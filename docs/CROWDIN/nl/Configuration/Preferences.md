@@ -30,7 +30,7 @@
 ```
 
 (Preferences-general)=
-## Algemeen
+## General
 
 **Units**
 

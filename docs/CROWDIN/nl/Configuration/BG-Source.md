@@ -1,6 +1,6 @@
 # CGMS/FGMS Configuration
 
-* [Algemeen](../Hardware/GeneralCGMRecommendation.md)
+* [General](../Hardware/GeneralCGMRecommendation.md)
 * [Data Smoothing](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)
 * [xDrip+Settings](./xdrip.md)
 * [Dexcom G7](../Hardware/DexcomG7.md)

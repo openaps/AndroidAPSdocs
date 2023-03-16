@@ -1,34 +1,34 @@
-# Veelgestelde vragen
+# FAQ for loopers
 
-Om vragen toe te voegen aan de Veelgestelde Vragen: volg deze [instructies](../make-a-PR.md)
+Volg deze [instructies](../make-a-PR.md) om vragen toe te voegen aan de Veelgestelde vragen.
 
-# Algemeen
+# General
 
-## Kan ik de AndroidAPS app gewoon downloaden?
+## Can I just download the AndroidAPS installation file?
 
-Nee. Er is geen downloadbaar apk bestand voor AndroidAPS. Je moet het zelf [bouwen](../Installing-AndroidAPS/Building-APK.md). Omdat:
+No. There is no downloadable apk file for AndroidAPS. You have to [build](../Installing-AndroidAPS/Building-APK.md) it yourself. Dit is de reden waarom:
 
-AndroidAPS wordt gebruikt om je pomp te bedienen en insuline te geven. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. Het verspreiden van een ongereguleerd medisch hulpmiddel is illegaal. In andere delen van de wereld bestaat vergelijkbare regelgeving.
+AndroidAPS is used to control your pump and give insulin. Volgens de huidige Europese regelgeving vallen dit soort systemen onder klasse IIa of IIb voor medische hulpmiddelen. Dat betekent dat die een wettelijke goedkeuring (CE-goedkeuring) vereisen, waarvoor verschillende studies en verificaties nodig zijn. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
 
-This regulation is not restricted just to sales (in the meaning of getting money for something) but applies to any distribution (even giving away for free). Building a medical device for yourself is the only way to use the app within these regulations.
+Deze regelgeving beperkt zich niet tot verkoop (in de zin dat er geld voor wordt gevraagd), maar is van toepassing op elke vorm van distributie (zelfs gratis weggeven). Building a medical device for yourself is the only way to use the app within these regulations.
 
-Dat is waarom een kant-en-klare app niet verspreid mag worden.
+Dat is waarom een kant-en-klare apk niet verspreid mag worden.
 
 (FAQ-how-to-begin)=
 
-## Hoe begin ik?
+## How to begin?
 
-First of all, you have to **get loopable hardware components**:
+Ten eerste moet je alle **fysieke onderdelen van een closed loop** verzamelen:
 
-- Een [geschikte insulinepomp](./Pump-Choices.md), 
+- A [supported insulin pump](./Pump-Choices.md), 
 - een [Android smartphone](Phones.md) (Apple iOS wordt niet ondersteund door AndroidAPS - je kunt wel [iOS Loop](https://loopkit.github.io/loopdocs/) gebruiken) en 
-- a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
+- een [glucosesensor](../Configuration/BG-Source.md). 
 
-Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
+Ten tweede moet je de **fysieke onderdelen instellen**. Zie het [voorbeeld van een set-up](Sample-Setup.md) met stap-voor-stap instructies.
 
-Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
+Ten derde moet je alle **software bouwen en instellen**: AndroidAPS en de bron voor de glucosesensor (CGM/FGM).
 
-Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
+Ten vierde moet je leren en **begrijpen hoe het algoritme is ontworpen om jouw behandelinstellingen** correct te kunnen beheren en bijstellen. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
 
 ## Zijn er nog praktische tips?
 
