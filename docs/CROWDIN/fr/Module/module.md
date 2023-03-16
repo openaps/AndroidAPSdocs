@@ -1,9 +1,9 @@
-# Component Overview
+# Vue d'ensemble des composants
 
 AAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the [component setup](index-component-setup), too.
 
 ```{image} ../images/modules.png
-:alt: Components overview
+:alt: Aperçu des composants
 ```
 
 ```{note}
@@ -16,45 +16,45 @@ De plus, il est également important d'utiliser uniquement des fournitures d'ori
 Enfin et surtout, vous ne devez pas prendre d'inhibiteurs du SGLT-2 (gliflozines), car ils abaissent de façon incalculable la glycémie.  La combinaison avec un système qui réduit les débits de base pour augmenter la glycémie est particulièrement dangereuse car en raison de la gliflozine, cette augmentation de glycémie pourrait ne pas se produire et un état dangereux d'absence d'insuline peut se produire.
 ```
 
-## Necessary Modules
+## Composants Nécessaires
 
-### Good individual dosage algorithm for your diabetes therapy
+### Un bon algorithme de dosage individuel pour votre diabète
 
-Even though this is not something to create or buy, this is the 'module' which is probably underestimated the most but essential. When you let an algorithm help manage your diabetes, it needs to know the right settings to not make severe mistakes. Even if you are still missing other modules, you can already verify and adapt your 'profile' in collaboration with your diabetes team. Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
+Même si ce n'est pas quelque chose à créer ou à acheter, c'est le "composant" qui est probablement le plus sous-estimé, mais essentiel. Quand vous laissez un algorithme vous aider à gérer votre diabète, il doit en connaître les bons réglages pour ne pas faire de graves erreurs. Même si d'autres composants vous manquent, vous pouvez déjà vérifier et adapter votre « profil » en collaboration avec votre équipe médicale. La plupart des "boucleurs" utilisent le rythme circadien pour les DB, la SI et le G/I, qui adaptent la sensibilité à l'insuline hormonale durant la journée.
 
-The profile includes
+Le profil inclut :
 
-- BR (Basal rates)
-- ISF (insulin sensitivity factor) is your blood glucose unit per one unit insulin
-- CR (carb ratio) is grams carbohydrate per one unit insulin
-- DIA (duration of insulin acting).
+- DB (débits de basal)
+- SI (sensibilité à l'insuline) est la baisse de glycémie que provoque une unité d'insuline
+- G/I (ratio Glucides / Insuline) est la quantité de glucides en grammes par unité d'insuline
+- DAI (durée d'action de l'insuline).
 
 (module-no-use-of-sglt-2-inhibitors)=
-### No use of SGLT-2 inhibitors
+### Ne pas utiliser d'inhibiteurs SGLT-2
 
-SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. As they incalculably lower blood sugar levels, you MUST NOT take them while using a closed loop system like AAPS! There would be a huge risk of a ketoacidosis or a hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
+Les inhibiteurs SGLT-2, aussi appelés gliflozines, empêchent la réabsorption du glucose dans le rein. As they incalculably lower blood sugar levels, you MUST NOT take them while using a closed loop system like AAPS! Il y aurait un risque énorme d'une acidocétose ou d'une hypoglycémie ! La combinaison de ce médicament avec un système qui abaisse les débits de basal pour augmenter la glycémie est particulièrement dangereuse car en raison de la gliflozine, cette augmentation de Gly pourrait ne pas se produire et un état dangereux d'absence d'insuline peut se produire.
 
 (module-phone)=
-### Phone
+### Téléphone
 
-The current version of AAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10. Users are strongly encouraged to keep their build of AAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AAPS version 2.6.1.4, suitable for older Android versions, remains available from the [old repository.](https://github.com/miloskozak/AAPS)
+The current version of AAPS requires an Android smartphone with Google Android 8.0 or above. Donc si vous pensez à un nouveau téléphone, un Android 8.1 minimum est recommandé mais choisissez de préférence une version Android 9 ou 10. Users are strongly encouraged to keep their build of AAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AAPS version 2.6.1.4, suitable for older Android versions, remains available from the [old repository.](https://github.com/miloskozak/AAPS)
 
-Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
+Les utilisateurs ont créé une [liste de téléphones et montres testés](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform).
+Pour enregistrer un téléphone ou une montre qui n'est pas déjà dans la feuille de calcul, veuillez remplir le [formulaire](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform).
 
-Any problems with the spreadsheet please send an email to [hardware@androidaps.org](mailto:hardware@androidaps.org), any donations of phone/watch models that still need testing please send an email to [donations@androidaps.org](mailto:hardware@androidaps.org).
+En cas de problème avec la feuille de calcul, merci d'envoyer un mail à [hardware@androidaps.org](mailto:hardware@androidaps.org), pour tous les dons de téléphone/montre qui ont encore besoin d'être testés, merci d'envoyer un mail à [donations@androidaps.org](mailto:hardware@androidaps.org).
 
-### Insulin pump
+### Pompe à insuline
 
 AAPS **currently** works with
 
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (également nécessaire : application Ruffy, LineageOS ou Android 8.1 sur votre téléphone)
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
 - [DanaR](../Configuration/DanaR-Insulin-Pump.md)
 - [Dana-i/RS](../Configuration/DanaRS-Insulin-Pump.md)
-- [some old Medtronic pumps](../Configuration/MedtronicPump.md) from upcoming version 2.4 ([additional communication device](module-additional-communication-device) needed)
-- [Omnipod Eros](../Configuration/OmnipodEros.md) ([additional communication device](module-additional-communication-device) needed)
+- [certaines anciennes pompes Medtronic](../Configuration/MedtronicPump.md) de la version 2.4 à venir ([dispositif de communication supplémentaire](module-additional-communication-device) nécessaires)
+- [Omnipod Eros](../Configuration/OmnipodEros.md) ([dispositif de communication supplémentaire](module-additional-communication-device) nécessaire)
 - [Omnipod Dash](../Configuration/OmnipodDASH.md)
 
 If no additional communication device  is mentioned the communication betweeen insulin pump and AAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
@@ -62,9 +62,9 @@ If no additional communication device  is mentioned the communication betweeen i
 **Other pumps** that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](../Getting-Started/Future-possible-Pump-Drivers.md) page.
 
 (module-additional-communication-device)=
-#### Additional communication device
+#### Périphérique de communication additionnel
 
-For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
+Pour les anciennes pompes medtronic, un périphérique de communication supplémentaire (en plus de votre téléphone) est nécessaire pour "traduire" le signal radio de la pompe vers le Bluetooth. Make sure to choose the correct version depending on your pump.
 
 - ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
 - ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
@@ -117,9 +117,9 @@ You can choose any smartwatch with Android Wear 1.x and above. Most loopers wear
 
 Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). There are different watchfaces for use with AAPS, which you can find [here](../Configuration/Watchfaces.md).
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform).
+Pour enregistrer un téléphone ou une montre qui n'est pas déjà dans la feuille de calcul, veuillez remplir le [formulaire](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform).
 
-Any problems with the spreadsheet please send an email to [hardware@androidaps.org](mailto:hardware@androidaps.org), any donations of phone/watch models that still need testing please send an email to [donations@androidaps.org](mailto:hardware@androidaps.org).
+En cas de problème avec la feuille de calcul, merci d'envoyer un mail à [hardware@androidaps.org](mailto:hardware@androidaps.org), pour tous les dons de téléphone/montre qui ont encore besoin d'être testés, merci d'envoyer un mail à [donations@androidaps.org](mailto:hardware@androidaps.org).
 
 ### xDrip+
 
