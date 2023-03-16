@@ -1,22 +1,3 @@
----
-substitutions:
-  DiaLink: |-
-    ```{image} ../images/omnipod/DiaLink.png
-    ```
-  EmaLink: |-
-    ```{image} ../images/omnipod/EmaLink.png
-    ```
-  LoopLink: |-
-    ```{image} ../images/omnipod/LoopLink.png
-    ```
-  OrangeLink: |-
-    ```{image} ../images/omnipod/OrangeLink.png
-    ```
-  RileyLink: |-
-    ```{image} ../images/omnipod/RileyLink.png
-    ```
----
-
 # Component Overviews
 
 AAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the [component setup](index-component-setup), too.
@@ -88,11 +69,11 @@ If no additional communication device  is mentioned the communication betweeen i
 
 For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
 
-- {{ OrangeLink }}  [OrangeLink Website](https://getrileylink.org/product/orangelink)
-- {{ RileyLink }} [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
-- {{ EmaLink }}  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
-- {{ DiaLink }}  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
-- {{ LoopLink }}  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
+- ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
+- ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
+- ![EmaLink](../images/omnipod/EmaLink.png)  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
+- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
+- ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
 
 **So what's the best pump for looping with AAPS?**
 
