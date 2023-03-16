@@ -136,7 +136,3 @@ You can keep on reading through the docs here, get in touch with other loopers o
 
 **Done?**
 If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/Objectives.md) before each new Objective and setup up your [hardware](index-component-setup).
-
-% Image aliases resource for referencing images by name with more positioning flexibility
-
-% Hardware and Software Requirements
