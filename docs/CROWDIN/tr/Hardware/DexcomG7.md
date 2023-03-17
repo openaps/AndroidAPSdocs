@@ -9,7 +9,7 @@ Lütfen uyarılara dikkat edin ve [dev sürümü oluşturma](../Installing-Andro
 
 ```
 
-## Önce Temel
+## Ön Bilgi
 
 2022 baharında Dexcom G7 CE sertifikasını aldı ve '22 Ekim'in sonunda satılmaya başladı.
 
