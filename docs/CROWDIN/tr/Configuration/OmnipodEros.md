@@ -1,6 +1,6 @@
-# AAPS Omnipod Insulin Pump Driver Documentation
+# AAPS Omnipod İnsülin Pompası Sürücü Dokümantasyonu
 
-These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**). The Omnipod driver is available as part of AAPS (AAPS) as of version 2.8.
+Bu talimatlar, Omnipod Eros nesil pompayı yapılandırmak içindir (**Omnipod Dash DEĞİL**). Omnipod Eros sürücüsü, 2.8 sürümünden itibaren AAPS'in bir eklentisidir.
 
 **Bu yazılım bir DIY (Kendin Yap) yapay pankreas çözümünün bir parçasıdır ve bir ürün değildir, ancak nasıl kullanılacağı da dahil olmak üzere sistemi okumanızı, öğrenmenizi ve anlamanızı gerektirir. Yazılımla yaptıklarınızdan yalnızca siz sorumlusunuz.**
 
@@ -9,9 +9,9 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 :depth: 2
 ```
 
-## Hardware and Software Requirements
+## Donanım ve Yazılım Gereksinimleri
 
-- **Pod Communication Device**
+- **Pod İletişim Cihazı**
 
 > Component that bridges communication from your AAPS enabled phone to Eros generation pods.
 > 
