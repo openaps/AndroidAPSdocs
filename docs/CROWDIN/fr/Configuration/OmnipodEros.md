@@ -104,61 +104,61 @@ Si vous avez déjà appairé avec succès votre RileyLink dans l'assistant de co
 
 1. Assurez-vous que votre RileyLink est complètement chargé et mis en marche.
 
-2. After selecting the Omnipod driver, identify and select your RileyLink from **Config Builder (1)** ➜**Pump**➜**Omnipod**➜**Gear Icon (Settings) (2)** ➜**RileyLink Configuration (3)** by pressing the **Not Set** or **MAC Address (if present)** text.
+2. Après avoir sélectionné le pilote Omnipod, identifiez et sélectionnez votre RileyLink dans la **Configuration (1)** ➜**Pompe**➜**Omnipod**➜**Roue crantée (2)** ➜**Configuration du RileyLink (3)** en appuyant sur **Non configuré** ou sur le texte de **l'adresse MAC (si présent)**.
 
-   > Ensure your RileyLink battery is charged and it is [positioned in close proximity](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Once selected, you can proceed to activate your first pod session. Use the back button on your phone to return to the main AAPS interface.
+   > Assurez-vous que votre batterie RileyLink est chargée et qu'il est [positionné à proximité](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm de distance ou moins) de votre téléphone pour que AAPS l'identifie par son adresse MAC. Une fois sélectionné, vous pouvez continuer à activer votre première session de pod. Utilisez le bouton retour de votre téléphone pour revenir à l'interface principale AAPS.
    > 
    > ![RileyLink_Setup_1](../images/omnipod/RileyLink_Setup_1.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
-3. On the **RileyLink Selection** screen press the **Scan (4)** button to initiate a bluetooth scan. **Select your RileyLink (5)**  from the list of available Bluetooth devices.
+3. Sur l'écran de **Sélection RileyLink** appuyez sur le bouton **Rechercher (4)** pour lancer un balayage bluetooth. **Sélectionnez votre RileyLink (5)** dans la liste des périphériques Bluetooth disponibles.
 
    > ![RileyLink_Setup_3](../images/omnipod/RileyLink_Setup_3.png) ![RileyLink_Setup_4](../images/omnipod/RileyLink_Setup_4.png)
 
-4. After successful selection you are returned to the Omnipod Settings page listing your **currently selected RileyLink's MAC Address (6).**
+4. Après avoir sélectionné avec succès vous êtes revenu sur la page des paramètres Omnipod indiquant l'**adresse MAC du RileyLink actuellement sélectionné (6).**
 
    > ![RileyLink_Setup_5](../images/omnipod/RileyLink_Setup_5.png)
 
-5. Verify that in the **Omnipod (POD)** tab that the **RileyLink Status (1)** appears as **Connected.** The **Pod status (2)** field should show **No active Pod**; if not, please attempt the previous step or exit AAPS to see if this refreshes the connection.
+5. Vérifiez que dans l'onglet **Omnipod (POD)** que l'**Etat du RileyLink (1)** apparaît comme étant **connecté.** Le champ **Etat du pod (2)** doit afficher **Aucun Pod actif**; si ce n'est pas le cas, veuillez réessayer l'étape précédente ou quitter AAPS pour voir si cela rafraîchit la connexion.
 
    > ![RileyLink_Setup_6](../images/omnipod/RileyLink_Setup_6.png)
 
 (OmnipodEros-activating-a-pod)=
 
-### Activating a Pod
+### Activation d’un Pod
 
-Before you can activate a pod please ensure you have properly configured and connected your RileyLink connection in the Omnipod settings
+Avant de pouvoir activer un pod, veuillez vous assurer que vous avez correctement configuré et connecté votre connexion RileyLink dans les paramètres d'Omnipod
 
-*REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Before pairing the Pod's radio signal is weaker, however after it has been paired it will operate at full signal power. During these procedures, make sure that your pod is* [within close proximity](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) but not on top of or right next to the RileyLink.\*
+*RAPPEL : La communication avec le Pod pour l'activation de celui-ci se fait sur des périodes limitées pour des raisons de sécurité. Avant d'être appairé le signal radio du Pod est plus faible, mais après l'appairage, il fonctionnera à pleine puissance. Lors de ces procédures, assurez-vous que votre pod est* [à proximité immédiate](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm de distance ou moins) mais pas au dessus ou juste à côté du RileyLink.\*
 
-01. Navigate to the **Omnipod (POD)** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
+01. Naviguez vers l'onglet **Omnipod (POD)** et cliquez sur le bouton **POD MGMT (1)** , puis cliquez sur **Activer Pod (2)**.
 
     > ![Activate_Pod_1](../images/omnipod/Activate_Pod_1.png) ![Activate_Pod_2](../images/omnipod/Activate_Pod_2.png)
 
-02. L'écran **Remplir le pod** s'affiche. Remplissez le nouveau pod avec au moins 80 unités d'insuline et écoutez le deux bips indiquant que le pod est prêt à être amorcé. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use 12 to 15 units.
+02. L'écran **Remplir le pod** s'affiche. Remplissez le nouveau pod avec au moins 80 unités d'insuline et écoutez le deux bips indiquant que le pod est prêt à être amorcé. Lors du calcul de la quantité totale d'insuline dont vous avez besoin pendant 3 jours, veuillez prendre en compte que l'amorçage du pod utilisera de 12 à 15 unités.
 
     > ![Activate_Pod_3](../images/omnipod/Activate_Pod_3.png)
     > 
-    > Ensure the new pod and RileyLink are within close proximity of each other (~30cm or less) and click the **Next** button.
+    > Assurez-vous que le nouveau pod et le RileyLink sont à proximité les uns des autres (~30 cm ou moins) et cliquez sur le bouton **Suivant**.
 
-03. Sur l'écran **Initialiser le Pod** le pod commencera à amorcer (vous entendrez un clic suivi d'une série de tics pendant que le pod s'amorce). If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, [move the RileyLink closer](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
+03. Sur l'écran **Initialiser le Pod** le pod commencera à amorcer (vous entendrez un clic suivi d'une série de tics pendant que le pod s'amorce). Si le RileyLink est hors de portée du pod en cours d'activation, vous recevrez un message d'erreur **Aucune réponse du Pod**. Si cela se produit, [rapprochez le RileyLink](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm de distance ou moins) mais pas au dessus ni juste à côté du Pod et cliquez sur le bouton **Réessayer (1)**.
 
     > ![Activate_Pod_4](../images/omnipod/Activate_Pod_4.png) ![Activate_Pod_5](../images/omnipod/Activate_Pod_5.png)
 
-04. Upon successful priming a green checkmark will be shown and the **Next** button will become enabled. Cliquer sur le bouton **Suivant** pour terminer l'initialisation de l'amorçage du pod et afficher l'écran **Attacher Pod**.
+04. Une fois amorcé avec succès, une coche verte sera affichée et le bouton **Suivant** sera activé. Cliquer sur le bouton **Suivant** pour terminer l'initialisation de l'amorçage du pod et afficher l'écran **Attacher Pod**.
 
     > ![Activate_Pod_6](../images/omnipod/Activate_Pod_6.png)
 
-05. Ensuite, préparer le site de perfusion du nouveau pod. Remove the pod's plastic needle cap and white paper backing from the adhesive and apply the pod to your usually selected site on your body. Une fois terminé, cliquez sur le bouton **Suivant**.
+05. Ensuite, préparer le site de perfusion du nouveau pod. Retirez le capuchon en plastique du pod et le papier blanc de l'adhésif et appliquez le pod à l'endroit habituel sur votre corps. Une fois terminé, cliquez sur le bouton **Suivant**.
 
     > ![Activate_Pod_7](../images/omnipod/Activate_Pod_7.png)
 
-06. La boîte de dialogue **Attacher Pod** apparaîtra. **ONLY click on the OK button if you are ready to deploy the cannula**.
+06. La boîte de dialogue **Attacher Pod** apparaîtra. **Ne cliquez sur le bouton Ok QUE si vous êtes prêt à déployer la canule**.
 
     > ![Activate_Pod_8](../images/omnipod/Activate_Pod_8.png)
 
 07. After pressing **OK**, it may take some time before the Omnipod responds and inserts the cannula (1-2 minutes maximum), so be patient.
 
-    > If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, move the RileyLink closer (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry** button.
+    > Si le RileyLink est hors de portée du pod en cours d'activation, vous recevrez un message d'erreur **Aucune réponse du Pod**. If this occurs, move the RileyLink closer (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry** button.
     > 
     > If the RileyLink is out of Bluetooth range or does not have an active connection to the phone, you will receive an error message **No response from RileyLink**. If this occurs, move the RileyLink closer to the phone and click the **Retry** button.
     > 
