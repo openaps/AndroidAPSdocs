@@ -13,7 +13,7 @@ Bu talimatlar, Omnipod Eros nesil pompayı yapılandırmak içindir (**Omnipod D
 
 - **Pod İletişim Cihazı**
 
-> Component that bridges communication from your AAPS enabled phone to Eros generation pods.
+> AAPS Omnipod Eros sekmesi üzerinden yapılandırıp etkinleştirdiğiniz, telefonunuz ile Eros podları arasında iletişimi sağlayan cihaz.
 > 
 > > - ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
 > > - ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
@@ -21,45 +21,45 @@ Bu talimatlar, Omnipod Eros nesil pompayı yapılandırmak içindir (**Omnipod D
 > > - ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
 > > - ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
 
-- ![Android_phone](../images/omnipod/Android_phone.png)  **Mobile Phone Device**
+- ![Android_phone](../images/omnipod/Android_phone.png)  **Cep Telefonu Cihazı**
 
-> Component that will operate AAPS and send control commands to the Pod communication device.
+> AAPS'i çalıştıracak ve Pod iletişim cihazına kontrol komutları gönderecek eklenti.
 > 
-> > - Supported [Omnipod driver Android phone](https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit) with a version of AAPS 2.8 and related [components setup](index-component-setup)
+> > - AAPS 2.8 sürümü ve ilgili [bileşen kurulumu](index-component-setup) ile desteklenen [Omnipod sürücüsü Android telefonlar](https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit)
 
-- ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **Insulin Delivery Device**
+- ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **İnsülin İletim Cihazı**
 
-> Component that will interpret commands received from the Pod communication device originating from your AAPS enable phone.
+> AAPS kurulu telefonunuz tarafından Pod iletişim cihazına gönderilen komutları yorumlayacak bileşen.
 > 
-> > - A new Omnipod pod (Eros generation - **NOT DASH**)
+> > - Yeni bir Omnipod podu (Eros - **DASH DEĞİL**)
 
-These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and attempt to begin this process on your next pod change.
+Bu talimatlar, yeni bir pod oturumu başlattığınızı varsayar; durum böyle değilse, lütfen sabırlı olun ve bir sonraki pod değişikliğinizde bu işlemle başlamaya çalışın.
 
 ## Başlamadan önce
 
-**SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, charged RileyLink, and phone devices are must-haves).
+**ÖNCE GÜVENLİK** - bir hatadan kurtulamayacağınız bir ortamda bu işlemi denemeyin (ekstra pod, insülin ve telefon cihazları olmazsa olmazdır).
 
-**Your Omnipod PDM will no longer work after the AAPS Omnipod driver activates your pod**. Previously you used your Omnipod PDM to send commands to your Omnipod Eros pod. An Omnipod Eros pod only allows a single device to send communication to it. Podu başarıyla etkinleştiren cihaz, o andan itibaren onunla iletişim kurmasına izin verilen tek cihazdır. This means that once you activate an Omnipod Eros pod with your RileyLink through the AAPS Omnipod driver, **you will no longer be able to use your PDM with your pod**. The AAPS Omnipod driver with the RileyLink is now your acting PDM. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies with AAPS is not working correctly.*
+**Omnipod PDM'niz, AAPS Omnipod sürücüsü podunuzu etkinleştirdikten sonra artık çalışmayacaktır**. Önceden Omnipod Eros Podunuz'a komutlar göndermek için Omnipod PDM'nizi kullanıyordunuz. Bir Omnipod Eros podu, yalnızca tek bir cihazın kendisine iletişim göndermesine izin verir. Podu başarıyla etkinleştiren cihaz, o andan itibaren onunla iletişim kurmasına izin verilen tek cihazdır. Bu AAPS Omnipod sürücüsü aracılığıyla RileyLink'inizle bir Omnipod Eros podunu etkinleştirdiğinizde, ** artık PDM'niz ile podunuzu kullanamayacağınız anlamına gelir**. RileyLink'li AAPS Omnipod sürücüsü artık bir nevi yeni PDM'niz olur. *Bu, PDM'nizi çöpe atmanız gerektiği anlamına GELMEZ, yedek olarak saklamanız şiddetle önerilir ve AAPS düzgün çalışmadığı acil durumlar için gereklidir.*
 
-**You can configure multiple RileyLinks, but only one selected RileyLink at a time can communicate with a pod.** The AAPS Omnipod driver supports the ability to add multiple RileyLinks in the RileyLink configuration, however, only one RileyLink at a time can be selected to be used for sending and receiving communication.
+**Birden çok RileyLink yapılandırabilirsiniz, ancak bir seferde yalnızca bir seçili RileyLink bir podla iletişim kurabilir.** AAPS Omnipod sürücüsü, RileyLink yapılandırmasına birden çok RileyLink ekleme özelliğini destekler, ancak iletişim göndermek ve almak için kullanılmak üzere bir seferde yalnızca bir RileyLink seçilebilir.
 
-**Your pod will not shut off when the RileyLink is out of range.** When your RileyLink is out of range or the signal is blocked from communicating with the active pod, your pod will continue to deliver basal insulin. Upon activating a pod, the basal profile defined in AAPS will be programmed into the new pod. Should you lose contact with the pod, it will revert to this basal profile. You will not be able to issue new commands until the RileyLink comes back in range and re-establishes the connection.
+**RileyLink kapsama alanı dışındayken podunuz kapanmaz.** RileyLink'iniz kapsama alanı dışında olduğunda veya sinyalin aktif podunuz ile iletişim kurması engellendiğinde, podunuz bazal insülin iletmeye devam edecektir. Bir podu etkinleştirdikten sonra, AAPS'de tanımlanan bazal profil yeni poda programlanacaktır. Pod ile teması kaybederseniz, bu bazal profile geri dönecektir. RileyLink menzile girip bağlantıyı yeniden kurana kadar yeni komutlar veremezsiniz.
 
-**30 min Basal Rate Profiles are NOT supported in AAPS.** If you are new to AAPS and are setting up your basal rate profile for the first time please be aware that basal rates starting on a half hour are not supported and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of say 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work.  You will need to update this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00.  Even though the 30 min basal rate profile increments are supported by the Omnipod hardware itself, AAPS is not able to take them into account with its algorithms currently.
+**30 dakikalık Bazal Oran Profilleri AAPS'de DESTEKLENMEZ.** AAPS'de yeniyseniz ve bazal oran profilinizi ilk kez oluşturuyorsanız, lütfen saatlik bazal oran profilinizi ayarlayın ve yarım saatlik bazal oranların desteklenmediğini unutmayın. Örneğin, 09:30'da başlayan ve 11:30'da biten 2 saatlik bir süresi olan 1,1 ünitelik bir bazal oranınız varsa, bu çalışmayacaktır.  Bu 1,1 ünite bazal oranını 9:00-11:00 veya 10:00-12:00 zaman aralığına güncellemeniz gerekecektir.  30 dakikalık bazal oran profili artışları Omnipod donanımının kendisi tarafından desteklense de, AAPS şu anda algoritmaları ile bunları hesaba katamamaktadır.
 
-## Enabling the Omnipod Driver in AAPS
+## AAPS'de Omnipod Sürücüsünü Etkinleştirme
 
-You can enable the Omnipod driver in AAPS in **two ways**:
+Dash sürücüsünü AAPS'de **iki şekilde** etkinleştirebilirsiniz:
 
-### Option 1: The Setup Wizard
+### Seçenek 1: Kurulum Sihirbazı
 
-After installing a new version of AAPS, the **Setup Wizard** will start automatically.  This will also occur during in place upgrades.  If you already have exported your settings from a previous installation you can exit the Setup Wizard and import your old settings.  For new installations proceed below.
+AAPS'nin yeni bir sürümünü yükledikten sonra **Kurulum Sihirbazı** otomatik olarak başlayacaktır.  Bu aynı zamanda sürüm yükseltme sırasında da ortaya çıkacaktır.  Ayarlarınızı önceki bir kurulumdan kaydettiyseniz (dışarı aktarma), Kurulum Sihirbazından çıkıp eski ayarlarınızı içeri aktarabilirsiniz.  Yeni kurulumlar için aşağıdan ilerleyin.
 
-Via the **AAPS Setup Wizard (2)** located at the top right-hand corner **three-dot menu (1)** and proceeding through the wizard menus until you arrive at the **Pump** screen. Then select the **Omnipod radio button (3)** .
+Sağ üst köşede **üç noktalı menü (1)** bulunan **AAPS Kurulum Sihirbazı (2)** aracılığıyla **Pompa** ekranına gelene kadar sihirbaz menülerinde ilerleyin. Ardından **Omnipod radyo butonunu (3)** seçin.
 
 > ![Enable_Omnipod_Driver_1](../images/omnipod/Enable_Omnipod_Driver_1.png)  ![Enable_Omnipod_Driver_2](../images/omnipod/Enable_Omnipod_Driver_2.png)
 
-On the same screen, below the pump selection, the **Omnipod Driver Settings** are displayed, under the **RileyLink Configuration** add your RileyLink device by pressing the **Not Set** text.
+Aynı ekranda, pompa seçiminin altında **Omnipod Sürücü Ayarları** görüntülenir, **RileyLink Yapılandırması** altında **Ayarlanmadı** metnine basarak RileyLink cihazınızı ekleyin metin.
 
 On the **RileyLink Selection** screen press the **Scan** button and select your RileyLink by scanning for all available Bluetooth devices and selecting your RileyLink from the list. When properly selected you are returned to the pump driver selection screen displaying the Omnipod driver settings showing your selected RileyLink with the MAC address listed.
 
@@ -95,17 +95,17 @@ Please **swipe left** to the **Omnipod (POD)** tab where you will be able to man
 
 (OmnipodEros-rileylink-setup)=
 
-### RileyLink Setup
+### RileyLink Kurulumu
 
-If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the [Activating a Pod Section](OmnipodEros-activating-a-pod) below.
+RileyLink'inizi Kurulum Sihirbazında veya yukarıdaki adımlarda zaten başarılı bir şekilde eşleştirdiyseniz, aşağıdaki [Bir Pod Bölümünü Etkinleştirme](OmnipodEros-activating-a-pod) bölümüne ilerleyin.
 
-*Note: A good visual indicator that the RileyLink is not connected is that the Insulin and Calculator buttons on the HOME tab will be missing. This will also occur for about the first 30 seconds after AAPS starts, as it is actively connecting to the RileyLink.*
+*Not: RileyLink'in bağlı olmadığının göstergesi, GİRİŞ sekmesindeki İnsülin ve Hesap Makinesi düğmelerinin eksik olmasıdır. Bu, RileyLink'e aktif olarak bağlanıp, AAPS başladıktan sonraki ilk 30 saniye boyunca da böyle olacaktır.*
 
-1. Ensure that your RileyLink is fully charged and powered on.
+1. RileyLink'inizin tam olarak şarj edildiğinden ve açık olduğundan emin olun.
 
-2. After selecting the Omnipod driver, identify and select your RileyLink from **Config Builder (1)** ➜**Pump**➜**Omnipod**➜**Gear Icon (Settings) (2)** ➜**RileyLink Configuration (3)** by pressing the **Not Set** or **MAC Address (if present)** text.
+2. Omnipod sürücüsünü seçtikten sonra **Konfigürasyon ayarları (1)** ➜**Pompa**➜**Omnipod**➜**Dişli Çark (Ayarlar) (2) **➜**RileyLink Yapılandırması (3)** **Ayarlanmadı** veya **MAC Adresi (varsa)** metnine basarak RileyLink'inizi belirleyin ve seçin.
 
-   > Ensure your RileyLink battery is charged and it is [positioned in close proximity](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Once selected, you can proceed to activate your first pod session. Use the back button on your phone to return to the main AAPS interface.
+   > AAPS'in telefonunuzu MAC adresiyle tanımlaması için, RileyLink pilinizin şarjlı olduğundan ve telefonunuzun [yakın bir mesafede](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm veya daha kısa mesafede) olduğundan emin olun. Seçildikten sonra, ilk pod oturumunuzu etkinleştirmek için ilerleyebilirsiniz. Ana AAPS arayüzüne dönmek için telefonunuzdaki geri düğmesini kullanın.
    > 
    > ![RileyLink_Setup_1](../images/omnipod/RileyLink_Setup_1.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
