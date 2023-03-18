@@ -217,7 +217,7 @@ To deactivate a pod (either from expiration or from a pod failure):
 
    > ![Deactivate_Pod_9](../images/omnipod/Deactivate_Pod_9.png)  ![Deactivate_Pod_10](../images/omnipod/Deactivate_Pod_10.png)
 
-### Suspending and Resuming Insulin Delivery
+### Suspender y reanudar la administración de insulina
 
 The process below will show you how to suspend and resume insulin pump delivery.
 
