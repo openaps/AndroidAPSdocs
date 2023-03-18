@@ -40,21 +40,21 @@ Selecciona EOPATCH2 en la parte superior de la pantalla de inicio y pulsa el bot
 
 ![Bild4](../images/EOPatch/Bild4.png)
 
-### Connecting the patch
-Insert the syringe needle into the insulin inlet on the patch and then slowly push the piston to inject the insulin. When insulin is filled with more than 80U, the patch makes a booting sound (1 buzzer) and boots. After confirming the buzzer sound, click the START PAIRING button on the screen.
+### Conexión del parche
+Inserta la aguja de la jeringa en la entrada de insulina del parche y, a continuación, empujea lentamente el émbolo para inyectar la insulina. Cuando se introducen mas de 80U, el parche emite un sonido de arranque (1 zumbido) y arranca. Después de confirmar el sonido del zumbido, haz clic en el botón INICIAR EMPAREJAMIENTO de la pantalla.
 
-[Warning]
+[Advertencia]
 
-- Do not turn the needle action lever until instructed. It can cause serious problems during injection or safety checks otherwise.
-- The amount of insulin that can be injected into the patch is 80~200U. If you inject less than 80U into the patch initially, the patch will not work.
-- Take the insulin to be put into the patch from the refrigerator and leave it at room temperature for 15 to 30 minutes beforehand. The temperature of the insulin to be injected must be at least 10°C.
+- No gires la palanca de acción de la aguja hasta que se indique. De lo contrario, puedes causar graves problemas durante la inyección o con los controles de seguridad.
+- La cantidad de insulina que puede inyectarse en el parche es de 80~200U. Si inyectas menos de 80U en el parche inicialmente, el parche no funcionará.
+- Saque del frigorífico la insulina que vas a poner en el parche y déjala a temperatura ambiente entre 15 y 30 minutos antes. La temperatura de la insulina a inyectar debe ser de al menos 10°C.
 
 ![Bild5](../images/EOPatch/Bild5.png)
 
-### patch pairing
+### Emparejamiento del parche
 The Patch pairing screen will be displayed, and pairing will be attempted automatically. If communication is successful, the Bluetooth pairing request notification appears. Click OK and when the Bluetooth pairing request notification appears a second time with the authentication code, select OK again.
 
-[Warning]
+[Advertencia]
 
 - For pairing, the patch and the smartphone must be located within 30 cm of each other.
 - After the patch booting is completed, the patch will beep every 3 minutes until the pairing is complete.
@@ -71,7 +71,7 @@ After removing the adhesive tape of the patch, check if the needle is sticking o
 ### Patch attachment
 Insulin should be injected in a spot with subcutaneous fat but few nerves or blood vessels, so it is recommended to use the abdomen, arm, or thigh for the patch attachment site. Choose a patch attachment site and apply the patch after disinfecting the location.
 
-[Warning]
+[Advertencia]
 
 - Make sure to straighten the side of the patch tape attached to the body evenly, so that the patch adheres completely to the skin.
 - If the patch does not stick completely, air may enter between the patch and the skin, which can weaken the adhesive strength and waterproof effect of the patch.
@@ -81,7 +81,7 @@ Insulin should be injected in a spot with subcutaneous fat but few nerves or blo
 ### Safety Check
 When patching is complete, touch Start Safety Check. When the safety check is completed, the patch will beep once.
 
-[Warning]
+[Advertencia]
 
 - For safe use, do not turn the needle action lever until the safety check has been completed.
 
