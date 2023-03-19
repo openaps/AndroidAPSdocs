@@ -1,4 +1,4 @@
-# CGMS/FGMS Configuration
+# CGMS/FGMS-Konfiguration
 
 * [Allgemein](../Hardware/GeneralCGMRecommendation.md)
 * [Datenglättung](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)
