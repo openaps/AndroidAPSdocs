@@ -83,7 +83,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 #### BG Warnzeichen
 
-Beginnend mit Android 3.0 erhälst Du möglicherweise ein dreieckiges Warnsignal neben der BG-Ziffer, links auf dem Hauptbildschirm.
+Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
 
 *Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
 
@@ -99,7 +99,7 @@ However, when there are a lot of duplicates, it might be easier to
 
 The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
 
-![Rotes BG-Warndreieck](../images/bg_warn_red.png)
+![Red BG warning](../images/bg_warn_red.png)
 
 You need to find out why you get duplicate BGs:
 
@@ -112,7 +112,7 @@ You need to find out why you get duplicate BGs:
 
 * Das gelbe Warnsignal weist darauf hin, dass BG-Daten in unregelmäßigen Zeitintervallen angekommen sind oder einige BGs fehlen.
    
-   ![Gelbes BG-Warndreieck](../images/bg_warn_yellow.png)
+   ![Yellow BG warning](../images/bg_warn_yellow.png)
 
 * Normalerweise musst Du in diesem Falle nichts tun. Der closed loop funktioniert weiter!
 
