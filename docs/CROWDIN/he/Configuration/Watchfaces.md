@@ -1,6 +1,6 @@
 # AAPS בשעונים חכמים עם מערכת הפעלה Wear Os
 
-אתם יכולים להתקין AndroidAPS בשעון החכם שלכם המבוסס **Wear Os**. גרסת השעון של AAPS מאפשר לכם:
+You can install AAPS app on your **Wear OS based** smartwatch. גרסת השעון של AAPS מאפשר לכם:
 
 * **display data on your watch**: by providing [custom watchfaces](Watchfaces-aaps-watchfaces) or in standard watchfaces with use of [complications](Watchfaces-complications)
 * **לשלוט על AAPS מהשעון**: להזריק בולוס, לקבוע ערך מטרה זמני וכו'.
@@ -16,15 +16,15 @@
 
 אפליקציית Wear OS של AAPS הופרדה מבניית אפליקציית ה-Android של הטלפון הנייד. לכן עליכם ליצור APK חתום נפרד נוסף. בחרו את המודול "AndroidAPS.wear" ואת הגרסה לבנייה "fullRelease" כדי שאפליקציה שנייה עבור השעון Wear OS תיבנה במסגרת [בניית קובץ ה-APK](../Installing-AndroidAPS/Building-APK.md) (או "pumpcomtrolRelease" אשר תאפשר שליטה מהשעון במשאבה ללא לופ).
 
-החל ממאי 2021 חובה להתקין את AAPS בשעון "מהצד", כי היא לא נגישה יותר דרך חנות האפליקציות של גוגל שבשעון. ניתן להתקין מן הצד בעזרת [Wear Installer](https://youtu.be/8HsfWPTFGQI) אותם צריך להתקין גם בשעון וגם בטלפון. האפליקצה Wear Installer ניתנת להורדה מחנות האפליקציות של גוגל. הסרטון המקושר מעלה של מפתח Wear Installer מלקולם בריינט, נותן הוראות מפורטות ל- א. להורדת האפליקציה לטלפון הנייד. ב. הגדרת ה-Android Debugger בשעון. ג. השימוש ב-Wear Installer בטלפון ובשעון כדי להתקין מהצד את אפליקציית AAPS wear בשעון. לאחר שתבחרו את AndroidAPS כאפליקציה להעלאת הגרסה של Wear בשעון, תוכל להשתמש במסכי תצוגה, סיבוכים ופונקציות לשליטה ב-AAPS.
+החל ממאי 2021 חובה להתקין את AAPS בשעון "מהצד", כי היא לא נגישה יותר דרך חנות האפליקציות של גוגל שבשעון. ניתן להתקין מן הצד בעזרת [Wear Installer](https://youtu.be/8HsfWPTFGQI) אותם צריך להתקין גם בשעון וגם בטלפון. האפליקצה Wear Installer ניתנת להורדה מחנות האפליקציות של גוגל. הסרטון המקושר מעלה של מפתח Wear Installer מלקולם בריינט, נותן הוראות מפורטות ל- א. להורדת האפליקציה לטלפון הנייד. ב. הגדרת ה-Android Debugger בשעון. ג. השימוש ב-Wear Installer בטלפון ובשעון כדי להתקין מהצד את אפליקציית AAPS wear בשעון. Once you have selected AAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
 
 ### הגדרות בטלפון
 
-Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
+Within AAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
 
 ## שליטה ב-AAPS מהשעון
 
-AndroidAPS מותאם להיות *נשלט* על ידי שעוני Android Wear. אם אתם רוצים להזריק בולוס וכו' מהשעון, עליכם להפעיל את "שליטה משעון" בתוך "הגדרות Wear" בבונה התצורה.
+AAPS is designed to be *controlled* by Android Wear watches. אם אתם רוצים להזריק בולוס וכו' מהשעון, עליכם להפעיל את "שליטה משעון" בתוך "הגדרות Wear" בבונה התצורה.
 
 הפונקציות הבאות ניתנות להפעלה מהשעון:
 
@@ -45,7 +45,7 @@ AndroidAPS מותאם להיות *נשלט* על ידי שעוני Android Wear.
 
 There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
-Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
+Ensure notifications from AAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
 
 To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
 
@@ -53,9 +53,9 @@ To get faster to the AAPS menu, do a double tap on your BG. With a double tap on
 
 ![Available watchfaces](../images/Watchface_Types.png)
 
-(Watchfaces-new-watchface-as-of-androidaps-2-8)=
+(Watchfaces-new-watchface-as-of-AAPS-2-8)=
 
-### תצוגות שעון חדשות החל מגרסה AndroidAPS 2.8
+### New watchface as of AAPS 2.8
 
 ![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
 
@@ -63,7 +63,7 @@ To get faster to the AAPS menu, do a double tap on your BG. With a double tap on
 
 ## תצוגת שעות AAPSv2 - מקרא
 
-![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
+![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
 
 A - time since last loop run
 
@@ -165,7 +165,7 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 *Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
 
-AndroidAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
+AAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
 
 Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
 
@@ -188,7 +188,7 @@ When configuring complications on watchface, Wear OS will present and filter the
 
 ### סיבוכים מסופקים על ידי AAPS
 
-AndroidAPS provides following complications:
+AAPS provides following complications:
 
 ![AAPS_Complications_List](../images/Watchface_Complications_List.png)
 
@@ -295,7 +295,7 @@ While charging, it would be helpful if the display could stay “always-on” an
 
 The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “During charging” or “Always on and charging”
 
-The Android developer options enable your watch to stay awake during charging. To make the developer options available, see https://developer.android.com/training/wearables/get-started/debugging. Set the “Stay awake when charging” to “on” in the developer options”.
+The Android developer options enable your watch to stay awake during charging. To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options”.
 
 Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
 
@@ -339,7 +339,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 ### Sony Smartwatch 3
 
 * The Sony Smartwach 3 is one of the most popular watches to be used with AAPS.
-* Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above.
+* Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AAPS 2.7 and above.
 * A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.md).
 
 ## View Nightscout data
@@ -348,4 +348,4 @@ If you are using another looping system and want to *view* your looping detail o
 
 # Pebble
 
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
+Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AAPS then send either SMS or pushover notification.
