@@ -1,6 +1,6 @@
 # xDrip+ ayarları
 
-(xDrip+ ile ilgili ek bilgi için lütfen https://xdrip.readthedocs.io/en/latest/ adresine bakın)
+(For additional information regarding xDrip+, please refer to the [xDrip documentation](https://xdrip.readthedocs.io/en/latest/.)
 
 Henüz kurulu değilse [xDrip+](https://jamorham.github.io/#xdrip-plus)'ı indirin.
 
@@ -34,11 +34,11 @@ Telefonunuz Android 10 çalıştırıyorsa ve xDrip+ ana sürüm ile ilgili soru
    
    ![xDrip+ Temel Ayarlar 2](../images/xDrip_Basic2.png)
 
-* **Ugy.lar-arası ayarlar** (Yayın) AndroidAPS kullanacaksanız ve veriler AndroidAPS'e iletilecekse, Uygulamalar Arası ayarlarda xDrip+'da yayını etkinleştirmeniz gerekir.
+* **InterApp-Settings** (Broadcast) If you are going to use AAPS and the data should be forwarded to i.e. AAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
 
 * Değerlerin eşit olması için `Ekranda Görünen Glikoz Değerini Gönder` seçeneğini etkinleştirmelisiniz.
 
-* AndroidAPS'de `Tedavileri kabul et` ve "Yerel olarak yayınla"yı da etkinleştirdiyseniz, xDrip+ AndroidAPS'den insülin, karbonhidrat ve bazal oran bilgilerini alır ve hipo tahminini vb. tahmin edebilir. Bu daha doğrudur.
+* If you have also activated `Accept treatments` and "Enable local Broadcasts" in AAPS, then xDrip+ will receive insulin, carbs and basal rate information from AAPS and can estimate the hypo prediction etc. Bu daha doğrudur.
    
    ![xDrip+ Temel Ayarlar 3](../images/xDrip_Basic3.png)
 
@@ -46,7 +46,7 @@ Telefonunuz Android 10 çalıştırıyorsa ve xDrip+ ana sürüm ile ilgili soru
 
 ### Alıcı tanımlama
 
-* Yerel yayınla ilgili sorunlar keşfederseniz (AAPS, xDrip+'dan KŞ değerleri almıyor) Ayarlar > Uygulamalar arası ayarlar > Alıcıyı tanımlayın'a gidin ve AndroidAPS derlemesi için `info.nightscout.androidaps` girin (PumpControl yapısını kullanıyorsanız `info.nightscout.aapspumpcontrol` girin!!).
+* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
 * Lütfen Dikkat: Otomatik düzeltme bazen i'yi büyük harfe çevirme eğilimindedir. `info.nightscout.androidaps` yazarken **yalnızca küçük harf kullanmalısınız** (veya PumpControl için `info.nightscout.aapspumpcontrol`). I büyük harf olursa, APPS xDrip+'dan KŞ değerlerini alamaz.
    
    ![xDrip+ Temel Uyg.-Arası Ayarlar Alıcıyı tanımlayın](../images/xDrip_InterApp_NS.png)
