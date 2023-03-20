@@ -341,12 +341,7 @@ Open the hamburger menu, start the Configuration wizard and enter new password w
 
 ## How to reset the password in AAPS v3.x
 
-If you forgot your password:
-Close AAPS.
-Put an empty file named PasswordReset (without any extensions) in 
-phone_main_memory/AAPS/extra directory.
-Restart AAPS. The new AAPS password is the serial number of your pump. The serial for the Omnipod DASH pod is 4241.
-You can change the password via 3 dots menu, configuration wizard, unlock parameters.
+You find the documentation [here](update3_0-reset-master-password).
 
 ## My link/pump/pod is unresponsive (RL/OL/EmaLink…)
 
