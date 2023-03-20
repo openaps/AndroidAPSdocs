@@ -83,7 +83,7 @@ Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gü
 
 #### KŞ uyarı işareti
 
-Android 3.0'dan itibaren, ana ekranda KŞ değerinizin altında bir uyarı sinyali alabilirsiniz.
+Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
 
 *Not*: AAPS hesaplamalar için 30 saate kadar olan süreyi dikkate alır. Dolayısıyla, sorun çözüldükten sonra bile, son düzensiz aralık oluştuktan sonra sarı üçgenin kaybolması yaklaşık 30 saat sürebilir.
 
@@ -99,7 +99,7 @@ Ancak, çok sayıda kopya olduğunda, aşağıdakileri yapmak daha kolay olabili
 
 Kırmızı uyarı işareti, hemen harekete geçmenizi işaret ediyor: Döngünün işini doğru yapmasını engelleyen, yinelenen KŞ verileri alıyorsunuz. Bu nedenle, çözülene kadar döngünüz devre dışı bırakılacaktır.
 
-![Kırmızı KŞ uyarısı](../images/bg_warn_red.png)
+![Red BG warning](../images/bg_warn_red.png)
 
 Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
@@ -112,7 +112,7 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
 * Sarı uyarı sinyali, KŞ'nizin düzensiz zaman aralıklarında geldiğini veya bazı KŞ verilerinin eksik olduğunu gösteriyor.
    
-   ![Sarı KŞ uyarısı](../images/bg_warn_yellow.png)
+   ![Yellow BG warning](../images/bg_warn_yellow.png)
 
 * Genellikle herhangi bir işlem yapmanız gerekmez. Kapalı döngü çalışmaya devam eder!
 
