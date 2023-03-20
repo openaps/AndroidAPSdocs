@@ -83,7 +83,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 #### Avertissement Glycémie
 
-À partir d'Android 3.0, vous pouvez avoir un signal d'avertissement à côté de votre glycémie sur l'écran principal.
+Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
 
 *Remarque* : Jusqu'à 30 heures sont prises en compte pour les calculs AAPS. Donc, même après avoir résolu la cause racine, cela peut prendre environ 30 heures pour que le triangle jaune disparaisse après le dernier interval irrégulier.
 
@@ -99,7 +99,7 @@ Cependant, quand il y a beaucoup de doublons, il peut être plus facile de
 
 Le signe d'alerte rouge vous demande d'être actif immédiatement : vous recevez des glycémies dupliquées, qui empèche la boucle de faire son travail correctement. Par conséquent, votre boucle sera désactivée jusqu'à ce que ce soit résolu.
 
-![Avertissement de glycémie rouge](../images/bg_warn_red.png)
+![Red BG warning](../images/bg_warn_red.png)
 
 Vous devez savoir pourquoi vous avez des Gly dupliquées :
 
@@ -112,7 +112,7 @@ Vous devez savoir pourquoi vous avez des Gly dupliquées :
 
 * Le signal d'alerte jaune indique que votre Gly est arrivée dans des intervalles de temps irréguliers ou qu'il manque des Gly.
    
-   ![Avertissement de glycémie jaune](../images/bg_warn_yellow.png)
+   ![Yellow BG warning](../images/bg_warn_yellow.png)
 
 * Habituellement, vous n'avez rien à faire. La boucle fermée va continuer à fonctionner !
 
