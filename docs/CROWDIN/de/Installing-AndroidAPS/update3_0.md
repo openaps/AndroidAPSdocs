@@ -1,4 +1,4 @@
-# Notwendige Überprüfungen nach Aktualisierung auf AndroidAPS 3.0
+# Necessary checks after update to AAPS 3.0
 
 * **Minimale Android-Version ist 9.0 jetzt.**
 * **Daten werden nicht in die neue Datenbankstruktur überführt.**
@@ -31,21 +31,23 @@
 * Ein neues lokales Profil wird hinzugefügt, dass vom aktuellen Datum an gültig ist.
 * Um das Profil von Nightscout aus zu aktualisieren, musst Du 'Clone' verwenden (den Eintrag, nicht das Profil) und die Änderungen speichern. Du solltest "Profil gültig ab: <aktuelles Datum>" sehen.
 
+(update3_0-reset-master-password)=
+
 ## Masterpasswort zurücksetzen
 * Du kannst nun Dein Master-Passwort zurücksetzen, falls Du es vergessen hast.
 * Dazu muss eine Datei mit dem Namen `PasswordReset` in das `/AAPS/extra` Verzeichnis Deines Telefon-Dateisystems hinzugefügt werden.
-* AndroidAPS neu starten.
+* Restart AAPS.
 * Das neue Passwort wird durch die Seriennummer Deiner aktiven Pumpe gebildet.
 * For Dash: The serial number is always 4241.
 * Für den Omnipod EROS ist es die in der Registerkarte 'POD' als "Laufende Nummer" angegebene Zahl.
 
 ## Warnsignal neben BG
 
-Beginnend mit Android 3.0 erhälst Du möglicherweise ein dreieckiges Warnsignal neben der BG-Ziffer, links auf dem Hauptbildschirm.
+Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
 
-  ![Rotes BG-Warndreieck](../images/bg_warn_red.png)
+  ![Red BG warning](../images/bg_warn_red.png)
 
-  ![Gelbes BG-Warndreieck](../images/bg_warn_yellow.png)
+  ![Yellow BG warning](../images/bg_warn_yellow.png)
 
 For details see [AAPS screens page](Screenshots-bg-warning-sign)
 
@@ -54,4 +56,4 @@ For details see [AAPS screens page](Screenshots-bg-warning-sign)
 
    ![Fehlermeldung: Daten aus verschiedenen Pumpen](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](Config-Builder-pump). Wechsel die Pumpe zu einer virtuellen Pumpe und zurück zu Deiner aktuellen Pumpe. Dadurch wird der Pumpenzustand zurückgesetzt.
+To resolve this issue go to [config builder](Config-Builder-pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.
