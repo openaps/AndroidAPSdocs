@@ -154,7 +154,7 @@ If you want to set an internal link within the AndroidAPS documentation, please 
     This is a note.
     
 
-### Warnings
+### Advertencias
 
     ```{admonition} Strong Warning
     :class: warning

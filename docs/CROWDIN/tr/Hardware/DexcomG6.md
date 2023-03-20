@@ -1,6 +1,6 @@
 # Dexcom G6
 
-## Önce temel bilgiler
+## Ön Bilgi
 
 -   [Burada](../Hardware/GeneralCGMRecommendation.md) olduğu gibi genel hijyen ve CGM sensör ayar tavsiyesine uyun.
 -   2018 sonbahar/sonu sonra üretilen G6 vericileri için lütfen [en son gecelik derleme xDrip+ sürümlerinden](https://github.com/NightscoutFoundation/xDrip/releases) birini kullandığınızdan emin olun. Bu vericiler yeni bir firmware yazılımına sahiptir ve xDrip+'ın en son kararlı sürümü (2019/01/10) bununla istenildiği gibi çalışmaz.

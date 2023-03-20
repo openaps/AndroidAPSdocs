@@ -11,7 +11,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 * [Verlorener Keystore](troubleshooting_androidstudio-lost-keystore)
 * [Troubleshooting AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 
-### Settings
+### Einstellungen
 * [Profile](Profiles-troubleshooting-profile-errors)
 
   ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)

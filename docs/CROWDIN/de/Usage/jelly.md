@@ -34,7 +34,7 @@ Gehe wie folgt vor, um bei Android 7.0 zu bleiben:
 
 ![Jelly Einstellungen](../images/jelly_02.jpg)
 
-### Settings
+### Einstellungen
 
 * Verwende das Jelly nur zum Loopen.
 * Aktiviere WLAN nur, um xDrip, AAPS und WearOS zu installieren. Ansonsten bleibt das WLAN aus. 

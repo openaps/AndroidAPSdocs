@@ -1,10 +1,10 @@
-# EOPatch2 Instruction Manual
+# EOPatch2 Anleitung
 
-**Planned but not commited for AndroidAPS 3.2 (next version)!**
+**Geplant, aber nicht für AndroidAPS 3.2 vorgesehen (nächste Version)!**
 
-The patch requires the use of rapid-acting U-100 type insulin, such as NovoRapid or Humalog. Use a rapid-acting insulin that is suitable for you according to your doctor’s prescription and inject the prescribed dosage.
+Der Patch erfordert die Verwendung von schnell wirkendem U-100 Insulin wie NovoRapid oder Humalog. Verwende ein schnell wirkendes Insulin, das für Dich nach dem Rezept Deines Arztes geeignet ist und verwende die vorgeschriebene Dosierung.
 
-The smallest injectable dose of insulin when using the patch is 0.05 U. The Profile BAS should therefore be set at a minimum value of 0.05 U/hr or more and an interval of 0.05 U/hr, as otherwise there may be an error between the estimated total infusion amount in the Profile and the actual infusion amount in the patch. Gleichermaßen muss der Bolus mit einem Mindestinfusionsvolumen von 0,05 U gesetzt und infusioniert werden.
+Die kleinste injizierbare Dosis Insulin bei Verwendung des Patches beträgt 0,05 U. Der Profil-BAS sollte daher auf einen Mindestwert von 0,05 U/Stunde oder mehr und ein Intervall von 0,05 U/Std. eingestellt werden, da sonst ein Fehler zwischen der geschätzten Gesamtinfusionsmenge im Profil und der tatsächlichen Infusionsmenge im Patch auftreten kann. Gleichermaßen muss der Bolus mit einem Mindestinfusionsvolumen von 0,05 U gesetzt und infusioniert werden.
 
 ## Pumpen-Einrichtung
 1. Klicke auf dem AndroidAPS Startbildschirm oben links auf das Hamburger Menü und wähle den Konfigurations-Generator aus.
@@ -14,7 +14,7 @@ The smallest injectable dose of insulin when using the patch is 0.05 U. The Prof
 
 ![Bild1](../images/EOPatch/Bild1.png) ![Bild2](../images/EOPatch/Bild2.png)
 
-## Settings
+## Einstellungen
 Wähle EOPATCH2 oben auf dem Startbildschirm, um zum EOPATCH2-Tab zu gelangen.
 
 Wählen Sie das Menü EOPatch2 Einstellungen, indem Sie auf die drei Punkte in der oberen rechten Ecke klicken.
@@ -24,7 +24,7 @@ Das Menü EOPatch2 Einstellungen bietet ein Menü zur Einstellung von 3 Benachri
 ### Insulin-Reservoir fast leer
 Eine Warnung erscheint, wenn die Menge an Insulin, die im Reservoir verbleibt, den eingestellten Wert oder weniger erreicht. Es kann von 10 auf 50 IE in 5 IE Inkrementen eingestellt werden.
 
-### Patch expiration Reminder
+### Erinnerung an POD-Ablauf
 Dies ist eine Mahnung um Dich über die verbleibende Zeit vor Ablauf des aktuellen Patches zu informieren. Es kann von 1 auf 24 Stunden in 1 Stunde Stufen eingestellt werden. Der erste Einstellungswert beträgt 4 Stunden.
 
 ### Patch Ton zur Erinnerung
@@ -41,118 +41,118 @@ Wähle EOPATCH2 oben auf dem Startbildschirm aus und klicke auf die Schaltfläch
 ![Bild4](../images/EOPatch/Bild4.png)
 
 ### Verbinde den Patch
-Insert the syringe needle into the insulin inlet on the patch and then slowly push the piston to inject the insulin. When insulin is filled with more than 80U, the patch makes a booting sound (1 buzzer) and boots. After confirming the buzzer sound, click the START PAIRING button on the screen.
+Führe die Spritzennadel in den Insulineinlass des Patches und drücke dann langsam den Kolben herunter, um das Insulin einzufüllen. Wenn mehr als 80 Einheiten eingefüllt sind, wird der Patch mit einem summenden Geräusch das Hochfahren bestätigen und starten. Nach dem Bestätigen des Summers, tippe auf den 'START PAIRING'-Button auf dem Bildschirm.
 
 [Warning]
 
-- Do not turn the needle action lever until instructed. It can cause serious problems during injection or safety checks otherwise.
-- The amount of insulin that can be injected into the patch is 80~200U. If you inject less than 80U into the patch initially, the patch will not work.
-- Take the insulin to be put into the patch from the refrigerator and leave it at room temperature for 15 to 30 minutes beforehand. The temperature of the insulin to be injected must be at least 10°C.
+- Löse die Nadel erst dann aus, wenn es die Anweisung sagt. Es kann sonst zu ernsthaften Problemen beim Einführen der Nadel oder bei den Sicherheitsprüfungen kommen.
+- Es können zwischen 80 und 200 Einheiten in den Patch gefüllt werden. Der Patch wird mit weniger als 80 Einheiten nicht funktionieren.
+- Nimm das Insulin für den Patch 15-30 Minuten vor dem Befüllen aus dem Kühlschrank, sodass es Raumtemperatur annehmen kann. Das Insulin muss mindestens 10°C warm sein.
 
 ![Bild5](../images/EOPatch/Bild5.png)
 
-### patch pairing
-The Patch pairing screen will be displayed, and pairing will be attempted automatically. If communication is successful, the Bluetooth pairing request notification appears. Click OK and when the Bluetooth pairing request notification appears a second time with the authentication code, select OK again.
+### Pod koppeln
+Der Kopplungsdialog wird angezeigt und der Kopplungsversuch wird automatisch gestartet. War die Kommunikation erfolgreich, erscheint die Bluetooth-Koppelungsanfrage. Bestätige die Koppelungsanfrage mit OK und im Anschluss ein zweites Mal mit dem entsprechenden Code.
 
 [Warning]
 
-- For pairing, the patch and the smartphone must be located within 30 cm of each other.
-- After the patch booting is completed, the patch will beep every 3 minutes until the pairing is complete.
-- After booting the patch, the patch application must be completed via the app within 60 minutes. If the application cannot be completed within 60 minutes, the patch should be discarded.
+- Für die Koppelung dürfen der Patch und das Smartphone maximal 30 cm entfernt voneinander sein.
+- Nachdem der Patch gestartet ist, wird er bis zum Abschluss der Koppelung alle 3 Minuten piepen.
+- Die Aktivierung des Patches muss innerhalb von 60 Minuten über die App abgeschlossen sein. Sollte der Vorgang länger dauern, sollte der Patch nicht mehr verwendet werden.
 
 ![Bild6](../images/EOPatch/Bild6.png) ![Bild7](../images/EOPatch/Bild7.png) ![Bild8](../images/EOPatch/Bild8.png)
 
 
-### patch preparation
-After removing the adhesive tape of the patch, check if the needle is sticking out. If there are no problems with the patch, click NEXT.
+### Patch vorbereiten
+Nach dem Entfernen des Abdeckpapiers des Patches, prüfe, ob die Nadel herausragt. Tippe auf 'WEITER', wenn alles OK aussieht.
 
 ![Bild9](../images/EOPatch/Bild9.png)
 
-### Patch attachment
-Insulin should be injected in a spot with subcutaneous fat but few nerves or blood vessels, so it is recommended to use the abdomen, arm, or thigh for the patch attachment site. Choose a patch attachment site and apply the patch after disinfecting the location.
+### Patch setzen
+Insulin sollte ins Unterhautfettgewebe injiziert werden, da es dort wenige Nerven oder Blutgefäße gibt. Es wird empfohlen den Patch am Bauch, Arm oder Oberschenkel zu setzen. Wähle eine Setzstelle und setze den Patch, nachdem Du den Bereich desinfiziert hast.
 
 [Warning]
 
-- Make sure to straighten the side of the patch tape attached to the body evenly, so that the patch adheres completely to the skin.
-- If the patch does not stick completely, air may enter between the patch and the skin, which can weaken the adhesive strength and waterproof effect of the patch.
+- Streiche das Patchpflaster am Körper glatt, sodass der Patch vollständig auf der Haut klebt.
+- Wenn der Patch nicht vollständig aufliegt, kann Luft zwischen Patch und Haut kommen, die die Klebfestigkeit und die Wasserdichtigkeit des Patches beeinträchtigen kann.
 
 ![Bild10](../images/EOPatch/Bild10.png)
 
-### Safety Check
-When patching is complete, touch Start Safety Check. When the safety check is completed, the patch will beep once.
+### Sicherheitsprüfung
+Wenn das Patchen abgeschlossen ist, tippe auf 'Starte Sicherheitsprüfung'. Wenn die Sicherheitsüberprüfung abgeschlossen ist, wird der Patch einmal piepen.
 
 [Warning]
 
-- For safe use, do not turn the needle action lever until the safety check has been completed.
+- Aus Sicherheitsgründe drehe den Hebel zur Nadelauslösung nicht, bevor die Sicherheitsprüfung abgeschlossen ist.
 
 ![Bild11](../images/EOPatch/Bild11.png) ![Bild12](../images/EOPatch/Bild12.png)
 
 
-### Inserting the needle
-The needle is inserted by holding around the patch and turning the needle action lever more than 100° in the upward direction of the lever. There is a buzzer sound when the needle is inserted correctly. Turn the needle action lever further clockwise to release the lever. Click NEXT.
+### Einführen der Nadel
+Die Nadel wird eingeführt, wenn der Patch festgehalten wird und der Hebel des Nadelauslösers um mehr als 100° vom Patch weg nach oben gedreht wird. Das korrekte Einführen der Nadel wird mit einem summenden Geräusch bestätigt. Drehe den Hebel im Uhrzeigersinn weiter, um den Auslöser zu lösen. Tippe auf 'WEITER'.
 
-[Caution]
+[Achtung]
 
-- If you go to the next step without the buzzer sounding, a needle insertion error warning will appear.
+- Wenn Du an dieser Stelle weiter machst, bevor Du ein Piepen oder Summen gehört hast, wird es eine Fehlermeldung zur Nadeleinführung geben.
 
-## Discarding the patch
-Patches must be replaced in the case of low insulin levels, usage expiration, and defects. The recommended usage period for each patch is 84 hours after booting the patch.
+## Den Patch entfernen
+Bei zu geringem Insulinfüllstand, abgelaufener Nutzungsdauer oder anderen Defekten, muss der Patch entfernt werden. Die empfohlene Nutzungsdauer für jeden Patch beträgt 84 Stunden nach dem Starten des Patches.
 
-### Discarding the patch
-Select EOPATCH2 at the top of the home screen and click the DISCARD/CHANGE PATCH button at the bottom. On the next screen, click the DISCARD PATCH button. A dialog box appears to confirm once more and if you select the DISCARD PATCH button, the disposal is completed.
+### Den Patch entfernen
+Wähle EOPATCH2 oben auf dem Startbildschirm aus und tippe auf den PATCH ENTFERNEN/TAUSCHEN-Button unten. Tippe auf dem nächsten Bildschirm auf den ENTFERNE PATCH-Button. Es erscheint ein Dialogfenster, um das Entfernen erneut zu bestätigen. Danach ist der Vorgang abgeschlossen und der Patch entfernt.
 
 ![Bild13](../images/EOPatch/Bild13.png) ![Bild14](../images/EOPatch/Bild14.png) ![Bild15](../images/EOPatch/Bild15.png) ![Bild16](../images/EOPatch/Bild16.png)
 
 ## Insulinlieferung stoppen und fortsetzen
-Suspending insulin delivery also cancels both extended bolus and temporary basal. When resuming insulin delivery, the canceled extended bolus and temporary basal will not be resumed. And when insulin delivery is suspended, the patch will give a sound every 15 minutes.
+Das Unterbrechen der Insulinabgabe stoppt sowohl eine temporäre Basalrate als auch einen verlängerten Bolus. Bei der Wiederaufnahme der Insulinabgabe werden eine zuvor gestoppte temporäre Basalrate oder ein verlängerte Bolus nicht wieder fortgesetzt. Bei unterbrochener Insulinabgabe gibt der Patch alle 15 Minuten einen Hinweiston ab.
 
-### Suspending insulin delivery
-Select EOPATCH2 at the top of the home screen and click the SUSPEND button at the bottom right. When you select CONFIRM in the confirmation box, a time selection box appears. If you select the CONFIRM button after selecting the time, the insulin delivery will be suspended for the set amount of time.
+### Insulinabgabe unterbrechen
+Wähle oben auf dem Startbildschirm EOPATCH2 aus und tippe auf den UNTERBRECHEN-Button unten rechts. Wenn Du auf BESTÄTIGEN im nächsten Dialog tippst, öffnet sich ein Zeitauswahl-Fenster. Wenn Du nach der Auswahl der Dauer der Unterbrechung auf BESTÄTIGEN tippst, wird die Insulinabgabe für diesen Zeitraum ausgesetzt.
 
 ![Bild17](../images/EOPatch/Bild17.png) ![Bild18](../images/EOPatch/Bild18.png) ![Bild19](../images/EOPatch/Bild19.png)
 
 
-### Resuming insulin delivery
-Select EOPATCH2 at the top of the home screen and click the RESUME button at the bottom right. Insulin delivery will resume by selecting CONFIRM in the confirmation dialog box.
+### Insulinabgabe fortsetzen
+Wähle oben auf dem Startbildschirm EOPATCH2 aus und tippe auf den FORTSETZEN-Button unten rechts. Nach dem Tippen auf BESTÄTIGEN in der dann erscheinen Dialogbox, wird die Insulinabgabe wieder gestartet.
 
 ![Bild20](../images/EOPatch/Bild20.png) ![Bild21](../images/EOPatch/Bild21.png)
 
-## Alarms/Warnings
+## Alarme/Warnungen
 
 ### Alarm
 
-Alarms are issued for emergency situations of the highest priority and require immediate action. The alarm signal does not disappear or time out until it is acknowledged. An alarm occurs when there is a problem with the patch being used, so there may be cases where the patch in use needs to be discarded and replaced with a new patch. The warning is displayed as a dialog box and switching to another screen is not possible until processing is completed.
+Alarme werden in Notfallsituationen ausgelöst, haben die höchste Priorität und erfordern sofortiges Handeln. Der Alarmton wird so lange abgespielt werden, bis er manuell bestätigt wird. Ein Alarm deutet auf ein Problem mit dem aktiven Patch hin. Es kann also sein, dass dieser entweder entfernt und/oder durch einen neuen Patch ersetzt werden muss. Die Warnung wird als Dialogfenster angezeigt. Ein Wechseln auf einen Bildschirm ist erst möglich, wenn Du entsprechend reagiert hast.
 
 ![Bild22](../images/EOPatch/Bild22.png) ![Bild23](../images/EOPatch/Bild23.png)
 
-The different types of alarms are explained below.
+Die verschiedenen Alarmarten werden im Folgenden beschrieben.
 
-| Alarms                     | Explanation                                                                                                                                                                                                         |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir            | Occurs when the patch’s reservoir runs out of insulin.                                                                                                                                                              |
-| Patch expired              | Occurs when the patch usage time has expired, and no further insulin injections are possible.                                                                                                                       |
-| Occlusion                  | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
-| Power on self-test failure | Occurs when the patch finds an unexpected error during the post-boot self-test process.                                                                                                                             |
-| Inappropriate temperature  | Occurs when the patch is outside the normal operating temperature range during patch application and use. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition. |
-| Needle insertion Error     | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
-| Patch battery Error        | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                                                            |
-| Patch activation Error     | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                                             |
-| Patch Error                | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                                            |
+| Alarme                           | Beschreibung                                                                                                                                                                                      |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Reservoir leer                   | Tritt auf, wenn das Insulin im Reservoir des Patches zu Ende geht.                                                                                                                                |
+| Patch abgelaufen                 | Tritt auf, wenn die Nutzungsdauer des Patches abgelaufen ist. Es kann dann kein weiteres Insulin abgegeben werden.                                                                                |
+| Verstopfung                      | Tritt auf, wenn der Insulineinlass des Patches verstopft ist.                                                                                                                                     |
+| Selbsttestfehler beim Starten    | Tritt auf, wenn ein unerwarteter Fehler nach dem Selbsttest des Patches aufgetreten ist.                                                                                                          |
+| Ungeeignete Temperatur           | Tritt auf, wenn der Patch während des Setzens oder der Nutzung nicht im zugelassenen Temperaturbereich ist.  Um den Alarm zu stoppen, muss der Patch eine Temperatur zwischen 4.4 und 37°C haben. |
+| Fehler beim Einführen der Nadeln | Tritt auf, wenn das Einführen der Nadel beim Setzen des Patches nicht richtig funktioniert hat. Prüfe, ob der Nadeleinsatz des Patches und der Auslösehebel parallel zueinander sind.             |
+| Patch-Batteriefehler             | Tritt auf, kurz bevor die Batterie des Patches vollständig leer ist.                                                                                                                              |
+| Patch-Aktivierungsfehler         | Tritt auf, wenn die App die Aktivierung nicht innerhalb von 60 Minuten nach dem Starten des Patches abschliessen kann.                                                                            |
+| Patch-Fehler                     | Tritt auf, wenn ein unerwarteter Fehler beim Aufkleben oder der Nutzung des Patches festgestellt wird.                                                                                            |
 
-### Warning
+### Warnung
 
-A warning occurs in a medium or low-priority situation. When a warning occurs, it is displayed as a notification in the Overview screen.
+Eine Warnung tritt in niedrig- und mittel-prioren Situationen auf. Eine Warnung wird als Benachrichtigung in der Übersicht angezeigt.
 
 ![Bild24](../images/EOPatch/Bild24.png)
 
-The different types of warnings are explained below.
+Die verschiedenen Warnarten werden unten erklärt.
 
-| Warnings                     | Explanation                                                                                                                           |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| End of insulin suspend       | Occurs when the time set by the user has elapsed after the insulin infusion suspension has been completed.                            |
-| Low reservoir                | Occurs when the remaining amount of insulin in the patch is below the set amount.                                                     |
-| Patch operating life expired | Occurs when the patch usage period is over.                                                                                           |
-| Patch will expire soon       | Occurs 1 hour before the patch must be discarded.                                                                                     |
-| Incomplete Patch activation  | Occurs when more than 3 minutes have elapsed due to an interruption during patch application in the stage after pairing is completed. |
-| Patch battery low            | Occurs when the patch's battery is low.                                                                                               |
+| Warnungen                        | Beschreibung                                                                                                   |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Ende der Insulinunterbrechung    | Tritt auf, wenn der vorher eingegebene Zeitraum für eine Unterbrechung der Insulinabgabe abgelaufen ist.       |
+| Niedriger Reservoirstand         | Tritt auf, wenn der Restfüllstand des Patches den vordefinierten Wert unterschreitet.                          |
+| Patch-Nutzungsdauer abgelaufen   | Tritt auf, wenn die Nutzungsdauer des Patches abgelaufen ist.                                                  |
+| Patch läuft in Kürze ab          | Tritt eine Stunde bevor der Patch entfernt werden muss auf.                                                    |
+| Unvollständige Patch-Aktivierung | Tritt auf, wenn durch eine Unterbrechung im Setzprozess nach dem Koppeln mehr als drei Minuten vergangen sind. |
+| Niedriger Patch-Batteriestand    | Tritt auf, wenn der Batteriestand des Patches niedrig ist.                                                     |
 
