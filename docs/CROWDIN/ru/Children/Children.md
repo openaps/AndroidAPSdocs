@@ -22,7 +22,7 @@ AndroidAPS предлагает несколько опций для удале�
 - [xDrip+](../Configuration/xdrip.md) in follower mode (mainly BG values and **alarms**)
 - [Sugarmate](https://sugarmate.io/) or [Spike](https://spike-app.com/) on iOS (mainly BG values and **alarms**)
 
-## Things to consider
+## Важные факторы
 
 - Setting the correct [treatment factors](FAQ-how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
 - Настройки должны быть одинаковыми в AAPS и NSClient.
