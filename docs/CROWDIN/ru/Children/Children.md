@@ -12,11 +12,11 @@ AndroidAPS предлагает несколько опций для удале�
 - Родители могут дистанционно следить за всеми необходимыми данными, такими как уровень глюкозы, активные углеводы, активный инсулин и т. д. с помощью приложения **NSClient** на телефоне. Настройки должны быть одинаковыми в AAPS и NSClient.
 - Родители оповещаются с помощью приложения **xDrip в режиме слежения follower** на своем телефоне.
 - Remote control of AndroidAPS using [SMS Commands](../Children/SMS-Commands.md) secured by two-factor authentication.
-- Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) for further details.
+- Дистанционное управление через приложение NSClient рекомендуется только в том случае, если синхронизация работает хорошо (т. е. вы не видите нежелательных изменений данных, таких как спонтанная модификация TT, TBR и т. д.,) см. [примечания к выпуску версии 2.8.1.1](Releasenotes-important-hints-2-8-1-1) для получения более подробной информации.
 
-## Tools and apps for remote monitoring
+## Инструменты и приложения для удаленного мониторинга
 
-- [Nightscout](https://nightscout.github.io/) in web browser (mainly data display)
+- [Nightscout](https://nightscout.github.io/) в веб-браузере (главным образом отображение данных)
 - NSClient app is a stripped down version of AAPS capable of following somebody, making profile switches, setting TTs and entering carbs. There are 2 apps:  [NSClient & NSClient2 to download](https://github.com/nightscout/AndroidAPS/releases/). The only difference is the app name. This way you can install the app twice on the same phone, to be able to follow 2 different persons/nightscouts with it.
 - Dexcom follow if you are using original Dexcom app (BG values only)
 - [xDrip+](../Configuration/xdrip.md) in follower mode (mainly BG values and **alarms**)
