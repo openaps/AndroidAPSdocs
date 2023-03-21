@@ -1,4 +1,4 @@
-# Necessary checks after update to AAPS 3.0
+# AAPS 3.0 güncellemesinden sonra gerekli kontroller
 
 * **Minimum Android sürümü artık 9.0'dır.**
 * **Veriler yeni veritabanına taşınmaz.**
@@ -36,24 +36,24 @@
 ## Ana parolayı sıfırla
 * Unutmanız durumunda artık ana şifrenizi sıfırlayabilirsiniz.
 * Telefonunuzun dosya sisteminde `/AAPS/extra` dizinine `PasswordReset` adlı bir dosya eklemeniz gerekiyor.
-* Restart AAPS.
+* AAPS'i yeniden başlatın.
 * Yeni şifre, aktif pompanızın seri numarası olacaktır.
 * Dash için: Seri numarası her zaman 4241'dir.
 * EROS için ayrıca POD sekmesinde "Sıra Numarası" olarak listelenir
 
 ## KŞ'nin altındaki uyarı sinyali
 
-Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+Android 3.0'dan itibaren, ana ekranda KŞ değerinizin altında bir uyarı sinyali alabilirsiniz.
 
-  ![Red BG warning](../images/bg_warn_red.png)
+  ![Kırmızı KŞ uyarısı](../images/bg_warn_red.png)
 
-  ![Yellow BG warning](../images/bg_warn_yellow.png)
+  ![Sarı KŞ uyarısı](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](Screenshots-bg-warning-sign)
+Ayrıntılar için [AAPS ekranları sayfasına](Screenshots-bg-warning-sign) bakın
 
 
 ## Hata mesajı: Farklı pompadan gelen veriler
 
    ![Hata mesajı: Farklı pompadan gelen veriler](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](Config-Builder-pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.
+Bu sorunu çözmek için [Konfigürasyon ayarları](Config-Builder-pump)'na gidin. Pompayı sanal pompa ile değiştirin ve daha sonra gerçek pompanıza geri dönün. Bu şekilde pompa durumu sıfırlanacaktır.
