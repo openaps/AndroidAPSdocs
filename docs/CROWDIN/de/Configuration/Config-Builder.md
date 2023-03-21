@@ -4,11 +4,11 @@ Abhängig von Deinen Einstellungen kannst Du den Konfigurationsgenerator über e
 
 ![Konfigurations-Generator öffnen](../images/ConfBuild_Open_AAPS30.png)
 
-Im Reiter “Konfigurations-Generator” (KONF) kannst du fast alle AAPS-Funktionen konfigurieren. Die Auswahlfelder links (A) aktivieren die gewählte Funktion, die Auswahlfelder rechts (C) legen fest, ob die Funktion als Tab (E) angezeigt wird oder nicht. Falls die rechte Box nicht aktiviert ist, sind die Funktionen über das Hamburger-Menü (D) oben links am Bildschirm erreichbar.
+Im Reiter “Konfigurations-Generator” (KONF) kannst du fast alle AAPS-Funktionen konfigurieren. The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AAPS. Falls die rechte Box nicht aktiviert ist, sind die Funktionen über das Hamburger-Menü (D) oben links am Bildschirm erreichbar.
 
 Falls zusätzliche Einstellungen innerhalb der Funktion möglich sind, können sie über das Zahnrad (B) aufgerufen werden.
 
-**Erste Konfiguration:** Seit AAPS 2.0 führt dich ein Einrichtungsassistent durch die Einrichtung von AndroidAPS. Drücke das 3-Punkte-Menü (F) oben rechts am Bildschirm und wähle "Einrichtungsassistent", um diesen zu starten.
+**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AAPS. Drücke das 3-Punkte-Menü (F) oben rechts am Bildschirm und wähle "Einrichtungsassistent", um diesen zu starten.
 
 ![Konfigurations-Generator - Checkboxen und Zahnrad](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
@@ -101,7 +101,7 @@ Details werden auf der separaten [Profil-Helfer-Seite](../Configuration/profileh
 
 * Die Insulinwirkdauer (DIA) ist nicht für jeden gleich. Daher musst Du es selbst für Dich austesten. 
 * Unter fünf Stunden darf der Wert aber nicht liegen.
-* Für viele Menschen mit Diabetes, die ultra-schnell wirkende Insuline wie Fiasp nutzen, gibt es 3 - 4 Stunden nach der Insulingabe nahezu keinen spürbaren Effekt mehr, auch wenn dann rechnerisch noch 0.0xx Einheiten vorhanden sind. Die verbleibende Menge kann aber bei Sport und anderen Aktivitäten doch noch einen Einfluss haben. Daher nutzt AAPS eine minimale Wirkdauer von 5 Stunden.
+* Für viele Menschen mit Diabetes, die ultra-schnell wirkende Insuline wie Fiasp nutzen, gibt es 3 - 4 Stunden nach der Insulingabe nahezu keinen spürbaren Effekt mehr, auch wenn dann rechnerisch noch 0.0xx Einheiten vorhanden sind. Die verbleibende Menge kann aber bei Sport und anderen Aktivitäten doch noch einen Einfluss haben. Therefore, AAPS uses minimum 5h as DIA.
 * Im Abschnitt zu den Insulinprofilen auf [dieser Seite](Screenshots-insulin-profile) findest Du weitere Informationen dazu.
 
 ### Unterschiede der Insulintypen
@@ -154,7 +154,7 @@ Hier kannst du auswählen, aus welcher Quelle AAPS die BZ-Werte empfangen soll. 
 ![Konfigurations-Generator - BZ-Quelle](../images/ConfBuild_BGSource_AAPS30.png)
 
 * [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) - Wähle zusätzlich in den Einstellungen “Sende BZ-Werte zu xDrip+”, wenn du die xDrip+ Alarme nutzen willst.
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Kann nicht als Empfänger für Dexcom G6 ab AAPS 3.0 verwendet werden (siehe [Versionshinweise](Releasenotes-important-hints-3-0-0) für Details.
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - nur Version 4.15.57 und neuer werden unterstützt
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
@@ -222,7 +222,7 @@ Wähle den gewünschten APS-Algorithmus für Therapie-Anpassungen. Die Details z
 
 * AAPS wertet laufend alle verfügbaren Daten (IOB, COB, BZ-Wert) aus und macht dir bei Bedarf Behandlungsvorschläge, wie du deine Therapie anpassen solltest. 
 * Die Vorschläge werden nicht automatisch (wie im Closed Loop) ausgeführt, sondern müssen manuell in die Pumpe eingegeben werden. Wenn Du eine kompatible Pumpe (Dana R/RS oder Accu Chek Combo) verwendest, kann dies auch über eine Schaltfläche in AndroidAPS geschehen. 
-* Diese Option ist zum Kennenlernen der Funktionsweise gedacht oder falls du eine nicht unterstützte Pumpe verwendest.
+* This option is for getting to know how AAPS works or if you are using an unsupported pump.
 
 (Config-Builder-closed-loop)=
 
@@ -248,7 +248,7 @@ Wähle den gewünschten APS-Algorithmus für Therapie-Anpassungen. Die Details z
 
 ## Ziele (objectives - Lernprogramm)
 
-AndroidAPS hat eine Reihe an Zielen (objectives), die Du nach und nach erfüllen musst. Dies soll dich sicher durch die Einrichtung eines Closed Loop Systems führen. Das garantiert, dass du alles korrekt eingestellt hast und auch verstehst, was das System genau macht. Nur so kannst du dem System vertrauen.
+AAPS has a leraning program (objectives) that you have to fulfill step by step. Dies soll dich sicher durch die Einrichtung eines Closed Loop Systems führen. Das garantiert, dass du alles korrekt eingestellt hast und auch verstehst, was das System genau macht. Nur so kannst du dem System vertrauen.
 
 Du solltest regelmäßig deine Einstellungen (inklusive deiner Fortschritte in den objectives) [exportieren](../Usage/ExportImportSettings.md). Dann kannst du sie einfach importieren, wenn du später einmal Dein Smartphone austauschen musst (neues Gerät, Displayschaden...).
 
@@ -303,11 +303,11 @@ Stelle die Werte für die drei Buttons im Dialog 'Katheterwechsel' (Aktionen Tab
 
 #### Zielbereich für die Grafikanzeige
 
-Wähle die Ober- und Untergrenze des grün hinterlegten Zielbereichs im Diagramm auf der Startseite und auf der Smartwatch. Dies dient nur der Anzeige und ist nicht der Zielwert für Deinen Blutzucker. Beispiel: 70 - 180 mg/dl oder 3,9 - 10 mmol/l
+Choose the high and low marks for the BG-graph on AAPS overview and smart watch. Dies dient nur der Anzeige und ist nicht der Zielwert für Deinen Blutzucker. Beispiel: 70 - 180 mg/dl oder 3,9 - 10 mmol/l
 
 #### Kurze Tab-Überschriften
 
-Wähle, ob die Titel der Tabs lang (z.B. Aktionen, Lokales Profil, Behandlungen) oder kurz (z.B. AKT, LP, BEH) angezeigt werden sollen.
+Choose wether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
 #### Zeige Feld für Notizen in den Behandlungsdialogen
 
@@ -338,13 +338,13 @@ Benutzerdefinierte Automatisierung von Aufgaben ("wenn - dann - sonst"). Weitere
 
 ### SMS Kommunikator
 
-Der SMS-Kommunikator erlaubt die Fernsteuerung einiger AndroidAPS Funktionen via SMS. Weitere Informationen zum Setup findest Du auf der Seite [SMS-Befehle](../Children/SMS-Commands.md).
+Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.md) for more setup information.
 
 ### Essen
 
 Zeigt die im Nahrungsmittel-Editor erfassten Einträge an. Weitere Informationen zur Einrichtung der Nahrungsmitteldatenbank findest Du im [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods).
 
-Hinweis: Die Einträge können nicht im AndroidAPS-Rechner verwendet werden. (reine Anzeigefunktion)
+Note: Entries cannot be used in the AAPS calculator. (reine Anzeigefunktion)
 
 (Config-Builder-wear)=
 
@@ -367,7 +367,7 @@ Zeigt Loop Information in deinem xDrip+ Watchface (falls du nicht das AAPS/[AAPS
 
 ### Nightscout-Client
 
-* Ns-Client Synchronisierung deiner AndroidAPS-Daten mit Nightscout einrichten.
+* Setup sync of your AAPS data with Nightscout.
 * Mit einem Klick auf das [Zahnrad](Preferences-nsclient) kannst Du direkt in die Einstellungen springen und diese anpassen.
 
 ### Wartung
