@@ -4,11 +4,11 @@ Ayarlarınıza bağlı olarak, ekranın üst kısmındaki bir sekmeden veya hamb
 
 ![Konfigürasyon ayarlarını açmak](../images/ConfBuild_Open_AAPS30.png)
 
-Konfigürasyon ayarları (KONF), modüler özellikleri açıp kapattığınız sekmedir. The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AAPS. Sağ kutu aktif değilse ekranın sol üst köşesindeki hamburger menüsünü (D) kullanarak fonksiyona ulaşabilirsiniz.
+Konfigürasyon ayarları (KONF), modüler özellikleri açıp kapattığınız sekmedir. Sol taraftaki kutular (A) hangisini kullanacağınızı seçmenize izin verir, sağ taraftaki kutular (C) bunları AAPS'de bir sekme (E) olarak görmenizi sağlar. Sağ kutu aktif değilse ekranın sol üst köşesindeki hamburger menüsünü (D) kullanarak fonksiyona ulaşabilirsiniz.
 
 Modül içinde ek ayarlar mevcut olduğunda, sizi tercihler içindeki belirli ayarlara götürecek olan dişli çarka (B) tıklayabilirsiniz.
 
-**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AAPS. Ekranın sağ üst tarafındaki 3 nokta menüsüne basın (F) ve kullanmak için 'Kurulum Sihirbazı'nı seçin.
+**İlk yapılandırma:** AAPS 2.0'dan bu yana bir Kurulum sihirbazı, AAPS'i kurma sürecinde size rehberlik eder. Ekranın sağ üst tarafındaki 3 nokta menüsüne basın (F) ve kullanmak için 'Kurulum Sihirbazı'nı seçin.
 
 ![Konfigürasyon ayarları kutusu ve dişli çark](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
@@ -101,7 +101,7 @@ Ayrıntılar, [profil yardımcısı sayfasında](../Configuration/profilehelper.
 
 * İES her kişi için aynı değildir. Bu yüzden kendiniz test etmelisiniz. 
 * Ancak her zaman en az 5 saat olmalıdır.
-* Fiasp gibi ultra hızlı insülin kullanan birçok insan için, kural olarak 0.0xx ünite mevcut olsa bile, 3-4 saat sonra pratikte gözle görülür bir etkisi yoktur. Bu kalan miktar, örneğin spor sırasında hala görülebilir. Therefore, AAPS uses minimum 5h as DIA.
+* Fiasp gibi ultra hızlı insülin kullanan birçok insan için, kural olarak 0.0xx ünite mevcut olsa bile, 3-4 saat sonra pratikte gözle görülür bir etkisi yoktur. Bu kalan miktar, örneğin spor sırasında hala görülebilir. Bu nedenle, AAPS, İES olarak minimum 5saat kullanır.
 * Bununla ilgili daha fazla bilgiyi [bu sayfanın](Screenshots-insulin-profile) İnsülin Profili bölümünde okuyabilirsiniz.
 
 ### İnsülin tipi farklılıkları
@@ -222,7 +222,7 @@ Terapi ayarlamaları için istenen APS algoritmasını seçin. OpenAPS(OAPS) sek
 
 * AAPS, mevcut tüm verileri (AİNS, AKARB, KŞ...) sürekli olarak değerlendirir ve gerekirse tedavinizi nasıl ayarlayacağınız konusunda tedavi önerilerinde bulunur. 
 * (kapalı döngüde olduğu gibi) Öneriler otomatik olarak yürütülmeyecektir. Uyumlu bir pompa (Dana R/RS veya Accu Chek Combo) kullanıyorsanız, pompaya manuel olarak veya bir düğme kullanılarak girilmelidir. 
-* This option is for getting to know how AAPS works or if you are using an unsupported pump.
+* Bu seçenek, AAPS'in nasıl çalıştığını veya desteklenmeyen bir pompa kullanıp kullanmadığınızı öğrenmek içindir.
 
 (Config-Builder-closed-loop)=
 
@@ -248,7 +248,7 @@ Terapi ayarlamaları için istenen APS algoritmasını seçin. OpenAPS(OAPS) sek
 
 ## Görevler (öğrenme programı)
 
-AAPS has a leraning program (objectives) that you have to fulfill step by step. Bunun amacı, güvenli bir şekilde kapalı döngü sistemi kurmak için size rehberlik etmektir. Her şeyi doğru bir şekilde kurmanızı ve sistemin tam olarak ne yaptığını anlamanızı garanti eder. Sisteme güvenmenizin tek yolu bu.
+AAPS, adım adım gerçekleştirmeniz gereken bir öğrenme programına (görevlere) sahiptir. Bunun amacı, güvenli bir şekilde kapalı döngü sistemi kurmak için size rehberlik etmektir. Her şeyi doğru bir şekilde kurmanızı ve sistemin tam olarak ne yaptığını anlamanızı garanti eder. Sisteme güvenmenizin tek yolu bu.
 
 Düzenli olarak [ayarlarınızı dışa aktarmalısınız](../Usage/ExportImportSettings.md) (görevlerin ilerlemesi dahil). Akıllı telefonunuzu daha sonra değiştirmeniz durumunda (yeni satın alma, ekran hasarı vb.) bu ayarları kolayca içe aktarabilirsiniz.
 
@@ -303,11 +303,11 @@ Kateterinizin (kanülünüzün) uzunluğuna bağlı olarak, doldurma/hazırlama 
 
 #### Görüntüleme aralığı
 
-Choose the high and low marks for the BG-graph on AAPS overview and smart watch. Bu yalnızca görselleştirme içindir. KŞ'nizin hedef aralığı değildir. Örnek: 70 - 180 mg/dl veya 3,9 - 10 mmol/l
+AAPS ve akıllı saatteki KŞ grafiği görünümü için yüksek ve düşük izleri seçin. Bu yalnızca görselleştirme içindir. KŞ'nizin hedef aralığı değildir. Örnek: 70 - 180 mg/dl veya 3,9 - 10 mmol/l
 
 #### Kısa sekme başlıkları
 
-Choose wether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+AAPS'deki sekme başlıklarının uzun (ör. EYLEMLER, YEREL PROFİL, OTOMASYON) veya kısa (ör. EYLEM, YP, OTO) olmasını seçebilirsiniz.
 
 #### Tedavi diyaloglarında not alanını göster
 
@@ -338,13 +338,13 @@ Kullanıcı tanımlı otomasyon görevleri. Lütfen otomasyonla ilgili [burayı 
 
 ### SMS Kominikatör
 
-Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.md) for more setup information.
+Ebeveynlerin bazı AAPS özelliklerini uzaktan SMS yoluyla kontrol etmesine izin verir, daha fazla kurulum bilgisi için [SMS Komutları](../Children/SMS-Commands.md)'na bakın.
 
 ### Yiyecek
 
 Nightscout gıda veritabanında tanımlanan yemek ön ayarlarını görüntüler, daha fazla kurulum bilgisi için [Nightscout Beni Oku](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods)'ya bakın.
 
-Note: Entries cannot be used in the AAPS calculator. (Sadece Görüntüleme)
+Not: Girişler, AAPS hesap makinesinde kullanılamaz. (Sadece Görüntülenir)
 
 (Config-Builder-wear)=
 
@@ -367,7 +367,7 @@ Döngü bilgilerini xDrip+ saat arayüzünde görüntüleyin (Eğer AAPS/[AAPS v
 
 ### NSClient
 
-* Setup sync of your AAPS data with Nightscout.
+* AAPS verilerinizin Nightscout ile senkronizasyonunu ayarlayın.
 * [Tercihler](Preferences-nsclient) içindeki ayarlar, dişli çark tıklanarak açılabilir.
 
 ### Bakım
