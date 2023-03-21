@@ -17,8 +17,8 @@ AndroidAPS предлагает несколько опций для удале�
 ## Инструменты и приложения для удаленного мониторинга
 
 - [Nightscout](https://nightscout.github.io/) в веб-браузере (главным образом отображение данных)
-- NSClient app is a stripped down version of AAPS capable of following somebody, making profile switches, setting TTs and entering carbs. There are 2 apps:  [NSClient & NSClient2 to download](https://github.com/nightscout/AndroidAPS/releases/). The only difference is the app name. This way you can install the app twice on the same phone, to be able to follow 2 different persons/nightscouts with it.
-- Dexcom follow if you are using original Dexcom app (BG values only)
+- * Приложение NSClient-это урезанная версии AAPS для слежения, переключения профилей, постановки временных целей TT и ввода углеводов. There are 2 apps:  [NSClient & NSClient2 to download](https://github.com/nightscout/AndroidAPS/releases/). Единственное различие-это название приложения. Таким образом имеется возможность установить приложение дважды на одном телефоне, чтобы следить за 2 разными лицами/nightscout.
+- Приложение Dexcom Follow, если вы используете оригинальное приложение Dexcom (только ГК)
 - [xDrip+](../Configuration/xdrip.md) in follower mode (mainly BG values and **alarms**)
 - [Sugarmate](https://sugarmate.io/) or [Spike](https://spike-app.com/) on iOS (mainly BG values and **alarms**)
 
