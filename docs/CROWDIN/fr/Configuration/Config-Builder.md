@@ -4,11 +4,11 @@ Selon vos paramètres, vous pouvez ouvrir le générateur de configuration via u
 
 ![Ouvrir le générateur de configuration](../images/ConfBuild_Open_AAPS30.png)
 
-Le Générateur de configuration (Conf) est l'onglet dans lequel vous activez et désactivez les fonctions modulaires. Les cases du côté gauche (A) vous permettent de choisir celles à utiliser, les cases du côté droit (C) vous permettent de les visualiser sous forme d'onglet (E) dans AndroidAPS. Si la case de droite n'est pas cochée, vous pouvez atteindre la fonction en utilisant le menu hamburger (D) en haut à gauche de l'écran.
+Le Générateur de configuration (Conf) est l'onglet dans lequel vous activez et désactivez les fonctions modulaires. The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AAPS. Si la case de droite n'est pas cochée, vous pouvez atteindre la fonction en utilisant le menu hamburger (D) en haut à gauche de l'écran.
 
 Lorsque des paramètres supplémentaires sont disponibles dans le module, vous pouvez cliquer sur la roue crantée (B) qui vous amènera a des paramètres spécifiques dans les préférences.
 
-**Première configuration :** Depuis lAPS 2.0, un assistant de configuration vous guide à travers le processus de configuration de AndroidAPS. Appuyez sur le menu 3 points en haut à droite de l'écran (F) et sélectionnez 'Assistant de configuration' pour l'utiliser.
+**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AAPS. Appuyez sur le menu 3 points en haut à droite de l'écran (F) et sélectionnez 'Assistant de configuration' pour l'utiliser.
 
 ![Sections du générateur de configuration et roue crantée](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
@@ -101,7 +101,7 @@ Les détails sont expliqués sur la [page d'aide des profils](../Configuration/p
 
 * La DAI n'est pas la même pour chaque personne. C'est pourquoi vous devez la tester par vous-même. 
 * Mais elle doit toujours être au minimum de 5 heures.
-* Pour beaucoup de personnes utilisant des insulines ultra rapide comme la FIASP, il n'y a pratiquement pas d'effet notable après 3-4 heures tout au plus, même si 0.0 xx unités sont disponibles en tant que règle. Cette quantité résiduelle peut encore être perceptible pendant le sport, par exemple. Par conséquent, AndroidAPS utilise au moins 5h comme DAI.
+* Pour beaucoup de personnes utilisant des insulines ultra rapide comme la FIASP, il n'y a pratiquement pas d'effet notable après 3-4 heures tout au plus, même si 0.0 xx unités sont disponibles en tant que règle. Cette quantité résiduelle peut encore être perceptible pendant le sport, par exemple. Therefore, AAPS uses minimum 5h as DIA.
 * Vous pouvez en savoir plus à ce sujet dans la section Profil d'Insuline de [cette page](Screenshots-insulin-profile).
 
 ### Différences entre les types d'insuline
@@ -154,7 +154,7 @@ Sélectionnez la source de glycémie que vous utilisez - consultez la page [Sour
 ![Générateur de Configuration Source de Glycémie](../images/ConfBuild_BGSource_AAPS30.png)
 
 * [Construisez votre propre application Dexcom (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) est déconseillé comme récepteur pour Dexcom G6 depuis AAPS 3.0 (voir [Notes de version](Releasenotes-important-hints-3-0-0) pour plus de détails.
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * [Medtronic 640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - seule la version 4.15.57 et plus récentes sont prise en charge
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
@@ -223,7 +223,7 @@ Sélectionnez l'algorithme APS souhaité pour les ajustements de thérapie. Vous
 
 * AAPS évalue en permanence toutes les données disponibles (IA, GA, Gly ...) et fait des propositions de traitement pour ajuster votre thérapie si nécessaire. 
 * Les suggestions ne seront pas exécutées automatiquement (comme dans la boucle fermée) doivent être entrées manuellement dans la pompe ou en utilisant un bouton si vous utiliserez une pompe compatible (Dana R/RS, Accu Chek Combo, Insight...). 
-* Cette option permet de savoir comment AndroidAPS fonctionne ou si vous utilisez une pompe non prise en charge.
+* This option is for getting to know how AAPS works or if you are using an unsupported pump.
 
 (Config-Builder-closed-loop)=
 
@@ -249,7 +249,7 @@ Sélectionnez l'algorithme APS souhaité pour les ajustements de thérapie. Vous
 
 ## Objectifs (programme d'apprentissage)
 
-AAPS a un programme d'apprentissage (objectifs) que vous devez réaliser étape par étape. Cela devrait vous guider en toute sécurité à travers la mise en place d'un système de boucle fermée. Ce programme d'apprentissage garantit que vous avez tout mis en place correctement et que vous comprenez ce que le système fait exactement. C'est la seule façon pour vous de faire confiance au système.
+AAPS has a leraning program (objectives) that you have to fulfill step by step. Cela devrait vous guider en toute sécurité à travers la mise en place d'un système de boucle fermée. Ce programme d'apprentissage garantit que vous avez tout mis en place correctement et que vous comprenez ce que le système fait exactement. C'est la seule façon pour vous de faire confiance au système.
 
 Vous devez [exporter régulièrement vos paramètres](../Usage/ExportImportSettings.md) (y compris la progression des objectifs). Au cas où vous devrez remplacer votre smartphone plus tard (nouvel achat, problème d'écran, etc.) vous pouvez simplement importer ces paramètres.
 
@@ -304,11 +304,11 @@ Choisissez la quantité par défaut des trois boutons de la boite de dialogue Am
 
 #### Fourchette de visualisation
 
-Choisissez les valeurs de glycémies hautes et basses du graphique principal sur l'écran d'accueil AAPS et la montre. Il ne s'agit que de la visualisation, pas de la plage cible de votre glycémie. Par exemple : 70 - 180 mg/dl ou 3,9 - 10 mmol/l
+Choose the high and low marks for the BG-graph on AAPS overview and smart watch. Il ne s'agit que de la visualisation, pas de la plage cible de votre glycémie. Par exemple : 70 - 180 mg/dl ou 3,9 - 10 mmol/l
 
 #### Raccourcir les titres des onglets
 
-Choisissez si les titres des onglets dans AndroidAPS sont longs (ex: ACTIONS, PROFIL LOCAL, AUTOMATION) ou courts (ex: ACT, PL, AUTO)
+Choose wether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
 #### Affiche les notes dans les dialogues
 
@@ -339,13 +339,13 @@ Tâches d'automatisation définies par l'utilisateur (si-alors-sinon). Veuillez 
 
 ### Communicateur SMS
 
-Permet aux aidants à distance de contrôler certaines fonctionnalités d'AAPS via SMS, voir [Commandes SMS](../Children/SMS-Commands.md) pour plus d'informations sur la configuration.
+Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.md) for more setup information.
 
 ### Aliments
 
 Affiche les préréglages alimentaires définis dans la base de données Nightscout, voir [Nightscout Lisez-moi](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) pour plus d'informations sur la configuration.
 
-Remarque : Les entrées ne peuvent pas être utilisées dans la calculatrice AAPS. (Affichage uniquement)
+Note: Entries cannot be used in the AAPS calculator. (Affichage uniquement)
 
 (Config-Builder-wear)=
 
@@ -368,7 +368,7 @@ Affiche les informations de la boucle sur votre cadran xDrip+ (si vous n'utilise
 
 ### NSClient
 
-* Configurer la synchronisation de vos données AndroidAPS avec Nightscout.
+* Setup sync of your AAPS data with Nightscout.
 * Les paramètres dans les [préferences](Preferences-nsclient) peuvent être ouverts en cliquant sur la roue crantée.
 
 ### Maintenance
