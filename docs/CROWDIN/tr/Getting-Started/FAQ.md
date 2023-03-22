@@ -21,12 +21,12 @@ Bu yüzden apk'ler mevcut değildir.
 Her şeyden önce, **döngülenebilir donanım bileşenleri almanız** gerekir:
 
 - [destekleyen bir insülin pompası](./Pump-Choices.md), 
-- an [Android smartphone](Phones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
+- bir [Android akıllı telefon](Phones.md) (Apple iOS, AAPS tarafından desteklenmez - [iOS Loop](https://loopkit.github.io/loopdocs/) kontrol edebilirsiniz) ve
 - [sürekli glikoz izleme sistemi](../Configuration/BG-Source.md). 
 
 İkinci olarak, **donanımınızı kurmanız** gerekir. [Adım adım öğreticiyle örnek kurulum](Sample-Setup.md)'a bakın.
 
-Thirdly, you have to **setup your software components**: AAPS and CGM/FGM source.
+Üçüncü olarak, **yazılım bileşenlerinizi kurmanız** gerekir: AAPS ve CGM/FGM kaynağı.
 
 Dördüncüsü, tedavi faktörlerinizi kontrol etmek için **OpenAPS referans tasarımını öğrenmeli ve anlamalısınız**. Kapalı döngünün temel prensibi, bazal oranınızın ve karbonhidrat oranınızın doğru olmasıdır. Tüm öneriler, temel ihtiyaçlarınızın karşılandığını ve gördüğünüz herhangi bir tepe veya dip noktasının, bu nedenle bazı tek seferlik ayarlamalar (egzersiz, stres vb.) gerektiren diğer faktörlerin bir sonucu olduğunu varsayar. Kapalı döngünün güvenlik için yapabileceği ayarlamalar sınırlandırılmıştır ([OpenAPS Referans Tasarımında](https://openaps.org/reference-design/) izin verilen maksimum geçici bazal oranına bakın), bu izin verilen dozun temeldeki yanlış bir bazalı düzeltmek için boşa harcamak istemediğiniz anlamına gelir. Örneğin, yemekten önce genellikle düşük seviyeniz varsa, muhtemelen bazal oranınızın ayarlanması gerekir. Bazalların ve/veya İDF'nin ayarlanması gerekip gerekmediği ve ayrıca karbonhidrat oranının değiştirilmesi gerekip gerekmediğini önermek için geniş bir veri havuzunu değerlendirmek için [Otoayar](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig)'ı kullanabilirsiniz. Veya bazalınızı [eski moda bazal oranı ayarı](https://integrateddiabetes.com/basal-testing/) şekilde test edip ayarlayabilirsiniz.
 
@@ -38,19 +38,19 @@ Tercihlerinizin kolayca değiştirilmesini istemiyorsanız, tercihler menüsünd
 
 ### Android Wear Akıllı saatler
 
-If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AAPS are not blocked. Eylemin onayı bildirim yoluyla gelir.
+Ayarları bolus yapmak veya değiştirmek için android wear uygulamasını kullanmayı planlıyorsanız, AAPS'den gelen bildirimlerin engellenmediğinden emin olmanız gerekir. Eylemin onayı bildirim yoluyla gelir.
 
 (FAQ-disconnect-pump)=
 
 ### Pompayı ayırın
 
-If you take your pump off for showering, bathing, swimming, sports or other activities you must let AAPS know that no insulin is delivered to keep IOB correct.
+Duş almak, banyo yapmak, yüzmek, spor yapmak veya diğer etkinlikler için pompanızı çıkarırsanız, AAPS'e AİNS'i doğru tutmak için insülin verilmediğini bildirmelisiniz.
 
-The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](Screenshots-loop-status).
+[AAPS Ana Ekranında](Screenshots-loop-status) Döngü Durumu simgesi kullanılarak pompanın bağlantısı kesilebilir.
 
 ### Öneriler yalnızca tek bir CGM değerlerine dayalı değildir
 
-Güvenlik için yapılan öneriler bir CGM okumasına değil, ortalama deltaya dayanmaktadır. Therefore, if you miss some readings it may take a while after getting data back before AAPS kicks in looping again.
+Güvenlik için yapılan öneriler bir CGM okumasına değil, ortalama deltaya dayanmaktadır. Bu nedenle, bazı okumaları kaçırırsanız, AAPS'in tekrar döngüye girmesi, verileri geri aldıktan sonra biraz zaman alabilir.
 
 ### Diğer okumalar
 
@@ -403,9 +403,9 @@ Android Studio'dan: Projeyi açıp GitHub'dan çektikten sonra "Gradle"ın senkr
 
 ## Uyarı: Geliştirme sürümü çalıştırılıyor. Kapalı döngü devre dışı
 
-AAPS is not running in "developer mode". AAPS şu mesajı gösterir: "dev sürümü çalışıyor. Kapalı döngü devre dışı".
+AAPS "geliştirici modunda" çalışmıyor. AAPS şu mesajı gösterir: "dev sürümü çalışıyor. Kapalı döngü devre dışı".
 
-Make sure AAPS is running in "developer mode": Place a file named "engineering_mode" at the location "AAPS/extra". Herhangi bir dosya, doğru şekilde adlandırıldığı sürece iş görür. Make sure to restart AAPS for it to find the file and go into "developer mode".
+AAPS'in "geliştirici modunda" çalıştığından emin olun: "AAPS/extra" konumuna "engineering_mode" adlı bir dosya yerleştirin. Herhangi bir dosya, doğru şekilde adlandırıldığı sürece iş görür. Dosyayı bulması ve "geliştirici moduna" geçmesi için AAPS'i yeniden başlattığınızdan emin olun.
 
 İpucu: Mevcut bir günlük dosyasının bir kopyasını alın ve onu "engineering_mode" olarak yeniden adlandırın (not: dosya uzantısı olmayacak).
 
@@ -415,7 +415,7 @@ Ayarlar dosyaları telefonunuzun dahili deposunda "/AAPS/preferences" dizininde 
 
 ## Pil tasarrufu nasıl yapılandırılır?
 
-Properly configuring Power Management is important to prevent your Phone's OS to suspend AAPS and related app's and services when your phone is not being used. Doğru yapılandırılmazsa, AAPS işini yapamaz ve/veya sensör için bluetooth bağlantıları ve Rileylink (RL) kapatılarak "pompa bağlantısı kesildi" uyarılarına ve iletişim hatalarına neden olabilir. On the phone, go to settings->Apps and disable battery savings for: AAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. Sonuç olarak piliniz daha hızlı bitebilir ancak bu, soruna pil tasarrufunun neden olup olmadığını anlamanın bir yoludur. Pil tasarrufunun uygulanma şekli büyük ölçüde telefonun markasına, modeline ve/veya işletim sistemi sürümüne bağlıdır. Bu nedenle, kurulumunuz için pil tasarrufunu doğru şekilde ayarlamak için bu dokümanda talimat vermek neredeyse imkansızdır. Hangi ayarların sizin için en iyi sonucu verdiğini deneyin. Ek bilgi için ayrıca bkz. Uygulamamı devre dışı bırakma
+Güç Yönetiminin doğru şekilde yapılandırılması, telefonunuzun işletim sisteminin, telefonunuz kullanılmadığında AAPS'i ve ilgili uygulama ve hizmetleri askıya almaması için önemlidir. Doğru yapılandırılmazsa, AAPS işini yapamaz ve/veya sensör için bluetooth bağlantıları ve Rileylink (RL) kapatılarak "pompa bağlantısı kesildi" uyarılarına ve iletişim hatalarına neden olabilir. Telefonda, ayarlar->Uygulamalar'a gidin ve aşağıdakiler için pil tasarrufunu devre dışı bırakın: AAPS xDrip veya BYODA/Dexcom uygulaması Bluetooth sistem uygulaması (önce sistem uygulamalarını görüntülemeyi seçmeniz gerekebilir) Alternatif olarak, telefondaki tüm pil tasarruflarını tamamen devre dışı bırakın. Sonuç olarak piliniz daha hızlı bitebilir ancak bu, soruna pil tasarrufunun neden olup olmadığını anlamanın bir yoludur. Pil tasarrufunun uygulanma şekli büyük ölçüde telefonun markasına, modeline ve/veya işletim sistemi sürümüne bağlıdır. Bu nedenle, kurulumunuz için pil tasarrufunu doğru şekilde ayarlamak için bu dokümanda talimat vermek neredeyse imkansızdır. Hangi ayarların sizin için en iyi sonucu verdiğini deneyin. Ek bilgi için ayrıca bkz. Uygulamamı devre dışı bırakma
 
 ## Günde birkaç kez veya geceleri Pompa ulaşılamıyor uyarıları.
 
