@@ -165,7 +165,7 @@ Dolgulu yıldız etkin (**Açık**) durumu içindir ve içi boş yıldız simges
 
 *Komplikasyon* geleneksel saatçilikten bir terimdir ve ana saat kadranına eklemeyi tanımlar - başka bir küçük pencere veya alt kadran (tarih, haftanın günü, ay evresi vb. ile birlikte). Wear OS 2.0, bu metaforu hava durumu, bildirimler, fitness sayaçları ve daha fazlası gibi özel veri sağlayıcılarının komplikasyonları destekleyen tüm saat yüzlerine eklenmesine olanak tanımak için getiriyor.
 
-AAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
+AAPS Wear OS uygulaması, `2.6` derlemesinden bu yana komplikasyonları destekler ve komplikasyonları destekleyen herhangi bir üçüncü taraf izleme yüzünün AAPS ile ilgili verileri (KŞ gidişatı ile, Aktif İnsülin, Aktif KArbonhidrat, vb.) görüntülemek üzere yapılandırılmasına izin verir.
 
 Komplikasyonlar ayrıca AAPS işlevlerine **kısayol** olarak da hizmet eder. Bunlara dokunarak AAPS ile ilgili menüleri ve diyalogları açabilirsiniz (komplikasyon tipine ve konfigürasyona bağlı olarak).
 
@@ -188,7 +188,7 @@ Saat yüzeyinde komplikasyonları yapılandırırken, Wear OS, saat yüzeyinde s
 
 ### AAPS tarafından sağlanan komplikasyonlar
 
-AAPS provides following complications:
+AAPS aşağıdaki komplikasyonları sağlar:
 
 ![AAPS_Komplikasyonları_Listesi](../images/Watchface_Complications_List.png)
 
