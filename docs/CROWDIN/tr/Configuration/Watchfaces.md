@@ -63,7 +63,7 @@ AAPS menüsüne daha hızlı ulaşmak için KŞ'nize iki kez dokunun. KŞ eğris
 
 ## AAPSv2 saat arayüzü - Legend
 
-![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
+![Legend AAPSv2 saat arayüzü](../images/Watchface_Legend.png)
 
 A - son döngü çalıştırmasından beri geçen süre
 
@@ -295,7 +295,7 @@ Basitleştirilmiş UI modu için mevcut saat arayüzleri: AAPS, AAPS V2, Home Bi
 
 Basitleştirilmiş UI modu için mevcut saat arayüzleri: AAPS, AAPS V2, Home Big, Digital Style, Steampunk ve Cockpit. Basitleştirilmiş kullanıcı arayüzü isteğe bağlıdır ve saat yüzü ayarları aracılığıyla yapılandırılır. (saat yüzüne uzun basın ve "düzenle" veya dişli simgesini tıklayın) "Basit Kullanıcı Arayüzü" yapılandırmasını seçin ve "Şarj sırasında" veya "Şarjda ve Her zaman açık" olarak ayarlayın.
 
-Android geliştirici seçenekleri, saatinizin şarj olurken uyanık kalmasını sağlar. To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Geliştirici seçeneklerinde "Şarj olurken uyanık kal"ı "açık" olarak ayarlayın.
+Android geliştirici seçenekleri, saatinizin şarj olurken uyanık kalmasını sağlar. Geliştirici seçeneklerini kullanılabilir hale getirmek için [dokümantasyona](https://developer.android.com/training/wearables/get-started/debugging) bakınız. Geliştirici seçeneklerinde "Şarj olurken uyanık kal"ı "açık" olarak ayarlayın.
 
 Not: her ekran her zaman açık olmaya uygun değildir. Özellikle eski OLED ekranlarda ekran yanmasına neden olabilir. Saatler genellikle yanmayı önlemek için ekranı karartır; tavsiye için lütfen kullanıcı el kitabınıza, üretime veya internete bakın.
 
@@ -339,7 +339,7 @@ Pil gerektiren başlıca alanlar şunlardır:
 ### Sony Smartwatch 3
 
 * Sony Smartwatch 3, APPS ile kullanılacak en popüler saatlerden biridir.
-* Maalesef Google, 2020 sonbaharında wear OS 1.5 cihazları için desteği bıraktı. This leads to problems when using Sony SW3 with AAPS 2.7 and above.
+* Maalesef Google, 2020 sonbaharında wear OS 1.5 cihazları için desteği bıraktı. Bu Sony SW3'ü AAPS 2.7 ve üstü ile kullanırken sorunlara yol açar.
 * Bu soruna [sorun giderme sayfasında](../Usage/SonySW3.md) olası bir geçici çözüm bulunabilir.
 
 ## Nightscout verilerini görüntüleyin
@@ -348,4 +348,4 @@ Başka bir döngü sistemi kullanıyorsanız ve bir Android Wear saatinde döng�
 
 # Pebble
 
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AAPS through the watch. Aktif İnsülin ve şu anda etkin olan geçici bazal oranı ve tahminler gibi görüntülenecek alanları seçebilirsiniz. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AAPS then send either SMS or pushover notification.
+Pebble kullanıcıları, döngü verilerini *görüntülemek* için [Urchin saat yüzünü](https://github.com/mddub/urchin-cgm) kullanabilir (Nightscout'a yüklenmişse), ancak saat aracılığıyla AAPS ile etkileşime geçemezsiniz. Aktif İnsülin ve şu anda etkin olan geçici bazal oranı ve tahminler gibi görüntülenecek alanları seçebilirsiniz. Açık döngü durumunda, bildirimin AAPS'den alınıp alınmadığını ve ardından SMS veya push bildirimi gönderildiğini söyleyen bir uygulama oluşturmak için [IFTTT](https://ifttt.com/)'ı kullanabilirsiniz.
