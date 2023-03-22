@@ -61,37 +61,37 @@ Sağ üst köşede **üç noktalı menü (1)** bulunan **AAPS Kurulum Sihirbazı
 
 Aynı ekranda, pompa seçiminin altında **Omnipod Sürücü Ayarları** görüntülenir, **RileyLink Yapılandırması** altında **Ayarlanmadı** metnine basarak RileyLink cihazınızı ekleyin metin.
 
-On the **RileyLink Selection** screen press the **Scan** button and select your RileyLink by scanning for all available Bluetooth devices and selecting your RileyLink from the list. When properly selected you are returned to the pump driver selection screen displaying the Omnipod driver settings showing your selected RileyLink with the MAC address listed.
+**RileyLink Seçimi** ekranında **Tara** düğmesine basın ve mevcut tüm Bluetooth cihazlarını tarayarak ve listeden RileyLink cihazınızı bulup seçin. Doğru seçildiğinde, seçtiğiniz RileyLink ve mac adresinin de bulunduğu Omnipod sürücü ayarlarının görüntülendiği pompa sürücüsü seçim ekranına dönersiniz.
 
-Press the **Next** button to proceed with the rest of the **Setup Wizard.**  It can take up to one minute for the selected RileyLink to initialize and the **Next** button to become active.
+**Kurulum Sihirbazı**'nın geri kalanına devam etmek için **İleri** düğmesine basın. Seçilen RileyLink'in başlatılması bir dakika kadar sürebilir ve **İleri** > butonuna basarak aktif hale getirin.
 
-Detailed steps on how to setup your pod communication device are listed below in the [RileyLink Setup Section](OmnipodEros-rileylink-setup).
+Pod iletişim cihazınızı nasıl kuracağınıza ilişkin ayrıntılı adımlar, aşağıda [RileyLink Kurulum Bölümünde](OmnipodEros-rileylink-setup) listelenmiştir.
 
-**OR**
+**VEYA**
 
 ### Seçenek 2: Konfigürasyon ayarları
 
-Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜**Pump**➜**Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will display the Omnipod menu as a tab in the AAPS interface titled **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
+Sol üst köşedeki **hamburger menüsü** aracılığıyla **Konfigürasyon ayarları(1)** ➜**Pompa**➜**Omnipod** altındaki **Omnipod** başlığındaki **radyo düğmesi (2)**. **Ayar Dişlisi (3)**'ün yanındaki **onay kutusu (4)** seçildiğinde, Omnipod menüsü AAPS arayüzünde **POD** başlıklı bir sekme olarak görüntülenir. Bu dokümanda **Omnipod (POD)** sekmesi olarak anılır.
 
-> **NOTE:** A faster way to access the **Omnipod settings** can be found below in the [Omnipod Settings section](OmnipodEros-omnipod-settings) of this document.
+> **NOT:** **Omnipod ayarlarına** erişmenin daha hızlı bir yolu, aşağıda bu dokümanın [Omnipod Ayarları bölümünde](OmnipodEros-omnipod-settings) bulunabilir.
 > 
 > ![Enable_Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Enable_Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
 
 ### Omnipod Sürücü Seçiminin Doğrulanması
 
-*Note: If you have exited the Setup Wizard early without selecting your RileyLink, the Omnipod Driver is enabled but you will still need to select your RileyLink.  You may see the Omnipod (POD) tab appear as it does below*
+*Not: Kurulum Sihirbazından RileyLink'inizi seçmeden erken çıktıysanız, Omnipod Sürücüsü etkinleştirilir ancak yine de RileyLink'inizi seçmeniz gerekir.  Omnipod (POD) sekmesi aşağıdaki gibi görünecektir*
 
-To verify that you have enabled the Omnipod driver in AAPS **swipe to the left** from the **Overview** tab, where you will now see an **Omnipod** or **POD** tab.
+AAPS'de Omnipod sürücüsünü etkinleştirdiğinizi doğrulamak için **Genel Bakış** sekmesinde **sola kaydırdığınızda** bir **Omnipod** veya **POD** sekmesi göreceksiniz.
 
 ![Enable_Omnipod_Driver_5](../images/omnipod/Enable_Omnipod_Driver_5.png)
 
-## Omnipod Configuration
+## Omnipod Kanfigürasyonu
 
-Please **swipe left** to the **Omnipod (POD)** tab where you will be able to manage all pod and RileyLink functions (some of these functions are not enabled or visible without an active pod session):
+Lütfen **sola kaydırıp** tüm pod ve RileyLink işlevlerini yönetebileceğiniz **Omnipod (POD)** sekmesine ulaşın.(bu işlevlerden bazıları etkin bir pod oturumu olmadan etkinleştirilmez veya görünmez):
 
-> ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png) Refresh Pod connectivity and status
+> ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png) Pod bağlantısını ve durumunu yenileyin
 > 
-> ![pod_management](../images/omnipod/ICONS/omnipod_overview_pod_management.png) Pod Management (Activate, Deactivate, Play test beep, RileyLink Stats and Pod history)
+> ![pod_management](../images/omnipod/ICONS/omnipod_overview_pod_management.png) Pod Yönetimi (Etkinleştir, Devre Dışı Bırak, Test bip sesini çal, RileyLink İstatistikleri ve Pod geçmişi)
 
 (OmnipodEros-rileylink-setup)=
 
@@ -109,57 +109,57 @@ RileyLink'inizi Kurulum Sihirbazında veya yukarıdaki adımlarda zaten başarı
    > 
    > ![RileyLink_Setup_1](../images/omnipod/RileyLink_Setup_1.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
-3. On the **RileyLink Selection** screen press the **Scan (4)** button to initiate a bluetooth scan. **Select your RileyLink (5)**  from the list of available Bluetooth devices.
+3. Bir bluetooth taraması başlatmak için **RileyLink Seçimi** ekranında **Tara (4)** düğmesine basın. Kullanılabilir Bluetooth cihazları listesinden **RileyLink'inizi (5) seçin**.
 
    > ![RileyLink_Setup_3](../images/omnipod/RileyLink_Setup_3.png) ![RileyLink_Setup_4](../images/omnipod/RileyLink_Setup_4.png)
 
-4. After successful selection you are returned to the Omnipod Settings page listing your **currently selected RileyLink's MAC Address (6).**
+4. Başarılı bir seçimden sonra, **seçtiğiniz RileyLink'in MAC Adresini (6)** listeleyen Omnipod Ayarları sayfasına geri dönersiniz.
 
    > ![RileyLink_Setup_5](../images/omnipod/RileyLink_Setup_5.png)
 
-5. Verify that in the **Omnipod (POD)** tab that the **RileyLink Status (1)** appears as **Connected.** The **Pod status (2)** field should show **No active Pod**; if not, please attempt the previous step or exit AAPS to see if this refreshes the connection.
+5. **Omnipod (POD)** sekmesinde, **RileyLink Durumu (1)** öğesinin **Bağlı** olarak göründüğünü doğrulayın. **Pod durumu (2) ** alanında **Etkin Pod Yok** gösterilmelidir. Değilse, lütfen önceki adımı deneyin veya bunun bağlantıyı yenileyip yenilemediğini görmek için AAPS'den çıkın.
 
    > ![RileyLink_Setup_6](../images/omnipod/RileyLink_Setup_6.png)
 
 (OmnipodEros-activating-a-pod)=
 
-### Activating a Pod
+### Pod Etkinleştirme
 
-Before you can activate a pod please ensure you have properly configured and connected your RileyLink connection in the Omnipod settings
+Bir podu etkinleştirmeden önce lütfen Omnipod ayarlarında RileyLink bağlantınızı doğru şekilde yapılandırdığınızdan ve bağlandığınızdan emin olun
 
-*REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Before pairing the Pod's radio signal is weaker, however after it has been paired it will operate at full signal power. During these procedures, make sure that your pod is* [within close proximity](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) but not on top of or right next to the RileyLink.\*
+*HATIRLATICI: Güvenlik güvenlik önlemleri nedeniyle, pod aktivasyon eşleştirmesi için pod iletişimi sınırlı mesafede gerçekleşir. Eşleştirmeden önce Pod'un radyo sinyali daha zayıftır, ancak eşleştirildikten sonra tam sinyal gücünde çalışacaktır. Bu prosedürler sırasında podunuzun* [yakın mesafede](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm veya daha az uzaklıkta) olduğundan, ancak RileyLink'in üstünde veya hemen yanında olmadığından emin olun.\*
 
-01. Navigate to the **Omnipod (POD)** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
+01. **Omnipod (POD)** sekmesine gidin ve **POD YNTM (1)** butonuna ve ardından **Podu Etkinleştir(2)**'i tıklayın.
 
     > ![Activate_Pod_1](../images/omnipod/Activate_Pod_1.png) ![Activate_Pod_2](../images/omnipod/Activate_Pod_2.png)
 
-02. **Podu Doldur** ekranı görüntülenir. Yeni bir podu en az 80 ünite insülinle doldurun ve podun kullanıma hazır olduğunu belirten iki bip sesini dinleyin. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use 12 to 15 units.
+02. **Podu Doldur** ekranı görüntülenir. Yeni bir podu en az 80 ünite insülinle doldurun ve podun kullanıma hazır olduğunu belirten iki bip sesini dinleyin. 3 gün boyunca ihtiyacınız olan toplam insülin miktarını hesaplarken, pod hazırlamanın ilave12 ile 15 ünite kullanacağını lütfen göz önünde bulundurun.
 
     > ![Activate_Pod_3](../images/omnipod/Activate_Pod_3.png)
     > 
-    > Ensure the new pod and RileyLink are within close proximity of each other (~30cm or less) and click the **Next** button.
+    > Yeni pod ve RileyLink'in birbirine yakın (~30cm veya daha az) olduğundan emin olun ve **İleri** butonunu tıklayın.
 
-03. **Pod'u Başlat** ekranında, pod hazırlanmaya başlar (pod kendini hazırlarken bir tıklama ve ardından bir dizi tıkırtı sesi duyarsınız). If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, [move the RileyLink closer](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
+03. **Pod'u Başlat** ekranında, pod hazırlanmaya başlar (pod kendini hazırlarken bir tıklama ve ardından bir dizi tıkırtı sesi duyarsınız). RileyLink etkinleştirilmekte olan podun kapsama alanı dışındaysa **Pod yanıt vermiyor** hata mesajı alırsınız. Böyle bir durumda, podun üstüne veya çok yakınına gelmeden [RileyLink'i yaklaştırın](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm veya daha az uzağa) ve **Yeniden Dene (1)** butonunu tıklayın.
 
     > ![Activate_Pod_4](../images/omnipod/Activate_Pod_4.png) ![Activate_Pod_5](../images/omnipod/Activate_Pod_5.png)
 
-04. Upon successful priming a green checkmark will be shown and the **Next** button will become enabled. Pod hazırlama işlemini tamamlamak ve **Pod Ekle** ekranını görüntülemek için **İleri** butonunu tıklayın.
+04. Başarılı kullanıma hazırlamanın ardından yeşil bir onay işareti gösterilecek ve **İleri** butonu etkinleştirilecektir. Pod hazırlama işlemini tamamlamak ve **Pod Ekle** ekranını görüntülemek için **İleri** butonunu tıklayın.
 
     > ![Activate_Pod_6](../images/omnipod/Activate_Pod_6.png)
 
-05. Ardından, yeni podun infüzyon bölgesini hazırlayın. Remove the pod's plastic needle cap and white paper backing from the adhesive and apply the pod to your usually selected site on your body. Bitirdiğinizde, **İleri** butonunu tıklayın.
+05. Ardından, yeni podun infüzyon bölgesini hazırlayın. Podun plastik iğne kapağını ve beyaz kağıt desteğini yapışkandan çıkarın ve Pod'u vücudunuzda genellikle seçtiğiniz bölgeye uygulayın. Bitirdiğinizde, **İleri** butonunu tıklayın.
 
     > ![Activate_Pod_7](../images/omnipod/Activate_Pod_7.png)
 
-06. **Pod Ekle** iletişim kutusu şimdi görünecektir. **ONLY click on the OK button if you are ready to deploy the cannula**.
+06. **Pod Ekle** iletişim kutusu şimdi görünecektir. **YALNIZCA kanülü yerleştirmeye hazırsanız Tamam butonuna tıklayın**.
 
     > ![Activate_Pod_8](../images/omnipod/Activate_Pod_8.png)
 
-07. After pressing **OK**, it may take some time before the Omnipod responds and inserts the cannula (1-2 minutes maximum), so be patient.
+07. **Tamam**'a bastıktan sonra, Omnipod'un yanıt vermesi ve kanülü yerleştirmesi biraz zaman alabilir (maksimum 1-2 dakika), bu nedenle sabırlı olun.
 
-    > If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, move the RileyLink closer (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry** button.
+    > RileyLink etkinleştirilmekte olan podun kapsama alanı dışındaysa **Pod yanıt vermiyor** hata mesajı alırsınız. Böyle bir durumda, RileyLink'i podun üstüne veya hemen yanına değil, yakınına (~30 cm veya daha yakın) getirin ve **Yeniden Dene** butonuna tıklayın.
     > 
-    > If the RileyLink is out of Bluetooth range or does not have an active connection to the phone, you will receive an error message **No response from RileyLink**. If this occurs, move the RileyLink closer to the phone and click the **Retry** button.
+    > RileyLink, Bluetooth kapsama alanı dışındaysa veya telefonla etkin bir bağlantısı yoksa **RileyLink yanıt vermiyor** hata mesajı alırsınız. Böyle bir durumda, RileyLink'i telefona yaklaştırın ve **Yeniden Dene** butonunu tıklayın.
     > 
     > *NOT: Kanül takılmadan önce, kanül yerleştirme noktasının etrafındaki cildi sıkıştırmak iyi bir uygulamadır. Bu iğnenin düzgün bir şekilde yerleştirilmesini sağlar ve tıkanıklık oluşturma şansınızı azaltır.*
     > 
@@ -175,33 +175,33 @@ Before you can activate a pod please ensure you have properly configured and con
 
     > ![Activate_Pod_13](../images/omnipod/Activate_Pod_13.png)
 
-10. The **Pod management** menu screen should now display with the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. Bunun nedeni, bir podun artık etkin olması ve o anda etkin olan podu devre dışı bırakmadan ek bir pod etkinleştirememenizdendir.
+10. **Pod yönetimi** menüsünde şimdi **Pod Etkinleştir (1)** butonu <em x-id"3"=>devre dışı</em> olmalı ve **Pod'u Devre Dışı Bırak (2)** butonu *aktif olmalıdır.*. Bunun nedeni, bir podun artık etkin olması ve o anda etkin olan podu devre dışı bırakmadan ek bir pod etkinleştirememenizdendir.
 
-    Click on the back button on your phone to return to the **Omnipod (POD)** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
+    **Omnipod(POD)** sekme ekranına dönmek için telefonunuzdaki geri düğmesini tıklayın. Şimdi aktif pod oturumunuz için mevcut bazal oran, pod rezervuar seviyesi, iletilen insülin, pod hataları ve uyarılar dahil Pod bilgileri görüntülenecektir.
 
-    For more details on the information displayed go to the [Omnipod (POD) Tab](OmnipodEros-omnipod-pod-tab) section of this document.
+    Görüntülenen bilgiler hakkında daha fazla ayrıntı için bu dokümanın [Omnipod (POD) Sekmesi](OmnipodEros-omnipod-pod-tab) bölümüne gidin.
 
     ![Activate_Pod_14](../images/omnipod/Activate_Pod_14.png) ![Activate_Pod_15](../images/omnipod/Activate_Pod_15.png)
 
-### Deactivating a Pod
+### Pod'u Devre Dışı Bırakma
 
-Under normal circumstances, the life of a pod should run for three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
+Normal şartlar altında toplam 80 saatlik pod kullanımı için, üç günlük (72 saat) pod kullanım ömrüne ilaveten, sona erme uyarısından sonra 8 saat daha çalışmalıdır.
 
 Bir Podu devre dışı bırakmak (süre sonundan veya bir pod hatasından dolayı):
 
-1. Go to the **Omnipod (POD)** tab, click on the **POD MGMT (1)** button, on the **Pod management** screen click on the **Deactivate Pod (2)** button.
+1. **Omnipod (POD)** sekmesine gidin, **POD YNTM (1)** butonunu tıklayın, **pod yönetimi** ekranında **Pod'u Devre Dışı Bırak (2)** butonunu tıklayın.
 
    > ![Deactivate_Pod_1](../images/omnipod/Deactivate_Pod_1.png) ![Deactivate_Pod_2](../images/omnipod/Deactivate_Pod_2.png)
 
-2. On the **Deactivate Pod** screen, first, make sure the RileyLink is in close proximity to the pod but not on top of or right next to the pod, then click on the **Next** button to begin the process of deactivating the pod.
+2. **Podu Devre Dışı Bırak** ekranında, önce RileyLink'in poda yakın olduğundan, ama podun üstünde veya hemen yanında olmadığından emin olun, ardından işlemi başlatmak için **İleri** butonunu tıklayarak podu devre dışı bırakın.
 
    > ![Deactivate_Pod_3](../images/omnipod/Deactivate_Pod_3.png)
 
-3. The **Deactivating Pod** screen will appear, and you will receive a confirmation beep from the pod that deactivation was successful.
+3. **Pod Devre Dışı Bırakılıyor** ekranı görünecek ve podun devre dışı bırakmanın başarılı olduğuna dair bir onay bip sesi alacaksınız.
 
    > ![Deactivate_Pod_4](../images/omnipod/Deactivate_Pod_4.png)
    > 
-   > **IF deactivation fails** and you do not receive a confirmation beep, you may receive a **No response from RileyLink** or **No response from Pod message**. Please click on the **Retry (1)** button to attempt deactivation again. If deactivation continues to fail, please click on the **Discard Pod (2)** button to discard the Pod. Etkin oturum devre dışı bırakıldığı için artık podunuzu çıkartabilirsiniz. If your Pod has a screaming alarm, you may need to manually silence it (using a pin or a paperclip) as the **Discard Pod (2)** button will not silence it.
+   > **Devre dışı bırakma başarısız olursa** ve bir onay bip sesi almazsanız, **RileyLink cevap vermiyor** veya **Pod mesajından yanıt yok** bildirimlerini alabilirsiniz. Devre dışı bırakmayı tekrar denemek için lütfen **Yeniden Dene (1)** butonunu tıklayın. Devre dışı bırakma işlemi başarısız olmaya devam ederse, lütfen **Podu çıkar (2)** butonunu tıklayarak Pod'u iptal edin. Etkin oturum devre dışı bırakıldığı için artık podunuzu çıkartabilirsiniz. Pod'unuzda çığlık atan bir alarm varsa, **Podu çıkar (2)** butonu onu susturmayacağından manuel olarak (bir iğne veya ataç kullanarak) susturmanız gerekebilir.
    > 
    > > ![Deactivate_Pod_5](../images/omnipod/Deactivate_Pod_5.png)  ![Deactivate_Pod_6](../images/omnipod/Deactivate_Pod_6.png)
 
@@ -209,33 +209,33 @@ Bir Podu devre dışı bırakmak (süre sonundan veya bir pod hatasından dolay�
 
    > ![Deactivate_Pod_7](../images/omnipod/Deactivate_Pod_7.png)
 
-5. Click on the green button to return to the **Pod management** screen.
+5. **Pod yönetimi** ekranına dönmek için yeşil butonu tıklayın.
 
    > ![Deactivate_Pod_8](../images/omnipod/Deactivate_Pod_8.png)
 
-6. You are now returned to the **Pod management** menu press the back button on your phone to return to the **Omnipod (POD)** tab. Verify that the **RileyLink Status:** field reports **Connected** and the **Pod status:** field displays a **No active Pod** message.
+6. Artık **Pod yönetimi** menüsüne döndünüz, **Omnipod (POD)** sekmesine dönmek için telefonunuzdaki geri düğmesine basın. **RileyLink Durumu:** alanının **Bağlandı** olarak bildirdiğini ve **Pod durumu:** alanının **Etkin Pod Yok** mesajı görüntülediğini doğrulayın.
 
    > ![Deactivate_Pod_9](../images/omnipod/Deactivate_Pod_9.png)  ![Deactivate_Pod_10](../images/omnipod/Deactivate_Pod_10.png)
 
 ### İnsülin İletimini Askıya Alma ve Devam Ettirme
 
-The process below will show you how to suspend and resume insulin pump delivery.
+Aşağıdaki süreç, insülin pompası iletimini nasıl askıya alacağınızı ve devam ettireceğinizi gösterecektir.
 
-*NOTE - if you do not see a SUSPEND button*, then it has not been enabled to display in the Omnipod (POD) tab. Enable the **Show Suspend Delivery button in Omnipod tab** setting in the [Omnipod settings](OmnipodEros-omnipod-settings) under **Other**.
+*NOT - bir ASKIYA AL butonu* görmüyorsanız, Omnipod (POD) sekmesinde görüntülenmesi etkinleştirilmemiştir. **Diğer** altındaki [Omnipod ayarlarında](OmnipodEros-omnipod-settings) **Omnipod sekmesinde Teslimatı Askıya Al butonunu göster** ayarını etkinleştirin.
 
-#### Suspending Insulin Delivery
+#### İnsülin İletiminin Askıya Alınması
 
-Use this command to put the active pod into a suspended state. In this suspended state, the pod will no longer deliver any insulin. This command mimics the suspend function that the original Omnipod PDM issues to an active pod.
+Etkin podu askıya alınmış duruma getirmek için bu komutu kullanın. Bu askıya alınmış durumda, pod artık herhangi bir insülin iletmeyecektir. Bu komut orijinal Omnipod PDM'nin etkin bir poda verdiği askıya alma işlevini taklit eder.
 
-1. Go to the **Omnipod (POD)** tab and click on the **SUSPEND (1)** button. The suspend command is sent from the RileyLink to the active pod and the **SUSPEND (3)** button will become greyed out. The **Pod status (2)** will display **SUSPEND DELIVERY**.
+1. **Omnipod (POD)** sekmesine gidin ve **ASKIYA AL (1)** butonunu tıklayın. Askıya alma komutu, RileyLink'ten aktif poda gönderilir ve **ASKIYA AL (3)** butonu grileşir. **Pod durumu (2)**, **İLETİM DURDURULDU** olarak görüntülenecektir.
 
    > ![Suspend_Insulin_Delivery_1](../images/omnipod/Suspend_Insulin_Delivery_1.png) ![Suspend_Insulin_Delivery_2](../images/omnipod/Suspend_Insulin_Delivery_2.png)
 
-2. When the suspend command is successfully confirmed by the RileyLink a confirmation dialog will display the message **All insulin delivery has been suspended**. Onaylamak ve devam etmek için **Tamam**'ı tıklayın.
+2. Askıya alma komutu RileyLink tarafından başarıyla onaylandığında, bir onay iletişim kutusu **Tüm insülin iletimi askıya alındı** mesajını görüntüler. Onaylamak ve devam etmek için **Tamam**'ı tıklayın.
 
    > ![Suspend_Insulin_Delivery_3](../images/omnipod/Suspend_Insulin_Delivery_3.png)
 
-3. Your active pod has now suspended all insulin delivery. The **Omnipod (POD)** tab will update the **Pod status (1)** to **Suspended**. The **SUSPEND** button will change to a new **Resume Delivery (2)** button
+3. Aktif Pod'unuz şimdi tüm insülin iletimini askıya aldı. **Omnipod (POD)** sekmesi, **Pod durumunu (1)** **Askıya alındı** olarak güncelleyecektir. **ASKIYA AL** butonu, **İletime Devam Et (2)** butonu olarak değişecektir.
 
    > ![Suspend_Insulin_Delivery_4](../images/omnipod/Suspend_Insulin_Delivery_4.png)
 
@@ -243,128 +243,128 @@ Use this command to put the active pod into a suspended state. In this suspended
 
 İletimi askıya alınmış Pod'unuzun insülin iletimini yeniden başlatma talimatı vermek için bu komutu kullanın. Komut başarıyla işlendikten sonra, aktif bazal profildeki geçerli zamana dayalı mevcut bazal oranı kullanılarak normal insülin iletimi sürdürülecektir. Pod bolus, GBO ve SMB için komutları tekrar kabul edecektir.
 
-1. Go to the **Omnipod (POD)** tab and ensure the **Pod status (1)** field displays **Suspended**, then press the **Resume Delivery (2)** button to start the process to instruct the current pod to resume normal insulin delivery. A message **RESUME DELIVERY** will display in the **Pod status (3)** field, signifying the RileyLink is actively sending the command to the suspended pod.
+1. **Omnipod (POD)** sekmesine gidin ve **Pod durumu (1)** satırında **ASKIYA ALINDI** mesajının görünmesi gerekir, ardından mevcut podun normal insülin iletimini sürdürmesi talimatını vermek için **İLETİME DEVAM ET (2)** butonuna basın. **Pod durumu (3)** alanında, RileyLink'in aktif olarak askıya alınan pod'a komutu gönderdiğini belirten bir **İLETİME DEVAM ET** mesajı görüntülenecektir.
 
    > ![Resume_Insulin_Delivery_1](../images/omnipod/Resume_Insulin_Delivery_1.png) ![Resume_Insulin_Delivery_2](../images/omnipod/Resume_Insulin_Delivery_2.png)
 
-2. When the Resume delivery command is successfully confirmed by the RileyLink a confirmation dialog will display the message **Insulin delivery has been resumed**. Onaylamak ve devam etmek için **Tamam**'ı tıklayın.
+2. İletime devam et komutu RileyLink tarafından başarıyla onaylandığında, bir onay iletişim kutusunda **İnsülin iletimi devam ettirildi** mesajı görüntülenecektir. Onaylamak ve devam etmek için **Tamam**'ı tıklayın.
 
    > ![Resume_Insulin_Delivery_3](../images/omnipod/Resume_Insulin_Delivery_3.png)
 
-3. The **Omnipod (POD)** tab will update the **Pod status (1)** field to display **RUNNING,** and the **Resume Delivery** button will now display the **SUSPEND (2)** button.
+3. **Omnipod (POD)** sekmesi, **Pod durumu (1)** alanını **ÇALIŞIYOR** olarak güncelleyecek ve **İletimi Sürdür** butonu şimdi **ASKIYA AL (2)** butonu olarak görünecektir.
 
    > ![Resume_Insulin_Delivery_4](../images/omnipod/Resume_Insulin_Delivery_4.png)
 
-### Acknowledging Pod Alerts
+### Pod Uyarılarını Onaylamak
 
-*NOTE - if you do not see an ACK ALERTS button, it is because it is conditionally displayed on the Omnipod (POD) tab ONLY when the pod expiration or low reservoir alert has been triggered.*
+*NOT - bir BİLGİ UYARILARI düğmesi görmüyorsanız, bunun nedeni SADECE pod sona erme veya düşük rezervuar uyarısı tetiklendiğinde Omnipod (POD) sekmesinde koşullu olarak görüntülenmesidir.*
 
-The process below will show you how to acknowledge and dismiss pod beeps that occur when the active pod time reaches the warning time limit before the pod expiration of 72 hours (3 days). This warning time limit is defined in the **Hours before shutdown** Omnipod alerts setting. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hour (3 days) limit.
+Aşağıdaki süreç, etkin pod süresi 72 saatlik (3 gün) pod sona ermeden önce uyarı süresi sınırına ulaştığında meydana gelen pod bip seslerini nasıl onaylayacağınızı ve kapatacağınızı göstermektedir. Bu uyarı süresi sınırı, Omnipod uyarıları ayarında **Kapanmadan kaç saat önce** olarak tanımlanır. Bir pod'un maksimum ömrü 80 saattir (3 gün 8 saat), ancak Insulet 72 saat (3 gün) sınırının aşılmamasını önermektedir.
 
-*NOTE - If you have enabled the "Automatically acknowledge Pod alerts" setting in Omnipod Alerts, this alert will be handled automatically after the first occurrence and you will NOT need to manually dismiss the alert.*
+*NOT - Omnipod Uyarılarında "Pod uyarılarını otomatik olarak onayla" ayarını etkinleştirdiyseniz, bu uyarı ilk kez meydana geldikten sonra otomatik olarak işlenir ve uyarıyı manuel olarak kapatmanız GEREKMEZ.*
 
-1. When the defined **Hours before shutdown** warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and a pod change will soon be required. You can verify this on the **Omnipod (POD)** tab, the **Pod expires: (1)** field will show the exact time the pod will expire (72 hours after activation) and the text will turn **red** after this time has passed, under the **Active Pod alerts (2)** field where the status message **Pod will expire soon** is displayed. This trigger will display the **ACK ALERTS (3)** button. A **system notification (4)** will also inform you of the upcoming pod expiration
+1. Tanımlanan **Kapanmadan kaç saat önce?** uyarı süresi sınırına ulaşıldığında, pod sona erme zamanına yaklaştığını size bildirmek için uyarı bip sesleri çıkaracak ve yakında pod değişikliği gerekecektir. Bunu **Omnipod (POD)** sekmesinde doğrulayabilirsiniz, **Pod'un süresi doluyor: (1)** alanı, pod süresinin tam olarak ne zaman biteceğini (etkinleştirmeden 72 saat sonra) gösterecek ve metin ** kırmızıya** dönecektir. Bu süre geçtikten sonra, **Aktif Pod uyarıları (2)** alanının altında, **Pod'un süresi yakında dolacak** durum mesajı görüntülenecektir. Bu aynı zamanda **ALARMLARI ONAYLA (3)** butonunun görüntülenmesini de tetikler. Bir **sistem bildirimi (4)** ayrıca size yaklaşan pod sona erme tarihi hakkında bilgi verecektir
 
    > ![Acknowledge_Alerts_1](../images/omnipod/Acknowledge_Alerts_1.png) ![Acknowledge_Alerts_2](../images/omnipod/Acknowledge_Alerts_2.png)
 
-2. Go to the **Omnipod (POD)** tab and press the **ACK ALERTS (2)** button (acknowledge alerts). The RileyLink sends the command to the pod to deactivate the pod expiration warning beeps and updates the **Pod status (1)** field with **ACKNOWLEDGE ALERTS**.
+2. **Omnipod (POD)** sekmesine gidin ve **ALARMLARI ONAYLA (2)** butonuna basın (alarmları onaylayın). Rileylink, pod sona erme uyarı bip seslerini devre dışı bırakmak için pod'a komutu gönderir ve **Pod durumu (1)** satırını **ALARMLARI ONAYLA** olarak günceller.
 
    > ![Acknowledge_Alerts_3](../images/omnipod/Acknowledge_Alerts_3.png)
 
-3. Upon **successful deactivation** of the alerts, **2 beeps** will be issued by the active pod and a confirmation dialog will display the message **Activate alerts have been acknowledged**. İletişim kutusunu onaylamak ve kapatmak için **Tamam** butonunu tıklayın.
+3. Uyarıların **başarıyla devre dışı bırakılması** üzerine, etkin pod tarafından **2 bip** sesi verilir ve bir onay iletişim kutusunda **Etkin alarmlar susturuldu.** mesajı görüntülenir. İletişim kutusunu onaylamak ve kapatmak için **Tamam** butonunu tıklayın.
 
    > ![Acknowledge_Alerts_4](../images/omnipod/Acknowledge_Alerts_4.png)
    > 
-   > If the RileyLink is out of range of the pod while the acknowledge alerts command is being processed a warning message will display 2 options. **Mute (1)** will silence this current warning. **OK (2)** will confirm this warning and allow the user to try to acknowledge alerts again.
+   > RileyLink, onay uyarıları komutu işlenirken pod'un menzili dışındaysa, bir uyarı mesajı 2 seçenek görüntüleyecektir. **Sessiz (1)** bu mevcut uyarıyı susturur. **Tamam (2)**, bu uyarıyı onaylar ve kullanıcının uyarıları yeniden onaylamasına izin verir.
    > 
    > ![Acknowledge_Alerts_5](../images/omnipod/Acknowledge_Alerts_5.png)
 
-4. Go to the **Omnipod (POD)** tab, under the **Active Pod alerts** field, the warning message is no longer displayed and the active pod will no longer issue pod expiration warning beeps.
+4. **Omnipod (POD)** ana sekmesine gidin, **Aktif Pod uyarıları** alanı altında, uyarı mesajı artık görüntülenmez ve aktif pod artık pod sona erme uyarı bip sesleri vermez.
 
 (OmnipodEros-view-pod-history)=
 
 ### Pod Geçmişini Görüntüle
 
-Bu bölüm, aktif pod geçmişinizi nasıl gözden geçireceğinizi ve farklı eylem kategorilerine göre nasıl filtreleyeceğinizi gösterir. The pod history tool allows you to view the actions and results committed to your currently active pod during its three day (72 - 80 hours) life.
+Bu bölüm, aktif pod geçmişinizi nasıl gözden geçireceğinizi ve farklı eylem kategorilerine göre nasıl filtreleyeceğinizi gösterir. Pod geçmişi aracı, üç günlük (72 - 80 saat) ömrü boyunca şu anda etkin olan pod'unuza yönelik eylemleri ve sonuçları görüntülemenize olanak tanır.
 
-This feature is useful for verifying boluses, TBRs, basal changes that were given but you may be unsure if they completed. The remaining categories are useful in general for troubleshooting issues and determining the order of events that occurred leading up to a failure.
+Bu özellik ile verilen bolusları, GBO'larını, bazal değişiklikleri doğrulamak için kullanışlıdır ancak tamamlandıklarından emin olamayabilirsiniz. Kalan kategoriler, genel olarak sorunları gidermek ve bir arızaya yol açan olayların sırasını belirlemek için kullanışlıdır.
 
-*NOTE:* **Uncertain** commands will appear in the pod history, however due to their nature you cannot ensure their accuracy.
+*NOT:* **Belirsiz** komutlar pod geçmişinde görünür, ancak yapıları gereği doğruluklarından emin olamazsınız.
 
-1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod management** menu and then press the **Pod history (2)** button to access the pod history screen.
+1. **Omnipod (POD)** sekmesine gidin ve **POD YNTM (1)** butonuna basarak **Pod Yönetimi** menüsüne gidin ve ardından pod geçmişi ekranına erişmek için **Pod geçmişi (2)** butonuna basın.
 
    > ![Pod_History_1](../images/omnipod/Pod_History_1.png) ![Pod_History_2](../images/omnipod/Pod_History_2.png)
 
-2. On the **Pod history** screen, the default category of **All (1)** is displayed showing the **Date and Time (2)** of all pod **Actions (3)** and **Results (4)** in reverse chronological order. Use your phone’s **back button 2 times** to return to the **Omnipod (POD)** tab in the main AAPS interface.
+2. **Pod geçmişi ** ekranında, **All (1)** (Tümü) varsayılan kategorisi ile tüm pod **Eylemleri (3)** ve **Sonuçları (4)** **Tarih ve Saat (2)** ters kronolojik sırada görüntülenir. Ana AAPS arayüzünde **Omnipod (POD)** sekmesine dönmek için telefonunuzun **geri butonunu 2 kez** kullanın.
 
    > ![Pod_History_3](../images/omnipod/Pod_History_3.png) ![Pod_History_4](../images/omnipod/Pod_History_4.png)
 
-### View RileyLink Settings and History
+### RileyLink Ayarlarını ve Geçmişini Görüntüle
 
-This section shows you how to review the settings of your active pod and RileyLink along with the communication history of each. This feature, once accessed, is split into two sections: **Settings** and **History**.
+Bu bölüm, aktif pod ve RileyLink ayarlarının yanı sıra her birinin iletişim geçmişinin nasıl gözden geçirileceğini gösterir. Bu özellik bir kez erişildiğinde iki bölüme ayrılır: **Ayarlar** ve **Geçmiş**.
 
-The primary use of this feature is when your pod communication device is out of the Bluetooth range of your phone after a period of time and the **RileyLink status** reports **RileyLink unreachable**. The **REFRESH** button on the main **Omnipod (POD)** tab will manually attempt to re-establish Bluetooth communication with the currently configured RileyLink in the Omnipod settings.
+Bu özelliğin birincil kullanımı, pod iletişim cihazınızın bir süre sonra telefonunuzun Bluetooth kapsama alanı dışında kalması ve **RileyLink durumunun** **RileyLink'e ulaşılamadığını** bildirmesidir. **Omnipod (POD)** ana sekmesindeki **REFRESH** butonu, Omnipod ayarlarında halihazırda yapılandırılmış RileyLink ile Bluetooth iletişimini manuel olarak yeniden kurmaya çalışır.
 
-In the event the **REFRESH** button on the main **Omnipod (POD)** tab does not restore the connection to the pod communication device, please follow the additional steps below for a manual reconnection.
+**Omnipod (POD)** ana sekmesindeki **YENİLE** butonunun pod iletişim cihazına olan bağlantıyı geri yüklememesi durumunda, manuel yeniden bağlantı için lütfen aşağıdaki ek adımları izleyin.
 
-#### Manually Re-establish Pod Communication Device Bluetooth Communication
+#### Pod İletişim Bluetooth İletişim Aygıtını Manuel Olarak Yeniden-kurun
 
-1. From the **Omnipod (POD)** tab when the **RileyLink Status: (1)** reports **RileyLink unreachable** press the **POD MGMT (2)** button to navigate to the **Pod Management** menu. On the **Pod Management** menu you will see a notification appear actively searching for a RileyLink connection, press the **RileyLink stats (3)** button to access the **RileyLink settings** screen.
+1. **Omnipod (POD)** sekmesinde **RileyLink Durumu: (1)** **RileyLink'e ulaşılamıyor** bildirdiğinde, **Pod Yönetimi** menüsüne gitmek için **POD YNTM (2)** butonuna basın. **Pod Yönetimi** menüsünde, aktif olarak bir RileyLink bağlantısı arayan bir bildirimin göründüğünü göreceksiniz, **RileyLink ayarları** ekranına erişmek için **RileyLink istatistikleri (3)** butonuna basın.
 
    > ![RileyLink_Bluetooth_Reset_1](../images/omnipod/RileyLink_Bluetooth_Reset_1.png) ![RileyLink_Bluetooth_Reset_2](../images/omnipod/RileyLink_Bluetooth_Reset_2.png)
 
-2. On the **RileyLink Settings (1)** screen under the **RileyLink (2)** section you can confirm both the Bluetooth connection status and error in the **Connection Status and Error: (3)** fields. A *Bluetooth Error* and *RileyLink unreachable* status should be shown. Start the manual Bluetooth reconnection by pressing the **refresh (4)** button in the lower right corner.
+2. **RileyLink (2)** bölümünün altındaki **RileyLink Ayarları (1)** ekranında, **Bağlantı Durumu ve Hata: (3)** alanlarında hem Bluetooth bağlantı durumunu hem de hatayı onaylayabilirsiniz. Bir *Bluetooth Hatası* ve *RileyLink ulaşılamaz* durumu görünmelidir. Sağ alt köşedeki **yenile (4)** butonuna basarak manuel olarak Bluetooth'a yeniden bağlanmasını sağlayın.
 
    > ![RileyLink_Bluetooth_Reset_3](../images/omnipod/RileyLink_Bluetooth_Reset_3.png)
    > 
-   > If the pod communication device is unresponsive or out of range of the phone while the Bluetooth refresh command is being processed a warning message will display 2 options.
+   > Bluetooth yenileme komutu işlenirken pod iletişim cihazı yanıt vermiyorsa veya telefonun kapsama alanı dışındaysa, 2 seçenekli bir uyarı mesajı görüntülenir.
 
-   - **Mute (1)** will silence this current warning.
-   - **OK (2)** will confirm this warning and allow the user to try to re-establish the Bluetooth connection again.
+   - **Sessiz (1)** bu mevcut uyarıyı susturur.
+   - **Tamam (2)** bu uyarıyı onaylar ve kullanıcının Bluetooth bağlantısını yeniden kurmayı denemesine izin verir.
 
    > ![RileyLink_Bluetooth_Reset_4](../images/omnipod/RileyLink_Bluetooth_Reset_4.png)
 
-3. If the **Bluetooth connection** does not re-establish, try manually turning **off** and then back **on** the Bluetooth function on your phone.
+3. **Bluetooth bağlantısı** yeniden kurulmazsa, telefonunuzdaki Bluetooth işlevini manuel olarak **kapatmayı** ve ardından tekrar **açmayı** deneyin.
 
-4. After a successful RileyLink Bluetooth reconnection the **Connection Status: (1)** field should report **RileyLink ready**. Congratulations, you have now reconnected your configured pod communication device to AAPS!
+4. Başarılı bir RileyLink Bluetooth yeniden bağlantısından sonra, **Bağlantı Durumu: (1)** alanı **RileyLink hazır** olarak görünmelidir. Tebrikler, artık yapılandırılmış pod iletişim cihazınızı (örn. RileyLink) AAPS'ye yeniden bağladınız!
 
    > ![RileyLink_Bluetooth_Reset_5](../images/omnipod/RileyLink_Bluetooth_Reset_5.png)
 
-#### Pod Communication Device and Active Pod Settings
+#### Pod İletişim Cihazı (örn. RileyLink) ve Aktif Pod Ayarları
 
-This screen will provide information, status, and settings configuration information for both the currently configured pod communication device and the currently active Omnipod Eros pod.
+Bu ekran, hem halihazırda yapılandırılmış pod iletişim cihazı hem de aktif olan Omnipod Eros pod için bilgi, durum ve ayar yapılandırma bilgilerini sağlayacaktır.
 
-1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod management** menu, then press the **RileyLink stats (2)** button to view your currently configured **RileyLink (3)** and active pod **Device (4)** settings.
+1. **Pod yönetimi** menüsüne erişmek için **Omnipod (POD)** sekmesine gidin ve **POD YNTM (1)** butonuna basın. Ardından yapılandırılmış **RileyLink (3)** ve etkin pod **Cihaz (4)** ayarlarınızı görüntülemek için **RileyLink istatistikleri (2)** butonuna basın.
 
    > ![RileyLink_Statistics_Settings_1](../images/omnipod/RileyLink_Statistics_Settings_1.png) ![RileyLink_Statistics_Settings_2](../images/omnipod/RileyLink_Statistics_Settings_2.png)
    > 
    > ![RileyLink_Statistics_Settings_3](../images/omnipod/RileyLink_Statistics_Settings_3.png)
 
-##### RileyLink (3) fields
+##### RileyLink (3) alanı
 
-> - **Address:** MAC address of the selected pod communication device defined in the Omnipod Settings.
-> - **Name:** Bluetooth identification name of the selected pod communication device defined in your phone's Bluetooth settings.
-> - **Battery Level:** Displays the current battery level of the connected pod communication device
-> - **Connected Device:** Model of the Omnipod pod currently communicating with the pod communication device
-> - **Connection Status**: The current status of the Bluetooth connection between the pod communication device and the phone running AAPS.
-> - **Connection Error:** If there is an error with the pod communication device Bluetooth connection details will be displayed here.
-> - **Firmware Version:** Current firmware version installed on the actively connected pod communication device.
+> - **Adres:** Omnipod Ayarlarında tanımlanan seçili pod iletişim cihazının MAC adresi.
+> - **İsim:** Telefonunuzun Bluetooth ayarlarında tanımlanan seçili pod iletişim cihazının Bluetooth tanımlama adı.
+> - **Pil Seviyesi:** Bağlı pod iletişim cihazının mevcut pil seviyesini gösterir
+> - **Bağlı Cihaz:** Şu anda pod iletişim cihazıyla iletişim kuran Omnipod pod modeli
+> - **Bağlantı Durumu**: Pod iletişim cihazı ile AAPS çalıştıran telefon arasındaki Bluetooth bağlantısının mevcut durumu.
+> - **Bağlantı Hatası:** Pod iletişim cihazı ile ilgili bir hata varsa Bluetooth bağlantı detayları burada görüntülenecektir.
+> - **Pod yazılımı:** Aktif olarak bağlı pod iletişim cihazında kurulu mevcut yazılım sürümüdür.
 
-##### Device (4) fields - With an Active Pod
+##### Cihaz (4) alanı - Aktif Pod ile
 
-> - **Device Type:** The type of device communicating with the pod communication device (Omnipod pod pump)
-> - **Device Model:** The model of the active device connected to the pod communication device (the current model name of the Omnipod pod, which is Eros)
-> - **Pump Serial Number:** Serial number of the currently activated pod
-> - **Pump Frequency:** Communication radio frequency the pod communication device has tuned to enable communication between itself and the pod.
-> - **Last Used frequency:** Last known radio frequency the pod used to communicate with the pod communication device.
-> - **Last Device Contact:** Date and time of the last contact the pod made with the pod communication device.
-> - **Refresh button** manually refresh the settings on this page.
+> - **Cihaz Ti̇pi:** Pod iletişim cihazıyla iletişim kuran aygıtın türü (Omnipod pod pompası)
+> - **Cihaz Modeli:** Pod iletişim cihazına bağlı aktif cihazın modeli (Omnipod podunun mevcut model adı, yani Eros)
+> - **Pompa Seri Numarası:** Şu anda etkinleştirilmiş olan podun seri numarası
+> - **Pompa Frekansı:** Pod iletişim cihazının kendisi ile pod arasında iletişimi sağlamak için ayarladığı iletişim radyo frekansı.
+> - **Son Kullanılan frekans:** podun, pod iletişim cihazıyla iletişim kurmak için kullandığı bilinen son radyo frekansı.
+> - **Son Cihaz İletişimi:** Pod ile pod iletişim cihazı (örn. RilyLink) arasında yapılan son iletişimin tarihi ve saati.
+> - **Yenile butonu** bu sayfadaki ayarları manuel olarak yeniler.
 
-#### RileyLink and Active Pod History
+#### RileyLink ve Aktif Pod Geçmişi
 
-This screen provides information in reverse chronological order of each state or action that either the RileyLink or currently connected pod is in or has taken. The entire history is only available for the currently active pod, after a pod change this history will be erased and only events from the newly activated pod will be recorded and shown.
+Bu ekran RileyLink'in veya o anda bağlı olan pod içinde olduğu veya gerçekleştirdiği her durum veya eylemin ters kronolojik sırayla bilgi sağlar. Tüm geçmiş yalnızca o anda etkin olan pod için kullanılabilir, bir bölme değişikliğinden sonra bu geçmiş silinecek ve yalnızca yeni etkinleştirilen podun olayları kaydedilecek ve gösterilecektir.
 
-1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu, then press the **Pod History (2)** button to view the **Settings** and **History** screen. Click on the **HISTORY (3)** text to display the entire history of the RileyLink and currently active pod session.
+1. **Pod Yönetimi** menüsüne erişmek için **Omnipod (POD)** sekmesine gidin ve **POD YNTM (1)** butonuna basın, ardından **Ayarlar** ve **Geçmiş** ekranını görüntülemek için **Pod Geçmişi (2)** butonuna basın. RileyLink'in tüm geçmişini ve şu anda etkin olan pod oturumunu görüntülemek için **GEÇMİŞ (3)** metnine tıklayın.
 
    > ![RileyLink_Statistics_History_1](../images/omnipod/RileyLink_Statistics_History_1.png) ![RileyLink_Statistics_History_2](../images/omnipod/RileyLink_Statistics_History_2.png)
    > 
@@ -372,113 +372,113 @@ This screen provides information in reverse chronological order of each state or
 
 ##### Alanlar
 
-> - **Date & Time**: In reverse chronological order the timestamp of each event.
-> - **Device:** The device to which the current action or state is referring.
-> - **State or Action:** The current state or action performed by the device.
+> - **Tarih & Zaman**: Ters kronolojik sırayla her olayın zaman damgası.
+> - **Cihaz:** Mevcut eylemin veya durumun atıfta bulunduğu cihaz.
+> - **Durum veya Eylem:** Cihaz tarafından gerçekleştirilen mevcut durum veya eylem.
 
 (OmnipodEros-omnipod-pod-tab)=
 
-## Omnipod (POD) Tab
+## Omnipod (POD) Sekmesi
 
-Below is an explanation of the layout and meaning of the icons and status fields on the **Omnipod (POD)** tab in the main AAPS interface.
+Aşağıda, ana AAPS arayüzündeki **Omnipod (POD)** sekmesindeki simgelerin ve durum satırlarının düzeninin ve anlamının bir açıklaması bulunmaktadır.
 
-*NOTE: If any message in the Omnipod (POD) tab status fields report (uncertain) then you will need to press the Refresh button to clear it and refresh the pod status.*
+*NOT: Omnipod (POD) sekmesi durum alanlarındaki herhangi bir mesaj raporlanırsa (belirsiz), o zaman bunu temizlemek ve bölme durumunu yenilemek için Yenile düğmesine basmanız gerekir.*
 
 > ![Omnipod_Tab](../images/omnipod/Omnipod_Tab.png)
 
 ### Alanlar
 
-- **RileyLink Status:** Displays the current connection status of the RileyLink
+- **RileyLink Durumu:** RileyLink'in mevcut bağlantı durumunu görüntüler
 
-- *RileyLink Unreachable* - pod communication device is either not within Bluetooth range of the phone, powered off or has a failure preventing Bluetooth communication.
-- *RileyLink Ready* - pod communication device is powered on and actively initializing the Bluetooth connection
-- *Connected* - pod communication device is powered on, connected and actively able to communicate via Bluetooth.
+- *RileyLink Ulaşılamıyor* Pod iletişim cihazı, telefonun Bluetooth kapsama alanında değil, kapalı veya Bluetooth iletişimini engelleyen bir arıza var.
+- *RileyLink Hazır* Pod iletişim cihazı açık ve Bluetooth bağlantısını aktif olarak başlatıyor
+- *Bağlı* Pod iletişim cihazı açık, bağlı ve Bluetooth aracılığıyla aktif olarak iletişim kurabiliyor.
 
-- **Pod address:** Displays the current address in which the active pod is referenced
+- **Pod adresi:** Etkin pod'un referans aldığı mevcut adresi görüntüler
 
-- **LOT:** Displays the LOT number of the active pod
+- **LOT:** Etkin podun LOT numarasını görüntüler
 
-- **TID:** Displays the serial number of the pod.
+- **TID:** Podun seri numarasını görüntüler.
 
-- **Firmware Version:** Displays the firmware version of the active pod.
+- **Yyazılımı Sürümü:** Etkin podun donanım yazılımı sürümünü görüntüler.
 
-- **Time on Pod:** Displays the current time on the active pod.
+- **Pod üzerindeki zaman:** Aktif poddaki geçerli saati görüntüler.
 
-- **Pod expires:** Displays the date and time when the active pod will expire.
+- **Pod Sona Erme:** Pod'un süresinin dolacağı tarih ve saati görüntüler.
 
-- **Pod status:** Displays the status of the active pod.
+- **Pod durumu:** Aktif podun durumunu görüntüler.
 
-- **Last connection:** Displays the last time communication with the active pod was achieved.
+- **Son bağlantı:** Etkin Pod'la en son iletişimin sağlandığı zamanı görüntüler.
 
 - *Biraz önce* - 20 saniyeden kısa bir süre önce.
 - *Bir dakikadan kısa bir süre önce* - 20 saniyeden uzun, ancak 60 saniyeden kısa bir süre önce.
 - *1 dakika önce* - 60 saniyeden uzun ancak 120 saniyeden kısa (2 dakika)
 - *XX dakika önce* - XX değeriyle tanımlanan 2 dakikadan daha uzun bir süre önce
 
-- **Last bolus:** Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
+- **Son bolus:** Etkin poda gönderilen son bolusun miktarını ve ne kadar süre önce verildiğini parantez içinde görüntüler.
 
 - **Bazal oranı:** Bazal oran profilinden geçerli zaman için programlanmış bazal oranı görüntüler.
 
 - **Geçici bazal oranı:** Şu anda çalışmakta olan Geçici Bazal Oranı aşağıdaki biçimde görüntüler
 
-- Units / hour @ time TBR was issued (minutes run / total minutes TBR will be run)
+- Ünite / saat @ GBO'nın verildiği zaman (çalışma dakikası / GBO'nın çalıştırılacağı toplam dakika)
 - *Örnek:* 0,00Ü/s @18:25 ( 90/120 dakika)
 
-- **Rezervuar:** Rezervuarda 50 üniteden fazla insülin olduğuda 50+Ü'den fazla kalanı gösterir. Below this value the exact units are displayed in yellow text.
+- **Rezervuar:** Rezervuarda 50 üniteden fazla insülin olduğuda 50+Ü'den fazla kalanı gösterir. Bu değerin altında tam birimler sarı metinle gösterilir.
 
-- **Toplam iletilen:** Rezervuardan iletilen toplam insülin ünite miktarını görüntüler. *Note this is an approximation as priming and filling the pod is not an exact process.*
+- **Toplam iletilen:** Rezervuardan iletilen toplam insülin ünite miktarını görüntüler. *Pod mutlak kesinlikle hazırlanıp ve doldurulmadığı için bunun bir tahmin olduğunu unutmayın.*
 
-- **Hatalar:** Karşılaşılan son hatayı görüntüler. Review the [Pod history](OmnipodEros-view-pod-history), [RileyLink history](OmnipodEros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
+- **Hatalar:** Karşılaşılan son hatayı görüntüler. Geçmiş hatalar ve daha ayrıntılı bilgiler için [Pod geçmişini](OmnipodEros-view-pod-history), [RileyLink geçmişini](OmnipodEros-rileylink-and-active-pod-history) ve günlük dosyalarını inceleyin.
 
-- **Etkin pod alarmları:** Etkin pod alarmlarını gösteren satırdır. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
+- **Etkin pod alarmları:** Etkin pod alarmlarını gösteren satırdır. Genellikle pod son kullanma tarihi 72 saat sonraysa ve pod yerel bip sesleri çıkardığında kullanılır.
 
-### Icons
+### Simgeler
 
-- **REFRESH:**
+- **YENİLE:**
 
   > ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png)
   > 
-  > Sends a refresh command to the active pod to update communication
+  > İletişimi güncellemek için aktif pod'a bir yenileme komutu gönderir
   > 
   > Pod durumunu yenilemek ve metin içeren (belirsiz) durum satırlarını yenilemek için kullanın.
   > 
-  > See the [Troubleshooting section](OmnipodEros-troubleshooting) below for additional information.
+  > Ek bilgi için aşağıdaki [Sorun giderme bölümüne](OmnipodEros-troubleshooting) bakın.
 
-- **POD MGMT:**
+- **POD YNTM:**
 
   > ![pod_management](../images/omnipod/ICONS/omnipod_overview_pod_management.png)
   > 
-  > Navigates to the Pod management menu
+  > Pod yönetimi menüsüne yönlendirir
 
-- **ACK ALERTS:**
+- **BİLGİ UYARILARI:**
 
   > ![ack_alerts](../images/omnipod/ICONS/omnipod_overview_ack_alerts.png)
   > 
-  > When pressed this will disable the pod expiration beeps and notifications.
+  > Bu butona basıldığında, pod sona erme biplerini ve bildirimlerini devre dışı bırakır.
   > 
-  > Button is displayed only when pod time is past expiration warning time Upon successful dismissal, this icon will no longer appear.
+  > Buton, yalnızca pod süresi sona erme uyarı süresini geçtiğinde görüntülenir Bildirimler devre dışı kaldıktan sonra, bu simge artık görünmeyecek.
 
-- **SET TIME:**
+- **SAATİ AYARLA:**
 
   > ![set_time](../images/omnipod/ICONS/omnipod_overview_set_time.png)
   > 
-  > When pressed this will update the time on the pod with the current time on your phone.
+  > Basıldığında, pod'taki saat, telefonunuzdaki geçerli saatle güncellenir.
 
-- **SUSPEND:**
+- **ASKIYA AL:**
 
-  > ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
+  > ![askıya al](../images/omnipod/ICONS/omnipod_overview_suspend.png)
   > 
-  > Suspends the active pod
+  > Etkin pod'u askıya alır
 
-- **RESUME DELIVERY:**
+- **İLETİME DEVAM ET:**
 
-  > ![resume](../images/omnipod/ICONS/omnipod_overview_resume.png)
+  > ![devam et](../images/omnipod/ICONS/omnipod_overview_resume.png)
   > 
-  > > Resumes the currently suspended, active pod
+  > > Şu anda askıya alınmış, etkin pod'u devam ettirir
 
 ### Pod Yönetim Menüsü
 
-Below is an explanation of the layout and meaning of the icons on the **Pod Management** menu accessed from the **Omnipod (POD)** tab.
+Aşağıda, **Omnipod (POD)** sekmesinden erişilen **Pod Yönetimi** menüsündeki simgelerin düzeni ve anlamının bir açıklaması bulunmaktadır.
 
 > ![Omnipod_Tab_Pod_Management](../images/omnipod/Omnipod_Tab_Pod_Management.png)
 
@@ -486,86 +486,86 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 
   > ![activate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
   > 
-  > Primes and activates a new pod
+  > Yeni bir pod hazırlar ve etkinleştirir
 
 - **Pod'u Devre Dışı Bırakma**
 
   > ![deactivate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
   > 
-  > Deactivates the currently active pod.
+  > O anda etkin olan podu devre dışı bırakır.
   > 
-  > A partially paired pod ignores this command.
+  > Kısmen eşleştirilmiş bir pod bu komutu yok sayar.
   > 
-  > Use this command to deactivate a screaming pod (error 49).
+  > Çığlık atan bir podu devre dışı bırakmak için bu komutu kullanın (hata 49).
   > 
-  > If the button is disabled (greyed out) use the Discard Pod button.
+  > Buton devre dışıysa (gri ise), "Pod'u çıkart" butonunu kullanın.
 
-- **Play test beep**
+- **Test bip sesi çal**
 
   > ![play_test_beep](../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png)
   > 
-  > Plays a single test beep on the pod when pressed.
+  > Basıldığında pod'tan tek bir test bip sesi çalar.
 
-- **Discard pod**
+- **Pod'u çıkart**
 
   > ![discard_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_discard_pod.png)
   > 
-  > Deactivates and discards the pod state of an unresponsive pod when pressed.
+  > Basıldığında, yanıt vermeyen bir Pod'un Pod durumunu devre dışı bırakacak ve iptal edecektir.
   > 
-  > Button is only displayed when very specific cases are met as proper deactivation is no longer possible:
+  > Düğme yalnızca, uygun şekilde devre dışı bırakma artık mümkün olmadığı zaman, çok özel durumlarda görüntülenir:
   > 
-  > > - A **pod is not fully paired** and thus ignores deactivate commands.
-  > > - A **pod is stuck** during the pairing process between steps
-  > > - A **pod simply does not pair at all.**
+  > > - Bir **pod tam olarak eşlenmemiş** ve dolayısıyla devre dışı bırakma komutları yok sayar.
+  > > - Eşleştirme adımları arasındaki işlemler sırasında bir **pod takıldı** ise
+  > > - **Pod hiç bir şekilde eşleşmiyorsa.**
 
-- **Pod history**
+- **Pod geçmişi**
 
   > ![pod_history](../images/omnipod/ICONS/omnipod_overview_pod_management_pod_history.png)
   > 
-  > Displays the active pod activity history
+  > Etkin Pod'un etkinlik geçmişini görüntüler
 
-- **RileyLink stats:**
+- **RileyLink istatistikleri:**
 
   > ![rileylink_stats](../images/omnipod/ICONS/omnipod_overview_pod_management_rileylink_stats.png)
   > 
-  > Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
+  > Geçerli ayarları ve RileyLink Bağlantı geçmişini gösteren RileyLink İstatistikleri ekranına gider
   > 
-  > > - **Settings** - displays RileyLink and active pod settings information
-  > > - **History** - displays RileyLink and Pod communication history
+  > > - **Ayarlar** - RileyLink ve aktif pod ayarları bilgilerini görüntüler
+  > > - **Geçmiş** - RileyLink ve Pod iletişim geçmişini görüntüler
 
-- **Reset RileyLink Config**
+- **RileyLink Yapılandırmasını Sıfırla**
 
   > ![reset_rileylink_config](../images/omnipod/ICONS/omnipod_overview_pod_management_reset_rileylink_config.png)
   > 
-  > When pressed this button resets the currently connected pod communication device configuration.
+  > Bu düğmeye basıldığında, o anda bağlı olan pod iletişim cihazı (örn. RileyLink) yapılandırmasını sıfırlar.
   > 
-  > > - When communication is started, specific data is sent to and set in the RileyLink > - Memory Registers are set > - Communication Protocols are set > - Tuned Radio Frequency is set 
-  > > - See [additional notes](OmnipodEros-reset-rileylink-config-notes) at the end of this table
+  > > - İletişim başladığında, belirli veriler RileyLink'e gönderilir ve burada ayarlanır > - Bellek Kayıtları ayarlandı > - İletişim Protokolleri ayarlandı > - Ayarlı Radyo Frekansı ayarlandı 
+  > > - Bu tablonun sonundaki [ek notlara](OmnipodEros-reset-rileylink-config-notes) bakın
 
-- **Read pulse log:**
+- **Sinyal günlüğünü oku:**
 
   > ![pulse_log](../images/omnipod/ICONS/omnipod_overview_pod_management_pulse_log.png)
   > 
-  > > Sends the active pod pulse log to the clipboard
+  > > Aktif pod sinyal günlüğünü panoya gönderir
 
 (OmnipodEros-reset-rileylink-config-notes)=
 
-#### *Reset RileyLink Config Notes*
+#### *RileyLink Yapılandırma Sıfırlama Notları*
 
-- The primary usage of this feature is when the currently active pod communication device is not responding and communication is in a stuck state.
-- If the pod communication device is turned off and then back on, the **Reset RileyLink Config** button needs to be pressed, so that it sets these communication parameters in the pod communication device configuration.
-- If this is NOT done then AAPS will need to be restarted after the pod communication device is power cycled.
-- This button **DOES NOT** need to be pressed when switching between different pod communication devices
+- Bu özelliğin birincil kullanımı, o anda etkin olan pod iletişim cihazının yanıt vermediği ve iletişimin takılı kaldığı durumlardır.
+- Pod iletişim cihazı (örn. RileyLink) kapatılıp tekrar açılırsa, pod iletişim cihazı konfigürasyonunda bu iletişim parametrelerini ayarlaması için **RileyLink Ayarlarını Sıfırla** butonuna basılması gerekir.
+- Bu YAPILMAYACAK OLURSA, pod iletişim cihazı kapatıldıktan sonra AAPS'nin yeniden başlatılması gerekecektir.
+- Farklı pod iletişim cihazları arasında geçiş yaparken bu butona basılması **GEREKMEZ**
 
 (OmnipodEros-omnipod-settings)=
 
-## Omnipod Settings
+## Omnipod Ayarları
 
-The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**➜**Pump**➜**Omnipod**➜**Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled **OMNIPOD** or **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
+Omnipod sürücü ayarları, sol üst köşedeki **hamburger menüsü** altında **Konfigürasyon ayarları**➜**Pompa**➜**Omnipod**➜**Dişli çark (ayarlar) (2)** içerisinde **Omnipod** başlıklı **radyo butonu(1)** seçilerek yapılabilir. **Dişli çark (2)**'ın yanındaki **onay kutusu (3)**'ün seçilmesi, Omnipod menüsünün AAPS arayüzünde **OMNIPOD** veya **POD** başlıklı bir sekme olarak görüntülenmesini sağlar. Bu dokümanda **Omnipod (POD)** sekmesi olarak anılır.
 
 ![Omnipod_Settings_1](../images/omnipod/Omnipod_Settings_1.png)
 
-**NOTE:** A faster way to access the **Omnipod settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **Omnipod (POD)** tab and selecting **Omnipod preferences (2)** from the dropdown menu.
+**NOT:** **Omnipod ayarlarına** daha hızlı erişmenin bir yolu da, **Omnipod (POD)** sekmesinde iken sağ üst köşesindeki **3 noktalı menü (1)** ye basıp açılan menüden **Omnipod tercihler'ini (2)** seçmektir.
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png)
 
@@ -573,137 +573,137 @@ Ayar grupları aşağıda listelenmiştir; aşağıda açıklanan çoğu ayarı 
 
 ![Omnipod_Settings_3](../images/omnipod/Omnipod_Settings_3.png)
 
-*NOTE: An asterisk (\*) denotes the default for a setting is enabled.*
+*NOT: Yıldız işareti (\*), bir ayarın varsayılan olarak etkin olduğunu belirtir.*
 
 ### RileyLink
 
-Allows for scanning of a pod communication device. The Omnipod driver cannot select more than one pod communication device at a time.
+Bir pod iletişim cihazının taranmasına izin verir. Omnipod sürücüsü aynı anda birden fazla pod iletişim cihazı seçemez.
 
-- **Show battery level reported by OrangeLink/EmaLink/DiaLink:** Reports the actual battery level of the OrangeLink/EmaLink/Dialink. It is **strongly recommended** that all OrangeLink/EmaLink/DiaLink users enable this setting.
+- **OrangeLink/EmaLink/DiaLink tarafından bildirilen pil seviyesini göster:** OrangeLink/EmaLink/Dialink'in gerçek pil seviyesini bildirir. Tüm OrangeLink/EmaLink/DiaLink kullanıcılarının bu ayarı etkinleştirmesi **şiddetle önerilir**.
 
-- DOES NOT work with the original RileyLink.
-- May not work with RileyLink alternatives.
-- Enabled - Reports the current battery level for supported pod communication devices.
-- Disabled - Reports a value of n/a.
+- Orijinal RileyLink ile ÇALIŞMAZ.
+- RileyLink alternatifleriyle çalışmayabilir.
+- Etkin - Desteklenen pod iletişim cihazları için mevcut pil seviyesini raporlar.
+- Devre Dışı - n/a değerini gösterir.
 
-- **Enable battery change logging in Actions:** In the Actions menu, the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Some pod communication devices now have the ability to use regular batteries which can be changed.  This option allows you to note that and reset battery age timers.
+- **Eylemlerde pil değişikliği kaydını etkinleştir:** Eylemler menüsünde, bu ayarı VE yukarıdaki pil raporlama ayarını etkinleştirdiyseniz pil değiştirme düğmesi etkinleştirilir.  Bazı pod iletişim cihazları artık değiştirilebilen normal pilleri kullanmaya imkan sağlarlar.  Bu seçenek, bunu not etmenize ve pil yaşı zamanlayıcılarını sıfırlamanıza olanak tanır.
 
 ### Onay Bildirimleri
 
 Bolus, bazal, SMB ve GBO iletimi ve değişiklikleri için pod üzerinden onay bip sesleri sağlar.
 
-- **\*Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
-- **\*Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
-- **\*SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
+- **\*Bolus bip seslerini etkinleştir:** Bolus iletildiğinde onay biplerini etkinleştirin veya devre dışı bırakın.
+- **\*Bazal bip seslerini etkinleştir:** Yeni bir bazal oran ayarlandığında, aktif bazal oran iptal edildiğinde veya mevcut bazal oran değiştirildiğinde onay biplerini etkinleştirin veya devre dışı bırakın.
+- **\*SMB bip seslerini etkinleştir:** Bir SMB teslim edildiğinde onay biplerini etkinleştirin veya devre dışı bırakın.
 - **GBO (TBR) bip seslerini etkinleştir:** Bir GBO ayarlandığında veya iptal edildiğinde onay biplerini etkinleştirin veya devre dışı bırakın.
 
 ### Alarmlar
 
-Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
+Tanımlanan eşik birimlerine dayalı olarak pod sona erme, kapatma, düşük rezervuar için AAPS uyarıları ve Nightscout duyuruları sağlar.
 
-*Herhangi bir alarm tetiklendikten sonra pod ile her iletişimde tetiklenen alarm için bir AAPS bildiriminin alınacağını unutmayın. Gelen uyarıyı kapatmak, "Pod uyarılarını otomatik olarak sustur" etkin değilse, bildirimin tekrar gelmesini ENGELLEMEZ. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.*
+*Herhangi bir alarm tetiklendikten sonra pod ile her iletişimde tetiklenen alarm için bir AAPS bildiriminin alınacağını unutmayın. Gelen uyarıyı kapatmak, "Pod uyarılarını otomatik olarak sustur" etkin değilse, bildirimin tekrar gelmesini ENGELLEMEZ. Uyarıyı MANUEL OLARAK kapatmak için Omnipod (POD) sekmesini ziyaret etmeli ve BİLGİ UYARILARI düğmesine basmalısınız.*
 
-- **\*Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
+- **\*Süre sonu hatırlatıcısını etkinleştir:** Kapanmadan önce tanımlanan saat süresine ulaşıldığında tetiklenecek şekilde pod sona erme hatırlatıcısını etkinleştirin veya devre dışı bırakın.
 - **Kapanmadan kaç saat önce:** Etkin pod kapanmadan önceki saat süresini tanımlar, bu daha sonra pod süre sonu hatırlatıcısı alarmını tetikler.
-- **\*Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
+- **\*Düşük rezervuar uyarısını etkinleştir:** Pod, ünite satırında belirlenen alt rezervuar sınırına ulaştığında bir alarm etkinleştirin veya devre dışı bırakın.
 - **Ünite:** Pod düşük rezervuar alarmının tetikleneceği ünite sayısı.
-- **Automatically acknowledge Pod alerts:** When enabled a notification will still be issued however immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
+- **Pod uyarılarını otomatik olarak kabul et:** Etkinleştirildiğinde, yine de bir bildirim verilecektir, ancak uyarının verilmesinden bu yana ilk pod iletişim temasından hemen sonra, artık otomatik olarak onaylanacak ve uyarı reddedilecektir.
 
 ### Bildirimler
 
-Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus events were successful.
+GBO, SMB veya bolus olaylarının başarılı olup olmadığı yani belirsiz olduğunda AAPS bildirimleri ve sesli telefon uyarıları sağlar.
 
 *NOT: Bunlar yalnızca bildirimlerdir, sesli uyarı yapılmaz.*
 
 - **Belirsiz GBO (TBR) bildirimleri için sesi etkinleştir:** Bir Geçici Bazal Oranının başarılı bir şekilde ayarlanıp ayarlanmadığı AAPS tarafından belirsiz olduğunda sesli bir uyarı ve görsel bildirim tetiklemek için bu ayarı etkinleştirin veya devre dışı bırakın.
-- **\*Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
-- **\*Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
+- **\*Belirsiz SMB bildirimleri için sesi etkinleştir:** Bir SMB'nin başarıyla teslim edilip edilmediğinden AAPS emin olmadığında sesli bir uyarı ve görsel bildirimi tetiklemek için bu ayarı etkinleştirin veya devre dışı bırakın.
+- **\*Belirsiz bolus bildirimleri için sesi etkinleştir:** AAPS'nin bir bolusun başarıyla iletildiğinden emin olmadığı durumlarda sesli uyarı ve görsel bildirimi tetiklemek için bu ayarı etkinleştirin veya devre dışı bırakın.
 
 ### Diğer
 
-Provides advanced settings to assist debugging.
+Hata ayıklamaya yardımcı olmak için gelişmiş ayarlar sağlar.
 
-- **Show Suspend Delivery button in Omnipod tab:** Hide or display the suspend delivery button in the **Omnipod (POD)** tab.
-- **Show Pulse log button in Pod Management menu:** Hide or display the pulse log button in the **Pod Management** menu.
-- **Show RileyLink Stats button in Pod Management menu:** Hide or display the RileyLink Stats button in the **Pod Management** menu.
-- **\*DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
+- **Omnipod sekmesinde İletimi Askıya Al butonunu göster:** **Omnipod (POD)** sekmesinde iletimi askıya al butonunu gizleyin veya görüntüleyin.
+- **Pod Yönetimi menüsünde Nabız günlüğü butonunu göster:** **Pod Yönetimi** menüsünde nabız günlüğü butonunu gizleyin veya görüntüleyin.
+- **Pod Yönetimi menüsünde RileyLink İstatistikleri butonunu göster:** **Pod Yönetimi** menüsünde RileyLink İstatistikleri butonunu gizleyin veya görüntüleyin.
+- **\*DST/Saat dilimi algılamayı etkinleştir:**, telefon DST'nin gözlemlendiği bir alanda kullanılıyorsa, saat dilimi değişikliklerinin otomatik olarak algılanmasını sağlar.
 
-### Switching or Removing an Active Pod Communication Device (RileyLink)
+### Aktif Pod İletişim Aygıtını Değiştirme veya Çıkarma (RileyLink)
 
-With many alternative models to the original RileyLink available (such as OrangeLink or EmaLink) or the need to have multiple/backup versions of the same pod communication device (RileyLink), it becomes necessary to switch or remove the selected pod communication device (RileyLink) from Omnipod Setting configuration.
+Mevcut RileyLink'e (OrangeLink veya EmaLink gibi) birçok alternatif model veya aynı pod iletişim cihazının (RileyLink) birden çok/yedek versiyonuna ihtiyaç duyulduğunda, Omnipod Ayarı yapılandırmasından, seçilen pod iletişim cihazının (RileyLink) değiştirilmesi veya çıkarılması gerekli hale gelir.
 
-The following steps will show how to **Remove** and existing pod communication device (RileyLink) as well as **Add** a new pod communication device.  Executing both **Remove** and **Add** steps will switch your device.
+Aşağıdaki adımlar, Mevcut pod iletişim cihazını (RileyLink) **Kaldır**'manın yanı sıra yeni bir pod iletişim cihazının **Eklemesini** gösterecektir.  Hem **Kaldır** hem de **Ekle** adımlarını uyguladığınızda cihazınız değişir.
 
-1. Access the **RileyLink Selection** menu by selecting the **3 dot menu (1)** in the upper right hand corner of the **Omnipod (POD)** tab and selecting **Omnipod preferences (2)** from the dropdown menu. On the **Omnipod Settings** menu under **RileyLink Configuration (3)** press the **Not Set** (if no device is selected) or **MAC Address** (if a device is present) text to open the **RileyLink Selection** menu.
+1. **RileyLink Seçimi** menüsüne erişmek için **Omnipod (POD)** sekmesinin sağ üst köşesindeki **3 noktalı menüyü (1)** seçerek, açılır menüden **Omnipod tercihleri (2)** ni seçin. **Omnipod Ayarları** menüsünde **RileyLink Yapılandırması (3)** altındaki **Ayarlanmadı** (herhangi bir cihaz seçilmemişse) veya **MAC Adresi** (bir cihaz varsa) metnine basın. **RileyLink Seçimi** menüsünü açın.
 
    > ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
-### Remove Currently Selected Pod Communication Device (RileyLink)
+### Halihazırda Seçili Olan Pod İletişim Aygıtını Kaldırın (RileyLink)
 
-This process will show how to remove the currently selected pod communication device (RileyLink) from the Omnipod Driver settings.
+Bu işlem, seçili olan pod iletişim cihazının (RileyLink) Omnipod Sürücü ayarlarından nasıl kaldırılacağını gösterecektir.
 
-1. Under **RileyLink Configuration** press the **MAC Address (1)** text to open the **RileyLink Selection** menu.
+1. **RileyLink Yapılandırması** altında, **RileyLink Seçimi** menüsünü açmak için **MAC Adresi (1)** metnine basın.
 
    > ![RileyLink_Setup_Remove_1](../images/omnipod/RileyLink_Setup_Remove_1.png)
 
-2. On the **RileyLink Selection** menu the press **Remove (2)** button to remove **your currently selected RileyLink (3)**
+2. **RileyLink Seçimi** menüsünde, **Seçtiğiniz RileyLink'i (3)** kaldırmak için **Kaldır (2)** butonuna basın
 
    > ![RileyLink_Setup_Remove_2](../images/omnipod/RileyLink_Setup_Remove_2.png)
 
-3. At the confirmation prompt press **Yes (4)** to confirm the removal of your device.
+3. Onay isteminde, cihazınızın kaldırılmasını onaylamak için **Evet (4)**'e basın.
 
    > ![RileyLink_Setup_Remove_3](../images/omnipod/RileyLink_Setup_Remove_3.png)
 
-4. You are returned to the **Omnipod Setting** menu where under **RileyLink Configuration** you will now see the device is **Not Set (5)**.  Congratulations, you have now successfully removed your selected pod communication device.
+4. **RileyLink Yapılandırması** altında **Omnipod Ayarı** menüsüne geri dönerek cihazın **Ayarlanmadı (5)** olduğunu görürsünüz.  Tebrikler, seçtiğiniz pod iletişim cihazını başarıyla kaldırdınız.
 
    > ![RileyLink_Setup_Remove_4](../images/omnipod/RileyLink_Setup_Remove_4.png)
 
-### Add Currently Selected Pod Communication Device (RileyLink)
+### Halihazırda Seçili Olan Pod İletişim Aygıtını Ekleyin (RileyLink)
 
-This process will show how to add a new pod communication device to the Omnipod Driver settings.
+Bu işlem, Omnipod Sürücü ayarlarına yeni bir pod iletişim cihazının nasıl ekleneceğini gösterecektir.
 
-1. Under **RileyLink Configuration** press the **Not Set (1)** text to open the **RileyLink Selection** menu.
+1. **RileyLink Seçimi** menüsünü açmak için **RileyLink Yapılandırması** altında **Ayarlanmadı (1)** metnine basın.
 
    > ![RileyLink_Setup_Add_1](../images/omnipod/RileyLink_Setup_Add_1.png)
 
-2. Press the **Scan (2)** button to start scanning for all available Bluetooth devices.
+2. Mevcut tüm Bluetooth cihazlarını taramaya başlamak için **Tara (2)** butonuna basın.
 
    > ![RileyLink_Setup_Add_2](../images/omnipod/RileyLink_Setup_Add_2.png)
 
-3. Select **your RileyLink (3)** from the list of available devices and you will be returned to the **Omnipod Settings** menu displaying the **MAC Address (4)** of your newly selected device.  Congratulations you have successfully selected your pod communication device.
+3. Mevcut cihazlar listesinden **RileyLink'inizi (3)** seçerek yeni seçtiğiniz cihazınızın **MAC Adresini (4)** görüntüleyen **Omnipod Ayarları** menüsüne geri dönersiniz.  Tebrikler, pod iletişim cihazınızı başarıyla seçtiniz.
 
    > ![RileyLink_Setup_Add_3](../images/omnipod/RileyLink_Setup_Add_3.png) ![RileyLink_Setup_Add_4](../images/omnipod/RileyLink_Setup_Add_4.png)
 
 ## Eylemler (EYLEM) Sekmesi
 
-This tab is well documented in the main AAPS documentation but there are a few items on this tab that are specific to how the Omnipod pod differs from tube based pumps, especially after the processes of applying a new pod.
+Bu sekme, ana AAPS dokümantasyonunda açık bir şekilde anlatılmıştır, ancak bu sekmede, özellikle yeni bir pod takıldıktan sonra, Omnipod podunun hortum bazlı pompalardan nasıl farklı olduğuna dair özel birkaç nokta belirtilmektedir.
 
 1. Ana AAPS arayüzünde **Eylemler (EYLEM)** sekmesine gidin.
-2. Under the **Careportal (1)** section the following 3 fields will have their **age reset** to 0 days and 0 hours **after each pod change**: **Insulin** and **Cannula**. Bu Omnipod pompasının çalışma şekli nedeniyle böyle yapılmaktadır. **Pompa pili** ve **insülin rezervuarı**, her pod içinde yer almaktadır. Pod, kanülü doğrudan pod uygulama bölgesinde deriye yerleştirdiği için, Omnipod pompalarında hortum kullanılmaz. *Bu nedenle, bir pod değişikliğinden sonra bu değerlerin her birinin yaşı otomatik olarak sıfırlanır.* **Pompa pil yaşı** pod pili her zaman kendi ömründen daha fazla olacağı için (maksimum 80 saat) rapor edilmez.
+2. **Bakımportalı (1)** bölümünün altında **İnsülin** ve **Kanül** alanları her pod değişikliğinden sonra **yaşlarını 0 gün ve 0 saat ** olacak şekilde sıfırlayacaktır. Bu Omnipod pompasının çalışma şekli nedeniyle böyle yapılmaktadır. **Pompa pili** ve **insülin rezervuarı**, her pod içinde yer almaktadır. Pod, kanülü doğrudan pod uygulama bölgesinde deriye yerleştirdiği için, Omnipod pompalarında hortum kullanılmaz. *Bu nedenle, bir pod değişikliğinden sonra bu değerlerin her birinin yaşı otomatik olarak sıfırlanır.* **Pompa pil yaşı** pod pili her zaman kendi ömründen daha fazla olacağı için (maksimum 80 saat) rapor edilmez.
 
 > ![Actions_Tab](../images/omnipod/Actions_Tab.png)
 
-### Levels
+### Dolum seviyeleri
 
 **İnsülin Seviyesi**
 
-Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This is because it is not known exactly how much insulin was put in the pod, only that when the 2 beeps are triggered while filling the pod that over 85 units have been injected. A Pod can hold a maximum of 200 units. Priming can also introduce variance as it is not and exact process.  With both of these factors, the Omnipod driver has been written to give the best approximation of insulin remaining in the reservoir.
+Omnipod Eros Pod'daki insülin bildirim miktarı kesin değil.  Bunun nedeni, pod ne kadar insülin konulduğu tam olarak bilinmemekle birlikte, yalnızca pod doldurulurken 2 bip sesi tetiklendiğinde 85 üniteden fazla enjekte edilmiş olmasıdır. Bir Pod en fazla 200 ünite alabilir. Hazırlama, kesin bir süreç olmadığı için sapmalara da yol açabilir.  Bu faktörlerin her ikisiyle birlikte, Omnipod sürücüsü rezervuarda kalan insülinin en iyi yaklaşık değerini verecek şekilde yazılmıştır.
 
-> - **Above 50 Units** - Reports a value of 50+U when more than 50 units are currently in the reservoir.
-> - **Below 50 Units** - Reports an approximate calculated value of insulin remaining in the reservoir.
+> - **50 Ünitenin Üzerinde** - Şu an rezervuarda 50 üniteden fazla insülin olduğunda 50+Ü değeri bildirilir.
+> - **50 Ünitenin Altında** - Rezervuarda kalan insülinin yaklaşık hesaplanmış değerini bildirir.
 > - **SMS** - SMS yanıtlarında insülin seviyesi 50+Ü veya değer görünür.
 > - **Nightscout** - Nightscout'a (sürüm 14.07 ve daha eski) 50 üniteden fazla olduğunda 50 değerini yükler.  Daha yeni sürümler, 50 ünite üzerinde olduğunda 50+ değerini bildirir.
 
-**Battery Level**
+**Pil seviyesi**
 
-Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices, such as the OrangeLink, EmaLink or DiaLink.  The RileyLink hardware is not capable of reporting its battery level.  The battery level is reported after each communication with the pod, so when charging a linear increase may not be observed.  A manual refresh will update the current battery level.  When a supported Pod communication device is disconnected a value of 0% will be reported.
+Pil seviyesi bildirimi, OrangeLink, EmaLink veya DiaLink gibi pod iletişim cihazlarının mevcut pil düzeyini görüntülemek için etkinleştirilebilen bir ayardır.  RileyLink donanımı, pil seviyesini bildiremez.  Pil seviyesi, pod ile her iletişimden sonra rapor edilir, bu nedenle şarj olurken doğrusal bir artış gözlemlenmeyebilir.  El ile yenileme, mevcut pil seviyesini güncelleyecektir.  Desteklenen bir Pod iletişim cihazının bağlantısı kesildiğinde %0 değeri rapor edilecektir.
 
-> - **RileyLink hardware is NOT capable of reporting battery level**
-> - **"Show battery level reported by OrangeLink/EmaLink/DiaLink" Setting MUST be enabled in the Omnipod settings to report battery level values**
-> - **Battery level reporting ONLY works for OrangeLink, EmaLink and DiaLink Devices**
-> - **Battery Level reporting MAY work for other devices (excluding RileyLink)**
-> - **SMS** - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned
-> - **Nightscout** - Battery level is reported when an actual level exists, a value of n/a will not be reported
+> - **RileyLink donanımı, pil seviyesini bildirme özelliğine sahip değildir**
+> - **Pil seviyesi değerlerini bildirmek için Omnipod ayarlarında "OrangeLink/EmaLink/DiaLink tarafından bildirilen pil seviyesini göster" Ayarı MUTLAKA etkinleştirilmelidir**
+> - **Pil seviyesi raporlaması YALNIZCA OrangeLink, EmaLink ve DiaLink Cihazları için geçerlidir**
+> - **Pil Düzeyi raporlaması diğer cihazlarda da çalışabilir (RileyLink hariç)**
+> - **SMS** - Gerçek bir seviye mevcut olduğunda yanıt olarak mevcut pil seviyesini döndürür, n/a değeri döndürülmez
+> - **Nightscout** - Gerçek bir seviye mevcut olduğunda pil seviyesi rapor edilir, n/a değeri rapor edilmez
 
 (OmnipodEros-troubleshooting)=
 
@@ -711,82 +711,82 @@ Battery level reporting is a setting that can be enabled to return the current b
 
 ### Pod Hataları
 
-Pod'larda, kendisiyle ilgili donanım sorunları da dahil olmak üzere çeşitli sorunlar nedeniyle ara sıra hatalar olabiliyor. AAPS onaylanmış bir kullanım şekli olmadığından, bunları Insulet'e bildirmemek en iyi seçenektir. A list of fault codes can be found [here](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+Pod'larda, kendisiyle ilgili donanım sorunları da dahil olmak üzere çeşitli sorunlar nedeniyle ara sıra hatalar olabiliyor. AAPS onaylanmış bir kullanım şekli olmadığından, bunları Insulet'e bildirmemek en iyi seçenektir. Nedeni belirlemeye yardımcı olması için [burada](https://github.com/openaps/openomni/wiki/Fault-event-codes) hata kodlarının bir listesi bulunmaktadır.
 
 ### 49 numaralı Pod hatasını önleme
 
-Bu hata bir komut için yanlış bir pod durumu veya bir insülin iletim komutu sırasındaki bir hata ile ilgilidir. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under the **Config Builder**➜**General**➜**NSClient**➜**cog wheel**➜**Advanced Settings** to prevent possible failures.
+Bu hata bir komut için yanlış bir pod durumu veya bir insülin iletim komutu sırasındaki bir hata ile ilgilidir. Nightscout client kullanıcılarının, olası arızaları önlemek için **Konfigürasyon ayarları**➜**Genel**➜**NSClient**➜**dişli çark**➜**Gelişmiş Ayarlar** altında *yalnızca yükleme (Senkronizasyonu devre dışı bırak)* seçeneğini etkinleştirmelerini öneririz.
 
 ### Pompaya Ulaşılamıyor Uyarıları
 
-It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**➜**Local Alerts**➜**Pump unreachable threshold \[min\]** and setting this to **120**.
+Pompa ulaşılamaz uyarılarının sağ üst taraftaki üç noktalı menüye giderek,**Tercihler**➜**Yerel Uyarılar**➜**Pompa Ulaşılamaz eşiği \[min\]** seçip bu seçeneğin **120** olarak ayarlanması önerilir.
 
 (OmnipodEros-import-settings-from-previous-aaps)=
-### Import Settings from previous AAPS
+### Önceki AAPS ayarlarını içe aktarın
 
-Please note that importing settings has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
+Ayarları içe aktarmanın, eski bir Pod durumunu içe aktarma olanağına sahip olduğunu lütfen unutmayın. Sonuç olarak, aktif bir Pod'u kaybedebilirsiniz. Bu nedenle dolayı **etkin bir Pod oturumu sırasında ayarları içe aktarmamanız** şiddetle tavsiye edilir.
 
-1. Deactivate your pod session. Verify that you do not have an active pod session.
+1. Pod oturumunuzu devre dışı bırakın. Etkin bir pod oturumunuz olmadığına emin olun.
 2. Ayarlarınızı dışa aktarın ve bir kopyasını güvenli bir yerde saklayın.
-3. Uninstall the previous version of AAPS and restart your phone.
-4. Install the new version of AAPS and verify that you do not have an active pod session.
-5. Import your settings and activate your new pod.
+3. AAPS'nin önceki sürümünü kaldırın ve telefonunuzu yeniden başlatın.
+4. AAPS'nin yeni sürümünü yükleyin ve etkin bir pod oturumunuz olmadığını doğrulayın.
+5. Ayarlarınızı içe aktarın ve yeni podunuzu etkinleştirin.
 
 ### Omnipod sürücü uyarıları
 
-please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. Karşılaşabileceğiniz başlıca uyarıların bir özeti aşağıda listelenmiştir:
+Omnipod ürücüsü **Giriş sekmesinde** çeşitli uyarılar sunmakla birlikte bunların çoğu bilgi amaçlıdır ve kapatılabilirken, bazıları da kullanıcıya tetiklenen uyarının nedenini çözmek için bir eylemde bulunmasını sağlar. Karşılaşabileceğiniz başlıca uyarıların bir özeti aşağıda listelenmiştir:
 
-#### No active Pod
+#### Aktif Pod Yok
 
-No active Pod session detected. Bu uyarı, **ERTELE**'ye basılarak geçici olarak kapatılabilir, ancak yeni bir pod etkinleştirilmedikçe tetiklenmeye devam edecektir. Once activated this alert is automatically silenced.
+Aktif bir Pod oturumu algılanamadı. Bu uyarı, **ERTELE**'ye basılarak geçici olarak kapatılabilir, ancak yeni bir pod etkinleştirilmedikçe tetiklenmeye devam edecektir. Etkinleştirildiğinde bu uyarı otomatik olarak susacaktır.
 
-#### Pod suspended
+#### Pod askıya alındı
 
-Informational alert that Pod has been suspended.
+Pod'un askıya alındığına dair bilgi uyarısı.
 
-#### Setting basal profile failed. Delivery might be suspended! Lütfen Omnipod sekmesindeki Pod durumunu manuel olarak güncelleyin ve gerekirse teslimi devam ettirin..
+#### Bazal profil ayarlanamadı. İletim durdurulmuş olabilir! Lütfen Omnipod sekmesindeki Pod durumunu manuel olarak güncelleyin ve gerekirse teslimi devam ettirin..
 
 Pod bazal profili ayarının başarısız olduğuna ve Dash sekmesinde *Yenile*'ye basmanız gerektiğine dair bilgi uyarısı.
 
 #### SMB bolusunun başarılı olup olmadığı doğrulanamıyor. Bolus'un başarılı olmadığından eminseniz, SMB girişini Tedaviler'den manuel olarak kaldırmalısınız.
 
-Alert that the SMB bolus success could not be verified, you will need to verify the *Last bolus* field on the Omnipod tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
+SMB bolus başarısının doğrulanamadığı konusunda uyarı; SMB bolusunun başarılı olup olmadığını görmek için Omnipod sekmesindeki *Son bolus* alanını doğrulamanız ve başarısız olmuşsa Tedaviler sekmesinden girişi kaldırmanız gerekir.
 
 #### "Görev bolus/GBO/SMB"nin tamamlanıp tamamlanmadığı belirsizse, lütfen başarılı olup olmadığını manuel olarak doğrulayın.
 
-Due to the way that the RileyLink and Omnipod communicate, situations can occur where it is *uncertain* if a command was successfully processed. The need to inform the user of this uncertainty was necessary.
+RileyLink ve Omnipod'un iletişim kurma biçimi nedeniyle, bir komutun başarıyla işlenip işlenmediğinin *belirsiz* olduğu durumlar ortaya çıkabilir. Kullanıcıyı bu belirsizlik hakkında bilgilendirme önemlidir.
 
-Below are a few examples of when an uncertain notification can occur.
+Aşağıda, belirsiz bir bildirimin ne zaman ortaya çıkabileceğine dair birkaç örnek verilmiştir.
 
-- **Boluses** - Uncertain boluses cannot be automatically verified. The notification will remain until the next bolus but a manual pod refresh will clear the message. *By default alerts beeps are enabled for this notification type as the user will manually need to verify them.*
-- **TBRs, Pod Statuses, Profile Switches, Time Changes** - a manual pod refresh will clear the message. By default alert beeps are disabled for this notification type.
-- **Pod Time Deviation -** When the time on the pod and the time your phone deviates too much then it is difficult for AAPS loop to function and make accurate predictions and dosage recommendations. If the time deviation between the pod and the phone is more than 5 minutes then AAPS will report the pod is in a Suspended state under Pod status with a HANDLE TIME CHANGE message. An additional **Set Time** icon will appear at the bottom of the Omnipod (POD) tab. Clicking Set Time will synchronize the time on the pod with the time on the phone and then you can click the RESUME DELIVERY button to continue normal pod operations.
+- **Bolus** - Belirsiz boluslar otomatik olarak doğrulanamaz. Bildirim, bir sonraki bolusa kadar kalacak ancak manuel Pod yenilemesi mesajı silecektir. *Varsayılan olarak, kullanıcının manuel olarak onaylaması gerektiğinden, bu tür bir bildirim için uyarı bip sesleri etkinleştirilir.*
+- **GBO'lar, Pod Durumları, Profil Anahtarları, Zaman Değişiklikleri** - manuel bir pod güncellemesi mesajı siler. Bu bildirim türü için varsayılan uyarı bip sesleri devre dışıdır.
+- **Pod Zaman Sapması -** Pod zamanı ile telefonunuzun zamanı çok fazla saptığında, AAPS döngünün çalışması ve doğru tahminler ve dozaj önerileri yapması zordur. Pod ile telefon arasındaki zaman sapması 5 dakikadan fazlaysa, AAPS, HANDLE TIME CHANGE "ZAMAN DEĞİŞİKLİĞİ İŞLE" mesajıyla Pod'un Pod durumu altında Askıya alınmış durumda olduğunu bildirir. Omnipod (POD) sekmesinin altında ek bir **Saati Ayarla** simgesi görünecektir. Saati Ayarla'yı tıklamak, Pod saati telefondaki saatle senkronize eder ve ardından normal pod işlemlerine devam etmek için 'RESUME DELIVERY' TESLİME DEVAM ET düğmesine tıklayabilirsiniz.
 
-## Best Practices
+## En İyi Uygulamalar
 
 (OmnipodEros-optimal-omnipod-and-rileylink-positioning)=
 
-### Optimal Omnipod and RileyLink Positioning
+### En İyi Omnipod ve RileyLink Konumlandırılması
 
-The antenna used on the RileyLink to communicate with an Omnipod pod is a 433 MHz helical spiral antenna. Due to its construction properties it radiates an omni directional signal like a three dimensional doughnut with the z-axis representing the vertical standing antenna. This means that there are optimal positions for the RileyLink to be placed, especially during pod activation and deactivation routines.
+Bir Omnipod pod ile iletişim kurmak için RileyLink'te kullanılan anten, 433 MHz sarmal spiral antendir. Yapı özelliklerinden dolayı, dikey duran anteni temsil eden z ekseni ile üç boyutlu bir halka gibi çok yönlü bir sinyal yayar. Bu özellikle pod etkinleştirme ve devre dışı bırakma rutinleri sırasında, RileyLink'in yerleştirilmesi için en uygun konumdırmanın olduğu anlamına gelir.
 
 ![Toroid_w_CS](../images/omnipod/Toroid_w_CS.png)
 
-> *(Fig 1. Graphical plot of helical spiral antenna in an omnidirectional pattern*)
+> *(Şek 1. Çok yönlü bir düzende sarmal sarmal antenin grafik çizimi*)
 
-Because of both safety and security concerns, pod *activation* has to be done at a range *closer (~30 cm away or less)* than other operations such as giving a bolus, setting a TBR or simply refreshing the pod status. Due to the nature of the signal transmission from the RileyLink antenna it is NOT recommended to place the pod directly on top of or right next to the RileyLink.
+Hem güvenlik hem de emniyet endişeleri nedeniyle pod *aktivasyonu*, bolus verme, bir GBO ayarlama veya sadece bölme durumunu yenilemek gibi diğer işlemlerden *daha yakın (~30 cm veya daha kısa)* bir mesafede yapılmalıdır. RileyLink anteninden sinyal iletiminin doğası gereği, podun doğrudan RileyLink'in üzerine veya hemen yanına yerleştirilmesi ÖNERİLMEZ.
 
-The image below shows the optimal way to position the RileyLink during pod activation and deactivation procedures. The pod may activate in other positions but you will have the most success using the position in the image below.
+Aşağıdaki resim, pod etkinleştirme ve devre dışı bırakma prosedürleri sırasında RileyLink'i konumlandırmanın en uygun yolunu göstermektedir. Pod başka pozisyonlarda aktif olabilir ama en başarılı olanı aşağıdaki resimdeki pozisyonu kullanarak elde edersiniz.
 
-*Note: If after optimally positioning the pod and RileyLink communication fails, this may be due to a low battery which decreases the transmission range of the RileyLink antenna. To avoid this issue make sure the RileyLink is properly charged or connected directly to a charging cable during this process.*
+*Not: Pod en uygun şekilde yerleştirdikten sonra ve RileyLink iletişimi başarısız olursa, bunun nedeni, RileyLink anteninin iletim menzilini azaltan düşük pil seviyesi olabilir. Bu sorunu önlemek için, bu işlem sırasında RileyLink'in doğru şekilde şarj edildiğinden veya doğrudan bir şarj kablosuna bağlandığından emin olun.*
 
 ![Omnipod_pod_and_RileyLink_Position](../images/omnipod/Omnipod_pod_and_RileyLink_Position.png)
 
-## Where to get help for Omnipod driver
+## Omnipod sürücüsü için nereden yardım alınabilir
 
-All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerate and use the following guidelines when requesting assistance:
+Omnipod sürücüsü için tüm geliştirme çalışmaları topluluk tarafından gönüllü olarak yapılır; Yardım talep ederken lütfen düşünceli olmanızı ve aşağıdaki yönergeleri kullanmanızı rica ediyoruz:
 
 - **Seviye 0:** Sorun yaşadığınız işlevin nasıl çalışması gerektiğini anladığınızdan emin olmak için bu dokümantasyonun ilgili bölümünü okuyun.
 - **Seviye 1:** Bu dokümantasyonu kullanmanıza rağmen hâlâ çözemediğiniz sorunlarla karşılaşıyorsanız, lütfen [bu davet bağlantısını](https://discord.gg/4fQUWHZ4Mw) kullanarak **Discord**'da * #androidaps* kanalına gidin.
-- **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../Usage/Accessing-logfiles.md).
+- **Seviye 2:** Sorununuzun bildirilip bildirilmediğini görmek için mevcut sorunları arayın; değilse, lütfen yeni bir [sorun](https://github.com/nightscout/AndroidAPS/issues) oluşturun ve [günlük dosyalarınızı](../Usage/Accessing-logfiles.md) ekleyin.
 - **Sabırlı olun - topluluğumuzun üyelerinin çoğu iyi huylu gönüllülerden oluşur ve sorunları çözmek genellikle hem kullanıcılar hem de geliştiriciler için zaman ve sabır gerektirir.**
