@@ -4,11 +4,11 @@ SSS'ye nasıl soru eklenir: Bu [talimatları](../make-a-PR.md) izleyin
 
 # Genel
 
-## Can I just download the AAPS installation file?
+## AAPS kurulum dosyasını indirebilir miyim?
 
-Hayır. There is no downloadable apk file for AAPS. Kendiniz [derlemeniz](../Installing-AndroidAPS/Building-APK.md) gerekir. Nedeni ise:
+Hayır. AAPS için indirilebilir bir apk dosyası yoktur. Kendiniz [derlemeniz](../Installing-AndroidAPS/Building-APK.md) gerekir. Nedeni ise:
 
-AAPS is used to control your pump and give insulin. Avrupa'daki mevcut düzenlemelere göre IIa veya IIb olarak sınıflandırılan tüm sistemler, çeşitli çalışmalar ve imzalar gerektiren düzenleyici onay (CE işareti) gerektiren tıbbi cihazlardır. Düzenlenmemiş bir cihazı dağıtmak yasa dışıdır. Dünyanın başka yerlerinde de benzer düzenlemeler var.
+AAPS, pompanızı kontrol etmek ve insülin vermek için kullanılır. Avrupa'daki mevcut düzenlemelere göre IIa veya IIb olarak sınıflandırılan tüm sistemler, çeşitli çalışmalar ve imzalar gerektiren düzenleyici onay (CE işareti) gerektiren tıbbi cihazlardır. Düzenlenmemiş bir cihazı dağıtmak yasa dışıdır. Dünyanın başka yerlerinde de benzer düzenlemeler var.
 
 Bu düzenleme (bir şey karşılığında para almak anlamında) sadece satışla sınırlı olmayıp, her türlü dağıtım (hatta ücretsiz dağıtma) için de geçerlidir. Kendiniz için bir tıbbi cihaz oluşturmak, uygulamayı bu düzenlemeler dahilinde kullanmanın tek yoludur.
 
