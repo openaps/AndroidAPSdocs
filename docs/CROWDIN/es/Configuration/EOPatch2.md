@@ -1,13 +1,13 @@
 # Manual de instrucciones de EOPatch2 (Glucomen Day Pump)
 
-**Planned but not commited for AAPS 3.2 (next version)!**
+**Previsto, pero no confirmado para AAPS 3.2 (próxima versión)**
 
 El parche requiere de insulina de acción rápida del tipo U-100, como NovoRapid o Humalog. Utiliza una insulina de acción rápida adecuada para tí, según la prescripción de tu médico e inyéctate la dosis prescrita.
 
 La dosis más pequeña de insulina que puede ponerse cuando usamos es parche es de 0.05U. Por lo tanto, el perfil basal debe ajustarse a un valor mínimo de 0.05U o más, con un intervalo de 0.05U/h, ya que de lo contrario, puede haber un error entre la cantidad total de infusión estimada en el perfil y la cantidad real de infusión en el parche. Del mismo modo, el bolo también debe fijarse con un volumen de infusión mínimo de 0.05U.
 
 ## Configuración de la bomba
-1. On the AAPS home screen, click the hamburger menu in the upper left corner and go to Config Builder.
+1. En la pantalla de inicio de AAPS, haga clic en el menú hamburguesa de la esquina superior izquierda y vaya a Tabla de configuraciones
 1. Selecciona "EOPatch2" en la seción de las bombas.
 1. Pulsa el botón de Atrás para volver a la pantalla de inicio.
 
