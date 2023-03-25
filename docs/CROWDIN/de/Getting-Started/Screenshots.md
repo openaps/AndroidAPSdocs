@@ -414,7 +414,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
    * Kanülenalter
    * Alter & Ladestand (in %) der Pumpenbatterie
 
-* Less information will be shown if [low resolution skin](Preferences-skin) is used.
+* Weniger Informationen werden angezeigt, wenn [Skin](Preferences-skin) mit niedriger Auflösung verwendet wird.
 
 (Screenshots-sensor-level-battery)=
 
