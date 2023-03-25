@@ -1,13 +1,13 @@
 # EOPatch2 Anleitung
 
-**Planned but not commited for AAPS 3.2 (next version)!**
+**In Planung, aber nicht in AAPS 3.2!**
 
 Der Patch erfordert die Verwendung von schnell wirkendem U-100 Insulin wie NovoRapid oder Humalog. Verwende ein schnell wirkendes Insulin, das für Dich nach dem Rezept Deines Arztes geeignet ist und verwende die vorgeschriebene Dosierung.
 
 Die kleinste injizierbare Dosis Insulin bei Verwendung des Patches beträgt 0,05 U. Der Profil-BAS sollte daher auf einen Mindestwert von 0,05 U/Stunde oder mehr und ein Intervall von 0,05 U/Std. eingestellt werden, da sonst ein Fehler zwischen der geschätzten Gesamtinfusionsmenge im Profil und der tatsächlichen Infusionsmenge im Patch auftreten kann. Gleichermaßen muss der Bolus mit einem Mindestinfusionsvolumen von 0,05 U gesetzt und infusioniert werden.
 
 ## Pumpen-Einrichtung
-1. On the AAPS home screen, click the hamburger menu in the upper left corner and go to Config Builder.
+1. Klicke auf dem AndroidAPS Startbildschirm oben links auf das Hamburger Menü und wähle den Konfigurations-Generator aus.
 1. Wählen Sie im Bereich Pumpen 'EOPatch2' aus.
 1. Drücken Sie die Zurück-Taste, um zum Startbildschirm zurückzukehren.
 
