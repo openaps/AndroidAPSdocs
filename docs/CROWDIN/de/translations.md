@@ -9,15 +9,15 @@
 
 Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stellen wir keine SLAs zur Verfügung, aber im Allgemeinen erfolgt die Genehmigung in < 1 Tag. Falls nicht, kontaktiere bitte das Doc Team über Facebook oder Discord.
 
-    <br />* When we approve you, click the flag
-       ![When we approve you, click the flag](./images/translation_flags.png)
+    <br />* Wenn wir Dich aufnehmen, klicke auf die Flagge
+       ![Wenn wir Dich aufnehmen, klicke auf die Flagge](./images/translation_flags. ng)
     
-    ## Translation of the app
+    ## Übersetzung der App
     
     (translations-translate-strings-for-androidaps-app)=
-    ### Translate strings for AndroidAPS app
+    ### Zeichenketten für die AndroidAPS-App übersetzen
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
+    * Wenn Du keine von Dir speziell ausgewählten Zeichenketten übersetzen willst, wähle einfach die Schaltfläche "Alle übersetzen" um zu starten. It will show you the strings which need translation.
     
        ![Click translate all](./images/translations-click-translate-all.png)
     
@@ -78,12 +78,12 @@ Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stell
     
     In general this needs 1 - 3 days but might during holiday take a little bit longer.
     
-    ### Translating links
+    ### Übersetzen von Links
     
-    ```{admonition} Links are not translated anymore
+    ```{admonition} Links werden nicht mehr übersetzt
     :class: note
     
-    Links are not translated anymore. In the past we had a topic here but this is gone as through migraton to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Links werden nicht mehr übersetzt. In the past we had a topic here but this is gone as through migraton to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
     
     
 
