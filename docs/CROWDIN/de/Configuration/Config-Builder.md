@@ -4,11 +4,11 @@ Abhängig von Deinen Einstellungen kannst Du den Konfigurationsgenerator über e
 
 ![Konfigurations-Generator öffnen](../images/ConfBuild_Open_AAPS30.png)
 
-Im Reiter “Konfigurations-Generator” (KONF) kannst du fast alle AAPS-Funktionen konfigurieren. The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AAPS. Falls die rechte Box nicht aktiviert ist, sind die Funktionen über das Hamburger-Menü (D) oben links am Bildschirm erreichbar.
+Im Reiter “Konfigurations-Generator” (KONF) kannst du fast alle AAPS-Funktionen konfigurieren. Die Auswahlfelder links (A) aktivieren die gewählte Funktion, die Auswahlfelder rechts (C) legen fest, ob die Funktion als Tab (E) in AAPS angezeigt wird oder nicht. Falls die rechte Box nicht aktiviert ist, sind die Funktionen über das Hamburger-Menü (D) oben links am Bildschirm erreichbar.
 
 Falls zusätzliche Einstellungen innerhalb der Funktion möglich sind, können sie über das Zahnrad (B) aufgerufen werden.
 
-**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AAPS. Drücke das 3-Punkte-Menü (F) oben rechts am Bildschirm und wähle "Einrichtungsassistent", um diesen zu starten.
+**Erste Konfiguration:** Seit AAPS 2.0 führt Dich der 'Einrichtungsassistent' durch die Einrichtung von AAPS. Drücke das 3-Punkte-Menü (F) oben rechts am Bildschirm und wähle "Einrichtungsassistent", um diesen zu starten.
 
 ![Konfigurations-Generator - Checkboxen und Zahnrad](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
@@ -101,7 +101,7 @@ Details werden auf der separaten [Profil-Helfer-Seite](../Configuration/profileh
 
 * Die Insulinwirkdauer (DIA) ist nicht für jeden gleich. Daher musst Du es selbst für Dich austesten. 
 * Unter fünf Stunden darf der Wert aber nicht liegen.
-* Für viele Menschen mit Diabetes, die ultra-schnell wirkende Insuline wie Fiasp nutzen, gibt es 3 - 4 Stunden nach der Insulingabe nahezu keinen spürbaren Effekt mehr, auch wenn dann rechnerisch noch 0.0xx Einheiten vorhanden sind. Die verbleibende Menge kann aber bei Sport und anderen Aktivitäten doch noch einen Einfluss haben. Therefore, AAPS uses minimum 5h as DIA.
+* Für viele Menschen mit Diabetes, die ultra-schnell wirkende Insuline wie Fiasp nutzen, gibt es 3 - 4 Stunden nach der Insulingabe nahezu keinen spürbaren Effekt mehr, auch wenn dann rechnerisch noch 0.0xx Einheiten vorhanden sind. Die verbleibende Menge kann aber bei Sport und anderen Aktivitäten doch noch einen Einfluss haben. Daher nutzt AAPS eine minimale Wirkdauer von 5 Stunden.
 * Im Abschnitt zu den Insulinprofilen auf [dieser Seite](Screenshots-insulin-profile) findest Du weitere Informationen dazu.
 
 ### Unterschiede der Insulintypen
@@ -222,7 +222,7 @@ Wähle den gewünschten APS-Algorithmus für Therapie-Anpassungen. Die Details z
 
 * AAPS wertet laufend alle verfügbaren Daten (IOB, COB, BZ-Wert) aus und macht dir bei Bedarf Behandlungsvorschläge, wie du deine Therapie anpassen solltest. 
 * Die Vorschläge werden nicht automatisch (wie im Closed Loop) ausgeführt, sondern müssen manuell in die Pumpe eingegeben werden. Wenn Du eine kompatible Pumpe (Dana R/RS oder Accu Chek Combo) verwendest, kann dies auch über eine Schaltfläche in AndroidAPS geschehen. 
-* This option is for getting to know how AAPS works or if you are using an unsupported pump.
+* Diese Option ist zum Kennenlernen der Funktionsweise gedacht oder falls Du eine nicht unterstützte Pumpe verwendest.
 
 (Config-Builder-closed-loop)=
 
@@ -248,7 +248,7 @@ Wähle den gewünschten APS-Algorithmus für Therapie-Anpassungen. Die Details z
 
 ## Ziele (objectives - Lernprogramm)
 
-AAPS has a leraning program (objectives) that you have to fulfill step by step. Dies soll dich sicher durch die Einrichtung eines Closed Loop Systems führen. Das garantiert, dass du alles korrekt eingestellt hast und auch verstehst, was das System genau macht. Nur so kannst du dem System vertrauen.
+AAPS hat ein Lernprogramm, das Du durchlaufen und dort eine Reihe an Zielen (objectives) nach und nach erfüllen musst. Dies soll dich sicher durch die Einrichtung eines Closed Loop Systems führen. Das garantiert, dass du alles korrekt eingestellt hast und auch verstehst, was das System genau macht. Nur so kannst du dem System vertrauen.
 
 Du solltest regelmäßig deine Einstellungen (inklusive deiner Fortschritte in den objectives) [exportieren](../Usage/ExportImportSettings.md). Dann kannst du sie einfach importieren, wenn du später einmal Dein Smartphone austauschen musst (neues Gerät, Displayschaden...).
 
@@ -303,11 +303,11 @@ Stelle die Werte für die drei Buttons im Dialog 'Katheterwechsel' (Aktionen Tab
 
 #### Zielbereich für die Grafikanzeige
 
-Choose the high and low marks for the BG-graph on AAPS overview and smart watch. Dies dient nur der Anzeige und ist nicht der Zielwert für Deinen Blutzucker. Beispiel: 70 - 180 mg/dl oder 3,9 - 10 mmol/l
+Wähle die Ober- und Untergrenze des grün hinterlegten Zielbereichs im Diagramm auf der AAPS-Übersicht und auf der Smartwatch. Dies dient nur der Anzeige und ist nicht der Zielwert für Deinen Blutzucker. Beispiel: 70 - 180 mg/dl oder 3,9 - 10 mmol/l
 
 #### Kurze Tab-Überschriften
 
-Choose wether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+Wähle, ob die Titel der Tabs lang (z.B. Aktionen, Lokales Profil, Automation) oder kurz (z.B. AKT, LP, AUTO) angezeigt werden sollen.
 
 #### Zeige Feld für Notizen in den Behandlungsdialogen
 
@@ -338,13 +338,13 @@ Benutzerdefinierte Automatisierung von Aufgaben ("wenn - dann - sonst"). Weitere
 
 ### SMS Kommunikator
 
-Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.md) for more setup information.
+Der SMS-Kommunikator erlaubt die Fernsteuerung einiger AAPS Funktionen via SMS. Weitere Informationen zum Setup findest Du auf der Seite [SMS-Befehle](../Children/SMS-Commands.md).
 
 ### Essen
 
 Zeigt die im Nahrungsmittel-Editor erfassten Einträge an. Weitere Informationen zur Einrichtung der Nahrungsmitteldatenbank findest Du im [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods).
 
-Note: Entries cannot be used in the AAPS calculator. (reine Anzeigefunktion)
+Hinweis: Die Einträge können nicht im AAPS-Rechner verwendet werden. (reine Anzeigefunktion)
 
 (Config-Builder-wear)=
 
@@ -367,7 +367,7 @@ Zeigt Loop Information in deinem xDrip+ Watchface (falls du nicht das AAPS/[AAPS
 
 ### Nightscout-Client
 
-* Setup sync of your AAPS data with Nightscout.
+* NSClient Synchronisierung Deiner AAPS-Daten mit Nightscout einrichten.
 * Mit einem Klick auf das [Zahnrad](Preferences-nsclient) kannst Du direkt in die Einstellungen springen und diese anpassen.
 
 ### Wartung
