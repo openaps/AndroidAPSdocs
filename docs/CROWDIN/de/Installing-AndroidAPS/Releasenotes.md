@@ -393,7 +393,7 @@ Nutze bitte [Android Studio 3.6.1](https://developer.android.com/studio/) oder n
 
 - SimpleProfile is removed
 
-- [Extended bolus](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
+- [Extended bolus](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) Funktionalität - Closed Loop wird deaktiviert
 
 - MDT plugin: Fixed bug with duplicated entries
 
@@ -403,7 +403,7 @@ Nutze bitte [Android Studio 3.6.1](https://developer.android.com/studio/) oder n
 
 - Different UI and internal improvements
 
-- [Wear complications](../Configuration/Watchfaces.md)
+- [Wear OS-Komplikationen](../Configuration/Watchfaces.md)
 
 - New [SMS commands](../Children/SMS-Commands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
 
