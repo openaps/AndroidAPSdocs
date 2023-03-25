@@ -137,7 +137,6 @@ Normally, you should now have achieved your goal: swithing your AAPS input from 
 
 ![DexcomG7.md](../images/G7_DIAKEM_AAPS_NSClientV3.png)  ![DexcomG7.md](../images/G7_DIAKEM_AAPS_NSClientV3_Preferences.png)
 
-
 14 Final words...
 
 . keep an eye on things, especially since you are running a dev or beta build as well as a new G7 dexcom... so don't remove your g6 and xdrip right away... and when in doubt check with a good old finger test your actual real time BG (remember that dexcom will  always be a bit behind)... 
