@@ -1,6 +1,6 @@
 # xDrip+ Einstellungen
 
-(For additional information regarding xDrip+, please refer to the [xDrip documentation](https://xdrip.readthedocs.io/en/latest/.)
+(Weitere Informationen zu xDrip+ findest Du in der [xDrip-Dokumentation](https://xdrip.readthedocs.io/en/latest/.)
 
 Wenn Du es nicht bereits eingerichtet hast, lade [xDrip+](https://jamorham.github.io/#xdrip-plus) herunter.
 
@@ -34,11 +34,11 @@ Wenn Du Android 10 verwendest und Probleme mit der xDrip+ master Version auftret
    
    ![xDrip+ Grundeinstellungen 2](../images/xDrip_Basic2.png)
 
-* **InterApp-Settings** (Broadcast) If you are going to use AAPS and the data should be forwarded to i.e. AAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
+* **InterApp-Einstellungen** (Broadcast) Wenn Du AAPS nutzt und die Daten an z.B. AAPS weitergereicht werden sollen, musst Du den sogenannten 'Broadcast' in xDrip+ in den Inter-App Einstellungen einschalten.
 
 * Damit die Werte übereinstimmen, solltest Du `Sende den angezeigten Glukosewert` aktivieren.
 
-* If you have also activated `Accept treatments` and "Enable local Broadcasts" in AAPS, then xDrip+ will receive insulin, carbs and basal rate information from AAPS and can estimate the hypo prediction etc. 
+* Wenn Du zusätzlich `Behandlungen annehmen` und in AAPS 'Aktiviere lokale Broadcasts' auswählst, wird xDrip+ Insulinmengen, Kohlenhydrate und Basalrateninformationen aus AAPS erhalten und kann so z.B. niedrige Werte vorhersagen. 
    
    ![xDrip+ Grundeinstellungen 3](../images/xDrip_Basic3.png)
 
@@ -46,7 +46,7 @@ Wenn Du Android 10 verwendest und Probleme mit der xDrip+ master Version auftret
 
 ### Identifiziere Empfänger
 
-* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
+* Sollte es Probleme mit der lokalen Übertragung der Werte (AAPS empfängt z.B. keine Glukosewerte aus xDrip+) geben und Du nutzt die AAPS-Version, trage in den Einstellungen > Inter-App Einstellungen > Identifizierte Empfänger den Wert `info.nightscout.androidaps` ein. Nutzt Du die PumpControl-Version, trage dort bitte den Wert `info.nightscout.aapspumpcontrol` ein.
 * Achtung: Die Auto-Korrektur neigt manchmal dazu, das i von info in einen Großbuchstaben zu ändern. Du **darfst nur Kleinbuchstaben** verwenden, wenn Du `info.nightscout.androidaps` (oder `info.nightscout.aapspumpcontrol` für PumpControl eingibst), da die Groß-/Kleinschreibung beachtet wird. Mit einem groß geschriebenen 'I' kann AAPS keine Glukose-Werte aus xDrip+ empfangen.
    
    ![xDrip+ Basic Inter-App Einstellungen Identifiziere Empfänger](../images/xDrip_InterApp_NS.png)
