@@ -141,33 +141,33 @@
 - [Fehlerbehebung für Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 - [Fehlerbehebungen - Linksammlung](../Usage/troubleshooting.md)
 - Aktualisiert - Kurzanleitung für erfahrene Anwender
-- Docs - update [edit](make-a-PR-code-syntax) and [translation](translations#translation-of-the-documentation).
+- Doku aktualisiert - [Mitschreiben/Verbessern](make-a-PR-code-syntax) und [Übersetzen](translations#translation-of-the-documentation).
 
 ## Oktober 2019
 
-- [AAPS version 2.5](Releasenotes-version-2-5-0) updates (especially on [update page](Update-to-new-version.md))
-- [AccuChek Insight - log options](Accu-Chek-Insight-Pump-settings-in-aaps)
-- [COB calculation on separate page](../Usage/COB-calculation.md)
-- [COB - wrong COB value detection](COB-calculation-detection-of-wrong-cob-values)
+- [AAPS Version 2.5](Releasenotes-version-2-5-0) - Diverse Aktuallisierungen (vor allem auf der Seite [Update auf eine neue Version](Update-to-new-version.md))
+- [AccuChek Insight-Log-Optionen](Accu-Chek-Insight-Pump-settings-in-aaps)
+- [COB-Berechnung auf separate Seite ausgelagert](../Usage/COB-calculation.md)
+- [Aktiven Kohlenhydrate (COB) - Fehlerhafte Ermittlung](COB-calculation-detection-of-wrong-cob-values)
 - [Dexcom G6-spezifische Problembehandlung](DexcomG6-dexcom-g6-specific-troubleshooting)
-- [Objectives update version 2.5](../Usage/Objectives.md)
-- [Preferences update](../Configuration/Preferences.md)
-- [SGLT-2 inhibitors - do not use when looping](module-no-use-of-sglt-2-inhibitors)
-- [SMS Commands Troubleshooting](SMS-Commands-troubleshooting)
-- [xDrip - update G6 transmitter replacement](xdrip-replace-transmitter)
+- [Ziele (objectives) Update AAPS Version 2.5](../Usage/Objectives.md)
+- [Update Einstellungen](../Configuration/Preferences.md)
+- [SGLT-2 Inhibitoren - beim Loopen nicht verwenden](module-no-use-of-sglt-2-inhibitors)
+- [SMS-Befehle Problembehandlung](SMS-Commands-troubleshooting)
+- [xDrip - Update G6 Transmitter ersetzen](xdrip-replace-transmitter)
 
 ## September 2019
 
 - [Automate](../Usage/Automation.md)
-- [Bolus calculator](Screenshots-wrong-cob-detection) - slow carb absorption
-- [Nightscout security](Nightscout-security-considerations)
-- [Profile timeshift](Profiles-time-shift) (more details)
+- [Bolus Rechner](Screenshots-wrong-cob-detection) - Langsame KH-Aufnahme
+- [Nightscout Sicherheit](Nightscout-security-considerations)
+- [Zeitverschiebung von Profilen](Profiles-time-shift) (detailliertere Erklärung)
 - [Kontrolle aus der Ferne](../Children/Children.md)
-- [What is a closed loop system?](../Getting-Started/ClosedLoop.md)
+- [Was ist ein Closed Loop System?](../Getting-Started/ClosedLoop.md)
 
 ## August 2019
 
-- Dexcom G6 patched app region
-- [Dexcom G6 new transmitter](xdrip-connect-g6-transmitter-for-the-first-time) ("firefly" / 8G...)
-- [What do I need?](index-what-do-i-need) - new structure & additional information
-- New structure
+- Dexcom G6 gepatchte App-Region
+- [Dexcom G6 neue Transmitter](xdrip-connect-g6-transmitter-for-the-first-time) ("firefly" / 8G...)
+- [Was brauche ich?](index-what-do-i-need) - neue Struktur und zusätzliche Infos
+- Neue Struktur
