@@ -43,7 +43,7 @@
 
 ## Warnsignal neben BG
 
-Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+Beginnend mit Android 3.0 erhälst Du möglicherweise ein dreieckiges Warnsignal neben der BG-Ziffer, links auf dem Hauptbildschirm.
 
   ![Red BG warning](../images/bg_warn_red.png)
 
