@@ -1,6 +1,6 @@
 # AAPS auf einer Smartwatch mit Wear OS
 
-You can install AAPS app on your **Wear OS based** smartwatch. Mit der Watch-Version von AAPS kannst Du:
+Du kannst AndroidAPS auf Deiner Smartwatch mit **Wear OS** installieren. Mit der Watch-Version von AAPS kannst Du:
 
 * **Werte auf Deiner Uhr anzeigen**: Mit individuellem Ziffernblatt (watchface), [Standardziffernblatt](Watchfaces-aaps-watchfaces) oder mit [Komplikationen](Watchfaces-complications) (complications) im Standardziffernblatt
 * **AAPS steuern**: Bolus abgeben, temporäres Ziel setzen, etc.
@@ -16,15 +16,15 @@ You can install AAPS app on your **Wear OS based** smartwatch. Mit der Watch-Ver
 
 Die Wear OS App von AAPS wurde von der AAPS-Version für das Android Smartphone getrennt. Daher musst Du eine zweite signierte APK generieren. Wähle als Modul "AndroidAPS.wear" und als Build-Variante "fullRelease" und eine zweite apk Datei für die Wear OS Uhr wird generiert, wenn [die APK Build](../Installing-AndroidAPS/Building-APK.md) (oder "pumpcontrolRelease", die es dir erlaubt, einfach die Pumpe ohne Loop zu steuern).
 
-Ab März 2021 musst Du AAPS mittels sogenanntem Sideload auf die Uhr übertragen. Dies kann nicht mehr über den Google Play Store der Uhr erfolgen. Verwende dazu am besten einen [Wear Installer](https://youtu.be/8HsfWPTFGQI). Diesen musst Du sowohl auf Deinem Smartphone als auch Deiner Uhr installieren. Die Wear Installer App kann aus dem Google Play Store heruntergeladen werden. Das verlinkte Video von Malcolm Bryant, dem Entwickler von Wear Installer gibt Dir detaillierte Anweisungen um a) die apk auf Dein Smartphone herunterzuladen b) den Android Debugger auf der Uhr einzurichten c) den Wear Installer auf dem Smartphonezu verwenden und die AAPS-Wear-App auf das Smartphone zu laden. Once you have selected AAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
+Ab März 2021 musst Du AAPS mittels sogenanntem Sideload auf die Uhr übertragen. Dies kann nicht mehr über den Google Play Store der Uhr erfolgen. Verwende dazu am besten einen [Wear Installer](https://youtu.be/8HsfWPTFGQI). Diesen musst Du sowohl auf Deinem Smartphone als auch Deiner Uhr installieren. Die Wear Installer App kann aus dem Google Play Store heruntergeladen werden. Das verlinkte Video von Malcolm Bryant, dem Entwickler von Wear Installer gibt Dir detaillierte Anweisungen um a) die apk auf Dein Smartphone herunterzuladen b) den Android Debugger auf der Uhr einzurichten c) den Wear Installer auf dem Smartphonezu verwenden und die AAPS-Wear-App auf das Smartphone zu laden. Sobald Du AndroidAPS wear version auf der Uhr ausgewählt hast, kannst Du Watchfaces und Komplikationen nutzen und AAPS teilweise über die Uhr steuern.
 
 ### Einrichten auf dem Smartphone
 
-Within AAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
+In AndroidAPS auf Deinem Smartphone musst Du im Konfigurations-Generator das [Wear Plugin](Config-Builder-wear) aktivieren.
 
 ## AAPS von der Uhr aus steuern
 
-AAPS is designed to be *controlled* by Android Wear watches. Wenn Du Deinen Loop von der Uhr aus steuern willst (z.B. Bolus abgeben), aktiviere "Steuerung durch die Uhr".
+AndroidAPS kann mit einer Android Wear Smartwatch *gesteuert* werden. Wenn Du Deinen Loop von der Uhr aus steuern willst (z.B. Bolus abgeben), aktiviere "Steuerung durch die Uhr".
 
 Die nachfolgenden Funktionen kannst Du von der Uhr aus starten:
 
@@ -45,7 +45,7 @@ Die nachfolgenden Funktionen kannst Du von der Uhr aus starten:
 
 Es gibt mehrere Ziffernblätter zur Auswahl, die das durchschnittliche Delta, IOB, die derzeit aktive TBR und Basalraten sowie die Kurve der CGM-Werte anzeigen können.
 
-Ensure notifications from AAPS are not blocked on the watch. Die Eingaben werden aktiviert, indem man die Benachrichtigung auf der Uhr öffnet, einmal wischt und bestätigt.
+Stelle sicher, dass Benachrichtigungen von AAPS nicht auf der Uhr blockiert sind. Die Eingaben werden aktiviert, indem man die Benachrichtigung auf der Uhr öffnet, einmal wischt und bestätigt.
 
 Um schneller zu AndroidAPS zu kommen, kannst du den angezeigten CGM-Wert auf der Uhr doppelt anklicken. Klicke doppelt auf die BZ-Kurve um den Zeitraum zu ändern.
 
@@ -55,7 +55,7 @@ Um schneller zu AndroidAPS zu kommen, kannst du den angezeigten CGM-Wert auf der
 
 (Watchfaces-new-watchface-as-of-AAPS-2-8)=
 
-### New watchface as of AAPS 2.8
+### Neue Watchface ab AAPS 2.8
 
 ![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
 
@@ -188,7 +188,7 @@ Bei der Konfiguration von Komplikationen passt Wear OS die Auswahl an und führt
 
 ### AAPS-Komplikationen
 
-AAPS provides following complications:
+AAPS stellt folgende Komplikationen zur Verfügung:
 
 ![AAPS_Complications_List](../images/Watchface_Complications_List.png)
 
@@ -295,7 +295,7 @@ Während des Ladens wäre es hilfreich, wenn das Display auf "always-on" bleibt 
 
 Der vereinfachte UI-Modus ist für diese Zifferblätter verfügbar: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, Cockpit. Das vereinfachte UI ist optional und wird über die Einstellungen der Ziffernblätter konfiguriert. (Halte das Ziffernblatt lange gedrückt und klicke auf "Bearbeiten" oder auf das Zahnrad-Symbol) Wähle die Konfiguration "Einfache UI" und setze sie auf "always-on" oder "always-on und aufladen"
 
-Die Android-Entwickleroptionen ermöglichen es Deiner Uhr wach zu bleiben, während sie aufgeladen wird. To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Setze in den Entwickleroptionen das "Bleib beim Aufladen" auf "an".
+Die Android-Entwickleroptionen ermöglichen es Deiner Uhr wach zu bleiben, während sie aufgeladen wird. Um die Entwickleroptionen zur Verfügung zu stellen, lesen Sie die [offizielle Dokumentation](https://developer.android.com/training/wearables/get-started/debugging). Setze in den Entwickleroptionen das "Bleib beim Aufladen" auf "an".
 
 Hinweis: Nicht alle Displays können always-on gut handhaben. Es kann dazu führen, dass sich der Bildschirm einbrennt, insbesondere auf den älteren OLED-Displays. Die Uhren verdunkeln das Display im Allgemeinen, um das Einbrennen zu verhindern; bitte informiere Dich über das Handbuch , Angaben des Herstellers oder das Internet für Ratschläge.
 
@@ -339,7 +339,7 @@ Da wir bei der Kommunikation keine Kompromisse eingehen können (wir brauchen ak
 ### Sony Smartwatch 3
 
 * Die Sony Smartwach 3 ist eine der beliebtesten Uhren zu Verwendung mit AAPS.
-* Leider hat Google die Unterstützung für Wear OS 1.5 Geräte im Herbst 2020 eingestellt. This leads to problems when using Sony SW3 with AAPS 2.7 and above.
+* Leider hat Google die Unterstützung für Wear OS 1.5 Geräte im Herbst 2020 eingestellt. Dies führt zu Problemen bei der Verwendung von Sony SW3 mit AndroidAPS 2.7 und höher.
 * Einen Workaround findest Du auf der Seite zur [Problembehandlung](../Usage/SonySW3.md).
 
 ## Nightscout Daten anzeigen
@@ -348,4 +348,4 @@ Falls Du ein anderes System zum Loopen verwendest und Deine Daten oder die Deine
 
 # Pebble
 
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AAPS through the watch. Du kannst Felder wählen, um z. B. IOB, aktiver temp. Basalrate und Vorhersage anzeigen zu lassen. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AAPS then send either SMS or pushover notification.
+Pebble Nutzer können das [Urchin watchface](https://github.com/mddub/urchin-cgm) nutzen um ihre Loop-Daten zu *sehen*. Mit dieser Methode ist es aber nicht möglich, die Pumpe und AndroidAPS zu steuern. Du kannst Felder wählen, um z. B. IOB, aktiver temp. Basalrate und Vorhersage anzeigen zu lassen. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AAPS then send either SMS or pushover notification.
