@@ -10,7 +10,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 * Wechsele zwischen den verschiedenen AndroidAPS-Modulen.
 * Alternativ kannst Du die Bildschirme wechseln, indem Du nach links oder rechts wischst.
-* Displayed tabs can be selected in [config builder](Config-Builder-tab-or-hamburger-menu).
+* Anzuzeigende Tabs können unter [KONFIGURATION](Config-Builder-tab-or-hamburger-menu) ausgewählt werden.
 
 (Screenshots-section-b-profile-target)=
 
@@ -18,16 +18,16 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 #### Aktuelles Profil
 
-![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+![Verbleibende Dauer des Profilwechsels](../images/Home2020_ProfileSwitch.png)
 
 * Das aktuelle Profil wird in der linken Schaltfläche angezeigt.
 * Drücke kurz auf die Profil-Schaltfläche, für die Anzeige der Profildetails.
-* Long press profile bar to [switch between different profiles](Profiles-profile-switch).
+* Drücke lange auf die Profilschaltfläche, um [zwischen verschiedenen Profilen zu wechseln](Profiles-profile-switch).
 * Falls der Profilwechsel mit Angabe der Dauer durchgeführt wurde, wird die verbleibende Zeit in Minuten in Klammern angezeigt.
 
 #### Ziel
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+![Verbleibende Dauer des temporären Ziels](../images/Home2020_TT.png)
 
 * Das aktuelle BZ-Ziel wird in der rechten Schaltfläche angezeigt.
 * Drücke kurz auf die Zielwert-Schaltfläche, um ein [temporäres Ziel](../Usage/temptarget.md) zu setzen.
@@ -37,10 +37,10 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 #### Anzeige der dynamischen Ziel-Anpassung
 
-![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+![Anzeige der dynamischen Ziel-Anpassung](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS kann das Ziel dynamisch anhand der Empfindlichkeit (Sensitivity) anpassen, wenn Du den SMB-Algorithmus verwendest.
-* Enable either one or both of the [following options](Preferences-openaps-smb-settings) 
+* Aktiviere entweder eine oder beide der [folgenden Optionen](Preferences-openaps-smb-settings) 
    * "Sensibilität erhöht den Zielwert" und/oder 
    * "Resistenz senkt Zielwert" 
 * Falls AAPS Resistenz oder Sensibilität erkennt, wird das aus dem Profil vorgegebene Ziel angepasst. 
@@ -51,7 +51,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 #### Aktueller Blutzucker
 
 * Der neueste Blutzuckerwert aus Deinem CGM wird auf der linken Seite angezeigt.
-* Color of the BG value reflects the status to the defined [range](Preferences-range-for-visualization). 
+* Die Farbe des Glukosewertes spiegelt den Status im definierten [Bereich](Preferences-range-for-visualization) wider. 
    * grün = innerhalb des Bereichs
    * rot = unterhalb des Zielbereichs
    * gelb = oberhalb des Zielbereichs
@@ -66,7 +66,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 * Ein neues Symbol zeigt den Status des Loops:
    
    * grüner Kreis = Loop läuft
-   * green circle with dotted line = [low glucose suspend (LGS)](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * grüner Kreis mit gepunkteter Linie = [Low Glucose Suspend (Reduzierung der Basalrate bei niedrigen Glukosewerten)](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
    * roter Kreis = Loop deaktiviert (dauerhaft)
    * gelber Kreis = Loop ausgesetzt (vorübergehend pausiert, aber Basalinsulin wird weiter abgegeben) - verbleibende Zeit wird unter dem Symbol angezeigt
    * grauer Kreis = Pumpe getrennt (vorübergehend gar keine Insulinabgabe) - verbleibende Zeit wird unter dem Symbol angezeigt
@@ -83,25 +83,25 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
 
 #### BG Warnzeichen
 
-Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+Beginnend mit Android 3.0 erhälst Du möglicherweise ein dreieckiges Warnsignal neben der BG-Ziffer, links auf dem Hauptbildschirm.
 
-*Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
+*Hinweis*: Für AAPS-Berechnungen werden bis zu 30 Stunden berücksichtigt. Daher kann es auch nach der Lösung des zugrunde liegenden Problems bis zu 30 Stunden dauern, bis das gelbe Dreieck nach dem letzten unregelmäßigen Intervall verschwunden ist.
 
-To remove it immediately you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
+Um es sofort zu entfernen, musst Du ein paar Einträge manuell aus der Registerkarte Dexcom/xDrip+ löschen.
 
-However, when there are a lot of duplicates, it might be easier to
+Wenn es jedoch viele Duplikate gibt, könnte es einfacher sein,
 
-* [backup your settings](../Usage/ExportImportSettings.md),
+* [sichere deine Einstellungen](../Usage/ExportImportSettings.md),
 * setze deine Datenbank im Wartungsmenü zurück und
-* [import your settings](../Usage/ExportImportSettings.md) again
+* [Importiere deine Einstellungen](../Usage/ExportImportSettings.md) erneut
 
 ##### Rotes Warndreieck: Doppelte BG-Daten
 
-The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
+Das rote Warndreieck signalisiert, dass Du sofort aktiv werden solltest: Du erhältst doppelte BG-Daten, die den Loop daran hindern seine Arbeit richtig zu machen. Daher wird der Loop so lange deaktiviert, bis das Problem gelöst ist.
 
 ![Red BG warning](../images/bg_warn_red.png)
 
-You need to find out why you get duplicate BGs:
+Du musst herausfinden, warum du doppelte BG-Daten erhältst:
 
 * Ist Dexcom Bridge auf deiner NS-Seite aktiviert? Deaktiviere die Dexcom Bridge, indem Du zu heroku (oder einem anderen Hosting-Provider) gehst, dort die "enable" Variable bearbeitest und den "bridge" Teil dort entfernst. (Details zu heroku [findest Du hier](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
 * Laden mehrere Quellen deine BG zu NS hoch? Wenn Du die BYODA-App verwendest, aktiviere den Upload in AAPS, aber aktiviere ihn nicht in xDrip+, falls das der Fall ist.
@@ -125,7 +125,7 @@ You need to find out why you get duplicate BGs:
 
 ### Abschnitt D - IOB, COB, BR und AS
 
-![Section D](../images/Home2020_TBR.png)
+![Abschnitt D](../images/Home2020_TBR.png)
 
 * Spritze: Insulin on Bord (IOB) - Menge des aktiven Insulins im Körper
    
@@ -133,11 +133,11 @@ You need to find out why you get duplicate BGs:
    * IOB kann negativ sein, wenn zuvor die Basalrate reduziert worden ist.
    * Ein Klick auf das Symbol zeigt die Aufteilung von Bolus und Basal-Insulin.
 
-* Grain: [carbs on board (COB)](../Usage/COB-calculation.md) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
+* Ähre: [Kohlenhydrate an Bord (COB)](../Usage/COB-calculation.md) - noch nicht resorbierte Kohlenhydrate, die vorher gegessen wurden -> Symbol blinkt, falls Kohlenhydrate benötigt werden
 
 * Violette Linie: Basalrate - Symbol ändert sich bei temporärer Änderung der Basalrate (flach bei 100%) 
    * Klicke auf das Icon um Details zur Basalrate und einer eventuellen temporären Basalrate (inkl. verbleibende Dauer) angezeigt zu bekommen.
-* Arrows up & down: indicating actual [autosens](Open-APS-features-autosens) status (enabled or disabled) and value is shown below icon
+* Pfeile nach oben & unten: zeigen den aktuellen [Autosens](Open-APS-features-autosens) Status (aktiviert oder deaktiviert) an. Der Wert wird unterhalb des Symbols angezeigt.
 
 #### Kohlenhydrat-Vorschlag
 
@@ -150,7 +150,7 @@ You need to find out why you get duplicate BGs:
 
 ### Abschnitt E - Status Lights
 
-![Section E](../images/Home2020_StatusLights.png)
+![Abschnitt E](../images/Home2020_StatusLights.png)
 
 * Status Lights geben eine optische Warnung für 
    * Kanülenalter
@@ -160,19 +160,19 @@ You need to find out why you get duplicate BGs:
    * Batteriealter und Ladezustand (%)
 * Bei Überschreitung der Warnschwelle werden die Werte gelb angezeigt.
 * Wenn die kritische Schwelle überschritten wird, werden die Werte rot angezeigt.
-* Settings can be made in [preferences](Preferences-status-lights).
+* Die Einstellungen sind in den [NSClient Einstellungen](Preferences-status-lights) zu finden.
 
 (Screenshots-section-f-main-graph)=
 
 ### Abschnitt F - Hauptgrafik
 
-![Section F](../images/Home2020_MainGraph.png)
+![Abschnitt F](../images/Home2020_MainGraph.png)
 
 * Grafik zeigt Ihren Blutzuckerspiegel (BZ) wie von Ihrem Glukose-Monitor (CGM) gemessen. 
 * Notizen, die auf der Registerkarte "Aktion" eingegeben werden, wie z. B. die Kalibrierungen nach Messung am Finger, die Kohlenhydrat Einträge sowie die Profilwechsel werden hier angezeigt. 
 * Wenn du den angezeigten Zeitraum verändern möchtest, drücke lange auf die Grafik. Du kannst zwischen 6, 12, 18 oder 24 Stunden wählen.
-* Der grüne Bereich spiegelt den Zielbereich wider. It can be configured in [preferences](Preferences-range-for-visualization).
-* Blue triangles show [SMB](Open-APS-features-super-micro-bolus-smb) - if enabled in [preferences](Preferences-openaps-smb-settings).
+* Der grüne Bereich spiegelt den Zielbereich wider. Er kann in [Einstellungen](Preferences-range-for-visualization) konfiguriert werden.
+* Blaue Dreiecke zeigen [SMB](Open-APS-features-super-micro-bolus-smb) - wenn aktiviert in [Einstellungen](Preferences-openaps-smb-settings).
 * Optionale Informationen:
    
    * Predictions (Vorhersagen)
@@ -190,7 +190,7 @@ You need to find out why you get duplicate BGs:
 
 #### Vorhersage Kurven
 
-* **Orange** line: [COB](../Usage/COB-calculation.md) (colour is used generally to represent COB and carbs)
+* **Orange** Linie: [COB](../Usage/COB-calculation.md) (Farbe wird im Allgemeinen verwendet, um COB und Kohlenhydrate darzustellen)
    
    Die Prognosekurve zeigt, wohin sich der BZ (nicht die COB selbst!) auf der Grundlage der aktuellen Pumpeneinstellungen und unter der Annahme, dass die Abweichungen aufgrund der Kohlenhydratresorption konstant bleiben, entwickeln wird. Diese Linie erscheint nur, wenn es bekannte COB gibt.
 
@@ -202,21 +202,21 @@ You need to find out why you get duplicate BGs:
    
    Die Prognoselinie zeigt, wie sich die IOB-Kurve ändern würde, wenn die Pumpe die Insulinabgabe komplett stoppen würde (0% TBR).
    
-   *This line appears only when the [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *Diese Linie erscheint nur, wenn der [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)-Algorithmus verwendet wird.*
 
-* **Dark yellow** line: [UAM](Sensitivity-detection-and-COB-sensitivity-oref1) (un-announced meals)
+* **Dunkelgelbe** Zeile: [UAM](Sensitivity-detection-and-COB-sensitivity-oref1) (nicht ankündigte Mahlzeiten)
    
    Unannounced meals (nicht angekündigte Mahlzeiten) bedeutet, dass ein signifikanter Anstieg des Glukosespiegels durch Mahlzeiten, Adrenalin oder andere Einflüsse festgestellt wird. Die Prognoselinie ähnelt der ORANGE COB-Linie, geht aber davon aus, dass die Abweichungen mit konstanter Rate abnehmen werden (durch Verlängerung der aktuellen Reduktionsrate).
    
-   *This line appears only when the [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *Diese Linie erscheint nur, wenn der [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)-Algorithmus verwendet wird.*
 
-* **Dark orange** line: aCOB (accelerated carbohydrate absorption)
+* **Dunkelorange** Linie: aCOB (beschleunigte Kohlenhydratabsorption)
    
-   Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/l/5m) carb absorption rate. Deprecated and of limited usefulness.
+   Ähnlich wie COB, aber unter Annahme einer festen Kohlenhydrat-Absorptionsrate von 10 mg/dL/5m (-0,555 mmol/l/5m). Veraltet und nur begrenzt nützlich.
    
-   *This line appears only when the older [AMA](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *Diese Linie erscheint nur, wenn der [AMA](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)-Algorithmus verwendet wird.*
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselinien oder in der Nähe der Linie, die Annahmen macht, die Deiner Situation am nächsten kommen, liegen.
 
 #### Basal
 
@@ -233,9 +233,9 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 ### Abschnitt G - zusätzliche Grafiken
 
 * Sie können bis zu vier zusätzliche Grafiken unterhalb der Hauptgrafik aktivieren.
-* To open settings for additional graphs click the triangle on the right side of the [main graph](Screenshots-section-f-main-graph) and scroll down.
+* Um die Einstellungen für zusätzliche Graphen zu öffnen, klicke auf das Dreieck auf der rechten Seite der [Hauptgrafik](Screenshots-section-f-main-graph) und scrolle nach unten.
 
-![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+![Einstellung weiterer Diagramme](../images/Home2020_AdditionalGraphSetting.png)
 
 * Um ein zusätzliches Diagramm hinzuzufügen, markieren Sie das Kästchen auf der linken Seite des Namens (d. h. \---\---- Graph 1 \---\----).
 
@@ -246,9 +246,9 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 #### Aktives Insulin (IOB)
 
 * Zeigt das Insulin, das an Bord ist (= aktives Insulin im Körper). Es enthält Insulin aus Bolus und temporärem Basal (** schließt aber Basalraten aus deinem Profil aus**).
-* If there were no [SMBs](Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+* Wenn es keine [SMBs](Open-APS-features-super-micro-bolus-smb), keine Boli und keine TBR während der DIA-Zeit gäbe, wäre dies Null.
 * Das IOB kann negativ sein, wenn Sie längere Zeit keinen verbleibenden Bolus und keine oder nur niedrige Basalrate hatten.
-* Decaying depends on your [DIA and insulin profile settings](Config-Builder-local-profile). 
+* Das Abklingverhalten hängt von den [Einstellungen zum Insulin und zum DIA im Profil](Config-Builder-local-profile) ab. 
 
 #### Aktive Kohlenhydrate
 
@@ -259,14 +259,14 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 #### Abweichungen
 
 * **GRAUE** Balken zeigen eine Abweichung aufgrund von Kohlenhydraten. 
-* **GRÜNE** Balken zeigen, dass der BZ höher ist als der Algorithmus es erwartet. Green bars are used to increase resistance in [Autosens](Open-APS-features-autosens).
-* **ROTE** Balken zeigen, dass der BZ niedriger ist als der Algorithmus erwartet. Red bars are used to increase sensitivity in [Autosens](Open-APS-features-autosens).
+* **GRÜNE** Balken zeigen, dass der BZ höher ist als der Algorithmus es erwartet. Grüne Balken werden verwendet, um die Resistenz in [Autosens](Open-APS-features-autosens) zu erhöhen.
+* **ROTE** Balken zeigen, dass der BZ niedriger ist als der Algorithmus erwartet. Rote Balken werden verwendet, um die Sensitivität in [Autosens](Open-APS-features-autosens) zu erhöhen.
 * **GELB** Balken zeigen eine Abweichung aufgrund von UAM an.
 * **SCHWARZE** Balken zeigen kleine Abweichungen, die bei der Berechnung der Sensitivität nicht berücksichtigt werden.
 
 #### Sensitivität
 
-* Shows the sensitivity that [Autosens](Open-APS-features-autosens) has detected. 
+* Zeigt die Sensitivität an, die von [Autosens](Open-APS-features-autosens) ermittelt wurde. 
 * Die Sensitivität ist die Berechnung der Insulinempfindlichkeit, die auf Grund von Bewegung, Hormonen etc. schwankt.
 
 #### Aktivität
@@ -281,60 +281,60 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ### Abschnitt H - Schaltflächen
 
-![Homescreen buttons](../images/Home2020_Buttons.png)
+![Buttons für den Homescreen](../images/Home2020_Buttons.png)
 
 * Schaltflächen für Insulin, Kohlenhydrate und Bolus-Rechner sind "immer an".
    
    * Wenn die Verbindung zur Pumpe unterbrochen ist, ist die Schaltfläche 'Insulin' nicht sichtbar.
 
-* Other Buttons have to be setup in [preferences]Preferences-buttons).
+* Weiter Schaltflächen können unter [preferences]Einstellungen > Übersicht konfiguriert werden.
 
 #### Insulin
 
-![Insulin button](../images/Home2020_ButtonInsulin.png)
+![Insulin-Button](../images/Home2020_ButtonInsulin.png)
 
-* To give a certain amount of insulin without using [bolus calculator](Screenshots-bolus-wizard).
-* By checking the box you can automatically start your [eating soon temp target](Preferences-default-temp-targets).
+* Um einen Bolus abzugeben, ohne den [Bolus-Rechner](Screenshots-bolus-wizard) zu nutzen.
+* Durch Aktivieren des Kästchens kannst Du automatisch Dein [Essens-TT](Preferences-default-temp-targets) ('bald essen') starten.
 * Wenn das Insulin nicht durch die Pumpe abgegeben werden soll, sondern Du die Insulinmenge nur erfassen willst (z.B. Insulin mit Spritze gegeben), aktiviere das entsprechende Kästchen.
 
 #### Kohlenhydrate
 
-![Carbs button](../images/Home2020_ButtonCarbs.png)
+![Kohlenhydrat-Button](../images/Home2020_ButtonCarbs.png)
 
 * Kohlenhydrate ohne Bolus dokumentieren.
-* Certain [pre-set temporary targets](Preferences-default-temp-targets) can be set directly by checking the box.
+* Bestimmte [vordefinierte temporäre Ziele](Preferences-default-temp-targets) (Bald essen, Aktivität und Hypo) können direkt durch Aktivieren des Kästchens gesetzt werden.
 * Zeitverschiebung: Wann wirst Du/hast Du Kohlenhydrate gegessen (in Minuten).
-* Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.md)
+* Dauer: Wird für ["eCarbs" verwendet](../Usage/Extended-Carbs.md).
 * Mit den Buttons können Sie schnell die Menge der Kohlenhydrate erhöhen.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](Preferences-nsclient).
+* Notizen werden in Abhängigkeit von Deinen Einstellungen im [NS-Client](Preferences-nsclient) nach Nightscout hochgeladen.
 
 #### Bolus-Rechner
 
-* See Bolus Wizard [section below](Screenshots-bolus-wizard)
+* Siehe Bolus Wizard [Abschnitt unten](Screenshots-bolus-wizard)
 
 #### Kalibrierungen
 
 * Sendet eine Kalibrierung an xDrip + oder öffnet den Dexcom Kalibrierungsdialog.
-* Must be activated in [preferences](Preferences-buttons).
+* Muss in den [Einstellungen](Preferences-buttons) aktiviert sein.
 
 #### CGM
 
 * Öffnet xDrip+.
 * Die Schaltfläche "Zurück" kehrt zu AAPS zurück.
-* Must be activated in [preferences](Preferences-buttons).
+* Muss in den [Einstellungen](Preferences-buttons) aktiviert sein.
 
 #### Quick Wizard
 
 * Einfache Eingabe von Kohlenhydraten und deren Berechnungsgrundlage.
-* Details are setup in [preferences](Preferences-quick-wizard).
+* Details werden in den [Einstellungen](Preferences-quick-wizard) eingerichtet.
 
 (Screenshots-bolus-wizard)=
 
 ## Bolus-Rechner
 
-![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
+![Bolus-Rechner](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus this is where you will normally make it from.
+Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
 ### Abschnitt I
 
@@ -353,7 +353,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ### Abschnitt J
 
-* Beim SUPER BOLUS wird das Basalinsulin der kommenden zwei Stunden zum berechneten Bolus addiert und die Basalrate für die kommenden zwei Stunden auf Null gesetzt, um das extra Insulin wieder heraus zu nehmen. The option only shows when "Enable [superbolus](Preferences-superbolus) in wizard" is set in the [preferences overview](Preferences-overview).
+* Beim SUPER BOLUS wird das Basalinsulin der kommenden zwei Stunden zum berechneten Bolus addiert und die Basalrate für die kommenden zwei Stunden auf Null gesetzt, um das extra Insulin wieder heraus zu nehmen. Die Option ist nur verfügbar, wenn in den [Einstellungen der Übersicht](Preferences-overview) bei den erweiterten Einstellungen 'Aktiviere [ Superbolus](Preferences-superbolus) im Bolus-Rechner' aktiviert ist.
 * Damit soll kurzfristig mehr Insulin zur Verfügung stehen und dadurch hoffentlich Spitzen vermieden werden.
 * Weitere Informationen findest Du unter [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
@@ -361,7 +361,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * Zeigt den errechneten Bolus. 
 * Falls IOB (Insulin on bord) den berechneten Bolus bereits übersteigt, wird nur die Menge der fehlenden Kohlenhydrate angezeigt.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](Preferences-nsclient).
+* Notizen werden in Abhängigkeit von Deinen Einstellungen im [NS-Client](Preferences-nsclient) nach Nightscout hochgeladen.
 
 ### Abschnitt L
 
@@ -380,28 +380,28 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 #### Fehlerhafte Erkennung der aktiven Kohlenhydrate (COB)
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+![Langsamer Kohlenhydrat-Abbau](../images/Calculator_SlowCarbAbsorption.png)
 
 * Wenn Du nach Verwendung des Bolus-Assistenten die obige Warnung siehst, hat AAPS erkannt, dass aktiven Kohlenhydrate (COB) eventuell nicht korrekt berechnet werden konnten. 
 * Wenn Du kurz nach einer vorangegangenen Mahlzeit erneut einen Bolus abgeben willst, solltest Du Dir der Gefahr einer Überdosierung bewusst sein! 
-* For details see the hints on [COB calculation page](COB-calculation-detection-of-wrong-cob-values).
+* Weitere Hinweise findest Du auf der Seite zur [Berechnung der aktiven Kohlenhydrate (COB)](COB-calculation-detection-of-wrong-cob-values).
 
 (Screenshots-action-tab)=
 
 ## Aktionen Tab
 
-![Actions tab](../images/Home2021_Action.png)
+![Aktionen Tab](../images/Home2021_Action.png)
 
 ### Aktionen - Abschnitt M
 
-* Button [profile switch](Profiles-profile-switch) as an alternative to pressing the [current profile](Screenshots-section-b-profile-target) on homescreen.
-* Button [temporary target](temptarget-temp-targets) as an alternative to pressing the [current target](Screenshots-section-b-profile-target) on homescreen.
+* Button [Profilwechsel](Profiles-profile-switch) als Alternative zum Klicken des [aktuellen Profils](Screenshots-section-b-profile-target) auf dem Startbildschirm.
+* Button [Temporäres Ziel](temptarget-temp-targets) als Alternative zum Klicken des [aktuellen Ziels](Screenshots-section-b-profile-target) auf dem Startbildschirm.
 * Button zum Starten oder Abbrechen einer temporären Basalrate. Beachte, dass sich die Bezeichnung der Schaltfläche von "TBR" zu "Abbrechen X%" ändert, wenn eine temporäre Basalrate abgegeben wird.
-* Even though [extended boluses](Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+* Auch wenn [verzögerte Boli](Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment) im Closed Loop nicht wirklich funktionieren, haben einige Nutzer nach einer Option gefragt, um verzögerte Boli dennoch verwenden zu können.
    
    * Diese Option ist nur für Dana RS und Insight Pumpen verfügbar. 
    * Der Closed Loop wird automatisch gestoppt und für die Laufzeit des verzögerten Bolus zum Open Loop gewechselt.
-   * Make sure to read the [details](../Usage/Extended-Carbs.md) before using this option.
+   * Lies vor Verwendung dieser Option unbedingt die [Details](../Usage/Extended-Carbs.md).
 
 (Screenshots-careportal-section-n)=
 
@@ -422,14 +422,14 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * Benötigt xDrip+ Nightly Build vom 10.12.2020 oder neuer.
 * Verfügbar für CGM-Systeme mit zusätzlichem Transmitter wie z.B. MiaoMiao 2. (Technisch gesehen muss der Sensor cat level Informationen an xDrip+ senden.)
-* Thresholds can be set in [preferences](Preferences-status-lights).
+* Die Schwellwerte können in den [Einstellungen](Preferences-status-lights) gesetzt werden.
 * Wenn der Batterieladestand des Sensors und des Smartphones identisch sind, ist die xDrip+ Version wahrscheinlich zu alt und benötigt ein Update.
    
    ![Batterieladestand Sensor und Smartphone stimmen überein](../images/Home2021_ActionSensorBat.png)
 
 ### Careporal - Abschnitt O
 
-* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](Screenshots-careportal-section-n).
+* BZ-Test, Katheterwechsel, CGM-Sensor gesetzt, Pumpenbatterie-Wechsel sind die Basis für die in [Abschnitt N](Screenshots-careportal-section-n) angezeigten Daten.
 * Mit dem Button 'Katheterwechsel' kannst Du sowohl einen Katheter- (Schlauch) als auch einen Kanülenwechsel (Nadel) aufzeichnen.
 * Abschnitt O spiegelt das Careportal aus Nightscout wider. Bewegung, Ankündigung und Frage sind daher spezielle Formen der Notiz.
 
@@ -447,7 +447,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 * Andere bevorzugen einen Anteil von 32% bis 37% des Basalinsulins (TBB) am Gesamtinsulin (TDD). 
 * Wie die meisten Faustregeln gilt, dass dies nicht allgemeingültig ist. Hinweis: Bei dir und deinem Diabetes kann es ganz anders sein!
 
-![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
+![Historie + TDD](../images/Home2021_Action_HB_TDD.png)
 
 (Screenshots-insulin-profile))=
 
@@ -455,17 +455,17 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ![Insulin Profil](../images/Screenshot_insulin_profile.png)
 
-* This shows the activity profile of the insulin you have chosen in [config builder](Config-Builder-insulin). 
+* Dies zeigt das Aktivitätsprofil des Insulins, das Du im [Konfigurations-Generator](Config-Builder-insulin) ausgewählt hast. 
 * Die LILA Linie zeigt an, wie viel Insulin nach der Injektion verbleibt und wie es im Zeitverlauf abnimmt. Die BLAUE Linie veranschaulicht die Aktivität des Insulins.
 * Wichtig zu beachten ist, dass der Ablauf deutlich länger dauert, als gemein hin angenommen. 
 * Von der klassischen umpentherapie bist du es wahrscheinlich gewohnt anzunehmen, dass das Insulin nach ca. 3 1/2 Stunden vollständig abgebaut ist. 
 * Allerdings spielt der langsamere Abbau beim Loopen eine wichtige Rolle da die Berechnungen deutlich präziser sind und sich diese geringen Mengen unter den rekursiven Berechnungen des AndroidAPS Algorithmus summieren.
 
-For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+Für weitere Informationen zu den verschiedenen Insulintypen, ihren Aktivitätsprofilen und warum dies alles eine Rolle spielt, lies bitte diesen Artikel: [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
 
-And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+Du solltest auch einen Blick in diesen exzellenten Blog-Artikel werfen: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+Und noch mehr bei: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Status der Pumpe
 
@@ -476,22 +476,22 @@ And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017
 
 ## Careportal (Behandlungen)
 
-Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
+Careportal hat die Funktionen repliziert, die auf der Nightscout-Webseite unter dem "+"-Symbol zu finden sind, das es erlaubt, Notizen hinzuzufügen.
 
 ### Kohlenhydrat-Berechnung überprüfen
 
-![Review carb calculation on t tab](../images/Screenshots_TreatCalc.png)
+![KH-Berechnung auf dem Tab "Behandlungen" überprüfen](../images/Screenshots_TreatCalc.png)
 
-* If you have used the [Bolus Wizard](Screenshots-bolus-wizard) to calculate insulin dosage you can review this calculation later on ts tab.
-* Klicke einfach auf den grünen Text 'Berech.'. (Depending on pump used insulin and carbs can also be shown in one single line in ts.)
+* Wenn Du den [Bolus-Rechner](Screenshots-bolus-wizard) verwendet hast, um den Bolus zu berechnen, kannst Du diese Berechnung später auf dem Tab Behandlungen überprüfen.
+* Klicke einfach auf den grünen Text 'Berech.'. (Je nach Pumpe können Insulin und Kohlenhydrate auch in einer einzigen Zeile in Behandlungen gezeigt werden.)
 
 (Screenshots-carb-correction)=
 
 ### Kohlenhydrat Korrektur
 
-![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+![Behandlung in einer oder zwei Zeilen](../images/Treatment_1or2_lines.png)
 
-Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+Der Behandlungs-Tab kann verwendet werden, um fehlerhafte Kohlenhydrat-Einträge zu korrigieren (z.B. wenn Du die KH-Menge über- oder unterschätzt hast).
 
 1. Prüfe und merke Dir die aktuelle COB- und IOB-Menge, die auf dem Startbildschirm angezeigt wird.
 2. Je nach Pumpenmodell werden die Kohlenhydrate entweder zusammen mit dem Insulin in einer Zeile oder als separater Eintrag (z.B. bei der Dana RS) angezeigt.
@@ -509,7 +509,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 * Diese Registerkarten enthalten Details zu den Berechnungen des Algorithmus und erklären, warum AAPS so und nicht anders gerechnet hat.
 * Die Berechnung erfolgt jedes Mal, wenn das System einen neuen Wert vom CGM erhält.
-* For more details see [APS section on config builder page](Config-Builder-aps).
+* Weitere Details findest Du im [APS-Abschnitt auf der Seite des Konfigurations-Generators](Config-Builder-aps).
 
 ## Profile
 
@@ -523,24 +523,24 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
    * Basalrate
    * BZ-Ziel: Wert, den die AAPS-Berechnungen anstreben sollen
 
-* As of version 3.0 only [local profile](Config-Builder-local-profile) is possible. Das lokale Profil kann auf Deinem Smartphone bearbeitet und mit Deiner Nightscout-Seite synchronisiert werden.
+* Ab Version 3.0 ist nur ein [lokales Profil](Config-Builder-local-profile) möglich. Das lokale Profil kann auf Deinem Smartphone bearbeitet und mit Deiner Nightscout-Seite synchronisiert werden.
 
 (Screenshots-treatment)=
 
 ## Bolus
 
-History of the following treatments:
+Historie der folgenden Behandlungen:
 
-* Bolus & carbs -> option to [remove entries](Screenshots-carb-correction) to correct history
+* Bolus & Kohlenhydrate -> Option zum [Entfernen von Einträgen](Screenshots-carb-correction) zur Korrektur der Historie
 * [Verzögerter Bolus](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Temporäre Basalrate (TBR)
 * [Temporäres Ziel](../Usage/temptarget.md)
 * [Profilwechsel](../Usage/Profiles.md)
-* [Careportal](CPbefore26-careportal-discontinued) - notes entered through action tab and notes in dialogues
+* [Careportal](CPbefore26-careportal-discontinued) - Notizen, die über den Aktions-Tab oder Dialoge eingeben wurden
 
 ## BZ-Quelle - xDrip+, BYODA...
 
-![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
+![Tab BZ-Quelle - hier xDrip+](../images/Screenshots_BGSource.png)
 
 * Abhängig von Deiner BZ-Quelle wird diese Registerkarte unterschiedlich benannt.
 * Zeigt die Historie der CGM Messungen an und bietet die Möglichkeit, Einträge im Fehlerfall zu entfernen (z.B. Niedrigwerte wegen Kompression).
@@ -550,5 +550,5 @@ History of the following treatments:
 ![Nightscout-Client](../images/Screenshots_NSClient.png)
 
 * Zeigt den Status der Verbindung mit Deiner Nightscout Seite an.
-* Settings are made in [preferences](Preferences-nsclient). Du kannst den entsprechenden Abschnitt öffnen, indem Du auf das Zahnrad auf der rechten oberen Seite des Bildschirms klickst.
+* Die Einstellungen werden in den [Einstellungen](Preferences-nsclient) gemacht. Du kannst den entsprechenden Abschnitt öffnen, indem Du auf das Zahnrad auf der rechten oberen Seite des Bildschirms klickst.
 * Hinweise zur Fehlersuche findest Du auf [dieser Seite](../Usage/Troubleshooting-NSClient.md).
