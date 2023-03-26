@@ -63,6 +63,7 @@ Adjust the xDrip+ settings according to the explanations on the xDrip+ settings 
 
 I just want to share my own personal experience as it might help folks in a similar position... I made several mistakes which hopefully you can avoid to make the transition smoother...
 Assuming that you have been already looping hapily with a G6 transmitter sending its data to Xdrip+ which sends it to AAPS which uploads it to NightScout. In my case I have a samsun S22+ running the latest Android on Tmobile, I am using omnipod dash. I also use a google drive to share files between my PC and my phone. I never ran a dev/beta build of AAPS before... I just received a G7 prescription from my endocrinologist; so how can I use it? That's the way I did it...  I am sure there are other ways some of which might be simpler/better... don't hesitate to refine this doc accordingly!
+note: If you happen to use the _BYODA g6 _app (aka Original recipe) instead of xdrip+ you will have to uninstall it before installing _diakem G7 _(aka new coke).
 
 1. Disclaimer & al. 
 
@@ -112,12 +113,12 @@ Assuming that you have been already looping hapily with a G6 transmitter sending
 
 11. install DIAKEM
 
-    1. if you already had installed the official dexcom G7 app uninstall it first (that wasn't my case but that's what is instructed above).
-    2. download the de DIAKEM app aka (replacement for the dexcom g7 app) on your phone from here: https://github.com/authorgambel/DiaKEM_G7
+    1. download the de DIAKEM app aka (replacement for the dexcom g7 app) on your phone from here: https://github.com/authorgambel/DiaKEM_G7
     direct link to v1.1 which I used: https://github.com/authorgambel/DiaKEM_G7/releases/download/v1.1/dexcom-v1.4.0.3906-screenshot-broadcast-compatibility.apk
-    3. copy the apk file in your google drive folder and install it like you did for AAPS.
-    4. it will create a **dexcom g7** app icon on your phone and you can run the app to configure it like a normal dexcom G7
-    5. The new dexcom G7 is supposedly more precise, faster response, much faster warmp (only minutes) than G6 but it also lack "smoothing"... long story short at this point your AAPS is still running with G6/Xdrip and you have the G7 running by itself in parallel... you might want to wait a bit before moving the next step and compare the results from the G6 vs G7 using a finger stick check to assess which is best for you... overall they seemed pretty close for me and I swapped after few hours.
+    2. copy the apk file in your google drive folder
+    3. if you already had installed the official dexcom G7 app or the original BYODA-for-g6 uninstall it first (if you have xdrip no need to uninstall you can run both in parallel ).         
+    5. Install the new diakem G7 app. it will create a **dexcom g7** app icon on your phone and you can run the app to configure it like a normal dexcom G7
+    6. The new dexcom G7 is supposedly more precise, faster response, much faster warmp (only minutes) than G6 but it also lack "smoothing"... long story short at this point your AAPS is still running with G6/Xdrip and you have the G7 running by itself in parallel... you might want to wait a bit before moving the next step and compare the results from the G6 vs G7 using a finger stick check to assess which is best for you... overall they seemed pretty close for me and I swapped after few hours.
 
 12. Switch AAPS from old trusted G6 to bleeding edge G7!
     1. in the AAPS top tabs (normally **HOME** is the default tab selected), slide all the way to the right to the **CONF** tab.
