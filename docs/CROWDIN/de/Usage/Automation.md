@@ -135,8 +135,8 @@ Klicke auf das Papierkorbsymbol, um eine Automatisierungsregel zu löschen.
 Dies sind nur Beispiele, keine Ratschläge. Du sollte diese nicht einfach kopieren ohne sicher zu sein, was Du wirklich tust und ohne zu wissen, warum man diese braucht.
 
 - Profilwechsel für Deine täglichen Aktivitäten (z. B. Schule, Sport, Wochenende vs. Arbeitstag) mit Standort, WLAN SSID, Zeit etc.
-- Setting temp target for activities based on time, location, connection to a bluetooth device...
-- Setting eating soon temp targets based on time, location...
+- Temporäre Ziele basierend auf dem Zeitpunkt, dem Ort, der Verbindung zu einem Bluetooth-Gerät (z.B. Autoradio) etc. starten
+- Bald-Essen-Temp Target auf Basis von Zeit, Standort,...
 
 ### Temporäres Ziel bei niedrigem Blutzucker
 
@@ -158,12 +158,12 @@ In diesem Beispiel isst der Benutzer bei der Arbeit unter der Woche jeden Tag zu
 
 Achte darauf, Automatisierungen nicht falsch einzusetzen. Dies könnte zu Schwierigkeiten und sogar zu einer Gefahr für Deine Gesundheit führen. Beispiele für eine fehlerhafte Verwendung sind z. B.:
 
-- Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
-- Setting profile to compensate food
-- Setting profile without duration
-- Creating one way rules (i.e. do something but don't undo it by another rule)
-- Creating long term rules
+- Versuche, den Algorithmus zu überlisten statt ihn nur zu unterstützen (z.B.  Profilwechsel statt Feinanpassung der Basalrate und Faktoren)
+- Profilwechsel zum Ausgleich von Lebensmitteln festlegen
+- Profilwechsel ohne Dauer festlegen
+- Einweg-Regeln (z.B.  Regel einrichten, aber Rückgängigmachung vergessen)
+- Langzeitregeln erstellen
 
 ## Alternativen
 
-Für fortgeschrittene Benutzer gibt es andere Möglichkeiten, Aufgaben mit IFTTT oder einer Drittanbieter-Android-App namens Automate zu automatisieren. Some examples can be found [here](./automationwithapp.html).
+Für fortgeschrittene Benutzer gibt es andere Möglichkeiten, Aufgaben mit IFTTT oder einer Drittanbieter-Android-App namens Automate zu automatisieren. Einige Beispiele findest Du [hier](./automationwithapp.html).
