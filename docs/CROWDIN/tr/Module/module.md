@@ -37,7 +37,7 @@ Gliflozinler olarak da adlandırılan SGLT-2 inhibitörleri, böbrekte glikozun 
 (module-phone)=
 ### Telefon
 
-AAPS'nin mevcut sürümü, Google Android 9.0 veya üzeri bir Android akıllı telefon gerektirir. Bu nedenle, yeni bir telefon düşünüyorsanız, minimum Android 8.1 önerilir, ancak optimal olarak Android 10 veya 12 seçin. Kullanıcıların, güvenlik nedeniyle AAPS yapılarını güncel tutmaları şiddetle tavsiye edilir, ancak minimum Android 9.0 sürümüne sahip bir cihazı olmayan kullanıcılar için, daha eski Android sürümleri için uygun olan AAPS sürümü 2.6.1.4, için [eski depo.](https://github.com/miloskozak/AAPS) ya bakabilirsiniz.
+The current version of AAPS requires an Android smartphone with Google Android 9.0 or above. So if you are thinking about a new phone, Android 9 is recommended at a minimum but optimally choose Android 10 or 12. Kullanıcıların, güvenlik nedeniyle AAPS yapılarını güncel tutmaları şiddetle tavsiye edilir, ancak minimum Android 9.0 sürümüne sahip bir cihazı olmayan kullanıcılar için, daha eski Android sürümleri için uygun olan AAPS sürümü 2.6.1.4, için [eski depo.](https://github.com/miloskozak/AAPS) ya bakabilirsiniz.
 
 Kullanıcılar bir [test edilmiş telefonlar ve saatler listesi](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) oluşturuyor
 
