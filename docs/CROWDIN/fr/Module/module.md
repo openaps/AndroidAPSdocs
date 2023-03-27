@@ -37,7 +37,7 @@ Les inhibiteurs SGLT-2, aussi appelés gliflozines, empêchent la réabsorption 
 (module-phone)=
 ### Téléphone
 
-La version actuelle d'AAPS nécessite un smartphone Android avec Google Android 8.0 ou supérieur. Donc si vous pensez à un nouveau téléphone, un Android 8.1 minimum est recommandé mais choisissez de préférence une version Android 9 ou 10. Les utilisateurs sont fortement encouragés à maintenir leur version d'AAPS à jour pour des raisons de sécurité. Cependant pour les utilisateurs qui ne peuvent pas utiliser d'appareil avec Android 8 minimum, la version 2.6.1.4 d'AAPS, adaptée aux versions plus anciennes d'Android, reste disponible sur l'[ancien dépôt.](https://github.com/miloskozak/AAPS)
+The current version of AAPS requires an Android smartphone with Google Android 9.0 or above. So if you are thinking about a new phone, Android 9 is recommended at a minimum but optimally choose Android 10 or 12. Les utilisateurs sont fortement encouragés à maintenir leur version d'AAPS à jour pour des raisons de sécurité. Cependant pour les utilisateurs qui ne peuvent pas utiliser d'appareil avec Android 8 minimum, la version 2.6.1.4 d'AAPS, adaptée aux versions plus anciennes d'Android, reste disponible sur l'[ancien dépôt.](https://github.com/miloskozak/AAPS)
 
 Les utilisateurs ont créé une [liste de téléphones et montres testés](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
