@@ -139,23 +139,23 @@ Wenn du diese Option aktivierst, dann kann der SMB unangekündigte Mahlzeiten er
 
 ### Hohe temporäre Ziele erhöhen die Sensitivität
 
-Wenn du diese Option aktivierst, dann wird die Insulinempfindlichkeit erhöht, wenn du ein temporäres Ziel über 100 mg/dl bzw. 5,6 mmol/l setzt. Das bedeutet, der Insulinsensibilitäts-Faktor (ISF) wird erhöht während der Kohlenhydrate-Faktor (IC) und die Basalrate gesenkt werden.
+Wenn Du diese Option aktivierst, dann wird die Insulinempfindlichkeit erhöht, wenn Du ein temporäres Ziel über 100 mg/dl bzw. 5,6 mmol/l setzt. Das bedeutet, der Insulinsensibilitäts-Faktor (ISF) wird erhöht während der Kohlenhydrate-Faktor (IC) und die Basalrate gesenkt werden.
 
 ### Niedrige temporäre Ziele senken die Sensitivität
 
-If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise.
+Wenn Du diese Option aktivierst, dann wird die Insulinempfindlichkeit verringert, wenn Du ein temporäres Ziel unter 100 mg/dl bzw. 5,6 mmol/l setzt. Das bedeutet, der Insulinsensibilitäts-Faktor (ISF) wird gesenkt während der Kohlenhydrate-Faktor (IC) und die Basalrate erhöht werden.
 
 ### Erweiterte Einstellungen
 
-**Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
+**Verwende immer das kurze durchschnittliche Delta statt einfacher Werte.** Wenn du dies aktivierst, dann verwendet AndroidAPS für die Berechnungen statt des aktuellen Glukosewertes den durchschnittlichen Glukosewert der letzten 15 Minuten (= kurzes durchschnittliches Delta), was normalerweise dem Durchschnittswert der letzten drei Werte entspricht. Dies hilft AndroidAPS dabei, mit Werten aus verrauschten Quellen wie xDrip+ und Libre stabiler zu arbeiten.
 
-**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then AndroidAPS can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**Max daily safety multiplier** Dies ist eine wichtige Sicherheitseinstellung. Der voreingestellte Wert (der nur in Ausnahmefällen geändert werden muss) ist 3. Das bedeutet, dass AndroidAPS daran gehindert wird, eine temporäre Basalrate zu setzen, die mehr als dem dreifachen Wert der höchsten stündlichen Rate entspricht, die in der Pumpe gesetzt ist. Beispiel: Wenn die höchste stündliche Basalrate 1.0 U/h ist und der Sicherheitsmultiplikator des Basalhöchstwertes auf 3 gesetzt ist, dann kann AndroidAPS die temporäre Basalrate höchstens auf einen Wert von 3.0 IE setzen.
 
-Default value: 3 (shouldn’t be changed unless you really need to and know, what you are doing)
+Standardwert: 3 (sollte nur in Ausnahmefällen geändert werden und wenn Du weisst, was das bedeutet)
 
-**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump.
+**Current Basal safety multiplier** Dies ist eine weitere wichtige Sicherheitseinstellung. Der voreingestellte Wert (der nur in Ausnahmefällen geändert werden muss) ist 4. Das bedeutet, dass AndroidAPS daran gehindert wird, eine temporäre Basalrate zu setzen, die mehr als dem vierfachen Wert der aktuellen stündlichen Basalrate entspricht, die in der Pumpe gesetzt ist.
 
-Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing)
+Standardwert: 4 (sollte nur in Ausnahmefällen geändert werden und wenn Du weisst, was das bedeutet)
 
 * * *
 
@@ -163,19 +163,19 @@ Default value: 4 (shouldn’t be changed unless you really need to and know, wha
 
 ## Erweiterter Mahlzeit-Assistent (AMA)
 
-AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
+AMA steht für “advanced meal assist” und ist eine OpenAPS-Funktion aus 2017 (Oref0). Nachdem Du Dir einen Bolus gegeben hast, darf AMA schneller eine höhere temporäre Basalrate wählen, vorausgesetzt Du gibst die Kohlenhydrate verlässlich ein.
 
-You can find more information in the [OpenAPS documentation](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+Siehe auch: [OpenAPS-Dokumentation (englisch)](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 (Open-APS-features-max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal)=
 
 ### Max IE/h, die als temporäre Basalrate gesetzt werden können (OpenAPS “max-basal”)
 
-This safety setting helps AndroidAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. Es wird empfohlen, hier etwas vernünftiges einzugeben. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
+Diese Sicherheitseinstellung hindert AndroidAPS daran, jemals eine gefährlich hohe Basalrate zu setzen und begrenzt die temporäre Basalrate auf x IE/h. Es wird empfohlen, hier etwas vernünftiges einzugeben. Eine gute Empfehlung ist, den höchsten stündlichen Basalratenwert in deinem Profil zu verwenden und diesen mit 4 oder mindestens mit 3 zu multiplizieren. Beispiel: wenn der höchste stündliche Basalratenwert in Deinem Profil 1.0 IE/h ist, kannst Du diesen mit 4 multiplizieren, wodurch Du einen Wert von 4 IE/h erhältst, so dass Du "4" als Sicherheitseinstellung setzen kannst.
 
-You cannot chose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
+Du kannst aber keinen beliebigen Wert wählen: AAPS begrenzt als “hard limit” den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Das "hard limit" für maxIOB ist bei AMA niederiger als bei SMB. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höchsten.
 
-The hardcoded parameters in AndroidAPS are:
+AndroidAPS hat folgende "hard limits":
 
 * Kind: 2
 * Jugendlicher: 5
@@ -187,9 +187,9 @@ The hardcoded parameters in AndroidAPS are:
 
 ### Maximales Basal-IOB, das OpenAPS abgeben darf \[IE\] (OpenAPS “max-iob”)
 
-This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
+Dieser Parameter begrenzt das maximale Basal-IOB, bis zu dem AndroidAPS noch funktioniert. Wenn dieses IOB höher ist, dann wird kein weiteres Basalinsulin mehr abgegeben, bis das Basal-IOB wieder unter dem Grenzwert liegt.
 
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. Das ist sehr individuell und hängt stark vom durchschnittlichen Gesamtinsulinbedarf ab (total daily dose = TDD). Zur Sicherheit gibt es ein Limit, das auf dem Patientenalter basiert. The 'hard limit' for maxIOB is lower in AMA than in SMB.
+Der Standardwert ist 2, aber Du solltest diesen Parameter in kleinen Schritten erhöhen um zu sehen, wie stark sich das bei Dir auswirkt und welcher Wert am besten passt. Das ist sehr individuell und hängt stark vom durchschnittlichen Gesamtinsulinbedarf ab (total daily dose = TDD). Zur Sicherheit gibt es ein Limit, das auf dem Patientenalter basiert. Das "hard limit" für maxIOB ist bei AMA niederiger als bei SMB.
 
 * Kind: 3
 * Jugendlicher: 5
@@ -201,27 +201,27 @@ The default value is 2, but you should be rise this parameter slowly to see how 
 
 ### Verwende AMA Autosense
 
-Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosens or not.
+Hier kannst du auswählen, ob die [Empfindlichkeitserkennung](../Configuration/Sensitivity-detection-and-COB.md) Autosens verwendet werden soll oder nicht.
 
 ### Autosense passt auch temporäre Ziele an
 
-If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. This lets AndroidAPS work more 'aggressive' or not. The actual target might be reached faster with this.
+Wenn Du diese Option aktivierst, dann kann Autosense auch Ziele anpassen (neben Basalrate und ISF). Dadurch kann AndroidAPS "aggressiver" arbeiten oder nicht. Der aktuell eingestellte Zielwert wird dadurch möglicherweise schneller erreicht.
 
 ### Erweiterte Einstellungen
 
-**Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
+**Verwende immer das kurze durchschnittliche Delta statt einfacher Werte.** Wenn du dies aktivierst, dann verwendet AndroidAPS für die Berechnungen statt des aktuellen Glukosewertes den durchschnittlichen Glukosewert der letzten 15 Minuten (= kurzes durchschnittliches Delta), was normalerweise dem Durchschnittswert der letzten drei Werte entspricht. Dies hilft AndroidAPS dabei, mit Werten aus verrauschten Quellen wie xDrip+ und Libre stabiler zu arbeiten.
 
-**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then AndroidAPS can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**Max daily safety multiplier** Dies ist eine wichtige Sicherheitseinstellung. Der voreingestellte Wert (der nur in Ausnahmefällen geändert werden muss) ist 3. Das bedeutet, dass AndroidAPS daran gehindert wird, eine temporäre Basalrate zu setzen, die mehr als dem dreifachen Wert der höchsten stündlichen Rate entspricht, die in der Pumpe gesetzt ist. Beispiel: Wenn die höchste stündliche Basalrate 1.0 U/h ist und der Sicherheitsmultiplikator des Basalhöchstwertes auf 3 gesetzt ist, dann kann AndroidAPS die temporäre Basalrate höchstens auf einen Wert von 3.0 IE setzen.
 
-Default value: 3 (shouldn’t be changed unless you really need to and know, what you are doing)
+Standardwert: 3 (sollte nur in Ausnahmefällen geändert werden und wenn Du weisst, was das bedeutet)
 
-**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump.
+**Current Basal safety multiplier** Dies ist eine weitere wichtige Sicherheitseinstellung. Der voreingestellte Wert (der nur in Ausnahmefällen geändert werden muss) ist 4. Das bedeutet, dass AndroidAPS daran gehindert wird, eine temporäre Basalrate zu setzen, die mehr als dem vierfachen Wert der aktuellen stündlichen Basalrate entspricht, die in der Pumpe gesetzt ist.
 
-Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing)
+Standardwert: 4 (sollte nur in Ausnahmefällen geändert werden und wenn Du weisst, was das bedeutet)
 
-**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+**Bolus snooze dia divisor** Die Funktion “Bolus snooze” wird dann aktiviert, wenn Du einen Essensbolus gegeben hast. AAPS reagiert nach den Mahlzeiten für die Dauer des DIA geteilt durch den "bolus-snooze" Parameter nicht mit einer niedrigen temporären Basalrate. Der Standardwert ist 2. Dies bedeutet: Bei einem DIA von 5 Stunden wird der “Bolus snooze” über 5 : 2 = 2,5 Stunden geradlinig auslaufen.
 
-Default value: 2
+Standardwert: 2
 
 (Open-APS-features-overview-of-hard-coded-limits)=
 
