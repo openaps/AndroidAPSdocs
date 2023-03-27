@@ -90,27 +90,27 @@ Das Autotune-Plugin ist die Umsetzung des OpenAPS Autotune-Algorithmus in AAPS.
 - UAM als Basal kategorisieren (voreingestellt: EIN): Diese Einstellung ist für Nutzende gedacht, die AAPS ohne Eingabe der Kohlenhydrate einsetzen (vollständiges UAM). Wenn die Option deaktiviert ist, werden UAM nicht als Basal bewertet.
   - Hinweis: Wenn mindestens eine Stunde eines Tages erkannt wird, in der KH-Aufnahme stattgefunden hat, werden alle als "UAM" kategorisierte Daten, als Basal gewertet. Das ist unabhängig davon, ob Du die Option aktiviert hast oder nicht (AN oder AUS)
 - Anzahl der Tage an Daten (voreingestellt: 5): Hier kannst Du den Standardwert festlegen. Jedes Mal, wenn Du ein neues Profil im Autotune-Plugin auswählst, wird der Parameter 'Anpassungstage' durch diesen Standardwert ersetzt.
-- Apply average result in circadian IC/ISF (default Off): see [Circadian IC or ISF profile](#circadian-ic-or-isf-profile) below.
+- Durchschnittsresultat im zirkadianen IC/ISF anwenden (voreingestellt: AUS): Details hierzu findest Du unten im Abschnitt [Zirkadiane Profile für KH- und Korrekturfaktoren (IC/ISF)](#circadian-ic-or-isf-profile).
 
 ### Andere Einstellungen
 
-- Autotune also uses Max autosens ratio and Min autotsens ratio to limit variation. You can see and adjust these values in Config Builder > Sensitivity detection plugin > Settings > Advanced Settings
+- Autotune nutzt 'Max. Autosens-Faktor' und 'Min Autotsens-Faktor' um die Variabilität einzugrenzen. Die Werte können in KONFIGURATION > Sensititivtätserkennung > Einstellungen > Erweiterte Einstellungen eingesehen und geändert werden
 
   ![Autotune Standardbildschirm](../images/Autotune/Autotune_12.png)
 
 
 
-## Advanced feature
+## Erweiterte Funktionen
 
 (circadian-ic-or-isf-profile)=
 
-### Circadian IC or ISF profile
+### Zirkadiane Profile für KH- und Korrekturfaktoren (IC/ISF)
 
-- If you have important variation of IC and/or you ISF in your profile, and you fully trust in your circadian time and variation, then you can set "Apply average result in circadiant IC/ISF"
+- Wenn Du große Abweichungen in IC- und/oder ISF-Werten Deines Profils hast und Du von der zirkadianen Verteilung und Variabilität überzeugt bist, kannst Du 'Apply average result in circadian IC/ISF' auswählen
 
-  - Note that Autotune calculation will always be done with a single value, and circadian variation will not be tuned by Autotune. This setting only apply average variation calculated for IC and/or ISF on your circadian values
+  - Es ist wichtig zu wissen, dass die Autotune-Berechnungen immer mit einem fixen Wert erfolgt. Autotune wird keine zirkadiane Verteilung erstellen. Diese Einstellung berücksichtigt lediglich berechnete Durchschnittswerte Deiner zirkadianen Werte für IC und/oder ISF
 
-- See on screenshot below Tuned profile with Apply average variation Off (on the left) and On (on the right)
+- Auf dem Screenshot unten siehst Du links das angepasste Profil mit der abgeschalteten Funktionen 'Durchschnittsresultat im zirkadianen IC/ISF anwenden' (AUS) und rechts mit der eingeschalteten Funktion (AN)
 
   ![Autotune Standardbildschirm](../images/Autotune/Autotune_13.png)
 
@@ -118,49 +118,49 @@ Das Autotune-Plugin ist die Umsetzung des OpenAPS Autotune-Algorithmus in AAPS.
 
 (run-autotune-with-an-automation-rule)=
 
-## Run Autotune with an automation rule
+## Autotune mit einer Automatisierungsregel starten
 
-First step is to define correct trigger for an automation rule with Autotune:
+Der erste Schritt besteht darin, den richtigen Auslöser für eine Automatisierungsregel mit Autotune zu definieren:
 
-Note: for more information on how to set an automation rule, see [here](./Automation.md).
+Hinweis: Details zum Setzen einer Automatisierungsregel, findest Du [hier](./Automation.md).
 
-- You should select Recurring time trigger: only run Autotune once per day, and autotune is designed to be runned daily (each new run you shift one day later and quickly profile modification should be tiny)
+- Als Auslöser sollte 'Wiederholungszeit' ausgewählt werden: Starte Autotune nur einmal täglich. Autotune is so konzipiert, dass es einmal am Tag läuft und vorgeschlagene Profilanpassungen am Folgetag durch Autotune erneut geprüft werden können. Bei regelmäßiger Ausführung (täglich) sind die dann notwendigen Profilanpassungen nur gering bzw. klein.
 
   ![Autotune Standardbildschirm](../images/Autotune/Autotune_16.png)
 
-- It's better at the beginning to run Autotune during the day to be able to check results. If you want to run Autotune during the night, you have to select in the trigger 4AM or later to include current day in next Autotune Calculation.
+- Um die Ergebnisse unmittelbar überprüfen zu können, hat sich am Anfang bewährt Autotune am Tag auszuführen. Bei einer geplanten Ausführung in den Nachtstunden, wähle 04:00h oder später. Damit wird der aktuelle Tag in der nächsten Autotune-Berechnung berücksichtigt.
 
   ![Autotune Standardbildschirm](../images/Autotune/Autotune_17.png)
 
-- Then you can select "Run Autotune" Action in the list
+- Nun kannst Du 'Autotune ausführen' unter 'Aktion' auswählen.
 
   ![Autotune Standardbildschirm](../images/Autotune/Autotune_18.png)
 
-- You can then select Autotune Action to adjust parameters for your run. Default parameters are "Active Profile", default Tune days value defined in Autotune Plugin preferences, and All days are selected.
+- Durch tippen auf 'Autotune Profil', kannst Du die Parameter für den Autotune-Lauf anpassen. Vorausgefüllt sind '<Aktiv>' als das anzupassende Profil und unter 'Anpassungstage' der Wert, den Du in den 'Autotune Einstellungen' hinterlegt hast.
 
   ![Autotune Standardbildschirm](../images/Autotune/Autotune_19.png)
 
-- After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "Automation Switch Profile" to enabled to automatically update and activate profile tuned after calculation.
+- Wenn Du nach einigen Tagen mit den Autotune-Ergebnissen zufrieden bist und die vorgeschlagenen prozentualen Anpassungen nur noch sehr gering sind, kannst Du in den [Autotune Einstellungen](#autotune-plugin-settings) die Option 'Automation Profilwechsel' aktivieren. Damit wird das Profil nach einer Autotune-Berechnung automatisch mit den Ergebnissen aktualisiert und anschliessend aktiviert.
 
-## Tips and trick's
+## Tipps und Tricks
 
-Autotune works with information existing in your database, so if you just installed AAPS on a new phone, you will have to wait several days before being able to launch Autotune with enough days to get relevant results.
+Autotune arbeitet den Informationen in Deiner Datenbank. Wenn Du AAPS gerade erst frisch auf Deinem Smartphone installiert hast, musst Du einige Tage warten, bevor Autotune mit genügend Informationen gestartet werden kann und sinnvolle Ergebnisse zurückliefert.
 
-Autotune is just an help, it's important to regularly check if you agree with calculated profile. If you have any doubt, change Autotune settings (for example the number of days) or copy results in local profile and adjust profile before using it.
+Autotune ist nur ein Hilfsmittel. Es ist wichtig, dass Du das berechnete Profil überprüfst und die Einzelwerte bewusst hinterfragst. Wenn Du an irgendeiner Stelle Zweifel haben solltest, passe die Autotune-Einstellungen (z.B. die Anpassungstage) an oder kopiere die Ergebnisse in ein lokales Profil, um dort notwendige Änderungen vorzunehmen, bevor Du diese verwendest.
 
-Always use Autotune several days manually to check results before applyling them. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile than you start to use Automation (Never before)
+Autotune sollte immer einige Tage manuell gestartet werden, damit Du die Möglichkeit hast die Ergebnisse zuerst zu prüfen, bevor Du sie übernimmst. Eine vollautomatisches 'Autotunen' darf nur dann (und wirklich nur dann!) begonnen werden, wenn Du den bisherigen Ergebnissen voll vertraust, und die vorgeschlagenen Anpassungen zwischen Eingangsprofil und berechnetem Profil nur noch sehr gering ausfallen.
 
-- Autotune can work very well for some users and not for others, so **If you don't trust Autotune result, don't use it**
+- Autotune funktioniert für einige von uns sehr gut, für andere allerdings auch nicht. **Solltest Du am Autotune-Ergebnis zweifeln, nutze es nicht**
 
-It's also important to analyse Autotune results to understand (or try to understand) why Autotune propose these modifications
+Wichtig ist auch, sich die Autotune-Ergebnise sehr genau anzuschauen, um zu verstehen, aus welchem Grund Autotune welche Anpassungen vorschlägt.
 
-- you can have a whole increase or decrease of the strength of your profile (for example increase of total basal associated to decrease of ISF and IC values). it could be associated to several following days with autosens correction above 100% (more agressivity required) or below 100% (you are more sensitive)
-- Sometimes Autotune propose a different balance between basal rates and IC/ISF (for ex lower basal and more aggressive IC/ISF)
+- Es kann eine vollständige Erhöhung oder Abschwächung Deines Profils geben (z.B. Anhebung des Basalprofils, um ISF- und IC-Werte abzuschwächen). Das kann die Folge von längeren Phasen (mehrere Tage) mit einer Autosens-Korrektur über 100% (höhere Aggressivität notwendig) oder unter 100% (Abschwächung notwendig) sein
+- Manchmal schlägt Autotune ein anderes 'Basal zu IC/ISF'-Verhältnis vor (z.B. niedrigere Basalrate und agressivere IC/ISF-Faktoren)
 
-We advise to not use Autotune in the following cases:
+In folgenden Situationen wird von einer Autotune-Nutzung abgeraten:
 
-- You don't enter all your carbs
-  - If you don't enter carbs correction for an hypoglycemia, Autotune will see an unexpected increase of your BG value and will increase your basal rates the 4 hours earlier, it could be the opposite of what you need to avoid hypo, especially if it's in the middle of the night. That's why it's important to enter all carbs especially correction for hypo.
+- Du gibst nicht alle Kohlenhydrate ein
+  - Wenn Du Kohlenhydrate zur Korrektur einer Hypo nicht eingibst, wird Autotune den dann steigenden Glukosewert nicht erwarten und als Konsequenz eine Erhöhung der Basalraten 4 Stunden davor vorschlagen. Das kann genau das Gegenteil sein, was nötig ist, um die Hypo (besonders in den Nachtstunden) zukünftig zu vermeiden. Deshalb ist es wichtig, alle Kohlenhydrate (insbesondere die KH, um aus einer Hypo zu kommen) vollständig einzugeben.
 - Du hast viele Abschnitte mit nicht angekündigten Mahlzeiten (UAM) im Verlauf Deines Tages
   - Hast Du alle Kohlenhydrate eingegeben und hast Du die Kohlenhydratmenge richtig eingeschätzt?
   - Alle Abschnitte mit nicht angekündigten Mahlzeiten (UAM), werden der Basalrate zugerechnet, sodass eine erhebliche Anhebung (mehr als notwendig) der Basalrate als Folge vorgeschlagen werden wird. Ausnahme: Du hast die Option 'UAM als Basal kategorisieren' deaktiviert
