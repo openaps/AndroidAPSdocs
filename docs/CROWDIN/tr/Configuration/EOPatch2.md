@@ -1,18 +1,18 @@
 # EOPatch2 Kullanım Kılavuzu
 
-**AndroidAPS 3.2 (sonraki sürüm) için planlandı ancak taahhüt edilmedi!**
+**AAPS 3.2 (sonraki sürüm) için planlandı ancak taahhüt edilmedi!**
 
 EOPatch pompası, NovoRapid veya Humalog gibi hızlı etkili U-100 tipi insülin kullanımını gerektirir. Doktorunuzun reçetesine göre sizin için uygun olan hızlı etkili bir insülin kullanın ve reçete edilen dozu enjekte edin.
 
 EOpatch kullanılırken en küçük enjekte edilebilir insülin dozu 0,05 ünitedir. Bu nedenle, bazal Profili minimum 0,05 Ü/sa veya 0,05 Ü/saatin katları olacak şekilde daha yüksek bir değere ayarlanmalıdır. Aksi taktirde Profildeki tahmini toplam infüzyon miktarı ile pompadaki gerçek infüzyon miktarı arasında bir hata olabilir. Aynı şekilde, bolus da minimum infuzyon miktarı 0,05 Ü olarak ayarlanmalıdır.
 
 ## Pompa Kurulumu
-1. AndroidAPS ana ekranında sol üst köşedeki hamburger menüsüne tıklayın ve Konfigürasyon ayarları'na gidin.
+1. AAPS ana ekranında sol üst köşedeki hamburger menüsüne tıklayın ve Konfigürasyon ayarları'na gidin.
 1. Pompa bölümünde 'EOPatch2'yi seçin.
 1. Ana ekrana dönmek için Geri tuşuna basın.
 
 
-![Bild1](../images/EOPatch/Bild1.png) ![Bild2](../images/EOPatch/Bild2.png)
+![Image1](../images/EOPatch/Bild1.png) ![Image2](../images/EOPatch/Bild2.png)
 
 ## Ayarlar
 EOPATCH2 sekmesine gitmek için ana ekranın üst kısmındaki EOPATCH2'yi seçin.
@@ -30,7 +30,7 @@ Bu, mevcut pompanın sona ermesinden önce kalan süreyi size bildirmek için bi
 ### Pompa sesli Hatırlatıcılar
 Bu, bazal enjeksiyon dışındaki enjeksiyonlar için bir hatırlatma işlevidir. (Yayma) bir bolus enjeksiyonu veya geçici bir bazal enjeksiyonu kullanıyorsanız, patch, enjeksiyon başladığında ve enjeksiyon tamamlandığında bir uyarı sesi çıkarır. İlk ayar değeri Kapalı'dır.
 
-![Bild3](../images/EOPatch/Bild3.png)
+![Image3](../images/EOPatch/Bild3.png)
 
 ## Pompa Bağlantısı
 
@@ -38,7 +38,7 @@ Bu, bazal enjeksiyon dışındaki enjeksiyonlar için bir hatırlatma işlevidir
 
 Ana ekranın üst kısmındaki EOPATCH2'yi seçin ve sol alttaki PATCH ETKİNLEŞTİRME butonuna tıklayın.
 
-![Bild4](../images/EOPatch/Bild4.png)
+![Image4](../images/EOPatch/Bild4.png)
 
 ### Pompa Bağlantısı
 Şırınga iğnesini flasterdeki insülin girişine sokun ve ardından insülini enjekte etmek için pistonu yavaşça itin. 80Ü'dan fazla İnsülin doldurulduğunda, patch bir açılış sesi verir ve açılır. Zil sesini onayladıktan sonra, ekrandaki EŞLEŞTİRMEYİ BAŞLAT düğmesine tıklayın.
@@ -49,7 +49,7 @@ Ana ekranın üst kısmındaki EOPATCH2'yi seçin ve sol alttaki PATCH ETKİNLE�
 - Patch rezervuarına enjekte edilebilecek insülin miktarı 80~200Ü'dir. Başlangıçta Patch rezervuarına 80Ü'den daha az insülin enjekte ederseniz Patch çalışmayacaktır.
 - Konulacak insülini buzdolabından önceden alın ve 15-30 dakika oda sıcaklığında bekletin. Enjekte edilecek insülinin sıcaklığı en az 10°C olmalıdır.
 
-![Bild5](../images/EOPatch/Bild5.png)
+![Image5](../images/EOPatch/Bild5.png)
 
 ### pompa eşleştirme
 Patch eşleştirme ekranı görüntülenecek ve eşleştirme otomatik olarak denenecektir. İletişim başarılı olursa, Bluetooth eşleştirme isteği bildirimi görünür. Tamam'a tıklayın ve Bluetooth eşleştirme talebi bildirimi, kimlik doğrulama koduyla birlikte ikinci kez göründüğünde tekrar Tamam'ı seçin.
@@ -60,13 +60,13 @@ Patch eşleştirme ekranı görüntülenecek ve eşleştirme otomatik olarak den
 - Patch önyüklemesi tamamlandıktan sonra, eşleştirme tamamlanana kadar patch her 3 dakikada bir bip sesi çıkaracaktır.
 - Patch başladıktan sonra, patch uygulamasının 60 dakika içinde uygulama üzerinden tamamlanması gerekir. Uygulama 60 dakika içinde tamamlanamıyorsa patch atılmalıdır.
 
-![Bild6](../images/EOPatch/Bild6.png) ![Bild7](../images/EOPatch/Bild7.png) ![Bild8](../images/EOPatch/Bild8.png)
+![Image6](../images/EOPatch/Bild6.png) ![Image7](../images/EOPatch/Bild7.png) ![Image8](../images/EOPatch/Bild8.png)
 
 
 ### Patch hazırlığı
 Patch yapışkan bandını çıkardıktan sonra iğnenin dışarı çıkıp çıkmadığını kontrol edin. Patch ile ilgili herhangi bir sorun yoksa, İLERİ'ye tıklayın.
 
-![Bild9](../images/EOPatch/Bild9.png)
+![Image9](../images/EOPatch/Bild9.png)
 
 ### Patch yerleştirme
 İnsülin, deri altı yağ içeren ancak az sayıda sinir veya kan damarı olan bir noktaya enjekte edilmelidir, bu nedenle Patch takma yeri olarak karın, kol veya uyluğun kullanılması önerilir. Bir Patch infüzyon bölgesi seçin ve konumu dezenfekte ettikten sonra pompayı yerleştirin.
@@ -76,7 +76,7 @@ Patch yapışkan bandını çıkardıktan sonra iğnenin dışarı çıkıp çı
 - Pompanın cilde tamamen yapışması için pompa bandının vücuda yapıştırılan tarafını eşit şekilde düzleştirdiğinizden emin olun.
 - Pompa tamamen yapışmazsa, pompa ile cilt arasına hava girebilir ve bu da pompanın yapışma gücünü ve su geçirmezlik etkisini zayıflatabilir.
 
-![Bild10](../images/EOPatch/Bild10.png)
+![Image10](../images/EOPatch/Bild10.png)
 
 ### Güvenlik Kontrolü
 Yerleştirme işlemi tamamlandığında, Güvenlik Kontrolünü Başlat'a dokunun. Güvenlik kontrolü tamamlandığında, pompa bir kez bip sesi çıkaracaktır.
@@ -85,7 +85,7 @@ Yerleştirme işlemi tamamlandığında, Güvenlik Kontrolünü Başlat'a dokunu
 
 - Güvenli kullanım için, güvenlik kontrolü tamamlanana kadar iğne hareket kolunu çevirmeyin.
 
-![Bild11](../images/EOPatch/Bild11.png) ![Bild12](../images/EOPatch/Bild12.png)
+![Image11](../images/EOPatch/Bild11.png) ![Image12](../images/EOPatch/Bild12.png)
 
 
 ### İğneyi yerleştirme
@@ -101,7 +101,7 @@ Yerleştirme işlemi tamamlandığında, Güvenlik Kontrolünü Başlat'a dokunu
 ### Pompanın çıkarılması
 Ana ekranın üst kısmında EOPATCH2'yi seçin ve alttaki POMPAYI AYIR/DEĞİŞTİR butonuna tıklayın. Bir sonraki ekranda, POMPAYI ÇIKAR butonuna tıklayın. Bir kez daha onaylamak için bir iletişim kutusu görünür ve POMPAYI ÇIKAR butonunu seçerseniz, imha işlemi tamamlanır.
 
-![Bild13](../images/EOPatch/Bild13.png) ![Bild14](../images/EOPatch/Bild14.png) ![Bild15](../images/EOPatch/Bild15.png) ![Bild16](../images/EOPatch/Bild16.png)
+![Image13](../images/EOPatch/Bild13.png) ![Image14](../images/EOPatch/Bild14.png) ![Image15](../images/EOPatch/Bild15.png) ![Image16](../images/EOPatch/Bild16.png)
 
 ## İnsülin İletimini Askıya Alma ve Devam Ettirme
 İnsülin iletiminin askıya alınması aynı zamanda hem Yayma bolusu hem de geçici bazalı iptal eder. İnsülin iletimine devam edilirken, iptal edilen yayma bolus ve geçici bazal devam ettirilmeyecektir. Ve insülin iletimi askıya alındığında, pompa her 15 dakikada bir ses verecektir.
@@ -109,13 +109,13 @@ Ana ekranın üst kısmında EOPATCH2'yi seçin ve alttaki POMPAYI AYIR/DEĞİŞ
 ### İnsülin iletiminin askıya alınması
 Ana ekranın üst kısmında EOPATCH2'yi seçin ve sağ alttaki ASKIYA AL butonuna tıklayın. Onay kutusunda ONAYLA'yı seçtiğinizde, bir zaman seçim kutusu görünür. Süreyi seçtikten sonra ONAYLA düğmesini seçerseniz, insülin iletimi ayarlanan süre boyunca askıya alınacaktır.
 
-![Bild17](../images/EOPatch/Bild17.png) ![Bild18](../images/EOPatch/Bild18.png) ![Bild19](../images/EOPatch/Bild19.png)
+![Image17](../images/EOPatch/Bild17.png) ![Image18](../images/EOPatch/Bild18.png) ![Image19](../images/EOPatch/Bild19.png)
 
 
 ### İnsülin iletimini devam ettirme
 Ana ekranın üst kısmında EOPATCH2'yi seçin ve sağ alttaki DEVAM ET butonuna tıklayın. Onay iletişim kutusunda ONAYLA öğesi seçildiğinde insülin iletimi devam edecektir.
 
-![Bild20](../images/EOPatch/Bild20.png) ![Bild21](../images/EOPatch/Bild21.png)
+![Image20](../images/EOPatch/Bild20.png) ![Image21](../images/EOPatch/Bild21.png)
 
 ## Alarmlar/Uyarılar
 
@@ -123,7 +123,7 @@ Ana ekranın üst kısmında EOPATCH2'yi seçin ve sağ alttaki DEVAM ET butonun
 
 Alarmlar, en yüksek önceliğe sahip acil durumlar için verilir ve acil müdahale gerektirir. Alarm sinyali, onaylanana kadar kaybolmaz veya zaman aşımına uğramaz. Kullanılan pompa ile ilgili bir sorun olduğunda bir alarm verilir, bu nedenle kullanılan pompanın çıkarılması ve yeni bir pompa ile değiştirilmesi gereken durumlar olabilir. Uyarı bir iletişim kutusu olarak görüntülenir ve işlem tamamlanana kadar başka bir ekrana geçiş mümkün değildir.
 
-![Bild22](../images/EOPatch/Bild22.png) ![Bild23](../images/EOPatch/Bild23.png)
+![Image22](../images/EOPatch/Bild22.png) ![Image23](../images/EOPatch/Bild23.png)
 
 Farklı alarm türleri aşağıda açıklanmıştır.
 
@@ -143,7 +143,7 @@ Farklı alarm türleri aşağıda açıklanmıştır.
 
 Orta veya düşük öncelikli bir durumda bir uyarı oluşur. Bir uyarı oluştuğunda, Genel Bakış ekranında bir bildirim olarak görüntülenir.
 
-![Bild24](../images/EOPatch/Bild24.png)
+![Image24](../images/EOPatch/Bild24.png)
 
 Farklı uyarı türleri aşağıda açıklanmıştır.
 

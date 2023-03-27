@@ -11,13 +11,13 @@ Ein Hinweis zur Vorsicht: AndroidAPS wird nicht von einer medizinischen Aufsicht
 - das System pflegt, auf dem aktuellen Stand hält und es überwacht, um sicherzustellen, dass es ordnungsgemäß funktioniert.
 
 ```{note}
-**Disclaimer and Warning**
+**Haftungsausschluss und Warnung**
 
-- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout erfüllt keinerlei Anforderungen des Datenschutzes im Gesundheitswesen. Verwenden Sie Nightscout und AndroidAPS auf eigenes Risiko und setzen Sie es nicht ein, um Behandlungsentscheidungen zu treffen.
-- Use of code from github.com is without warranty or formal support of any kind. Im Übrigen wird auf die Lizenz verwiesen, die im Repository abgerufen werden kann.
-- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Ihre Verwendung dient nur zur Information und bedeutet weder, dass AAPS zu ihnen gehört, noch dass sie unterstützt werden.
+- Alle Informationen, Gedanken und Code, die hier beschrieben werden, sind ausschließlich zu Informations- und Bildungszwecken bestimmt. Nightscout erfüllt keinerlei Anforderungen des Datenschutzes im Gesundheitswesen. Verwenden Sie Nightscout und AndroidAPS auf eigenes Risiko und setzen Sie es nicht ein, um Behandlungsentscheidungen zu treffen.
+- Bei Nutzung des Quellcodes von github.com bestehen keinerlei Gewährleistungs- und Garantieansprüche. Es gibt keinen Support. Im Übrigen wird auf die Lizenz verwiesen, die im Repository abgerufen werden kann.
+- Sämtliche Produkt- und Herstellernamen, Handelsmarken, Dienstleistungsmarken, Warenzeichen und eingetragene Dienstleistungsmarken sind Eigentum ihrer jeweiligen Inhaber und werden nur zu Informationszwecken genutzt und nicht für Werbung oder Marketing. Ihre Verwendung dient nur zur Information und bedeutet weder, dass AAPS zu ihnen gehört, noch dass sie unterstützt werden.
 
-Please note - this project has no association with and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
+Bitte beachten - Dieses Projekt steht in keinerlei Verbindung zu: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) oder [Medtronic](https://www.medtronic.com/).
 ```
 
 Wenn Du bereit bist, diese Herausforderung anzunehmen, lies bitte weiter.

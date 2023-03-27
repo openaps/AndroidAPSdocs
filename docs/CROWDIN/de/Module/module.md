@@ -1,70 +1,70 @@
-# Component Overview
+# Übersicht der Komponenten
 
-AAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the [component setup](index-component-setup), too.
+AAPS ist nicht einfach eine (selbst erstellte) App, es ist eines von verschiedenen Modulen Deines Closed Loop Systems. Bevor Du Dich für die einzelnen Komponenten entscheidest, solltest Du einen Blick auf das [Komponenten-Setup](index-component-setup), werfen.
 
 ```{image} ../images/modules.png
-:alt: Components overview
+:alt: Übersicht der Komponenten
 ```
 
 ```{note}
-**IMPORTANT SAFETY NOTICE**
+**WICHTIGER SICHERHEITSHINWEIS**
 
-The foundation of AAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. Es ist extrem wichtig, dass die Insulinpumpe und das CGM-System, die für ein Closed Loop System mit automatisierter Insulinabgabe verwendet werden, hinreichend getestet und voll funktionstüchtig sind sowie (in Europa) eine CE-Kennzeichnung haben und (in Deutschland) als Medizinprodukte zugelassen sind. Veränderungen an Hard- oder Software dieser Komponenten können zu unerwarteter Insulinabgabe und damit zu erheblichen Risiken für den Anwender führen. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AAPS system.
+Die grundlegenden Sicherheitsfunktionen von AAPS, die in dieser Dokumentation beschrieben sind, bauen auf den Sicherheitsfunktionen der Hardware auf, mit der Du Dein System aufgesetzt hast. Es ist extrem wichtig, dass die Insulinpumpe und das CGM-System, die für ein Closed Loop System mit automatisierter Insulinabgabe verwendet werden, hinreichend getestet und voll funktionstüchtig sind sowie (in Europa) eine CE-Kennzeichnung haben und (in Deutschland) als Medizinprodukte zugelassen sind. Veränderungen an Hard- oder Software dieser Komponenten können zu unerwarteter Insulinabgabe und damit zu erheblichen Risiken für den Anwender führen. *Verwende keine* defekten, modifizierten oder selbsterstellten Insulinpumpen oder CGM-Empfänger, um ein AAPS-System zu erstellen oder zu betreiben.
 
 Außerdem ist es ebenso wichtig, nur Originalzubehör zu verwenden. Setzhilfen, Kanülen und Reservoire müssen vom Hersteller für den Einsatz mit deiner Pumpe bzw. deinem CGM zugelassen sein. Die Verwendung von nicht geprüftem oder modifiziertem Zubehör kann zu Ungenauigkeiten des CGM-Systems und Insulinabgabefehlern führen. Insulin ist sehr gefährlich, wenn es falsch dosiert wird. Spiele nicht mit deinem Leben, indem du ungeprüftes oder modifiziertes Zubehör verwendest.
 
 Nicht zuletzt darfst Du keine SGLT-2-Hemmer (Gliflozins) einnehmen, da sie den Blutzuckerspiegel unberechenbar senken.  Die Kombination mit einem Closed Loop System, das die basalen Raten senkt, um den BZ zu erhöhen ist besonders gefährlich, da durch die Gliflozin dieser BZ-Anstieg verhindert wird und ein gefährlicher Zustand durch Insulinmangel auftreten kann.
 ```
 
-## Necessary Modules
+## Erforderliche Komponenten
 
-### Good individual dosage algorithm for your diabetes therapy
+### Gute individuelle Profileinstellungen für Deine Diabetes-Therapie
 
-Even though this is not something to create or buy, this is the 'module' which is probably underestimated the most but essential. When you let an algorithm help manage your diabetes, it needs to know the right settings to not make severe mistakes. Even if you are still missing other modules, you can already verify and adapt your 'profile' in collaboration with your diabetes team. Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
+Obwohl Du es weder kaufen noch einfach erstellen kannst, ist dies wahrscheinlich das Modul, das am meisten unterschätzt wird, obwohl es für einen funktionieren Loop absolut wesentlich ist. Wenn Dich der Algorithmus bei Deinem Diabetes-Management unterstützen soll, benötigt dieser die korrekten Einstellungen um keine schwerwiegenden Fehlentscheidungen zu treffen. Auch wenn Dir andere Module noch fehlen, kannst Du Dein bestehendes 'Profil' zusammen mit Deinem Diabetes-Team überprüfen und anpassen. Die meisten Looper verwenden eine sogenannte zirkadiane Basalrate, Korrektur- und KH-Faktoren die sich an der hormonellen Insulinempfindlichkeit im Tagesverlauf orientieren.
 
-The profile includes
+Das Profil beinhaltet:
 
-- BR (Basal rates)
-- ISF (insulin sensitivity factor) is your blood glucose unit per one unit insulin
-- CR (carb ratio) is grams carbohydrate per one unit insulin
-- DIA (duration of insulin acting).
+- BR (Basalraten)
+- ISF (insulin sensitivity factor - Korrekturfaktor): Menge an mg bzw. mmol die eine Einheit Insulin Deinen Blutzucker senkt
+- CR (carb ratio - KH-Faktor): Gramm Kohlenhydrate, die mit einer Einheit Insulin abgedeckt werden können
+- DIA (duration of insulin acting): Insulin-Wirkdauer
 
 (module-no-use-of-sglt-2-inhibitors)=
-### No use of SGLT-2 inhibitors
+### Keine Verwendung von SGLT-2-Hemmern
 
-SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. As they incalculably lower blood sugar levels, you MUST NOT take them while using a closed loop system like AAPS! There would be a huge risk of a ketoacidosis or a hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
+SGLT-2 Hemmer, auch Gliflozins genannt, hemmen die Resorption (Aufnahme) von Glukose in der Niere. Da sie den Blutzuckerspiegel unberechenbar senken, dürfen sie KEINESFALLS mit einem Closed Loop System wie AAPS verwendet werden! Es bestünde ein enormes Risiko für eine Ketoazidose oder eine Hypoglykämie! Die Kombination dieser Medikamente mit einem Closed Loop System, das die Basalrate senkt, um den BZ zu erhöhen, ist besonders gefährlich, da durch die Gliflozin dieser BZ-Anstieg verhindert wird und ein gefährlicher Zustand durch Insulinmangel auftreten kann.
 
 (module-phone)=
-### Phone
+### Smartphone
 
-The current version of AAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10. Users are strongly encouraged to keep their build of AAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AAPS version 2.6.1.4, suitable for older Android versions, remains available from the [old repository.](https://github.com/miloskozak/AAPS)
+Die aktuelle Version von AAPS erfordert ein Android Smartphone mit Google Android 8.0 oder höher. Solltest Du also über ein neues Telefon nachdenken, wird mindestens Android 8.1, idealerweise aber Android 9 oder 10 empfohlen. Aus Sicherhheitsgründen wird Dir dringend empfohlen Deine AAPS-Version immer auf dem letzten Stand zu halten bzw. zu bringen. Wenn Dein Smartphone kein Android 8.0 oder höher haben sollte, steht Dir die AAPS-Version 2.6.1.4 im [alten Repository](https://github.com/miloskozak/AAPS) zur Verfügung. AAPS-Version 2.6.1.4 kann mit älteren Android-Versionen genutzt werden.
 
-Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
+Benutzer haben eine [Liste von getesteten Handys und Smartwatches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) erstellt.
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform).
+Um ein Handy oder eine Smartwatch einzutragen welches noch nicht in der Liste ist, bitte das  [Formular](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform) ausfüllen.
 
-Any problems with the spreadsheet please send an email to [hardware@androidaps.org](mailto:hardware@androidaps.org), any donations of phone/watch models that still need testing please send an email to [donations@androidaps.org](mailto:hardware@androidaps.org).
+Probleme mit der Tabelle bitte per E-Mail an [hardware@androidaps.org](mailto:hardware@androidaps.org) melden. Wenn du Handys oder Smartwatches zum Testen zur Verfügung stellen möchtest, bitte eine E-Mail an [donations@androidaps.org](mailto:hardware@androidaps.org) schreiben.
 
-### Insulin pump
+### Insulinpumpe
 
-AAPS **currently** works with
+AAPS funktioniert **derzeit** mit
 
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (zusätzlich werden Ruffy App, LineageOS oder Android 8.1 auf Deinem Smartphone benötigt)
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
 - [DanaR](../Configuration/DanaR-Insulin-Pump.md)
 - [Dana-i/RS](../Configuration/DanaRS-Insulin-Pump.md)
-- [some old Medtronic pumps](../Configuration/MedtronicPump.md) from upcoming version 2.4 ([additional communication device](module-additional-communication-device) needed)
-- [Omnipod Eros](../Configuration/OmnipodEros.md) ([additional communication device](module-additional-communication-device) needed)
+- [Einige alte Medtronic Pumpen](../Configuration/MedtronicPump.md) ab AAPS Version 2.4 ([zusätzliches Kommunikationsgerät](module-additional-communication-device) erforderlich)
+- [Omnipod Eros](../Configuration/OmnipodEros.md) ([zusätzliches Kommunikationsgerät](module-additional-communication-device) erforderlich)
 - [Omnipod DASH](../Configuration/OmnipodDASH.md)
 
-If no additional communication device  is mentioned the communication betweeen insulin pump and AAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
+Wenn kein zusätzliches Kommunikationsgerät erwähnt wird, kommuniziert die Insulinpumpe mit AAPS direkt über Bluetooth (ohne das ein zwischengeschaltetes Gerät noch etwas umwandeln muss).
 
-**Other pumps** that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](../Getting-Started/Future-possible-Pump-Drivers.md) page.
+Informationen über weitere in Zukunft ggf. loopbare Insulinpumpen findest Du [hier](../Getting-Started/Future-possible-Pump-Drivers.md).
 
 (module-additional-communication-device)=
-#### Additional communication device
+#### Zusätzliches Kommunikationsgerät
 
-For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
+Für alte Medtronic-Pumpen ist ein zusätzliches Kommunikationsgerät (neben Deinem Smartphone) erforderlich, um das Funksignal von der Pumpe zu Bluetooth "zu übersetzen". Wähle die richtige Variante des Kommunikationsgeräts aus, je nach dem welche Pumpe Du nutzt.
 
 - ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
 - ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
@@ -72,63 +72,63 @@ For old medtronic pumps an additional communication device (besides your phone) 
 - ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Kontakt:](mailto:Boshetyn@ukr.net)
 - ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Kontakt:](https://jameswedding.substack.com/) - nicht getestet
 
-**So what's the best pump for looping with AAPS?**
+**Welche Pumpe ist mit AAPS am Besten für den Closed Loop geeignet?**
 
-The Combo, the Insight and the older Medtronics are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
+Die Combo, die Insight und die älteren Medtronic Pumpen sind solide und "loopfähig". Die Combo hat wegen des Standard Luer-Lock-Anschlusses auch den Vorteil, dass die Auswahl an Kathetern groß ist. Und sie verwendet Standard-Batterien, die rund um die Uhr an jeder Tankstelle erhältlich sind. Im Notfall kannst du sie sogar aus der Fernbedienung in deinem Hotelzimmer "ausleihen" ;-).
 
-The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice however are:
+Die Vorteile der DanaR/RS und Dana-i vs. der Combo sind aber:
 
-- The Dana pumps connect to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
-- Initial pairing is simpler with the Dana-i/RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
-- So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
-- The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB.  The Dana-i/RS is configurable that it does neither beep or vibrate.
-- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
-- All pumps AAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
+- Die Dana Pumpen können sich mit fast jedem Smartphone verbinden, auf dem das Betriebssystem Google Android >= 5.1 installiert ist. Ein Austausch der werksseitigen Smartphone-Software (z. B. durch das Lineage Betriebssystem) ist nicht nötig. Wenn Dein Smartphone kaputt geht oder gestohlen wird, kannst Du auf einem anderen / neuen Smartphone sehr schnell die Pumpe wieder steuern... Mit der Combo ist das nicht so einfach.  jedenfalls nicht solange Android 8.1 nur auf wenigen Smartphones installiert ist.
+- Das erste Einrichten der Verbindung zwischen der Dana-i/RS und dem Smartphone ist einfacher. Allerdings ist dieser Schritt normalerweise nur bei der Ersteinrichtung erforderlich.
+- Bislang arbeitet die Combo mit screen parsing. Grundsätzlich funktioniert das gut, aber es ist leider langsam. Beim Loopen ist das nicht so schlimm, denn das läuft alles im Hintergrund ab. Das führt aber dazu, dass eine bestehende Bluetooth-Verbindung leichter abgebrochen wird. Das kann unpraktisch sein, wenn Du Dich während eines Bolus-Prozesses zu weit vom Smartphone entfernst (z. B. beim Kochen).
+- Die Combo virbiert am Ende jeder TBR, die DanaR vibriert (oder piept) bei Abgabe eines SMB. In der Nacht wird der Loop meistens eher TBR setzen statt SMB.  Die Dana-i/RS kann so eingestellt werden, dass sie weder bei TBR, noch bei SMB vibriert oder piept.
+- Die History kann auf der Dana-i/RS in wenigen Sekunden mit COB ausgelesen werden. Deshalb können die Smartphones offline leicht ausgewechselt werden. Sobald einige CGM-Daten verfügbar sind, kann das Loopen fortgesetzt werden.
+- Alle Pumpen, die AAPS unterstützt, sind (jedenfalls bei Auslieferung) wasserdicht. Nur die DanaR/Rs garantiert auch während der Nutzung Wasserdichtigkeit durch das abgedichtete Batteriefach und das Reservoir-System.
 
 ### BZ-Quelle
 
-This is just a short overview of all compatible CGMs/FGM with AAPS. For further details, look [here](../Configuration/BG-Source.md). Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
+Dies ist nur eine kurze Übersicht über alle mit AAPS kompatiblen CGM/FGM. Weitere Details findest Du [hier](../Configuration/BG-Source.md). Nur ein kurzer Hinweis: Wenn Du Deine Glukose-Daten in der xDrip+ App oder Deiner Nightscout-Website anzeigen kannst, kannst Du xDrip+ (oder Nightscout mit Webverbindung) als BZ-Quelle in AAPS wählen.
 
-- [Dexcom G6](../Hardware/DexcomG6.md): BOYDA is recommended as of version 3.0 (see [release notes](Releasenotes-important-hints-3-0-0) for details). xDrip+ must be at least version 2022.01.14 or newer
-- [Dexcom G5](../Hardware/DexcomG5.md): It works with xDrip+ app or patched Dexcom app
-- [Dexcom G4](../Hardware/DexcomG4.md): These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
-- [Libre 2](../Hardware/Libre2.md): It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
-- [Libre 1](../Hardware/Libre1.md): You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
-- [Eversense](../Hardware/Eversense.md): It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
-- [Enlite (MM640G/MM630G)](../Hardware/MM640g.md): quite complicated with a lot of extra stuff
+- [Dexcom G6](../Hardware/DexcomG6.md): Ab AAPS version 3.0 wird BYODA empfohlen (vgl. hierzu auch die [Release Notes](Releasenotes-important-hints-3-0-0)). xDrip+ muss mindestens Version 2022.01.14 oder neuer sein
+- [Dexcom G5](../Hardware/DexcomG5.md):  Funktioniert mit xDrip+ oder der gepatchten Dexcom App
+- [Dexcom G4](../Hardware/DexcomG4.md):  Diese Sensoren sind relativ alt, aber es gibt im Netz Anleitungen wie Du sie mit der xDrip+ App verwenden kannst.
+- [Libre 2](../Hardware/Libre2.md): Funktioniert mit xDrip+ (kein Transmitter erforderlich), Du musst aber auch für den Libre 2 eine eigene gepatchte App erstellen.
+- [Libre 1](../Hardware/Libre1.md): Du benötigst einen Sender wie Bluecon oder MiaoMiao, den Du selbst bauen oder einfach kaufen kannst, und die xDrip+ App.
+- [Eversense](../Hardware/Eversense.md): Funktioniert bisher nur in Kombination mit der ESEL-App und einer gepatchten Eversense-App (funktioniert nicht mit der Kombination Dana RS und LineageOS, jedoch gut mit DanaRS und Android oder Combo und Lineage OS).
+- [Enlite (MM640G/MM630G)](../Hardware/MM640g.md): ziemlich kompliziert mit viel zusätzlichem Aufwand
 
 ### Nightscout
 
-Nightscout is a open source web application that can log and display your CGM data and AAPS data and creates reports. You can find more information on the [website of the Nightscout project](http://nightscout.github.io/). You can create your own [Nightscout website](https://nightscout.github.io/nightscout/new_user/), use the semi-automated Nightscout setup on [zehn.be](https://ns.10be.de/en/index.html) or host it on your own server (this is for IT experts).
+Nightscout ist eine Open Source Web-Anwendung, die Deine CGM-Daten und AAPS-Daten protokollieren und anzeigen kann und Berichte erstellt. Mehr Informationen findest Du auf der [Website des Nightscout-Projekts](http://nightscout.github.io/). Du kannst Deine eigene [Nightscout-Website](https://nightscout.github.io/nightscout/new_user/) erstellen, die halbautomatische Nightscout-Einrichtung auf [zehn.be](https://ns.10be.de/en/index.html) oder auf Deinem eigenen Server hosten (dies ist für IT-Experten).
 
-Nightscout is independent of the other modules. You will need it to fulfill Objective 1.
+Nightscout ist unabhängig von den anderen Modulen. Du brauchst aber auf jeden Fall eine Nightscout-Seite, um das Objetive (Ziel) 1 abzuschließen.
 
-Additional information on how to configure Nightscout for use with AAPS can be found [here](../Installing-AndroidAPS/Nightscout.md).
+Weitere Informationen zur Konfiguration von Nightscout zur Nutzung mit AAPS findest Du [hier](../Installing-AndroidAPS/Nightscout.md).
 
-### AAPS-.apk file
+### AAPS-.apk Datei
 
-The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  [here](../Installing-AndroidAPS/Building-APK.md).
+Die grundlegende Komponente des Systems. Bevor Du die App installierst, musst Du zuerst die apk-Datei (das ist Dateinamenerweiterung für eine Android-App) erstellen. Die Anleitung dazu findest Du  [hier](../Installing-AndroidAPS/Building-APK.md).
 
-## Optional Modules
+## Optionale Komponenten
 
 ### Smartwatch
 
-You can choose any smartwatch with Android Wear 1.x and above. Most loopers wear a Sony Smartwatch 3 (SWR50) as it is the only watch that can get readings from Dexcom G5/G5 when phone is out of range. Some other watches can be patched to work as a standalone receiver as well (see [this documentation](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5) for more details).
+Jede Smartwatch mit Android 1.x oder höher funktioniert. Viele Looper verwenden eine Sony Smartwatch 3 (SWR50), da diese auch Werte vom Dexcom G5/G6 empfangen kann, wenn sich das Smartphone nicht in Reichweite befindet. Einige andere Smartwatches können so gepatched werden, dass sie als 'Standalone receiver' verwendet werden können (siehe [diese Dokumentation](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5) für weitere Details).
 
-Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). There are different watchfaces for use with AAPS, which you can find [here](../Configuration/Watchfaces.md).
+Es gibt eine von AAPS Anwendern erstellte [Liste mit getesteten Smartphones und Smartwatches:](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). Es gibt verschiedene Watchfaces die Du mit AAPS nutzen kannst. Weitere Informationen findest Du [hier](../Configuration/Watchfaces.md).
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform).
+Um ein Handy oder eine Smartwatch einzutragen welches noch nicht in der Liste ist, bitte das  [Formular](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform) ausfüllen.
 
-Any problems with the spreadsheet please send an email to [hardware@androidaps.org](mailto:hardware@androidaps.org), any donations of phone/watch models that still need testing please send an email to [donations@androidaps.org](mailto:hardware@androidaps.org).
+Probleme mit der Tabelle bitte per E-Mail an [hardware@androidaps.org](mailto:hardware@androidaps.org) melden. Wenn du Handys oder Smartwatches zum Testen zur Verfügung stellen möchtest, bitte eine E-Mail an [donations@androidaps.org](mailto:hardware@androidaps.org) schreiben.
 
 ### xDrip+
 
-Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found [here](../Configuration/xdrip.md). Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
+Auch wenn Du die xDrip+ App nicht als BZ-Datenquelle benötigst, kannst Du sie dennoch für  Alarme oder eine gute Anzeige der Glukosewerte verwenden. Du kannst in xDrip+ beliebig viele Alarme einreichten, festlegen zu welchen Zeiten diese aktiv sein sollen, ob sie die Stummschaltung des Smartphones überschreiben können etc. Weitere Hinweise zu den xDrip+ Einstellungen findest Du [hier](../Configuration/xdrip.md). Beachte bitte, dass die Entwicklung von xDrip+ sehr agil ist und die Dokumentation damit teilweise nicht Schritt halten und entsprechend nicht immer aktuell sein kann.
 
-## What to do while waiting for modules
+## Wartezeit überbrücken
 
-It sometimes takes a while to get all modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is NECESSARY to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with AAPS. Using this mode, AAPS gives treatment advices you can manually execute.
+Manchmal dauert es eine Weile, um alle Module für den Closed Loop zusammen zu bekommen. Aber keine Sorge, es gibt viele Dinge, die Du in der Zwischenzeit machen kannst. Es ist ABSOLUT WICHTIG, Deine Basalrate (BR), die KH-Faktoren (IC), Korrekturfaktoren (ISF) etc. intensiv zu prüfen und ggf. anzupassen. Der Open Loop ist zudem eine sehr gute Möglichkeit, das System kennenzulernen und mit AAPS vertraut zu werden. Im Open Loop gibt AAPS Behandlungsempfehlungen, die Du manuell ausführen kannst.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../Where-To-Go-For-Help/Background-reading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+Du kannst Dich weiter durch das Wiki arbeiten, online und offline mit anderen Loopern in Kontakt treten, weitere [Hintergrundinfos](../Where-To-Go-For-Help/Background-reading.md) oder Berichte von anderen Loopern lesen. Sei aber vorsichtig, nicht alle Anwenderberichte müssen richtig oder für Deinen Fall zutreffend sein.
 
-**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/Objectives.md) before each new Objective and setup up your [hardware](index-component-setup).
+**Fertig?** Wenn Du alle Komponenten für AAPS zusammen hast - oder zumindest genug, um mit dem Open Loop zu beginnen - solltest Du zuerst die Beschreibung der [Objectives (Ziele)](../Usage/Objectives.md) lesen und Deine [Hardware](index-component-setup) einrichten.

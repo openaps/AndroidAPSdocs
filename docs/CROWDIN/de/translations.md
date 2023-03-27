@@ -5,23 +5,23 @@
 
 * Sende Deinen Beitrittswunsch an das Docs-Team. Klicke dazu auf die Fahne der gewünschten Sprache und dann auf der nächsten Seite rechts oben auf den Button "Join". Gib die gewünschte(n) Sprach(n) an, ein paar Infos zu Dir und Deiner AAPS Erfahrung und auch ob Du als Übersetzter oder Lektor (nur Personen mit Übersetzungs- und längerer AAPS-Erfahrung ) unterstützen möchtest.
 
-```{admonition} Time for Approval :class: note
+```{admonition} Zeit für die Freigabe :class: note
 
 Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stellen wir keine SLAs zur Verfügung, aber im Allgemeinen erfolgt die Genehmigung in < 1 Tag. Falls nicht, kontaktiere bitte das Doc Team über Facebook oder Discord.
 
-    <br />* When we approve you, click the flag
-       ![When we approve you, click the flag](./images/translation_flags.png)
+    <br />* Wenn wir Dich aufnehmen, klicke auf die Flagge
+       ![Wenn wir Dich aufnehmen, klicke auf die Flagge](./images/translation_flags. ng)
     
-    ## Translation of the app
+    ## Übersetzung der App
     
     (translations-translate-strings-for-androidaps-app)=
-    ### Translate strings for AndroidAPS app
+    ### Zeichenketten für die AndroidAPS-App übersetzen
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
+    * Wenn Du keine von Dir speziell ausgewählten Zeichenketten übersetzen willst, wähle einfach die Schaltfläche "Alle übersetzen" um zu starten. Es zeigt Dir direkt die Zeichenketten, die übersetzt werden müssen.
     
        ![Click translate all](./images/translations-click-translate-all.png)
     
-    * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+    * Wenn Du eine einzelne Datei übersetzen möchtest, suche bitte die Datei über den Suchdialog oder die Baumstruktur und klicke auf den Dateinamen, um die Übersetzungsarbeit an Zeichenketten in dieser Datei zu starten.
     
        ![Click strings.xml](./images/translations-click-strings.png)
     
@@ -37,11 +37,11 @@ Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stell
        ![Proofreading mode app](./images/translations-proofreading-mode.png) 
     
     
-      and approve translated texts 
+      und genehmige übersetzte Texte 
     
        ![approve text](./images/translations-proofreading.png)
     
-    When a proofreader approves a translation it will be added to the next version of AndroidAPS.
+    Wenn ein Korrekturleser eine Übersetzung genehmigt, wird diese zur nächsten AndroidAPS-Version hinzugefügt.
     
     (translations-translation-of-the-documentation)=
     ## Translation of the documentation
@@ -53,18 +53,16 @@ Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stell
     
     * Translate sentences by sentence
     
-        1. The yellow text is the text you are working at the moment.
+        1. Der gelbe Text ist der Text, an dem Du gerade arbeitest.
     
-        1. The green text is already translated. You don't need to do this again.
+        1. Der grüne Text ist bereits übersetzt. Du musst dies nicht nochmals tun.
     
-        1. The red text is the remaining text which have to be translated.
+        1. Der rote Text ist der verbleibende Text, der übersetzt werden muss.
     
-        1. This is the source text you are working on at the moment
+        1. Dies ist der Quelltext, an dem Du gerade arbeitest. Dies ist die Übersetzung, die Du gerade vorbereitest. Du kannst den Text von oben kopieren oder einen der folgenden Vorschläge auswählen.
     
-        1. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
-    
-        1. These are the suggestion for a translation. Especially you can see how much Crowdin rates this as a fit or if it was already just in the past and come up through text rearrangements but not content change.
-        1. Press the "save" button to save a proposal for the translation. It will then promoted to a proofreader for final check.
+        1. Dies sind die Vorschläge für eine Übersetzung. Vor allem kannst Du sehen, wie sehr Crowdin dies als passend bewertet, oder ob es schon als Übersetzung für diesen Text verwendet in der Vergangenheit verwendet wurde und die neue Übersetzung nur durch Textverschiebungen hervorgerufen wurde, aber nicht durch Änderungen der Inhalte.
+        1. Drücke die Schaltfläche "Speichern", um einen Vorschlag für die Übersetzung zu speichern. Er wird dann zu einem Proofreader zur abschließenden Freigabe gegeben.
     
     ![Translation docs](./images/translation_WikiTranslate.png)
     
@@ -72,33 +70,33 @@ Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stell
     
         1. the translation is proofread
     
-        1. the sync run between Crowdin and Github finished (once an hour) which creates an PR for Github.
+        1. die Synchronisierung zwischen Crowdin und Github durchgeführt wurde (einmal pro Stunde), wodurch ein PR für Github erstellt wird.
     
-        1. the PR in Github was approved.
+        1. der PR in Github genehmigt wurde.
     
-    In general this needs 1 - 3 days but might during holiday take a little bit longer.
+    In der Regel erfolgt die Freigabe innerhalb von 1 - 3 Tage, kann aber in Urlaubszeiten auch einmal etwas länger dauern.
     
-    ### Translating links
+    ### Übersetzen von Links
     
-    ```{admonition} Links are not translated anymore
+    ```{admonition} Links werden nicht mehr übersetzt
     :class: note
     
-    Links are not translated anymore. In the past we had a topic here but this is gone as through migraton to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Links werden nicht mehr übersetzt. In der Vergangenheit hatten wir hier ein Thema, aber mit der Migraton nach Markdown und den myst_parser erzeugen wir im englischen Text  explizite Labels , die nicht übersetzt werden.
     
     
 
-You are translating the text which represents the link. Please you have to be carefull **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
+Wenn Du einen Text mit einem Link übersetzt, bitte sei vorsichtig **nicht** den Link zu entfernen, der durch ein Paar `<0><>` Tags repräsentiert wird oder mit einer anderen Zahl, falls mehrere Links in einem Absatz enthalten sind.
 
-It's the proofreaders job to have a special look on this!
+Es ist die Aufgabe des Proofreaders, einen besonderen Blick darauf zu haben!
 
-### Proofreading
+### Korrekturlesen
 
-* Proofreaders have to switch to Proofreading mode
+* Proofreader müssen zum Proofreading-Modus wechseln
     
     ![Proofreading mode docs](./images/translation_WikiProofreadingmode.png)
     
-    and approve translated texts
+    und geben übersetzte Texte frei.
     
-    ![approve text](./images/translations-proofreading.png)
+    ![Übersetzung freigeben](./images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during hollidays. To speed up the process you can inform docs team about new translations.
+* Wenn ein Korrekturleser eine Übersetzung annimmt, wird sie in die nächste Dokumentations-Version hinzugefügt, die in keinem festen Zeitplan erstellt, sondern bei Bedarf etwa einmal pro Woche außer während der Feiertage. Um den Prozess zu beschleunigen, kannst Du das Docs-Team über neue Übersetzungen informieren.

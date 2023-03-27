@@ -1,6 +1,6 @@
 # הגדרות xDrip+
 
-(לקבלת מידע נוסף אודות xDrip+ גשו לכתובת https://xdrip.readthedocs.io/en/latest/)
+(For additional information regarding xDrip+, please refer to the [xDrip documentation](https://xdrip.readthedocs.io/en/latest/.)
 
 אם עוד לא התקנתם, הורידו [מכאן את xDrip+](https://jamorham.github.io/#xdrip-plus).
 
@@ -34,11 +34,11 @@
    
    ![xDrip+ Basic Settings 2](../images/xDrip_Basic2.png)
 
-* **הגדרות לשיתוף פעולה בין אפליקציות** (הפץ על הטלפון) אם תשתמשו ב-AndroidAPS והנתונים של xDrip צריכים להיות מופנים ל-AndroidAPS, עליכם להפעיל את הפץ על הטלפון בתפריט הגדרות לשיתוף פעולה בין אפליקציות.
+* **InterApp-Settings** (Broadcast) If you are going to use AAPS and the data should be forwarded to i.e. AAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
 
 * על מנת שהערכים יהיו שווים, עליכם להפעיל `שלח גלוקוז מוצג`.
 
-* אם אפשרתם את `קבל טיפולים` וגם את "אפשר שידורים מקומיים" ב-AndroidAPS, אז xDrip+ יקבל מידע על אינסולין, פחמימות ומינונים בזאליים מ-AndroidAPS ויוכל להעריך את תחזית להתנהגות הסוכר וכו' טוב יותר.
+* If you have also activated `Accept treatments` and "Enable local Broadcasts" in AAPS, then xDrip+ will receive insulin, carbs and basal rate information from AAPS and can estimate the hypo prediction etc. טוב יותר.
    
    ![xDrip+ Basic Settings 3](../images/xDrip_Basic3.png)
 
@@ -46,7 +46,7 @@
 
 ### זיהוי מקלט
 
-* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AndroidAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
+* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
 * שימו לב: תיקון אוטומטי נוטה לפעמים לשנות את האות הראשונה לאות גדולה. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip+.
    
    ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)

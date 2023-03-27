@@ -1,6 +1,6 @@
 # Настройки xDrip+
 
-(Дополнительную информацию по теме xDrip+, см. https://xdrip.readthedocs.io/en/latest/)
+(For additional information regarding xDrip+, please refer to the [xDrip documentation](https://xdrip.readthedocs.io/en/latest/.)
 
 Если это еще не сделано, скачайте [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
@@ -34,11 +34,11 @@
    
    ![основные настройки xDrip+ 2](../images/xDrip_Basic2.png)
 
-* **Взаимодействие с приложениями (Inter-app settings)** (Трансляция) Для пользования AndroidAPS данные должны перенаправляться; вам следует активировать трансляцию xDrip+ в настройках Inter-App.
+* **InterApp-Settings** (Broadcast) If you are going to use AAPS and the data should be forwarded to i.e. AAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
 
 * Для того чтобы не было расхождений между приложениями, необходимо активировать `Отправлять отображаемое значение ГК`.
 
-* Если вы также активировали `Принимать назначения (Accept treatments)` и трансляцию в AndroidAPS, то xDrip+ получит информацию об инсулине, углеводах и базальной скорости от AndroidAPS и сможет прогнозировать гипогликемию и т. д. более точно.
+* If you have also activated `Accept treatments` and "Enable local Broadcasts" in AAPS, then xDrip+ will receive insulin, carbs and basal rate information from AAPS and can estimate the hypo prediction etc. более точно.
    
    ![основные настройки xDrip+ 3](../images/xDrip_Basic3.png)
 
@@ -46,7 +46,7 @@
 
 ### Идентификатор ресивера
 
-* Если вы обнаружили проблемы с локальной трансляцией (AAPS не принимает значения BG из xDrip+) перейдите в Настройки > Inter-app settings > Identify receiver и введите `info. ightscout.androidaps` для сборки AndroidAPS (а если используется сборка PumpControl, вместо этого введите `info.nightscout.aapspumpcontrol`!!).
+* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
 * Внимание: Автокоррекция, как правило, меняет i на прописную букву. **Используйте только строчные буквы** при вводе `info.nightscout.androidaps` (или `info.nightscout.aapspumpcontrol` для PumpControl). Прописная I не позволит AAPS получать данные ГК из xDrip+.
    
    ![xDrip+ Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)

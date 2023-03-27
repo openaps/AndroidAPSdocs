@@ -2,22 +2,22 @@
 
 # Profilwechsel
 
-Documentation about profiles in general can be found at [Config Builder - profile](Config-Builder-profile).
+Dokumentation zu Profilen im Allgemeinen finden sich unter [Konfiguration - Profil](Config-Builder-profile).
 
-On starting your AAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again to start using these changes.
+Wenn Du Dein AndroidAPS startest und Dein Profil auswählst, musst Du einen "Profilwechsel" mit einer Dauer von 0 durchführen (wird später erklärt). Wenn Du das machst, beginnt AAPS damit, die Historie der Profile zu verfolgen und jede Änderung am Profil erfordert einen erneuten Profilwechsel, auch dann, wenn Du den Inhalt eines Profils in NS änderst. Ein geändertes Profil wird sofort an AAPS übertragen, aber Du musst dieses Profil aktivieren, damit die Änderungen aktiv werden.
 
-Internally AAPS creates snapshot of profile with start date and duration and is using it within selected period.
+AAPS erzeugt intern eine Momentaufnahme des Profils mit dem Startdatum und der Dauer und verwendet es für den angegebenen Zeitraum.
 
 * Eine Dauer von 0 bedeutet unendlich. Dadurch ist dieses Profil bis zu einem erneuten Profilwechsel aktiv.
 * Dauer von x Minuten bedeutet x Minuten Verwendung dieses Profils. Nach Ablauf dieser Dauer wird das Profil wieder auf das zuvor aktive Profil zurückgestellt.
 
-If you edited your profile inside the "local profile" tab you can activate the profile there which makes an implicit profile switch too.
+Wenn Du Dein Profil in der Registerkarte "lokales Profil" bearbeitet hast, kannst Du das Profil dort aktivieren, was gleichzeitig einen Profilwechsel bewirkt.
 
-To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below) on the homescreen of AndroidAPS.
+Drücke lange auf den Namen Deines Profils ("Tuned 03/11" im Bild unten), um einen Profilwechsel durchzuführen.
 
-![Do profile switch](../images/ProfileSwitch_HowTo.png)
+![Profilwechsel durchführen](../images/ProfileSwitch_HowTo.png)
 
-Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
+Bei einem Profilwechsel kannst Du zwei zusätzliche Optionen wählen, die früher Teil des Zirkadianen Prozent-Profils waren:
 
 ## Prozentsatz
 
@@ -34,7 +34,7 @@ Within the "profile switch" you can choose two additional changes which used to 
 
 ## Zeitverschiebung
 
-![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
+![Prozentsatz für Profilumschaltung und Zeitverschiebung](../images/ProfileSwitchTimeShift2.png)
 
 * Verschiebt alles um die Anzahl der eingegebenen Stunden. 
 * So kannst du zum Beispiel bei Nachtschichten angeben, wie viele Stunden später / früher du zu Bett gehst oder aufstehst.
@@ -47,9 +47,9 @@ Within the "profile switch" you can choose two additional changes which used to 
     * 22:00 **-10 h** -> 12:00
     * Die Einstellungen von 22:00 Uhr werden anstelle der normalerweise um 12:00 Uhr programmierten Einstellungen verwendet.
 
-![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
+![Richtung der Zeitverschiebung für Profile](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+Der Mechanismus, dass eine Momentaufnahme des Profils gemacht wird, erlaubt eine sehr viel präzisere Berechnung der Vergangenheit und die Möglichkeit, Änderungen am Profil nachzuverfolgen.
 
 (Profiles-troubleshooting-profile-errors)=
 
@@ -57,7 +57,7 @@ This mechanism of taking snapshots of the profile allows a much more precise cal
 
 ### “Ungültiges Profil” / “Basal Profil nicht ausgerichtet auf Stunden”
 
-![Basal not aligned to the hour](../images/BasalNotAlignedToHours2.png)
+![Basalprofil nicht auf Stunden ausgerichtet](../images/BasalNotAlignedToHours2.png)
 
 * Diese Fehlermeldungen werden angezeigt, wenn Du eine Basalrate oder I:C Faktoren nicht nur zur vollen Stunde hast. (Die Pumpen Dana R und Dana RS beispielsweise lassen Änderungen zur halben Stunde nicht zu.)
   
@@ -73,14 +73,14 @@ This mechanism of taking snapshots of the profile allows a much more precise cal
   
   ![Profilwechsel löschen](../images/PSRemove.png)
 
-Alternatively you can delete the profile switch directly in mLab as described below.
+Alternativ kannst Du den Profilwechsel auch direkt in mLab wie unten beschrieben löschen.
 
 ### “Profilwechsel von NS empfangen aber Profil existiert lokal nicht”
 
 * Das Profil wurde nicht korrekt von Nightscout synchronisiert.
 * Lösche den Profilwechsel wie oben beschrieben.
 
-Alternatively you can delete the profile switch directly in mLab:
+Alternativ kannst Du den Profilwechsel auch direkt in mLab löschen:
 
 * Öffne Deine mLab Datensammlung.
 * Suche in den Behandlungen nach “Profile switch”.

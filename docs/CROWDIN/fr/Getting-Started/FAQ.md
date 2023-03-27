@@ -4,11 +4,11 @@ Comment ajouter des questions à la FAQ : suivez ces [instructions](../make-a-P
 
 # Généralités
 
-## Puis-je télécharger le fichier d'installation d'AndroidAPS ?
+## Can I just download the AAPS installation file?
 
-Non. Il n'y a pas de fichier apk téléchargeable pour AndroidAPS. Vous devez le [générer](../Installing-AndroidAPS/Building-APK.md) vous-même. En voici la raison :
+Non. There is no downloadable apk file for AAPS. Vous devez le [générer](../Installing-AndroidAPS/Building-APK.md) vous-même. En voici la raison :
 
-AndroidAPS est utilisé pour contrôler votre pompe et injecter de l'insuline. Selon la réglementation actuelle, en Europe, tous les systèmes de classe IIa ou IIb, sont des dispositifs médicaux qui nécessitent une approbation réglementaire (un marquage CE) qui nécessitent diverses études et approbations. La distribution d'un dispositif non homologué est illégal. Des réglementations similaires existent dans d'autres parties du monde.
+AAPS is used to control your pump and give insulin. Selon la réglementation actuelle, en Europe, tous les systèmes de classe IIa ou IIb, sont des dispositifs médicaux qui nécessitent une approbation réglementaire (un marquage CE) qui nécessitent diverses études et approbations. La distribution d'un dispositif non homologué est illégal. Des réglementations similaires existent dans d'autres parties du monde.
 
 Ce règlement n'est pas limité qu'aux ventes (dans le sens d'obtenir de l'argent pour quelque chose), mais s'applique à n'importe quel moyen de distribution (même en accès gratuit). Construire vous même un appareil médical est la seule façon d'utiliser l'application en respectant ces règlements.
 
@@ -21,12 +21,12 @@ C'est pourquoi les apk ne sont pas disponibles.
 Tout d'abord, vous devez **obtenir des composants matériels de la boucle** :
 
 - Une [pompe à insuline prise en charge](./Pump-Choices.md), 
-- un [smartphone Android](Phones.md) (l'iOS d'Apple n'est pas pris en charge par AndroidAPS - vous pouvez vérifier [iOS Loop](https://loopkit.github.io/loopdocs/)), et 
+- an [Android smartphone](Phones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
 - un système de [Mesure de Glycémie en Continu (MGC)](../Configuration/BG-Source.md). 
 
 Deuxièmement, vous devez **configurer votre matériel**. Voir [exemple de configuration avec le tutoriel étape par étape](Sample-Setup.md).
 
-Troisièmement, vous devez **configurer vos composants logiciels** : AAPS et la source MGC/MGF.
+Thirdly, you have to **setup your software components**: AAPS and CGM/FGM source.
 
 Quatrièmement, vous devez apprendre et **comprendre le fonctionnement de référence OpenAPS pour vérifier vos paramètres de traitement**. Le principe fondateur de boucle fermée est que votre débit de basal et vos ratios Glucides/Insuline (G/I) et Sensibilité à l'Insuline (SI) sont bien déterminés. Toutes les recommandations supposent que vos besoins en basal sont satisfaits et que les pics ou les creux que vous voyez sont le résultat d'autres facteurs qui nécessitent par conséquent des ajustements (exercices, stress, etc.). Les ajustements que la boucle fermée peut effectuer ont été limités pour des raisons de sécurité (voir Débit Basal Temporaire maximum autorisé dans [Conception de référence OpenAPS](https://openaps.org/reference-design/)), ce qui signifie que vous ne devez pas perdre de la marge de manœuvre pour corriger un débit de basal erroné. Si par exemple vous êtes souvent bas à l'approche d'un repas, il est probable que vos débits de basal nécessitent un ajustement. Vous pouvez utiliser [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) pour analyser un grand nombre de données pour voir comment les débit de basal et/ou la SI doivent être ajustés, et aussi si le ratio G/I doit être modifié. Vous pouvez aussi tester et configurer vos débits de basal [à l'ancienne](https://integrateddiabetes.com/basal-testing/).
 
@@ -38,19 +38,19 @@ Si vous ne voulez pas que vos préférences soient facilement modifiées, vous p
 
 ### Montres connectées Android Wear
 
-Si vous envisagez d'utiliser l'application Android Wear pour créer un bolus ou modifier des paramètres à partir de votre montre connectée, vous devez vous assurer que les notifications d'AndroidAPS ne sont pas bloquées. La confirmation de l'action se fait par notification.
+If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AAPS are not blocked. La confirmation de l'action se fait par notification.
 
 (FAQ-disconnect-pump)=
 
 ### Débrancher la pompe
 
-Si vous retirez votre pompe pour la douche, le bain, la natation, sports ou toutes autres activités, vous devez informer AAPS qu'aucune insuline n'est délivrée pour que l'IA soit correcte.
+If you take your pump off for showering, bathing, swimming, sports or other activities you must let AAPS know that no insulin is delivered to keep IOB correct.
 
-The pump can be disconnected using the Loop Status icon on the [AndroidAPS Home Screen](Screenshots-loop-status).
+The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](Screenshots-loop-status).
 
 ### Recommandations non seulement basées sur une seule lecture MGC
 
-Pour plus de sécurité, les recommandations faites ne sont pas basées sur une unique lecture MGC, mais sur le delta moyen. Par conséquent, si vous manquez quelques données, cela peut prendre un certain temps après la lecture de nouvelles données avant qu'AAPS n'active à nouveau la boucle fermée.
+Pour plus de sécurité, les recommandations faites ne sont pas basées sur une unique lecture MGC, mais sur le delta moyen. Therefore, if you miss some readings it may take a while after getting data back before AAPS kicks in looping again.
 
 ### Autres lectures
 
@@ -63,11 +63,11 @@ Il y a plusieurs blogs avec de bons conseils pour vous aider à comprendre les a
 
 ## Quel équipement d'urgence est-il recommandé d'avoir sur soi ?
 
-Vous devez avoir le même équipement d'urgence avec vous, comme tous les autres diabétique de T1 avec une pompe à insuline. Quand vous bouclez avec AAPS, il est fortement recommandé d'avoir les équipements supplémentaires suivants avec ou près de vous :
+Vous devez avoir le même équipement d'urgence avec vous, comme tous les autres diabétique de T1 avec une pompe à insuline. When looping with AAPS it is strongly recommended to have the following additional equipment with or near to you:
 
 - Pack de batteries et câbles pour charger votre smartphone, votre montre et, le cas échéant, votre lecteur BT ou votre périphérique de connection
 - Piles de la Pompe
-- L'[apk](../Installing-AndroidAPS/Building-APK.md) actuel et les [fichiers de préférences](../Usage/ExportImportSettings.md) pour AAPS et toutes les autres applications que vous utilisez (par ex. xDrip+, BYODA Dexcom) localement et dans le cloud (Dropbox, Google Drive).
+- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## Comment puis-je fixer le capteur MGC/MGF en toute sécurité ?
 
@@ -75,7 +75,7 @@ Vous pouvez le coller. Il existe plusieurs « overpatchs » pré-troués adapté
 
 Vous pouvez le fixer. Vous pouvez également acheter un brassard pour maintenir le MGC/MGF en place (recherche Google, eBay ou Amazon).
 
-# Paramètres AndroidAPS
+# AAPS settings
 
 La liste suivante a pour but de vous aider à optimiser les paramètres. Il peut être préférable de commencer par le haut et de travailler vers le bas. Essayez de valider un seul paramètre avant d'en changer un autre. Travaillez avec de petites étapes plutôt que de faire de grands changements à la fois. Vous pouvez utiliser [Autotune](https://autotuneweb.azurewebsites.net/) pour guider votre réflexion, même s'il ne doit pas être suivie aveuglément : il peut ne pas fonctionner correctement pour vous ou en toutes circonstances. Notez que les paramètres interagissent les uns avec les autres - vous pouvez avoir des paramètres "erronés" qui fonctionnent bien ensemble dans certaines circonstances (par exemple si une basal trop élevé se produit en même temps qu'une Gly trop élevée) mais pas dans d'autres. Cela signifie que vous devez tenir compte de tous les paramètres et vérifier qu'ils fonctionnent ensemble dans une variété de circonstances.
 
@@ -204,21 +204,21 @@ Tout d'abord, vérifiez votre débit de basal et faites un test de débits de ba
 
 ### Quelles sont les causes des pics post-prandiaux en boucle fermée ?
 
-Tout d'abord, vérifiez votre débit de basal et faites un test de débits de basal sans glucides. S'il est correct et que votre glycémie est en train d'atteindre votre cible une fois que les glucides sont complètement absorbés, essayez de définir une cible temporaire pour "Début Repas imminent" dans AAPS un peu avant le repas ou réfléchissez à faire un prébolus avec un décalage horaire adapté vu avec votre diabétologue. Si votre glycémie est trop élevée après le repas et encore trop élevée une fois les glucides absorbés, pensez à diminuer votre G/I avec votre diabétologue. Si votre glycémie est trop élevée avec des GA et trop faible après l'absorption complète des glucides, pensez à augmenter votre ratio G/I et faite un prébolus avec un décalage horaire vu avec votre diabétologue.
+Tout d'abord, vérifiez votre débit de basal et faites un test de débits de basal sans glucides. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. Si votre glycémie est trop élevée après le repas et encore trop élevée une fois les glucides absorbés, pensez à diminuer votre G/I avec votre diabétologue. Si votre glycémie est trop élevée avec des GA et trop faible après l'absorption complète des glucides, pensez à augmenter votre ratio G/I et faite un prébolus avec un décalage horaire vu avec votre diabétologue.
 
 # Autres paramètres
 
 ## Paramètres Nightscout
 
-### AndroidAPS NSClient indique 'non autorisé' et ne télécharge pas les données. Que puis-je faire ?
+### AAPS NSClient says 'not allowed' and does not upload data. Que puis-je faire ?
 
 Dans NSClient, vérifiez les 'Paramètres de connexion'. Peut-être n'êtes-vous pas connecté à un Wi-Fi autorisé ou vous avez activé "Uniquement pendant la charge" et votre câble de charge n'est pas branché.
 
 ## Paramètres MGC
 
-### Pourquoi ne AndroidAPS indique 'la source de glycémie actuelle ne supporte pas de filtrage avancé' ?
+### Why does AAPS say 'BG source doesn't support advanced filtering'?
 
-Si vous utilisez un autre MGC/MGF que le Dexcom G5 ou G6 en mode natif xDrip, vous obtiendrez cette alerte dans l'onglet AAPS OpenAPS SMB. Voir [Lissage des données de glycémie](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) pour plus de détails.
+If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AAPS OpenAPS-tab. Voir [Lissage des données de glycémie](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) pour plus de détails.
 
 ## Pompe
 
@@ -233,16 +233,16 @@ La boucle peut réduire la durée de vie de la pile de la pompe plus rapidement 
 - réduire la durée d'affichage de l'écran LCD (dans le menu des paramètres de la pompe)
 - réduire la durée du rétro-éclairage (dans le menu des paramètres de la pompe)
 - sélectionnez les paramètres de notification à un bip plutôt que de vibrer (dans le menu des paramètres de la pompe)
-- appuyez uniquement sur les boutons de la pompe pour recharger, utilisez AndroidAPS pour afficher tout l'historique, le niveau de la pile et le volume du réservoir.
-- l'application AndroidAPS peut souvent être fermée pour économiser de l'énergie ou de la RAM libre sur certains téléphones. Lorsque AndroidAPS est réinitialisé à chaque démarrage, il établit une connexion Bluetooth avec la pompe et relit l'historique des débits de basal et des bolus. Cela consomme de la batterie. Pour voir si c'est le cas, allez dans Préférences > NSClient et activer l'option 'Démarrage de l'app journaux vers NS'. Nightscout recevra un événement à chaque redémarrage d'AndroidAPS, ce qui facilite le suivi du problème. Pour réduire cette situation, inscrivez AndroidAPS sur la la liste blanche des paramètres de la batterie du téléphone, pour que le moniteur d'alimentation arrète de la fermer.
+- only press the buttons on the pump to reload, use AAPS to view all history, battery level and reservoir volume.
+- AAPS app may often be closed to save energy or free RAM on some phones. When AAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. Cela consomme de la batterie. Pour voir si c'est le cas, allez dans Préférences > NSClient et activer l'option 'Démarrage de l'app journaux vers NS'. Nightscout will receive an event at every restart of AAPS, which makes it easy to track the issue. To reduce this happening, whitelist AAPS app in the phone battery settings to stop the app power monitor closing it down.
     
     Par exemple, pour l'inscire sur la liste blanche avec un téléphone Samsung fonctionnant sous Android Pie :
     
     - Accédez à Paramètres -> Maintenance de l'appareil -> Batterie 
-    - Faites défiler jusqu'à ce que vous trouviez AndroidAPS et sélectionnez la 
+    - Scroll until you find AAPS and select it
     - Désélectionnez "Mettre l'application en veille"
     - AUSSI allez dans Paramètres -> Applications -> (Trois points en haut à droite de l'écran), sélectionnez "accès spécial" -> Optimiser util. de la batterie
-    - Faites défiler jusqu'à AndroidAPS et assurez-vous qu'elle est désélectionnée.
+    - Scroll to AAPS and make sure it is de-selected.
 
 - nettoyez les bornes de la pile avec un tampon d'alcool pour s'assurer qu'aucune cire ou draisse de fabrication ne reste.
 
@@ -251,9 +251,9 @@ La boucle peut réduire la durée de vie de la pile de la pompe plus rapidement 
 
 ### Changement des réservoirs et des canules
 
-Le changement de cartouche ne peut pas être fait via AAPS, mais doit être effectué comme avant directement via la pompe.
+The change of cartridge cannot be done via AAPS but must be carried out as before directly via the pump.
 
-- Faites un appui long sur "Boucle Ouverte" / "Boucle Fermée" de l'onglet Accueil de AndroidAPS et sélectionnez 'Suspendre la Boucle pour 1h'
+- Long press on "Open Loop"/"Closed Loop" on the Home tab of AAPS and select 'Suspend Loop for 1h'
 - Now nnect the pump and change the reservoir as per pump instructions.
 - Ainsi le remplissage de la tubulure et de la canule peuvent être faites directement sur la pompe. Dans ce cas utilisez le [bouton AMORCER/REMPLIR](CPbefore26-pump) dans l'onglet Actions pour uniquement enregistrer le changement.
 - Une fois reconnecté à la pompe, continuez la boucle en appuyant sur "Suspendu (X m)".
@@ -262,7 +262,7 @@ Le changement d'une canule n'utilise cependant pas la fonction "Remplir tubulure
 
 ## Fonds d'écran
 
-Vous pouvez trouver le fond d'écran AAPS pour votre téléphone sur la [page téléphones](Phones-phone-background).
+You can find the AAPS wallpaper for your phone on the [phones page](Phones-phone-background).
 
 ## Utilisation quotidienne
 
@@ -300,11 +300,11 @@ Le pourcentage du changement de profil, la valeur de votre cible temporaire d'ac
 
 ### Sexe
 
-Vous pouvez retirer la pompe pour être "libre", mais vous devez le dire à l'AAPS, pour que les calculs d'IA soient justes. Voir [description ci-dessus](FAQ-disconnect-pump).
+You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. Voir [description ci-dessus](FAQ-disconnect-pump).
 
 ### Boire de l'alcool
 
-La consommation d'alcool est dangereux en mode boucle fermée car l'algorithme ne peut pas prévoir correctement l'impact de l'alcool sur la glycémie. Vous devez vérifier votre propre méthode de traitement en utilisant une des fonctions suivantes dans AAPS :
+La consommation d'alcool est dangereux en mode boucle fermée car l'algorithme ne peut pas prévoir correctement l'impact de l'alcool sur la glycémie. You have to check out your own method for treating this using the following functions in AAPS:
 
 - désactivation de la boucle fermée et traitement du diabète manuellement ou
 - réglage d'une cible de temp élevées et désactivation des RNS pour éviter l'augmentation de l'IA par la boucle en raison d'un repas non signalé
@@ -338,7 +338,7 @@ Avec les pompes Dana R et Dana R coréenne, vous n'avez rien à faire. Pour d'au
 
 ### Hospitalisation
 
-Si vous souhaitez partager des informations sur AAPS et DIY en boucle avec votre équipe médicale, vous pouvez imprimer le [guide AAPS pour les professionnels de santé](../Resources/clinician-guide-to-AndroidAPS.md).
+If you want to share some information about AAPS and DIY looping with your clinicians, you can print out the [guide to AAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
 
 ### Rendez-vous médical avec votre diabétologue
 
@@ -385,7 +385,7 @@ Open the hamburger menu, start the Configuration wizard and enter new password w
 
 ## Comment réinitialiser le mot de passe dans AAPS v3.x ?
 
-Si vous avez oublié votre mot de passe : Fermez AAPS. Mettez un fichier vide nommé PasswordReset (sans aucune extension) dans le répertoire phone_main_memory/AAPS/extra . Restart AAPS. The new AAPS password is the serial number of your pump. The serial for the Omnipod DASH pod is 4241. You can change the password via 3 dots menu, configuration wizard, unlock parameters.
+You find the documentation [here](update3_0-reset-master-password).
 
 ## My link/pump/pod is unresponsive (RL/OL/EmaLink…)
 
@@ -403,9 +403,9 @@ Depuis Android Studio : Assurez-vous que la synchronisation et l'indexage "Gradl
 
 ## Alerte : Version Dev. La boucle fermée est désactivée
 
-AndroidAPS is not running in "developer mode". AAPS shows the following message: "running dev version. La boucle fermée est désactivée".
+AAPS is not running in "developer mode". AAPS shows the following message: "running dev version. La boucle fermée est désactivée".
 
-Assurez-vous qu'AAPS fonctionne en mode développeur : Placez un fichier nommé "engineering_mode" dans le dossier "AAPS/extra". Any file will do as long as it is properly named. Make sure to restart AndroidAPS for it to find the file and go into "developer mode".
+Make sure AAPS is running in "developer mode": Place a file named "engineering_mode" at the location "AAPS/extra". Any file will do as long as it is properly named. Make sure to restart AAPS for it to find the file and go into "developer mode".
 
 Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!).
 
@@ -415,7 +415,7 @@ Settings files will be stored on your phone's internal storage in the directory 
 
 ## Comment configurer les économies de batterie ?
 
-Properly configuring Power Management is important to prevent your Phone's OS to suspend AndroidAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. Sur le téléphone allez dans Paramètres->Applications et désactivez les économies de batterie pour : AAPS, xDrip ou BYODA/Dexcom app, l'application système Bluetooth (vous devrez peut-être d'abord afficher les applications système) Alternativement, désactivez entièrement toutes les économies de batterie sur le téléphone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
+Properly configuring Power Management is important to prevent your Phone's OS to suspend AAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
 
 ## Pump unreachable alerts several times a day or at night.
 

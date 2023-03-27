@@ -4,11 +4,11 @@ V závislosti na vašich nastaveních můžete Konfiguraci otevřít prostředni
 
 ![Otevřít průvodce konfigurací](../images/ConfBuild_Open_AAPS30.png)
 
-Konfigurace (Conf) je záložka, kde si zapínáte nebo vypínáte jednotlivé moduly. Zaškrtnutím boxu (kroužek) na levé straně (A) vybíráte modul, který chcete používat, boxy (čtverečky) na pravé straně (C) zajistí zobrazení modulu jako záložky (E) v AndroidAPS. I když není pravý box zaškrtnutý, dostanete se k funkci přes hamburger menu (D) v levém horním rohu obrazovky.
+Konfigurace (Conf) je záložka, kde si zapínáte nebo vypínáte jednotlivé moduly. The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AAPS. I když není pravý box zaškrtnutý, dostanete se k funkci přes hamburger menu (D) v levém horním rohu obrazovky.
 
 Pokud má modul další dodatečná nastavení, dostanete se k nim kliknutím na ozubené kolo (B).
 
-**První konfigurace:** Od AAPS 2.0 Vás provede procesem nastavení AndroidAPS Setup wizard (Průvodce nastavením). Stiskněte 3 tečky v pravé horní části obrazovky (F) a vyberte „Průvodce nastavením“.
+**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AAPS. Stiskněte 3 tečky v pravé horní části obrazovky (F) a vyberte „Průvodce nastavením“.
 
 ![Tlačítko konfigurace a ozubené kolo](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
@@ -101,7 +101,7 @@ Podrobnosti jsou vysvětleny na stránce nápovědy [pomocník s profilem](../Co
 
 * Hodnota DIA není u každého člověka stejná. Proto si ji musíte vyzkoušet sami na sobě. 
 * Vždy to však musí být alespoň 5 hodin.
-* Pro velké množství lidí nemá ultra-rychlý inzulin jako Fiasp po 3–4 hodinách prakticky žádné znatelné účinky, i když fakticky zbývá cca 0,0xx jednotky. Nicméně i toto zbytkové množství může mít vliv například při sportu. Proto AndroidAPS používá jako minimální hodnotu DIA 5 h.
+* Pro velké množství lidí nemá ultra-rychlý inzulin jako Fiasp po 3–4 hodinách prakticky žádné znatelné účinky, i když fakticky zbývá cca 0,0xx jednotky. Nicméně i toto zbytkové množství může mít vliv například při sportu. Therefore, AAPS uses minimum 5h as DIA.
 * Další informace o tom si můžete přečíst v části Inzulinový profil na [ této ](Screenshots-insulin-profile) stránce.
 
 ### Rozdíly v typu inzulínu
@@ -154,7 +154,7 @@ Vyberte jaký zdroj glykémií používáte. Viz stránka [Zdroj glykémie](BG-S
 ![Konfigurace zdroje glykémie](../images/ConfBuild_BGSource_AAPS30.png)
 
 * [Sestav si vlastní Dexcom aplikaci (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) – od AndroidAPS verze 3.0 již nelze použít jako zdroj glykémií z Dexcom G6 (detaily viz [poznámky k vydání](Releasenotes-important-hints-3-0-0).
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - jsou podporovány pouze verze 4.15.57 a novější
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
@@ -222,7 +222,7 @@ Vyberte požadovaný algoritmus APS pro úpravy léčby. Detaily vybraného algo
 
 * AAPS průběžně hodnotí všechny dostupné údaje (IOB, COB, glykémie…) a předkládá návrhy, jak v případě potřeby upravit vaši léčbu. 
 * Návrhy nebudou provedeny automaticky (tak jako v uzavřené smyčce), ale mohou být zadány ručně přímo do pumpy nebo tlačítkem z aplikace – pokud používáte podporovanou pumpu (DanaR/RS nebo Accu-check Combo). 
-* Tato volba slouží k tomu, abyste poznali, jak vlastně AndroidAPS funguje, nebo používáte-li nepodporovanou pumpu.
+* This option is for getting to know how AAPS works or if you are using an unsupported pump.
 
 (Config-Builder-closed-loop)=
 
@@ -248,7 +248,7 @@ Vyberte požadovaný algoritmus APS pro úpravy léčby. Detaily vybraného algo
 
 ## Cíle (výukový program)
 
-Součástí AndroidAPS je výukový program (cíle), které musíte splnit krok za krokem. Ty by vás měly bezpečně provést nastavením uzavřené smyčky. Postupným splněním cílů je zajištěno, že přesně porozumíte tomu, jak systém pracuje. Jedině tak můžete svému systému plně důvěřovat.
+AAPS has a leraning program (objectives) that you have to fulfill step by step. Ty by vás měly bezpečně provést nastavením uzavřené smyčky. Postupným splněním cílů je zajištěno, že přesně porozumíte tomu, jak systém pracuje. Jedině tak můžete svému systému plně důvěřovat.
 
 Měli byste pravidelně [exportovat svá nastavení](../Usage/ExportImportSettings.md) (včetně pokroku v plnění cílů). V případě, že v budoucnosti budete muset svůj smartphone nahradit (nové zařízení, poškození displeje atd.), můžete tato nastavení jednoduše importovat.
 
@@ -303,11 +303,11 @@ Nastavte výchozí hodnoty tří tlačítek v dialogovém okně plnění/doplňo
 
 #### Rozsah pro zobrazení
 
-Nastavte hranice nízké a vysoké glykémie, které budou použité u grafů glykémie v AAPS a hodinkách. Jde pouze o zobrazení, nikoliv nastavení cílové hodnoty glykémie. Příklad: 70–180 mg/dl nebo 3,9–10 mmol/l
+Choose the high and low marks for the BG-graph on AAPS overview and smart watch. Jde pouze o zobrazení, nikoliv nastavení cílové hodnoty glykémie. Příklad: 70–180 mg/dl nebo 3,9–10 mmol/l
 
 #### Krátké názvy modulů
 
-Vyberte si, zda jsou názvy záložek v AndroidAPS dlouhé (např. AKCE, LOKÁLNÍ PROFIL, AUTOMATIZACE) nebo krátké (např. AKCE, MRPF, AUTO)
+Choose wether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
 #### Zobrazovat kolonku poznámky v dialozích ošetření
 
@@ -338,13 +338,13 @@ User defined automation tasks ('if-then-else'). Please [read on here](../Usage/A
 
 ### SMS komunikátor
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.md) for more setup information.
+Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.md) for more setup information.
 
 ### Jídlo
 
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Note: Entries cannot be used in the AAPS calculator. (View only)
 
 (Config-Builder-wear)=
 
@@ -367,7 +367,7 @@ Display loop information on your xDrip+ watchface (if you are not using AAPS/[AA
 
 ### NSClient
 
-* Nastavení synchronizace dat AndroidAPS s Nightscoutem.
+* Setup sync of your AAPS data with Nightscout.
 * Settings in [preferences](Preferences-nsclient) can be opened by clicking the cog wheel.
 
 ### Údržba

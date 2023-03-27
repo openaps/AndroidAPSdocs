@@ -7,7 +7,7 @@
 ## Wichtige Hinweise
 
 * Nutze bitte **[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** oder neuer, um die APK-Datei zu erstellen.
-* [Windows 10 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
+* [Windows 10 32-bit Systeme](troubleshooting_androidstudio-unable-to-start-daemon-process) werden von Android Studio 2020.3.1 nicht unterstützt
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 
@@ -67,7 +67,7 @@ Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 3. [Pfad zu git.exe in den Einstellungen von Android Studio festlegen](Building-APK-set-git-path-in-preferences)
 4. [AndroidAPS-Code herunterladen](Building-APK-download-androidaps-code)
 5. [Download Android SDK](Building-APK-download-android-sdk)
-6. [Build the app](Building-APK-generate-signed-apk) (generate signed apk)
+6. [App erstellen](Building-APK-generate-signed-apk) (generate signed apk)
 7. [APK-Datei auf das Smartphone übertragen](Building-APK-transfer-apk-to-smartphone)
 8. [Identifiziere den Empfänger falls Du xDrip verwendest+](xdrip-identify-receiver)
 
@@ -305,7 +305,7 @@ Signieren bedeutet, dass Du die App mit einem digitalen Fingerabdruck versiehst 
 
 * Gib das Passwort für Deinen key store ein (2) und bestätige es (3).![Key store Pfad wählen](../images/studioSetup/47_KeystoreDialog.png)
     
-    ***Hinweis:*** Passwörter für key store und key müssen nicht sehr anspruchsvoll sein. Merke sie Dir gut oder notiere sie an einem sicheren Ort. In case you will not remember your passwords in the future, see [troubleshooting for lost key store](troubleshooting_androidstudio-lost-keystore).
+    ***Hinweis:*** Passwörter für key store und key müssen nicht sehr anspruchsvoll sein. Merke sie Dir gut oder notiere sie an einem sicheren Ort. Falls Du künftig einmal keinen Zugriff auf die Passwörter haben solltest, findest Du einen Lösungsvorschlag unter [Fehlerbehebung verlorener key store](troubleshooting_androidstudio-lost-keystore).
 
 * Gib einen Alias für Deinen key ein (4). Wähle eine beliebige Bezeichnung.
 

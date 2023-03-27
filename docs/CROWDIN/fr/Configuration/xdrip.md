@@ -1,6 +1,6 @@
 # Paramètres xDrip+
 
-(Pour plus d'informations concernant xDrip+, veuillez vous référer à https://xdrip.readthedocs.io/en/latest/)
+(For additional information regarding xDrip+, please refer to the [xDrip documentation](https://xdrip.readthedocs.io/en/latest/.)
 
 S'il n'est pas déjà configuré, téléchargez [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
@@ -34,11 +34,11 @@ Si votre téléphone tourne Android 10 et que vous avez des difficultés avec la
    
    ![xDrip+ Paramètres de base 2](../images/xDrip_Basic2.png)
 
-* **Inter App-Settings** (Diffusion locale) Si vous voulez utiliser AndroidAPS et que les données doivent être transmises à AndroidAPS, vous devez activer la Diffusion locale dans xDrip + dans les paramètres Inter-app.
+* **InterApp-Settings** (Broadcast) If you are going to use AAPS and the data should be forwarded to i.e. AAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
 
 * Pour que les valeurs soient les mêmes, vous devez activer `Send Display Glucose`.
 
-* Si vous avez aussi activé `Accept Treatments` et "Activé la diffusion locale" dans AndroidAPS, alors xDrip+ recevra l'insuline, les glucides et les informations sur les débits de basal d'AndroidAPS et peut estimer la prédiction des hypo, etc. avec plus de précision.
+* If you have also activated `Accept treatments` and "Enable local Broadcasts" in AAPS, then xDrip+ will receive insulin, carbs and basal rate information from AAPS and can estimate the hypo prediction etc. avec plus de précision.
    
    ![xDrip+ Paramètres de base 3](../images/xDrip_Basic3.png)
 
@@ -46,7 +46,7 @@ Si votre téléphone tourne Android 10 et que vous avez des difficultés avec la
 
 ### Identifier le récepteur
 
-* Si vous rencontrez des problèmes avec la diffusion locale (AAPS ne recevant pas les valeurs de glycémie de xDrip+) allez dans Réglages > Réglages Inter-app > Identifier le récepteur et entrez `info.nightscout.androidaps` pour AndroidAPS (si vous utilisez la version PumpControl , veuillez entrer `info.nightscout.aapspumpcontrol` à la place!!).
+* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
 * Attention: La correction automatique a parfois tendance à changer la lettre i en majuscules. Vous **devez utiliser uniquement des lettres minuscules** en tapant `info.nightscout.androidaps` (ou `info.nightscout.aapspumpcontrol` pour PumpControl). Un I majuscule empêcherait l'apoplication de recevoir les valeurs de Gly de xDrip+.
    
    ![xDrip+ Paramètres interapp basiques Identifier le récepteur](../images/xDrip_InterApp_NS.png)

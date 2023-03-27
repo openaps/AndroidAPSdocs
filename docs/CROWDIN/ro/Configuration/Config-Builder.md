@@ -4,11 +4,11 @@
 
 ![Deschidere Configurarea sistemului](../images/ConfBuild_Open_AAPS30.png)
 
-Configurarea sistemului (Conf) este fila unde activezi sau dezactivezi optiuni ale modulelor. Casetele din partea stângă (A) permit să selectezi ce optiune să folosesti, casetele din partea dreaptă (C) permit să vizualizezi optiunile ca filă (E) în AndroidAPS. În cazul în care caseta din dreapta nu este activa, ajungi la funcție folosind meniul (D) din stânga sus.
+Configurarea sistemului (Conf) este fila unde activezi sau dezactivezi optiuni ale modulelor. The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AAPS. În cazul în care caseta din dreapta nu este activa, ajungi la funcție folosind meniul (D) din stânga sus.
 
 În cazul în care în cadrul modulului sunt disponibile setări suplimentare, poti clika pe rotița (B) ca sa ajungi la setările specifice din preferințe.
 
-**Prima configurare:** Începând cu versiunea AAPS 2.0, există un Asistent de Configurare care te orienteaza in stabilire a parametrilor de functionare a AndroidAPS. Apasa meniul reprezentat prin 3 puncte in partea dreaptă sus a ecranului (F) și selecteaza 'Asistent Configurare' pentru a îl folosi.
+**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AAPS. Apasa meniul reprezentat prin 3 puncte in partea dreaptă sus a ecranului (F) și selecteaza 'Asistent Configurare' pentru a îl folosi.
 
 ![Casuta Configurare sistem şi rotita](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
@@ -101,7 +101,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 
 * The DIA is not the same for each person. That's why you have to test it for yourself. 
 * But it must always be at least 5 hours.
-* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
+* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AAPS uses minimum 5h as DIA.
 * You can read more about that in the Insulin Profile section of [this](Screenshots-insulin-profile) page.
 
 ### Insulin type differences
@@ -154,7 +154,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 ![Config Builder BG source](../images/ConfBuild_BGSource_AAPS30.png)
 
 * [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](Releasenotes-important-hints-3-0-0) for details.
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
@@ -222,7 +222,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 * AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. 
 * The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). 
-* This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
+* This option is for getting to know how AAPS works or if you are using an unsupported pump.
 
 (Config-Builder-closed-loop)=
 
@@ -248,7 +248,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 ## Obiective (program de instruire)
 
-AndroidAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+AAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
 You should [export your settings](../Usage/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
 
@@ -303,11 +303,11 @@ Choose the default amounts of the three buttons in fill/prime dialogue, dependin
 
 #### Range of visualization
 
-Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+Choose the high and low marks for the BG-graph on AAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
 
 #### Scurtează titlurile secțiunilor
 
-Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+Choose wether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
 #### Show notes field in treatment dialogs
 
@@ -338,13 +338,13 @@ User defined automation tasks ('if-then-else'). Please [read on here](../Usage/A
 
 ### Comunicator SMS
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.md) for more setup information.
+Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.md) for more setup information.
 
 ### Food
 
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Note: Entries cannot be used in the AAPS calculator. (View only)
 
 (Config-Builder-wear)=
 
@@ -367,7 +367,7 @@ Display loop information on your xDrip+ watchface (if you are not using AAPS/[AA
 
 ### Client NS
 
-* Setup sync of your AndroidAPS data with Nightscout.
+* Setup sync of your AAPS data with Nightscout.
 * Settings in [preferences](Preferences-nsclient) can be opened by clicking the cog wheel.
 
 ### Maintenance
