@@ -68,7 +68,7 @@ This value determines which maxIOB has to be considered by AAPS running in close
 
 Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In AMA, maxIOB was just a safety-parameter for basal IOB, while in SMB-mode, it also includes bolus IOB. A good start is
 
-    maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day)
+    maxIOB = average mealbolus + 3x max daily basal
     
 
 Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in [AMA](Open-APS-features-max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
