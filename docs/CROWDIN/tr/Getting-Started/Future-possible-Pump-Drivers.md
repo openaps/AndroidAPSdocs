@@ -8,7 +8,7 @@ Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemin
 
 ### EOPatch2 ([Ana sayfa](http://www.eoflow.com/eng/main/main.html))
 
-** Döngü durumu: ** Yeni bir döngü adayıdır. Kullandıkları uzaktan kumanda aslında değiştirilmiş Android cihazıdır. (Pompa şu anda yalnızca Kore'de mevcuttur). Without commitment look out for AAPS 3.2.
+** Döngü durumu: ** Yeni bir döngü adayıdır. Kullandıkları uzaktan kumanda aslında değiştirilmiş Android cihazıdır. (Pompa şu anda yalnızca Kore'de mevcuttur). Söz vermiyoruz ancak AAPS 3.2'ye bakabilirsiniz.
 
 **AAPS için donanım gereksinimi:** Muhtemelen yok. BT etkin görünüyor.
 
@@ -16,7 +16,7 @@ Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemin
 
 ### Ypsomed Pompası ([Pompa ana sayfası](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Döngü durumu:** Sürüm 1 - 1.5 (2018/2Ç) döngü adayı değildir. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
+**Döngü durumu:** Sürüm 1 - 1.5 (2018/2Ç) döngü adayı değildir. BT iletişimine sahip olsalar da, iletişim çok sınırlı ve tek yönlüdür: Pompa->Uygulama. Haziran 2022'de (Almanya'da) şirket, uygulamalarından bolus ve GBO ayarlamaya olanak tanıyan DOSE (1.6) adlı yeni sürümünü yayınladı. Kendi Döngülerini uygulama planları iptal edildi ve CamAPS (destek zaten uygulandı) ile ortak olmaya ve döngü çözümlerini kullanmaya karar verdiler. Daha fazla bilgi için bu [sayfaya](https://www.mylife-diabetescare.com/en/loop-program.html) bakın
 
 **Hardware requirement for AAPS:** None. It's BT enabled.
 
@@ -38,7 +38,7 @@ Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemin
 
 **AAPS için donanım gereksinimi:** Muhtemelen yok. BT etkin görünüyor.
 
-**Comment:** Some investigation has started to see if this pump can be supported in AAPS very easily. You can find more information on our discord in channel "medtrum".
+**Yorum:** Bu pompanın AAPS'de kolayca desteklenip desteklenemeyeceğini görmek için bazı araştırmalar başlatıldı. Hakkında daha fazla bilgiyi discord "medtrum" kanalında bulabilirsiniz.
 
 * * *
 
