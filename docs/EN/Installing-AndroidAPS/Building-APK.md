@@ -253,7 +253,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * Android Studio might recommend to update the gradle system. **Never update gradle!** This will lead to difficulties!
 
-* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1).
+* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "upgrade" (1).
 
    ![No gradle update](../images/studioSetup/36_GradleUpdateRequest.png)
 
