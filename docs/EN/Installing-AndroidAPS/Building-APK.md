@@ -224,7 +224,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 (Building-APK-download-android-sdk)=
 ## Download Android SDK
 
-* In the menu, go to  File (1) > Settings (2).
+* In the menu, go to  File (1) > Settings (2) (or Android Studio > Preferences on Mac).
 
    ![Open settings](../images/studioSetup/30_Settings.png)
 
