@@ -51,7 +51,6 @@ Mit der Auswahl von "Average Smoothing" oder "Exponential Smoothing", kannst Du 
 
 ## 2. xDrip+ (Companion App)
 
--   Lade dir die originale Dexcom G7 App aus dem Playstore herunter und installiere sie. 
 -   Lade xDrip+ herunter und installiere es: [xDrip+](https://github.com/NightscoutFoundation/xDrip)
 - Wähle in xDrip+ "Companion App" als Datenquelle aus. Zusätzlich muss in den Bluetootheinstellungen (Einstellungen > Erweiterte Einstellungen > Bluetootheinstellungen) "Companion Bluetooth" aktiviert werden.
 - Wähle in AAPS unter Konfiguration > BZ-Quelle > "xDrip+" aus. Passe die Einstellungen in xDrip+ so an, wie es unter  [xDrip+ Einstellungen](../Configuration/xdrip.md) beschrieben ist. 
