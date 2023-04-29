@@ -8,7 +8,7 @@ Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemin
 
 ### EOPatch2 ([Ana sayfa](http://www.eoflow.com/eng/main/main.html))
 
-** Döngü durumu: ** Yeni bir döngü adayıdır. Kullandıkları uzaktan kumanda aslında değiştirilmiş Android cihazıdır. (Pompa şu anda yalnızca Kore'de mevcuttur). Söz vermiyoruz ancak Androidaps 3.2'ye bakabilirsiniz.
+** Döngü durumu: ** Yeni bir döngü adayıdır. Kullandıkları uzaktan kumanda aslında değiştirilmiş Android cihazıdır. (Pompa şu anda yalnızca Kore'de mevcuttur). Söz vermiyoruz ancak AAPS 3.2'ye bakabilirsiniz.
 
 **AAPS için donanım gereksinimi:** Muhtemelen yok. BT etkin görünüyor.
 
@@ -16,11 +16,11 @@ Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemin
 
 ### Ypsomed Pompası ([Pompa ana sayfası](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Döngü durumu:** Sürüm 1 - 1.5 (2018/2Ç) döngü adayı değildir. BT iletişimi olmasına rağmen iletişim çok sınırlı ve tek yönlüdür: Haziran 2022'de (Almanya'da) şirket uygulamalarında bolus ve TBR'yi ayarlamaya izin veren DOSE (1.6) adlı yeni sürümü yayınladı. Bu pompa yavaş yavaş Avrupa'da kullanıma sunuluyor, ancak tüm dünyada kullanıma sunulması biraz zaman alacak. Kendi döngülerini uygulama planı iptal edildi ve CamAPS ile ortak olmaya (destek verildi) ve döngü çözümlerini kullanmaya karar verdiler. Daha fazla bilgi için bu [sayfaya](https://www.mylife-diabetescare.com/en/loop-program.html) bakın
+**Döngü durumu:** Sürüm 1 - 1.5 (2018/2Ç) döngü adayı değildir. BT iletişimine sahip olsalar da, iletişim çok sınırlı ve tek yönlüdür: Pompa->Uygulama. Haziran 2022'de (Almanya'da) şirket, uygulamalarından bolus ve GBO ayarlamaya olanak tanıyan DOSE (1.6) adlı yeni sürümünü yayınladı. Kendi Döngülerini uygulama planları iptal edildi ve CamAPS (destek zaten uygulandı) ile ortak olmaya ve döngü çözümlerini kullanmaya karar verdiler. Daha fazla bilgi için bu [sayfaya](https://www.mylife-diabetescare.com/en/loop-program.html) bakın
 
 **AAPS için donanım gereksinimi:** Yok. BT etkin.
 
-**Yorumlar:** Şu anda sürücü üzerinde çalışan 2 grup var, bu nedenle yeni sürüm yayınlandıktan sonra yakında AAPS desteği almayı bekleyebiliriz. Bir grup YpsoMed tarafından destekleniyor ve Avustralya'da gerçekleşen Tıbbi denemelere yardımcı oluyor, 2. grup ise tersine mühendislik orijinal uygulamasıyla bağımsız olarak çalışıyor.
+**Yorumlar:** Pompanın doz sürümüne çok ağır şifreleme eklenmiştir. Bu nedenle bu pompa yakın gelecekte (veya hiçbir zaman) büyük bir olasılıkla AAPS tarafından desteklenmeyecektir. Ypsomed ile çalışan ve tıbbi denemelere yardımcı olan geliştiricimiz vardı, bu yüzden belki onun sürücüsünün yayınlanmasına izin verilir, ancak bu küçük bir olasılıktır. Hakkında daha fazla bilgiyi discord "ypsopump-talk" kanalında bulabilirsiniz.
 
 * * *
 
@@ -37,6 +37,18 @@ Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemin
 **Döngü durumu:** Bir Döngü adayıdır. Şirketin kendi sınırlı yarım döngü sistemi çalışıyor (A6). Iphone Uygulaması ile kontrol edilebilir. Şu anda mevcut bir Android uygulaması yok.
 
 **AAPS için donanım gereksinimi:** Muhtemelen yok. BT etkin görünüyor.
+
+**Yorum:** Bu pompanın AAPS'de kolayca desteklenip desteklenemeyeceğini görmek için bazı araştırmalar başlatıldı. Hakkında daha fazla bilgiyi discord "medtrum" kanalında bulabilirsiniz.
+
+* * *
+
+### Equil (Aidex/GlucoRx/MicroTechMD) ([Anasayfa](https://www.glucorx.ie/glucorx-equil/))
+
+**Döngü durumu:** Bir Döngü adayıdır.
+
+**AAPS için donanım gereksinimi:** Yok. BT etkin görünüyor.
+
+**Yorum:** Bazı kişiler AAPS'de pompa desteğini araştırmaya başladı, ancak bu henüz başlangıç aşamasında. Hakkında daha fazla bilgiyi discord "equil" kanalında bulabilirsiniz.
 
 * * *
 
@@ -74,7 +86,7 @@ Geçmişte şirket, pompalarının harici cihazlar tarafından kontrol edilmesin
 
 **Yorumlar:** Bu önümüzdeki birkaç yıl içinde çıkacak olan ve Tidepool Loop yazılımında desteklenmesi planlanan pompadır. ([bu makaleye bakın](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
 
-### Willcare İnsülin pompası ([Ana Sayfa](http://en.shinmyungmedi.com))
+### Willcare İnsülin pompası ([Ana Sayfa](http://shinmyungmedi.com/en/))
 
 **Döngü durumu:** Şu anda döngü adayı değil, ancak çalışanları tarafından bizimle iletişime geçildi ve pompalarını döngüye dahil olacak şekilde genişletmekle ilgilendiler (şu anda yalnızca get/set profile komutlarının eksik olduğunu düşünüyorum).
 
@@ -113,7 +125,7 @@ Geçmişte şirket, pompalarının harici cihazlar tarafından kontrol edilmesin
 - Pompanın bir çeşit uzaktan kumandayı desteklemesi gerekir. (BT, Radyo frekansı, vb)
 - Saldırıya uğramış/dokümante edilmiş/vb. protokeller.
 
-**Minimum gereksinim**
+**Minimal requirement**
 
 - Geçici Bazal Oranı Ayarla
 - Durum Al
