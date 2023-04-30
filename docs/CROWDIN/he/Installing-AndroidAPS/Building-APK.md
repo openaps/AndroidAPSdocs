@@ -2,7 +2,7 @@
 
 ## בנייה עצמית במקום הורדה
 
-**יישום AndroidAPS אינו זמין להורדה מטעמי רגולציה של מכשירים רפואיים. בנייה עצמית של היישום לשימוש אישי הינה חוקית אך אסור לתת את היישום לאחרים! ראו [שאלות נפוצות](../Getting-Started/FAQ.md) לפרטים.**
+**AAPS is not available as download due to regulation for medical devices. בנייה עצמית של היישום לשימוש אישי הינה חוקית אך אסור לתת את היישום לאחרים! ראו [שאלות נפוצות](../Getting-Started/FAQ.md) לפרטים.**
 
 ## הערות חשובות
 
@@ -56,7 +56,7 @@
 ### מאמר זה מחולק לשני חלקים.
 
 * בחלק הסקירה יש הסבר על השלבים הדרושים לבניית קובץ ה-APK.
-* בחלק המדריך צעד אחר צעד תמצאו את צילומי המסך של תהליך שלם. מכיוון שהגרסאות של Android Studio - סביבת פיתוח התוכנה בה נשתמש לבניית ה-APK - ישתנו מהר מאוד זה לא יהיה זהה להתקנה שלך אבל זה אמור לתת לך נקודת התחלה טובה. Android Studio פועל גם על Windows, Mac OS X ו-Linux וייתכנו הבדלים קטנים בהיבטים מסוימים בין כל פלטפורמה. אם אתם מגלים שמשהו חשוב שגוי או חסר, אנא הודע לקבוצת הפייסבוק "AndroidAPS Users" או בצ'אט Discord [Android APS](https://discord.gg/4fQUWHZ4Mw) כדי שנוכל לבדוק זאת.
+* בחלק המדריך צעד אחר צעד תמצאו את צילומי המסך של תהליך שלם. מכיוון שהגרסאות של Android Studio - סביבת פיתוח התוכנה בה נשתמש לבניית ה-APK - ישתנו מהר מאוד זה לא יהיה זהה להתקנה שלך אבל זה אמור לתת לך נקודת התחלה טובה. Android Studio פועל גם על Windows, Mac OS X ו-Linux וייתכנו הבדלים קטנים בהיבטים מסוימים בין כל פלטפורמה. If you find that something important is wrong or missing, please inform the facebook group "AAPS users" or in the Discord chat [Android APS](https://discord.gg/4fQUWHZ4Mw) so that we can have a look at this.
 
 ## סקירה כללית
 
@@ -65,7 +65,7 @@
 1. [התקנת Git](../Installing-AndroidAPS/git-install.md)
 2. [התקנת Android Studio](Building-APK-install-android-studio)
 3. [הגדרת נתיב של Git בהעדפות Android Studio](Building-APK-set-git-path-in-preferences)
-4. [הורדת הקוד של AndroidAPS](Building-APK-download-androidaps-code)
+4. [Download AAPS code](Building-APK-download-AAPS-code)
 5. [הורדת Android SDK](Building-APK-download-android-sdk)
 6. [בניית האפליקציה](Building-APK-generate-signed-apk) (יצירת apk חתום)
 7. [העברת קובץ ה-apk לטלפון](Building-APK-transfer-apk-to-smartphone)
@@ -170,9 +170,9 @@
 * לפרטים על התקנת git עיינו ב[תיעוד ה-git הרשמי](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * אם אתם מתקינים git דרך homebrew אין צורך לשנות שום העדפות. ליתר ביטחון: ניתן למצוא אותם כאן: Android Studio > Preferences.
 
-(Building-APK-download-androidaps-code)=
+(Building-APK-download-AAPS-code)=
 
-## הורדת הקוד של AndroidAPS
+## Download AAPS code
 
 * במסך הפתיחה של Android Studio בחרו "Projects" (1) בצד שמאל ולאחר מכן "Get from VCS" (2).
     
@@ -187,7 +187,7 @@
     * ודאו שבחרתם ב"Repository URL" בצד שמאל (1).
     
     * בדוק אם "Git" נבחר ב-version control (2).
-    * העתיקו והדביקו את כתובת האתר: ```https://github.com/nightscout/AndroidAPS``` למאגר הראשי של AndroidAPS לתוך תיבת הטקסט של URL (כתובת האתר) (3).
+    * העתיקו והדביקו את כתובת האתר: ```https://github.com/nightscout/AndroidAPS``` to the main AAPS repository into the URL textbox (3).
     * בחרו את הספרייה שבה ברצונכם לשמור את הקוד המשוכפל (4).
         
         ![שיבוט גיט](../images/studioSetup/21_CloneURL.png)
@@ -222,7 +222,7 @@
 
 ## הורדת Android SDK
 
-* בתפריט, עבור אל File (1) > Settings (2).
+* In the menu, go to File (1) > Settings (2) (or Android Studio > Preferences on Mac).
     
     ![הגדרות פתוחות](../images/studioSetup/30_Settings.png)
 
@@ -251,7 +251,7 @@
 
 * Android Studio עשוי להמליץ לעדכן את מערכת gradle. **לעולם אל תעדכנו את gradle!** זה יגרום לבעיות!
 
-* אם אתם רואים מידע בצד הימני התחתון של חלון Android Studio שהתוסף של Android Gradle מוכן לעדכון לחץ על הטקסט "update" (1).
+* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "upgrade" (1).
     
     ![אי שידרוג Gradle](../images/studioSetup/36_GradleUpdateRequest.png)
 
@@ -283,7 +283,7 @@
     
     ![קובץ APK במקום חבילה](../images/studioSetup/43_Apk.png)
 
-* וודאו שה-module הינו "AndriodAPS.app".
+* Make sure that module is set to "AAPS.app" (1).
 
 * לחצו "Create new" (2) על מנת להתחיל יצירת ה-key store (מאגר המפתחות).
     
@@ -317,7 +317,7 @@
 
 * לחצו על "OK" (9) לסיום.
 
-* וודאו שסימנתם את התיבה לזכירת הסיסמאות (1). כך שלא תידרשו לרשום אותן שוב בפעם הבאה שתבנו את האפליקציה (כלומר, כאשר תבנו גרסה חדשה לעדכון של AndroidAPS).
+* וודאו שסימנתם את התיבה לזכירת הסיסמאות (1). So you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version).
 
 * לחצו על "Next" (2).
     
