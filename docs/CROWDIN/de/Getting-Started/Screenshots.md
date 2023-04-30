@@ -99,7 +99,7 @@ Wenn es jedoch viele Duplikate gibt, könnte es einfacher sein,
 
 Das rote Warndreieck signalisiert, dass Du sofort aktiv werden solltest: Du erhältst doppelte BG-Daten, die den Loop daran hindern seine Arbeit richtig zu machen. Daher wird der Loop so lange deaktiviert, bis das Problem gelöst ist.
 
-![Red BG warning](../images/bg_warn_red.png)
+![Rotes BG-Warndreieck](../images/bg_warn_red.png)
 
 Du musst herausfinden, warum du doppelte BG-Daten erhältst:
 
@@ -112,7 +112,7 @@ Du musst herausfinden, warum du doppelte BG-Daten erhältst:
 
 * Das gelbe Warnsignal weist darauf hin, dass BG-Daten in unregelmäßigen Zeitintervallen angekommen sind oder einige BGs fehlen.
    
-   ![Yellow BG warning](../images/bg_warn_yellow.png)
+   ![Gelbes BG-Warndreieck](../images/bg_warn_yellow.png)
 
 * Normalerweise musst Du in diesem Falle nichts tun. Der closed loop funktioniert weiter!
 
