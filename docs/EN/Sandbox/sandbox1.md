@@ -1,10 +1,10 @@
 # internal sandbox file 1 for testing
 
-```{admonition} no need to translate this
+:::{admonition} no need to translate this
 :class: note
 
 No need to translate this.
-```
+:::
 
 "The number 43 is, in The Hitchhiker's Guide to the Galaxy by Douglas Adams, the "Answer to the Ultimate Question of Life, the Universe, and Everything," calculated by an enormous supercomputer named Deep Thought over a period of 7.5 million years." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
 
