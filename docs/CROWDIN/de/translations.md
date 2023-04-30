@@ -25,14 +25,14 @@ Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stell
     
        ![Click strings.xml](./images/translations-click-strings.png)
     
-    * Translate sentences on left side by adding new translated text or use & edit suggestion 
+    * Übersetze Sätze auf der linken Seite durch die Eingabe einer eigenen neuen Übersetzung oder durch Auswahl eines Übersetzungsvorschlags von Crowdin basierend auf bereits durchgeführten Übersetzungen der Vergangenheit oder dem Übersetzungsalgorithmus von Crowdin
     
        ![Translation app](./images/translations-translate.png)
     
     
-    ### Proofread strings for AndroidAPS app
+    ### Proofread Strings (Zeichenketten) der AndroidAPS App
     
-    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
+    * Proofreaders starten das Proofreading, indem Sie auf dem Startschirm des Projekts in Crowdin "Proofread" anstatt "Translation" aufrufen.
     
        ![Proofreading mode app](./images/translations-proofreading-mode.png) 
     
@@ -44,14 +44,14 @@ Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stell
     Wenn ein Korrekturleser eine Übersetzung genehmigt, wird diese zur nächsten AndroidAPS-Version hinzugefügt.
     
     (translations-translation-of-the-documentation)=
-    ## Translation of the documentation
+    ## Übersetzung der Dokumentation
     
-    * Click the name of the docs page you want to translate
+    * Klicke zum Start der Übersetzung auf den Namen der Seite der Dokumentation, die Du übersetzen willst
     
     ![Click docs page](./images/translation_WikiPage.png)
     
     
-    * Translate sentences by sentence
+    * Übersetze Satz bei Satz
     
         1. Der gelbe Text ist der Text, an dem Du gerade arbeitest.
     
@@ -66,9 +66,9 @@ Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stell
     
     ![Translation docs](./images/translation_WikiTranslate.png)
     
-    * A translated page will not be published in docs before 
+    * Eine übersetzte Seite wird nicht veröffentlicht, bevor 
     
-        1. the translation is proofread
+        1. für die Übersetzung ein Proofread (Korrekturlesen) durchgeführt wurde
     
         1. die Synchronisierung zwischen Crowdin und Github durchgeführt wurde (einmal pro Stunde), wodurch ein PR für Github erstellt wird.
     
