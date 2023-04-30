@@ -10,17 +10,17 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Loop-status** Ist ein heißer Loop-Kandidat. Die verwendete Fernbedienung ist bereits ein modifiziertes Android Gerät. (Pumpe ist aktuell nur in Korea verfügbar.) Ohne hier ein Commitment zu geben, halte Ausschau auf die zukünftige Version AndroidAPS 3.2.
 
-**Hardware requirement for AAPS:** Probably none. Die Pumpe scheint über Bluetooth zu kommunizieren.
+**Hardware-Anforderungen für AAPS:** Vermutlich keine. Die Pumpe scheint über Bluetooth zu kommunizieren.
 
 * * *
 
 ### Ypsomed Pumpe ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Loop Status:** Version 1 - 1.5 (2Q/2018) sind nicht zum Loopen geeignet. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. Weitere Infos findest Du auf [dieser Seite.](https://www.mylife-diabetescare.com/en/loop-program.html)
+**Loop Status:** Version 1 - 1.5 (2Q/2018) sind nicht zum Loopen geeignet. Die bestehende BT-Kommunikation ist sehr begrenzt und nur ein eine Richtung: Pumpe->App. Im Juni 2022 veröffentlichte das Unternehmen (in Deutschland) die neue Version mit dem Namen DOSE (1.6), welche das Setzen von Bolus und TBR aus ihrer App erlaubt. Der Plan zur Umsetzung der eigenen Loop wurde abgebrochen und sie beschlossen, mit CamAPS (Unterstützung bereits implementiert) zusammenzuarbeiten und die CamAPS Loop-Lösung zu nutzen. Weitere Infos findest Du auf [dieser Seite.](https://www.mylife-diabetescare.com/en/loop-program.html)
 
 **Hardware Voraussetzungen für AAPS:** Keine. Die Pumpe kommuniziert über Bluetooth.
 
-**Comments:** Dose version of pump had very heavy encryption added, so there is big probababilty that this pump won't be supported by AAPS in near future (or ever). We had developer working with Ypsomed and helping with medical trials, so maybe his version of driver will be alowed to be released, but this is just small possibility of that. You can find more information on our discord in channel "ypsopump-talk".
+**Kommentare:** Für die Dose Version der Pumpe wurde eine starke Verschlüsselung hinzugefügt, so dass die Wahrscheinlichkeit hoch ist, dass diese Pumpe in naher Zukunft (oder immer) nicht von AAPS unterstützt wird. Wir hatten Entwickler, die mit Ypsomed zusammengearbeitet und mit medizinischen Studien geholfen haben, so dass vielleicht seine Version des Treibers freigegeben wird, aber es besteht nur eine kleine Chance dafür. Du kannst mehr Informationen in unserem Discord Channel "ypsopump-talk" finden.
 
 * * *
 
@@ -28,7 +28,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Loop Status:** Zur Zeit nicht umgesetzt. Die Pumpe ist möglicherweise zum Loopen geeignet, aber da das Protokoll derzeit nicht bekannt ist, ist eine zeitnahe Umsetzung unwahrscheinlich.
 
-**Hardware requirement for AAPS:** Probably none. Die Pumpe kommuniziert über Bluetooth.
+**Hardware-Anforderungen für AAPS:** Vermutlich keine. Die Pumpe kommuniziert über Bluetooth.
 
 * * *
 
@@ -36,19 +36,19 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 **Loop-status** Ist ein Loop-Kandidat. Das Unternehmen bietet sein eigenes, limitiertes "Halb-Loop-System" (A6) an. Steuerbar per iPhone App. Aktuell keine Android App verfügbar.
 
-**Hardware requirement for AAPS:** Probably none. Die Pumpe scheint über Bluetooth zu kommunizieren.
+**Hardware-Anforderungen für AAPS:** Vermutlich keine. Die Pumpe scheint über Bluetooth zu kommunizieren.
 
-**Comment:** Some investigation has started to see if this pump can be supported in AAPS very easily. You can find more information on our discord in channel "medtrum".
+**Kommentar:** Einige Untersuchungen haben begonnen, um festzustellen, ob diese Pumpe in AAPS sehr einfach unterstützt werden könnte. Du kannst mehr Informationen in unserem Discord Channel "medtrum" finden.
 
 * * *
 
-### Equil (pump from Aidex/GlucoRx/MicroTechMD) ([Homepage](https://www.glucorx.ie/glucorx-equil/))
+### Equil (Pumpe von Aidex/GlucoRx/MicroTechMD) ([Homepage](https://www.glucorx.ie/glucorx-equil/))
 
 **Loop-status** Ist ein Loop-Kandidat.
 
 **Hardware Voraussetzungen für AAPS:** Keine. Die Pumpe scheint über Bluetooth zu kommunizieren.
 
-**Comment:** Some people started looking into supporting pump in AAPS, but this is still in beginning phases. You can find more information on our discord in channel "equil".
+**Kommentar:** Einige Entwickler haben begonnen zu prüfen, ob die Pumpe in AAPS unterstützt werden kann, aber dies ist noch in der Anfangsphase. Du kannst mehr Informationen in unserem Discord Channel "equil" finden.
 
 * * *
 
@@ -86,7 +86,7 @@ Sie planen zuerst die t:Mobi (vorher t:sport genannt) Ende 2022 oder 2023 auf de
 
 **Kommentare:** Diese Pumpe soll in den kommenden Jahren auf den Markt kommen und von der Tidepool Loop Software unterstützt werden ([siehe dieser Artikel [englisch]](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration)).
 
-### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
+### Willcare Insulin Pumpe ([Homepage](http://shinmyungmedi.com/en/))
 
 **Loop-Status:** Momentan kein Loop-Kandidat. Aber wir wurden von Mitarbeitern des Herstellers kontaktiert, da sie daran interessiert sind, ihre Pumpe loopfähig zu machen (momentan fehlen wohl nur Kommandos zum Lesen und Schreiben der Profile).
 
@@ -102,7 +102,7 @@ Sie planen zuerst die t:Mobi (vorher t:sport genannt) Ende 2022 oder 2023 auf de
 
 **Loop Status:** Zur Zeit nicht umgesetzt. Die Pumpe ist möglicherweise zum Loopen geeignet, aber da das Protokoll derzeit nicht bekannt ist, ist eine zeitnahe Umsetzung unwahrscheinlich.
 
-**Hardware requirement for AAPS:** Probably none. Die Pumpe kommuniziert über Bluetooth.
+**Hardware-Anforderungen für AAPS:** Vermutlich keine. Die Pumpe kommuniziert über Bluetooth.
 
 **Hinweis zur Pumpe:** Es ist der Eindruck entstanden, dass sich das Unternehmen aus dem Pumpenmarkt zurückzieht. Weitere Informationen dazu findest Du in diesem [Artikel](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
