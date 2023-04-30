@@ -1,4 +1,4 @@
-# Necessary checks after update to AAPS 3.0
+# Notwendige Prüfungen nach der Aktualisierung auf AAPS 3.0
 
 * **Minimale Android-Version ist 9.0 jetzt.**
 * **Daten werden nicht in die neue Datenbankstruktur überführt.**
@@ -36,24 +36,24 @@
 ## Masterpasswort zurücksetzen
 * Du kannst nun Dein Master-Passwort zurücksetzen, falls Du es vergessen hast.
 * Dazu muss eine Datei mit dem Namen `PasswordReset` in das `/AAPS/extra` Verzeichnis Deines Telefon-Dateisystems hinzugefügt werden.
-* Restart AAPS.
+* Starte AAPS neu.
 * Das neue Passwort wird durch die Seriennummer Deiner aktiven Pumpe gebildet.
-* For Dash: The serial number is always 4241.
+* Für den Omnipod Dash ist die Seriennummer immer '4241'.
 * Für den Omnipod EROS ist es die in der Registerkarte 'POD' als "Laufende Nummer" angegebene Zahl.
 
 ## Warnsignal neben BG
 
 Beginnend mit Android 3.0 erhälst Du möglicherweise ein dreieckiges Warnsignal neben der BG-Ziffer, links auf dem Hauptbildschirm.
 
-  ![Red BG warning](../images/bg_warn_red.png)
+  ![Rotes BG-Warndreieck](../images/bg_warn_red.png)
 
-  ![Yellow BG warning](../images/bg_warn_yellow.png)
+  ![Gelbes BG-Warndreieck](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](Screenshots-bg-warning-sign)
+Details findest Du auf der Seite [AAPS-Bildschirm](Screenshots-bg-warning-sign)
 
 
 ## Fehlermeldung: Daten aus verschiedenen Pumpen
 
    ![Fehlermeldung: Daten aus verschiedenen Pumpen](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](Config-Builder-pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.
+Um dieses Problem zu beheben, gehe zum Bildschirm [Konfiguration](Config-Builder-pump). Wechsel die Pumpe zu einer virtuellen Pumpe und zurück zu Deiner aktuellen Pumpe. Dadurch wird der Pumpenzustand zurückgesetzt.

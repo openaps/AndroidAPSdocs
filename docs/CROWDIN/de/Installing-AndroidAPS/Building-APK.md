@@ -65,7 +65,7 @@ Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 1. [Git installieren](../Installing-AndroidAPS/git-install.md)
 2. [Android Studio installieren](Building-APK-install-android-studio)
 3. [Pfad zu git.exe in den Einstellungen von Android Studio festlegen](Building-APK-set-git-path-in-preferences)
-4. [AndroidAPS-Code herunterladen](Building-APK-download-androidaps-code)
+4. [Download AAPS-Code](Building-APK-download-AAPS-code)
 5. [Download Android SDK](Building-APK-download-android-sdk)
 6. [App erstellen](Building-APK-generate-signed-apk) (generate signed apk)
 7. [APK-Datei auf das Smartphone übertragen](Building-APK-transfer-apk-to-smartphone)
@@ -170,9 +170,9 @@ Klicke auf dem Android Studio Willkommensbildschirm auf "Customize" \[Anpassen\]
 * Details zur Installation von git findest Du in der [offiziellen git Dokumentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * Wenn Du git über homebrew installierst, musst Du keine Einstellungen ändern. Im Fall der Fälle findest Du diese unter Android Studio - Preferences.
 
-(Building-APK-download-androidaps-code)=
+(Building-APK-download-AAPS-code)=
 
-## AndroidAPS-Code herunterladen
+## Download AAPS-Code
 
 * Wähle auf dem Android Studio Willkommensbildschirm "Projects" auf der linken Seite (1) und dann "Get from VCS" (2).
     
@@ -222,7 +222,7 @@ Klicke auf dem Android Studio Willkommensbildschirm auf "Customize" \[Anpassen\]
 
 ## Download Android SDK
 
-* Gehe im Menü zu File (1) > Settings (2).
+* Gehe im Menü auf Datei (1) > Einstellungen (2) (oder Android Studio > Einstellungen auf dem Mac).
     
     ![Einstellungen öffnen](../images/studioSetup/30_Settings.png)
 
@@ -283,7 +283,7 @@ Signieren bedeutet, dass Du die App mit einem digitalen Fingerabdruck versiehst 
     
     ![APK statt Bundle](../images/studioSetup/43_Apk.png)
 
-* Stelle sicher, dass als Modul "AndroidAPS.app" (1) ausgewählt ist.
+* Stelle sicher, dass als Modul "AAPS.app" (1) ausgewählt ist.
 
 * Klicke auf “Create new...” (2), um Deinen key store zu erstellen.
     

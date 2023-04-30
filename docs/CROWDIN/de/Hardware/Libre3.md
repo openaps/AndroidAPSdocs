@@ -1,15 +1,15 @@
 # Freestyle Libre 3
 
-Das Freestyle Libre 3 System kann gefährliche Blutzuckerwerte automatisch melden. Der Libre3 Sensor sendet jede Minute den aktuellen Blutzuckerwert an einen Empfänger (Lesegerät oder Smartphone). Der Receiver löst nötigenfalls einen Alarm aus. With the help of the Juggluco app ([Link](https://www.juggluco.nl/Juggluco/mgdL/index.html)), you can start the sensor directly and connect it to Xdrip+, AAPS or Libreview. In this way, the blood sugar minute values can be transmitted directly. Es ist sogar möglich, ältere Daten aus dem Speicher des Sensors zu empfangen (zwei Stunden minütliche Glukose und zwei Wochen einmal pro 5 Minuten Verlaufsdaten), die an Juggluco gesendet werden.
+Das Freestyle Libre 3 System kann gefährliche Blutzuckerwerte automatisch melden. Der Libre3 Sensor sendet jede Minute den aktuellen Blutzuckerwert an einen Empfänger (Lesegerät oder Smartphone). Der Receiver löst nötigenfalls einen Alarm aus. Mithilfe der Juggluco-App ([Link](https://www.juggluco.nl/Juggluco/mgdL/index.html)) kannst Du den Sensor direkt starten und ihn mit Xdrip+, AAPS oder Libreview verbinden. So können die Blutzuckerwerte direkt übertragen werden. Es ist sogar möglich, ältere Daten aus dem Speicher des Sensors zu empfangen (zwei Stunden minütliche Glukose und zwei Wochen einmal pro 5 Minuten Verlaufsdaten), die an Juggluco gesendet werden.
 
-You don't need the Libre3 app anymore. you can use it side by side with Juggluco, be sure to force shut the Libre 3 app before you use Juggluco.
+Du brauchst die Libre3-App nicht mehr. Du kannst es Seite an Seite mit Juggluco verwenden, achte dabei darauf, die Libre 3 App zu schließen, bevor Du Juggluco verwendest.
 
-If you use Xdrip+, the sensor can also be calibrated in the range of -40 mg/dl to +20 mg/dl (-2.2 mmol/l to +1.1 mmol/l) to compensate for differences between the bloody reading and the sensor readings.
+Der Sensor kann im Bereich von -40 mg/dl bis +20 mg/dl (-2.2 mmol/l bis +1.1 mmol/l) kalibriert werden, um die Differenz zwischen blutiger Messung und den Sensorwerten anzupassen.
 
 
-### Step 1: Install & set up Juggluco
+### Schritt 1: Installiere und richte Juggluco ein
 
-Now download & install the Juggluco App from here ([link](https://www.juggluco.nl/Juggluco/download.html)). With the help of this app, the blood sugar readings can be sent directly to Xdrip and AAPS. Zu diesem Zweck wird der aktive Sensor (der bei Libreview registriert ist) innerhalb von Juggluco verwendet. Dies erklärt auch, warum ein Libreview-Konto obligatorisch ist.
+Jetzt & die Juggluco App von hier herunterladen ([Link](https://www.juggluco.nl/Juggluco/download.html)). Mit Hilfe dieser App können die Blutzuckermessungen direkt an Xdrip und AAPS gesendet werden. Zu diesem Zweck wird der aktive Sensor (der bei Libreview registriert ist) innerhalb von Juggluco verwendet. Dies erklärt auch, warum ein Libreview-Konto obligatorisch ist.
 
 Nach der Installation von Juggluco können mehrere Nachrichten angezeigt werden. Erlaube Juggluco Geräte in der Nähe zu finden, zu suchen und zu verbinden.
 
@@ -44,7 +44,7 @@ Dieses Menü wird geöffnet. Hier kannst Du "Einstellungen" auswählen.
 Diese Seite wird dann angezeigt. In der Auswahl "1." hast Du zwei Möglichkeiten:
 
 1. "An xDrip senden" -> Mit dieser Einstellung werden die Blutzuckerwerte an xDrip gesendet. Wähle als Empfänger in xDrip "Libre2 patched" oder "Libre 2 (patched app)" aus.
-2. "xDrip broadcast" -> With this setting, the minutely blood sugar reading are sent directly to AAPS. The blood glucose source must be set to "xDrip+" within AAPS.
+2. "xDrip Broadcast" -> Mit dieser Einstellung wird das minütige Lesen von Zucker direkt an AAPS gesendet. Die Blutzuckerquelle muss innerhalb von AAPS auf "xDrip+" gesetzt werden.
 
 Um den Sensor zu starten, wählen Sie "2." das Kontrollkästchen "Libreview".
 
@@ -74,7 +74,7 @@ Jetzt ist es an der Zeit, den Sensor neu zu starten! Gehe zurück zum Juggluco S
 
 Fertig, das ist es! Wenn die Lesungen nicht sichtbar sind, findest Du weitere Informationen im Abschnitt "Erlebnisse und Fehlerbehebung".
 
-### Step 2: Set up xDrip
+### Step 2: xDrip einrichten
 
 Die Blutzuckerwerte werden von der xDrip + App auf dem Smartphone empfangen.
 
@@ -85,13 +85,13 @@ Die Blutzuckerwerte werden von der xDrip + App auf dem Smartphone empfangen.
 - In xDrip+ gehe zu Einstellungen > Inter-App Einstellungen > Lokaler Broadcast und wähle AN.
 - In xDrip+ gehe zu Einstellungen > Inter-App Einstellungen > Behandlungen annehmen und wähle AUS.
 - Um in AndroidAPS (ab Version 2.5) CGM-Werte von xDrip+ zu empfangen, stelle in den Einstellungen > Interapp Einstellungen > Identifiziere Empfänger auf info.nightscout.androidaps ein)
-- If you want to be able to use AAPS to calibrate then in xDrip+ go to Settings -> Interapp Compatibility -> Accept Calibrations and select ON. Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
+- Falls Du mit AAPS kalibrieren willst, dann gehe in xDrip+ zu Einstellungen > Inter-App Einstellungen > Accept Calibrations und wähle AN. Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
 
 ```{image} ../images/Libre2_Tags.png
 :alt: xDrip+ LibreLink Fehlerprotokoll
 ```
 
-### Step 3: Start sensor within xDrip
+### Schritt 3: Sensor in xDrip starten
 
 In xDrip+ den Sensor dann mit „Start Sensor“ und „nicht heute“ starten. Es ist nicht notwendig, das Mobiltelefon auf den Sensor zu halten. Tatsächlich startet "Start Sensor" physisch keinen Libre 3 Sensor oder interagiert auch nicht mit ihnen. Damit soll xDrip+ einfach nur mitgeteilt werden, dass ein neuer Sensor Blutzuckerwerte liefert. Wenn verfügbar, gib zwei blutige Messwerte für die Anfangskalibrierung ein. Nun sollten die Blutzuckerte alle 5 Minuten in xDrip+ angezeigt werden. Übersprungene Werte, weil Du zum Beispiel zu weit von Deinem Telefon entfernt warst, werden nicht nachgefüllt.
 
@@ -99,10 +99,10 @@ Warte mindestens 15-20 Minuten, wenn noch keine Daten vorhanden sind.
 
 Nach einem Sensorwechsel erkennt xDrip+ den neuen Sensor automatisch und löscht alle Kalibrierungsdaten. Du kannst nach der Aktivierung blutig messen und eine neue erste Kalibrierung erfassen.
 
-### Step 4: Configure AAPS
+### Schritt 4: AAPS konfigurieren
 
-- In AAPS go to Config Builder -> BG Source and check "xDrip+"
-- If AAPS does not receive BG values when phone is in airplane mode, use "Identify receiver"
+- In AndroidAPS gehe zum Config Builder -> BG Source und aktiviere "xDrip+"
+- Wenn AndroidAPS keine BG-Werte erhält, wenn sich das Telefon im Flugmodus befindet, verwende "Empfänger identifizieren"
 
 Wenn Du den Libre 3 als BZ-Quelle nutzt, stehen die Funktionen 'Enable SMB always' und 'Enable SMB after carbs' nicht zur Verfügung. Die BZ-Werte des Libre 3 sind für einen sicheren Einsatz dieser Funktionen nicht glatt genug.
 
@@ -117,17 +117,17 @@ Es ist möglich, als Empfänger von Juggluco auf die Libre 3 App zurückzuwechse
 5. Die 60-minütige Aufwärmphase sollte dann beginnen. Dies ist nach jeder Änderung notwendig und kann nicht übersprungen werden.
 
 
-### Missing FL3 values in Androidaps
+### Fehlende FL3-Werte in AAPS
 
-Some Freestyle Libre 3 sensors send their minute glucose values not every minute (60s), but send them at slightly different times. (58s, 59s, or 61s, 62s). Juggluco gets the new glucose value directly from the sensor at whatever time they occure and broadcasts them. If you need Xdrip+ to calibrate or smooth the values and want them to be broadcasted to AAPS afterwards, there is a problem.
+Einige Freestyle Libre 3 Sensoren senden ihre Minutenzuckerwerte nicht jede Minute (60s), sondern schicken sie zu etwas anderen Zeiten. (58s, 59s, or 61s, 62s). Juggluco erhält den neuen Glukosewert direkt vom Sensor, wann immer er auftritt, und ihn sendet ihn. Wenn Du Xdrip+ benötigest, um die Werte zu kalibrieren oder zu glätten und möchtest, dass sie anschließend auf AAPS übertragen werden, gibt es ein Problem.
 
-There is a sanity check in Xdrip+ that prevents broadcasting values that are below a certain threshold - in this case 60s.
+In Xdrip+ gibt es eine Überprüfungsprüfung, die Sendewerte verhindert, die unter einem bestimmten Schwellenwert liegen - in diesem Fall 60s.
 
-This can lead to AndroidAPS not getting minute values from Xdrip!
+Dies kann dazu führen, dass AndroidAPS keine Minutenwerte von Xdrip erhält!
 ```{image} https://camo.githubusercontent.com/72863950f3062716319362ba087877134d23fa9566c81e7ea6af266056dc5e1c/68747470733a2f2f696e73756c696e636c75622e64652f636f72652f696e6465782e7068703f6174746163686d656e742f32303136302d30356466383031392d343435642d343338652d383233362d3665396231633762333438622d6a7065672f
-:alt: xDrip+ not broadcasting FL3 readings to AAPS.
+:alt: xDrip+ sendet keine FL3-Messwerte an AAPS.
 ```
-To always get the values to AAPS, you have to use this Xdrip+ version: ([link](https://github.com/blaqone/xDrip))
+Um die Werte immer in AAPS zu erhalten, musst Du folgende Xdrip+ Version verwenden: ([Link](https://github.com/blaqone/xDrip))
 
 (Libre3-experiences-and-troubleshooting)=
 ### Erfahrungen und Troubleshooting

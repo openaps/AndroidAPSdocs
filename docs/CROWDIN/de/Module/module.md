@@ -37,7 +37,7 @@ SGLT-2 Hemmer, auch Gliflozins genannt, hemmen die Resorption (Aufnahme) von Glu
 (module-phone)=
 ### Smartphone
 
-The current version of AAPS requires an Android smartphone with Google Android 9.0 or above. So if you are thinking about a new phone, Android 9 is recommended at a minimum but optimally choose Android 10 or 12. Aus Sicherhheitsgründen wird Dir dringend empfohlen Deine AAPS-Version immer auf dem letzten Stand zu halten bzw. zu bringen. Wenn Dein Smartphone kein Android 8.0 oder höher haben sollte, steht Dir die AAPS-Version 2.6.1.4 im [alten Repository](https://github.com/miloskozak/AAPS) zur Verfügung. AAPS-Version 2.6.1.4 kann mit älteren Android-Versionen genutzt werden.
+Die aktuelle Version von AAPS erfordert ein Android Smartphone mit Google Android 9.0 oder höher. Solltest Du also über ein neues Smartphone nachdenken, wird mindestens Android 9, idealerweise aber Android 10 oder 12 empfohlen. Aus Sicherhheitsgründen wird Dir dringend empfohlen Deine AAPS-Version immer auf dem letzten Stand zu halten bzw. zu bringen. Wenn Dein Smartphone kein Android 8.0 oder höher haben sollte, steht Dir die AAPS-Version 2.6.1.4 im [alten Repository](https://github.com/miloskozak/AAPS) zur Verfügung. AAPS-Version 2.6.1.4 kann mit älteren Android-Versionen genutzt werden.
 
 Benutzer haben eine [Liste von getesteten Handys und Smartwatches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) erstellt.
 

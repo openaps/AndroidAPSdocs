@@ -2,7 +2,7 @@
 
 ## Construire vous-même au lieu de télécharger
 
-**AndroidAPS n'est pas disponible en téléchargement en raison de la réglementation concernant les dispositifs médicaux. Il est légal de construire l'application pour votre usage personnel, mais vous ne devez en aucun cas donner une copie à d'autres personnes ! Voir la [page FAQ](../Getting-Started/FAQ.md) pour plus de détails.**
+**AAPS is not available as download due to regulation for medical devices. Il est légal de construire l'application pour votre usage personnel, mais vous ne devez en aucun cas donner une copie à d'autres personnes ! Voir la [page FAQ](../Getting-Started/FAQ.md) pour plus de détails.**
 
 ## Remarques importantes
 
@@ -56,7 +56,7 @@ Veuillez garder à l'esprit que et **CPU 64 bits et un système d'exploitation 6
 ### Cet article est divisé en deux parties.
 
 * La partie "aperçu" indique les étapes nécessaires pour construire le fichier APK.
-* Dans la partie "pas à pas", vous trouverez les captures d'écran d'une installation complète. Les versions d'Android Studio - l'environnement de développement logiciel que nous utiliserons pour construire l'APK - changent très rapidement. Les exemples ne seront donc pas identiques à votre installation, mais cela devrait vous donner un bon point de départ. Android Studio fonctionne sous Windows, Mac OS X et Linux et il peut y avoir de petites différences entre chaque plateforme. Si vous trouvez que quelque chose d'important qui est incorrect ou manquant, merci d'informer le groupe facebook "utilisateurs AndroidAPS" ou dans les chats Discord [Android APS ou AndroidAPSwiki](https://discord.gg/4fQUWHZ4Mw) afin que nous puissions y remédier.
+* Dans la partie "pas à pas", vous trouverez les captures d'écran d'une installation complète. Les versions d'Android Studio - l'environnement de développement logiciel que nous utiliserons pour construire l'APK - changent très rapidement. Les exemples ne seront donc pas identiques à votre installation, mais cela devrait vous donner un bon point de départ. Android Studio fonctionne sous Windows, Mac OS X et Linux et il peut y avoir de petites différences entre chaque plateforme. If you find that something important is wrong or missing, please inform the facebook group "AAPS users" or in the Discord chat [Android APS](https://discord.gg/4fQUWHZ4Mw) so that we can have a look at this.
 
 ## Aperçu
 
@@ -65,7 +65,7 @@ En général, les étapes nécessaires pour construire le fichier APK sont :
 1. [Installer Git](../Installing-AndroidAPS/git-install.md)
 2. [Installer Android Studio](Building-APK-install-android-studio)
 3. [Définir le chemin d’accès git dans Android Studio](Building-APK-set-git-path-in-preferences)
-4. [Télécharger le code AndroidAPS](Building-APK-download-androidaps-code)
+4. [Download AAPS code](Building-APK-download-AAPS-code)
 5. [Télécharger Android SDK](Building-APK-download-android-sdk)
 6. [Générer l'application](Building-APK-generate-signed-apk) (générer un fichier apk signé)
 7. [Transférer le fichier apk sur votre téléphone](Building-APK-transfer-apk-to-smartphone)
@@ -170,9 +170,9 @@ Sur l'écran d'accueil d'Android Studio cliquez sur "Customize" (1) à gauche, p
 * Pour plus de détails sur l'installation de git, voir la [documentation officielle](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * Si vous installez git via homebrew, il n'est pas nécessaire de modifier les préférences. Juste au cas où : on peut y accéder ici : Android Studio - Preferences.
 
-(Building-APK-download-androidaps-code)=
+(Building-APK-download-AAPS-code)=
 
-## Télécharger le code AndroidAPS
+## Download AAPS code
 
 * Sur l'écran d'accueil d'Android Studio, sélectionnez "Projects" (1) à gauche, puis "Get from VCS" (2).
     
@@ -187,7 +187,7 @@ Sur l'écran d'accueil d'Android Studio cliquez sur "Customize" (1) à gauche, p
     * Assurez-vous d'avoir sélectionné "Repository URL" sur la gauche (1).
     
     * Vérifier si "Git" est sélectionné comme contrôle de version (2).
-    * Copiez et collez l'URL ```https://github.com/nightscout/AndroidAPS``` dans le dépôt principal d'AndroidAPS dans la zone de texte d'URL (3).
+    * Copiez et collez l'URL ```https://github.com/nightscout/AndroidAPS``` to the main AAPS repository into the URL textbox (3).
     * Choisissez le répertoire dans lequel vous voulez enregistrer le code cloné (4).
         
         ![Clone Git](../images/studioSetup/21_CloneURL.png)
@@ -222,7 +222,7 @@ Sur l'écran d'accueil d'Android Studio cliquez sur "Customize" (1) à gauche, p
 
 ## Télécharger Android SDK
 
-* Dans le menu, allez dans "File" (1) > "Settings" (2).
+* In the menu, go to File (1) > Settings (2) (or Android Studio > Preferences on Mac).
     
     ![Ouvrir les paramètres](../images/studioSetup/30_Settings.png)
 
@@ -251,7 +251,7 @@ Sur l'écran d'accueil d'Android Studio cliquez sur "Customize" (1) à gauche, p
 
 * Android Studio recommande de mettre à jour le "gradle system". **Ne jamais mettre à jour gradle !** Cela pourrait entraîner des difficultés !
 
-* Si vous voyez une information sur le côté inférieur droit de votre fenêtre Android Studio qui indique que le plugin Android Gradle est prêt à mettre à jour, cliquez sur le texte "update" (1).
+* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "upgrade" (1).
     
     ![Pas de mise à jour de Gradle](../images/studioSetup/36_GradleUpdateRequest.png)
 
@@ -283,7 +283,7 @@ Signer signifie que vous signez votre application générée mais d'une façon n
     
     ![APK au lieu du bundle](../images/studioSetup/43_Apk.png)
 
-* Assurez-vous que le module est défini sur "AndroidAPS.app" (1).
+* Make sure that module is set to "AAPS.app" (1).
 
 * Cliquez sur "Create new..." (2) pour commencer la création de votre fichier de clés.
     
@@ -317,7 +317,7 @@ Signer signifie que vous signez votre application générée mais d'une façon n
 
 * Cliquez sur "OK" (9) lorsque vous avez terminé.
 
-* Assurez-vous que la case permettant de mémoriser les mots de passe est cochée (1). Ainsi vous n'aurez pas à les saisir à nouveau la prochaine fois que vous génèrerez le fichier apk (par ex. en faisant une mise à jour avec une nouvelle version d'AndroidAPS).
+* Assurez-vous que la case permettant de mémoriser les mots de passe est cochée (1). So you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version).
 
 * Cliquez sur "Next" (2).
     
