@@ -1,9 +1,9 @@
 # test için dahili sanal alan dosyası 1
 
-:::{admonition} no need to translate this
+:::{admonition} bunu tercüme etmeye gerek yok
 :class: note
 
-No need to translate this.
+Bunu tercüme etmenize gerek yok.
 :::
 
 :::{danger}
@@ -20,13 +20,13 @@ Bu, dokümantasyon ekibinin test etmesi için dahili bir sanal alan dosyasıdır
     1. CROWDIN çevirisi ve
     2. Dok. dağıtımını okuyun.
 
-You can dirctly jump from here to the second label in this file - ["Jump"](sandbox1-this-is-another-test).
+Buradan doğrudan bu dosyadaki ikinci etikete atlayabilirsiniz - ["Atla"](sandbox1-this-is-another-test).
 
-And you can jump to the first label too - ["Jump"](sandbox1-this-is-a-test).
+Ayrıca ilk etikete de atlayabilirsiniz - ["Atla"](sandbox1-this-is-a-test).
 
 Buradan ikinci sanal alan dosyasına atlayabilirsiniz - ["Atla"](./sandbox2.md).
 
-You can dirctly jump from here to the first label in the sandbox2.md file - ["Jump"](sandbox2-this-is-a-test).
+Buradan doğrudan sandbox2.md dosyasındaki ilk etikete atlayabilirsiniz - ["Atla"](sandbox2-this-is-a-test).
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
