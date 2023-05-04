@@ -2,16 +2,16 @@
 
 Durum saatte bir güncellenir ve yalnızca Crowdin'deki durumu yansıtır.
 
-:::{tip}
+:::{ipucu}
 
-Be careful the percentage of proofreading must be lower then the percentage of translations but they decided to show it on top of the translations. It's better to look only at the percentage level of translations to see if work is to be done.
+Redaksiyon yüzdesinin çeviri yüzdesinden daha düşük olmasına dikkat edin. Ancak çevirilerin üzerinde gösterilmektedir. İşin ne kadar yapıldığını görmek için yalnızca çevirilerin yüzde düzeyine bakmak daha iyi olacaktır.
 
 :::
 
-:::{admonition} needed time for final publication
+:::{admonition} Nihai yayın için gerekli süre
 :class: note
 
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+Crowdin çevirisinden sonra, çevirileri çekme isteği (PR) olarak Github'a aktarmak için her gün Github'a bir senkronizasyon planlanır.
 
 PR'nin kabulü, mümkün olan en hızlı şekilde manuel olarak yapılacaktır.
 
