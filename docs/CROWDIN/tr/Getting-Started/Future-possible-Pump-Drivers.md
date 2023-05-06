@@ -125,7 +125,7 @@ Geçmişte şirket, pompalarının harici cihazlar tarafından kontrol edilmesin
 - Pompanın bir çeşit uzaktan kumandayı desteklemesi gerekir. (BT, Radyo frekansı, vb)
 - Saldırıya uğramış/dokümante edilmiş/vb. protokeller.
 
-**Minimal requirement**
+**Minimum gereksinim**
 
 - Geçici Bazal Oranı Ayarla
 - Durum Al

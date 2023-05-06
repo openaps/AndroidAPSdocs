@@ -55,7 +55,7 @@ AAPS menüsüne daha hızlı ulaşmak için KŞ'nize iki kez dokunun. KŞ eğris
 
 (Watchfaces-new-watchface-as-of-AAPS-2-8)=
 
-### New watchface as of AAPS 2.8
+### AAPS 2.8'den itibaren yeni saat yüzü
 
 ![Watchface Dijital Stil](../images/Watchface_DigitalStyle.png)
 

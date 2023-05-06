@@ -74,7 +74,7 @@ Her şey yolunda giderse, artık "Verileri yeniden gönder" butonunun altında �
 
 Bitti, işte bu kadar! Değerler görünmüyorsa "Deneyimler ve sorun giderme" bölümünde daha fazla bilgi bulabilirsiniz.
 
-### Step 2: Set up xDrip
+### 2. Adım: xDrip'i ayarlayın
 
 Kan şekeri değerleri akıllı telefonda xDrip+ uygulaması tarafından alınır.
 
