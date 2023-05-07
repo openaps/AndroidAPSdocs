@@ -1,6 +1,6 @@
-# Para los usuarios de otros CGM subidos a Nightscout
+# Para los usuarios de otros MCG que suben datos a Nightscout
 
-If you have any other CGM set up that sends your data to [Nightscout](https://nightscout.github.io/) then
+Si tienes cualquier otro MCG configurado que envía los datos a [Nightscout](https://nightscout.github.io/) entonces
 
 -   In AndroidAPS Preferences enter your Nightscout website and API secret.
 -   Select NSClient in ConfigBuilder (setting in AndroidAPS).
