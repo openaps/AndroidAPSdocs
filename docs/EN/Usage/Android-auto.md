@@ -54,7 +54,7 @@ You should now see a screen similar to this screen.
 
 Press on the **setting** icon to start the configuration.
 
-Scroll down to the end of the page and select **see more on phone**.
+Scroll down to the end of the page and select **see more in the phone**.
 
 ![Enable developer mode](../images/android_auto_06.png)
 
@@ -71,7 +71,7 @@ With this hidden combination you are open the developer mode.
 
 ![Enable developer mode](../images/android_auto_08.png)
 
-Confirm that you wnat to enable the developer mode in the modal dialog "Allow development settings?".
+Confirm that you want to enable the developer mode in the modal dialog "Allow development settings?".
 
 ![Enable developer mode](../images/android_auto_09.png)
 
