@@ -50,7 +50,7 @@ You should now see a screen similar to this screen.
 
 Press on the **setting** icon to start the configuration.
 
-Scroll down to the end of the page and select **see more on phone**.
+Scroll down to the end of the page and select **see more in the phone**.
 
 ![Enable developer mode](../images/android_auto_06.png)
 
@@ -64,7 +64,7 @@ There you see the version of Android Auto listed. Tap 10 times (in word ten) on 
 
 ![Enable developer mode](../images/android_auto_08.png)
 
-Confirm that you wnat to enable the developer mode in the modal dialog "Allow development settings?".
+Confirm that you want to enable the developer mode in the modal dialog "Allow development settings?".
 
 ![Enable developer mode](../images/android_auto_09.png)
 
@@ -78,7 +78,7 @@ Now you can quit developer mode if you want. Tap three dots menu on the top righ
 
 Tap the **number icon** on the lower right side in Android Auto in your car.
 
-![Bell icon - Android Auto in car](../images/android_auto_05.png)
+![number icon - Android Auto in car](../images/android_auto_11.png)
 
 Your CGM value wil be shown as follows.
 
