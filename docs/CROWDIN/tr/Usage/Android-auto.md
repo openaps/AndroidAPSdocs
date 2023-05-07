@@ -1,48 +1,89 @@
 # Android Auto
 
-![Android Auto'da AAPS CGM verileri](../images/AndroidAuto_05.png)
+AAPS is capable to send you information about your actual state as message directly into Android Auto in your car.
+
+:::{admonition} version and last change information :class: dropdown date of last edit: 07/05/2023
+
+versions used for documentation:
+
+* AAPS 3.2.0-dev-i
+* Android Auto: 9.3.631434-release :::
+
+## Requirements
+
+AAPS uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of Auto Audio in the car.
+
+That means that
+
+* you must configure AAPS to use system notifications for alerts and notifications and
+* as AAPS is an unoffical App allow the use of "unknown sources" with Android Auto.
+
+![AAPS CGM data on Android Auto](../images/android_auto_01.png)
 
 (Android-auto-AAPS-settings-for-android-auto)=
 
-## AAPS settings for Android Auto
+## use system notifications in AAPS for alerts and notifications
 
-Uyarılar ve bildirimler için sistem bildirimlerini kullan:
+Open 3-dot-menu on top right of home screen and selecting **Preferences**
 
-* Ana ekranın sağ üst köşesindeki 3 noktalı menüyü açın ve **Tercihler** ➜ **Yerel Uyarılar** ➜ öğesini seçin ve **Uyarılar ve bildirimler için sistem bildirimlerini kullan**'ı etkinleştirin 
+![Use system notifications for alerts and notifications](../images/android_auto_02.png)
 
-![Uyarılar ve bildirimler için sistem bildirimlerini kullan](../images/AndroidAuto_01v2.png)
+In **Local Alerts** activate **Use system notifications for alerts and notifications**
+
+![Use system notifications for alerts and notifications](../images/android_auto_03.png)
+
+Please check now that you get notifications from AASP on the mobile before you walk to your car!
+
+![Use system notifications for alerts and notifications](../images/android_auto_04.png)
 
 (Android-auto-AAPS-settings-in-android-auto-app-on-your-phone)=
 
-## Telefonunuzdaki Android Auto uygulamasındaki ayarlar
+## allow the use of "unknown sources" with Android Auto.
 
-AAPS resmi bir Android Auto uygulaması olmadığı için bildirimlerin Android Auto'da etkinleştirilmesi gerekir.
+As AAPS is no official Android Auto app notifications have to be activated for "unknown sources" in Android Auto. This is done through the use of the developer mode which we will show you here.
 
-* Telefonunuzda Android Auto uygulamasını açın.
-* Hamburger menüsüne dokunun
-* Ayarları şeçin
-* Listenin sonuna kadar aşağı kaydırın ve sürüm no'ya "Geliştirici modu etkin" mesajı görüntülenene kadar 10 kez dokunun.
+Go to your car and connect your mobile with the cars audio system.
 
-![Geliştirici modunu etkinleştir](../images/AndroidAuto_02.png)
+You should now see a screen similar to this screen.
 
-* Sağ üst köşedeki 3 noktalı menüyü açın
-* "Geliştirici ayarları"nı seçin
-* Listenin sonuna kadar aşağı kaydırın ve "Bilinmeyen kaynaklar" ı etkinleştirin
+![Enable developer mode](../images/android_auto_05.png)
 
-![Bilinmeyen kaynakları etkinleştir](../images/AndroidAuto_03.png)
+Press on the **setting** icon to start the configuration.
 
-* Artık isterseniz geliştirici modundan çıkabilirsiniz. Bunu yapmak için sağ üstteki üç nokta menüsüne dokunun.
+Scroll down to the end of the page and select **see more on phone**.
 
-## Arabada bildirimlerin gösterilmesi
+![Enable developer mode](../images/android_auto_06.png)
 
-* Arabanızda Android Auto'nun alt menü çubuğundaki zil simgesine dokunun
+Now on the mobile we will activate the developer mode.
 
-![Zil simgesi - Arabada Android Auto](../images/AndroidAuto_04.png)
+the first screen looks like this. Scroll down to the end of the page.
 
-* CGM değerleri aşağıdaki gibi gösterilecektir:
+![Enable developer mode](../images/android_auto_07.png)
 
-![Android Auto'da AAPS CGM verileri](../images/AndroidAuto_05.png)
+There you see the version of Android Auto listed. Tap 10 times (in word ten) on the version of Android Auto. With this hidden combination you are open the developer mode.
 
-## Sorun giderme:
+![Enable developer mode](../images/android_auto_08.png)
+
+Confirm that you wnat to enable the developer mode in the modal dialog "Allow development settings?".
+
+![Enable developer mode](../images/android_auto_09.png)
+
+In the **developer settings** enable the "Unknown sources".
+
+![Enable developer mode](../images/android_auto_10.png)
+
+Now you can quit developer mode if you want. Tap three dots menu on the top right to do so.
+
+## Show notifications in car
+
+Tap the **number icon** on the lower right side in Android Auto in your car.
+
+![Bell icon - Android Auto in car](../images/android_auto_05.png)
+
+Your CGM value wil be shown as follows.
+
+![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+
+## Troubleshooting:
 
 * If you don't see the notification, check if you [allowed AAPS to show notifications](Android-auto-AAPS-settings-for-android-auto) in Android and if [Android Auto has access rights to notifications](Android-auto-AAPS-settings-in-android-auto-app-on-your-phone).
