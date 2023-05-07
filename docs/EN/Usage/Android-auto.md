@@ -2,13 +2,26 @@
 
 AAPS is capable to send you information about your actual state as message directly into Android Auto in your car.
 
+
+:::{tip} version and last change information
+:class: dropdown
+
+date: 07/05/2023
+
+versions:
+
+* AAPS 3.2.0-dev-i
+* Android Auto: 9.3.631434-release
+:::
+
 ## Requirements
 
 AAPS uses a feature von Android Auto which allows messages from apps on the mobile to be routed to the display of Auto Audio in the car.
 
 That means that
-a) you must configure AAPS to use system notifications for alerts and notifications and
-b) as AAPS is an unoffical App allow the use of "unknown sources" with Android Auto.
+
+* you must configure AAPS to use system notifications for alerts and notifications and
+* as AAPS is an unoffical App allow the use of "unknown sources" with Android Auto.
 
 ![AAPS CGM data on Android Auto](../images/android_auto_01.png)
 
