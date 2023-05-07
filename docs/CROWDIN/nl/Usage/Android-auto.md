@@ -2,9 +2,9 @@
 
 ![AAPS CGM gegevens op Android Auto](../images/AndroidAuto_05.png)
 
-(Android-auto-androidaps-settings-for-android-auto)=
+(Android-auto-AAPS-settings-for-android-auto)=
 
-## AndroidAPS instellingen voor Android Auto
+## AAPS settings for Android Auto
 
 Use system notifications for alerts and notifications:
 
@@ -12,7 +12,7 @@ Use system notifications for alerts and notifications:
 
 ![Use system notifications for alerts and notifications](../images/AndroidAuto_01v2.png)
 
-(Android-auto-androidaps-settings-in-android-auto-app-on-your-phone)=
+(Android-auto-AAPS-settings-in-android-auto-app-on-your-phone)=
 
 ## Instellingen in Android Auto app op jouw telefoon
 
@@ -45,4 +45,4 @@ As AAPS is no official Android Auto app notifications have to be activated in An
 
 ## Problemen oplossen:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](Android-auto-androidaps-settings-for-android-auto) in Android and if [Android Auto has access rights to notifications](Android-auto-androidaps-settings-in-android-auto-app-on-your-phone).
+* If you don't see the notification, check if you [allowed AAPS to show notifications](Android-auto-AAPS-settings-for-android-auto) in Android and if [Android Auto has access rights to notifications](Android-auto-AAPS-settings-in-android-auto-app-on-your-phone).
