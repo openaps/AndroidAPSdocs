@@ -2,9 +2,9 @@
 
 ![Données MGC AAPS sur Android Auto](../images/AndroidAuto_05.png)
 
-(Android-auto-androidaps-settings-for-android-auto)=
+(Android-auto-AAPS-settings-for-android-auto)=
 
-## Paramètres AndroidAPS pour Android Auto
+## AAPS settings for Android Auto
 
 Utiliser le système des notifications :
 
@@ -12,7 +12,7 @@ Utiliser le système des notifications :
 
 ![Utiliser les notifications système pour les alertes et les notifications](../images/AndroidAuto_01v2.png)
 
-(Android-auto-androidaps-settings-in-android-auto-app-on-your-phone)=
+(Android-auto-AAPS-settings-in-android-auto-app-on-your-phone)=
 
 ## Paramètres dans l'application Android Auto sur votre téléphone
 
@@ -45,4 +45,4 @@ Comme AAPS n'est pas une application officielle Android, les notifications doive
 
 ## Résolution de problèmes :
 
-* Si vous ne voyez pas de notification, vérifiez si vous avez [autorisé AAPS à afficher les notifications](Android-auto-androidaps-settings-for-android-auto) dans Android et si [Android Auto a les droits d'accès aux notifications](Android-auto-androidaps-settings-in-android-auto-app-on-your-phone).
+* If you don't see the notification, check if you [allowed AAPS to show notifications](Android-auto-AAPS-settings-for-android-auto) in Android and if [Android Auto has access rights to notifications](Android-auto-AAPS-settings-in-android-auto-app-on-your-phone).
