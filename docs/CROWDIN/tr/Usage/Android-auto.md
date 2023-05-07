@@ -2,9 +2,9 @@
 
 ![Android Auto'da AAPS CGM verileri](../images/AndroidAuto_05.png)
 
-(Android-auto-androidaps-settings-for-android-auto)=
+(Android-auto-AAPS-settings-for-android-auto)=
 
-## Android Auto için AndroidAPS ayarları
+## AAPS settings for Android Auto
 
 Uyarılar ve bildirimler için sistem bildirimlerini kullan:
 
@@ -12,7 +12,7 @@ Uyarılar ve bildirimler için sistem bildirimlerini kullan:
 
 ![Uyarılar ve bildirimler için sistem bildirimlerini kullan](../images/AndroidAuto_01v2.png)
 
-(Android-auto-androidaps-settings-in-android-auto-app-on-your-phone)=
+(Android-auto-AAPS-settings-in-android-auto-app-on-your-phone)=
 
 ## Telefonunuzdaki Android Auto uygulamasındaki ayarlar
 
@@ -45,4 +45,4 @@ AAPS resmi bir Android Auto uygulaması olmadığı için bildirimlerin Android 
 
 ## Sorun giderme:
 
-* Bildirimleri görmüyorsanız, [AAPS'in bildirimleri göstermesine izin verdiğinizi](Android-auto-androidaps-settings-for-android-auto) ve android için de [Android Auto'nun bildirimlere erişim hakları olduğunu kontrol edin](Android-auto-androidaps-settings-in-android-auto-app-on-your-phone).
+* If you don't see the notification, check if you [allowed AAPS to show notifications](Android-auto-AAPS-settings-for-android-auto) in Android and if [Android Auto has access rights to notifications](Android-auto-AAPS-settings-in-android-auto-app-on-your-phone).
