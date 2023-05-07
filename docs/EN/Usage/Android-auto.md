@@ -85,7 +85,7 @@ Now you can quit developer mode if you want. Tap three dots menu on the top righ
 
 Tap the **number icon** on the lower right side in Android Auto in your car.
 
-![Bell icon - Android Auto in car](../images/android_auto_05.png)
+![number icon - Android Auto in car](../images/android_auto_11.png)
 
 Your CGM value wil be shown as follows.
 
