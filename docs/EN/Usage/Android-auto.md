@@ -15,7 +15,7 @@ versions used for documentation:
 
 ## Requirements
 
-AAPS uses a feature von Android Auto which allows messages from apps on the mobile to be routed to the display of Auto Audio in the car.
+AAPS uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of Auto Audio in the car.
 
 That means that
 
