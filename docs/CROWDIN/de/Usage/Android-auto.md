@@ -2,9 +2,9 @@
 
 ![AAPS CGM-Daten in Android Auto](../images/AndroidAuto_05.png)
 
-(Android-auto-androidaps-settings-for-android-auto)=
+(Android-auto-AAPS-settings-for-android-auto)=
 
-## AndroidAPS-Einstellungen für Android Auto
+## AAPS settings for Android Auto
 
 Benutze Systemmeldungen für Alarme und Meldungen:
 
@@ -12,7 +12,7 @@ Benutze Systemmeldungen für Alarme und Meldungen:
 
 ![Benutze Systemmeldungen für Alarme und Meldungen](../images/AndroidAuto_01v2.png)
 
-(Android-auto-androidaps-settings-in-android-auto-app-on-your-phone)=
+(Android-auto-AAPS-settings-in-android-auto-app-on-your-phone)=
 
 ## Einstellungen in der Android Auto App auf dem Smartphone
 
@@ -45,4 +45,4 @@ Da AAPS keine offizielle Android Auto App ist, müssen die Benachrichtigungen ei
 
 ## Problemlösungen
 
-* Falls die Benachrichtigungen nicht angezeigt werden: Prüfe, ob Du [AAPS-Benachrichtigungen in Android zugelassen hast](Android-auto-androidaps-settings-for-android-auto) und ob [Android Auto Benachrichtigungen anzeigen darf](Android-auto-androidaps-settings-in-android-auto-app-on-your-phone).
+* If you don't see the notification, check if you [allowed AAPS to show notifications](Android-auto-AAPS-settings-for-android-auto) in Android and if [Android Auto has access rights to notifications](Android-auto-AAPS-settings-in-android-auto-app-on-your-phone).
