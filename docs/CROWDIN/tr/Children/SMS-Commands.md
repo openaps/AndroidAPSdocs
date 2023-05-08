@@ -2,11 +2,11 @@
 
 ## Önce Güvenlik
 
-- AndroidAPS, çocuğunuzun telefonunu kısa mesaj yoluyla uzaktan kontrol etmenizi sağlar. Bu SMS kominikatörü etkinleştirirseniz, uzak komutlar verecek şekilde ayarlanmış telefonun çalınabileceğini unutmayın. Bu yüzden her zaman en azından bir PIN kodu ile telefonu koruyun. Güçlü bir parola veya biyometrik doğrulama önerilir.
+- AAPS allows you to control a child's phone remotely via text message. Bu SMS kominikatörü etkinleştirirseniz, uzak komutlar verecek şekilde ayarlanmış telefonun çalınabileceğini unutmayın. Bu yüzden her zaman en azından bir PIN kodu ile telefonu koruyun. Güçlü bir parola veya biyometrik doğrulama önerilir.
 - Ayrıca, SMS komutları için [ikinci bir telefon numarasına](SMS-Commands-authorized-phone-numbers) izin verilmesi önerilir. Böylece komut gönderdiğiniz ana telefonunuzun kaybolması veya çalınması durumunda SMS iletişimini [geçici olarak devre dışı bırakmak](SMS-Commands-other) için ikinci numarayı kullanabilirsiniz.
-- AndroidAPS ayrıca bolus veya profil değişikliği gibi uzak komutlarınızın gerçekleşip gerçekleşmediğini kısa mesajla size bildirecektir. Alıcı telefonlardan birinin çalınması durumuna karşı en az iki farklı telefon numarasına onay metinleri gönderilecek şekilde ayarlamanız önerilir.
+- AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Alıcı telefonlardan birinin çalınması durumuna karşı en az iki farklı telefon numarasına onay metinleri gönderilecek şekilde ayarlamanız önerilir.
 - **SMS Komutları aracılığıyla bolus yaparsanız, Nightscout (NSClient, Web Sitesi...) ya da sms aracılığıyla karbonhidrat girmelisiniz!** Bunu yapmazsanız, aktif insülin çok düşük aktif karbonhidrat ile doğrulanır ve AAPS çok fazla aktif insülininiz olduğunu varsaydığından potansiyel olarak düzeltme bolusu yapılmamasına veya bazal iptaline yol açar.
-- AndroidAPS sürüm 2.7'den itibaren, SMS komutlarını kullanırken güvenliği artırmak için zamana dayalı tek seferlik parolaya sahip bir kimlik doğrulama uygulaması (google authenticator) kullanılmaktadır.
+- As of AAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
 
 ## SMS Komutları kurulumu
 
@@ -23,7 +23,7 @@
 
 ### Yetkili telefon numaraları
 
-- AndroidAPS'de **Tercihler > SMS Kominikatör**'e gidin ve SMS komutlarının gelmesine izin vereceğiniz telefon numaralarını girin (noktalı virgülle ayrılmış - örn. +6412345678;+6412345679)
+- In AAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
 
 - 'SMS ile uzaktan komutlara izin ver' seçeneğini etkinleştirin.
 
@@ -81,7 +81,7 @@
 
 ## SMS komutlarını kullanmak
 
-- Aşağıdaki [komutlardan](SMS-Commands-commands) herhangi birini kullanarak onayladığınız telefon numaralarından AAPS çalışan ana telefona bir SMS gönderebilirsiniz.
+- Send a SMS to the phone with AAPS running from your approved phone number(s) using any of the [commands](SMS-Commands-commands) below.
 
 - AAPS ana telefonu, istenen komutun veya durumun başarısını onaylamak için yanıt verecektir.
 
@@ -96,7 +96,7 @@
 (SMS-Commands-commands)=
 ## Komutlar
 
-Komutlar İngilizce olarak gönderilmelidir, yanıt dizesi ise programınızın bu kısmı [tercüme edilmiş ](translations-translate-strings-for-androidaps-app) ise yerel dilinizde olacaktır.
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](translations-translate-strings-for-AAPS-app).
 
 ```{image} ../images/SMSCommands.png
 :alt: Örnek SMS Komutları
@@ -182,3 +182,10 @@ Galaxy S10 telefonundaki bir güncellemeden sonra SMS komutlarının çalışmad
 ```{image} ../images/SMSdisableChat.png
 :alt: SMS as chat message devre dışı
 ```
+### Android Messages App
+
+If you are having issues sending or receiving SMS commands with the Android Messages app disable end-to-end ecryption on both caregiver and child's phones.
+ - open the specific SMS conversation in Messages
+ - Select the options ellipisis in the top right corner
+ - select "Details"
+ - Activate "Only send SMS and MMS messages"
