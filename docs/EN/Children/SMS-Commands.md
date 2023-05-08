@@ -217,3 +217,10 @@ There was a report on SMS commands stopping after an update on Galaxy S10 phone.
 ```{image} ../images/SMSdisableChat.png
 :alt: Disable SMS as chat message
 ```
+### Android Messages App
+
+If you are having issues sending or receiving SMS commands with the Android Messages app disable end-to-end ecryption on both caregiver and child's phones.
+ - open the specific SMS conversation in Messages
+ - Select the options ellipisis in the top right corner
+ - select "Details"
+ - Activate "Only send SMS and MMS messages"
