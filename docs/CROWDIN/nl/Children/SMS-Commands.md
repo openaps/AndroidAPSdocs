@@ -2,11 +2,11 @@
 
 ## Safety First
 
-- AndroidAPS allows you to control a child's phone remotely via text message. Bedenk wel, dat de telefoon die is ingesteld om externe commando's te geven, kan worden gestolen. Beveilig die telefoon dus goed, met op z'n minst een pincode. A strong password or biometrics are recommended.
+- AAPS allows you to control a child's phone remotely via text message. Bedenk wel, dat de telefoon die is ingesteld om externe commando's te geven, kan worden gestolen. Beveilig die telefoon dus goed, met op z'n minst een pincode. A strong password or biometrics are recommended.
 - Additionally it is recommended to allow a [second phone number](SMS-Commands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](SMS-Commands-other) SMS communicator in case your main remote phone gets lost or stolen.
-- AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Het wordt aangeraden om ten minste 2 telefoonnummers te koppelen in de SMS communicator instellingen. Mocht één van de gekoppelde telefoons worden gestolen, dan zul je deze bevestigings-SMS'jes evengoed nog op het tweede telefoonnummer binnenkrijgen.
+- AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Het wordt aangeraden om ten minste 2 telefoonnummers te koppelen in de SMS communicator instellingen. Mocht één van de gekoppelde telefoons worden gestolen, dan zul je deze bevestigings-SMS'jes evengoed nog op het tweede telefoonnummer binnenkrijgen.
 - **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
-- As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
+- As of AAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
 
 ## Setup SMS commands
 
@@ -23,7 +23,7 @@
 
 ### Authorized phone numbers
 
-- In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
+- In AAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
 
 - Enable 'Allow remote commands via SMS'.
 
@@ -81,7 +81,7 @@
 
 ## Use SMS commands
 
-- Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the [commands](SMS-Commands-commands) below.
+- Send a SMS to the phone with AAPS running from your approved phone number(s) using any of the [commands](SMS-Commands-commands) below.
 
 - The AAPS phone will respond to confirm success of command or status requested.
 
@@ -96,7 +96,7 @@
 (SMS-Commands-commands)=
 ## Commands
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](translations-translate-strings-for-androidaps-app).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](translations-translate-strings-for-AAPS-app).
 
 ```{image} ../images/SMSCommands.png
 :alt: SMS Commands Example
@@ -182,3 +182,10 @@ There was a report on SMS commands stopping after an update on Galaxy S10 phone.
 ```{image} ../images/SMSdisableChat.png
 :alt: Disable SMS as chat message
 ```
+### Android Messages App
+
+If you are having issues sending or receiving SMS commands with the Android Messages app disable end-to-end ecryption on both caregiver and child's phones.
+ - open the specific SMS conversation in Messages
+ - Select the options ellipisis in the top right corner
+ - select "Details"
+ - Activate "Only send SMS and MMS messages"
