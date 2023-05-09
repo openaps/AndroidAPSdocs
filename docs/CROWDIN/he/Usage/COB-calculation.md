@@ -1,6 +1,12 @@
 # חישוב פחמימות פעילות (COB)
 
-## איך AndroidAPS מחשב את הפחמימות הפעילות?
+## How does AAPS calculate the COB value?
+
+When carbs are entered as part of a meal or correction, AAPS adds them to the current carbs on board (COB). AAPS then absorbs (removes) carbs based on observed deviations to BG values. The rate of absorption depends on the carb sensitivity factor. This is not a profile value but is calculated as ISF/IC and is how many mg/dl 1g of carbs will raise your BG.
+
+For example, if your profile ISF is 100 and your IC is 5, your CSF would be 20. For every 20 mg/dl your BG goes up, 1g of carbs are absorbed by AAPS. Positive IOB also effects this calculation. So, if AAPS expected your BG to go down by 20 mg/dl because of IOB and it instead stayed flat, it would also absorb 1g of carbs.
+
+Carbs will also be absorbed via the methods described below based on what sensitivity algorithm is used.
 
 ### Oref1
 
@@ -25,7 +31,7 @@ absorption is calculated to have `COB == 0` after specified time
 
 AAPS מזהיר אם אתם עומדים לקבל בולוס עם COB מארוחה קודמת והאלגוריתם חושב שחישוב ה-COB הנוכחי עלול להיות שגוי. במקרה זה הוא יציג הודעה נוספת עח כך במסך האישור לאחר השימוש באשף הבולוס.
 
-### כיצד AndroidAPS מזהה ערכי COB שגויים?
+### How does AAPS detect wrong COB values?
 
 בדרך כלל AAPS מזהה ספיגת פחמימות באמצעות סטיות ברמת הסוכר. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called 'fallback'). מכיוון ששיטה זו מחשבת רק את ספיגת הפחמימות המינימלית מבלי להתחשב בסטיות של רמת הסוכר, היא עלולה להוביל לערכי COB שגויים.
 
