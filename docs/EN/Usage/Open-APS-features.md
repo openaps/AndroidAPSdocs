@@ -82,7 +82,9 @@ Here, you can choose if you want to use the [sensitivity detection](../Configura
 This is a master control switch for SMB. If disabled, no SMBs will be given. If enabled, and at least one of the conditions described below is active, SMBs will be enabled. 
 
 ### Enable SMB with high temp targets
-If this setting is enabled, SMB will be allowed, but not necessarily enabled, when there is a high temporary target active (defined as anything above 100mg/dl regardless of profile target). This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, SMBs can be disabled by setting a temp target above 100mg/dl. This feature will also disable SMB regardless of what other condition is trying to enable SMB. 
+If this setting is enabled, SMB will be allowed, but not necessarily enabled, when there is a high temporary target active (defined as anything above 100mg/dl regardless of profile target). This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, SMBs can be disabled by setting a temp target above 100mg/dl. This option will also disable SMB regardless of what other condition is trying to enable SMB.
+
+If this setting is enabled, SMB will only be enabled with a high temp target if Enable SMB with temp targets is also enabled. 
 
 (Open-APS-features-enable-smb-always)=
 ### Enable SMB always
@@ -95,7 +97,7 @@ For other CGM/FGM like Freestyle Libre, ‘SMB always’ is deactivated until xD
 If this setting is enabled, SMB is enabled when the COB is greater than 0.
 
 ### Enable SMB with temp targets
-If this setting is enabled, SMB is enabled when there is any temp target set (eating soon, activity, hypo, custom). If this setting is enabled but "Enable SMB with high temp targets" is disabled, SMB will be enabled when a low temp target is set (below 100mg/dl) but disabled when a high temp target is set. 
+If this setting is enabled, SMB is enabled when there is any temp target set (eating soon, activity, hypo, custom). If this setting is enabled but "Enable SMB with high temp targets" is disabled, SMB will be enabled when a low temp target is set (below 100mg/dl) but disabled when a high temp target is set.
 
 ### Enable SMB after carbs
 If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB has reached 0. For safety reasons, this option is only available for BG sources with a nice filtering system for noisy data. Currently it is only an available option with a Dexcom G5 or G6 if using the ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. If a BG value has too large of a deviation, the G5/G6 doesn’t send it and waits for the next value in 5 minutes.
