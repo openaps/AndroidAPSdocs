@@ -4,14 +4,14 @@ L'état est mis à jour une fois par heure et ne reflète que l'état dans Crowd
 
 :::{tip}
 
-Be careful the percentage of proofreading must be lower then the percentage of translations but they decided to show it on top of the translations. It's better to look only at the percentage level of translations to see if work is to be done.
+Attention, le pourcentage de relecture doit être inférieur au pourcentage de traductions, mais ils ont décidé de le montrer en plus des traductions. Il est préférable de ne regarder que le pourcentage de traductions pour voir s'il y a du travail à faire.
 
 :::
 
-:::{admonition} needed time for final publication
+:::{admonition} temps nécessaire pour la publication finale
 :class: note
 
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+Après la traduction dans Crowdin une synchronisation vers Github est planifiée chaque jour pour transférer des traductions vers Github en tant que pull request (PR).
 
 L'acceptation du PR est une tâche manuelle qui sera effectuée aussi vite que possible.
 

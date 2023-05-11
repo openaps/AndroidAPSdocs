@@ -1,6 +1,6 @@
 # Omnipod DASH
 
-הוראות אלה מיועדות להגדרת משאבת  **Omnipod DASH** ** החדשה (לא Omnipod Eros)**. מנהל ההתקן של Omnipod זמין כחלק מ-AndroidAPS החל מגרסה 3.0.
+הוראות אלה מיועדות להגדרת משאבת  **Omnipod DASH** ** החדשה (לא Omnipod Eros)**. The Omnipod driver is available as part of AAPS (AAPS) as of version 3.0.
 
 **** תוכנה זו היא חלק מפתרון לבלב מלאכותי DIY ואינו מוצר אך דורש ממכם לקרוא, ללמוד ולהבין את המערכת, כולל את אופן השימוש בה. האחריות על השימוש במערכת היא עליכם בלבד.**
 
@@ -24,9 +24,8 @@
 
 * **טלפון Android תואם** עם חיבור בלוטות' (BLE)
    -  לא כל דגמי הטלפון וגרסאות האנדרואיד מובטחות לעבוד כהלכה. יש לבדוק את [**הטלפונים שנבדקו עם DASH**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) או פשוט נסו עם הטלפון שלכם וספרו לנו את התוצאה (הפניה לטלפון ואזור גיאוגרפי, גרסת אנדרואיד, עבד / עם קשיים / לא עבד).
-   - **הערה חשובה: היו מספר מקרים של איבודי חיבור קבועים שאינם ניתנים לשחזור בעת שימוש בפודים ישנים יותר עם גירסת קושחה 3X.XX  היזהרו בעת שימוש בפודים הישנים האלה עם AndroidAPS, במיוחד עם התקני בלוטות' מחוברים אחרים!**  
-     שימו לב שמנהל ההתקן של AAPS עם Omnipod Dash מתחבר לפוד באמצעות בלוטות' בכל פעם שהוא שולח פקודה ואז מתנתק מיד לאחר מכן. חיבורי הבלוטות' עלולים להיות מופרעים על ידי מכשירים אחרים המקושרים לטלפון המפעיל את AAPS כגון אוזניות וכו'... (מה שעלול לגרום, במקרים נדירים, לבעיית חיבור או לשגיאות\אובדן פוד בהפעלה או לאחר מכן בחלק מדגמי הטלפון).
-   -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.md) instructions.
+   - **הערה חשובה: היו מספר מקרים של איבודי חיבור קבועים שאינם ניתנים לשחזור בעת שימוש בפודים ישנים יותר עם גירסת קושחה 3X.XX  Be careful when using these old pods with AAPS, especially with other Bluetooth devices connected!** Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. חיבורי הבלוטות' עלולים להיות מופרעים על ידי מכשירים אחרים המקושרים לטלפון המפעיל את AAPS כגון אוזניות וכו'... (מה שעלול לגרום, במקרים נדירים, לבעיית חיבור או לשגיאות\אובדן פוד בהפעלה או לאחר מכן בחלק מדגמי הטלפון).
+   -  **Version 3.0 or newer of AAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.md) instructions.
 * [**חיישן סוכר רציף (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
 הוראות אלה מניחות כי אתם מתחילים שימוש בפוד חדש; אם זה לא כך, אנא התאזרו בסבלנות ונסו להתחיל בתהליך זה לקראת החלפת הפוד הבא.
@@ -39,29 +38,31 @@
 
 *זה לא אומר שצריך לזרוק את ה-PDM, מומלץ לשמור אותו בסביבה כגיבוי למקרי חירום, למשל כאשר הטלפון הולך לאיבוד או AAPS אינו פועל כהלכה.*
 
-**הפוד לא יפסיק לספק אינסולין אם הוא מאבד חיבור ל-AndroidAPS**. מינוני הבזאלי המוגדרים כברירת מחדל מתוכנתים על הפוד בזמן הפעלתו כפי שהוגדר בפרופיל הפעיל הנוכחי. כל עוד AndroidAPS פעיל הוא ישלח פקודות של מינונים בזאליים זמניים שיפעלו לכל היותר 120 דקות. כאשר מסיבה כלשהי הפוד אינו מקבל פקודות חדשות (למשל בגלל שהתקשורת אבדה עקב מרחק גדול מהטלפון) הפוד יחזור אוטומטית למינוני הבזאלי המוגדרים כברירת מחדל.
+**Your pod will not stop delivering insulin when it is not connected to AAPS**. מינוני הבזאלי המוגדרים כברירת מחדל מתוכנתים על הפוד בזמן הפעלתו כפי שהוגדר בפרופיל הפעיל הנוכחי. As long as AAPS is operational it will send basal rate commands that run for a maximum of 120 minutes. כאשר מסיבה כלשהי הפוד אינו מקבל פקודות חדשות (למשל בגלל שהתקשורת אבדה עקב מרחק גדול מהטלפון) הפוד יחזור אוטומטית למינוני הבזאלי המוגדרים כברירת מחדל.
 
-**פרופילי בזאלי המתחילים בשעות לא עגולות אינם נתמכים ב-AndroidAPS.** **פרופיל ברירת המחדל ב-AndroidAPS אינו תומך במסגרת זמן של מינון בזאלי של 30 דקות** אם אתם חדשים ב-AndroidAPS ואתם מגדירים את הפרופיל הבזאלי הבסיסי שלך בפעם הראשונה, חשוב לשים לב שמינונים שמתחילים בשעה לא עגולה אינם נתמכים, ותצטרכו להתאים את פרופיל הבזאלי שלך כך שמינון יתחיל בשעה עגולה. לדוגמה, אם יש מינון בזאלי של למשל 1.1 יחידות שמתחיל בשעה 09:30 ויש לו משך של שעתיים ומסתיים בשעה 11:30, זה לא יעבוד. יהיה עליכם לעדכן את המינון של 1.1 יחידות לטווח זמן של 09:00-11:00 או 10:00-12:00. למרות שהחומרה של Omnipod Dash עצמה תומכת במרווחי פרופיל המינון הבזאלי של 30 דקות, AndroidAPS לא מסוגל לקחת אותם בחשבון עם האלגוריתמים שלה כרגע.
+**30 min Basal Rate Profiles are NOT supported in AAPS.** **The AAPS Profile does not support a 30 minute basal rate time frame** If you are new to AAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. לדוגמה, אם יש מינון בזאלי של למשל 1.1 יחידות שמתחיל בשעה 09:30 ויש לו משך של שעתיים ומסתיים בשעה 11:30, זה לא יעבוד. יהיה עליכם לעדכן את המינון של 1.1 יחידות לטווח זמן של 09:00-11:00 או 10:00-12:00. Even though the Omnipod Dash hardware itself supports the 30 min basal rate profile increments, AAPS is not able to take them into account with its algorithms currently.
+
+**0U/h profile basal rates are NOT supported in AAPS** While the DASH pods do support a zero basal rate, since AAPS uses multiples of the profile basal rate to determine automated treatment it cannot function with a zero basal rate. A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.
 
 ## הפעלת מנהל התקן ה-Dash ב-AAPS
 
-אפשר לאפשר את מנהל ההתקן של Dash בשני **אופנים**:
+You can enable the Dash driver in AAPS in **two ways**:
 
 ### אפשרות 1: התקנות חדשות
 
-כשמתקינים AndroidAPS לראשונה, **אשף ההתקנה** ילווה אתכם לאורך ההתקנה וההגדרה. בחרו "DASH" כשתגיעו לחלק של בחירת המשאבה.
+When you are installing AAPS for the first time, the **Setup Wizard** will guide you through installing AAPS. Select “DASH” when you reach Pump selection.
 
 ![Enable_Dash_1](../images/DASH_images/Enable_Dash/Enable_Dash_1.png)
 
-אם אתם לא בטוחים במעשיכם, בחרו "משאבה וירטואלית" ותוכלו לבחור ב-"DASH" מאוחר יותר, לאחר שהגדרתם את AndroidAPS (ראו אפשרות 2).
+When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up AAPS (see option 2).
 
 ### אפשרות 2: בונה התצורה
 
-בהתקנה קיימת, תוכלו לבחור במשאבת **DASH** בבונה התצורה:
+On an existing installation you can select the **DASH** pump from the Config builder:
 
-בפינה הימנית-עליונה **בתפריט ההמבורגר (☰)** בחרו **בונה התצורה (1)** ← **משאבה** ← **Dash** ← **בחירת הכפתור העגול ("כפתור רדיו") (2) ← גלגל שיניים (3)**.
+On the top-left hand corner **hamburger menu** select **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**.
 
-בסימון **V (4)** בתיבה ליד **גלגל השיניים (3)** אתם תאפשרו לתפריט Dash להופיע כלשונית בממשק AAPS תחת השם **DASH**. סימון ה-V יקל על הגישה אל הפקודות של DASH בעת השימוש ב-AAPS.
+Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the AAPS interface titled **DASH**. Checking this box will facilitate your access to the DASH commands when using AAPS.
 
 **NOTE:** A faster way to access the [**Dash settings**](DanaRS-Insulin-Pump-dash-settings) can be found below in the Dash settings section of this document.
 
@@ -69,17 +70,17 @@
 
 ### אימות בחירת מנהל התקן Omnipod
 
-כדי לוודא שהפעלת את מנהל ההתקן של Dash ב-AAPS, אם סימנתם את התיבה (4), **החליקו ימינה** מהלשונית **סקירה כללית**, שם תראו כעת לשונית **DASH**. אם לא סימנתם את התיבה, תמצאו את הלשונית DASH בתפריט ההמבורגר מימין למעלה.
+To verify that you have enabled the Dash driver in AAPS, if you have checked the box (4), **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab. If you have not checked the box, you’ll find the DASH tab in the hamburger menu upper left.
 
 ![Enable_Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
 ## תצורת Dash
 
-אנא **החלקו שמאלה** ללשונית **DASH** בה תוכלו לנהל את כל פונקציות הפוד (חלק מהפונקציות הללו אינן מופעלות או גלויות ללא פוד פעיל):
+Please **swipe left** to the **DASH** tab where you will be able to manage all pod functions (some of these functions are not enabled or visible without an active pod session):
 
-![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) רעננו את הקישור והסטטוס של הפוד, תוכלו להשתיק אזעקות פוד כאשר הוא מצפצף
+![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) Refresh Pod connectivity and status, be able to silence pod alarms when the pod beeps
 
-![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) ניהול פוד (הפעלה, השבתה, השמעת צפצוף בדיקה והיסטוריית פוד)
+![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) Pod Management (Activate, Deactivate, Play test beep, and Pod history)
 
 (OmnipodDASH-activate-pod)=
 
@@ -292,7 +293,7 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 
 ## הגדרות Dash
 
-The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. בסימון **V (4)** בתיבה ליד **גלגל השיניים (3)** אתם תאפשרו לתפריט Dash להופיע כלשונית בממשק AAPS תחת השם **DASH**.
+The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the AAPS interface titled **DASH**.
 
 ![Dash_settings_1](../images/DASH_images/Dash_settings/Dash_settings_1.png) ![Dash_settings_2](../images/DASH_images/Dash_settings/Dash_settings_2.png)
 
@@ -392,7 +393,7 @@ When no communication can be established with the pod for a preconfigured time a
 
 ### ייצוא הגדרות
 
-Exporting AndroidAPS settings enables you to restore all your settings, and maybe more importantly, all your Objectives. You may need to restore settings to the “last known working situation” or after uninstalling/reinstalling AndroidAPS or in case of phone loss, reinstalling on the new phone.
+Exporting AAPS settings enables you to restore all your settings, and maybe more importantly, all your Objectives. You may need to restore settings to the “last known working situation” or after uninstalling/reinstalling AAPS or in case of phone loss, reinstalling on the new phone.
 
 Note: The active pod information is included in the exported settings. If you import an "old" exported file, your actual pod will "die". There is no other alternative. In some cases (like a _programmed_ phone change), you may need to use the exported file to restore AndroisAPS settings **while keeping the current active Pod**. In this case it is important to only use the recently exported settings file containing the pod currently active.
 
@@ -421,30 +422,30 @@ When importing settings with an active Pod, make sure the export was done with t
 
 ### ייבוא הגדרות המכילות מצב פוד מפוד לא פעיל
 
-When importing settings containing data for a Pod that is no longer active, AndroidAPS will try to connect with it, which will obviously fail. You can not activate a new Pod in this situation.
+When importing settings containing data for a Pod that is no longer active, AAPS will try to connect with it, which will obviously fail. You can not activate a new Pod in this situation.
 
 To remove the old Pod session “try” to de-activate the Pod. The de-activation will fail. Select “Retry”. After the second or third retry you will get the option to remove the pod. Once the old pod is removed you will be able to activate a new Pod.
 
-### התקנה מחדש של AndroidAPS
+### Reinstalling AAPS
 
-When uninstalling AndroidAPS you will lose all your settings, objectives and the current Pod session. To restore them make sure you have a recent exported settings file available!
+When uninstalling AAPS you will lose all your settings, objectives and the current Pod session. To restore them make sure you have a recent exported settings file available!
 
 When on an active Pod, make also sure that you have an export for the current Pod session or you will lose the currently active Pod when importing older settings.
 
 1. ייצאו את ההגדרות שלך ושמרו עותק במקום בטוח.
-2. הסירו את התקנת AndroidAPS והפעילו מחדש את הטלפון.
-3. התקינו גרסה חדשה של AndroidAPS.
+2. Uninstall AAPS and restart your phone.
+3. Install the new version of AAPS.
 4. ייבוא הגדרות
 5. וודאו את כל ההעדפות (אפשר לייבא שוב הגדרות)
 6. הפעילו פוד חדש
 7. לבסוף: ייצאו קובץ הגדרות
 
-### עדכון AndroidAPS לגרסה חדשה יותר
+### Updating AAPS to a newer version
 
 In most cases there is no need to uninstall. You can do an “in-place” install by starting the installation for the new version. This is also possible when on an active Pod  session.
 
 1. ייבאו את ההגדרות.
-2. התקינו את גרסת AndroidAPS החדשה.
+2. Install  the new AAPS version.
 3. ודאו שההתקנה הצליחה
 4. המשיכו את השימוש בפוד הקיים או הפעילו פוד חדש.
 5. לבסוף: ייצאו קובץ הגדרות.
@@ -464,6 +465,6 @@ Please note that the Omnipod Dash driver presents a variety of unique alerts on 
 All of the development work for the Omnipod DASH driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
 
 -  **רמה 0** קראו את הסעיף הרלוונטי בתיעוד זה כדי להבטיח שאתם מבינים כיצד להשתמש במה שאתם מתקשים איתו.
--  **רמה 1:** אם אתם עדיין נתקלים בבעיות שאתם לא מצליחים לפתור באמצעות מסמך זה, אנא עברו לערוץ *#androidaps* ב-**Discord** באמצעות [קישור ההזמנה](https://discord.gg/4fQUWHZ4Mw).
--  **רמה 2:** חפשו בעיות קיימות כדי לראות אם הבעיה שלכם כבר דווחה ב-[בעיות](https://github.com/nightscout/AndroidAPS/issues) אם היא קיימת, אנא אשרו/הגיבו/הוסיפו מידע על הבעיה שלכם. אם לא, צרו [בעיה חדשה](https://github.com/nightscout/AndroidAPS/issues) וצרפו את [קובצי היומן (Log) שלכם](../Usage/Accessing-logfiles.md).
+-  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#AAPS* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues) if it exists, please confirm/comment/add information on your problem. אם לא, צרו [בעיה חדשה](https://github.com/nightscout/AndroidAPS/issues) וצרפו את [קובצי היומן (Log) שלכם](../Usage/Accessing-logfiles.md).
 -  **היו סבלניים - רוב חברי הקהילה שלנו מורכבים ממתנדבים בעלי אופי טוב, ופתרון בעיות דורש לעתים קרובות זמן וסבלנות מצד המשתמשים והמפתחים כאחד.**
