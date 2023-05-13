@@ -64,6 +64,7 @@ PS: Your fork and branch will still be sitting on your own personal GitHub accou
 We are using markdown for the docs pages. The files have got the suffix ".md".
 
 ### Text format
+
 * bold: `**text**`
 * italic: `*text*`
 * Headline 1: `# headline`
@@ -72,7 +73,7 @@ We are using markdown for the docs pages. The files have got the suffix ".md".
 
 ### ordered list
 
-
+```
 1. first
 1. second
 1. third
