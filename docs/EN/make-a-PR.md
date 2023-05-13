@@ -63,11 +63,6 @@ PS: Your fork and branch will still be sitting on your own personal GitHub accou
 
 We are using markdown for the docs pages. The files have got the suffix ".md".
 
-(make-a-PR-image-size)=
-### Image size
-
-If using images please use reasonable sizes. Screenshot images should be up to **1050 pixels wide**.
-
 ### Text format
 * bold: `**text**`
 * italic: `*text*`
@@ -128,79 +123,112 @@ You can insert lists in lists by indenting the next level with 4 more spaces to 
 
 ### Images
 
+To include images you use this markdown syntax.
+
 * images: `![alt text](../images/file.png)`
+
+Images names should confirm to one of following naming rules.
+
+* `filename-image-xx` where xx is a unique double digit number for the images in this file.
+* `filename-image-xx` where xx is a meaning full name for the author of the md file.
+
+Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+
+We are not translating images at the moment.
+
+(make-a-PR-image-size)=
+Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+
+* Screenshots from web pages images should be up to **1050 pixels wide**.
+* Diagramms of process flows should be up to **1050 pixels wide**.
+* Screenshots from the app should be up to **300 to 400 pixels wide**.
 
 ### Links
 
+#### External links
+
+External links are links to external web sites.
+
 * external link: `[alt text](www.url.tld)`
+
+#### Internal links to the start of a md file
+
+Internal links to pages are links to the start of a md file which is hosted on our own server.
+
 * internal link to .md page: `[alt text](../folder/file.md)`
-* internal link to headline: `[alt text](../folder/file.html#headline)`
 
-### Internal links
+#### Internal links to named inline refernces
 
-If you want to set an internal link within the AAPS documentation, please only use **relative links**. Only this will make the link work in the other languages (Czech, German...) as well.
+Internal links to named inline refernces are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
 
-* `[text](../Usage/Test.md)` will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
-* `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md
-* To set the link to an **anchor** (i.e. a headline) you let the file extension .md in place!
-  * `[text](../Usage/Test.md#anchor)`
+Add a named reference at the location in the target md file you want to jump to.
 
-### Notes
+`(name-of-my-md-file-this-is-my-fancy-named-reference)=`
 
-```
-```{admonition} Friendly Note
+The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
+
+Therefore it is a good practice to start with the filename and then the reference name you select.
+
+Use only lowercase letters and hyphenate words.
+
+Then link this refernce in the text you are writing with the following kind of link.
+* Internal links to named inline refernces: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+
+### Notes, Warnings, Collapsing Notes
+
+You can add notes and warning boxes to documentation.
+
+Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all.
+Please use these carefully as the documentation should be as easy to read as possible.
+
+#### Notes
+
+:::
+:::{admonition} Note
 :class: note
 
 This is a note.
-```
-```
+:::
+:::
 
-```{admonition} Friendly Note
+:::{admonition} Note
 :class: note
 
 This is a note.
-```
+:::
 
-### Warnings
+#### Warnings
 
-```
-```{admonition} Strong Warning
+:::
+:::{admonition} Warning
 :class: warning
 
 This is a warning.
-```
-```
+:::
+:::
 
-```{admonition} Strong Warning
+:::{admonition} Warning
 :class: warning
 
 This is a warning.
-```
+:::
 
-## Adding multiple images to the documentation
+#### Collapsing Notes
 
-If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
+:::
+:::{admonition} further detailed readings for interested readers
+:class: dropdown
 
-* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses GitHub. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png". 
-* Please use reasonable sizes. Screenshot images should be up to **1050 pixels wide**.
-* You can upload images in batches easily by:
+This admonition has been collapsed,
+meaning you can add longer form content here,
+without it taking up too much space on the page.
+:::
+:::
 
- 1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your GitHub username)).
+:::{admonition} further detailed readings for interested readers
+:class: dropdown
 
- 2. Click in the upper right corner where it says "Upload files"
-
- 3. Drag and drop your images into the screen
-
- 4. Commit these to your branch
-
- 5. Now, you can look for the URL/relative path of each file and use that to refer to when adding images into a page in the documentation.
-
- 6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the [correct code](./make-a-PR.html#code-syntax) for the page type you are on (.md or .rst).
-   The main thing is to have a plain text description, followed by a link with a relative path to the image, like this: 
-    * For .md pages: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)` 
-        (That code is exactly how the image below is embedded to be displayed.)
-    * For .rst pages: `.. image:: ../images/Example_batch_images_upload.png`<br>`  :alt: Example of uploading images in batches`
-
-![Example of uploading images in batches](./images/Example_batch_images_upload.png)
-
- 7. After adding images or making adjustments, you can submit a PR to the master branch of AndroidAPSdocs.
+This admonition has been collapsed,
+meaning you can add longer form content here,
+without it taking up too much space on the page.
+:::
