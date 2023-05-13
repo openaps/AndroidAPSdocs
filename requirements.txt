@@ -2,4 +2,5 @@ sphinx==5.3.0
 sphinx_rtd_theme==1.2.0
 sphinx-togglebutton
 myst_parser==0.18.1
+colon_fence
 urllib3==1.26.15
