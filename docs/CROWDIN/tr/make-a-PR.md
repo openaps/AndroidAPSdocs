@@ -8,7 +8,7 @@ Metnin nasıl biçimlendirileceğine (başlık, kalın...) ve bağlantıların a
 
 Herhangi bir sorunuz, geri bildiriminiz veya yeni fikirleriniz için [discord](https://discord.gg/4fQUWHZ4Mw) aracılığıyla dokümantasyon ekibiyle iletişime geçebilirsiniz. Çekme isteği yapmak zor değil, belgeleri düzenlemenize yardımcı olabiliriz.
 
-Bir noktada bir çekme isteği (PR) yapmanız önerilecektir. PR, çekme isteğinin kısaltmasıdır ve GitHub'da depolanan bilgileri eklemenin veya düzenlemenin bir yoludur. Aslında bir tane yapmak çok zor değil ve katkıda bulunmak için harika bir yol. Bu dokümantasyonlar, sizin gibi insanlar PR'lar yaptığı için burada. Bir hata yapmaktan veya bir şekilde yanlış dokümantasyonu düzenlemekten endişe etmeyin. Değişiklikler "resmi" AndroidAPS belge deposunda birleştirilmeden önce her zaman bir inceleme süreci vardır. PR sürecindeki herhangi bir kazayla orijinalleri bozamazsınız. Genel PR prosesi:
+Bir noktada bir çekme isteği (PR) yapmanız önerilecektir. PR, çekme isteğinin kısaltmasıdır ve GitHub'da depolanan bilgileri eklemenin veya düzenlemenin bir yoludur. Aslında bir tane yapmak çok zor değil ve katkıda bulunmak için harika bir yol. Bu dokümantasyonlar, sizin gibi insanlar PR'lar yaptığı için burada. Bir hata yapmaktan veya bir şekilde yanlış dokümantasyonu düzenlemekten endişe etmeyin. There is always a review process before changes are merged into the "formal" AAPS documentation repository. PR sürecindeki herhangi bir kazayla orijinalleri bozamazsınız. Genel PR prosesi:
 
 * Mevcut içeriği düzenleyerek kod veya dokümanlarda düzenlemeler ve iyileştirmeler yapın.
 * Düzenlemelerinizin iyi görünüp görünmediğini bir kez daha kontrol edin.
@@ -28,48 +28,41 @@ Bir noktada bir çekme isteği (PR) yapmanız önerilecektir. PR, çekme isteği
 
 ![dokümanı düzenle](./images/PR1.png)
 
-     Veya sağ üst köşedeki "GitHub'da Düzenle" bağlantısına tıklayabilir ve ardından düzenlenecek sayfa içeriğinin üst çubuğunda görünen kalem simgesine tıklayabilirsiniz.
-    
+Or you can click on the "Edit in GitHub" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited.
 
 ![RTD io](./images/PR2.png)
 
 3. Adım 2'deki seçeneklerden biri veya diğeri, düzenlemelerinizin kaydedileceği deponuzda yeni bir dal oluşturacaktır. Bu dosyada düzenlemelerinizi yapabilirsiniz.
 
-Dokümanlar sayfaları için markdown kullanıyoruz. Dosya ".md" son ekine sahiptir. Markdown özelliği sabit değildir ve şu anda markdown dosyalarımız için myst_parser kullanıyoruz. [Aşağıda açıklanan](make-a-PR-code-syntax) doğru sözdizimini kullanmaya dikkat edin.
+We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](make-a-PR-code-syntax).
 
-![Şubeyi düzenle](./images/PR3.png)
+![Edit branch](./images/PR3.png)
 
 4. "<>Dosyayı düzenle" sekmesinde çalışıyorsunuz. Değiştirdiğiniz her şeyin istediğiniz gibi göründüğünden emin olmak için yeni bir görünüm için "Preview changes" "Değişiklikleri önizle" sekmesini seçin (yazım hataları vs.). Gerekli bir iyileştirme görürseniz, daha fazla iyileştirme yapmak için düzenleme sekmesine geri dönün. 
 
-![önizleme modu](./images/PR5.png)
+![preview mode](./images/PR5.png)
 
 5. Düzenlemelerinizi bitirdiğinizde, sayfanın en altına gidin. Alttaki kutuda, "İsteğe bağlı bir genişletilmiş açıklama ekleyin..." yazan metin alanına yorumlarınızı girin. Varsayılan başlık dosya adıdır. Değişikliğin **nedenini** açıklayan bir cümle eklemeye çalışın. Nedeni ilişkilendirmek, gözden geçirenlerin PR ile ne yapmaya çalıştığınızı anlamasına yardımcı olur.
 
-![yorum yap](./images/PR4.png)
+![commit comments](./images/PR4.png)
 
 6. Yeşil "Dosya değişiklikleri öner" veya "Değişiklikleri kabul et" düğmesini tıklayın. Açılan sayfada "Create Pull Request" "Çekme Talebi Oluştur" u tıklayın ve sonraki sayfada tekrar "Çekme Talebi Oluştur" u tıklayın.
 
-![çekme isteği oluşturun](./images/PR6.png)
+![create pull request](./images/PR6.png)
 
-7. Bu, bir çekme isteğinin (PR) açılmasını tamamlar. GitHub, PR'ye başlıktan sonra bulunan bir sayı ve bir kare işaret atar. Geri bildirimi kontrol etmek için bu sayfaya dönün (veya size e-postayla GitHub bildirimleri gönderildiyse, PR ile ilgili herhangi bir etkinlik hakkında bilgilendiren e-postalar alacaksınız). Düzenleme şimdi, ekibin AndroidAPS için ana belgelere geçmeden önce gözden geçireceği ve potansiyel olarak geri bildirimde bulunacağı bir PR listesinde olacak! PR'nin ilerlemesini kontrol etmek isterseniz, GitHub hesabınızın sağ üst köşesindeki zil logosuna tıklayıp tüm PR'lerinizi görebilirsiniz.
+7. Bu, bir çekme isteğinin (PR) açılmasını tamamlar. GitHub, PR'ye başlıktan sonra bulunan bir sayı ve bir kare işaret atar. Geri bildirimi kontrol etmek için bu sayfaya dönün (veya size e-postayla GitHub bildirimleri gönderildiyse, PR ile ilgili herhangi bir etkinlik hakkında bilgilendiren e-postalar alacaksınız). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! PR'nin ilerlemesini kontrol etmek isterseniz, GitHub hesabınızın sağ üst köşesindeki zil logosuna tıklayıp tüm PR'lerinizi görebilirsiniz.
 
-![PR takibi](./images/PR7.png)
+![PR tracking](./images/PR7.png)
 
-Not: Çatalınız (fork) ve şubeniz (branch) hala kendi kişisel GitHub hesabınızda kalıyor olacak. PR'nizin birleştiğine dair bir bildirim aldıktan sonra, işiniz bittiyse şubenizi silebilirsiniz (Adım 8'in bildirim alanı, kapatıldığında veya birleştiğinde şubeyi silmek için bir bağlantı sağlayacaktır). Gelecekteki düzenlemeler için, bu prosedürü izlerseniz, düzenlemeler her zaman AndroidAPSdocs depolarının güncellenmiş bir sürümüyle başlayacaktır. Bir PR isteği başlatmak için başka bir yöntem kullanmayı seçerseniz (örneğin, başlangıç noktası olarak çatallı deponuzun ana dalından başlayarak düzenleme), önce bir "karşılaştırma" gerçekleştirerek ve çatalınızı en son güncellemenizden bu yana gerçekleşen tüm güncellemeleri birleştirerek deponuzun güncel olduğundan emin olmanız gerekir. İnsanlar depolarını güncellemeyi unutmaya meyilli olduğundan, "karşılaştırma" yapmaya alışana kadar yukarıda özetlenen PR sürecini kullanmanızı öneririz.
+PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
 
 (make-a-PR-code-syntax)=
 
 ## Sözdizimi kodları
 
-Dokümanlar sayfaları için markdown kullanıyoruz. Dosyalar ".md" son ekine sahiptir.
+We are using markdown for the docs pages. The files have got the suffix ".md".
 
-(make-a-PR-image-size)=
-
-### Görüntü boyutu
-
-Görüntüler kullanıyorsanız lütfen makul boyutları kullanın. Ekran görüntüleri **1050 piksel genişliğinde** olmalıdır.
-
-### Metin Formatı
+### Text format
 
 * kalın: `**metin**`
 * italik: `*metin*`
@@ -77,121 +70,138 @@ Görüntüler kullanıyorsanız lütfen makul boyutları kullanın. Ekran görü
 * Başlık 2: `## başlık`
 * Başlık 3: `### başlık`
 
-### Sıralı Liste
+### ordered list
 
-    1. birinci
-    1. ikinci
-    1. üçüncü
+    1. first
+    1. second
+    1. third
     
 
 1. birinci
 2. saniye
-3. üçüncü
+3. third
 
-### sırasız liste
+### unordered list
 
-    - bir öğe
-    - başka bir öğe
-    - ve başka bir öğe
+    - one element
+    - another element
+    - and another element
     
 
 * bir öğe
 * başka bir öğe
 * ve başka bir öğe
 
-### çok seviyeli liste
+### multi level list
 
-Bir sonraki düzeyi bir öncekinden 4 boşluk daha sağda girintileyerek listelere ilave liste ekleyebilirsiniz.
+You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
 
-    1. birinci
-    1. ikinci
-    1. üçüncü
-       1. bir öğe
-       1. başka bir öğe
-      1. va başka bir öğe
-    1. dört
-    1. beş
-    1. altı
+    1. first
+    1. second
+    1. third
+      1. one element
+      1. another element
+      1. and another element
+    1. four
+    1. five
+    1. six
     
 
 1. birinci
 2. saniye
-3. üçüncü 1. bir öğe 1. başka bir öğe 1. ve başka bir öğe
+3. third 
+    1. bir öğe
+    2. başka bir öğe
+    3. ve başka bir öğe
 4. dört
 5. beş
-6. altı
+6. six
 
-### Görseller
+### Images
+
+To include images you use this markdown syntax.
 
 * images: `![alt text](../images/file.png)`
 
-### Bağlantılar
+Images names should confirm to one of following naming rules.
 
-* harici bağlantı: `[alt metin](www.url.tld)`
-* .md sayfasına dahili bağlantı: `[alt metin](../folder/file.md)`
-* başlığa dahili bağlantı: `[alt metin](../folder/file.html#headline)`
+* `filename-image-xx` where xx is a unique double digit number for the images in this file.
+* `filename-image-xx` where xx is a meaning full name for the author of the md file.
 
-### Dahili bağlantılar
+Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
 
-AndroidAPS dokümantasyonunda dahili bir bağlantı ayarlamak istiyorsanız, lütfen yalnızca **göreceli bağlantıları** kullanın. Yalnızca bu yöntem, bağlantının diğer dillerde de (Çekçe, Almanca...) çalışmasını sağlar.
+We are not translating images at the moment.
 
-* `[text](../Usage/Test.md)`, bulunduğunuz bir dizinden /Usage alt dizinine dahili bir köprü oluşturacaktır. Hedef dosyanın sonu .md veya .rst olmalıdır (.html değil)
-* `[text](./Usage/Test.md)` bulunduğunuz yerden /Usage alt dizinine dahili bir köprü kurar. Hedef dosyanın sonu .md olmalıdır
-* Bağlantıyı bir **çapaya** (yani bir başlığa) ayarlamak için .md dosya uzantısını yerinde bırakın! 
-  * `[text](../Usage/Test.md#anchor)`
+(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
 
-### Notlar
+* Screenshots from web pages images should be up to **1050 pixels wide**.
+* Diagramms of process flows should be up to **1050 pixels wide**.
+* Screenshots from the app should be up to **300 to 400 pixels wide**.
 
-    ```{admonition} Dostça Not
-    :class: not
-    
-    Bu bir not.
-    
+### Links
 
-    <br />```{admonition} Dostça Not
-    :class: not
-    
-    Bu bir not.
-    
+#### External links
 
-### Uyarılar
+External links are links to external web sites.
 
-    ```{admonition} Güçlü Uyarı
-    :class: uyarı
-    
-    Bu bir uyarı.
-    
+* external link: `[alt text](www.url.tld)`
 
-    <br />```{admonition} Güçlü Uyarı
-    :class: uyarı
-    
-    Bu bir uyarı.
-    
+#### Internal links to the start of a md file
 
-## Dokümantasyona birden çok görüntü ekleme
+Internal links to pages are links to the start of a md file which is hosted on our own server.
 
-Dokümanların bazı bölümlerine görsel olarak yardımcı olacak görüntü ve fotoğraf eklemek de dahil çok sayıda düzenleme yapmayı planlıyorsanız (teşekkürler!), aşağıdaki yaklaşımı kullanmak isteyebilirsiniz:
+* internal link to .md page: `[alt text](../folder/file.md)`
 
-* Ekran görüntülerini kaydederken ekran görüntülerini açıklayıcı bir adla yeniden adlandırın - ancak GitHub'ın kafasını karıştıracağı için boşluk kullanmamaya çalışın. Bunun yerine alt çizgi kullanın. "Örnek toplu görüntüler upload.png" yerine Örnek_toplu_görüntüler_upload.png. 
-* Lütfen makul ölçüler kullanın. Ekran görüntüleri **1050 piksel genişliğinde** olmalıdır.
-* Görüntüleri toplu şekilde aşağıdakileri adımları uygulayıp kolayca yükleyebilirsiniz:
-  
-  1. Görüntüler klasörüne gidin (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - ancak bunu yapabilmek için dokümanlar Görüntüler klasörünün çatalında/kopyasında olduğunuzdan emin olun ( URL'deki "openaps" ifadesini GitHub kullanıcı adınızla değiştirin)).
-  
-  2. Sağ üst köşede "Dosya yükle" yazan yere tıklayın
-  
-  3. Görsellerinizi ekrana sürükleyip bırakın
-  
-  4. Bunları şubenize teslim edin
-  
-  5. Artık her dosyanın URL'sini/göreceli yolunu arayabilir ve bunu belgelerdeki bir sayfaya resim eklerken başvurmak için kullanabilirsiniz.
-  
-  6. Görsellerin nasıl ekleneceğine dair örnekleri görmek, görsellerin zaten başarıyla gömülü olduğu sayfadan bir örnek görmek için bir sayfanın "ham" koduna bakabilirsiniz. Bulunduğunuz sayfa türü (.md veya .rst) için [doğru kodu](./make-a-PR.html#code-syntax) kullandığınızdan emin olun. Ana amaç, düz bir metin açıklamasına sahip olmak ve ardından aşağıdaki gibi görüntüye göreli bir yol içeren bir bağlantıya sahip olmaktır:
-    
-    * .md sayfaları için: `![Görüntüleri toplu halde yükleme örneği](../images/Example_batch_images_upload.png)`
-    * .rst sayfaları için: `.. image:: ../images/Example_batch_images_upload.png`  
-      `:alt: Görüntüleri toplu halde yükleme örneği`
+#### Internal links to named inline refernces
 
-![Toplu halde resim yükleme örneği](./images/Example_batch_images_upload.png)
+Internal links to named inline refernces are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
 
-7. Resim ekledikten veya ayarlamalar yaptıktan sonra, AndroidAPSdocs'un ana dalına bir PR gönderebilirsiniz.
+Add a named reference at the location in the target md file you want to jump to.
+
+`(name-of-my-md-file-this-is-my-fancy-named-reference)=`
+
+The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
+
+Therefore it is a good practice to start with the filename and then the reference name you select.
+
+Use only lowercase letters and hyphenate words.
+
+Then link this refernce in the text you are writing with the following kind of link.
+
+* Internal links to named inline refernces: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+
+### Notes, Warnings, Collapsing Notes
+
+You can add notes and warning boxes to documentation.
+
+Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all. Please use these carefully as the documentation should be as easy to read as possible.
+
+#### Notes
+
+::: :::{admonition} Note :class: note
+
+This is a note. ::: :::
+
+:::{admonition} Note :class: note
+
+This is a note. :::
+
+#### Uyarılar
+
+::: :::{admonition} Warning :class: warning
+
+This is a warning. ::: :::
+
+:::{admonition} Warning :class: warning
+
+This is a warning. :::
+
+#### Collapsing Notes
+
+::: :::{admonition} further detailed readings for interested readers :class: dropdown
+
+This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page. ::: :::
+
+:::{admonition} further detailed readings for interested readers :class: dropdown
+
+This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page. :::
