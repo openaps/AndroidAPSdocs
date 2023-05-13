@@ -40,7 +40,6 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
     'myst_parser',
-    'colon_fence',
     'sphinx_togglebutton',
     # 'alabaster',
 ]
