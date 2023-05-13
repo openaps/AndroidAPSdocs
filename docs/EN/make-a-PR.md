@@ -63,21 +63,39 @@ PS: Your fork and branch will still be sitting on your own personal GitHub accou
 
 We are using markdown for the docs pages. The files have got the suffix ".md".
 
+Markwodn is a very simple text formating language which is separates text content from text formating.
+
+The writer only e.g. marks a headline as level 1 headline and the markdown processor generate during processing the HTML code to render the heading in HTML.
+
+The idea behind this is that
+* the writer should think about the text and not the formating first and
+* the markdown text is open for exchange between different markdown tools instead of e.g. proprietray tools like Mircosoft Windows.
+
+Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard to
+* stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
+* enable us to use a transaltion services to translate the english language in a target language like French or German because they can work on markdown but not complex formating codes because they can't separate there content from layout which might be fatal.
+
+### Headlines
+
+* Headline 1: `# headline`
+* Headline 2: `## headline`
+* Headline 3: `### headline`
+* Headline 4: `#### headline`
+
+We try to avoid further leveles of headlines.
+
 ### Text format
 
 * bold: `**text**`
 * italic: `*text*`
-* Headline 1: `# headline`
-* Headline 2: `## headline`
-* Headline 3: `### headline`
 
 ### ordered list
 
-```
+:::
 1. first
 1. second
 1. third
-```
+:::
 
 1. first
 1. second
@@ -85,11 +103,11 @@ We are using markdown for the docs pages. The files have got the suffix ".md".
 
 ### unordered list
 
-```
+:::
 - one element
 - another element
 - and another element
-```
+:::
 
 - one element
 - another element
@@ -100,7 +118,7 @@ We are using markdown for the docs pages. The files have got the suffix ".md".
 
 You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
 
-```
+:::
 1. first
 1. second
 1. third
@@ -110,7 +128,7 @@ You can insert lists in lists by indenting the next level with 4 more spaces to 
 1. four
 1. five
 1. six
-```
+:::
 
 1. first
 1. second
@@ -186,52 +204,52 @@ Please use these carefully as the documentation should be as easy to read as pos
 
 #### Notes
 
-```
-```{admonition} Note
+::::
+:::{admonition} Note
 :class: note
 
 This is a note.
-```
-```
+:::
+::::
 
-```{admonition} Note
+:::{admonition} Note
 :class: note
 
 This is a note.
-```
+:::
 
 #### Warnings
 
-```
-```{admonition} Warning
+::::
+:::{admonition} Warning
 :class: warning
 
 This is a warning.
-```
-```
+:::
+::::
 
-```{admonition} Warning
+:::{admonition} Warning
 :class: warning
 
 This is a warning.
-```
+:::
 
 #### Collapsing Notes
 
-```
-```{admonition} further detailed readings for interested readers
+::::
+:::{admonition} further detailed readings for interested readers
 :class: dropdown
 
 This admonition has been collapsed,
 meaning you can add longer form content here,
 without it taking up too much space on the page.
-```
-```
+:::
+::::
 
-```{admonition} further detailed readings for interested readers
+:::{admonition} further detailed readings for interested readers
 :class: dropdown
 
 This admonition has been collapsed,
 meaning you can add longer form content here,
 without it taking up too much space on the page.
-```
+:::
