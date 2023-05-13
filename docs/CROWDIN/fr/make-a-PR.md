@@ -62,71 +62,100 @@ PS: Your fork and branch will still be sitting on your own personal GitHub accou
 
 We are using markdown for the docs pages. The files have got the suffix ".md".
 
+Markdown is a very simple text formating language which separates text content from text formating.
+
+The writer only e.g. marks a headline as level 1 headline and the markdown processor generate during processing the necessary HTML code to render the heading in HTML.
+
+The idea behind this is that
+
+* the writer should think about the text and not the formating first,
+* the markdown text is open for exchange between different markdown tools instead of e.g. proprietray tools like Mircosoft Windows and
+* you can generate several output formats from one markdown file.
+
+Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard to
+
+* stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
+* enable us to use a transaltion services to translate the english language in a target language like French or German because they can work on markdown but not complex formating codes because they can't separate there content from layout which might be fatal.
+
+### Headlines
+
+* Headline 1: `# headline`
+* Headline 2: `## headline`
+* Headline 3: `### headline`
+* Headline 4: `#### headline`
+
+We try to avoid further leveles of headlines.
+
 ### Text format
 
-* gras : `**text**`
-* italique : `*text*`
-* Titre 1 : `# titre`
-* Titre 2 : `## titre`
-* Titre 3 : `### titre`
+* bold: `**text**`
+* italic: `*text*`
 
 ### ordered list
 
-    1. first
-    1. second
-    1. third
-    
+:::
 
 1. premier
 2. deuxième
-3. third
+3. third :::
+
+4. premier
+
+5. deuxième
+6. third
 
 ### unordered list
 
-    - one element
-    - another element
-    - and another element
-    
+:::
 
-* un élément
-* un autre élément
-* et un autre élément
+* one element
+* another element
+* and another element :::
+
+* one element
+
+* another element
+* and another element
 
 ### multi level list
 
 You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
 
-    1. first
-    1. second
-    1. third
-      1. one element
-      1. another element
-      1. and another element
-    1. four
-    1. five
-    1. six
-    
+:::
 
 1. premier
 2. deuxième
 3. third 
-    1. un élément
-    2. un autre élément
-    3. et un autre élément
+    1. one element
+    2. another element
+    3. and another element
 4. quatre
 5. cinq
-6. six
+6. six :::
+
+7. premier
+
+8. deuxième
+9. third 
+    1. one element
+    2. another element
+    3. and another element
+10. quatre
+11. cinq
+12. six
 
 ### Images
 
 To include images you use this markdown syntax.
 
-* images : `![alt text](../images/file.png)`
+* images: `![alt text](../images/file.png)`
 
-Images names should confirm to one of following naming rules.
+The type of image should be PNG or JPEG.
 
-* `filename-image-xx` where xx is a unique double digit number for the images in this file.
-* `filename-image-xx` where xx is a meaning full name for the author of the md file.
+Images names should confirm to one of following naming rules. In the example I use png as suffix. In case you use JPEG please replace it with jpeg.
+
+* `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
+* `filename-image-xx.png` where xx is a meaning full name for the author of the md file.
 
 Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
 
@@ -178,9 +207,9 @@ Furthermore you can add collapsing notes for detailed information which would us
 
 #### Notes
 
-::: :::{admonition} Note :class: note
+:::: :::{admonition} Note :class: note
 
-This is a note. ::: :::
+This is a note. ::: ::::
 
 :::{admonition} Note :class: note
 
@@ -188,9 +217,9 @@ This is a note. :::
 
 #### Warnings
 
-::: :::{admonition} Warning :class: warning
+:::: :::{admonition} Warning :class: warning
 
-This is a warning. ::: :::
+This is a warning. ::: ::::
 
 :::{admonition} Warning :class: warning
 
@@ -198,9 +227,9 @@ This is a warning. :::
 
 #### Collapsing Notes
 
-::: :::{admonition} further detailed readings for interested readers :class: dropdown
+:::: :::{admonition} further detailed readings for interested readers :class: dropdown
 
-This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page. ::: :::
+This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page. ::: ::::
 
 :::{admonition} further detailed readings for interested readers :class: dropdown
 
