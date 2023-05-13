@@ -186,15 +186,13 @@ Please use these carefully as the documentation should be as easy to read as pos
 
 #### Notes
 
-:::
-
+```
 :::{admonition} Note
 :class: note
 
 This is a note.
 :::
-
-:::
+```
 
 :::{admonition} Note
 :class: note
@@ -204,15 +202,13 @@ This is a note.
 
 #### Warnings
 
-:::
-
+```
 :::{admonition} Warning
 :class: warning
 
 This is a warning.
 :::
-
-:::
+```
 
 :::{admonition} Warning
 :class: warning
@@ -222,8 +218,7 @@ This is a warning.
 
 #### Collapsing Notes
 
-:::
-
+```
 :::{admonition} further detailed readings for interested readers
 :class: dropdown
 
@@ -231,8 +226,7 @@ This admonition has been collapsed,
 meaning you can add longer form content here,
 without it taking up too much space on the page.
 :::
-
-:::
+```
 
 :::{admonition} further detailed readings for interested readers
 :class: dropdown
