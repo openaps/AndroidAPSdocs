@@ -72,7 +72,7 @@ We are using markdown for the docs pages. The files have got the suffix ".md".
 
 ### ordered list
 
-```
+
 1. first
 1. second
 1. third
@@ -127,10 +127,12 @@ To include images you use this markdown syntax.
 
 * images: `![alt text](../images/file.png)`
 
-Images names should confirm to one of following naming rules.
+The type of image should be PNG or JPEG.
 
-* `filename-image-xx` where xx is a unique double digit number for the images in this file.
-* `filename-image-xx` where xx is a meaning full name for the author of the md file.
+Images names should confirm to one of following naming rules. In the example I use png as suffix. In case you use JPEG please replace it with jpeg.
+
+* `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
+* `filename-image-xx.png` where xx is a meaning full name for the author of the md file.
 
 Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
 
@@ -183,52 +185,52 @@ Please use these carefully as the documentation should be as easy to read as pos
 
 #### Notes
 
-:::
-:::{admonition} Note
+```
+```{admonition} Note
 :class: note
 
 This is a note.
-:::
-:::
+```
+```
 
-:::{admonition} Note
+```{admonition} Note
 :class: note
 
 This is a note.
-:::
+```
 
 #### Warnings
 
-:::
-:::{admonition} Warning
+```
+```{admonition} Warning
 :class: warning
 
 This is a warning.
-:::
-:::
+```
+```
 
-:::{admonition} Warning
+```{admonition} Warning
 :class: warning
 
 This is a warning.
-:::
+```
 
 #### Collapsing Notes
 
-:::
-:::{admonition} further detailed readings for interested readers
+```
+```{admonition} further detailed readings for interested readers
 :class: dropdown
 
 This admonition has been collapsed,
 meaning you can add longer form content here,
 without it taking up too much space on the page.
-:::
-:::
+```
+```
 
-:::{admonition} further detailed readings for interested readers
+```{admonition} further detailed readings for interested readers
 :class: dropdown
 
 This admonition has been collapsed,
 meaning you can add longer form content here,
 without it taking up too much space on the page.
-:::
+```
