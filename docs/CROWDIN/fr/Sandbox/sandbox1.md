@@ -1,4 +1,4 @@
-# fichier sandbox interne 1 pour les tests
+# internal sandbox file 1 for testing our sprint
 
 :::{admonition} pas besoin de traduire ceci
 :class: note
