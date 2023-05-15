@@ -61,9 +61,9 @@ The state of the translations per language for app and documentation can be foun
 ```
 
 ```{toctree}
-:caption: Change language
+:caption: Home
 
-Change language <./changelanguage.md>
+Intro <intro.md>
 
 ```
 
