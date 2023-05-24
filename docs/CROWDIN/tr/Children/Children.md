@@ -4,14 +4,14 @@
 :alt: Çocukları izleme
 ```
 
-AAPS offer several options for remote monitoring of children and also allows to send remote commands. Of course you can also use remote monitoring to follow your partner or friend.
+AAPS, çocukların uzaktan izlenmesi için çeşitli seçenekler sunar ve ayrıca uzaktan sms komutları göndermeye izin verir. Elbette, partnerinizi veya arkadaşınızı takip etmek için de uzaktan izlemeyi kullanabilirsiniz.
 
 ## Fonksiyonlar
 
-- Kid's pump is controlled by kid's phone using AAPS.
-- Ebeveynler, telefonlarında **NSClient uygulamasını** kullanarak KŞ seviyeleri, AKRB, AİNS gibi ilgili tüm verileri görerek uzaktan takip edebilirler. Settings must be the same in AAPS and NSClient app.
+- Çocuğun pompası, AAPS kullanılarak çocuğun telefonu tarafından kontrol edilir.
+- Ebeveynler, telefonlarında **NSClient uygulamasını** kullanarak KŞ seviyeleri, AKRB, AİNS gibi ilgili tüm verileri görerek uzaktan takip edebilirler. Ayarlar AAPS ve NSClient uygulamasında aynı olmalıdır.
 - Ebeveynler, telefonlarında **xDrip+ uygulamasını takipçi modunda** kullanarak KŞ uyarılarını alabilirler.
-- Remote control of AAPS using [SMS Commands](../Children/SMS-Commands.md) secured by two-factor authentication.
+- [SMS Komutları](../Children/SMS-Commands.md) kullanılarak AAPS'in uzaktan kontrolü, iki faktörlü kimlik doğrulama ile güvence altına alınmıştır.
 - NSClient uygulaması aracılığıyla uzaktan kontrol, yalnızca senkronizasyonunuz iyi çalışıyorsa önerilir (yani, GH "geçici hedef", GBO değişimleri gibi veri değişikliklerini görmüyorsanız), [Daha fazla ayrıntı için Sürüm 2.8.1.1 için sürüm notlarına bakınız](Releasenotes-important-hints-2-8- 1-1).
 
 ## Uzaktan izleme için araçlar ve uygulamalar
@@ -32,7 +32,7 @@ A smartwatch can be a very useful tool in helping manage AAPS with kids. A coupl
 ## Dikkat edilmesi gereken önemli noktalar
 
 - Doğru [tedavi faktörlerini](FAQ-how-to-begin) (bazal oran, İES, İDF...) ayarlamak, çocuklar için özellikle büyüme hormonları söz konusu olduğunda zor olmaktadır.
-- Settings must be the same in AAPS and NSClient app.
+- Ayarlar AAPS ve NSClient uygulamasında aynı olmalıdır.
 - AAPS ana telefonunun yalnızca döngü çalıştırıldıktan sonra karşıya bilgi yükleyeceğini, bunun yanı sıra yükleme ve indirme süresi nedeniyle ana ve takipçi arasında bilgide zaman farkının oluşacağını da göz önünde bulundurun.
 - Bu nedenle, uzaktan izleme ve uzaktan tedaviye başlamadan önce, bunları doğru bir şekilde ayarlamak için zaman ayırın ve çocuğunuz yanınızdayken test edin. Okul tatilleri bunun için iyi bir zaman olabilir.
 - Uzaktan kontrol çalışmadığında acil durum planınız nedir (örn. ağ sorunları)?
