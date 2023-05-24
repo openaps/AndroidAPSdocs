@@ -182,10 +182,10 @@ Galaxy S10 telefonundaki bir güncellemeden sonra SMS komutlarının çalışmad
 ```{image} ../images/SMSdisableChat.png
 :alt: SMS as chat message devre dışı
 ```
-### Android Messages App
+### Android Mesajları Uygulaması
 
-If you are having issues sending or receiving SMS commands with the Android Messages app disable end-to-end ecryption on both caregiver and child's phones.
- - open the specific SMS conversation in Messages
- - Select the options ellipisis in the top right corner
- - select "Details"
- - Activate "Only send SMS and MMS messages"
+Android Mesaj uygulamasıyla SMS komutları gönderip alırken sorun yaşıyorsanız, hem ebeveyn hem de çocuğun telefonlarında uçtan uca şifrelemeyi devre dışı bırakın.
+ - Herhangi bir SMS mesajını açın
+ - Sağ üst köşedeki üç noktayı seçin
+ - "Detaylar"ı seçin
+ - "Yalnızca SMS ve MMS mesajları gönder" seçeneğini etkinleştirin
