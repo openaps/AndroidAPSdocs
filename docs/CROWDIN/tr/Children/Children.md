@@ -22,12 +22,12 @@ AAPS, çocukların uzaktan izlenmesi için çeşitli seçenekler sunar ve ayrıc
 - Takipçi modunda [xDrip+](../Configuration/xdrip.md) (esas olarak KŞ değerleri ve **alarmlar**)
 - iOS'ta [Sugarmate](https://sugarmate.io/) veya [Spike](https://spike-app.com/) (esas olarak KŞ değerleri ve **alarmlar**)
 
-## Smartwatch options
+## Akıllı saat seçenekleri
 
-A smartwatch can be a very useful tool in helping manage AAPS with kids. A couple of different configurations are possible:
+Akıllı saat, çocuklarla AAPS'nin yönetilmesine yardımcı olmak için çok yararlı bir araç olabilir. Birkaç farklı konfigürasyon mümkündür:
 
-- If NSClient is installed on the parents phone, the [NSClient WearOS app](https://github.com/nightscout/AndroidAPS/releases/) can be installed on a compatible smartwatch connected to the parent's phone. This will show current BG, loop status and allow carb entry, temp targets and profile changes. It will NOT allow bolusing from the WearOS app.
-- Alternatively, the [AAPS WearOS app](https://androidaps.readthedocs.io/en/latest/Configuration/Watchfaces.html) can be built and installed on a compatible smartwatch, connected to the kid's phone but worn by the parent. This includes all the functions listed above as well as the ability to bolus insulin. This allows the parent to adminster insulin without needing to remove the kid's phone from however it is kept on them.
+- Ebeveynin telefonunda NSClient yüklüyse, ebeveynin telefonuna bağlı uyumlu bir akıllı saate [NSClient WearOS uygulaması](https://github.com/nightscout/AndroidAPS/releases/) yüklenebilir. Bu, mevcut KŞ'yi, döngü durumunu gösterecek ve karbonhidrat girişi, geçici hedefler ve profil değişikliklerine izin verecektir. WearOS uygulamasından bolus kullanımına izin VERİLMEZ.
+- Alternatif olarak, [AAPS WearOS uygulaması](https://androidaps.readthedocs.io/en/latest/Configuration/Watchfaces.html) çocuğun telefonuna bağlı ancak ebeveynleri tarafından takılabilen uyumlu bir akıllı saat üzerine kurulabilir. Bu uygulama yukarıda listelenen tüm fonksiyonların yanı sıra bolus insülin yeteneğini de içerir. Bu sayede ebeveyn çocuğun telefonuna dokunmadan insülin gönderebilir.
 
 ## Dikkat edilmesi gereken önemli noktalar
 
@@ -36,5 +36,5 @@ A smartwatch can be a very useful tool in helping manage AAPS with kids. A coupl
 - AAPS ana telefonunun yalnızca döngü çalıştırıldıktan sonra karşıya bilgi yükleyeceğini, bunun yanı sıra yükleme ve indirme süresi nedeniyle ana ve takipçi arasında bilgide zaman farkının oluşacağını da göz önünde bulundurun.
 - Bu nedenle, uzaktan izleme ve uzaktan tedaviye başlamadan önce, bunları doğru bir şekilde ayarlamak için zaman ayırın ve çocuğunuz yanınızdayken test edin. Okul tatilleri bunun için iyi bir zaman olabilir.
 - Uzaktan kontrol çalışmadığında acil durum planınız nedir (örn. ağ sorunları)?
-- Anaokulu ve ilkokulda uzaktan izleme ve tedavi gerçekten yardımcı olabilir. Ancak öğretmenlerin ve eğitimcilerin çocuğunuzun tedavi planından haberdar olmalıdır. Examples for such care plans can be found in the [files section of AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) on Facebook.
-- It is important to keep the kid's phone in range of their pump and CGM at all times. This can be challenging especially with very small children. Many solutions exist, a popular option is an [SPI Belt](https://spibelt.com/collections/kids-belts)
+- Anaokulu ve ilkokulda uzaktan izleme ve tedavi gerçekten yardımcı olabilir. Ancak öğretmenlerin ve eğitimcilerin çocuğunuzun tedavi planından haberdar olmalıdır. Bu tür bakım planlarının örnekleri, facebook'ta [AAPS kullanıcılarının dosyalar bölümünde](https://www.facebook.com/groups/AndroidAPSUsers/files/) bulunabilir.
+- Çocuğun telefonunu her zaman pompasının ve CGM'inin menzilinde tutmak önemlidir. Bu, özellikle çok küçük çocuklarda zor olabilir. Pek çok çözüm mevcuttur, popüler bir seçenek [SPI Kemeri](https://spibelt.com/collections/kids-belts)'dir.
