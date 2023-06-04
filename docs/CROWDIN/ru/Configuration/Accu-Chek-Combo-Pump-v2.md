@@ -34,28 +34,28 @@ Also, if you are migrating from the old driver, be aware that the new driver com
 
 This new driver is currently written to support the following languages on the Combo. (This is unrelated to the language in AAPS - it is the language shown on the Combo's LCD itself.)
 
-* English
-* Spanish
+* Английский
+* Испанский
 * Французский
 * Итальянский
-* Russian
+* Русский
 * Турецкий
 * Польский
-* Czech
+* Чешский
 * Венгерский
 * Словацкий
 * Румынский
 * Хорватский
-* Dutch
-* Greek
+* Голландский
+* Греческий
 * Finnish
 * Norwegian
 * Португальский
 * Шведский
 * Danish
-* German
+* Немецкий
 * Slovenian
-* Lithuanian
+* Литовский
 
 **Important**: If your pump is set to a language that is not part of this list, please contact the developers, and set the pump's language to one in this list. Otherwise, the driver won't work properly.
 
