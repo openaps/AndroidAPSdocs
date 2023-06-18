@@ -270,9 +270,9 @@ without it taking up too much space on the page.
 
 Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
 
-Instead of:  “What causes high postprandial BG peaks in closed loop?
+Instead of:  *“What causes high postprandial BG peaks in closed loop?"*
 
-Use: “What causes a high BG peak after lunch (postprandial) in closed loop?
+Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
 
 ##### Use plain words that everyone can understand
 
@@ -305,29 +305,29 @@ Particularly if you record video or screenshots, make sure not to disclose your 
 
 Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse. 
 
-Instead of: “You should just think of it as a complete statement”.
+Instead of: *“You should just think of it as a complete statement."*
 
-Use: “Think of it as a complete statement.”
+Use: *“Think of it as a complete statement.”*
 
 #### Mostly use active verbs, rather than passive verbs
 
-Example of an active verb:
+Example of an **active verb**:
 
-- “The pump (subject) delivers (verb) the insulin (object).”
+- *“The pump (subject) delivers (verb) the insulin (object).”*
     
 
 “delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
 
-Example of a passive verb: 
+Example of a **passive verb**: 
 
-- “The insulin (subject) is delivered (verb) by the pump (object)”
+- *“The insulin (subject) is delivered (verb) by the pump (object)”*
     
 
-“delivered” a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”.   Also consider starting with the active verb.
+*“delivered”* a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”.   Also consider starting with the active verb.
 
-Instead of: “You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.” 
+Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
 
-Use: “Connect your desired pump to the phone through the AAPS pump menu.”
+Use: *“Connect your desired pump to the phone through the AAPS pump menu.”*
 
 Passive verbs can cause problems:
 
@@ -357,19 +357,18 @@ A nominalisation is the name of something that isn't a physical object, such as 
 
 For example:
 
-|     |     |
-| --- | --- |
 | Verb | Nominalisation |
+| --- | --- |
 | complete | completion |
 | introduce | introduction |
 | provide | provision |
 | fail | failure |
 
-They are often used instead of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
+They are often used **instead** of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
 
-Instead of: “The implementation of the method has been done by a team.”
+Instead of: *“The implementation of the method has been done by a team.”*
 
-Use: “A team has implemented the method.”
+Use: *“A team has implemented the method.”*
 
 #### Use lists where appropriate
 
@@ -385,13 +384,13 @@ In the bulleted list above, each point is a complete sentence so they each start
 
 #### Mythbusting
 
-- You can start a sentence with and, but, because, so or however.
+- You can start a sentence with **and, but, because, so or however**.
     
-- You can split infinitives. So you can say “to boldly go”.
+- You can split infinitives. So you can say **“to boldly go”**.
     
-- You can end a sentence with a preposition. In fact, it is something we should stand up for.
+- You can end a sentence with a preposition. In fact, it is something **we should stand up for**.
     
-- And you can use the same word twice in a sentence if you can't find a better word.
+- And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
     
 
 #### Optimising writing style by purpose 
@@ -402,13 +401,13 @@ An “explanation” style is used for the introduction, background and knowledg
 
 A “How-to-guide” style (with minimal explanation) is used for building, configuring AAPS, and some of the troubleshooting sections.
 
-A tutorial helps the pupil acquire basic competence. The user will learn by doing.
+A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
 
 ![Image](./images/styleguide02.png)
 
 ##### ![Image](./images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
 
-- narrator directly talks to the reader: In this tutorial you will
+- narrator directly talks to the reader: In this tutorial **you** will
     (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
     
 - Future Tense -> to show the final target
@@ -417,14 +416,14 @@ A tutorial helps the pupil acquire basic competence. The user will learn by doin
     
 - Past Tense -> to show accomplished tasks  -> Quick and immediate visible results
     
-- Minimum Explanations -> strict necessary to complete the task - what and why
+- Minimum Explanations -> strict necessary to complete the task - **what and why**
     
 - Ignore options/alternatives/…. No ambiguity
     
 - Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example:
-    You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.
+    *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
     
-- Tutorial Title (Level 1 heading)
+- **Tutorial** Title (Level 1 heading)
     
 
 - Introduction (no heading)
@@ -452,18 +451,18 @@ A how-to guide’s purpose is to help the already-competent user perform a parti
 
 - HOW-to
     
-- narrator directly talks to the reader: In this tutorial you will
+- narrator directly talks to the reader: In this tutorial **you** will
     
 - Future Tense -> to show the final target
     
 - Conditional Imperative Tense -> to get X do y -> Concrete steps - avoid abstract concepts
     
-- Minimum Explanations -> strict necessary to complete the task -> what and why
+- Minimum Explanations -> strict necessary to complete the task -> **what and why**
     
 - Ignore options/alternatives/….
     No ambiguity, but you can link to the reference entry or explanation entry
     
-- How-to: Title (Level 1 heading)
+- **How-to**: Title (Level 1 heading)
     
 
 - Introduction paragraph
@@ -491,7 +490,7 @@ An explanation clarifies, deepens and broadens the reader’s understanding of a
 
 - WHY
     
-- Start with About
+- Start with **About**
     
 - Provide context, link ALL relevant references
     
@@ -501,7 +500,7 @@ An explanation clarifies, deepens and broadens the reader’s understanding of a
     
 - State the unknown/moving targets etc… 
     
-- About Title (Level 1 heading)
+- **About** Title (Level 1 heading)
     
 
 - Introduction (no heading)
@@ -521,11 +520,11 @@ An explanation clarifies, deepens and broadens the reader’s understanding of a
 
 For writing/updating the AAPS documentation, consider the process as consisting of two stages. These can be carried out by the same person at different points, or more than one person.  
 
-An author (e.g. you!) writes/edits a section of the documentation in a concise conversational tone, then passes it to the editor.
+An **author (e.g. you!)** writes/edits a section of the documentation in a concise conversational tone, then passes it to the editor.
 
-The editor (e.g. a fellow AAPS user, or the person who receives the pull request) reviews adherence to the style guide, edits the section for clarity and accessibility, removing as many words as possible (especially for tutorial/how-to sections). Reading the text out loud may help. 
+The **editor (e.g. a fellow AAPS user, or the person who receives the pull request)** reviews adherence to the style guide, edits the section for clarity and accessibility, removing as many words as possible (especially for tutorial/how-to sections). Reading the text out loud may help. 
 
-General AAPS points
+#### General AAPS points
 
 - For glucose values, state both mg/dl and mmol/l in each occurrence (also consider this for screenshots, if possible). 
     
@@ -534,7 +533,7 @@ General AAPS points
 - Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from. 
     
 
-#### 3\. Useful References
+### 3\. Useful References
 
 [https://dev.readthedocs.io/en/latest/style-guide.html](https://dev.readthedocs.io/en/latest/style-guide.html)
 
