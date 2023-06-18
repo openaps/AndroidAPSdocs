@@ -278,7 +278,7 @@ Use: “What causes a high BG peak after lunch (postprandial) in closed loop?
 
 Find an A-Z of alternative words to make your writing easier to understand here: 
 
-[<ins>https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html</ins>](https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html)
+[https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html](https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html)
 
 #### Privacy/licensing concerns:
 
@@ -311,14 +311,14 @@ Use: “Think of it as a complete statement.”
 
 #### Mostly use active verbs, rather than passive verbs
 
-Example of an <ins>active verb</ins>:
+Example of an active verb:
 
 - “The pump (subject) delivers (verb) the insulin (object).”
     
 
 “delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
 
-Example of a <ins>passive verb</ins>: 
+Example of a passive verb: 
 
 - “The insulin (subject) is delivered (verb) by the pump (object)”
     
@@ -359,13 +359,13 @@ For example:
 
 |     |     |
 | --- | --- |
-| <ins>Verb</ins> | <ins>Nominalisation</ins> |
+| Verb | Nominalisation |
 | complete | completion |
 | introduce | introduction |
 | provide | provision |
 | fail | failure |
 
-They are often used <ins>instead</ins> of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
+They are often used instead of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
 
 Instead of: “The implementation of the method has been done by a team.”
 
@@ -417,7 +417,7 @@ A tutorial helps the pupil acquire basic competence. The user will learn by doin
     
 - Past Tense -> to show accomplished tasks  -> Quick and immediate visible results
     
-- Minimum Explanations -> strict necessary to complete the task - <ins>what and why</ins>
+- Minimum Explanations -> strict necessary to complete the task - what and why
     
 - Ignore options/alternatives/…. No ambiguity
     
@@ -458,7 +458,7 @@ A how-to guide’s purpose is to help the already-competent user perform a parti
     
 - Conditional Imperative Tense -> to get X do y -> Concrete steps - avoid abstract concepts
     
-- Minimum Explanations -> strict necessary to complete the task -> <ins>what and why</ins>
+- Minimum Explanations -> strict necessary to complete the task -> what and why
     
 - Ignore options/alternatives/….
     No ambiguity, but you can link to the reference entry or explanation entry
@@ -536,18 +536,18 @@ General AAPS points
 
 #### 3\. Useful References
 
-[<ins>https://dev.readthedocs.io/en/latest/style-guide.html</ins>](https://dev.readthedocs.io/en/latest/style-guide.html)
+[https://dev.readthedocs.io/en/latest/style-guide.html](https://dev.readthedocs.io/en/latest/style-guide.html)
 
-[<ins>Diátaxis (diataxis.fr)</ins>](https://diataxis.fr/)
+[Diátaxis (diataxis.fr)](https://diataxis.fr/)
 
-[<ins>Technical Writer Style Guide Examples  | Technical Writer HQ</ins>](https://technicalwriterhq.com/writing/technical-writing/technical-writer-style-guide/)
+[Technical Writer Style Guide Examples  | Technical Writer HQ](https://technicalwriterhq.com/writing/technical-writing/technical-writer-style-guide/)
 
-[<ins>DigitalOcean's Technical Writing Guidelines | DigitalOcean</ins>](https://www.digitalocean.com/community/tutorials/digitalocean-s-technical-writing-guidelines)
+[DigitalOcean's Technical Writing Guidelines | DigitalOcean](https://www.digitalocean.com/community/tutorials/digitalocean-s-technical-writing-guidelines)
 
-[<ins>Top 10 tips for Microsoft style and voice - Microsoft Style Guide | Microsoft Learn</ins>](https://learn.microsoft.com/en-us/style-guide/top-10-tips-style-voice?source=recommendations)
+[Top 10 tips for Microsoft style and voice - Microsoft Style Guide | Microsoft Learn](https://learn.microsoft.com/en-us/style-guide/top-10-tips-style-voice?source=recommendations)
 
-[<ins>https://www.plainenglish.co.uk/how-to-write-in-plain-english.html</ins>](https://www.plainenglish.co.uk/how-to-write-in-plain-english.html)
+[https://www.plainenglish.co.uk/how-to-write-in-plain-english.html](https://www.plainenglish.co.uk/how-to-write-in-plain-english.html)
 
-[<ins>https://developers.google.com/style</ins>](https://developers.google.com/style)
+[https://developers.google.com/style](https://developers.google.com/style)
 
-[<ins>https://www.mongodb.com/docs/meta/style-guide/screenshots/screenshot-guidelines/</ins>](https://www.mongodb.com/docs/meta/style-guide/screenshots/screenshot-guidelines/)
+[https://www.mongodb.com/docs/meta/style-guide/screenshots/screenshot-guidelines/](https://www.mongodb.com/docs/meta/style-guide/screenshots/screenshot-guidelines/)
