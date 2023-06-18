@@ -88,9 +88,8 @@ Multiple daily injections (MDI, a) usually involve giving an injection of a long
 
 At present there are four major open source closed loop systems available: OpenAPS, AAPS, Loop and iAPS, (formerly FreeAPS X). The features of the different systems are shown in the table below:
 
-|     |     |     |     |     |     |
+| Devices |     | Open APS | AAPS | [Loop](https://loopkit.github.io/loopdocs/) | iAPS |
 | --- | --- | --- | --- | --- | --- |
-| Devices, Systems, Algorithms in open source AID |     | Open APS | AAPS | [Loop](https://loopkit.github.io/loopdocs/) | iAPS |
 | PUMP | - Older Medtronic<br>    <br>- Older Omnipod (Eros)<br>    <br>- Newer Omnipod (Dash)<br>    <br>- DANA R, DANA RS, DANA I<br>    <br>- Roche Combo, Insight | ✔<br>❌<br>❌<br>❌<br>❌ | ✔<br>✔<br>✔<br>✔<br><br>✔ | ✔<br>✔<br>✔<br>❌<br>❌ | ✔<br>✔<br>✔<br><br>❌<br>❌ |
 | CGM | - Dexcom G4, G5, G6<br>    <br>- Libre 1 (requires Miao Miao)<br>    <br>- Libre 2<br>    <br>- Libre 3<br>    <br>- Medtronic Enlite<br>    <br>- [Dexcom G7](https://androidaps.readthedocs.io/en/latest/Hardware/DexcomG7.html)<br>    <br>- [Eversense](https://androidaps.readthedocs.io/en/latest/Hardware/Eversense.html)  [MM640g/MM630g](https://androidaps.readthedocs.io/en/latest/Hardware/MM640g.html)<br>    <br>- [PocTech](https://androidaps.readthedocs.io/en/latest/Hardware/PocTech.html)<br>    <br>- [Nightscout as BG Source](https://androidaps.readthedocs.io/en/latest/Hardware/CgmNightscoutUpload.html) | ✔<br>✔<br>✔ | ✔<br>✔<br>✔<br>❌<br><br>✔<br><br>❌(beta)<br><br>✔<br><br>✔<br><br>✔ | ✔<br>✔<br>✔<br><br>✔<br><br>❌<br><br>? | ✔<br>✔<br>✔<br>❌<br><br>✔<br><br>✔<br><br>✔<br><br>✔<br><br>✔ |
 | Phone | - Android<br>    <br>- iPhone | ✔<br>✔ | ✔<br>❌ | ❌<br>✔ | ❌<br>✔ |
