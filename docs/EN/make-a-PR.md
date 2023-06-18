@@ -254,3 +254,301 @@ This admonition has been collapsed,
 meaning you can add longer form content here,
 without it taking up too much space on the page.
 :::
+## Style Guide
+
+### Contents
+
+1.  English language writing tips
+    
+2.  AAPS-specific writing notes
+    
+3.  Useful references
+    
+
+### <img src="images/styleguide01.png" width="80" height="80" style="margin-left: 0px; margin-top: 0px;">1\. English language writing tips
+
+#### Use language that is appropriate for the reader
+
+Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
+
+Instead of:  “What causes high postprandial BG peaks in closed loop?
+
+Use: “What causes a high BG peak after lunch (postprandial) in closed loop?
+
+##### Use plain words that everyone can understand
+
+Find an A-Z of alternative words to make your writing easier to understand here: 
+
+[<ins>https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html</ins>](https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html)
+
+#### Privacy/licensing concerns:
+
+Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure Youtube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
+
+#### Keep sentences short, get to the point
+
+- Clear writing should have an average sentence length of 15 to 20 words.
+    
+- This does not mean making every sentence the same length. Be punchy. Vary your writing by mixing short sentences (like the last one) with longer ones (like this one).
+    
+- Stick to one main idea in a sentence, plus perhaps one other related point.
+    
+- You may still find yourself writing the odd long sentence, especially when trying to explain a complicated point. But most long sentences can be broken up in some way. 
+    
+- Remove weak words: “you can”, “there is/are/were”, “in order to”. 
+    
+- Place keywords near the beginning of titles, sentences and paragraphs.
+    
+- Be visual! Wherever possible provide a brief diagram, screenshot or video.
+    
+
+#### Don't be afraid to give instructions
+
+Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse. 
+
+Instead of: “You should just think of it as a complete statement”.
+
+Use: “Think of it as a complete statement.”
+
+#### Mostly use active verbs, rather than passive verbs
+
+Example of an <ins>active verb</ins>:
+
+- “The pump (subject) delivers (verb) the insulin (object).”
+    
+
+“delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
+
+Example of a <ins>passive verb</ins>: 
+
+- “The insulin (subject) is delivered (verb) by the pump (object)”
+    
+
+“delivered” a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”.   Also consider starting with the active verb.
+
+Instead of: “You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.” 
+
+Use: “Connect your desired pump to the phone through the AAPS pump menu.”
+
+Passive verbs can cause problems:
+
+- They can be confusing.
+    
+- They often make writing more long-winded.
+    
+- They make writing less lively.
+    
+
+##### Good uses of passives
+
+There are times when it might be appropriate to use a passive.
+
+- To make something less hostile - 'this bill has not been paid' (passive) is softer than 'you have not paid this bill' (active).
+    
+- To avoid taking the blame - 'a mistake was made' (passive) rather than 'You made a mistake' (active).
+    
+- When you don't know who or what the doer is - 'the England team has been picked'.
+    
+- If it simply sounds better.
+    
+
+#### Avoid nominalisations
+
+A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion.  Nominalisations are formed from verbs.
+
+For example:
+
+|     |     |
+| --- | --- |
+| <ins>Verb</ins> | <ins>Nominalisation</ins> |
+| complete | completion |
+| introduce | introduction |
+| provide | provision |
+| fail | failure |
+
+They are often used <ins>instead</ins> of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
+
+Instead of: “The implementation of the method has been done by a team.”
+
+Use: “A team has implemented the method.”
+
+#### Use lists where appropriate
+
+Lists are excellent for splitting information up. There are two main types of list:
+
+- A continuous sentence with several listed points picked out at the beginning, middle or end.
+    
+
+- Separate bullet points with an introductory statement.
+    
+
+In the bulleted list above, each point is a complete sentence so they each start with a capital letter and end with a full stop. Use bullet points rather than numbers or letters, as they draw your attention to each point without giving you extra information to take in.
+
+#### Mythbusting
+
+- You can start a sentence with and, but, because, so or however.
+    
+- You can split infinitives. So you can say “to boldly go”.
+    
+- You can end a sentence with a preposition. In fact, it is something we should stand up for.
+    
+- And you can use the same word twice in a sentence if you can't find a better word.
+    
+
+#### Optimising writing style by purpose 
+
+To keep the documentation clear and short, we write different sections of the documentation in different styles. 
+
+An “explanation” style is used for the introduction, background and knowledge development sections.
+
+A “How-to-guide” style (with minimal explanation) is used for building, configuring AAPS, and some of the troubleshooting sections.
+
+A tutorial helps the pupil acquire basic competence. The user will learn by doing.
+
+.<img src="images/styleguide02.png" width="479" height="268" style="margin-left: 0px; margin-top: 0px;">
+
+##### <img src="images/styleguide03.png" width="64" height="64" style="margin-left: 0px; margin-top: 0px;">Tutorials (e.g. teaching a kid to beat egg whites)
+
+- narrator directly talks to the reader: In this tutorial you will
+    (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
+    
+- Future Tense -> to show the final target
+    
+- Imperative Tense -> to do the tasks  -> Concrete steps - avoid abstract concepts
+    
+- Past Tense -> to show accomplished tasks  -> Quick and immediate visible results
+    
+- Minimum Explanations -> strict necessary to complete the task - <ins>what and why</ins>
+    
+- Ignore options/alternatives/…. No ambiguity
+    
+- Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example:
+    You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.
+    
+- Tutorial Title (Level 1 heading)
+    
+
+- Introduction (no heading)
+    
+- Prerequisites (Level 2 heading)
+    
+- Steps:
+    
+
+- Step 1 — Doing the First Thing (Level 2 heading)
+    
+- Step 2 — Doing the Next Thing (Level 2 heading)
+    
+- Step n — Doing the Last Thing (Level 2 heading)
+    
+
+- Conclusion (Level 2 heading)
+    
+
+<img src="images/styleguide04.png" width="740" height="400" style="margin-left: 0px; margin-top: 0px;">
+
+##### <img src="images/styleguide05.png" width="64" height="64" style="margin-left: 0px; margin-top: 0px;">How-To Guides (e.g. a recipe)
+
+A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
+
+- HOW-to
+    
+- narrator directly talks to the reader: In this tutorial you will
+    
+- Future Tense -> to show the final target
+    
+- Conditional Imperative Tense -> to get X do y -> Concrete steps - avoid abstract concepts
+    
+- Minimum Explanations -> strict necessary to complete the task -> <ins>what and why</ins>
+    
+- Ignore options/alternatives/….
+    No ambiguity, but you can link to the reference entry or explanation entry
+    
+- How-to: Title (Level 1 heading)
+    
+
+- Introduction paragraph
+    
+- Optional Prerequisites (paragraph or Level 2 heading if more than 1)
+    
+- Steps:
+    
+
+- Step 1 — Doing the First Thing (Level 2 heading)
+    
+- Step 2 — Doing the Next Thing (Level 2 heading)
+    
+- Step n — Doing the Last Thing (Level 2 heading)
+    
+
+- Conclusion paragraph
+    
+
+<img src="images/styleguide06.png" width="1021" height="321" style="margin-left: 0px; margin-top: 0px;">
+
+##### <img src="images/styleguide07.png" width="64" height="64" style="margin-left: 0px; margin-top: 0px;">Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+
+An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
+
+- WHY
+    
+- Start with About
+    
+- Provide context, link ALL relevant references
+    
+- Discuss options/alternatives
+    
+- Don’t instruct or provide reference (link to them)
+    
+- State the unknown/moving targets etc… 
+    
+- About Title (Level 1 heading)
+    
+
+- Introduction (no heading)
+    
+- Optional Prerequisites (Level 2 heading)
+    
+- Subtopic 1 (level 2 heading)
+    
+- Conclusion (Level 2 heading)
+    
+
+<img src="images/styleguide08.png" width="1021" height="429" style="margin-left: 0px; margin-top: 0px;">
+
+### 2\. AAPS-specific writing/updating notes 
+
+#### Author & Editor
+
+For writing/updating the AAPS documentation, consider the process as consisting of two stages. These can be carried out by the same person at different points, or more than one person.  
+
+An author (e.g. you!) writes/edits a section of the documentation in a concise conversational tone, then passes it to the editor.
+
+The editor (e.g. a fellow AAPS user, or the person who receives the pull request) reviews adherence to the style guide, edits the section for clarity and accessibility, removing as many words as possible (especially for tutorial/how-to sections). Reading the text out loud may help. 
+
+General AAPS points
+
+- For glucose values, state both mg/dl and mmol/l in each occurrence (also consider this for screenshots, if possible). 
+    
+- For consistency, use “AAPS” rather than “Android APS”.
+    
+- Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from. 
+    
+
+#### 3\. Useful References
+
+[<ins>https://dev.readthedocs.io/en/latest/style-guide.html</ins>](https://dev.readthedocs.io/en/latest/style-guide.html)
+
+[<ins>Diátaxis (diataxis.fr)</ins>](https://diataxis.fr/)
+
+[<ins>Technical Writer Style Guide Examples  | Technical Writer HQ</ins>](https://technicalwriterhq.com/writing/technical-writing/technical-writer-style-guide/)
+
+[<ins>DigitalOcean's Technical Writing Guidelines | DigitalOcean</ins>](https://www.digitalocean.com/community/tutorials/digitalocean-s-technical-writing-guidelines)
+
+[<ins>Top 10 tips for Microsoft style and voice - Microsoft Style Guide | Microsoft Learn</ins>](https://learn.microsoft.com/en-us/style-guide/top-10-tips-style-voice?source=recommendations)
+
+[<ins>https://www.plainenglish.co.uk/how-to-write-in-plain-english.html</ins>](https://www.plainenglish.co.uk/how-to-write-in-plain-english.html)
+
+[<ins>https://developers.google.com/style</ins>](https://developers.google.com/style)
+
+[<ins>https://www.mongodb.com/docs/meta/style-guide/screenshots/screenshot-guidelines/</ins>](https://www.mongodb.com/docs/meta/style-guide/screenshots/screenshot-guidelines/)
