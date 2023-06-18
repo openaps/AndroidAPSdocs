@@ -264,8 +264,7 @@ without it taking up too much space on the page.
     
 3.  Useful references
     
-
-### <img src="./images/styleguide01.png" width="80" height="80" style="margin-left: 0px; margin-top: 0px;">1\. English language writing tips
+### ![Image](./images/styleguide01.png") 1\. English language writing tips
 
 #### Use language that is appropriate for the reader
 
@@ -405,9 +404,9 @@ A “How-to-guide” style (with minimal explanation) is used for building, conf
 
 A tutorial helps the pupil acquire basic competence. The user will learn by doing.
 
-<img src="./images/styleguide02.png" width="479" height="268" style="margin-left: 0px; margin-top: 0px;">
+![Image](./images/styleguide02.png")
 
-##### <img src="./images/styleguide03.png" width="64" height="64" style="margin-left: 0px; margin-top: 0px;">Tutorials (e.g. teaching a kid to beat egg whites)
+##### ![Image](./images/styleguide03.png") Tutorials (e.g. teaching a kid to beat egg whites)
 
 - narrator directly talks to the reader: In this tutorial you will
     (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
@@ -445,9 +444,9 @@ A tutorial helps the pupil acquire basic competence. The user will learn by doin
 - Conclusion (Level 2 heading)
     
 
-<img src="./images/styleguide04.png" width="740" height="400" style="margin-left: 0px; margin-top: 0px;">
+![Image](./images/styleguide04.png")
 
-##### <img src="./images/styleguide05.png" width="64" height="64" style="margin-left: 0px; margin-top: 0px;">How-To Guides (e.g. a recipe)
+##### ![Image](./images/styleguide01.png") How-To Guides (e.g. a recipe)
 
 A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
 
@@ -484,9 +483,9 @@ A how-to guide’s purpose is to help the already-competent user perform a parti
 - Conclusion paragraph
     
 
-<img src="./images/styleguide06.png" width="1021" height="321" style="margin-left: 0px; margin-top: 0px;">
+![Image](./images/styleguide06.png")
 
-##### <img src="./images/styleguide07.png" width="64" height="64" style="margin-left: 0px; margin-top: 0px;">Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![Image](./images/styleguide07.png") Explanation (e.g. Science behind why egg whites stiffen when you beat them)
 
 An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
 
@@ -514,7 +513,7 @@ An explanation clarifies, deepens and broadens the reader’s understanding of a
 - Conclusion (Level 2 heading)
     
 
-<img src="./images/styleguide08.png" width="1021" height="429" style="margin-left: 0px; margin-top: 0px;">
+![Image](./images/styleguide08.png")
 
 ### 2\. AAPS-specific writing/updating notes 
 
