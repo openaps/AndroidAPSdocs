@@ -8,7 +8,7 @@ The most basic way to do this is by detecting **glucose levels**, using these va
 
 You can read more about the different artificial pancreas systems currently in use and in development in this 2022 review article:   
 
-https://www.frontiersin.org/articles/10.3389/fendo.2022.919942/full#:~:text=Fully%20closed%2Dloop%20systems%2C%20unlike,user%20input%20for%20mealtime%20boluses.
+![Frontiers](./images/FRONTIERS_Logo_Grey_RGB.png) [Future Directions in Closed-Loop Technology](https://www.frontiersin.org/articles/10.3389/fendo.2022.919942/full#:~:text=Fully%20closed%2Dloop%20systems%2C%20unlike,user%20input%20for%20mealtime%20boluses).
 
 In the near future, some systems will also have the ability to inject glucagon to prevent severe hypo allowing even tighter controls than solely with insulin.
 
@@ -88,7 +88,7 @@ Multiple daily injections (MDI, a) usually involve giving an injection of a long
 
 At present there are four major open source closed loop systems available: OpenAPS, AAPS, Loop and iAPS, (formerly FreeAPS X). The features of the different systems are shown in the table below:
 
-| Devices |     | Open APS | AAPS | [Loop](https://loopkit.github.io/loopdocs/) | iAPS |
+| Devices |     | [Open APS](https://openaps.readthedocs.io/en/latest/) | [AAPS](https://wiki.aaps.app) | [Loop](https://loopkit.github.io/loopdocs/) | [iAPS](https://iaps.readthedocs.io/en/latest/) |
 | --- | --- | --- | --- | --- | --- |
 | PUMP | - Older Medtronic<br>    <br>- Older Omnipod (Eros)<br>    <br>- Newer Omnipod (Dash)<br>    <br>- DANA R, DANA RS, DANA I<br>    <br>- Roche Combo, Insight | ✔<br>❌<br>❌<br>❌<br>❌ | ✔<br>✔<br>✔<br>✔<br><br>✔ | ✔<br>✔<br>✔<br>❌<br>❌ | ✔<br>✔<br>✔<br><br>❌<br>❌ |
 | CGM | - Dexcom G4, G5, G6<br>    <br>- Libre 1 (requires Miao Miao)<br>    <br>- Libre 2<br>    <br>- Libre 3<br>    <br>- Medtronic Enlite<br>    <br>- [Dexcom G7](https://androidaps.readthedocs.io/en/latest/Hardware/DexcomG7.html)<br>    <br>- [Eversense](https://androidaps.readthedocs.io/en/latest/Hardware/Eversense.html)  [MM640g/MM630g](https://androidaps.readthedocs.io/en/latest/Hardware/MM640g.html)<br>    <br>- [PocTech](https://androidaps.readthedocs.io/en/latest/Hardware/PocTech.html)<br>    <br>- [Nightscout as BG Source](https://androidaps.readthedocs.io/en/latest/Hardware/CgmNightscoutUpload.html) | ✔<br>✔<br>✔ | ✔<br>✔<br>✔<br>❌<br><br>✔<br><br>❌(beta)<br><br>✔<br><br>✔<br><br>✔ | ✔<br>✔<br>✔<br><br>✔<br><br>❌<br><br>? | ✔<br>✔<br>✔<br>❌<br><br>✔<br><br>✔<br><br>✔<br><br>✔<br><br>✔ |
@@ -100,7 +100,7 @@ An international peer-reviewed consensus statement containing practical guidance
 
  Lancet Diabetes Endocrinol, 2022; 10: 58–74
 
-[<ins>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/</ins>](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)
+[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)
 
 It is hard to get a “feel” for any system without using it, or talking to others who are using it, so do reach out to others on Facebook/Discord and ask. Most people find that AAPS is incredibly sophisticated in comparison to other hybrid closed loop systems (particularly the commercial systems), with a huge number of potentially customisable settings and features,  discussed above. Some people can find this a little overwhelming in the beginning, but there is no rush to investigate all the possibilities at once, you can progress as slowly or as fast as you would like, and there is help available at every step of the way.  
 
@@ -118,7 +118,7 @@ It is important to note that the AAPS user needs to be proactive to troubleshoot
 
 ## Q: Is it safe to use open-source systems like AAPS? 
 
-A more accurate question is probably “is it safe compared to my current type 1 diabetes insulin delivery system?” since no method of insulin delivery is without risk. There are many checks and balances in place with AAPS. A recent paper looked at the use of AAPS in a computer simulated set-up, [<ins>https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375</ins>](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375) which was an effective way to unobjectively trial how safe and effective the system is. More generally, it is estimated that over 10,000 individuals worldwide are using open-source automated-insulin delivery systems, and uptake continues to increase globally.
+A more accurate question is probably “is it safe compared to my current type 1 diabetes insulin delivery system?” since no method of insulin delivery is without risk. There are many checks and balances in place with AAPS. A recent paper looked at the use of AAPS in a computer simulated set-up, [https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375) which was an effective way to unobjectively trial how safe and effective the system is. More generally, it is estimated that over 10,000 individuals worldwide are using open-source automated-insulin delivery systems, and uptake continues to increase globally.
 
 Any device that uses radio communications could be hacked, and this is true for a non-looping insulin pump as well. Currently, we are not aware of anyone attempting to harm individuals by hacking their diabetes-related medical equipment. However, there are multiple ways to protect against such risks:  
 
@@ -137,7 +137,7 @@ Depending on the country - link to doctors section of docs
 
  Lancet Diabetes Endocrinol, 2022; 10: 58–74
 
-[<ins>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/</ins>](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)
+[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)
 
 ## Q: Why can’t I just download AAPS and use it straight away?  
 
@@ -174,19 +174,44 @@ Some experienced and confident AAPS users conduct experiments with emerging tech
 
 You can read more about some of these experiments and discussion on emerging tech here: 
 
-[<ins>https://www.diabettech.com/</ins>](https://www.diabettech.com/)
+[https://www.diabettech.com/](https://www.diabettech.com/)
 
-[<ins>https://bionicwookie.com/</ins>](https://bionicwookie.com/)
+[https://bionicwookie.com/](https://bionicwookie.com/)
+
+## Q: Who can benefit?
+
+| User Type    |
+| --- |
+| ✔️ type 1 diabetic |
+| ✔️ caregiver or parent of a type 1 diabetic |
+| ✔️ blind users type 1 diabetic |
+
+The above table assumes that the user has access to both continuous gluocse monitor and insulin pump. 
+
+## Q: What benefits can I get?
+
+With investment of your time, AAPS can potentially lead to:
+
+- alleviating the stress and burden of managing type 1 diabetes.
+    
+- reducing the multitude of mundane decisions that arise from type 1 diabetes.
+    
+- the provision of personalised and dynamic insulin dosing based on real-time data which can cut down the need for hypo treatments and reduce hyperglycemia episodes.
+    
+- an increased knowledge of insulin management and confidence to better fine tune your settings. 
+    
+- the ability to create automatic settings (“automations) that are tailored to fit in with your lifestyle.
+    
+- improved sleep quality and overall reduction in the frequency of nighttime interventions.
+    
+- remote monitoring and administration of insulin delivery for caregivers of type 1 diabetics.
+    
+- streamlining of all your portable diabetic equipment (continuous glucose monitor and insulin portable devices) by replacing them with an android phone controlled by AAPS. 
+    
+
+Ultimately, AAPS can empower individuals to better manage their diabetes resulting in stable blood sugars and improved long term health outcomes.
 
 ---
-
-## Who can benefit? -> single T1D user, T1D user with Caregiver
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-## What benefits can I get?
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 ## how to read this doc
 
