@@ -1,81 +1,81 @@
-# SMS Commands
+# SMS-команды
 
-## Safety First
+## Безопасность прежде всего
 
-- AAPS allows you to control a child's phone remotely via text message. Если смс-коммуникатор активирован, не забывайте, что телефон, настроенный на подачу удаленных команд, может быть украден. Поэтому всегда защищайте смартфон хотя бы ПИН-кодом. A strong password or biometrics are recommended.
+- AAPS allows you to control a child's phone remotely via text message. Если смс-коммуникатор активирован, не забывайте, что телефон, настроенный на подачу удаленных команд, может быть украден. Поэтому всегда защищайте смартфон хотя бы ПИН-кодом. Рекомендуется использовать надежный пароль или биометрические данные.
 - Additionally it is recommended to allow a [second phone number](SMS-Commands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](SMS-Commands-other) SMS communicator in case your main remote phone gets lost or stolen.
 - AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Рекомендуется сделать такую настройку, чтобы подтверждающие тексты направлялись по меньшей мере на два разных телефона на тот случай, если один из них украден.
 - **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
 - As of AAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
 
-## Setup SMS commands
+## Настройка SMS-команд
 
 ```{image} ../images/SMSCommandsSetup.png
-:alt: SMS Commands Setup
+:alt: Настройка SMS команд
 ```
 
 - Most of the adjustments of temp targets, following AAPS etc. can be done on [NSClient app](../Children/Children.md) on an Android phone with an internet connection.
-- Boluses can't be given through Nightscout, but you can use SMS commands.
+- Болюсы не могут подаваться через Nightscout, но можно использовать SMS-команды.
 - If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
 - In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
 
 (SMS-Commands-authorized-phone-numbers)=
 
-### Authorized phone numbers
+### Авторизованные номера телефонов
 
 - In AAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
 
 - Enable 'Allow remote commands via SMS'.
 
-- If you want to use more than one number:
+- Если вы хотите использовать более одного номера:
 
-  - Enter just one number.
+  - Введите только один номер.
 
   - Make that single number work by sending and confirming a SMS command.
 
-  - Enter additional number(s) separated by semicolon, no space.
+  - Введите дополнительные номера, разделенные точкой с запятой, без пробела.
 
     ```{image} ../images/SMSCommandsSetupSpace2.png
     :alt: SMS Commands Setup multiple numbers
     ```
 
-### Minutes between bolus commands
+### Минуты между командами на болюс
 
-- You can define the minimum delay between two boluses issued via SMS.
-- For safety reasons you have to add at least two authorized phone numbers to edit this value.
+- Можно определить минимальную задержку между двумя болюсами, поданными при помощи SMS.
+- Из соображений безопасности следует добавить хотя бы два авторизованных номера телефона для изменения этого значения.
 
 ### Additionally mandatory PIN at token end
 
-- For safety reasons the reply code must be followed by a PIN.
+- По соображениям безопасности за кодом ответа должен следовать PIN.
 
-- PIN rules:
+- Правила установки PIN:
 
-  - 3 to 6 digits
-  - not same digits (i.e. 1111)
-  - not in a row (i.e. 1234)
+  - от 3 до 6 цифр
+  - все цифры различные (например, 1111)
+  - не подряд (например, 1234)
 
-### Authenticator setup
+### Настройка аутентификации
 
-- Two-factor authentication is used to improve safety.
+- Для повышения безопасности используется двухфакторная аутентификация.
 
-- You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
+- You can use any Authenticator app that supports RFC 6238 TOTP tokens. Популярные бесплатные приложения:
 
   - [Authy](https://authy.com/download/)
   - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
   - [LastPass Authenticator](https://lastpass.com/auth/)
   - [FreeOTP Authenticator](https://freeotp.github.io/)
 
-- Install the authenticator app of your choice on your follower phone and scan the QR code shown in AAPS.
+- Установите на телефоне-фолловере приложение идентификации по выбору и просканируйте QR-код, показанный в AAPS.
 
 - Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. Example:
 
-  - Your mandatory PIN is 2020
-  - TOTP token from the authenticator app is 457051
-  - Enter 4570512020
+  - Ваш обязательный PIN-код 2020
+  - Маркер TOTP из приложения идентификации-457051
+  - Введите 4570512020
 
 - The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **There is no button you can press!**
 
-- The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
+- Время на обоих телефонах должно быть синхронизировано. Best practice is set automatically from network. Time differences might lead to authentication problems.
 
 - Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
 
@@ -87,9 +87,9 @@
 
 - Confirm command by sending the code where necessary. Example:
 
-  - Your mandatory PIN is 2020
-  - TOTP token from the authenticator app is 457051
-  - Enter 4570512020
+  - Ваш обязательный PIN-код 2020
+  - Маркер TOTP из приложения идентификации-457051
+  - Введите 4570512020
 
 **Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 

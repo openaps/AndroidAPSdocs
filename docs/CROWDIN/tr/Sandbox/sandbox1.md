@@ -1,4 +1,4 @@
-# internal sandbox file 1 for testing our sprint
+# sprint testi için dahili sanal alan dosyası 1
 
 :::{admonition} bunu tercüme etmeye gerek yok
 :class: note
