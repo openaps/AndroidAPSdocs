@@ -446,7 +446,7 @@ A tutorial helps the pupil acquire basic competence. The user will learn by doin
 
 ![Image](./images/styleguide04.png)
 
-##### ![Image](./images/styleguide01.png) How-To Guides (e.g. a recipe)
+##### ![Image](./images/styleguide05.png) How-To Guides (e.g. a recipe)
 
 A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
 
