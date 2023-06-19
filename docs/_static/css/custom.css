@@ -58,7 +58,7 @@ th {
   color: white;
 }
 
-th p a {
+th.head p a.reference {
   color: yellow;
 }
 
