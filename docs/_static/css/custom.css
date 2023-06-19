@@ -57,4 +57,9 @@ th {
   background-color: #66e0ff;
   color: white;
 }
+
+th p a {
+  color: yellow;
+}
+
 /* Peter Leimbach - a standard style for the tables */
