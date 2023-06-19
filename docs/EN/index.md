@@ -244,7 +244,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Preparing <prepairing.md>
 Building AAPS <buildingAAPS.md>
-Completing the objectives <completingObjectives.md>
+Completing the objectives <completingObjetives.md>
 
 ```
 
@@ -259,13 +259,13 @@ Maintaining <maintaining.md>
 ```{toctree}
 :caption: Troubleshooting
 
-
+Dummy <dummy.md>
 ```
 
 ```{toctree}
 :caption: FAQ & References
 
-
+Dummy <dummy.md>
 ```
 
 ```{toctree}
