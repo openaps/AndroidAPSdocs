@@ -2,6 +2,7 @@
   display: none !important;
 }
 
+/* Peter Leimbach - This is for automatic numbering the headlines - begin */
 body { counter-reset: h1counter h2counter h3counter h4counter h5counter h6counter; }
 
 h1 { counter-reset: h2counter; }
@@ -35,3 +36,27 @@ h6:before {
     counter-increment: h6counter;
     content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) "." counter(h6counter) ".\0000a0\0000a0";
 }
+/* Peter Leimbach - This is for automatic numbering the headlines - end */
+
+/* Peter Leimbach - a standard style for the tables */
+table, th, td {
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #038cfc;
+  color: white;
+}
+
+tr:hover {background-color: #59f748;}
+/* Peter Leimbach - a standard style for the tables */
