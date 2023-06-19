@@ -54,9 +54,6 @@ th, td {
 }
 
 th {
-  background-color: #038cfc;
   color: white;
 }
-
-tr:hover {background-color: #59f748;}
 /* Peter Leimbach - a standard style for the tables */
