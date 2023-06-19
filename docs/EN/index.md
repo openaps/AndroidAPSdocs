@@ -68,7 +68,36 @@ Intro <intro.md>
 ```
 
 ```{toctree}
-:caption: Getting started
+:caption: Getting Started
+
+Preparing <prepairing.md>
+Building AAPS <buildingAAPS.md>
+Completing the objectives <completingObjectives.md>
+
+```
+
+```{toctree}
+:caption: Operating
+
+Optimizing <optimizing.md>
+Maintaining <maintaining.md>
+
+```
+
+```{toctree}
+:caption: Troubleshooting
+
+
+```
+
+```{toctree}
+:caption: FAQ & References
+
+
+```
+
+```{toctree}
+:caption: Old-Getting started
 
 Safety first <./Getting-Started/Safety-first.md>
 
@@ -83,7 +112,7 @@ Docs updates & changes <./Getting-Started/WikiUpdate.md>
 (index-what-do-i-need)=
 
 ```{toctree}
-:caption: What do I need
+:caption: Old-What do I need
 
 CGM/FGM choices <./Configuration/BG-Source.md>
 
@@ -94,7 +123,7 @@ Module <./Module/module.md>
 ```
 
 ```{toctree}
-:caption: How to Install AAPS
+:caption: Old-How to Install AAPS
 
 Building the APK <./Installing-AndroidAPS/Building-APK.md>
 
@@ -117,7 +146,7 @@ Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 (index-component-setup)=
 
 ```{toctree}
-:caption: Component Setup
+:caption: Old-Component Setup
 
 CGM/FGM <./Configuration/BG-Source.md>
 
@@ -136,7 +165,7 @@ Smartwatch  <./Hardware/Smartwatch.md>
 (index-configuration)=
 
 ```{toctree}
-:caption: Configuration
+:caption: Old-Configuration
 
 Config builder <./Configuration/Config-Builder.md>
 
@@ -145,7 +174,7 @@ Preferences <./Configuration/Preferences.md>
 ```
 
 ```{toctree}
-:caption: AAPS Usage
+:caption: Old-AAPS Usage
 
 AAPS screens <./Getting-Started/Screenshots.md>
 
@@ -178,7 +207,7 @@ Android auto <./Usage/Android-auto.md>
 ```
 
 ```{toctree}
-:caption: General Hints
+:caption: Old-General Hints
 
 Crossing timezones with pumps <./Usage/Timezone-traveling.md>
 
@@ -193,7 +222,7 @@ xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 ```
 
 ```{toctree}
-:caption: AAPS for children
+:caption: Old-AAPS for children
 
 Remote monitoring <./Children/Children.md>
 
@@ -204,7 +233,7 @@ Profile helper <./Configuration/profilehelper.md>
 ```
 
 ```{toctree}
-:caption: Troubleshooting
+:caption: Old-Troubleshooting
 
 Troubleshooting <./Usage/troubleshooting.md>
 
@@ -213,19 +242,19 @@ Nightscout client <./Usage/Troubleshooting-NSClient.md>
 ```
 
 ```{toctree}
-:caption: FAQ
+:caption: Old-FAQ
 
 FAQ <./Getting-Started/FAQ.md>
 ```
 
 ```{toctree}
-:caption: Glossary
+:caption: Old-Glossary
 
 Glossary <./Getting-Started/Glossary.md>
 ```
 
 ```{toctree}
-:caption: Where to go for help
+:caption: Old-Where to go for help
 
 Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
 
@@ -236,13 +265,13 @@ Docs updates & changes <./Getting-Started/WikiUpdate.md>
 ```
 
 ```{toctree}
-:caption: For Clinicians
+:caption: Old-For Clinicians
 
 For Clinicians <./Resources/clinician-guide-to-AndroidAPS.md>
 ```
 
 ```{toctree}
-:caption: How to help
+:caption: Old-How to help
 
 How to help <./Getting-Started/How-can-I-help.md>
 
@@ -255,7 +284,7 @@ How to edit the docs <./make-a-PR.md>
 ```
 
 ```{toctree}
-:caption: Sandbox
+:caption: Old-Sandbox
 
 Sandbox <./Sandbox/sandbox1.md>
 ```
