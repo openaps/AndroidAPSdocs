@@ -117,6 +117,14 @@ This is a section for the clinicians who have expressed interest in open source 
 
 ## what are we going to build?	
 
+### An Android Phone Application
+
+At the core, AAPS is an android application running from a phone. You are going to build it from scratch by installing tools to download the sourcecode and build the actual application. 
+
+### A reporting server NightScout (or Tidepool)
+
+In order to fully use AAPS properly you will want to setup a nightscout server. It is used to collect data from AAPS over time and possibly communicate to the application. It is required for parents who want to oversee their children AAPS sessions. It is also key to share data between clinicians and patients to perform analysis over time.
+
 ## How long will it take?	
 
 ## Who might AAPS not be suitable for?	
