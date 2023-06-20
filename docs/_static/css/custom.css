@@ -58,6 +58,7 @@ th {
   color: white;
 }
 
+/* changes the background color of the links in the table comparing DIY loops */
 th.head p a.reference {
   color: yellow;
 }
