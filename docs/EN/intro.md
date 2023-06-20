@@ -1,4 +1,6 @@
-![20-06-23v2 AAPS simple overview-cropped](https://github.com/openaps/AndroidAPSdocs/assets/94044064/e505b73b-09a0-42a4-a1ab-b830a0741234)# Introduction to APS and AAPS
+![20-06-23v2 AAPS simple overview-cropped](https://github.com/openaps/AndroidAPSdocs/assets/94044064/e505b73b-09a0-42a4-a1ab-b830a0741234)
+
+# Introduction to APS and AAPS
 
 ## What is an “Artificial Pancreas System”?
 
