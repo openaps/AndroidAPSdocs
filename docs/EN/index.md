@@ -16,7 +16,7 @@ Intro <intro.md>
 ```{toctree}
 :caption: Getting Started
 
-Preparing <prepairing.md>
+Preparing <preparing.md>
 Building AAPS <buildingAAPS.md>
 Completing the objectives <completingObjetives.md>
 
