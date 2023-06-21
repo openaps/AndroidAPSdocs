@@ -1,36 +1,22 @@
-# Das AndroidAPS Projekt unterstützen
+Q - How can I help with AAPS?
 
-## AndroidAPS lebt ausschließlich von ehrenamtlichem Einsatz und hat keine bezahlten Mitarbeiter.
+## AAPS operates entirely on volunteer efforts, and has no paid staff.
 
-Eltern, Betreuer, geliebte Personen und Menschen mit Diabetes arbeiten zusammen, um die Entwicklung einer Lösung für ein sehr verbreitetes Problem voranzutreiben. </br>Die Entwickler arbeiten kostenlos in ihrer Freizeit. Aber es wäre etwas unfair von ihnen zu erwarten, zusätzliche Ausgaben auf sich zu nehmen, um ein solch fantastisches Projekt kostenfrei für alle als Open Source zur Verfügung zu stellen.
+AAPS developers are also people with diabetes, or their parents, caregivers, or loved ones. We are all working together, to develop and improve AAPS as a solution to the challenges of living with diabetes. Developers donate their spare time and expertise for free. There are many ways that people who aren't developers can help support the AAPS project. This includes direct donations of money, equipment (like unwanted Android phones, pumps and sensors), or donation of time to editing and updating the documents. This support ensure that developers can focus on the IT side of the project, and don't also have to pay for the advances to make something which is an amazing free open-source tool.
 
-*Um ein neues Gerät vollständig zu testen, benötigen die Entwickler ein Ersatzgerät und eine Ersatzpumpe, denn diese Tests können nicht an Menschen durchgeführt werden, bevor AndroidAPS stabil läuft. Neuere Pumpenmodelle und CGM-Geräte müssen getestet werden, sobald sie verfügbar sind. Ein Teil des gespendeten Geldes wird auch für den weltweiten Versand dieser Testgeräte an die Entwickler benötigt.   
-Außerdem ist es einfach auch eine gute Idee, etwas zu den Reisekosten der Entwickler beizutragen, damit diese ihre dunklen Kellerräume verlassen und ihre Köpfe auf Konferenzen und anderen Veranstaltungen zusammen stecken können.*
+How you can help:
 
-## Ich kann programmieren! Wie kann ich mich beteiligen?
+1) If you can write code: Yay! Look at the issues, ask on Discord ([AndroidAPS](https://discord.gg/4fQUWHZ4Mw).) or Facebook ([link](https://www.facebook.com/groups/AndroidAPSUsers/)), there is always a lot to do! Pick a small task first and do your first pull request! :)
 
-Juhuu! Schau dir die Issues an, frag im discord Channel. Es gibt immer viel zu tun! Suche dir zunächst eine kleine Aufgabe aus und mache deinen ersten pull request! :)
+2) Funding donations: Has AAPS improved your (or your loved one's) quality of life? Do you want to support the project? The developers have started a Ko-fi donations page, with the aim to start the (very long) certification process for the app. Please support or follow our page: https://ko-fi.com/diabetesone. Certification would mean we can officially launch the AAPS app and have it approved by the medical authorities. The best way to improve the AAPS app, making it easier to access with improved user experience and interface is to get it certified. Some of the money donated is also needed for the logistical costs of shipping equipment across countries to the developers. Sometimes it's also nice to contribute the cost of a coffee towards the developers, to support them to leave their darkened rooms and meet each other at conferences and events, to let their creative and analytical brains bounce off each other.
 
-## Ich kenne mich aus mit dem System und möchte bei den Docs mitschreiben!
+3) Equipment: To fully test a new rig (set-up) developers need spare android phones, pumps and sensors, since the rig cannot be used on a human until it is stable. Newer models need testing as they become available. If you have equipment that you think may be of use, please contact the developers by posting on Facebook ([link](https://www.facebook.com/groups/AndroidAPSUsers/)) or Discord ([AndroidAPS](https://discord.gg/4fQUWHZ4Mw).) with information about what you want to donate and which country you are in (Peter - is there a specific contact or different channel which is more efficient for this purpose?).
 
-Großartig, das ist sehr willkommen und eine gute Möglichkeit, etwas beizutragen!
+5) Improve the docs: sometimes the easiest time to update the docs is if you have literally just done something (set-up a smartwatch, for example) and you feel the documentation was hard to follow, or out of date. Please use the instructions (link [How to make a PR](../make-a-PR.md).) to edit the docs and make a pull-request. If you want to do larger edits, please read the style guide [(link](https://androidaps.readthedocs.io/en/rework-project/make-a-PR.html#style-guide)) first. If you want to add in videos or figures, some suggestions for how to do this are explained here (link - not sure we wrote this bit yet). Keeping the docs up-to-date helps many people, is very highly appreciated and a good way to pay it forward! You don't have to be an expert and your updates will be checked by other users before publishing.
 
-* Den discord Channel über das Wiki findest du hier: [AndroidAPSwiki/Lobby](https://discord.gg/4fQUWHZ4Mw). 
-* Eine Anleitung, wie man Beiträge auf Englisch hinzufügt und bearbeitet, ist hier zu finden: [Am Wiki mitschreiben](../make-a-PR.md). Andere Sprachen können nur übersetzt, aber nicht bearbeitet werden. Dadurch wird die Einheitlichkeit des Wikis in allen Sprachen gewährleistet.
+6) Translation of the AAPS app or documentation: Other languages are only translated from the English version, and can't be edited for consistency reasons. If you are translating something for the first time, please start with translating the strings for the app, as this is easier and you will get results faster. You are welcome to start as a translator for the documentation in parallel or later. You can check the state of translations for the languages app and documentation [here](../Administration/stateTranslations.md).
 
-## Ich spreche mehrere Sprachen und würde gerne bei der Übersetzung der App bzw. des Wikis helfen
+* If you want to translate **the app** to other languages, please use [crowdin](https://crowdin.com/project/androidaps).
+* If you want to translate **the docs** to other languages please use [crowdin](https://crowdin.com/project/androidapsdocs). Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
 
-Wenn Du zum ersten Mal übersetzen solltest, beginne mit der Übersetzung der Textabschnitte für die App. Das ist einfacher und bringt Dir schnellere Ergebnisse.
-
-Als Übersetzer für die Dokumentation kannst Du parallel zur App-Übersetzung oder auch später anfangen.
-
-Du kannst den Übersetzungsstand der einzelnen Sprachen für die App und die Dokumentation [hier sehen](../Administration/stateTranslations.md).
-
-* Falls du die **die App** in andere Sprachen übersetzen willst (danke), nutze bitte [crowdin](https://crowdin.com/project/androidaps).
-* Falls du die **die Docs** in andere Sprachen übersetzen willst (danke), nutze bitte [crowdin](https://crowdin.com/project/androidapsdocs). 
-
-Registriere Dich einfach bei CROWDIN, wähle Deine Sprache aus, warte bis der Admin deine Anfrage bestätigt und schon kannst Du loslegen!
-
-## Gibt es weitere Möglichkeiten, zu helfen?
-
-Wir brauchen auch Grafikdesigner, Experten für User Experience, Übersetzer und Autoren für das Wiki. Oder bringe das Projekt dadurch voran, dass Du die einfachen Fragen auf discord und Facebook beantwortest, damit sich die Entwickler darauf konzentrieren, die harten Nüsse zu knacken.
+7) Other ways to help: skills needed by the AAPS team include graphic design, user interface (UX) design, translators, wiki editors or simply paying it forward by answering the simple questions in Discord & Facebook to allow developers the time and space to focus on the harder stuff. You won't be tied in to more of a commitment than you are able to give, we are all volunteers.
