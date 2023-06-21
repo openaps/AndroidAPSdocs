@@ -9,7 +9,7 @@ Please read further in the [introduction](intro.md).
 ```{toctree}
 :caption: Home
 
-Intro <intro.md>
+Introduction <introduction.md>
 
 ```
 
