@@ -74,7 +74,7 @@ These are all examples, the full range of features gives huge flexibility for da
     
 - **Accessibility and affordability**: **AAPS** gives people who currently can’t afford to self-fund, or don’t have funding/insurance, access to a world-class hybrid closed looping system which is conceptually years ahead, in terms of development, of the commercial systems. You currently need to have a Nightscout account to set up **AAPS**, although the Nightscout account is not required for day-to-day running of the **AAPS** loop. Many people continue to use Nightscout for collecting their data, and for remote control. Although **AAPS** itself is free, setting up Nightscout through one of the various platforms may incur a fee (€0 - €12), depending on what level of support you want (see comparison table). **AAPS** works with a wide range of affordable (starting from approx €150) Android phones. In comparison, Loop currently costs around €80 a year for the Apple development licence, and CamAPS FX costs around €80/month (prices last checked in June 2023).
     
-- ****Support**: No automated insulin delivery system is perfect. Commercial and open-source systems share many common glitches in both communications and temporary hardware failure. There is support available from community of AAPS users on Facebook, Discord and Github who designed, developed and are currently using **AAPS**, all over the world. There are also Facebook support groups and help from clinic/commercial companies for the commercial APS systems -  it is worth speaking to the users, or former users of these systems to get feedback on the common glitches, the quality of the education programme and the level of ongoing support provided.
+- **Support**: No automated insulin delivery system is perfect. Commercial and open-source systems share many common glitches in both communications and temporary hardware failure. There is support available from community of AAPS users on Facebook, Discord and Github who designed, developed and are currently using **AAPS**, all over the world. There are also Facebook support groups and help from clinic/commercial companies for the commercial APS systems -  it is worth speaking to the users, or former users of these systems to get feedback on the common glitches, the quality of the education programme and the level of ongoing support provided.
     
 - **Predictability, transparency and safety**: with no learning algorithm, **AAPS** is logical and in some respects, more predictable, which may make it easier to know when a setting is wrong, and to adjust it accordingly. You can see exactly what the system is doing, why it is doing it, and set its operational limits, which puts the control (and responsibility) in your hands. This can provide the user with confidence, and a sounder sleep. 
     
@@ -84,12 +84,12 @@ These are all examples, the full range of features gives huge flexibility for da
     
 ## How does AAPS compare to MDI and open looping? 
 
-Multiple daily injections (MDI, (a) in **Figure 2** below) usually involve giving an injection of a long-lasting insulin (_e.g._ Tresiba) once a day, with injections of faster-acting insulin (_e.g._ Novorapid, Fiasp) at mealtimes, or for corrections. Open pumping (b) involves using a pump to deliver basal at pre-programmed rates of rapid-acting insulin, and then boluses through the pump at mealtimes or for corrections. The basics of a looping system are that the looping app uses the sensor glucose data to instruct the pump to stop insulin delivery when it predicts you are heading for a low, and to give you extra insulin if your glucose levels are rising and predicted to go too high (c). Although this figure is oversimplified, it shows the potential of closed looping. 
+Multiple daily injections (MDI, (a) in **Figure 2** below) usually involve giving an injection of a long-lasting insulin (_e.g._ Tresiba) once a day, with injections of faster-acting insulin (_e.g._ Novorapid, Fiasp) at mealtimes, or for corrections. Open pumping (b) involves using a pump to deliver basal at pre-programmed rates of rapid-acting insulin, and then boluses through the pump at mealtimes or for corrections. The basics of a looping system are that the looping app uses the sensor glucose data to instruct the pump to stop insulin delivery when it predicts you are heading for a low, and to give you extra insulin if your glucose levels are rising and predicted to go too high (c). Although this figure is oversimplified compared to real-life, it aims to demonstrate the key differences of the approaches. It is possible to achieve exceptionally good glucose control with any of these three approaches. 
 
-![21-06-23, PNG MDI loop insulin glucose graphs](https://github.com/openaps/AndroidAPSdocs/assets/94044064/ae56d503-1272-427f-a7b3-4200aac952a9)
+![21-06-23 AAPS glucose MDI etc](https://github.com/openaps/AndroidAPSdocs/assets/94044064/44e8bbde-f19c-486f-abda-1d132c38ef01)
 
 
-**Figure 2**. Basic overview of (a) MDI, (b) open-loop pumping and (c) hybrid closed loop pumping. Real-life scenarios are more complex, this aims to demonstrate the key differences of the approaches. It is possible to achieve exceptionally good glucose control with any of these three approaches. 
+**Figure 2**. Basic overview of (a) MDI, (b) open-loop pumping and (c) hybrid closed loop pumping. 
 
 ## How does AAPS compare to other looping systems?
 
@@ -115,15 +115,13 @@ At present there are four major open source closed loop systems available: [Open
 | Phone      | Android                                                                                                  | ![available](./images/available.png)                  | ![available](./images/available.png)           | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)       |
 | Phone      | iPhone                                                                                                   | ![available](./images/available.png)                  | ![unavailable](./images/unavailable.png)       | ![available](./images/available.png)        | ![available](./images/available.png)           |
 
-[OpenAPS](https://openaps.readthedocs.io/) was the first Open Source Closed Loop System. It uses a small computer such as Raspberry Pi or Intel Edison. Both AndroidAPS (AAPS) and iAPS use the OpenAPS algorithms, whereas Loop uses a separate algorithm. You can read a comparison of iAPS and **AAPS** here.
+[OpenAPS](https://openaps.readthedocs.io/) was the first Open Source Closed Loop System. It uses a small computer such as Raspberry Pi or Intel Edison. Both AAPS and iAPS use the OpenAPS algorithms, whereas Loop uses a separate algorithm. You can read a comparison of iAPS and **AAPS** here.
 
-An international peer-reviewed consensus statement containing practical guidance on open source looping was written by and for health-care professionals, and published in a leading medical journal in 2022. It is well worth a read (including for your diabetes clinic) and summarises the main technical differences between the different open-source hybrid closed loop systems: 
+An international peer-reviewed consensus statement containing practical guidance on open source looping was written by and for health-care professionals, and published in a leading medical journal in 2022: [_Lancet Diabetes Endocrinol_, 2022; 10: 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/). It is well worth a read (including for your diabetes clinic) and summarises the main technical differences between the different open-source hybrid closed loop systems. 
 
- Lancet Diabetes Endocrinol, 2022; 10: 58–74
 
-[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)
+It is hard to get a “feel” for any system without using it, or talking to others who are using it, so do reach out to others on Facebook/Discord and ask. Most people find that **AAPS** is incredibly sophisticated in comparison to other hybrid closed loop systems (particularly the commercial systems), with a huge number of potentially customisable settings and features,  discussed above. Some people can find this a little overwhelming in the beginning, but there is no rush to investigate all the possibilities at once, you can progress as slowly or as fast as you would like, and there is help available at every step of the way.  
 
-It is hard to get a “feel” for any system without using it, or talking to others who are using it, so do reach out to others on Facebook/Discord and ask. Most people find that AAPS is incredibly sophisticated in comparison to other hybrid closed loop systems (particularly the commercial systems), with a huge number of potentially customisable settings and features,  discussed above. Some people can find this a little overwhelming in the beginning, but there is no rush to investigate all the possibilities at once, you can progress as slowly or as fast as you would like, and there is help available at every step of the way.  
 
 ## Does AAPS use artificial intelligence or any learning algorithm?
 
@@ -133,13 +131,13 @@ No. **AAPS** does not have any complicated machine learning algorithms, multiple
 
 Practically, your choice of system is often restricted by which pump you already have, or can obtain from your medical provider, and your choice of phone (Apple or Android). If you don’t yet have a pump you have the biggest choice of systems. Technology is continually evolving, pumps are being discontinued and new pumps and sensors are being released. Most open-source systems work with the main sensors (Libre and Dexcom) or are quickly adapted to work with new sensors a year or so after they are released (with a bit of time delay for safety and stability testing). 
 
-Most **AAPS **users report more time in range, HbA1c reductions, as well as quality of life improvements from having a system that can auto-adjust basal rates overnight during sleep, and this is true for most hybrid closed loop APS. Some people have a preference for a very simple system which is not very customisable (which means you may prefer a commercial system), and others find this lack of control very frustrating (you may prefer an open-source system). If you (or your dependent) are newly diagnosed, a common route is to get the hang of MDI plus sensor first, then progress to a pump which has the potential for looping, then to **AAPS**, but some people (especially small kids) may go straight to a pump.
+Most **AAPS** users report more time in range, HbA1c reductions, as well as quality of life improvements from having a system that can auto-adjust basal rates overnight during sleep, and this is true for most hybrid closed loop systems. Some people have a preference for a very simple system which is not very customisable (which means you may prefer a commercial system), and others find this lack of control very frustrating (you may prefer an open-source system). If you (or your dependent) are newly diagnosed, a common route is to get used to using MDI plus a glucose sensor first, then progress to a pump which has the potential for looping, then progress to **AAPS**, but some people (especially small kids) may go straight to a pump.
 
 It is important to note that the **AAPS** user needs to be proactive to troubleshoot and fix problems themselves, with help from the community. This is a very different mindset to that when using a commercial system. With **AAPS** a user has more control, but also the responsibility, and needs to be comfortable with that. 
 
 ## Is it safe to use open-source systems like AAPS? 
 
-A more accurate question is probably “is it safe compared to my current type 1 diabetes insulin delivery system?” since no method of insulin delivery is without risk. There are many checks and balances in place with **AAPS**. A recent paper looked at the use of**** AAPS ****in a computer simulated set-up, [https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375) which was an effective way to unobjectively trial how safe and effective the system is. More generally, it is estimated that over 10,000 individuals worldwide are using open-source automated-insulin delivery systems, and uptake continues to increase globally.
+A more accurate question is probably “is it safe **compared** with my current insulin delivery system?” since no method of insulin delivery is without risk. There are many checks and balances in place with **AAPS**. A recent [paper](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375) looked at the use of **AAPS** in a computer simulated set-up, which was an effective way to unobjectively trial how safe and effective the system is. More generally, it is estimated that over 10,000 individuals worldwide are using open-source automated-insulin delivery systems, and uptake continues to increase globally.
 
 Any device that uses radio communications could be hacked, and this is true for a non-looping insulin pump as well. Currently, we are not aware of anyone attempting to harm individuals by hacking their diabetes-related medical equipment. However, there are multiple ways to protect against such risks:  
 
@@ -154,42 +152,38 @@ If a malicious attack was made on your insulin pump, these strategies would sign
 
 ## How can I approach discussing AAPS with my clinical team?
 
-Depending on the country - link to doctors section of docs
+Different clinical teams (and individuals) have very different views on DIY looping. Some clinicians have type 1 diabetes, use DIY looping themselves and are strongly enthusiastic, some would like to be supportive but know little about it, and a few feel very uncomfortable supporting patients who use DIY systems. The Loop and Learn group maintains a [list](https://www.loopandlearn.org/hcp-recommendations/?mibextid=Zxz2cZ&fbclid=IwAR1yeDqYASHep7XGIHKFLfuyMLgQGZPLBWQ8Pn7S0D3D1x6TUb7yb10opO0) of clinicians who are known to be supportive of DIY approaches, you are also able to add your own supportive practitioner to the list, which helps others. 
 
- Lancet Diabetes Endocrinol, 2022; 10: 58–74
+When you discuss DIY looping with your clinical team, it may help to email them a [copy](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/) of the landmark 2022 paper about DIY looping beforehand, or take along a printout to your next meeting for them to read. 
 
-[https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)
+## Why can’t I just download AAPS and use it straight away?  
 
-## Q: Why can’t I just download AAPS and use it straight away?  
-
-The **AAPS** app is not provided in Google Play - you have to build it from source code by yourself for legal reasons. **AAPS** is unlicensed, meaning that it does not have approval by any regulatory body authority in any country. **AAPS**is deemed to be carrying out a medical experiment on yourself, and is carried out at the user’s own risk.
+The **AAPS** app is not provided in Google Play - you have to build it from source code by yourself for legal reasons. **AAPS** is unlicensed, meaning that it does not have approval by any regulatory body authority in any country. **AAPS** is deemed to be carrying out a medical experiment on yourself, and is carried out at the user’s own risk.
 
 Setting up the system requires patience, determination and the gradual development of technical knowledge. All the information and support can be found in these documents, elsewhere online, or from others who have already done it. It is estimated that over 2000 people have successfully built and are currently using **AAPS** worldwide. 
 
-The developers of **AAPS**t ake safety incredibly seriously, and want others to have a good experience of using **AAPS**. That is why it is essential that every user (or carer, if the user is a child):
+The developers of **AAPS** take safety incredibly seriously, and want others to have a good experience of using **AAPS**. That is why it is essential that every user (or carer, if the user is a child):
 
-- builds the AAPS system themself and works through the **objectives** so that they have reasonably good personalised settings and understand the basics of how AAPS ****works by the time they “close the loop”;
+- builds the AAPS system themself and works through the **objectives** so that they have reasonably good personalised settings and understand the basics of how **AAPS** works by the time they “close the loop”;
     
 - backs up their system by exporting and saving important files (like keystore and settings .json file) somewhere safe, so you can setup again quickly if needed;
     
 - updates to newer master versions as and when they become available; and
     
-- maintains and monitors the system to ensure it is working properly.
-    
+- maintains and monitors the system to ensure it is working properly.    
 
-## Q: What is the connectivity of the AAPS system? 
+## What is the connectivity of the AAPS system? 
 
 **Figure 3 (below)** shows one example of the **AAPS** system for a user who do not require any followers interacting with the system. Additional open-source software and platforms which are not shown can also be integrated.  
 
-![21-06-23, AAPS connectivity no followers](https://github.com/openaps/AndroidAPSdocs/assets/94044064/ac40b079-dcca-4b59-939d-acd6e6a4cb66)
+![21-06-23 AAPS connectivity no followers](https://github.com/openaps/AndroidAPSdocs/assets/94044064/d9a8f782-410f-49e5-b6f6-2c29d6fd5c0a)
 
 
 **Figure 4 (below)** shows the full potential of the **AAPS** system for a user who has followers and requires a monitor and send adjust the system remotely (like a child with type 1 diabetes). Additional open-source software and platforms which are not shown can also be integrated.  
 
-![21-06-23, AAPS connectivity with followers](https://github.com/openaps/AndroidAPSdocs/assets/94044064/07e23923-1473-4f4d-8c87-bb03e5d28eb0)
+![21-06-23 AAPS overview with followers](https://github.com/openaps/AndroidAPSdocs/assets/94044064/eedd0f86-5e06-441d-822c-c53cbc2faa80)
 
-
-## Q: How does AAPS get continually developed and improved? 
+## How does AAPS get continually developed and improved? 
 
 Most **AAPS** users use the fully tested **master** version of AAPS, which has been tested for bugs and problems, before being released to the community. Behind the scenes, the developers try out new improvements, and test these out in “developer” (**dev**) versions of **AAPS** with a user community who are happy to do bug updates at short notice. If the improvements work well, they are then released as a new “master” version of **AAPS**. Any new master release is announced on the Facebook group, so that the mainstream **AAPS** users can read about and update to the new master version. 
 
@@ -201,7 +195,7 @@ Tim Street [https://www.diabettech.com/](https://www.diabettech.com/)
 
 David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 
-## Q: Who can benefit?
+## Who can benefit from AAPS?
 
 | User Type    |
 | --- |
