@@ -206,9 +206,9 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 
 The above table assumes that the user has access to both continuous gluocse monitor and insulin pump. 
 
-*All data from **AAPS** can be made available to healthcare professionals via data sharing platforms, including NightScout that provides logging and real time monitoring of CGM data, insulin delivery, carbohydrate entries, predictions and settings. Nightscout records include daily and weekly reports which can aid healthcare professionals' discussions with type 1 patients with more accurate data on glycemic control and any behavioural considerations.
+*All data from **AAPS** can be made available to healthcare professionals via data sharing platforms, including Nightscout that provides logging and real time monitoring of CGM data, insulin delivery, carbohydrate entries, predictions and settings. Nightscout records include daily and weekly reports which can aid healthcare professionals' discussions with type 1 patients with more accurate data on glycemic control and any behavioural considerations.
 
-## Q: What benefits can I get?
+## What benefits can I get?
 
 With investment of your time, **AAPS** can potentially lead to:
 
@@ -226,70 +226,8 @@ With investment of your time, **AAPS** can potentially lead to:
     
 - remote monitoring and administration of insulin delivery for caregivers of type 1 diabetics; and
    
-- streamlining of all your portable diabetic equipment (continuous glucose monitor and insulin portable devices) by replacing them with an android phone controlled by **AAPS**. 
+- streamlining of all your portable diabetic equipment (continuous glucose monitor receiver and insulin controlling devices) by using an android phone controlled by **AAPS**. 
     
+Ultimately,**AAPS** can empower individuals to better manage their diabetes, resulting in stable blood sugars and improved long term health outcomes.
 
-Ultimately,**AAPS** can empower individuals to better manage their diabetes resulting in stable blood sugars and improved long term health outcomes.
-
----
-
-## AAPS First Steps 
-
-Welcome. This is an introduction to aid beginners getting started with **AAPS** (or commonly referred to as "looping").
-
-## Safety
-
-“_With great powers comes great responsibilities…_”
-
-**AAPS** is designed with an extensive set of safety features with limits imposed and gradually removed with completion of the **objectives **(predominately made up of multiple choice questions). An **AAPS** feature will be unlocked as the Objectives are successfully completed. This process will gradually allow the user to migrate from Open Loop to Closed Loop.
-
-This has been done to achieve the best possible experience with **AAPS** in order to prevent common mistakes that new users tend to make when starting to loop. The safety parameters have been built upon typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with AAPS or has overlooked the required materials. Do not worry, we have all been there!
-
-## Key Principles
-
-The key principles and concepts of looping must be understood by the user before using **AAPS**. This is achieved by investing your personal time into reading the **AAPS** documentation, and completing the Objectives which is aimed to provide you with a solid platform for safe and effective use of **AAPS**. The volume of **AAPS** documentation may seem overwhelming at first but be patient and trust the process - with the proper approach, you'll get there! The overall process will depend upon the beginner’s progress and completion of objectives can typically take between 6 to 9 weeks .
-
-## Plan for hiccups
-
-At the preliminary stages of **AAPS**, you should expect to experience some hiccups whilst trying to fine tune your settings. **AAPS**’ glitches cannot be flushed out until the system is used in everyday life. Please plan accordingly and allow a sensible amount of time to troubleshoot and resolve such issues.
-
-## Flexibility/Adaptability
-
-Success with **AAPS** requires a proactive approach, a willingness to reflect on the BG data and flexibility to make the necessary adjustments to **AAPS** in order to improve your outcomes. Just as it is nearly impossible to learn to play a sport by reading about the rules alone, the same can be said of **AAPS**.
-
-## Technology compatibility
-
-There are limitations with **AAPS** as it is accessible for only certain types of insulin pumps or CGMs, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read  please read Component Set Up (Section INSERT).
-
-## App Build Time
-
-The time to build the **AAPS**(under Section INSERT) depends on your level of expertise and technical ability. Typically for inexperienced users, it can take up to half a day or a full day (with help from the community) in order to build the **AAPS**. The process will significantly speed up as you become more experienced at building the **AAPS**. 
-To aid the build process there are sections dedicated for:
-- list of questions and answers for frequent errors that are likely to occur under FAQs (Section K);
-- “How to install AAPS? (Section INSERT) which includes Troubleshooting subsection.
-
-## Keystore & configurations settings a export file 
-
-A “keystore” is a password encrypted file unique to your own copy of **AAPS**. Your android phone uses it to ensure that nobody else can upgrade your own copy without the keystore. In short, as part of the **AAPS** build, you should:
-
-- save the your keystore file (.jks file used to sign your app) in a safe place;
-- keep a note of your password for your keystore file.
-
-By doing the above, this will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. On average, there will be 2-3 AAPS updates required each year. 
-
-In addition, **AAPS** provides the ability to export all your configuration settings. This ensures that you can safely recover your system while changing phones, upgrading/reinstalling the application with minimum disruption. 
-
-## Troubleshootng 
-
-Please feel free to reach out to the AAPS community if there is anything you feel unsure about - there is no such thing as a silly question! All users with various levels of experience are encouraged to ask questions as necessary. Response times to questions are usually quick, typically only a few hours due to the volume of **AAPS** users. 
- 
-a) check the documentation;
-b) ask AAPS facebook group (https://www.facebook.com/groups/AndroidAPSUsers); and
-c) ask our discord channel.
-
-## Section overview
-
-AAPS documentation is made up of the following Sections:
-
-[INSERT ONCE SECTIONS /SUB SECTIONS AGREED]
----
+Interested in how to get started with setting up AAPS? Take a look at the [First Steps](https://androidaps.readthedocs.io/en/rework-project/preparing.html#) section. 
