@@ -95,6 +95,8 @@ Multiple daily injections (MDI, (a) in **Figure 2** below) usually involve givin
 
 At present there are four major open source closed loop systems available: [OpenAPS](https://openaps.readthedocs.io/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) and [iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI), (formerly FreeAPS X). The features of the different systems are shown in the table below:
 
+[OpenAPS](https://openaps.readthedocs.io/) was the first Open Source Closed Loop System. It uses a small computer such as Raspberry Pi or Intel Edison. Both AAPS and iAPS use the OpenAPS algorithms, whereas Loop uses a separate algorithm. You can read a comparison of iAPS and **AAPS** here.
+
 | Devicestype | Name                                                                                                     | [AAPS](https://wiki.aaps.app)                  | [Loop](https://loopkit.github.io/loopdocs/) | [Open APS](https://openaps.readthedocs.io/en/latest/) | [iAPS](https://iaps.readthedocs.io/en/latest/) (1) |
 | ---         | ---                                                                                                      | ---                                            | ---                                         | ---                                                   | ---                                                |
 | Phone       | Android                                                                                                  | ![available](./images/available.png)           | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)               |
@@ -132,10 +134,7 @@ Remarks in table
 5. Only older versions.
 6. Only older versions. Please check their documentation.
 
-[OpenAPS](https://openaps.readthedocs.io/) was the first Open Source Closed Loop System. It uses a small computer such as Raspberry Pi or Intel Edison. Both AAPS and iAPS use the OpenAPS algorithms, whereas Loop uses a separate algorithm. You can read a comparison of iAPS and **AAPS** here.
-
 An international peer-reviewed consensus statement containing practical guidance on open source looping was written by and for health-care professionals, and published in a leading medical journal in 2022: [_Lancet Diabetes Endocrinol_, 2022; 10: 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/). It is well worth a read (including for your diabetes clinic) and summarises the main technical differences between the different open-source hybrid closed loop systems. 
-
 
 It is hard to get a “feel” for any system without using it, or talking to others who are using it, so do reach out to others on Facebook/Discord and ask. Most people find that **AAPS** is incredibly sophisticated in comparison to other hybrid closed loop systems (particularly the commercial systems), with a huge number of potentially customisable settings and features,  discussed above. Some people can find this a little overwhelming in the beginning, but there is no rush to investigate all the possibilities at once, you can progress as slowly or as fast as you would like, and there is help available at every step of the way.  
 
