@@ -2,9 +2,9 @@
 
 *Tyto pokyny slouží k nastavení aplikace a pumpy DanaRS od roku 2017 nebo nejnovější Dana-i. Pokud máte původní DanaR, navštivte [Pumpa DanaR](./DanaR-Insulin-Pump).*
 
-**Pumpu Dana RS s firmwarem v3 lze použít pouze s AndroidAPS verze 2.7 a vyšší.**
+**New Dana RS firmware v3 can be used from AAPS version 2.7 onwards.**
 
-**Novou pumpu Dana-i lze použít pouze s AndroidAPS verze 3.0 a vyšší.**
+**New Dana-i can be used from AAPS version 3.0 onwards.**
 
 * V pumpě DanaRS/i je aplikací používán "BAZÁL A". Stávající data budou přepsána.
 
@@ -12,7 +12,7 @@
 
 ## Párování pumpy
 
-* Na domovské obrazovce AndroidAPS klikněte na hamburger menu v levém horním rohu a přejděte do Konfigurace.
+* On AAPS homescreen click hamburger menu on the top left corner and go to Config Builder.
 * V sekci pumpy vyberte 'Dana-i/RS'.
 * Kliknutím na ozubené kolo se dostanete přímo do nastavení pumpy nebo se vrátíte na hlavní obrazovku.
     
@@ -34,7 +34,7 @@
 * Postupujte podle procesu párování na základě typu a firmwaru vaší pumpy:
     
     * Pro DanaRS v1 vyberte v nastavení heslo pumpy a nastavte si ho.
-    * Pro DanaRS v3 musíte zadat 2 sekvence čísel a písmen zobrazených na pumpě do dialogu párování AndroidAPS.
+    * For DanaRS v3 you have to type 2 sequences of numbers and letters displayed on pump to AAPS pairing dialog.
     * Pro Dana-i se zobrazí standardní dialogové okno párování Android a musíte zadat 6-místné číslo zobrazené na pumpě.
 
 * Vyberte rychlost bolusu, abyste změnili výchozí rychlost bolusu (12sec na 1U, 30sec na 1U nebo 60sec na 1U).
@@ -48,11 +48,11 @@
 ### Výchozí heslo
 
 * DanaRS s firmwarem v1 a v2 má výchozí heslo 1234.
-* Pro DanaRS s firmwarem v3 nebo Dana-i je výchozím heslem kombinace měsíce a data výroby (tj. měsíc 01 a den 24).
+* For DanaRS with firmware v3 or Dana-i the default password is derived from the manufacturing date and calculates as MMDD where MM is the month and DD is the day, the pump was produced (i.e. '0124' representing month 01 and day 24).
     
-    * Otevřete hlavní menu na pumpě > Přehled > Informace. 
-    * Číslo 3 je datum výroby. 
-    * Pro v3/i se toto heslo používá pouze pro uzamčení nabídky na pumpě. Nepoužívá se pro komunikaci a není nutné jej zadat v AndroidAPS.
+    * From MAIN MENU select REVIEW then open SHIPPING INFORMATION from the sub menu
+    * Number 3 is manifacturing date. 
+    * Pro v3/i se toto heslo používá pouze pro uzamčení nabídky na pumpě. It's not used for communication and it's not necessary to enter it in AAPS.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
 
@@ -85,11 +85,11 @@
 
 * Potvrďte pomocí tlačítka OK.
 
-* Uložte opětovným stisknutím tlačítka OK.
+* Press OK to save setting.
     
     ![DanaRS Uložení nového hesla](../images/DanaRSPW_06_PWnewSave.png)
 
-* Přejděte dolů na "14. UKONČIT" a stiskněte tlačítko OK.
+* Přejděte dolů na "14. EXIT" and press OK to exit.
     
     ![Ukončit DanaRS](../images/DanaRSPW_07_Exit.png)
 
@@ -119,13 +119,13 @@ When switching to a new phone the following steps are necessary:
 
 * **Ručně spárujte** Danu RS s novým telefonem
 * Vzhledem k tomu, že nastavení týkající se připojení pumpy jsou také importována, AAPS na vašem novém telefonu již pumpu „zná“, a proto nezahájí skenování bluetooth. Proto je třeba nový telefon a pumpu spárovat ručně.
-* Nainstalujte AndroidAPS v novém telefonu.
+* Install AAPS on the new phone.
 * [Import settings](ExportImportSettings-import-settings) on your new phone
 
 ### DanaRS v3, Dana-i
 
 * Start pairing procedure like decribed [above](DanaRS-Insulin-Pump-pairing-pump).
-* Někdy může být nutné vymazat informace o párování v AndroidAPS dlouhým kliknutím na ikonu BT na kartě Dana-i/RS.
+* Sometimes it may be necessary to clear pairing information in AAPS by long-click BT icon on Dana-i/RS tab.
 
 ## Cestování mezi časovými pásmy s pumpou Dana RS
 
