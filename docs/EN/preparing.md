@@ -119,23 +119,141 @@ This section is aimed to provide new users with links on resources in order to g
 This is a section for the clinicians who have expressed interest in open source artificial pancreas technology such as AAPS, or for patients who want to share such information with their clinicians.                                                                                                                                                                                                                              |
 
 ## what are we going to build?	
+### An Android Phone Application: AAPS
+
+At the core, AAPS is an android application running from a phone. You are going to build it from scratch by installing tools to download the source code and build the actual application. 
+
+### A reporting server NightScout (Tidepool*)
+
+In order to fully take advantage of AAPS, you will want to setup a Nightscout server. It is used to collect data from AAPS over time to generate reports corelating CGM and insulin patterns.  Furthermore it can be used possibly to communicate to the AAPS application itself. This is required for parents who want to oversee their children AAPS sessions. 
+
+To put things in perspective, attempting to analyze your diabetes performance by looking at CGM data separately from the pump data is like driving a car where the driver is blind and the passenger describes the scene... 
+
+(*) (as of 26-Jun-203) Tidepool is currently available with the upcoming version 3.2 of AAPS.
+
+
+### A comprehensive ecosystem for maintenance 
+
+Since the application needs to be built and maintained; you will be taken step-by-step through setting up several tools which will allow to maintain the application, save your settings, your parameters, etc... 
+
 
 ## How long will it take?	
 
-## Who might AAPS not be suitable for?	
+As mentioned earlier, adopting AAPS is a more of a "journey" than a one-time setup. Current estimates would be:
+- initial reading of the documentation: 1 day
+- installing/configuring PC to allow the build: 2-8 hours
+- building a Nightscout server: 1 hour
+- installing (xdrip or BYODA or ... ): 1 hour
+- configuring CGM->xdrip->APPS  initially: 1 hour
+- configuring  AAPS->pump initially:1 hour
+- configuring AAPS->NightScout (reporting only): 1 hour
+- optional (for Parents) - configuring NightScout <-> AAPS & NSFollowers: 1 hour
+- Objective 1 :  1 hour
+- Objective 2 :  2 hour
+- Objective 3 : 14 days
+- Objective 4 : 7  days
+- Objective 5 : 7  days ?
+- Objective 6 : 5-14 days
+- Objective 7 : 7 days ?
+- Objective 8 : 7-14 days ?
+- Objective 9 : 14 day ?
+- Objective 10 : 1 day ?
 
-## Where can I get help?	
+once you are fully operational on AAPS, you are very likely to keep fine tuning your parameters and improving your overall diabete management.
 
 ## Requirements	
 
-### medical
+### Medical
 
-### technical
+#### A Supportive CareTeam
 
-### personal
+As long as your endocrinologist masters CGM, pumps and is open to you using an open source hybrid loop system it should be fine. Even better:
+- he already leverages NightScout (or Tidepool) with his patients on CGM/Pump
+- he already support adoption of loop systems especially loop/AAPS/iAPS/OpenAPS
+- he is himself a Type 1 Diabetic on AAPS.
+...
+
+#### NO SGLT-2 inhibitors
+
+:::{admonition} NO SGLT-2 inhibitors
+:class: danger
+SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. As they incalculably lower blood sugar levels, you MUST NOT take them while using a closed loop system like AAPS! There would be a huge risk of a ketoacidosis or a hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen. 
+:::
+Common Branding names include: Invokana, Farxiga, Jardiance, Glyxambi, Synjardy, Steglatro, and Xigduo XR, others... 
+ 
+
+#### 100U/ml insulins:
+
+AAPS calculations are based on insulin concentrations of 100U/ml (same as pump's standard). The following types of insulin profile presets are supported:
+- Rapid-Acting Oref: Humalog/NovoRapid/NovoLog
+- Ultra-Rapid ORef:  Fiasp
+- Lyumjev: 
+
+For Experimental/Advanced users only:
+- Free-Peak Oref: Allows you to define peak of the insulin activity
+
+
+### Technical
+
+This documentation aims at reducing the technical expertise required to an absolute minimum. However, you use your computer to build an android application from scratch, setup a server over the internet in a  public cloud; modify several android phone configurations and develop an extensive expertise in diabetes management... 
+Overall this is achieved by moving step-by-step, being patient, and leveraging support from an extensive community. If you are already able to navigate the internet, manage your own gmail emails, keep your Computer up-to-date it should be feasible. Just take your time.
+### Personal
+
+Again, their is definitely a steep learning curve to use AAPS. It will take time, patience and significant efforts however it is also a very rewarding experience as proven by the 10, 000 active users of the solution... 
+
 
 ### CGMs
+AAPS currently works with the following CGMs:
 
-### Insulin Pump
+| STATUS      | Name                                                                                                     |
+| ---        | ---                                                                                                      | 
+| Current    | Dexcom G6, One                                                                                           | 
+| Current    | Medtronic Enlite                                                                                         | 
+| Current    | Eversense                                                                                                | 
+| Current    | MM640g/MM630g                                                                                            | 
+| Current    | Libre 2                                                                                                  | 
+| Current    | PocTech                                                                                                  | 
+| Current    | NightScout as intermediate BG Source                                                                     | 
+| Legacy     | Dexcom G4/G5                                                                                             | 
+| Legacy     | Libre 1 (requires Miao Miao)                                                                             | 
+| Beta       | Dexcom G7                                                                                                | 
+| No Support | Libre 3                                                                                                  | 
 
-### Reporting (NS, Tidepool)
+
+### Insulin Pumps
+
+AAPS currently works with the following pumps:
+
+| STATUS      | Name                    | Additional Requirements              |
+| ---        | ---                     |  ---                                 |
+| Current    | Newer Omnipod Dash      | |
+| Current    | DANA R, DANA RS, DANA-i | |
+| Current    | Roche/Accucheck Combo, insight | |
+| Legacy     | Older Omnipod Eeros     |[additional device needed ](module-additional-communication-device) |
+| Legacy     | [some old Medtronic pumps](../Configuration/MedtronicPump.md)    | [additional device needed ](module-additional-communication-device) |
+
+
+### Phones
+
+The current version of AAPS requires an Android smartphone with Google Android 9.0 or above. So if you are thinking about a new phone, Android 9 is recommended at a minimum but optimally choose Android 10 or 12 or 13.
+
+Users are strongly encouraged to keep their build of AAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AAPS version 2.6.1.4, suitable for older Android versions, remains available from the [old repository.](https://github.com/miloskozak/AAPS)
+
+Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
+
+To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform).
+
+Any problems with the spreadsheet please send an email to [hardware@androidaps.org](mailto:hardware@androidaps.org), any donations of phone/watch models that still need testing please send an email to [donations@androidaps.org](mailto:hardware@androidaps.org).
+
+- [List of tested phones](../Getting-Started/Phones.md)
+- [Jelly Pro Settings](../Usage/jelly.md)
+- [Huawei Settings](../Usage/huawei.md)
+
+Users are strongly encouraged to keep their phone version of Android up-to-date including with security parameters. However, if you are new with AAPS or are not a technical expert you might want to delay updating your phone until others confirm it is safe on our various forums. 
+
+:::{admonition} Google Play Protect potential Issue
+:class: warning
+There have been several reports of AAPS being shutdown arbitrarily by Google Play Protect every morning. If this happens you will have to go to the google play options and disable "Google Play Protect". This doesn't seem to apply to all phone models or all Android versions.
+:::
+
+
