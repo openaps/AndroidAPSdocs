@@ -4,7 +4,7 @@
 
 AAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. It uses an openAPS software algorithm which aims to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need a supported and FDA/CE approved insulin pump, and a continuous glucose meter.
 
-Interested? Read more about AAPS in the [introduction](intro.md).
+Interested? Read more about AAPS in the [introduction](introduction.md).
 
 ```{warning}
 **IMPORTANT SAFETY NOTICE**
