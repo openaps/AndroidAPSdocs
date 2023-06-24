@@ -45,10 +45,10 @@ _These instructions are for configuring the app and your pump if you have a Dana
 ### Default password
 
 * For DanaRS with firmware v1 and v2 the default password is 1234.
-* For DanaRS with firmware v3 or Dana-i the default password is a combination of production month and production date (i.e. month 01 and day 24). 
+* For DanaRS with firmware v3 or Dana-i the default password is derived from the manufacturing date and calculates as MMDD where MM is the month and DD is the day, the pump was produced (i.e. '0124' representing month 01 and day 24). 
 
-  * Open main menu on pump > review > information. 
-  * Number 3 is production date. 
+  * From MAIN MENU select REVIEW then open SHIPPING INFORMATION from the sub menu
+  * Number 3 is manifacturing date. 
   * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AAPS.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
@@ -79,11 +79,11 @@ _These instructions are for configuring the app and your pump if you have a Dana
   ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
    
 * Confirm with OK button.
-* Save by pressing OK button again.
+* Press OK to save setting.
 
   ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
    
-* Move down to "14. EXIT" and press OK button.
+* Move down to "14. EXIT" and press OK to exit.
 
   ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
 
