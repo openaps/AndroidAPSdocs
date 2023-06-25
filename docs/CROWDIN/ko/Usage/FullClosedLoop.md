@@ -220,7 +220,7 @@ For exceptional meals, or to lower it if sports follow, the iob threshold can ra
 
 Automation(#3),”iobTH reached => SMBs off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive SMB boosting.
 
-![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop03.png)
+![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop04.png)
 
 Automation #3
 
@@ -243,11 +243,11 @@ In case for instance your breakfast totally deviates in carb content from your a
 
 In case, after a “rich” meal, a long-lasting stagnation with **high glucose** value is seen, Automation #6 (below, left),"post-meal High”, helps deal with fatty acid resistance: After multi-course meals, large greasy pizza, raclette evening, the glucose curve can form two humps or, very often, an elongated high plateau.
 
-![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop04.png)
+![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop05.png)
 
 Automation #4
 
-![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop05.png)
+![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop06.png)
 
 Automation #5
 
