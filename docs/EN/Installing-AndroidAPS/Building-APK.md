@@ -88,7 +88,7 @@ Download [Android Studio from here](https://developer.android.com/studio/install
 
 On first start you will find the setup wizard:
 
-Select "Do not import settings". Remark: This dialog will only pop up if an older version of Android Studion was detected. 
+Select "Do not import settings" as we don't want to import settings from previous installations.
 
    ![Do not import settings](../images/studioSetup/01_ImportSettings.png)
 
@@ -112,13 +112,18 @@ This selection has no influence on building the APK but the following screenshot
 
    ![UI color scheme](../images/studioSetup/05_UITheme.png)
 
-Mark "android-sdk-license", select "Accept" and click "Finish" on the License Agreement dialog.
+
+Click "Next" on the "Verify Settings" dialog.
+
+   ![Verify settings](../images/studioSetup/06_Verify.png)
+
+
+Select "Accept" and click "Finish" on the License Agreement dialog.
+
+> **_Note:_**  Depending on your PC-setup the licenses to be accepted might vary from what is shown in the screenshot-
 
    ![License Agreement SDK](../images/studioSetup/06a_LicenseAgreementSDK.png)
 
-Click "Finish" on the "Verify Settings" dialog.
-
-   ![Verify settings](../images/studioSetup/06_Verify.png)
 
 Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
 
