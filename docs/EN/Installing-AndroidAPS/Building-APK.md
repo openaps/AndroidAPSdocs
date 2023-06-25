@@ -120,7 +120,7 @@ Click "Next" on the "Verify Settings" dialog.
 
 Select "Accept" and click "Finish" on the License Agreement dialog.
 
-> **_Note:_**  Depending on your PC-setup the licenses to be accepted might vary from what is shown in the screenshot-
+> **_Note:_**  Depending on your PC-setup the licenses to be accepted might vary from what is shown in the screenshot.
 
    ![License Agreement SDK](../images/studioSetup/06a_LicenseAgreementSDK.png)
 
