@@ -120,7 +120,8 @@ Click "Next" on the "Verify Settings" dialog.
 
 Select "Accept" and click "Finish" on the License Agreement dialog.
 
-> **_Note:_**  Depending on your PC-setup the licenses to be accepted might vary from what is shown in the screenshot.
+> **_Note:_**  Depending on your setup the licenses to be accepted might vary from what is shown in the screenshot.
+
 
    ![License Agreement SDK](../images/studioSetup/06a_LicenseAgreementSDK.png)
 
@@ -260,11 +261,11 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * Android Studio might recommend to update the gradle system. **Never update gradle!** This will lead to difficulties!
 
-* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "upgrade" (1).
+* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "More" (1).
 
    ![No gradle update](../images/studioSetup/36_GradleUpdateRequest.png)
 
-* In the dialog box the select "Don't remind me again for this project" (2).
+* In the dialog box the select "Don't ask for this project" (2).
 
    ![No gradle update](../images/studioSetup/37_GradleUpdateDeny.png)
 
