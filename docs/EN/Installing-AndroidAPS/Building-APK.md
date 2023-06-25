@@ -65,7 +65,7 @@ In general, the steps necessary to build the APK file:
 4. [Download AAPS code](Building-APK-download-AAPS-code)
 5. [Download Android SDK](Building-APK-download-android-sdk)
 6. [Build the app](Building-APK-generate-signed-apk) (generate signed apk)
-7. [Transfer apk file to your phone](Building-APK-transfer-apk-to-smartphone)
+7. [Transfer APK file to your phone](Building-APK-transfer-apk-to-smartphone)
 8. [Identify receiver if using xDrip+](xdrip-identify-receiver)
 
 
@@ -80,7 +80,7 @@ Follow the manual on the [git installation page](../Installing-AndroidAPS/git-in
 (Building-APK-install-android-studio)=
 ## Install Android Studio
 
-The following screenshots have been taken from Android Studio Version Arctic Fox | 2020.3.1. Screens can change in future versions of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
+The following screenshots have been taken from Android Studio Version Flamingo | 2022.2.1. Screens can change in future versions of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
 
 One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
 
@@ -88,7 +88,7 @@ Download [Android Studio from here](https://developer.android.com/studio/install
 
 On first start you will find the setup wizard:
 
-Select "Do not import settings" as you have not used it before.
+Select "Do not import settings". Remark: This dialog will only pop up if an older version of Android Studion was detected. 
 
    ![Do not import settings](../images/studioSetup/01_ImportSettings.png)
 
@@ -111,6 +111,10 @@ This selection has no influence on building the APK but the following screenshot
 
 
    ![UI color scheme](../images/studioSetup/05_UITheme.png)
+
+Mark "android-sdk-license", select "Accept" and click "Finish" on the License Agreement dialog.
+
+   ![License Agreement SDK](../images/studioSetup/06a_LicenseAgreementSDK.png)
 
 Click "Finish" on the "Verify Settings" dialog.
 
@@ -188,7 +192,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
     - Check if "Git" is selected as version control (2).
     - Copy and paste the URL
       ```
-      https://github.com/nightscout/AndroidAPS
+      https://github.com/nightscout/AndroidAPS.git
       ```
       to the main AAPS repository into the URL textbox (3).
     - Choose the directory where you want to save the cloned code (4).
@@ -198,8 +202,6 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 * Click button "Clone" (5).
 
    ![Clone repository](../images/studioSetup/22_Cloning.png)
-
-* Do not click "Background" while repository is cloned!
 
 * After the repository is cloned successfully, Android Studio will open the cloned project.
 
@@ -329,7 +331,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 
    ![Remember passwords](../images/studioSetup/48_KeystoreSave.png)
 
-* Select build variant "fullRelease" (1) and press "Finish".
+* Select build variant "fullRelease" (1) and press "Create".
 
    ![Select build variant](../images/studioSetup/49_BuildVariant.png)
 
