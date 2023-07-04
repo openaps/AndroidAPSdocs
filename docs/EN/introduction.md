@@ -93,7 +93,7 @@ Multiple daily injections (MDI, (a) in **Figure 2** below) usually involve givin
 
 ## How does AAPS compare to other looping systems?
 
-At present there are four major open source closed loop systems available: [OpenAPS](https://openaps.readthedocs.io/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) and [iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI); see [here](https://iaps.readthedocs.io/en/main/) for the **iAPS** docs which are currently under development (iAPS was formerly known as FreeAPS X). [OpenAPS](https://openaps.readthedocs.io/) was the first Open Source Closed Loop System. It uses a small computer such as Raspberry Pi or Intel Edison. Both AAPS and iAPS use the OpenAPS algorithms, whereas Loop uses a separate algorithm. You can read a brief comparison of iAPS and **AAPS** [here](https://iaps.readthedocs.io/en/main/Configuration/transition-qa.html).
+As of June 25 2023, there are four major open source closed loop systems available: [OpenAPS](https://openaps.readthedocs.io/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) and [iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI), (formerly FreeAPS X). The features of the different systems are shown in the table below:
 
 The features of the different systems are shown in the table below:
 
