@@ -44,9 +44,8 @@ These instructions will assume that you are starting a new pod session; if this 
 Default basal rates are programmed on the pod on activation as defined in the current active profile.
 As long as AAPS is operational it will send basal rate commands that run for a maximum of 120 minutes. When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod - phone distance) the pod will automatically fall back to default basal rates.
 
-**30 min Basal Rate Profiles are NOT supported in AAPS.**
-**The AAPS Profile does not support a 30 minute basal rate time frame**
-If you are new to AAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Omnipod Dash hardware itself supports the 30 min basal rate profile increments, AAPS is not able to take them into account with its algorithms currently.
+**The AAPS basal rate Profile only supports full hour time slots. So you can not set a basal rate start or end time at 11:30 for example**
+
 
 **0U/h profile basal rates are NOT supported in AAPS**
 While the DASH pods do support a zero basal rate, since AAPS uses multiples of the profile basal rate to determine automated treatment it cannot function with a zero basal rate. A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate. 
@@ -97,7 +96,7 @@ Please **swipe left** to the **DASH** tab where you will be able to manage all p
 
 ![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
-2. The **Fill Pod** screen is displayed. Fill a new pod with at least 80 units of insulin and listen for two beeps indicating that the pod is ready to be primed. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use about 3-10 units.
+2. The **Fill Pod** screen is displayed. Fill a new pod with at least 80 units of insulin (standard concentration of 100u/ml aka *U100*) and listen for two beeps indicating that the pod is ready to be primed. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use about 3-10 units.
 
 ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
 
