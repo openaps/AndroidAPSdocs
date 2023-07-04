@@ -1,4 +1,4 @@
-# Изменить язык
+# Изменение языка
 
 ```{note}
 The language selection have been moved to the bottom drawer of the left menu. Please click on the bottom bar to open language selection menu.
@@ -11,12 +11,12 @@ The language selection have been moved to the bottom drawer of the left menu. Pl
 
 Или просто нажмите на один из следующих языков:
 
-- [English](https://androidaps.readthedocs.io/en/latest/)
-- [Czech](https://androidaps.readthedocs.io/cs/latest/)
-- [Dutch](https://androidaps.readthedocs.io/nl/latest/)
-- [German](https://androidaps.readthedocs.io/de/latest/)
-- [Greek](https://androidaps.readthedocs.io/el/latest/)
-- [Korean](https://androidaps.readthedocs.io/ko/latest/)
-- [Lithuanian](https://androidaps.readthedocs.io/lt/latest/)
-- [Russian](https://androidaps.readthedocs.io/ru/latest/)
-- [Spanish](https://androidaps.readthedocs.io/es/latest/)
+- [Английский](https://androidaps.readthedocs.io/en/latest/)
+- [Чешский](https://androidaps.readthedocs.io/cs/latest/)
+- [Голландский](https://androidaps.readthedocs.io/nl/latest/)
+- [Немецкий](https://androidaps.readthedocs.io/de/latest/)
+- [Греческий](https://androidaps.readthedocs.io/el/latest/)
+- [Корейский](https://androidaps.readthedocs.io/ko/latest/)
+- [Литовский](https://androidaps.readthedocs.io/lt/latest/)
+- [Русский](https://androidaps.readthedocs.io/ru/latest/)
+- [Испанский](https://androidaps.readthedocs.io/es/latest/)

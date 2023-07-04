@@ -1,23 +1,23 @@
-# Как помочь с AndroidAPS
+# How to help with AAPS
 
-## AndroidAPS работает полностью на добровольной основе и не имеет оплачиваемого персонала.
+## AAPS operates entirely on volunteer efforts and has no paid staff.
 
-Разработчики – родители, опекуны, близкие люди и люди с диабетом, работающие над развитием и улучшением решения общих задач. Разработчики безвозмездно выделяют свое свободное время, но несправедливо ожидать, что они будут нести дополнительные расходы, когда делают что-то такое удивительное с открытым исходным кодом и бесплатно для всех.
+Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
 
-*Для полного тестирования новой техники необходимо иметь дополнительный телефон и запасную помпу, так как людям нельзя пользоваться системой пока она не будет стабильной. Новые модели нуждаются в тестировании по мере появления. Некоторые из жертвуемых денег необходимы для расходов на доставку этих устройств разработчикам в разных странах. Иногда полезно сделать пожертвование, чтобы разработчики могли оставить свои темные комнаты и встретиться друг с другом на конференциях и мероприятиях, где они смогут дать своим творческим и аналитическим мозгам столкнуться.*
+*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
 
-## Я могу написать код! Как принять участие?
+## I can write code! How do I participate?
 
-Ура! Изучите проблемы, поспрашивайте в канале gitter, там всегда много дел! Сначала выберите небольшую задачу и внесите первый вклад в общий проект! :)
+Yay! Look at the issues, ask in the discord channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
 
-## Я знаю систему и могу написать документацию!
+## I know the system and can write documentation!
 
-Отлично, это очень ценится и это хороший способ внести свой вклад в общее дело!
+Great, this is a highly appreciated thing and a good way to pay it forward!
 
-* Канал для обсуждения AAPS находится здесь: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* Руководство, как предлагать описания на английском языке, можно найти здесь: [Как сделать PR](../make-a-PR.md). Другие языки переводятся только с английского языка и не могут редактироваться по соображениям целостности и последовательности.
+* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
+* A guide how to do commits on English wiki can be found here: [How to make a PR](../make-a-PR.md). Other languages are only translated from english and can't be edited for consistency reasons.
 
-## Я говорю на нескольких языках и хочу перевести приложение или документацию
+## I do speak multiple languages and want to translate the app or the documentation
 
 If you are translating something for the first time, please start with translating the strings for the app, as this is easier and you will get results faster.
 
@@ -25,11 +25,11 @@ You are welcome to start as a translator for the documentation in parallel or la
 
 You can check the state of translations for the languages app and documentation [here](../Administration/stateTranslations.md).
 
-* Если вы хотите перевести **приложение** на другие языки (спасибо), воспользуйтесь [crowdin](https://crowdin.com/project/androidaps).
-* Если вы хотите перевести **документацию** на другие языки (спасибо), воспользуйтесь [crowdin](https://crowdin.com/project/androidapsdocs). 
+* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
+* If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
 
 Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
 
-## Есть ли другие способы помочь?
+## Are there other ways to help?
 
 Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.

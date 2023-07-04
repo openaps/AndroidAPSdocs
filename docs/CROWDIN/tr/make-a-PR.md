@@ -8,7 +8,7 @@ Metnin nasıl biçimlendirileceğine (başlık, kalın...) ve bağlantıların a
 
 Herhangi bir sorunuz, geri bildiriminiz veya yeni fikirleriniz için [discord](https://discord.gg/4fQUWHZ4Mw) aracılığıyla dokümantasyon ekibiyle iletişime geçebilirsiniz. Çekme isteği yapmak zor değil, belgeleri düzenlemenize yardımcı olabiliriz.
 
-Bir noktada bir çekme isteği (PR) yapmanız önerilecektir. PR, çekme isteğinin kısaltmasıdır ve GitHub'da depolanan bilgileri eklemenin veya düzenlemenin bir yoludur. Aslında bir tane yapmak çok zor değil ve katkıda bulunmak için harika bir yol. Bu dokümantasyonlar, sizin gibi insanlar PR'lar yaptığı için burada. Bir hata yapmaktan veya bir şekilde yanlış dokümantasyonu düzenlemekten endişe etmeyin. There is always a review process before changes are merged into the "formal" AAPS documentation repository. PR sürecindeki herhangi bir kazayla orijinalleri bozamazsınız. Genel PR prosesi:
+Bir noktada bir çekme isteği (PR) yapmanız önerilecektir. PR, çekme isteğinin kısaltmasıdır ve GitHub'da depolanan bilgileri eklemenin veya düzenlemenin bir yoludur. Aslında bir tane yapmak çok zor değil ve katkıda bulunmak için harika bir yol. Bu dokümantasyonlar, sizin gibi insanlar PR'lar yaptığı için burada. Bir hata yapmaktan veya bir şekilde yanlış dokümantasyonu düzenlemekten endişe etmeyin. Değişiklikler "resmi" AAPS belge deposunda birleştirilmeden önce her zaman bir inceleme süreci vardır. PR sürecindeki herhangi bir kazayla orijinalleri bozamazsınız. Genel PR prosesi:
 
 * Mevcut içeriği düzenleyerek kod veya dokümanlarda düzenlemeler ve iyileştirmeler yapın.
 * Düzenlemelerinizin iyi görünüp görünmediğini bir kez daha kontrol edin.
@@ -28,7 +28,7 @@ Bir noktada bir çekme isteği (PR) yapmanız önerilecektir. PR, çekme isteği
 
 ![dokümanı düzenle](./images/PR1.png)
 
-Or you can click on the "Edit in GitHub" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited.
+Veya sağ üst köşedeki "GitHub'da Düzenle" bağlantısına tıklayabilir ve ardından düzenlenecek sayfa içeriğinin üst çubuğunda görünen kalem simgesine tıklayabilirsiniz.
 
 ![RTD io](./images/PR2.png)
 
@@ -50,11 +50,11 @@ We are using markdown for the docs pages. The file have got the suffix ".md".The
 
 ![create pull request](./images/PR6.png)
 
-7. Bu, bir çekme isteğinin (PR) açılmasını tamamlar. GitHub, PR'ye başlıktan sonra bulunan bir sayı ve bir kare işaret atar. Geri bildirimi kontrol etmek için bu sayfaya dönün (veya size e-postayla GitHub bildirimleri gönderildiyse, PR ile ilgili herhangi bir etkinlik hakkında bilgilendiren e-postalar alacaksınız). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! PR'nin ilerlemesini kontrol etmek isterseniz, GitHub hesabınızın sağ üst köşesindeki zil logosuna tıklayıp tüm PR'lerinizi görebilirsiniz.
+7. Bu, bir çekme isteğinin (PR) açılmasını tamamlar. GitHub, PR'ye başlıktan sonra bulunan bir sayı ve bir kare işaret atar. Geri bildirimi kontrol etmek için bu sayfaya dönün (veya size e-postayla GitHub bildirimleri gönderildiyse, PR ile ilgili herhangi bir etkinlik hakkında bilgilendiren e-postalar alacaksınız). Düzenleme şimdi, ekibin AAPS için ana belgelere geçmeden önce gözden geçireceği ve potansiyel olarak geri bildirimde bulunacağı bir PR listesinde olacak! PR'nin ilerlemesini kontrol etmek isterseniz, GitHub hesabınızın sağ üst köşesindeki zil logosuna tıklayıp tüm PR'lerinizi görebilirsiniz.
 
 ![PR tracking](./images/PR7.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+Not: Çatalınız (fork) ve şubeniz (branch) hala kendi kişisel GitHub hesabınızda kalıyor olacak. PR'nizin birleştiğine dair bir bildirim aldıktan sonra, işiniz bittiyse şubenizi silebilirsiniz (Adım 8'in bildirim alanı, kapatıldığında veya birleştiğinde şubeyi silmek için bir bağlantı sağlayacaktır). Gelecekteki düzenlemeler için, bu prosedürü izlerseniz, düzenlemeler her zaman AndroidAPSdocs depolarının güncellenmiş bir sürümüyle başlayacaktır. Bir PR isteği başlatmak için başka bir yöntem kullanmayı seçerseniz (örneğin, başlangıç noktası olarak çatallı deponuzun ana dalından başlayarak düzenleme), önce bir "karşılaştırma" gerçekleştirerek ve çatalınızı en son güncellemenizden bu yana gerçekleşen tüm güncellemeleri birleştirerek deponuzun güncel olduğundan emin olmanız gerekir. İnsanlar depolarını güncellemeyi unutmaya meyilli olduğundan, "karşılaştırma" yapmaya alışana kadar yukarıda özetlenen PR sürecini kullanmanızı öneririz.
 
 (make-a-PR-code-syntax)=
 
@@ -96,57 +96,57 @@ We try to avoid further leveles of headlines.
 :::
 
 1. birinci
-2. saniye
-3. third :::
+2. ikinci
+3. üçüncü :::
 
 4. birinci
 
-5. saniye
-6. third
+5. ikinci
+6. üçüncü
 
-### unordered list
+### sırasız liste
 
 :::
 
-* one element
-* another element
-* and another element :::
+* bir öğe
+* başka bir öğe
+* va başka bir öğe :::
 
-* one element
+* bir öğe
 
-* another element
-* and another element
+* başka bir öğe
+* ve başka bir öğe
 
-### multi level list
+### çok seviyeli liste
 
-You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
+Bir sonraki düzeyi bir öncekinden 4 boşluk daha sağda girintileyerek listelere ilave liste ekleyebilirsiniz.
 
 :::
 
 1. birinci
-2. saniye
-3. third 
-    1. one element
-    2. another element
-    3. and another element
+2. ikinci
+3. üçüncü 
+    1. bir öğe
+    2. başka bir öğe
+    3. ve başka bir öğe
 4. dört
 5. beş
 6. six :::
 
 7. birinci
 
-8. saniye
-9. third 
-    1. one element
-    2. another element
-    3. and another element
+8. ikinci
+9. üçüncü 
+    1. bir öğe
+    2. başka bir öğe
+    3. ve başka bir öğe
 10. dört
 11. beş
-12. six
+12. altı
 
-### Images
+### Görseller
 
-To include images you use this markdown syntax.
+Görüntüleri dahil etmek için bu işaretleme sözdizimini kullanırsınız.
 
 * images: `![alt text](../images/file.png)`
 
