@@ -1,7 +1,7 @@
 # Formats in addition to HTML
 
 formats:
-   #- pdf
+   - pdf
    - none
 
 # Pip requirements
