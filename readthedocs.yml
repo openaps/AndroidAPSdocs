@@ -2,7 +2,7 @@
 
 formats:
    - pdf
-   - none
+
 
 # Pip requirements
 requirements_file: ./requirements.txt
