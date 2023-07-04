@@ -324,7 +324,7 @@ Abhängig von Deinen Einstellungen im [Konfigurations-Generator](../Configuratio
 
 - Diese Einstellung existiert als Sicherheitsgrenze, um zu verhindern, dass AAPS jemals eine gefährlich hohe Basalrate setzt.
 - Der Wert wird in IE pro Stunde angegeben (IE/h).
-- Es wird empfohlen, hier etwas vernünftiges einzugeben. Eine gute Empfehlung ist, die **höchste Basalrate** in Deinem Profil zu verwenden und diese **mit 4 zu multiplizieren**.
+- It is advised to set this to something sensible. Eine gute Empfehlung ist, die **höchste Basalrate** in Deinem Profil zu verwenden und diese **mit 4 zu multiplizieren**.
 - Wenn zum Beispiel die höchste Basalrate in deinem Profil 0.5IE/h war, kannst du das mit 4 multiplizieren, um einen Wert von 2IE/h zu erhalten.
 - Siehe dazu auch die [detaillierte Funktionsbeschreibung](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
