@@ -8,16 +8,13 @@ For hints how to format text (headline, bold...) and set links please see the ["
 ## General
 
 For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw). 
-Doing a PR isn't difficult, but we can help you editing the documentation.
 
-At some point it will be suggested that you make a PR. PR is short for pull request, and it is a way of adding or editing information stored in GitHub.  It's actually not too hard to do one and it is a great way to contribute. This documentation is here because people like you made PRs.  Don't worry about making a mistake or somehow editing the wrong documents.  There is always a review process before changes are merged into the "formal" AAPS documentation repository.  You can't mess up the originals through any accidents in the PR process.  The general process is:
+At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub.  It's actually not too hard to do a PR and it is a great way to contribute. You are reading this documentation right now because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository.  You can't mess up the originals through any accidents in the process. The general process is:
 
 * Make edits and improvements to code or documentation by editing the existing content.
 * Double-check that your edits look good to you.
-* Make a few notes of what's changed so people may understand the edits.
-* Create a pull request, which asks the administrators to use your changes.
-* They will do a review and either (1)merge your changes, (2)comment back to you about your changes, or (3)start a new document with your changes.
-
+* Create a pull request, which asks the editor to use your changes. When you do this, there is a small box where you can add comments. Make a few notes of what's changed, so the editor understand the edits.
+* The editor will do a review and either (1) merge your changes, (2) comment back to you about your changes, or (3)start a new document with your changes.
 (Side note:  If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
 
 For our example we are going to make an edit to AndroidAPSdocs.  This does NOT need to be done in the linux environment on your rig.  This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
