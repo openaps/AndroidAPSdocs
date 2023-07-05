@@ -102,11 +102,12 @@ You need to find out why you get duplicate BGs:
 * Last resort: In AAPS, go to your NS Client settings, select the sync settings and disable the "Accept CGM data from NS" option.
 
 ##### Yellow warning sign
-* The yellow warning signal is indicating that your BG arrived in irregular time intervals or some BGs are missing.
+* The yellow warning signal is indicating that your BG arrived in irregular time intervals or some BGs are missing. 
 
   ![Yellow BG warning](../images/bg_warn_yellow.png)
 
 * Usually you do not have to take any action. The closed loop will continue to work!
+* For instannce clicking the warning side will inform you that  "BG data status: Recalculated data used".
 * As a sensor change is interupting the constant flow of BG data a yellow warning sign after sensor change is normal and nothing to worry about.
 * Special note for libre users:
 
