@@ -21,6 +21,7 @@ AAPS offer several options for remote monitoring of children and also allows to 
 - Dexcom follow if you are using original Dexcom app (BG values only)
 - [xDrip+](../Configuration/xdrip.md) in follower mode (mainly BG values and **alarms**)
 - [Sugarmate](https://sugarmate.io/) or [Spike](https://spike-app.com/) on iOS (mainly BG values and **alarms**)
+- Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting 
 
 ## Smartwatch options
 
