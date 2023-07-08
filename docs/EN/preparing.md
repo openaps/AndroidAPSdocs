@@ -249,7 +249,13 @@ Any problems with the spreadsheet please send an email to [hardware@androidaps.o
 - [Jelly Pro Settings](../Usage/jelly.md)
 - [Huawei Settings](../Usage/huawei.md)
 
-Users are strongly encouraged to keep their phone version of Android up-to-date including with security parameters. However, if you are new with AAPS or are not a technical expert you might want to delay updating your phone until others confirm it is safe on our various forums. 
+Users are encouraged to keep their phone version of Android up-to-date including with security parameters. However, if you are new with AAPS or are not a technical expert you might want to delay updating your phone until others confirm it is safe on our various forums. 
+
+:::{admonition} delaying Samsung phones updates
+:class: warning
+Samsung has an unfortunate track record of forcing updates of their phones which cause bluetooth connectivity issues. To disable these forced updates you need to switch the phone to "developper mode" by:
+ go to settings and about then software information, then tap build number u til it confirms you have unlocked developer mode. Got back to main settings menu and you should see a new developer options menu item. Open developer options and scroll to find auto system update and turn it off
+:::
 
 :::{admonition} Google Play Protect potential Issue
 :class: warning
