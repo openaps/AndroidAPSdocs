@@ -4,18 +4,18 @@
 
 AAPS, android akıllı telefonlarında yapay pankreas sistemi (APS) görevi gören, insüline bağımlı diyabetle yaşayan kişiler için açık kaynak kodlu bir uygulamadır. Ana kompanentler ile amacı, farklı openAPS yazılım algoritmaları kullanarak canlı bir pankreasın yaptığı gibi otomatik insülin dozlama (AID) yaparak kan şekeri seviyelerini sağlıklı sınırlar içinde tutmaktır. Ek olarak, yazılımın desteklediği ve FDA/CE onaylı bir insülin pompasına ve sürekli şeker ölçüm cihazına ihtiyacınız olacaktır.
 
-The app does *not* use self-learning artificial intelligence. Instead, the calculations of AAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons.
+Uygulama kendi kendine öğrenen yapay zeka *kullanmaz.* Bunun yerine, AAPS'in hesaplamaları, kullanıcının tedavi profiline manuel olarak koyduğu bireysel dozaj algoritmasına ve karbonhidrat alımına dayanır, ancak bunlar güvenlik nedenleriyle sistem tarafından doğrulanır.
 
-The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
+Uygulama Google Play'de bulunmaz - yasal nedenlerle onu kaynak koddan kendiniz oluşturmanız gerekir.
 
 ```{admonition} Ask for help - Writing Docs
-:class: note
+:class: not
 
-Please don't be shy, we urgently *need* support in creating the documentation.
+Lütfen utangaç olmayın, dokümantasyonu oluştururken desteğe ihtiyacımız var.
 
-A pull request to edit the documentation is relatively simple to create. You can't break anything. There are release procedures.
+Dokümantasyonu düzenlemek için bir çekme isteği oluşturmak nispeten kolaydır. Hiçbir şeyi bozamazsınız. Serbest bırakma prosedürleri var.
 
-A 3 minute video which explains how to edit the docs via PR is available [here](https://www.youtube.com/watch?v=Vo4L6YYxWak).
+Dokümanların PR (çekme isteği) yoluyla nasıl düzenleneceğini açıklayan 3 dakikalık bir videoyu [burada](https://www.youtube.com/watch?v=Vo4L6YYxWak) bulabilirsiniz.
 
 ```
 
@@ -193,78 +193,78 @@ xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 ```
 
 ```{toctree}
-:caption: AAPS for children
+:caption: Çocuklar için AAPS
 
-Remote monitoring <./Children/Children.md>
+Uzaktan izleme <./Children/Children.md>
 
-SMS commands <./Children/SMS-Commands.md>
+SMS komutları <./Children/SMS-Commands.md>
 
-Profile helper <./Configuration/profilehelper.md>
-
-```
-
-```{toctree}
-:caption: Full Closed Loop
-
-Full Closed Loop <./Usage/FullClosedLoop.md>
+Profil yardımcısı <./Configuration/profilehelper.md>
 
 ```
 
 ```{toctree}
-:caption: Troubleshooting
+:caption: Tam Kapalı Döngü
 
-Troubleshooting <./Usage/troubleshooting.md>
+Tam Kapalı Döngü <./Usage/FullClosedLoop.md>
+
+```
+
+```{toctree}
+:caption: Sorun Giderme
+
+Sorun Giderme <./Usage/troubleshooting.md>
 
 Nightscout client <./Usage/Troubleshooting-NSClient.md>
 
 ```
 
 ```{toctree}
-:caption: FAQ
+:caption: SSS
 
-FAQ <./Getting-Started/FAQ.md>
+SSS <./Getting-Started/FAQ.md>
 ```
 
 ```{toctree}
-:caption: Glossary
+:caption: Sözlük
 
-Glossary <./Getting-Started/Glossary.md>
+Sözlük <./Getting-Started/Glossary.md>
 ```
 
 ```{toctree}
-:caption: Where to go for help
+:caption: Yardım için nereye gitmeli?
 
-Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
+Başlamadan önce okumanız gereken yararlı kaynaklar <./Where-To-Go-For-Help/Background-reading.md>
 
-Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
+Yardım için nereye gitmeli <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
-Docs updates & changes <./Getting-Started/WikiUpdate.md>
-
-```
-
-```{toctree}
-:caption: For Clinicians
-
-For Clinicians <./Resources/clinician-guide-to-AndroidAPS.md>
-```
-
-```{toctree}
-:caption: How to help
-
-How to help <./Getting-Started/How-can-I-help.md>
-
-How to translate the app and docs <./translations.md>
-
-State of translations <./Administration/stateTranslations.md>
-
-How to edit the docs <./make-a-PR.md>
+Doküman güncellemeleri & değişiklikler <./Getting-Started/WikiUpdate.md>
 
 ```
 
 ```{toctree}
-:caption: Sandbox
+:caption: Klinisyenler için
 
-Sandbox <./Sandbox/sandbox1.md>
+Klinisyenler için <./Resources/clinician-guide-to-AndroidAPS.md>
+```
+
+```{toctree}
+:caption: Nasıl yardım ederim
+
+Nasıl yardım ederim <./Getting-Started/How-can-I-help.md>
+
+Uygulama ve dokümantasyon nasıl çevrilir <./translations.md>
+
+Çevirilerin durumu <./Administration/stateTranslations.md>
+
+Dokümanlar nasıl düzenlenir <./make-a-PR.md>
+
+```
+
+```{toctree}
+:caption: Güvenli Alan
+
+Güvenli alan <./Sandbox/sandbox1.md>
 ```
 
 ```{note}
