@@ -9,7 +9,7 @@ For hints how to format text (headline, bold...) and set links please see the ["
 
 For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw). 
 
-Perhaps after discussion, they will suggest that you make a pull request (PR). This is a way that you can easily add or editing information stored in GitHub.  It's actually not too hard, and it is a great way to contribute. This documentation is here because people like you made PRs.  Don't worry about making a mistake or somehow editing the wrong documents.  There is always a review process before changes are merged into the "formal" AAPS documentation repository.  You can't mess up the originals through any accidents in the PR process.  The general process is:
+At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub.  It's actually not too hard to do a PR and it is a great way to contribute. You are reading this documentation right now because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository.  You can't mess up the originals through any accidents in the process. The general process is:
 
 * Make edits and improvements to code or documentation by editing the existing content.
 * Double-check that your edits look good to you.
