@@ -324,7 +324,7 @@
 
 - APPS'in tehlikeli derecede yüksek bazal oranı vermesini önlemek için bir güvenlik sınırıdır.
 - Değer, ünite/saat (Ü/s) cinsinden ölçülür.
-- Mantıklı bir değer ayarlamanız önerilir. Profilinizdeki **en yüksek bazal oranı** alıp **4 ile çarpmanız** iyi bir öneridir.
+- It is advised to set this to something sensible. Profilinizdeki **en yüksek bazal oranı** alıp **4 ile çarpmanız** iyi bir öneridir.
 - Örneğin, profilinizdeki en yüksek bazal oran 0,5 Ü/s ise, bunu 4 ile çarparak maks geçici bazal için 2 Ü/s değerini elde edersiniz.
 - Ayrıca [ayrıntılı özellik açıklamasına](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal) bakın.
 
