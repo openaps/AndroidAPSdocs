@@ -21,6 +21,7 @@ AAPS, çocukların uzaktan izlenmesi için çeşitli seçenekler sunar ve ayrıc
 - Orijinal Dexcom uygulamasını kullanıyorsanız, Dexcom follow uygulaması (yalnızca KŞ değerleri)
 - Takipçi modunda [xDrip+](../Configuration/xdrip.md) (esas olarak KŞ değerleri ve **alarmlar**)
 - iOS'ta [Sugarmate](https://sugarmate.io/) veya [Spike](https://spike-app.com/) (esas olarak KŞ değerleri ve **alarmlar**)
+- Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting
 
 ## Akıllı saat seçenekleri
 

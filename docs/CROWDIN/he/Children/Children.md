@@ -21,6 +21,7 @@ AAPS offer several options for remote monitoring of children and also allows to 
 - דקסקום Follow אם אתם משתמשים באפליקציית דקסקום (רק ערכי הסוכר מוצגים)
 - אפליקציית [xDrip+](../Configuration/xdrip.md) במצב עוקב (בעיקר להצגת ערכי הסוכר והשמעת **התראות**)
 - אפליקציית [Sugarmate](https://sugarmate.io/) או [Spike](https://spike-app.com/) על מכשירי iOS (בעיקר ערכי סוכר **והתראות**)
+- Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting
 
 ## Smartwatch options
 
