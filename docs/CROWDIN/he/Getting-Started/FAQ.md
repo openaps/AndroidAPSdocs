@@ -389,7 +389,7 @@ Please
 
 ## מכשיר הקישור\משאבה\פוד שלי לא מגיב (RileyLink/OrangeLink/EmaLink...)
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaL...).
+בטלפונים מסוימים, יש ניתוק בלוטות' ממכשירי הקישור (RL/AOL/Email...).
 
 Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump.)
 
