@@ -10,7 +10,7 @@
 
 * ניווט בין מודולי AndroidAPS השונים.
 * לחלופין ניתן לעבור בין המסכים ע"י החלקה שמאלה וימינה.
-* Displayed tabs can be selected in [config builder](Config-Builder-tab-or-hamburger-menu).
+* הלשוניות שניתנות להצגה נבחרות ב[בונה התצורה](Config-Builder-tab-or-hamburger-menu).
 
 (Screenshots-section-b-profile-target)=
 
@@ -22,7 +22,7 @@
 
 * הפרופיל הנוכחי מוצג בסרגל הימיני (כששפת המערכת עברית).
 * לחיצה קצרה על הפרופיל מציגה את פרטי הפרופיל
-* Long press profile bar to [switch between different profiles](Profiles-profile-switch).
+* לחיצה ארוכה על הפרופיל תפתח את תיבת דו השיח [החלפת פרופיל](Profiles-profile-switch).
 * אם החלפת הפרופיל בוצעה עם משך זמן מוגדר, הזמן הנותר מוצג בסוגריים.
 
 #### ערך מטרה
@@ -40,7 +40,7 @@
 ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS יכול להתאים באופן דינמי את ערכי המטרה על סמך הרגישות אם אתם משתמשים באלגוריתם SMB.
-* Enable either one or both of the [following options](Preferences-openaps-smb-settings) 
+* הפעילו את אחת [מהאפשרויות הבאות](Preferences-openaps-smb-settings) או את שתיהן: 
    * "רגישות מעלה את ערך המטרה" ו\או 
    * "תנגודת מורידה את ערך המטרה" 
 * אם AAPS מזהה תנגודת או רגישות, המטרה תשונה ממה שנקבע בפרופיל. 
@@ -51,7 +51,7 @@
 #### רמת סוכר נוכחית
 
 * קריאת הסוכר האחרונה מהחיישן מוצגת בצד ימין.
-* Color of the BG value reflects the status to the defined [range](Preferences-range-for-visualization). 
+* הצבע של ערך הסוכר משקף את הסטטוס לפי [הטווח](Preferences-range-for-visualization) המוגדר. 
    * ירוק = בטווח
    * אדום = מתחת לטווח
    * צהוב = מעל הטווח
@@ -66,7 +66,7 @@
 * סמל חדש מציג את מצב הלולאה:
    
    * עיגול ירוק = לולאה פועלת
-   * green circle with dotted line = [low glucose suspend (LGS)](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * עיגול ירוק מְקֻוְוקָּו = השהיית בזאלי עקב סוכר נמוך (LGS)
    * מעגל אדום = לולאה מושבתת (קבוע)
    * עיגול צהוב = לולאה מושהת (השהיה זמנית אך אינסולין בזאלי יינתן) - הזמן שנותר להשהיה מוצג מתחת לסמל
    * עיגול אפור = המשאבה מנותקת (האופן זמני, ללא הזרמת כל אינסולין) - הזמן שנותר מוצג מתחת לסמל
