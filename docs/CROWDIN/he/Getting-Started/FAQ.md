@@ -77,63 +77,63 @@
 
 # הגדרות AAPS
 
-The following list aims to help you optimize settings. It may be best to start at the top and work to the bottom. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
+הרשימה הבאה מסכמת את שלבי האופטימיזציה של הפרופיל שלכם. מומלץ לבצע את התהליך לפי הסדר הרשום מטה. חשוב לסיים לקבוע כל הגדרה לפני שמתקדמים להגדרה הבאה. יש לבצע שינויים קטנים בהדרגה ולהמנע משינויים גדולים בכל פעם. ניתן להשתמש ב[Autotune](https://autotuneweb.azurewebsites.net/) כאמצעי להנחייה בקביעת ההגדרות אך חשוב לבחון כל מקרה לגופו ולא לאמץ את ההמלצות באופן אוטומטי. יתכן שלא בכל המקרים ההמלצות יתאימו לכם. ההגדרות יכולות להשפיע אחת על השניה - יתכן מצב שמספר הגדרות שמוגדרות בצורה שגויה מפצות אחת על השניה ומביאות לתוצאה חיובית (למשל בזאלי גבוה מדי יחד עם יחס אינסולין\פחמימה (IC) גבוה מדי) ויתכן מצב שההשפעה ההדדית של הגדרות תהיה שלילית. לכן, תמיד חשוב לשים לב לכל ההגדרות ולוודא שהן תקינות ושביחד הן נותנות תוצאה טובה במצבים שונים.
 
 ## משך פעילות האינסולין (DIA) (שעות)
 
 ### תיאור ובדיקה
 
-The length of time that insulin decays to zero.
+משך הזמן שלוקח לאינסולין שהוזרק לדעוך עד 0.
 
-This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
+במקרים רבים המשך מוגדר קצר מדי. אצל רוב האנשים ההגדרה המתאימה היא 5 שעות, ובחלק מהמקרים גם 6 ואף 7.
 
 (FAQ-impact)=
 
 ### השפעה
 
-Too short DIA can lead to low BGs. And vice-versa.
+הגדרת ערך DIA נמוך מדי עשויה להביא לרמת סוכר נמוכה ולהיפך.
 
-If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.
+אם משך פעילות האינסולין קצר מדי, AAPS יחשב בטעות שהבולוס הקודם דעך לחלוטין ואז בזמן שהסוכר עדיין גבוה, יזריק עוד. (למעשה, הוא לא ימתין שהאינסולין הפעיל יגיע לאפס ויתחיל לתת עוד אינסולין כשההשפעה על הסוכר לא תיראה מספקת). כתוצאה מכך, נוצרת הערמה של הזרקות, אליהן AAPS לא מודע.
 
-Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
+כאשר DIA קצר מדי, הסוכר גבוה ולאחר מכן AAPS יתקן ויוריד ביתר עד להיפוגליקמיה.
 
 ## תוכנית המינונים הבזאליים (יחידות\שעה)
 
 ### תיאור ובדיקה
 
-The amount of insulin in a given hour time block to maintain BG at a stable level.
+מינון האינסולין שמוזרק בשעה נתונה לצורך שמירה על יציבות של רמת הסוכר בדם.
 
-Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
+בדקו את התאמת המינונים שלכם ע"י השבתת הלופ, צום, צפייה בסוכר במשך כ-5 שעות אחרי ארוחה כדי לראות את השינויים בסוכר. חזרו על תהליך זה מספר פעמים.
 
-If BG is dropping, basal rate is too high. And vice-versa.
+אם רמת הסוכר יורדת, המינון הבזאלי גבוה מדי. ולהיפך.
 
 ### השפעה
 
-Too high basal rate can lead to low BGs. And vice-versa.
+הגדרת מינונים בזאליים גבוהים מדי עלולה להביא לערכי סוכר נמוכים (היפוגליקמיה). ולהיפך.
 
-AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
+חישובי AAPS מסתמכים על המינונים המוגדרים בתוכנית הבזאלית. אם המינונים הבזאליים גבוהים מדי, השהייה זמנית של הבזאלי (zero temp) תוצג כאינסולין פעיל (IOB) שלילי גבוה ממה שניתן היה לצפות, מה שגורם לכך ש-AAPS ייתן יותר תיקונים מהדרוש כדי להביא את האינסולין הפעיל חזרה ל-0.
 
-So, a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.
+מינון בזאלי גבוה מדי יגרום לסוכר נמוך גם עם מינון ברירת המחדל הבזאלי וגם שעות אחר כך כש-AAPS ינסה לתקן כדי להגיע לערך המטרה.
 
-Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
+מצד שני, מינון נמוך מדי יביא לעליה בסוכר ולכשלון בלהוריד את הסוכר אל ערך המטרה.
 
 ## רגישות או יחס התיקון (ISF) (mg/dl/U)
 
 ### תיאור ובדיקה
 
-The drop in BG expected from dosing 1U of insulin.
+המדד שמתאר כמה סוכר (mg/dl) צפוי לרדת כתוצאה מהזרקת יחידת אינסולין אחת.
 
-Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
+בהנחה שהמינון הבזאלי נכון, תוכלו לבדוק את מדד זה ע"י השבתת הלופ, וידוא שאין אינסולין פעיל, אכילת מספר טבליות גלוקוז לקבלת סוכר גבוה ויציב.
 
-Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
+לאחר מכן בצעו בולוס ע"פ ה-ISF המוגדר בפרופיל ועקבו אחר הירידה בסוכר.
 
-Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
+היזהרו מהיפוגליקמיה כי במקרים רבים ערך ה-ISF מוגדר נמוך מהדרוש. משמעות ערך ISF נמוך היא שיחידת אינסולין תוריד את הסוכר מהר מהצפוי.
 
 ### השפעה
 
-**Lower ISF** (i.e. 40 instead of 50) meaning insulin drops your BG less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If the ISF is too low, this can lead to low BGs.
+**ISF נמוך** (לדוגמה 40 במקום 50) משמע כל יחידת אינסולין מפחיתה פחות את הסוכר בדם. זה מוביל לתיקון אגרסיבי\חזק יותר ע"י הלולאה עם **יותר אינסולין**. ערך נמוך מדי יביא להיפוגלקמיות.
 
-**Higher ISF** (i.e. 45 instead of 35) meaning insulin drops your BG more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If the ISF is too high, this can lead to high BGs.
+**ISF גבוה** (לדוגמה 45 במקום 35) משמע כל יחידת אינסולין מפחיתה יותר את הסוכר בדם. זה מוביל לתיקון עדין\חלש יותר ע"י הלולאה עם **פחות אינסולין**. ערך ISF גבוה מדי יביא לסוכר גבוה, להיפרגלקמיות.
 
 **Example:**
 
@@ -142,19 +142,19 @@ Be careful as this is quite often set too low. Too low means 1 U will drop BG fa
 - ISF = 30 -> 90 / 30 = 3U
 - ISF = 45 -> 90 / 45 = 2U
 
-An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp. when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
+אם ISF נמוך מדי (מצב נפוץ) ייגרמו תיקונים ביתר, היות ו-AAPS חושב שהוא צריך יותר אינסולין מהדרוש לצורך תיקון של סוכר גבוה. מצב זה גורם ל"רכבת הרים" של ערכי הסוכר (במיוחד בזמן צום). במצב כזה, עליכם להעלות את ערך ה-ISF. זה יגרום לכך ש-AAPS יבצע תיקונים עדינים יותר וימנעו תיקונים ביתר של סוכר גבוה שמובילים לסוכר נמוך.
 
-Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
+מצד שני, ערך ISF גבוה מדי מביא לתיקנים בחוסר שמובילים לכך שהסוכר נשאר מעל ערך המטרה - זה בולט במיוחד בלילה.
 
 ## יחס אינסולין לפחמימות (IC) (gr/U)
 
 ### תיאור ובדיקה
 
-The grams of carbohydrate for each unit of insulin.
+המדד שמתאר את כמות הפחמימות שמכסה יחידת אינסולין.
 
-Some people also use I:C as abbreviation instead of IC or talk about carb ratio (CR).
+למדד זה יש מספר שמות נוספים: CR ו-I:C.
 
-Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food your normally eat at that time of day and count its carbs precisely.
+בהנחה שהמינון הבזאלי נכון, תוכלו לנסות את ה-IC ע"י וידוא שהאינסולין הפעיל הוא 0 ובזמן שאתם עם סוכר בטווח תקין, לאכול כמות ידוע ומדוייקת של פחמימות ואז להזריק בולוס ע"פ ה-IC הנוכחי המוגדר בפרופיל. מומלץ לאכול את מה שבדרך כלל אתם אוכלים בשעה כזו ביממה ולספור את הפחמימות במדוייק.
 
 > **הערות:**
 > 
@@ -176,11 +176,11 @@ Assuming correct basal, you can test by checking IOB is zero and that you are in
 
 ### השפעה
 
-**Lower IC** = less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.
+**יחס IC נמוך** = פחות גרם על כל יחידה כלומר יותר אינסולין על מספר נתון של פחמימות. אפשר לקרוא לזה גם "יותר אגרסיבי".
 
-**Higher IC** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’.
+**יחס IC גבוה** = יותר גרם על כל יחידה כלומר פחות אינסולין על מספר נתון של פחמימות. במילים אחרות "פחות אגרסיבי".
 
-If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are IC is too large. Conversely if your BG is lower than before food, IC is too small.
+אם אחרי סיום עיכול ארוחה וגם האינסולין הפעיל ירד ל-0 אך הסוכר גבוה ממה שהיה לפני הארוחה, סביר להניח שה-IC גבוה מדי. ולהיפך, אם הסוכר נמוך ממה שהיה לפני הארוחה, ה-IC נמוך מדי.
 
 # אלגוריתם APS (מערכת לבלב מלאכותי)
 
@@ -188,7 +188,7 @@ If after meal has digested and IOB has returned to zero, your BG remains higher 
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter any longer.
+ב-AMA, המושג DIA לא באמת מייצג "משך פעילות אינסולין". זהו פרמטר שהיה קשור למשך הפעילות אך כיום משמעותו היא "הזמן שבו התיקון הנוכחי צפוי להסתיים". אין לכך קשר לחישוב האינסולין הפעיל. ב-OpenAPS SMB אין צורך בפרמטר זה כלל.
 
 ## פרופיל
 
@@ -216,25 +216,25 @@ In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a para
 
 ## הגדרות חיישנים
 
-### Why does AAPS say 'BG source doesn't support advanced filtering'?
+### למה AAPS רושם 'מקור ערכי הסוכר הפעיל אינו תומך בסינון נתונים מתקדם'?
 
-If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AAPS OpenAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+אם אתם משתמשים בחיישן שאינו דקסקום G5 או G6 עם xDrip במצב נטיבי, התראה זו תופיע בלשונית OpenAPS. ראו [שיפור נתוני סוכר](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) לקבלת פרטים נוספים.
 
 ## משאבה
 
 ### היכן למקם את המשאבה?
 
-There are innumerable possibilities to place the pump. It does not matter if you are looping or not.
+יש מגוון רחב של מקומות למיקום המשאבה על הגוף. אין זה משנה אם אתם משתמשים בלופ או לא.
 
 ### סוללות
 
-Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Tricks to increase battery life include:
+השימוש בלופ, הכולל תקשורת בלוטות' תכופה, מנצל יותר את הסוללה של המשאבה מאשר שימוש רגיל במשאבה. כדאי להחליף את הסוללה כאשר היא מגיע ל-25% קיבולת מכיוון שמנקודה זו התקשורת עלולה להיכשל. ניתן להגדיר התראת סוללה ע"י הגדרת המשתנה PUMP_WARN_BATT_P באתר ה-Nightscout שלכם. המלצות לחיסכון בסוללה:
 
 - הפחיתו את משך זמן התצוגה של מסך המשאבה (ההגדרה בגוף המשאבה)
 - הפחיתו את משך זמן תאורת המסך של המשאבה (ההגדרה בגוף המשאבה)
 - הגדירו שהתראות תהינה צפצופים במקום רטט (ההגדרה בגוף המשאבה)
-- only press the buttons on the pump to reload, use AAPS to view all history, battery level and reservoir volume.
-- AAPS app may often be closed to save energy or free RAM on some phones. When AAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. פעולה זו צורכת סוללה. אם זה קורה, גשו לתפריט העדפות > NSClient > אפשרו את 'רשום הפעלת AAPS ב-Nightscout'. Nightscout will receive an event at every restart of AAPS, which makes it easy to track the issue. To reduce this happening, whitelist AAPS app in the phone battery settings to stop the app power monitor closing it down.
+- לחצו על כפתורים במשאבה רק לצורך החלפת מכלי אינסולין וצפו בהיסטוריית המשאבה, רמת סוללה וכמות אינסולין נותרת רק מתוך AAPS.
+- מכשירים מסויימים עלולים לסגור את AndroidAPS בניסיון לחסוך סוללה וזיכרון. כש-AndroidAPS מופעל מחדש, הוא יוצר קשר עם המשאבה דרך בלוטות' וקורא את היסטוריית המשאבה ואת המינון הבזאלי הנוכחי. פעולה זו צורכת סוללה. אם זה קורה, גשו לתפריט העדפות > NSClient > אפשרו את 'רשום הפעלת AAPS ב-Nightscout'. בכל פעם ש-AndroidAPS מופעל מחדש, יהיה רישום על כך ב-Nightscout וניתן יהיה לזהות האם הבעיה קיימת במכשירכם. על מנת לצמצם מקרי הפעלה מחדש של AAPS, הגדירו במכשירכם ש-AAPS (ושאר היישומים שקשורים ללופ) יהיו ללא מיטוב סוללה, כך מכשירכם לא ינסה לסגור את היישום כדי לחסוך סוללה.
     
     לדוגמה, לצורך ביטול מיטוב הסוללה במכשיר סמסונג המריץ אנדרואיד 11:
     
@@ -247,18 +247,18 @@ Looping can reduce the pump battery faster than normal use because the system in
 - נקו את מגעי הסוללה עם מטלית עם אלכוהול כדי לוודא שלא נשארו שאריות שומן וכו'.
 
 - עבור משאבות [ Dana R / RS](../Configuration/DanaRS-Insulin-Pump.md) הליך ההפעלה שואב זרם גבוה דרך הסוללה כדי לשבור במכוון את סרט הפסיבציה (מונע אובדן אנרגיה בזמן האחסון), אך לא תמיד פועל לשבירתו ב -100%. הוציאו והחזירו את הסוללה 2-3 פעמים עד להופעת 100% על המסך, או, לפני הכנסתה, געו בשני מסופי הסוללה בעזרת מפתח לזמן קצר מאוד, כדי לגרום לקצר רגעי.
-- see also more tips for [particular types of battery](Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
+- לקריאה נוספת של טיפים נוספים [לסוגים מסוימים של סוללות](Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life).
 
 ### החלפת מכלים וצינוריות
 
-The change of cartridge cannot be done via AAPS but must be carried out as before directly via the pump.
+לא ניתן לבצע את החלפת המכל באמצעות AndroidAPS. יש לבצע אותה כבעבר, ישירות בגוף המשאבה.
 
-- Long press on "Open Loop"/"Closed Loop" on the Home tab of AAPS and select 'Suspend Loop for 1h'
-- Now nnect the pump and change the reservoir as per pump instructions.
-- בצעו גם תיחול (Prime) של הצינורית ישירות במשאבה (במשאבות תומכות). In this case use [PRIME/FILL button](CPbefore26-pump) in the actions tab just to record the change.
+- לחצו לחיצה ארוכה על צלמית "לולאה פתוחה"/"לולאה סגורה" בלשונית דף הבית של AndroidAPS ובחרו 'השהה לולאה למשך שעה'
+- נתקו את המשאבה, החליפו את המכל בהתאם להוראות ההפעלה של המשאבה.
+- בצעו גם תיחול (Prime) של הצינורית ישירות במשאבה (במשאבות תומכות). במקרה כזה, לחצו גם על לחצן [תיחול\מילוי](CPbefore26-pump) בלשונית פעולות לצורך רישום התיחול.
 - לאחר החיבור מחדש של המשאבה, הפעילו את הלולאה מחדש על ידי לחיצה על צלמית הלולאה ובחירת חיבור מחדש.
 
-The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the [PRIME/FILL button](CPbefore26-pump) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
+כפתור החלפת הצינורית לא משתמש בפונקציית התיחול של המשאבה אלא ממלא את הצינורית ואת הקנולה ע"י ביצוע בולוס שאינו נרשם בהיסטוריית הטיפולים. אין השפעה על הבזאלי הזמני הנוכחי. בלשונית פעולות, השתמשו בלחצן [תיחול\מילוי](CPbefore26-pump) כדי לקבוע את כמות האינסולין הדרושה לתיחול והתחילו את מילוי הצינורית. אם הכמות לא הספיקה, חזרו את המילוי. ניתן להגדיר לחצנים עם כמויות ברירת מחדל בתפריט העדפות > סקירה כללית > מילוי\תיחול כמויות סטנדרטיות של אינסולין. עיינו בחוברת ההוראות שבקופסת הקנולות כדי לברר כמה יחידות דרושות לתיחול, בהתאם לאורך המחט ואורך הצינורות.
 
 ## טפט
 
@@ -274,7 +274,7 @@ The change of a cannula however does not use the "prime infusion set" function o
 
 ### בעבודה
 
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](Profiles-time-shift) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+בהתאם לסוג עבודתכם, ייתכן שתשתמשו בהגדרות טיפול שונות בימי עבודה לעומת ימי חופש. כלופרים, מומלץ לכם לשקול לבצע [החלפת פרופיל](../Usage/Profiles.md) לימי עבודה טיפוסיים. לדוגמה, ניתן לעבור לפרופיל גבוה מ-100% אם יש עבודה פחות תובענית (למשל ישיבה ליד שולחן), או פחות מ-100% אם אתם פעילים ועומדים על הרגליים כל היום. יש לשקול גם ערך מטרה זמני גבוה או נמוך או [היסט זמן של הפרופיל](Profiles-time-shift) כאשר אתם עובדים מוקדם או מאוחר מהרגיל, או אם אתם עובדים במשמרות שונות. אפשר גם ליצור פרופיל נוסף (לדוגמה "בית", "יום עבודה") ולבצע החלפת פרופיל לפי הצורך.
 
 ## פעילויות פנאי
 
@@ -282,21 +282,21 @@ Depending on your job, you may choose to use different treatment factors on work
 
 ### ספורט
 
-You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
+עליכם לתכנן מחדש את הרגלי הספורט שלכם מהימים שלפני הלופ. אם התרגלתם לאכול פחמימות לפני האימון, הלולאה הסגורה תזהה זאת ותתקן בהתאם.
 
-So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
+לכן, בגופכם יהיו יותר פחמימות אבל במקביל, הלופ יפעל כנגד הפחמימות עם הזרקת אינסולין.
 
-When looping you should try these steps:
+בעת שימוש בלופ, נסו את הפעולות הבאות:
 
 - בצעו [החלפת פרופיל](../Usage/Profiles.md) < 100%.
-- Set an [activity temp target](temptarget-activity-temp-target) above your standard target.
-- If you are using SMB make sure ["Enable SMB with high temp targets"](Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](Open-APS-features#enable-smb-always) are disabled.
+- הגדירו [ערך מטרה זמני](temptarget-activity-temp-target) גבוה מהרגיל.
+- אם אתם משתמשים ב-SMB, וודאו שכיביתם את [הפעלת SMB עם ערכי מטרה גבוהים](Open-APS-features-enable-smb-with-high-temp-targets) ואת [הפעלת SMB תמיד](Open-APS-features#enable-smb-always).
 
-Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
+ביצוע הפעולות לפני וביטולן אחרי הפעילות הגופנית חשובים מאוד. בצעו את השינויים זמן מה לפני הפעילות הגופנית וקחו בחשבון את השפעת ניפוח השרירים.
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.md) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
+אם אתם מתאמנים בזמנים קבועים (לדוגמה שיעורי\חוגי ספורט), שקלו להשתמש [באוטומציה](../Usage/Automation.md) שתבצע שינויים בפרופיל ובערך המטרה בזמנים אלה אוטומטית. גם אוטומציות תלויות מיקום (לפי GPS) יכולות להיות שימושיות אך הסתמכות עליהן תקשה על ביצוע השינויים מספיק זמן לפני האימון.
 
-The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
+אחוז הפרופיל הזמני והערך המטרה הזמני המתאימים לכם הם אישיים לכם. ליתר בטיחות, התחילו מלהשתמש באחוזים מעט יותר נמוכים מהרגיל ומערכי מטרה גבוהים, המשיכו לשפר את הערכים באימונים הבאים עד שתדעו מהם הערכים המתאימים לכם.
 
 ### יחסי מין
 
@@ -322,9 +322,9 @@ The percentage of the profile switch, the value for your activity temp target an
 2. המתינו להפעלת מצב טיסה.
 3. הפעילו בלוטות'.
 
-You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
+כעת לא תקבלו שיחות והאתם מנותקים מהאינטרנט. אך הלופ פועל בכל זאת.
 
-Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
+משתמשים מסויימים חווים בעיות עם השידור המקומי (AAPS לא מקבל נתוני סוכר מ-xDrip) בזמן שהם במצב טיסה. ב-xDrip, גשו להגדרות > הגדרות לשיתוף פעולה בין אפליקציות > זיהוי מקלט > רשמו `info.nightscout.androidaps` באותיות קטנות בלבד.
 
 ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
@@ -332,7 +332,7 @@ Some people have discovered problems with local broadcast (AAPS not receiving BG
 
 #### כיצד להתמודד עם שינויי אזורי זמן?
 
-With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../Usage/Timezone-traveling.md) page for more details.
+אם אתם משתמשים במשאבות Dana R או Dana R מהשוק הקוריאני, אתם לא צריכים לעשות דבר. אם אתם משתמשים במשאבות אחרות, ראו [אזורי זמן ונסיעות](../Usage/Timezone-traveling.md) לקבלת פרטים נוספים.
 
 ## נושאים רפואיים
 
@@ -360,32 +360,32 @@ With Dana R and Dana R Korean you don't have to do anything. For other pumps see
 
 ## AAPS עוצר כל יום בערך באותה שעה.
 
-Stop Google Play Protect. Check for "cleaning" apps (ie CCleaner etc) and uninstall them. AAPS / 3 dots menu / About / follow the link "Keep app running in the background" to stop all battery optimizations.
+עצרו את Google Play Protect. בדקו אם יש אפליקציות "ניקיון" (לדוגמה CCleaner וכו') והסירו אותן. AAPS > תפריט 3 נקודות > אודות > עקבו אחר ההוראות שבקישור "איך לא להשבית את האפליקציה שלי?" כדי לעצור את כל אופטימיזציות הסוללה.
 
 ## איך לארגן את הגיבויים שלי?
 
-Export settings very regularly: after each pod change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Keep several old export files.
+ייצוא הגדרות בקביעות: לאחר כל החלפת פוד, לאחר שינוי בפרופיל שלכם, לאחר סיום משימה, אם משנים את סוג המשאבה... גם אם שום דבר לא שונה, ייצאו פעם בחודש. שמרו כמה קבצי ייצוא ישנים.
 
-Copy on an internet drive (Dropbox, Google etc) : all the apks you used to install apps on your phone (AAPS, xDrip, BYODA, Patched LibreLink…) as well as the exported setting files from all your apps.
+העתיקו לכונן אינטרנט (Dropbox, Google וכו'): כל קבצי ה-APK שבהם השתמשתם כדי להתקין אפליקציות בטלפון (AAPS, xDrip, BYODA, Patched LibreLink...) כמו גם את קבצי ההגדרות המיוצאים מכל האפליקציות.
 
 ## יש לי בעיות ושגיאות בבניית האפליקציה.
 
 Please
 
-- check [Troubleshooting Android Studio](troubleshooting_androidstudio-troubleshooting-android-studio) for typical errors and
-- הטיפים שב[מדריך הבניה שלב אחר שלב](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
+- ראו [פתרון בעיות ב-Android Studio](troubleshooting_androidstudio-troubleshooting-android-studio) עבור שגיאות אופייניות
+- הטיפים שב[מדריך הבניה, שלב אחר שלב](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
 ## אני תקוע\ה במשימה וצריכ\ה עזרה.
 
-Screen capture the question and answers. Post-it on the Discord AAPS channel. Don't forget to tell which options you choose (or not) and why. You'll get hints and help but you'll need to find the answers.
+צלמו את המסך עם השאלה והתשובות. פרסמו בערוץ ה-AAPS ב-Discord. אל תשכחו לספר באילו אפשרויות אתם בוחרים (או לא) ומדוע. אתם תקבלו רמזים ועזרה אבל תצטרכו להגיע לתשובה בעצמכם.
 
 ## כיצד לאפס את הסיסמה ב-AAPS v2.8.x?
 
-Open the hamburger menu, start the Configuration wizard and enter new password when asked. You can quit the wizard after the password phase.
+פתחו את תפריט ההמבורגר, הפעילו את אשף התצורה והזינו סיסמה חדשה כשתתבקשו. ניתן לצאת מהאשף לאחר שלב בחירת הסיסמה.
 
 ## כיצד לאפס את הסיסמה ב-AAPS v3.x?
 
-You find the documentation [here](update3_0-reset-master-password).
+הסבר לכך נמצא [כאן](update3_0-reset-master-password).
 
 ## מכשיר הקישור\משאבה\פוד שלי לא מגיב (RileyLink/OrangeLink/EmaLink...)
 
@@ -419,11 +419,11 @@ Properly configuring Power Management is important to prevent your Phone's OS to
 
 ## התראות המשאבה אינה זמינה מופיעות מספר פעמים ביום או בלילה.
 
-Your phone may be suspending AAPS services or even Bluetooth causing it to loose connection to RL (see battery savings) Consider configuring unreachable alerts to 120 minutes by going to the top right-hand side three-dot menu, selecting Preferences->Local Alerts->Pump unreachable threshold [min].
+ייתכן שהטלפון שלך עוצר את שירותי AAPS או אפילו בלוטות' מה שגורם לו להתנתק מהריילילינק (ראו חיסכון בסוללה) שקלו להגדיר התראות על אי השגה ל-120 דקות על ידי מעבר לתפריט שלוש הנקודות בצד שמאל למעלה, בחירה בהעדפות->התראות מקומיות-> סף משאבה בלתי נגישה [min].
 
 ## היכן אוכל למחוק טיפולים ב-AAPS v3?
 
-3 dots menu, select treatements, then 3 dots menu again and you have different options available.
+תפריט 3 נקודות, בחרו טיפולים ואז שוב תפריט 3 נקודות שם יש אפשרויות זמינות שונות.
 
 ## הגדרה ושימוש באפליקציית NSClient מרחוק
 
