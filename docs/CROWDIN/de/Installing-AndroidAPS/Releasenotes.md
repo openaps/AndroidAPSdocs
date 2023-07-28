@@ -90,7 +90,7 @@ Erscheinungsdatum: 19.07.2022
 ### Wichtige Hinweise
 
 - Nach dem Update Wear-App deinstallieren und neue Version installieren
-- Omnipod Benutzer: Update auf dem Pod ändern !!!
+- Omnipod Benutzer: Update nur bei Pod-Wechsel durchführen !!!
 
 ### Änderungen
 
