@@ -454,15 +454,15 @@ AndroidAPS אינו פועל ב"מצב מפתחים". AAPS מציג את ההו�
 
 ## נוהל הביצוע:
 
-1) Suspend the DASH pump. This makes sure there are no running or queued commands active when DASH loses connection 2) Put the phone into airplane mode to disable BT (as well as WiFi and Mobile data). This way it is guaranteed AAPS and DASH can not communicate. 3) Export settings (which includes the DASH state) 4) Copy the settings file just exported from the phone (as it is in airplane mode and we do not want to change that, easiest way is using USB cable) 5) Copy the settings file to the alternate phone. 6) Import settings on the alternate phones AAPS. 7) Check the DASH tab to verify it is seeing the Pod. 8) Un-suspend the Pod. 9) Check the DASH tab and confirm it is communicating with the Pod (use the refresh button)
+1) השעו (Suspend) את פוד ה-DASH. זה מוודא שאין פקודות פועלות או בתור כאשר DASH מאבד את החיבור 2) הכניסו את הטלפון למצב טיסה כדי להשבית את הבלוטות' (כמו גם WiFi ונתונים ניידים). כך מבטיחים ש-AAPS ו-DASH לא יכולים לתקשר. 3) ייצאו ההגדרות בתפריט התחזוקה (הכוללות את מצב DASH) 4) העתיקו את קובץ ההגדרות שיצא זה עתה מהטלפון (מכיוון שהוא כבר במצב טיסה ואנחנו לא רוצים לשנות זאת, הדרך הקלה ביותר היא באמצעות כבל USB) 5) העבירו את קובץ ההגדרות אל הטלפון החלופי. 6) ייבאו את הגדרות ב-AAPS שבטלפון החלופי. 7) בדקו בלשונית DASH שהוא מזהה את הפוד. 8) בטלו את השעיית הפוד. 9) בדקו בלשונית DASH ש-AAPS מתקשר עם הפוד (לחצו על לחצן הרענון)
 
-Congratulations: you did it!
+ברכות! הצלחתם!
 
-*Wait!* You still have the main phone thinking it can reconnect to the same DASH:
+*רגע!* עדיין יש לכם את הטלפון הראשון והוא חושב שהוא יכול להתחבר מחדש לאותו DASH:
 
-1) On the main phone choose "deactivate". This is safe because the phone has no way of communicating with DASH to actually deactivated the Pod (it is still in airplane mode) 2) Deactivation will result in a communications error - this is expected. 3) Just hit "retry" a couple of times until AAPS offers the option to "Discard" the Pod.
+1) בטלפון הראשי בחרו "כבה פוד". זה בטוח מכיוון שלטלפון אין דרך לתקשר עם DASH כדי לבטל את הפוד בפועל (כי הוא עדיין במצב טיסה) 2) השבתה תגרום לשגיאת תקשורת - זה צפוי. 3) פשוט לחצו על "נסה שוב" כמה פעמים עד ש-AAPS יציע את האפשרות "להיפטר" מהפוד.
 
-When Discarded, verify AAPS is reporting "No Active Pod". You can now safely disable airplane mode again.
+לאחר ש-"נפטרים" מהפוד, ודאו ש-AAPS מדווח "אין פוד פעיל". כעת תוכלו להשבית בבטחה שוב את מצב המטוס.
 
 ## כיצד לייבא הגדרות מגרסאות קודמות של AAPS ל-AAPS v3?
 
