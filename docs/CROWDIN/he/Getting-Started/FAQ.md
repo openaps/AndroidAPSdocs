@@ -391,15 +391,15 @@ Please
 
 בטלפונים מסוימים, יש ניתוק בלוטות' ממכשירי הקישור (RL/AOL/Email...).
 
-Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump.)
+לחלקם יש גם קישורים שאינם מגיבים (AAPS אומר שהם מחוברים אבל מכשירי הקישור לא יכולים להגיע למשאבה או לפקד עליה)
 
-The easiest way to get all these parts working together is : 1/ Delete Link from AAPS 2/ Power off Link 3/ AAPS 3 dot menu, quit AAPS 4/ Long press AAPS icon, Android menu, info on app AAPS, Force stop AAPS and then Delete cache memory (Do not delete main memory !) 4bis/ Rarely some phones may need a reboot here. You can try without reboot. 5/Power on Link 6/Start AAPS 7/Pod tab, 3 dot menu, search and connect Link
+הדרך הקלה ביותר לגרום לכל החלקים הללו לעבוד יחד היא: (1) מחקו את מכשיר הקישור מ-AAPS. (2) כיבוי מכשיר הקישור. (3) תפריט 3 נקודות > יציאה. (4) לחיצה ארוכה על סמל AAPS, תפריט אנדרואיד, מידע על אפליקציית AAPS, עצירת AAPS בכוח ולאחר מכן מחקו זיכרון מטמון (אל תמחקו את הזיכרון הראשי!) לעיתים נדירות טלפונים מסוימים עשויים להזדקק לאתחול בנקודה זו. אפשר לנסות בלי לאתחל. (5) הפעלת מכשיר הקישור (6) הפעלת AAPS (7) לשונית הפוד > תפריט 3 נקודות > חיפוש וחיבור מכשיר הקישור
 
 ## שגיאת בבנייה: שם הקובץ ארוך מדי
 
-While trying to build I get an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "c:\src\AndroidAPS-EROS").
+בזמן ניסיון לבנות אני מקבל\ת שגיאה המציינת ששם הקובץ ארוך מדי. פתרונות אפשריים: העבירו את המקורות שלכם לספריה קרובה יותר לספריית הבסיס של הכונן שלך (למשל "c:\src\AndroidAPS-EROS").
 
-From Android Studio: Make sure "Gradle" is done syncing and indexing after opening the project and pulling from GitHub. Execute a Build->Clean Project before doing a Rebuild Project. Execute File->Invalidate Caches and Restart Android Studio.
+מאנדרואיד סטודיו: ודאו שהסנכרון והאינדקס של "Gradle" בוצע לאחר פתיחת הפרוייקט והעתקה מ-GitHub. בצעו Build->Clean Project לפני ביצוע פרויקט בנייה מחדש. הפעילו File->Invalidate Caches והפעילו מחדש את Android Studio.
 
 ## התראה: פועל בגרסת הפיתוח. לולאה סגורה מושבתת
 
@@ -411,11 +411,11 @@ AndroidAPS אינו פועל ב"מצב מפתחים". AAPS מציג את ההו�
 
 ## איפה אפשר למצוא קבצי הגדרות?
 
-Settings files will be stored on your phone's internal storage in the directory "/AAPS/preferences". WARNING: Make sure not to lose your password as without it you will not be able to import an encrypted settings file!
+קבצי ההגדרות יאוחסנו באחסון הפנימי של הטלפון בספרייה "/AAPS/preferences". אזהרה: הקפידו לא לאבד את הסיסמה שלכם כי בלעדיה לא תוכלו לייבא קובץ הגדרות כי הוא מוצפן!
 
 ## כיצד להגדיר חיסכון בסוללה?
 
-Properly configuring Power Management is important to prevent your Phone's OS to suspend AAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
+הגדרה נכונה של ניהול צריכת החשמל חשובה כדי למנוע ממערכת ההפעלה של הטלפון לעצור את AndroidAPS ואת האפליקציות והשירותים האחרים הקשורים ללופ כאשר הטלפון אינו בשימוש. כתוצאה מכך AAPS לא יכול לעשות את עבודתו ו\או חיבורי בלוטות' לחיישן ולריילילינק Rileylink עלולים להיסגר ולגרום להתראות "המשאבה מנותקת" ולשגיאות תקשורת. בטלפון, עברו אל הגדרות -> אפליקציות והשביתו את החיסכון בסוללה עבור: AndroidAPS, xDrip או BYODA/Dexcom אפליקציית מערכת הבלוטות' (ייתכן שתצטרכו לבחור לאפשר תחילה לצפייה באפליקציות מערכת) לחלופין, השביתו לחלוטין את כל החיסכון בסוללה בטלפון. כתוצאה מכך הסוללה עשויה להתרוקן מהר יותר, אבל זו דרך טובה לגלות אם חיסכון בסוללה גורם לבעיה. האופן שבו חיסכון בסוללה מיושם תלוי מאוד במותג, דגם ו\או גרסת מערכת ההפעלה של הטלפון. כתוצאה מכך כמעט בלתי אפשרי לתת הוראות להגדרה נכונה של חיסכון בסוללה עבור המערכת הספציפית שלכם. נסו וגלו אילו הגדרות עובדות הכי טוב עבורכם. למידע נוסף, ראו גם "איך לא להשבית את האפליקציה שלי?"
 
 ## התראות המשאבה אינה זמינה מופיעות מספר פעמים ביום או בלילה.
 
@@ -427,30 +427,30 @@ Properly configuring Power Management is important to prevent your Phone's OS to
 
 ## הגדרה ושימוש באפליקציית NSClient מרחוק
 
-AAPS can be monitored and controlled remotely via the NSClient app and optionally via the associated Wear app running on Android Wear watches. Note that the NSClient (remote) app is distinct from the NSClient configuration in AAPS, and the NSClient (remote) Wear app is distinct from the AAPS Wear app--for clarity the remote apps will be referred to as 'NSClient remote' and 'NSClient remote Wear' apps.
+ניתן לנטר ולשלוט ב-AAPS מרחוק באמצעות אפליקציית NSClient ובאופן אופציונלי באמצעות אפליקציית AAPS ל-WearOS הפועלת בשעוני Android Wear. שימו לב שהאפליקציה NSClient (העוקבת) נבדלת מ-NSClient שב-AAPS בטלפון הראשי, ואפליקציית Wear NSClient (העוקבת) נבדלת מאפליקציית AAPS Wear--למען הבהירות, האפליקציות המרוחקות יכונו 'NSClient מרוחק' ו-Wear NSClient מרוחק'.
 
-To enable NSClient remote functionality you must: 1) Install the NSClient remote app (the version should match the version of AAPS being used) 2) Run the NSClient remote app and proceed through the configuration wizard to grant required permissions and configure access to your Nightscout site. 3) At this point you may want to disable some of the Alarm options, and/or advanced settings which log the start of the NSClient remote app to your Nightscout site. Once this is done, NSClient remote will download Profile data from your Nightscout site, the 'Overview' tab will display CGM data and some AAPS data, but but may not display graph data, and will indicate that a profile isn't yet set. 4) To activate the profile:
+כדי להפעיל פונקציונליות מרחוק של NSClient, עליכם: (1) להתקין את האפליקציה העוקבת NSClient (הגרסה צריכה להתאים לגרסה של AAPS שבה נעשה שימוש) (2) הפעלה של אפליקציית NSClient עוקבת והמשך דרך אשף התצורה כדי להעניק הרשאות נדרשות ולהגדיר גישה לאתר Nightscout האישי. (3) בשלב זה ייתכן שתרצו להשבית חלק מאפשרויות האזעקה ו\או הגדרות מתקדמות אשר רושמות את ההתחלה של אפליקציית NSClient מרחוק באתר ה-Nightscout. ברגע שזה נעשה, NSClient העוקב יוריד נתוני פרופיל מאתר ה-Nightscout, הכרטיסייה 'סקירה כללית' תציג נתוני חיישן סוכר ונתוני AAPS, אך ייתכן שלא יציג נתוני גרפים, ותציין שפרופיל עדיין לא הוגדר. (4) כדי להפעיל את הפרופיל:
 
 - אפשרו סנכרון פרופיל מרחוק ב-AAPS > מסך NSClient > תפריט 3 נקודות או גלגל שיניים > העדפות NSClient > סינכרון 
 - הפעילו את הפרופיל בעוקב NSClient > פרופיל לאחר שתעשו כך, הפרופיל יוגדר, ועוקב NSClient אמור להציג את כל הנתונים מ-AAPS. רמז: אם הגרף עדיין חסר, נסו לשנות את הגדרות הגרף כדי לאלץ עדכון. (5) כדי לאפשר שליטה מרחוק על ידי NSClient, הפעילו באופן סלקטיבי את האפשרויות של AAPS (שינויי פרופיל, ערכי מטרה זמניים, פחמימות וכו') שבהם תרצו להיות מסוגלים לשלוט מרחוק דרך AAPS > מסך NSClient > תפריט 3 נקודות או גלגל שיניים > העדפות NSClient > סינכרון. לאחר ביצוע שינויים אלה, תוכלו לשלוט מרחוק ב-AAPS באמצעות אתר Nightscout או אפליקציית NSClient.
 
-If you'd like to monitor/control AAPS via the NSClient remote Wear App, you'll need both NSClient remote and the associated Wear app to be installed. To compile the NSClient remote Wear app, follow the standard instructions for installing/configuring the AAPS wear app, except when compiling it, choose the NSClient variant.
+אם תרצו לנטר\לשלוט ב-AAPS באמצעות אפליקציית Wear של NSClient מרחוק, תצטרכו להתקין גם את האפליקציית המעקב NSClient וגם את אפליקציית Wear המשויכת לה. כדי לבנות את אפליקציית Wear של NSClient, עקבו אחר ההוראות הסטנדרטיות להתקנה\הגדרה של אפליקציית AAPS wear ושימו לב לבחור בגרסת NSClient במקום Full release.
 
 ## יש לי משולש אדום \ AAPS לא מאפשר לולאה סגורה \ לולאות נשארות בהשהייה עקב סוכר נמוך \ יש לי משולש צהוב
 
-The red and yellow triangles are a security feature in AAPS v3.
+המשולשים האדומים והצהובים הם תכונת אבטחה ב-AAPS v3.
 
-Red triangle means that you have duplicate BGs and AAPS can't calculate precisely the deltas. You can't close the loop. You need to delete one BG of each duplicated value in order to clear the red triangle. Go to BYODA or xDRIP tab, long press one line you want to delete, check one of each lines that are doubled (or via 3 dots menu and Delete, depending on your AAPS version). You may need to reset the AAPS databases if there are too many double BGs. In this case, you'll also loose stats, IOB, COB, selected profile.
+משולש אדום אומר שיש כפילות נתוני סוכר ו-AAPS לא יכול לחשב במדויק את ההפרשים. עקב כך אי אפשר לסגור את הלולאה. עליכם למחוק את כל הנתונים הכפולים כדי להעלים את המשולש האדום. עברו ללשונית BYODA או xDrip, לחצו לחיצה ארוכה על שורה אחת שברצונך למחוק, סמנו כל שורה שהוכפלה (או דרך תפריט 3 נקודות ומחיקה, בהתאם לגרסת ה-AAPS). ייתכן שיהיה עליכם לאפס את מסדי הנתונים של AAPS אם יש יותר מדי ערכי סוכר כפולים. במקרה זה, תאבדו גם נתונים סטטיסטיים, פחמימות פעילות, אינסולין פעיל ופרופיל הנבחר.
 
-Possible origin of the problem: xDrip and/or NS backfilling BGs.
+מקור אפשרי לבעיה: הופעלה הורדת נתוני סוכר מ-NS בהגדרות AAPS או ב-xDrip.
 
-The yellow triangle means unstable delay between each BG reading. You don't receive BGs every 5 min regularly or missing BGs. It is often a Libre problem. It also happens when you change G6 transmitter. If the yellow triangle is related to the G6 tansmitter change, it will go away by itself after several hours (around 24h). In case of Libre, the yellow triangle will stay. The loop can be closed and works correctly.
+המשולש הצהוב פירושו הפרש זמנים לא קבוע בין כל קריאת סוכר. כלומר לא מקבלים נתוני סוכר כל 5 דקות באופן קבוע או שנתונים חסרים. לעתים קרובות זו בעיה של Libre. זה קורה גם כאשר מחליפים משדר G6. אם המשולש הצהוב קשור להחלפת משדר G6, הוא ייעלם מעצמו לאחר מספר שעות (כ-24 שעות). במקרה של Libre, המשולש הצהוב יישאר. הלולאה ניתנת לסגירה ופועלת כהלכה.
 
 ## האם אפשר להעביר פוד Dash פעיל למכשיר אחר?
 
-This is possible. Note that as moving is "unsupported" and "untested" there is some risk involved. Best to try the procedure when your Pod is about to expire so when things go wrong not much is lost.
+זה אפשרי. יש לשים לב שמכיוון שמעבר הוא "לא נתמך" ו"לא נבדק", קיים סיכון מסוים. עדיף לנסות את ההליך כאשר הפוד עומד לפוג, כך שכשדברים משתבשים, לא הרבה ילך לאיבוד.
 
-Critical is that pump "state" (which includes it's MAC address) in AAPS and DASH match on reconnecting
+זה קריטי ש"מצב" הפוד (הכוללת את כתובת ה-MAC שלו) ב-AAPS ו-DASH יהיו תואמים בחיבור מחדש
 
 ## נוהל הביצוע:
 
