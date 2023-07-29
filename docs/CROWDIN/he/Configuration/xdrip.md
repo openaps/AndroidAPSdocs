@@ -1,6 +1,6 @@
 # הגדרות xDrip+
 
-(For additional information regarding xDrip+, please refer to the [xDrip documentation](https://xdrip.readthedocs.io/en/latest/.)
+(לקבלת מידע נוסף אודות xDrip+ [ראו את הוראות xDrip](https://xdrip.readthedocs.io/en/latest/.))
 
 אם עוד לא התקנתם, הורידו [מכאן את xDrip+](https://jamorham.github.io/#xdrip-plus).
 
@@ -34,11 +34,11 @@
    
    ![xDrip+ Basic Settings 2](../images/xDrip_Basic2.png)
 
-* **InterApp-Settings** (Broadcast) If you are going to use AAPS and the data should be forwarded to i.e. AAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
+* **הגדרות לשיתוף פעולה בין אפליקציות** (הפצה על הטלפון) אם תשתמשו ב-AndroidAPS, הנתונים של xDrip צריכים להיות מופנים ל-AndroidAPS. עליכם להפעיל את הפץ על הטלפון בתפריט הגדרות לשיתוף פעולה בין אפליקציות.
 
 * על מנת שהערכים יהיו שווים, עליכם להפעיל `שלח גלוקוז מוצג`.
 
-* If you have also activated `Accept treatments` and "Enable local Broadcasts" in AAPS, then xDrip+ will receive insulin, carbs and basal rate information from AAPS and can estimate the hypo prediction etc. טוב יותר.
+* אם אפשרתם את `קבל טיפולים` וגם את "אפשר שידורים מקומיים" ב-AndroidAPS, אז xDrip+ יקבל מידע על אינסולין, פחמימות ומינונים בזאליים מ-AndroidAPS ויוכל להעריך את תחזית להתנהגות הסוכר וכו' טוב יותר.
    
    ![xDrip+ Basic Settings 3](../images/xDrip_Basic3.png)
 
@@ -46,8 +46,8 @@
 
 ### זיהוי מקלט
 
-* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
-* שימו לב: תיקון אוטומטי נוטה לפעמים לשנות את האות הראשונה לאות גדולה. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip+.
+* אם אתה מגלה בעיות עם שידור מקומי (AAPS לא מקבל ערכי BG מ-xDrip+) היכנס אל Settings > Inter-app settings > Identify receiver והזן `info.nightscout.androidaps` עבור תצורת AndroidAPS ( אם אתם משתמשים ביישום PumpControl, יש להזין במקום זאת `info.nightscout.aapspumpcontrol`).
+* שימו לב: תיקון אוטומטי נוטה לפעמים לשנות את האות הראשונה לאות גדולה. יש **להשתמש רק באותיות קטנות** בעת הקלדת `info.nightscout.androidaps` (או `info.nightscout.aapspumpcontrol` עבור PumpControl). אותיות גדולות מונעות מ-AAPS לקבל את ערכי הסוכר מ-xDrip+.
    
    ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
@@ -55,7 +55,7 @@
 
 * ניתן לחבר בו-זמנית משדר דקסקום G6 למקלט דקסקום (או לחילופין את המשאבה t:slim) ואפליקציה אחת בטלפון.
 * בעת שימוש ב-xDrip+ כמקלט הסירו תחילה את אפליקציית דקסקום. **לא ניתן לחבר את xDrip+ וגם את אפליקציית דקסקום למשדר בו-זמנית!**
-* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+* אם אתם ברצונכם להשתמש ב-Clarity ורוצים ליהנות מהתראות ש-xDrip+ מציע, השתמשו ב-[Byoda - "בנה אפליקציית דקסקום בעצמך" ](DexcomG6-if-using-g6-with-build-your-own-dexcom-app), המציעה שידור מקומי ל-xDrip+.
 
 ### גרסת xDrip+ בהתאם למספר הסידורי של משדר G6
 
@@ -80,13 +80,13 @@
 
 ### אתחול מונע לא מומלץ 
 
-**With Dexcom transmitters who's serial no. is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
+**במשדרי G6 עם מספר סידורי שמתחיל ב-8G, 8H ,8J וכו', אתחול מונע (preemptive restarts) אינו מתאים ועלול לקלקל את המשדר!**
 
-The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
+הארכה אוטומטית של חיישני דקסקום (`preemptive restarts`) אינה מומלצת מכיוון שהדבר עלול להוביל ל"קפיצות "בערכי הסוכר ביום התשיעי לאחר ההפעלה מחדש.
 
 ![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
+השימוש ב-G6 קצת יותר מורכב ממה שנדמה. כדי להשתמש בו בבטחה, יש לשים לב למספר נקודות:
 
 * אם אתם משתמשים בנתונים הנאטיביים (Native Data) עם קוד הכיול ב-xDrip+ או ב-Spike, הדבר הבטוח ביותר שאפשר לעשות הוא לא לאפשר הפעלה מחדש של החיישן.
 * אם אתם מוכרחים להשתמש באתחול מונע, הקפידו להפעיל זאת בזמן ביום בו תוכלו לצפות בשינוי ולכייל במידת הצורך. 
