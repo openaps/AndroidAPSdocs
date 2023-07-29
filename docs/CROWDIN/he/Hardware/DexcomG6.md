@@ -21,7 +21,7 @@
 
 -   ניתן לחבר בו-זמנית משדר דקסקום G6 למקלט דקסקום (או לחילופין את המשאבה t:slim) ואפליקציה אחת בטלפון.
 -   בעת שימוש ב-xDrip+ כמקלט הסירו תחילה את אפליקציית דקסקום. **לא ניתן לחבר את xDrip+ וגם את אפליקציית דקסקום למשדר בו-זמנית!**
--   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+-   אם אתם צריכים להשתמש ב-Clarity ורוצים ליהנות מהתראות ש-xDrip+ מציע, השתמשו ב-[BYODA - "בנה אפליקציית דקסקום בעצמך" ](DexcomG6-if-using-g6-with-build-your-own-dexcom-app), המציעה שידור מקומי ל-xDrip+.
 -   אם עדיין לא הוגדר אז הורידו [xDrip+](https://github.com/NightscoutFoundation/xDrip) ועקבו אחר הוראות [הגדרת xDrip+](../Configuration/xdrip.md).
 -   בחרו ביישום xDrip+ בבונה התצורה (הגדרה ב- AndroidAPS).
 -   התאימו את ההגדרות ב-xDrip+ לפי [דף הוראות   xDrip+](../Configuration/xdrip.md)
@@ -68,8 +68,8 @@
 
 ### פיתרון בעיות כלליות
 
-General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.html#troubleshooting).
+פתרון בעיות כלליות עבור חיישנים ניתן למצוא [כאן](./GeneralCGMRecommendation.html#troubleshooting).
 
 ### משדר חדש עם חיישן שכבר מופעל
 
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at <https://youtu.be/tx-kTsrkNUM>.
+במקרה של החלפת משדר במהלך פעילות חיישן שכבר הופעל, תרצו להסיר את המשדר מבלי לפגוע בחיישן. ניתן למצוא סרטון הדגמה בכתובת <https://youtu.be/tx-kTsrkNUM>.
