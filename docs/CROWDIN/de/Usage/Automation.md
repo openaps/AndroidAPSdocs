@@ -6,9 +6,9 @@ Für gleichbleibende, mehrfach auftretende Ereignisse, kann es sein, dass man im
 
 Zum Beispiel kann man ein automatisiertes Hypo-Temp-Target erstellen, das bei einem niedrigen Blutzucker automatisch aktiviert wird. Oder wenn man sich in seinem Sportstudio befindet, könnte automatisch ein temporäres Ziel aktiviert werden.
 
-Bevor Du Automatisierung nutzt, solltest Du Dich mit [Temporären Zielen](./temptarget.html) und/oder [Profil Wechsel](./Profiles.html) auseinander gesetzt haben.
+Bevor Du Automatisierung nutzt, solltest Du Dich mit [Temporären Zielen](./temptarget.html) und/oder Profil Wechseln auseinander gesetzt haben.
 
-Stelle sicher, dass Du wirklich verstehst, wie Automation funktioniert bevor Du Deine erste einfache Regel erstellst. **Verwende eine Benachrichtigung statt der tatsächlichen Aktion.** Wenn Du sicher bist, dass die Automatisierung zum richtigen Zeitpunkt auslöst, kannst Du die Benachrichtigung durch die von Dir gewünschte Aktion ersetzen.
+Stelle sicher, dass Du wirklich verstehst, wie Automation funktioniert bevor Du Deine erste einfache Regel erstellst. **Verwende zunächst eine Benachrichtigung statt der tatsächlichen Aktion.** Wenn Du sicher bist, dass die Automatisierung zum richtigen Zeitpunkt auslöst, kannst Du die Benachrichtigung durch die von Dir gewünschte Aktion ersetzen.
 
 ```{image} ../images/Automation_ConditionAction_RC3.png
 :alt: Automation Bedingung und Aktion
@@ -18,6 +18,7 @@ Stelle sicher, dass Du wirklich verstehst, wie Automation funktioniert bevor Du 
 
 Um eine Automatisierung zu erstellen, gibt man dieser einen Namen, mindestens eine Bedingung und mindestens eine auszuführende Aktion.
 
+(Automation-important-note)=
 ### Wichtiger Hinweis
 
 **Automation bleibt aktiv, wenn Du den Loop deaktivierst!**
@@ -30,7 +31,7 @@ Schalte daher ggf. die Automation-Regeln aus während Du den Loop deaktiviert ha
 
 ### Automatisierung aufrufen
 
-Abhängig von deinen [Einstellungen im Konfigurationsgenerator](../Configuration/Config-Builder#registerkarte-tab-oder-hamburger-menu) findest du [Automatisierungen](../Configuration/Config-Builder.md#automatisierung) entweder im Hamburger.Menü oder als Registerkarte (Tab).
+Abhängig von Deinen [Einstellungen in der KONFIGURATION](Config-Builder-tab-or-hamburger-menu) findest Du [Automatisierungen](Config-Builder#automation) entweder im Hamburger-Menü oder im Tab.
 
 ### Allgemein
 
@@ -49,11 +50,11 @@ Es gibt ein paar Einschränkungen:
 
 Man kann zwischen verschiedenen Bedingungen wählen. Hier sind nur ein paar erwähnt, aber die meisten sind selbsterklärend und werden daher hier nicht beschrieben:
 
-Verbundene Bedingungen: Du kannst mehrere Bedingungen verwenden und diese wie folgt verbinden:
+- Verbundene Bedingungen: Du kannst mehrere Bedingungen verwenden und diese wie folgt verbinden:
 
-> - "Und"
-> - "Oder"
-> - Entweder oder (d.h. eine (und nur eine) der Bedingungen muss zutreffen, damit die Aktion ausgeführt wird)
+  - "Und"
+  - "Oder"
+  - Entweder oder (d.h. eine (und nur eine) der Bedingungen muss zutreffen, damit die Aktion ausgeführt wird)
 
 - Zeit vs. Wiederkehrende Zeit
 
@@ -63,7 +64,7 @@ Verbundene Bedingungen: Du kannst mehrere Bedingungen verwenden und diese wie fo
 - Standort: in "Konfiguration" (Automation) kann man auswählen, welchen Standort Service man möchte:
 
   - Passiver Standort: AAPS nutzt nur die Standort, die von andere Apps angefordert werden.
-  - Netzwerkstandort: Bestimmung des Standorts mithilfe der Infrastruktur Deines Mobilfunkanbieters (teilweise recht ungenau)
+  - Netzwerkstandort: Standort Deines Wi-Fi
   - GPS-Standort (Achtung! Kann zu übermäßigen Akkuverbrauch führen!)
 
 ### Aktion
@@ -82,7 +83,7 @@ Du kannst eine oder mehrere Aktionen wählen:
 - prozentuale Änderung des Profils
 
   - muss zwischen 70% und 130% liegen
-  - funktioniert nur, wenn aktuell das Profil mit 100% läuft
+  - funktioniert nur, wenn das Profil zu dem Zeitpunkt mit 100% läuft
 
 Nachdem du deine Aktionen hinzugefügt hast, **vergesse nicht die Standard-Werte zu ändern** indem du auf die Standard-Werte klickst.
 
@@ -90,6 +91,7 @@ Nachdem du deine Aktionen hinzugefügt hast, **vergesse nicht die Standard-Werte
 :alt: Automation Standard-Werte vs.  eigene Werte
 ```
 
+(Automation-sort-automation-rules)=
 ### Automation-Regeln sortieren
 
 Zum Sortieren von Automation-Regeln klicke und halte die Schaltfläche mit den vier Linien auf der rechten Seite des Bildschirms und bewege sie nach oben oder unten.
@@ -103,10 +105,11 @@ Zum Sortieren von Automation-Regeln klicke und halte die Schaltfläche mit den v
 Klicke auf das Papierkorbsymbol, um eine Automatisierungsregel zu löschen.
 
 ```{image} ../images/Automation_Delete.png
-:alt: "Automation-Regeln l\xF6schen"
+:alt: Automation-Regeln löschen
 ```
 
-## Empfehlungen und Vorbehalte
+(Automation-good-practice-caveats)=
+## Empfehlungen und Beschränkungen
 
 - Wenn Du Automation zum ersten Mal nutzt oder eine neue Regel erstellst, solltest Du zusätzlich eine Benachrichtigung erstellen bis Du sicher bist, dass die Regel so funktioniert, wie beabsichtigt.
 
@@ -116,11 +119,11 @@ Klicke auf das Papierkorbsymbol, um eine Automatisierungsregel zu löschen.
 
   **Doppelt wichtig, wenn die Aktion ein Profilwechsel ist!**
 
-- Verwende temporäre Ziele statt Profilwechseln. Temporäre Ziele setzen [Autosens](../Usage/Open-APS-features#autosens) nicht auf 0 zurück.
+- Verwende temporäre Ziele statt Profilwechseln. Temporäre Ziele setzen [Autosens](Open-APS-features-autosens) nicht auf 0 zurück.
 
 - Setze Profilwechsel sparsam und nur als letzte Möglichkeit ein.
 
-  - Durch einen Profilwechsel wird [Autosens](../Usage/Open-APS-features#autosens) für mind. 6 Stunden unbrauchbar.
+  - Ein Profilwechsel macht [Autosens](Open-APS-features-autosens) für mindestens 6 Stunden unbrauchbar.
 
 - Profilwechsel setzen Dein Profil nicht automatisch auf das Standardprofil zurück.
 

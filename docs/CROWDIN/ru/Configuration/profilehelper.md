@@ -1,6 +1,6 @@
 # Помощник профиля
 
-Помощник профиля предлагает две функции:
+Profile helper offers two functions:
 
 1. Найти профиль для детей
 2. Сравнить два профиля или переключателя профиля, чтобы клонировать новый профиль
@@ -30,7 +30,7 @@ Profile helper offers data sets from two different hospitals for children to fin
 6. Press button 'COMPARE PROFILES' on top of screen.
 7. Comparison of the two adjusted profiles will be displayed.
 
-Once you are fine with the profile adjustments you can [clone the profile](../Configuration/profilehelper#clone-profile) as described below.
+Once you are fine with the profile adjustments you can [clone the profile](profilehelper-clone-profile) as described below.
 
 ## Compare two profiles
 
@@ -55,9 +55,10 @@ You can use profile helper also to compare to different profiles or profile swit
 8. Press button 'COMPARE PROFILES' on top of screen.
 9. Comparison of the two adjusted profiles will be displayed.
 
+(profilehelper-clone-profile)=
 ## Clone profile
 
-If you use [local profiles](../Configuration/Config-Builder#local-profile) you can clone a profile / profile switch directly from profile helper.
+If you use [local profiles](Config-Builder-local-profile) you can clone a profile / profile switch directly from profile helper.
 
 ```{image} ../images/ProfileHelperClone.png
 :alt: Profile Helper Clone profile / profile switch

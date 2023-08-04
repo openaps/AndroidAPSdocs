@@ -8,7 +8,7 @@
 ![DanaR pompa](../images/danar1.png)
 
 * Ana Menü > Ayarlar > Keşif'e gidin
-* Telefon ayarlarında Bluetooth'a gidin, yakındaki cihazları tarayın, DanaR serinumaranızı seçin ve şifrenizi girin (Eşleştirme şifresi 0000'dır). Taramada DanaR görünmüyorsa telefonu yeniden başlatın ve DanaR pilini çıkarın, değiştirin ve bu iki adımı yeniden deneyin.
+* Telefon ayarlarında Bluetooth'a gidin, yakındaki cihazları tarayın, DanaR seri numaranızı seçin ve şifrenizi girin (Eşleştirme şifresi 0000'dır). Taramada DanaR görünmüyorsa telefonu yeniden başlatın ve DanaR pilini çıkarın, değiştirin ve bu iki adımı yeniden deneyin.
 
 * AndroidAPS'de Konfigürasyon ayarlarına gidin ve sahip olduğunuz DanaR pompa türünü seçin (DanaR, DanaR Korean, DanaRv2)
 
@@ -23,4 +23,4 @@
 
 ## Dana R pompasıyla farklı zaman diliminde seyahat
 
-Saat dilimleri arasında seyahat hakkında bilgi için [Pompayla seyahat ederken saat dilimleri](../Usage/Timezone-traveling#danarv2-danars) bölümüne bakın.
+Saat dilimleri arasında seyahat hakkında bilgi için [Pompayla seyahat ederken saat dilimleri](Timezone-traveling-danarv2-danars) bölümüne bakın.

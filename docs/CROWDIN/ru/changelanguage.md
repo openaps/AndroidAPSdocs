@@ -1,14 +1,12 @@
-# Изменить язык
+# Изменение языка
 
-```{eval-rst}
-.. примечание::
-   Выбор языка был перемещен в нижнюю панель левого меню. Нажмите на нижнюю панель, чтобы открыть меню выбора языка.
+```{note}
+The language selection have been moved to the bottom drawer of the left menu. Please click on the bottom bar to open language selection menu.
 ```
 
-```{eval-rst}
-.. изображение:: images/documentation_language_menu.png
-   :width: 350
-   :alt: Открытие меню выбора языка
+```{image} images/documentation_language_menu.png
+:alt: Open language menu
+:width: 350
 ```
 
 Или просто нажмите на один из следующих языков:

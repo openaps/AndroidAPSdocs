@@ -33,15 +33,14 @@ La solution de contournement suivante devrait prolonger la durée d'utilisation 
 - Ensuite, branchez votre smartwatch au PC.
 - Renommez le dernier APK téléchargé des Services Google en utilisant un nom court et simple (par ex. SW3fix.apk).
 - Placez cet APK dans le répertoire de votre outil adb (dans notre cas : le répertoire où ont été décompressés les outils de plate-forme SDK).
-
-Ouvrez le terminal Windows en utilisant la commande "cmd" dans le menu Démarrer de Windows.
-Dans la fenêtre "terminal", allez dans le répertoire qui contient l'outil adb et le fichier apk des Services Google (tapez la commande "cd \[votre chemin\]", par ex. "cd C:UsersSWR50loopersdktools").
-\* Tapez ensuite "adb devices".
-\* Au bout d'un moment, vous devriez obtenir une demande d'autorisation de débogage sur votre montre : accepter.
-\* Dans le terminal, vous devriez maintenant voir quelque chose qui ressemble à "14452D11F536B52 device" lorsque vous tapez à nouveau "adb devices".
-\* Si vous voyez "non autorisé" ou autre, vous n'êtes pas prêt pour l'étape suivante, revenez en arrière et réessayez.
-\* Si vous avez du mal à cette étape, vous aurez peut-être besoin de drivers spécifiques pour votre montre. Google sera votre meilleur ami à ce stade.
-\* Puis attendez, l'installation peut prendre plusieurs minutes.
+- Ouvrez le terminal Windows en utilisant la commande "cmd" dans le menu Démarrer de Windows.
+- Dans la fenêtre "terminal", allez dans le répertoire qui contient l'outil adb et le fichier apk des Services Google (tapez la commande "cd \[votre chemin\]", par ex. "cd C:UsersSWR50loopersdktools").
+- Tapez ensuite "adb devices".
+- Au bout d'un moment, vous devriez obtenir une demande d'autorisation de débogage sur votre montre : accepter.
+- Dans le terminal, vous devriez maintenant voir quelque chose qui ressemble à "14452D11F536B52 device" lorsque vous tapez à nouveau "adb devices".
+- Si vous voyez "non autorisé" ou autre, vous n'êtes pas prêt pour l'étape suivante, revenez en arrière et réessayez.
+- Si vous avez du mal à cette étape, vous aurez peut-être besoin de drivers spécifiques pour votre montre. Google sera votre meilleur ami à ce stade.
+- Puis attendez, l'installation peut prendre plusieurs minutes.
 
 ## 5. Envoyer l'application à votre montre
 
@@ -54,7 +53,7 @@ Dans la fenêtre "terminal", allez dans le répertoire qui contient l'outil adb 
 - Attendez environ 4–5 minutes pour que l'installation se termine.
 
   ```{image} ../images/SonySW3_Terminal2.png
-  :alt: "Installation r\xE9ussie du terminal"
+  :alt: Installation réussie du terminal
   ```
 
 - Une fois terminé, redémarrez votre montre et vous devriez voir que les applications commencent à se synchroniser rapidement.

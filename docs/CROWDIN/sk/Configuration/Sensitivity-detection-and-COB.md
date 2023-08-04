@@ -1,3 +1,5 @@
+(Sensitivity-detection-and-COB-sensitivity-detection)=
+
 # Sensitivity detection
 
 ## Sensitvity algorithm

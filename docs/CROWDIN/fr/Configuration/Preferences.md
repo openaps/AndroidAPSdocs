@@ -3,13 +3,13 @@
 - **Ouvrez les préférences** en cliquant sur le menu trois points en haut à droite de l'écran.
 
   ```{image} ../images/Pref2020_Open2.png
-  :alt: "Ouvrir les pr\xE9f\xE9rences"
+  :alt: Ouvrir les préférences
   ```
 
 - Vous pouvez accéder directement aux préférences d'un certain onglet (par ex. onglet pompe) en sélectionnant cet onglet et en cliquant sur Préférences du plugin.
 
   ```{image} ../images/Pref2020_OpenPlugin2.png
-  :alt: "Ouvrir les pr\xE9f\xE9rences du plugin"
+  :alt: Ouvrir les préférences du plugin
   ```
 
 - **Les sous-menus** peuvent être ouverts en cliquant sur le triangle situé sous le titre du sous-menu.
@@ -21,16 +21,17 @@
 - Avec le **filtre** en haut de l'écran des préférences, vous pouvez accéder rapidement à certaines préférences. Il suffit de taper une partie du texte que vous cherchez.
 
   ```{image} ../images/Pref2021_Filter.png
-  :alt: "Filtre des pr\xE9ferences"
+  :alt: Filtre des préferences
   ```
 
-```{eval-rst}
-.. contenus::
+```{contents}
+contenus::
    :backlinks: entrée
    :depth: 2
 ```
 
-## Général
+(Preferences-general)=
+## Généralités
 
 **Unités**
 
@@ -45,19 +46,20 @@
 - Si vous utilisez des langues différentes, vous pouvez parfois voir un mélange de langues. Cela est dû à un problème Android, le remplacement de la langue par défaut d'Android parfois ne fonctionne pas.
 
   ```{image} ../images/Pref2020_General.png
-  :alt: "Pr\xE9f\xE9rences > G\xE9n\xE9ral"
+  :alt: Preferences > General
   ```
 
 **Nom du patient**
 
 - Peut être utilisé si vous devez différencier plusieurs configurations (par ex. deux enfants DT1 de votre famille).
 
+(Preferences-protection)=
 ### Protection
 
+(Preferences-master-password)=
 #### Mot de passe principal
 
-- Nécessaire pour pouvoir [exporter les paramètres](../Usage/ExportImportSettings.md) car ils sont chiffrés depuis la version 2.7.
-  **La protection biométrique ne fonctionne pas sur les téléphones OnePlus. Ceci est un problème connu de OnePlus sur certains téléphones.**
+- Nécessaire pour pouvoir [exporter les paramètres](../Usage/ExportImportSettings.md) car ils sont chiffrés depuis la version 2.7. **La protection biométrique ne fonctionne pas sur les téléphones OnePlus. Ceci est un problème connu de OnePlus sur certains téléphones.**
 
 - Ouvrez les préférences (menu trois points en haut à droite de l'écran d'accueil)
 
@@ -68,7 +70,7 @@
 - Entrez le mot de passe, confirmez le et cliquez sur OK.
 
   ```{image} ../images/MasterPW.png
-  :alt: "D\xE9finir le mot de passe principal"
+  :alt: Définir le mot de passe principal
   ```
 
 #### Protection des paramètres
@@ -77,7 +79,7 @@
 
 - Le mot de passe personnalisé doit être utilisé si vous voulez juste utiliser le mot de passe principal pour sécuriser [les paramètres exportés](../Usage/ExportImportSettings.md).
 
-- Si vous utilisez un mot de passe personnalisé, cliquez sur la ligne "Mot de passe des paramètres" pour définir le mot de passe comme décrit [ci-dessus](../Configuration/Preferences#mot-de-passe-principal).
+- If you are using a custom password click on line "Settings password" to set password as described [above](Preferences-master-password).
 
   ```{image} ../images/Pref2020_Protection.png
   :alt: Protection
@@ -95,15 +97,16 @@
 - Dans l'exemple ci-dessous, vous voyez l'invite de protection biométrique. Si l'authentification biométrique ne fonctionne pas, cliquez dans la zone au-dessus de l'invite blanche et entrez le mot de passe principal.
 
   ```{image} ../images/Pref2020_PW.png
-  :alt: "Protection biom\xE9trique"
+  :alt: Protection biométrique
   ```
 
+(Preferences-skin)=
 #### Thème
 
 - Vous pouvez choisir parmi quatre thèmes :
 
   ```{image} ../images/Pref2021_SkinWExample.png
-  :alt: "S\xE9lection du theme + exemples"
+  :alt: Sélection du theme + exemples
   ```
 
 - Le thème 'Basse résolution' a des étiquettes plus courte et "âge/niveau" ont été enlevé dans la zone Careportal de l'onglet Action pour avoir plus d'espace disponible sur un écran de très basse résolution.
@@ -122,15 +125,16 @@
 - **Grand écran** a une taille de graphiques augmentée comparé aux autres thèmes
 
   ```{image} ../images/Screenshots_Skins.png
-  :alt: "Th\xE8mes selon l'orientation du t\xE9l\xE9phone"
+  :alt: Thèmes selon l'orientation du téléphone
   ```
 
+(Preferences-overview)=
 ## Aperçu
 
 - Dans la section Aperçu, vous pouvez définir les préférences de l'écran d'accueil.
 
   ```{image} ../images/Pref2020_OverviewII.png
-  :alt: "Pr\xE9f\xE9rences > Aper\xE7u"
+  :alt: Preferences > Overview
   ```
 
 ### Garder l'écran allumé
@@ -138,6 +142,7 @@
 - Utile lors d'une présentation.
 - Cela consomme beaucoup d'énergie, il est donc prudent de brancher votre téléphone sur un chargeur.
 
+(Preferences-buttons)=
 ### Boutons
 
 - Définissez quels boutons sont visibles en bas de votre écran d'accueil.
@@ -145,9 +150,10 @@
 - Avec les paramètres incrément, vous pouvez définir les quantités pour les trois boutons des boîtes de dialogue glucides et insuline pour une entrée facile.
 
   ```{image} ../images/Pref2020_OV_Buttons.png
-  :alt: "Pr\xE9f\xE9rences > Boutons"
+  :alt: Préférences > Boutons
   ```
 
+(Preferences-quick-wizard)=
 ### Assistant Rapide
 
 - Si vous avez une collation ou un repas fréquent, vous pouvez utiliser le bouton Assistant Rapide pour entrer facilement la quantité de glucides et définir les règles de calcul.
@@ -159,32 +165,34 @@
 - La proposition doit être confirmée avant l'injection de l'insuline.
 
   ```{image} ../images/Pref2020_OV_QuickWizard.png
-  :alt: "Pr\xE9f\xE9rences > Bouton Assistant rapide"
+  :alt: Préférences > Bouton Assistant rapide
   ```
 
+(Preferences-default-temp-targets)=
 ### Cibles Temporaires par défaut
 
-- Les [Cibles Temporaires (CT)](../Usage/temptarget#cibles-temporaires) vous permettent de définir une nouvelle cible de glycémie pour une certaine durée.
+- Les [Cibles Temporaires (CT)](../Usage/temptarget.md) vous permettent de définir une nouvelle cible de glycémie pour une certaine durée.
 
 - Avec la configuration de CT par défaut, vous pouvez facilement changer vos cibles d'activité, de repas imminent, etc.
 
 - Faites un appui long sur votre cible dans le coin supérieur droit de l'écran d'accueil ou utilisez les raccourcis dans le bouton orange « Glucides » en bas.
 
   ```{image} ../images/Pref2020_OV_DefaultTT.png
-  :alt: "Pr\xE9f\xE9rences > Cibles temporaires par d\xE9faut"
+  :alt: Preferences > Default temp targets
   ```
 
 ### Insuline par défaut pour Amorcer/Remplir
 
-- Si vous voulez remplir la tubulure ou amorcer la canule avec AAPS, vous pouvez le faire via [l'onglet actions](../Getting-Started/Screenshots#onglet-actions).
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](Screenshots-action-tab).
 - Les valeurs prédéfinies peuvent être configurées dans cette boite de dialogue.
 
+(Preferences-range-for-visualization)=
 ### Fourchette de visualisation
 
 - Définissez quelle partie du graphique sur l'écran d'accueil doit être votre plage cible et sera remplie avec fond vert.
 
   ```{image} ../images/Pref2020_OV_Range2.png
-  :alt: "Pr\xE9f\xE9rences > Fourchette de visualisation"
+  :alt: Préférences > Fourchette de visualisation
   ```
 
 ### Raccourcir les titres des onglets
@@ -194,7 +202,7 @@
 - Par exemple, l'onglet "OpenAPS AMA" devient "OAPS", "Objectifs" devient "OBJ" etc.
 
   ```{image} ../images/Pref2020_OV_Tabs.png
-  :alt: "Pr\xE9f\xE9rences > Onglets"
+  :alt: Preferences > Tabs
   ```
 
 ### Afficher les notes dans les boîtes de dialogue
@@ -202,15 +210,16 @@
 - Vous permet d'ajouter des textes courts de notes à vos traitements (assistant bolus, glucides, insuline...)
 
   ```{image} ../images/Pref2020_OV_Notes.png
-  :alt: "Pr\xE9f\xE9rences > Notes dans les bo\xEEtes de dialogue"
+  :alt: Preferences > Notes in treatment dialogs
   ```
 
+(Preferences-status-lights)=
 ### Voyants d'état
 
 - Les voyants d'état donnent une alerte visuelle pour
 
-  - Âge du capteur
-  - Niveau de batterie capteurs pour certains MGC utilisant des transmetteurs externe (voir les [Écrans AndroidAPS](../Getting-Started/Screenshots#niveau-du-capteur-batterie) pour plus de détails).
+  - Age du capteur
+  - Sensor battery level for certain smart readers (see [screenshots page](Screenshots-sensor-level-battery) for details).
   - Âge de l'insuline (jours d'utilisation du réservoir)
   - Niveau du réservoir (unités)
   - Âge de la canule
@@ -224,13 +233,14 @@
 - Dans les versions antérieures à AAPS 2.7 le paramètrage des seuils pour les voyants d'état être effectué dans Nightscout.
 
   ```{image} ../images/Pref2020_OV_StatusLights2.png
-  :alt: "Pr\xE9f\xE9rences > Voyants d'\xE9tat"
+  :alt: Preferences > Status Lights
   ```
 
+(Preferences-advanced-settings-overview)=
 ### Paramètres avancés (Aperçu)
 
 ```{image} ../images/Pref2021_OV_Adv.png
-:alt: "Pr\xE9f\xE9rences > Voyants d'\xE9tat"
+:alt: Preferences > Status Lights
 ```
 
 #### Injecter cette partie de Bolus calculée par l’assistant
@@ -241,18 +251,19 @@
 
 #### Assistant bolus
 
-- Si vous exécutez [l'assistant de Bolus](../Getting-Started/Screenshots#assistant-bolus) et que la glycémie est supérieure à 10 mmol (180 mg/dl) un bolus de correction sera proposé.
+- If you run [Bolus wizard](Screenshots-bolus-wizard) and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
 
 - Si le bolus de correction est accepté, **aucun glucide** ne sera enregistré.
 
 - Une alarme sera déclenchée lorsque la glycémie est au bon niveau pour commencer à manger.
 
-- Vous devez à nouveau sélectionner l'[Assistant Bolus](../Getting-Started/Screenshots#assistant-bolus) et entrer la quantité de glucides que vous voulez manger.
+- You have to enter [Bolus wizard](Screenshots-bolus-wizard) again and enter the amount of carbs you want to eat.
 
   ```{image} ../images/Home2021_BolusWizard_CorrectionOffer.png
   :alt: Message assistant bolus
   ```
 
+(Preferences-superbolus)=
 #### Superbolus
 
 - Activer les Superbolus dans l'Assistant.
@@ -260,7 +271,7 @@
 
 ## Traitements de sécurité
 
-### Patient type
+### Type de patient
 
 - Les limites de sécurité sont établies en fonction de l'âge sélectionné dans ce paramètre.
 - Si vous commencez à atteindre ces limites restrictives (comme le Maximum Bolus), il est temps de changer d’un cran.
@@ -276,12 +287,13 @@
 
 ### Maximum de Glucides autorisé \[g\]
 
-- défini la quantité maximale de glucides que l'assistant bolus de AAPS est autorisée à utiliser.
+- Défini la quantité maximale de glucides que l'assistant bolus de AAPS est autorisée à utiliser.
 - Ce paramètre existe comme une limite de sécurité pour empêcher l'administration d’un bolus trop important dû à une saisie accidentelle ou une erreur de l’utilisateur.
 - Il est recommandé de définir cette valeur à un montant raisonnable qui correspond approximativement à la quantité maximale de glucides que vous êtes susceptible d’avoir dans d'un repas.
 
 ## Boucle
 
+(Preferences-aps-mode)=
 ### Mode APS
 
 - Basculer entre les boucles ouvertes et fermées ainsi que le mode arrêt glycémie basses (AGB)
@@ -289,18 +301,20 @@
 - **La Boucle fermée** signifie que les suggestions DBT (Débit de Basal Temporaire) sont automatiquement envoyées à votre pompe sans confirmation ou entrée de votre part.
 - **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. This means that if blood glucose is dropping it can reduce the basal rate, but if blood glucose is rising then it will only increase the basal rate if the basal IOB is negative (e.g. from a previous Low Glucose Suspend).
 
+(Preferences-minimal-request-change)=
 ### Changement minimum \[%\]
 
 - Lorsque vous utilisez le mode boucle ouverte, vous recevrez des notifications chaque fois que le programme AAPS vous recommande d'ajuster le débit de basal.
 - Pour réduire le nombre de notifications, vous pouvez utiliser une plage cible de glycémie plus étendue ou augmenter le pourcentage de changement minimal.
 - Ce paramètre défini le changement relatif minimum qui déclenchera une notification.
 
+(Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)=
 ## Assistance Améliorée Repas (AAR ou AMA) ou Super Micro Bolus (SMB)
 
 Selon vos paramètres dans le [Générateur de configuration](../Configuration/Config-Builder.md) vous pouvez choisir entre deux algorithmes :
 
-- [Assistance Améliorée Repas (OpenAPS AMA)](../Usage/Open-APS-features#assistance-amelioree-repas-aar) - état de l'algorithme en 2017
-- [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features#super-micro-bolus-smb) - algorithme le plus récent pour les utilisateurs avancés
+- [Advanced meal assist (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm for advanced users
 
 ### Paramètres OpenAPS AMA
 
@@ -311,15 +325,15 @@ Selon vos paramètres dans le [Générateur de configuration](../Configuration/C
 
 - Existe comme une limite de sécurité pour empêcher AAPS d'etre capable d'administrer un dosage de Basal dangereusement élevé.
 - La valeur est definie en Unités d'insuline par heure (U/h).
-- Il est conseillé de definir cette valuer de facon raisonnable et sensée. Une bonne recommandation est de prendre le **débit de basal le plus élevé** de votre profil et de le **multiplier par 4**.
+- It is advised to set this to something sensible. Une bonne recommandation est de prendre le **débit de basal le plus élevé** de votre profil et de le **multiplier par 4**.
 - Par exemple, si le dosage basal le plus élevé de votre profil est de 0,5 U/h, vous pourriez le multiplier par 4 pour obtenir la valeur de 2 U/h.
-- Voir également la [description détaillée de la fonctionnalité](../Usage/Open-APS-features#max-u-h-pour-le-debit-temp-basal-openaps-max-basal).
+- See also [detailed feature description](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
-#### L'IA basal maximum que l'OpenAPS pourra délivrer \[U\]
+#### L'IA basal maximum que OpenAPS peut délivrer \[U\]
 
 - Une quantité d'insuline basale supplémentaire (en unités) a pu s'accumuler dans votre corps, en plus de votre profil basal normal.
 - Une fois cette valeur atteinte, AAPS cessera de délivrer de l'insuline basale supplémentaire jusqu'à ce que votre Insuline basale Active (IA) aie diminuée et soit de nouveau dans cette plage.
-- Cette valeur **ne prend pas en compte pas l'Insuline Active IA des bolus**, mais seulement la Basal.
+- Cette valeur **ne prend pas en compte pas l'Insuline Active IA des bolus**, mais seulement la basale.
 - Cette valeur est calculée et surveillée indépendamment de votre débit de basal normal. Ce n'est que l'insuline basale additionnelle en plus du débit normal qui est pris en compte.
 
 Lorsque vous commencez à boucler, **il est conseillé de mettre l'IA basal Max à 0** pour une période de temps, pendant que vous vous habituez au système. Cela empêche AAPS de donner de l'insuline basale supplémentaire. Pendant ce temps, AAPS sera toujours en mesure de limiter ou de désactiver votre insuline basale pour prévenir l'hypoglycémie. C'est une étape importante pour :
@@ -337,7 +351,7 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 
 #### Autosens
 
-- [Autosens](../Usage/Open-APS-features#autosens) regarde les écarts de glycémie (positifs/negatifs/neutres).
+- [Autosens](Open-APS-features-autosens) looks at blood glucose deviations (positive/negative/neutral).
 - Il essaiera de comprendre à quel point vous êtes sensible/résistant en fonction de ces écarts et ajustera le débit basal et la SI en fonction de ces écarts.
 - Si vous sélectionnez "Autosens ajuste aussi les cibles" l'algorithme modifiera également votre cible de glycémie.
 
@@ -346,26 +360,28 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 - Normalement, vous n'avez pas à modifier les paramètres dans cette boîte de dialogue !
 - Si vous voulez quand même les changer, lisez en détail la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) et assurez-vous de bien comprendre ce que vous faites.
 
+(Preferences-openaps-smb-settings)=
 ### Paramètres OpenAPS SMB
 
-- Contrairement à AMA, [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) n'utilise pas de les débits de basal temporaires pour contrôler la glycémie, mais principalement les petits super micro-bolus.
+- In contrast to AMA, [SMB](Open-APS-features-super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
-- Vous devez avoir démarré [l'objectif 9](../Usage/Objectives#objectif-9-activation-de-fonctionnalites-supplementaires-pour-l-utilisation-en-journee-telles-que-la-fonction-smb) pour utiliser les SMB.
+- You must have started [objective 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
-- Les trois premiers paramètres sont expliqués [ci-dessus](../Configuration/Preferences#debit-max-en-u-h-pour-une-temp-basal).
+- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
-- Les détails sur les différentes options d'activation sont décrits dans la section [Fonctionnalités OpenAPS](../Usage/Open-APS-features#activer-smb).
+- Details on the different enable options are described in [OpenAPS feature section](Open-APS-features-enable-smb).
 
 - *La fréquence à laquelle les SMB seront donnés en min* est une restriction pour que le SMB ne soit distribué que toutes les 4 minutes par défaut. Cette valeur empêche le système d'émettre trop souvent des SMB (par exemple dans le cas où une cible temporaire a été définie). Vous ne devriez pas modifier ce paramètre sauf si vous en connaissez exactement les conséquences.
 
-- Si 'Sensibilité augmente la cible' ou 'Résistance diminue la cible' est activée, [Autosens](../Usage/Open-APS-features#autosens) modifiera votre cible glycémique en fonction de vos écarts de glycémie.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](Open-APS-features-autosens) will modify your glucose target according to your blood glucose deviations.
 
 - Si la cible est modifiée, elle sera affichée avec un fond vert sur votre écran d'accueil.
 
   ```{image} ../images/Home2020_DynamicTargetAdjustment.png
-  :alt: "Cible modifi\xE9e par Autosens"
+  :alt: Cible modifiée par Autosens
   ```
 
+(Preferences-carb-required-notification)=
 #### Notification glucides requis
 
 - Cette fonctionnalité n'est disponible que si l'algorithme SMB est sélectionné.
@@ -381,7 +397,7 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 - Les notifications Glucides requis peuvent être envoyées sur Nightscout si vous le souhaitez, dans ce cas une annonce sera affichée et diffusée.
 
   ```{image} ../images/Pref2020_CarbsRequired.png
-  :alt: "Afficher les glucides requis sur l'\xE9cran d'accueil"
+  :alt: Afficher les glucides requis sur l'écran d'accueil
   ```
 
 #### Paramètres avancés (OpenAPS SMB)
@@ -392,7 +408,7 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 ## Paramètres d’absorption
 
 ```{image} ../images/Pref2020_Absorption.png
-:alt: "Param\xE8tres d'absorption"
+:alt: Paramètres d'absorption
 ```
 
 ### min_5m_carbimpact
@@ -423,12 +439,12 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 
 ### Paramètres avancés - Ratio autosens
 
-- Définit les ratios min. et max. [Autosens](../Usage/Open-APS-features#autosens).
+- Define min. and max. [autosens](Open-APS-features-autosens) ratio.
 - Normalement les valeurs standards (max. 1,2 et min. 0,7) ne devrait pas être modifiées.
 
 ## Paramètres de la pompe
 
-Les options ici varient selon le pilote de pompe que vous avez sélectionné dans le [Générateur de configuration](../Configuration/Config-Builder#pompe).  Appairez et réglez votre pompe selon les instructions relatives à la pompe :
+The options here will vary depending on which pump driver you have selected in [Config Builder](Config-Builder-pump).  Appairez et réglez votre pompe selon les instructions relatives à la pompe :
 
 - [Pompe à Insuline DanaR](../Configuration/DanaR-Insulin-Pump.md)
 - [Pompe à Insuline DanaRS](../Configuration/DanaRS-Insulin-Pump.md)
@@ -438,6 +454,7 @@ Les options ici varient selon le pilote de pompe que vous avez sélectionné dan
 
 Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sélectionné Pompe virtuelle Pump dans le Générateur de configuration.
 
+(Preferences-nsclient)=
 ## NSClient
 
 ```{image} ../images/Pref2020_NSClient.png
@@ -445,16 +462,16 @@ Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sé
 ```
 
 - Définissez votre *URL Nightscout* (par ex. <https://yourwebsitename.herokuapp.com>) et l'*API secret* (un mot de passe de 12 caractères enregistré dans vos variables Heroku).
-- Cela permet de lire et d'écrire des données entre le site Nightscout et AndroidAPS.
+- Cela permet de lire et d'écrire des données entre le site Nightscout et AAPS.
 - Vérifiez deux fois les fautes de frappe ici si vous êtes coincé dans l'objectif 1.
 - **Vérifiez bien que l'URL est SANS /api/v1/ à la fin.**
 - *Log app start to NS* enregistre une note dans Careportal Nightscout à chaque démarrage de l'application.  L'application ne devrait pas avoir besoin de démarrer plus d'une fois par jour; si c'est plus souvent, cela suggère un problème (par ex. l'optimisation de la batterie n'est pas désactivée pour AAPS).
-- Si activé, les modifications du [profil local](../Configuration/Config-Builder#profil-local) sont envoyées sur votre site Nightscout.
+- If activated changes in [local profile](Config-Builder-local-profile) are uploaded to your Nightscout site.
 
 ### Paramètres de connexion
 
 ```{image} ../images/ConfBuild_ConnectionSettings.png
-:alt: "Param\xE8tres de connexion NSClient"
+:alt: Paramètres de connexion NSClient
 ```
 
 - Restreignez le téléchargement de Nightscout au Wi-Fi seulement ou même à certains SSID Wi-Fi.
@@ -469,26 +486,27 @@ Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sé
 - Elles ne fonctionneront que si vous avez une connexion avec Nightscout et sont destinées aux parents/aidants.
 - Si vous avez la source MGC sur votre téléphone (par ex. xDrip+ ou BYODA \[Construisez votre propre application dexcom\]) puis utilisez ces alarmes à la place.
 
+(Preferences-advanced-settings-nsclient)=
 ### Paramètres avancés (NSClient)
 
 ```{image} ../images/Pref2020_NSClientAdv.png
-:alt: "Param\xE8tres avanc\xE9s NSClient"
+:alt: Paramètres avancés NSClient
 ```
 
 - La plupart des options dans les paramètres avancés sont explicites.
 
 - *Activer les transmissions locales* partagera vos données vers d'autres applications sur le téléphone, telles que xDrip+.
 
-  - Vous devez [passer par AAPS](../Configuration/Config-Builder#source-gly) et activer la diffusion locale dans AAPS pour utiliser les alarmes xDrip+.
+  - You need to [go through AAPS](Config-Builder-bg-source) and enable local broadcast in AAPS to use xDrip+ alarms.
 
 - *Utiliser toujours les valeurs absolues du basal* doit être activé si vous souhaitez utiliser Autotune correctement. Voir la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) pour plus de détails sur Autotune.
 
 ## Communicateur SMS
 
-- Les options ne seront affichées que si le Communicateur SMS est sélectionné dans le [Générateur de configuration](../Configuration/Config-Builder#communicateur-sms).
+- Options will only be displayed if SMS communicator is selected in [Config Builder](Config-Builder-sms-communicator).
 - Ce paramètre permet de contrôler à distance de l'application en envoyant des instructions au téléphone du patient que l'application appliquera comme Suspendre la boucle ou un bolus.
 - De plus amples informations sont décrites dans [Commandes SMS](../Children/SMS-Commands.md).
-- Une sécurité supplémentaire est obtenue grâce à l'utilisation d'une application authentificateur et d'un code confidentiel supplémentaire à la fin du jeton.
+- Une sécurité supplémentaire est obtenue grâce à l'utilisation d'une application authentificateur et d'un code PIN supplémentaire à la fin du jeton.
 
 ## Automatisation
 
@@ -509,7 +527,7 @@ Sélectionnez le service de localisation à utiliser :
 ## Choix de données
 
 ```{image} ../images/Pref2020_DataChoice.png
-:alt: "Choix de donn\xE9es"
+:alt: Choix de données
 ```
 
 - Vous pouvez aider davantage au développement d'AAPS en envoyant des rapports de plantage aux développeurs.
@@ -517,11 +535,11 @@ Sélectionnez le service de localisation à utiliser :
 ## Paramètres de maintenance
 
 ```{image} ../images/Pref2020_Maintenance.png
-:alt: "Param\xE8tres de maintenance"
+:alt: Paramètres de maintenance
 ```
 
-- Le destinataire standard des journaux est <mailto:logs@androidaps.org>.
-- Si vous sélectionnez *Chiffrer les paramètres exportés* ces paramètres sont chiffrés avec votre mot de passe principal \<../Configuration/Preferences#mot-de-passe-principal>\`\_. Dans ce cas, le mot de passe principal doit être entré à chaque fois que les paramètres sont exportés ou importés.
+- Le destinataire standard des journaux est <logs@androidaps.org>.
+- If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). Dans ce cas, le mot de passe principal doit être entré à chaque fois que les paramètres sont exportés ou importés.
 
 ## Open Humans
 

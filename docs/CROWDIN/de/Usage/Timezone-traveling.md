@@ -4,6 +4,8 @@
 
 Es gibt keine Probleme beim Zeitzonenwechsel im Smartphone, da die Pumpe keine Historie verwendet
 
+(Timezone-traveling-danarv2-danars)=
+
 ## DanaRv2, DanaRS
 
 Diese Pumpen benötigen besondere Aufmerksamkeit, weil AndroidAPS die Historie der Pumpe verwendet, die Einträge in der Pumpe aber keine Zeitangaben beinhalten. **Das bedeutet, dass ein einfacher Zeitzonenwechsel im Smartphone dazu führt, dass Einträge mit verschiedenen Zeitzonen ausgelesen und doppelt angezeigt werden.**
@@ -24,13 +26,13 @@ Um dies zu vermeiden, gibt es zwei Möglichkeiten:
    
    * z.B. Wien -> New York: Profilwechsel +6 Stunden
    * z.B. Wien -> Sydney: Profilwechsel -8 Stunden
-* Wahrscheinlich keine Option, wenn Du die [gepatchte LibreLink-App](../Hardware/Libre2#reisen-uber-zeitzonen-hinweg) nutzt. Dort muss der automatische Zeitzonenwechsel eingestellt werden, um einen neuen Libre 2 Sensor starten zu können.
+* Vermutlich keine Option, wenn Du die [gepatchte LibreLink-App](Libre2-time-zone-travelling) nutzt, da zum Starten 'Automatische Zeitzone' im Smartphone aktiviert sein muss.
 
 ### Option 2: Pumpenhistorie löschen
 
 * Schalte die automatische Einstellung von Datum und Uhrzeit in Deinem Smartphone aus (manueller Zeitzonen-Wechsel)
 
-Wenn du aus dem Flugzeug steigst:
+Wenn Du aus dem Flugzeug steigst:
 
 * schalte die Pumpe aus
 * ändere die Zeitzone auf dem Smartphone
@@ -39,6 +41,8 @@ Wenn du aus dem Flugzeug steigst:
 * ändere die Zeit in der Pumpe
 * schalte das Smartphone an
 * lasse das Smartphone mit der Pumpe verbinden und verfeinere die Zeiteinstellung
+
+(Timezone-traveling-insight)=
 
 ## Insight
 
@@ -50,15 +54,29 @@ Es kann zu Ungenauigkeiten in den TDDs führen. Aber es sollte kein Problem sein
 
 Der Insight-Nutzer muss sich also nicht um Zeitumstellung oder den Wechsel von Zeitzonen kümmern. Es gibt eine Ausnahme zu dieser Regel: Die Insight Pumpe hat eine kleine interne Batterie, um die Zeit immer aktuell zu halten etc. während Du die "normale" Batterie wechselst. Wenn der Batteriewechsel zu lange dauert, kann diese interne Batterie leer werden, die Uhr wird zurückgesetzt und Du wirst gebeten, Zeit und Datum nach dem Einlegen der neuen Batterie neu einzugeben. In diesem Fall werden alle Einträge vor dem Batteriewechsel in der Berechnung in AAPS übersprungen, da die richtige Zeit nicht korrekt erkannt werden kann.
 
+## Accu-Chek Combo
+
+Der [neue Combo-Treiber](../Configuration/Accu-Chek-Combo-Pump-v2.md) passt die Pumpenzeit automatisch an die Systemzeit des Smartphones an. Die Combo selbst speichert keine Zeitzonen, sondern lediglich die lokale Zeit. Der neue Treiber setzt genau diese lokale Zeit. Zusätzlich wird die Zeitzone in den lokalen AAPS-Einstellungen hinterlegt, um die lokale Pumpenzeit in einen vollständigen Zeitstempel, der die entsprechende Zeitverschiebung enthält, umzurechnen. Du musst hier also nichts tun. Sollten die Abweichungen zwischen Combo und Smartphone zu groß werden, wird die Pumpenzeit automatisch korrigiert.
+
+Es kann etwas dauern bis die Synchronisierung abgeschlossen ist, da die Anpassung nur mit einem langsamen Kommunikations-Protokoll (remote-terminal mode) gemacht werden kann. Das ist eine Combo-Beschränkung, die nicht umgangen werden kann.
+
+Der alte, auf Ruffy basierende, Treiber passt die Zeit nicht automatisch ein. In diesem Setup muss die Anpassung von Hand erfolgen. Unten findest Du die nötigen Schritte, um die Anpassungen wegen eines Zeitzonenenwechsels oder wegen der Zeitumstellung sicher durchzuführen.
+
+(Timezone-traveling-time-adjustment-daylight-savings-time-dst)=
+
 # Zeitumstellung (Sommer-/Winterzeit)
 
 Je nach Pumpe und CGM können Zeitsprünge zu Problemen führen. Bei der Combo wird z.B. die Pumpenhistorie neu gelesen und doppelte Einträge werden erstellt. Nimm daher bitte die folgenden Anpassungen tagsüber vor.
 
 Nutze den Bolus-Kalkulator erst dann wieder, wenn Du sicher bist, dass COB und IOB absolut korrekt sind. Wahrscheinlich ist es besser, diese für ein paar Stunden nach der Zeitumstellung nicht zu nutzen.
 
+(Timezone-traveling-accu-chek-combo)=
+
 ## Accu-Chek Combo
 
-AndroidAPS wird Dich alarmieren, wenn die Zeit zwischen Pumpe und Smartphone zu sehr abweicht. Bei der Zeitumstellung wäre dies unerfreulicherweise mitten in der Nacht. Um dies zu verhindern und stattdessen den Schlaf zu genießen, folge diesen Schritten, so dass Du die Zeitumstellung zu einer Zeit erzwingen kannst, die Dir passt.
+**HINWEIS**: Wie oben erwähnt, gelten die Informationen dieses Abschnitts nur für die alten Ruffy-basierenden Treiber. Der neue Treiber passt Datum und Uhrzeit und Sommer-/Winterzeit automatisch an.
+
+AAPS wird Dich alarmieren, wenn die Zeit zwischen Pumpe und Smartphone zu sehr abweicht. Bei der Zeitumstellung wäre dies unerfreulicherweise mitten in der Nacht. Um dies zu verhindern und stattdessen den Schlaf zu genießen, folge diesen Schritten, so dass Du die Zeitumstellung zu einer Zeit erzwingen kannst, die Dir passt.
 
 ### Vor der Zeitumstellung notwendige Maßnahmen
 

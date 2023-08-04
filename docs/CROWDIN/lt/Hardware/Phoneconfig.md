@@ -1,10 +1,5 @@
 # Telefonai
 
-```{toctree}
-:glob: true
-:maxdepth: 1
-
-Sąrašas išbandytų išmaniųjų telefonų ir laikrodžių <../Getting-Started/Phones.md>
-Jelly Pro Nustatymai <../Usage/jelly.md>
-Huawei Nustatymai <../Usage/huawei.md>
-```
+- [List of tested phones](../Getting-Started/Phones.md)
+- [Jelly Pro Settings](../Usage/jelly.md)
+- [Huawei Settings](../Usage/huawei.md)

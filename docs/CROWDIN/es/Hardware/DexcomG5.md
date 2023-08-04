@@ -2,31 +2,28 @@
 
 ## Si se utiliza G5 con xdrip+
 
-- If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow instructions on nightscout ([G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support).
-- In xdrip go to Settings > Inter-app settings > Broadcast Data Locally and select ON.
-- In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
-- Si usted quiere ser capaz de utilizar AndroidAPS para calibrar, a continuación, en xdrip vaya a Configuración > Interapp Compatibilidad > Aceptar Calibraciones y seleccione ON.  Puede que también desee revisar las opciones en Ajustes > Ajustes Menos Comunes > Ajustes Avanzados de Calibración.
-- Seleccione xdrip en ConfigBuilder (seteos en AndroidAPS).
-- If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md) .
+-   If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow instructions on nightscout ([G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support).
+-   In xdrip go to Settings > Inter-app settings > Broadcast Data Locally and select ON.
+-   In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
+-   If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
+-   Select xdrip in ConfigBuilder (setting in AndroidAPS).
+-   If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md) .
 
 ## Si utiliza G5 con la aplicación Dexcom parcheada
 
-- Descargar el apk desde [https://github.com/dexcomapp/dexcomapp](https://github.com/dexcomapp/dexcomapp), y elegir la versión que más se adapte a sus necesidades (mg/dl o mmol/l versión, G5).
+-   Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5).
 
-  - Carpeta 2.3 es para los usuarios de AndroidAPS 2.3, carpeta 2.4 para los usuarios de la AAPS 2.5.
-  - Abrir <https://play.google.com/store/search?q=dexcom%20g5> en tu ordenador. La región estará visible en el URL.
+    -   Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users of AAPS 2.5.
+    -   Open <https://play.google.com/store/search?q=dexcom%20g5> on your computer. La región estará visible en el URL.
 
-  ```{eval-rst}
-  .. imagen:: ../images/DexcomG5regionURL.PNG
-    :alt: Region en el URL Dexcom G5
-  ```
+    ![Region in Dexcom G5 URL](../images/DexcomG5regionURL.PNG)
 
-- Detener el sensor y desinstalar el app de Dexcom original, si no lo ha hecho ya.
+-   Stop sensor and uninstall the original Dexcom app, if not already done.
 
-- Instalar el apk descargado
+-   Install downloaded apk
 
-- Iniciar Sensor
+-   Start sensor
 
-- Seleccione la aplicación Dexcom (parchada) en ConfigBuilder (seteos en AndroidAPS).
+-   Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
 
-- Si desea utilizar xDrip alarmas a través de la difusión local: en xDrip menú hamburguesa > ajustes > ajustes de hardware de origen de datos > 640G /EverSense.
+-   If you want to use xDrip alarms via local broadcast: in xDrip hamburger menu > settings > hardware data source > 640G /EverSense.

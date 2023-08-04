@@ -14,7 +14,7 @@ Profil yardımcısı iki işlev sunar:
 Profil yardımcısı, 18 yaşına kadar olan çocuğunuzun ilk profilini bulması için çocuklar için iki farklı hastaneden veri seti sunar.
 
 ```{image} ../images/ProfileHelperKids1.png
-:alt: "\xC7ocuk Profil Yard\u0131mc\u0131s\u0131 1"
+:alt: Çocuk Profil Yardımcısı 1
 ```
 
 1. Ekranın sağ üst tarafındaki üç noktalı menüden 'Profil yardımcısı'nı seçin.
@@ -23,21 +23,21 @@ Profil yardımcısı, 18 yaşına kadar olan çocuğunuzun ilk profilini bulmas�
 4. 'Geçerli profil'e uzun basın ve DPV Varsayılan profilini seçin.
 
 ```{image} ../images/ProfileHelperKids2.png
-:alt: "\xC7ocuk Profil Yard\u0131mc\u0131s\u0131 2"
+:alt: Çocuk Profil Yardımcısı 2
 ```
 
 5. Çocukların yaşını, bazal yüzdesini ve GTD Toplamı **veya** ağırlığını girerek DPV Varsayılan profilini (başka bir hastane veri kümesine göre) ayarlayın.
 6. Ekranın üstündeki 'PROFİLLERİ KARŞILAŞTIR' düğmesine basın.
 7. Ayarlanan iki profilin karşılaştırması görüntülenecektir.
 
-Profil ayarlamalarını yaptıktan sonra [profili](../Configuration/profilehelper#clone-profile) aşağıda açıklandığı gibi klonlayabilirsiniz.
+Profil ayarlamalarını yaptıktan sonra, aşağıda açıklandığı gibi [profili kopyalayabilirsiniz](profilehelper-clone-profile).
 
 ## İki profili karşılaştırın
 
-Profil yardımcısını farklı profiller veya profil değişimleri ile karşılaştırmak için de kullanabilirsiniz (önceden bir profil değiştirme'de \<../Usage/Profiles.md>\`kullanılan profillerinizin yüzdesi).
+Profil yardımcısını farklı profiller veya profil değişimleri ile karşılaştırmak için de kullanabilirsiniz (önceden bir [profil değiştirme'de](../Usage/Profiles.md) kullanılan profillerinizin yüzdesi).
 
 ```{image} ../images/ProfileHelper1.png
-:alt: "Profil Yard\u0131mc\u0131s\u0131 1"
+:alt: Profil Yardımcısı 1
 ```
 
 1. Ekranın sağ üst tarafındaki üç noktalı menüden 'Profil yardımcısı'nı seçin.
@@ -46,7 +46,7 @@ Profil yardımcısını farklı profiller veya profil değişimleri ile karşıl
 4. Sağdaki 2 etiketli gri çubuğa tıklayarak ekranı değiştirin.
 
 ```{image} ../images/ProfileHelper2.png
-:alt: "Profil Yard\u0131mc\u0131s\u0131 2"
+:alt: Profil Yardımcısı 2
 ```
 
 5. Standart olarak 'Mevcut profil' karşılaştırma adayı olarak sunulmaktadır.
@@ -55,12 +55,13 @@ Profil yardımcısını farklı profiller veya profil değişimleri ile karşıl
 8. Ekranın üstündeki 'PROFİLLERİ KARŞILAŞTIR' düğmesine basın.
 9. Ayarlanan iki profilin karşılaştırması görüntülenecektir.
 
+(profilehelper-clone-profile)=
 ## Profili Klonla
 
-[Yerel profil](../Configuration/Config-Builder#local-profile) kullanıyorsanız, doğrudan profil yardımcısından bir profil klonlayabilirsiniz.
+[Yerel profiller](Config-Builder-local-profile) kullanıyorsanız, doğrudan profil yardımcısından bir profil / profil anahtarını kopyalayabilirsiniz.
 
 ```{image} ../images/ProfileHelperClone.png
-:alt: "Profil Yard\u0131mc\u0131s\u0131 profil Klonlama / profil de\u011Fi\u015Ftirme"
+:alt: Profil Yardımcısı profil Klonlama / profil değiştirme
 ```
 
 1. İstenen profili / profil değiştir'meyi yukarıda açıklandığı gibi seçin.

@@ -2,13 +2,13 @@
 
 **Esta descripción es sólo para editar la documentación en inglés. All new information must be added in English first. Si desea traducir a otros idiomas (gracias), por favor use [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-Para obtener sugerencias sobre cómo formatear texto (titulares, audaces ...) y establecer enlaces, por favor vea la sección ["sintaxis de código"](./make-a-PR#code-syntax) de esta página.
+For hints how to format text (headline, bold...) and set links please see the ["code syntax"](make-a-PR-code-syntax) section of this page.
 
 ## General
 
 For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw). Hacer una PR no es difícil, pero podemos ayudarle a editar la documentación.
 
-En algún momento se le sugerirá que haga un PR. PR es la abreviatura de solicitud de modificación, y es una manera de agregar o editar la información almacenada en GitHub. En realidad, no es muy difícil hacer una y es una gran forma de contribuir. Esta documentación está aquí porque la gente como tú hizo PRs. No te preocupes por cometer un error o de alguna manera editar los documentos equivocados. Siempre hay un proceso de revisión antes de que los cambios se fusionen en el repositorio de documentación "formal" AndroidAPS. No se pueden estropear los originales a través de cualquier accidente en el proceso de PR. El proceso general es:
+En algún momento se le sugerirá que haga un PR. PR es la abreviatura de solicitud de modificación, y es una manera de agregar o editar la información almacenada en GitHub. En realidad, no es muy difícil hacer una y es una gran forma de contribuir. Esta documentación está aquí porque la gente como tú hizo PRs. No te preocupes por cometer un error o de alguna manera editar los documentos equivocados. There is always a review process before changes are merged into the "formal" AAPS documentation repository. No se pueden estropear los originales a través de cualquier accidente en el proceso de PR. El proceso general es:
 
 * Realice ediciones y mejoras en el código o la documentación editando el contenido existente.
 * Vuelva a comprobar que sus ediciones se vean bien para usted.
@@ -28,150 +28,209 @@ Por nuestro ejemplo, vamos a hacer una edición a AndroidAPSdocs. Esto NO es nec
 
 ![editar doc](./images/PR1.png)
 
-     Or you can click on the "Edit in GitHub" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited.
-    
+Or you can click on the "Edit in GitHub" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited.
 
 ![RTD io](./images/PR2.png)
 
-3. Una o la otra de las opciones del paso 2 creará una nueva rama en el SU repositorio donde se guardarán las ediciones. Haga sus ediciones en el archivo.
-  
-  Tenga en cuenta que utilizamos diferentes extensiones de archivo: .rst (ReStructuredText) y .md (Markdown) y la sintaxis varía un poco entre los dos. Tenga cuidado de utilizar la sintaxis correcta como [descrita debajo](./make-a-PR#code-syntax).
+3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
 
-![Editar rama](./images/PR3.png)
+We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](make-a-PR-code-syntax).
+
+![Edit branch](./images/PR3.png)
 
 4. Ha estado trabajando en la pestaña "<>Edit file". Seleccione la pestaña "Preview changes" para refrescar la vista asegúrese de que todo lo que ha cambiado se parece a lo que ha significado (typpos sic). Si ve una mejora necesaria, vuelva a la pestaña de edición para realizar más mejoras. 
 
-![modo vista previa](./images/PR5.png)
+![preview mode](./images/PR5.png)
 
 5. Cuando haya terminado de realizar las ediciones, desplácese hasta la parte inferior de la página. En el recuadro situado en la parte inferior, proporcione sus comentarios en el campo de texto que lee, "Add an optional extended description...". El título predeterminado tiene el nombre de archivo. Intente incluir una frase que explique la **razón** para el cambio. Describir la razón ayuda a los revisores a entender lo que estás intentando hacer con la PR.
 
-![enviar comentarios](./images/PR4.png)
+![commit comments](./images/PR4.png)
 
 6. Haga clic en el botón verde "Propose file changes" o "Commit changes". En la página que aparece, pulse "Create Pull Request" y otra vez en la página siguiente, pulse "Create Pull Request".
 
-![crear petición de modificación](./images/PR6.png)
+![create pull request](./images/PR6.png)
 
-7. Eso completa la apertura de una solicitud de PR. GitHub asigna al PR un número, ubicado después del título y una marca de hash. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). La edición ahora estará en una lista de relaciones públicas que el equipo revisará y potencialmente dará retroalimentación antes de comprometerse con la documentación principal de AndroidAPS! Si quieres ver el progreso de la PR, puedes hacer clic en el logo de la campana en la esquina superior derecha de tu cuenta de GitHub y ver todos tus PRs.
+7. Eso completa la apertura de una solicitud de PR. GitHub asigna al PR un número, ubicado después del título y una marca de hash. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! Si quieres ver el progreso de la PR, puedes hacer clic en el logo de la campana en la esquina superior derecha de tu cuenta de GitHub y ver todos tus PRs.
 
-![Seguimiento de PR](./images/PR7.png)
+![PR tracking](./images/PR7.png)
 
-PD: su fork y rama va a estar asentados en su propia cuenta de GitHub. Después de recibir una notificación de que su PR se ha fusionado, puede suprimir su rama si ha terminado con ella (el área de notificación del paso 8 proporcionará un enlace para suprimir la rama una vez que se ha cerrado o fusionado). Para las ediciones futuras, si sigue este procedimiento, las ediciones siempre empezarán con una versión actualizada de los repositorios AndroidAPSdocs. Si decide utilizar otro método para iniciar una PR (p.ej. editando a partir de la rama maestra del repositorio bifurcado como punto de inicio), necesitará asegurarse de que su repositorio está actualizado realizando una "comparación" primero y fusionando cualquier actualización que haya ocurrido desde la última vez que actualizó su fork. Dado que la gente tiende a olvidarse de actualizar sus repos, recomendamos usar el proceso de PR descrito más arriba hasta que se familiarice con la realización de "comparaciones".
+PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+
+(make-a-PR-code-syntax)=
 
 ## Sintaxis del código
 
-En este momento se utilizan dos idiomas para las páginas de los documentos:
+We are using markdown for the docs pages. The files have got the suffix ".md".
 
-* Markdown (.md) - el lenguaje de marcado utilizado originalmente para las páginas de wiki
-* texto reStructuredText (.rst) - el nuevo lenguaje de códigos
+Markdown is a very simple text formating language which separates text content from text formating.
 
-We will change all docs pages in the medium term from reStructuredText to Markdown format bit by bit. Mientras tanto, es importante que utilice la sintaxis correcta al formatear texto o enlazar. Si no está seguro de tener un vistazo a los códigos de formato/enlace en las páginas existentes.
+The writer only e.g. marks a headline as level 1 headline and the markdown processor generate during processing the necessary HTML code to render the heading in HTML.
 
-### Tamaño de la imagen
+The idea behind this is that
 
-Si usa imágenes por favor use tamaños razonables. Las imágenes de captura de pantalla deben ser **de 250 píxeles de ancho**.
+* the writer should think about the text and not the formating first,
+* the markdown text is open for exchange between different markdown tools instead of e.g. proprietray tools like Mircosoft Windows and
+* you can generate several output formats from one markdown file.
 
-### Archivos .md
+Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard to
 
-#### Formato de texto
+* stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
+* enable us to use a transaltion services to translate the english language in a target language like French or German because they can work on markdown but not complex formating codes because they can't separate there content from layout which might be fatal.
 
-* negrita: `**text**`
-* cursiva: `*texto*`
-* Título 1: `# título`
-* Título 2: `## título`
-* Título 3: `### título`
+### Headlines
 
-#### Imagenes
+* Headline 1: `# headline`
+* Headline 2: `## headline`
+* Headline 3: `### headline`
+* Headline 4: `#### headline`
 
-* imágenes: `![alt text](../images/file.png)`
+We try to avoid further leveles of headlines.
 
-#### Enlaces
+### Text format
 
-* enlace externo: `[alt text](www.url.tld)`
+* bold: `**text**`
+* italic: `*text*`
+
+### ordered list
+
+:::
+
+1. first
+2. second
+3. third :::
+
+4. first
+
+5. second
+6. third
+
+### unordered list
+
+:::
+
+* one element
+* another element
+* and another element :::
+
+* one element
+
+* another element
+* and another element
+
+### multi level list
+
+You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
+
+:::
+
+1. first
+2. second
+3. third 
+    1. one element
+    2. another element
+    3. and another element
+4. four
+5. five
+6. six :::
+
+7. first
+
+8. second
+9. third 
+    1. one element
+    2. another element
+    3. and another element
+10. four
+11. five
+12. six
+
+### Images
+
+To include images you use this markdown syntax.
+
+* images: `![alt text](../images/file.png)`
+
+The type of image should be PNG or JPEG.
+
+Images names should confirm to one of following naming rules. In the example I use png as suffix. In case you use JPEG please replace it with jpeg.
+
+* `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
+* `filename-image-xx.png` where xx is a meaning full name for the author of the md file.
+
+Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+
+We are not translating images at the moment.
+
+(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+
+* Screenshots from web pages images should be up to **1050 pixels wide**.
+* Diagramms of process flows should be up to **1050 pixels wide**.
+* Screenshots from the app should be up to **300 to 400 pixels wide**.
+
+### Links
+
+#### External links
+
+External links are links to external web sites.
+
+* external link: `[alt text](www.url.tld)`
+
+#### Internal links to the start of a md file
+
+Internal links to pages are links to the start of a md file which is hosted on our own server.
+
 * internal link to .md page: `[alt text](../folder/file.md)`
-* internal link to .rst page: `[alt text](../folder/file.rst)`
-* internal link to headline: `[alt text](../folder/file#headline)`
 
-### Archivos .rst
+#### Internal links to named inline refernces
 
-#### Formato de texto
+Internal links to named inline refernces are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
 
-* negrita: `**text**`
-* cursiva: `*texto*`
-* Título 1:
-  
-  `título`  
-  `*****`
+Add a named reference at the location in the target md file you want to jump to.
 
-* Título 2:
-  
-  `título`  
-  `=====`
+`(name-of-my-md-file-this-is-my-fancy-named-reference)=`
 
-* Título 3:
-  
-  `título`  
-  `-----`
+The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
 
-#### Imagenes
+Therefore it is a good practice to start with the filename and then the reference name you select.
 
-* imagenes:
-  
-  `.. image:: ../images/modules.png`  
-  `:alt: alt text`
+Use only lowercase letters and hyphenate words.
 
-#### Enlaces
+Then link this refernce in the text you are writing with the following kind of link.
 
-* enlace externo: `` `alt text <www.url.tld>_` ``
-* enlace interno a archivo .md: `` `alt text <../folder/file.html>_` ``
-* enlace interno al archivo .rst: `` `alt text <../folder/file.html>_` ``
-* enlace interno a título: `` `alt text <../folder/file.html#headline>_` ``
+* Internal links to named inline refernces: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
-### Enlaces internos
+### Notes, Warnings, Collapsing Notes
 
-Si desea establecer un enlace interno dentro de la documentación de AndroidAPS, utilice sólo **enlaces relativos**. Sólo esto hará que el enlace funcione en los otros idiomas (checo, alemán...) también.
+You can add notes and warning boxes to documentation.
 
-#### En archivos que terminan con **.md**:
+Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all. Please use these carefully as the documentation should be as easy to read as possible.
 
-* `[text](../Usage/Test.md)` establecerá un hiperenlace interno a un directorio mas arriba desde donde se está y, a continuación, en el subdirectorio /Usage. El final del archivo de destino debe ser .md o .rst (no .html)
-* `[text](./Usage/Test.md)` establecerá un hiperenlace interno desde donde estés en /Usage. El final del archivo de destino debe ser .md o .rst (no .html)
-* Para establecer el enlace a un **ancla** (por ejemplo, un título) tiene que omitir la extensión del archivo 
-  * `[text](../Usage/Test#anchor)` en lugar de `[text](../Usage/Test.md#anchor)`
+#### Notes
 
-#### En archivos que terminan con **.md**:
+:::: :::{admonition} Note :class: note
 
-* `` `Text <../Usage/Test.hmtl>`_ `` will set a hyperlink one directory up from where you are and then into the subdirectory /Usage. El final del archivo de destino debe ser .html.
-  
-  Excepto que están en toctree. Then you have to write it like this: `Text <../Usage/Test.md>` with .md or .rst (not .html).
+This is a note. ::: ::::
 
-* `Text <./Usage/Test.md>` establecerá un hiperenlace desde el lugar en el que estas a /Usage.
+:::{admonition} Note :class: note
 
-* Para establecer el enlace a un **ancla** (por ejemplo, un título) usted tiene que agregar el ancla al enlace 
-  * `[text](../Usage/Test.html#anchor)` en lugar de `[text](../Usage/Test#anchor)`
+This is a note. :::
 
-## Adición de varias imágenes a la documentación
+#### Advertencias
 
-Si usted está planeando hacer un montón de modificaciones, incluyendo la adición de imágenes para ayudar a ilustrar las partes de la documentación (¡gracias!), es posible que desee tomar el siguiente enfoque:
+:::: :::{admonition} Warning :class: warning
 
-* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses GitHub. En su lugar, utilice guiones bajos. Es decir, Example_batch_images_upload.png en vez de "Ejemplo de imágenes por lotes upload.png". 
-* Por favor use tamaños razonables. Las imágenes de captura de pantalla deben ser **de 250 píxeles de ancho**.
-* Puede subir imágenes en lotes fácilmente mediante:
-  
-  1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your GitHub username)).
-  
-  2. Haga clic en la esquina superior derecha donde dice "Cargar archivos"
-  
-  3. Arrastre y suelte las imágenes en la pantalla
-  
-  4. Confirme esto en su rama
-  
-  5. Ahora, puede buscar la ruta URL/relativa de cada archivo y utilizarla para hacer referencia al añadir imágenes a una página de la documentación.
-  
-  6. Para ver ejemplos de cómo añadir las imágenes, puede ver el código "raw" de una página para ver un ejemplo de una página que ya tiene las imágenes incrustadas correctamente. Asegúrese de utilizar el [código correcto](./make-a-PR#code-syntax) para el tipo de página sobre la que está (.md o .rst). Lo principal es tener una simple descripción de texto, seguido por un enlace con una ruta de acceso relativa a la imagen, como este:
-    
-    * For .md pages: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)` (That code is exactly how the image below is embedded to be displayed.)
-    * Para páginas .rst: `.. image:: ../images/Example_batch_images_upload.png`  
-      `:alt: Example of uploading images in batches`
+This is a warning. ::: ::::
 
-![Ejemplo de carga de imágenes en lotes](./images/Example_batch_images_upload.png)
+:::{admonition} Warning :class: warning
 
-7. Después de añadir imágenes o realizar ajustes, puede enviar un PR a la rama maestra de AndroidAPSdocs.
+This is a warning. :::
+
+#### Collapsing Notes
+
+:::: :::{admonition} further detailed readings for interested readers :class: dropdown
+
+This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page. ::: ::::
+
+:::{admonition} further detailed readings for interested readers :class: dropdown
+
+This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page. :::

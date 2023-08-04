@@ -2,6 +2,8 @@
 
 **Deze software is onderdeel van een doe-het-zelf oplossing en is niet een product, maar vraagt JOU te lezen, leren en te begrijpen hoe het systeem werkt en hoe je het kunt gebruiken. Het neemt niet je gehele diabetes management van je over, maar stelt je wel in staat om je diabetes beter onder controle te krijgen en je kwaliteit van leven te verhogen, als je bereid bent de benodigde tijd erin te investeren. Haast je niet, maar geef jezelf de tijd om te leren. Jij alleen bent verantwoordelijk voor wat je ermee doet.**
 
+(Accu-Chek-Combo-Pump-hardware-requirements)=
+
 ## Hardware vereisten
 
 - Een Roche Accu-Chek Combo pomp (elke firmware is geschikt).
@@ -15,10 +17,10 @@
 
 ## Beperkingen
 
-- Extended bolus en multiwave bolus worden niet ondersteund (Zie [Extended Carbs](../Usage/Extended-Carbs.md) voor een alternatief).
+- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.md) instead).
 - Slechts één basaal profiel wordt ondersteund.
 - Als je in de pomp meer dan één basaalprofiel instelt of wanneer je extended bolus of multiwave bolus geeft vanaf de pomp dan zal dit ingrijpen op de TBR en zal AAPS de loop dwingen tot een beperkte gebruiksmodus voor de duur van 6 uur, omdat de loop onder deze omstandigheden anders niet veilig kan blijven werken.
-- Het is momenteel niet mogelijk om de tijd en datum automatisch in te stellen op de pomp, waardoor [zomer- en wintertijd](../Usage/Timezone-traveling#accu-chek-combo) handmatig moeten worden ingesteld. Je kunt op de telefoon het automatisch bijwerken van de zomer- en winter tijd uitzetten in de avond en in de ochtend weer aanzetten, tegelijk met het handmatig wijzigen van de tijd op de pomp. Zo voorkom je alarmen in de nacht.
+- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](Timezone-traveling-accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 - Op dit moment worden alleen basaal standen tussen de 0,05 en 10 E/uur ondersteund. Dit geldt ook voor profielwissels, bijvoorbeeld bij een verhoging tot 200% mag de hoogste basaalstand niet boven de 5 E/uur liggen omdat het nog wordt verdubbeld. Dit geldt ook voor de ondergrens: bij een verlaging tot 50% moet de laagste basaalstand minstens 0,10 E/uur zijn.
 - Als de loop een actieve TBR (tijdelijke basaalstand) eigenlijk zou willen cancellen, dan zal de Combo een TBR instellen van 90% of 110% gedurende 15 minuten. Dit is omdat het annuleren van een TBR een trilalarm geeft op de pomp. Op deze manier worden veelvuldige trilalarmen vermeden.
 - Zo nu en dan (ruwweg elke paar dagen) gebeurt het dat AAPS het TBR CANCELLED alarm niet automatisch kan onderdrukken. Dan moet jij zelf de Vernieuw-knop in AAPS gebruiken om de waarschuwing in AAPS te krijgen, of je moet het alarm wegdrukken via de knoppen op je pomp.
@@ -27,7 +29,7 @@
 - Er is een ander probleem wanneer een herstart niet helpt, maar een knop op de pomp moet worden ingedrukt (hierdoor wordt de Bluetooth van de pomp gereset), voordat de pomp opnieuw verbindingen kan maken met de telefoon. 
 - Er is heel weinig dat kan worden gedaan om beide problemen op dit moment te verhelpen. Dus als je deze fouten vaak ziet, is je enige optie op dit moment om een andere telefoon te zoeken die goed werkt met AndroidAPS en de Combo (zie hierboven).
 - Het toedienen van een bolus vanaf de pomp zal niet altijd optijd gedetecteerd worden (word gecontroleerd als AAPS met de pomp verbindt) dit kan in het ergste geval tot wel 20 minuten duren. 
-- Voordat AAPS een commando voor een bolus of hoge TBR geeft, zal hij altijd de bolusgeschiedenis in de pomp controleren. Wanneer hij dan de handmatige bolus opmerkt, zal AAPS geen Bolus/TBR commando geven omdat deze was berekend met verkeerde aannames. (-> Niet bolussen vanaf de pomp! Zie hoofdstuk [Gebruik](#usage))
+- Voordat AAPS een commando voor een bolus of hoge TBR geeft, zal hij altijd de bolusgeschiedenis in de pomp controleren. Wanneer hij dan de handmatige bolus opmerkt, zal AAPS geen Bolus/TBR commando geven omdat deze was berekend met verkeerde aannames. (-> Niet bolussen vanaf de pomp! See chapter [Usage](Accu-Chek-Combo-Pump-usage) below)
 - Het instellen van een TBR op de pomp moet worden vermeden, aangezien AAPS de controle zou moeten houden over TBRs. Wanneer je dit wel zou doen, dan kan het tot 20 minuten duren voordat AAPS contact maakt met de pomp en de nieuwe TBR detecteert. De TBR zal alleen worden geregistreerd vanaf het moment dat hij wordt gedetecteerd, dus in het ergste geval zou er al twintig minuten lang een TBR zijn afgegeven die niet in de IOB wordt meegerekend. 
 
 ## Instellen
@@ -51,13 +53,13 @@
     - Toetsblokkering van de pomp inschakelen om ongewenst bolusen vanaf de pomp te voorkomen, vooral wanneer de pomp eerder werd gebruikt en snel bolussen een gewoonte was.
     - Stel de scherm time-out en menu time-out in tot een minimum van 5,5 en 5 respectievelijk. Dit laat AAPS sneller herstellen van foutsituaties en vermindert de hoeveelheid trillingalarmen die je kunt hebben tijdens zulke fouten
 
-![Schermafbeelding van instellingen voor het gebruikersmenu](../images/combo/combo-menu-settings.png)
+![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
 
-![Schermafbeelding van TBR instellingen](../images/combo/combo-tbr-settings.png)
+![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
 
-![Schermafbeelding van bolusinstellingen](../images/combo/combo-bolus-settings.png)
+![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
 
-![Schermafbeelding van instellingen voor insuline reservoir](../images/combo/combo-insulin-settings.png)
+![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
 - Installeer AndroidAPS zoals deze is beschreven in de [AndroidAPS wiki](https://androidaps.readthedocs.io/)
 - Zorg ervoor dat je de wiki goed doorleest en begrijpt hoe AndroidAPS ingesteld moet worden.
@@ -69,13 +71,15 @@
 - Voordat u de Combo-plugin in AAPS inschakelt, zorg er dan voor dat jouw profiel correct is ingesteld en geactiveerd (!) en dat jouw basale profiel up-to-date is. Omdat AAPS het basale profiel zal synchroniseren met de pomp. Activeer vervolgens de Combo-plugin. Druk op de *Verversen* knop op het Combo tabblad om de pomp te initialiseren.
 - Om de verbinding te controleren: zorg dat de pomp **niet verbonden is**, en gebruik AAPS om een TBR van 500% gedurende 15 minuten in te stellen en een kleine bolus te geven. De pomp moet nu een actieve TBR hebben en een bolus in de geschiedenis. AAPS moet ook de actieve TBR en de geleverde bolus laten zien.
 
+(Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)=
+
 ## Waarom werkt het koppelen met de pomp met de "ruffy" app niet?
 
-Er zijn verschillende oorzaken mogelijk. Probeer de volgende stappen:
+There are serveral possible reasons. Try the following steps:
 
 1. Plaats een **verse of volle batterij** in de pomp. Kijk in de batterij sectie voor details. Zorg ervoor dat de pomp heel dicht bij de smartphone is.
 
-![Combo moet naast de telefoon zijn](../images/Combo_next_to_Phone.png)
+![Combo should be next to phone](../images/Combo_next_to_Phone.png)
 
 2. Schakel bluetooth apparaten uit of verwijder ze zodat ze geen verbinding met de telefoon kunnen maken tijdens het koppelen. Alle parallelle bluetooth-communicatie of -prompt voor het tot stand brengen van verbindingen kan het koppelingsproces verstoren.
 
@@ -100,6 +104,8 @@ Er zijn verschillende oorzaken mogelijk. Probeer de volgende stappen:
 13. Als je de branch 'pairing' hebt gebruikt om de ruffy app te bouwen, installeer dan nu de versie van de 'combo' branch hier overheen. Zorg ervoor dat je dezelfde sleutels (key-store) hebt gebruikt bij het signeren van de twee versies van de app om alle instellingen en gegevens te kunnen behouden; hierin staan ook de koppelingsgegevens.
 14. Start de telefoon opnieuw op.
 15. Nu kan je de AAPS loop herstarten.
+
+(Accu-Chek-Combo-Pump)=
 
 ## Gebruik
 

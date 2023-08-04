@@ -1,33 +1,41 @@
 # Seguimiento remoto
 
-```{eval-rst}
-.. imagen:: ../images/KidsMonitoring.png
-  Tema: Supervisión de los niños
+```{image} ../images/KidsMonitoring.png
+:alt: Monitoring children
 ```
 
-AndroidAPS ofrece varias opciones para el monitorización remota de los parámetros de niños y también permite enviar comandos remotos. Por supuesto, también puedes usar la monitorización remota para seguir los datos de tu pareja o amigo.
+AAPS offer several options for remote monitoring of children and also allows to send remote commands. Of course you can also use remote monitoring to follow your partner or friend.
 
-## Funciones
+## Functions
 
-La bomba de insulina de un niño es controlado por el teléfono móvil del niño usando AndroidAPS.
-\* Los padres pueden seguir de forma remota todos los datos relevantes, tales como los niveles de glucosa, carbohidratos a bordo, insulina a bordo, etc. utilizando la aplicación \*\* NSClient * * en su teléfono. Las configuraciones deben ser iguales en las aplicaciones AndroidAPS y NSClient.
-\* Los padres pueden visualizar las alarmas usando la aplicación **xDrip en modo seguidor** en su teléfono.
-Control remoto de AndroidAPS usando `Comandos SMS <../ Niños / SMS-Commands.html>` _ protegido por autenticación de dos pasos.
-\* El control remoto medinte la aplicación NSClient sólo se recomienda si la sincronización funciona bien (es decir, si no ves cambios de datos inesperados, como la auto modificación de Objetios temporaes, TBR, etc) ver [notas de revisón de la Versión 2.8.1.1](../Installing-AndroidAPS/Releasenotes#important-hints) para más detalles.
+- Kid's pump is controlled by kid's phone using AAPS.
+- Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone. Settings must be the same in AAPS and NSClient app.
+- Parents can be alarmed by using **xDrip+ app in follower mode** on their phone.
+- Remote control of AAPS using [SMS Commands](../Children/SMS-Commands.md) secured by two-factor authentication.
+- Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) for further details.
 
-## Herramientas y aplicaciones para monitorización remota
+## Tools and apps for remote monitoring
 
-- [Nightscout](https://nightscout.github.io/) en el navegador web (principalmente para visualización de datos)
-- La aplicación NSClient es una versión reducida de AAPS que permite seguir a otra persona, realizar cambios de perfil, configurar objetivos temporales e ingresar carbohidratos. Hay dos aplicaciones:  [NSClient & NSClient2 para descargar](https://github.com/nightscout/AndroidAPS/releases/). La única diferencia entre las aplicaciones es el nombre. Esto permite realizar dos instalaciones de la aplicación en el mismo teléfono, por lo que es posible seguir a dos personas o cuentas de nightscout diferentes.
-- Dexcom follow si está usando la aplicación original Dexcom (sólo valores BG)
-- `xDrip <../Configuration/xdrip.md>` _ en modo seguidor (principalmente valores de BG y \*\* alarmas\*\*)
-- [Sugarmate](https://sugarmate.io/) o [Spike](https://spike-app.com/) en iOS (principalmente valores de glucosa en sangre y **alarmas**)
+- [Nightscout](https://nightscout.github.io/) in web browser (mainly data display)
+- NSClient app is a stripped down version of AAPS capable of following somebody, making profile switches, setting TTs and entering carbs. There are 2 apps:  [NSClient & NSClient2 to download](https://github.com/nightscout/AndroidAPS/releases/). The only difference is the app name. This way you can install the app twice on the same phone, to be able to follow 2 different persons/nightscouts with it.
+- Dexcom follow if you are using original Dexcom app (BG values only)
+- [xDrip+](../Configuration/xdrip.md) in follower mode (mainly BG values and **alarms**)
+- [Sugarmate](https://sugarmate.io/) or [Spike](https://spike-app.com/) on iOS (mainly BG values and **alarms**)
+- Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting
 
-## Puntos a considerar
+## Smartwatch options
 
-- Establecer los [factores de tratamiento correctos](../Getting-Started/FAQ#how-to-begin) (tasa basal, DIA, ISF...) es difícil para los niños, especialmente cuando las hormonas de crecimiento están involucradas.
-- Las configuraciones deben de ser iguales en las aplicaciones AndroidAPS y NSClient.
-- Considere la diferencia de tiempo entre el maestro y el seguidor debido al tiempo de subida y descarga, así como el hecho de que el teléfono maestro de AAPS sólo subirá después de la ejecución del bucle.
-- Por lo tanto, tómese su tiempo para establecer los parámetros correctamente y probarlos en la vida real con su niño junto a usted, antes de comenzar el control y tratamiento remoto. Las vacaciones escolares pueden ser un buen momento para ello.
-- Cuál es su plan de emergencia cuando el control remoto no funciona (por ejemplo, problemas de conectividad). problemas de red)?
-- La monitorización y el tratamiento a distancia pueden ser realmente útiles en la guardería y colegio. Pero asegúrate de que los profesores y educadores estén al tanto del plan de tratamiento de tu hijo. Ejemplos de planes de atención se pueden encontrar en los archivos de la sección de AndroidAPS usuarios \<<https://www.facebook.com/groups/AndroidAPSUsers/files/>>\`\_ en Facebook.
+A smartwatch can be a very useful tool in helping manage AAPS with kids. A couple of different configurations are possible:
+
+- If NSClient is installed on the parents phone, the [NSClient WearOS app](https://github.com/nightscout/AndroidAPS/releases/) can be installed on a compatible smartwatch connected to the parent's phone. This will show current BG, loop status and allow carb entry, temp targets and profile changes. It will NOT allow bolusing from the WearOS app.
+- Alternatively, the [AAPS WearOS app](https://androidaps.readthedocs.io/en/latest/Configuration/Watchfaces.html) can be built and installed on a compatible smartwatch, connected to the kid's phone but worn by the parent. This includes all the functions listed above as well as the ability to bolus insulin. This allows the parent to adminster insulin without needing to remove the kid's phone from however it is kept on them.
+
+## Things to consider
+
+- Setting the correct [treatment factors](FAQ-how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
+- Settings must be the same in AAPS and NSClient app.
+- Consider time gap between master and follower due to time for up- and download as well as the fact that AAPS master phone will only upload after loop run.
+- So take your time to set those correctly and test them in real life with your kid next to you before starting remote monitoring and remote treatment. School holidays might be a good time for that.
+- What is your emergency plan when remote control does not work (i.e. network problems)?
+- Remote monitoring and treatment can be really helpful in kinder garden and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan. Examples for such care plans can be found in the [files section of AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) on Facebook.
+- It is important to keep the kid's phone in range of their pump and CGM at all times. This can be challenging especially with very small children. Many solutions exist, a popular option is an [SPI Belt](https://spibelt.com/collections/kids-belts)

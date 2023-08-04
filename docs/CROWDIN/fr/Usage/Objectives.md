@@ -2,23 +2,23 @@
 
 AndroidAPS a une série d'objectifs qui doivent être complétés pour vous guider à travers les fonctionnalités et les paramètres de la boucle sécurisée.  Ils s'assurent que vous avez correctement configuré tout ce qui est détaillé dans les sections ci-dessus, et que vous comprenez ce que votre système fait et pourquoi vous pouvez lui faire confiance.
 
-Si vous **mettez à jour les téléphones** alors vous pouvez [exporter vos paramètres](../Usage/ExportImportSettings.md) pour garder votre progression à travers les objectifs. Non seulement vos progrès à travers les objectifs de l'être sauvés, mais également vos paramètres de sécurité, tels que max bolus etc.  Si vous n'exportez pas et n'importez pas vos paramètres, vous devrez recommencer les objectifs depuis le début.  C'est une bonne idée de [sauvegarder vos paramètres](../Usage/ExportImportSettings.html) souvent juste au cas où.
+Si vous **mettez à jour les téléphones** alors vous pouvez [exporter vos paramètres](../Usage/ExportImportSettings.md) pour garder votre progression à travers les objectifs. Non seulement vos progrès à travers les objectifs de l'être sauvés, mais également vos paramètres de sécurité, tels que max bolus etc. Si vous n'exportez pas et n'importez pas vos paramètres, vous devrez recommencer les objectifs depuis le début.  C'est une bonne idée de [sauvegarder vos paramètres](../Usage/ExportImportSettings.html) souvent juste au cas où.
 
-Si vous voulez revenir en arrière sur les objectifs terminés voir les [explications ci-dessous](../Usage/Objectives#retour-arriere-dans-les-objectifs).
+Si vous voulez revenir en arrière sur les objectifs terminés voir les [explications ci-dessous](Objectives-go-back-in-objectives).
 
 ## Objectif 1 : Paramétrage de la visualisation et la surveillance des données, analyse des débits Basal et des ratios
 
 - Sélectionnez la source de glycémie adaptée à votre configuration.  Voir [Source GLY](../Configuration/BG-Source.md) pour plus d'informations.
-- Sélectionnez la bonne pompe dans le générateur de configuration (sélectionnez la Pompe virtuelle si vous utilisez un modèle de pompe sans pilote AndroidAPS pour le bouclage) afin de vous assurer que votre pompe peut communiquer avec AndroidAPS.
-- Si vous utilisez la pompe DanaR, assurez-vous d'avoir suivi les instructions [Pompe à insuline DanaR](../Configuration/DanaR-Insulin-Pump.md) pour assurer le lien entre la pompe et AndroidAPS.
+- Sélectionnez la bonne pompe dans la Configuration (sélectionnez la Pompe virtuelle si vous utilisez un modèle de pompe sans pilote AAPS pour le bouclage) afin de vous assurer que votre pompe peut communiquer avec AAPS.
+- Si vous utilisez la pompe DanaR, assurez-vous d'avoir suivi les instructions [Pompe à insuline DanaR](../Configuration/DanaR-Insulin-Pump.md) pour assurer le lien entre la pompe et AAPS.
 - Suivez les instructions de la page [Nightscout](../Installing-AndroidAPS/Nightscout.md) pour s'assurer que Nightscout peut recevoir et afficher ces données.
-- Notez que l'URL dans NSClient doit être **SANS /api/v1/** à la fin - voir les [paramètres NSClient dans les Préférences](../Configuration/Preferences#nsclient).
+- Notez que l'URL dans NSClient doit être **SANS /api/v1/** à la fin - voir les [paramètres NSClient dans les Préférences](Preferences-nsclient).
 
-*Vous devrez peut-être attendre la prochaine lecture de glycémie avant qu'AndroidAPS ne la reconnaisse.*
+*Vous devrez peut-être attendre la prochaine lecture de glycémie avant qu'AAPS ne la reconnaisse.*
 
 ## Objectif 2 : Apprendre comment contrôler AndroidAPS
 
-- Exécutez différentes actions dans AndroidAPS tel que décrit dans cet objectif.
+- Exécutez différentes actions dans AAPS tel que décrit dans cet objectif.
 
 - Cliquez sur le texte orange "Pas encore terminé" pour accéder à la liste des tâches.
 
@@ -28,9 +28,10 @@ Si vous voulez revenir en arrière sur les objectifs terminés voir les [explica
   :alt: Screenshot objective 2
   ```
 
+(Objectives-objective-3-prove-your-knowledge)=
 ## Objectif 3 : Prouver ses connaissances
 
-- Passez un examen à choix multiples pour tester vos connaissances d'AndroidAPS.
+- Passez un examen à choix multiples pour tester vos connaissances d'AAPS.
 
 - Cliquez sur le texte orange "Pas encore terminé" pour accéder à la page avec la question et répondre aux options.
 
@@ -50,7 +51,7 @@ Si vous voulez revenir en arrière sur les objectifs terminés voir les [explica
 
 - Sélectionnez la Boucle Ouverte soit à partir des Préférences, soit en faisant un appui long sur le bouton de boucle en haut à gauche de l'écran d'accueil.
 - Travaillez dans les [Préférences](../Configuration/Preferences.md) pour la configurer pour vous.
-- Adoptez manuellement au moins 20 suggestions de débits de base temporaires sur une période de 7 jours; saisissez-les sur votre pompe et confirmez dans AndroidAPS que vous les avez acceptés.  Assurez-vous que ces données apparaissent bien dans AndroidAPS et dans Nightscout.
+- Adoptez manuellement au moins 20 suggestions de débits de base temporaires sur une période de 7 jours; saisissez-les sur votre pompe et confirmez dans AAPS que vous les avez acceptés.  Assurez-vous que ces données apparaissent bien dans AndroidAPS et dans Nightscout.
 - Activez des [Cibles temporaires](../Usage/temptarget.md), si nécessaire. Utilisez des cibles temp. hypo temp pour éviter que le système ne corrige trop fortement une augmentation de la glycémie après une hypo.
 
 ### Réduire le nombre de notifications
@@ -69,7 +70,7 @@ Si vous voulez revenir en arrière sur les objectifs terminés voir les [explica
 
 ## Objectif 5 : Compréhension de la Boucle Ouverte, y compris les propositions de débits Basal temporaires
 
-- Commencez à comprendre le raisonnement qu'il y a derrière chaque recommandation de basal temporaire en regardant [Comprendre la logique de détermination basale](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) ainsi que les [lignes de prédiction dans l'écran d'accueil AndroidAPS](../Getting-Started/Screenshots#lignes-de-prediction)/Nightscout et le résumé des résultats des calculs dans votre onglet OpenAPS.
+- Commencez à comprendre le raisonnement qu'il y a derrière chaque recommandation de basal temporaire en regardant [Comprendre la logique de détermination basale](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) ainsi que les [lignes de prédiction dans l'écran d'accueil AAPS](Screenshots-prediction-lines)/Nightscout et le résumé des résultats des calculs dans votre onglet OpenAPS.
 
 Vous voudrez définir votre objectif plus haut que d'habitude jusqu'à ce que vous ayez confiance dans les calculs et les paramètres.  Le système permet
 
@@ -93,69 +94,75 @@ Vous pouvez afficher une plage plus large (lignes vertes) sur le graphique pour 
 :alt: blank
 ```
 
+(Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)=
 ## Objectif 6 : Démarrage de la boucle fermée avec le système AGB ( Arrêt pour Glycémie Basse )
 
 ```{image} ../images/sign_warning.png
 :alt: Warning sign
 ```
 
-### Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend. High BG values have to be corrected manually by you!
+### La boucle fermée ne corrigera pas les glycémies élevées dans l'objectif 6, car elle est limitée à la suspension glycémie basse. Les hyperglycémies doivent être corrigées manuellement par vous !
 
-- Prerequisite: You need a good profile (basal, ISF, IC) already working in AndroidAPS to start with Loop in Low Glucose Suspend mode. Otherwise you can run in a hypo which you have to manually correct. This will help you a lot to avoid having to treat a low glucose over a period of 5 days. **If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios and do NOT start objective 6 at this time.**
-- You don't have to change your settings now. During objective 6, the maxIOB setting is internally set to zero automatically. **This override will be reversed when moving to objective 7.**
-- The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you. If blood glucose is rising then it will only increase basal if the basal IOB is negative from a previous Low Glucose Suspend. Otherwise basal rates will remain the same as your selected profile. **That means that you have to manually handle high values with insulin corrections.**
-- If your basal IOB is negative (see screenshot below) a TBR > 100% can be issued also in objective 6.
+- Pré-requis : Vous avez besoin d'un bon profil (basal, SI, G/I) déjà en cours dans AAPS pour commencer avec Loop en mode Arrêt Glycémie Basse. Sinon, vous pouvez faire une hypo que vous devrez corriger manuellement. Cela vous aidera beaucoup à éviter d'avoir à traiter des glycémies faible sur une période de 5 jours. **Si vous avez toujours des hypoglycémies fréquentes ou sévères alors envisagez de réajuster votre DAI, ratios basal, SI et G/I et ne démarrez PAS l'objectif 6 pour le moment.**
+- Vous n'avez pas à changer vos paramètres pour le moment. Au cours de l'objectif 6, le paramètre maxIA est automatiquement défini sur zéro. **Cette limitations sera supprimée lors du passage à l'objectif 7.**
+- Le système remplacera vos paramètres maxIA à zéro, ce qui signifie que si la glycémie diminue, il peut réduire le débit de basal pour vous. Si la glycémie augmente, elle n'augmentera le débit de basal que si l'IA basale est négative du fait d'un Arrêt Glycémie Basse antérieur. Sinon, vos débits de basal resteront les mêmes que votre profil sélectionné. **Cela signifie que vous devez gérer manuellement vos glycémies élevées avec des corrections d'insuline.**
+- Si votre IA basale est négative (voir copie d'écran ci-dessous) un DBT > 100% peut également être diffusé à l'objectif 6.
 
 ```{image} ../images/Objective6_negIOB.png
-:alt: "Exemple IA n\xE9gative"
+:alt: Exemple IA négative
 ```
 
-- Set your target range slightly higher than you usually aim for, just to be safe and have a bit more scurity buffer.
-- Enable 'Low Glucose Suspend' mode either by by pressing and holding the Loop icon at the top right corner of the home screen and selecting the Loop - LGS mode icon.
-- Watch how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
+- Définissez votre cible légèrement plus haut que vous ne le faites habituellement, simplement pour être sûr et avoir un peu plus de marge de scurité.
+- Activez le mode 'Arrêt Glycémie Basse' en appuyant sur l'icône Boucle en haut à droite de l'écran d'accueil et en sélectionnant l'icône Boucle AGB.
+- Surveillez comment les basales temporaires sont actives en regardant le texte bleu de la basale sur l'écran d'accueil, ou le rendu de la basale en bleu sur le graphique de l'écran d'accueil.
 - Vous pouvez subir temporairement des pics de glycémie à la suite d'hypos sans pouvoir augmenter le débit de base sur le rebond.
 
-## Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
+(Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets)=
+## Objectif 7 : Réglage de la Boucle Fermée, augmentation de l'IA (Insuline Active) maximale au dessus de 0 et abaissement progressif des cibles glycémiques
 
-- Select 'Closed Loop' either from [Preferences](../Configuration/Preferences.md) or by pressing and holding the Loop icon at the top right corner of the home screen, over a period of 1 day.
+- Sélectionnez 'Boucle fermée' soit dans les [Préférences](../Configuration/Preferences.md) soit en faisant un appui long sur l'icône Boucle en haut à droite de l'écran d'accueil. sur une période de 1 jour.
 
-- Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0. The default recommendation is "average mealbolus + 3x max daily basal" (for the SMB algorithm) or "3x max daily basal" (for the older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
+- Augmentez votre 'IA max total qu'OpenAPS ne peut pas dépasser' (dans OpenAPS appelé 'max-IA') au-dessus de 0. La recommandation par défaut est "moyenne bolus repas + 3 x max basal quotidienne"(pour l'algorithme SMB) ou "3 x max basal quotidienne" (pour les algorithme AMA plus anciens) mais devez augmenter très lentement jusqu'à ce que vous trouviez vos propres paramètres qui marchent pour vous (max basal quotidienne = le débit de base maximum sur l'ensemble des plages horaires de la journée).
 
-  Cette recommandation doit être considérée comme un point de départ. If you set to the 3x and you are seeing moves that push you too hard and fast then lower that number. If you are very resistant, raise it very little at a time.
+  Cette recommandation doit être considérée comme un point de départ. Si vous paramétrez 3 x et que vous constatez des variations trop importantes et rapides, alors diminuez cette valeur. Si vous êtes très résistant, augmentez la un peu à la fois.
 
   ```{image} ../images/MaxDailyBasal2.png
   :alt: max daily basal
   ```
 
-- Once confident on how much IOB suits your looping patterns, then reduce your targets to your desired level.
+- Une fois confiant sur la quantité d'IA qui convient à votre profil de boucle, réduisez ensuite vos cibles jusqu'au niveau souhaité.
 
+(Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)=
 ## Objectif 8 : Ajustement des débits Basal et des ratios si nécessaire, puis activation de la fonction auto-sens
 
 - Vous pouvez utiliser [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) pour vérifier que votre basale reste précise ou faire un test de basal traditionnel.
 - Activez [autosens](../Usage/Open-APS-features.md) sur une période de 7 jours et regardez la ligne blanche dans le graphique de l'écran d'accueil qui montre comment la sensibilité à l'insuline augmente ou diminue selon l'exercice physique, le cycle hormonal etc, et gardez un oeil sur l'onglet OpenAPS qui indique comment AndroidAPS ajuste les basales et/ou les cibles en conséquence.
 
-*N'oubliez pas d'enregistrer votre Bouclage dans \`ce formulaire \<https://bit.ly/nowlooping>\`\_ \*en indiquant AndroidAPS comme votre type de logiciel de boucle DIY, si vous ne l'avez pas déjà fait.*
+N'oubliez pas d'enregistrer votre Bouclage dans \`ce formulaire \<https://bit.ly/nowlooping>\`\_ \*en indiquant AndroidAPS comme votre type de logiciel de boucle DIY, si vous ne l'avez pas déjà fait.
 
+(Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
 ## Objectif 9 : Activation de fonctionnalités supplémentaires pour l'utilisation en journée, telles que la fonction SMB
 
-- Vous devez lire le [chapitre SMB dans ce wiki](../Usage/Open-APS-features#super-micro-bolus-smb) et le [chapitre oref1 dans la documentation openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) pour comprendre comment les SMB fonctionnent, en particulier ce qu'il y a derrière le zéro-temp.
-- Puis vous devez [augmenter le maxIA](../Usage/Open-APS-features#ia-totale-maximale-pour-openaps-u-openaps-max-ia) pour que les SMB marchent correctement. maxIA inclu maintenant toutes les IA, pas seulement la basale ajoutée. Autrement dit, si vous faites un bolus de 8 U pour un repas et que maxIA est à 7 U, aucun SMB ne sera délivré jusqu'à ce que l'IA redescende en dessous de 7 U. Un bon début est maxIA = bolus moyen des repas + 3 x basale max quotidienne (basale max quotidienne = débit horaire max de basale sur n'importe quelle période de la journée - voir [Objectif 7](../Usage/Objectives.md#objectif-7-reglage-de-la-boucle-fermee-augmentation-de-l-ia-insuline-active-maximale-au-dessus-de-0-et-abaissement-progressif-des-cibles-glycemiques) pour une illustration)
+- Vous devez lire le [chapitre SMB dans ce wiki](Open-APS-features-super-micro-bolus-smb) et le [chapitre oref1 dans la documentation openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) pour comprendre comment les SMB fonctionnent, en particulier ce qu'il y a derrière le zéro-temp.
+- Puis vous devez [augmenter le maxIA](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) pour que les SMB marchent correctement. maxIA inclu maintenant toutes les IA, pas seulement la basale ajoutée. Autrement dit, si vous faites un bolus de 8 U pour un repas et que maxIA est à 7 U, aucun SMB ne sera délivré jusqu'à ce que l'IA redescende en dessous de 7 U. Un bon début est maxIA = bolus moyen des repas + 3 x basale max quotidienne (basale max quotidienne = débit horaire max de basale sur n'importe quelle période de la journée - voir [Objectif 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) pour une illustration)
 - la valeur par défaut de min_5m_carbimpact est passée de 3 à 8 entre AMA et SMB. Si vous passez de AMA vers SMB, vous devez la modifier manuellement.
 
+(Objectives-objective-10-automation)=
 ## Objectif 10: Automatisation
 
 - Vous devez commencer l'objectif 10 pour pouvoir utiliser l'[Automatisation](../Usage/Automation.md).
-- Assurez-vous d'avoir complété tous les objectifs, y compris l'examen [../Usage/Objectives#objectif-3-prouver-ses-connaissances](../Usage/Objectives.md#objectif-3-prouver-ses-connaissances).
+- Assurez-vous d'avoir complété tous les objectifs, y compris l'examen [Objectif 3 prouver ses connaissances](Objectives#objective-3-prove-your-knowledge).
 - Compléter les objectifs précédents n’affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
 
+(Objectives-go-back-in-objectives)=
 ## Retour arrière dans les Objectifs
 
 Si vous voulez revenir en arrière sur les objectifs terminés pour quelque raison que ce soit, vous pouvez le faire en cliquant sur "Refaire l'objectif".
 
 ```{image} ../images/Objective_ClearFinished.png
-:alt: "Retour arri\xE8res objectifs"
+:alt: Retour arrières objectifs
 ```
 
 ## Objectifs dans Android APS avant la version 3.0
 
-Un objectif a été supprimé lors de la sortie d'Android APS 3.0.  Les utilisateurs d'Android APS version 2.8.2.1 qui sont sur des version d'Android plus anciens (par ex. antérieur à la version 9) utiliseront un jeu d'objectifs plus ancien qui peut être trouvé [ici](../Usage/Objectives_old.md).
+Un objectif a été supprimé lors de la sortie d'Android APS 3.0.  Les utilisateurs d'AAPS version 2.8.2.1 qui sont sur des version d'Android plus anciens (par ex. antérieur à la version 9) utiliseront un jeu d'objectifs plus ancien qui peut être trouvé [ici](../Usage/Objectives_old.md).

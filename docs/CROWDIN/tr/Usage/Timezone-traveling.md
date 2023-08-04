@@ -4,6 +4,8 @@
 
 Pompa geçmişi kullanmadığı için telefonda saat dilimini değiştirmekle ilgili bir sorun yok
 
+(Timezone-traveling-danarv2-danars)=
+
 ## DanaRv2, DanaRS
 
 AndroidAPS, pompanın geçmişini kullandığından ancak pompadaki kayıtların saat dilimi damgasına sahip olmadığı için bu pompalar özel bir bakıma ihtiyaç duyar. **Bu telefonda saat dilimini basitçe değiştirirseniz, kayıtların farklı saat dilimleriyle okunacağı ve iki katına çıkacağı anlamına gelir.**
@@ -24,7 +26,7 @@ Bunu önlemek için iki olasılık vardır:
    
    * ör. Viyana -> New York: profil değiştirme +6 saat
    * ör. Viyana -> Sidney: profil değiştirme -8 saat
-* Yeni bir Libre 2 sensörünü başlatmak için eğer [yama uygulanmış LibreLink uygulaması](../Hardware/Libre2#time-zone-travelling) kullanıyorsanız, otomatik saat dilimi ayarlanmalıdır ve bu seçeneği kullanamazsınız.
+* Yeni bir Libre 2 sensörünü başlatmak için eğer [yama uygulanmış LibreLink uygulaması](Libre2-time-zone-travelling) kullanıyorsanız, otomatik saat dilimi ayarlanmalıdır ve bu seçeneği kullanamazsınız.
 
 ### Seçenek 2: Pompa geçmişini sil
 
@@ -40,6 +42,8 @@ Uçaktan inerken:
 * telefonu açın
 * telefonun pompaya bağlanmasına ve zaman ince ayarının yapmasına izin verin
 
+(Timezone-traveling-insight)= 
+
 ## Insight
 
 Sürücü, pompanın saatini telefonun saatine göre otomatik olarak ayarlar.
@@ -50,13 +54,27 @@ GTD'larda yanlışlıklara neden olabilir. Ama sorun olmamalı.
 
 Böylece Insight kullanıcısının saat dilimi değişiklikleri ve saat değişiklikleri konusunda endişelenmesine gerek kalmaz. Bu kuralın bir istisnası vardır: Insight pompasının esas pilini değiştirirken zaman vb. bilgileri hafızasında tutması için küçük bir dahili pili vardır. Pilin değiştirilmesi uzun sürerse bu dahili pilin enerjisi biterse saat sıfırlanır ve yeni pil taktıktan sonra saat ve tarih girmeniz istenir. Bu durumda, pil değişimi öncesindeki tüm girişler, doğru zaman tam olarak tanımlanamadığı için AAPS'deki hesaplamada atlanır.
 
-# Zaman ayarı yaz saati uygulaması (DST)
+## Accu-Chek Combo
+
+[Yeni Combo sürücüsü](../Configuration/Accu-Chek-Combo-Pump-v2.md), pompanın saatini telefonun saatine göre otomatik olarak ayarlar. Combo, saat dilimlerini depolayamaz, yalnızca yerel saati depolayabilir. Dolayısıyla yeni sürücü pompaya bunu programlar. Ek olarak, pompanın yerel saatini saat dilimi farkı olan tam bir zaman damgasına dönüştürebilmek için yerel AndroidAPS tercihlerinde saat dilimini saklar. Kullanıcının herhangi bir şey yapmasına gerek yoktur; Combo'daki saat, telefonun geçerli saatinden çok fazla saparsa, pompanın saati otomatik olarak ayarlanır.
+
+Bununla birlikte, yalnızca genellikle yavaş olan uzak terminal modunda yapılabildiğinden, bunun biraz zaman aldığını unutmayın. Bu aşılamayan bir Combo sınırlamasıdır.
+
+Ruffy tabanlı eski sürücü, zamanı otomatik olarak ayarlamaz. Kullanıcının bunu manuel olarak yapması gerekir. Değişikliğin nedeninin saat dilimi / gün ışığından yararlanma olması durumunda bunu güvenli bir şekilde yapmak için gerekli adımlar için aşağıya bakın.
+
+(Timezone-traveling-time-adjustment-daylight-savings-time-dst)=
+
+# Yaz saati uygulamasında (DST) zaman ayarı
 
 Pompa ve CGM kurulumuna bağlı olarak, zaman atlamaları sorunlara yol açabilir. Combo ile örn. pompa geçmişi tekrar okunur ve yinelenen girişlere yol açar. Bu yüzden lütfen ayarlamayı gece değil, uyanıkken yapın.
 
 AKRB ve AİNS'in kesinlikle doğru olduğundan emin olana kadar bolus hesaplayıcıyı tekrar kullanmayın. DST Saat değişikliğinden sonra muhtemelen birkaç saat kullanmamak daha iyidir.
 
+(Timezone-traveling-accu-chek-combo)=
+
 ## Accu-Chek Combo
+
+**NOT**: Yukarıda bahsedildiği gibi, bu bölüm yalnızca Ruffy tabanlı eski sürücü için geçerlidir. Yeni sürücü tarih, saat ve DST'yi otomatik olarak ayarlar.
 
 Pompa ve telefon arasındaki süre çok farklıysa AndroidAPS bir alarm verir. Ne yazık ki, DST zaman değişikliği gece yarısında olacaktır. Bunu önlemek ve bunun yerine uykunuzun tadını çıkarmamak için kendinize daha uygun bir zamanda saat değişikliğini yapmaya zorlamak için şu adımları izleyin:
 

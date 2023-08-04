@@ -4,27 +4,29 @@ SSS'ye nasıl soru eklenir: Bu [talimatları](../make-a-PR.md) izleyin
 
 # Genel
 
-## AndroidAPS kurulum dosyasını indirebilir miyim?
+## AAPS kurulum dosyasını indirebilir miyim?
 
-Hayır. AndroidAPS için indirilebilir bir apk dosyası yoktur. Kendiniz [derlemeniz](../Installing-AndroidAPS/Building-APK.md) gerekir. Nedeni ise:
+Hayır. AAPS için indirilebilir bir apk dosyası yoktur. Kendiniz [derlemeniz](../Installing-AndroidAPS/Building-APK.md) gerekir. Nedeni ise:
 
-AndroidAPS, pompanızı kontrol etmek ve insülin vermek için kullanılır. Avrupa'daki mevcut düzenlemelere göre IIa veya IIb olarak sınıflandırılan tüm sistemler, çeşitli çalışmalar ve imzalar gerektiren düzenleyici onay (CE işareti) gerektiren tıbbi cihazlardır. Düzenlenmemiş bir cihazı dağıtmak yasa dışıdır. Dünyanın başka yerlerinde de benzer düzenlemeler var.
+AAPS, pompanızı kontrol etmek ve insülin vermek için kullanılır. Avrupa'daki mevcut düzenlemelere göre IIa veya IIb olarak sınıflandırılan tüm sistemler, çeşitli çalışmalar ve imzalar gerektiren düzenleyici onay (CE işareti) gerektiren tıbbi cihazlardır. Düzenlenmemiş bir cihazı dağıtmak yasa dışıdır. Dünyanın başka yerlerinde de benzer düzenlemeler var.
 
 Bu düzenleme (bir şey karşılığında para almak anlamında) sadece satışla sınırlı olmayıp, her türlü dağıtım (hatta ücretsiz dağıtma) için de geçerlidir. Kendiniz için bir tıbbi cihaz oluşturmak, uygulamayı bu düzenlemeler dahilinde kullanmanın tek yoludur.
 
 Bu yüzden apk'ler mevcut değildir.
+
+(FAQ-how-to-begin)=
 
 ## Nasıl başlamalı?
 
 Her şeyden önce, **döngülenebilir donanım bileşenleri almanız** gerekir:
 
 - [destekleyen bir insülin pompası](./Pump-Choices.md), 
-- bir [Android akıllı telefon](Phones.md) (Apple iOS, AndroidAPS tarafından desteklenmez - [iOS Loop](https://loopkit.github.io/loopdocs/) kontrol edebilirsiniz) ve 
+- bir [Android akıllı telefon](Phones.md) (Apple iOS, AAPS tarafından desteklenmez - [iOS Loop](https://loopkit.github.io/loopdocs/) kontrol edebilirsiniz) ve
 - [sürekli glikoz izleme sistemi](../Configuration/BG-Source.md). 
 
 İkinci olarak, **donanımınızı kurmanız** gerekir. [Adım adım öğreticiyle örnek kurulum](Sample-Setup.md)'a bakın.
 
-Üçüncü olarak, **yazılım bileşenlerinizi kurmanız** gerekir: AndroidAPS ve CGM/FGM kaynağı.
+Üçüncü olarak, **yazılım bileşenlerinizi kurmanız** gerekir: AAPS ve CGM/FGM kaynağı.
 
 Dördüncüsü, tedavi faktörlerinizi kontrol etmek için **OpenAPS referans tasarımını öğrenmeli ve anlamalısınız**. Kapalı döngünün temel prensibi, bazal oranınızın ve karbonhidrat oranınızın doğru olmasıdır. Tüm öneriler, temel ihtiyaçlarınızın karşılandığını ve gördüğünüz herhangi bir tepe veya dip noktasının, bu nedenle bazı tek seferlik ayarlamalar (egzersiz, stres vb.) gerektiren diğer faktörlerin bir sonucu olduğunu varsayar. Kapalı döngünün güvenlik için yapabileceği ayarlamalar sınırlandırılmıştır ([OpenAPS Referans Tasarımında](https://openaps.org/reference-design/) izin verilen maksimum geçici bazal oranına bakın), bu izin verilen dozun temeldeki yanlış bir bazalı düzeltmek için boşa harcamak istemediğiniz anlamına gelir. Örneğin, yemekten önce genellikle düşük seviyeniz varsa, muhtemelen bazal oranınızın ayarlanması gerekir. Bazalların ve/veya İDF'nin ayarlanması gerekip gerekmediği ve ayrıca karbonhidrat oranının değiştirilmesi gerekip gerekmediğini önermek için geniş bir veri havuzunu değerlendirmek için [Otoayar](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig)'ı kullanabilirsiniz. Veya bazalınızı [eski moda bazal oranı ayarı](https://integrateddiabetes.com/basal-testing/) şekilde test edip ayarlayabilirsiniz.
 
@@ -36,17 +38,19 @@ Tercihlerinizin kolayca değiştirilmesini istemiyorsanız, tercihler menüsünd
 
 ### Android Wear Akıllı saatler
 
-Ayarları bolus yapmak veya değiştirmek için android wear uygulamasını kullanmayı planlıyorsanız, AndroidAPS'den gelen bildirimlerin engellenmediğinden emin olmanız gerekir. Eylemin onayı bildirim yoluyla gelir.
+Ayarları bolus yapmak veya değiştirmek için android wear uygulamasını kullanmayı planlıyorsanız, AAPS'den gelen bildirimlerin engellenmediğinden emin olmanız gerekir. Eylemin onayı bildirim yoluyla gelir.
+
+(FAQ-disconnect-pump)=
 
 ### Pompayı ayırın
 
-Duş almak, banyo yapmak, yüzmek, spor yapmak veya diğer etkinlikler için pompanızı çıkarırsanız, AndroidAPS'ye AİNS'i doğru tutmak için insülin verilmediğini bildirmelisiniz.
+Duş almak, banyo yapmak, yüzmek, spor yapmak veya diğer etkinlikler için pompanızı çıkarırsanız, AAPS'e AİNS'i doğru tutmak için insülin verilmediğini bildirmelisiniz.
 
-[AndroidAPS Ana Ekranında](./Screenshots.md#loop-status) Döngü Durumu simgesi kullanılarak pompanın bağlantısı kesilebilir.
+[AAPS Ana Ekranında](Screenshots-loop-status) Döngü Durumu simgesi kullanılarak pompanın bağlantısı kesilebilir.
 
 ### Öneriler yalnızca tek bir CGM değerlerine dayalı değildir
 
-Güvenlik için yapılan öneriler bir CGM okumasına değil, ortalama deltaya dayanmaktadır. Bu nedenle, bazı okumaları kaçırırsanız, AndroidAPS'in tekrar döngüye girmesi, verileri geri aldıktan sonra biraz zaman alabilir.
+Güvenlik için yapılan öneriler bir CGM okumasına değil, ortalama deltaya dayanmaktadır. Bu nedenle, bazı okumaları kaçırırsanız, AAPS'in tekrar döngüye girmesi, verileri geri aldıktan sonra biraz zaman alabilir.
 
 ### Diğer okumalar
 
@@ -59,11 +63,11 @@ Döngü yapmanın pratikliğini anlamanıza yardımcı olacak iyi ipuçları iç
 
 ## Yanıma hangi acil durum ekipmanının alınması önerilir?
 
-İnsülin pompası tedavisi olan diğer tüm T1D'ler gibi aynı acil durum ekipmanına sahip olmalısınız. AndroidAPS ile döngü kurarken, yanınızda veya yakınında aşağıdaki ek ekipmanın bulunması şiddetle tavsiye edilir:
+İnsülin pompası tedavisi olan diğer tüm T1D'ler gibi aynı acil durum ekipmanına sahip olmalısınız. AAPS ile döngü kurarken, yanınızda veya yakınında aşağıdaki ek ekipmanın bulunması şiddetle tavsiye edilir:
 
 - Akıllı telefonunuzu, saatinizi ve (gerekirse) BT okuyucusunu veya Link cihazını şarj etmek için pil takımı ve kablolar
 - Pompa pilleri
-- AndroidAPS ve kullandığınız diğer uygulamalar (ör. xDrip+, BYO Dexcom) için hem yerel olarak hem de bulutta (Dropbox, Google Drive) mevcut [apk](../Installing-AndroidAPS/Building-APK.md) ve [tercih dosyaları](../Usage/ExportImportSettings.md).
+- AAPS ve kullandığınız diğer uygulamalar (ör. xDrip+, BYO Dexcom) için hem yerel olarak hem de bulutta (Dropbox, Google Drive) mevcut [apk](../Installing-AndroidAPS/Building-APK.md) ve [tercih dosyaları](../Usage/ExportImportSettings.md).
 
 ## CGM/FGM'yi güvenli ve güvenilir bir şekilde nasıl bağlayabilirim?
 
@@ -71,7 +75,7 @@ Bantlayabilirsiniz. Yaygın CGM sistemleri için önceden delinmiş birkaç çe�
 
 Siz bunu düzeltebilirsiniz. CGM/FGM'yi bir bantla sabitleyen üst kol bilezikleri de satın alabilirsiniz (Google, eBay veya Amazon'da arama yapın).
 
-# AndroidAPS ayarları
+# AAPS Ayarları
 
 Aşağıdaki liste, ayarları optimize etmenize yardımcı olmayı amaçlamaktadır. En baştan başlamak ve en alta kadar çalışmak en iyisi olabilir. Diğerini değiştirmeden hemen önce bir ayarı almayı hedefleyin. Tek seferde büyük değişiklikler yapmak yerine küçük adımlarla çalışın. [Otoayar](https://autotuneweb.azurewebsites.net/)'ı düşüncenize rehberlik etmesi için kullanabilirsiniz, ancak körü körüne takip edilmemelidir: sizin için veya her durumda iyi çalışmayabilir. Ayarların birbiriyle etkileşime girdiğine dikkat edin - bazı durumlarda birlikte iyi çalışan 'yanlış' ayarlarınız olabilir (örneğin, çok yüksek bir bazal, çok yüksek bir Karbonhidrat oranı ile aynı anda olursa), ancak diğerlerinde çalışmaz. Bu tüm ayarları göz önünde bulundurmanız ve çeşitli koşullarda birlikte çalıştıklarını kontrol etmeniz gerektiği anlamına gelir.
 
@@ -82,6 +86,8 @@ Aşağıdaki liste, ayarları optimize etmenize yardımcı olmayı amaçlamaktad
 İnsülinin metabolizmada tamamen parçalanması için geçen süre.
 
 Bu genellikle çok kısa ayarlanır. Çoğu insanın en az 5 saat, bazen 6 veya 7 saate ihtiyacı vardır.
+
+(FAQ-impact)=
 
 ### Etki
 
@@ -198,21 +204,21 @@ Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal
 
 ### Kapalı döngüde yüksek tokluk KŞ'i zirvelerine ne sebep olur?
 
-Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal oranı testi yapın. Doğruysa ve karbonhidratlar tamamen emildikten sonra KŞ'niz hedefinize düşüyorsa, AndroidAPS'de yemekten bir süre önce bir "yakında yemek yeme" geçici hedefi belirlemeye çalışın veya endokrinologunuzla uygun bir bolus öncesi zamanı düşünün. KŞ'niz yemekten sonra çok yüksekse ve karbonhidratlar tamamen emildikten sonra hala çok yüksekse, endokrinologunuzla IC'nizi azaltmayı düşünün. KŞ değerleriniz aktif karbonhidratlarla çok yüksekse ve tam karbonhidrat emiliminden sonra da çok düşerse, diyabet uzmanınıza Kİ oranınızı artırıp artırmayacağınızı danışın ve uygun bir insülin- yemek arası süre belirleyin.
+Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal oranı testi yapın. Doğruysa ve karbonhidratlar tamamen emildikten sonra KŞ'niz hedefinize düşüyorsa, AAPS'de yemekten bir süre önce bir "yakında yemek yeme" geçici hedefi belirlemeye çalışın veya endokrinologunuzla uygun bir bolus öncesi zamanı düşünün. KŞ'niz yemekten sonra çok yüksekse ve karbonhidratlar tamamen emildikten sonra hala çok yüksekse, endokrinologunuzla IC'nizi azaltmayı düşünün. KŞ değerleriniz aktif karbonhidratlarla çok yüksekse ve tam karbonhidrat emiliminden sonra da çok düşerse, diyabet uzmanınıza Kİ oranınızı artırıp artırmayacağınızı danışın ve uygun bir insülin- yemek arası süre belirleyin.
 
 # Diğer ayarlar
 
 ## Nightscout ayarları
 
-### AndroidAPS NSClient 'izin verilmiyor' diyor ve veri yüklemiyor. Bu durumda ne yapabilirim?
+### AAPS NSClient 'izin verilmiyor' diyor ve veri yüklemiyor. Bu durumda ne yapabilirim?
 
 NSClient'te 'Bağlantı ayarları'nı kontrol edin. Belki de aslında izin verilen bir WLAN'da değilsiniz veya 'Yalnızca şarj oluyorsa' seçeneğini etkinleştirdiniz ve şarj kablonuz bağlı değil.
 
 ## CGM ayarları
 
-### AndroidAPS neden 'KŞ kaynağı gelişmiş filtrelemeyi desteklemiyor' diyor?
+### AAPS neden 'KŞ kaynağı gelişmiş filtrelemeyi desteklemiyor' diyor?
 
-xDrip yerel modunda Dexcom G5 veya G6'dan başka bir CGM/FGM kullanırsanız, bu uyarıyı AndroidAPS OpenAPS sekmesinde alırsınız. Daha fazla ayrıntı için [Kan şekeri verilerini yumuşatma](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) konusuna bakın.
+xDrip yerel modunda Dexcom G5 veya G6'dan başka bir CGM/FGM kullanırsanız, bu uyarıyı AAPS OpenAPS sekmesinde alırsınız. Daha fazla ayrıntı için [Kan şekeri verilerini yumuşatma](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) konusuna bakın.
 
 ## Pompa
 
@@ -227,36 +233,36 @@ Döngü, pompa pilini normal kullanımdan daha hızlı azaltabilir, çünkü sis
 - LCD'nin açık kaldığı süreyi azaltın (pompa ayarları menüsünde)
 - arka ışığın açık kalma süresini kısaltın (pompa ayarları menüsünde)
 - titreşim yerine bir bip sesiyle bildirim ayarlarını seçin (pompa ayarları menüsünden)
-- yeniden doldurmak için yalnızca pompadaki düğmelere basın, tüm geçmişi, pil seviyesini ve rezervuar hacmini görüntülemek için AndroidAPS'yi kullanın.
-- AndroidAPS uygulaması, bazı telefonlarda enerji tasarrufu veya boş RAM için genellikle kapatılabilir. AndroidAPS her başlatmada yeniden başlatıldığında, pompaya bir Bluetooth bağlantısı kurar ve mevcut bazal oranı ve bolus geçmişini yeniden okur. Bu pil tüketir. Bunun olup olmadığını görmek için Tercihler > NSClient'e gidin ve 'Uygulama başlangıcını NS'ye kaydet' seçeneğini etkinleştirin. Nightscout, AndroidAPS'nin her yeniden başlatılmasında, sorunu izlemeyi kolaylaştıran bir etkinlik alacaktır. Bunu azaltmak için, uygulamanın güç monitörünün kapatmasını durdurmak için telefonun pil ayarlarında AndroidAPS uygulamasını beyaz listeye ekleyin.
+- yeniden doldurmak için yalnızca pompadaki düğmelere basın, tüm geçmişi, pil seviyesini ve rezervuar hacmini görüntülemek için AAPS'i kullanın.
+- AAPS uygulaması, bazı telefonlarda enerji tasarrufu veya boş RAM için genellikle kapatılabilir. AAPS her başlatmada yeniden başlatıldığında, pompaya bir Bluetooth bağlantısı kurar ve mevcut bazal oranı ve bolus geçmişini yeniden okur. Bu pil tüketir. Bunun olup olmadığını görmek için Tercihler > NSClient'e gidin ve 'Uygulama başlangıcını NS'ye kaydet' seçeneğini etkinleştirin. Nightscout, AAPS'nin her yeniden başlatılmasında, sorunu izlemeyi kolaylaştıran bir etkinlik alacaktır. Bunu azaltmak için, uygulamanın güç monitörünün kapatmasını durdurmak için telefonun pil ayarlarında AAPS uygulamasını beyaz listeye ekleyin.
     
     Örneğin, Android Pie çalıştıran bir Samsung telefonda beyaz listeye almak için:
     
     - Ayarlar -> Cihaz Bakımı -> Pil'e gidin 
-    - AndroidAPS'yi bulana kadar kaydırın ve seçin 
+    - AAPS'i bulana kadar kaydırın ve seçin
     - "Uygulamayı uyku moduna geçir" seçimini kaldırın
     - AYRICA Ayarlar -> Uygulamalar -> seçeneğine gidin (ekranın sağ üst köşesindeki üç daire sembolü) "özel erişim" seçeneğini seçin -> Pil kullanımını optimize edin
-    - AndroidAPS'ye gidin ve seçili olmadığından emin olun.
+    - AAPS'e gidin ve seçili olmadığından emin olun.
 
 - üretim sürecinden kalan balmumu veya yağ izi kalmadığından emin olmak için pil kutuplarını alkolle temizleyin.
 
 - [DanaR/RS pompası](../Configuration/DanaRS-Insulin-Pump.md) ile, başlatma prosedürü sırasında, pil kontaklarındaki koruyucu filmleri (depolama sırasında enerji kaybını önlemeyi amaçlayan) kısaca çıkarmaya çalışmak için yüksek bir akım kullanılır, ancak bu her zaman %100 çalışmaz. Pili ekranda %100 görünene kadar 2-3 kez çıkarıp yeniden takın veya pil anahtarını kullanarak pili kısa bir süre için her iki terminale birden uygulayarak takmadan önce kısa devre yapın.
-- ayrıca [belirli pil türleri](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life) için daha fazla ipucuna bakın
+- ayrıca [belirli pil türleri](Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life) için daha fazla ipucuna bakın
 
 ### Rezervuar ve kanüllerin değiştirilmesi
 
-Kartuş değişimi AndroidAPS üzerinden yapılamaz, ancak daha önce olduğu gibi doğrudan pompa üzerinden yapılmalıdır.
+Kartuş değişimi AAPS üzerinden yapılamaz, ancak daha önce olduğu gibi doğrudan pompa üzerinden yapılmalıdır.
 
-- AndroidAPS'nin Ana Sayfa sekmesindeki "Açık Döngü"/"Kapalı Döngü" üzerine uzun basın ve 'Döngüyü 1 saat Askıya Al' seçeneğini seçin
+- AAPS'in Ana Sayfa sekmesindeki "Açık Döngü"/"Kapalı Döngü" üzerine uzun basın ve 'Döngüyü 1 saat Askıya Al' seçeneğini seçin
 - Şimdi pompayı ayırın ve hazneyi pompa talimatlarına göre değiştirin.
-- Ayrıca doğrudan pompa üzerinde hortum ve kanül doldurma işlemi yapılabilir. Bu durumda, sadece değişikliği kaydetmek için eylemler sekmesinde [HAZIRLA/DOLDUR düğmesini](../Usage/CPbefore26#pump) kullanın.
+- Ayrıca doğrudan pompa üzerinde hortum ve kanül doldurma işlemi yapılabilir. Bu durumda, sadece değişikliği kaydetmek için eylemler sekmesinde [HAZIRLA/DOLDUR düğmesini](CPbefore26-pump) kullanın.
 - Pompaya yeniden bağlandıktan sonra, 'Askıya Alındı (X m)' üzerine uzun basarak döngüye devam edin.
 
-Ancak bir kanülün değiştirilmesi, pompanın "prime infüzyon seti" işlevini kullanmaz, ancak infüzyon setini ve/veya kanülü bolus geçmişinde görünmeyen bir bolus kullanarak doldurur. Bu şu anda çalışmakta olan geçici bir bazal oranını kesintiye uğratmadığı anlamına gelir. Eylemler (Eyl) sekmesinde, infüzyon setini doldurmak için gereken insülin miktarını ayarlamak ve hazırlamaya başlamak için [HAZIRLA/DOLDUR düğmesini](../Usage/CPbefore26#pump) kullanın. Miktar yeterli değilse, doldurmayı tekrarlayın. Varsayılan miktar düğmelerini Tercihler > Diğer > Standart insülin miktarlarını Hazırla/Doldur bölümünden ayarlayabilirsiniz. İğne uzunluğuna ve hortum uzunluğuna bağlı olarak kaç ünitenin doldurulması gerektiğini öğrenmek için kanül kutunuzdaki talimat kitapçığına bakın.
+Ancak bir kanülün değiştirilmesi, pompanın "prime infüzyon seti" işlevini kullanmaz, ancak infüzyon setini ve/veya kanülü bolus geçmişinde görünmeyen bir bolus kullanarak doldurur. Bu şu anda çalışmakta olan geçici bir bazal oranını kesintiye uğratmadığı anlamına gelir. Eylemler (Eyl) sekmesinde, infüzyon setini doldurmak için gereken insülin miktarını ayarlamak ve hazırlamaya başlamak için [HAZIRLA/DOLDUR düğmesini](CPbefore26-pump) kullanın. Miktar yeterli değilse, doldurmayı tekrarlayın. Varsayılan miktar düğmelerini Tercihler > Diğer > Standart insülin miktarlarını Hazırla/Doldur bölümünden ayarlayabilirsiniz. İğne uzunluğuna ve hortum uzunluğuna bağlı olarak kaç ünitenin doldurulması gerektiğini öğrenmek için kanül kutunuzdaki talimat kitapçığına bakın.
 
 ## Duvar Kağıdı
 
-Telefonunuz için AndroidAPS duvar kağıdını [telefonlar sayfasında](../Getting-Started/Phones#phone-background) bulabilirsiniz.
+Telefonunuz için AAPS duvar kağıdını [telefonlar sayfasında](Phones-phone-background) bulabilirsiniz.
 
 ## Günlük kullanım
 
@@ -264,13 +270,15 @@ Telefonunuz için AndroidAPS duvar kağıdını [telefonlar sayfasında](../Gett
 
 #### Duş alırken veya banyo yaparken ne yapmalı?
 
-Duş veya banyo yaparken pompayı çıkarabilirsiniz. Bu kısa süre için buna ihtiyacınız olmayabilir, ancak AİNS hesaplamalarının doğru olması için AAPS'e bağlantınızın kesildiğini söylemelisiniz. [yukarıdaki açıklamaya](../Getting-Started/FAQ#disconnect-pump) bakın.
+Duş veya banyo yaparken pompayı çıkarabilirsiniz. Bu kısa süre için buna ihtiyacınız olmayabilir, ancak AİNS hesaplamalarının doğru olması için AAPS'e bağlantınızın kesildiğini söylemelisiniz. [yukarıdaki açıklamaya](FAQ-disconnect-pump) bakın.
 
 ### İş
 
-İşinize bağlı olarak, iş günlerinde farklı tedavi faktörleri kullanmayı tercih edebilirsiniz. Bir döngü kullanıcısı olarak, tipik iş gününüz için bir [profil değiştirmeyi](../Usage/Profiles.md) düşünmelisiniz. Örneğin, daha az zorlu bir işiniz varsa (örneğin, masada oturmak) %100'den yüksek bir profile veya tüm gün aktif ve ayaktaysanız %100'den az bir profile geçebilirsiniz. Ayrıca, farklı vardiyalarda çalışıyorsanız, normalden çok daha erken veya daha geç çalışırken yüksek veya düşük bir geçici hedef veya [profilinizin zaman kaymasını](../Usage/Profiles#time-shift) düşünebilirsiniz. Ayrıca ikinci bir profil (ör. "ev" ve "iş günü") oluşturabilir ve ihtiyacınız olan profile günlük profil geçişi yapabilirsiniz.
+İşinize bağlı olarak, iş günlerinde farklı tedavi faktörleri kullanmayı tercih edebilirsiniz. Bir döngü kullanıcısı olarak, tipik iş gününüz için bir [profil değiştirmeyi](../Usage/Profiles.md) düşünmelisiniz. Örneğin, daha az zorlu bir işiniz varsa (örneğin, masada oturmak) %100'den yüksek bir profile veya tüm gün aktif ve ayaktaysanız %100'den az bir profile geçebilirsiniz. Ayrıca, farklı vardiyalarda çalışıyorsanız, normalden çok daha erken veya daha geç çalışırken yüksek veya düşük bir geçici hedef veya [profilinizin zaman kaymasını](Profiles-time-shift) düşünebilirsiniz. Ayrıca ikinci bir profil (ör. "ev" ve "iş günü") oluşturabilir ve ihtiyacınız olan profile günlük profil geçişi yapabilirsiniz.
 
 ## Boş zaman etkinlikleri
+
+(FAQ-sports)=
 
 ### Sporlar
 
@@ -281,8 +289,8 @@ Böylece daha fazla aktif karbonhidrat olurdu, ancak aynı zamanda döngü, ins�
 Döngü yaparken şu adımları denemelisiniz:
 
 - [profil geçişi](../Usage/Profiles.md) < %100 yapın.
-- Standart hedefinizin üzerinde bir [etkinlik geçici hedefi](../Usage/temptarget#activity-temp-target) belirleyin.
-- SMB kullanıyorsanız ["SMB'yi yüksek geçici hedeflerle etkinleştir"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) ve ["SMB'yi her zaman etkinleştir"](../Usage/Open-APS-features#enable-smb-always)'in devre dışı bırakıldığından emin olun.
+- Standart hedefinizin üzerinde bir [etkinlik geçici hedefi](temptarget-activity-temp-target) belirleyin.
+- SMB kullanıyorsanız ["SMB'yi yüksek geçici hedeflerle etkinleştir"](Open-APS-features-enable-smb-with-high-temp-targets) ve ["SMB'yi her zaman etkinleştir"](Open-APS-features#enable-smb-always)'in devre dışı bırakıldığından emin olun.
 
 Bu ayarlar için önce ve sonra çalıştırma önemlidir. Değişiklikleri spordan önce zamanında yapın ve kas dolgusunun etkisini göz önünde bulundurun.
 
@@ -292,11 +300,11 @@ Profil değişikliğinin yüzdesi, aktivite geçici hedefinizin değeri ve deği
 
 ### Cinsel ilişki
 
-Pompayı 'özgür' olabilmek için kaldırabilirsiniz, ancak AndroidAPS'ye AİNS hesaplamalarının doğru olması için söylemelisiniz. [yukarıdaki açıklamaya](../Getting-Started/FAQ#disconnect-pump) bakın.
+Pompayı 'özgür' olabilmek için kaldırabilirsiniz, ancak AAPS'e AİNS hesaplamalarının doğru olması için söylemelisiniz. [yukarıdaki açıklamaya](FAQ-disconnect-pump) bakın.
 
 ### Alkol tüketimi
 
-Algoritma alkolden etkilenen KŞ'yi doğru bir şekilde tahmin edemediği için kapalı döngü modunda alkol içmek risklidir. AndroidAPS'de aşağıdaki işlevleri kullanarak bunu tedavi etmek için kendi yönteminizi kontrol etmeniz gerekir:
+Algoritma alkolden etkilenen KŞ'yi doğru bir şekilde tahmin edemediği için kapalı döngü modunda alkol içmek risklidir. AAPS'de aşağıdaki işlevleri kullanarak bunu tedavi etmek için kendi yönteminizi kontrol etmeniz gerekir:
 
 - Kapalı döngü modunun devre dışı bırakılması ve diyabetin manuel olarak tedavi edilmesi veya
 - gözetimsiz bir yemek nedeniyle döngüyü artıran AİNS'i önlemek için yüksek geçici hedefleri belirlemek ve bildirilmeyen Öğünleri (UAM)'yi devre dışı bırakmak veya
@@ -308,7 +316,7 @@ Alkol içerken, karbonhidrat yiyerek hipoglisemiyi manuel olarak önlemek için 
 
 #### Gece boyunca mobil ve WIFI radyasyonu olmadan nasıl döngü yapabilirim?
 
-Birçok kullanıcı geceleri telefonu uçak moduna alıyor. Döngünün uyurken sizi desteklemesini istiyorsanız, aşağıdaki şekilde ilerleyin (bu yalnızca xDrip+ veya ['Kendi Dexcom Uygulamanızı Oluşturun'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) gibi yerel bir KŞ kaynağıyla çalışır, KŞ okumalarını Nightscout aracılığıyla alırsanız çalışmayacaktır):
+Birçok kullanıcı geceleri telefonu uçak moduna alıyor. Döngünün uyurken sizi desteklemesini istiyorsanız, aşağıdaki şekilde ilerleyin (bu yalnızca xDrip+ veya ['Kendi Dexcom Uygulamanızı Oluşturun'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) gibi yerel bir KŞ kaynağıyla çalışır, KŞ okumalarını Nightscout aracılığıyla alırsanız çalışmayacaktır):
 
 1. Cep telefonunuzda uçak modunu açın.
 2. Uçak modu aktif olana kadar bekleyin.
@@ -330,9 +338,9 @@ Dana R ve Dana R Korean ile hiçbir şey yapmanıza gerek yok. Diğer pompalar i
 
 ### Hastaneye yatış
 
-Klinisyenlerinizle AndroidAPS ve DIY döngüsü hakkında bazı bilgileri paylaşmak istiyorsanız, [klinisyenler için AndroidAPS kılavuzunu](../Resources/clinician-guide-to-AndroidAPS.md) yazdırabilirsiniz.
+Klinisyenlerinizle AAPS ve DIY döngüsü hakkında bazı bilgileri paylaşmak istiyorsanız, [klinisyenler için AAPS kılavuzunu](../Resources/clinician-guide-to-AndroidAPS.md) yazdırabilirsiniz.
 
-### Endokrinologunuzla tıbbi randevu
+### Endokrin doktorunuzla tıbbi randevu
 
 #### Raporlama
 
@@ -342,11 +350,11 @@ Nightscout raporlarınızı (https://YOUR-NS-SITE.com/report) gösterebilir veya
 
 ## Benim problemim burada listelenmemiş.
 
-[Yardım almak için bilgi.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Yardım almak için bilgi.](Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
 ## Sorunum burada listelenmiyor ama çözümü buldum
 
-[Yardım almak için bilgi.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Yardım almak için bilgi.](Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
 **Çözümünüzü bu listeye eklememizi bize hatırlatın!**
 
@@ -364,7 +372,7 @@ Bir internet sürücüsüne kopyalayın (Dropbox, Google vb.): Telefonunuza uygu
 
 Lütfen
 
-- tipik hatalar için [Android Studio'da Sorun Giderme](../Installing-AndroidAPS/troubleshooting_androidstudio#troubleshooting-android-studio)'yi kontrol edin ve
+- tipik hatalar için [Android Studio'da Sorun Giderme](troubleshooting_androidstudio-troubleshooting-android-studio)'yi kontrol edin ve
 - [adım adım izlenecek yol](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po) ile ilgili ipuçları.
 
 ## Bir göreve takıldım ve yardıma ihtiyacım var.
@@ -377,7 +385,7 @@ Hamburger menüsünü açın, Yapılandırma sihirbazını başlatın ve soruldu
 
 ## AAPS v3.x'te parola nasıl sıfırlanır
 
-Şifrenizi unuttuysanız: AAPS'yi kapatın. telefon_anadizini/AAPS/ekstra dizinine PasswordReset (herhangi bir uzantı olmadan) adlı boş bir dosya koyun. AAPS'i yeniden başlatın. Yeni AAPS parolası, pompanızın seri numarasıdır. Omnipod DASH podunun seri numarası 4241'dir. Parolayı 3 nokta menü, kurulum sihirbazı, kilit açma parametreleri ile değiştirebilirsiniz.
+Dokümantasyonu [burada](update3_0-reset-master-password) bulabilirsiniz.
 
 ## Bağlantım/pompam/pod'um yanıt vermiyor (RL/OL/EmaLink…)
 
@@ -395,9 +403,9 @@ Android Studio'dan: Projeyi açıp GitHub'dan çektikten sonra "Gradle"ın senkr
 
 ## Uyarı: Geliştirme sürümü çalıştırılıyor. Kapalı döngü devre dışı
 
-AndroidAPS "geliştirici modunda" çalışmıyor. AAPS şu mesajı gösterir: "dev sürümü çalışıyor. Kapalı döngü devre dışı".
+AAPS "geliştirici modunda" çalışmıyor. AAPS şu mesajı gösterir: "dev sürümü çalışıyor. Kapalı döngü devre dışı".
 
-AndroidAPS'nin "geliştirici modunda" çalıştığından emin olun: "AAPS/extra" konumuna "engineering_mode" adlı bir dosya yerleştirin. Herhangi bir dosya, doğru şekilde adlandırıldığı sürece iş görür. Dosyayı bulması ve "geliştirici moduna" geçmesi için AndroidAPS'i yeniden başlattığınızdan emin olun.
+AAPS'in "geliştirici modunda" çalıştığından emin olun: "AAPS/extra" konumuna "engineering_mode" adlı bir dosya yerleştirin. Herhangi bir dosya, doğru şekilde adlandırıldığı sürece iş görür. Dosyayı bulması ve "geliştirici moduna" geçmesi için AAPS'i yeniden başlattığınızdan emin olun.
 
 İpucu: Mevcut bir günlük dosyasının bir kopyasını alın ve onu "engineering_mode" olarak yeniden adlandırın (not: dosya uzantısı olmayacak).
 
@@ -407,7 +415,7 @@ Ayarlar dosyaları telefonunuzun dahili deposunda "/AAPS/preferences" dizininde 
 
 ## Pil tasarrufu nasıl yapılandırılır?
 
-Güç Yönetiminin doğru şekilde yapılandırılması, telefonunuzun işletim sisteminin, telefonunuz kullanılmadığında AndroidAPS'i ve ilgili uygulama ve hizmetleri askıya almaması için önemlidir. Doğru yapılandırılmazsa, AAPS işini yapamaz ve/veya sensör için bluetooth bağlantıları ve Rileylink (RL) kapatılarak "pompa bağlantısı kesildi" uyarılarına ve iletişim hatalarına neden olabilir. Telefonda, ayarlar->Uygulamalar'a gidin ve aşağıdakiler için pil tasarrufunu devre dışı bırakın: AndroidAPS xDrip veya BYODA/Dexcom uygulaması Bluetooth sistem uygulaması (önce sistem uygulamalarını görüntülemeyi seçmeniz gerekebilir) Alternatif olarak, telefondaki tüm pil tasarruflarını tamamen devre dışı bırakın. Sonuç olarak piliniz daha hızlı bitebilir ancak bu, soruna pil tasarrufunun neden olup olmadığını anlamanın bir yoludur. Pil tasarrufunun uygulanma şekli büyük ölçüde telefonun markasına, modeline ve/veya işletim sistemi sürümüne bağlıdır. Bu nedenle, kurulumunuz için pil tasarrufunu doğru şekilde ayarlamak için bu dokümanda talimat vermek neredeyse imkansızdır. Hangi ayarların sizin için en iyi sonucu verdiğini deneyin. Ek bilgi için ayrıca bkz. Uygulamamı devre dışı bırakma
+Güç Yönetiminin doğru şekilde yapılandırılması, telefonunuzun işletim sisteminin, telefonunuz kullanılmadığında AAPS'i ve ilgili uygulama ve hizmetleri askıya almaması için önemlidir. Doğru yapılandırılmazsa, AAPS işini yapamaz ve/veya sensör için bluetooth bağlantıları ve Rileylink (RL) kapatılarak "pompa bağlantısı kesildi" uyarılarına ve iletişim hatalarına neden olabilir. Telefonda, ayarlar->Uygulamalar'a gidin ve aşağıdakiler için pil tasarrufunu devre dışı bırakın: AAPS xDrip veya BYODA/Dexcom uygulaması Bluetooth sistem uygulaması (önce sistem uygulamalarını görüntülemeyi seçmeniz gerekebilir) Alternatif olarak, telefondaki tüm pil tasarruflarını tamamen devre dışı bırakın. Sonuç olarak piliniz daha hızlı bitebilir ancak bu, soruna pil tasarrufunun neden olup olmadığını anlamanın bir yoludur. Pil tasarrufunun uygulanma şekli büyük ölçüde telefonun markasına, modeline ve/veya işletim sistemi sürümüne bağlıdır. Bu nedenle, kurulumunuz için pil tasarrufunu doğru şekilde ayarlamak için bu dokümanda talimat vermek neredeyse imkansızdır. Hangi ayarların sizin için en iyi sonucu verdiğini deneyin. Ek bilgi için ayrıca bkz. Uygulamamı devre dışı bırakma
 
 ## Günde birkaç kez veya geceleri Pompa ulaşılamıyor uyarıları.
 

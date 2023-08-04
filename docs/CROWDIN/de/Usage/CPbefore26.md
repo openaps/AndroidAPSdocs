@@ -11,13 +11,15 @@ Auf dieser Seite zeigen wir, wo die bisher über das Careportal verfügbaren Fun
 ## Aktivität & Feedback
 
 ```{image} ../images/Careportal_25_26_1_IIb.png
-:alt: "Careportal - Aktivit\xE4t & Feedback"
+:alt: "Careportal - Aktivität\xE4t & Feedback"
 ```
 
-Die Altersangaben zu Sensoren, Kanülen, etc. finden sich nun unten auf dem Tab / im Menü "Aktionen".
-BZ Test wurde auf den Tab / in das Menü "Aktionen" verschoben.
-Das temporäres Ziel wurde auf den Tab / in das Menü "Aktionen" verschoben.
-Bewegung wurde auf den Tab / in das Menü "Aktionen" verschoben. (siehe Screenshot im Bereich [Kohlenhydrate & Bolus](#kohlenhydrate--bolus) auf dieser Seite).
+- Alter-Informationen wurden in Aktionen-Tab / Menü verschoben.
+- BZ Test wurde auf den Tab / in das Menü "Aktionen" verschoben.
+- Temporäres Ziel wurde auf den Tab / in das Menü "Aktionen" verschoben.
+- Übung ist nicht mehr verfügbar, aber Du kannst das Notizfeld im Dialogfeld verwenden, wenn Du eine Aktion wie Bolus usw. durchführst. (siehe Screenshot in Abschnitt [Carbs & bolus](CPbefore26-carbs-bolus) auf dieser Seite).
+
+(CPbefore26-carbs-bolus)=
 
 ## Kohlenhydrate & Bolus
 
@@ -44,7 +46,7 @@ Bewegung wurde auf den Tab / in das Menü "Aktionen" verschoben. (siehe Screensh
 ```
 
 - Das Setzen des CGM-Sensors kannst Du jetzt im Tab / Menü "Aktionen" erfassen.
-- Alle anderen Funktionen aus diesem Abschnitt wurden entfernt. Nutze das Notizfeld in der Dialogbox, die erscheint wenn eine Aktion wie z.B. Bolusabgabe durchgeführt wird (siehe Screenshot im Bereich [Kohlenhydrate & Bolus](#kohlenhydrate--bolus) auf dieser Seite).
+- Alle anderen Funktionen aus diesem Abschnitt wurden entfernt. Wenn Du eine Aktion wie z.B. Bolusabgabe dokumentieren möchtest, nutze das Notizfeld im Dialogfeld (siehe Screenshot im Bereich [Kohlenhydrate & Bolus](CPbefore26-carbs-bolus) auf dieser Seite).
 
 ## Pumpe
 

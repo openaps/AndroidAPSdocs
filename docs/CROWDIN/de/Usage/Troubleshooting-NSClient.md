@@ -1,3 +1,5 @@
+(Troubleshooting-NSClient-troubleshooting-nsclient)=
+
 # NSClient-Problembehebung
 
 Der NSClient benötigt eine stabile Verbindung mit Nightscout. Instabile Verbindungen führen zu Synchronisationsfehlern und hoher Datennutzung.
@@ -8,11 +10,11 @@ Wenn Dir niemand auf Nightscout folgt, kannst Du den NSClient pausieren, um die 
 
 Wechsele zur Registerkarte NSClient in AAPS und prüfe das Protokoll. Normalerweise wird alle ~30s ein PING empfangen und es gibt kaum Hinweise auf Reconnections.. Wenn Du viele Wiederverbindungen siehst, liegt ein Problem vor.
 
-Seit AndroidAPS Version 2. wird, wenn ein solches Verhalten erkannt wird, der NSClient für 15 Minuten pausiert und die Meldung "NSClient Fehlfunktion" auf dem Hauptbildschirm angezeigt.
+Seit AndroidAPS Version 2.0 wird, wenn ein solches Verhalten erkannt wird, der NSClient für 15 Minuten pausiert und die Meldung "NSClient Fehlfunktion" auf dem Hauptbildschirm angezeigt.
 
 * Neustart
 
-Als erste Schritte solltest du sowohl Nightscout als auch das Smartphone neu starten um zu sehen, ob der Fehler weiter besteht.
+Als erste Schritte solltest Du sowohl Nightscout als auch das Smartphone neu starten um zu sehen, ob der Fehler weiter besteht.
 
 Wenn Dein Hightscout auf Heroku gehostet ist, kannst Du NS wie folgt neu starten: Melde Dich in Heroku an, klicke auf den Namen Deiner Nightscout App, klicke auf das 'More'- Menü und dann auf 'Restart all dynos'.
 
@@ -32,7 +34,11 @@ Falls Deine Nightscout-Seite bei Azure gehostet wird: Viele Nutzer haben eine Zu
 
 Ein Workaround für Verbindungsprobleme in Azure ist, in den 'Application settings' das HTTP Protokoll auf 2.0 zu setzen und die 'Websockets' einzuschalten.
 
-* Wenn du immernoch eine Fehlermeldung bekommst...
+* Keine Blutzuckerwerte von Nightscout
+
+Wenn AAPS sich korrekt mit Nightscout verbindet, aber Blutzuckerwerte als N/A anzeigt. Gehe zu NSCLIENT, drücke das 3-Punkt-Menü oben rechts, klicke auf NSClient Einstellungen -> Synchronisation aktivieren "Empfangen/Backfill CGM Daten".
+
+* Wenn Du immernoch eine Fehlermeldung bekommst...
 
 Überprüfe die Datenbankgröße in MongoDB oder über das Plugin für die Datenbankgröße in Nightscout. Wenn Du die kostenfreie Version von MongoDB nutzt, ist die Datenbank bei 496 MB voll und muss bereinigt werden. [Hier sind die Überprüfung der Datenbankgröße und deren Bereinigung beschrieben.](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
 

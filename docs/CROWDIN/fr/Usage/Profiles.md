@@ -1,6 +1,8 @@
+(Profiles-profile-switch)=
+
 # Changement de profil
 
-La documentation sur les profils en général peut être trouvée sur [Générateur de configuration - Profil](../Configuration/Config-Builder#profil).
+La documentation sur les profils en général peut être trouvée dans [Configuration - Profil](Config-Builder-profile).
 
 Lors du démarrage d'AAPS et de la sélection de votre profil, vous devrez faire un événement « Changement de profil » avec une durée nulle (ceci est expliqué plus tard). En faisant cela, AAPS commence à suivre l'historique des profils et chaque modification du profil nécessite de faire un "Changement de profil" même lorsque vous modifiez le contenu du profil dans NS. Le profil mis à jour est poussé vers AAPS immédiatement, mais vous devez faire le changement de profil à nouveau pour commencer à utiliser ces changements.
 
@@ -11,7 +13,7 @@ En interne, AAPS crée une capture instantanée du profil avec la date et la dur
 
 Si vous avez modifié votre profil dans l'onglet "Profil local", vous pouvez y activer le profil, ce qui permet également de faire un changement de profil implicite.
 
-Pour effectuer un changement de profil, faites un appui long sur le nom de votre profil ("Tuned 03/11" dans l'image ci-dessous) dans la page d'accueil d'AndroidAPS.
+Pour effectuer un changement de profil, faites un appui long sur le nom de votre profil ("Tuned 03/11" dans l'image ci-dessous) dans la page d'accueil d'AAPS.
 
 ![Faire un changement de profil](../images/ProfileSwitch_HowTo.png)
 
@@ -27,6 +29,8 @@ Dans le "Changement de profil", vous pouvez choisir deux paramètres supplément
 * Cela sera envoyé à la pompe et sera ensuite le débit basal par défaut.
 
 * L'algorithme de la boucle (ouvert ou fermé) continuera de fonctionner au dessus du profil au pourcentage sélectionné. Ainsi, par exemple, des pourcentages différents peuvent être mis en place sur un profil pour différentes étapes du cycle hormonal.
+
+(Profiles-time-shift)=
 
 ## Décalage horaire
 
@@ -46,6 +50,8 @@ Dans le "Changement de profil", vous pouvez choisir deux paramètres supplément
 ![Changement de profil et sens du décalage horaire](../images/ProfileSwitch_PlusMinus2.png)
 
 Ce mécanisme de prise de photos du profil permet des calculs beaucoup plus précis du passé et la possibilité de suivre les changements de profil.
+
+(Profiles-troubleshooting-profile-errors)=
 
 ## Dépannage des erreurs de profil
 

@@ -1,8 +1,8 @@
 # AAPS בשעונים חכמים עם מערכת הפעלה Wear Os
 
-אתם יכולים להתקין AndroidAPS בשעון החכם שלכם המבוסס **Wear Os**. גרסת השעון של AAPS מאפשר לכם:
+You can install AAPS app on your **Wear OS based** smartwatch. גרסת השעון של AAPS מאפשר לכם:
 
-* **להציג מידע בשעונכם**: באמצעות מבחר של [תצוגות מותאמות אישית](#aaps-watchfaces) או תצוגות סטנדרטיות בשימוש של [סיבוכים](#complications).
+* **display data on your watch**: by providing [custom watchfaces](Watchfaces-aaps-watchfaces) or in standard watchfaces with use of [complications](Watchfaces-complications)
 * **לשלוט על AAPS מהשעון**: להזריק בולוס, לקבוע ערך מטרה זמני וכו'.
 
 ### לפני קניית שעון...
@@ -10,26 +10,26 @@
 * כמה תכונות כגון *סיבוכים* מחייבות גרסה 2.0 של Wear Os או מאוחרת יותר כדי לעבוד
 * חברת גוגל שינתה שמה של *Android Wear 1.x* לשם *Wear OS* מגרסה 2.x, כך כאשר היא אומרת *Android Wear* יתכן שמתכוונת לגרסה הישנה 1.x של המערכת.
 * אם התיאור של השעון החכם מצביעה על תאימות רק עם *Android* וגם *IOS* - זה **לא** אומר שהוא עובד עם *Wear Os* - יתכן שהיצרנים משתמשים במערכות משלהם **שלא תואמות AAPS wear!**
-* עיינו [ברשימה של הטלפונים והשעונים שנבחנו](../Getting-Started/Phones#list-of-tested-phones) וגם [שאלו את הקהילה](../Where-To-Go-For-Help/Connect-with-other-users.md) אם יש לכם ספק שהשעון שלכם נתמך.
+* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
 
 ### בניית גרסת Wear OS של AAPS
 
 אפליקציית Wear OS של AAPS הופרדה מבניית אפליקציית ה-Android של הטלפון הנייד. לכן עליכם ליצור APK חתום נפרד נוסף. בחרו את המודול "AndroidAPS.wear" ואת הגרסה לבנייה "fullRelease" כדי שאפליקציה שנייה עבור השעון Wear OS תיבנה במסגרת [בניית קובץ ה-APK](../Installing-AndroidAPS/Building-APK.md) (או "pumpcomtrolRelease" אשר תאפשר שליטה מהשעון במשאבה ללא לופ).
 
-החל ממאי 2021 חובה להתקין את AAPS בשעון "מהצד", כי היא לא נגישה יותר דרך חנות האפליקציות של גוגל שבשעון. ניתן להתקין מן הצד בעזרת [Wear Installer](https://youtu.be/8HsfWPTFGQI) אותם צריך להתקין גם בשעון וגם בטלפון. האפליקצה Wear Installer ניתנת להורדה מחנות האפליקציות של גוגל. הסרטון המקושר מעלה של מפתח Wear Installer מלקולם בריינט, נותן הוראות מפורטות ל- א. להורדת האפליקציה לטלפון הנייד. ב. הגדרת ה-Android Debugger בשעון. ג. השימוש ב-Wear Installer בטלפון ובשעון כדי להתקין מהצד את אפליקציית AAPS wear בשעון. לאחר שתבחרו את AndroidAPS כאפליקציה להעלאת הגרסה של Wear בשעון, תוכל להשתמש במסכי תצוגה, סיבוכים ופונקציות לשליטה ב-AAPS.
+החל ממאי 2021 חובה להתקין את AAPS בשעון "מהצד", כי היא לא נגישה יותר דרך חנות האפליקציות של גוגל שבשעון. ניתן להתקין מן הצד בעזרת [Wear Installer](https://youtu.be/8HsfWPTFGQI) אותם צריך להתקין גם בשעון וגם בטלפון. האפליקצה Wear Installer ניתנת להורדה מחנות האפליקציות של גוגל. הסרטון המקושר מעלה של מפתח Wear Installer מלקולם בריינט, נותן הוראות מפורטות ל- א. להורדת האפליקציה לטלפון הנייד. ב. הגדרת ה-Android Debugger בשעון. ג. השימוש ב-Wear Installer בטלפון ובשעון כדי להתקין מהצד את אפליקציית AAPS wear בשעון. Once you have selected AAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
 
 ### הגדרות בטלפון
 
-בתוך AndroidAPS, בבונה התצורה עליכם [לאפשר תוסף Wear](../Configuration/Config-Builder#wear).
+Within AAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
 
 ## שליטה ב-AAPS מהשעון
 
-AndroidAPS מותאם להיות *נשלט* על ידי שעוני Android Wear. אם אתם רוצים להזריק בולוס וכו' מהשעון, עליכם להפעיל את "שליטה משעון" בתוך "הגדרות Wear" בבונה התצורה.
+AAPS is designed to be *controlled* by Android Wear watches. אם אתם רוצים להזריק בולוס וכו' מהשעון, עליכם להפעיל את "שליטה משעון" בתוך "הגדרות Wear" בבונה התצורה.
 
 הפונקציות הבאות ניתנות להפעלה מהשעון:
 
 * קביעת ערך מטרה זמני
-* שימוש במחשבון הבולוסים (משתני החישוב יכולים להיות מוגדרים ב[הגדרות](../Configuration/Config-Builder#wear) בטלפון)
+* use the bolus calculator (calculation variables can be defined in [settings](Config-Builder-wear) on the phone)
 * הכרזת פחמימות ממושכות
 * הזרקת בולוס (אינסולין + פחמימות)
 * הגדרות שעון
@@ -39,19 +39,23 @@ AndroidAPS מותאם להיות *נשלט* על ידי שעוני Android Wear.
     * בדיקה והחלפת פרופיל, CPP (פרופיל אחוזים צירקדיים = היסט זמן + אחוז)
     * הצגת תצרוכת האינסולין הכללית (TDD=סיכום יומי של הבולוסים יחד עם המינונים הבזאליים)
 
+(Watchfaces-aaps-watchfaces)=
+
 ## תצוגות שעונים של AAPS
 
-ישנן כמה תצוגות לשעונים לבחירה אשר כוללים שינוי ממוצע, אינסולין זמין, מינון בזאלי זמני הנוכחי, פרופילים בזאליים וגרפים של קריאות מדידות גלוקוז בדם.
+There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
-וודאו שהתראות מ-AndroidAPS לא חסומות בשעון. אישור של פעולה (כגון זריקת בולוס, יעד זמני וכו') תבוצע דרך התראות שתצטרכו להחליק ולאשר.
+Ensure notifications from AAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
 
-כדי להציג את התפריט של AAPS במהירות, הקישו פעמיים על קריאת גלוקוז הדם במסך. עם הקשה כפולה בעקומת הגלוקוז בדם, אתם יכולים לשנות את קנה מידת הזמן בתצוגה..
+To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
 
 ## תצוגות שעון זמינות
 
 ![Available watchfaces](../images/Watchface_Types.png)
 
-### תצוגות שעון חדשות החל מגרסה AndroidAPS 2.8
+(Watchfaces-new-watchface-as-of-AAPS-2-8)=
+
+### New watchface as of AAPS 2.8
 
 ![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
 
@@ -59,31 +63,31 @@ AndroidAPS מותאם להיות *נשלט* על ידי שעוני Android Wear.
 
 ## תצוגת שעות AAPSv2 - מקרא
 
-![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
+![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
 
-A - זמן שעבר מאז הפעילות האחרונה של הלופ
+A - time since last loop run
 
-B - קריאת חיישון גלוקוז רציף
+B - CGM reading
 
-C - דקות שעברו מאז קריאת חיישן הסוכר האחרונה
+C - minutes since last CGM reading
 
-D - שינוי בהשוואה לקריאה האחרונה מהחיישן (ב-mmol או mg/dl)
+D - change compared to last CGM reading (in mmol or mg/dl)
 
-E - שינוי ממוצע בקריאות החיישן ב-15 הדקות האחרונות
+E - average change CGM reading last 15 minutes
 
-F - סוללת הטלפון
+F - phone battery
 
-G - המינון הבזאלי (מוצג ביחידות לשעה ובאחוזים כאשר מופעל מינון בזאלי זמני)
+G - basal rate (shown in U/h during standard rate and in % during TBR)
 
-H - (אינטראקציה של גלוקוז בדם - BGI) -> המידה בה הסוכר בדם צפוי לעלות או לרדת על בסיס פעולת האינסולין בלבד.
+H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
-I - פחמימות (פחמימות זמינות או ממושכות עתידיות)
+I - carbs (carbs on board | e-carbs in the future)
 
-J - אינסולין פעיל (בולוס או בזאלי)
+J - insulin on board (from bolus | from basal)
 
 ## גישה לתפריט הראשי של AAPS
 
-על מנת לגשת לתפריט הראשי של AAPS אתם יכולים להשתמש בחלופות הבאות:
+To access main menu of AAPS you can use on of following options:
 
 * הקשה כפולה בערך הגלוקוז בדם
 * לבחור בצלמית AAPS בתפריט האפליקציות בשעון
@@ -91,9 +95,9 @@ J - אינסולין פעיל (בולוס או בזאלי)
 
 ## הגדרות (בשעון wear)
 
-על מנת לגשת להגדרות של תצוגת השעון, כנסו לתפריט הראשי של AAPS, החליקו למעלה ובחרו "הגדרות".
+To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
 
-כוכבית מלאה מורה על מצב מאושר (**On**), וכוכבית ריקה מורה על לא מאושר (**Off**):
+Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
 
 ![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
@@ -101,6 +105,8 @@ J - אינסולין פעיל (בולוס או בזאלי)
 
 * ** רטט בזמן בולוס** (ברירת מחדל `On`):
 * **יחידות לפעולות** (ברירת מחדל `mg/dl`): אם **On** יחידות לפעולות `mg/dl`, אם **Off** היחידה היא `mmol/l`. בשימוש כאשר מוגדר יעד זמני (TT) מהשעון.
+
+(Watchfaces-watchface-settings)=
 
 ### הגדרות תצוגת פני השעון
 
@@ -153,19 +159,21 @@ J - אינסולין פעיל (בולוס או בזאלי)
 
 * **אחוז האשף** (ברירת המחדל `off`): מאפשר בולוס תיקון מהאשף (הערך הוזן באחוזים לפני הודעת האישור)
 
+(Watchfaces-complications)=
+
 ## סיבוכים
 
-*סיבוכים* הינו מונח מסורתי של שענות, אשר מתאר תוספים לפנים של השעון - כחלון קטן נוסף או מחוג משני (עם תאריך, יום בשבוע, שלב ירח, וכו'). Wear OS 2.0 מביא מטפורה זו על מנת לאפשר לתוכנות המספקות מידע, כמו הודעות מזג אוויר, מחשבוני כושר ועוד - להיות מוסף לכל פני השעונים שתומכים בסיבוכים.
+*Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
 
-אפליקציית AndroidAPS Wear OS תומכת בסיבוכים מאז גרסה `2.6`, ומאפשרת לכל פני שעון של צד שלישי שתומך בסיבוכים להצגת נתונים קשורים ל-AAPS (גלוקוז בדם עם מגמה, IOB, COB, וכו').
+AAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
 
-סיבוכים משמשים גם כ-**קיצור דרך** לפונקציות של AAPS. על ידי הקשה עליהם תוכלו לפתוח תפריטים ודיאלוגים הקשורים ל-AAPS (מותנה בסוגי הסיבוכים ותצורות).
+Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
 
 ![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
 
 ### סוגי סיבוכים
 
-אפליקציה AAPS Wear OS מספקת רק נתונים גולמיים, לפי פורמטים מוגדרים מראש. אופן הצגת התצורה, הגבולות, הצבעים והגופנים של הסיבוכים הוא באחריות יוצרי פני השעון. מסוגי הסיבוכים הרבים של Wear OS הקיימים, AAPS משתמש ב:
+AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
 
 * `טקסט קצר` - מכיל שתי שורות של טקסט, 7 תווים כל אחת, אליהן מתייחסים לפעמים כערך ותווית. לרוב מוצגים בתוך עיגול או אליפסה - אחד מתחת לאחר, או זה לצד זה. זהו סיבוך עם מקום מוגבל ביותר. AAPS מנסה להסיר תווים לא נחוצים כדי להתאימם: על ידי עיגול ערכים, הסרת אפסים מקדימים או נגררים מהערכים וכו'.
 * `טקסט ארוך` - מכיל שתי שורות של טקסט, עם 20 תווים בערך כל אחד. בדרך כלל מוצגות בתוך מלבן או אליפסה ארוכה - אחת מתחת לשניה. משמש למצבים טקסטואלים יותר מפורטים.
@@ -174,13 +182,13 @@ J - אינסולין פעיל (בולוס או בזאלי)
 
 ### הגדרות סיבוכים
 
-על מנת להוסיף סיבוך לתצוגת פני השעון, עצבו אותו על ידי לחיצה ארוכה והקשה על צלמית גלגל השיניים בהמשך למטה. בהתאם לאופן שבו השעון הספציפי מגדיר אותם - לחצו על מצייני מיקום או היכנסו לתפריט ההגדרות של פני השעון בשביל הסיבוכים. סיבוכים של AAPS מקובצים תחת כפריט בתפריט AAPS.
+To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
 
-כאשר מעצבים סיבוכים בפני שעון, Wear OS יציג ויסנן את רשימת הסיבוכים שבהם אפשר לבחור בהתאם לפני השעון. אם סיבוכים מסויימים לא נמצאים ברשימה זו, יתכן שסוג הסיבוך לא מתאים למיקום זה.
+When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
 
 ### סיבוכים מסופקים על ידי AAPS
 
-AndroidAPS מספק את סיבוכים הבאים:
+AAPS provides following complications:
 
 ![AAPS_Complications_List](../images/Watchface_Complications_List.png)
 
@@ -195,7 +203,7 @@ AndroidAPS מספק את סיבוכים הבאים:
 * **צלמית IoB** (`טקסט קצר`, פותח * בולוס*): מציג ערך אינסולין פעיל עם צלמית סטטית.
 * **סוללת הטלפון** (`ערך טווח`, פותח *סטטוס*): מציג את אחוז טעינת סוללת הטלפון, כפי שמדווח על ידי AAPS. מוצג באחוזים עם צלמית של סוללה שמייצגת את הערך המדווח. יתכן שלא יתעדכן בזמן אמת, אבל כן כאשר נתונים חשובים אחרים של AAPS משתנים (בדרך כלל כל 5 דקות עם קריאה חדשה של גלוקוז בדם).
 
-בנוסף קיימים עוד שלושה סיבוכים של `תמונה גדולה` סוג: **טפט כהה**, ** טפט אפור** ו**טפט בהיר**, המציג טפט סטטי של AAPS.
+Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.
 
 ### הגדרות הקשורות לסיבוכים
 
@@ -287,7 +295,7 @@ While charging, it would be helpful if the display could stay “always-on” an
 
 The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “During charging” or “Always on and charging”
 
-The Android developer options enable your watch to stay awake during charging. To make the developer options available, see https://developer.android.com/training/wearables/get-started/debugging. Set the “Stay awake when charging” to “on” in the developer options”.
+The Android developer options enable your watch to stay awake during charging. To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options”.
 
 Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
 
@@ -295,7 +303,17 @@ Note: not all displays can handle always-on very well. It can cause screen burn-
 
 ![Simplified UI](../images/Watchface_simplified_ui.png)
 
-### Performance and battery life tips
+## Snooze Alert shortcut
+
+It is possible to create a shortcut to snooze the alerts/alarm of AAPS. Muting the sound via your watch is convenient and faster without reaching for your phone. Note; you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
+
+To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
+
+### Snooze xDrip
+
+When you use xDrip and have xDrip installed on the watch, the 'AAPS Snooze Alert' shortcut will also Snooze any xDrip alarm.
+
+## Performance and battery life tips
 
 Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
 
@@ -313,12 +331,14 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
 * Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
 * Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
+* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](Watchfaces-watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
 * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
 * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
 * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
-* Check [list of tested phones and watches](../Getting-Started/Phones#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
+* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
 * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+
+(Watchfaces-troubleshooting-the-wear-app)=
 
 ## Troubleshooting the wear app:
 
@@ -329,13 +349,13 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 ### Sony Smartwatch 3
 
 * The Sony Smartwach 3 is one of the most popular watches to be used with AAPS.
-* Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above.
+* Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AAPS 2.7 and above.
 * A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.md).
 
 ## View Nightscout data
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". ישנן כמה תצוגות לשעונים לבחירה אשר כוללים שינוי ממוצע, אינסולין זמין, מינון בזאלי זמני הנוכחי, פרופילים בזאליים וגרפים של קריאות מדידות גלוקוז בדם.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
 # Pebble
 
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
+Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AAPS then send either SMS or pushover notification.

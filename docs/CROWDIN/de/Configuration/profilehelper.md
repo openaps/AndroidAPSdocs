@@ -30,7 +30,7 @@ Profil-Helfer bietet Datensätze von zwei verschiedenen Kinderkrankenhäusern an
 6. Drücke die Schaltfläche 'PROFILE VERGLEICHEN' oben auf dem Bildschirm.
 7. Es wird der Vergleich der beiden angepassten Profile angezeigt.
 
-Wenn Du mit den Profilanpassungen zufrieden bist, kannst Du das [Profil klonen](../Configuration/profilehelper#profil-klonen) wie unten beschrieben.
+Wenn Du mit den Profilanpassungen zufrieden bist, kannst Du das [Profil klonen](profilehelper-clone-profile) wie unten beschrieben.
 
 ## Vergleiche zwei Profile
 
@@ -43,7 +43,7 @@ Du kannst den Profil-Helfer auch verwenden, um Profile oder Profilwechsel (um ei
 1. Wähle 'Profil-Helfer' aus dem Drei-Punkte-Menü oben rechts auf dem Bildschirm.
 2. Drücke lange auf 'Standard-Profil' und wähle 'Verfügbares Profil' für eine Liste Deiner vorhandenen Profile oder 'Profilwechsel' für eine Liste der zuletzt verwendeten Profilwechsel.
 3. Drücke lange auf den Namen des Profils / Profilwechsels ('Aktuell_LP' im obigen Screenshot) und wähle ein Profil / einen Profilwechsel aus der Liste.
-4. Wechsele den Bildschirm, indem Du auf die rechte, graue Schaltfläche mit der Bezeichnung '2' klickst.
+4. Wechsele den Bildschirm, indem du auf die rechte, graue Schaltfläche mit der Bezeichnung '2' klickst.
 
 ```{image} ../images/ProfileHelper2.png
 :alt: Profile Helper 2
@@ -55,9 +55,10 @@ Du kannst den Profil-Helfer auch verwenden, um Profile oder Profilwechsel (um ei
 8. Drücke die Schaltfläche 'PROFILE VERGLEICHEN' oben auf dem Bildschirm.
 9. Es wird der Vergleich der beiden angepassten Profile angezeigt.
 
+(profilehelper-clone-profile)=
 ## Profil klonen
 
-Wenn Du [lokale Profile](../Configuration/Config-Builder#lokales-profil) verwendest, kannst Du ein Profil / einen Profilwechsel direkt vom Profil-Helfer klonen.
+Wenn Du [lokale Profile](Config-Builder-local-profile) verwendest, kannst Du ein Profil / einen Profilwechsel direkt vom Profil-Helfer klonen.
 
 ```{image} ../images/ProfileHelperClone.png
 :alt: Profile Helper Clone Profil / Profilwechsel

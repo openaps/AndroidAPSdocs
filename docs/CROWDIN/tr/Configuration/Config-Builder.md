@@ -4,13 +4,15 @@ Ayarlarınıza bağlı olarak, ekranın üst kısmındaki bir sekmeden veya hamb
 
 ![Konfigürasyon ayarlarını açmak](../images/ConfBuild_Open_AAPS30.png)
 
-Konfigürasyon ayarları (KONF), modüler özellikleri açıp kapattığınız sekmedir. Sol taraftaki kutular (A) hangisini kullanacağınızı seçmenize izin verir, sağ taraftaki kutular (C) bunları AndroidAPS'de bir sekme (E) olarak görmenizi sağlar. Sağ kutu aktif değilse ekranın sol üst köşesindeki hamburger menüsünü (D) kullanarak fonksiyona ulaşabilirsiniz.
+Konfigürasyon ayarları (KONF), modüler özellikleri açıp kapattığınız sekmedir. Sol taraftaki kutular (A) hangisini kullanacağınızı seçmenize izin verir, sağ taraftaki kutular (C) bunları AAPS'de bir sekme (E) olarak görmenizi sağlar. Sağ kutu aktif değilse ekranın sol üst köşesindeki hamburger menüsünü (D) kullanarak fonksiyona ulaşabilirsiniz.
 
 Modül içinde ek ayarlar mevcut olduğunda, sizi tercihler içindeki belirli ayarlara götürecek olan dişli çarka (B) tıklayabilirsiniz.
 
-**İlk yapılandırma:** AAPS 2.0'dan bu yana bir Kurulum sihirbazı, AndroidAPS'yi kurma sürecinde size rehberlik eder. Ekranın sağ üst tarafındaki 3 nokta menüsüne basın (F) ve kullanmak için 'Kurulum Sihirbazı'nı seçin.
+**İlk yapılandırma:** AAPS 2.0'dan bu yana bir Kurulum sihirbazı, AAPS'i kurma sürecinde size rehberlik eder. Ekranın sağ üst tarafındaki 3 nokta menüsüne basın (F) ve kullanmak için 'Kurulum Sihirbazı'nı seçin.
 
 ![Konfigürasyon ayarları kutusu ve dişli çark](../images/ConfBuild_ConfigBuilder_AAPS30.png)
+
+(Config-Builder-tab-or-hamburger-menu)=
 
 ## Sekme veya hamburger menüsü
 
@@ -18,12 +20,16 @@ Göz simgesinin altındaki onay kutusu ile ilgili program bölümünün nasıl a
 
 ![Sekme veya hamburger menüsü](../images/ConfBuild_TabOrHH_AAPS30.png)
 
+(Config-Builder-profile)=
+
 ## Profil
 
 * Kullanmak istediğiniz bazal profili seçin. Daha fazla kurulum bilgisi için [Profiller](../Usage/Profiles.md) sayfasına bakın.
 * AAPS 3.0'dan itibaren yalnızca yerel profil kullanılabilir.
 
 Ancak Nightscout profilini yerel bir profile senkronize etmek mümkündür. Bunu yapmak için Nightscout editöründe birkaç profilden oluşan tüm veritabanı kaydını klonlamak önemlidir. Lütfen aşağıdaki talimatlara bakın. Eğer kapsamlı bir profildeki büyük değişiklikleri web arayüzü aracılığıyla yapacaksanız, bu işlem verilerin daha kolay girilebilmesine yardımcı olabilir, örn. verileri bir elektronik tablodan manuel olarak kopyalamak.
+
+(Config-Builder-local-profile)=
 
 ### Yerel profil
 
@@ -53,15 +59,17 @@ Bir profil değiştir'me ile kolayca yeni bir yerel profil oluşturabilirsiniz. 
 
 ![Klon profil değişikliği](../images/LocalProfile_ClonePS_AAPS30.png)
 
+(Config-Builder-upload-local-profiles-to-nightscout)=
+
 #### Yerel profilleri Nightscout'a yükleyin
 
-Yerel profiller ayrıca Nightscout'a yüklenebilir. Ayarlar [NSClient tercihlerinde](../Configuration/Preferences#nsclient) bulunabilir.
+Yerel profiller ayrıca Nightscout'a yüklenebilir. Ayarlar [NSClient tercihlerinde](Preferences-nsclient) bulunabilir.
 
 ![Yerel profili NS'a yükleyin](../images/LocalProfile_UploadNS_AASP30.png)
 
 #### Nighscout profil düzenleyicide profili değiştir
 
-Nightscout profil düzenleyicisindeki profildeki değişiklikleri yerel profillerle senkronize edebilirsiniz. Ayarlar [NSClient tercihlerinde](../Configuration/Preferences#nsclient) bulunabilir.
+Nightscout profil düzenleyicisindeki profildeki değişiklikleri yerel profillerle senkronize edebilirsiniz. Ayarlar [NSClient tercihlerinde](Preferences-nsclient) bulunabilir.
 
 Sadece mavi oklu bir profili değil, tüm aktif profiller için Nightscout veritabanı kayıtlarını klonlamak gerekir. Yeni veritabanı kayıtları daha sonra güncel tarihi taşır ve "yerel profil" sekmesi aracılığıyla etkinleştirilebilir.
 
@@ -75,6 +83,8 @@ Profil yardımcısı iki işlev sunar:
 2. Yeni bir profili klonlamak için iki profili veya profil değişimlerini karşılaştırmak
 
 Ayrıntılar, [profil yardımcısı sayfasında](../Configuration/profilehelper.md) açıklanmıştır.
+
+(Config-Builder-insulin)=
 
 ## İnsülin
 
@@ -91,14 +101,14 @@ Ayrıntılar, [profil yardımcısı sayfasında](../Configuration/profilehelper.
 
 * İES her kişi için aynı değildir. Bu yüzden kendiniz test etmelisiniz. 
 * Ancak her zaman en az 5 saat olmalıdır.
-* Fiasp gibi ultra hızlı insülin kullanan birçok insan için, kural olarak 0.0xx ünite mevcut olsa bile, 3-4 saat sonra pratikte gözle görülür bir etkisi yoktur. Bu kalan miktar, örneğin spor sırasında hala görülebilir. Bu nedenle, AndroidAPS, İES olarak minimum 5saat kullanır.
-* Bununla ilgili daha fazla bilgiyi [bu sayfanın](../Getting-Started/Screenshots#insulin-profile) İnsülin Profili bölümünde okuyabilirsiniz. 
+* Fiasp gibi ultra hızlı insülin kullanan birçok insan için, kural olarak 0.0xx ünite mevcut olsa bile, 3-4 saat sonra pratikte gözle görülür bir etkisi yoktur. Bu kalan miktar, örneğin spor sırasında hala görülebilir. Bu nedenle, AAPS, İES olarak minimum 5saat kullanır.
+* Bununla ilgili daha fazla bilgiyi [bu sayfanın](Screenshots-insulin-profile) İnsülin Profili bölümünde okuyabilirsiniz.
 
 ### İnsülin tipi farklılıkları
 
 * 'Hızlı Etkili', 'Ultra Hızlı' ve 'Lyumjev' için İES, kendiniz ayarlayabileceğiniz tek değişkendir ve zirve zamanı sabittir. 
 * Free-Peak (serbest-zirve), hem İES'i hem de zirveye ulaşma süresini ayarlamanıza olanak tanır fakat yalnızca bu ayarların etkilerini bilen ileri düzey kullanıcılar tarafından kullanılmalıdır. 
-* [İnsülin eğrisi grafiği](../Getting-Started/Screenshots#insulin-profile), farklı eğrileri anlamanıza yardımcı olur. 
+* [İnsülin eğrisi grafiği](Screenshots-insulin-profile), farklı eğrileri anlamanıza yardımcı olur.
 * Yukarıda bir sekme olarak görüntülemek için onay kutusunu etkinleştirebilirsiniz. Diğer türlü hamburger menüsünde olacaktır.
 
 #### Hızlı etkili Oref
@@ -117,6 +127,8 @@ Ayrıntılar, [profil yardımcısı sayfasında](../Configuration/profilehelper.
 * İES = en az 5.0s
 * Maks. zirve = enjeksiyondan 55 dakika sonra (sabit, ayarlanabilir değil)
 
+(Config-Builder-lyumjev)=
+
 #### Lyumjev
 
 ![İnsülin tipi Lyumjev](../images/ConfBuild_Insulin_L.png)
@@ -133,14 +145,16 @@ Ayrıntılar, [profil yardımcısı sayfasında](../Configuration/profilehelper.
 * Profilde daha yüksek belirtilmemişse, İES otomatik olarak 5 saate ayarlanır.
 * Bu etki profili, desteklenmeyen bir insülin veya farklı insülinlerin bir karışımı kullanılıyorsa önerilir.
 
+(Config-Builder-bg-source)=
+
 ## KŞ kaynağı
 
-Kullanmakta olduğunuz kan şekeri kaynağını seçin - daha fazla kurulum bilgisi için [KŞ Kaynağı](BG-Source.rst) sayfasına bakın.
+Kullanmakta olduğunuz kan şekeri kaynağını seçin - daha fazla kurulum bilgisi için [KŞ Kaynağı](BG-Source.md) sayfasına bakın.
 
 ![Konfigürasyon ayarları KŞ kaynağı](../images/ConfBuild_BGSource_AAPS30.png)
 
 * [Kendi Dexcom Uygulamanızı Oluşturun (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - AAPS 3.0'dan itibaren Dexcom G6 için KŞ alıcısı olarak kullanılamaz (detay için [sürüm notları](../Installing-AndroidAPS/Releasenotes#important-hints)na bakınız.
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - Sadece versiyon 4.15.57 ve daha yenisi için desteklenir.
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
@@ -148,6 +162,8 @@ Kullanmakta olduğunuz kan şekeri kaynağını seçin - daha fazla kurulum bilg
 * Glunovo CGM sistemi için [Glunovo Uygulaması](https://infinovo.com/)
 * NSClient KŞ - bu durumda kapalı döngü mobil veri / wifi kapsama alanına bağlı olduğundan önerilmez. CGM verileri yalnızca NS sitenize çevrimiçi bir bağlantı varsa alınacaktır. En iyisi, diğer CGM veri kaynaklarından birinden yerel olarak kullanmaktır.
 * Rastgele KŞ: Rastgele KŞ verisi oluşturur (Yalnızca Demo modu)
+
+(Config-Builder-pump)=
 
 ## Pompa
 
@@ -166,10 +182,10 @@ Kullanmakta olduğunuz pompayı seçin.
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
 
 * [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (ruffy kurulumu gerektirir)
-* [Omnipod Eros](OmnipodEros.rst)
+* [Omnipod Eros](OmnipodEros.md)
 * [Omnipod DASH](OmnipodDASH.md)
 * [Medtronic](MedtronicPump.md)
-* [Diaconn G8](DiaconnG8.rst)
+* [Diaconn G8](DiaconnG8.md)
 * MDI (Çoklu Günlük Enjeksiyon tedaviniz için AAPS önerileri alın)
 * Sanal pompa (henüz sürücüsü olmayan pompa için açık döngü - yalnızca AAPS önerileri)
 
@@ -177,18 +193,22 @@ Kullanmakta olduğunuz pompayı seçin.
 
 Duyarlılık algılama türünü seçin. Farklı tasarımlarla ilgili daha fazla ayrıntı için lütfen [burayı okuyun](../Configuration/Sensitivity-detection-and-COB.md). Bu, hareket halindeyken geçmiş verileri analiz edecek ve insüline normalden daha duyarlı (veya tersine, daha dirençli) tepki verdiğinizi fark ederse ayarlamalar yapacaktır. Duyarlılık algoritması hakkında daha fazla ayrıntıyı [OpenAPS dokümantasyonu](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)nda bulabilirsiniz.
 
-Grafiklerde duyarlılık işaretlenerek beyaz çizgide duyarlılığınızı ana ekranda görüntüleyebilirsiniz. Duyarlılık Tespitinin/[Otoduyarlılık](../Usage/Open-APS-features#autosens)'ın iletilen insülin miktarını otomatik olarak ayarlamasına izin vermek için [8.Görev](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)'de olmanız gerektiğini unutmayın. Bu hedefe ulaşmadan önce, Otoduyarlılık yüzdesi veya grafiğinizdeki çizgi yalnızca bilgi amaçlı görüntülenir.
+Grafiklerde duyarlılık işaretlenerek beyaz çizgide duyarlılığınızı ana ekranda görüntüleyebilirsiniz. Duyarlılık Tespitinin/[Otoduyarlılık](Open-APS-features-autosens)'ın iletilen insülin miktarını otomatik olarak ayarlamasına izin vermek için [8.Görev](Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)'de olmanız gerektiğini unutmayın. Bu hedefe ulaşmadan önce, Otoduyarlılık yüzdesi veya grafiğinizdeki çizgi yalnızca bilgi amaçlı görüntülenir.
+
+(Config-Builder-absorption-settings)=
 
 ### Emilim ayarları
 
 Oref1 ile SMB kullanıyorsanız **min_5m_carbimpact**'i 8 olarak değiştirmelisiniz. Bu değer yalnızca CGM okumalarındaki boşluklar sırasında veya fiziksel aktivite kan şekeri artışını tükettiğinde kullanılır. Bunun dışında AAPS tarafından aktif karbonhidrat bozulur. [Karbonhidrat emiliminin](../Usage/COB-calculation.md) kan reaksiyonlarınıza göre dinamik olarak hesaplanamadığı zamanlarda, karbonhidratlarınıza varsayılan bir bozulma ekler. Temel olarak bir ön güvenliktir.
+
+(Config-Builder-aps)=
 
 ## APS (YPS)
 
 Terapi ayarlamaları için istenen APS algoritmasını seçin. OpenAPS(OAPS) sekmesinde seçilen algoritmanın aktif detayını görüntüleyebilirsiniz.
 
 * OpenAPS AMA (gelişmiş yemek yardımı, algoritmanın 2017'deki durumu) Basit bir ifadeyle faydası, yemek bolusu verdikten sonra eğer karbonhidratları doğru bir şekilde girerseniz, sistem daha hızlı bir şekilde kan şekerine yüksek geçici bazal oranları ile müdahale eder.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (süper mikro bolus, ileri düzey kullanıcılar için en yeni algoritma) [9. Görevde olmanız gerekir](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) ve OpenAPS SMB'yi kullanmak için min_5m_carbimpact değeri Konfigürasyon ayarları> Duyarlılık algılaması > Oref1 Duyarlılık ayarlarında 8 olarak ayarlanmalıdır.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (süper mikro bolus, ileri düzey kullanıcılar için en yeni algoritma) [9. Görevde olmanız gerekir](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) ve OpenAPS SMB'yi kullanmak için min_5m_carbimpact değeri Konfigürasyon ayarları> Duyarlılık algılaması > Oref1 Duyarlılık ayarlarında 8 olarak ayarlanmalıdır.
 
 ## Döngü
 
@@ -196,17 +216,21 @@ Terapi ayarlamaları için istenen APS algoritmasını seçin. OpenAPS(OAPS) sek
 
 ![Konfigürasyon ayarları - döngü modu](../images/ConfigBuilder_LoopLGS.png)
 
+(Config-Builder-open-loop)=
+
 ### Açık Döngü
 
 * AAPS, mevcut tüm verileri (AİNS, AKARB, KŞ...) sürekli olarak değerlendirir ve gerekirse tedavinizi nasıl ayarlayacağınız konusunda tedavi önerilerinde bulunur. 
 * (kapalı döngüde olduğu gibi) Öneriler otomatik olarak yürütülmeyecektir. Uyumlu bir pompa (Dana R/RS veya Accu Chek Combo) kullanıyorsanız, pompaya manuel olarak veya bir düğme kullanılarak girilmelidir. 
-* Bu seçenek, AndroidAPS'in nasıl çalıştığını veya desteklenmeyen bir pompa kullanıp kullanmadığınızı öğrenmek içindir.
+* Bu seçenek, AAPS'in nasıl çalıştığını veya desteklenmeyen bir pompa kullanıp kullanmadığınızı öğrenmek içindir.
+
+(Config-Builder-closed-loop)=
 
 ### Kapalı Döngü
 
 * AAPS, mevcut tüm verileri (AİNS, AKARB, KŞ...) sürekli olarak değerlendirir ve ayarlanan hedef aralığa veya değere ulaşmak için (yani sizin tarafınızdan fazla müdahale olmadan) gerekirse tedaviyi (bolus iletimi, geçici bazal oranı, hipo öncesi insülin durdurma vb.) otomatik olarak ayarlar. 
 * Kapalı Döngü, bireysel olarak ayarlayabileceğiniz çok sayıda güvenlik limiti dahilinde çalışır.
-* Kapalı Döngü yalnızca [6. Hedef](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)i veya daha üstünü tamamladıysanız mümkündür ve desteklenen bir pompa kullanmanız gerekir.
+* Kapalı Döngü yalnızca [6. Hedef](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)i veya daha üstünü tamamladıysanız mümkündür ve desteklenen bir pompa kullanmanız gerekir.
 * Not: Kapalı döngü modunda hedef aralığı yerine tek bir hedef (yani 5,0 - 7,0 mmol veya 90 - 125 mg/dl yerine 5,5 mmol veya 100 mg/dl) önerilir.
 
 ### Düşük Glikoz Süspansiyonu (LGS)
@@ -224,7 +248,7 @@ Terapi ayarlamaları için istenen APS algoritmasını seçin. OpenAPS(OAPS) sek
 
 ## Görevler (öğrenme programı)
 
-AndroidAPS, adım adım gerçekleştirmeniz gereken bir öğrenme programına (görevlere) sahiptir. Bunun amacı, güvenli bir şekilde kapalı döngü sistemi kurmak için size rehberlik etmektir. Her şeyi doğru bir şekilde kurmanızı ve sistemin tam olarak ne yaptığını anlamanızı garanti eder. Sisteme güvenmenizin tek yolu bu.
+AAPS, adım adım gerçekleştirmeniz gereken bir öğrenme programına (görevlere) sahiptir. Bunun amacı, güvenli bir şekilde kapalı döngü sistemi kurmak için size rehberlik etmektir. Her şeyi doğru bir şekilde kurmanızı ve sistemin tam olarak ne yaptığını anlamanızı garanti eder. Sisteme güvenmenizin tek yolu bu.
 
 Düzenli olarak [ayarlarınızı dışa aktarmalısınız](../Usage/ExportImportSettings.md) (görevlerin ilerlemesi dahil). Akıllı telefonunuzu daha sonra değiştirmeniz durumunda (yeni satın alma, ekran hasarı vb.) bu ayarları kolayca içe aktarabilirsiniz.
 
@@ -232,13 +256,13 @@ Daha fazla bilgi için [Görevler](../Usage/Objectives.md) sayfasına bakın.
 
 ## Tedaviler
 
-Tedaviler (TEDAVİ) sekmesine bakarsanız, nightcout'a yüklenen tedavileri görebilirsiniz. Bir girişi düzenlemek veya silmek isterseniz (örneğin beklediğinizden daha az karbonhidrat yediniz) tedavilerden 'Kaldır'ı seçin ve [ana ekranda karbonhidrat düğmesi](../Getting-Started/Screenshots#carb-correction) aracılığıyla yeni değeri girin. (gerekirse zamanı değiştirin)
+Tedaviler (TEDAVİ) sekmesine bakarsanız, nightcout'a yüklenen tedavileri görebilirsiniz. Bir girişi düzenlemek veya silmek isterseniz (örneğin beklediğinizden daha az karbonhidrat yediniz) tedavilerden 'Kaldır'ı seçin ve [ana ekranda karbonhidrat düğmesi](Screenshots-carb-correction) aracılığıyla yeni değeri girin. (gerekirse zamanı değiştirin)
 
 ## Genel
 
 ### Genel Bakış
 
-Döngünüzün mevcut durumu ve en yaygın eylemler için düğmeleri görüntüler (ayrıntılar için [GİRİŞ ekranı bölümüne bakın](../Getting-Started/Screenshots.md)). Ayarlara dişli çark tıklanarak erişilebilir.
+Döngünüzün mevcut durumu ve en yaygın eylemler için butonları görüntüler (ayrıntılar için [GİRİŞ ekranı bölümüne bakın](../Getting-Started/Screenshots.md)). Ayarlara dişli çark tıklanarak erişilebilir.
 
 #### Ekranı açık tut
 
@@ -279,11 +303,11 @@ Kateterinizin (kanülünüzün) uzunluğuna bağlı olarak, doldurma/hazırlama 
 
 #### Görüntüleme aralığı
 
-AndroidAPS ve akıllı saatteki KŞ grafiği görünümü için yüksek ve düşük izleri seçin. Bu yalnızca görselleştirme içindir. KŞ'nizin hedef aralığı değildir. Örnek: 70 - 180 mg/dl veya 3,9 - 10 mmol/l
+AAPS ve akıllı saatteki KŞ grafiği görünümü için yüksek ve düşük izleri seçin. Bu yalnızca görselleştirme içindir. KŞ'nizin hedef aralığı değildir. Örnek: 70 - 180 mg/dl veya 3,9 - 10 mmol/l
 
 #### Kısa sekme başlıkları
 
-AndroidAPS'deki sekme başlıklarının uzun (ör. EYLEMLER, YEREL PROFİL, OTOMASYON) veya kısa (ör. EYLEM, YP, OTO) olmasını seçebilirsiniz.
+AAPS'deki sekme başlıklarının uzun (ör. EYLEMLER, YEREL PROFİL, OTOMASYON) veya kısa (ör. EYLEM, YP, OTO) olmasını seçebilirsiniz.
 
 #### Tedavi diyaloglarında not alanını göster
 
@@ -291,32 +315,38 @@ Tedavileri girerken bir not alanı isterseniz bu seçeneği işaretleyin.
 
 #### Durum ışıkları
 
-Kanül yaşı, insülin yaşı, sensör yaşı, pil yaşı, rezervuar seviyesi veya pil seviyesi için genel bakışta [durum ışıklarının](../Configuration/Preferences#status-lights) görünmesini istiyorsanız bu seçeneği işaretleyin. Uyarı seviyesine ulaşıldığında durum ışığının rengi sarıya döner. Kritik seviyeye ulaştığında kırmızı renkte görünecektir.
+Kanül yaşı, insülin yaşı, sensör yaşı, pil yaşı, rezervuar seviyesi veya pil seviyesi için genel bakışta [durum ışıklarının](Preferences-status-lights) görünmesini istiyorsanız bu seçeneği işaretleyin. Uyarı seviyesine ulaşıldığında durum ışığının rengi sarıya döner. Kritik seviyeye ulaştığında kırmızı renkte görünecektir.
 
 #### Gelişmiş Ayarlar
 
-**Bolus sihirbazı sonucunun bu kadarını iletin**: SMB kullanırken, birçok kişi ihtiyaç duyulan insülinin %100'ünü yemek bolusu olarak iletmez, sadece bir kısmını (örn. %75) gönderir ve SMB, UAM ile (Bildirilmemiş yemek algılama) gerisini halleder. Bu ayarda, bolus sihirbazının hesaplaması için varsayılan bir yüzde değer seçebilirsiniz. Bu ayar %75 ise ve 10u bolus yapmanız gerekiyorsa, bolus sihirbazı yalnızca 7,5 ünitelik bir öğün bolusu önerecektir.
+**Bolus sihirbazı sonucunun bu kadarını iletin**: SMB kullanırken, birçok kişi ihtiyaç duyulan insülinin %100'ünü yemek bolusu olarak iletmez, sadece bir kısmını (örn. %75) gönderir ve SMB, UAM ile (Bildirilmemiş yemek algılama) gerisini halleder. Bu ayarda, bolus sihirbazının hesaplaması için varsayılan bir yüzde değer seçebilirsiniz. Bu ayar %75 ise ve 10ü bolus yapmanız gerekiyorsa, bolus sihirbazı yalnızca 7,5 ünitelik bir öğün bolusu önerecektir.
 
-**Sihirbazda süper bolus işlevini etkinleştirin** (*süper mikro bolustan* farklıdır!): Dikkatli kullanın ve gerçekte ne işe yaradığını öğrenene kadar etkinleştirmeyin. Temel olarak, sonraki iki saat için bazal bolusa eklenir ve iki saatlik sıfır geçici bazal etkinleştirilir. **AAPS döngü işlevleri devre dışı bırakılacak - bu nedenle dikkatli kullanın! SMB kullanırsanız, AAPS döngü işlevleri ["SMB'yi sınırlamak için maks. bazal dakika"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to) içindeki ayarlarınıza göre devre dışı bırakılacaktır. SMB kullanmazsanız, döngü işlevleri iki saat boyunca devre dışı bırakılır.** Süper bolus ile ilgili ayrıntılara [buradan ulaşabilirsiniz](https://www. diyabetnet.com/diabetes-technology/blue-skying/super-bolus).
+**Sihirbazda süper bolus işlevini etkinleştirin** (*süper mikro bolustan* farklıdır!): Dikkatli kullanın ve gerçekte ne işe yaradığını öğrenene kadar etkinleştirmeyin. Temel olarak, sonraki iki saat için bazal bolusa eklenir ve iki saatlik sıfır geçici bazal etkinleştirilir. **AAPS döngü işlevleri devre dışı bırakılacak - bu nedenle dikkatli kullanın! SMB kullanırsanız, AAPS döngü işlevleri ["SMB'yi sınırlamak için maks. bazal dakika"](Open-APS-features-max-minutes-of-basal-to-limit-smb-to) içindeki ayarlarınıza göre devre dışı bırakılacaktır. SMB kullanmazsanız, döngü işlevleri iki saat boyunca devre dışı bırakılır.** Süper bolus ile ilgili ayrıntılara [buradan ulaşabilirsiniz](https://www. diyabetnet.com/diabetes-technology/blue-skying/super-bolus).
+
+(Config-Builder-actions)=
 
 ### Eylemler
 
 * Ortak özelliklere hızla erişmek için bazı butonlar.
-* Ayrıntılar için [AAPS ekran görüntülerine](../Getting-Started/Screenshots#action-tab) bakın.
+* Ayrıntılar için [AAPS ekran görüntülerine](Screenshots-action-tab) bakın.
 
 ### Otomasyon
 
 Kullanıcı tanımlı otomasyon görevleri. Lütfen otomasyonla ilgili [burayı okuyun](../Usage/Automation.md).
 
+(Config-Builder-sms-communicator)=
+
 ### SMS Kominikatör
 
-Ebeveynlerin bazı AndroidAPS özelliklerini uzaktan SMS yoluyla kontrol etmesine izin verir, daha fazla kurulum bilgisi için [SMS Komutları](../Children/SMS-Commands.md)'na bakın.
+Ebeveynlerin bazı AAPS özelliklerini uzaktan SMS yoluyla kontrol etmesine izin verir, daha fazla kurulum bilgisi için [SMS Komutları](../Children/SMS-Commands.md)'na bakın.
 
 ### Yiyecek
 
 Nightscout gıda veritabanında tanımlanan yemek ön ayarlarını görüntüler, daha fazla kurulum bilgisi için [Nightscout Beni Oku](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods)'ya bakın.
 
-Not: Girişler, AndroidAPS hesaplayıcısında kullanılamaz. (Sadece Görüntüleme)
+Not: Girişler, AAPS hesap makinesinde kullanılamaz. (Sadece Görüntülenir)
+
+(Config-Builder-wear)=
 
 ### Wear
 
@@ -337,8 +367,8 @@ Döngü bilgilerini xDrip+ saat arayüzünde görüntüleyin (Eğer AAPS/[AAPS v
 
 ### NSClient
 
-* AndroidAPS verilerinizin Nightscout ile senkronizasyonunu ayarlayın.
-* [Tercihler](../Configuration/Preferences#nsclient) içindeki ayarlar, dişli çark tıklanarak açılabilir.
+* AAPS verilerinizin Nightscout ile senkronizasyonunu ayarlayın.
+* [Tercihler](Preferences-nsclient) içindeki ayarlar, dişli çark tıklanarak açılabilir.
 
 ### Bakım
 

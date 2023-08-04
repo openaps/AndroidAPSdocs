@@ -18,21 +18,22 @@ Auf einem Windows 10 PC sieht es in etwa so aus:
 
 Neben anderen werden folgende Einstellungen exportiert:
 
-- [Automation](../Usage/Automation.md) Regeln
+- [Automation](../Usage/Automation.md) Ereignisse
 - Einstellungen des [Konfigurations-Generators](../Configuration/Config-Builder.md)
-- Einstellungen der [lokalen Profile](../Configuration/Config-Builder#lokales-profil)
-- Status der [Ziele (Objectives)](../Usage/Objectives.md) inkl. [Ergebnisse der Multiple-Choice-Fragen](../Usage/Objectives#ziel-3-belege-dein-wissen)
-- [Einstellungen im 3-Punkte-Menü](../Configuration/Preferences.md) inkl. [NS Client Einstellungen](../Configuration/Preferences#nightscout-client)
+- Einstellungen für das [lokale Profil](Config-Builder-local-profile)
+- Übersicht über die [Ziele](../Usage/Objectives.md) (Objectives) und der [Testergebnisse](Objectives-objective-3-prove-your-knowledge)
+- [Voreinstellungen](../Configuration/Preferences.md) inkl. der [NS Client Einstellungen](Preferences-nsclient)
 
 ## Verschlüsseltes Backup-Format
 
-Die Sicherung der Einstellungen wird mit einem Master-Passwort verschlüsselt, das in den [Einstellungen](../Configuration/Preferences#master-passwort) festgelegt wird.
+Das Backup ist durch ein Master-Passwort verschlüsselt. Das Master-Passwort kann in den [Einstellungen](Preferences-master-password) festgelegt werden.
 
+(ExportImportSettings-export-settings)=
 ## Exportiere die Einstellungen
 
 - Hamburger Menü (drei Striche oben links am Bildschirm)
 - Wartung
-- Einstellungen exportieren
+- Exportiere die Einstellungen
 
 ```{image} ../images/AAPS_ExportSettings1.png
 :alt: AndroidAPS Export der Einstellungen 1
@@ -40,20 +41,21 @@ Die Sicherung der Einstellungen wird mit einem Master-Passwort verschlüsselt, d
 
 - Datum und Zeit des Exports werden automatisch an den Dateinamen angehängt und zusammen mit dem Pfad angezeigt.
 - Klicke auf "OK'.
-- Gib das [Master-Passwort](../Configuration/Preferences#master-passwort) ein und klicke 'OK'.
+- Gib' Dein [Master-Passwort](Preferences-master-password) ein und klicke auf 'OK'.
 - Der erfolgreiche Export wird am unteren Rand des Bildschirms angezeigt.
 
 ```{image} ../images/AAPS_ExportSettings2.png
 :alt: AndroidAPS Export der Einstellungen 2
 ```
 
+(ExportImportSettings-import-settings)=
 ## Importiere die Einstellungen
 
-**Während einer aktiven Pod-Sitzung keine Einstellungen importieren** - weitere Details findest Du auf der [Seite zum Omnipod](../Configuration/OmnipodEros#import-settings-from-previous-aaps).
+**Importiere keine Einstelllungen während einer laufenden Pod Session** - vgl. Hinweise auf der [Omnipod Seite](OmnipodEros-import-settings-from-previous-aaps).
 
 - Hamburger Menü (drei Striche oben links am Bildschirm)
 - Wartung
-- Einstellungen importieren
+- Importiere die Einstellungen
 
 ```{image} ../images/AAPS_ImportSettings1.png
 :alt: AndroidAPS Import der Einstellungen 1
@@ -62,7 +64,7 @@ Die Sicherung der Einstellungen wird mit einem Master-Passwort verschlüsselt, d
 - Alle Dateien im Verzeichnis AAPS/preferences/ auf Deinem Smartphone werden in der Liste angezeigt.
 - Datei auswählen.
 - Bestätige den Import durch Klick auf 'OK'.
-- Gib das [Master-Passwort](../Configuration/Preferences#master-passwort) ein und klicke 'OK'.
+- Gib' Dein [Master-Passwort](Preferences-master-password) ein und klicke auf 'OK'.
 
 ```{image} ../images/AAPS_ImportSettings2.png
 :alt: AndroidAPS Import der Einstellungen 2
@@ -88,5 +90,5 @@ Die Sicherung der Einstellungen wird mit einem Master-Passwort verschlüsselt, d
 ## Einstellungs-Datei übertragen
 
 - Der beste Weg, um Einstellungs-Datei auf ein neues Telefon zu übertragen, ist über ein USB-Kabel oder einen Cloud-Service (z.B. Google Drive).
-- Anleitungen dazu findest Du im Netz, z.B. [Android-Hilfe](https://support.google.com/android/answer/9064445?hl=de).
+- Anleitungen dazu findest Du im Netz, z.B. [Android-Hilfe](https://support.google.com/android/answer/9064445?hl=en).
 - Wenn Probleme mit der übertragenen Datei auftreten, versuche eine andere Methode, um die Datei zu übertragen.

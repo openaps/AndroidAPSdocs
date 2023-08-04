@@ -1,216 +1,191 @@
-# SMS Komandos
+# SMS Commands
 
-## Saugumas - svarbiausia
+## Safety First
 
-- AndroidAPS leidžia jums kontroliuoti vaiko telefoną nuotoliniu būdu per tekstinį pranešimą. Jei įgalinate šį SMS komunikatorių, visada prisiminkite, kad telefonas, duodantis nuotolinio valdymo komandas, gali būti pavogtas. Todėl visada jį apsaugokite bent PIN kodu. Rekomenduojamas stiprus slaptažodis arba biometriniai duomenys.
-- Be to, rekomenduojama leisti [dar vienam telefono numeriui](#authorized-phone-numbers) siųsti SMS komandas. Taigi, jei bus pamestas ar pavogtas pagrindinį nuotolinis telefonas, antruoju numeriu galite [laikinai išjungti](#other) SMS komunikatorių.
-- AndroidAPS teikia grįžtamąjį ryšį Sms žinute, jei jūsų nuotolinės komandos, tokios kaip buvo atliktas boluso suleidimas ar profilio keitimas, buvo patvirtintos. Patartina tai nustatyti taip, kad patvirtinimo tekstai būtų siunčiami bent dviem skirtingais telefono numeriais, jei pavogtas vienas iš priimančių telefonų.
-- **Jei bolusuojate per SMS Komandas, jūs privalote įvesti angliavandenius per Nightscout (NSClient, Interneto svetainėje...)!** Jei to nepadarysite AIO bus teisingas su per mažai AAO, kas potencialiai lems, kad korekcinis bolusas nebus leidžiamas, nes AAPS preziumuos, kad yra per daug aktyvaus insulino.
-- Su AndroidAPS versija 2.7, siekiant padidinti saugumą naudojant SMS komandas, turi būti naudojama autentifikavimo programa su laike apribotu vienkartiniu slaptažodžiu.
+- AAPS allows you to control a child's phone remotely via text message. Jei įgalinate šį SMS komunikatorių, visada prisiminkite, kad telefonas, duodantis nuotolinio valdymo komandas, gali būti pavogtas. Todėl visada jį apsaugokite bent PIN kodu. A strong password or biometrics are recommended.
+- Additionally it is recommended to allow a [second phone number](SMS-Commands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](SMS-Commands-other) SMS communicator in case your main remote phone gets lost or stolen.
+- AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Patartina tai nustatyti taip, kad patvirtinimo tekstai būtų siunčiami bent dviem skirtingais telefono numeriais, jei pavogtas vienas iš priimančių telefonų.
+- **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
+- As of AAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
 
-## SMS komandų nustatymas
+## Setup SMS commands
 
 ```{image} ../images/SMSCommandsSetup.png
-:alt: "SMS Komand\u0173 Nustatymas"
+:alt: SMS Commands Setup
 ```
 
-- Dauguma tokių nustatymų kaip laikinas tikslas, AAPS veiksmų sekimas ir t. t. gali būti atliekama per [NSClient programėlę](../Children/Children.md) Android telefone su interneto ryšiu.
-- Bolusai negali būti suleisti per Nightscout, bet jūs galite naudoti SMS komandas.
-- Jei jūs naudojate iPhone kaip sekėjas ir todėl negalite naudoti NSClient programėlės, tam yra papildomos SMS komandos.
-- Savo Android telefono nustatymuose eikite į Programos > AndroidAPS > Leidimai ir įjunkite SMS
+- Most of the adjustments of temp targets, following AAPS etc. can be done on [NSClient app](../Children/Children.md) on an Android phone with an internet connection.
+- Boluses can't be given through Nightscout, but you can use SMS commands.
+- If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
+- In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
 
-### Autorizuoti telefono numeriai
+(SMS-Commands-authorized-phone-numbers)=
 
-- AndroidAPS eikite į **Nustatymus > SMS Komunikatorius** ir įveskite telefono numerį(-ius), iš kurio(-ių) jūs leidžiate SMS komandas (atskirtas kabliataškiu - pvz. +6412345678;+6412345679)
+### Authorized phone numbers
 
-- Įgalinkite "Leisti nuotolines komandas SMS žinutėmis".
+- In AAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
 
-- Jei norite naudoti daugiau nei vieną numerį:
+- Enable 'Allow remote commands via SMS'.
 
-  - Įveskite tik vieną numerį.
+- If you want to use more than one number:
 
-  - Įsitikinkite to vieno numerio veikimu nusiunčiant ir patvirtinant SMS komandą.
+  - Enter just one number.
 
-  - Įveskite papildomą numerį(-ius) atskiriant juos kabliataškiu be tarpo.
+  - Make that single number work by sending and confirming a SMS command.
+
+  - Enter additional number(s) separated by semicolon, no space.
 
     ```{image} ../images/SMSCommandsSetupSpace2.png
-    :alt: "SMS komandos konfig\u016Bravimas. Keli numeriai"
+    :alt: SMS Commands Setup multiple numbers
     ```
 
-### Minutės tarp boluso komandų
+### Minutes between bolus commands
 
-- Jūs galite nustatyti minimalų laiko tarpą tarp bolusų, suleistų SMS komandomis.
-- Dėl saugumo priežasčių turite pridėti bent du autorizuotus telefono numerius šiai reikšmei redaguoti.
+- You can define the minimum delay between two boluses issued via SMS.
+- For safety reasons you have to add at least two authorized phone numbers to edit this value.
 
-### Papildomas privalomas PIN kodas žymeklio gale
+### Additionally mandatory PIN at token end
 
-- Saugumo sumetimais po atsakymo kodo turi būti nurodytas PIN kodas.
+- For safety reasons the reply code must be followed by a PIN.
 
-- PIN taisyklės:
+- PIN rules:
 
-  - nuo 3 iki 6 skaitmenų
-  - ne tokie pat skaitmenys (t. y. 1111)
-  - ne iš eilės (t. y. 1234)
+  - 3 to 6 digits
+  - not same digits (i.e. 1111)
+  - not in a row (i.e. 1234)
 
-### Autentifikavimo sąrankos nustatymas
+### Authenticator setup
 
-- Dviejų veiksnių autentifikavimas naudojamas saugumui pagerinti.
+- Two-factor authentication is used to improve safety.
 
-- Galite naudoti bet kurią Authenticator programą, palaikančią RFC 6238 TOTP žymeklius. Populiarios nemokamos programos yra:
+- You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
 
   - [Authy](https://authy.com/download/)
   - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
   - [LastPass Authenticator](https://lastpass.com/auth/)
   - [FreeOTP Authenticator](https://freeotp.github.io/)
 
-- Įdiekite pasirinktą autentifikavimo programą savo sekėjo telefone ir nuskaitykite AAPS rodomą QR kodą.
+- Install the authenticator app of your choice on your follower phone and scan the QR code shown in AAPS.
 
-- Išbandykite vienkartinį slaptažodį, įvesdami autentifikavimo programoje rodomą prieigos raktą ir PIN, kurį ką tik nustatėte AAPS. Pavyzdys:
+- Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. Example:
 
-  - Jūsų privalomas PIN yra 2020
-  - TOTP žymeklis iš autentifikatoriaus programėlės yra 457051
-  - Įveskite 4570512020
+  - Your mandatory PIN is 2020
+  - TOTP token from the authenticator app is 457051
+  - Enter 4570512020
 
-- Raudonas tekstas „NETEISINGAS PIN“ pasikeis **automatiškai** į žalią „OK“, jei įvestis teisinga. Nėra mygtuko, kurį galėtumėte paspausti! \*\*
+- The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **There is no button you can press!**
 
-- Laikas abiejuose telefonuose turi būti sinchronizuotas. Geriausia praktika - naudoti automatinį tinklo pateiktą laiką. Net ir nežymūs laiko skirtumai gali sukelti autentiškumo nustatymo problemų.
+- The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
 
-- Naudokite mygtuką "RESET AUTHENTICATORS" (Iš naujo nustatyti autentifikatorius), jei norite pašalinti nuostatas.  (Anuliuojant autentifikaciją, Jūsų sukurti autentifikavimo kodai taps negaliojančiais. Jums reikės juos nustatyti dar kartą)
+- Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
 
-## SMS komandų naudojimas
+## Use SMS commands
 
-- Siųskite SMS žinutę iš jūsų patvirtinto(-ų) telefono numerio(-ių) į pagrindinį AndroidAPS telefoną, naudodami bet kurią iš toliau nurodytų [komandų](../Children/SMS-Commands#commands).
+- Send a SMS to the phone with AAPS running from your approved phone number(s) using any of the [commands](SMS-Commands-commands) below.
 
-- AAPS telefonas reaguos patvirtindamas komandos ar būsenos prašymą.
+- The AAPS phone will respond to confirm success of command or status requested.
 
-- Patvirtinkite komandą, jei reikia, nusiųsdami kodą. Pavyzdys:
+- Confirm command by sending the code where necessary. Example:
 
-  - Jūsų privalomas PIN yra 2020
-  - TOTP žymeklis iš autentifikatoriaus programėlės yra 457051
-  - Įveskite 4570512020
+  - Your mandatory PIN is 2020
+  - TOTP token from the authenticator app is 457051
+  - Enter 4570512020
 
-**Patarimas**: jei reikia siųsti didelį kiekį SMS, naudinga abiejuose mobiliuosiuose telefonuose turėti mažos kainos SMS.
+**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
-## Komandos
+(SMS-Commands-commands)=
+## Commands
 
-Komandos turi būti išsiųstos anglų kalba, atsakymą gausite savo vietine kalba, jei eilutė jau yra [išversta](../translations#translate-strings-for-androidaps-app).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](translations-translate-strings-for-AAPS-app).
 
-```{eval-rst}
-.. nuotrauka:: ../images/SMSCommands.png
-  :alt: SMS komandų pavyzdys
+```{image} ../images/SMSCommands.png
+:alt: SMS Commands Example
 ```
 
 ### Ciklas
 
-- LOOP STOP/DISABLE
-  \* Atsakymas: Ciklas išjungtas
+- LOOP STOP/DISABLE \* Response: Loop has been disabled
 
-- LOOP START/ENABLE
-  \* Atsakymas: Ciklas įjungtas
+- LOOP START/ENABLE \* Response: Loop has been enabled
 
-- LOOP-STATUS
+- LOOP STATUS
 
-  - Atsakymas priklauso nuo esamos būsenos
+  - Response depends on actual status
 
-    - Ciklas išjungtas
-    - Ciklas įjungtas
-    - Sustabdyta (10 m)
+    - Loop is disabled
+    - Loop is enabled
+    - Suspended (10 min)
 
-- LOOP SUSPEND 20
-  \* Atsakymas: Ciklas sustabdytas 20 minučių
+- LOOP SUSPEND 20 \* Response: Loop suspended for 20 minutes
 
-- LOOP RESUME
-  \* Atsakymas: Ciklas atnaujintas
+- LOOP RESUME \* Response: Loop resumed
 
-### NGJ duomenys
+### CGM data
 
-- BG
-  \* Atsakymas: Paskutinis KG: 5.6 prieš 4 min, Delta: -0,2 mmol, AIO: 0.20U (Boluso: 0.10U Bazės: 0.10U)
-- CAL 5.6
-  \* Atsakymas: Norėdami išsiųsti kalibraciją 5.6, atsakykite su kodu iš Authenticator programos, po atsakymo kodo turi būti nurodytas PIN kodas
-  \* Atsakymas po to, kai AAPS gauna teisingą kodą: kalibravimas išsiųstas (**jei įdiegta xDrip+. xDrip+ turi būti aktyvi funkcija „Priimti kalibravimą"**)
+- BG \* Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- CAL 5.6 \* Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN \* Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
 
-### Valandinė bazė
+### Basal
 
-- BASAL STOP/CANCEL
-  \* Atsakymas: Norėdami sustabdyti laikiną bazę, atsakykite su kodu iš Authenticator programos, po atsakymo kodo turi būti nurodytas PIN kodas
-- BASAL 0.3
-  \* Atsakymas: Norėdami nustatyti 0,3vv/h bazę 30 min, atsakykite su kodu iš Authenticator programos, po atsakymo kodo turi būti nurodytas PIN kodas
-- BASAL 0.3 20
-  \* Atsakymas: Norėdami nustatyti 0,3vv/h bazę 20 min, atsakykite su kodu iš Authenticator programos, po atsakymo kodo turi būti nurodytas PIN kodas
-- BASAL 30%
-  \* Atsakymas: Norėdami nustatyti 30% bazę 30 min, atsakykite su kodu iš Authenticator programos, po atsakymo kodo turi būti nurodytas PIN kodas
-- BASAL 30% 50
-  \* Atsakymas: Norėdami nustatyti 30% bazę 50 min, atsakykite su kodu iš Authenticator programos, po atsakymo kodo turi būti nurodytas PIN kodas
+- BASAL STOP/CANCEL \* Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
+- BASAL 0.3 \* Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
+- BASAL 0.3 20 \* Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
+- BASAL 30% \* Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
+- BASAL 30% 50 \* Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
 
-### Bolusas
+### Bolus
 
-Per 15 minučių po paskutinio AAPS boluso arba po paskutinės SMS komandos, boluso SMS žinute siųsti neįmanoma. Reikšmę galite pakoreguoti tik įvedę bent du telefonų numerius! Taigi atsakymas priklauso nuo to, kada buvo suleistas paskutinis bolusas.
+Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
 
-- BOLUS 1.2
-  \* Atsakymas: Norėdami suleisti 1,2vv bolusą, atsakykite su kodu iš Authenticator programos, po atsakymo kodo turi būti nurodytas PIN kodas
-  \* Atsakymas B: Nuotolinis bolusas negalimas. Bandykite dar kartą vėliau.
-- BOLUS 0.60 MEAL
-  \* Valgymo laikinas tikslas nustatomas pasirenkamu parametru MEAL (standartinės vertės yra 90 mg/dL, 5,0 mmol/L 45 minutės).
-  \* Atsakymas: Norėdami suleisti 0,6vv maisto bolusą, atsakykite su kodu iš Authenticator programos, po atsakymo kodo turi būti nurodytas PIN kodas
-  \* Atsakymas B: Nuotolinis bolusas negalimas.
-- CARBS 5
-  \* Atsakymas: Norėdami įvesti 5 g 12:45, atsakykite su kodu iš Authenticator programos, po atsakymo kodo turi būti nurodytas PIN kodas
-- CARBS 5 17:35/5:35PM
-  \* Atsakymas: Norėdami įvesti 5 g 17:35, atsakykite su kodu iš Authenticator programos, po atsakymo kodo turi būti nurodytas PIN kodas
-- EXTENDED STOP/CANCEL
-  \* Atsakymas: Norėdami sustabdyti ištęstą bolusą, atsakykite su kodu iš Authenticator programos, po atsakymo kodo turi būti nurodytas PIN kodas
-- EXTENDED 2 120
-  \* Atsakymas: Norėdami nustatyti 2vv ištęstą bolusą 120 min, atsakykite su kodu iš Authenticator programos, po atsakymo kodo turi būti nurodytas PIN kodas
+- BOLUS 1.2 \* Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available. Try again later.
+- BOLUS 0.60 MEAL \* If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins). \* Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available.
+- CARBS 5 \* Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
+- CARBS 5 17:35/5:35PM \* Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
+- EXTENDED STOP/CANCEL \* Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
+- EXTENDED 2 120 \* Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
 
 ### Profilis
 
-- PROFILE STATUS
-  \* Atsakymas: Profilis1
-- PROFILE LIST
-  \* Atsakymas: 1.\`Profilis1\` 2.\`Profilis2\`
-- PROFILE 1
-  \* Atsakymas: Norėdami nustatyti profilį į Profilis1 100%, atsakykite su kodu iš Authenticator programos, po atsakymo kodo turi būti nurodytas PIN kodas
-- PROFILE 2 30
-  \* Atsakymas: Norėdami nustatyti profilį į Profilis2 30%, atsakykite su kodu iš Authenticator programos, po atsakymo kodo turi būti nurodytas PIN kodas
+- PROFILE STATUS \* Response: Profile1
+- PROFILE LIST \* Response: 1.\`Profile1\` 2.\`Profile2\`
+- PROFILE 1 \* Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
+- PROFILE 2 30 \* Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+
+(SMS-Commands-other)=
 
 ### Kiti
 
-- TREATMENTS REFRESH
-  \* Atsakymas: Atnaujinti terapiją iš NS
-- NSCLIENT RESTART
-  \* Atsakymas: NSCLIENT RESTART 1 gavėjas
-- PUMP
-  \* Atsakymas: Paskutinis ryšys: prieš 1 min LB: 0.00U/h @11:38 5/30min AIO: 0.5 U Rezervuaras: 34U Baterija: 100
-- PUMP CONNECT
-  \* Atsakas: Pompa prijungta
-- PUMP DISCONNECT *30*
-  \* Atsakymas: Norėdami atjungti pompą *30* min, atsakykite su kodu iš Authenticator programos, po atsakymo kodo turi būti nurodytas PIN kodas
-- SMS DISABLE/STOP
-  \* Atsakas: Norėdami išjungti SMS nuotolinį valdymą, atsakykite su kodu Any. Atminkite, kad nuotolinį valdymą galite suaktyvinti tik AAPS pagrindiniame išmaniajame telefone.
-- TARGET MEAL/ACTIVITY/HYPO
-  \* Atsakymas: Norėdami nustatyti laikiną tikslą MEAL/ACTIVITY/HYPO, atsakykite su kodu iš Authenticator programos, po atsakymo kodo turi būti nurodytas PIN kodas
-- TARGET STOP/CANCEL
+- TREATMENTS REFRESH \* Response: Refresh treatments from NS
+- NSCLIENT RESTART \* Response: NSCLIENT RESTART 1 receivers
+- PUMP \* Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- PUMP CONNECT \* Response: Pump reconnected
+- PUMP DISCONNECT *30* \* Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
+- SMS DISABLE/STOP \* Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
+- TARGET MEAL/ACTIVITY/HYPO \* Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
+- TARGET STOP/CANCEL \* Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
+- HELP \* Response: BG, LOOP, TREATMENTS, .....
+- HELP BOLUS \* Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
-> - Atsakymas: Norėdami atšaukti Laikiną Tikslą, atsakykite su kodu iš Authenticator programos, po atsakymo kodo turi būti nurodytas PIN kodas
-
-- HELP
-  \* Atsakymas: BG, LOOP, TREATMENTS, .....
-- HELP BOLUS
-  \* Atsakymas: BOLUS 1.2 BOLUS 1.2 MEAL
-
+(SMS-Commands-troubleshooting)=
 ## Trikčių šalinimas
 
-### Kelios SMS
+### Multiple SMS
 
-Jei gaunate tą pačią žinutę, vėl ir vėl iš naujo (t. y. profilio pakeitimas) tikriausiai nustatėte nesibaigiantį ciklą su kita programa. Pavyzdžiui, tai galėtų būti xDrip+. Tokiu atveju įsitikinkite, kad xDrip+ (arba kita programa, prijungta prie Nightscout) neįkelia jokių terapijos duomenų.
+If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. This could be xDrip+, for example. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS.
 
-Jei kita programa yra įdiegta keliuose telefonuose, būtinai išjunkite įkėlimą į juos visus.
+If the other app is installed on multiple phones make sure to deactivate upload on all of them.
 
-### SMS komandos neveikia Samsung telefonuose
+### SMS commands not working on Samsung phones
 
-Buvo pranešimų, kad po atnaujinimo Galaxy S10 SMS komandos nustojo veikti. Tai galima išspręsti išjungiant parinktį "Siųsti kaip pokalbio pranešimą“.
+There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabling 'send as chat message'.
 
 ```{image} ../images/SMSdisableChat.png
-:alt: "I\u0161jungti SMS kaip pokalbio prane\u0161im\u0105"
+:alt: Disable SMS as chat message
 ```
+### Android Messages App
+
+If you are having issues sending or receiving SMS commands with the Android Messages app disable end-to-end ecryption on both caregiver and child's phones.
+ - open the specific SMS conversation in Messages
+ - Select the options ellipisis in the top right corner
+ - select "Details"
+ - Activate "Only send SMS and MMS messages"

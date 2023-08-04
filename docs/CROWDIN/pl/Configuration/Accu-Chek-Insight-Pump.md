@@ -12,7 +12,7 @@
 
 Note: AAPS will write data always in **first basal rate profile in the pump**.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module#phone) page which Android version is required to run AndroidAPS.)
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](module-phone) page which Android version is required to run AndroidAPS.)
 * The AndroidAPS app installed on your phone
 
 ## Ustawienia
@@ -50,9 +50,11 @@ Note: AAPS will write data always in **first basal rate profile in the pump**.
 
 Note: There will be no permanent connection between pump and phone. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
 
+(Accu-Chek-Insight-Pump-settings-in-aaps)=
+
 ## Ustawienia w AAPS
 
-**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences#advanced-settings-nsclient)).
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](Preferences-advanced-settings-nsclient)).
 
 ![Screenshot of Insight Settings](../images/Insight_settings.png)
 
@@ -112,13 +114,15 @@ Configure alarms in the pump as follows:
 
 This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
 
+(Accu-Chek-Insight-Pump-vibration)=
+
 ### Vibration
 
 Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus).
 
 * Firmware 1.x: No vibration by design.
 * Firmware 2.x: Vibration cannot be disabled.
-* Firmware 3.x: AndroidAPS delivers bolus silently. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+* Firmware 3.x: AndroidAPS delivers bolus silently. (minimum [version 2.6.1.4](Releasenotes-version-2-6-1-4))
 
 Firmware version can be found in the menu.
 
@@ -127,6 +131,8 @@ Firmware version can be found in the menu.
 Battery life for Insight when looping range from 10 to 14 days, max. 20 days. The user reporting this is using Energizer lithium batteries.
 
 The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+
+(Accu-Chek-Insight-Pump-insight-specific-errors)=
 
 ## Typowe błędy
 
@@ -144,4 +150,4 @@ In this case turn off bluetooth on pump AND smartphone for about 10 seconds and 
 
 ## Przekraczanie stref czasowych z pompą Insight
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](Timezone-traveling-insight).

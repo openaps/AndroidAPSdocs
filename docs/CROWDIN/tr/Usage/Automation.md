@@ -6,18 +6,19 @@ Aynı sıklıktaki olaylar için her zaman aynı ayarları değiştirmeniz gerek
 
 Örneğin KŞ'niz çok düşük olduğunda, otomatik olarak yüksek bir geçici hedefe sahip olmaya karar verebilirsiniz. Veya fitness merkezinizdeyseniz, otomatik olarak geçici bir hedef alırsınız.
 
-Otomasyonu kullanmadan önce, manuel [geçici hedeflere](./temptarget.html) veya profil anahtarlarından emin olmalısınız.
+Otomasyonu kullanmadan önce, manuel [geçici hedeflerden ](./temptarget.html) veya profil değişimlerinden emin olmalısınız.
 
-İlk basit kuralınızı oluşturmadan önce otomasyonun nasıl çalıştığını gerçekten anladığınızdan emin olun. **Aksiyon yerine AAPS'nin önce yalnızca bir bildirim göstermesine izin verin.** Otomasyonun doğru zamanda tetiklendiğinden eminseniz, bildirimi gerçek eylemle değiştirin.
+İlk basit kuralınızı oluşturmadan önce otomasyonun nasıl çalıştığını gerçekten anladığınızdan emin olun. **Eylem yerine AAPS'nin önce yalnızca bir bildirim görüntülemesine izin verin.** Otomasyonun doğru zamanda tetiklendiğinden emin olduğunuzda, bildirimi gerçek eylemle değiştirin.
 
 ```{image} ../images/Automation_ConditionAction_RC3.png
-:alt: "Otomasyon ko\u015Fulu + eylem"
+:alt: Otomasyon koşulu + eylem
 ```
 
 ## Bu nasıl kullanılır
 
 Bir otomasyon kurmak için ona bir başlık vermeniz, en az bir koşul ve bir eylem seçmeniz gerekir.
 
+(Automation-important-note)=
 ### Önemli Not
 
 **Döngüyü devre dışı bıraktığınızda otomasyon hala etkindir!**
@@ -25,13 +26,12 @@ Bir otomasyon kurmak için ona bir başlık vermeniz, en az bir koşul ve bir ey
 Bu nedenle, gerekirse bu durumlarda otomasyon kurallarını devre dışı bıraktığınızdan emin olun. Bunu otomasyon kuralınızın adının solundaki kutunun işaretini kaldırarak yapabilirsiniz.
 
 ```{image} ../images/Automation_ActivateDeactivate.png
-:alt: "Otomasyon kural\u0131n\u0131 etkinle\u015Ftirin ve devre d\u0131\u015F\u0131\
-:  \ b\u0131rak\u0131n"
+:alt: Otomasyon kuralını etkinleştirin ve devre dışı bırakın
 ```
 
 ### Otomasyon nerede bulunur
 
-Hamburger menüsünde veya sekmede [Konfigürasyon ayarları içerisinde](../Configuration/Config-Builder#sekme-veya-hamburger-menusu) içindeki ayarlarınıza bağlı olarak, Otomasyon \<../Configuration/Config-Builder.md#otomasyon> öğesini bulacaksınız. \_\_
+[Konfigürasyon ayarlarındaki ayarlarınıza](Config-Builder-tab-or-hamburger-menu) bağlı olarak [Otomasyonu](Config-Builder#automation) ya hamburger menüsünde veya sekme olarak bulacaksınız.
 
 ### Genel
 
@@ -39,7 +39,7 @@ Bazı sınırlar vardır:
 
 - Glikoz değeri 72 ile 270 mg/dl arasında veya 4 ile 15 mmol/l arasında olmalıdır.
 - Profil yüzdesi %70 ile %130 arasında olmalıdır.
-- 5 dk vardır. yürütmeler (ve ilk yürütme) arasındaki zaman sınırı.
+- Yürütmeler (ve ilk yürütme) arasında 5dk. zaman sınırı vardır.
 
 **Lütfen dikkatli olun:**
 
@@ -56,10 +56,10 @@ Birkaç koşul arasından seçim yapabilirsiniz. Burada yalnızca birkaçından 
   - "Veya"
   - "Dışlamalı veya" (bu koşullardan yalnızca birinin geçerli olması durumunda, eylem(ler) in gerçekleşeceği anlamına gelir)
 
-- Zaman vs. yinelenen zaman
+- Zaman ve yinelenen zaman
 
   - zaman = tek seferlik olay
-  - yinelenen zaman = düzenli olarak gerçekleşen bir şey (ör. haftada bir, her iş günü vb.)
+  - yinelenen zaman = düzenli olarak gerçekleşen bir şey (yani haftada bir, her iş günü vb.)
 
 - konum: konfiguration oluşturucuda (Otomasyon), kullanmak istediğiniz konum hizmetini seçebilirsiniz:
 
@@ -82,21 +82,22 @@ Bir veya daha fazla eylem seçebilirsiniz:
 
 - profil yüzdesi
 
-  - \%70 ile %130 arasında olmalıdır
+  - %70 ile %130 arasında olmalıdır
   - yalnızca önceki yüzde %100 olduğunda çalışır
 
-Eyleminizi ekledikten sonra, varsayılan değerlere tıklayarak **varsayılan değerleri** ihtiyacınız olanla değiştirmeyi unutmayın.
+Eyleminizi ekledikten sonra, varsayılan değerlere tıklayarak **varsayılan değerleri ihtiyacınız olanla **değiştirmeyi unutmayın.
 
 ```{image} ../images/Automation_Default_V2_5.png
-:alt: "Otomasyon varsay\u0131lan\u0131 vs. de\u011Ferlerini ayarlay\u0131n"
+:alt: Otomasyon varsayılanı ve ayarlanan değerler
 ```
 
+(Automation-sort-automation-rules)=
 ### Otomasyon kurallarını sıralama
 
 Otomasyon kurallarını sıralamak için ekranın sağ tarafındaki dört satırlı düğmeyi basılı tutun ve yukarı veya aşağı hareket ettirin.
 
 ```{image} ../images/Automation_Sort.png
-:alt: "Otomasyon kurallar\u0131n\u0131 s\u0131ralama"
+:alt: Otomasyon kurallarını sıralama
 ```
 
 ### Otomasyon kurallarını silme
@@ -104,24 +105,25 @@ Otomasyon kurallarını sıralamak için ekranın sağ tarafındaki dört satır
 Bir otomasyon kuralını silmek için çöp kutusu simgesine tıklayın.
 
 ```{image} ../images/Automation_Delete.png
-:alt: "Otomasyon kural\u0131n\u0131 silme"
+:alt: Otomasyon kuralını silme
 ```
 
+(Automation-good-practice-caveats)=
 ## Alıştırma & uyarılar
 
 - Otomasyonu kullanmaya başladığınızda veya yeni bir kural oluşturduğunuzda, önce kuralın iyi çalıştığından emin olana kadar sadece bir bildirim ekleyin.
 
 - Kural sonuçlarını izleyin.
 
-- Koşulları çok kolaylaştırmaya çalışmayın (yani: IF KŞ> 80 mg/dl VE KŞ\< 180 mg/dl)
+- Koşulları çok kolaylaştırmaya çalışmayın (yani: EĞER KŞ> 80 mg/dl VE KŞ< 180 mg/dl)
 
   **İşlem bir profil değiştirme ise iki kat önemlidir!**
 
-- Profil değiştirme yerine Geçici Hedefleri kullanmayı deneyin. Geçici Hedefler, [Autosens](../Usage/Open-APS-features#autosens) öğesini 0'a resetlemez.
+- Profil değiştirme yerine Geçici Hedefleri kullanmayı deneyin. Geçici Hedefleri, [Otoduyarlılık](Open-APS-features-autosens) 0'a sıfırlamaz.
 
 - Profil değiştirmeyi az miktarda ve tercihen son çare olarak yapıldığından emin olun.
 
-  - Profil değiştirme, [Autosens](../Usage/Open-APS-features#autosens) en az 6 saat boyunca işe yaramaz hale getirir.
+  - Profil değiştirme, [Otoduyarlılığı](Open-APS-features-autosens) en az 6 saat süreyle işe yaramaz hale getirir.
 
 - Profil değiştirme, profili temel profilinize geri döndürmez
 
@@ -156,10 +158,10 @@ Bu örnek, hafta boyunca her gün aynı saatte işyerinde öğle yemeği yiyen b
 
 Otomasyonu yanlış kullanmadığınıza lütfen dikkat edin. Yanlış kullanım sağlığınızı tehlikeye atabilir. Yanlış kullanım örnekleri:
 
-- Yalnızca yardım yerine algoritmayı geçersiz kılmaya çalışmak (ör. bazal, IC vb. ayarlamak yerine profili değiştirerek)
+- Yalnızca yardım almak yerine algoritmayı geçersiz kılmaya çalışmak (yani bazal, IC vb. ayarlamak yerine profili değiştirmek)
 - Yiyecekleri telafi etmek için profil ayarlama
 - Süresiz profil ayarlama
-- Tek yönlü kurallar oluşturma (ör. bir şey yap ama başka bir kuralla geri alma)
+- Tek yön kuralları oluşturma (örn. bir şey yapın ama başka bir kuralla geri almayın)
 - Uzun süreli kurallar oluşturmak
 
 ## Alternatifler

@@ -1,9 +1,9 @@
 # Dla użytkowników Eversense
 
-The easiest way to use Eversense with AndroidAPS is to install the non-US modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk) (and uninstall the original one first).
+The easiest way to use Eversense with AndroidAPS is to install the EU or US modified [Eversense app](https://cr4ck3d3v3r53n53.club/) (and uninstall the original one first).
 
-**Uwaga: odinstalowując starą aplikację, lokalne dane historyczne starsze niż 1 tydzień zostaną utracone!**
+**Warning: by uninstalling the old app, your local historical data older than one week will be lost!**
 
-Żeby finalnie dodać swoje dane do AndroidAPS, musisz zainstalować 'ESEL \<<https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk>>\`\_ i zezwolić na "Wysyłanie do AAPS i xDrip" w ESEL oraz wybrać "MM640g" jako źródło poziomów cukru (BG source) w zakładce Konfiguracja w AAPS. Ponieważ poziomy cukrów z Eversense'a mogą być czasami zaszumione, dobrze jest ustawić "Łagodne dane" w ESEL, co jest lepszym rozwiązaniem aniżeli ustawienie "Zawsze używaj krótkiej średniej delty" w AAPS.
+To finally get your data to AndroidAPS, you need to install [ESEL](https://github.com/BernhardRo/Esel/releases) and enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the [Configuration Builder](../Configuration/Config-Builder.md) in AndroidAPS. Ponieważ poziomy cukrów z Eversense'a mogą być czasami zaszumione, dobrze jest ustawić "Łagodne dane" w ESEL, co jest lepszym rozwiązaniem aniżeli ustawienie "Zawsze używaj krótkiej średniej delty" w AAPS.
 
-You can find  all APKs including the one for the US and another instruction for using xDrip with an Eversense [here](https://github.com/BernhardRo/Esel/tree/master/apk).
+You can find the instruction for using xDrip with an Eversense [here](https://github.com/BernhardRo/Esel/tree/master/apk).

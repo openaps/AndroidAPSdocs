@@ -1,6 +1,7 @@
+(Profiles-profile-switch)=
 # Profile switch
 
-Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder#profile).
+Documentation about profiles in general can be found at [Config Builder - profile](Config-Builder-profile).
 
 On starting your AAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again to start using these changes.
 
@@ -10,7 +11,7 @@ Internally AAPS creates snapshot of profile with start date and duration and is 
 
 If you edited your profile inside the "local profile" tab you can activate the profile there which makes an implicit profile switch too.
 
-To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below) on the homescreen of AndroidAPS.
+To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below) on the homescreen of AAPS.
 
 ![Do profile switch](../images/ProfileSwitch_HowTo.png)
 
@@ -25,6 +26,7 @@ Within the "profile switch" you can choose two additional changes which used to 
 * It will be sent to the pump and then be the default basal rate. 
 * The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
 
+(Profiles-time-shift)=
 ## Time shift
 
 ![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
@@ -44,6 +46,7 @@ Within the "profile switch" you can choose two additional changes which used to 
 
 This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
 
+(Profiles-troubleshooting-profile-errors)=
 ## Troubleshooting Profile Errors
 
 ### 'Invalid profile' / 'Basal Profile not aligned to hours' 
@@ -74,5 +77,5 @@ Alternatively you can delete the profile switch directly in mLab:
 ![mlab](../images/mLabDeletePS.png)
 
 ### 'DIA 3hr too short'
-* Error message will appear if your duration of insulin action in your profile is listed at a value that AndroidAPS doesn't believe will be accurate.  
+* Error message will appear if your duration of insulin action in your profile is listed at a value that AAPS doesn't believe will be accurate.
 * Read about [selecting the right DIA](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles) to continue.

@@ -4,8 +4,7 @@
 :alt: AAPS AAPS sanki bir otopilot gibidir
 ```
 
-Yapay pankreas kapalı döngü sistemi, diyabet yönetimini sizin için daha kolay hale getirmek için farklı bileşenleri birleştirir.
-Açık kaynaklı kapalı döngü hareketinin kurucularından biri olan Dana M. Lewis, [Otomatik İnsülin İletimi](https://www.artificialpancreasbook.com/) adlı harika kitabında, onu "diyabetiniz için otomatik pilot" olarak adlandırıyor \<<https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>>\`\_. Ama bu ne anlama geliyor?
+Yapay pankreas kapalı döngü sistemi, diyabet yönetimini sizin için daha kolay hale getirmek için farklı bileşenleri birleştirir. Açık kaynaklı kapalı döngü hareketinin kurucularından biri olan Dana M. Lewis, [Otomatik İnsülin İletimi](https://www.artificialpancreasbook.com/) adlı harika kitabında, onu ["diyabetiniz için otomatik pilot"](https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps) olarak adlandırıyor. Ama bu ne anlama geliyor?
 
 **Uçakta otopilot**
 
@@ -17,7 +16,7 @@ Otopilot çeşitli sensörlerden gelen sinyalleri alır, bir bilgisayar bunları
 
 Aynısı yapay bir pankreas kapalı döngü sistemi için de geçerlidir. Bütün işi yapmıyor, yine de şeker hastalığınızla ilgilenmeniz gerekiyor. Kapalı döngü sistemi, bir CGM/FGM'den alınan sensör verilerini bazal oran, insülin duyarlılık faktörü ve karbonhidrat oranı gibi diyabet yönetimi spesifikasyonlarınızla birleştirir. Buradan diyabetinizi hedef aralıkta tutmak ve sizi rahatlatmak için tedavi önerilerini hesaplar ve bu kalıcı küçük ayarlamaları uygular. Bu diyabetin "yanında" hayatınız için daha fazla zaman bırakır.
 
-İnsan gözetimi olmadan sadece otopilotun uçtuğu bir uçağa binmek istemediğiniz gibi, kapalı döngü sistemi diyabet yönetiminizde size yardımcı olur, ancak her zaman desteğinize ihtiyaç duyar! **Kapalı döngüde bile diyabetinizi unutamazsınız!**
+İnsan gözetimi olmadan sadece otopilotun uçtuğu bir uçağa binmek istemediğiniz gibi, kapalı döngü sistemi diyabet yönetiminizde size yardımcı olur, ancak her zaman desteğinize ihtiyaç duyar! **Kapalı bir döngüde bile diyabetinizi tamamen unutamazsınız!**
 
 Otopilot, pilotun özelliklerine olduğu kadar sensör değerlerine de bağlı olduğu gibi, bir kapalı döngü sistemi de sizi başarılı bir şekilde desteklemek için bazal oranlar, ISF ve karbonhidrat oranı gibi uygun girdilere ihtiyaç duyar.
 
@@ -27,7 +26,7 @@ Otopilot, pilotun özelliklerine olduğu kadar sensör değerlerine de bağlı o
 
 ### AndroidAPS (AAPS)
 
-AndroidAPS [bu belgelerde](./WhatisAndroidAPS.html). içinde ayrıntılı olarak açıklanmıştır. İnsülin pompanızın hesaplanması ve kontrolü için bir Android Akıllı Telefon kullanır. OpenAPS ile güçlü bir işbirliği içindedir (ör. algoritmaları paylaşırlar).
+AndroidAPS, [bu dokümanda](./WhatisAndroidAPS.html) ayrıntılı olarak açıklanmıştır. İnsülin pompanızın hesaplanması ve kontrolü için bir Android Akıllı Telefon kullanır. OpenAPS ile güçlü bir işbirliği içindedir (yani algoritmaları paylaşırlar).
 
 Uyumlu [pompalar](../Hardware/pumps.md) şunlardır:
 
@@ -35,12 +34,13 @@ Uyumlu [pompalar](../Hardware/pumps.md) şunlardır:
 - [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Diaconn G8](../Configuration/DiaconnG8.md)
-- [Omnipod Eros](../Configuration/OmnipodEros.md) / Omnipod Dash
-- bazı eski [Medtronic pompaları](../Configuration/MedtronicPump.md)
+- [Omnipod DASH](../Configuration/OmnipodDASH.md)
+- [Omnipod Eros](../Configuration/OmnipodEros.md)
+- Bazı eski [Medtronic pompaları](../Configuration/MedtronicPump.md)
 
 ### OpenAPS
 
-[OpenAPS](https://openaps.readthedocs.io) ilk Açık Kaynak Kapalı Döngü Sistemidir. Raspberry Pi veya Intel Edison gibi küçük bir bilgisayar kullanır.
+[OpenAPS](https://openaps.readthedocs.io) ilk Açık Kaynak kodlu Kapalı Döngü Sistemidir. Raspberry Pi veya Intel Edison gibi küçük bir bilgisayar kullanır.
 
 Uyumlu pompalar şunlardır:
 
@@ -48,9 +48,10 @@ Uyumlu pompalar şunlardır:
 
 ### IOS için Loop
 
-[iOS için Döngü](https://loopkit.github.io/loopdocs/), Apple iPhone'larla kullanılabilecek Açık Kaynaklı Kapalı Döngü Sistemidir.
+iOS için [Loop](https://loopkit.github.io/loopdocs/) Apple iPhone'larla kullanılabilecek Açık Kaynak kodlu bir Kapalı Döngü Sistemidir.
 
 Uyumlu pompalar şunlardır:
 
+- Omnipod DASH
 - Omnipod Eros
 - Bazı Eski Medtronic pompalar

@@ -1,5 +1,7 @@
 # Nightscout
 
+(Nightscout-security-considerations)=
+
 ## Remarques sur la sécurité
 
 En complément des rapports, Nightscout peut également être utilisé pour contrôler AAPS. C'est-à-dire que vous pouvez définir des cibles temporaires ou ajouter des glucides futurs. Ces informations seront recueillies par AAPS qui agira en conséquence. Par conséquent, cela vaut la peine de penser à sécuriser votre site Nightscout.
@@ -22,6 +24,8 @@ Il y a dans les paramètres AAPS une fonction "Remonter uniquement vers NS (sync
 ### Autres paramètres de sécurité
 
 Gardez votre téléphone à jour comme c'est décrit dans [La sécurité avant tout](../Getting-Started/Safety-first.md).
+
+(Nightscout-manual-nightscout-setup)=
 
 ## Manuel d'installation Nightscout
 

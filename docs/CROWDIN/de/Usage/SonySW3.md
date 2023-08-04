@@ -13,7 +13,7 @@ Der nachfolgend beschriebene Workaround ermöglicht die Weiternutzung der Sony S
 - Du musst 2 Dinge sicherstellen:
 
   - Ist es die neueste Version?
-  - Ist es kompatibel mit Android 6.0+? Da es die Android Wear Version ist, werden Version 7.0 und neuer nicht funktionieren.
+  - Ist es kompatibel mit Android 6.0+?
 
 - Früher oder später wird Google Android 6.0 nicht mehr unterstützen. Ab diesem Zeitpunkt wird die letzte Version nicht mehr für Android 6.0 zur Verfügung stehen und damit die Nutzung der Sony Smartwatch 3 nicht mehr möglich sein.
 
@@ -36,7 +36,7 @@ Der nachfolgend beschriebene Workaround ermöglicht die Weiternutzung der Sony S
 - Öffne das Windows-Terminal mit dem Befehl "cmd" im Windows-Startmenü.
 - Wechsle im Terminal in das Verzeichnis, das Dein adb Tool und die Google Services APK enthält (tippe „cd \[Pfad zu Deinem Verzeichnis\]“, z.B. „cd C:UsersSWR50loopersdktools“).
 - Gib dann "adb devices" ein.
-- Nach einem kurzen Moment kommt eine Eingabeaufforderung, ob die Debugging-Berechtigung für die Uhr erteilt werden soll. Gewähre diese.
+- Nach einem kurzen Moment kommt eine Eingabeaufforderung, ob die Debugging-Berechtigung für die Uhr erteilt werden soll.
 - Im Terminalfenster solltest Du nun etwas wie "14452D11F536B52 device" sehen, wenn Du erneut "adb devices" eingibst.
 - Falls Dir "unauthorized" oder eine ähnliche Meldung angezeigt wird, musst Du die vorherigen Schritte wiederholen.
 - Falls Du an dieser Stelle hängen bleibst, benötigst Du ggf. spezifische Treiber oder ähnliches für Deine Smartwatch. Die Google Suche hilft Dir hier weiter.
@@ -56,4 +56,4 @@ Der nachfolgend beschriebene Workaround ermöglicht die Weiternutzung der Sony S
   :alt: Terminal erfolgreiche Installation
   ```
 
-- Starte Deine Smartwatch neu nachdem die Installation abgeschlossen ist. Die Apps sollten sich dann direkt neu synchronisieren.
+- Die Apps sollten sich dann direkt neu synchronisieren.

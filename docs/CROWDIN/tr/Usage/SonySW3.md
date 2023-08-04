@@ -6,7 +6,7 @@ Aşağıdaki geçici çözüm, Sony Smartwatch 3'ün kullanım süresini uzataca
 
 ## 1. Wear OS için en son GService'i indirin
 
-- [apkmirror web sitesini](https://www.apkmirror.com/apk/google-inc/google-play-services-android-wear/) kullanarak "Google Play Hizmetleri (Wear OS) için en son apk'yı bulabilirsiniz. ".
+- [Apkmirror web sitesini](https://www.apkmirror.com/apk/google-inc/google-play-services-android-wear/) kullanarak "Google Play Hizmetleri (Wear OS) için en son apk'yı bulabilirsiniz. ".
 
   Mimari: armeabi-v7a, Minimum Sürüm: Android 6.0+, Ekran DPI: nodpi
 
@@ -24,7 +24,7 @@ Aşağıdaki geçici çözüm, Sony Smartwatch 3'ün kullanım süresini uzataca
 
 ## 3. Saatinizde ADB Hata Ayıklama seçeneklerini etkinleştirin
 
-- Ayarlar --> Hakkında --> Yapı numarası'na giderek geliştirici modunu etkinleştirin
+- Ayarlar --> Hakkında--> Yapı numarası'na giderek geliştirici modunu etkinleştirin
 - 7 kez tıklayın.
 - Şimdi Ayarlar --> Geliştirici Seçenekleri --> ADB Hata Ayıklama'ya gidin (etkinleştir)
 
@@ -34,7 +34,7 @@ Aşağıdaki geçici çözüm, Sony Smartwatch 3'ün kullanım süresini uzataca
 - En son indirilen google hizmetleri APK'sini kısa ve basit bir isim kullanarak yeniden adlandırın (örn: SW3fix.apk).
 - Bu APK'yı adb aracınızın dizinine yerleştirin (sıkıştırılmamış SDK Platform Araçları dizini).
 - Windows başlat menüsünde "cmd" komutunu kullanarak Windows komut istemini açın.
-- Terminalde, adb aracınızı ve google hizmetleri APK'nizi içeren dizine gidin ("cd \[yolunuz\]" komutunu yazın, ör. „cd C:UsersSWR50loopersdktools“).
+- Terminalde, adb aracınızı ve google hizmetleri APK'nızı içeren dizine gidin ("cd \[yolunuz\]" komutunu yazın, örneğin "cd C:UsersSWR50loopersdktools".)
 - Ardından “adb devices” yazın.
 - Bir süre sonra, saatinizde hata ayıklama izni isteyen bir istem almalısınız: kabul et.
 - Terminalde şimdi tekrar "adb devices" yazarken "14452D11F536B52 device" gibi bir şey görmelisiniz.
@@ -53,7 +53,7 @@ Aşağıdaki geçici çözüm, Sony Smartwatch 3'ün kullanım süresini uzataca
 - Kurulumun tamamlanması için yaklaşık 4-5 dakika bekleyin.
 
   ```{image} ../images/SonySW3_Terminal2.png
-  :alt: "Terminal ba\u015Far\u0131l\u0131 kurulum"
+  :alt: Terminal başarılı kurulum
   ```
 
 - Bittiğinde, saatinizi yeniden başlatın ve uygulamaların kendisini hemen senkronize etmeye başladığını görmelisiniz.

@@ -2,13 +2,13 @@
 
 - Le code du programme a été changé de façon significative lors du passage à AAPS 2.7.
 - Par conséquent, il est important de faire des changements ou de vérifier les paramètres après la mise à jour.
-- Veuillez consulter les [notes de version](../Installing-AndroidAPS/Releasenotes#version-2-7-0) pour plus de détails sur les nouvelles fonctions et les améliorations.
+- Veuillez consulter les [notes de version](Releasenotes-version-2-7-0) pour plus de détails sur les nouvelles fonctions et les améliorations.
 
 ## Vérifier la source de glycémie
 
 - Vérifiez si la source de glycémie est correcte après la mise à jour.
 - En particulier quand vous utilisez [xDrip+](../Configuration/xdrip.md) il peut arriver que la source soit remplacée par l'application Dexcom patchée.
-- Ouvrez le [Générateur de configuration](../Configuration/Config-Builder#source-gly) (menu hamburger en haut à gauche de l'écran d'accueil)
+- Ouvrez la [Configuration](Config-Builder-bg-source) (menu hamburger en haut à gauche de l'écran d'accueil)
 - Faites défiler vers le bas jusqu'à "Source des glycémies".
 - Sélectionnez la bonne source de glycémie si des changements sont nécessaires.
 
@@ -19,8 +19,8 @@
 ## Terminer les objectifs
 
 - AAPS 2.7 contient un nouvel objectif 11 (dans les dernières versions renuméroté à 10!) pour l'[automatisation](../Usage/Automation.md).
-- Vous devez avoir fini les autres objectfs ([objectifs 3 et 4](../Usage/Objectives#objectif-3-prouver-ses-connaissances)) pour pouvoir faire l'[objectif 11](../Usage/Objectives.md#objectif-10-automatisation).
-- Si par exemple vous n'avez pas encore terminé l'examen dans l'[objective 3](../Usage/Objectives.tml#objectif-3-prouver-ses-connaissances) , vous devrez terminer l'examen avant de pouvoir commencer l'[objective 10](../Usage/Objectives#objectif-10-automatisation).
+- Vous devez avoir fini les autres objectfs ([objectifs 3 et 4](Objectives-objective-3-prove-your-knowledge)) pour pouvoir faire l'[objectif 11](Objectives-objective-10-automation).
+- Si par exemple vous n'avez pas encore terminé l'examen dans l'[objectif 3](../Usage/Objectives-objective-3-prove-your-knowledge) , vous devrez terminer l'examen avant de pouvoir commencer l'[objectif 10](Objectives-objective-10-automation).
 - Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
 
 ## Définir le mot de passe principal
@@ -32,7 +32,7 @@
 - Entrez le mot de passe, confirmez le et cliquez sur OK.
 
 ```{image} ../images/MasterPW.png
-:alt: "D\xE9finir le mot de passe principal"
+:alt: Définir le mot de passe principal
 ```
 
 ## Exporter les paramètres
@@ -43,7 +43,7 @@
 - Assurez-vous de stocker vos paramètres exportés non seulement sur votre téléphone, mais également dans au moins un autre endroit sûr (votre pc, stockage cloud...).
 - Si vous construisez l'apk AAPS 2.7 avec le même fichier de clés que dans les versions précédentes, vous pouvez installer la nouvelle version sans supprimer la version précédente.
 - Tous les paramètres ainsi que les objectifs terminés resteront tels qu'ils étaient dans la version précédente.
-- Si vous avez perdu votre fichier de clés, construisez la version 2.7 avec un nouveau fichier de clés et importez les paramètres de la version précédente, comme c'est décrit dans la section [dépannage](../Installing-AndroidAPS/troubleshooting_androidstudio#fichier-de-cles-perdu).
+- Si vous avez perdu votre fichier de clés, construisez la version 2.7 avec un nouveau fichier de clés et importez les paramètres de la version précédente, comme c'est décrit dans la section [dépannage](troubleshooting_androidstudio-lost-keystore).
 
 ## Autosens (un indice - aucune action nécessaire)
 
@@ -55,12 +55,12 @@
 
 - Le mot de passe Pump pour [Dana RS](../Configuration/DanaRS-Insulin-Pump.md) n'était pas été vérifié dans les versions précédentes.
 - Ouvrez les préférences (menu trois points en haut à droite de l'écran d'accueil)
-- Faites défiler vers le bas et cliquez sur triangle à côté de " Dana RS ".
-- Cliquez sur " Mot de passe pompe (v1 uniquement) "
-- Entrez le mot de passe de la pompe (Le [mot de passe par défaut](../Configuration/DanaRS-Insulin-Pump#mot-de-passe-par-defaut) est différent selon la version du firmware) et cliquez sur OK.
+- Faites défiler vers le bas et cliquez sur triangle à côté de "Dana RS".
+- Cliquez sur "Mot de passe pompe (v1 uniquement)"
+- Entrez le mot de passe de la pompe (Le [mot de passe par défaut](DanaRS-Insulin-Pump-default-password) est différent selon la version du firmware) et cliquez sur OK.
 
 ```{image} ../images/DanaRSPW.png
-:alt: "D\xE9finir le mot de passe Dana RS"
+:alt: Définir le mot de passe Dana RS
 ```
 
-Pour changer le mot de passe sur Dana RS, suivez les instructions sur la [page DanaRS](../Configuration/DanaRS-Insulin-Pump#changer-de-mot-de-passe-sur-la-pompe).
+Pour changer le mot de passe sur Dana RS, suivez les instructions sur la [page DanaRS](DanaRS-Insulin-Pump-change-password-on-pump).

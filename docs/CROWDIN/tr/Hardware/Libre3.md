@@ -1,183 +1,126 @@
-# Freestyle Libre 3
+# **Freestyle Libre 3**
 
-Freestyle Libre 3 sistemi, tehlikeli kan şekeri düzeylerini otomatik olarak bildirebilir. Libre3 Sensörü, mevcut kan şekeri seviyesini her dakika bir alıcıya (okuyucu veya akıllı telefon) gönderir. Alıcı, gerekirse bir alarmı tetikler. Değiştirilmiş bir Libre 3 uygulaması, Juggluco uygulaması ve xDrip+ uygulaması ile kan şekeri seviyenizi akıllı telefonunuzda sürekli olarak alabilir ve görüntüleyebilirsiniz. Sensör belleğinden daha eski verileri almak bile mümkündür ( iki saatlik, dakikalık glikoz ve iki haftada bir 5 dakikalık geçmiş verileri). Bu Juggluco'ya gönderilir.
+Freestyle Libre 3 (FSL3) requires a unique setup to receive BG values in to AAPS. The below is one method for achieving this using the separate app Juggluco. This method uses Juggluco to receive raw, 1-minute interval data from the sensor which is then passed to xDrip+ to be smoothed into 5-minute interval data to be passed to AAPS. While it is possible to pass data directly from Juggluco to AAPS at 1-minute intervals, this would likely result in noisy data and additional battery drain.
 
-Sensör, glikometre ölçümleri ve sensör okumaları arasındaki farkları ayarlamak için -40 mg/dl ila +20 mg/dl (-2,2 mmol/l ila +1,1 mmol/l) aralığında kalibre edilebilir.
+New sensors can be started either with the Libre 3 App or directly in Juggluco. The guide below indicates the process for starting a sensor with the Libre 3 app and then transferring to Juggluco. For more information on directly starting a sensor without the Libre 3 app please refer to the “original instructions” under “further help” below.
 
-## Mevcut sınırlamalar
+Juggluco can also pass data to LibreView for sharing with health care providers when the sensor is started with the Libre 3 app.
 
-- Bu çözümün Freestyle Libre 3 sensörlerinin ABD versiyonuyla çalışıp çalışmadığı şu anda doğrulanmadı!
-- Uygulama sadece arm64 sistemleri (64 bit sistemler) için çalışacaktır. Çoğu modern telefon desteklenir. Emin değilseniz, yamayı yüklemeyi ve uygulamayı başlatmayı deneyin.
-- Root yapılmış bir sisteminiz varsa root işlemini kaldırmanız gerekir. Bazı talimatları [bu linkte](https://www.reddit.com/r/Freestylelibre/comments/s22vlr/comment/hw2p4th/?utm_source=share&utm_medium=web2x&context=3) bulabilirsiniz.
-- Juggluco (libre3 okumalarını almak için gerekli uygulama) yalnızca İngilizce, Felemenkçe ve İtalyanca dillerini desteklemektedir. Yamalı Libre3 uygulaması şunları destekler: ar, de, es, fr, hi, in, it, ja, ko, my, nl, pt, ru, th, tr ve vi.
+Within xDrip+ the sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl (-2.2 mmol/l to +1.1 mmol/l) to compensate for differences between a manual meter reading and the sensor readings.
 
-### Adım 1: Yamalı LibreLink-App'i indirin ve kurun
 
-Yamalı .apk dosyasını [buradan indirin](https://github.com/maheini/FreeStyle-Libre-3-patch/raw/main/Patched%20Apk/Libre%203_v3.3.0_apkfab.com.apk) veya \` buradan \<<https://apkfab.com/libre-3/com.freestylelibre3.app.de/apk?h=142cfbb2e0b1f10cd280408b10c5a5127e46e00e78d7775dae382529921487e9>>\`\_ ve telefonunuza yükleyin.
+###
+**Step 1: Install & Start a sensor with Libre 3 app on your phone**
 
-Uygulamayı telefonunuza başarıyla yükledikten sonra uygulamayı açın. Aşağıdaki gibi bir uyarı görürseniz, görmezden gelebilirsiniz. (Uygulama herhangi bir AB sensörüyle çalışıyor)
 
-```{image} ../images/libre3/step_1.jpg
-:alt: "LibreLink uyar\u0131s\u0131"
-```
 
-“Hesap Oluştur” ekranındaysanız, LibreView hesabı oluşturma seçeneğiniz vardır. Bir sensörü farklı bir uygulamayla yeniden etkinleştirme olanağına sahip olduğunuz için bu iyi bir seçenek olabilir. Ayrıca KŞ verilerini LibreView ile paylaşmanıza da olanak tanır. Beğenmediysen sağ üstteki "Atla"ya bas.
+1. If not already, from the Google Play Store download and install the “Libre 3” app.
+2. Login in to Libreview or create a new account and write down your credentials for use in a future step.
+3. Follow the instructions in the app to start the sensor
+4. Wait the 1 hour warm up period and ensure the sensor is receiving values
+5. Force close the Libre 3 app (typically Settings > Apps > Libre 3 > Force Stop)
 
-```{image} ../images/libre3/step_2.jpg
-:alt: "LibreView hesab\u0131"
-```
+###
+**Step 2: Install & set up Juggluco on your phone**
 
-Lütfen bu ekranda Ölçü Biriminizi seçin. Daha sonra da değiştirebilirsiniz.
+1. On your phone, download and install the Juggluco app ([link](https://www.juggluco.nl/Juggluco/download.html)) most modern phones will use the most recent version of the “Arm64 only ” link
+2. When prompted, allow Juggluco to find, locate, and connect nearby devices and allow notifications
+3. If a request to deactivate battery optimization appears, tap "Allow" to ensure the app runs in the background.
+4. After the introduction screen, open the Juggluco menu by clicking on the empty space in the upper left hand corner of the screen.
 
-```{image} ../images/libre3/step_3.jpg
-:alt: "\xD6l\xE7\xFC Birimi se\xE7imi"
-```
+![menu location](https://github.com/openaps/AndroidAPSdocs/assets/13263947/a8378ec5-050a-44ac-b0e2-e84989691050)
 
-"Pil optimizasyonunu yoksay mı?" diye soran bir Pop-up'ınız varsa, "İZİN VER" seçeneğini tıklayın. Bu Libre3 uygulamasının arka planda çalışmasını sağlar.
 
-```{image} ../images/libre3/step_4.jpg
-:alt: "Pil optimizasyonlar\u0131n\u0131 devre d\u0131\u015F\u0131 b\u0131rak"
-```
+5. Select "Settings" from the menu.
+6. Select the checkbox for “Patched Libre Broadcast”
+7. Select the checkbox for “com.eveningoutpost.dexdrip” and click “Save”
+8. Select the checkbox for “Libreview”
+9. Enter the Libreview login credentials you wrote down in step 1.2 above and click “Get Account ID”
+10. Wait for a multi-digit number to appear below the "Resend data" button, indicating a successful connection with Libreview.
+11. Select the checkbox for “Send to Libreview” if you want to have your data uploaded to Libreview (not required)
+12. Click “Ok”
+13. Click “Save”
+14. With the Juggluco app open, scan your active sensor with your phone's NFC reader. Readings should appear shortly (note the Libre 3 does not support receiving readings via NFC so readings will only become available once the bluetooth connection is established)
 
-Şimdi Libre3 uygulamasını kurmuş olmalısınız. Juggluco bağlantısı ile devam edelim
+###
+**Step 3: Set up xDrip+**
 
-### Adım 2: Libre3'ü Juggluco ile bağlayın
+1. Download and install one of the latest nightly builds of xDrip+ app from [here](https://github.com/NightscoutFoundation/xDrip/releases). See general settings needed for xDrip [here](https://androidaps.readthedocs.io/en/latest/Configuration/xdrip.html).
+2. Navigate to Settings > Hardware Data Source >  select "Libre (patched app)" as the data source.
+3. Go to Settings > Inter-app settings > Broadcast locally and turn it **on**.
+4. Go to Settings > Inter-app settings > Accept Glucose and turn it **off**.
+5. Go to Settings > Inter-app settings > Identify Receiver and set it to "info.nightscout.androidaps".
 
-Libre3 kenar çubuğunu açın ve Juggluco'yu seçin.
+###
+**Step 4: Start sensor within xDrip**
 
-```{image} ../images/libre3/step_5.jpg
-:alt: "Juggluco men\xFCs\xFC"
-```
+1. In xDrip+, start the sensor by selecting "Start Sensor" from the main menu on the left and "not today". No physical interaction with the sensor is required at this stage.
+2. Wait for at least 15-20 minutes for the data to appear in xDrip+.
 
-Juggluco menüsünde, "Port"un 7117 olarak ayarlandığından emin olun ve alttaki "Bağlantı Ekle"ye tıklayın.
+###
+**Step 5: Configure AAPS**
 
-```{image} ../images/libre3/step_6.jpg
-:alt: "Juggluco'ya genel bak\u0131\u015F"
-```
+1. In AAPS go to Config Builder > BG Source and check "xDrip+"
 
-Şimdi aşağıdaki resme göre her şeyi doldurun:
+**Subsequent sensor changes**
 
-```{image} ../images/libre3/step_7.jpg
-:alt: Libre Juggluco kurulumu
-```
+1. Open Libre 3 app and follow in app instructions to start a new sensor
+2. Wait the 1 hour warm up period and ensure the sensor is receiving values
+3. Force close the Libre 3 app (typically Settings > Apps > Libre 3 > Force Stop)
+4. Open Juggluco and note the serial number of the existing sensor
 
-Bitirdiyseniz, ayarlarınızı onaylamak için “Kaydet”e tıklayın. Harika, şimdi Libre3 uygulamasını kapatabilirsiniz!
+![serial number](https://github.com/openaps/AndroidAPSdocs/assets/13263947/a159dd53-9f7c-4277-9d4b-bcf175dadd38)
 
-### 3. Adım: Juggluco'yu Kurun
+5. With Juggluco open scan your active sensor with your phone's NFC reader. Readings should appear shortly (note the Libre 3 does not support receiving readings via NFC so readings will only become available once the bluetooth connection is established)
+6. When you are ready to deactivate the old sensor<sup>1</sup>, open the Juggluco menu by clicking anywhere in the empty space in the upper left hand corner of the screen.
+7. Select Sensor
+8. Select the old sensor from the drop down menu by selecting the serial number you documented in step 4
 
-Juggluco .apk dosyasını [buradan indirin](https://github.com/maheini/FreeStyle-Libre-3-patch/raw/main/Juggluco-solution/versions/latest/Juggluco.apk) veya \` buradan \<<https://apkfab.com/juggluco/tk.glucodata/apk?h=1fc401ff9fbe7f56e6a0a7068fed6da96592b13757c3b05cddff893d813e18fd>>\`\_ ve telefonunuza yükleyin.
+![terminate sensor](https://github.com/openaps/AndroidAPSdocs/assets/13263947/80a8918e-aa4a-42bb-9ef9-1e062e1d650f)
 
-Şimdi uygulamayı açalım. Aşağıdaki ekran ile karşılaşacaksınız. “Sensörsüz” düğmesine tıklamanız yeterlidir.
+9. Select Terminate<sup>2</sup>
 
-```{image} ../images/libre3/step_8.jpg
-:alt: "Juggluco kar\u015F\u0131lama ekran\u0131"
-```
+<sup>1</sup>When two sensors are active Juggluco will send the most recent value from either sensor to xDrip+. If the sensors are not calibrated and reading BG similarly, this may result in jumpy BG values being reported to xDrip+.
 
-Bundan sonra kısa bir tanıtım metni alırsınız. "Tamam"ı tıklayın.
+<sup>2</sup>If you terminate the wrong sensor, you can reactivate it starting at step 5 above.
 
-```{image} ../images/libre3/step_9.jpg
-:alt: "Juggluco tan\u0131t\u0131m ekran\u0131"
-```
 
-Tamam, Juggluco'yu kuralım! Uygulamanın kendisi en iyi Arayüze sahip değil, ancak çok kullanışlı bir uygulama. Ayarları açmak için sol üst ekranda herhangi bir yere tıklayın. Şimdi bu menüyü aşağıda görmelisiniz. “Ayarlar”ı seçin.
+###
+**Sorun giderme**
 
-```{image} ../images/libre3/step_10.jpg
-:alt: "Juggluco ayarlar\u0131 men\xFCs\xFC"
-```
 
-Ayarlar içinde, xDrip ile veri bağlantısını yapılandırabilirsiniz. "xDrip'e Gönder"e tıklayın ve "Tamam"a basın.
+####
+**Check that the following settings are properly set**
 
-```{image} ../images/libre3/step_11.jpg
-:alt: "Juggluco ayarlar\u0131"
-```
 
-Juggluco uygulamasında sol üst ortadaki kısma basın. Yeni bir menü açılmalıdır. Lütfen "Yansıma"yı seçin. (mirror)
 
-```{image} ../images/libre3/step_12.jpg
-:alt: "Juggluco ba\u011Flant\u0131 men\xFCs\xFC"
-```
+* NFC etkin / BT etkin
+* Depolama ve konum izni etkin
+* Location service enabled (both in system settings and app permissions)
+* Otomatik saat ve saat dilimi ayarı
 
-Bu ekranı görmelisiniz. Sağ üst köşedeki bağlantı noktası ayarının "8795" olduğunu kontrol edin ve "Bağlantı Ekle" üzerine dokunun. (Unutmayın, Juggluco uygulamasında bağlantı noktaları değiştirilir)
+####
+**Sorun Giderme; Juggluco KŞ değeri okumuyor**
 
-```{image} ../images/libre3/step_13.jpg
-:alt: "Juggluco ba\u011Flant\u0131 ekran\u0131"
-```
+* Libre 3 uygulamasının durup durmadığını kontrol edin.
+* Juggluco uygulamasında Libre 3 sensörünü yeniden tarayın
+* Sensörün mevcut Libreview hesabıyla etkinleştirildiğinden emin olun
+* Check if a sensor number is visible in Juggluco (menu > Sensor)
+* The sensor is usually connected to the smartphone via bluetooth within 3 minutes, but it may also take longer.
+* Bluetooth bağlantısı kurulamazsa, akıllı telefonu yeniden başlatmayı deneyin.
+* Libre 3 sensörünün başka bir cihaza bağlı olmadığından emin olun.
+* If necessary, in xDrip+ enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for troubleshooting.
 
-Şimdi aşağıda gösterildiği gibi tüm ayarları ve Libre3 şifrenize göre şifrenizi dolduralım. Bunu yaptıysanız - onaylamak için “Kaydet”e basın.
+####
+**Kan şekeri ölçümlerinin Libreview'e yüklenmemesiyle ilgili sorun giderme**
 
-```{image} ../images/libre3/step_14.jpg
-:alt: "Juggluco ba\u011Flant\u0131 ayarlar\u0131"
-```
+* İnternet bağlantını kontrol et
+* Juggluco'nun kan şekeri okumaları aldığından emin olun
+* Juggluco->Ayarlar->Libreview içinde "Libreview'e Gönder" onay kutusunun işaretlendiğinden emin olun
 
-Tebrikler! Şimdi bir önceki menüdeki “Senk” düğmesine basmayı deneyebilirsiniz. Bir süre sonra Juggluco, kan şekeri değerlerini Libre3 uygulamasından otomatik olarak almalıdır.
+####
+**Daha fazla yardım**
 
-Şimdi sadece sensörü tarayarak yamalı uygulama ile Libre3 sensörünü başlatın. Tüm ayarların doğru yapıldığından emin olun. Aynı LibreView hesap adını belirtirseniz, orijinal Libre3 uygulamasıyla zaten kullanılmış olan bir sensörü kullanabilirsiniz. "Yeni Sensörü Başlat" a basmanız ve sensörü taramanız gerekir. Yamasız Libre 3 uygulamasına geri dönmek istiyorsanız, aynısını yapmanız gerekir.
-
-Başarılı sensör başlatma için zorunlu ayarlar:
-
-- NFC etkin / BT etkin
-- hafıza ve konum izni etkin
-- konum hizmeti etkin
-- otomatik saat ve saat dilimi ayarı
-- yamalı uygulamada en az bir alarm ayarlayın
-
-Konum hizmetinin merkezi bir ayar olduğunu lütfen unutmayın. Bu, ayrıca ayarlanması gereken uygulama konumu izni değildir!
-
-### Adım 4: Sonunda xDrip'i kurun
-
-Kan şekeri değerleri akıllı telefonda xDrip+ uygulaması tarafından alınır.
-
-- Henüz kurmadıysanız, xDrip+ uygulamasını indirin ve [buradan](https://github.com/NightscoutFoundation/xDrip/releases) en son derlemelerden birini yükleyin.
-
-- xDrip+'da veri kaynağı olarak "Libre2 (Yamalı uyg)" öğesini seçin
-
-- Gerekirse, Gelişmiş Ayarlar->Ekstra Günlük Ayarları->Günlük için ekstra etiketler altında "BgReading:d,xdrip libre_receiver:v" girin. Bu, sorun giderme için ek hata mesajlarını günlüğe kaydeder.
-
-- xDrip+'da Ayarlar > Uyg.lar-arası ayarlar > Verileri Yerel Olarak Yayınla'ya gidin ve AÇ'ı seçin.
-
-- xDrip+'da Ayarlar > Uyg.lar-arası ayarlar > Tedaviyi Kabul Et'e gidin ve KAPALI'yı seçin.
-
-- AAPS'nin xDrip+'tan kan şekeri düzeylerini (sürüm 2.5.x ve üstü) almasını sağlamak için lütfen Ayarlar > Uyg.lar-arası ayarlar > Alıcıyı Tanımla "info.nightscout.androidaps" öğesini ayarlayın \<../Configuration/xdrip#identify-receiver> \_
-
-- AndroidAPS'i kalibre etmek için kullanmak istiyorsanız, xdrip'te Ayarlar > Uyg.lar-arası ayarlar > Kalibrasyonları Kabul Et'e gidin ve AÇIK'ı seçin.  Ayarlar > Daha Az Ortak Ayarlar > Gelişmiş Kalibrasyon Ayarları'ndaki seçeneklerini de gözden geçirmek isteyebilirsiniz.
-
-```{image} ../images/Libre2_Tags.jpg
-:alt: "xDrip LibreLink oturum a\xE7ma"
-```
-
-### Adım 5: Sensörü xDrip içinde başlatın
-
-xDrip'te sensörü "Sensörü başlat" ve "bugün değil" ile başlatın.
-
-Aslında bu, herhangi bir Libre2 sensörünü fiziksel olarak başlatmaz (sensörü ya kendi cihazı ya da nfc özellikli bi telefon ve librelink uygulaması ile başlatmanız gerekir.) Bu sadece xDrip+'ın yeni bir sensörün kan şekeri seviyelerini ilettiğini anlamak içindir. Varsa, ilk kalibrasyon için iki ölçümlü glikometre değeri girin. Şimdi kan şekeri değerleri her 5 dakikada bir xDrip+'da görüntülenmelidir. Atlanan değerler, ör. telefonunuzdan çok uzakta olduğunuz zamanlar için, doldurulmayabilr.
-
-Bir sensör değişikliğinden sonra xDrip+ yeni sensörü otomatik olarak algılar ve tüm kalibrasyon verilerini siler. Aktivasyondan sonra kanlı KŞ'nizi kontrol edebilir ve yeni bir başlangıç kalibrasyonu yapabilirsiniz.
-
-### Adım 6: AndroidAPS'i yapılandırın (döngü için)
-
-- AndroidAPS'de Konfigürasyon ayarları > KŞ Kaynağı'na gidin ve 'xDrip+' seçeneğini işaretleyin
-- Telefon uçak modundayken AndroidAPS KŞ değerlerini almıyorsa, 'xDrip+ ayarlar sayfasında \<../Configuration/xdrip#identify-receiver>'\_ açıklandığı gibi 'Alıcıyı tanımla'yı kullanın.
-
-Halihazırda, Libre 2'i KŞ kaynağı olarak kullanıyorsanız, SMB algoritmasında "SMB'yi her zaman etkinleştir" ve "Karbonhidrattan sonra SMB'yi etkinleştir"i işaretleyemezsiniz. Libre 2'in KŞ değerleri, bu seçenekleri güvenle kullanmak için yeterince düzgün değildir. Daha fazla ayrıntı için [Kan şekeri verilerini yumuşatma](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) bölümüne bakın.
-
-### Deneyimler ve Sorun Giderme
-
-#### Sorun Giderme Libre3'de okuma yok
-
-- Android konum hizmeti verilmedi - lütfen sistem ayarlarında etkinleştirin
-- Otomatik saat ve saat dilimi ayarlanmadı - lütfen ayarları uygun şekilde değiştirin
-- Bluetooth kapalı - lütfen açın
-
-#### Sorun Giderme Libre3 -> Juggluco bağlantısı
-
-- Libre3'ün herhangi bir okuma alıp almadığından emin olun
-- Ayarlarınızı ve şifrenizi tekrar kontrol edin
-- Libre3 içinde “Sync” ->Juggluco ve “Sync” ve “Reinit” Juggluco->Mirror düğmesine tıklayın
-- Bazen her şeyi yapılandırdıktan sonra Libre3'ü kapatmaya zorlamanız ve yeniden başlatmanız gerekebilir.
-- Bir süre bekleyin veya Juggluco'yu zorla kapatmaya çalışın
-- Juggluco'nun eski sürümleri (2.9.6'nın altında) Libre3 sensöründen bağlı cihazlara geri doldurulmuş veri göndermez (örneğin, WearOS'ta Juggluco.) Bunun için (Juggluco menüsü) Yamalı Libre 3 uygulaması içinde "Verileri Yeniden Gönder"e basmanız gerekebilir.
-
-#### Daha fazla yardım
 
 Orijinal talimatlar: [jkaltes web sitesi](http://jkaltes.byethost16.com/Juggluco/libre3/)
 

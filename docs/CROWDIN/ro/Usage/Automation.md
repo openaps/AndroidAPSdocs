@@ -18,6 +18,7 @@ Make sure you really understand how automation works before setting up your firs
 
 To set up an automation, you have to give it a title, select at least one condition and one action.
 
+(Automation-important-note)=
 ### Important note
 
 **Automation is still active when you disable loop!**
@@ -30,7 +31,7 @@ So make sure to deactivate automation rules during these occasions if necessary.
 
 ### Where to find Automation
 
-Depending on your [settings in config builder](../Configuration/Config-Builder#tab-or-hamburger-menu) you will either find [Automation](../Configuration/Config-Builder.md#automation) in hamburger menu or as a tab.
+Depending on your [settings in config builder](Config-Builder-tab-or-hamburger-menu) you will either find [Automation](Config-Builder#automation) in hamburger menu or as a tab.
 
 ### General
 
@@ -51,11 +52,11 @@ You can choose between several conditions. Here are some things explained, but m
 
 - connect conditions: you can have several conditions and can link them with
 
-  - "Și"
-  - "Sau"
+  - "And"
+  - "Or"
   - "Exclusive or" (which means that if one - and only one of the - conditions applies, the action(s) will happen)
 
-- Time vs. timp recurent
+- Time vs. recurring time
 
   - time =  single time event
   - recurring time = something that happens regularly (i.e. once a week, every working day etc.)
@@ -70,16 +71,16 @@ You can choose between several conditions. Here are some things explained, but m
 
 You can choose one or more actions:
 
-- pornește o țintă temporară
+- start temp target
 
   - must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
   - works only if there is no previous temp target
 
-- oprește o țintă temporară
+- stop temp target
 
-- notificare
+- notification
 
-- procentajul profilului
+- profile percentage
 
   - must be between 70% and 130%
   - works only if the previous percentage is 100%
@@ -90,6 +91,7 @@ After adding your action, **don't forget to change the default values** to what 
 :alt: Automation default vs. set values
 ```
 
+(Automation-sort-automation-rules)=
 ### Sort automation rules
 
 To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
@@ -106,6 +108,7 @@ To delete an automation rule click on trash icon.
 :alt: Delete automation rule
 ```
 
+(Automation-good-practice-caveats)=
 ## Good practice & caveats
 
 - When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
@@ -116,11 +119,11 @@ To delete an automation rule click on trash icon.
 
   **Doubly important if action is a profile switch!**
 
-- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](../Usage/Open-APS-features#autosens) back to 0.
+- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](Open-APS-features-autosens) back to 0.
 
 - Make sure Profile switches are made sparingly and preferably at a last resort.
 
-  - Profile switching renders [Autosens](../Usage/Open-APS-features#autosens) useless for a min of 6 hours.
+  - Profile switching renders [Autosens](Open-APS-features-autosens) useless for a min of 6 hours.
 
 - Profile switching will not reset the profile back to your base profile
 

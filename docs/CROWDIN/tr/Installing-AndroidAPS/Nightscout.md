@@ -1,5 +1,7 @@
 # Nightscout
 
+(Nightscout-security-considerations)=
+
 ## Güvenlik Hususları
 
 Nightscout raporlamanın yanı sıra AAPS'i kontrol etmek için de kullanılabilir. Yani Geçici hedefler belirleyebilir veya gelecekteki karbonhidratları ekleyebilirsiniz. Bu bilgiler AAPS tarafından alınacak ve buna göre hareket edecektir. Bu nedenle Nightscout web sitenizi güvence altına almalısınız.
@@ -22,6 +24,8 @@ AAPS ayarlarında yalnızca NS yükleme (senkronizasyon yok) işlevi vardır. Bu
 ### Diğer güvenlik ayarları
 
 [Önce güvenlik](../Getting-Started/Safety-first.md) bölümünde açıklandığı gibi telefonunuzu güncel tutun.
+
+(Nightscout-manual-nightscout-setup)=
 
 ## Manuel Nightscout kurulumu
 

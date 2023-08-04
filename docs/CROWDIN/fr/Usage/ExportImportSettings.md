@@ -11,23 +11,24 @@ Les paramètres exportés doivent être copiés sur un stockage cloud ou sur vot
 Sur un ordinateur Windows 10, cela ressemble à ceci :
 
 ```{image} ../images/AAPS_ExImportSettingsWin.png
-:alt: "AndroidAPS Pr\xE9f\xE9rences t\xE9l\xE9phone connect\xE9 \xE0 l'ordinateur"
+:alt: AndroidAPS Préférences téléphone connecté à l'ordinateur
 ```
 
 ## Informations exportées
 
 Entre autres, les informations suivantes font partie des paramètres exportés :
 
-- [Evènement d'automatisation](../Usage/Automation.md)
-- Paramètres du [Générateur de configuration](../Configuration/Config-Builder.md)
-- Paramètres des [Profils locaux](../Configuration/Config-Builder#profil-local)
-- Résultats des [Objectifs](../Usage/Objectives.md) y compris les résultats de l'objectif 3 [Prouver ses connaissances](../Usage/Objectives#objectif-3-prouver-ses-connaissances)
-- [Préférences](../Configuration/Preferences.md) y compris les paramètres [NSClient](../Configuration/Preferences#nsclient)
+- Événements d'[Automatisation](../Usage/Automation.md)
+- Paramètres de la [Configuration](../Configuration/Config-Builder.md)
+- Paramètres du [Profil local](Config-Builder-local-profile)
+- États des [objectifs](../Usage/Objectives.md) incluant [résultats d'examen](Objectives-objective-3-prove-your-knowledge)
+- [Préférences](../Configuration/Preferences.md) y compris les paramètres [NSClient](Preferences-nsclient)
 
 ## Format de sauvegarde chiffré
 
-La sauvegarde des paramètres est chiffrée par un mot de passe principal qui peut être défini dans [Préférences](../Configuration/Preferences#mot-de-passe-principal) .
+La sauvegarde des paramètres est chiffrée par un mot de passe principal qui peut être défini dans les [Préférences](Preferences-master-password) .
 
+(ExportImportSettings-export-settings)=
 ## Exporter les paramètres
 
 - Menu Hamburger (coin supérieur gauche de l'écran)
@@ -35,37 +36,38 @@ La sauvegarde des paramètres est chiffrée par un mot de passe principal qui pe
 - Exporter les paramètres
 
 ```{image} ../images/AAPS_ExportSettings1.png
-:alt: "AndroidAPS exporter les param\xE8tres 1"
+:alt: AndroidAPS exporter les paramètres 1
 ```
 
 - La date et l'heure d'exportation seront automatiquement ajoutées au nom du fichier et affichées avec le chemin.
 - Cliquez sur 'OK'.
-- Entrez le [mot de passe principal](../Configuration/Preferences#mot-de-passe-principal) et cliquez 'OK'.
+- Entrez le [mot de passe principal](Preferences-master-password) et cliquez sur 'OK'.
 - L'exportation réussie sera affichée en bas de l'écran.
 
 ```{image} ../images/AAPS_ExportSettings2.png
-:alt: "AndroidAPS exporter les param\xE8tres 2"
+:alt: AndroidAPS exporter les paramètres 2
 ```
 
+(ExportImportSettings-import-settings)=
 ## Importer les paramètres
 
-**Ne pas importer les paramètres pendant une session Pod active** - voir la page [Omnipod pour plus de détails](../Configuration/OmnipodEros#importer-les-parametres-aaps-de-versions-precedentes).
+**Ne pas importer les paramètres pendant une session Pod active** - voir la page [Omnipod pour plus de détails](OmnipodEros-import-settings-from-previous-aaps).
 
 - Menu Hamburger (coin supérieur gauche de l'écran)
 - Maintenance
-- Importez les paramètres
+- Importer les paramètres
 
 ```{image} ../images/AAPS_ImportSettings1.png
-:alt: "AndroidAPS importer les param\xE8tres 1"
+:alt: AndroidAPS importer les paramètres 1
 ```
 
 - Tous les fichiers présents dans le dossier AAPS/préférences/ de votre téléphone seront affichés dans la liste.
 - Sélectionnez un fichier.
 - Confirmez l'importation en cliquant sur 'OK'.
-- Entrez le [mot de passe principal](../Configuration/Preferences#mot-de-passe-principal) et cliquez 'OK'.
+- Entrez le [mot de passe principal](Preferences-master-password) et cliquez sur 'OK'.
 
 ```{image} ../images/AAPS_ImportSettings2.png
-:alt: "AndroidAPS importer les param\xE8tres 2"
+:alt: AndroidAPS importer les paramètres 2
 ```
 
 - Les détails du fichier de préférences seront affichés.

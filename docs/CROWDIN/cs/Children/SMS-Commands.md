@@ -2,16 +2,16 @@
 
 ## Bezpečnost především
 
-- AndroidAPS vám umožňuje kontrolovat telefon vašeho dítěte na dálku prostřednictvím textových zpráv. Pokud povolíte SMS komunikátor, vždy pamatujte na to, že telefon nastavený k vydávání vzdálených příkazů, může být ukraden. Proto vždy chraňte telefon alespoň pomocí kódu PIN. Doporučuje se zvolit si silné heslo nebo biometrické údaje.
-- Navíc se pro SMS příkazy doporučuje povolit [druhé telefonní číslo](#autorized-phone-numbers). Pokud dojde ke ztrátě nebo ukradení mobilu, můžete z druhého čísla [dočasně vypnout](#other) SMS komunikátor.
-- Systém AndroidAPS vás rovněž bude informovat textovou zprávou o tom, jestli váš vzdálený příkaz, např. bolus nebo změna profilu, byl proveden. Je proto vhodné nastavit, aby byly potvrzovací zprávy odesílány alespoň na dvě různá telefonní čísla pro případ, že by došlo ke zcizení jednoho z rodičovských telefonů.
-- **Pokud jste zadali bolus prostřednictvím SMS příkazů, musíte přes Nightscout (NSClient, webovou stránku...) zadat odpovídající množství sacharidů!** Jestliže to neuděláte, bude IOB kalkulováno oproti nízkému COB. Případný korekční bolus pak nemusí být vydán, protože AAPS předpokládá, že máte příliš mnoho aktivního inzulínu.
-- Od AndroidAPS verze 2.7 musí být kvůli zvýšení bezpečnosti při posílání SMS použita autentizační aplikace s časově omezeným jednorázovým heslem.
+- AAPS allows you to control a child's phone remotely via text message. Pokud povolíte SMS komunikátor, vždy pamatujte na to, že telefon nastavený k vydávání vzdálených příkazů, může být ukraden. Proto vždy chraňte telefon alespoň pomocí kódu PIN. Doporučuje se zvolit si silné heslo nebo biometrické údaje.
+- Additionally it is recommended to allow a [second phone number](SMS-Commands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](SMS-Commands-other) SMS communicator in case your main remote phone gets lost or stolen.
+- AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Je proto vhodné nastavit, aby byly potvrzovací zprávy odesílány alespoň na dvě různá telefonní čísla pro případ, že by došlo ke zcizení jednoho z rodičovských telefonů.
+- **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
+- As of AAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
 
 ## Nastavení SMS příkazů
 
 ```{image} ../images/SMSCommandsSetup.png
-:alt: "Nastaven\xED SMS p\u0159\xEDkaz\u016F"
+:alt: Nastavení SMS příkazů
 ```
 
 - Většinu úprav dočasných cílů, se kterými pracuje AAPS apod., můžete provést přes [aplikaci NSClient](../Children/Children.md) na telefonu s Androidem připojenému k internetu.
@@ -19,9 +19,11 @@
 - Používáte-li ke sledování iPhone, nemůžete použít NSClient. Pak máte k dispozici pouze SMS příkazy.
 - Ve vašem Android telefonu přejděte do jeho systémového nastavení, následně do Aplikace > AndroidAPS > Oprávnění a povolte SMS
 
+(SMS-Commands-authorized-phone-numbers)=
+
 ### Schválená telefonní čísla
 
-- V AndroidAPS přejděte do **Nastavení > SMS komunikátor** a zadejte telefonní číslo(a), ze kterých umožníte přijímat SMS příkazy (oddělené středníkem – např. +6412345678;+6412345679)
+- In AAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
 
 - Povolte možnost 'Povolit posílání příkazů přes SMS'.
 
@@ -29,12 +31,12 @@
 
   - Zadejte pouze jedno číslo.
 
-  - Ujistěte se, že první číslo funguje - zasláním SMS příkazu a jeho potvrzením.
+  - Ujistěte se, že první číslo funguje – zasláním SMS příkazu a jeho potvrzením.
 
   - Přidejte další číslo(a) oddělené středníkem, bez mezery.
 
     ```{image} ../images/SMSCommandsSetupSpace2.png
-    :alt: "SMS p\u0159\xEDkazy - nastaven\xED v\xEDce \u010D\xEDsel"
+    :alt: SMS příkazy – nastavení více čísel
     ```
 
 ### Minut mezi příkazy pro bolus
@@ -58,7 +60,7 @@
 
 - Můžete použít libovolnou aplikaci Authenticator, která podporuje tokeny RFC 6238 TOTP. Oblíbené bezplatné aplikace jsou:
 
-  - \` Authy \<<https://authy.com/download/>>\` \_
+  - [Authy](https://authy.com/download/)
   - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
   - [LastPass Authenticator](https://lastpass.com/auth/)
   - [FreeOTP Authenticator](https://freeotp.github.io/)
@@ -71,15 +73,15 @@
   - TOTP token z autentizační aplikace je 457051
   - Zadejte 4570512020
 
-- Je-li zadání správné, změní se **automaticky** červený text "WRONG PIN" na zelené "OK". **Není třeba stisknout žádné tlačítko!**
+- The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **There is no button you can press!**
 
 - Na obou telefonech musí být synchronizovaný čas. Nejlepší způsob je synchronizovat čas automaticky prostřednictvím sítě. Časové rozdíly mohou vést k problémům s ověřováním.
 
-- Chcete-li odebrat všechny autentikátory, stiskněte tlačítko "RESETOVAT AUTENTIKÁTORY".  (resetování autentikátorů způsobíte, že VŠECHNY používané autentikátory budou neplatné. Budete je muset nastavit znovu)
+- Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (Resetováním autentikátorů způsobíte, že VŠECHNY používané autentikátory budou neplatné. Budete je muset nastavit znovu.)
 
 ## Použití SMS příkazů
 
-- Pošlete SMS na telefon s běžícím AndroidAPS ze schváleného telefonního čísla pomocí některého z [příkazů](../Children/SMS-Commands#commands) níže.
+- Send a SMS to the phone with AAPS running from your approved phone number(s) using any of the [commands](SMS-Commands-commands) below.
 
 - Mobil s AAPS odpoví pro potvrzení požadovaného stavu nebo příkazu.
 
@@ -89,23 +91,22 @@
   - TOTP token z autentizační aplikace je 457051
   - Zadejte 4570512020
 
-Tip: Jestliže budete posílat větší množství SMS, je výhodné mít na obou mobilech SMS paušál.
+**Tip**:: Jestliže budete posílat větší množství SMS, je výhodné mít na obou mobilech SMS paušál.
 
+(SMS-Commands-commands)=
 ## Příkazy
 
-Příkazy musí být odeslány v angličtině. Pokud je řetězec odpovědi přeložen \<../translations#translate-řetězce-pro-androidaps-app> \` \_, bude odpověď ve vašem jazyce.
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](translations-translate-strings-for-AAPS-app).
 
 ```{image} ../images/SMSCommands.png
-:alt: "p\u0159\xEDklad SMS p\u0159\xEDkazu"
+:alt: příklad SMS příkazu
 ```
 
 ### Smyčka
 
-- LOOP STOP/DISABLE
-  \* Odpověď: Smyčka byla zakázána
+- LOOP STOP/DISABLE \* Odpověď: Smyčka byla zakázána
 
-- LOOP START/ENABLE
-  \* Odpověď: Smyčka byla povolena
+- LOOP START/ENABLE \* Odpověď: Smyčka byla povolena
 
 - LOOP STATUS
 
@@ -115,104 +116,76 @@ Příkazy musí být odeslány v angličtině. Pokud je řetězec odpovědi pře
     - Smyčka je povolena
     - Pozastavena (10 minut)
 
-- LOOP SUSPEND 20
-  \* Odpověď: Smyčka pozastavena na 20 minut
+- LOOP SUSPEND 20 \* Odpověď: Smyčka pozastavena na 20 minut
 
-- LOOP RESUME
-  \* Odpověď: Smyčka obnovena
+- LOOP RESUME \* Odpověď: Smyčka obnovena
 
 ### CGM data
 
-- BG
-  \* Odpověď: poslední BG: 5.6 před 4min Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Bazál: 0.10U)
-- CAL 5.6
-  \* Odpověď: Pro odeslání kalibrace 5.6 odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
-  \* Odpověď po přijetí správného potvrzovacího kódu: Kalibrace odeslána (*je-li instalovaný xDrip. V xDrip+ musí být povolen příjem kalibrací\**)
+- BG \* Odpověď: poslední BG: 5.6 před 4min Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Bazál: 0.10U)
+- CAL 5.6 \* Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN \* Response after correct code was received: Calibration sent (**If xDrip is installed. Příjem kalibrací musí být v xDrip+ povolen.**)
 
 ### Bazál
 
-- BASAL STOP/CANCEL
-  \* Odpověď: Pro zastavení dočasného bazálu odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
-- BASAL 0.3
-  \* Odpověď: Pro spuštění bazálu 0.3U/h odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
-- BASAL 0.3 20
-  \* Odpověď: Pro spuštění bazálu 0.3U/h na 20 min odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
-- BASAL 30%
-  \* Odpověď: Pro spuštění bazálu 30% na 30 minut odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
-- BASAL 30% 50
-  \* Odpověď: Pro spuštění bazálu 30% na 50 minut odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+- BASAL STOP/CANCEL \* Odpověď: Pro zastavení dočasného bazálu odpověz pomocí SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+- BASAL 0.3 \* Odpověď: Pro spuštění bazálu 0.3U/h odpověz pomocí SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+- BASAL 0.3 20 \* Odpověď: Pro spuštění bazálu 0.3U/h na 20 min odpověz pomocí SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+- BASAL 30% \* Odpověď: Pro spuštění bazálu 30% na 30 minut odpověz pomocí SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+- BASAL 30% 50 \* Odpověď: Pro spuštění bazálu 30% na 50 minut odpověz pomocí SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 
 ### Bolus
 
 Vzdálený bolus není povolen do 15 minut (tato hodnota je upravitelná pouze v případě, že jsou přidána 2 telefonní čísla) po posledním bolusu nebo vzdálených příkazech! Odpověď závisí na době, která uplynula od posledního podání bolusu.
 
-- BOLUS 1.2
-  \* Odpověď A: Pro podani bolusu 1.2U odpovez SMS s kodem z aplikace Authenticator pro User nasledovano kodem PIN
-  \* Odpověď B: Vzdálený bolus není k dispozici. Zkuste to později.
-- BOLUS 0.60 MEAL
-  \* Zadáte-li volitelný parametr MEAL, nastaví se dočasný cíl PŘED JÍDLEM (výchozí hodnoty jsou: 90 mg/dL, 5,0 mmol/l na 45 minut).
-  \* Odpověď A: Pro podání bolusu na jídlo 0.60U odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
-  \* Odpověď B: Vzdálený bolus není k dispozici.
-- CARBS 5
-  \* Odpověď: Pro zapsání 5g v 12:45/5:35PM odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
-- CARBS 5 17:35/5:35PM
-  \* Odpověď: Pro zapsání 5g v 17:35/5:35PM odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
-- EXTENDED STOP/CANCEL
-  \* Odpověď: Pro zastaveni rozšířeného bolusu odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
-- EXTENDED 2 120
-  \* Odpověď: Pro spuštění prodlouženého bolusu 2U na 120 min odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+- BOLUS 1.2 \* Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available. Zkuste to později.
+- BOLUS 0.60 MEAL \* If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins). \* Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available.
+- CARBS 5 \* Odpověď: Pro zapsání 5g v 12:45/5:35PM odpověz pomocí SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+- CARBS 5 17:35/5:35PM \* Odpověď: Pro zapsání 5g v 17:35/5:35PM odpověz pomocí SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+- EXTENDED STOP/CANCEL \* Odpověď: Pro zastaveni rozšířeného bolusu odpověz pomocí SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+- EXTENDED 2 120 \* Odpověď: Pro spuštění prodlouženého bolusu 2U na 120 min odpověz pomocí SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 
 ### Profil
 
-- PROFILE STATUS
-  Odpověď: Profile1
+- PROFILE STATUS Odpověď: Profile1
+- PROFILE LIST \* Odpověď : 1.\`Profile1\` 2.\`Profile2\`
+- PROFILE 1 \* Odpověď: Pro přepnutí profilu na Profil1 100% odpověz pomocí SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+- PROFILE 2 30 \* Odpověď: Pro přepnutí profilu na Profil2 30% odpověz pomocí SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
 
-- PROFILE LIST
-  \* Odpověď : 1.\`Profile1\` 2.\`Profile2\`
-
-- PROFILE 1
-  \* Odpověď: Pro přepnutí profilu na Profil1 100% odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
-
-- PROFILE 2 30
-  \* Odpověď: Pro přepnutí profilu na Profil2 30% odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+(SMS-Commands-other)=
 
 ### Jiné
 
-- TREATMENTS REFRESH
-  \* Odpověď: Obnovit ošetření z NS
-- NSCLIENT RESTART
-  \* Odpověď: NSCLIENT RESTART 1 příjemce
-- PUMP
-  \* Odpověď: Posl. spojení: 1 min zpět Doč. bazál: 0.00U/h @11:38 5/30min IOB: 0.5U Zás: 34U Baterie: 100
-- PUMP CONNECT
-  \* Odpověď: Pumpa znovu připojena
-- PUMP DISCONNECT *30*
-  \* Odpověď: Pro odpojení pumpy na *30* minut odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
-- SMS DISABLE/STOP
-  \* Odpověď: Pro vypnutí vzdálené SMS služby odpovězte pomocí SMS s kódem Any. Mějte na paměti, že ji budete moci opětovně reaktivovat pouze z hlavního smartphonu s AAPS.
-- TARGET MEAL/ACTIVITY/HYPO
-  \* Odpověď: Pro nastaveni dočasneho cíle PŘED JÍDLEM/AKTIVITA/HYPO odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+- TREATMENTS REFRESH \* Odpověď: Obnovit ošetření z NS
+- NSCLIENT RESTART \* Response: NSCLIENT RESTART 1 receivers
+- PUMP \* Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- PUMP CONNECT \* Odpověď: Pumpa znovu připojena
+- PUMP DISCONNECT *30* \* Odpověď: Pro odpojení pumpy na *30* minut odpověz pomocí SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+- SMS DISABLE/STOP \* Response: To disable the SMS Remote Service reply with code Any. Mějte na paměti, že ji budete moci opětovně reaktivovat pouze z hlavního smartphonu s AAPS.
+- TARGET MEAL/ACTIVITY/HYPO \* Odpověď: Pro nastaveni dočasneho cíle PŘED JÍDLEM/AKTIVITA/HYPO odpověz pomocí SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
+- TARGET STOP/CANCEL \* Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
+- HELP \* Response: BG, LOOP, TREATMENTS, .....
+- HELP BOLUS \* Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
-TARGET STOP/CANCEL
-: - Odpověď: Pro zastaveni dočasného cíle odpověz SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
-
-- HELP
-  \* Odpověď: BG, LOOP, TREATMENTS, .....
-- HELP BOLUS
-  \* Odpověď: BOLUS 1.2 BOLUS 1.2 MEAL
-
+(SMS-Commands-troubleshooting)=
 ## Řešení problémů
 
 ### Duplicitní SMS
 
-Obdržíte-li stejnou zprávu znovu a znovu (např. přepnutí profilu), je pravděpodobné, že se jedná o zacyklení s jinými aplikacemi. Například xDrip+. Pokud je to tak, ujistěte se prosím, že xDrip+ (nebo jakákoliv jiná aplikace) nenahrává ošetření do NS.
+If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. Například xDrip+. Pokud je to tak, ujistěte se prosím, že xDrip+ (nebo jakákoliv jiná aplikace) nenahrává ošetření do NS.
 
 Je-li tato jiná aplikace nainstalovaná na více telefonech, deaktivujte upload u všech instancí.
 
 ### Nefunkční SMS příkazy na telefonech Samsung
 
-Po aktualizaci telefonu Galaxy S10 bylo hlášeno, že SMS příkazy přestaly fungovat. Lze to vyřešit vypnutím "odeslání zprávy jako konverzace".
+Po aktualizaci telefonu Galaxy S10 bylo hlášeno, že SMS příkazy přestaly fungovat. Lze to vyřešit vypnutím možnosti "odesílat zprávy jako konverzace".
 
 ```{image} ../images/SMSdisableChat.png
-:alt: "Zak\xE1zat odes\xEDl\xE1n\xED SMS jako konverzace"
+:alt: Zakázat odesílání SMS jako konverzace
 ```
+### Android Messages App
+
+If you are having issues sending or receiving SMS commands with the Android Messages app disable end-to-end ecryption on both caregiver and child's phones.
+ - open the specific SMS conversation in Messages
+ - Select the options ellipisis in the top right corner
+ - select "Details"
+ - Activate "Only send SMS and MMS messages"

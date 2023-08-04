@@ -1,12 +1,12 @@
-# SMS-Kommandos
+# SMS-Befehle
 
 ## Sicherheitshinweise
 
-- AndroidAPS erlaubt es Dir, das Smartphone eines Kindes über SMS-Nachricht aus der Ferne zu steuern. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Kommandos eingerichtet ist, gestohlen werden oder verloren gehen kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code. Es wird ein starkes Passwort oder biometrischer Schutz empfohlen.
-- Außerdem ist es empfehlenswert, eine [zweite Telefonnummer](#erlaubte-telefonnummern) für SMS Kommandos einzurichten. Dann kannst Du die zweite Nummer nutzen, um den SMS-Kommunikator [vorübergehend zu deaktivieren](#andere), falls Dein Smartphone verloren geht oder gestohlen wird.
-- AndroidAPS gibt Rückmeldung per SMS, wenn Deine Remote-Kommandos, wie z.B. ein Bolus oder eine Profiländerung, ausgeführt wurden. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
+- AAPS allows you to control a child's phone remotely via text message. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Befehle eingerichtet ist, gestohlen werden kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code. Es wird ein starkes Passwort oder biometrischer Schutz empfohlen.
+- Außerdem ist es empfehlenswert, eine [zweite Telefonnummer](SMS-Commands-authorized-phone-numbers) für SMS Kommandos einzurichten. Dann kannst Du die zweite Nummer nutzen, um den SMS-Kommunikator [vorübergehend zu deaktivieren](SMS-Commands-other), falls Dein Smartphone verloren geht oder gestohlen wird.
+- AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
 - **Wenn Du einen Bolus über SMS-Kommandos abgibst, musst Du die Kohlenhydrate über Nightscout (NSClient, Webseite...) eingeben!** Wenn Du das unterlässt, ist zwar das IOB korrekt, aber die COB sind zu gering. Dies kann dazu führen, dass notwendige Korrekturboli nicht abgegeben werden, da AAPS davon ausgeht, dass Du zu viel aktives Insulin hast.
-- Ab AndroidAPS Version 2.7 muss eine Authentifizierungs-App mit einem zeitbasierten Einmalpasswort verwendet werden, um die Sicherheit bei der Verwendung von SMS-Kommandos zu erhöhen.
+- As of AAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
 
 ## SMS-Kommandos einrichten
 
@@ -19,9 +19,11 @@
 - Falls Du als Follower ein iPhone verwendest und daher die NSClient-App nicht nutzen kannst, gibt es weitere SMS-Kommandos.
 - Gehe dazu in den Systemeinstellungen deines Android-Telefons zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
 
+(SMS-Commands-authorized-phone-numbers)=
+
 ### Erlaubte Telefonnummern
 
-- In AndroidAPS gehst du zu **Einstellungen > SMS-Kommunikator** und trägst die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AndroidAPS zu senden. Mehrere Nummern werden dabei durch Semikolon ohne Leerzeichen getrennt (z.B. +6412345678;+6412345679)
+- In AAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
 
 - Aktiviere 'Erlaube Fernsteuerung per SMS zulassen'.
 
@@ -52,7 +54,7 @@
   - nicht dieselben Ziffern (z.B. 1111)
   - keine Ziffernfolge (z.B. 1234)
 
-### Konfiguration des Authentifikators
+### Konfiguration der Authenticator App
 
 - Zwei-Faktor-Authentifizierung wird zur Verbesserung der Sicherheit verwendet.
 
@@ -79,7 +81,7 @@
 
 ## SMS-Kommandos verwenden
 
-- Sende eine SMS von Deiner/Deinen erlaubte/n Telefonnummer(n) an das Smartphone, das AndroidAPS ausgeführt und nutze dabei eines der [Kommandos](../Children/SMS-Commands#id1) unten.
+- Send a SMS to the phone with AAPS running from your approved phone number(s) using any of the [commands](SMS-Commands-commands) below.
 
 - Das AAPS-Smartphone wird antworten, um sich die Durchführung des übermittelten Kommandos bestätigen zu lassen oder um den angeforderten Status zu übermitteln.
 
@@ -91,21 +93,20 @@
 
 **Hinweis**: Eine SMS-Flat auf beiden Telefonen kann nützlich sein, da u.U. viele SMS hin und her gesandt werden.
 
+(SMS-Commands-commands)=
 ## Kommandos
 
-Kommandos müssen in Englisch gesendet werden, die Antwort erhältst Du in Deiner lokalen Sprache, wenn die Zeichenfolge bereits [übersetzt ist](../translations#texte-fur-die-androidaps-app-ubersetzen).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](translations-translate-strings-for-AAPS-app).
 
 ```{image} ../images/SMSCommands.png
-:alt: "Beispiele f\xFCr SMS-Kommandos"
+:alt: Beispiele für SMS-Kommandos
 ```
 
 ### Loop
 
-- LOOP STOP/DISABLE
-  \* Antwort: Loop wurde deaktiviert.
+- LOOP STOP/DISABLE \* Antwort: Loop wurde deaktiviert.
 
-- LOOP START/ENABLE
-  \* Antwort: Loop wurde aktiviert
+- LOOP START/ENABLE \* Antwort: Loop wurde aktiviert
 
 - LOOP-STATUS
 
@@ -113,89 +114,59 @@ Kommandos müssen in Englisch gesendet werden, die Antwort erhältst Du in Deine
 
     - Loop ist deaktiviert.
     - Loop ist aktiviert.
-    - Pausiert (%1\$d min)
+    - Pausiert (%1$d min)
 
-- LOOP SUSPEND 20
-  \* Antwort: Loop unterbrochen für 20 Minuten
+- LOOP SUSPEND 20 \* Antwort: Loop unterbrochen für 20 Minuten
 
-- LOOP RESUME
-  \* Antwort: Loop wurde fortgesetzt
+- LOOP RESUME \* Antwort: Loop wurde fortgesetzt
 
 ### CGM-Daten
 
-- BG
-  \* Antwort: Letzter BZ: 5.6 4min her, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
-- CAL 5.6
-  \* Antwort: Um die Kalibrierung 5.6 zu senden, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
-  \* Antwort, nachdem der korrekte Code von AAPS empfangen wurde: Kalibrierung gesendet (**Falls xDrip installiert ist. In xDrip+ muss "Kalibrierungen akzeptieren" aktiviert sein.**)
+- BG \* Antwort: Letzter BZ: 5.6 4min her, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- CAL 5.6 \* Antwort: Um die Kalibrierung 5.6 zu senden, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN. \* Antwort, nachdem der korrekte Code von AAPS empfangen wurde: Kalibrierung gesendet (**Falls xDrip installiert ist. In xDrip+ muss "Kalibrierungen akzeptieren" aktiviert sein.**)
 
 ### Basal
 
-- BASAL STOP/CANCEL
-  \* Antwort: Antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN, um die temporäre Basalrate zu beenden.
-- BASAL 0.3
-  \* Antwort: Um eine Basalrate von 0.3IE/h für 30 Minuten zu setzen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
-- BASAL 0.3 20
-  Antwort: Um eine Basalrate von 0.3IE/h für 20 Minuten zu setzen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
-- BASAL 30%
-  \* Antwort: Um die Basalrate von 30% für 30 Minuten zu setzen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
-- BASAL 30% 50
-  \* Antwort: Um die Basalrate von 30% für 50 Minuten zu setzen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
+- BASAL STOP/CANCEL \* Antwort: Antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN, um die temporäre Basalrate zu beenden.
+- BASAL 0.3 \* Antwort: Um eine Basalrate von 0.3IE/h für 30 Minuten zu setzen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
+- BASAL 0.3 20 Antwort: Um eine Basalrate von 0.3IE/h für 20 Minuten zu setzen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
+- BASAL 30% \* Antwort: Um die Basalrate von 30% für 30 Minuten zu setzen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
+- BASAL 30% 50 \* Antwort: Um die Basalrate von 30% für 50 Minuten zu setzen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
 
 ### Bolus
 
 Ein Bolus via SMS ist innerhalb von 15 Minuten nach der letzten Bolusgabe in AAPS oder nach dem letzten SMS-Kommando nicht möglich. Den Wert kannst Du nur anpassen, wenn mind. zwei Rufnummern eingetragen sind. Die Antwort hängt daher davon ab, wann der letzte Bolus abgegeben wurde.
 
-- BOLUS 1.2
-  \* Antwort A: Um einen Bolus von 1,2 IE abzugeben, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
-  \* Antwort B: Bolusabgabe aus der Ferne nicht verfügbar. Versuch es später nochmal.
-- BOLUS 0.60 MEAL
-  \* Mit dem optionalen Parameter MEAL wird ein Mahlzeiten TT gesetzt (Standardwerte sind 90 mg/dL / 5.0 mmol/L für 45 Minuten).
-  \* Antwort A: Um einen Bolus von 0,6 IE abzugeben, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
-  \* Antwort B: Bolusabgabe aus der Ferne nicht verfügbar.
-- CARBS 5
-  \* Antwort: Um 5g Kohlenhydrate um 12:45 einzugeben, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
-- CARBS 5 17:35/5:35PM
-  \* Antwort: Um 5g Kohlenhydrate um 17:35 einzugeben, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
-- EXTENDED STOP/CANCEL
-  \* Antwort: Antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN, um den erweiterten Bolus zu beenden.
-- EXTENDED 2 120
-  \* Antwort: Um den erweiterten Bolus 2 IE für 120 Minuten abzugeben, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
+- BOLUS 1.2 \* Antwort A: Um einen Bolus von 1,2 IE abzugeben, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN. \* Antwort B: Bolusabgabe aus der Ferne nicht verfügbar. Versuch es später nochmal.
+- BOLUS 0.60 MEAL \* Mit dem optionalen Parameter MEAL wird ein Mahlzeiten TT gesetzt (Standardwerte sind 90 mg/dL / 5.0 mmol/L für 45 Minuten). \* Antwort A: Um einen Bolus von 0,6 IE abzugeben, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
+- CARBS 5 \* Antwort: Um 5g Kohlenhydrate um 12:45 einzugeben, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
+- CARBS 5 17:35/5:35PM \* Antwort: Um 5g Kohlenhydrate um 17:35 einzugeben, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
+- EXTENDED STOP/CANCEL \* Antwort: Antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN, um den erweiterten Bolus zu beenden.
+- EXTENDED 2 120 \* Antwort: Um den erweiterten Bolus 2 IE für 120 Minuten abzugeben, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
 
 ### Profile
 
-- PROFILE STATUS
-  \* Antwort: Profil1
-- PROFILE LIST
-  \* Antwort: 1. \` Profil1 \` 2. \` Profil2 \`
-- PROFILE 1
-  \* Antwort: Um zum Profil 1 mit 100% zu wechseln, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
-- PROFILE 2 30
-  \* Antwort: Um zum Profil 2 mit 30% zu wechseln, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
+- PROFILE STATUS \* Antwort: Profil1
+- PROFILE LIST \* Antwort: 1. \` Profil1 \` 2. \` Profil2 \`
+- PROFILE 1 \* Antwort: Um zum Profil 1 mit 100% zu wechseln, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
+- PROFILE 2 30 \* Antwort: Um zum Profil 2 mit 30% zu wechseln, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
+
+(SMS-Commands-other)=
 
 ### Andere
 
-- TREATMENTS REFRESH
-  \* Antwort: Behandlungen von NS aktualisieren
-- NSCLIENT RESTART
-  \* Antwort: NSCLIENT RESTART 1 receivers
-- PUMP
-  \* Antwort: Letzte Verbindung: vor 1 Min. Temp: 0.00E/h @11:38 5/30min IOB: 0.5E Reserv: 34E Batt: 100
-- PUMP CONNECT
-  \* Antwort: Pumpe erneut verbunden
-- PUMP DISCONNECT *30*
-  \* Um die Pumpe für *30* Minuten zu trennen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
-- SMS DISABLE/STOP
-  \* Antwort: Um den SMS Remote Service zu deaktivieren, antworte mit dem Code Any. Beachte, dass Du die Fernsteuerung nur am AAPS Master-Smartphone wieder aktivieren kannst.
-- TARGET MEAL/ACTIVITY/HYPO
-  \* Antwort: Um ein MEAL/ACTIVITY/HYPO TT zu setzen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
-- TARGET STOP/CANCEL
-  \* Antwort: Um das temporäre Ziel zu stoppen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
-- HELP
-  \* Antwort: BG, LOOP, TREATMENTS, .....
-- HELP BOLUS
-  \* Antwort: BOLUS 1.2 BOLUS 1.2 MEAL
+- TREATMENTS REFRESH \* Antwort: Behandlungen von NS aktualisieren
+- NSCLIENT RESTART \* Antwort: NSCLIENT RESTART 1 receivers
+- PUMP \* Antwort: Letzte Verbindung: vor 1 Min. Temp: 0.00E/h @11:38 5/30min IOB: 0.5E Reserv: 34E Batt: 100
+- PUMP CONNECT \* Antwort: Pumpe erneut verbunden
+- PUMP DISCONNECT *30* \* Um die Pumpe für *30* Minuten zu trennen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
+- SMS DISABLE/STOP \* Antwort: Um den SMS Remote Service zu deaktivieren, antworte mit dem Code Any. Beachte, dass Du die Fernsteuerung nur am AAPS Master-Smartphone wieder aktivieren kannst.
+- TARGET MEAL/ACTIVITY/HYPO \* Antwort: Um ein MEAL/ACTIVITY/HYPO TT zu setzen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
+- TARGET STOP/CANCEL \* Antwort: Um das temporäre Ziel zu stoppen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
+- HELP \* Antwort: BG, LOOP, TREATMENTS, .....
+- HELP BOLUS \* Antwort: BOLUS 1.2 BOLUS 1.2 MEAL
 
+(SMS-Commands-troubleshooting)=
 ## Problembehandlung
 
 ### Mehrfach-SMS
@@ -211,3 +182,10 @@ Es gab einen Hinweis, dass nach einem Update die SMS Kommandos auf einem Galaxy 
 ```{image} ../images/SMSdisableChat.png
 :alt: SMS als Chatnachricht deaktivieren
 ```
+### Android Messages App
+
+If you are having issues sending or receiving SMS commands with the Android Messages app disable end-to-end ecryption on both caregiver and child's phones.
+ - open the specific SMS conversation in Messages
+ - Select the options ellipisis in the top right corner
+ - select "Details"
+ - Activate "Only send SMS and MMS messages"

@@ -11,7 +11,7 @@ Exported settings should be copied to a cloud storage or your computer, better t
 On a Windows 10 computer it looks like this:
 
 ```{image} ../images/AAPS_ExImportSettingsWin.png
-:alt: AndroidAPS Preferences phone connected to computer
+:alt: AAPS Preferences phone connected to computer
 ```
 
 ## Exported information
@@ -20,14 +20,15 @@ Among others the following information is part of the settings export:
 
 - [Automation](../Usage/Automation.md) events
 - [Config builder](../Configuration/Config-Builder.md) settings
-- [Local profile](../Configuration/Config-Builder#local-profile) settings
-- [Objectives](../Usage/Objectives.md) status incl. [exam results](../Usage/Objectives#objective-3-prove-your-knowledge)
-- [Preferences](../Configuration/Preferences.md) incl. [NS Client settings](../Configuration/Preferences#nsclient)
+- [Local profile](Config-Builder-local-profile) settings
+- [Objectives](../Usage/Objectives.md) status incl. [exam results](Objectives-objective-3-prove-your-knowledge)
+- [Preferences](../Configuration/Preferences.md) incl. [NS Client settings](Preferences-nsclient)
 
 ## Encrypted backup format
 
-Settings backup is encrypted by a master password that can be set in [Preferences](../Configuration/Preferences#master-password) .
+Settings backup is encrypted by a master password that can be set in [Preferences](Preferences-master-password) .
 
+(ExportImportSettings-export-settings)=
 ## Export settings
 
 - Hamburger menu (top left corner of screen)
@@ -35,37 +36,38 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - Export settings
 
 ```{image} ../images/AAPS_ExportSettings1.png
-:alt: AndroidAPS export settings 1
+:alt: AAPS export settings 1
 ```
 
 - Date and time of export will be added to the file name automatically and displayed together with the path.
 - Click 'OK'.
-- Enter [master password](../Configuration/Preferences#master-password) and click 'OK'.
+- Enter [master password](Preferences-master-password) and click 'OK'.
 - Successful export will be prompted at bottom of the screen.
 
 ```{image} ../images/AAPS_ExportSettings2.png
-:alt: AndroidAPS export settings 2
+:alt: AAPS export settings 2
 ```
 
+(ExportImportSettings-import-settings)=
 ## Import settings
 
-**Do not import settings while on an active Pod session** - see [Omnipod page for details](../Configuration/OmnipodEros#import-settings-from-previous-aaps).
+**Do not import settings while on an active Pod session** - see [Omnipod page for details](OmnipodEros-import-settings-from-previous-aaps).
 
 - Hamburger menu (top left corner of screen)
 - Maintenance
 - Import settings
 
 ```{image} ../images/AAPS_ImportSettings1.png
-:alt: AndroidAPS import settings 1
+:alt: AAPS import settings 1
 ```
 
 - All files from folder AAPS/preferences/ on your phone will be shown in the list.
 - Select file.
 - Confirm import by clicking 'OK'.
-- Enter [master password](../Configuration/Preferences#master-password) and click 'OK'.
+- Enter [master password](Preferences-master-password) and click 'OK'.
 
 ```{image} ../images/AAPS_ImportSettings2.png
-:alt: AndroidAPS import settings 2
+:alt: AAPS import settings 2
 ```
 
 - Details on the preference file will be shown.

@@ -5,7 +5,7 @@
 - Klicke auf das Hamburger Menü in der oberen linken Ecke.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_01.jpg
-  > :alt: "Hamburger Men\xFC"
+  > :alt: Hamburger Menü
   > ```
 
 - Klicke auf Konfiguration.
@@ -23,7 +23,7 @@
 - Wähle 'ausgewählte Pumpe'.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_04.jpg
-  > :alt: "Pumpe ausw\xE4hlen"
+  > :alt: Pumpe auswählen
   > ```
 
 - Wähle die Modellnummer Deiner Insulinpumpe aus, sobald sie in der Liste erscheint.
@@ -36,10 +36,9 @@
 
   > 1. Die letzten 5 Ziffern der Seriennummer auf der Rückseite der Pumpe.
   > 2. Drücke den = Button > Information > BLE > letzte 5 Ziffern.
-  >
-  > > ```{image} ../images/DiaconnG8/DiaconnG8_06.jpg
-  > > :alt: "Modellnr. pr\xFCfen"
-  > > ```
+  > 
+  > > `{image} ../images/DiaconnG8/DiaconnG8_06.jpg
+    :alt: "Modellnr.`
 
 - Nach Auswahl der Pumpe erscheint ein Fenster, in dem der PIN Code abgefragt wird. Gib die PIN-Nummer ein, die auf Deiner Pumpe angezeigt wird, um die Verbindung abzuschließen.
 
@@ -49,11 +48,11 @@
 
 ## Überprüfung des Pumpenstatus und Synchronisierung der Protokolle
 
-Sobald Ihre Pumpe verbunden ist, klicken Sie auf das Bluetooth-Symbol, um den Status zu überprüfen und die Protokolle zu synchronisieren.
+- Sobald Ihre Pumpe verbunden ist, klicke auf das Bluetooth-Symbol, um den Status zu überprüfen und die Protokolle zu synchronisieren.
 
-> ```{image} ../images/DiaconnG8/DiaconnG8_08.jpg
-> :alt: Bluetooth-Status
-> ```
+  > ```{image} ../images/DiaconnG8/DiaconnG8_08.jpg
+  > :alt: Bluetooth-Status
+  > ```
 
 ## Bluetooth-Fehlerbehebung
 
@@ -64,7 +63,7 @@ Sobald Ihre Pumpe verbunden ist, klicken Sie auf das Bluetooth-Symbol, um den St
 - Klicke auf die Schaltfläche mit den 3 Punkten oben rechts.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_09.jpg
-  > :alt: "Men\xFC Einstellungen"
+  > :alt: Menü Einstellungen
   > ```
 
 - Klicke auf "Beenden".
@@ -108,14 +107,14 @@ Sobald Ihre Pumpe verbunden ist, klicken Sie auf das Bluetooth-Symbol, um den St
 
 - Wenn die Option **Reservoirwechsel protokollieren** aktiviert ist, werden die entsprechenden Details automatisch in das Careportal hochgeladen, wenn das Ereignis "Insulinwechsel" eintritt.
 - Ist die Option **Kanülenwechsel protokollieren** aktiviert, werden bei einem Kanülenwechsel die entsprechenden Details automatisch in das Careportal hochgeladen.
-- Wenn die Option **Schlauchwechsel protokollieren** aktiviert ist, werden die relevanten Details automatisch in das Pflegeportal hochgeladen.
+- Wenn die Option **Schlauchwechsel protokollieren** aktiviert ist, werden die relevanten Details automatisch in das Careportal hochgeladen.
 - Wenn die Option **Batteriewechsel protokollieren** aktiviert ist, werden die relevanten Details neim Batteriewechsel automatisch in das Pflegeportal hochgeladen und die Schaltfläche PUMPENBATTERIEWECHSEL auf der Registerkarte AKTION ist deaktiviert. (Hinweis: Um die Batterie zu wechseln, stoppe bitte alle laufenden Injektionsvorgänge.)
 
 ```{image} ../images/DiaconnG8/DiaconnG8_15.jpg
-:alt: "Diaconn G8 Aktionsmen\xFC"
+:alt: Diaconn G8 Aktionsmenü
 ```
 
 ### Funktion verzögerter Bolus
 
 - Wenn Du einen verzögerten Bolus verwendest, wird der "Closed Loop"-Modus deaktiviert.
-- Auf [dieser Seite](../Usage/Extended-Carbs#warum-ein-verzogerter-bolus-beim-loopen-nicht-funktioniert) wird erläutert, warum der erweiterte Bolus im "Closed Loop"-Modus nicht funktioniert.
+- Auf [dieser Seite](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) wird erläutert, warum der erweiterte Bolus im "Closed Loop"-Modus nicht funktioniert.

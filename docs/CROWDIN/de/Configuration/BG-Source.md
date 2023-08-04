@@ -1,11 +1,12 @@
-# BZ-Quelle
+# CGMS/FGMS-Konfiguration
 
-* [Allgemeine Empfehlungen für alle CGM/FGM](../Hardware/GeneralCGMRecommendation.md)
-* [Glättung der Blut-Glukose-Daten](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)
+* [Allgemein](../Hardware/GeneralCGMRecommendation.md)
+* [Datenglättung](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)
 * [xDrip+Einstellungen](./xdrip.md)
+* [Dexcom G7](../Hardware/DexcomG7.md)
 * [Dexcom G6](../Hardware/DexcomG6.md)
 * [Dexcom G5](../Hardware/DexcomG5.md)
-* [Dexcom G4](../Hardware/DexcomG4.md)
+* [Dexcom G4 - dies ist der MD file](../Hardware/DexcomG4.md)
 * [Libre 3](../Hardware/Libre3.md)
 * [Libre 2](../Hardware/Libre2.md)
 * [Libre 1](../Hardware/Libre1.md)

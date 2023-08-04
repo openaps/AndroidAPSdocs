@@ -1,21 +1,21 @@
 # Tercihler
 
-Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak * **tercihleri açın**.
+- Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak **tercihleri açın**.
 
-> ```{image} ../images/Pref2020_Open2.png
-> :alt: "Tercihleri a\xE7\u0131n"
-> ```
+  ```{image} ../images/Pref2020_Open2.png
+  :alt: Tercihleri açın
+  ```
 
-- Belirli bir sekme için doğrudan tercihlere geçebilirsiniz (ör. pompa sekmesi) bu sekmeyi açıp Eklenti tercihlerini tıklayarak.
+- Bu sekmeyi açıp Eklenti tercihleri'ne tıklayarak belirli bir sekmenin (ör. pompa sekmesi) tercihlerine doğrudan atlayabilirsiniz.
 
   ```{image} ../images/Pref2020_OpenPlugin2.png
-  :alt: "Tercihler Eklentisini a\xE7\u0131n"
+  :alt: Tercihler Eklentisini açın
   ```
 
 - **Alt menüler**, alt menü başlığının altındaki üçgene tıklanarak açılabilir.
 
   ```{image} ../images/Pref2020_Submenu2.png
-  :alt: "Alt men\xFCy\xFC a\xE7"
+  :alt: Alt menüyü aç
   ```
 
 - Tercihler ekranının üst kısmındaki **filtre** ile belirli tercihlere hızlı bir şekilde erişebilirsiniz. Sadece aradığınız metnin bir kısmını yazmaya başlayın.
@@ -24,12 +24,12 @@ Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak * **terci
   :alt: Tercihler filtresi
   ```
 
-```{eval-rst}
-.. içerik::
-   :backlinks: giriş
-   :depth: 2
+```{contents}
+:backlinks: entry
+:depth: 2
 ```
 
+(Preferences-general)=
 ## Genel
 
 **Ünite**
@@ -50,14 +50,15 @@ Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak * **terci
 
 **Hasta Adı**
 
-- Birden fazla kurulum arasında ayrım yapmanız gerekiyorsa kullanılabilir (örn. ailenizde iki T1D çocuk varsa).
+- Birden fazla kurulum arasında ayrım yapmanız gerekiyorsa kullanılabilir (örn. ailenizdeki 2 T1D çocuk için).
 
+(Preferences-protection)=
 ### Güvenlik
 
+(Preferences-master-password)=
 #### Ana parola
 
-- Sürüm 2.7'den itibaren şifreli oldukları için [ayarları](../Usage/ExportImportSettings.md) dışa aktarabilmek için gereklidir.
-  **Biyometrik koruma, OnePlus telefonlarda çalışmayabilir. Bu bazı OnePlus telefonlarında bilinen bir sorunudur.**
+- 2.7 sürümünden itibaren şifrelenmiş oldukları için [ayarları dışa aktarabilmek](../Usage/ExportImportSettings.md) için gereklidir. **Biyometrik koruma, OnePlus telefonlarda çalışmayabilir. Bu bazı OnePlus telefonlarında bilinen bir sorunudur.**
 
 - Tercihleri Açın (ana ekranın sağ üst köşesindeki üç noktalı menü)
 
@@ -68,19 +69,19 @@ Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak * **terci
 - Parolayı girin, onaylayın ve Tamam'a tıklayın.
 
   ```{image} ../images/MasterPW.png
-  :alt: "Ana parola tan\u0131mlama"
+  :alt: Ana parola tanımlama
   ```
 
 #### Ayarların Güvenliği "Settings protection"
 
-- Ayarlarınızı bir parola veya telefonun biyometrik doğrulaması ile koruyun (ör. [çocuğunuz AAPS kullanıyor ise](../Children/Children.md)).
+- Ayarlarınızı bir parola veya telefonun biyometrik kimlik doğrulaması ile koruyun (ör. [çocuk AAPS kullanıyor](../Children/Children.md)).
 
-- Ayarların güvenliği "settings protection" tıklandığında, seçenekler arasındaki özel şifre "custom password" yalnızca [dışa aktarılan ayarların](../Usage/ExportImportSettings.md) güvenliğini sağlamak için ana parolayı kullanmak, iç ayarların değiştirilmesinde farklı parola kullanmak istiyorsanız ayarlanmalıdır. Ayarlarda ve tercihlerde değişiklik yapmak için bu paraloyı hatırlamanız gerektiğini unutmayın.
+- Yalnızca [dışa aktarılan ayarların](../Usage/ExportImportSettings.md) güvenliğini sağlamak için ana parola kullanmak istiyorsanız, özel parola kullanılmalıdır.
 
-- Ayarlar için Özel şifre kullanmak istiyorsanız, şifreyi [açıklamadaki gibi ayarlamak için](../Configuration/Preferences#master-password) "custom password" satırına tıklayın.
+- Özel bir parola kullanıyorsanız, parolayı [yukarıda](Preferences-master-password) açıklandığı gibi ayarlamak için "Parola ayarları" satırına tıklayın.
 
   ```{image} ../images/Pref2020_Protection.png
-  :alt: "G\xFCvenlik"
+  :alt: Güvenlik
   ```
 
 #### Uygulama Güvenliği
@@ -90,7 +91,7 @@ Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak * **terci
 
 #### Bolus koruması
 
-- AAPS küçük bir çocuk tarafından kullanılıyorsa ve siz [SMS yoluyla bolus gönderiyorsanız](../Children/SMS-Commands.md) bolus koruması yararlı olabilir.
+- AAPS küçük bir çocuk tarafından kullanılıyorsa ve siz [SMS yoluyla bolus](../Children/SMS-Commands.md) gönderiyorsanız, bolus koruması yararlı olabilir.
 
 - Aşağıdaki örnekte biyometrik koruma istemini görüyorsunuz. Biyometrik kimlik doğrulama çalışmazsa, beyaz kısmın üzerindeki boşluğa tıklayın ve ana parolayı girin.
 
@@ -98,12 +99,13 @@ Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak * **terci
   :alt: Biyometrik koruma
   ```
 
+(Preferences-skin)=
 #### Görünüm
 
 - Dört çeşit görünüm arasından seçim yapabilirsiniz:
 
   ```{image} ../images/Pref2021_SkinWExample.png
-  :alt: "G\xF6r\xFCn\xFCm se\xE7imi + \xF6rnekler"
+  :alt: Görünüm seçimi + örnekler
   ```
 
 - 'Düşük çözünürlüklü görünüm', düşük çözünürlüklü ekranda daha fazla kullanılabilir alana sahip olmak için daha kısa etiket ve yaş/seviye satırı kaldırılmış olarak gelir.
@@ -112,25 +114,26 @@ Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak * **terci
 
 ##### Dikey oryantasyon
 
-- **Orijinal Görünüm\*\*de \*\*Düğmeler her zaman ekranın altında görüntülenir** ve değişmez.
-- **Geniş Ekran** diğer dış görünümlere kıyasla tüm grafiklerin daha büyük bir boyutuna sahiptir
+- **Orijinal Dış Görünüm** ve **Butonlar her zaman ekranın altında görüntülenir** aynıdır
+- **Geniş Ekran** diğer dış görünümlere kıyasla tüm grafiklerin daha büyük boyutuna sahiptir
 
 ##### Yatay oryantasyon
 
-- **Orijinal Görünüm** ve **Geniş Ekran**'ı kullandığınızda ekranın alt kısmındaki düğmeleri görmek için aşağı kaydırmanız gerekir.
+- **Orijinal Dış Görünüm** ve **Büyük Ekranı** kullanarak ekranın alt kısmındaki butonları görmek için aşağı kaydırmanız gerekir
 
-- **Geniş Ekran** diğer dış görünümlere kıyasla tüm grafiklerin daha büyük bir boyutuna sahiptir
+- **Geniş Ekran** diğer dış görünümlere kıyasla tüm grafiklerin daha büyük boyutuna sahiptir
 
   ```{image} ../images/Screenshots_Skins.png
-  :alt: "Ekran y\xF6n\xFCne g\xF6re g\xF6r\xFCn\xFCm"
+  :alt: Ekran yönüne göre görünüm
   ```
 
+(Preferences-overview)=
 ## Genel Bakış
 
 - Genel bakış bölümünde ana ekran için tercihleri tanımlayabilirsiniz.
 
   ```{image} ../images/Pref2020_OverviewII.png
-  :alt: "Tercihler > Genel Bak\u0131\u015F"
+  :alt: Tercihler > Genel Bakış
   ```
 
 ### Ekranı açık tut
@@ -138,6 +141,7 @@ Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak * **terci
 - Sunum yaparken kullanışlıdır.
 - Çok fazla enerji tüketeceğinden telefonunuzu şarj cihazına takmanız tavsiye edilir.
 
+(Preferences-buttons)=
 ### Butonlar
 
 - Ana ekranınızın altında hangi butonların görüneceğini tanımlayın.
@@ -145,9 +149,10 @@ Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak * **terci
 - Karbonhidrat ve insülin diyalogundaki üç artış butonu ile kolay giriş için miktar tanımlayabilirsiniz.
 
   ```{image} ../images/Pref2020_OV_Buttons.png
-  :alt: "Tercihler > D\xFC\u011Fmeler"
+  :alt: Tercihler > Butonlar
   ```
 
+(Preferences-quick-wizard)=
 ### Hızlı Asistan
 
 - Sürekli yediğiniz yiyecekler için, karbonhidrat miktarını girdiğiniz ve neleri hesaplayacağınızı ayarladığınız hızlı asistan butonu oluşturarak, ana sayfaya ekleyip kullanabilirsiniz.
@@ -159,32 +164,34 @@ Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak * **terci
 - İnsülin verilmeden önce önerinin onaylanması gerekir.
 
   ```{image} ../images/Pref2020_OV_QuickWizard.png
-  :alt: "Tercihler > H\u0131zl\u0131 Asistan Butonu"
+  :alt: Tercihler > Hızlı Asistan Butonu
   ```
 
+(Preferences-default-temp-targets)=
 ### Varsayılan Geçici hedefler
 
-- [Geçici hedefler (GH)](../Usage/temptarget.md) belirli bir süre için kan şekeri hedefinizi değiştirmeyi tanımlamanıza izin verir.
+- [Geçici hedefler (GH)](../Usage/temptarget.md), kan şekeri hedefinizi belirli bir süre için değiştirmenizi sağlar.
 
 - Varsayılan GH ayarı ile aktivite, yakında öğün vb. butonlar için hedefinizi kolayca değiştirebilirsiniz.
 
 - Hedefinizi, ana ekranın sağ üst köşesindeki hedefinize uzun basarak veya alttaki turuncu “Karbonhidrat” düğmesindeki kısayolları kullanarak değiştirebilirsiniz.
 
   ```{image} ../images/Pref2020_OV_DefaultTT.png
-  :alt: "Tercihler > Varsay\u0131lan ge\xE7ici hedefler"
+  :alt: Tercihler > Varsayılan geçici hedefler
   ```
 
 ### Standart insülin miktarlarını Hazırla/Doldur
 
-- AAPS aracılığıyla hortum doldurmak veya kanül hazırlamak istiyorsanız, bunu [eylemler sekmesi](../Getting-Started/Screenshots#action-tab) üzerinden yapabilirsiniz.
+- AAPS aracılığıyla boruyu doldurmak veya kanülü hazırlamak istiyorsanız, bunu [eylemler sekmesinden](Screenshots-action-tab) yapabilirsiniz.
 - Bu diyalogda önceden ayarlanmış (pompanıza göre) değerler tanımlanabilir.
 
+(Preferences-range-for-visualization)=
 ### Görselleştirme Aralığı
 
 - Ana ekrandaki grafiğin hangi bölümünün hedef aralığınız olacağını ve yeşil arka planla doldurulacağını tanımlayın.
 
   ```{image} ../images/Pref2020_OV_Range2.png
-  :alt: "Tercihler > G\xF6rselle\u015Ftirme aral\u0131\u011F\u0131"
+  :alt: Tercihler > Görselleştirme aralığı
   ```
 
 ### Kısa sekme başlıkları
@@ -202,15 +209,16 @@ Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak * **terci
 - Tedavilerinize kısa metin notları ekleme seçeneği sunar (bolus sihirbazı, karbonhidrat, insülin...)
 
   ```{image} ../images/Pref2020_OV_Notes.png
-  :alt: "Tercihler > Tedavi diyaloglar\u0131ndaki notlar"
+  :alt: Tercihler > Tedavi diyaloglarındaki notlar
   ```
 
+(Preferences-status-lights)=
 ### Durum ışıkları
 
-- Durum ışıkları aşağıdakiler için görsel uyarı verir;
+- Durum ışıkları için görsel bir uyarı verir
 
   - Sensör yaşı
-  - Bazı akıllı okuyucular için sensör pil seviyesi (ayrıntılar için [ekran görüntüleri sayfasına](../Getting-Started/Screenshots#sensor-level-battery) bakın).
+  - Belirli akıllı okuyucular için sensör pil düzeyi (ayrıntılar için [ekran görüntüleri sayfasına](Screenshots-sensor-level-battery) bakın).
   - İnsülin yaşı (rezervuarın kullanıldığı gün sayısı)
   - Rezervuar seviyesi (Ünite)
   - Kanül yaşı
@@ -224,13 +232,14 @@ Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak * **terci
 - AAPS 2.7'den önceki sürümlerde durum ışıkları için ayarların Nightscout üzerinden yapılması gerekiyordu.
 
   ```{image} ../images/Pref2020_OV_StatusLights2.png
-  :alt: "Tercihler > Durum I\u015F\u0131klar\u0131"
+  :alt: Tercihler > Durum Işıkları
   ```
 
+(Preferences-advanced-settings-overview)=
 ### Gelişmiş ayarlar
 
 ```{image} ../images/Pref2021_OV_Adv.png
-:alt: "Tercihler > Durum I\u015F\u0131klar\u0131"
+:alt: Tercihler > Durum Işıkları
 ```
 
 #### Bolus sihirbazı sonucunun bu kadarını ilet
@@ -241,18 +250,19 @@ Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak * **terci
 
 #### Bolus danışmanı
 
-- [Bolus sihirbazını](../Getting-Started/Screenshots#bolus-wizard) çalıştırırsanız ve glikoz değeriniz 10 mmol'ün (180 mg/dl) üzerindeyse, bir düzeltme bolusu sunulacaktır.
+- [Bolus sihirbazını](Screenshots-bolus-wizard) çalıştırırsanız ve glikoz değeriniz 10 mmol'ün (180 mg/dl) üzerindeyse, bir düzeltme bolusu sunulur.
 
-- Düzeltme bolusu kabul edilirse **karbonhidrat yok** kaydedilecektir.
+- Düzeltme bolusu kabul edilirse **hiç karbonhidrat** kaydedilmez.
 
 - Yemeğe başlamak için glikoz değeri iyi seviyede olduğunda bir alarm başlatılacaktır.
 
-- Tekrar [Bolus sihirbazına](../Getting-Started/Screenshots#bolus-wizard) girip yemek istediğiniz karbonhidrat miktarını girmelisiniz.
+- Tekrar [Bolus sihirbazına](Screenshots-bolus-wizard) girmeniz ve yemek istediğiniz karbonhidrat miktarını girmeniz gerekir.
 
   ```{image} ../images/Home2021_BolusWizard_CorrectionOffer.png
-  :alt: "Bolus dan\u0131\u015Fman\u0131 mesaj\u0131"
+  :alt: Bolus danışmanı mesajı
   ```
 
+(Preferences-superbolus)=
 #### Süperbolus
 
 - Bolus sihirbazında süper bolusu etkinleştirme seçeneği.
@@ -260,14 +270,14 @@ Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak * **terci
 
 ## Tedavi güvenliği
 
-### Patient type
+### Hasta tipi
 
 - Güvenlik limitleri bu ayarda seçtiğiniz yaşa göre belirlenir.
 - Bu limitlere (maksimum bolus gibi) çok sık ulaşıyorsanız, bir adım yukarı çıkmanın zamanı gelmiştir.
 - Gerçek yaştan daha yüksek olanı seçmek kötü bir fikirdir çünkü insülin iletişim kutusuna yanlış değer girilerek (örneğin ondalık nokta atlanarak) aşırı doz almaya neden olabilir.
 - Bu sabit güvenlik sınırları için gerçek rakamları bilmek istiyorsanız, [bu sayfada](../Usage/Open-APS-features.md) kullandığınız algoritma özelliğine gidin.
 
-### Maks izin verilen bolus \[U\]
+### Maks izin verilen bolus \[Ü\]
 
 - AAPS'in bolus olarak bir kerede iletmesine izin verilen maksimum insülin miktarını tanımlar.
 - Bu ayar, yanlış giriş veya kullanıcı hatası nedeniyle büyük miktarda bolus verilmesini önlemek için bir güvenlik sınırıdır.
@@ -282,53 +292,56 @@ Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak * **terci
 
 ## Döngü
 
+(Preferences-aps-mode)=
 ### APS modu
 
 - Açık ve kapalı döngü ile düşük glikoz süspansiyonu (DGS) arasında geçiş yapar
 - **Açık döngü**, GBO önerilerinin verilerinize göre yapıldığı ve AAPS giriş ekranında bir bildirim olarak göründüğü anlamına gelir. Manuel onaydan sonra, insülin dozlama komutu pompaya aktarılacaktır. Yalnızca sanal pompa kullanıyorsanız, manuel olarak girmeniz gerekir.
 - **Kapalı döngü**, GBO önerilerinin sizden onay veya girdi almadan otomatik olarak pompanıza gönderildiği anlamına gelir.
-- **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. This means that if blood glucose is dropping it can reduce the basal rate, but if blood glucose is rising then it will only increase the basal rate if the basal IOB is negative (e.g. from a previous Low Glucose Suspend).
+- **Düşük glikoz askıya alma**, kapalı döngüye benzer, ancak maxIOB ayarını sıfır olarak geçersiz kılar. Bu, kan şekeri düşüyorsa bazal hızı azaltabileceği, ancak kan şekeri yükseliyorsa bazal hızı yalnızca bazal AİNS negatifse (örneğin önceki bir Düşük Glikoz Askıya Alma işleminden) artacağı anlamına gelir.
 
+(Preferences-minimal-request-change)=
 ### Minimum istek değişikliği \[%\]
 
-- Açık döngü kullanırken, AAPS'in bazal oranı ayarlamanızı önerdiği her seferde bildirim alırsınız.
+- Açık döngü kullanırken, AAPS'in bazal hızı ayarlamanızı önerdiği her seferde bildirim alırsınız.
 - Bildirim sayısını azaltmak için daha geniş bir KŞ hedef aralığı kullanabilir veya minimum istek oranının yüzdesini artırabilirsiniz.
-- Bu yüzde, bir bildirimi tetiklemek için gereken göreli değişikliği tanımlar.
+- Bu, bir bildirimi tetiklemek için gereken göreli değişikliği tanımlar.
 
+(Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)=
 ## Gelişmiş Yemek Asistanı (AMA) veya Süper Mikro Bolus (SMB)
 
-&#32;içindeki ayarlarınıza bağlı olarak iki algoritma arasında seçim yapabilirsiniz:
+[Konfigürasyon ayarları](../Configuration/Config-Builder.md) içindeki ayarlarınıza bağlı olarak iki algoritma arasında seçim yapabilirsiniz:
 
-- [Gelişmiş yemek asistanı (OpenAPS AMA)](../Usage/Open-APS-features#advanced-meal-assist-ama) - algoritmanın 2017'deki durumu
-- [Süper Mikro Bolus (OpenAPS SMB)](../Usage/Open-APS-features#super-micro-bolus-smb) - ileri düzey kullanıcılar için en yeni algoritma
+- [Gelişmiş yemek yardımı (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - algoritmanın 2017'deki durumu
+- [Süper Mikro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - ileri düzey kullanıcılar için en yeni algoritma
 
 ### OpenAPS SMB ayarları
 
 - Karbonhidratları doğru bir şekilde girerseniz, yemek bolusunuzdan sonra sistem yüksek kan şekerine daha hızlı müdahele eder.
-- Ayarlar ve Otoduyarlılık hakkında daha fazla ayrıntı için, [OpenAPS dokümantasyonuna](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html) bakabilirsiniz.
+- Ayarlar ve Otoduyarlılık hakkında daha fazla ayrıntıyı [OpenAPS dokümanlarında](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html) bulabilirsiniz.
 
 #### Maks Ü/s geçici Bazal ayarlanabilir
 
 - APPS'in tehlikeli derecede yüksek bazal oranı vermesini önlemek için bir güvenlik sınırıdır.
 - Değer, ünite/saat (Ü/s) cinsinden ölçülür.
-- Mantıklı bir değer ayarlamanız önerilir. Profilinizdeki **en yüksek bazal oranı** alıp **4 ile çarpmanız** iyi bir tavsiyedir.
+- It is advised to set this to something sensible. Profilinizdeki **en yüksek bazal oranı** alıp **4 ile çarpmanız** iyi bir öneridir.
 - Örneğin, profilinizdeki en yüksek bazal oran 0,5 Ü/s ise, bunu 4 ile çarparak maks geçici bazal için 2 Ü/s değerini elde edersiniz.
-- Ayrıca bkz. [ayrıntılı özellik açıklaması](../Usage/Open-APS-features#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- Ayrıca [ayrıntılı özellik açıklamasına](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal) bakın.
 
-#### OpenAPS tarafından aşılmayacak, maksimum toplam AİNS(Aktif İnsülin)\[U\]
+#### OpenAPS'in \[U\] iletebileceği maksimum bazal AİNS
 
-- Normal bazal profilinizin üzerine vücudunuzda birikmesine izin verilen ek bazal insülin miktarı (ünite olarak).
+- Normal bazal profilinizin yanı sıra vücudunuzda birikmesine izin verilen ek bazal insülin miktarı (ünite olarak).
 - Bu değere ulaşıldığında, AAPS, Aktif insülin (AİNS) tekrar bu aralığa düşene kadar ek bazal insülin vermeyi durduracaktır.
-- Bu değer **bolus aktif insülini** dikkate almaz, yalnızca bazal insülin için hesaplanır.
+- Bu değer **bolus AİNS değerini dikkate almaz** yalnızca bazal değeridir.
 - Bu değer, normal profildeki bazal oranınızdan bağımsız olarak hesaplanır ve izlenir. Normal bazal oranınızın üzerindeki ek bazal insülin dikkate alınır.
 
-Döngüye başladığınızda, sisteme alışırken bir süreliğine Maks Bazal AİNS'i 0'a ayarlamanız önerilir\*\*. Bu, AAPS'in herhangi bir ek bazal insülin vermesini engeller. Bu süre zarfında AAPS, hipoglisemiyi önlemeye yardımcı olmak için bazal insülininizi sınırlandırabilir veya kapatabilir. Bu adım, aşağıdaki maddeleri anlamak ve gözlemlemek için önemlidir:
+Döngüye başladığınızda, sisteme alışırken **Maks Bazal AİNS değerini bir süreliğine 0 olarak ayarlamanız önerilir**. Bu, AAPS'in herhangi bir ek bazal insülin vermesini engeller. Bu süre zarfında AAPS, hipoglisemiyi önlemeye yardımcı olmak için bazal insülininizi sınırlandırabilir veya kapatabilir. Bu adım, aşağıdaki maddeleri anlamak ve gözlemlemek için önemlidir:
 
 - AAPS sistemine alışmak ve nasıl güvenli çalıştığını izlemek için kendinize süre ayırmak.
 - Bazal profilinizi ve İnsülin Duyarlılık Faktörünüzü (ISF) mükemmelleştirme fırsatını yakalamak.
 - AAPS'in hipoglisemiyi önlemek için bazal insülininizi nasıl sınırladığını görmek.
 
-Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistemin size ek bazal insülin vermeye başlamasına izin verebilirsiniz. Bunun için önerilen değer, profilinizdeki **en yüksek bazal oranı** alıp **3 ile çarpmaktır**. Örneğin, profilinizdeki en yüksek bazal oran 0,5 Ü/s ise, bunu 3 ile çarparak 1,5 Ü/s değerini elde edebilirsiniz.
+Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistemin size ek bazal insülin vermeye başlamasına izin verebilirsiniz. Bunun için önerilen ilke, profilinizdeki **en yüksek bazal oranı** alıp **3 ile çarpmanız** şeklindedir. Örneğin, profilinizdeki en yüksek bazal oran 0,5 Ü/s ise, bunu 3 ile çarparak 1,5 Ü/s değerini elde edebilirsiniz.
 
 - Bu değerle ihtiyatlı başlayabilir ve zamanla yavaş yavaş artırabilirsiniz.
 - Bunlar yalnızca yönergedir; herkesin vücudu farklıdır. Burada önerilenden daha fazlasına veya daha azına ihtiyacınız olduğunu fark edebilirsiniz, ancak her zaman ihtiyatlı başlayın ve yavaş yavaş ayarlayın.
@@ -337,7 +350,7 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 #### Otoduyarlılık
 
-- [Otoduyarlılık](../Usage/Open-APS-features#autosens) kan şekeri sapmalarına (pozitif/negatif/nötr) bakar.
+- [Otoduyarlılık](Open-APS-features-autosens) kan şekeri sapmalarına (pozitif/negatif/nötr) bakar.
 - Bu sapmalara göre sizin ne kadar duyarlı/dirençli olduğunuzu anlamaya çalışacak ve bu sapmalara göre bazal hızı ve IDF'yi ayarlayacaktır.
 - "Otoduyarlılıkta hedefi ayarla"yı seçerseniz, algoritma ayrıca glikoz hedefinizi de değiştirir.
 
@@ -346,26 +359,28 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 - Normalde bu diyalogdaki ayarları değiştirmeniz gerekmez!
 - Yine de bunları değiştirmek isterseniz ne yaptığınızı anlamak için, [OpenAPS dokümantasyonundaki](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) ayrıntıları okuduğunuzdan emin olun.
 
+(Preferences-openaps-smb-settings)=
 ### OpenAPS SMB ayarları
 
-- AMA'nın aksine, [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) glikoz seviyelerini kontrol etmek için geçici bazal oranları kullanmaz, esas olarak küçük süper mikro boluslar kullanır.
+- AMA'nın aksine, [SMB](Open-APS-features-super-micro-bolus-smb) glikoz seviyelerini kontrol etmek için geçici bazal oranları kullanmaz, esas olarak küçük süper mikro boluslar kullanır.
 
-- SMB'yi kullanmak için. `Görev 9 <../Usage/Objectives#objective-9-eneasing-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>` 'a başlamış olmalısınız.
+- SMB'yi kullanmak için [görev 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)'a başlamış olmalısınız.
 
-- İlk üç ayar [yukarıda](../Configuration/Preferences#max-u-h-a-temp-basal-can-be-set-to) açıklanmıştır.
+- İlk üç ayar [yukarıda](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal) açıklanmıştır.
 
-- Farklı etkinleştirme seçenekleriyle ilgili ayrıntılar, [OpenAPS özellik bölümünde](../Usage/Open-APS-features#enable-smb) açıklanmıştır.
+- Farklı etkinleştirme seçenekleriyle ilgili ayrıntılar, [OpenAPS özelliği bölümünde](Open-APS-features-enable-smb) açıklanmaktadır.
 
 - *SMB'lerin dakika cinsinden ne sıklıkta verileceği*, SMB'nin varsayılan olarak yalnızca 4 dakikada bir teslim edilmesi için bir kısıtlamadır. Bu değer, sistemin SMB'yi çok sık verilmesini engeller (örneğin, bir geçici hedefin ayarlanması durumunda). Sonuçları tam olarak bilmiyorsanız bu ayarı değiştirmemelisiniz.
 
-- 'Hassasiyet hedefi yükseltir' veya 'Direnç hedefi düşürür' etkinleştirilirse [Otoduyarlılık](../Usage/Open-APS-features#autosens) kan şekeri sapmalarınıza göre glikoz hedefinizi değiştirir.
+- 'Hassasiyet hedefi yükseltir' veya 'Direnç hedefi düşürür' etkinleştirilirse [Otoduyarlılık](Open-APS-features-autosens) kan şekeri sapmalarınıza göre glikoz hedefinizi değiştirir.
 
 - Hedef değiştirilirse, giriş ekranınızda hedef yeşil bir arka planla görüntülenecektir.
 
   ```{image} ../images/Home2020_DynamicTargetAdjustment.png
-  :alt: "Hedef otoduyarl\u0131l\u0131k taraf\u0131ndan de\u011Fi\u015Ftirilmi\u015F"
+  :alt: Hedef otoduyarlılık tarafından değiştirilmiş
   ```
 
+(Preferences-carb-required-notification)=
 #### Karbonhidrat gerekli bildirimi
 
 - Bu özellik yalnızca SMB algoritması seçildiğinde kullanılabilir.
@@ -378,10 +393,10 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 - Bir eşik tanımlanabilir - bir bildirimi tetiklemek için gereken minimum karbonhidrat miktarı.
 
-- İstenirse karbonhidrat gerekli bildirimleri Nightscout'a iletilebilir, bu durumda bir anons gösterilip yayınlanacaktır.
+- İstenirse karbonhidrat ihtiyacı bildirimleri Nightscout'a iletilebilir, bu durumda bir anons gösterilir ve yayınlanır.
 
   ```{image} ../images/Pref2020_CarbsRequired.png
-  :alt: "Giri\u015F ekran\u0131nda karb gerekli g\xF6sterimi"
+  :alt: Giriş ekranında karb gerekli gösterimi
   ```
 
 #### Gelişmiş ayarlar (OpenAPS SMB)
@@ -392,7 +407,7 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 ## Emilim ayarları
 
 ```{image} ../images/Pref2020_Absorption.png
-:alt: "Emilim ayarlar\u0131"
+:alt: Emilim ayarları
 ```
 
 ### min_5m_carbimpact
@@ -403,18 +418,18 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 - Karbonhidrat emiliminin kanınızın reaksiyonlarına göre dinamik olarak çalışılamadığı zamanlarda, karbonhidratlarınıza varsayılan bir bozulma ekler. Temel olarak bir ön güvenliktir.
 
-- Basitçe söylemek gerekirse: Algoritma, mevcut insülin vb. dozundan etkilendiğinde KŞ'lerinizin nasıl davranması * gerektiğini\* "bilir".
+- Basitçe söylemek gerekirse: Algoritma, mevcut insülin vb. dozundan etkilendiğinde KŞ'lerinizin nasıl davranması *gerektiğini* "bilir".
 
 - Beklenen davranıştan pozitif bir sapma olduğunda, bazı karbonhidratlar emilir/çürür. Büyük değişiklik=çok karbonhidrat vs.
 
-- min_5m_carbimpact, 5 dakika başına varsayılan karbonhidrat emilim etkisini tanımlar. Daha fazla ayrıntı için [OpenAPS dokümantasyonuna bakın](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-karbipakt).
+- min_5m_carbimpact, 5 dakika başına varsayılan karbonhidrat emilim etkisini tanımlar. Daha fazla ayrıntı için [OpenAPS dokümanlarına](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact) bakın.
 
 - AMA için standart değer 5, SMB için 8'dir.
 
 - Ana ekrandaki AKRB grafiği, en üste turuncu bir daire koyarak min_5m_impact'in ne zaman kullanıldığını gösterir.
 
   ```{image} ../images/Pref2020_min_5m_carbimpact.png
-  :alt: "AKRB grafi\u011Fi"
+  :alt: AKRB grafiği
   ```
 
 ### Maksimum besin emilim süresi
@@ -423,38 +438,39 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 ### Gelişmiş ayarlar - otoduyarlılık oranı
 
-Otoduyarlılık oranı için [min. ve maks.](../Usage/Open-APS-features#autosens) tanımlayın.
-\* Normalde standart değerler (maks. 1.2 ve min. 0.7) değiştirilmemelidir.
+- [Otoduyarlılık](Open-APS-features-autosens) min. ve maks. oranı tanımlama.
+- Normalde standart değerler (maks. 1.2 ve min. 0.7) değiştirilmemelidir.
 
 ## Pompa Ayarları
 
-Buradaki seçenekler, [Konfigürasyon ayarları](../Configuration/Config-Builder#pump) içinde seçtiğiniz pompa sürücüsüne bağlı olarak değişecektir.  Pompanızı pompayla ilgili talimatlara göre eşleştirin ve ayarlayın:
+Buradaki seçenekler [Konfigürasyon ayarları](Config-Builder-pump) içinde seçtiğiniz pompa sürücüsüne bağlı olarak değişecektir.  Pompanızı pompayla ilgili talimatlara göre eşleştirin ve ayarlayın:
 
-- [Dana-R insülin pompası](../Configuration/DanaR-Insulin-Pump.md)
-- [DanaRS insulin Pompası](../Configuration/DanaRS-Insulin-Pump.md)
+- [DanaR Insulin Pompası](../Configuration/DanaR-Insulin-Pump.md)
+- [DanaRS Insulin Pompası](../Configuration/DanaRS-Insulin-Pump.md)
 - [Accu Chek Combo Pompa](../Configuration/Accu-Chek-Combo-Pump.md)
-- [Accu-Chek Insight pompa](../Configuration/Accu-Chek-Insight-Pump.md)
-- [Medtronic Pompaları](../Configuration/MedtronicPump.md)
+- [Accu-Chek Insight pompası](../Configuration/Accu-Chek-Insight-Pump.md)
+- [Medtronic Pompa](../Configuration/MedtronicPump.md)
 
 Döngüyü açmak için AndroidAPS kullanıyorsanız, Konfigürasyon ayarlarında Sanal Pompa'yı seçtiğinizden emin olun.
 
+(Preferences-nsclient)=
 ## NSClient
 
 ```{image} ../images/Pref2020_NSClient.png
 :alt: NSClient
 ```
 
-- *Nightscout URL'nizi* ayarlayın (ör. <https://yourwebsitename.herokuapp.com>) ve *API şifresi* (Heroku değişkenlerinize kaydedilen 12 karakterlik bir parola).
+- *Nightscout URL'nizi* (ör. <https://yourwebsitename.herokuapp.com>) ve *API parolanızı* (Heroku değişkenlerinde kaydedilmiş 12 karakterlik bir şifre) ayarlayın.
 - Bu, verilerin hem Nightscout web sitesi hem de AndroidAPS arasında okunmasını ve yazılmasını sağlar.
 - Hedef 1'de takılıp kalırsanız, burada yazım hatalarını iki kez kontrol edin.
 - **URL'nin sonunda /api/v1/ OLMADAN olduğundan emin olun.**
-- *Uygulamanın NS'ye başlatılması*, uygulama her başlatıldığında Nightscout bakım portalına girişlerinize bir not kaydeder.  Uygulamanın günde bir defadan fazla başlatılması gerekmez; bundan daha sık olması durumunda sorun çıkarır (örn. AAPS için pil optimizasyonu devre dışı değil).
-- [yerel profil](../Configuration/Config-Builder#local-profile) içindeki etkinleştirilmiş değişiklikler Nightscout sitenize yüklenir.
+- *NS'de Uyg. günlüğünün başlatılması* uygulama her başlatıldığında Nightscout bakım portalına girişlerinize bir not kaydeder.  Uygulamanın günde bir defadan fazla başlatılması gerekmez. Bundan daha sık olması bir sorun olduğunu gösterir (örneğin. pil optimizasyonu AAPS için devre dışı bırakılmamıştır).
+- Etkinleştirilirse, [yerel profildeki](Config-Builder-local-profile) değişiklikler Nightscout sitenize yüklenir.
 
 ### Bağlantı Ayarları
 
 ```{image} ../images/ConfBuild_ConnectionSettings.png
-:alt: "NSClient ba\u011Flant\u0131 ayarlar\u0131"
+:alt: NSClient bağlantı ayarları
 ```
 
 - Nightscout yüklemesini yalnızca Wi-Fi ile veya hatta belirli Wi-Fi SSID'leri ile sınırlayın.
@@ -465,29 +481,30 @@ Döngüyü açmak için AndroidAPS kullanıyorsanız, Konfigürasyon ayarlarınd
 ### Alarm türleri
 
 - Alarm seçenekleri, uygulama aracılığıyla hangi varsayılan Nightscout alarmlarının kullanılacağını seçmenize olanak tanır.
-- Alarmların çalması için "Heroku değişkenleri \<<https://nightscout.github.io/nightscout/setup_variables/#alarms>>" içinde Acil Yüksek, Yüksek, Düşük ve Acil Düşük alarm değerlerini ayarlamanız gerekir.
+- Alarmların çalması için [Heroku değişkenlerinizde](https://nightscout.github.io/nightscout/setup_variables/#alarms) Acil Yüksek, Yüksek, Düşük ve Acil Düşük alarm değerlerini ayarlamanız gerekir.
 - Yalnızca Nightscout ile bağlantınız varken çalışırlar ve ebeveynler/bakıcılar için tasarlanmıştır.
-- Telefonunuzda CGM kaynağı varsa (ör. xDrip+ veya BYODA \[Kendi dexcom uygulamanızı oluşturun\]), bu uygulamalardaki alarmları kullanın.
+- Telefonunuzda CGM kaynağı varsa (ör. xDrip+ veya BYODA \[Kendi dexcom uygulamanızı oluşturun\]) bunun yerine bu alarmları kullanın.
 
+(Preferences-advanced-settings-nsclient)=
 ### Gelişmiş Ayarlar (NSClient)
 
 ```{image} ../images/Pref2020_NSClientAdv.png
-:alt: "NS Client geli\u015Fmi\u015F ayarlar"
+:alt: NS Client gelişmiş ayarlar
 ```
 
 - Gelişmiş ayarlardaki çoğu seçenek kendi açıklamasını içerir.
 
 - *Yerel yayınları etkinleştir*, verilerinizi telefondaki xDrip+ gibi diğer uygulamalarla paylaşacaktır.
 
-  - xDrip+ alarmlarını kullanmak için [AAPS](../Configuration/Config-Builder#bg-source) Konfigürasyon ayarlarına gitmeniz ve AAPS'de yerel yayını etkinleştirmeniz gerekir.
+  - xDrip+ alarmlarını kullanmak için [AAPS'e geçmeniz](Config-Builder-bg-source) ve AAPS'de yerel yayını etkinleştirmeniz gerekir.
 
-- *Her zaman bazal mutlak değerleri kullan* Autotune'u doğru kullanmak istiyorsanız etkinleştirilmelidir. Autotune hakkında daha fazla ayrıntı için [OpenAPS dokümantasyonuna](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) bakın.
+- Autotune'u doğru kullanmak istiyorsanız *Her zaman bazal mutlak değerleri kullan* etkinleştirilmelidir. Autotune hakkında daha fazla ayrıntı için [OpenAPS dokümanlarına](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) bakın.
 
 ## SMS Kominikatör
 
-- Seçenekler yalnızca [Konfigürasyon ayarları](../Configuration/Config-Builder#sms-communicator) içinde SMS Kominikatör seçilirse görüntülenecektir.
+- Seçenekler yalnızca [Konfigürasyon ayarlarında](Config-Builder-sms-communicator) SMS Kominikatör seçilirse görüntülenecektir.
 - Bu ayar, döngüyü askıya alma veya bolus yapma gibi uygulamanın izleyeceği talimatları hastanın telefonuna mesaj göndererek uygulamanın uzaktan kontrol edilmesini sağlar.
-- Daha fazla bilgi [SMS Komutları](../Children/SMS-Commands.md) bölümünde açıklanmıştır.
+- Daha fazla bilgi [SMS Komutları](../Children/SMS-Commands.md)nda açıklanmıştır.
 - Bir kimlik doğrulama uygulaması ve mesaj sonunda ek PIN kullanılarak ek güvenlik elde edilir.
 
 ## Otomasyon
@@ -501,7 +518,7 @@ Hangi konum hizmetinin kullanılacağını seçin:
 ## Yerel uyarılar
 
 ```{image} ../images/Pref2020_LocalAlerts.png
-:alt: "Yerel uyar\u0131lar"
+:alt: Yerel uyarılar
 ```
 
 - Ayarlar açıklayıcı olmalıdır.
@@ -509,7 +526,7 @@ Hangi konum hizmetinin kullanılacağını seçin:
 ## Veri seçenekleri
 
 ```{image} ../images/Pref2020_DataChoice.png
-:alt: "Veri se\xE7enekleri"
+:alt: Veri seçenekleri
 ```
 
 - Geliştiricilere kilitlenme raporları göndererek AAPS'nin daha da geliştirilmesine yardımcı olabilirsiniz.
@@ -517,15 +534,15 @@ Hangi konum hizmetinin kullanılacağını seçin:
 ## Bakım ayarları
 
 ```{image} ../images/Pref2020_Maintenance.png
-:alt: "Bak\u0131m ayarlar\u0131"
+:alt: Bakım ayarları
 ```
 
-- Günlüklerin standart alıcısı <mailto:logs@androidaps.org'dur>.
-- *Dışa aktarılan ayarları şifrele*'yi seçerseniz, bunlar [ana şifreniz "master password"\<../Configuration/Preferences#master-password>][ana şifreniz "master password"<../configuration/preferences.md#master-password>] ile şifrelenir. Bu durumda, ayarlar her dışa aktarıldığında veya içe aktarıldığında ana parola girilmelidir.
+- Günlüklerin standart alıcısı <logs@androidaps.org>'dur.
+- *Dışa aktarılan ayarları şifrele*'yi seçerseniz, bunlar [ana parolanız](Preferences-master-password) ile şifrelenir. Bu durumda, ayarlar her dışa aktarıldığında veya içe aktarıldığında ana parola girilmelidir.
 
 ## Open Humans
 
-- Verilerinizi araştırma projelerine bağışlayarak topluluğa yardımcı olabilirsiniz! Ayrıntılar, [Open Humans sayfasında](../Configuration/OpenHumans.md) açıklanmaktadır.
+- Verilerinizi araştırma projelerine bağışlayarak topluluğa yardımcı olabilirsiniz! Ayrıntılar [Open Humans sayfasında](../Configuration/OpenHumans.md) açıklanmıştır.
 
 - Tercihler'de verilerin ne zaman yükleneceğini tanımlayabilirsiniz
 

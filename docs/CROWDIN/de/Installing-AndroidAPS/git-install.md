@@ -1,4 +1,4 @@
-# Installiere git
+# Git installieren
 
 ## Windows
 
@@ -7,6 +7,13 @@
 - **Du musst immer online sein, da Android Studio verschiedene Updates herunterlädt!**
 - Jede git Version sollte funktionieren. Zum Beispiel [https://git-scm.com/download/win](https://git-scm.com/download/win).
 - Notiere Dir den Installationspfad. Du brauchst diesen im nächsten Schritt.
+
+```{admonition} make git.exe available via Windows PATH
+:class: Notiz
+
+Achte darauf, dass die Datei git.exe später ohne den Installationspfad mit angeben zu müssen, aufrufbar ist. Android Studio benötigt dies, um git.exe zu finden. In diesem Fall wird der Pfad in den Android Studio-Einstellungen automatisch richtig gesetzt.
+
+```
 
 ```{image} ../images/Update_GitPath.png
 :alt: Git Installationspfad
@@ -17,7 +24,7 @@
 - Öffne File > Settings
 
   ```{image} ../images/Update_GitSettings1.png
-  :alt: "Android Studio - Einstellungen \xF6ffnen"
+  :alt: Android Studio - Einstellungen öffnen
   ```
 
 - Klicke auf das kleine Dreieck neben Version Control (1.), um das Untermenü zu öffnen.
@@ -42,7 +49,7 @@
 
 - Falls git.exe nicht gefunden werden kann, schließe das Dialogfenster mit "OK" (1.) und klicke dann auf den Button mit den drei Punkten (2.).
 
-- Du kannst auch die \<a href="<https://www.computerwoche.de/a/suchfunktion-optimal-nutzen,3331986,2>">Suchfunktion  im Windows Explorer verwenden, um "git.exe" zu finden wenn Du Dir nicht sicher bist, wo diese gespeichert ist. Du brauchst die git.exe, die im Ordner bingespeichert ist.
+- Du kannst auch die [Suchfunktion](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html)  im Windows Explorer verwenden, um "git.exe" zu finden wenn Du Dir nicht sicher bist, wo diese gespeichert ist. Du brauchst die git.exe, die im Ordner bin gespeichert ist.
 
 - Wähle den Pfad zu git.exe aus, stelle sicher, dass Du den Ordner \*\* \\bin\\\*\* ausgewählt hast (3.), und klicke auf "OK" (4.).
 
@@ -56,11 +63,12 @@
 
 - Starte Deinen PC neu, um die Systemumgebung zu aktualisieren.
 
+(git-install-check-git-settings-in-android-studio)=
 ### 4. Prüfe die Einstellungen in Android Studio
 
 - Öffne das Terminal-Fenster in Android Studio
 
-- Gib\`\`git --version\`\` (ohne Anführungszeiten und ohne das Leerzeichen zwischen den zwei - \[Minuszeichen\]!) und drücke Return
+- Gib `git --version` (ohne Anführungszeiten und ohne das Leerzeichen zwischen den zwei - \[Minuszeichen\]!) und drücke Return
 
   ```{image} ../images/AndroidStudio_gitversion1.png
   :alt: git - -version

@@ -1,6 +1,8 @@
+(Profiles-profile-switch)=
+
 # Profil değiştirme
 
-Genel olarak profillerle ilgili dokümantasyon [Konfigürasyon ayarları - profil](../Configuration/Config-Builder#profile) adresinde bulunabilir.
+Genel olarak profillerle ilgili dokümantasyon [Konfigürasyon ayarları - profil](Config-Builder-profile) adresinde bulunabilir.
 
 AAPS'nizi başlatırken ve profilinizi seçerken, sıfır süreli (daha sonra açıklanacak) bir "Profil değiştirme" olayı yapmanız gerekecektir. Bunu yaparak AAPS, profillerin geçmişini izlemeye başlar ve her yeni profil değişikliği, NS'de profilin içeriğini değiştirseniz bile başka bir "Profil değiştirme" gerektirir. Güncellenen profil hemen AAPS'e gönderilir, ancak bu değişiklikleri kullanmaya başlamak için aynı profili tekrar değiştirmeniz gerekir.
 
@@ -28,6 +30,8 @@ Profil değiştirme yapmak için, AndroidAPS'nin ana ekranında profilinizin ad�
 
 * Döngü algoritması (açık veya kapalı), seçilen yüzde profili üzerinde çalışmaya devam edecektir. Böylece, örneğin hormon döngüsünün farklı aşamaları için ayrı yüzde profilleri oluşturulabilir.
 
+(Profiles-time-shift)=
+
 ## Zaman kaydırma
 
 ![Profil değişim yüzdesi ve zaman kayması](../images/ProfileSwitchTimeShift2.png)
@@ -46,6 +50,8 @@ Profil değiştirme yapmak için, AndroidAPS'nin ana ekranında profilinizin ad�
 ![Profil değişimi zaman kaydırma talimatları](../images/ProfileSwitch_PlusMinus2.png)
 
 Profilin anlık görüntülerini alma mekanizması, geçmişe ilişkin çok daha kesin hesaplamalara ve profil değişikliklerini izleme olanağına olanak tanır.
+
+(Profiles-troubleshooting-profile-errors)=
 
 ## Profil Hatalarında Sorun Giderme
 

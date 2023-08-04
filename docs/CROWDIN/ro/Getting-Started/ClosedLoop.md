@@ -4,8 +4,7 @@
 :alt: AAPS is like an autopilot
 ```
 
-An artificial pancreas closed loop system combines different components in order to make diabetes management easier for you.
-In her great book [Automated Insulin Delivery](https://www.artificialpancreasbook.com/) Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an ["autopilot for your diabetes"](https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps). But what does that mean?
+An artificial pancreas closed loop system combines different components in order to make diabetes management easier for you. In her great book [Automated Insulin Delivery](https://www.artificialpancreasbook.com/) Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an ["autopilot for your diabetes"](https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps). But what does that mean?
 
 **Autopilot in an aircraft**
 
@@ -35,7 +34,8 @@ Compatible [pumps](../Hardware/pumps.md) are:
 - [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Diaconn G8](../Configuration/DiaconnG8.md)
-- [Omnipod Eros](../Configuration/OmnipodEros.md) / Omnipod Dash
+- [Omnipod DASH](../Configuration/OmnipodDASH.md)
+- [Omnipod Eros](../Configuration/OmnipodEros.md)
 - some old [Medtronic pumps](../Configuration/MedtronicPump.md)
 
 ### OpenAPS
@@ -52,5 +52,6 @@ Compatible pumps are:
 
 Compatible pumps are:
 
+- Omnipod DASH
 - Omnipod Eros
 - some old Medtronic pumps

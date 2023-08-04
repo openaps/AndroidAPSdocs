@@ -1,8 +1,8 @@
 # AAPS sur montres Wear OS
 
-Vous pouvez installer l'application AndroidAPS sur votre montre connectée **Wear OS**. La version montre de AAPS vous permet de:
+You can install AAPS app on your **Wear OS based** smartwatch. La version montre de AAPS vous permet de:
 
-* **afficher les données sur votre montre** : en fournissant des [cadrans personnalisés](#cadrans-aaps) ou dans des cadrans standards avec l'utilisation de [complications](#complications)
+* **display data on your watch**: by providing [custom watchfaces](Watchfaces-aaps-watchfaces) or in standard watchfaces with use of [complications](Watchfaces-complications)
 * **contrôler AAPS du téléphone** : pour faire un bolus, définir une cible temporaire, etc.
 
 ### Avant d'acheter la montre...
@@ -10,26 +10,26 @@ Vous pouvez installer l'application AndroidAPS sur votre montre connectée **Wea
 * Certaines fonctions comme les *complications* nécessitent une version 2.0 ou plus récente de Wear OS
 * Google a rebaptisé *Android Wear 1.x* en *Wear OS* depuis la version 2.x, donc quand il est indiqué *Android Wear* il est possible que ce soit une ancienne version 1.x du système
 * Si la description indique seulement *Compatibilité avec Android* et *iOS* - cela **ne signifie pas** que la montre fonctionne sous *Wear OS* - cela peut tout à fait être une autre sorte de système d'exploitation spécifique au fournisseur **qui n'est pas compatible avec les cadrans AAPS wear!**
-* Vérifiez la [liste des téléphones et des montres testés](../Getting-Started/Phones#liste-des-telephones-testes) et [demandez à la communauté](../Where-To-Go-For-Help/Connect-with-other-users.md) si vous avez un doute si votre montre sera prise en charge
+* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
 
 ### Construction de la version Wear OS d'AAPS
 
 L’application Wear OS de AAPS a été séparée de la compilation de AAPS pour Android mobile. Par conséquent, vous devez générer un second APK signé. Sélectionnez le module "AndroidAPS.wear" avec la variante "fullRelease" et un 2ème fichier apk pour la montre Wear OS est généré quand vous [générez l'APK](../Installing-AndroidAPS/Building-APK.md) (ou encore "pumpcontrolRelease" qui vous permettra de juste controler la pompe sans boucler).
 
-À partir de mars 2021, vous devez mettre AAPS sur la montre, il n'est plus accessible via le Google Play Store de la montre. Vous pouvez utiliser [Wear Installer](https://youtu.be/8HsfWPTFGQI) que vous devrez installer sur votre montre et votre téléphone. L'application Wear Installer peut être téléchargée depuis le Google Play Store. La vidéo liée de Malcolm Bryant le développeur de Wear Installer vous donne des instructions détaillées pour a) télécharger l'apk sur votre mobile b) configurer le Débogueur Android sur la montre c) utiliser Wear Installer sur le mobile et la montre pour installer la version Wear OS de AAPS sur la montre. Une fois que vous aurez sélectionné AndroidAPS comme application pour la télécharger sur la montre, vous serez en mesure d'utiliser les cadrans, les complications et les contrôles AAPS.
+À partir de mars 2021, vous devez mettre AAPS sur la montre, il n'est plus accessible via le Google Play Store de la montre. Vous pouvez utiliser [Wear Installer](https://youtu.be/8HsfWPTFGQI) que vous devrez installer sur votre montre et votre téléphone. L'application Wear Installer peut être téléchargée depuis le Google Play Store. La vidéo liée de Malcolm Bryant le développeur de Wear Installer vous donne des instructions détaillées pour a) télécharger l'apk sur votre mobile b) configurer le Débogueur Android sur la montre c) utiliser Wear Installer sur le mobile et la montre pour installer la version Wear OS de AAPS sur la montre. Once you have selected AAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
 
 ### Configuration sur le téléphone
 
-Dans AndroidAPS, dans le Générateur de configuration, vous devez [activer Wear](../Configuration/Config-Builder#wear).
+Within AAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
 
 ## Contrôler AAPS depuis la montre
 
-AndroidAPS est conçu pour être *contrôlé* par les montres Android Wear. Si vous voulez commander AAPS depuis la montre (bolus etc) alors dans les "Paramètres Wear" vous devez activer "Commandes depuis la montre".
+AAPS is designed to be *controlled* by Android Wear watches. Si vous voulez commander AAPS depuis la montre (bolus etc) alors dans les "Paramètres Wear" vous devez activer "Commandes depuis la montre".
 
 Les fonctions suivantes peuvent être déclenchées à partir de la montre :
 
 * définir une cible temporaire
-* utiliser l'assistant bolus (les paramètres à prendre en compte dans le calculs peuvent être définis dans [Paramètres de l'Assistant](../Configuration/Config-Builder#wear) sur le téléphone)
+* utiliser l'assistant bolus (les paramètres à prendre en compte dans le calculs peuvent être définis dans [Paramètres de l'Assistant](Config-Builder-wear) sur le téléphone)
 * administrer des eGlucides
 * administrer un bolus (insuline + glucides)
 * afficher les paramètres sur la montre
@@ -39,11 +39,13 @@ Les fonctions suivantes peuvent être déclenchées à partir de la montre :
     * vérifier et modifier le profil (décalage horaire + pourcentage)
     * montrer la DTQ (Dose Totale Quotidienne = bolus + basale par jour)
 
+(Watchfaces-aaps-watchfaces)=
+
 ## Cadrans AAPS
 
 Il y a plusieurs cadrans à choisir qui incluent le delta moyen, l'IA, le débit temporaire de basal actuel et les profils de basal + le graphique de lecture MGC.
 
-Vérifiez que les notifications d'AndroidAPS ne sont pas bloquées sur la montre. La confirmation de l'action (par ex. bolus, cible temporaire) est envoyée par une notification que vous devrez glisser et cocher.
+Ensure notifications from AAPS are not blocked on the watch. La confirmation de l'action (par ex. bolus, cible temporaire) est envoyée par une notification que vous devrez glisser et cocher.
 
 Pour accéder plus rapidement au menu AAPS, appuyez deux fois sur votre Gly. Avec un double appui sur la courbe Gly vous pouvez changer l'échelle de temps.
 
@@ -51,7 +53,9 @@ Pour accéder plus rapidement au menu AAPS, appuyez deux fois sur votre Gly. Ave
 
 ![Cadrans disponibles](../images/Watchface_Types.png)
 
-### Nouveau cadran depuis AndroidAPS 2.8
+(Watchfaces-new-watchface-as-of-AAPS-2-8)=
+
+### New watchface as of AAPS 2.8
 
 ![Cadran Digital](../images/Watchface_DigitalStyle.png)
 
@@ -59,7 +63,7 @@ Pour accéder plus rapidement au menu AAPS, appuyez deux fois sur votre Gly. Ave
 
 ## Cadran AAPSv2 - Légende
 
-![Légende du cadran AndroidAPSv2](../images/Watchface_Legend.png)
+![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
 
 A - temps écoulé depuis le dernier calcul de la boucle
 
@@ -102,6 +106,8 @@ L'étoile remplie est pour l'état activé (**On**), et l'étoile vide indique q
 * **Vibrer sur Bolus** (par défaut `Oui`):
 * **Unités des Actions** (par défaut `mg/dl`) : si **On** l'unité des actions est `mg/dl`, si **Off** l'unité est `mmol/l`. Utilisé lors de la définition d'une CT à partir de la montre.
 
+(Watchfaces-watchface-settings)=
+
 ### Paramètres cadran
 
 * **Afficher Date** (par défaut `Off`): remarque, la date n'est pas disponible sur tous les cadrans
@@ -125,7 +131,7 @@ L'étoile remplie est pour l'état activé (**On**), et l'étoile vide indique q
 
 * **Design de saisie** : avec ce parametre, vous pouvez sélectionner la position des boutons "+" et "-" quand vous entrez des commandes pour AAPS (CT, Insuline, Glucides...)
 
-![Input design options](../images/Watchface_InputDesign.png)
+![Choix de l'interface d'entrée](../images/Watchface_InputDesign.png)
 
 ### Paramètres spécifiques à certains cadrans
 
@@ -153,11 +159,13 @@ L'étoile remplie est pour l'état activé (**On**), et l'étoile vide indique q
 
 * **Assistant Pourcentage** (par défaut `Off`) : Autoriser la correction du bolus à partir de l'assistant (valeur saisie en pourcentage avant la confirmation)
 
+(Watchfaces-complications)=
+
 ## Complications
 
 La *complication* est un terme issu de l'horlogerie traditionnelle, il décrit l'ajout à la montre principale d'une autre petite fenêtre ou sous-cadran (avec date, jour de la semaine, phase lunaire, etc.). Wear OS 2.0 apporte cette métaphore pour permettre aux fournisseurs de données personnalisés, comme la météo, les notifications, compteurs de fitness et plus encore, d'ajouter ces informations à tous les cadrans qui supportent les complications.
 
-AndroidAPS Wear OS prend en charge les complications depuis la version `2.6`, et permet à tout les cadrans qui supporte les complications d'être configuré pour afficher les données liées à AAPS (Gly avec tendance, IA, GA, etc.).
+AAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
 
 Les complications servent également de **raccourci** aux fonctions AAPS. En appuyant dessus, vous pouvez ouvrir les menus et dialogues de AAPS (selon la complication et la configuration).
 
@@ -180,7 +188,7 @@ Quand vous configurez les complications dans un cadran, Wear OS présente et fil
 
 ### Complications fournies par AAPS
 
-AndroidAPS fournit les complications suivantes :
+AAPS provides following complications:
 
 ![Liste des complications AAPS](../images/Watchface_Complications_List.png)
 
@@ -221,7 +229,7 @@ Veuillez noter que les tuiles n'affichent pas l'état courant de l'application A
 
 ## Comment ajouter les tuiles :
 
-Avant d'utiliser les tuiles, vous devez activer "Commandes depuis la montre" dans les paramètres "Wear OS" d'Android APS.
+Avant d'utiliser les tuiles, vous devez activer "Commandes depuis la montre" dans les paramètres "Wear OS" d'AAPS.
 
 ![Wear phone preferences enabled](../images/wear_phone_preferences.jpg)
 
@@ -251,11 +259,11 @@ Les actions prises en charge dans la tuile d'action peuvent envoyer des requête
 
 ![Wear action tile, sample calculator](../images/wear_actions.png)
 
-[1] Via, le menu Wear OS, réglez l'option "Pourcentage de Calculateur" à "ON" pour afficher le pourcentage d'entrée dans la calculatrice de bolus. Le pourcentage par défaut est basé sur les paramètres du téléphone dans la section "Aperçu" ["Injecter cette partie de Bolus calculée par l’assistant en %"](Config-Builder.html#parametres-avances) Quand l'utilisateur ne fournit pas de pourcentage, la valeur par défaut du téléphone est utilisée. Configurez les autres paramètres de l'assistant bolus dans l'application téléphone via "Préférences" "Paramètres de l'assistant".
+[1] Via, le menu Wear OS, réglez l'option "Pourcentage de Calculateur" à "ON" pour afficher le pourcentage d'entrée dans la calculatrice de bolus. Le pourcentage par défaut est basé sur les paramètres du téléphone dans la section "Aperçu" ["Injecter cette partie de Bolus calculée par l’assistant en %"](Config-Builder.html#advanced-settings) Quand l'utilisateur ne fournit pas de pourcentage, la valeur par défaut du téléphone est utilisée. Configurez les autres paramètres de l'assistant bolus dans l'application téléphone via "Préférences" "Paramètres de l'assistant".
 
 ### AAPS(Cible Temp)
 
-La tuile cible temporaire peut demander une cible temporaire basée sur les préréglages du téléphone AAPS. Configurez l'heure prédéfinie et les cibles à travers les paramètres de l'application téléphone en allant dans "Préférences", "Aperçu", ["Cibles temporaires par défaut"](Config-Builder.html#cibles-temporaires-par-defaut) et définissez la durée et les cibles pour chaque raccourci. Configurez les actions visibles sur la tuile à travers les paramètres de tuile. Faites un appui long sur la tuile pour afficher les options de configuration et sélectionnez 1 à 4 options :
+La tuile cible temporaire peut demander une cible temporaire basée sur les préréglages du téléphone AAPS. Configurez l'heure prédéfinie et les cibles à travers les paramètres de l'application téléphone en allant dans "Préférences", "Aperçu", ["Cibles temporaires par défaut"](Config-Builder.html#default-temp-targets) et définissez la durée et les cibles pour chaque raccourci. Configurez les actions visibles sur la tuile à travers les paramètres de tuile. Faites un appui long sur la tuile pour afficher les options de configuration et sélectionnez 1 à 4 options :
 
 * **Activité** : pour le sport
 * **Hypo** : pour augmenter la cible pendant le traitement d'une hypo
@@ -283,11 +291,11 @@ Le mode Interface simplifiée est disponible pour les montres : AAPS, AAPS V2, G
 
 ### Mode nuit
 
-Lors de la charge, il serait utile que l'affichage reste « toujours actif » et montre votre glycémie pendant la nuit. Cependant, les cadrans standards de la montre sont trop clairs et ont trop d'informations, et les détails sont difficiles à lire avec des yeux endormis. Par conséquent, nous avons ajouté une option pour la montre face afin de simplifier l'interface utilisateur lors de la charge si c'est activé dans les paramètres.
+Lors de la charge, il serait utile que l'affichage reste « toujours actif » et montre votre glycémie pendant la nuit. Cependant, les cadrans standards de la montre sont trop clairs et ont trop d'informations, et les détails sont difficiles à lire avec des yeux endormis. Par conséquent, nous avons ajouté une option pour le cadran afin de simplifier l'interface utilisateur lors de la charge si c'est activé dans les paramètres.
 
 Le mode Interface simplifiée est disponible pour les montres : AAPS, AAPS V2, Grand-graph, Digital, Steampunk et Cockpit. L'interface simplifiée est optionnelle et est configurée via les paramètres du cadran de la montre. (faites un appui long sur le cadran et cliquez sur "Editer" ou sur la roue crantée).Sélectionnez la configuration "Interface simplifiée" et activez "Pendant la charge" ou "Toujours allumé et pendant la charge".
 
-Les options de développement Android permettent à votre montre de rester réveillée pendant la charge. Pour rendre les options de développement disponibles, consultez https://developer.android.com/training/wearables/get-started/debugging. Activez le paramètre "Laisser activé pendant la charge" dans les options du développeur.
+Les options de développement Android permettent à votre montre de rester réveillée pendant la charge. To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Activez le paramètre "Laisser activé pendant la charge" dans les options du développeur.
 
 Remarque : tous les afficheurs ne sont pas bien gérés. Il peut entrainer une détérioration de l'écran, en particulier sur les anciens écrans OLED. Les montres diminueront généralement l'éclairage de l'écran pour éviter le déteriorer; veuillez consulter le manuel utilisateur, le fabricant ou internet pour obtenir des conseils.
 
@@ -295,32 +303,44 @@ Remarque : tous les afficheurs ne sont pas bien gérés. Il peut entrainer une d
 
 ![Interface simplifiée](../images/Watchface_simplified_ui.png)
 
-### Conseils sur les performances et la durée de vie des batteries
+## Snooze Alert shortcut
 
-Les montres Wear OS sont des appareils très limités en énergie. La taille de la montre limite la capacité de la batterie incluse. Même avec les progrès récents tant du côté matériel que du côté logiciel, les montres Wear OS nécessitent toujours une charge quotidienne.
+It is possible to create a shortcut to snooze the alerts/alarm of AAPS. Muting the sound via your watch is convenient and faster without reaching for your phone. Note; you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
 
-Si la durée de vie de la batterie est inférieure à une journée (du matin au soir), voici quelques conseils pour résoudre les problèmes.
+To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
 
-Les principaux consommateurs de batterie sont :
+### Snooze xDrip
+
+When you use xDrip and have xDrip installed on the watch, the 'AAPS Snooze Alert' shortcut will also Snooze any xDrip alarm.
+
+## Performance and battery life tips
+
+Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+
+If an experienced battery span is shorter than a day (from dusk to dawn), here are some tips to troubleshoot the issues.
+
+Main battery-demanding areas are:
 
 * Affichage actif avec rétroéclairage (pour LED) ou en mode pleine intensité (pour OLED)
 * Le rendu à l'écran
 * Communication radio via Bluetooth
 
-Puisque nous ne pouvons pas transiger sur la communication (nous avons besoin de la mise à jour des données) et que nous voulons avoir les données les plus récentes, la plupart des optimisations peuvent être fait du côté du *délai d'affichage* :
+Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in *display time* area:
 
 * Les cadrans standards sont généralement mieux optimisés que ceux personnalisés, téléchargés depuis le store.
 * Il est préférable d'utiliser des cadrans qui limitent la quantité de données affichées en mode inactif/veille.
 * Soyez conscient lorsque vous utilisez d'autres Complications, comme les widgets météo de tiers - ou d'autres encore - qui utilisent des données provenant de sources externes.
 * Commencez par des cadrans plus simples. Ajoutez une complication à la fois et observez comment elle affecte la durée de vie de la batterie.
-* Essayez d'utiliser le thème **Sombre** pour les montres AAPS, et [**Séparateur invisible**](#parametres-cadran). Sur les montres OLED, cela limitera la quantité de pixels allumés et limitera la consommation.
+* Essayez d'utiliser le thème **Sombre** pour les montres AAPS, et [**Séparateur invisible**](Watchfaces-watchface-settings). Sur les montres OLED, cela limitera la quantité de pixels allumés et limitera la consommation.
 * Vérifiez ce qui fonctionne le mieux sur votre montre : les cadrans AAPS standards ou d'autres cadrans avec les Complications AAPS.
 * Observez sur quelques jours, avec différents profils d'activités. La plupart des montres activent l'affichage sur le regard, des mouvements de poignet et d'autres déclencheurs liés à l'utilisation.
 * Vérifiez les paramètres du système global qui affectent les performances : notifications, durée du rétro éclairage, affichage actif quand le GPS est activé.
-* Vérifiez la [liste des téléphones et des montres testés](../Getting-Started/Phones#list-of-tested-phones) et [demandez à la communauté](../Where-To-Go-For-Help/Connect-with-other-users.md) pour avoir le retour d'expérience des autres utilisateurs et sur la durée de vie des batteries.
+* Vérifiez la [liste des téléphones et des montres testés](Phones-list-of-tested-phones) et [demandez à la communauté](../Where-To-Go-For-Help/Connect-with-other-users.md) pour avoir le retour d'expérience des autres utilisateurs et sur la durée de vie des batteries.
 * **Nous ne pouvons pas garantir que les données affichées sur les Cadrans ou les complications sont à jour**. A la fin, c'est Wear OS qui décide quand mettre à jour le cadran ou la complication. Même lorsque l'application AAPS demande une mise à jour, le système peut décider de reporter ou d'ignorer les mises à jour pour préserver la batterie. En cas de doute et de batterie de montre faible - faites toujours une double vérification avec l'application AAPS sur le téléphone.
 
-## Dépannage de l'application wear :
+(Watchfaces-troubleshooting-the-wear-app)=
+
+## Troubleshooting the wear app:
 
 * Parfois, cela peut aider de resynchroniser AAPS avec la montre car cela peut être un peu lent quand il le fait tout seul : Wear / Renvoyer toutes les données
 * Activez le débogage ADB dans les Options Développeur (sur la montre), connectez la montre via l'USB et démarrez l'application Wear une fois dans Android Studio.
@@ -329,13 +349,13 @@ Puisque nous ne pouvons pas transiger sur la communication (nous avons besoin de
 ### Sony Smartwatch 3
 
 * La montre Sony Smartwatch 3 est l'une des plus populaires utilisée avec AAPS.
-* Malheureusement, Google a abandonné la prise en charge des appareils sous Wear OS 1.5 à l'automne 2020. Cela entraîne des problèmes lors de l'utilisation de Sony SW3 avec AndroidAPS 2.7 et plus.
+* Malheureusement, Google a abandonné la prise en charge des appareils sous Wear OS 1.5 à l'automne 2020. This leads to problems when using Sony SW3 with AAPS 2.7 and above.
 * Une solution de contournement possible peut être trouvée sur cette [page de dépannage](../Usage/SonySW3.md).
 
-## Afficher les données Nightscout
+## View Nightscout data
 
-Si vous utilisez un autre système de bouclage et que vous voulez *voir* le détail de la boucle sur une montre Android Wear, ou si vous voulez regarder la boucle de votre enfant, vous pouvez juste construire/télécharger le fichier APK NSClient. Pour ce faire, suivez les instructions [construire l'APK](../Installing-AndroidAPS/Building-APK.md) en sélectionnant la variante de génération "NSClientRelease". Il y a plusieurs cadrans à choisir qui incluent le delta moyen, l'IA, le débit temporaire de basal actuel et les profils de basal + le graphique de lecture MGC.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Il y a plusieurs cadrans à choisir qui incluent le delta moyen, l'IA, le débit temporaire de basal actuel et les profils de basal + le graphique de lecture MGC.
 
 # Pebble
 
-Les utilisateurs de Pebble peuvent utiliser le [Cadran Urchin](https://github.com/mddub/urchin-cgm) pour *voir* les données de la boucle (si elles sont téléchargée sur Nightscout), mais vous ne pourrez pas interagir avec AndroidAPS depuis la montre. Vous pouvez choisir des zones à afficher telles que l'IA, le débit de basal temporaire courant et les courbes de prédiction. Si vous êtes en boucle ouverte, vous pouvez utiliser [IFTTT](https://ifttt.com/) pour créer un applet qui dira si une Notification reçue de AndroidAPS doit envoyer un SMS ou une Notification.
+Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AAPS then send either SMS or pushover notification.

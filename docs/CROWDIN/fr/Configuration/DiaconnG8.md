@@ -8,22 +8,22 @@
   > :alt: Menu hamburger
   > ```
 
-- Cliquez sur le Générateur de configuration.
+- Cliquez sur Configuration.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_02.jpg
-  > :alt: "G\xE9n\xE9rateur de configuration"
+  > :alt: Générateur de configuration
   > ```
 
 - Après avoir sélectionné la pompe Diaconn G8, cliquez sur l'icône Paramètres (roue crantée).
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_03.jpg
-  > :alt: "Param\xE8tres"
+  > :alt: Paramètres
   > ```
 
 - Choisissez la pompe sélectionnée.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_04.jpg
-  > :alt: "S\xE9lection de la pompe"
+  > :alt: Sélection de la pompe
   > ```
 
 - Sélectionnez le numéro de modèle de votre pompe à insuline une fois qu'elle apparaît dans la liste.
@@ -36,10 +36,9 @@
 
   > 1. Les 5 derniers chiffres du numéro SN au dos de la pompe.
   > 2. Cliquez sur le bouton O > Information > BLE > Derniers 5 chiffres.
-  >
-  > > ```{image} ../images/DiaconnG8/DiaconnG8_06.jpg
-  > > :alt: "V\xE9rification du num\xE9ro de s\xE9rie"
-  > > ```
+  > 
+  > > `{image} ../images/DiaconnG8/DiaconnG8_06.jpg
+    :alt: vérifier le n° de modèle`
 
 - Une fois que vous avez sélectionné votre pompe, une fenêtre apparaît pour demander un code PIN. Entrez le code PIN affiché sur votre pompe pour terminer la connexion.
 
@@ -52,7 +51,7 @@
 - Une fois que votre pompe est connectée, cliquez sur le symbole Bluetooth pour vérifier l'état et synchroniser les journaux.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_08.jpg
-  > :alt: "\xC9tat du Bluetooth"
+  > :alt: État du Bluetooth
   > ```
 
 ## Dépannage Bluetooth
@@ -61,10 +60,10 @@
 
 ### Méthode 1) Vérifiez à nouveau la pompe une fois la connexion à AAPS terminée.
 
-- Cliquez sur le bouton de 3 points en haut à droite.
+- Cliquez sur le menu 3 points en haut à droite.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_09.jpg
-  > :alt: "Menu pr\xE9ferences"
+  > :alt: Menu préferences
   > ```
 
 - Cliquez sur Quitter.
@@ -81,16 +80,16 @@
   > :alt: Bouton Bluetooth
   > ```
 
-- Cliquez sur le bouton Réglage de la pompe Diaconn G8 appariée.
+- Cliquez sur le bouton Réglage de la pompe Diaconn G8 appairée.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_12.jpg
-  > :alt: "Bouton param\xE8tres"
+  > :alt: Bouton paramètres
   > ```
 
 - Désappairage.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_13.jpg
-  > :alt: "D\xE9sappairage"
+  > :alt: Désappairage
   > ```
 
 - Répétez le processus d'appairage Bluetooth pour la pompe (voir ci-dessus).
@@ -99,7 +98,7 @@
 
 ### Réglage des options de pompe Diaconn G8
 
-- Gestionnaire de configuration > Pompe > Diaconn G8 > Paramètres
+- Configuration > Pompe > Diaconn G8 > Paramètres
 - DIACONN G8 en haut à droite> Menu 3 points en haut à droite > Préférences Diaconn G8
 
 ```{image} ../images/DiaconnG8/DiaconnG8_14.jpg
@@ -118,4 +117,4 @@
 ### Fonction Bolus Étendu
 
 - Si vous utilisez un bolus étendu, cela désactivera la boucle fermée.
-- Voir [cette page](../Usage/Extended-Carbs#pourquoi-les-bolus-etendus-ne-marchent-pas-avec-une-boucle-fermee) pour plus de détails pourquoi le bolus étendu ne fonctionne pas dans un environnement de boucle fermée.
+- Voir [cette page](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) pour plus de détails pourquoi le bolus étendu ne fonctionne pas dans un environnement de boucle fermée.

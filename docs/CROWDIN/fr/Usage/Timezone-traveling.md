@@ -4,9 +4,11 @@
 
 Il n'y a aucun problème avec le changement de fuseau horaire dans le téléphone car la pompe n'utilise pas l'historique
 
+(Timezone-traveling-danarv2-danars)=
+
 ## DanaRv2, DanaRS
 
-Ces pompes ont besoin d'une attention toute particulière, car AndroidAPS utilise l'historique de la pompe, mais les enregistrements de la pompe ne prend pas en compte le changement de fuseau horaire. **Cela signifie que si vous changez simplement de fuseau horaire dans le téléphone, les enregistrements seront lus avec un fuseau horaire différent et seront doublés.**
+Ces pompes ont besoin d'une attention toute particulière, car AAPS utilise l'historique de la pompe, mais les enregistrements de la pompe ne prend pas en compte le changement de fuseau horaire. **Cela signifie que si vous changez simplement de fuseau horaire dans le téléphone, les enregistrements seront lus avec un fuseau horaire différent et seront doublés.**
 
 Pour éviter cela, il y a deux possibilités :
 
@@ -24,7 +26,7 @@ Pour éviter cela, il y a deux possibilités :
    
    * par ex. Vienne -> New York : Changement de profil +6 heures
    * par ex. Vienne -> Sydney : Changement de profil -8 heures
-* Probablement pas une option si vous utilisez [l'application LibreLink patchée](../Hardware/Libre2#changement-de-fuseau-horaire) car la Date et heure automatique doit être activé pour démarrer un nouveau capteur Libre 2.
+* Probablement pas une option si vous utilisez [l'application LibreLink patchée](Libre2-time-zone-travelling) car la Date et heure automatique doit être activé pour démarrer un nouveau capteur Libre 2.
 
 ### Option 2: Supprimer l'historique de la pompe
 
@@ -40,6 +42,8 @@ Quand vous sortez de l'avion :
 * allumez le telephone
 * laissez le téléphone se connecter à la pompe et ré-ajuster l'heure
 
+(Timezone-traveling-insight)=
+
 ## Insight
 
 Le driver Insight ajuste automatiquement l'heure de la pompe à l'heure du téléphone.
@@ -50,15 +54,29 @@ Cela peut causer des inexactitudes dans les DTQ. Mais cela ne devrait pas être 
 
 L'utilisateur Insight n'a donc pas à s'inquiéter des changements de fuseau horaire et des changements d'heure. Il y a une exception à cette règle : la pompe Insight a une petite batterie interne pour sauvegarder l'heure, etc. lorsque vous changez la pile "réelle". Si le changement de la pile prend trop de temps, cette batterie interne peut manquer d'énergie, l'heure sera remise à zéro, et il vous sera demandé d'entrer un nouveau la date et l'heure après avoir mis la nouvelle pile. Dans ce cas, toutes les entrées avant le changement de la pile sont ignorées dans les calculs de AAPS car l'heure exacte ne peut pas être identifiée correctement.
 
+## Accu-Chek Combo
+
+Le [nouveau pilote Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md) ajuste automatiquement l'heure de la pompe à l'heure du téléphone. Le Combo ne peut pas stocker les fuseaux horaires, seulement les heures locales, ce qui est précisément ce que le nouveau pilote programme dans la pompe. De plus, il stocke le fuseau horaire dans les préférences locales d'AAPS pour être en mesure de convertir l'heure locale de la pompe en un horodatage complet qui a un décalage de fuseau horaire. L'utilisateur n'a rien à faire; si l'heure sur le Combo s'écarte trop de l'heure actuelle du téléphone, l'heure de la pompe est automatiquement ajustée.
+
+Notez toutefois que cela prend du temps, car cela ne peut être fait qu'en mode terminal distant, ce qui est généralement lent. Il s'agit d'une limitation Combo qui ne peut pas être contournée.
+
+L'ancien pilote basé sur Ruffy n'ajuste pas l'heure automatiquement. L'utilisateur doit le faire manuellement. Voir ci-dessous les étapes nécessaires pour le faire en toute sécurité en cas de changement de fuseau horaire ou de changement d'heure été / hivers.
+
+(Timezone-traveling-time-adjustment-daylight-savings-time-dst)=
+
 # Changements d'heure
 
 En fonction de la pompe et de la configuration de MGC, les changements d'heure peuvent entraîner des problèmes. Avec la Combo par ex., l'historique de la pompe est lu à nouveau et cela conduirait à des entrées dupliquées. Donc veuillez faire l'ajustement pendant que vous êtes éveillé et non pendant la nuit.
 
 Si vous faites un bolus avec la calculatrice, veuillez désactiver les GA et IA à moins que vous ne soyez sûr qu'ils sont absolument corrects - mieux vaut ne pas les utiliser pendant quelques heures après le changement d'heure.
 
+(Timezone-traveling-accu-chek-combo)=
+
 ## Accu-Chek Combo
 
-AndroidAPS émettra une alarme si l'heure entre la pompe et le téléphone est très différente. En cas de changement d'heure (été ou hiver), cela arrive au milieu de la nuit. Pour éviter cela et profiter de votre sommeil, suivez ces étapes pour que vous puissiez forcer le changement de temps à une heure convenable pour vous-même :
+**REMARQUE** : Comme mentionné ci-dessus, cette secton n'est valide que pour l'ancien pilote basé sur Ruffy. Le nouveau pilote ajuste automatiquement la date et l'heure.
+
+AAPS émettra une alarme si l'heure entre la pompe et le téléphone est très différente. En cas de changement d'heure (été ou hiver), cela arrive au milieu de la nuit. Pour éviter cela et profiter de votre sommeil, suivez ces étapes pour que vous puissiez forcer le changement de temps à une heure convenable pour vous-même :
 
 ### Actions à faire avant le changement d'heure
 

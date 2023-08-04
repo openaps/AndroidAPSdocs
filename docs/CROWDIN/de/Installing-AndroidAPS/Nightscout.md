@@ -1,5 +1,7 @@
 # Nightscout
 
+(Nightscout-security-considerations)=
+
 ## Sicherheitsüberlegungen
 
 Neben der Erstellung von Berichten, kann Nightscout auch genutzt werden, um AndroidAPS zu steuern. So kannst Du z.B. temporäre Ziele setzen oder Kohlenhydrate eingeben. Diese Informationen werden von AAPS übernommen, das dann entsprechend reagiert. Daher macht es Sinn, über die Absicherung Deiner Nightscout-Seite nachzudenken.
@@ -23,9 +25,11 @@ In den AAPS-Einstellungen gibt es eine Funktion, nur Daten zu Nightscout hochzul
 
 Halte Dein Smartphone aktuell wie es in den [Sicherheitshinweisen](../Getting-Started/Safety-first.md) beschrieben ist.
 
+(Nightscout-manual-nightscout-setup)=
+
 ## Manuelles Nightscout-Setup
 
-Wir gehen davon aus, dass du bereits eine Nightscout Seite hast. Falls nicht, gehe zum [Nightscout Wiki](http://nightscout.github.io/nightscout/new_user/). Dort findest du detaillierte Informationen zur Einrichtung. Die unten stehenden Hinweise beziehen sich auf die Einstellungen, die du zusätzlich in deiner Nightscout Seite vornehmen musst. Deine Nightscout Seite muss mindestens unter Version 10 (wird als 0.10... angezeigt) laufen. Prüfe daher, ob du tatsächlich die [letzte Version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) verwendest. Andersfalls bekommst du in der AAPS App eine Fehlermeldung. Manche Looper haben festgestellt, dass durch das Loopen mehr Speicherplatz verbraucht wird, als Azure kostenfrei zur Verfügung stellt. Daher ist Heroku die bessere Wahl.
+Wir gehen davon aus, dass du bereits eine Nightscout Seite hast. Falls nicht, gehe zum [Nightscout Wiki](http://nightscout.github.io/nightscout/new_user/). Dort findest du detaillierte Informationen zur Einrichtung. Die unten stehenden Hinweise beziehen sich auf die Einstellungen, die du zusätzlich in deiner Nightscout Seite vornehmen musst. Deine Nightscout Seite muss mindestens unter Version 10 (wird als 0.10... angezeigt) laufen. Prüfe daher, ob Du tatsächlich die [letzte Version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) verwendest. Andersfalls bekommst Du in der AAPS App eine Fehlermeldung. Manche Looper haben festgestellt, dass durch das Loopen mehr Speicherplatz verbraucht wird, als Azure kostenfrei zur Verfügung stellt. Daher ist Heroku die bessere Wahl.
 
 * Gehe zu https://herokuapp.com/
 
@@ -59,6 +63,6 @@ Looper Martin Schiftan hat seinen Service einer halb-automatischen Nightscout Ei
 * Eine automatisierte Basalratenüberprüfung mit Autotune ist ebenfalls enthalten. 
 * Die Server befinden sich in Deutschland und Finnland.
 
-[https://ns.10be.de/](https://ns.10be.de/en/index.html)
+<https://ns.10be.de/en/index.html>
 
 Eine Alternative wäre beispielsweise <https://t1pal.com/> - ab $11,99 pro Monat.

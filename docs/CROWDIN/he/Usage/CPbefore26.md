@@ -1,6 +1,6 @@
 # Careportal (discontinued)
 
-פורטל הטיפולים שיכפל את הפונקציות שנמצאות במסך נייטסקאוט תחת הסמל "+" המאפשר להוסיף הערות לרשומותיכם. But careportal did not issue any commands to the pump! So, if a bolus was added using this screen it simply made a note of this on your Nightscout record, the pump wasn’t instructed to deliver a bolus. This led to a lot of misunderstandings.
+Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records. But careportal did not issue any commands to the pump! So, if a bolus was added using this screen it simply made a note of this on your Nightscout record, the pump wasn’t instructed to deliver a bolus. This led to a lot of misunderstandings.
 
 The code originally used to add offline support for careportal did not harmonize with the development of AAPS and was really blocking further coding. **Therefore, decision was made to remove careportal in AAPS version 2.6.**
 
@@ -17,7 +17,9 @@ This page will show where you can find the functions previously available in car
 - Age information was moved to actions tab / menu.
 - BG check was moved to actions tab / menu.
 - Temporary target was moved to actions tab / menu.
-- Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs-bolus) on this page).
+- Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](CPbefore26-carbs-bolus) on this page).
+
+(CPbefore26-carbs-bolus)=
 
 ## Carbs & bolus
 
@@ -44,7 +46,7 @@ This page will show where you can find the functions previously available in car
 ```
 
 - CGM sensor insert can now be found in the actions tab / menu.
-- All other functions from this section have been removed. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs-bolus) on this page).
+- All other functions from this section have been removed. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](CPbefore26-carbs-bolus) on this page).
 
 ## משאבה
 

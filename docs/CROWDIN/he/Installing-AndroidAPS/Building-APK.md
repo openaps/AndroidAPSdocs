@@ -2,12 +2,14 @@
 
 ## בנייה עצמית במקום הורדה
 
-**יישום AndroidAPS אינו זמין להורדה מטעמי רגולציה של מכשירים רפואיים. בנייה עצמית של היישום לשימוש אישי הינה חוקית אך אסור לתת את היישום לאחרים! ראו [שאלות נפוצות](../Getting-Started/FAQ.md) לפרטים.**
+**AAPS is not available as download due to regulation for medical devices. בנייה עצמית של היישום לשימוש אישי הינה חוקית אך אסור לתת את היישום לאחרים! ראו [שאלות נפוצות](../Getting-Started/FAQ.md) לפרטים.**
 
 ## הערות חשובות
 
 * נא להשתמש ב-**[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** או חדש יותר כדי לבנות את ה-apk.
-* [מערכות Windows 10 של 32 ביט](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) אינן נתמכות על ידי Android Studio 2020.3.1
+* [מערכות Windows 10 של 32 ביט](troubleshooting_androidstudio-unable-to-start-daemon-process) אינן נתמכות על ידי Android Studio 2020.3.1
+
+(Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 
 ## מפרט מומלץ של מחשב לבניית קובץ apk
 
@@ -54,20 +56,20 @@
 ### מאמר זה מחולק לשני חלקים.
 
 * בחלק הסקירה יש הסבר על השלבים הדרושים לבניית קובץ ה-APK.
-* בחלק המדריך צעד אחר צעד תמצאו את צילומי המסך של תהליך שלם. מכיוון שהגרסאות של Android Studio - סביבת פיתוח התוכנה בה נשתמש לבניית ה-APK - ישתנו מהר מאוד זה לא יהיה זהה להתקנה שלך אבל זה אמור לתת לך נקודת התחלה טובה. Android Studio פועל גם על Windows, Mac OS X ו-Linux וייתכנו הבדלים קטנים בהיבטים מסוימים בין כל פלטפורמה. אם אתם מגלים שמשהו חשוב שגוי או חסר, אנא הודע לקבוצת הפייסבוק "AndroidAPS Users" או בצ'אט Discord [Android APS](https://discord.gg/4fQUWHZ4Mw) כדי שנוכל לבדוק זאת.
+* בחלק המדריך צעד אחר צעד תמצאו את צילומי המסך של תהליך שלם. מכיוון שהגרסאות של Android Studio - סביבת פיתוח התוכנה בה נשתמש לבניית ה-APK - ישתנו מהר מאוד זה לא יהיה זהה להתקנה שלך אבל זה אמור לתת לך נקודת התחלה טובה. Android Studio פועל גם על Windows, Mac OS X ו-Linux וייתכנו הבדלים קטנים בהיבטים מסוימים בין כל פלטפורמה. If you find that something important is wrong or missing, please inform the facebook group "AAPS users" or in the Discord chat [Android APS](https://discord.gg/4fQUWHZ4Mw) so that we can have a look at this.
 
 ## סקירה כללית
 
 באופן כללי, השלבים של בניית קובץ ה-APK הם:
 
 1. [התקנת Git](../Installing-AndroidAPS/git-install.md)
-2. [התקנת Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
-3. [הגדרת נתיב של Git בהעדפות Android Studio](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
-4. [הורדת הקוד של AndroidAPS](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
-5. [הורדת Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
-6. [בניית האפליקציה](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (יצירת apk חתום)
-7. [העברת קובץ ה-apk לטלפון](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [הגדרת זיהוי מקלט אם משתמשים ב-xDrip](..//Configuration/xdrip#identify-receiver)
+2. [התקנת Android Studio](Building-APK-install-android-studio)
+3. [הגדרת נתיב של Git בהעדפות Android Studio](Building-APK-set-git-path-in-preferences)
+4. [Download AAPS code](Building-APK-download-AAPS-code)
+5. [הורדת Android SDK](Building-APK-download-android-sdk)
+6. [בניית האפליקציה](Building-APK-generate-signed-apk) (יצירת apk חתום)
+7. [העברת קובץ ה-apk לטלפון](Building-APK-transfer-apk-to-smartphone)
+8. [הגדרת זיהוי מקלט אם משתמשים ב-xDrip](xdrip-identify-receiver)
 
 ## מדריך שלב אחר שלב
 
@@ -77,9 +79,11 @@
 
 עקבו אחר המדריך ב[דף התקנת של git](../Installing-AndroidAPS/git-install.md).
 
+(Building-APK-install-android-studio)=
+
 ## התקנת Android Studio
 
-צילומי המסך הבאים נלקחו מגרסת Android Studio Arctic Fox | 2020.3.1. המסכים יכולים להשתנות בגרסאות עתידיות של Android Studio. אף על פי כן, אתם צפויים להיות מסוגלים למצוא את דרככם. אפשר [לקבל עזרה מהקהילה](../Where-To-Go-For-Help/Connect-with-other-users.md).
+צילומי המסך הבאים נלקחו מגרסת Android Studio Arctic Fox | 2020.3.1. המסכים עשויים להשתנות בגרסאות עתידיות של Android Studio. אף על פי כן, אתם צפויים להיות מסוגלים למצוא את דרככם. אפשר [לקבל עזרה מהקהילה](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
 אחד הדברים החשובים ביותר בעת התקנת Android Studio: **היו סבלניים!** במהלך ההתקנה וההגדרה Android Studio מוריד הרבה דברים וזה לוקח זמן.
 
@@ -89,19 +93,19 @@
 
 בחרו "Do not import settings" מכיוון שלא השתמשתם בו בעבר.
 
-![על תייבא הגדרות](../images/studioSetup/01_ImportSettings.png)
+![Do not import settings](../images/studioSetup/01_ImportSettings.png)
 
 החליטו אם ברצונכם לשתף נתונים עם Google או לא.
 
-![שתף מידע עם גוגול](../images/studioSetup/02_DataSharing.png)
+![שיתוף מידע עם גוגל](../images/studioSetup/02_DataSharing.png)
 
 במסך הבא לחץ על "Next".
 
 ![מסך הכניסה](../images/studioSetup/03_Welcome.png)
 
-בחר בהתקנה "Standard" ולחץ על "הבא".
+בחר בהתקנה "Standard" ולחצו על "Next".
 
-![התקנה בסיסית](../images/studioSetup/04_InstallType.png)
+![התקנה סטנדרטית](../images/studioSetup/04_InstallType.png)
 
 בחרו את ערכת הנושא עבור ממשק המשתמש לנוחיותכם. (במדריך זה השתמשנו ב"Light".) לאחר מכן לחצו על "Next".
 
@@ -113,9 +117,11 @@
 
 ![אימות הגדרות](../images/studioSetup/06_Verify.png)
 
-המתינו בזמן ש-Android Studio מוריד רכיבים נוספים והתאזרו בסבלנות. לאחר הורדת הכל כפתור "Finish" הופך לכחול. לחץ על הכפתור כעת.
+המתינו בזמן ש-Android Studio מוריד רכיבים נוספים והתאזרו בסבלנות. לאחר הורדת כל הרכיבים, כפתור ה-"Finish" הופך לכחול. לחצו על הכפתור כעת.
 
-![רכיבי הורדות](../images/studioSetup/07_Downloading.png)
+![מוריד רכיבים](../images/studioSetup/07_Downloading.png)
+
+(Building-APK-set-git-path-in-preferences)=
 
 ## הגדירו את נתיב git בהעדפות
 
@@ -123,11 +129,11 @@
 
 במסך הפתיחה של Android Studio לחצו על "Customize" (1) בצד שמאל ולאחר מכן בחרו בקישור "All settings..." (2):
 
-![הגדרות אנדרואיד סטודיו ומסך הכנסיה](../images/studioSetup/10_WizardSettings.png)
+![הגדרות אנדרואיד סטודיו ממסך הכניסה](../images/studioSetup/10_WizardSettings.png)
 
 ### Windows
 
-* כמשתמשי Windows, ודאו שהפעלת מחדש את המחשב לאחר [התקנת Git](../Installing-AndroidAPS/git-install.md).
+* כמשתמשי Windows, ודאו שהפעלתם מחדש את המחשב לאחר [התקנת Git](../Installing-AndroidAPS/git-install.md).
 
 * לחצו פעמיים על "Version Control" (1) כדי לפתוח את תפריט המשנה.
 
@@ -164,7 +170,9 @@
 * לפרטים על התקנת git עיינו ב[תיעוד ה-git הרשמי](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * אם אתם מתקינים git דרך homebrew אין צורך לשנות שום העדפות. ליתר ביטחון: ניתן למצוא אותם כאן: Android Studio > Preferences.
 
-## הורדת הקוד של AndroidAPS
+(Building-APK-download-AAPS-code)=
+
+## Download AAPS code
 
 * במסך הפתיחה של Android Studio בחרו "Projects" (1) בצד שמאל ולאחר מכן "Get from VCS" (2).
     
@@ -179,7 +187,7 @@
     * ודאו שבחרתם ב"Repository URL" בצד שמאל (1).
     
     * בדוק אם "Git" נבחר ב-version control (2).
-    * העתיקו והדביקו את כתובת האתר: ```https://github.com/nightscout/AndroidAPS``` למאגר הראשי של AndroidAPS לתוך תיבת הטקסט של URL (כתובת האתר) (3).
+    * העתיקו והדביקו את כתובת האתר: ```https://github.com/nightscout/AndroidAPS``` to the main AAPS repository into the URL textbox (3).
     * בחרו את הספרייה שבה ברצונכם לשמור את הקוד המשוכפל (4).
         
         ![שיבוט גיט](../images/studioSetup/21_CloneURL.png)
@@ -210,9 +218,11 @@
     
     אל דאגה, תכף הן תטופלנה!
 
+(Building-APK-download-android-sdk)=
+
 ## הורדת Android SDK
 
-* בתפריט, עבור אל File (1) > Settings (2).
+* In the menu, go to File (1) > Settings (2) (or Android Studio > Preferences on Mac).
     
     ![הגדרות פתוחות](../images/studioSetup/30_Settings.png)
 
@@ -241,7 +251,7 @@
 
 * Android Studio עשוי להמליץ לעדכן את מערכת gradle. **לעולם אל תעדכנו את gradle!** זה יגרום לבעיות!
 
-* אם אתם רואים מידע בצד הימני התחתון של חלון Android Studio שהתוסף של Android Gradle מוכן לעדכון לחץ על הטקסט "update" (1).
+* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "upgrade" (1).
     
     ![אי שידרוג Gradle](../images/studioSetup/36_GradleUpdateRequest.png)
 
@@ -251,9 +261,11 @@
 
 * הפעילו מחדש את Android Studio לפני שתמשיכו.
 
+(Building-APK-generate-signed-apk)=
+
 ## יצירת APK חתום
 
-החתימה פירושה שאתם מציינים שהאפליקציה היא יצירה שלכם בצורה דיגיטלית כמעין טביעת אצבע דיגיטלית בתוך האפליקציה עצמה. זה הכרחי כי לאנדרואיד יש כלל שהוא מקבל רק קוד חתום להפעלה מסיבות אבטחה. למידע נוסף, ראו [קישור זה](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+החתימה פירושה שאתם מציינים שהאפליקציה היא יצירה שלכם בצורה דיגיטלית כמעין טביעת אצבע דיגיטלית בתוך האפליקציה עצמה. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * לאחר הפעלת Android Studio, המתינו עד לסיום כל משימות הרקע.
     
@@ -271,7 +283,7 @@
     
     ![קובץ APK במקום חבילה](../images/studioSetup/43_Apk.png)
 
-* וודאו שה-module הינו "AndriodAPS.app".
+* Make sure that module is set to "AAPS.app" (1).
 
 * לחצו "Create new" (2) על מנת להתחיל יצירת ה-key store (מאגר המפתחות).
     
@@ -293,7 +305,7 @@
 
 * רשמו (2) ואמתו (3) את סיסמת המאגר המפתחות שלכם. ![בחר נתיב מפתח מאגר](../images/studioSetup/47_KeystoreDialog.png)
     
-    ***הערה:*** הסיסמאות למאגר המפתחות לא חייבות להיות מתוחכמות. וודאו שתזכרו את הסיסמאות על ידי שמירתן במקום בטוח. במקרה שלא תיזכרו את הסיסמאות שלכם בעתיד, ראו[פיתרון בעיות במאגר המפתחות](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+    ***הערה:*** הסיסמאות למאגר המפתחות לא חייבות להיות מתוחכמות. וודאו שתזכרו את הסיסמאות על ידי שמירתן במקום בטוח. In case you will not remember your passwords in the future, see [troubleshooting for lost key store](troubleshooting_androidstudio-lost-keystore).
 
 * רשמו כינוי (4) למאגר המפתחות שלכם. בחרו כל כינוי שתרצו.
 
@@ -305,7 +317,7 @@
 
 * לחצו על "OK" (9) לסיום.
 
-* וודאו שסימנתם את התיבה לזכירת הסיסמאות (1). כך שלא תידרשו לרשום אותן שוב בפעם הבאה שתבנו את האפליקציה (כלומר, כאשר תבנו גרסה חדשה לעדכון של AndroidAPS).
+* וודאו שסימנתם את התיבה לזכירת הסיסמאות (1). So you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version).
 
 * לחצו על "Next" (2).
     
@@ -339,12 +351,14 @@
 
 * "app-full-release.apk" (3) הינו הקובץ שאתם מחפשים!
 
+(Building-APK-transfer-apk-to-smartphone)=
+
 ## העתיקו את האפליקציה אל הטלפון
 
-הדרך הקלה ביותר להעביר או להעתיק את האפליקציה לטלפון החכם היא דרך [ כבל USB או Google Drive](https://support.google.com/android/answer/9064445?hl=en). שימו לב שהעברה דרך דואר אלקטרוני יכולה לגרום לבעיות שאינה מומלצת.
+Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
 
-בטלפון החכם שלכם עליכם לאפשר התקנה ממקורות לא ידועים. מדריכים לכך ניתן למצוא באינטרנט (כלומר [כאן](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) או [כאן](https://www.androidcentral.com/unknown-sources)).
+On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
 ## פתרון בעיות
 
-ראו דף נפרד [פיתרון בעיות של Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
+See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).

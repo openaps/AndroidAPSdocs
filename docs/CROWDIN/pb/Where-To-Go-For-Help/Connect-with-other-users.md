@@ -1,3 +1,5 @@
+(Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)=
+
 # I'm getting stuck; What do I do? Who can I ask?
 
 This project is based on volunteer work so some rules apply to avoid extra work to those who so kindly donate their time and skills:

@@ -1,163 +1,134 @@
----
-substitutions:
-  DiaLink: |-
-    ```{image} ../images/omnipod/DiaLink.png
-    ```
-  EmaLink: |-
-    ```{image} ../images/omnipod/EmaLink.png
-    ```
-  LoopLink: |-
-    ```{image} ../images/omnipod/LoopLink.png
-    ```
-  OrangeLink: |-
-    ```{image} ../images/omnipod/OrangeLink.png
-    ```
-  RileyLink: |-
-    ```{image} ../images/omnipod/RileyLink.png
-    ```
----
-
 # Component Overview
 
-AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the [component setup](../index#component-setup), too.
+AAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the [component setup](index-component-setup), too.
 
 ```{image} ../images/modules.png
 :alt: Components overview
 ```
 
-```{eval-rst}
-.. pastaba::
-   **SVARBUS SAUGOS ĮSPĖJIMAS**
+```{note}
+**IMPORTANT SAFETY NOTICE**
 
-   Šioje dokumentacijoje aprašytos pagrindinės AndroidAPS saugos funkcijos, grindžiamos aparatinės įrangos, su kuria nustatėte savo sistemą, saugos savybėmis. Labai svarbu, kad insulino pompa ir CGM sistema, naudojama uždaro ciklo sistemai su automatiniu insulino tiekimu, būtų tinkamai išbandytos ir visiškai veikiančios, pažymėtos CE ženklu (Europoje) kaip medicinos prietaisai. Šių komponentų aparatinės ar programinės įrangos pakeitimai gali sukelti netikėtą insulino tiekimą ir taip sukelti didelę riziką vartotojui. Nenaudokite sugedusių, modifikuotų ar pačių pagamintų insulino pompų ar CGM duomenų skaitytuvų, kad sukurtumėte ar valdytumėte AndroidAPS sistemą.
+The foundation of AAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. Labai svarbu, kad insulino pompa ir CGM sistema, naudojama uždaro ciklo sistemai su automatiniu insulino tiekimu, būtų tinkamai išbandytos ir visiškai veikiančios, pažymėtos CE ženklu (Europoje) kaip medicinos prietaisai. Šių komponentų aparatinės ar programinės įrangos pakeitimai gali sukelti netikėtą insulino tiekimą ir taip sukelti didelę riziką vartotojui. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AAPS system.
 
-   Be to, ne mažiau svarbu naudoti tik originalius priedus, tokius kaip įšovikliai, kateteriai ir insulino rezervuarai, patvirtinti jūsų pompos ar CGM gamintojo. Nepatikrintų ar modifikuotų priedų naudojimas gali sukelti CGM sistemos netikslumus ir insulino tiekimo klaidas. Insulinas yra labai pavojingas, jei jis neteisingai dozuotas. Nežaisk su savo gyvenimu naudodamas neišbandytus ar modifikuotus priedus.
+Be to, ne mažiau svarbu naudoti tik originalius priedus, tokius kaip įšovikliai, kateteriai ir insulino rezervuarai, patvirtinti jūsų pompos ar CGM gamintojo. Nepatikrintų ar modifikuotų priedų naudojimas gali sukelti CGM sistemos netikslumus ir insulino tiekimo klaidas. Insulinas yra labai pavojingas, jei jis neteisingai dozuotas. Nežaisk su savo gyvenimu naudodamas neišbandytus ar modifikuotus priedus.
 
-   Galiausiai, jūs neturėtumėte vartoti SGLT-2 inhibitorių (glifozinų), nes jie nenuspėjamai sumažina cukraus kiekį kraujyje.  Ypač pavojingas derinys su sistema, kuri sumažina bazę siekdama pakelti glikemiją, nes dėl gliflozinų šis glikemijos padidėjimas gali neįvykti ir gali grėsmingai pritrūkti insulino.
+Galiausiai, jūs neturėtumėte vartoti SGLT-2 inhibitorių (glifozinų), nes jie nenuspėjamai sumažina cukraus kiekį kraujyje.  Ypač pavojingas derinys su sistema, kuri sumažina bazę siekdama pakelti glikemiją, nes dėl gliflozinų šis glikemijos padidėjimas gali neįvykti ir gali grėsmingai pritrūkti insulino.
 ```
 
-## Būtinieji Moduliai
+## Necessary Modules
 
-### Geri individualūs insulino dozavimo algoritmai
+### Good individual dosage algorithm for your diabetes therapy
 
-Nors jūs negalite nei nusipirkti, nei lengvai sukurti, greičiausiai tai yra modulis, kuris labiausiai nuvertinamas, nors jis yra būtinas uždaram ciklui. Jei algoritmas padės palaikyti diabeto valdymą, jam reikia teisingų nustatymų, kad nepriimtumėte rimtų klaidingų sprendimų.
-Net jei dar trūksta kitų modulių, kartu su diabeto komanda galite patikrinti ir pakoreguoti esamą „profilį“.
-Dauguma uždaro ciklo naudotojų naudoja vadinamąją cirkadinę valandinę bazę, insulino jautrimo faktorių bei insulino ir angliavandenių santykio faktorius, kurie yra pagrįsti hormoniniu jautrumu insulinui dienos metu.
+Even though this is not something to create or buy, this is the 'module' which is probably underestimated the most but essential. When you let an algorithm help manage your diabetes, it needs to know the right settings to not make severe mistakes. Even if you are still missing other modules, you can already verify and adapt your 'profile' in collaboration with your diabetes team. Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
 
-Profilį sudaro
+The profile includes
 
-- Bazė
-- JIF (jautrumo insulinui faktorius) yra jūsų kraujo gliukozės kiekis, kurį sumažina vienas vienetas insulino
+- BR (Basal rates)
+- ISF (insulin sensitivity factor) is your blood glucose unit per one unit insulin
 - CR (carb ratio) is grams carbohydrate per one unit insulin
-- IVT (insulino veikimo trukmė).
+- DIA (duration of insulin acting).
 
-### Negalima naudoti SGLT-2 inhibitorių
+(module-no-use-of-sglt-2-inhibitors)=
+### No use of SGLT-2 inhibitors
 
-SGLT-2 inhibitoriai, dar vadinami gliflozinais, slopina gliukozės absorbciją (pasisavinimą) inkstuose. Kadangi jie nenuspėjamai sumažina gliukozės kiekį kraujyje, jų NEGALIMA naudoti su uždaro ciklo sistema, pavyzdžiui, AndroidAPS! Yra didžiulė ketoacidozės ar hipoglikemijos rizika! Ypač pavojingas šių medikamentų derinys su sistema, kuri sumažina bazę siekdama pakelti glikemiją, nes dėl gliflozinų šis glikemijos padidėjimas gali neįvykti ir gali grėsmingai pritrūkti insulino.
+SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. As they incalculably lower blood sugar levels, you MUST NOT take them while using a closed loop system like AAPS! There would be a huge risk of a ketoacidosis or a hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
 
-### Telefonas
+(module-phone)=
+### Phone
 
-The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
-Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the [old repository.](https://github.com/miloskozak/androidaps)
+The current version of AAPS requires an Android smartphone with Google Android 9.0 or above. So if you are thinking about a new phone, Android 9 is recommended at a minimum but optimally choose Android 10 or 12. Users are strongly encouraged to keep their build of AAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AAPS version 2.6.1.4, suitable for older Android versions, remains available from the [old repository.](https://github.com/miloskozak/AAPS)
 
-Vartotojai sukūrė [patikrintų išmaniųjų telefonų ir išmaniųjų laikrodžių, sąrašą:\<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>][patikrintų išmaniųjų telefonų ir išmaniųjų laikrodžių, sąrašą:<https://docs.google.com/spreadsheets/d/1gzasn6f0gv6tkgy9ebsyl0bqnhna0rdqa9qgycaqcqc/edit?usp=sharing>]
+Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
-Norėdami įvesti mobilųjį telefoną ar išmanųjį laikrodį, kurio dar nėra sąraše, užpildykite formą \<<https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewfor>>'\_.
+To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform).
 
-Praneškite apie bet kokias lentelės problemas el. paštu [hardware@androidaps.org](mailto:hardware@androidaps.org). Jei norite pateikti mobiliuosius telefonus ar išmaniuosius laikrodžius testavimui, atsiųskite el. laišką adresu [donations@androidaps.org](mailto:hardware@androidaps.org).
+Any problems with the spreadsheet please send an email to [hardware@androidaps.org](mailto:hardware@androidaps.org), any donations of phone/watch models that still need testing please send an email to [donations@androidaps.org](mailto:hardware@androidaps.org).
 
-### Insulino pompa
+### Insulin pump
 
-AndroidAPS **šiuo metu** veikia su
+AAPS **currently** works with
 
 - [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
 - [DanaR](../Configuration/DanaR-Insulin-Pump.md)
 - [Dana-i/RS](../Configuration/DanaRS-Insulin-Pump.md)
-- [some old Medtronic pumps](../Configuration/MedtronicPump.md) from upcoming version 2.4 ([additional communication device](../Module/module#additional-communication-device) needed)
-- [Omnipod Eros](../Configuration/OmnipodEros.md) ([additional communication device](../Module/module#additional-communication-device) needed)
+- [some old Medtronic pumps](../Configuration/MedtronicPump.md) from upcoming version 2.4 ([additional communication device](module-additional-communication-device) needed)
+- [Omnipod Eros](../Configuration/OmnipodEros.md) ([additional communication device](module-additional-communication-device) needed)
 - [Omnipod DASH](../Configuration/OmnipodDASH.md)
 
-If no additional communication device  is mentioned the communication betweeen insulin pump and AndroidAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
+If no additional communication device  is mentioned the communication betweeen insulin pump and AAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
 
-\*\* Kitos pompos\*\*, kurios ateityje gali veikti su AndroidAPS, yra išvardytos puslapyje „Ateityje galimos naudoti pompos" \<../Getting-Started/Future-possible-Pump-Drivers.md>\`\_.
+**Other pumps** that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](../Getting-Started/Future-possible-Pump-Drivers.md) page.
 
-Jei norite įsigyti pompą \*\* savo lėšomis , tiekėjų adresus skirtingose šalyse galite rasti šioje lentelėje \<<https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>>“. Prašome užpildyti savo pardavėjo informaciją, jei ji dar nėra joje nurodyta.
-
+(module-additional-communication-device)=
 #### Additional communication device
 
 For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
 
-- {{ OrangeLink }}  [OrangeLink Website](https://getrileylink.org/product/orangelink)
-- {{ RileyLink }} [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
-- {{ EmaLink }}  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
-- {{ DiaLink }}  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
-- {{ LoopLink }}  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
+- ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
+- ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
+- ![EmaLink](../images/omnipod/EmaLink.png)  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
+- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
+- ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
 
-**Kuri pompa labiausiai tinka uždaro ciklo sistemai su AndroidAPS?**
+**So what's the best pump for looping with AAPS?**
 
-Combo, Insight ir senesnės Medtronic pompos yra patikimos ir tinkamos uždaram ciklui. Dėl infuzinės sistemos standartinės Luer užrakto jungties, Combo turi didelį pranašumą. Ir tam naudojama įprasta baterija, kurią galite nusipirkti bet kurioje degalinėje ar jums patogioje parduotuvėje. Ir jei jums to tikrai reikia, galite pavogti / pasiskolinti iš nuotolinio valdymo pultelio iš viešbučio kambario ;-).
+The Combo, the Insight and the older Medtronics are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
 
-The advantages of the DanaR/RS and Dana-i vs. Combo yra:
+The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice however are:
 
-- The Dana pumps connect to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana pumps as quick replacement... su Combo tai nėra taip lengva. bent jau tol, kol Android 8.1 diegiama tik keliuose telefonų modeliuose
-- Initial pairing is simpler with the Dana-i/RS. Tačiau paprastai šio žingsnio reikia tik pradinio sąrankos metu.
-- Kol kas Combo dirba su ekrano analizavimu. Iš esmės tai veikia gerai, bet, deja, lėtai. Tai nėra taip blogai, ko reikia ciklui, nes visa tai veikia fone. Tačiau tai leis lengviau atšaukti esamą Bluetooth ryšį. Tai gali būti nepatogu, jei inicijuojate bolusą ir vėliau būdami per daug toli nuo išmaniojo telefono, pvz., gamindami maistą.
-- The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. Naktį greičiausiai naudositės TBR, o ne SMB.  The Dana-i/RS is configurable that it does neither beep or vibrate.
+- The Dana pumps connect to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
+- Initial pairing is simpler with the Dana-i/RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
+- So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
+- The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB.  The Dana-i/RS is configurable that it does neither beep or vibrate.
 - Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
-
-Visos pompos, palaikančio AndroidAPS, yra atsparios vandeniui (bent jau naujos). Tik Dana pompos taip pat turi „garantiją dėl vandens atsparumo“ dėl uždaro akumuliatoriaus ir rezervuaro užpildymo skyriaus.
+- All pumps AAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
 
 ### Glikemijos šaltinis
 
-Tai tik trumpa su AndroidAPS suderinamų NGJ monitoringo sistemų apžvalga. For further details, look [here](../Configuration/BG-Source.md). Tiesiog trumpa pastaba: jei galite pateikti gliukozės duomenis xDrip+ programoje ar Nightscout svetainėje, galite pasirinkti xDrip+ (arba Nightscout su interneto ryšiu) kaip AAPS KG šaltinį.
+This is just a short overview of all compatible CGMs/FGM with AAPS. For further details, look [here](../Configuration/BG-Source.md). Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
 
-- [Dexcom G6](../Hardware/DexcomG6.md): BOYDA is recommended as of version 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes#important-hints) for details). xDrip+ must be at least version 2022.01.14 or newer
-- [Dexcom G5](../Hardware/DexcomG5.md): Veikia su xDrip+ arba modifikuota Dexcom programa
-- [Dexcom G4](../Hardware/DexcomG4.md): Šie sensoriai yra gana seni, bet jūs galite rasti instrukcijas apie tai, kaip naudoti juos su xDrip+ programa
-- [Libre 2](../Hardware/Libre2.md): Veikia su xDrip+ (nereikia siųstuvo), tačiau taip pat turite sukurti savo modifikuotą programą Libre 2.
-- [Libre 1](../Hardware/Libre1.md): Jums reikalingas siųstuvas, pavyzdžiui, Blucon ar MiaoMiao, kurį galite susikurti patys arba tiesiog nusipirkti, ir xDrip+ programa
-- [Eversense](../Hardware/Eversense.md): Kol kas veikia tik kartu su ESEL programa ir modifikuota Eversense programa (neveikia su Dana RS ir LineageOS deriniu, tačiau gerai veikia su DanaRS ir Android arba Combo ir Lineage OS)
+- [Dexcom G6](../Hardware/DexcomG6.md): BOYDA is recommended as of version 3.0 (see [release notes](Releasenotes-important-hints-3-0-0) for details). xDrip+ must be at least version 2022.01.14 or newer
+- [Dexcom G5](../Hardware/DexcomG5.md): It works with xDrip+ app or patched Dexcom app
+- [Dexcom G4](../Hardware/DexcomG4.md): These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
+- [Libre 2](../Hardware/Libre2.md): It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
+- [Libre 1](../Hardware/Libre1.md): You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
+- [Eversense](../Hardware/Eversense.md): It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
 - [Enlite (MM640G/MM630G)](../Hardware/MM640g.md): quite complicated with a lot of extra stuff
 
 ### Nightscout
 
-Nightscout yra atvirojo kodo žiniatinklio programa, galinti registruoti ir rodyti jūsų NGJ ir AndroidAPS duomenis bei generuoti ataskaitas. You can find more information on the [website of the Nightscout project](http://nightscout.github.io/). Galite sukurti savo [Nightscout svetainę](https://nightscout.github.io/nightscout/new_user/), naudodami pusiau automatinę Nightscout sąranką 'zehn.be \<<https://ns.10be.de/en/index.html>> \_ arba patalpinti savo serveryje (tai skirta IT ekspertams).
+Nightscout is a open source web application that can log and display your CGM data and AAPS data and creates reports. You can find more information on the [website of the Nightscout project](http://nightscout.github.io/). You can create your own [Nightscout website](https://nightscout.github.io/nightscout/new_user/), use the semi-automated Nightscout setup on [zehn.be](https://ns.10be.de/en/index.html) or host it on your own server (this is for IT experts).
 
-Nightscout yra nepriklausomas nuo kitų modulių. Jums jo reikės, kad galėtumėte įvykdyti 1-ą Tikslą.
+Nightscout is independent of the other modules. You will need it to fulfill Objective 1.
 
-Additional information on how to configure Nightscout for use with AndroidAPS can be found [here](../Installing-AndroidAPS/Nightscout.md).
+Additional information on how to configure Nightscout for use with AAPS can be found [here](../Installing-AndroidAPS/Nightscout.md).
 
-### AAPS-.apk failas
+### AAPS-.apk file
 
-Pagrindiniai sistemos komponentai. Prieš diegdami programą, pirmiausia turite sukurti apk failą (kuris yra Android programos failo pavadinimo plėtinys). Instructions are  [here](../Installing-AndroidAPS/Building-APK.md).
+The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  [here](../Installing-AndroidAPS/Building-APK.md).
 
-## Pasirenkamieji Moduliai
+## Optional Modules
 
-### Išmanieji laikrodžiai
+### Smartwatch
 
-Bet koks išmanusis laikrodis su Android Wear 1.x ar naujesne versija veikia. Daugelis uždaro ciklo vartotojai naudoja Sony Smartwatch 3 (SWR50), nes taip pat galima priimti reikšmes iš Dexcom G5/G6, kai išmaniojo telefono nėra diapazone. Kai kuriuos kitus išmaniuosius laikrodžius galima pritaikyti, kad juos būtų galima naudoti kaip autonominį imtuvą (žr. [dokumentaciją \<\<https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>][dokumentaciją <<https://github.com/nightscoutfoundation/xdrip/wiki/patching-android-wear-devices-for-use-with-the-g5>], jei norite gauti daugiau informacijos).
+You can choose any smartwatch with Android Wear 1.x and above. Most loopers wear a Sony Smartwatch 3 (SWR50) as it is the only watch that can get readings from Dexcom G5/G5 when phone is out of range. Some other watches can be patched to work as a standalone receiver as well (see [this documentation](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5) for more details).
 
-Vartotojai sukūrė [patikrintų išmaniųjų telefonų ir išmaniųjų laikrodžių, sąrašą:\<https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>][patikrintų išmaniųjų telefonų ir išmaniųjų laikrodžių, sąrašą:<https://docs.google.com/spreadsheets/d/1gzasn6f0gv6tkgy9ebsyl0bqnhna0rdqa9qgycaqcqc/edit?usp=sharing>]. There are different watchfaces for use with AndroidAPS, which you can find [here](../Configuration/Watchfaces.md).
+Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). There are different watchfaces for use with AAPS, which you can find [here](../Configuration/Watchfaces.md).
 
-Norėdami įvesti mobilųjį telefoną ar išmanųjį laikrodį, kurio dar nėra sąraše, užpildykite formą \<<https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewfor>>'\_.
+To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform).
 
-Praneškite apie bet kokias lentelės problemas el. paštu [hardware@androidaps.org](mailto:hardware@androidaps.org). Jei norite pateikti mobiliuosius telefonus ar išmaniuosius laikrodžius testavimui, atsiųskite el. laišką adresu [donations@androidaps.org](mailto:hardware@androidaps.org).
+Any problems with the spreadsheet please send an email to [hardware@androidaps.org](mailto:hardware@androidaps.org), any donations of phone/watch models that still need testing please send an email to [donations@androidaps.org](mailto:hardware@androidaps.org).
 
 ### xDrip+
 
-Net jei jums nereikia xDrip+ programos kaip KG duomenų šaltinio, vis tiek galite ja naudotis aliarmams arba patogų glikemijos duomenų rodymą. xDrip+ galite nustatyti norimus įspėjimo signalų, apibrėžti laiką, kada jie turėtų būti aktyvūs, ar jie gali nepaisyti išmaniojo telefono nutildymo ir pan. Some xDrip+ information can be found [here](../Configuration/xdrip.md). Atminkite, kad xDrip+ tobulinimas yra labai aktyvus ir dokumentacija kartais negali jo sekti, todėl ne visada gali būti atnaujinta.
+Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found [here](../Configuration/xdrip.md). Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
 
-## Ką daryti laukiant modulių
+## What to do while waiting for modules
 
-Kartais užtrunka šiek tiek laiko, kol bus gauti visi uždaro ciklo moduliai. Nesijaudinkite, laukdami galite padaryti daug. It is NECESSARY to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. Ir galbūt atviras ciklas gali būti geras būdas išbandyti sistemą ir susipažinti su AndroidAPS. Šiame režime AndroidAPS teikia rekomendacijas, kurių galite laikytis rankiniu būdu.
+It sometimes takes a while to get all modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is NECESSARY to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with AAPS. Using this mode, AAPS gives treatment advices you can manually execute.
 
 You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../Where-To-Go-For-Help/Background-reading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
-**Atlikta?**
-Jei turite visus AAPS komponentus kartu arba bent jau pakankamai, kad pradėtumėte nuo atviro ciklo, pirmiausia turėtumėte perskaityti [Tikslų skiltį](../Usage/Objectives.md) prieš pradedant naują Tikslą bei nustatyti savo
-[įrangą](../index#component-setup).
-
-% Image aliases resource for referencing images by name with more positioning flexibility
-
-% Hardware and Software Requirements
+**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/Objectives.md) before each new Objective and setup up your [hardware](index-component-setup).

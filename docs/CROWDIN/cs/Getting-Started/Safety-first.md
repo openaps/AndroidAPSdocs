@@ -1,14 +1,14 @@
 # Bezpečnost především
 
-**Jestliže se rozhodnete sestavit si vlastní umělou slinivku, vždy je třeba myslet na bezpečnost a plně si uvědomovat dopad všech vašich akcí**.
+**When you decide to build your own artificial pancreas, it's always important to think about security and safety, and to understand the impact of all your actions**
 
 ## Obecné
 
-- AndroidAPS je jen nástroj, který vám pomůže s managementem diabetu, nejde o plně automatizovaný systém, který jen nainstalujete a zapomenete na něho!
-- Nepředpokládejte, že bude systém AndroidAPS vždy bezchybný. Toto zařízení přebírá kontrolu nad vaším podáváním inzulinu: Vždy jej kontrolujte, snažte se porozumět tomu, jak funguje a naučte se interpretovat jeho akce.
-- Pamatujte na to, že jakmile jednou spárujete pumpu s telefonem, telefon může vydat pumpě jakýkoli pokyn. Používejte tento telefon pouze pro systém AndroidAPS a, je-li používán dítětem, pouze na nezbytnou komunikaci. Neinstalujte nepotřebné aplikace nebo hry (!!!), které by mohly do vašeho telefonu zavléci malware, jako jsou trojské koně, viry nebo boty, které by mohly zasahovat do vašeho systému.
-- Nainstalujte všechny aktualizace zabezpečení poskytované výrobcem telefonu a společností Google.
-- Možná budete muset změnit své diabetické návyky, protože použitím uzavřeného smyčku systému měníte svou léčbu. Např. někteří lidé uvádějí, že jim k řešení hypoglykémie stačí menší množství sacharidů, protože systém AndroidAPS již omezil dodávku inzulinu.
+- AndroidAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
+- Do not assume that AndroidAPS will never make mistakes. Toto zařízení přebírá kontrolu nad vaším podáváním inzulinu: Vždy jej kontrolujte, snažte se porozumět tomu, jak funguje a naučte se interpretovat jeho akce.
+- Remember that, once paired, the phone can instruct the pump to do anything. Používejte tento telefon pouze pro systém AndroidAPS a, je-li používán dítětem, pouze na nezbytnou komunikaci. Neinstalujte nepotřebné aplikace nebo hry (!!!), které by mohly do vašeho telefonu zavléci malware, jako jsou trojské koně, viry nebo boty, které by mohly zasahovat do vašeho systému.
+- Install all security updates provided by your phone manufacturer and Google.
+- You might also need to change your diabetes habits as you change your therapy by using a closed loop system. Např. někteří lidé uvádějí, že jim k řešení hypoglykémie stačí menší množství sacharidů, protože systém AndroidAPS již omezil dodávku inzulinu.
 
 ## SMS komunikátor
 
@@ -29,13 +29,12 @@ To do this, please proceed as follows:
 - There, at the bottom, you will find the checkbox "Enable Java Access Bridge", select it.
 - Done, just close the window! The screen reader should work now.
 
-```{eval-rst}
-.. poznámka::
-   **DŮLEŽITÉ BEZPEČNOSTNÍ UPOZORNĚNÍ**
+```{note}
+**IMPORTANT SAFETY NOTICE**
 
-   Základy bezpečnosti AndroidAPS zmíněné v této dokumentaci jsou postaveny na bezpečnostních vlastnostech hardwaru používaného k vybudování vašeho systému. Je zásadně důležité, abyste používali pouze testované, plně funkční a pro uzavřenou smyčku schválené inzulinové pumpy a CGM. Hardwarové nebo softwarové úpravy těchto komponent mohou způsobit neočekávané dávkování inzulínu, což může znamenat pro uživatele významné riziko. Pokud najdete nebo získáte rozbité, upravené nebo doma vyrobené inzulínové pumpy nebo CGM, NEPOUŽÍVEJTE JE pro vytvoření systému AndroidAPS.
+The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. Je zásadně důležité, abyste používali pouze testované, plně funkční a pro uzavřenou smyčku schválené inzulinové pumpy a CGM. Hardwarové nebo softwarové úpravy těchto komponent mohou způsobit neočekávané dávkování inzulínu, což může znamenat pro uživatele významné riziko. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
 
-   Kromě toho je stejně důležité používat pouze originální spotřební materiál, jako jsou sety a zásobníky, schválené výrobcem pro použití s vaší pumpou nebo CGM. Použití nevyzkoušeného nebo upraveného spotřebního materiálu může způsobit nepřesnosti a chyby při dodávce inzulínu. Inzulín je velmi nebezpečný, když není dávkovaný správně – prosím, nehazardujte se svým životem tím, že budete upravovat spotřební materiál.
+Kromě toho je stejně důležité používat pouze originální spotřební materiál, jako jsou sety a zásobníky, schválené výrobcem pro použití s vaší pumpou nebo CGM. Použití nevyzkoušeného nebo upraveného spotřebního materiálu může způsobit nepřesnosti a chyby při dodávce inzulínu. Inzulín je velmi nebezpečný, když není dávkovaný správně – prosím, nehazardujte se svým životem tím, že budete upravovat spotřební materiál.
 
-   V neposlední řadě nesmíte užívat SGLT-2 inhibitory (glifloziny), které snižují hadinu cukru v krvi.  Kombinace se systémem, která snižuje bazální hodnoty ke zvýšení glykémie je zvláště nebezpečná, protože v důsledku gliflozinu tento nárůst glykémie nemusí nastat a může dojít k nebezpečnému stavu nedostatku inzulínu.
+V neposlední řadě nesmíte užívat SGLT-2 inhibitory (glifloziny), které snižují hadinu cukru v krvi.  Kombinace se systémem, která snižuje bazální hodnoty ke zvýšení glykémie je zvláště nebezpečná, protože v důsledku gliflozinu tento nárůst glykémie nemusí nastat a může dojít k nebezpečnému stavu nedostatku inzulínu.
 ```

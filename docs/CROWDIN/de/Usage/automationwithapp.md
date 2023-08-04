@@ -1,6 +1,6 @@
 # Automatisierung mit Drittanbieter-App Android Automate
 
-**Dieser Artikel wurde vor Erscheinen von AndroidAPS Version 2.5 geschrieben. Mittlerweile gibt es ein [automation plugin in AndroidAPS](./Automation.rst) selbst. Für einige ist dieser Artikel vielleicht dennoch nützlich, die Drittanbieter-App sollte jedochn nur von fortgeschrittenen Benutzern verwendet werden.**
+**Dieser Artikel wurde vor Erscheinen von AndroidAPS Version 2.5 geschrieben. Mittlerweile gibt es ein [automation plugin in AndroidAPS](./Automation.md) selbst. Für einige ist dieser Artikel vielleicht dennoch nützlich, die Drittanbieter-App sollte jedochn nur von fortgeschrittenen Benutzern verwendet werden.**
 
 Da AndroidAPS ein hybrides Closed-Loop-System ist, muss der Benutzer noch einige Informationen von Hand eingeben (z.B. Bewegung, Spritz-Ess-Abstand ("eating soon"), Chillen auf dem Sofa...). Häufig wiederkehrende manuelle Eingaben können über externe Tools wie Automate oder IFTTT automatisiert werden, um die AndroidAPS-Funktionen zu erweitern.
 
@@ -32,7 +32,7 @@ Tippe in AndroidAPS auf das Drei-Punkte-Menü am oberen rechten Bildschirmrand u
 
 Tippe in AndroidAPS auf das Drei-Punkte-Menü am oberen rechten Bildschirmrand und gehe auf Einstellungen > Nightscout-Client > Erweiterte Einstellungen und deaktivere 'Zu Nightscout nur hochladen (keine Synchronisation)' und 'kein Upload zu Nightscout'.
 
-Beachte die [Sicherheitsüberlegungen](../Installing-AndroidAPS/Nightscout#sicherheitsuberlegungen) und sei besonders vorsichtig, wenn Du eine [Insight Pumpe](../Configuration/Accu-Chek-Insight-Pump#einstellungen-in-androidaps) verwendest.
+Beachte die [Sicherheitsüberlegungen](Nightscout-security-considerations) und sei besonders vorsichtig, wenn Du eine [Insight-Pumpe](Accu-Chek-Insight-Pump-settings-in-aaps) verwendest.
 
 ![Nightscout download preferences](../images/automate-aaps2.jpg)
 

@@ -6,9 +6,9 @@ Please see [this page](../Usage/Objectives.md) for the current set of Objectives
 
 AndroidAPS ma szereg zadań (celi), które należy wykonać. Cele służą temu aby przeprowadzić użytkownika przez funkcje i ustawienia systemu dla zapewnienia bezpiecznego używania pętli.  Gwarantują, że wszystko poprawnie skonfigurowałeś w sekcjach powyżej i że wiesz, co robi Twój system i dlaczego możesz mu zaufać.
 
-If you are **upgrading phones** then you can [export your settings](../Usage/ExportImportSettings.md) to keep your progress through the objectives. Zapiszesz nie tylko Twoje postępy w realizacji celów, ale także ustawienia bezpieczeństwa, takie jak maksymalny bolus itp.  Jeśli nie wyeksportujesz i nie zaimportujesz swoich ustawień, będziesz musiał zacząć od początku.  It is a good idea to [backup your settings](../Usage/ExportImportSettings.html) frequently just in case.
+If you are **upgrading phones** then you can [export your settings](../Usage/ExportImportSettings.md) to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to [backup your settings](../Usage/ExportImportSettings.html) frequently just in case.
 
-If you want to go back in objectives see [explanation below](../Usage/Objectives#go-back-in-objectives).
+If you want to go back in objectives see [explanation below](../Usage/Objectives.md#go-back-in-objectives).
 
 ## Cel 1: Ustawienie wizualizacji i monitorowania, analizowanie profilu podstawowego i parametrów
 
@@ -16,40 +16,46 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 - Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.
 - If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
 - Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure Nightscout can receive and display this data.
-- Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see [NSClient settings in Preferences](../Configuration/Preferences#nsclient).
+- Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see [NSClient settings in Preferences](../Configuration/Preferences.md#nsclient).
 
 *You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
 
-Objective 2: Learn how to control AndroidAPS
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
-\* Perform several actions in AndroidAPS as described in this objective.
-\* Click on the orange text "Not completed yet" to access the to-dos.
-\* Links will be provided to guide you in case you are not familiar with a specific action yet.
+## Objective 2: Learn how to control AndroidAPS
 
-> ```{image} ../images/Objective2_V2_5.png
-> :alt: Screenshot objective 2
-> ```
+- Perform several actions in AndroidAPS as described in this objective.
 
-Objective 3: Prove your knowledge
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
-\* Pass a multiple-choice exam testing your AndroidAPS knowledge.
-\* Click on the orange text "Not completed yet" to access the page with the question and answering options.
+- Click on the orange text "Not completed yet" to access the to-dos.
 
-> ```{image} ../images/Objective3_V2_5.png
-> :alt: Screenshot objective 3
-> ```
+- Links will be provided to guide you in case you are not familiar with a specific action yet.
+
+  ```{image} ../images/Objective2_V2_5.png
+  :alt: Screenshot objective 2
+  ```
+
+## Objective 3: Prove your knowledge
+
+- Pass a multiple-choice exam testing your AndroidAPS knowledge.
+
+- Click on the orange text "Not completed yet" to access the page with the question and answering options.
+
+  ```{image} ../images/Objective3_V2_5.png
+  :alt: Screenshot objective 3
+  ```
 
 - Links will be provided to guide you in case you are unsure about the correct answers yet.
+
 - The questions for objective 3 have been completely rewritten by native speakers as of AAPS 2.8. The new ones cover the same basic topics plus a few new ones.
+
 - These new questions will lead to some not answered questions even though you have successfully completed objective 3 in previous versions.
+
 - Unanswered questions will affect you only if you start a new objective. In other words: If you have already completed all objectives you can wait and answer the new questions later without loosing AAPS functions.
 
-Objective 4: Starting on an open loop
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
-\* Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
-\* Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
-\* Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Ensure this data shows in AndroidAPS and Nightscout.
-\* Enable [temp targets](../Usage/temptarget.md) if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo.
+## Objective 4: Starting on an open loop
+
+- Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
+- Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
+- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Ensure this data shows in AndroidAPS and Nightscout.
+- Enable [temp targets](../Usage/temptarget.md) if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo.
 
 ### Reduce number of notifications
 
@@ -67,7 +73,7 @@ Objective 4: Starting on an open loop
 
 ## Objective 5: Understanding your open loop, including its temp basal recommendations
 
-- Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AndroidAPS homescreen](../Getting-Started/Screenshots#prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+- Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AndroidAPS homescreen](../Getting-Started/Screenshots.md#prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
 
 You will want to set your target higher than usual until you are confident in the calculations and settings.  System allows
 
@@ -140,19 +146,19 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 ## Objective 9: Try additional features for daytime use and gain confidence in your closed loop system
 
-- Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate [advanced meal assist (AMA)](../Usage/Open-APS-features#advanced-meal-assist-ama).
-- As [advanced meal assist (AMA)](../Usage/Open-APS-features#advanced-meal-assist-ama) is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
+- Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate [advanced meal assist (AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama).
+- As [advanced meal assist (AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama) is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
 
 ## Objective 10: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
 
-- You must read the [SMB chapter in this wiki](../Usage/Open-APS-features#super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
-- Then you ought to [rise maxIOB](../Usage/Open-APS-features#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](../Usage/Objectives.md#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) for an illustration)
+- You must read the [SMB chapter in this wiki](../Usage/Open-APS-features.md#super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
+- Then you ought to [rise maxIOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](../Usage/Objectives#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) for an illustration)
 - min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually.
 
 ## Objective 11: Automation
 
 - You have to start objective 11 to be able to use [Automation](../Usage/Automation.md).
-- Make sure you have completed all objectives including exam [../Usage/Objectives#objective-3-prove-your-knowledge](../Usage/Objectives.md#objective-3-prove-your-knowledge).
+- Make sure you have completed all objectives including exam [../Usage/Objectives.md#objective-3-prove-your-knowledge](../Usage/Objectives#objective-3-prove-your-knowledge).
 - Completing previous objectives will not effect other objectives you have already finished. You will keep all finished objectives!
 
 ## Go back in objectives

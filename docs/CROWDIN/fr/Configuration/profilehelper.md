@@ -3,7 +3,7 @@
 L'assistant profil a deux fonctions :
 
 1. Trouver un profil pour les enfants
-2. Comparer deux profils ou changements de profil pour dupliquer un nouveau profil
+2. Comparer deux profils ou changements de profil pour cloner un nouveau profil
 
 ## Profil pour les enfants (jusqu'à 18 ans)
 
@@ -30,7 +30,7 @@ L'assistant de profil propose un ensemble de données d'enfants provenant de deu
 6. Appuyez sur le bouton 'COMPARER LES PROFILS' en haut de l'écran.
 7. La comparaison des deux profils sélectionnés sera affichée.
 
-Une fois que vous êtes d'accord avec les réglages du profil, vous pouvez [dupliquer le profil](../Configuration/profilehelper#id1) comme décrit ci-dessous.
+Une fois que vous êtes d'accord avec les réglages du profil, vous pouvez [dupliquer le profil](profilehelper-clone-profile) comme décrit ci-dessous.
 
 ## Comparer deux profils
 
@@ -55,9 +55,10 @@ Vous pouvez également utiliser l'assistant de profil pour comparer à différen
 8. Appuyez sur le bouton 'COMPARER LES PROFILS' en haut de l'écran.
 9. La comparaison des deux profils sélectionnés sera affichée.
 
+(profilehelper-clone-profile)=
 ## Dupliquer le profil
 
-Si vous utilisez des [profils locaux](../Configuration/Config-Builder#profil-local), vous pouvez dupliquer un Profil / Changement de profil directement depuis l'assistant de profil.
+Si vous utilisez des [profils locaux](Config-Builder-local-profile), vous pouvez dupliquer un Profil / Changement de profil directement depuis l'assistant de profil.
 
 ```{image} ../images/ProfileHelperClone.png
 :alt: Assistant profile Dupliquer le Profil / Changement de profil

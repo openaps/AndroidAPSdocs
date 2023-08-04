@@ -1,26 +1,32 @@
+(Smoothing-Blood-Glucose-Data-in-xDrip-smoothing-blood-glucose-data)=
+
 # Gliukozės kraujyje duomenų išlyginimas
 
-Jei KG duomenys šokinėjantys/triukšmingi, AAPS gali neteisingai dozuoti insuliną, kas sąlygotų žemą arba aukštą KG. Dėl šios priežasties yra svarbu atjungti ciklą, kol problema bus išspręsta. Priklausomai nuo jūsų NGJ tokie dalykai gali kilti dėl NGJ konfigūravimo arba jutiklio problemų, puslapio sutrikimų. Jums gali tekti pakeisti savo NGJ jutiklį, kad išsprętumėte tai. Kai kurios funkcijos, pavyzdžiui, "Įjungti SMB visada" ir "Įjungti SMB po angliavandenių" gali būti naudojami tik su geru KG šaltinio filtravimu.
+If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high or low BG. For this reason it’s important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM’s configuration or sensor problems/site issues. You may need to replace your CGM sensor to resolve this.
+
+Some CGM systems have internal algorithms to detect the noise level in the readings and AndroidAPS can use this information to avoid giving SMBs if the BG data is too unreliable. However, some CGMs do not transmit this data and for these BG sources 'Enable SMB always' and 'Enable SMB after carbs' are disabled for safety reasons.
 
 ## Dexcom sensors
 
 ### Build Your Own Dexcom App
 
-When using [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. Furthermore you can take advantage of Dexcom back-smoothing. There are no restrictions in using SMB.
+When using [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. Furthermore you can take advantage of Dexcom back-smoothing. There are no restrictions in using SMBs, because the noise-level data is shared with AAPS.
 
-### xDrip+ with Dexcom G5 or G6
+### xDrip+ with Dexcom G6 or Dexcom ONE
 
-Pakankamai sklandūs duomenys ir siunčiami tik tada, kai naudojate xDrip+ G5 "OB1 kolektorius natyviu režimu".
+Noise-level data and smooth BG readings are only shared with AAPS if you use xDrip+ [native mode](https://navid200.github.io/xDrip/docs/Native-Algorithm). Using native mode, there are no restrictions in using SMBs.
 
-### Dexcom G5 App (patched)
+### Dexcom G6 or Dexcom ONE with xDrip+ Companion Mode
 
-When using Dexcom G5 App (patched) your BG data is smooth and consistent. There are no restrictions in using SMB.
+The noise-level data is not shared with AAPS using this method. Therefore 'Enable SMB always' and 'Enable SMB after carbs' are disabled.
 
 ## Freestyle Libre sensors
 
-### xDrip+ with Freestyle Libre
+### xDrip+ with FreeStyle Libre
 
-When using xDrip+ as your data source for Freestyle Libre values until now you cannot activate 'Enable SMB always' and 'Enable SMB after carbs' within SMB because the BG values are not smooth enough. Except this, there are a couple of things you can do to help reduce noise in the data.
+None of the FreeStyle Libre systems (FSL1, FSL2, or FSL3) broadcast any information about the level of noise detected in the readings, and therefore 'Enable SMB always' and 'Enable SMB after carbs' are disabled for all setups using the FreeStyle Libre.
+
+In addition, many people have reported the FreeStyle Libre often produces noisy data. In xDrip+ there are a few options to help with this:
 
 **Smooth Sensor Noise.** In xDrip+ Settings > xDrip+ Display Settings ensure that Smooth Sensor Noise is turned on. This attempts to apply smoothing to noisy data.
 

@@ -2,13 +2,13 @@
 
 **An dieser Stelle wird nur die Bearbeitung der englischen Dokumentation erläutert. Alle neuen Informationen müssen zuerst in Englisch eingegeben werden. Falls du diese in eine andere Sprache übersetzen willst (Danke dafür!), nutze bitte [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-Hinweise zum Formatieren von Texten (Überschriften, fett...) und zum Setzen von Links findest Du weiter unten auf dieser Seite im Bereich ["Code-Syntax"](./make-a-PR#code-syntax).
+Hinweise zum Formatieren von Texten (Überschriften, fett...) und zum Setzen von Links findest Du weiter unten auf dieser Seite im Bereich ["Code-Syntax"](make-a-PR-code-syntax).
 
 ## Allgemein
 
 Bei Fragen, Feedback oder neuen Ideen für die Dokumentation erreichst Du das Docs team via [discord](https://discord.gg/4fQUWHZ4Mw). Einen "pull request" zu machen ist nicht schwierig, aber wir können Dir helfen, die Dokumentation zu bearbeiten.
 
-Es kann sein, dass dir irgendwann vorgeschlagen wird, einen PR zu machen. PR, die Abkürzung für Pull-Request, ist eine Möglichkeit wie man Quellcode oder - wie in diesem Fall - Dokumentationen auf GitHub ergänzen oder ändern kann. Es ist eigentlich nicht allzu schwer und eine gute Möglichkeit, einen Beitrag zu leisten. Diese Dokumentation gibt es, weil Leute wie du PRs gemacht haben. Mach dir keine Sorgen einen Fehler zu machen oder irgendwie die falschen Dokumente zu bearbeiten. Es wird immer Korrektur gelesen, bevor Änderungen in die "finale" AndroidAPS Dokumentation integriert werden. Du kannst das Original nicht zerstören, wenn du beim PR etwas falsch machst. Die allgemeine Vorgehensweise ist:
+Es kann sein, dass dir irgendwann vorgeschlagen wird, einen PR zu machen. PR, die Abkürzung für Pull-Request, ist eine Möglichkeit wie man Quellcode oder - wie in diesem Fall - Dokumentationen auf GitHub ergänzen oder ändern kann. Es ist eigentlich nicht allzu schwer und eine gute Möglichkeit, einen Beitrag zu leisten. Diese Dokumentation gibt es, weil Leute wie du PRs gemacht haben. Mach dir keine Sorgen einen Fehler zu machen oder irgendwie die falschen Dokumente zu bearbeiten. There is always a review process before changes are merged into the "formal" AAPS documentation repository. Du kannst das Original nicht zerstören, wenn du beim PR etwas falsch machst. Die allgemeine Vorgehensweise ist:
 
 * Mache Änderungen und Verbesserungen am Code oder der Dokumentation, indem du das bestehende Dokument veränderst.
 * Vergewissere dich, dass die Änderungen gut aussehen.
@@ -28,14 +28,13 @@ In unserem Beispiel nehmen wir nun eine Änderung an der AndroidAPS-Dokumentatio
 
 ![edit doc](./images/PR1.png)
 
-     Oder du klickst auf den “Edit in Github”-Link in der oberen rechten Ecke und klickst dann auf das Bleistift-Symbol, das in der oberen Leiste der Seite erscheint, um diese zu editieren. 
-    
+Or you can click on the "Edit in GitHub" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited.
 
 ![RTD io](./images/PR2.png)
 
 3. Beide Optionen in Schritt 2 führen dazu, dass ein neuer Branch in DEINEM kopierten Repository erstellt wird, wo die Änderungen gespeichert werden sollen. Editiere die Datei.
-  
-  Beachte, dass wir zwei verschiedene Dateitypen verwenden: .rst (ReStructuredText) und .md (Markdown). Der Syntax zwischen den beiden variiert etwas. Achte auf den richtigen Syntax wie [unten](./make-a-PR#code-syntax) beschrieben.
+
+We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](make-a-PR-code-syntax).
 
 ![Edit branch](./images/PR3.png)
 
@@ -51,127 +50,187 @@ In unserem Beispiel nehmen wir nun eine Änderung an der AndroidAPS-Dokumentatio
 
 ![create pull request](./images/PR6.png)
 
-7. Das war der letzte Schritt zur Erstellung eines pull requests, PR. GitHub ordnet dem PR eine Nummer, die du nach dem Titel findest, zu und einen Hashtag. Rufe diese Seite wieder auf, um Feedback zu erhalten (oder du erhältst automatisch E-Mail Benachrichtigungen über Aktivitäten bei deinem PR, wenn du Github entsprechend konfiguriert hast). Die Änderung wird nun in einer Liste von PR's aufgeführt, die das Team überprüfen wird; es wird gegebenenfalls Rückmeldungen dazu geben, bevor die Änderung in die Hauptdokumentation für AndroidAPS einfließt! Wenn du den Fortschritt des PR überprüfen willst, kannst du auf das Logo mit der Glocke in der oberen rechten Ecke deines GitHub-Kontos klicken, wo du dann alle deine PRs siehst.
+7. Das war der letzte Schritt zur Erstellung eines pull requests, PR. GitHub ordnet dem PR eine Nummer, die du nach dem Titel findest, zu und einen Hashtag. Rufe diese Seite wieder auf, um Feedback zu erhalten (oder du erhältst automatisch E-Mail Benachrichtigungen über Aktivitäten bei deinem PR, wenn du Github entsprechend konfiguriert hast). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! Wenn du den Fortschritt des PR überprüfen willst, kannst du auf das Logo mit der Glocke in der oberen rechten Ecke deines GitHub-Kontos klicken, wo du dann alle deine PRs siehst.
 
 ![PR tracking](./images/PR7.png)
 
-PS: dein Fork und Branch befinden sich nach wie vor auf deinem persönlichen GitHub Konto. Nachdem du die Benachrichtigung erhalten hast, dass dein PR integriert wurde, kannst du deinen Branch löschen, wenn du damit fertig bist (der Benachrichtigungsbereich in Schritt 8 stellt dir einen Link zur Verfügung, um den Branch zu löschen, wenn er geschlossen oder integriert wurde). Künftige Änderungen werden immer mit einer aktuellen Version des AndroidAPS Repositories beginnen, wenn du diese Vorgehensweise verwendest. Wenn du eine andere Methode verwendest, um einen PR zu starten (z.B. du fängst mit einem lokalen Fork des Master Branches an), musst du sicherstellen, dass dein Repository aktuell ist, indem du erst ein "compare" ausführst und damit alle Updates integrierst, die seit dem letzten Update deines Forks stattgefunden haben. Da häufig vergessen wird, die eigenen Repositories auf dem aktuellen Stand zu halten, empfehlen wir, den PR Prozess wie oben beschrieben zu verwenden, bis du dich mit der Ausführung von "compares" vertraut gemacht hast.
+PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+
+(make-a-PR-code-syntax)=
 
 ## Code-Syntax
 
-Momentan werden in den Docs zwei Code-Sprachen eingesetzt:
+We are using markdown for the docs pages. The files have got the suffix ".md".
 
-* Markdown (.md) - die ursprünglich für Docs-Seiten verwendete Markup-Sprache
-* reStructuredText (.rst) - die neue Markup-Sprache
+Markdown is a very simple text formating language which separates text content from text formating.
 
-We will change all docs pages in the medium term from reStructuredText to Markdown format bit by bit. In der Zwischenzeit ist es wichtig, dass Du beim Formatieren von Text oder dem Setzen von Links den richtigen Syntax verwendest. Wenn Du Dir nicht sicher bist, schaue einfach bei existierenden Seiten wie dort formatiert bzw. die Links gesetzt wurden.
+The writer only e.g. marks a headline as level 1 headline and the markdown processor generate during processing the necessary HTML code to render the heading in HTML.
 
-### Bildgröße
+The idea behind this is that
 
-Nutze bei der Verwendung von Bildern bitte angemessene Größen. Screenshots sollten **250 Pixels breit** sein.
+* the writer should think about the text and not the formating first,
+* the markdown text is open for exchange between different markdown tools instead of e.g. proprietray tools like Mircosoft Windows and
+* you can generate several output formats from one markdown file.
 
-### .md Dateien
+Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard to
 
-#### Textformatierung
+* stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
+* enable us to use a transaltion services to translate the english language in a target language like French or German because they can work on markdown but not complex formating codes because they can't separate there content from layout which might be fatal.
 
-* fett: `**Text**`
-* kursiv: `*Text*`
-* Überschrift 1: `# Überschrift`
-* Überschrift 2: `## Überschrift`
-* Überschrift 3: `### Überschrift`
+### Headlines
 
-#### Bilder
+* Headline 1: `# headline`
+* Headline 2: `## headline`
+* Headline 3: `### headline`
+* Headline 4: `#### headline`
 
-* Bilder: `![Alternativtext](../images/file.png)`
+We try to avoid further leveles of headlines.
 
-#### Links
+### Text format
 
-* externe Links: `[Linktext](www.url.tld)`
-* Interne Links zu .md Seiten: `[Linktext](.../folder/file.md)`
-* Interner Link zu .rst Seiten: `[Linktext] (.../folder/file.rst)`
-* Interne Links zu Überschriften: `[Linktext](.../folder/file#headline)`
+* bold: `**text**`
+* italic: `*text*`
 
-### .rst Dateien
+### ordered list
 
-#### Textformatierung
+:::
 
-* fett: `**Text**`
-* kursiv: `*Text*`
-* Überschrift 1:
-  
-  `Überschrift`  
-  `*****`
+1. erste
+2. zweite
+3. third :::
 
-* Überschrift 2:
-  
-  `Überschrift`  
-  `=====`
+4. erste
 
-* Überschrift 3:
-  
-  `Überschrift`  
-  `-----`
+5. zweite
+6. third
 
-#### Bilder
+### unordered list
 
-* Bilder:
-  
-  `.. image:: ../images/modules.png`  
-  `:alt: Alternativtext`
+:::
 
-#### Links
+* one element
+* another element
+* and another element :::
 
-* Externe Links: `` Linktext <www.url.tld>_` ``
-* Interne Links zu .md Seiten: `` `Linktext <../folder/file.html>_` ``
-* Interne Links zu .rst Seiten: `` `Linktext <../folder/file.html>_` ``
-* Interne Links zu Überschriften: `` `Linktext <../folder/file.html#headline>_` ``
+* one element
 
-### Interne Links
+* another element
+* and another element
 
-Wenn du einen internen Link in die AndroidAPS Dokumentation einfügen willst, benutze bitte nur **relative Links**. Nur dann funktioniert der Link auch in anderen Sprachen (Tschechisch, Russisch...).
+### multi level list
 
-#### Dateien mit der Endung **.md**:
+You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
 
-* `[text](../Usage/Test.md)` legt einen Hyperlink fest, der auf ein Verzeichnis oberhalb des aktuellen Verzeichnisses beginnt und dort auf das Verzeichnis /Usage verweist. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
-* `[text](/Usage/Test.md)` legt einen Hyperlink fest, der aus dem aktuellen Verzeichnis auf das Unterverzeichnis /Usage verweist. Die Erweiterung der Zieldatei muss .md oder .rst sein (nicht .html)
-* Um den Link auf einen **Anker** (d.h. eine Überschrift) zu setzen, muss die Dateierweiterung weggelassen werden. 
-  * `[text](../Usage/Test#anchor)` statt `[text](../Usage/Test.md#anchor)`
+:::
 
-#### Dateien mit der Endung **.rst**:
+1. erste
+2. zweite
+3. third 
+    1. one element
+    2. another element
+    3. and another element
+4. vier
+5. fünf
+6. six :::
 
-* `` `Text <../Usage/Test.hmtl>`_ `` legt einen Hyperlink fest, der auf ein Verzeichnis unterhalb des aktuellen Verzeichnisses beginnt und dort auf das Verzeichnis /Usage verweist. Die Endung der Zieldatei muss .html sein.
-  
-  Außer Du bist in einem Toctree. Dann musst Du wie folgt schreiben: `Text <../Usage/Test.md>` mit .md oder .rst (nicht .html).
+7. erste
 
-* `Text <./Usage/Test.md>` legt einen Hyperlink fest, der aus dem aktuellen Verzeichnis auf das Unterverzeichnis /Usage verweist.
+8. zweite
+9. third 
+    1. one element
+    2. another element
+    3. and another element
+10. vier
+11. fünf
+12. six
 
-* Um den Link auf einen **Anker** (z.B.. eine Überschrift) zu setzen, muss die der Anker an den Link angehängt werden. 
-  * `[Alternativtext](../Usage/Test.html#anchor)` statt `[Alternativtext](../Usage/Test#anchor)`
+### Images
 
-## Mehrere Bilder zum Wiki hinzufügen
+To include images you use this markdown syntax.
 
-Wenn du vor hast viele Änderungen zu machen, die auch das Hinzufügen von Bildern beinhalten, um Teile der Dokumentation zu illustrieren (Danke!), könnte dir folgende Möglichkeit helfen:
+* images: `![alt text](../images/file.png)`
 
-* Wenn du Screenshots speicherst, benenne diese mit einem beschreibenden Namen - aber vermeide Leerzeichen, da dies GitHubs Syntax verwirrt. Verwende stattdessen Unterstriche. Z.B. Example_batch_images_upload.png statt "Example batch images upload.png". 
-* Bitte verwende angemessene Größen. Screenshots sollten **250 Pixels breit** sein.
-* Mehrere Bilder kannst du auf diese Art leicht hochladen:
-  
-  1. Navigiere zu dem Bilder Verzeichnis (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images) - aber vergewissere dich, dass du dich in deinem Fork / deiner Kopie des Bilderverzeichnisses befindest (ersetze "openaps" in der URL mit deinem GitHub Benutzernamen).
-  
-  2. Klicke in die rechte obere Ecke wo "Upload files" steht
-  
-  3. Ziehe deine Bilder auf den Bildschirm
-  
-  4. Führe einen "Commit" auf deinen Branch aus
-  
-  5. Nun kannst Du die URL / den relativen Pfad jedes Bildes ermitteln, um darauf zu referenzieren, wenn Du das Bild in der Dokumentation verwenden willst.
-  
-  6. Beispiele, wie man Bilder hinzufügt, kannst du dir im "rohen" Code von Seiten anschauen, in denen schon erfolgreich Bilder eingefügt wurden. Stelle sicher, dass Du den [richtigen Code-Syntax](./make-a-PR#code-syntax) für den aktuellen Seitentyp (.md oder .rst) verwendest. Hauptsächlich geht es darum, dass Du dem Linktext einen relativen Pfad wie folgt beschrieben zuweist:
-    
-    * Für .md Seiten: `![Beispiel zum Upload mehrerer Bilder](../images/Example_batch_images_upload.png)` (Dieser Code entspricht genau dem, um das untenstehende Bild einzubetten.)
-    * Für .rst Seiten: `.. image:: ../images/Example_batch_images_upload.png`  
-      `:alt: Beispiel zum Upload mehrerer Bilder`
+The type of image should be PNG or JPEG.
 
-![Beispiel, um mehrere Bilder gleichzeitig hochzuladen](./images/Example_batch_images_upload.png)
+Images names should confirm to one of following naming rules. In the example I use png as suffix. In case you use JPEG please replace it with jpeg.
 
-7. Nachdem du Bilder hinzugefügt oder Veränderungen vorgenommen hast, kannst du einen PR auf das master branch von AndroidAPSdocs machen.
+* `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
+* `filename-image-xx.png` where xx is a meaning full name for the author of the md file.
+
+Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+
+We are not translating images at the moment.
+
+(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+
+* Screenshots from web pages images should be up to **1050 pixels wide**.
+* Diagramms of process flows should be up to **1050 pixels wide**.
+* Screenshots from the app should be up to **300 to 400 pixels wide**.
+
+### Links
+
+#### External links
+
+External links are links to external web sites.
+
+* external link: `[alt text](www.url.tld)`
+
+#### Internal links to the start of a md file
+
+Internal links to pages are links to the start of a md file which is hosted on our own server.
+
+* internal link to .md page: `[alt text](../folder/file.md)`
+
+#### Internal links to named inline refernces
+
+Internal links to named inline refernces are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
+
+Add a named reference at the location in the target md file you want to jump to.
+
+`(name-of-my-md-file-this-is-my-fancy-named-reference)=`
+
+The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
+
+Therefore it is a good practice to start with the filename and then the reference name you select.
+
+Use only lowercase letters and hyphenate words.
+
+Then link this refernce in the text you are writing with the following kind of link.
+
+* Internal links to named inline refernces: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+
+### Notes, Warnings, Collapsing Notes
+
+You can add notes and warning boxes to documentation.
+
+Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all. Please use these carefully as the documentation should be as easy to read as possible.
+
+#### Notes
+
+:::: :::{admonition} Note :class: note
+
+This is a note. ::: ::::
+
+:::{admonition} Note :class: note
+
+This is a note. :::
+
+#### Warnungen
+
+:::: :::{admonition} Warning :class: warning
+
+This is a warning. ::: ::::
+
+:::{admonition} Warning :class: warning
+
+This is a warning. :::
+
+#### Collapsing Notes
+
+:::: :::{admonition} further detailed readings for interested readers :class: dropdown
+
+This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page. ::: ::::
+
+:::{admonition} further detailed readings for interested readers :class: dropdown
+
+This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page. :::

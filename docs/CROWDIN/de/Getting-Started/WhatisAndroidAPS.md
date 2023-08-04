@@ -6,19 +6,19 @@ Ein APS kann die Aufgabe nicht so gut erfüllen wie eine biologische Bauchspeich
 
 Ein Hinweis zur Vorsicht: AndroidAPS wird nicht von einer medizinischen Aufsichtsbehörde reguliert. Die Verwendung von AndroidAPS ist im Wesentlichen die Durchführung eines medizinischen Experiments an sich selbst. Die Einrichtung des Systems erfordert Entschlossenheit und technisches Wissen. Wenn Dir zu Beginn das technische Know-how noch fehlt, wirst Du es am Ende haben. Alle Informationen, die Du benötigst, findest Du auf dieser und anderen Seiten im Internet. Oder Du kannst Deine Fragen in Facebook-Gruppen oder anderen Foren an erfahrene Nutzer stellen. Viele unterschiedliche Menschen mit Diabetes haben AndroidAPS erfolgreich erstellt und nutzen es nun ganz sicher. Es ist aber wichtig, dass jeder Benutzer
 
-- das System selbst erstellt, damit er/sie vollständig versteht, wie es funktioniert.
+- das System selbst erstellt, damit Er/Sie vollständig versteht, wie es funktioniert.
 - seine individuellen Diabetes-Einstellungen zusammen mit seinem Diabetes-Team anpasst, so dass diese bestmöglich funktionieren.
 - das System pflegt, auf dem aktuellen Stand hält und es überwacht, um sicherzustellen, dass es ordnungsgemäß funktioniert.
 
-:::{note}
-**Disclaimer und Warnung**
+```{note}
+**Haftungsausschluss und Warnung**
 
-- Sämtliche Informationen, Gedanken und der Quellcode sind nur für informatorische und wissenschaftliche Zwecke. Nightscout erfüllt keinerlei Anforderungen des Datenschutzes im Gesundheitswesen. Verwenden Sie Nightscout und AndroidAPS auf eigenes Risiko und setzen Sie es nicht ein, um Behandlungsentscheidungen zu treffen.
+- Alle Informationen, Gedanken und Code, die hier beschrieben werden, sind ausschließlich zu Informations- und Bildungszwecken bestimmt. Nightscout erfüllt keinerlei Anforderungen des Datenschutzes im Gesundheitswesen. Verwenden Sie Nightscout und AndroidAPS auf eigenes Risiko und setzen Sie es nicht ein, um Behandlungsentscheidungen zu treffen.
 - Bei Nutzung des Quellcodes von github.com bestehen keinerlei Gewährleistungs- und Garantieansprüche. Es gibt keinen Support. Im Übrigen wird auf die Lizenz verwiesen, die im Repository abgerufen werden kann.
 - Sämtliche Produkt- und Herstellernamen, Handelsmarken, Dienstleistungsmarken, Warenzeichen und eingetragene Dienstleistungsmarken sind Eigentum ihrer jeweiligen Inhaber und werden nur zu Informationszwecken genutzt und nicht für Werbung oder Marketing. Ihre Verwendung dient nur zur Information und bedeutet weder, dass AAPS zu ihnen gehört, noch dass sie unterstützt werden.
 
-Bitte beachten: Dieses Projekt steht in keinerlei Verbindung mit [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) oder [Medtronic](https://www.medtronic.com/).
-:::
+Bitte beachten - Dieses Projekt steht in keinerlei Verbindung zu: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) oder [Medtronic](https://www.medtronic.com/).
+```
 
 Wenn Du bereit bist, diese Herausforderung anzunehmen, lies bitte weiter.
 
@@ -36,5 +36,4 @@ Wenn Du bereit bist, diese Herausforderung anzunehmen, lies bitte weiter.
 
 ## Wie lege ich los?
 
-Natürlich sind alle hier verfügbaren Informationen für Dein Closed Loop System sehr wichtig, es ist aber auch normal, dass die vielen neuen Dinge anfangs etwas verwirrend wirken.
-Gute Orientierung bieten die [Modul-Übersicht](../Module/module.md) und die [Objectives (Ziele)](../Usage/Objectives.html).
+Natürlich sind alle hier verfügbaren Informationen für Dein Closed Loop System sehr wichtig, es ist aber auch normal, dass die vielen neuen Dinge anfangs etwas verwirrend wirken. Gute Orientierung bieten die [Modul-Übersicht](../Module/module.md) und die [Objectives (Ziele)](../Usage/Objectives.html).

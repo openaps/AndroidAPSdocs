@@ -2,6 +2,8 @@
 
 **Ce logiciel est un système "Do it yourself" (faire soi-même), et ce n’est pas un produit fini destiné à la mise sur le marché. VOUS devez obligatoirement lire, apprendre et comprendre ce système, y compris la façon de l’utiliser. Ce logiciel ne fait pas toute la gestion de votre diabète pour vous, mais il peut améliorer votre diabète et votre qualité de vie si vous êtes prêt à y consacrer le temps nécessaire. Ne vous précipitez pas, mais laissez vous le temps d’apprendre. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
 
+(Accu-Chek-Combo-Pump-hardware-requirements)=
+
 ## Configuration matérielle requise
 
 - Une pompe Roche Accu-Chek Combo (avec n’importe quel firmware, ils fonctionnent tous)
@@ -18,7 +20,7 @@
 - Les bolus étendus et les bolus mixtes ne sont pas pris en charge (voir [Glucides étendus](../Usage/Extended-Carbs.md) à la place).
 - Seulement un profil de basal est pris en charge.
 - Sélectionner un profil de basal autre que 'Basal1' sur la pompe, ou délivrer via la pompe des bolus 'carré' et 'mixte', interfère avec les DBT et force la boucle en mode 'AGB' pendant 6 heures car la boucle ne peut pas fonctionner en toute sécurité dans ces conditions.
-- Actuellement, il n'est pas possible de régler l'heure et la date de la pompe, donc [les changements d'heure](../Usage/Timezone-traveling#accu-chek-combo) doivent être effectués manuellement (vous pouvez désactiver la mise à jour automatique de l'heure du téléphone la veille au soir, puis changer l'heure le matin du téléphone et de la pompe pour éviter une alarme pendant la nuit).
+- Actuellement, il n'est pas possible de régler l'heure et la date de la pompe, donc [les changements d'heure](Timezone-traveling-accu-chek-combo) doivent être effectués manuellement (vous pouvez désactiver la mise à jour automatique de l'heure du téléphone la veille au soir, puis changer l'heure le matin du téléphone et de la pompe pour éviter une alarme pendant la nuit).
 - Actuellement, seuls les débits de basals de 0,05 à 10 U/h sont supportés. Ceci s'applique également lors de la modification du profil, par exemple, lorsqu'il augmente à 200%, le taux basal le plus élevé ne doit pas dépasser 5 U/h car il sera doublé. De même, en réduisant à 50%, le taux basal le plus bas doit être au moins 0,10 U/h.
 - Si la boucle demande l'annulation d'un DBT en cours, le Combo fixera un DBT de 90% ou 110% pendant 15 minutes à la place. C'est parce que l'annulation d'un DBT provoque une alerte sur la pompe qui cause beaucoup de vibrations.
 - Occasionnellement (tous les deux jours ou plus), AndroidAPS risque de ne pas annuler automatiquement une alerte 'TBR CANCELLED', donc l’utilisateur doit s’en occuper (en appuyant sur le bouton actualiser dans AndroidAPS afin de transférer l’alarme à AAPS, ou en confirmant l’alerte sur la pompe).
@@ -27,7 +29,7 @@
 - Il y a une autre solution si le redémarrage du téléphone n'a pas aidé. Il s'agit de presser un bouton sur la pompe (pour réinitialiser le Bluetooth de la pompe) afin que celle-ci accepte de nouveau les connexions du téléphone. 
 - A ce stade, il n’y a plus de solution pour remédier à la perte de connections. Donc, si vous voyez souvent ces erreurs, votre seule option est d'acquérir un autre téléphone connu pour fonctionner correctement avec AndroidAPS et le Combo (voir ci-dessus).
 - Un bolus délivré à partir de la pompe ne sera pas toujours détecté immédiatement (il faut vérifier à chaque fois qu'AndroidAPS est bien connecté à la pompe), et cela peut prendre jusqu'à 20 minutes dans le pire des cas. 
-- Les bolus sur la pompe sont toujours vérifiés avant un DBT élevé ou un bolus délivré par AAPS, mais en raison des limitations, AAPS refusera ensuite de délivrer le DBT/Bolus comme il a été calculé sous de fausses prédictions. (-> La solution est de ne pas délivrer de bolus via la pompe! Voir le chapitre [Utilisation](#utilisation) ci-dessous)
+- Les bolus sur la pompe sont toujours vérifiés avant un DBT élevé ou un bolus délivré par AAPS, mais en raison des limitations, AAPS refusera ensuite de délivrer le DBT/Bolus comme il a été calculé sous de fausses prédictions. (-> La solution est de ne pas délivrer de bolus via la pompe! See chapter [Usage](Accu-Chek-Combo-Pump-usage) below)
 - Le paramétrage d'un DBT sur la pompe doit être évité puisque la boucle assure le contrôle des DBT. La détection d'un nouveau DBT sur la pompe peut prendre jusqu'à 20 minutes et l'effet du DBT est seulement comptabilisé à l’instant où il est détecté, donc dans le pire des cas, il peut y avoir 20 minutes d’un DBT qui n’est pas pris en compte dans l’IA. 
 
 ## Paramètres
@@ -69,6 +71,8 @@
 - Avant d'activer le plugin Combo dans AAPS, assurez-vous que votre profil est bien configuré et activé et que votre profil de basal est à jour car AAPS synchronisera le profil basal à la pompe. Ensuite, activez le plugin Combo. Appuyez sur le bouton *Actualiser* dans l'onglet Combo pour initialiser la pompe.
 - Pour vérifier votre configuration, avec la pompe **déconnectée**, utilisez AAPS pour définir un DBT de 500% pendant 15 min et faite un bolus. La pompe doit normalement avoir un DBT en cours et un bolus dans l'historique. AAPS doit aussi de son côté montrer le DBT actif et le bolus délivré.
 
+(Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)=
+
 ## Pourquoi l'appairage avec la pompe ne fonctionne pas avec l'application "Ruffy"?
 
 Il y a plusieurs raisons possibles. Essayez les étapes suivantes :
@@ -100,6 +104,8 @@ Il y a plusieurs raisons possibles. Essayez les étapes suivantes :
 13. Si vous avez utilisé la branche 'appairage' pour construire l'application Ruffy, installez maintenant la version de version à partir de la branche 'combo' au-dessus de celle-ci. Assurez-vous que vous avez utilisé les mêmes clés lors de la signature des deux versions de l'application pour conserver tous les paramètres et les données, car elles contiennent aussi les propriétés de connexion.
 14. Redémarrer le téléphone.
 15. Maintenant, vous pouvez redémarrer la boucle AAPS.
+
+(Accu-Chek-Combo-Pump)=
 
 ## Utilisation
 

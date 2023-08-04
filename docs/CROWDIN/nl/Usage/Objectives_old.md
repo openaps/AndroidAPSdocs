@@ -6,27 +6,27 @@ Please see [this page](../Usage/Objectives.md) for the current set of Objectives
 
 AndroidAPS heeft een reeks leerdoelen die je moet doorlopen, zodat je alle opties en instellingen leert kennen om veilig te kunnen loopen.  De leerdoelen zorgen ervoor dat je alles goed hebt ingesteld, en dat je snapt wat het systeem doet en waarom. Zodat je erop kunt vertrouwen dat het de juiste keuzes maakt.
 
-Als je een **andere telefoon gaat gebruiken**, dan kun je jouw [instellingen exporteren](../Usage/ExportImportSettings.md) om je voortgang door de doelstellingen te behouden. Ook jouw veiligheidsinstellingen zoals max. bolus etc. worden hierbij opgeslagen.  Wanneer je je instellingen niet exporteert en importeert op je nieuwe telefoon, dan zul je weer helemaal opnieuw moeten beginnen met de leerdoelen.  Het is een goed idee om regelmatig een [back-up te maken van jouw instellingen](../Usage/ExportImportSettings.html) voor het geval dat er iets met jouw telefoon gebeurt.
+If you are **upgrading phones** then you can [export your settings](../Usage/ExportImportSettings.md) to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to [backup your settings](../Usage/ExportImportSettings.html) frequently just in case.
 
-Als je wilt teruggaan in de doelen, zie de [uitleg hieronder](../Usage/Objectives#teruggaan-in-doelen).
+If you want to go back in objectives see [explanation below](../Usage/Objectives.md#go-back-in-objectives).
 
 ## Doel 1: Instellen van visualisatie en monitoring en analyseren van basaal en ratio's
 
-- Selecteer de bloedglucose bron die jij gebruikt.  Zie [BG Source](../Configuration/BG-Source.md) voor meer informatie.
-- Selecteer de juiste pomp in Configurator (Selecteer 'virtuele pomp' als je een pomp gebruikt waar geen AndroidAPS driver voor bestaat) om ervoor te zorgen dat jouw pomp kan communiceren met AndroidAPS.
-- Als je de DanaR pomp gebruikt, volg dan de [DanaR](../Configuration/DanaR-Insulin-Pump.md) instructies om de pomp te koppelen aan AndroidAPS.
-- Volg de instructies van de [Nightscout](../Installing-AndroidAPS/Nightscout.md) pagina om ervoor te zorgen dat Nightscout gegevens kan ontvangen en weergeven.
-- Opmerking: URL in NSClient moet worden ingevuld **ZONDER /api/v1/** aan het einde - zie [NSClient-instellingen in Instellingen](../Configuration/Preferences#nsclient).
+- Select the right blood glucose source for your setup.  See [BG Source](../Configuration/BG-Source.md) for more information.
+- Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.
+- If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
+- Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure Nightscout can receive and display this data.
+- Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see [NSClient settings in Preferences](../Configuration/Preferences.md#nsclient).
 
-*Het kan zijn dat je even moet wachten tot de volgende bloedglucose-waarde binnenkomt voordat AndroidAPS de wijzigingen opmerkt.*
+*You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
 
 ## Doel 2: Leer hoe AndroidAPS te gebruiken
 
-- Voer verschillende acties uit in AndroidAPS zoals beschreven in dit doel.
+- Perform several actions in AndroidAPS as described in this objective.
 
-- Klik op de oranje tekst "Nog niet voltooid" om toegang te krijgen tot de opdrachten.
+- Click on the orange text "Not completed yet" to access the to-dos.
 
-- Er staan links naar deze wiki om je op weg te helpen in het geval je de specifieke actie nog niet kent.
+- Links will be provided to guide you in case you are not familiar with a specific action yet.
 
   ```{image} ../images/Objective2_V2_5.png
   :alt: Screenshot doel 2
@@ -34,58 +34,58 @@ Als je wilt teruggaan in de doelen, zie de [uitleg hieronder](../Usage/Objective
 
 ## Doel 3: Bewijs jouw kennis
 
-- Zorg dat je slaagt voor de multiple-choice test van jouw AndroidAPS kennis.
+- Pass a multiple-choice exam testing your AndroidAPS knowledge.
 
-- Klik op de oranje tekst "Nog niet voltooid" om toegang te krijgen tot de pagina met de vraag en antwoordopties.
+- Click on the orange text "Not completed yet" to access the page with the question and answering options.
 
   ```{image} ../images/Objective3_V2_5.png
   :alt: Screenshot doel 3
   ```
 
-- Er staan links naar deze wiki om je op weg te helpen als je het antwoord niet meteen weet.
+- Links will be provided to guide you in case you are unsure about the correct answers yet.
 
-- De vragen voor doelstelling 3 voor AAPS versie 2.8 zijn volledig herschreven door gebruikers van wie Engels de moedertaal is, en vervolgens vertaald naar o.a. het Nederlands. Dit om te voorkomen dat je een vraag niet begrijpt door onduidelijke bewoordingen. De vernieuwde vragen gaan grotendeels over dezelfde inhoud, en er zijn een paar nieuwe vragen toegevoegd.
+- The questions for objective 3 have been completely rewritten by native speakers as of AAPS 2.8. De vernieuwde vragen gaan grotendeels over dezelfde inhoud, en er zijn een paar nieuwe vragen toegevoegd.
 
-- Voor mensen die de vragen uit Doel 3 in een vorige versie hadden afgerond, is Doel 3 weer op 'nog niet voltooid' komen te staan omdat deze nieuwe vragen nog beantwoord moeten worden.
+- These new questions will lead to some not answered questions even though you have successfully completed objective 3 in previous versions.
 
-- Voor hen geldt dat zij niet aan een nieuw Doel kunnen beginnen totdat ze de nieuwe vragen ook beantwoord hebben. Voor mensen die in een vorige versie alle Doelen al hadden afgerond, geldt dat zij ruim de tijd hebben om deze nieuwe vragen te beantwoorden. Er worden bij hen geen AAPS-functies gedeactiveerd nu deze vragen nog openstaan. Het is wel verstandig om er binnenkort mee aan de slag te gaan; wanneer een volgende versie uitkomt, die wellicht nieuwe functies (en bijbehorende nieuwe Doelen) heeft, dan zou je niet aan een nieuw Doel kunnen beginnen totdat je alle vragen hebt beantwoord.
+- Unanswered questions will affect you only if you start a new objective. Voor mensen die in een vorige versie alle Doelen al hadden afgerond, geldt dat zij ruim de tijd hebben om deze nieuwe vragen te beantwoorden. Er worden bij hen geen AAPS-functies gedeactiveerd nu deze vragen nog openstaan. Het is wel verstandig om er binnenkort mee aan de slag te gaan; wanneer een volgende versie uitkomt, die wellicht nieuwe functies (en bijbehorende nieuwe Doelen) heeft, dan zou je niet aan een nieuw Doel kunnen beginnen totdat je alle vragen hebt beantwoord.
 
 ## Doel 4: Beginnen met een open loop
 
-- Selecteer Open-Loop vanuit het Instellingen-menu of door de Open Loop / Closed Loop -knop linksbovenin het Overzicht-scherm ingedrukt te houden.
-- Werk door de [Instellingen](../Configuration/Preferences.md) heen om de loop in te stellen.
-- Voer minstens 20 tijdelijke basaalstanden in over een periode van 7 dagen; voer ze in op jouw pomp en bevestig in AndroidAPS dat je ze hebt geaccepteerd.  Controleer dat deze gegevens zichtbaar zijn in AndroidAPS en Nightscout.
-- Stel [tijdelijke streefdoelen](../Usage/temptarget.md) in indien nodig. Gebruik bijvoorbeeld een tijdelijk hypo streefdoel om te voorkomen dat het systeem te sterk corrigeert voor een stijgende bloedsuiker na een hypo.
+- Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
+- Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
+- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Controleer dat deze gegevens zichtbaar zijn in AndroidAPS en Nightscout.
+- Enable [temp targets](../Usage/temptarget.md) if necessary. Gebruik bijvoorbeeld een tijdelijk hypo streefdoel om te voorkomen dat het systeem te sterk corrigeert voor een stijgende bloedsuiker na een hypo.
 
 ### Verminder het aantal meldingen
 
-- Je kunt het aantal suggesties voor tijdelijke basalen dat je krijgt tijdens de Open Loop modus, verminderen. Doe dit bijvoorbeeld door bredere streefdoelen in te stellen, zoals 90-150 mg/dl of 5,0-8,5 mmol/l.
+- To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l.
 
-- Voor 's nachts zou je de bovengrens van je streefdoel flink kunnen verhogen (of de Open Loop zelfs helemaal kunnen deactiveren) voor een ongestoorde nachtrust.
+- You might even want to wider upper limit (or disable Open Loop) at night.
 
-- Daarnaast kun je in de Instellingen een groter getal invullen bij "Minimale verzoek voor aanpassing\[%\]".
+- In Preferences you can set a minimum percentage for suggestion of basal rate change.
 
   ```{image} ../images/OpenLoop_MinimalRequestChange2.png
   :alt: Open Loop Minimale verzoek voor aanpassing
   ```
 
-- En uiteraard kun je ervoor kiezen om niet elke 5 minuten alle suggesties daadwerkelijk uit te voeren...
+- Also, you do not need to act every 5 minutes on all suggestions...
 
 ## Doel 5: De Open Loop begrijpen, inclusief de voorgestelde tijdelijke basaalstanden
 
-- Leer de reden achter een suggestie voor tijdelijke basaalstand kennen. Kijk naar de [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) en naar de [voorspelling in de glucosegrafiek van het AndroidAPS Overzichts-scherm](../Getting-Started/Screenshots#voorspellingslijnen) of Nightscout, en naar de berekening in je OpenAPS tab.
+- Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AndroidAPS homescreen](../Getting-Started/Screenshots.md#prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
 
 Je wilt beginnen met een streefdoel dat hoger is dan normaal, totdat je vertrouwen in de berekeningen en de instellingen hebt gekregen.  Het systeem staat toe
 
-- een laag streefdoel tot minimaal 4 mmol/l (72 mg/dl) of maximaal 10 mmol/l (180 mg/dl)
-- een hoog streefdoel tot minimaal 5 mmol/l (90 mg/dl) of maximaal 15 mmol/l (225 mg/dl)
-- een enkele waarde als tijdelijk streefdoel tussen 4 mmol/l en 15 mmol/l (72 mg/dl tot 225 mg/dl)
+- a low target to be a minimum of 4 mmol (72 mg/dl) or maximum of 10 mmol (180 mg/dl)
+- a high target to be a minimum of 5 mmol (90 mg/dl) and maximum of 15 mmol (225 mg/dl)
+- a temporary target as a single value can be anywhere in the range of 4 mmol to 15 mmol (72 mg/dl to 225 mg/dl)
 
-Het streefdoel is de waarde waar de berekeningen op zijn gebaseerd, en is niet hetzelfde als waar je jouw bloedglucose waarden binnen wilt houden.  Als je een erg brede range als streefdoel instelt, bijvoorbeeld een verschil van 3 mmol/l of meer (50 mg/dl of meer), dan zul je zien dat AAPS niet vaak in actie komt. Dit komt omdat de voorspelde bloedglucose meestal binnen dat brede bereik zal liggen en het systeem dus niet vaak een andere tijdelijk basaal voorstelt.
+Het streefdoel is de waarde waar de berekeningen op zijn gebaseerd, en is niet hetzelfde als waar je jouw bloedglucose waarden binnen wilt houden.  If your target is very wide (say, 3 or more mmol \[50 mg/dl or more\] wide), you will often find little AAPS action. Dit komt omdat de voorspelde bloedglucose meestal binnen dat brede bereik zal liggen en het systeem dus niet vaak een andere tijdelijk basaal voorstelt.
 
-Je kunt experimenteren met je lage en hoge streefdoel en een nauwer bereik instellen, bijvoorbeeld 1 of minder mmol/l (20 mg/dl of minder) verschil, en observeren hoe het systeem daardoor zijn gedrag aanpast. De meesten vullen uiteindelijk hetzelfde getal in bij hoge en lage streefdoel, daarmee bereik je de strakste glucosegrafieken.
+You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol \[20 mg/dl or less\] wide) and observe how the behavior of your system changes as a result.
 
-Deze tijdelijke streefdoelen zijn iets anders dan het 'groene gebied' dat je in je grafiek ziet. Je kunt waarden voor het groene gebied invoeren via 3 stipjes in rechterbovenhoek > 'Instellingen \<../Configuration/Preferences.md>\`\_\_ > Bereik voor Visualisatie.
+You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
 ```{image} ../images/sign_stop.png
 :alt: Stop-teken
@@ -105,61 +105,61 @@ Deze tijdelijke streefdoelen zijn iets anders dan het 'groene gebied' dat je in 
 
 ### De closed loop zal hoge glucosewaarden in doel 6 niet naar beneden kunnen brengen, omdat in dit doel alleen nog de 'pompstop voor laag' functie geactiveerd is. Om hoge glucosewaarden naar beneden te krijgen, moet je zelf nog handmatig ingrijpen!
 
-- Selecteer Closed-Loop vanuit het [Instellingen-menu](../Configuration/Preferences.md) of door de Loop-knop linksbovenin het Overzicht-scherm ingedrukt te houden.
+- Select Closed Loop either from [Preferences](../Configuration/Preferences.md) or by pressing and holding the Open Loop button in the top left of the home screen.
 
-- Stel je lage en hoge streefdoel iets hoger in dan je normaal zou doen, voor de zekerheid.
+- Set your target range slightly higher than you usually aim for, just to be safe.
 
-- Kijk hoe tijdelijke basaastanden worden ingesteld door te kijken naar de blauwe tekst in het Overzicht-scherm, of door het blauwe deel van de grafiek op het Overzicht-scherm te bekijken.
+- Watch  how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
 
-- Zorg dat jouw instellingen zo zijn, dat AndroidAPS in 5 dagen tijd niet heeft hoeven ingrijpen om een lage glucosewaarde te voorkomen.  Mocht je op dit moment nog veelvuldige of heftige lage glucosewaardes hebben, dan moet je waarschijnlijk nog iets verbeteren aan jouw instellingen van DIA, basaal, ISF of KH ratio (in die volgorde).
+- Ensure your settings have supported AndroidAPS to avoid having to treat a low glucose over a period of 5 days.  Mocht je op dit moment nog veelvuldige of heftige lage glucosewaardes hebben, dan moet je waarschijnlijk nog iets verbeteren aan jouw instellingen van DIA, basaal, ISF of KH ratio (in die volgorde).
 
-- Je hoeft je instellingen niet te veranderen. Tijdens doel 6 wordt de maxIOB automatisch door het systeem op nul gezet in de berekeningen. Deze beperking verdwijnt als je naar doel 7 gaat.
+- You don't have to change your settings. Tijdens doel 6 wordt de maxIOB automatisch door het systeem op nul gezet in de berekeningen. Deze beperking verdwijnt als je naar doel 7 gaat.
 
-- Het systeem zal gedurende dit doel de door jou ingestelde waarde van maxIOB negeren, en een waarde van 0 aanhouden. Dit betekent dat bij een dalende glucosewaarde de basaalstand naar beneden wordt aangepast, maar bij een stijgende glucosewaarde er alleen maar een hogere basaalstand wordt ingesteld wanneer de IOB negatief is (IOB kan negatief zijn, als hij eerder al een lagere basaalstand heeft ingesteld ivm lage glucosewaarde). Zolang de IOB positief is zal het systeem de normale basaalstand aanhouden, zoals ingesteld in jouw profiel.
+- The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the basal IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.
 
   ```{image} ../images/Objective6_negIOB.png
   :alt: Voorbeeld negatieve IOB
   ```
 
-- Als jouw basaal IOB negatief is (zie screenshot hierboven) kan AndroidAPS een tijdelijk basaal > 100% instellen.
+- If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
 
-- Het kan gebeuren dat je (bijv. na een hypo) een piek krijgt in je glucosewaarde, omdat jouw IOB op dat moment groter is dan nul, en het systeem dus geen tijdelijk basaal > 100% kan instellen. Gedurende dit doel zul je af en toe handmatig moeten ingrijpen om hoge bloedsuikers naar beneden te krijgen.
+- You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.
 
 ## Doel 7: Inregelen van de closed loop, verhoog de max IOB boven 0 en laat geleidelijk de streef BG dalen
 
-Verhoog jouw 'Max totaal IOB dat OpenAPS niet kan overschrijden' (in OpenAPS heet dit 'max-iob') naar een getal groter dan 0. Het wordt standaard aanbevolen om de volgende formule te gebruiken: "gemiddelde maalbolus + 3x max dagelijkse basaal"(voor SMB algoritme) of "3x max dagelijkse basaal" (voor het oudere AMA algoritme). NB: in deze formule wordt met "max dagelijkse basaal" bedoeld de hoogste waarde van jouw basaal (in eenheden per uur). Wanneer je deze instelling hoger wilt hebben dan de standaardformule, doe dit dan altijd in kleine stapjes en test gedurende meerdere dagen het effect van die verhoging.
+- Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
 
-> Deze aanbeveling moet als uitgangspunt worden beschouwd. Als je op de 3x zit en je ziet dat het systeem de neiging heeft om jouw bloedglucose te laag uit te laten komen, pas dan deze instelling aan naar een lager getal. Als je zeer insulineresistent bent, pas dan deze instelling met kleine stapjes aan naar een hoger getal.
->
-> ```{image} ../images/MaxDailyBasal2.png
-> :alt: max dagelijkse basaal
-> ```
+  Deze aanbeveling moet als uitgangspunt worden beschouwd. Als je op de 3x zit en je ziet dat het systeem de neiging heeft om jouw bloedglucose te laag uit te laten komen, pas dan deze instelling aan naar een lager getal. Als je zeer insulineresistent bent, pas dan deze instelling met kleine stapjes aan naar een hoger getal.
 
-- Nadat je weet welke IOB instelling goed bij jou past, kun je ook je BG streefdoel instellingen gaan verlagen.
+  ```{image} ../images/MaxDailyBasal2.png
+  :alt: max dagelijkse basaal
+  ```
+
+- Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
 
 ## Doel 8: Pas basaalstanden en de ratio's aan indien nodig, activeer hierna de Autosens optie
 
-- Je kunt [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) gebruiken om eenmalig te laten berekenen of jouw basaalstanden goed zijn ingesteld, of een traditionele basaaltest doen. Zie ook de "Veelgestelde vragen" sectie van deze wiki.
-- Schakel [Autosens](../Usage/Open-APS-features.md) in gedurende een periode van 7 dagen en bekijk de witte lijn in de grafiek op het Overzichts-scherm. Die lijn geeft weer hoe jouw gevoeligheid voor insuline kan verhogen of verminderen als gevolg van beweging, hormonen etc. Bekijk ook af en toe de OpenAPS tab om te zien hoe AndroidAPS je basaalstanden en/of BG streefdoelen aanpast adhv jouw gevoeligheid op dat moment. en houd op de OpenAPS tab in de gaten hoe AndroidAPS de basaalstanden en/of streefdoelen dienovereenkomstig aanpast.
+- You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
+- Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
 
-*Vergeet niet om jezelf als nieuwe looper aan te melden via 'dit formulier \<https://bit.ly/nowlooping>'\_ en AndroidAPS als jouw type loop-software te kiezen, als je dat nog niet gedaan hebt.*
+*Don’t forget to record your looping in* [this form](https://bit.ly/nowlooping) *logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
 
 ## Objective 9: Try additional features for daytime use and gain confidence in your closed loop system
 
-- Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate [advanced meal assist (AMA)](../Usage/Open-APS-features#advanced-meal-assist-ama).
-- As [advanced meal assist (AMA)](../Usage/Open-APS-features#advanced-meal-assist-ama) is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
+- Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate [advanced meal assist (AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama).
+- As [advanced meal assist (AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama) is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
 
 ## Objective 10: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
 
-Je moet het [SMB hoofdstuk in deze wiki](../Usage/Open-APS-features#super-micro-bolus-smb) en het [hoofdstuk oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) lezen om te begrijpen hoe SMB werkt, met name het idee achter de tijdelijke basaalstanden van nul (zero-temp).
-\* Daarna kun je [maxIOB verhogen](../Usage/Open-APS-features#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) zodat SMB goed kan functioneren. maxIOB bevat nu alle IOB, niet alleen de toegediende basale insuline. Als je een bolus van 8E geeft voor een maaltijd en jouw maxIOB is 7E, dan zullen er geen SMBs worden afgegeven totdat IOB onder de 7E komt. Een goede start is maxIOB = gemiddelde maalbolus + 3x max dagelijkse basaal (max dagelijkse basaal = de hoogste waarde van jouw basaal (in eenheden per uur). Zie [Doel 7](../Usage/Objectives#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) voor een afbeelding
-Wanneer je van AMA naar SMB wisselt, dan moet je jouw instelling voor min_5m_carbimpact in de Opname instellingen veranderen van 3 naar 8. Je moet dit handmatig doen wanneer je van AMA naar SMB wisselt.
+- You must read the [SMB chapter in this wiki](../Usage/Open-APS-features.md#super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
+- Then you ought to [rise maxIOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxIOB bevat nu alle IOB, niet alleen de toegediende basale insuline. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](../Usage/Objectives#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) for an illustration)
+- min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. Je moet dit handmatig doen wanneer je van AMA naar SMB wisselt.
 
 ## Objective 11: Automation
 
 - You have to start objective 11 to be able to use [Automation](../Usage/Automation.md).
-- Zorg ervoor dat je alle doelen hebt voltooid, inclusief het [examen](../Usage/Objectives#doel-3-bewijs-jouw-kennis).
-- Het behalen van eerdere doelen zal geen effect hebben op andere doelen die je al hebt behaald. Je behoudt alle reeds afgeronde doelen!
+- Make sure you have completed all objectives including exam [../Usage/Objectives.md#objective-3-prove-your-knowledge](../Usage/Objectives#objective-3-prove-your-knowledge).
+- Completing previous objectives will not effect other objectives you have already finished. Je behoudt alle reeds afgeronde doelen!
 
 ## Teruggaan in doelen
 

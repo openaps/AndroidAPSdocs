@@ -6,7 +6,7 @@ Pour des évènements identiques et fréquents, vous devrez peut-être toujours 
 
 Par ex. lorsque votre Gly est trop faible, vous pouvez décider d'avoir automatiquement une cible temporaire haute. Ou si vous êtes à votre centre de fitness, vous activez automatiquement une cible temp.
 
-Avant d'utiliser l'Automatisation, vous devez être à l'aise avec l'utilisation des cibles temp. \<./temptarget.html>\`\_ ou les changements de profil.
+Avant d'utiliser l'automatisation, vous devriez être confiant avec les [cibles temporaires](./temptarget.html) ou les changements de profil.
 
 Assurez-vous de bien comprendre comment l'automatisation fonctionne avant de configurer votre première règle simple. **Au lieu de l'action, laisser AAPS n'afficher qu'une notification.** Quand vous êtes sûr que l'automatisation est déclenchée au bon moment, remplacez la notification par une action réelle.
 
@@ -14,10 +14,11 @@ Assurez-vous de bien comprendre comment l'automatisation fonctionne avant de con
 :alt: Condition d'Automation + action
 ```
 
-## Comment l’utiliser
+## Comment l’utiliser 
 
 Pour mettre en place une automatisation, vous devez lui donner un titre, sélectionner au moins une condition et une action.
 
+(Automation-important-note)=
 ### Remarque importante
 
 **L'automatisation est toujours active lorsque vous désactivez la boucle !**
@@ -25,12 +26,12 @@ Pour mettre en place une automatisation, vous devez lui donner un titre, sélect
 Veillez donc à désactiver les règles d'automatisation pendant ces moments si nécessaire. Vous pouvez le faire en décochant la case à gauche du nom de votre règle d'automatisation.
 
 ```{image} ../images/Automation_ActivateDeactivate.png
-:alt: "Activer et d\xE9sactiver une r\xE8gle d'automatisation"
+:alt: Activer et désactiver une règle d'automatisation
 ```
 
 ### Où trouver l'automatisation
 
-Selon vos [paramètres dans le Générateur de configuration](../Configuration/Config-Builder#onglet-ou-menu-hamburger) vous trouverez soit [Automatisation](../Configuration/Config-Builder.md#automatisation) dans le menu hamburger soit comme un onglet.
+Selon vos [paramètres dans le Générateur de configuration](Config-Builder-tab-or-hamburger-menu) vous trouverez soit [Automatisation](Config-Builder#automation) dans le menu hamburger soit comme un onglet.
 
 ### Généralités
 
@@ -60,7 +61,7 @@ Vous pouvez choisir entre plusieurs conditions. Voici quelques explications, mai
   - Temps = événement unique
   - Période répétitive = quelque chose qui arrive régulièrement (par ex. une fois par semaine, chaque jour ouvrable, etc)
 
-- Localisation : dans le générateur de configuration (Automatisation), vous pouvez choisir le service de localisation que vous souhaitez utiliser :
+- Localisation : dans la configuration (Automatisation), vous pouvez choisir le service de localisation que vous souhaitez utiliser :
 
   - Utiliser la localisation passive : AAPS ne prend la localisation que lorsque d'autres applications la demandent
   - Utiliser la localisation par le réseau : Localisation de votre Wifi
@@ -90,12 +91,13 @@ Après avoir ajouté votre action, **n'oubliez pas de modifier les valeurs par d
 :alt: Automatisation defaut vs. choisir valeur
 ```
 
+(Automation-sort-automation-rules)=
 ### Tri des règles d'automatisation
 
 Pour trier les règles d'automatisation, cliquez et maintenez l'icone sur la droite d'une règle (4 lignes) et déplacez-la vers le haut ou vers le bas.
 
 ```{image} ../images/Automation_Sort.png
-:alt: "Tri des r\xE8gles d'automatisation"
+:alt: Tri des règles d'automatisation
 ```
 
 ### Suppression des règles d'automatisation
@@ -103,9 +105,10 @@ Pour trier les règles d'automatisation, cliquez et maintenez l'icone sur la dro
 Pour supprimer une règle d'automatisation, cliquez sur l'icône Corbeille.
 
 ```{image} ../images/Automation_Delete.png
-:alt: "Suppression des r\xE8gles d'automatisation"
+:alt: Suppression des règles d'automatisation
 ```
 
+(Automation-good-practice-caveats)=
 ## Bonnes pratiques et avertissements
 
 - Lorsque vous commencez à utiliser l'automatisation ou que vous créez une nouvelle règle, commencez par ajouter une notification jusqu'à ce que vous soyez certain que la règle fonctionne correctement.
@@ -116,11 +119,11 @@ Pour supprimer une règle d'automatisation, cliquez sur l'icône Corbeille.
 
   **C'est doublement important si l'action est un changement de profil!**
 
-- Essayez de privilégier l'utilisation de Cibles Temp. plutôt que des Changements de Profil. Les Cibles temporaires ne réinitialisent pas [Autosens](../Usage/Open-APS-features#autosens) à 0.
+- Essayez de privilégier l'utilisation de Cibles Temp. plutôt que des Changements de Profil. Les Cibles temporaires ne réinitialisent pas [Autosens](Open-APS-features-autosens) à 0.
 
-- Assurez-vous que les cchangements de profil sont faits avec parcimonie et de préférence en dernier recours.
+- Assurez-vous que les changements de profil sont faits avec parcimonie et de préférence en dernier recours.
 
-  - Les changements de profil rendent [Autosens](../Usage/Open-APS-features#autosens) inutilisable pendant au minimum 6 heures.
+  - Les changements de profil rendent [Autosens](Open-APS-features-autosens) inutilisable pendant au minimum 6 heures.
 
 - Un changement de profil ne remettra pas le profil standard initial
 
@@ -155,7 +158,7 @@ Cet exemple est pour quelqu'un qui déjeune au travail tous les jours à la mêm
 
 Veuillez noter que si vous n'utilisez pas correctement l'automatisation, cela pourrait entraîner des difficultés et même être dangereux pour votre santé. Des exemples d'utilisation incorrecte sont :
 
-- Essayer de surcharger l'algorithme au lieu de l'utiliser simplement comme une aide (par ex. en changeant de profil au lieu d'ajuster le débit de basal, le G/I etc.)
+- Essayer de contourner l'algorithme au lieu de l'utiliser simplement comme une aide (par ex. en changeant de profil au lieu d'ajuster le débit de basal, le G/I etc.)
 - Régler le profil pour compenser la nourriture
 - Mettre un profil sans durée
 - Créer des règles à sens unique (par ex. faire quelque chose, mais ne pas annuler par une autre règle)

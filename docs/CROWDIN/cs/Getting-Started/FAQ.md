@@ -4,49 +4,53 @@ Jak sem přidat další otázky: Postupujte podle těchto pokynů: [odkaz](../ma
 
 # Obecné
 
-## Mohu si prostě stáhnout instalační soubor AndroidAPS?
+## Can I just download the AAPS installation file?
 
-Ne. Pro AndroidAPS neexistuje žádný stažitelný soubor apk. Musíte si jej sami [sestavit](../Installing-AndroidAPS/Building-APK.md). Zde je odůvodnění:
+Ne. There is no downloadable apk file for AAPS. Musíte si jej sami [sestavit](../Installing-AndroidAPS/Building-APK.md). Zde je odůvodnění:
 
-Systém AndroidAPS slouží k ovládání vaší pumpy a dávkování inzulinu. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. Distribuce neregulovaných zařízení je nezákonná. Podobná nařízení platí také v ostatních částech světa.
+AAPS is used to control your pump and give insulin. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. Distribuce neregulovaných zařízení je nezákonná. Podobná nařízení platí také v ostatních částech světa.
 
 This regulation is not restricted just to sales (in the meaning of getting money for something) but applies to any distribution (even giving away for free). Building a medical device for yourself is the only way to use the app within these regulations.
 
 Proto nejsou soubory APK k dispozici.
 
+(FAQ-how-to-begin)=
+
 ## Jak začít?
 
-Za prvé, musíte si **opatřit kompatibilní hardwarové komponenty**:
+First of all, you have to **get loopable hardware components**:
 
 - podporovanou [inzulínovou pumpu](./Pump-Choices.md) 
-- [smartphone s operačním systémem Android](Phones.md) (Apple iOS není systémem AndroidAPS podporován – podívejte se na [iOS Loop](https://loopkit.github.io/loopdocs/)) a 
-- [systém pro kontinuální monitorování glykémie](../Configuration/BG-Source.md). 
+- an [Android smartphone](Phones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
+- a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
 
-Za druhé, musíte **nastavit hardware**. Viz [příklad nastavení s podrobným návodem](Sample-Setup.md).
+Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
 
-Za třetí, musíte **nastavit své softwarové komponenty**: AndroidAPS a zdroj CGM/FGM.
+Thirdly, you have to **setup your software components**: AAPS and CGM/FGM source.
 
-Za čtvrté, musíte se seznámit s funkcí **systému OpenAPS a pochopit jej, abyste mohli kontrolovat parametry zásadní pro vaši léčbu**. Základním principem uzavřené smyčky je, že máte správně nastavené dávkování bazálního inzulínu a inzulíno-sacharidový poměr. Všechna doporučení smyčky předpokládají, že vaše potřeba bazálního inzulínu je pokrytá a všechny vrcholy nebo propady, které vidíte na grafu glykémie, jsou výsledkem jiných faktorů vyžadujících určité jednorázové úpravy (cvičení, stres atd.). Úpravy, které uzavřená smyčka může provádět, byly z důvodu bezpečnosti omezeny (viz maximální povolený dočasný bazál v [OpenAPS Reference Design](https://openaps.org/reference-design/)), což znamená, že nechcete „plýtvat“ povolenými změnami dávkování dočasného bazálu na to, abyste jimi opravovali špatně nastavený základní bazál. Pokud jste například často příliš nízko ještě před jídlem, pak pravděpodobně vaše bazální dávky potřebují upravit. Můžete použít nástroj [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig), který vám připraví řadu návrhů, zda a které bazální dávky a/nebo citlivosti na inzulín byste měli upravit, a také to, zda je nutné změnit inzulíno-sacharidový poměr. Nebo můžete vyzkoušet a nastavit své bazály [postaru](https://integrateddiabetes.com/basal-testing/).
+Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
 
 ## Jaká jsou praktická doporučení pro provoz smyčky?
 
 ### Ochrana heslem
 
-Pokud nechcete, aby někdo mohl snadno upravit vaše nastavení, pak můžete celou nabídku Nastavení chránit heslem tak, že v nabídce Nastavení vyberte možnost „Heslo do nastavení“ a zadáte své zvolené heslo. Při příštím vstupu do nabídky Nastavení budete muset zadat heslo, abyste mohli pokračovat dál. Pokud budete později chtít ochranu heslem odstranit, přejděte v nabídce do „Heslo do nastavení“ a odstraňte text.
+If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
 
 ### Chytré hodinky Android Wear
 
-Pokud máte v úmyslu používat aplikaci prostřednictvím hodinek s Wear OS na bolusy nebo změnu nastavení, pak je třeba zajistit, aby v systému Android nebyla blokovaná oznámení z AndroidAPS. Potvrzení různých akcí přicházejí prostřednictvím oznámení.
+If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AAPS are not blocked. Confirmation of action comes via notification.
+
+(FAQ-disconnect-pump)=
 
 ### Odpojit pumpu
 
-If you take your pump off for showering, bathing, swimming, sports or other activities you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
+If you take your pump off for showering, bathing, swimming, sports or other activities you must let AAPS know that no insulin is delivered to keep IOB correct.
 
-The pump can be disconnected using the Loop Status icon on the [AndroidAPS Home Screen](./Screenshots.md#loop-status).
+The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](Screenshots-loop-status).
 
 ### Doporučení nejsou založena pouze na jediné hodnotě ze senzoru CGM
 
-For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
+For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AAPS kicks in looping again.
 
 ### Další čtení
 
@@ -59,11 +63,11 @@ There are several blogs with good tips to help you understand the practicalities
 
 ## Jaké vybavení pro případ nouze se doporučuje brát s sebou?
 
-You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AndroidAPS it is strongly recommended to have the following additional equipment with or near to you:
+You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AAPS it is strongly recommended to have the following additional equipment with or near to you:
 
 - Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
 - Pump batteries
-- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.md) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## How can I safely and securely attach the CGM/FGM?
 
@@ -71,7 +75,7 @@ You can tape it. There are several pre-perforated 'overpatches' for common CGM s
 
 You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
 
-# Nastavení AndroidAPS
+# AAPS settings
 
 The following list aims to help you optimize settings. It may be best to start at the top and work to the bottom. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
 
@@ -83,9 +87,11 @@ The length of time that insulin decays to zero.
 
 This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
 
+(FAQ-impact)=
+
 ### Dopad
 
-Too short DIA can lead to low BGs. A naopak. Pokud glykémie stoupá, bazální dávka je příliš nízká.
+Too short DIA can lead to low BGs. And vice-versa.
 
 If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.
 
@@ -99,11 +105,11 @@ The amount of insulin in a given hour time block to maintain BG at a stable leve
 
 Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
 
-If BG is dropping, basal rate is too high. A naopak. Pokud glykémie stoupá, bazální dávka je příliš nízká.
+If BG is dropping, basal rate is too high. And vice-versa.
 
 ### Dopad
 
-Too high basal rate can lead to low BGs. A naopak. Pokud glykémie stoupá, bazální dávka je příliš nízká.
+Too high basal rate can lead to low BGs. And vice-versa.
 
 AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
@@ -198,21 +204,21 @@ First of all, check your basal rate and make a no-carb basal rate test. If it is
 
 ### Co způsobuje výrazné vrcholy po jídle při používání uzavřené smyčky?
 
-First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
+First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
 
 # Další nastavení
 
 ## Nastavení Nightscoutu
 
-### NSClient v AndroidAPS hlásí 'není povoleno' a nenahrává žádná data. Co mohu dělat?
+### AAPS NSClient says 'not allowed' and does not upload data. Co mohu dělat?
 
 In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
 
 ## Nastavení CGM
 
-### Proč AndroidAPS hlásí 'Zdroj glykémií nepodporuje pokročilé filtrování'?
+### Why does AAPS say 'BG source doesn't support advanced filtering'?
 
-If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS OpenAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AAPS OpenAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 
 ## Pumpa
 
@@ -227,36 +233,36 @@ Looping can reduce the pump battery faster than normal use because the system in
 - reduce the length of time the LCD stays on (within pump settings menu)
 - reduce the length of time the backlight stays on (within pump settings menu)
 - select notification settings to a beep rather than vibrate (within pump settings menu)
-- only press the buttons on the pump to reload, use AndroidAPS to view all history, battery level and reservoir volume.
-- AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
+- only press the buttons on the pump to reload, use AAPS to view all history, battery level and reservoir volume.
+- AAPS app may often be closed to save energy or free RAM on some phones. When AAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AAPS, which makes it easy to track the issue. To reduce this happening, whitelist AAPS app in the phone battery settings to stop the app power monitor closing it down.
     
     For example, to whitelist on a Samsung phone running Android Pie:
     
     - Go to Settings -> Device Care -> Battery 
-    - Scroll until you find AndroidAPS and select it 
+    - Scroll until you find AAPS and select it
     - De-select "Put app to sleep"
     - ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
-    - Scroll to AndroidAPS and make sure it is de-selected.
+    - Scroll to AAPS and make sure it is de-selected.
 
 - clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
 
 - for [Dana R/RS pumps](../Configuration/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
-- see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
+- see also more tips for [particular types of battery](Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
 
 ### Výměna zásobníků a kanyl
 
-The change of cartridge cannot be done via AndroidAPS but must be carried out as before directly via the pump.
+The change of cartridge cannot be done via AAPS but must be carried out as before directly via the pump.
 
-- Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAPS and select 'Suspend Loop for 1h'
-- Now disconnect the pump and change the reservoir as per pump instructions.
-- Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26#pump) in the actions tab just to record the change.
+- Long press on "Open Loop"/"Closed Loop" on the Home tab of AAPS and select 'Suspend Loop for 1h'
+- Now nnect the pump and change the reservoir as per pump instructions.
+- Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](CPbefore26-pump) in the actions tab just to record the change.
 - Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
-The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the [PRIME/FILL button](../Usage/CPbefore26#pump) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
+The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the [PRIME/FILL button](CPbefore26-pump) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 
 ## Pozadí
 
-You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones#phone-background).
+You can find the AAPS wallpaper for your phone on the [phones page](Phones-phone-background).
 
 ## Každodenní používání
 
@@ -264,39 +270,41 @@ You can find the AndroidAPS wallpaper for your phone on the [phones page](../Get
 
 #### Co dělat při sprchování a koupání?
 
-You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ#disconnect-pump).
+You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](FAQ-disconnect-pump).
 
 ### Práce
 
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](Profiles-time-shift) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
 ## Volnočasové aktivity
 
+(FAQ-sports)=
+
 ### Sporty
 
-Budete muset změnit své staré sportovní návyky z doby, kdy jste ještě nepoužívali smyčku. Pokud budete při sportu dokrmovat sacharidy jako dříve, systém uzavřené smyčky to pozná a bude se snažit je korigovat.
+You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
 
-Takže byste sice měli více zkonzumovaných sacharidů, ale smyčka by na ně zároveň vydala inzulin.
+So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
 
-Při používání smyčky byste měli vyzkoušet tyto kroky:
+When looping you should try these steps:
 
 - Make a [profile switch](../Usage/Profiles.md) < 100%.
-- Set an [activity temp target](../Usage/temptarget#activity-temp-target) above your standard target.
-- If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
+- Set an [activity temp target](temptarget-activity-temp-target) above your standard target.
+- If you are using SMB make sure ["Enable SMB with high temp targets"](Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](Open-APS-features#enable-smb-always) are disabled.
 
-Provedení změn před sportem a po sportu je velmi důležité. Proveďte změny v čase před sportem a zvažte vliv svalového plnění.
+Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
 
-Pokud se věnujete sportu pravidelně ve stejný čas (např. lekce ve fitku), zvažte možnost použití [automatizace](../Usage/Automation.md) pro přepnutí profilu a nastavení dočasného cíle. Bylo by možné použít automatizaci na základě polohy, ale obtížně se pak kontroluje včasné provedení změny nastavení.
+If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.md) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
 
-Procentuální hodnota přepnutí profilu, hodnota pro váš dočasný cíl Aktivita a optimální čas pro změnu nastavení jsou velmi individuální. Při zjišťování správných hodnot se v zájmu bezpečnosti držte při zdi (začněte raději s nižší procentuální hodnotou a vyšším dočasným cílem).
+The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
 
 ### Sex
 
-You can remove the pump to be 'free', but you should tell AndroidAPS so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ#disconnect-pump).
+You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. See [description above](FAQ-disconnect-pump).
 
 ### Požívání alkoholu
 
-Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
+Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AAPS:
 
 - Deactivating closed loop mode and treating the diabetes manually or
 - setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
@@ -308,7 +316,7 @@ When drinking alcohol, you always have to have an eye on your CGM to manually av
 
 #### Jak mohu provozovat smyčku během noci bez mobilního a WIFI záření?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Zapněte na mobilu režim letadlo.
 2. Počkejte dokud není režim aktivní.
@@ -330,7 +338,7 @@ With Dana R and Dana R Korean you don't have to do anything. For other pumps see
 
 ### Pobyt v nemocnici
 
-If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
+If you want to share some information about AAPS and DIY looping with your clinicians, you can print out the [guide to AAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
 
 ### Kontrola u vašeho diabetologa
 
@@ -342,11 +350,11 @@ You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or
 
 ## My problem is not listed here.
 
-[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Information to get help.](Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
 ## My problem is not listed here but I found the solution
 
-[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Information to get help.](Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
 **Remind us to add your solution to this list!**
 
@@ -364,7 +372,7 @@ Copy on an internet drive (Dropbox, Google etc) : all the apks you used to insta
 
 Please
 
-- check [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio#troubleshooting-android-studio) for typical errors and
+- check [Troubleshooting Android Studio](troubleshooting_androidstudio-troubleshooting-android-studio) for typical errors and
 - the tipps for with a [step by step walktrough](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
 ## I'm stuck on an objective and need help.
@@ -377,7 +385,7 @@ Open the hamburger menu, start the Configuration wizard and enter new password w
 
 ## How to reset the password in AAPS v3.x
 
-If you forgot your password: Close AAPS. Put an empty file named PasswordReset (without any extensions) in phone_main_memory/AAPS/extra directory. Restart AAPS. The new AAPS password is the serial number of your pump. The serial for the Omnipod DASH pod is 4241. You can change the password via 3 dots menu, configuration wizard, unlock parameters.
+You find the documentation [here](update3_0-reset-master-password).
 
 ## My link/pump/pod is unresponsive (RL/OL/EmaLink…)
 
@@ -395,9 +403,9 @@ From Android Studio: Make sure "Gradle" is done syncing and indexing after openi
 
 ## Alert: Running dev version. Closed loop is disabled
 
-AndroidAPS is not running in "developer mode". AAPS shows the following message: "running dev version. Closed loop is disabled".
+AAPS is not running in "developer mode". AAPS shows the following message: "running dev version. Closed loop is disabled".
 
-Make sure AndroidAPS is running in "developer mode": Place a file named "engineering_mode" at the location "AAPS/extra". Any file will do as long as it is properly named. Make sure to restart AndroidAPS for it to find the file and go into "developer mode".
+Make sure AAPS is running in "developer mode": Place a file named "engineering_mode" at the location "AAPS/extra". Any file will do as long as it is properly named. Make sure to restart AAPS for it to find the file and go into "developer mode".
 
 Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!).
 
@@ -407,7 +415,7 @@ Settings files will be stored on your phone's internal storage in the directory 
 
 ## How to configure battery savings?
 
-Properly configuring Power Management is important to prevent your Phone's OS to suspend AndroidAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AndroidAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
+Properly configuring Power Management is important to prevent your Phone's OS to suspend AAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
 
 ## Pump unreachable alerts several times a day or at night.
 

@@ -1,6 +1,8 @@
+(Profiles-profile-switch)=
+
 # Αλλαγή Προφίλ
 
-Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder#profile).
+Documentation about profiles in general can be found at [Config Builder - profile](Config-Builder-profile).
 
 On starting your AAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again to start using these changes.
 
@@ -15,7 +17,7 @@ To do a profile switch long-press on the name of your profile ("Tuned 03/11" in 
 
 ![Do profile switch](../images/ProfileSwitch_HowTo.png)
 
-Μέσα στο "διακόπτη προφίλ" μπορείτε να επιλέξετε δύο αλλαγές που ήταν μέρος του Προφίλ ποσοστών του Κιρκαδικού ρυθμου:
+Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
 
 ## Ποσοστό
 
@@ -28,9 +30,11 @@ To do a profile switch long-press on the name of your profile ("Tuned 03/11" in 
 
 * The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
 
+(Profiles-time-shift)=
+
 ## Αλλαγή της ώρας
 
-![Αλλαγή προφίλ ποσοστιαία και χρονικά](../images/ProfileSwitchTimeShift2.png)
+![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
 
 * This moves everything round the clock by the number of hours entered. 
 * So, for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
@@ -43,9 +47,11 @@ To do a profile switch long-press on the name of your profile ("Tuned 03/11" in 
     * 22:00 **-10 h** -> 12:00
     * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
 
-![Προσανατολισμοί των χρονικών μετατοπίσεων προφίλ](../images/ProfileSwitch_PlusMinus2.png)
+![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
 
-Αυτός ο μηχανισμός λήψης στιγμιότυπων του προφίλ επιτρέπει πολύ πιο ακριβείς υπολογισμούς του παρελθόντος και τη δυνατότητα παρακολούθησης αλλαγών προφίλ.
+This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+
+(Profiles-troubleshooting-profile-errors)=
 
 ## Αντιμετώπιση σφαλμάτων προφίλ
 

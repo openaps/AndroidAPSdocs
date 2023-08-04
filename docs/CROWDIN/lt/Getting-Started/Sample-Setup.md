@@ -31,7 +31,7 @@ Tačiau, kai yra interneto ryšys, duomenys automatiškai įkeliami į Nightscou
 
 3. [Dexcom G6](https://dexcom.com)
     
-    * Alternatyvos: žr. galimų [glikemijos šaltinių](../Configuration/BG-Source.md) sąrašą
+    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.md)
 
 4. Pasirinktinai: Sony Smartwatch 3 (SWR50)
     
@@ -80,7 +80,7 @@ To do this perform the following steps on your smartphone:
 1. Jei originali Dexcom programėlė yra įdiegta: 
     * Sustabdykite sensorių
     * Ištrinkite programas per Meniu > Nustatymai> Programos> Dexcom G6 Mobile > Pašalinti
-2. Download and install the [BYODA Dexcom ap](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app)
+2. Download and install the [BYODA Dexcom ap](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)
 3. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
 4. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
     * Urgent low `55mg/dl` / `3.1mmol/l` (cannot be disabled)
@@ -92,8 +92,8 @@ To do this perform the following steps on your smartphone:
 
 ## Įdiegti AndroidAPS
 
-1. Laikykitės instrukcijų, kad [sukurti APK failą](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
-2. [Perkelkite](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) sukurtą programą APK į savo telefoną
+1. Follow the instructions to [build the APK](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)
+2. [Transfer](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone) the generated APK to your phone
 3. [Konfigūruokite AndroidAPS](../Configuration/Config-Builder.md) pagal savo poreikius, naudodamiesi sąrankos vedliu arba rankiniu būdu
 4. Šiame pavyzdyje mes naudojome (be kita ko)
 

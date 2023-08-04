@@ -4,8 +4,7 @@
 :alt: AAPS ist wie ein Autopilot
 ```
 
-Ein Closed Loop System für eine künstliche Bauchspeicheldrüse kombiniert verschiedene Komponenten, um Dein Diabetes Management zu vereinfachen.
-In ihrem großartigen Buch [Automated Insulin Delivery](https://www.artificialpancreasbook.com/) bezeichnet Dana M. Lewis, eine der Gründerinnen der Open Source Closed Loop Bewegung, es als ["Autopilot für Deinen Diabetes"](https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps). Aber was bedeutet das?
+Ein Closed Loop System für eine künstliche Bauchspeicheldrüse kombiniert verschiedene Komponenten, um Dein Diabetes Management zu vereinfachen. In ihrem großartigen Buch [Automated Insulin Delivery](https://www.artificialpancreasbook.com/) bezeichnet Dana M. Lewis, eine der Gründerinnen der Open Source Closed Loop Bewegung, es als ["Autopilot für Deinen Diabetes"](https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps). Aber was bedeutet das?
 
 **Autopilot in einem Flugzeug**
 
@@ -27,7 +26,7 @@ Aktuell sind drei große Open Source Closed Loop Systeme verfügbar:
 
 ### AndroidAPS (AAPS)
 
-AndroidAPS wird in [dieser Dokumentation](./WhatisAndroidAPS.html) ausführlich beschrieben. AAPS verwendet ein Android Smartphone für die Berechnungen und die Steuerung Deiner Insulinpumpe. AAPS steht in enger Verbindung mit OpenAPS, sie nutzen beide z.B.  die gleichen Algorithmen.
+AndroidAPS wird in [dieser Dokumentation](./WhatisAndroidAPS.html) ausführlich beschrieben. AAPS verwendet ein Android Smartphone für die Berechnungen und die Steuerung Deiner Insulinpumpe. AAPS steht in enger Verbindung mit OpenAPS, sie teilen z.B. die Oref Algorithmen.
 
 Kompatible [Insulinpumpen](../Hardware/pumps.md) sind:
 
@@ -35,7 +34,8 @@ Kompatible [Insulinpumpen](../Hardware/pumps.md) sind:
 - [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Diaconn G8](../Configuration/DiaconnG8.md)
-- [Omnipod Eros](../Configuration/OmnipodEros.md) / Omnipod Dash
+- [Omnipod DASH](../Configuration/OmnipodDASH.md)
+- [Omnipod Eros](../Configuration/OmnipodEros.md)
 - einige alte [Medtronic Pumpen](../Configuration/MedtronicPump.md)
 
 ### OpenAPS
@@ -52,5 +52,6 @@ Kompatible Insulinpumpen sind:
 
 Kompatible Insulinpumpen sind:
 
+- Omnipod DASH
 - Omnipod Eros
 - einige alte Medtronic Pumpen

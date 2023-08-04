@@ -2,13 +2,13 @@
 
 **Tento popis je pouze pro editaci anglické dokumentace. Všechny nové informace musí být přidány nejdřív v angličtině. Pokud chcete přeložit wiki do jiných jazyků (děkujeme), použijte prosím [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](./make-a-PR#code-syntax) section of this page.
+For hints how to format text (headline, bold...) and set links please see the ["code syntax"](make-a-PR-code-syntax) section of this page.
 
 ## Obecné
 
 For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw). Vytvoření PR není obtížné, ale můžeme vám pomoci editovat dokumentaci.
 
-V určitém okamžiku bude doporučeno, abyste udělali PR. PR je zkratka pro pull request a je to způsob, jak přidat nebo editovat informace uložené v GitHubu. Ve skutečnosti není příliš těžké udělat takový krok a je to skvělý způsob, jak přispět. Tato dokumentace je zde proto, že lidé, jako jste vy, udělali svůj PR. Nebojte se, že uděláte chybu nebo nějak editujete špatné dokumenty. Před sloučením změn do „formálního“ repositáře dokumentace AndroidAPS je zde vždy proces přezkumu. Nějakou chybou nemůžete originál poškodit. Obecný proces je:
+V určitém okamžiku bude doporučeno, abyste udělali PR. PR je zkratka pro pull request a je to způsob, jak přidat nebo editovat informace uložené v GitHubu. Ve skutečnosti není příliš těžké udělat takový krok a je to skvělý způsob, jak přispět. Tato dokumentace je zde proto, že lidé, jako jste vy, udělali svůj PR. Nebojte se, že uděláte chybu nebo nějak editujete špatné dokumenty. There is always a review process before changes are merged into the "formal" AAPS documentation repository. Nějakou chybou nemůžete originál poškodit. Obecný proces je:
 
 * Edituje a vylepšuje kód nebo dokumentaci editací stávajícího obsahu.
 * Zkontrolujte, že vaše úpravy vypadají dobře.
@@ -28,150 +28,209 @@ Například: chystáme se upravit AndroidAPSdocs. To není nutné dělat v linux
 
 ![edit doc](./images/PR1.png)
 
-     Or you can click on the "Edit in GitHub" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited.
-    
+Or you can click on the "Edit in GitHub" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited.
 
 ![RTD io](./images/PR2.png)
 
-3. Libovolnou možností v kroku 2 vytvoříte nový branch ve svém repozitáři, kde budou uloženy vaše změny. Udělejte své úpravy do souboru.
-  
-  Be aware that we use different file extensions: .rst (ReStructuredText) and .md (Markdown) and the syntax varies a little bit between the two. Take care to use the correct syntax as [described below](./make-a-PR#code-syntax).
+3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
 
-![Upravit větev](./images/PR3.png)
+We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](make-a-PR-code-syntax).
+
+![Edit branch](./images/PR3.png)
 
 4. Pracujete v záložce "<>Edit file". Vyberte záložku "Preview changes" pro nový náhled, abyste zjistili, že vše, co jste změnili, je to, co jste chtěli. Pokud vidíte, že je potřeba další zlepšení, vraťte se zpět na záložku editace a pokračujte. 
 
-![režim náhledu](./images/PR5.png)
+![preview mode](./images/PR5.png)
 
 5. Když jste dokončili své úpravy, přesuňte se do dolní části stránky. V obdélníku dole napište komentář do textového pole "Add an optional extended description...". Výchozí název má jméno souboru. Zkuste přidat větu s vysvětlením **důvodu** změny. Pomůže to při kontrole, o jakou změnu se pokoušíte.
 
-![potvrdit komentáře](./images/PR4.png)
+![commit comments](./images/PR4.png)
 
 6. Klikněte na zelené tlačítko "Propose file changes" nebo "Commit changes". Na stránce se pak objeví tlačítko "Create Pull Request" a znovu na další stránce klepněte na tlačítko "Create Pull Request".
 
-![vytvořit žádost o přijetí změn](./images/PR6.png)
+![create pull request](./images/PR6.png)
 
-7. Tím dokončíte žádost PR. GitHub přiděluje PR číslo, které se nachází za názvem a hashovou značkou. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). Žádost o změnu bude nyní na seznamu PR, který bude tým přezkoumávat a případně poskytne zpětnou vazbu před tím, než začlení změnu do hlavní dokumentace pro AndroidAPS! Pokud chcete zkontrolovat pokrok ve zpracování PR, můžete kliknout na symbol zvonku v horním pravém rohu svého účtu na GitHub a uvidíte všechny své PR.
+7. Tím dokončíte žádost PR. GitHub přiděluje PR číslo, které se nachází za názvem a hashovou značkou. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! Pokud chcete zkontrolovat pokrok ve zpracování PR, můžete kliknout na symbol zvonku v horním pravém rohu svého účtu na GitHub a uvidíte všechny své PR.
 
-![Sledování PR](./images/PR7.png)
+![PR tracking](./images/PR7.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. Po oznámení, že Váš PR byl sloučený, můžete odstranit branch, pokud do něj nechcete dělat další změny (V kroku 8 bude odkaz na odstranění branche, jakmile bude PR uzavřen nebo sloučen). Pro budoucí úpravy, pokud budete následovat tento postup, budou změny vždy začínat aktualizovanou verzí repozitáře AndroidAPSdocs. Pokud se rozhodnete použít jinou metodu pro vytvoření PR žádosti (např. editace začínající z vaší kopie repozitáře), budete muset zajistit, aby Váš repozitář byl aktuální, a to nejprve provedením "Compare" a sloučením všech aktualizací, které se udály od doby, kdy jste naposledy aktualizovali svůj repozitář. Protože lidé často zapomínají aktualizovat svůj repozitář, doporučujeme použít pro PR proces popsaný výše, dokud se neseznámíte s detaily fungování "Compare".
+PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+
+(make-a-PR-code-syntax)=
 
 ## Code syntax
 
-At the moment there are two languages used for docs pages:
+We are using markdown for the docs pages. The files have got the suffix ".md".
 
-* Markdown (.md) - the markup language originally used for docs pages
-* reStructuredText (.rst) - the new markup language
+Markdown is a very simple text formating language which separates text content from text formating.
 
-We will change all docs pages in the medium term from reStructuredText to Markdown format bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
+The writer only e.g. marks a headline as level 1 headline and the markdown processor generate during processing the necessary HTML code to render the heading in HTML.
 
-### Image size
+The idea behind this is that
 
-If using images please use reasonable sizes. Screenshot images should be **250 pixels wide**.
+* the writer should think about the text and not the formating first,
+* the markdown text is open for exchange between different markdown tools instead of e.g. proprietray tools like Mircosoft Windows and
+* you can generate several output formats from one markdown file.
 
-### .md files
+Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard to
 
-#### Text format
+* stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
+* enable us to use a transaltion services to translate the english language in a target language like French or German because they can work on markdown but not complex formating codes because they can't separate there content from layout which might be fatal.
 
-* bold: `**text**`
-* italic: `*text*`
+### Headlines
+
 * Headline 1: `# headline`
 * Headline 2: `## headline`
 * Headline 3: `### headline`
+* Headline 4: `#### headline`
 
-#### Images
+We try to avoid further leveles of headlines.
 
-* images: `![alt text](../images/file.png)`
-
-#### Links
-
-* external link: `[alt text](www.url.tld)`
-* internal link to .md page: `[alt text](../folder/file.md)`
-* internal link to .rst page: `[alt text](../folder/file.rst)`
-* internal link to headline: `[alt text](../folder/file#headline)`
-
-### .rst files
-
-#### Text format
+### Text format
 
 * bold: `**text**`
 * italic: `*text*`
-* Headline 1:
-  
-  `headline`  
-  `*****`
 
-* Headline 2:
-  
-  `headline`  
-  `=====`
+### ordered list
 
-* Headline 3:
-  
-  `headline`  
-  `-----`
+:::
 
-#### Images
+1. first
+2. second
+3. third :::
 
-* images:
-  
-  `.. image:: ../images/modules.png`  
-  `:alt: alt text`
+4. first
 
-#### Links
+5. second
+6. third
 
-* external link: `` `alt text <www.url.tld>_` ``
-* internal link to .md page: `` `alt text <../folder/file.html>_` ``
-* internal link to .rst page: `` `alt text <../folder/file.html>_` ``
-* internal link to headline: `` `alt text <../folder/file.html#headline>_` ``
+### unordered list
 
-### Internal links
+:::
 
-Pokud chcete nastavit vnitřní odkaz v dokumentaci AndroidAPS, použijte pouze **relativní odkazy**. Only this will make the link work in the other languages (Czech, German...) as well.
+* one element
+* another element
+* and another element :::
 
-#### V souborech končících na **.md**:
+* one element
 
-* `[text](../Usage/Test.md)` nastaví vnitřní odkaz o adresář nahoru, z místa kde jste, a pak do podadresáře /Usage. Ukončení cílového souboru musí být .md nebo .rst (ne .html)
-* `[text](./Usage/Test.md)` nastaví interní hypertextový odkaz z místa, kde se nachází, na /Usage. Ukončení cílového souboru musí být .md nebo .rst (ne .html)
-* Chcete-li nastavit odkaz na **ukotvení** (např. na titulek) musíte vynechat příponu souboru 
-  * `[text](../Usage/Test#anchor)` místo `[text](../Usage/Test.md#anchor)`
+* another element
+* and another element
 
-#### V souborech končících na **.rst**:
+### multi level list
 
-* `` `Text <../Usage/Test.hmtl>`_ `` nastaví vnitřní odkaz o adresář nahoru, z místa kde jste, a pak do podadresáře /Usage. Koncovka cílového souboru musí být .html.
-  
-  Kromě toho, když jste v toctree. Pak ho musíte psát takto: `Text <../Usage/Test.md>` s .md nebo rst (not .html).
+You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
 
-* `Text <./Usage/Test.md>` nastaví odkaz z místa, kde jste, do podadresáře /Usage.
+:::
 
-* To set the link to an **anchor** (i.e. a headline) you have to add the anchor to the link 
-  * `[text](../Usage/Test.html#anchor)` instead of `[text](../Usage/Test#anchor)`
+1. first
+2. second
+3. third 
+    1. one element
+    2. another element
+    3. and another element
+4. four
+5. five
+6. six :::
 
-## Adding multiple images to documentation
+7. first
 
-Pokud plánujete provést mnoho editací včetně přidání obrázků, které by pomohly vylepšit části dokumentace (děkujeme Vám!), můžete použít následující postup:
+8. second
+9. third 
+    1. one element
+    2. another element
+    3. and another element
+10. four
+11. five
+12. six
 
-* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses GitHub. Naopak používejte podtržítka. Jako např. Example_batch_images_upload.png místo "Example batch images upload.png". 
-* Please use reasonable sizes. Screenshot images should be **250 pixels wide**.
-* Můžete snadno nahrát obrázky v dávkách:
-  
-  1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your GitHub username)).
-  
-  2. Klepněte na pravý horní roh, kde se nachází "Upload files"
-  
-  3. Přetáhěte snímky na obrazovku pomocí myši
-  
-  4. Potvrďte (Commit) tyto informace
-  
-  5. Nyní můžete vyhledat adresu URL a relativní cestu ke každému souboru a použít je při přidávání obrázků do stránky v dokumentaci.
-  
-  6. Chcete-li zobrazit příklady, jak přidat obrázky, můžete se podívat na "zdrojový" kód stránky a podívat se na příklad ze stránky, která již má obrázky vložené úspěšně. Make sure you use the [correct code](./make-a-PR#code-syntax) for the page type you are on (.md or .rst). The main thing is to have a plain text description, followed by a link with a relative path to the image, like this:
-    
-    * For .md pages: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)` (That code is exactly how the image below is embedded to be displayed.)
-    * For .rst pages: `.. image:: ../images/Example_batch_images_upload.png`  
-      `:alt: Example of uploading images in batches`
+### Images
 
-![Příklad přenosu obrázků v dávkách](./images/Example_batch_images_upload.png)
+To include images you use this markdown syntax.
 
-7. Po přidání obrázků nebo provedení úprav můžete odeslat PR (Pull request) do hlavní větve AndroidAPSdocs.
+* images: `![alt text](../images/file.png)`
+
+The type of image should be PNG or JPEG.
+
+Images names should confirm to one of following naming rules. In the example I use png as suffix. In case you use JPEG please replace it with jpeg.
+
+* `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
+* `filename-image-xx.png` where xx is a meaning full name for the author of the md file.
+
+Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+
+We are not translating images at the moment.
+
+(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+
+* Screenshots from web pages images should be up to **1050 pixels wide**.
+* Diagramms of process flows should be up to **1050 pixels wide**.
+* Screenshots from the app should be up to **300 to 400 pixels wide**.
+
+### Links
+
+#### External links
+
+External links are links to external web sites.
+
+* external link: `[alt text](www.url.tld)`
+
+#### Internal links to the start of a md file
+
+Internal links to pages are links to the start of a md file which is hosted on our own server.
+
+* internal link to .md page: `[alt text](../folder/file.md)`
+
+#### Internal links to named inline refernces
+
+Internal links to named inline refernces are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
+
+Add a named reference at the location in the target md file you want to jump to.
+
+`(name-of-my-md-file-this-is-my-fancy-named-reference)=`
+
+The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
+
+Therefore it is a good practice to start with the filename and then the reference name you select.
+
+Use only lowercase letters and hyphenate words.
+
+Then link this refernce in the text you are writing with the following kind of link.
+
+* Internal links to named inline refernces: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+
+### Notes, Warnings, Collapsing Notes
+
+You can add notes and warning boxes to documentation.
+
+Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all. Please use these carefully as the documentation should be as easy to read as possible.
+
+#### Notes
+
+:::: :::{admonition} Note :class: note
+
+This is a note. ::: ::::
+
+:::{admonition} Note :class: note
+
+This is a note. :::
+
+#### Warnings
+
+:::: :::{admonition} Warning :class: warning
+
+This is a warning. ::: ::::
+
+:::{admonition} Warning :class: warning
+
+This is a warning. :::
+
+#### Collapsing Notes
+
+:::: :::{admonition} further detailed readings for interested readers :class: dropdown
+
+This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page. ::: ::::
+
+:::{admonition} further detailed readings for interested readers :class: dropdown
+
+This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page. :::

@@ -6,44 +6,43 @@ Please see [this page](../Usage/Objectives.md) for the current set of Objectives
 
 AndroidAPS tiene una serie de Objetivos que deben completarse para guiarlo a través de las características y configuraciones de lazo cerrado de manera segura.  Estos, aseguran que ha configurado correctamente todo lo detallado en las secciones anteriores, y que comprende lo que está haciendo su sistema y por qué, de modo que pueda confiar en él.
 
-Si estás **actualizando teléfonos** entonces puedes [exportar tus ajustes](../Usage/ExportImportSettings.md) para mantener tu progreso a través de los objetivos. No solo se guardará su progreso a través de los objetivos, sino también su configuración de seguridad, como el máximo bolo, etc.  Si no exporta e importa su configuración, deberá volver a comenzar los objetivos desde el principio.  Es una buena idea hacer [copia de seguridad de tus ajustes](../Usage/ExportImportSettings.html) frecuentemente sólo por si acaso.
+If you are **upgrading phones** then you can [export your settings](../Usage/ExportImportSettings.md) to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to [backup your settings](../Usage/ExportImportSettings.html) frequently just in case.
 
-If you want to go back in objectives see [explanation below](../Usage/Objectives#go-back-in-objectives).
+If you want to go back in objectives see [explanation below](../Usage/Objectives.md#go-back-in-objectives).
 
 ## Objetivo 1: Establecimiento de la visualización y la supervisión, análisis de las basales y las tasas
 
-- Seleccione la fuente correcta de glucosa en sangre para su configuración.  Ver [BG Source](../Configuration/BG-Source.md) para más información.
-- Seleccione la bomba correcta en ConfigBuilder (seleccione Virtual Pump si utiliza un modelo de bomba sin el controlador AndroidAPS para bucles) para asegurarse de que el estado de la bomba se puede comunicar con AndroidAPS.
-- Si utiliza la bomba DanaR asegúrese de haber seguido las instrucciones [DanaR Insulin Bump](../Configuration/DanaR-Insulin-Pump.md) para asegurar el enlace entre la bomba y AndroidAPS.
-- Siga las instrucciones en la página [Nightscout](../Installing-AndroidAPS/Nightscout.md) para asegurar que Nightscout pueda recibir y mostrar estos datos.
-- Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see [NSClient settings in Preferences](../Configuration/Preferences#nsclient).
+- Select the right blood glucose source for your setup.  See [BG Source](../Configuration/BG-Source.md) for more information.
+- Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.
+- If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
+- Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure Nightscout can receive and display this data.
+- Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see [NSClient settings in Preferences](../Configuration/Preferences.md#nsclient).
 
-*Es posible que tengas que esperar a que llegue la próxima lectura de glucosa en sangre para que AndroidAPS la reconozca.*
+*You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
 
 ## Objetivo 2: Aprender a controlar AndroidAPS
 
-- Llevar a cabo varias acciones en AndroidAPS como se describe en este objetivo.
+- Perform several actions in AndroidAPS as described in this objective.
 
-- Haga clic en el texto naranja "Aún no completado" para acceder a los tareas.
+- Click on the orange text "Not completed yet" to access the to-dos.
 
-- Se proporcionarán enlaces para guiarle en caso de que aún no esté familiarizado con una acción específica.
+- Links will be provided to guide you in case you are not familiar with a specific action yet.
 
-  ```{eval-rst}
-  .. imagen:: ../images/Objective2_V2_5.png
-    :alt: Captura de pantalla de objetivo 2
+  ```{image} ../images/Objective2_V2_5.png
+  :alt: Captura de pantalla de objetivo 2
   ```
 
 ## Objetivo 3: Demuestra tus conocimientos
 
-- Pasar un examen de múltiples opciones probando su conocimiento de AndroidAPS.
+- Pass a multiple-choice exam testing your AndroidAPS knowledge.
 
-- Haga clic en el texto naranja "No completado todavía" para acceder a la página con las opciones de preguntas y respuestas.
+- Click on the orange text "Not completed yet" to access the page with the question and answering options.
 
   ```{image} ../images/Objective3_V2_5.png
   :alt: Captura de pantalla de objetivo 3
   ```
 
-- Se proporcionarán enlaces para guiarle en caso de que no esté seguro de las respuestas correctas todavía.
+- Links will be provided to guide you in case you are unsure about the correct answers yet.
 
 - The questions for objective 3 have been completely rewritten by native speakers as of AAPS 2.8. The new ones cover the same basic topics plus a few new ones.
 
@@ -53,43 +52,43 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 ## Objetivo 4: Iniciar en un lazo abierto
 
-- Seleccione Abrir lazo desde Preferencias, o pulsando y manteniendo pulsado el botón de Lazo en la parte superior izquierda de la pantalla de inicio.
+- Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
 - Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
-- Promulgar manualmente al menos 20 de las sugerencias de la tasa basal temporal durante un período de 7 días; póngalos en su bomba y confirme en AndroidAPS que los ha aceptado.  Asegúrese de que estos datos se muestran en AndroidAPS y Nightscout.
-- Activar [objetivos temporales](../Usage/temptarget.md) si es necesario. Utilice los objetivos temporales de hipoglucemia para evitar que el sistema se corrija demasiado fuerte debido a un aumento de la glucosa en sangre tras una hipoglucemia.
+- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Asegúrese de que estos datos se muestran en AndroidAPS y Nightscout.
+- Enable [temp targets](../Usage/temptarget.md) if necessary. Utilice los objetivos temporales de hipoglucemia para evitar que el sistema se corrija demasiado fuerte debido a un aumento de la glucosa en sangre tras una hipoglucemia.
 
 ### Reducir el número de notificaciones
 
-- Para reducir el número de decisiones que se tomarán mientras se encuentra en Lazo abierto se establece un rango de objetivo de alcance amplio como 90-150 mg/dl o 5,0-8,5 mmol/l.
+- To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l.
 
-- Es posible que incluso desee ampliar el límite superior (o inhabilitar el Lazo Abierto) en la noche.
+- You might even want to wider upper limit (or disable Open Loop) at night.
 
-- En Preferencias, puede establecer un porcentaje mínimo para la sugerencia de cambio de tasa basal.
+- In Preferences you can set a minimum percentage for suggestion of basal rate change.
 
   ```{image} ../images/OpenLoop_MinimalRequestChange2.png
   :alt: Open Loop minimal request change
   ```
 
-- Además, no hace falta que actúe cada 5 minutos en todas las sugerencias...
+- Also, you do not need to act every 5 minutes on all suggestions...
 
 ## Objetivo 5: Comprensión de su lazo abierto, incluidas sus recomendaciones basales temporales
 
-- Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AndroidAPS homescreen](../Getting-Started/Screenshots#prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+- Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AndroidAPS homescreen](../Getting-Started/Screenshots.md#prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
 
 Usted querrá establecer su objetivo más alto de lo normal hasta que esté seguro en los cálculos y los ajustes.  El sistema permite
 
-- un objetivo bajo es un mínimo de 4 mmol (72 mg/dl) o máximo de 10 mmol (180 mg/dl)
-- un objetivo alto puede ser un mínimo de 5 mmol (90 mg/dl) y un máximo de 15 mmol (225 mg/dl)
-- un objetivo temporal como un solo valor puede estar en cualquier lugar en el rango de 4 mmol a 15 mmol (72 mg/dl a 225 mg/dl)
+- a low target to be a minimum of 4 mmol (72 mg/dl) or maximum of 10 mmol (180 mg/dl)
+- a high target to be a minimum of 5 mmol (90 mg/dl) and maximum of 15 mmol (225 mg/dl)
+- a temporary target as a single value can be anywhere in the range of 4 mmol to 15 mmol (72 mg/dl to 225 mg/dl)
 
-El objetivo es el valor en el que se basan los cálculos, y no es el mismo que al que apuntamos para mantener la glucosa dentro del rango.  Si su objetivo es muy amplio (digamos, 3 o más mmol \[50 mg/dl o más\] de ancho), a menudo encontrarás poca acción de AAPS. Esto se debe a que eventualmente se prevé que la glucosa en sangre esté en algún lugar de esa amplia gama y, por lo tanto, no se sugieran muchas variaciones de basales temporales.
+El objetivo es el valor en el que se basan los cálculos, y no es el mismo que al que apuntamos para mantener la glucosa dentro del rango.  If your target is very wide (say, 3 or more mmol \[50 mg/dl or more\] wide), you will often find little AAPS action. Esto se debe a que eventualmente se prevé que la glucosa en sangre esté en algún lugar de esa amplia gama y, por lo tanto, no se sugieran muchas variaciones de basales temporales.
 
 You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol \[20 mg/dl or less\] wide) and observe how the behavior of your system changes as a result.
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
 ```{image} ../images/sign_stop.png
-:alt: "Se\xF1al de parada"
+:alt: Señal de parada
 ```
 
 ### Parar aquí si usted está lazo abierto con una bomba virtual - no haga clic en Comprobar al final de este objetivo.
@@ -101,20 +100,20 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 ## Objetivo 6: Empezando a cerrar el lazo con Baja Glucosa Suspender
 
 ```{image} ../images/sign_warning.png
-:alt: "Se\xF1al de advertencia"
+:alt: Señal de advertencia
 ```
 
 ### El lazo cerrado no corregirá los valores de bg alto en el objetivo 6, ya que se limita a la suspensión por baja glucosa. ¡Los valores altos de BG tienen que ser corregidos manualmente por usted!
 
 - Select Closed Loop either from [Preferences](../Configuration/Preferences.md) or by pressing and holding the Open Loop button in the top left of the home screen.
 
-- Establezca el rango de destino un poco más alto de lo que normalmente pretende, sólo para estar seguros.
+- Set your target range slightly higher than you usually aim for, just to be safe.
 
-- Vea cómo las basales temporales están activas al visualizar el texto basal azul en la pantalla de inicio o en la representación basal azul en el gráfico de pantalla.
+- Watch  how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
 
-- Asegúrese de que sus ajustes han soportado AndroidAPS para evitar tener que tratar una glucosa baja durante un período de 5 días.  Si sigue teniendo episodios frecuentes o graves de glucosa baja, considere la posibilidad de ajustar las proporciones de DIA, basal, ISF y tasa de carbohidratos.
+- Ensure your settings have supported AndroidAPS to avoid having to treat a low glucose over a period of 5 days.  Si sigue teniendo episodios frecuentes o graves de glucosa baja, considere la posibilidad de ajustar las proporciones de DIA, basal, ISF y tasa de carbohidratos.
 
-- No tienes que cambiar tu configuración. Durante el objetivo 6, el valor de maxIOB se establece internamente en cero automáticamente. Esta alteración temporal se invertirá cuando se mueva al objetivo 7.
+- You don't have to change your settings. Durante el objetivo 6, el valor de maxIOB se establece internamente en cero automáticamente. Esta alteración temporal se invertirá cuando se mueva al objetivo 7.
 
 - The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the basal IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.
 
@@ -124,11 +123,11 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 - If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
 
-- Puede experimentar temporalmente picos después de las hipos tratadas sin la posibilidad de aumentar basal en el rebote.
+- You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.
 
 ## Objetivo 7: Ajustar el lazo cerrado, elevando el IOB máximo por encima de 0 y reduciendo gradualmente los objetivos de BG
 
-- Aumente su 'Máximo Total IOB OpenAPS no puede pasar' (en OpenAPS llamado 'max-iob') por encima de 0 durante un período de 1 día, la recomendación por defecto es "promedio bolos de comidas + 3x max basal diaria" (para el algoritmo SMB) o "3x max basal diaria" (para el algoritmo AMA más antiguo), pero debería trabajar lentamente hasta que sepa que los ajustes funcionan para usted (max basal diaria = el valor máximo por hora en cualquier segmento de tiempo del día).
+- Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
 
   Esta recomendación debe considerarse como un punto de partida. Si se establece en el 3x y se están viendo movimientos que le empuja a cambios fuertes y rápidos, a continuación, baje ese número. Si eres muy resistente, levanta un poco a la vez.
 
@@ -136,7 +135,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
   :alt: max basal diaria
   ```
 
-- Una vez que este seguro de cuánta IOB se adapta a su lazo de patrones, a continuación, reduzca sus objetivos al nivel deseado.
+- Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
 
 ## Objetivo 8: ajustar las basales y proporciones si es necesario, y luego habilitar el autosensado
 
@@ -147,19 +146,19 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 ## Objective 9: Try additional features for daytime use and gain confidence in your closed loop system
 
-- Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate [advanced meal assist (AMA)](../Usage/Open-APS-features#advanced-meal-assist-ama).
-- As [advanced meal assist (AMA)](../Usage/Open-APS-features#advanced-meal-assist-ama) is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
+- Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate [advanced meal assist (AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama).
+- As [advanced meal assist (AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama) is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
 
 ## Objective 10: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
 
-- Debe leer el capítulo [SMB en este wiki](../Usage/Open-APS-features#super-micro-bolus-smb) y [capítulo oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) para entender cómo funciona SMB, especialmente cuál es la idea detrás de cero-temporal.
-- A continuación, usted debe [subir maxIOB](../Usage/Open-APS-features#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) para tener los SMBs trabajando bien. maxIOB ahora incluye todo IOB, no sólo la basal añadida. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](../Usage/Objectives.md#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) for an illustration)
-- El valor predeterminado de min_5m_carbimpact en los valores de absorción ha cambiado de 3 a 8 al ir de AMA a SMB. If you are upgrading from AMA to SMB, you have to change it manually.
+- You must read the [SMB chapter in this wiki](../Usage/Open-APS-features.md#super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
+- Then you ought to [rise maxIOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxIOB ahora incluye todo IOB, no sólo la basal añadida. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](../Usage/Objectives#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) for an illustration)
+- min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually.
 
 ## Objective 11: Automation
 
 - You have to start objective 11 to be able to use [Automation](../Usage/Automation.md).
-- Make sure you have completed all objectives including exam [../Usage/Objectives#objective-3-prove-your-knowledge](../Usage/Objectives.md#objective-3-prove-your-knowledge).
+- Make sure you have completed all objectives including exam [../Usage/Objectives.md#objective-3-prove-your-knowledge](../Usage/Objectives#objective-3-prove-your-knowledge).
 - Completing previous objectives will not effect other objectives you have already finished. You will keep all finished objectives!
 
 ## Go back in objectives

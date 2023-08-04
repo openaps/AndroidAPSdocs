@@ -1,8 +1,10 @@
+(Profiles-profile-switch)=
+
 # Profilwechsel
 
-Dokumentation zu Profilen im Allgemeinen finden sich unter [Konfiguration - Profil](../Configuration/Config-Builder#profile).
+Dokumentation zu Profilen im Allgemeinen finden sich unter [Konfiguration - Profil](Config-Builder-profile).
 
-Wenn du dein AndroidAPS startest und dein Profil auswählst, musst du einen "Profilwechsel" mit einer Dauer von 0 durchführen (wird später erklärt). Wenn du das machst, beginnt AAPS damit, die Historie der Profile zu verfolgen und jede Änderung am Profil erfordert einen erneuten Profilwechsel, auch dann, wenn du den Inhalt eines Profils in NS änderst. Ein geändertes Profil wird sofort an AAPS übertragen, aber du musst dieses Profil aktivieren, damit die Änderungen aktiv werden.
+Wenn Du Dein AndroidAPS startest und Dein Profil auswählst, musst Du einen "Profilwechsel" mit einer Dauer von 0 durchführen (wird später erklärt). Wenn Du das machst, beginnt AAPS damit, die Historie der Profile zu verfolgen und jede Änderung am Profil erfordert einen erneuten Profilwechsel, auch dann, wenn Du den Inhalt eines Profils in NS änderst. Ein geändertes Profil wird sofort an AAPS übertragen, aber Du musst dieses Profil aktivieren, damit die Änderungen aktiv werden.
 
 AAPS erzeugt intern eine Momentaufnahme des Profils mit dem Startdatum und der Dauer und verwendet es für den angegebenen Zeitraum.
 
@@ -28,9 +30,11 @@ Bei einem Profilwechsel kannst Du zwei zusätzliche Optionen wählen, die frühe
 
 * Der Loop Algorithmus (Open Loop oder Closed Loop) wird von da an mit dem ausgewählten prozentualen Profil arbeiten. So können zum Beispiel unterschiedliche prozentuale Profile für die verschiedene Phasen des hormonellen Zyklus eingerichtet werden.
 
+(Profiles-time-shift)=
+
 ## Zeitverschiebung
 
-![Prozentsatz der Profilumschaltung und Zeitschaltupft](../images/ProfileSwitchTimeShift2.png)
+![Prozentsatz für Profilumschaltung und Zeitverschiebung](../images/ProfileSwitchTimeShift2.png)
 
 * Verschiebt alles um die Anzahl der eingegebenen Stunden. 
 * So kannst du zum Beispiel bei Nachtschichten angeben, wie viele Stunden später / früher du zu Bett gehst oder aufstehst.
@@ -46,6 +50,8 @@ Bei einem Profilwechsel kannst Du zwei zusätzliche Optionen wählen, die frühe
 ![Richtung der Zeitverschiebung für Profile](../images/ProfileSwitch_PlusMinus2.png)
 
 Der Mechanismus, dass eine Momentaufnahme des Profils gemacht wird, erlaubt eine sehr viel präzisere Berechnung der Vergangenheit und die Möglichkeit, Änderungen am Profil nachzuverfolgen.
+
+(Profiles-troubleshooting-profile-errors)=
 
 ## Fehlerbehebung bei Profil Fehlern
 

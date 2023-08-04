@@ -1,3 +1,5 @@
+(Accessing-logfiles-accessing-logfiles)=
+
 # Günlük dosyalarına erişim
 
 * Telefonu dosya aktarım modunda bir bilgisayara bağlayın

@@ -4,8 +4,7 @@
 :alt: AAPS est comme un pilote automatique
 ```
 
-Un système de boucle fermée du pancréas artificiel combine différents composants afin de vous faciliter la gestion du diabète.
-Dans son grand livre [Automated Insulin Delivery](https://www.artificialpancreasbook.com/) Dana M. Lewis, une des fondatrices du mouvement "Open Source closed loop" (Boucle fermée en open Source), appelle cela ["pilote automatique pour votre diabète"](https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps). Mais qu'est-ce que cela signifie ?
+Un système de boucle fermée du pancréas artificiel combine différents composants afin de vous faciliter la gestion du diabète. Dans son grand livre [Automated Insulin Delivery](https://www.artificialpancreasbook.com/) Dana M. Lewis, une des fondatrices du mouvement "Open Source closed loop" (Boucle fermée en open Source), appelle cela ["pilote automatique pour votre diabète"](https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps). Mais qu'est-ce que cela signifie ?
 
 **Pilot automatique dans un avion**
 
@@ -27,15 +26,16 @@ Tout comme le pilote automatique dépend des valeurs du capteur ainsi que des sp
 
 ### AndroidAPS (AAPS)
 
-AndroidAPS est décrit en détail dans [cette documentation](./WhatisAndroidAPS.html). Il utilise un Smartphone Android pour le calcul et le contrôle de votre pompe à insuline. Il est en étroite collaboration avec OpenAPS (par ex. ils partagent les algorithmes).
+AAPS est décrit en détail dans [cette documentation](./WhatisAndroidAPS.html). Il utilise un Smartphone Android pour le calcul et le contrôle de votre pompe à insuline. Il est en étroite collaboration avec OpenAPS (par ex. ils partagent les algorithmes).
 
 Les [pompes](../Hardware/pumps.md) compatibles sont :
 
-- [DanaR](../Configuration/DanaR-Insulin-Pump.md)/ [DanaRS & Dana-i\<../Configuration/DanaRS-Insulin-Pump.html>][danars & dana-i<../configuration/danars-insulin-pump.html>]
-- [Pompe Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
+- [DanaR](../Configuration/DanaR-Insulin-Pump.md) / [DanaRS & Dana-i](../Configuration/DanaRS-Insulin-Pump.html)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Diaconn G8](../Configuration/DiaconnG8.md)
-- [Omnipod Eros](../Configuration/OmnipodEros.md) / Omnipod Dash
+- [Omnipod Dash](../Configuration/OmnipodDASH.md)
+- [Omnipod Eros](../Configuration/OmnipodEros.md)
 - quelques anciennes [Pompes Medtronic](../Configuration/MedtronicPump.md)
 
 ### OpenAPS
@@ -52,5 +52,6 @@ Les pompes compatibles sont :
 
 Les pompes compatibles sont :
 
+- Omnipod Dash
 - Omnipod Eros
 - quelques anciennes pompes Medtronic

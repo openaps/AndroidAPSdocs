@@ -1,155 +1,158 @@
-# EOPatch2 Instruction Manual
+# Manual de instrucciones de EOPatch2 (Glucomen Day Pump)
 
-The patch requires the use of rapid-acting U-100 type insulin, such as NovoRapid or Humalog. Use a rapid-acting insulin that is suitable for you according to your doctor’s prescription and inject the prescribed dosage.
+**Previsto, pero no confirmado para AAPS 3.2 (próxima versión)**
 
-The smallest injectable dose of insulin when using the patch is 0.05 U. The Profile BAS should therefore be set at a minimum value of 0.05 U/hr or more and an interval of 0.05 U/hr, as otherwise there may be an error between the estimated total infusion amount in the Profile and the actual infusion amount in the patch. Likewise, the bolus must also be set and infused with a minimum infusion volume of 0.05 U.
+El parche requiere de insulina de acción rápida del tipo U-100, como NovoRapid o Humalog. Utiliza una insulina de acción rápida adecuada para tí, según la prescripción de tu médico e inyéctate la dosis prescrita.
 
-## Pump Setup
-1. On the AndroidAPS home screen, click the hamburger menu in the upper left corner and go to Config Builder.
-1. Select 'EOPatch2' in the Pump section.
-1. Press the Back key to return to the home screen.
+La dosis más pequeña de insulina que puede ponerse cuando usamos es parche es de 0.05U. Por lo tanto, el perfil basal debe ajustarse a un valor mínimo de 0.05U o más, con un intervalo de 0.05U/h, ya que de lo contrario, puede haber un error entre la cantidad total de infusión estimada en el perfil y la cantidad real de infusión en el parche. Del mismo modo, el bolo también debe fijarse con un volumen de infusión mínimo de 0.05U.
 
-![Bild1](../../images/EOPatch/Bild1.png) ![Bild2](../../images/EOPatch/Bild2.png)
+## Configuración de la bomba
+1. En la pantalla de inicio de AAPS, haga clic en el menú hamburguesa de la esquina superior izquierda y vaya a Tabla de configuraciones
+1. Selecciona "EOPatch2" en la seción de las bombas.
+1. Pulsa el botón de Atrás para volver a la pantalla de inicio.
+
+
+![Image1](../images/EOPatch/Bild1.png) ![Image2](../images/EOPatch/Bild2.png)
 
 ## Configuración
-Select EOPATCH2 at the top of the home screen to go to the EOPATCH2 tab.
+Selecciona EOPATCH2 en la parte superior de la pantalla de inicio para ir a la pestaña EOPATCH2.
 
-Select the EOPatch2 Preferences menu by clicking the three dots in the upper right corner.
+Selecciona el menú Preferencias de EOPatch2, pulsando sobre los tres puntos de la esquina superior derecha.
 
-The EOPatch2 Preferences menu offers a menu to set 3 types of notifications.
+El menú Preferencias de EOPatch2 ofrece un menú para configurar tres tipos de notificaciones.
 
-### Low reservoir Alerts
-A warning appears when the amount of insulin remaining in the reservoir reaches the set value or less while using the patch. It can be set from 10 to 50U in 5U increments.
+### Alertas de reservorio bajo
+Aparece una advertencia cuando la cantidad de insulina restante en el reservorio alcanza el valor establecido o menos, durante el uso del parche. Se puede ajustar entre 10-50U, con incrementos de 5U.
 
-### Patch expiration Reminder
-This is a reminder to notify you of the time remaining before the current patch expires. It can be set from 1 to 24 hours in 1 hour increments. The initial setting value is 4 hours.
+### Recordatorio de expiración del parche
+Se trata de un recordatorio para informarte del tiempo que falta para que caduque el parche actual. Puede ajustarse entre 1-24 horas, con incrementos de 1 hora. Por defecto, viene configurado en 4 horas.
 
-### Patch buzzer Reminder
-This is a reminder function for injections other than basal injection. If you are using an (extended) bolus injection or a temporary basal injection, the patch will make a buzzer sound when the injection starts and when the injection is complete. The initial setting value is Off.
+### Recordatorio de zumbidos del parche
+Se trata de una función de recordatorio para inyecciones distintas de la inyección basal. Si estás usando una inyección en bolo (extendido) o una inyección basal temporal, el parche emitirá un zumbido cuando comience la inyección y otro cuando finalice. La configuración predeterminada es Desactivado.
 
-![Bild3](../../images/EOPatch/Bild3.png)
+![Image3](../images/EOPatch/Bild3.png)
 
-## Connecting the Patch
+## Conexión del parche
 
-### Move to patch connection screen
+### Ir a la pantalla de conexión del parche
 
-Select EOPATCH2 at the top of the home screen and click the ACTIVATE PATCH button at the bottom left.
+Selecciona EOPATCH2 en la parte superior de la pantalla de inicio y pulsa el botón ACTIVAR PARCHE en la parte inferior izquierda.
 
-![Bild4](../../images/EOPatch/Bild4.png)
+![Image4](../images/EOPatch/Bild4.png)
 
-### Connecting the patch
-Insert the syringe needle into the insulin inlet on the patch and then slowly push the piston to inject the insulin. When insulin is filled with more than 80U, the patch makes a booting sound (1 buzzer) and boots. After confirming the buzzer sound, click the START PAIRING button on the screen.
+### Conexión del parche
+Inserta la aguja de la jeringa en la entrada de insulina del parche y, a continuación, empujea lentamente el émbolo para inyectar la insulina. Cuando se introducen mas de 80U, el parche emite un sonido de arranque (1 zumbido) y arranca. Después de confirmar el sonido del zumbido, haz clic en el botón INICIAR EMPAREJAMIENTO de la pantalla.
 
-[Warning]
+[Advertencia]
 
-- Do not turn the needle action lever until instructed. It can cause serious problems during injection or safety checks otherwise.
-- The amount of insulin that can be injected into the patch is 80~200U. If you inject less than 80U into the patch initially, the patch will not work.
-- Take the insulin to be put into the patch from the refrigerator and leave it at room temperature for 15 to 30 minutes beforehand. The temperature of the insulin to be injected must be at least 10°C.
+- No gires la palanca de acción de la aguja hasta que se indique. De lo contrario, puedes causar graves problemas durante la inyección o con los controles de seguridad.
+- La cantidad de insulina que puede inyectarse en el parche es de 80~200U. Si inyectas menos de 80U en el parche inicialmente, el parche no funcionará.
+- Saque del frigorífico la insulina que vas a poner en el parche y déjala a temperatura ambiente entre 15 y 30 minutos antes. La temperatura de la insulina a inyectar debe ser de al menos 10°C.
 
-![Bild5](../../images/EOPatch/Bild5.png)
+![Image5](../images/EOPatch/Bild5.png)
 
-### patch pairing
-The Patch pairing screen will be displayed, and pairing will be attempted automatically. If communication is successful, the Bluetooth pairing request notification appears. Click OK and when the Bluetooth pairing request notification appears a second time with the authentication code, select OK again.
+### Emparejamiento del parche
+Se mostrará la pantalla de emparejamiento del patche y se intentará realizar el emparejamiento automáticamente. Si la comunicación se realiza correctamente, aparece una notificación de solicitud de emparejamiento Bluetooth. Haz clic en Aceptar y cuando aparezca por segunda vez la notificación de solicitud de emparejamiento Bluetooth con el código de autenticación, vuelva a seleccionar Aceptar.
 
-[Warning]
+[Advertencia]
 
-- For pairing, the patch and the smartphone must be located within 30 cm of each other.
-- After the patch booting is completed, the patch will beep every 3 minutes until the pairing is complete.
-- After booting the patch, the patch application must be completed via the app within 60 minutes. If the application cannot be completed within 60 minutes, the patch should be discarded.
+- Para el emparejamiento, el parche y el teléfono deben estar situados a menos de 30 cm el uno del otro.
+- Una vez completado el inicio del parche, éste emitirá un pitido cada 3 minutos hasta que se complete el emparejamiento.
+- Después de iniciar el parche, la aplicación del parche debe completarse mediante la aplicación, en un plazo de 60 minutos. Si la aplicación no puede completarse en 60 minutos, el parche deberá desecharse.
 
-![Bild6](../../images/EOPatch/Bild6.png) ![Bild7](../../images/EOPatch/Bild7.png) ![Bild8](../../images/EOPatch/Bild8.png)
-
-
-### patch preparation
-After removing the adhesive tape of the patch, check if the needle is sticking out. If there are no problems with the patch, click NEXT.
-
-![Bild9](../../images/EOPatch/Bild9.png)
-
-### Patch attachment
-Insulin should be injected in a spot with subcutaneous fat but few nerves or blood vessels, so it is recommended to use the abdomen, arm, or thigh for the patch attachment site. Choose a patch attachment site and apply the patch after disinfecting the location.
-
-[Warning]
-
-- Make sure to straighten the side of the patch tape attached to the body evenly, so that the patch adheres completely to the skin.
-- If the patch does not stick completely, air may enter between the patch and the skin, which can weaken the adhesive strength and waterproof effect of the patch.
-
-![Bild10](../../images/EOPatch/Bild10.png)
-
-### Safety Check
-When patching is complete, touch Start Safety Check. When the safety check is completed, the patch will beep once.
-
-[Warning]
-
-- For safe use, do not turn the needle action lever until the safety check has been completed.
-
-![Bild11](../../images/EOPatch/Bild11.png) ![Bild12](../../images/EOPatch/Bild12.png)
+![Image6](../images/EOPatch/Bild6.png) ![Image7](../images/EOPatch/Bild7.png) ![Image8](../images/EOPatch/Bild8.png)
 
 
-### Inserting the needle
-The needle is inserted by holding around the patch and turning the needle action lever more than 100° in the upward direction of the lever. There is a buzzer sound when the needle is inserted correctly. Turn the needle action lever further clockwise to release the lever. Click NEXT.
+### Preparación del parche
+Tras retirar la cinta adhesiva del parche, comprueba si la aguja sobresale. Si no hay problemas con el parche, haga clic en SIGUIENTE.
 
-[Caution]
+![Image9](../images/EOPatch/Bild9.png)
 
-- If you go to the next step without the buzzer sounding, a needle insertion error warning will appear.
+### Fijación del parche
+La insulina debe inyectarse en un lugar con grasa subcutánea, pero con pocos nervios o vasos sanguíneos, por lo que se recomienda utilizar el abdomen, el brazo o el muslo, como lugar de fijación del parche. Elije un lugar de fijación del parche y aplíqualo después de desinfectar la zona.
 
-## Discarding the patch
-Patches must be replaced in the case of low insulin levels, usage expiration, and defects. The recommended usage period for each patch is 84 hours after booting the patch.
+[Advertencia]
 
-### Discarding the patch
-Select EOPATCH2 at the top of the home screen and click the DISCARD/CHANGE PATCH button at the bottom. On the next screen, click the DISCARD PATCH button. A dialog box appears to confirm once more and if you select the DISCARD PATCH button, the disposal is completed.
+- Asegúrate de enderezar uniformemente el lado de la cinta adhesiva del parche pegado al cuerpo, para que se adhiera completamente a la piel.
+- Si el parche no se adhiere completamente, puede entrar aire entre el parche y la piel, lo que puede debilitar la fuerza adhesiva y el efecto impermeable del parche.
 
-![Bild13](../../images/EOPatch/Bild13.png) ![Bild14](../../images/EOPatch/Bild14.png) ![Bild15](../../images/EOPatch/Bild15.png) ![Bild16](../../images/EOPatch/Bild16.png)
+![Image10](../images/EOPatch/Bild10.png)
 
-## Suspending and Resuming Insulin Delivery
-Suspending insulin delivery also cancels both extended bolus and temporary basal. When resuming insulin delivery, the canceled extended bolus and temporary basal will not be resumed. And when insulin delivery is suspended, the patch will give a sound every 15 minutes.
+### Comprobación de seguridad
+Una vez finalizada la aplicación del parche, toca Iniciar comprobación de seguridad. Una vez finalizadas las comprobaciones de seguridad, el parche emitirá un pitido.
 
-### Suspending insulin delivery
-Select EOPATCH2 at the top of the home screen and click the SUSPEND button at the bottom right. When you select CONFIRM in the confirmation box, a time selection box appears. If you select the CONFIRM button after selecting the time, the insulin delivery will be suspended for the set amount of time.
+[Advertencia]
 
-![Bild17](../../images/EOPatch/Bild17.png) ![Bild18](../../images/EOPatch/Bild18.png) ![Bild19](../../images/EOPatch/Bild19.png)
+- Para un uso seguro, no gires la palanca de accionamiento de la aguja hasta que se haya completado la comprobación de seguridad.
+
+![Image11](../images/EOPatch/Bild11.png) ![Image12](../images/EOPatch/Bild12.png)
 
 
-### Resuming insulin delivery
-Select EOPATCH2 at the top of the home screen and click the RESUME button at the bottom right. Insulin delivery will resume by selecting CONFIRM in the confirmation dialog box.
+### Inserción de la aguja
+La aguja se inserta sujetando la zona alrededor del parche y girando la palanca de acción de la aguja más de 100°, en la dirección de la flecha de la palanca. Se escuchará un zumbido cuando la aguja se introduce correctamente. Gira aún más la palanca de acción de la aguja, en el sentido de las agujas del reloj para soltarla. Haz clic en SIGUIENTE
 
-![Bild20](../../images/EOPatch/Bild20.png) ![Bild21](../../images/EOPatch/Bild21.png)
+[Precaución]
 
-## Alarms/Warnings
+- Si vas al siguiente paso sin haber escuchado el zumbido, aparecerá un aviso de error de inserción de la aguja.
 
-### Alarm
+## Descartando el parche
+Los parches deben sustituirse en caso de: bajos niveles de insulina, caducidad de uso y defectos. El periodo de uso recomendado para cada parche es de 84 horas después de iniciarlo.
 
-Alarms are issued for emergency situations of the highest priority and require immediate action. The alarm signal does not disappear or time out until it is acknowledged. An alarm occurs when there is a problem with the patch being used, so there may be cases where the patch in use needs to be discarded and replaced with a new patch. The warning is displayed as a dialog box and switching to another screen is not possible until processing is completed.
+### Descartando el parche
+Selecciona EOPATCH2 en la parte superior de la pantalla de inicio y pulsa el botón DESCARTAR/CAMBIAR PARCHE, en la parte inferior. En la siguiente pantalla, haz clic en el botón DESCARTAR PARCHE. Aparecerá un cuadro de diálogo para confirmar una vez más, y si pulsas sobre el botón DESCARTAR PARCHE, se completará la eliminación.
 
-![Bild22](../../images/EOPatch/Bild22.png) ![Bild23](../../images/EOPatch/Bild23.png)
+![Image13](../images/EOPatch/Bild13.png) ![Image14](../images/EOPatch/Bild14.png) ![Image15](../images/EOPatch/Bild15.png) ![Image16](../images/EOPatch/Bild16.png)
 
-The different types of alarms are explained below.
+## Suspender y reanudar la administración de insulina
+La suspensión de la administración de insulina,  anula tanto el bolo extendido como la basal temporal. Al reanudar la administración de insulina, no se reanudará ni el bolo extendido, ni la basal temporal canceladas. Cuando se suspenda la administración de insulina, el parche emitirá un sonido cada 15 minutos.
 
-| Alarms                     | Explanation                                                                                                                                                                                                         |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir            | Occurs when the patch’s reservoir runs out of insulin.                                                                                                                                                              |
-| Patch expired              | Occurs when the patch usage time has expired, and no further insulin injections are possible.                                                                                                                       |
-| Occlusion                  | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
-| Power on self-test failure | Occurs when the patch finds an unexpected error during the post-boot self-test process.                                                                                                                             |
-| Inappropriate temperature  | Occurs when the patch is outside the normal operating temperature range during patch application and use. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition. |
-| Needle insertion Error     | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
-| Patch battery Error        | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                                                            |
-| Patch activation Error     | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                                             |
-| Patch Error                | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                                            |
+### Suspender la administración de insulina
+Selecciona EOPATCH2 en la parte superior de la pantalla de inicio y pulsa el botón SUSPENDER en la parte inferior derecha. Cuando selecciones CONFIRMAR en el cuadro de confirmación, aparecerá un cuadro de selección de hora. Si seleccionas el botón CONFIRMAR después de seleccionar la hora, la administración de insulina se suspenderá durante el tiempo establecido.
 
-### Warning
+![Image17](../images/EOPatch/Bild17.png) ![Image18](../images/EOPatch/Bild18.png) ![Image19](../images/EOPatch/Bild19.png)
 
-A warning occurs in a medium or low-priority situation. When a warning occurs, it is displayed as a notification in the Overview screen.
 
-![Bild24](../../images/EOPatch/Bild24.png)
+### Reanudación de la administración de insulina
+Selecciona EOPATCH2 en la parte superior de la pantalla de inicio y pulsa el botón REANUDAR en la parte inferior derecha. La administración de insulina se reanudará seleccionando CONFIRMAR en el cuadro de diálogo de confirmación.
 
-The different types of warnings are explained below.
+![Image20](../images/EOPatch/Bild20.png) ![Image21](../images/EOPatch/Bild21.png)
 
-| Warnings                     | Explanation                                                                                                                           |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| End of insulin suspend       | Occurs when the time set by the user has elapsed after the insulin infusion suspension has been completed.                            |
-| Low reservoir                | Occurs when the remaining amount of insulin in the patch is below the set amount.                                                     |
-| Patch operating life expired | Occurs when the patch usage period is over.                                                                                           |
-| Patch will expire soon       | Occurs 1 hour before the patch must be discarded.                                                                                     |
-| Incomplete Patch activation  | Occurs when more than 3 minutes have elapsed due to an interruption during patch application in the stage after pairing is completed. |
-| Patch battery low            | Occurs when the patch's battery is low.                                                                                               |
+## Alarmas/Advertencias
+
+### Alarmas
+
+Las alarmas se emiten en situaciones de emergencia de máxima prioridad y que requieren una actuación inmediata. La señal de alarma no desaparece hasta que se confirma. Se produce una alarma cuando hay un problema con el parche que se está utilizando, por lo que puede haber casos en los que sea necesario desechar el parche en uso y sustituirlo por uno nuevo. La advertencia se muestra como un cuadro de diálogo y no es posible cambiar a otra pantalla hasta que se complete el proceso.
+
+![Image22](../images/EOPatch/Bild22.png) ![Image23](../images/EOPatch/Bild23.png)
+
+A continuación, se explican los distintos tipos de alarmas.
+
+| Alarmas                            | Explicación                                                                                                                                                                                                                                                     |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Reservorio vacío                   | Se produce cuando el reservorio del parche se queda sin insulina.                                                                                                                                                                                               |
+| Parche caducado                    | Ocurre cuando el tiempo de uso del parche ha expirado y no es posible realizar más inyecciones de insulina.                                                                                                                                                     |
+| Oclusión                           | Se produce cuando parece que la entrada de insulina del parche está obstruida.                                                                                                                                                                                  |
+| Fallo en el auto-test de encendido | Se produce cuando el parche encuentra un error inesperado durante el proceso de autocomprobación posterior al arranque.                                                                                                                                         |
+| Temperatura inadecuada             | Se produce cuando el parche se encuentra fuera del intervalo normal de temperatura de funcionamiento, durante su aplicación y uso. Para hacer frente a esta alarma, mueva el parche a una condición de temperatura de funcionamiento adecuada (de 4,4° a 37°C). |
+| Error de inserción de la aguja     | Se produce cuando la inserción de la aguja no es normal durante el proceso de aplicación del parche. Comprueba que el borde de inserción de la aguja del parche y el botón de activación de la aguja están en línea recta.                                      |
+| Error de la batería del parche     | Se produce justo antes de que la batería interna del parche se agote y se apague.                                                                                                                                                                               |
+| Error de activación del parche     | Ocurre cuando la aplicación no consigue completar el proceso de aplicación del parche en los 60 minutos siguientes al inicio del mismo.                                                                                                                         |
+| Error del parche                   | Ocurre cuando el parche encuentra un error inesperado al aplicar y utilizar el parche.                                                                                                                                                                          |
+
+### Advertencias
+
+Una advertencia se produce en una situación de prioridad media o baja. Cuando se produce una advertencia, se muestra como una notificación en la pantalla de Inicio.
+
+![Image24](../images/EOPatch/Bild24.png)
+
+A continuación, se explican los distintos tipos de advertencias.
+
+| Advertencias                          | Explicación                                                                                                                                                                |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Fin de la suspensión de insulina      | Ocurre cuando ha transcurrido el tiempo establecido por el usuario tras finalizar la suspensión de la infusión de insulina.                                                |
+| Reservorio bajo                       | Se produce cuando la cantidad restante de insulina en el parche es inferior a la cantidad establecida.                                                                     |
+| Expiración de la vida útil del parche | Se produce cuando finaliza el periodo de uso del parche.                                                                                                                   |
+| El parche caducará pronto             | Se produce 1 hora antes de que deba desecharse el parche.                                                                                                                  |
+| Activación incompleta del parche      | Se produce cuando han transcurrido más de 3 minutos debido a una interrupción durante la aplicación del parche, en la fase posterior a la finalización del emparejamiento. |
+| Batería del parche baja               | Ocurre cuando la batería del parche está baja.                                                                                                                             |
 

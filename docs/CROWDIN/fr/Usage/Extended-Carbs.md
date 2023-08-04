@@ -1,14 +1,15 @@
+(Extended-Carbs-extended-carbs-ecarbs)=
 # Glucides étendus / "eGlucides"
 
 ## Que sont les eGlucides et quand sont-ils utiles?
 
-Avec une thérapie par pompe régulière, Les bolus étendus sont un bon moyen de traiter les repas gras ou absorbés lentement et dont l'impact sur l'augmentation de la glycémie est plus long que la durée d'action de l'insuline. Cependant dans un contexte de boucle, les bolus étendus n'ont pas autant d'intérêt (et posent des difficultés techniques) car il s'agit d'un débit de basal fixe élevé, qui va à l'encontre du fonctionnement de la boucle, qui ajuste dynamiquement le débit de basal. [Voir ci-dessous](../Usage/Extended-Carbs#pourquoi-les-bolus-etendus-ne-marchent-pas-avec-une-boucle-fermee) pour plus de détails.
+Avec une thérapie par pompe régulière, Les bolus étendus sont un bon moyen de traiter les repas gras ou absorbés lentement et dont l'impact sur l'augmentation de la glycémie est plus long que la durée d'action de l'insuline. Cependant dans un contexte de boucle, les bolus étendus n'ont pas autant d'intérêt (et posent des difficultés techniques) car il s'agit d'un débit de basal fixe élevé, qui va à l'encontre du fonctionnement de la boucle, qui ajuste dynamiquement le débit de basal. [Voir ci-dessous](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) pour plus de détails.
 
 Mais le besoin de prendre en charge de tels repas existe toujours. C'est pourquoi AndroidAPS depuis la version 2.0 prend en charge ce que l'on appelle les glucides étendus ou eGlucides.
 
 Les eGlucides sont des glucides qui sont actifs pendant plusieurs heures. Pour les repas standard avec plus de glucides que de graisse/protéines, entrer les glucides à l'avance (et réduire le bolus initial si nécessaire) est généralement suffisant pour éviter d'injecter trop tôt de l'insuline.  Mais pour les repas à absorption plus lente où l'entrée de la totalité des glucides au début entraîne trop d'IA injectée par les SMB, les eGlucides peuvent être utilisés pour simuler plus précisément comment les glucides (et tous les équivalents de glucides que vous entrez pour les autres macronutriments) sont absorbés et influencent la glycémie. Grâce à cette information, la boucle peut gérer les glucides en administrant les SMB de façon plus progressive, ce qui peut être assimilé à un bolus prolongé dynamique (cela devrait également fonctionner sans les SMB, mais probablement moins efficacement).
 
-**Remarque :** Les eGlucides ne sont pas limités aux repas lourds en graisses/protéines : ils peuvent également être utilisés pour aider dans toutes les situations où il y a des influences qui augmentent les glycémies, par ex. lors de la prise d'autres médicaments comme les corticostéroïdes.
+**Remarque :** Les eGlucides ne sont pas limités aux repas lourds en graisses/protéines : ils peuvent également être utilisés pour aider dans toutes les situations où il y a des influences qui augmentent les glycémies, par ex.
 
 ## Mécanique d'utilisation d'eGlucides
 
@@ -27,7 +28,7 @@ Les eGlucides dans l’onglet Accueil, notez les glucides entre parenthèses dan
 Les glucides qui se seront pris en compte plus tard sont en orange foncé dans l'onglet Traitement :
 
 ```{image} ../images/eCarbs_Treatment.png
-:alt: "eGlucides \xE0 venir dans l'onglet Traitement"
+:alt: eGlucides à venir dans l'onglet Traitement
 ```
 
 ______________________________________________________________________
@@ -40,15 +41,16 @@ ______________________________________________________________________
 
 La configuration recommandée est d'utiliser le plug-in OpenAPS SMB, avec les SMB activés ainsi que le paramètre *Activer SMB avec les glucides* activé.
 
-Un scénario par ex. pour une pizza pourrait être de donner un bolus (partiel) à l'avance via l'*Assistant* puis d'utiliser le bouton *Glucides* pour entrer les glucides restants pendant une durée de 4-6 heures, en commençant après 1 ou 2 heures.
+Par exemple pour une pizza, cela pourrait être de donner un bolus (partiel) à l'avance via l'*Assistant* puis d'utiliser le bouton *Glucides* pour entrer les glucides restants pendant une durée de 4-6 heures, en commençant après 1 ou 2 heures.
 
-**Remarques importantes :** Vous devrez essayer et voir quelles sont les valeurs qui marchent pour vous bien sûr. Vous pouvez également ajuster soigneusement le paramètre *Max minutes de basal pour limiter SMB* pour rendre l'algorithme plus ou moins agressif.
-Avec des repas faibles en glucides et riches en graisses/protéines, il peut être suffisant d'utiliser uniquement des eGlucides sans bolus manuels (voir le blog ci-dessus). Lorsque des eGlucides sont générés, une note Careportal est également créée pour pouvoir documenter toutes les entrées, et faciliter les itérations et l'amélioration des entrées.
+**Remarques importantes :** Vous devrez essayer et voir quelles sont les valeurs qui marchent pour vous bien sûr. Vous pouvez également ajuster soigneusement le paramètre *Max minutes de basal pour limiter SMB* pour rendre l'algorithme plus ou moins agressif. Avec des repas faibles en glucides et riches en graisses/protéines, il peut être suffisant d'utiliser uniquement des eGlucides sans bolus manuels (voir le blog ci-dessus). Lorsque des eGlucides sont générés, une note Careportal est également créée pour pouvoir documenter toutes les entrées, et faciliter les itérations et l'amélioration des entrées.
 
+(Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Bolus étendu et pourquoi ils ne fonctionneront pas dans une boucle fermée ?
 
-Comme mentionné ci-dessus, les bolus étendus ou mixtes ne fonctionnent pas vraiment dans un environnement en boucle fermée. [Voir ci-dessous](#pourquoi-les-bolus-etendus-ne-marchent-pas-avec-une-boucle-fermee) pour plus de détails
+Comme mentionné ci-dessus, les bolus étendus ou mixtes ne fonctionnent pas vraiment dans un environnement en boucle fermée. [Voir ci-dessous](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) pour plus de détails
 
+(Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Bolus étendus et passage en boucle ouverte - uniquement pour les pompesDana et Insight
 
 Certaines personnes ont demandé une option pour utiliser des bolus étendus dans AAPS, car ils voulaient traiter les aliments spéciaux comme ils avaient l'habitude de le faire.
@@ -57,12 +59,13 @@ C'est pourquoi à partir de la version 2.6, il y a une option pour un bolus éte
 
 - La boucle fermée sera automatiquement arrêtée et basculera en mode boucle ouverte pour la durée du bolus étendu.
 - La quantité d'insuline, le temps restant et le temps total seront affichés sur la page d'accueil.
-- Sur les pompes Insight, les bolus étendus *ne sont pas disponibles* si [Activer l'émulation de DBT](../Configuration/Accu-Chek-Insight-Pump#parametres-dans-aaps) est activé.
+- Sur les pompes Insight, les bolus étendus *ne sont pas disponibles* si [Activer l'émulation de DBT](Accu-Chek-Insight-Pump-settings-in-aaps) est activé.
 
 ```{image} ../images/ExtendedBolus2_6.png
-:alt: "Bolus \xE9tendus dans AAPS 2.6"
+:alt: Bolus étendus dans AAPS 2.6
 ```
 
+(Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Pourquoi les bolus étendus ne marchent pas avec une boucle fermée
 
 1. La boucle détermine que maintenant 1,55 U / h doit être délivré. Que ce soit administré sous forme de bolus étendu ou de DBT n'a pas d'importance pour l'algorithme. En fait, certaines des pompes utilisent le bolus étendu. Que devrait-il arriver alors ? La plupart des pilotes de pompe arrêtent alors le bolus prolongé -> Vous n’avez même pas eu besoin de le démarrer.

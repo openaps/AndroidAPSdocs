@@ -84,11 +84,11 @@ However there is a variant of the patched app supporting LibreView with enabled 
 The blood sugar values are received on the smartphone by the xDrip+ App.
 
 -   If not already set up then download xDrip+ app and install one of the latest nightly builds from [here](https://github.com/NightscoutFoundation/xDrip/releases).
--   In xDrip+ select "Libre2 (patched App)" as data source
+-   In xDrip+ select "Libre2 patched" or "Libre 2 (patched App)" as data source
 -   If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for trouble shooting.
 -   In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
 -   In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
--   to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set [Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps"](../Configuration/xdrip#identify-receiver)
+-   to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set [Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps"](xdrip-identify-receiver)
 -   If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
 
 ![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
@@ -104,10 +104,11 @@ After a sensor change xDrip+ will automatically detect the new sensor and will d
 ## Step 4: Configure AndroidAPS (for looping only)
 
 -   In AndroidAPS go to Config Builder > BG Source and check 'xDrip+'
--   If AndroidAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip#identify-receiver).
+-   If AndroidAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](xdrip-identify-receiver).
 
 Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within SMB algorithm. The BG values of Libre 2 are not smooth enough to use it safely. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 
+(Libre2-experiences-and-troubleshooting)=
 ## Experiences and Troubleshooting
 
 ### Connectivity

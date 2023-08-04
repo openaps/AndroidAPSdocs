@@ -1,3 +1,5 @@
+(Accessing-logfiles-accessing-logfiles)=
+
 # Logdateien erhalten
 
 * Verbinde das Smartphone mit dem Computer im Dateiübertragungsmodus

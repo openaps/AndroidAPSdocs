@@ -1,3 +1,5 @@
+(Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)=
+
 # Ich stecke fest; Was kann ich tun? Wen kann ich fragen?
 
 Dieses Projekt basiert auf ehrenamtlicher Arbeit, weshalb einige Regeln existieren, um zusätzliche Arbeit für diejenigen zu vermeiden, die so freundlich sind, ihre Zeit und ihre Fähigkeiten zur Verfügung zu stellen:
@@ -8,19 +10,19 @@ Dieses Projekt basiert auf ehrenamtlicher Arbeit, weshalb einige Regeln existier
 * Stufe 4: Erstelle eine [Problembeschreibung](https://github.com/nightscout/AndroidAPS/issues) (Issue) und füge deine [Log-Dateien](../Usage/Accessing-logfiles.md) hinzu.
 * Stufe 5: Schreibe eine E-Mail an *developers@androidaps.org* (nur dann, wenn persönliche Daten benötigt werden, die nicht auf einem öffentlichen Kanal verbreitet werden sollten und wenn dein Problem nicht auf einer anderen Stufe gelöst wurde)
 
-Um Unterstützung für CGM-Quellen zu erhalten, verwende bitte die Facebook-Gruppen oder discord Kanäle für das spezielle System (z.B. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)), für Unterstützung bei Nightscout benutze [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/), da die Benutzer dort mehr über die speziellen Systeme wissen, als die Leute hier, die alle unterschiedliche Systeme verwenden.
+Um Unterstützung für CGM-Quellen zu erhalten, verwende bitte die Facebook-Gruppen oder den Discord Kanäle für das spezielle System (z.B. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)), für Unterstützung bei Nightscout benutze [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/), da die Benutzer dort mehr über die speziellen Systeme wissen, als die Leute hier, die alle unterschiedliche Systeme verwenden.
 
 ## Schließe dich der AndroidAPS users Gruppe auf Facebook an!
 
-Tritt der [AndroidAPS Facebook Gruppe (englisch)](https://www.facebook.com/groups/1900195340201874/) bei. Du kannst dort alle Fragen zum Algorithmus stellen, alle Setup-Probleme posten, die du mit Android Studio und der Erstellung der APK hast, alle Fragen zur Verwendung der App anbringen und auch Tipps bekommen, wie du die App optimal nutzen kannst. Es gibt auch eine Gruppe für Benutzer der Combo Pumpe [AAPSCombo (englisch)](https://www.facebook.com/groups/127507891261169/), die ein etwas spezifischeres Setup haben.
+Tritt der [AndroidAPS Facebook Gruppe (englisch)](https://www.facebook.com/groups/1900195340201874/) bei. Du kannst dort alle Fragen zum Algorithmus stellen, alle Setup-Probleme posten, die Du mit Android Studio und der Erstellung der APK hast, alle Fragen zur Verwendung der App anbringen und auch Tipps bekommen, wie Du die App optimal nutzen kannst. Es gibt auch eine Gruppe für Benutzer der Combo Pumpe [AAPSCombo](https://www.facebook.com/groups/127507891261169/), die ein etwas spezifischeres Setup haben.
 
 ## Weitere Informationsquellen in englischer Sprache
 
 * [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): deckt alle DIY Closed Loop Systeme ab (OpenAPS, Loop und AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
 * [xDrip+ - ](https://xdrip.readthedocs.io/en/latest/)
-* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in general
-* [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
+* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM im Allgemeinen
+* [AndroidAPS bei Discord](https://discord.gg/4fQUWHZ4Mw)
 
 ## Länder- bzw. sprachspezifische Informationsquellen
 

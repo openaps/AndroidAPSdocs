@@ -1,11 +1,13 @@
 # Temel kullanım için Accu-Chek Combo İpuçları
 
+**NOT:** AAPS sürüm 3.2'den itibaren [yeni Combo sürücüsü](../Configuration/Accu-Chek-Combo-Pump-v2.md) (bazen "combov2" şeklinde anılır) eklendi. Eski sürücüye "Ruffy tabanlı sürücü" de denir. Bu dokümanın bazı bölümleri yalnızca eski sürücü için geçerlidir. Bunlara göre açıklama yapılacaktır.
+
 ## Sorunsuz kullanim nasıl sağlanır
 
 * Her zaman **akıllı telefonunuzu yanınızda bulundurun**, geceleri yatağınızın yanında bırakın. Siz uyurken pompanız vücudunuzun arkasında veya altında durabileceğinden, daha yüksek bir konum (bir raf veya tahta üzerinde) en iyi sonucu verir.
 * Her zaman pompa pilinin mümkün olduğunca dolu olduğundan emin olun. Pille ilgili ipuçları için pil bölümüne bakın.
-* Sistem çalışırken **ruffy uygulamayasına dokunmamak** en iyisidir. Uygulama yeniden başlatılırsa pompa bağlantısı kesilebilir. Pompa ruffy'ye bağlandıktan sonra tekrar bağlanmaya gerek yoktur. Telefon yeniden başlatıldıktan sonra bile bağlantı otomatik olarak yeniden kurulur. Mümkünse, yanlışlıkla açmamak için uygulamayı kullanılmayan bir ekrana veya akıllı telefonunuzdaki bir klasöre taşıyın.
-* Döngü sırasında yanlışlıkla uygulamayı açarsanız, akıllı telefonu hemen yeniden başlatmak en iyisidir.
+* Sistem çalışırken **ruffy uygulamayasına dokunmamak** en iyisidir. (Yalnızca eski sürücü için geçerlidir) Uygulama yeniden başlatılırsa pompa bağlantısı kesilebilir. Pompa ruffy'ye bağlandıktan sonra tekrar bağlanmaya gerek yoktur. Telefon yeniden başlatıldıktan sonra bile bağlantı otomatik olarak yeniden kurulur. Mümkünse, yanlışlıkla açmamak için uygulamayı kullanılmayan bir ekrana veya akıllı telefonunuzdaki bir klasöre taşıyın.
+* Döngü sırasında yanlışlıkla uygulamayı açarsanız, akıllı telefonu hemen yeniden başlatmak en iyisidir. (Yalnızca eski sürücü için geçerlidir)
 * Mümkün olduğunda, pompayı yalnızca AndroidAPS uygulaması aracılığıyla çalıştırın. Bunu kolaylaştırmak için pompa üzerindeki tuş kilidini **POMPA AYARLARI / TUŞ KİLİDİ / AÇIK** altında etkinleştirin. Sadece rezervuar veya pilin değiştirilmesi gerektiğinde pompanın düğmelerini kullanmak gerekir. ![Tuş kilidi](../images/combo/combo-tips-keylock.png)
 
 ## Pompaya erişilemiyor. Ne yapmalı?
@@ -17,15 +19,19 @@
 
 ### Pompanın erişilebilirliğini geri yükleyin
 
-* AndroidAPS bir **pompaya erişilemiyor** alarmı bildirdiğinde, önce tuş kilidini kaldırın ve **pompadaki herhangi bir tuşa basın** (ör. "aşağı" düğmesi). Pompa ekranı kapanır kapanmaz, AndroidAPS'de **Kombo Sekmesi**'nde **GÜNCELLE**'ye basın. Çoğunlukla iletişim tekrar çalışır.
-* Bu işe yaramazsa, akıllı telefonunuzu yeniden başlatın. Yeniden başlatmanın ardından AndroidAPS ve ruffy yeniden etkinleştirilecek ve pompa ile yeni bir bağlantı kurulacaktır.
+* AndroidAPS bir **pompaya erişilemiyor** alarmı bildirdiğinde, önce tuş kilidini kaldırın ve **pompadaki herhangi bir tuşa basın** (ör. "aşağı" düğmesi). Pompa ekranı kapanır kapanmaz, AAPS'de **Kombo Sekmesi**'nde **GÜNCELLE**'ye basın. Çoğunlukla iletişim tekrar çalışır.
+* Bu işe yaramazsa, akıllı telefonunuzu yeniden başlatın. Yeniden başlatmanın ardından AAPS yeniden etkinleştirilecek ve pompa ile yeni bir bağlantı kurulacaktır. Eski sürücüyü kullanıyorsanız, ruffy de yeniden etkinleştirilecektir.
 * Farklı akıllı telefonlarla yapılan testler, bazı akıllı telefonların "pompa ulaşılamaz" hatasını diğerlerinden daha sık tetiklediğini göstermiştir. [AAPS Telefonları](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) başarıyla test edilmiş akıllı telefonlar listesi. 
 
 ### Sık sık yapılan iletişim hatalarının temel nedenleri ve sonuçları
 
 * **Düşük bellek** (veya **agresif güç tasarrufu** ayarları) olan telefonlarda, AndroidAPS genellikle kapatılır. Ana ekrandaki Bolus ve Hesap Makinesi düğmelerinin, sistem başlatılmakta olduğu için AAPS'yi açarken gösterilmemesinden anlayabilirsiniz. Bu başlangıçta "pompa ulaşılamaz alarmlarını" tetikleyebilir. Combo sekmesinin **Son Bağlantı** alanında, AndroidAPS'nin pompayla en son ne zaman iletişim kurduğunu kontrol edebilirsiniz. 
 
-![Pompa ulaşılamıyor](../images/combo/combo-tips-pump-unreachable.png) ![Pompayla bağlantı yok](../images/combo/combo-tips-no-connection-to-pump.png)
+![Pompa'ya ulaşılamıyor](../images/combo/combo-tips-pump-unreachable.png)
+
+![Pompayla bağlantı yok (eski sürücü sekmesinde gösterildiği gibi)](../images/combo/combo-tips-no-connection-to-pump.png)
+
+![Pompayla bağlantı yok (yeni sürücü sekmesinde gösterildiği gibi)](../images/combo/combov2-tips-no-connection-to-pump.png)
 
 * Uygulama yeniden başlatıldığında bazal profil pompadan okunduğu için bu hata pompanın pilini daha hızlı tüketebilir.
 * Ayrıca pompa üzerindeki bir düğmeye basılana kadar pompanın gelen tüm bağlantıları reddetmesine neden olan hataya neden olma olasılığını da artırır. 
@@ -46,9 +52,11 @@
 ![Bluetooth etkin](../images/combo/combo-tips-compo.png)
 
 * Pompa üzerindeki tuş kilidini serbest bırakın, pompayı durdurma moduna getirin, muhtemelen iptal edilmiş bir geçici bazal oranı onaylayın ve pili hızlı bir şekilde değiştirin.
-* Pompanın üzerindeki saat, pil değişiminden sonra sıfırlandıysa, pompadaki tarih ve saati, AAPS çalıştıran telefonunuzdaki tarih/saat ile aynı olacak şekilde ayarlayın.
+* Eski sürücüyü kullanırken, pompanın üzerindeki saat, pil değişiminden sonra sıfırlandıysa, pompadaki tarih ve saati, AAPS çalıştıran telefonunuzdaki tarih/saat ile aynı olacak şekilde ayarlayın. (Yeni sürücü, pompanın tarihini ve saatini otomatik olarak günceller.)
 * Ardından ana ekranda **Askıya Alınan Döngü** simgesine basarken pompayı tekrar çalışma moduna getirin **Devam et** öğesini seçin.
 * AndroidAPS, bir sonraki kan şekeri değerinin gelmesiyle gerekli bir geçici bazal oranını yeniden ayarlayacaktır. 
+
+(Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
 
 ### Pil tipi ve kısa pil ömrünün nedenleri
 
@@ -64,12 +72,14 @@ Farklı pil türlerinin tipik kullanım ömrü aralıkları aşağıdaki gibidir
 
 Pil ömrünüz yukarıda belirtilen aralıklardan önemli ölçüde kısaysa, lütfen aşağıdaki olası nedenleri kontrol edin:
 
-* [ruffy Uygulamasının](https://github.com/MilosKozak/ruffy) vMarch 2018'den sonraki sürümleri, pompa pil ömrünü önemli ölçüde iyileştirdi. Kısa pil ömrüyle ilgili sorunlarınız varsa en yeni sürümde olduğunuzdan emin olun.
+* [ruffy Uygulamasının](https://github.com/MilosKozak/ruffy) Mart 2018'den sonraki sürümleri, pompa pil ömrünü önemli ölçüde iyileştirdi. (Yalnızca eski sürücü için geçerlidir) Kısa pil ömrüyle ilgili sorunlarınız varsa en yeni sürümde olduğunuzdan emin olun.
 * Pilleri kısmen kısa devre yapan ve hızlı bir şekilde boşaltan Combo pompanın vidalı pil kapağının bazı çeşitleri vardır. Bu sorunu olmayan kapaklar, altın metal kontaklardan tanınabilir.
 * Pompa saati kısa bir pil değişiminde "hayatta kalmazsa", kısa bir elektrik kesintisi sırasında saati çalıştıran kapasitör arızalı olabilir. Bu durumda, pompanın Roche tarafından değiştirilmesi yardımcı olabilir, bu garanti süresi boyunca bir sorun teşkil etmez. 
 * Akıllı telefon donanımı ve yazılımı (Android işletim sistemi ve bluetooth stack), tam faktörler henüz tam olarak bilinmese de, pompanın pil ömrünü de etkiler. İmkanınız varsa, başka bir akıllı telefon deneyin ve pil ömürlerini karşılaştırın.
 
 ## Gün ışığından yararlanma saati değişiklikleri
+
+**NOT**: Yeni sürücü, tarihi ve saati otomatik olarak ayarlar ve yaz saati uygulaması değişikliklerini kendi başına gerçekleştirir. Aşağıdaki adımların tümü yalnızca eski sürücü için geçerlidir.
 
 * Şu anda birleşik sürücü, pompanın zamanının otomatik olarak ayarlanmasını desteklememektedir.
 * Gün ışığından yararlanma saati değişikliği gecesinde, akıllı telefonun saati güncellenir, ancak pompanın saati değişmez. Bu sistemler arasında saat 3'te farklılık gösterdiği için bir alarma yol açar.
