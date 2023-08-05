@@ -1,4 +1,4 @@
-# Component Overview
+# # Обзор компонентов
 
 AAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the [component setup](index-component-setup), too.
 

@@ -1,12 +1,12 @@
 # AKRB hesaplaması
 
-## How does AAPS calculate the COB value?
+## AAPS AKRB değerini nasıl hesaplar?
 
-When carbs are entered as part of a meal or correction, AAPS adds them to the current carbs on board (COB). AAPS then absorbs (removes) carbs based on observed deviations to BG values. The rate of absorption depends on the carb sensitivity factor. This is not a profile value but is calculated as ISF/IC and is how many mg/dl 1g of carbs will raise your BG.
+Karbonhidratlar bir yemeğin veya düzeltmenin bir parçası olarak girildiğinde, AAPS bunları aktif karbonhidratlara (AKRB) ekler. AAPS, KŞ değerlerinde gözlemlenen sapmalara dayalı olarak karbonhidratları emer (kaldırır). Emilim oranı, karbonhidrat duyarlılık faktörüne bağlıdır. Bu bir profil değeri değildir, ancak İDF/Kİ olarak hesaplanır ve 1 g karbonhidratın KŞ'nizi kaç mg/dl yükselteceğini gösterir.
 
-For example, if your profile ISF is 100 and your IC is 5, your CSF would be 20. For every 20 mg/dl your BG goes up, 1g of carbs are absorbed by AAPS. Positive IOB also effects this calculation. So, if AAPS expected your BG to go down by 20 mg/dl because of IOB and it instead stayed flat, it would also absorb 1g of carbs.
+Örneğin, profil İDF'niz 100 ve Kİ'niz 5 ise, KDF'niz 20 olacaktır. Kan şekerinizin yükseldiği her 20 mg/dl için, 1 g karbonhidrat AAPS tarafından emilir. Pozitif AKRB de bu hesaplamayı etkiler. Dolayısıyla, AAPS, KŞ'nizin AİNS nedeniyle 20 mg/dl düşmesini beklerse ve bunun yerine düz kalırsa, 1 g karbonhidrat emer.
 
-Carbs will also be absorbed via the methods described below based on what sensitivity algorithm is used.
+Karbonhidratlar, hangi hassasiyet algoritmasının kullanıldığına bağlı olarak aşağıda açıklanan yöntemlerle de emilecektir.
 
 ### Oref1
 
@@ -31,7 +31,7 @@ KŞ sapmalarından hesaplanan değer yerine minimum karbonhidrat emilimi (min_5m
 
 AAPS, bir önceki öğünden AKRB ile bolus yapmak üzereyseniz, algoritma mevcut AKRB hesaplamasının yanlış olabileceğini düşünür ve sizi uyarır. Bu durumda bolus sihirbazından sonraki onay ekranında size ek bir ipucu verecektir.
 
-### How does AAPS detect wrong COB values?
+### AAPS, yanlış AKRB değerlerini nasıl tespit eder?
 
 Normalde AAPS, karbonhidrat emilimini KŞ sapmaları yoluyla tespit eder. Karbonhidratları girdiyseniz, ancak AAPS bunların KŞ sapmaları aracılığıyla tahmini emilimini göremezse, bunun yerine emilimi hesaplamak için [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) yöntemini kullanır. ('fallback' olarak adlandırılır). Bu yöntem, KŞ sapmalarını dikkate almadan yalnızca minimum karbonhidrat emilimini hesapladığı için yanlış AKRB değerlerine yol açabilir.
 

@@ -182,7 +182,7 @@ Select the pump you are using.
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
 
 * [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
-* [Omnipod Eros](OmnipodEros.md)
+* [Omnompod Eros](OmnipodEros.md)
 * [Omnipod DASH](OmnipodDASH.md)
 * [Medtronic](MedtronicPump.md)
 * [Diaconn G8](DiaconnG8.md)

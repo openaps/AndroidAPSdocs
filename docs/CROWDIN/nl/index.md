@@ -6,7 +6,7 @@ AAPS is an open source app for people living with insulin-dependent diabetes tha
 
 The app does *not* use self-learning artificial intelligence. Instead, the calculations of AAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons.
 
-De app is niet verkrijgbaar in de Google Play store - om juridische redenen moet iedere gebruiker de app zelf vanuit de broncode bouwen.
+The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
 
 ```{admonition} Ask for help - Writing Docs
 :class: note

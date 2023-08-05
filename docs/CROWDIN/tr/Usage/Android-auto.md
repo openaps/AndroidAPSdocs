@@ -74,16 +74,16 @@ In the **developer settings** enable the "Unknown sources".
 
 Now you can quit developer mode if you want. Tap three dots menu on the top right to do so.
 
-## Show notifications in car
+## Arabada bildirimlerin gösterilmesi
 
-Tap the **number icon** on the lower right side in Android Auto in your car.
+Arabanızda Android Auto'da sağ alt taraftaki **sayı simgesine** dokunun.
 
 ![number icon - Android Auto in car](../images/android_auto_11.png)
 
-Your CGM value wil be shown as follows.
+CGM değerleri aşağıdaki gibi gösterilecektir.
 
 ![AAPS CGM data on Android Auto](../images/android_auto_01.png)
 
-## Troubleshooting:
+## Sorun giderme:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](Android-auto-AAPS-settings-for-android-auto) in Android and if [Android Auto has access rights to notifications](Android-auto-AAPS-settings-in-android-auto-app-on-your-phone).
+* Bildirimleri görmüyorsanız, [AAPS'in bildirimleri göstermesine izin verdiğinizi](Android-auto-AAPS-settings-for-android-auto) ve android için de [Android Auto'nun bildirimlere erişim hakları olduğunu kontrol edin](Android-auto-AAPS-settings-in-android-auto-app-on-your-phone).
