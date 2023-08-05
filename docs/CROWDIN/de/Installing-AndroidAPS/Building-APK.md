@@ -226,10 +226,10 @@ Klicke auf dem Android Studio Willkommensbildschirm auf "Customize" \[Anpassen\]
     
     ![Einstellungen öffnen](../images/studioSetup/30_Settings.png)
 
-* Doppelklicke auf Appearance & Behaviour, um das Untermenü zu öffnen (1).
+* Double-click on Languages & Frameworks to open its submenu (1).
 
-* Doppelklicke auf System Settings (2) und wähle Android SDK (3).
-* Markiere die Box links neben "Android 9.0 (Pie)" (4) (API Level 28).
+* Select Android SDK (2).
+* Tick the box left of "Android 9.0 (Pie)" (3) (API Level 28).
     
     ![SDK-Einstellungen](../images/studioSetup/31_AndroidSDK.png)
 
