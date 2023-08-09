@@ -45,9 +45,9 @@ In order to allow users with older Android to use older version of AAPS new vers
 - Use AAPS version **2.6.2**
 - Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.6.2
 
-## WatchOS version
+## WearOS version
 
-- AAPS 3.2 requires at least WatchOS with Android 7.1
+- AAPS 3.2 requires at least WearOS API level 25 (Android 7.1)
 
 ## Version 3.2.0
 
