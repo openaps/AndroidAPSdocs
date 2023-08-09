@@ -16,7 +16,7 @@ Si no se actualiza durante otros 30 días (90 días a partir de la fecha de la n
 Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AAPS no sólo proporcionan nuevas características, sino también importantes correcciones de seguridad. Por lo tanto, es necesario actualizar lo antes posible. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
 
 ```{admonition} First version of AAPS
-La primera versión de prueba comenzó en 2015. En 2016 se publicó la primera versión.
+La primera versión de prueba comenzó en 2015. In 2016 has been the first released version.
 
 La cronología de estos lanzamientos no está disponible en este momento, pero como es una pregunta recurrente, lo documentamos aquí.
 
@@ -43,6 +43,10 @@ Se han lanzado nuevas versiones de AAPS que sólo comprueban la versión de Andr
 - Usa la versión de AAPS **2.6.2**
 - Descargar el código de AAPS desde <https://github.com/nightscout/AndroidAPS> branch 2.6.2
 
+## WearOS version
+
+- AAPS 3.2 requires at least WearOS API level 25 (Android 7.1)
+
 ## Versión 3.2.0
 
 Fecha de lanzamiento: XX-XX-2023
@@ -62,6 +66,7 @@ Fecha de lanzamiento: XX-XX-2023
 
 - Controlador de bomba EOPatch2 / Glucomen Day Pump @jungsomyeonggithub @MilosKozak
 - Controlador de bomba Accu-Chek Combo V2 (sin necesidad de Ruffy) @dv1
+- Medtrum Nano driver @jbr7rr
 - Controlador de bomba Korean DanaI @MilosKozak
 - Soporte al MCG Glunovo @christinadamianou
 - Soporte a Dexcom G7 @MilosKozak @rICTx-T1D @khskekec
