@@ -18,7 +18,7 @@ Lütfen bu değişikliğin sizi rahatsız etmeyi amaçlamadığını, ancak güv
 ```{admonition} First version of AAPS
 :class: not
 
-İlk test sürümü 2015'te başladı. 2016 yılında ilk sürüm yayımlandı.
+İlk test sürümü 2015'te başladı. In 2016 has been the first released version.
 
 Bu yayımların kronolojisi şu anda mevcut değil, ancak bu sorular birçok kez sorulduğu için burada dokümante ediyoruz.
 
@@ -45,6 +45,10 @@ Daha eski Android'e sahip kullanıcıların AAPS'nin eski sürümünü kullanmas
 - AAPS **2.6.2** sürümünü kullanın
 - AAPS kodunu <https://github.com/nightscout/AndroidAPS> 2.6.2 şubesinden indirin
 
+## WearOS version
+
+- AAPS 3.2 requires at least WearOS API level 25 (Android 7.1)
+
 ## Sürüm 3.2.0
 
 Yayınlanma tarihi: XX-XX-2023
@@ -64,6 +68,7 @@ Yayınlanma tarihi: XX-XX-2023
 
 - EOPatch2 / GlucomenDay pompa sürücüsü @jungsomyeonggithub @MilosKozak
 - ComboV2 pompa sürücüsü (Ruffy'ye gerek yok) @dv1
+- Medtrum Nano driver @jbr7rr
 - Kore DanaI desteği @MilosKozak
 - Glunovo CGM desteği @christinadamianou
 - G7 desteği @MilosKozak @rICTx-T1D @khskekec
