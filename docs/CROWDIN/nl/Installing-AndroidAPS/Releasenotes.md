@@ -64,6 +64,7 @@ Release date: XX-XX-2023
 
 - EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
 - ComboV2 pump driver (no need of Ruffy) @dv1
+- Medtrum Nano driver @jbr7rr
 - Korean DanaI support @MilosKozak
 - Glunovo CGM support @christinadamianou
 - G7 support @MilosKozak @rICTx-T1D @khskekec
