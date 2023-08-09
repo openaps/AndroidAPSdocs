@@ -18,7 +18,7 @@ You will receive the following information as soon as a new update is available:
 ```{admonition} First version of AAPS
 :class: note
 
-The first test version started already in 2015. In 2016 has beend the first released version.
+The first test version started already in 2015. In 2016 has been the first released version.
 
 The chronology of these releases is not available at the moment but as this questions is asked severeal times we document it here.
 
@@ -44,6 +44,10 @@ In order to allow users with older Android to use older version of AAPS new vers
 
 - Use AAPS version **2.6.2**
 - Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.6.2
+
+## WearOS version
+
+- AAPS 3.2 requires at least WearOS API level 25 (Android 7.1)
 
 ## Version 3.2.0
 
