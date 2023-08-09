@@ -18,7 +18,7 @@ Please understand that this change is not intended to bug you but is due to safe
 ```{admonition} First version of AAPS
 :class: note
 
-The first test version started already in 2015. In 2016 has beend the first released version.
+The first test version started already in 2015. In 2016 has been the first released version.
 
 The chronology of these releases is not available at the moment but as this questions is asked severeal times we document it here.
 
