@@ -1,6 +1,6 @@
 # Medtrum Nano
 
-These instructions are for configuring the Medtrum Nano insulin pump. **The Medtrum driver is Planned but not commited for AAPS 3.2 (next version)!**
+These instructions are for configuring the Medtrum Nano insulin pump. **The Medtrum driver is planned but not commited for AAPS 3.2 (next version)!**
 
 This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.
 
@@ -105,11 +105,13 @@ Set this to a sensible value for your insulin requirements.
 
 #### Activate patch from the Medtrum overview Tab
 
-Go to the Medtrum TAB in the AAPS interface and press the **Change Patch** button.
+Navigate to the Medtrum TAB in the AAPS interface and press the **Change Patch** button. (TODO: Screenshot)
 
 If a patch is already active, you will be prompted to deactive this patch first - See Deactivate patch below.
 
 Follow the prompts to fill and activate a new patch. Please note - it is important to only connect the pump base to the reservoir patch at the step when you are prompted to do so. **You must only put the pump on your body and insert the cannula when prompted to during the activation process (after priming is complete).**
+
+1. (TODO: Activation Steps with Screenshots)
 
 ### Deactivate patch
 
