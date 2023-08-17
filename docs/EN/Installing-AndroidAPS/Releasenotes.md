@@ -87,7 +87,7 @@ Release date: XX-XX-2023
 - Diaconn driver fixes @miyeongkim
 - AAPSClient provides info if main phone is plugged in electricity @MilosKozak
 - Change in BolusWizard. If CGM is not available percentage is ignored (ie 100% is used)
-- new 125k+ lines of code, changed 150k lines
+- new 150k+ lines of code, changed 156k lines
 
 ## Version 3.1.0
 
