@@ -18,7 +18,7 @@ Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln,
 ```{admonition} First version of AAPS
 :class: note
 
-Die erste Testversion gab es bereits 2015. Im 2016 wurde dann das erste Release veröffentlicht.
+Die erste Testversion gab es bereits 2015. In 2016 has been the first released version.
 
 Da die Releasefolge und deren Veröffenlichungszeitpunkte immer wieder erfragt werden, haben wir diese hier - sofern verfügbar - zusammengetragen.
 
@@ -45,6 +45,10 @@ Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zw
 - Verwende AAPS Version **2.6.2**.
 - Download des AAPS Code unter <https://github.com/nightscout/AndroidAPS> branch 2.6.2
 
+## WearOS version
+
+- AAPS 3.2 requires at least WearOS API level 25 (Android 7.1)
+
 ## Version 3.2.0
 
 Erscheinungsdatum: XX.XX.2023
@@ -64,6 +68,7 @@ Erscheinungsdatum: XX.XX.2023
 
 - EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
 - ComboV2 Pumpentreiber (Ruffy nicht mehr benötigt) @dv1
+- Medtrum Nano driver @jbr7rr
 - Unterstützung für Dana-i @MilosKozak
 - Glunovo CGM support @christinadamianou
 - G7-Unterstützung @MilosKozak @rICTx-T1D @khskekec
@@ -90,7 +95,7 @@ Erscheinungsdatum: 19.07.2022
 ### Wichtige Hinweise
 
 - Nach dem Update Wear-App deinstallieren und neue Version installieren
-- Omnipod Benutzer: Update auf dem Pod ändern !!!
+- Omnipod Benutzer: Update nur bei Pod-Wechsel durchführen !!!
 
 ### Änderungen
 

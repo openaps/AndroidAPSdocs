@@ -226,10 +226,10 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
     
     ![Ayarları aç](../images/studioSetup/30_Settings.png)
 
-* Alt menüsünü (1) açmak için "Appearance & Behaviour" üzerine çift tıklayın.
+* Double-click on Languages & Frameworks to open its submenu (1).
 
-* System Settings'e (2) çift tıklayın ve Android SDK'yı (3) seçin.
-* "Android 9.0 (Pie)" (4) (API Level 28) öğesinin solundaki kutuyu işaretleyin.
+* Select Android SDK (2).
+* Tick the box left of "Android 9.0 (Pie)" (3) (API Level 28).
     
     ![SDK ayarları](../images/studioSetup/31_AndroidSDK.png)
 

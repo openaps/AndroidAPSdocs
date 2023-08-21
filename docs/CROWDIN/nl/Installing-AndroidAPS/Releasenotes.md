@@ -18,7 +18,7 @@ Deze harde beperkingen zijn uiteraard niet bedoeld om je te pesten, maar zijn er
 ```{admonition} First version of AAPS
 :class: note
 
-The first test version started already in 2015. In 2016 has beend the first released version.
+The first test version started already in 2015. In 2016 has been the first released version.
 
 The chronology of these releases is not available at the moment but as this questions is asked severeal times we document it here.
 
@@ -45,6 +45,10 @@ In order to allow users with older Android to use older version of AAPS new vers
 - Use AAPS version **2.6.2**
 - Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.6.2
 
+## WearOS version
+
+- AAPS 3.2 requires at least WearOS API level 25 (Android 7.1)
+
 ## Version 3.2.0
 
 Release date: XX-XX-2023
@@ -64,6 +68,7 @@ Release date: XX-XX-2023
 
 - EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
 - ComboV2 pump driver (no need of Ruffy) @dv1
+- Medtrum Nano driver @jbr7rr
 - Korean DanaI support @MilosKozak
 - Glunovo CGM support @christinadamianou
 - G7 support @MilosKozak @rICTx-T1D @khskekec
