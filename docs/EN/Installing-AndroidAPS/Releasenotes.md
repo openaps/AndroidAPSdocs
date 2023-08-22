@@ -75,6 +75,7 @@ Release date: XX-XX-2023
 - NSClient v3 plugin @MilosKozak
 - Tidepool support @MilosKozak
 - Smoothing plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
+- DynamicISF plugin @Chris Wilson, @tim2000s
 - New logo @thiagomsoares
 - New watchface @philhoul
 - fixed tons of issues from 3.1 version
