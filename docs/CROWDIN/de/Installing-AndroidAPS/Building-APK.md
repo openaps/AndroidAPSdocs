@@ -283,7 +283,7 @@ Signieren bedeutet, dass Du die App mit einem digitalen Fingerabdruck versiehst 
     
     ![APK statt Bundle](../images/studioSetup/43_Apk.png)
 
-* Stelle sicher, dass als Modul "AAPS.app" (1) ausgewählt ist.
+* Stelle sicher, dass als Modul "AndroidAPS.app" (1) ausgewählt ist.
 
 * Klicke auf “Create new...” (2), um Deinen key store zu erstellen.
     
