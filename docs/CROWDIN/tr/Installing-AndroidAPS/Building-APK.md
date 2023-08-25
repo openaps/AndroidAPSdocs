@@ -2,7 +2,7 @@
 
 ## Programı İndirmek yerine kendiniz oluşturun...
 
-**AndroidAPS, tıbbi cihazlarla ilgili düzenlemeler nedeniyle indirilebilen bir uygulama değildir. Uygulamayı kendi kullanımınız için oluşturmak yasaldır, ancak bir kopyasını başkasına vermemelisiniz! Ayrıntılar için [SSS sayfasına](../Getting-Started/FAQ.md) bakın.**
+**AAPS, tıbbi cihazlarla ilgili düzenlemeler nedeniyle indirilebilen bir uygulama değildir. Uygulamayı kendi kullanımınız için oluşturmak yasaldır, ancak bir kopyasını başkasına vermemelisiniz! Ayrıntılar için [SSS sayfasına](../Getting-Started/FAQ.md) bakın.**
 
 ## Önemli notlar
 
@@ -56,7 +56,7 @@ Lütfen hem **64 bit CPU hem de 64 bit işletim sisteminin zorunlu koşul olduğ
 ### Bu makale iki bölüme ayrılmıştır.
 
 * Genel bakış bölümünde, APK dosyasını oluşturmak için hangi adımların gerekli olduğuna dair bir açıklama vardır.
-* Adım adım izleme bölümünde, somut bir kurulumun ekran görüntülerini bulacaksınız. APK'yı oluşturmak için kullanacağımız yazılım geliştirme ortamı olan Android Studio'nun sürümleri çok hızlı değişeceğinden, bu sizin kurulumunuzla aynı olmayacak ancak size iyi bir başlangıç noktası sunacaktır. Android Studio ayrıca Windows, Mac OS X ve Linux üzerinde çalışır ve her platform arasında bazı yönlerden küçük farklılıklar olabilir. Önemli bir şeyin yanlış veya eksik olduğunu fark ederseniz, lütfen "AndroidAPS kullanıcıları" facebook grubuna haber verin veya Discord chat sohbet grubu altında [Android APS](https://discord.gg/4fQUWHZ4Mw)'a bir göz atabilirsiniz.
+* Adım adım izleme bölümünde, somut bir kurulumun ekran görüntülerini bulacaksınız. APK'yı oluşturmak için kullanacağımız yazılım geliştirme ortamı olan Android Studio'nun sürümleri çok hızlı değişeceğinden, bu sizin kurulumunuzla aynı olmayacak ancak size iyi bir başlangıç noktası sunacaktır. Android Studio ayrıca Windows, Mac OS X ve Linux üzerinde çalışır ve her platform arasında bazı yönlerden küçük farklılıklar olabilir. Önemli bir şeyin yanlış veya eksik olduğunu fark ederseniz, lütfen "AAPS kullanıcıları" facebook grubuna haber verin veya Discord chat sohbet grubu altında [Android APS](https://discord.gg/4fQUWHZ4Mw)'a bir göz atabilirsiniz.
 
 ## Genel Bakış
 
@@ -65,7 +65,7 @@ Genel olarak, APK dosyasını oluşturmak için gerekli adımlar:
 1. [Git yükleyin](../Installing-AndroidAPS/git-install.md)
 2. [Android Studio'yu yükleyin](Building-APK-install-android-studio)
 3. [Android Studio tercihlerinde git yolunu ayarlayın](Building-APK-set-git-path-in-preferences)
-4. [AndroidAPS kodlarını indirin](Building-APK-download-androidaps-code)
+4. [AAPS kodlarını indirin](Building-APK-download-AAPS-code)
 5. [Android SDK'i indirin](Building-APK-download-android-sdk)
 6. [Uygulamayı oluşturun](Building-APK-generate-signed-apk) (imzalı apk oluşturun)
 7. [Telefonunuza apk dosyasını aktarın](Building-APK-transfer-apk-to-smartphone)
@@ -170,9 +170,9 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
 * Git'i yüklemeyle ilgili ayrıntılar için [resmi git belgelerine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) bakın.
 * Git'i homebrew aracılığıyla kurarsanız, herhangi bir tercihi değiştirmenize gerek yoktur. Her ihtimale karşı: Android Studio - Tercihler altında bulabilirsiniz.
 
-(Building-APK-download-androidaps-code)=
+(Building-APK-download-AAPS-code)=
 
-## AndroidAPS kodlarını indirin
+## AAPS kodlarını indirin
 
 * Android Studio karşılama ekranında soldaki "Projects" (1) projeler ve ardından "Get from VCS" (2) VCS'den Alın öğesini seçin.
     
@@ -187,7 +187,7 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
     * Solda (1) taraftaki "Repository URL"ni seçtiğinizden emin olun.
     
     * Versiyon kontrolü (2) olarak "Git"in seçili olup olmadığını kontrol edin.
-    * URL'yi kopyalayıp yapıştırın ```https://github.com/nightscout/AndroidAPS``` ana AndroidAPS deposuna URL metin kutusuna (3) kopyalayıp yapıştırın.
+    * URL'yi kopyalayıp yapıştırın ```https://github.com/nightscout/AndroidAPS``` ana AAPS deposuna URL metin kutusuna (3) kopyalayıp yapıştırın.
     * Klonlanmış kodu (4) kaydetmek istediğiniz dizini seçin.
         
         ![Git'i Klonla](../images/studioSetup/21_CloneURL.png)
@@ -222,14 +222,14 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
 
 ## Android SDK'i indirin
 
-* Menüde File (1) > Settings (2)'ye gidin.
+* Menüde Dosya (1) > Ayarlar (2) (veya Mac'te Android Studio > Tercihler) seçeneğine gidin.
     
     ![Ayarları aç](../images/studioSetup/30_Settings.png)
 
-* Alt menüsünü (1) açmak için "Appearance & Behaviour" üzerine çift tıklayın.
+* Double-click on Languages & Frameworks to open its submenu (1).
 
-* System Settings'e (2) çift tıklayın ve Android SDK'yı (3) seçin.
-* "Android 9.0 (Pie)" (4) (API Level 28) öğesinin solundaki kutuyu işaretleyin.
+* Select Android SDK (2).
+* Tick the box left of "Android 9.0 (Pie)" (3) (API Level 28).
     
     ![SDK ayarları](../images/studioSetup/31_AndroidSDK.png)
 
@@ -283,7 +283,7 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
     
     ![Bundle yerine APK](../images/studioSetup/43_Apk.png)
 
-* Modülün "AndroidAPS.app" (1) olarak ayarlandığından emin olun.
+* Modülün "AAPS.app" (1) olarak ayarlandığından emin olun.
 
 * Kendi "key store" oluşturmaya başlamak için "Create new..." (2) öğesini tıklayın.
     
@@ -317,7 +317,7 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
 
 * İşiniz bittiğinde "OK"yi (9) tıklayın.
 
-* Şifreleri hatırlama kutusunun işaretli olduğundan emin olun (1). Böylece, apk'yi bir sonraki oluşturduğunuzda (yani yeni bir AndroidAPS sürümüne güncelleme yaparken) bunları tekrar girmeniz gerekmez.
+* Şifreleri hatırlama kutusunun işaretli olduğundan emin olun (1). Böylece, apk'yi bir sonraki oluşturduğunuzda (yani yeni bir AAPS sürümüne güncelleme yaparken) bunları tekrar girmeniz gerekmez.
 
 * "Next"i (2) tıklayın.
     

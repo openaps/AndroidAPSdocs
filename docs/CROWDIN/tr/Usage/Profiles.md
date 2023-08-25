@@ -2,7 +2,7 @@
 
 # Profil değiştirme
 
-Documentation about profiles in general can be found at [Config Builder - profile](Config-Builder-profile).
+Genel olarak profillerle ilgili dokümantasyon [Konfigürasyon ayarları - profil](Config-Builder-profile) adresinde bulunabilir.
 
 AAPS'nizi başlatırken ve profilinizi seçerken, sıfır süreli (daha sonra açıklanacak) bir "Profil değiştirme" olayı yapmanız gerekecektir. Bunu yaparak AAPS, profillerin geçmişini izlemeye başlar ve her yeni profil değişikliği, NS'de profilin içeriğini değiştirseniz bile başka bir "Profil değiştirme" gerektirir. Güncellenen profil hemen AAPS'e gönderilir, ancak bu değişiklikleri kullanmaya başlamak için aynı profili tekrar değiştirmeniz gerekir.
 
@@ -15,7 +15,7 @@ Profilinizi "yerel profil" sekmesinde düzenlediyseniz, profili orada etkinleşt
 
 Profil değiştirme yapmak için, AndroidAPS'nin ana ekranında profilinizin adına (aşağıdaki resimde "03/11' e ayarlanmış") uzun basın.
 
-![Do profile switch](../images/ProfileSwitch_HowTo.png)
+![Profil değişimi yapmak](../images/ProfileSwitch_HowTo.png)
 
 "Profil değiştirme" içinde, daha önce Sirkadiyen Yüzde Profilinin parçası olan iki ek değişiklik seçebilirsiniz:
 
@@ -34,7 +34,7 @@ Profil değiştirme yapmak için, AndroidAPS'nin ana ekranında profilinizin ad�
 
 ## Zaman kaydırma
 
-![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
+![Profil değişim yüzdesi ve zaman kayması](../images/ProfileSwitchTimeShift2.png)
 
 * Zaman kaydırma, her şeyi girilen saat değerine göre günün her saatinde hareket ettirir. 
 * Bu nedenle, örneğin, gece vardiyalarında çalışırken, saat değerini ne kadar geç/erken yatacağınıza veya ne kadar erken kalkacağınıza göre değiştirebilirsiniz.
@@ -47,9 +47,9 @@ Profil değiştirme yapmak için, AndroidAPS'nin ana ekranında profilinizin ad�
     * 22:00 **-10 s** -> 12:00
     * Negatif zaman kayması nedeniyle normalde 12:00'de kullanılan ayarlar yerine 22:00 (10 pm) ayarları kullanılacaktır.
 
-![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
+![Profil değişimi zaman kaydırma talimatları](../images/ProfileSwitch_PlusMinus2.png)
 
-This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+Profilin anlık görüntülerini alma mekanizması, geçmişe ilişkin çok daha kesin hesaplamalara ve profil değişikliklerini izleme olanağına olanak tanır.
 
 (Profiles-troubleshooting-profile-errors)=
 
@@ -57,7 +57,7 @@ This mechanism of taking snapshots of the profile allows a much more precise cal
 
 ### 'Geçersiz profil' / 'Bazal Profil saatlere göre ayarlanmadı'
 
-![Basal not aligned to the hour](../images/BasalNotAlignedToHours2.png)
+![Bazal saatle uyumlu değil](../images/BasalNotAlignedToHours2.png)
 
 * Saati olmayan bazal oranlarınız veya I:C oranlarınız varsa bu hata mesajları görünecektir. (DanaR ve DanaRS pompaları örneğin yarım saatlik değişiklikleri desteklemez.)
   
@@ -73,14 +73,14 @@ This mechanism of taking snapshots of the profile allows a much more precise cal
   
   ![Profil değişimini kaldırma](../images/PSRemove.png)
 
-Alternatively you can delete the profile switch directly in mLab as described below.
+Alternatif olarak, profil değişimini aşağıda açıklandığı gibi doğrudan mLab'den silebilirsiniz.
 
 ### 'NS'den alınan profil değişimi ancak profil yerel olarak mevcut değil'
 
 * İstenen profil Nightscout'tan doğru şekilde eşitlenmedi.
 * Profil değişimini silmek için yukarıdaki talimatları izleyin
 
-Alternatively you can delete the profile switch directly in mLab:
+Alternatif olarak, profil değişimini doğrudan mLab'den silebilirsiniz:
 
 * Mlab koleksiyonunuza gidin
 * Profil değiştirme'yi tedavilerde arama yapın

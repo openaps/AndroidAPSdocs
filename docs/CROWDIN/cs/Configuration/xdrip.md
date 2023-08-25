@@ -1,6 +1,6 @@
 # xDrip+ nastavení
 
-(Další informace týkající se xDrip+ se podívejte se na https://xdrip.readthedocs.io/en/latest/)
+(For additional information regarding xDrip+, please refer to the [xDrip documentation](https://xdrip.readthedocs.io/en/latest/.)
 
 Pokud ho ještě nemáte nastaven, stáhněte si [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
@@ -34,11 +34,11 @@ Pokud váš telefon používá systém Android 10 a máte potíže s aplikací x
    
    ![xDrip+ Základní nastavení 2](../images/xDrip_Basic2.png)
 
-* **Komunikace mezi aplikacemi** (Broadcast) Pokud budete používat AndroidAPS a data by měla být přenášena např. do AndroidAPS, měli byste v xDripu aktivovat Lokální odesílání dat.
+* **InterApp-Settings** (Broadcast) If you are going to use AAPS and the data should be forwarded to i.e. AAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
 
 * Aby byly hodnoty stejné, měli byste aktivovat `Odesílat zobrazovanou glykémii`.
 
-* Pokud také zapnete `Přijímat ošetření` a "Povolení lokálního odesílání" v AndroidAPS, tak xDrip+ bude přijímat informace o inzulínu, sacharidech a nastavení bazálů z AndroidAPS a bude předpovídat blížící se hypo atd. mnohem přesněji.
+* If you have also activated `Accept treatments` and "Enable local Broadcasts" in AAPS, then xDrip+ will receive insulin, carbs and basal rate information from AAPS and can estimate the hypo prediction etc. mnohem přesněji.
    
    ![xDrip+ Základní nastavení 3](../images/xDrip_Basic3.png)
 
@@ -46,7 +46,7 @@ Pokud váš telefon používá systém Android 10 a máte potíže s aplikací x
 
 ### Identify receiver
 
-* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AndroidAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
+* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
 * Pozor: automatické opravy textu v androidu mají tendenci měnit velikost prvního písmene. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip+.
    
    ![xDrip+ Základní nastavení komunikace mezi aplikacemi Identify receiver](../images/xDrip_InterApp_NS.png)
@@ -334,7 +334,7 @@ Please note that the following method might likely not work if your Dexcom G6 tr
 * Zastavte senzor
 * Spusťte senzor se skutečným kódem (vytištěným na ochranné nálepce)
 
-Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
+V log souborech v xDrip+ ověřte, že xDrip+ začne počítat „Trvání: 1 minuta“ (a tak dále). Pouze v log protokolech v xDrip+ můžete v úvodní fázi zjistit, zda xDrip+ zastavil senzor. Pozdější stav není v dolní části hlavní obrazovky vždy zobrazen správně.
 
 ## xDrip+ a Freestyle Libre
 
@@ -357,12 +357,12 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
 ### Úroveň baterie čtečky Libre
 
 * Úroveň baterie chytrých čteček jako MiaoMiao 2 může být zobrazena v AAPS.
-* Details can be found on [screenshots page](Screenshots-sensor-level-battery).
+* Podrobnosti naleznete na [stránce se screenshoty](Screenshots-sensor-level-battery).
 
 ### Připojte vysílač Libre a spusťte senzor
 
-![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip+ Spustit vysílač a senzor Libre 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip+ Spustit vysílač a senzor Libre 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Spustit vysílač a senzor Libre 3](../images/xDrip_Libre_Transmitter03.png)

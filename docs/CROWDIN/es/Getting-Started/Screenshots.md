@@ -83,7 +83,7 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 
 #### Señal de advertencia de glucosa
 
-Desde la versión de AndroidAPS 3.0, puede aparecer una señal de advertencia debajo de la lectura de glucosa de la pantalla principal.
+Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
 
 *Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
 
@@ -99,7 +99,7 @@ However, when there are a lot of duplicates, it might be easier to
 
 The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
 
-![Triángulo de adverntencia de glucosa en rojo](../images/bg_warn_red.png)
+![Red BG warning](../images/bg_warn_red.png)
 
 You need to find out why you get duplicate BGs:
 
@@ -112,7 +112,7 @@ You need to find out why you get duplicate BGs:
 
 * La señal de advertencia amarilla indica que tus datos de glucosa llegan en intervalos de tiempo irregulares o que faltan algunos datos de glucosa.
    
-   ![Triángulo de adverntencia de glucosa en amarillo](../images/bg_warn_yellow.png)
+   ![Yellow BG warning](../images/bg_warn_yellow.png)
 
 * Normalmente no hay que tomar ninguna acción. El lazo cerrado puede continuar funcionando.
 

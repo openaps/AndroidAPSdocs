@@ -2,11 +2,11 @@
 
 ## Önce Güvenlik
 
-- AndroidAPS, çocuğunuzun telefonunu kısa mesaj yoluyla uzaktan kontrol etmenizi sağlar. Bu SMS kominikatörü etkinleştirirseniz, uzak komutlar verecek şekilde ayarlanmış telefonun çalınabileceğini unutmayın. Bu yüzden her zaman en azından bir PIN kodu ile telefonu koruyun. Güçlü bir parola veya biyometrik doğrulama önerilir.
+- AAPS, çocuğunuzun telefonunu kısa mesaj yoluyla uzaktan kontrol etmenizi sağlar. Bu SMS kominikatörü etkinleştirirseniz, uzak komutlar verecek şekilde ayarlanmış telefonun çalınabileceğini unutmayın. Bu yüzden her zaman en azından bir PIN kodu ile telefonu koruyun. Güçlü bir parola veya biyometrik doğrulama önerilir.
 - Ayrıca, SMS komutları için [ikinci bir telefon numarasına](SMS-Commands-authorized-phone-numbers) izin verilmesi önerilir. Böylece komut gönderdiğiniz ana telefonunuzun kaybolması veya çalınması durumunda SMS iletişimini [geçici olarak devre dışı bırakmak](SMS-Commands-other) için ikinci numarayı kullanabilirsiniz.
-- AndroidAPS ayrıca bolus veya profil değişikliği gibi uzak komutlarınızın gerçekleşip gerçekleşmediğini kısa mesajla size bildirecektir. Alıcı telefonlardan birinin çalınması durumuna karşı en az iki farklı telefon numarasına onay metinleri gönderilecek şekilde ayarlamanız önerilir.
+- AAPS ayrıca bolus veya profil değişikliği gibi uzak komutlarınızın gerçekleşip gerçekleşmediğini kısa mesajla size bildirecektir. Alıcı telefonlardan birinin çalınması durumuna karşı en az iki farklı telefon numarasına onay metinleri gönderilecek şekilde ayarlamanız önerilir.
 - **SMS Komutları aracılığıyla bolus yaparsanız, Nightscout (NSClient, Web Sitesi...) ya da sms aracılığıyla karbonhidrat girmelisiniz!** Bunu yapmazsanız, aktif insülin çok düşük aktif karbonhidrat ile doğrulanır ve AAPS çok fazla aktif insülininiz olduğunu varsaydığından potansiyel olarak düzeltme bolusu yapılmamasına veya bazal iptaline yol açar.
-- AndroidAPS sürüm 2.7'den itibaren, SMS komutlarını kullanırken güvenliği artırmak için zamana dayalı tek seferlik parolaya sahip bir kimlik doğrulama uygulaması (google authenticator) kullanılmaktadır.
+- AAPS sürüm 2.7'den itibaren, SMS komutlarını kullanırken güvenliği artırmak için zamana dayalı tek seferlik parolaya sahip bir kimlik doğrulama uygulaması (google authenticator) kullanılmaktadır.
 
 ## SMS Komutları kurulumu
 
@@ -23,7 +23,7 @@
 
 ### Yetkili telefon numaraları
 
-- AndroidAPS'de **Tercihler > SMS Kominikatör**'e gidin ve SMS komutlarının gelmesine izin vereceğiniz telefon numaralarını girin (noktalı virgülle ayrılmış - örn. +6412345678;+6412345679)
+- AAPS'de **Tercihler > SMS Kominikatör**'e gidin ve SMS komutlarının gelmesine izin vereceğiniz telefon numaralarını girin (noktalı virgülle ayrılmış - örn. +6412345678;+6412345679)
 
 - 'SMS ile uzaktan komutlara izin ver' seçeneğini etkinleştirin.
 
@@ -67,7 +67,7 @@
 
 - Seçtiğiniz kimlik doğrulama uygulamasını takipçi telefonunuza yükleyin ve AAPS'de gösterilen QR kodunu tarayın.
 
-- Kimlik doğrulama uygulamanızda gösterilen kodu ve AAPS'de az önce kurduğunuz PIN'i girerek tek kullanımlık şifreyi test edin. Example:
+- Kimlik doğrulama uygulamanızda gösterilen kodu ve AAPS'de az önce kurduğunuz PIN'i girerek tek kullanımlık şifreyi test edin. Örnek kullanım:
 
   - Zorunlu PIN'iniz 2020
   - Kimlik doğrulama uygulamasındaki TOTP kodu 457051
@@ -85,7 +85,7 @@
 
 - AAPS ana telefonu, istenen komutun veya durumun başarısını onaylamak için yanıt verecektir.
 
-- Kodu göndererek komutu onaylayın. Example:
+- Kodu göndererek komutu onaylayın. Örnek kullanım:
 
   - Zorunlu PIN'iniz 2020
   - Kimlik doğrulama uygulamasındaki TOTP kodu 457051
@@ -96,7 +96,7 @@
 (SMS-Commands-commands)=
 ## Komutlar
 
-Komutlar İngilizce olarak gönderilmelidir, yanıt dizesi ise programınızın bu kısmı [tercüme edilmiş ](translations-translate-strings-for-androidaps-app) ise yerel dilinizde olacaktır.
+Komutlar İngilizce olarak gönderilmelidir, yanıt dizesi ise programınızın bu kısmı [tercüme edilmiş ](translations-translate-strings-for-AAPS-app) ise yerel dilinizde olacaktır.
 
 ```{image} ../images/SMSCommands.png
 :alt: Örnek SMS Komutları
@@ -182,3 +182,10 @@ Galaxy S10 telefonundaki bir güncellemeden sonra SMS komutlarının çalışmad
 ```{image} ../images/SMSdisableChat.png
 :alt: SMS as chat message devre dışı
 ```
+### Android Mesajları Uygulaması
+
+Android Mesaj uygulamasıyla SMS komutları gönderip alırken sorun yaşıyorsanız, hem ebeveyn hem de çocuğun telefonlarında uçtan uca şifrelemeyi devre dışı bırakın.
+ - Herhangi bir SMS mesajını açın
+ - Sağ üst köşedeki üç noktayı seçin
+ - "Detaylar"ı seçin
+ - "Yalnızca SMS ve MMS mesajları gönder" seçeneğini etkinleştirin

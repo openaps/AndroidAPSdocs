@@ -1,4 +1,4 @@
-# Welcome to the AAPS documentation
+# Добро пожаловать в Документацию по AndroidAPS (AAPS)
 
 ![Image](images/modules-female.png)
 
@@ -200,6 +200,13 @@ Remote monitoring <./Children/Children.md>
 SMS commands <./Children/SMS-Commands.md>
 
 Profile helper <./Configuration/profilehelper.md>
+
+```
+
+```{toctree}
+:caption: Full Closed Loop
+
+Full Closed Loop <./Usage/FullClosedLoop.md>
 
 ```
 

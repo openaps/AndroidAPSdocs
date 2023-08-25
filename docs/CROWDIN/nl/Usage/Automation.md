@@ -33,7 +33,7 @@ So make sure to deactivate automation rules during these occasions if necessary.
 
 Depending on your [settings in config builder](Config-Builder-tab-or-hamburger-menu) you will either find [Automation](Config-Builder#automation) in hamburger menu or as a tab.
 
-### Algemeen
+### General
 
 Er zijn een aantal beperkingen:
 

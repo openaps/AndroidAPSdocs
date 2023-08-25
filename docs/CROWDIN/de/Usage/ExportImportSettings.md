@@ -1,4 +1,4 @@
-# Export & import settings
+# Einstellungen exportieren & importieren
 
 ## Wann sollte man die Einstellungen exportieren?
 
@@ -18,20 +18,20 @@ Auf einem Windows 10 PC sieht es in etwa so aus:
 
 Neben anderen werden folgende Einstellungen exportiert:
 
-- [Automation](../Usage/Automation.md) events
-- [Config builder](../Configuration/Config-Builder.md) settings
-- [Local profile](Config-Builder-local-profile) settings
-- [Objectives](../Usage/Objectives.md) status incl. [exam results](Objectives-objective-3-prove-your-knowledge)
-- [Preferences](../Configuration/Preferences.md) incl. [NS Client settings](Preferences-nsclient)
+- [Automation](../Usage/Automation.md) Ereignisse
+- Einstellungen des [Konfigurations-Generators](../Configuration/Config-Builder.md)
+- Einstellungen für das [lokale Profil](Config-Builder-local-profile)
+- Übersicht über die [Ziele](../Usage/Objectives.md) (Objectives) und der [Testergebnisse](Objectives-objective-3-prove-your-knowledge)
+- [Voreinstellungen](../Configuration/Preferences.md) inkl. der [NS Client Einstellungen](Preferences-nsclient)
 
 ## Verschlüsseltes Backup-Format
 
-Settings backup is encrypted by a master password that can be set in [Preferences](Preferences-master-password) .
+Das Backup ist durch ein Master-Passwort verschlüsselt. Das Master-Passwort kann in den [Einstellungen](Preferences-master-password) festgelegt werden.
 
 (ExportImportSettings-export-settings)=
 ## Exportiere die Einstellungen
 
-- Hamburger menu (top left corner of screen)
+- Hamburger Menü (drei Striche oben links am Bildschirm)
 - Wartung
 - Exportiere die Einstellungen
 
@@ -39,10 +39,10 @@ Settings backup is encrypted by a master password that can be set in [Preference
 :alt: AndroidAPS Export der Einstellungen 1
 ```
 
-- Date and time of export will be added to the file name automatically and displayed together with the path.
-- Click 'OK'.
-- Enter [master password](Preferences-master-password) and click 'OK'.
-- Successful export will be prompted at bottom of the screen.
+- Datum und Zeit des Exports werden automatisch an den Dateinamen angehängt und zusammen mit dem Pfad angezeigt.
+- Klicke auf "OK'.
+- Gib' Dein [Master-Passwort](Preferences-master-password) ein und klicke auf 'OK'.
+- Der erfolgreiche Export wird am unteren Rand des Bildschirms angezeigt.
 
 ```{image} ../images/AAPS_ExportSettings2.png
 :alt: AndroidAPS Export der Einstellungen 2
@@ -51,9 +51,9 @@ Settings backup is encrypted by a master password that can be set in [Preference
 (ExportImportSettings-import-settings)=
 ## Importiere die Einstellungen
 
-**Do not import settings while on an active Pod session** - see [Omnipod page for details](OmnipodEros-import-settings-from-previous-aaps).
+**Importiere keine Einstelllungen während einer laufenden Pod Session** - vgl. Hinweise auf der [Omnipod Seite](OmnipodEros-import-settings-from-previous-aaps).
 
-- Hamburger menu (top left corner of screen)
+- Hamburger Menü (drei Striche oben links am Bildschirm)
 - Wartung
 - Importiere die Einstellungen
 
@@ -61,34 +61,34 @@ Settings backup is encrypted by a master password that can be set in [Preference
 :alt: AndroidAPS Import der Einstellungen 1
 ```
 
-- All files from folder AAPS/preferences/ on your phone will be shown in the list.
-- Select file.
-- Confirm import by clicking 'OK'.
-- Enter [master password](Preferences-master-password) and click 'OK'.
+- Alle Dateien im Verzeichnis AAPS/preferences/ auf Deinem Smartphone werden in der Liste angezeigt.
+- Datei auswählen.
+- Bestätige den Import durch Klick auf 'OK'.
+- Gib' Dein [Master-Passwort](Preferences-master-password) ein und klicke auf 'OK'.
 
 ```{image} ../images/AAPS_ImportSettings2.png
 :alt: AndroidAPS Import der Einstellungen 2
 ```
 
-- Details on the preference file will be shown.
-- Last option to cancel import.
-- Click 'Import'.
-- Confirm message by clicking 'OK'.
-- AAPS will be restarted in order to activate imported preferences.
+- Details zu der gewählten Datei werden angezeigt.
+- Letzte Option zum Abbrechen des Imports.
+- Klicke auf 'Importieren'.
+- Bestätige die Meldung durch Klick auf 'OK'.
+- AAPS wird neu gestartet, um importierte Einstellungen zu aktivieren.
 
 ### Hinweis für Dana RS Nutzer
 
 - Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan.
-- Please pair new phone and pump manually.
+- Bitte stelle die Bluetooth-Verbindung zwischen Smartphone und Pumpe manuell her.
 
 ### Einstellungen aus früheren Versionen importieren (vor AAPS 2.7)
 
-- The "old" settings file (called 'AndroidAPSPreferences' - without file extension) must be in root folder of your smartphone (/storage/emulated/0).
-- Do not put the "old" file in the same folder as the new exported settings (AAPS/preferences).
-- You will find the "old" file on the bottom of the list in the import dialogue.
+- Die “alte” Datei mit den Einstellung (der Dateiname ist 'AndroidAPSPreferences' - ohne Dateiendung) muss sich im Stammordner (root folder) des Smartphones befinden (/storage/emulated/0).
+- Lege die "alte" Datei nicht in den gleichen Ordner wie die neuen exportierten Einstellungen (AAPS/Einstellungen).
+- Die "alte" Einstellungs-Datei findest Du am Ende der Liste im Import-Dialog.
 
 ## Einstellungs-Datei übertragen
 
-- Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
-- Manuals can be found on the web, i.e. [Android help pages](https://support.google.com/android/answer/9064445?hl=en).
-- If you experience problems with the transferred file try another way to transfer file.
+- Der beste Weg, um Einstellungs-Datei auf ein neues Telefon zu übertragen, ist über ein USB-Kabel oder einen Cloud-Service (z.B. Google Drive).
+- Anleitungen dazu findest Du im Netz, z.B. [Android-Hilfe](https://support.google.com/android/answer/9064445?hl=en).
+- Wenn Probleme mit der übertragenen Datei auftreten, versuche eine andere Methode, um die Datei zu übertragen.

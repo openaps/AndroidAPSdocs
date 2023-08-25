@@ -1,6 +1,12 @@
 # AKRB hesaplaması
 
-## AndroidAPS AKRB değerini nasıl hesaplar?
+## AAPS AKRB değerini nasıl hesaplar?
+
+Karbonhidratlar bir yemeğin veya düzeltmenin bir parçası olarak girildiğinde, AAPS bunları aktif karbonhidratlara (AKRB) ekler. AAPS, KŞ değerlerinde gözlemlenen sapmalara dayalı olarak karbonhidratları emer (kaldırır). Emilim oranı, karbonhidrat duyarlılık faktörüne bağlıdır. Bu bir profil değeri değildir, ancak İDF/Kİ olarak hesaplanır ve 1 g karbonhidratın KŞ'nizi kaç mg/dl yükselteceğini gösterir.
+
+Örneğin, profil İDF'niz 100 ve Kİ'niz 5 ise, KDF'niz 20 olacaktır. Kan şekerinizin yükseldiği her 20 mg/dl için, 1 g karbonhidrat AAPS tarafından emilir. Pozitif AKRB de bu hesaplamayı etkiler. Dolayısıyla, AAPS, KŞ'nizin AİNS nedeniyle 20 mg/dl düşmesini beklerse ve bunun yerine düz kalırsa, 1 g karbonhidrat emer.
+
+Karbonhidratlar, hangi hassasiyet algoritmasının kullanıldığına bağlı olarak aşağıda açıklanan yöntemlerle de emilecektir.
 
 ### Oref1
 
@@ -25,7 +31,7 @@ KŞ sapmalarından hesaplanan değer yerine minimum karbonhidrat emilimi (min_5m
 
 AAPS, bir önceki öğünden AKRB ile bolus yapmak üzereyseniz, algoritma mevcut AKRB hesaplamasının yanlış olabileceğini düşünür ve sizi uyarır. Bu durumda bolus sihirbazından sonraki onay ekranında size ek bir ipucu verecektir.
 
-### AndroidAPS, yanlış AKRB değerlerini nasıl tespit eder?
+### AAPS, yanlış AKRB değerlerini nasıl tespit eder?
 
 Normalde AAPS, karbonhidrat emilimini KŞ sapmaları yoluyla tespit eder. Karbonhidratları girdiyseniz, ancak AAPS bunların KŞ sapmaları aracılığıyla tahmini emilimini göremezse, bunun yerine emilimi hesaplamak için [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) yöntemini kullanır. ('fallback' olarak adlandırılır). Bu yöntem, KŞ sapmalarını dikkate almadan yalnızca minimum karbonhidrat emilimini hesapladığı için yanlış AKRB değerlerine yol açabilir.
 

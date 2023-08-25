@@ -1,6 +1,6 @@
 # Pomocník s profilem
 
-Profile helper offers two functions:
+Pomocník s profilem nabízí dvě funkce:
 
 1. Najít profil pro děti
 2. Porovnání dvou profilů nebo přepnutí profilů za účelem naklonování nového profilu

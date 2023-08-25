@@ -2,11 +2,11 @@
 
 ## La sécurité avant tout
 
-- AAPS vous permet de controler le téléphone d’un enfant à distance via un SMS. Si vous activez le Communicateur SMS, rappelez-vous toujours que le téléphone configuré pour donner des commandes distantes pourrait être volé. Donc, toujours le protéger au minimum par un code PIN. Un mot de passe robuste ou une identification biométrique sont recommandés.
+- AAPS allows you to control a child's phone remotely via text message. Si vous activez le Communicateur SMS, rappelez-vous toujours que le téléphone configuré pour donner des commandes distantes pourrait être volé. Donc, toujours le protéger au minimum par un code PIN. Un mot de passe robuste ou une identification biométrique sont recommandés.
 - Il est également recommandé d'autoriser un [deuxième numéro de téléphone](SMS-Commands-authorized-phone-numbers) pour les commandes SMS. Vous pouvez donc utiliser le deuxième numéro pour [désactiver temporairement](SMS-Commands-other) la communication SMS dans le cas où votre téléphone principal serait perdu ou volé.
-- AAPS vous informera également par SMS si vos commandes distantes, comme un bolus ou un changement de profil, ont été effectuées. Il est conseillé de le configurer de sorte que les SMS de confirmation soient envoyés à au moins deux numéros de téléphone différents au cas où l'un des téléphones destinataires serait volé.
+- AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Il est conseillé de le configurer de sorte que les SMS de confirmation soient envoyés à au moins deux numéros de téléphone différents au cas où l'un des téléphones destinataires serait volé.
 - **Si vous faites un bolus au moyen de commandes SMS, vous devez entrer les glucides par Nightscout (NSClient, site Web ...) !** Si vous ne le faites pas, l'IA serait correct mais le GA serait lui trop faible pouvant conduire à ne pas effectuer de bolus de correction car AAPS estimerait que vous avez trop d'insuline active.
-- Depuis AndroidAPS version 2.7, une application d'authentification avec un mot de passe à usage unique basé sur l'heure doit être utilisé pour augmenter la sécurité lors de l'utilisation de commandes SMS.
+- As of AAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
 
 ## Paramétrer les commandes SMS
 
@@ -23,7 +23,7 @@
 
 ### Numéros de tél autorisés
 
-- Dans AndroidAPS, allez dans **Préférences > Communicateur SMS** et entrez le(s) numéro(s) de téléphone que vous autoriserez pour les commandes SMS (séparés par des points-virgules, par ex. +33123456789;+33123456798)
+- In AAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
 
 - Activez 'Autoriser les commandes distantes par SMS'.
 
@@ -81,7 +81,7 @@
 
 ## Utiliser les commandes SMS
 
-- Envoyez depuis votre/vos numéro(s) de téléphone approuvé(s) un SMS au téléphone ayant AAPS lancé en utilisant l'une des [commandes](SMS-Commands-commands) ci-dessous.
+- Send a SMS to the phone with AAPS running from your approved phone number(s) using any of the [commands](SMS-Commands-commands) below.
 
 - Le téléphone AAPS répondra pour confirmer le succès de la commande ou du statut demandé.
 
@@ -96,7 +96,7 @@
 (SMS-Commands-commands)=
 ## Commandes
 
-Les commandes doivent être envoyées en anglais, la réponse sera dans votre langue locale si la chaîne de réponse a déjà été [traduite](translations-translate-strings-for-androidaps-app).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](translations-translate-strings-for-AAPS-app).
 
 ```{image} ../images/SMSCommands.png
 :alt: Example de commandes SMS
@@ -182,3 +182,10 @@ Il y a eu un signalement sur les commandes SMS s'arrêtant après une mise à jo
 ```{image} ../images/SMSdisableChat.png
 :alt: Désactiver SMS en tant que message chat
 ```
+### Android Messages App
+
+If you are having issues sending or receiving SMS commands with the Android Messages app disable end-to-end ecryption on both caregiver and child's phones.
+ - open the specific SMS conversation in Messages
+ - Select the options ellipisis in the top right corner
+ - select "Details"
+ - Activate "Only send SMS and MMS messages"

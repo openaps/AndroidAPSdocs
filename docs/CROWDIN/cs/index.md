@@ -204,6 +204,13 @@ Profile helper <./Configuration/profilehelper.md>
 ```
 
 ```{toctree}
+:caption: Full Closed Loop
+
+Full Closed Loop <./Usage/FullClosedLoop.md>
+
+```
+
+```{toctree}
 :caption: Troubleshooting
 
 Troubleshooting <./Usage/troubleshooting.md>

@@ -21,7 +21,7 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 
 -   Der Dexcom G6-Transmitter kann gleichzeitig mit einem Dexcom-Empfänger (oder alternativ mit der t:slim-Pumpe) und einer App auf dem Handy verbunden werden.
 -   Wenn Du xDrip+ zum Empfang der CGM-Daten verwendest, deinstalliere zuerst die Dexcom App. **Du kannst xDrip+ und die Dexcom App nicht gleichzeitig mit dem Transmitter verbinden!**
--   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+-   Falls Du Clarity benötigst und trotzdem von den xDrip+ Alarmen profitieren willst, musst Du die [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) mit lokaler Datenübertragung zu xDrip+ verwenden.
 -   Falls Du xDrip noch nicht eingerichtet hast, dann lade es Dir herunter [xdrip](https://github.com/NightscoutFoundation/xDrip) und richte es entsprechend der Dokumentation unter[G5](../Configuration/xdrip.md)  ein.
 -   Wähle in AndroidAPS > Konfiguration > BZ-Quelle > xDrip+.
 -   Passe die Einstellungen xDrip+ entsprechend den Erläuterungen auf der [Seite xDrip+ Einstellungen](../Configuration/xdrip.md) an.
@@ -68,8 +68,8 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 
 ### Allgemeine Problembehandlung
 
-General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.html#troubleshooting).
+Allgemeine Vorschläge für die Problemlösung bei CGMs findest Du [hier](./GeneralCGMRecommendation.html#troubleshooting).
 
 ### Neuer Transmitter bei laufendem Sensor
 
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at <https://youtu.be/tx-kTsrkNUM>.
+Falls Du einen Transmitter bei einer laufenden Sensorsitzung wechseln musst, kannst Du versuchen, den Transmitter zu tauschen, ohne die Transmitterhalterung zu beschädigen. Eine Videoanleitung findest Du unter <https://youtu.be/tx-kTsrkNUM>.

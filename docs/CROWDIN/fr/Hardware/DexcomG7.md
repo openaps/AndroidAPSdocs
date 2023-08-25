@@ -3,9 +3,9 @@
 ```{admonition} Only available in dev branch
 :class: note
 
-This feature is only available in the in dev branch and not in master.
+Cette fonctionnalité n'est disponible que dans la branche de développement et pas dans master.
 
-Please be aware of the warnings and follow the instructions in [building a dev version](../Installing-AndroidAPS/Dev_branch.md).
+Veuillez prendre note des avertissements et suivre les instructions dans la [construction d'une version de développement](../Installing-AndroidAPS/Dev_branch.md).
 
 ```
 
@@ -47,7 +47,7 @@ For the configuration in AAPS
 
 The smoothing of glucose values can be activated by enabling the "Average smoothing" or "Exponential Smoothing" plugin in the Config Builder. To disable select the "No Smoothing" option. "Exponential smoothing" is more aggressive and rewrites the newest Glucose Value but is good in dealing with heavy noise. "Average smoothing" is much like the back smoothing that was in BYODA G6 and only rewrites the past values but not the current value and therefore has a faster response time.
 
-Smoothing **MUST** be enabled for meaningful use of the G7 values.
+**Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 values.
 
 ## 2. Xdrip+ (companion mode)
 

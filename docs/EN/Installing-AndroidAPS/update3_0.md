@@ -31,6 +31,8 @@
 * A new local profile is added, valid from the current date.
 * To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date.
 
+(update3_0-reset-master-password)=
+
 ## Reset master password
 * You can now reset your master password in case you have forgotten it.
 * You need to add a file named ```PasswordReset``` to the ```/AAPS/extra``` directory on your phones fileystem.

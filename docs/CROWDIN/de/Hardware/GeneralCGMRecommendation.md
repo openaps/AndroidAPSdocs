@@ -37,4 +37,4 @@ Versuche, die Einstellungen zum "noise blocking" in xDrip (Einstellungen -> Inte
 
 ![Negatives Sensor-Alter](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](Config-Builder-actions) or a sensor insert with wrong date. Wechsle zur Registerkarte "Behandlungen" > "Careportal" und lösche den falschen Eintrag.
+Dies tritt dann auf, wenn im [Aktionen Tab / Menü](Config-Builder-actions) ein doppelter Eintrag "CGM-Sensor gesetzt" oder bei einem einzelnen Eintrag ein falsches Datum verwendet wurde. Wechsle zur Registerkarte "Behandlungen" > "Careportal" und lösche den falschen Eintrag.

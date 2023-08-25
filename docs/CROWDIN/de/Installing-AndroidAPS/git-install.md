@@ -9,9 +9,9 @@
 - Notiere Dir den Installationspfad. Du brauchst diesen im nächsten Schritt.
 
 ```{admonition} make git.exe available via Windows PATH
-:class: note
+:class: Notiz
 
-Make sure that you can call git.exe without the prefing path as Android Studio needs this to find git.exe. It will then automatically sets the path to git.exe correct in the Android Studio settings.
+Achte darauf, dass die Datei git.exe später ohne den Installationspfad mit angeben zu müssen, aufrufbar ist. Android Studio benötigt dies, um git.exe zu finden. In diesem Fall wird der Pfad in den Android Studio-Einstellungen automatisch richtig gesetzt.
 
 ```
 

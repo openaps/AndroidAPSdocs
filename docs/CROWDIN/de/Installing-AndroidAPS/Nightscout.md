@@ -12,24 +12,24 @@ Du kannst den allgemeinen Zugriff auf Deine Nightscout-Seite mittels [authentica
 
 ### AndroidAPS Einstellungen
 
-In den AAPS-Einstellungen gibt es eine Funktion, nur Daten zu Nightscout hochzuladen (keine Synchronisierung). By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs.
+In den AAPS-Einstellungen gibt es eine Funktion, nur Daten zu Nightscout hochzuladen (keine Synchronisierung). Wenn Du diese Funktion wählst, wird AAPS keine Änderungen von Nightscout (z.B. temporäre Ziele oder Kohlenhydrateingaben) übernehmen.
 
 * Tippe oben rechts auf dem Startbildschirm auf das 3-Punkte-Menü.
 * Klicke auf "Einstellungen".
 * Scrolle nach unten und tippe auf "Erweiterte Einstellungen".
 * Wähle "Zu Nightscout nur hochladen (keine Synchronisation)".
 
-![Nightscout upload only](../images/NSsafety.png)
+![Nightscout nur Daten hochladen](../images/NSsafety.png)
 
 ### Weitere Sicherheitseinstellungen
 
-Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
+Halte Dein Smartphone aktuell wie es in den [Sicherheitshinweisen](../Getting-Started/Safety-first.md) beschrieben ist.
 
 (Nightscout-manual-nightscout-setup)=
 
 ## Manuelles Nightscout-Setup
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
+Wir gehen davon aus, dass du bereits eine Nightscout Seite hast. Falls nicht, gehe zum [Nightscout Wiki](http://nightscout.github.io/nightscout/new_user/). Dort findest du detaillierte Informationen zur Einrichtung. Die unten stehenden Hinweise beziehen sich auf die Einstellungen, die du zusätzlich in deiner Nightscout Seite vornehmen musst. Deine Nightscout Seite muss mindestens unter Version 10 (wird als 0.10... angezeigt) laufen. Prüfe daher, ob Du tatsächlich die [letzte Version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) verwendest. Andersfalls bekommst Du in der AAPS App eine Fehlermeldung. Manche Looper haben festgestellt, dass durch das Loopen mehr Speicherplatz verbraucht wird, als Azure kostenfrei zur Verfügung stellt. Daher ist Heroku die bessere Wahl.
 
 * Gehe zu https://herokuapp.com/
 
@@ -53,9 +53,9 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
 
 ## Halb-automatische Nightscout Einrichtung
 
-Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
+Looper Martin Schiftan hat seinen Service einer halb-automatischen Nightscout Einrichtung für viele Jahre kostenfrei angeboten. Nachdem die Nutzerzahl stark angestiegen ist, gilt dies auch für die Kosten und er muss seit Oktober 2021 eine geringe Abogebühr - ab €4,17 pro Monat - erheben.
 
-**Benefits**
+**Vorteile**
 
 * Du kannst Nightscout mit ein paar Klicks einrichten und direkt verwenden. 
 * Deutlich weniger manueller Aufwand, da Martin versucht, die Administration so weit als möglich zu automatisieren.
@@ -65,4 +65,4 @@ Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many
 
 <https://ns.10be.de/en/index.html>
 
-An alternative would be <https://t1pal.com/> - starting at $11,99 per month.
+Eine Alternative wäre beispielsweise <https://t1pal.com/> - ab $11,99 pro Monat.

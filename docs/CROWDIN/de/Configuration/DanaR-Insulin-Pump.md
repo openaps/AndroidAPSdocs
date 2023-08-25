@@ -23,4 +23,4 @@
 
 ## Mit der Dana R Pumpe über Zeitzonen hinweg reisen
 
-For information on traveling across time zones see section [Timezone traveling with pumps](Timezone-traveling-danarv2-danars).
+Für allgemeine Informationen zum Reisen über Zeitzonen hinweg siehe [Mit der Pumpe über Zeitzonen hinweg reisen](Timezone-traveling-danarv2-danars).

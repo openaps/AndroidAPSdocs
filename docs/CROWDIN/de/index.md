@@ -1,27 +1,27 @@
 # Willkommen zur AAPS-Dokumentation
 
-![Image](images/modules-female.png)
+![Grafik](images/modules-female.png)
 
-AAPS ist eine Open-Source-App für Menschen, die mit Insulinabhängigen Diabetes leben, die als künstliches Pankreassystem (APS) auf Google Android Smartphones fungiert. The main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter.
+AAPS ist eine Open-Source-App für Menschen, die mit Insulinabhängigen Diabetes leben, die als künstliches Pankreassystem (APS) auf Google Android Smartphones fungiert. Hauptkomponenten sind verschiedene OpenAPS-Softwarealgorithmen, die genau das tun sollen, was eine gesunde Bauchspeicheldrüse auch tut: den Blutzuckerspiegel durch automatisierte Insulindosierung (AID) in gesunden Grenzen halten.  Zusätzlich werden mindestens eine unterstützte Insulinpumpe mit einer CE-Kennzeichnung und ein CGM/FGM benötigt.
 
-Die App nutzt *keine* selbstlernende künstliche Intelligenz. Stattdessen basieren die Berechnungen von AndroidAPS auf den individuellen Therapiefaktoren und Kohlenhydratmengen, die der Benutzer manuell in sein Behandlungsprofil eingibt. Diese Eingaben werden aber aus Sicherheitsgründen vom System verifiziert.
+The app does *not* use self-learning artificial intelligence. Instead, the calculations of AAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons.
 
 The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
 
 ```{admonition} Ask for help - Writing Docs
 :class: note
 
-Bitte scheuen Sie sich nicht, wir brauchen dringend Unterstützung bei der Erstellung der Dokumentation.
+Please don't be shy, we urgently *need* support in creating the documentation.
 
-Ein Pull-Request zum Bearbeiten der Dokumentation ist relativ einfach zu erstellen. You can't break anything. There are release procedures.
+A pull request to edit the documentation is relatively simple to create. You can't break anything. There are release procedures.
 
-Ein 3-minütiges Video, welches erklärt, wie man die Dokumentation per PR bearbeitet, ist verfügbar [here](https://www.youtube.com/watch?v=Vo4L6YxWak).
+A 3 minute video which explains how to edit the docs via PR is available [here](https://www.youtube.com/watch?v=Vo4L6YYxWak).
 
 ```
 
-## Wie kann ich die Dokumentation lesen?
+## How to read the documentation?
 
-Wir haben diesen Abschnitt der Dokumentation speziell für diejenigen zur Verfügung gestellt, die neu im Konzept der Do-It-Yourself-APS (Artificial-Pankreas-Systems) sind, um am besten zu zeigen, wie man sich mit den Informationen, die wir für die wichtigsten halten, vertraut machen kann. Insbesondere was das Verständnis der Gründe für die "Grenzen" betrifft, die beim ersten Start deiner AAPS-Reise festgelegt wurden. These safety limits have been developed over many years by observations of the inadvertent mistakes that new users are most likely to make when first learning to set up, build, and then successfully loop with AAPS - as most often those mistakes occur simply because the user was so excited to get started using the system that they may have forgotten to sit down and dedicate the time needed to understand the information within this documentation thoroughly. We have all been there!
+We have provided this subsection of the documentation especially for those who are new to concept of Do-It-Yourself-APS (Artificial-Pancreas-Systems) in order to best show how to get acquainted with the information we consider to be the most important, especially in terms of understanding the reasons behind the "limits" set in place when you are first beginning your AAPS journey. These safety limits have been developed over many years by observations of the inadvertent mistakes that new users are most likely to make when first learning to set up, build, and then successfully loop with AAPS - as most often those mistakes occur simply because the user was so excited to get started using the system that they may have forgotten to sit down and dedicate the time needed to understand the information within this documentation thoroughly. We have all been there!
 
 Certainly the approach, "read everything" has merit and is certainly true. However, it is not uncommon for newcomers to quickly become overwhelmed by the sheer volume and variety of new information that they are expected to understand all at once! So these next few subsections are meant to lay out the most important foundations of the knowledge necessary to successfully run your own chosen setup with as few hiccups as is possible. New users can refer back to this guide when they run into aspects of the system they are not yet familiar with; and to remind themselves where to go within the Documentation in order to locate more in-depth information, as needed. It is also important to lay out the capabilities of AAPS in an up-front manner, as sometimes it can be disappointing to discover in the middle of reading the documentation that certain necessary tools are currently not available for use (due to constraints on which types of insulin pumps or CGMs are available in some countries vs. other countries etc.) or simply offers less/different functionality than first assumed. Finally, it is important to acknowledge that many experience-related aspects inside this documentation only become pertinent as you begin to use AAPS in real-time. Just as it is nearly impossible to learn to play a sport perfectly just by reading about the rules, it takes a combination of first learning the foundations of the rules for safely operating AAPS and then committing the time learning how best to apply those rules as you navigate through the steps of looping with AAPS.
 
@@ -117,17 +117,17 @@ Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 (index-component-setup)=
 
 ```{toctree}
-:caption: Komponenten Setup
+:caption: Component Setup
 
 CGM/FGM <./Configuration/BG-Source.md>
 
-xDrip Einstellungen <./Configuration/xdrip.md>
+xDrip Settings <./Configuration/xdrip.md>
 
-Pumpenwahl <./Getting-Started/Pump-Choices.md>
+Pump choices <./Getting-Started/Pump-Choices.md>
 
-Telefonwahl <./Hardware/Phoneconfig.md>
+Phones <./Hardware/Phoneconfig.md>
 
-Nightscout Setup <./Installing-AndroidAPS/Nightscout.md>
+Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
 
 Smartwatch  <./Hardware/Smartwatch.md>
 
@@ -204,6 +204,13 @@ Profile helper <./Configuration/profilehelper.md>
 ```
 
 ```{toctree}
+:caption: Full Closed Loop
+
+Full Closed Loop <./Usage/FullClosedLoop.md>
+
+```
+
+```{toctree}
 :caption: Troubleshooting
 
 Troubleshooting <./Usage/troubleshooting.md>
@@ -261,12 +268,12 @@ Sandbox <./Sandbox/sandbox1.md>
 ```
 
 ```{note}
-**Disclaimer And Warning**
+**Haftungsausschluss und Warnung**
 
-- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout erfüllt keinerlei Anforderungen des Datenschutzes im Gesundheitswesen. Use Nightscout and AAPS at your own risk, and do not use the information or code to make medical decisions.
-- Use of code from github.com is without warranty or formal support of any kind. Im Übrigen wird auf die Lizenz verwiesen, die im Repository abgerufen werden kann.
-- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Ihre Verwendung dient nur zur Information und bedeutet weder, dass AAPS zu ihnen gehört, noch dass sie unterstützt werden.
+- Alle Informationen, Gedanken und Code, die hier beschrieben werden, sind nur für Informations- und Bildungszwecke bestimmt. Nightscout erfüllt keinerlei Anforderungen des Datenschutzes im Gesundheitswesen. Du verwendest Nightscout und AAPS auf eigenes Risiko. Setze es nicht ein, um Behandlungsentscheidungen zu treffen.
+- Bei Nutzung des Quellcodes von github.com bestehen keinerlei Gewährleistungs- und Garantieansprüche. Es gibt keinen Support. Im Übrigen wird auf die Lizenz verwiesen, die im Repository abgerufen werden kann.
+- Sämtliche Produkt- und Herstellernamen, Handelsmarken, Dienstleistungsmarken, Warenzeichen und eingetragene Dienstleistungsmarken sind Eigentum ihrer jeweiligen Inhaber und werden nur zu Informationszwecken genutzt und nicht für Werbung oder Marketing. Ihre Verwendung dient nur zur Information und bedeutet weder, dass AAPS zu ihnen gehört, noch dass sie unterstützt werden.
 
-Please note - this project has no association with and is not endorsed by: [SOOIL](<https://www.sooil.com/eng/>), [Dexcom](<https://www.dexcom.com/>), [Accu-Chek, Roche Diabetes Care](<https://www.accu-chek.com/>) or [Medtronic](<https://www.medtronic.com/>)
+Bitte beachten: Dieses Projekt steht in keinerlei Verbindung mit: [SOOIL](<https://www.sooil.com/eng/>), [Dexcom](<https://www.dexcom.com/>), [Accu-Chek, Roche Diabetes Care](<https://www.accu-chek.com/>) oder [Medtronic](<https://www.medtronic.com/>)
 
 ```

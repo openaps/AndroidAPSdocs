@@ -12,7 +12,7 @@
 
 Hinweis: AAPS schreibt Daten immer in das **erstes Basalratenprofil in der Pumpe**.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](module-phone) page which Android version is required to run AndroidAPS.)
+* Ein Android-Smartphone - im Grunde funktionieren alle Android-Versionen mit der Insight, aber prüfe auf der Seite [Module](module-phone), welche Android Version für AAPS benötigt wird.
 * AndroidAPS muss auf Deinem Smartphone installiert sein.
 
 ## Einrichtung
@@ -54,7 +54,7 @@ Hinweis: Es besteht keine permanente Verbindung zwischen Pumpe und Smartphone. E
 
 ## Einstellungen in AndroidAPS
 
-**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](Preferences-advanced-settings-nsclient)).
+**Hinweis: Es ist ab AAPS Version 2.7 nun wieder möglich, 'Verwende absolute statt prozentuale Basalwerte beim Upload zu Nightscout' mit der Insight zu aktivieren, um Autotune nutzen zu können.** Dies gilt auch dann, wenn die Synchronisation mit Nightscout aktiviert ist. (Gehe dazu in AAPS auf [Einstellungen > Nightscout-Client > Erweiterte Einstellungen](Preferences-advanced-settings-nsclient).)
 
 ![Screenshot der Insight Einstellungen](../images/Insight_settings.png)
 
@@ -122,7 +122,7 @@ Abhängig von der Version der Pumpen-Firmware kann die Insight jedes Mal kurz vi
 
 * Firmware 1.x: Grundsätzlich keine Vibration
 * Firmware 2.x: Vibration kann nicht deaktiviert werden.
-* Firmware 3.x: AndroidAPS Bolusabgabe ohne Vibration. (minimum [version 2.6.1.4](Releasenotes-version-2-6-1-4))
+* Firmware 3.x: AndroidAPS Bolusabgabe ohne Vibration. (Mindestanforderung [AAPS Version 2.6.1.4](Releasenotes-version-2-6-1-4))
 
 Die Firmware-Version kann im Menü der Pumpe nachgesehen werden.
 
@@ -150,4 +150,4 @@ Schalte dann Bluetooth auf Pumpe und Smartphone für etwa 10 Sekunden aus und sc
 
 ## Mit der Insight Pumpe über Zeitzonen hinweg reisen
 
-For information on traveling across time zones see section [Timezone traveling with pumps](Timezone-traveling-insight).
+Für allgemeine Informationen zum Reisen über Zeitzonen hinweg siehe [Mit der Pumpe über Zeitzonen hinweg reisen](Timezone-traveling-insight).

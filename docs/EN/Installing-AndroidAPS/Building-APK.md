@@ -224,13 +224,13 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 (Building-APK-download-android-sdk)=
 ## Download Android SDK
 
-* In the menu, go to  File (1) > Settings (2).
+* In the menu, go to  File (1) > Settings (2) (or Android Studio > Preferences on Mac).
 
    ![Open settings](../images/studioSetup/30_Settings.png)
 
-* Double-click on Appearance & Behaviour to open its submenu (1).
-* Double-click on System Settings (2) and select Android SDK (3).
-* Tick the box left of "Android 9.0 (Pie)" (4) (API Level 28).
+* Double-click on Languages & Frameworks to open its submenu (1).
+* Select Android SDK (2).
+* Tick the box left of "Android 9.0 (Pie)" (3) (API Level 28).
 
    ![SDK settings](../images/studioSetup/31_AndroidSDK.png)
 
@@ -253,7 +253,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * Android Studio might recommend to update the gradle system. **Never update gradle!** This will lead to difficulties!
 
-* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1).
+* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "upgrade" (1).
 
    ![No gradle update](../images/studioSetup/36_GradleUpdateRequest.png)
 
@@ -286,7 +286,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 
    ![APK instead of bundle](../images/studioSetup/43_Apk.png)
 
-* Make sure that module is set to "AAPS.app" (1).
+* Make sure that module is set to "AndroidAPS.app" (1).
 * Click "Create new..." (2) to start creating your key store.
 
    **_Note:_** A key store in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords.

@@ -117,4 +117,4 @@
 ### Funktion verzögerter Bolus
 
 - Wenn Du einen verzögerten Bolus verwendest, wird der "Closed Loop"-Modus deaktiviert.
-- See [this page](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- Auf [dieser Seite](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) wird erläutert, warum der erweiterte Bolus im "Closed Loop"-Modus nicht funktioniert.

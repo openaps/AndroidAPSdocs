@@ -1,4 +1,4 @@
-# Wat is een closed loop systeem met AndroidAPS?
+# What is a closed loop system with AndroidAPS?
 
 AndroidAPS is een app die wordt gebruikt als 'kunstmatige alvleesklier' systeem (Artificial Pancreas System of kortweg APS in het Engels). Deze app draait op een Android smartphone   en heeft hetzelfde doel als een menselijke alvleesklier: de bloedglucosewaardes automatisch binnen gezonde grenzen houden.
 

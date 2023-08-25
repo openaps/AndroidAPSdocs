@@ -113,11 +113,11 @@ Bunlar olağan gradle senkronizasyon hatalarıdır:
 
   "Gradle Settings" bağlantınız yoksa, sağ kenardaki Gradle Sekmesini (1) seçerek Gradle ayarlarını manuel olarak açın, araçlar simgesini (2) ve orada 'Gradle Settings' öğesini seçin (3).
 
-  ![Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
+  ![Gradle Ayarları](../images/studioTroubleshooting/09_GradleSettings.png)
 
   Gradle ayarları iletişim kutusunu açtığınızda, "Gradle JDK" da seçenekleri (1) açın ve "Gömülü JDK sürümü"nü (2) seçin.
 
-  ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
+  ![Gradle Ayarları](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
   Ayarlar iletişim kutusunu kaydetmek ve kapatmak için "Tamam"a basın.
 

@@ -1,6 +1,6 @@
-# Πως μπορώ να βοηθήσω με το AndroidAPS
+# How to help with AAPS
 
-## AndroidAPS operates entirely on volunteer efforts and has no paid staff.
+## AAPS operates entirely on volunteer efforts and has no paid staff.
 
 Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
 
@@ -15,7 +15,7 @@ Yay! Look at the issues, ask in the discord channel, there is always a lot to do
 Great, this is a highly appreciated thing and a good way to pay it forward!
 
 * The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* Ένας οδηγός πώς να κάνετε δεσμεύσεις στο αγγλικό wiki μπορείτε να τον βρείτε εδώ: [ How to make a PR ](../make-a-PR.md). Άλλες γλώσσες μεταφράζονται μόνο από τα αγγλικά και δεν μπορούν να επεξεργαστούν για λόγους συνέπειας.
+* A guide how to do commits on English wiki can be found here: [How to make a PR](../make-a-PR.md). Other languages are only translated from english and can't be edited for consistency reasons.
 
 ## I do speak multiple languages and want to translate the app or the documentation
 
