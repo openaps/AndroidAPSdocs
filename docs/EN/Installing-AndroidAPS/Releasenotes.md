@@ -77,10 +77,10 @@ Release date: XX-XX-2023
 - Smoothing plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
 - DynamicISF plugin @Chris Wilson, @tim2000s
 - New logo @thiagomsoares
-- New watchface @philhoul
+- New watchface @Philoul
 - fixed tons of issues from 3.1 version
 - allow add notes on more places @Sergey Zorchenko
-- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
+- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
 - new SMS commands LOOP LGS/CLOSED @pzadroga
 - wear translations @Andries-Smit
 - xdrip communication moved to separate module @MilosKozak
