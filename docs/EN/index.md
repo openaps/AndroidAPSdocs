@@ -43,6 +43,14 @@ Completing the objectives <completingObjetives.md>
 ```
 
 ```{toctree}
+:caption: Remote control and following
+
+Remote control <remote-control.md>
+Following-only <following-only.md>
+
+```
+
+```{toctree}
 :caption: Operating
 
 Optimizing <optimizing.md>
