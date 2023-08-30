@@ -11,11 +11,12 @@ _To fully test a new rig developers need to have a spare phone and a spare pump 
 Yay! Look at the issues, ask in the discord channel, there is always a lot to do! 
 Pick a small task at first and do your first pull request! :)
 
-## I know the system and can write documentation!
+## I know the system and can edit/write new sections of documentation!
 
-Great, this is a highly appreciated thing and a good way to pay it forward!
-* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../make-a-PR.md). Other languages are only translated from english and can't be edited for consistency reasons.
+Got a new watch and found that the instructions for integrating watches in the AAPS documentation need updating? Or maybe something in the docs isn't quite clear, and you can think of a better way of writing it. Everyone can edit the docs, from correcting small errors to adding in new sections on exciting new developments. This is highly appreciated by the community and a good way to pay it forward! No coding knowledge is needed.
+
+* A step-by-step guide on how to edit the existing documentation can be found here: [How to make a PR](../make-a-PR.md). Other languages are only translated from English and can't be edited for consistency reasons.
+* The Discord channel regarding this can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
 
 ## I do speak multiple languages and want to translate the app or the documentation
 
