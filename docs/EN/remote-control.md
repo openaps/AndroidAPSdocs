@@ -372,15 +372,53 @@ If you are having issues sending or receiving SMS commands with the Android Mess
 ●	Activate “Only send SMS and MMS messages”
 
 
-**### 2) \*\*NSClient\*\***
+### 2) **NSClient**
 
-If you have a caregiver/parent Android phone you can use the \*\*[NSClient\*\* app](https://androidaps.readthedocs.io/en/rework-project/Children/Children.html). This app looks very similar in appearance to \*\*AAPS\*\* itself and offers to the caregiver remote tabs that will action comments into **AAPS**. Features include:
+If you have a caregiver/parent Android phone you can build, install and use the **NSClient** app. This app looks very similar in appearance to **AAPS** itself and offers to the caregiver remote tabs that will action comments into AAPS. Features include:
 
-![](RackMultipart20230828-1-iu5zcn_html_9fee1c9c4a56cdf2.png)
+Tab/ Hamburger
 
-\*\*NSClient\*\* allows the caregiver to make most of the adjustments that are allowed by\*\*AAPS\*\* (excluding insulin boluses) remotely, via the mobile or internet network. The main benefits of NSClient are the speed and ease it with which caregivers/parents can remotely control \*\*APPS\*\*. Using NSClient \_can\_ be much faster than entering SMS Commands, if delivering a command which would require authentication. Commands entered on NSClient are uploaded onto Nightscout.
+Features
 
-Remote control through NSClient app is only recommended if your synchronization is working well (\_i.e.\_ you don't see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) for further details
+**Action** Tab
+
+Profile Switch
+
+Temp Target
+
+BG Check
+
+CGM Sensor Insert
+
+Note
+
+Exercise
+
+Announcement
+
+Question?
+
+History Browser
+
+**Food**Tab
+
+**Treatments** Tab
+
+Check Treatments delivered including bolus and carbs entered
+
+**Maintenance** Tab
+
+Export and Import Settings
+
+**Profile** Tab
+
+Creating new Profile
+
+Profile switch
+
+**NSClient** allows the caregiver to make most of the adjustments that are allowed by**AAPS** (excluding insulin boluses) remotely, via the mobile or internet network. The main benefits of NSClient are the speed and ease it with which caregivers/parents can remotely control **APPS**. Using NSClient _can_ be much faster than entering SMS Commands, if delivering a command which would require authentication. Commands entered on NSClient are uploaded onto Nightscout.
+
+Remote control through NSClient app is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) for further details
 
 There are 2 apps you can download: [NSClient & NSClient2 to download](https://github.com/nightscout/AndroidAPS/releases/). The only difference is the app name. This allows you to install the app twice on the same phone, to be able to follow two different people or nightscout accounts with it at the same time.
 
@@ -390,67 +428,44 @@ A smartwatch can be a very useful tool in helping manage AAPS with kids. A coupl
 
 #### 3) Nightscout
 
-As well as Nightscout being a server in "the Cloud", there is also a dedicated \*\*Nightscout\*\* app which can be download directly from the App Store on your iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use NSClient, or, if you only want to follow and not send treatments you can download and install the Nightwatch app from the Playstore (link to follow AAPS section).
+As well as Nightscout being a server in “the Cloud”, there is also a dedicated **Nightscout** app which can be download directly from the App Store on your iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use NSClient, or, if you only want to follow and not send treatments you can download and install the Nightwatch app from the Playstore (link to follow AAPS section).
 
-Once you have installed the Nightscout app on your iPhone, open the app and follow the prompts. Enter your Nightscout address (below, left). The form of this may vary depending on how your Nightscout is hosted. ([http://youraddresshere.herokuapp.com](http://youraddresshere.herokuapp.com/)). Then enter your Nightscout API secret (below right). If not prompted for your API password, then you need to enter this by clicking on the padlock at the top of the app. More info is available here:
+Once you have installed the Nightscout app on your iPhone, open the app and follow the prompts. Enter your Nightscout address (below, left). The form of this may vary depending on how your Nightscout is hosted. (http://youraddresshere.herokuapp.com). Then enter your Nightscout API secret (below right). If not prompted for your API password, then you need to enter this by clicking on the padlock at the top of the app. More info is available here:
 
-[https://nightscout.github.io/nightscout/discover/](https://nightscout.github.io/nightscout/discover/)
+https://nightscout.github.io/nightscout/discover/
 
-![](RackMultipart20230828-1-iu5zcn_html_a7b1dca207b41cfb.png)
+When you first log in, you will have a very simple display (below, left). Customise the display options, by selecting the “hamburger” in the top right and scrolling down.
 
-When you first log in, you will have a very simple display (below, left). Customise the display options, by selecting the "hamburger" in the top right and scrolling down.
+Scroll down through to “Settings”. You may wish to change the “scale” to “linear” as the default for the BG display is logarithmic, and under “render basal” select “default” so that the pump basal shows up. Continue to scroll down until you get to “show plugins”. You need to make sure “careportal” is checked, and can also select various other metrics (most useful are: IOB, care portal, pump, cannula age, insulin age, basal profile and OpenAPS). Now need to click “save” at the bottom for these changes to take effect.
 
-![](RackMultipart20230828-1-iu5zcn_html_9896c54bfa1d1432.png)
-
-![](RackMultipart20230828-1-iu5zcn_html_8412f74f98bdbd69.png)
-
-![](RackMultipart20230828-1-iu5zcn_html_4cd5602279d0a768.png)
-
-Scroll down through to **"Settings".** You may wish to change the " **scale**" to " **linear**" as the default for the BG display is logarithmic, and under " **render basal**" select " **default**" so that the pump basal shows up. Continue to scroll down until you get to " **show plugins**". **You need to make sure "careportal" is checked** , and can also select various other metrics (most useful are: **IOB, care portal, pump, cannula age, insulin age, basal profile and OpenAPS** ). Now need to click **"save"** at the bottom for these changes to take effect.
-
-After pressing "save" the app will return to your main Nightscout screen which will look a little like this:
-
-![](RackMultipart20230828-1-iu5zcn_html_340cc7a187439045.png)
+After pressing “save” the app will return to your main Nightscout screen which will look a little like this:
 
 There is a huge amount of information on the AAPS system in the grey tabs on this screen:
 
-![](RackMultipart20230828-1-iu5zcn_html_c61d02de398a9774.png)
-
-![](RackMultipart20230828-1-iu5zcn_html_a3b0880f9fb8536d.png)
-
 ### Sending treatments through the Nightscout app
 
-**Connecting Nightscout with AAPS:**
+Connecting Nightscout with AAPS:
 
-To set-up sending treatments from the Nightscout app to **AAPS** , go into the **NSclient tab** in the AAPS app. Open the right-hand dot menu, and open **NSclientpreferences** – **synchronisation** and select the relevantoptions in this menu. Set it to receive the different commands (temporary targets, etc) and also to synchronise profiles. If things don't seem to be synchronised, go back to the **NSclient** tab and select "full synchronisation" and wait a few minutes.
+To set-up sending treatments from the Nightscout app to AAPS, go into the NSclient tab in the AAPS app. Open the right-hand dot menu, and open NSclientpreferences – synchronisation and select the relevant options in this menu. Set it to receive the different commands (temporary targets, etc) and also to synchronise profiles. If things don’t seem to be synchronised, go back to the NSclient tab and select “full synchronisation” and wait a few minutes.
 
-**Nightscout** on your iPhone has all the same functions as Nightscout on your PC. It allows you to send many commands to \*\*AAPS\*\*, but it does not allow you to send insulin boluses. You can however "announce" insulin through Nightscout as a "correction bolus", although it is not delivered. Because **AAPS** now takes that fake insulin bolus into account, announcing insulin actually works to make **AAPS** \_less aggressive\_, and can be useful for cancelling negative insulin and preventing lows.
+Nightscout on your iPhone has all the same functions as Nightscout on your PC. It allows you to send many commands to **AAPS**, but it does not allow you to send insulin boluses. You can however “announce” insulin through Nightscout as a “correction bolus”, although it is not delivered. Because AAPS now takes that fake insulin bolus into account, announcing insulin actually works to make AAPS _less aggressive_, and can be useful for cancelling negative insulin and preventing lows.
 
-![](RackMultipart20230828-1-iu5zcn_html_8b4a4e86dedfc996.png)
+Read more about Nightscout options here: https://nightscout.github.io/
 
-![](RackMultipart20230828-1-iu5zcn_html_14169bc58c6a077c.png)
+Tips for getting the most out of the Nightscout app:
 
-![](RackMultipart20230828-1-iu5zcn_html_624d4bea2c0abac.png)
+1). If you get “stuck” on a page, just click “refresh” (bottom middle) and the cross at the top right and it will take you back to the homepage with the BG graph.
 
-Read more about Nightscout options here: [https://nightscout.github.io/](https://nightscout.github.io/)
-
-**Tips for getting the most out of the Nightscout app:**
-
-1). If you get "stuck" on a page, just click "refresh" (bottom middle) and the cross at the top right and it will take you back to the homepage with the BG graph.
-
-2) To see the current profile which is running on the phone, press the various icons on the screen above the graph. More info (current carb ratio, sensitivity and timezone etc.) can be seen by pressing "basal" and "OpenAPS" gives info about the profile and current target _etc_. Both the phone battery% and the pump battery % can also be monitored. BWP gives information on what the algorithm thinks will happen in the future, given the IOB and COB.
-
-**Other icons in the menu: what does the pencil (edit) mean?**
+To see the current profile which is running on the phone, press the various icons on the screen above the graph. More info (current carb ratio, sensitivity and timezone etc.) can be seen by pressing “basal” and “OpenAPS” gives info about the profile and current target etc. Both the phone battery% and the pump battery % can also be monitored. BWP gives information on what the algorithm thinks will happen in the future, given the IOB and COB.
+Other icons in the menu: what does the pencil (edit) mean?
 
 You can (technically) use the edit pencil to move or delete bolus or correction treatments from the last 48h.
 
-![](RackMultipart20230828-1-iu5zcn_html_9ee3981d1b5d4137.png)
-
 More about this here:
 
-[https://nightscout.github.io/nightscout/discover/#edit-mode-edit](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
+https://nightscout.github.io/nightscout/discover/#edit-mode-edit
 
-Although this could potentially be useful for deleting announced (but not bolused for) carbs, in practice it doesn't currently work well with AAPS and we recommend making changes like this through the AAPS app directly.
+Although this could potentially be useful for deleting announced (but not bolused for) carbs, in practice it doesn’t currently work well with AAPS and we recommend making changes like this through the AAPS app directly.
 
 
 
