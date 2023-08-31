@@ -49,7 +49,7 @@ The **AAPS app** uses a decision making process (**algorithm**) from OpenAPS. Be
 
 ## What are the advantages of the AAPS system? 
 
-The OpenAPS algorithm used by **AAPS** controls blood sugar levels in the absence of user input, according to the users’ defined parameters (important ones being basal rates, insulin sensitivity factors, insulin-to-carb ratios, duration of insulin activity etc.), reacting every 5 minutes to the new sensor data. Some of the reported advantages of using AAPS are extensive fine-tunable options, automations and increased transparency of the system for the patient/caregiver. This can result in better control over your (or your dependent’s) diabetes, which in turn may give improved quality of life and increased peace of mind.  
+The OpenAPS algorithm used by **AAPS** controls blood sugar levels in the absence of user input, according to the users’ defined parameters (important ones being basal rates, insulin sensitivity factors, insulin-to-carb ratios, duration of insulin activity etc.), reacting every 5 minutes to the new sensor data. Some of the reported advantages of using AAPS are extensive fine-tunable options, automations and increased transparency of the system for the patient/caregiver. This can result in better control over your (or your dependant’s) diabetes, which in turn may give improved quality of life and increased peace of mind.  
 
 **Practical advantages include:** 
 
@@ -70,7 +70,7 @@ These are all examples, the full range of features gives huge flexibility for da
     
 - **No commercial constraints, due to open application interfaces**: beyond the use of an open-source approach, which allows the source code of **AAPS** to be viewed at any time, the general principle of providing open programming interfaces gives other developers the opportunity to contribute new ideas too. This accelerates development and allows users to add on features to make life with diabetes even more convenient. Good examples for such integrations are [NightScout](https://nightscout.github.io/), [Nightscout Reporter](https://nightscout-reporter.zreptil.de/), [Xdrip+](https://xdrip.readthedocs.io/en/latest/install/usethedoc/), [M5 stack](https://github.com/mlukasek/M5_NightscoutMon/wiki?fbclid=IwAR1pupoCy-2GuXLS7tIO8HRkOC_536YqSxTK7eF0UrKkM1PuucFYRyPFvd0) etc. There is ongoing dialogue between open-source developers and those developing commercial systems. Many of the DIY innovations are gradually adopted by commercial systems, where developments are understandably slower, partly because interfaces between systems from different companies (pumps, apps, sensors _etc_) need to be carefully negotiated and licenced. This can also slow innovations which are convenient for the patient (or a small sub-population of patients, who have a very specific requirement) but do not generate any sizable profit. 
     
-- **Detailed app interface**: with **AAPS** it is easy to keep track of things like: pump insulin levels, cannula age, sensor age, pump battery age, insulin-on-board _etc_. Many actions can be done through the **AAPS** app (priming the pump, disconnecting the pump _etc_.), instead of on the pump itself, which means the pump can stay in your (or your dependent's) pocket or belt. 
+- **Detailed app interface**: with **AAPS** it is easy to keep track of things like: pump insulin levels, cannula age, sensor age, pump battery age, insulin-on-board _etc_. Many actions can be done through the **AAPS** app (priming the pump, disconnecting the pump _etc_.), instead of on the pump itself, which means the pump can stay in your (or your dependant's) pocket or belt. 
     
 - **Accessibility and affordability**: **AAPS** gives people who currently can’t afford to self-fund, or don’t have funding/insurance, access to a world-class hybrid closed looping system which is conceptually years ahead, in terms of development, of the commercial systems. You currently need to have a Nightscout account to set up **AAPS**, although the Nightscout account is not required for day-to-day running of the **AAPS** loop. Many people continue to use Nightscout for collecting their data, and for remote control. Although **AAPS** itself is free, setting up Nightscout through one of the various platforms may incur a fee (€0 - €12), depending on what level of support you want (see comparison table). **AAPS** works with a wide range of affordable (starting from approx €150) Android phones. In comparison, Loop currently costs around €80 a year for the Apple development licence, and CamAPS FX costs around €80/month (prices last checked in June 2023).
     
@@ -144,11 +144,11 @@ It is hard to get a “feel” for any system without using it, or talking to ot
 
 No. The master version of **AAPS** does not have any machine learning algorithms, multiple-parameter insulin response models, or artificial intelligence. As such, the system is open and transparent in how it works, and has the ability to be understood not just by experts, but also by clinicians and patients. It also means that if you have a sharply varying schedule (maybe switching from a stressful week at work to a relaxing holiday) and are likely to need a significantly different amount of insulin, you can immediately switch **AAPS** to run a weaker/stronger customised profile. A ‘learning system’ will do this adjustment for you automatically, but is likely to take longer to adjust the insulin delivery.   
 
-## Which system is right for me or my dependent? 
+## Which system is right for me or my dependant? 
 
 Practically, your choice of system is often restricted by which pump you already have, or can obtain from your medical provider, and your choice of phone (Apple or Android). If you don’t yet have a pump you have the biggest choice of systems. Technology is continually evolving, pumps are being discontinued and new pumps and sensors are being released. Most open-source systems work with the main sensors (Libre and Dexcom) or are quickly adapted to work with new sensors a year or so after they are released (with a bit of time delay for safety and stability testing). 
 
-Most **AAPS** users report more time in range, HbA1c reductions, as well as quality of life improvements from having a system that can auto-adjust basal rates overnight during sleep, and this is true for most hybrid closed loop systems. Some people have a preference for a very simple system which is not very customisable (which means you may prefer a commercial system), and others find this lack of control very frustrating (you may prefer an open-source system). If you (or your dependent) are newly diagnosed, a common route is to get used to using MDI plus a glucose sensor first, then progress to a pump which has the potential for looping, then progress to **AAPS**, but some people (especially small kids) may go straight to a pump.
+Most **AAPS** users report more time in range, HbA1c reductions, as well as quality of life improvements from having a system that can auto-adjust basal rates overnight during sleep, and this is true for most hybrid closed loop systems. Some people have a preference for a very simple system which is not very customisable (which means you may prefer a commercial system), and others find this lack of control very frustrating (you may prefer an open-source system). If you (or your dependant) are newly diagnosed, a common route is to get used to using MDI plus a glucose sensor first, then progress to a pump which has the potential for looping, then progress to **AAPS**, but some people (especially small kids) may go straight to a pump.
 
 It is important to note that the **AAPS** user needs to be proactive to troubleshoot and fix problems themselves, with help from the community. This is a very different mindset to that when using a commercial system. With **AAPS** a user has more control, but also the responsibility, and needs to be comfortable with that. 
 
@@ -169,9 +169,56 @@ If a malicious attack was made on your insulin pump, these strategies would sign
 
 ## How can I approach discussing AAPS with my clinical team?
 
-Different clinical teams (and individuals) have very different views on DIY looping. Some clinicians have type 1 diabetes, use DIY looping themselves and are strongly enthusiastic, some would like to be supportive but know little about it, and a few feel very uncomfortable supporting patients who use DIY systems. The Loop and Learn group maintains a [list](https://www.loopandlearn.org/hcp-recommendations/?mibextid=Zxz2cZ&fbclid=IwAR1yeDqYASHep7XGIHKFLfuyMLgQGZPLBWQ8Pn7S0D3D1x6TUb7yb10opO0) of clinicians who are known to be supportive of DIY approaches, you are also able to add your own supportive practitioner to the list, which helps others. 
+Users are encouraged to speak with their clinicians about their intention to use **AAPS**. Please do not be afraid to have an honest conversation with your diabetes team if you intend to use **AAPS** (or any other DIY loop, for that matter). Transparency and trust between patient and doctor is paramount. 
 
-When you discuss DIY looping with your clinical team, it may help to email them a [copy](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/) of the landmark 2022 paper about DIY looping beforehand, or take along a printout to your next meeting for them to read. 
+**Suggested approach**:
+Start a conversation with your clinician to determine their familiarity and attitude towards diabetic technology such as CGMs,  pumps, hybrid loops and commercial looping. Your clinician/endocrinologist should be aware of the basic technology and be willing to discuss with you recent advancements with commercial loop products available within their regions. 
+
+Obtain your clinicians/endocrinologists’ views on DIY loop _vs_ commercial looping, and gauge their knowledge in this area. Are they familiar with **AAPS** and can they share with you any helpful experience of working with patients with DIY looping?
+
+Ask if your team has any patients under their care who already use DIY looping. Due to patient confidentiality, doctors cannot pass other patient’s details to you without obtaining the individual’s consent. However, if you want to, you **can** ask them to pass **your** contact details to an existing DIY looping patient if there is one the clinician feels you might "click” with, suggesting that you would be happy for the patient to contact you to discuss DIY looping. Clinicians are not obliged to do this, but some are happy to, since they realise the importance of peer-to-peer support in type 1 diabetes management. You may also find it useful to meet local friendly DIY loopers. This is of course up to you, and not entirely necessary.  
+
+If you feel unsupported by your team to loop with **AAPS**, the following discussion points may aid your communications: 
+a) there is precedent for DIY looping in their patient population and recent published guidance in the Lancet has confirmed that DIY loops are safe and effective at improving diabetic control including time in range;
+b) starting with **AAPS** - involves a gradual migration from “open” pumping, through low-glucose suspend, through to hybrid “closed” looping by completing a number of objectives. There is therefore a structured programme which requires the user to demonstrate a certain level of competence in this area before they can close the loop. It may also reassure your team to know that there are around 10,000 users worldwide currently using **AAPS** and technical support is available to you from the DIY community; 
+c) you can provide both CGM and looping/pumping information as combined reports at clinic meetings (through Nightscout or Tidepool), either printed out or on-screen (if you bring a laptop/tablet). The streamlining of both CGM and insulin data should hopefully allow more effective use of your clinician’s time to review your reports and aid their discussions in assessing your progress; and
+d) if there is still strong objection from your team, hand your clinician printouts of the reference articles below, and write out the link to the **AAPS** website “clinician section” for them to consider: 
+
+For Clinicians – A General Introduction and Guide to **AAPS** — AndroidAPS 3.1 documentation
+
+A paper published in the Lancet Diabetes Endocrinology on 13 November 2021 (co led by Kings’ and Guy’s and St Thomas’ NHS Foundation Trust, and co lead by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s) provides:
+a) **assurance** for professionals that DIY artificial pancreas systems/ open source as a “safe and effective treatment” option for type 1 diabetes and provides guidance on recommendations, discussions, supports, documentation;
+b) **recognition** that open-source **automated insulin delivery** (“AID”) systems can increase time in range (TIR) while reducing variability in blood glucose concentrations and the amount of hypo and hyperglycaemic episodes in various age groups, genders and communities;
+c) recommendation that healthcare workers should support type 1 patients or their caregivers who might choose to manage their diabetes with an open source AID system;
+d) recommendation that healthcare workers should attempt to learn about all treatment options that might benefit patients including available open-source AID systems.  If health care professionals do not have resources to educate themselves, or have legal or regulatory concerns, they should consider cooperating, or teaming up with other healthcare professionals who can support this;
+e) emphasis that all users of CGMs should have real-time and open access to their own health data at all times;
+f) emphasis that these open source systems have not undergone the same regulatory evaluations as commercially available medical technologies, and there is no commercial technical support. However, extensive community support is available; and
+g) a recommendation that regulation and legal frameworks should be updated to ensure clarity on permitting ethical and effective treatment of such open source systems.
+
+Another paper issued in the Medical Law International 2021) also highlights the UK General Medical Council’s ‘consent guidance’ (Decision Making and Consent  published in September 2020 can be interpreted as placing a strong emphasis on doctor and patients making decisions together. The doctor should explain the potential benefits, risks, burdens and side-effects on DIY APS and may recommend a particular option without pressuring the patient. 
+
+Ultimately it is up to the patient to weigh up these factors, along with any non-clinical issues relevant to them and decide which treatment option, if any, to accept. 
+
+If a doctor discovers in a clinic that their patient is looping with a DIY system, they are not exempted from their obligations to monitor the patient, simply because they did not prescribe the particular piece of technology the patient is using; clinicians must continue to monitor patients.
+
+Doctors (at least in the UK) are not prohibited from prescribing unlicensed medicines and can use their clinical discretion. They should therefore use their clinical judgement to decide if a DIY APS is suitable for a specific patient, and discuss what they consider to be the pros and cons with the patient.
+
+Further reading here: 
+
+1.Lancet Diabetes Endocrinol, 2022; 10: 58–74 
+Open-source automated insulin delivery: international consensus statement and practical guidance for health-care professionals - The Lancet Diabetes & Endocrinology
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/
+2. KIng’s College press release https://www.kcl.ac.uk/news/do-it-yourself-artificial-pancreas-given-approval-by-team-of-experts
+3. Diabetes UK https://www.diabetes.org.uk/professionals/position-statements-reports/do-it-yourself-closed-loop
+4. Berlin Institute of Health
+https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended
+5. Canadian Journal of Diabetes
+https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext
+6. Diabetes Canada
+How to help people on open-source automated insulin delivery systems? (diabetotech.com)
+
+
+
 
 ## Why can’t I just download AAPS and use it straight away?  
 
