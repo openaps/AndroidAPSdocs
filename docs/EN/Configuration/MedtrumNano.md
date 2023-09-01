@@ -5,15 +5,16 @@ These instructions are for configuring the Medtrum Nano insulin pump. **The Medt
 This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.
 
 ## Pump capabilities with AAPS
+* All loop functionality supported (SMB, TBR etc)
 * Automatic DST and timezone handling
-* All loop functionality supported (Bolus + Temporary basal)
 * Extended bolus not supported by AAPS driver
 
 ## Hardware and Software Requirements
+* **Compatible Medtrum pump base and reservoir patches**
+    - Currently supported is Medtrum Nano with pump base refs: **MD0201** and **MD8201**. If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [**here**](https://discordapp.com/channels/629952586895851530/1076120802476441641).
 * **Compatible Android phone** with a BLE Bluetooth connection 
     - See AAPS requirements (TODO Link)
-* **Compatible Medtrum pump base and patches**
-    - Currently Medtrum Nano pump base refs: **MD0201** and **MD8201** are supported. If you have an unsupported model and can donate the hardware or you can help with testing contact us at discord (TODO: Hyperlink) for support.
+* [**Continuous Glucose Monitor (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
 ## Before you begin
 
@@ -47,7 +48,7 @@ If you are installing AAPS for the first time, the **Setup Wizard** will guide y
 
 (TODO: Screenshot)
 
-When in doubt you can also select “Virtual Pump” and select “Medtrum” later, after setting up AAPS (see option 2).
+If in doubt you can also select “Virtual Pump” and select “Medtrum” later, after setting up AAPS (see option 2).
 
 #### Option 2: The Config Builder
 
@@ -65,7 +66,7 @@ TODO: Screenshot of settings
 
 #### Serial Number:
 
-Enter here the serial number of your pump base as noted on the pump base. Make sure the serial number is correct and there are no spaces added (You can either use capital or lowercase). 
+Enter the serial number of your pump base here as noted on the pump base. Make sure the serial number is correct and there are no spaces added (You can either use capital or lowercase). 
 
 NOTE: This setting can only be changed when there is no patch active.
 
@@ -99,8 +100,8 @@ Set this to a sensible value for your insulin requirements.
 ### Step 3: Activate patch
 
 **Before you continue:**
-- Have your Medtrum Nano pump base and and patch ready.
-- Make sure that AAPS is properly set up and a profile is activated (TODO: Link to profile setup)
+- Have your Medtrum Nano pump base and and reservoir patch ready.
+- Make sure that AAPS is properly set up and a [profile is activated](https://androidaps.readthedocs.io/en/latest/Configuration/Config-Builder.html#config-builder-profile).
 - Other devices that can talk to the Medtrum pump are disabled (PDM and Medtrum app)
 
 #### Activate patch from the Medtrum overview Tab
