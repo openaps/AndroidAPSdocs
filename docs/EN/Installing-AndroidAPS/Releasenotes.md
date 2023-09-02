@@ -86,6 +86,7 @@ Release date: XX-XX-2023
 - xdrip communication moved to separate module @MilosKozak
 - internal changes: updated libs versions, rx3 migration, new modules structure @MilosKozak
 - Diaconn driver fixes @miyeongkim
+- more database maintenance options @MilosKozak
 - AAPSClient provides info if main phone is plugged in electricity @MilosKozak
 - Change in BolusWizard. If CGM is not available percentage is ignored (ie 100% is used)
 - new 150k+ lines of code, changed 156k lines
