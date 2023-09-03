@@ -1,6 +1,6 @@
-# Medtrum Nano
+# Medtrum Nano / 300U
 
-These instructions are for configuring the Medtrum Nano insulin pump. **The Medtrum driver is planned but not commited for AAPS 3.2 (next version)!**
+These instructions are for configuring the Medtrum insulin pump. **The Medtrum driver is planned but not commited for AAPS 3.2 (next version)!**
 
 This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.
 
@@ -11,14 +11,18 @@ This software is part of a DIY artificial pancreas solution and is not a product
 
 ## Hardware and Software Requirements
 * **Compatible Medtrum pump base and reservoir patches**
-    - Currently supported is Medtrum Nano with pump base refs: **MD0201** and **MD8201**. If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [**here**](https://discordapp.com/channels/629952586895851530/1076120802476441641).
+    - Currently supported:
+        - Medtrum TouchCare Nano with pump base refs: **MD0201** and **MD8201**.
+        - Medtrum TouchCare 300U with pump base ref: **MD8301**.
+        - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
+* **Version 3.2.0 or newer of AAPS built and installed** using the [Build APK](../Installing-AndroidAPS/Building-APK.md) instructions.
 * **Compatible Android phone** with a BLE Bluetooth connection 
-    - See AAPS requirements (TODO Link)
-* [**Continuous Glucose Monitor (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
+    - See AAPS [Release Notes](../Installing-AndroidAPS/Releasenotes.md)
+* [**Continuous Glucose Monitor (CGM)**](BG-Source.md)
 
 ## Before you begin
 
-**SAFETY FIRST** Do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, and phone devices are must-haves). 
+**SAFETY FIRST** Do not attempt this process in an environment where you cannot recover from an error (extra patches, insulin, and pump control devices are must-haves). 
 
 **The PDM and Medtrum App will not work with a patch that is activated by AAPS.**
 Previously you may have used your PDM or Medtrum app to send commands to your pump. For security reasons you can only use the activated patch with the device or app that was used to activate it.
@@ -26,8 +30,8 @@ Previously you may have used your PDM or Medtrum app to send commands to your pu
 *This does NOT mean that you should throw away your PDM. It is recommended to keep it somewhere safe as a backup in case of emergencies, for instance if your phone gets lost or AAPS is not working correctly.*
 
 **Your pump will not stop delivering insulin when it is not connected to AAPS**
-Default basal rates are programmed on the pump during activation as defined in the current active profile.
-As long as AAPS is operational, it will send basal rate commands that run for a maximum of 120 minutes. If for some reason the pod does not receive any new commands (for instance because communication was lost due to pump - phone distance) the pump will automatically fall back to default basal rates.
+Default basal rates are programmed on the pump as defined in the current active profile.
+As long as AAPS is operational, it will send temporary basal rate commands that run for a maximum of 120 minutes. If for some reason the pump does not receive any new commands (for instance because communication was lost due to pump - phone distance) the pump will fall back to the default basal rate programmed on the pump once the Temporary Basal Rate ends.
 
 **30 min Basal Rate Profiles are NOT supported in AAPS.**
 **The AAPS Profile does not support a 30 minute basal rate time frame**
@@ -46,23 +50,25 @@ CAUTION: When activating a patch with AAPS you **MUST** disable all other device
 
 If you are installing AAPS for the first time, the **Setup Wizard** will guide you through installing AAPS. Select “Medtrum” when you reach Pump selection.
 
-(TODO: Screenshot)
-
 If in doubt you can also select “Virtual Pump” and select “Medtrum” later, after setting up AAPS (see option 2).
+
+![Setup Wizard](../images/medtrum/SetupWizard.png)
 
 #### Option 2: The Config Builder
 
-On an existing installation you can select the **Medtrum** pump from the Config builder:
+On an existing installation you can select the **Medtrum** pump from the [Config Builder](Config-Builder.md#config-builder-profile):
 
-On the top-left hand corner **hamburger menu** select **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Medtrum**\ ➜\ **Settings Gear (3)** by selecting the **Enable button (2)** titled **Medtrum**. 
+On the top-left hand corner **hamburger menu** select **Config Builder**\ ➜\ **Pump**\ ➜\ **Medtrum**\ by selecting the **Enable button** titled **Medtrum**. 
 
-Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Medtrum overview to be displayed as a tab in the AAPS interface titled **Medtrum**. Checking this box will facilitate your access to the Medtrum commands when using AAPS and is highly recommended.
+Selecting the **checkbox** next to the **Settings Gear** will allow the Medtrum overview to be displayed as a tab in the AAPS interface titled **Medtrum**. Checking this box will facilitate your access to the Medtrum commands when using AAPS and is highly recommended.
+
+![Config Builder](../images/medtrum/ConfigBuilder.png)
 
 ### Step 2: Change settings
 
-Enter the Medtrum settings by tapping the **Settings Gear (3)** 
+Enter the Medtrum settings by tapping the **Settings Gear** of the Medtrum module in the Config Builder .
 
-TODO: Screenshot of settings
+![Medtrum Settings](../images/medtrum/MedtrumSettings.png)
 
 #### Serial Number:
 
@@ -87,50 +93,190 @@ Note: In silent mode AAPS will still sound the alarm depending on your phone's v
 
 #### Hourly Maximum Insulin
 
-This setting changes the maximum amount of insulin that can be delivered in one hour. The default is 25U. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see TODO: Link to overview menu.
+This setting changes the maximum amount of insulin that can be delivered in one hour. The default is 25U. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#reset-alarms).
 
 Set this to a sensible value for your insulin requirements. 
 
 #### Daily Maximum Insulin
 
-This setting changes the maximum amount of insulin that can be delivered in one day. The default is 80U. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see TODO: Link to overview menu.
+This setting changes the maximum amount of insulin that can be delivered in one day. The default is 80U. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#reset-alarms).
 
 Set this to a sensible value for your insulin requirements.
 
 ### Step 3: Activate patch
 
 **Before you continue:**
-- Have your Medtrum Nano pump base and and reservoir patch ready.
-- Make sure that AAPS is properly set up and a [profile is activated](https://androidaps.readthedocs.io/en/latest/Configuration/Config-Builder.html#config-builder-profile).
+- Have your Medtrum Nano pump base and a reservoir patch ready.
+- Make sure that AAPS is properly set up and a [profile is activated](../Usage/Profiles.md).
 - Other devices that can talk to the Medtrum pump are disabled (PDM and Medtrum app)
 
 #### Activate patch from the Medtrum overview Tab
 
-Navigate to the Medtrum TAB in the AAPS interface and press the **Change Patch** button. (TODO: Screenshot)
+Navigate to the [Medtrum TAB](#overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
 
-If a patch is already active, you will be prompted to deactive this patch first - See Deactivate patch below.
+If a patch is already active, you will be prompted to deactivate this patch first - See Deactivate patch below.
 
 Follow the prompts to fill and activate a new patch. Please note - it is important to only connect the pump base to the reservoir patch at the step when you are prompted to do so. **You must only put the pump on your body and insert the cannula when prompted to during the activation process (after priming is complete).**
 
-1. (TODO: Activation Steps with Screenshots)
+##### Start Activation
+
+![Start Activation](../images/medtrum/activation/StartActivation.png)
+
+At this step, double check your serial number and make sure the pumpbase is not connected to the patch yet.
+
+Press **Next** to continue.
+
+##### Fill the patch
+
+![Fill the patch](../images/medtrum/activation/FillPatch.png)
+
+Once the patch is detected and filled with a minimum of 70Units of insulin, press **Next** will appear.
+
+##### Prime the patch
+
+![Half press](../images/medtrum/activation/HalfPress.png)
+
+Do not remove the safety lock and press the needle button on the patch.
+
+Press **Next** to start prime
+
+![Prime progress](../images/medtrum/activation/PrimeProgress.png)
+
+![Prime complete](../images/medtrum/activation/PrimeComplete.png)
+
+Once the prime is complete, press **Next** to continue.
+
+##### Attach Patch
+
+![Attach patch](../images/medtrum/activation/AttachPatch.png)
+
+Clean the skin, and attach the patch to your body. And press the needle button on the patch to insert the cannula.
+
+Press **Next** to activate the patch.
+
+##### Activate Patch
+
+![Activate patch](../images/medtrum/activation/ActivatePatch.png)
+
+When activation is complete, the following screen will appear
+
+![Activation complete](../images/medtrum/activation/ActivationComplete.png)
+
+Press **OK** to return to main screen.
 
 ### Deactivate patch
 
-To deactive a currently active patch, go to the Medtrum TAB in the AAPS interface and press the **Change Patch** button.
+To deactivate a currently active patch, go to the [Medtrum TAB](#overview) in the AAPS interface and press the **Change Patch** button.
 
-You will be asked to confirm that you wish to deactive the current patch. **Please note that this action is not reversable.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. If you are not ready to activate a new patch, press **Cancel** to return to the main screen.
+![Deactivate patch](../images/medtrum/activation/DeactivatePatch.png)
+
+You will be asked to confirm that you wish to deactivate the current patch. **Please note that this action is not reversable.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. If you are not ready to activate a new patch, press **Cancel** to return to the main screen.
+
+![Deactivate progress](../images/medtrum/activation/DeactivateProgress.png)
 
 If Android APS in unable to deactivate the patch (For instance because the pump base has already been removed from the reservoir patch), you may press **Discard** to forget the current patch session and make it possible to activate a new patch.
 
+![Deactivate complete](../images/medtrum/activation/DeactivateComplete.png)
+
+Once deactivation is complete, press **OK** to return to main screen or press **Next** to continue the process to activate a new patch.
+
 ### Resume interrupted activation
 
+If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#overview) in the AAPS interface and press the **Change Patch** button.
+
+![Resume interrupted activation](../images/medtrum/activation/ActivationInProgress.png)
+
+Press **Next** to continue the activation process. Press **Discard** to discard the current patch session and make it possible to activate a new patch.
+
+![Reading activation status](../images/medtrum/activation/ReadingActivationStatus.png)
+
+The driver will try to determine the current status of the patch activation. If this was successful it will go into the activation progress at the current step.
+
 ## Overview
+
+The overview contains the current status of the Medtrum patch. It also contains buttons to change the patch, reset alarms and refresh the status.
+
+![Medtrum Overview](../images/medtrum/Overview.png)
+
+##### BLE Status:
+
+This shows the current status of the Bluetooth connection to the pump base.
+
+##### Last connected:
+
+This shows the last time the pump was connected to AAPS.
+
+##### Pump state:
+
+This shows the current state of the pump. For example:
+    - ACTIVE : The pump is activated and running normally
+    - STOPPED: The patch is not activated
+
+##### Basal type:
+
+This shows the current basal type.
+
+##### Basal rate:
+
+This shows the current basal rate.
+
+##### Last bolus:
+
+This shows the last bolus that was delivered.
+
+##### Active bolus:
+
+This shows the active bolus that is currently being delivered.
+
+##### Active alarms:
+
+This shows any active alarms that are currently active.
+
+##### Reservoir:
+
+This shows the current reservoir level.
+
+##### Battery:
+
+This shows the current battery voltage of the patch.
+
+##### Pump type:
+
+This shows the current pump type number.
+
+##### FW version:
+
+This shows the current firmware version of the patch.
+
+##### Patch no:
+
+This shows the sequence number of the activated patch. This number is incremented every time a new patch is activated.
+
+##### Patch expires:
+
+This shows the date and time when the patch will expire.
+
+##### Refresh:
+
+This button will refresh the status of the patch.
+
+##### Change patch:
+
+This button will start the process to change the patch. See [Activate patch](#activate-patch) for more information.
+
+### Reset alarms
+
+The alarm button will appear on the overview screen when there is an active alarm that can be reset. Pressing this button will reset the alarms and resume insulin delivery if the patch has been suspended due to the alarm. E.g. when suspended due to a maximum daily insulin delivery alarm.
+
+![Reset alarms](../images/medtrum/ResetAlarms.png)
+
+Press the **Reset Alarms** button to reset the alarms and resume normal operation.
 
 ## Troubleshooting
 
 ### Activation interrupted
 
-If the activation process is interrupted for example by and empty phone battery or phone crash. The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: TODO
+If the activation process is interrupted for example by and empty phone battery or phone crash. The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#resume-interrupted-activation)
 
 ### Preventing patch faults
 
@@ -143,7 +289,7 @@ The patch can give a variety of errors. To prevent frequent errors:
 All of the development work for the Medtrum driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
 
 -  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#AAPS* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
+-  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#Medtrum* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
 -  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues)
 if it exists, please confirm/comment/add information on your problem.
 If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.md).
