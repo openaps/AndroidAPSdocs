@@ -230,10 +230,10 @@ Default value: 2
   </tr>
   <tr>
     <td>MAXDIA</td>
-    <td>7,0</td>
-    <td>7,0</td>
-    <td>7,0</td>
-    <td>7,0</td>
+    <td>9,0</td>
+    <td>9,0</td>
+    <td>9,0</td>
+    <td>9,0</td>
     <td>10,0</td>
   </tr>
   <tr>
