@@ -7,7 +7,7 @@ This software is part of a DIY artificial pancreas solution and is not a product
 ## Pump capabilities with AAPS
 * All loop functionality supported (SMB, TBR etc)
 * Automatic DST and timezone handling
-* Extended bolus not supported by AAPS driver
+* Extended bolus is not supported by AAPS driver
 
 ## Hardware and Software Requirements
 * **Compatible Medtrum pump base and reservoir patches**
@@ -114,7 +114,7 @@ Set this to a sensible value for your insulin requirements.
 
 Navigate to the [Medtrum TAB](#overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
 
-If a patch is already active, you will be prompted to deactivate this patch first - See Deactivate patch below.
+If a patch is already active, you will be prompted to deactivate this patch first. see [Deactivate Patch](#deactivate-patch).
 
 Follow the prompts to fill and activate a new patch. Please note - it is important to only connect the pump base to the reservoir patch at the step when you are prompted to do so. **You must only put the pump on your body and insert the cannula when prompted to during the activation process (after priming is complete).**
 
