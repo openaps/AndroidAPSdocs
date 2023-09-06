@@ -171,29 +171,48 @@ If a malicious attack was made on your insulin pump, these strategies would sign
 
 Users are encouraged to speak with their clinicians about their intention to use **AAPS**. Please do not be afraid to have an honest conversation with your diabetes team if you intend to use **AAPS** (or any other DIY loop, for that matter). Transparency and trust between patient and doctor is paramount. 
 
-**Suggested approach**:
+### Suggested approach:
 Start a conversation with your clinician to determine their familiarity and attitude towards diabetic technology such as CGMs,  pumps, hybrid loops and commercial looping. Your clinician/endocrinologist should be aware of the basic technology and be willing to discuss with you recent advancements with commercial loop products available within their regions. 
+
+#### Local precedent
 
 Obtain your clinicians/endocrinologists’ views on DIY loop _vs_ commercial looping, and gauge their knowledge in this area. Are they familiar with **AAPS** and can they share with you any helpful experience of working with patients with DIY looping?
 
 Ask if your team has any patients under their care who already use DIY looping. Due to patient confidentiality, doctors cannot pass other patient’s details to you without obtaining the individual’s consent. However, if you want to, you **can** ask them to pass **your** contact details to an existing DIY looping patient if there is one the clinician feels you might "click” with, suggesting that you would be happy for the patient to contact you to discuss DIY looping. Clinicians are not obliged to do this, but some are happy to, since they realise the importance of peer-to-peer support in type 1 diabetes management. You may also find it useful to meet local friendly DIY loopers. This is of course up to you, and not entirely necessary.  
 
-If you feel unsupported by your team to loop with **AAPS**, the following discussion points may aid your communications: 
-a) there is precedent for DIY looping in their patient population and recent published guidance in the Lancet has confirmed that DIY loops are safe and effective at improving diabetic control including time in range;
-b) starting with **AAPS** - involves a gradual migration from “open” pumping, through low-glucose suspend, through to hybrid “closed” looping by completing a number of objectives. There is therefore a structured programme which requires the user to demonstrate a certain level of competence in this area before they can close the loop. It may also reassure your team to know that there are around 10,000 users worldwide currently using **AAPS** and technical support is available to you from the DIY community; 
-c) you can provide both CGM and looping/pumping information as combined reports at clinic meetings (through Nightscout or Tidepool), either printed out or on-screen (if you bring a laptop/tablet). The streamlining of both CGM and insulin data should hopefully allow more effective use of your clinician’s time to review your reports and aid their discussions in assessing your progress; and
-d) if there is still strong objection from your team, hand your clinician printouts of the reference articles below, and write out the link to the **AAPS** website “clinician section” for them to consider: 
+#### National and International Precedent
 
-For Clinicians – A General Introduction and Guide to **AAPS** — AndroidAPS 3.1 documentation
+If you feel unsupported by your team to loop with **AAPS**, the following discussion points may help: 
+
+a) The **AAPS** system has been designed BY patients and their caregivers. It has been designed ultimately for safety, but also drawing on in-depth patient experience. There are currently around **10,000** AAPS users worldwide. There is therefore likely to be other patients using DIY looping in your clinic's patient population (whether they know about it or not). 
+
+b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_ has confirmed that DIY loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(2)_ which highlight the progress of the DIY looping commmunity. 
+
+c) Starting with **AAPS** involves a _gradual_ migration from “open” loop pumping, through low-glucose suspend, through to hybrid “closed” looping, by completing a number of objectives. There is therefore a structured programme, requiring the user to demonstrate a level of competence at each stage and fine-tuning their basic settings (basal, ISF and ICR) before they can close the loop. 
+
+d) Technical support is available to you from the DIY community through Github, Discord and Facebook closed groups. 
+
+e) You will be able to provide **both CGM and insulin looping/pumping information** as combined reports at clinic meetings (through Nightscout or Tidepool), either printed out or on-screen (if you bring a laptop/tablet). The streamlining of both CGM and insulin data will allow more effective use of your clinician’s time to review your reports and aid their discussions in assessing your progress.
+
+f) If there is still strong objection from your team, hand your clinician printouts of the reference articles linked here in the text, and give them the link to the **AAPS** clinicians section: [For Clinicians – A General Introduction and Guide to **AAPS**](https://androidaps.readthedocs.io/en/latest/Resources/clinician-guide-to-AndroidAPS.html)
+
+#### Support for DIY looping by other clinicians
 
 A paper published in the Lancet Diabetes Endocrinology on 13 November 2021 (co led by Kings’ and Guy’s and St Thomas’ NHS Foundation Trust, and co lead by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s) provides:
-a) **assurance** for professionals that DIY artificial pancreas systems/ open source as a “safe and effective treatment” option for type 1 diabetes and provides guidance on recommendations, discussions, supports, documentation;
-b) **recognition** that open-source **automated insulin delivery** (“AID”) systems can increase time in range (TIR) while reducing variability in blood glucose concentrations and the amount of hypo and hyperglycaemic episodes in various age groups, genders and communities;
-c) recommendation that healthcare workers should support type 1 patients or their caregivers who might choose to manage their diabetes with an open source AID system;
-d) recommendation that healthcare workers should attempt to learn about all treatment options that might benefit patients including available open-source AID systems.  If health care professionals do not have resources to educate themselves, or have legal or regulatory concerns, they should consider cooperating, or teaming up with other healthcare professionals who can support this;
-e) emphasis that all users of CGMs should have real-time and open access to their own health data at all times;
-f) emphasis that these open source systems have not undergone the same regulatory evaluations as commercially available medical technologies, and there is no commercial technical support. However, extensive community support is available; and
-g) a recommendation that regulation and legal frameworks should be updated to ensure clarity on permitting ethical and effective treatment of such open source systems.
+
+a) **Assurance** for professionals that DIY artificial pancreas systems/ open source as a “safe and effective treatment” option for type 1 diabetes and provides guidance on recommendations, discussions, supports, documentation;
+
+b) **Recognition** that open-source automated insulin delivery (“AID”) systems can increase time in range (TIR) while reducing variability in blood glucose concentrations and the amount of hypo and hyperglycaemic episodes in various age groups, genders and communities;
+
+c) **Recommendation** that healthcare workers should **support** type 1 patients or their caregivers who choose to manage their diabetes with an open source AID system;
+
+d) Recommendation that healthcare workers should attempt to learn about all treatment options that might benefit patients including available open-source AID systems.  If health care professionals do not have resources to educate themselves, or have legal or regulatory concerns, they should consider **cooperating, or teaming up with other healthcare professionals** who do;
+
+e) Emphasis that all users of CGMs should have real-time and open-access to **their own health data** at all times
+
+f) Emphasis that these open source systems have not undergone the same regulatory evaluations as commercially available medical technologies, and there is no commercial technical support. However, **extensive community support is available**; and
+
+g) A recommendation that **regulation and legal frameworks** should be updated to ensure clarity on permitting ethical and effective treatment of such open source systems.
 
 Another paper issued in the Medical Law International 2021) also highlights the UK General Medical Council’s ‘consent guidance’ (Decision Making and Consent  published in September 2020 can be interpreted as placing a strong emphasis on doctor and patients making decisions together. The doctor should explain the potential benefits, risks, burdens and side-effects on DIY APS and may recommend a particular option without pressuring the patient. 
 
@@ -203,21 +222,22 @@ If a doctor discovers in a clinic that their patient is looping with a DIY syste
 
 Doctors (at least in the UK) are not prohibited from prescribing unlicensed medicines and can use their clinical discretion. They should therefore use their clinical judgement to decide if a DIY APS is suitable for a specific patient, and discuss what they consider to be the pros and cons with the patient.
 
-Further reading here: 
+#### The articles linked above, and other position statements, are listed below: 
 
-1.Lancet Diabetes Endocrinol, 2022; 10: 58–74 
-Open-source automated insulin delivery: international consensus statement and practical guidance for health-care professionals - The Lancet Diabetes & Endocrinology
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/
-2. KIng’s College press release https://www.kcl.ac.uk/news/do-it-yourself-artificial-pancreas-given-approval-by-team-of-experts
-3. Diabetes UK https://www.diabetes.org.uk/professionals/position-statements-reports/do-it-yourself-closed-loop
-4. Berlin Institute of Health
-https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended
-5. Canadian Journal of Diabetes
-https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext
-6. Diabetes Canada
+1. Open-source automated insulin delivery: international consensus statement and practical guidance for health-care professionals 
+[Lancet Diabetes Endocrinol, 2022; 10: 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)
+2. A DIY ‘bionic pancreas’ is changing diabetes care — what's next? [Nature 620, 940-941 (2023)](https://doi.org/10.1038/d41586-023-02648-9)
+3. (http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
+4. [Berlin Institute of Health position statement, 2022](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
+5. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide[Diabetes Canada position and guide, _Canadian Journal of Diabetes_,_47_,389-397, E8, 2023](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
+6.  (https://www.sciencedirect.com/science/article/pii/S1499267123001387)
 How to help people on open-source automated insulin delivery systems? (diabetotech.com)
+7. [Diabetes UK position statement on DIY APS systems, updated Jan 2020](https://www.diabetes.org.uk/resources-s3/2020-01/DIY%20closed%20looping%20for%20Type%201%20diabetes%20position%20statement.pdf?)
 
-
+ #### Peer-reviewed research articles about AndroidAPS:
+9. [First Use of Open-Source Automated Insulin DeliveryAndroidAPS in Full Closed-Loop Scenario: Pancreas4ALLRandomized Pilot Study, 2023](https://www.liebertpub.com/doi/epdf/10.1089/dia.2022.0562)
+10. [Pre-school and school-aged children benefit from the switchfrom a sensor-augmented pump to an AndroidAPS hybridclosed loop: A retrospective analysis, 2021](https://onlinelibrary.wiley.com/doi/epdf/10.1111/pedi.13190)
+11. [In Silico Trials of an Open-Source Android-Based Artificial Pancreas: A New Paradigm to Test Safety and Efficacy of Do-It-Yourself Systems, 2020](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375)
 
 
 ## Why can’t I just download AAPS and use it straight away?  
