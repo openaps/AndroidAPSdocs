@@ -10,7 +10,7 @@ Norėdami naudoti AndroidAPS, turite atlikti šiuos veiksmus:
 
 * Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.md).
 * [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.md#configuration).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](index-configuration).
 
 ## How A DIY Closed Loop Works
 
@@ -43,7 +43,7 @@ AndroidAPS skaidriai dokumentuoja visus įvestus duomenis, gautą rekomendaciją
 
 ## Examples of AndroidAPS algorithm decision making:
 
-AndroidAPS naudoja tą patį pagrindinį algoritmą ir funkcionalumą kaip ir OpenAPS. Remdamasis nustatymais ir esama situacija, algoritmas pateikia keletą prognozių, pagal kurias apskaičiuojami skirtingi scenarijai, kas gali nutikti ateityje. Nightscout jie rodomi kaip violetinės linijos. AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes.md#overview-tab). Žurnalo failai gali būti naudojami norint atsekti, kuris iš šių įvairių numatymų buvo naudojamas konkrečiu laikotarpiu, kad būtų apskaičiuotos būtinos priemonės.
+AndroidAPS naudoja tą patį pagrindinį algoritmą ir funkcionalumą kaip ir OpenAPS. Remdamasis nustatymais ir esama situacija, algoritmas pateikia keletą prognozių, pagal kurias apskaičiuojami skirtingi scenarijai, kas gali nutikti ateityje. Nightscout jie rodomi kaip violetinės linijos. AndroidAPS uses different colors to separate these [prediction lines](Releasenotes-overview-tab). Žurnalo failai gali būti naudojami norint atsekti, kuris iš šių įvairių numatymų buvo naudojamas konkrečiu laikotarpiu, kad būtų apskaičiuotos būtinos priemonės.
 
 ### Here are examples of the purple prediction lines, and how they might differ:
 

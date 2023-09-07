@@ -10,7 +10,7 @@
 
 * Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.md).
 * [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.md#configuration).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](index-configuration).
 
 ## How A DIY Closed Loop Works
 
@@ -43,7 +43,7 @@
 
 ## Examples of AndroidAPS algorithm decision making:
 
-Το AndroidAPS χρησιμοποιεί τον ίδιο βασικό αλγόριθμο και το σύνολο λειτουργιών του ως OpenAPS. Ο αλγόριθμος κάνει πολλαπλές προβλέψεις (με βάση τις ρυθμίσεις και την κατάσταση) που αντιπροσωπεύουν διαφορετικά σενάρια για το τι μπορεί να συμβεί στο μέλλον. Στη Nightscout, αυτά εμφανίζονται ως "μοβ γραμμές". AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes.md#overview-tab). Στα ημερολόγια, θα περιγράψει ποιες από αυτές τις προβλέψεις και ποιο χρονικό πλαίσιο οδηγεί τις απαραίτητες ενέργειες.
+Το AndroidAPS χρησιμοποιεί τον ίδιο βασικό αλγόριθμο και το σύνολο λειτουργιών του ως OpenAPS. Ο αλγόριθμος κάνει πολλαπλές προβλέψεις (με βάση τις ρυθμίσεις και την κατάσταση) που αντιπροσωπεύουν διαφορετικά σενάρια για το τι μπορεί να συμβεί στο μέλλον. Στη Nightscout, αυτά εμφανίζονται ως "μοβ γραμμές". AndroidAPS uses different colors to separate these [prediction lines](Releasenotes-overview-tab). Στα ημερολόγια, θα περιγράψει ποιες από αυτές τις προβλέψεις και ποιο χρονικό πλαίσιο οδηγεί τις απαραίτητες ενέργειες.
 
 ### Here are examples of the purple prediction lines, and how they might differ:
 

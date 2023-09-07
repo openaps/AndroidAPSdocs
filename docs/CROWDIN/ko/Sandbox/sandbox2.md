@@ -1,10 +1,10 @@
 # internal sandbox file 2 for testing
 
-:::{admonition} no need to translate this
+```{admonition} no need to translate this
 :class: note
 
 No need to translate this.
-:::
+```
 
 This is an internal sandbox file for the documentation team to test
 

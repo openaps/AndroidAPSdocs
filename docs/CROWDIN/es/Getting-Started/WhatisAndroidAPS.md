@@ -10,7 +10,7 @@ Una nota de cautela: los AndroidAPS no están regulados por ninguna autoridad m�
 - Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
 - Maintains and monitors the system to ensure it is working properly
 
-:::{note}
+```{note}
 **Disclaimer and Warning**
 
 - All information, thought, and code described here is intended for informational and educational purposes only. Actualmente Nightscout no dispone de HIPAA privacy compliance. Use Nightscout y AndroidAPS bajo su responsabilidad, no use esta información para o código para tomar decisiones médicas.
@@ -18,7 +18,7 @@ Una nota de cautela: los AndroidAPS no están regulados por ninguna autoridad m�
 - All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Su uso aquí es informativo y no implica afiliación o pago por ello.
 
 Please note - this project has no association with and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
-:::
+```
 
 Si estás listo para el reto, por favor lee en.
 

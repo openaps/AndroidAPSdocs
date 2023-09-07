@@ -21,13 +21,13 @@ Pour en savoir plus sur les détails et les raisons de ces recommandations, cons
 
 -   L'émetteur Dexcom G6 peut être connecté simultanément au récepteur Dexcom (ou alternativement à la pompe t:slim) et à une application sur votre téléphone.
 -   Lorsque vous utilisez xDrip+ comme récepteur, désinstallez d'abord l'application Dexcom. **Vous ne pouvez pas connecter xDrip + et l'application Dexcom avec l'émetteur en même temps !**
--   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+-   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 -   Si ce n'est pas encore configuré, téléchargez [xDrip](https://github.com/NightscoutFoundation/xDrip) et suivez les instructions sur [la page de configuration xDrip+](../Configuration/xdrip.md).
 -   Sélectionnez xDrip dans la Configuration (dans AndroidAPS).
 -   Ajuster les paramètres dans xDrip+ en fonction de [la page de configuration xDrip+](../Configuration/xdrip.md).
 -   Si AAPS ne reçoit pas de valeurs de glycémie lorsque le téléphone est en mode avion utilisez 'Identifier le récepteur' comme décrit dans [la page de configuration xDrip+](../Configuration/xdrip.md).
 
-(if-using-g6-with-build-your-own-dexcom-app)=
+(DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## Si vous utilisez G6 avec votre propre application Dexcom
 
 -   * Depuis Décembre 2020 [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) (BYODA) prend également en charge la diffusion locale vers AAPS et/ou xDrip+ (sauf pour les capteurs G5 !)
@@ -48,6 +48,8 @@ Pour en savoir plus sur les détails et les raisons de ces recommandations, cons
 -   Sélectionnez '640G / Eversense' comme source de données.
 -   La commande 'démarrer le capteur' doit être effectuée dans xDrip+ pour recevoir les valeurs. Cela n'affectera pas votre capteur actuel contrôlé par Build Your Own Dexcom App.
 
+
+(DexcomG6-troubleshooting-g6)=
 ## Dépannage G6
 
 ### Dépannages spécifiques à Dexcom G6

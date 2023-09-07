@@ -10,7 +10,7 @@ AndroidAPS is an app that acts as an artificial pancreas system (APS) on an Andr
 - Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
 - Maintains and monitors the system to ensure it is working properly
 
-:::{note}
+```{note}
 **Disclaimer and Warning**
 
 - All information, thought, and code described here is intended for informational and educational purposes only. Το Nightscout δεν πραγματοποιεί επί του παρόντος προσπάθεια συμμόρφωσης με το HIPAA. Χρησιμοποιήστε το Nightscout και το AndroidAPS με δική σας ευθύνη και μην χρησιμοποιείτε τις πληροφορίες ή τον κωδικό για να παίρνετε ιατρικές αποφάσεις.
@@ -18,7 +18,7 @@ AndroidAPS is an app that acts as an artificial pancreas system (APS) on an Andr
 - All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Η χρήση τους είναι για ενημερωτικούς σκοπούς και δεν συνεπάγεται καμία προσχώρηση ή έγκριση από αυτούς.
 
 Please note - this project has no association with and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
-:::
+```
 
 Εάν είστε έτοιμοι για την πρόκληση, παρακαλώ διαβάστε το.
 

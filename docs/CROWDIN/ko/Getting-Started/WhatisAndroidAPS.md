@@ -10,7 +10,7 @@ APS가 실제 췌장과 동일한 역할을 하진 못하지만, 1형당뇨인�
 - Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
 - Maintains and monitors the system to ensure it is working properly
 
-:::{note}
+```{note}
 **Disclaimer and Warning**
 
 - All information, thought, and code described here is intended for informational and educational purposes only. Nightscout은 현재 HIPAA 개인 정보 보호 준수 규약을 따르지 않습니다. Nightscout와 AndroidAPS를 본인의 책임하에 사용하세요. 의학적 결정을 위해 이 정보와 코드를 사용하지 마세요.
@@ -18,7 +18,7 @@ APS가 실제 췌장과 동일한 역할을 하진 못하지만, 1형당뇨인�
 - All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. 그것들을 사용한 것은 정보를 제공하기 위한 목적이며, 그들과의 제휴 또는 보증을 의미하지는 않습니다.
 
 Please note - this project has no association with and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
-:::
+```
 
 이 도전을 하실 준비가 되었다면 계속 읽어주세요.
 

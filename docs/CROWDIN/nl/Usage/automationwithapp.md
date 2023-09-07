@@ -32,7 +32,7 @@ In AndroidAPS Instellingen, ga naar NSClient en kies Verbindingsinstellingen. Zo
 
 In AndroidAPS Instellingen, ga naar NSClient en kies Geavanceerde Instellingen. Zorg ervoor dat 'Alleen NS upload (sync. gedeactiveerd)' en 'Geen upload naar NS' uit staan.
 
-Be aware of the [security issues](../Installing-AndroidAPS/Nightscout.md#security-considerations) that might occure and be very careful if you are using an [Insight pump](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
+Be aware of the [security issues](Nightscout-security-considerations) that might occure and be very careful if you are using an [Insight pump](Accu-Chek-Insight-Pump-settings-in-aaps).
 
 ![Nightscout downloadinstellingen](../images/automate-aaps2.jpg)
 

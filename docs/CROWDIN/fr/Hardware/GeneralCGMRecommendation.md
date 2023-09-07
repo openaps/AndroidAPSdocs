@@ -16,7 +16,7 @@ Lors de la mise en place du capteur, il est recommandé de ne pas appuyer trop f
 
 Après la mise en place du capteur, l'émetteur peut être cliqué dans son support. Attention ! Cliquez d'abord sur le côté carré, puis appuyez sur le côté rond.
 
-(troubleshooting)=
+(GeneralCGMRecommendation-troubleshooting)=
 ## Résolution de problèmes
 
 ### Problèmes de connexion
@@ -37,4 +37,4 @@ You might try to change settings for noise blocking in xdrip (Settings - Inter-A
 
 ![Negative sensor age](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../Configuration/Config-Builder.md#actions) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.
+This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](Config-Builder-actions) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.

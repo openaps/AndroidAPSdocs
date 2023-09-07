@@ -1,4 +1,4 @@
-(accessing-logfiles)=
+(Accessing-logfiles-accessing-logfiles)=
 
 # Žurnalų failų gavimas
 

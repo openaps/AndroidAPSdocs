@@ -32,7 +32,7 @@ Compatible [pumps](../Hardware/pumps.md) are:
 
 - [DanaR](../Configuration/DanaR-Insulin-Pump.md) / [DanaRS & Dana-i](../Configuration/DanaRS-Insulin-Pump.html)
 - [아큐-첵 콤보](../Configuration/Accu-Chek-Combo-Pump.md)
-- [Accu-Chek Insight (아큐첵 인사이트)](../Configuration/Accu-Chek-Insight-Pump.md)
+- [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Diaconn G8](../Configuration/DiaconnG8.md)
 - [Omnipod DASH](../Configuration/OmnipodDASH.md)
 - [Omnipod Eros](../Configuration/OmnipodEros.md)

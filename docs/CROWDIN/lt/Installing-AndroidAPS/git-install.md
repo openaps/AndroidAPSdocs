@@ -8,6 +8,13 @@
 - Any git version should work. For example [https://git-scm.com/download/win](https://git-scm.com/download/win).
 - Make sure to note down the installation path. Jums jo reikės kitame žingsnyje.
 
+```{admonition} make git.exe available via Windows PATH
+:class: note
+
+Make sure that you can call git.exe without the prefing path as Android Studio needs this to find git.exe. It will then automatically sets the path to git.exe correct in the Android Studio settings.
+
+```
+
 ```{image} ../images/Update_GitPath.png
 :alt: Git diegimo kelias
 ```
@@ -56,7 +63,7 @@
 
 - Reboot your PC to update System Environment.
 
-(check-git-settings-in-android-studio)=
+(git-install-check-git-settings-in-android-studio)=
 ### 4. Patikrinkite git parametrus Android Studio programoje
 
 - Open Terminal window in Android Studio

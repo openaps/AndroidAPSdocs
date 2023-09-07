@@ -1,4 +1,4 @@
-(i-m-getting-stuck-what-do-i-do-who-can-i-ask)=
+(Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)=
 
 # Ik kom hier niet verder mee. Wat moet ik doen? Wie kan ik vragen?
 

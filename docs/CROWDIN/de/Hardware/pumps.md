@@ -7,5 +7,5 @@
 * [Diaconn G8 Insulinpumpe](../Configuration/DiaconnG8.md)
 * [Omnipod Eros](../Configuration/OmnipodEros.md)
 * [Omnipod DASH](../Configuration/OmnipodDASH.md)
-* [Medtronic pump](../Configuration/MedtronicPump.md)
-* [Future possible pump drivers](../Getting-Started/Future-possible-Pump-Drivers.md)
+* [Medtronic Pumpe](../Configuration/MedtronicPump.md)
+* [Zukünftig ggf. loopbare Pumpen](../Getting-Started/Future-possible-Pump-Drivers.md)

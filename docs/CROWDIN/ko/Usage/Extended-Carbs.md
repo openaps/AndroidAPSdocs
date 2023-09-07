@@ -1,9 +1,9 @@
-(extended-carbs-ecarbs)=
+(Extended-Carbs-extended-carbs-ecarbs)=
 # 확장 탄수화물 / "eCarbs"
 
 ## What are eCarbs and when are they useful?
 
-보통 펌프의 확장 bolus 기능은 기름진 음식이나 소화가 느린 음식 등으로 인슐린 작용시간 이후에도 혈당을 높이는 경우에 사용하면 좋은 방법이다. 그러나 Loop에서는 확장 bolus 기능을 이용하여 basal 양을 동적으로 조절하는 동작을 하기 때문에 기본적으로 높은 임시 basal 양으로 고정시킨다.(기술적인 문제를 야기할 수도 있다) 그러므로 고유의 확장 bolus 기능을 사용하는 것은 좋은 방법이 아니다. For details see [extended bolus](../Usage/Extended-Carbs.md#why-extended-boluses-won-t-work-in-a-closed-loop-environment) below.
+보통 펌프의 확장 bolus 기능은 기름진 음식이나 소화가 느린 음식 등으로 인슐린 작용시간 이후에도 혈당을 높이는 경우에 사용하면 좋은 방법이다. 그러나 Loop에서는 확장 bolus 기능을 이용하여 basal 양을 동적으로 조절하는 동작을 하기 때문에 기본적으로 높은 임시 basal 양으로 고정시킨다.(기술적인 문제를 야기할 수도 있다) 그러므로 고유의 확장 bolus 기능을 사용하는 것은 좋은 방법이 아니다. For details see [extended bolus](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) below.
 
 하지만 이러한 음식들에 대한 처리는 여전히 필요하다. 따라서 AndroidAPS 2.0이상에서 확장 bolus/eCarbs 기능을 지원한다.
 
@@ -45,12 +45,12 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 
 **Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. 저탄수화물, 고지방/고단백질 음식은 수동적인 bolus 없이 eCarbs만 사용해도 된다.(위의 블로그 포스트를 참고) eCarbs가 입력되면, 케어포털 메뉴는 더 쉽게 입력하게 만들어주고 모든 입력 내용을 문서화 한다.
 
-(extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
+(Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Extended bolus and why they won't work in closed-loop environment?
 
-위에서 언급한 것과 같이, 확장 또는 멀티 웨이브 bolus는 Closed Loop에서 효과적으로 동작하지 않는다. [See below](../Usage/Extended-Carbs.md#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
+위에서 언급한 것과 같이, 확장 또는 멀티 웨이브 bolus는 Closed Loop에서 효과적으로 동작하지 않는다. [See below](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
-(extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
+(Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Extended bolus and switch to open loop - Dana and Insight pump only
 
 Some people were asking for an option to use extended bolus in AAPS anyway as they wanted to treat special foods the way they are used to.
@@ -59,13 +59,13 @@ That's why as of version 2.6 there is an option for an extended bolus for users 
 
 - Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
 - Bolus units, remaining and total time will be shown on homescreen.
-- On Insight pump extended bolus is *not available* if [TBR emulation](../Configuration/Accu-Chek-Insight-Pump.md#settings-in-aaps) is used.
+- On Insight pump extended bolus is *not available* if [TBR emulation](Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
 ```{image} ../images/ExtendedBolus2_6.png
 :alt: Extended bolus in AAPS 2.6
 ```
 
-(why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
+(Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Why extended boluses won't work in a closed loop environment
 
 1. Loop는 현재 1.55U/h로 주입하기로 결정한다. 이것이 확장 bolus로 주입되는지 TBR로 주입되는지는 알고리즘에서 중요하지 않다. 사실, 일부 펌프는 확장 bolus을 사용한다. 그러면 어떻게 동작해야 할까? Most pump drivers then stop the extended bolus -> You didn't even need to start it.

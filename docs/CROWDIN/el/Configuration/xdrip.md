@@ -1,6 +1,6 @@
 # Ρυθμίσεις xDrip+
 
-(For additional information regarding xDrip+, please refer to https://xdrip.readthedocs.io/en/latest/)
+(For additional information regarding xDrip+, please refer to the [xDrip documentation](https://xdrip.readthedocs.io/en/latest/.)
 
 If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
@@ -34,19 +34,19 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
    
    ![xDrip + Βασικές ρυθμίσεις 2](../images/xDrip_Basic2.png)
 
-* ** Ρυθμίσεις InterApp ** (Broadcast) Εάν πρόκειται να χρησιμοποιήσετε το AndroidAPS και τα δεδομένα πρέπει να προωθηθούν π.χ. στο AndroidAPS, πρέπει να ενεργοποιήσετε τη μετάδοση στο xDrip + στις ρυθμίσεις Inter-App.
+* **InterApp-Settings** (Broadcast) If you are going to use AAPS and the data should be forwarded to i.e. AAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
 
 * In order for the values to be equal, you should activate `Send the displayed glucose value`.
 
-* If you have also activated `Accept treatments` and "Enable local Broadcasts" in AndroidAPS, then xDrip+ will receive insulin, carbs and basal rate information from AndroidAPS and can estimate the hypo prediction etc. με καλύτερη ακρίβεια.
+* If you have also activated `Accept treatments` and "Enable local Broadcasts" in AAPS, then xDrip+ will receive insulin, carbs and basal rate information from AAPS and can estimate the hypo prediction etc. με καλύτερη ακρίβεια.
    
    ![+xDrip Βασικές ρυθμίσεις 3](../images/xDrip_Basic3.png)
 
-(identify-receiver)=
+(xdrip-identify-receiver)=
 
 ### Προσδιορίστε δέκτη
 
-* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AndroidAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
+* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
 * Pay attention: Auto-correction sometimes tend to change i to capital letter. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip+.
    
    ![+xDrip Basic Inter-app Ρυθμίσεις Προσδιορίζουν δέκτη](../images/xDrip_InterApp_NS.png)
@@ -55,7 +55,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 * The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
 * When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
-* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 
 ### xDrip + έκδοση ανάλογα με τον σειριακό αριθμό του πομπού G6.
 
@@ -96,11 +96,11 @@ What’s clear is that using the G6 is perhaps a little more complex than it as 
 
 To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
 
-(connect-g6-transmitter-for-the-first-time)=
+(xdrip-connect-g6-transmitter-for-the-first-time)=
 
 ### Συνδέστε το πομπό G6 για πρώτη φορά
 
-**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
+**For second and following transmitters see [Extend transmitter life](xdrip-extend-transmitter-life) below.**
 
 Για τους πομπούς G6 που κατασκευάστηκαν μετά το πέρας / τέλος του 2018 (δηλ. με σειριακό αριθμό. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus).
 
@@ -145,7 +145,7 @@ To learn more about the details and reasons for these recommendations read the [
    
    ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-(transmitter-battery-status)=
+(xdrip-transmitter-battery-status)=
 
 ### Κατάσταση μπαταρίας πομπού
 
@@ -157,11 +157,13 @@ To learn more about the details and reasons for these recommendations read the [
    * Posting 1: Transmitter days: 151 / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
    * Posting 2: Transmitter days: 249 / Voltage A: 275 (at time of failure)
 
+(xdrip-extend-transmitter-life)=
+
 ### Επέκταση της διάρκειας ζωής του πομπού
 
-* So far life cannot be extended for transmitters who's serial no. starts with 8G, 8H or 8J. Same is true for transmitters with serial no. starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip.md#transmitter-battery-status)).
+* So far life cannot be extended for transmitters who's serial no. starts with 8G, 8H or 8J. Same is true for transmitters with serial no. starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](xdrip-transmitter-battery-status)).
 * To prevent difficulties starting sensors it is highly recommended to extend transmitter life before day 100 of first usage.
-* Use of transmitters serial no. starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if [engineering mode](../Usage/Enabling-Engineering-Mode-in-xDrip) is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
+* Use of transmitters serial no. starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if [engineering mode](nabling-Engineering-Mode-in-xDrip) is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
 * Running sensor session will be stopped when extending transmitter life. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
 * Stop sensor manually via hamburger menu.
 * Switch to the `engineering mode`: 
@@ -181,7 +183,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 * Transmitter days will be set to 0 after successful extension and start of sensor.
 
-(replace-transmitter)=
+(xdrip-replace-transmitter)=
 
 ### Αντικατάσταση πομπού
 
@@ -283,7 +285,7 @@ To learn more about the details and reasons for these recommendations read the [
    * If you are using the xDrip+ algorithm then you can set a time more than 2 hours ago to avoid warm up. Readings may be very erratic. Therefore, this is not recommended.
 * Enter Sensor code (on the peel-off foil of the sensor) 
    * Keep code for further reference (i.e. new start after transmitter had to be removed)
-   * Code can also be found in [xDrip+ logs](../Configuration/xdrip.md#retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
+   * Code can also be found in [xDrip+ logs](xdrip-retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
 * No calibration is needed if you use G6 in "native mode". xDrip+ will show readings automatically after 2 hour warm-up.
 * Do not turn original Dexcom Receiver (if used) back on before xDrip+ shows first readings.
    
@@ -291,7 +293,7 @@ To learn more about the details and reasons for these recommendations read the [
    
    ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
 
-(retrieve-sensor-code)=
+(xdrip-retrieve-sensor-code)=
 
 ### Ανάκτηση κώδικα αισθητήρα
 
@@ -307,7 +309,7 @@ To learn more about the details and reasons for these recommendations read the [
    
    ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
 
-(troubleshooting-dexcom-g5-g6-and-xdrip)=
+(xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
 
 ## Αντιμετώπιση προβλημάτων Dexcom G5/G6 και xDrip+
 
@@ -355,7 +357,7 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
 ### Libre smart reader battery level
 
 * Battery level of smart readers such as MiaoMiao 2 can be displayed in AAPS.
-* Details can be found on [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery).
+* Details can be found on [screenshots page](Screenshots-sensor-level-battery).
 
 ### Connect Libre Transmitter & start sensor
 
