@@ -51,12 +51,13 @@ You can use a sensor that was already used with the original Libre3 app if you u
 
 You can also, for example, share your data with your doctor or print the reports from Libreview before your visit. The graphs and blood glucose reports in Libreview are usually better than those from xDrip or Juggluco.
 
-1. navigate to settings in Juggluco
-2. choose "Liebreview
+1. Navigate to settings in Juggluco
+2. Choose "Libreview
+
 ![Liebreview](../images/libre3/step\_12.jpg)
  
-3. enter the data of your Libreview account (if you don't have one yet, create one in advance)
-4. done!
+3. Enter the data of your Libreview account (if you don't have one yet, create one in advance)
+4. Done!
 
 ## Step 3 (optional): Setup xDrip
 
