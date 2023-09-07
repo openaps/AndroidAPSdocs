@@ -59,7 +59,8 @@ You can also, for example, share your data with your doctor or print the reports
 ![Liebreview](../images/libre3/step\_12.jpg)
  
 3. Enter the data of your Libreview account (if you don't have one yet, create one in advance)
-4. Done!
+4. Tap "Get Account ID" and wait until the Libre-ID gets visible (random number below the password input field)
+5. Done!
 
 ## Step 3: Setup xDrip
 
