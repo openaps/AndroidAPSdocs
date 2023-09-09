@@ -315,4 +315,4 @@ With investment of your time, **AAPS** can potentially lead to:
     
 Ultimately,**AAPS** can empower individuals to better manage their diabetes, resulting in stable blood sugars and improved long term health outcomes.
 
-Interested in how to get started with setting up AAPS? Take a look at the [First Steps](https://androidaps.readthedocs.io/en/rework-project/preparing.html#) section. 
+Interested in how to get started with setting up AAPS? Take a look at the "coming soon ;-)" section.
