@@ -60,6 +60,15 @@ Note that this takes some time, however, since it can only be done in the remote
 The old, Ruffy-based driver does not adjust the time automatically. The user has to do that manually. See below for the steps necessary to do that safely in case the timezone / daylight savings is the reason for the change.
 
 (Timezone-traveling-time-adjustment-daylight-savings-time-dst)=
+
+## Medtrum
+
+The driver automatically adjusts the time of the pump to the time of the phone.
+
+Timezone changes keep the history in tact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and IOB. If you change time manually double check the IOB.
+
+When the timezone or time changes running TBR's are stopped. 
+
 # Time adjustment daylight savings time (DST)
 
 Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
@@ -107,6 +116,10 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 6. Continue as normal.
 
 ## Accu-Chek Insight
+
+* Change to DST is done automatically. No action required.
+
+## Medtrum
 
 * Change to DST is done automatically. No action required.
 
