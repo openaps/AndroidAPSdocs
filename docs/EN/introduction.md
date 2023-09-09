@@ -31,7 +31,7 @@ Several commercial hybrid closed loop systems have been launched, the most recen
 
 ## What is Android APS (AAPS)?
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/0f089d96-b7ee-452a-aa9d-aae10ab58971)
+![image](./images/basic-outline-of-AAPS.png)
 
 **Figure 1**. Basic outline of the Android APS (Artificial Pancreas System), AAPS.
 
@@ -86,7 +86,7 @@ These are all examples, the full range of features gives huge flexibility for da
 
 Multiple daily injections (MDI, (a) in **Figure 2** below) usually involve giving an injection of a long-lasting insulin (_e.g._ Tresiba) once a day, with injections of faster-acting insulin (_e.g._ Novorapid, Fiasp) at mealtimes, or for corrections. Open pumping (b) involves using a pump to deliver basal at pre-programmed rates of rapid-acting insulin, and then boluses through the pump at mealtimes or for corrections. The basics of a looping system are that the looping app uses the sensor glucose data to instruct the pump to stop insulin delivery when it predicts you are heading for a low, and to give you extra insulin if your glucose levels are rising and predicted to go too high (c). Although this figure is oversimplified compared to real-life, it aims to demonstrate the key differences of the approaches. It is possible to achieve exceptionally good glucose control with any of these three approaches. 
 
-![21-06-23 AAPS glucose MDI etc](https://github.com/openaps/AndroidAPSdocs/assets/94044064/44e8bbde-f19c-486f-abda-1d132c38ef01)
+![21-06-23 AAPS glucose MDI etc](./images/basic-overview-mdi-open-and-closed-loop.png)
 
 
 **Figure 2**. Basic overview of (a) MDI, (b) open-loop pumping and (c) hybrid closed loop pumping. 
@@ -261,12 +261,12 @@ The developers of **AAPS** take safety incredibly seriously, and want others to 
 
 **Figure 3 (below)** shows one example of the **AAPS** system for a user who do not require any followers interacting with the system. Additional open-source software and platforms which are not shown can also be integrated.  
 
-![21-06-23 AAPS connectivity no followers](https://github.com/openaps/AndroidAPSdocs/assets/94044064/d9a8f782-410f-49e5-b6f6-2c29d6fd5c0a)
+![21-06-23 AAPS connectivity no followers](./images/AAPS-connectivity-no-followers.png)
 
 
 **Figure 4 (below)** shows the full potential of the **AAPS** system for a user who has followers and requires a monitor and send adjust the system remotely (like a child with type 1 diabetes). Additional open-source software and platforms which are not shown can also be integrated.  
 
-![21-06-23 AAPS overview with followers](https://github.com/openaps/AndroidAPSdocs/assets/94044064/eedd0f86-5e06-441d-822c-c53cbc2faa80)
+![21-06-23 AAPS overview with followers](./images/AAPS-overview-with-followers.png)
 
 ## How does AAPS get continually developed and improved? 
 
