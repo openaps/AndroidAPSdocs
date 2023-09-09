@@ -154,6 +154,11 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 - Make sure you have completed all objectives including exam [Objectives-objective-3-prove-your-knowledge](Objectives#objective-3-prove-your-knowledge).
 - Completing previous objectives will not effect other objectives you have already finished. You will keep all finished objectives!
 
+(Objectives-objective-11-DynamicISF)=
+## Objective 11: Additional Features such as DynamicISF
+
+- You have to start objective 11 to be able to use [DynamicISF](../Usage/Open-APS-features.md)
+  
 (Objectives-go-back-in-objectives)=
 ## Go back in objectives
 
