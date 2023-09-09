@@ -197,6 +197,19 @@ The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low 
 
 Default value: 2
 
+***
+
+(Open-APS-features-DynamicISF)=
+## DynamicISF
+
+DynamicISF was added in AAPS version 3.2 and requires you to start Objective 11 to use. Select DynamicISF in the config builder > APS to activate. It is recommended only for advanced users that have a good handle on AAPS controls and monitoring. 
+
+DynamicISF adapts the insulin sensitifty factor dynamically based on total daily dose of insulin (TDD) and current and predicted blood glucose values. The only user selected parameter is the DynamicISF Adjustment Factor % found under Preferences > OpenAPS SMB. Select a value below 100% to make the DynamicISF effect less aggressive and greater than 100% to make it more aggressive. It is recommended that you start with a small value (less than 100%) and monitor your blood glucose levels closely. 
+
+Additional advanced detail on the methodologies used by DynamicISF to set the ISF value and safeties in place can be found here: [DynamicISF on github](https://github.com/aptash/AndroidAPS-DynISF)
+
+
+
 (Open-APS-features-overview-of-hard-coded-limits)=
 ## Overview of hard-coded limits
 
