@@ -150,7 +150,8 @@ Once the prime is complete, press **Next** to continue.
 
 ![Attach patch](../images/medtrum/activation/AttachPatch.png)
 
-Clean the skin, and attach the patch to your body. And press the needle button on the patch to insert the cannula.
+Clean the skin, remove stickers and attach the patch to your body. 
+Remove safety lock and press the needle button on the patch to insert the cannula.
 
 Press **Next** to activate the patch.
 
