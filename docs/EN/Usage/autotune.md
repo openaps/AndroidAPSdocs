@@ -1,10 +1,10 @@
-# How to use Autotune plugin
+# How to use Autotune plugin (dev only)
 
 Documentation about Autotune algorythm can be found in [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
 Autotune plugin is an implementation of OpenAPS autotune algorythm within AAPS.
 
-**Currently Autotune Plugin is only available in dev branch with Engineering mode.**
+**Currently Autotune Plugin is only available in dev branch and with Engineering mode.**
 
 ## Autotune user interface
 
@@ -17,7 +17,7 @@ Autotune plugin is an implementation of OpenAPS autotune algorythm within AAPS.
 - Last Run il a link that recover your latest valid calculation. If you didn't launch Autotune on current day, or if previous results was removed with a modification of calculation parameter above, then you can recover parameters and results of the latest successfull run.
 - Warning show you for example some information about selected profile (if you have several IC values or several ISF values)
   - Note: Autotune calculation works with only a single IC and a single ISF value. There is currently no existing Autotune algorythm to tune a circadian IC or circadian ISF. If your input profile  has several values, you can see in warning section the average value taken into account to tune your profile.
-- Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, DAI, IC, ISF, basal and target)
+- Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, DIA, IC, ISF, basal and target)
   - Note: Autotune will only tune your IC (single value), ISF (single value) and basal (with circadian variation). Units, DAI and target will remain unchanged in output profile.
 
 - "Run Autotune" will launch Autotune calculation with selected profile and the number of Tune days
@@ -170,7 +170,7 @@ Autotune works with information existing in your database, so if you just instal
 
 Autotune is just an help, it's important to regularly check if you agree with calculated profile. If you have any doubt, change Autotune settings (for example the number of days) or copy results in local profile and adjust profile before using it.
 
-Always use Autotune several days manually to check results before applyling them. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile than you start to use Automation (Never before)
+Always use Autotune several days manually to check results before applying them. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile than you start to use Automation (Never before)
 
 - Autotune can work very well for some users and not for others, so **If you don't trust Autotune result, don't use it**
 
@@ -182,13 +182,13 @@ It's also important to analyse Autotune results to understand (or try to underst
 We advise to not use Autotune in the following cases:
 
 - You don't enter all your carbs
-  - If you don't enter carbs correction for an hypoglycemia, Autotune will see an unexcepted increase of your BG value and will increase your basal rates the 4 hours earlier, it could be the opposite of what you need to avoid hypo, especially if it's in the middle of the night. That's why it's important to enter all carbs especially correction for hypo.
+  - If you don't enter carbs correction for an hypoglycemia, Autotune will see an unexpected increase of your BG value and will increase your basal rates the 4 hours earlier, it could be the opposite of what you need to avoid hypo, especially if it's in the middle of the night. That's why it's important to enter all carbs especially correction for hypo.
 - You have a lot of period with UAM detected during the day.
   - Do you have entered all your carbs and correctly estimated your Carbs ?
   - All UAM periods (except if you enter no carbs during a day and categorized UAM as basal is disabled), all your UAM periods will be categorized as basal, this can increase a lot your basal (much more than necessary)
 
 - Your carbs absorption is very slow: if most of your carbs absorption are calculated with min_5m_carbimpact parameter (you can see these periods with a little orange dot in the top of COB curve), the calculation of COB could be wrong and leads to wrong results.
-  - We you practice sport, you are generally more sensitive and your BG doesn't rise a lot, so during or after an exercice, it's usual to see some periods with slow carbs. But if you have too often unexpected slow carb absorption, then you may need a profile adjustment (higher value of IC) or a min_5m_carbimpact a bit to high.
+  - When you practice sport, you are generally more sensitive and your BG doesn't rise a lot, so during or after an exercice, it's usual to see some periods with slow carbs. But if you have too often unexpected slow carb absorption, then you may need a profile adjustment (higher value of IC) or a min_5m_carbimpact a bit too high.
 - You have a "very bad days", for example stuck several hours in hyperglycemia with a huge amount of insulin to be able to go down within the range, or after a sensor change you got long periods of wrong BG values. If during the pas weeks you only have one or 2 "bad days", you can disable manually these days in autotune calculation to exclude them from calculation, and again **check carefully if you can trust the results**
 - If the percentage of modification is too important
   - You can try to increase the number of days to get smoother results
