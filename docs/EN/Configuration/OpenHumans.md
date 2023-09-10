@@ -3,7 +3,7 @@
 ## Donate your data for science
 
 You can help the community by donating your data to research projects! This helps scientists to pay it forward, develop new scientific ideas and broaden the open mind of open source closed loop systems.
-AndroidAPS is ready to synchronize your data with [Open Humans](https://www.openhumans.org), a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data.
+AAPS is ready to synchronize your data with [Open Humans](https://www.openhumans.org), a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data.
 
 You retain full control about what happens to your data and what projects you want to support by giving them access to your data. Depending on the project you have joined, data is evaluated and used by them in different ways and extent.
 
@@ -37,7 +37,7 @@ Secret or private information such as your Nightscout URL or API secret will not
 5. Read the given information about the Open Humans Uploader and terms of use carefully.
 6. Confirm by checking the box and click 'LOGIN'.
 7. Open Humans website will be opened. Login with your credentials.
-8. Decide whether you want to hide your AndroidAPS Uploader membership in your public Open Humans profile.
+8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
 9. Click button 'Authorize project'.
 
 ```{image} ../images/OHUploader2.png
@@ -70,11 +70,11 @@ September 2020 the 'OPEN' project launched a [survey](https://survey.open-diabet
 
 ### [OpenAPS Data Commons](https://www.openhumans.org/activity/openaps-data-commons/)
 
-The OpenAPS Data Commons was created to enable a simple way to share data sets from the DIYAPS community for research. The data is shared both with traditional researchers who will create traditional research studies, and with groups or individuals from the community who want to review data as part of their own research projects. The OpenAPS Data Commons uses the 'Open Humans' platform to enable people to easily upload and share their data from DIYAPS including AndroidAPS, Loop, and OpenAPS.
+The OpenAPS Data Commons was created to enable a simple way to share data sets from the DIYAPS community for research. The data is shared both with traditional researchers who will create traditional research studies, and with groups or individuals from the community who want to review data as part of their own research projects. The OpenAPS Data Commons uses the 'Open Humans' platform to enable people to easily upload and share their data from DIYAPS including AAPS, Loop, and OpenAPS.
 
 You can get your data into Open Humans via one of three ways:
 
-1. use the AndroidAPS uploader option to get your data into Open Humans
+1. use the AAPS uploader option to get your data into Open Humans
 2. use the Nightscout Data Transfer to get your data into Open Humans
 3. manually upload data files into Open Humans.
 
@@ -89,7 +89,7 @@ Also see [Open Humans Terms of Use](https://www.openhumans.org/terms/).
 
 ## Data Privacy
 
-Open Humans takes care of protecting your privacy by assigning a numerical ID to you for each project. This allows projects to recognize but no identify you. The Application ID uploaded by AndroidAPS is similar and only helps administrate the data. More information can be found here:
+Open Humans takes care of protecting your privacy by assigning a numerical ID to you for each project. This allows projects to recognize but no identify you. The Application ID uploaded by AAPS is similar and only helps administrate the data. More information can be found here:
 
 - [Open Humans Data Use Policy](https://www.openhumans.org/data-use/)
 - [Open Humans GDPR](https://www.openhumans.org/gdpr/)

@@ -1,8 +1,8 @@
 # Wear OS akıllı saatinde AAPS
 
-AndroidAPS uygulamasını **Wear OS tabanlı** akıllı saatinize yükleyebilirsiniz. AAPS'nin akıllı saat sürümü şunları yapmanızı sağlar:
+AAPS uygulamasını **Wear OS tabanlı** akıllı saatinize yükleyebilirsiniz. AAPS'nin akıllı saat sürümü şunları yapmanızı sağlar:
 
-* **verileri saatinizde görüntüleyin**: [özel saat arayüzleri](#aaps-watchfaces) sağlayarak veya standart saat arayüzlerini [komplikasyonlarla](#complications) kullanın
+* **verileri saatinizde görüntüleyin**: [özel saat arayüzleri](Watchfaces-aaps-watchfaces) sağlayarak veya standart saat arayüzlerini [komplikasyonlarla](Watchfaces-complications) kullanın
 * **AAPS'yi telefonda kontrol edin**: bolus için, geçici bir hedef belirleyin vb.
 
 ### Saat satın almadan önce...
@@ -10,26 +10,26 @@ AndroidAPS uygulamasını **Wear OS tabanlı** akıllı saatinize yükleyebilirs
 * *komplikasyonlar* gibi bazı özelliklerin çalışması için Wear OS sürüm 2.0 veya daha yeni bir sürüm gerekir
 * Google, *Android Wear 1.x*'i 2.x sürümünden *Wear OS* olarak yeniden markaladı, bu nedenle *Android Wear* dediği zaman, sistemin daha eski 1.x sürümünü gösteriyor olabilir
 * Akıllı saatin açıklaması yalnızca *Android* ve *iOS* ile uyumluluğu gösteriyorsa - bu *Wear OS*'de çalıştığı **anlamına gelmez** - **AAPS wear ile uyumlu olmayan!** başka bir tür Markaya özel işletim sistemi de olabilir
-* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
+* [Test edilmiş telefonlar ve saatler listesini kontrol edin](Phones-list-of-tested-phones) ve saatinizin desteklenip desteklenmeyeceğinden şüpheniz varsa [topluluğa sorun](../Where-To-Go-For-Help/Connect-with-other-users.md)
 
 ### AAPS'nin Wear OS sürümünü derlemek
 
 AAPS'in Wear OS Uygulaması, Android mobil için AAPS yapısından ayrılmıştır. Bu nedenle, ikinci bir imzalı APK oluşturmanız gerekir. Modül olarak "AndroidAPS.wear" ve yapı varyantı olarak "fullRelease" seçin ve Wear OS saati için ikinci bir apk dosyası [APK oluşturulurken](../Installing-AndroidAPS/Building-APK.md) oluşturulur (veya "pumpcontrolRelease" yalnızca uzaktan pompayı döngü olmadan kontrol etmenizi sağlar).
 
-Mart 2021'den itibaren sideload AAPS'yi saatinize yüklemeniz gerekiyor, artık saatin Google Play Store''undan erişilemiyor. Hem saatinize hem de telefonunuza yüklemeniz gereken [Wear Installer](https://youtu.be/8HsfWPTFGQI)'ı sideload kullanarak yükleyebilirsiniz. Wear Installer uygulaması Google Play Store'dan indirilebilir. Wear Installer'ın geliştiricisi Malcolm Bryant'ın verdiği bağlantılı video, size ayrıntılı talimatlar verecektir. a) apk'yı cep telefonunuza indirin b) wear'e Android Hata Ayıklayıcı'yı kurun c) Cep telefonunuzda Wear Installer'ı kullanarak AAPS wear uygulamasını telefonunuzdan saatinize yan yükleme yapabilirsiniz. Saate wear sürümünü yüklemek için uygulamanız olarak AndroidAPS'yi seçtiğinizde, saat kadranlarını, komplikasyonları ve AAPS kontrollerini kullanabileceksiniz.
+Mart 2021'den itibaren sideload AAPS'yi saatinize yüklemeniz gerekiyor, artık saatin Google Play Store''undan erişilemiyor. Hem saatinize hem de telefonunuza yüklemeniz gereken [Wear Installer](https://youtu.be/8HsfWPTFGQI)'ı sideload kullanarak yükleyebilirsiniz. Wear Installer uygulaması Google Play Store'dan indirilebilir. Wear Installer'ın geliştiricisi Malcolm Bryant'ın verdiği bağlantılı video, size ayrıntılı talimatlar verecektir. a) apk'yı cep telefonunuza indirin b) wear'e Android Hata Ayıklayıcı'yı kurun c) Cep telefonunuzda Wear Installer'ı kullanarak AAPS wear uygulamasını telefonunuzdan saatinize yan yükleme yapabilirsiniz. Saate wear sürümünü yüklemek için uygulamanız olarak AAPS'i seçtiğinizde, saat kadranlarını, komplikasyonları ve AAPS kontrollerini kullanabileceksiniz.
 
 ### Telefonda Kurulum
 
-Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder.md#wear).
+AAPS içinde, Konfigürasyon ayarlarında [Wear eklentisini etkinleştirmeniz](Config-Builder-wear) gerekir.
 
 ## APPS'i Saatten Kontrol Etme
 
-AndroidAPS, Android Wear saatleri tarafından *kontrol edilecek* şekilde tasarlanmıştır. Saatinizden bolus vs. göndermek istiyorsanız "Wear ayarları" içinde "Saat tarafından kontrol"u etkinleştirmeniz gerekir.
+AAPS, Android Wear saatleri tarafından *kontrol edilecek* şekilde tasarlanmıştır. Saatinizden bolus vs. göndermek istiyorsanız "Wear ayarları" içinde "Saat tarafından kontrol"u etkinleştirmeniz gerekir.
 
 Aşağıdaki işlevler saatten tetiklenebilir:
 
 * geçici bir hedef belirleme
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder.md#wear) on the phone)
+* bolus hesaplayıcıyı kullanma (hesaplama değişkenleri telefondaki [ayarlarda](Config-Builder-wear) tanımlanabilir)
 * yKarb yönetme
 * bolus (insulin + carbs) yönetme
 * saat ayarları
@@ -39,11 +39,13 @@ Aşağıdaki işlevler saatten tetiklenebilir:
     * profili kontrol etme ve değiştirme, CPP (Sirkadiyen Yüzde Profili = zaman kayması + yüzde)
     * GTD gösterme (Günlük toplam doz = bolus + günlük bazal)
 
+(Watchfaces-aaps-watchfaces)=
+
 ## AAPS Saat Yüzleri
 
 Ortalama delta, AİNS, şu anda aktif olan geçici bazal oranı ve bazal profiller + CGM okumaları grafiğini içeren birkaç saat arayüzü vardır.
 
-AndroidAPS'den gelen bildirimlerin saatte engellenmediğinden emin olun. Eylemin onayı (örn. bolus, geçici hedef), kaydırmanız ve işaretlemeniz gereken bildirim yoluyla gelir.
+AAPS'den gelen bildirimlerin saatte engellenmediğinden emin olun. Eylemin onayı (örn. bolus, geçici hedef), kaydırmanız ve işaretlemeniz gereken bildirim yoluyla gelir.
 
 AAPS menüsüne daha hızlı ulaşmak için KŞ'nize iki kez dokunun. KŞ eğrisine iki kez dokunarak zaman ölçeğini değiştirebilirsiniz..
 
@@ -51,41 +53,41 @@ AAPS menüsüne daha hızlı ulaşmak için KŞ'nize iki kez dokunun. KŞ eğris
 
 ![Mevcut saat yüzleri](../images/Watchface_Types.png)
 
-(new-watchface-as-of-androidaps-2-8)=
+(Watchfaces-new-watchface-as-of-AAPS-2-8)=
 
-### AndroidAPS 2.8'den itibaren yeni saat yüzü
+### AAPS 2.8'den itibaren yeni saat yüzü
 
-![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
+![Watchface Dijital Stil](../images/Watchface_DigitalStyle.png)
 
 * Renk, çizgiler ve daire, watchface seçici menüsünün dişli işareti üzerindeki ayar menüsünde yapılandırılabilir.
 
 ## AAPSv2 saat arayüzü - Legend
 
-![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
+![Legend AAPSv2 saat arayüzü](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A - son döngü çalıştırmasından beri geçen süre
 
-B - CGM reading
+B - CGM okuması
 
-C - minutes since last CGM reading
+C - son CGM okumasından bu yana geçen dakika
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - son CGM okumasına kıyasla değişiklik (mmol veya mg/dl olarak)
 
-E - average change CGM reading last 15 minutes
+E - son 15 dakikadaki ortalama değişiklik CGM okuması
 
-F - phone battery
+F - telefon pili
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - bazal oranı (standart oran sırasında Ü/sa olarak ve GBO sırasında % olarak gösterilir)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - KŞE (kan şekeri etkileşimi) -> KŞ'nin yalnızca insülin aktivitesine bağlı olarak yükselmesi veya düşmesi "gerektiği" derece.
 
-I - carbs (carbs on board | e-carbs in the future)
+I - karbonhidrat (aktif karbonhidrat | yayma y-karbonhidratlar)
 
-J - insulin on board (from bolus | from basal)
+J - aktif insülin (bolustan | bazaldan)
 
 ## AAPS ana menüsüne erişim
 
-To access main menu of AAPS you can use on of following options:
+AAPS ana menüsüne erişmek için aşağıdaki seçeneklerden birini kullanabilirsiniz:
 
 * KŞ değerinize iki kez tıklayın
 * saat uygulaması menüsünde AAPS simgesini seçin
@@ -93,16 +95,18 @@ To access main menu of AAPS you can use on of following options:
 
 ## Ayarlar (wear saati içinde)
 
-To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
+Saat yüzü ayarlarına erişmek için AAPS ana menüsüne girin, yukarı kaydırın ve "Ayarlar" öğesini seçin.
 
-Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
+Dolgulu yıldız etkin (**Açık**) durumu içindir ve içi boş yıldız simgesi ayarın devre dışı olduğunu gösterir (**Kapalı**):
 
-![Settings on/off](../images/Watchface_Settings_On_Off.png)
+![Ayarlar açık/kapalı](../images/Watchface_Settings_On_Off.png)
 
 ### AAPS tamamlayıcı parametreleri
 
 * **Bolus'ta Titreşim** (varsayılan `Açık`):
 * **Eylemler için ünite** (varsayılan `mg/dl`): eğer **Açık** ise eylemler için ünite `mg/dl`, eğer **Kapalı** ise eylemler için ünite `mmol/l`'dir. Saatten herhangi bir GH ayarlarken kullanılır.
+
+(Watchfaces-watchface-settings)=
 
 ### Saat yüzü ayarları
 
@@ -127,7 +131,7 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 * **Giriş Tasarımı**: Bu parametre ile AAPS (TT, İnsülin, Karbonhidrat...) için komutları girerken "+" ve "-" butonlarının konumunu seçebilirsiniz
 
-![Input design options](../images/Watchface_InputDesign.png)
+![Giriş tasarımı seçenekleri](../images/Watchface_InputDesign.png)
 
 ### Belirli saat yüzü parametreleri
 
@@ -135,7 +139,7 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 * **Delta Ayrıntısı** (varsayılan `Orta`)
 
-![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
+![Steampunk_göstergesi](../images/Watchface_Steampunk_Gauge.png)
 
 #### Daire Saat Yüzü
 
@@ -155,21 +159,21 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 * **Sihirbaz Yüzdesi** (varsayılan `Kapalı`): Sihirbazdan bolus düzeltmesine izin ver (değer, onay bildiriminden önce yüzde olarak girilir)
 
-(complications)=
+(Watchfaces-complications)=
 
 ## Komplikasyonlar
 
-*Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
+*Komplikasyon* geleneksel saatçilikten bir terimdir ve ana saat kadranına eklemeyi tanımlar - başka bir küçük pencere veya alt kadran (tarih, haftanın günü, ay evresi vb. ile birlikte). Wear OS 2.0, bu metaforu hava durumu, bildirimler, fitness sayaçları ve daha fazlası gibi özel veri sağlayıcılarının komplikasyonları destekleyen tüm saat yüzlerine eklenmesine olanak tanımak için getiriyor.
 
-AndroidAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
+AAPS Wear OS uygulaması, `2.6` derlemesinden bu yana komplikasyonları destekler ve komplikasyonları destekleyen herhangi bir üçüncü taraf izleme yüzünün AAPS ile ilgili verileri (KŞ gidişatı ile, Aktif İnsülin, Aktif KArbonhidrat, vb.) görüntülemek üzere yapılandırılmasına izin verir.
 
-Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
+Komplikasyonlar ayrıca AAPS işlevlerine **kısayol** olarak da hizmet eder. Bunlara dokunarak AAPS ile ilgili menüleri ve diyalogları açabilirsiniz (komplikasyon tipine ve konfigürasyona bağlı olarak).
 
-![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
+![Saat_Yüzündeki_Komplikasyonlar](../images/Watchface_Complications_On_Watchfaces.png)
 
 ### Komplikasyon Türleri
 
-AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
+AAPS Wear OS uygulaması, önceden tanımlanmış biçimlere göre yalnızca ham veriler sağlar. Düzeni, kenarlığı, rengi ve yazı tipi dahil olmak üzere komplikasyonların nerede ve nasıl oluşturulacağına karar vermek üçüncü taraf saat yüzüne bağlıdır. AAPS, mevcut birçok Wear OS komplikasyon türünden şunları kullanır:
 
 * `KISA METİN` - Her biri 7 karakterden oluşan, bazen değer ve etiket olarak adlandırılan iki satır metin içerir. Genellikle bir daire veya küçük hap içinde - alt alta veya yan yana işlenir. Yer sınırı çok olan bir komplikasyondur. AAPS, sığdırmak için gereksiz karakterleri kaldırmaya çalışır: değerleri yuvarlayarak, değerlerden baştaki ve sondaki sıfırları kaldırarak vb.
 * `UZUN METİN` - Her biri yaklaşık 20 karakterden oluşan iki satır metin içerir. Genellikle bir dikdörtgen veya "long pill" içinde - alt alta işlenir. Daha fazla ayrıntı ve metin durumu için kullanılır.
@@ -178,15 +182,15 @@ AAPS Wear OS app provides only raw data, according to predefined formats. It is 
 
 ### Komplikasyon Kurulumu
 
-To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
+Saat yüzüne karmaşıklık eklemek için, uzun basarak ve aşağıdaki dişli simgesine tıklayarak yapılandırın. Belirli saat yüzünün onları nasıl yapılandırdığına bağlı olarak - ya yer tutuculara tıklayın ya da komplikasyonlar için saat yüzü kurulum menüsüne girin. AAPS komplikasyonları, AAPS menü girişi altında gruplandırılmıştır.
 
-When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
+Saat yüzeyinde komplikasyonları yapılandırırken, Wear OS, saat yüzeyinde seçilen komplikasyon yerine sığabilecek komplikasyonların listesini sunacak ve filtreleyecektir. Listede belirli komplikasyonlar bulunamıyorsa, bu muhtemelen türünün belirtilen yer için kullanılamamasından kaynaklanmaktadır.
 
 ### AAPS tarafından sağlanan komplikasyonlar
 
-AndroidAPS provides following complications:
+AAPS aşağıdaki komplikasyonları sağlar:
 
-![AAPS_Complications_List](../images/Watchface_Complications_List.png)
+![AAPS_Komplikasyonları_Listesi](../images/Watchface_Complications_List.png)
 
 * **BO, Aktif Karbonhidrat & Aktif İnsülin** (`KISA METİN`, *Menü*'yü açar): İlk satırda *Bazal Oranı* ve ikinci satırda *Aktif Karbonhidrat* ve *Aktif Insülini* görüntüler.
 * **Kan Şekeri** (`KISA METİN`, *Menüyü* açar): ilk satırda *Kan Şekeri* değerini ve *trend* okunu, ikinci satırda *ölçüm zamanı* ve *KŞ delta* değerini gösterir.
@@ -199,7 +203,7 @@ AndroidAPS provides following complications:
 * **AiNS Simgesi** (`KISA METİN`, *Bolus*'u açar): Statik bir simgeyle *Aktif İnsülin* değerini görüntüler.
 * **Yükleyici/Telefon Pili** (`ARALIKLI DEĞER`, *Durum* açılır): AAPS tarafından bildirilen AAPS telefonunun (yükleyici) pil yüzdesini görüntüler. Bildirilen değeri yansıtan bir pil simgesiyle yüzde göstergesi olarak görüntülenir. Gerçek zamanlı olarak güncellenmeyebilir, ancak diğer önemli AAPS verileri değiştiğinde (genellikle: yeni *Kan Şekeri* ölçümü ile her ~5 dakikada bir) güncellenir.
 
-Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.
+Ek olarak, `BÜYÜK GÖRÜNTÜ` türünün üç komplikasyonu vardır: **Koyu Duvar Kağıdı**, **Gri Duvar Kağıdı** ve **Açık Duvar Kağıdı**, statik AAPS duvar kağıdı.
 
 ### Komplikasyonla ilgili ayarlar
 
@@ -215,21 +219,21 @@ Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpa
 
 ## Wear OS Kutucukları
 
-Wear OS Tiles provide easy access to users' information and actions to get things done. The tiles are only available on Android smartwatches running on Wear Os version 2.0 and higher.
+Wear OS kutucukları, yapacağınız herhangi birşey için kullanıcıların bilgilerine ve eylemlerine kolay erişim sağlar. Kutucuklar yalnızca Wear Os sürüm 2.0 ve üzeri sürümlerde çalışan Android akıllı saatlerinde mevcuttur.
 
-Tiles allow you to quickly access actions on the AAPS application without going through the watch face menu. The tiles are optional and can be added and configured by the user.
+Kutucuklar, saat yüzü menüsüne gerek kalmadan AAPS uygulamasındaki eylemlere hızlı bir şekilde erişmenizi sağlar. Kutucuklar isteğe bağlıdır ve kullanıcı tarafından eklenebilir ve yapılandırılabilir.
 
-The tiles are used "next to" any watch face. To access a tile, when enabled, swipe right to left on your watch face to show them.
+Kutucuklar, herhangi bir saat arayüzünün "yanında" kullanılır. Etkin olduğunda bir kutucuğa erişmek için, saat kadranınızda sağdan sola kaydırın.
 
-Please note; that the tiles do not hold the actual state of the AAPS phone app and will only make a request, which has to be confirmed on the watch before it is applied.
+Not; kutucukların AAPS telefon uygulamasının mevcut durumunun yerini tutmadığını, yalnızca uygulanmadan önce saatte onaylanması gereken bir istekte bulunduğunu unutmayın.
 
 ## Kutucuk nasıl eklenir?
 
-Before using the tiles, you have to switch on "Control from Watch" in the "Wear OS" settings of Android APS.
+Kutucukları kullanmadan önce, Android APS'nin "Wear OS" ayarlarında "Saatten Kontrol" seçeneğini açmanız gerekir.
 
-![Wear phone preferences enabled](../images/wear_phone_preferences.jpg)
+![Wear telefon tercihleri etkin](../images/wear_phone_preferences.jpg)
 
-Depending on your Wear OS version, brand and smartphone there are two ways of enabling the tiles:
+Wear OS sürümünüze, markanıza ve akıllı telefonunuza bağlı olarak kutucukları etkinleştirmenin iki yolu vardır:
 
 1. Saatinizde, saat arayüzünüzden; 
     * "+ Kutucuk ekle"ye ulaşana kadar sağdan sola kaydırın 
@@ -239,13 +243,13 @@ Depending on your Wear OS version, brand and smartphone there are two ways of en
     * "Kutucuk" bölümüne ve ardından "+ Ekle" düğmesine tıklayın
     * Eklemek istediğiniz AAPS kutucuğunu seçerek bulun. ![Wear -telefon kutucuk ekleme](../images/wear_companion_app_add_tile.png) kutucukların sırası, sürükleyip bırakarak değiştirilebilir
 
-The content of the tiles can be customized by long-pressing a tile and clicking the "Edit" or "gear icon" button.
+Kutucukların içeriği, bir kutucuğa uzun süre basılarak ve "Düzenle" veya "dişli simgesi" düğmesine tıklanarak özelleştirilebilir.
 
 ### APS(Eylemler) Kutucuğu
 
-The action tile can hold 1 to 4 user-defined action buttons. To configure, long-press the tile, which will show the configuration options. Similar actions are also available through the standard watch menu.
+Eylem kutucuğu, 1 ila 4 kullanıcı tanımlı eylem butonunun yerini tutabilir. Yapılandırmak için, seçenekleri gösterecek olan kutucuğa uzun basın. Benzer işlemler, standart saat menüsünden de yapılabilir.
 
-Actions supported in the Action tile can request the AAPS phone app for:
+Eylem kutucuğunda desteklenen eylemler, AAPS telefon uygulamasından şunlar için talepte bulunabilir:
 
 * **Hesap**; karbonhidrat girdisine ve isteğe bağlı bir yüzdeye dayalı bir bolus hesaplaması yapın [1]
 * **İnsülin**; ünite değeri girerek insülin verilmesini isteyin
@@ -253,13 +257,13 @@ Actions supported in the Action tile can request the AAPS phone app for:
 * **Karb**; (yayma) karbonhidrat ekle
 * **GeçiciH**; özel bir geçici hedef ve süre belirleyin
 
-![Wear action tile, sample calculator](../images/wear_actions.png)
+![Wear aksiyon kutucuğu, örnek hesap makinesi](../images/wear_actions.png)
 
-[1] Via, the Wear OS menu, set the "Calculator Percentage" option to "ON" to show the percentage input in the bolus calculator. The default percentage is based on the phone settings in the"Overview" section ["Deliver this part of the bolus wizard result %"](Config-Builder.html#advanced-settings) When the user does not provide a percentage, the default value from the phone is used. Configure the other parameters for the bolus calculator in the phone app via "Preferences" "Wizard Settings".
+[1] Bolus hesaplayıcıda yüzde girişini göstermek için Wear OS menüsü aracılığıyla "Hesap Makinesi Yüzdesi" seçeneğini "AÇIK" olarak ayarlayın. Varsayılan yüzde, "Genel Bakış" bölümündeki telefon ayarlarına bağlıdır ["Bolus sihirbazı sonucunun bu kadarını ilet %"](Config-Builder.html#advanced-settings) Kullanıcı bir yüzde belirtmezse, telefondaki varsayılan değer kullanılır. Bolus hesaplayıcı için diğer parametreleri telefon uygulamasında "Tercihler" "Sihirbaz Ayarları" üzerinden yapılandırın.
 
 ### AAPS(Geçici Hedef) Kutucuğu
 
-The Temp Target Tile can request a temporary target based on AAPS phone presets. Configure preset time and targets through the phone app setting by going to "Preferences", "Overview", ["Default Temp-Targets"](Config-Builder.html#default-temp-targets) and set the duration and targets for each preset. Configure the visible actions on the tile through the tile settings. Long press the tile to show the configuration options and select 1 to 4 options:
+Geçici Hedef Kutucuğu, AAPS telefon ön ayarlarına dayalı olarak geçici bir hedef talep edebilir. "Tercihler", "Genel Bakış", ["Varsayılan Geçici Hedefler"](Config-Builder.html#default-temp-targets) seçeneğine giderek telefon uygulaması ayarı aracılığıyla önceden ayarlanmış süreyi ve hedefleri yapılandırın ve her ön ayar için süreyi ve hedefleri ayarlayın. Kutucuk ayarları aracılığıyla kutucuktaki görünür eylemleri yapılandırın. Yapılandırma seçenekleri için kutucuğa uzun basın ve 1 ile 4 arasında seçim yapın:
 
 * **Aktivite**; Spor için
 * **Hipo**; hipo tedavisi sırasında hedefi yükseltmek için
@@ -267,39 +271,49 @@ The Temp Target Tile can request a temporary target based on AAPS phone presets.
 * **Manuel**; özel bir geçici hedef ve süre belirleme
 * **İptal**; mevcut geçici hedefi durdurmak için
 
-![Wear actions tile edit](../images/wear_tile_tempt_edit.png)
+![Waer aksiyon kutucuk düzenle](../images/wear_tile_tempt_edit.png)
 
 ### AAPS(Hızlı asistan) Kutucuğu
 
-The QuickWizard tile can hold 1 to 4 quick wizard action buttons, defined with the phone app[2]. See [QuickWizard](Config-Builder.html#quickwizard-settings). You can set standard meals (carbs and calculation method for the bolus) to be displayed on the tile depending on the time of the day. Ideal for the most common meals/snacks you eat during the day. You can specify if the quick wizard buttons will show on the phone, watch, or both. Please note that the phone can show only one quick wizard button at a time. The quick wizard setup also can specify a custom percentage of the insulin for the bolus. The custom percentage enables you to vary, for example, snack at 120%, slow absorbing breakfast 80% and hypo treatment sugar snack at 0%
+Hızlı asistan kutucuğu, telefon uygulaması[2] ile tanımlanan 1 ila 4 hızlı asistan eylem butonunun yerini tutabilir. [Hızlı asistan](Config-Builder.html#quickwizard-settings)'a bakın. Günün saatine bağlı olarak kutucuk üzerinde görüntülenecek standart öğünleri (karbonhidrat ve bolus için hesaplama yöntemi) ayarlayabilirsiniz. Gün içinde en çok yediğiniz öğünler/atıştırmalıklar için idealdir. Hızlı asistan butonlarının telefonda, saatte veya her ikisinde de gösterilip gösterilmeyeceğini belirleyebilirsiniz. Telefonun aynı anda yalnızca bir hızlı asistan butonu gösterebileceğini lütfen unutmayın. Hızlı asistan kurulumu ayrıca bolus için özel bir insülin yüzdesi belirleyebilir. Özel yüzde, örneğin atıştırmalıkları%120, yavaş emilen kahvaltıyı %80 ve şekersiz atıştırmalıkları %0 olarak değiştirmenizi sağlar.
 
-![Wear actions tile and phone configuration](../images/quickwizard_watch_phone.png)
+![Waer aksiyon kutucuk ve telefon konfigürasyonu](../images/quickwizard_watch_phone.png)
 
-[2] Wear OS limits tiles update frequency to only once every 30 seconds. When you notice that the changes on your phone are not reflected on the tile, consider; waiting 30 seconds, using the "Resend all data" button from the Wear OS section of AAPS, or removing the tile and adding it again. To change the order of the QuickWizard buttons dragging an item up or down.
+[2] Wear OS, kutucuk güncelleme sıklığını yalnızca her 30 saniyede bir ile sınırlar. Telefonunuzdaki değişikliklerin kutucuklara yansımadığını fark ettiğinizde; AAPS'in Wear OS bölümündeki "Tüm verileri yeniden gönder" butonunu kullanarak veya kutucuğu kaldırıp yeniden ekleyerek 30 saniye bekleyin. Hızlı asistan butonlarının sırasını değiştirmek için bir öğeyi yukarı veya aşağı sürükleyin.
 
 ## Her zaman açık
 
-Long battery life for Android Wear OS smartwatches is a challenge. Some smartwatches get as much as 30 hours before recharging. The display should be switched off for optimal power saving when not in use. Most watches support the “Always on” display.
+Android Wear OS akıllı saatleri için uzun pil ömrü zorlu bir iştir. Bazı akıllı saatler, yeniden şarj edilmeden önce 30 saat kadar kullanılabilir. Kullanılmadığı zaman optimum güç tasarrufu için ekran kapatılmalıdır. Çoğu saat "Her zaman açık" ekranını destekler.
 
-Since AAPS version 3, we can use a “Simplify UI” during always-on-mode. This UI only contains the blood glucose, direction, and time. This UI is power-optimized with less frequent updates, showing less information and lightening fewer pixels to save power on OLED displays.
+AAPS sürüm 3'ten bu yana, her zaman açık moddayken "Basitleştirilmiş Kullanıcı Arayüzü" kullanabiliriz. Bu kullanıcı arayüzü yalnızca kan şekeri, yön ve zamanı içerir. Bu kullanıcı arayüzü, daha az sıklıkta güncelleme ile güç açısından optimize edilmiştir, daha az bilgi gösterir ve OLED ekranlarda güç tasarrufu sağlamak için daha az piksel aydınlatır.
 
-The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “Always on” or “Always on and charging”.
+Basitleştirilmiş UI modu için mevcut saat arayüzleri: AAPS, AAPS V2, Home Big, Digital Style, Steampunk ve Cockpit. Basitleştirilmiş kullanıcı arayüzü isteğe bağlıdır ve saat yüzü ayarları aracılığıyla yapılandırılır. (saat yüzüne uzun basın ve "düzenle" veya dişli simgesini tıklayın) "Basit Kullanıcı Arayüzü" yapılandırmasını seçin ve "Her zaman açık" veya "Şarjda ve Her zaman açık" olarak ayarlayın.
 
 ### Gece modu
 
-While charging, it would be helpful if the display could stay “always-on” and show your blood glucose during the night. However, the standard watch-faces are too bright and have too much information, and the details are hard to read with sleepy eyes. Therefore, we added an option for the watch-face to simplify the UI only during charging when set in the configuration.
+Şarj olurken ekranın "sürekli açık" kalması ve gece boyunca kan şekerinizi göstermesi yararlı olacaktır. Ancak standart saat kadranları çok parlak ve çok fazla bilgi içeriyor ve uykulu gözlerle ayrıntıları okumak zor. Bu nedenle, yapılandırmada ayarlandığında yalnızca şarj sırasında kullanıcı arayüzünü basitleştirmek için saat yüzü için bir seçenek ekledik.
 
-The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “During charging” or “Always on and charging”
+Basitleştirilmiş UI modu için mevcut saat arayüzleri: AAPS, AAPS V2, Home Big, Digital Style, Steampunk ve Cockpit. Basitleştirilmiş kullanıcı arayüzü isteğe bağlıdır ve saat yüzü ayarları aracılığıyla yapılandırılır. (saat yüzüne uzun basın ve "düzenle" veya dişli simgesini tıklayın) "Basit Kullanıcı Arayüzü" yapılandırmasını seçin ve "Şarj sırasında" veya "Şarjda ve Her zaman açık" olarak ayarlayın.
 
-The Android developer options enable your watch to stay awake during charging. To make the developer options available, see https://developer.android.com/training/wearables/get-started/debugging. Set the “Stay awake when charging” to “on” in the developer options”.
+Android geliştirici seçenekleri, saatinizin şarj olurken uyanık kalmasını sağlar. Geliştirici seçeneklerini kullanılabilir hale getirmek için [dokümantasyona](https://developer.android.com/training/wearables/get-started/debugging) bakınız. Geliştirici seçeneklerinde "Şarj olurken uyanık kal"ı "açık" olarak ayarlayın.
 
-Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
+Not: her ekran her zaman açık olmaya uygun değildir. Özellikle eski OLED ekranlarda ekran yanmasına neden olabilir. Saatler genellikle yanmayı önlemek için ekranı karartır; tavsiye için lütfen kullanıcı el kitabınıza, üretime veya internete bakın.
 
-![Watchface Nightstand](../images/Watchface_nightstand.jpg)
+![Komidin Saat arayüzü](../images/Watchface_nightstand.jpg)
 
-![Simplified UI](../images/Watchface_simplified_ui.png)
+![Basitleştirilmiş Kullanıcı Arayüzü](../images/Watchface_simplified_ui.png)
 
-### Performans ve pil ömrü ipuçları
+## Snooze Alert shortcut
+
+It is possible to create a shortcut to snooze the alerts/alarm of AAPS. Muting the sound via your watch is convenient and faster without reaching for your phone. Note; you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
+
+To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
+
+### Snooze xDrip
+
+When you use xDrip and have xDrip installed on the watch, the 'AAPS Snooze Alert' shortcut will also Snooze any xDrip alarm.
+
+## Performance and battery life tips
 
 Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
 
@@ -317,16 +331,16 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Etkin olmayan / karartılmış modda işlenen veri miktarını sınırlayan saat arayüzlerini kullanmak daha iyidir.
 * Üçüncü taraf hava durumu widget'ları gibi diğer Komplikasyonları karıştırırken veya harici kaynaklardan gelen verileri kullanırken dikkatli olun.
 * Daha basit saat yüzleriyle başlayın. Aynı anda bir komplikasyon ekleyin ve pil ömrünü nasıl etkilediklerini gözlemleyin.
-* AAPS saat arayüzleri için **Koyu** temayı ve [**Eşleşen bölücü**](#watchface-settings) kullanmayı deneyin. OLED cihazlarda, yanan piksel miktarını sınırlayacak ve yanmayı sınırlayacaktır.
+* AAPS saat arayüzleri için **Koyu** temayı ve [**Eşleşen bölücü**](Watchfaces-watchface-settings) kullanmayı deneyin. OLED cihazlarda, yanan piksel miktarını sınırlayacak ve yanmayı sınırlayacaktır.
 * Saatinizde nelerin daha iyi performans gösterdiğini kontrol edin: AAPS stok saat yüzleri veya AAPS Komplikasyonlarına sahip diğer saat yüzleri.
 * Farklı aktivite profilleriyle birkaç gün boyunca gözlem yapın. Çoğu saat, bakış, hareket ve kullanımla ilgili diğer tetikleyicilerde ekranı etkinleştirir.
 * GPS etkinleştirildiğinde, performansı etkileyen global sistem ayarlarınızı kontrol edin: bildirimler, arka ışık/etkin ekran zaman aşımı.
-* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
+* [Test edilmiş telefonlar ve saatler listesini kontrol edin](Phones-list-of-tested-phones) ve diğer kullanıcıların deneyimleri ve bildirilen pil ömrü için [topluluğa sorun](../Where-To-Go-For-Help/Connect-with-other-users.md).
 * **Saat arayüzünde veya komplikasyonda görüntülenen verilerin güncel olduğunu garanti edemeyiz**. Sonunda, bir saat yüzünün veya bir komplikasyonun ne zaman güncelleneceğine karar vermek Wear OS'ye kalmıştır. AAPS uygulaması güncelleme talep ettiğinde bile, sistem pilden tasarruf etmek için güncellemeleri ertelemeye veya yok saymaya karar verebilir. Şüphe duyduğunuzda ve saatinizin pili azaldığında - her zaman telefondaki ana AAPS uygulamasıyla iki kez kontrol edin.
 
-(troubleshooting-the-wear-app)=
+(Watchfaces-troubleshooting-the-wear-app)=
 
-## Wear uygulamasında sorun giderme:
+## Troubleshooting the wear app:
 
 * Bazen uygulamaları saatle yeniden senkronize etmek yardımcı olur, çünkü bunu yapmak biraz yavaş olabilir: Android Wear > Dişli simgesi > Saat adı > Uygulamaları yeniden eşitle.
 * Geliştirici Seçeneklerinde (saatte) ADB hata ayıklamasını etkinleştirin, saati USB üzerinden bağlayın ve Android Studio'da Wear uygulamasını bir kez başlatın.
@@ -335,13 +349,13 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 ### Sony Smartwatch 3
 
 * Sony Smartwatch 3, APPS ile kullanılacak en popüler saatlerden biridir.
-* Maalesef Google, 2020 sonbaharında wear OS 1.5 cihazları için desteği bıraktı. Bu Sony SW3'ü AndroidAPS 2.7 ve üstü ile kullanırken sorunlara yol açar.
-* A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.md).
+* Maalesef Google, 2020 sonbaharında wear OS 1.5 cihazları için desteği bıraktı. Bu Sony SW3'ü AAPS 2.7 ve üstü ile kullanırken sorunlara yol açar.
+* Bu soruna [sorun giderme sayfasında](../Usage/SonySW3.md) olası bir geçici çözüm bulunabilir.
 
-## Nightscout verilerini görüntüleyin
+## View Nightscout data
 
 If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Ortalama delta, AİNS, şu anda aktif olan geçici bazal oranı ve bazal profiller + CGM okumaları grafiğini içeren birkaç saat arayüzü vardır.
 
 # Pebble
 
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
+Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AAPS then send either SMS or pushover notification.

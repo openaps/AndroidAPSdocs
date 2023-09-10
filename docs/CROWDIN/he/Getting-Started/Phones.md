@@ -1,4 +1,4 @@
-(list-of-tested-phones)=
+(Phones-list-of-tested-phones)=
 
 # List of tested Phones compatible with Omnipod Dash Insulin Pump Pods
 
@@ -18,7 +18,7 @@ After you fill in the form data the maintainer will check the data and approve i
 
 Any problems with the spreadsheet please contact us directly or via a GitHub issue for the openaps/AndroidAPSDocs project.
 
-(phone-background)=
+(Phones-phone-background)=
 
 # רקע הטלפון
 

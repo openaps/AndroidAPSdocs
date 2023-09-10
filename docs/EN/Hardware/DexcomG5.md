@@ -10,11 +10,11 @@
     Locally and select ON.
 -   In xdrip go to Settings > Inter-app settings > Accept Treatments and
     select OFF.
--   If you want to be able to use AndroidAPS to calibrate then in xdrip
+-   If you want to be able to use AAPS to calibrate then in xdrip
     go to Settings > Interapp Compatibility > Accept Calibrations and
     select ON. You may also want to review the options in Settings >
     Less Common Settings > Advanced Calibration Settings.
--   Select xdrip in ConfigBuilder (setting in AndroidAPS).
+-   Select xdrip in ConfigBuilder (setting in AAPS).
 -   If AAPS does not receive BG values when phone is in airplane mode
     use 'Identify receiver' as describe on [xDrip+ settings
     page](../Configuration/xdrip.md) .
@@ -25,7 +25,7 @@
     choose the version that fits your needs (mg/dl or mmol/l version,
     G5).
 
-    -   Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users
+    -   Folder 2.3 is for users of AAPS 2.3, folder 2.4 for users
         of AAPS 2.5.
     -   Open <https://play.google.com/store/search?q=dexcom%20g5> on
         your computer. Region will be visible in URL.
@@ -40,7 +40,7 @@
 -   Start sensor
 
 -   Select Dexcom App (patched) in ConfigBuilder (setting in
-    AndroidAPS).
+    AAPS).
 
 -   If you want to use xDrip alarms via local broadcast: in xDrip
     hamburger menu > settings > hardware data source > 640G /EverSense.

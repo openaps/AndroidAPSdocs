@@ -1,102 +1,104 @@
-# AndroidAPS uygulaması veya dokümantasyon için diziler (strings) nasıl çevrilir?
+# AndroidAPS uygulaması veya dokümantasyon için dizeler (strings) nasıl çevrilir?
 
-* For the the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
-* For the documentation please visit <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
+* Uygulamada kullanılan dizeler için <https://crowdin.com/project/androidaps> adresine gidin ve GitHub hesabınızı kullanarak giriş yapın
+* Dokümantasyon için lütfen <https://crowdin.com/project/androidapsdocs> adresini ziyaret edin ve GitHub hesabınızı kullanarak giriş yapın
 
-* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users).
+* Dokümanlar ekibine katılma isteği gönderin. Bunu yapmak için istediğiniz dilin bayrağına ve ardından sonraki sayfanın sağ üst köşesindeki "join" katıl düğmesine tıklayın. Lütfen dili belirtin ve çevirmen veya redaktör olmak istiyorsanız (yalnızca çeviri konusunda yetenekli kişiler + ileri düzey AndroidAPS kullanıcıları) AAPS deneyiminiz ve kendiniz hakkında biraz bilgi verin.
 
-:::{admonition} Time for Approval :class: note
+```{admonition} Onay Zamanı :class: not
 
-The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord. :::
+Onay manuel bir adımdır. Kâr amacı gütmeyen kuruluş olarak SLA'lar sağlamıyoruz ancak genel olarak onay < 1 gün içinde yapılacaktır. Aksi taktirde lütfen Facebook veya Discord aracılığıyla doküman ekibiyle iletişime geçin.
 
-* Sizi onayladığımızda bayrağa tıklayın ![When we approve you, click the flag](./images/translation_flags.png)
-
-## Uygulamanın çevirisi
-
-(translate-strings-for-androidaps-app)=
-
-### AndroidAPS uygulaması için dizeleri (strings) çevir
-
-* If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
+    <br />* When we approve you, click the flag
+       ![When we approve you, click the flag](./images/translation_flags.png)
     
-    ![Click translate all](./images/translations-click-translate-all.png)
-
-* If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+    ## Translation of the app
     
-    ![Click strings.xml](./images/translations-click-strings.png)
-
-* Translate sentences on left side by adding new translated text or use & edit suggestion
+    (translations-translate-strings-for-androidaps-app)=
+    ### Translate strings for AndroidAPS app
     
-    ![Translation app](./images/translations-translate.png)
-
-### Proofread strings for AndroidAPS app
-
-* Proofreaders start by selecting "Proofread" when starting from the language home screen.
+    * If you have no preference for strings you translate just select the "Translate All" button to start. Size çevrilmesi gereken dizeleri gösterecektir.
     
-    ![Proofreading mode app](./images/translations-proofreading-mode.png)
+       ![Tümünü çevir'e tıklayın](./images/translations-click-translate-all.png)
     
-    and approve translated texts
+    * Tek bir dosyayı çevirmek istiyorsanız, lütfen dosyayı arama iletişim kutusundan veya ağaç yapısından arayın ve o dosyadaki dizeler üzerinde çeviri çalışmasını başlatmak için dosya adına tıklayın.
     
-    ![approve text](./images/translations-proofreading.png)
-
-When a proofreader approves a translation it will be added to the next version of AndroidAPS.
-
-(translation-of-the-documentation)=
-
-## Translation of the documentation
-
-* Click the name of the docs page you want to translate
-
-![Click docs page](./images/translation_WikiPage.png)
-
-* Translate sentences by sentence
+       ![Dizeleri tıklayın.xml](./images/translations-click-strings.png)
     
-    1. The yellow text is the text you are working at the moment.
+    * Yeni çevrilmiş metin ekleyerek sol taraftaki cümleleri çevirin veya & öneriyi düzenle
     
-    2. The green text is already translated. You don't need to do this again.
+        ![Çeviri uygulaması](./images/translations-translate.png)
     
-    3. The red text is the remaining text which have to be translated.
     
-    4. This is the source text you are working on at the moment
+    ### AndroidAPS uygulaması için redaksiyon dizeleri
     
-    5. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
+    * Redaktörler, ana dil ekranından başlarken "redaksiyon" seçeneğini seçerek başlar.
     
-    6. These are the suggestion for a translation. Especially you can see how much Crowdin rates this as a fit or if it was already just in the past and come up through text rearrangements but not content change.
+       ![Redaksiyon modu uygulaması](./images/translations-proofreading-mode.png)
     
-    7. Press the "save" button to save a proposal for the translation. It will then promoted to a proofreader for final check.
-
-![Translation docs](./images/translation_WikiTranslate.png)
-
-* A translated page will not be published in docs before
     
-    1. the translation is proofread
+       ve çevrilmiş metinleri onaylayın
     
-    2. the sync run between Crowdin and Github finished (once an hour) which creates an PR for Github.
+        ![metni onayla](./images/translations-proofreading.png)
     
-    3. the PR in Github was approved.
-
-In general this needs 1 - 3 days but might during holiday take a little bit longer.
-
-### Translating links
-
-:::{admonition} Links are not translated anymore :class: note
-
-Links are not translated anymore. In the past we had a topic here but this is gone as through migraton to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
-
-:::
-
-You are translating the text which represents the link. Please you have to be carefull **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
-
-It's the proofreaders job to have a special look on this!
-
-### Proofreading
-
-* Proofreaders have to switch to Proofreading mode
+    Redaktör bir çeviriyi onayladığında, çeviri AndroidAPS'nin bir sonraki sürümüne eklenecektir.
     
-    ![Proofreading mode docs](./images/translation_WikiProofreadingmode.png)
+    (translations-translation-of-the-documentation)=
+    ## Translation of the documentation
     
-    and approve translated texts
+    * Click the name of the docs page you want to translate
     
-    ![approve text](./images/translations-proofreading.png)
+    ![Click docs page](./images/translation_WikiPage.png)
+    
+    
+    * Translate sentences by sentence
+    
+        1. Sarı metin, şu anda üzerinde çalıştığınız metindir.
+    
+        1. Yeşil metin zaten çevrilmiştir. Tekrar yapmana gerek yok.
+    
+        1. Kırmızı metin, çevrilmesi gereken metindir.
+    
+        1. Bu, şu anda üzerinde çalıştığınız kaynak metindir.
+    
+         1. Bu, hazırladığınız çeviridir. Yukarıdaki metni kopyalayabilir veya aşağıdaki önerilerden birini seçebilirsiniz.
+    
+        1. Bunlar bir çeviri önerisidir. Özellikle Crowdin'in bunu ne kadar uyumlu olarak değerlendirdiğini veya geçmişte olup olmadığını ve metin düzenlemeleriyle ortaya çıkıp içerik değişikliği yapılıp yapılmadığını görebilirsiniz.
+        1. Bir çeviri önerisini kaydetmek için "kaydet" düğmesine basın. Daha sonra son kontrol için redaktöre terfi ettirilecektir.
+    
+    ![Çeviri dok.ları](./images/translation_WikiTranslate.png)
+    
+    * Çevrilmiş bir sayfa dokümanlarda yayınlanmadan önce
+    
+         1. çeviri redaksiyonu
+    
+         1. Crowdin ve Github arasındaki senkronizasyon (saatte bir) tamamlanır ve bu da Github için bir PR (çekme isteği) oluşturur.
+    
+        1. Github'daki PR onaylanır.
+    
+    Genel olarak bu 1 - 3 güne ihtiyaç duyar ancak tatil günlerinde biraz daha uzun sürebilir.
+    
+    ### Bağlantılı çeviriler
+    
+    ```{admonition} Bağlantılar artık çevrilmiyor
+    :class: not
+    
+    Bağlantılar artık çevrilmiyor. Geçmişte burada bir başlığımız vardı ama bu, Markdown'a ve myst_parser'a geçiş yoluyla gitti, biz açıkça ingilizce metinde etiketler oluşturuyoruz ve bu etiketleri başlık altında dillere yayıyoruz.
+    
+    
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during hollidays. To speed up the process you can inform docs team about new translations.
+Bağlantıyı temsil eden metni çeviriyorsunuz. Lütfen bir çift `<0></0>` etiketiyle temsil edilen veya bir paragrafta başka bir sayı varsa bağlantıyı **kaldırmamaya** dikkat etmelisiniz.
+
+Bu bağlantılar ve karakter çiftleri için dokümanı kontrol edip göz atmak redaktörlerin işidir!
+
+### Redaksiyon
+
+* Redaktörler redaksiyon moduna geçerek
+    
+    ![Doküman redaksiyon modu](./images/translation_WikiProofreadingmode.png)
+    
+    çevrilmiş metinleri onaylayabilirler
+    
+    ![metni onayla](./images/translations-proofreading.png)
+
+* Redaktör bir çeviriyi onayladığında, sabit bir takvim olmamakla birlikte, tatil günleri dışında yaklaşık haftada bir kez gerçekleşecek bir sonraki doküman güncellemesine eklenecektir. Süreci hızlandırmak için dokümantasyon ekibini yeni çeviriler hakkında bilgilendirebilirsiniz.

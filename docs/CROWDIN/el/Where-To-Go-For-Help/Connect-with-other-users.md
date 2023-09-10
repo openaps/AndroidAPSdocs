@@ -1,4 +1,4 @@
-(i-m-getting-stuck-what-do-i-do-who-can-i-ask)=
+(Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)=
 
 # Δυσκολεύομαι και δεν μπορώ να προχωρήσω... Τι να κάνω; Που μπορώ να απευθυνθώ;
 

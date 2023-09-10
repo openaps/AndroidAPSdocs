@@ -1,10 +1,10 @@
 # interne Sandbox-Datei 2 zum Testen
 
-:::{admonition} keine Übersetzung erforderlich
+```{admonition} no need to translate this
 :class: note
 
-Dies muss nicht übersetzt werden.
-:::
+No need to translate this.
+```
 
 Dies ist eine interne Sandbox-Datei für das Dokumentationsteam zum Testen
 

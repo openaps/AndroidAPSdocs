@@ -1,6 +1,6 @@
 # Nightscout
 
-(security-considerations)=
+(Nightscout-security-considerations)=
 
 ## שיקולי ביטחון
 
@@ -25,7 +25,7 @@ There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS
 
 Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
 
-(manual-nightscout-setup)=
+(Nightscout-manual-nightscout-setup)=
 
 ## הגדרה ידנית של Nightscout
 

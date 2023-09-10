@@ -1,4 +1,4 @@
-(list-of-tested-phones)=
+(Phones-list-of-tested-phones)=
 
 # Liste der getesteten Smartphones
 
@@ -10,7 +10,7 @@ Der neue Treiber für den DASH Pod konnte sehr effizient und schnell erstellt we
 
 Wenn in Zukunft wieder eine andere Hardwareliste benötigt wird und Jemand sich um diese Liste kümmern möchte, kontaktiere uns bitte!
 
-The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
+Die Liste des getesteten Telefons kann über den folgenden Link [Liste der getesteten Telefone mit Omnipod-Insulinpumpe](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) aufgerufen werden
 
 Mit STRG-F kannst Du im Text der Google Tabelle suchen. Die Tabelle ist schreibgeschützt. Um den Test eines Telefons aufzunehmen, fülle bitte das [-Formular](https://forms.gle/g7GbSkMCTfFrWKjSA) aus.
 
@@ -18,7 +18,7 @@ Nachdem Du die Formulardaten ausgefüllt hast, wird der Betreuer die Daten über
 
 Im Falle von Fragen oder Problemen mit der Tabelle kontaktiere uns bitte direkt oder über einen GitHub Issue für das openaps/AndroidAPSDocs Projekt.
 
-(phone-background)=
+(Phones-phone-background)=
 
 # Handy Hintergrundbild
 

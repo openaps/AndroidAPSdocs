@@ -10,7 +10,7 @@ Para empezar a utilizar AndroidAPS, se deben realizar los pasos siguientes:
 
 * Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.md).
 * [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.md#configuration).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](index-configuration).
 
 ## How A DIY Closed Loop Works
 
@@ -43,7 +43,7 @@ AndroidAPS se ha diseñado para realizar un seguimiento transparente de todos lo
 
 ## Examples of AndroidAPS algorithm decision making:
 
-AndroidAPS utiliza el mismo algoritmo de núcleo y el mismo conjunto de características que OpenAPS. El algoritmo hace varias predicciones (basadas en valores, y la situación) que representan diferentes escenarios de lo que podría suceder en el futuro. En Nightscout, estos se muestran como "líneas púrpuras". AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes.md#overview-tab). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
+AndroidAPS utiliza el mismo algoritmo de núcleo y el mismo conjunto de características que OpenAPS. El algoritmo hace varias predicciones (basadas en valores, y la situación) que representan diferentes escenarios de lo que podría suceder en el futuro. En Nightscout, estos se muestran como "líneas púrpuras". AndroidAPS uses different colors to separate these [prediction lines](Releasenotes-overview-tab). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
 
 ### Here are examples of the purple prediction lines, and how they might differ:
 

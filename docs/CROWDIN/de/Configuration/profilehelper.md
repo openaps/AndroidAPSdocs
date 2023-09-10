@@ -30,7 +30,7 @@ Profil-Helfer bietet Datensätze von zwei verschiedenen Kinderkrankenhäusern an
 6. Drücke die Schaltfläche 'PROFILE VERGLEICHEN' oben auf dem Bildschirm.
 7. Es wird der Vergleich der beiden angepassten Profile angezeigt.
 
-Wenn Du mit den Profilanpassungen zufrieden bist, kannst Du das [Profil klonen](../Configuration/profilehelper.md#clone-profile) wie unten beschrieben.
+Wenn Du mit den Profilanpassungen zufrieden bist, kannst Du das [Profil klonen](profilehelper-clone-profile) wie unten beschrieben.
 
 ## Vergleiche zwei Profile
 
@@ -55,10 +55,10 @@ Du kannst den Profil-Helfer auch verwenden, um Profile oder Profilwechsel (um ei
 8. Drücke die Schaltfläche 'PROFILE VERGLEICHEN' oben auf dem Bildschirm.
 9. Es wird der Vergleich der beiden angepassten Profile angezeigt.
 
-(clone-profile)=
+(profilehelper-clone-profile)=
 ## Profil klonen
 
-Wenn Du [lokale Profile](../Configuration/Config-Builder.md#local-profile) verwendest, kannst Du ein Profil / einen Profilwechsel direkt vom Profil-Helfer klonen.
+Wenn Du [lokale Profile](Config-Builder-local-profile) verwendest, kannst Du ein Profil / einen Profilwechsel direkt vom Profil-Helfer klonen.
 
 ```{image} ../images/ProfileHelperClone.png
 :alt: Profile Helper Clone Profil / Profilwechsel

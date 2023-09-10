@@ -8,11 +8,11 @@ Faydalı ilave bilgilere de [SSS](../Getting-Started/FAQ.html) sayfasından ula�
 
 ### Yapım & güncelleme
 
-* [Kayıp keystore](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore)
-* [Android Studio'da Sorun Giderme](../Installing-AndroidAPS/troubleshooting_androidstudio.html)
+* [Kayıp keystore](troubleshooting_androidstudio-lost-keystore)
+* [Android Studio'da Sorun Giderme](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 
 ### Ayarlar
-* [Profil](../Usage/Profiles.md#troubleshooting-profile-errors)
+* [Profil](Profiles-troubleshooting-profile-errors)
 
   ![Hata: Bazal saatlere göre ayarlanamadı](../images/Screen_DifferentPump.png)
 
@@ -23,11 +23,11 @@ Faydalı ilave bilgilere de [SSS](../Getting-Started/FAQ.html) sayfasından ula�
 * [Nightscout Client](../Usage/Troubleshooting-NSClient.html)
 
 ### Kullanım
-* [Yanlış karbonhidrat değerleri](../Usage/COB-calculation.md#detection-of-wrong-cob-values)
+* [Yanlış karbonhidrat değerleri](COB-calculation-detection-of-wrong-cob-values)
 
    ![Hata: Yavaş karbonhidrat emilimi](../images/Calculator_SlowCarbAbsorption.png)
 
-* [SMS Komutları](../Children/SMS-Commands.md#troubleshooting)
+* [SMS Komutları](SMS-Commands-troubleshooting)
 
 ### Sık bluetooth bağlantı sorunları
 
@@ -52,11 +52,11 @@ Bunları belirli android telefonlarda nasıl bulacağınıza dair örnekler aşa
 
 * Şimdi "Bluetooth" uygulamasını arayın ve seçin.
 
-  ![Bluetooth uyg.](../images/troubleshooting/pixel/04_bluetooth.png)
+  ![Bluetooth uyg.](../images/troubleshooting/pixel/03_bluetooth.png)
 
 * "Uygulama pil kullanımı"na tıklayın ve "Optimize edilmedi"yi seçin.
 
-  ![BT Pil optimizasyonu](../images/troubleshooting/pixel/05_btunrestricted.png)
+  ![BT Pil optimizasyonu](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
 #### Samsung telefonlar
@@ -84,27 +84,27 @@ Bunları belirli android telefonlarda nasıl bulacağınıza dair örnekler aşa
 
 ## CGM
 
-* [Genel](../Hardware/GeneralCGMRecommendation.md#troubleshooting)
-* [Dexcom G6](../Hardware/DexcomG6.html#troubleshooting-g6)
-* [Libre 3](../Hardware/Libre3.html#experiences-and-troubleshooting)
-* [Libre 2](../Hardware/Libre2.html#experiences-and-troubleshooting)
-* [xDrip - CGM verisi yok](../Configuration/xdrip.md#identify-receiver)
-* [xDrip - Dexcom sorun giderme](../Configuration/xdrip.md#troubleshooting-dexcom-g5-g6-and-xdrip)
+* [Genel](GeneralCGMRecommendation-troubleshooting)
+* [Dexcom G6](DexcomG6-troubleshooting-g6)
+* [Libre 3](Libre3-experiences-and-troubleshooting)
+* [Libre 2](Libre2-experiences-and-troubleshooting)
+* [xDrip - CGM verisi yok](xdrip-identify-receiver)
+* [xDrip - Dexcom sorun giderme](xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ## Pompalar
 
-* [DanaRS](../Configuration/DanaRS-Insulin-Pump.md#dana-rs-specific-errors)
-* [Accu-Chek Combo genel](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html)
-* [Accu-Chek Combo + Ruffy](../Configuration/Accu-Chek-Combo-Pump.md#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
-* [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md#insight-specific-errors)
-* [Medtronic + RileyLink](../Configuration/MedtronicPump.md#what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
+* [DanaRS](DanaRS-Insulin-Pump-dana-rs-specific-errors)
+* [Accu-Chek Combo genel](Accu-Chek-Combo-Tips-for-Basic-usage)
+* [Accu-Chek Combo + Ruffy](Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
+* [Accu-Chek Insight](Accu-Chek-Insight-Pump-insight-specific-errors)
+* [Medtronic + RileyLink](MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 
 ## Telefonlar
 
-* [Jelly](../Usage/jelly.html)
-* [Huawei bluetooth & pil optimizasyonu](../Usage/huawei.html)
+* [Jelly](../Usage/jelly.md)
+* [Huawei bluetooth & pil optimizasyonu](../Usage/huawei.md)
 
 ## Akıllı saatler
 
-* [Wear uygulamasında sorun giderme](../Configuration/Watchfaces.md#troubleshooting-the-wear-app)
-* [Sony Smartwatch 3](../Usage/SonySW3.html)
+* [Wear uygulamasında sorun giderme](Watchfaces-troubleshooting-the-wear-app)
+* [Sony Smartwatch 3](../Usage/SonySW3.md)

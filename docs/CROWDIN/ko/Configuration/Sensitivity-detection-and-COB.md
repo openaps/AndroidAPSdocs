@@ -1,4 +1,4 @@
-(sensitivity-detection)=
+(Sensitivity-detection-and-COB-sensitivity-detection)=
 
 # 민감도 감지
 

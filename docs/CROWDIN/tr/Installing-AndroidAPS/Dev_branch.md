@@ -1,7 +1,7 @@
-## Development branch
+## Geliştirici Sürümü
 
 <font color="#FF0000"><strong>Dikkat:</strong></font>
-Development branch yalnızca AndroidAPS'in daha da geliştirilmesi içindir. <font color="#FF0000"><strong>Tedavi amaçlı döngü için değil</strong></font> test etmek için ayrı bir telefonda kullanılmalıdır!
+Geliştirici sürümü yalnızca AndroidAPS'in daha da geliştirilmesi içindir. <font color="#FF0000"><strong>Tedavi amaçlı döngü için değil</strong></font> test etmek için ayrı bir telefonda kullanılmalıdır!
 
 Kullanılacak en kararlı AndroidAPS sürümü, [Master branch](https://github.com/nightscout/AndroidAPS/tree/master) sürümüdür. Tedavi amaçlı döngü için Master branch sürümünü kullanmanız önerilir.
 
