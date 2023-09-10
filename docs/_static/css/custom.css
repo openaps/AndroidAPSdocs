@@ -1,3 +1,24 @@
 .rst-other-versions a[href*="/fr/"] {
   display: none !important;
 }
+/* Peter Leimbach - a standard style for the tables */
+table, th, td {
+  border: 1px solid;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+th {
+  background-color: #008ae6;
+  color: white;
+}
+
+/* changes the background color of the links in the table comparing DIY loops */
+th.head p a.reference {
+  color: yellow;
+}

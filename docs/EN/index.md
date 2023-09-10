@@ -64,7 +64,7 @@ Change language <./changelanguage.md>
 ```{toctree}
 :caption: Home
 
-Introduction <introduction.md>
+Introduction <./introduction.md>
 
 ```
 
@@ -256,9 +256,9 @@ How to help <./Getting-Started/How-can-I-help.md>
 
 How to translate the app and docs <./translations.md>
 
-State of translations <./Administration/stateTranslations.md>
-
 How to edit the docs <./make-a-PR.md>
+
+State of translations <./Administration/stateTranslations.md>
 
 ```
 
