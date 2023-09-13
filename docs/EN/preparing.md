@@ -1,60 +1,78 @@
 # Preparing
 
-## Guide to the Android APS doc	
+## Guide to the AndroidAPS documentation	
 
 ### First Steps
-Welcome. This is an introduction to aid beginners to the concept of Do-It-Yourself-APS (Android-Artificial-Pancreas-Systems “AAPS”) is commonly referred to as ‘looping’..
+Welcome. This is an introduction to aid beginners starting with the Do-It-Yourself (DIY) system, Android Artificial Pancreas System (**AAPS**), which is also commonly referred to as ‘looping’.
 
 #### Safety
-“With great power come great responsibility…”
+“With great power comes great responsibility…”
 
-**AAPS** is designed with an extensive set of safety features with limits imposed and gradually removed with completion of the [Objectives](https://androidaps.readthedocs.io/en/latest/Usage/Objectives.html) (predominately made up of multiple choice questions). An **AAPS** feature will be unlocked as the Objectives are successfully completed. This process will gradually allow the user to migrate from Open Loop to Closed Loop.
+**AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](https://androidaps.readthedocs.io/en/latest/Usage/Objectives.html) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
 
-This has been done to achieve the best possible experience with AAPS by preventing common mistakes new users tend to make when starting to loop. The safety parameters have been built upon typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS** or has overlooked the required materials. Do not worry, we have all been there!
+The Objectives have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The Objectives aim to minimise these issues. 
+
+:::{admonition} Warning
+
+:class: warning
+
+Caution concerning rapid improvements in blood glucose control 
+:::
+
+An important safety consideration which is currently not widely appreciated is that a **rapid reduction in HbA1c and improved blood glucose control in those who have had elevated glucose levels for some time can cause permanent damage**. 
+
+This damage can include sight loss and permanent neuropathy (pain). It appears to be possible to avoid this by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 10.6 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.  
+
+One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the Hba1C dropped 1%, 2% or 3% respectively over a 6 month period. They suggested that the **"decrease in HbA1c value during any 6-month period should be limited to less than 2% in order to prevent the progression of retinopathy. It is also evident that too rapid a decrease at the initiation of glycemic control could cause severe or transient exacerbation of the progression of retinopathy."** 
+
+(N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for a HbA1c calculator tool.) 
+
+In another retrospective evaluation of 954 patients, a different [study](https://www.mdpi.com/1999-4923/15/7/1791) noted that: 
+
+**"With a decrease in HbA1c of 2–3% points over 3 months there was a 20% absolute risk of developing treatment-induced neuropathy in diabetes, with a decrease in HbA1c of >4% points over 3 months the absolute risk of developing treatment-induced neuropathy in diabetes exceeded 80%."** 
+
+A further [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this work agreed that to avoid complications **the goal should be to reduce A1c by <2% over 3 months.** You can read another review on the topic [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf).
+
+It is generally recognised that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.  
 
 #### Key Principles
 
-The key principles and concepts of looping must be understood by the user before using **AAPS**. This is achieved by investing your personal time into reading the **AAPS** documentation, and completing the Objectives which is aimed to provide you with a solid platform for safe and effective use of **AAPS**. The volume of **AAPS** documentation may seem overwhelming at first but be patient and trust the process - with the proper approach, you'll get there! The overall process will depend upon the beginner’s progress and completion of objectives can typically take between 6 to 9 weeks .
+The key principles and concepts of looping must be understood before using **AAPS**. This is achieved by investing your personal time into reading the **AAPS** documentation, and completing the Objectives which aim to provide you with a solid platform for safe and effective use of **AAPS**. The volume of **AAPS** documentation may seem overwhelming at first but be patient and trust the process - with the proper approach, you'll get there! The speed of progression will depend upon the individual, but be aware that completion of all the objectives typically takes 6 - 9 weeks. A detailed breakdown of the timeline is given below, be aware that by objective 8 of AAPS you are closed looping, the later objectives add in additional features like **SMS commands** and **automations** which are useful to some users, but not essential to the core function of **AAPS**. Success with **AAPS** requires a proactive approach, a willingness to reflect on the BG data and flexibility to make the necessary adjustments to **AAPS** in order to improve your outcomes. Just as it is nearly impossible to learn to play a sport by reading about the rules alone, the same can be said of **AAPS**.
 
-#### Plan for hiccups
+#### Plan for delays and minor issues in getting everything set up and running smoothly
 
-At the preliminary stages of **AAPS**, you should expect to experience some hiccups whilst trying to fine tune your settings. **AAPS**’ glitches cannot be flushed out until the system is used in everyday life. Please plan accordingly and allow a sensible amount of time to troubleshoot and resolve such issues.
-
-#### Flexibility/Adaptability
-
-Success with **AAPS** requires a proactive approach, a willingness to reflect on the BG data and flexibility to make the necessary adjustments to **AAPS** in order to improve your outcomes. Just as it is nearly impossible to learn to play a sport by reading about the rules alone, the same can be said of **AAPS**.
+In the preliminary stages of getting started with **AAPS**, you may experience difficulties getting all the components of the loop communicating effectively with each other (and potential followers), and when fine-tuning your settings. Some glitches cannot be resolved until **AAPS** is used in everyday life, but plenty of help is available on the Facebook group and Discord. Please plan accordingly and choose "good" times, like a quiet morning of a weekend (i.e. not late at night or when you are tired, or before a big meeting or travel) to troubleshoot and resolve issues.  
 
 #### Technology compatibility
 
-There are limitations with **AAPS** as it is accessible for only certain types of insulin pumps or CGMs, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read  please read Component Set Up (Section INSERT)[Component Set Up (Section E).](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
+**AAPS** is only compatible with certain types of insulin pumps, CGMs and phones, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read the [Component Set Up Section](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
 #### App build time
 
-The time to build the **AAPS**(under Section INSERT) depends on your level of expertise and technical ability. Typically for inexperienced users, it can take up to half a day or a full day (with help from the community) in order to build the **AAPS**. The process will significantly speed up as you become more experienced at building the **AAPS**. 
+The time to build the **AAPS** app (under Section INSERT) depends on your level of expertise and technical ability. Typically for inexperienced users, it can take up to half a day or a full day (with help from the community) in order to build **AAPS**. The process will significantly speed up for newer **AAPS** versions, as you become more experienced.
 
-To aid the build process there are sections dedicated for:
+To aid the build process there are dedicated sections:
 
-- list of questions and answers for frequent errors that are likely to occur under [FAQs (Section](https://androidaps.readthedocs.io/en/latest/Getting-Started/FAQ.html) K);
+- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](https://androidaps.readthedocs.io/en/latest/Getting-Started/FAQ.html) K);
     
 - “[How to install AAPS](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Building-APK.html)? (Section D) which includes [Troubleshooting](https://androidaps.readthedocs.io/en/latest/Usage/troubleshooting.html) Subsection.
     
 
-#### Keystore & configuration settings export  file
+#### Keystore & configuration settings export file
 
-A “keystore” is a password encrypted file unique to your own copy of **AAPS**. Your android phone uses it to ensure that nobody else can upgrade your own copy without the keystore. In short, as part of the **AAPS** build, you should:
+A “keystore” (.jks file) is a password encrypted file unique to your own copy of **AAPS**. Your Android phone uses it to ensure that nobody else can upgrade your own copy without the keystore. In short, as part of the **AAPS** build, you should:
 
-1.  save the your keystore file (.jks file used to sign your app) in a safe place;
+1.  Save the your keystore file (.jks file used to sign your app) in a safe place;
     
-2.  keep a note of your password for your keystore file.
+2.  Keep a note of your password for your keystore file.
     
-
-By doing the above, this will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. On average, there will be 2-3 AAPS updates required each year. 
+This will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. On average, there will be 2 **AAPS** updates required each year. 
 
 In addition, **AAPS** provides the ability to [export all your configuration settings](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html). This ensures that you can safely recover your system while changing phones, upgrading/reinstalling the application with minimum disruption. 
 
 #### Troubleshooting
 
-Please feel free to reach out to the AAPS community if there is anything you feel unsure about - there is no such thing as a silly question! All users with various levels of experience are encouraged to ask questions as necessary. Response times to questions are usually quick, typically only a few hours due to the volume of **AAPS** users. 
+Please feel free to reach out to the AAPS community if there is anything you feel unsure about - there is no such thing as a silly question! All users with various levels of experience are encouraged to ask questions. Response times to questions are usually quick due to the number of **AAPS** users. 
 
 ##### [check the documentation](https://androidaps.readthedocs.io/en/latest/index.html)
 
@@ -92,7 +110,7 @@ This section provides a breakdown of the features provided by AAPS.
 
 ##### [General Hints](https://androidaps.readthedocs.io/en/latest/Usage/Timezone-traveling.html)
 
-Useful tricks on how to tackle looping issues such as time zones, and daylight saving (i.e. Spring Forward/ - Fall Back).
+Useful tricks on how to tackle looping issues such as time zones, and daylight saving (_i.e._ Spring Forward/ - Fall Back).
 
 ##### [AAPS](https://androidaps.readthedocs.io/en/latest/Getting-Started/Screenshots.html) for Children
 
@@ -141,26 +159,26 @@ Both **Nightscout** and **AAPS** must be updated approximately once a year, as i
 
 As mentioned earlier, adopting **AAPS** is more of a “journey” that requires investment of your personal time. It is not a one-time setup. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 2 to 3 months overall. Here is breakdown:
 
-| Tasks                                                                                |  Time Guestimate |
-|--------------------------------------------------------------------------------------|:----------------:|
-| initial reading of the documentation:                                                | 1-2 days         |
-| installing/configuring PC to allow the build:                                        | 2-8 hours        |
-| building a Nightscout server:                                                        | 1 hour           |
-| installing (xdrip or BYODA or …)                                                     | 1 hour           |
-| configuring CGM->xdrip->APPS initially:                                              | 1 hour           |
-| configuring AAPS->pump initially:                                                    | 1 hour           |
-| configuring AAPS->NightScout (reporting only):                                       | 1 hour           |
-| optional (for Parents) - configuring NightScout <-> **AAPS** & NSFollowers:          | 1 hour           |
-| Objective 1: Setting up visualization and monitoring, analysing basals and ratios    | 1 hour           |
-| Objective 2: Learn how to control AAPS                                               | 2 hour           |
-| Objective 3: Prove your knowledge                                                    | Up to 14 days    |
-| Objective 4: Starting on an open loop                                                | 7 days           |
-| Objective 5: Understanding your open loop, including its temp basal recommendations  | 7 days           |
-| Objective 6: Starting to close the loop with Low Glucose Suspend                     | Up to 5-14 days  |
-| Objective 7: Tuning the closed loop, raising maxIOB and gradually lowering BG targets| Up to 7 days     |
-| Objective 8: Adjust basals and ratios if needed, and then enable autosens            | Up to 7-14 days  |
-| Objective 9: Enabling additional oref1 features, such as super micro bolus (SMB)     | Up to 14 days    |
-| Objective 10: Automation                                                             | 1 day            |
+| Tasks                                                                                |  Approx time    |
+|--------------------------------------------------------------------------------------|:---------------:|
+| initial reading of the documentation:                                                | 1-2 days        |
+| installing/configuring PC to allow the build:                                        | 2-8 hours       |
+| building a Nightscout server:                                                        | 1 hour          |
+| installing (xdrip or BYODA or …)                                                     | 1 hour          |
+| configuring CGM->xdrip->APPS initially:                                              | 1 hour          |
+| configuring AAPS->pump initially:                                                    | 1 hour          |
+| configuring AAPS->NightScout (reporting only):                                       | 1 hour          |
+| optional (for Parents) - configuring NightScout <-> **AAPS** & NSFollowers:          | 1 hour          |
+| Objective 1: Setting up visualization and monitoring, analysing basals and ratios    | 1 hour          |
+| Objective 2: Learn how to control AAPS                                               | 2 hour          |
+| Objective 3: Prove your knowledge                                                    | Up to 14 days   |
+| Objective 4: Starting on an open loop                                                | 7 days          |
+| Objective 5: Understanding your open loop, including its temp basal recommendations  | 7 days          |
+| Objective 6: Starting to close the loop with Low Glucose Suspend                     | Up to 5-14 days |
+| Objective 7: Tuning the closed loop, raising maxIOB and gradually lowering BG targets| Up to 7 days    |
+| Objective 8: Adjust basals and ratios if needed, and then enable autosens            | Up to 7-14 days |
+| Objective 9: Enabling additional oref1 features, such as super micro bolus (SMB)     | Up to 14 days   |
+| Objective 10: Automation                                                             | 1 day           |
 
 
 Once you are fully operational on **AAPS**, you will need to fine tune your setting parameters in order to improve your overall diabetic management.
