@@ -110,9 +110,9 @@ The features of the different systems are shown in the table below:
 | PUMP        | [Omnipod (Dash)](../Configuration/OmnipodDASH.md) (2)                                                    | ![available](./images/available.png)           | ![available](./images/available.png)        | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)               |
 | PUMP        | [Omnipod (Eros)](../Configuration/OmnipodEros.md)                                                        | ![available](./images/available.png)           | ![available](./images/available.png)        | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)               |
 | PUMP        | [Diaconn G8](../Configuration/DiaconnG8.md)                                                              | ![available](./images/available.png)           | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)           |
-| PUMP        | [EOPatch 2](../Configuration/EOPatch2.md)                                                                | ![available](./images/available.png) (3)       | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)           |
-| PUMP        | [Medtrum TouchCare Nano](../Configuration/MedtrumNano.md)                                                | ![available](./images/available.png) (3)       | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)           |
-| PUMP        | [Medtrum TouchCare 300U](../Configuration/MedtrumNano.md)                                                | ![available](./images/available.png) (3)       | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)           |
+| PUMP        | [EOPatch 2](../Configuration/EOPatch2.md)                                                                | ![available](./images/available.png) (4)       | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)           |
+| PUMP        | [Medtrum TouchCare Nano](../Configuration/MedtrumNano.md)                                                | ![available](./images/available.png) (4)       | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)           |
+| PUMP        | [Medtrum TouchCare 300U](../Configuration/MedtrumNano.md)                                                | ![available](./images/available.png) (4)       | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)           |
 | PUMP        | [Roche Combo](../Configuration/Accu-Chek-Combo-Pump.md)                                                  | ![available](./images/available.png)           | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)           |
 | PUMP        | [Roche Insight](../Configuration/Accu-Chek-Insight-Pump.md)                                              | ![available](./images/available.png)           | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)           |
 | PUMP        | [Older Medtronic](../Configuration/MedtronicPump.md)                                                     | ![available](./images/available.png)           | ![available](./images/available.png)        | ![available](./images/available.png)                  | ![available](./images/available.png)               |
@@ -130,20 +130,20 @@ The features of the different systems are shown in the table below:
 | CGM         | [Nightscout as BG Source](../Hardware/CgmNightscoutUpload.md)                                            | ![available](./images/available.png)           | ![available](./images/available.png)        | ![available](./images/available.png)                  | ![available](./images/available.png)               |
 
 _Table notes:_ 
-1. A **rig** is a small computer which you carry around with you, without a monitor. One supported device type is Intel Edison + Explorer Board and the other Raspberry Pi + Explorer HAT or Adafruit RFM69HCW Bonnet. The first APS were based on this setup, as mobile phones were not capable of running the required algorithms. Use of these systems has declined, as the setup on mobile phones has become easier, and phones have a display included. Intel has also stopped selling the Intel Edison. The excellent OpenAPS algorithms Oref0 and Oref1 are now incorporated in AAPS and iAPS.
+1. A **rig** is a small computer which you carry around with you, without a monitor. One supported device type is Intel Edison + Explorer Board and the other Raspberry Pi + Explorer HAT or Adafruit RFM69HCW Bonnet. The first APS were based on this setup, as mobile phones were not capable of running the required algorithms. Use of these systems has declined, as the setup on mobile phones has become easier, and phones have a display included. Intel has also stopped selling the Intel Edison. The excellent OpenAPS algorithms **oref0** and **oref1** are now incorporated in AAPS and iAPS.
 2. Omnipod Dash is the successor of Omnipod Eros. It supports bluetooth communication and does not need a rig gateway to communicate between the Omnipod and mobile phone. If you have a choice, we recommend use of the Dash instead of Eros.
 3. Integration of Dexcom G7 with **AAPS** is currently not available in the **master** AAPS version, only the development and beta versions. Please wait until release of the **AAPS** master version 3.2.0 where Dexcom G7 support is planned for inclusion.
 4. Only older versions.
-5. Only older versions. Please check their documentation.
 
-An international peer-reviewed consensus statement containing practical guidance on open source looping was written by and for health-care professionals, and published in a leading medical journal in 2022: [_Lancet Diabetes Endocrinol_, 2022; 10: 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/). It is well worth a read (including for your diabetes clinic) and summarises the main technical differences between the different open-source hybrid closed loop systems. 
+
+An international peer-reviewed consensus statement containing practical guidance on open source looping was written by and for health-care professionals, and published in a leading medical journal in 2022: [_Lancet Diabetes Endocrinol_, 2022; 10: 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_). It is well worth a read (including for your diabetes clinic) and summarises the main technical differences between the different open-source hybrid closed loop systems. 
 
 It is hard to get a “feel” for any system without using it, or talking to others who are using it, so do reach out to others on Facebook/Discord and ask. Most people find that **AAPS** is incredibly sophisticated in comparison to other hybrid closed loop systems (particularly the commercial systems), with a huge number of potentially customisable settings and features,  discussed above. Some people can find this a little overwhelming in the beginning, but there is no rush to investigate all the possibilities at once, you can progress as slowly or as fast as you would like, and there is help available at every step of the way.  
 
 
 ## Does AAPS use artificial intelligence or any learning algorithm?
 
-No. The master version of **AAPS** does not have any machine learning algorithms, multiple-parameter insulin response models, or artificial intelligence. As such, the system is open and transparent in how it works, and has the ability to be understood not just by experts, but also by clinicians and patients. It also means that if you have a sharply varying schedule (maybe switching from a stressful week at work to a relaxing holiday) and are likely to need a significantly different amount of insulin, you can immediately switch **AAPS** to run a weaker/stronger customised profile. A ‘learning system’ will do this adjustment for you automatically, but is likely to take longer to adjust the insulin delivery.   
+The current master version of **AAPS** (3.1.0.3) does not have any machine learning algorithms, multiple-parameter insulin response models, or artificial intelligence. As such, the system is open and transparent in how it works, and has the ability to be understood not just by experts, but also by clinicians and patients. It also means that if you have a sharply varying schedule (maybe switching from a stressful week at work to a relaxing holiday) and are likely to need a significantly different amount of insulin, you can immediately switch **AAPS** to run a weaker/stronger customised profile. A ‘learning system’ will do this adjustment for you automatically, but is likely to take longer to adjust the insulin delivery.   
 
 ## Which system is right for me or my dependant? 
 
@@ -154,7 +154,8 @@ Most **AAPS** users report more time in range, HbA1c reductions, as well as qual
 It is important to note that the **AAPS** user needs to be proactive to troubleshoot and fix problems themselves, with help from the community. This is a very different mindset to that when using a commercial system. With **AAPS** a user has more control, but also the responsibility, and needs to be comfortable with that. 
 
 ## Is it safe to use open-source systems like AAPS? 
-#### Safety of the AAPS system
+
+### Safety of the AAPS system
 A more accurate question is probably “is it safe **compared** with my current insulin delivery system?” since no method of insulin delivery is without risk. There are many checks and balances in place with **AAPS**. A recent [paper](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375) looked at the use of **AAPS** in a computer simulated set-up, which was an effective way to unobjectively trial how safe and effective the system is. More generally, it is estimated that over 10,000 individuals worldwide are using open-source automated-insulin delivery systems, and uptake continues to increase globally.
 
 Any device that uses radio communications could be hacked, and this is true for a non-looping insulin pump as well. Currently, we are not aware of anyone attempting to harm individuals by hacking their diabetes-related medical equipment. However, there are multiple ways to protect against such risks:  
@@ -190,7 +191,7 @@ If you feel unsupported by your team to loop with **AAPS**, the following discus
 
 a) The **AAPS** system has been designed BY patients and their caregivers. It has been designed ultimately for safety, but also drawing on in-depth patient experience. There are currently around **10,000** AAPS users worldwide. There is therefore likely to be other patients using DIY looping in your clinic's patient population (whether they know about it or not). 
 
-b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_ has confirmed that DIY loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(2)_ which highlight the progress of the DIY looping commmunity. 
+b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_ has confirmed that DIY loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_ which highlight the progress of the DIY looping commmunity. 
 
 c) Starting with **AAPS** involves a _gradual_ migration from “open” loop pumping, through low-glucose suspend, through to hybrid “closed” looping, by completing a number of objectives. There is therefore a structured programme, requiring the user to demonstrate a level of competence at each stage and fine-tuning their basic settings (basal, ISF and ICR) before they can close the loop. 
 
@@ -202,7 +203,7 @@ f) If there is still strong objection from your team, hand your clinician printo
 
 #### Support for DIY looping by other clinicians
 
-A paper published in the Lancet Diabetes Endocrinology on 13 November 2021 (co led by Kings’ and Guy’s and St Thomas’ NHS Foundation Trust, and co lead by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s) provides:
+The paper published in the [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_)[ (co led by Kings’ and Guy’s and St Thomas’ NHS Foundation Trust, and co lead by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) provides:
 
 a) **Assurance** for professionals that DIY artificial pancreas systems/ open source as a “safe and effective treatment” option for type 1 diabetes and provides guidance on recommendations, discussions, supports, documentation;
 
@@ -218,7 +219,7 @@ f) Emphasis that these open source systems have not undergone the same regulator
 
 g) A recommendation that **regulation and legal frameworks** should be updated to ensure clarity on permitting ethical and effective treatment of such open source systems.
 
-Another paper issued in the Medical Law International 2021) also highlights the UK General Medical Council’s ‘consent guidance’ (Decision Making and Consent  published in September 2020 can be interpreted as placing a strong emphasis on doctor and patients making decisions together. The doctor should explain the potential benefits, risks, burdens and side-effects on DIY APS and may recommend a particular option without pressuring the patient. 
+Another paper in [Medical Law International, 2021](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)(_4_) also highlights the UK General Medical Council’s ‘consent guidance’ places a strong emphasis on doctor and patients making decisions together. The doctor should explain the potential benefits, risks, burdens and side-effects on DIY APS and may recommend a particular option without pressuring the patient. 
 
 Ultimately it is up to the patient to weigh up these factors, along with any non-clinical issues relevant to them and decide which treatment option, if any, to accept. 
 
@@ -226,22 +227,22 @@ If a doctor discovers in a clinic that their patient is looping with a DIY syste
 
 Doctors (at least in the UK) are not prohibited from prescribing unlicensed medicines and can use their clinical discretion. They should therefore use their clinical judgement to decide if a DIY APS is suitable for a specific patient, and discuss what they consider to be the pros and cons with the patient.
 
-#### The articles linked above, and other position statements, are listed below: 
+#### The articles referenced above, and other useful links and position statements are listed below: 
 
 1. Open-source automated insulin delivery: international consensus statement and practical guidance for health-care professionals 
-[Lancet Diabetes Endocrinol, 2022; 10: 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)
-2. A DIY ‘bionic pancreas’ is changing diabetes care — what's next? [Nature 620, 940-941 (2023)](https://doi.org/10.1038/d41586-023-02648-9)
-3. (http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
-4. [Berlin Institute of Health position statement, 2022](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
-5. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide[Diabetes Canada position and guide, _Canadian Journal of Diabetes_,_47_,389-397, E8, 2023](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
-6.  (https://www.sciencedirect.com/science/article/pii/S1499267123001387)
-How to help people on open-source automated insulin delivery systems? (diabetotech.com)
-7. [Diabetes UK position statement on DIY APS systems, updated Jan 2020](https://www.diabetes.org.uk/resources-s3/2020-01/DIY%20closed%20looping%20for%20Type%201%20diabetes%20position%20statement.pdf?)
-
- #### Peer-reviewed research articles about AndroidAPS:
-9. [First Use of Open-Source Automated Insulin DeliveryAndroidAPS in Full Closed-Loop Scenario: Pancreas4ALLRandomized Pilot Study, 2023](https://www.liebertpub.com/doi/epdf/10.1089/dia.2022.0562)
-10. [Pre-school and school-aged children benefit from the switchfrom a sensor-augmented pump to an AndroidAPS hybridclosed loop: A retrospective analysis, 2021](https://onlinelibrary.wiley.com/doi/epdf/10.1111/pedi.13190)
-11. [In Silico Trials of an Open-Source Android-Based Artificial Pancreas: A New Paradigm to Test Safety and Efficacy of Do-It-Yourself Systems, 2020](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375)
+[_Lancet Diabetes Endocrinol_, (2022) _10_, 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)
+2. [In Silico Trials of an Open-Source Android-Based Artificial Pancreas: A New Paradigm to Test Safety and Efficacy of Do-It-Yourself Systems, 2020](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375)
+3. A DIY ‘bionic pancreas’ is changing diabetes care — what's next? [_Nature_ (2023), _620_, 940-941](https://doi.org/10.1038/d41586-023-02648-9)
+4. Prescribing unapproved medical devices? The case of DIY artificial pancreas systems [_Medical law international_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
+5. [Berlin Institute of Health position statement, 2022](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
+6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (Diabetes Canada position and guide) [_Canadian Journal of Diabetes_, (2023)_47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
+7.  Netherlands (EN/NL) - for clinicians - [how to help people on open source automated insulin delivery systems](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
+8. First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALLRandomized Pilot Study [_Diabetes Technol. Ther._,
+25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
+9. Pre-school and school-aged children benefit from the switch from a sensor-augmented pump to an AndroidAPS hybrid closed loop: A retrospective analysis [_Pediatr. Diabetes_
+ 2021, _22_, 594-604. 2021](https://onlinelibrary.wiley.com/doi/epdf/10.1111/pedi.13190)
+10. Outcomes of the OPEN project, an EU-funded project into the Outcomes of Patient’s Evidence with Novel, Do-it-Yourself Artificial Pancreas Technology (https://www.open-diabetes.eu/publications)
+    
 
 
 ## Why can’t I just download AAPS and use it straight away?  
