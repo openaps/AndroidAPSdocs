@@ -13,7 +13,7 @@ Welcome. This is an introduction to aid beginners starting with the Do-It-Yourse
 The Objectives have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The Objectives aim to minimise these issues. 
 
 :::{admonition} Avoid permanent and painful damage to your eyes and nerves
-:class: danger
+:class: warning
 Caution is advised concerning rapid improvements in blood glucose control and lowering of HbA1c 
 :::
 
