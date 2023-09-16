@@ -8,7 +8,7 @@ Welcome. This is an introduction to aid beginners starting with the Do-It-Yourse
 #### Safety
 “With great power comes great responsibility…”
 
-**AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](https://androidaps.readthedocs.io/en/latest/Usage/Objectives.html) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
+**AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](Usage/Objectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
 
 The Objectives have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The Objectives aim to minimise these issues. 
 
@@ -49,7 +49,7 @@ In the preliminary stages of getting started with **AAPS**, you may experience d
 
 #### Technology compatibility
 
-**AAPS** is only compatible with certain types of insulin pumps, CGMs and phones, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read the [Component Set Up Section](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
+**AAPS** is only compatible with certain types of insulin pumps, CGMs and phones, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read the [Component Set Up Section](Configuration/BG-Source.md)
 
 #### App build time
 
@@ -57,9 +57,9 @@ The time to build the **AAPS** app  depends on your level of expertise and techn
 
 To aid the build process there are dedicated sections:
 
-- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](https://androidaps.readthedocs.io/en/latest/Getting-Started/FAQ.html) K);
+- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](Getting-Started/FAQ.md) K);
     
-- “[How to install AAPS](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Building-APK.html)? (Section D) which includes [Troubleshooting](https://androidaps.readthedocs.io/en/latest/Usage/troubleshooting.html) Subsection.
+- “[How to install AAPS](Installing-AndroidAPS/Building-APK.md)? (Section D) which includes [Troubleshooting](Usage/troubleshooting.md) Subsection.
     
 
 #### Keystore & configuration settings export file
@@ -72,18 +72,18 @@ A “keystore” (.jks file) is a password encrypted file unique to your own cop
     
 This will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. On average, there will be 2 **AAPS** updates required each year. 
 
-In addition, **AAPS** provides the ability to [export all your configuration settings](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html). This ensures that you can safely recover your system while changing phones, upgrading/reinstalling the application with minimum disruption. 
+In addition, **AAPS** provides the ability to [export all your configuration settings](Usage/ExportImportSettings.md). This ensures that you can safely recover your system while changing phones, upgrading/reinstalling the application with minimum disruption. 
 
 
 #### Time to progress to full looping after building AAPS and setting up the loop
 
-How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](https://androidaps.readthedocs.io/en/rework-project/preparing.html#how-long-will-it-take))
+How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](how-long-will-it-take))
 
 #### Troubleshooting
 
 Please feel free to reach out to the AAPS community if there is anything you feel unsure about - there is no such thing as a silly question! All users with various levels of experience are encouraged to ask questions. Response times to questions are usually quick due to the number of **AAPS** users. 
 
-##### [check the documentation](https://androidaps.readthedocs.io/en/latest/index.html)
+##### [check the documentation](index.md)
 
 ##### [ask our facebook group](https://www.facebook.com/groups/AndroidAPSUsers/)
 
@@ -93,11 +93,11 @@ Please feel free to reach out to the AAPS community if there is anything you fee
 
 AAPS documentation is made up of the following Sections:
 
-##### [Getting started](https://androidaps.readthedocs.io/en/latest/Getting-Started/Safety-first.html)
+##### [Getting started](Getting-Started/Safety-first.md)
 
 This is a must read to understand the general concept of what an artificial pancreas system is designed to do.
 
-##### [What do I need?](https://androidaps.readthedocs.io/en/latest/Module/module.html) 
+##### [What do I need?](Module/module.md) 
 
 This explains AAPS’ compatibility with CGMs (Continuous Glucose Monitors) and insulin pumps.  It also provides a guide on the correct assembly of an AAPS system to ensure that it functions correctly in everyday life.
 
@@ -105,7 +105,7 @@ This explains AAPS’ compatibility with CGMs (Continuous Glucose Monitors) and 
 
 This section is the manual for building the AAPS. Strict adherence to the step-by-step instructions are required in order to successfully build **AAPS**.  Please take your time.
 
-##### [Component Setup](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
+##### [Component Setup](Configuration/BG-Source.md)
 
 This explains how to properly integrate each of the various different separate component parts into **AAPS**, as well as how to set them up to work as seamlessly as possible together. All components are listed under the separate sections: CGM/FGM, xDrip Settings, Pumps, Phones, Nightscout setup, and Smartwatches. The sensor (BG) values and control of the insulin pump are particularly important information to understand.
 
@@ -117,11 +117,11 @@ This explains how to set and configure your ‘Profile’, ‘Insulin’, ‘BG 
 
 This section provides a breakdown of the features provided by AAPS.
 
-##### [General Hints](https://androidaps.readthedocs.io/en/latest/Usage/Timezone-traveling.html)
+##### [General Hints](Usage/Timezone-traveling.md)
 
 Useful tricks on how to tackle looping issues such as time zones, and daylight saving (_i.e._ Spring Forward/ - Fall Back).
 
-##### [AAPS](https://androidaps.readthedocs.io/en/latest/Getting-Started/Screenshots.html) for Children
+##### [AAPS](Getting-Started/Screenshots.md) for Children
 
 This is designed for parents or caregivers who want to build an AAPS for their child.  It also explains the extra features necessary in order to support and safely  control your child’s AAPS remotely. 
 
@@ -133,11 +133,11 @@ This section contains links to help solve issues when building or using **AAPS**
 
 This section addresses specific questions which tend to come up when building or using **AAPS**.
 
-##### [Glossary](https://androidaps.readthedocs.io/en/latest/Getting-Started/Glossary.html)
+##### [Glossary](Getting-Started/Glossary.md)
 
 This contains a list of the acronyms (or short-term names) or defined terms developed specifically for AAP (for instance, the terms ‘ISF’ or ‘TT’ have special meanings in AAPS).
 
-##### [Where to go for help](https://androidaps.readthedocs.io/en/latest/Where-To-Go-For-Help/Background-reading.html)?
+##### [Where to go for help](Where-To-Go-For-Help/Background-reading.md)?
 
 This section is aimed to provide new users with links on resources in order to get help including accessing community support made up of both new and experienced users who can clarify questions, and resolve the usual pitfalls that come with AAPS.
 
