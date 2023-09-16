@@ -71,6 +71,8 @@ Introduction <./introduction.md>
 ```{toctree}
 :caption: Getting started
 
+Preparing <preparing.md>
+
 Safety first <./Getting-Started/Safety-first.md>
 
 What is a closed loop system <./Getting-Started/ClosedLoop.md>
