@@ -6,6 +6,8 @@ Welcome. This documentation aims to guide users on every aspect of the Do-It-You
 
 An expanded index of the documentation can be found [here](https://androidaps.readthedocs.io/en/latest/index.html), and you can also use the tabs on the left of the page to navigate through the different sections. 
 
+(preparing-safety-first)=
+
 ## Safety First
 “With great power comes great responsibility…”
 
