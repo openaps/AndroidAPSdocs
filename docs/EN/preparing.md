@@ -4,7 +4,7 @@
 
 Welcome. This documentation aims to guide users on every aspect of the Do-It-Yourself (DIY) system, Android Artificial Pancreas System (**AAPS**), which is also commonly referred to as ‘looping’.
 
-An expanded index of the documentation can be found [here](https://androidaps.readthedocs.io/en/latest/index.html), and you can also use the tabs on the left of the page to navigate through the different sections. 
+An expanded index of the documentation can be found [here](index.md), and you can also use the tabs on the left of the page to navigate through the different sections. 
 
 (preparing-safety-first)=
 
@@ -71,7 +71,7 @@ In the preliminary stages of getting started with **AAPS**, you may experience d
 
 #### Technology compatibility
 
-**AAPS** is only compatible with certain types of insulin pumps, CGMs and phones, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read the [CGM](Configuration/BG-Source.md), [pump](https://androidaps.readthedocs.io/en/latest/Getting-Started/Pump-Choices.html) and [phone](https://androidaps.readthedocs.io/en/latest/Hardware/Phoneconfig.html) sections. 
+**AAPS** is only compatible with certain types of insulin pumps, CGMs and phones, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read the [CGM](Configuration/BG-Source.md), [pump](Getting-Started/Pump-Choices.md) and [phone](Hardware/Phoneconfig.md) sections. 
 
 #### App build time and progressing to full looping
 
@@ -114,19 +114,19 @@ AAPS documentation is made up of the following Sections:
 
 This explains AAPS’ compatibility with CGMs (Continuous Glucose Monitors) and insulin pumps. It also provides a guide on the correct assembly of an AAPS system to ensure that it functions correctly in everyday life.
 
-#### [How to build and install AAPS](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Building-APK.html)
+#### [How to build and install AAPS](Installing-AndroidAPS/Building-APK.md)
 
 This section is the manual for building the AAPS. Strict adherence to the step-by-step instructions are required in order to successfully build **AAPS**.  Please take your time.
 
 #### [Component Setup]
 
-This explains how to properly integrate each of the various different separate component parts into **AAPS**, as well as how to set them up to work as seamlessly as possible together. All components are listed under the separate sections including: [CGM/FGM](Configuration/BG-Source.md), [Pumps](https://androidaps.readthedocs.io/en/latest/Getting-Started/Pump-Choices.html) and [Phones](https://androidaps.readthedocs.io/en/latest/Hardware/Phoneconfig.html) 
+This explains how to properly integrate each of the various different separate component parts into **AAPS**, as well as how to set them up to work as seamlessly as possible together. All components are listed under the separate sections including: [CGM/FGM](Configuration/BG-Source.md), [Pumps](Getting-Started/Pump-Choices.md) and [Phones](Hardware/Phoneconfig.md) 
 
-#### [Configuration](https://androidaps.readthedocs.io/en/latest/Configuration/Config-Builder.html)
+#### [Configuration](Configuration/Config-Builder.md)
 
 This explains how to set and configure your ‘Profile’, ‘Insulin’, ‘BG Source’, ‘Pump’, ‘Sensitivity Detection’, ‘APS’, ‘Loop’, ‘Treatments’.
 
-#### [AAPS Use](https://androidaps.readthedocs.io/en/latest/Getting-Started/Screenshots.html)
+#### [AAPS Use](Getting-Started/Screenshots.md)
 
 This section provides a breakdown of the features provided by AAPS, with screenshots.
 
@@ -134,15 +134,15 @@ This section provides a breakdown of the features provided by AAPS, with screens
 
 Useful tricks on how to tackle looping issues such as time zones, and daylight saving (_i.e._ Spring Forward/ - Fall Back).
 
-#### [AAPS for Children](https://androidaps.readthedocs.io/en/latest/Children/Children.html)
+#### [AAPS for Children](Children/Children.md)
 
 This is designed for parents or caregivers who want to build an AAPS for their child, or for adults who would like to have a significant other follow their data. It also explains the extra features necessary in order to support and safely control AAPS remotely. 
 
-#### [Troubleshooting](https://androidaps.readthedocs.io/en/latest/Usage/troubleshooting.html)
+#### [Troubleshooting](Usage/troubleshooting.md)
 
 This section contains links to help solve issues when building or using **AAPS**.
 
-#### [Frequently asked Questions, FAQ](https://androidaps.readthedocs.io/en/latest/Getting-Started/FAQ.html)
+#### [Frequently asked Questions, FAQ](Getting-Started/FAQ.md)
 
 This section addresses specific questions which tend to come up when building or using **AAPS**.
 
@@ -154,9 +154,9 @@ This contains a list of the acronyms (or short-term names) or defined terms deve
 
 This section is aimed to provide new users with links on resources in order to get help including accessing community support made up of both new and experienced users who can clarify questions, and resolve the usual pitfalls that come with AAPS.
 
-#### [Section For Clinicians](https://androidaps.readthedocs.io/en/latest/Resources/clinician-guide-to-AndroidAPS.html)
+#### [Section For Clinicians](Resources/clinician-guide-to-AndroidAPS.md)
 
-This is a [section specificially for clinicians](https://androidaps.readthedocs.io/en/latest/Resources/clinician-guide-to-AndroidAPS.html) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](https://androidaps.readthedocs.io/en/latest/introduction.html#how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.                                                                                                                                                                                                                             
+This is a [section specificially for clinicians](Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.                                                                                                                                                                                                                             
 
 ## What are we going to build and install?
 	
@@ -209,7 +209,7 @@ Once you are fully operational on **AAPS**, you will need to fine tune your sett
 
 ### Medical considerations
 
-In addition to the medical warnings in the [safety section](https://androidaps.readthedocs.io/en/latest/preparing.html#safety) there are also different parameters, depending on which insulin you are using in the pump. 
+In addition to the medical warnings in the [safety section](preparing-safety-frist) there are also different parameters, depending on which insulin you are using in the pump. 
 
 #### Insulin choice
 
