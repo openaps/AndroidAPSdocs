@@ -209,6 +209,7 @@ Use original supplies such as inserters, cannulas and insulin containers approve
 
 Do not take SGLT-2 inhibitors (gliflozins) when using **AAPS** as they incalculably lower blood sugar levels. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](preparing-safety-first).
 
+(introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)=
 ## How can I approach discussing AAPS with my clinical team?
 
 Users are encouraged to speak with their clinicians about their intention to use **AAPS**. Please do not be afraid to have an honest conversation with your diabetes team if you intend to use **AAPS** (or any other DIY loop, for that matter). Transparency and trust between patient and doctor is paramount. 
