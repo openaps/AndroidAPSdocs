@@ -4,7 +4,7 @@
 
 Welcome. This documentation aims to guide users on every aspect of the Do-It-Yourself (DIY) system, Android Artificial Pancreas System (**AAPS**), which is also commonly referred to as ‘looping’.
 
-An expanded index of the documentation can be found [here](index.md), and you can also use the tabs on the left of the page to navigate through the different sections. The [glossary](Glossary.md) explains terms that you may not be familiar with. 
+An expanded index of the documentation can be found [here](index.md), and you can also use the tabs on the left of the page to navigate through the different sections. The [glossary](Getting-Started/Glossary.md) explains terms that you may not be familiar with. 
 
 (preparing-safety-first)=
 
