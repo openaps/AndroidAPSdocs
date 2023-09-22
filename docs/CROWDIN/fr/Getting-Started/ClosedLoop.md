@@ -26,7 +26,7 @@ Tout comme le pilote automatique dépend des valeurs du capteur ainsi que des sp
 
 ### AndroidAPS (AAPS)
 
-AAPS est décrit en détail dans [cette documentation](./WhatisAndroidAPS.html). Il utilise un Smartphone Android pour le calcul et le contrôle de votre pompe à insuline. Il est en étroite collaboration avec OpenAPS (par ex. ils partagent les algorithmes).
+AAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). Il utilise un Smartphone Android pour le calcul et le contrôle de votre pompe à insuline. Il est en étroite collaboration avec OpenAPS (par ex. ils partagent les algorithmes).
 
 Les [pompes](../Hardware/pumps.md) compatibles sont :
 
