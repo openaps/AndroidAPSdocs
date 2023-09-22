@@ -1,14 +1,14 @@
-# Ecrane AndroidAPS
+# AAPS screens
 
 ## Ecranul de pornire
 
 ![Homescreen V2.7](../images/Home2020_Homescreen.png)
 
-Acesta este primul ecran pe care îl veți descoperi când deschideți AndroidAPS și conține majoritatea informațiilor de care veți avea nevoie zi de zi.
+This is the first screen you will come across when you open AAPS and it contains most of the information that you will need day to day.
 
 ### Secțiunea A - Pagini
 
-* Navigaţi între diferitele module AndroidAPS.
+* Navigate between the various AAPS modules.
 * Alternativ, puteţi schimba ecranele glisând în stânga sau în dreapta.
 * Displayed tabs can be selected in [config builder](Config-Builder-tab-or-hamburger-menu).
 
@@ -347,7 +347,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 #### Eating reminder
 
-* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
+* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AAPS
    
    ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
 
@@ -382,7 +382,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
 
-* If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. 
+* If you see the warning above after using bolus wizard, AAPS has detected that the calculated COB value maybe wrong.
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
 * For details see the hints on [COB calculation page](COB-calculation-detection-of-wrong-cob-values).
 
@@ -459,7 +459,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 * The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
 * The important thing to note is that the decay has a long tail. 
 * If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
-* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
+* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AAPS algorithm.
 
 For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
