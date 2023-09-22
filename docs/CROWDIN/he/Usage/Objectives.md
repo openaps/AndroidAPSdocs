@@ -1,6 +1,6 @@
 # משימות
 
-ל-AndroidAPS מספר משימות שנועדו ללמד אתכם את ההגדרות ואת היכולות של לופ, באופן בטיחותי.  המשימות נועדו להבטיח שהגדרתם כראוי את כל מה שתואר בפרקים הקודמים ושאתם מבינים מה המערכת עושה ולמה, כדי שתוכלו לבטוח בה.
+AAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping.  המשימות נועדו להבטיח שהגדרתם כראוי את כל מה שתואר בפרקים הקודמים ושאתם מבינים מה המערכת עושה ולמה, כדי שתוכלו לבטוח בה.
 
 If you are **upgrading phones** then you can [export your settings](../Usage/ExportImportSettings.md) to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to [backup your settings](../Usage/ExportImportSettings.html) frequently just in case.
 
@@ -9,16 +9,16 @@ If you want to go back in objectives see [explanation below](Objectives-go-back-
 ## משימה 1: הגדרת ויזואליזציה, ניטור, ניתוח המינון הבזאלי והיחסים
 
 - Select the right blood glucose source for your setup.  See [BG Source](../Configuration/BG-Source.md) for more information.
-- Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.
-- If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
+- Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AAPS driver for looping) to ensure your pump status can communicate with AAPS.
+- If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AAPS.
 - Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure Nightscout can receive and display this data.
 - Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see [NSClient settings in Preferences](Preferences-nsclient).
 
-*You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
+*You may need to wait for the next blood glucose reading to arrive before AAPS will recognise it.*
 
-## משימה 2: למדו כיצד לשלוט בממשק AndoridAPS
+## Objective 2: Learn how to control AAPS
 
-- Perform several actions in AndroidAPS as described in this objective.
+- Perform several actions in AAPS as described in this objective.
 
 - Click on the orange text "Not completed yet" to access the to-dos.
 
@@ -31,7 +31,7 @@ If you want to go back in objectives see [explanation below](Objectives-go-back-
 (Objectives-objective-3-prove-your-knowledge)=
 ## משימה 3: הוכיחו את הידע שלכם
 
-- Pass a multiple-choice exam testing your AndroidAPS knowledge.
+- Pass a multiple-choice exam testing your AAPS knowledge.
 
 - Click on the orange text "Not completed yet" to access the page with the question and answering options.
 
@@ -51,7 +51,7 @@ If you want to go back in objectives see [explanation below](Objectives-go-back-
 
 - Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
 - Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  וודאו ששינוי המינון נרשם ב-AndroidAPS וגם ב-Nightscout.
+- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AAPS that you have accepted them.  Ensure this data shows in AAPS and Nightscout.
 - Enable [temp targets](../Usage/temptarget.md) if necessary. הפעילו ערך מטרה זמני היפו כדי למנוע מהמערכת לתקן ביתר עליות ברמת הסוכר בעת יציאה מהיפוגליקמיה.
 
 ### צמצום מספר התראות הלולאה הפתוחה
@@ -70,7 +70,7 @@ If you want to go back in objectives see [explanation below](Objectives-go-back-
 
 ## משימה 5: העמקת הבנת הלולאה הפתוחה, לרבות המינונים הבזאליים הזמניים וההמלצות
 
-- התחילו לנסות להבין את המחשבה שמאחורי המלצת המינון הבזאלי הזמני ע"י קריאת [לוגיקת קביעת מינון בזאלי](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), את [עקום התחזית במסך הבית](Screenshots-prediction-lines) או בנייטסקאוט ואת סיכום הפלטים של החישובים המופיעים בלשונית OpenAPS.
+- Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AAPS homescreen](Screenshots-prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
 
 רצוי שתקבעו ערכי מטרה גבוהים מהרגיל עד אשר תבטחו בהגדרות ובחישובי הלופ.  המערכת מאפשרת
 
@@ -103,7 +103,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 ### הלולאה הסגורה שבמשימה 6 לא תתקן ערכי סוכר גבוהים כי היא מוגבלת להפסקת הזרקת אינסולין כתיקון לסוכר נמוך. עליכם לתקן סוכר גבוה ידנית בעצמכם!
 
-- Prerequisite: You need a good profile (basal, ISF, IC) already working in AndroidAPS to start with Loop in Low Glucose Suspend mode. Otherwise you can run in a hypo which you have to manually correct. This will help you a lot to avoid having to treat a low glucose over a period of 5 days. **If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios and do NOT start objective 6 at this time.**
+- Prerequisite: You need a good profile (basal, ISF, IC) already working in AAPS to start with Loop in Low Glucose Suspend mode. Otherwise you can run in a hypo which you have to manually correct. This will help you a lot to avoid having to treat a low glucose over a period of 5 days. **If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios and do NOT start objective 6 at this time.**
 - You don't have to change your settings now. During objective 6, the maxIOB setting is internally set to zero automatically. **This override will be reversed when moving to objective 7.**
 - The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you. If blood glucose is rising then it will only increase basal if the basal IOB is negative from a previous Low Glucose Suspend. Otherwise basal rates will remain the same as your selected profile. **That means that you have to manually handle high values with insulin corrections.**
 - If your basal IOB is negative (see screenshot below) a TBR > 100% can be issued also in objective 6.
@@ -136,9 +136,9 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 ## משימה 8: התאמת המינון בזאלי והיחסים במקרה הצורך ולאחר מכן הפעלת Autosens
 
 - תוכלו להשתמש ב-[autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) באופן חד פעמי לבדיקת השינוי במינון הבזאלי או שתעשו בדיקת בזאלי מסורתית.
-- * הפעילו [autosens](../Usage/Open-APS-features.md) במשך 7 ימים וצפו בהתנהגות עקום הרגישות הלבן בגרף במסך הבית (גרף משני) כתוצאה משינויים הורמונליים, פעילות גופנית וכו'.
+- Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AAPS is adjusting the basals and/or targets accordingly.
 
-*אל תשכחו לרשום את עצמכם* [בטופס הזה](https://bit.ly/nowlooping) *לרישום סוג הלופ שלכם כ-AndroidAPS אם טרם עשיתם זאת.*
+*Don’t forget to record your looping in* [this form](https://bit.ly/nowlooping) *logging AAPS as your type of DIY loop software, if you have not already done so.*
 
 (Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
 ## משימה 9: אפשרו פונקציות oref1 כגון סופר מיקרובולוס (SMB), בשעות היום
@@ -153,6 +153,11 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 - You have to start objective 10 to be able to use [Automation](../Usage/Automation.md).
 - Make sure you have completed all objectives including exam [Objectives-objective-3-prove-your-knowledge](Objectives#objective-3-prove-your-knowledge).
 - סיום משימות קודמות לא ישפיע על משימות שאותן כבר השלמתם. המשימות שכבר הושלמו יישמרו כך!
+
+(Objectives-objective-11-DynamicISF)=
+## Objective 11: Additional Features such as DynamicISF
+
+- You have to start objective 11 to be able to use [DynamicISF](../Usage/Open-APS-features.md)
 
 (Objectives-go-back-in-objectives)=
 ## חזרה על משימות
