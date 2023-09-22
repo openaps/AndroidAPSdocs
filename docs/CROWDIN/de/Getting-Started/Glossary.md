@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>"Android Artifical Pancreas System" ist die Bezeichnung der Android app. APS steht dabei frei übersetzt für "künstliche Bauspeicheldrüse".</td>
+ <td>AAPS is the name of the Android app - AAPS ist the abbrevation - APS is a abrevation used for artificial pancreas system</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -29,7 +29,7 @@
   </td>
 <tr>
  <td><strong>Android Auto</strong></td>
- <td>Android Auto (AA) ist eine von Google entwickelte Funktion, die Android-Apps auf dem Infotainmentsystem eines Fahrzeugs verfügbar macht. Mit Android Auto kann AAPS Benachrichtigungen auf das Fahrzeugdisplay schicken.</td>
+ <td>Android Auto (AA) ist eine von Google entwickelte Funktion, die Android-Apps auf dem Infotainmentsystem eines Fahrzeugs verfügbar macht. Through Android Auto AAPS can send messages to your compatible and configured infotainment system.</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Android-auto.html">Wiki - Android Auto</a><br><a href="https://www.android.com/intl/en_en/auto/">Google Android Auto</a></td>
 </tr>
@@ -96,7 +96,7 @@
 </tr>
 <tr>
  <td><strong>CAGE</strong></td>
- <td>cannula age (Kanülenalter) - wird auf dem AAPS Startbildschirm und in Nightscout angezeigt, wenn der Katheterwechsel im Reiter/Menue Aktionen eingegeben wurde</td>
+ <td>cannula age - displayed on the homescreen of AAPS and in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -150,7 +150,7 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>'git' (in unserem Kontext) ist ein Tool, um den AAPS Quellcode, der für das Bauen der AAPS-App (APK-Datei) benötigt wird, aus 'Github' herunterzuladen. Es ist ein Versionskontrollsystem und verfolgt Änderungen in Dateien. Es hilft besonders, wenn Teams an den gleichen Dateien arbeiten wollen.<br>-> bei APK Updates erforderlich</td>
+ <td>git in our context here is the tool to mainly download the AAPS sources from Github for the build process. Es ist ein Versionskontrollsystem und verfolgt Änderungen in Dateien. Es hilft besonders, wenn Teams an den gleichen Dateien arbeiten wollen.<br>-> bei APK Updates erforderlich</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - Update auf neue Version...</a></td>
 </tr>
@@ -228,7 +228,7 @@
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
- <td>Open Source Projekt zur Anzeige und Berichte zu den CGM-Daten. Es ist der zentrale Datenknotenpunkt für alle Diabetes-Daten. Hier speichert AAPS die Daten. Es wird genutzt: Z.B. von Eltern, die dem Diabetesmanagement ihrer Kinder folgen wollen, oder zum Erstellen von Berichten auf Basis der historischen Daten, um sich einen aktuellen Überblick über die Diabetes-Eckdaten (erwarteter HbA1c, Time in Range) zu verschaffen oder um Datenmuster zu erkennen etc..</td>
+ <td>Open Source Projekt zur Anzeige und Berichte zu den CGM-Daten. Es ist der zentrale Datenknotenpunkt für alle Diabetes-Daten. It is where AAPS is storing the data. Es wird genutzt: Z.B. von Eltern, die dem Diabetesmanagement ihrer Kinder folgen wollen, oder zum Erstellen von Berichten auf Basis der historischen Daten, um sich einen aktuellen Überblick über die Diabetes-Eckdaten (erwarteter HbA1c, Time in Range) zu verschaffen oder um Datenmuster zu erkennen etc..</td>
  <td>Nightscout Reporter</td>
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>
@@ -276,7 +276,7 @@
 </tr>
 <tr>
  <td><strong>PH</strong></td>
- <td>Pumpenhistorie - Übersicht über die erfolgten Behandlungen. Aufruf über 3-Punkt-Menue > Historie auf der rechten Seite des AAPS-Startbildschirms</td>
+ <td>pump history - you access it in the treatments which are located on the 3 dot menu on the right side of AAPS main screen</td>
  <td>&nbsp;</td>
  <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
 </tr>
@@ -288,7 +288,7 @@
 </tr>
 <tr>
  <td><strong>Profile</strong></td>
- <td>Zusammenfassung aller grundlegender Therapieeinstellungen (Basalrate, Insulinwirkdauer, Korrekturfaktoren, KH-Faktoren etc.). <br>AndroidAPS v3 nutzt nur lokale Profile. Nightscout-Profile können jedoch zu AAPS synchronisiert/kopiert werden</td>
+ <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>AAPS v3 only supports local profiles but Nightscout profiles can be copied (synchronized) to AAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - Profil</a></td>
 </tr>
@@ -312,7 +312,7 @@
 </tr>
 <tr>
  <td><strong>SAGE</strong></td>
- <td>sensor age (Sensoralter) - Wird auf dem AAPS-Startbildschirm und in Nightscout angezeigt, wenn das Setzdatum über den Reiter/Menue 'Aktionen' eingegeben wurde</td>
+ <td>sensor age - displayed on the homescreen of AAPS and in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
@@ -378,13 +378,13 @@
 </tr>
 <tr>
  <td><strong>Virtual pump</strong></td>
- <td>Möglichkeit, AAPS Funktionen auszuprobieren oder für um mit Pumpen, für die noch kein Treiber zur Verfügung steht, manuell loopen zu können</td>
+ <td>option to try AAPS functions or for PWD using a pump model with no AAPS driver for looping</td>
  <td>Open Loop</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>Smartphone-Hintergrundbild</strong></td>
- <td>AndroidAPS-Hintergrundbild</td>
+ <td>AAPS background image</td>
  <td></td>
  <td><a href="../Getting-Started/Phones.html#phone-background">siehe Seite Smartphones</a></td>
 </tr>
