@@ -1,10 +1,10 @@
-# Kas yra uždaro ciklo sistema su AndroidAPS?
+# What is a closed loop system with AAPS?
 
-AndroidAPS yra programa, veikianti kaip dirbtinė kasos sistema (DKS) Android išmaniajame telefone. Kas yra dirbtinės kasos sistema? Tai programa, kuria siekiama padaryti tai, ką daro funkcionuojanti kasa: automatiškai siekia išlaikyti sveiką gliukozės kiekį kraujyje.
+AAPS is an app that acts as an artificial pancreas system (APS) on an Android smartphone. Kas yra dirbtinės kasos sistema? Tai programa, kuria siekiama padaryti tai, ką daro funkcionuojanti kasa: automatiškai siekia išlaikyti sveiką gliukozės kiekį kraujyje.
 
-APS negali atlikti tokio pat darbo kaip biologinė kasa, tačiau tai gali palengvinti I tipo cukrinio diabeto gydymą standartine įranga ir paprasta bei saugia programine įranga. Šie prietaisai apima nepertraukiamą gliukozės monitorių (CGM), skirtą AndroidAPS informuoti apie jūsų gliukozės kiekį kraujyje, ir insulino pompą, valdomą AndroidAPS, kad būtų tiekiamos atitinkamos insulino dozės. Programa susisiekia su šiais įrenginiais Bluetooth ryšiu. Dozė apskaičiuojama naudojant algoritmą ar taisyklių rinkinį, sukurtą kitai dirbtinei kasai, vadinamai OpenAPS. OpenAPS turi tūkstančius vartotojų, kurie sukaupė milijonus valandų naudojimo.
+APS negali atlikti tokio pat darbo kaip biologinė kasa, tačiau tai gali palengvinti I tipo cukrinio diabeto gydymą standartine įranga ir paprasta bei saugia programine įranga. Those devices include a continuous glucose monitor (CGM) to tell AAPS about your blood sugar levels and an insulin pump which AAPS controls to deliver appropriate doses of insulin. Programa susisiekia su šiais įrenginiais Bluetooth ryšiu. Dozė apskaičiuojama naudojant algoritmą ar taisyklių rinkinį, sukurtą kitai dirbtinei kasai, vadinamai OpenAPS. OpenAPS turi tūkstančius vartotojų, kurie sukaupė milijonus valandų naudojimo.
 
-Atsargiai: nei vienos šalies medicininis reguliatorius nereglamentuoja AndroidAPS. AndroidAPS iš esmės naudojama savo paties medicininiam eksperimentui atlikti. Sistemai sukurti reikia ryžto ir techninių žinių. Jei pradžioje vis dar trūksta techninių žinių, pabaigoje jas turėsite. Visą jums reikalingą informaciją galite rasti šiame ir kituose interneto puslapiuose. Arba galite užduoti savo klausimus Facebook grupėse ar kituose forumuose patyrusiems vartotojams. Daugybė skirtingų diabetu sergančių žmonių sėkmingai sukūrė AndroidAPS ir dabar saugiai naudojasi. Bet tai svarbu kiekvienam vartotojui:
+A note of caution: AAPS is not regulated by any medical authority in any country. Using AAPS is essentially carrying out a medical experiment on yourself. Sistemai sukurti reikia ryžto ir techninių žinių. Jei pradžioje vis dar trūksta techninių žinių, pabaigoje jas turėsite. Visą jums reikalingą informaciją galite rasti šiame ir kituose interneto puslapiuose. Arba galite užduoti savo klausimus Facebook grupėse ar kituose forumuose patyrusiems vartotojams. Many people have successfully built AAPS and are now using it entirely safely, but it is essential that every user:
 
 - Builds the system themselves so that they thoroughly understand how it works
 - Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
@@ -13,7 +13,7 @@ Atsargiai: nei vienos šalies medicininis reguliatorius nereglamentuoja AndroidA
 ```{note}
 **Disclaimer and Warning**
 
-- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout neatitinka jokių privatumo reikalavimų sveikatos priežiūros srityje. Savo rizika naudokite Nightscout ir AndroidAPS ir nenaudokite jų priimdami medicininius sprendimus.
+- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout neatitinka jokių privatumo reikalavimų sveikatos priežiūros srityje. Use Nightscout and AAPS at your own risk, and do not use the information or code to make medical decisions.
 - Use of code from github.com is without warranty or formal support of any kind. Norėdami gauti daugiau informacijos, perskaitykite šios saugyklos LICENCIJĄ.
 - All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Jie naudojami tik informaciniais tikslais ir nereiškia, kad AAPS priklauso jiems ir kad jie yra palaikomi.
 
@@ -22,7 +22,7 @@ Please note - this project has no association with and is not endorsed by: [SOOI
 
 Jei esate pasirengęs priimti šį iššūkį, skaitykite toliau.
 
-## Pagrindiniai AndroidAPS tikslai
+## Primary goals behind AAPS
 
 - An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (<https://openaps.org/reference-design/>)
 - An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
