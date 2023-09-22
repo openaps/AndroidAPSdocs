@@ -21,7 +21,7 @@ The first three are mostly appropriate for carers/parents, but smartwatches are 
 5.	Examples for school care plans for children of different ages can be found in the [“files section”](https://www.facebook.com/groups/AndroidAPSUsers/files/) of the **AAPS** Facebook page. 
 6.	What is your emergency plan for when remote control does not work (_i.e._ network problems or lost bluetooth connection)?  Always consider what will happen with **AAPS** if you suddenly can’t send a new command. **AAPS** overwrites the pump basal, ISF and ICR with the current profile values. Only use temporary profile switches (_i.e._ with a set time duration) if switching to a stronger insulin profile, in case your remote connection is disrupted. Then the pump will revert to the original profile when the time expires.
 
-## SMS Commands
+## 1) SMS Commands
 
 You can control **AAPS** remotely via text (SMS) message through a feature known as **SMS Commands**. SMS commands can be sent to **AAPS**  by _any_ type of phone (iPhone/Android). 
 
@@ -372,7 +372,7 @@ If you are having issues sending or receiving SMS commands with the Android Mess
 ●	Activate “Only send SMS and MMS messages”
 
 
-### 2) **NSClient**
+## 2) **NSClient**
 
 If you have a caregiver/parent Android phone you can directly download and install the [**NSClient**](https://github.com/nightscout/AndroidAPS/releases/) app. **NSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver tabs that will remotely action commands in **AAPS**: 
 
@@ -508,5 +508,5 @@ Although this could potentially be useful for deleting announced (but not boluse
 
 
 ## **Smartwatches** 
-
-
+This section is currently being updated, the scheduled release is the weekend of 30th Sept/1st Oct 2023....watch this space!
+The existing section on smartwatches can be found in [Smartwatches](docs/EN/Hardware/Smartwatch.md) 
