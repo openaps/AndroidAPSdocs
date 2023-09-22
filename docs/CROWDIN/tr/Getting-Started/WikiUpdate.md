@@ -4,7 +4,7 @@
 
 - [KŞ kalite uyarı işareti](Screenshots-bg-warning-sign) @tanja
 - [Medtronic pompa güncellemesi](../Configuration/MedtronicPump.md) @dottedfingertips
-- [AndroidAPS 3.0 güncellemesinden sonra gerekli kontroller](../Installing-AndroidAPS/update3_0.md) @tanja
+- [Necessary checks after update to AAPS 3.0](../Installing-AndroidAPS/update3_0.md) @tanja
 - [Omnipod Dash](../Configuration/OmnipodDASH.md) @Freloner @ robertrub @vanelsberg
 - AAPS 3.0 için dokümanları güncelleyin (kısmen) @xJoe
 - [AAPS 3.0 için Wear OS](../Configuration/Watchfaces.md) @peterleimbach
@@ -52,11 +52,11 @@
 
 ## Ocak 2021
 
-- [Eylem sekmesi](Screenshots-action-tab) - 'AndroidAPS ekranları' sayfasında daha fazla ayrıntı
+- [Action tab](Screenshots-action-tab) - more details on page 'AAPS screens'
 - Dexcom G6 ile [Kendi Dexcom Uygulamanızı Oluşturun](DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 - Libre akıllı okuyucu [pil seviyesi](Screenshots-sensor-level-battery)
 - [Görevler](Objectives-objective-3-prove-your-knowledge) - yeni sorular
-- Diğer [yeni AndroidAPS 2.8.0 fonksiyonları](Releasenotes-version-2-8-0)
+- Other [new AAPS 2.8.0 functions](Releasenotes-version-2-8-0)
 
 ## Aralık 2020
 
@@ -98,7 +98,7 @@
 ## Mart 2020
 
 - [Android Studio 3.6.1 ile apk oluşturun](../Installing-AndroidAPS/Building-APK.md)
-- [Donanım sürümü v3 ile DanaRS](../Configuration/DanaRS-Insulin-Pump.md) **şu anda AndroidAPS ile kullanılamaz!**
+- [DanaRS with firmware v3](../Configuration/DanaRS-Insulin-Pump.md) **cannot currently be used with AAPS!**
 - [Yayma bolus ve açık döngüye geçiş](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 - [Apk'yı Android Studio 3.6.1 ile güncelleyin](../Installing-AndroidAPS/Update-to-new-version.md)
 
