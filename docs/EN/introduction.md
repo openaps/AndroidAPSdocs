@@ -17,11 +17,7 @@ An artificial pancreas can be thought of as an [“autopilot for your diabetes�
 What does that mean?
 In an aircraft, an autopilot does not do the complete job of the human pilot, the pilot cannot sleep through the entire flight. The autopilot aids the work of the pilot. It relieves them of the burden of permanently monitoring the aircraft, allowing the pilot to concentrate on wider monitoring from time to time. The autopilot receives signals from various sensors, a computer evaluates them together with the pilot’s specifications and then makes the necessary adjustments, alerting the pilot to any concerns. The pilot no longer has to worry about constantly making decisions.
 
-
-```{image} ../images/autopilot.png
-:alt: AAPS is like an autopilot
-```
-
+![image](./images/autopilot.png)
 
 ## What does hybrid closed loop mean? 
 
