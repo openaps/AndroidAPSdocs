@@ -32,19 +32,9 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 * * *
 
-### Medtrum A6/P6/C6 ([Homepage](https://www.medtrum.com/product/nanopump.html))
-
-**Stav smyčky:** Je kandidátem na smyčku. Company has its own limited half-Loop system running (A6). Controllable via iPhone App. No Android app available at the moment.
-
-**Hardwarové požadavky pro AAPS:** Zřejmě žádné. Zdá se, že podporuje BT.
-
-**Comment:** Some investigation has started to see if this pump can be supported in AAPS very easily. You can find more information on our discord in channel "medtrum".
-
-* * *
-
 ### Equil (pump from Aidex/GlucoRx/MicroTechMD) ([Homepage](https://www.glucorx.ie/glucorx-equil/))
 
-**Stav smyčky:** Je kandidátem na smyčku.
+**Loop status:** Is a Loop candidate.
 
 **Hardware requirement for AAPS:** None. Zdá se, že podporuje BT.
 
@@ -54,7 +44,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 ### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Stav smyčky:** Je kandidátem na smyčku.
+**Loop status:** Is a Loop candidate.
 
 **Hardware requirement for AAPS:** None. Zdá se, že podporuje BT.
 
