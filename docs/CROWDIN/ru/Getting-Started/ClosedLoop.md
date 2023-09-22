@@ -26,7 +26,7 @@
 
 ### AndroidAPS (AAPS)
 
-AndroidAPS подробно описан [в этой документации](./WhatisAndroidAPS.html). Он использует смартфон Android для вычислений и контроля инсулиновой помпы. Для него используются те же алгоритмы, что и для системы OpenAPS.
+AAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). Он использует смартфон Android для вычислений и контроля инсулиновой помпы. Для него используются те же алгоритмы, что и для системы OpenAPS.
 
 Совместимые [инсулиновые помпы](../Hardware/pumps.md):
 
