@@ -1,14 +1,14 @@
-# Οθόνες AndroidAPS
+# AAPS screens
 
 ## Αρχική οθόνη
 
-![Homescreen V2.7](../images/Home2020_Homescreen.png)
+![Αρχική οθόνη V2.7](../images/Home2020_Homescreen.png)
 
-Αυτή είναι η πρώτη οθόνη που θα συναντήσετε όταν ανοίγετε το AndroidAPS και περιέχει τις περισσότερες από τις πληροφορίες που θα χρειαστείτε καθημερινά.
+This is the first screen you will come across when you open AAPS and it contains most of the information that you will need day to day.
 
-### Section A - Tabs
+### Ενότητα Α- Καρτέλες
 
-* Navigate between the various AndroidAPS modules.
+* Navigate between the various AAPS modules.
 * Alternatively you can change screens by swiping left or right.
 * Displayed tabs can be selected in [config builder](Config-Builder-tab-or-hamburger-menu).
 
@@ -66,12 +66,12 @@
 * A new icon shows loop status:
    
    * green circle = loop running
-   * green circle with dotted line = [low glucose suspend (LGS)](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
-   * red circled = loop disabled (not working permanently)
-   * yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-   * grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-   * Orange circle = super bolus running - remaining time is shown below icon
-   * blue circle with dotted line = open loop
+   * πράσινος κύκλος με διακεκομμένη γραμμή = [ αναστολή χαμηλής γλυκόζης (LGS)](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * κόκκινος κύκλος = κύκλωμα απενεργοποιημένο (δε λειτουργεί μόνιμα)
+   * κίτρινος κύκλος = κύκλωμα σε αναστολή (προσωρινά σε παύση, αλλά θα δοθεί βασική ινσουλίνη) - ο χρόνος που υπολείπεται φαίνεται κάτω από το εικονίδιο
+   * γκρι κύκλος = αντλία αποσυνδεδεμένη (προσωρινά δεν υπάρχει καθόλου δόση ινσουλίνης) - ο χρόνος που απομένει φαίνεται κάτω από το εικονίδιο
+   * Πορτοκαλί κύκλος = super bolus ενεργό - ο χρόνος που απομένει εμφανίζεται κάτω από το εικονίδιο
+   * μπλε κύκλος με διακεκομμένη γραμμή = ανοικτό κύκλωμα
 
 * Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
    
@@ -81,57 +81,57 @@
 
 (Screenshots-bg-warning-sign)=
 
-#### BG warning sign
+#### Προειδοποιητικό σήμα γλυκόζης αίματος
 
 Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
 
 *Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
 
-To remove it immediately you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
+Για να το αφαιρέσετε αμέσως, πρέπει να διαγράψετε χειροκίνητα μερικές καταχωρήσεις από την καρτέλα Dexcom/xDrip+.
 
-However, when there are a lot of duplicates, it might be easier to
+Ωστόσο, όταν υπάρχουν πολλές διπλές καταχωρήσεις, μπορεί να είναι ευκολότερο να
 
-* [backup your settings](../Usage/ExportImportSettings.md),
-* reset your database in the maintenance menu and
-* [import your settings](../Usage/ExportImportSettings.md) again
+* [κρατήσετε αντίγραφο ασφαλείας των ρυθμίσεων σας](../Usage/ExportImportSettings.md),
+* να επαναφέρετε τη βάση δεδομένων στο μενού συντήρησης και
+* [να εισάγετε τις ρυθμίσεις σας](../Usage/ExportImportSettings.md) ξανά
 
-##### Red warning sign: Duplicate BG data
+##### Κόκκινο προειδοποιητικό σημάδι: Διπλά δεδομένα γλυκόζης αίματος
 
-The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
+Το κόκκινο προειδοποιητικό σήμα σας προειδοποιεί να ενεργήσετε άμεσα: Λαμβάνετε διπλά δεδομένα γλυκόζης αίματος, τα οποία εμποδίζουν το κύκλωμα να δουλέψει σωστά. Ως εκ τούτου, το κύκλωμά σας θα απενεργοποιηθεί μέχρι να επιλυθεί.
 
 ![Red BG warning](../images/bg_warn_red.png)
 
-You need to find out why you get duplicate BGs:
+Θα πρέπει να βρείτε γιατί παίρνετε διπλά δεδομένα γλυκόζης αίματος:
 
-* Is Dexcom bridge enabled on your NS site? Disable the bridge by going to heroku (or any other hosting provider), edit the "enable" variable and remove the "bridge" part there. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Is Dexcom bridge enabled on your NS site? Disable the bridge by going to heroku (or any other hosting provider), edit the "enable" variable and remove the "bridge" part there. (Για το heroku [λεπτομέρειες μπορείτε να βρείτε εδώ](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
 * Do multiple sources upload your BG to NS? If you use the BYODA app, enable the upload in AAPS but do not enable it in xDrip+, if you use that.
 * Do you have any followers that might receive your BG but do also upload it again to your NS site?
 * Last resort: In AAPS, go to your NS Client settings, select the sync settings and disable the "Accept CGM data from NS" option.
 
-##### Yellow warning sign
+##### Κίτρινο προειδοποιητικό σημάδι
 
 * The yellow warning signal is indicating that your BG arrived in irregular time intervals or some BGs are missing.
    
    ![Yellow BG warning](../images/bg_warn_yellow.png)
 
-* Usually you do not have to take any action. The closed loop will continue to work!
+* Συνήθως δεν χρειάζεται να κάνετε κάτι. Το κλειστό κύκλωμα θα συνεχίσει να λειτουργεί!
 
 * As a sensor change is interupting the constant flow of BG data a yellow warning sign after sensor change is normal and nothing to worry about.
-* Special note for libre users:
+* Ειδική σημείωση για τους χρήστες libre:
    
-   * Every single libre slips a minute or two every few hours, meaning you never get a perfect flow of regular BG intervals.
+   * Όλα τα libre χάνουν ένα ή δύο λεπτά κάθε λίγες ώρες, πράγμα που σημαίνει ότι δεν έχετε ποτέ μια τέλεια ροή κανονικών χρονικών διαστημάτων γλυκόζης αίματος.
    * Also jumpy readings interrupt the continous flow.
    * Therefore the yellow warning sign will be 'always on' for libre users.
 
 ### Section D - IOB, COB, BR and AS
 
-![Section D](../images/Home2020_TBR.png)
+![Ενότητα Δ](../images/Home2020_TBR.png)
 
 * Syringe: insulin on board (IOB) - amount of active insulin inside your body
    
    * The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
    * IOB may be negative if there have recently been periods of reduced basal.
-   * Press the icon to see the split of bolus and basal insulin
+   * Πιέστε το εικονίδιο για να δείτε το διαχωρισμό της γευματικής και της βασικής ινσουλίνης
 
 * Grain: [carbs on board (COB)](../Usage/COB-calculation.md) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
 
@@ -139,13 +139,13 @@ You need to find out why you get duplicate BGs:
    * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
 * Arrows up & down: indicating actual [autosens](Open-APS-features-autosens) status (enabled or disabled) and value is shown below icon
 
-#### Carbs required
+#### Απαιτούνται υδατάνθρακες
 
-![Carbs required](../images/Home2020_CarbsRequired.png)
+![Απαιτούνται υδατάνθρακες](../images/Home2020_CarbsRequired.png)
 
-* Carbs suggestions are given when the reference design detects that it requires carbs.
-* This is when the oref algorithm thinks I can't rescue you by 0 (zero) temping and you will need carbs to fix.
-* The carb notifications are much more sophisticated than the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
+* Οι προτάσεις υδατανθράκων δίνονται όταν το πλάνο αναφοράς ανιχνεύει ότι απαιτούνται υδατάνθρακες.
+* Αυτό συμβαίνει όταν ο αλγόριθμος oref θεωρεί ότι δεν μπορεί να σας γλυτώσει με 0 (μηδέν) προσωρινό ρυθμό και θα χρειαστείτε υδατάνθρακες για να διορθωθεί η κατάσταση.
+* Οι ειδοποιήσεις υδατανθράκων είναι πολύ πιο εξελιγμένες από αυτές του υπολογιστή γεματικής δόσης. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
 * Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
 ### Section E - Status lights
@@ -192,29 +192,29 @@ You need to find out why you get duplicate BGs:
 
 * **Orange** line: [COB](../Usage/COB-calculation.md) (colour is used generally to represent COB and carbs)
    
-   Prediction line shows where your BG (not where COB itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
+   Η γραμμή πρόβλεψης δείχνει πού θα πάει η γλυκόζη σας (όχι οι ίδιοι οι Ενεργοί Υδατάνθρακες!) με βάση τις τρέχουσες ρυθμίσεις της αντλίας και υποθέτοντας ότι οι αποκλίσεις λόγω απορρόφησης υδατανθράκων παραμένουν σταθερές. Αυτή η γραμμή εμφανίζεται μόνο εάν υπάρχουν γνωστοί Ενεργοί Υδατάνθρακες.
 
-* **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
+* **Σκούρη μπλε γραμμή**: Ενεργή ινσουλίνη (το χρώμα χρησιμοποιείται γενικά για να αντιπροσωπεύει την Ενεργή Ινσουλίνη και την ινσουλίνη)
    
-   Prediction line shows what would happen under the influence of insulin only. For example if you dialled in some insulin and then didn’t eat any carbs.
+   Η γραμμή πρόβλεψης δείχνει τι θα συνέβαινε με την επίδραση μόνο της ινσουλίνης. Για παράδειγμα, αν έχετε εισάγει κάποια ινσουλίνη και στη συνέχεια δεν φάτε υδατάνθρακες.
 
-* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* **Ανοιχτή μπλε γραμμή**: μηδενικός προσωρινός ρυθμός (προβλεπόμενη γλυκόζη αίματος αν θα οριζόταν προσωρινός βασικός ρυθμός στο 0%)
    
-   Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+   Η γραμμή πρόβλεψης δείχνει πώς θα άλλαζε η πορεία της Ενεργής Ινσουλίνης αν η αντλία σταματούσε όλη την παροχή ινσουλίνης (0% προσωρινός βασικός ρυθμός).
    
-   *This line appears only when the [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *Αυτή η γραμμή εμφανίζεται μόνο όταν χρησιμοποιείται ο αλγόριθμος [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb).*
 
-* **Dark yellow** line: [UAM](Sensitivity-detection-and-COB-sensitivity-oref1) (un-announced meals)
+* **Σκούρη κίτρινη Γραμμή **: [ΜΚΓ](Sensitivity-detection-and-COB-sensitivity-oref1) (μη καταχωρημένα γεύματα)
    
    Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
    
-   *This line appears only when the [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *Αυτή η γραμμή εμφανίζεται μόνο όταν χρησιμοποιείται ο αλγόριθμος [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb).*
 
-* **Dark orange** line: aCOB (accelerated carbohydrate absorption)
+* **Σκούρη πορτοκαλί** γραμμή: εΕΥ (επιταχυνόμενη απορρόφηση υδατανθράκων)
    
-   Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/l/5m) carb absorption rate. Deprecated and of limited usefulness.
+   Παρόμοια με τους Ενεργούς Υδατάνθρακες, αλλά υποθέτοντας ένα στατικό ρυθμό απορρόφησης υδατανθράκων 10 mg/dL/5m (-0.555 mmol/l/5m). Deprecated and of limited usefulness.
    
-   *This line appears only when the older [AMA](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *Αυτή η γραμμή εμφανίζεται μόνο όταν χρησιμοποιείται ο παλιότερος αλγόριθμος [AMA](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb).*
 
 Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
 
@@ -225,7 +225,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * In times standard basal rate is given the area under the curve is shown in dark blue.
 * When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
 
-#### Activity
+#### Άσκηση
 
 * The **thin yellow** line shows the activity of Insulin. 
 * It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
@@ -250,13 +250,13 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
 * Decaying depends on your [DIA and insulin profile settings](Config-Builder-local-profile). 
 
-#### Carbs On Board
+#### Ενεργοί Υδατάνθρακες
 
 * Shows the carbs you have on board (= active, not yet decayed carbs in your body). 
 * Decaying depends on the deviations the algorithm detects. 
 * If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
 
-#### Deviations
+#### Αποκλίσεις
 
 * **GREY** bars show a deviation due to carbs. 
 * **GREEN** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](Open-APS-features-autosens).
@@ -264,12 +264,12 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * **YELLOW** bars show a deviation due to UAM.
 * **BLACK** bars show small deviations not taken into account for sensitivity
 
-#### Sensitivity
+#### Ευαισθησία
 
 * Shows the sensitivity that [Autosens](Open-APS-features-autosens) has detected. 
 * Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
 
-#### Activity
+#### Άσκηση
 
 * Shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). 
 * The value is higher for insulin closer to peak time.
@@ -297,7 +297,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * By checking the box you can automatically start your [eating soon temp target](Preferences-default-temp-targets).
 * If you do not want to bolus through pump but record insulin amount (i.e. insulin given by syringe) check the corresponding box.
 
-#### Carbs
+#### Υδατάνθρακες
 
 ![Carbs button](../images/Home2020_ButtonCarbs.png)
 
@@ -332,34 +332,34 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ## Bolus Wizard
 
-![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
+![Οδηγός Bolus](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus this is where you will normally make it from.
+Όταν θέλετε να κάνετε ένα bolus γεύματος, αυτό θα το κάνετε κανονικά από.
 
 ### Section I
 
-* BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. 
+* BG field is normally already populated with the latest reading from your CGM. Εάν δεν έχετε λειτουργικό CGM τότε θα είναι κενό. 
 * In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. 
 * The CORR field is if you want to modify the end dosage for some reason.
-* The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+* The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. Μπορείτε να βάλετε έναν αρνητικό αριθμό σε αυτό το πεδίο αν κάνετε bolusing για προηγούμενους υδατάνθρακες.
 
 (Screenshots-eating-reminder)=
 
 #### Eating reminder
 
-* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
+* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AAPS
    
    ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Section J
 
 * SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable [superbolus](Preferences-superbolus) in wizard" is set in the [preferences overview](Preferences-overview).
-* The idea is to deliver the insulin sooner and hopefully reduce spikes.
+* Η ιδέα είναι να παραδώσουμε την ινσουλίνη νωρίτερα και ελπίζουμε να μειώσουμε τις απότομες μεταβολές.
 * For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
 ### Section K
 
-* Shows the calculated bolus. 
+* Εμφανίζει το υπολογισμένο bolus. 
 * If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
 * Notes will be uploaded to Nightscout - depending on your settings for [NS client](Preferences-nsclient).
 
@@ -369,11 +369,11 @@ When you want to make a meal bolus this is where you will normally make it from.
 * You can deselect any that you do not want to include but you normally wouldn't want to.
 * For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
 
-#### Combinations of COB and IOB and what they mean
+#### Συνδυασμοί COB και IOB και τι σημαίνουν
 
 * For safety reasons IOB boxed cannot be unticked when COB box is ticked as you might run the risk of too much insulin as AAPS is not accounting for what’s already given.
 * If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
+* If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. Αυτό οδηγεί σε μια ειδοποίηση σχετικά με την «εξαφάνιση των υδατανθράκων».
 * If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
 
 (Screenshots-wrong-cob-detection)=
@@ -382,7 +382,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
 
-* If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. 
+* If you see the warning above after using bolus wizard, AAPS has detected that the calculated COB value maybe wrong.
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
 * For details see the hints on [COB calculation page](COB-calculation-detection-of-wrong-cob-values).
 
@@ -442,24 +442,24 @@ When you want to make a meal bolus this is where you will normally make it from.
 #### TDD
 
 * Total daily dose = bolus + basal per day
-* Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 
+* Μερικοί γιατροί χρησιμοποιούν - ειδικά για νέες αντλίες - μια αναλογία βασικού ρυθμού προς bolus 50:50. 
 * Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 
-* Others prefer range of 32% to 37% of TDD for TBB. 
-* Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+* Άλλοι προτιμούν το εύρος από 32% έως 37% του TDD για TBB. 
+* Όπως και οι περισσότεροι από αυτούς τους κανόνες, είναι περιορισμένης πραγματικής εγκυρότητας. Σημείωση: Ο διαβήτης σας μπορεί να διαφέρει!
 
 ![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
 
 (Screenshots-insulin-profile))=
 
-## Insulin Profile
+## Προφίλ ινσουλίνης
 
-![Insulin Profile](../images/Screenshot_insulin_profile.png)
+![Προφίλ ινσουλίνης](../images/Screenshot_insulin_profile.png)
 
 * This shows the activity profile of the insulin you have chosen in [config builder](Config-Builder-insulin). 
 * The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
 * The important thing to note is that the decay has a long tail. 
 * If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
-* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
+* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AAPS algorithm.
 
 For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
