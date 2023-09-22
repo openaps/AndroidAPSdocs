@@ -10,12 +10,12 @@
 * Aller au Menu > Paramètres > Découverte
 * Dans le menu Paramètres du téléphone, aller à Bluetooth, scanner les périphériques proches, sélectionner et entrer le numéro de série de votre DanaR et saisir votre mot de passe (le mot de passe de l’appairage est 0000). Si la DanaR n’apparaît pas en scannant, alors redémarrer le téléphone et enlever la batterie de la DanaR , replacer la et recommencer ces deux étapes.
 
-* Dans AndroidAPS, allez dans Config Builder et sélectionnez le type de DanaR, vous avez ( DanaR, DanaR coréenne ou DanaRv2).
+* In AAPS go to Config Builder and select the type of DanaR you have (DanaR, DanaR Korean, DanaRv2)
 
 * Sélectionnez le Menu en appuyant sur les 3 points en haut à droite. Sélectionnez le menu Préférences.
 * Sélectionnez le périphérique Bluetooth Dana R, puis cliquez sur votre numéro de série de DanaR.
 * Rentrer le mot de passe de la pompe et saisir votre mot de passe. (le mot de passe par défaut est 1234)
-* Si vous voulez qu'AndroidAPS autorise et utilise le débit de Basal supérieur à 200%, il faut confirmer l'autorisation des bolus étendus pour > 200%. Notez que cela signifie que vous ne pouvez pas opérer en boucle avec des traitements Cible Temporaire Haute tout en utilisant des bolus prolongés pour se nourrir.
+* If you want AAPS to allow basal rate above 200%, enable Use extended boluses for >200%. Notez que cela signifie que vous ne pouvez pas opérer en boucle avec des traitements Cible Temporaire Haute tout en utilisant des bolus prolongés pour se nourrir.
 * Dans le menu Préférences sous paramètres de pompe de DanaR, vous pouvez modifier la vitesse de bolus par défaut utilisée (12 sec par 1 Unité, 30 sec par 1 Unité ou 60 sec par 1 Unité).
 * Régler l'incrément basal sur la pompe à 0.01 U/h
 * Régler l'incrément bolus sur la pompe à 0,1 U/h
