@@ -1,6 +1,6 @@
 # Görevler
 
-AndroidAPS, güvenli döngü özellikleri ve ayarlarında size yol göstermek için tamamlanması gereken bir dizi Görevlere sahiptir.  Yukarıdaki bölümlerde ayrıntıları verilen her şeyi doğru bir şekilde yapılandırdığınızdan ve sisteminizin ne yaptığını ve neden ona güvenebileceğinizi anladığınızdan emin olurlar.
+AAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping.  Yukarıdaki bölümlerde ayrıntıları verilen her şeyi doğru bir şekilde yapılandırdığınızdan ve sisteminizin ne yaptığını ve neden ona güvenebileceğinizi anladığınızdan emin olurlar.
 
 **Telefonları yükseltiyorsanız** görevlerde ilerlemenizi sürdürmek için [ayarlarınızı dışa aktarabilirsiniz](../Usage/ExportImportSettings.md). Yalnızca hedeflerdeki ilerlemeniz değil, aynı zamanda maksimum bolus gibi güvenlik ayarlarınız da kaydedilecektir. Ayarlarınızı dışa ve içe aktarmazsanız, görevlere baştan başlamanız gerekecektir.  Her ihtimale karşı sık sık [ayarlarınızı yedeklemeniz](../Usage/ExportImportSettings.html) iyi bir fikirdir.
 
@@ -9,16 +9,16 @@ Görevlere geri dönmek istiyorsanız [aşağıdaki açıklamaya](Objectives-go-
 ## Görev 1: Görselleştirme ve izleme ayarları, bazal ve oranlarını analize etme
 
 - Kurulumunuz için doğru kan şekeri kaynağını seçin.  Daha fazla bilgi için [KŞ Kaynağı](../Configuration/BG-Source.md)na bakın.
-- Pompa durumunuzun AndroidAPS ile iletişim kurabilmesini sağlamak için Konfigürasyon Ayarlarında doğru Pompayı seçin (döngü için AndroidAPS sürücüsü olmayan bir pompa modeli kullanıyorsanız Sanal Pompa'yı seçin).
-- DanaR pompa kullanıyorsanız, pompa ile AndroidAPS arasındaki bağlantıyı sağlamak için [DanaR İnsülin Pompası](../Configuration/DanaR-Insulin-Pump.md) talimatlarını uyguladığınızdan emin olun.
+- Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AAPS driver for looping) to ensure your pump status can communicate with AAPS.
+- If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AAPS.
 - Nightscout'un bu verileri alabilmesi ve görüntüleyebilmesi için [Nightscout](../Installing-AndroidAPS/Nightscout.md) sayfasındaki talimatları izleyin.
 - NSClientteki URL'nin sonunda **/api/v1/ OLMADAN** yazılması gerektiğini unutmayın - [Tercihler'deki NSClient ayarları](Preferences-nsclient)'na bakın.
 
-*AndroidAPS'in tanıması için bir sonraki kan şekeri ölçümünün gelmesini beklemeniz gerekebilir.*
+*You may need to wait for the next blood glucose reading to arrive before AAPS will recognise it.*
 
-## Görev 2: AndroidAPS'yi nasıl kontrol edeceğinizi öğrenin
+## Objective 2: Learn how to control AAPS
 
-- Bu görevde açıklandığı gibi AndroidAPS'de çeşitli eylemler gerçekleştirin.
+- Perform several actions in AAPS as described in this objective.
 
 - Tek tek görevlere ulaşmak için turuncu renkli "Henüz tamamlanmadı" metnine tıklayın.
 
@@ -31,7 +31,7 @@ Görevlere geri dönmek istiyorsanız [aşağıdaki açıklamaya](Objectives-go-
 (Objectives-objective-3-prove-your-knowledge)=
 ## Görev 3: Bilginizi kanıtlayın
 
-- Çeşitli AndroidAPS ve kapalı döngü konularında çok seçmeli soruları yanıtlayın.
+- Pass a multiple-choice exam testing your AAPS knowledge.
 
 - Soru ve cevap seçeneklerinin bulunduğu sayfaya erişmek için turuncu renkli "Henüz tamamlanmadı" yazısına tıklayın.
 
@@ -51,7 +51,7 @@ Görevlere geri dönmek istiyorsanız [aşağıdaki açıklamaya](Objectives-go-
 
 - Tercihler'den veya ana ekranın sol üst köşesindeki Döngü düğmesini basılı tutarak Döngü Aç'ı seçin.
 - Ayarlarınız için [Tercihler](../Configuration/Preferences.md) üzerinde çalışın.
-- 7 günlük bir süre boyunca geçici bazal oran önerilerinin en az 20'sini manuel olarak yürürlüğe koyun; bunları pompanıza girin ve AndroidAPS'de kabul ettiğinizi onaylayın.  Bu verilerin AndroidAPS ve Nightscout'ta gösterildiğinden emin olun.
+- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AAPS that you have accepted them.  Ensure this data shows in AAPS and Nightscout.
 - Gerekirse [geçici hedefleri](../Usage/temptarget.md) etkinleştirin. Bir hipodan sonra yükselen kan şekeri nedeniyle sistemin çok güçlü düzeltme yapmasını önlemek için hipo geçici hedeflerini kullanın.
 
 ### Bildirim sayısını azaltın
@@ -70,7 +70,7 @@ Görevlere geri dönmek istiyorsanız [aşağıdaki açıklamaya](Objectives-go-
 
 ## Görev 5: Geçici bazal önerileri de dahil olmak üzere açık döngünüzü anlamak
 
-- [Temel mantığı belirleme](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) ve [AndroidAPS /Nightscout ana ekranındaki tahmin satırına](Screenshots-prediction-lines) hem de OpenAPS sekmenizdeki hesaplamalardan elde edilen çıktıların özetine bakarak geçici bazal önerilerinin arkasındaki düşünceyi anlamaya başlayın.
+- Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AAPS homescreen](Screenshots-prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
 
 Hesaplamalardan ve ayarlardan emin olana kadar hedefinizi normalden daha yükseğe koymak isteyeceksiniz.  Sistem izin verdiğince
 
@@ -103,7 +103,7 @@ Hedeflerinizi birbirine daha yakın bir aralık (diyelim ki 1 veya daha az mmol 
 
 ### Kapalı döngü, düşük glikoz duraklatma ile sınırlı olduğundan, görev 6'daki yüksek KŞ değerlerini düzeltmeyecektir. Yüksek KŞ değerleri sizin tarafınızdan manuel olarak düzeltilmelidir!
 
-- Ön koşul: Döngü ile Düşük Glikoz Askıya Alma modunda başlamak için AndroidAPS'de çalışan iyi bir profile (bazal, İDF, Kİ) ihtiyacınız var. Aksi takdirde, kendinizi manuel olarak düzeltmeniz gereken bir hipoda bulabilirsiniz. Bu seçenek, hipodan 5 gün boyunca kaçınmanıza yardımcı olacaktır. **Hala sık veya şiddetli düşük glikoz atakları yaşıyorsanız, İES, bazal, İDF ve karbonhidrat oranlarınızı iyileştirmeyi, düzeltmeyi düşünün ve şu anda 6. görevle BAŞLAMAYIN.**
+- Prerequisite: You need a good profile (basal, ISF, IC) already working in AAPS to start with Loop in Low Glucose Suspend mode. Aksi takdirde, kendinizi manuel olarak düzeltmeniz gereken bir hipoda bulabilirsiniz. Bu seçenek, hipodan 5 gün boyunca kaçınmanıza yardımcı olacaktır. **Hala sık veya şiddetli düşük glikoz atakları yaşıyorsanız, İES, bazal, İDF ve karbonhidrat oranlarınızı iyileştirmeyi, düzeltmeyi düşünün ve şu anda 6. görevle BAŞLAMAYIN.**
 - Ayarlarınızı şimdi değiştirmenize gerek yok. Görev 6 sırasında maxAİNS ayarı dahili olarak otomatik sıfıra ayarlanır. **Bu geçersiz kılma, görev 7'ye geçildiğinde tersine çevrilecektir.**
 - Sistem, maxAİNS ayarınızı sıfır olarak geçersiz kılar; bu, kan şekerinin düşmesi durumunda sizin için bazalı düşürebileceği anlamına gelir. Kan şekeri yükseliyorsa, yalnızca bazal AİNS önceki bir Düşük Glikoz Askıya Alma işlemine göre negatifse bazal artacaktır. Aksi takdirde, bazal oranlar seçtiğiniz profille aynı kalacaktır. **Bu, yüksek KŞ değerleriyle insülin düzeltmeleri yaparak manuel başa çıkmanız gerektiği anlamına gelir.**
 - Bazal AİNS negatifse (aşağıdaki ekran görüntüsüne bakın) Görev 6'da da bir GBO > %100 verilebilir.
@@ -136,9 +136,9 @@ Hedeflerinizi birbirine daha yakın bir aralık (diyelim ki 1 veya daha az mmol 
 ## Görev 8: Gerekirse bazalleri ve oranları ayarlayın ve ardından otoduyarlılığı etkinleştirin
 
 - Bazallarınızın doğruluğunu kontrol etmek veya geleneksel bir bazal testi yapmak için [otoayarı](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) bir defaya mahsus olarak kullanabilirsiniz.
-- 7 gün boyunca [otoduyarlılık](../Usage/Open-APS-features.md) özelliğini etkinleştirin ve ana ekran grafiğindeki beyaz çizginin egzersiz veya hormonlar vb. AndroidAPS'in bazalları ve/veya hedefleri buna göre nasıl ayarladığını OpenAPS raporu sekmesinden takip edin.
+- Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AAPS is adjusting the basals and/or targets accordingly.
 
-Henüz yapmadıysanız *Döngünüzü* [bu forma](https://bit.ly/nowlooping) *AndroidAPS'yi DIY döngü yazılımınız olarak kaydetmeyi unutmayın*
+*Don’t forget to record your looping in* [this form](https://bit.ly/nowlooping) *logging AAPS as your type of DIY loop software, if you have not already done so.*
 
 (Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
 ## Görev 9: Süper mikro bolus (SMB) gibi gündüz kullanımı için ek oref1 özelliklerinin etkinleştirilmesi
@@ -153,6 +153,11 @@ Henüz yapmadıysanız *Döngünüzü* [bu forma](https://bit.ly/nowlooping) *An
 - [Otomasyon](../Usage/Automation.md)u kullanabilmek için 10. göreve başlamanız gerekir.
 - [Görevler-görev-3-bilgini-kanıtla](Objectives#objective-3-prove-your-knowledge) sınavı dahil tüm görevleri tamamladığınızdan emin olun.
 - Önceki görevleri tamamlamak, halihazırda tamamladığınız diğer görevleri etkilemeyecektir. Tüm tamamlanmış görevler korunacaktır!
+
+(Objectives-objective-11-DynamicISF)=
+## Objective 11: Additional Features such as DynamicISF
+
+- You have to start objective 11 to be able to use [DynamicISF](../Usage/Open-APS-features.md)
 
 (Objectives-go-back-in-objectives)=
 ## Görevlere geri dön
