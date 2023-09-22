@@ -23,7 +23,7 @@ Bu önerilerin ayrıntıları ve nedenleri hakkında daha fazla bilgi edinmek i�
 -   xDrip+'ı alıcı olarak kullanmadan önce Dexcom uygulamasını telefonunuzdan kaldırın. **xDrip+ ve Dexcom uygulamasını vericiye aynı anda bağlayamazsınız!**
 -   Dexcom clarity uygulamasını kullanıyorsanız ve xDrip+ alarmlarından yararlanmak istiyorsanız xDrip+'ta yerel yayın ile [Kendi Dexcom Uygulamanızı Oluşturun (BYODA)](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) kullanın.
 -   Henüz kurulmadıysa [xDrip+](https://github.com/NightscoutFoundation/xDrip)'i indirin ve [xDrip+ ayarlar sayfasındaki](../Configuration/xdrip.md) talimatları izleyin.
--   Konfigürasyon ayarlarında (AndroidAPS'deki ayarda) xDrip+'ı seçin.
+-   Select xDrip+ in ConfigBuilder (setting in AAPS).
 -   [xDrip+ ayarlar sayfasına](../Configuration/xdrip.md) göre xDrip+'daki ayarları yapın
 -   AAPS, telefon uçak modundayken KŞ değerlerini almıyorsa, [xDrip+ ayarlar sayfasında](../Configuration/xdrip.md) açıklandığı gibi 'Alıcıyı tanımla'yı kullanın.
 
@@ -38,7 +38,7 @@ Bu önerilerin ayrıntıları ve nedenleri hakkında daha fazla bilgi edinmek i�
 -   Telefon ayarlarından uygulamalara gidin > Dexcom G6 > izinler > ek izinler ve 'Dexcom uygulamasına eriş' düğmesine basın.
 -   Kısa bir süre sonra BYODA verici sinyalini almalıdır. (eğer değilse sensörü durdurmanız ve yenisini başlatmanız gerekecektir.)
 
-### AndroidAPS ayarları
+### Settings for AAPS
 
 -   Konfigürasyon ayarları'nda 'Dexcom Uygulaması (yamalı)' seçin.
 -   Herhangi bir değer almazsanız, başka bir veri kaynağı seçin, ardından AAPS ve BYODA yayını arasında bağlantı kurmak için izin talebini tetiklemek için 'Dexcom Uygulaması (yamalı)' öğesini yeniden seçin.
