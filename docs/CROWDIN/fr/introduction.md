@@ -12,15 +12,11 @@ Vous pouvez en savoir plus sur les différents systèmes de pancréas artificiel
 
 Dans un avenir proche, certains systèmes dits de "double hormone" auront également la possibilité d'injecter du glucagon en plus de l'insuline, dans le but de prévenir les hypoglycémies sévères et de permettre un contrôle encore plus rigoureux de la glycémie.
 
-An artificial pancreas can be thought of as an [“autopilot for your diabetes”](https://www.artificialpancreasbook.com/)
+An artificial pancreas can be thought of as an [“autopilot for your diabetes”](https://www.artificialpancreasbook.com/). What does that mean?
 
-What does that mean? Dans un avion, un pilote automatique ne fait pas tout le travail du pilote humain, ainsi le pilote ne peut pas dormir pendant la totalité du vol. Le pilote automatique facilite le travail du pilote. Il soulage le pilote du fardeau de la surveillance permanente de l’avion, lui permettant de se concentrer de temps à autre sur une surveillance de plus haut niveau. Le pilote automatique reçoit des signaux de divers capteurs. Un ordinateur les évalue en même temps que les spécifications du pilote, puis il effectue les ajustements nécessaires, en informant le pilote de tout motif de préoccupation. Le pilote n'a plus à se soucier de prendre constamment des décisions.
+Dans un avion, un pilote automatique ne fait pas tout le travail du pilote humain, ainsi le pilote ne peut pas dormir pendant la totalité du vol. Le pilote automatique facilite le travail du pilote. Il soulage le pilote du fardeau de la surveillance permanente de l’avion, lui permettant de se concentrer de temps à autre sur une surveillance de plus haut niveau. Le pilote automatique reçoit des signaux de divers capteurs. Un ordinateur les évalue en même temps que les spécifications du pilote, puis il effectue les ajustements nécessaires, en informant le pilote de tout motif de préoccupation. Le pilote n'a plus à se soucier de prendre constamment des décisions.
 
-
-```{image} ../images/autopilot.png
-:alt: AAPS est comme un pilote automatique
-```
-
+![image](./images/autopilot.png)
 
 ## Que signifie "boucle fermée hybride" ?
 
