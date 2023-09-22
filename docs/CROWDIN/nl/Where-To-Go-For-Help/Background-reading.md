@@ -32,12 +32,10 @@ Voordat je begint met bouwen, heb je nog wat leeswerk te doen om te begrijpen ho
 
 <https://www.diabettech.com/artificial-pancreas/looping-do-i-choose-openaps-or-loop-either-way-wearenotwaiting/>
 
-<https://www.healthline.com/diabetesmine/dana-rs-insulin-pump-embraces-wearenotwaiting>
-
 <https://btvnovinite.bg/video/bulgaria/dnes-e-svetovnijat-den-za-borba-s-diabeta.html>
 
 ## Filmpjes op YouTube
 
-[Tim Omer: gewone mensen nemen het heft in eigen hand "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI](https://www.youtube.com/watch?v=RjhkRmL1wOI)
+[Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI](https://www.youtube.com/watch?v=RjhkRmL1wOI)
 
-[Live interview (Engelstalig) met Dana Lewis, heeft als eerste een doe-het-zelf Pancreas Systeem gebouwd - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)
+[Live interview with Dana Lewis, creator of Do-It-Yourself Pancreas System - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)
