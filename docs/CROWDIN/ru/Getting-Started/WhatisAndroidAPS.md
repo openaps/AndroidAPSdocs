@@ -1,10 +1,10 @@
-# Что такое система замкнутого цикла с AndroidAPS?
+# What is a closed loop system with AAPS?
 
-AndroidAPS - это приложение, которое работает как искусственная система поджелудочной железы (APS) на смартфоне Android. Что такое система искусственной поджелудочной железы? Это программа, которая призвана делать то, что делает живая поджелудочная: автоматически поддерживать уровень сахара в крови в допустимых пределах.
+AAPS is an app that acts as an artificial pancreas system (APS) on an Android smartphone. Что такое система искусственной поджелудочной железы? Это программа, которая призвана делать то, что делает живая поджелудочная: автоматически поддерживать уровень сахара в крови в допустимых пределах.
 
-ИПЖ не может выполнять все функции биологической поджелудочной железы, но она может сделать диабет типа 1 более легким в управлении с использованием коммерчески доступных устройств и простого и безопасного ПО. Эти устройства включают в себя непрерывный мониторинг глюкозы (CGM), который сообщает AndroidAPS о вашей ГК и инсулиновую помпу, управляемую алгоритмом AndroidAPS для подачи соответствующих доз инсулина. Приложение взаимодействует с этими устройствами через Bluetooth. Она производит расчет дозирования с использованием алгоритма или набора правил, разработанных для другой системы ИПЖ, OpenAPS, которая имеет тысячи пользователей и миллионы часов использования.
+ИПЖ не может выполнять все функции биологической поджелудочной железы, но она может сделать диабет типа 1 более легким в управлении с использованием коммерчески доступных устройств и простого и безопасного ПО. Those devices include a continuous glucose monitor (CGM) to tell AAPS about your blood sugar levels and an insulin pump which AAPS controls to deliver appropriate doses of insulin. Приложение взаимодействует с этими устройствами через Bluetooth. Она производит расчет дозирования с использованием алгоритма или набора правил, разработанных для другой системы ИПЖ, OpenAPS, которая имеет тысячи пользователей и миллионы часов использования.
 
-Предупреждение: AndroidAPS не регулируется медицинскими органами ни в одной стране. Использование AndroidAPS-это, по сути, медицинский эксперимент над самим собой. Настройка системы требует настойчивости и технических знаний. Если у вас нет технических знаний, вы их постепенно приобретете. Вся нужная информация есть в этих документах, на соответствующих сайтах интернете или у других пользователей, которые уже спостроили APS -вы можете спросить их в группах Facebook или на форумах. Многие люди успешно построили AndroidAPS и теперь спокойно им пользуются, но важно, чтобы каждый пользователь:
+A note of caution: AAPS is not regulated by any medical authority in any country. Using AAPS is essentially carrying out a medical experiment on yourself. Настройка системы требует настойчивости и технических знаний. Если у вас нет технических знаний, вы их постепенно приобретете. Вся нужная информация есть в этих документах, на соответствующих сайтах интернете или у других пользователей, которые уже спостроили APS -вы можете спросить их в группах Facebook или на форумах. Many people have successfully built AAPS and are now using it entirely safely, but it is essential that every user:
 
 - Builds the system themselves so that they thoroughly understand how it works
 - Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
@@ -13,7 +13,7 @@ AndroidAPS - это приложение, которое работает как
 ```{note}
 **Disclaimer and Warning**
 
-- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout в настоящее время не пытается соответствовать принципам конфиденциальности HIPAA. Вы применяете Nightscout и AndroidAPS на свой собственный риск и пожалуйста не используйте информацию или код для принятия медицинских решений.
+- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout в настоящее время не пытается соответствовать принципам конфиденциальности HIPAA. Use Nightscout and AAPS at your own risk, and do not use the information or code to make medical decisions.
 - Use of code from github.com is without warranty or formal support of any kind. Пожалуйста, ознакомьтесь с ЛИЦЕНЗИЕЙ этого репозитория.
 - All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Их использование - в информационных целях и не подразумевает какой-либо принадлежности к ним или их одобрения.
 
@@ -22,7 +22,7 @@ Please note - this project has no association with and is not endorsed by: [SOOI
 
 Если вы готовы продолжать, читайте дальше.
 
-## Основные цели AndroidAPS
+## Primary goals behind AAPS
 
 - An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (<https://openaps.org/reference-design/>)
 - An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
