@@ -1,4 +1,4 @@
-# Necessary checks after update to AAPS 3.0
+# Vérifications nécessaires après la mise à jour vers AAPS 3.0
 
 * **La version minimale d'Android est maintenant 9.0.**
 * **Les données ne sont pas migrées vers la nouvelle base de données.**
@@ -36,24 +36,24 @@
 ## Réinitialiser le mot de passe principal
 * Vous pouvez maintenant réinitialiser votre mot de passe principal au cas où vous l'auriez oublié.
 * Vous devez ajouter un fichier nommé `PasswordReset` dans le répertoire `/AAPS/extra` du système de fichiers de votre téléphone.
-* Restart AAPS.
+* Redémarrez AAPS.
 * Le nouveau mot de passe sera le numéro de série de votre pompe active.
 * Pour Dash: Le numéro de série est toujours 4241.
 * Pour EROS, il est également listé dans l'onglet POD dans "Numéro de série"
 
 ## Signal d'avertissement à côté de la glycémie
 
-Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+À partir d'Android 3.0, vous pouvez avoir un signal d'avertissement à côté de votre glycémie sur l'écran principal.
 
-  ![Red BG warning](../images/bg_warn_red.png)
+  ![Avertissement de glycémie rouge](../images/bg_warn_red.png)
 
-  ![Yellow BG warning](../images/bg_warn_yellow.png)
+  ![Avertissement de glycémie jaune](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](Screenshots-bg-warning-sign)
+Pour plus de détails, voir la page [écrans AAPS](Screenshots-bg-warning-sign)
 
 
-## Message d'erreur : Données provenant de pompes différentes
+## Message d'échec : Données provenant de pompes différentes
 
-   ![Message d'erreur : Données provenant de pompes différentes](../images/Screen_DifferentPump.png)
+   ![Message d'échec : Données provenant de pompes différentes](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](Config-Builder-pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.
+Pour résoudre ce problème, allez dans la [Configuration](Config-Builder-pump). Sélectionnez la pompe virtuelle puis resélectionnez votre pompe réelle. Cela réinitialisera l'état de la pompe.
