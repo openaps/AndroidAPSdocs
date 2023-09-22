@@ -1,22 +1,29 @@
 # Welcome to the AAPS documentation
 
-![Image](images/modules-female.png)
+![image](./images/basic-outline-of-AAPS.png)
 
-AAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. The main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter.
+AAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. It uses an openAPS software algorithm which aims to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need a supported and FDA/CE approved insulin pump, and a continuous glucose meter.
 
-The app does *not* use self-learning artificial intelligence. Instead, the calculations of AAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons.
+Interested? Read more about AAPS in the [introduction](introduction.md).
 
-The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
+```{warning}
+**IMPORTANT SAFETY NOTICE**
 
-```{admonition} Ask for help - Writing Docs
-:class: note
+The foundation of AAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. 인슐린 자동 주입 시스템을 사용할 시에는 완벽하게 작동한다고 증명하는 테스트와 FDA 또는 CE 승인을 받은 인슐린 펌프과 CGM만을 사용하는 것이 매우 중요합니다. 이러한 구성요소에 대한 하드웨어 또는 소프트웨어의 변형은 예기치 않은 인슐린 투약을 야기하여 사용자에게 상당한 위험을 초래할 수 있습니다. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AAPS system.
 
-Please don't be shy, we urgently *need* support in creating the documentation.
+또한, 펌프 또는 CGM을 사용할 때에는 원래 공급되는 물품 즉 제조업자에 의해 승인된 삽입기, 캐뉼러 및 인슐린 용기만을 사용하는 것이 매우 중요합니다. 검증이 되지 않고 변형된 물품을 사용하는 경우에는 CGM의 부정확성과 인슐린의 투약 오류가 발생할 수 있습니다. 인슐린은 남용되면 매우 위험하니 물품들을 해킹하여 사용하는 것과 같이 본인의 목숨을 가지고 노는 행위와 같은 행동들은 삼가해주시기 바랍니다.
 
-A pull request to edit the documentation is relatively simple to create. You can't break anything. There are release procedures.
+마지막으로는  계산할 수 없을 정도로 혈당을 낮추기 때문에 SGLT-2 억제제 (글 리플로 진)을 절대 사용하면 안된다.  혈당을 올리기 위해 기저양(basal rate)을 낮추는 시스템과 병행하는 것은 글 리폴로 진으로 인해 매우 위헙합니다. 오히려 혈당이 오르지 않을 수 있으며 인슐린 부족의 위험한 상태까지 올 수 있습니다.
+```
 
-A 3 minute video which explains how to edit the docs via PR is available [here](https://www.youtube.com/watch?v=Vo4L6YYxWak).
+```{note}
+**Disclaimer and Warning**
 
+- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout은 현재 HIPAA 개인 정보 보호 준수 규약을 따르지 않습니다. Use Nightscout and AAPS at your own risk, and do not use the information or code to make medical decisions.
+- Use of code from github.com is without warranty or formal support of any kind. 자세한 것은 이 곳의 라이센스에 대한 자세한 내용을 참고하세요.
+- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. 그것들을 사용한 것은 정보를 제공하기 위한 목적이며, 그들과의 제휴 또는 보증을 의미하지는 않습니다.
+
+Please note - this project has no association with and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
 ```
 
 ## How to read the documentation?
@@ -47,19 +54,6 @@ There is a subsection for the [clinicians](Resources/clinician-guide-to-AAPS.md)
 
 Finally, in the subsection [How to help?](make-a-PR.md) we would like to provide you with information so that you are able to suggest small or larger changes to the documentation yourself and work together with us on the documentation. We further need support for [translation of the documentation](translations.md) By the way, it also very helpful for everyone if you could provide links to the corresponding documentation (or screenshots of where the links are located within the Documentation if you are not familiar with how to send a link) when answering questions from other users. That way the correct information can easily be located again should other users also be trying to find answers to the same types of questions in the future.
 
-(index-translation-help-needed)=
-
-```{admonition} Ask for help - Translators Neeeded!!!
-:class: note
-
-The documentation is written in English and translated in different languages. We are searching help by the translation of a) the app and b) the documentation.
-
-The translation process is explained [here](translations.md).
-
-The state of the translations per language for app and documentation can be found [here](./Administration/stateTranslations.md).
-
-```
-
 ```{toctree}
 :caption: Change language
 
@@ -68,7 +62,16 @@ Change language <./changelanguage.md>
 ```
 
 ```{toctree}
+:caption: Home
+
+Introduction <./introduction.md>
+
+```
+
+```{toctree}
 :caption: Getting started
+
+Preparing <preparing.md>
 
 Safety first <./Getting-Started/Safety-first.md>
 
@@ -255,9 +258,9 @@ How to help <./Getting-Started/How-can-I-help.md>
 
 How to translate the app and docs <./translations.md>
 
-State of translations <./Administration/stateTranslations.md>
-
 How to edit the docs <./make-a-PR.md>
+
+State of translations <./Administration/stateTranslations.md>
 
 ```
 
