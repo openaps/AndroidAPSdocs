@@ -8,21 +8,21 @@ If nobody is following you on Nightscout you can choose to pause NSClient to sav
 
 * Как обнаружить нестабильную связь?
 
-Go to NSClient tab in AAPS and watch the log. The expected behavior is to receive a PING every ~30s and almost no reconnection messages. If you see many reconnections, then there is a problem.
+Go to NSClient tab in AAPS and watch the log. The expected behavior is to receive a PING every ~30s and almost no reconnection messages. Если вы видите много повторных попыток соединения, то это свидетельство проблем со связью.
 
 Since AAPS version 2.0, when such behavior is detected, NSClient is paused for 15 minutes and the message "NSClient malfunction" is displayed on the main Overview screen.
 
 * перезапуск
 
-What you should try as a first step is restart both: Nightscout and then phone to see if the issue is permanent
+В качестве первого шага попробуйте перезапустить Nightcout и затем телефон, чтобы понять, сохраняется ли проблема
 
-If your Nightscout is hosted on Heroku, you can restart Nightscout by: Logging into Heroku, click on your nightscout app name, click on the 'More' menu, then 'Restart all dynos'.
+Если Nightscout размещен на Heroku, вы можете перезапустить Nightscout так: зайдите в Heroku, нажмите на имя приложения, нажмите в меню «More», затем «Restart all dynos».
 
-For other hosts, please follow your hosts guidance documentation.
+На других хостингах следуйте документации хостинга.
 
 * Проблемы с телефоном
 
-Android may put your phone into a sleep mode. Check if you have an exception for AAPS in your phones power options to allow it to run in the background all the time.
+Android может перевести телефон в спящий режим. Check if you have an exception for AAPS in your phones power options to allow it to run in the background all the time.
 
 Check the NSClient again when in strong network signal location.
 
