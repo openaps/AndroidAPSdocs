@@ -25,7 +25,7 @@
 
 - En AndroidAPS ir a Tabla de configuraciones > Comunicador SMS \*\* y añadir el número(s) de teléfono que deseas habilitar para enviar comandos SMS (separados por punto y coma - p.ej. +3412345678;+3412345679)
 
-- Note that the "+" in front of the number may or may not be required based on your location. To determine this send a sample text which will show the received format in the SMS Communicator tab.
+- Ten en cuenta que el signo "+" delante del número puede o no ser necesario según tu ubicación. Para determinarlo, envía un texto de muestra que muestre el formato recibido en la pestaña de Comunicador de SMS.
 
 - Habilitar 'Permitir comandos remotos vía SMS'.
 
