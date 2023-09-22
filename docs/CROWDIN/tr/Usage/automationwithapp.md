@@ -1,8 +1,8 @@
 # Üçüncü taraf Android Automate Uygulaması ile otomasyon
 
-**Bu makale AndroidAPS sürüm 2.5'ten önce yazılmıştır. AndroidAPS sürüm 2.5 ile [AndroidAPS içinde bir otomasyon eklentisi](./Automation.md) vardır. Bazıları için burası hala yararlı olabilir, ancak yalnızca ileri düzey kullanıcılar tarafından kullanılmalıdır.**
+**This article has been written before AAPS version 2.5. There is an [automation plugin in AAPS](./Automation.md) itself with AAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
 
-AndroidAPS hibrit bir kapalı döngü sistemi olduğundan, yine de bazı kullanıcı etkileşimi gereklidir (örneğin, döngüye yürüdüğünüzü, birazdan yemek yediğinizi, koltukta uzandığınızı söyleyin...). En son AndroidAPS işlevselliğini genişletmek için sık manuel kullanıcı girişleri, Otomatikleştirme veya IFTTT gibi harici araçlar aracılığıyla otomatikleştirilebilir.
+As AAPS is a hybrid closed loop system, some user interaction is necessary though (e.g. tell the loop that you are walking, eating soon, lying on the sofa...). Frequent manual user inputs can be automated via external tools like Automate or IFTTT to extend the recent AAPS functionality.
 
 ## Android Otomatikleştirme Uygulaması
 
@@ -10,27 +10,27 @@ AndroidAPS hibrit bir kapalı döngü sistemi olduğundan, yine de bazı kullan�
 
 Bu aracı kullanarak diyabetinizi çeşitli koşullara göre otomatik olarak tedavi etmek için iş akışlarını 'eğer bu (if this..) şeklinde kolayca oluşturabilirsiniz... ve bu... bunu değil... o zaman şunu yap... ve şu...'. Konfigüre edebileceğiniz binlerce olasılık vardır.
 
-Şimdiye kadar **Nightscout Profili üzerinden döngü yapmak gerekliydi**, Automate, komutları HTTP isteği aracılığıyla doğrudan nightscout web sitenizde yürütür ve ardından onu AndroidAPS uygulamanızla eşitler.
+Until now it is **necessary to loop via Nightscout Profile**, as Automate executes the commands via HTTP-request directly in your nightscout website that subsequently syncs it to your AAPS app.
 
-**Çevrimdışı döngü (Automate ve AndroidAPS uygulaması arasında doğrudan iletişim) henüz desteklenmemektedir**, ancak teknolojik olarak mümkündür. Belki ileride bir çözüm bulunur. Bunu yapmanın bir yolunu bulduysanız, lütfen bunu bu belgelere ekleyin veya bir geliştiriciyle iletişime geçin.
+**Offline looping (direct communication between Automate and AAPS app) is not supported yet**, but technologically possible. Belki ileride bir çözüm bulunur. Bunu yapmanın bir yolunu bulduysanız, lütfen bunu bu belgelere ekleyin veya bir geliştiriciyle iletişime geçin.
 
 ### Temel gereksinimler
 
 #### Automate Uygulaması
 
-Android Automate'i Google Play Store'dan veya <https://llamalab.com/automate/> adresinden indirin ve AndroidAPS'nin çalıştığı akıllı telefonunuza yükleyin.
+Download Android Automate in Google Play Store or at <https://llamalab.com/automate/> and install it on your smartphone where AAPS runs.
 
 Otomatikleştir'de, ekranın sol üst kısmındaki hamburger menüsüne dokunun > Ayarlar > 'Sistem başlangıcında çalıştır' seçeneğini işaretleyin. Bu sistem başlangıcında iş akışlarınızı otomatik olarak çalıştıracaktır.
 
 ![Automate HTTP isteği](../images/automate-app2.png)
 
-#### AndroidAPS
+#### AAPS
 
-AndroidAPS'de, sağ üst ekrandaki 3 nokta menüsüne dokunun ve Tercihler > NSClient > Bağlantı ayarları > 'Yalnızca WiFi bağlantısını kullan' ve 'Yalnızca şarj oluyorsa' seçeneklerinin işaretini kaldırın, çünkü otomatik tedavi yalnızca AndroidAPS gerçek bir nightcout bağlantısı olduğunda çalışır.
+In AAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Connection settings > Uncheck 'Use WiFi connection only' and 'Only if charging' as the automated treating does only work when AAPS has an actual nightscout connection.
 
 ![Nightscout bağlantı tercihleri](../images/automate-aaps1.jpg)
 
-AndroidAPS'de, sağ üst ekrandaki 3 nokta menüsüne dokunun ve Tercihler > NSClient > Gelişmiş Ayarlar > 'Yalnızca NS yükle (senkronizasyon devre dışı)' ve 'NS'ye yükleme yok' seçeneğinin işaretini kaldırın.
+In AAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'.
 
 Oluşabilecek [güvenlik sorunlarının](Nightscout-security-considerations) farkında olun ve bir [Insight pump](Accu-Chek-Insight-Pump-settings-in-aaps) kullanıyorsanız çok dikkatli olun.
 
@@ -119,7 +119,7 @@ Askıyı başlat: Oynat düğmesine dokunun
 
 #### Örnek 3: Sizin tarafınızdan eklenecek!!!
 
-Lütfen .flo dosyasını Automate topluluğuna yükleyerek ('Nightscout' anahtar kelimesi altında) başka iş akışları ekleyin ve bunu [AndroidAPSdocs deposunda Çekme İsteği](../make-a-PR.md) yaparak burada açıklayın.
+Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSDocs repository](../make-a-PR.md).
 
 ## Eğer buysa, o zaman (IFTTT)
 
