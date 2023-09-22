@@ -2,23 +2,23 @@
 
 ## Kein Download möglich - APK muss selbst erstellt werden
 
-**Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist AndroidAPS nicht als Download verfügbar. Du kannst die App legal für Dich selbst erstellen, darfst aber keine Kopie an andere weitergeben! Weitere Informationen findest Du auf der [FAQ Seite](../Getting-Started/FAQ.md).**
+**AAPS is not available as download due to regulation for medial devices. Du kannst die App legal für Dich selbst erstellen, darfst aber keine Kopie an andere weitergeben! Weitere Informationen findest Du auf der [FAQ Seite](../Getting-Started/FAQ.md).**
 
 ## Wichtige Hinweise
 
-* Wenn eine neue Version erscheint, führe bitte so bald als möglich ein Update durch. Ein [Hinweis auf dem AndroidAPS Startbildschirm](Releasenotes-release-notes) informiert über die neue Version.
-* Ab Version 2.7 wurde der Speicherort des Repositories auf <https://github.com/nightscout/AndroidAPS> geändert. Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die [App-Erstellung von vorne](../Installing-AndroidAPS/Building-APK.md) beginnst.
+* Wenn eine neue Version erscheint, führe bitte so bald als möglich ein Update durch. You will receive an [information on the AAPS home screen](Releasenotes-release-notes) about the new version.
+* Ab Version 2.7 wurde der Speicherort des Repositories auf <https://github.com/nightscout/AndroidAPS> geändert. Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AAPS-Verzeichnis entfernst und die [App-Erstellung von vorne](../Installing-AndroidAPS/Building-APK.md) (new clone) beginnst.
 * Nutze bitte **[Android Studio Version 2020.3.1 (Arctic Fox)](https://developer.android.com/studio/)** oder neuer, um die APK-Datei zu erstellen.
 * [Windows 10 32-bit Systeme](troubleshooting_androidstudio-unable-to-start-daemon-process) werden von Android Studio 2020.3.1 nicht unterstützt.
 * Lies die [Release Notes](../Installing-AndroidAPS/Releasenotes.md) für die aktuelle Version
 
-## Übersicht zum Aktualisieren Deiner AndroidAPS-Version
+## Overview for updating your AAPS version
 
 1. [Exportiere Deine Einstellungen](../Usage/ExportImportSettings-export-settings) von der "alten" AAPS Version auf Deinem Smartphone. Vielleicht brauchst Du sie nicht, aber sicher ist sicher.
-2. Führe ein [Update Deiner lokalen Kopie](Update-to-new-version-update-your-local-copy) des AndroidAPS Sourcecodes durch (Git->Fetch und Git -> Pull).
+2. [Update local copy](Update-to-new-version-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
 3. [Erstelle signierte APK](Update-to-new-version-build-the-signed-apk)
 4. [Übertrage die erstellte APK-Datei](Building-APK-transfer-apk-to-smartphone) auf Dein Smartphone und installiere sie.
-5. [Prüfe die Version](Update-to-new-version-check-aaps-version-on-phone) in AAPS
+5. [Check the version](Update-to-new-version-check-aaps-version-on-phone) in AAPS
 6. Stelle abhängig von Deiner [BZ-Quelle](../Configuration/BG-Source.md) sicher, dass Du ['identify receiver'](xdrip-identify-receiver) in xDrip+ gesetzt hast oder verwende die ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 
 Für den Fall, dass Probleme auftreten, findest Du Lösungsansätze auf der separaten Seite für [Fehlerbehebung von Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
@@ -31,11 +31,11 @@ Falls Du Dir nicht mehr sicher bist, wie dies genau funktioniert, findest Du die
 
 ## 2. Führe ein Update deiner lokalen Version durch
 
-Ab Version 2.7 wurde der Speicherort des Repositories auf <https://github.com/nightscout/AndroidAPS> geändert. Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die [App-Erstellung von vorne](../Installing-AndroidAPS/Building-APK.md) beginnst.
+Ab Version 2.7 wurde der Speicherort des Repositories auf <https://github.com/nightscout/AndroidAPS> geändert. If you are not familiar with git the easiest way for update is remove directory with AAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
 
 Wenn Du die URL bereits geändert hast oder von Version 2.8.x updatest, folge diesen Schritten:
 
-* Öffne Dein existierendes AndroidAPS Projekt mit Android Studio. Möglicherweise musst Du Dein Projekt wählen. Doppelklicke auf das AndroidAPS Projekt.
+* Open your existing AAPS project with Android Studio. Möglicherweise musst Du Dein Projekt wählen. (Double) click on the AAPS project.
     
     ![Android Studio - Projekt auswählen](../images/update/01_ProjectSelection.png)
 
