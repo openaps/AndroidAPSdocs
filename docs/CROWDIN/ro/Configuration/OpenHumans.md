@@ -2,7 +2,7 @@
 
 ## Donează datele tale pentru știință
 
-Poți ajuta comunitatea prin donarea datelor tale către proiecte de cercetare! Acest lucru ajută oamenii de știință să meargă mai departe, să dezvolte noi idei științifice și să crească atenția acordata sistemelor în bucla închisa open-source. AndroidAPS is ready to synchronize your data with [Open Humans](https://www.openhumans.org), a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data.
+Poți ajuta comunitatea prin donarea datelor tale către proiecte de cercetare! Acest lucru ajută oamenii de știință să meargă mai departe, să dezvolte noi idei științifice și să crească atenția acordata sistemelor în bucla închisa open-source. AAPS is ready to synchronize your data with [Open Humans](https://www.openhumans.org), a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data.
 
 Deții controlul deplin asupra a ceea ce se întâmplă cu datele tale și asupra proiectelor pe care dorești să le susții oferindu-le acces la datele tale. Datele tale sunt evaluate și folosite în moduri și în grade diferite in funcție de proiectul la care te-ai alăturat.
 
@@ -36,7 +36,7 @@ Informații secrete sau private, cum ar fi Nightscout URL sau API secret nu vor 
 5. Citește cu atenție informațiile furnizate despre funcția de Open Humans Uploader și termenii de utilizare.
 6. Confirmă prin bifarea căsuţei şi apasă pe "LOGIN".
 7. Site-ul Open Humans va fi deschis. Autentifică-te cu datele tale de autentificare.
-8. Decide dacă vrei să îți ascunzi calitatea de membru al aplicației AndroidAPS Uploader în profilul public Open Humans.
+8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
 9. Apăsați butonul „Autorizează proiectul”.
 
 ```{image} ../images/OHUploader2.png
@@ -69,11 +69,11 @@ September 2020 the 'OPEN' project launched a [survey](https://survey.open-diabet
 
 ### [OpenAPS Data Commons](https://www.openhumans.org/activity/openaps-data-commons/)
 
-OpenAPS Data Commons e creat pentru a permite o modalitate simplă de a partaja date de la comunitatea DIYAPS pentru cercetare. Datele sunt partajate atât catre cercetători tradiționali, pentru studii de cercetare, cât și grupurilor sau persoanelor din comunitate care doresc să analizeze datele ca parte a propriilor proiecte. OpenAPS Data Commons folosește platforma 'Open Humans' pentru a permite oamenilor să încarce ușor și să partajeze datele lor din DIYAPS, inclusiv AndroidAPS, Loop şi OpenAPS.
+OpenAPS Data Commons e creat pentru a permite o modalitate simplă de a partaja date de la comunitatea DIYAPS pentru cercetare. Datele sunt partajate atât catre cercetători tradiționali, pentru studii de cercetare, cât și grupurilor sau persoanelor din comunitate care doresc să analizeze datele ca parte a propriilor proiecte. The OpenAPS Data Commons uses the 'Open Humans' platform to enable people to easily upload and share their data from DIYAPS including AAPS, Loop, and OpenAPS.
 
 Poți să introduci datele tale în Open Humans prin unul din aceste trei moduri:
 
-1. utilizează opțiunea de încarcare AndroidAPS
+1. use the AAPS uploader option to get your data into Open Humans
 2. utilizează transferul de date Nightscout
 3. încarca manual fişiere de date în Open Humans.
 
@@ -87,7 +87,7 @@ Also see [Open Humans Terms of Use](https://www.openhumans.org/terms/).
 
 ## Confidenţialitatea datelor
 
-Open Humans iti protejeaza intimitatea prin atribuirea unui ID numeric pentru fiecare proiect. Aceasta permite proiectelor să recunoască sursa fara sa te idntifice. ID-ul aplicației încărcate de către AndroidAPS este similar și ajută doar la administrarea datelor. Mai multe informații pot fi gasite aici:
+Open Humans iti protejeaza intimitatea prin atribuirea unui ID numeric pentru fiecare proiect. Aceasta permite proiectelor să recunoască sursa fara sa te idntifice. The Application ID uploaded by AAPS is similar and only helps administrate the data. Mai multe informații pot fi gasite aici:
 
 - [Open Humans Data Use Policy](https://www.openhumans.org/data-use/)
 - [Open Humans GDPR](https://www.openhumans.org/gdpr/)
