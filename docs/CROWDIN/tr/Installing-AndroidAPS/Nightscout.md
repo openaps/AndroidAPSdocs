@@ -10,7 +10,7 @@ Nightscout raporlamanın yanı sıra AAPS'i kontrol etmek için de kullanılabil
 
 [kimlik doğrulama rollerini](https://nightscout.github.io/nightscout/security) kullanarak Nightscout sitenize genel erişimi engelleyebilirsiniz.
 
-### AndroidAPS ayarları
+### AAPS Ayarları
 
 AAPS ayarlarında yalnızca NS yükleme (senkronizasyon yok) işlevi vardır. Bunu yaparak AAPS, Nightscout'ta yapılan geçici hedefler veya gelecekteki karbonhidratlar gibi değişiklikleri almaz.
 
