@@ -1,4 +1,4 @@
-# Necessary checks after update to AAPS 3.0
+# Comprobaciones necesarias después de actualizar a AndroidAPS 3.0
 
 * **Ahora, la versión mínima requerida de Android es la 9.0**
 * **Los datos no son migrados a la nueva base de datos**
@@ -36,24 +36,24 @@
 ## Restablecer contraseña maestra
 * Ahora es posible restablecer la contraseña maestra, en caso de que se nos haya olvidado.
 * Es necesario añadir un fichero llamado `PasswordReset` en el directorio `/AAPS/extra` de tu teléfono.
-* Restart AAPS.
+* Reiniciar AAPS.
 * La nueva contraseña será el número de serie de la bomba de insulina que esté activa.
-* For Dash: The serial number is always 4241.
+* Para Dash: El número de serie siempre es 4241.
 * Para Eros, aparece en la pestaña del Pod, como "Número de sequencia".
 
 ## Señal de advertencia debajo de la lectura de glucosa
 
-Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+Desde la versión de 3.0 de AndroidAPS, puede aparecer una señal de advertencia debajo de la lectura de glucosa de la pantalla principal.
 
-  ![Red BG warning](../images/bg_warn_red.png)
+  ![Triángulo de advertencia de glucosa en rojo](../images/bg_warn_red.png)
 
-  ![Yellow BG warning](../images/bg_warn_yellow.png)
+  ![Triángulo de advertencia de glucosa en amarillo](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](Screenshots-bg-warning-sign)
+Para obtener más información, accede a la [Página de pantallas de AAPS](Screenshots-bg-warning-sign)
 
 
 ## Mensaje de error: Los datos son de bombas diferentes
 
    ![Mensaje de error: Los datos son de bombas diferentes](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](Config-Builder-pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.
+Para solucionar este problema, ve a la página  [Tabla de configuraciones](Config-Builder-pump). Cambia a bomba virtual y después vuelve a seleccionar la casilla de tu bomba actual. Eso restablecerá el estado de la bomba.
