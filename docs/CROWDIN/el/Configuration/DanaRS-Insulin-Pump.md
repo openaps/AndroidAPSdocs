@@ -25,7 +25,7 @@
 * Click on "Selected pump".
 * In the pairing window click on the entry for your pump.
     
-    ![AAPS pair Dana-i/RS](../images/DanaRS_i_Pairing.png)
+    ![Το AAPS κάνει σύζευξη με την αντλία Dana-i/RS](../images/DanaRS_i_Pairing.png)
 
 * **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
     
@@ -51,66 +51,66 @@
 * For DanaRS with firmware v3 or Dana-i the default password is derived from the manufacturing date and calculates as MMDD where MM is the month and DD is the day, the pump was produced (i.e. '0124' representing month 01 and day 24).
     
     * From MAIN MENU select REVIEW then open SHIPPING INFORMATION from the sub menu
-    * Number 3 is manifacturing date. 
+    * Ο αριθμός 3 είναι η ημερομηνία κατασκευής. 
     * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AAPS.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
 
-## Change password on pump
+## Αλλαγή κωδικού πρόσβασης στην αντλία
 
-* Press OK button on pump
-* In main menu select "OPTION" (move right by pressing arrow button several times)
+* Πατήστε το κουμπί OK στην αντλία
+* Στο κυρίως μενού επιλέξτε "ΕΠΙΛΟΓΗ" (πηγαίνετε δεξιά πατώντας το κουμπί βέλους αρκετές φορές)
     
-    ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
+    ![Κεντρικό Μενού αντλίας DanaRS](../images/DanaRSPW_01_MainMenu.png)
 
-* In options menu select "USER OPTION"
+* Στο μενού επιλογών επιλέξτε "ΕΠΙΛΟΓΗ ΧΡΗΣΤΗ"
     
     ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
 
-* Use arrow button to scroll down to "11. password"
+* Χρησιμοποιήστε το κουμπί βέλους για να μετακινηθείτε προς τα κάτω στο "11. κωδικός πρόσβασης
     
-    ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
+    ![DanaRS 11. Κωδικόs πρόσβασης](../images/DanaRSPW_03_11PW.png)
 
-* Press OK to enter old password.
+* Πατήστε OK για να εισάγετε τον παλιό κωδικό πρόσβασης.
 
 * Enter **old password** (Default password see [above](DanaRS-Insulin-Pump-default-password)) and press OK
     
-    ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
+    ![Εισαγωγή παλιού κωδικού πρόσβασης για την αντλία DanaRS](../images/DanaRSPW_04_11PWenter.png)
 
-* If wrong password is entered here there will be no message indicating failure!
+* Εάν εισάγετε λάθος κωδικό πρόσβασης εδώ δεν θα υπάρχει κάποιο μήνυμα που να υποδεικνύει αποτυχία!
 
 * Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
     
-    ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
+    ![DanaRS Νέος κωδικός πρόσβασης](../images/DanaRSPW_05_PWnew.png)
 
-* Confirm with OK button.
+* Επιβεβαιώστε με το κουμπί OK.
 
-* Press OK to save setting.
+* Πατήστε OK για αποθήκευση των ρυθμίσεων.
     
-    ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
+    ![DanaRS Αποθήκευση νέου κωδικού πρόσβασης](../images/DanaRSPW_06_PWnewSave.png)
 
-* Move down to "14. EXIT" and press OK to exit.
+* Πηγαίνετε κάτω στο "14. EXIT" και πατήστε OK για έξοδο.
     
-    ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
+    ![Έξοδος Του DanaRS](../images/DanaRSPW_07_Exit.png)
 
 (DanaRS-Insulin-Pump-dana-rs-specific-errors)=
 
 ## Dana RS specific errors
 
-### Error during insulin delivery
+### Βλάβη κατά την χορήγηση ινσουλίνης
 
 In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![Συναγερμός παράδοσης ινσουλίνης](../images/DanaRS_Error_bolus.png)
 
 * In most cases this is just a communication issue and the correct amount of insulin is delivered.
 * Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
 * Delete error entry in [treatments tab](Screenshots-carb-correction) if you wish.
 * Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
 
-## Special note when switching phone
+## Ειδική σημείωση για την αλλαγή τηλεφώνου
 
-When switching to a new phone the following steps are necessary:
+Κατά τη μετάβαση σε νέο τηλέφωνο απαιτούνται τα ακόλουθα βήματα:
 
 * [Export settings](ExportImportSettings-export-settings) on your old phone
 * Transfer settings from old to new phone
@@ -119,14 +119,14 @@ When switching to a new phone the following steps are necessary:
 
 * **Manually pair** Dana RS with the new phone
 * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
-* Install AAPS on the new phone.
-* [Import settings](ExportImportSettings-import-settings) on your new phone
+* Εγκατάσταση του AAPS στο νέο τηλέφωνο.
+* [Εισαγωγή ρυθμίσεων](ExportImportSettings-import-settings) στο νέο σας τηλέφωνο
 
 ### DanaRS v3, Dana-i
 
 * Start pairing procedure like decribed [above](DanaRS-Insulin-Pump-pairing-pump).
 * Sometimes it may be necessary to clear pairing information in AAPS by long-click BT icon on Dana-i/RS tab.
 
-## Timezone traveling with Dana RS pump
+## Ταξιδεύοντας σε διαφορετικές ζώνες ώρας με την Dana Rs
 
 For information on traveling across time zones see section [Timezone traveling with pumps](Timezone-traveling-danarv2-danars).
