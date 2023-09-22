@@ -2,7 +2,7 @@
 
 # Liste des téléphones testés compatibles avec la pompe à insuline Omnipod
 
-Currently, we have a very hard-working behind-the-scenes Maintainer, who is in charge of ensuring the integrity of the Hardware List of all Android Phones/Smartwatches Capable of Looping with the Omnipod Dash; the newest pump driver addition to our ever-expanding network of Bluetooth enabled insulin pumps for use within the AndroidAPS/OpenAPS ecosystem!
+Currently, we have a very hard-working behind-the-scenes Maintainer, who is in charge of ensuring the integrity of the Hardware List of all Android Phones/Smartwatches Capable of Looping with the Omnipod Dash; the newest pump driver addition to our ever-expanding network of Bluetooth enabled insulin pumps for use within the AAPS/OpenAPS ecosystem!
 
 Notre mainteneur a passé beaucoup de temps et d'efforts pour s'assurer que tout le monde puisse facilement saisir des données dans la feuille de calcul; via un formulaire Google avec des en-têtes d’information pré-remplis pour faciliter l’utilisation! Cela permet de garantir que les données existantes ne peuvent pas être accidentellement écrasées ou supprimées. La même expérience peut être renouvelée à partir du succès de la première fois en utilisant à nouveau Google Sheets.
 
@@ -22,4 +22,4 @@ Pour tout problème constaté dans la feuille de calcul, veuillez nous contacter
 
 # Fond d'écran
 
-![fond d'écran](../images/bg_phone_thump.jpg) </br> Design : Thiago :)</br> Si vous voulez décorer votre téléphone avec plus d'AAPS, vous pouvez télécharger votre image d'arrière-plan ici : ![Fond d'écran en haute résolution.](../images/bg_phone.jpg)
+![fond d'écran](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AAPS, you can download your background image here: ![Fond d'écran en haute résolution.](../images/bg_phone.jpg)
