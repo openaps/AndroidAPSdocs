@@ -509,4 +509,4 @@ Although this could potentially be useful for deleting announced (but not boluse
 
 ## **Smartwatches** 
 This section is currently being updated, the scheduled release is the weekend of 30th Sept/1st Oct 2023....watch this space!
-The existing section on smartwatches can be found in [Smartwatches](docs/EN/Hardware/Smartwatch.md) 
+The existing section on smartwatches can be found in [Smartwatches](Hardware/Smartwatch.md) 
