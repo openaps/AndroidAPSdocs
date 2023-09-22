@@ -1,4 +1,4 @@
-# Необходимые проверки после обновления с AndroidAPS 2.6
+# Necessary checks after update coming from AAPS 2.6
 
 - The program code was changed significantly when switching to AAPS 2.7.
 - Therefore it is important that you make some changes or check settings after the update.
