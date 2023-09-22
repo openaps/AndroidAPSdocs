@@ -1,16 +1,16 @@
-# Экраны AndroidAPS
+# AAPS screens
 
 ## Главный экран
 
 ![Главный экран V2.7](../images/Home2020_Homescreen.png)
 
-Это первый экран, который вы увидите, когда откроете AndroidAPS, и он содержит большую часть текущей информации.
+This is the first screen you will come across when you open AAPS and it contains most of the information that you will need day to day.
 
 ### Раздел А - Вкладки
 
-* Переход между различными модулями AndroidAPS.
+* Navigate between the various AAPS modules.
 * Также можно переходить между экранами свайпом влево или вправо.
-* Displayed tabs can be selected in [config builder](Config-Builder-tab-or-hamburger-menu).
+* Отображаемые здесь вкладки можно выбрать в [Конфигураторе](Config-Builder-tab-or-hamburger-menu).
 
 (Screenshots-section-b-profile-target)=
 
@@ -22,10 +22,10 @@
 
 * Текущий профиль отображается на левой панели.
 * Короткое нажатие открывает подробности о текущем профиле
-* Long press profile bar to [switch between different profiles](Profiles-profile-switch).
+* Долгое нажатие позволяет [переключаться между разными профилями](Profiles-profile-switch).
 * Если профиль был изменен на время - в скобках отображается оставшееся время его активности в минутах.
 
-#### Целевое значение ГК
+#### Целевое значение ГК (Цель)
 
 ![Temp target remaining duration](../images/Home2020_TT.png)
 
@@ -39,8 +39,8 @@
 
 ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
-* AAPS может динамически изменять установленную цель основываясь на чувствительности если используется алгоритм СМБ (SMB).
-* Enable either one or both of the [following options](Preferences-openaps-smb-settings) 
+* AAPS может динамически изменять установленную цель основываясь на чувствительности, если используется алгоритм СМБ (SMB).
+* Активируйте одну или обе [настройки](Preferences-openaps-smb-settings): 
    * "чувствительность повышает цель" и/или 
    * "сопротивляемость понижает цель" 
 * Если AAPS обнаружит повышенную сопротивляемость или чувствительность - цель будет изменена. 
@@ -51,11 +51,11 @@
 #### Текущий уровень глюкозы крови
 
 * Последнее значение ГК, переданное вашим НМГ, отображается в левой части экрана.
-* Color of the BG value reflects the status to the defined [range](Preferences-range-for-visualization). 
+* Цвет показаний ГК соответствует настроенному [даипазону](Preferences-range-for-visualization): 
    * зеленый = в заданном диапазоне
    * красный = ниже заданного диапазона
    * желтый = выше заданного диапазона
-* Сероватый блок в центре экрана отображает изменение текущего уровня ГК относительно предыдущего чтения, и изменение за последние 15 и 40 минут.
+* Серый блок по центру экрана отображает изменение текущего уровня ГК относительно предыдущего показания и изменение за последние 15 и 40 минут.
 
 (Screenshots-loop-status)=
 
@@ -65,50 +65,50 @@
 
 * Новые иконки отображают статус цикла:
    
-   * зеленый круг = активна замкнутая петля
-   * green circle with dotted line = [low glucose suspend (LGS)](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * зеленый круг = активен замкнутый цикла
+   * зеленый круг с пунктирной линией =[приостановка помпы на низкой ГК (LGS)](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
    * красный круг = цикл деактивирован (постоянно отключен)
    * желтый круг = цикл приостановлен (временно приостановлен, но базальный инсулин будет подаваться) - оставшееся время паузы отображается под иконкой
    * серый круг = помпа отключена (временно отключена любая подача инсулина) - оставшееся время остановки отображается под иконкой
    * оранжевый круг = запущен суперболюс - оставшееся время отображаешься под иконкой
-   * синий круг с пунктирной линией = активна открытая петля
+   * синий круг с пунктирной линией = активен открытый цикл
 
-* Короткое или длинное нажатие на иконку откроет диалоговое окно для переключения между режимами петли (Закрытая, Предотвращение низкой ГК, Открытая или Отключена), для отключения / возобновления цикла или отключения / подключения помпы обратно.
+* Короткое или длинное нажатие на иконку откроет диалоговое окно для переключения между режимами цикла (Закрытый, Приостановка на низкой ГК, Открытый или Отключен), для отключения / возобновления цикла или отключения / подключения помпы обратно.
    
-   * Если диалоговое окно было вызвано которким нажатием - после смены режима появится запрос на подтверждение. Если долгим нажатием - смена режима применится сразу.
+   * Если диалоговое окно было вызвано коротким нажатием - после смены режима появится запрос на подтверждение. Если долгим нажатием - смена режима применится сразу.
    
    ![Меню состояния цикла](../images/Home2020_Loop_Dialog.png)
 
 (Screenshots-bg-warning-sign)=
 
-#### предупреждающий знак ГК
+#### Восклицательный знак возле ГК
 
 Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
 
-*Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
+*Примечание*: AAPS учитывает данные за 30 часов в своих расчетах. Поэтому даже после устранения проблемы нерегулярной передачи данных, может потребоваться до 30 часов, чтобы исчез желтый треугольник.
 
-To remove it immediately you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
+Чтобы немедленно удалить его, вам нужно вручную удалить несколько записей из вкладки Dexcom/xDrip+.
 
-However, when there are a lot of duplicates, it might be easier to
+Однако если задублированных данных много, может быть проще сделать следующее:
 
-* [backup your settings](../Usage/ExportImportSettings.md),
+* [создать резервную копию настроек](../Usage/ExportImportSettings.md),
 * сбросить базу данных в меню обслуживания и
-* [import your settings](../Usage/ExportImportSettings.md) again
+* заново [импортировать настройки](../Usage/ExportImportSettings.md)
 
-##### Красный предупреждающий знак: Дублирующиеся данные ГК
+##### Красный восклицательный знак: Задублированные данные ГК
 
-The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
+Красный предупреждающий знак служит сигналом для немедленных действий: поступают дублирующиеся данные ГК, не позволяющие правильно работать алгоритму цикла. Поэтому замкнутый цикл будет отключен до устранения проблемы.
 
 ![Red BG warning](../images/bg_warn_red.png)
 
-You need to find out why you get duplicate BGs:
+Следует выяснить, почему данные ГК дублируются:
 
 * Активирован ли мост Dexcom на вашем сайте NS? Отключите мост, перейдя в Heroku (или к другому провайдеру хостинга), отредактируйте переменную «enable» и удалите "bridge". (Для Heroku [подробности можно найти здесь](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
-* Имеется ли несколько источников передачи данных ГК в Nightscout (NS)? Если вы используете самостоятельно собранное приложение BYODA, включите загрузку в AAPS, но не включайте его в xDrip+.
-* Есть ли подписчики, followers, которые могут получать вашу ГК и также снова передавать ее на ваш сайт NS?
+* Имеется ли несколько источников передачи данных ГК в Nightscout (NS)? Если вы используете самостоятельно собранное приложение BYODA, включите загрузку в AAPS, но не включайте её в xDrip+.
+* Есть ли подписчики, фоловеры, которые могут получать вашу ГК и также снова передавать ее на ваш сайт NS?
 * Последний вариант: В AAPS перейдите в настройки NS Client выберите настройки синхронизации и отключите опцию "Принимать данные CGM из NS".
 
-##### Желтый предупреждающий знак
+##### Желтый восклицательный знак
 
 * Желтый сигнал предупреждения указывает, что значения вашей ГК получены через нерегулярные промежутки времени или имеются пропуски значений.
    
@@ -127,17 +127,17 @@ You need to find out why you get duplicate BGs:
 
 ![Section D](../images/Home2020_TBR.png)
 
-* Иконка шприца: инсулин "на борту" (IOB) - количество активного инсулина в теле
+* Иконка шприца: инсулин "на борту" (IOB, АктИнс) - количество активного инсулина в теле
    
-   * Значение активного инсулина Iob будет нулевым при подаче только стандартного базального и когда нет остатков от предыдущих болюсов. 
+   * Значение активного инсулина IOB будет нулевым при подаче только стандартного базального и когда нет остатков от предыдущих болюсов. 
    * IOB может быть отрицательным если был период с пониженным относительно текущего профиля базалом.
    * Нажмите на иконку (только короткое нажатие), чтобы увидеть как IOB распределяется между базой и болюсом.
 
-* Grain: [carbs on board (COB)](../Usage/COB-calculation.md) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
+* Иконка колоска: [углеводы "на борту"](../Usage/COB-calculation.md) (COB, АктУгл) - количество еще не усвоенных углеводов из тех, чтоб были введены ранее. Иконка мерцает, если необходимо съесть дополнительные углеводы.
 
-* Иконка с фиолетовой линией: базальная скорость - иконка изменяется в соответствии с текущими настройками базала (прямая линия при базе 100%) 
+* Иконка с фиолетовой линией: базальная скорость (BR, БС) - иконка изменяется в соответствии с текущими настройками базала (прямая линия при базе 100%) 
    * Нажмите на иконку (только короткое нажатие), чтобы увидеть подробности базала (значение текущего базала, время начала, остаток/общая продолжительность в минутах)
-* Arrows up & down: indicating actual [autosens](Open-APS-features-autosens) status (enabled or disabled) and value is shown below icon
+* Иконка со стрелками вверх и вниз: отображает статус [Автосенса](Open-APS-features-autosens) (AS) (включен или отключен) и текущий расчет под иконкой
 
 #### Требуются углеводы
 
@@ -152,15 +152,15 @@ You need to find out why you get duplicate BGs:
 
 ![Section E](../images/Home2020_StatusLights.png)
 
-* Индикаторы состояния сообщают о 
-   * Времени работы катетера помпы
-   * Времени работы инсулина в резервуаре помпы
-   * Уровне заполнения резервуара (единицы)
-   * Времени, отработанном сенсором
-   * Времени, отработанном батареей и о ее уровне (%)
+* Индикаторы состояния сообщают: 
+   * сколько времени прошло с момента установки канюли
+   * сколько времени прошло с момента установки резервуара
+   * об уровне заполнения резервуара (в единицах)
+   * сколько времени отработал сенсор
+   * сколько времени прошло с замены батареи и об уровне ее заряда (%)
 * Если превышено пороговое значение, данные показываются желтым цветом.
 * Если превышено критическое пороговое значение, значения будут показаны красным цветом.
-* Settings can be made in [preferences](Preferences-status-lights).
+* Установить пороговые значения можно в [настройках](Preferences-status-lights).
 
 (Screenshots-section-f-main-graph)=
 
@@ -170,16 +170,16 @@ You need to find out why you get duplicate BGs:
 
 * График показывает уровень глюкозы в крови (ГК) считываемый с мониторинга глюкозы (CGM). 
 * Здесь показаны заметки, введенные на вкладке действия, такие как калибровка с глюкометра и записи углеводов, а также переключения профиля. 
-* Длительное нажатие на графике изменит шкалу времени. Можно выбрать 6, 8, 12, 18 или 24 часа.
-* Зеленая область отражает ваш целевой диапазон. It can be configured in [preferences](Preferences-range-for-visualization).
-* Blue triangles show [SMB](Open-APS-features-super-micro-bolus-smb) - if enabled in [preferences](Preferences-openaps-smb-settings).
+* Длительное нажатие на графике изменит его масштаб. Можно выбрать отображение последних 6, 8, 12, 18 или 24 часов.
+* Зеленая область отражает ваш целевой диапазон. Его можно задать в [настройках](Preferences-range-for-visualization).
+* Голубые треугольники показывают [СМБ](Open-APS-features-super-micro-bolus-smb) - если они активированы в [настройках](Preferences-openaps-smb-settings).
 * Дополнительная информация:
    
    * Прогнозирование
    * Базал
    * Активность-кривая действия инсулина
 
-#### Активация необязательной информации
+#### Активация дополнительной информации
 
 * Щелкните по треугольнику в правой части основного графика, чтобы выбрать, какая информация будет показана на главной диаграмме.
 * Для главного графика доступны три варианта выше строки "\---\---- График 1 \---\----".
@@ -190,7 +190,7 @@ You need to find out why you get duplicate BGs:
 
 #### Линии прогнозирования
 
-* **Orange** line: [COB](../Usage/COB-calculation.md) (colour is used generally to represent COB and carbs)
+* ** Оранжевая ** линия: [АктУгл (COB) ](../Usage/COB-calculation.md) (цвет используется для представления активных углеводов COB и углеводов в целом)
    
    Линия предсказания показывает, где будет ГК (а не сами активные углеводы COB) на основе текущих настроек помпы с учетом того, что отклонения вследствие усвоения углеводов останутся постоянными. Эта линия появляется только при известном наличии активных углеводов COB.
 
@@ -202,38 +202,38 @@ You need to find out why you get duplicate BGs:
    
    В строке прогноза показано, как изменится линия траектории активного инсулина IOB, если помпа прекратит подачу инсулина (0% TBR).
    
-   *This line appears only when the [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *Эта линия появляется только когда используется алгоритм [СМБ](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb).*
 
-* **Dark yellow** line: [UAM](Sensitivity-detection-and-COB-sensitivity-oref1) (un-announced meals)
+* ** Темно-желтая ** линия: [ непредвиденный прием пищи UAM ](Sensitivity-detection-and-COB-sensitivity-oref1)
    
    Незапланированный прием пищи - обнаружение значительного повышения уровня глюкозы, как следствие приема пищи, выброса адреналина или других факторов. Линия предсказания аналогична оранжевой линии активных углеводов COB, но предполагает, что отклонения будут понижаться с постоянной скоростью (за счет увеличения текущей скорости сокращения).
    
-   *This line appears only when the [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *Эта линия появляется только когда используется алгоритм [СМБ](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb).*
 
-* **Dark orange** line: aCOB (accelerated carbohydrate absorption)
+* **Темно-оранжевая** линия: aCOB (ускоренное усвоение углеводов)
    
-   Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/l/5m) carb absorption rate. Deprecated and of limited usefulness.
+   Аналогично COB, но скорость усвоения углеводов считается постоянной и равной 10 мг/дл/5м (-0.555 ммоль/л/5м). Устарело и имеет ограниченную полезность.
    
-   *This line appears only when the older [AMA](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *Линия появляется только когда используется старый алгоритм [AMA](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb).*
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+Обычно реальная кривая глюкозы находится где-то между этих линий, или близка к той, которая ближе всего описывает вашу текущую ситуацию.
 
 #### Базал
 
 * **Сплошная синяя** линия показывает базальную скорость помпы и отражает фактическую подачу инсулина с течением времени.
-* **пунктирная синяя** линия - это средняя скорость базы, если не было временных настроек базальной скорости (TBR).
-* При стандартной базальной скорости область под кривой показывается в темно-синем цвете.
-* Когда базальная скорость временно корректируется (увеличивается или уменьшается), область под кривой отображается в светло-синем цвете.
+* **Пунктирная синяя** линия - это базальная скорость из профиля, если бы не было временных изменений базальной скорости (ВБС).
+* При стандартной базальной скорости область под линией показывается в темно-синем цвете.
+* Когда базальная скорость временно изменяется (увеличивается или уменьшается), область под линией отображается в светло-синем цвете.
 
 #### Нагрузка
 
-* В **тонкая желтая** линия отображает активность инсулина. 
+* **Тонкая желтая** линия отображает активность инсулина. 
 * Она основана на ожидаемом падении ГК из-за действия инсулина в системе, если не присутствуют другие факторы (например, углеводы).
 
 ### Раздел G - дополнительные графики
 
 * Можно активировать до четырех дополнительных графиков ниже главного графика.
-* To open settings for additional graphs click the triangle on the right side of the [main graph](Screenshots-section-f-main-graph) and scroll down.
+* Чтобы настроить дополнительные графики - щелкните по треугольнику справа от [главного](Screenshots-section-f-main-graph) и прокрутите вниз.
 
 ![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
 
@@ -245,28 +245,28 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Активный инсулин (IOB)
 
-* Показывает инсулин, который вы имеете на борту (= активный инсулин в вашем теле). Он включает инсулин болюсов и временного базала (**, но исключает базальную скорость, установленную в вашем профиле**).
-* If there were no [SMBs](Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+* Показывает инсулин, который вы имеете "на борту" (= активный инсулин в вашем теле). Он включает инсулин болюсов и временного базала (**но исключает базальную скорость, установленную в вашем профиле**).
+* Если бы не было [СМБ](Open-APS-features-super-micro-bolus-smb), болюсов, и ВБС во время действия инсулина DIA, он равнялся бы нулю.
 * Активный инсулин IOB может быть отрицательным, если у не осталось ни болюсов, ни нулевого/низкого временного базала в течение более длительного времени чем DIA.
-* Decaying depends on your [DIA and insulin profile settings](Config-Builder-local-profile). 
+* Усвоение инсулина зависит от времени его действия [DIA и настроек профиля инсулина](Config-Builder-local-profile). 
 
-#### Активные углеводы COB
+#### Активные углеводы (COB)
 
 * Показывает активные углеводы в организме (= еще не усвоенные углеводы). 
 * Усвоение активного инсулина зависит от отклонений, замеченных алгоритмом. 
-* Если он обнаружит более высокое поглощение углеводов, чем ожидалось, будет подан инсулин, и это увеличит количество активного инсулина IOB (с учетом настроек безопасности). 
+* Если обнаружится более быстрое усвоение углеводов, чем ожидалось, будет подан инсулин, и это увеличит количество активного инсулина IOB (с учетом настроек безопасности). 
 
 #### Отклонения
 
-* ** СЕРЫЕ ** столбцы показывают отклонение, вызванное углеводами. 
-* ** ЗЕЛЕНЫЕ ** столбцы показывают, что ГК превышает уровень, ожидаемый алгоритмом. Green bars are used to increase resistance in [Autosens](Open-APS-features-autosens).
-* ** КРАСНЫЕ ** столбцы показывают, что ГК ниже величины, ожидаемой алгоритмом. Red bars are used to increase sensitivity in [Autosens](Open-APS-features-autosens).
-* ** ЖЕЛТЫЕ ** столбцы показывают отклонение, вызванное непредвиденным приемом пищи UAM.
+* **СЕРЫЕ** столбцы показывают отклонение, вызванное углеводами. 
+* **ЗЕЛЕНЫЕ** столбцы показывают, что ГК превышает уровень, ожидаемый алгоритмом. Зеленые столбцы используются для увеличения сопротивления в [Autosens](Open-APS-features-autosens).
+* **КРАСНЫЕ** столбцы показывают, что ГК ниже величины, ожидаемой алгоритмом. Красные столбцы используются для увеличения чувствительности в [Autosens](Open-APS-features-autosens).
+* **ЖЕЛТЫЕ** столбцы показывают отклонение, вызванное непредвиденным приемом пищи UAM.
 * **ЧЕРНЫЕ** столбцы показывают небольшие отклонения, не принятые во внимание при расчете чувствительности
 
 #### Чувствительность
 
-* Shows the sensitivity that [Autosens](Open-APS-features-autosens) has detected. 
+* Показывает чувствительность, обнаруженную алгоритмом [Autosens](Open-APS-features-autosens). 
 * Чувствительность - это расчет чувствительности к инсулину в результате нагрузки, гормонов и т.д.
 
 #### Нагрузка
@@ -317,7 +317,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * Отправляет калибровку в xDrip + или открывает диалог калибровки Dexcom.
 * Must be activated in [preferences](Preferences-buttons).
 
-#### CGM/Непрерывный мониторинг ГК
+#### CGM / НМГ
 
 * Открывает xDrip +.
 * Кнопка Назад возвращает в AAPS.
@@ -347,7 +347,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 #### Напоминание о приеме пищи
 
-* Для углеводов в будущем можно поставить галочку (ставится по умолчанию при вводе времени в будущем), чтобы напомнить о приеме введеных в AAPS углеводов
+* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AAPS
    
    ![Мастер болюса с напоминанием о питании](../images/Home2021_BolusWizard_EatingReminder.png)
 
@@ -382,7 +382,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
 
-* If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. 
+* If you see the warning above after using bolus wizard, AAPS has detected that the calculated COB value maybe wrong.
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
 * For details see the hints on [COB calculation page](COB-calculation-detection-of-wrong-cob-values).
 
@@ -439,7 +439,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * Позволяет перемещаться по журналу AAPS.
 
-#### TDD/общая суточная доза инсулина
+#### TDD / общая суточная доза инсулина
 
 * Общая суточная доза = болюс + базал за сутки
 * Некоторые врачи рекомендуют - особенно для новых пользователей - соотношение базал-болюс 50:50. 
@@ -459,7 +459,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 * ФИОЛЕТОВАЯ линия показывает, сколько инсулина остается после ввода по мере рассасывания, а СИНЯЯ линия показывает его активность.
 * The important thing to note is that the decay has a long tail. 
 * If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
-* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
+* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AAPS algorithm.
 
 For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
