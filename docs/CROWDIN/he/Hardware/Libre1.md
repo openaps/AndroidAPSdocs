@@ -17,8 +17,8 @@
 -   אם עוד לא התקנתם את xDrip+, הורידו ועקבו אחר ההוראות של [LimiTTEer](https://github.com/JoernL/LimiTTer) או [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki).
 -   ב-xDrip+ נווטו להגדרות > הגדרות לשיתוף פעולה בין אפליקציות > הפץ על הטלפון והפעילו.
 -   ב-xDrip+ נווטו להגדרות > הגדרות לשיתוף פעולה בין אפליקציות > קבל טיפולים ובחרו כבוי.
--   אם ברצונכם לבצע כיול דרך AndroidAPS, נווטו להגדרות > הגדרות לשיתוף פעולה בין אפליקציות > קבל כיולים והפעילו. ייתכן שתצטרכו לבדוק את ההגדרות שבהגדרות > הגדרות פחות נפוצות > כיול מתקדם.
--   בחרו ביישום xDrip+ בבונה התצורה (הגדרה ב- AndroidAPS).
+-   If you want to be able to use AAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. ייתכן שתצטרכו לבדוק את ההגדרות שבהגדרות > הגדרות פחות נפוצות > כיול מתקדם.
+-   Select xDrip+ in ConfigBuilder (setting in AAPS).
 -   התאימו את ההגדרות ב-xDrip+ לפי [דף הוראות   xDrip+](../Configuration/xdrip.md). ישנו חלק להגדרה בסיסית של xDrip+ והגדרות מיוחדות לשימוש ב-Freestyle Libre עם xDrip+.
 -   אם AAPS אינו מקבל ערכי סוכר כאשר הטלפון במצב טיסה השתמשו ב'זהה מקלט' כפי שמתואר בהגדרות [xDrip+ דף](../Configuration/xdrip.md).
 
@@ -26,4 +26,4 @@
 
 -   תצטרכו להשתמש בגרסת Glimp 4.15.57 ומעלה. גרסאות ישנות יותר לא נתמכות.
 -   אם לא הוגדרה כבר, אפשר להוריד את Glimp ולעקוב אחר ההוראות ב[נייטסקאוט](https://nightscout.github.io/uploader/setup/#glimp).
--   בחרו ביישום Glimp בבונה התצורה (הגדרה ב- AndroidAPS).
+-   Select Glimp in ConfigBuilder (setting in AAPS).
