@@ -283,7 +283,7 @@
     
     ![קובץ APK במקום חבילה](../images/studioSetup/43_Apk.png)
 
-* Make sure that module is set to "AAPS.app" (1).
+* Make sure that module is set to "AndroidAPS.app" (1).
 
 * לחצו "Create new" (2) על מנת להתחיל יצירת ה-key store (מאגר המפתחות).
     
