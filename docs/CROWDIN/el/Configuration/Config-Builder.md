@@ -24,36 +24,36 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 ## Προφίλ
 
-* Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
+* Επιλέξτε το βασικό προφίλ που θέλετε να χρησιμοποιήσετε. See [Profiles](../Usage/Profiles.md) page for more setup information.
 * As of AAPS 3.0, only the local profile is available.
 
-However, it is possible to synchronise a Nightscout profile into a local profile. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Please see the instructions below. This can be helpful if major changes to a more extensive profile can be entered more easily via the web interface, e.g. to manually copy data from a spreadsheet.
+Ωστόσο, είναι εφικτό να συγχρονιστεί ένα προφίλ Nightscout σε ένα τοπικό προφίλ. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Παρακαλούμε δείτε τις παρακάτω οδηγίες. Αυτό μπορεί να είναι χρήσιμο αν σημαντικές αλλαγές σε ένα πιο εκτεταμένο προφίλ μπορούν να εισαχθούν πιο εύκολα μέσω της διεπαφής web, e.. για να αντιγράψετε χειροκίνητα δεδομένα από ένα υπολογιστικό φύλλο.
 
 (Config-Builder-local-profile)=
 
-### Local profile
+### Τοπικό προφίλ
 
-Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
+Το τοπικό προφίλ χρησιμοποιεί το βασικό προφίλ που καταχωρήθηκε χειροκίνητα στο τηλέφωνο. Μόλις επιλεγεί, εμφανίζεται μια νέα καρτέλα στο AAPS, όπου μπορείτε να αλλάξετε τα δεδομένα προφίλ που διαβάζονται από την αντλία, εάν είναι απαραίτητο. Με την επόμενη αλλαγή προφίλ εγγράφονται στην αντλία στο προφίλ 1. Αυτό το προφίλ συνιστάται καθώς δεν εξαρτάται από τη σύνδεση στο διαδίκτυο.
 
-Your local profiles are part of [exported settings](../Usage/ExportImportSettings.md). So make sure to have a backup in a safe place.
+Τα τοπικά προφίλ σας είναι μέρος των ρυθμίσεων [που εξάγονται](../Usage/ExportImportSettings.md). Έτσι βεβαιωθείτε ότι έχετε ένα αντίγραφο ασφαλείας σε ασφαλές μέρος.
 
-![Local Profile settings](../images/LocalProfile_Settings.png)
+![Ρυθμίσεις τοπικού προφίλ](../images/LocalProfile_Settings.png)
 
-Buttons:
+Πλήκτρα:
 
-* green plus: add
-* red X: delete
-* blue arrow: duplicate
+* πράσινο plus: προσθέστε
+* κόκκινο Χ: διαγραφή
+* μπλε βέλος: αντίγραφο
 
-If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+Αν κάνετε οποιεσδήποτε αλλαγές στο προφίλ σας, βεβαιωθείτε ότι επεξεργάζεστε το σωστό προφίλ. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
 
 #### Clone profile switch
 
-You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+Μπορείτε να δημιουργήσετε εύκολα ένα νέο τοπικό προφίλ από μια αλλαγή προφίλ. Σε αυτή την περίπτωση η χρονική μετατόπιση και το ποσοστό θα εφαρμοστούν στο νέο τοπικό προφίλ.
 
-1. Click 3-dots-menu in upper right corner.
-2. Select 'Treatments'.
-3. Press star symbol to access profile switch page.
+1. Κάντε κλικ στις τρεις τελείες στην επάνω δεξιά γωνία.
+2. Επιλέξτε 'Θεραπείες'.
+3. Πατήστε το σύμβολο αστέρι για να αποκτήσετε πρόσβαση μ στη σελίδα αλλαγής προφίλ.
 4. Select the desired profile switch and press "Clone".
 5. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
 
@@ -61,26 +61,26 @@ You can easily create a new local profile from a profile switch. In this case ti
 
 (Config-Builder-upload-local-profiles-to-nightscout)=
 
-#### Upload local profiles to Nightscout
+#### Ανεβάστε τα τοπικά προφίλ στο nightscout
 
-Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](Preferences-nsclient).
+Τα τοπικά προφίλ μπορούν επίσης να ανέβουν στο nightscout. The settings can be found in [NSClient preferences](Preferences-nsclient).
 
-![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
+![Ανεβάστε το τοπικό προφίλ στο nightscout](../images/LocalProfile_UploadNS_AASP30.png)
 
-#### Change profile in Nighscout profile editor
+#### Αλλάξτε το προφίλ στο πρόγραμμα επεξεργασίας προφίλ Nightscout
 
 You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](Preferences-nsclient).
 
 It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
 
-![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+![Κλωνοποιήστε τις βάσεις δεδομένων](../images/Nightscout_Profile_Editor.PNG)
 
-### Profile helper
+### Βοηθός προφίλ
 
-Profile helper offers two functions:
+Ο βοηθός προφίλ προσφέρει δύο λειτουργίες:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. Εύρεση προφίλ για παιδιά
+2. Σύγκριση δύο προφίλ ή εναλλαγή προφίλ προκειμένου να κλωνοποιηθεί ένα νέο προφίλ
 
 Details are explained on the separate [profile helper page](../Configuration/profilehelper.md).
 
@@ -88,20 +88,20 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 
 ## Ινσουλίνη
 
-![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
+![Τύπος Ινσουλίνης](../images/ConfBuild_Insulin_AAPS30.png)
 
-* Select the type of insulin curve you are using.
+* Επιλέξτε τον τύπο ινσουλίνης που χρησιμοποιείτε.
 * The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
-* The curves will vary based on the DIA and the time to peak.
+* Οι καμπύλες θα ποικίλλουν βασιζόμενες στην DIA και στην ώρα κορύφωσης.
     
-    * PURPLE line shows how much **insulin remains** after it has been injected as it decays with time.
-    * BLUE line shows **how active** insulin is.
+    * Η ΜΩΒ γραμμή δείχνει πόση **ινσουλίνη παραμένει** μετά την ένεση καθώς εξασθενεί με το χρόνο.
+    * Οι μπλε γραμμές δείχνουν **πόση ενεργή** ινσουλίνη υπάρχει.
 
 ### DIA
 
-* The DIA is not the same for each person. That's why you have to test it for yourself. 
-* But it must always be at least 5 hours.
-* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AAPS uses minimum 5h as DIA.
+* Η DIA (διάρκεια δράσης ινσουλίνης) δεν είναι η ίδια για κάθε άτομο Γι 'αυτό θα πρέπει να το δοκιμάσετε για τον εαυτό σας. 
+* Αλλά πρέπει πάντα να είναι τουλάχιστον 5 ώρες.
+* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Για αυτόν ακριβώς τον λόγο το AAPS χρησιμοποιεί ως ελάχιστη ώρα τις 5 ώρες για τη διάρκεια δράσης (DIA) της ινσουλίνης 
 * You can read more about that in the Insulin Profile section of [this](Screenshots-insulin-profile) page.
 
 ### Insulin type differences
@@ -116,26 +116,26 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 ![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
 
 * recommended for Humalog, Novolog and Novorapid
-* DIA = at least 5.0h
-* Max. peak = 75 minutes after injection (fixed, not adjustable)
+* DIA = τουλάχιστον 5 ώρες
+* Μέγιστη. κορυφή = 75 λεπτά μετά την ένεση (σταθερή, μη ρυθμιζόμενη)
 
 #### Ultra-Rapid Oref
 
 ![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
 
-* recommended for FIASP
-* DIA = at least 5.0h
-* Max. peak = 55 minutes after injection (fixed, not adjustable)
+* προτείνεται για FIASP
+* DIA = τουλάχιστον 5 ώρες
+* Μέγιστη. κορυφή = 55 λεπτά μετά την ένεση (σταθερή, μη ρυθμιζόμενη)
 
 (Config-Builder-lyumjev)=
 
 #### Lyumjev
 
-![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
+![Τύπος ινσουλίνης Lyumjev](../images/ConfBuild_Insulin_L.png)
 
-* special insulin profile for Lyumjev
-* DIA = at least 5.0h
-* Max. peak = 45 minutes after injection (fixed, not adjustable)
+* ειδικό προφίλ ινσουλίνης για το Lyumjev
+* DIA = τουλάχιστον 5 ώρες
+* Μέγιστη. κορυφή = 45 λεπτά μετά την ένεση (σταθερή, μη ρυθμιζόμενη)
 
 #### Free Peak Oref
 
@@ -151,55 +151,55 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 
 Select the blood glucose source you are using - see [BG Source](BG-Source.md) page for more setup information.
 
-![Config Builder BG source](../images/ConfBuild_BGSource_AAPS30.png)
+![Διαμόρφωση BG πηγή](../images/ConfBuild_BGSource_AAPS30.png)
 
 * [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - υποστηρίζεται μόνο έκδοση 4.15.57 και νεότερη
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
-* [Tomato App](http://tomato.cool/) for MiaoMiao device
-* [Glunovo App](https://infinovo.com/) for Glunovo CGM system
+* [Tomato App](http://tomato.cool/) για τη συσκευή MiaoMiao
+* [Εφαρμογή Glunovo](https://infinovo.com/) για το σύστημα καταγραφης Glunovo CGM
 * NSClient BG - not recommended as closed loop relies on mobile data / wifi coverage in this case. CGM data will only be received if there is an online connection to your NS site. Better use local broadcast from one of the other CGM data sources.
-* Random BG: Generates random BG data (Demo mode only)
+* Τυχαία τιμή γλυκόζης (BG): Δημιουργεί τυχαία δεδομένα τιμών γλυκόζης (λειτουργία επίδειξης μόνο)
 
 (Config-Builder-pump)=
 
 ## Αντλία
 
-Select the pump you are using.
+Επιλέξτε την αντλία που χρησιμοποιείτε.
 
-![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS30.png)
+![Επιλογή διαμόρφωσης για την εφαρμογή δημιουργίας της αντλίας ](../images/ConfBuild_Pump_AAPS30.png)
 
 * [Dana R](DanaR-Insulin-Pump.md)
-* Dana R Korean (for domestic DanaR pump)
-* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
-* [Dana-i/RS](DanaRS-Insulin-Pump.md)
+* DanaR Korean (τοπική αντλία DanaR pump για τη Κορέα)
+* Αντλία Dana Rv2 (αντλία DanaR με την ανεπίσημη αναβάθμιση λογισμικού)
+* [Αντλία Dana-i/RS](DanaRS-Insulin-Pump.md)
     
-    * For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
-    * [Password for Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
+    * Για τις αντλίες dana, χρησιμοποιήστε **Σύνθετες ρυθμίσεις** για να ενεργοποιήσετε το BT φρουρό εάν είναι απαραίτητο. Απενεργοποιεί το Bluetooth για ένα δευτερόλεπτο αν δεν υπάρχει δυνατή σύνδεση με την αντλία. Αυτό μπορεί να βοηθήσει σε ορισμένα τηλέφωνα όπου το bluetooth κολλάει.
+    * Ο [Κωδικός πρόσβασης για την Dana RS αντλία](../Configuration/DanaRS-Insulin-Pump.md) πρέπει να εισαχθεί σωστά. Ο κωδικός δεν είχε ελεγχθεί σε προηγούμενες εκδόσεις.
 
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
 
 * [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
-* [Omnipod Eros](OmnipodEros.md)
+* [Αντλία Omnipod Eros](OmnipodEros.md)
 * [Omnipod DASH](OmnipodDASH.md)
 * [Medtronic](MedtronicPump.md)
 * [Diaconn G8](DiaconnG8.md)
 * MDI (receive AAPS suggestions for your multiple daily injections therapy)
-* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
+* Εικονική αντλία (ανοικτό κύκλωμα για αντλία που δεν έχει ακόμα οδηγό - μόνο προτάσεις AAPS)
 
 ## Ανίχνευση ευαισθησίας
 
-Select the type of sensitivity detection. For more details of different designs please [read on here](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Επιλέξτε τον τύπο ανίχνευσης ευαισθησίας. Για περισσότερες λεπτομέρειες σχετικά με διαφορετικά σχέδια παρακαλώ [διαβάστε εδώ](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Περισσότερες λεπτομέρειες σχετικά με τον αλγόριθμο ευαισθησίας μπορούν να διαβαστούν στα έγγραφα [OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
 (Config-Builder-absorption-settings)=
 
-### Absorption settings
+### Ρύθμιση απορρόφησης
 
-If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.md) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+Εάν χρησιμοποιείτε Oref1 με SMB, πρέπει να αλλάξετε το **min_5m_carbimpact** στο 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.md) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
 
 (Config-Builder-aps)=
 
@@ -230,17 +230,17 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 * AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). 
 * The Closed Loop works within numerous safety limits, which you can be set individually.
-* Closed Loop is only possible if you are in [Objective 6](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
-* Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol or 100 mg/dl instead of 5,0 - 7,0 mmol or 90 - 125 mg/dl) is recommended.
+* Το κλειστό κύκλωμα είναι δυνατό μόνο εάν βρίσκεστε σε [ Στόχος 6 ](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend) ή υψηλότερα και χρησιμοποιήστε μια υποστηριζόμενη αντλία.
+* Παρακαλώ σημειώστε: Σε κατάσταση κλειστού κυκλώματος ένας μοναδικός στόχος αντί του εύρους στόχου (π.χ. συνιστώνται 5,5 mmol ή 100 mg/dl αντί για 5,0 - 7,0 mmol ή 90 - 125 mg/dl).
 
-### Low Glucose Suspend (LGS)
+### Αναστολή Χαμηλής Γλυκόζης)
 
-* maxIOB is set to zero
-* This means if blood glucose is dropping it can reduce basal for you.
-* But if blood glucose is rising no automatic correction will be made. Your basal rates will remain the same as your selected profile.
+* το μέγιστο IOB έχει οριστεί σε μηδέν
+* Αυτό σημαίνει ότι εάν η γλυκόζη του αίματος πέφτει μπορεί να μειώσει τον βασικό ρυθμό για εσας.
+* Αλλα εάν η γλυκόζη του αίματος αυξάνεται, καμία αυτόματη διόρθωση δεν θα γίνει. Your basal rates will remain the same as your selected profile.
 * Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower BG.
 
-### Minimal request change
+### Ελάχιστο αίτημα για αλλαγή
 
 * When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. 
 * To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate.
@@ -248,7 +248,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 ## Στόχοι ( μαθαίνοντας το πρόγραμμα)
 
-AAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+AAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. Αυτός είναι ο μόνος τρόπος για να εμπιστευτείτε το σύστημα.
 
 You should [export your settings](../Usage/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
 
@@ -262,11 +262,11 @@ If you view the Treatments (Treat) tab, you can see the treatments that have bee
 
 ### Σφαιρική Εικόνα
 
-Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
+Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Μπορείτε να έχετε πρόσβαση στις ρυθμίσεις κάνοντας κλικ στο γρανάζι.
 
-#### Keep screen on
+#### Κρατήστε την οθόνη ενεργή
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+Η επιλογή 'Ενεργοποίηση οθόνης' θα αναγκάσει το Android να διατηρεί την οθόνη ενεργή ανά πάσα στιγμή. Αυτό είναι χρήσιμο για παρουσιάσεις κ. λ. π. Αλλά καταναλώνει πολύ μπαταρία. Συνεπώς, συνιστάται να συνδέσετε το smartphone με το καλώδιο του φορτιστή.
 
 #### Buttons
 
@@ -275,15 +275,15 @@ Define which Buttons are shown on the home screen.
 * Θεραπείες
 * Υπολογιτής
 * Ινσουλίνη
-* Carbs
+* Υδατάνθρακες
 * CGM (opens xDrip+)
-* Calibration
+* Καλιμπράρισμα
 
 Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
 
-#### QuickWizard settings
+#### Ρυθμίσεις Γρήγορου Οδηγού
 
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Δημιουργήστε ένα κουμπί για ένα συγκεκριμένο πρότυπο γεύματος (υδατάνθρακες και μέθοδος υπολογισμού για το bolus) που θα εμφανίζονται στην αρχική οθόνη. Χρησιμοποιείται για τα γεύματα που καταναλώνονται συχνά. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
 
 Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
 
@@ -293,9 +293,9 @@ Note: Button will not be visible if outside the specified time range or if you h
 
 Choose default temp-targets (duration and target). Preset values are:
 
-* eating soon: target 72 mg/dl / 4.0 mmol/l, duration 45 min
-* activity: target 140 mg/dl / 7.8 mmol/l, duration 90 min
-* hypo: target 125 mg/dl / 6.9 mmol/l, duration 45 min
+* Φαγητό σύντομα: στόχος 72 mg/ dl / 4, 0 mmol/l, διάρκεια 45 λεπτά
+* Δραστηριότητα: στόχος 140 mg/dl / 7.8 mmol/l, διάρκεια 90 min
+* υπογλυκαιμία: στόχος 125 mg/dl / 6, 9 mmol/l, διάρκεια 45 λεπτά 
 
 #### Fill/Prime standard insulin amounts
 
@@ -303,21 +303,21 @@ Choose the default amounts of the three buttons in fill/prime dialogue, dependin
 
 #### Range of visualization
 
-Choose the high and low marks for the BG-graph on AAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+Choose the high and low marks for the BG-graph on AAPS overview and smart watch. It is only the visualization, not the target range for your BG. Παράδειγμα: 70 - 180 mg/dl ή 3.9 - 10 mmol/l
 
-#### Shorten tab titles
+#### Συντομογραφίες ενοτήτων
 
-Choose wether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+Επιλέξτε αν οι τίτλοι καρτέλας στο AAPS είναι μεγάλοι (π.χ. ACTIONS, LOCAL PROFILE, AUTOMATION) ή σύντομες (π.χ. ACT, LP, AUTO)
 
 #### Show notes field in treatment dialogs
 
-Choose if you want to have a notes field when entering treatments or not.
+Επιλέξτε αν θέλετε να έχετε ένα πεδίο σημειώσεων όταν εισάγετε θεραπείες ή όχι.
 
-#### Status lights
+#### Φώτα κατάστασης
 
-Choose if you want to have [status lights](Preferences-status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+Choose if you want to have [status lights](Preferences-status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Η κρίσιμη ηλικία θα εμφανιστεί με κόκκινο χρώμα.
 
-#### Advanced settings
+#### Προηγμένες ρυθμίσεις
 
 **Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
 
@@ -330,9 +330,9 @@ Choose if you want to have [status lights](Preferences-status-lights) on overvie
 * Some buttons to quickly access common features.
 * See [AAPS screenshots](Screenshots-action-tab) for details.
 
-### Automation
+### Αυτοματοποίηση
 
-User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.md).
+User defined automation tasks ('if-then-else'). Παρακαλώ [διαβάστε εδώ](../Usage/Automation.md).
 
 (Config-Builder-sms-communicator)=
 
@@ -340,11 +340,11 @@ User defined automation tasks ('if-then-else'). Please [read on here](../Usage/A
 
 Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.md) for more setup information.
 
-### Food
+### Φαγητό
 
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-Note: Entries cannot be used in the AAPS calculator. (View only)
+Note: Entries cannot be used in the AAPS calculator. (μόνο για ανάγνωση)
 
 (Config-Builder-wear)=
 
@@ -358,7 +358,7 @@ If you want to bolus etc. from the watch then within "Wear settings" you need to
 
 Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
-* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
+* Ξαναστείλετε όλα τα δεδομένα. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
 * Open settings on your watch directly from your phone.
 
 ### xDrip Statusline (watch)
@@ -370,9 +370,9 @@ Display loop information on your xDrip+ watchface (if you are not using AAPS/[AA
 * Setup sync of your AAPS data with Nightscout.
 * Settings in [preferences](Preferences-nsclient) can be opened by clicking the cog wheel.
 
-### Maintenance
+### Συντήρηση
 
-Email and number of logs to be send. Normally no change necessary.
+Ηλεκτρονικό ταχυδρομείο και αριθμός αρχείων καταγραφής που αποστέλλονται. Κανονικά καμία αλλαγή δεν είναι απαραίτητη.
 
 ### Διαμόρφωση
 
