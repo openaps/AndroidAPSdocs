@@ -283,7 +283,7 @@ Signer signifie que vous signez votre application générée mais d'une façon n
     
     ![APK au lieu du bundle](../images/studioSetup/43_Apk.png)
 
-* Make sure that module is set to "AAPS.app" (1).
+* Make sure that module is set to "AndroidAPS.app" (1).
 
 * Cliquez sur "Create new..." (2) pour commencer la création de votre fichier de clés.
     
