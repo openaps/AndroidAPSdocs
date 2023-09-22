@@ -4,7 +4,7 @@
 
 KŞ verileri atlamalı/gürültülü ise, AAPS insülini yanlış dozlayarak yüksek veya düşük KŞ'ne sebep olabilir. Bu nedenle, sorun çözülene kadar döngüyü devre dışı bırakmak önemlidir. CGM'nize bağlı olarak, bu tür sorunlar CGM'in yapılandırmasından veya sensör/set sorunlarından kaynaklanabilir. Bunu çözmek için CGM sensörünüzü değiştirmeniz gerekebilir.
 
-Bazı CGM sistemleri, okumalardaki gürültü seviyesini tespit etmek için dahili algoritmalara sahiptir ve AndroidAPS, KŞ verileri çok güvenilmezse SMB'leri vermekten kaçınmak için bu bilgiyi kullanabilir. Ancak, bazı CGM'ler bu verileri iletmez ve bu KŞ kaynakları için 'SMB'yi her zaman etkinleştir' ve 'Karbonhidrattan sonra SMB'yi etkinleştir' güvenlik nedenleriyle devre dışı bırakılır.
+Some CGM systems have internal algorithms to detect the noise level in the readings and AAPS can use this information to avoid giving SMBs if the BG data is too unreliable. Ancak, bazı CGM'ler bu verileri iletmez ve bu KŞ kaynakları için 'SMB'yi her zaman etkinleştir' ve 'Karbonhidrattan sonra SMB'yi etkinleştir' güvenlik nedenleriyle devre dışı bırakılır.
 
 ## Dexcom sensörleri
 
