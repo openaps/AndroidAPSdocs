@@ -215,13 +215,13 @@
 (Preferences-status-lights)=
 ### Stavové indikátory
 
-- Status lights give a visual warning for
+- Stavové indikátory zobrazují vizuální varování pro
 
-  - Sensor age
+  - Stáří senzoru
   - Sensor battery level for certain smart readers (see [screenshots page](Screenshots-sensor-level-battery) for details).
-  - Insulin age (days reservoir is used)
-  - Reservoir level (units)
-  - Cannula age
+  - Stáří inzulínu (doba použití aktuálního zásobníku)
+  - Stav zásobníku (jednotky)
+  - Stáří kanyly
   - Pump battery age
   - Pump battery level (%)
 
@@ -393,7 +393,7 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 
 - A threshold can be defined - minimum amount of carbs needed to trigger a notification.
 
-- Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+- V případě potřeby může být notifikace vyžadovaných sacharidů odeslána do Nightscoutu. Notifikace se pak zobrazí v Nightscoutu a bude vysílána.
 
   ```{image} ../images/Pref2020_CarbsRequired.png
   :alt: Zobrazení požadovaných sacharidů na domovské obrazovce
