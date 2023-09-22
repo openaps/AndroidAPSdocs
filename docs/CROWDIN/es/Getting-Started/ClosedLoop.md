@@ -26,7 +26,7 @@ En la actualidad, existen tres principales sistemas de lazo cerrado de código a
 
 ### AndroidAPS (AAPS)
 
-AAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). Utiliza un smartphone Android para el cálculo y el control de tu bomba de insulina. Mantiene una estrecha colaboración con OpenAPS (es decir, comparten algoritmos).
+AAPS se describe en detalle en [esta documentación](./WhatisAndroidAPS.html). Utiliza un smartphone Android para el cálculo y el control de tu bomba de insulina. Mantiene una estrecha colaboración con OpenAPS (es decir, comparten algoritmos).
 
 Las [bombas](../Hardware/pumps.md) compatibles son:
 
