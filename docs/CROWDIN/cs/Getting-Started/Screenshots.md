@@ -10,7 +10,7 @@ This is the first screen you will come across when you open AAPS and it contains
 
 * Navigate between the various AAPS modules.
 * Obrazovky můžete také změnit tak, že přejedete prstem doleva nebo doprava.
-* Displayed tabs can be selected in [config builder](Config-Builder-tab-or-hamburger-menu).
+* Zobrazené karty mohou být vybrány v [konfiguraci](Config-Builder-tab-or-hamburger-menu).
 
 (Screenshots-section-b-profile-target)=
 
@@ -22,7 +22,7 @@ This is the first screen you will come across when you open AAPS and it contains
 
 * Aktuální profil je zobrazen v levém panelu.
 * Krátkým stiskem panelu profilu zobrazíte detaily profilu
-* Long press profile bar to [switch between different profiles](Profiles-profile-switch).
+* Dlouhým stiskem panelu profilu [přepínejte mezi různými profily](Profiles-profile-switch).
 * Pokud byl profil přepnut s dobou trvání, tak se zbývající minuty platnosti profilu zobrazí v závorkách.
 
 #### Cíl
@@ -40,7 +40,7 @@ This is the first screen you will come across when you open AAPS and it contains
 ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS může dynamicky upravovat vaši cílovou hodnotu na základě citlivosti, pokud používáte algoritmus SMB.
-* Enable either one or both of the [following options](Preferences-openaps-smb-settings) 
+* Povolte jednu nebo obě [následující možnosti](Preferences-openaps-smb-settings) 
    * "citlivost zvyšuje cíl" a/nebo 
    * "rezistence snižuje cíl" 
 * Jestliže AAPS detekuje rezistenci nebo citlivost, cíl se bude lišit od hodnoty, která je nastavena v profilu. 
@@ -51,7 +51,7 @@ This is the first screen you will come across when you open AAPS and it contains
 #### Aktuální hodnota glykémie
 
 * Nejnovější glykémie z CGM je zobrazena na levé straně.
-* Color of the BG value reflects the status to the defined [range](Preferences-range-for-visualization). 
+* Barva hodnoty glykémie odráží stav vzhledem k definovanému [rozsahu](Preferences-range-for-visualization). 
    * zelená = v rozmezí
    * červená = pod cílovým rozmezím
    * žlutá = nad cílovým rozmezím
@@ -66,7 +66,7 @@ This is the first screen you will come across when you open AAPS and it contains
 * Nová ikona zobrazující stav smyčky:
    
    * zelený kruh = smyčka běží
-   * green circle with dotted line = [low glucose suspend (LGS)](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * zelený kruh s tečkovanou čárou = [režim vypnutí před nízkou (LGS)](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
    * červený kruh = smyčka vypnutá (nefunguje trvale)
    * žlutý kruh = smyčka pozastavena (dočasně pozastavena, ale bude vydán bazální inzulin) - zbývající čas je zobrazen pod ikonou
    * šedý kruh = pumpa odpojena (dočasně žádný výdej inzulínu) - zbývající čas je zobrazen pod ikonou
@@ -125,38 +125,38 @@ You need to find out why you get duplicate BGs:
 
 ### Sekce D – IOB, COB, BR a AS
 
-![Section D](../images/Home2020_TBR.png)
+![Sekce D](../images/Home2020_TBR.png)
 
-* Syringe: insulin on board (IOB) - amount of active insulin inside your body
+* Injekční stříkačka: aktivní inzulín (IOB) - množství aktivního inzulinu v těle
    
-   * The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
-   * IOB may be negative if there have recently been periods of reduced basal.
-   * Press the icon to see the split of bolus and basal insulin
+   * Ukazatel aktivního inzulínu by měl být nula, pokud běží pouze váš standardní bazál a žádný z předchozích bolusů už nemá aktivní zůstatek. 
+   * IOB může být i záporný, pokud byl dříve aktivován snížený bazál.
+   * Stisknutím ikony zobrazíte rozdělení bolusové a bazální dávky
 
 * Grain: [carbs on board (COB)](../Usage/COB-calculation.md) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
 
 * Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%) 
-   * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
-* Arrows up & down: indicating actual [autosens](Open-APS-features-autosens) status (enabled or disabled) and value is shown below icon
+   * Stisknutím ikony zobrazíte základní bazální dávku a podrobnosti o jakémkoli dočasném bazálu (včetně zbývající doby trvání)
+* Šipky nahoru a dolů: indikace aktuálního stavu [autosens](Open-APS-features-autosens) (povoleno nebo zakázáno) a hodnota je zobrazena pod ikonou
 
-#### Carbs required
+#### Požadavek sacharidů
 
-![Carbs required](../images/Home2020_CarbsRequired.png)
+![Požadavek sacharidů](../images/Home2020_CarbsRequired.png)
 
-* Carbs suggestions are given when the reference design detects that it requires carbs.
-* This is when the oref algorithm thinks I can't rescue you by 0 (zero) temping and you will need carbs to fix.
-* The carb notifications are much more sophisticated than the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
-* Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+* Návrhy sacharidů jsou uvedeny v případě, že algoritmus detekuje potřebu sacharidů.
+* Děje se tak tehdy, když si algoritmus oref myslí, že vás nedokáže zachránit zastavením bazálu (nulový bazál) a že budete potřebovat další sacharidy.
+* Oznámení jsou mnohem sofistikovanější než ta z bolusového kalkulátoru. Můžete vidět návrh sacharidů, zatímco bolusová kalkulačka neobsahuje chybějící sacharidy.
+* V případě potřeby může být notifikace vyžadovaných sacharidů odeslána do Nightscoutu. Notifikace se pak zobrazí v Nightscoutu a bude vysílána.
 
 ### Sekce E – Stavové indikátory
 
-![Section E](../images/Home2020_StatusLights.png)
+![Sekce E](../images/Home2020_StatusLights.png)
 
-* Status lights give a visual warning for 
-   * Cannula age
-   * Insulin age (days reservoir is used)
-   * Reservoir level (units)
-   * Sensor age
+* Stavové indikátory zobrazují vizuální varování pro 
+   * Stáří kanyly
+   * Stáří inzulínu (doba použití aktuálního zásobníku)
+   * Stav zásobníku (jednotky)
+   * Stáří senzoru
    * Battery age and level (%)
 * If threshold warning is exceeded, values will be shown in yellow.
 * If threshold critical is exceeded, values will be shown in red.
@@ -245,26 +245,26 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Insulin on board
 
-* Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
-* If there were no [SMBs](Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
-* IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
-* Decaying depends on your [DIA and insulin profile settings](Config-Builder-local-profile). 
+* Shows the insulin you have on board (= active insulin in your body). Zahrnuje inzulín z bolusu a dočasného bazálu (**ale nezahrnuje bazální dávky nastavené ve vašem profilu**).
+* Pokud by neexistovaly žádné [SMB](Open-APS-features-super-micro-bolus-smb), žádné bolusy ani žádné TBR během doby DIA, tato hodnota by byla nula.
+* IOB může být záporný, pokud již není aktivní žádný bolus a po delší dobu byl nastaven nulový/nízký dočasný bazál.
+* Odbourávání závisí na vaší hodnotě [DIA a nastavení inzulinového profilu](Config-Builder-local-profile). 
 
-#### Carbs On Board
+#### Zbývající sacharidy
 
 * Shows the carbs you have on board (= active, not yet decayed carbs in your body). 
-* Decaying depends on the deviations the algorithm detects. 
-* If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
+* Vstřebávání závisí na odchylkách, které detekuje algoritmus. 
+* Pokud se zjistí vyšší absorpce, než se očekávalo, může dojít k vydání inzulinu. To bude mít za následek zvýšení IOB (zda více či méně závisí na vašich bezpečnostních nastaveních). 
 
-#### Deviations
+#### Odchylky
 
-* **GREY** bars show a deviation due to carbs. 
-* **GREEN** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](Open-APS-features-autosens).
-* **RED** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](Open-APS-features-autosens).
+* **ŠEDÉ** sloupce zobrazují odchylku způsobenou sacharidy. 
+* **ZELENÉ** sloupce ukazují, že je glykémie vyšší, než algoritmus očekával. Green bars are used to increase resistance in [Autosens](Open-APS-features-autosens).
+* **ČERVENÉ** sloupce ukazují, že je glykémie nižší, než algoritmus očekával. Red bars are used to increase sensitivity in [Autosens](Open-APS-features-autosens).
 * **YELLOW** bars show a deviation due to UAM.
 * **BLACK** bars show small deviations not taken into account for sensitivity
 
-#### Sensitivity
+#### Citlivost
 
 * Shows the sensitivity that [Autosens](Open-APS-features-autosens) has detected. 
 * Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
