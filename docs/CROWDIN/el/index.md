@@ -1,22 +1,29 @@
 # Welcome to the AAPS documentation
 
-![Image](images/modules-female.png)
+![image](./images/basic-outline-of-AAPS.png)
 
-AAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. The main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter.
+AAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. It uses an openAPS software algorithm which aims to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need a supported and FDA/CE approved insulin pump, and a continuous glucose meter.
 
-The app does *not* use self-learning artificial intelligence. Instead, the calculations of AAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons.
+Interested? Read more about AAPS in the [introduction](introduction.md).
 
-The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
+```{warning}
+**IMPORTANT SAFETY NOTICE**
 
-```{admonition} Ask for help - Writing Docs
-:class: note
+The foundation of AAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. Είναι πολύ σημαντικό να χρησιμοποιείτε μόνο μια δοκιμασμένη, πλήρως λειτουργική FDA ή CE εγκεκριμένη αντλία ινσουλίνης και CGM για το κλείσιμο ενός αυτοματοποιημένου κυκλώματος δοσολογίας ινσουλίνης. Οι τροποποιήσεις υλικού ή λογισμικού σε αυτά τα εξαρτήματα μπορεί να προκαλέσουν απροσδόκητη δόση ινσουλίνης, προκαλώντας σημαντικό κίνδυνο για τον χρήστη. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AAPS system.
 
-Please don't be shy, we urgently *need* support in creating the documentation.
+Επιπλέον, είναι εξίσου σημαντικό να χρησιμοποιείτε μόνο αυθεντικά προϊόντα όπως εισαγωγείς, κάνουλα και δοχεία ινσουλίνης εγκεκριμένα από τον κατασκευαστή για χρήση με την αντλία ή το CGM. Η χρήση μη δοκιμασμένων ή τροποποιημένων αναλωσίμων μπορεί να προκαλέσει ανακρίβεια CGM και σφάλματα δοσολογίας ινσουλίνης. Η ινσουλίνη είναι εξαιρετικά επικίνδυνη όταν δίνετε σε λάθος δοσολογία - παρακαλώ μην παίζετε με τη ζωή σας με μη εγκεκριμένες προμήθειες.
 
-A pull request to edit the documentation is relatively simple to create. You can't break anything. There are release procedures.
+Last not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels.  The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
+```
 
-A 3 minute video which explains how to edit the docs via PR is available [here](https://www.youtube.com/watch?v=Vo4L6YYxWak).
+```{note}
+**Disclaimer and Warning**
 
+- All information, thought, and code described here is intended for informational and educational purposes only. Το Nightscout δεν πραγματοποιεί επί του παρόντος προσπάθεια συμμόρφωσης με το HIPAA. Use Nightscout and AAPS at your own risk, and do not use the information or code to make medical decisions.
+- Η χρήση του κώδικα από το github.com είναι χωρίς εγγύηση ή επίσημη υποστήριξη οποιασδήποτε μορφής. Ανατρέξτε στην ΑΔΕΙΑ ΑΠΟΣΤΟΛΗΣ αυτού του αποθετηρίου για λεπτομέρειες.
+- Όλα τα ονόματα των προϊόντων και των εταιρειών, τα εμπορικά σήματα, τα κατατεθέντα εμπορικά σήματα και τα καταχωρημένα λογότυπα υπηρεσίας αποτελούν ιδιοκτησία των αντίστοιχων κατόχων τους. Η χρήση τους είναι για ενημερωτικούς σκοπούς και δεν συνεπάγεται καμία προσχώρηση ή έγκριση από αυτούς.
+
+Please note - this project has no association with and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
 ```
 
 ## How to read the documentation?
@@ -37,7 +44,7 @@ For parents who want to build AAPS for their children, we recommend the subsecti
 
 Now that you have a solid understanding of the concepts that AAPS uses, know where to go for the the necessary tools to build your APS and are familiar with where to get help in case of an emergency, it is the right time to start building the app! The subsection [How to install AAPS?](Installing-AAPS/Building-APK.md) shows you this in detail. Since the requirements are very different from anything you might have set up in the past, we recommend that you really follow the instructions, step-by-step the first few times you build the app, so that you have a stronger sense of how the app building process is supposed to behave when all directions are followed exactly. Please remember to take your time. Later this will go very quickly when you build the app again for a new version. That way you will have a greater chance of noticing when something doesn't going as planned before too many steps are out of line. It is important to save the your keystore file (.jks file used to sign your app) in a safe place, so that you can always use that exact same keystore file and password each and every time you are asked to create a new updated version of AAPS, as this file is what makes sure that each new version of the app "remembers" all the information that you have provided to it in previous versions of the app and thus ensure that the updates will go as smoothly as possible. On average, you can assume that there will be one new version and 2-3 required updates per year. This number is based on experience and may change in the future. But we do want to at least give you a general guideline on what to expect. When you are more experienced at building updated AAPS app versions all the steps that are required in building an updated app will only take 15-30 minutes, on average. However, in the beginning there can be a rather steep learning curve as these steps are not always considered intuitive by new users! So do not get frustrated if you find that it takes half a day or a whole day with some help from the community before you are finally finished with the update process. If you find that you are getting very frustrated just take a short break, and oftentimes; after a stroll around the block or two...you'll find that you are better able to approach the problem again. We have also compiled a list of questions and answers to most of the typical errors that are likely to occur the first few updates located within the FAQs section; as well as within "How to install AAPS?" that provides additional information in the subsection "Troubleshooting".
 
-The subsection [Component Setup](Configuration/BG-Source.md) explains how to properly integrate each of the various different separate component parts into AAPS, as well as how to set them up to work as seamlessly as possible together. All components are listed under the separate sections: CGM/FGM, xDrip Settings, Pumps, Phones, Nightscout setup, and Smartwatches. The sensor (BG) values and control of the insulin pump are particularly important information to understand. The subsection [Configuration](Configuration/BG-Source.md) describes the best pump configurations to use in AAPS.
+The subsection [Component Setup](Configuration/BG-Source.md) explains how to properly integrate each of the various different separate component parts into AAPS, as well as how to set them up to work as seamlessly as possible together. Όλα τα διαφορετικά εξαρτήματα αναφέρονται στις ξεχωριστές ενότητες: CGM / FGM, ρυθμίσεις xDrip, αντλίες, τηλέφωνα, ρύθμιση Nightscout και Smartwatches. Οι τιμές γλυκόζης αίματος του αισθητήρα (BG) και ο έλεγχος της αντλίας ινσουλίνης είναι ιδιαίτερα σημαντικές πληροφορίες που πρέπει να κατανοήσουμε. The subsection [Configuration](Configuration/BG-Source.md) describes the best pump configurations to use in AAPS.
 
 This is followed by a particularly important subsection [AAPS Usage](Getting-Started/Screenshots.md), in which you are slowly introduced to the full usage of what AAPS has to offer via a safe and carefully calibrated step-by-step gradual process designed to make sure that you/your child are thoroughly familiar and comfortable navigating all the different levels and menu configurations before graduating on the next phase, each commonly referred to as the next Objective, until you are have enough experience to begin using the more advanced options available within the app. These Objectives are specially designed in such a way that will gradually unlock more possibilities of AAPS and switch from Open Loop to Closed Loop.
 
@@ -47,19 +54,6 @@ There is a subsection for the [clinicians](Resources/clinician-guide-to-AAPS.md)
 
 Finally, in the subsection [How to help?](make-a-PR.md) we would like to provide you with information so that you are able to suggest small or larger changes to the documentation yourself and work together with us on the documentation. We further need support for [translation of the documentation](translations.md) By the way, it also very helpful for everyone if you could provide links to the corresponding documentation (or screenshots of where the links are located within the Documentation if you are not familiar with how to send a link) when answering questions from other users. That way the correct information can easily be located again should other users also be trying to find answers to the same types of questions in the future.
 
-(index-translation-help-needed)=
-
-```{admonition} Ask for help - Translators Neeeded!!!
-:class: note
-
-The documentation is written in English and translated in different languages. We are searching help by the translation of a) the app and b) the documentation.
-
-The translation process is explained [here](translations.md).
-
-The state of the translations per language for app and documentation can be found [here](./Administration/stateTranslations.md).
-
-```
-
 ```{toctree}
 :caption: Change language
 
@@ -68,7 +62,16 @@ Change language <./changelanguage.md>
 ```
 
 ```{toctree}
+:caption: Home
+
+Introduction <./introduction.md>
+
+```
+
+```{toctree}
 :caption: Getting started
+
+Preparing <preparing.md>
 
 Safety first <./Getting-Started/Safety-first.md>
 
@@ -255,9 +258,9 @@ How to help <./Getting-Started/How-can-I-help.md>
 
 How to translate the app and docs <./translations.md>
 
-State of translations <./Administration/stateTranslations.md>
-
 How to edit the docs <./make-a-PR.md>
+
+State of translations <./Administration/stateTranslations.md>
 
 ```
 
@@ -271,8 +274,8 @@ Sandbox <./Sandbox/sandbox1.md>
 **Disclaimer And Warning**
 
 - All information, thought, and code described here is intended for informational and educational purposes only. Το Nightscout δεν πραγματοποιεί επί του παρόντος προσπάθεια συμμόρφωσης με το HIPAA. Use Nightscout and AAPS at your own risk, and do not use the information or code to make medical decisions.
-- Use of code from github.com is without warranty or formal support of any kind. Ανατρέξτε στην ΑΔΕΙΑ ΑΠΟΣΤΟΛΗΣ αυτού του αποθετηρίου για λεπτομέρειες.
-- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Η χρήση τους είναι για ενημερωτικούς σκοπούς και δεν συνεπάγεται καμία προσχώρηση ή έγκριση από αυτούς.
+- Η χρήση του κώδικα από το github.com είναι χωρίς εγγύηση ή επίσημη υποστήριξη οποιασδήποτε μορφής. Ανατρέξτε στην ΑΔΕΙΑ ΑΠΟΣΤΟΛΗΣ αυτού του αποθετηρίου για λεπτομέρειες.
+- Όλα τα ονόματα των προϊόντων και των εταιρειών, τα εμπορικά σήματα, τα κατατεθέντα εμπορικά σήματα και τα καταχωρημένα λογότυπα υπηρεσίας αποτελούν ιδιοκτησία των αντίστοιχων κατόχων τους. Η χρήση τους είναι για ενημερωτικούς σκοπούς και δεν συνεπάγεται καμία προσχώρηση ή έγκριση από αυτούς.
 
 Please note - this project has no association with and is not endorsed by: [SOOIL](<https://www.sooil.com/eng/>), [Dexcom](<https://www.dexcom.com/>), [Accu-Chek, Roche Diabetes Care](<https://www.accu-chek.com/>) or [Medtronic](<https://www.medtronic.com/>)
 
