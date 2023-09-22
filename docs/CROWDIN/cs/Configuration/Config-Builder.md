@@ -252,7 +252,7 @@ AAPS has a leraning program (objectives) that you have to fulfill step by step. 
 
 Měli byste pravidelně [exportovat svá nastavení](../Usage/ExportImportSettings.md) (včetně pokroku v plnění cílů). V případě, že v budoucnosti budete muset svůj smartphone nahradit (nové zařízení, poškození displeje atd.), můžete tato nastavení jednoduše importovat.
 
-See [Objectives](../Usage/Objectives.md) page for more information.
+Viz stránka [Objectives](../Usage/Objectives.md) pro další informace o nastavení.
 
 ## Ošetření
 
@@ -321,18 +321,18 @@ Vyberte si, chcete-li mít zobrazené [stavové indikátory](Preferences-status-
 
 **Podat tuto část z výsledku kalkukace [%]**: Při použití SMB si mnoho lidí neposílá na jídlo 100% dávku inzulínu, ale pouze její část (např. 75 %), a nechá zbytek na SMB ve spolupráci s UAM (detekce neoznámeného jídla). V tomto nastavení si můžete zvolit výchozí hodnotu pro procento, se kterým by měl bolus kalkulátor počítat. Pokud je toto nastavení 75 % a máte dostat bolus 10 U, navrhne bolusový kalkulátor pouze 7,5 jednotky.
 
-**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**V průvodci povolte funkci superbolus** (jde o něco jiné než *super mikro bolus*!): Funkci používejte s opatrností a nepovolujte ji, dokud se nenaučíte, co to skutečně dělá. V podstatě je bazál za následující 2 hodiny přidán do bolusu a po dobu těchto 2 h je nastaven nulový dočasný bazál. **Funkce smyčky AAPS budou po dobu superbolusu deaktivovány – používat opatrně! Pokud používáte funkci SMB, funkce smyčky AAPS budou deaktivovány dle vašeho nastavení v části [„Maximální počet minut bazálu, ke kterým se limituje SMB“](Open-APS-features-max-minutes-of-basal-to-limit-smb-to), pokud funkci SMB nevyužíváte, funkce smyčky budou vypnuty na dvě hodiny.** Podrobnosti o superbolusu najdete [zde](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 (Config-Builder-actions)=
 
 ### Akce
 
 * Tlačítka k běžně používaným úkonům.
-* See [AAPS screenshots](Screenshots-action-tab) for details.
+* Podrobnosti najdete v části [Obrazovky AAPS](Screenshots-action-tab).
 
 ### Automatizace
 
-User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.md).
+Uživatelem vytvořené úlohy automatizace ('if-then-else'). Prosím, [přečtěte si zde](../Usage/Automation.md).
 
 (Config-Builder-sms-communicator)=
 
@@ -342,38 +342,38 @@ Allows remote caregivers to control some AAPS features via SMS, see [SMS Command
 
 ### Jídlo
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Zobrazuje jídla přidaná do databáze Nightscoutu. Více informací viz [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods).
 
-Note: Entries cannot be used in the AAPS calculator. (View only)
+Note: Entries cannot be used in the AAPS calculator. (Pouze je zobrazit)
 
 (Config-Builder-wear)=
 
 ### Wear
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Sledování a ovládání AAPS prostřednictvím hodinek s Wear OS (viz [stránka Ciferníky](../Configuration/Watchfaces.md)). Chcete-li nastavit parametry pro výpočet bolusu na hodinkách (tj. 15min trend, COB…), klikněte na nastavení (ozubené kolo).
 
 Chcete-li z hodinek zadávat bolus atd., musíte v „Nastavení wear“ aktivovat volbu „Ovládání z hodinek“.
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Nastavení hodinek](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+Prostřednictvím záložky Wear nebo hamburger menu (levý horní roh obrazovky, když není záložka zobrazena) můžete
 
 * znovu poslat všechna data. To může pomoci v případech, kdy byly hodinky nějakou dobu nedostupné a potřebujete do nich poslat data.
 * Otevřít nastavení hodinek přímo z telefonu.
 
 ### Stavová řádka xDrip (hodinky)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Zobrazit na displeji hodinek (ciferník xDrip+) stav smyčky (pokud nepoužíváte AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md))
 
 ### NSClient
 
 * Setup sync of your AAPS data with Nightscout.
-* Settings in [preferences](Preferences-nsclient) can be opened by clicking the cog wheel.
+* Nastavení v [konfiguraci](Preferences-nsclient) lze otevřít kliknutím na ozubené kolo.
 
 ### Údržba
 
-Email and number of logs to be send. Normally no change necessary.
+E-mail a počet logů, které budou odeslány. Obvykle není nutné tyto hodnoty měnit.
 
 ### Konfigurace
 
-Use tab for config builder instead of hamburger menu.
+Místo hamburger menu použijte záložku Konfigurace.
