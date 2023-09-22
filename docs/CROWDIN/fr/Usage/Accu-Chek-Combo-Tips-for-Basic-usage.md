@@ -5,40 +5,45 @@
 ## Comment assurer les opérations en douceur
 
 * Toujours **porter le smartphone avec vous**, laissez-le à côté de votre lit la nuit. Comme votre pompe peut se poser derrière vous ou sous votre corps pendant que vous dormez, une position plus élevée (sur une tablette ou une étagère) fonctionne mieux.
-* Toujours vérifiez toujours que la batterie de la pompe est aussi complète que possible. Reportez-vous à la section de la batterie pour obtenir des conseils concernant la batterie.
-* (S'applique uniquement à l'ancien pilote) Il est préférable de **ne pas toucher l'application Ruffy** pendant que le système fonctionne. Si l'application est redémarrée, la connexion à la pompe peut s'arrêter. Une fois que la pompe est connectée à la Ruffy, il n'est pas nécessaire de la reconnecter. Même après un redémarrage du téléphone, la connexion est automatiquement rétablie. Si possible, déplacez l'application vers un écran inutilisé ou dans un dossier de votre smartphone afin de ne pas l'ouvrir accidentellement.
+* Always make sure that the pump battery is as full as possible. See the battery section for tipps regarding the battery.
+
+* (Only applies to the old driver) It is best to **not touch the app ruffy** while the system is running. If the app is started again, the connection to the pump can break off. Once the pump is connected to ruffy, there is no need to re-connect. Even after a restart of the phone, the connection is automatically re-established. If possible, move the app to an unused screen or in a folder on your smartphone so you do not accidentally open it.
+
 * (S'applique uniquement à l'ancien pilote) Si vous ouvrez involontairement l'application Ruffy pendant le bouclage, il est préférable de redémarrer le smartphone immédiatement.
-* Dans la mesure du possible, n'utiliser la pompe que via l'application AndroidAPS. Pour faciliter cela, activez le verrouillage sur la pompe sous **Réglages pompe / Verrouillage des touches / On**. Ce n'est que lorsque vous changez la pile ou la cartouche qu'il est nécessaire d'utiliser les touches de la pompe. ![Verrouillage des touches](../images/combo/combo-tips-keylock.png)
+* Whenever possible, only operate the pump via the AAPS app. To facilitate this, activate the key lock on the pump under **PUMP SETTINGS / KEY LOCK / ON**. Ce n'est que lorsque vous changez la pile ou la cartouche qu'il est nécessaire d'utiliser les touches de la pompe. 
+
+![Keylock](../images/combo/combo-tips-keylock.png)
 
 ## Pompe inaccessible. Que faire ?
 
 ### Activer l'alerte pompe inaccessible
 
-* Dans AndroidAPS, accédez à **Paramètres / Alertes locales** et activez **Alerte si la pompe est hors de portée** et paramétrez **Seuil alerte pompe hors de portée [min]** à **31** minutes. 
+* In AAPS, go to **Settings / Local Alarms** and activate **alarm when pump is unreachable** and set **pump not reachable limit [Min]** to **31** minutes.
 * Cela vous donnera suffisamment de temps pour ne pas déclencher l'alarme quand vous quittez une pièce en laissant le téléphone sur le bureau, mais vous informe si la pompe n'est pas joignable pour une durée supérieure à celle d'un d'un débit de base temporaire.
 
 ### Restaurer l'accessibilité de la pompe
 
-* Quand AndroidAPS signale un alarme **pompe injoignable**, deverrouillez d'abord la pompe et **appuyez syr n'importe quelle touche de la pompe** (par ex. le bouton "bas"). Dès que l'affichage de la pompe s'est étient, appuyez sur **Actualiser** dans **l'onglet Combo** dans AAPS. La plupart du temps la communication fonctionnera à nouveau.
-* Si cela ne marche pas, redémarrez votre smartphone. Après le redémarrage, AAPS sera réactivés et une nouvelle connexion sera établie avec la pompe. Si vous utilisez l'ancien pilote, Ruffy sera également réactivé.
-* Les tests avec différents smartphones ont montré que certains smartphones déclenchaient l'erreur "pompe injoignable" plus souvent que d'autres. La [liste des téléphones testés](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) liste les smartphones testés avec succès avec AAPS. 
+* When AAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, press **Refresh** on the **Combo Tab** in AAPS. La plupart du temps la communication fonctionnera à nouveau.
+* If that does not help, reboot your smartphone. After the restart, AAPS will be reactivated and a new connection will be established with the pump. If you are using the old driver, ruffy will be reactivated as well.
+
+* The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) lists successfully tested smartphones.
 
 ### Causes racines et conséquences des fréquentes erreurs de communication
 
-* Sur les téléphones avec **peu de mémoire** (ou des réglages **aggressifs d'économie d'énergie**), AndroidAPS est souvent fermé. Vous pouvez le constater par le fait que les boutons Bolus et Calculatrice sur l'écran d'accueil ne sont pas affichés lors de l'ouverture d'AAPS car le système est en cours d'initialisation. Cela peut déclencher une alerte "Pompe hors de portée" au démarrage. Dans le champs **Dernière connexion** de l'onglet Combo, vous pouvez vérifier quand AndroidAPS a communiqué pour la dernière fois avec la pompe. 
+* On phones with **low memory** (or **aggressive power-saving** settings), AAPS is often shut down. Vous pouvez le constater par le fait que les boutons Bolus et Calculatrice sur l'écran d'accueil ne sont pas affichés lors de l'ouverture d'AAPS car le système est en cours d'initialisation. Cela peut déclencher une alerte "Pompe hors de portée" au démarrage. In the **Last Connection** field of the Combo tab, you can check when AAPS last communicated with the pump.
 
-![Pompe hors de portée](../images/combo/combo-tips-pump-unreachable.png)
+![Pump unreachable](../images/combo/combo-tips-pump-unreachable.png)
 
-![Aucune connexion à la pompe (comme indiqué dans l’onglet de l’ancien pilote)](../images/combo/combo-tips-no-connection-to-pump.png)
+![No connection to pump (as shown in the old driver's tab)](../images/combo/combo-tips-no-connection-to-pump.png)
 
-![Aucune connexion à la pompe (comme indiqué dans l’onglet du nouveau pilote)](../images/combo/combov2-tips-no-connection-to-pump.png)
+![No connection to pump (as shown in the new driver's tab)](../images/combo/combov2-tips-no-connection-to-pump.png)
 
 * Cette erreur peut vider la pile de la pompe plus rapidement car le profil basal est lu à partir de la pompe lorsque l'application est redémarrée.
 * Cela augmente également la probabilité de provoquer l'erreur qui amène la pompe à rejeter toutes les connexions entrantes jusqu'à ce qu'un bouton de la pompe soit enfoncé. 
 
 ## Echec de l'annulation du débit de base temporaire
 
-* Occasionnellement, AndroidAPS ne peut pas annuler automatiquement une alerte **DBT ANNULEE**. Dans ce cas, vous devez soit appuyer sur **ACTUALISER** dans **l'onglet Combo** d'AndroidAPS soit confirmer l'alarme sur la pompe.
+* Occasionally, AAPS can not automatically cancel a **TBR CANCELED** alert. Then you have to either press **UPDATE** in the AAPS **Combo tab** or the alarm on the pump will need to be confirmed.
 
 ## Considérations relatives à la pile
 
@@ -49,12 +54,12 @@
 * Avant de changer la pile, appuyez sur le symbole **Boucle** sur l'écran principal et sélectionnez **Suspendre la boucle pendant 1h**. 
 * Attendez que la pompe communique avec le téléphone et que le logo bluetooth sur la pompe ait disparu.
 
-![Bluetooth activé](../images/combo/combo-tips-compo.png)
+![Bluetooth enabled](../images/combo/combo-tips-compo.png)
 
 * Déverrouillez les touches de la pompe, mettez la pompe à l'arrêt, confirmez si nécessaire l'annulation du débit de base temporaire et changez rapidement la pile.
 * Lorsque vous utilisez l'ancien pilote, si l'horloge de la pompe ne survit pas au changement de pile, redéfinissez la date et l'heure de la pompe à exactement la même date/heure du téléphone exécutant AAPS. (Le nouveau pilote met à jour automatiquement la date et l'heure de la pompe.)
 * Ensuite, redémarrez la pompe, faites un appui long sur l'icone **Boucle suspendue** dans l'écran principal d'AAPS et sélectionnez **Reprendre**.
-* AndroidAPS redéfinira si nécessaire un nouveau Débit de Base Temporaire lors de l'arrivée de la prochaine glycémie. 
+* AAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value.
 
 (Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
 
@@ -64,13 +69,13 @@
 
 ![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
-Les durées de vie standards des différents types de batterie sont les suivantes :
+Ranges for typical life time of the different battery types are as follows:
 
 * **Energizer Ultimate Lithium** : 4 à 7 semaines
 * **Power One Alcaline** (Varta) à partir du servcie pack : 2 à 4 semaines
 * Batteries **Eneloop rechargeables** (BK-3MCCE) : 1 à 3 semaines
 
-Si la durée de vie de votre pile est significativement inférieure à celle indiquée ci-dessus, vérifiez les causes possibles suivantes :
+If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
 
 * (S'applique uniquement à l'ancien pilote) Les versions de [l'application Ruffy](https://github.com/MilosKozak/ruffy) après mars 2018 ont significativement améliorées la durée de vie de la pile de la pompe. Assurez-vous que vous êtes sur une version plus récente si vous avez des problèmes de durée de vie de la pile.
 * Il y a quelques variantes du capuchon de pile de la pompe Combo, qui court-circuite partiellement les piles et les vide rapidement. Les capuchons sans ce problème sont reconnaissables par les contacts dorés.
@@ -79,7 +84,7 @@ Si la durée de vie de votre pile est significativement inférieure à celle ind
 
 ## Changement d'heure (été ou hiver)
 
-**REMARQUE**: Le nouveau pilote définit automatiquement la date et l'heure et gère les changements d'heure d'été par lui-même. Les étapes ci-dessous s'appliquent uniquement à l'ancien pilote.
+**NOTE**: The new driver automatically sets date and time and handles daylight saving time changes on its own. The steps below all only apply to the old driver.
 
 * Actuellement, le pilote combo ne prend pas en charge l'ajustement automatique de l'heure de la pompe.
 * Pendant la nuit d'un changement d'heure, l'heure du smartphone est mise à jour, mais l'heure de la pompe reste inchangé. Cela conduit à une alarme en raison du décalage des heures entre les systèmes à 3 heures du matin.
@@ -87,23 +92,23 @@ Si la durée de vie de votre pile est significativement inférieure à celle ind
 
 ## Bolus étendus, bolus mixtes
 
-L'algorithme OpenAPS ne prend pas en charge un bolus carré étendu ou un bolus mixte. Mais un traitement similaire peut être réalisé à l'aide de l'alternative suivante :
+The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
 
 * Utilisez les **e-Glucides** à partir du bouton GLUCIDES en entrant la quantité globale de glucides du repas et la durée pendant laquelle vous pensez que les glucides arriveront dans le sang. Le système calculera ensuite les petits glucides répartis de manière égale sur toute la durée de sorte que l'algorithme fournisse une dose d'insuline équivalente tout en vérifiant de façon permanente l'augmentation/diminution globale de la glycémie. Pour une approche de bolus mixte, vous pouvez également combiner un bolus immédiat plus petit avec des e-glucides. 
-* Avant de manger, dans l'onglet **Actions** d'AndroidAPS définissez une cible temporaire **Repas imminent** avec la cible de glycémie 80 pendant plusieurs heures. La durée doit être basée sur la durée que vous auriez choisi d'utiliser pour un bolus étendu. Cela permettra de garder votre cible inférieure à la normale et donc d'augmenter la quantité d'insuline délivrée.
+* Before eating, on the **Actions tab** in AAPS set as a temporary **Eating Soon** goal with target glucose 80 for several hours. La durée doit être basée sur la durée que vous auriez choisi d'utiliser pour un bolus étendu. Cela permettra de garder votre cible inférieure à la normale et donc d'augmenter la quantité d'insuline délivrée.
 * Ensuite, utilisez l'**ASSISTANT** pour entrer les glucides complets du repas, mais n'appliquez pas directement la quantité d'insuline proposée par le calculateur de bolus. Si un bolus de type mixte doit être administré, corrigez la quantité d'insuline. Selon le repas, l'algorithme doit maintenant fournir des SMB supplémentaires ou des débits de basal temporaires plus élevés pour contrer l'augmentation de la glycémie. Ici, la limitation de sécurité du débit basal (Max U/h, Les IA basales) maximales devraient être expérimentées avec beaucoup de soin et, si nécessaire, temporairement modifiées.
 
-* Si vous êtes tenté d'utiliser les bolus étendus ou mixtes directement sur la pompe, AndroidAPS vous pénalisera avec la désactivation de la boucle fermée pendant les six heures suivantes afin de vous assurer qu'aucune dose excessive d'insuline n'est délivrée.
+* If you are tempted to just use the extended or multiwave bolus directly on the pump, AAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
 
-![Boucle désactivée après bolus mixte](../images/combo/combo-tips-multiwave-bolus.png)
+![Disabled loop after multiwave bolus](../images/combo/combo-tips-multiwave-bolus.png)
 
 ## Alarmes à l'administration du bolus
 
-* Si AndroidAPS détecte qu'un bolus identique a été délivré avec succès pendant la même minute, le 2ème bolus avec la même quantité d'insuline ne sera pas injecté. Si vous voulez vraiment faire deux bolus de suite avec la même quantité d'insuline, il suffit d'attendre deux minutes de plus, puis refaire le nouveau bolus. Si le premier bolus a été interrompu ou n'a pas été délivré pour d'autres raisons, vous pouvez refaire immédiatement le bolus depuis AAPS 2.0.
+* If AAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical numer of insulin units. Si vous voulez vraiment faire deux bolus de suite avec la même quantité d'insuline, il suffit d'attendre deux minutes de plus, puis refaire le nouveau bolus. Si le premier bolus a été interrompu ou n'a pas été délivré pour d'autres raisons, vous pouvez refaire immédiatement le bolus depuis AAPS 2.0.
 * L'alarme est un mécanisme de sécurité qui va lire l'historique des bolus de la pompe avant d'administrer un nouveau bolus pour calculer correctement l'insuline active (IA), même quand un bolus est administré directement sur la pompe. Pour cela, il faut éviter les entrées multiples identiques.
 
 ![Double bolus](../images/combo/combo-tips-doppelbolus.png)
 
 * Ce mécanisme est également responsable d'une deuxième source d'erreur: si, lors de l'utilisation de la calculatrice, un autre bolus est administré via la pompe et donc l'historique des bolus change, la base du calcul du bolus est erronée et le bolus est abandonné. 
 
-![Bolus annulé](../images/combo/combo-tips-history-changed.png)
+![Canceled bolus](../images/combo/combo-tips-history-changed.png)
