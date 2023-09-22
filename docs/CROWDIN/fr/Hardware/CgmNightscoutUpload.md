@@ -2,5 +2,5 @@
 
 Si vous utiliser un autre MGC qui envoie vos données sur [Nightscout](https://nightscout.github.io/) alors
 
--   Dans le menu Préférences d'AndroidAPS, entrez votre site Web Nightscout et votre API secret.
--   Sélectionnez NSClient dans ConfigBuilder (Menu Paramètres dans AndroidAPS).
+-   In AAPS Preferences enter your Nightscout website and API secret.
+-   Select NSClient in ConfigBuilder (setting in AAPS).
