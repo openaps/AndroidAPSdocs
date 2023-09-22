@@ -283,7 +283,7 @@ Signing means that you indicate your app to be your own creation but in a digita
     
     ![Apk вместо пакета](../images/studioSetup/43_Apk.png)
 
-* Make sure that module is set to "AAPS.app" (1).
+* Make sure that module is set to "AndroidAPS.app" (1).
 
 * Click "Create new..." (2) to start creating your key store.
     
@@ -359,6 +359,6 @@ Easiest way to transfer app-full-release.apk to your phone is via [USB cable or 
 
 On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
-## Troubleshooting
+## Устранение неполадок
 
 See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
