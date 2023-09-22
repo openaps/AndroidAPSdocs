@@ -2,7 +2,7 @@
 
 These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**). The Omnipod driver is available as part of AAPS (AAPS) as of version 2.8.
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.**
+**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Εσείς και μόνο είστε υπεύθυνοι για οτιδήποτε κάνετε με αυτό.**
 
 ```{contents}
 :backlinks: entry
@@ -619,7 +619,7 @@ Provides AAPS notifications and audible phone alerts when it is uncertain if TBR
 - **\*Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
 - **\*Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
 
-### Άλλα
+### Άλλο
 
 Provides advanced settings to assist debugging.
 
