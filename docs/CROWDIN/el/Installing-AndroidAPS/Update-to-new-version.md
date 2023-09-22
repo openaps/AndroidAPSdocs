@@ -2,23 +2,23 @@
 
 ## Φτιάξτε το μόνοι σας, αντί να το κατεβάσετε
 
-**AndroidAPS δεν είναι διαθέσιμο για κατέβασμα λόγω κανονισμού για τις ιατρικές συσκευές. Είναι νόμιμο να χτίσει η εφαρμογή για δική σας χρήση, αλλά δεν πρέπει να δώσετε αντίγραφο σε άλλους! Δείτε το [σελίδα FAQ](../Getting-Started/FAQ.md) για λεπτομέρειες.**
+**AAPS is not available as download due to regulation for medial devices. Είναι νόμιμο να χτίσει η εφαρμογή για δική σας χρήση, αλλά δεν πρέπει να δώσετε αντίγραφο σε άλλους! Δείτε το [σελίδα FAQ](../Getting-Started/FAQ.md) για λεπτομέρειες.**
 
 ## Σημαντικές σημειώσεις
 
-* Please update as soon as possible after a new release is available. You will receive an [information on the AndroidAPS home screen](Releasenotes-release-notes) about the new version.
-* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
+* Please update as soon as possible after a new release is available. You will receive an [information on the AAPS home screen](Releasenotes-release-notes) about the new version.
+* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
 * Please use **[Android Studio Version 2020.3.1 (Arctic Fox)](https://developer.android.com/studio/)** or newer to build the apk.
 * [Windows 10 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1.
 * Make sure you read the [Release Notes](../Installing-AndroidAPS/Releasenotes.md) for the current version
 
-## Overview for updating your AndroidAPS version
+## Overview for updating your AAPS version
 
 1. [Export your settings](../Usage/ExportImportSettings-export-settings) from the existing AAPS version on your phone. You might not need it, but better be save than sorry.
-2. [Update local copy](Update-to-new-version-update-your-local-copy) of the AndroidAPS sourcecode (Git->Fetch and Git -> Pull)
+2. [Update local copy](Update-to-new-version-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
 3. [Build signed APK](Update-to-new-version-build-the-signed-apk)
 4. [Transfer the built apk](Building-APK-transfer-apk-to-smartphone) to your phone and install it
-5. [Check the version](Update-to-new-version-check-aaps-version-on-phone) in AndroidAPS
+5. [Check the version](Update-to-new-version-check-aaps-version-on-phone) in AAPS
 6. Depending on your [BG source](../Configuration/BG-Source.md) make sure to [identify receiver](xdrip-identify-receiver) in xDrip or use the ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 
 In case you experience problems, see separate page for [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
@@ -29,13 +29,13 @@ See the [Export & import settings](ExportImportSettings-export-settings) page if
 
 (Update-to-new-version-update-your-local-copy)=
 
-## 2. Update your local copy
+## 2. Ενημερώστε το τοπικό σας αντίγραφο
 
-As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
+As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
 
 If you have already changed the URL or update from version 2.8.x, follow these steps:
 
-* Open your existing AndroidAPS project with Android Studio. You might need to select your project. (Double) click on the AndroidAPS project.
+* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
     
     ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
 
@@ -81,11 +81,11 @@ On your phone you have to allow installation from unknown sources. Manuals how t
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-## 6. Check AAPS version on phone
+## 6. Ελέγξτε την έκδοση AAPS στο τηλέφωνό σας
 
 After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
 
-![AAPS version installed](../images/Update_VersionCheck282.png)
+![Η έκδοση AAPS έχει εγκατασταθεί](../images/Update_VersionCheck282.png)
 
 # Αντιμετώπιση προβλημάτων
 
