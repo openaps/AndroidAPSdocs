@@ -26,7 +26,7 @@ Atualmente existem três principais sistemas de loop fechado de código aberto d
 
 ### AndroidAPS (AAPS)
 
-AndroidAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). Ele usa um Smartphone Android para cálculo e controle da sua bomba de insulina. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
+AAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). Ele usa um Smartphone Android para cálculo e controle da sua bomba de insulina. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
 
 Compatible [pumps](../Hardware/pumps.md) are:
 
