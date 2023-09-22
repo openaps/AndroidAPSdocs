@@ -1,8 +1,8 @@
 # Automatisation avec une application Android Automate tierce
 
-**Cet article a été écrit avant la version 2.5 d'AndroidAPS. Il existe un plug-in d'automatisation [dans AndroidAPS](./Automation.md) lui-même à partir de la version 2.5. Pour certains, ceci peut être encore utile, mais ne doit être utilisé que par les utilisateurs avancés.**
+**This article has been written before AAPS version 2.5. There is an [automation plugin in AAPS](./Automation.md) itself with AAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
 
-Comme AndroidAPS est un système à boucle fermée hybride, une certaine interaction avec l'utilisateur est nécessaire (par ex. dites à la boucle si vous marchez, mangez bientôt, restez couché sur le canapé...). Les entrées manuelles fréquentes peuvent être automatisées via des outils externes tels que Automate ou IFTTT pour étendre la fonctionnalité récente d'AndroidAPS.
+As AAPS is a hybrid closed loop system, some user interaction is necessary though (e.g. tell the loop that you are walking, eating soon, lying on the sofa...). Frequent manual user inputs can be automated via external tools like Automate or IFTTT to extend the recent AAPS functionality.
 
 ## Application Android Automate
 
@@ -10,27 +10,27 @@ L'application gratuite Android™ Automate vous permet d'automatiser diverses t�
 
 A l'aide de cet outil vous pouvez facilement créer des workflows pour traiter votre diabète à l'aide de plusieurs conditions selon le principe de 'si ... et ... et pas ..., alors fait ... et ...'. Il y a des milliers de possibilités que vous pouvez configurer.
 
-Jusqu'à présent, il est **nécessaire de boucler via un profil Nightscout**, car Automate exécute les commandes via des requêtes HTTP directement dans votre site Web nightscout qui le synchronise ensuite avec votre application AndroidAPS.
+Until now it is **necessary to loop via Nightscout Profile**, as Automate executes the commands via HTTP-request directly in your nightscout website that subsequently syncs it to your AAPS app.
 
-**La boucle hors ligne (communication directe entre Automate et AndroidAPS) n'est pas encore prise en charge**, mais est techniquement possible. Il y aura peut-être une solution à l'avenir. Si vous avez trouvé un moyen de le faire, veuillez l'ajouter à cette documentation ou contacter un développeur.
+**Offline looping (direct communication between Automate and AAPS app) is not supported yet**, but technologically possible. Il y aura peut-être une solution à l'avenir. Si vous avez trouvé un moyen de le faire, veuillez l'ajouter à cette documentation ou contacter un développeur.
 
 ### Exigences de base
 
 #### Application Automate
 
-Téléchargez Android Automate dans Google Play Store ou sur <https://llamalab.com/automate/> et installez la sur votre smartphone où AndroidAPS s'exécute.
+Download Android Automate in Google Play Store or at <https://llamalab.com/automate/> and install it on your smartphone where AAPS runs.
 
 Dans Automate, appuyez sur le menu hamburger en haut à gauche de l'écran > Settings > Cochez 'Run on system startup'. Cela exécutera automatiquement vos Workflows au démarrage du système.
 
 ![Automatiser requête HTTP](../images/automate-app2.png)
 
-#### AndroidAPS
+#### AAPS
 
-Dans AndroidAPS appuyez sur le menu trois points en haut à droite de l'écran et accédez à Paramètres > NSClient > Paramètres de connexion > Décochez la case "Utiliser uniquement la connexion WiFi" et "Uniquement si en charge" comme Automate ne fonctionne que lorsque AndroidAPS a une connexion avec Nightscout.
+In AAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Connection settings > Uncheck 'Use WiFi connection only' and 'Only if charging' as the automated treating does only work when AAPS has an actual nightscout connection.
 
 ![Paramètres de connexion Nighscout](../images/automate-aaps1.jpg)
 
-Dans AndroidAPS appuyez sur le menu trois points en haut à droite de l'écran et accédez à Paramètres > NSClient > Paramètres avancés > Décochez 'Remonter uniquement vers NS (sync désactivée)' et 'Pas de téléchargement vers NS'.
+In AAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'.
 
 Soyez conscient des [problèmes de sécurité](Nightscout-security-considerations) qui pourraient se produire et soyez très prudent si vous utilisez une [pompe Insight](Accu-Chek-Insight-Pump-settings-in-aaps).
 
@@ -119,7 +119,7 @@ Démarrer le script : Cliquez sur le bouton Start
 
 #### Exemple 3: À vous de l'ajouter !!!
 
-Veuillez ajouter d'autres scripts en remontant vos fichiers .flo file dans la communauté Automate (sous le mot clé 'Nightscout') et décrivez les ici en faisant un [Pull Request sur le répertoire AndroidAPSdocs](../make-a-PR.md).
+Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSDocs repository](../make-a-PR.md).
 
 ## IF This, Then That (IFTTT)
 
