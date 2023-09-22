@@ -2,7 +2,7 @@
 
 Einige der nachfolgenden Optionen sind Android-spezifisch, einige Huawei-spezifisch:
 
-* Füge AndroidAPS und xdrip+ der Liste der Apps hinzu, die von der Akkuoptimierungen ausgenommen sind:
+* Add AAPS and xdrip+ to apps list which ignore battery optimisations:
   
   * Einstellungen / App / Einstellungen / Spezielle Berechtigungen/ Akkuoptimierung ignorieren / Wählen Sie "Alle Anwendungen" / App auf erlaubt setzen
     
