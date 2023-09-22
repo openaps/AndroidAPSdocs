@@ -1,38 +1,39 @@
 # La sécurité avant tout
 
-**When you decide to build your own artificial pancreas, it's always important to think about security and safety, and to understand the impact of all your actions**
+**Quand vous décidez de construire votre propre pancréas artificiel, c’est toujours important de penser à la sécurité et à la sûreté, et de bien comprendre les impacts de toutes vos actions**
 
 ## Généralités
 
-- AndroidAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
-- Do not assume that AndroidAPS will never make mistakes. Le dispositif prend le contrôle de la délivrance d’insuline : surveillez le tout le temps, comprenez comment il fonctionne, et apprenez comment interpréter ses actions.
-- Remember that, once paired, the phone can instruct the pump to do anything. N’utilisez ce téléphone que pour AndroidAPS et, s’il est utilisé par un enfant, pour les communications essentielles. N’installez pas des applications ou des jeux (!!!) inutiles qui pourraient introduire des logiciels malveillants comme des chevaux de troie, des virus ou des robots qui pourraient interférer avec votre système.
-- Install all security updates provided by your phone manufacturer and Google.
-- You might also need to change your diabetes habits as you change your therapy by using a closed loop system. Par ex. certaines personnes signalent qu'elles ont besoin de moins de traitements d'hypo car AndroidAPS a déjà réduit l'insuline.
+- AAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
+- Do not assume that AAPS will never make mistakes. Le dispositif prend le contrôle de la délivrance d’insuline : surveillez le tout le temps, comprenez comment il fonctionne, et apprenez comment interpréter ses actions.
+- N’oubliez pas que, une fois appairé, le téléphone peut demander à la pompe de faire n'importe quelle action. Only use this phone for AAPS and, if being used by a child, essential communications. N’installez pas des applications ou des jeux (!!!) inutiles qui pourraient introduire des logiciels malveillants comme des chevaux de troie, des virus ou des robots qui pourraient interférer avec votre système.
+- Installez toutes les mises à jour de sécurité proposées par le fabricant de votre téléphone et Google.
+- Vous pourriez aussi avoir besoin de modifier vos habitudes en tant que diabétique lorsque vous changez de thérapie en utilisant un système de boucle fermée. Par ex. some people report, they need less hypo treatments as AAPS has already reduced insulin.
 
 ## Communicateur SMS
 
-- AndroidAPS allows you to control a child's phone remotely via text message. Si vous activez le Communicateur SMS, rappelez-vous toujours que le téléphone configuré pour donner des commandes distantes pourrait être volé. Donc, toujours le protéger au minimum par un code PIN.
-- AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Il est conseillé de le configurer de sorte que les SMS de confirmation soient envoyés à au moins deux numéros de téléphone différents au cas où l'un des téléphones destinataires serait volé.
+- AAPS vous permet de controler le téléphone d’un enfant à distance via un SMS. Si vous activez le Communicateur SMS, rappelez-vous toujours que le téléphone configuré pour donner des commandes distantes pourrait être volé. Donc, toujours le protéger au minimum par un code PIN.
+- AAPS vous informera également par SMS si vos commandes à distance, comme un bolus ou un changement de profil, ont été effectuées. Il est conseillé de le configurer de sorte que les SMS de confirmation soient envoyés à au moins deux numéros de téléphone différents au cas où l'un des téléphones destinataires serait volé.
 
-## AndroidAPS can also be used by blind people
+(Safety-first-aaps-can-also-be-used-by-blind-people)=
+## AAPS can also be used by blind people
 
-On Android devices TalkBack is part of the operating system. It is a program for screen orientation via voice output. With TalkBack you can operate your smartphone as well as AndroidAPS blind.
+Sur les appareils Android, TalkBack fait partie du système d'exploitation. Il s'agit d'un programme pour s'orienter sur l'écran avec la voix. With TalkBack you can operate your smartphone as well as AAPS blind.
 
-We users create the AndroidAPS app ourselves with Android Studio. Many use Microsoft Windows for this purpose, where there is the Screenreader analogous to TalkBack. Since Android Studio is a Java application, the "Java Access Bridge" component must be enabled in the Control Panel. Otherwise, the screen reader of the PC will not speak in Android Studio.
+We users create the AAPS app ourselves with Android Studio. Beaucoup utilisent Microsoft Windows à cette fin, à l'aide du lecteur d'écran ("Screenreader"), qui est analogue à TalkBack. Comme Android Studio est une application Java, le composant "Java Access Bridge" doit être activé dans le Panneau de configuration. Dans le cas contraire, le lecteur d'écran du PC ne pourra pas fonctionner dans Android Studio.
 
-To do this, please proceed as follows:
+Pour ce faire, veuillez procéder comme suit:
 
-- Press WINDOWSTASTE and enter "Control Panel" in the search field, open with Enter. It opens: "All Control Panel Items".
-- Press the letter C to get to "Center for Ease of Use", open with Enter.
-- Then open "Use computer without a screen" with Enter.
-- There, at the bottom, you will find the checkbox "Enable Java Access Bridge", select it.
-- Done, just close the window! The screen reader should work now.
+- Appuyez sur la touche "Windows" et entrez "Panneau de configuration" dans le champ de recherche, appuyez sur la touche "Entrée" pour l'ouvrir. Cela ouvre : "Tous les éléments du panneau de configuration".
+- Appuyez sur la lettre C pour aller à "Centre pour la facilité d'utilisation", appuyez sur la touche "Entrée" pour l'ouvrir.
+- Puis ouvrez "Utiliser l'ordinateur sans écran" en appuyant sur "Entrée".
+- Là, en bas, vous trouverez la case à cocher "Activer Java Access Bridge", sélectionnez-la.
+- Terminé, il suffit de fermer la fenêtre ! Le lecteur d'écran devrait fonctionner maintenant.
 
 ```{note}
-**IMPORTANT SAFETY NOTICE**
+**AVIS DE SÉCURITÉ IMPORTANT**
 
-The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. Il est extrêmement important que vous utilisiez uniquement une pompe à insuline et un capteur de MGC approuvés FDA/CE pour mettre en oeuvre une boucle fermée d'administration automatique d'insuline. Les modifications matérielles ou logicielles de ces composants peuvent entraîner un dosage incorrect de l'insuline, causant un risque significatif pour l'utilisateur. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
+La base des fonctions de sécurité d'AAPS présentée dans cette documentation s'appuie sur les fonctions de sécurité du matériel utilisé pour construire votre système. Il est extrêmement important que vous utilisiez uniquement une pompe à insuline et un capteur de MGC approuvés FDA/CE pour mettre en oeuvre une boucle fermée d'administration automatique d'insuline. Les modifications matérielles ou logicielles de ces composants peuvent entraîner un dosage incorrect de l'insuline, causant un risque significatif pour l'utilisateur. Si vous trouvez ou recevez des pompes à insuline ou des récepteurs MGC cassés, modifiés ou fabriqués par vos soins, *ne les utilisez pas* pour créer un système AAPS.
 
 De plus, il est également important d'utiliser uniquement des fournitures d'origine telles que serteurs, canules et réservoirs d'insuline approuvés par le fabricant pour une utilisation avec votre pompe ou votre MGC. L'utilisation de consommables non testés ou modifiés peut entraîner une imprécision du MGC et des erreurs de dosage de l'insuline. L'insuline est très dangereuse lorsqu'elle est mal dosée - veuillez ne pas jouer avec votre vie en piratant avec vos fournitures.
 
