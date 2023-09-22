@@ -32,16 +32,6 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 * * *
 
-### Medtrum A6/P6/C6 ([Homepage](https://www.medtrum.com/product/nanopump.html))
-
-**Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controllable via iPhone App. No Android app available at the moment.
-
-**Requisitos de hardware para AAPS: ** Probablemente ninguno. It seems to be BT enabled.
-
-**Comment:** Some investigation has started to see if this pump can be supported in AAPS very easily. You can find more information on our discord in channel "medtrum".
-
-* * *
-
 ### Equil (pump from Aidex/GlucoRx/MicroTechMD) ([Homepage](https://www.glucorx.ie/glucorx-equil/))
 
 **Loop status:** Is a Loop candidate.
