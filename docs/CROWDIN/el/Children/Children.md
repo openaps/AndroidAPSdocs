@@ -1,41 +1,41 @@
-# Remote monitoring
+# Απομακρυσμένο σύστημα παρακολούθησης
 
 ```{image} ../images/KidsMonitoring.png
-:alt: Monitoring children
+:alt: Παρακολούθηση παιδιών
 ```
 
-AAPS offer several options for remote monitoring of children and also allows to send remote commands. Of course you can also use remote monitoring to follow your partner or friend.
+Το AndroidAPS προσφέρει αρκετές επιλογές για την απομακρυσμένη παρακολούθηση των παιδιών και επίσης επιτρέπει την αποστολή εντολών από απόσταση. Φυσικά, μπορείτε να χρησιμοποιήσετε το σύστημα απομακρυσμένης παρακολούθησης για να ακολουθήσετε τον σύντροφο ή τον φίλο σας.
 
-## Functions
+## Λειτουργίες
 
-- Kid's pump is controlled by kid's phone using AAPS.
-- Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone. Settings must be the same in AAPS and NSClient app.
-- Parents can be alarmed by using **xDrip+ app in follower mode** on their phone.
-- Remote control of AAPS using [SMS Commands](../Children/SMS-Commands.md) secured by two-factor authentication.
-- Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) for further details.
+- Η αντλία του παιδιού ελέγχεται από το τηλέφωνο του παιδιού χρησιμοποιώντας το AndroidAPS.
+- Οι γονείς μπορούν να παρακολουθήσουν απομακρυσμένα όλα τα σχετικά δεδομένα, όπως τα επίπεδα γλυκόζης, τους ενεργούς υδατάνθρακες, την ενεργή ινσουλίνη κλπ. χρησιμοποιώντας την εφαρμογή **NSClient** στο τηλέφωνό τους. Οι ρυθμίσεις πρέπει να είναι ίδιες στο AndroidAPS και το NSClient.
+- Οι γονείς μπορούν να έχουν συναγερμούς χρησιμοποιώντας την εφαρμογή **xDrip+ με λειτουργία ακόλουθου ** στο τηλέφωνο τους.
+- Απομακρυσμένος έλεγχος του AAPS χρησιμοποιώντας [ Εντολές SMS ](../Children/SMS-Commands.md) που εξασφαλίζεται με έλεγχο ταυτότητας δύο παραγόντων.
+- Ο απομακρυσμένος έλεγχος μέσω της εφαρμογής NSClient συνιστάται μόνο αν ο συγχρονισμός σας λειτουργεί καλά (πχ. Δε βλέπετε ανεπιθύμητες αλλαγές δεδομένων όπως μετατροπές που κάνατε οι ίδιοι σε TT, TBR κλπ) δείτε [σημειώσεις για τη Version 2. 1.1](Releasenotes-important-hints-2-8-1-1) για περισσότερες λεπτομέρειες.
 
-## Tools and apps for remote monitoring
+## Εργαλεία και εφαρμογές για την εξ αποστάσεως παρακολούθηση
 
-- [Nightscout](https://nightscout.github.io/) in web browser (mainly data display)
-- NSClient app is a stripped down version of AAPS capable of following somebody, making profile switches, setting TTs and entering carbs. There are 2 apps:  [NSClient & NSClient2 to download](https://github.com/nightscout/AndroidAPS/releases/). The only difference is the app name. This way you can install the app twice on the same phone, to be able to follow 2 different persons/nightscouts with it.
-- Dexcom follow if you are using original Dexcom app (BG values only)
-- [xDrip+](../Configuration/xdrip.md) in follower mode (mainly BG values and **alarms**)
-- [Sugarmate](https://sugarmate.io/) or [Spike](https://spike-app.com/) on iOS (mainly BG values and **alarms**)
-- Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting
+- [Nightscout ](https://nightscout.github.io/)στο πρόγραμμα περιήγησης στο web (κυρίως εμφάνιση δεδομένων)
+- Η εφαρμογή NSClient είναι μια απλουστευμένη έκδοση του AAPS που μπορεί να ακολουθήσει κάποιον, να κανει αλλαγές στο προφίλ, να ρυθμίσει ρυθμίζοντας προσωρινούς ρυθμούς και να εισάγει υδατάνθρακες. Υπάρχουν 2 εφαρμογές για να κατεβάσετε:  το [NSClient & και το NSClient2 ](https://github.com/nightscout/AndroidAPS/releases/). Η μόνη διαφορά μεταξύ τους είναι το όνομα της εφαρμογής. Με αυτόν τον τρόπο μπορείτε να εγκαταστήσετε την εφαρμογή δύο φορές στο ίδιο τηλέφωνο ώστε να μπορείτε να ακολουθήσετε δύο διαφορετικά άτομα/nightscouts με την εφαρμογή.
+- Παρακολούθηση Dexcom αν χρησιμοποιείτε την αυθεντική εφαρμογή του Dexcom (μόνο τιμές γλυκόζης)
+- [xDrip +](../Configuration/xdrip.md) σε λειτουργία follower (κυρίως τιμές γλυκόζης και **συναγερμοί**)
+- [Sugarmate](https://sugarmate.io/) ή [Spike](https://spike-app.com/) σε iOS (κυρίως τιμές γλυκόζης και συναγερμοί ****)
+- Ορισμένοι χρήστες βρίσκουν ότι ένα πλήρες εργαλείο απομακρυσμένης πρόσβασης, όπως το [TeamViewer](https://www.teamviewer.com/) μπορεί είναι χρήσιμο για την προηγμένη απομακρυσμένη αντιμετώπιση προβλημάτων
 
-## Smartwatch options
+## Επιλογές Smartwatch
 
-A smartwatch can be a very useful tool in helping manage AAPS with kids. A couple of different configurations are possible:
+Ένα smartwatch μπορεί να είναι ένα πολύ χρήσιμο εργαλείο για τη διαχείριση του AAPS με παιδιά. Μερικές διαφορετικές ρυθμίσεις είναι δυνατές:
 
-- If NSClient is installed on the parents phone, the [NSClient WearOS app](https://github.com/nightscout/AndroidAPS/releases/) can be installed on a compatible smartwatch connected to the parent's phone. This will show current BG, loop status and allow carb entry, temp targets and profile changes. It will NOT allow bolusing from the WearOS app.
-- Alternatively, the [AAPS WearOS app](https://androidaps.readthedocs.io/en/latest/Configuration/Watchfaces.html) can be built and installed on a compatible smartwatch, connected to the kid's phone but worn by the parent. This includes all the functions listed above as well as the ability to bolus insulin. This allows the parent to adminster insulin without needing to remove the kid's phone from however it is kept on them.
+- Εάν το NSClient είναι εγκατεστημένο στο τηλέφωνο των γονέων, η εφαρμογή [NSClient WearOS](https://github.com/nightscout/AndroidAPS/releases/) μπορεί να εγκατασταθεί σε ένα συμβατό smartwatch το οποίο είναι συνδεδεμένο στο τηλέφωνο του γονέα. Αυτό θα εμφανίσει την τρέχουσα γλυκόζη αίματος, την κατάσταση του συστήματος και θα επιτρέψει την καταχώρηση υδατανθράκων, προσωρινών στόχων και τις αλλαγές προφίλ. ΔΕΝ θα επιτρέψει γευματική δόση ινσουλίνης από την εφαρμογή WearOS.
+- Εναλλακτικά, η εφαρμογή [AAPS WearOS](https://androidaps.readthedocs.io/en/latest/Configuration/Watchfaces.html) μπορεί να κατασκευαστεί και να εγκατασταθεί σε ένα συμβατό smartwatch που είναι συνδεδεμένο στο τηλέφωνο του παιδιού, αλλά φοριέται από τον γονέα. Σε αυτό περιλαμβάνονται όλες οι λειτουργίες που αναφέρονται παραπάνω, καθώς και η ικανότητα για γευματική δόση ινσουλίνης. Αυτό επιτρέπει στο γονέα να χορηγήσει ινσουλίνη χωρίς να χρειάζεται να πάρει το τηλέφωνο από πάνω από το παιδί.
 
-## Things to consider
+## Πράγματα που πρέπει να σκεφτείτε
 
-- Setting the correct [treatment factors](FAQ-how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
-- Settings must be the same in AAPS and NSClient app.
-- Consider time gap between master and follower due to time for up- and download as well as the fact that AAPS master phone will only upload after loop run.
-- So take your time to set those correctly and test them in real life with your kid next to you before starting remote monitoring and remote treatment. School holidays might be a good time for that.
-- What is your emergency plan when remote control does not work (i.e. network problems)?
-- Remote monitoring and treatment can be really helpful in kinder garden and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan. Examples for such care plans can be found in the [files section of AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) on Facebook.
-- It is important to keep the kid's phone in range of their pump and CGM at all times. This can be challenging especially with very small children. Many solutions exist, a popular option is an [SPI Belt](https://spibelt.com/collections/kids-belts)
+- Ο καθορισμός των σωστών ["θεραπευτικών παραγόντων ](FAQ-how-to-begin) (βασικός ρυθμός DIA, ISF...) Είναι δύσκολος για τα παιδιά, ειδικά όταν εμπλέκονται αυξητικές ορμόνες.
+- Οι ρυθμίσεις πρέπει να είναι ίδιες στο AndroidAPS και το NSClient.
+- Λάβετε υπόψη το χρονικό κενό ανάμεσα στο βασικό χρήστη και τον ακόλουθο που δημιουργείται λόγω του χρόνου που χρειάζεται για να ανέβουν και να κατέβουν τα δεδομένα, όπως επίσης και το γεγονός ότι το βασικό τηλέφωνο με AAPS θα ανεβάσει τα δεδομένα μόνο αφού ξεκινήσει το κύκλωμα.
+- Επομένως, πάρτε το χρόνο σας προκειμένου να κάνετε τις ρυθμίσεις σωστά και δοκιμάστε τες στην πραγματική ζωή με το παιδί σας δίπλα σας προτού να ξεκινήσετε την απομακρυσμένη παρακολούθηση και τις απομακρυσμένες θεραπευτικές κινήσεις. Οι σχολικές διακοπές μπορεί να είναι μια καλή περίοδος για αυτό.
+- Ποιο είναι το σχέδιο έκτακτης ανάγκης σας όταν το σύστημα απομακρυσμένης παρακολούθησης δε λειτουργεί (π.χ προβλήματα με το ίντερνετ);
+- Η απομακρυσμένη παρακολούθηση και η απομακρυσμένη θεραπευτική αντιμετώπιση μπορεί να είναι ιδιαίτερα βοηθητικές στο νηπιαγωγείο και το Δημοτικό σχολείο. Αλλά βεβαιωθείτε ότι οι δάσκαλοι και οι εκπαιδευτικοί γνωρίζουν το θεραπευτικό πλάνο του παιδιού σας. Παραδείγματα τέτοιων θεραπευτικών πλάνων μπορούν να βρεθούν στην ενότητα [αρχεία των χρηστών AAPS](https://www.facebook.com/groups/AndroidAPSUsers/files/) στο Facebook.
+- Είναι σημαντικό να κρατάτε το τηλέφωνο του παιδιού σε σύνδεση με την αντλία και το CGM ανά πάσα στιγμή. Αυτό μπορεί να είναι δύσκολο ειδικά με πολύ μικρά παιδιά. Υπάρχουν πολλές λύσεις, μια δημοφιλής επιλογή είναι μια ζώνη [SPI](https://spibelt.com/collections/kids-belts)
