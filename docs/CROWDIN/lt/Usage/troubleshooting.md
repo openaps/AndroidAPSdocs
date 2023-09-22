@@ -4,7 +4,7 @@ Jūs galite rasti trikčių diagnostikos informaciją daugelyje puslapių šioje
 
 Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.html).
 
-## AndroidAPS programa
+## AAPS app
 
 ### Building & updating
 
