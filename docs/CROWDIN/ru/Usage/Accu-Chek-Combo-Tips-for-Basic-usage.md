@@ -5,27 +5,32 @@
 ## Как обеспечить бесперебойную работу
 
 * Всегда ** носите смартфон с собой **, оставляя его рядом с кроватью ночью. Так как помпа может оказаться за или под вами во время сна, лучше всего оставлять ее где-то повыше (на полке).
-* Всегда убеждайтесь, что батарея помпы максимально заряжена. Информацию о батарее смотрите в разделе подсказок по использованию батареи.
-* (Only applies to the old driver) It is best to **not touch the app ruffy** while the system is running. Если приложение запускается заново, соединение с помпой может прерваться. Как только помпа соединится с ruffy, нет необходимости в повторном подключении. Даже после перезапуска телефона соединение восстанавливается автоматически. По возможности переместите приложение на неиспользуемый экран или папку на смартфоне, чтобы случайно его не открыть.
+* Always make sure that the pump battery is as full as possible. See the battery section for tipps regarding the battery.
+
+* (Only applies to the old driver) It is best to **not touch the app ruffy** while the system is running. If the app is started again, the connection to the pump can break off. Once the pump is connected to ruffy, there is no need to re-connect. Even after a restart of the phone, the connection is automatically re-established. If possible, move the app to an unused screen or in a folder on your smartphone so you do not accidentally open it.
+
 * (Only applies to the old driver) If you unintentionally open the app ruffy during looping, it's best to restart the smartphone right away.
-* Всякий раз, когда это возможно, управляйте помпой с помощью приложения AndroidAPS. Для этого активируйте блокировку кнопок на помпе в ** PUMP SETTINGS/KEY LOCK/ON **. Кнопками помпы следует пользоваться только при замене батареи или картриджа. ![Блокировка кнопок](../images/combo/combo-tips-keylock.png)
+* Whenever possible, only operate the pump via the AAPS app. To facilitate this, activate the key lock on the pump under **PUMP SETTINGS / KEY LOCK / ON**. Кнопками помпы следует пользоваться только при замене батареи или картриджа. 
+
+![Keylock](../images/combo/combo-tips-keylock.png)
 
 ## Помпа недоступна. Что делать?
 
 ### Активируйте сигнализацию "помпа недоступна"
 
-* В AndroidAPS перейдите в ** Настройки/Локальные оповещения **, активируйте ** оповещение при недоступности помпы ** и задайте для него лимит [Min]</strong> до ** 31 ** минут. 
+* In AAPS, go to **Settings / Local Alarms** and activate **alarm when pump is unreachable** and set **pump not reachable limit [Min]** to **31** minutes.
 * Это даст вам достаточно времени, чтобы не активировать сигнал при выходе из помещения, пока телефон останется на столе, но информирует вас, если помпа не может быть достигнута на время, превышающее длительность временного базала.
 
 ### Восстановление доступности помпы
 
-* Когда AndroidAPS сообщает о том, что **помпа недоступна** разблокируйте кнопки помпы и ** нажмите на любую кнопку ** (например, "вниз"). As soon as the pump display has turned off, press **Refresh** on the **Combo Tab** in AndroidAPS. В большинстве случаев связь с помпой восстанавливается.
-* Если это не поможет, перезагрузите смартфон. After the restart, AndroidAPS will be reactivated and a new connection will be established with the pump. If you are using the old driver, ruffy will be reactivated as well.
-* Тесты с разными телефонами показали, что некоторые из них запускают ошибку "помпа недоступна" чаще, чем другие. В разделе [ Телефоны для AAPS ](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) перечислены успешно проверенные смартфоны. 
+* When AAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, press **Refresh** on the **Combo Tab** in AAPS. В большинстве случаев связь с помпой восстанавливается.
+* If that does not help, reboot your smartphone. After the restart, AAPS will be reactivated and a new connection will be established with the pump. If you are using the old driver, ruffy will be reactivated as well.
+
+* The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) lists successfully tested smartphones.
 
 ### Причины и последствия частых ошибок связи
 
-* На телефонах с ** небольшой памятью ** (или ** агрессивными параметрами экономии заряда батареи **) AndroidAPS часто отключается. Это можно определить по тому, что кнопки Bolus и Calculator не присутствуют на главном экране при запуске AAPS, так как система инициализируется. Это может привести к оповещениям "помпа недоступна" при запуске. В поле ** недавнее соединение ** на вкладке Combo можно проверить, когда AndroidAPS последний раз обменивался данными с помпой. 
+* On phones with **low memory** (or **aggressive power-saving** settings), AAPS is often shut down. Это можно определить по тому, что кнопки Bolus и Calculator не присутствуют на главном экране при запуске AAPS, так как система инициализируется. Это может привести к оповещениям "помпа недоступна" при запуске. In the **Last Connection** field of the Combo tab, you can check when AAPS last communicated with the pump.
 
 ![Pump unreachable](../images/combo/combo-tips-pump-unreachable.png)
 
@@ -38,7 +43,7 @@
 
 ## Отмена временной базальной скорости не выполнена
 
-* Иногда AndroidAPS не может автоматически отменить оповещение ** Временная скорость базала TBR ОТМЕНЕНА **. В этом случае необходимо нажать кнопку ** ОБНОВИТЬ ** на вкладке **COMBO** или подтвердить получение сигнала на помпе.
+* Occasionally, AAPS can not automatically cancel a **TBR CANCELED** alert. Then you have to either press **UPDATE** in the AAPS **Combo tab** or the alarm on the pump will need to be confirmed.
 
 ## Особенности работы батареи помпы
 
@@ -54,7 +59,7 @@
 * Разблокируйте кнопки на помпе, переведите ее в режим остановки, подтвердите возможно отмененный временный базал, и замените батарею.
 * When using the old driver, if the clock on the pump did not survive the battery chenge, re-set the date and time on the pump to exactly the date/time on your phone running AAPS. (The new driver automatically updates the pump's date and time.)
 * Затем переведите помпу в рабочий режим и выберите ** Возобновить ** при длинном нажатии на ** Приостановлено ** на главном экране.
-* AndroidAPS возобновит подачу необходимого временного базала с получением следующего значения ГК. 
+* AAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value.
 
 (Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
 
@@ -90,16 +95,16 @@ If your battery life is significantly shorter than the ranges given above, pleas
 The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
 
 * Используйте **e-Carbs** при занесении углеводов или использовании калькулятора путем ввода всех углеводов целого блюда и расчетного времени их поступления в кровь в виде глюкозы. Затем система вычислит мелкие углеводы, равномерно распределенные на всю продолжительность, что приведет к тому, что алгоритм обеспечит эквивалентную дозировку инсулина, при этом постоянно проверяя общее увеличение/снижение уровня глюкозы в крови. При использовании многоволнового болюса можно комбинировать меньший болюс, поданный немедленно, с растянутыми углеводами e-carbs. 
-* Перед едой на вкладке **Действия** в AndroidAPS установить временную цель **Ожидаемый прием пищи** ГК 80 (4,5) на несколько часов. Продолжительность должна основываться на интервале, который вы выбрали бы для пролонгированного болюса. Это будет держать цель ниже, чем обычно, и поэтому увеличит количество поданного инсулина.
+* Before eating, on the **Actions tab** in AAPS set as a temporary **Eating Soon** goal with target glucose 80 for several hours. Продолжительность должна основываться на интервале, который вы выбрали бы для пролонгированного болюса. Это будет держать цель ниже, чем обычно, и поэтому увеличит количество поданного инсулина.
 * Затем воспользуйтесь **Калькулятором** и введите общее количество принимаемых углеводов, но непосредственно не применяйте значения, предлагаемые калькулятором болюса. Если предполагается болюс двойной волны, снизьте дозировку инсулина. Чтобы противодействовать росту ГК, в зависимости от пищи, алгоритм обеспечит дополнительные микроболюсы SMB или более высокую временную скорость базала. В данном случае ограничение безопасности для базала должно быть тщательно изучено и, при необходимости, временно изменено.
 
-* Если вы соблазнились просто использовать пролонгированный или многоволновый болюс непосредственно на помпе, AndroidAPS накажет вас отключением замкнутого цикла на следующие шесть часов, чтобы убедиться, что отсутствует избыток подачи инсулина.
+* If you are tempted to just use the extended or multiwave bolus directly on the pump, AAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
 
 ![Disabled loop after multiwave bolus](../images/combo/combo-tips-multiwave-bolus.png)
 
 ## Сигналы оповещений при подаче болюса
 
-* Если AndroidAPS обнаружит, что идентичные болюсы были успешно поданы в одну и ту же минуту, то подача болюса с одним и тем же количеством единиц инсулина будет предотвращена. Если вы действительно хотите подать одинаковое количество инсулина за короткий промежуток времени, просто подождите еще две минуты, а затем снова подайте болюс. Если первый болюс был прерван или не был подан по другим причинам, вы можете сразу же повторно дать болюс (начиная с версии AAPS 2.0.).
+* If AAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical numer of insulin units. Если вы действительно хотите подать одинаковое количество инсулина за короткий промежуток времени, просто подождите еще две минуты, а затем снова подайте болюс. Если первый болюс был прерван или не был подан по другим причинам, вы можете сразу же повторно дать болюс (начиная с версии AAPS 2.0.).
 * Такое оповещение есть механизм безопасности, который считывает историю помпы, прежде чем подавать новый болюс, чтобы правильно вычислить активный инсулин IOB, даже когда болюс подается непосредственно с помпы. Он не позволяет неразличимые записи.
 
 ![Double bolus](../images/combo/combo-tips-doppelbolus.png)

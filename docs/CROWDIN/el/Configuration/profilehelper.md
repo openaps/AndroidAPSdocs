@@ -1,9 +1,9 @@
-# Profile helper
+# Βοηθός προφίλ
 
-Profile helper offers two functions:
+Ο βοηθός προφίλ προσφέρει δύο λειτουργίες:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. Εύρεση προφίλ για παιδιά
+2. Σύγκριση δύο προφίλ ή εναλλαγή προφίλ προκειμένου να κλωνοποιηθεί ένα νέο προφίλ
 
 ## Profile for kids (up to 18 years)
 

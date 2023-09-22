@@ -11,7 +11,7 @@ Kopiere die exportierten Einstellungen auf Deinen Computer oder in einen Cloud-S
 Auf einem Windows 10 PC sieht es in etwa so aus:
 
 ```{image} ../images/AAPS_ExImportSettingsWin.png
-:alt: AndroidAPS Preferences Datei - Smartphone mit PC verbunden
+:alt: AAPS Preferences phone connected to computer
 ```
 
 ## Exportierte Einstellungen
@@ -36,7 +36,7 @@ Das Backup ist durch ein Master-Passwort verschlüsselt. Das Master-Passwort kan
 - Exportiere die Einstellungen
 
 ```{image} ../images/AAPS_ExportSettings1.png
-:alt: AndroidAPS Export der Einstellungen 1
+:alt: AAPS export settings 1
 ```
 
 - Datum und Zeit des Exports werden automatisch an den Dateinamen angehängt und zusammen mit dem Pfad angezeigt.
@@ -45,7 +45,7 @@ Das Backup ist durch ein Master-Passwort verschlüsselt. Das Master-Passwort kan
 - Der erfolgreiche Export wird am unteren Rand des Bildschirms angezeigt.
 
 ```{image} ../images/AAPS_ExportSettings2.png
-:alt: AndroidAPS Export der Einstellungen 2
+:alt: AAPS export settings 2
 ```
 
 (ExportImportSettings-import-settings)=
@@ -58,7 +58,7 @@ Das Backup ist durch ein Master-Passwort verschlüsselt. Das Master-Passwort kan
 - Importiere die Einstellungen
 
 ```{image} ../images/AAPS_ImportSettings1.png
-:alt: AndroidAPS Import der Einstellungen 1
+:alt: AAPS import settings 1
 ```
 
 - Alle Dateien im Verzeichnis AAPS/preferences/ auf Deinem Smartphone werden in der Liste angezeigt.
@@ -67,7 +67,7 @@ Das Backup ist durch ein Master-Passwort verschlüsselt. Das Master-Passwort kan
 - Gib' Dein [Master-Passwort](Preferences-master-password) ein und klicke auf 'OK'.
 
 ```{image} ../images/AAPS_ImportSettings2.png
-:alt: AndroidAPS Import der Einstellungen 2
+:alt: AAPS import settings 2
 ```
 
 - Details zu der gewählten Datei werden angezeigt.

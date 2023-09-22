@@ -8,7 +8,7 @@ Het wijzigen van de tijdzone in de telefoon is geen probleem omdat de pompgeschi
 
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AndroidAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
+These pumps need a special care because AAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
 
 To avoid this there are two possibilities:
 
@@ -56,13 +56,21 @@ So the Insight user doesn't have to worry about timezone changes and time change
 
 ## Accu-Chek Combo
 
-The [new Combo driver](../Configuration/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the new driver programs into the pump. In addition, it stores the timezone in the local AndroidAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
+The [new Combo driver](../Configuration/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the new driver programs into the pump. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
 
 Note that this takes some time, however, since it can only be done in the remote-terminal mode, which is generally slow. This is a Combo limitation that cannot be overcome.
 
 The old, Ruffy-based driver does not adjust the time automatically. The user has to do that manually. See below for the steps necessary to do that safely in case the timezone / daylight savings is the reason for the change.
 
 (Timezone-traveling-time-adjustment-daylight-savings-time-dst)=
+
+## Medtrum
+
+The driver automatically adjusts the time of the pump to the time of the phone.
+
+Timezone changes keep the history in tact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and IOB. If you change time manually double check the IOB.
+
+When the timezone or time changes running TBR's are stopped.
 
 # Wisselen tussen zomer- en wintertijd
 
@@ -76,7 +84,7 @@ If you bolus with the calculator please don't use COB and IOB unless you made su
 
 **NOTE**: As mentioned above, this secton is only valid for the old, Ruffy-based driver. The new driver adjusts date and time and DST automatically.
 
-AndroidAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
+AAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
 
 ### Acties voorafgaand aan tijdswissel
 
@@ -90,7 +98,7 @@ AndroidAPS will issue an alarm if the time between pump and phone differs too mu
    * Een lijst van deze landen is beschikbaar op [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * Voor Nederland/België zou je "Brazzaville" (Congo) kunnen kiezen op de avond voordat de zomertijd ingaat, en "Amman" (Jordanië) op de avond voordat de wintertijd ingaat. Verander de tijdzone van jouw telefoon naar Congo/Jordanië.
 
-3. In AndroidAPS ga je naar het pomp-tabblad en vernieuw de status.
+3. In AAPS refresh your pump.
 
 4. Ga naar het tabblad Behandelingen... Als je dubbele behandelingen ziet:
    
@@ -104,8 +112,8 @@ AndroidAPS will issue an alarm if the time between pump and phone differs too mu
 A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
 
 1. Verander de Android tijdzone terug naar je huidige locatie en schakel de automatische tijdzone opnieuw in.
-2. AndroidAPS zal je snel beginnen te waarschuwen dat de tijdsinstelling van de Combo niet overeenkomt met jouw telefoon. Dus werk de klok van de pomp handmatig bij via de knoppen van de pomp.
-3. Op het AndroidAPS "Combo" scherm, klik op Vernieuwen.
+2. AAPS will soon start alerting you that the Combo’s clock doesn’t match. Dus werk de klok van de pomp handmatig bij via de knoppen van de pomp.
+3. On the AAPS “Combo” screen, press Refresh.
 4. Ga dan naar tabblad Behandelingen en kijk of daar behandelingen in de toekomst tussen staan. Er zouden er niet veel moeten zijn.
    
    * Druk NIET (!) op "verwijder behandelingen in de toekomst"
@@ -119,8 +127,12 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 
 * Wisselingen tussen zomer/wintertijd worden automatisch gedaan. Geen actie vereist.
 
+## Medtrum
+
+* Wisselingen tussen zomer/wintertijd worden automatisch gedaan. Geen actie vereist.
+
 ## Other pumps
 
-* Deze functie is beschikbaar sinds AndroidAPS versie 2.2.
-* Gedurende de nacht wordt er automatisch omgeschakeld. Om problemen te voorkomen zal de loop worden gedeactiveerd gedurende 3 uur NA de zomer/wintertijd wissel. Dit gebeurt om veiligheidsredenen (te hoge IOB als gevolg van dubbele bolus-invoer vóór tijdswisseling).
-* Je ontvangt een melding op het hoofdscherm voorafgaand aan de tijdswissel, dat de loop tijdelijk zal worden uitgeschakeld. Dit bericht zal verschijnen zonder geluid, trilling oid.
+* This feature is available since AAPS version 2.2.
+* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
+* You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.

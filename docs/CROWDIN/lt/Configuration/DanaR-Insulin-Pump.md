@@ -10,12 +10,12 @@
 * Eikite Main Menu > Setting > Discovery
 * Telefone eikite į Bluetooth nustatymus, nuskaitykite aptinkamus prietaisus, pasirinkite savo DanaR pompos serijos numerį ir įveskite slaptažodį (sujungimo slaptažodis yra 0000). Jei telefonas neaptinka pompos, paleiskite telefoną iš naujo, išimkite DanaR bateriją, pakeiskite ją nauja ir pakartokite šiuos du žingsnius.
 
-* AndroidAPS programoje eikite į Konfigūraciją ir išsirinkite Jūsų DanaR pompos tipą (DanaR, DanaR Korean, DanaRv2)
+* In AAPS go to Config Builder and select the type of DanaR you have (DanaR, DanaR Korean, DanaRv2)
 
 * Pradinio lango viršutiniame dešiniajame kampe paspauskite 3 taškus. Išsirinkite Nustatymai.
 * Išsirinkite "DanaR Bluetooth" ir paspauskite savo pompos serijinį numerį.
 * Pasirinkite "Pompos slaptažodis" ir įveskite savo slaptažodį. (Standartinis slaptažodis yra 1234)
-* Jei norite, kad AndroidAPS naudotų bazės reikšmes virš 200 %, pažymėkite "Naudoti ištęstus bolusus >200%". Įsidėmėkite, kad Jūs negalėsite naudoti ciklo su padidinta laikina baze, jei naudosite ištęstus bolusus maistui.
+* If you want AAPS to allow basal rate above 200%, enable Use extended boluses for >200%. Įsidėmėkite, kad Jūs negalėsite naudoti ciklo su padidinta laikina baze, jei naudosite ištęstus bolusus maistui.
 * "Nustatymuose" pasirinkę "DanaR pompos nustatymai" galite pakeisti standartinį boluso greitį (1 V per 12 s, 1 V per 30 s, 1 V per 60 s).
 * Nustatykite bazės žingsnį pompoje 0.01 U/h
 * Set bolus step on pump to 0.1 U/h

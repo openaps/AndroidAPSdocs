@@ -313,7 +313,7 @@ To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > 
 
 When you use xDrip and have xDrip installed on the watch, the 'AAPS Snooze Alert' shortcut will also Snooze any xDrip alarm.
 
-## Performance and battery life tips
+## Tipy pro lepší chod a delší výdrž baterie
 
 Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
 

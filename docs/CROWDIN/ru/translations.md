@@ -1,27 +1,27 @@
-# How to translate strings for the AndroidAPS app or the documentation
+# How to translate strings for the AAPS app or the documentation
 
-* For the the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
-* For the documentation please visit <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
+* Для перевода текста в интерфейсе приложения пройдите по ссылке <https://crowdin.com/project/androidaps> и залогиньтесь с помощью вашей учетной записи GitHub
+* Для перевода статей документации перейдите по ссылке <https://crowdin.com/project/androidapsdocs> и залогиньтесь, используя вашу учетную запись GitHub
 
-* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users).
+* Запросите участие в команде составителей документации. Для этого кликните по флагу желаемого языка, а затем нажмите кнопку "Join" ("Присоединиться") в правом верхнем углу следующей страницы. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
 
-```{admonition} Time for Approval :class: note
+```{admonition} Ожидание одобрения :class: note
 
-The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
+Одобрение выполняется человеком. Как некоммерческая организация мы не выставляем какие-либо сроки, но обычно одобрение занимает меньше 1 дня. Если вы не получили одобрения - пожалуйста, обратитесь к команде документации через Facebook или Discord (русскоязычные пользователи могут написать в группу AndroidApsGroup в Telegram).
 
     <br />* When we approve you, click the flag
        ![When we approve you, click the flag](./images/translation_flags.png)
     
     ## Translation of the app
     
-    (translations-translate-strings-for-androidaps-app)=
-    ### Translate strings for AndroidAPS app
+    (translations-translate-strings-for-AAPS-app)=
+    ### Translate strings for AAPS app
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
+    * If you have no preference for strings you translate just select the "Translate All" button to start. Если вы не настроили строки, которые хотите переводить - для начала нажмите кнопку "Translate All" ("Перевести всё"). Отобразятся требующие перевода строки.
     
        ![Click translate all](./images/translations-click-translate-all.png)
     
-    * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+    * Если вы хотите перевести какой-то конкретный файл - найдите его с помощью поля для поиска или в структуре файлов, нажмите на него и начните переводить строчку за строчкой.
     
        ![Click strings.xml](./images/translations-click-strings.png)
     
@@ -30,7 +30,7 @@ The approval is a manual step. As non profit organization we don't provide SLAs 
        ![Translation app](./images/translations-translate.png)
     
     
-    ### Proofread strings for AndroidAPS app
+    ### Proofread strings for AAPS app
     
     * Proofreaders start by selecting "Proofread" when starting from the language home screen.
     
@@ -41,7 +41,7 @@ The approval is a manual step. As non profit organization we don't provide SLAs 
     
        ![approve text](./images/translations-proofreading.png)
     
-    When a proofreader approves a translation it will be added to the next version of AndroidAPS.
+    When a proofreader approves a translation it will be added to the next version of AAPS.
     
     (translations-translation-of-the-documentation)=
     ## Translation of the documentation
@@ -53,52 +53,48 @@ The approval is a manual step. As non profit organization we don't provide SLAs 
     
     * Translate sentences by sentence
     
-        1. The yellow text is the text you are working at the moment.
+        1. Желтым выделен текст, над которым вы сейчас работаете.
     
-        1. The green text is already translated. You don't need to do this again.
+        1. Зеленым - уже переведенный текст. Вам не требуется переводить его.
     
-        1. The red text is the remaining text which have to be translated.
+        1. Красным выделен текст, который еще не переведен.
     
-        1. This is the source text you are working on at the moment
+        1. Оригинал текста, над которым вы сейчас работаете. Ваш перевод. Вы можете скопировать текст из поля выше или выбрать один из предложенных ниже.
     
-        1. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
-    
-        1. These are the suggestion for a translation. Especially you can see how much Crowdin rates this as a fit or if it was already just in the past and come up through text rearrangements but not content change.
-        1. Press the "save" button to save a proposal for the translation. It will then promoted to a proofreader for final check.
+        1. Имеющиеся варианты перевода. Здесь также можно увидеть, насколько платформа Crowdin оценивает этот перевод как подходящий, или ситуацию, когда перевод был сделан ранее и текст был реорганизован без изменения содержания.
+        1. Нажмите кнопку "save" ("Сохранить") чтобы сохранить свое предложение перевода. После этого ваш вариант будет доступен для финальной оценки корректором.
     
     ![Translation docs](./images/translation_WikiTranslate.png)
     
-    * A translated page will not be published in docs before 
+    * Переведенная страница не будет опубликована до тех пор, пока 
     
-        1. the translation is proofread
+        1. перевод не будет одобрен корректором. не закончится синхронизация между Crowdin и Github (раз в час), которая создает PR (pull request) для Github.
     
-        1. the sync run between Crowdin and Github finished (once an hour) which creates an PR for Github.
+        1. PR в Github не будет одобрен.
     
-        1. the PR in Github was approved.
+    В среднем вся процедура занимает от 1 до 3 дней, но в выходные и праздники могут быть задержки.
     
-    In general this needs 1 - 3 days but might during holiday take a little bit longer.
+    ### Перевод ссылок
     
-    ### Translating links
-    
-    ```{admonition} Links are not translated anymore
+    ```{admonition} Ссылки больше не переводятся
     :class: note
     
-    Links are not translated anymore. In the past we had a topic here but this is gone as through migraton to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Ссылки больше не переводятся. Раньше здесь был соответствующий раздел, однако он исчез с переходом на Markdown и myst_parser. Метки создаются на английском и распространяются автоматически на другие языки.
     
     
 
-You are translating the text which represents the link. Please you have to be carefull **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
+Вы переводите текст ссылки, отображаемый пользователю. Пожалуйста, будьте внимательны и **не** удаляйте ссылки, расположенные внутри тегов `<0></0>` или других пар чисел, если ссылок на странице несколько.
 
-It's the proofreaders job to have a special look on this!
+Корректорам следует обращать особое внимание вопросу правильности ссылок!
 
 ### Proofreading
 
-* Proofreaders have to switch to Proofreading mode
+* Корректоры должны переключиться в режим Proofreading
     
-    ![Proofreading mode docs](./images/translation_WikiProofreadingmode.png)
+    ![Режим коррекции документации](./images/translation_WikiProofreadingmode.png)
     
-    and approve translated texts
+    и одобрить переведенный текст
     
-    ![approve text](./images/translations-proofreading.png)
+    ![одобрить текст](./images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during hollidays. To speed up the process you can inform docs team about new translations.
+* Когда proofreader одобрит перевод, последний будет добавлен в ближайшую сборку документации. Сборки происходят не по фиксированному граф, но примерно каждую неделю, исключая праздники. Для ускорения процесса вы можете проинформировать команду о появлении нового перевода.

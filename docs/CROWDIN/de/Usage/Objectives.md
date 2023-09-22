@@ -1,6 +1,6 @@
 # Objectives (Ziele)
 
-AndroidAPS hat eine Reihe von Zielen (objectives), die erreicht werden müssen, damit du an die Funktionen und Einstellungen von sicherem Looping herangeführt wirst.  Sie stellen sicher, dass du alles, was in den Abschnitten weiter oben beschrieben wurde, korrekt installiert hast und dass du verstehst, was das System tut und warum du ihm vertrauen kannst.
+AAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping.  Sie stellen sicher, dass du alles, was in den Abschnitten weiter oben beschrieben wurde, korrekt installiert hast und dass du verstehst, was das System tut und warum du ihm vertrauen kannst.
 
 Wenn Du Dein **Smartphone wechselst**  kannst Du Deine [Einstellungen exportieren](../Usage/ExportImportSettings.md) , um Deinen Fortschritt bei der Bearbeitung der  Objectives zu behalten. Neben dem Fortschritt bei den Zielen werden auch deine Sicherheitseinstellungen wie der maximale Bolus usw. gespeichert. Wenn Du die Einstellungen nicht exportierst und wieder importierst, musst Du die Ziele von Anfang an neu erreichen.  Denke daran, regelmäßig ein [Backup Deiner Einstellungen](../Usage/ExportImportSettings.html) zu machen, um auf der sicheren Seite zu sein.
 
@@ -9,16 +9,16 @@ Wenn Du eines der Objectives (Ziele) neu starten willst, folge der [Anleitung we
 ## Ziel 1: Einrichten der Darstellung und Überwachung sowie analysieren der Basalraten und Faktoren
 
 - Wähle die zu deinen Geräten passende Quelle für den Blutzuckerwert.  Weitere Informationen findest Du unter [BZ-Quelle](../Configuration/BG-Source.md).
-- Wähle die richtige Pumpe im Konfigurations-Generator (wähle virtuelle Pumpe, wenn du ein Pumpenmodell benutzt, für das es keinen AndroidAPS-Treiber gibt) um sicherzustellen, dass die Pumpe ihren Status mit AndroidAPS teilen kann.
-- Wenn Du eine DanaR Pumpe verwendest, dann stelle sicher, dass Du die [DanaR Insulinpumpen-Anleitung](../Configuration/DanaR-Insulin-Pump.md) befolgt hast, damit eine gute Verbindung zwischen der Pumpe und AndroidAPS gewährleistet ist.
+- Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AAPS driver for looping) to ensure your pump status can communicate with AAPS.
+- If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AAPS.
 - Befolge die  [Nightscout-Anleitung](../Installing-AndroidAPS/Nightscout.md), um zu gewährleisten, dass Nightscout diese Daten empfangen und anzeigen kann.
 - Die URL im NSClient muss **OHNE /api/v1/** am Ende eingegeben werden - siehe [NSClient Einstellungen](Preferences-nsclient).
 
-*Es kann sein, dass Du auf das Auslesen des nächsten Zuckerwertes warten musst, bevor AndroidAPS es erkennt.*
+*You may need to wait for the next blood glucose reading to arrive before AAPS will recognise it.*
 
-## Ziel 2: Lerne, wie AndroidAPS bedient wird
+## Objective 2: Learn how to control AAPS
 
-- Führe verschiedene Aktionen in AndroidAPS aus, die in dieser Zielaufgabe beschrieben werden.
+- Perform several actions in AAPS as described in this objective.
 
 - Klicke auf den orangenen Text "Noch nicht abgeschlossen", um zu den einzelnen Aufgaben zu kommen.
 
@@ -31,7 +31,7 @@ Wenn Du eines der Objectives (Ziele) neu starten willst, folge der [Anleitung we
 (Objectives-objective-3-prove-your-knowledge)=
 ## Ziel 3: Belege Dein Wissen
 
-- Beantworte Multiple-Choice-Fragen zu verschiedenen AndroidAPS- und Closed-Loop-Themen.
+- Pass a multiple-choice exam testing your AAPS knowledge.
 
 - Klicke auf den orangenen Text "Noch nicht abgeschlossen", um zur Seite mit den Fragen und Antwortmöglichkeiten zu kommen.
 
@@ -51,7 +51,7 @@ Wenn Du eines der Objectives (Ziele) neu starten willst, folge der [Anleitung we
 
 - Wähle Open Loop entweder in den Einstellungen oder indem Du lange auf den Loop Button in der linken oberen Ecke des Hauptbildschirms drückst.
 - Arbeite Dich durch die  [Einstellungen](../Configuration/Preferences.md), um AndroidAPS an Deine Anforderungen anzupassen.
-- Bestätige in einem Zeitraum von 7 Tagen mindestens 20 der temporären Basalratenanpassungen; gib sie jeweils von Hand in der Pumpe ein und bestätige in AndroidAPS, dass du sie akzeptiert hast.  Überprüfe, ob diese Daten in AndroidAPS und Nightscout angezeigt werden.
+- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AAPS that you have accepted them.  Ensure this data shows in AAPS and Nightscout.
 - Aktiviere falls notwendig [temporäre Ziele](../Usage/temptarget.md). Nutze das Hypo Temp Target um zu verhindern, dass AAPS aufgrund des Blutzuckeranstiegs nach einer Hypo zu stark korrigiert.
 
 ### Anzahl der Benachrichtigungen reduzieren
@@ -70,7 +70,7 @@ Wenn Du eines der Objectives (Ziele) neu starten willst, folge der [Anleitung we
 
 ## Ziel 5: Open Loop inklusive der temporären Basalratenvorschläge verstehen
 
-- Versuche zu verstehen wie die Empfehlungen für die temporäre Basalraten zustandekommen, indem Du [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) liest und Dich sowohl mit den [Vorhersagelinien auf dem Android APS Startbildschirm](Screenshots-prediction-lines)/Nightscout als auch mit den Ergebnissen der Berechnungen auf dem OpenAPS-Reiter beschäftigst.
+- Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AAPS homescreen](Screenshots-prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
 
 Es ist möglicherweise sinnvoll, wenn du das Ziel höher als üblich ansetzt, bis du den Berechnungen und Einstellungen vertraust.  Das System erlaubt:
 
@@ -103,7 +103,7 @@ Du kannst die Anzeige Deines Zielbereichs (grüne Linien) durch die Änderung de
 
 ### Im Ziel 6 wird die Basalrate bei zu erwartenden niedrigen Glukose-Werten abgeschaltet werden. Der 'closed loop' wird im Ziel 6 keinen Korrekturbolus bei hohen Werten abgeben. Hohe Glukose-Werte müssen von Dir manuell korrigiert werden!
 
-- Voraussetzung: Wenn Du den Loop mit der Abschaltung bei niedrigen Glukose-Werten nutzen willst, muss ein getestetes Profil (Basalrate, Korrektur- und Essensfaktoren) in AAPS gespeichert sein. Du kannst sonst in eine Hypo geraten, die Du manuell behandeln musst. Ein gut getestetes Profil wird Dir helfen, dass Du in den fünf Tagen seltener in eine Hypo kommst, die Du behandeln musst. **Starte das Ziel 6 NICHT, wenn Du immer noch häufig Situationen mit niedrigen oder sehr niedrigen Glukosewerten hast. Passe zuerst DIA, Basalrate, Korrekturfaktoren (ISF) und Essenfaktoren an und teste diese, bevor Du das Ziel 6 startest.**
+- Prerequisite: You need a good profile (basal, ISF, IC) already working in AAPS to start with Loop in Low Glucose Suspend mode. Du kannst sonst in eine Hypo geraten, die Du manuell behandeln musst. Ein gut getestetes Profil wird Dir helfen, dass Du in den fünf Tagen seltener in eine Hypo kommst, die Du behandeln musst. **Starte das Ziel 6 NICHT, wenn Du immer noch häufig Situationen mit niedrigen oder sehr niedrigen Glukosewerten hast. Passe zuerst DIA, Basalrate, Korrekturfaktoren (ISF) und Essenfaktoren an und teste diese, bevor Du das Ziel 6 startest.**
 - Du musst Deine Einstellungen noch nicht verändern. Während Du Dich im Ziel 6 befindest, wird maxIOB intern automatisch auf Null gesetzt. **Wenn Du zu Ziel 7 übergehst, wird es diesen 'override' nicht mehr geben.**
 - Das System wird Deinen maxIOB Wert auf Null setzen (und Deinen Wert damit überschreiben). Wenn Deine Glukosewerte dann fallen, kann AAPS damit Deine Basalrate reduzieren oder aussetzen. Sollten die Glukosewerte steigen, wird das Basal nur dann erhöht, wenn Dein IOB negativ ist (z.B. nach dem Aussetzen der Basalrate wg. vorangegangener niedriger Werte). In allen anderen Fällen wird die Standard-Basalrate Deines aktuellen Profils verwendet. **Hohe Werte müssen deshalb von Dir manuell mit Insulin korrigiert werden.**
 - Wenn Dein Basal-IOB negativ ist (siehe Bildschirmausschnitt unten), kann auch im Ziel 6 eine TBR > 100% gesetzt werden.
@@ -136,9 +136,9 @@ Du kannst die Anzeige Deines Zielbereichs (grüne Linien) durch die Änderung de
 ## Ziel 8: Passe, falls notwendig, Basalraten und Faktoren an und aktiviere dann die Autosens-Funktion
 
 - Du kannst  [Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) verwenden, um dafür zu sorgen, dass Deine Basalraten korrekt bleiben oder einen traditionellen Basalratentest durchführen.
-- Schalte [Autosens](../Usage/Open-APS-features.md) für einen Zeitraum von 7 Tagen ein und beobachte die weiße Linie auf der Grafik auf dem Hauptbildschirm, die anzeigt, dass deine Sensibilität gegenüber Insulin auf Grund von Aktivitäten oder Hormonen steigt oder fällt. Schaue auf dem OpenAPS-Tab nach, wie AndroidAPS die Basalraten und/oder Zielwerte entsprechend anpasst.
+- Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AAPS is adjusting the basals and/or targets accordingly.
 
-*Vergiss nicht, dich als Looper in* [diesem Formular](https://bit.ly/nowlooping) *zu registrieren, wenn du das bisher noch nicht getan hast. Gib AndroidAPS als Art deiner DIY Loop-Software an.\**
+*Don’t forget to record your looping in* [this form](https://bit.ly/nowlooping) *logging AAPS as your type of DIY loop software, if you have not already done so.*
 
 (Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
 ## Ziel 9: Aktiviere zusätzliche oref1 Funktionen zum täglichen Gebrauch, wie z. B. den super micro bolus (SMB)
@@ -153,6 +153,11 @@ Du kannst die Anzeige Deines Zielbereichs (grüne Linien) durch die Änderung de
 - Du musst Ziel 10 starten, um [Automatisierungen](../Usage/Automation.md) nutzen zu können.
 - Stelle sicher, dass Du alle vorausgegangenen Ziele inkl. des [Wissenstest](Objectives#objective-3-prove-your-knowledge) abgeschlossen hast.
 - Andere, von Dir bereits abgeschlossene Ziele, werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
+
+(Objectives-objective-11-DynamicISF)=
+## Objective 11: Additional Features such as DynamicISF
+
+- You have to start objective 11 to be able to use [DynamicISF](../Usage/Open-APS-features.md)
 
 (Objectives-go-back-in-objectives)=
 ## Objective (Ziel) neu starten

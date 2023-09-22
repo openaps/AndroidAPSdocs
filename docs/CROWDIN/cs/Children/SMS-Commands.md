@@ -2,9 +2,9 @@
 
 ## Bezpečnost především
 
-- AAPS allows you to control a child's phone remotely via text message. Pokud povolíte SMS komunikátor, vždy pamatujte na to, že telefon nastavený k vydávání vzdálených příkazů, může být ukraden. Proto vždy chraňte telefon alespoň pomocí kódu PIN. Doporučuje se zvolit si silné heslo nebo biometrické údaje.
-- Additionally it is recommended to allow a [second phone number](SMS-Commands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](SMS-Commands-other) SMS communicator in case your main remote phone gets lost or stolen.
-- AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Je proto vhodné nastavit, aby byly potvrzovací zprávy odesílány alespoň na dvě různá telefonní čísla pro případ, že by došlo ke zcizení jednoho z rodičovských telefonů.
+- AAPS umožňuje vládat telefon vašeho dítěte na dálku prostřednictvím textových zpráv. Pokud povolíte SMS komunikátor, vždy pamatujte na to, že telefon nastavený k vydávání vzdálených příkazů, může být ukraden. Proto vždy chraňte telefon alespoň pomocí kódu PIN. Doporučuje se zvolit si silné heslo nebo biometrické údaje.
+- Navíc je doporučeno povolit pro SMS příkazy [druhé telefonní číslo](SMS-Commands-authorized-phone-numbers). Pokud dojde ke ztrátě nebo ukradení vašeho hlavního telefonu, můžete z druhého čísla [dočasně vypnout](SMS-Commands-other) SMS ovládání.
+- AAPS vás bude textovou zprávou informovat, že byl poslaný příkaz (bolus, změna profilu apod.) úspěšně vykonán. Je proto vhodné nastavit, aby byly potvrzovací zprávy odesílány alespoň na dvě různá telefonní čísla pro případ, že by došlo ke zcizení jednoho z rodičovských telefonů.
 - **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
 - As of AAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
 
@@ -24,6 +24,8 @@
 ### Schválená telefonní čísla
 
 - In AAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
+
+- Note that the "+" in front of the number may or may not be required based on your location. To determine this send a sample text which will show the received format in the SMS Communicator tab.
 
 - Povolte možnost 'Povolit posílání příkazů přes SMS'.
 
@@ -156,7 +158,7 @@ Vzdálený bolus není povolen do 15 minut (tato hodnota je upravitelná pouze v
 ### Jiné
 
 - TREATMENTS REFRESH \* Odpověď: Obnovit ošetření z NS
-- NSCLIENT RESTART \* Response: NSCLIENT RESTART 1 receivers
+- NSCLIENT RESTART \* Odpověď: NSCLIENT RESTART 1 příjemce
 - PUMP \* Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 - PUMP CONNECT \* Odpověď: Pumpa znovu připojena
 - PUMP DISCONNECT *30* \* Odpověď: Pro odpojení pumpy na *30* minut odpověz pomocí SMS s kódem z aplikace Authenticator pro User následováno kódem PIN

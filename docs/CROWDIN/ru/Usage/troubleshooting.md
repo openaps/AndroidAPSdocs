@@ -1,10 +1,10 @@
-# Troubleshooting
+# Устранение неполадок
 
 Вы можете найти много информации об устранении неполадок на страницах этого документа. На этой странице собраны ссылки, которые помогут найти решения вашей проблемы.
 
 Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.html).
 
-## Приложение AndroidAPS
+## AAPS app
 
 ### Building & updating
 
@@ -14,18 +14,18 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 ### Настройки
 * [Профиль](Profiles-troubleshooting-profile-errors)
 
-  ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
+  ![Ошибка: Базал не выровнен по часам](../images/Screen_DifferentPump.png)
 
 * [Pump - data from different pump](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
 
-  ![Failure message: Data from different pump](../images/BasalNotAlignedToHours2.png)
+  ![Сообщение об ошибке: данные с другой помпы](../images/BasalNotAlignedToHours2.png)
 
 * [Nightscout Client](../Usage/Troubleshooting-NSClient.html)
 
 ### Применение
 * [Wrong carb values](COB-calculation-detection-of-wrong-cob-values)
 
-   ![Error: Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+   ![Ошибка: Медленное поглощение углеводов](../images/Calculator_SlowCarbAbsorption.png)
 
 * [SMS commands](SMS-Commands-troubleshooting)
 
@@ -75,14 +75,14 @@ Here are examples how to find them on specific android phones.
 
 * Select "battery".
 
-  ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
+  ![Батарея](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
 * Set it to "Not optimized"
 
   ![Not optimized](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
 
-## CGM/Непрерывный мониторинг ГК
+## CGM /  НМГ
 
 * [Общие настройки](GeneralCGMRecommendation-troubleshooting)
 * [Dexcom G6](DexcomG6-troubleshooting-g6)

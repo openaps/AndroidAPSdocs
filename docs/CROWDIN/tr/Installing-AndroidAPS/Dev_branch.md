@@ -1,11 +1,11 @@
 ## Geliştirici Sürümü
 
-<font color="#FF0000"><strong>Dikkat:</strong></font>
-Geliştirici sürümü yalnızca AndroidAPS'in daha da geliştirilmesi içindir. <font color="#FF0000"><strong>Tedavi amaçlı döngü için değil</strong></font> test etmek için ayrı bir telefonda kullanılmalıdır!
+<font color="#FF0000"><strong>Attention:</strong></font>
+Dev branch is for the further development of AAPS only. <font color="#FF0000"><strong>Tedavi amaçlı döngü için değil</strong></font> test etmek için ayrı bir telefonda kullanılmalıdır!
 
-Kullanılacak en kararlı AndroidAPS sürümü, [Master branch](https://github.com/nightscout/AndroidAPS/tree/master) sürümüdür. Tedavi amaçlı döngü için Master branch sürümünü kullanmanız önerilir.
+The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). Tedavi amaçlı döngü için Master branch sürümünü kullanmanız önerilir.
 
-AndroidAPS'nin Development sürümü yalnızca yığın izleriyle uğraşan, günlük dosyalarına bakan, hata ayıklayıcıyı çalıştırarak hata raporları oluşturabilen ve diğer geliştiricilere yardımcı olan geliştiriciler ve test uzmanları içindir. (kısaca: yardım almadan ne yaptıklarını bilen insanlar!) Bu nedenle birçok tamamlanmamış özellik devre dışı bırakılır. Bu özellikleri etkinleştirmek için /AAPS/extra dizininde `engineering_mode` adlı bir klasör oluşturarak **Mühendislik Modu**'na girin. Mühendislik modunu etkinleştirmek döngüyü tamamen bozabilir.
+The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Bu nedenle birçok tamamlanmamış özellik devre dışı bırakılır. Bu özellikleri etkinleştirmek için /AAPS/extra dizininde `engineering_mode` adlı bir klasör oluşturarak **Mühendislik Modu**'na girin. Mühendislik modunu etkinleştirmek döngüyü tamamen bozabilir.
 
 Bununla birlikte, Dev branch, hangi özelliklerin test edildiğini görmek ve hataları gidermeye yardımcı olmak ve yeni özelliklerin pratikte nasıl çalıştığı hakkında geri bildirimde bulunmak için iyi bir yerdir. Çoğu zaman insanlar Dev branch'ı kararlı olduğundan emin olana kadar eski bir telefonda ve pompada test eder - tüm kullanımın riski size aittir. Herhangi bir yeni özelliği test ederken, hala geliştirilmekte olan bir özelliği test ettiğinizi unutmayın. Kendinizi güvende tutmak için özen göstererek & riskin size ait olduğunu bilerek yapın.
 

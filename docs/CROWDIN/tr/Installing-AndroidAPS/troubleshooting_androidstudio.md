@@ -3,7 +3,7 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## Kayıp keystore
-AndroidAPS'yi güncellerken aynı keystore kullanırsanız, akıllı telefonunuzdaki önceki sürümü kaldırmanız gerekmez. Bu nedenle keystore'u bir kaydetme yerinde saklamanız önerilir.
+If you use the same keystore when updating AAPS you do not have to uninstall the previous version on your smartphone. Bu nedenle keystore'u bir kaydetme yerinde saklamanız önerilir.
 
 Öncekinden farklı bir keystore'la imzalanmış apk'yı yüklemeye çalışırsanız, yüklemenin başarısız olduğuna dair bir hata mesajı alırsınız!
 
@@ -90,7 +90,7 @@ Bunlar olağan gradle senkronizasyon hatalarıdır:
 
     * Bu dosyayı bir kaydetme yerine taşımak veya kesmek ve yapıştırmak için bilgisayarınızdaki normal dosya gezgininizi kullanın.
 
-    * Dosyanın artık AndroidAPS dizininde saklanmadığından emin olmak için Android Studio'ya geri dönün ve Commit sekmesindeki Yenile düğmesine (4) tıklayın.
+    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AAPS directory anymore.
 
       Commit sekmesinde başka bir değişiklik yoksa, [3. Adım](troubleshooting_androidstudio-step-3-gradle-resync)'a gidin.
 
@@ -163,7 +163,7 @@ Bunlar olağan gradle senkronizasyon hatalarıdır:
 
     ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
-  * AndroidAPS'ye sağ tıklayın (2)
+  * Right-click on AAPS (2)
 
   * "Reload Gradle Project" üzerine tıklayın (3)
 
@@ -194,7 +194,7 @@ Uygulamanız başarıyla oluşturuldu ve telefona aktarılabilir!
 Bu, Android Studio 3.5.1 ve Windowsa taşınan Java ortamı ile ilgili bir hata gibi görünüyor. Anahtar doğru bir şekilde oluşturuldu, ancak bir öneri yanlışlıkla bir hata olarak görüntüleniyor. Bu şu anda göz ardı edilebilir.
 
 
-## AndroidAPS tarafından hiçbir CGM verisi alınmadı
+## No CGM data is received by AAPS
 
 * Yamalı Dexcom G6 uygulamasını kullanıyorsanız: Bu uygulama eski. Bunun yerine [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) uygulamasını kullanın.
 
@@ -229,7 +229,7 @@ Yukarıdaki ipuçlarından hiçbiri yardımcı olmadıysa, uygulamayı sıfırda
 
     Veya yeni bir anahtar deposu kullanabilirsiniz.
 
-3. [Burada](Building-APK-download-androidaps-code) açıklandığı gibi sıfırdan uygulama oluşturun.
+3. Build app from scratch as described [here](Building-APK-download-AAPS-code).
 
 4. APK'yı başarıyla oluşturduğunuz zaman, telefonunuzdaki mevcut uygulamayı silin, yeni apk'yı telefonunuza aktarın ve yükleyin.
 5. Hedeflerinizi ve ayarlarınızı geri yüklemek için tekrar [ayarları içe aktarın](../Usage/ExportImportSettings).

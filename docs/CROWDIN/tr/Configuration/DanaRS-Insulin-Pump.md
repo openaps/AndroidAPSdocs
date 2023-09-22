@@ -2,9 +2,9 @@
 
 *Bu talimatlar, 2017'den itibaren bir DanaRS'niz veya daha yeni Dana-i'niz varsa uygulamayı ve pompanızı yapılandırmak içindir. Bunun yerine DanaR'a sahipseniz [DanaR İnsülin Pompası](./DanaR-Insulin-Pump)'nı ziyaret edin.*
 
-**New Dana RS firmware v3 can be used from AAPS version 2.7 onwards.**
+**Yeni Dana RS pompa yazılımı v3, AAPS sürüm 2.7'den itibaren kullanılabilir.**
 
-**New Dana-i can be used from AAPS version 3.0 onwards.**
+**Yeni Dana-i, AAPS 3.0 sürümünden itibaren kullanılabilir.**
 
 * DanaRS/i pompasında uygulama tarafından "BASAL A" kullanılır. Mevcut verilerin üzerine yazılır.
 
@@ -12,7 +12,7 @@
 
 ## Pompa eşleştirme
 
-* On AAPS homescreen click hamburger menu on the top left corner and go to Config Builder.
+* AAPS ana ekranında sol üst köşedeki hamburger menüsüne tıklayın ve Konfigürasyon ayarları'na gidin.
 * Pompa bölümünde 'Dana-i/RS'i seçin.
 * Doğrudan pompa ayarlarına gitmek için dişli çarka tıklayın veya ana ekrana dönün.
     
@@ -34,7 +34,7 @@
 * Pompanızın tipine ve yazılımına göre eşleştirme sürecini takip edin:
     
     * DanaRS v1 için tercihlerde pompa şifresini seçin ve şifrenizi ayarlayın.
-    * For DanaRS v3 you have to type 2 sequences of numbers and letters displayed on pump to AAPS pairing dialog.
+    * DanaRS v3 için, AAPS eşleştirme iletişim kutusuna, pompada görüntülenen 2 dizi sayı ve harfi yazmanız gerekir.
     * Dana-i için standart Android eşleştirme iletişim kutusu görünür ve pompada görüntülenen 6 haneli sayıyı girmeniz gerekir.
 
 * Kullanılan varsayılan bolus hızını değiştirmek için Bolus Hızı'nı seçin (1u başına 12sn, 1u başına 30sn veya 1u başına 60sn).
@@ -48,11 +48,11 @@
 ### Varsayılan parola
 
 * Pompa yazılımı v1 ve v2'ye sahip DanaRS için varsayılan parola 1234'tür.
-* For DanaRS with firmware v3 or Dana-i the default password is derived from the manufacturing date and calculates as MMDD where MM is the month and DD is the day, the pump was produced (i.e. '0124' representing month 01 and day 24).
+* v3 cihaz yazılımlı DanaRS veya Dana-i'ye sahip olanlar için varsayılan parola üretim tarihinden çıkarılır ve MMDD olarak hesaplanır; burada MM ay, DD ise pompanın üretildiği gündür (yani '0124', 01. ayı ve 24. günü temsil eder).
     
-    * From MAIN MENU select REVIEW then open SHIPPING INFORMATION from the sub menu
-    * Number 3 is manifacturing date. 
-    * v3/i için bu şifre sadece pompada menüyü kilitlemek için kullanılır. It's not used for communication and it's not necessary to enter it in AAPS.
+    * MAIN MENU'den REVIEW'i seçin ve alt menüden SHIPPING INFORMATION'nu açın.
+    * 3. numara üretim tarihidir. 
+    * v3/i için bu şifre sadece pompada menüyü kilitlemek için kullanılır. İletişim veya AAPS'e girmek için gerekli değildir.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
 
@@ -85,11 +85,11 @@
 
 * OK butonu ile onaylayın.
 
-* Press OK to save setting.
+* Ayarı kaydetmek için OK'e basın.
     
     ![DanaRS Yeni parolayı kaydet](../images/DanaRSPW_06_PWnewSave.png)
 
-* "14. EXIT" çıkışa gelin EXIT" and press OK to exit.
+* "14. EXIT" çıkışa gelin ve OK butonuna basın.
     
     ![DanaRS Çıkış](../images/DanaRSPW_07_Exit.png)
 
@@ -119,13 +119,13 @@ Yeni bir telefona geçerken aşağıdaki adımları yapmanız gerekir:
 
 * Dana RS'i yeni telefonla **manuel olarak eşleştirin**
 * Pompa bağlantı ayarları da içe aktarıldığından, yeni telefonunuzdaki AAPS pompayı zaten "bilir" ve bu nedenle bir bluetooth taraması başlatmaz. Bu nedenle yeni telefon ve pompa manuel olarak eşleştirilmelidir.
-* Install AAPS on the new phone.
+* AAPS'i yeni telefona yükleyin.
 * Yeni telefonunuzda [Ayarları içe aktarın](ExportImportSettings-import-settings)
 
 ### DanaRS v3, Dana-i
 
 * [Yukarıda](DanaRS-Insulin-Pump-pairing-pump) açıklanan şekilde eşleştirme prosedürünü başlatın.
-* Sometimes it may be necessary to clear pairing information in AAPS by long-click BT icon on Dana-i/RS tab.
+* Bazen, Dana-i/RS sekmesindeki BT simgesine uzun tıklayarak AAPS'deki eşleştirme bilgilerinin temizlenmesi gerekebilir.
 
 ## Dana RS pompasıyla seyahat edenler için saat dilimi
 

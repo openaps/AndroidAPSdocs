@@ -1,14 +1,14 @@
-# מסכי AndroidAPS
+# AAPS screens
 
 ## מסך הבית
 
 ![Homescreen V2.7](../images/Home2020_Homescreen.png)
 
-זהו המסך הראשון שתתקלו בו בעת פתיחת AndroidAPS והוא מכיל את רוב המידע שתצטרכו ביום יום.
+This is the first screen you will come across when you open AAPS and it contains most of the information that you will need day to day.
 
 ### חלק A - לשוניות
 
-* ניווט בין מודולי AndroidAPS השונים.
+* Navigate between the various AAPS modules.
 * לחלופין ניתן לעבור בין המסכים ע"י החלקה שמאלה וימינה.
 * הלשוניות שניתנות להצגה נבחרות ב[בונה התצורה](Config-Builder-tab-or-hamburger-menu).
 
@@ -347,7 +347,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 #### תזכורת אכילה
 
-* עבור פחמימות עתידיות ניתן לסמן את תיבת סימון התזכורת (היא נבחרת כברירת מחדל כאשר מוזנת ארוחה עתידית) כך שתוכלו לקבל תזכורת לאכול את הפחמימות שהזנתם ל-AndroidAPS בהתאם לזמן שהזנתם ב-"זמן פחמימות"
+* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AAPS
    
    ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
 
@@ -382,7 +382,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
 
-* אם האזהרה למעלה מופיעה לאחר שימוש באשף הבולוס, AndroidAPS זיהה שערך ה-COB המחושב אולי שגוי. 
+* If you see the warning above after using bolus wizard, AAPS has detected that the calculated COB value maybe wrong.
 * לכן, אם תרצו להזריק בולוס לאחר ארוחה קודמת עם פחמימות פעילות, עליכם להיות מודעים למינון ביתר! 
 * לפרטים נוספים ראו [חישוב פחמימות פעילות](COB-calculation-detection-of-wrong-cob-values).
 
@@ -459,7 +459,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 * העקום הסגול מראה כמה אינסולין נשאר לאחר הזרקתו כשהוא דועך לאורך הזמן והעקום הכחול מראה כמה הוא פעיל.
 * חשוב לשים לב לכך שלדעיכה יש זנב ארוך. 
 * אם השתמשתם בעבר במשאבה, כנראה שהנחתם שדעיכת האינסולין לוקחת כ-3.5 שעות. 
-* עם זאת, בשימוש בלופ, הזנב הארוך חשוב כיוון שהחישובים הרבה יותר מדויקים והכמויות הקטנות הללו בזנבות מסתכמות למספרים משמעותיים בחישובים הרקורסיבים של אלגוריתמים של AndroidAPS.
+* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AAPS algorithm.
 
 For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 

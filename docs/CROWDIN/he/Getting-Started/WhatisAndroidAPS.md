@@ -1,10 +1,10 @@
-# מהי מערכת לולאה סגורה ב-AndroidAPS?
+# What is a closed loop system with AAPS?
 
-AndroidAPS היא אפליקציה הפועלת כמערכת לבלב מלאכותי (APS) בסמארטפון אנדרואיד. מהי מערכת לבלב מלאכותי? זוהי תוכנה שמטרתה לעשות את מה שעושה לבלב טבעי: לשמור על רמות הסוכר בדם בטווח בריא באופן אוטומטי.
+AAPS is an app that acts as an artificial pancreas system (APS) on an Android smartphone. מהי מערכת לבלב מלאכותי? זוהי תוכנה שמטרתה לעשות את מה שעושה לבלב טבעי: לשמור על רמות הסוכר בדם בטווח בריא באופן אוטומטי.
 
-מערכת לבלב מלאכותי לא יכולה לעשות את העבודה כמו לבלב ביולוגי, אבל יכולה להקל על ניהול סוכרת מסוג 1 באמצעות מכשירים זמינים מסחרית ותוכנה פשוטה ובטוחה. מכשירים אלה כוללים חיישן גלוקוז רציף (CGM) כדי לדווח ל-AndroidAPS על רמות הסוכר בדם ומשאבת אינסולין בה היא שולטת כדי לספק מינונים מתאימים של אינסולין. האפליקציה מתקשרת עם מכשירים אלה באמצעות בלוטות'. היא מבצעת את חישובי המינון שלה באמצעות אלגוריתם, או מערכת כללים, שפותחה עבור מערכת לבלב מלאכותית אחרת, בשם OpenAPS, לה אלפי משתמשים וצברה מיליוני שעות שימוש.
+מערכת לבלב מלאכותי לא יכולה לעשות את העבודה כמו לבלב ביולוגי, אבל יכולה להקל על ניהול סוכרת מסוג 1 באמצעות מכשירים זמינים מסחרית ותוכנה פשוטה ובטוחה. Those devices include a continuous glucose monitor (CGM) to tell AAPS about your blood sugar levels and an insulin pump which AAPS controls to deliver appropriate doses of insulin. האפליקציה מתקשרת עם מכשירים אלה באמצעות בלוטות'. היא מבצעת את חישובי המינון שלה באמצעות אלגוריתם, או מערכת כללים, שפותחה עבור מערכת לבלב מלאכותית אחרת, בשם OpenAPS, לה אלפי משתמשים וצברה מיליוני שעות שימוש.
 
-הערת זהירות: AndroidAPS אינה עוברת רגולציה על ידי אף רשות רפואית באף מדינה. השימוש ב-AndroidAPS הוא בעצם ביצוע ניסוי רפואי על עצמכם. הקמת המערכת דורשת נחישות ויכולת טכנית. אם עדיין אין לכם את הידע הטכני בהתחלה, עד סיום התהליך אתם תרכשו אותו. את כל המידע הדרוש ניתן למצוא במסמכים באתר זה, במקומות אחרים באינטרנט, או אצל אחרים שכבר עשו זאת -- מומלץ לשאול בקבוצות פייסבוק או בפורומים אחרים. אנשים רבים בנו להם בהצלחה את AndroidAPS וכעת משתמשים בו בצורה בטוחה לחלוטין, אך חיוני שכל משתמש:
+A note of caution: AAPS is not regulated by any medical authority in any country. Using AAPS is essentially carrying out a medical experiment on yourself. הקמת המערכת דורשת נחישות ויכולת טכנית. אם עדיין אין לכם את הידע הטכני בהתחלה, עד סיום התהליך אתם תרכשו אותו. את כל המידע הדרוש ניתן למצוא במסמכים באתר זה, במקומות אחרים באינטרנט, או אצל אחרים שכבר עשו זאת -- מומלץ לשאול בקבוצות פייסבוק או בפורומים אחרים. Many people have successfully built AAPS and are now using it entirely safely, but it is essential that every user:
 
 - Builds the system themselves so that they thoroughly understand how it works
 - Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
@@ -14,7 +14,7 @@ AndroidAPS היא אפליקציה הפועלת כמערכת לבלב מלאכו
 **Disclaimer and Warning**
 
 - All information, thought, and code described here is intended for informational and educational purposes only. Nightscout לא עושה כרגע ניסיון לתאימות לפרטיות HIPAA. 
- השימוש ב-Nightscout וב-AndroidAPS הוא על אחריותכם בלבד, ואל תשתמשו במידע או בקוד כדי לקבל החלטות רפואיות.
+ Use Nightscout and AAPS at your own risk, and do not use the information or code to make medical decisions.
 - Use of code from github.com is without warranty or formal support of any kind. אנא עיינו ברישיון של מאגר זה לפרטים.
 
 - All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. השימוש בהם הוא למטרות מידע ואינו מרמז על כל זיקה או אישור על ידם. 
@@ -25,7 +25,7 @@ Please note - this project has no association with and is not endorsed by: [SOOI
 
 אם אתם מוכנים לאתגר, המשיכו לקרוא.
 
-## המטרות העיקריות של AndroidAPS
+## Primary goals behind AAPS
 
 - An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (<https://openaps.org/reference-design/>)
 - An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout

@@ -1,175 +1,177 @@
-# SMS Commands
+# Εντολές SMS
 
-## Safety First
+## Πρώτα η ασφάλεια
 
-- AAPS allows you to control a child's phone remotely via text message. Αν ενεργοποιήσετε αυτό την επικοινωνία με SMS, θυμηθείτε πάντα ότι το τηλέφωνο που έχει ρυθμιστεί για να δώσει απομακρυσμένες εντολές μπορεί να κλαπεί. Συνεπώς, πάντα να το προστατεύετε τουλάχιστον από ένα κωδικό PIN. A strong password or biometrics are recommended.
-- Additionally it is recommended to allow a [second phone number](SMS-Commands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](SMS-Commands-other) SMS communicator in case your main remote phone gets lost or stolen.
-- AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Συνιστάται να το ρυθμίσετε έτσι ώστε τα κείμενα επιβεβαίωσης να αποστέλλονται σε τουλάχιστον δύο διαφορετικούς αριθμούς τηλεφώνου σε περίπτωση κλοπής ενός από τα τηλέφωνα λήψης.
-- **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
-- As of AAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
+- Το AAPS σας επιτρέπει να ελέγχετε εξ αποστάσεως το τηλέφωνο ενός παιδιού μέσω ενός μηνύματος SMS. Αν ενεργοποιήσετε αυτό την επικοινωνία με SMS, θυμηθείτε πάντα ότι το τηλέφωνο που έχει ρυθμιστεί για να δώσει απομακρυσμένες εντολές μπορεί να κλαπεί. Συνεπώς, πάντα να το προστατεύετε τουλάχιστον από ένα κωδικό PIN. Συνιστάται ένας ισχυρός κωδικός πρόσβασης ή βιομετρικά στοιχεία για πρόσβαση.
+- Επιπλέον, συνιστάται να επιτρέπεται η χρήση ενός [δεύτερου αριθμού τηλεφώνου](SMS-Commands-authorized-phone-numbers) για εντολές μέσω μηνυμάτων. Με αυτό τον τρόπο μπορείτε να χρησιμοποιήσετε το δεύτερο αριθμό για την [ προσωρινή απενεργοποίηση ](SMS-Commands-other) της επικοινωνίας με SMS σε περίπτωση που το βασικό τηλέφωνο για απομακρυσμένη παρακολούθηση χαθεί ή κλαπεί.
+- Το AndroidAPS θα σας ενημερώσει επίσης με μήνυμα κειμένου , εάν έχουν πραγματοποιηθεί οι απομακρυσμένες εντολές σας, όπως μια γευματική δόση ή μια αλλαγή προφίλ. Συνιστάται να το ρυθμίσετε έτσι ώστε τα κείμενα επιβεβαίωσης να αποστέλλονται σε τουλάχιστον δύο διαφορετικούς αριθμούς τηλεφώνου σε περίπτωση κλοπής ενός από τα τηλέφωνα λήψης.
+- **Αν δίνετε μια γευματική δόση μέσω των Εντολών με Μηνύματα (SMS Commands) πρέπει να εισαγετε τους υδατάνθρακες μέσω του Nightscout (στο NSClient, ή στη διεύθυνση του Nightscout στο ίντερνετ...)!**Αν δεν το κάνετε, η ποσότητα της ενεργής ινσουλίνης (IOB) θα είναι σωστή, όμως πιθανόν με πολύ λίγους ενεργούς υδατάνθρακες (COB), κάτι που είναι πιθανό να οδηγήσει στο να μην χορηγηθεί διορθωτική δόση ινσουλίνης, γιατί το AAPS θα υποθέσει ότι έχετε υπερβολική ενεργή ινσουλίνη.
+- Από την έκδοση AndroidAPS 2.7 και μετά, πρέπει να χρησιμοποιείται μια εφαρμογή ελέγχου ταυτότητας με ένα κωδικό μιας χρήσης με πρόσβαση περιορισμένου χρόνου προκειμένου να αυξηθεί η ασφάλεια κατά τη χρήση των εντολών με μηνύματα.
 
-## Setup SMS commands
+## Ρύθμιση εντολών μηνυμάτων (SMS commands)
 
 ```{image} ../images/SMSCommandsSetup.png
-:alt: SMS Commands Setup
+:alt: Ρύθμιση εντολών μηνυμάτων
 ```
 
-- Most of the adjustments of temp targets, following AAPS etc. can be done on [NSClient app](../Children/Children.md) on an Android phone with an internet connection.
-- Boluses can't be given through Nightscout, but you can use SMS commands.
-- If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
-- In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+- Οι περισσότερες από τις προσαρμογές των προσωρινών στόχων του AAPS κλπ μπορούν να γίνουν στην [εφαρμογή NSClient](../Children/Children.md) σε ένα τηλέφωνο Android με σύνδεση στο διαδίκτυο.
+- Δεν μπορείτε να χορηγήσετε δόση ινσουλίνης μέσω του Nightscout, αλλά μπορείτε μέσω μηνυμάτων SMS.
+- Αν χρησιμοποιείτε iPhone ως ακόλουθος και επομένως δεν μπορείτε να χρησιμοποιήσετε την εφαρμογή NSClient, υπάρχουν διαθέσιμες επιπλέον εντολές μέσω μηνυμάτων SMS.
+- Στις ρυθμίσεις του android τηλεφώνου σας, επιλέξτε Εφαρμογές> AndroidAPS> Άδειες και ενεργοποιήστε τα μηνύματα SMS
 
 (SMS-Commands-authorized-phone-numbers)=
 
-### Authorized phone numbers
+### Εξουσιοδοτημένα τηλεφωνικά νούμερα
 
-- In AAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
+- Στο AndroidAPS μεταβείτε στην επιλογή **Προτιμήσεις> Επικοινωνία με SMS ** και εισαγάγετε τον/τους αριθμό/αριθμούς τηλεφώνου από τους οποίους θα επιτρέπεται να δέχονται εντολές με μηνύματα SMS (διαχωρισμένους με ερωτηματικά - π.χ. +306952441211;+306925542211)
 
-- Enable 'Allow remote commands via SMS'.
+- Note that the "+" in front of the number may or may not be required based on your location. To determine this send a sample text which will show the received format in the SMS Communicator tab.
 
-- If you want to use more than one number:
+- Ενεργοποιήστε το "Να επιτρέπονται απομακρυσμένες εντολές μέσω μηνυμάτων SMS(Allow remote commands via SMS)".
 
-  - Enter just one number.
+- Αν θέλετε να χρησιμοποιήσετε πάνω από έναν αριθμό:
 
-  - Make that single number work by sending and confirming a SMS command.
+  - Εισάγετε μόνο έναν αριθμό.
 
-  - Enter additional number(s) separated by semicolon, no space.
+  - Ενεργοποιήστε τη λειτουργία αυτού του αριθμού στέλνοντας και επιβεβαιώνοντας μια εντολή μέσω μηνύματος SMS.
+
+  - Εισάγετε επιπλέον τηλεφωνικό/ούς αριθμό/ούς διαχωρισμένους με ελληνικό ερωτηματικό, χωρίς κενό.
 
     ```{image} ../images/SMSCommandsSetupSpace2.png
-    :alt: SMS Commands Setup multiple numbers
+    :alt: Ρύθμιση Εντολών μέσω Μηνυμάτων SMS με πολλαπλούς τηλεφωνικούς αριθμούς
     ```
 
-### Minutes between bolus commands
+### Λεπτά μεταξύ εντολών bolus
 
-- You can define the minimum delay between two boluses issued via SMS.
-- For safety reasons you have to add at least two authorized phone numbers to edit this value.
+- Μπορείτε να προσδιορίσετε την ελάχιστη χρονική διαφορά ανάμεσα σε δύο δόσεις ινσουλίνης που χορηγούνται μέσω μηνυμάτων.
+- Για λόγους ασφαλείας πρέπει να προσθέσετε τουλάχιστον δύο εξουσιοδοτημένους τηλεφωνικούς αριθμούς για να επεξεργαστείτε αυτή την μεταβλητή.
 
-### Additionally mandatory PIN at token end
+### Επιπλέον, είναι υποχρεωτικό το PIN στο τέλος του token
 
-- For safety reasons the reply code must be followed by a PIN.
+- Για λόγους ασφαλείας ο κωδικός απάντησης πρέπει να ακολουθείται από ένα PIN.
 
-- PIN rules:
+- Κανόνες για το PIN:
 
-  - 3 to 6 digits
-  - not same digits (i.e. 1111)
-  - not in a row (i.e. 1234)
+  - 3 με 6 ψηφία
+  - όχι ίδια ψηφία (π.χ. 1111)
+  - όχι ψηφία σε σειρά (π.χ. 1234)
 
-### Authenticator setup
+### Ρύθμιση ελέγχου ταυτότητας
 
-- Two-factor authentication is used to improve safety.
+- Χρησιμοποιείται ο έλεγχος ταυτότητας δύο παραγόντων (2FA) προκειμένου να βελτιωθεί η ασφάλεια.
 
-- You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
+- Μπορείτε να χρησιμοποιήσετε οποιαδήποτε εφαρμογή ελέγχου ταυτότητας (Authenticator app) που υποστηρίζει RFC 6238 TOTP tokens. Δημοφιλείς δωρεάν εφαρμογές είναι οι:
 
   - [Authy](https://authy.com/download/)
   - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
   - [LastPass Authenticator](https://lastpass.com/auth/)
   - [FreeOTP Authenticator](https://freeotp.github.io/)
 
-- Install the authenticator app of your choice on your follower phone and scan the QR code shown in AAPS.
+- Εγκαταστήστε την εφαρμογή ελέγχου ταυτότητας που επιλέξατε , στο τηλέφωνο σας που λειτουργεί ως ακόλουθος , και σκανάρετε τον κώδικα QR που εμφανίζεται στο AAPS.
 
-- Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. Example:
+- Δοκιμάστε τον κωδικό μιας χρήσης εισάγοντας το token που εμφανίζεται στην εφαρμογή ελέγχου ταυτότητας και το PIN που μόλις ρυθμίσατε στο AAPS. Παράδειγμα:
 
-  - Your mandatory PIN is 2020
-  - TOTP token from the authenticator app is 457051
-  - Enter 4570512020
+  - Το υποχρεωτικό σας PIN είναι 2020
+  - Το TOTP token από την εφαρμογή ελέγχου ταυτότητας είναι το 457051
+  - Εισάγετε το νούμερο 4570512020
 
-- The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **There is no button you can press!**
+- Το κόκκινο μήνυμα "ΛΑΘΟΣ ΚΩΔΙΚΟΣ" θα αλλάξει **αυτόματα** σε ένα πράσινο "ΟΚ" αν η καταχώριση είναι σωστή. **Δεν υπάρχει κανένα κουμπί που να μπορείτε να πατήσετε!**
 
-- The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
+- Η ώρα και στα δύο τηλέφωνα πρέπει να είναι συγχρονισμένη. Η καλύτερη λύση είναι να ορίζεται αυτόματα από το διαδίκτυο. Οι διαφορές ώρας μπορεί να οδηγήσουν σε προβλήματα επαλήθευσης ταυτότητας.
 
-- Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
+- Χρησιμοποιήστε το κουμπί "ΕΠΑΝΑΦΟΡΑ ΕΛΕΓΧΟΥ ΤΑΥΟΤΗΤΑΣ" ("RESET AUTHENTICATORS") αν θέλετε να αφαιρέσετε τους προβλεπόμενους ελέγχους ταυτότητας.  (Με την επαναφορά του ελέγχου ταυτότητας ακυρώνετε ΟΛΟΥΣ τους προβλεπόμενους ελέγχους ταυτότητας. Θα χρειαστεί να τους ξαναρυθμίσετε)
 
-## Use SMS commands
+## Χρήση εντολών μηνυμάτων SMS
 
-- Send a SMS to the phone with AAPS running from your approved phone number(s) using any of the [commands](SMS-Commands-commands) below.
+- Στείλτε ένα μήνυμα στο τηλέφωνο που χρησιμοποιεί το AndroidAPS από τον εγκεκριμένο τηλεφωνικό σας αριθμό/ούς χρησιμοποιώντας οποιαδήποτε από τις [εντολές](SMS-Commands-commands) παρακάτω.
 
-- The AAPS phone will respond to confirm success of command or status requested.
+- Το τηλέφωνο με το AAPS θα ανταποκριθεί επιβεβαιώνοντας την επιτυχία της εντολής ή της κατάστασης που ζητήθηκε.
 
-- Confirm command by sending the code where necessary. Example:
+- Επιβεβαιώστε την εντολή στέλνοντας τον κωδικό όπου είναι απαραίτητο. Παράδειγμα:
 
-  - Your mandatory PIN is 2020
-  - TOTP token from the authenticator app is 457051
-  - Enter 4570512020
+  - Το υποχρεωτικό σας PIN είναι 2020
+  - Το TOTP token από την εφαρμογή ελέγχου ταυτότητας είναι το 457051
+  - Εισάγετε το νούμερο 4570512020
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**Συμβουλή**: Μπορεί να είναι χρήσιμο να διαθέτετε απεριόριστα μηνύματα στο συμβόλαιο του τηλεφώνου σας (για κάθε τηλέφωνο που χρησιμοποιείτε) αν στέλνετε πολλά μηνύματα.
 
 (SMS-Commands-commands)=
-## Commands
+## Εντολές
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](translations-translate-strings-for-AAPS-app).
+Οι εντολές πρέπει να στέλνονται στα αγγλικά, η απάντηση θα είναι στη γλώσσα σας αν οι απαντήσεις είναι ήδη [μεταφρασμένες](translations-translate-strings-for-AAPS-app).
 
 ```{image} ../images/SMSCommands.png
-:alt: SMS Commands Example
+:alt: Παράδειγμα εντολών μηνυμάτων
 ```
 
 ### Κύκλωμα
 
-- LOOP STOP/DISABLE \* Response: Loop has been disabled
+- LOOP STOP/DISABLE \* Απάντηση: Το κύκλωμα έχει απενεργοποιηθεί
 
-- LOOP START/ENABLE \* Response: Loop has been enabled
+- LOOP START/ENABLE \* Response: Το κύκλωμα έχει ενεργοποιηθεί
 
 - LOOP STATUS
 
-  - Response depends on actual status
+  - Η απάντηση εξαρτάται από την κατάσταση τη δεδομένη στιγμή
 
-    - Loop is disabled
-    - Loop is enabled
-    - Suspended (10 min)
+    - Κύκλωμα απενεργοποιημένο
+    - Κύκλωμα ενεργοποιημένο
+    - Αναστολή (10 λεπτά)
 
-- LOOP SUSPEND 20 \* Response: Loop suspended for 20 minutes
+- LOOP SUSPEND 20 \* Απάντηση: Κύκλωμα σε αναστολή για 20 λεπτά
 
-- LOOP RESUME \* Response: Loop resumed
+- LOOP RESUME \* Απάντηση: Επανέναρξη κυκλώματος
 
-### CGM data
+### Δεδομένα CGM
 
-- BG \* Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
-- CAL 5.6 \* Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN \* Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
+- BG \* Απάντηση: Τελευταία τιμή γλυκόζης: BG: 105 πριν 4 λεπτά, Delta: -6 mg/dl, Ενεργή ινσουλίνη: 0.20U (Δόση ινσουλίνης: 0.10U Bασική ινσουλίνη: 0.10U)
+- CAL 105 \* Απάντηση: Για να στείλετε την τιμή βαθμονόμησης 105 απαντήστε με κωδικό από την εφαρμογή για έλεγχο ταυτότητας του χρήστη, ακολουθούμενη από PIN \* Απάντηση μετά από λήψη σωστού κωδικού: Η βαθμονόμηση στάλθηκε (**Αν το xDrip είναι εγκατεστημένο. Η αποδοχή των βαθμονομήσεων πρέπει να έχει ενεργοποιηθεί στο xDrip + **)
 
-### Basal
+### Βασικός Ρυθμός
 
-- BASAL STOP/CANCEL \* Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
-- BASAL 0.3 \* Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
-- BASAL 0.3 20 \* Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
-- BASAL 30% \* Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
-- BASAL 30% 50 \* Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
+- BASAL STOP/CANCEL \* Απάντηση: Για να σταματήσετε τον προσωρινό ρυθμό απαντήστε με κωδικό από την εφαρμογή ελέγχου ταυτότητας για τον Χρήστη, ακολουθούμενο από PIN
+- BASAL 0.3 \* Απάντηση: Για έναρξη βασικού ρυθμού 0.3U/h για 30 λεπτά απαντήστε με κωδικό από την εφαρμογή ελέγχου ταυτότητας για Χρήστη, ακολουθούμενο από PIN
+- BASAL 0.3 \* Απάντηση: Για έναρξη βασικού ρυθμού 0.3U/h για 30 λεπτά απαντήστε με κωδικό από την εφαρμογή ελέγχου ταυτότητας για το χρήστη, ακολουθούμενο από PIN
+- BASAL 30% \* Απάντηση: Για έναρξη βασικού ρυθμού 30% για 30 λεπτά απαντήστε με κωδικό από την εφαρμογή ελέγχου ταυτότητας για το χρήστη, ακολουθούμενο από PIN
+- BASAL 30% 50 \* Απάντηση: Για έναρξη βασικού ρυθμού 30% για 50 λεπτά απαντήστε με κωδικό από την εφαρμογή ελέγχου ταυτότητας για το χρήστη, ακολουθούμενο από PIN
 
-### Bolus
+### Δόση ινσουλίνης
 
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
+Η απομακρυσμένη δόση ινσουλίνης δεν επιτρέπεται εντός 15 λεπτών (η τιμή αυτή είναι επεξεργάσιμη μόνο αν προστεθούν 2 τηλεφωνικοί αριθμοί) μετά την τελευταία εντολή για δόση ινσουλίνης ή τις απομακρυσμένες εντολές δόσης ινσουλίνης! Ως εκ τούτου, η απάντηση εξαρτάται από το χρόνο που δόθηκε η τελευταία δόση ινσουλίνης.
 
-- BOLUS 1.2 \* Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available. Try again later.
-- BOLUS 0.60 MEAL \* If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins). \* Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available.
-- CARBS 5 \* Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
-- CARBS 5 17:35/5:35PM \* Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
-- EXTENDED STOP/CANCEL \* Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
-- EXTENDED 2 120 \* Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
+- BOLUS 1.2 \* Απάντηση A: Για να δοθεί δόση ινσουλίνης 1.2U απαντήστε με κωδικό από την εφαρμογή Ελέγχου Ταυτότητας για το Χρήστη, ακολουθούμενο από PIN \* Απάντηση B: Η απομακρυσμένη δόση ινσουλίνης δεν είναι διαθέσιμη. Προσπαθήστε ξανά αργότερα.
+- BOLUS 0.60 MEAL \* Εάν καθορίσετε την προαιρετική παράμετρο ΓΕΥΜΑ (MEAL), αυτό ορίζει τον προσωρινό στόχο ΓΕΥΜΑ (MEAL) (οι προεπιλεγμένες τιμές είναι: 90 mg/dL ή 5.0 mmol/l για 45 λεπτά). \* Απάντηση A: Για να δοθεί δόση ινσουλίνης 060. U απαντήστε με κωδικό από την εφαρμογή Ελέγχου Ταυτότητας για το Χρήστη, ακολουθούμενο από PIN \* Απάντηση B: Η απομακρυσμένη δόση ινσουλίνης δεν είναι διαθέσιμη.
+- CARBS 5 \* Απάντηση: Για να εισάγετε 5g στις 12:45 απαντήστε με κωδικό από την εφαρμογή ελέγχου ταυτότητας για το Χρήστη, ακολουθούμενο από PIN
+- CARBS 5 17:35/5:35PM \* Απάντηση: Για να εισάγετε 5g στις 17:35 απαντήστε με κωδικό από την εφαρμογή ελέγχου ταυτότητας για το Χρήστη, ακολουθούμενο από PIN
+- EXTENDED STOP/CANCEL \* Απάντηση: Για να σταματήσετε την εκτεταμένη δόση ινσουλίνης απαντήστε με κωδικό από την εφαρμογή ελέγχου ταυτότητας για το Χρήστη, ακολουθούμενο από PIN
+- EXTENDED 2 120 \* Απάντηση: Για να ξεκινήσετε εκτεταμένη δόση ινσουλίνης 2U για 120 λεπτά απαντήστε με κωδικό από την εφαρμογή ελέγχου ταυτότητας για το Χρήστη, ακολουθούμενο από PIN
 
 ### Προφίλ
 
-- PROFILE STATUS \* Response: Profile1
-- PROFILE LIST \* Response: 1.\`Profile1\` 2.\`Profile2\`
-- PROFILE 1 \* Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
-- PROFILE 2 30 \* Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+- PROFILE STATUS \* Απάντηση: Προφίλ1
+- PROFILE LIST \* Απάντηση: 1.\`Προφίλ1\` 2.\`Προφίλ2\`
+- PROFILE 1 \* Απάντηση: Για αλλαγή προφίλ σε Προφίλ1 100% απαντήστε με κωδικό από την εφαρμογή ελέγχου ταυτότητας για το Χρήστη, ακολουθούμενο από PIN
+- PROFILE 2 30 \* Απάντηση: Για αλλαγή προφίλ σε Profile2 30% απαντήστε με κωδικό από την εφαρμογή ελέγχου ταυτότητας για το Χρήστη, ακολουθούμενο από PIN
 
 (SMS-Commands-other)=
 
-### Άλλα
+### Άλλο
 
-- TREATMENTS REFRESH \* Response: Refresh treatments from NS
-- NSCLIENT RESTART \* Response: NSCLIENT RESTART 1 receivers
-- PUMP \* Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
-- PUMP CONNECT \* Response: Pump reconnected
-- PUMP DISCONNECT *30* \* Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
-- SMS DISABLE/STOP \* Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
-- TARGET MEAL/ACTIVITY/HYPO \* Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
-- TARGET STOP/CANCEL \* Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
-- HELP \* Response: BG, LOOP, TREATMENTS, .....
-- HELP BOLUS \* Response: BOLUS 1.2 BOLUS 1.2 MEAL
+- TREATMENTS REFRESH \* Απάντηση: Ανανέωση θεραπευτικών χειρισμών από το NS
+- NSCLIENT RESTART \* Απάντηση: Επανεκκίνηση NSCLIENT 1 δέκτης
+- PUMP \* Απάντηση: Τελευταία σύνδεση: πριν από 1 λεπτό Temp: 0.00U/h @11:38 5/30min Ενεργή Ινσουλίνη: 0.5U Υπόλοιπο Ρεζερβουάρ: 34U Μπαταρία: 100
+- PUMP CONNECT \* Απάντηση: Η αντλία επανασυνδέθηκε
+- PUMP DISCONNECT *30* \* Απάντηση: Για να αποσυνδέσετε την αντλία για *30* λεπτά απαντήστε με κωδικό από την εφαρμογή ελέγχου ταυτότητας για το Χρήστη, ακολουθούμενο από PIN
+- SMS DISABLE/STOP \* Απάντηση: Για να απενεργοποιήσετε την Απομακρυσμένη Υπηρεσία SMS απαντήστε με κωδικό Any. Λάβετε υπόψη ότι θα μπορείτε να το επανενεργοποιήσετε μόνο απευθείας από το κυρίως (master) smartphone με AAPS.
+- TARGET MEAL/ACTIVITY/HYPO \* Απάντηση: Για να ρυθμίσετε τον Προσωρινό Στόχο ΓΕΥΜΑ/ ΔΡΑΣΤΗΡΙΟΤΗΤΑ/ ΥΠΟΓΛΥΚΑΙΜΙΑ (MEAL/ACTIVITY/HYPO) απαντήστε με τον κωδικό από την εφαρμογή ελέγχου ταυτότητας του Χρήστη, ακολουθούμενο από το PIN
+- TARGET STOP/CANCEL \* Απάντηση: Για να ακυρώσετε τον Προσωρινό Στόχο απαντήστε με κωδικό από την εφαρμογή ελέγχου ταυτότητας για το Χρήστη, ακολουθούμενο από το PΙΝ
+- HELP \* Απάντηση: ΓΛΥΚΟΖΗ ΑΙΜΑΤΟΣ (BG), ΚΥΚΛΩΜΑ (LOOP,) ΘΕΡΑΠΕΥΤΙΚΟΙ ΧΕΙΡΙΣΜΟΙ (TREATMENTS), .....
+- HELP BOLUS \* Απάντηση: Δόση ινσουλίνης 1.2 Δόση ινσουλίνης 1.2 Γεύμα
 
 (SMS-Commands-troubleshooting)=
 ## Αντιμετώπιση προβλημάτων
 
-### Multiple SMS
+### Πολλαπλά SMS
 
 If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. This could be xDrip+, for example. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS.
 

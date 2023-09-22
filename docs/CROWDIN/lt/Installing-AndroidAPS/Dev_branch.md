@@ -1,11 +1,11 @@
 ## Kūrėjo versija (Development branch)
 
-<font color="#FF0000"><strong>Dėmesio:</strong></font>
-„Kūrėjo versija“ yra skirta tik tolesniam AndroidAPS tobulinimui. Jis gali būti naudojamas tik atskirame išmaniajame telefone bandymo tikslais, <font color="#FF0000"><strong>o ne realiam ciklui</strong></font>
+<font color="#FF0000"><strong>Attention:</strong></font>
+Dev branch is for the further development of AAPS only. Jis gali būti naudojamas tik atskirame išmaniajame telefone bandymo tikslais, <font color="#FF0000"><strong>o ne realiam ciklui</strong></font>
 
-Stabiliausia AndroidAPS versija, kurią galima naudoti [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). Realiam cikui rekomenduojama naudoti tik Master branch.
+The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). Realiam cikui rekomenduojama naudoti tik Master branch.
 
-AndroidAPS kūrėjo versija yra skirta kūrėjams ir testuotojams, kurie gali tvarkyti programos įrašus, žurnalo failus ir galbūt suaktyvinti derinimo įrankį, kad būtų parengtos klaidų ataskaitos, kurios naudingos kūrėjams (trumpai tariant, žmonėms, kurie tai žino ką daro ir dirba savarankiškai). Todėl daugelis nebaigtų funkcijų yra išjungtos. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in directory /AAPS/extra . Įjungę inžinerinį režimą, galite visiškai sugadinti ciklą.
+The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Todėl daugelis nebaigtų funkcijų yra išjungtos. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in directory /AAPS/extra . Įjungę inžinerinį režimą, galite visiškai sugadinti ciklą.
 
 Tačiau kūrėjo versija yra gera vieta pamatyti, kokios funkcijos yra tikrinamos, ir padėti pašalinti klaidas bei pateikti atsiliepimus apie tai, kaip naujos funkcijos veikia praktiškai. Dažnai žmonės išbando kūrėjo versiją su senu telefone ir pompa, kol įsitikina, kad versija stabili - už bet kokį jos naudojimą atsakingi esate tik jūs patys. Testuodami bet kokias naujas funkcijas, atminkite, kad nusprendėte išbandyti vis dar kuriamą funkciją. Darykite tai savo rizika, tačiau atsargiai, kad apsaugotumėte save.
 

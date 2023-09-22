@@ -451,7 +451,7 @@ Buradaki seçenekler [Konfigürasyon ayarları](Config-Builder-pump) içinde se�
 - [Accu-Chek Insight pompası](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Medtronic Pompa](../Configuration/MedtronicPump.md)
 
-Döngüyü açmak için AndroidAPS kullanıyorsanız, Konfigürasyon ayarlarında Sanal Pompa'yı seçtiğinizden emin olun.
+If using AAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
 (Preferences-nsclient)=
 ## NSClient
@@ -461,7 +461,7 @@ Döngüyü açmak için AndroidAPS kullanıyorsanız, Konfigürasyon ayarlarınd
 ```
 
 - *Nightscout URL'nizi* (ör. <https://yourwebsitename.herokuapp.com>) ve *API parolanızı* (Heroku değişkenlerinde kaydedilmiş 12 karakterlik bir şifre) ayarlayın.
-- Bu, verilerin hem Nightscout web sitesi hem de AndroidAPS arasında okunmasını ve yazılmasını sağlar.
+- This enables data to be read and written between both the Nightscout website and AAPS.
 - Hedef 1'de takılıp kalırsanız, burada yazım hatalarını iki kez kontrol edin.
 - **URL'nin sonunda /api/v1/ OLMADAN olduğundan emin olun.**
 - *NS'de Uyg. günlüğünün başlatılması* uygulama her başlatıldığında Nightscout bakım portalına girişlerinize bir not kaydeder.  Uygulamanın günde bir defadan fazla başlatılması gerekmez. Bundan daha sık olması bir sorun olduğunu gösterir (örneğin. pil optimizasyonu AAPS için devre dışı bırakılmamıştır).

@@ -25,6 +25,8 @@
 
 - In AAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
 
+- Note that the "+" in front of the number may or may not be required based on your location. To determine this send a sample text which will show the received format in the SMS Communicator tab.
+
 - Enable 'Allow remote commands via SMS'.
 
 - If you want to use more than one number:

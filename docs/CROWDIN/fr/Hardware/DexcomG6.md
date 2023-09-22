@@ -21,9 +21,9 @@ Pour en savoir plus sur les détails et les raisons de ces recommandations, cons
 
 -   L'émetteur Dexcom G6 peut être connecté simultanément au récepteur Dexcom (ou alternativement à la pompe t:slim) et à une application sur votre téléphone.
 -   Lorsque vous utilisez xDrip+ comme récepteur, désinstallez d'abord l'application Dexcom. **Vous ne pouvez pas connecter xDrip + et l'application Dexcom avec l'émetteur en même temps !**
--   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+-   Si vous avez besoin de Clarity et que vous voulez profiter des alarmes xDrip+, utilisez [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) avec la diffusion locale vers xDrip+.
 -   Si ce n'est pas encore configuré, téléchargez [xDrip](https://github.com/NightscoutFoundation/xDrip) et suivez les instructions sur [la page de configuration xDrip+](../Configuration/xdrip.md).
--   Sélectionnez xDrip dans la Configuration (dans AndroidAPS).
+-   Select xDrip+ in ConfigBuilder (setting in AAPS).
 -   Ajuster les paramètres dans xDrip+ en fonction de [la page de configuration xDrip+](../Configuration/xdrip.md).
 -   Si AAPS ne reçoit pas de valeurs de glycémie lorsque le téléphone est en mode avion utilisez 'Identifier le récepteur' comme décrit dans [la page de configuration xDrip+](../Configuration/xdrip.md).
 
@@ -38,7 +38,7 @@ Pour en savoir plus sur les détails et les raisons de ces recommandations, cons
 -   Dans les paramètres du téléphone, allez dans Applications > Dexcom G6 > Autorisations > Autorisations supplémentaires et appuyez sur 'Access Dexcom app'.
 -   Après une courte période BYODA devrait recevoir le signal du transmetteur. (Si ce n'est pas le cas, vous devrez arrêter le capteur et en démarrer un nouveau.)
 
-### Paramètres pour AndroidAPS
+### Settings for AAPS
 
 -   Sélectionnez 'App Dexcom (patchée)' dans la Configuration.
 -   Si vous ne recevez aucune valeur, sélectionnez une autre source de données, puis re-sélectionnez 'App Dexcom (patchée)' pour déclencher la demande d'autorisations pour établir la connexion entre AAPS et BYODA.
@@ -68,8 +68,8 @@ Pour en savoir plus sur les détails et les raisons de ces recommandations, cons
 
 ### Dépannage général
 
-General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.html#troubleshooting).
+Les dépannages généraux concernant les MGC peuvent être trouvés [ici](./GeneralCGMRecommendation.html#depannage).
 
 ### Nouvel émetteur avec capteur en cours
 
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at <https://youtu.be/tx-kTsrkNUM>.
+Si vous changez de transmetteur avec un capteur en cours d'exécution, vous pouvez essayer de retirer le transmetteur sans endommager le montage du capteur. Une vidéo peut être trouvée [ici](https://youtu.be/tx-kTsrkNUM).

@@ -9,48 +9,48 @@ Veuillez prendre note des avertissements et suivre les instructions dans la [con
 
 ```
 
-## Fundamental in advance
+## Commençons par des fondamentaux
 
-In spring 2022, the Dexcom G7 received its CE certificate and was sold at the end of October '22.
+Au printemps 2022, le Dexcom G7 a reçu son certificat CE et a été vendu fin octobre 2022.
 
-Noteworthy is the fact that the G7 system, compared to the G6, does not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app). Consequently, the values have to be smoothed to be able to use them sensibly in AAPS.
+Il est à noter que le système G7, par rapport au G6, ne lisse pas les valeurs, ni dans l'application, ni dans le lecteur. Plus de détails disponibles [ici](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app). Par conséquent, les valeurs doivent être lissées pour pouvoir les utiliser de manière raisonnable dans AAPS.
 
-There are **two** possibilities (as of 02/'23).
+Il y a **deux possibilités** (à partir de 02/2023).
 
 ![DexcomG7.md](../images/DexcomG7.png)
 
-## 1.  Patched Dexcom G7 App
+## 1.  Application Dexcom G7 patchée
 
-### Install a new patched (!) G7 app and start the sensor
+### Installez la nouvelle application G7 patchée et démarrez le capteur
 
-A patched Dexcom G7 app gives acess to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+L'application Dexcom G7 patchée donne accès aux données Dexcom G7. Ce n'est pas l'application BYODA car cette application ne peut pas recevoir de données G7 pour le moment.
 
-Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
+Désinstallez l'application Dexcom originale si vous l'avez utilisée avant (une session de capteur peut être poursuivie - notez le code du capteur avant de retirer l'application!)
 
-Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
+Téléchargez et installez le fichier patched.apk [ici](https://github.com/authorgambel/g7/releases).
 
-Enter sensor code in the patched app.
+Entrez le code du capteur dans l'application patchée.
 
-Follow the general recommendations for CGM hygiene and sensor placement found [here](../Hardware/GeneralCGMRecommendation.md).
+Suivez les recommandations générales pour l'hygiène des MGC et le placement des capteurs qu'on trouve [ici](../Hardware/GeneralCGMRecommendation.md).
 
-After the warm-up phase, the values are displayed as usual in the G7 app.
+Après la phase de préchauffage, les valeurs s'affichent comme d'habitude dans l'application G7.
 
-### build a new signed APK from the dev branch
+### construire un nouvel APK signé depuis la branche de développement
 
-To be able to receive the values from the G7 App in AAPS and to smooth the received values, a change in AAPS is necessary.
+Pour pouvoir recevoir les valeurs de l'application G7 dans AAPS et pour lisser les valeurs reçues, un changement dans AAPS est nécessaire.
 
-Therefore build a new signed APK from the official dev branch and install it on your mobile.
+Pour cette raison, construisez un nouvel APK signé à partir de la branche officielle de développement et installez-le sur votre mobile.
 
-For the configuration in AAPS
-- Select 'BYODA' in the configuration generator - even if it is not the BYODA app!
-- If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
+Pour la configuration dans AAPS
+- Sélectionnez 'BYODA' dans l'onglet configuration - même si ce n'est pas l'application BYODA !
+- Si AAPS ne reçoit aucune valeur, passer à une autre source de glycémie, puis revenez à 'BYODA' pour permettre la requête d'approbation de l'échange de données entre AAPS et BYODA.
 
-The smoothing of glucose values can be activated by enabling the "Average smoothing" or "Exponential Smoothing" plugin in the Config Builder. To disable select the "No Smoothing" option. "Exponential smoothing" is more aggressive and rewrites the newest Glucose Value but is good in dealing with heavy noise. "Average smoothing" is much like the back smoothing that was in BYODA G6 and only rewrites the past values but not the current value and therefore has a faster response time.
+Le lissage des valeurs de glucose peut être activé en activant le plugin "lissage moyen" ou "lissage exponentiel" dans le Générateur de configuration. Pour désactiver cette option, sélectionnez l'option "Sans lissage". Le "lissage exponentiel" est plus agressif et réécrit la plus récente valeur de glucose, mais est avantageux dans la gestion des valeurs trop bruitées. Le "lissage moyen" ressemble beaucoup au lissage arrière qui était dans BYODA G6 et ne réécrit que les valeurs passées, mais pas la valeur actuelle et a donc un temps de réponse plus rapide.
 
-**Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 values.
+**Lissage Exponentiel** **DOIT** être activé pour que les valeurs G7 soient pertinentes.
 
-## 2. Xdrip+ (companion mode)
+## 2. Xdrip+ (mode compagnon)
 
--   Download and install Xdrip+: [xdrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in Xdrip "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
-- In AAPS select  > Configuration > BG source > xDrip+. Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md) 
+-   Téléchargez et installez xDrip+ : [xdrip](https://github.com/NightscoutFoundation/xDrip)
+- Sélectionnez comme source de glycémie dans xDrip "Companion App". Puis dans "Paramètres moins courant" allez dans "Paramètres Bluetooth" et sélectionnez "Companion Bluetooth".
+- Dans AAPS, sélectionnez  > Configuration > source de glycémie > xDrip+. Ajustez les paramètres xDrip+ en fonction des explications sur la page des paramètres xDrip+  [paramètres xDrip+](../Configuration/xdrip.md) 

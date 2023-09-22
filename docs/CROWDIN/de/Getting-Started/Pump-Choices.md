@@ -1,9 +1,9 @@
 # Pumenwahl
 
-AndroidAPS funktioniert mit einer Reihe von Insulinpumpen. Die folgende Liste enthält die derzeit unterstützten Geräte und zeigt in Klammern an, ob AndroidAPS mit der Pumpe kommuniziert, indem Du die native Bluetooth-Funktion Deines Smartphones verwenden kannst oder ob ein Rileylink-kompatibles Gerät benötigt wird.
+AAPS works with a number of insulin pumps. The following list shows the currently supported devices and indicates if AAPS communicates with the pump using your phones native Bluetooth function or if it requires a Rileylink Compatible device in brackets.
 
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (Bluetooth)
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md) (Bluetooth) (**neuer Treiber für Accu-Chek Combo ab AAPS v3.2**)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (Bluetooth; old driver that uses the additional Ruffy app)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; new driver, available starting with AndroidAPS v.3.2)
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) (Bluetooth)
 - [DanaR](../Configuration/DanaR-Insulin-Pump.md) (Bluetooth)
 - [DanaRS](../Configuration/DanaRS-Insulin-Pump.md) (Bluetooth)
@@ -12,6 +12,8 @@ AndroidAPS funktioniert mit einer Reihe von Insulinpumpen. Die folgende Liste en
 - [EOPatch2](../Configuration/EOPatch2.md) (Bluetooth)
 - [Omnipod Eros](../Configuration/OmnipodEros.md) (Rylelink kompatibles Gerät)
 - [Omnipod DASH](../Configuration/OmnipodDASH.md) (Bluetooth)
-- Bestimmte ältere [Medtronic](../Configuration/MedtronicPump.md) (Rileylink-kompatibles Gerät)
+- [Medtrum Nano](../Configuration/MedtrumNano.md) (Bluetooth)
+- [Medtrum 300U](../Configuration/MedtrumNano.md) (Bluetooth)
+- Certain older [Medtronic](../Configuration/MedtronicPump.md) (Rileylink Compatible Device)
 
-Informationen über weitere Pumpen, die möglicherweise irgendwann mit AndroidAPS funktionieren, findest du auf der Seite [Zukünftig ggf. loopbare Pumpen](Future-possible-Pump-Drivers.md).
+Details of the status of other pumps that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.

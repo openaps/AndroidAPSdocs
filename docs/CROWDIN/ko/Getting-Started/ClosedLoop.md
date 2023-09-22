@@ -26,7 +26,7 @@
 
 ### AndroidAPS (AAPS)
 
-AndroidAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). 이는 안드로이드 스마트폰을 사용하여 인슐린 펌프 사용을 계산하고 제어합니다. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
+AAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). 이는 안드로이드 스마트폰을 사용하여 인슐린 펌프 사용을 계산하고 제어합니다. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
 
 Compatible [pumps](../Hardware/pumps.md) are:
 

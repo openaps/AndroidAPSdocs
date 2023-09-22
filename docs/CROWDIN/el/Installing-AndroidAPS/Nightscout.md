@@ -4,13 +4,13 @@
 
 ## Ζητήματα ασφάλειας
 
-Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
+Besides reporting Nightscout can also be used to control AAPS. Π.χ. μπορείτε να ορίσετε στοχευμένους στόχους ή να προσθέσετε μελλοντικούς υδατάνθρακες. This information will be picked up by AAPS and it will act correspondingly. Ως εκ τούτου αξίζει να σκεφτείτε την εξασφάλιση της ιστοσελίδας σας Nightscout.
 
 ### Ρυθμίσεις Nightscout
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
+Μπορείτε να αρνηθείτε την πρόσβαση του κοινού στην τοποθεσία Nightscout χρησιμοποιώντας [ ρόλους ελέγχου ταυτότητας ](https://nightscout.github.io/nightscout/security).
 
-### Ρυθμίσεις AndroidAPS
+### AAPS settings
 
 There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs.
 
@@ -23,7 +23,7 @@ There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS
 
 ### Περαιτέρω ρυθμίσεις ασφαλείας
 
-Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
+Κρατήστε το τηλέφωνό σας ενημερωμένο, όπως περιγράφεται στην [ασφάλεια](../Getting-Started/Safety-first.md).
 
 (Nightscout-manual-nightscout-setup)=
 
@@ -43,7 +43,7 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
   * `DEVICESTATUS_ADVANCED` = `true`
   * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
+  * Μπορούν να ρυθμιστούν διάφοροι συναγερμοί για την [παρακολούθηση της αντλίας](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), ειδικότερα για το πόσο άδεια είναι η μπαταρία: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
@@ -55,7 +55,7 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
 
 Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
-**Benefits**
+**Οφέλη**
 
 * Μπορείτε να εγκαταστήσετε το Nightscout με μερικά κλικ και να το χρησιμοποιήσετε απευθείας. 
 * Μείωση της χειρωνακτικής εργασίας καθώς ο Martin προσπαθεί να αυτοματοποιήσει τη διαδικασία.

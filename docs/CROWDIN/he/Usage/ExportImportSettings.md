@@ -11,7 +11,7 @@
 במחשב Windows 10 זה נראה כך:
 
 ```{image} ../images/AAPS_ExImportSettingsWin.png
-:alt: AndroidAPS Preferences phone connected to computer
+:alt: AAPS Preferences phone connected to computer
 ```
 
 ## מידע מיוצא
@@ -36,7 +36,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - ייצוא הגדרות
 
 ```{image} ../images/AAPS_ExportSettings1.png
-:alt: AndroidAPS export settings 1
+:alt: AAPS export settings 1
 ```
 
 - Date and time of export will be added to the file name automatically and displayed together with the path.
@@ -45,7 +45,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - Successful export will be prompted at bottom of the screen.
 
 ```{image} ../images/AAPS_ExportSettings2.png
-:alt: AndroidAPS export settings 2
+:alt: AAPS export settings 2
 ```
 
 (ExportImportSettings-import-settings)=
@@ -58,7 +58,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - ייבוא הגדרות
 
 ```{image} ../images/AAPS_ImportSettings1.png
-:alt: AndroidAPS import settings 1
+:alt: AAPS import settings 1
 ```
 
 - כל הקבצים מהתיקייה /AAPS/preferences בטלפון יוצגו ברשימה.
@@ -67,7 +67,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - Enter [master password](Preferences-master-password) and click 'OK'.
 
 ```{image} ../images/AAPS_ImportSettings2.png
-:alt: AndroidAPS import settings 2
+:alt: AAPS import settings 2
 ```
 
 - יוצגו פרטים על קובץ ההעדפות.

@@ -1,14 +1,14 @@
-# AndroidAPS ekranları
+# AAPS screens
 
 ## Giriş Ekranı
 
 ![Anaekran V2.7](../images/Home2020_Homescreen.png)
 
-Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gün ihtiyaç duyacağınız bilgilerin çoğunu içerir.
+This is the first screen you will come across when you open AAPS and it contains most of the information that you will need day to day.
 
 ### Bölüm A - Sekmeler
 
-* Çeşitli AndroidAPS modülleri arasında gezinin.
+* Navigate between the various AAPS modules.
 * Alternatif olarak, sola veya sağa kaydırarak ekranları değiştirebilirsiniz.
 * Görüntülenen sekmeler [konfigürasyon ayarları](Config-Builder-tab-or-hamburger-menu)'nda seçilebilir.
 
@@ -347,7 +347,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 #### Yemek hatırlatıcısı
 
-* Yenecek karbonhidratlar için alarm onay kutusu işaretlenebilir. Böylece AndroidAPS'e girdiğiniz karbonhidratları ne zaman yemeniz gerektiği size hatırlatılabilir. (Girilen süre sonunda karbonhidratlar sisteme ilave edilir.)
+* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AAPS
    
    ![Yemek Hatırlatıcılı Bolus Sihirbazı](../images/Home2021_BolusWizard_EatingReminder.png)
 
@@ -382,7 +382,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 ![Yavaş karbonhidrat emilimi](../images/Calculator_SlowCarbAbsorption.png)
 
-* Bolus sihirbazını kullandıktan sonra yukarıdaki uyarıyı görüyorsanız, AndroidAPS hesaplanan AKRB değerinin yanlış olabileceğini algılamıştır. 
+* If you see the warning above after using bolus wizard, AAPS has detected that the calculated COB value maybe wrong.
 * Bu nedenle, mevcut Aktif Karbonhidrat ile bir yemekten sonra tekrar bolus yapmak istiyorsanız, aşırı dozun farkında olmalısınız! 
 * Ayrıntılar için [COB hesaplama sayfasındaki](COB-calculation-detection-of-wrong-cob-values) ipuçlarına bakın.
 
@@ -459,7 +459,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 * MOR çizgi zamanla bozulduğu için enjekte edildikten sonra ne kadar insülin kaldığını, MAVİ çizgi ise ne kadar aktif olduğunu gösterir.
 * Sürecin genel olarak varsayıldığından çok daha uzun sürdüğünü not etmek önemlidir. 
 * Pompa ile elle bolus gönderiyorsanız, muhtemelen insülinin yaklaşık 3.5 saat içinde azaldığını varsayıyorsunuz. 
-* Ancak, döngü ile pompa kullanırken uzun insülin zamanı önemlidir. Çünkü hesaplamalar çok daha kesindir ve bu küçük miktarlar, AndroidAPS algoritmasındaki hesaplamalara eklenirler.
+* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AAPS algorithm.
 
 Farklı insülin türleri, aktivite profilleri ve tüm bunların neden önemli olduğu hakkında daha fazla ayrıntı için [Üstel Etkinlik Eğrilerine Dayalı Yeni AİNS Eğrilerini Anlamak](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) makalesini okuyabilirsiniz.
 

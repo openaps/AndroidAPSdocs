@@ -1,15 +1,15 @@
-# Dla lekarzy specjalistów – Ogólne wprowadzenie i przewodnik po AndroidAPS
+# For Clinicians – A General Introduction and Guide to AAPS
 
-Ta strona jest przeznaczona dla lekarzy specjalistów, którzy wyrazili zainteresowanie technologią sztucznej trzustki open source, taką jak AndroidAPS, lub dla pacjentów, którzy chcą podzielić się takimi informacjami ze swoimi lekarzami.
+This page is intended for clinicians who have expressed interest in open source artificial pancreas technology such as AAPS, or for patients who want to share such information with their clinicians.
 
-Ten przewodnik zawiera trochę specjalistycznych informacji na temat zamkniętej pętli typu "zrób to sam", w szczególności jak działa AndroidAPS. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](../index.md). Jeśli masz pytania, o więcej szczegółów proszę zapytać pacjenta ewentualnie ni krępuj się kierować pytań do naszej społeczności. (Jeśli nie korzystasz z mediów społecznościowych (np. [Twitter](https://twitter.com/kozakmilos) lub Facebook), prosimy o kontakt mailowy na adres developers@AndroidAPS.org). [Tutaj można również znaleźć niektóre z najnowszych badań i danych dotyczących wyników](https://openaps.org/outcomes/).
+This guide has some high-level information about DIY closed looping and specifically how AAPS works. For more details on all of these topics, please view the [comprehensive AAPS documentation online](../index.md). Jeśli masz pytania, o więcej szczegółów proszę zapytać pacjenta ewentualnie ni krępuj się kierować pytań do naszej społeczności. (Jeśli nie korzystasz z mediów społecznościowych (np. [Twitter](https://twitter.com/kozakmilos) lub Facebook), prosimy o kontakt mailowy na adres developers@AndroidAPS.org). [Tutaj można również znaleźć niektóre z najnowszych badań i danych dotyczących wyników](https://openaps.org/outcomes/).
 
 ## The steps for building a DIY Closed Loop:
 
-Aby rozpocząć korzystanie z AndroidAPS, należy podjąć następujące kroki:
+To start using AAPS, the following steps should be taken:
 
 * Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.md).
-* [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
+* [Download the AAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
 * [Configure the software to talk to their diabetes devices and specify settings and safety preferences](index-configuration).
 
 ## How A DIY Closed Loop Works
@@ -18,11 +18,11 @@ Bez systemu zamkniętej pętli, osoba cierpiąca na cukrzycę samodzielnie groma
 
 Przy automatycznym podawaniu insuliny, system robi to samo: zbiera dane z pompy, CGM oraz z innych miejsc w których informacje są rejestrowane (takie jak Nightscout), wykorzystuje te informacje do wykonania obliczeń i decyduje o tym, ile więcej lub mniej insuliny jest potrzebne (powyżej lub poniżej podstawowej bazy), a także wykorzystuje tymczasowe bazę w celu dokonania niezbędnych korekt, aby utrzymać lub sprowadzić stężenia glukozy do docelowego zakresu.
 
-Jeśli urządzenie z systemem AndroidAPS przerwie działanie lub wyjdzie poza zasięg pompy, po zakończeniu ostatniej tymczasowej bazy, pompa wróci do swojej podstawowej funkcjonalności z zaprogramowanymi wcześniej ustawieniami bazy.
+If the device running AAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basals rates runnning.
 
 ## How data is gathered:
 
-Używając AndroidAPS, urządzenie z systemem Android uruchamia specjalną aplikację do wykonywania obliczeń, urządzenie komunikuje się za pomocą Bluetooth z obsługiwaną pompą. AndroidAPS może komunikować się z innymi urządzeniami poprzez chmurę, za pośrednictwem Wifi lub sieci komórkowej, aby zebrać dodatkowe informacje i zaprezentować pacjentowi, jego opiekunom oraz bliskim, co to robi i dlaczego.
+With AAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AAPS can communicate with other devices and to the cloud via wifi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
 
 Urządzenie z Androidem musi:
 
@@ -39,11 +39,11 @@ Oprogramowanie zostało zaprojektowane w taki sposób aby sprawić, że urządze
 
 Ponieważ najważniejszym parametrem wejściowym jest poziom glukozy we krwi pochodzący z CGM (systemu ciągłego monitorowania glukozy), ważne jest posiadanie wysokiej jakości danych CGM.
 
-AndroidAPS jest przeznaczony do przejrzystego prezentowania wszystkich zebranych danych wejściowych, wynikających z nich zaleceń i wszelkich podjętych działań. Z tych względów, w dowolnym momencie przeglądając logi łatwo odpowiedzieć na pytanie "dlaczego akurat system robi X?".
+AAPS is designed to transparently track all input data it gathers, the resulting recommendation, and any action taken. Z tych względów, w dowolnym momencie przeglądając logi łatwo odpowiedzieć na pytanie "dlaczego akurat system robi X?".
 
-## Examples of AndroidAPS algorithm decision making:
+## Examples of AAPS algorithm decision making:
 
-AndroidAPS używa tego samego algorytmu i funkcji, co OpenAPS. Algorytm dokonuje wielu prognoz (na podstawie ustawień i sytuacji) reprezentujących różne scenariusze tego, co może się wydarzyć w przyszłości. W Nightscout prognozy te są wyświetlane jako "purpurowe linie". AndroidAPS uses different colors to separate these [prediction lines](Releasenotes-overview-tab). W logach system natomiast będzie opisywał, które z tych prognoz (i w jakich ramach czasowych) wykorzystuje się do podejmowania niezbędnych działań.
+AAPS uses the same core algorithm and feature set as OpenAPS. Algorytm dokonuje wielu prognoz (na podstawie ustawień i sytuacji) reprezentujących różne scenariusze tego, co może się wydarzyć w przyszłości. W Nightscout prognozy te są wyświetlane jako "purpurowe linie". AAPS uses different colors to separate these [prediction lines](Releasenotes-overview-tab). W logach system natomiast będzie opisywał, które z tych prognoz (i w jakich ramach czasowych) wykorzystuje się do podejmowania niezbędnych działań.
 
 ### Here are examples of the purple prediction lines, and how they might differ:
 
@@ -53,49 +53,49 @@ AndroidAPS używa tego samego algorytmu i funkcji, co OpenAPS. Algorytm dokonuje
 
 ### Scenario 1 - Zero Temp for safety
 
-Na tym przykładzie poziom cukru rośnie w krótkim okresie czasu, jednak przewiduje się, że w dłuższym okresie czasu poziom cukru będzie niski. W rzeczywistości prognozuje się, że cukier spadnie poniżej poziomu docelowego *i* progu bezpieczeństwa. Dla bezpieczeństwa, aby zapobiec niedocukrzeniu, AndroidAPS ustawi zerową bazę (tymczasowa baza na 0%) , aż do momentu, gdy eventualBG \[prognozowany cukier\] (w dowolnym przedziale czasowym) jest powyżej progu.
+Na tym przykładzie poziom cukru rośnie w krótkim okresie czasu, jednak przewiduje się, że w dłuższym okresie czasu poziom cukru będzie niski. W rzeczywistości prognozuje się, że cukier spadnie poniżej poziomu docelowego *i* progu bezpieczeństwa. For safety to prevent the low, AAPS will issue a zero temp (temporary basal rate at 0%), until the eventualBG (in any time frame) is above threshold.
 
 ![Scenariusz dawkowania 1](../images/Dosing_scenario_1.jpg)
 
 ### Scenario 2 - Zero temp for safety
 
-Na tym przykładzie prognozuje się, że w najbliższym czasie stężenie cukru spadnie poniżej zera, ale przewiduje się, że ostatecznie przekroczy wartość docelową. Jednakże, ponieważ w najbliższym czasie spadek cukru jest poniżej progu bezpieczeństwa, AndroidAPS ustawi zerową bazę tymczasową, aż do momentu, gdy nie będzie już żadnego punktu linii prognozowania, który jest poniżej progu.
+Na tym przykładzie prognozuje się, że w najbliższym czasie stężenie cukru spadnie poniżej zera, ale przewiduje się, że ostatecznie przekroczy wartość docelową. However, because the near-term low is actually below the safety threshold, AAPS will issue a zero temp, until there is no longer any point of the prediction line that is below threshold.
 
 ![Scenariusz dawkowania 2](../images/Dosing_scenario_2.jpg)
 
 ### Scenario 3 - More insulin needed
 
-Na tym przykładzie krótkoterminowa prognoza pokazuje spadek cukru poniżej celu. Nie przewiduje się jednak, aby ten spadek był poniżej progu bezpieczeństwa. Prognozowany cukier (eventualBG) jest powyżej wartości docelowej. Dlatego też AndroidAPS powstrzyma się od dodawania insuliny, która przyczyniłaby się w najbliższym czasie do niedocukrzenia (dodanie insuliny spowodowałoby, że prognoza spadłyby poniżej progu). Następnie, gdy to tylko będzie bezpieczne, system oszacuje dodanie insuliny w celu obniżenia do poziomu docelowego, według najniższego poziomu z możliwych prognoz cukrów. *(W zależności od ustawień oraz wymaganej ilości i czasu podawania insuliny, insulina ta może być podawana przez bazę tymczasową lub SMB (super-mikro bolusy) )*
+Na tym przykładzie krótkoterminowa prognoza pokazuje spadek cukru poniżej celu. Nie przewiduje się jednak, aby ten spadek był poniżej progu bezpieczeństwa. Prognozowany cukier (eventualBG) jest powyżej wartości docelowej. Therefore, AAPS will restrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). Następnie, gdy to tylko będzie bezpieczne, system oszacuje dodanie insuliny w celu obniżenia do poziomu docelowego, według najniższego poziomu z możliwych prognoz cukrów. *(W zależności od ustawień oraz wymaganej ilości i czasu podawania insuliny, insulina ta może być podawana przez bazę tymczasową lub SMB (super-mikro bolusy) )*
 
 ![Scenariusz dawkowania 3](../images/Dosing_scenario_3.jpg)
 
 ### Scenario 4 - Low temping for safety
 
-Na tym przykładzie AndroidAPS widzi, że poziom glukozy jest znacznie powyżej celu. Jednakże, ze względu na czas działania insuliny, w organizmie jest już wystarczająco dużo insuliny, aby ostatecznie doprowadzić BG do prawidłowego zakresu. W rzeczywistości przewiduje się, że stężenie glukozy w organizmie będzie ostatecznie niższe od wartości docelowej. Dlatego też AndroidAPS nie będzie dostarczał dodatkowej insuliny, więc nie przyczyni się w dłuższej perspektywie czasowej do niedocukrzenia. Pomimo, iż poziom glukozy jest wysoki/wzrastający, to jednak w tym przypadku zasadne jest obniżenie bazy.
+In this example, AAPS sees that BG is spiking well above target. Jednakże, ze względu na czas działania insuliny, w organizmie jest już wystarczająco dużo insuliny, aby ostatecznie doprowadzić BG do prawidłowego zakresu. W rzeczywistości przewiduje się, że stężenie glukozy w organizmie będzie ostatecznie niższe od wartości docelowej. Therefore, AAPS will not provide extra insulin so it will not contribute to a longer-timeframe low. Pomimo, iż poziom glukozy jest wysoki/wzrastający, to jednak w tym przypadku zasadne jest obniżenie bazy.
 
 ![Scenariusz dawkowania 4](../images/Dosing_scenario_4.jpg)
 
 ## Optimizing settings and making changes
 
-Trudna może okazać się pomoc pacjentowi (dla lekarza specjalisty, który nie ma doświadczenia z AndroidAPS oraz z zamkniętymi pętlami), w szczególności przy optymalizacji ustawień oraz dokonywaniu zmian w celu poprawy wyników. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
+As a clinician who may not have experience with AAPS or DIY closed loops, you may find it challenging to help your patient optimize their settings or make changes to improve their outcomes. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
 
 Przy dostrajaniu systemu pacjenci powinni przyjąć jedną podstawową zasadę - należy dokonywać wyłącznie jednej zmiany na raz, a następnie obserwować wpływ tej zmiany przez około 2-3 dni. Ewentualne, kolejne pojedyncze zmiany systemu należy wykonywać stopniowo, dopiero po weryfikacji wpływu poprzedzającej zmiany (z tym zastrzeżeniem, iż jeśli okaże się, że zmiana źle wpływa na funkcjonowanie systemu, pacjenci powinni natychmiast powrócić do poprzedniego ustawienia). Natura ludzka skłania do obracania wszystkich pokręteł i zmieniania wszystkiego na raz, ale jeśli ktoś tak postępuje, z dużym prawdopodobieństwem spowoduje powstanie kolejnych wadliwych ustawień, a w konsekwencji nawet utrudni sobie powrót do ostatniego, znanego zadowalającego stanu.
 
-Jednym z najbardziej przydatnych narzędzi do dostrajania systemu jest zautomatyzowane narzędzie służące do obliczania bazy, ISF (współczynnika wrażliwości na insulinę) i współczynnika węglowodanowego. This is called “[Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)”. Zostało ono zaprojektowane tak, aby mogło być uruchamiane niezależnie/ręcznie, dostarczając dane, które pomagają pacjentowi w stopniowym dokonywaniu zmian ustawień. Najlepszą praktyką jest najpierw uruchamianie (lub przeglądanie raportów) Autotune, a dopiero następnie ewentualna modyfikacja ustawień. Na chwilę obecną, korzystając z AndroidAPS, Autotune należy uruchamiać niezależnie, nie mniej jednak trwają prace, aby zaimplementować Autotune bezpośrednio w AndroidAPS. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adustment of these parameters would be the natural link to the clinician.
+Jednym z najbardziej przydatnych narzędzi do dostrajania systemu jest zautomatyzowane narzędzie służące do obliczania bazy, ISF (współczynnika wrażliwości na insulinę) i współczynnika węglowodanowego. This is called “[Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)”. Zostało ono zaprojektowane tak, aby mogło być uruchamiane niezależnie/ręcznie, dostarczając dane, które pomagają pacjentowi w stopniowym dokonywaniu zmian ustawień. Najlepszą praktyką jest najpierw uruchamianie (lub przeglądanie raportów) Autotune, a dopiero następnie ewentualna modyfikacja ustawień. With AAPS, Autotune will be run as a "one-off", although there are ongoing efforts to incorporate it directly into AAPS as well. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adustment of these parameters would be the natural link to the clinician.
 
-Dodatkowo należy wskazać, iż zachowanie człowieka (uczonego i przyzwyczajonego do normalnego prowadzenia cukrzycy) często wpływa na wyniki, nawet przy zamkniętej pętli. Na przykład, jeśli przewiduje się, że stężenie glukozy obniży się, a AndroidAPS zmniejszy poziom insuliny w trakcie spadku, do podniesienia stężenia glukozy z 70 mg/dl (3,9 mmol) może być potrzebna tylko niewielka ilość węglowodanów (np. 3-4 g węglowodanów). Jednak w wielu przypadkach ktoś może zdecydować się na przyjęcie dużo większej ilości węglowodanów (np. trzymając się zasady 15), co spowoduje szybszy skok zarówno od dodatkowej glukozy, jak i dlatego, że insulina została zmniejszona przez AndroidAPS w okresie spadku glukozy.
+Dodatkowo należy wskazać, iż zachowanie człowieka (uczonego i przyzwyczajonego do normalnego prowadzenia cukrzycy) często wpływa na wyniki, nawet przy zamkniętej pętli. For example, if BG is predicted to go low and AAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dl (3.9 mmol). Jednak w wielu przypadkach ktoś może zdecydować się na przyjęcie dużo większej ilości węglowodanów (np. trzymając się zasady 15), co spowoduje szybszy skok zarówno od dodatkowej glukozy, jak i dlatego, że insulina została zmniejszona przez AndroidAPS w okresie spadku glukozy.
 
 ## OpenAPS
 
-**Niniejszy przewodnik został oparty na [Przewodniku klinicznym do OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS jest systemem opracowanym do pracy na małym przenośnym komputerze (ogólnie nazywanym "platformą" ["rig"]). AndroidAPS wykorzystuje wiele technik zaimplementowanych w OpenAPS i w dużej mierze wykorzystuje logikę i algorytmy OpenAPS. Z tych względów niniejszy przewodnik jest bardzo podobny do oryginalnego opracowania. Wiele informacji o OpenAPS można łatwo zaadaptować do AndroidAPS, przy uwzględnieniu okoliczności, iż podstawową różnicą obydwu systemów jest platforma sprzętowa, na której one funkcjonują.
+**Niniejszy przewodnik został oparty na [Przewodniku klinicznym do OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS jest systemem opracowanym do pracy na małym przenośnym komputerze (ogólnie nazywanym "platformą" ["rig"]). AAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AAPS, with the main difference being the hardware platform where each peace of software is run.
 
 ## Summary
 
-Reasumując, przewodnik niniejszy jest specjalistycznym streszczeniem jak działa AndroidAPS. Aby uzyskać więcej informacji, zapytaj pacjenta, skontaktuj się ze społecznością lub przeczytaj pełną dokumentację AndroidAPS dostępną online.
+This is meant to be a high-level overview of how AAPS works. For more details, ask your patient, reach out to the community, or read the full AAPS documentation available online.
 
 Dodatkowo warto przeczytać:
 
-* The [full AndroidAPS documentation](../index)
+* The [full AAPS documentation](../index)
 * [Projekt Referencyjny OpenAPS](https://OpenAPS.org/reference-design/), wyjaśniający mechanizmy bezpieczeństwa zaprojektowane w OpenAPS: https://openaps.org/reference-design/
 * The [full OpenAPS documentation](https://openaps.readthedocs.io/en/latest/index.html) 
   * More [details on OpenAPS calculations](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)

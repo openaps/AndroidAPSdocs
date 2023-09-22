@@ -1,30 +1,30 @@
-# state of translation for app and the documentation
+# Estado de la traducción para la aplicación y la documentación
 
-The state is once per hour updated and reflects only the state in Crowdin.
+El estado se actualiza una vez por hora y refleja únicamente el estado de Crowdin.
 
 :::{tip}
 
-Be careful the percentage of proofreading must be lower then the percentage of translations but they decided to show it on top of the translations. It's better to look only at the percentage level of translations to see if work is to be done.
+Cuidado, el porcentaje de correcciones debe ser inferior al de traducciones, pero han decidido mostrarlo encima de las traducciones. Es mejor fijarse sólo en el nivel porcentual de las traducciones para ver si hay que trabajar.
 
 :::
 
-:::{admonition} needed time for final publication
+:::{admonition} tiempo necesario para la publicación final
 :class: note
 
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+Después de la traducción con Crowdin, está programada una sincronización con Github todos los días, para transferir las traducciones a Github como un pull request (PR).
 
-The acceptance of the PR is a manual task which will be done es fast as possible.
+La aceptación del Pull Request (PR) es una tarea manual que se realizará lo más rápido posible.
 
 :::
 
-## state app translation
+## Estado de la traducción de la aplicación
 
-State of the **app** translations per language (country code, percentage translation, percentage proofreading).
+Estado de las traducciones de la **app** por idioma (código de país, porcentaje de traducción, porcentaje de revisión).
 
-![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+![Estado de la traducción de la aplicación](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## state documentation translation
+## Estado de la traducción de la documentación
 
-State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
+Estado de las traducciones de **documentación** por idioma (código de país, porcentaje de traducción, porcentaje de revisión).
 
-![state documentation translation](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+![Estado de la traducción de la documentación](https://badges.awesome-crowdin.com/translation-13588158-310610.png)

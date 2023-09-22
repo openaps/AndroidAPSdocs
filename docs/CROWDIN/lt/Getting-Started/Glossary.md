@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS is the name of the Android app - AAPS ist the abbrevation - APS is a abrevation used for artificial pancreas system</td>
+ <td>AAPS is the name of the Android app - AAPS ist the abbrevation - APS is a abrevation used for artificial pancreas system</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -29,7 +29,7 @@
   </td>
 <tr>
  <td><strong>Android Auto</strong></td>
- <td>Android Auto is a system developed by Google LLC to use functions of an Android smartphone with the infotainment system in motor vehicles. Through Android Auto AndroidAPS can send messages to your compatible and configured infotainment system.</td>
+ <td>Android Auto is a system developed by Google LLC to use functions of an Android smartphone with the infotainment system in motor vehicles. Through Android Auto AAPS can send messages to your compatible and configured infotainment system.</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Android-auto.html">Wiki - android auto</a><br><a href="https://www.android.com/intl/en_en/auto/">Google Android Auto</a></td>
 </tr>
@@ -96,7 +96,7 @@
 </tr>
 <tr>
  <td><strong>CAGE</strong></td>
- <td>cannula age - displayed on the homescreen of AndroidAPS and in Nightscout if information was entered in the actions tab / menu</td>
+ <td>cannula age - displayed on the homescreen of AAPS and in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -150,7 +150,7 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>git in our context here is the tool to mainly download the AndroidAPS sources from Github for the build process. It's version-control system for tracking changes in computer files and coordinating work on those files especially for teams.<br>-> necessary for APK updates</td>
+ <td>git in our context here is the tool to mainly download the AAPS sources from Github for the build process. It's version-control system for tracking changes in computer files and coordinating work on those files especially for teams.<br>-> necessary for APK updates</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - update APK</a></td>
 </tr>
@@ -228,7 +228,7 @@
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
- <td>open source project to access and report CGM data. It's the central data hub for all your diabetes data. It is where AndroidAPS is storing the data. It's available e.g. for parents following their childs diabetes management or reporting of the historical data to get the actual state of the diabetes control (expected HbA1c, time in range) or search for patterns in the data via percentilr chart etc..</td>
+ <td>open source project to access and report CGM data. It's the central data hub for all your diabetes data. It is where AAPS is storing the data. It's available e.g. for parents following their childs diabetes management or reporting of the historical data to get the actual state of the diabetes control (expected HbA1c, time in range) or search for patterns in the data via percentilr chart etc..</td>
  <td>Nightscout Reporter</td>
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>
@@ -276,7 +276,7 @@
 </tr>
 <tr>
  <td><strong>PH</strong></td>
- <td>pump history - you access it in the treatments which are located on the 3 dot menu on the right side of AndroidAPS main screen</td>
+ <td>pump history - you access it in the treatments which are located on the 3 dot menu on the right side of AAPS main screen</td>
  <td>&nbsp;</td>
  <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
 </tr>
@@ -288,7 +288,7 @@
 </tr>
 <tr>
  <td><strong>Profilis</strong></td>
- <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>AndroidAPS v3 only supports local profiles but Nightscout profiles can be copied (synchronized) to AndroidAPS</td>
+ <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>AAPS v3 only supports local profiles but Nightscout profiles can be copied (synchronized) to AAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
 </tr>
@@ -312,7 +312,7 @@
 </tr>
 <tr>
  <td><strong>SAGE</strong></td>
- <td>sensor age - displayed on the homescreen of AndroidAPS and in Nightscout if information was entered in the actions tab / menu</td>
+ <td>sensor age - displayed on the homescreen of AAPS and in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
@@ -378,13 +378,13 @@
 </tr>
 <tr>
  <td><strong>Virtual pump</strong></td>
- <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
+ <td>option to try AAPS functions or for PWD using a pump model with no AAPS driver for looping</td>
  <td>Atviras Ciklas</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>Fonas</strong></td>
- <td>AndroidAPS background image</td>
+ <td>AAPS background image</td>
  <td></td>
  <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>
 </tr>

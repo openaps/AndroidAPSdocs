@@ -4,7 +4,7 @@ Sorun giderme bilgilerini viki'deki birçok sayfada bulabilirsiniz. Bu sayfa, so
 
 Faydalı ilave bilgilere de [SSS](../Getting-Started/FAQ.html) sayfasından ulaşabilirsiniz.
 
-## AndroidAPS uygulaması
+## AAPS app
 
 ### Yapım & güncelleme
 

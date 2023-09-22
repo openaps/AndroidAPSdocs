@@ -1,4 +1,4 @@
 # PocTech CT-100 kullanıcıları için
 
 - PocTech Uygulamasını Yükleyin
-- AndroidAPS Konfigürasyon ayarları'nda PocTech Uygulamasını seçin
+- Select PocTech App in ConfigBuilder (setting in AAPS)

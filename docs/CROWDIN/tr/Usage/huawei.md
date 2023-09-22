@@ -2,7 +2,7 @@
 
 Bazıları Android'e özel, bazıları Huawei'ye özgü olmak üzere farklı seçenekler vardır:
 
-* Pil optimizasyonlarını göz ardı eden uygulamalar listesine AndroidAPS ve xdrip+'ı ekleyin:
+* Add AAPS and xdrip+ to apps list which ignore battery optimisations:
   
   * Ayarlar / Uygulamalar / ayarlar / Özel erişim / Pil optimizasyonunu yoksay / "Tüm uygulamalar"ı seçin / Uygulamayı izin verilen olarak ayarla
     

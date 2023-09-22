@@ -23,7 +23,7 @@ To learn more about the details and reasons for these recommendations read the [
 -   При использовании xDrip+ в качестве приемника сначала удалите приложение Dexcom. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
 -   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 -   If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow instructions on [xDrip+ settings page](../Configuration/xdrip.md).
--   Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
+-   Select xDrip+ in ConfigBuilder (setting in AAPS).
 -   Adjust settings in xDrip+ according to [xDrip+ settings page](../Configuration/xdrip.md)
 -   If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
@@ -38,7 +38,7 @@ To learn more about the details and reasons for these recommendations read the [
 -   In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
 -   After short time BYODA should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
 
-### Настройки для AndroidAPS
+### Settings for AAPS
 
 -   Select 'Dexcom App (patched)' in config builder.
 -   If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
