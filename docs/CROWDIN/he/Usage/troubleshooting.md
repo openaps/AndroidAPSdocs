@@ -4,7 +4,7 @@
 
 Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.html).
 
-## אפליקציית AndroidAPS
+## AAPS app
 
 ### Building & updating
 
