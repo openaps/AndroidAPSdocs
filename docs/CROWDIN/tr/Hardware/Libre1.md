@@ -17,8 +17,8 @@ Halihazırda, Libre 1'i KŞ kaynağı olarak kullanıyorsanız, SMB algoritması
 -   Henüz kurmadıysanız, xDrip+'ı indirin ve [LimiTTEer](https://github.com/JoernL/LimiTTer) veya [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki) ile ilgili talimatları izleyin.
 -   xdrip'te Ayarlar > Yerel-Uygulama ayarlarına gidin ve > Verileri Yerel Olarak Yayınlayını AÇIK seçin.
 -   xDrip+'da Ayarlar > Uyg.lar-arası ayarlar > Tedaviyi Kabul Et'e gidin ve KAPALI'yı seçin.
--   Kalibre etmek için AndroidAPS'yi kullanabilmek istiyorsanız, xdrip'te Ayarlar > Uygulamalar Arası Uyumluluğu > Kalibrasyonları Kabul Et'e gidin ve  AÇIK'ı seçin. Ayarlar > Daha Az Ortak Ayarlar> Gelişmiş Kalibrasyon Ayarları'ndaki seçenekleri de gözden geçirmek isteyebilirsiniz.
--   Konfigürasyon ayarlarında (AndroidAPS'deki ayarda) xDrip+'ı seçin.
+-   If you want to be able to use AAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. Ayarlar > Daha Az Ortak Ayarlar> Gelişmiş Kalibrasyon Ayarları'ndaki seçenekleri de gözden geçirmek isteyebilirsiniz.
+-   Select xDrip+ in ConfigBuilder (setting in AAPS).
 -   Ekran görüntülü xDrip+ ayarları için [xDrip+ ayarlarına bakın](../Configuration/xdrip.md). Temel xDrip ayarları ve Freestyle Libre xDrip ayarları için bir bölüm mevcuttur.
 -   AAPS, telefon uçak modundayken KŞ değerlerini almıyorsa, [xDrip+ ayarlar sayfasında](../Configuration/xdrip.md) açıklandığı gibi 'Alıcıyı tanımla'yı kullanın.
 
@@ -26,4 +26,4 @@ Halihazırda, Libre 1'i KŞ kaynağı olarak kullanıyorsanız, SMB algoritması
 
 -   Glimp sürüm 4.15.57 veya daha yenisine ihtiyacınız olacak. Daha eski sürümler desteklenmez.
 -   Henüz kurulmadıysa, Glimp'i indirin ve [Nightscout](https://nightscout.github.io/uploader/setup/#glimp) üzerindeki talimatları izleyin.
--   Konfigürasyon ayarlarında Glimp'i seçin (AndroidAPS'de).
+-   Select Glimp in ConfigBuilder (setting in AAPS).
