@@ -1,11 +1,11 @@
 ## Development branch (voor ontwikkelaars)
 
-<font color="#FF0000"><strong>Belangrijk:</strong></font>
-Dev branch is alleen bedoeld voor programmeurs/testers die werken aan de verdere ontwikkeling van de AndroidAPS software. Het hoort op een aparte telefoon te worden gebruikt om nieuwe softwareversies uit te testen <font color="#FF0000"><strong>niet voor het daadwerkelijke loopen!</strong></font>
+<font color="#FF0000"><strong>Attention:</strong></font>
+Dev branch is for the further development of AAPS only. Het hoort op een aparte telefoon te worden gebruikt om nieuwe softwareversies uit te testen <font color="#FF0000"><strong>niet voor het daadwerkelijke loopen!</strong></font>
 
-De meest stabiele versie van AndroidAPS is die in de [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). Het wordt aangeraden om op de Master branch te blijven voor de loop die je in gebruik hebt.
+The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). Het wordt aangeraden om op de Master branch te blijven voor de loop die je in gebruik hebt.
 
-De dev-versie van AndroidAPS is alleen voor ontwikkelaars en testers die kunnen omgaan met stacktraces, kunnen zoeken in logbestanden en zo nodig de debugger op te starten om foutrapporten te produceren die nuttig zijn voor de ontwikkelaars (kortom: mensen die weten wat ze doen zonder hulp te krijgen!). Daarom zijn veel functies die nog niet voltooid zijn, uitgeschakeld in de app. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in directory /AAPS/extra . Het inschakelen van de ontwikkelaarsmodus kan de loop volledig onbruikbaar maken.
+The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Daarom zijn veel functies die nog niet voltooid zijn, uitgeschakeld in de app. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in directory /AAPS/extra . Het inschakelen van de ontwikkelaarsmodus kan de loop volledig onbruikbaar maken.
 
 In de Dev branch kun je zien welke functies worden getest, en je kunt er helpen met bugs ontdekken en feedback geven over hoe nieuwe functies in de praktijk werken. Vaak zullen mensen de Dev-branch testen met een oude telefoon en pomp totdat ze er vertrouwen in hebben dat die versie stabiel is - gebruik ervan is op jouw eigen risico. Bij het testen van nieuwe functies, vergeet niet dat je iets aan het testen bent dat nog middenin het ontwikkelingsproces is. Doe dit op je eigen risico & met de nodige voorzichtigheid om jezelf veilig te houden.
 
