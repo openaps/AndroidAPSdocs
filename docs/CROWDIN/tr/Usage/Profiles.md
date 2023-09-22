@@ -13,7 +13,7 @@ Dahili olarak AAPS, profilin başlangıç tarihi ve süresi ile anlık görünt�
 
 Profilinizi "yerel profil" sekmesinde düzenlediyseniz, profili orada etkinleştirebilirsiniz, bu da örtülü bir profil geçişi yapar.
 
-Profil değiştirme yapmak için, AndroidAPS'nin ana ekranında profilinizin adına (aşağıdaki resimde "03/11' e ayarlanmış") uzun basın.
+To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below) on the homescreen of AAPS.
 
 ![Profil değişimi yapmak](../images/ProfileSwitch_HowTo.png)
 
@@ -88,5 +88,5 @@ Alternatif olarak, profil değişimini doğrudan mLab'den silebilirsiniz:
 
 ### 'İES 3 saat çok kısa'
 
-* Profilinizdeki insülin etki süreniz, AndroidAPS'in doğru olacağına inanmadığı bir değerde listeleniyorsa, bu hata mesajı görünecektir. 
+* Error message will appear if your duration of insulin action in your profile is listed at a value that AAPS doesn't believe will be accurate.
 * [Doğru İES'i seçin](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and hakkında bilgi edinin -why-it-matters/) ve bunu profilinizde düzenleyin, ardından devam etmek için bir [Profil Değiştirme](../Usage/Profiles) yapın.
