@@ -4,7 +4,7 @@
 
 Si les glycémies sont instables/bruitées, AAPS peut mal doser la quantité d'insuline, entraînant des hyper ou hypo. Pour cette raison, il est important de désactiver la boucle jusqu'à ce que le problème soit résolu. Selon votre MGC, de tels problèmes peuvent être dus à la configuration de la MGC ou à des problèmes de capteur ou de site. Vous devrez peut-être remplacer votre capteur MGC pour résoudre ce problème.
 
-Certains systèmes de MGC ont des algorithmes internes pour détecter le niveau de bruit dans les lectures et AAPS peut utiliser cette information pour éviter de donner des SMB si les données de glycémie sont trop peu fiables. Cependant, certaines MGC ne transmettent pas ces données et, pour ces sources de glycémie, 'Activer le SMB toujours' et 'Activer le SMB après les glucides' sont désactivés pour des raisons de sécurité.
+Some CGM systems have internal algorithms to detect the noise level in the readings and AAPS can use this information to avoid giving SMBs if the BG data is too unreliable. Cependant, certaines MGC ne transmettent pas ces données et, pour ces sources de glycémie, 'Activer le SMB toujours' et 'Activer le SMB après les glucides' sont désactivés pour des raisons de sécurité.
 
 ## Capteurs Dexcom
 
