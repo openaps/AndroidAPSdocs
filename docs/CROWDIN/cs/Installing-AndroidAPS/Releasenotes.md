@@ -47,7 +47,7 @@ In order to allow users with older Android to use older version of AAPS new vers
 
 ## WearOS version
 
-- AAPS 3.2 requires at least WearOS API level 25 (Android 7.1)
+- AAPS 3.2 requires at least WearOS API level 26 (Android 8)
 
 ## Version 3.2.0
 
