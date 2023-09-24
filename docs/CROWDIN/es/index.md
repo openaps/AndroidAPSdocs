@@ -2,9 +2,9 @@
 
 ![image](./images/basic-outline-of-AAPS.png)
 
-AAPS es una aplicación de código abierto para personas que viven con diabetes, dependientes de insulina y que actúa como un sistema de páncreas artificial (APS) en teléfonos inteligentes Android de Google. It uses an openAPS software algorithm which aims to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need a supported and FDA/CE approved insulin pump, and a continuous glucose meter.
+AAPS es una aplicación de código abierto para personas que viven con diabetes, dependientes de insulina y que actúa como un sistema de páncreas artificial (APS) en teléfonos inteligentes Android de Google. Utiliza un algoritmo de software OpenAPS que tiene como objetivo hacer lo que hace un páncreas en funcionamiento: mantener los niveles de azúcar en sangre dentro de límites saludables mediante la administración automatizada de insulina (AID). Además, necesitas una bomba de insulina compatible y aprobada por la FDA/CE, así como un medidor continuo de glucosa.
 
-Interested? Read more about AAPS in the [introduction](introduction.md).
+¿Estás interesado? Lee más sobre AAPS en la [introducción](introduction.md).
 
 ```{warning}
 **IMPORTANT SAFETY NOTICE**
@@ -62,24 +62,24 @@ Cambiar idioma <./changelanguage.md>
 ```
 
 ```{toctree}
-:caption: Home
+:caption: Inicio
 
-Introduction <./introduction.md>
+Introducción <./introduction.md>
 
 ```
 
 ```{toctree}
-:caption: Getting started
+:caption: Empezando
 
-Preparing <preparing.md>
+Preparación <preparing.md>
 
-Safety first <./Getting-Started/Safety-first.md>
+Seguridad primero <./Getting-Started/Safety-first.md>
 
-What is a closed loop system <./Getting-Started/ClosedLoop.md>
+¿Que es un sistema de lazo cerrado? <./Getting-Started/ClosedLoop.md>
 
-What is a closed loop system with AAPS <./Getting-Started/WhatisAndroidAPS.md>
+¿Que es un sistema de lazo cerrado con AAPS? <./Getting-Started/WhatisAndroidAPS.md>
 
-Docs updates & changes <./Getting-Started/WikiUpdate.md>
+Actualizaciones y cambios en la documentación <./Getting-Started/WikiUpdate.md>
 
 ```
 
@@ -252,15 +252,15 @@ Para profesionales de la salud <./Resources/clinician-guide-to-AndroidAPS.md>
 ```
 
 ```{toctree}
-:caption: How to help
+:caption: Cómo ayudar
 
-How to help <./Getting-Started/How-can-I-help.md>
+Cómo aydudar <./Getting-Started/How-can-I-help.md>
 
-How to translate the app and docs <./translations.md>
+Cómo traducir la aplicación y la documentación <./translations.md>
 
-How to edit the docs <./make-a-PR.md>
+Cómo editar la documentación <./make-a-PR.md>
 
-State of translations <./Administration/stateTranslations.md>
+Estado de las traducciones <./Administration/stateTranslations.md>
 
 ```
 
