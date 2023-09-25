@@ -4,6 +4,11 @@
 
 Karbonhidratlar bir yemeğin veya düzeltmenin bir parçası olarak girildiğinde, AAPS bunları aktif karbonhidratlara (AKRB) ekler. AAPS, KŞ değerlerinde gözlemlenen sapmalara dayalı olarak karbonhidratları emer (kaldırır). Emilim oranı, karbonhidrat duyarlılık faktörüne bağlıdır. Bu bir profil değeri değildir, ancak İDF/Kİ olarak hesaplanır ve 1 g karbonhidratın KŞ'nizi kaç mg/dl yükselteceğini gösterir.
 
+The formula is: `absorbed_carbs = deviation * ic / isf` It means:
+* increasing ic will increase carbs absorbed every 5 minutes thus shorten total time of absorption
+* increasing isf will decrease carbs absorbed every 5 minutes thus prolong total time of absorption
+* changing profile % increase/decrease both values thus has no impact on carbs absorption time
+
 Örneğin, profil İDF'niz 100 ve Kİ'niz 5 ise, KDF'niz 20 olacaktır. Kan şekerinizin yükseldiği her 20 mg/dl için, 1 g karbonhidrat AAPS tarafından emilir. Pozitif AKRB de bu hesaplamayı etkiler. Dolayısıyla, AAPS, KŞ'nizin AİNS nedeniyle 20 mg/dl düşmesini beklerse ve bunun yerine düz kalırsa, 1 g karbonhidrat emer.
 
 Karbonhidratlar, hangi hassasiyet algoritmasının kullanıldığına bağlı olarak aşağıda açıklanan yöntemlerle de emilecektir.
@@ -27,6 +32,7 @@ emilim, belirtilen süreden sonra `AKRB == 0` olarak hesaplanır
 KŞ sapmalarından hesaplanan değer yerine minimum karbonhidrat emilimi (min_5m_carbimpact) kullanılırsa, AKRB grafiğinde turuncu bir nokta görünür.
 
 (COB-calculation-detection-of-wrong-cob-values)=
+
 ## Yanlış AKRB değerlerinin tespiti
 
 AAPS, bir önceki öğünden AKRB ile bolus yapmak üzereyseniz, algoritma mevcut AKRB hesaplamasının yanlış olabileceğini düşünür ve sizi uyarır. Bu durumda bolus sihirbazından sonraki onay ekranında size ek bir ipucu verecektir.
