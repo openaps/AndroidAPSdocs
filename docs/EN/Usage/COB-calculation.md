@@ -27,6 +27,14 @@ absorption is calculated to have `COB == 0` after specified time
 If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from BG deviations, an orange dot appears on COB graph.
 
 (COB-calculation-detection-of-wrong-cob-values)=
+## How is COB calculated
+
+AAPS calculates absorbed carbs from deviations and substracts it from entered carbs. The formula is: `absorbed_carbs = deviation * ic / isf`
+It means:
+* increasing ic will increase carbs absorbed every 5 minutes thus shorten total time of absorption 
+* increasing isf will decrease carbs absorbed every 5 minutes thus prolong total time of absorption
+* changing profile % increase/decrease both values thus has no impact on carbs absorption time
+
 ## Detection of wrong COB values
 
 AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. In this case it will give you an additional hint on the confirmation screen after usage of bolus wizard.
