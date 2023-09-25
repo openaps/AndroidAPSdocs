@@ -4,6 +4,11 @@
 
 Cuando se introducen carbohidratos como parte de una comida o de una corrección, AAPS los añade a los carbohidratos actuales (COB). A continuación, AAPS absorbe (elimina) carbohidratos en función de las desviaciones observadas con respecto a los valores de glucosa (BG). La tasa de absorción depende del factor de sensibilidad a los carbohidratos. No se trata de un valor configurado en el perfil, sino que se calcula como ISF/IC y es la cantidad de mg/dl que 1g de carbohidratos subirá tu glucemia.
 
+The formula is: `absorbed_carbs = deviation * ic / isf` It means:
+* increasing ic will increase carbs absorbed every 5 minutes thus shorten total time of absorption
+* increasing isf will decrease carbs absorbed every 5 minutes thus prolong total time of absorption
+* changing profile % increase/decrease both values thus has no impact on carbs absorption time
+
 Por ejemplo, si tu ISF del perfil es 100 y tu ratio (IC) es 5, tu CSF sería 20. Por cada 20 mg/dl que sube tu glucosa (BG), se absorben por AAPS 1g de carbohidratos. La insulina activa positiva (IOB), también afecta a este cálculo. Por lo tanto, si la AAPS esperaba que tu glucosa baje 20 mg/dl debido a la insulina activa (IOB) y, en cambio, se mantiene estable, también absorberá 1g de carbohidratos.
 
 Los carbohidratos también se absorven mediante los métodos descritos a continuación, en función del algoritmo de sensibilidad que se utilice.
@@ -27,6 +32,7 @@ La absorción se calcula para tener `COB == 0` después del tiempo especificado
 Si se utiliza la absorción mínima de carbohidratos (min_5m_carbimpact) en lugar del valor calculado a partir de las desviaciones de BG, aparece un punto naranja en el gráfico COB.
 
 (COB-calculation-detection-of-wrong-cob-values)=
+
 ## Detección de valores erróneos de carbohidratos (COB)
 
 AAPS te avisa si estás a punto de poner un bolo con carbohidratos (COB) de una comida anterior y el algoritmo cree que el cálculo actual de carbohidratos, puede ser erróneo. En este caso, te dará mostrará una sugerencia en la pantalla de confirmación, después de utilizar el asistente de bolo.
