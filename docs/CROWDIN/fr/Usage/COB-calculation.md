@@ -4,6 +4,11 @@
 
 When carbs are entered as part of a meal or correction, AAPS adds them to the current carbs on board (COB). AAPS then absorbs (removes) carbs based on observed deviations to BG values. The rate of absorption depends on the carb sensitivity factor. This is not a profile value but is calculated as ISF/IC and is how many mg/dl 1g of carbs will raise your BG.
 
+The formula is: `absorbed_carbs = deviation * ic / isf` It means:
+* increasing ic will increase carbs absorbed every 5 minutes thus shorten total time of absorption
+* increasing isf will decrease carbs absorbed every 5 minutes thus prolong total time of absorption
+* changing profile % increase/decrease both values thus has no impact on carbs absorption time
+
 For example, if your profile ISF is 100 and your IC is 5, your CSF would be 20. For every 20 mg/dl your BG goes up, 1g of carbs are absorbed by AAPS. Positive IOB also effects this calculation. So, if AAPS expected your BG to go down by 20 mg/dl because of IOB and it instead stayed flat, it would also absorb 1g of carbs.
 
 Carbs will also be absorbed via the methods described below based on what sensitivity algorithm is used.
@@ -27,6 +32,7 @@ l'absorption est calculée pour avoir `GA == 0` après la durée spécifiée
 Si l'absorption minimale de glucides (min_5m_carbimpact) est utilisée à la place de la valeur calculée à partir des écarts de GLY, un point orange apparaît sur le graphique GA.
 
 (COB-calculation-detection-of-wrong-cob-values)=
+
 ## Détection de GA erronés
 
 AAPS vous avertit si vous êtes sur le point de faire un bolus avec des GA d'un précédent repas et que l'algorithme pense que le calcul actuel des GA pourrait être erroné. Dans ce cas, il vous donnera une indication supplémentaire sur l'écran de confirmation après l'utilisation de l'assistant bolus.
