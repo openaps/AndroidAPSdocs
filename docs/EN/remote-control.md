@@ -394,7 +394,29 @@ If you have a caregiver/parent Android phone you can directly download and insta
 
 There are 2 versions of the app you can [download](https://github.com/nightscout/AndroidAPS/releases/), **NSClient** & **NSClient2**. The only difference between the two versions is the app name. This allows you to install the **NSClient** app twice on the same phone, to follow two different people or Nightscout accounts at the same time. 
 
-Features include:
+
+![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/160a05d8-9e9f-4ff8-969c-86e860d133d0)
+
+
+To download NSClient, click on app-nsclient-release-3.1.0.3.apk
+
+Then go to  _downloads_ on your computer. On Windows, -downloads_ will show the right hand ribbon:
+
+![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/ef18062a-f42a-420d-8344-0fd46bebd86a)
+
+
+Once downloaded, click _show in folder_
+
+![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/24f3b198-a11f-4aeb-b0b9-d8215df5d7cc)
+
+
+The apk can now be either:
+
+Transferred by a USB cable onto the follower phone; or
+Dragged into G drive folder, and then added onto the follower phone by clicking on app-nsclient-release-3.1.0.3.apk
+
+
+### Features of **NSClient** include:
 
 
 ![Sara's NSClient table](https://github.com/openaps/AndroidAPSdocs/assets/94044064/7d7013b9-1237-4d30-9b14-4ca71e90b3ba)
@@ -450,7 +472,8 @@ After pressing “save” the app will return to your main Nightscout screen whi
 
 Looking in more detail at the top left menu of the Nightscout app: 
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/a3da721d-dce8-4f0c-824c-11e7a9299387)
+
+![nightscout top bar](https://github.com/openaps/AndroidAPSdocs/assets/94044064/0a75b191-e350-41c7-a447-8f923f966b72)
 
 
 
@@ -508,5 +531,5 @@ Although this could potentially be useful for deleting announced (but not boluse
 
 
 ## **Smartwatches** 
-This section is currently being updated, the scheduled release is the weekend of 30th Sept/1st Oct 2023....watch this space!
+This section is currently being updated, the scheduled release is the weekend of 7th Oct 2023....watch this space!
 The existing section on smartwatches can be found in [Smartwatches](Hardware/Smartwatch.md) 
