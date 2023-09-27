@@ -1,35 +1,35 @@
 # DanaRS and Dana-i Pump
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards or the newer Dana-i. Επισκεφθείτε την  DanaR Αντλία Ινσουλίνης </ 0> αν έχετε την DanaR αντλία.</em></p> 
+*Αυτές οι οδηγίες αφορούν στη διαμόρφωση της εφαρμογής και της αντλίας σας εάν έχετε μια αντλία DanaRS από το 2017 και μετά. Επισκεφθείτε την  DanaR Αντλία Ινσουλίνης </ 0> αν έχετε την DanaR αντλία.</em></p> 
 
-**New Dana RS firmware v3 can be used from AAPS version 2.7 onwards.**
+**Το νέο υλικολογισμικό της Dana RS v3 μπορεί να χρησιμοποιηθεί από την έκδοση AAPS 2.7 και μετά.**
 
-**New Dana-i can be used from AAPS version 3.0 onwards.**
+**Το νέο υλικολογισμικό της Dana RS v3 μπορεί να χρησιμοποιηθεί από την έκδοση AAPS 3.0 και μετά.**
 
-* In DanaRS/i pump "BASAL A" is used by the app. Existing data gets overwritten.
+* Στην αντλία DanaRS χρησιμοποιείται η εφαρμογή "βασικός ρυθμός Α". Τα υπάρχοντα δεδομένα αντικαθίστανται.
 
 (DanaRS-Insulin-Pump-pairing-pump)=
 
-## Pairing pump
+## Σύζευξη αντλίας
 
-* On AAPS homescreen click hamburger menu on the top left corner and go to Config Builder.
-* In pump section select 'Dana-i/RS'.
-* Click on gear wheel to get directly to the pump settings or return to homescreen.
+* Στην αρχική οθόνη του AAPS κάντε κλικ στο μενού χάμπουργκερ στην επάνω αριστερή γωνία και μεταβείτε στην διαμόρφωση παραμέτρων (Config Builder).
+* Στην ενότητα της αντλίας επιλέξτε 'Dana-i/RS'.
+* Κάντε κλικ στον γρανάζι για να μεταβείτε απευθείας στις ρυθμίσεις της αντλίας ή να επιστρέψετε στην αρχική οθόνη.
     
-    ![AAPS config builder Dana-i/RS](../images/DanaRS_i_ConfigB.png)
+    ![Επιλογές διαμόρφωσης του AAPS για την αντλία Dana-i/RS](../images/DanaRS_i_ConfigB.png)
 
-* Go to 'DANA-i/RS' tab.
+* Μεταβείτε στην καρτέλα 'DANA-i/RS'.
 
-* Select preferences menu by tapping the 3 dots in the top right. 
-* Select 'Dana-i/RS Preferences'.
-* Click on "Selected pump".
-* In the pairing window click on the entry for your pump.
+* Επιλέξτε το μενού προτιμήσεων, πατώντας τις 3 τελείες πάνω δεξιά. 
+* Επιλέξτε 'Dana-i/RS Προτιμήσεις'.
+* Κάντε κλικ στο "Επιλεγμένη αντλία".
+* Στο παράθυρο σύζευξης κάντε κλικ στην καταχώρηση για την αντλία σας.
     
     ![Το AAPS κάνει σύζευξη με την αντλία Dana-i/RS](../images/DanaRS_i_Pairing.png)
 
-* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+* Πρέπει να επιβεβαιώσετε την σύζευξη στην αντλία! </b> Αυτός είναι ο τρόπος με τον οποίο γίνονται και άλλες συνδέσεις bluetooth (δηλαδή smartphone και ηχείο αυτοκινήτου).
     
-    ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+    ![Επιβεβαίωση σύζευξης Dana RS](../images/DanaRS_Pairing.png)
 
 * Follow the pairing process based on the type and firmware of your pump:
     
@@ -129,4 +129,4 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 ## Ταξιδεύοντας σε διαφορετικές ζώνες ώρας με την Dana Rs
 
-For information on traveling across time zones see section [Timezone traveling with pumps](Timezone-traveling-danarv2-danars).
+Για πληροφορίες σχετικά με τη μετακίνηση σε ζώνες ώρας, ανατρέξτε στην ενότητα [Αλλαγή ζώνης ώρας όταν ταξιδεύεις με αντλία ](Timezone-traveling-danarv2-danars).
