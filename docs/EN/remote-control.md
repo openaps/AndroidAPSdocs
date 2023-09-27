@@ -1,16 +1,14 @@
 # Remote control of AAPS
 There are four highly effective tools for remotely managing **AAPS**:
  
-1) [SMS commands](https://androidaps.readthedocs.io/en/rework-project/remote-control.html#sms-commands) (follower phone can be either Android or iOS), 
-2) [NS Client](https://androidaps.readthedocs.io/en/rework-project/remote-control.html#nsclient) (follower phone is Android)
-3) [Nightscout](https://androidaps.readthedocs.io/en/rework-project/remote-control.html#nightscout) (Android, iOS or other computer/device).  
-4) [Smartwatches](https://androidaps.readthedocs.io/en/rework-project/remote-control.html#smartwatches) (Android) 
+1) [SMS commands](sms-commands) (follower phone can be either Android or iOS), 
+2) [NS Client](nsclient) (follower phone is Android)
+3) [Nightscout](nightscout) (Android, iOS or other computer/device).  
+4) [Smartwatches](smartwatches) (Android) 
 
 The first three are mostly appropriate for carers/parents, but smartwatches are very useful for carers/parents **and** for adults with diabetes themselves. 
 
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/36a73018-7856-4ef8-81c5-f5b1515e8eaa)
-
+![image](images/remote-control-01.png)
 
 #### Considerations when setting up remote control of **AAPS** for a child
 
@@ -21,6 +19,7 @@ The first three are mostly appropriate for carers/parents, but smartwatches are 
 5.	Examples for school care plans for children of different ages can be found in the [“files section”](https://www.facebook.com/groups/AndroidAPSUsers/files/) of the **AAPS** Facebook page. 
 6.	What is your emergency plan for when remote control does not work (_i.e._ network problems or lost bluetooth connection)?  Always consider what will happen with **AAPS** if you suddenly can’t send a new command. **AAPS** overwrites the pump basal, ISF and ICR with the current profile values. Only use temporary profile switches (_i.e._ with a set time duration) if switching to a stronger insulin profile, in case your remote connection is disrupted. Then the pump will revert to the original profile when the time expires.
 
+(sms-commands)=
 ## 1) SMS Commands
 
 You can control **AAPS** remotely via text (SMS) message through a feature known as **SMS Commands**. SMS commands can be sent to **AAPS**  by _any_ type of phone (iPhone/Android). 
@@ -36,39 +35,31 @@ You can control **AAPS** remotely via text (SMS) message through a feature known
 
 ### **SMS command safety**
 If you enable **SMS Communicator** in **AAPS**, consider that the phone which is set up to give remote commands could be stolen, and/or used by someone else. Always lock your phone handset with at least a PIN. A strong password and/ or biometric lock are highly recommended, and ensure this is different from your APK Master password (the password which is required to change **AAPS** settings) .
-A second phone number must be enabled for SMS commands to work, even if you only have one primary caregiver/follower. You can then use the second number to temporarily disable SMS communicator (with the command **“SMS stop”**) if your main caregiver/parent phone is compromised. Versions of **AAPS** 2.7 and newer also use an [Authenticator app](https://androidaps.readthedocs.io/en/rework-project/remote-control.html#authentication-or-not)). 
+A second phone number must be enabled for SMS commands to work, even if you only have one primary caregiver/follower. You can then use the second number to temporarily disable SMS communicator (with the command **“SMS stop”**) if your main caregiver/parent phone is compromised. Versions of **AAPS** 2.7 and newer also use an [Authenticator app](authentication-or-not)). 
 
 ### Different types of SMS commands
 The **SMS Commands Table** below shows all the possible SMS commands. _Example values_ are given, to aid understanding. The commands have the same range of possible values (targets, percent profile etc.) which are allowable in the AAPS app itself. The commands below have been listed by how commonly used they are likely to be, the first two tables should have most of the SMS commands you need with full looping. 
 
 ### SMS commands tables
 
+![image](images/remote-control-02.png)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/46a1c9f1-1798-419d-8b45-6de3f8696348)
+![image](images/remote-control-03.png)
 
- 
+![image](images/remote-control-04.png)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/14fff8b8-d9cd-4371-8531-bfb8aea6affd)
+![image](images/remote-control-05.png)
 
- 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/6c261591-dda7-410a-b665-a08a049c55a3)
-
- 
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/52c84c90-2770-49a2-99f3-3c23dd2a7bef)
-
-
+(authentication-or-not)=
 ### Authentication or not?
 
 You may notice from the table above that some SMS commands give an immediate response, and some SMS commands require **authenticating** with a security code from an additional app and a PIN (see below (link for more detail). A simple enquiry like “**bg**” (which requests an update on current glucose) is quick to type, doesn’t need authenticating, and returns the **AAPS** status information shown below: 
   
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/cbece9b9-9363-4a4d-bf58-422bcea6bb2a)
-
+![image](images/remote-control-06.png)
 
 Commands which need more security require a code to be entered, for example:
 
-
-![SMS authenticated for markdown-smaller](https://github.com/openaps/AndroidAPSdocs/assets/94044064/bc77d04a-650d-4baa-a05c-c1aa8662de72)
+![SMS authenticated for markdown-smaller](images/remote-control-07.png)
 
 ### **How to set up SMS commands**
 
@@ -84,10 +75,7 @@ The overall process is as follows:
 
 **5)	Testing SMS commands works (caregiver and AAPS phone)**
 
-   
 ### **Let's get started!** 
-
-
 
 1) **Download an authenticator**: On the caregiver phone, download (from the App store or Google play) and install one authenticator of your choice from the list below:
   
@@ -101,56 +89,32 @@ The overall process is as follows:
 
 These Authenticator apps produce a time-limited, one-time 6-digit password, similar to mobile banking or shopping. You can use an alternative Authenticator app, as long as it supports RFC 6238 TOTP tokens. The Microsoft Authenticator does not work.
 
-
 2) **Check phone settings:** In the **AAPS** phone settings go to Apps > AndroidAPS > Permissions  > SMS  > Allow SMS
  
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/7c0fcf07-66bf-4093-adc2-2673df5cd4a2)
-
-
-
+![image](images/remote-control-08.png)
  
 3) **Date and time synching:** In both the **AAPS** phone and the caregiver phone, check the date and time are synched. Exactly how you do this depends on your specific handsets, you may need to try out different settings.
-   
-   
+
 Example (for Samsung S23 handset): Settings – general management – date and time- automatic date and time 
 
-
-
 Some options may be greyed out, due to needing admin via a family account if the phone has been set up as a child account. This date and time setting is called “set automatically” on a caregiver/parent iPhone. If you are not sure if you have synched the handsets, don’t worry, you can set up the SMS commands and troubleshoot afterwards if it seems to be causing problems (ask for help if needed). 
- 
-
-
-
-
-
  
 4) **AAPS settings:** 
 
 #### i) Now that the phone settings have been checked, in the **AAPS** app itself, use the left hand hamburger menu to navigate to Config Builder: 
 
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/c4b3f896-9762-4ada-b270-f2ae2b63eb9b)
+![image](images/remote-control-09.png)
 
 #### ii) Enable “SMS communicator” by checking the boxes, then click the “cog” to get to the SMS communicator preferences screen:
 
-
- ![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/d8fd556d-6245-45a9-923a-78ea508539af)
-
-
-
-
-
-
+![image](images/remote-control-10.png)
  
 _Note - as an alternative route to Config Builder, you can also use the new “SMS Communicator tab” at the top of the AAPS screen, then right click on the custom right hand hamburger menu for that page, to get to the SMS communicator preferences screen._ 
 
-
 #### iii) On the preferences screen enable “allow remote commands via SMS”: 
 
+![image](images/remote-control-11.png)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/87386eac-252c-4dde-bcd2-203f2b5b1356)
-
- 
 #### iv) Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
 
 UK phone number: +447976304596
@@ -166,13 +130,8 @@ Note that the “+” in front of the number may or may not be required based on
 If you have more than one phone number to add, separate them by semicolons, with NO space between numbers (this is critical!). Select “OK”:  
 
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/7321685b-28d5-4de5-b868-1ad0c46e9088)
+![image](images/remote-control-12.png)
 
-
-
-
-
- 
 #### v) Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent. 
 
 PIN requirements are:
@@ -183,20 +142,8 @@ PIN requirements are:
 
 •not sequential numbers (_i.e._ 1234) 
 
+![image](images/remote-control-13.png)
 
-
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/651d706e-6b9a-4af2-9e9f-0dd6284dfc9b)
-
-
-
-
-
-
-
-
-
- 
 #### vi) On the preferences screen select “Authenticator setup”
 
 ●	Follow the step-by-step instructions on the screen.
@@ -218,12 +165,7 @@ Code to check: 4570512401
 If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. The process is now complete, there is no “OK” button you need to press after entering the code:
 
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/241a6aab-15f4-4579-a97f-b67773b0b192)
-
-
-
-
-
+![image](images/remote-control-14.png)
 
 You should now be set up with SMS commands.
 
@@ -231,20 +173,10 @@ You should now be set up with SMS commands.
 
 1)	To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the AAPS phone. You should get a response similar to that shown here:
 
+![image](images/remote-control-15.png)
 
-
- ![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/49c311fb-d1c8-4622-a4f6-345cedc896fe)
-
-
-
-
-
-
-
- 
 2)	Now try an SMS command that requires the authenticator. To do this, send a text from the caregiver’s phone with the required command to the**AAPS** phone (_e.g._ “target hypo”). The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by an additional secret **PIN** known only to caregivers/followers (a string of ten digits in total, assuming your PIN is only 4 digits).
 
-   
 This example is shown below, with the SMS command “target hypo” to set a hypo temp target:
 
 ●	In this example, your PIN is 1289
@@ -253,18 +185,11 @@ This example is shown below, with the SMS command “target hypo” to set a hyp
 
 ●	When prompted, text 2741271289
 
-
-
 Commands must be sent in English. The response should be in your local language.
 When you try sending an SMS command for the first time, try it in the presence of the AAPS phone, to see how it works: 
 
+![image](images/remote-control-16.png)
 
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/652affff-ab61-499d-ad0d-d5cd423e6000)
-
-
-
- 
 The caregiver’s phone will receive a SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully. There are several possible reasons the command may not be successful:
 
 ●	SMS commands setup isn’t complete/correct
@@ -281,23 +206,10 @@ The caregiver’s phone will receive a SMS in reply from **AAPS** to confirm if 
 
 If your command is successful, you will receive a reply to confirm this. If there is a problem you will receive an error message.
 
-
-
 Common errors are shown in the examples below: 
 
+![image](images/remote-control-17.png)
 
-
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/8794f74a-a17b-41cf-a3e9-636485c0395b)
-
-
-
-
-
-
-
-
-  
 ### **Additional safety notes on SMS commands**
 
 The default minimum time delay between bolus commands is 15 minutes. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
@@ -310,7 +222,7 @@ Remote bolusing of insulin can _only_ be done via **SMS Commands**, it cannot be
 
 1)	Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to using the “syringe” icon in **AAPS**. 
 2)	Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to using the “carbs” tab in **AAPS**.
-   
+
 **The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can use a combination of Nightscout or NSClient with SMS commands. Carbs can be announced through Nightscout without any authentication (see instructions sub section below) , and are therefore quicker than SMS commands. 
 
 ### SMS commands troubleshooting and FAQ
@@ -351,13 +263,7 @@ Because of this, you may want an alternative way to communicate directly with yo
 There was a report of SMS commands stopping after an update on a Samsung Galaxy S10 phone. This was solved by disabling ‘send as chat message’.
 
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/26567167-4816-4e46-ab47-9e12d4c05567)
-
-
-
-
-
- 
+![image](images/remote-control-18.png)
 
 #### **Q. How can I fix issues with the Android Messages App?**
 
@@ -371,122 +277,80 @@ If you are having issues sending or receiving SMS commands with the Android Mess
 
 ●	Activate “Only send SMS and MMS messages”
 
-
+(nsclient)=
 ## 2) **NSClient**
 
 If you have a caregiver/parent Android phone you can directly download and install the [**NSClient**](https://github.com/nightscout/AndroidAPS/releases/) app. **NSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver tabs that will remotely action commands in **AAPS**: 
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/b0e28614-db94-4bab-8b4c-58ab96fd65a3)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](images/remote-control-19.png)
 
 There are 2 versions of the app you can [download](https://github.com/nightscout/AndroidAPS/releases/), **NSClient** & **NSClient2**. The only difference between the two versions is the app name. This allows you to install the **NSClient** app twice on the same phone, to follow two different people or Nightscout accounts at the same time. 
 
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/160a05d8-9e9f-4ff8-969c-86e860d133d0)
-
+![image](images/remote-control-20.png)
 
 To download NSClient, click on app-nsclient-release-3.1.0.3.apk
 
 Then go to  _downloads_ on your computer. On Windows, -downloads_ will show the right hand ribbon:
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/ef18062a-f42a-420d-8344-0fd46bebd86a)
-
+![image](images/remote-control-21.png)
 
 Once downloaded, click _show in folder_
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/24f3b198-a11f-4aeb-b0b9-d8215df5d7cc)
-
+![image](images/remote-control-22.png)
 
 The apk can now be either:
 
 Transferred by a USB cable onto the follower phone; or
 Dragged into G drive folder, and then added onto the follower phone by clicking on app-nsclient-release-3.1.0.3.apk
 
-
 ### Features of **NSClient** include:
 
-
-![Sara's NSClient table](https://github.com/openaps/AndroidAPSdocs/assets/94044064/7d7013b9-1237-4d30-9b14-4ca71e90b3ba)
-
+![Sara's NSClient table](images/remote-control-23.png)
 
 **NSClient** allows the caregiver to make many of the adjustments that are allowed directly in **AAPS** (excluding insulin boluses) remotely, via the mobile or internet network. The main benefits of **NSClient** are the speed and ease with which caregivers/parents can use it to remotely control **APPS**. NSClient _can_ be much faster than entering SMS Commands, if delivering a command which would require authentication. Commands entered on **NSClient** are uploaded onto Nightscout.
 
 Remote control through **NSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc) see [release notes for Version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) for further details.
 
-
 ### NS Client with smartwatch options
 
-A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **NSClient** is installed on the parents phone, the [**NSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. This will show current BG, loop status and allow carb entry, temp targets and profile changes. It will NOT allow bolusing from the WearOS app. You can read more about Smartwatches [here](https://androidaps.readthedocs.io/en/rework-project/remote-control.html#smartwatches).
+A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **NSClient** is installed on the parents phone, the [**NSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. This will show current BG, loop status and allow carb entry, temp targets and profile changes. It will NOT allow bolusing from the WearOS app. You can read more about Smartwatches [here](smartwatches).
 
+(nightscout)=
 ## 3) Nightscout 
 
-As well as Nightscout being a server in “the Cloud”, there is also a dedicated **Nightscout** app which can be downloaded directly from the App Store on your iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**NSClient**](https://androidaps.readthedocs.io/en/rework-project/remote-control.html#nsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](link) app from the Playstore.
+As well as Nightscout being a server in “the Cloud”, there is also a dedicated **Nightscout** app which can be downloaded directly from the App Store on your iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**NSClient**](nsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](link) app from the Playstore.
 
 Once you have installed the **Nightscout** app on your iPhone, open the app and follow the set-up prompts, entering your Nightscout address (see below, left). The form of this may vary depending on how your Nightscout is hosted. (_e.g._ http://youraddresshere.herokuapp.com). Then enter your Nightscout API secret (see below, right). If not prompted for your API password, then you need to enter this by clicking on the padlock at the top of the app: 
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/ef59f822-f124-42d8-9503-ec0ef72aedea)
-
-
-
-
+![image](images/remote-control-24.png)
 
 More info on setup is available directly from [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
 When you first log in, you will have a very simple display (below, left). Customise the display options, by selecting the “hamburger” in the top right and scrolling down:
 
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/a0f19855-39fd-4a03-93fc-fb4661abdf40)
-
+![image](images/remote-control-25.png)
 
 Scroll down through to “Settings”. You may wish to change the “scale” to “linear” as the default for the BG display is logarithmic, and under “render basal” select “default” so that the pump basal shows up. Continue to scroll down until you get to “show plugins”. You need to make sure “careportal” is checked, and can also select various other metrics (most useful are: IOB, care portal, pump, cannula age, insulin age, basal profile and OpenAPS). 
 
+![image](images/remote-control-26.png)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/83b0eb24-4d45-43e2-9e0e-1fd22e271716)
-
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/ad3d62b3-e5ed-495a-8b72-86860ef998fe)
-
+![image](images/remote-control-27.png)
 
 Importantly, you now need to click “save” at the bottom for these changes to take effect.
 
-
 After pressing “save” the app will return to your main Nightscout screen which will look a little like this:
 
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/436a65ec-359f-43c0-ac56-7d4f7b4b3cf6)
-
-
+![image](images/remote-control-28.png)
 
 Looking in more detail at the top left menu of the Nightscout app: 
 
-
-![nightscout top bar](https://github.com/openaps/AndroidAPSdocs/assets/94044064/0a75b191-e350-41c7-a447-8f923f966b72)
-
-
-
-
+![nightscout top bar](images/remote-control-29.png)
 
 There is a huge amount of information on the status of the **AAPS** system in the grey tabs (and even more information is revealed if you tap the tab) on this screen:
 
+![image](images/remote-control-30.png)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/e8558ae7-2b9b-4fbd-84f3-3dbdcdea24f8)
-
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/755f71cb-908c-4ce4-9203-7e619d0a6c6e)
-
+![image](images/remote-control-31.png)
 
 ### Sending treatments through the Nightscout app to AAPS
 
@@ -498,20 +362,13 @@ Nightscout on your iPhone has all the same functions as Nightscout on your PC. I
 
 Although you cannot actually bolus insulin, you can however “announce” insulin through Nightscout as a “correction bolus”, although it is not delivered. Because AAPS now takes that fake insulin bolus into account, announcing insulin actually works to make AAPS _less aggressive_, and can be useful for cancelling negative insulin and preventing lows in the event that your profile has been too strong (for example due to prior exercise). You will want to check this for yourself in the presence of the **AAPS** phone, in case your **Nightscout** setup differs. 
 
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/f018207c-fc0e-421e-ad3f-f09a78167a89)
+![image](images/remote-control-32.png)
 
 Some of the most useful **Nightscout** commands are described in the table below. 
 
 #### Nightscout command table 
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/5e98f0f2-dd50-4099-9336-9c2a9506d9cd)
-
-
-
-
-
-
+![image](images/remote-control-33.png)
 
 Read more about **Nightscout** options [here](https://nightscout.github.io/)
 
@@ -529,7 +386,7 @@ More about this [here](https://nightscout.github.io/nightscout/discover/#edit-mo
 
 Although this could potentially be useful for deleting announced (but not bolused for) carbs, in practice it doesn’t currently work well with **AAPS** and we recommend making changes like this via the **AAPS** app directly.
 
-
-## **Smartwatches** 
+(smartwatches)=
+## 4) Smartwatches
 This section is currently being updated, the scheduled release is the weekend of 7th Oct 2023....watch this space!
 The existing section on smartwatches can be found in [Smartwatches](Hardware/Smartwatch.md) 
