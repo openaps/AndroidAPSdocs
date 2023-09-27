@@ -18,9 +18,9 @@
 * If you want AAPS to allow basal rate above 200%, enable Use extended boluses for >200%. Σημειώστε ότι αυτό σημαίνει ότι δεν μπορείτε να έχετε κύκλωμα με υψηλά TBRs ενώ χρησιμοποιείτε εκτεταμένα bolus για φαγητό.
 * Στις προτιμήσεις κάτω από τις ρυθμίσεις της αντλίας DanaR μπορείτε να αλλάξετε την προεπιλεγμένη ταχύτητα bolus που χρησιμοποιείται ήδη (12sec ανά 1u, 30sec ανά 1u ή 60sec ανά 1u).
 * Τοποθετήστε το βασικό βήμα στην αντλία σε 0,01 U/h
-* Set bolus step on pump to 0.1 U/h
+* Ρυθμίστε το βήμα bolus στην αντλία σε 0.1 U/h
 * Ενεργοποιήστε το εκτεταμένο bolus στην αντλία
 
 ## Ταξιδεύοντας σε διαφορετικές ζώνες ώρας με αντλία Dana R
 
-For information on traveling across time zones see section [Timezone traveling with pumps](Timezone-traveling-danarv2-danars).
+Για πληροφορίες σχετικά με τη μετακίνηση σε ζώνες ώρας, ανατρέξτε στην ενότητα [Αλλαγή ζώνης ώρας όταν ταξιδεύεις με αντλία ](Timezone-traveling-danarv2-danars).
