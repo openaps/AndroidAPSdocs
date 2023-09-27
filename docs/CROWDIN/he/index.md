@@ -76,13 +76,15 @@ Introduction <./introduction.md>
 
 Preparing <preparing.md>
 
-Safety first <./Getting-Started/Safety-first.md>
-
-What is a closed loop system <./Getting-Started/ClosedLoop.md>
-
-What is a closed loop system with AAPS <./Getting-Started/WhatisAndroidAPS.md>
-
 Docs updates & changes <./Getting-Started/WikiUpdate.md>
+
+```
+
+```{toctree}
+:caption: Remote control and following
+
+Remote control <remote-control.md>
+Following-only <following-only.md>
 
 ```
 
