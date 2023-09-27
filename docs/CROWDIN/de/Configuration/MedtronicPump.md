@@ -124,35 +124,39 @@ Wenn der Medtronic-Treiber verwendet wird, werden zwei zusätzliche Aktionen im 
 
 ## Wichtige Hinweise
 
-### OpenAPS Nutzer
+### Special attention in NS configuration needed
 
-OpenAPS users should note that AAPS with Medtronic uses a completely different approach than OpenAPS. Using AAPS the primary method of interacting with th pump is via your phone. In der Regel muss die Pumpe nur bei einem Reservoirwechsel direkt über das Pumpen-Menü bedient werden. Bei OpenAPS ist es erforderlich zumindest den Teil eines Bolus direkt an der Pumpe auszulösen. Das ist bei AAPS nicht notwendig. In the event the pump is used to manually deliver a bolus there can be issues if AAPS attempts to deliver one at the same time. Auch wenn es Sicherhheitsprüfungen zum Verhindern solcher Probleme gibt, sollten diese besser vermieden werden.
+AAPS is using serial number for synchronization and serial number is exposed to NS. Because knowledge of serial number of old Medtronic pump can be used to control the pump remotely take special care to hardening NS site preventing leakage of SN of your pump. See https://nightscout.github.io/nightscout/security/
 
-### Protokollierung
+### OpenAPS users
 
-Falls Du einen Fehler in der Pumpenfunktion Deiner Medtronic behoben möchtest, wähle aus dem Hamburger-Menü (drei Striche) 'Wartung' aus und dann 'Log-Einstellungen'. Pump, PumpComm, PumpBTComm sollte für die Fehleranalyse von Medtronic-Problemen ausgewählt werden.
+OpenAPS users should note that AAPS with Medtronic uses a completely different approach than OpenAPS. Using AAPS the primary method of interacting with th pump is via your phone. In normal use cases it is likely that the only time it is required to use the pump menu is when changing resevoirs. This is very different when using OpenAPS where at least some of a bolus is usually delivered via the quick bolus buttons. In the event the pump is used to manually deliver a bolus there can be issues if AAPS attempts to deliver one at the same time. There are checks to try and prevent issues in such cases but this should still be avoided where possible.
+
+### Logging
+
+In the event you need to troubleshoot your Medtronic pump function select the menu icon in the upper left corner of the screen, select Maintainance and Log Settings. For troubleshooting any Medtronic issues Pump, PumpComm, PumpBTComm should be checked.
 
 ### Medtronic CGM
 
-Das Medtronic CGM ("Enlite") wird derzeit NICHT unterstützt.
+Medtronic CGM is currently NOT supported.
 
-### Manuelle Pumpenbedienung
+### Manual use of pump
 
-Die händische Bedienung der Pumpe (z.B. Bolusgabe oder temporäre Basalraten setzen) sollte vermieden werden. All such commands should be sent via AAPS. Falls manuelle Befehle verwendet werden, müssen diese mindestens 3 Minuten auseinanderliegen, um das Risiko von Problemen zu verringern.
+You should avoid manually bolusing or setting TBRs on your pump. All such commands should be sent via AAPS. In the event manual commands are used there must be a delay of at least 3 minutes between them in order to reduce the risk of any issues.
 
 ### Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AAPS
 
 AAPS will automatically detect Timezone changes and will update the Pump's time when your phone switches to the new time.
 
-Wenn Du Richtung Osten reist, werden Stunden zur aktuellen Zeit addiert (z. B. von GMT+0 nach GMT+2). Das ist problemlos, da keine Überschneidungen geben kann (z.B. es ist nicht möglich, dass die gleiche Uhrzeit zweimal auftritt). Das Reisen in Richtung Westen ist da problematischer, da Du in der Zeit tatsächlich zurückreist und dies zu falschen IOB-Werten führen kann.
+Travelling east means you are going to be adding hours to the current time (ex. from GMT+0 to GMT+2) will not result in any issues as there will be no overlap (e.g. it won't be possible to have the same hour twice). Travelling west however can result in issues as you are effectively going back in time which can result in incorrect IOB data.
 
-Das Problem der Reisen nach Westen ist den Entwickler*innen bekannt und die Arbeiten an einer Lösung dauern an. Beachte dazu auch https://github.com/andyrozman/RileyLinkAAPS/issues/145 mit mehr Details. Für den Moment, habe bitte im Kopf, dass das Problem auftreten kann und sei beim Reisen durch Zeitzonen entsprechend aufmerksam.
+The issues seen when travelling west are known to the developers and work on a possible solution is ongoing. See https://github.com/andyrozman/RileyLinkAAPS/issues/145 for more detail. For now, please be aware that this issue may occur and carefully monitor when changing time zones.
 
-### Ist ein GNARL ein voll kompatibles RileyLink-kompatibles Gerät?
+### Is a GNARL a fully compatible Rileylink combatible device?
 
-The GNARL code fully supports all of the functions used by the Medtronic driver in AAPS which means it is fully compatible. Es ist allerdings wichtig zu wissen, dass das mit zusätzlicher Arbeit verbunden ist. Es muss kompatible Hardware beschafft werden, auf die dann der GNARL-Code geladen werden muss.
+The GNARL code fully supports all of the functions used by the Medtronic driver in AAPS which means it is fully compatible. It is important to note that this will require addtional work as you will have to source compatible hardware and then load the GNARL code on to the device.
 
-**Hinweis:** Die GNARL-Software ist noch experimentell und wenig getestet ist. Sie sollte daher nicht als so sicher angesehen werden wie die des RileyLink.
+**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
 
 (MedtronicPump-faq)=
 
@@ -160,9 +164,9 @@ The GNARL code fully supports all of the functions used by the Medtronic driver 
 
 (MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
-### Vorgehen bei Verlust der Verbindung zum RileyLink und/oder der Pumpe
+### What to do if I loose connection to RileyLink and/or pump?
 
-Es gibt einige Möglichkeiten, um Verbindungsprobleme zu lösen.
+There are a number of options to try and resolve connectivity issues.
 
 - Nutze den 'Aufwachen und Anpassen'-Button im AKTIONEN-Tab, so wie es oben beschrieben ist.
 - Deaktiviere Bluetooth auf Deinem Smartphone, warte 10 Sekunden und schalte es wieder ein. Dies zwingt das RileyLink-Gerät sich erneut mit dem Smartphone zu verbinden.
@@ -172,11 +176,11 @@ Es gibt einige Möglichkeiten, um Verbindungsprobleme zu lösen.
     2. *Während* dein Smartphone startet, starte den Rileylink ebenfalls neu
     3. Open AAPS and allow the connection to restore
 
-### Ermittlung der Pumpen-Frequenz
+### How to determine what Frequency my pump uses
 
-![Rückseite Medtronic Pumpe](../images/Medtronic06.png)
+![Pump Model](../images/Medtronic06.png)
 
-Auf der Pumpen-Rückseite findest Du eine Zeile mit der Modellnummer und drei weitere Buchstaben. Die ersten beiden Buchstaben (von dreien) bestimmt die Funkfrequenz der Pumpe. Aus dem letzten Buchstaben lässt sich die Pumpenfarbe ableiten. Hier sind mögliche Werte für die Frequenz:
+On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Here are possible values for Frequency:
 
 - NA - Nordamerika (in der Frequenzauswahl musst Du "US & Kanada (916 MHz)" auswählen)
 - CA - Kanada (in Frequenzauswahl musst Du "US & Kanada (916 MHz)" auswählen)

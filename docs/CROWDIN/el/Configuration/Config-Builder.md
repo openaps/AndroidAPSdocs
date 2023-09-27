@@ -111,17 +111,17 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * The [insulin curve graph](Screenshots-insulin-profile) helps you to understand the different curves.
 * You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
 
-#### Rapid-Acting Oref
+#### Γρήγορη δράση - Oref
 
-![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
+![Τύπος ινσουλίνης Rapid- Acting Oref](../images/ConfBuild_Insulin_RAO.png)
 
-* recommended for Humalog, Novolog and Novorapid
+* προτεινόμενο για Humalog, Novolog και Novorapid
 * DIA = τουλάχιστον 5 ώρες
 * Μέγιστη. κορυφή = 75 λεπτά μετά την ένεση (σταθερή, μη ρυθμιζόμενη)
 
-#### Ultra-Rapid Oref
+#### Έξτρα Γρήγορη δράση - Oref
 
-![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
+![Τύπος ινσουλίνης Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
 
 * προτείνεται για FIASP
 * DIA = τουλάχιστον 5 ώρες
@@ -137,19 +137,19 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * DIA = τουλάχιστον 5 ώρες
 * Μέγιστη. κορυφή = 45 λεπτά μετά την ένεση (σταθερή, μη ρυθμιζόμενη)
 
-#### Free Peak Oref
+#### Ελεύθερης κορυφής Oref
 
-![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
+![Τύπος ινσουλίνης Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
 
-* With the "Free Peak 0ref" profile you can individually enter the peak time. To do so click to cogwheel to enter advanced settings.
+* Με το προφίλ "Ελεύθερης κορυφής Oref" μπορείτε να εισάγετε μεμονωμένα την ώρα της κορυφής. Για να το κάνετε αυτό, κάντε κλικ στο cogwheel για να εισάγετε προηγμένες ρυθμίσεις.
 * The DIA is automatically set to 5 hours if it is not specified higher in the profile.
-* This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+* Αυτή η επιλογή στο προφίλ συνιστάται εάν χρησιμοποιείται μη επαναλαμβανόμενη ινσουλίνη ή μείγμα διαφορετικών ινσουλινών.
 
 (Config-Builder-bg-source)=
 
 ## Πηγή BG
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.md) page for more setup information.
+Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
 
 ![Διαμόρφωση BG πηγή](../images/ConfBuild_BGSource_AAPS30.png)
 
@@ -193,7 +193,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 
 Επιλέξτε τον τύπο ανίχνευσης ευαισθησίας. Για περισσότερες λεπτομέρειες σχετικά με διαφορετικά σχέδια παρακαλώ [διαβάστε εδώ](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. Περισσότερες λεπτομέρειες σχετικά με τον αλγόριθμο ευαισθησίας μπορούν να διαβαστούν στα έγγραφα [OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Πριν την επίτευξη αυτού του στόχου, το ποσοστό ευαισθησίας Autosens / η γραμμή στο γράφημά σας εμφανίζεται μόνο για ενημέρωση.
 
 (Config-Builder-absorption-settings)=
 
@@ -205,9 +205,9 @@ You can view your sensitivity on the homescreen by selecting SEN and watching th
 
 ## APS
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
+Επιλέξτε τον αλγόριθμο APS που θέλετε για τις ρυθμίσεις των παρεμβάσεων. Μπορείτε να δείτε την ενεργή λεπτομέρεια του επιλεγμένου αλγορίθμου στην καρτέλα OpenAPS (OAPS).
 
-* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
+* OpenAPS AMA ( προηγμένο βοήθημα γεύματος, Κατάσταση του αλγορίθμου για το 2017) Με απλά λόγια, τα οφέλη είναι αφού δώσετε στον εαυτό σας ένα bolus γεύματος, το σύστημα μπορεί να αντιδράσει γρηγορότερα ΑΝ εισάγετε υδατάνθρακες αξιόπιστα.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Κύκλωμα
@@ -332,7 +332,7 @@ Choose if you want to have [status lights](Preferences-status-lights) on overvie
 
 ### Αυτοματοποίηση
 
-User defined automation tasks ('if-then-else'). Παρακαλώ [διαβάστε εδώ](../Usage/Automation.md).
+Εργασίες αυτοματισμού που ορίζονται από τον χρήστη ('εάν-τότε'). Παρακαλώ [διαβάστε εδώ](../Usage/Automation.md).
 
 (Config-Builder-sms-communicator)=
 
@@ -342,33 +342,33 @@ Allows remote caregivers to control some AAPS features via SMS, see [SMS Command
 
 ### Φαγητό
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Εμφανίζει τις προεπιλογές τροφίμων που ορίζονται στη βάση δεδομένων τροφίμων Nightscout, δείτε [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) για περισσότερες πληροφορίες ρύθμισης.
 
-Note: Entries cannot be used in the AAPS calculator. (μόνο για ανάγνωση)
+Σημείωση: Οι καταχωρήσεις δεν μπορούν να χρησιμοποιηθούν στους υπολογισμούς του AndroidAPS. (μόνο για ανάγνωση)
 
 (Config-Builder-wear)=
 
 ### Wear
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Παρακολουθήστε και ελέγχετε το AAPS χρησιμοποιώντας το Android Wear ρολόι σας (δείτε [σελίδα Watchfaces](../Configuration/Watchfaces.md)). Χρησιμοποιήστε τις ρυθμίσεις (γρανάζι) για να ορίσετε ποιες μεταβλητές θα πρέπει να λαμβάνονται υπόψη κατά τον υπολογισμό του bolus που δίνεται από το ρολόι σας (δηλαδή τάση 15 λεπτών, COB...).
 
 If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
-![Wear settings](../images/ConfBuild_Wear.png)
+![Ρυθμίσεις Wear](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+Μέσα από την καρτέλα Wear ή το μενού χάμπουργκερ (στην πάνω αριστερή πλευρά της οθόνης, αν δεν εμφανίζεται η καρτέλα) μπορείτε
 
-* Ξαναστείλετε όλα τα δεδομένα. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
+* Ξαναστείλετε όλα τα δεδομένα. Μπορεί να είναι χρήσιμο εάν το ρολόι δεν συνδεόταν για κάποιο χρονικό διάστημα και θέλετε να ωθήσετε τις πληροφορίες στο ρολόι.
+* Ανοίξτε τις ρυθμίσεις στο ρολόι σας απευθείας από το τηλέφωνό σας.
 
-### xDrip Statusline (watch)
+### xDrip Γραμμή κατάστασης (ρολόι)
 
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
+Δείτε της πληροφορίες του κυκλώματος στο xDrip+ watchface (εάν δεν χρησιμοποιείται το AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
 ### NSClient
 
-* Setup sync of your AAPS data with Nightscout.
-* Settings in [preferences](Preferences-nsclient) can be opened by clicking the cog wheel.
+* Ρυθμίστε τον συγχρονισμό των δεδομένων AndroidAPS με το Nightscout.
+* Οι ρυθμίσεις στις [προτιμήσεις](Preferences-nsclient) μπορούν να ανοίξουν κάνοντας κλικ στο γρανάζι.
 
 ### Συντήρηση
 
@@ -376,4 +376,4 @@ Display loop information on your xDrip+ watchface (if you are not using AAPS/[AA
 
 ### Διαμόρφωση
 
-Use tab for config builder instead of hamburger menu.
+Χρησιμοποιήστε την καρτέλα για την Διαμόρφωση αντί για το μενού χάμπουργκερ.
