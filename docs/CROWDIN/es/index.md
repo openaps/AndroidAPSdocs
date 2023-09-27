@@ -69,17 +69,19 @@ Introducción <./introduction.md>
 ```
 
 ```{toctree}
-:caption: Empezando
+:caption: Getting started
 
-Preparación <preparing.md>
+Preparing <preparing.md>
 
-Seguridad primero <./Getting-Started/Safety-first.md>
+Docs updates & changes <./Getting-Started/WikiUpdate.md>
 
-¿Que es un sistema de lazo cerrado? <./Getting-Started/ClosedLoop.md>
+```
 
-¿Que es un sistema de lazo cerrado con AAPS? <./Getting-Started/WhatisAndroidAPS.md>
+```{toctree}
+:caption: Remote control and following
 
-Actualizaciones y cambios en la documentación <./Getting-Started/WikiUpdate.md>
+Remote control <remote-control.md>
+Following-only <following-only.md>
 
 ```
 
