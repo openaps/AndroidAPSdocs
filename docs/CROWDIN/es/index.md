@@ -17,13 +17,13 @@ Por último pero no por ello menos importante, no hay que tomar inhibidores SGLT
 ```
 
 ```{note}
-**Disclaimer and Warning**
+**Aviso y Advertencia**
 
-- All information, thought, and code described here is intended for informational and educational purposes only. Actualmente Nightscout no dispone de HIPAA privacy compliance. Utilice Nightscout y AAPS bajo su propio riesgo y no utilice la información o el código para tomar decisiones médicas.
+- Toda la información, ideas y código descritos aquí tienen la única finalidad de ser informativos y educativos. Actualmente Nightscout no dispone de HIPAA privacy compliance. Utilice Nightscout y AAPS bajo su propio riesgo y no utilice la información o el código para tomar decisiones médicas.
 - El uso del código de github.com se realiza sin garantía ni soporte formal de ningún tipo. Por favor revise el repositorio de Licencia para más detalles.
 - Todos los nombres de productos y empresas, marcas comerciales, marcas de servicio, marcas registradas y marcas de servicio registradas, son propiedad de sus respectivos titulares. Su uso aquí es informativo y no implica afiliación o pago por ello.
 
-Please note - this project has no association with and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
+Ten en cuenta que este proyecto no tiene ninguna asociación, ni está respaldado por: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
 ```
 
 ## ¿Cómo leer la documentación?
@@ -69,19 +69,19 @@ Introducción <./introduction.md>
 ```
 
 ```{toctree}
-:caption: Getting started
+:caption: Empezando
 
-Preparing <preparing.md>
+Preparando <preparing.md>
 
-Docs updates & changes <./Getting-Started/WikiUpdate.md>
+Actualizaciones & cambios en la documentación <./Getting-Started/WikiUpdate.md>
 
 ```
 
 ```{toctree}
-:caption: Remote control and following
+:caption: Control remoto y seguimiento
 
-Remote control <remote-control.md>
-Following-only <following-only.md>
+Control remoto <remote-control.md>
+Sólo seguimiento <following-only.md>
 
 ```
 
