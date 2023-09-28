@@ -303,9 +303,9 @@
 (Preferences-minimal-request-change)=
 ### Minimal request change \[%\]
 
-- When using open loop you will receive notifications every time AAPS recommends to adjust basal rate.
+- Όταν χρησιμοποιείτε ανοικτό κύκλωμα, θα λαμβάνετε ειδοποιήσεις κάθε φορά που το AAPS συνιστά την προσαρμογή του βασικού ρυθμού.
 - To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
-- This defines the relative change required to trigger a notification.
+- Αυτό καθορίζει τη σχετική αλλαγή που απαιτείται για την ενεργοποίηση μιας ειδοποίησης.
 
 (Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)=
 ## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
