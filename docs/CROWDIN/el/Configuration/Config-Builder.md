@@ -208,28 +208,28 @@ You can view your sensitivity on the homescreen by selecting SEN and watching th
 Επιλέξτε τον αλγόριθμο APS που θέλετε για τις ρυθμίσεις των παρεμβάσεων. Μπορείτε να δείτε την ενεργή λεπτομέρεια του επιλεγμένου αλγορίθμου στην καρτέλα OpenAPS (OAPS).
 
 * OpenAPS AMA ( προηγμένο βοήθημα γεύματος, Κατάσταση του αλγορίθμου για το 2017) Με απλά λόγια, τα οφέλη είναι αφού δώσετε στον εαυτό σας ένα bolus γεύματος, το σύστημα μπορεί να αντιδράσει γρηγορότερα ΑΝ εισάγετε υδατάνθρακες αξιόπιστα.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* [OpenAPS SMB (super micro bolus, ο πιο πρόσφατος αλγόριθμος για προχωρημένους χρήστες)[ Σημειώστε ότι πρέπει να είστε στο ](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)Στόχος 9](../Usage/Open-APS-features.md) για να χρησιμοποιήσετε το OpenAPS SMB και η επιδραση των 5min_5m_carbimpact πρέπει να ρυθμιστεί στο 8 στο μενού Διαμόρφωση> Ανίχνευση ευαισθησίας> Ρυθμίσεις Oref1 ευαισθησίας.
 
 ## Κύκλωμα
 
-* Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
+* Εναλλαγή μεταξύ ανοικτού κυκλώματος, κλειστού κυκλώματος και χαμηλής αναστολής γλυκόζης (LGS).
 
-![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
+![Διαμόρφωση συστήματος - λειτουργία κυκλώματος](../images/ConfigBuilder_LoopLGS.png)
 
 (Config-Builder-open-loop)=
 
 ### Ανοιχτό κύκλωμα
 
-* AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. 
-* The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). 
-* This option is for getting to know how AAPS works or if you are using an unsupported pump.
+* Το AAPS αξιολογεί συνεχώς όλα τα διαθέσιμα δεδομένα (IOB, COB, BG...) και κάνει προτάσεις σχετικά με τον τρόπο προσαρμογής της θεραπείας σας εάν είναι απαραίτητο. 
+* Οι προτάσεις δεν θα εκτελούνται αυτόματα (όπως στο κλειστό κύκλωμα) πρέπει να εισαχθούν χειροκίνητα στην αντλία ή χρησιμοποιώντας ένα κουμπί σε περίπτωση που χρησιμοποιείτε μια συμβατή αντλία (Dana R / RS ή Accu Chek Combo). 
+* Αυτή η επιλογή είναι για να μάθετε πώς λειτουργεί το AndroidAPS ή αν χρησιμοποιείτε μια μη υποστηριζόμενη αντλία.
 
 (Config-Builder-closed-loop)=
 
 ### Κλειστό κύκλωμα
 
-* AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). 
-* The Closed Loop works within numerous safety limits, which you can be set individually.
+* Το AAPS αξιολογεί συνεχώς όλα τα διαθέσιμα δεδομένα (IOB, COB, BG...) και προσαρμόζει αυτόματα τη θεραπεία εάν είναι απαραίτητο (π.χ. χωρίς περαιτέρω παρέμβαση από εσάς) για να φτάσει στο καθορισμένο εύρος στόχου ή τιμή (δόση bolus, προσωρινός βασικός ρυθμός, κλείσιμο ινσουλίνης για να αποφύγετε την υπογλυκαιμία κ.λπ.). 
+* Το κλειστό κύκλωμα λειτουργεί εντός πολλών ορίων ασφαλείας, τα οποία μπορείτε να ορίσετε ξεχωριστά.
 * Το κλειστό κύκλωμα είναι δυνατό μόνο εάν βρίσκεστε σε [ Στόχος 6 ](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend) ή υψηλότερα και χρησιμοποιήστε μια υποστηριζόμενη αντλία.
 * Παρακαλώ σημειώστε: Σε κατάσταση κλειστού κυκλώματος ένας μοναδικός στόχος αντί του εύρους στόχου (π.χ. συνιστώνται 5,5 mmol ή 100 mg/dl αντί για 5,0 - 7,0 mmol ή 90 - 125 mg/dl).
 
@@ -237,32 +237,32 @@ You can view your sensitivity on the homescreen by selecting SEN and watching th
 
 * το μέγιστο IOB έχει οριστεί σε μηδέν
 * Αυτό σημαίνει ότι εάν η γλυκόζη του αίματος πέφτει μπορεί να μειώσει τον βασικό ρυθμό για εσας.
-* Αλλα εάν η γλυκόζη του αίματος αυξάνεται, καμία αυτόματη διόρθωση δεν θα γίνει. Your basal rates will remain the same as your selected profile.
-* Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower BG.
+* Αλλα εάν η γλυκόζη του αίματος αυξάνεται, καμία αυτόματη διόρθωση δεν θα γίνει. Ο βασικός σας ρυθμός θα παραμείνει ο ίδιος όπως έχετε επιλέξει στο προφίλ σας.
+* Μόνο εάν το βασικο IOB (ενεργή ινσουλίνη) είναι αρνητικό (από προηγούμενη χαμηλή αναστολή γλυκόζης) επιπλέον ινσουλίνη θα χορηγηθεί για να μείωση την τιμή γλυκόζης.
 
 ### Ελάχιστο αίτημα για αλλαγή
 
-* When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. 
-* To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate.
-* This defines the relative change required to trigger a notification.
+* Όταν χρησιμοποιείτε ανοικτό κύκλωμα, θα λαμβάνετε ειδοποιήσεις κάθε φορά που το AAPS συνιστά την προσαρμογή του βασικού ρυθμού. 
+* Για να μειώσετε τον αριθμό των ειδοποιήσεων, μπορείτε είτε να χρησιμοποιήσετε ένα ευρύτερο εύρος στόχων τιμής γλυκόζης, είτε να αυξήσετε το ποσοστό του ελάχιστου ρυθμού αιτημάτων.
+* Αυτό καθορίζει τη σχετική αλλαγή που απαιτείται για την ενεργοποίηση μιας ειδοποίησης.
 
 ## Στόχοι ( μαθαίνοντας το πρόγραμμα)
 
-AAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. Αυτός είναι ο μόνος τρόπος για να εμπιστευτείτε το σύστημα.
+Το AAPS έχει ένα πρόγραμμα εκμάθησης (στόχοι) που πρέπει να εκπληρώσετε βήμα προς βήμα. Αυτό θα σας καθοδηγήσει με ασφάλεια με στη δημιουργία ενός συστήματος κλειστού κυκλώματος. Εξασφαλίζει ότι έχετε ρυθμίσει τα πάντα σωστά και καταλαβαίνετε τι ακριβώς κάνει το σύστημα. Αυτός είναι ο μόνος τρόπος για να εμπιστευτείτε το σύστημα.
 
-You should [export your settings](../Usage/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
+Θα πρέπει [να εξάγετε τις ρυθμίσεις σας](../Usage/ExportImportSettings.md) (συμπεριλαμβανομένης της προόδου των στόχων) σε τακτική βάση. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
 
-See [Objectives](../Usage/Objectives.md) page for more information.
+Δες τη σελίδα [Στόχοι](../Usage/Objectives.md) για περισσότερες πληροφορίες.
 
 ## Θεραπείες
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](Screenshots-carb-correction).
+Αν προβάλετε την καρτέλα Θεραπείες (Θεραπείες), μπορείτε να δείτε τις θεραπείες που έχουν μεταφορτωθεί στο nightscout. Εάν θέλετε να επεξεργαστείτε ή να διαγράψετε μια καταχώριση (π.χ. φάγατε λιγότερους υδατάνθρακες από ό, τι περιμένατε), επιλέξτε 'Αφαίρεση' και εισαγάγετε τη νέα τιμή (αλλάξτε την ώρα αν χρειαστεί) μέσω της καρτέλας Careportal (Cp).
 
 ## Γενικά
 
 ### Σφαιρική Εικόνα
 
-Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Μπορείτε να έχετε πρόσβαση στις ρυθμίσεις κάνοντας κλικ στο γρανάζι.
+Εμφανίζει την τρέχουσα κατάσταση του κυκλώματος και των κουμπιών σας για τις περισσότερο συνηθισμένες ενέργειες (βλ. [ενότητα Η αρχική οθόνη](../Getting-Started/Screenshots.md) για λεπτομέρειες). Μπορείτε να έχετε πρόσβαση στις ρυθμίσεις κάνοντας κλικ στο γρανάζι.
 
 #### Κρατήστε την οθόνη ενεργή
 
@@ -270,7 +270,7 @@ Displays the current state of your loop and buttons for most common actions (see
 
 #### Buttons
 
-Define which Buttons are shown on the home screen.
+Ορίστε ποια πλήκτρα θα εμφανίζονται στην αρχική οθόνη.
 
 * Θεραπείες
 * Υπολογιτής
@@ -279,19 +279,19 @@ Define which Buttons are shown on the home screen.
 * CGM (opens xDrip+)
 * Καλιμπράρισμα
 
-Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
+Επιπλέον, μπορείτε να ορίσετε συντομεύσεις για αυξήσεις ινσουλίνης και υδατανθράκων και να αποφασίσετε αν το πεδίο σημειώσεων θα εμφανίζεται στους διαλόγους θεραπείας.
 
 #### Ρυθμίσεις Γρήγορου Οδηγού
 
-Δημιουργήστε ένα κουμπί για ένα συγκεκριμένο πρότυπο γεύματος (υδατάνθρακες και μέθοδος υπολογισμού για το bolus) που θα εμφανίζονται στην αρχική οθόνη. Χρησιμοποιείται για τα γεύματα που καταναλώνονται συχνά. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+Δημιουργήστε ένα κουμπί για ένα συγκεκριμένο πρότυπο γεύματος (υδατάνθρακες και μέθοδος υπολογισμού για το bolus) που θα εμφανίζονται στην αρχική οθόνη. Χρησιμοποιείται για τα γεύματα που καταναλώνονται συχνά. Εάν έχουν οριστεί διαφορετικοί χρόνοι για διαφορετικά γεύματα, θα έχετε πάντα το κατάλληλο κουμπί γεύματος στην αρχική οθόνη, ανάλογα με την ώρα της ημέρας.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+Σημείωση: Το κουμπί δεν θα είναι ορατό αν βρίσκεται έξω από το καθορισμένο χρονικό διάστημα ή αν έχετε αρκετό IOB για να καλύψετε τους υδατάνθρακες που ορίζονται στο κουμπί QuickWizard.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Κουμπί QuickWizard](../images/ConfBuild_QuickWizard.png)
 
-#### Default Temp-Targets
+#### Προκαθορισμένος Στόχος-Προσ Ρυθμού
 
-Choose default temp-targets (duration and target). Preset values are:
+Επιλέξτε προεπιλεγμένους στόχους ρυθμού (διάρκεια και στόχος). Οι προκαθορισμένες τιμές είναι:
 
 * Φαγητό σύντομα: στόχος 72 mg/ dl / 4, 0 mmol/l, διάρκεια 45 λεπτά
 * Δραστηριότητα: στόχος 140 mg/dl / 7.8 mmol/l, διάρκεια 90 min
