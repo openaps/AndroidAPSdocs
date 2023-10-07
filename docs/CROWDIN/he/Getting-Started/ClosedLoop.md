@@ -26,7 +26,7 @@
 
 ### AndroidAPS (AAPS)
 
-AndroidAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). המערכת משתמשת בסמארטפון אנדרואיד לחישוב ולשליטה על משאבת האינסולין. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
+AAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). המערכת משתמשת בסמארטפון אנדרואיד לחישוב ולשליטה על משאבת האינסולין. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
 
 Compatible [pumps](../Hardware/pumps.md) are:
 

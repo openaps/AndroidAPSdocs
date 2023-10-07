@@ -2,13 +2,13 @@
 
 Αυτή είναι μια λίστα με ορισμένες Αντλίες που επιπλέουν γύρω από αυτό, και την κατάσταση υποστήριξης γι 'αυτούς σε οποιοδήποτε από τα συστήματα κυκλώματος και στη συνέχεια την κατάσταση στο AAPS. Στο τέλος υπάρχουν κάποιες πληροφορίες, τι απαιτείται για να είναι μια αντλία "ικανή για κύκλωμα".
 
-## Pumps that are Loopable
+## Αντλίες που είναι για κύκλωμα
 
 * * *
 
 ### EOPatch2 ([Homepage](http://www.eoflow.com/eng/main/main.html))
 
-**Loop status:** Is a hot Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea). Without commitment look out for AAPS 3.2.
+**Loop status:** Is a hot Loop candidate. The remote control they use is actually modified Android device. (Η αντλία είναι προς το παρόν διαθέσιμη μόνο στην Κορέα). Without commitment look out for AAPS 3.2.
 
 ** Απαιτήσεις υλικού για το AAPS: ** Πιθανώς κανένα. It seems to be BT enabled.
 
@@ -29,16 +29,6 @@
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 ** Απαιτήσεις υλικού για το AAPS: ** Πιθανώς κανένα. It's BT enabled.
-
-* * *
-
-### Medtrum A6/P6/C6 ([Homepage](https://www.medtrum.com/product/nanopump.html))
-
-**Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controllable via iPhone App. No Android app available at the moment.
-
-** Απαιτήσεις υλικού για το AAPS: ** Πιθανώς κανένα. It seems to be BT enabled.
-
-**Comment:** Some investigation has started to see if this pump can be supported in AAPS very easily. You can find more information on our discord in channel "medtrum".
 
 * * *
 
@@ -106,7 +96,7 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 **Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
-## Pumps that aren't Loopable
+## Αντλίες που δεν είναι για κύκλωμα
 
 ### Animas Vibe
 
@@ -118,18 +108,18 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 **Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
 
-## Requirements for pumps being loopable
+## Απαιτήσεις αντλιών για να είναι συμβατές με κύκλωμα
 
 **Prerequisite**
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
-- Protocol is hacked/documented/etc.
+- Η αντλία πρέπει να υποστηρίζει κάποιο είδος τηλεχειρισμού. (BT, Radio frequency, etc)
+- Το πρωτόκολλο παραβιάζεται / τεκμηριώνεται / κλπ.
 
 **Minimal requirement**
 
-- Set Temporary Basal Rate
+- Ορισμός συχνότητας προσωρινού βασικού ρυθμού
 - Get Status
-- Cancel Temporary Basal Rate
+- Ακύρωση συχνότητας προσωρινού βασικού ρυθμού
 
 **For oref1(SMB) or Bolusing:**
 
@@ -137,16 +127,16 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 **Good to have**
 
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Ακύρωση του Bolus
+- Αποκτήστε βασικό προφίλ (σχεδόν απαραίτητο)
+- Ορίστε βασικό προφίλ (ωραίο να έχετε)
+- Διαβάστε το Ιστορικό 
 
 **Other (not required but good to have)**
 
-- Set Extended Bolus
+- Ορίστε εκτεταμένο bolus
 - Cancel Extended Bolus
-- Read History
+- Διαβάστε το Ιστορικό
 - Read TDD
 
 * * *

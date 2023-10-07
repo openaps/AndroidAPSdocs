@@ -47,7 +47,7 @@ In order to allow users with older Android to use older version of AAPS new vers
 
 ## WearOS version
 
-- AAPS 3.2 requires at least WearOS API level 25 (Android 7.1)
+- AAPS 3.2 requires at least WearOS API level 26 (Android 8)
 
 ## Version 3.2.0
 
@@ -62,6 +62,7 @@ Release date: XX-XX-2023
 - Tidepool can be used as a replacement of NS to pass first objective
 - If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip it must be selected source "xDrip+ Sync Follower"
 - If you want to switch to ComboV2 driver, Ruffy must be uninstalled and pump paired again to AAPS
+- In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
 
 
 ### Changes
@@ -86,6 +87,7 @@ Release date: XX-XX-2023
 - xdrip communication moved to separate module @MilosKozak
 - internal changes: updated libs versions, rx3 migration, new modules structure @MilosKozak
 - Diaconn driver fixes @miyeongkim
+- more database maintenance options @MilosKozak
 - AAPSClient provides info if main phone is plugged in electricity @MilosKozak
 - Change in BolusWizard. If CGM is not available percentage is ignored (ie 100% is used)
 - new 150k+ lines of code, changed 156k lines

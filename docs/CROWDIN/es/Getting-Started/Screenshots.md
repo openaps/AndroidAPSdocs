@@ -1,14 +1,14 @@
-# Pantallas de AndroidAPS
+# AAPS screens
 
 ## Pantalla de inicio
 
 ![Pantalla de inicio V2.7](../images/Home2020_Homescreen.png)
 
-Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene la mayor parte de la información que necesitarás en tu día a día.
+This is the first screen you will come across when you open AAPS and it contains most of the information that you will need day to day.
 
 ### Sección A - Pestañas
 
-* Navegar entre los distintos módulos de AndroidAPS.
+* Navigate between the various AAPS modules.
 * También puedes cambiar de pantalla deslizando hacia la izquierda o la derecha.
 * Displayed tabs can be selected in [config builder](Config-Builder-tab-or-hamburger-menu).
 
@@ -83,7 +83,7 @@ Esta es la primera pantalla que encontrarás cuando abras AndroidAPS y contiene 
 
 #### Señal de advertencia de glucosa
 
-Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+Desde la versión de 3.0 de AndroidAPS, puede aparecer una señal de advertencia debajo de la lectura de glucosa de la pantalla principal.
 
 *Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
 
@@ -99,7 +99,7 @@ However, when there are a lot of duplicates, it might be easier to
 
 The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
 
-![Red BG warning](../images/bg_warn_red.png)
+![Triángulo de advertencia de glucosa en rojo](../images/bg_warn_red.png)
 
 You need to find out why you get duplicate BGs:
 
@@ -112,7 +112,7 @@ You need to find out why you get duplicate BGs:
 
 * La señal de advertencia amarilla indica que tus datos de glucosa llegan en intervalos de tiempo irregulares o que faltan algunos datos de glucosa.
    
-   ![Yellow BG warning](../images/bg_warn_yellow.png)
+   ![Triángulo de advertencia de glucosa en amarillo](../images/bg_warn_yellow.png)
 
 * Normalmente no hay que tomar ninguna acción. El lazo cerrado puede continuar funcionando.
 
@@ -347,7 +347,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 #### Recordatorio de comida
 
-* Cuando configuramos carbohidratos en el futuro, podemos seleccionar la casilla de la alarma (ésta se marca automáticamente si cambiamos el tiempo de absorción al futuro), para que nos recuerde el momento en el que vamos a comer los carbohidratos que anunciamos previamente en AndroidAPS.
+* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AAPS
    
    ![Asistente de bolo con recordatorio de comida](../images/Home2021_BolusWizard_EatingReminder.png)
 
@@ -382,7 +382,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
 
-* Si ves el aviso de advertencia anterior después de usar el asistente de bolo, AndroidAPS ha detectado que el valor de COB calculado puede ser incorrecto. 
+* If you see the warning above after using bolus wizard, AAPS has detected that the calculated COB value maybe wrong.
 * Por lo tanto, si quieres volver a administrar un bolo después de una comida previa con COB activo, ¡debes de tener mucho cuidado para evitar posibles sobredosis de insulina! 
 * For details see the hints on [COB calculation page](COB-calculation-detection-of-wrong-cob-values).
 
@@ -459,7 +459,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 * La línea MORADA muestra la cantidad de insulina que va quedando después de ser entregada y cómo va disminuyendo con el paso del tiempo. La línea AZUL cómo de activa es en cada momento.
 * Una de las cosas más importantes a tener en cuenta es que la caida de la curva es lenta y prolongada en el tiempo y hay que tener en cuenta las posibles colas. 
 * Si has estado acostumbrado a usar bombas en manual, probablemente estés acostumbrado a suponer que la insulina decae en unas 3,5 horas. 
-* Sin embargo, cuando se utiliza un lazo cerrado, es mejor usar colas más largas (configurando más alto el valor de DIA), ya que los cálculos son mucho más precisos y estas pequeñas cantidades se van sumando cuando se realizan los cálculos recursivos en el algoritmo de AndroidAPS.
+* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AAPS algorithm.
 
 For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 

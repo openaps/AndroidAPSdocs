@@ -47,7 +47,7 @@ In order to allow users with older Android to use older version of AAPS new vers
 
 ## WearOS version
 
-- AAPS 3.2 requires at least WearOS API level 25 (Android 7.1)
+- AAPS 3.2 requires at least WearOS API level 26 (Android 8)
 
 ## Version 3.2.0
 
@@ -62,6 +62,7 @@ Release date: XX-XX-2023
 - Tidepool can be used as a replacement of NS to pass first objective
 - If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip it must be selected source "xDrip+ Sync Follower"
 - If you want to switch to ComboV2 driver, Ruffy must be uninstalled and pump paired again to AAPS
+- In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
 
 
 ### Alterações
@@ -75,17 +76,21 @@ Release date: XX-XX-2023
 - NSClient v3 plugin @MilosKozak
 - Tidepool support @MilosKozak
 - Smoothing plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
+- DynamicISF plugin @Chris Wilson, @tim2000s
+- New logo @thiagomsoares
+- New watchface @Philoul
 - fixed tons of issues from 3.1 version
 - allow add notes on more places @Sergey Zorchenko
-- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
+- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
 - new SMS commands LOOP LGS/CLOSED @pzadroga
 - wear translations @Andries-Smit
 - xdrip communication moved to separate module @MilosKozak
 - internal changes: updated libs versions, rx3 migration, new modules structure @MilosKozak
 - Diaconn driver fixes @miyeongkim
+- more database maintenance options @MilosKozak
 - AAPSClient provides info if main phone is plugged in electricity @MilosKozak
 - Change in BolusWizard. If CGM is not available percentage is ignored (ie 100% is used)
-- new 125k+ lines of code, changed 150k lines
+- new 150k+ lines of code, changed 156k lines
 
 ## Version 3.1.0
 

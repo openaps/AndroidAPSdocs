@@ -1,6 +1,6 @@
 # Objectifs
 
-AndroidAPS a une série d'objectifs qui doivent être complétés pour vous guider à travers les fonctionnalités et les paramètres de la boucle sécurisée.  Ils s'assurent que vous avez correctement configuré tout ce qui est détaillé dans les sections ci-dessus, et que vous comprenez ce que votre système fait et pourquoi vous pouvez lui faire confiance.
+AAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping.  Ils s'assurent que vous avez correctement configuré tout ce qui est détaillé dans les sections ci-dessus, et que vous comprenez ce que votre système fait et pourquoi vous pouvez lui faire confiance.
 
 Si vous **mettez à jour les téléphones** alors vous pouvez [exporter vos paramètres](../Usage/ExportImportSettings.md) pour garder votre progression à travers les objectifs. Non seulement vos progrès à travers les objectifs de l'être sauvés, mais également vos paramètres de sécurité, tels que max bolus etc. Si vous n'exportez pas et n'importez pas vos paramètres, vous devrez recommencer les objectifs depuis le début.  C'est une bonne idée de [sauvegarder vos paramètres](../Usage/ExportImportSettings.html) souvent juste au cas où.
 
@@ -9,16 +9,16 @@ Si vous voulez revenir en arrière sur les objectifs terminés voir les [explica
 ## Objectif 1 : Paramétrage de la visualisation et la surveillance des données, analyse des débits Basal et des ratios
 
 - Sélectionnez la source de glycémie adaptée à votre configuration.  Voir [Source GLY](../Configuration/BG-Source.md) pour plus d'informations.
-- Sélectionnez la bonne pompe dans la Configuration (sélectionnez la Pompe virtuelle si vous utilisez un modèle de pompe sans pilote AAPS pour le bouclage) afin de vous assurer que votre pompe peut communiquer avec AAPS.
-- Si vous utilisez la pompe DanaR, assurez-vous d'avoir suivi les instructions [Pompe à insuline DanaR](../Configuration/DanaR-Insulin-Pump.md) pour assurer le lien entre la pompe et AAPS.
+- Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AAPS driver for looping) to ensure your pump status can communicate with AAPS.
+- If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AAPS.
 - Suivez les instructions de la page [Nightscout](../Installing-AndroidAPS/Nightscout.md) pour s'assurer que Nightscout peut recevoir et afficher ces données.
 - Notez que l'URL dans NSClient doit être **SANS /api/v1/** à la fin - voir les [paramètres NSClient dans les Préférences](Preferences-nsclient).
 
-*Vous devrez peut-être attendre la prochaine lecture de glycémie avant qu'AAPS ne la reconnaisse.*
+*You may need to wait for the next blood glucose reading to arrive before AAPS will recognise it.*
 
-## Objectif 2 : Apprendre comment contrôler AndroidAPS
+## Objective 2: Learn how to control AAPS
 
-- Exécutez différentes actions dans AAPS tel que décrit dans cet objectif.
+- Perform several actions in AAPS as described in this objective.
 
 - Cliquez sur le texte orange "Pas encore terminé" pour accéder à la liste des tâches.
 
@@ -31,7 +31,7 @@ Si vous voulez revenir en arrière sur les objectifs terminés voir les [explica
 (Objectives-objective-3-prove-your-knowledge)=
 ## Objectif 3 : Prouver ses connaissances
 
-- Passez un examen à choix multiples pour tester vos connaissances d'AAPS.
+- Pass a multiple-choice exam testing your AAPS knowledge.
 
 - Cliquez sur le texte orange "Pas encore terminé" pour accéder à la page avec la question et répondre aux options.
 
@@ -51,7 +51,7 @@ Si vous voulez revenir en arrière sur les objectifs terminés voir les [explica
 
 - Sélectionnez la Boucle Ouverte soit à partir des Préférences, soit en faisant un appui long sur le bouton de boucle en haut à gauche de l'écran d'accueil.
 - Travaillez dans les [Préférences](../Configuration/Preferences.md) pour la configurer pour vous.
-- Adoptez manuellement au moins 20 suggestions de débits de base temporaires sur une période de 7 jours; saisissez-les sur votre pompe et confirmez dans AAPS que vous les avez acceptés.  Assurez-vous que ces données apparaissent bien dans AndroidAPS et dans Nightscout.
+- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AAPS that you have accepted them.  Ensure this data shows in AAPS and Nightscout.
 - Activez des [Cibles temporaires](../Usage/temptarget.md), si nécessaire. Utilisez des cibles temp. hypo temp pour éviter que le système ne corrige trop fortement une augmentation de la glycémie après une hypo.
 
 ### Réduire le nombre de notifications
@@ -70,7 +70,7 @@ Si vous voulez revenir en arrière sur les objectifs terminés voir les [explica
 
 ## Objectif 5 : Compréhension de la Boucle Ouverte, y compris les propositions de débits Basal temporaires
 
-- Commencez à comprendre le raisonnement qu'il y a derrière chaque recommandation de basal temporaire en regardant [Comprendre la logique de détermination basale](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) ainsi que les [lignes de prédiction dans l'écran d'accueil AAPS](Screenshots-prediction-lines)/Nightscout et le résumé des résultats des calculs dans votre onglet OpenAPS.
+- Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AAPS homescreen](Screenshots-prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
 
 Vous voudrez définir votre objectif plus haut que d'habitude jusqu'à ce que vous ayez confiance dans les calculs et les paramètres.  Le système permet
 
@@ -103,7 +103,7 @@ Vous pouvez afficher une plage plus large (lignes vertes) sur le graphique pour 
 
 ### La boucle fermée ne corrigera pas les glycémies élevées dans l'objectif 6, car elle est limitée à la suspension glycémie basse. Les hyperglycémies doivent être corrigées manuellement par vous !
 
-- Pré-requis : Vous avez besoin d'un bon profil (basal, SI, G/I) déjà en cours dans AAPS pour commencer avec Loop en mode Arrêt Glycémie Basse. Sinon, vous pouvez faire une hypo que vous devrez corriger manuellement. Cela vous aidera beaucoup à éviter d'avoir à traiter des glycémies faible sur une période de 5 jours. **Si vous avez toujours des hypoglycémies fréquentes ou sévères alors envisagez de réajuster votre DAI, ratios basal, SI et G/I et ne démarrez PAS l'objectif 6 pour le moment.**
+- Prerequisite: You need a good profile (basal, ISF, IC) already working in AAPS to start with Loop in Low Glucose Suspend mode. Sinon, vous pouvez faire une hypo que vous devrez corriger manuellement. Cela vous aidera beaucoup à éviter d'avoir à traiter des glycémies faible sur une période de 5 jours. **Si vous avez toujours des hypoglycémies fréquentes ou sévères alors envisagez de réajuster votre DAI, ratios basal, SI et G/I et ne démarrez PAS l'objectif 6 pour le moment.**
 - Vous n'avez pas à changer vos paramètres pour le moment. Au cours de l'objectif 6, le paramètre maxIA est automatiquement défini sur zéro. **Cette limitations sera supprimée lors du passage à l'objectif 7.**
 - Le système remplacera vos paramètres maxIA à zéro, ce qui signifie que si la glycémie diminue, il peut réduire le débit de basal pour vous. Si la glycémie augmente, elle n'augmentera le débit de basal que si l'IA basale est négative du fait d'un Arrêt Glycémie Basse antérieur. Sinon, vos débits de basal resteront les mêmes que votre profil sélectionné. **Cela signifie que vous devez gérer manuellement vos glycémies élevées avec des corrections d'insuline.**
 - Si votre IA basale est négative (voir copie d'écran ci-dessous) un DBT > 100% peut également être diffusé à l'objectif 6.
@@ -136,9 +136,9 @@ Vous pouvez afficher une plage plus large (lignes vertes) sur le graphique pour 
 ## Objectif 8 : Ajustement des débits Basal et des ratios si nécessaire, puis activation de la fonction auto-sens
 
 - Vous pouvez utiliser [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) pour vérifier que votre basale reste précise ou faire un test de basal traditionnel.
-- Activez [autosens](../Usage/Open-APS-features.md) sur une période de 7 jours et regardez la ligne blanche dans le graphique de l'écran d'accueil qui montre comment la sensibilité à l'insuline augmente ou diminue selon l'exercice physique, le cycle hormonal etc, et gardez un oeil sur l'onglet OpenAPS qui indique comment AndroidAPS ajuste les basales et/ou les cibles en conséquence.
+- Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AAPS is adjusting the basals and/or targets accordingly.
 
-N'oubliez pas d'enregistrer votre Bouclage dans \`ce formulaire \<https://bit.ly/nowlooping>\`\_ \*en indiquant AndroidAPS comme votre type de logiciel de boucle DIY, si vous ne l'avez pas déjà fait.
+*Don’t forget to record your looping in* [this form](https://bit.ly/nowlooping) *logging AAPS as your type of DIY loop software, if you have not already done so.*
 
 (Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
 ## Objectif 9 : Activation de fonctionnalités supplémentaires pour l'utilisation en journée, telles que la fonction SMB
@@ -153,6 +153,11 @@ N'oubliez pas d'enregistrer votre Bouclage dans \`ce formulaire \<https://bit.ly
 - Vous devez commencer l'objectif 10 pour pouvoir utiliser l'[Automatisation](../Usage/Automation.md).
 - Assurez-vous d'avoir complété tous les objectifs, y compris l'examen [Objectif 3 prouver ses connaissances](Objectives#objective-3-prove-your-knowledge).
 - Compléter les objectifs précédents n’affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
+
+(Objectives-objective-11-DynamicISF)=
+## Objective 11: Additional Features such as DynamicISF
+
+- You have to start objective 11 to be able to use [DynamicISF](../Usage/Open-APS-features.md)
 
 (Objectives-go-back-in-objectives)=
 ## Retour arrière dans les Objectifs

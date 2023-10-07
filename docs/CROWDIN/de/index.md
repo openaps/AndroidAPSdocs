@@ -1,22 +1,29 @@
 # Willkommen zur AAPS-Dokumentation
 
-![Grafik](images/modules-female.png)
+![image](./images/basic-outline-of-AAPS.png)
 
-AAPS ist eine Open-Source-App für Menschen, die mit Insulinabhängigen Diabetes leben, die als künstliches Pankreassystem (APS) auf Google Android Smartphones fungiert. Hauptkomponenten sind verschiedene OpenAPS-Softwarealgorithmen, die genau das tun sollen, was eine gesunde Bauchspeicheldrüse auch tut: den Blutzuckerspiegel durch automatisierte Insulindosierung (AID) in gesunden Grenzen halten.  Zusätzlich werden mindestens eine unterstützte Insulinpumpe mit einer CE-Kennzeichnung und ein CGM/FGM benötigt.
+AAPS ist eine Open-Source-App für Menschen, die mit Insulinabhängigen Diabetes leben, die als künstliches Pankreassystem (APS) auf Google Android Smartphones fungiert. It uses an openAPS software algorithm which aims to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need a supported and FDA/CE approved insulin pump, and a continuous glucose meter.
 
-The app does *not* use self-learning artificial intelligence. Instead, the calculations of AAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons.
+Interested? Read more about AAPS in the [introduction](introduction.md).
 
-The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
+```{warning}
+**WICHTIGER SICHERHEITSHINWEIS**
 
-```{admonition} Ask for help - Writing Docs
-:class: note
+Die grundlegenden Sicherheitsfunktionen von AAPS, die in dieser Dokumentation beschrieben sind, bauen auf den Sicherheitsfunktionen der Hardware auf, mit der Du Dein System aufgesetzt hast. Es ist extrem wichtig, dass die Insulinpumpe und das CGM-System, die für ein Closed Loop System mit automatisierter Insulinabgabe verwendet werden, hinreichend getestet und voll funktionstüchtig sind sowie (in Europa) eine CE-Kennzeichnung haben und (in Deutschland) als Medizinprodukte zugelassen sind. Veränderungen an Hard- oder Software dieser Komponenten können zu unerwarteter Insulinabgabe und damit zu erheblichen Risiken für den Anwender führen. *Verwende keine* defekten, modifizierten oder selbsterstellten Insulinpumpen oder CGM-Empfänger, um ein AAPS-System zu erstellen oder zu betreiben.
 
-Please don't be shy, we urgently *need* support in creating the documentation.
+Außerdem ist es ebenso wichtig, nur Originalzubehör zu verwenden. Setzhilfen, Kanülen und Reservoire müssen vom Hersteller für den Einsatz mit deiner Pumpe bzw. deinem CGM zugelassen sein. Die Verwendung von nicht geprüftem oder modifiziertem Zubehör kann zu Ungenauigkeiten des CGM-Systems und Insulinabgabefehlern führen. Insulin ist sehr gefährlich, wenn es falsch dosiert wird. Spiele nicht mit deinem Leben, indem du ungeprüftes oder modifiziertes Zubehör verwendest.
 
-A pull request to edit the documentation is relatively simple to create. You can't break anything. There are release procedures.
+Nicht zuletzt darfst Du keine SGLT-2-Hemmer (Gliflozins) einnehmen, da sie den Blutzuckerspiegel unberechenbar senken.  Die Kombination mit einem Closed Loop System, das die basalen Raten senkt, um den BZ zu erhöhen ist besonders gefährlich, da durch die Gliflozin dieser BZ-Anstieg verhindert wird und ein gefährlicher Zustand durch Insulinmangel auftreten kann.
+```
 
-A 3 minute video which explains how to edit the docs via PR is available [here](https://www.youtube.com/watch?v=Vo4L6YYxWak).
+```{note}
+**Haftungsausschluss und Warnung**
 
+- Alle Informationen, Gedanken und Code, die hier beschrieben werden, sind ausschließlich zu Informations- und Bildungszwecken bestimmt. Nightscout erfüllt keinerlei Anforderungen des Datenschutzes im Gesundheitswesen. Du verwendest Nightscout und AAPS auf eigenes Risiko. Setze es nicht ein, um Behandlungsentscheidungen zu treffen.
+- Bei Nutzung des Quellcodes von github.com bestehen keinerlei Gewährleistungs- und Garantieansprüche. Es gibt keinen Support. Im Übrigen wird auf die Lizenz verwiesen, die im Repository abgerufen werden kann.
+- Sämtliche Produkt- und Herstellernamen, Handelsmarken, Dienstleistungsmarken, Warenzeichen und eingetragene Dienstleistungsmarken sind Eigentum ihrer jeweiligen Inhaber und werden nur zu Informationszwecken genutzt und nicht für Werbung oder Marketing. Ihre Verwendung dient nur zur Information und bedeutet weder, dass AAPS zu ihnen gehört, noch dass sie unterstützt werden.
+
+Bitte beachten - Dieses Projekt steht in keinerlei Verbindung zu: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) oder [Medtronic](https://www.medtronic.com/).
 ```
 
 ## How to read the documentation?
@@ -47,19 +54,6 @@ There is a subsection for the [clinicians](Resources/clinician-guide-to-AAPS.md)
 
 Finally, in the subsection [How to help?](make-a-PR.md) we would like to provide you with information so that you are able to suggest small or larger changes to the documentation yourself and work together with us on the documentation. We further need support for [translation of the documentation](translations.md) By the way, it also very helpful for everyone if you could provide links to the corresponding documentation (or screenshots of where the links are located within the Documentation if you are not familiar with how to send a link) when answering questions from other users. That way the correct information can easily be located again should other users also be trying to find answers to the same types of questions in the future.
 
-(index-translation-help-needed)=
-
-```{admonition} Ask for help - Translators Neeeded!!!
-:class: note
-
-The documentation is written in English and translated in different languages. We are searching help by the translation of a) the app and b) the documentation.
-
-The translation process is explained [here](translations.md).
-
-The state of the translations per language for app and documentation can be found [here](./Administration/stateTranslations.md).
-
-```
-
 ```{toctree}
 :caption: Change language
 
@@ -68,15 +62,26 @@ Change language <./changelanguage.md>
 ```
 
 ```{toctree}
+:caption: Home
+
+Introduction <./introduction.md>
+
+```
+
+```{toctree}
 :caption: Getting started
 
-Safety first <./Getting-Started/Safety-first.md>
-
-What is a closed loop system <./Getting-Started/ClosedLoop.md>
-
-What is a closed loop system with AAPS <./Getting-Started/WhatisAndroidAPS.md>
+Preparing <preparing.md>
 
 Docs updates & changes <./Getting-Started/WikiUpdate.md>
+
+```
+
+```{toctree}
+:caption: Remote control and following
+
+Remote control <remote-control.md>
+Following-only <following-only.md>
 
 ```
 
@@ -255,9 +260,9 @@ How to help <./Getting-Started/How-can-I-help.md>
 
 How to translate the app and docs <./translations.md>
 
-State of translations <./Administration/stateTranslations.md>
-
 How to edit the docs <./make-a-PR.md>
+
+State of translations <./Administration/stateTranslations.md>
 
 ```
 

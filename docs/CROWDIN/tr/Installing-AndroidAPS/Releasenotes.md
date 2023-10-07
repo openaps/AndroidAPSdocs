@@ -18,7 +18,7 @@ Lütfen bu değişikliğin sizi rahatsız etmeyi amaçlamadığını, ancak güv
 ```{admonition} First version of AAPS
 :class: not
 
-İlk test sürümü 2015'te başladı. In 2016 has been the first released version.
+İlk test sürümü 2015'te başladı. 2016 yılında ilk sürüm yayımlandı.
 
 Bu yayımların kronolojisi şu anda mevcut değil, ancak bu sorular birçok kez sorulduğu için burada dokümante ediyoruz.
 
@@ -45,9 +45,9 @@ Daha eski Android'e sahip kullanıcıların AAPS'nin eski sürümünü kullanmas
 - AAPS **2.6.2** sürümünü kullanın
 - AAPS kodunu <https://github.com/nightscout/AndroidAPS> 2.6.2 şubesinden indirin
 
-## WearOS version
+## WearOS versiyonu
 
-- AAPS 3.2 requires at least WearOS API level 25 (Android 7.1)
+- AAPS 3.2 requires at least WearOS API level 26 (Android 8)
 
 ## Sürüm 3.2.0
 
@@ -62,30 +62,35 @@ Yayınlanma tarihi: XX-XX-2023
 - Tidepool, ilk görevi geçmek için NS yerine kullanılabilir
 - xDrip+'a gönderirseniz, xDrip senkronizasyon eklentisini yapılandırmanız gerekir. AAPS'den xDrip'te KŞ almak için "xDrip+ Sync Follower" kaynağı seçilmelidir.
 - ComboV2 sürücüsüne geçmek istiyorsanız, Ruffy'nin kaldırılması ve pompanın AAPS ile yeniden eşleştirilmesi gerekir.
+- In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
 
 
 ### Değişiklikler
 
 - EOPatch2 / GlucomenDay pompa sürücüsü @jungsomyeonggithub @MilosKozak
 - ComboV2 pompa sürücüsü (Ruffy'ye gerek yok) @dv1
-- Medtrum Nano driver @jbr7rr
+- Medtrum Nano sürücüsü @jbr7rr
 - Kore DanaI desteği @MilosKozak
 - Glunovo CGM desteği @christinadamianou
 - G7 desteği @MilosKozak @rICTx-T1D @khskekec
 - NSClient v3 eklentisi @MilosKozak
 - Tidepool desteği @MilosKozak
 - Yumuşatma eklentisi @MilosKozak, @justmara, Üstel yumuşatma @nichi (Tsunami), Ortalama yumuşatma @jbr7rr
+- DynamicISF plugin @Chris Wilson, @tim2000s
+- New logo @thiagomsoares
+- New watchface @Philoul
 - 3.1 sürümündeki tonlarca sorun düzeltildi
 - daha fazla yere not eklenmesine izin verme @Sergey Zorchenko
-- UI düzeltmeleri @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
+- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
 - yeni SMS komutları LOOP LGS/CLOSED @pzadroga
 - wear çevirileri @Andries-Smit
 - xdrip iletişimi @MilosKozak ayrı modülüne taşındı
 - dahili değişiklikler: güncellenmiş kütüphane sürümleri, rx3 geçişi, yeni modül yapısı @MilosKozak
 - Diaconn sürücü düzeltmeleri @miyeongkim
+- more database maintenance options @MilosKozak
 - AAPSClient ana telefon elektriğe takılıysa bilgi verir @MilosKozak
 - Bolus sihirbazında değişiklik. CGM mevcut değilse, yüzde göz ardı edilir (yani %100 kullanılır)
-- 125 binden fazla yeni kod satırı, 150 bin satır değiştirildi
+- new 150k+ lines of code, changed 156k lines
 
 ## Sürüm 3.1.0
 

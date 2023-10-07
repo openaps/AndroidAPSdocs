@@ -3,7 +3,7 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## אבד ה-keystore
-If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
+If you use the same keystore when updating AAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
 
 If you try to install the apk, signed with a different keystore than before, you will get an error message that the installation failed!
 
@@ -90,7 +90,7 @@ If you receive a failure message like
 
     * השתמשו בסייר הקבצים הרגיל במחשב כדי להעביר או לגזור ולהדביק את הקובץ למקום אחר.
 
-    * חזרו ל-Android Studio ולחצו על כפתור רענן (4) בלשונית Commit כדי לוודא שהקובץ אינו מאוחסן יותר בספריית AndroidAPS.
+    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AAPS directory anymore.
 
       If there are no other changes in the commit tab, go to [Step 3](troubleshooting_androidstudio-step-3-gradle-resync).
 
@@ -163,7 +163,7 @@ Follow the instructions at [Gradle Resync](troubleshooting_androidstudio-step-3-
 
     ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
-  * לחצו לחיצה ימנית על AndroidAPS (2)
+  * Right-click on AAPS (2)
 
   * לחצו על "Reload Gradle Project" (3)
 
@@ -194,7 +194,7 @@ When creating a new keystore for building the signed APK, on Windows the followi
 This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
 
 
-## נתוני סוכר אינם מתקבלים על ידי AndroidAPS
+## No CGM data is received by AAPS
 
 * במקרה שאתם משתמשים באפליקציית Dexcom G6 הפרוצה: אפליקציה זו מיושנת. Use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
 
@@ -229,7 +229,7 @@ If non of the above tips helped you might consider building the app from scratch
 
     או שתצרו מאגר מפתחות חדש.
 
-3. Build app from scratch as described [here](Building-APK-download-androidaps-code).
+3. Build app from scratch as described [here](Building-APK-download-AAPS-code).
 
 4. לאחר בניית ה-APK, מחקו את האפליקציה שבטלפון, העבירו את ה-APK החדש לטלפון והתקינו.
 5. [ייבאו הגדרות](../Usage/ExportImportSettings) שוב כדי לשחזר את המשימות ואת ההגדרות שלכם.

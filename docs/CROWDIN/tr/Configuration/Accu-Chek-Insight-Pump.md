@@ -12,8 +12,8 @@
 
 Not: AAPS, verileri her zaman **pompadaki ilk bazal oran profiline** yazar.
 
-* Bir Android telefon (Temelde her Android sürümü Insight ile çalışır, ancak AndroidAPS'yi çalıştırmak için hangi Android sürümünün gerekli olduğunu [Modül](module-phone) sayfasında kontrol edin.)
-* Telefonunuzda yüklü olan AndroidAPS uygulaması
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](module-phone) page which Android version is required to run AAPS.)
+* The AAPS app installed on your phone
 
 ## Kurulum
 
@@ -21,7 +21,7 @@ Not: AAPS, verileri her zaman **pompadaki ilk bazal oran profiline** yazar.
     
     ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
 
-* AndroidAPS uygulamasının [Konfigürasyon ayarları](../Configuration/Config-Builder) bölümünün, pompa kısmında Accu-Chek Insight'ı seçin
+* In [Config builder](../Configuration/Config-Builder) of the AAPS app select Accu-Chek Insight in the pump section
     
     ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
@@ -40,11 +40,11 @@ Not: AAPS, verileri her zaman **pompadaki ilk bazal oran profiline** yazar.
     
     ![Screenshot of Insight Pairing 3](../images/Insight_Pairing3.png)
 
-* Başardınız! Pompanızı AndroidAPS ile başarılı bir şekilde eşleştirdiğiniz için arkanıza yaslanın.
+* Başardınız! Pat yourself on the back for successfully pairing your pump with AAPS.
     
     ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
 
-* Her şeyin yolunda olduğunu kontrol etmek için, AndroidAPS'de Konfigürasyon ayarlarına geri dönün ve Insight Pump'ın yanındaki dişli çarka dokunarak Insight ayarlarına girin, ardından Insight Pairing'e dokunun, pompa hakkında bazı bilgiler göreceksiniz.
+* To check all is well, go back to Config builder in AAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
     
     ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 
@@ -58,19 +58,19 @@ Not: Pompa ile telefon arasında kalıcı bir bağlantı olmayacaktır. Yalnızc
 
 ![Screenshot of Insight Settings](../images/Insight_settings.png)
 
-AndroidAPS'deki Insight ayarlarında aşağıdaki seçenekleri etkinleştirebilirsiniz:
+In the Insight settings in AAPS you can enable the following options:
 
 * "Rezervuar değişikliklerini günlüğe kaydet": Bu, pompada "kanül dolumu" programını çalıştırdığınızda bir insülin kartuşu değişikliğini otomatik olarak kaydeder.
 
-* "Tüp değişikliklerini günlüğe kaydet": Bu, pompada "tüp doldurma" programını çalıştırdığınızda AndroidAPS veritabanına bir not ekler.
+* "Log tube changes": This adds a note to the AAPS database when you run the "tube filling" program on the pump.
 
-* "Set değişikliğini günlüğe kaydet": Bu, pompada "kanül doldurma" programını çalıştırdığınızda AndroidAPS veritabanına bir not ekler. **Not: Bir set değişikliği, Autosens'i de sıfırlar.**
+* "Log site change": This adds a note to the AAPS database when you run the "cannula filling" program on the pump. **Not: Bir set değişikliği, Autosens'i de sıfırlar.**
 
 * "Pil değişikliklerini günlüğe kaydet": Bu, pompaya yeni bir pil taktığınızda pil değişikliğini kaydeder.
 
-* "Çalışma modu değişikliklerini günlüğe kaydet": Bu, pompayı her başlattığınızda, durdurduğunuzda veya duraklattığınızda AndroidAPS veritabanına bir not ekler.
+* "Log operating mode changes": This inserts a note in the AAPS database whenever you start, stop or pause the pump.
 
-* "Günlük uyarıları": Bu, pompa bir uyarı verdiğinde AndroidAPS veritabanına bir not kaydeder (hatırlatıcılar, bolus ve GBO iptali hariç - bunlar kaydedilmez).
+* "Log alerts": This records a note in the AAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
 
 * "GBO öykünmesini etkinleştir": Insight pompası yalnızca %250'ye kadar geçici bazal oranları (GBO'lar) verebilir. Bu kısıtlamayı aşmak için, %250'den fazla bir GBO talep ederseniz, GBO emülasyonu pompaya ekstra insülin için bir yayma bolus verme talimatı verecektir.
     
@@ -80,7 +80,7 @@ AndroidAPS'deki Insight ayarlarında aşağıdaki seçenekleri etkinleştirebili
 
 * "Otomatik bolus iletiminde titreşimleri devre dışı bırak": Bu, otomatik bolus (SMB veya GBO emülasyonlu geçici bazal) iletirken Insight pompasının titreşimlerini devre dışı bırakır. Bu ayar yalnızca Insight üretici yazılımının (3.x) en son sürümüyle kullanılabilir.
 
-* "Kurtarma süresi": Bu, AndroidAPS'nin başarısız bir bağlantı girişiminden sonra tekrar denemeden önce ne kadar bekleyeceğini tanımlar. 0 ila 20 saniye arasında seçim yapabilirsiniz. Bağlantı sorunları yaşıyorsanız, daha uzun bir bekleme süresi seçin.   
+* "Recovery duration": This defines how long AAPS will wait before trying again after a failed connection attempt. 0 ila 20 saniye arasında seçim yapabilirsiniz. Bağlantı sorunları yaşıyorsanız, daha uzun bir bekleme süresi seçin.   
       
     Örnek min. kurtarma süresi = 5 ve maks. kurtarma süresi = 20   
       
@@ -93,11 +93,11 @@ AndroidAPS'deki Insight ayarlarında aşağıdaki seçenekleri etkinleştirebili
     yeniden dene -> bağlantı yok -> **20** saniye bekleyin.   
     ...
 
-* "Bağlantıyı kesme gecikmesi": Bu, bir işlem tamamlandıktan sonra AndroidAPS'nin pompa bağlantısını kesmek için ne kadar (saniye olarak) bekleyeceğini tanımlar. Varsayılan değer 5 saniyedir.
+* "Disconnect delay": This defines how long (in seconds) AAPS will wait to disconnect from the pump after an operation is finished. Varsayılan değer 5 saniyedir.
 
 Pompanın durdurulduğu süreler için AAPS %0 geçici bazal oranı kaydeder.
 
-AndroidAPS'de Accu-Chek Insight sekmesi, pompanın mevcut durumunu gösterir ve iki düğmesi vardır:
+In AAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
 
 * "Yenile": Pompa durumunu yeniler
 * "Bildirim üzerinden GBO'yu Etkinleştir/Devre Dışı Bırak": Standart bir Insight pompası, bir GBO bittiğinde bir alarm verir. Bu düğme, yapılandırma yazılımına ihtiyaç duymadan bu alarmı etkinleştirmenizi veya devre dışı bırakmanızı sağlar.
@@ -112,17 +112,17 @@ Pompadaki alarmları aşağıdaki gibi yapılandırın:
 * Menü > Ayarlar > Cihaz ayarları > Mod ayarları > Sessiz > Ses > 0 (tüm çubukları kaldırın)
 * Menü > Modlar > Sinyal modu > Sessiz
 
-Bu, pompadan gelen tüm alarmları susturarak AndroidAPS'in bir alarmın sizinle ilgili olup olmadığına karar vermesine olanak tanır. AndroidAPS bir alarmı kabul etmezse, ses seviyesi artacaktır (önce bip, sonra titreşim).
+This will silence all alarms from the pump, allowing AAPS to decide if an alarm is relevant to you. If AAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
 
 (Accu-Chek-Insight-Pump-vibration)=
 
 ### Titreşim
 
-Pompanızın donanım yazılımı sürümüne bağlı olarak, Insight her bolus verildiğinde kısa bir süre titrer (örneğin, AndroidAPS bir SMB yayınladığında veya GBO emülasyonu yayma bir bolus gönderdiğinde).
+Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AAPS issues an SMB or TBR emulation delivers an extended bolus).
 
 * Firmware 1.x: Tasarımda titreşim yok.
 * Firmware 2.x: Titreşim devre dışı bırakılamaz.
-* Firmware 3.x: AndroidAPS, bolus'u sessizce gönderir. (minimum [versiyon 2.6.1.4](Releasenotes-version-2-6-1-4))
+* Firmware 3.x: AAPS delivers bolus silently. (minimum [versiyon 2.6.1.4](Releasenotes-version-2-6-1-4))
 
 Donanım yazılımı sürümünü menüde bulabilirsiniz.
 
@@ -130,7 +130,7 @@ Donanım yazılımı sürümünü menüde bulabilirsiniz.
 
 Döngü sırasında Insight için pil ömrü 10 ila 14 gün maks. 20 gündür. Energizer lityum pil kullanan kullanıcılar bunu bildirmişlerdir.
 
-Insight pompası, çıkarılabilir pili değiştirirken saat gibi temel işlevleri çalışır durumda tutmak için küçük bir dahili pile sahiptir. Pilin değiştirilmesi çok uzun sürerse, bu dahili pilin gücü tükenebilir. Saat sıfırlanırsa yeni bir pil taktıktan sonra yeni bir saat ve tarih girmeniz istenecektir. Böyle bir durumda, pil değişimi öncesindeki AndroidAPS'deki tüm girişler, doğru zaman doğru bir şekilde tanımlanamayacağından artık hesaplamalara dahil edilmeyecektir.
+Insight pompası, çıkarılabilir pili değiştirirken saat gibi temel işlevleri çalışır durumda tutmak için küçük bir dahili pile sahiptir. Pilin değiştirilmesi çok uzun sürerse, bu dahili pilin gücü tükenebilir. Saat sıfırlanırsa yeni bir pil taktıktan sonra yeni bir saat ve tarih girmeniz istenecektir. If this happens, all entries in AAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
 
 (Accu-Chek-Insight-Pump-insight-specific-errors)=
 

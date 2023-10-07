@@ -10,7 +10,7 @@ Neben der Erstellung von Berichten, kann Nightscout auch genutzt werden, um Andr
 
 Du kannst den allgemeinen Zugriff auf Deine Nightscout-Seite mittels [authentication roles](https://nightscout.github.io/nightscout/security) (Benutzer mit verschiedenen Zugriffsrechten) unterbinden.
 
-### AndroidAPS Einstellungen
+### AAPS-Einstellungen
 
 In den AAPS-Einstellungen gibt es eine Funktion, nur Daten zu Nightscout hochzuladen (keine Synchronisierung). Wenn Du diese Funktion wählst, wird AAPS keine Änderungen von Nightscout (z.B. temporäre Ziele oder Kohlenhydrateingaben) übernehmen.
 

@@ -3,7 +3,7 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## Verlorener Keystore
-Wenn Du beim Update von AndroidAPS den selben Keystore verwendest, musst Du die Vorgängerversion von AAPS auf Deinem Smartphone nicht deinstallieren. Daher wird empfohlen, den Keystore an einem sicheren Platz zu speichern.
+If you use the same keystore when updating AAPS you do not have to uninstall the previous version on your smartphone. Daher wird empfohlen, den Keystore an einem sicheren Platz zu speichern.
 
 Wenn Du versuchst das apk zu installieren und es mit einem anderen keystore signiert wurde als zuvor, bekommst Du einen Fehler, dass die Installation fehlgeschlagen ist!
 
@@ -90,7 +90,7 @@ Falls Du eine Fehlermeldung bekommst, die so aussieht
 
     * Benutze deinen Datei Explorer und verschiebe die Datei an einen Ort, außerhalb des Source Code Projekts.
 
-    * Gehe zurück zu Android Studio und klicke den Refresh Button (4) im Commit Tab, um sicherzustellen, dass die Datei nicht mehr im AndroidAPS Projekt liegt.
+    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AAPS directory anymore.
 
       Falls keine weiteren Änderungen im Commit Tab zu sehen sind, gehe zu [Schritt 3](troubleshooting_androidstudio-step-3-gradle-resync).
 
@@ -163,7 +163,7 @@ Folge der Anleitung bei [Gradle Resync](troubleshooting_androidstudio-step-3-gra
 
     ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
-  * Rechtsklick auf AndroidAPS (2)
+  * Right-click on AAPS (2)
 
   * Klicke auf "Reload Gradle Project" (3)
 
@@ -194,7 +194,7 @@ Beim Erstellen eines neuen Keystores zum Erstellen der signierten APK wird unter
 Dies scheint ein Fehler in Android Studio 3.5.1 und seiner Java-Umgebung in Windows zu sein. Der Schlüssel wird korrekt erstellt, aber eine Empfehlung wird fälschlicherweise als Fehler angezeigt. Dies kann momentan ignoriert werden.
 
 
-## No CGM data is received by AndroidAPS
+## No CGM data is received by AAPS
 
 * Falls Du gepatchte Dexcom G6-App verwendest: Diese App ist veraltet. Verwende stattdessen die [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app)  App.
 
@@ -229,7 +229,7 @@ Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, 
 
     Oder verwende einfach einen neuen keystore.
 
-3. Erstelle die App von Grund auf neu wie [hier](Building-APK-download-androidaps-code) beschrieben.
+3. Build app from scratch as described [here](Building-APK-download-AAPS-code).
 
 4. Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
 5. [Importiere Einstellungen](../Usage/ExportImportSettings) erneut, um deine Zielsetzungen und Einstellungen wiederherzustellen.

@@ -283,7 +283,7 @@ Signing means that you indicate your app to be your own creation but in a digita
     
     ![APK namísto možnosti bundle](../images/studioSetup/43_Apk.png)
 
-* Make sure that module is set to "AAPS.app" (1).
+* Make sure that module is set to "AndroidAPS.app" (1).
 
 * Click "Create new..." (2) to start creating your key store.
     

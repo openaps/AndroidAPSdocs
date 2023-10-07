@@ -2,67 +2,67 @@
 
 (Nightscout-security-considerations)=
 
-## Consideraciones de Seguridad
+## Consideraciones de seguridad
 
-Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
+Además de informar, Nightscout también se puede utilizar para controlar AAPS. Es decir, puedes establecer objetivos temporales o agregar carbohidratos futuros. Esta información será recogida por AAPS y actuará en consecuencia. Por lo tanto, vale la pena pensar en securizar tu sitio web de Nightscout.
 
 ### Ajustes de Nightscout
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
+Puedes denegar el acceso público a tu sitio de Nightscout utilizando [roles de autenticación](https://nightscout.github.io/nightscout/security).
 
-### Ajustes en AndroidAPS
+### AAPS settings
 
-There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs.
+Hay una función de sólo carga a NS (sin sincronización) en la configuración de AAPS. Al hacerlo, AAPS no registrará los cambios realizados en Nightscout, como objetivos temporales o carbohidratos futuros.
 
-* Toca el menú de 3 puntos en la esquina superior derecha en la pantalla de inicio de AAPS.
-* Seleccione "preferencias".
-* Desplácese hacia abajo y toque "Configuración avanzada".
-* Activar "sólo carga de NS
+* Toca el menú de tres puntos en la esquina superior derecha de la pantalla de inicio de AAPS
+* Selecciona "Preferencias"
+* Desplázate hacia abajo y toca "Configuración avanzada"
+* Activa "Sólo carga de NS"
 
-![Nightscout upload only](../images/NSsafety.png)
+![Nightscout solo subida](../images/NSsafety.png)
 
-### Ajustes de seguridad adicionales
+### Configuraciones de seguridad adicionales
 
-Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
+Mantén tu teléfono actualizado como se describe en [seguridad primero](../Getting-Started/Safety-first.md).
 
 (Nightscout-manual-nightscout-setup)=
 
 ## Configuración manual de Nightscout
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
+Se asume que ya tienes un sitio de Nightscout; si no lo tienes, visita la página de [Nightscout](http://nightscout.github.io/nightscout/new_user/) para obtener instrucciones completas sobre la configuración. Las siguientes instrucciones son los ajustes que también deberás agregar a tu sitio de Nightscout. Tu sitio de Nightscout debe ser al menos de la versión 10 (mostrado como 0.10...), así que verifica que estás utilizando la [última versión](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version); de lo contrario, recibirás un mensaje de error en tu aplicación AAPS. Algunas personas encuentran usuarios "loopeando" que utilizan más de la cuota gratuita de Azure, por lo que Heroku es la opción preferida.
 
 * Ve a https://herokuapp.com/
 
-* Pincha en App Service name
+* Haz clic en el nombre de tu servicio de aplicaciones
 
-* Pincha en Application settings (azure) or Settings(ajustes) > "Reveal Config Variables (heroku)
+* Haz clic en "Configuración de la aplicación" (Azure) o "Settings> "Reveal Config Variables" (Heroku).
 
-* Añade o edita las variables siguientes:
+* Agrega o edita las variables de la siguiente manera:
   
-  * ENABLE = careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps
-  * DEVICESTATUS_ADVANCED = true
+  * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps`
+  * `DEVICESTATUS_ADVANCED` = `true`
   * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
+  * Se pueden configurar varias alarmas para [monitorear la bomba](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), se recomienda en particular la alarma de porcentaje de batería: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
 ![Azure](../images/nightscout1.png)
 
-* Pinchar en guardar arriba en el panel.
+* Haz clic en "Save" en la parte superior del panel.
 
-## Configuración de Nightscout semi automatizada
+## Configuración semi-automatizada de Nightscout
 
-Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
+El compañero looper Martin Schiftan ofreció una configuración semi-automatizada de Nightscout durante muchos años de forma gratuita. A medida que aumentó el número de usuarios, también aumentaron los costos y, por lo tanto, tuvo que comenzar a cobrar una pequeña tarifa a partir de octubre de 2021, que parte de 4,17€ al mes.
 
-**Benefits**
+**Beneficios**
 
-* Puede instalar Nightscout con un par de clics y usarlo directamente. 
-* Reducción del trabajo manual mientras Martin trata de automatizar la administración.
+* Puedes instalar Nightscout con unos pocos clics y usarlo directamente. 
+* Reducción del trabajo manual, ya que Martin intenta automatizar la administración.
 * Todos los ajustes se pueden realizar a través de una interfaz web fácil de usar. 
-* El servicio incluye una verificación automática de la tasa basal usando Autotune. 
-* The servers are located in Germany and Finland.
+* El servicio incluye una verificación automatizada de la tasa basal utilizando Autotune. 
+* Los servidores están ubicados en Alemania y Finlandia.
 
 <https://ns.10be.de/en/index.html>
 
-An alternative would be <https://t1pal.com/> - starting at $11,99 per month.
+Otra alternativa sería <https://t1pal.com/> - a partir de 11,99$ al mes.

@@ -1,4 +1,4 @@
-# AndroidAPS 2.6'dan güncelleme sonrası gerekli kontroller
+# Necessary checks after update coming from AAPS 2.6
 
 - AAPS 2.7'ye geçilirken program kodu önemli ölçüde değiştirildi.
 - Bu nedenle güncellemeden sonra bazı değişiklikler yapmanız veya ayarları kontrol etmeniz önemlidir.

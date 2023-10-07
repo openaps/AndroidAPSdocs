@@ -47,9 +47,9 @@ In order to allow users with older Android to use older version of AAPS new vers
 
 ## WearOS version
 
-- AAPS 3.2 requires at least WearOS API level 25 (Android 7.1)
+- AAPS 3.2 requires at least WearOS API level 26 (Android 8)
 
-## Version 3.2.0
+## Έκδοση 3.2.0
 
 Release date: XX-XX-2023
 
@@ -62,6 +62,7 @@ Release date: XX-XX-2023
 - Tidepool can be used as a replacement of NS to pass first objective
 - If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip it must be selected source "xDrip+ Sync Follower"
 - If you want to switch to ComboV2 driver, Ruffy must be uninstalled and pump paired again to AAPS
+- In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
 
 
 ### Changes
@@ -75,21 +76,25 @@ Release date: XX-XX-2023
 - NSClient v3 plugin @MilosKozak
 - Tidepool support @MilosKozak
 - Smoothing plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
+- DynamicISF plugin @Chris Wilson, @tim2000s
+- New logo @thiagomsoares
+- New watchface @Philoul
 - fixed tons of issues from 3.1 version
 - allow add notes on more places @Sergey Zorchenko
-- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
+- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
 - new SMS commands LOOP LGS/CLOSED @pzadroga
 - wear translations @Andries-Smit
 - xdrip communication moved to separate module @MilosKozak
 - internal changes: updated libs versions, rx3 migration, new modules structure @MilosKozak
 - Diaconn driver fixes @miyeongkim
+- more database maintenance options @MilosKozak
 - AAPSClient provides info if main phone is plugged in electricity @MilosKozak
 - Change in BolusWizard. If CGM is not available percentage is ignored (ie 100% is used)
-- new 125k+ lines of code, changed 150k lines
+- new 150k+ lines of code, changed 156k lines
 
-## Version 3.1.0
+## Έκδοση 3.1.0
 
-Release date: 19-07-2022
+Ημερομηνία κυκλοφορίας: 19-07-2022
 
 (Releasenotes-important-hints-3-1-0)=
 ### Important hints
@@ -115,9 +120,9 @@ Release date: 19-07-2022
 - MDI plugin removed in favor of VirtualPump
 - new automation action: StopProcessing (following rules)
 
-## Version 3.0.0
+## Έκδοση 3.0.0
 
-Release date: 31-01-2022
+Ημερομηνία κυκλοφορίας: 31-01-2022
 
 (Releasenotes-important-hints-3-0-0)=
 ### Important hints
@@ -201,9 +206,9 @@ Release date: 31-01-2022
   - /AAPS/logs /AAPS/exports
   - /AAPS/preferences
 
-## Version 2.8.2
+## Έκδοση 2.8.2
 
-Release date: 23-01-2021
+Ημερομηνία κυκλοφορίας: 23-01-2021
 
 - Please see also [important hints for version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) below.
 
@@ -216,9 +221,9 @@ Release date: 23-01-2021
 - NSClient fixes
 - Bolus advisor now works with Pumpcontrol and NSClient
 
-## Version 2.8.1.1
+## Έκδοση 2.8.1.1
 
-Release date: 12-01-2021
+Ημερομηνία κυκλοφορίας: 12-01-2021
 
 (important-hints-2-8-1-1)
 ### Important hints
@@ -240,12 +245,12 @@ Release date: 12-01-2021
 - RS driver improvement
 - various crashes fixed
 - UI fixes and improvements
-- new translations
+- νέες μεταφράσεις
 
 (Releasenotes-version-2-8-0)=
-## Version 2.8.0
+## Έκδοση 2.8.0
 
-Release date: 01-01-2021
+Ημερομηνία κυκλοφορίας: 01-01-2021
 
 ### Important hints
 
@@ -273,9 +278,9 @@ Release date: 01-01-2021
 - Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
 
 (Releasenotes-version-2-7-0)=
-## Version 2.7.0
+## Έκδοση 2.7.0
 
-Release date: 24-09-2020
+Ημερομηνία κυκλοφορίας: 24-09-2020
 
 **Make sure to check and adjust settings after updating to 2.7 as described** [here](../Installing-AndroidAPS/update2_7.md).
 
@@ -312,9 +317,9 @@ You need at least start [objective 11 (in later versions objective 10!)](Objecti
 - New documentation @Achim
 
 (Releasenotes-version-2-6-1-4)=
-## Version 2.6.1.4
+## Έκδοση 2.6.1.4
 
-Release date: 04-05-2020
+Ημερομηνία κυκλοφορίας: 04-05-2020
 
 Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
@@ -323,9 +328,9 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 - Insight: Disable vibration on bolus for firmware version 3 - second attempt
 - Otherwise is equal to 2.6.1.3. Update is optional.
 
-## Version 2.6.1.3
+## Έκδοση 2.6.1.3
 
-Release date: 03-05-2020
+Ημερομηνία κυκλοφορίας: 03-05-2020
 
 Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
@@ -334,9 +339,9 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 - Insight: Disable vibration on bolus for firmware version 3
 - Otherwise is equal to 2.6.1.2. Update is optional.
 
-## Version 2.6.1.2
+## Έκδοση 2.6.1.2
 
-Release date: 19-04-2020
+Ημερομηνία κυκλοφορίας: 19-04-2020
 
 Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
@@ -345,9 +350,9 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 - Fix crashing in Insight service
 - Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
 
-## Version 2.6.1.1
+## Έκδοση 2.6.1.1
 
-Release date: 06-04-2020
+Ημερομηνία κυκλοφορίας: 06-04-2020
 
 Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
@@ -356,9 +361,9 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 - Resolves SMS CARBS command issue while using Combo pump
 - Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
 
-## Version 2.6.1
+## Έκδοση 2.6.1
 
-Release date: 21-03-2020
+Ημερομηνία κυκλοφορίας: 21-03-2020
 
 Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
@@ -376,9 +381,9 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 - Fixed sending of calibrations to xDrip
 
 (Releasenotes-version-2-6-0)=
-## Version 2.6.0
+## Έκδοση 2.6.0
 
-Release date: 29-02-2020
+Ημερομηνία κυκλοφορίας: 29-02-2020
 
 Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
@@ -434,16 +439,16 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - Tons on new translations
 
-## Version 2.5.1
+## Έκδοση 2.5.1
 
-Release date: 31-10-2019
+Ημερομηνία κυκλοφορίας: 31-10-2019
 
 Please note the [important notes](Releasenotes-important-notes-2-5-0) and [limitations](Releasenotes-is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](Releasenotes-version-2-5-0). \* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things). \* New versioning that will allow to do minor updates without triggering the update-notification.
 
 (Releasenotes-version-2-5-0)=
-## Version 2.5.0
+## Έκδοση 2.5.0
 
-Release date: 26-10-2019
+Ημερομηνία κυκλοφορίας: 26-10-2019
 
 (Releasenotes-important-notes-2-5-0)=
 
@@ -455,7 +460,7 @@ Release date: 26-10-2019
 - Glimp is supported from version 4.15.57 and newer.
 
 (Releasenotes-is-this-update-for-me-currently-is-not-supported)=
-### Is this update for me? Currently is NOT supported
+### Είναι αυτή η ενημερωμένη έκδοση για μένα; Επί του παρόντος ΔΕΝ υποστηρίζεται
 
 - Android 5 and lower
 - Poctech
@@ -466,28 +471,28 @@ Release date: 26-10-2019
 
 - Internal change of targetSDK to 28 (Android 9), jetpack support
 - RxJava2, Okhttp3, Retrofit support
-- Old [Medtronic pumps](../Configuration/MedtronicPump.md) support (RileyLink need)
+- Παλιές [Medtronic αντλίες](../Configuration/MedtronicPump.md) υποστηρίζονται (RileyLink αναγκαίο)
 - New [Automation plugin](../Usage/Automation.md)
 - Allow to [bolus only part](Preferences-advanced-settings-overview) from bolus wizard calculation
 - Rendering insulin activity
 - Adjusting IOB predictions by autosens result
 - New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
-- Signature verifier
+- Έλεγχος υπογραφής
 - Allow to bypass objectives for OpenAPS users
 - New [objectives](../Usage/Objectives.md) - exam, application handling (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
 - Fixed bug in Dana\* drivers where false time difference was reported
 - Fixed bug in [SMS communicator](../Children/SMS-Commands.md)
 
-## Version 2.3
+## Έκδοση 2.3
 
-Release date: 25-04-2019
+Ημερομηνία κυκλοφορίας: 25-04-2019
 
 ### Σημαντικά νέα χαρακτηριστικά
 
 - Important safety fix for Insight (really important if you use Insight!)
 - Fix History-Browser
 - Fix delta calculations
-- Language updates
+- Ενημέρωση γλωσσών
 - Check for GIT and warn on gradle upgrade
 - More automatic testing
 - Fixing potential crash in AlarmSound Service (thanks @lee-b !)

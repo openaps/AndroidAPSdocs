@@ -4,7 +4,7 @@ Vous pouvez trouver des informations de dépannage sur de nombreuses pages dans 
 
 D'autres informations utiles peuvent également être disponibles dans la rubrique [FAQ](../Getting-Started/FAQ.html).
 
-## Application AndroidAPS
+## AAPS app
 
 ### Génération et mise à jour
 
@@ -18,7 +18,7 @@ D'autres informations utiles peuvent également être disponibles dans la rubriq
 
 * [Pompe - données provenant de différentes pompes](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
 
-  ![Message d'erreur : Données provenant de pompes différentes](../images/BasalNotAlignedToHours2.png)
+  ![Message d'échec : Données provenant de pompes différentes](../images/BasalNotAlignedToHours2.png)
 
 * [Client Nightscout](../Usage/Troubleshooting-NSClient.html)
 

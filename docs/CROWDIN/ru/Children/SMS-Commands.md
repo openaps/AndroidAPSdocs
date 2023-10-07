@@ -25,6 +25,8 @@
 
 - In AAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
 
+- Note that the "+" in front of the number may or may not be required based on your location. To determine this send a sample text which will show the received format in the SMS Communicator tab.
+
 - Enable 'Allow remote commands via SMS'.
 
 - Если вы хотите использовать более одного номера:
@@ -167,7 +169,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 - HELP BOLUS \* Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
 (SMS-Commands-troubleshooting)=
-## Troubleshooting
+## Устранение неполадок
 
 ### Multiple SMS
 

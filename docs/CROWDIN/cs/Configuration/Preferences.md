@@ -215,13 +215,13 @@
 (Preferences-status-lights)=
 ### Stavové indikátory
 
-- Status lights give a visual warning for
+- Stavové indikátory zobrazují vizuální varování pro
 
-  - Sensor age
+  - Stáří senzoru
   - Sensor battery level for certain smart readers (see [screenshots page](Screenshots-sensor-level-battery) for details).
-  - Insulin age (days reservoir is used)
-  - Reservoir level (units)
-  - Cannula age
+  - Stáří inzulínu (doba použití aktuálního zásobníku)
+  - Stav zásobníku (jednotky)
+  - Stáří kanyly
   - Pump battery age
   - Pump battery level (%)
 
@@ -393,7 +393,7 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 
 - A threshold can be defined - minimum amount of carbs needed to trigger a notification.
 
-- Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+- V případě potřeby může být notifikace vyžadovaných sacharidů odeslána do Nightscoutu. Notifikace se pak zobrazí v Nightscoutu a bude vysílána.
 
   ```{image} ../images/Pref2020_CarbsRequired.png
   :alt: Zobrazení požadovaných sacharidů na domovské obrazovce
@@ -451,7 +451,7 @@ The options here will vary depending on which pump driver you have selected in [
 - [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Medtronic Pump](../Configuration/MedtronicPump.md)
 
-Používáte-li AndroidAPS pouze jako otevřenou smyčku, vyberte v nastavení Virtuální pumpu.
+If using AAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
 (Preferences-nsclient)=
 ## NSClient
@@ -461,7 +461,7 @@ Používáte-li AndroidAPS pouze jako otevřenou smyčku, vyberte v nastavení V
 ```
 
 - Set your *Nightscout URL* (i.e. <https://yourwebsitename.herokuapp.com>) and the *API secret* (a 12 character password recorded in your Heroku variables).
-- This enables data to be read and written between both the Nightscout website and AndroidAPS.
+- This enables data to be read and written between both the Nightscout website and AAPS.
 - Double check for typos here if you are stuck in Objective 1.
 - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
 - *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS).

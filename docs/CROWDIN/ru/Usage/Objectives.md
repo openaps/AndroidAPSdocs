@@ -1,94 +1,94 @@
 # Цели
 
-AndroidAPS ставит ряд Целей, которые необходимо выполнить, чтобы подготовиться к свойствам и параметрам настроек для безопасной работы алгоритма ИПЖ.  Цели позволяют удостовериться, что все сконфигурировано правильно, что мы понимаем, что, как и почему делает система и что мы можем доверять ей.
+AAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping.  Цели позволяют удостовериться, что все настроено правильно, что вы понимаете что, как и почему делает программа, и что ей можно доверять.
 
-If you are **upgrading phones** then you can [export your settings](../Usage/ExportImportSettings.md) to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to [backup your settings](../Usage/ExportImportSettings.html) frequently just in case.
+Если вы **обновляете телефон**, то можете [экспортировать настройки](../Usage/ExportImportSettings.md) чтобы сохранить прохождение целей. При этом будут сохранен не только ваш прогресс в прохождении целей, но и настройки безопасности, такие как максимальный болюс и т. п. Если вы не сделаете экспорт-импорт настроек - вам придется заново проходить все цели.  Рекомендуется периодически [делать бекап актуальных настроек](../Usage/ExportImportSettings.html),  на всякий случай.
 
-If you want to go back in objectives see [explanation below](Objectives-go-back-in-objectives).
+Если вы захотите снова пройти цели - смотрите [объяснения ниже](Objectives-go-back-in-objectives).
 
 ## Цель 1: Настройка визуализации и мониторинга, анализ базальной скорости и коэффициентов
 
-- Select the right blood glucose source for your setup.  See [BG Source](../Configuration/BG-Source.md) for more information.
-- Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.
-- If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
-- Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure Nightscout can receive and display this data.
-- Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see [NSClient settings in Preferences](Preferences-nsclient).
+- Выберите свой источник данных ГК.  См. [Источники ГК](../Configuration/BG-Source.md) для дополнительной информации.
+- Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AAPS driver for looping) to ensure your pump status can communicate with AAPS.
+- If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AAPS.
+- Следуйте инструкциям по настройке [Nightscout](../Installing-AndroidAPS/Nightscout.md), чтобы он мог получать и отображать данные ГК и терапии из AndroidAPS.
+- Обратите внимание: URL в Клиенте NS **не должен содержать строку /api/v1/** в конце - см. подробнее в [настройках Клиент NS](Preferences-nsclient).
 
-*You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
+*You may need to wait for the next blood glucose reading to arrive before AAPS will recognise it.*
 
-## Цель 2: научиться контролировать AndroidAPS
+## Objective 2: Learn how to control AAPS
 
-- Perform several actions in AndroidAPS as described in this objective.
+- Perform several actions in AAPS as described in this objective.
 
-- Click on the orange text "Not completed yet" to access the to-dos.
+- Нажмите на оранжевый текст «Не завершено» для доступа к каждому заданию.
 
-- Links will be provided to guide you in case you are not familiar with a specific action yet.
+- Если вы еще не знакомы с конкретным действием - вам будут предоставлены ссылки на инструкции из этой документации.
 
   ```{image} ../images/Objective2_V2_5.png
   :alt: снимок экрана Цель 2
   ```
 
 (Objectives-objective-3-prove-your-knowledge)=
-## Цель 3: доказательство знаний
+## Цель 3: Подтвердите ваши знания
 
-- Pass a multiple-choice exam testing your AndroidAPS knowledge.
+- Pass a multiple-choice exam testing your AAPS knowledge.
 
-- Click on the orange text "Not completed yet" to access the page with the question and answering options.
+- Чтобы открыть сам вопрос и варианты ответов на него - нажмите на оранжевый текст "Не завершено".
 
   ```{image} ../images/Objective3_V2_5.png
   :alt: снимок экрана Цель 3
   ```
 
-- Links will be provided to guide you in case you are unsure about the correct answers yet.
+- Если вам требуется помощь с поиском правильного ответа - воспользуйтесь приложенной к вопросу ссылкой на соответствующую статью из этой документации.
 
-- The questions for objective 3 have been completely rewritten by native speakers as of AAPS 2.8. Новые темы охватывают те же основные вопросы плюс несколько новых.
+- Для версии 2.8 вопросы 3 цели были полностью переработаны носителями языка. Они охватывают как прежние базовые темы, так и несколько новых.
 
-- These new questions will lead to some not answered questions even though you have successfully completed objective 3 in previous versions.
+- Поэтому, если вы проходили 3 цель в предыдущих версиях программы - у вас появятся новые неотвеченные вопросы.
 
-- Unanswered questions will affect you only if you start a new objective. Другими словами, если вы уже достигли всех целей, вы можете подождать и отвечать на новые вопросы позже, не теряя функционал AAPS.
+- Неотвеченные вопросы окажут влияние только в том случае, если вы еще не прошли все цели и приступаете к новой. Другими словами, если вы уже прошли все цели ранее - вы можете ответить на новые вопросы позднее, не теряя функционал AAPS.
 
-## Цель 4: Начало на незамкнутом цикле
+## Цель 4: Начните с открытого цикла
 
-- Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
-- Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Убедитесь, что эти данные представлены в AndroidAPS и Nightscout.
-- Enable [temp targets](../Usage/temptarget.md) if necessary. Используйте врем. цели для купирования гипогликемии чтобы предотвратить слишком сильные коррекции после гипо.
+- Выберите открытый цикл либо в настройках, либо нажав кнопку "Открытый цикл" в левом верхнем углу главного экрана.
+- Зайдите в [Настройки](../Configuration/Preferences.md) и измените их исходя из своих потребностей.
+- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AAPS that you have accepted them.  Ensure this data shows in AAPS and Nightscout.
+- Применяйте [временные цели (ВЦ)](../Usage/temptarget.md) при необходимости. Используйте ВЦ Гипо для купирования гипогликемии, чтобы предотвратить слишком активное скалывание растущей после купирования гипо ГК.
 
 ### Сократите количество уведомлений
 
-- To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l.
+- Для сокращения количества предложений во время работы в режиме Открытого цикла установите широкий целевой диапазон, например, 90-150 мг/дл или 5,0-8,5 ммоль/л.
 
-- You might even want to wider upper limit (or disable Open Loop) at night.
+- Возможно, вы захотите увеличить верхнюю границу диапазона на ночь (или вовсе отключить цикл на это время).
 
-- In Preferences you can set a minimum percentage for suggestion of basal rate change.
+- В Настройках можно указать процент изменения базала, "минимальный запрос на изменения", при превышении которого система предложит вам внести соответствующие изменения в помпе.
 
   ```{image} ../images/OpenLoop_MinimalRequestChange2.png
   :alt: изменение минимального запроса на незамкнутом цикле
   ```
 
-- Also, you do not need to act every 5 minutes on all suggestions...
+- Необязательно принимать все-все предложения алгоритма каждые 5 минут...
 
-## Глубже понимаем незамкнутую систему Open Loop, включая ее рекомендации по временным базалам
+## Цель 5: Глубже понимаем работу системы в режиме незамкнутого цикла, включая ее рекомендации по временным базалам
 
-- Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AndroidAPS homescreen](Screenshots-prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+- Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AAPS homescreen](Screenshots-prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
 
-До тех пор, пока мы не убедимся в правильности вычислений и настроек, целевые значения гликемии следует несколько завышать.  Система позволяет
+Целевые значения гликемии следует несколько завысить до тех пор, пока вы не убедитесь в правильности всех вычислений и настроек.  Система позволяет
 
-- a low target to be a minimum of 4 mmol (72 mg/dl) or maximum of 10 mmol (180 mg/dl)
-- a high target to be a minimum of 5 mmol (90 mg/dl) and maximum of 15 mmol (225 mg/dl)
+- установить нижнюю границу целевого значения ГК в диапазоне между 4 ммоль/л (72 мг/дл) и 10 ммоль/л (180 мг/дл)
+- установить верхнюю границу целевого значения ГК в диапазоне между 5 ммоль/л (90 мг/дл) и 15 ммоль/л (225 мг/дл)
 - a temporary target as a single value can be anywhere in the range of 4 mmol to 15 mmol (72 mg/dl to 225 mg/dl)
 
-Целевое значение - это значение, на котором основываются расчеты, а не то же самое, что долгосрочные целевые значения вашей ГК.  If your target is very wide (say, 3 or more mmol \[50 mg/dl or more\] wide), you will often find little AAPS action. Это связано с тем, что конечные значения ГК предполагаются где-то в этом широком диапазоне и, следовательно, не происходит много изменений базальной скорости.
+Целевое значение - это значение, на котором основываются расчеты, это не тот диапазон, в рамках которого вам надо стараться удерживать вашу ГК.  Если ваш целевой диапазон очень широк (скажем, 3 или более ммоль/л \[ 50 мг/дл или более\]), то AAPS будет редко запрашивать какие-либо изменения. Это связано с тем, что расчетные значения ГК будут располагаться где-то в этом широком диапазоне и, следовательно, изменения базальной скорости не потребуются.
 
-You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol \[20 mg/dl or less\] wide) and observe how the behavior of your system changes as a result.
+Можете поэкспериментировать и задать более узкий диапазон значений (например, чтобы разность между нижней и верхней границами не превышала 1 ммоль/л) и понаблюдать, как при этом изменится поведение системы.
 
-You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
+Для визуализации на графике того целевого диапазона, в котором надо удерживать ГК (зеленая область), установите границы этого диапазона в [Настройках](../Configuration/Preferences.md) > Начало > Диапазон для визуализации.
 
 ```{image} ../images/sign_stop.png
 :alt: знак "Стоп"
 ```
 
-### Остановитесь здесь, если пользуетесь незамкнутым циклом с виртуальной помпой - не нажимайте на кнопку «Верифицировать» в конце цели.
+### Остановитесь здесь, если пользуетесь открытым циклом с виртуальной помпой - не нажимайте на кнопку «Подтвердить» в конце цели.
 
 ```{image} ../images/blank.png
 :alt: пусто
@@ -103,7 +103,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 ### Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend. High BG values have to be corrected manually by you!
 
-- Prerequisite: You need a good profile (basal, ISF, IC) already working in AndroidAPS to start with Loop in Low Glucose Suspend mode. Otherwise you can run in a hypo which you have to manually correct. This will help you a lot to avoid having to treat a low glucose over a period of 5 days. **If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios and do NOT start objective 6 at this time.**
+- Prerequisite: You need a good profile (basal, ISF, IC) already working in AAPS to start with Loop in Low Glucose Suspend mode. Otherwise you can run in a hypo which you have to manually correct. This will help you a lot to avoid having to treat a low glucose over a period of 5 days. **If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios and do NOT start objective 6 at this time.**
 - You don't have to change your settings now. During objective 6, the maxIOB setting is internally set to zero automatically. **This override will be reversed when moving to objective 7.**
 - The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you. If blood glucose is rising then it will only increase basal if the basal IOB is negative from a previous Low Glucose Suspend. Otherwise basal rates will remain the same as your selected profile. **That means that you have to manually handle high values with insulin corrections.**
 - If your basal IOB is negative (see screenshot below) a TBR > 100% can be issued also in objective 6.
@@ -118,7 +118,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 - Возможны временные пики вслед за мерами против гипогликемии без возможности увеличить базу на откате._
 
 (Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets)=
-## Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
+## Цель 7: Настройка замкнутого цикла с поднятием макс величины IOB выше 0 и постепенным понижением целевой ГК
 
 - Select 'Closed Loop' either from [Preferences](../Configuration/Preferences.md) or by pressing and holding the Loop icon at the top right corner of the home screen, over a period of 1 day.
 
@@ -133,26 +133,31 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 - Once confident on how much IOB suits your looping patterns, then reduce your targets to your desired level.
 
 (Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)=
-## Цель 8: При необходимости скорректируйте базал и коэффициенты и затем активируйте авто-чувствительность autosens
+## Цель 8: Настраиваем базал и коэффициенты с последующей активацией auto-sens
 
 - You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
-- Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
+- Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AAPS is adjusting the basals and/or targets accordingly.
 
-*Don’t forget to record your looping in* [this form](https://bit.ly/nowlooping) *logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
+*Don’t forget to record your looping in* [this form](https://bit.ly/nowlooping) *logging AAPS as your type of DIY loop software, if you have not already done so.*
 
 (Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
-## Цель 9: Активация таких дополнительных функций алгоритма oref1 для работы в дневное время, как супер микроболюс SMB
+## Цель 9: Активация таких дополнительных функций для дневного времени как супер микро болюс SMB
 
-- You must read the [SMB chapter in this wiki](Open-APS-features-super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
-- Then you ought to [rise maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxIOB теперь включает весь активный инсулин IOB, а не только добавленный базал. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) for an illustration)
-- min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. Если вы переходите с AMA к SMB, то вам нужно изменить его вручную.
+- Следует прочитать [раздел СМБ в этой документации](Open-APS-features-super-micro-bolus-smb) и [главу oref1 в документации по openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) чтобы понять, как работает СМБ, и какая идея стоит за отключением базала при использовании этого алгоритма.
+- Затем следует [поднять maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob), чтобы заставить СМБ работать должным образом. maxIOB теперь учитывает весь активный инсулин IOB, а не только дополнительный базал. То есть, если подан болюс 8 ед. на еду, а maxIOB равен 7 ед., то СМБ не будет подан до тех пор, пока активный инсулин IOB не упадет ниже 7 ед. Хорошим стартом является расчет maxIOB = средний подаваемый на еду болюс + 3 максимальных ежедневных базала (макс. ежедневный базал = максимальное значение базальной скорости в течении дня) - см. [Цель 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets)
+- При переходе с алгоритма AMA на СМБ значение усвоения углеводов по умолчанию (min_5m_carbimpact) изменится с 3 до 8. Если вы переходите с AMA на СМБ - вам нужно изменить это значение самостоятельно.
 
 (Objectives-objective-10-automation)=
 ## Цель 10: Автоматизация
 
-- You have to start objective 10 to be able to use [Automation](../Usage/Automation.md).
-- Make sure you have completed all objectives including exam [Objectives-objective-3-prove-your-knowledge](Objectives#objective-3-prove-your-knowledge).
-- Completing previous objectives will not effect other objectives you have already finished. You will keep all finished objectives!
+- Вы должны начать цель 10 для использования [Автоматизации](../Usage/Automation.md).
+- Убедитесь, что вы завершили все предыдущие цели, включая [Цель 3: Подтвердите ваши знания](Objectives#objective-3-prove-your-knowledge).
+- Повторное прохождение более ранних целей не приведет к сбросу более поздних, если они уже были успешно завершены. You will keep all finished objectives!
+
+(Objectives-objective-11-DynamicISF)=
+## Objective 11: Additional Features such as DynamicISF
+
+- You have to start objective 11 to be able to use [DynamicISF](../Usage/Open-APS-features.md)
 
 (Objectives-go-back-in-objectives)=
 ## Возможность возврата к предыдущим целям
@@ -165,4 +170,4 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 ## Цели в Android APS до версии 3.0
 
-Одна из целей была удалена после выхода Android APS 3.0.  Users of Android APS version 2.8.2.1 who are on older Android software (i.e. earlier than version 9) will be using an older set of objectives which can be found [here](../Usage/Objectives_old.md).
+Одна из целей была удалена после выхода Android APS 3.0.  Для пользователей Android APS версии 2.8.2.1 на старых телефонах (версия ОС Android ниже 9) будет использован прежний набор целей, который можно найти [тут](../Usage/Objectives_old.md).

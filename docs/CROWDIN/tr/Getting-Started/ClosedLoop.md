@@ -26,7 +26,7 @@ Otopilot, pilotun özelliklerine olduğu kadar sensör değerlerine de bağlı o
 
 ### AndroidAPS (AAPS)
 
-AndroidAPS, [bu dokümanda](./WhatisAndroidAPS.html) ayrıntılı olarak açıklanmıştır. İnsülin pompanızın hesaplanması ve kontrolü için bir Android Akıllı Telefon kullanır. OpenAPS ile güçlü bir işbirliği içindedir (yani algoritmaları paylaşırlar).
+AAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). İnsülin pompanızın hesaplanması ve kontrolü için bir Android Akıllı Telefon kullanır. OpenAPS ile güçlü bir işbirliği içindedir (yani algoritmaları paylaşırlar).
 
 Uyumlu [pompalar](../Hardware/pumps.md) şunlardır:
 

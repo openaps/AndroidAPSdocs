@@ -8,7 +8,7 @@ Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans
 
 ## Interface utilisateur Autotune
 
-![Autotune écran par défaut](../images/Autotune/Autotune_1.png)
+![Autotune écran par défaut](../images/Autotune/Autotune_1b.png)
 
 - Vous pouvez sélectionner le profil d'entrée que vous voulez régler dans le menu déroulant Profil (par défaut, votre profil actif actuel est sélectionné)
   - Remarque : chaque fois que vous sélectionnez un nouveau profil, les résultats précédents seront supprimés et le paramètre Nb jours sera défini à la valeur par défaut
@@ -17,23 +17,23 @@ Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans
 - Dernier run affiche la date du dernier calcul et permet d'afficher votre dernier calcul valide. Si vous n'avez pas lancé Autotune le jour en cours, ou si les résultats précédents ont été supprimés avec une modification du paramètre de calcul ci-dessus, vous pouvez alors récupérer les paramètres et les résultats de la dernière exécution réussie.
 - L'avertissement vous montre par exemple des informations sur le profil sélectionné (si vous avez plusieurs valeurs G/I ou plusieurs valeurs SI)
   - Remarque : Le calcul Autotune fonctionne avec une seule valeur de G/I et une seule valeur de SI. Il n'existe actuellement aucun algorythme Autotune pour ajuster un G/I circadien ou une SI circadienne. Si votre profil d'entrée a plusieurs valeurs, vous pouvez voir dans la section Avertissement la valeur moyenne prise en compte pour calculer votre profil.
-- Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, DIA, IC, ISF, basal and target)
-  - Remarque : Autotune ne réglera que le G/I (valeur unique), la SI (valeur unique) et les débits de basal (avec variation circadienne). Units, DIA and target will remain unchanged in output profile.
+- Le bouton Vérifiez Profil d'entrée permet d'ouvrir la Visionneuse de Profil pour vous permettre de faire une vérification rapide de votre profil (unités, DAI, G/I, SI, basal et cible)
+  - Remarque : Autotune ne réglera que le G/I (valeur unique), la SI (valeur unique) et les débits de basal (avec variation circadienne). Les unités, la DAI et les cibles resteront inchangées dans le profil de sortie.
 
 - "Lancer Autotune" exécutera le calcul Autotune avec le profil et le nombre de jours sélectionnés
   - Remarque : Le calcul Autotune peut prendre beaucoup de temps. Une fois lancé, vous pouvez passer à une autre vue (écran d'accueil ...) et revenir plus tard dans le plugin Autotune pour voir les résultats
 
-![Démarrage Run Autotune](../images/Autotune/Autotune_2.png)
+![Démarrage Run Autotune](../images/Autotune/Autotune_2b.png)
 
 - Ensuite, au cours de l'exécution vous verrez les résultats intermédiaires ci-dessous
 
   - Remarque : Pendant l'exécution, les paramètres sont verrouillés, vous ne pouvez donc plus modifier le profil d'entrée sélectionné ou le nombre de jour. Vous devrez attendre la fin du calcul actuel si vous voulez lancer un nouveau calcul avec d'autres paramètres.
 
-  ![Autotune lors de l'exécution](../images/Autotune/Autotune_3.png)
+  ![Autotune lors de l'exécution](../images/Autotune/Autotune_3b.png)
 
 - Une fois le calcul automatique terminé, vous verrez le résultat (Tuned Profil) et les quatre boutons ci-dessous.
 
-![Résultat Autotune](../images/Autotune/Autotune_4.png)
+![Résultat Autotune](../images/Autotune/Autotune_4b.png)
 
 - Il est important de toujours comparer le profil d'entrée (colonne "Profil"), le profil de sortie (colonne "Tuned") et le pourcentage de variation pour chaque valeur (colonne "%").
 
@@ -41,7 +41,7 @@ Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans
 
 - Le bouton « Comparer les profils » ouvre la vue Comparateur de profil. Le profil d'entrée est en bleu, et le profil de sortie (nommé "Tuned") est en rouge.
 
-  - Remarque : dans l'exemple ci-dessous, le profil d'entrée a une variation circadienne pour le G/I et la SI, mais le profil calculé en sortie a une seule valeur. Si pour vous il est important d'obtenir un profil de sortie circadien, voir [Profil G/I ou SI circadians](#circadian-ic-or-isf-profile) ci-dessous.
+  - Remarque : dans l'exemple ci-dessous, le profil d'entrée a une variation circadienne pour le G/I et la SI, mais le profil calculé en sortie a une seule valeur. Si pour vous il est important d'obtenir un profil de sortie circadien, voir [Profil G/I ou SI circadians](autotune-circadian-ic-or-isf-profile) ci-dessous.
 
   ![Comparer les profils Autotune](../images/Autotune/Autotune_5.png)
 
@@ -84,13 +84,13 @@ Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans
 
 ![Autotune écran par défaut](../images/Autotune/Autotune_11.png)
 
-- Changer le profil avec l'Automation (Désactivé par défaut) : voir [Exécuter Autotune avec une règle d'automatisation](#run-autotune-with-an-automation-rule) ci-dessous. Si vous activez ce paramètre, le profil d'entrée sera automatiquement mis à jour par le profil Tuned, et il sera activé.
+- Changer le profil avec l'Automation (Désactivé par défaut) : voir [Exécuter Autotune avec une règle d'automatisation](autotune-run-autotune-with-an-automation-rule) ci-dessous. Si vous activez ce paramètre, le profil d'entrée sera automatiquement mis à jour par le profil Tuned, et il sera activé.
   - **Soyez prudent, vous devez prendre confiance en vérifiant pendant plusieurs jours qu'après une mise à jour et l'activation du profil Tuned sans aucune modification, cela améliore effectivement votre boucle.**
 
 - Catégoriser UAM comme basal (par défaut On) : Ce paramètre est pour les utilisateurs utilisant AndroidAPS sans aucun glucide entré (Full UAM). Il empêchera (quand désactivé) de catégoriser les RNS en tant que basal.
   - Remarque : si vous avez au moins une heure d'absorption de glucides détectée pendant une journée, alors toutes les données catégorisées comme "RNS" seront catégorisées en tant que basal, quel que soit ce paramètre (Activé ou Désactivé)
 - Nombre de jours de données (par défaut 5) : Vous pouvez définir la valeur par défaut avec ce paramètre. À chaque fois que vous sélectionnez un nouveau profil dans le plugin Autotune, le nombre de jours sera remplacé par cette valeur par défaut
-- Appliquer le résultat moyen dans l'IC/ISF circadienne (Désactivation par défaut) : voir [Profil avec G/I ou SI Circadiens](#circadian-ic-or-isf-profile) ci-dessous.
+- Apply average result in circadian IC/ISF (default Off): see [Circadian IC or ISF profile](autotune-circadian-ic-or-isf-profile) below.
 
 ### Autres paramètres
 
@@ -102,7 +102,7 @@ Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans
 
 ## Fonctionnalités avancées
 
-(circadian-ic-or-isf-profile)=
+(autotune-circadian-ic-or-isf-profile)=
 
 ### Profil avec G/I ou SI Circadiens
 
@@ -116,7 +116,21 @@ Le plugin Autotune est une implémentation de l'algorythme autotune OpenAPS dans
 
 
 
-(run-autotune-with-an-automation-rule)=
+### Tune specific days of the week
+
+- If you click on the checkbox with the eye on the right of "Rune days" parameter, you will see the day selection. You can specify which day of the week should be included in Autotune calculation (in screenshot below you can see an example for "working days" with Saturday and Sunday removed from autotune calculation)
+  - If the number of day included in Autotune calculation is lower than the number of Tune days, then you will see how many days will be included on the right of Tune days selector (10 days in the example below)
+  - This setting gives good results only if the number of remaining days is not to small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should select a minimum of 21 or 28 Tune days to have 6 or 8 days included in Autotune calculation)
+
+![Autotune écran par défaut](../images/Autotune/Autotune_14b.png)
+
+- During Autotune calculation, you can see the progress of the calculations ("Partial result day 3 / 10 tuned" on example below)
+
+  ![Autotune écran par défaut](../images/Autotune/Autotune_15b.png)
+
+
+
+(autotune-run-autotune-with-an-automation-rule)=
 
 ## Exécuter Autotune avec une règle d'automatisation
 
@@ -138,9 +152,17 @@ Remarque : pour plus d'informations sur la façon de définir une règle d'autom
 
 - Vous pouvez ensuite sélectionner l'action Profil Autotune pour régler les paramètres. Les paramètres par défaut sont "Profil actif", le nombre de jours défini dans les préférences Autotune, et tous les jours sont sélectionnés.
 
-  ![Autotune écran par défaut](../images/Autotune/Autotune_19.png)
+  ![Autotune écran par défaut](../images/Autotune/Autotune_19b.png)
 
-- Après quelques jours, si vous faites entièrement confiance aux résultats Autotune et si le pourcentage de modification est faible, vous pouvez modifier les [Paramètres Autotune](#autotune-plugin-settings) "Changer le Profil avec l'automatisation" pour l'activer, cela mettre à jour le profil et l'activera automatiquement après le calcul.
+- After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](autotune-plugin-settings) "Automation Switch Profile" to enabled to automatically update and activate profile tuned after calculation.
+
+Note: if you want to automatically tune profiles for specific days of the week (for example a profile for "Weekend days" and another one for "Working days"), then create one rule for each profile, select the same days in Trigger and in Autotune Action, Tune days must be high enough to be sure tuning will be done with at least 6 or 8 days, and don't forget to select time after 4AM in trigger...
+
+- See below an example of rule to tune "my profile" on all "Working days" with 14 Tune days selected (so only 10 days included in autotune calculation).
+
+![Autotune écran par défaut](../images/Autotune/Autotune_20b.png)
+
+
 
 ## Trucs et astuces
 
@@ -148,7 +170,7 @@ Autotune fonctionne avec les informations existantes dans votre base de données
 
 Autotune n'est qu'une aide, il est important de vérifier régulièrement si vous êtes d'accord avec le profil calculé. Si vous avez le moindre doute, modifiez les paramètres Autotune (par exemple le nombre de jours) ou copiez les résultats dans le profil local et ajustez le profil avant de l'utiliser.
 
-Utilisez toujours Autotune plusieurs jours manuellement pour vérifier les résultats avant de les appliquer. Et ce n'est que lorsque vous faites entièrement confiance aux résultats Autotune et quand la variation devient très faible entre le profil précédent et le profil calculé que vous pouvez commencer à utiliser l'automatisation (jamais avant)
+Always use Autotune several days manually to check results before applying them. Et ce n'est que lorsque vous faites entièrement confiance aux résultats Autotune et quand la variation devient très faible entre le profil précédent et le profil calculé que vous pouvez commencer à utiliser l'automatisation (jamais avant)
 
 - Autotune peut très bien fonctionner pour certains utilisateurs et pas du tout pour d'autres, donc **Si vous ne faites pas confiance au résultat Autotune, ne l'utilisez pas**
 
@@ -167,6 +189,6 @@ Nous recommandons de ne pas utiliser Autotune dans les cas suivants :
 
 - L'absorption des glucides est très lente : si la plupart de vos glucides sont calculés avec un paramètre min_5m_carbimpact (vous pouvez voir ces périodes avec un petit point orange en haut de la courbe), le calcul des GA pourrait être erroné et conduire à de mauvais résultats.
   - Quand vous faites du sport, vous êtes généralement plus sensible et votre glycémie ne monte pas beaucoup, donc pendant ou après un exercice, il est habituel de voir quelques périodes avec des glucides lents. Mais si vous avez trop souvent une absorption lente inattendue des glucides, alors vous aurez besoin d'un ajustement de profil (valeur plus élevée de G/I) ou d'un min_5m_carbimpact un peu plus élevé.
-- Vous avez un "très mauvais jours", par exemple coincé plusieurs heures en hyperglycémie avec une énorme quantité d'insuline pour pouvoir descendre à l'intérieur de la cible, ou après un changement de capteur, vous avez obtenu de longues périodes avec des glycémies erronées.
+- Vous avez un "très mauvais jours", par exemple coincé plusieurs heures en hyperglycémie avec une énorme quantité d'insuline pour pouvoir descendre à l'intérieur de la cible, ou après un changement de capteur, vous avez obtenu de longues périodes avec des glycémies erronées. If during the pas weeks you only have one or 2 "bad days", you can disable manually these days in autotune calculation to exclude them from calculation, and again **check carefully if you can trust the results**
 - Si le pourcentage de modification est trop important
   - Vous pouvez essayer d'augmenter le nombre de jours pour obtenir des résultats plus lisses

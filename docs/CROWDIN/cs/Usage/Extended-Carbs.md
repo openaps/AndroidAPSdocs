@@ -5,7 +5,7 @@
 
 S běžnou léčbou pomocí inzulínové pumpy je rozložený bolus dobrý způsob, jak řešit tučná nebo jinak pomalu stravovaná jídla, která zvyšují hladinu glukózy v krvi déle, než je působnost inzulínu. Nicméně v rámci smyčky nedávají rozložené bolusy moc smysl (a způsobují technické potíže), protože to jsou v podstatě fixní vysoké TBR, což je proti hlavnímu principu smyčky, která bazální dávky přizpůsobuje dynamicky. For details see [extended bolus](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) below.
 
-Potřeba řešit taková jídla však stále zůstává. To je důvod, proč AndroidAPS od verze 2.0 podporuje takzvané rozložené sacharidy neboli eCarbs.
+Potřeba řešit taková jídla však stále zůstává. Which is why AAPS as of version 2.0 supports so called extended carbs or eCarbs.
 
 eSacharady jsou sacharidy, jejichž působení se rozlévá do několika hodin. Pro standardní jídla s více sacharidy než tuky/bílkovinami je zadávání sacharidů dopředu (a snížení počátečního bolusu v případě podle potřeby) obvykle dostatečné řešení, aby se tak zabránilo příliš brzkému podání inzulínu.  Ale pro pomaleji vstřebávaná jídla, kde zadání všech sacharidů předem způsobí příliš velké IOB z SMB, mohou být použity eSacharidy, aby se přesněji simulovalo vstřebávání sacharidů (a jakýchkoliv ekvivalentů, které zadáte pro ostatní makroživiny). Výsledkem je přesnější simulace průběhu glykémie v krvi. Pomocí těchto informací může smyčka podávat SMB k těmto sacharidům po částech, což lze považovat za dynamický rozložený bolus (mělo by to fungovat také bez SMB, ale bude to pravděpodobně méně účinné).
 

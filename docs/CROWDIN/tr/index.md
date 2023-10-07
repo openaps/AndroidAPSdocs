@@ -1,22 +1,29 @@
 # AAPS dokümantasyonuna hoş geldiniz
 
-![Görsel](images/modules-female.png)
+![image](./images/basic-outline-of-AAPS.png)
 
-AAPS, android akıllı telefonlarında yapay pankreas sistemi (APS) görevi gören, insüline bağımlı diyabetle yaşayan kişiler için açık kaynak kodlu bir uygulamadır. Ana kompanentler ile amacı, farklı openAPS yazılım algoritmaları kullanarak canlı bir pankreasın yaptığı gibi otomatik insülin dozlama (AID) yaparak kan şekeri seviyelerini sağlıklı sınırlar içinde tutmaktır. Ek olarak, yazılımın desteklediği ve FDA/CE onaylı bir insülin pompasına ve sürekli şeker ölçüm cihazına ihtiyacınız olacaktır.
+AAPS, android akıllı telefonlarında yapay pankreas sistemi (APS) görevi gören, insüline bağımlı diyabetle yaşayan kişiler için açık kaynak kodlu bir uygulamadır. It uses an openAPS software algorithm which aims to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need a supported and FDA/CE approved insulin pump, and a continuous glucose meter.
 
-Uygulama kendi kendine öğrenen yapay zeka *kullanmaz.* Bunun yerine, AAPS'in hesaplamaları, kullanıcının tedavi profiline manuel olarak koyduğu bireysel dozaj algoritmasına ve karbonhidrat alımına dayanır, ancak bunlar güvenlik nedenleriyle sistem tarafından doğrulanır.
+Interested? Read more about AAPS in the [introduction](introduction.md).
 
-Uygulama Google Play'de bulunmaz - yasal nedenlerle onu kaynak koddan kendiniz oluşturmanız gerekir.
+```{warning}
+** ÖNEMLİ GÜVENLİK BİLDİRİMİ **
 
-```{admonition} Ask for help - Writing Docs
-:class: not
+Bu dokümantasyonda anlatılan AAPS güvenlik özelliklerinin temeli, sisteminizi oluşturmak için kullanılan donanımın güvenlik özellikleri üzerine kurulmuştur. Kapalı döngü kullanımı ile otomatik insülin dozlama için yalnızca test edilmiş, tam işlevli FDA veya CE onaylı insülin pompası ve CGM kullanmanız kritik derecede önemlidir. Bu bileşenlerin donanımında veya yazılımında yapılan değişiklikler, beklenmeyen insülin iletimine ve dolayısıyla kullanıcı için önemli risklere yol açabilir. Bir AAPS sistemi oluşturmak veya çalıştırmak için bozulmuş, değiştirilmiş veya kendi kendine yapılmış insülin pompaları veya CGM alıcıları bulursanız veya size teklif edilirse *kesinlikle kullanmayın*.
 
-Lütfen utangaç olmayın, dokümantasyonu oluştururken desteğe ihtiyacımız var.
+Ek olarak, sadece orijinal aksesuarların kullanılması da bir o kadar önemlidir. Yerleştirme yardımcıları, kanüller ve rezervuarlar, pompanız veya CGM ile kullanım için üretici tarafından onaylanmalıdır. Test edilmemiş veya modifiye edilmiş aksesuarların kullanılması, CGM Sisteminin yanlış olmasına ve insülin iletim hatalarına neden olabilir. Yanlış dozda insülin çok tehlikelidir. Test edilmemiş veya modifiye edilmiş aksesuarlar kullanarak hayatınız ile oynamayın.
 
-Dokümantasyonu düzenlemek için bir çekme isteği oluşturmak nispeten kolaydır. Hiçbir şeyi bozamazsınız. Serbest bırakma prosedürleri var.
+Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inanılmaz derecede düşürdükleri için bu programla beraber bu ilaçları kullanmamalısınız.  Kan Şekerini artırmak için bazal oranları düşüren bir sistemle kombinasyon tehlikelidir. Çünkü gliflozin nedeniyle Kan Şekerindeki bu artış gerçekleşmeyebilir ve tehlikeli bir insülin eksikliği durumu meydana gelerek ketoasidoza sebep olabilir.
+```
 
-Dokümanların PR (çekme isteği) yoluyla nasıl düzenleneceğini açıklayan 3 dakikalık bir videoyu [burada](https://www.youtube.com/watch?v=Vo4L6YYxWak) bulabilirsiniz.
+```{note}
+**Sorumluluk Reddi ve Uyarı**
 
+- Burada açıklanan tüm bilgiler, düşünce ve kodlar yalnızca bilgilendirme ve eğitim amaçlıdır. Nightscout şu anda HIPAA gizlilik uyumluluğu için herhangi bir girişimde bulunmamaktadır. Nightscout ve AAPS'i kendi sorumluluğunuzda kullanın. Tıbbi kararlar almak için bilgileri veya kodu kullanmayın.
+- github.com'dan alınan kodun kullanımı herhangi bir garanti veya resmi destek içermez. Ayrıntılar için lütfen bu deponun LİSANSINI gözden geçirin.
+- Tüm ürün ve şirket adları, ticari markalar, hizmet markaları, tescilli ticari markalar ve tescilli hizmet markaları ilgili sahiplerinin mülkiyetindedir. Kullanımları bilgi amaçlıdır ve onlar tarafından herhangi bir bağlantı veya onay anlamına gelmez.
+
+Lütfen unutmayın - bu projenin [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) veya [Medtronic](https://www.medtronic.com/) ile hiçbir ilişkisi yoktur ve bunlar tarafından desteklenmemektedir.
 ```
 
 ## Dokümantasyon nasıl okunur?
@@ -47,19 +54,6 @@ AAPS gibi açık kaynak kodlu yapay pankreas teknolojisine ilgi duyduğunu ifade
 
 Son olarak, [Nasıl yardımcı olurum?](make-a-PR.md) alt başlığında, dokümantasyonda küçük veya büyük değişiklikleri önerebilmeniz ve dokümantasyon üzerinde bizimle birlikte çalışabilmeniz için size bilgi veriyoruz. Ayrıca [dokümantasyon çevirisi](translations.md) için desteğe ihtiyacımız var. Bu arada, diğer kullanıcılardan gelen soruları yanıtlarken ilgili dokümantasyona bağlantılar (veya bağlantıların nasıl gönderileceğini bilmiyorsanız dokümantasyon içinde bağlantıların nerede bulunduğuna dair ekran görüntüleri) sağlamanız da herkes için çok yararlı olacaktır. Bu şekilde, diğer kullanıcılar da gelecekte aynı tür sorulara yanıt bulmaya çalışırsa, doğru bilgiler kolayca yeniden bulunabilir.
 
-(index-translation-help-needed)=
-
-```{admonition} Ask for help - Translators Neeeded!!!
-:class: not
-
-Dokümantasyon İngilizce olarak yazılmış ve farklı dillere çevrilmiştir. a) uygulamanın ve b) dokümantasyonun çevirisiyle ilgili yardıma ihtiyacımız var.
-
-Çeviri süreci [burada](translations.md) açıklanmıştır.
-
-Uygulama ve dokümantasyon için dil başına çevirilerin durumu [burada](./Administration/stateTranslations.md) bulunabilir.
-
-```
-
 ```{toctree}
 :caption: Dili değiştir
 
@@ -68,15 +62,26 @@ Dili değiştir <./changelanguage.md>
 ```
 
 ```{toctree}
-:caption: Başlarken
+:caption: Home
 
-Önce güvenlik <./Getting-Started/Safety-first.md>
+Introduction <./introduction.md>
 
-Kapalı döngü sistemi nedir? <./Getting-Started/ClosedLoop.md>
+```
 
-AAPS ile kapalı döngü sistemi nedir? <./Getting-Started/WhatisAndroidAPS.md>
+```{toctree}
+:caption: Getting started
 
-Doküman güncellemeleri & değişiklikler <./Getting-Started/WikiUpdate.md>
+Preparing <preparing.md>
+
+Docs updates & changes <./Getting-Started/WikiUpdate.md>
+
+```
+
+```{toctree}
+:caption: Remote control and following
+
+Remote control <remote-control.md>
+Following-only <following-only.md>
 
 ```
 
@@ -249,15 +254,15 @@ Klinisyenler için <./Resources/clinician-guide-to-AndroidAPS.md>
 ```
 
 ```{toctree}
-:caption: Nasıl yardım ederim
+:caption: How to help
 
-Nasıl yardım ederim <./Getting-Started/How-can-I-help.md>
+How to help <./Getting-Started/How-can-I-help.md>
 
-Uygulama ve dokümantasyon nasıl çevrilir <./translations.md>
+How to translate the app and docs <./translations.md>
 
-Çevirilerin durumu <./Administration/stateTranslations.md>
+How to edit the docs <./make-a-PR.md>
 
-Dokümanlar nasıl düzenlenir <./make-a-PR.md>
+State of translations <./Administration/stateTranslations.md>
 
 ```
 

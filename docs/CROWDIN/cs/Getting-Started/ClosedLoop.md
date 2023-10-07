@@ -26,7 +26,7 @@ V současnosti jsou k dispozici tři hlavní oper source systémy uzavřené smy
 
 ### AndroidAPS (AAPS)
 
-AndroidAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). Pro výpočty a ovládání inzulinové pumpy využívá smartphone se systémem Android. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
+AAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). Pro výpočty a ovládání inzulinové pumpy využívá smartphone se systémem Android. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
 
 Compatible [pumps](../Hardware/pumps.md) are:
 

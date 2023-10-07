@@ -25,6 +25,8 @@ Der nachfolgend beschriebene Workaround ermöglicht die Weiternutzung der Sony S
 ## 3. Aktiviere die ADB Debugging Optionen auf Deiner Sony Smartwatch 3
 
 - Aktiviere den Entwicklermodus: Settings (Einstellungen) -> About (Über) -> Build number
+- Or it could be Settings --> System --> About -->  --> Versions --> Build number
+
 - Klicke 'build number' 7 mal an.
 - Gehe nun zu Settings (Einstellungen) --> Developer Options (Entwickleroptionen) --> ADB Debugging (enable)
 

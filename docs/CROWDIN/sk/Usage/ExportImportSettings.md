@@ -11,7 +11,7 @@ Exported settings should be copied to a cloud storage or your computer, better t
 On a Windows 10 computer it looks like this:
 
 ```{image} ../images/AAPS_ExImportSettingsWin.png
-:alt: AndroidAPS Preferences phone connected to computer
+:alt: AAPS Preferences phone connected to computer
 ```
 
 ## Exported information
@@ -36,7 +36,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - Export settings
 
 ```{image} ../images/AAPS_ExportSettings1.png
-:alt: AndroidAPS export settings 1
+:alt: AAPS export settings 1
 ```
 
 - Date and time of export will be added to the file name automatically and displayed together with the path.
@@ -45,7 +45,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - Successful export will be prompted at bottom of the screen.
 
 ```{image} ../images/AAPS_ExportSettings2.png
-:alt: AndroidAPS export settings 2
+:alt: AAPS export settings 2
 ```
 
 (ExportImportSettings-import-settings)=
@@ -58,7 +58,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - Import settings
 
 ```{image} ../images/AAPS_ImportSettings1.png
-:alt: AndroidAPS import settings 1
+:alt: AAPS import settings 1
 ```
 
 - All files from folder AAPS/preferences/ on your phone will be shown in the list.
@@ -67,7 +67,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - Enter [master password](Preferences-master-password) and click 'OK'.
 
 ```{image} ../images/AAPS_ImportSettings2.png
-:alt: AndroidAPS import settings 2
+:alt: AAPS import settings 2
 ```
 
 - Details on the preference file will be shown.

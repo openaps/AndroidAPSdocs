@@ -4,7 +4,7 @@ Puede encontrar información de resolución de problemas en muchas páginas de l
 
 Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.html).
 
-## Aplicación AndroidAPS
+## AAPS app
 
 ### Building & updating
 

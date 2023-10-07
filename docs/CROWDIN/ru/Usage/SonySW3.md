@@ -1,6 +1,6 @@
 # Установка службы Google Play вручную для Sony Smartwatch 3
 
-Sony Smartwach 3-одни из самых популярных часов дляс AAPS. К сожалению, осенью 2020 года Google прекратил поддержку устройств с операционной системой OS 1.5. Это приводит к проблемам при использовании Sony SW3 с AndroidAPS 2.7 и более поздними версиями приложения.
+Sony Smartwach 3-одни из самых популярных часов дляс AAPS. К сожалению, осенью 2020 года Google прекратил поддержку устройств с операционной системой OS 1.5. This leads to problems when using Sony SW3 with AAPS 2.7 and above.
 
 Следующий обходной путь должен продлить время использования Sony Smartwatch 3, но имейте в виду, что необходимость перехода на новые часы рано или поздно наступит.
 
@@ -25,6 +25,8 @@ Sony Smartwach 3-одни из самых популярных часов для
 ## 3. Включите параметры отладки ADB на ваших часах
 
 - Enable developer mode by going to Settings --> About --> Build number
+- Or it could be Settings --> System --> About -->  --> Versions --> Build number
+
 - Click it 7 times.
 - Now go to Settings --> Developer Options --> ADB Debugging (enable)
 

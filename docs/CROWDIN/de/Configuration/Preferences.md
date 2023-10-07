@@ -451,7 +451,7 @@ Die Einstellungen hier sind je nach Pumpenmodell, das Du im [Konfigurations-Gene
 - [Accu Chek Insight Pumpe](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Medtronic Pumpe](../Configuration/MedtronicPump.md)
 
-Stelle sicher, dass du die virtuelle Pumpe im Konfigurations-Generator ausgewählt hast, wenn du AndroidAPS als Open Loop betreibst.
+If using AAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
 (Preferences-nsclient)=
 ## Nightscout-Client
@@ -461,7 +461,7 @@ Stelle sicher, dass du die virtuelle Pumpe im Konfigurations-Generator ausgewäh
 ```
 
 - Gib Deine *Nightscout URL* (z.B. <https://yourwebsitename.herokuapp.com>) und das *API secret* (ein 12-stelliges Passwort, dass Du in den Variablen bei Heroku definiert hast) ein.
-- Das versetzt AndroidAPS in die Lage, Daten von Nightscout zu lesen und zu schreiben.
+- This enables data to be read and written between both the Nightscout website and AAPS.
 - Überprüfe die Eingaben auf Tippfehler, wenn du bei Ziel 1 hängen bleibst.
 - **Stelle sicher, dass die URL NICHT mit /api/v1/ endet.**
 - *Logge App-Start in Nightscout* schreibt jedes Mal, wenn AAPS startet, eine Notiz in Dein Nightscout Careportal.  Die App sollte maximal einmal am Tag neu gestartet werden. Mehrere Einträge am Tag könnten ein Hinweis auf ein Problem sein (z.B.  Akkuoptimierung für AAPS nicht deaktiviert).

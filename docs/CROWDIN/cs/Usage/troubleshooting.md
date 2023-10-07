@@ -4,7 +4,7 @@ Informace o odstraňování problémů můžete najít na mnoha stránkách wiki
 
 Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.html).
 
-## Aplikace AndroidAPS
+## AAPS app
 
 ### Building & updating
 

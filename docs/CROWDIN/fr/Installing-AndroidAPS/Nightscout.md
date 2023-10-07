@@ -10,7 +10,7 @@ En complément des rapports, Nightscout peut également être utilisé pour cont
 
 Vous pouvez interdire l'accès public à votre site Nightscout en utilisant des [rôles d'authentification](https://nightscout.github.io/nightscout/security).
 
-### Paramètres AndroidAPS
+### AAPS settings
 
 Il y a dans les paramètres AAPS une fonction "Remonter uniquement vers NS (sync désactivée)". En l'activant, AAPS ne prendra pas en compte les changement effectués dans Nightscout comme les cibles temp. ou les glucides renseignés.
 

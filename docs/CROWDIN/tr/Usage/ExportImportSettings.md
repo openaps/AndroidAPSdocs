@@ -11,7 +11,7 @@ Dışa aktarılan ayarlar, telefondan bir buluta veya bilgisayarınıza kopyalan
 Bir Windows 10 bilgisayarında şöyle görünür:
 
 ```{image} ../images/AAPS_ExImportSettingsWin.png
-:alt: Bilgisayara bağlı AndroidAPS telefonda Preferences klasörü
+:alt: AAPS Preferences phone connected to computer
 ```
 
 ## Dışa aktarılan bilgiler
@@ -36,7 +36,7 @@ Ayar yedeği, [tercihler ](preferences-master-password) içinde ayarlanabilen bi
 - Dışa aktarma ayarları
 
 ```{image} ../images/AAPS_ExportSettings1.png
-:alt: AndroidAPS dışa aktarma ayarları 1
+:alt: AAPS export settings 1
 ```
 
 - Dışa aktarma tarihi ve saati dosya adına otomatik olarak eklenecek ve yol ile birlikte görüntülenecektir.
@@ -45,7 +45,7 @@ Ayar yedeği, [tercihler ](preferences-master-password) içinde ayarlanabilen bi
 - Ekranın alt kısmında başarılı dışa aktarma görünecektir.
 
 ```{image} ../images/AAPS_ExportSettings2.png
-:alt: AndroidAPS dışa aktarma ayarları 2
+:alt: AAPS export settings 2
 ```
 
 (ExportImportSettings-import-settings)=
@@ -58,7 +58,7 @@ Ayar yedeği, [tercihler ](preferences-master-password) içinde ayarlanabilen bi
 - Ayarları içe aktarın
 
 ```{image} ../images/AAPS_ImportSettings1.png
-:alt: AndroidAPS içe aktarma ayarları 1
+:alt: AAPS import settings 1
 ```
 
 - Telefonunuzdaki AAPS/preferences/ klasöründeki tüm dosyalar listede gösterilecektir.
@@ -67,7 +67,7 @@ Ayar yedeği, [tercihler ](preferences-master-password) içinde ayarlanabilen bi
 - [Ana şifre ](preferences-master-password)'yi girin ve 'Tamam'ı tıklayın.
 
 ```{image} ../images/AAPS_ImportSettings2.png
-:alt: AndroidAPS içe aktarma ayarları 2
+:alt: AAPS import settings 2
 ```
 
 - Aktarılacak dosyaya ilişkin ayrıntılar gösterilecektir.

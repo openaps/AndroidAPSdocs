@@ -88,9 +88,9 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
   ![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
 
-  ![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+  ![Снимок экрана настроек болюса](../images/combo/combo-bolus-settings.png)
 
-  ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+  ![Снимок экрана настроек для картриджей инсулина](../images/combo/combo-insulin-settings.png)
 
 ## Activating the driver and pairing it with the Combo
 

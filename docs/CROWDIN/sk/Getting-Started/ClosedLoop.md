@@ -26,7 +26,7 @@ V súčasnosti existujú tri hlavné open source systémy uzavretého okruhu:
 
 ### AndroidAPS (AAPS)
 
-AndroidAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). Pre výpočty a ovládanie inzulínovej pumpy používa telefón so systémom Android. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
+AAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). Pre výpočty a ovládanie inzulínovej pumpy používa telefón so systémom Android. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
 
 Compatible [pumps](../Hardware/pumps.md) are:
 

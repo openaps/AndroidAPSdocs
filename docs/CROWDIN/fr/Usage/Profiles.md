@@ -13,7 +13,7 @@ En interne, AAPS crée une capture instantanée du profil avec la date et la dur
 
 Si vous avez modifié votre profil dans l'onglet "Profil local", vous pouvez y activer le profil, ce qui permet également de faire un changement de profil implicite.
 
-Pour effectuer un changement de profil, faites un appui long sur le nom de votre profil ("Tuned 03/11" dans l'image ci-dessous) dans la page d'accueil d'AAPS.
+To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below) on the homescreen of AAPS.
 
 ![Faire un changement de profil](../images/ProfileSwitch_HowTo.png)
 
@@ -88,5 +88,5 @@ Vous pouvez également supprimer le changement de profil directement dans mLab :
 
 ### 'DAI 3h trop court'
 
-* Le message d'erreur apparaîtra si votre durée d'action de l'insuline dans votre profil est à une valeur que AndroidAPS ne pense pas être exacte. 
+* Error message will appear if your duration of insulin action in your profile is listed at a value that AAPS doesn't believe will be accurate.
 * Lisez la section [sélection de la valeur de DAI](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) et modifiez-la dans votre profil, puis faites un [Changement de profil](../Usage/Profiles) pour continuer.

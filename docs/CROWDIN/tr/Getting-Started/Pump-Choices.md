@@ -1,9 +1,9 @@
 # Pompa Seçimi
 
-AndroidAPS, bir dizi insülin pompasıyla çalışır. Aşağıdaki liste şu anda desteklenen cihazları göstermektedir. Parantez içerisinde ise AndroidAPS'in telefonlarınızın pompa ile yerel Bluetooth işlevini kullanarak direk mi yoksa Rileylink uyumlu bir cihaz vasıtası ile mi iletişim kurduğunu gösterir.
+AAPS works with a number of insulin pumps. The following list shows the currently supported devices and indicates if AAPS communicates with the pump using your phones native Bluetooth function or if it requires a Rileylink Compatible device in brackets.
 
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (Bluetooth)
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md) (Bluetooth) (**AndroidAPS v3.2 ile başlayan Accu-Chek Combo için yeni sürücü**)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (Bluetooth; old driver that uses the additional Ruffy app)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md) (Bluetooth; new driver, available starting with AndroidAPS v.3.2)
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) (Bluetooth)
 - [DanaR](../Configuration/DanaR-Insulin-Pump.md) (Bluetooth)
 - [DanaRS](../Configuration/DanaRS-Insulin-Pump.md) (Bluetooth)
@@ -12,6 +12,8 @@ AndroidAPS, bir dizi insülin pompasıyla çalışır. Aşağıdaki liste şu an
 - [EOPatch2](../Configuration/EOPatch2.md) (Bluetooth)
 - [Omnipod Eros](../Configuration/OmnipodEros.md) (Rileylink Uyumlu Cihaz)
 - [Omnipod DASH](../Configuration/OmnipodDASH.md) (Bluetooth)
-- Bazı eski [Medtronic pompaları](../Configuration/MedtronicPump.md) (Rileylink Uyumlu Cihaz)
+- [Medtrum Nano](../Configuration/MedtrumNano.md) (Bluetooth)
+- [Medtrum 300U](../Configuration/MedtrumNano.md) (Bluetooth)
+- Certain older [Medtronic](../Configuration/MedtronicPump.md) (Rileylink Compatible Device)
 
-AndroidAPS ile çalışma potansiyeline sahip olabilecek diğer pompaların durumlarının ayrıntıları [Gelecek (olası) Pompalar](Future-possible-Pump-Drivers.md) sayfasında listelenmiştir.
+Details of the status of other pumps that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.

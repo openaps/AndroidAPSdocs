@@ -2,7 +2,7 @@
 
 Yra įvairių variantų, kai kurie būdingi konkrečiai "Android", kai kurie - "Huawei":
 
-* Pridėti AndroidAPS ir xdrip+ į programų sąrašą, kuris ignoruoja baterijos optimizavimą:
+* Add AAPS and xdrip+ to apps list which ignore battery optimisations:
   
   * Nustatymai / Programos / Nustatymai / Specialusis autorizavimas / Ignoruoti baterijos optimizavimą / Pasirinkite "Visos programos" / Suteikti programoms leidimą
     

@@ -32,8 +32,6 @@ Zanim zbudujesz swoją pętlę, będziesz musiał dużo czytać, aby zrozumieć,
 
 <https://www.diabettech.com/artificial-pancreas/looping-do-i-choose-openaps-or-loop-either-way-wearenotwaiting/>
 
-<https://www.healthline.com/diabetesmine/dana-rs-insulin-pump-embraces-wearenotwaiting>
-
 <https://btvnovinite.bg/video/bulgaria/dnes-e-svetovnijat-den-za-borba-s-diabeta.html>
 
 ## Materiały na YouTube

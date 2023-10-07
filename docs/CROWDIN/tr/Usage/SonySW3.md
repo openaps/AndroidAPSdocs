@@ -1,6 +1,6 @@
 # Sony Smartwatch 3 için Google Play Hizmetinin Manuel Kurulumu
 
-Sony Smartwatch 3, APPS ile kullanılacak en popüler saatlerden biridir. Maalesef Google, 2020 sonbaharında wear OS 1.5 cihazları için desteği bıraktı. Bu Sony SW3'ü AndroidAPS 2.7 ve üstü ile kullanırken sorunlara yol açar.
+Sony Smartwatch 3, APPS ile kullanılacak en popüler saatlerden biridir. Maalesef Google, 2020 sonbaharında wear OS 1.5 cihazları için desteği bıraktı. Bu Sony SW3'ü AAPS 2.7 ve üstü ile kullanırken sorunlara yol açar.
 
 Aşağıdaki geçici çözüm, Sony Smartwatch 3'ün kullanım süresini uzatacaktır, ancak yeni bir akıllı saate geçme ihtiyacının er ya da geç geleceğini unutmayın.
 
@@ -25,6 +25,8 @@ Aşağıdaki geçici çözüm, Sony Smartwatch 3'ün kullanım süresini uzataca
 ## 3. Saatinizde ADB Hata Ayıklama seçeneklerini etkinleştirin
 
 - Ayarlar --> Hakkında--> Yapı numarası'na giderek geliştirici modunu etkinleştirin
+- Or it could be Settings --> System --> About -->  --> Versions --> Build number
+
 - 7 kez tıklayın.
 - Şimdi Ayarlar --> Geliştirici Seçenekleri --> ADB Hata Ayıklama'ya gidin (etkinleştir)
 

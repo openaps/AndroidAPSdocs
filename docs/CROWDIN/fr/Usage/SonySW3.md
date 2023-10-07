@@ -1,6 +1,6 @@
 # Installation manuelle du service Google Play pour Sony Smartwatch 3
 
-La montre Sony Smartwatch 3 est l'une des plus populaires utilisée avec AAPS. Malheureusement, Google a abandonné la prise en charge des appareils sous Wear OS 1.5 à l'automne 2020. Cela entraîne des problèmes lors de l'utilisation de Sony SW3 avec AndroidAPS 2.7 et plus.
+La montre Sony Smartwatch 3 est l'une des plus populaires utilisée avec AAPS. Malheureusement, Google a abandonné la prise en charge des appareils sous Wear OS 1.5 à l'automne 2020. This leads to problems when using Sony SW3 with AAPS 2.7 and above.
 
 La solution de contournement suivante devrait prolonger la durée d'utilisation de la Smartwatch 3, mais gardez à l'esprit que le besoin de passer à une nouvelle montre connectée viendra tôt ou tard.
 
@@ -25,6 +25,8 @@ La solution de contournement suivante devrait prolonger la durée d'utilisation 
 ## 3. Activez les options de débogage ADB sur votre montre
 
 - Activez le mode développeur en allant dans Paramètres --> À propos --> Numéro de build
+- Or it could be Settings --> System --> About -->  --> Versions --> Build number
+
 - Cliquez dessus 7 fois.
 - Maintenant, allez dans Paramètres --> Options développeur --> Débogage ADB (activer)
 

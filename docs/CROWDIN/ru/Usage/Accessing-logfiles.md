@@ -3,7 +3,7 @@
 # Чтение лог-файлов
 
 * Подключите телефон к компьютеру в режиме передачи файлов
-* Найдите файлы журнала в папке с данными AndroidAPS
+* Locate the log files in the AAPS data directory
     
     * (2.8.2)Папка будет находиться где-то в районе ***Internal storage(1) / Android / data / info.nightscout.androidaps / files***
     * (3.0.0) Папка будет находиться где-то в районе ***Internal storage(1) / AAPS / logs***

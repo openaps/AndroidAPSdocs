@@ -1,16 +1,16 @@
-# AAPS en reloj inteligente Wear OS
+# AAPS en relojes inteligentes con Wear OS
 
-You can install AAPS app on your **Wear OS based** smartwatch. La versión de AAPS para reloj le permite:
+Puedes instalar la aplicación de AAPS en tu reloj **con sistema Wear OS**. La versión de AAPS para el reloj te permite:
 
-* **display data on your watch**: by providing [custom watchfaces](Watchfaces-aaps-watchfaces) or in standard watchfaces with use of [complications](Watchfaces-complications)
-* **control de AAPS en el teléfono**: para bolo, establecer un objetivo temporal, etc.
+* **Visualizar datos en el reloj**: proporcionando [esferas personalizadas](Watchfaces-aaps-watchfaces) o el uso de [complicaciones](Watchfaces-complications) con esferas estándar.
+* **Controlar AAPS desde el teléfono**: pner bolos, establecer objetivos temporales, etc.
 
 ### Antes de comprar un reloj...
 
-* Algunas características como *complicaciones* requieren que Wear OS versión 2.0 o más reciente funcione
-* Google ha renombrado de *Android Wear 1.x* a *Wear OS* a partir de la versión 2.x, de modo que cuando se dice *Android Wear* puede indicar la presencia de versiones mayores a la versión 1.x del sistema
-* Si la descripción de los smartwatch indica sólo compatibilidad con *Android* y *iOS* - esto **no** significa que pueda ejecutar *Wear OS* - puede ser también de otro tipo de Proveedor de sistema operativo específico **que no es compatible con la AAPS Wear!**
-* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
+* Algunas características como las *complicaciones* requieren la versión 2.0 de Wear OS o más reciente, para que funcione
+* Google renombró *Android Wear 1.x* a *Wear OS* desde la versión 2.x, por lo que que cuando se dice *Android Wear*, se puede estar hablando de la versión 1.x más antigua del sistema.
+* Si la descripción del reloj indica sólo compatibilidad con *Android* e *iOS* - esto **no** significa que pueda ejecutar *Wear OS* - puede significar también que funciona con otro sistema operativo esfecífico del fabricante **que no es compatible con la aplicación AAPS para el reloj**
+* Consulta la [lista de teléfonos y relojes probados](Phones-list-of-tested-phones) y [pregunta a la comunidad ](../Where-To-Go-For-Help/Connect-with-other-users.md) si tienes dudas con la compatibilidad del reloj.
 
 ### Construyendo la versión de AAPS para Wear OS
 
@@ -87,32 +87,32 @@ J - insulin on board (from bolus | from basal)
 
 ## Acceso al menú principal de AAPS
 
-To access main menu of AAPS you can use on of following options:
+Para acceder al menú principal de AAPS puedes utilizar una de las siguientes opciones:
 
-* double tap on your BG value
-* select AAPS icon in watch applications menu
-* tap on AAPS complication (if configured for menu)
+* Pulsar dos veces sobre el valor de glucosa
+* Pulsar sobre el icono de AAPS en el menú de aplicaciones del reloj
+* Pulsar sobre Complicación de AAPS (si se ha configurado para el menú)
 
-## Configuración (desde el smartwatch)
+## Ajustes (desde el reloj)
 
-To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
+Para acceder a los ajustes del reloj, accede desde el menú principal de AAPS, desliza hacia arriba y selecciona "Ajustes".
 
-Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
+La estrella rellena significa que la opción está activada (**Activado**), y el icono de estrella con hueco indica que la característica está desactivadoa(**Desactivado**):
 
 ![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
-### AAPS companion parameters
+### Parámetros complementarios de AAPS
 
-* **Vibrate on Bolus** (default `On`):
-* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
+* **Vibrar en bolos** (por defecto `Activado`):
+* **Unidades usadas en las acciones** (por defecto `mg/dl`): si está **Activado** las unidades para las acciones están en `mg/dl`, si está **Desactivado** la unidad es `mmol/l`. Se utiliza cuando se establece un OT desde el reloj.
 
 (Watchfaces-watchface-settings)=
 
-### Watchface settings
+### Ajustes de las esferas
 
-* **Show Date** (default `Off`): note, date is not available on all watchfaces
-* **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
-* **Show COB** (default `On`): Display or not COB value
+* <**Mostrar fecha** (por defecto `Desactivado`): la fecha no está disponible en todas las esferas.
+* **Mostrar IOB** (por defecto `Activado`): Mostrar o no el valor de la insulina activa (IOB). El ajuste para el valor detallado está dentro los parámetros de AAPS)
+* **Mostrar COB** (predeterminado `Activado`): Mostrar o no el valor de los carbohidratos (COB)
 * **Show Delta** (default `On`): Display or not the BG variation of the last 5 minutes
 * **Show AvgDelta** (default `On`): Display or not the average BG variation of the last 15 minutes
 * **Show Phone Battery** (default `On`): Phone battery in %. Red if below 30% .
