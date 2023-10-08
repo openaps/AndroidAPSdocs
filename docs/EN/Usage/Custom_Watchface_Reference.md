@@ -215,7 +215,7 @@ When you design your first watchface, you have to know that everything is organi
 
 
 
-![CustomWatchface layers](..\images\CustomWatchface_1.jpg)
+![CustomWatchface layers](../images/CustomWatchface_1.jpg)
 
 
 
@@ -262,7 +262,7 @@ If user authorize custom watchface to modify watch parameter (setting within wea
 
 In example below Gota watchface has one required parameter. If authorization is not given it will be shown in white color, but authorization is given, then this parameter will be set and locked on the watch (in this case the number is in orange color)
 
-![Required parameters](..\images\CustomWatchface_2.jpg)
+![Required parameters](../images/CustomWatchface_2.jpg)
 
 
 
@@ -272,7 +272,7 @@ Twin views provide an easy way to adjust the view position based on the visible 
 
 In example below you can see AAPS (Cockpit) watchface with all views visible within settings, and the same watchface with "Show rig battery" disabled and "Show avg delta" disabled
 
-![Twin Views](..\images\CustomWatchface_3.jpg)
+![Twin Views](../images/CustomWatchface_3.jpg)
 
 You can see that when one of the twin views is hidden, the other is shifted to be centered
 
