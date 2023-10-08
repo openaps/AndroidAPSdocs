@@ -83,7 +83,7 @@ See below an example of an Image block for second_hand, (in this case there are 
     "topmargin": 0,
     "leftmargin": 0,
     "visibility": "visible",
-	"color": "#BC906A"
+    "color": "#BC906A"
 }
 ```
 To have second_hand colored with default BG color (lowRange, midRange or highRange), you just have to modify the latest ligne with the keyValue `bgColor`
@@ -215,7 +215,7 @@ When you design your first watchface, you have to know that everything is organi
 
 
 
-![CustomWatchface_1](..\..\EN\images\CustomWatchface_1.jpg)
+![CustomWatchface layers](..\images\CustomWatchface_1.jpg)
 
 
 
@@ -231,14 +231,87 @@ Then within json file all views are sorted from the Back to the Top (this will h
 
 ### Preferences Feature
 
-CustomWatchface can select and automatically tune some watch preferences to have the correct visualization of the watchface (if authorization is given within Wear preferences).
+CustomWatchface can automatically tune some watch preferences to have the correct visualization of the watchface (if authorization is given within Wear preferencesby the user).
+
+But this feature should be used with care. Preferences are common with all other watchfaces. So several rules to respect with this feature:
+
+- never set preferences concerning hidden views
+- try to maximize the visible views
+- feel free to oversize the width of certain views:
+  - TBR can be shown as percentage (small width, but also as absolue values much wider)
+  - delta or avg delta with detailed information can be wide
+  - same for iob2: this view can have total iob, but if detailed iob is selected, then text size can be very long
+
+If you still need some very specific settings to have a correct display (in example below, if there is not enough space for detailed iob, you can "force" this parameter to `false` of your watch, you can include within metadata block some settings constraint like that
+
+```json
+    "metadata": {
+        "name": "Default Watchface",
+        "author": "myName",
+        "created_at": "07\/10\/2023",
+        "author_version": "1.0",
+        "cwf_version": "1.0",
+        "comment": "Default watchface, you can click on EXPORT WATCHFACE button to generate a template",
+        "key_show_detailed_iob": false
+    },
+```
+
+If user authorize custom watchface to modify watch parameter (setting within wear plugin) then Show detailed iob will be set to "disable", and locked to disable (no modification of this parameter possible, until authorization is disabled within wear plugin parameter, or another watchface is selected)
+
+- Note that when a user select a watchface, he can see the number of "required parameter" during watchface selection
+
+In example below Gota watchface has one required parameter. If authorization is not given it will be shown in white color, but authorization is given, then this parameter will be set and locked on the watch (in this case the number is in orange color)
+
+![Required parameters](..\images\CustomWatchface_2.jpg)
 
 
 
 ### TwinView Feature
 
+Twin views provide an easy way to adjust the view position based on the visible views. This does not have the power of a layout entirely made up of LinearLayout, but can handle many common cases.
 
+In example below you can see AAPS (Cockpit) watchface with all views visible within settings, and the same watchface with "Show rig battery" disabled and "Show avg delta" disabled
 
+![Twin Views](..\images\CustomWatchface_3.jpg)
+
+You can see that when one of the twin views is hidden, the other is shifted to be centered
+
+in this example, you can see that within `"uploader_battery"` block, we have `"twinView":` key is added to define `"rig_battery"` view, and in `"rig_battery"` block  `"twinView":` key define `"uploader_battery"` as twin. Then then additional key `"leftOffsetTwinHidden":` define the number of pixel to shift the view when twin is hidden.
+
+To calculate this number, you can see that the difference between the leftMargin of each of the twin views is 50 pixels, so the offset to stay centered is half in one direction or the other.
+
+If the twin views are positioned vertically, in this case you must use the key `"topOffsetTwinHidden":` 
+
+    "uploader_battery": {
+        "width": 49,
+        "height": 30,
+        "topmargin": 354,
+        "leftmargin": 150,
+        "rotation": 0,
+        "visibility": "visible",
+        "textsize": 23,
+        "gravity": "center",
+        "font": "roboto_condensed_bold",
+        "fontStyle": "bold",
+        "fontColor": "#FFFFFF",
+    	"twinView": "rig_battery",
+    	"leftOffsetTwinHidden": 25
+    },
+    "rig_battery": {
+        "width": 49,
+        "height": 30,
+        "topmargin": 354,
+        "leftmargin": 200,
+        "rotation": 0,
+        "visibility": "visible",
+        "textsize": 23,
+        "gravity": "center",
+        "font": "roboto_condensed_bold",
+        "fontStyle": "bold",
+        "fontColor": "#FFFFFF",
+    	"twinView": "uploader_battery",
+    	"leftOffsetTwinHidden": -25
+    },
 ### DynData Feature
 
 
