@@ -4,7 +4,7 @@
 :alt: Мониторинг детей
 ```
 
-AAPS offer several options for remote monitoring of children and also allows to send remote commands. Of course you can also use remote monitoring to follow your partner or friend.
+AAPS предлагает несколько опций для удаленного мониторинга детей, а также позволяет отправлять удаленные команды. Of course you can also use remote monitoring to follow your partner or friend.
 
 ## Функции
 
