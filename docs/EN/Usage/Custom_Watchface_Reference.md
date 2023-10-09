@@ -282,37 +282,307 @@ To calculate this number, you can see that the difference between the leftMargin
 
 If the twin views are positioned vertically, in this case you must use the key `"topOffsetTwinHidden":` 
 
+```json
+"uploader_battery": {
+    "width": 49,
+    "height": 30,
+    "topmargin": 354,
+    "leftmargin": 150,
+    "rotation": 0,
+    "visibility": "visible",
+    "textsize": 23,
+    "gravity": "center",
+    "font": "roboto_condensed_bold",
+    "fontStyle": "bold",
+    "fontColor": "#FFFFFF",
+    "twinView": "rig_battery",
+    "leftOffsetTwinHidden": 25
+},
+"rig_battery": {
+    "width": 49,
+    "height": 30,
+    "topmargin": 354,
+    "leftmargin": 200,
+    "rotation": 0,
+    "visibility": "visible",
+    "textsize": 23,
+    "gravity": "center",
+    "font": "roboto_condensed_bold",
+    "fontStyle": "bold",
+    "fontColor": "#FFFFFF",
+    "twinView": "uploader_battery",
+    "leftOffsetTwinHidden": -25
+},
+```
+### DynData Feature
+
+DynData is the most powerfull feature if you want to include some animation within you watchface, according to some internal values (like BG value, BG level, delta, % of battery... see list of available data here §§§)
+
+To illustrate this feature, I will take the example of AAPS (SteamPunk) watchface:
+
+![CustomWatchface_4](../images/CustomWatchface_4.png)
+
+In this watchfaceWe will have to manage the rotation of BG value (from 30 degrees to 330 degrees) on the right, the dynamic range of avg_delta (up to 5mgdl, 10mgdl or 20mgdl according to value), the rotation of pointer that should be synchronized to dynamic, and also the different layer of the views...
+
+To be able to manage this Watchface, see below all the images included into the zip file:
+
+Note: to be able to see the transparency, all these images are on a yellow background and surrounded by a red square
+
+![Steampunk images](../images/CustomWatchface_5.jpg)
+
+- On the first row, Background.jpg and CoverPlate.png will be automatically mapped with associated view (default views filename), and steampunk_pointer.png will be managed by dynData
+- On the second row you see the 3 scales of dynamic range for avg_delta that will also be managed by dynData
+- On the third row, chartBackground.jpg will be linked manually within chart view, Hourhand.png and finally MinuteHand.png files will be automatically mapped with associated views
+
+#### **Background management**
+
+First concerning BG value image, no choice here, it can only be in background layer (otherwize it will be in front of the chart view and chart will not be visible!). So we will have to map BG value to background, and rotate background image according to BG value.
+
+Within `"background"` block, we will include 2 dedicated keys to make this rotation:
+
+```json
+"background": {
+    "width": 400,
+    "height": 400,
+    "topmargin": 0,
+    "leftmargin": 0,
+	"dynData": "rotateSgv",
+	"rotationOffset": true,
+    "visibility": "visible"
+},
+```
+`"dynData":` key will define which block should be used to define the animation (value, range, convertion...) here this block was named "rotateSgv" (choose an explicit name when you use this feature), 
+
+`"rotationOffset": true,` will define that the expected animation according to value should be a rotation. (others available keys are `"leftOffset"` and `"topOffset"` if you want to create a slider)
+
+Now we will go at the end of the file, after view blocks:
+
+```json
+"second_hand": {
+    "width": 120,
+    "height": 120,
+    "topmargin": 140,
+    "leftmargin": 140,
+    "visibility": "gone"
+},
+"dynData": {
+	"rotateSgv": {
+		"valueKey": "sgv",
+		"minData": 30,
+		"maxData": 330
+	},
+```
+You can see that after the latest view (`"second_hand"`), we added a new `"dynData": {` block that  will containts all animations:
+
+The block defined within `"background"`view was named `"rotateSgv"`, it's the first block you will find into `"dynData"`!
+
+This block is simple, with a first key named `"valueKey":` that will be used to define which value should be used. in this case `"sgv"` is a "keyValue" that defines BG value (note that in most cases the keyValue has the same name that the view that shows this information).
+
+Concerning BG value, default min data is set to 39mgdl and max  data is set to 400mgdl (see below §§§ all available keyValues and associated min/max data values).
+
+Within `"rotateSgv"` block the two additional keys (`"minData":` and `"maxData":`) will be used to tune min and max data to 30 and 330. We can that to directly use data value (without any convertion) to rotate background in degrees. In this situation all BG values above 330mgdl will be limited to 330, upper limit of the image. 
+
+#### **Chart management**
+
+Default background of chart is transparent, so to hide BG scale included into background image, we will need to include a dedicated background image (this image will include the overall shadows of Steampunk watchface). The link to charBackground.jpg file is done with `"background":` key
+
+Of course, the sizing and positioning of the view must be done to the pixel!
+
+    "chart": {
+        "width": 216,
+        "height": 107,
+        "topmargin": 280,
+        "leftmargin": 80,
+        "visibility": "visible",
+    	"background": "chartBackground"
+    },
+#### **Avg delta management**
+
+To be able to manage dynamic range of avg delta, we will use the four freetext views. freetext1 will be used to manage the image scale, and freetext2 to freetext4 will be used to manage pointer rotation according to scale.
+
+**freetext1**
+
+As explain before, freetext views are in front of chart and in front of background, that's why we included transparent area to see these areas (right side and bottom side of the image)
+
+Note that the bottom part of these images is used as background of chart to have a perfect integration.
+
+```json
+"freetext1": {
+    "width": 400,
+    "height": 400,
+    "topmargin": 0,
+    "leftmargin": 0,
+    "rotation": 0,
+    "visibility": "visible",
+	"dynData": "avgDeltaBackground"
+},
+```
+For this view we include the link to another `"dynData"`block named `avgDeltaBackground`. This block will manage avgDelta scale according to avgDelta value.
+
+```json
+	"avgDeltaBackground": {
+		"valueKey": "avg_delta",
+		"minData": -20,
+		"maxData": 20,
+		"invalidImage": "steampunk_gauge_mgdl_5",
+		"image1": "steampunk_gauge_mgdl_20",
+		"image2": "steampunk_gauge_mgdl_20",
+		"image3": "steampunk_gauge_mgdl_10",
+		"image4": "steampunk_gauge_mgdl_5",
+		"image5": "steampunk_gauge_mgdl_5",
+		"image6": "steampunk_gauge_mgdl_10",
+		"image7": "steampunk_gauge_mgdl_20",
+		"image8": "steampunk_gauge_mgdl_20"
+	},
+```
+- `"valueKey":` will make the link with `"avg_delta"` value
+- min and max Data will also limit the range to the maximum available within this watchface (from -20mgdl to 20mgdl). For mmol users, keep in mind that all internal values are always in mgdl within AAPS.
+
+Then we will see here how to manage dynamic background image according to value.
+
+`"invalidImage":` is the key to manage image to show when we have an invalid data (or missing data). Here we make the link to additional resource image including into zip file with 5 mgdl scale
+
+Then we will use a serie of images, starting from `"image1":` to `"image8":`. The number of provided images will define the number of steps between `minData` and `maxData`. 
+
+- `image1` will define image to show when avg_delta is equal or close to `minData` and the image with the highest number (here `image8`) will be used to define the image that should be shown when avg_delta is equal or close to `maxData`
+- between -20mgdl and 20mgdl, the overall range is 40mgdl, devided by 8 (number of images provided), we will have 8 steps of 5mgdl
+- Now we can map background images according to avg_delta value, starting from the lowest values: between -20 and -15, and also between -15 and -10 we will use  `steampunk_gauge_mgdl_20` for the scale, then between -10 and -5 `steampunk_gauge_mgdl_10`, and so on until +15 and +20 where we will again use `steampunk_gauge_mgdl_20` background image
+
+**freetext2 to freetext4**
+
+For these views will will combine dynamic images and rotation feature explained before:
+
+```json
+"freetext2": {
+    "width": 276,
+    "height": 276,
+    "topmargin": 64,
+    "leftmargin": 64,
+    "rotation": 0,
+    "visibility": "visible",
+	"dynData": "avgDelta5",
+	"rotationOffset": true
+},
+"freetext3": {
+    "width": 276,
+    "height": 276,
+    "topmargin": 64,
+    "leftmargin": 64,
+    "rotation": 0,
+    "visibility": "visible",
+	"dynData": "avgDelta10",
+	"rotationOffset": true
+},
+"freetext4": {
+    "width": 276,
+    "height": 276,
+    "topmargin": 64,
+    "leftmargin": 64,
+    "rotation": 0,
+    "visibility": "visible",
+	"dynData": "avgDelta20",
+	"rotationOffset": true
+},
+```
+Here each view is dedicated to a specific scale (so is linked to a dedicated dynData block), you can alos notice that `"rotationOffset":` key is enabled for these 3 views.Now take a look on the first dynData block:
+
+		"avgDelta5": {
+			"valueKey": "avg_delta",
+			"minData": -20,
+			"maxData": 20,
+			"rotationOffset": {
+				"minValue": -120,
+				"maxValue": 120
+			},
+			"invalidImage": "null",
+			"image1": "null",
+			"image2": "null",
+			"image3": "null",
+			"image4": "steampunk_pointer",
+			"image5": "steampunk_pointer",
+			"image6": "null",
+			"image7": "null",
+			"image8": "null"
+		},
+Here, even if dynamic range will be used only between -5 and +5 avg_delta datas, it's important to keep the overall range of -20, +20mgdl to be sure to be synchronize during scale switches. That's why we keep the same overall range than for `avgDeltaBackground`  and the same number ot steps (8 images).
+
+You can note that either `"invalidImage"` or several `"imagexx"` are with `"null"` key value (it could be any string not existing as a filename within zip file). When a filename is not found, then view background image will be transparent. So the setting ensure that pointer will only be visible for step 4 and step 5 (avg delta between -5mgdl and +5 mgdl), and will not be visible outside this range.
+
+Now we can see a new block `"rotationOffset":` that will have inside two keys `"minValue":` and `"maxValue":`. These values are used to make the convertion between internal datas (in mgdl), and the angle rotation we want to have.
+
+- Steampunk watchface is designed to have maximum from -30 degrees to 30 degrees rotation for the pointer. So according to the scale (here from -5mgdl to 5mgdl), we will want to have 30 degrees for these values. Because `minData` and `maxData`are 4 times greater, then the corresponding minValues and maxValues are 4 * 30 degrees so -120 and +120 degrees. But for all rotation above or below +-30 degrees the pointer will be hidden (no image visible). So it's exactly what is expected here.
+
+The other dynData blocks are defined the same way to tune `"avgDelt10"`and `"avgDelta20"`
+
+#### loop view
+
+in Steampunk watchface loop green and red arrows (for status) are disabled, this is also managed with a dedicated dynData block associated to loop view.
+
+		"loopArrows": {
+			"invalidImage": "greyArrows",
+			"image1": "greenArrows",
+			"image2": "redArrows"
+		}
+Because this block is only called by loop View, and default data managed by this view is loop information, then `"valueKey":` key is optional.
+
+Default `minData` and `maxData` for loop are defined to 0min and 28min, so with two images, all data values below 14 min will be shown with background `image1` and all data values above 14 min will be shown with `image2`. 14 min is exactly the threshold to switch from green arrow to red arrow.
+
+In this example, `greyArrows`, `greenArrows` and `redArrows` files are not included into zip file, so these arrows are just removed (invisible), but you can use this block "as is" if you want to tune status arrows with custom background images.
+
+#### rig_battery and uploader_battery views
+
+To finish the overview of dynData feature, we will take a look on battery management. The idea here is to customize text color according to battery level (from 0 to 100%)
+
     "uploader_battery": {
-        "width": 49,
-        "height": 30,
-        "topmargin": 354,
-        "leftmargin": 150,
+        "width": 60,
+        "height": 28,
+        "topmargin": 100,
+        "leftmargin": 170,
         "rotation": 0,
         "visibility": "visible",
-        "textsize": 23,
+        "textsize": 20,
         "gravity": "center",
-        "font": "roboto_condensed_bold",
+        "font": "default",
         "fontStyle": "bold",
-        "fontColor": "#FFFFFF",
+        "fontColor": "#00000000",
+    	"dynData": "batteryIcons",
     	"twinView": "rig_battery",
-    	"leftOffsetTwinHidden": 25
+    	"topOffsetTwinHidden": -13
     },
     "rig_battery": {
-        "width": 49,
-        "height": 30,
-        "topmargin": 354,
-        "leftmargin": 200,
+        "width": 60,
+        "height": 28,
+        "topmargin": 74,
+        "leftmargin": 170,
         "rotation": 0,
         "visibility": "visible",
-        "textsize": 23,
+        "textsize": 20,
         "gravity": "center",
-        "font": "roboto_condensed_bold",
+        "font": "default",
         "fontStyle": "bold",
-        "fontColor": "#FFFFFF",
+        "fontColor": "#00000000",
+    	"dynData": "batteryIcons",
     	"twinView": "uploader_battery",
-    	"leftOffsetTwinHidden": -25
+    	"topOffsetTwinHidden": 13
     },
-### DynData Feature
+You can see here that these both views share the same `dynData` block named `batteryIcons`. It's possible because by default attached data is the one of the view (to without specifying a  `"valueKey":` key within  `batteryIcons` block, it will be applied with `uploader_battery` data or `rig_battery` data according to the view).
+
+Note these two views also use TwinView feature explain here §§§.
+
+Now lets take a look on dynData block:
+
+		"batteryIcons": {
+			"invalidColor": "#00000000",
+			"color1": "#A00000",
+			"color2": "#000000",
+			"color3": "#000000",
+			"color4": "#000000",
+			"color5": "#000000"		
+		},
+Here we use exactly the same logic that for dynamic background image, but with dedicated keys (`"invalidColor"` and  `"color1"` to `"color5"` to specify 5 steps of 20% each one).
+
+- `"color1"` (dark red) will be used for all values below 20%, and white will be used for all values above this threshold.
+- If you want to lower the threshold to "below 10%", you just have to add 5 additional keys from `"color6"` to `"color10"` , but you can also adjust each color if you want progressive variation from green to yellow, orange and red...
 
 
 
