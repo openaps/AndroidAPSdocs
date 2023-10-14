@@ -1,9 +1,9 @@
-# Comment traduire des chaînes de caractères pour l'application AAPS ou la documentation
+# How to translate strings for the AAPS app or the documentation
 
 * Pour les chaînes utilisées dans l'application, allez sur <https://crowdin.com/project/androidaps> et connectez-vous à l'aide de votre compte GitHub
 * Pour la documentation, allez sur <https://crowdin.com/project/androidapsdocs> et connectez vous à l'aide de votre compte GitHub
 
-* Envoyez une demande d'adhésion à l'équipe Wiki. Pour le faire, cliquez sur le drapeau de la langue souhaitée, puis sur le bouton "Join" dans le coin supérieur droit de la page suivante. Veuillez renseigner la langue, donner quelques informations sur vous et votre expérience AAPS et si vous voulez être un traducteur ou un correcteur (seulement les personnes qualifiées pour traduire + les utilisateurs avancés d'AAPS).
+* Envoyez une demande d'adhésion à l'équipe Wiki. Pour le faire, cliquez sur le drapeau de la langue souhaitée, puis sur le bouton "Join" dans le coin supérieur droit de la page suivante. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
 
 ```{admonition} Etape d'Approbation :class: Remarque
 
@@ -14,8 +14,8 @@ L'approbation est une étape manuelle. En tant qu’organisation à but non lucr
     
     ## Translation of the app
     
-    (translations-translate-strings-for-androidaps-app)=
-    ### Translate strings for AndroidAPS app
+    (translations-translate-strings-for-AAPS-app)=
+    ### Translate strings for AAPS app
     
     * If you have no preference for strings you translate just select the "Translate All" button to start. Cela vous montrera toutes les chaînes de caractères qui ont besoin de traduction.
     
@@ -23,24 +23,25 @@ L'approbation est une étape manuelle. En tant qu’organisation à but non lucr
     
     * Si vous voulez traduire un fichier individuel, veuillez rechercher le fichier via la boîte de dialogue de recherche ou dans l'arborescence des fichiers et cliquer sur le nom du fichier pour commencer le travail de traduction sur les chaînes de caractères présentes dans ce fichier.
     
-       ![Cliquez sur les chaines de caractères](./images/translations-click-strings. ng)
+       ![Click strings.xml](./images/translations-click-strings.png)
     
-    * Traduire les phrases à gauche en ajoutant un nouveau texte traduit ou en utilisant & en éditant les suggestions 
+    * Translate sentences on left side by adding new translated text or use & edit suggestion 
     
-       ![Traduction de l'Application AAPS](. images/translations-translate.png)
+       ![Translation app](./images/translations-translate.png)
     
     
-    ### Approuver les traductions pour l'application AAPS
+    ### Proofread strings for AAPS app
     
-    * les "Proofreaders" commencent en sélectionnant "Proofread" à partir de l'écran d'accueil de leur langage.
+    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
     
-       ![Mode Proofreading](./images/translations-proofreading-mode.png) 
+       ![Proofreading mode app](./images/translations-proofreading-mode.png) 
     
-      et approuvent les textes traduits 
     
-       ![approve text](. images/translations-proofreading.png)
+      and approve translated texts 
     
-    Lorsqu'un correcteur approuve une traduction, elle sera ajoutée à la prochaine version d'AAPS.
+       ![approve text](./images/translations-proofreading.png)
+    
+    When a proofreader approves a translation it will be added to the next version of AAPS.
     
     (translations-translation-of-the-documentation)=
     ## Translation of the documentation

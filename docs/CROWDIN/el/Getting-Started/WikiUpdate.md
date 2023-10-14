@@ -4,7 +4,7 @@
 
 - [BG quality warning sign](Screenshots-bg-warning-sign) @tanja
 - [Medtronic pump update](../Configuration/MedtronicPump.md) @dottedfingertips
-- [Necessary checks after update to AndroidAPS 3.0](../Installing-AndroidAPS/update3_0.md) @tanja
+- [Necessary checks after update to AAPS 3.0](../Installing-AndroidAPS/update3_0.md) @tanja
 - [Omnipod Dash](../Configuration/OmnipodDASH.md) @Freloner @ robertrub @vanelsberg
 - Update docs for AAPS 3.0 (partly) @xJoe
 - [Wear OS for AAPS 3.0](../Configuration/Watchfaces.md) @peterleimbach
@@ -25,11 +25,11 @@
 - Update [troubleshooting Android stduio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 - Removed patched [Dexcom](../Hardware/DexcomG6.md) app as it is obsolete
 
-## October 2021
+## Οκτώβριος 2021
 
 - [Release notes](../Installing-AndroidAPS/Releasenotes.md) AAPS 3.0 beta
 
-## September 2021
+## Σεπτεμβρίου 2021
 
 - Recommended computer specification to [build AAPS app](Building-APK-recommended-specification-of-computer-for-building-apk-file)
 
@@ -52,11 +52,11 @@
 
 ## January 2021
 
-- [Action tab](Screenshots-action-tab) - more details on page 'AndroidAPS screens'
+- [Action tab](Screenshots-action-tab) - more details on page 'AAPS screens'
 - Dexcom G6 with [Build Your Own Dexcom App](DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 - Libre smart reader [battery level](Screenshots-sensor-level-battery)
 - [Objectives](Objectives-objective-3-prove-your-knowledge) - new questions
-- Other [new AndroidAPS 2.8.0 functions](Releasenotes-version-2-8-0)
+- Other [new AAPS 2.8.0 functions](Releasenotes-version-2-8-0)
 
 ## December 2020
 
@@ -64,7 +64,7 @@
 - [OpenAPS hard-coded limits](Open-APS-features-overview-of-hard-coded-limits)
 - Sony Smartwatch 3 [Manual Installation of Google Play Service](../Usage/SonySW3.md)
 
-## October 2020
+## Οκτώβριος 2020
 
 - Accu-Chek Combo - update [time adjustment daylight savings time](Timezone-traveling-time-adjustment-daylight-savings-time-dst)
 - Accu-Chek Insight - Option to [upload absolute values](Accu-Chek-Insight-Pump-settings-in-aaps)
@@ -72,7 +72,7 @@
 - Omnipod Eros - status update
 - [SMS commands - time sync](../Children/SMS-Commands.md)
 
-## September 2020
+## Σεπτεμβρίου 2020
 
 - Major update for new AAPS version 2.7
 - For details see `release notes <Releasenotes-version-2-7-0>`
@@ -98,7 +98,7 @@
 ## March 2020
 
 - [Build apk with Android Studio 3.6.1](../Installing-AndroidAPS/Building-APK.md)
-- [DanaRS with firmware v3](../Configuration/DanaRS-Insulin-Pump.md) **cannot currently be used with AndroidAPS!**
+- [DanaRS with firmware v3](../Configuration/DanaRS-Insulin-Pump.md) **cannot currently be used with AAPS!**
 - [Extended bolus and switch to open loop](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 - [Update apk with Android Studio 3.6.1](../Installing-AndroidAPS/Update-to-new-version.md)
 
@@ -143,7 +143,7 @@
 - Update - quick walk-through for experienced users
 - Docs - update [edit](make-a-PR-code-syntax) and [translation](translations#translation-of-the-documentation).
 
-## October 2019
+## Οκτώβριος 2019
 
 - [AAPS version 2.5](Releasenotes-version-2-5-0) updates (especially on [update page](Update-to-new-version.md))
 - [AccuChek Insight - log options](Accu-Chek-Insight-Pump-settings-in-aaps)
@@ -160,14 +160,14 @@
 
 - [Αυτοματοποιήστε](../Usage/Automation.md)
 - [Bolus calculator](Screenshots-wrong-cob-detection) - slow carb absorption
-- [Nightscout security](Nightscout-security-considerations)
+- [Nightscout ασφάλεια](Nightscout-security-considerations)
 - [Profile timeshift](Profiles-time-shift) (more details)
-- [Remote monitoring](../Children/Children.md)
-- [What is a closed loop system?](../Getting-Started/ClosedLoop.md)
+- [Απομακρυσμένο σύστημα παρακολούθησης](../Children/Children.md)
+- [Τι είναι ένα σύστημα κλειστού κυκλώματος;](../Getting-Started/ClosedLoop.md)
 
 ## Αυγούστου 2019
 
 - Dexcom G6 patched app region
 - [Dexcom G6 new transmitter](xdrip-connect-g6-transmitter-for-the-first-time) ("firefly" / 8G...)
 - [What do I need?](index-what-do-i-need) - new structure & additional information
-- New structure
+- Νέα δομή

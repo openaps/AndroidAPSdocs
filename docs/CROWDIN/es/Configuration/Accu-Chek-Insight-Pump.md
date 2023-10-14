@@ -12,8 +12,8 @@
 
 Nota: AAPS escribirá los datos siempre en **primer perfil de tasa basal en la bomba**.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](module-phone) page which Android version is required to run AndroidAPS.)
-* La aplicación AndroidAPS instalada en el teléfono
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](module-phone) page which Android version is required to run AAPS.)
+* The AAPS app installed on your phone
 
 ## Configuración
 
@@ -21,7 +21,7 @@ Nota: AAPS escribirá los datos siempre en **primer perfil de tasa basal en la b
     
     ![Pantallazo de quitar el medidor Insight](../images/Insight_RemoveMeter.png)
 
-* En [Config Builder ](../Configuration/Config-Builder) de la aplicación AndroidAPS, seleccione Accu-Chek Insight en la sección de la bomba
+* In [Config builder](../Configuration/Config-Builder) of the AAPS app select Accu-Chek Insight in the pump section
     
     ![Pantallazo de Configuración de Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
@@ -40,11 +40,11 @@ Nota: AAPS escribirá los datos siempre en **primer perfil de tasa basal en la b
     
     ![Pantalla de emparejamiento 3 de Insight](../images/Insight_Pairing3.png)
 
-* Correcto! Una palmadita en la espalda por el éxito en la vinculación de la bomba con AndroidAPS.
+* Correcto! Pat yourself on the back for successfully pairing your pump with AAPS.
     
     ![Pantalla de emparejamiento 4 de Insight](../images/Insight_Pairing4.png)
 
-* Para comprobar todo está bien, vuelve a Config builder en AndroidAPS y pulsa sobre el engranaje de la bomba Insight para entrar en la configuración Insight, luego pulsa en el emparejamiento Insight y verás alguna información sobre la bomba:
+* To check all is well, go back to Config builder in AAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
     
     ![Pantalla de información de emparejamiento Insight](../images/Insight_PairingInformation.png)
 
@@ -58,19 +58,19 @@ Note: There will be no permanent connection between pump and phone. Sólo se est
 
 ![Screenshot of Insight Settings](../images/Insight_settings.png)
 
-In the Insight settings in AndroidAPS you can enable the following options:
+In the Insight settings in AAPS you can enable the following options:
 
 * "Registrar cambios en el depósito": Esto registrará automáticamente un cambio de cartucho de insulina cuando se ejecute el programa de "llenar la cánula" en la bomba.
 
-* "Registro de cambios de tubo": Esto agrega una nota a la base de datos de AndroidAPS al ejecutar el programa de "llenado de tubo" de la bomba.
+* "Log tube changes": This adds a note to the AAPS database when you run the "tube filling" program on the pump.
 
-* "Registro de cambio de cánula”: Esto agrega una nota a la base de datos de AndroidAPS cuando se ejecuta "el llenado de la cánula" del programa de la bomba. **Nota: un cambio de cánula también restablece el autosens.**
+* "Log site change": This adds a note to the AAPS database when you run the "cannula filling" program on the pump. **Nota: un cambio de cánula también restablece el autosens.**
 
 * "Registro de cambios de batería": Se registra el cambio de la batería cuando usted pone una batería nueva en la bomba.
 
-* "Registro de cambios del modo de operación": Se agrega una nota en la base de datos de AndroidAPS cuando: se inicia, detiene o pausa la bomba.
+* "Log operating mode changes": This inserts a note in the AAPS database whenever you start, stop or pause the pump.
 
-* "Registro de alertas": Se agrega una nota en la base de datos AndroidAPS siempre que la bomba emite una alerta (excepto los recordatorios, el bolo y la cancelación de TBR, eventos que no se registran).
+* "Log alerts": This records a note in the AAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
 
 * "Habilitar emulación TBR": La bomba Insight sólo puede realizar las tasas basales temporales (TBRs) hasta el 250%. Para evitar esta restricción, La emulación TBR dará instrucciones a la bomba para que proporcione un bolus extendido para la insulina extra si solicita un TBR de más del 250%.
     
@@ -80,7 +80,7 @@ In the Insight settings in AndroidAPS you can enable the following options:
 
 * "Disable vibrations on automated bolus delivery": This disables the Insight pump's vibrations when delivering an automatic bolus (SMB or Temp basal with TBR emulation). This setting is available only with the latest version of Insight firmware (3.x).
 
-* "Tiempo de recuperación": Esto define cuánto tiempo esperará el AndroidAPS antes de volver a intentarlo, después de un intento de conexión fallido. Puede elegir entre 0 y 20 segundos. Si experimenta problemas de conexión, elija un tiempo de espera más largo.   
+* "Recovery duration": This defines how long AAPS will wait before trying again after a failed connection attempt. Puede elegir entre 0 y 20 segundos. Si experimenta problemas de conexión, elija un tiempo de espera más largo.   
       
     Example for min. tiempo de recuperación = 5 y max. tiempo de recuperación = 20   
       
@@ -93,11 +93,11 @@ In the Insight settings in AndroidAPS you can enable the following options:
     reintento-> sin conexión-> espera **20 ** seg.   
     ...
 
-* "Retraso de desconexión": Define cuánto tiempo (en segundos) AndroidAPS esperará a desconectarse de la bomba después de que finalice una operación. El valor predeterminado es de 5 segundos.
+* "Disconnect delay": This defines how long (in seconds) AAPS will wait to disconnect from the pump after an operation is finished. El valor predeterminado es de 5 segundos.
 
 For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
 
-In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
+In AAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
 
 * "Actualizar": Refresca el estado de la bomba
 * "Activar/Desactivar TBR notificación": Una bomba Insight estándar emite una alarma cuando una basal temporal termina. Este botón le permite habilitar o inhabilitar esta alarma sin necesidad de software de configuración.
@@ -112,17 +112,17 @@ Configure alarms in the pump as follows:
 * Menú > Ajustes > ajustes del equipo > configuración de Modo >Silencio > Volumen > 0 (quitar todas las barras)
 * Menú > Modos > modo de Señal > Silencio
 
-This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
+This will silence all alarms from the pump, allowing AAPS to decide if an alarm is relevant to you. If AAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
 
 (Accu-Chek-Insight-Pump-vibration)=
 
 ### Vibración
 
-Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus).
+Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AAPS issues an SMB or TBR emulation delivers an extended bolus).
 
 * Firmware 1.x: Sin vibración por diseño.
 * Firmware 2.x: La vibración no se puede inhabilitar.
-* Firmware 3.x: AndroidAPS libera en forma silenciosa. (minimum [version 2.6.1.4](Releasenotes-version-2-6-1-4))
+* Firmware 3.x: AAPS delivers bolus silently. (minimum [version 2.6.1.4](Releasenotes-version-2-6-1-4))
 
 Firmware version can be found in the menu.
 
@@ -130,7 +130,7 @@ Firmware version can be found in the menu.
 
 Battery life for Insight when looping range from 10 to 14 days, max. 20 days. The user reporting this is using Energizer lithium batteries.
 
-The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
 
 (Accu-Chek-Insight-Pump-insight-specific-errors)=
 

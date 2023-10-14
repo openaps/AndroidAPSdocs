@@ -17,8 +17,8 @@ Wenn Du den Libre 1 als BZ-Quelle nutzt, können aus Sicherheitsgründen die Fun
 -   Falls noch nicht eingerichtet, dann laden Sie xDrip+ herunter und folgen Sie den Anweisungen auf [LimiTTEer](https://github.com/JoernL/LimiTTer) oder [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki).
 -   In xDrip+ gehe zu Einstellungen > Inter-App Einstellungen > Lokaler Broadcast und wähle AN.
 -   In xDrip+ gehe zu Einstellungen > Inter-App Einstellungen > Behandlungen annehmen und wähle AUS.
--   Falls du mit AndroidAPS kalibrieren willst, dann gehe in xDrip+ zu Einstellungen > Inter-App Einstellungen > Accept Calibrations und wähle AN. Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
--   Wähle in AndroidAPS > Konfiguration > BZ-Quelle > xDrip+.
+-   If you want to be able to use AAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
+-   Select xDrip+ in ConfigBuilder (setting in AAPS).
 -   Passe die Einstellungen xDrip+ entsprechend den Erläuterungen auf der [Seite xDrip+ Einstellungen](../Configuration/xdrip.md) an. Es gibt einen Teil für grundlegende xDrip+ Einstellungen und für Freestyle Libre xDrip+ Einstellungen.
 -   Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze "Identify receiver" wie auf der [Seite xDrip+ Einstellungen](../Configuration/xdrip.md) beschrieben.
 
@@ -26,4 +26,4 @@ Wenn Du den Libre 1 als BZ-Quelle nutzt, können aus Sicherheitsgründen die Fun
 
 -   Du benötigst Glimp Version 4.15.57 oder neuer. Ältere Versionen werden nicht unterstützt.
 -   Falls noch nicht eingerichtet, dann laden Sie Glimp herunter und folgen Sie den Anweisungen auf [Nightscout](https://nightscout.github.io/uploader/setup/#glimp).
--   Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > Glimp.
+-   Select Glimp in ConfigBuilder (setting in AAPS).

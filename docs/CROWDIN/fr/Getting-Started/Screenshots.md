@@ -1,14 +1,14 @@
-# Ecrans AndroidAPS
+# AAPS screens
 
 ## Écran d'accueil
 
 ![Écran d'accueil V2.7](../images/Home2020_Homescreen.png)
 
-Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il contient la plupart des informations dont vous aurez besoin au jour le jour.
+This is the first screen you will come across when you open AAPS and it contains most of the information that you will need day to day.
 
 ### Section A - Onglets
 
-* Permet de naviguer entre les différents modules AndroidAPS.
+* Navigate between the various AAPS modules.
 * Vous pouvez également changer d'écrans en glissant vers la gauche ou la droite.
 * Displayed tabs can be selected in [config builder](Config-Builder-tab-or-hamburger-menu).
 
@@ -83,7 +83,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 #### Avertissement Glycémie
 
-Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+À partir d'Android 3.0, vous pouvez avoir un signal d'avertissement à côté de votre glycémie sur l'écran principal.
 
 *Remarque* : Jusqu'à 30 heures sont prises en compte pour les calculs AAPS. Donc, même après avoir résolu la cause racine, cela peut prendre environ 30 heures pour que le triangle jaune disparaisse après le dernier interval irrégulier.
 
@@ -99,7 +99,7 @@ Cependant, quand il y a beaucoup de doublons, il peut être plus facile de
 
 Le signe d'alerte rouge vous demande d'être actif immédiatement : vous recevez des glycémies dupliquées, qui empèche la boucle de faire son travail correctement. Par conséquent, votre boucle sera désactivée jusqu'à ce que ce soit résolu.
 
-![Red BG warning](../images/bg_warn_red.png)
+![Avertissement de glycémie rouge](../images/bg_warn_red.png)
 
 Vous devez savoir pourquoi vous avez des Gly dupliquées :
 
@@ -112,7 +112,7 @@ Vous devez savoir pourquoi vous avez des Gly dupliquées :
 
 * Le signal d'alerte jaune indique que votre Gly est arrivée dans des intervalles de temps irréguliers ou qu'il manque des Gly.
    
-   ![Yellow BG warning](../images/bg_warn_yellow.png)
+   ![Avertissement de glycémie jaune](../images/bg_warn_yellow.png)
 
 * Habituellement, vous n'avez rien à faire. La boucle fermée va continuer à fonctionner !
 
@@ -347,7 +347,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 #### Rappel repas
 
-* Pour les glucides dans le futur, la case à cocher "alarme" peut être sélectionnée (cochée par défaut lorsqu'un décalage horaire positif est renseigné) afin de vous rappeler quand vous avez prévu de manger les glucides entrés dans AndroidAPS
+* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AAPS
    
    ![Assistant bolus avec rappel alimentation](../images/Home2021_BolusWizard_EatingReminder.png)
 
@@ -382,7 +382,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 ![Absorption lente des glucides](../images/Calculator_SlowCarbAbsorption.png)
 
-* Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. 
+* If you see the warning above after using bolus wizard, AAPS has detected that the calculated COB value maybe wrong.
 * Donc si vous voulez faire un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! 
 * Pour plus d'informations, voir les conseils sur la [page de calcul des GA](COB-calculation-detection-of-wrong-cob-values).
 
@@ -459,7 +459,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 * La ligne MAUVE indique la quantité d’insuline restante après son injection car elle décroît avec le temps, tandis que la ligne BLEUE indique son activité.
 * Le point important à noter est que la décomposition a une longue queue. 
 * Si vous êtes habitué à la pompe manuellement, vous êtes probablement habitué à supposer que l'insuline se désintègre en environ 3,5 heures. 
-* Toutefois, lorsque vous bouclez la longue queue est importante, car les calculs sont beaucoup plus précis et ces petites quantités s’additionnent lorsqu’elles sont soumises aux calculs récursifs de l’algorithme AndroidAPS.
+* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AAPS algorithm.
 
 Pour plus d'informations sur les différents types d'insuline, leurs profils d'activité et l'importance de tout cela, vous pouvez lire un article ici sur [Comprendre les nouvelles courbes IA basées sur des courbes d'activité exponentielles](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 

@@ -32,19 +32,9 @@
 
 * * *
 
-### Medtrum A6/P6/C6 ([Homepage](https://www.medtrum.com/product/nanopump.html))
-
-**Статус пригодности:** Является кандидатом для ИПЖ. Company has its own limited half-Loop system running (A6). Controllable via iPhone App. No Android app available at the moment.
-
-**Требования к оборудованию для AAPS:** По-видимому, никаких. Похоже, что блутус-связь имеется.
-
-**Comment:** Some investigation has started to see if this pump can be supported in AAPS very easily. You can find more information on our discord in channel "medtrum".
-
-* * *
-
 ### Equil (pump from Aidex/GlucoRx/MicroTechMD) ([Homepage](https://www.glucorx.ie/glucorx-equil/))
 
-**Статус пригодности:** Является кандидатом для ИПЖ.
+**Loop status:** Is a Loop candidate.
 
 **Hardware requirement for AAPS:** None. Похоже, что блутус-связь имеется.
 
@@ -54,7 +44,7 @@
 
 ### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Статус пригодности:** Является кандидатом для ИПЖ.
+**Loop status:** Is a Loop candidate.
 
 **Hardware requirement for AAPS:** None. Похоже, что блутус-связь имеется.
 

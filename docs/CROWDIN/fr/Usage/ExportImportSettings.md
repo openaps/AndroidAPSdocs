@@ -11,7 +11,7 @@ Les paramètres exportés doivent être copiés sur un stockage cloud ou sur vot
 Sur un ordinateur Windows 10, cela ressemble à ceci :
 
 ```{image} ../images/AAPS_ExImportSettingsWin.png
-:alt: AndroidAPS Préférences téléphone connecté à l'ordinateur
+:alt: AAPS Preferences phone connected to computer
 ```
 
 ## Informations exportées
@@ -36,7 +36,7 @@ La sauvegarde des paramètres est chiffrée par un mot de passe principal qui pe
 - Exporter les paramètres
 
 ```{image} ../images/AAPS_ExportSettings1.png
-:alt: AndroidAPS exporter les paramètres 1
+:alt: AAPS export settings 1
 ```
 
 - La date et l'heure d'exportation seront automatiquement ajoutées au nom du fichier et affichées avec le chemin.
@@ -45,7 +45,7 @@ La sauvegarde des paramètres est chiffrée par un mot de passe principal qui pe
 - L'exportation réussie sera affichée en bas de l'écran.
 
 ```{image} ../images/AAPS_ExportSettings2.png
-:alt: AndroidAPS exporter les paramètres 2
+:alt: AAPS export settings 2
 ```
 
 (ExportImportSettings-import-settings)=
@@ -58,7 +58,7 @@ La sauvegarde des paramètres est chiffrée par un mot de passe principal qui pe
 - Importer les paramètres
 
 ```{image} ../images/AAPS_ImportSettings1.png
-:alt: AndroidAPS importer les paramètres 1
+:alt: AAPS import settings 1
 ```
 
 - Tous les fichiers présents dans le dossier AAPS/préférences/ de votre téléphone seront affichés dans la liste.
@@ -67,7 +67,7 @@ La sauvegarde des paramètres est chiffrée par un mot de passe principal qui pe
 - Entrez le [mot de passe principal](Preferences-master-password) et cliquez sur 'OK'.
 
 ```{image} ../images/AAPS_ImportSettings2.png
-:alt: AndroidAPS importer les paramètres 2
+:alt: AAPS import settings 2
 ```
 
 - Les détails du fichier de préférences seront affichés.

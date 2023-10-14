@@ -1,191 +1,193 @@
-# SMS Commands
+# Comandos SMS
 
-## Safety First
+## La seguridad primero
 
-- AAPS allows you to control a child's phone remotely via text message. Si activas esta función "SMS Communicator", recuerda siempre que el teléfono configurado para dar comandos remotos podría ser robado. Por lo que protege siempre el móvil con código PIN. A strong password or biometrics are recommended.
-- Additionally it is recommended to allow a [second phone number](SMS-Commands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](SMS-Commands-other) SMS communicator in case your main remote phone gets lost or stolen.
-- AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Es aconsejable, por seguridad, configurar esta función para que los textos de confirmación se envíen al menos a dos números de teléfono diferentes, así si falla (o ha sido robado) uno, quedará el otro.
-- **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
-- As of AAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
+- AndroidAPS te permite controlar el teléfono de un niño de forma remota mediante mensajes de texto. Si activas esta función "SMS Communicator", recuerda siempre que el teléfono configurado para dar comandos remotos podría ser robado. Por lo que protege siempre el móvil con código PIN. Se recomienda usar una contraseña compleja o usar datos biométricos.
+- Además, se recomienda permitir a un [segundo número de teléfono](SMS-Commands-authorized-phone-numbers) para comandos SMS. Por lo que puedes utilizar el segundo número para [desactivar temporalmente](SMS-Commands-other) los comandos SMS en caso de que que pierdas o te roben el teléfono principal.
+- AndroidAPS también te avisará por mensaje de texto si tus comandos remotos, tales como bolos o cambios de perfil, se han llevado a cabo. Es aconsejable, por seguridad, configurar esta función para que los textos de confirmación se envíen al menos a dos números de teléfono diferentes, así si falla (o ha sido robado) uno, quedará el otro.
+- **Si envías un bolo por mensaje de texto, debes introducir los carbohidratos a través de Nightscout (NSClient, Web,...)!** Si no lo haces, la insulina activa será correcta, pero los carbohidratos serán demasiado bajos, lo que podría provocar que no se realicen correcciones, ya que AAPS asume que tiene demasiada insulina activa.
+- Desde la versión 2.7 de AndroidAPS se debe utilizar una aplicación de autenticación por contraseña de un sólo uso, para mejorar la seguridad al usar la opción de comandos SMS.
 
-## Setup SMS commands
+## Configurar comandos SMS
 
 ```{image} ../images/SMSCommandsSetup.png
-:alt: SMS Commands Setup
+:alt: Configuración de comandos SMS
 ```
 
-- Most of the adjustments of temp targets, following AAPS etc. can be done on [NSClient app](../Children/Children.md) on an Android phone with an internet connection.
-- Boluses can't be given through Nightscout, but you can use SMS commands.
-- If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
-- In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+- La mayoría de los ajustes de los objetivos temporales, seguidor de AAPS, etc. se pueden realizar en la [Aplicación NSClient](../Children/Children.md) en un teléfono Android con una conexión a Internet.
+- Los bolos no pueden poner mediante Nightscout, pero se pueden usar los comandos SMS.
+- Si utilizas un iPhone como seguidor y, por tanto, no puedes utilizar la aplicación NSClient, tienes a tu disposición comandos SMS adicionales.
+- En los ajustes de tu teléfono Android, ve a aplicaciones > AAPS > Permisos y activa el de SMS
 
 (SMS-Commands-authorized-phone-numbers)=
 
-### Authorized phone numbers
+### Números de teléfono permitidos
 
-- In AAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
+- En AndroidAPS ir a Tabla de configuraciones > Comunicador SMS \*\* y añadir el número(s) de teléfono que deseas habilitar para enviar comandos SMS (separados por punto y coma - p.ej. +3412345678;+3412345679)
 
-- Enable 'Allow remote commands via SMS'.
+- Ten en cuenta que el signo "+" delante del número puede o no ser necesario según tu ubicación. Para determinarlo, envía un texto de muestra que muestre el formato recibido en la pestaña de Comunicador de SMS.
 
-- If you want to use more than one number:
+- Habilitar 'Permitir comandos remotos vía SMS'.
 
-  - Enter just one number.
+- Si quieres utilizar más de un número:
 
-  - Make that single number work by sending and confirming a SMS command.
+  - Añade sólo un número.
 
-  - Enter additional number(s) separated by semicolon, no space.
+  - Asegúrate de que ese número funciona enviando y confirmando comandos SMS.
+
+  - Añade número/os adicionales separados por punto y coma, sin espacios.
 
     ```{image} ../images/SMSCommandsSetupSpace2.png
-    :alt: SMS Commands Setup multiple numbers
+    :alt: Configurar Comandos SMS usando múltiples números
     ```
 
-### Minutes between bolus commands
+### Minutos entre los comandos de bolos
 
-- You can define the minimum delay between two boluses issued via SMS.
-- For safety reasons you have to add at least two authorized phone numbers to edit this value.
+- Puedes definir un retraso mínimo entre dos bolos enviados mediante SMS.
+- Por razones de seguridad, hay que añadir al menos dos números de teléfono autorizados para editar este valor.
 
-### Additionally mandatory PIN at token end
+### Es obligatorio añadir el PIN al final del token
 
-- For safety reasons the reply code must be followed by a PIN.
+- Por razones de seguridad, el código de respuesta tiene que ir seguido de un PIN.
 
-- PIN rules:
+- Reglas del PIN:
 
-  - 3 to 6 digits
-  - not same digits (i.e. 1111)
-  - not in a row (i.e. 1234)
+  - De 3 a 6 dígitos
+  - No puede ser los mismos dígitos (p.ej. 1111)
+  - No pueden ser números consecutivos (p.ej. 1234)
 
-### Authenticator setup
+### Configuración de la aplicación de autenticación
 
-- Two-factor authentication is used to improve safety.
+- Se utiliza una doble autenticación, para mejorar la seguridad.
 
-- You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
+- Puedes utilizar cualquier aplicación de autenticación que soporte tokens RFC 6238 TOTP. Las aplicaciones más comunes gratuitas son las siguientes:
 
   - [Authy](https://authy.com/download/)
   - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
   - [LastPass Authenticator](https://lastpass.com/auth/)
   - [FreeOTP Authenticator](https://freeotp.github.io/)
 
-- Install the authenticator app of your choice on your follower phone and scan the QR code shown in AAPS.
+- Instala en tu teléfono la aplicación de autenticación preferida y escanea el código QR mostrado en AAPS.
 
-- Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. Example:
+- Prueba la contraseña de un solo uso introduciendo el token mostrado en tu aplicación de autenticación y el PIN que has configurado en AAPS. Example:
 
-  - Your mandatory PIN is 2020
-  - TOTP token from the authenticator app is 457051
-  - Enter 4570512020
+  - El PIN obligatorio es 2020
+  - El token generado por la aplicación de autenticación TOTP es 457051
+  - Añade 4570512020
 
-- The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **There is no button you can press!**
+- El texto rojo "PIN INCORRECTO" cambiará **automáticamente** a verde "OK" si lo has añadido correctamente. **¡No hay que pulsar ningún botón!**
 
-- The time on both phones must be synchronized. Best practice is set automatically from network. Time differences might lead to authentication problems.
+- La hora en ambos teléfonos tiene que estar sincronizada. La mejor práctica es configurarla de forma automática desde la red. Las diferencias de tiempo pueden causar problemas de autenticación.
 
-- Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
+- Usa el botón "REINICIAR AUTENTICADORES" si quieres eliminar los autenticadores aprovisionados.  (Al restablecer el autenticador se invalidan TODOS los autenticadores ya aprovisionados. Tendrás que volver a configurarlos)
 
-## Use SMS commands
+## Uso de comandos SMS
 
-- Send a SMS to the phone with AAPS running from your approved phone number(s) using any of the [commands](SMS-Commands-commands) below.
+- Envía un SMS al teléfono que ejecuta AAPS desde alguno de tus teléfonos autorizados, utilizando cualquiera de los [comandos](SMS-Commands-commands) siguientes.
 
-- The AAPS phone will respond to confirm success of command or status requested.
+- El teléfono que ejecuta AAPS responderá para confirmar el éxito del comando o del estado solicitado.
 
-- Confirm command by sending the code where necessary. Example:
+- Confirma el comando enviando el código donde sea necesario. Example:
 
-  - Your mandatory PIN is 2020
-  - TOTP token from the authenticator app is 457051
-  - Enter 4570512020
+  - El PIN obligatorio es 2020
+  - El token generado por la aplicación de autenticación TOTP es 457051
+  - Añade 4570512020
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**Sugerencia**: Puede ser útil tener SMS ilimitados en tu plan de teléfono (para cada teléfono utilizado), si se van a enviar muchos SMS.
 
 (SMS-Commands-commands)=
-## Commands
+## Comandos
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](translations-translate-strings-for-AAPS-app).
+Los comandos deben enviarse en inglés, la respuesta será en tu idioma local si la cadena de respuesta ya está [traducida](translations-translate-strings-for-AAPS-app).
 
 ```{image} ../images/SMSCommands.png
-:alt: SMS Commands Example
+:alt: Ejemplo de Comandos SMS
 ```
 
 ### Loop
 
-- LOOP STOP/DISABLE \* Response: Loop has been disabled
+- LOOP STOP/DISABLE \* Respuesta: El lazo ha sido desactivado
 
-- LOOP START/ENABLE \* Response: Loop has been enabled
+- LOOP START/ENABLE \* Respuesta: El lazo ha sido activado
 
 - LOOP STATUS
 
-  - Response depends on actual status
+  - La respuesta depende del estado actual
 
-    - Loop is disabled
-    - Loop is enabled
-    - Suspended (10 min)
+    - El lazo está desactivado
+    - El lazo está activado
+    - Suspendido (10 min)
 
-- LOOP SUSPEND 20 \* Response: Loop suspended for 20 minutes
+- LOOP SUSPEND 20 \* Respuesta: El lazo se ha suspendido durante 20 minutos
 
-- LOOP RESUME \* Response: Loop resumed
+- LOOP RESUME \* Respuesta: El lazo se ha reanudado
 
-### CGM data
+### Datos del MCG
 
-- BG \* Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
-- CAL 5.6 \* Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN \* Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
+- BG \* Respuesta: Última BG: 5.6 hace 4min, Delta: -0,2 mmol, IOB: 0.20U (Bolo: 0.10U Basal: 0.10U)
+- CAL 5.6 \* Respuesta: Para enviar la calibración 5.6, responde con el código de la aplicación Authenticator para el Usuario seguido del PIN. \* Respuesta después de recibir el código correcto: Calibración enviada (** Si xDrip está instalado. Debe habilitarse la aceptación de calibraciones en xDrip+**)
 
 ### Basal
 
-- BASAL STOP/CANCEL \* Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
-- BASAL 0.3 \* Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
-- BASAL 0.3 20 \* Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
-- BASAL 30% \* Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
-- BASAL 30% 50 \* Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
+- BASAL STOP/CANCEL \* Respuesta: Para detener la basal temporal, responde con el código de la aplicación de autenticación del usuario seguido del PIN
+- BASAL 0.3 \* Respuesta: Para iniciar basal de 0,3U/h durante 30 minutos, responda con el código de la aplicación de autenticación del usuario seguido del PIN
+- BASAL 0.3 20 \* Respuesta: Para iniciar basal de 0,3U/h durante 20 minutos, responda con el código de la aplicación de autenticación del usuario seguido del PIN
+- BASAL 30% \* Respuesta: Para iniciar basal al 30% durante 30 minutos, responda con el código de la aplicación de autenticación del usuario seguido del PIN
+- BASAL 30% 50 \* Respuesta: Para iniciar basal al 30% durante 50 minutos, responda con el código de la aplicación de autenticación del usuario seguido del PIN
 
-### Bolus
+### Bolo
 
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
+No se permite el bolo remoto en los próximos 15 minutos (este valor sólo es editable si se han agregado 2 números de teléfono) después del último comando de bolo o comandos remotos. Por lo tanto, la respuesta depende del momento en que se administró el último bolo.
 
-- BOLUS 1.2 \* Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available. Try again later.
-- BOLUS 0.60 MEAL \* If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins). \* Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available.
-- CARBS 5 \* Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
-- CARBS 5 17:35/5:35PM \* Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
-- EXTENDED STOP/CANCEL \* Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
-- EXTENDED 2 120 \* Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
+- BOLUS 1.2 \* Respuesta A: Para administrar un bolo de 1.2U, responda con el código de la aplicación de autenticación del usuario seguido del PIN. \* Respuesta B: Bolo remoto no disponible. Inténtelo de nuevo más tarde.
+- BOLUS 0,60 MEAL \* Si especifica el parámetro opcional MEAL, esto establece el Objetivo Temporal para COMIDA (los valores predeterminados son: 90 mg/dL, 5.0 mmol/l durante 45 minutos). \* Respuesta A: Para administrar un bolo para la comida de 0,60U, responda con el código de la aplicación de autenticación del usuario seguido del PIN \* Respuesta B: Bolos remotos no disponibles.
+- CARBS 5 \* Respuesta: Para ingresar 5 gramos a las 12:45, responda con el código de la aplicación de autenticación del usuario seguido del PIN
+- CARBS 5 17:35/5:35PM \* Respuesta: Para ingresar 5 gramos a las 17:35, responda con el código de la aplicación de autenticación del usuario seguido del PIN
+- EXTENDED STOP/CANCEL \* Respuesta: Para detener el bolo extendido, responda con el código de la aplicación de autenticación del usuario seguido del PIN
+- EXTENDED 2 120 \* Respuesta: Para iniciar un bolo extendido de 2U durante 120 minutos, responda con el código de la aplicación de autenticación del usuario seguido del PIN
 
 ### Perfil
 
-- PROFILE STATUS \* Response: Profile1
-- PROFILE LIST \* Response: 1.\`Profile1\` 2.\`Profile2\`
-- PROFILE 1 \* Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
-- PROFILE 2 30 \* Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+- PROFILE STATUS \* Respuesta: Perfil1
+- PROFILE LIST \* Respuesta: 1.\`Perfil1\` 2.\`Perfil2\`
+- PERFIL 1 \* Respuesta: Para cambiar al perfil Perfil1 al 100%, responda con el código de la aplicación de autenticación del usuario seguido del PIN
+- PROFILE 2 30 \* Respuesta: Para cambiar al perfil Perfil2 al 30%, responda con el código de la aplicación de autenticación del usuario seguido del PIN
 
 (SMS-Commands-other)=
 
 ### Otros
 
-- TREATMENTS REFRESH \* Response: Refresh treatments from NS
-- NSCLIENT RESTART \* Response: NSCLIENT RESTART 1 receivers
-- PUMP \* Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
-- PUMP CONNECT \* Response: Pump reconnected
-- PUMP DISCONNECT *30* \* Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
-- SMS DISABLE/STOP \* Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
-- TARGET MEAL/ACTIVITY/HYPO \* Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
-- TARGET STOP/CANCEL \* Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
-- HELP \* Response: BG, LOOP, TREATMENTS, .....
-- HELP BOLUS \* Response: BOLUS 1.2 BOLUS 1.2 MEAL
+- TREATMENTS REFRESH \* Respuesta: Actualizar tratamientos desde NS
+- NSCLIENT RESTART \* Respuesta: Reiniciar NSCLIENT con 1 receptor
+- PUMP \* Respuesta: Última conexión: hace 1 minuto. Temp: 0,00U/h @11:38. 5/30 min. IOB: 0,5 U. Reservorio: 34 U. Batería: 100%
+- PUMP CONNECT \* Respuesta: Bomba reconectada
+- PUMP DISCONNECT *30* \* Respuesta: Para desconectar la bomba durante *30* minutos, responda con el código de la aplicación de autenticación del usuario seguido del PIN
+- SMS DISABLE/STOP \* Respuesta: Para desactivar el Servicio Remoto de SMS, responda con el código "Any". Recuerda que solo podrás activarlo de nuevo desde el teléfono principal de AAPS.
+- TARGET MEAL/ACTIVITY/HYPO \* Respuesta: Para configurar el Objetivo Temporal COMIDA/ACTIVIDAD/HIPO, responde con el código de la aplicación de autenticación del usuario seguido del PIN
+- TARGET STOP/CANCEL \* Respuesta: Para cancelar el Objetivo Temporal, responde con el código de la aplicación de autenticación del usuario seguido del PIN
+- HELP \* Respuesta: Glucemia, Lazo, Tratamientos, ...
+- HELP BOLUS \* Respuesta: BOLO 1.2, BOLO 1.2 COMIDA
 
 (SMS-Commands-troubleshooting)=
 ## Solución de problemas
 
-### Multiple SMS
+### Múltiples SMS
 
-If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. This could be xDrip+, for example. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS.
+Si recibes el mismo mensaje una y otra vez (por ejemplo, cambio de perfil), es probable que hayas configurado un bucle con otras aplicaciones. Podría ser con xDrip+, por ejemplo. Si es así, asegúrate de que xDrip+ (u cualquier otra aplicación) no esté subiendo tratamientos a NS.
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+Si la otra aplicación está instalada en varios teléfonos, asegúrate de desactivar la subida de datos en todos ellos.
 
-### SMS commands not working on Samsung phones
+### Los comandos SMS no funcionan en teléfonos Samsung
 
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabling 'send as chat message'.
+Hubo un informe sobre comandos SMS que dejaron de funcionar después de una actualización en el teléfono Galaxy S10. Podría resolverse desactivando 'Enviar como mensaje de chat'.
 
 ```{image} ../images/SMSdisableChat.png
-:alt: Disable SMS as chat message
+:alt: Desactivar SMS como mensaje de chat
 ```
-### Android Messages App
+### Aplicación Mensajes de Android
 
-If you are having issues sending or receiving SMS commands with the Android Messages app disable end-to-end ecryption on both caregiver and child's phones.
- - open the specific SMS conversation in Messages
- - Select the options ellipisis in the top right corner
- - select "Details"
- - Activate "Only send SMS and MMS messages"
+Si tienes problemas para enviar o recibir comandos SMS con la aplicación Mensajes de Android, desactiva el cifrado de extremo a extremo en los teléfonos tanto del cuidador como del niño.
+ - Abre la conversación SMS específica en la aplicación Mensajes
+ - Selecciona los tres puntos (opciones de menú) en la esquina superior derecha
+ - Selecciona 'Detalles'
+ - Activa 'Solo enviar mensajes SMS y MMS'

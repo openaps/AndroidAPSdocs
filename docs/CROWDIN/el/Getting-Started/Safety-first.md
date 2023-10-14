@@ -4,22 +4,23 @@
 
 ## Γενικά
 
-- AndroidAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
-- Do not assume that AndroidAPS will never make mistakes. Αυτή η συσκευή αναλαμβάνει τον έλεγχο της χορήγησης ινσουλίνης: Παρακολουθήστε τη συνεχώς, κατανοήστε πώς λειτουργεί και μάθετε πώς να ερμηνεύετε τις ενέργειές της.
-- Remember that, once paired, the phone can instruct the pump to do anything. Χρησιμοποιήστε μόνο αυτό το τηλέφωνο για το AndroidAPS και, εάν χρησιμοποιείται από ένα παιδί, να του μιλήσετε ώστε να προσέχει το κινητό. Μην εγκαταστήσετε περιττές εφαρμογές ή παιχνίδια (!!!) που θα μπορούσαν να εισάγουν κακόβουλο λογισμικό, όπως trojans, ιούς ή bots που θα μπορούσαν να παρεμβληθούν στο σύστημά σας.
-- Install all security updates provided by your phone manufacturer and Google.
-- You might also need to change your diabetes habits as you change your therapy by using a closed loop system. Π.χ. μερικοί άνθρωποι αναφέρουν ότι χρειάζονται λιγότερες θεραπείες υπογλυκαιμίας, καθώς το AndroidAPS έχει ήδη μειώσει την ινσουλίνη.
+- AAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
+- Do not assume that AAPS will never make mistakes. Αυτή η συσκευή αναλαμβάνει τον έλεγχο της χορήγησης ινσουλίνης: Παρακολουθήστε τη συνεχώς, κατανοήστε πώς λειτουργεί και μάθετε πώς να ερμηνεύετε τις ενέργειές της.
+- Να θυμάστε ότι, μόλις συνδεθεί, το τηλέφωνο μπορεί να δώσει εντολή στην αντλία να κάνει οτιδήποτε. Only use this phone for AAPS and, if being used by a child, essential communications. Μην εγκαταστήσετε περιττές εφαρμογές ή παιχνίδια (!!!) που θα μπορούσαν να εισάγουν κακόβουλο λογισμικό, όπως trojans, ιούς ή bots που θα μπορούσαν να παρεμβληθούν στο σύστημά σας.
+- Εγκαταστήστε όλες τις ενημερώσεις ασφαλείας που παρέχονται από τον κατασκευαστή του τηλεφώνου σας και το Google.
+- Μπορεί επίσης να χρειαστεί να αλλάξετε τις συνήθειες του διαβήτη καθώς αλλάζετε τη θεραπεία σας χρησιμοποιώντας ένα σύστημα κλειστού κυκλώματος. Π.χ. some people report, they need less hypo treatments as AAPS has already reduced insulin.
 
 ## Επικοινωνία με SMS
 
-- AndroidAPS allows you to control a child's phone remotely via text message. Αν ενεργοποιήσετε αυτό την επικοινωνία με SMS, θυμηθείτε πάντα ότι το τηλέφωνο που έχει ρυθμιστεί για να δώσει απομακρυσμένες εντολές μπορεί να κλαπεί. Συνεπώς, πάντα να το προστατεύετε τουλάχιστον από ένα κωδικό PIN.
-- AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Συνιστάται να το ρυθμίσετε έτσι ώστε τα κείμενα επιβεβαίωσης να αποστέλλονται σε τουλάχιστον δύο διαφορετικούς αριθμούς τηλεφώνου σε περίπτωση κλοπής ενός από τα τηλέφωνα λήψης.
+- Το AAPS σας επιτρέπει να ελέγχετε εξ αποστάσεως το τηλέφωνο ενός παιδιού μέσω ενός μηνύματος SMS. Αν ενεργοποιήσετε αυτό την επικοινωνία με SMS, θυμηθείτε πάντα ότι το τηλέφωνο που έχει ρυθμιστεί για να δώσει απομακρυσμένες εντολές μπορεί να κλαπεί. Συνεπώς, πάντα να το προστατεύετε τουλάχιστον από ένα κωδικό PIN.
+- Το AndroidAPS θα σας ενημερώσει επίσης με μήνυμα κειμένου , εάν έχουν πραγματοποιηθεί οι απομακρυσμένες εντολές σας, όπως μια γευματική δόση ή μια αλλαγή προφίλ. Συνιστάται να το ρυθμίσετε έτσι ώστε τα κείμενα επιβεβαίωσης να αποστέλλονται σε τουλάχιστον δύο διαφορετικούς αριθμούς τηλεφώνου σε περίπτωση κλοπής ενός από τα τηλέφωνα λήψης.
 
-## AndroidAPS can also be used by blind people
+(Safety-first-aaps-can-also-be-used-by-blind-people)=
+## AAPS can also be used by blind people
 
-On Android devices TalkBack is part of the operating system. It is a program for screen orientation via voice output. With TalkBack you can operate your smartphone as well as AndroidAPS blind.
+On Android devices TalkBack is part of the operating system. It is a program for screen orientation via voice output. With TalkBack you can operate your smartphone as well as AAPS blind.
 
-We users create the AndroidAPS app ourselves with Android Studio. Many use Microsoft Windows for this purpose, where there is the Screenreader analogous to TalkBack. Since Android Studio is a Java application, the "Java Access Bridge" component must be enabled in the Control Panel. Otherwise, the screen reader of the PC will not speak in Android Studio.
+We users create the AAPS app ourselves with Android Studio. Many use Microsoft Windows for this purpose, where there is the Screenreader analogous to TalkBack. Since Android Studio is a Java application, the "Java Access Bridge" component must be enabled in the Control Panel. Otherwise, the screen reader of the PC will not speak in Android Studio.
 
 To do this, please proceed as follows:
 
@@ -32,9 +33,9 @@ To do this, please proceed as follows:
 ```{note}
 **IMPORTANT SAFETY NOTICE**
 
-The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
+The foundation of AAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. Είναι πολύ σημαντικό να χρησιμοποιείτε μόνο μια δοκιμασμένη, πλήρως λειτουργική FDA ή CE εγκεκριμένη αντλία ινσουλίνης και CGM για το κλείσιμο ενός αυτοματοποιημένου κυκλώματος δοσολογίας ινσουλίνης. Οι τροποποιήσεις υλικού ή λογισμικού σε αυτά τα εξαρτήματα μπορεί να προκαλέσουν απροσδόκητη δόση ινσουλίνης, προκαλώντας σημαντικό κίνδυνο για τον χρήστη. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AAPS system.
 
-Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+Επιπλέον, είναι εξίσου σημαντικό να χρησιμοποιείτε μόνο αυθεντικά προϊόντα όπως εισαγωγείς, κάνουλα και δοχεία ινσουλίνης εγκεκριμένα από τον κατασκευαστή για χρήση με την αντλία ή το CGM. Η χρήση μη δοκιμασμένων ή τροποποιημένων αναλωσίμων μπορεί να προκαλέσει ανακρίβεια CGM και σφάλματα δοσολογίας ινσουλίνης. Η ινσουλίνη είναι εξαιρετικά επικίνδυνη όταν δίνετε σε λάθος δοσολογία - παρακαλώ μην παίζετε με τη ζωή σας με μη εγκεκριμένες προμήθειες.
 
 Last not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels.  The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
 ```

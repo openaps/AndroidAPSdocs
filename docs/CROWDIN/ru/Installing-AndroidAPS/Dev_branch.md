@@ -1,11 +1,11 @@
 ## Версия разработчиков
 
-<font color="#FF0000"><strong> Внимание: </strong></font>
-Версия разработчиков -только для дальнейшего развития AndroidAPS. Она должен использоваться на отдельном телефоне для тестирования <font color="#FF0000"><strong> а не для реального цикла!</strong></font>
+<font color="#FF0000"><strong>Attention:</strong></font>
+Dev branch is for the further development of AAPS only. Она должен использоваться на отдельном телефоне для тестирования <font color="#FF0000"><strong> а не для реального цикла!</strong></font>
 
-Самая стабильная версия AndroidAPS для обычного пользователя - [ Master branch ](https://github.com/nightscout/AndroidAPS/tree/master). Рекомендуется оставаться на версии Master для реального использования.
+The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). Рекомендуется оставаться на версии Master для реального использования.
 
-Версия dev AndroidAPS - только для разработчиков и тестировщиков, которые умеют работать с stacktraces, просматривать файлы журналов, запускать отладчик для создания отчетов об ошибках, которые помогают разработчикам (короче говоря: для людей, которые знают, что делают без посторонней помощи!). Поэтому многие незавершенные функции отключены. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in directory /AAPS/extra . Включение инженерного режима может полностью нарушить работу цикла.
+The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Поэтому многие незавершенные функции отключены. To enable these features enter **Engineering Mode** by creating a file named `engineering_mode` in directory /AAPS/extra . Включение инженерного режима может полностью нарушить работу цикла.
 
 Тем не менее, версия разработчиков-хорошее место для того, чтобы понять, какие функции тестируются, помочь исправлению ошибок и дать отзыв о том, как работают новые функции. Часто люди тестируют версию Dev на старом телефоне и помпе до тех пор, пока они не уверены, что версия стабильна -любое ее использование на их собственный риск. При тестировании новых функций помните, что они по-прежнему в процессе разработки. Делайте это на свой страх и риск & с должной осмотрительностью, чтобы сохранить себя в безопасности.
 

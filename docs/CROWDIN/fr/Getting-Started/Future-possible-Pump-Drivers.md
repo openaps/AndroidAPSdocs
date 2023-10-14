@@ -32,19 +32,9 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 * * *
 
-### Medtrum A6/P6/C6 ([Page d'accueil](https://www.medtrum.com/product/nanopump.html))
-
-**Etat de la boucle :** Candidat à la boucle. L'entreprise dispose de son propre système de demi-boucle limité (A6). Controlable via une application iPhone. Aucune application Android disponible pour le moment.
-
-**Configuration matérielle requise pour AAPS :** Probablement aucune. Il semble qu'elle dispose du Bluetooth.
-
-**Comment:** Some investigation has started to see if this pump can be supported in AAPS very easily. You can find more information on our discord in channel "medtrum".
-
-* * *
-
 ### Equil (pump from Aidex/GlucoRx/MicroTechMD) ([Homepage](https://www.glucorx.ie/glucorx-equil/))
 
-**Etat de la boucle :** Candidat à la boucle.
+**Loop status:** Is a Loop candidate.
 
 **Hardware requirement for AAPS:** None. Il semble qu'elle dispose du Bluetooth.
 
@@ -54,7 +44,7 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 ### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Etat de la boucle :** Candidat à la boucle.
+**Loop status:** Is a Loop candidate.
 
 **Hardware requirement for AAPS:** None. Il semble qu'elle dispose du Bluetooth.
 

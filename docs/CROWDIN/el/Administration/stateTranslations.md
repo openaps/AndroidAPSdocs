@@ -1,30 +1,30 @@
-# state of translation for app and the documentation
+# κατάσταση μετάφρασης για την εφαρμογή και την τεκμηρίωση
 
-The state is once per hour updated and reflects only the state in Crowdin.
+Η κατάσταση ενημερώνεται μία φορά την ώρα και αντικατοπτρίζει μόνο την κατάσταση στο Crowdin.
 
-:::{tip}
+Χωρίς κλειδί Κείμενο παραγράφου Xpath: /p[2]
 
-Be careful the percentage of proofreading must be lower then the percentage of translations but they decided to show it on top of the translations. It's better to look only at the percentage level of translations to see if work is to be done.
-
-:::
-
-:::{admonition} needed time for final publication
-:class: note
-
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
-
-The acceptance of the PR is a manual task which will be done es fast as possible.
+Προσέξτε, το ποσοστό διόρθωσης πρέπει να είναι χαμηλότερο από το ποσοστό των μεταφράσεων, αλλά αποφάσισαν να το εμφανίσουν πάνω από τις μεταφράσεις. Είναι καλύτερο να κοιτάξουμε μόνο το ποσοστό των μεταφράσεων για να δούμε αν πρόκειται να γίνει δουλειά.
 
 :::
 
-## state app translation
+:::{admonition} απαιτείται χρόνος για την τελική έκδοση
+:class: σημείωση
 
-State of the **app** translations per language (country code, percentage translation, percentage proofreading).
+Μετά τη μετάφραση του Crowdin προγραμματίζεται ένας συγχρονισμός στο Github κάθε μέρα για να μεταφέρετε μεταφράσεις στο Github όπως αιτήματα έλξης. (PR).
 
-![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+Η αποδοχή του PR είναι μια χειροκίνητη εργασία που θα γίνει όσο το δυνατόν γρηγορότερα.
 
-## state documentation translation
+:::
 
-State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
+## κατάσταση μετάφρασης εφαρμογής
 
-![state documentation translation](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+Κατάσταση </strong> μετάφρασης εφαρμογής ** ανά γλώσσα (κωδικός χώρας, ποσοστό μετάφρασης, ποσοστό διόρθωσης.</p>
+
+![κατάσταση μετάφρασης εφαρμογής](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+
+## κατάσταση μετάφρασης τεκμηρίωσης
+
+Κατάσταση </strong> μετάφρασης εφαρμογής ** ανά γλώσσα (κωδικός χώρας, ποσοστό μετάφρασης, ποσοστό διόρθωσης.</p>
+
+![κατάσταση μετάφρασης τεκμηρίωσης](https://badges.awesome-crowdin.com/translation-13588158-310610.png)

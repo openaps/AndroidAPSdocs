@@ -226,10 +226,10 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
     
     ![Open settings](../images/studioSetup/30_Settings.png)
 
-* Double-click on Appearance & Behaviour to open its submenu (1).
+* Double-click on Languages & Frameworks to open its submenu (1).
 
-* Double-click on System Settings (2) and select Android SDK (3).
-* Tick the box left of "Android 9.0 (Pie)" (4) (API Level 28).
+* Select Android SDK (2).
+* Tick the box left of "Android 9.0 (Pie)" (3) (API Level 28).
     
     ![SDK settings](../images/studioSetup/31_AndroidSDK.png)
 
@@ -283,7 +283,7 @@ Signing means that you indicate your app to be your own creation but in a digita
     
     ![APK in plaats van bundel](../images/studioSetup/43_Apk.png)
 
-* Make sure that module is set to "AAPS.app" (1).
+* Make sure that module is set to "AndroidAPS.app" (1).
 
 * Click "Create new..." (2) to start creating your key store.
     

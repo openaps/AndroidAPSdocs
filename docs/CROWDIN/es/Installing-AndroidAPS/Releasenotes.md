@@ -43,6 +43,10 @@ Se han lanzado nuevas versiones de AAPS que sólo comprueban la versión de Andr
 - Usa la versión de AAPS **2.6.2**
 - Descargar el código de AAPS desde <https://github.com/nightscout/AndroidAPS> branch 2.6.2
 
+## Versión de WearOS
+
+- AAPS 3.2 requires at least WearOS API level 26 (Android 8)
+
 ## Versión 3.2.0
 
 Fecha de lanzamiento: XX-XX-2023
@@ -56,33 +60,39 @@ Fecha de lanzamiento: XX-XX-2023
 - Tidepool puede utilizarse como sustituto de NS para superar el primer objetivo.
 - Si envías datos a xDrip+, debes configurar el plugin de sincronización de xDrip+. Para recibir BGs de AAPS en xDrip, debe estar seleccionada la fuente de datos hardware "xDrip+ Sync Follower".
 - Si quieres cambiar al controlador ComboV2, Ruffy debe ser desinstalado y la bomba emparejado de nuevo a AAPS
+- In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
 
 
 ### Cambios
 
 - Controlador de bomba EOPatch2 / Glucomen Day Pump @jungsomyeonggithub @MilosKozak
 - Controlador de bomba Accu-Chek Combo V2 (sin necesidad de Ruffy) @dv1
+- Controlador de bomba Medtrum Nano @jbr7rr
 - Controlador de bomba Korean DanaI @MilosKozak
 - Soporte al MCG Glunovo @christinadamianou
 - Soporte a Dexcom G7 @MilosKozak @rICTx-T1D @khskekec
 - Plugin NSClient v3 @MilosKozak
 - Soporte para Tidepool @MilosKozak
 - Pulgin de suavizado @MilosKozak, @justmara, Suavizado Exponencial @nichi (Tsunami), Suavizado Promedio @jbr7rr
+- DynamicISF plugin @Chris Wilson, @tim2000s
+- New logo @thiagomsoares
+- New watchface @Philoul
 - Corregidos muchos problemas de la versión 3.1
 - Permitir añadir notas desde más lugares @Sergey Zorchenko
-- Correcciones en la interfaz de usuario (UI) @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
+- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
 - Nuevos comandos SMS para Lazo LGS/Cerrado @pzadroga
 - Traducciones Wear @Andries-Smit
 - Traslado de comunicaciones con xDrip+ a un módulo independiente @MilosKozak
 - Cambios internos: actualización de versiones de librerías, migración a rx3, nueva estructura de módulos @MilosKozak
 - Correcciones en el controlador de Diaconn @miyeongkim
+- more database maintenance options @MilosKozak
 - AAPSClient proporciona información si el teléfono principal está conectado a la electricidad @MilosKozak
 - Cambio en asistente de bolo. Si el MCG no está disponible, se ignora el porcentaje (es decir, se utiliza el 100%)
-- Más de 125k+ nuevas líneas de código y más de 150k líneas modificadas
+- new 150k+ lines of code, changed 156k lines
 
 ## Versión 3.1.0
 
-Release date: 19-07-2022
+Fecha de lanzamiento: 19-07-2022
 
 (Releasenotes-important-hints-3-1-0)=
 ### Notas importantes
@@ -93,20 +103,20 @@ Release date: 19-07-2022
 ### Cambios
 
 - Corrección de errores de la versión 3.0
-- fix application freezing @MilosKozak
-- fixed DASH driver @avereha
-- fixed Dana drivers @MilosKozak
-- huge UI improvement, cleanup and unification, migration to material design, styles, white theme, new icons. @Andries-Smit @MilosKozak @osodebailar @Philoul
-- widget @MilosKozak
+- Corrección de congelación de la aplicación @MilosKozak
+- Correcciones de los controladores de las bombas DASH @avereha
+- Corrección de controladores de las bombas Dana @MilosKozak
+- Importantes mejoras de la interfaz gráfica (UI), limpieza y unificación. Migración a "Material Design", estilos, tema claro, nuevos iconos, etc. @Andries-Smit @MilosKozak @osodebailar @Philoul
+- Añadido Widget @MilosKozak
 - Soporte para Aidex CGM @andyrozman @markvader (sólo Pumpcontrol)
 - Watch `Wear OS tiles <../Configuration/Configuration/Watchfaces.mdl#wear-os-tiles>`, translations @Andries-Smit
-- Wear code refactored. No compatible con versiones anteriores @MilosKozak
-- a11y improvements @Andries-Smit
-- new protection option PIN @Andries-Smit
-- allow graph scale from menu @MilosKozak
-- more statistics available @MilosKozak
-- MDI plugin removed in favor of VirtualPump
-- new automation action: StopProcessing (following rules)
+- Código de Wear refactorizado. Not backward compatible anymore @MilosKozak
+- Mejoras de accesibilidad por @Andries-Smit
+- Nueva opción de protección PIN @Andries-Smit
+- Permite cambiar la escala gráfica desde el menú @MilosKozak
+- Más estadísticas disponibles @MilosKozak
+- Complemento MDI eliminado en favor de la Bomba Virtual
+- Nueva acción de automatización: Detener procesamiento (siguiendo reglas)
 
 ## Versión 3.0.0
 

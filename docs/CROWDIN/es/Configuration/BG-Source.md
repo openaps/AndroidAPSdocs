@@ -1,4 +1,4 @@
-# CGMS/FGMS Configuration
+# Configuración de MCGs/MFGs
 
 * [General](../Hardware/GeneralCGMRecommendation.md)
 * [Suavizado de datos](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)

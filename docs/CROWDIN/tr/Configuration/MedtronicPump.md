@@ -15,7 +15,7 @@ Aşağıdaki modeli ve yazılımı belirtilen pompa kombinasyonları uyumludur:
 
 ## Donanım ve yazılım gereksinimleri
 
-- **Telefon:** Medtronic sürücüsü, Bluetooth bağlantılarını destekleyen herhangi bir android telefonla çalışmalıdır. **ÖNEMLİ: Telefon üreticilerinin Bluetooth uygulamaları değişebileceği için her bir telefon modelinin davranış biçimi farklı olabilir. Örneğin, bazı telefonlar Bluetooth'u etkinleştirmeyi/devre dışı bırakmayı farklı şekilde ele alacaktır. Bu, AndroidAPS'in Rileylink cihazına yeniden bağlanması gerektiğinde kullanıcı deneyimini etkileyebilir.**
+- **Telefon:** Medtronic sürücüsü, Bluetooth bağlantılarını destekleyen herhangi bir android telefonla çalışmalıdır. **ÖNEMLİ: Telefon üreticilerinin Bluetooth uygulamaları değişebileceği için her bir telefon modelinin davranış biçimi farklı olabilir. Örneğin, bazı telefonlar Bluetooth'u etkinleştirmeyi/devre dışı bırakmayı farklı şekilde ele alacaktır. This can impact the user experience when AAPS needs to reconnect to your Rileylink type device.**
 - **RileyLink Uyumlu Cihaz:** Android telefonlar, iletişimi yönetmek için ayrı bir cihaz olmadan Medtronic pompalarıyla iletişim kuramaz. Bu cihaz, Bluetooth aracılığıyla telefonunuzla ve uyumlu bir radyo bağlantısı aracılığıyla pompanızla bağlantı kuracaktır. Bu tür ilk cihaza Rileylink adı verildi, ancak artık ek işlevsellik sunabilen başka seçenekler de mevcuttur.
     
     - Rileylink'i [getrileylink.org](https://getrileylink.org/product/rileylink916) adresinde bulabilirsiniz.
@@ -29,19 +29,19 @@ Aşağıdaki modeli ve yazılımı belirtilen pompa kombinasyonları uyumludur:
 
 ## Pompa Konfigürasyonu
 
-AndroidAPS'in uzaktan komut gönderebilmesi için pompada aşağıdaki ayarların yapılandırılması gerekir. Medtronic 715'te değişikliği yapmak için gerekli adımlar, her ayar için parantez içinde gösterilmiştir. Adımlar, pompa tipine ve/veya pompa yazılım sürümüne göre değişebilir.
+The following settings should be configured on the pump in order for AAPS to remotely send commands. Medtronic 715'te değişikliği yapmak için gerekli adımlar, her ayar için parantez içinde gösterilmiştir. Adımlar, pompa tipine ve/veya pompa yazılım sürümüne göre değişebilir.
 
 - **Pompada uzak modu etkinleştir** Pompada Act'ye basın ve Yardımcı Programlar (Utilities) -> Uzak Seçenekler'e (Remote Options) gidin, Açık'ı (ON) seçin ve sonraki ekranda Kimlik Ekle'yi (Add ID) yapın ve 1111111 gibi herhangi bir rastgele kimlik ekleyin. Pompanın uzaktan iletişim beklemesi için Remote ID listesinde en az bir ID olmalıdır.
 - **Maks Bazal Ayarla** (Pompada Act'e basın ve Bazal'a gidin ve ardından Maks Bazal Oranı seçin) Örnek olarak, bu değeri maksimum standart bazal oranınızın dört katına ayarlamak %400 Geçici Bazal Oranına izin verir. Pompa tarafından izin verilen maksimum değer saatte 34,9 ünitedir.
 - **Maks Bolus Ayarla** (Pompada sırasıyla Act ve Bolus'a basın ve ardından Maks Bolus'u seçin) Buradaki değer pompanın kabul edeceği en büyük bolustur. Pompa tarafından izin verilen maksimum değer 25'tir.
-- **Profili Standart olarak ayarlayın**. (Pompada Act'ye basın ve Bazal'a gidin ve ardından bazal modelinizi seçin) AndroidAPS telefonunuzdaki farklı profilleri yöneteceğinden pompanın yalnızca bir profile ihtiyacı olacaktır. Başka bazal modeli gerekli değildir.
+- **Profili Standart olarak ayarlayın**. (On the pump press Act and go to Basal and then Select Patterns) The pump will only need one profile as AAPS will manage different profiles on your phone. Başka bazal modeli gerekli değildir.
 - **Geçici Bazal Oranı türünü ayarlayın** (Pompada ACT'ye basın ve Bazal'a ve ardından Geçici Bazal Türü'ne gidin). Mutlak'ı (Absolute) seçin (Yüzdeyi değil).
 
-## Telefonun/AndroidAPS'in Medtronic Yapılandırması
+## Medtronic Configuration of Phone/AAPS
 
-- **RileyLink uyumlu cihazı telefonunuzdaki Bluetooth menüsüyle eşleştirmeyin.** Telefonunuzdaki Bluetooth menüsü aracılığıyla eşleştirme, aşağıdaki talimatları uygularken AndroidAPS'in Rileylink Uyumlu cihazınızı görmesini engeller. 
+- **Do not pair RileyLink compatible device with the Bluetooth menu on your phone.** Pairing via the Bluetooth menu on your phone will stop AAPS from seeing your Rileylink Compatible device when you follow the instructions below.
 - Telefonunuzda otomatik ekran döndürmeyi devre dışı bırakın. Belirli cihazlarda otomatik ekran döndürme, Bluetooth oturumlarının yeniden başlamasına neden olur ve bu da Medtronic pompanız için sorunlara neden olabilir. 
-- AndroidAPS'de Medtronic pompanızı yapılandırmanın iki yolu vardır: 
+- There are two ways to configure your Medtronic pump in AAPS:
 
 1. Yeni bir kurulumun parçası olarak kurulum sihirbazını kullanma
 2. Konfigürasyon Ayarları'nda pompa seçimi sekmesinde Medtronic seçeneğinin yanındaki dişli simgesini tıklayarak
@@ -50,18 +50,18 @@ Medtronic pompanızı kurulum sihirbazıyla yapılandırırken, Bluetooth sorunl
 
 ![Medtronic Ayarları](../images/Medtronic01a.png)
 
-AndroidAPS'i medtronic pompanızla çalışacak şekilde ayarlarken aşağıdaki öğeleri ayarlamanız gerekir: (yukarıdaki resme bakın)
+While setting up AAPS to work with your medtronic pump you need to set following items: (see picture above)
 
 - **Pompa Seri Numarası**: Pompanızın arkasında yer alır ve SN ile başlar. Alfabetik karakterler olmadan yalnızca görünen 6 rakamı girmelisiniz (ör. 123456).
 - **Pompa Tipi**: Kullandığınız pompa modeli (ör. 522). 
 - **Pompa Frekansı**: Pompanızın ilk dağıtıldığı yere bağlı olarak iki seçenek vardır. Hangi seçeneği seçeceğinizden emin değilseniz lütfen [SSS](MedtronicPump-faq)'i kontrol edin): 
     - ABD & Kanada için (NA-CA) kullanılan frekans 916 Mhz
     - Dünya çapında (WW) kullanılan frekans 868 Mhz'dir.
-- **Pompadaki Maks Bazal (Ü/s)**: Bunun, pompanızda ayarlanan değerle eşleşmesi gerekir (yukarıdaki pompa konfigürasyonuna bakın). Bu ayar AndroidAPS'in bazal oranınız aracılığıyla ne kadar insülin iletebileceğini belirleyeceğinden dikkatli bir şekilde seçilmelidir. Bu değer maksimum geçici bazal oranını etkin bir şekilde ayarlayacaktır. Örnek olarak, bu değeri maksimum standart bazal oranınızın dört katına ayarlamak %400 Geçici Bazal Oranına izin verir. Pompa tarafından izin verilen maksimum değer saatte 34,9 ünitedir.
-- **Pompadaki Maks Bolus (Ü)** (bir saat içinde): Bunun, pompanızda ayarlanan değerle eşleşmesi gerekir (yukarıdaki pompa konfigürasyonuna bakın). Bu ayar AndroidAPS'in bir seferde ne kadar bolus insülin iletebileceğini belirlediğinden dikkatlice düşünülmelidir.
-- **Bolus göndermeden önceki bekleme süresi (sn)**: Bolus verildikten sonra, komut gerçekten pompaya gönderilmeden önce geçen saniye sayısı. Bu süre, bir bolus komutunun yanlışlıkla gönderilmesi durumunda kullanıcının bolusu iptal etmesine olanak tanır. AndroidAPS üzerinden başlatılan bir bolusu iptal etmek mümkün değildir. Halihazırda başlamış bir bolusu iptal etmenin tek yolu, pompayı manuel olarak askıya almak ve ardından devam ettirmektir.
-- **Medtronic Kodlama**: Medtronic kodlamasının gerçekleştirilip gerçekleştirilmediğini belirler. Donanım kodlamasının seçilmesi (Rileylink uyumlu cihaz tarafından gerçekleştirilir) tercih edilir çünkü bu daha az veri gönderilmesine neden olur. Yazılım kodlamasının seçilmesi (AndroidAPS tarafından gerçekleştirilir), sık bağlantı kesilmesi durumunda yardımcı olabilir. Rileylink cihazlarında yazılım sürümü 0.x ise bu ayar yok sayılır.
-- **Pil Türü (Güç Görünümü)**: Kalan pil gücü seviyesini doğru bir şekilde belirlemek için kullanımda olan AAA pil tipini seçmelisiniz. Basit görünüm dışında bir değer seçildiğinde, AndroidAPS hesaplanan pil yüzdesi seviyesini ve voltajı görüntüler. Aşağıdaki seçenekler mevcuttur:
+- **Pompadaki Maks Bazal (Ü/s)**: Bunun, pompanızda ayarlanan değerle eşleşmesi gerekir (yukarıdaki pompa konfigürasyonuna bakın). Again this setting must be carefully selected as it will determine how much AAPS can deliver via your basal rate. Bu değer maksimum geçici bazal oranını etkin bir şekilde ayarlayacaktır. Örnek olarak, bu değeri maksimum standart bazal oranınızın dört katına ayarlamak %400 Geçici Bazal Oranına izin verir. Pompa tarafından izin verilen maksimum değer saatte 34,9 ünitedir.
+- **Pompadaki Maks Bolus (Ü)** (bir saat içinde): Bunun, pompanızda ayarlanan değerle eşleşmesi gerekir (yukarıdaki pompa konfigürasyonuna bakın). This setting should be carefully considered as it determines how large a bolus AAPS can ever set.
+- **Bolus göndermeden önceki bekleme süresi (sn)**: Bolus verildikten sonra, komut gerçekten pompaya gönderilmeden önce geçen saniye sayısı. Bu süre, bir bolus komutunun yanlışlıkla gönderilmesi durumunda kullanıcının bolusu iptal etmesine olanak tanır. It is not possible to cancel a bolus that has started via AAPS. Halihazırda başlamış bir bolusu iptal etmenin tek yolu, pompayı manuel olarak askıya almak ve ardından devam ettirmektir.
+- **Medtronic Kodlama**: Medtronic kodlamasının gerçekleştirilip gerçekleştirilmediğini belirler. Donanım kodlamasının seçilmesi (Rileylink uyumlu cihaz tarafından gerçekleştirilir) tercih edilir çünkü bu daha az veri gönderilmesine neden olur. Selecting Software encoding (i.e. carried out by AAPS) can help in the event frequent disconnects are seen. Rileylink cihazlarında yazılım sürümü 0.x ise bu ayar yok sayılır.
+- **Pil Türü (Güç Görünümü)**: Kalan pil gücü seviyesini doğru bir şekilde belirlemek için kullanımda olan AAA pil tipini seçmelisiniz. When a value other than simple view is selected AAPS will display the remaining calculated battery percentage level and volts. Aşağıdaki seçenekler mevcuttur:
     
     - Seçilmedi (Basit görünüm)
     - Alkali (Genişletilmiş görünüm)
@@ -77,11 +77,11 @@ AndroidAPS'i medtronic pompanızla çalışacak şekilde ayarlarken aşağıdaki
 
 ## MEDTRONIC (MDT) Sekmesi
 
-![MDT Sekmesi](../images/Medtronic02.png) AndroidAPS, bir Medtronic pompası kullanacak şekilde yapılandırıldığında, ekranın üst kısmında bir MDT sekmesi gösterilecektir. Bu sekme, Medtronic'e özgü bazı eylemlerle birlikte mevcut pompa durumu bilgilerini görüntüler.
+![MDT Sekmesi](../images/Medtronic02.png) When AAPS is configured to use a Medtronic pump a MDT tab will be shown in the list of tabs at the top of the screen. Bu sekme, Medtronic'e özgü bazı eylemlerle birlikte mevcut pompa durumu bilgilerini görüntüler.
 
 - **RileyLink Durumu**: Telefonunuz ve Rileylink uyumlu cihaz arasındaki bağlantının mevcut durumu. Bu satır her zaman "Bağlı" olarak görünmelidir. Diğer herhangi bir durum, kullanıcı müdahalesini gerektirebilir. 
 - **RileyLink Pili**: EmaLink veya OrangeLink cihazınızın mevcut pil seviyesi. Medtronic Pompa Yapılandırma menüsünde "OrangeLink/EmaLink/DiaLink cihazı tarafından bildirilen pil seviyesini göster" seçimine bağlıdır.
-- **Pompa Durumu**: Pompa bağlantısının mevcut durumu. Pompa sürekli bağlı olmayacağından, burada genellikle uyku simgesi görünecektir. "Uyanıyor" da dahil olmak üzere AndroidAPS bir komut iletmeye çalışırken "Saat Alınıyor", "GBO Ayarla" gibi diğer olası pompa komutlarını da burada bulabilirsiniz. 
+- **Pompa Durumu**: Pompa bağlantısının mevcut durumu. Pompa sürekli bağlı olmayacağından, burada genellikle uyku simgesi görünecektir. There are a number of possible other status including "Waking Up" when AAPS is trying to issue a command or other possible pump commands such as "Get Time", "Set TBR", etc.
 - **Pil**: Medtronic Pompa Yapılandırma menüsünde Pil Tipi (Güç Görünümü) için seçilen değere göre pil durumunu gösterir. 
 - **Son bağlantı**: Son başarılı pompa bağlantısının ne kadar önce gerçekleştiği.
 - **Son Bolus**: Son başarılı bolusun ne kadar süre önce verildiği.
@@ -102,7 +102,7 @@ Ekranın altında üç buton vardır:
 
 ![Pompa Geçmişi İletişim Kutusu](../images/Medtronic03.png)
 
-Pompa geçmişi her 5 dakikada bir alınır ve yerel olarak saklanır. Yalnızca 24 saatlik geçmiş değerler depolanır. Gerektiğinde pompa davranışını görmenin bir yoludur. Depolanan öğeler yalnızca AndroidAPS ile ilgili olanlardır ve ilgisi olmayan bir yapılandırma işlevi içermez.
+Pompa geçmişi her 5 dakikada bir alınır ve yerel olarak saklanır. Yalnızca 24 saatlik geçmiş değerler depolanır. Gerektiğinde pompa davranışını görmenin bir yoludur. The only items stored are those relevenant to AAPS and will not inlcude a configuration function that has no relevance.
 
 (MedtronicPump-rl-status-rileylink-status)=
 
@@ -119,40 +119,44 @@ RL Durumu iletişim kutusunda iki sekme bulunur:
 
 Medtronic sürücüsü kullanıldığında, Eylemler Sekmesine iki buton eklenir:
 
-- **Uyan ve Ayarla** - AndroidAPS'in pompanıza uzun bir süre boyunca bağlanmaması durumunda (5 dakikada bir bağlanmalıdır) bu buton ile zorlayabilirsiniz. Bu buton pompanız tarafından kullanılan tüm olası radyo frekanslarını arayarak pompanızla iletişim kurmaya çalışacaktır. Başarılı bir bağlantı yapılması durumunda, başarılı frekans varsayılan olarak ayarlanacaktır. 
+- **Wake and Tune Up** - In the event that AAPS hasn't connected to your pump for a sustained period (it should connect every 5 minutes), you can force a Tune Up. Bu buton pompanız tarafından kullanılan tüm olası radyo frekanslarını arayarak pompanızla iletişim kurmaya çalışacaktır. Başarılı bir bağlantı yapılması durumunda, başarılı frekans varsayılan olarak ayarlanacaktır.
 - **RileyLink Yapılandırmasını Sıfırla** - RileyLink uyumlu cihazınızı sıfırlarsanız, cihazın yeniden yapılandırılabilmesi için bu eylemi kullanmanız gerekebilir (frekans ayarı, frekans tipi ayarı, yapılandırılmış kodlama).
 
 ## Önemli notlar
 
-### OpenAPS kullanıcıları
+### Special attention in NS configuration needed
 
-OpenAPS kullanıcıları, Medtronic pompa ile AndroidAPS'in OpenAPS'den tamamen farklı bir yaklaşım kullandığını unutmamalıdır. AndroidAPS'i kullanmak ve pompayla etkileşim kurmanın birincil yöntemi telefonunuzdur. Normal kullanımda pompa menüsünü sadece rezervuar ve set değiştirirken kullanırsınız. Bu, bolusun en azından bir kısmının genellikle hızlı bolus butonları aracılığıyla iletildiği OpenAPS kullanımından farklıdır. Pompanın manuel olarak bolus iletmek için kullanılması durumunda, AndroidAPS aynı anda bir bolus iletmeye çalışırsa sorun yaşayabilirsiniz. Bu gibi durumlarda sorunları önlemek için gerekli kontroller vardır ancak yine de mümkünse bundan kaçınılmalıdır.
+AAPS is using serial number for synchronization and serial number is exposed to NS. Because knowledge of serial number of old Medtronic pump can be used to control the pump remotely take special care to hardening NS site preventing leakage of SN of your pump. See https://nightscout.github.io/nightscout/security/
 
-### Log kayıtları
+### OpenAPS users
 
-Medtronic pompa işlevinizde sorun gidermeniz gerekirse, ekranın sol üst köşesindeki menü simgesini seçin, Bakım ve Günlük Ayarları'nı seçin. Herhangi bir Medtronic sorununu gidermek için Pump, PumpComm, PumpBTComm seçili olmalıdır.
+OpenAPS users should note that AAPS with Medtronic uses a completely different approach than OpenAPS. Using AAPS the primary method of interacting with th pump is via your phone. In normal use cases it is likely that the only time it is required to use the pump menu is when changing resevoirs. This is very different when using OpenAPS where at least some of a bolus is usually delivered via the quick bolus buttons. In the event the pump is used to manually deliver a bolus there can be issues if AAPS attempts to deliver one at the same time. There are checks to try and prevent issues in such cases but this should still be avoided where possible.
+
+### Logging
+
+In the event you need to troubleshoot your Medtronic pump function select the menu icon in the upper left corner of the screen, select Maintainance and Log Settings. For troubleshooting any Medtronic issues Pump, PumpComm, PumpBTComm should be checked.
 
 ### Medtronic CGM
 
-Medtronic CGM (SGİ) sensörleri şu anda DESTEKLENMEMEKTEDİR.
+Medtronic CGM is currently NOT supported.
 
-### Pompanın manuel kullanımı
+### Manual use of pump
 
-Pompanızda manuel olarak bolus göndermekten veya GBO'ları ayarlamaktan kaçınmalısınız. Tüm bu komutlar AndroidAPS aracılığıyla yapılmalıdır. Manuel komutların kullanılması durumunda, herhangi bir sorun riskini azaltmak için aralarında en az 3 dakikalık bir gecikme olmalıdır.
+You should avoid manually bolusing or setting TBRs on your pump. All such commands should be sent via AAPS. In the event manual commands are used there must be a delay of at least 3 minutes between them in order to reduce the risk of any issues.
 
-### Saat dilimi değişiklikleri ve DST (Yaz Saati Uygulaması) veya Medtronic Pompa ve AndroidAPS ile Seyahat
+### Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AAPS
 
-AndroidAPS, Saat Dilimi değişikliklerini otomatik olarak algılar ve telefonunuz yeni saate geçtiğinde Pompanın saatini günceller.
+AAPS will automatically detect Timezone changes and will update the Pump's time when your phone switches to the new time.
 
-Doğuya seyahat etmek, şimdiki zamana saat ekleyeceğiniz anlamına gelir (ör. GMT+0'dan GMT+2'ye) herhangi bir çakışma olmayacağından (örneğin aynı saatin iki kez tekrar etmesi mümkün olmayacak) herhangi bir soruna yol açmayacaktır. Bununla birlikte, batıya seyahat etmek, mevcut zamanda geriye gittiğiniz için sorunlara neden olabilir ve bu da hatalı AİNS verileriyle sonuçlanabilir.
+Travelling east means you are going to be adding hours to the current time (ex. from GMT+0 to GMT+2) will not result in any issues as there will be no overlap (e.g. it won't be possible to have the same hour twice). Travelling west however can result in issues as you are effectively going back in time which can result in incorrect IOB data.
 
-Batıya seyahat ederken görülen sorunlar geliştiriciler tarafından biliniyor ve olası bir çözüm üzerinde çalışmalar devam ediyor. Daha fazla ayrıntı için https://github.com/andyrozman/RileyLinkAAPS/issues/145 adresine bakın. Şimdilik lütfen böyle bir sorun ortaya çıkabileceğini unutmayın ve saat dilimlerini değiştirirken dikkatli bir şekilde izleyin.
+The issues seen when travelling west are known to the developers and work on a possible solution is ongoing. See https://github.com/andyrozman/RileyLinkAAPS/issues/145 for more detail. For now, please be aware that this issue may occur and carefully monitor when changing time zones.
 
-### Bir GNARL, tam uyumlu Rileylink ile karşılaştırılabilir bir cihaz mıdır?
+### Is a GNARL a fully compatible Rileylink combatible device?
 
-GNARL kodu, AndroidAPS'de Medtronic sürücüsü tarafından kullanılan tüm işlevleri tam olarak destekler, bu da tamamen uyumlu olduğu anlamına gelir. Uyumlu bir donanım tedarik etmeniz ve ardından GNARL kodunu cihaza yüklemeniz gerekeceğinden, bunun ek çalışma gerektireceğini unutmamak önemlidir.
+The GNARL code fully supports all of the functions used by the Medtronic driver in AAPS which means it is fully compatible. It is important to note that this will require addtional work as you will have to source compatible hardware and then load the GNARL code on to the device.
 
-**Yazılımcı notu:** Lütfen GNARL yazılımının hala deneysel olduğunu, az test edildiğini ve RileyLink kadar güvenli olarak değerlendirilmemesi gerektiğini unutmayın.
+**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
 
 (MedtronicPump-faq)=
 
@@ -160,9 +164,9 @@ GNARL kodu, AndroidAPS'de Medtronic sürücüsü tarafından kullanılan tüm i�
 
 (MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
-### RileyLink ve/veya pompa ile bağlantımı kaybedersem ne yapmalıyım?
+### What to do if I loose connection to RileyLink and/or pump?
 
-Bağlantı sorunlarını çözmek için çeşitli seçenekler deneyebilirsiniz.
+There are a number of options to try and resolve connectivity issues.
 
 - Yukarıda ayrıntılı olarak açıklandığı gibi EYLEM sekmesindeki "Uyan ve Ayarla" butonunu kullanın.
 - Telefonunuzda Bluetooth'u devre dışı bırakın, 10 saniye bekleyin ve ardından tekrar etkinleştirin. Bu işlem Rileylink cihazını telefona yeniden bağlanmaya zorlayacaktır.
@@ -170,13 +174,13 @@ Bağlantı sorunlarını çözmek için çeşitli seçenekler deneyebilirsiniz.
 - Kullanıcılar, diğer yöntemlerin olmadığı durumlarda tekrar bağlantı için aşağıdaki adımların etkili olduğunu bulmuşlardır: 
     1. Telefonunuzu yeniden başlatın
     2. *Telefon yeniden başlatılırken* Rileylink cihazınızı yeniden başlatın
-    3. AndroidAPS'i açın ve bağlantının geri yüklenmesine izin verin
+    3. Open AAPS and allow the connection to restore
 
-### Pompamın hangi Frekansı kullandığını nasıl belirleyebilirim?
+### How to determine what Frequency my pump uses
 
-![Pompa Modeli](../images/Medtronic06.png)
+![Pump Model](../images/Medtronic06.png)
 
-Pompanın arkasında, 3 harfli özel bir kodla birlikte model numaranızın ayrıntılarını veren bir satır bulacaksınız. İlk iki harf frekans tipini, son harf ise rengi belirler. Frekans için olası değerler şunlardır:
+On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Here are possible values for Frequency:
 
 - NA - Kuzey Amerika (frekans seçiminde "ABD ve Kanada (916 MHz)" seçeneğini seçmeniz gerekir)
 - CA - Kanada (frekans seçiminde "ABD ve Kanada (916 MHz)" seçeneğini seçmeniz gerekir)

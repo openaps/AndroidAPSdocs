@@ -10,12 +10,12 @@
 * Prejdite do HLAVNÍ NABÍDKA > NASTAVENÍ > VYHLEDÁVANÍ
 * V Bluetooth nastaveniach telefónu dajte Vyhľadať blízke zariadenia, vyberte sériové číslo vašej pumpy DanaR a zadajte heslo (heslo pre spárovanie je 0000). Ak sa DanaR neobjavila v Bluetooth vyhľadávaní medzi dostupnými spárovateľnými zariadeniami, reštartujte telefón, vyberte batériu z pumpy, vymeňte ju a vyššie uvedené 2 kroky opakujte.
 
-* V AndroidAPS kliknite na Konfiguráciu a zvoľte typ pumpy DanaR ktorú máte (DanaR, Kórejská DanaR, DanaRv2)
+* In AAPS go to Config Builder and select the type of DanaR you have (DanaR, DanaR Korean, DanaRv2)
 
 * Stlačte ikonku menu (3 bodky) v pravej hornej časti obrazovky. Zvoľte Nastavenia.
 * Vyberte DanaR Bluetooth zariadenie a kliknite na sériové číslo vašej pumpy DanaR.
 * Vyberte Heslo do pumpy a zadajte ho. (predvolené heslo je 1234)
-* Ak chcete AndroidAPS povoliť dočasný bazál nad 200%, zvoľte Použiť predĺžené bolusy pre > 200%. Pri takomto nastavení umožňujúcom systému vysoké dočasné bazály nad 200 % však nebudete môcť používať predĺžené bolusy (platí pre pôvodnú verziu firmware pumpy).
+* If you want AAPS to allow basal rate above 200%, enable Use extended boluses for >200%. Pri takomto nastavení umožňujúcom systému vysoké dočasné bazály nad 200 % však nebudete môcť používať predĺžené bolusy (platí pre pôvodnú verziu firmware pumpy).
 * V nastaveniach pre pumpu DanaR môžete zmeniť Rýchlosť bolusu (12sec na 1u, 30sec na 1u alebo 60sec na 1u).
 * Nastavte bazálny krok na pumpe na 0.01U/h
 * Set bolus step on pump to 0.1 U/h

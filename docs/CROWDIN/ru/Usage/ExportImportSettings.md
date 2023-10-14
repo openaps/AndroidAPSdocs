@@ -11,7 +11,7 @@
 На компьютере с Windows 10 это выглядит так:
 
 ```{image} ../images/AAPS_ExImportSettingsWin.png
-:alt: AndroidAPS настройки телефона, подключенного к компьютеру
+:alt: AAPS Preferences phone connected to computer
 ```
 
 ## Экспортированные данные
@@ -36,7 +36,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - Экспорт настроек
 
 ```{image} ../images/AAPS_ExportSettings1.png
-:alt: настройки экспорта AndroidAPS 1
+:alt: AAPS export settings 1
 ```
 
 - Date and time of export will be added to the file name automatically and displayed together with the path.
@@ -45,7 +45,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - Successful export will be prompted at bottom of the screen.
 
 ```{image} ../images/AAPS_ExportSettings2.png
-:alt: настройки экспорта AndroidAPS 2
+:alt: AAPS export settings 2
 ```
 
 (ExportImportSettings-import-settings)=
@@ -58,7 +58,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - Выполните импорт настроек
 
 ```{image} ../images/AAPS_ImportSettings1.png
-:alt: настройки импорта AndroidAPS 1
+:alt: AAPS import settings 1
 ```
 
 - All files from folder AAPS/preferences/ on your phone will be shown in the list.
@@ -67,7 +67,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - Enter [master password](Preferences-master-password) and click 'OK'.
 
 ```{image} ../images/AAPS_ImportSettings2.png
-:alt: настройки импорта AndroidAPS 2
+:alt: AAPS import settings 2
 ```
 
 - Details on the preference file will be shown.

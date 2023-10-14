@@ -2,7 +2,7 @@
 
 ## Darujte svá data vědě
 
-Můžete pomoci komunitě tím, že daruje vaše data do výzkumných projektů! To pomáhá vědcům se dále posouvat, rozvíjet nové vědecké myšlenky a pomáhá otevírat téma open source systémů s uzavřenou smyčkou. AndroidAPS is ready to synchronize your data with [Open Humans](https://www.openhumans.org), a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data.
+Můžete pomoci komunitě tím, že daruje vaše data do výzkumných projektů! To pomáhá vědcům se dále posouvat, rozvíjet nové vědecké myšlenky a pomáhá otevírat téma open source systémů s uzavřenou smyčkou. AAPS is ready to synchronize your data with [Open Humans](https://www.openhumans.org), a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data.
 
 Zachováváte si plnou kontrolu nad tím, co se stane s vašimi daty, a jaké projekty chcete podpořit tím, že jim udělíte přístup k vašim datům. V závislosti na projektu, ke kterému jste se připojili, jsou údaje vyhodnocovány a používány různými způsoby a v různém rozsahu.
 
@@ -36,7 +36,7 @@ Tajné nebo soukromé informace, jako je adresa vašeho Nightscoutu nebo API hes
 5. Pozorně si přečtěte uvedené informace o nástroji Open Humans Uploader a podmínkách jeho použití.
 6. Potvrďte zaškrtnutím políčka a klepněte na 'LOGIN'.
 7. Otevře se webová stránka Open Humans. Přihlaste se pomocí svých přihlašovacích údajů.
-8. Rozhodněte, zda chcete skrýt své členství AndroidAPS Uploader ve svém veřejném profilu Open Humans.
+8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
 9. Klepněte na tlačítko 'Authorize project'.
 
 ```{image} ../images/OHUploader2.png
@@ -69,11 +69,11 @@ September 2020 the 'OPEN' project launched a [survey](https://survey.open-diabet
 
 ### [OpenAPS Data Commons](https://www.openhumans.org/activity/openaps-data-commons/)
 
-OpenAPS Data Commons byl vytvořen proto, aby bylo možné jednoduše sdílet datové sady od DIYAPS komunity pro účely výzkumu. Tyto údaje jsou sdíleny s tradičními výzkumnými pracovníky, kteří budou vytvářet tradiční výzkumné studie, a se skupinami nebo jednotlivci z komunity, kteří chtějí přezkoumat údaje v rámci svých vlastních výzkumných projektů. OpenAPS Data Commons používá platformu "Open Humans" s cílem umožnit lidem snadno nahrávat a sdílet svá data z DIYAPS, včetně systémů AndroidAPS, Loop a OpenAPS.
+OpenAPS Data Commons byl vytvořen proto, aby bylo možné jednoduše sdílet datové sady od DIYAPS komunity pro účely výzkumu. Tyto údaje jsou sdíleny s tradičními výzkumnými pracovníky, kteří budou vytvářet tradiční výzkumné studie, a se skupinami nebo jednotlivci z komunity, kteří chtějí přezkoumat údaje v rámci svých vlastních výzkumných projektů. The OpenAPS Data Commons uses the 'Open Humans' platform to enable people to easily upload and share their data from DIYAPS including AAPS, Loop, and OpenAPS.
 
 Data můžete do Open Humans dostat jedním ze tří způsobů:
 
-1. použít funkci AndroidAPS uploader pro odesílání svých dat do Open Humans
+1. use the AAPS uploader option to get your data into Open Humans
 2. použít Nightscout Data Transfer pro odesílání svých dat do Open Humans
 3. ručně nahrát datové soubory do Open Humans
 
@@ -87,7 +87,7 @@ Also see [Open Humans Terms of Use](https://www.openhumans.org/terms/).
 
 ## Ochrana dat
 
-Open Humans se stará o ochranu vašeho soukromí tím, že vám pro každý projekt přidělí číselné ID. To umožňuje rozpoznat projekty, ale neumožňuje to identifikovat vaši osobu. ID aplikace nahrané pomocí AndroidAPS je podobné a pomáhá pouze spravovat data. Další informace naleznete zde:
+Open Humans se stará o ochranu vašeho soukromí tím, že vám pro každý projekt přidělí číselné ID. To umožňuje rozpoznat projekty, ale neumožňuje to identifikovat vaši osobu. The Application ID uploaded by AAPS is similar and only helps administrate the data. Další informace naleznete zde:
 
 - [Open Humans Data Use Policy](https://www.openhumans.org/data-use/)
 - [Open Humans GDPR](https://www.openhumans.org/gdpr/)

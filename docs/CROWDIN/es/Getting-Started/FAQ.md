@@ -1,14 +1,14 @@
 # Preguntas frecuentes para loopers
 
-¿Como añadir preguntas a las FAQ?: Siga las siguientes [instrucciones](../make-a-PR.md)
+¿Cómo agregar preguntas a las preguntas frecuentes?: Sigue estas [instrucciones](../make-a-PR.md).
 
 # General
 
-## Can I just download the AAPS installation file?
+## ¿Puedo simplemente descargar el archivo de instalación de AAPS?
 
-No. There is no downloadable apk file for AAPS. Tienes que [montarlo](../Installing-AndroidAPS/Building-APK.md) tu mismo. Te explicamos el porqué:
+No. No hay un archivo APK descargable para AAPS. Debes [compilarlo](../Installing-AndroidAPS/Building-APK.md) tú mismo. Aquí está la razón:
 
-AAPS is used to control your pump and give insulin. Según la normativa vigente en Europa, todos los sistemas clasificados como IIa o IIb son productos sanitarios que requieren una aprobación reglamentaria (una marca CE), para lo que se necesitan diversos estudios y aprobaciones. La distribución de dispositivos no regulados es ilegal. Existen reglamentos similares en otras partes del mundo.
+AAPS se utiliza para controlar tu bomba y administrar insulina. Según la normativa vigente en Europa, todos los sistemas clasificados como IIa o IIb son productos sanitarios que requieren una aprobación reglamentaria (una marca CE), para lo que se necesitan diversos estudios y aprobaciones. La distribución de dispositivos no regulados es ilegal. Existen reglamentos similares en otras partes del mundo.
 
 Esta normativa no se limita sólo a las ventas (en el sentido de obtener dinero por algo), sino que se aplica a cualquier distribución (incluso regalar). Construir un dispositivo médico para uno mismo, es la única manera de utilizar la aplicación dentro de esta normativa.
 
@@ -18,17 +18,17 @@ Por eso no hay apks disponibles.
 
 ## ¿Cómo empezar?
 
-First of all, you have to **get loopable hardware components**:
+En primer lugar, debes **obtener componentes de hardware compatibles con el lazo cerrado**:
 
 - Una [bomba de insulina compatible ](./Pump-Choices.md), 
-- an [Android smartphone](Phones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
-- a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
+- un [teléfono Android](Phones.md) (Apple iOS no es compatible con AAPS; puedes consultar [iOS Loop](https://loopkit.github.io/loopdocs/)) y
+- un [medidor contínuo de glucosa](../Configuration/BG-Source.md). 
 
-Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
+En segundo lugar, debes **configurar tu hardware**. Consulta [una configuración de ejemplo con un tutorial paso a paso](Sample-Setup.md).
 
-Thirdly, you have to **setup your software components**: AAPS and CGM/FGM source.
+En tercer lugar, debes **configurar tus componentes de software**: AAPS y la fuente de MCG/MFG.
 
-Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
+En cuarto lugar, debes aprender y **comprender el diseño de referencia de OpenAPS para comprobar tus parámetros de tratamiento**. El principio fundamental del lazo cerrado es que tu tasa basal y la relación de carbohidratos sean precisas. Todas las recomendaciones asumen que tus necesidades de basal están cubiertas y cualquier pico o caída que estés experimentando es resultado de otros factores que, por lo tanto, requieren ajustes puntuales (ejercicio, estrés, etc.). Los ajustes que el lazo cerrado puede realizar por seguridad han sido limitados (consulta la tasa basal temporal máxima permitida en el [Diseño de Referencia de OpenAPS](https://openaps.org/reference-design/)), lo que significa que no quieres desperdiciar las dosis permitidas en corregir una basal mal ajustada. Si, por ejemplo, sueles tener basales temporales bajas antes de una comida, es probable que necesites ajustar tu tasa basal. Puedes utilizar [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) para considerar un amplio conjunto de datos y sugerir si es necesario ajustar las tasas basales y/o la sensibilidad a la insulina (ISF), y también si es necesario cambiar los ratios. O puedes probar y ajustar tu tasa basal de la [manera tradicional](https://integrateddiabetes.com/basal-testing/).
 
 ## ¿Cuáles son los aspectos prácticos del lazo?
 

@@ -25,6 +25,8 @@
 
 - AAPS'de **Tercihler > SMS Kominikatör**'e gidin ve SMS komutlarının gelmesine izin vereceğiniz telefon numaralarını girin (noktalı virgülle ayrılmış - örn. +6412345678;+6412345679)
 
+- Note that the "+" in front of the number may or may not be required based on your location. To determine this send a sample text which will show the received format in the SMS Communicator tab.
+
 - 'SMS ile uzaktan komutlara izin ver' seçeneğini etkinleştirin.
 
 - Birden fazla numara kullanmak istiyorsanız:

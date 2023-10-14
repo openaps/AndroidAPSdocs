@@ -97,7 +97,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
     * PURPLE line shows how much **insulin remains** after it has been injected as it decays with time.
     * BLUE line shows **how active** insulin is.
 
-### DIA (время действия инсулина)
+### DIA
 
 * The DIA is not the same for each person. That's why you have to test it for yourself. 
 * But it must always be at least 5 hours.

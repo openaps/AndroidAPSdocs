@@ -89,7 +89,7 @@ The blood sugar values are received on the smartphone by the xDrip+ App.
 -   ב-xDrip+ נווטו להגדרות > הגדרות לשיתוף פעולה בין אפליקציות > הפץ על הטלפון והפעילו.
 -   ב-xDrip+ נווטו להגדרות > הגדרות לשיתוף פעולה בין אפליקציות > קבל טיפולים ובחרו כבוי.
 -   to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set [Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps"](xdrip-identify-receiver)
--   אם ברצונכם לבצע כיול דרך AndroidAPS, נווטו להגדרות > הגדרות לשיתוף פעולה בין אפליקציות > קבל כיולים והפעילו. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
+-   If you want to be able to use AAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
 
 ![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
 
@@ -101,10 +101,10 @@ In fact this will not physically start any Libre2 sensor or interact with them i
 
 After a sensor change xDrip+ will automatically detect the new sensor and will delete all calibration data. You may check you bloody BG after activation and make a new initial calibration.
 
-## Step 4: Configure AndroidAPS (for looping only)
+## Step 4: Configure AAPS (for looping only)
 
--   In AndroidAPS go to Config Builder > BG Source and check 'xDrip+'
--   If AndroidAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](xdrip-identify-receiver).
+-   In AAPS go to Config Builder > BG Source and check 'xDrip+'
+-   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](xdrip-identify-receiver).
 
 Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within SMB algorithm. The BG values of Libre 2 are not smooth enough to use it safely. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 

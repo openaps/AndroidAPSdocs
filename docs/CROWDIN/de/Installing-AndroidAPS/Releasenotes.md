@@ -18,7 +18,7 @@ Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln,
 ```{admonition} First version of AAPS
 :class: note
 
-Die erste Testversion gab es bereits 2015. Im 2016 wurde dann das erste Release veröffentlicht.
+Die erste Testversion gab es bereits 2015. In 2016 has been the first released version.
 
 Da die Releasefolge und deren Veröffenlichungszeitpunkte immer wieder erfragt werden, haben wir diese hier - sofern verfügbar - zusammengetragen.
 
@@ -45,6 +45,10 @@ Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zw
 - Verwende AAPS Version **2.6.2**.
 - Download des AAPS Code unter <https://github.com/nightscout/AndroidAPS> branch 2.6.2
 
+## WearOS version
+
+- AAPS 3.2 requires at least WearOS API level 26 (Android 8)
+
 ## Version 3.2.0
 
 Erscheinungsdatum: XX.XX.2023
@@ -58,29 +62,35 @@ Erscheinungsdatum: XX.XX.2023
 - Um das erste Objective (Ziel) zu erreichen, kann anstelle von Nightscout nun auch Tidepool genutzt werden.
 - Wenn Daten an xDrip+ gesendet werden sollen, muss xDrip- Synchronisierungs-Plugin konfiguriert werden. Um Glukosewerte aus AAPS in xDrip+ zu empfangen, muss als Datenquelle "xDrip+ Sync Follower" ausgewählt werden.
 - Wenn auf den ComboV2-Treiber gewechselt werden soll, muss Ruffy deinstalliert und die Pumpe erneut mit AAPS gekoppelt werden.
+- In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
 
 
 ### Änderungen
 
 - EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
 - ComboV2 Pumpentreiber (Ruffy nicht mehr benötigt) @dv1
+- Medtrum Nano driver @jbr7rr
 - Unterstützung für Dana-i @MilosKozak
 - Glunovo CGM support @christinadamianou
 - G7-Unterstützung @MilosKozak @rICTx-T1D @khskekec
 - NSClient v3 plugin @MilosKozak
 - Tidepool support @MilosKozak
 - Glättungs-Plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
+- DynamicISF plugin @Chris Wilson, @tim2000s
+- New logo @thiagomsoares
+- New watchface @Philoul
 - Tonnenweise Version 3.1-Probleme gelöst
 - Notizen an mehr Stellen zugelassen @Sergey Zorchenko
-- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
+- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
 - Neue SMS-Befehle LOOP LGS/CLOSED @pzadroga
 - Übersetzungen für Wear @Andries-Smit
 - xDrip-Kommunikation in eigenes Modul ausgelagert @MilosKozak
 - Interne Änderungen: aktualisierte Bibliotheken-Versionen, rx3-Migration, neue Modulstrukturen @MilosKozak
 - Diaconn-Treiber korrigiert @miyeongkim
+- more database maintenance options @MilosKozak
 - AAPSClient liefert Info, ob das Loop-Smartphone geladen wird @MilosKozak
 - Änderung im Bolus-Rechner: Wenn CGM-Daten fehlen, wird der Prozentsatz ignoriert (d.h. 100% wird genutzt)
-- Mehr als 125.000 Codezeilen geschrieben, 150.000 Codezeilen geändert
+- new 150k+ lines of code, changed 156k lines
 
 ## Version 3.1.0
 
@@ -90,7 +100,7 @@ Erscheinungsdatum: 19.07.2022
 ### Wichtige Hinweise
 
 - Nach dem Update Wear-App deinstallieren und neue Version installieren
-- Omnipod Benutzer: Update auf dem Pod ändern !!!
+- Omnipod Benutzer: Update nur bei Pod-Wechsel durchführen !!!
 
 ### Änderungen
 

@@ -8,7 +8,7 @@ Il n'y a aucun problème avec le changement de fuseau horaire dans le téléphon
 
 ## DanaRv2, DanaRS
 
-Ces pompes ont besoin d'une attention toute particulière, car AAPS utilise l'historique de la pompe, mais les enregistrements de la pompe ne prend pas en compte le changement de fuseau horaire. **Cela signifie que si vous changez simplement de fuseau horaire dans le téléphone, les enregistrements seront lus avec un fuseau horaire différent et seront doublés.**
+These pumps need a special care because AAPS is using history from the pump but the records in pump don't have timezone stamp. **Cela signifie que si vous changez simplement de fuseau horaire dans le téléphone, les enregistrements seront lus avec un fuseau horaire différent et seront doublés.**
 
 Pour éviter cela, il y a deux possibilités :
 
@@ -56,7 +56,7 @@ L'utilisateur Insight n'a donc pas à s'inquiéter des changements de fuseau hor
 
 ## Accu-Chek Combo
 
-Le [nouveau pilote Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md) ajuste automatiquement l'heure de la pompe à l'heure du téléphone. Le Combo ne peut pas stocker les fuseaux horaires, seulement les heures locales, ce qui est précisément ce que le nouveau pilote programme dans la pompe. De plus, il stocke le fuseau horaire dans les préférences locales d'AAPS pour être en mesure de convertir l'heure locale de la pompe en un horodatage complet qui a un décalage de fuseau horaire. L'utilisateur n'a rien à faire; si l'heure sur le Combo s'écarte trop de l'heure actuelle du téléphone, l'heure de la pompe est automatiquement ajustée.
+Le [nouveau pilote Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md) ajuste automatiquement l'heure de la pompe à l'heure du téléphone. Le Combo ne peut pas stocker les fuseaux horaires, seulement les heures locales, ce qui est précisément ce que le nouveau pilote programme dans la pompe. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. L'utilisateur n'a rien à faire; si l'heure sur le Combo s'écarte trop de l'heure actuelle du téléphone, l'heure de la pompe est automatiquement ajustée.
 
 Notez toutefois que cela prend du temps, car cela ne peut être fait qu'en mode terminal distant, ce qui est généralement lent. Il s'agit d'une limitation Combo qui ne peut pas être contournée.
 
@@ -64,19 +64,27 @@ L'ancien pilote basé sur Ruffy n'ajuste pas l'heure automatiquement. L'utilisat
 
 (Timezone-traveling-time-adjustment-daylight-savings-time-dst)=
 
+## Medtrum
+
+Le driver Insight ajuste automatiquement l'heure de la pompe à l'heure du téléphone.
+
+Timezone changes keep the history in tact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and IOB. If you change time manually double check the IOB.
+
+When the timezone or time changes running TBR's are stopped.
+
 # Changements d'heure
 
-En fonction de la pompe et de la configuration de MGC, les changements d'heure peuvent entraîner des problèmes. Avec la Combo par ex., l'historique de la pompe est lu à nouveau et cela conduirait à des entrées dupliquées. Donc veuillez faire l'ajustement pendant que vous êtes éveillé et non pendant la nuit.
+Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
 
-Si vous faites un bolus avec la calculatrice, veuillez désactiver les GA et IA à moins que vous ne soyez sûr qu'ils sont absolument corrects - mieux vaut ne pas les utiliser pendant quelques heures après le changement d'heure.
+If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
 
 (Timezone-traveling-accu-chek-combo)=
 
 ## Accu-Chek Combo
 
-**REMARQUE** : Comme mentionné ci-dessus, cette secton n'est valide que pour l'ancien pilote basé sur Ruffy. Le nouveau pilote ajuste automatiquement la date et l'heure.
+**NOTE**: As mentioned above, this secton is only valid for the old, Ruffy-based driver. The new driver adjusts date and time and DST automatically.
 
-AAPS émettra une alarme si l'heure entre la pompe et le téléphone est très différente. En cas de changement d'heure (été ou hiver), cela arrive au milieu de la nuit. Pour éviter cela et profiter de votre sommeil, suivez ces étapes pour que vous puissiez forcer le changement de temps à une heure convenable pour vous-même :
+AAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
 
 ### Actions à faire avant le changement d'heure
 
@@ -90,7 +98,7 @@ AAPS émettra une alarme si l'heure entre la pompe et le téléphone est très d
    * Une liste de ces pays est disponible : [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * Pour l'Europe Centrale (CET), cela pourrait être "Brazzaville" (Kongo). Changez le fuseau horaire de votre téléphone à Kongo.
 
-3. Dans AndroidAPS actualisez votre pompe.
+3. In AAPS refresh your pump.
 
 4. Vérifiez l'onglet Traitements... Si vous voyez des traitements en doublon :
    
@@ -101,11 +109,11 @@ AAPS émettra une alarme si l'heure entre la pompe et le téléphone est très d
 
 ### Actions à faire apès le changement d'heure
 
-Un bon moment pour faire ce changement serait avec des IA faibles. Par ex. une heure avant un repas tel que le petit-déjeuner, (tous les bolus récents dans l'histoire de la pompe auront été de petites corrections avec des SMB, votre GA et votre IA devraient tous les deux être proches de zéro).
+A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
 
 1. Remettez le fuseau horaire Android de votre lieu actuel et réactivez le fuseau horaire automatique.
-2. AndroidAPS va bientôt vous avertir que l'heure du Combo ne correspond pas. Mettez à jour l’heure de la pompe manuellement via l’écran et les boutons de la pompe.
-3. Sur l'écran « Combo » d'AndroidAPS, appuyez sur Rafraîchir.
+2. AAPS will soon start alerting you that the Combo’s clock doesn’t match. Mettez à jour l’heure de la pompe manuellement via l’écran et les boutons de la pompe.
+3. On the AAPS “Combo” screen, press Refresh.
 4. Allez ensuite à l'écran Traitements et cherchez des événements dans le futur. Il ne devrait pas y en avoir beaucoup.
    
    * NE PAS appuyer sur "Supprimer les futurs traitements"
@@ -119,8 +127,12 @@ Un bon moment pour faire ce changement serait avec des IA faibles. Par ex. une h
 
 * Le changement d'heure est effectué automatiquement. Aucune action requise.
 
-## Autres pompes
+## Medtrum
 
-* Cette fonctionnalité est disponible depuis la version 2.2 d'AndroidAPS.
-* Pour éviter toute difficulté, la boucle sera désactivée pendant 3 heures APRES le changement d'heure. Ceci est fait pour des raisons de sécurité (IA trop élevée à cause d'un bolus dupliqué avant le changement d'heure).
-* Vous recevrez une notification sur l'écran principal avant le changement d'heure pour vous informer que la boucle sera temporairement désactivée. Ce message apparaîtra sans bip, vibration ou quoi que ce soit.
+* Le changement d'heure est effectué automatiquement. Aucune action requise.
+
+## Other pumps
+
+* This feature is available since AAPS version 2.2.
+* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
+* You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.

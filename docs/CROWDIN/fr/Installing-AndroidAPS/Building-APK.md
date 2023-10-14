@@ -226,10 +226,10 @@ Sur l'écran d'accueil d'Android Studio cliquez sur "Customize" (1) à gauche, p
     
     ![Ouvrir les paramètres](../images/studioSetup/30_Settings.png)
 
-* Double-cliquez sur "Appearance & Behaviour" pour ouvrir son sous-menu (1).
+* Double-click on Languages & Frameworks to open its submenu (1).
 
-* Double-cliquez sur "System Settings" (2) et sélectionnez "Android SDK" (3).
-* Cochez la case à gauche de "Android 9.0 (Pie)" (4.) (API niveau 28).
+* Select Android SDK (2).
+* Tick the box left of "Android 9.0 (Pie)" (3) (API Level 28).
     
     ![Paramètres SDK](../images/studioSetup/31_AndroidSDK.png)
 
@@ -283,7 +283,7 @@ Signer signifie que vous signez votre application générée mais d'une façon n
     
     ![APK au lieu du bundle](../images/studioSetup/43_Apk.png)
 
-* Make sure that module is set to "AAPS.app" (1).
+* Make sure that module is set to "AndroidAPS.app" (1).
 
 * Cliquez sur "Create new..." (2) pour commencer la création de votre fichier de clés.
     

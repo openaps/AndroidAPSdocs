@@ -18,7 +18,7 @@ Veuillez comprendre que cette modification n'a pas pour but de vous corriger mai
 ```{admonition} First version of AAPS
 :class: note
 
-La première version de test a déjà commencé en 2015. La première version a été publiée en 2016.
+La première version de test a déjà commencé en 2015. In 2016 has been the first released version.
 
 La chronologie de ces versions n'est pas disponible pour le moment, mais comme cette question est posée plusieurs fois, nous la documenterons ici.
 
@@ -45,6 +45,10 @@ Afin de permettre aux utilisateurs ayant une ancienne version d'Android d'utilis
 - Utiliser la version **2.6.2** d'AAPS
 - Téléchargez le code AAPS depuis <https://github.com/nightscout/AndroidAPS> branche 2.6.2
 
+## WearOS version
+
+- AAPS 3.2 requires at least WearOS API level 26 (Android 8)
+
 ## Version 3.2.0
 
 Date de sortie : XX-XX-2023
@@ -58,29 +62,35 @@ Date de sortie : XX-XX-2023
 - Tidepool peut être utilisé à la place de NS pour passer le premier objectif
 - Si vous envoyez à xDrip+, vous devez configurer le plugin de synchronisation xDrip. Afin de transférer les glycémies d'AAPS vers xDrip, il doit être sélectionné comme source "xDrip+ Sync Follower"
 - Si vous voulez basculer vers le pilote ComboV2, Ruffy doit être désinstallé et la pompe doit être à nouveau appairée à AAPS
+- In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
 
 
 ### Modifications
 
 - EOPatch2 / GlucomenDay pilote pompe @jungsomyeonggithub @MilosKozak
 - Pilote pompe ComboV2 (pas besoin de Ruffy) @dv1
+- Medtrum Nano driver @jbr7rr
 - * Support de DanaI coréenne @MilosKozak
 - Support du MGC Glunovo @christinadamianou
 - Support G7 @MilosKozak @rICTx-T1D @khskekec
 - Plugin NSClient v3 @MilosKozak
 - Support Tidepool @MilosKozak
 - Plugin Lissage @MilosKozak, @justmara, Lissage Exponentiel @nichi (Tsunami), Lissage moyen @jbr7rr
+- DynamicISF plugin @Chris Wilson, @tim2000s
+- New logo @thiagomsoares
+- New watchface @Philoul
 - Correction de tonnes de problèmes de la version 3.1
 - Ajout des notes dans plus de dialogues @Sergey Zorchenko
-- Correction de l'Interface Utilisateur @MilosKozak @osodebailar @Andries-Smit @yodax @philoul @dv1 @paravoid
+- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
 - Nouvelles commandes SMS LOOP LGS/CLOSED @pzadroga
 - Traductions wear @Andries-Smit
 - Communication xdrip déplacée vers un plugin séparé @MilosKozak
 - Changements internes : mise à jour des versions de libs, migration rx3, nouvelle structure de modules @MilosKozak
 - Corrections dans le Pilote Diaconn @miyeongkim
+- more database maintenance options @MilosKozak
 - AAPSClient transmet les informations si le téléphone principal est branché @MilosKozak
 - Change in BolusWizard. Si la MGC n'est pas disponible, le pourcentage est ignoré (100% est utilisé)
-- + de 125k nouvelles lignes de code, 150k lignes changées
+- new 150k+ lines of code, changed 156k lines
 
 ## Version 3.1.0
 

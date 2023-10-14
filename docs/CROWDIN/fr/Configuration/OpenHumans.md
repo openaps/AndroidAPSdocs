@@ -2,7 +2,7 @@
 
 ## Donner vos données pour la science
 
-Vous pouvez aider la communauté en faisant don de vos données à des projets de recherche ! Cela aide les scientifiques à avancer, à développer de nouvelles idées scientifiques et à élargir les esprits concernant les systèmes de boucle fermée open source. AndroidAPS est prêt à synchroniser vos données sur [Open Humans](https://www.openhumans.org), une plateforme vous permettant de télécharger, connectez et stockez vos données personnelles – telles que la génétique, l'activité et la santé.
+Vous pouvez aider la communauté en faisant don de vos données à des projets de recherche ! Cela aide les scientifiques à avancer, à développer de nouvelles idées scientifiques et à élargir les esprits concernant les systèmes de boucle fermée open source. AAPS is ready to synchronize your data with [Open Humans](https://www.openhumans.org), a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data.
 
 Vous gardez le contrôle total sur l'utilisation de vos données et sur les projets que vous voulez soutenir en leur donnant accès à vos données. Selon les projets que vous avez rejoint, les données sont évaluées et utilisées par eux de différentes manières.
 
@@ -36,7 +36,7 @@ Les informations secrètes ou privées telles que votre URL Nightscout ou votre 
 5. Lisez attentivement les informations fournies à propos du téléversement Open Humans et les conditions d'utilisation.
 6. Confirmez en cochant la case et cliquez sur 'CONNEXION'.
 7. Le site web Open Humans sera ouvert. Veuillez vous connecter avec vos identifiants.
-8. Décidez si vous voulez cacher votre abonnement AndroidAPS dans votre profil public Open Humans.
+8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
 9. Cliquez sur le bouton 'Authorize project'.
 
 ```{image} ../images/OHUploader2.png
@@ -69,11 +69,11 @@ En septembre 2020, le projet 'OPEN' a lancé une [enquête](https://survey.open-
 
 ### [Données communes OpenAPS](https://www.openhumans.org/activity/openaps-data-commons/)
 
-OpenAPS Data Commons a été créé pour permettre facilement de partager les jeux de données de la communauté DIYAPS pour la recherche. Les données sont partagées à la fois avec des chercheurs traditionnels qui créeront des études de recherche traditionnelles et avec des groupes ou des individus de la communauté qui souhaitent examiner les données dans le cadre de leurs propres projets de recherche. OpenAPS Data Commons utilise la plateforme "Open Humans" pour permettre aux gens de télécharger et de partager facilement leurs données depuis les DIYAPS, y compris AndroidAPS, Loop et OpenAPS.
+OpenAPS Data Commons a été créé pour permettre facilement de partager les jeux de données de la communauté DIYAPS pour la recherche. Les données sont partagées à la fois avec des chercheurs traditionnels qui créeront des études de recherche traditionnelles et avec des groupes ou des individus de la communauté qui souhaitent examiner les données dans le cadre de leurs propres projets de recherche. The OpenAPS Data Commons uses the 'Open Humans' platform to enable people to easily upload and share their data from DIYAPS including AAPS, Loop, and OpenAPS.
 
 Vous pouvez envoyer vos données dans Open Humans par l'un des trois moyens suivants :
 
-1. utilisez l'option de téléversement AndroidAPS pour télécharger vos données dans Open Humans
+1. use the AAPS uploader option to get your data into Open Humans
 2. utilisez le transfert de données Nightscout pour déverser vos données dans Open Humans
 3. téléchargez manuellement des fichiers de données dans Open Humans.
 
@@ -87,7 +87,7 @@ Voir aussi les [Conditions d'utilisation Open Humans](https://www.openhumans.org
 
 ## Protection des données
 
-Open Humans s'occupe de la protection de votre vie privée en vous assignant un identifiant numérique pour chaque projet. Cela permet aux projets de vous reconnaître mais pas vous identifier. L'ID de l'application téléchargé par AndroidAPS est similaire et ne sert qu'à administrer les données. Plus d'informations peuvent être trouvées ici :
+Open Humans s'occupe de la protection de votre vie privée en vous assignant un identifiant numérique pour chaque projet. Cela permet aux projets de vous reconnaître mais pas vous identifier. The Application ID uploaded by AAPS is similar and only helps administrate the data. Plus d'informations peuvent être trouvées ici :
 
 - [Règles d'utilisation des données Open Humans](https://www.openhumans.org/data-use/)
 - [Open Humans et GDPR](https://www.openhumans.org/gdpr/)

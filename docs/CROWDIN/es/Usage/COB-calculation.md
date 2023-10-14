@@ -1,60 +1,66 @@
-# Cálculo COB
+# Cálculo de carbohidratos (COB)
 
-## How does AAPS calculate the COB value?
+## ¿Cómo calcula la AAPS el valor de los carbohidratos (COB)?
 
-When carbs are entered as part of a meal or correction, AAPS adds them to the current carbs on board (COB). AAPS then absorbs (removes) carbs based on observed deviations to BG values. The rate of absorption depends on the carb sensitivity factor. This is not a profile value but is calculated as ISF/IC and is how many mg/dl 1g of carbs will raise your BG.
+Cuando se introducen carbohidratos como parte de una comida o de una corrección, AAPS los añade a los carbohidratos actuales (COB). A continuación, AAPS absorbe (elimina) carbohidratos en función de las desviaciones observadas con respecto a los valores de glucosa (BG). La tasa de absorción depende del factor de sensibilidad a los carbohidratos. No se trata de un valor configurado en el perfil, sino que se calcula como ISF/IC y es la cantidad de mg/dl que 1g de carbohidratos subirá tu glucemia.
 
-For example, if your profile ISF is 100 and your IC is 5, your CSF would be 20. For every 20 mg/dl your BG goes up, 1g of carbs are absorbed by AAPS. Positive IOB also effects this calculation. So, if AAPS expected your BG to go down by 20 mg/dl because of IOB and it instead stayed flat, it would also absorb 1g of carbs.
+The formula is: `absorbed_carbs = deviation * ic / isf` It means:
+* increasing ic will increase carbs absorbed every 5 minutes thus shorten total time of absorption
+* increasing isf will decrease carbs absorbed every 5 minutes thus prolong total time of absorption
+* changing profile % increase/decrease both values thus has no impact on carbs absorption time
 
-Carbs will also be absorbed via the methods described below based on what sensitivity algorithm is used.
+Por ejemplo, si tu ISF del perfil es 100 y tu ratio (IC) es 5, tu CSF sería 20. Por cada 20 mg/dl que sube tu glucosa (BG), se absorben por AAPS 1g de carbohidratos. La insulina activa positiva (IOB), también afecta a este cálculo. Por lo tanto, si la AAPS esperaba que tu glucosa baje 20 mg/dl debido a la insulina activa (IOB) y, en cambio, se mantiene estable, también absorberá 1g de carbohidratos.
 
-### Oref1
+Los carbohidratos también se absorven mediante los métodos descritos a continuación, en función del algoritmo de sensibilidad que se utilice.
 
-Los carbohidratos no absorbidos se cortan después del tiempo especificado
+### Sensibilidad Oref1
+
+Los carbohidratos no absorbidos se eliminarán después del tiempo especificado
 
 ```{image} ../images/cob_oref0_orange_II.png
-:alt: Oref1
+:alt: Sensibilidad Oref1
 ```
 
-### AAPS, promedio ponderado
+### Sensibilidad promedio ponderada
 
-absorption is calculated to have `COB == 0` after specified time
+La absorción se calcula para tener `COB == 0` después del tiempo especificado
 
 ```{image} ../images/cob_aaps2_orange_II.png
-:alt: AAPS, Promedio ponderado
+:alt: Sensibilidad promedio ponderada
 ```
 
 Si se utiliza la absorción mínima de carbohidratos (min_5m_carbimpact) en lugar del valor calculado a partir de las desviaciones de BG, aparece un punto naranja en el gráfico COB.
 
 (COB-calculation-detection-of-wrong-cob-values)=
-## Detección de valores COB incorrectos
 
-AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. En este caso, le dará una sugerencia adicional en la pantalla de confirmación después del uso del asistente en bolo.
+## Detección de valores erróneos de carbohidratos (COB)
 
-### How does AAPS detect wrong COB values?
+AAPS te avisa si estás a punto de poner un bolo con carbohidratos (COB) de una comida anterior y el algoritmo cree que el cálculo actual de carbohidratos, puede ser erróneo. En este caso, te dará mostrará una sugerencia en la pantalla de confirmación, después de utilizar el asistente de bolo.
 
-Normalmente, AAPS detecta la absorción de carbohidros a través de desviaciones de BG. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called 'fallback'). Como este método calcula sólo la absorción mínima de carbohidratos sin considerar desviaciones de BG, podría llevar a valores de COB incorrectos.
+### ¿Cómo detecta AAPS los valores de carbohidratos (COB) erróneos?
+
+Normalmente AAPS detecta la absorción de carbohidratos a través de las desviaciones de la glucemia. En el caso de que se hayan introducido carbohidratos, pero AAPS no pueda calcular su absorción estimada mediante las desviaciones de la glucosa, utilizará el método [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) para calcular la absorción (el llamado 'fallback'). Como este método sólo calcula la absorción mínima de carbohidratos sin tener en cuenta las desviaciones de glucosa, podría dar lugar a valores de carbohidratos (COB) incorrectos.
 
 ```{image} ../images/Calculator_SlowCarbAbsorption.png
-:alt: Pista de un valor COB incorrecto
+:alt: Sugerencia sobre un valor incorrecto de COB
 ```
 
-In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  Esto significa que tal vez tenga menos carbohidratos a bordo que los calculados por el algoritmo.
+En la captura de pantalla anterior, el 41% de las veces, la absorción de carbohidratos se calculó matemáticamente mediante el uso de min_5m_carbimpact, en lugar del valor detectado a partir de las desviaciones.  Esto significa que tal vez estás consumiendo menos carbohidratos de los calculados por el algoritmo.
 
-### ¿Cómo hacer frente a esta advertencia?
+### ¿Cómo actuar ante esta advertencia?
 
-- Consider to cancel the treatment - press Cancel instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving COB unticked.
-- In case you are sure you need a correction bolus, enter it manually.
-- In any case be careful not to overdose!
+- Si desea cancelar el tratamiento, pulsa Cancelar en lugar de OK.
+- Calcula de nuevo tu próxima comida con el asistente de bolo, dejando la casilla COB sin marcar.
+- En caso de que estés seguro de que necesitas un bolo de corrección, introdúcelo manualmente.
+- En cualquier caso, ¡cuidado con las sobredosis!
 
-### ¿Por qué el algoritmo no detecta correctamente el COB?
+### ¿Por qué el algoritmo no detecta correctamente los carbohidratos (COB)?
 
-- Maybe you overestimated carbs when entering them.
-- Activity / exercise after your previous meal
-- I:C needs adjustment
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA)
+- Quizás sobrestimaste los carbohidratos al introducirlos.
+- Realizaste una actividad o ejercicio después de la comida anterior
+- Los ratios deben ser ajustados (I:C)
+- El valor de min_5m_carbimpact es incorrecto (se recomienda 8 con SMB y 3 con AMA).
 
-## Corrección manual de los carbohidratos ingresados
+## Corrección manual de los carbohidratos introducidos
 
-If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described [here](Screenshots-carb-correction).
+Si has sobreestimado o subestimado los carbohidratos, puedes corregirlo mediante el menú de tratamientos, realizando las acciones, que se describen [aquí](Screenshots-carb-correction).

@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS is the name of the Android app - AAPS ist the abbrevation - APS is a abrevation used for artificial pancreas system</td>
+ <td>AAPS is the name of the Android app - AAPS ist the abbrevation - APS is a abrevation used for artificial pancreas system</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -29,7 +29,7 @@
   </td>
 <tr>
  <td><strong>Android Auto</strong></td>
- <td>Android Auto is a system developed by Google LLC to use functions of an Android smartphone with the infotainment system in motor vehicles. Through Android Auto AndroidAPS can send messages to your compatible and configured infotainment system.</td>
+ <td>Android Auto is a system developed by Google LLC to use functions of an Android smartphone with the infotainment system in motor vehicles. Through Android Auto AAPS can send messages to your compatible and configured infotainment system.</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Android-auto.html">Wiki - android auto</a><br><a href="https://www.android.com/intl/en_en/auto/">Google Android Auto</a></td>
 </tr>
@@ -56,7 +56,7 @@
  <td><strong>BAT</strong></td>
  <td>χαμηλή στάθμη μπαταρίας στην αρχική οθόνη</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview"> Προτιμήσεις </a> <br> <a href="../Getting-Started/Screenshots.html"> Στιγμιότυπα οθόνης </a></td>
 </tr>
 <tr>
  <td><strong>BG</strong></td>
@@ -96,7 +96,7 @@
 </tr>
 <tr>
  <td><strong>CAGE</strong></td>
- <td>cannula age - displayed on the homescreen of AndroidAPS and in Nightscout if information was entered in the actions tab / menu</td>
+ <td>cannula age - displayed on the homescreen of AAPS and in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -104,7 +104,7 @@
  <td><strong>CAN</strong></td>
  <td>status light overdue cannula change on homescreen</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview"> Προτιμήσεις </a> <br> <a href="../Getting-Started/Screenshots.html"> Στιγμιότυπα οθόνης </a></td>
 </tr>
 <tr>
  <td><strong>CGM</strong></td>
@@ -126,7 +126,7 @@
 </tr>
 <tr>
  <td><strong>DIA</strong></td>
- <td>duration of insulin action</td>
+ <td>διάρκεια της δράσης της ινσουλίνης</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
@@ -150,7 +150,7 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>git in our context here is the tool to mainly download the AndroidAPS sources from Github for the build process. It's version-control system for tracking changes in computer files and coordinating work on those files especially for teams.<br>-> necessary for APK updates</td>
+ <td>git in our context here is the tool to mainly download the AAPS sources from Github for the build process. It's version-control system for tracking changes in computer files and coordinating work on those files especially for teams.<br>-> necessary for APK updates</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - update APK</a></td>
 </tr>
@@ -173,8 +173,8 @@
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
 <tr>
- <td><strong>IC (or I:C)</strong></td>
- <td>insulin to carb ratio (How many carbs are covered by one unit of insulin?)</td>
+ <td><strong>IC (ή I:C)</strong></td>
+ <td>αναλογίας ινσουλίνης υδατανθράκων (Για πόσους υδατάνθρακες χρειάζεται 1 μονάδα ινσουλίνης;)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -186,21 +186,21 @@
 </tr>
 <tr>
  <td><strong>ISF</strong></td>
- <td>insulin sensitivity factor - the expected decrease in BG as a result of one unit of insulin</td>
+ <td>ο παράγοντας ευαισθησίας στην ινσουλίνη - η αναμενόμενη μείωση της BG ως αποτέλεσμα μιας μονάδας ινσουλίνης</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>LGS</strong></td>
- <td>Low Glucose Suspend<br>AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
- <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objective 6</a></td>
+ <td>Η χαμηλή δόση γλυκόζης <br> Το AAPS θα μειώσει τη βασική αν πέσει η γλυκόζη του αίματος. Αλλά εάν η γλυκόζη του αίματος αυξάνεται, τότε θα αυξηθεί μόνο η βασική τιμή εάν το IOB είναι αρνητικό (από προηγούμενη LGS), διαφορετικά τα βασικά ποσοστά θα παραμείνουν τα ίδια με τα επιλεγμένα προφίλ σας. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
+ <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">στόχος 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>LineageOS</strong></td>
  <td>free and open-source operating system for smartphones etc.<br>alternative OS for smartphones not running Android 8.1 (Oreo)<br>(when using Accu-Chek Combo)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo pump</a></td>
+ <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo αντλία</a></td>
 </tr>
 <tr>
  <td><strong>Log files</strong></td>
@@ -209,7 +209,7 @@
  <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - log files</a></td>
 </tr>
 <tr>
- <td><strong>maxIOB</strong></td>
+ <td><strong>μέγιστη ΙΟΒ</strong></td>
  <td>safety feature - maximum total IOB AAPS can't go over</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
@@ -228,33 +228,33 @@
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
- <td>open source project to access and report CGM data. It's the central data hub for all your diabetes data. It is where AndroidAPS is storing the data. It's available e.g. for parents following their childs diabetes management or reporting of the historical data to get the actual state of the diabetes control (expected HbA1c, time in range) or search for patterns in the data via percentilr chart etc..</td>
- <td>Nightscout Reporter</td>
+ <td>open source project to access and report CGM data. It's the central data hub for all your diabetes data. It is where AAPS is storing the data. It's available e.g. for parents following their childs diabetes management or reporting of the historical data to get the actual state of the diabetes control (expected HbA1c, time in range) or search for patterns in the data via percentilr chart etc..</td>
+ <td>Αναφορές Nightscout</td>
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>
 <tr>
- <td><strong>Nightscout Reporter</strong></td>
+ <td><strong>Αναφορές Nightscout</strong></td>
  <td>Tool from fellow looper to generate PDF reports from Nightscout web app data e.g. for meetings with your diabetes team.</td>
  <td>Nightscout</td>
- <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
+ <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Αναφορές</a><br><a href="https://www.facebook.com/nightrep/">NS Αναφορές @ Facebook</a></td>
 </tr>
 <tr>
  <td><strong>NS Client</strong></td>
- <td>part of AAPS to connect to your Nightscout site</td>
+ <td>μέρος του AAPS για να συνδεθείτε στον ιστότοπό σας Nightscout</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
 <tr>
  <td><strong>Στόχοι</strong></td>
- <td>learning program within AAPS guiding you step by step from open to closed loop</td>
+ <td>μαθαίνοντας το πρόγραμμα στο πλαίσιο του AAPS που σας καθοδηγεί βήμα προς βήμα από ανοιχτό σε κλειστό βρόχο</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
+ <td><a href="../Usage/Objectives.html">Wiki - Στόχοι</a></td>
 </tr>
 <tr>
  <td><strong>OpenAPS</strong></td>
  <td>open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pi)<br>AAPS uses some of the OpenAPS features</td>
  <td>&nbsp;</td>
- <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
+ <td><a href="https://openaps.readthedocs.io">Αρχεία OpenAPS</a></td>
 </tr>
 <tr>
  <td><strong>Ανοιχτό κύκλωμα</strong></td>
@@ -276,7 +276,7 @@
 </tr>
 <tr>
  <td><strong>PH</strong></td>
- <td>pump history - you access it in the treatments which are located on the 3 dot menu on the right side of AndroidAPS main screen</td>
+ <td>pump history - you access it in the treatments which are located on the 3 dot menu on the right side of AAPS main screen</td>
  <td>&nbsp;</td>
  <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
 </tr>
@@ -288,7 +288,7 @@
 </tr>
 <tr>
  <td><strong>Προφίλ</strong></td>
- <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>AndroidAPS v3 only supports local profiles but Nightscout profiles can be copied (synchronized) to AndroidAPS</td>
+ <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>AAPS v3 only supports local profiles but Nightscout profiles can be copied (synchronized) to AAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
 </tr>
@@ -302,7 +302,7 @@
  <td><strong>RES</strong></td>
  <td>status light overdue reservoir change on homescreen</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview"> Προτιμήσεις </a> <br> <a href="../Getting-Started/Screenshots.html"> Στιγμιότυπα οθόνης </a></td>
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
@@ -312,7 +312,7 @@
 </tr>
 <tr>
  <td><strong>SAGE</strong></td>
- <td>sensor age - displayed on the homescreen of AndroidAPS and in Nightscout if information was entered in the actions tab / menu</td>
+ <td>sensor age - displayed on the homescreen of AAPS and in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
@@ -320,7 +320,7 @@
  <td><strong>SEN</strong></td>
  <td>status light sensor change on homescreen</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview"> Προτιμήσεις </a> <br> <a href="../Getting-Started/Screenshots.html"> Στιγμιότυπα οθόνης </a></td>
 </tr>
 <tr>
  <td><strong>Sensivity detection</strong></td>
@@ -344,23 +344,23 @@
  <td><strong>Super bolus</strong></td>
  <td>shift of basal to bolus insulin for faster BG adjustment</td>
  <td>&nbsp;</td>
- <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
+ <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - Το Super Bolus</a></td>
 </tr>
 <tr>
  <td><strong>TBB</strong></td>
- <td>total base basal (sum of basal rate within 24 hours)</td>
+ <td>συνολική βάση βασικού ρυθμού (άθροισμα βασικού ρυθμού εντός 24 ωρών)</td>
  <td>TBR / TDD</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>TBR</strong></td>
- <td>temporary basal rate</td>
+ <td>προσωρινώς βασικός ρυθμός</td>
  <td>TBB / TDD</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>TDD</strong></td>
- <td>total daily dose (bolus + basal per day)</td>
+ <td>συνολική ημερήσια δόση (bolus + βασικός ρυθμός ημερησίως)</td>
  <td>TBB / TBR</td>
  <td>&nbsp;</td>
 </tr>
@@ -377,14 +377,14 @@
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td><strong>Virtual pump</strong></td>
- <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
+ <td><strong>Εικονική αντλία</strong></td>
+ <td>option to try AAPS functions or for PWD using a pump model with no AAPS driver for looping</td>
  <td>Ανοιχτό κύκλωμα</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>Ταπετσαρία</strong></td>
- <td>AndroidAPS background image</td>
+ <td>AAPS background image</td>
  <td></td>
  <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>
 </tr>
@@ -395,8 +395,8 @@
  <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="https://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
- <td><strong>Zero-temp</strong></td>
- <td>temporary basal rate with 0% (no basal insulin delivery)</td>
+ <td><strong>Μηδενικός ρυθμός</strong></td>
+ <td>προσωρινός βασικός με ποσοστό στο 0% (χωρίς βασική χορήγηση ινσουλίνης)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>

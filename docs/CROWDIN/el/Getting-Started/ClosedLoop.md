@@ -26,7 +26,7 @@ At present there are three major open source closed loop systems available:
 
 ### AndroidAPS (AAPS)
 
-AndroidAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). It uses an Android Smartphone for calculation and control of your insulin pump. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
+AAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). It uses an Android Smartphone for calculation and control of your insulin pump. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
 
 Compatible [pumps](../Hardware/pumps.md) are:
 
@@ -35,7 +35,7 @@ Compatible [pumps](../Hardware/pumps.md) are:
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Diaconn G8](../Configuration/DiaconnG8.md)
 - [Omnipod DASH](../Configuration/OmnipodDASH.md)
-- [Omnipod Eros](../Configuration/OmnipodEros.md)
+- [Αντλία Omnipod Eros](../Configuration/OmnipodEros.md)
 - some old [Medtronic pumps](../Configuration/MedtronicPump.md)
 
 ### OpenAPS
@@ -53,5 +53,5 @@ Compatible pumps are:
 Compatible pumps are:
 
 - Omnipod DASH
-- Omnipod Eros
+- Αντλία Omnipod Eros
 - some old Medtronic pumps

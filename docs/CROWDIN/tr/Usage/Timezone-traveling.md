@@ -8,7 +8,7 @@ Pompa geçmişi kullanmadığı için telefonda saat dilimini değiştirmekle il
 
 ## DanaRv2, DanaRS
 
-AndroidAPS, pompanın geçmişini kullandığından ancak pompadaki kayıtların saat dilimi damgasına sahip olmadığı için bu pompalar özel bir bakıma ihtiyaç duyar. **Bu telefonda saat dilimini basitçe değiştirirseniz, kayıtların farklı saat dilimleriyle okunacağı ve iki katına çıkacağı anlamına gelir.**
+These pumps need a special care because AAPS is using history from the pump but the records in pump don't have timezone stamp. **Bu telefonda saat dilimini basitçe değiştirirseniz, kayıtların farklı saat dilimleriyle okunacağı ve iki katına çıkacağı anlamına gelir.**
 
 Bunu önlemek için iki olasılık vardır:
 
@@ -56,7 +56,7 @@ Böylece Insight kullanıcısının saat dilimi değişiklikleri ve saat değiş
 
 ## Accu-Chek Combo
 
-[Yeni Combo sürücüsü](../Configuration/Accu-Chek-Combo-Pump-v2.md), pompanın saatini telefonun saatine göre otomatik olarak ayarlar. Combo, saat dilimlerini depolayamaz, yalnızca yerel saati depolayabilir. Dolayısıyla yeni sürücü pompaya bunu programlar. Ek olarak, pompanın yerel saatini saat dilimi farkı olan tam bir zaman damgasına dönüştürebilmek için yerel AndroidAPS tercihlerinde saat dilimini saklar. Kullanıcının herhangi bir şey yapmasına gerek yoktur; Combo'daki saat, telefonun geçerli saatinden çok fazla saparsa, pompanın saati otomatik olarak ayarlanır.
+[Yeni Combo sürücüsü](../Configuration/Accu-Chek-Combo-Pump-v2.md), pompanın saatini telefonun saatine göre otomatik olarak ayarlar. Combo, saat dilimlerini depolayamaz, yalnızca yerel saati depolayabilir. Dolayısıyla yeni sürücü pompaya bunu programlar. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. Kullanıcının herhangi bir şey yapmasına gerek yoktur; Combo'daki saat, telefonun geçerli saatinden çok fazla saparsa, pompanın saati otomatik olarak ayarlanır.
 
 Bununla birlikte, yalnızca genellikle yavaş olan uzak terminal modunda yapılabildiğinden, bunun biraz zaman aldığını unutmayın. Bu aşılamayan bir Combo sınırlamasıdır.
 
@@ -64,19 +64,27 @@ Ruffy tabanlı eski sürücü, zamanı otomatik olarak ayarlamaz. Kullanıcını
 
 (Timezone-traveling-time-adjustment-daylight-savings-time-dst)=
 
+## Medtrum
+
+Sürücü, pompanın saatini telefonun saatine göre otomatik olarak ayarlar.
+
+Timezone changes keep the history in tact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and IOB. If you change time manually double check the IOB.
+
+When the timezone or time changes running TBR's are stopped.
+
 # Yaz saati uygulamasında (DST) zaman ayarı
 
-Pompa ve CGM kurulumuna bağlı olarak, zaman atlamaları sorunlara yol açabilir. Combo ile örn. pompa geçmişi tekrar okunur ve yinelenen girişlere yol açar. Bu yüzden lütfen ayarlamayı gece değil, uyanıkken yapın.
+Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
 
-AKRB ve AİNS'in kesinlikle doğru olduğundan emin olana kadar bolus hesaplayıcıyı tekrar kullanmayın. DST Saat değişikliğinden sonra muhtemelen birkaç saat kullanmamak daha iyidir.
+If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
 
 (Timezone-traveling-accu-chek-combo)=
 
 ## Accu-Chek Combo
 
-**NOT**: Yukarıda bahsedildiği gibi, bu bölüm yalnızca Ruffy tabanlı eski sürücü için geçerlidir. Yeni sürücü tarih, saat ve DST'yi otomatik olarak ayarlar.
+**NOTE**: As mentioned above, this secton is only valid for the old, Ruffy-based driver. The new driver adjusts date and time and DST automatically.
 
-Pompa ve telefon arasındaki süre çok farklıysa AndroidAPS bir alarm verir. Ne yazık ki, DST zaman değişikliği gece yarısında olacaktır. Bunu önlemek ve bunun yerine uykunuzun tadını çıkarmamak için kendinize daha uygun bir zamanda saat değişikliğini yapmaya zorlamak için şu adımları izleyin:
+AAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
 
 ### Saat değişmeden önce yapılması gerekenler
 
@@ -90,7 +98,7 @@ Pompa ve telefon arasındaki süre çok farklıysa AndroidAPS bir alarm verir. N
    * Bu ülkelerin listesi mevcuttur [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * Orta Avrupa Saati (CET) için bu "Brazzaville" (Kongo) olabilir. Telefonunuzun saat dilimini Kongo olarak değiştirin.
 
-3. AndroidAPS'de pompanızı yenileyin.
+3. In AAPS refresh your pump.
 
 4. Tedaviler sekmesini kontrol edin... Yinelenen tedaviler görürseniz:
    
@@ -101,11 +109,11 @@ Pompa ve telefon arasındaki süre çok farklıysa AndroidAPS bir alarm verir. N
 
 ### Saat değişikliğinden sonra yapılacak işlemler
 
-Bu geçişi yapmak için iyi bir zaman, düşük AİNS ile olacaktır. Örneğin. kahvaltı gibi bir yemekten bir saat önce (pompa geçmişindeki son boluslar küçük SMB düzeltmeleri olacaktır. AKRB ve AİNS'nizin her ikisi de sıfıra yakın olmalıdır.)
+A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
 
 1. Android saat dilimini tekrar geçerli konumunuza değiştirin ve otomatik saat dilimini yeniden etkinleştirin.
-2. AndroidAPS yakında Combo'nun saatinin eşleşmediği konusunda sizi uyarmaya başlayacak. Bu nedenle, pompanın ekranı ve düğmeleri aracılığıyla pompanın saatini manuel olarak güncelleyin.
-3. AndroidAPS "Combo" ekranında Yenile'ye basın.
+2. AAPS will soon start alerting you that the Combo’s clock doesn’t match. Bu nedenle, pompanın ekranı ve düğmeleri aracılığıyla pompanın saatini manuel olarak güncelleyin.
+3. On the AAPS “Combo” screen, press Refresh.
 4. Ardından Tedaviler ekranına gidin ve gelecekte olabilecek olayları arayın. Çok fazla olmamalı.
    
    * "İleriki tedavileri sil" düğmesine basmayın
@@ -119,8 +127,12 @@ Bu geçişi yapmak için iyi bir zaman, düşük AİNS ile olacaktır. Örneğin
 
 * DST'ye geçiş otomatik olarak yapılır. Herhangi bir işlem gerekmez.
 
-## Diğer Pompalar
+## Medtrum
 
-* Bu özellik, AndroidAPS sürüm 2.2'den beri mevcuttur.
-* Zorlukları önlemek için Döngü, DST anahtarından SONRA 3 saat süreyle devre dışı bırakılacaktır. Bu güvenlik nedenleriyle yapılır (DST değişikliğinden önce yinelenen bolus nedeniyle AİNS çok yüksek).
-* DST değişikliğinden önce ana ekranda, döngünün geçici olarak devre dışı bırakılacağına dair bir bildirim alacaksınız. Bu mesaj uyarı, titreşim veya herhangi bir şey olmadan görünecektir.
+* DST'ye geçiş otomatik olarak yapılır. Herhangi bir işlem gerekmez.
+
+## Other pumps
+
+* This feature is available since AAPS version 2.2.
+* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
+* You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.

@@ -1,10 +1,10 @@
-# AndroidAPS ile kapalı döngü sistemi nedir?
+# What is a closed loop system with AAPS?
 
-AndroidAPS, bir Android akıllı telefonda yapay pankreas sistemi (APS) görevi gören bir uygulamadır. Yapay pankreas sistemi nedir? Canlı bir pankreasın yaptığını yapmayı amaçlayan (otomatik olarak kan şekerini sağlıklı sınırlar içinde tutmak) bir yazılım programıdır.
+AAPS is an app that acts as an artificial pancreas system (APS) on an Android smartphone. Yapay pankreas sistemi nedir? Canlı bir pankreasın yaptığını yapmayı amaçlayan (otomatik olarak kan şekerini sağlıklı sınırlar içinde tutmak) bir yazılım programıdır.
 
-Bir APS, biyolojik pankreasın yaptığı kadar iyi yapamaz, ancak ticari olarak mevcut cihazları ve basit ve güvenli yazılımları kullanarak tip 1 diyabetin daha kolay yönetilmesini sağlayabilir. Bu cihazlar, AndroidAPS'yi kan şekeri seviyelerinizden haberdar etmek için bir Sürekli Glikoz Monitörü (CGM) ve uygun insülin dozlarını vermek için AndroidAPS tarafından kontrol edilen bir insülin pompası içerir. Uygulama, bu cihazlarla bluetooth üzerinden iletişim kurar. Dozaj hesaplamalarını, binlerce kullanıcısı olan ve milyonlarca saatlik kullanımı birikmiş olan OpenAPS adı verilen başka bir yapay pankreas sistemi için geliştirilmiş bir algoritma ya da kurallar dizisi kullanarak yapmaktadır.
+Bir APS, biyolojik pankreasın yaptığı kadar iyi yapamaz, ancak ticari olarak mevcut cihazları ve basit ve güvenli yazılımları kullanarak tip 1 diyabetin daha kolay yönetilmesini sağlayabilir. Those devices include a continuous glucose monitor (CGM) to tell AAPS about your blood sugar levels and an insulin pump which AAPS controls to deliver appropriate doses of insulin. Uygulama, bu cihazlarla bluetooth üzerinden iletişim kurar. Dozaj hesaplamalarını, binlerce kullanıcısı olan ve milyonlarca saatlik kullanımı birikmiş olan OpenAPS adı verilen başka bir yapay pankreas sistemi için geliştirilmiş bir algoritma ya da kurallar dizisi kullanarak yapmaktadır.
 
-Bir uyarı notu: AndroidAPS, herhangi bir ülkede herhangi bir tıbbi otorite tarafından düzenlenmemiştir. AndroidAPS'yi kullanmak aslında kendi üzerinizde tıbbi bir deney yapmaktır. Sistemin kurulumu kararlılık ve teknik bilgi gerektirir. Başlangıçta teknik bilgiye sahip değilseniz, sonunda kesinlkle olacaktır. İhtiyacınız olan tüm bilgiler bu belgelerde, başka bir yerde çevrimiçi olarak veya daha önce yapmış olanlardan bulunabilir - onlara Facebook gruplarında veya diğer forumlarda sorabilirsiniz. Birçok kişi AndroidAPS'yi başarıyla oluşturdu ve şimdi tamamen güvenli bir şekilde kullanıyor, ancak her kullanıcının şunları yapması önemlidir:
+A note of caution: AAPS is not regulated by any medical authority in any country. Using AAPS is essentially carrying out a medical experiment on yourself. Sistemin kurulumu kararlılık ve teknik bilgi gerektirir. Başlangıçta teknik bilgiye sahip değilseniz, sonunda kesinlkle olacaktır. İhtiyacınız olan tüm bilgiler bu belgelerde, başka bir yerde çevrimiçi olarak veya daha önce yapmış olanlardan bulunabilir - onlara Facebook gruplarında veya diğer forumlarda sorabilirsiniz. Many people have successfully built AAPS and are now using it entirely safely, but it is essential that every user:
 
 - Sistemin nasıl çalıştığını tam olarak anlamak için sistemi kendiniz kurun
 - Bireysel diyabet ayarlarını diyabet ekibi ile birlikte en iyi şekilde çalışacak şekilde ayarlar
@@ -13,7 +13,7 @@ Bir uyarı notu: AndroidAPS, herhangi bir ülkede herhangi bir tıbbi otorite ta
 ```{note}
 **Sorumluluk Reddi ve Uyarı**
 
-- Burada açıklanan tüm bilgiler, düşünce ve kodlar yalnızca bilgilendirme ve eğitim amaçlıdır. Nightscout şu anda HIPAA gizlilik uyumluluğu için herhangi bir girişimde bulunmamaktadır. Nightscout ve AndroidAPS'i kendi sorumluluğunuzda kullanın. Tıbbi kararlar almak için bilgileri veya kodu kullanmayın.
+- Burada açıklanan tüm bilgiler, düşünce ve kodlar yalnızca bilgilendirme ve eğitim amaçlıdır. Nightscout şu anda HIPAA gizlilik uyumluluğu için herhangi bir girişimde bulunmamaktadır. Nightscout ve AAPS'i kendi sorumluluğunuzda kullanın. Tıbbi kararlar almak için bilgileri veya kodu kullanmayın.
 - github.com'dan alınan kodun kullanımı herhangi bir garanti veya resmi destek içermez. Ayrıntılar için lütfen bu deponun LİSANSINI gözden geçirin.
 - Tüm ürün ve şirket adları, ticari markalar, hizmet markaları, tescilli ticari markalar ve tescilli hizmet markaları ilgili sahiplerinin mülkiyetindedir. Kullanımları bilgi amaçlıdır ve onlar tarafından herhangi bir bağlantı veya onay anlamına gelmez.
 
@@ -22,7 +22,7 @@ Lütfen unutmayın - bu projenin [SOOIL](http://www.sooil.com/eng/), [Dexcom](ht
 
 Meydan okumaya hazırsanız, lütfen okumaya devam edin.
 
-## AndroidAPS'nin arkasındaki birincil hedefler
+## Primary goals behind AAPS
 
 - Dahili güvenliği olan bir uygulama. Oref0 ve oref1 olarak bilinen algoritmaların güvenlik özelliklerini okumak için [burayı ](https://openaps.org/reference-design/) tıklayın.
 - Yapay pankreas ve Nightscout ile tip 1 diyabeti yönetmek için hepsi bir arada uygulama

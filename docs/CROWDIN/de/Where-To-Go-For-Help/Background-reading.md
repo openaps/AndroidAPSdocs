@@ -32,8 +32,6 @@ Bevor du dein rig erstellst, musst du sehr viel lesen, um die ganze Funktionswei
 
 <https://www.diabettech.com/artificial-pancreas/looping-do-i-choose-openaps-or-loop-either-way-wearenotwaiting/>
 
-<https://www.healthline.com/diabetesmine/dana-rs-insulin-pump-embraces-wearenotwaiting>
-
 <https://btvnovinite.bg/video/bulgaria/dnes-e-svetovnijat-den-za-borba-s-diabeta.html>
 
 ## YouTube

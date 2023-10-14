@@ -25,6 +25,8 @@ The following workaround should extend the time the Sony Smartwatch 3 can be use
 ## 3. Enable ADB Debugging options on your watch
 
 - Enable developer mode by going to Settings --> About --> Build number
+- Or it could be Settings --> System --> About -->  --> Versions --> Build number
+   
 - Click it 7 times.
 - Now go to Settings --> Developer Options --> ADB Debugging (enable)
 

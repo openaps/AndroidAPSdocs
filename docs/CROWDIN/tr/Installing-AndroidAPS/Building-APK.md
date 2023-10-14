@@ -226,10 +226,10 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
     
     ![Ayarları aç](../images/studioSetup/30_Settings.png)
 
-* Alt menüsünü (1) açmak için "Appearance & Behaviour" üzerine çift tıklayın.
+* Languages & Frameworks tıklayarak menüyü açın (1)
 
-* System Settings'e (2) çift tıklayın ve Android SDK'yı (3) seçin.
-* "Android 9.0 (Pie)" (4) (API Level 28) öğesinin solundaki kutuyu işaretleyin.
+* Android SDK (2)'yi seçin.
+* "Android 9.0 (Pie)" (3) (API Level 28) öğesinin solundaki kutuyu işaretleyin.
     
     ![SDK ayarları](../images/studioSetup/31_AndroidSDK.png)
 
@@ -283,7 +283,7 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
     
     ![Bundle yerine APK](../images/studioSetup/43_Apk.png)
 
-* Modülün "AAPS.app" (1) olarak ayarlandığından emin olun.
+* Make sure that module is set to "AndroidAPS.app" (1).
 
 * Kendi "key store" oluşturmaya başlamak için "Create new..." (2) öğesini tıklayın.
     

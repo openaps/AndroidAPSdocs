@@ -452,7 +452,7 @@ The options here will vary depending on which pump driver you have selected in [
 - [Pompe Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Pompe Medtronic](../Configuration/MedtronicPump.md)
 
-Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sélectionné Pompe virtuelle Pump dans le Générateur de configuration.
+If using AAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
 (Preferences-nsclient)=
 ## NSClient
@@ -462,7 +462,7 @@ Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sé
 ```
 
 - Définissez votre *URL Nightscout* (par ex. <https://yourwebsitename.herokuapp.com>) et l'*API secret* (un mot de passe de 12 caractères enregistré dans vos variables Heroku).
-- Cela permet de lire et d'écrire des données entre le site Nightscout et AAPS.
+- This enables data to be read and written between both the Nightscout website and AAPS.
 - Vérifiez deux fois les fautes de frappe ici si vous êtes coincé dans l'objectif 1.
 - **Vérifiez bien que l'URL est SANS /api/v1/ à la fin.**
 - *Log app start to NS* enregistre une note dans Careportal Nightscout à chaque démarrage de l'application.  L'application ne devrait pas avoir besoin de démarrer plus d'une fois par jour; si c'est plus souvent, cela suggère un problème (par ex. l'optimisation de la batterie n'est pas désactivée pour AAPS).

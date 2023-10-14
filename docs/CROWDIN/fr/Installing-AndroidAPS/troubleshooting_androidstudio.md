@@ -3,7 +3,7 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## Fichier de clés perdu
-Si vous utilisez le même fichier de clés lors de la mise à jour d'AAPS, vous n'avez pas besoin de désinstaller la version précédente sur votre smartphone. C'est pourquoi il est recommandé de stocker le fichier de clés dans un dossier de sauvegarde sûr.
+If you use the same keystore when updating AAPS you do not have to uninstall the previous version on your smartphone. C'est pourquoi il est recommandé de stocker le fichier de clés dans un dossier de sauvegarde sûr.
 
 Si vous essayez d'installer l'apk, signé avec un fichier de clés différent de celui d'avant, vous recevrez un message d'erreur indiquant que l'installation a échoué!
 
@@ -90,7 +90,7 @@ Si vous recevez un message d'erreur comme ceci
 
     * Utilisez votre explorateur de fichiers habituel sur votre ordinateur pour déplacer ou couper et coller ce(s) fichier(s) à un autre endroit.
 
-    * Retournez à Android Studio et cliquez sur le bouton Refresh (4) dans l'onglet Commit pour vous assurer que le fichier n'est plus stocké dans le répertoire AndroidAPS.
+    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AAPS directory anymore.
 
       S'il n'y a pas d'autres changements dans l'onglet commit, allez à l'[Étape 3](troubleshooting_androidstudio-step-3-gradle-resync).
 
@@ -163,7 +163,7 @@ Suivez les instructions à [Gradle Resync](troubleshooting_androidstudio-step-3-
 
     ![Gradle Rechargement](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
-  * Faites un clic droit sur AndroidAPS (2)
+  * Right-click on AAPS (2)
 
   * Cliquez sur "Reload Gradle Project" (3)
 
@@ -194,7 +194,7 @@ Lors de la création d'un fichier de clés pour pouvoir générer un APK signé,
 Cela semble être un bug avec Android Studio 3.5.1 et son environnement Java livré sous Windows. La clé est créée correctement mais une recommandation est affichée à tort comme une erreur. Cela peut actuellement être ignoré.
 
 
-## Aucune donnée MGC n'est reçue par AndroidAPS
+## No CGM data is received by AAPS
 
 * Si vous utilisez l'application Dexcom G6 patchée, cette application est obsolète. Utilisez l'application [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) à la place.
 
@@ -229,7 +229,7 @@ Si aucun des conseils ci-dessus ne vous a aidé, vous pourriez envisager de repa
 
     Ou vous pouvez recréer un nouveau fichier de clés.
 
-3. Construisez l'application à partir de zéro comme c'est décrit [ici](Building-APK-download-androidaps-code).
+3. Build app from scratch as described [here](Building-APK-download-AAPS-code).
 
 4. Quand vous avez construit l'APK avec succès, supprimez l'application existante sur votre téléphone, transférez le nouvel apk sur votre téléphone et installez le.
 5. [Importer à nouveau les paramètres](../Usage/ExportImportSettings#importer-les-parametres) pour restaurer vos paramètres et objectifs.

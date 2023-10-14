@@ -226,10 +226,10 @@
     
     ![הגדרות פתוחות](../images/studioSetup/30_Settings.png)
 
-* לחצו פעמיים על Appearance & Behaviour לפתיחת תפריט המשנה שלו (1).
+* Double-click on Languages & Frameworks to open its submenu (1).
 
-* לחצו פעמיים על הגדרות System Settings (2) ובחרו Android SDK (3).
-* סמנו V בתיבה שליד "Android 9.0 (Pie)" (4) (API Level 28).
+* Select Android SDK (2).
+* Tick the box left of "Android 9.0 (Pie)" (3) (API Level 28).
     
     ![הגדרות SDK](../images/studioSetup/31_AndroidSDK.png)
 
@@ -283,7 +283,7 @@
     
     ![קובץ APK במקום חבילה](../images/studioSetup/43_Apk.png)
 
-* Make sure that module is set to "AAPS.app" (1).
+* Make sure that module is set to "AndroidAPS.app" (1).
 
 * לחצו "Create new" (2) על מנת להתחיל יצירת ה-key store (מאגר המפתחות).
     

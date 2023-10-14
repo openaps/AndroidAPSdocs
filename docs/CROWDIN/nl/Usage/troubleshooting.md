@@ -4,7 +4,7 @@ Informatie over het oplossen van problemen staat verspreid over verschillende pa
 
 Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.html).
 
-## AndroidAPS app
+## AAPS app
 
 ### Building & updating
 

@@ -17,8 +17,8 @@ Jusqu'à présent, en utilisant le Freestyle Libre 1 comme source Gly, vous ne p
 -   Si vous ne l'avez pas déjà configuré, téléchargez xDrip+ et suivez les instructions sur [LimiTTEer](https://github.com/JoernL/LimiTTer) ou [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki).
 -   Dans xDrip allez dans Paramètres > Inter-app settings > Diffusion Locale et sélectionnez ON.
 -   Dans xDrip allez dans Paramètres > Inter-app settings > Accept Treatments et sélectionnez OFF.
--   Si vous voulez pouvoir utiliser AndroidAPS pour calibrer, alors dans xDrip, allez dans Paramètres > Inter-app settings > Accept Calibrations et sélectionnez ON. Vous pouvez également consulter les options dans Paramètres > Paramètres moins courants > Paramètres Avancés de Calibration.
--   Sélectionnez xDrip dans la Configuration (dans AndroidAPS).
+-   If you want to be able to use AAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. Vous pouvez également consulter les options dans Paramètres > Paramètres moins courants > Paramètres Avancés de Calibration.
+-   Select xDrip+ in ConfigBuilder (setting in AAPS).
 -   Pour les paramètres dans xDrip+ voir les copies d'écrans dans [la page de configuration xDrip+](../Configuration/xdrip.md). Il y a une partie pour les paramètres de base xDrip+ et une pour les paramètres spécifiques au Freestyle Libre.
 -   Si AAPS ne reçoit pas de valeurs de glycémie lorsque le téléphone est en mode avion utilisez 'Identifier le récepteur' comme décrit dans [la page de configuration xDrip+](../Configuration/xdrip.md).
 
@@ -26,4 +26,4 @@ Jusqu'à présent, en utilisant le Freestyle Libre 1 comme source Gly, vous ne p
 
 -   Vous aurez besoin de Glimp version 4.15.57 ou plus récente. Les versions plus anciennes ne sont pas prises en charge.
 -   Si vous ne l'avez pas déjà configuré, téléchargez Glimp et suivez les instructions sur [Nightscout](https://nightscout.github.io/uploader/setup/#glimp).
--   Sélectionnez Glimp dans la Configuration (Menu hamburger dans AndroidAPS).
+-   Select Glimp in ConfigBuilder (setting in AAPS).

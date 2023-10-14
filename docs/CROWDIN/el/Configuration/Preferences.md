@@ -136,7 +136,7 @@
   :alt: Preferences > Overview
   ```
 
-### Keep screen on
+### Κρατήστε την οθόνη ενεργή
 
 - Useful while giving a presentation.
 - It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
@@ -194,7 +194,7 @@
   :alt: Preferences > Range for visualization
   ```
 
-### Shorten tab titles
+### Συντομογραφίες ενοτήτων
 
 - See more tab titles on screen.
 
@@ -213,7 +213,7 @@
   ```
 
 (Preferences-status-lights)=
-### Status lights
+### Φώτα κατάστασης
 
 - Status lights give a visual warning for
 
@@ -303,9 +303,9 @@
 (Preferences-minimal-request-change)=
 ### Minimal request change \[%\]
 
-- When using open loop you will receive notifications every time AAPS recommends to adjust basal rate.
+- Όταν χρησιμοποιείτε ανοικτό κύκλωμα, θα λαμβάνετε ειδοποιήσεις κάθε φορά που το AAPS συνιστά την προσαρμογή του βασικού ρυθμού.
 - To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
-- This defines the relative change required to trigger a notification.
+- Αυτό καθορίζει τη σχετική αλλαγή που απαιτείται για την ενεργοποίηση μιας ειδοποίησης.
 
 (Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)=
 ## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
@@ -404,7 +404,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 - Normally you do not have to change the settings in this dialogue!
 - If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
 
-## Absorption settings
+## Ρύθμιση απορρόφησης
 
 ```{image} ../images/Pref2020_Absorption.png
 :alt: Absorption settings
@@ -451,7 +451,7 @@ The options here will vary depending on which pump driver you have selected in [
 - [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Medtronic Pump](../Configuration/MedtronicPump.md)
 
-If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+If using AAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
 (Preferences-nsclient)=
 ## NSClient
@@ -461,7 +461,7 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
 ```
 
 - Set your *Nightscout URL* (i.e. <https://yourwebsitename.herokuapp.com>) and the *API secret* (a 12 character password recorded in your Heroku variables).
-- This enables data to be read and written between both the Nightscout website and AndroidAPS.
+- This enables data to be read and written between both the Nightscout website and AAPS.
 - Double check for typos here if you are stuck in Objective 1.
 - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
 - *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS).
@@ -507,7 +507,7 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
 - Further information is described in [SMS Commands](../Children/SMS-Commands.md).
 - Additional safety is obtained through use of an authenticator app and additional PIN at token end.
 
-## Automation
+## Αυτοματοποίηση
 
 Select which location service shall be used:
 

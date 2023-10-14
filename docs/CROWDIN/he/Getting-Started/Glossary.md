@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS הוא השם של אפליקציית אנדרואיד - AAPS הוא הקיצור - APS הוא קיצור המשמש למערכת הלבלב המלאכותית</td>
+ <td>AAPS is the name of the Android app - AAPS ist the abbrevation - APS is a abrevation used for artificial pancreas system</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -29,7 +29,7 @@
   </td>
 <tr>
  <td><strong>Android Auto</strong></td>
- <td>Android Auto היא מערכת שפותחה על ידי Google LLC כדי להשתמש בפונקציות של סמארטפון אנדרואיד עם מערכת המידע והבידור בכלי רכב ממונעים. באמצעות Android Auto אפליקציית AndroidAPS יכולה לשלוח הודעות למערכת המידע והבידור התואמת והמוגדרת שלך.</td>
+ <td>Android Auto היא מערכת שפותחה על ידי Google LLC כדי להשתמש בפונקציות של סמארטפון אנדרואיד עם מערכת המידע והבידור בכלי רכב ממונעים. Through Android Auto AAPS can send messages to your compatible and configured infotainment system.</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Android-auto.html">Wiki - android auto</a><br><a href="https://www.android.com/intl/en_en/auto/">Google Android Auto</a></td>
 </tr>
@@ -96,7 +96,7 @@
 </tr>
 <tr>
  <td><strong>גיל צינ'</strong></td>
- <td>גיל החיישן - מוצג במסך הראשי של AndroidAPS וב-Nightscout אם נתון זה הוזן בלשונית או בתפריט פעולות</td>
+ <td>cannula age - displayed on the homescreen of AAPS and in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -150,7 +150,7 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>git בהקשר שלנו כאן הוא הכלי להורדת קוד המקור של AndrdoidAPS מ-Github לצורך תהליך הבנייה. מערכת בקרת גרסאות למעקב אחר שינויים בקבצי מחשב ותיאום עבודה על אותם קבצים.<br> דרוש לעדכוני APK</td>
+ <td>git in our context here is the tool to mainly download the AAPS sources from Github for the build process. מערכת בקרת גרסאות למעקב אחר שינויים בקבצי מחשב ותיאום עבודה על אותם קבצים.<br> דרוש לעדכוני APK</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - עדכון APK</a></td>
 </tr>
@@ -228,7 +228,7 @@
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
- <td>פרויקט בקוד פתוח לגישה, ניטור ודיווח על נתוני סוכר בדם. זהו מרכז הנתונים של כל נתוני הסוכרת שלך. זהו המקום בו AndroidAPS מאחסן את הנתונים. שימושי להורים שעוקבים אחר ניהול הסוכרת של ילדיהם או דיווח על הנתונים ההיסטוריים כדי לקבל את המצב בפועל של בקרת הסוכרת (HbA1c צפוי, זמן בטווח) או לחפש דפוסים בנתונים באמצעות תרשים אחוזונים וכו'..</td>
+ <td>פרויקט בקוד פתוח לגישה, ניטור ודיווח על נתוני סוכר בדם. זהו מרכז הנתונים של כל נתוני הסוכרת שלך. It is where AAPS is storing the data. שימושי להורים שעוקבים אחר ניהול הסוכרת של ילדיהם או דיווח על הנתונים ההיסטוריים כדי לקבל את המצב בפועל של בקרת הסוכרת (HbA1c צפוי, זמן בטווח) או לחפש דפוסים בנתונים באמצעות תרשים אחוזונים וכו'..</td>
  <td>Nightscout Reporter</td>
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>
@@ -276,7 +276,7 @@
 </tr>
 <tr>
  <td><strong>PH - היסטוריית משאבה</strong></td>
- <td>היסטוריית משאבות - ניגשה בטיפולים הממוקמים בתפריט 3 הנקודות בצד שמאל של המסך הראשי של AndroidAPS</td>
+ <td>pump history - you access it in the treatments which are located on the 3 dot menu on the right side of AAPS main screen</td>
  <td>&nbsp;</td>
  <td><a href="../Getting-Started/Screenshots.html#treatment">צילומי מסך</a></td>
 </tr>
@@ -288,7 +288,7 @@
 </tr>
 <tr>
  <td><strong>פרופיל</strong></td>
- <td>הגדרות טיפול בסיסיות (מינון בזאלי, DIA, IC, ISF, ערכי מטרה)<br>AndroidAPS v3 תומך רק בפרופילים מקומיים אך ניתן להעתיק (לסנכרן) פרופילי Nightscout אל AndroidAPS</td>
+ <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>AAPS v3 only supports local profiles but Nightscout profiles can be copied (synchronized) to AAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - פרופיל</a></td>
 </tr>
@@ -312,7 +312,7 @@
 </tr>
 <tr>
  <td><strong>גיל סנס'</strong></td>
- <td>גיל החיישן - מוצג במסך הראשי של AndroidAPS וב-Nightscout אם נתון זה הוזן בלשונית או בתפריט פעולות</td>
+ <td>sensor age - displayed on the homescreen of AAPS and in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
@@ -378,13 +378,13 @@
 </tr>
 <tr>
  <td><strong>Virtual pump - משאבה וירטואלית</strong></td>
- <td>אפשרות להתנסות בפונקציות של AAPS או לחולי סוכרת עם משאבה שאינה נתמכת על ידי מערכת AndroidAPS</td>
+ <td>option to try AAPS functions or for PWD using a pump model with no AAPS driver for looping</td>
  <td>לולאה פתוחה</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>טפט</strong></td>
- <td>תמונת הרקע של AndroidAPS</td>
+ <td>AAPS background image</td>
  <td></td>
  <td><a href="../Getting-Started/Phones.html#phone-background">ראו דף מכשירי טלפון</a></td>
 </tr>

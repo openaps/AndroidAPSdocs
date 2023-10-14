@@ -2,7 +2,7 @@
 
 Er zijn verschillende opties, sommige Android specifiek, sommige Huawei specifiek:
 
-* Voeg AndroidAPS en xdrip+ toe aan de lijst van apps die accuoptimalisatie negeren:
+* Add AAPS and xdrip+ to apps list which ignore battery optimisations:
   
   * Instellingen / App / Instellingen / Speciale toestemmingen / Batterij optimalisering negeren / Selecteer "Alle toepassingen" / Stel app in op toestaan
     

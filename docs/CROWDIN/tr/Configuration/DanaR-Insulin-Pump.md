@@ -10,12 +10,12 @@
 * Ana Menü > Ayarlar > Keşif'e gidin
 * Telefon ayarlarında Bluetooth'a gidin, yakındaki cihazları tarayın, DanaR seri numaranızı seçin ve şifrenizi girin (Eşleştirme şifresi 0000'dır). Taramada DanaR görünmüyorsa telefonu yeniden başlatın ve DanaR pilini çıkarın, değiştirin ve bu iki adımı yeniden deneyin.
 
-* AndroidAPS'de Konfigürasyon ayarlarına gidin ve sahip olduğunuz DanaR pompa türünü seçin (DanaR, DanaR Korean, DanaRv2)
+* In AAPS go to Config Builder and select the type of DanaR you have (DanaR, DanaR Korean, DanaRv2)
 
 * Sağ üstteki 3 noktaya dokunarak Menü'yü seçin. Tercihleri Seçin.
 * DanaR Bluetooth cihazını seçin ve DanaR seri numaranıza tıklayın.
 * Pompa şifresini seçin ve şifrenizi girin. (Varsayılan şifre 1234'tür)
-* AndroidAPS'nin %200'ün üzerinde bazal orana izin vermesini istiyorsanız, >%200 için yayma bolus kullan'ı etkinleştirin. Bunun yiyecek için yayma bolusları kullanırken yüksek GBO'larla döngü yapamayacağınız anlamına geldiğini unutmayın.
+* If you want AAPS to allow basal rate above 200%, enable Use extended boluses for >200%. Bunun yiyecek için yayma bolusları kullanırken yüksek GBO'larla döngü yapamayacağınız anlamına geldiğini unutmayın.
 * DanaR pompa ayarları altındaki Tercihler'de, kullanılan varsayılan bolus hızını değiştirebilirsiniz (1ü başına 12sn, 1ü başına 30sn veya 1ü başına 60sn).
 * Pompadaki bazal adımı 0,01 Ü/s ayarlayın
 * Pompadaki bolus adımını 0,1 Ü/s ayarlayın

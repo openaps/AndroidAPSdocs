@@ -1,11 +1,11 @@
 # AAPS on Wear OS smartwatch
 
-You can install AAPS app on your **Wear OS based** smartwatch. Watch version of AAPS allows you to:
+You can install AAPS app on your **Wear OS based** smartwatch. Η έκδοση του AAPS για το ρολόι σας επιτρέπει να:
 
-* **display data on your watch**: by providing [custom watchfaces](Watchfaces-aaps-watchfaces) or in standard watchfaces with use of [complications](Watchfaces-complications)
-* **control AAPS on phone**: to bolus, set a temporary target etc.
+* **βλέπετε δεδομένα στο ρολόι σας**: παρέχοντας [προσαρμόσμενες προσόψεις ρολογιού ](Watchfaces-aaps-watchfaces) ή με τις τυπικές προσόψεις ρολογιού με τη χρήση [εξειδικευμένων ρυθμίσεων](Watchfaces-complications)
+* **ελέγχετε το AAPS στο τηλέφωνο**: για να κάνετε δόση, να θέσετε έναν προσωρινό στόχο κλπ.
 
-### Before you buy watch...
+### Πριν αγοράσετε ένα ρολόι...
 
 * Some features like *complications* require Wear OS version 2.0 or newer to work
 * Google rebranded *Android Wear 1.x* to *Wear OS* from version 2.x, so when it says *Android Wear* it may indicate older 1.x version of system
@@ -16,13 +16,13 @@ You can install AAPS app on your **Wear OS based** smartwatch. Watch version of 
 
 The Wear OS App of AAPS has been seperated from the AAPS build for the Android mobile. Therefore you have to generate a second signed APK. Select as module "AndroidAPS.wear" and as build variant "fullRelease" and a second apk file for the Wear OS clock is generated when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpcontrolRelease" which will allow you to just remote control the pump without looping).
 
-From March 2021 you need to sideload AAPS onto the watch, it is no longer accessible via the watch's Google Play Store. You can sideload using [Wear Installer](https://youtu.be/8HsfWPTFGQI) which you will need to install on both your watch and phone. The Wear Installer app can be downloaded from the Google Play Store. The linked video from Malcolm Bryant the developer of Wear Installer gives you detailed instructions to a) download the apk to your mobile b) setup the Android Debugger on the wear c) use Wear Installer on mobile and wear to sideload the AAPS wear app to the mobile. Once you have selected AAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
+From March 2021 you need to sideload AAPS onto the watch, it is no longer accessible via the watch's Google Play Store. You can sideload using [Wear Installer](https://youtu.be/8HsfWPTFGQI) which you will need to install on both your watch and phone. The Wear Installer app can be downloaded from the Google Play Store. The linked video from Malcolm Bryant the developer of Wear Installer gives you detailed instructions to a) download the apk to your mobile b) setup the Android Debugger on the wear c) use Wear Installer on mobile and wear to sideload the AAPS wear app to the mobile. Μόλις επιλέξετε το AAPS ως εφαρμογή για να ανεβάσετε την έκδοση του στο ρολόι, θα είστε σε θέση να χρησιμοποιήσετε προσόψεις ρολογιού και τα στοιχεία ελέγχου AAPS.
 
-### Setup on the Phone
+### Ρύθμιση στο τηλέφωνο
 
-Within AAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
+Μέσα στο AAPS, στο Μενού διαμόρφωσης πρέπει να [ ενεργοποιήσετε το plugin Wear ](Config-Builder-wear).
 
-## Controlling AAPS from Watch
+## Χειρισμός του AAPS από το ρολόι
 
 AAPS is designed to be *controlled* by Android Wear watches. If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
@@ -30,52 +30,52 @@ The following functions can be triggered from the watch:
 
 * set a temporary target
 * use the bolus calculator (calculation variables can be defined in [settings](Config-Builder-wear) on the phone)
-* administer eCarbs
-* administer a bolus (insulin + carbs)
-* watch settings
-* status 
-    * check pump status
-    * check loop status
-    * check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+* διαχείριση eCarbs
+* χορηγήση δόσης bolus (ινσουλίνη + υδατάνθρακες)
+* Ρυθμίσεις ρολογιού
+* κατάσταση 
+    * ελέξτε κατάσταση αντλίας
+    * έλεγχος κατάστασης κυκλώματος
+    * ελέγχος και εναλλαγή προφίλ, CPP (Circadian Percentage Profile = time shift + percentage)
     * show TDD (Total daily dose = bolus + basal per day)
 
 (Watchfaces-aaps-watchfaces)=
 
-## AAPS Watchfaces
+## Προσόψεις ρολογιού AAPS
 
 There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
-Ensure notifications from AAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
+Βεβαιωθείτε ότι οι ειδοποιήσεις από το AndroidAPS δεν εμποδίζονται στο ρολόι. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
 
-To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
+Για να φτάσετε πιο γρήγορα στο μενού AAPS, κάντε διπλό πάτημα στο BG σας. With a double tap onto the BG curve you can change the time scale..
 
-## Watchfaces available
+## Διαθέσιμες προσόψεις ρολογιού
 
-![Available watchfaces](../images/Watchface_Types.png)
+![Διαθέσιμες προσόψεις ρολογιού](../images/Watchface_Types.png)
 
 (Watchfaces-new-watchface-as-of-AAPS-2-8)=
 
-### New watchface as of AAPS 2.8
+### Νέα πρόσοψη ρολογιού ως AAPS 2.8
 
-![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
+![Πρόσοψη ρολογιού Ψηφιακό Στυλ](../images/Watchface_DigitalStyle.png)
 
-* Color, lines and circle are configurable in setting menu on cog-sign of watchface chooser menu.
+* Το χρώμα, οι γραμμές και ο κύκλος διαμορφώνονται στο μενού ρύθμισης στο cog-sign του μενού επιλογής της πρόσοψης.
 
-## AAPSv2 watchface - Legend
+## AAPSv2 Πρόσοψη ρολογιού - Legend
 
-![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
+![Legend AndroidAPSv2 Πρόσοψη ρολογιού](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A - χρόνος από την τελευταία εκτέλεση του κυκλώματος
 
-B - CGM reading
+Β - Ανάγνωση CGM
 
-C - minutes since last CGM reading
+Γ - λεπτά από την τελευταία ανάγνωση CGM
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+Δ - αλλαγή σε σχέση με την τελευταία ανάγνωση CGM (σε mmol ή mg / dl)
 
-E - average change CGM reading last 15 minutes
+E - μέση αλλαγή ανάγνωσης CGM που διαρκεί 15 λεπτά
 
-F - phone battery
+Ζ - μπαταρία τηλεφώνου
 
 G - basal rate (shown in U/h during standard rate and in % during TBR)
 
@@ -85,39 +85,39 @@ I - carbs (carbs on board | e-carbs in the future)
 
 J - insulin on board (from bolus | from basal)
 
-## Accessing main menu of AAPS
+## Πρόσβαση στο κύριο μενού του AAPS
 
-To access main menu of AAPS you can use on of following options:
+Για να αποκτήσετε πρόσβαση στο κύριο μενού του AAPS μπορείτε να χρησιμοποιήσετε τις παρακάτω επιλογές:
 
-* double tap on your BG value
-* select AAPS icon in watch applications menu
+* διπλό πάτημα στην τιμή γλυκόζης αίματος BG
+* επιλογή του εικονίδιου AAPS στο μενού εφαρμογών ρολογιού
 * tap on AAPS complication (if configured for menu)
 
-## Settings (in wear watch)
+## Ρυθμίσεις (σε ρολόι)
 
-To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
+Για πρόσβαση στις ρυθμίσεις πρόσοψης ρολογιού, μπείτε στο κύριο μενού AAPS, σύρετε προς τα πάνω και επιλέξτε "Ρυθμίσεις".
 
 Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
 
-![Settings on/off](../images/Watchface_Settings_On_Off.png)
+![Ρυθμίσεις ενεργοποίηση/απενεργοποίηση](../images/Watchface_Settings_On_Off.png)
 
-### AAPS companion parameters
+### Συνοδευτικές παράμετροι AAPS
 
-* **Vibrate on Bolus** (default `On`):
-* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
+* **Δόνηση στο Bolus** (προεπιλογή `στο`):
+* **Μονάδες για Ενέργειες** (Προεπιλογή `mg/dl`): εάν ** μονάδες** για ενέργειες είναι `mg/dl`, εάν η μονάδα **Off** είναι `mmol/l`. Χρησιμοποιείται κατά τη ρύθμιση ενός Προσωρινού στόχου από το ρολόι.
 
 (Watchfaces-watchface-settings)=
 
-### Watchface settings
+### Ρυθμίσεις πρόσοψης ρολογιού
 
-* **Show Date** (default `Off`): note, date is not available on all watchfaces
-* **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
-* **Show COB** (default `On`): Display or not COB value
-* **Show Delta** (default `On`): Display or not the BG variation of the last 5 minutes
-* **Show AvgDelta** (default `On`): Display or not the average BG variation of the last 15 minutes
-* **Show Phone Battery** (default `On`): Phone battery in %. Red if below 30% .
-* **Show Rig Battery** (default `Off`): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
-* **Show Basal Rate** (default `On`): Display or not current basal rate (in U/h or in % if TBR)
+* **Εμφάνιση ημερομηνίας** (προεπιλογή `Off`): σημείωση, η ημερομηνία δεν είναι διαθέσιμη σε όλες τις προσόψεις
+* **Εμφάνιση IOB** (προεπιλογή `On`): Εμφάνιση ή όχι IOB τιμή (η ρύθμιση για λεπτομερή τιμή είναι στις ρυθμίσεις ρολογιού AAPS)
+* **Εμφάνιση COB** (προεπιλογή `Στις`): Εμφάνιση ή όχι τιμή COB
+* **Εμφάνιση Delta** (προεπιλογή `Στις`): Εμφάνιση ή όχι της απόκλισης BG των τελευταίων 5 λεπτών
+* **Εμφάνιση AvgDelta** (προεπιλογή `Στις`): Εμφάνιση ή όχι η μέση μεταβολή BG των τελευταίων 15 λεπτών
+* **Εμφάνιση μπαταρίας τηλεφώνου** (προεπιλογή `On`): Μπαταρία τηλεφώνου σε %. Κόκκινο εάν είναι κάτω από 30% .
+* **Show Rig Battery** (default `Off`): Η μπαταρία Rig είναι μια σύνθεση της μπαταρίας τηλεφώνου, μπαταρίας αντλίας και αισθητήρα (γενικά η χαμηλότερη από τις 3 τιμές)
+* **Εμφάνιση βασικού ρυθμού** (προεπιλογή `On`): Εμφάνιση ή όχι του τρέχοντος βασικού ρυθμού (σε U/h ή σε % εάν TBR)
 * **Show Loop Status** (default `On`): show how many minutes since last loop run (arrows around value turn red if above 15').
 * **Show BG** (default `On`): Display or not last BG value
 * **Show Direction Arrow** (default `On`): Display or not BG trend arrow
@@ -180,24 +180,24 @@ AAPS Wear OS app provides only raw data, according to predefined formats. It is 
 * `RANGED VALUE` - Used for values from predefined range, like a percentage. It contains icon, label and is usually rendered as circle progress dial.
 * `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
 
-### Complication Setup
+### Ρύθμιση πρόσθετων δυνατοτήτων
 
-To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
+Για να προσθέσετε μια δυνατότητα (πολυπλοκότητα) στο ρολόι, ρυθμίστε το με παρατεταμένο πάτημα και κάνοντας κλικ στο παρακάτω εικονίδιο εργαλείων. Ανάλογα με το πώς ρυθμίζεται η συγκεκριμένη πρόσοψη - είτε κάντε κλικ στο placeholders είτε εισάγετε το μενού ρυθμίσεων της πρόσοψης για πολυπλοκότητες. Οι πολυπλοκότητες AAPS ομαδοποιούνται κάτω από την καταχώρηση μενού AAPS.
 
-When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
+Όταν ρυθμίζετε πολυπλοκότητες στην πρόσοψη του ρολογιού, το Wear OS θα παρουσιάσει και θα φιλτράρει τη λίστα των πολυπλοκοτήτων που μπορεί να ταιριάζουν στο επιλεγμένο μέρος της πρόσοψης. Εάν δεν εμφανίζεται κάποια συγκεκριμένη πολυπλοκότητα στη λίστα, αυτό οφείλεται πιθανώς στο ότι δεν μπορεί να χρησιμοποιηθεί για το δεδομένο μέρος.
 
-### Complications provided by AAPS
+### Πολυπλοκότητες που παρέχονται από το AAPS
 
-AAPS provides following complications:
+Το AAPS παρέχει τις ακόλουθες πολυπλοκότητες:
 
-![AAPS_Complications_List](../images/Watchface_Complications_List.png)
+![AAPS_Πολυπλοκότητες_Λίστα](../images/Watchface_Complications_List.png)
 
-* **BR, CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Basal Rate* on the first line and *Carbs on Board* and *Insulin on Board* on the second line.
-* **Blood Glucose** (`SHORT TEXT`, opens *Menu*): Displays *Blood Glucose* value and *trend* arrow on the first line and *measurement age* and *BG delta* on the second line.
-* **CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Carbs on Board* on the first line and *Insulin on Board* on the second line.
-* **CoB Detailed** (`SHORT TEXT`, opens *Wizard*): Displays current active *Carbs on Board* on the first line and planned (future, eCarbs) Carbs on the second line.
-* **CoB Icon** (`SHORT TEXT`, opens *Wizard*): Displays *Carbs on Board* value with a static icon.
-* **Full Status** (`LONG TEXT`, opens *Menu*): Shows most of the data at once: *Blood Glucose* value and *trend* arrow, *BG delta* and *measurement age* on the first line. On the second line *Carbs on Board*, *Insulin on Board* and *Basal Rate*.
+* **BR, CoB & IoB** (`SHORT TEXT`, opens *Menu*): Εμφανίζει *Βασικό ρυθμό* στην πρώτη γραμμή *Ενεργούς Υδατάνθρακες* και *Ενεργή Ινσουλίνη* στην δεύτερη γραμμή.
+* **Blood Glucose** (`SHORT TEXT`, opens *Menu*): Εμφανίζει *τιμή Γλυκόζης αίματος* και *βέλος * τάσης στην πρώτη γραμμή *χρόνο μέτρησης* και *διαφορά γλυκόζης αίματος* στην δευτερη γραμμή.
+* **CoB & IoB** (`SHORT TEXT`, opens *Menu*): Εμφανίζει *Ενεργόυς Υδατάνθρακες * στην πρώτη γραμμή και *Ενεργή Ινσουλίνη * στην δεύτερη γραμμή.
+* **CoB Detailed** (`SHORT TEXT`, opens *Wizard*):Εμφανίζει *Carbs τρέχοντες Ενεργούς Υδατάνθρακες * στην πρώτη γραμμή και προγραμματισμένους (μελλοντικούς , eCarbs) στην δεύτερη
+* **CoB Icon** (`SHORT TEXT`, opens *Wizard*): Εμφανίζει *τιμή Ενεργών Υδατανθράκων* με στατικό εικονίδιο.
+* **Full Status** (`LONG TEXT`, opens *Menu*): Εμφανίζει τα περισσότερα δεδομένα: *τιμή Γλυκόζης Αίματος* και *trend* βέλος, *διαφορά Γλυκόζης αίματος* και *χρόνο μέτρησης* στην πρώτη γραμμή. Στη δεύτερη γραμμή *Ενεργούς Υδατάνθρακες*, *Ενεργλη Ινσουλίνη* και *Βασικό Ρυθμό*.
 * **Full Status (flipped)** (`LONG TEXT`, opens *Menu*): Same data as for standard *Full Status*, but lines are flipped. Can be used in watchfaces which ignores one of two lines in `LONG TEXT`
 * **IoB Detailed** (`SHORT TEXT`, opens *Bolus*): Displays total *Insulin on Board* on the first line and split of *IoB* for *Bolus* and *Basal* part on the second line.
 * **IoB Icon** (`SHORT TEXT`, opens *Bolus*): Displays *Insulin on Board* value with a static icon.
@@ -352,7 +352,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AAPS 2.7 and above.
 * A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.md).
 
-## View Nightscout data
+## Προβολή δεδομένων Nightscout
 
 If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 

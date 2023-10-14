@@ -2,7 +2,7 @@
 
 # Omnipod Dash İnsülin Pompası Podları ile uyumlu, test edilmiş Telefonların listesi
 
-Şu anda, AndroidAPS/OpenAPS ekosisteminde kullanım için sürekli genişleyen Bluetooth özellikli insülin pompaları ağımıza eklenen en yeni pompa sürücüsü Omnipod Dash ile Döngü Yapabilen tüm Android Telefonların/Akıllı Saatlerin Donanım Listesinin bütünlüğünü sağlamaktan sorumlu çok çalışkan bir perde arkası Bakımcımız var.
+Currently, we have a very hard-working behind-the-scenes Maintainer, who is in charge of ensuring the integrity of the Hardware List of all Android Phones/Smartwatches Capable of Looping with the Omnipod Dash; the newest pump driver addition to our ever-expanding network of Bluetooth enabled insulin pumps for use within the AAPS/OpenAPS ecosystem!
 
 Bakım Sorumlumuz, kullanım kolaylığı için önceden doldurulmuş bilgi başlıklarına sahip bir Google Formu aracılığıyla Hesap Tablosuna veri girmenin herkes için kolay olduğundan emin olmak için çok zaman ve çaba harcadı. Bu, sayfalardaki mevcut verilerin yanlışlıkla üzerine yazılmamasını veya silinmemesini sağlar. Aynı deneyim, yine Google E-Tablolar kullanılarak ilk elde edilen başarının üzerine inşa edilebilir.
 
@@ -22,4 +22,4 @@ E-tabloyla ilgili herhangi bir sorun varsa, lütfen doğrudan veya openaps/Andro
 
 # Telefon Arka Planı
 
-![telefon arka planı](../images/bg_phone_thump.jpg) </br> Tasarım: Tiago :) </br> Telefonunuzu AndroidAPS arka planı ile dekore etmek istiyorsanız, arka plan resminizi buradan indirebilirsiniz: ![Yüksek çözünürlüklü arka plan.](../images/bg_phone.jpg)
+![telefon arka planı](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AAPS, you can download your background image here: ![Yüksek çözünürlüklü arka plan.](../images/bg_phone.jpg)

@@ -23,7 +23,7 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 -   Wenn Du xDrip+ zum Empfang der CGM-Daten verwendest, deinstalliere zuerst die Dexcom App. **Du kannst xDrip+ und die Dexcom App nicht gleichzeitig mit dem Transmitter verbinden!**
 -   Falls Du Clarity benötigst und trotzdem von den xDrip+ Alarmen profitieren willst, musst Du die [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) mit lokaler Datenübertragung zu xDrip+ verwenden.
 -   Falls Du xDrip noch nicht eingerichtet hast, dann lade es Dir herunter [xdrip](https://github.com/NightscoutFoundation/xDrip) und richte es entsprechend der Dokumentation unter[G5](../Configuration/xdrip.md)  ein.
--   Wähle in AndroidAPS > Konfiguration > BZ-Quelle > xDrip+.
+-   Select xDrip+ in ConfigBuilder (setting in AAPS).
 -   Passe die Einstellungen xDrip+ entsprechend den Erläuterungen auf der [Seite xDrip+ Einstellungen](../Configuration/xdrip.md) an.
 -   Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze "Identify receiver" wie auf der [Seite xDrip+ Einstellungen](../Configuration/xdrip.md) beschrieben.
 
@@ -38,7 +38,7 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 -   In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
 -   Innerhalb kurzer Zeit sollte BYODA das Transmitter-Signal aufnehmen. (Falls nicht, musst du den Sensor stoppen und einen neuen Sensor starten.)
 
-### Einstellungen für AndroidAPS
+### Settings for AAPS
 
 -   Wähle 'gepatchte Dexcom App' im Konfigurationsgenerator.
 -   Falls AAPS keine Werte erhält, wechsle auf eine andere BZ-Quelle und dann wieder zurück zur 'gepatchte Dexcom App', um die Abfrage für die Genehmigung des Datenaustauschs zwischen AAPS und BYODA aufzurufen.

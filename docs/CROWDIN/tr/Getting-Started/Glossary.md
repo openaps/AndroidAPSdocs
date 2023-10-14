@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS, Android uygulamasının adıdır - AAPS kısaltmasıdır - APS, yapay pankreas sistemi için kullanılan bir kısaltmadır</td>
+ <td>AAPS is the name of the Android app - AAPS ist the abbrevation - APS is a abrevation used for artificial pancreas system</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -29,7 +29,7 @@
   </td>
 <tr>
  <td><strong>Android Auto</strong></td>
- <td>Android Auto, motorlu araçlarda bilgi-eğlence sistemi ile bir Android akıllı telefonun işlevlerini kullanmak için Google LLC tarafından geliştirilen bir sistemdir. Android aracılığıyla Auto AndroidAPS, uyumlu ve yapılandırılmış bilgi-eğlence sisteminize mesaj gönderebilir.</td>
+ <td>Android Auto, motorlu araçlarda bilgi-eğlence sistemi ile bir Android akıllı telefonun işlevlerini kullanmak için Google LLC tarafından geliştirilen bir sistemdir. Through Android Auto AAPS can send messages to your compatible and configured infotainment system.</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Android-auto.html">Wiki - android auto</a><br><a href="https://www.android.com/intl/en_en/auto/">Google Android Auto</a></td>
 </tr>
@@ -96,7 +96,7 @@
 </tr>
 <tr>
  <td><strong>KYAŞ</strong></td>
- <td>kanül yaşı - işlemler sekmesine / menüsüne bilgi girilmişse AndroidAPS'nin ana ekranında ve Nightscout'ta görüntülenir</td>
+ <td>cannula age - displayed on the homescreen of AAPS and in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -150,7 +150,7 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>git bizim bağlamımızda burada, oluşturma işlemi için esas olarak Github'dan AndrdoidAPS kaynaklarını indirme aracıdır. Özellikle ekipler için bilgisayar dosyalarındaki değişiklikleri izlemek ve bu dosyalar üzerindeki çalışmaları koordine etmek için sürüm kontrol sistemidir.<br>-> APK güncellemeleri için gereklidir</td>
+ <td>git in our context here is the tool to mainly download the AAPS sources from Github for the build process. Özellikle ekipler için bilgisayar dosyalarındaki değişiklikleri izlemek ve bu dosyalar üzerindeki çalışmaları koordine etmek için sürüm kontrol sistemidir.<br>-> APK güncellemeleri için gereklidir</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Viki - APK güncellemesi</a></td>
 </tr>
@@ -228,7 +228,7 @@
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
- <td>CGM verilerine erişmek ve raporlamak için açık kaynak projesi. Tüm diyabet verileriniz için merkezi veri merkezidir. AndroidAPS orada verileri depoluyor. Çocuklarının diyabet yönetimini izleyen ebeveynler için veya diyabet kontrolünün gerçek durumunu (beklenen HbA1c, aralıktaki süre) elde etmek veya yüzdelik çizelgesi vb. yoluyla verilerdeki kalıpları aramak için geçmiş verilerin raporlanması için kullanılabilir..</td>
+ <td>CGM verilerine erişmek ve raporlamak için açık kaynak projesi. Tüm diyabet verileriniz için merkezi veri merkezidir. It is where AAPS is storing the data. Çocuklarının diyabet yönetimini izleyen ebeveynler için veya diyabet kontrolünün gerçek durumunu (beklenen HbA1c, aralıktaki süre) elde etmek veya yüzdelik çizelgesi vb. yoluyla verilerdeki kalıpları aramak için geçmiş verilerin raporlanması için kullanılabilir..</td>
  <td>NightScout raporları</td>
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>
@@ -276,7 +276,7 @@
 </tr>
 <tr>
  <td><strong>PG</strong></td>
- <td>pompa geçmişi - buna AndroidAPS ana ekranının sağ tarafında bulunan 3 noktalı menüde bulunan tedavilerden erişebilirsiniz</td>
+ <td>pump history - you access it in the treatments which are located on the 3 dot menu on the right side of AAPS main screen</td>
  <td>&nbsp;</td>
  <td><a href="../Getting-Started/Screenshots.html#treatment">Ekran görüntüleri</a></td>
 </tr>
@@ -288,7 +288,7 @@
 </tr>
 <tr>
  <td><strong>Profil</strong></td>
- <td>temel tedavi ayarları (bazal oran, İES, KİO, İDF, KŞ hedefi)<br>AndroidAPS v3 yalnızca yerel profilleri destekler, ancak Nightscout profilleri AndroidAPS'ye kopyalanabilir (senkronize edilebilir)</td>
+ <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>AAPS v3 only supports local profiles but Nightscout profiles can be copied (synchronized) to AAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Viki - profil</a></td>
 </tr>
@@ -312,7 +312,7 @@
 </tr>
 <tr>
  <td><strong>SYAŞ</strong></td>
- <td>sensör yaşı - işlemler sekmesine / menüsüne bilgi girilmişse AndroidAPS'nin ana ekranında ve Nightscout'ta görüntülenir</td>
+ <td>sensor age - displayed on the homescreen of AAPS and in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
@@ -378,13 +378,13 @@
 </tr>
 <tr>
  <td><strong>Sanal pompa</strong></td>
- <td>döngü için AndroidAPS sürücüsü olmayan bir pompa modeli kullanarak AAPS işlevlerini veya PWD için deneme seçeneği</td>
+ <td>option to try AAPS functions or for PWD using a pump model with no AAPS driver for looping</td>
  <td>Açık Döngü</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>Akıllı telefon Duvar kağıdı</strong></td>
- <td>AndroidAPS arka plan resmi</td>
+ <td>AAPS background image</td>
  <td></td>
  <td><a href="../Getting-Started/Phones.html#phone-background">telefon sayfasına bak</a></td>
 </tr>

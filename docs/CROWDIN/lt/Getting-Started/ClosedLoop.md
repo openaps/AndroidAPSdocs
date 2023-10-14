@@ -26,7 +26,7 @@ Panašiai, kaip autopilotas priklauso nuo jutiklių ir pilotų nustatytų parame
 
 ### AndroidAPS (AAPS)
 
-AndroidAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). Insulino pompai valdyti bei skaičiavimams atlikti naudojamas Android išmanusis telefonas. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
+AAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). Insulino pompai valdyti bei skaičiavimams atlikti naudojamas Android išmanusis telefonas. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
 
 Compatible [pumps](../Hardware/pumps.md) are:
 

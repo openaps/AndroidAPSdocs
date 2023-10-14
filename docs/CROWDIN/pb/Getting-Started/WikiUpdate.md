@@ -4,7 +4,7 @@
 
 - [BG quality warning sign](Screenshots-bg-warning-sign) @tanja
 - [Medtronic pump update](../Configuration/MedtronicPump.md) @dottedfingertips
-- [Necessary checks after update to AndroidAPS 3.0](../Installing-AndroidAPS/update3_0.md) @tanja
+- [Necessary checks after update to AAPS 3.0](../Installing-AndroidAPS/update3_0.md) @tanja
 - [Omnipod Dash](../Configuration/OmnipodDASH.md) @Freloner @ robertrub @vanelsberg
 - Update docs for AAPS 3.0 (partly) @xJoe
 - [Wear OS for AAPS 3.0](../Configuration/Watchfaces.md) @peterleimbach
@@ -52,11 +52,11 @@
 
 ## January 2021
 
-- [Action tab](Screenshots-action-tab) - more details on page 'AndroidAPS screens'
+- [Action tab](Screenshots-action-tab) - more details on page 'AAPS screens'
 - Dexcom G6 with [Build Your Own Dexcom App](DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
 - Libre smart reader [battery level](Screenshots-sensor-level-battery)
 - [Objectives](Objectives-objective-3-prove-your-knowledge) - new questions
-- Other [new AndroidAPS 2.8.0 functions](Releasenotes-version-2-8-0)
+- Other [new AAPS 2.8.0 functions](Releasenotes-version-2-8-0)
 
 ## December 2020
 
@@ -98,7 +98,7 @@
 ## March 2020
 
 - [Build apk with Android Studio 3.6.1](../Installing-AndroidAPS/Building-APK.md)
-- [DanaRS with firmware v3](../Configuration/DanaRS-Insulin-Pump.md) **cannot currently be used with AndroidAPS!**
+- [DanaRS with firmware v3](../Configuration/DanaRS-Insulin-Pump.md) **cannot currently be used with AAPS!**
 - [Extended bolus and switch to open loop](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 - [Update apk with Android Studio 3.6.1](../Installing-AndroidAPS/Update-to-new-version.md)
 

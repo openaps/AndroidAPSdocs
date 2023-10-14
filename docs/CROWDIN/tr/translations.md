@@ -1,9 +1,9 @@
-# AndroidAPS uygulaması veya dokümantasyon için dizeler (strings) nasıl çevrilir?
+# How to translate strings for the AAPS app or the documentation
 
 * Uygulamada kullanılan dizeler için <https://crowdin.com/project/androidaps> adresine gidin ve GitHub hesabınızı kullanarak giriş yapın
 * Dokümantasyon için lütfen <https://crowdin.com/project/androidapsdocs> adresini ziyaret edin ve GitHub hesabınızı kullanarak giriş yapın
 
-* Dokümanlar ekibine katılma isteği gönderin. Bunu yapmak için istediğiniz dilin bayrağına ve ardından sonraki sayfanın sağ üst köşesindeki "join" katıl düğmesine tıklayın. Lütfen dili belirtin ve çevirmen veya redaktör olmak istiyorsanız (yalnızca çeviri konusunda yetenekli kişiler + ileri düzey AndroidAPS kullanıcıları) AAPS deneyiminiz ve kendiniz hakkında biraz bilgi verin.
+* Dokümanlar ekibine katılma isteği gönderin. Bunu yapmak için istediğiniz dilin bayrağına ve ardından sonraki sayfanın sağ üst köşesindeki "join" katıl düğmesine tıklayın. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
 
 ```{admonition} Onay Zamanı :class: not
 
@@ -14,8 +14,8 @@ Onay manuel bir adımdır. Kâr amacı gütmeyen kuruluş olarak SLA'lar sağlam
     
     ## Translation of the app
     
-    (translations-translate-strings-for-androidaps-app)=
-    ### Translate strings for AndroidAPS app
+    (translations-translate-strings-for-AAPS-app)=
+    ### Translate strings for AAPS app
     
     * If you have no preference for strings you translate just select the "Translate All" button to start. Size çevrilmesi gereken dizeleri gösterecektir.
     
@@ -23,25 +23,25 @@ Onay manuel bir adımdır. Kâr amacı gütmeyen kuruluş olarak SLA'lar sağlam
     
     * Tek bir dosyayı çevirmek istiyorsanız, lütfen dosyayı arama iletişim kutusundan veya ağaç yapısından arayın ve o dosyadaki dizeler üzerinde çeviri çalışmasını başlatmak için dosya adına tıklayın.
     
-       ![Dizeleri tıklayın.xml](./images/translations-click-strings.png)
+       ![Click strings.xml](./images/translations-click-strings.png)
     
-    * Yeni çevrilmiş metin ekleyerek sol taraftaki cümleleri çevirin veya & öneriyi düzenle
+    * Translate sentences on left side by adding new translated text or use & edit suggestion 
     
-        ![Çeviri uygulaması](./images/translations-translate.png)
-    
-    
-    ### AndroidAPS uygulaması için redaksiyon dizeleri
-    
-    * Redaktörler, ana dil ekranından başlarken "redaksiyon" seçeneğini seçerek başlar.
-    
-       ![Redaksiyon modu uygulaması](./images/translations-proofreading-mode.png)
+       ![Translation app](./images/translations-translate.png)
     
     
-       ve çevrilmiş metinleri onaylayın
+    ### Proofread strings for AAPS app
     
-        ![metni onayla](./images/translations-proofreading.png)
+    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
     
-    Redaktör bir çeviriyi onayladığında, çeviri AndroidAPS'nin bir sonraki sürümüne eklenecektir.
+       ![Proofreading mode app](./images/translations-proofreading-mode.png) 
+    
+    
+      and approve translated texts 
+    
+       ![approve text](./images/translations-proofreading.png)
+    
+    When a proofreader approves a translation it will be added to the next version of AAPS.
     
     (translations-translation-of-the-documentation)=
     ## Translation of the documentation
