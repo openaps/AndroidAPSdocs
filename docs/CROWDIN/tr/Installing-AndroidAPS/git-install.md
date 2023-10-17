@@ -5,7 +5,7 @@
 ### 1. Git'i indir
 
 - **Android Studio çeşitli güncellemeler indirdiği için her zaman çevrimiçi olmanız gerekir!**
-- Herhangi bir git sürümü çalışması gerekir. Örneğin [https://git-scm.com/download/win](https://git-scm.com/download/win).
+- Any git version should work. Örneğin [https://git-scm.com/download/win](https://git-scm.com/download/win).
 - Kurulum yerini not ettiğinizden emin olun. Bir sonraki adımda ihtiyacınız olacak.
 
 ```{admonition} make git.exe available via Windows PATH
@@ -82,7 +82,7 @@ Android Studio'nun Git.exe'yi bulmak için bu yere ihtiyaç duyacağından Git.e
 
 ## Mac
 
-- Herhangi bir git sürümü çalışması gerekir. Örneğin [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+- Any git version should work. Örneğin [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
 - Git'i kurmak için homebrew kullanın: `` `$ brew install git` ``.
-- Git'i yüklemeyle ilgili ayrıntılar için [resmi git belgelerine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) bakın.
-- Git'i homebrew aracılığıyla kurarsanız, herhangi bir tercihi değiştirmenize gerek yoktur. Her ihtimale karşı: Android Studio - Tercihler altında bulabilirsiniz.
+- For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+- If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
