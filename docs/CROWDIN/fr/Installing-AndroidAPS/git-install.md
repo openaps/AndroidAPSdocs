@@ -5,7 +5,7 @@
 ### 1. Télécharger git
 
 - **Vous devez rester connecter à internet pendant toute la durée où Android Studio télécharge les différentes mises à jour !**
-- N’importe quelle version de git devrait fonctionner. Par exemple [https://git-scm.com/download/win](https://git-scm.com/download/win).
+- Any git version should work. Par exemple [https://git-scm.com/download/win](https://git-scm.com/download/win).
 - Assurez-vous de noter le chemin d’installation. Vous en aurez besoin dans la prochaine étape.
 
 ```{admonition} make git.exe available via Windows PATH
@@ -82,7 +82,7 @@ Assurez-vous que vous pouvez appeler git.exe sans le chemin de prédilection car
 
 ## Mac
 
-- N’importe quelle version de git devrait fonctionner. Par exemple [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+- Any git version should work. Par exemple [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
 - Utilisez homebrew pour installer git: `` `$ brew install git` ``.
-- Pour plus de détails sur l'installation de git, voir la [documentation officielle](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-- Si vous installez git via homebrew, il n'est pas nécessaire de modifier les préférences. Juste au cas où : on peut y accéder ici : Android Studio - Preferences.
+- For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+- If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
