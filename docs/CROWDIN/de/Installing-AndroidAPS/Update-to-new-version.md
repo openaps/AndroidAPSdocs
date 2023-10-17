@@ -77,7 +77,7 @@ Siehe die Anleitung für [APK auf Smartphone übertragen](Building-APK-transfer-
 
 ## 5. APK installieren
 
-Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. Anleitungen dazu findest Du im Internet (z.B. hier</0a> oder [hier](https://www.androidcentral.com/unknown-sources)). Hinweis: Wenn Du beim Erstellen Deinen bestehenden 'key store' im Android Studio verwendest hast, muss die alte AAPS nicht vom Smartphone deinstalliert werden. Um die APK zu installieren, folge den Anweisungen während des Updatevorgangs. In allen anderen Fällen (z.B. wenn ein neuer 'key store' für das Signieren der APK genutzt wurde), muss die alte App gelöscht werden, bevor die neue Version installiert werden kann.</p> 
+On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)). Hinweis: Wenn Du beim Erstellen Deinen bestehenden 'key store' im Android Studio verwendest hast, muss die alte AAPS nicht vom Smartphone deinstalliert werden. Um die APK zu installieren, folge den Anweisungen während des Updatevorgangs. In allen anderen Fällen (z.B. wenn ein neuer 'key store' für das Signieren der APK genutzt wurde), muss die alte App gelöscht werden, bevor die neue Version installiert werden kann.
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
