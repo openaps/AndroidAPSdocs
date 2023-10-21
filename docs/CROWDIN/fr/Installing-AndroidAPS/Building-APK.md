@@ -113,110 +113,119 @@ Sélectionnez le thème de l'interface utilisateur que vous souhaitez (dans ce m
 
 ![Couleur de l'interface](../images/studioSetup/05_UITheme.png)
 
-Cliquez sur "Finish" dans la boite de dialogue "Verify Settings".
+Click "Next" on the "Verify Settings" dialog.
 
-![Vérifiez les paramètres](../images/studioSetup/06_Verify.png)
+![Vérifiez les paramètres](../images/studioSetup/06_Overview.png)
 
-Attendez qu'Android Studio télécharge des composants supplémentaires et soyez patient. Une fois que tout est téléchargé, le bouton "Finish" devient bleu. Cliquez sur le bouton maintenant.
+Click on all three license agreement parts and select "Agree". When you have agreed to all, the "Finish" button will be enabled and you can "Finish".
 
-![Téléchargement des composants](../images/studioSetup/07_Downloading.png)
-
-(Building-APK-set-git-path-in-preferences)=
-
-## Définir le chemin de git dans les préférences
-
-Assurez-vous que [git est installé](../Installing-AndroidAPS/git-install.md) sur votre ordinateur et que vous avez redémarré votre ordinateur après l'installation.
-
-Sur l'écran d'accueil d'Android Studio cliquez sur "Customize" (1) à gauche, puis sélectionnez le lien "All settings..." (2):
-
-![Paramètres Android Studio à partir de l'écran d'accueil](../images/studioSetup/10_WizardSettings.png)
-
-### Windows
-
-* En tant qu'utilisateur de Windows, assurez-vous que vous avez redémarré votre ordinateur après [avoir installé Git](../Installing-AndroidAPS/git-install.md).
-
-* Double-cliquez sur "Version Control" (1) pour ouvrir le sous-menu.
-
-* Cliquez sur Git (2).
-* Assurez-vous que la méthode de mise à jour "Merge" (3) est sélectionnée.
-* Vérifiez si Android Studio peut localiser le chemin d'accès à git.exe automatiquement en cliquant sur le bouton "Test" (4).
+    ![Agree license agreements](../images/studioSetup/07_LicenseAgreement.png)
     
-    ![Paramètres Android Studio](../images/studioSetup/11_GitPath.png)
 
-* Si la configuration automatique est réussie, la version de git s'affiche sous chemin d'accès.
-    
-    ![Version Git affichée](../images/studioSetup/12_GitVersion.png)
+Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
 
-* Éventuellement git.exe peut ne pas être trouvé automatiquement ou le test entraînera une erreur (1) :
-    
-    ![Git non trouvé](../images/studioSetup/13_GitVersionError.png)
-    
-    Dans ce cas, cliquez sur l'icône de dossier (2).
-
-* Utilisez la [fonction de recherche](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) dans l'explorateur windows pour trouver "git.exe" si vous n'êtes pas sûr de l'endroit ou il a été installé. Vous cherchez un fichier nommé "git.exe", situé dans le dossier **\bin**.
-
-* Sélectionnez le chemin d'accès à git.exe et vérifiez que vous avez sélectionné le dossier ** \bin\ ** (3) et cliquez sur "OK" (4).
-    
-    ![Sélectionnez git manuellement](../images/studioSetup/14_GitManualSelection.png)
-
-* Vérifiez à nouveau votre chemin d'accès git sélectionné avec le bouton "Test" comme décrit ci-dessus.
-
-* Lorsque la version de git est affichée sous le chemin (voir la capture d'écran ci-dessus), fermez la fenêtre de configuration en cliquant sur le bouton "OK" (5).
-
-### Mac
-
-* N’importe quelle version de git devrait fonctionner. Par exemple <https://git-scm.com/download/mac>.
-* Utilisez homebrew pour installer git: ```$ brew install git```.
-* Pour plus de détails sur l'installation de git, voir la [documentation officielle](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* Si vous installez git via homebrew, il n'est pas nécessaire de modifier les préférences. Juste au cas où : on peut y accéder ici : Android Studio - Preferences.
+![Downloading components](../images/studioSetup/08_Downloading.png)
 
 (Building-APK-download-AAPS-code)=
 
 ## Download AAPS code
 
-* Sur l'écran d'accueil d'Android Studio, sélectionnez "Projects" (1) à gauche, puis "Get from VCS" (2).
+* On the Android Studio welcome screen select "Projects" (1) on the left and then "Get from VCS" (2).
     
-    ![Assistant Android Studio](../images/studioSetup/20_ProjectVCS.png)
+    ![Android Studio wizard](../images/studioSetup/20_ProjectVCS.png)
     
-    * Si vous avez déjà ouvert Android Studio et que vous ne voyez plus l'écran d'accueil, sélectionnez File (1.) > New (2.) > Project from Version Control ... (3)
+    * If you already opened Android Studio and do not see the welcome screen anymore select File (1) > New (2) > Project from Version Control... (3)
         
-        ![Charger le projet à partir du contrôle de version dans Android Studio](../images/AndroidStudio_FileNew.PNG)
+        ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
     
-    * Nous allons maintenant indiquer à Android Studio d'où recevoir le code :
+    * We will now tell Android Studio were to get the code from:
     
-    * Assurez-vous d'avoir sélectionné "Repository URL" sur la gauche (1).
+    * Make sure you have selected "Repository URL" on the left (1).
     
-    * Vérifier si "Git" est sélectionné comme contrôle de version (2).
-    * Copiez et collez l'URL ```https://github.com/nightscout/AndroidAPS``` to the main AAPS repository into the URL textbox (3).
-    * Choisissez le répertoire dans lequel vous voulez enregistrer le code cloné (4).
+    * Check if "Git" is selected as version control (2).
+    * Copy and paste the URL ```https://github.com/nightscout/AndroidAPS``` to the main AAPS repository into the URL textbox (3).
+    * Choose the directory where you want to save the cloned code (4).
         
         ![Clone Git](../images/studioSetup/21_CloneURL.png)
 
-* Cliquez sur le bouton "Clone" (5).
+* Click button "Clone" (5).
     
-    ![Cloner le répertoire](../images/studioSetup/22_Cloning.png)
+    ![Clone repository](../images/studioSetup/22_Cloning.png)
 
-* Ne cliquez pas sur "Background" pendant que le répertoire est cloné !
+* Do not click "Background" while repository is cloned!
 
-* Une fois que le dépôt a été cloné avec succès, Android Studio ouvrira le projet cloné.
+* After the repository is cloned successfully, Android Studio will open the cloned project.
 
-* On vous demandera si vous voulez faire confiance au projet. Cliquez sur "Trust project" !
+* You will be asked whether you want to trust the project. Click on "Trust project"!
     
-    ![Faire confiance au projet](../images/studioSetup/23_TrustProject.png)
+    ![Trust project](../images/studioSetup/23_TrustProject.png)
 
-* Dans le coin inférieur droit, vous verrez l'information qu'Android Studio exécute les tâches d'arrière-plan.
+* In the status bar at the bottom you will see the information that Android Studio is running background tasks.
     
-    ![Tâches d'arrière-plan](../images/studioSetup/24_GradleSyncRunning.png)
+    ![Background tasks](../images/studioSetup/24_GradleSyncRunning.png)
 
-* Accorder l'accès si votre pare-feu demande l'autorisation.
+* Windows only: Grant access if your firewall is asking for permission.
     
-    ![Autorisation java dans le pare-feu](../images/AndroidStudio361_18.png)
+    ![Firewall permission java](../images/AndroidStudio361_18.png)
 
-* Une fois que les tâches de fond sont terminées, vous verrez probablement une erreur indiquant que des erreurs se sont produites (1) ou (2) ou (3).
+* Once the background tasks are finished you will probably see an error saying that errors occurred (1) or (2) or (3).
     
-    ![Licence SDK](../images/studioSetup/25_SyncFailed.png)
+    ![SDK licence](../images/studioSetup/25_SyncFailed.png)
     
-    Ne vous inquiétez pas, cela sera bientôt résolu!
+    Don't worry, this will be solved soon!
+
+(Building-APK-set-git-path-in-preferences)=
+
+## Set git path in preferences
+
+Make sure [git is installed](../Installing-AndroidAPS/git-install.md) on your computer and you have restarted your computer since installing.
+
+On the Android Studio welcome screen click "Customize" (1) on the left and then select the link "All settings..." (2):
+
+![Android Studio settings from welcome screen](../images/studioSetup/10_WizardSettings.png)
+
+### Windows
+
+* As windows user, make sure you have restarted your computer after [installing Git](../Installing-AndroidAPS/git-install.md).
+
+* In the menu, go to File (1) > Settings (2) (or Android Studio > Preferences on Mac).
+    
+    ![Ouvrir les paramètres](../images/studioSetup/30_Settings.png)
+
+* Double-click "Version Control" (1) to open the sub-menu.
+
+* Click Git (2).
+* Make sure update method "Merge" (3) is selected.
+* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4).
+    
+    ![Android Studio settings](../images/studioSetup/11_GitPath.png)
+
+* If automatic setting is successful git version will be displayed next to the path.
+    
+    ![Git version displayed](../images/studioSetup/12_GitVersion.png)
+
+* Eventually git.exe cannot be found automatically or the Test will result in an error (1):
+    
+    ![Git not found](../images/studioSetup/13_GitVersionError.png)
+    
+    In this case click on the folder icon (2).
+
+* Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where git has been installed. You are looking for a file named "git.exe", located in **\bin** folder.
+
+* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3) and click "OK" (4).
+    
+    ![Select git manually](../images/studioSetup/14_GitManualSelection.png)
+
+* Check your selected git path again with the "Test" button as described above.
+
+* When the git version is displayed next to the path (see screenshot above), close settings window by clicking "OK" button (5).
+
+### Mac
+
+* Any git version should work. For example <https://git-scm.com/download/mac>.
+* Use homebrew to install git: ```$ brew install git```.
+* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
 
 (Building-APK-download-android-sdk)=
 
@@ -237,35 +246,31 @@ Sur l'écran d'accueil d'Android Studio cliquez sur "Customize" (1) à gauche, p
     
     ![Confirmer les modifications SDK](../images/studioSetup/32_ConfirmSDK.png)
 
-* Acceptez le contrat de licence (1) et cliquez sur « Next» (2).
+* Wait until the SDK download and installation is finished.
     
-    ![Accepter la licence SDK](../images/studioSetup/33_ConfirmLicense.png)
+    ![Wait during SDK installation](../images/studioSetup/34_DownloadSDK.png)
 
-* Attendez que le téléchargement et l'installation du SDK soient terminés.
+* When SDK installation is completed the "Finish" button will turn blue. Click this button.
     
-    ![Attendre lors de l'installation du SDK](../images/studioSetup/34_DownloadSDK.png)
+    ![Finish SDK installation](../images/studioSetup/35_DownloadSDKfinished.png)
 
-* Lorsque l'installation du SDK est terminée, le bouton "Finish" devient bleu. Cliquez sur ce bouton.
-    
-    ![Terminer l'installation du SDK](../images/studioSetup/35_DownloadSDKfinished.png)
-
-* Android Studio recommande de mettre à jour le "gradle system". **Ne jamais mettre à jour gradle !** Cela pourrait entraîner des difficultés !
+* Android Studio might recommend to update the gradle system. **Never update gradle!** This will lead to difficulties!
 
 * If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "upgrade" (1).
     
     ![Pas de mise à jour de Gradle](../images/studioSetup/36_GradleUpdateRequest.png)
 
-* Dans la boîte de dialogue sélectionnez "Don't remind me again for this project" (2).
+* In the dialog box the select "Don't remind me again for this project" (2).
     
     ![Pas de mise à jour de Gradle](../images/studioSetup/37_GradleUpdateDeny.png)
 
-* Redémarrez Android Studio avant de continuer.
+* Restart Android Studio before you continue.
 
 (Building-APK-generate-signed-apk)=
 
 ## Générer un APK signé
 
-Signer signifie que vous signez votre application générée mais d'une façon numérique comme une sorte d'empreinte digitale intégrée dans l'application elle-même. C'est nécessaire car Android a une règle qui impose de n'accepter que du code signé pour des raisons de sécurité. Pour plus d'informations sur ce sujet, suivez [ce lien](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * Après le démarrage d'Android Studio, attendez que toutes les tâches en arrière-plan soient terminées.
     
@@ -355,10 +360,10 @@ Signer signifie que vous signez votre application générée mais d'une façon n
 
 ## Transférer le fichier APK sur le smartphone
 
-La façon la plus facile de transférer le fichier app-full-release.apk dans votre téléphone est via [un câble USB ou Google Drive](https://support.google.com/android/answer/9064445?hl=en). Veuilez noter que le transfert par email peut entraîner des difficultés et n'est pas la méthode conseillée.
+Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
 
-Sur votre téléphone, vous devez autoriser l'installation à partir de sources inconnues. Les explications peuvent être trouvées sur internet (par ex. [ici](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) ou [ici](https://www.androidcentral.com/unknown-sources)).
+On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
 ## Résolution de problèmes
 
-Voir la page spécifique [dépannage Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
+See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).

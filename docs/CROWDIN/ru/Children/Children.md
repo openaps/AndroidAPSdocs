@@ -4,38 +4,38 @@
 :alt: Мониторинг детей
 ```
 
-AAPS offer several options for remote monitoring of children and also allows to send remote commands. Of course you can also use remote monitoring to follow your partner or friend.
+AAPS предлагает несколько опций для удаленного мониторинга детей, а также позволяет отправлять удаленные команды. Конечно, его можно использовать для мониторинга партнера или друга.
 
 ## Функции
 
-- Kid's pump is controlled by kid's phone using AAPS.
-- Родители могут дистанционно следить за всеми необходимыми данными, такими как уровень глюкозы, активные углеводы, активный инсулин и т. д. с помощью приложения **NSClient** на телефоне. Settings must be the same in AAPS and NSClient app.
-- Родители оповещаются с помощью приложения **xDrip в режиме слежения follower** на своем телефоне.
-- Remote control of AAPS using [SMS Commands](../Children/SMS-Commands.md) secured by two-factor authentication.
-- Дистанционное управление через приложение NSClient рекомендуется только в том случае, если синхронизация работает хорошо (т. е. вы не видите нежелательных изменений данных, таких как спонтанная модификация TT, TBR и т. д.,) см. [примечания к выпуску версии 2.8.1.1](Releasenotes-important-hints-2-8-1-1) для получения более подробной информации.
+- Помпа ребенка управляется телефоном ребенка с помощью AAPS.
+- Родители могут дистанционно следить за всеми данными, такими как уровень глюкозы, активные углеводы, активный инсулин и т. д. с помощью приложения **NSClient** на своем телефоне. Настройки должны быть одинаковыми в AAPS и NSClient.
+- Родители могут слышать оповещения с помощью приложения **xDrip в режиме слежения (follower)** на своем телефоне.
+- Удаленный контроль над AAPS с помощью [SMS -команд ](../Children/SMS-Commands.md) защищен двухфакторной аутентификацией.
+- Дистанционное управление через приложение NSClient рекомендуется только в том случае, если хорошо работает синхронизация (т. е. вы не видите нежелательных изменений данных, таких как спонтанная модификация TT, TBR и т. д.), подробнее см. [примечания к выпуску версии 2.8.1.1](Releasenotes-important-hints-2-8-1-1).
 
 ## Инструменты и приложения для удаленного мониторинга
 
-- [Nightscout](https://nightscout.github.io/) в веб-браузере (главным образом отображение данных)
-- * Приложение NSClient-это урезанная версии AAPS для слежения, переключения профилей, постановки временных целей TT и ввода углеводов. There are 2 apps:  [NSClient & NSClient2 to download](https://github.com/nightscout/AndroidAPS/releases/). Единственное различие-это название приложения. Таким образом имеется возможность установить приложение дважды на одном телефоне, чтобы следить за 2 разными лицами/nightscout.
+- [Nightscout](https://nightscout.github.io/) в интернет-браузере (в основном отображение данных)
+- * Приложение NSClient-это урезанная версии AAPS для слежения, переключения профилей, постановки временных целей TT и ввода углеводов. Существует два приложения для загрузки:  [NSClient & NSClient2](https://github.com/nightscout/AndroidAPS/releases/). Единственное отличие-это название приложения. Таким образом имеется возможность установить приложение дважды на одном телефоне, чтобы следить за 2 разными лицами/nightscout.
 - Приложение Dexcom Follow, если вы используете оригинальное приложение Dexcom (только ГК)
-- [xDrip+](../Configuration/xdrip.md) in follower mode (mainly BG values and **alarms**)
-- [Sugarmate](https://sugarmate.io/) or [Spike](https://spike-app.com/) on iOS (mainly BG values and **alarms**)
-- Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting
+- [xDrip+](../Configuration/xdrip.md) в режиме слежения (follower) (в основном значения ГК и **оповещения**)
+- [Sugarmate](https://sugarmate.io/) или [Spike](https://spike-app.com/) на iOS (в основном значения ГК и <1>оповещения</1>)
+- Некоторые пользователи считают, что инструменты полного доступа к телефону ребенка вроде [TeamViewer](https://www.teamviewer.com/) полезны для решения ситуативных проблем
 
-## Smartwatch options
+## Опции для смарт-часов
 
-A smartwatch can be a very useful tool in helping manage AAPS with kids. A couple of different configurations are possible:
+Смарт-часы бывают очень полезным инструментом для управления AAPS у детей. Возможны несколько различных конфигураций:
 
-- If NSClient is installed on the parents phone, the [NSClient WearOS app](https://github.com/nightscout/AndroidAPS/releases/) can be installed on a compatible smartwatch connected to the parent's phone. This will show current BG, loop status and allow carb entry, temp targets and profile changes. It will NOT allow bolusing from the WearOS app.
-- Alternatively, the [AAPS WearOS app](https://androidaps.readthedocs.io/en/latest/Configuration/Watchfaces.html) can be built and installed on a compatible smartwatch, connected to the kid's phone but worn by the parent. This includes all the functions listed above as well as the ability to bolus insulin. This allows the parent to adminster insulin without needing to remove the kid's phone from however it is kept on them.
+- Если NSClient установлен на родительский телефон,, приложение [NSClient WearOS](https://github.com/nightscout/AndroidAPS/releases/) может быть установлено на смарт-часах, совместимых с родительским телефоном. На них будет отображаться текущая ГК, статус замкнутого цикла, возможность вписать углеводы, временные цели и изменения профиля. Возможности ввести болюс с приложения на WearOS не будет.
+- В альтернативном варианте, приложение [AAPS WearOS](https://androidaps.readthedocs.io/en/latest/Configuration/Watchfaces.html) можно создать и установить на совместимых смарт-часах, подключенных к телефону ребенка, но носимых родителем. В него войдут все перечисленные выше функции, а также возможность подать болюс. Эта конфигурация позволяет родителям подавать инсулин без обращения к телефону ребенка.
 
 ## Важные факторы
 
-- Setting the correct [treatment factors](FAQ-how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
-- Settings must be the same in AAPS and NSClient app.
-- Consider time gap between master and follower due to time for up- and download as well as the fact that AAPS master phone will only upload after loop run.
-- So take your time to set those correctly and test them in real life with your kid next to you before starting remote monitoring and remote treatment. School holidays might be a good time for that.
-- What is your emergency plan when remote control does not work (i.e. network problems)?
-- Remote monitoring and treatment can be really helpful in kinder garden and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan. Examples for such care plans can be found in the [files section of AAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) on Facebook.
-- It is important to keep the kid's phone in range of their pump and CGM at all times. This can be challenging especially with very small children. Many solutions exist, a popular option is an [SPI Belt](https://spibelt.com/collections/kids-belts)
+- Определение правильных [факторов лечения](FAQ-how-to-begin)(скорость базала, время действия инсулина DIA, чувствительность к инсулину ISF...) - затруднено у детей, особенно с учетом гормонов роста.
+- Настройки должны быть одинаковыми в AAPS и NSClient.
+- Учитывайте временной разрыв между ведущим телефоном и ведомым из-за времени на загрузку и выгрузку, а также из-за того, что ведущий телефон AAPS начнет выгрузку только после выполнения цикла.
+- Так что не торопитесь, установите их правильно и проверьте их в реальной жизни когда ребенок рядом прежде чем начать дистанционный контроль и дистанционное лечение. Школьные каникулы могут быть хорошим временем для этого.
+- Определите план действий на тот случай, когда дистанционный контроль не работает (напр. проблемы с сетью).
+- Удаленный мониторинг и терапия могут быть особенно нужными в детском саду и начальной школе. Но убедитесь, что учителя и воспитатели в курсе плана лечения вашего ребенка. Примеры таких планов лечения можно найти в [разделе файлов пользователей AAPS](https://www.facebook.com/groups/AndroidAPSUsers/files/) на Facebook.
+- Важно всегда держать телефон ребенка в диапазоне связи с помпой и мониторингом. Это может быть особенно сложно если дети маленькие. Существует множество решений, популярный вариант - специальный пояс [SPI Belt](https://spibelt.com/collections/kids-belts)

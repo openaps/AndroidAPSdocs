@@ -4,16 +4,16 @@
 
 :::{tip}
 
-Be careful the percentage of proofreading must be lower then the percentage of translations but they decided to show it on top of the translations. It's better to look only at the percentage level of translations to see if work is to be done.
+Будьте внимательны, процент отредактированного должен быть ниже доли переводов, но было решено показывать его поверх переводов. Следует смотреть только на процент переведенного, чтобы понять потребность в выполнении перевода.
 
 :::
 
-:::{admonition} needed time for final publication
-:class: note
+:::{admonition} время, необходимое для окончательной публикации
+:class:примечание
 
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+Примечание После перевода на Crowdin синхронизация с Github происходит ежедневно по графику в виде запроса на внесение изменений Pull Request (PR)
 
-The acceptance of the PR is a manual task which will be done es fast as possible.
+Одобрение запроса на внесение изменений происходит в ручном режиме в максимально возможные сжатые сроки.
 
 :::
 

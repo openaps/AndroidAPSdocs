@@ -113,62 +113,18 @@ Select the theme for the user interface you like. (In this manual we used "Light
 
 ![UI color scheme](../images/studioSetup/05_UITheme.png)
 
-Click "Finish" on the "Verify Settings" dialog.
+Click "Next" on the "Verify Settings" dialog.
 
-![Verify settings](../images/studioSetup/06_Verify.png)
+![Verify settings](../images/studioSetup/06_Overview.png)
+
+Click on all three license agreement parts and select "Agree". When you have agreed to all, the "Finish" button will be enabled and you can "Finish".
+
+    ![Agree license agreements](../images/studioSetup/07_LicenseAgreement.png)
+    
 
 Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
 
-![Downloading components](../images/studioSetup/07_Downloading.png)
-
-(Building-APK-set-git-path-in-preferences)=
-
-## Set git path in preferences
-
-Make sure [git is installed](../Installing-AndroidAPS/git-install.md) on your computer and you have restarted your computer after installing.
-
-On the Android Studio welcome screen click "Customize" (1) on the left and then select the link "All settings..." (2):
-
-![Android Studio settings from welcome screen](../images/studioSetup/10_WizardSettings.png)
-
-### Windows
-
-* As windows user, make sure you have restarted your computer after [installing Git](../Installing-AndroidAPS/git-install.md).
-
-* Double-click "Version Control" (1) to open the sub-menu.
-
-* Click Git (2).
-* Make sure update method "Merge" (3) is selected.
-* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4).
-    
-    ![Android Studio settings](../images/studioSetup/11_GitPath.png)
-
-* If automatic setting is successful git version will be displayed next to the path.
-    
-    ![Git version displayed](../images/studioSetup/12_GitVersion.png)
-
-* Eventually git.exe cannot be found automatically or the Test will result in an error (1):
-    
-    ![Git not found](../images/studioSetup/13_GitVersionError.png)
-    
-    In this case click on the folder icon (2).
-
-* Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where git has been installed. You are looking for a file named "git.exe", located in **\bin** folder.
-
-* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3) and click "OK" (4).
-    
-    ![Select git manually](../images/studioSetup/14_GitManualSelection.png)
-
-* Check your selected git path again with the "Test" button as described above.
-
-* When the git version is displayed next to the path (see screenshot above), close settings window by clicking "OK" button (5).
-
-### Mac
-
-* Any git version should work. For example <https://git-scm.com/download/mac>.
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
+![Downloading components](../images/studioSetup/08_Downloading.png)
 
 (Building-APK-download-AAPS-code)=
 
@@ -208,7 +164,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
     
     ![Background tasks](../images/studioSetup/24_GradleSyncRunning.png)
 
-* Grant access if your firewall is asking for permission.
+* Windows only: Grant access if your firewall is asking for permission.
     
     ![Firewall permission java](../images/AndroidStudio361_18.png)
 
@@ -217,6 +173,59 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
     ![SDK licence](../images/studioSetup/25_SyncFailed.png)
     
     Don't worry, this will be solved soon!
+
+(Building-APK-set-git-path-in-preferences)=
+
+## Set git path in preferences
+
+Make sure [git is installed](../Installing-AndroidAPS/git-install.md) on your computer and you have restarted your computer since installing.
+
+On the Android Studio welcome screen click "Customize" (1) on the left and then select the link "All settings..." (2):
+
+![Android Studio settings from welcome screen](../images/studioSetup/10_WizardSettings.png)
+
+### Windows
+
+* As windows user, make sure you have restarted your computer after [installing Git](../Installing-AndroidAPS/git-install.md).
+
+* In the menu, go to File (1) > Settings (2) (or Android Studio > Preferences on Mac).
+    
+    ![Open settings](../images/studioSetup/30_Settings.png)
+
+* Double-click "Version Control" (1) to open the sub-menu.
+
+* Click Git (2).
+* Make sure update method "Merge" (3) is selected.
+* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4).
+    
+    ![Android Studio settings](../images/studioSetup/11_GitPath.png)
+
+* If automatic setting is successful git version will be displayed next to the path.
+    
+    ![Git version displayed](../images/studioSetup/12_GitVersion.png)
+
+* Eventually git.exe cannot be found automatically or the Test will result in an error (1):
+    
+    ![Git not found](../images/studioSetup/13_GitVersionError.png)
+    
+    In this case click on the folder icon (2).
+
+* Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where git has been installed. You are looking for a file named "git.exe", located in **\bin** folder.
+
+* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3) and click "OK" (4).
+    
+    ![Select git manually](../images/studioSetup/14_GitManualSelection.png)
+
+* Check your selected git path again with the "Test" button as described above.
+
+* When the git version is displayed next to the path (see screenshot above), close settings window by clicking "OK" button (5).
+
+### Mac
+
+* Any git version should work. For example <https://git-scm.com/download/mac>.
+* Use homebrew to install git: ```$ brew install git```.
+* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
 
 (Building-APK-download-android-sdk)=
 
@@ -236,10 +245,6 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 * Confirm changes by clicking OK.
     
     ![Confirm SDK changes](../images/studioSetup/32_ConfirmSDK.png)
-
-* Accept licence agreement (1) and click "Next" (2).
-    
-    ![Accept SDK licence](../images/studioSetup/33_ConfirmLicense.png)
 
 * Wait until the SDK download and installation is finished.
     

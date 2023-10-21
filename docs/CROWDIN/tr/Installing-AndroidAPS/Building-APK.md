@@ -113,110 +113,119 @@ Beğendiğiniz kullanıcı arayüzü için temayı seçin. (Bu kılavuzda biz "L
 
 ![UI renk şeması](../images/studioSetup/05_UITheme.png)
 
-"Ayarları Doğrula" iletişim kutusunda "Bitir" butonunu tıklayın.
+Click "Next" on the "Verify Settings" dialog.
 
-![Ayarları doğrulayın](../images/studioSetup/06_Verify.png)
+![Ayarları doğrulayın](../images/studioSetup/06_Overview.png)
 
-Android Studio ek bileşenleri indirirken bekleyin ve sabırlı olun. Her şey indirildikten sonra "Finish" düğmesi maviye döner. Şimdi butona tıklayın.
+Click on all three license agreement parts and select "Agree". When you have agreed to all, the "Finish" button will be enabled and you can "Finish".
 
-![Bileşenlerin indirilmesi](../images/studioSetup/07_Downloading.png)
-
-(Building-APK-set-git-path-in-preferences)=
-
-## Git yolunu tercihlerde ayarla
-
-Bilgisayarınızda [git'in kurulu olduğundan](../Installing-AndroidAPS/git-install.md) ve kurduktan sonra bilgisayarınızı yeniden başlattığınızdan emin olun.
-
-Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) öğesini tıklayın ve ardından "All settings..." (Tüm ayarlar...) bağlantısını seçin (2):
-
-![Karşılama ekranından Android Studio ayarları](../images/studioSetup/10_WizardSettings.png)
-
-### Windows
-
-* Windows kullanıcısı olarak, [Git'i yükledikten](../Installing-AndroidAPS/git-install.md) sonra bilgisayarınızı yeniden başlattığınızdan emin olun.
-
-* Alt menüyü açmak için "Version Control" (1) (Sürüm Kontrolü) üzerine çift tıklayın.
-
-* Git (2)'e tıklayın.
-* Güncelleme yönteminin "Merge" (3) (Birleştir) seçili olduğundan emin olun.
-* "Test" (4) düğmesini tıklayarak Android Studio'nun git.exe yolunu otomatik olarak bulup bulamayacağını kontrol edin.
+    ![Agree license agreements](../images/studioSetup/07_LicenseAgreement.png)
     
-    ![Android Studio ayarları](../images/studioSetup/11_GitPath.png)
 
-* Otomatik ayar başarılı olursa, yolun yanında git sürümü görüntülenecektir.
-    
-    ![Git sürümü görüntülendi](../images/studioSetup/12_GitVersion.png)
+Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
 
-* Sonunda git.exe otomatik olarak bulunamaz veya Test bir hatayla (error) (1) sonuçlanır :
-    
-    ![Git bulunamadı](../images/studioSetup/13_GitVersionError.png)
-    
-    Bu durumda klasör simgesine (2) tıklayın.
-
-* Git'in nereye kurulduğundan emin değilseniz, "git.exe"yi bulmak için Windows Gezgini'nde [arama işlevini](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) kullanın. **\bin** klasöründe bulunan "git.exe" adlı bir dosya arıyorsunuz.
-
-* git.exe yolunu seçin ve ** \bin\ ** klasöründe (3) olanı seçtiğinizden emin olun ve "OK" (4) Tamam'a tıklayın.
-    
-    ![Git'i manuel olarak seçilmesi](../images/studioSetup/14_GitManualSelection.png)
-
-* Seçtiğiniz git yolunu yukarıda açıklandığı gibi "Test" düğmesiyle tekrar kontrol edin.
-
-* Yolun yanında git sürümü görüntülendiğinde (yukarıdaki ekran görüntüsüne bakın), "OK" düğmesini (5) tıklayarak ayarlar penceresini kapatın.
-
-### Mac
-
-* Herhangi bir git sürümü çalışması gerekir. Örneğin <https://git-scm.com/download/mac>.
-* Git'i kurabilmek için homebrew kullanın: ```$ brew install git```.
-* Git'i yüklemeyle ilgili ayrıntılar için [resmi git belgelerine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) bakın.
-* Git'i homebrew aracılığıyla kurarsanız, herhangi bir tercihi değiştirmenize gerek yoktur. Her ihtimale karşı: Android Studio - Tercihler altında bulabilirsiniz.
+![Downloading components](../images/studioSetup/08_Downloading.png)
 
 (Building-APK-download-AAPS-code)=
 
 ## AAPS kodlarını indirin
 
-* Android Studio karşılama ekranında soldaki "Projects" (1) projeler ve ardından "Get from VCS" (2) VCS'den Alın öğesini seçin.
+* On the Android Studio welcome screen select "Projects" (1) on the left and then "Get from VCS" (2).
     
-    ![Android Studio sihirbazı](../images/studioSetup/20_ProjectVCS.png)
+    ![Android Studio wizard](../images/studioSetup/20_ProjectVCS.png)
     
-    * Android Studio'yu zaten açtıysanız ve artık hoş geldiniz ekranını görmüyorsanız, Sürüm Kontrolünden Dosya (1) > Yeni (2) > Proje'yi seçin... (3)
+    * If you already opened Android Studio and do not see the welcome screen anymore select File (1) > New (2) > Project from Version Control... (3)
         
-        ![Android Studio içindeki sürüm kontrolünden projeye göz atın](../images/AndroidStudio_FileNew.PNG)
+        ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
     
-    * Şimdi Android Studio'ya kodu nereden alacağını söyleyeceğiz:
+    * We will now tell Android Studio were to get the code from:
     
-    * Solda (1) taraftaki "Repository URL"ni seçtiğinizden emin olun.
+    * Make sure you have selected "Repository URL" on the left (1).
     
-    * Versiyon kontrolü (2) olarak "Git"in seçili olup olmadığını kontrol edin.
-    * URL'yi kopyalayıp yapıştırın ```https://github.com/nightscout/AndroidAPS``` ana AAPS deposuna URL metin kutusuna (3) kopyalayıp yapıştırın.
-    * Klonlanmış kodu (4) kaydetmek istediğiniz dizini seçin.
+    * Check if "Git" is selected as version control (2).
+    * Copy and paste the URL ```https://github.com/nightscout/AndroidAPS``` to the main AAPS repository into the URL textbox (3).
+    * Choose the directory where you want to save the cloned code (4).
         
-        ![Git'i Klonla](../images/studioSetup/21_CloneURL.png)
+        ![Clone Git](../images/studioSetup/21_CloneURL.png)
 
-* "Klonla" (5) düğmesine tıklayın.
+* Click button "Clone" (5).
     
-    ![Klon deposu](../images/studioSetup/22_Cloning.png)
+    ![Clone repository](../images/studioSetup/22_Cloning.png)
 
-* Depo klonlanırken "Arka Plan"a tıklamayın!
+* Do not click "Background" while repository is cloned!
 
-* Depo başarıyla klonlandıktan sonra, Android Studio klonlanan projeyi açacaktır.
+* After the repository is cloned successfully, Android Studio will open the cloned project.
 
-* Projeye güvenmek isteyip istemediğiniz sorulacak. "Trust project" (Projeye güven) üzerine tıklayın!
+* You will be asked whether you want to trust the project. Click on "Trust project"!
     
-    ![Projeye güven](../images/studioSetup/23_TrustProject.png)
+    ![Trust project](../images/studioSetup/23_TrustProject.png)
 
-* Alttaki durum çubuğunda, Android Studio'nun arka plan görevlerini çalıştırdığı bilgisini göreceksiniz.
+* In the status bar at the bottom you will see the information that Android Studio is running background tasks.
     
-    ![Arkaplan işlemleri](../images/studioSetup/24_GradleSyncRunning.png)
+    ![Background tasks](../images/studioSetup/24_GradleSyncRunning.png)
 
-* Güvenlik duvarınız izin istiyorsa erişim izni verin.
+* Windows only: Grant access if your firewall is asking for permission.
     
-    ![Güvenlik duvarı izni Java](../images/AndroidStudio361_18.png)
+    ![Firewall permission java](../images/AndroidStudio361_18.png)
 
-* Arka plan görevleri bittiğinde, muhtemelen (1) veya (2) veya (3) hataların oluştuğunu söyleyen bir hata göreceksiniz.
+* Once the background tasks are finished you will probably see an error saying that errors occurred (1) or (2) or (3).
     
-    ![SDK lisansı](../images/studioSetup/25_SyncFailed.png)
+    ![SDK licence](../images/studioSetup/25_SyncFailed.png)
     
-    Endişelenmeyin, bu yakında çözülecek!
+    Don't worry, this will be solved soon!
+
+(Building-APK-set-git-path-in-preferences)=
+
+## Set git path in preferences
+
+Make sure [git is installed](../Installing-AndroidAPS/git-install.md) on your computer and you have restarted your computer since installing.
+
+On the Android Studio welcome screen click "Customize" (1) on the left and then select the link "All settings..." (2):
+
+![Android Studio settings from welcome screen](../images/studioSetup/10_WizardSettings.png)
+
+### Windows
+
+* As windows user, make sure you have restarted your computer after [installing Git](../Installing-AndroidAPS/git-install.md).
+
+* Menüde Dosya (1) > Ayarlar (2) (veya Mac'te Android Studio > Tercihler) seçeneğine gidin.
+    
+    ![Ayarları aç](../images/studioSetup/30_Settings.png)
+
+* Double-click "Version Control" (1) to open the sub-menu.
+
+* Click Git (2).
+* Make sure update method "Merge" (3) is selected.
+* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4).
+    
+    ![Android Studio settings](../images/studioSetup/11_GitPath.png)
+
+* If automatic setting is successful git version will be displayed next to the path.
+    
+    ![Git version displayed](../images/studioSetup/12_GitVersion.png)
+
+* Eventually git.exe cannot be found automatically or the Test will result in an error (1):
+    
+    ![Git not found](../images/studioSetup/13_GitVersionError.png)
+    
+    In this case click on the folder icon (2).
+
+* Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where git has been installed. You are looking for a file named "git.exe", located in **\bin** folder.
+
+* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3) and click "OK" (4).
+    
+    ![Select git manually](../images/studioSetup/14_GitManualSelection.png)
+
+* Check your selected git path again with the "Test" button as described above.
+
+* When the git version is displayed next to the path (see screenshot above), close settings window by clicking "OK" button (5).
+
+### Mac
+
+* Any git version should work. For example <https://git-scm.com/download/mac>.
+* Use homebrew to install git: ```$ brew install git```.
+* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
 
 (Building-APK-download-android-sdk)=
 
@@ -237,35 +246,31 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
     
     ![SDK değişikliklerini onaylayın](../images/studioSetup/32_ConfirmSDK.png)
 
-* Lisans sözleşmesini (1) kabul edin ve "Next"ye (2) tıklayın.
+* Wait until the SDK download and installation is finished.
     
-    ![SDK lisansını kabul et](../images/studioSetup/33_ConfirmLicense.png)
+    ![Wait during SDK installation](../images/studioSetup/34_DownloadSDK.png)
 
-* SDK indirmesi ve kurulumu tamamlanana kadar bekleyin.
+* When SDK installation is completed the "Finish" button will turn blue. Click this button.
     
-    ![SDK kurulumu sırasında bekleyin](../images/studioSetup/34_DownloadSDK.png)
+    ![Finish SDK installation](../images/studioSetup/35_DownloadSDKfinished.png)
 
-* SDK kurulumu tamamlandığında "Finish" düğmesi maviye döner. Bu düğmeye tıklayın.
-    
-    ![SDK kurulumunu tamamlayın](../images/studioSetup/35_DownloadSDKfinished.png)
+* Android Studio might recommend to update the gradle system. **Never update gradle!** This will lead to difficulties!
 
-* Android Studio, gradle sistemini güncellemenizi önerebilir. **Gradle'ı asla güncellemeyin!** Bu zorluklara yol açacaktır!
-
-* Android Studio pencerenizin sağ alt tarafında Android Gradle Plugin'in güncellemeye hazır olduğuna dair bir bilgi görürseniz, "güncelleme" (1) metnine tıklayın.
+* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "upgrade" (1).
     
     ![Gradle güncellemesi yok](../images/studioSetup/36_GradleUpdateRequest.png)
 
-* İletişim kutusunda "Bana bu proje için bir daha hatırlatma" (2) öğesini seçin.
+* In the dialog box the select "Don't remind me again for this project" (2).
     
     ![Gradle güncellemesi yok](../images/studioSetup/37_GradleUpdateDeny.png)
 
-* Devam etmeden önce Android Studio'yu yeniden başlatın.
+* Restart Android Studio before you continue.
 
 (Building-APK-generate-signed-apk)=
 
 ## İmzalı APK oluştur
 
-İmzalama, uygulamanızın kendi eseriniz olduğunu, ancak uygulamanın içinde bir tür dijital parmak izi olarak dijital bir şekilde belirtmeniz anlamına gelir. Bu gereklidir, çünkü Android'in güvenlik nedenleriyle çalıştırmak için yalnızca imzalı kodu kabul ettiğine dair bir kuralı vardır. Bu konu hakkında daha fazla bilgi için [bu bağlantıyı](https://developer.android.com/studio/publish/app-signing.html#generate-key) izleyin.
+Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * Android Studio başlatıldıktan sonra tüm arka plan görevleri bitene kadar bekleyin.
     
@@ -355,10 +360,10 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
 
 ## APK'yı akıllı telefona aktarın
 
-App-full-release.apk dosyasını telefonunuza aktarmanın en kolay yolu [USB kablosu veya Google Drive](https://support.google.com/android/answer/9064445?hl=en) kullanmaktır. Lütfen posta yoluyla transferin zorluklara neden olabileceğini ve tercih edilen yol olmadığını unutmayın.
+Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
 
-Telefonunuzda bilinmeyen kaynaklardan kuruluma izin vermelisiniz. Bunun nasıl yapılacağına ilişkin kılavuzlar internette bulunabilir (yani [burada](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) veya [burada](https://www.androidcentral.com/unknown-sources)).
+On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
 ## Sorun giderme
 
-[Android Studio'da sorun giderme](../Installing-AndroidAPS/troubleshooting_androidstudio) sayfasına bakın.
+See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).

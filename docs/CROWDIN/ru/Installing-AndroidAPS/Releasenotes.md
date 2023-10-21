@@ -47,7 +47,7 @@ If your smartphone uses an Android Version older than Android 9 you will not be 
 
 ## WearOS version
 
-- AAPS 3.2 requires at least WearOS API level 26 (Android 8)
+- AAPS 3.2 requires at least WearOS API level 28 (Android 9)
 
 ## Version 3.2.0
 
