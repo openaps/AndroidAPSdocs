@@ -58,6 +58,10 @@ If the user does not bolus for meals, clearly a very fast insulin is needed so, 
 
 A modelling study (details see LINK FullLoop V2/March2023; there section 2.2) can show in quantitative terms that *faster insulins*
 
+Source:
+
+1) ![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg) IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
+
 - will result in significantly **lower** glucose **peaks** than slower insulins
 - **tolerate** a couple of minutes **delayed** first meal bolus while not incurring unacceptable height of peaks
 - **minimize the effect** on glucose peak **from different** carb load (**meal sizes**).

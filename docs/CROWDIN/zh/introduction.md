@@ -327,7 +327,39 @@ The above table assumes that the user has access to both continuous gluocse moni
 
 *All data from **AAPS** can be made available to healthcare professionals via data sharing platforms, including Nightscout that provides logging and real time monitoring of CGM data, insulin delivery, carbohydrate entries, predictions and settings. Nightscout records include daily and weekly reports which can aid healthcare professionals' discussions with type 1 patients with more accurate data on glycemic control and any behavioural considerations.
 
-## What benefits can I get?
+### Accessibility for users AAPS who are partially or completely blind
+
+#### Day to day AAPS use:
+AAPS can be used by blind people. On Android devices, the operating system has a program called TalkBack. This allows screen orientation via voice output as part of the operating system. By using TalkBack you can operate both your smartphone and AAPS without needing to be able to see.
+
+#### Building the AAPS app:
+As a user you will build the AAPS app in Android Studio. Many people use Microsoft Windows for this purpose, where there is the Screenreader analogous to TalkBack. Since Android Studio is a Java application, the “Java Access Bridge” component must be enabled in the Control Panel. Otherwise, the screen reader of the PC will not speak in Android Studio.
+
+How you do this depends on your operating system, two methods are outlined below:
+
+1) In the Windows Start menu, enter “Control Panel” in the search field, open with Enter. It opens: “All Control Panel Items”.
+
+Open the "Ease of Access Centre".
+
+Then open “Use computer without a display” with Enter.
+
+Under hear text read aloud select "turn on narrator" and "turn on audio display", and click "apply"
+
+or:
+
+2) Press Windows key and enter “Control Panel” in the search field, open with Enter. It opens: “All Control Panel Items”.
+
+Press the letter C to get to “Center for Ease of Use”, open with Enter.
+
+Then open “Use computer without a screen” with Enter.
+
+There, at the bottom, you will find the checkbox “Enable Java Access Bridge”, select it.
+
+Done, just close the window! The screen reader should work now.
+
+
+
+## What benefits can I get from AAPS?
 
 With investment of your time, **AAPS** can potentially lead to:
 
@@ -345,8 +377,8 @@ With investment of your time, **AAPS** can potentially lead to:
 
 - remote monitoring and administration of insulin delivery for caregivers of type 1 diabetics; and
 
-- streamlining of all your portable diabetic equipment (continuous glucose monitor receiver and insulin controlling devices) by using an android phone controlled by **AAPS**.
+- streamlining of all your portable diabetic equipment (continuous glucose monitor receiver and insulin controlling devices) by using an Android phone controlled by **AAPS**.
 
-Ultimately,**AAPS** can empower individuals to better manage their diabetes, resulting in stable blood sugars and improved long term health outcomes.
+Ultimately, **AAPS** can empower individuals to better manage their diabetes, resulting in stable blood sugars and improved long term health outcomes.
 
-Interested in how to get started with setting up AAPS? Take a look at the "coming soon ;-)" section.
+Interested in how to get started with setting up AAPS? Take a look at the [preparing](preparing.md) section.
