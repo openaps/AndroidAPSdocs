@@ -1,7 +1,6 @@
 # Medtrum Nano / 300U
 
 These instructions are for configuring the Medtrum insulin pump. 
-**The Medtrum driver is planned but not commited for AAPS 3.2 (next version)!**
 
 This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.
 
@@ -16,7 +15,7 @@ This software is part of a DIY artificial pancreas solution and is not a product
         - Medtrum TouchCare Nano with pumpbase refs: **MD0201** and **MD8201**.
         - Medtrum TouchCare 300U with pumpbase ref: **MD8301**.
         - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
-* **Version 3.2.0 or newer of AAPS built and installed** using the [Build APK](../Installing-AndroidAPS/Building-APK.md) instructions.
+* **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../Installing-AndroidAPS/Building-APK.md) instructions.
 * **Compatible Android phone** with a BLE Bluetooth connection 
     - See AAPS [Release Notes](../Installing-AndroidAPS/Releasenotes.md)
 * [**Continuous Glucose Monitor (CGM)**](BG-Source.md)
@@ -77,16 +76,6 @@ Enter the serial number of your pumpbase here as noted on the pumpbase. Make sur
 
 NOTE: This setting can only be changed when there is no patch active.
 
-#### Patch Expiration
-
-***Default: Enabled.***
-
-This setting changes the behavior of the patch. When enabled the patch will expire after 3 days and give an audible warning if you have sound enabled. After 3 days and 8 hours the patch will stop working.
-
-If this setting is disabled, the patch will not warn you and will continue running until the patch battery or reservoir runs out.
-
-
-
 #### Alarm settings
 
 ***Default: Beep.***
@@ -109,6 +98,20 @@ When enabled a Notification will be shown on the phone when a pump warning occur
     - Patch expiration warning
 
 In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#active-alarms).
+
+#### Patch Expiration
+
+***Default: Enabled.***
+
+This setting changes the behavior of the patch. When enabled the patch will expire after 3 days and give an audible warning if you have sound enabled. After 3 days and 8 hours the patch will stop working.
+
+If this setting is disabled, the patch will not warn you and will continue running until the patch battery or reservoir runs out.
+
+#### Pump expiry warning
+
+***Default: 72 hours.***
+
+This setting changes the time of the expiration warning, when [Patch Expiration](#patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
 
 #### Hourly Maximum Insulin
 
