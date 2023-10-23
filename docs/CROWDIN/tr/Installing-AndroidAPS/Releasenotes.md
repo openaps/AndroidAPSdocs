@@ -49,9 +49,9 @@ Daha eski Android'e sahip kullanıcıların AAPS'nin eski sürümünü kullanmas
 
 - AAPS 3.2 requires at least WearOS API level 28 (Android 9)
 
-## Sürüm 3.2.0
+## Version 3.2.0.0 dedicated to @Philoul
 
-Yayınlanma tarihi: XX-XX-2023
+Release date: 23-10-2023
 
 ### Önemli ipuçları
 
@@ -77,6 +77,7 @@ Yayınlanma tarihi: XX-XX-2023
 - Tidepool desteği @MilosKozak
 - Yumuşatma eklentisi @MilosKozak, @justmara, Üstel yumuşatma @nichi (Tsunami), Ortalama yumuşatma @jbr7rr
 - DynamicISF plugin @Chris Wilson, @tim2000s
+- Garmin watchface & HeartRate support @buessow
 - New logo @thiagomsoares
 - New watchface @Philoul
 - 3.1 sürümündeki tonlarca sorun düzeltildi
@@ -90,7 +91,10 @@ Yayınlanma tarihi: XX-XX-2023
 - more database maintenance options @MilosKozak
 - AAPSClient ana telefon elektriğe takılıysa bilgi verir @MilosKozak
 - Bolus sihirbazında değişiklik. CGM mevcut değilse, yüzde göz ardı edilir (yani %100 kullanılır)
-- new 150k+ lines of code, changed 156k lines
+- migration to kts build system @MilosKozak
+- improved CI integration @MilosKozak @buessow
+- tests cleaup @ryanhaining @MilosKozak
+- new 110k+ lines of code, changed 240k lines, 6884 changed files
 
 ## Sürüm 3.1.0
 
