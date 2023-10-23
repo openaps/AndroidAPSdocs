@@ -49,9 +49,9 @@ Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zw
 
 - AAPS 3.2 requires at least WearOS API level 28 (Android 9)
 
-## Version 3.2.0
+## Version 3.2.0.0 dedicated to @Philoul
 
-Erscheinungsdatum: XX.XX.2023
+Release date: 23-10-2023
 
 ### Wichtige Hinweise
 
@@ -77,6 +77,7 @@ Erscheinungsdatum: XX.XX.2023
 - Tidepool support @MilosKozak
 - Glättungs-Plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
 - DynamicISF plugin @Chris Wilson, @tim2000s
+- Garmin watchface & HeartRate support @buessow
 - New logo @thiagomsoares
 - New watchface @Philoul
 - Tonnenweise Version 3.1-Probleme gelöst
@@ -90,7 +91,10 @@ Erscheinungsdatum: XX.XX.2023
 - more database maintenance options @MilosKozak
 - AAPSClient liefert Info, ob das Loop-Smartphone geladen wird @MilosKozak
 - Änderung im Bolus-Rechner: Wenn CGM-Daten fehlen, wird der Prozentsatz ignoriert (d.h. 100% wird genutzt)
-- new 150k+ lines of code, changed 156k lines
+- migration to kts build system @MilosKozak
+- improved CI integration @MilosKozak @buessow
+- tests cleaup @ryanhaining @MilosKozak
+- new 110k+ lines of code, changed 240k lines, 6884 changed files
 
 ## Version 3.1.0
 
