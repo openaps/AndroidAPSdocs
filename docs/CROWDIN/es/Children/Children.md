@@ -4,11 +4,11 @@
 :alt: Monitoring children
 ```
 
-AAPS offer several options for remote monitoring of children and also allows to send remote commands. Of course you can also use remote monitoring to follow your partner or friend.
+AAPS ofrece varias opciones para la supervisión remota de los niños y también permite enviar comandos remotos. Por supuesto, también puede usar la supervisión remota para seguir los datos de su pareja o amigo.
 
-## Functions
+## Funciones
 
-- Kid's pump is controlled by kid's phone using AAPS.
+- La bomba de insulina del niño/a es controloda desde el teléfono del niño/a usando AAPS.
 - Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone. Settings must be the same in AAPS and NSClient app.
 - Parents can be alarmed by using **xDrip+ app in follower mode** on their phone.
 - Remote control of AAPS using [SMS Commands](../Children/SMS-Commands.md) secured by two-factor authentication.

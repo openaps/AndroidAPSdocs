@@ -5,7 +5,7 @@
 ### 1. הורדת git
 
 - **You have to be online all of the time as Android Studio downloads several updates!**
-- כל גרסה של git תתאים. For example [https://git-scm.com/download/win](https://git-scm.com/download/win).
+- Any git version should work. For example [https://git-scm.com/download/win](https://git-scm.com/download/win).
 - Make sure to note down the installation path. תצטרכו אותו בהמשך.
 
 ```{admonition} make git.exe available via Windows PATH
@@ -82,7 +82,7 @@ Make sure that you can call git.exe without the prefing path as Android Studio n
 
 ## Mac
 
-- כל גרסה של git תתאים. For example [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+- Any git version should work. For example [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
 - Use homebrew to install git: `` `$ brew install git` ``.
-- לפרטים על התקנת git עיינו ב[תיעוד ה-git הרשמי](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-- אם אתם מתקינים git דרך homebrew אין צורך לשנות שום העדפות. ליתר ביטחון: ניתן למצוא אותם כאן: Android Studio > Preferences.
+- For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+- If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.

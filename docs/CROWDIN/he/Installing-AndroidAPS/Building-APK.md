@@ -113,110 +113,119 @@
 
 ![צבעי ממשק משתמש](../images/studioSetup/05_UITheme.png)
 
-לחצו על "Finish" בתיבת הדו-שיח "Verify Settings".
+Click "Next" on the "Verify Settings" dialog.
 
-![אימות הגדרות](../images/studioSetup/06_Verify.png)
+![אימות הגדרות](../images/studioSetup/06_Overview.png)
 
-המתינו בזמן ש-Android Studio מוריד רכיבים נוספים והתאזרו בסבלנות. לאחר הורדת כל הרכיבים, כפתור ה-"Finish" הופך לכחול. לחצו על הכפתור כעת.
+Click on all three license agreement parts and select "Agree". When you have agreed to all, the "Finish" button will be enabled and you can "Finish".
 
-![מוריד רכיבים](../images/studioSetup/07_Downloading.png)
-
-(Building-APK-set-git-path-in-preferences)=
-
-## הגדירו את נתיב git בהעדפות
-
-ודאו ש[git מותקן](../Installing-AndroidAPS/git-install.md) במחשבכם ושאתחלתם את המחשב לאחר ההתקנתו.
-
-במסך הפתיחה של Android Studio לחצו על "Customize" (1) בצד שמאל ולאחר מכן בחרו בקישור "All settings..." (2):
-
-![הגדרות אנדרואיד סטודיו ממסך הכניסה](../images/studioSetup/10_WizardSettings.png)
-
-### Windows
-
-* כמשתמשי Windows, ודאו שהפעלתם מחדש את המחשב לאחר [התקנת Git](../Installing-AndroidAPS/git-install.md).
-
-* לחצו פעמיים על "Version Control" (1) כדי לפתוח את תפריט המשנה.
-
-* לחצו על Git (2).
-* ודא ששיטת העדכון "Merge" (3.) נבחרה.
-* בדקו אם Android Studio יכול לאתר נתיב ל-git.exe באופן אוטומטי על ידי לחיצה על הכפתור "Test" (4).
+    ![Agree license agreements](../images/studioSetup/07_LicenseAgreement.png)
     
-    ![הגדרות אנדרואיד סטודיו](../images/studioSetup/11_GitPath.png)
 
-* אם ההגדרה האוטומטית מצליחה תוצג גרסת git.
-    
-    ![גרסת גיט מוצגת](../images/studioSetup/12_GitVersion.png)
+Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
 
-* אם ניתן למצוא את git.exe באופן אוטומטי או שהבדיקה תגרום לשגיאה (1):
-    
-    ![גיט לא נמצא](../images/studioSetup/13_GitVersionError.png)
-    
-    במקרה זה לחצו על סמל התיקיה (2).
-
-* השתמש ב[פונקציית חיפוש](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) ב-Windows Explorer כדי למצוא את "git.exe" אם אינכם בטוחים היכן הותקן git. אתם מחפש קובץ בשם "git.exe", הממוקם בתיקייה **\bin**.
-
-* בחרו את הנתיב אל git.exe וודאו שבחרתם את זה שבתיקיית **\\bin\\** (3.) ולחצו על "OK" (4).
-    
-    ![בחר גיט ידנית](../images/studioSetup/14_GitManualSelection.png)
-
-* בדקו שוב את נתיב ה-git שבחרת עם כפתור "Test" כמתואר לעיל.
-
-* כאשר גרסת git מוצגת לצד הנתיב (ראו צילום מסך למעלה), סגרו את חלון ההגדרות על ידי לחיצה על כפתור "OK" (5).
-
-### Mac
-
-* כל גרסה של git תתאים. לדוגמה <https://git-scm.com/download/mac>.
-* השתמשו ב-homebrew להתקנת git: ```$ brew install git```.
-* לפרטים על התקנת git עיינו ב[תיעוד ה-git הרשמי](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* אם אתם מתקינים git דרך homebrew אין צורך לשנות שום העדפות. ליתר ביטחון: ניתן למצוא אותם כאן: Android Studio > Preferences.
+![Downloading components](../images/studioSetup/08_Downloading.png)
 
 (Building-APK-download-AAPS-code)=
 
 ## Download AAPS code
 
-* במסך הפתיחה של Android Studio בחרו "Projects" (1) בצד שמאל ולאחר מכן "Get from VCS" (2).
+* On the Android Studio welcome screen select "Projects" (1) on the left and then "Get from VCS" (2).
     
-    ![אנדרואיד סטודיו וויזרד](../images/studioSetup/20_ProjectVCS.png)
+    ![Android Studio wizard](../images/studioSetup/20_ProjectVCS.png)
     
-    * אם כבר פתחתם את Android Studio ולא רואים יותר את מסך הפתיחה בחרו File (1) > New (2) > Project from Version Control... (3)
+    * If you already opened Android Studio and do not see the welcome screen anymore select File (1) > New (2) > Project from Version Control... (3)
         
-        ![בדיקת פרויקט מפיקוח גרסה בתוך אנדרואיד סטודיו](../images/AndroidStudio_FileNew.PNG)
+        ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
     
-    * כעת נגיד ל-Android Studio מאיפה להשיג את הקוד:
+    * We will now tell Android Studio were to get the code from:
     
-    * ודאו שבחרתם ב"Repository URL" בצד שמאל (1).
+    * Make sure you have selected "Repository URL" on the left (1).
     
-    * בדוק אם "Git" נבחר ב-version control (2).
-    * העתיקו והדביקו את כתובת האתר: ```https://github.com/nightscout/AndroidAPS``` to the main AAPS repository into the URL textbox (3).
-    * בחרו את הספרייה שבה ברצונכם לשמור את הקוד המשוכפל (4).
+    * Check if "Git" is selected as version control (2).
+    * Copy and paste the URL ```https://github.com/nightscout/AndroidAPS``` to the main AAPS repository into the URL textbox (3).
+    * Choose the directory where you want to save the cloned code (4).
         
-        ![שיבוט גיט](../images/studioSetup/21_CloneURL.png)
+        ![Clone Git](../images/studioSetup/21_CloneURL.png)
 
-* לחץ על כפתור "Clone" (5).
+* Click button "Clone" (5).
     
-    ![מאגר השיבוט](../images/studioSetup/22_Cloning.png)
+    ![Clone repository](../images/studioSetup/22_Cloning.png)
 
-* אל תלחצו על "Background" בזמן שהמאגר משוכפל!
+* Do not click "Background" while repository is cloned!
 
-* לאחר שכפול המאגר בהצלחה, Android Studio יפתח את הפרויקט המשוכפל.
+* After the repository is cloned successfully, Android Studio will open the cloned project.
 
-* אתם תישאלו אם אתם נותנים אמון בפרויקט. בחרו "Trust project"!
+* You will be asked whether you want to trust the project. Click on "Trust project"!
     
-    ![פרויקט מהימן](../images/studioSetup/23_TrustProject.png)
+    ![Trust project](../images/studioSetup/23_TrustProject.png)
 
-* בשורת המצב בתחתית תראו את מידע על כך ש-Android Studio מפעיל משימות ברקע.
+* In the status bar at the bottom you will see the information that Android Studio is running background tasks.
     
-    ![משימות ברקע](../images/studioSetup/24_GradleSyncRunning.png)
+    ![Background tasks](../images/studioSetup/24_GradleSyncRunning.png)
 
-* העניקו גישה אם חומת האש (Firewall) שלכם מבקשת רשות.
+* Windows only: Grant access if your firewall is asking for permission.
     
-    ![אישור חומת אש של ג'אוה](../images/AndroidStudio361_18.png)
+    ![Firewall permission java](../images/AndroidStudio361_18.png)
 
-* לאחר סיום משימות הרקע, סביר להניח שתראו שגיאה האומרת שהתרחשו שגיאות (1) או (2) או (3).
+* Once the background tasks are finished you will probably see an error saying that errors occurred (1) or (2) or (3).
     
-    ![רישוי SDK](../images/studioSetup/25_SyncFailed.png)
+    ![SDK licence](../images/studioSetup/25_SyncFailed.png)
     
-    אל דאגה, תכף הן תטופלנה!
+    Don't worry, this will be solved soon!
+
+(Building-APK-set-git-path-in-preferences)=
+
+## Set git path in preferences
+
+Make sure [git is installed](../Installing-AndroidAPS/git-install.md) on your computer and you have restarted your computer since installing.
+
+On the Android Studio welcome screen click "Customize" (1) on the left and then select the link "All settings..." (2):
+
+![Android Studio settings from welcome screen](../images/studioSetup/10_WizardSettings.png)
+
+### Windows
+
+* As windows user, make sure you have restarted your computer after [installing Git](../Installing-AndroidAPS/git-install.md).
+
+* In the menu, go to File (1) > Settings (2) (or Android Studio > Preferences on Mac).
+    
+    ![הגדרות פתוחות](../images/studioSetup/30_Settings.png)
+
+* Double-click "Version Control" (1) to open the sub-menu.
+
+* Click Git (2).
+* Make sure update method "Merge" (3) is selected.
+* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4).
+    
+    ![Android Studio settings](../images/studioSetup/11_GitPath.png)
+
+* If automatic setting is successful git version will be displayed next to the path.
+    
+    ![Git version displayed](../images/studioSetup/12_GitVersion.png)
+
+* Eventually git.exe cannot be found automatically or the Test will result in an error (1):
+    
+    ![Git not found](../images/studioSetup/13_GitVersionError.png)
+    
+    In this case click on the folder icon (2).
+
+* Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where git has been installed. You are looking for a file named "git.exe", located in **\bin** folder.
+
+* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3) and click "OK" (4).
+    
+    ![Select git manually](../images/studioSetup/14_GitManualSelection.png)
+
+* Check your selected git path again with the "Test" button as described above.
+
+* When the git version is displayed next to the path (see screenshot above), close settings window by clicking "OK" button (5).
+
+### Mac
+
+* Any git version should work. For example <https://git-scm.com/download/mac>.
+* Use homebrew to install git: ```$ brew install git```.
+* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
 
 (Building-APK-download-android-sdk)=
 
@@ -237,35 +246,31 @@
     
     ![אמת רישוי SDK](../images/studioSetup/32_ConfirmSDK.png)
 
-* קבלו את הסכם הרישיון (1) ולחץ על "Next" (2).
+* Wait until the SDK download and installation is finished.
     
-    ![קבל רישוי SDK](../images/studioSetup/33_ConfirmLicense.png)
+    ![Wait during SDK installation](../images/studioSetup/34_DownloadSDK.png)
 
-* המתינו עד לסיום ההורדה וההתקנה של ה-SDK.
+* When SDK installation is completed the "Finish" button will turn blue. Click this button.
     
-    ![חכה בזמן התקנת SDK](../images/studioSetup/34_DownloadSDK.png)
+    ![Finish SDK installation](../images/studioSetup/35_DownloadSDKfinished.png)
 
-* כאשר התקנת SDK תושלם, כפתור "Finish" יהפוך לכחול. לחצו עליו.
-    
-    ![סיים התקנת SDK](../images/studioSetup/35_DownloadSDKfinished.png)
-
-* Android Studio עשוי להמליץ לעדכן את מערכת gradle. **לעולם אל תעדכנו את gradle!** זה יגרום לבעיות!
+* Android Studio might recommend to update the gradle system. **Never update gradle!** This will lead to difficulties!
 
 * If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "upgrade" (1).
     
     ![אי שידרוג Gradle](../images/studioSetup/36_GradleUpdateRequest.png)
 
-* בתיבת הדו-שיח בחרו "Don't remind me again for this project" (2).
+* In the dialog box the select "Don't remind me again for this project" (2).
     
     ![אי שידרוג Gradle](../images/studioSetup/37_GradleUpdateDeny.png)
 
-* הפעילו מחדש את Android Studio לפני שתמשיכו.
+* Restart Android Studio before you continue.
 
 (Building-APK-generate-signed-apk)=
 
 ## יצירת APK חתום
 
-החתימה פירושה שאתם מציינים שהאפליקציה היא יצירה שלכם בצורה דיגיטלית כמעין טביעת אצבע דיגיטלית בתוך האפליקציה עצמה. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * לאחר הפעלת Android Studio, המתינו עד לסיום כל משימות הרקע.
     
