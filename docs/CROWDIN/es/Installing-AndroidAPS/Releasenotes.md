@@ -47,9 +47,9 @@ Se han lanzado nuevas versiones de AAPS que sólo comprueban la versión de Andr
 
 - AAPS 3.2 requires at least WearOS API level 28 (Android 9)
 
-## Versión 3.2.0
+## Version 3.2.0.0 dedicated to @Philoul
 
-Fecha de lanzamiento: XX-XX-2023
+Release date: 23-10-2023
 
 ### Notas importantes
 
@@ -75,6 +75,7 @@ Fecha de lanzamiento: XX-XX-2023
 - Soporte para Tidepool @MilosKozak
 - Pulgin de suavizado @MilosKozak, @justmara, Suavizado Exponencial @nichi (Tsunami), Suavizado Promedio @jbr7rr
 - DynamicISF plugin @Chris Wilson, @tim2000s
+- Garmin watchface & HeartRate support @buessow
 - New logo @thiagomsoares
 - New watchface @Philoul
 - Corregidos muchos problemas de la versión 3.1
@@ -88,7 +89,10 @@ Fecha de lanzamiento: XX-XX-2023
 - more database maintenance options @MilosKozak
 - AAPSClient proporciona información si el teléfono principal está conectado a la electricidad @MilosKozak
 - Cambio en asistente de bolo. Si el MCG no está disponible, se ignora el porcentaje (es decir, se utiliza el 100%)
-- new 150k+ lines of code, changed 156k lines
+- migration to kts build system @MilosKozak
+- improved CI integration @MilosKozak @buessow
+- tests cleaup @ryanhaining @MilosKozak
+- new 110k+ lines of code, changed 240k lines, 6884 changed files
 
 ## Versión 3.1.0
 
