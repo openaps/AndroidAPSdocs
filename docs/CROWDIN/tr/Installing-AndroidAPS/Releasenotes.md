@@ -55,7 +55,7 @@ Release date: 23-10-2023
 
 ### Önemli ipuçları
 
-- NS 15 gereklidir. Şu anda NS ana deposunun "dev" şubesi
+- NS 15 is required
 - NS v3 eklentisinde websockets kullanırken, NS UI (artı düğmesi) aracılığıyla girilen işlemler ve v1 API kullanan diğer uygulamalar AAPS'e gönderilmez. Bu, NS'nin gelecekteki sürümünde düzeltilecektir. NS tamamen dahili olarak v3'e geçene kadar AAPS ve AAPSClient'te her zaman aynı istemciyi (v1 veya v3) kullanın. Aynısı AAPS ve AAPSClient'in kendisi için de geçerlidir.
 - v3 eklentisindeki websockets, v1 eklentisine benzer şekilde çalışır. AAPS, etkinleştirilmiş web yuvaları olmadan, NS'den düzenli olarak indirmeleri planlar ve bu, NS kalıcı olarak bağlı olmadığı için daha düşük güç tüketir. Bu da karşı tarafta, veri alışverişinde gecikmeler anlamına gelir.
 - Cgm kaynağı olarak xdrip kullanıyorsanız, dahili değişiklikler nedeniyle güncellemeden sonra tekrar seçmelisiniz.
