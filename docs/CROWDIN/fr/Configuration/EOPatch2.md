@@ -1,7 +1,5 @@
 # Manuel d'instruction EOPatch2
 
-**Planned but not commited for AAPS 3.2 (next version)!**
-
 Le patch nécessite l'utilisation d'insuline de type U-100 à action rapide, comme NovoRapid ou Humalog. Utilisez une insuline à action rapide qui vous convient selon l’ordonnance de votre médecin et injectez le dosage prescrit.
 
 La plus petite dose d'insuline injectable avec le patch est de 0,05 U. Le profil BAS doit donc être fixé à une valeur minimale de 0,05 U/h ou plus et un intervalle de 0,05U/h, autrement il peut y avoir une erreur entre le montant total estimé de l'injection par le profil et le montant réel de l'injection par le patch. De même, le bolus doit également être réglé et injecté avec un volume minimal de 0,05 U.
