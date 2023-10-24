@@ -1,13 +1,5 @@
 # Dexcom G7
 
-```{admonition} Only available in dev branch
-:class: note
-
-Cette fonctionnalité n'est disponible que dans la branche de développement et pas dans master.
-
-Veuillez prendre note des avertissements et suivre les instructions dans la [construction d'une version de développement](../Installing-AndroidAPS/Dev_branch.md).
-
-```
 
 ## Commençons par des fondamentaux
 
@@ -20,6 +12,8 @@ Il y a **deux possibilités** (à partir de 02/2023).
 ![DexcomG7.md](../images/DexcomG7.png)
 
 ## 1.  Application Dexcom G7 patchée
+
+**Note: AAPS 3.2.0.0 or higher is required!**
 
 ### Installez la nouvelle application G7 patchée et démarrez le capteur
 
@@ -35,11 +29,7 @@ Suivez les recommandations générales pour l'hygiène des MGC et le placement d
 
 Après la phase de préchauffage, les valeurs s'affichent comme d'habitude dans l'application G7.
 
-### construire un nouvel APK signé depuis la branche de développement
-
-Pour pouvoir recevoir les valeurs de l'application G7 dans AAPS et pour lisser les valeurs reçues, un changement dans AAPS est nécessaire.
-
-Pour cette raison, construisez un nouvel APK signé à partir de la branche officielle de développement et installez-le sur votre mobile.
+### Configuration in AAPS
 
 Pour la configuration dans AAPS
 - Sélectionnez 'BYODA' dans l'onglet configuration - même si ce n'est pas l'application BYODA !
