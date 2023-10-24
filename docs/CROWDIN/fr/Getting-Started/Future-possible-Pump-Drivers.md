@@ -6,17 +6,9 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 * * *
 
-### EOPatch2 ([Page d'accueil](http://www.eoflow.com/eng/main/main.html))
+### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Etat de la boucle :** Candidat à la boucle. La télécommande qu'ils utilisent est en fait un périphérique Android modifié. (La pompe n'est actuellement disponible qu'en Corée). Without commitment look out for AAPS 3.2.
-
-**Configuration matérielle requise pour AAPS :** Probablement aucune. Il semble qu'elle dispose du Bluetooth.
-
-* * *
-
-### Pompe Ypsomed ([Page d'accueil](https://www.ypsomed.com/en/diabetes-care-mylife.html))
-
-**Etat de la boucle :** Version 1-1.5 (2ème trimestre 2018) ne sont pas candidates à la boucle. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
+**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
 
 **Hardware requirement for AAPS:** None. It's BT enabled.
 
@@ -24,11 +16,11 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 * * *
 
-### Kaleido ([Page d'accueil](https://www.hellokaleido.com/))
+### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
-**Configuration matérielle requise pour AAPS :** Probablement aucune. It's BT enabled.
+**Hardware requirement for AAPS:** Probably none. It's BT enabled.
 
 * * *
 
@@ -36,7 +28,7 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 **Loop status:** Is a Loop candidate.
 
-**Hardware requirement for AAPS:** None. Il semble qu'elle dispose du Bluetooth.
+**Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
 **Comment:** Some people started looking into supporting pump in AAPS, but this is still in beginning phases. You can find more information on our discord in channel "equil".
 
@@ -46,7 +38,7 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 **Loop status:** Is a Loop candidate.
 
-**Hardware requirement for AAPS:** None. Il semble qu'elle dispose du Bluetooth.
+**Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
 **Comments:** There are some developers looking into decoding the protocol, but so far this is only in preliminary phases.
 
@@ -58,7 +50,7 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
 
-**Hardware requirement for AAPS:** None. Il semble qu'elle dispose du Bluetooth.
+**Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
 * * *
 
@@ -68,7 +60,7 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 They plan to release t:Mobi first (previously called t:sport) at end of 2022 or in 2023. Afterwards they will release t:slim X3 (2023 maybe) and after that t:Mobi Tubeless. t:mobi's will be controlable only over phone app, while X3 will look similar as X2, with some new nifty features (remote update of firmware, remote control over phone app, etc).
 
-**Hardware requirement for AAPS:** None. Il semble qu'elle dispose du Bluetooth.
+**Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
 * * *
 
@@ -80,7 +72,7 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 **Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
 
-**Hardware requirement for AAPS:** None. Il semble qu'elle dispose du Bluetooth.
+**Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
 **Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
 
@@ -92,7 +84,7 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
-**Configuration matérielle requise pour AAPS :** Probablement aucune. It's BT enabled.
+**Hardware requirement for AAPS:** Probably none. It's BT enabled.
 
 **Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
