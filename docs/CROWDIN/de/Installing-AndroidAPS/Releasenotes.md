@@ -49,13 +49,13 @@ Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zw
 
 - AAPS 3.2 requires at least WearOS API level 28 (Android 9)
 
-## Version 3.2.0
+## Version 3.2.0.0 dedicated to @Philoul
 
-Erscheinungsdatum: XX.XX.2023
+Release date: 23-10-2023
 
 ### Wichtige Hinweise
 
-- Nightscout Version 15 ist vorausgesetzt. (Derzeit im 'dev'-Branch des Nightscout Main-Repositories verfügbar).
+- NS 15 is required
 - Wenn Websockets in NS v3 genutzt werden, werden Behandlungen, die über die NS Oberfläche (Plus-Button) oder andere Anwendungen, die die V1 API nutzen, eingegeben werden, nicht an AAPS gesendet. Dies wird in einer der kommenden NS-Versionen behoben werden. Verwende immer den gleichen Client (v1 oder v3) in AAPS und AAPSClient, bis NS intern auf v3 umgestellt ist. Das Gleiche gilt für AAPS und den AAPSClient selbst.
 - Websockets funktionieren im v3 Plugin ähnlich zum v1 Plugin. Mit deaktivierten Websockets plant AAPS regelmäßige NS-Downloads ein. Da NS damit dann nicht mehr permanent verbunden ist, wird so der Stromverbrauch reduziert. Das bedeutet allerdings auch, dass Daten seltener ausgetauscht werden (Datenaktualität).
 - Wenn xDrip als BZ-Quelle genutzt wird, muss diese nach dem Update noch einmal neu eingestellt werden (bedingt durch interne Anpassungen).
@@ -77,6 +77,7 @@ Erscheinungsdatum: XX.XX.2023
 - Tidepool support @MilosKozak
 - Glättungs-Plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
 - DynamicISF plugin @Chris Wilson, @tim2000s
+- Garmin watchface & HeartRate support @buessow
 - New logo @thiagomsoares
 - New watchface @Philoul
 - Tonnenweise Version 3.1-Probleme gelöst
@@ -90,7 +91,10 @@ Erscheinungsdatum: XX.XX.2023
 - more database maintenance options @MilosKozak
 - AAPSClient liefert Info, ob das Loop-Smartphone geladen wird @MilosKozak
 - Änderung im Bolus-Rechner: Wenn CGM-Daten fehlen, wird der Prozentsatz ignoriert (d.h. 100% wird genutzt)
-- new 150k+ lines of code, changed 156k lines
+- migration to kts build system @MilosKozak
+- improved CI integration @MilosKozak @buessow
+- tests cleaup @ryanhaining @MilosKozak
+- new 110k+ lines of code, changed 240k lines, 6884 changed files
 
 ## Version 3.1.0
 

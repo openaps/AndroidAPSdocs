@@ -49,13 +49,13 @@ Daha eski Android'e sahip kullanıcıların AAPS'nin eski sürümünü kullanmas
 
 - AAPS 3.2 requires at least WearOS API level 28 (Android 9)
 
-## Sürüm 3.2.0
+## Version 3.2.0.0 dedicated to @Philoul
 
-Yayınlanma tarihi: XX-XX-2023
+Release date: 23-10-2023
 
 ### Önemli ipuçları
 
-- NS 15 gereklidir. Şu anda NS ana deposunun "dev" şubesi
+- NS 15 is required
 - NS v3 eklentisinde websockets kullanırken, NS UI (artı düğmesi) aracılığıyla girilen işlemler ve v1 API kullanan diğer uygulamalar AAPS'e gönderilmez. Bu, NS'nin gelecekteki sürümünde düzeltilecektir. NS tamamen dahili olarak v3'e geçene kadar AAPS ve AAPSClient'te her zaman aynı istemciyi (v1 veya v3) kullanın. Aynısı AAPS ve AAPSClient'in kendisi için de geçerlidir.
 - v3 eklentisindeki websockets, v1 eklentisine benzer şekilde çalışır. AAPS, etkinleştirilmiş web yuvaları olmadan, NS'den düzenli olarak indirmeleri planlar ve bu, NS kalıcı olarak bağlı olmadığı için daha düşük güç tüketir. Bu da karşı tarafta, veri alışverişinde gecikmeler anlamına gelir.
 - Cgm kaynağı olarak xdrip kullanıyorsanız, dahili değişiklikler nedeniyle güncellemeden sonra tekrar seçmelisiniz.
@@ -77,6 +77,7 @@ Yayınlanma tarihi: XX-XX-2023
 - Tidepool desteği @MilosKozak
 - Yumuşatma eklentisi @MilosKozak, @justmara, Üstel yumuşatma @nichi (Tsunami), Ortalama yumuşatma @jbr7rr
 - DynamicISF plugin @Chris Wilson, @tim2000s
+- Garmin watchface & HeartRate support @buessow
 - New logo @thiagomsoares
 - New watchface @Philoul
 - 3.1 sürümündeki tonlarca sorun düzeltildi
@@ -90,7 +91,10 @@ Yayınlanma tarihi: XX-XX-2023
 - more database maintenance options @MilosKozak
 - AAPSClient ana telefon elektriğe takılıysa bilgi verir @MilosKozak
 - Bolus sihirbazında değişiklik. CGM mevcut değilse, yüzde göz ardı edilir (yani %100 kullanılır)
-- new 150k+ lines of code, changed 156k lines
+- migration to kts build system @MilosKozak
+- improved CI integration @MilosKozak @buessow
+- tests cleaup @ryanhaining @MilosKozak
+- new 110k+ lines of code, changed 240k lines, 6884 changed files
 
 ## Sürüm 3.1.0
 
