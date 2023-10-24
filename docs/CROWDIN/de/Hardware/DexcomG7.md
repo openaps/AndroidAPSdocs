@@ -1,13 +1,5 @@
 # Dexcom G7
 
-```{admonition} Only available in dev branch
-:class: note
-
-Diese Funktion ist nur im dev Branch und nicht im Master verfügbar.
-
-Bitte beachte die Warnungen und folge den Anweisungen in [eine dev-Version erstellen](../Installing-AndroidAPS/Dev_branch.md).
-
-```
 
 ## Grundlegendes im Voraus
 
@@ -20,6 +12,8 @@ Es gibt aktuell (Februar 2023) **zwei** Wege dies zu tun.
 ![DexcomG7.md](../images/DexcomG7.png)
 
 ## 1.  Gepatchte Dexcom G7 App
+
+**Note: AAPS 3.2.0.0 or higher is required!**
 
 ### Installiere eine neue gepatchte (!) G7-App und starte den Sensor
 
@@ -35,11 +29,7 @@ Beachte die allgemeinen Empfehlungen zur CGM-Hygiene und den empfohlenen Sensor-
 
 Nach der Aufwärmphase werden die Glukosewerte wie üblich in der G7-App angezeigt.
 
-### Erstelle eine neue signierte APK aus dem 'dev'-Branch
-
-Um die Werte der G7-App in AAPS empfangen und glätten zu können, ist eine Änderung in AAPS notwendig.
-
-Baue dazu eine neue signierte APK aus dem offiziellen 'dev'-Branch und installiere Sie sie auf Deinem Smartphone.
+### Configuration in AAPS
 
 Zur Konfiguration von AAPS
 - Wähle 'BYODA' in der Konfiguration als BZ-Quelle (auch wenn es tatsächlich die gepatchte G7-App ist!)
