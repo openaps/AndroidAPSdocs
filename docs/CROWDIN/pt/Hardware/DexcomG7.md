@@ -1,13 +1,5 @@
 # Dexcom G7
 
-```{admonition} Only available in dev branch
-:class: note
-
-This feature is only available in the in dev branch and not in master.
-
-Please be aware of the warnings and follow the instructions in [building a dev version](../Installing-AndroidAPS/Dev_branch.md).
-
-```
 
 ## Fundamental in advance
 
@@ -20,6 +12,8 @@ There are **two** possibilities (as of 02/'23).
 ![DexcomG7.md](../images/DexcomG7.png)
 
 ## 1.  Patched Dexcom G7 App
+
+**Note: AAPS 3.2.0.0 or higher is required!**
 
 ### Install a new patched (!) G7 app and start the sensor
 
@@ -35,11 +29,7 @@ Follow the general recommendations for CGM hygiene and sensor placement found [h
 
 After the warm-up phase, the values are displayed as usual in the G7 app.
 
-### build a new signed APK from the dev branch
-
-To be able to receive the values from the G7 App in AAPS and to smooth the received values, a change in AAPS is necessary.
-
-Therefore build a new signed APK from the official dev branch and install it on your mobile.
+### Configuration in AAPS
 
 For the configuration in AAPS
 - Select 'BYODA' in the configuration generator - even if it is not the BYODA app!
