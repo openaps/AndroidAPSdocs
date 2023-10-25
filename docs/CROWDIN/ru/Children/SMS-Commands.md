@@ -23,9 +23,9 @@
 
 ### Авторизованные номера телефонов
 
-- In AAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
+- В AAPS перейдите в **Настройки > SMS Коммуникатор**и введите номер(а) телефона(ов), с которых хотите отправлять SMS команды (разделенные точками с запятыми - напр +6412345678;+6412345679)
 
-- Note that the "+" in front of the number may or may not be required based on your location. To determine this send a sample text which will show the received format in the SMS Communicator tab.
+- Обратите внимание, что «+» перед номером может быть обязательным или не потребуется в зависимости от вашего местоположения. Для определения этого отправьте образец текста, который будет отображать полученный формат на вкладке SMS Communicator.
 
 - Enable 'Allow remote commands via SMS'.
 
@@ -33,7 +33,7 @@
 
   - Введите только один номер.
 
-  - Make that single number work by sending and confirming a SMS command.
+  - Убедитесь, что этот телефон работает с алгоритмом путем отправки и подтверждения команды SMS.
 
   - Введите дополнительные номера, разделенные точкой с запятой, без пробела.
 
@@ -53,8 +53,8 @@
 - Правила установки PIN:
 
   - от 3 до 6 цифр
-  - все цифры различные (например, 1111)
-  - не подряд (например, 1234)
+  - все цифры различные (например, не 1111)
+  - не подряд (например, не 1234)
 
 ### Настройка аутентификации
 
@@ -67,7 +67,7 @@
   - [LastPass Authenticator](https://lastpass.com/auth/)
   - [FreeOTP Authenticator](https://freeotp.github.io/)
 
-- Установите на телефоне-фолловере приложение идентификации по выбору и просканируйте QR-код, показанный в AAPS.
+- Установите на телефоне-фолловере выбранное вами приложение идентификации и просканируйте QR-код, показанный в AAPS.
 
 - Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. Example:
 
@@ -75,19 +75,19 @@
   - Маркер TOTP из приложения идентификации-457051
   - Введите 4570512020
 
-- The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **There is no button you can press!**
+- Красный текст "НЕПРАВИЛЬНЫЙ ПИН" изменится **автоматически** на зеленый "OK", если запись правильная. **There is no button you can press!**
 
 - Время на обоих телефонах должно быть синхронизировано. Best practice is set automatically from network. Time differences might lead to authentication problems.
 
-- Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. You will need to set them up again)
+- Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. Вам придется их снова настроить)
 
 ## Use SMS commands
 
 - Send a SMS to the phone with AAPS running from your approved phone number(s) using any of the [commands](SMS-Commands-commands) below.
 
-- The AAPS phone will respond to confirm success of command or status requested.
+- Телефон с AAPS ответит чтобы подтвердить успешное выполнение команды или запрашиваемого статуса.
 
-- Confirm command by sending the code where necessary. Example:
+- Подтвердите команду, при необходимости отправив код. Example:
 
   - Ваш обязательный PIN-код 2020
   - Маркер TOTP из приложения идентификации-457051
@@ -106,9 +106,9 @@ Commands must be sent in English, the response will be in your local language if
 
 ### Замкнутый цикл
 
-- LOOP STOP/DISABLE \* Response: Loop has been disabled
+- LOOP STOP/DISABLE \* Ответ: Цикл отключен
 
-- LOOP START/ENABLE \* Response: Loop has been enabled
+- LOOP START/ENABLE \* Ответ: Цикл включен
 
 - LOOP STATUS
 
@@ -118,9 +118,9 @@ Commands must be sent in English, the response will be in your local language if
     - Loop is enabled
     - Suspended (10 min)
 
-- LOOP SUSPEND 20 \* Response: Loop suspended for 20 minutes
+- LOOP SUSPEND 20 \* Ответ: Цикл приостановлен на 20 минут
 
-- LOOP RESUME \* Response: Loop resumed
+- LOOP RESUME \* Ответ: Цикл возобновлен
 
 ### CGM data
 
