@@ -2,7 +2,7 @@
 There are four highly effective tools for remotely managing **AAPS**:
  
 1) [SMS commands](sms-commands) (follower phone can be either Android or iOS), 
-2) [NS Client](nsclient) (follower phone is Android)
+2) [AAPSClient](aapsclient) (follower phone is Android)
 3) [Nightscout](nightscout) (Android, iOS or other computer/device).  
 4) [Smartwatches](smartwatches) (Android) 
 
@@ -31,7 +31,7 @@ You can control **AAPS** remotely via text (SMS) message through a feature known
    
 3. In a region of poor internet reception, where text messages are able to get through, but data/internet phone reception is limited. This is very useful when going to remote areas (e.g. camping, skiing).
   
-4. If your other methods of remote control (Nightscout/NSClient) are temporarily not working
+4. If your other methods of remote control (Nightscout/AAPSClient) are temporarily not working
 
 ### SMS command safety
 If you enable **SMS Communicator** in **AAPS**, consider that the phone which is set up to give remote commands could be stolen, and/or used by someone else. Always lock your phone handset with at least a PIN. A strong password and/ or biometric lock are highly recommended, and ensure this is different from your APK Master password (the password which is required to change **AAPS** settings) .
@@ -218,25 +218,25 @@ If you want to remove the ability of a caregiver phone to send SMS commands, use
 
 ### Delivering mealtime boluses through SMS commands
 
-Remote bolusing of insulin can _only_ be done via **SMS Commands**, it cannot be actioned through NightScout or NSClient. Carbs however, can be announced through any of the three methods. It is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows: 
+Remote bolusing of insulin can _only_ be done via **SMS Commands**, it cannot be actioned through NightScout or AAPSClient. Carbs however, can be announced through any of the three methods. It is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
 
 1)	Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to using the “syringe” icon in **AAPS**. 
 2)	Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to using the “carbs” tab in **AAPS**.
 
-**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can use a combination of Nightscout or NSClient with SMS commands. Carbs can be announced through Nightscout without any authentication (see instructions sub section below) , and are therefore quicker than SMS commands. 
+**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can use a combination of Nightscout or AAPSClient with SMS commands. Carbs can be announced through Nightscout without any authentication (see instructions sub section below) , and are therefore quicker than SMS commands.
 
 ### SMS commands troubleshooting and FAQ
 
 #### Q: What _can’t_ we do with SMS commands?
 
-1)	**You cannot set a _temporary_ profile switch** (so for example, setting “profile exercise“ for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profiles switches can instead be set through Nightscout or NSClient.
+1)	**You cannot set a _temporary_ profile switch** (so for example, setting “profile exercise“ for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profiles switches can instead be set through Nightscout or AAPSClient.
 
 2)	**You cannot cancel automations** or **set user-defined targets** but there are approximate solutions: 
 As an example, imagine the normal profile target is 5.5. You have set an automation in AAPS, to always set a high target of 7.0 between 2.30pm and 3.30pm because of a sports class in school, and a condition of the automation is that “no temp target exists”. This week, you have been told at short notice that the sports class is cancelled, and is being replaced by a pizza-eating session, but your kid is already at school with the AAPS phone. If the high temporary target of 7.0 is started by the automation and you cancel it (on the AAPS phone, or remotely) the conditions for the automation are still met and **AAPS** will simply set the high target again, a minute later.
 
 **If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min under the Actions Tab or by pressing on the target tab. This would prevent the automation from setting the high target of 7.0.   
 
-**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use NSClient or Nightscout to do this.   
+**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use AAPSClient or Nightscout to do this.
 
 #### Q: What happens if I change my mind about a command I have just sent?
 
@@ -277,20 +277,20 @@ If you are having issues sending or receiving SMS commands with the Android Mess
 
 ●	Activate “Only send SMS and MMS messages”
 
-(nsclient)=
-## 2) NSClient
+(aapsclient)=
+## 2) AAPSClient
 
 _Note that **NSClient** has been replaced by **AAPSClient** for AAPS version 3.2 and higher, check the version release notes for more information._ 
 
-For versions of AAPS which are older than AAPS 3.2, if you have a caregiver/parent Android phone you can directly download and install the [**NSClient**](https://github.com/nightscout/AndroidAPS/releases/) app. **NSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver tabs that will remotely action commands in **AAPS**: 
+For versions of AAPS which are older than AAPS 3.2, if you have a caregiver/parent Android phone you can directly download and install the [**AAPSClient**](https://github.com/nightscout/AndroidAPS/releases/) app. **AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver tabs that will remotely action commands in **AAPS**:
 
 ![image](images/remote-control-19.png)
 
-There are 2 versions of the app you can [download](https://github.com/nightscout/AndroidAPS/releases/), **NSClient** & **NSClient2**. The only difference between the two versions is the app name. This allows you to install the **NSClient** app twice on the same phone, to follow two different people or Nightscout accounts at the same time. 
+There are 2 versions of the app you can [download](https://github.com/nightscout/AndroidAPS/releases/), **AAPSClient** & **AAPSClient2**. The only difference between the two versions is the app name. This allows you to install the **AAPSClient** app twice on the same phone, to follow two different people or Nightscout accounts at the same time.
 
 ![image](images/remote-control-20.png)
 
-To download NSClient, click on app-nsclient-release-3.1.0.3.apk
+To download AAPSClient, click on app-AAPSClient-release-3.1.0.3.apk
 
 Then go to  _downloads_ on your computer. On Windows, -downloads_ will show the right hand ribbon:
 
@@ -303,24 +303,24 @@ Once downloaded, click _show in folder_
 The apk can now be either:
 
 Transferred by a USB cable onto the follower phone; or
-Dragged into G drive folder, and then added onto the follower phone by clicking on app-nsclient-release-3.1.0.3.apk
+Dragged into G drive folder, and then added onto the follower phone by clicking on app-AAPSClient-release-3.1.0.3.apk
 
-### Features of NSClient include:
+### Features of AAPSClient include:
 
-![Sara's NSClient table](images/remote-control-23.png)
+![Sara's AAPSClient table](images/remote-control-23.png)
 
-**NSClient** allows the caregiver to make many of the adjustments that are allowed directly in **AAPS** (excluding insulin boluses) remotely, via the mobile or internet network. The main benefits of **NSClient** are the speed and ease with which caregivers/parents can use it to remotely control **APPS**. NSClient _can_ be much faster than entering SMS Commands, if delivering a command which would require authentication. Commands entered on **NSClient** are uploaded onto Nightscout.
+**AAPSClient** allows the caregiver to make many of the adjustments that are allowed directly in **AAPS** (excluding insulin boluses) remotely, via the mobile or internet network. The main benefits of **AAPSClient** are the speed and ease with which caregivers/parents can use it to remotely control **APPS**. AAPSClient _can_ be much faster than entering SMS Commands, if delivering a command which would require authentication. Commands entered on **AAPSClient** are uploaded onto Nightscout.
 
-Remote control through **NSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc) see [release notes for Version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) for further details.
+Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc) see [release notes for Version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) for further details.
 
 ### NS Client with smartwatch options
 
-A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **NSClient** is installed on the parents phone, the [**NSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. This will show current BG, loop status and allow carb entry, temp targets and profile changes. It will NOT allow bolusing from the WearOS app. You can read more about Smartwatches [here](smartwatches).
+A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **AAPSClient** is installed on the parents phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. This will show current BG, loop status and allow carb entry, temp targets and profile changes. It will NOT allow bolusing from the WearOS app. You can read more about Smartwatches [here](smartwatches).
 
 (nightscout)=
 ## 3) Nightscout 
 
-As well as Nightscout being a server in “the Cloud”, there is also a dedicated **Nightscout** app which can be downloaded directly from the App Store on your iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**NSClient**](nsclient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](link) app from the Playstore.
+As well as Nightscout being a server in “the Cloud”, there is also a dedicated **Nightscout** app which can be downloaded directly from the App Store on your iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](AAPSClient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](link) app from the Playstore.
 
 Once you have installed the **Nightscout** app on your iPhone, open the app and follow the set-up prompts, entering your Nightscout address (see below, left). The form of this may vary depending on how your Nightscout is hosted. (_e.g._ http://youraddresshere.herokuapp.com). Then enter your Nightscout API secret (see below, right). If not prompted for your API password, then you need to enter this by clicking on the padlock at the top of the app: 
 
@@ -356,7 +356,7 @@ There is a huge amount of information on the status of the **AAPS** system in th
 
 ### Sending treatments through the Nightscout app to AAPS
 
-To set-up sending treatments from the **Nightscout** app to **AAPS**, on the main AAPS phone, go into the **NSclient** tab in the **AAPS** app. Open the right-hand dot menu, and open NSclientpreferences – synchronisation and select the relevant options in this menu. Set it to receive the different commands (temporary targets, etc) and also to synchronise profiles. If things don’t seem to be synchronised, go back to the NSclient tab and select “full synchronisation” and wait a few minutes.
+To set-up sending treatments from the **Nightscout** app to **AAPS**, on the main AAPS phone, go into the **AAPSClient** tab in the **AAPS** app. Open the right-hand dot menu, and open AAPSClientpreferences – synchronisation and select the relevant options in this menu. Set it to receive the different commands (temporary targets, etc) and also to synchronise profiles. If things don’t seem to be synchronised, go back to the AAPSClient tab and select “full synchronisation” and wait a few minutes.
 
 Nightscout on your iPhone has all the same functions as Nightscout on your PC. It allows you to send many commands to **AAPS**, but it does not allow you to send insulin boluses.
 
@@ -438,7 +438,7 @@ In general, if you only want to follow glucose numbers and not interact with **A
 The first three smartwatch options require the smartwatch to have **Wear OS** installed. 
 
 **Wear OS** is the operating system which runs on some modern Android smartwatches. In [2018](https://en.wikipedia.org/wiki/Wear_OS), Google rebranded _Android Wear 1.x to Wear OS_ from version 2.x. So, if a device is labelled “_Android Wear_” rather than **Wear OS** it may indicate an older version. If the description of the smartwatch indicates only _compatibility_ with Android and iOS - it does not mean it is running Wear OS. It may be some other sort of Vendor specific operating system which is not compatible with **AAPS**. 
-To support installation and use of any version of **AAPS** or **NSClient**, a smartwatch will need to be running **Wear OS**, and ideally be Android 10 or newer. As a guide, as of October 2023, the latest release of **Wear OS** is version 4.0 (based on Android 13). 
+To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch will need to be running **Wear OS**, and ideally be Android 10 or newer. As a guide, as of October 2023, the latest release of **Wear OS** is version 4.0 (based on Android 13).
 
 If you install **AAPS** wear.apk on a **Wear OS** watch, there are a range of different custom **AAPS** watchfaces which  can be  selected. Alternatively, you can use a standard smartphone watchface, with your **AAPS** information included in small tiles known as “complications” on the face. A complication is any feature that is displayed on a watch face in addition to the time. Features like complications require Wear OS version 2.0 or newer to work.
 
@@ -478,11 +478,11 @@ If you are interested in setting up a standalone watch, read the posts and comme
 
 ### Smartwatch Option 2) **AAPS** on watch, for remote control of **AAPS** on a phone
 
-Similarly to using a follower phone with either NSClient, Nightscout or SMS commands (link to sections) a smartwatch can be used to remotely control **AAPS** and provide full profile data. A key difference to using a follower phone is that the smartwatch to **AAPS** phone link is via bluetooth and does not require an authenticator code. As a side-note, users have reported that if both smartwatch and phone linked by bluetooth are also on the same wifi network, the watch may also interact with the smartphone over the wifi, giving a longer range of communication. 
+Similarly to using a follower phone with either AAPSClient, Nightscout or SMS commands (link to sections) a smartwatch can be used to remotely control **AAPS** and provide full profile data. A key difference to using a follower phone is that the smartwatch to **AAPS** phone link is via bluetooth and does not require an authenticator code. As a side-note, users have reported that if both smartwatch and phone linked by bluetooth are also on the same wifi network, the watch may also interact with the smartphone over the wifi, giving a longer range of communication.
 
 A remote control smartwatch is therefore often useful in any situation where:
 
-a)	**NSClient**/Nightscout/**SMS** commands cannot work; or
+a)	**AAPSClient**/Nightscout/**SMS** commands cannot work; or
 
 b)	the user wishes to avoid the need for authenticator code (as required for the follower phone with inputting data, selecting TT or entering carbs).
 
@@ -669,7 +669,7 @@ If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, 
 3.	Check that the **AAPS** Phone and smartwatch are paired or linked in Samsung app.
 4.	It may also help to do a hard restart of Phone and smartwatch (meaning turning phone on and off)
 5.	Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have downloaded the **correct AAPS apk version for Wear OS**. If your AAPS wear.apk version is listed as any of the following:
-a)“wear-nsclient-release’;
+a) “wear-AAPSClient-release’;
 b) ‘wear-full-release.aab’; or
 c) the word ‘debug’ appears in the title,
  you have not selected the correct Wear OS apk version during the build.
@@ -700,11 +700,11 @@ A video explaining getting Whatsapp setup for messaging on the Galaxy 4 watch (y
 
 Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and the watch makes it possible for Whatsapp messages to announce with a slight vibration, and also for the Whatsapp message to display over the existing watchface.
 
-### Smartwatch Option 3: NSClient on a watch for remote control of **AAPS** on a phone
+### Smartwatch Option 3: AAPSClient on a watch for remote control of **AAPS** on a phone
 
-The software, NSClient Wear apk, can be downloaded directly from [Github](https://github.com/nightscout/AndroidAPS/releases/). 
+The software, AAPSClient Wear apk, can be downloaded directly from [Github](https://github.com/nightscout/AndroidAPS/releases/).
 
-The user does not have to build the NSClient wear apk on Android Studio providing the user is downloading the correct version from Github that is compatible with the **AAPS** version as operated on the master phone
+The user does not have to build the AAPSClient wear apk on Android Studio providing the user is downloading the correct version from Github that is compatible with the **AAPS** version as operated on the master phone
 
 To download the software, click on the required app:
 
@@ -728,10 +728,10 @@ Once downloaded, click _show in folder_
 ![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/39892cb3-6d1e-4146-a5d2-7c313d3bdd78)
 
 
-The Wear.NSClient.apk can now be either:
+The Wear.AAPSClient.apk can now be either:
 
 1.	transferred by a USB cable;
-2.	dragged into your G drive folder. Please follow steps above on how to transfer the Wear.NSClient.apk onto the watch.
+2.	dragged into your G drive folder. Please follow steps above on how to transfer the Wear.AAPSClient.apk onto the watch.
 
 
 ### 4) Limited Nightscout (and other options) on a watch - Fitbit watches
