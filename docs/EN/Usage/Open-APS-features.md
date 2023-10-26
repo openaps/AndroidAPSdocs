@@ -235,8 +235,8 @@ Future ISF uses the same TDD value as generated above, taking the adjustment fac
 
 Otherwise, minimum predicted BG is used.
 
-###Adjust sensitivity and BG
-This replaces the traditional oref1 deviation based Autosens model and instead uses rolling 24 hour TDD / 7-day average TDD. This is used to adjust basal and targets when the options are selected in preferences.
+###Autosens
+DynamicISF replaces the traditional oref1 deviation based Autosens model and instead uses rolling 24 hour TDD / 7-day average TDD. This is used to adjust basal and targets when the options are selected in preferences.
 
 (Open-APS-features-overview-of-hard-coded-limits)=
 ## Overview of hard-coded limits
