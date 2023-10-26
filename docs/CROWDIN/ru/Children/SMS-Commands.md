@@ -133,53 +133,53 @@ Commands must be sent in English, the response will be in your local language if
 - BASAL 0.3 \* Ответ: Для постановки базала на 0.3 ед/ч ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
 - BASAL 0.3 20 \* Ответ: Для постановки базала 0.3 ед/ч на 20 мин ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
 - BASAL 30% \* Ответ: Для постановки базала 30% ед/ч на 30 мин. ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
-- BASAL 30% 50 \* Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
+- BASAL 30% 50 \* Ответ: Для постановки базала 30% ед/ч на 50 мин. ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
 
 ### Bolus
 
 Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
 
-- BOLUS 1.2 \* Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available. Try again later.
-- BOLUS 0.60 MEAL \* If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins). \* Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available.
-- CARBS 5 \* Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
-- CARBS 5 17:35/5:35PM \* Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
-- EXTENDED STOP/CANCEL \* Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
-- EXTENDED 2 120 \* Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
+- BOLUS 1.2 \* Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available. Повторите позже.
+- BOLUS 0.60 MEAL \*Если указать необязательный параметр MEAL, запускается временная цель MEAL (значения по умолчанию: 90 мг/дл, 5.0 ммоль/л на 45 мин). \* Ответ A: Для подачи болюса 0.60 ед. ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом \* Ответ B: Удаленный болюс недоступен.
+- CARBS 5 \* Ответ: Чтобы ввести 5г в 12:45 ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
+- CARBS 5 17:35/5:35PM \* Ответ: Чтобы ввести 5г в 17:35 ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
+- EXTENDED STOP/CANCEL \* Ответ: Для остановки пролонгированного болюса ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
+- EXTENDED 2 120 * Ответ: Чтоб начать пролонгированный болюс 2ед на 120 минут ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
 
 ### Профиль
 
-- PROFILE STATUS \* Response: Profile1
-- PROFILE LIST \* Response: 1.\`Profile1\` 2.\`Profile2\`
-- PROFILE 1 \* Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
+- PROFILE STATUS \* Ответ: Profile1
+- PROFILE LIST \* Ответ: 1.\`Profile1\` 2.\`Profile2\`
+- PROFILE 1 \* Ответ: Для переключения профиля на Profile1 100% ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
 - PROFILE 2 30 \* Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
 
 (SMS-Commands-other)=
 
 ### Другое
 
-- TREATMENTS REFRESH \* Response: Refresh treatments from NS
-- NSCLIENT RESTART \* Response: NSCLIENT RESTART 1 receivers
-- PUMP \* Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
-- PUMP CONNECT \* Response: Pump reconnected
-- PUMP DISCONNECT *30* \* Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
-- SMS DISABLE/STOP \* Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
+- TREATMENTS REFRESH \* Ответ: Обновление терапии из NS
+- NSCLIENT RESTART \* Ответ: NSCLIENT RESTART 1 получателя
+- PUMP \* Ответ: Последнее соед: 1 мин. назад -- Врем базал: 0.00ед/ч @11:38 5/30мин IOB: 0.5ед Резервуар: 34ед Бат: 100
+- PUMP CONNECT \* Ответ: Помпа переподключена
+- PUMP DISCONNECT *30* \* Ответ: Чтобы разъединить связь с помпой на *30* минут ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
+- SMS DISABLE/STOP \* Ответ: Для отключения удаленного сервиса SMS ответьте любым кодом. Имейте в виду, что после этого его можно повторно активировать только непосредственно с основного смартфона AAPS.
 - TARGET MEAL/ACTIVITY/HYPO \* Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
-- TARGET STOP/CANCEL \* Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
-- HELP \* Response: BG, LOOP, TREATMENTS, .....
-- HELP BOLUS \* Response: BOLUS 1.2 BOLUS 1.2 MEAL
+- TARGET STOP/CANCEL \* Ответ: Для остановки временной цели ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
+- HELP \* Ответ: BG, LOOP, TREATMENTS, ..... (ГК, ЦИКЛ, ТЕРАПИЯ...).....
+- HELP BOLUS \* Ответ: BOLUS 1.2 BOLUS 1.2 MEAL (БОЛЮС 1.2 БОЛЮС 1.2 НА ЕДУ)
 
 (SMS-Commands-troubleshooting)=
 ## Устранение неполадок
 
 ### Multiple SMS
 
-If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. This could be xDrip+, for example. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS.
+Если вы многократно получаете одно и то же сообщение (напр. переключатель профиля), то, возможно, возникла закольцованность с другими приложениями. Например, с xDrip+. Если это так, убедитесь, что xDrip+ (или любое другое приложение) не загружает данные терапии в NS.
 
 If the other app is installed on multiple phones make sure to deactivate upload on all of them.
 
 ### SMS commands not working on Samsung phones
 
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabling 'send as chat message'.
+There was a report on SMS commands stopping after an update on Galaxy S10 phone. Решается путем отключения опции "отправлять SMS как сообщения чата".
 
 ```{image} ../images/SMSdisableChat.png
 :alt: Disable SMS as chat message
