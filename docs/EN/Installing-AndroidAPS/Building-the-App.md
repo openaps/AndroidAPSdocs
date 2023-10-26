@@ -26,13 +26,12 @@ This section will get you ready for building AAPS, by setting up a dedicated ema
 
 (⌛ About 5 minutes)
 
-![](../images/Building-the-App/building_0001.png))
+![](../images/Building-the-App/building_0001.png)
 
 Since you are using an Android phone it is recommended to have a personal email account tied to your phone and which has access to an online drive (such as Gmail which has Google Drive). Some AAPS users have a dedicated email account and drive set up only for their AAPS usage (like parents or caregivers). Other AAPS users prefer to use their main email account (and online drive, if available) for AAPS as well.\
 Potential advantages of using a dedicated Google account for AAPS: 
 
 :::{admonition} why a dedicated google account?
-
 :class: note
 
 - Dedicated Google drive space means you will not risk filling up your personal Google drive limit with **Export Preferences**.
@@ -52,9 +51,8 @@ Video: <https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?u
 #### Step-by-step guide to setting up a separate Google account and drive: 
 
 In this example: 
-
-- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>  using Gmail; ![](../images/Building-the-App/building_0002.png))
-- new “_AAPS_” email account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png))
+- Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>  using Gmail; ![](../images/Building-the-App/building_0002.png)
+- new “_AAPS_” email account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
 Things to consider:
 
@@ -70,26 +68,26 @@ Things to consider:
 #### Go <https://account.google.com> 
 
  If already logged into Google, the scenario below will redirect you to your “Everyday” **Myaccount** page. 
-(1) Click on the top right of the page on your profile picture (in the case a simple ![](../images/Building-the-App/building_0002.png))) 
+(1) Click on the top right of the page on your profile picture (in the case a simple ![](../images/Building-the-App/building_0002.png) 
 (2) select “_add another account_”.
-![](../images/Building-the-App/building_0005.png))
+![](../images/Building-the-App/building_0005.png)
 
 
-####  on the Gmail page enter your NEW dedicated account: 
+####  On the Gmail page enter your NEW dedicated account: 
 
 - Enter the new account: 
 - Create Account
 - for my personal use. 
 
 
- #### Next enter:
+ #### Next enter your persona:
  - Enter firstname
  - lastname
  - birthdate (needs to be an Adult age)
 
-#### Choose your NEW email address
+#### Choose your NEW email address & password
 
-This examples appends “.AAPS” to Donald Muck’s existing one…\
+This example appends “.AAPS” to Donald Muck’s existing one…\
 Set a password
 
 ####  Enter a phone number which can receive Gmail’s SMS verification
@@ -108,10 +106,10 @@ it will ask you to accept Gmail’s terms and conditions & confirm your personal
 
 #### Customizing the new profile.
 
-At this point you should be on Gmail’s MyAccount page showing your new AAPS dedicated email account… The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png)) with ![](../images/Building-the-App/building_0003.png))
+At this point you should be on Gmail’s MyAccount page showing your new AAPS dedicated email account… The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png)
 
-![](../images/Building-the-App/building_0007.png))\
-![](../images/Building-the-App/building_0008.png))
+![](../images/Building-the-App/building_0007.png)\
+![](../images/Building-the-App/building_0008.png)
 
 #### Configuring the new Gmail account
 
@@ -128,17 +126,17 @@ This part can be a bit confusing since you will have to switch back and forth be
 
 Open <https://gmail.com>  in each browser window and make sure Donald Muck’s personal account is on top and the new dedicated **AAPS** account is on the bottom of the screen, and is easily identifiable by the profile picture in the top right corner. (if needed you can always switch accounts by clicking on the profile picture and selecting the proper one like you did earlier in step 6)
 
-![](../images/Building-the-App/building_0009.png))
+![](../images/Building-the-App/building_0009.png)
 
 Your Gmail homepages  screen should look like this:\
-![](../images/Building-the-App/building_0010.png))
+![](../images/Building-the-App/building_0010.png)
 
  #### In the new Gmail account (bottom window) open Gmail settings… 
 
 - Click on the gear on the left of the profile picture 
 - then select “**See all Settings**”
 
-![](../images/Building-the-App/building_0011.png))
+![](../images/Building-the-App/building_0011.png)
 
 #### Setup forwarding…
 
@@ -150,14 +148,14 @@ Your Gmail homepages  screen should look like this:\
 
 There is quite a bit of back and forth between the windows but this will ensure that when you check your “everyday” account emails you will also see the emails forwarded from your AAPS dedicated account such as Gmail alerts…  
 
-![](../images/Building-the-App/building_0012.png))
+![](../images/Building-the-App/building_0012.png)
 
 #### Verify the forwarded email address…
 
 - In the “Everyday” gmail (top window), you will get the “Gmail forwarding Confirmation” email. 
 - Open it and “click the link to confirm the request”
 
-14. #### Finally archive forwarded emails in the new dedicated account gmail(bottom window)
+#### Finally archive forwarded emails in the new dedicated account gmail(bottom window)
 
 <!---->
 
@@ -165,25 +163,25 @@ There is quite a bit of back and forth between the windows but this will ensure 
 2. Check “forward incoming email”
 3. And archive Gmail’s copy (to keep your new dedicated mailbox clean)
 4. Scroll all the way to the bottom to save your changes\
-   ![](../images/Building-the-App/building_0013.png))
+   ![](../images/Building-the-App/building_0013.png)
 
-![](../images/Building-the-App/building_0014.png))
+![](../images/Building-the-App/building_0014.png)
 
 Now you have created a secondary Gmail account dedicated to **AAPS**\*. You will use it to safely store key information in its dedicated google drive later. 
 
-2. ### **Fill googlesheet survey**
-3. ### **Mount google drive(s) on your PC & Phone**
+
+### **Mount google drive(s) on your PC & Phone**
 
 (⌛About 10 minutes )\
-![](../images/Building-the-App/building_0015.png))
+![](../images/Building-the-App/building_0015.png)
 
 A Gmail account provides access to free cloud storage from Gdrive which can be accessed directly as a “virtual” drive from both your PC AND your phone. The scenario below will show you how to use this feature in order to simplify sharing files between the phone and the PC and backup important settings/files in Gdrive.
 
 If you have not done so already, install Gdrive on your PC: 
 
-1. #### Install Google drive (“Gdrive”) on your PC
+#### Install Google drive (“Gdrive”) on your PC
 
-Please see enclosed step-by-step 4 minutes guide here:\
+Please see enclosed step-by-step 4 minutes video  here:\
 <https://drive.google.com/file/d/1EnaQ7U8U7M84vOFjcMRoB43dNwqUuLty/view?usp=drive_link>
 
 1. Go to <https://drive.google.com/> 
@@ -209,30 +207,27 @@ Please see enclosed step-by-step 4 minutes guide here:\
    - (2) Click Share 
    - (3) Click Share 
    - Enter the email address of the people you will want to grant access to…\
-     ![](../images/Building-the-App/building_0016.png))
+     ![](../images/Building-the-App/building_0016.png)
 
 7. Download & install the “google drive” on your phone from the playstore link\
    If you need more details, you can see the step-by-step 2 minutes video here: <https://drive.google.com/file/d/1--qwxp95cG8pwCv1pDFZuuOl6ue22W4H/view?usp=drive_link> 
 
-   - Make sure that you configure it to use your “_aaps dedicated account_” by clicking on the profile picture…  
+   - If you use an *aaps dedicated account*, make sure that you configure google drive to use the correct one by clicking on the profile picture if you use a dedidcated a…  
 
-<!---->
-
-2. ### **Prepare Nightscout for integration with AAPS**
+### **Prepare Nightscout for integration with AAPS**
 
 (⌛About 30 minutes to setup + 15 minutes to prepare for AAPS)
 
 :::{admonition} why Nightscout?
-
 :class: note
 
 Nightscout is mainly used to correlate data collected from the CGM and the pump  and generate reports which can be viewed by you and your careteam. Nightscout also has a large set of additional features including for \[caregivers]\(https\://androidaps.readthedocs.io/en/rework-project/remote-control.html#nightscout) you can read more about Nightscout in general \[here]\(<https://nightscout.github.io/#>)  
 
 :::
 
-![](../images/Building-the-App/building_0017.png))
+![](../images/Building-the-App/building_0017.png)
 
-1. #### Purchase or build a Nightscout Server
+#### Purchase or build a Nightscout Server
 
 If you don’t already have one, you will need a Nightscout server]\(link to AAPS docs about Nightscout options) to use **AAPS**.  
 
@@ -254,7 +249,7 @@ As of July 2023 these are the steps to follow to create a free Nightscout cloud 
 
 <!---->
 
-2. #### Preparing Nightscout to receive data from AAPS
+#### Preparing Nightscout to receive data from AAPS
 
 In this example Donald Muck is hosting Nightscout in Azure and using the free MongoDB, depending on which option you have gone for, adapt the following guidance accordingly…)
 
@@ -268,7 +263,7 @@ Enable Nightscout roles and disable public access
    <https://nightscout.github.io/nightscout/security/#create-authentication-tokens-for-users> 
 
 Consider if you would like to add another few roles to grant read access to your careteam, yourself, an M5 stack device etc…\
-![](../images/Building-the-App/building_0018.png))
+![](../images/Building-the-App/building_0018.png)
 
 Take note of the Nightscout **AAPS** account name and access Token that you just created:
 
@@ -281,7 +276,7 @@ Take note of the Nightscout **AAPS** account name and access Token that you just
 
 Here is an example of Donald Muck’s AAPS\_paramaters file, note that it has also created optional entries like an access Token for its doctor to have direct access to its nightscout instance and added links to remember its Azure portal URL and its MongoDB portal URL.
 
-![](../images/Building-the-App/building_0019.png))
+![](../images/Building-the-App/building_0019.png)
 
 3. **Save your NS API Secret  & disable public access**\
    In Donald Muck’s azure configuration page:\
@@ -290,14 +285,13 @@ Here is an example of Donald Muck’s AAPS\_paramaters file, note that it has al
 (2) Add the _AUTH\_DEFAULT\_ROLES_ variable and set it up to “_denied_”\
 Then click the “restart” option in Azure to restart the nightscout server.\
 This is the documentation link:  [Nightscout Security and Privacy — Nightscout Documentation documentation](https://nightscout.github.io/nightscout/security/#how-to-turn-off-unauthorized-access)\
-![](../images/Building-the-App/building_0020.png))
+![](../images/Building-the-App/building_0020.png)
 
-3. ### **Install Git on your computer**
+### **Install Git on your computer**
 
 (⌛About 4 minutes to setup)
 
 :::{admonition} why git?
-
 :class: note
 
 Git is known as a “_Versioning control System_” (VCS).\
@@ -305,36 +299,35 @@ Git is a program that allows developers to track changes in their code and colla
 
 :::
 
-![](../images/Building-the-App/building_0021.png))
+![](../images/Building-the-App/building_0021.png)
 
 A video recording of the installation is available here:\
 <https://drive.google.com/file/d/1-fWdqT7HoplP2m5M9IxCAldlkwuOJbmG/view?usp=drive_link>
 
-1. #### Download Git
+#### Download Git
 
 <!---->
 
 1. Any recent Git version should work for both Mac and Windows. For example <https://git-scm.com/download/win>.
 2. Make sure to note down the installation path. You will need it in the next step.
 3. The Git install program will ask you about many options, you should be fine picking the default to all options EXCEPT when asked about “**_Choosing the default editor for Git_**”.. Unless you are familiar with VIM, change the default to “**_notepad”_** (or any other preferred program that you are familiar with, personally I notepad++). In this tutorial, you will not  need the Git editor but if later on you have a need for it this will make life less difficult. 
-4. After the install, check that everything is proper by starting a cmd prompt and confirm you can execute “**_git.exe –version_**”. You can also find the installation path of Git by running “**_where git_**” so you can save it in your AAPS\_parameters file. ![](../images/Building-the-App/building_0022.png))
+4. After the install, check that everything is proper by starting a cmd prompt and confirm you can execute “**_git.exe –version_**”. You can also find the installation path of Git by running “**_where git_**” so you can save it in your AAPS\_parameters file. ![](../images/Building-the-App/building_0022.png)
 5. Save the git path and commands in your AAPS\_paramaters file as well. (This is useful when you need to reinstall Android Studio if it can’t detect it automatically).\
-   ![](../images/Building-the-App/building_0023.png))
+   ![](../images/Building-the-App/building_0023.png)
 6. If you get an error try to reboot your computer before the next step.
 
 <!---->
 
-4. ### **Install Android Studio**
+### **Install Android Studio**
 
 (⌛About 7 minutes to setup)
 
-![](../images/Building-the-App/building_0024.png))
+![](../images/Building-the-App/building_0024.png)
 
 :::{admonition} why Android Studio?
-
 :class: note
 
-![](../images/Building-the-App/building_0025.png))
+![](../images/Building-the-App/building_0025.png)
 
 Android Studio is a programme to programme programmes!  Basically, it is a studio programme which runs on your computer and allows you to:
 
@@ -357,39 +350,39 @@ On first start you will find the setup wizard:
 
 Select “Do not import settings” as we don’t want to import settings from previous installations.
 
-![Do not import settings](../images/Building-the-App/building_0026.png))
+![Do not import settings](../images/Building-the-App/building_0026.png)
 
 Decide whether you want to share data with Google or not.
 
-![Share data with Google](../images/Building-the-App/building_0027.png))
+![Share data with Google](../images/Building-the-App/building_0027.png)
 
 On the following screen click “Next”.
 
-![Welcome screen](../images/Building-the-App/building_0028.png))
+![Welcome screen](../images/Building-the-App/building_0028.png)
 
 Select “Standard” installation and click “Next”.
 
-![Standard installation](../images/Building-the-App/building_0029.png))
+![Standard installation](../images/Building-the-App/building_0029.png)
 
 Select the theme for the user interface you like. Then click “Next”.
 
 Note**_:_** This is just the color scheme. You can select whatever you like (i.e. “Darcula” for dark mode). This selection has no influence on building the APK but the following screenshots might look different.
 
-![UI color scheme](../images/Building-the-App/building_0030.png))
+![UI color scheme](../images/Building-the-App/building_0030.png)
 
 Click “Next” on the “Verify Settings” dialog.
 
-![Verify settings](../images/Building-the-App/building_0031.png))
+![Verify settings](../images/Building-the-App/building_0031.png)
 
 Select “Accept” and click “Finish” on the License Agreement dialog.
 
 **_Note:_** Depending on your setup the licenses to be accepted might vary from what is shown in the screenshot.
 
-![License Agreement SDK](../images/Building-the-App/building_0032.png))
+![License Agreement SDK](../images/Building-the-App/building_0032.png)
 
 Wait while Android Studio downloads additional components and be patient. Once everything is downloaded in Android Studio select the “Finish” button when it turns blue. Click the button now.
 
-![Downloading components](../images/Building-the-App/building_0033.png))
+![Downloading components](../images/Building-the-App/building_0033.png)
 
 
 ## Set Git path in preferences
@@ -398,7 +391,7 @@ Make sure G[it is installed](https://androidaps.readthedocs.io/en/rework-project
 
 On the Android Studio welcome screen click “Customize” (1) on the left and then select the link “All settings…” (2):
 
-![Android Studio settings from welcome screen](../images/Building-the-App/building_0034.png))
+![Android Studio settings from welcome screen](../images/Building-the-App/building_0034.png)
 
 
 ### Windows
@@ -407,20 +400,19 @@ On the Android Studio welcome screen click “Customize” (1) on the left and t
 - Click Git (2).
 - Make sure the update method “Merge” (3) is selected.
 - Check if Android Studio can locate the path to git.exe automatically by clicking the button “Test” (4).\
-  ![Android Studio settings](../images/Building-the-App/building_0035.png))
+  ![Android Studio settings](../images/Building-the-App/building_0035.png)
 - If automatic setting is successful, the Git version will be displayed next to the path (it does not matter if the GIT version is not the latest version. Any recent GIT version will do).\
-  ![Git version displayed](../images/Building-the-App/building_0036.png))
+  ![Git version displayed](../images/Building-the-App/building_0036.png)
 
 :::{admonition} What to do if Git is not found?
-
 :class: info
 
 - Eventually git.exe cannot be found automatically or the Test will result in an error (1):\
-  ![Git not found](../images/Building-the-App/building_0037.png))\
+  ![Git not found](../images/Building-the-App/building_0037.png)\
   In this case click on the folder icon (2).
 - Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find “git.exe” if you are unsure where git has been installed. You are looking for a file named “git.exe”, located in \*_\bin\*_ folder.
 - Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3) and click “OK” (4).\
-  ![Select git manually](../images/Building-the-App/building_0038.png))
+  ![Select git manually](../images/Building-the-App/building_0038.png)
 - Check your selected git path again with the “Test” button as described above.
 
 :::
@@ -435,14 +427,13 @@ On the Android Studio welcome screen click “Customize” (1) on the left and t
 - For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 - If you install Git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
 
-5. ### **Download the AAPS source code**
+### **Download the AAPS source code**
 
 (⌛About 12 minutes to complete)
 
-![](../images/Building-the-App/building_0039.png))
+![](../images/Building-the-App/building_0039.png)
 
 :::{admonition} why does it take so long the first time?
-
 :class: note
 
 The first time AAPS is downloaded, Android Studio will connect over the internet to the Github website to download the source code for AAPS. This includes the actual source code of the current version of AAPS as well as past versions and ongoing beta and development files.  This should take about 1 minute. 
@@ -459,13 +450,13 @@ Please follow the steps below\
 <https://drive.google.com/file/d/1-jH5izbSwrMc2jTNi9fC84FNjevnKUh-/view?usp=drive_link> )
 
 - On the Android Studio welcome screen select “Projects” (1) on the left and then “Get from VCS” (2). (VCS stands for Version Control System, which in our case is the Git program you just configured earlier.)\
-  ![Android Studio wizard](../images/Building-the-App/building_0040.png))
+  ![Android Studio wizard](../images/Building-the-App/building_0040.png)
 
 -
 
 - If you already opened Android Studio and do not see the welcome screen anymore select File (1) > New (2) > Project from Version Control… (3)
 
-- ![Check out project from version control within Android Studio](../images/Building-the-App/building_0041.png))
+- ![Check out project from version control within Android Studio](../images/Building-the-App/building_0041.png)
 
 - We will now tell Android Studio where to get the code from:
 
@@ -478,21 +469,21 @@ Please follow the steps below\
 
 <!---->
 
-- Click button “Clone” (5).![](../images/Building-the-App/building_0042.png))\
-  ![Clone Git](../images/Building-the-App/building_0043.png))
+- Click button “Clone” (5).![](../images/Building-the-App/building_0042.png)\
+  ![Clone Git](../images/Building-the-App/building_0043.png)
 - Android Studio will now download the source code from the internet Github web site on your local computer (aka _cloning the AAPS Git repository_)\
-  ![Clone repository](../images/Building-the-App/building_0044.png))
+  ![Clone repository](../images/Building-the-App/building_0044.png)
 - After the Repository is cloned successfully, Android Studio will open the cloned project.
 - If asked whether you want to trust the project: click on “Trust project”!\
-  ![Trust project](../images/Building-the-App/building_0045.png))
+  ![Trust project](../images/Building-the-App/building_0045.png)
 - In the status bar at the bottom you will see the information that Android Studio is running background tasks. Be aware this can take a long time depending on your computer hardware, your internet access speed and if an earlier version of Android Studio was ever installed.\
-  ![Background tasks](../images/Building-the-App/building_0046.png))
+  ![Background tasks](../images/Building-the-App/building_0046.png)
 - If your firewall asks you to grant access, allow it since Android Studio is going to need to download additional libraries/sdk etc...\
-  ![Firewall permission java](../images/Building-the-App/building_0047.png))
+  ![Firewall permission java](../images/Building-the-App/building_0047.png)
 - Once the background tasks are finished you will probably see an error saying that errors occurred (1) or (2) or (3).\
-  ![SDK licence](../images/Building-the-App/building_0048.png))\
+  ![SDK licence](../images/Building-the-App/building_0048.png)\
   Or like this: DO NOT UPDATE GRADLE 
-- ![](../images/Building-the-App/building_0049.png))
+- ![](../images/Building-the-App/building_0049.png)
 
 Don’t worry, this will be solved soon! Please ignore the following Gradle message prompt here:
 
@@ -500,14 +491,13 @@ Android Gradle plugin version 7.2.2. …upgrade available. Start the AGP Upgrade
 
 This will interfere with your build.
 
-6. ### **Download the Android SDK**
+### **Download the Android SDK**
 
 (⌛About 5 minutes to complete)
 
-![](../images/Building-the-App/building_0050.png))
+![](../images/Building-the-App/building_0050.png)
 
 :::{admonition} what is an Android SDK?
-
 :class: note
 
 In order to run AAPS on the phone the application needs to integrate with Android itself. Android provides “_software development kits_” (SDK)  which allow applications like AAPS to interface with an Android operating system. For instance each version of Android might have a slightly different way to handle keyboard inputs and gestures. 
@@ -521,25 +511,24 @@ Please follow the steps below\
 <https://drive.google.com/file/d/10k9bvqkvunBThnZU2yL5OENkeH59tuVj/view?usp=drive_link> )
 
 - In the menu, go to File (1) > Settings (2) (or Android Studio > Preferences on Mac).\
-  ![](../images/Building-the-App/building_0051.png))
+  ![](../images/Building-the-App/building_0051.png)
 
 <!---->
 
 - In the search box, search for “sdk” (1)
 - Select Android SDK (2).
 - Tick the box left of “Android 9.0 (Pie)” (3) (API Level 28).\
-  ![](../images/Building-the-App/building_0052.png))
+  ![](../images/Building-the-App/building_0052.png)
 - Confirm changes by clicking OK.\
-  ![](../images/Building-the-App/building_0053.png))
+  ![](../images/Building-the-App/building_0053.png)
 - If prompted,  Accept license agreement (1) and click “Next” (2).\
-  ![Accept SDK licence](../images/Building-the-App/building_0054.png))
+  ![Accept SDK licence](../images/Building-the-App/building_0054.png)
 - Wait until the SDK download and installation is finished.\
-  ![Wait during SDK installation](../images/Building-the-App/building_0055.png))
+  ![Wait during SDK installation](../images/Building-the-App/building_0055.png)
 - When SDK installation is completed the “Finish” button will turn blue. Click this button.\
-  ![](../images/Building-the-App/building_0056.png))
+  ![](../images/Building-the-App/building_0056.png)
 
 :::{admonition} NEVER UPDATE GRADLE!
-
 :class: warning
 
 Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties!\
@@ -547,21 +536,20 @@ Android Studio might recommend updating the gradle system. **Never update gradle
 
 - If you see a notification on the lower or  right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text “More” (1).
 - In the dialog box the select “Don’t ask for this project” (2).\
-  ![](../images/Building-the-App/building_0057.png))
+  ![](../images/Building-the-App/building_0057.png)
 
-7. ### **Restart Android Studio before the next step**
+### **Restart Android Studio before the next step**
 
 Might be doing something, might be for voodoo luck, in any case, just restart the program…\
-![](../images/Building-the-App/building_0058.png))
+![](../images/Building-the-App/building_0058.png)
 
-8. ### **Build & Sign  the APK**
+### **Build & Sign  the APK**
 
 (⌛About 17 minutes to complete - depends on your computer speed)
 
-![](../images/Building-the-App/building_0059.png))&#x20;
+![](../images/Building-the-App/building_0059.png)&#x20;
 
 :::{admonition} Why signing Android apps?
-
 :class: note
 
 Android (like Apple’s IOS) requires each application to be signed to ensure that it can later only get updated from the same trusted source who released the original application.  For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).\
@@ -580,31 +568,31 @@ So now that we have installed Git, Android Studio, downloaded the AAPS source co
   - "daemon started successfully"
   - on the right side there is what's actively going on right now\... "Scanning Files to index..."
   - Please wait for all the messages on the right side to disappear.. This means your apk build is finished...\
-    ![](../images/Building-the-App/building_0060.png))
+    ![](../images/Building-the-App/building_0060.png)
 
 - **_Warning:_** If errors occur, do not continue with the following steps.\
   Consult the [troubleshooting section](https://androidaps.readthedocs.io/en/rework-project/Installing-AndroidAPS/troubleshooting_androidstudio.html) for known problems!\
-  ![Gradle Sync Error](../images/Building-the-App/building_0061.png))
+  ![Gradle Sync Error](../images/Building-the-App/building_0061.png)
 
 - Click “Build” (1) in the menu bar and select “Generate Signed Bundle / APK…” (2).\
-  ![](../images/Building-the-App/building_0062.png)) 
+  ![](../images/Building-the-App/building_0062.png) 
 
 <!---->
 
 - Select “APK” (1) instead of “Android App Bundle” and click “Next” (2).\
-  ![](../images/Building-the-App/building_0063.png))
+  ![](../images/Building-the-App/building_0063.png)
 
 <!---->
 
 - Make sure that module is set to “AAPS.app” (1).
 - Click “Create new…” (2). ****\
-  ![](../images/Building-the-App/building_0064.png))
+  ![](../images/Building-the-App/building_0064.png)
 
 <!---->
 
 - This opens a “**new Key store”** window. Click the folder symbol to select a path on your computer for your key store by clicking the “**key store path**” folder icon.\
   **_Note:_** A key store in this case is a file in which the information for signing is stored. It is encrypted and the information is secured with passwords.\
-  ![](../images/Building-the-App/building_0065.png))
+  ![](../images/Building-the-App/building_0065.png)
 
 - This will open a new window, aptly named  “Choose keystore file”... 
 
@@ -612,21 +600,21 @@ So now that we have installed Git, Android Studio, downloaded the AAPS source co
     **_Warning: Do not save in the same folder as project. You must use a different directory!_** 
   - Type a file name for your key store (2) 
   - confirm with “OK” (3).\
-    ![](../images/Building-the-App/building_0066.png))
+    ![](../images/Building-the-App/building_0066.png)
 
 <!---->
 
 - Open your Google drive AAPS\_paramaters file to save your passwords…\
   You will need a Keystore password and  key password. In our case, we will use the same relatively simple string made of letters and digits, no special characters.\
   Make sure to save the passwords (1 & 2) in your Google drive AAPS\_parameters file as well as the key alias(3). \
-  The password is required to simplify the upgrade process of AAPS later on. Copy the passwords then go back to Android Studio’s screen![](../images/Building-the-App/building_0067.png))  
+  The password is required to simplify the upgrade process of AAPS later on. Copy the passwords then go back to Android Studio’s screen![](../images/Building-the-App/building_0067.png)  
 
 <!---->
 
 - Back to the Android Studio’s “**New Key Store**” window.\
   1 Check the **Key store path**2 & 3, Enter the  **Key store password**4 check the **key Alias**5 & 6,  Enter the **key Password**7 check that the **validity** is 25 years(default value)\
   8 Enter a name (use your dedicated AAPS google account pseudonym )\
-  9 click “**OK**”![](../images/Building-the-App/building_0068.png))\
+  9 click “**OK**”![](../images/Building-the-App/building_0068.png)\
   **_Note:_** In case you will not remember your passwords in the future, see [troubleshooting for lost key store](https://androidaps.readthedocs.io/en/rework-project/Installing-AndroidAPS/troubleshooting_androidstudio.html#troubleshooting-androidstudio-lost-keystore).
 
 <!---->
@@ -634,13 +622,13 @@ So now that we have installed Git, Android Studio, downloaded the AAPS source co
 - Back to “**Generate Signed Bundle or APK**” window!\
   1 IMPORTANT - Make sure the box to remember passwords is checked/ticked. This will avoid the need to enter your password again the next time you build the apk (i.e. when updating to a new AAPS version).\
   2 Click “Next”\
-  ![](../images/Building-the-App/building_0069.png))
+  ![](../images/Building-the-App/building_0069.png)
 
 <!---->
 
 - Select build variant “fullRelease” (1) and press “Create”.\
-  ![](../images/Building-the-App/building_0070.png))
-- Android Studio will show “Gradle Build running” at the bottom. This takes some time, depending on your computer and internet connection. **Be patient!** (about 18 minutes as timed for this Donald Muck’s build)****![](../images/Building-the-App/building_0071.png))****
+  ![](../images/Building-the-App/building_0070.png)
+- Android Studio will show “Gradle Build running” at the bottom. This takes some time, depending on your computer and internet connection. **Be patient!** (about 18 minutes as timed for this Donald Muck’s build)****![](../images/Building-the-App/building_0071.png)****
 
 <!---->
 
@@ -649,7 +637,7 @@ So now that we have installed Git, Android Studio, downloaded the AAPS source co
   → Ifn case the build was not successful refer to the [troubleshooting section](https://androidaps.readthedocs.io/en/rework-project/Installing-AndroidAPS/troubleshooting_androidstudio.html).\
   2\) if you can’t find the “generate signed APK” notification anymore, click on the notifications tab all the way on the right edge of the Android studio window. All the notifications will show on the right side of the screen starting with the most recent on top.\
   3\) click the “locate” link to find the folder where the “apk” file has been generated.\
-  ![](../images/Building-the-App/building_0072.png))
+  ![](../images/Building-the-App/building_0072.png)
 
 <!---->
 
@@ -659,39 +647,13 @@ So now that we have installed Git, Android Studio, downloaded the AAPS source co
   3\) (and a output-metadata.json that you can ignore)\
   4\) open another window explorer window in your google drive’s AAPS\_APK folder\
   5\) create a new subfolder with the name of your build: AAPS\_3.1.0.03\_AUGUST.2023 or AAPS\_3.1\_myfirstbuild or AAPS\_3.1… usually tracking the version number or the date makes the most sense.\
-  ![](../images/Building-the-App/building_0073.png))
+  ![](../images/Building-the-App/building_0073.png)
 
 <!---->
 
 - Copy and paste the “apk” file from your computer into google drive…\
   Since google drive is in the cloud and also visible to your phone, you will be able to install the application in the next chapter…\
-  ![](../images/Building-the-App/building_0074.png))
+  ![](../images/Building-the-App/building_0074.png)
 
-## **Installing & Configuring AAPS**
+Next Step: installing and configuring  **AndroidAPS** on the phone
 
-### **Phone Settings**
-
- #### Disable play protect
- #### Battery optimizations: Bluetooth
-
- ### **CGMs**
-
- ### **Installing the AAPS on the phone**
-
- #### Load the AAPS phone application
- #### Disable play protect
- #### Battery optimizations
-
- ### **?Sensor App choice?**
- ### **Pumps**
-
- ### **AAPS->NS**
-
- ### **Parent/caregiver connection**
- ### **Remote Control of AAPS**
-
- #### SMS command safety
-      1. How to setup SMS commands
-      2. Getting started with using SMS
-      3. Additional notes on SMS commands
-      4. SMS commands troubleshooting
