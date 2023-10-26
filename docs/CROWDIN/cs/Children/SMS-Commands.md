@@ -5,7 +5,7 @@
 - AAPS umožňuje vládat telefon vašeho dítěte na dálku prostřednictvím textových zpráv. Pokud povolíte SMS komunikátor, vždy pamatujte na to, že telefon nastavený k vydávání vzdálených příkazů, může být ukraden. Proto vždy chraňte telefon alespoň pomocí kódu PIN. Doporučuje se zvolit si silné heslo nebo biometrické údaje.
 - Navíc je doporučeno povolit pro SMS příkazy [druhé telefonní číslo](SMS-Commands-authorized-phone-numbers). Pokud dojde ke ztrátě nebo ukradení vašeho hlavního telefonu, můžete z druhého čísla [dočasně vypnout](SMS-Commands-other) SMS ovládání.
 - AAPS vás bude textovou zprávou informovat, že byl poslaný příkaz (bolus, změna profilu apod.) úspěšně vykonán. Je proto vhodné nastavit, aby byly potvrzovací zprávy odesílány alespoň na dvě různá telefonní čísla pro případ, že by došlo ke zcizení jednoho z rodičovských telefonů.
-- **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
+- **If you bolus through SMS Commands you must enter carbs through Nightscout (AAPSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
 - As of AAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
 
 ## Nastavení SMS příkazů
@@ -14,9 +14,9 @@
 :alt: Nastavení SMS příkazů
 ```
 
-- Většinu úprav dočasných cílů, se kterými pracuje AAPS apod., můžete provést přes [aplikaci NSClient](../Children/Children.md) na telefonu s Androidem připojenému k internetu.
+- Most of the adjustments of temp targets, following AAPS etc. can be done on [AAPSClient app](../Children/Children.md) on an Android phone with an internet connection.
 - Bolusy přes Nightscout nepošlete. Můžete to ale provést pomocí SMS příkazů.
-- Používáte-li ke sledování iPhone, nemůžete použít NSClient. Pak máte k dispozici pouze SMS příkazy.
+- If you use an iPhone as a follower and therefore cannot use AAPSClient app, there are additional SMS commands available.
 - Ve vašem Android telefonu přejděte do jeho systémového nastavení, následně do Aplikace > AndroidAPS > Oprávnění a povolte SMS
 
 (SMS-Commands-authorized-phone-numbers)=
@@ -158,7 +158,7 @@ Vzdálený bolus není povolen do 15 minut (tato hodnota je upravitelná pouze v
 ### Jiné
 
 - TREATMENTS REFRESH \* Odpověď: Obnovit ošetření z NS
-- NSCLIENT RESTART \* Odpověď: NSCLIENT RESTART 1 příjemce
+- AAPSClient RESTART \* Response: AAPSClient RESTART 1 receivers
 - PUMP \* Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 - PUMP CONNECT \* Odpověď: Pumpa znovu připojena
 - PUMP DISCONNECT *30* \* Odpověď: Pro odpojení pumpy na *30* minut odpověz pomocí SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
