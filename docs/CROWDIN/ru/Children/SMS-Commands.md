@@ -3,9 +3,9 @@
 ## Безопасность прежде всего
 
 - AndroidAPS позволяет вам контролировать телефон ребенка удаленно посредством текстовых сообщений (смс). Если смс-коммуникатор активирован, не забывайте, что телефон, настроенный на подачу удаленных команд, может быть украден. Поэтому всегда защищайте смартфон хотя бы ПИН-кодом. Рекомендуется использовать надежный пароль или биометрические данные.
-- Additionally it is recommended to allow a [second phone number](SMS-Commands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](SMS-Commands-other) SMS communicator in case your main remote phone gets lost or stolen.
+- Кроме этого, рекомендуется иметь [второй телефонный номер](SMS-Commands-authorized-phone-numbers) для SMS-команд. В том случае, если основной удаленный телефон будет потерян или украден, можно командой со второго телефона [временно отключить](SMS-Commands-other) SMS-коммуникатор.
 - AndroidAPS также сообщит вам текстовым сообщением, выполнены ли ваши удаленные команды, такие как болюс или изменения профиля. Рекомендуется сделать такую настройку, чтобы подтверждающие тексты направлялись по меньшей мере на два разных телефона на тот случай, если один из них украден.
-- **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
+- **Если вы подаете болюс через SMS-команды необходимо вводить углеводы через Nightscout (NSClient, сайт...)**Если вы этого не сделаете, AAPS будет считать, что активных углеводов COB слишком мало и, вероятно, не будет подавать корректировочный болюс, полагая, что у вас много активного инсулина.
 - Начиная с версии AndroidAPS 2.7 при использовании SMS-команд необходимо использовать приложение-аутентификатор с одноразовым паролем.
 
 ## Настройка SMS-команд
@@ -14,10 +14,10 @@
 :alt: Настройка SMS команд
 ```
 
-- Most of the adjustments of temp targets, following AAPS etc. can be done on [NSClient app](../Children/Children.md) on an Android phone with an internet connection.
+- Большинство корректировок временных целей, вслед за ААПС и т. д. может быть сделано при помощи приложения [NSClient](../Children/Children.md) на телефоне Android с интернет-соединением.
 - Болюсы не могут подаваться через Nightscout, но можно использовать SMS-команды.
-- If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
-- In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+- Если у вас для слежения iPhone и, следовательно, нет возможности использовать NSclient, доступны дополнительные SMS-команды.
+- В настройках телефона перейдите в приложения > AndroidAPS > Разрешения и включите SMS
 
 (SMS-Commands-authorized-phone-numbers)=
 
@@ -27,7 +27,7 @@
 
 - Обратите внимание, что «+» перед номером может быть обязательным или не потребуется в зависимости от вашего местоположения. Для определения этого отправьте образец текста, который будет отображать полученный формат на вкладке SMS Communicator.
 
-- Enable 'Allow remote commands via SMS'.
+- * Включите «Разрешить удаленные команды при помощи SMS».
 
 - Если вы хотите использовать более одного номера:
 
@@ -38,7 +38,7 @@
   - Введите дополнительные номера, разделенные точкой с запятой, без пробела.
 
     ```{image} ../images/SMSCommandsSetupSpace2.png
-    :alt: SMS Commands Setup multiple numbers
+    :alt: Команды SMS с нескольких номеров
     ```
 
 ### Минуты между командами на болюс
@@ -46,7 +46,7 @@
 - Можно определить минимальную задержку между двумя болюсами, поданными при помощи SMS.
 - Из соображений безопасности следует добавить хотя бы два авторизованных номера телефона для изменения этого значения.
 
-### Additionally mandatory PIN at token end
+### Дополнительно обязательный пин-код в конце маркера
 
 - По соображениям безопасности за кодом ответа должен следовать PIN.
 
@@ -60,30 +60,30 @@
 
 - Для повышения безопасности используется двухфакторная аутентификация.
 
-- You can use any Authenticator app that supports RFC 6238 TOTP tokens. Популярные бесплатные приложения:
+- Можно использовать любое приложение Authenticator, которое поддерживает маркеры TOTP RFC 6238. Популярные бесплатные приложения:
 
-  - [Authy](https://authy.com/download/)
-  - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
+  - [Приложение Authy](https://authy.com/download/)
+  - Google Authenticator - [Android ](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2)/[iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
   - [LastPass Authenticator](https://lastpass.com/auth/)
   - [FreeOTP Authenticator](https://freeotp.github.io/)
 
 - Установите на телефоне-фолловере выбранное вами приложение идентификации и просканируйте QR-код, показанный в AAPS.
 
-- Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. Example:
+- Протестируйте одноразовый пароль, введя маркер, показанный в приложении идентификации, и ПИН, который вы только что настроили в AAPS. Example:
 
   - Ваш обязательный PIN-код 2020
   - Маркер TOTP из приложения идентификации-457051
   - Введите 4570512020
 
-- Красный текст "НЕПРАВИЛЬНЫЙ ПИН" изменится **автоматически** на зеленый "OK", если запись правильная. **There is no button you can press!**
+- Красный текст "НЕПРАВИЛЬНЫЙ ПИН" изменится **автоматически** на зеленый "OK", если запись правильная. **Кнопки для нажатия нет!**
 
-- Время на обоих телефонах должно быть синхронизировано. Best practice is set automatically from network. Time differences might lead to authentication problems.
+- Время на обоих телефонах должно быть синхронизировано. Оптимальный вариант - установить на автоматическую настройку из сети. Различия во времени могут привести к проблемам аутентификации.
 
-- Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (By resetting authenticator you make ALL already provisioned authenticators invalid. Вам придется их снова настроить)
+- Используйте кнопку "RESET AUTHENTICATORS"" (СБРОСИТЬ ИДЕНТИФИКАТОРЫ), если хотите их удалить.  (При сбросе аутентификации вы делаете ВСЕ уже предоставленные аутентификаторы недействительными. Вам придется их снова настроить)
 
-## Use SMS commands
+## Отправка SMS-Команд
 
-- Send a SMS to the phone with AAPS running from your approved phone number(s) using any of the [commands](SMS-Commands-commands) below.
+- Отправьте SMS на телефон с AAPS с подтвержденных номеров телефона(ов) используя любую из [команд](SMS-Commands-commands) ниже.
 
 - Телефон с AAPS ответит чтобы подтвердить успешное выполнение команды или запрашиваемого статуса.
 
@@ -93,15 +93,15 @@
   - Маркер TOTP из приложения идентификации-457051
   - Введите 4570512020
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+***Подсказка**: Если отправляется много SMS, полезно иметь тарифный план с неограниченным количеством SMS (на обоих телефонах).
 
 (SMS-Commands-commands)=
-## Commands
+## Команды
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](translations-translate-strings-for-AAPS-app).
+Команды должны отправляться на английском языке, ответ будет получен на русском языке, если строка ответа уже [переведена](translations-translate-strings-for-AAPS-app) <../translations. html#translate-strings-pl-androidaps-app> ` _.
 
 ```{image} ../images/SMSCommands.png
-:alt: SMS Commands Example
+:alt: Пример команд SMS
 ```
 
 ### Замкнутый цикл
@@ -112,22 +112,22 @@ Commands must be sent in English, the response will be in your local language if
 
 - LOOP STATUS
 
-  - Response depends on actual status
+  - Ответ зависит от фактического состояния
 
-    - Loop is disabled
-    - Loop is enabled
-    - Suspended (10 min)
+    - зцикл не работает
+    - зцикл работает
+    - Остановлен (на 10 мин)
 
 - LOOP SUSPEND 20 \* Ответ: Цикл приостановлен на 20 минут
 
 - LOOP RESUME \* Ответ: Цикл возобновлен
 
-### CGM data
+### Данные мониторинга
 
-- BG \* Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
-- CAL 5.6 \* Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN \* Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
+- BG \* Ответ: Новая ГК: 5.6 4мин назад, Дельта: -0,2 ммоль, Активный инсулин IOB: 0.20 ед. (Болюс: 0.10 ед. Базал: 0.10 ед.)
+- CAL 5.6 \* Ответ: Чтобы отправить калибровку 5.6 ответьте с кодом из приложения Authenticator для пользователя, затем PIN \* Ответ после получения верного кода: Калибровка отправлена (**Если установлен xDrip. Разрешение на прием калибровок должно быть включено в xDrip+**)
 
-### Basal
+### Базал
 
 - BASAL STOP/CANCEL \* Ответ: Для остановки временного базала ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
 - BASAL 0.3 \* Ответ: Для постановки базала на 0.3 ед/ч ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
@@ -135,11 +135,11 @@ Commands must be sent in English, the response will be in your local language if
 - BASAL 30% \* Ответ: Для постановки базала 30% ед/ч на 30 мин. ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
 - BASAL 30% 50 \* Ответ: Для постановки базала 30% ед/ч на 50 мин. ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
 
-### Bolus
+### Болюс
 
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
+Удаленный болюс разрешается только через 15 минут после предыдущей команды болюс или других удаленных команд (значение редактируется если для передачи команд добавлено 2 номера телефона)! * Поэтому ответ зависит от времени последнего болюса.
 
-- BOLUS 1.2 \* Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available. Повторите позже.
+- BOLUS 1.2 \* Ответ A: Для подачи болюса 1.2ед ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом \* Ответ B: Удаленный болюс недоступен. Повторите позже.
 - BOLUS 0.60 MEAL \*Если указать необязательный параметр MEAL, запускается временная цель MEAL (значения по умолчанию: 90 мг/дл, 5.0 ммоль/л на 45 мин). \* Ответ A: Для подачи болюса 0.60 ед. ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом \* Ответ B: Удаленный болюс недоступен.
 - CARBS 5 \* Ответ: Чтобы ввести 5г в 12:45 ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
 - CARBS 5 17:35/5:35PM \* Ответ: Чтобы ввести 5г в 17:35 ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
@@ -151,7 +151,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 - PROFILE STATUS \* Ответ: Profile1
 - PROFILE LIST \* Ответ: 1.\`Profile1\` 2.\`Profile2\`
 - PROFILE 1 \* Ответ: Для переключения профиля на Profile1 100% ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
-- PROFILE 2 30 \* Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+- PROFILE 2 30 \* Ответ: Для переключения профиля на Profile2 30% ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
 
 (SMS-Commands-other)=
 
@@ -171,23 +171,23 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 (SMS-Commands-troubleshooting)=
 ## Устранение неполадок
 
-### Multiple SMS
+### Несколько SMS
 
 Если вы многократно получаете одно и то же сообщение (напр. переключатель профиля), то, возможно, возникла закольцованность с другими приложениями. Например, с xDrip+. Если это так, убедитесь, что xDrip+ (или любое другое приложение) не загружает данные терапии в NS.
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+Если на других телефонах есть еще это приложение, отключите выгрузку данных на всех этих телефонах.
 
-### SMS commands not working on Samsung phones
+### Команды SMS не работают на телефонах Samsung
 
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Решается путем отключения опции "отправлять SMS как сообщения чата".
+Была жалоба на остановку работы SMS команд после обновления на телефоне Galaxy S10. Решается путем отключения опции "отправлять SMS как сообщения чата".
 
 ```{image} ../images/SMSdisableChat.png
-:alt: Disable SMS as chat message
+:alt: Отключить SMS как сообщение чата
 ```
-### Android Messages App
+### Приложение Messages для Android
 
-If you are having issues sending or receiving SMS commands with the Android Messages app disable end-to-end ecryption on both caregiver and child's phones.
- - open the specific SMS conversation in Messages
- - Select the options ellipisis in the top right corner
- - select "Details"
- - Activate "Only send SMS and MMS messages"
+Если у вас возникают проблемы с отправкой или получением SMS-команд в приложении Android Messages, отключите сквозное шифрование как на телефоне опекуне, так и на детском телефоне.
+ - откройте конкретный SMS-диалог в приложении Messages
+ - Выберите параметры в правом верхнем углу
+ - выберите "Подробности"
+ - Активируйте опцию "Отправлять только SMS и MMS"
