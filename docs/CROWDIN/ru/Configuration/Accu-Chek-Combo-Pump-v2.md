@@ -142,24 +142,24 @@ The consequence of this is that pairing will never be 100% without problems, tho
 ![Screenshot of Accu-Chek Combo tab with pairing](../images/combo/combov2-tab-with-pairing.png)
 
 1. _Driver state_: The driver can be in one of the following states:
-   - "Disconnected" : There is no Bluetooth connection; the driver is in this state most of the time, and only connects to the pump when needed - this saves power
-   - "Connecting"
-   - "Checking pump" : the pump is connected, but the driver is currently performing safety checks to ensure that everything is OK and up to date
-   - "Ready" : the driver is ready to accept commands from AAPS
+   - "Отключен" : Нет Bluetooth-соединения; драйвер в основном находится в этом состоянии и подключается к помпе при необходимости - это экономит питание
+   - "соединение устанавливается"
+   - "Проверка помпы" : помпа подключена, но в настоящее время драйвер выполняет проверки безопасности, чтобы убедиться, что все нормально и в актуальном состоянии
+   - "Готов" : драйвер готов принимать команды от AAPS
    - "Suspended" : the pump is suspended (shown as "stopped" in the Combo)
-   - "Executing command" : an AAPS command is being executed
-   - "Error" : an error occurred; the connection was terminated, any ongoing command was aborted
-2. _Last connection_: How many minutes ago did the driver successfully connect to the Combo; if this goes beyond 30 minutes, this item is shown with a red color
-3. _Current activity_: Additional detail about what the pump is currently doing; this is also where a thin progress bar can show a command's execution progress, like setting a basal profile
-4. _Battery_: Battery level; the Combo only indicates "full", "low", "empty" battery, and does not offer anything more accurate (like a percentage), so only these three levels are shown here
+   - "Выполнение команды" : выполняется команда AAPS
+   - "Ошибка" : произошла ошибка; соединение было прервано, любая текущая команда была прервана
+2. _Последнее соединение_: Сколько минут назад драйвер успешно подключился к Combo; если это превышает 30 минут, то этот элемент отображается красным цветом
+3. _Текущая активность_: Дополнительная информация о том, что делает помпа; здесь же тонкий индикатор прогресса может показывать ход выполнения команды, например, установки базального профиля
+4. _Батарея_: Уровень заряда батареи; Combo показывает только "полный", "низкий", "пустой" заряд аккумулятора, не предлагает более точного (в процентах), варианта, поэтому здесь показаны только эти три уровня
 5. _Reservoir_: How many IU are currently in the Combo's reservoir
-6. _Last bolus_: How many minutes ago the last bolus was delivered; if none was delivered yet after AAPS was started, this is empty
+6. _Предыдущий болюс_: Сколько минут назад был подан болюс; если после запуска AAPS болюсов не было, это поле пустое
 7. _Temp basal_: Details about the currently active temporary basal; if none is currently active, this is empty
-8. _Base basal rate_: Currently active base basal rate ("base" means the basal rate without any active TBR influencing the basal rate factor)
-9. _Serial number_: Combo serial number as indicated by the pump (this corresponds to the serial number shown on the back of the Combo)
-10. _Bluetooth address_: The Combo's 6-byte Bluetooth address, shown in the `XX:XX:XX:XX:XX:XX` format
+8. _Базовая базальная скорость_: Активная базовая базальная скорость ("база" означает базовую скорость без временных TBR. влияющих на коэффициент скорости базала)
+9. _Серийный номер_: Серийный номер, указанный помпой (соответствует номеру на задней панели Combo)
+10. _Адрес Bluetooth_: адрес Combo в 6-байтном формате `XX:XX:XX:XX:XX`
 
-The Combo can be operated through Bluetooth in the _remote-terminal_ mode or in the _command_ mode. The remote-terminal mode corresponds to the "remote control mode" on the Combo's meter, which mimics the pump's LCD and four buttons. Some commands have to be performed in this mode by the driver, since they have no counterpart in the command mode. That latter mode is much faster, but, as said, limited in scope. When the remote-terminal mode is active, the current remote-terminal screen is shown in the field that is located just above the Combo drawing at the bottom. When the driver switches to the command mode however, that field is left blank.
+Combo может управляться при помощи Bluetooth в режиме _удаленного терминала_ или в режиме _команд_. The remote-terminal mode corresponds to the "remote control mode" on the Combo's meter, which mimics the pump's LCD and four buttons. Some commands have to be performed in this mode by the driver, since they have no counterpart in the command mode. That latter mode is much faster, but, as said, limited in scope. When the remote-terminal mode is active, the current remote-terminal screen is shown in the field that is located just above the Combo drawing at the bottom. When the driver switches to the command mode however, that field is left blank.
 
 (The user does not influence this; the driver fully decides on its own what mode to use. This is merely a note for users to know why sometimes they can see Combo frames in that field.)
 
