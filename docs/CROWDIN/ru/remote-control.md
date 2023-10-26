@@ -76,7 +76,7 @@ The overall process is as follows:
 
 1) **Download an authenticator**: On the caregiver phone, download (from the App store or Google play) and install one authenticator of your choice from the list below:
 
-[**Authy**](https://authy.com/download/)
+[**Приложение Authy**](https://authy.com/download/)
 
 [**Google Authenticator - Android / iOS**](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&pli=1)
 
@@ -242,7 +242,7 @@ If you don’t get a response to an SMS command it could be for one of these rea
 
 #### Q. Why am I getting multiple SMS texts of the same message?
 
-If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip+, for example. If so, please ensure that xDrip+ (or any other app) does not upload treatments to NightScout.
+If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. Например, с xDrip+. If so, please ensure that xDrip+ (or any other app) does not upload treatments to NightScout.
 
 #### Q. I’ve just set up SMS commands and I am now getting far too many text messages. Can I reduce the frequency, or make them stop?
 

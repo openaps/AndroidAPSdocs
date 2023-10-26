@@ -235,46 +235,39 @@ DynamicISF was added in AAPS version 3.2 and requires you to start Objective 11 
 
 Please note that to use Dynamic ISF effectively, the AndroidAPS database needs a minimum of five days of data.
 
-DynamicISF adapts the insulin sensitifty factor dynamically based on total daily dose of insulin (TDD) and current and predicted blood glucose values. The only user selected parameter is the DynamicISF Adjustment Factor % found under Preferences > OpenAPS SMB. Select a value below 100% to make the DynamicISF effect less aggressive and greater than 100% to make it more aggressive. It is recommended that you start with a small value (less than 100%) and monitor your blood glucose levels closely.
+DynamicISF adapts the insulin sensitifty factor dynamically based on total daily dose of insulin (TDD) and current and predicted blood glucose values.
 
-Dynamic ISF uses Chris WIlson's model to determine ISF instead of a static profile settings. This is applied only in the openAPSSMB plugin. The openAPSAMA plugin continues to use profile settings for ISF.
+Dynamic ISF uses Chris Wilson’s model to determine ISF instead of a static profile settings.
 
-The equation implemented is: ISF = 277700 / ( BG * TDD )
+The equation implemented is: ISF = 1800 / (TDD * Ln (( glucose / insulin divisor) +1 ))
 
-The implementation here splits the use into two. One to calculate current ISF for use with predictions, the other to calculate future ISF for use with dosing.
+The implementation uses the equation to calculate current ISF and in the oref1 predictions for IOB, ZT and UAM. It is not used for COB.
 
-### Current ISF
+### GTD
 
-This uses a combination of the 7 day average TDD and a linear extrapolation of the pumps current total insulin delivered to calculate a TDD for today.
+This uses a combination of the 7 day average TDD, the previous day’s TDD and a weighted average of the last eight hours of insulin use extrapolated out for 24 hours. The total daily dose used in the above equation is weighted one third to each of the above values.
 
-The total daily dose used in the above equation is generally weighted 40% to the 7 day average and 60% to the extrapolation from the pump data. There are some special cases where this isn't applied. Bunlar:
+### Insulin Divisor
 
-* *When the time is earlier than 5am and the pump TDD is greater than 7 day TDD* 
-* *When the time is earlier than 7am and the pump TDD is less than 80% of 7 day TDD*
-
-In both these cases, a value of 80% of TDD is used in the caluclation.
-
-*When the pump TDD is less than 33% of 7 day TDD*
-
-In this case, the weighting is changed to be 75% pump TDD, 25% 7 day average TDD.
-
-The dynamic ISF value is still adjusted when setting an activity or eating soon temp target, as per the standard oref model.
-
-### Future ISF
-
-Future ISF uses the same TDD value as generated above. It then uses different glucose values dependent on the case:
-
-If delta is +ve or zero, or delta is negative but predicted glucose is above target, the future ISF value used for determining insulin required is the same as the current ISF.
-
-If delta is -ve, and the predicted glucose level is below target, then the future ISF value is used, as this is a less aggressive value.
+The insulin divisor depends on the peak of the insulin used and is inversely proportional to the peak time. For Lyumjev this value is 75, for Fiasp, 65 and regular rapid insulin, 55.
 
 ### Dynamic ISF Adjustment Factor
 
-The 1.5 version of the code includes an adjustment factor that allows the user to specify a value between 1% and 300%. This acts as a multiplier on the TDD value and results in the ISF values becoming smaller (ie more insulin required to move glucose levels a small amount) as the value is increased above 100% and larger (ie less insulin required to move glucose levels a small amount) as the value is decreased below 100%.
+The adjustment factor allows the user to specify a value between 1% and 300%. This acts as a multiplier on the TDD value and results in the ISF values becoming smaller (ie more insulin required to move glucose levels a small amount) as the value is increased above 100% and larger (ie less insulin required to move glucose levels a small amount) as the value is decreased below 100%.
 
-### Autosens and sensitivity ratio
+### Future ISF
 
-In this version of the code, the autosens value no longer uses the traditional oref1 deviation based model and instead uses rolling 24 hour TDD / 7-day average TDD. This is used to adjust basal and targets when the options are selected in preferences.
+Future ISF is used in the dosing decisions that oref1 makes. Future ISF uses the same TDD value as generated above, taking the adjustment factor into account. It then uses different glucose values dependent on the case:
+
+* If levels are flat, within +/- 3mg/dl, and predicted BG is above target, a combination of 50% minimum predicted BG and 50% current BG is used.
+
+* If eventual BG is above target and glucose levels are increasing, or eventual BG is above current BG, current BG is used.
+
+Otherwise, minimum predicted BG is used.
+
+### Otoduyarlılık
+
+DynamicISF replaces the traditional oref1 deviation based Autosens model and instead uses rolling 24 hour TDD / 7-day average TDD. This is used to adjust basal and targets when the options are selected in preferences.
 
 (Open-APS-features-overview-of-hard-coded-limits)=
 

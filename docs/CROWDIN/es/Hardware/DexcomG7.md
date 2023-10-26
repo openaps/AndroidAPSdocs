@@ -1,13 +1,5 @@
 # Dexcom G7
 
-```{admonition} Only available in dev branch
-:class: nota
-
-Esta función sólo está disponible en la rama dev y no en la master.
-
-Por favor, ten en cuenta las advertencias y sigue las instrucciones en [Construyendo la versión dev](../Installing-AndroidAPS/Dev_branch.md). [building a dev version](../Installing-AndroidAPS/Dev_branch.md).
-
-```
 
 ## Fundamental por adelantado
 
@@ -20,6 +12,8 @@ Existen **dos** posibilidades (a partir del 02/'23).
 ![DexcomG7.md](../images/DexcomG7.png)
 
 ## 1.  Aplicación Dexcom G7 parcheada
+
+**Note: AAPS 3.2.0.0 or higher is required!**
 
 ### Instale una nueva aplicación parcheada de G7 e inicia el sensor.
 
@@ -35,11 +29,7 @@ Sigue las recomendaciones generales para la higiene del MCG y la colocación del
 
 Tras la fase de calentamiento, los valores se muestran como de costumbre en la aplicación G7.
 
-### Crear una nueva APK firmada desde la rama de desarrollo (dev)
-
-Para poder recibir los valores de la aplicación G7 en AAPS y suavizar los valores recibidos, es necesario realizar un cambio en AAPS.
-
-Por lo tanto, crea una nueva APK firmada desde la rama de desarrollo oficial e instálala en tu teléfono.
+### Configuration in AAPS
 
 Para la configuración en AAPS
 - Selecciona "BYODA" en la tabla de configuraciones, aunque no sea la aplicación BYODA.

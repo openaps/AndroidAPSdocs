@@ -6,14 +6,6 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 * * *
 
-### EOPatch2 ([Homepage](http://www.eoflow.com/eng/main/main.html))
-
-**Loop status:** Is a hot Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea). Without commitment look out for AAPS 3.2.
-
-** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, It seems to be BT enabled.
-
-* * *
-
 ### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
 **Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
@@ -28,7 +20,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
-** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, It's BT enabled.
+**Hardware requirement for AAPS:** Probably none. It's BT enabled.
 
 * * *
 
@@ -92,7 +84,7 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
-** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, It's BT enabled.
+**Hardware requirement for AAPS:** Probably none. It's BT enabled.
 
 **Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 

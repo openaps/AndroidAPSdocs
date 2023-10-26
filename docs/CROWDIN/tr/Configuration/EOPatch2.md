@@ -1,7 +1,5 @@
 # EOPatch2 Kullanım Kılavuzu
 
-**AAPS 3.2 (sonraki sürüm) için planlandı ancak taahhüt edilmedi!**
-
 EOPatch pompası, NovoRapid veya Humalog gibi hızlı etkili U-100 tipi insülin kullanımını gerektirir. Doktorunuzun reçetesine göre sizin için uygun olan hızlı etkili bir insülin kullanın ve reçete edilen dozu enjekte edin.
 
 EOpatch kullanılırken en küçük enjekte edilebilir insülin dozu 0,05 ünitedir. Bu nedenle, bazal Profili minimum 0,05 Ü/sa veya 0,05 Ü/saatin katları olacak şekilde daha yüksek bir değere ayarlanmalıdır. Aksi taktirde Profildeki tahmini toplam infüzyon miktarı ile pompadaki gerçek infüzyon miktarı arasında bir hata olabilir. Aynı şekilde, bolus da minimum infuzyon miktarı 0,05 Ü olarak ayarlanmalıdır.

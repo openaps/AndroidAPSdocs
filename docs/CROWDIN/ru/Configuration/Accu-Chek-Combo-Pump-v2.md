@@ -1,6 +1,6 @@
 # Помпа Accu Chek Combo
 
-These instructions are for setting up the Accu-Chek Combo pump using the new combov2 driver, which is available as part of AndroidAPS as of version 3.2. This driver is entirely separate from the old one.
+Эти инструкции касаются настройки помпы Accu-Chek Combo с помощью нового драйвера combov2, который является составной частью AAPS начиная с версии 3.2. Этот драйвер никак не связан со старым.
 
 **Настоящее ПО является частью самодеятельной разработки, а не готовым программным продуктом. От ВАС потребуется прочитать, изучить и понять систему и то, как ей пользоваться. Она не контролирует диабет за вас, но позволит улучшить компенсацию и качество жизни, если вы готовы уделить ей достаточно времени. Не бросайтесь в систему сломя голову, дайте себе время на изучение. Только вы несете ответственность за то, что делаете.**
 
@@ -8,29 +8,29 @@ These instructions are for setting up the Accu-Chek Combo pump using the new com
 
 * A Roche Accu-Chek Combo (any firmware, they all work).
 * Устройство Smartpix или Realtyme с приложением "360" для конфигурирования помпы под свои параметры. По вашему запросу фирма Roche бесплатно вышлет устройства и По. (как всегда, Россия здесь исключение. По крайней мере, переводчику данной документации ничего не выслали. Возможно, надо разговаривать с сотрудниками или руководителями фирмы, а не с агентами, чьи контакты нам обычно дают при установке помпы)
-* A compatible phone. Android 9 (Pie) or newer is a must. If using LineageOS, the minimum supported version is 16.1. See [release notes](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Releasenotes.html#android-version-and-aaps-version) for details.
-* The AndroidAPS app installed on your phone.
+* A compatible phone. Android 9 (Pie) или новее является обязательным ьтребованием. При использовании кастомных прошивок LineageOS минимальная поддерживаемая версия - 16.1. See [release notes](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Releasenotes.html#android-version-and-aaps-version) for details.
+* Приложение AAPS на вашем телефоне.
 
-Some phones may work better than others, depending on their quality of Bluetooth support and whether or not they have additional, very aggressive power saving logic. Список телефонов можно найти в документе [Телефоны, работающие с AAPS](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). Пожалуйста, имейте в виду, что это не полный список и отражает личный опыт пользователей. Вам предлагается также делиться результатами вашего опыта и тем самым помогать другим (все подобные проекты основаны на идеологии бескорыстной помощи).
+Некоторые телефоны работают лучше, чем другие, в зависимости от качества поддержки Bluetooth и от того, имеют ли они дополнительный, агрессивный алгоритм экономии энергии. Список телефонов можно найти в документе [Телефоны, работающие с AAPS](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit). Пожалуйста, имейте в виду, что это не полный список и отражает личный опыт пользователей. Вам предлагается также делиться результатами вашего опыта и тем самым помогать другим (все подобные проекты основаны на идеологии бескорыстной помощи).
 
 (combov2-before-you-begin)=
 ## Before you begin
 
-**SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error. Keep your Smartpix / Realtyme device handy, along with the 360 Configuration Software. Plan on spending about an hour for setting everything up and checking that everything is working properly.
+**БЕЗОПАСНОСТЬ ПРЕЖДЕ ВСЕГО** - не пытайтесь выполнять эти действия в среде, где нет возможности сделать исправление ошибки. Keep your Smartpix / Realtyme device handy, along with the 360 Configuration Software. Планируйте потратить около часа на настройку и на проверку, что все работает правильно.
 
-Be aware of the following limitations:
+Помните о следующих ограничениях:
 
-* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../Usage/Extended-Carbs.rst) instead).
-* Only one basal profile (the first one) is supported.
+* Пролонгированный болюс и многоволновый болюс не поддерживаются (вместо них можно применять [Расширенные углеводы](../Usage/Extended-Carbs.rst)).
+* Поддерживается только один базальный профиль (первый).
 * The loop is disabled if the currently active profile on the pump isn't profile no. 1. This continues until profile no. 1 is made the active one; when that is done, the next time AAPS connects (either on its own after a while or because the user presses the Refresh button in the combov2 user interface), it will notice that profile no. 1 is the current one, and enable the loop again.
-* If the loop requests a running TBR to be cancelled, the Combo will set a TBR of 90% or 110% for 15 minutes instead. This is because actually cancelling a TBR causes an alert on the pump which causes a lot of vibrations, and these vibrations cannot be disabled.
+* Если алгоритм цикла запрашивает отмену текущей временной скорости базала (TBR), Combo на 15 минут установит ВБС (TBR) в 90% или 110%. This is because actually cancelling a TBR causes an alert on the pump which causes a lot of vibrations, and these vibrations cannot be disabled.
 * Стабильность соединения по bluetooth различна в разных телефонах и может вызвать оповещение "помпа недоступна" когда соединение разорвано. Если возникает эта ошибка, убедитесь, что Bluetooth включен, нажмите кнопку "обновить" на вкладке Комбо и проверьте, устранена ли проблема и если соединение не восстановится, перезагрузите телефон, что обычно исправляет ошибку.
 * There is another issue were a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth stack), before the pump accepts connections from the phone again.
 * Следует избегать программирования временного базала TBR на помпе, так как контроль над TBR задается алгоритмом AAPS. Обнаружение нового временного базала TBR на помпе может занять до 20 минут, а его действие принимается в расчет алгоритмом AAPS с момента обнаружения, так что в худшем случае TBR не будет учтен как активный инсулин IOB в течении 20 минут.
 
-If you have been using the old Combo driver that depends on the separate Ruffy app, and want to move to this new one, note that the pairing has to be done again - Ruffy and the new Combo driver are not able to share pairing information. Also, make sure that Ruffy is _not_ running. If in doubt, long-press the Ruffy app icon to bring up a context menu. In that menu, press on "App Info". In the UI that just opened up, press "Force stop". That way, it is ensured that an active Ruffy instance cannot interfere with the new driver.
+Если вы использовали старый драйвер Combo, который зависит от отдельного приложения Ruffy, и хотите перейти к этому новому, имейте в виду, что сопряжение должно быть сделано заново - Ruffy и новый драйвер Combo не могут обмениваться информацией о сопряжении. Также убедитесь при этом, что Ruffy _не_ запущен. Если сомневаетесь, выполните долгое нажатие на значок приложения Ruffy, чтобы вызвать контекстное меню. In that menu, press on "App Info". In the UI that just opened up, press "Force stop". That way, it is ensured that an active Ruffy instance cannot interfere with the new driver.
 
-Also, if you are migrating from the old driver, be aware that the new driver communicates a bolus command in an entirely different way to the Combo that is much faster, so don't be surprised when a bolus starts immediately regardless of the dosage. Furthermore, the general suggestions, tips and tricks etc. about dealing with Ruffy pairing and connection problems do not apply here, since this is an entirely new driver that shares no code with the old one.
+Также, если вы переходите со старого драйвера, имейте в виду, что новый драйвер передает команду на болюс по-другому, гораздо быстрее, чем Combo, и не удивляйтесь, что болюс подается сразу же, независимо от дозировки. Furthermore, the general suggestions, tips and tricks etc. about dealing with Ruffy pairing and connection problems do not apply here, since this is an entirely new driver that shares no code with the old one.
 
 This new driver is currently written to support the following languages on the Combo. (This is unrelated to the language in AAPS - it is the language shown on the Combo's LCD itself.)
 
@@ -48,35 +48,35 @@ This new driver is currently written to support the following languages on the C
 * Хорватский
 * Голландский
 * Греческий
-* Finnish
+* Финский
 * Norwegian
 * Португальский
 * Шведский
 * Danish
 * Немецкий
-* Slovenian
+* Словенский
 * Литовский
 
-**Important**: If your pump is set to a language that is not part of this list, please contact the developers, and set the pump's language to one in this list. Otherwise, the driver won't work properly.
+**Важно** Если ваша помпа использует язык, не входящий в этот список, свяжитесь с разработчиками, чтобы они добавили ваш язык в этот список. В противном случае драйвер не будет работать должным образом.
 
-## Phone setup
+## Настройка телефона
 
-It is very important to make sure that battery optimizations are turned off. AAPS already auto-detects when it is subject to these optimizations, and requests in its UI that these be turned off. But, on modern Android phones, Bluetooth _itself_ is an app (a system app). And, usually, that "Bluetooth app" is run _with battery optimizations on by default_. As a result, Bluetooth can refuse to respond when the phone aims to save power because it kills off the Bluetooth app. This means that in that Bluetooth system app's settings, battery optimizations must be turned off as well. Unfortunately, how one can find that Bluetooth system app differs between phones. In stock Android, go to Settings -> Apps -> See all N apps (N = the number of apps on your phone). Then, open the menu to the top right corner, tap on "Show system" or "Show system apps" or "All apps". Now, in the newly expanded list of apps, look for a "Bluetooth" app. Select it, and on its "App info" UI, tap on "Battery". There, disable battery optimizations (sometimes called "battery usage").
+It is very important to make sure that battery optimizations are turned off. AAPS already auto-detects when it is subject to these optimizations, and requests in its UI that these be turned off. Но, на современных телефонах Android, Bluetooth _сам_ является приложением (системным приложением). And, usually, that "Bluetooth app" is run _with battery optimizations on by default_. As a result, Bluetooth can refuse to respond when the phone aims to save power because it kills off the Bluetooth app. This means that in that Bluetooth system app's settings, battery optimizations must be turned off as well. Unfortunately, how one can find that Bluetooth system app differs between phones. На стоковом Android, перейдите в Настройки -> Приложения -> Просмотреть все N приложений (N = количество приложений на вашем телефоне). Затем откройте меню в верхнем правом углу, нажмите на "Системные Приложения" или "Показать системные приложения" или "Все приложения". Теперь в новом расширенном списке приложений найдите приложение Bluetooth. Select it, and on its "App info" UI, tap on "Battery". There, disable battery optimizations (sometimes called "battery usage").
 
-## Combo setup
+## Настройка Combo
 
-* Configure the pump using the Accu-Chek 360 Configuration Software. Если у вас нет этой программы, обратитесь в службу поддержки Акку-Чек. Обычно они высылают диск с программой "360° Pump Configuration Software" и устройство инфракрасной связи SmartPix зарегистрированным пользователям (устройство Realtyme также годится для этих целей).
+* Настройте помпу, используя Конфигурационное программное обеспечение Accu-Chek 360. Если у вас нет этой программы, обратитесь в службу поддержки Акку-Чек. Обычно они высылают диск с программой "360° Pump Configuration Software" и устройство инфракрасной связи SmartPix зарегистрированным пользователям (устройство Realtyme также годится для этих целей).
 
-  - **Required settings** (marked green in screenshots):
+  - **Необходимые настройки** (отмечены зеленым в скриншотах):
 
      * Установите/оставьте конфигурацию меню как "Стандартная", в результате будут показаны только поддерживаемые меню/действия на помпе и уберутся неподдерживаемые (пролонгированный/многоволновый болюс, множественные скорости базала), которые ограничивают функционал помпы в безопасном режиме AAPS.
-     * Verify the _Quick Info Text_ is set to "QUICK INFO" (without the quotes, found under _Insulin Pump Options_).
-     * Set TBR _Maximum Adjustment_ to 500%
-     * Disable _Signal End of Temporary Basal Rate_
-     * Set TBR _Duration increment_ to 15 min
+     * Убедитесь, что _Краткие сведения - текст_ установлен на "КРАТКИЕ СВЕДЕНИЯ" (без кавычек, в разделе _Параметры инсулиновой помпы_).
+     * Установите _Максимум корректировки_ временной скорости базала TBR на 500%
+     * Отключите _Сигнал окончания временного базала_
+     * Установите _приращение длительности_ временного базала на 15 мин
      * Включите Bluetooth
 
-  - **Recommended settings** (marked blue in screenshots)
+  - **Рекомендуемые настройки** (отмечены синим цветом на снимках с экрана)
 
      * Установите сигнал оповещения о малом количестве инсулина в картридже на величину по своему усмотрению
      * Настройте максимальную величину болюса в соответствии с требованиями вашей терапии, но имея в виду защиту от ошибок в программном обеспечении
@@ -94,13 +94,13 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
 ## Activating the driver and pairing it with the Combo
 
-* Select the "Accu-Chek Combo" driver in the [Config builder](../Configuration/Config-Builder). **Important**: There is the old driver, called "Accu-Chek Combo (Ruffy)", in that list as well. Do _not_ select that one.
+* Выберите драйвер "Accu-Chek Combo" в [Конфигураторе](../Configuration/Config-Builder). **Важно**: В списке драйверов помпытакже есть старый драйвер под названием "Accu-Chek Combo (Ruffy)". Его _не_ выбирайте.
 
   ![Screenshot of Config Builder Combo](../images/combo/combov2-config-builder.png)
 
 * Tap the cog-wheel to open the driver settings.
 
-* In the settings user interface, tap on the button 'Pair with pump' at the top of the screen. This opens the Combo pairing user interface. Follow the instructions shown on screen to start pairing. When Android asks for permission to make the phone visible to other Bluetooth devices, press "allow". Eventually, the Combo will show a custom 10-digit pairing PIN on its screen, and the driver will request it. Enter that PIN in the corresponding field.
+* В настройках пользовательского интерфейса нажмите на кнопку "Настройки сопряжения с Accu-Chek Combo" в верхней части экрана. Это откроет интерфейс сопряжения с Combo. Чтобы выполнить сопряжение, следуйте инструкциям на экране. Когда Android запросит разрешение на то, чтобы сделать телефон видимым для других устройств Bluetooth, нажмите "Разрешить". Через некоторое время, на экране Combo появится 10-значный ПИН для сопряжения, и AAPS запросит его. Введите этот PIN-код в соответствующее поле.
 
   ![Screenshot of Combo Pairing UI 1](../images/combo/combov2-pairing-screen-1.png)
 
@@ -112,11 +112,11 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
   ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
 
-* When the driver asks for the 10-digit PIN that is shown on the Combo, and the code is entered incorrectly, this is shown: ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
+* Когда AAPS запрашивает 10-значный PIN-код, отображаемый на Combo, и код введён неправильно, отображается следующее: ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
-* Once pairing is done, the pairing user interface is closed by pressing the OK button in the screen that states that pairing succeeded. After it is closed, you return to the driver settings user interface. The 'Pair with pump' button should now be greyed out and disabled.
+* По завершении сопряжения, интерфейс закрывается нажатием кнопки ОК на экране, на котором также указывается, что сопряжение прошло успешно. После закрытия экрана вы вернетесь в интерфейс настроек драйвера. Кнопка "Сопряжение с помпой" теперь должна стать серой и неактивной.
 
-  The Accu-Chek Combo tab looks like this after successfully pairing:
+  После успешной подключения вкладка Accu-Chek Combo выглядит так:
 
   ![Screenshot of Accu-Chek Combo tab with pairing](../images/combo/combov2-tab-with-pairing.png)
 
@@ -124,20 +124,20 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
   ![Screenshot of Accu-Chek Combo tab without pairing](../images/combo/combov2-tab-without-pairing.png)
 
-* To verify your setup (with the pump **disconnected** from any cannula to be safe!) use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
+* Для проверки настроек, при отключенной помпе в режиме **разъединено**, задайте в AAPS значение временного базала TBR 500% на 15 мин и подайте болюс. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
 
-* On the Combo, it is recommended to enable the key lock to prevent bolusing from the pump, esp. when the pump was used before and using the "quick bolus" feature was a habit.
+* На Combo рекомендуется включить блокировку клавиш для предотвращения подачи болюса, особенно если при прежнем пользовании была привычной "подача быстрого болюса".
 
-## Notes about pairing
+## Замечания к сопряжению
 
-The Accu-Chek Combo was developed before Bluetooth 4.0 was released, and just one year after the very first Android version was released. This is why its way of pairing with other devices is not 100% compatible with how it is done in Android today. To fully overcome this, AAPS would need system level permissions, which are only available for system apps. These are installed by the phone makers into the phone - users cannot install system apps.
+The Accu-Chek Combo was developed before Bluetooth 4.0 was released, and just one year after the very first Android version was released. This is why its way of pairing with other devices is not 100% compatible with how it is done in Android today. To fully overcome this, AAPS would need system level permissions, which are only available for system apps. Они устанавливаются производителями телефонов, пользователи не могут устанавливать системные приложения.
 
-The consequence of this is that pairing will never be 100% without problems, though it is greatly improved in this new driver. In particular, during pairing, Android's Bluetooth PIN dialog can briefly show up and automatically go away. But sometimes, it stays on screen, and asks for a 4-digit PIN. (This is not to be confused with the 10-digit Combo pairing PIN.) Do not enter anything, just press cancel. If pairing does not continue, follow the instructions on screen to retry the pairing attempt.
+The consequence of this is that pairing will never be 100% without problems, though it is greatly improved in this new driver. В частности, во время сопряжения, диалог на ввод Bluetooth-кода может появиться лишь ненадолго и автоматически исчезнуть. Иногда он остается на экране и запрашивает 4-значный PIN-код. (This is not to be confused with the 10-digit Combo pairing PIN.) Do not enter anything, just press cancel. Если сопряжение не продолжается, следуйте инструкциям на экране и повторите попытку подключения.
 
 (combov2-tab-contents)=
-## Accu-Chek Combo tab contents
+## Содержание вкладки Accu-Chek Combo
 
-The tab shows the following information when a pump was paired (items are listed from top to bottom):
+На вкладке показывается следующая информация после сопряжения с помпой (элементы перечислены сверху вниз):
 
 ![Screenshot of Accu-Chek Combo tab with pairing](../images/combo/combov2-tab-with-pairing.png)
 

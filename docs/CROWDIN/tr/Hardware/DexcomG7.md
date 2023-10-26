@@ -1,13 +1,5 @@
 # Dexcom G7
 
-```{admonition} Only available in dev branch
-:class: not
-
-Bu özellik yalnızca dev (geliştirici) sürümünde mevcuttur, master'da mevcut değildir.
-
-Lütfen uyarılara dikkat edin ve [dev sürümü oluşturma](../Installing-AndroidAPS/Dev_branch.md) bölümündeki talimatları izleyin.
-
-```
 
 ## Ön Bilgi
 
@@ -20,6 +12,8 @@ G7 sisteminin G6 ile karşılaştırıldığında ne uygulamada ne de okuyucuda 
 ![DexcomG7.md](../images/DexcomG7.png)
 
 ## 1.  Yamalı Dexcom G7 Uygulaması
+
+**Note: AAPS 3.2.0.0 or higher is required!**
 
 ### Yeni yamalı (!) bir G7 uygulaması kurun ve sensörü başlatın
 
@@ -35,11 +29,7 @@ Yamalı uygulamada sensör kodunu girin.
 
 Isınma aşamasından sonra, değerler her zamanki gibi G7 uygulamasında görüntülenir.
 
-### geliştirici (dev) sürümünde yeni bir imzalı APK oluşturun
-
-AAPS'de G7 Uygulamasından değerleri alabilmek ve alınan değerleri yumuşatmak için bir değişiklik gereklidir.
-
-Bu nedenle, resmi geliştirici sürümü için imzalı yeni bir APK oluşturun ve cep telefonunuza yükleyin.
+### Configuration in AAPS
 
 AAPS'deki yapılandırma için
 - Konfigürasyon ayarlarında 'BYODA'yı seçin - (şimdilik BYODA uygulaması olmasa bile!)
