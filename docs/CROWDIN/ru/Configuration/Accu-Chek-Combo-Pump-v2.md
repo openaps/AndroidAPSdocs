@@ -28,9 +28,9 @@
 * There is another issue were a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth stack), before the pump accepts connections from the phone again.
 * Следует избегать программирования временного базала TBR на помпе, так как контроль над TBR задается алгоритмом AAPS. Обнаружение нового временного базала TBR на помпе может занять до 20 минут, а его действие принимается в расчет алгоритмом AAPS с момента обнаружения, так что в худшем случае TBR не будет учтен как активный инсулин IOB в течении 20 минут.
 
-If you have been using the old Combo driver that depends on the separate Ruffy app, and want to move to this new one, note that the pairing has to be done again - Ruffy and the new Combo driver are not able to share pairing information. Also, make sure that Ruffy is _not_ running. If in doubt, long-press the Ruffy app icon to bring up a context menu. In that menu, press on "App Info". In the UI that just opened up, press "Force stop". That way, it is ensured that an active Ruffy instance cannot interfere with the new driver.
+Если вы использовали старый драйвер Combo, который зависит от отдельного приложения Ruffy, и хотите перейти к этому новому, имейте в виду, что сопряжение должно быть сделано заново - Ruffy и новый драйвер Combo не могут обмениваться информацией о сопряжении. Также убедитесь при этом, что Ruffy _не_ запущен. Если сомневаетесь, выполните долгое нажатие на значок приложения Ruffy, чтобы вызвать контекстное меню. In that menu, press on "App Info". In the UI that just opened up, press "Force stop". That way, it is ensured that an active Ruffy instance cannot interfere with the new driver.
 
-Also, if you are migrating from the old driver, be aware that the new driver communicates a bolus command in an entirely different way to the Combo that is much faster, so don't be surprised when a bolus starts immediately regardless of the dosage. Furthermore, the general suggestions, tips and tricks etc. about dealing with Ruffy pairing and connection problems do not apply here, since this is an entirely new driver that shares no code with the old one.
+Также, если вы переходите со старого драйвера, имейте в виду, что новый драйвер передает команду на болюс по-другому, гораздо быстрее, чем Combo, и не удивляйтесь, что болюс подается сразу же, независимо от дозировки. Furthermore, the general suggestions, tips and tricks etc. about dealing with Ruffy pairing and connection problems do not apply here, since this is an entirely new driver that shares no code with the old one.
 
 This new driver is currently written to support the following languages on the Combo. (This is unrelated to the language in AAPS - it is the language shown on the Combo's LCD itself.)
 
@@ -48,18 +48,18 @@ This new driver is currently written to support the following languages on the C
 * Хорватский
 * Голландский
 * Греческий
-* Finnish
+* Финский
 * Norwegian
 * Португальский
 * Шведский
 * Danish
 * Немецкий
-* Slovenian
+* Словенский
 * Литовский
 
-**Important**: If your pump is set to a language that is not part of this list, please contact the developers, and set the pump's language to one in this list. Otherwise, the driver won't work properly.
+**Важно** Если ваша помпа использует язык, не входящий в этот список, свяжитесь с разработчиками, чтобы они добавили ваш язык в этот список. В противном случае драйвер не будет работать должным образом.
 
-## Phone setup
+## Настройка телефона
 
 It is very important to make sure that battery optimizations are turned off. AAPS already auto-detects when it is subject to these optimizations, and requests in its UI that these be turned off. But, on modern Android phones, Bluetooth _itself_ is an app (a system app). And, usually, that "Bluetooth app" is run _with battery optimizations on by default_. As a result, Bluetooth can refuse to respond when the phone aims to save power because it kills off the Bluetooth app. This means that in that Bluetooth system app's settings, battery optimizations must be turned off as well. Unfortunately, how one can find that Bluetooth system app differs between phones. In stock Android, go to Settings -> Apps -> See all N apps (N = the number of apps on your phone). Then, open the menu to the top right corner, tap on "Show system" or "Show system apps" or "All apps". Now, in the newly expanded list of apps, look for a "Bluetooth" app. Select it, and on its "App info" UI, tap on "Battery". There, disable battery optimizations (sometimes called "battery usage").
 
