@@ -4,7 +4,7 @@
 
 Un pancréas humain fait beaucoup de choses en plus de réguler la glycémie. Cependant, le terme **« Système de pancréas artificiel » (APS)** fait généralement référence à un système qui agit pour maintenir automatiquement les niveaux de glycémie dans les limites de la santé.
 
-La façon basique de faire cela est de détecter les **niveaux de glycémies**, utiliser ces valeurs pour faire des **calculs**, puis d'injecter le montant correct (prédit) d'**insuline** dans le corps. Il répète le calcul régulièrement (quelques minutes), 24h/24, 7j/7. Il utilise des **alarmes** et des **alertes** pour informer l'utilisateur si une intervention ou une attention est nécessaire. Ce système est généralement composé d'un **capteur de glycémie **, d'une **pompe à insuline** et d'une **application** sur un smartphone.
+La façon basique de faire cela est de détecter les **niveaux de glycémies**, utiliser ces valeurs pour faire des **calculs**, puis d'injecter le montant correct (estimé) d'**insuline** dans le corps. Il répète le calcul régulièrement (quelques minutes), 24h/24, 7j/7. Il utilise des **alarmes** et des **alertes** pour informer l'utilisateur si une intervention ou une attention est nécessaire. Ce système est généralement composé d'un **capteur de glycémie **, d'une **pompe à insuline** et d'une **application** sur un smartphone.
 
 Vous pouvez en savoir plus sur les différents systèmes de pancréas artificiels actuellement disponibles et en cours de développement dans cet article de synthèse de 2022 :
 
