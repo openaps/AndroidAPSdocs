@@ -369,3 +369,6 @@ Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm)
 # Garmin
 Therer are a couple of watch faces for Garmin that integrate with xDrip or Nightscout on the [Garmin ConnectIQ store](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30). 
 AAPS Glucose Watch integrates directly with AAPS. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to AAPS. It's not available in the ConnectIQ store yet, since the necessary AAPS plugin is only available from AAPS 3.2. Please contact robert.b on [discord](https://discord.com/invite/4fQUWHZ4Mw) if you want to try it. 
+
+![Screenshot](../images/Garmin_WF.png)
+![Screenshot](../images/Garmin_WF-annotated.png)
