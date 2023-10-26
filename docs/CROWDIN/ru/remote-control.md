@@ -76,7 +76,7 @@ The overall process is as follows:
 
 1) **Download an authenticator**: On the caregiver phone, download (from the App store or Google play) and install one authenticator of your choice from the list below:
 
-[**Authy**](https://authy.com/download/)
+[**Приложение Authy**](https://authy.com/download/)
 
 [**Google Authenticator - Android / iOS**](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&pli=1)
 
