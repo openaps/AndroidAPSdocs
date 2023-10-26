@@ -61,22 +61,22 @@ This new driver is currently written to support the following languages on the C
 
 ## Настройка телефона
 
-It is very important to make sure that battery optimizations are turned off. AAPS already auto-detects when it is subject to these optimizations, and requests in its UI that these be turned off. But, on modern Android phones, Bluetooth _itself_ is an app (a system app). And, usually, that "Bluetooth app" is run _with battery optimizations on by default_. As a result, Bluetooth can refuse to respond when the phone aims to save power because it kills off the Bluetooth app. This means that in that Bluetooth system app's settings, battery optimizations must be turned off as well. Unfortunately, how one can find that Bluetooth system app differs between phones. In stock Android, go to Settings -> Apps -> See all N apps (N = the number of apps on your phone). Then, open the menu to the top right corner, tap on "Show system" or "Show system apps" or "All apps". Now, in the newly expanded list of apps, look for a "Bluetooth" app. Select it, and on its "App info" UI, tap on "Battery". There, disable battery optimizations (sometimes called "battery usage").
+It is very important to make sure that battery optimizations are turned off. AAPS already auto-detects when it is subject to these optimizations, and requests in its UI that these be turned off. Но, на современных телефонах Android, Bluetooth _сам_ является приложением (системным приложением). And, usually, that "Bluetooth app" is run _with battery optimizations on by default_. As a result, Bluetooth can refuse to respond when the phone aims to save power because it kills off the Bluetooth app. This means that in that Bluetooth system app's settings, battery optimizations must be turned off as well. Unfortunately, how one can find that Bluetooth system app differs between phones. На стоковом Android, перейдите в Настройки -> Приложения -> Просмотреть все N приложений (N = количество приложений на вашем телефоне). Затем откройте меню в верхнем правом углу, нажмите на "Системные Приложения" или "Показать системные приложения" или "Все приложения". Теперь в новом расширенном списке приложений найдите приложение Bluetooth. Select it, and on its "App info" UI, tap on "Battery". There, disable battery optimizations (sometimes called "battery usage").
 
-## Combo setup
+## Настройка Combo
 
-* Configure the pump using the Accu-Chek 360 Configuration Software. Если у вас нет этой программы, обратитесь в службу поддержки Акку-Чек. Обычно они высылают диск с программой "360° Pump Configuration Software" и устройство инфракрасной связи SmartPix зарегистрированным пользователям (устройство Realtyme также годится для этих целей).
+* Настройте помпу, используя Конфигурационное программное обеспечение Accu-Chek 360. Если у вас нет этой программы, обратитесь в службу поддержки Акку-Чек. Обычно они высылают диск с программой "360° Pump Configuration Software" и устройство инфракрасной связи SmartPix зарегистрированным пользователям (устройство Realtyme также годится для этих целей).
 
-  - **Required settings** (marked green in screenshots):
+  - **Необходимые настройки** (отмечены зеленым в скриншотах):
 
      * Установите/оставьте конфигурацию меню как "Стандартная", в результате будут показаны только поддерживаемые меню/действия на помпе и уберутся неподдерживаемые (пролонгированный/многоволновый болюс, множественные скорости базала), которые ограничивают функционал помпы в безопасном режиме AAPS.
-     * Verify the _Quick Info Text_ is set to "QUICK INFO" (without the quotes, found under _Insulin Pump Options_).
-     * Set TBR _Maximum Adjustment_ to 500%
-     * Disable _Signal End of Temporary Basal Rate_
-     * Set TBR _Duration increment_ to 15 min
+     * Убедитесь, что _Краткие сведения - текст_ установлен на "КРАТКИЕ СВЕДЕНИЯ" (без кавычек, в разделе _Параметры инсулиновой помпы_).
+     * Установите _Максимум корректировки_ временной скорости базала TBR на 500%
+     * Отключите _Сигнал окончания временного базала_
+     * Установите _приращение длительности_ временного базала на 15 мин
      * Включите Bluetooth
 
-  - **Recommended settings** (marked blue in screenshots)
+  - **Рекомендуемые настройки** (отмечены синим цветом на снимках с экрана)
 
      * Установите сигнал оповещения о малом количестве инсулина в картридже на величину по своему усмотрению
      * Настройте максимальную величину болюса в соответствии с требованиями вашей терапии, но имея в виду защиту от ошибок в программном обеспечении
