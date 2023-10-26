@@ -129,10 +129,10 @@ Commands must be sent in English, the response will be in your local language if
 
 ### Basal
 
-- BASAL STOP/CANCEL \* Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
-- BASAL 0.3 \* Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
-- BASAL 0.3 20 \* Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
-- BASAL 30% \* Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
+- BASAL STOP/CANCEL \* Ответ: Для остановки временного базала ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
+- BASAL 0.3 \* Ответ: Для постановки базала на 0.3 ед/ч ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
+- BASAL 0.3 20 \* Ответ: Для постановки базала 0.3 ед/ч на 20 мин ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
+- BASAL 30% \* Ответ: Для постановки базала 30% ед/ч на 30 мин. ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом
 - BASAL 30% 50 \* Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
 
 ### Bolus
