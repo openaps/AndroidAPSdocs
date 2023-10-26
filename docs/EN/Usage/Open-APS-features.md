@@ -213,18 +213,18 @@ The equation implemented is: ISF = 1800 / (TDD * Ln (( glucose / insulin divisor
 
 The implementation uses the equation to calculate current ISF and in the oref1 predictions for IOB, ZT and UAM. It is not used for COB.
 
-###TDD
+### TDD
 This uses a combination of the 7 day average TDD, the previous day’s TDD and a weighted average of the last eight hours of insulin use extrapolated out for 24 hours.
 The total daily dose used in the above equation is weighted one third to each of the above values.
 
-###Insulin Divisor
+### Insulin Divisor
 The insulin divisor depends on the peak of the insulin used and is inversely proportional to the peak time.
 For Lyumjev this value is 75, for Fiasp, 65 and regular rapid insulin, 55.
 
-###Dynamic ISF Adjustment Factor
+### Dynamic ISF Adjustment Factor
 The adjustment factor allows the user to specify a value between 1% and 300%. This acts as a multiplier on the TDD value and results in the ISF values becoming smaller (ie more insulin required to move glucose levels a small amount) as the value is increased above 100% and larger (ie less insulin required to move glucose levels a small amount) as the value is decreased below 100%.
 
-###Future ISF
+### Future ISF
 
 Future ISF is used in the dosing decisions that oref1 makes. 
 Future ISF uses the same TDD value as generated above, taking the adjustment factor into account. It then uses different glucose values dependent on the case:
@@ -235,7 +235,7 @@ Future ISF uses the same TDD value as generated above, taking the adjustment fac
 
 Otherwise, minimum predicted BG is used.
 
-###Autosens
+### Autosens
 DynamicISF replaces the traditional oref1 deviation based Autosens model and instead uses rolling 24 hour TDD / 7-day average TDD. This is used to adjust basal and targets when the options are selected in preferences.
 
 (Open-APS-features-overview-of-hard-coded-limits)=
