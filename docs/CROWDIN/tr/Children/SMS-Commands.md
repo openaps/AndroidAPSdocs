@@ -5,7 +5,7 @@
 - AAPS, çocuğunuzun telefonunu kısa mesaj yoluyla uzaktan kontrol etmenizi sağlar. Bu SMS kominikatörü etkinleştirirseniz, uzak komutlar verecek şekilde ayarlanmış telefonun çalınabileceğini unutmayın. Bu yüzden her zaman en azından bir PIN kodu ile telefonu koruyun. Güçlü bir parola veya biyometrik doğrulama önerilir.
 - Ayrıca, SMS komutları için [ikinci bir telefon numarasına](SMS-Commands-authorized-phone-numbers) izin verilmesi önerilir. Böylece komut gönderdiğiniz ana telefonunuzun kaybolması veya çalınması durumunda SMS iletişimini [geçici olarak devre dışı bırakmak](SMS-Commands-other) için ikinci numarayı kullanabilirsiniz.
 - AAPS ayrıca bolus veya profil değişikliği gibi uzak komutlarınızın gerçekleşip gerçekleşmediğini kısa mesajla size bildirecektir. Alıcı telefonlardan birinin çalınması durumuna karşı en az iki farklı telefon numarasına onay metinleri gönderilecek şekilde ayarlamanız önerilir.
-- **SMS Komutları aracılığıyla bolus yaparsanız, Nightscout (NSClient, Web Sitesi...) ya da sms aracılığıyla karbonhidrat girmelisiniz!** Bunu yapmazsanız, aktif insülin çok düşük aktif karbonhidrat ile doğrulanır ve AAPS çok fazla aktif insülininiz olduğunu varsaydığından potansiyel olarak düzeltme bolusu yapılmamasına veya bazal iptaline yol açar.
+- **If you bolus through SMS Commands you must enter carbs through Nightscout (AAPSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
 - AAPS sürüm 2.7'den itibaren, SMS komutlarını kullanırken güvenliği artırmak için zamana dayalı tek seferlik parolaya sahip bir kimlik doğrulama uygulaması (google authenticator) kullanılmaktadır.
 
 ## SMS Komutları kurulumu
@@ -14,9 +14,9 @@
 :alt: SMS Komutları kurulumu
 ```
 
-- AAPS takipçileri geçici hedef ayarlamalarının çoğunu, internet bağlantısı olan bir Android telefonda [NSClient uygulamasında](../Children/Children.md) yapılabilirler.
+- Most of the adjustments of temp targets, following AAPS etc. can be done on [AAPSClient app](../Children/Children.md) on an Android phone with an internet connection.
 - Boluslar Nightscout üzerinden verilemez, ancak SMS komutlarını kullanabilirsiniz.
-- Takipçi olarak bir iPhone kullanıyorsanız ve bu nedenle NSClient uygulamasını kullanamıyorsanız, ek SMS komutları mevcuttur.
+- If you use an iPhone as a follower and therefore cannot use AAPSClient app, there are additional SMS commands available.
 - Android telefon ayarınızda Uygulamalar > AndroidAPS > İzinler'e gidin ve SMS'i etkinleştirin
 
 (SMS-Commands-authorized-phone-numbers)=
@@ -158,7 +158,7 @@ Son gerçekleşen bolus komutundan sonra 15 dakika için uzaktan bolusa izin ver
 ### Diğer
 
 - TREATMENTS REFRESH \* Yanıt: Tedavileri NS'den yenile
-- NSCLIENT RESTART \* Yanıt: NSCLIENT tekrar başlatılıyor 1 alıcı
+- AAPSClient RESTART \* Response: AAPSClient RESTART 1 receivers
 - PUMP \* Yanıt: Son Bağlantı: 1dk önce Geçici: 0.00Ü/sa @11:38 5/30dk. AİNS: 0.5U Rezerv: 34Ü Pil: 100
 - PUMP CONNECT \* Yanıt: Pompa yeniden bağlandı
 - PUMP DISCONNECT *30* \* Yanıt: *30* dakika boyunca pompanın bağlantısını kesmek için Kullanıcı için Authenticator uygulamasından gelen kodu ve ardından PIN kodunu girerek yanıt verin
