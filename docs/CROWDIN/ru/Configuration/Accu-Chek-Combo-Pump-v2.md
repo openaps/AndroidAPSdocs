@@ -94,7 +94,7 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
 ## Activating the driver and pairing it with the Combo
 
-* Select the "Accu-Chek Combo" driver in the [Config builder](../Configuration/Config-Builder). **Important**: There is the old driver, called "Accu-Chek Combo (Ruffy)", in that list as well. Do _not_ select that one.
+* Выберите драйвер "Accu-Chek Combo" в [Конфигураторе](../Configuration/Config-Builder). **Важно**: В списке драйверов помпытакже есть старый драйвер под названием "Accu-Chek Combo (Ruffy)". Его _не_ выбирайте.
 
   ![Screenshot of Config Builder Combo](../images/combo/combov2-config-builder.png)
 
