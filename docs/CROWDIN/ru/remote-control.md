@@ -242,7 +242,7 @@ If you don’t get a response to an SMS command it could be for one of these rea
 
 #### Q. Why am I getting multiple SMS texts of the same message?
 
-If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip+, for example. If so, please ensure that xDrip+ (or any other app) does not upload treatments to NightScout.
+If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. Например, с xDrip+. If so, please ensure that xDrip+ (or any other app) does not upload treatments to NightScout.
 
 #### Q. I’ve just set up SMS commands and I am now getting far too many text messages. Can I reduce the frequency, or make them stop?
 
