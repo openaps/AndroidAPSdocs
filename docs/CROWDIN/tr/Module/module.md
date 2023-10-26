@@ -37,7 +37,7 @@ Gliflozinler olarak da adlandırılan SGLT-2 inhibitörleri, böbrekte glikozun 
 (module-phone)=
 ### Telefon
 
-AAPS'in mevcut sürümü, Google Android 9.0 veya üzeri bir Android akıllı telefon gerektirir. Bu nedenle, yeni bir telefon düşünüyorsanız, minimum Android 9 önerilir, ancak optimal olarak Android 10 veya 12 seçin. Kullanıcıların, güvenlik nedeniyle AAPS yapılarını güncel tutmaları şiddetle tavsiye edilir, ancak minimum Android 9.0 sürümüne sahip bir cihazı olmayan kullanıcılar için, daha eski Android sürümleri için uygun olan AAPS sürümü 2.6.1.4, için [eski depo.](https://github.com/miloskozak/AAPS) ya bakabilirsiniz.
+AAPS'in mevcut sürümü, Google Android 9.0 veya üzeri bir Android akıllı telefon gerektirir. Bu nedenle, yeni bir telefon düşünüyorsanız, minimum Android 9 önerilir, ancak optimal olarak Android 10 veya 12 seçin. For older Android versions, older AAPS versions are available see: [Release notes](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version)
 
 Kullanıcılar bir [test edilmiş telefonlar ve saatler listesi](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) oluşturuyor
 
@@ -49,13 +49,19 @@ E-tabloyla ilgili herhangi bir sorun olursa lütfen [hardware@androidaps.org](ma
 
 AAPS **şu an için** şu pompalarla çalışır;
 
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (ek olarak: telefonunuzda Ruffy uygulaması, LineageOS veya Android 8.1 yüklü olması gerekir)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)  (Old driver that uses the additional Ruffy app)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md) (New driver, available starting with AndroidAPS v.3.2)
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
 - [DanaR](../Configuration/DanaR-Insulin-Pump.md)
-- [Dana-i/RS](../Configuration/DanaRS-Insulin-Pump.md)
-- 2.4 sürümünden [eski bazı Medtronic pompaları](../Configuration/MedtronicPump.md) ([ek iletişim cihazı](module-additional-communication-device) gerekli)
-- [Omnipod Eros](../Configuration/OmnipodEros.md) ([ek iletişim cihazı](module-additional-communication-device) gerekli)
+- [DanaRS](../Configuration/DanaRS-Insulin-Pump.md)
+- [Dana-i](../Configuration/DanaRS-Insulin-Pump.md)
+- [Diaconn G8 ](../Configuration/DiaconnG8.md)
+- [EOPatch2](../Configuration/EOPatch2.md)
+- [Omnipod Eros](../Configuration/OmnipodEros.md)  ([additional communication device](module-additional-communication-device) needed)
 - [Omnipod DASH](../Configuration/OmnipodDASH.md)
+- [Medtrum Nano](../Configuration/MedtrumNano.md)
+- [Medtrum 300U](../Configuration/MedtrumNano.md)
+- Certain older [Medtronic](../Configuration/MedtronicPump.md) ([additional communication device](module-additional-communication-device) needed)
 
 Ek bir iletişim cihazından bahsedilmiyorsa, insülin pompası ve AAPS arasındaki iletişim, iletişim protokolünü çevirmek için ek bir iletişim cihazına ihtiyaç duymadan Android'in entegre bluetooth yığınına dayanır.
 
@@ -89,13 +95,16 @@ Bununla birlikte, tercih edilen pompa olarak DanaR/RS ve Dana-i'nin Combo'ya kar
 
 Bu, AAPS ile uyumlu tüm CGM'lere/FGM'lere kısa bir genel bakıştır. Daha fazla ayrıntı için [buraya](../Configuration/BG-Source.md) bakın. Kısa bir ipucu: glikoz verilerinizi xDrip+ uygulamasında veya Nightscout web sitesinde görüntüleyebiliyorsanız, AAPS'de KŞ kaynağı olarak xDrip+'ı (veya web bağlantılı Nightscout'u) seçebilirsiniz.
 
+- [Dexcom G7](../Hardware/DexcomG7.md): Works with xDrip+ or patched app
 - [Dexcom G6](../Hardware/DexcomG6.md): BOYDA, 3.0 sürümünden itibaren önerilir (ayrıntılar için [sürüm notlarına](Releasenotes-important-hints-3-0-0) bakın). xDrip+ en az 2022.01.14 veya daha yeni sürüm olmalıdır
 - [Dexcom G5](../Hardware/DexcomG5.md): xDrip+ uygulamasıyla veya yamalı Dexcom uygulamasıyla çalışır
 - [Dexcom G4](../Hardware/DexcomG4.md): Bu sensörler oldukça eskidir, ancak bunların nasıl kullanılacağına ilişkin talimatları xDrip+ uygulamasıyla bulabilirsiniz
-- [Libre 2](../Hardware/Libre2.md): xDrip+ ile çalışır (verici gerekmez), ancak kendi yamalı uygulamanızı oluşturmanız gerekir.
+- [Libre 3](../Hardware/Libre3.md): It works with xDrip+ (no transmitter needed)
+- [Libre 2](../Hardware/Libre2.md): It works with xDrip+ (no transmitter needed)
 - [Libre 1](../Hardware/Libre1.md): Bunun için (inşa et veya satın al) Bluecon veya MiaoMiao gibi bir vericiye ve xDrip+ uygulamasına ihtiyacınız var
 - [Eversense](../Hardware/Eversense.md): Şimdiye kadar yalnızca ESEL uygulaması ve yamalı bir Eversense-Uygulaması ile birlikte çalışır (Dana RS ve LineageOS ile çalışmaz ancak DanaRS ve Android veya Combo ve Lineage OS ile çalışır)
 - [Enlite (MM640G/MM630G)](../Hardware/MM640g.md): pek çok ekstra öğe gerekir ve oldukça karmaşıktır
+- [PocTech](../Hardware/PocTech.md)
 
 ### Nightscout
 
@@ -113,7 +122,7 @@ Sistemin temel bileşeni. Uygulamayı yüklemeden önce, apk dosyasını (bir An
 
 ### Akıllı saat
 
-Android Wear 1.x ve sonraki sürümlere sahip herhangi bir akıllı saati seçebilirsiniz. Çoğu looper, telefon kapsama alanı dışındayken bile Dexcom G5/G5'ten okuma alabilen tek saat olduğu için Sony Smartwatch 3 (SWR50) takar. Diğer bazı saatler de bağımsız bir alıcı olarak çalışacak şekilde yamalanabilir (daha fazla ayrıntı için [bu belgelere](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5) bakın).
+Android Wear 1.x ve sonraki sürümlere sahip herhangi bir akıllı saati seçebilirsiniz. Most loopers wear a Sony Smartwatch 3 (SWR50) as it is the only watch that can get readings from Dexcom G6/G5 when phone is out of range. Diğer bazı saatler de bağımsız bir alıcı olarak çalışacak şekilde yamalanabilir (daha fazla ayrıntı için [bu belgelere](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5) bakın).
 
 Kullanıcılar bir [test edilmiş telefonlar ve saatler listesi](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) oluşturuyor. AAPS ile kullanım için [burada](../Configuration/Watchfaces.md) bulabileceğiniz farklı saat arayüzleri vardır.
 

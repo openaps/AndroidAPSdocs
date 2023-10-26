@@ -5,7 +5,7 @@
 - AndroidAPS позволяет вам контролировать телефон ребенка удаленно посредством текстовых сообщений (смс). Если смс-коммуникатор активирован, не забывайте, что телефон, настроенный на подачу удаленных команд, может быть украден. Поэтому всегда защищайте смартфон хотя бы ПИН-кодом. Рекомендуется использовать надежный пароль или биометрические данные.
 - Кроме этого, рекомендуется иметь [второй телефонный номер](SMS-Commands-authorized-phone-numbers) для SMS-команд. В том случае, если основной удаленный телефон будет потерян или украден, можно командой со второго телефона [временно отключить](SMS-Commands-other) SMS-коммуникатор.
 - AndroidAPS также сообщит вам текстовым сообщением, выполнены ли ваши удаленные команды, такие как болюс или изменения профиля. Рекомендуется сделать такую настройку, чтобы подтверждающие тексты направлялись по меньшей мере на два разных телефона на тот случай, если один из них украден.
-- **Если вы подаете болюс через SMS-команды необходимо вводить углеводы через Nightscout (NSClient, сайт...)**Если вы этого не сделаете, AAPS будет считать, что активных углеводов COB слишком мало и, вероятно, не будет подавать корректировочный болюс, полагая, что у вас много активного инсулина.
+- **If you bolus through SMS Commands you must enter carbs through Nightscout (AAPSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
 - Начиная с версии AndroidAPS 2.7 при использовании SMS-команд необходимо использовать приложение-аутентификатор с одноразовым паролем.
 
 ## Настройка SMS-команд
@@ -14,9 +14,9 @@
 :alt: Настройка SMS команд
 ```
 
-- Большинство корректировок временных целей, вслед за ААПС и т. д. может быть сделано при помощи приложения [NSClient](../Children/Children.md) на телефоне Android с интернет-соединением.
+- Most of the adjustments of temp targets, following AAPS etc. can be done on [AAPSClient app](../Children/Children.md) on an Android phone with an internet connection.
 - Болюсы не могут подаваться через Nightscout, но можно использовать SMS-команды.
-- Если у вас для слежения iPhone и, следовательно, нет возможности использовать NSclient, доступны дополнительные SMS-команды.
+- If you use an iPhone as a follower and therefore cannot use AAPSClient app, there are additional SMS commands available.
 - В настройках телефона перейдите в приложения > AndroidAPS > Разрешения и включите SMS
 
 (SMS-Commands-authorized-phone-numbers)=
@@ -158,7 +158,7 @@
 ### Другое
 
 - TREATMENTS REFRESH \* Ответ: Обновление терапии из NS
-- NSCLIENT RESTART \* Ответ: NSCLIENT RESTART 1 получателя
+- AAPSClient RESTART \* Response: AAPSClient RESTART 1 receivers
 - PUMP \* Ответ: Последнее соед: 1 мин. назад -- Врем базал: 0.00ед/ч @11:38 5/30мин IOB: 0.5ед Резервуар: 34ед Бат: 100
 - PUMP CONNECT \* Ответ: Помпа переподключена
 - PUMP DISCONNECT *30* \* Ответ: Чтобы разъединить связь с помпой на *30* минут ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом

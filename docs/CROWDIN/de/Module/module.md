@@ -37,7 +37,7 @@ SGLT-2 Hemmer, auch Gliflozins genannt, hemmen die Resorption (Aufnahme) von Glu
 (module-phone)=
 ### Smartphone
 
-Die aktuelle Version von AAPS erfordert ein Android Smartphone mit Google Android 9.0 oder höher. Solltest Du also über ein neues Smartphone nachdenken, wird mindestens Android 9, idealerweise aber Android 10 oder 12 empfohlen. Aus Sicherhheitsgründen wird Dir dringend empfohlen Deine AAPS-Version immer auf dem letzten Stand zu halten bzw. zu bringen. Wenn Dein Smartphone kein Android 8.0 oder höher haben sollte, steht Dir die AAPS-Version 2.6.1.4 im [alten Repository](https://github.com/miloskozak/AAPS) zur Verfügung. AAPS-Version 2.6.1.4 kann mit älteren Android-Versionen genutzt werden.
+Die aktuelle Version von AAPS erfordert ein Android Smartphone mit Google Android 9.0 oder höher. Solltest Du also über ein neues Smartphone nachdenken, wird mindestens Android 9, idealerweise aber Android 10 oder 12 empfohlen. For older Android versions, older AAPS versions are available see: [Release notes](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version)
 
 Benutzer haben eine [Liste von getesteten Handys und Smartwatches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) erstellt.
 
@@ -49,13 +49,19 @@ Probleme mit der Tabelle bitte per E-Mail an [hardware@androidaps.org](mailto:ha
 
 AAPS funktioniert **derzeit** mit
 
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (zusätzlich werden Ruffy App, LineageOS oder Android 8.1 auf Deinem Smartphone benötigt)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)  (Old driver that uses the additional Ruffy app)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md) (New driver, available starting with AndroidAPS v.3.2)
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
 - [DanaR](../Configuration/DanaR-Insulin-Pump.md)
-- [Dana-i/RS](../Configuration/DanaRS-Insulin-Pump.md)
-- [Einige alte Medtronic Pumpen](../Configuration/MedtronicPump.md) ab AAPS Version 2.4 ([zusätzliches Kommunikationsgerät](module-additional-communication-device) erforderlich)
-- [Omnipod Eros](../Configuration/OmnipodEros.md) ([zusätzliches Kommunikationsgerät](module-additional-communication-device) erforderlich)
+- [Dana RS](../Configuration/DanaRS-Insulin-Pump.md)
+- [Dana-i](../Configuration/DanaRS-Insulin-Pump.md)
+- [Diaconn G8 ](../Configuration/DiaconnG8.md)
+- [EOPatch2](../Configuration/EOPatch2.md)
+- [Omnipod Eros](../Configuration/OmnipodEros.md)  ([additional communication device](module-additional-communication-device) needed)
 - [Omnipod DASH](../Configuration/OmnipodDASH.md)
+- [Medtrum Nano](../Configuration/MedtrumNano.md)
+- [Medtrum 300U](../Configuration/MedtrumNano.md)
+- Certain older [Medtronic](../Configuration/MedtronicPump.md) ([additional communication device](module-additional-communication-device) needed)
 
 Wenn kein zusätzliches Kommunikationsgerät erwähnt wird, kommuniziert die Insulinpumpe mit AAPS direkt über Bluetooth (ohne das ein zwischengeschaltetes Gerät noch etwas umwandeln muss).
 
@@ -89,13 +95,16 @@ Die Vorteile der DanaR/RS und Dana-i vs. der Combo sind aber:
 
 Dies ist nur eine kurze Übersicht über alle mit AAPS kompatiblen CGM/FGM. Weitere Details findest Du [hier](../Configuration/BG-Source.md). Nur ein kurzer Hinweis: Wenn Du Deine Glukose-Daten in der xDrip+ App oder Deiner Nightscout-Website anzeigen kannst, kannst Du xDrip+ (oder Nightscout mit Webverbindung) als BZ-Quelle in AAPS wählen.
 
+- [Dexcom G7](../Hardware/DexcomG7.md): Works with xDrip+ or patched app
 - [Dexcom G6](../Hardware/DexcomG6.md): Ab AAPS version 3.0 wird BYODA empfohlen (vgl. hierzu auch die [Release Notes](Releasenotes-important-hints-3-0-0)). xDrip+ muss mindestens Version 2022.01.14 oder neuer sein
 - [Dexcom G5](../Hardware/DexcomG5.md):  Funktioniert mit xDrip+ oder der gepatchten Dexcom App
 - [Dexcom G4](../Hardware/DexcomG4.md):  Diese Sensoren sind relativ alt, aber es gibt im Netz Anleitungen wie Du sie mit der xDrip+ App verwenden kannst.
-- [Libre 2](../Hardware/Libre2.md): Funktioniert mit xDrip+ (kein Transmitter erforderlich), Du musst aber auch für den Libre 2 eine eigene gepatchte App erstellen.
+- [Libre 3](../Hardware/Libre3.md): It works with xDrip+ (no transmitter needed)
+- [Libre 2](../Hardware/Libre2.md): It works with xDrip+ (no transmitter needed)
 - [Libre 1](../Hardware/Libre1.md): Du benötigst einen Sender wie Bluecon oder MiaoMiao, den Du selbst bauen oder einfach kaufen kannst, und die xDrip+ App.
 - [Eversense](../Hardware/Eversense.md): Funktioniert bisher nur in Kombination mit der ESEL-App und einer gepatchten Eversense-App (funktioniert nicht mit der Kombination Dana RS und LineageOS, jedoch gut mit DanaRS und Android oder Combo und Lineage OS).
 - [Enlite (MM640G/MM630G)](../Hardware/MM640g.md): ziemlich kompliziert mit viel zusätzlichem Aufwand
+- [PocTech](../Hardware/PocTech.md)
 
 ### Nightscout
 
@@ -113,7 +122,7 @@ Die grundlegende Komponente des Systems. Bevor Du die App installierst, musst Du
 
 ### Smartwatch
 
-Jede Smartwatch mit Android 1.x oder höher funktioniert. Viele Looper verwenden eine Sony Smartwatch 3 (SWR50), da diese auch Werte vom Dexcom G5/G6 empfangen kann, wenn sich das Smartphone nicht in Reichweite befindet. Einige andere Smartwatches können so gepatched werden, dass sie als 'Standalone receiver' verwendet werden können (siehe [diese Dokumentation](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5) für weitere Details).
+Jede Smartwatch mit Android 1.x oder höher funktioniert. Most loopers wear a Sony Smartwatch 3 (SWR50) as it is the only watch that can get readings from Dexcom G6/G5 when phone is out of range. Einige andere Smartwatches können so gepatched werden, dass sie als 'Standalone receiver' verwendet werden können (siehe [diese Dokumentation](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5) für weitere Details).
 
 Es gibt eine von AAPS Anwendern erstellte [Liste mit getesteten Smartphones und Smartwatches:](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). Es gibt verschiedene Watchfaces die Du mit AAPS nutzen kannst. Weitere Informationen findest Du [hier](../Configuration/Watchfaces.md).
 
