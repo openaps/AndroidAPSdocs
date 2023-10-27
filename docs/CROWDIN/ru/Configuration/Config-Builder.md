@@ -4,11 +4,11 @@
 
 ![Открыть компоновщик конфигурации](../images/ConfBuild_Open_AAPS30.png)
 
-Конфигуратор (Конф) - это вкладка, на которой можно подключать и отключать модули программы. The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AAPS. Если правая ячейка не активирована, доступ к функциям можно получить из выпадающего меню (D) в левом верхнем углу экрана.
+Конфигуратор (Конф) - это вкладка, на которой можно подключать и отключать модули программы. Ячейки с левой стороны (A) позволяют выбрать, какими модулями программы вы будете пользоваться, ячейки справа (C) позволяют представить эти модули в виде вкладок (E) в AAPS. Если правая ячейка не активирована, доступ к функциям можно получить из выпадающего меню (D) в левом верхнем углу экрана.
 
 Там, где в пределах модуля доступны дополнительные параметры, можно нажать на шестеренку (B), которая их откроет.
 
-**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AAPS. Для его запуска нажмите на меню под тремя точками в правом верхнем углу экрана меню (F) и выберите «Мастер установки».
+**Первая конфигурация:** Начиная с версии 2.0 AAPS процесс создания AAPS контролируется Мастером установки. Для его запуска нажмите на меню под тремя точками в правом верхнем углу экрана меню (F) и выберите «Мастер установки».
 
 ![Опции конфигуратора и шестеренка настроек](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
@@ -24,14 +24,14 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 ## Профиль
 
-* Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
-* As of AAPS 3.0, only the local profile is available.
+* Выберите базальной профиль, который хотите использовать. См. страницу [Профили](../Usage/Profiles.md) для дополнительной информации по установке.
+* Начиная с AAPS 3.0, доступен только локальный профиль.
 
-However, it is possible to synchronise a Nightscout profile into a local profile. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Please see the instructions below. This can be helpful if major changes to a more extensive profile can be entered more easily via the web interface, e.g. to manually copy data from a spreadsheet.
+Тем не менее, можно синхронизировать профиль Nightscout в локальный профиль. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Please see the instructions below. This can be helpful if major changes to a more extensive profile can be entered more easily via the web interface, e.g. to manually copy data from a spreadsheet.
 
 (Config-Builder-local-profile)=
 
-### Local profile
+### Локальный профиль
 
 Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
 
