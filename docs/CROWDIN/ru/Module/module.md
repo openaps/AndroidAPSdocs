@@ -104,7 +104,7 @@ This is just a short overview of all compatible CGMs/FGM with AAPS. For further 
 - [Libre 1](../Hardware/Libre1.md): You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
 - [Eversense](../Hardware/Eversense.md): It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
 - [Enlite (MM640G/MM630G)](../Hardware/MM640g.md): quite complicated with a lot of extra stuff
-- [PocTech](../Hardware/PocTech.md)
+- [Poctech](../Hardware/PocTech.md)
 
 ### Nightscout
 
