@@ -12,8 +12,8 @@
 
 Примечание: AAPS всегда записывает данные в **первый профиль скорости базала в помпе **.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](module-phone) page which Android version is required to run AAPS.)
-* The AAPS app installed on your phone
+* Телефон на Android- (Вообще каждая версия Android будет работать с Insight, но проверьте на странице [ Module ](module-phone), какая версия Android требуется для запуска AAPS.)
+* Приложение AAPS на вашем телефоне
 
 ## Настройки
 
@@ -58,7 +58,7 @@
 
 ![Снимок экрана настроек Insight](../images/Insight_settings.png)
 
-In the Insight settings in AAPS you can enable the following options:
+В настройках Insight в AAPS следует активировать следующие параметры:
 
 * "Отслеживать замены картриджа": При выполнении команды "заполнение инфузионного набора" на помпе, это действие автоматически внесется в журнал как замена картриджа.
 
@@ -118,19 +118,19 @@ In the Insight settings in AAPS you can enable the following options:
 
 ### Вибрация
 
-Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AAPS issues an SMB or TBR emulation delivers an extended bolus).
+В зависимости от версии прошивки, Insight кратко вибрирует при каждой подаче болюса (например, когда AAPS подает супермикроболюс SMB или эмулирует пролонгированный болюс временным базалом ВБС).
 
 * Прошивка 1.х: нет вибрации конструктивно.
 * Прошивка 2.х: вибрация не может быть отключена.
-* Firmware 3.x: AAPS delivers bolus silently. (minimum [version 2.6.1.4](Releasenotes-version-2-6-1-4))
+* Прошивка 3.х: AAPS подает болюс беззвучно. (минимум [версия 2.6.1.4](Releasenotes-version-2-6-1-4))
 
 Версию прошивки можно найти через меню.
 
 ## Замена батареи
 
-Срок службы батареи для Insight в замкнутом цикле составляет от 10 до 14 дней, максимум 20 days. Пользователи, сообщающие об этом, используют литиевые батареи Energizer.
+Срок службы батареи для Insight в замкнутом цикле составляет от 10 до 14 дней, максимум 20 дней. Пользователи, сообщающие об этом, используют литиевые батареи Energizer.
 
-В помпе Insight есть небольшой внутренний аккумулятор для поддержания таких важных функций, как часы, которые продолжают работать при замене батарей помпы. Если смена батареи занимает слишком много времени, то в этой внутренней батарее может кончиться заряд, время на часах будет сброшено, и вам будет предложено ввести новое время и дату после установки новой батарейки. If this happens, all entries in AAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+В помпе Insight есть небольшой внутренний аккумулятор для поддержания таких важных функций, как часы, которые продолжают работать при замене батарей помпы. Если смена батареи занимает слишком много времени, то в этой внутренней батарее может кончиться заряд, время на часах будет сброшено, и вам будет предложено ввести новое время и дату после установки новой батарейки. Если это произойдет, все записи в AAPS до замены батареи больше не будут включены в расчеты, так как правильное время не может быть определено.
 
 (Accu-Chek-Insight-Pump-insight-specific-errors)=
 
@@ -140,7 +140,7 @@ Depending on the firmware version of your pump, the Insight will vibrate briefly
 
 Рекомендуется применять только один растянутый болюс единовременно так как одновременное использование нескольких растянутых болюсов может вызвать ошибки.
 
-### Time out
+### Таймаут
 
 Иногда помпа Insight может не отвечать во время установки соединения. В этом случае AAPS выдает следующее сообщение: "Таймаут сопряжения - выполните сброс bluetooth".
 
