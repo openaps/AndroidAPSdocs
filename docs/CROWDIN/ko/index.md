@@ -158,6 +158,8 @@ Objectives <./Usage/Objectives.md>
 
 OpenAPS features <./Usage/Open-APS-features.md>
 
+Dynamic ISF <./Usage/DynamicISF.md>
+
 COB calculation <./Usage/COB-calculation.md>
 
 Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
