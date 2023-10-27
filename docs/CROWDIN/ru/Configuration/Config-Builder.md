@@ -54,7 +54,7 @@ You can easily create a new local profile from a profile switch. In this case ti
 1. Click 3-dots-menu in upper right corner.
 2. Select 'Treatments'.
 3. Press star symbol to access profile switch page.
-4. Select the desired profile switch and press "Clone".
+4. Выберите желательный профиль и нажмите "клонировать".
 5. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
 
 ![Переключение профиля и клонирование](../images/LocalProfile_ClonePS_AAPS30.png)
@@ -71,18 +71,18 @@ Local profiles can also be uploaded to Nightscout. The settings can be found in 
 
 You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](Preferences-nsclient).
 
-It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
+Необходимо клонировать активные данные всей базы данных Nightscout для профилей, а не просто профиль с синей стрелкой! Новые записи базы данных сохраняют текущую дату и могут быть активированы на вкладке "local profile".
 
 ![Clone database records](../images/Nightscout_Profile_Editor.PNG)
 
 ### Помощник профиля
 
-Profile helper offers two functions:
+Помощник профиля предлагает две функции:
 
 1. Найти профиль для детей
 2. Сравнить два профиля или переключателя профиля, чтобы клонировать новый профиль
 
-Details are explained on the separate [profile helper page](../Configuration/profilehelper.md).
+Подробности разъясняются на отдельной [странице помощника профиля](../Configuration/profilehelper.md).
 
 (Config-Builder-insulin)=
 
@@ -161,7 +161,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 * [Tomato App](http://tomato.cool/) for MiaoMiao device
 * [Glunovo App](https://infinovo.com/) for Glunovo CGM system
 * NSClient BG - not recommended as closed loop relies on mobile data / wifi coverage in this case. CGM data will only be received if there is an online connection to your NS site. Better use local broadcast from one of the other CGM data sources.
-* Random BG: Generates random BG data (Demo mode only)
+* Генерировать случайные данные ГК (только демо-режим)
 
 (Config-Builder-pump)=
 
@@ -248,7 +248,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 ## Цели (обучающая программа)
 
-AAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+AAPS содержит обучающую программу с рядом задач (целей), которые следует выполнить шаг за шагом. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
 You should [export your settings](../Usage/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
 
