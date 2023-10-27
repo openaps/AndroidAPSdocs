@@ -210,9 +210,9 @@ Zuerst solltest du deine Basalrate prüfen und einen Basalratentest ohne Kohlenh
 
 ## Nightscout Einstellungen
 
-### AAPS NSClient sagt 'nicht erlaubt' bzw. 'nicht zugelassen' und lädt keine Daten hoch. Was kann ich tun?
+### AAPSClient says 'not allowed' and does not upload data. Was kann ich tun?
 
-Überprüfe im Nightscout Client die "Verbindungs-Einstellungen". Vielleicht bist Du gerade nicht in einem erlaubten WLAN oder Du hast "Nur während des Ladens" aktiviert und dein Ladekabel ist nicht angeschlossen.
+In AAPSClient check 'Connection settings'. Vielleicht bist Du gerade nicht in einem erlaubten WLAN oder Du hast "Nur während des Ladens" aktiviert und dein Ladekabel ist nicht angeschlossen.
 
 ## CGM Einstellungen
 
@@ -425,16 +425,16 @@ Das Telefon kann AAPS-Dienste oder sogar Bluetooth unterbrechen, wodurch die Ver
 
 3-Punkte-Menü, wähle Behandlungen, dann hast Du verschiedene Optionen zur Verfügung.
 
-## NSClient App konfigurieren und nutzen
+## Configuring and Using the AAPSClient remote app
 
-AAPS kann mit der NSClient remote app (und optional auch mit der zugehörigen Wear app auf einer Android Wear Uhr) aus der Ferne kontrolliert und bedient werden. Zur Klärung und weil es leicht zu Verwechselungen kommen kann: Die NSClient remote app ist nicht die NSClient Konfiguration in AAPS, und die NSClient remote Wear app ist nicht zu verwechseln mit der AAPS Wear app. Wir verwenden im Folgenden für Apps zur Steuerung aus der Ferne die Namen 'NSClient remote' und 'NSClient remote Wear'.
+AAPS can be monitored and controlled remotely via the AAPSClient app and optionally via the associated Wear app running on Android Wear watches. Note that the AAPSClient (remote) app is distinct from the NSClient configuration in AAPS, and the AAPSClient (remote) Wear app is distinct from the AAPS Wear app--for clarity the remote apps will be referred to as 'AAPSClient remote' and 'AAPS remote Wear' apps.
 
-Um die NSClient remote Funktion nutzen zu können musst Du: 1) Die NSClient remote app installieren (die Version sollte zur verwendeten AAPS Version passen) 2) Die NSClient remote app starten und den Einrichtungsassistenten durchlaufen, um die notwendigen Berechtigungen richtig zu setzen und den Zugriff auf Deine Nightsout-Webseite einzurichten. 3) An dieser Stelle kannst Du einige der Alarm-Optionen und/oder der erweiterten Einstellungen ausschalten, die den Start der 'NSClient remote'-App auf Deiner Nightscout-Webseite protokolliert. Sobald das erledigt ist, wird der 'NSClient remote' die aktuellen Profilinformationen von Deiner Nightscout-Webseite herunterladen. Der Startbildschirm wird Deine CGM-Werte und einige AAPS-Daten anzeigen. Es werden noch nicht alle Graphen angezeigt werden und es wird ein Hinweis erscheinen, dass das Profile noch nicht gesetzt wurde. 4) Um das Profil nun zu setzen:
+To enable AAPSClient remote functionality you must: 1) Install the AAPSClient remote app (the version should match the version of AAPS being used) 2) Run the AAPSClient remote app and proceed through the configuration wizard to grant required permissions and configure access to your Nightscout site. 3) At this point you may want to disable some of the Alarm options, and/or advanced settings which log the start of the AAPSClient remote app to your Nightscout site. Once this is done, AAPSClient remote will download Profile data from your Nightscout site, the 'Overview' tab will display CGM data and some AAPS data, but but may not display graph data, and will indicate that a profile isn't yet set. 4) Um das Profil nun zu setzen:
 
 - Aktiviere 'Gespeicherte Profile abrufen' in AAPS (Einstellungen > Nightscout-Client-Einstellungen > Synchronisierung)
-- Setze/Aktiviere das Profil, in dem Du in der 'NSClient remote'-App auf das Profil drückst und mit OK bestätigst. Danach wird das Profil gesetzt und alle Werte aus AAPS sollten in der 'NS Client remote'-App vollständig angezeigt werden. Tipp: Sollte der Graph weiterhin nicht gezeigt werden, ändere die Graphen-Einstellung (langes Drücken auf den Graphen), um so eine Aktualisierung zu erzwingen. Um AAPS über die 'NSClient remote'-App steuern zu können, aktiviere die Funktionen, die aus der Ferne steuerbar sein sollen (z.B. Temporäre Ziele abrufen, Insulin abrufen etc.). Die Einstellungen findest Du in AAPS unter: Einstellungen > Nightscout-Client-Einstellungen > Synchronisierung. Sobald Du die beschriebenen Einstellungen gemacht hast, kannst Du AAPS aus der Ferne (remote) entweder über die Nightscout-Webseite oder die 'NSClient remote'-App steuern.
+- Activate the profile in NSClient remote > Profile After doing so, the profile will be set, and AAPSClient remote should display all data from AAPS. Tipp: Sollte der Graph weiterhin nicht gezeigt werden, ändere die Graphen-Einstellung (langes Drücken auf den Graphen), um so eine Aktualisierung zu erzwingen. 5) To enable remote control by the AAPSClient, selectively enable the aspects of AAPS (Profile changes, Temp Targets, Carbs, etc.) that you would like to be able to control remotely via AAPS > NSClient > Options . Once these changes are made, you'll be able to remotely control AAPS via either Nightscout or AAPSClient remote.
 
-Wenn Du AAPS mit der 'NSClient remote Wear'-App folgen/steuern möchtest, müssen sowohl die 'NSClient remote'-App und auch die zugehörige Wear-App installiert werden. Um die 'NSClient remote Wear'-App zu erstellen (kompilieren), nutze die Standardanleitung bis zu dem Punkt an dem kompiliert werden soll. Wähle hier die Variante 'NSClient' für das Kompilieren.
+If you'd like to monitor/control AAPS via the AAPSClient remote Wear App, you'll need both AAPSClient remote and the associated Wear app to be installed. To compile the AAPSClient remote Wear app, follow the standard instructions for installing/configuring the AAPS wear app, except when compiling it, choose the AAPSClient variant.
 
 ## Ich sehe ein rotes Dreieck / AAPS schließt den Loop nicht / Loop bleibt in LGS / Ich sehe ein gelbes Dreieck
 
