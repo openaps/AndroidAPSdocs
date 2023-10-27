@@ -33,3 +33,7 @@ Future ISF uses the same TDD value as generated above, taking the adjustment fac
 * If eventual BG is above target and glucose levels are increasing, or eventual BG is above current BG, current BG is used.
 
 Otherwise, minimum predicted BG is used.
+
+### Adjust sensitivity and BG setting
+
+This setting replaces Autosens, and uses the last 24h TDD/7D TDD as the basis for adjusting calculated ISF and also for increasing and decreasing basal rate, in the same way that standard Autosens does. 
