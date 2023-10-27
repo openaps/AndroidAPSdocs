@@ -21,7 +21,7 @@
     
     ![Снимок экрана удаления глюкометра из помпы Insight](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../Configuration/Config-Builder) of the AAPS app select Accu-Chek Insight in the pump section
+* В [Конфигураторе](../Configuration/Config-Builder) приложения AAPS выберите Accu-Chek Insight в разделе помпы
     
     ![Снимок экрана конфигуратора Config Builder помпы Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
@@ -40,11 +40,11 @@
     
     ![Снимок экрана сопряжения Insight 3](../images/Insight_Pairing3.png)
 
-* Успешно! Pat yourself on the back for successfully pairing your pump with AAPS.
+* Успешно! Похлопайте себя по спине за успешно выполненную задачу по сопряжению с AAPS.
     
     ![Снимок экрана сопряжения Insight 4](../images/Insight_Pairing4.png)
 
-* To check all is well, go back to Config builder in AAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
+* Чтобы убедиться, что все в порядке, вернитесь к конфигуратору в AAPS и нажмите на значок шестеренки рядом с надписью Помпа Insight, войдите в настройки Insight, затем нажмите на Сопряжение Insight и вы увидите информацию о помпе:
     
     ![Снимок экрана информации о сопряжения Insight](../images/Insight_PairingInformation.png)
 
@@ -62,15 +62,15 @@ In the Insight settings in AAPS you can enable the following options:
 
 * "Отслеживать замены картриджа": При выполнении команды "заполнение инфузионного набора" на помпе, это действие автоматически внесется в журнал как замена картриджа.
 
-* "Log tube changes": This adds a note to the AAPS database when you run the "tube filling" program on the pump.
+* "Отслеживать смену инфузионного набора": При запуске программы помпы "первичное заполнение инфузионного набора" в базе данных AAPS добавляется соответствующая заметка.
 
-* "Log site change": This adds a note to the AAPS database when you run the "cannula filling" program on the pump. ** Примечание: Изменение места установки катетера также сбрасывает Autosens. **
+* "Отслеживать смену места установки катетера": При запуске программы помпы "первичное заполнение инфузионного набора" в базе данных AAPS добавляется соответствующая заметка. ** Примечание: Изменение места установки катетера также сбрасывает Autosens. **
 
 * "Отслеживать замену батареи": При установке нового аккумулятора в помпе в базе данных Aaps добавляется соответствующая заметка.
 
-* "Log operating mode changes": This inserts a note in the AAPS database whenever you start, stop or pause the pump.
+* "Отслеживать изменение режима работы": Это добавляет заметку в базу данных AAPS, когда вы запускаете, останавливаете или приостанавливаете помпу.
 
-* "Log alerts": This records a note in the AAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
+* "Отслеживать оповещения": В базе данных AAPS автоматически делается заметка при оповещениях помпы (за исключением напоминаний, болюсов и отмены временной скорости базала TBR).
 
 * "Разрешить эмуляцию временного базала TBR": помпа Insight может давать только до 250% временной базальной скорости TBR. Чтобы обойти это ограничение, эмуляция временной базальной скорости TBR поручит помпе подать пролонгированный болюс с дополнительным инсулином если запрошенная временная скорость базала превышает 250%.
     
@@ -80,7 +80,7 @@ In the Insight settings in AAPS you can enable the following options:
 
 * "Отключить вибрации при ручной подаче болюса": Это отключает вибрации помпы Insight при автоматической подаче микроболюса SMB или эмуляции временного базала. Этот параметр доступен только для последней версии встроенного ПО Insight (3.x).
 
-* "Recovery duration": This defines how long AAPS will wait before trying again after a failed connection attempt. Можно выбрать от 0 до 20 секунд. Если вы испытываете проблемы с подключением, выберите более длительное время ожидания.   
+* "Длительность восстановления": Это определяет, время ожидания AAPS перед новой попыткой подключения после неудачной. Можно выбрать от 0 до 20 секунд. Если вы испытываете проблемы с подключением, выберите более длительное время ожидания.   
       
     Пример мин. длительности восстановления = 5 и макс. длительности восстановления = 20   
       
@@ -93,11 +93,11 @@ In the Insight settings in AAPS you can enable the following options:
     повторите -> нет соединения -> подождать **20** сек.   
     ...
 
-* "Disconnect delay": This defines how long (in seconds) AAPS will wait to disconnect from the pump after an operation is finished. Значение по умолчанию - 5 секунд.
+* "Задержка при разъединении": Определяет, сколько времени (в секундах) AAPS будет ждать, чтобы отключиться от помпы после завершения операции. Значение по умолчанию - 5 секунд.
 
-For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
+В период, когда помпа не работает, AAPS записывает в логах В БС равную 0%.
 
-In AAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
+В AAPS на вкладке Accu-Chek Insight показано текущее состояние помпы и две кнопки:
 
 * "Обновить": Обновляет состояние помпы
 * "Включить/выключить уведомление TBR": Стандартная помпа Insight издает сигнал по завершении временной TBR. Кнопка позволяет включить или отключить это оповещение без изменения конфигурации программного обеспечения.
@@ -112,7 +112,7 @@ In AAPS, the Accu-Chek Insight tab shows the current status of the pump and has 
 * Меню > Настройки > Параметры устройства > Параметры режима > Тихий > Сигнал > 0 (удалить все полоски)
 * Меню > настройка режимов > режим сигнала > тихий
 
-This will silence all alarms from the pump, allowing AAPS to decide if an alarm is relevant to you. If AAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
+Это уберет звук всех оповещений помпы и позволит AAPS решать, какой сигнал является актуальным для вас. Если AAPS не распознает сигнал, то его громкость увеличится (сначала гудок, затем вибрация).
 
 (Accu-Chek-Insight-Pump-vibration)=
 
