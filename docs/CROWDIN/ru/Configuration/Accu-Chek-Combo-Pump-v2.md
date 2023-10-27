@@ -163,22 +163,22 @@ Combo может управляться при помощи Bluetooth в реж�
 
 (The user does not influence this; the driver fully decides on its own what mode to use. This is merely a note for users to know why sometimes they can see Combo frames in that field.)
 
-At the very bottom, there is the "Refresh" button. This triggers an immediate pump status update. It also is used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](combov2-alerts)).
+В самом низу находится кнопка "Обновить". Она инициирует немедленное обновление статуса помпы. It also is used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](combov2-alerts)).
 
 ## Настройки
 
-These preferences are available for the combo driver (items are listed from top to bottom):
+Эти настройки доступны для драйвера Combo (элементы перечислены сверху вниз):
 
 ![Screenshot of Accu-Chek Combo preferences](../images/combo/combov2-preferences.png)
 
 1. _Pair with pump_: This is a button that can be pressed to pair with a Combo. It is disabled if a pump is already paired.
-2. _Unpair pump_: Unpairs a paired Combo; the polar opposite of item no. 1. It is disabled if no pump is paired.
-3. _Discovery duration (in seconds)_: When pairing, the drivers makes the phone discoverable by the pump. This controls how long that discoverability lasts. By default, the maximum (300 seconds = 5 minutes) is selected. Android does not allow for discoverability to last indefinitely, so a duration has to be chosen.
+2. _Unpair pump_: Unpairs a paired Combo; the polar opposite of item no. 1. Она неактивна, если нет сопряжения с помпой.
+3. _Продолжительность обнаружения (в секундах)_: При сопряжении драйвер делает телефон видимым для помпы. Параметр определяет, сколько длится функция обнаружения. By default, the maximum (300 seconds = 5 minutes) is selected. Android не позволяет, чтобы обнаружение длилось бессрочно, поэтому следует задать продолжительность.
 4. _Autodetect and automatically enter insulin reservoir change_: If enabled, the "reservoir change" action that is normally done by the user through the "prime/fill" button in the Action tab. This is explained [in further detail below](combov2-autodetections).
 5. _Autodetect and automatically enter battery change_: If enabled, the "battery change" action that is normally done by the user through the "pump battery change" button in the Action tab. This is explained [in further detail below](combov2-autodetections).
-6. _Enable verbose Combo logging_: This greatly expands the amount of logging done by the driver. **CAUTION**: Do not enable this unless asked to by a developer. Otherwise, this can add a lot of noise to AndroidAPS logs and lessen their usefulness.
+6. _Enable verbose Combo logging_: This greatly expands the amount of logging done by the driver. **ПРЕДУПРЕЖДЕНИЕ**: Включайте только если об этом вас попросил разработчик. В противном случае это добавит много ненужной информации в логи AAPS и уменьшит их полезность.
 
-Most users only ever use the top two items, the _Pair with pump_ and _Unpair pump_ buttons.
+Большинство пользователей используют только два первых элемента: кнопки _сопряжение с помпой_ и _разъединение с помпой_.
 
 (combov2-autodetections)=
 ## Autodetecting and automatically entering battery and reservoir changes
