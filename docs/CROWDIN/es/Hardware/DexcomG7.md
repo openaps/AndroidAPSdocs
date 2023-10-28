@@ -13,7 +13,7 @@ Existen **dos** posibilidades (a partir del 02/'23).
 
 ## 1.  Aplicación Dexcom G7 parcheada
 
-**Note: AAPS 3.2.0.0 or higher is required!**
+**Nota: Es necesario AAPS 3.2.0.0 o superior.**
 
 ### Instale una nueva aplicación parcheada de G7 e inicia el sensor.
 
@@ -29,7 +29,7 @@ Sigue las recomendaciones generales para la higiene del MCG y la colocación del
 
 Tras la fase de calentamiento, los valores se muestran como de costumbre en la aplicación G7.
 
-### Configuration in AAPS
+### Configuración en AAPS
 
 Para la configuración en AAPS
 - Selecciona "BYODA" en la tabla de configuraciones, aunque no sea la aplicación BYODA.
