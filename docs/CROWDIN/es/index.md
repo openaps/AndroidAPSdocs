@@ -150,35 +150,35 @@ Preferencias <./Configuration/Preferences.md>
 ```
 
 ```{toctree}
-:caption: AAPS Usage
+:caption: Uso de AAPS
 
-AAPS screens <./Getting-Started/Screenshots.md>
+Pantallas de AAPS <./Getting-Started/Screenshots.md>
 
-Objectives <./Usage/Objectives.md>
+Objectivos <./Usage/Objectives.md>
 
-OpenAPS features <./Usage/Open-APS-features.md>
+Características de OpenAPS <./Usage/Open-APS-features.md>
 
-Dynamic ISF <./Usage/DynamicISF.md>
+ISF Dinámico <./Usage/DynamicISF.md>
 
-COB calculation <./Usage/COB-calculation.md>
+Cálculo de COB <./Usage/COB-calculation.md>
 
-Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
+Detección de la sensibilidad <./Configuration/Sensitivity-detection-and-COB.md>
 
-Profile switch <./Usage/Profiles.md>
+Cambio de perfil <./Usage/Profiles.md>
 
-Temp-targets <./Usage/temptarget.md>
+Objetivos temporales <./Usage/temptarget.md>
 
-Extended carbs <./Usage/Extended-Carbs.md>
+Carbohidatos extendidos <./Usage/Extended-Carbs.md>
 
-Automation <./Usage/Automation.md>
+Automatización <./Usage/Automation.md>
 
-Autotune (dev only) <./Usage/autotune.md>
+Autotune (sólo dev) <./Usage/autotune.md>
 
-Careportal (discontinued) <./Usage/CPbefore26.md>
+Portal de cuidados (discontinuado) <./Usage/CPbefore26.md>
 
-Open Humans Uploader <./Configuration/OpenHumans.md>
+Subida de datos a Open Humans <./Configuration/OpenHumans.md>
 
-Automation with 3rd party apps <./Usage/automationwithapp.md>
+Automatización con aplicaciones de terceros <./Usage/automationwithapp.md>
 
 Android auto <./Usage/Android-auto.md>
 
