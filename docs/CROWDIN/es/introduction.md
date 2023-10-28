@@ -42,7 +42,7 @@ Since OpenAPS is only compatible with certain older insulin pumps, **AAPS** (whi
 
 
 
-## What are the basic components of AAPS?
+## ¿Cuáles son los componentes básicos de AAPS?
 
 The “brain” of AAPS is an **app** which you build yourself. There are detailed step-by-step instructions for this. You then install the **AAPS  app** on a [compatible](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit?pli=1#gid=2097219952) **Android smartphone** (**1**). A number of users prefer their loop on a separate phone to their main phone. So, you don’t necessarily have to be using an Android phone for everything else in your life, just for running your AAPS loop.
 
