@@ -4,33 +4,33 @@ ISF Dinámico se añadió en la versión 3.2 de AAPS y necesita que inicies el O
 
 Ten en cuenta que para utilizar ISF Dinámico de manera efectiva, la base de datos de AndroidAPS necesita un mínimo de cinco días de datos.
 
-DynamicISF adapts the insulin sensitifty factor dynamically based on total daily dose of insulin (TDD) and current and predicted blood glucose values.
+ISF Dinámico adapta el factor de sensibilidad a la insulina de manera dinámica en función de la dosis diaria total de insulina (TDD) y los valores actuales y previstos de glucosa en sangre.
 
-Dynamic ISF uses Chris Wilson’s model to determine ISF instead of a static profile settings.
+ISF Dinámico utiliza el modelo de Chris Wilson para determinar el factor de sensibilidad a la insulina (ISF) en lugar de un perfil de configuración estático.
 
-The equation implemented is: ISF = 1800 / (TDD * Ln (( glucose / insulin divisor) +1 ))
+La ecuación implementada es: ISF = 1800 / (TDD * Ln ((glucosa / divisor de insulina) + 1))
 
-The implementation uses the equation to calculate current ISF and in the oref1 predictions for IOB, ZT and UAM. It is not used for COB.
+La implementación utiliza la ecuación para calcular el ISF actual y en las predicciones de oref1 para IOB, ZT y UAM. No se utiliza para el COB.
 
 ### DDT
-This uses a combination of the 7 day average TDD, the previous day’s TDD and a weighted average of the last eight hours of insulin use extrapolated out for 24 hours. The total daily dose used in the above equation is weighted one third to each of the above values.
+Esto utiliza una combinación del promedio de TDD de 7 días, el TDD del día anterior y un promedio ponderado de las últimas ocho horas de uso de insulina proyectado durante 24 horas. La dosis diaria total utilizada en la ecuación anterior se pondera un tercio para cada uno de los valores mencionados anteriormente.
 
-### Insulin Divisor
-The insulin divisor depends on the peak of the insulin used and is inversely proportional to the peak time. For Lyumjev this value is 75, for Fiasp, 65 and regular rapid insulin, 55.
+### Divisor de insulina
+El divisor de insulina depende del pico de la insulina utilizada y es inversamente proporcional al tiempo del pico máximo. Para Lyumjev, este valor es 75, para Fiasp, 65 y para la insulina rápida regular, 55.
 
-### Dynamic ISF Adjustment Factor
-The adjustment factor allows the user to specify a value between 1% and 300%. This acts as a multiplier on the TDD value and results in the ISF values becoming smaller (ie more insulin required to move glucose levels a small amount) as the value is increased above 100% and larger (ie less insulin required to move glucose levels a small amount) as the value is decreased below 100%.
+### Factor de Ajuste de ISF Dinámico
+El factor de ajuste permite al usuario especificar un valor entre el 1% y 300%. Esto actúa como un multiplicador en el valor de TDD y provoca que los valores de ISF se vuelvan más pequeños (es decir, se requiere más insulina para mover los niveles de glucosa) a medida que el valor se incrementa por encima del 100% y más grandes (es decir, se requiere menos insulina mover los niveles de glucosa) a medida que el valor se reduce por debajo del 100%.
 
-### Future ISF
+### ISF Futuro
 
-Future ISF is used in the dosing decisions that oref1 makes. Future ISF uses the same TDD value as generated above, taking the adjustment factor into account. It then uses different glucose values dependent on the case:
+El ISF futuro se utiliza en las decisiones de dosificación que toma oref1. El ISF futuro utiliza el mismo valor de TDD generado anteriormente, teniendo en cuenta el factor de ajuste. Después, utiliza diferentes valores de glucosa dependiendo del caso:
 
-* If levels are flat, within +/- 3mg/dl, and predicted BG is above target, a combination of 50% minimum predicted BG and 50% current BG is used.
+* Si los niveles son estables, dentro de +/- 3 mg/dl, y la glucosa prevista está por encima del objetivo, se utiliza una combinación del 50% de la glucosa prevista mínima y el 50% de la glucosa actual.
 
-* If eventual BG is above target and glucose levels are increasing, or eventual BG is above current BG, current BG is used.
+* Si la glucosa eventual está por encima del objetivo y los niveles de glucosa están aumentando, o la glucosa eventual está por encima de la glucosa actual, se utiliza la glucosa actual.
 
-Otherwise, minimum predicted BG is used.
+De lo contrario, se utiliza la glucosa prevista mínima.
 
-### Adjust sensitivity and BG setting
+### Ajustar la sensibilidad y la configuración de glucosa
 
-This setting replaces Autosens, and uses the last 24h TDD/7D TDD as the basis for adjusting calculated ISF and also for increasing and decreasing basal rate, in the same way that standard Autosens does. 
+Esta configuración reemplaza Autosens y utiliza la base del cálculo del ISF ajustado y también para aumentar y disminuir la tasa basal de acuerdo al cociente de la TDD de las últimas 24 horas sobre la TDD de los últimos 7 días, de la misma manera que lo hace Autosens estándar. 
