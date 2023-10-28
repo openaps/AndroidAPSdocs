@@ -58,7 +58,7 @@
 
 **What to do in the case of an unstable Bluetooth connection with the pump.**
 
-### Method 1 ) Check the pump again after AAPS application is completed.
+### Метод 1 ) Проверьте помпу снова после завершения работы приложения AAPS.
 
 - Click on the 3 dots button on the top right.
 
@@ -80,7 +80,7 @@
   > :alt: Bluetooth button
   > ```
 
-- Click on the Setting button on the paired Diaconn G8 Insulin pump.
+- Нажмите кнопку настроек на сопряженной помпе Diaconn G8.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_12.jpg
   > :alt: Settings button
@@ -96,10 +96,10 @@
 
 ## Further Information
 
-### Diaconn G8 Insulin pump option setting
+### Настройка параметров помпы G8 Diaconn
 
 - Config manager > pump > Diaconn G8 > Settings
-- DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
+- DIACONN G8 вверху> 3 точки кнопки в правом верхнем углу > Настройки Diaconn G8
 
 ```{image} ../images/DiaconnG8/DiaconnG8_14.jpg
 :alt: Diaconn G8 pump options
