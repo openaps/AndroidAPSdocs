@@ -1,32 +1,32 @@
-# EOPatch2 Instruction Manual
+# Руководство для EOPatch2
 
-The patch requires the use of rapid-acting U-100 type insulin, such as NovoRapid or Humalog. Use a rapid-acting insulin that is suitable for you according to your doctor’s prescription and inject the prescribed dosage.
+Патч требует применения быстро действующего инсулина типа U-100, такого как Новорапид или Хумалог. В зависимости от рецепта врача необходимо применять быстродействующий инсулин, который подходит Вам в соответствии с рецептом и предписанными дозировками.
 
-The smallest injectable dose of insulin when using the patch is 0.05 U. The Profile BAS should therefore be set at a minimum value of 0.05 U/hr or more and an interval of 0.05 U/hr, as otherwise there may be an error between the estimated total infusion amount in the Profile and the actual infusion amount in the patch. Likewise, the bolus must also be set and infused with a minimum infusion volume of 0.05 U.
+The smallest injectable dose of insulin when using the patch is 0.05 U. The Profile BAS should therefore be set at a minimum value of 0.05 U/hr or more and an interval of 0.05 U/hr, as otherwise there may be an error between the estimated total infusion amount in the Profile and the actual infusion amount in the patch. Аналогичным образом, болюс необходимо установить и обеспечить минимальным количеством инсулина 0,05 ед.
 
-## Pump Setup
-1. On the AAPS home screen, click the hamburger menu in the upper left corner and go to Config Builder.
-1. Select 'EOPatch2' in the Pump section.
-1. Press the Back key to return to the home screen.
+## Настройка помпы
+1. На главном экране AAPS щелкните выпадающее меню в верхнем левом углу и перейдите в Конфигуратор.
+1. Выберите 'EOPatch2' в секции Помпы.
+1. Нажмите "Назад", чтобы вернуться на главный экран.
 
 
 ![Image1](../images/EOPatch/Bild1.png) ![Image2](../images/EOPatch/Bild2.png)
 
 ## Настройки
-Select EOPATCH2 at the top of the home screen to go to the EOPATCH2 tab.
+Выберите EOPATCH2 в верхней части главного экрана, чтобы перейти на вкладку EOPATCH2.
 
-Select the EOPatch2 Preferences menu by clicking the three dots in the upper right corner.
+Выберите меню настроек EOPatch2 щелкнув по трем точкам в правом верхнем углу.
 
 The EOPatch2 Preferences menu offers a menu to set 3 types of notifications.
 
 ### Low reservoir Alerts
-A warning appears when the amount of insulin remaining in the reservoir reaches the set value or less while using the patch. It can be set from 10 to 50U in 5U increments.
+A warning appears when the amount of insulin remaining in the reservoir reaches the set value or less while using the patch. Оно может быть установлено от 10 до 50 ед с приращением 5 ед.
 
 ### Patch expiration Reminder
 This is a reminder to notify you of the time remaining before the current patch expires. It can be set from 1 to 24 hours in 1 hour increments. The initial setting value is 4 hours.
 
-### Patch buzzer Reminder
-This is a reminder function for injections other than basal injection. If you are using an (extended) bolus injection or a temporary basal injection, the patch will make a buzzer sound when the injection starts and when the injection is complete. The initial setting value is Off.
+### Напоминания зуммера патча
+Это функция напоминания для инъекций, отличных от базала. Если вы применяете (расширенный) болюс или временный базал, патч издаст звук зуммера в начале и по окончании инъекции. Начальная настройка - Выкл.
 
 ![Image3](../images/EOPatch/Bild3.png)
 
