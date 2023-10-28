@@ -1,44 +1,44 @@
-# Introduction to APS and AAPS
+# Introducción a APS y AAPS
 
-## What is an “Artificial Pancreas System”?
+## ¿Qué es un sistema de páncreas artificial?
 
-A human pancreas does a lot of things besides regulating blood sugar. However, the term **“Artificial Pancreas System” (APS)** usually refers to a system which works to automatically keep blood sugar levels within healthy limits.
+Un páncreas humano hace muchas cosas además de regular el azúcar en sangre. Sin embargo, el término **“Sistema de Páncreas Artificiales” (APS)** generalmente se refiere a un sistema que funciona para mantener automáticamente los niveles de azúcar en la sangre dentro de límites saludables.
 
-The most basic way to do this is by detecting **glucose levels**, using these values to do **calculations**, and then delivering the (predicted) right amount of **insulin** to the body. It repeats the calculation, every few minutes, 24/7. It uses **alarms** and **alerts** to inform the user if intervention or attention is needed. This system is typically made up of a **glucose sensor**, an **insulin pump** and an **app** on a phone.
+La forma más básica de hacer esto es detectando **niveles de glucosa**, usando estos valores para hacer **cálculos**, y luego entregar la cantidad correcta (predecidida) de **insulina** al cuerpo. Repite el cálculo cada pocos minutos, 24/7. Utiliza **alarmas** y **alertas** para informar al usuario si se necesita intervención o atención. Este sistema normalmente está formado por un **sensor de glucosa**, una **bomba de insulina** y una **aplicación** en un teléfono.
 
-You can read more about the different artificial pancreas systems currently in use and in development in this 2022 review article:
+Puede leer más sobre los diferentes sistemas de pancreas artificiales actualmente en uso y en desarrollo en este artículo de revisión de 2022:
 
 ![Frontiers](./images/FRONTIERS_Logo_Grey_RGB.png) [Future Directions in Closed-Loop Technology](https://www.frontiersin.org/articles/10.3389/fendo.2022.919942/full#:~:text=Fully%20closed%2Dloop%20systems%2C%20unlike,user%20input%20for%20mealtime%20boluses).
 
-In the near future, some so-called "dual-hormone" systems will also have the ability to infuse glucagon alongside insulin, with the aim of preventing severe hypos and allowing even tighter blood glucose control.
+En un futuro cercano, algunos sistemas denominados "hormona dual" tendrán la capacidad de administrar glucagón junto con insulina, con el objetivo de prevenir hipoglucemias graves y permitir un control aún más estricto de la glucosa en sangre.
 
 An artificial pancreas can be thought of as an [“autopilot for your diabetes”](https://www.artificialpancreasbook.com/). What does that mean?
 
-In an aircraft, an autopilot does not do the complete job of the human pilot, the pilot cannot sleep through the entire flight. The autopilot aids the work of the pilot. It relieves them of the burden of permanently monitoring the aircraft, allowing the pilot to concentrate on wider monitoring from time to time. The autopilot receives signals from various sensors, a computer evaluates them together with the pilot’s specifications and then makes the necessary adjustments, alerting the pilot to any concerns. The pilot no longer has to worry about constantly making decisions.
+En una aeronave, un piloto automático no realiza completamente el trabajo del piloto humano; el piloto no puede dormirse durante todo el vuelo. El piloto automático ayuda en el trabajo del piloto. Les libera de la carga de monitorizar permanentemente la aeronave, permitiendo al piloto concentrarse en una supervisión más amplia de vez en cuando. El piloto automático recibe señales de varios sensores, una computadora las evalúa junto con las especificaciones del piloto y luego realiza los ajustes necesarios, alertando al piloto ante cualquier preocupación. El piloto ya no tiene que preocuparse por tomar decisiones constantemente.
 
 ![image](./images/autopilot.png)
 
-## What does hybrid closed loop mean?
+## ¿Qué significa lazo cerrado híbrido?
 
-The best solution for type 1 diabetes would be a “functional cure” (probably an implant of pancreatic cells which are protected from the immune system). While we are waiting for that, a “full closed loop” artificial pancreas is probably the next best thing. This is a tech system that doesn’t need any user input (like bolusing insulin for meals, or announcing exercise), with good regulation of blood glucose levels. At the moment, there are no widely available systems which are “full” closed loop, they all need some user input. The currently available systems are called “hybrid” closed loop, because they use a combination of automated technology and user input.
+La mejor solución para la diabetes tipo 1 sería una 'cura funcional' (probablemente un implante de células pancreáticas que estén protegidas del sistema inmunológico). Mientras esperamos eso, un páncreas artificial de 'lazo completamente cerrado' probablemente sea la siguiente mejor opción. Se trata de un sistema tecnológico que no necesita ninguna intervención por parte del usuario (como la administración de insulina para las comidas o la notificación de ejercicio), con una buena regulación de los niveles de glucosa en sangre. En este momento, no existen sistemas ampliamente disponibles que sean de 'lazo completamente cerrado', todos requieren cierta intervención del usuario. Los sistemas actualmente disponibles se llaman sistemas de lazo cerrado 'híbridos', porque utilizan una combinación de tecnología automatizada y entradas del usuario.
 
-## How and why did looping start?
+## ¿Cómo y por qué comenzó el lazo cerrado (looping)?
 
-The development of commercial technology for people with type 1 diabetes (T1D) is very slow. In 2013 the T1D community founded the #WeAreNotWaiting movement. They developed systems themselves using existing approved technology (insulin pumps and sensors) to improve blood glucose control, safety, and quality of life. These are known as DIY (do-it-yourself) systems, because they are not formally approved by health bodies (FDA, NHS etc). There are four main DIY systems available: [OpenAPS](https://openaps.org/what-is-openaps/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) and [iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI).
+El desarrollo de tecnología comercial para personas con diabetes tipo 1 (DT1) es muy lento. En 2013, la comunidad de personas con diabetes tipo 1 (DT1) fundó el movimiento #WeAreNotWaiting. Desarrollaron sistemas por sí mismos utilizando tecnología existente y aprobada (bombas de insulina y sensores) para mejorar el control de la glucosa en sangre, la seguridad y la calidad de vida. Estos son conocidos como sistemas DIY (hágalo usted mismo), ya que no están formalmente aprobados por organismos de salud (FDA, NHS, etc.). There are four main DIY systems available: [OpenAPS](https://openaps.org/what-is-openaps/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) and [iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI).
 
-A great way to understand the fundamentals of DIY looping is to read Dana Lewis’s book “Automated Insulin Delivery”. You can access it [here](https://www.artificialpancreasbook.com/) for free (or buy a hardcopy of the book). If you want to understand more about [OpenAPS](https://openaps.org/what-is-openaps/), which **AAPS** has developed from, the [OpenAPS website](https://openaps.org/what-is-openaps/) is a great resource.
+Una excelente manera de comprender los fundamentos del lazo cerrado DIY es leer el libro de Dana Lewis 'Entrega Automatizada de Insulina'. You can access it [here](https://www.artificialpancreasbook.com/) for free (or buy a hardcopy of the book). If you want to understand more about [OpenAPS](https://openaps.org/what-is-openaps/), which **AAPS** has developed from, the [OpenAPS website](https://openaps.org/what-is-openaps/) is a great resource.
 
-Several commercial hybrid closed loop systems have been launched, the most recent of which are [CamAPS FX](https://camdiab.com/) (UK and EU) and [Omnipod 5](https://www.omnipod.com/en-gb/what-is-omnipod/omnipod-5) (USA and EU). These are very different to DIY systems, mainly because they both include a “learning algorithm” which adjusts how much insulin is delivered according to your insulin needs from previous days. Many people in the DIY community have already tried out these commercial systems and compared them with their DIY system. You can find out more about how the different systems compare by asking on the dedicated Facebook groups for these systems, on the [AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/) or on [Discord](https://discord.com/invite/4fQUWHZ4Mw).
+Several commercial hybrid closed loop systems have been launched, the most recent of which are [CamAPS FX](https://camdiab.com/) (UK and EU) and [Omnipod 5](https://www.omnipod.com/en-gb/what-is-omnipod/omnipod-5) (USA and EU). Estos son muy diferentes a los sistemas DIY, principalmente porque ambos incluyen un 'algoritmo de aprendizaje' que ajusta la cantidad de insulina entregada según tus necesidades de insulina de los días anteriores. Muchas personas en la comunidad DIY ya han probado estos sistemas comerciales y los han comparado con su sistema DIY. You can find out more about how the different systems compare by asking on the dedicated Facebook groups for these systems, on the [AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/) or on [Discord](https://discord.com/invite/4fQUWHZ4Mw).
 
-## What is Android APS (AAPS)?
+## ¿Qué es Android APS (AAPS)?
 
 ![image](./images/basic-outline-of-AAPS.png)
 
-**Figure 1**. Basic outline of the Android APS (Artificial Pancreas System), AAPS.
+**Figura 1**. Esquema básico de Android APS (Sistema de Páncreas Artificial), AAPS.
 
 Android APS (**AAPS**) is a hybrid closed loop system, or Artificial Pancreas System  (APS). It makes its insulin dosing calculations using established [OpenAPS](https://openaps.org/) algorithms (a set of rules) developed by the #WeAreNotWaiting type 1 diabetes community.
 
-Since OpenAPS is only compatible with certain older insulin pumps, **AAPS** (which can be used with a wider range of insulin pumps) was developed in 2016 by Milos Kozak, for a family member with type 1 diabetes. Since those early days, **AAPS** has been continually developed and refined by a team of volunteer computer developers and other enthusiasts who have a connection to the type 1 diabetes world. Today, **AAPS** is used by approximately 10,000 people. It is a highly customisable and versatile system, and because it is open-source, it is also readily compatible with many other open-source diabetes softwares and platforms. The fundamental components of the current **AAPS** system are outlined in **Figure 1** above.
+Since OpenAPS is only compatible with certain older insulin pumps, **AAPS** (which can be used with a wider range of insulin pumps) was developed in 2016 by Milos Kozak, for a family member with type 1 diabetes. Desde aquellos primeros días, **AAPS** ha sido continuamente desarrollado y perfeccionado por un equipo de desarrolladores, voluntarios y entusiastas que tienen una conexión con el mundo de la diabetes tipo 1. Actualmente, **AAPS** es utilizado aproximadamente por 10.000 personas. Es un sistema altamente personalizable y versátil, y debido a que es de código abierto, también es fácilmente compatible con muchos otros programas y plataformas de diabetes de código abierto. The fundamental components of the current **AAPS** system are outlined in **Figure 1** above.
 
 
 
