@@ -8,13 +8,13 @@
   > :alt: Hamburger menu
   > ```
 
-- Click on Config Builder.
+- Выберите Конфигуратор.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_02.jpg
   > :alt: Config builder
   > ```
 
-- After selecting the Diaconn G8 Pump click on the Settings icon (cog wheel).
+- После выбора помпы Diaconn G8 щелкните на иконку настроек (шестеренка).
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_03.jpg
   > :alt: Settings
@@ -32,21 +32,21 @@
   > :alt: Pump pairing
   > ```
 
-- There are two options to check your model number:
+- Есть два варианта проверки номера модели:
 
   > 1. The last 5 digits of the SN number on the back of the pump.
   > 2. Click on O button > Information > BLE > Last 5 digits.
   > 
   > > `{image} ../images/DiaconnG8/DiaconnG8_06.jpg
-    :alt: check model no.`
+    :alt: проверить модель.`
 
-- Once you select your pump, a window appears asking for a pin code. Enter the pin number displayed on your pump to complete the connection.
+- Когда выберете помпу, появится окно с запросом PIN-кода. Введите PIN, отображаемый на вашей помпе для завершения сопряжения.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_07.jpg
   > :alt: PIN code
   > ```
 
-## Pump status check and log synchronization
+## Проверка статуса помпы и синхронизация журнала
 
 - Once your pump is connected, click on the Bluetooth symbol to check the status and to synchronize logs.
 
@@ -54,7 +54,7 @@
   > :alt: Bluetooth status
   > ```
 
-## Bluetooth Troubleshooting
+## Устранение неполадок Bluetooth-соединения
 
 **What to do in the case of an unstable Bluetooth connection with the pump.**
 
