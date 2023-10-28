@@ -32,7 +32,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 ## Экспорт настроек
 
 - Hamburger menu (top left corner of screen)
-- Maintenance
+- Обслуживание
 - Экспорт настроек
 
 ```{image} ../images/AAPS_ExportSettings1.png
@@ -54,7 +54,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 **Do not import settings while on an active Pod session** - see [Omnipod page for details](OmnipodEros-import-settings-from-previous-aaps).
 
 - Hamburger menu (top left corner of screen)
-- Maintenance
+- Обслуживание
 - Выполните импорт настроек
 
 ```{image} ../images/AAPS_ImportSettings1.png
@@ -78,7 +78,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 
 ### Примечание для пользователей Dana RS
 
-- As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan.
+- Поскольку настройки подключения помпы также переносятся на новый телефон, AAPS на новом телефоне уже будет "знать" помпу и не запустит сканирование bluetooth.
 - Please pair new phone and pump manually.
 
 ### Импорт настроек из предыдущих версий (перед AAPS 2.7)
