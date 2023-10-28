@@ -1,8 +1,8 @@
 (Open-APS-features-DynamicISF)=
-## DynamicISF
-DynamicISF was added in AAPS version 3.2 and requires you to start Objective 11 to use. Select DynamicISF in the config builder > APS to activate. It is recommended only for advanced users that have a good handle on AAPS controls and monitoring.
+## ISF Dinámico
+ISF Dinámico se añadió en la versión 3.2 de AAPS y necesita que inicies el Objetivo 11 para utilizarlo. Seleccionar ISF Dinámico en la tabla de configuraciones > APS para activarlo. Se recomienda únicamente para usuarios avanzados que tengan un buen dominio de los controles y la monitorización de AAPS.
 
-Please note that to use Dynamic ISF effectively, the AndroidAPS database needs a minimum of five days of data.
+Ten en cuenta que para utilizar ISF Dinámico de manera efectiva, la base de datos de AndroidAPS necesita un mínimo de cinco días de datos.
 
 DynamicISF adapts the insulin sensitifty factor dynamically based on total daily dose of insulin (TDD) and current and predicted blood glucose values.
 
