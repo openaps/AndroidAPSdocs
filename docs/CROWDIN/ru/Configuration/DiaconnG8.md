@@ -1,8 +1,8 @@
-# Diaconn G8 Insulin Pump
+# Помпа Diaconn G8
 
-## Insulin Pump Bluetooth Pairing
+## Bluetooth-сопряжение
 
-- Click on the hamburger menu in the top left corner.
+- Нажмите на выпадающее меню в левом верхнем углу.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_01.jpg
   > :alt: Hamburger menu
