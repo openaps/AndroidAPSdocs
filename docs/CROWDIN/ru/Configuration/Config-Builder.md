@@ -207,8 +207,8 @@ If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value 
 
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
-* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* OpenAPS AMA (расширенный помощник по питанию, Состояние алгоритма на 2017 год) Говоря простым языком, преимущества алгоритма в том, что после еды и при правильном вводе углеводов система может быстрее устанавливать временный базал.
+* [Супер микро болюс OpenAPS](../Usage/Open-APS-features.md) (самый новый алгоритм для опытных пользователей). Для того, чтобы использовать этот алгоритм, вы должны начать [Цель 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb), а параметр min_5m_carbimpact должен быть равен 8 (см. настройки в Конфигуратор > определение чувствительности > Чувствительность Oref1).
 
 ## Замкнутый цикл
 
@@ -222,7 +222,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 * AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. 
 * The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). 
-* This option is for getting to know how AAPS works or if you are using an unsupported pump.
+* Этот параметр предназначен для знакомства с работой AAPS или для неподдерживаемых помп.
 
 (Config-Builder-closed-loop)=
 
@@ -303,7 +303,7 @@ Choose the default amounts of the three buttons in fill/prime dialogue, dependin
 
 #### Range of visualization
 
-Choose the high and low marks for the BG-graph on AAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+Укажите значения высокой и низкой ГК для отображения на графике AAPS и на умных часах. Эти параметры используется только для графического представления и не является целевыми значениями ГК. Например: 70 - 180 мг/дл или 3,9 - 10 ммоль/л
 
 #### сокращенные имена табул
 
