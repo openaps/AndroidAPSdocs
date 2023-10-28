@@ -102,12 +102,12 @@
 - DIACONN G8 вверху> 3 точки кнопки в правом верхнем углу > Настройки Diaconn G8
 
 ```{image} ../images/DiaconnG8/DiaconnG8_14.jpg
-:alt: Diaconn G8 pump options
+:alt: опции Diaconn G8
 ```
 
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an “Insulin Change” event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs.
-- If the **Log tube change** option is activated, the relevant details are automatically uploaded to the careportal when a “Tube Change” event occurs.
+- Если активирована опция **Отслеживать замену резервуара**, соответствующие детали автоматически загружаются на careportal при возникновении события «Замена инсулина».
+- Если активирована опция **Отслеживать замену катетера**, соответствующие детали автоматически загружаются на careportal при возникновении события «Смена места установки катетера».
+- Если активирована опция **Отслеживать замену инфузионного набора**, соответствующие детали автоматически загружаются на careportal при возникновении события «Замена инфузионного набора».
 - If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a “Battery Change” event occurs, and the PUMP BATTERY CHANGE button in the ACTION tab is deactivated. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
 
 ```{image} ../images/DiaconnG8/DiaconnG8_15.jpg
