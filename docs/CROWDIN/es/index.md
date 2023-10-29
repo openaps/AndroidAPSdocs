@@ -154,31 +154,33 @@ Preferencias <./Configuration/Preferences.md>
 
 Pantallas de AAPS <./Getting-Started/Screenshots.md>
 
-Objetivos <./Usage/Objectives.md>
+Objectivos <./Usage/Objectives.md>
 
-Funciones de OpenAPS <./Usage/Open-APS-features.md>
+Características de OpenAPS <./Usage/Open-APS-features.md>
 
-Cálculos de COB <./Usage/COB-calculation.md>
+ISF Dinámico <./Usage/DynamicISF.md>
 
-Detección de sensibilidad <./Configuration/Sensitivity-detection-and-COB.md>
+Cálculo de COB <./Usage/COB-calculation.md>
+
+Detección de la sensibilidad <./Configuration/Sensitivity-detection-and-COB.md>
 
 Cambio de perfil <./Usage/Profiles.md>
 
 Objetivos temporales <./Usage/temptarget.md>
 
-Carbohidratos extendidos <./Usage/Extended-Carbs.md>
+Carbohidatos extendidos <./Usage/Extended-Carbs.md>
 
 Automatización <./Usage/Automation.md>
 
-Autotune (sólo en rama dev) <./Usage/autotune.md>
+Autotune (sólo dev) <./Usage/autotune.md>
 
-Careportal (descontinuado) <./Usage/CPbefore26.md>
+Portal de cuidados (discontinuado) <./Usage/CPbefore26.md>
 
-Cargador de datos en Open Humans <./Configuration/OpenHumans.md>
+Subida de datos a Open Humans <./Configuration/OpenHumans.md>
 
 Automatización con aplicaciones de terceros <./Usage/automationwithapp.md>
 
-Android Auto <./Usage/Android-auto.md>
+Android auto <./Usage/Android-auto.md>
 
 ```
 

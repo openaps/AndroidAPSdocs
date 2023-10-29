@@ -20,7 +20,7 @@ This software is part of a DIY artificial pancreas solution and is not a product
     - See AAPS [Release Notes](../Installing-AndroidAPS/Releasenotes.md)
 * [**Continuous Glucose Monitor (CGM)**](BG-Source.md)
 
-## Before you begin
+## Подготовка к работе
 
 **SAFETY FIRST** Do not attempt this process in an environment where you cannot recover from an error (extra patches, insulin, and pump control devices are must-haves).
 

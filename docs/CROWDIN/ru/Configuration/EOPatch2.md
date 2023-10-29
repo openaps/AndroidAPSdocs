@@ -1,97 +1,97 @@
-# EOPatch2 Instruction Manual
+# Руководство для EOPatch2
 
-The patch requires the use of rapid-acting U-100 type insulin, such as NovoRapid or Humalog. Use a rapid-acting insulin that is suitable for you according to your doctor’s prescription and inject the prescribed dosage.
+Патч требует применения быстро действующего инсулина типа U-100, такого как Новорапид или Хумалог. В зависимости от рецепта врача необходимо применять быстродействующий инсулин, который подходит Вам в соответствии с рецептом и предписанными дозировками.
 
-The smallest injectable dose of insulin when using the patch is 0.05 U. The Profile BAS should therefore be set at a minimum value of 0.05 U/hr or more and an interval of 0.05 U/hr, as otherwise there may be an error between the estimated total infusion amount in the Profile and the actual infusion amount in the patch. Likewise, the bolus must also be set and infused with a minimum infusion volume of 0.05 U.
+The smallest injectable dose of insulin when using the patch is 0.05 U. The Profile BAS should therefore be set at a minimum value of 0.05 U/hr or more and an interval of 0.05 U/hr, as otherwise there may be an error between the estimated total infusion amount in the Profile and the actual infusion amount in the patch. Аналогичным образом, болюс необходимо установить и обеспечить минимальным количеством инсулина 0,05 ед.
 
-## Pump Setup
-1. On the AAPS home screen, click the hamburger menu in the upper left corner and go to Config Builder.
-1. Select 'EOPatch2' in the Pump section.
-1. Press the Back key to return to the home screen.
+## Настройка помпы
+1. На главном экране AAPS щелкните выпадающее меню в верхнем левом углу и перейдите в Конфигуратор.
+1. Выберите 'EOPatch2' в секции Помпы.
+1. Нажмите "Назад", чтобы вернуться на главный экран.
 
 
 ![Image1](../images/EOPatch/Bild1.png) ![Image2](../images/EOPatch/Bild2.png)
 
 ## Настройки
-Select EOPATCH2 at the top of the home screen to go to the EOPATCH2 tab.
+Выберите EOPATCH2 в верхней части главного экрана, чтобы перейти на вкладку EOPATCH2.
 
-Select the EOPatch2 Preferences menu by clicking the three dots in the upper right corner.
+Выберите меню настроек EOPatch2 щелкнув по трем точкам в правом верхнем углу.
 
 The EOPatch2 Preferences menu offers a menu to set 3 types of notifications.
 
 ### Low reservoir Alerts
-A warning appears when the amount of insulin remaining in the reservoir reaches the set value or less while using the patch. It can be set from 10 to 50U in 5U increments.
+A warning appears when the amount of insulin remaining in the reservoir reaches the set value or less while using the patch. Оно может быть установлено от 10 до 50 ед с приращением 5 ед.
 
 ### Patch expiration Reminder
 This is a reminder to notify you of the time remaining before the current patch expires. It can be set from 1 to 24 hours in 1 hour increments. The initial setting value is 4 hours.
 
-### Patch buzzer Reminder
-This is a reminder function for injections other than basal injection. If you are using an (extended) bolus injection or a temporary basal injection, the patch will make a buzzer sound when the injection starts and when the injection is complete. The initial setting value is Off.
+### Напоминания зуммера патча
+Это функция напоминания для инъекций, отличных от базала. Если вы применяете (расширенный) болюс или временный базал, патч издаст звук зуммера в начале и по окончании инъекции. Начальная настройка - Выкл.
 
 ![Image3](../images/EOPatch/Bild3.png)
 
-## Connecting the Patch
+## Подключение Patch
 
 ### Move to patch connection screen
 
-Select EOPATCH2 at the top of the home screen and click the ACTIVATE PATCH button at the bottom left.
+Выберите EOPATCH2 в верхней части главного экрана и нажмите кнопку АКТИВИРОВАТЬ PATCH в левом нижнем углу.
 
 ![Image4](../images/EOPatch/Bild4.png)
 
-### Connecting the patch
-Insert the syringe needle into the insulin inlet on the patch and then slowly push the piston to inject the insulin. When insulin is filled with more than 80U, the patch makes a booting sound (1 buzzer) and boots. After confirming the buzzer sound, click the START PAIRING button on the screen.
+### Подключение Patch
+Вставьте иглу шприца в углубление для инсулина на Patch и медленно толкайте поршень, чтобы ввести инсулин. Когда инсулин наполнен более чем 80ед, патч делает звук загрузки (зуммер) и загружается. After confirming the buzzer sound, click the START PAIRING button on the screen.
 
 [Warning]
 
 - Do not turn the needle action lever until instructed. It can cause serious problems during injection or safety checks otherwise.
-- The amount of insulin that can be injected into the patch is 80~200U. If you inject less than 80U into the patch initially, the patch will not work.
-- Take the insulin to be put into the patch from the refrigerator and leave it at room temperature for 15 to 30 minutes beforehand. The temperature of the insulin to be injected must be at least 10°C.
+- The amount of insulin that can be injected into the patch is 80~200U. Если изначально ввести менее 80ед в патч, он не будет работать.
+- Заблаговременно достаньте из холодильника инсулин, который будете вводить в патч и оставьте его при комнатной температуре на 15 - 30 минут. The temperature of the insulin to be injected must be at least 10°C.
 
 ![Image5](../images/EOPatch/Bild5.png)
 
-### patch pairing
-The Patch pairing screen will be displayed, and pairing will be attempted automatically. If communication is successful, the Bluetooth pairing request notification appears. Click OK and when the Bluetooth pairing request notification appears a second time with the authentication code, select OK again.
+### Сопряжение с Patch
+Появится экран сопряжения патча и автоматически будет выполнено соединение. При успешном обмене данными появляется запрос на подключение Bluetooth. Нажмите ОК, и когда запрос подключения Bluetooth появится второй раз с кодом авторизации, снова выберите ОК.
 
 [Warning]
 
 - For pairing, the patch and the smartphone must be located within 30 cm of each other.
-- After the patch booting is completed, the patch will beep every 3 minutes until the pairing is complete.
+- После загрузки, патч будет издавать звуковой сигнал каждые 3 минуты, пока не будет завершено сопряжение.
 - After booting the patch, the patch application must be completed via the app within 60 minutes. If the application cannot be completed within 60 minutes, the patch should be discarded.
 
 ![Image6](../images/EOPatch/Bild6.png) ![Image7](../images/EOPatch/Bild7.png) ![Image8](../images/EOPatch/Bild8.png)
 
 
 ### patch preparation
-After removing the adhesive tape of the patch, check if the needle is sticking out. If there are no problems with the patch, click NEXT.
+После удаления клейкой ленты патча, проверьте, не торчит ли игла. Если проблем с патчем нет, жмите ДАЛЕЕ.
 
 ![Image9](../images/EOPatch/Bild9.png)
 
 ### Patch attachment
-Insulin should be injected in a spot with subcutaneous fat but few nerves or blood vessels, so it is recommended to use the abdomen, arm, or thigh for the patch attachment site. Choose a patch attachment site and apply the patch after disinfecting the location.
+Инсулин должен вводиться в области с подкожным жиром, где мало нервных окончаний или кровеносных сосудов, поэтому рекомендуется живот или бедро для места крепления патча. Выберите место установки патча, и после дезинфекции этого участка, установите патч.
 
 [Warning]
 
-- Make sure to straighten the side of the patch tape attached to the body evenly, so that the patch adheres completely to the skin.
-- If the patch does not stick completely, air may enter between the patch and the skin, which can weaken the adhesive strength and waterproof effect of the patch.
+- Обязательно разгладьте сторону патча, прикрепляемую к телу равномерно, чтобы патч был полностью прижат к коже.
+- Если патч не приклеится полностью, между ним и кожей попадет воздух, что ослабит прочность крепления и водонепроницаемость патча.
 
 ![Image10](../images/EOPatch/Bild10.png)
 
 ### Safety Check
-When patching is complete, touch Start Safety Check. When the safety check is completed, the patch will beep once.
+Когда патч наклеен, нажмите Начать проверку безопасности. When the safety check is completed, the patch will beep once.
 
 [Warning]
 
-- For safe use, do not turn the needle action lever until the safety check has been completed.
+- Для безопасности не поворачивайте рычаг действия иглы до завершения проверки.
 
 ![Image11](../images/EOPatch/Bild11.png) ![Image12](../images/EOPatch/Bild12.png)
 
 
 ### Inserting the needle
-The needle is inserted by holding around the patch and turning the needle action lever more than 100° in the upward direction of the lever. There is a buzzer sound when the needle is inserted correctly. Turn the needle action lever further clockwise to release the lever. Click NEXT.
+Игла вставляется при охвате патча рукой и повороте рычага введения иглы более чем на 100° вверх. There is a buzzer sound when the needle is inserted correctly. Поверните рычаг иглы дальше по часовой стрелке, чтобы освободить рычаг. Click NEXT.
 
 [Caution]
 
-- If you go to the next step without the buzzer sounding, a needle insertion error warning will appear.
+- Если вы перейдете к следующему шагу, не дожидаясь звука зуммера, появится оповещение об ошибке установки иглы.
 
 ## Discarding the patch
 Patches must be replaced in the case of low insulin levels, usage expiration, and defects. The recommended usage period for each patch is 84 hours after booting the patch.

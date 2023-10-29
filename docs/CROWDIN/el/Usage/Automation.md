@@ -46,7 +46,7 @@ There are some limits:
 - **less than -2 means: -3 and lower (-4,-10, etc)**
 - **more than -2 means: -1 and higher (-1, 0, +10, etc)**
 
-### Condition
+### Συνθήκη
 
 You can choose between several conditions. Here are some things explained, but most of it should be easy to understand and is not all described here:
 
@@ -67,18 +67,18 @@ You can choose between several conditions. Here are some things explained, but m
   - Use network location: Location of your Wifi
   - Use GPS location (Attention! May cause excessive battery drain!)
 
-### Action
+### Ενέργεια
 
-You can choose one or more actions:
+Μπορείτε να επιλέξετε μία ή περισσότερες ενέργειες:
 
 - start temp target
 
-  - must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
+  - πρέπει να είναι μεταξύ 72 mg/dl και 270 mg/dl (4 mmol/l και 15 mmol/l)
   - works only if there is no previous temp target
 
 - stop temp target
 
-- notification
+- ειδοποίηση
 
 - profile percentage
 
@@ -130,7 +130,7 @@ To delete an automation rule click on trash icon.
   - You have to make another rule to set this back or do it manually!
   - Increased risk of hypoglycemia if profile switch does not expire or reset back to base profile.
 
-## Examples
+## Παραδείγματα
 
 These are just setup examples, no advises. Don't reproduce them without being aware what you are actually doing or why you need them.
 
@@ -164,6 +164,6 @@ Please be aware to use automation incorrectly. This might lead to difficulties a
 - Creating one way rules (i.e. do something but don't undo it by another rule)
 - Creating long term rules
 
-## Alternatives
+## Εναλλακτικά
 
 For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found [here](./automationwithapp.html).

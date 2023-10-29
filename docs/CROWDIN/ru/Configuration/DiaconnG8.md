@@ -1,120 +1,120 @@
-# Diaconn G8 Insulin Pump
+# Помпа Diaconn G8
 
-## Insulin Pump Bluetooth Pairing
+## Bluetooth-сопряжение
 
-- Click on the hamburger menu in the top left corner.
+- Нажмите на выпадающее меню в левом верхнем углу.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_01.jpg
-  > :alt: Hamburger menu
+  > :alt: Выпадающее сэндвич-меню
   > ```
 
-- Click on Config Builder.
+- Выберите Конфигуратор.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_02.jpg
-  > :alt: Config builder
+  > :alt:Конфигуратор
   > ```
 
-- After selecting the Diaconn G8 Pump click on the Settings icon (cog wheel).
+- После выбора помпы Diaconn G8 щелкните на иконку настроек (шестеренка).
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_03.jpg
-  > :alt: Settings
+  > :alt:Настройки
   > ```
 
-- Choose Selected pump.
+- Выберите помпу.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_04.jpg
-  > :alt: Select pump
+  > :alt: Выбор помпы
   > ```
 
-- Select your insulin pump’s model number once it appears in the list.
+- Выберите номер модели вашей инсулиновой помпы.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_05.jpg
-  > :alt: Pump pairing
+  > :alt: Сопряжение помпы
   > ```
 
-- There are two options to check your model number:
+- Есть два варианта проверки номера модели:
 
-  > 1. The last 5 digits of the SN number on the back of the pump.
-  > 2. Click on O button > Information > BLE > Last 5 digits.
+  > 1. Последние 5 цифр номера SN на задней панели помпы.
+  > 2. Нажмите на кнопку O > Информация > BLE > Последние 5 цифр.
   > 
   > > `{image} ../images/DiaconnG8/DiaconnG8_06.jpg
-    :alt: check model no.`
+    :alt: проверить модель.`
 
-- Once you select your pump, a window appears asking for a pin code. Enter the pin number displayed on your pump to complete the connection.
+- Когда выберете помпу, появится окно с запросом PIN-кода. Введите PIN, отображаемый на вашей помпе для завершения сопряжения.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_07.jpg
-  > :alt: PIN code
+  > :alt: ПИН-код
   > ```
 
-## Pump status check and log synchronization
+## Проверка статуса помпы и синхронизация журнала
 
-- Once your pump is connected, click on the Bluetooth symbol to check the status and to synchronize logs.
+- После подключения помпы нажмите на символ Bluetooth, чтобы проверить статус и синхронизировать журналы.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_08.jpg
-  > :alt: Bluetooth status
+  > :alt:Статус Bluetooth
   > ```
 
-## Bluetooth Troubleshooting
+## Устранение неполадок Bluetooth-соединения
 
-**What to do in the case of an unstable Bluetooth connection with the pump.**
+**Что делать в случае нестабильного подключения Bluetooth к помпе.**
 
-### Method 1 ) Check the pump again after AAPS application is completed.
+### Метод 1 ) Проверьте помпу снова после завершения работы приложения AAPS.
 
-- Click on the 3 dots button on the top right.
+- Нажмите на 3 точки в правом верхнем углу.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_09.jpg
-  > :alt: Preferences menu
+  > :alt: Меню настроек
   > ```
 
-- Click on Exit.
+- Нажмите выход.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_10.jpg
-  > :alt: Exit
+  > :alt: Выход
   > ```
 
-### Method 2) If the first method doesn’t work, disconnect Bluetooth and then reconnect.
+### Метод 2) Если первый метод не работает, отключите Bluetooth и подключите заново.
 
-- Press and hold the Bluetooth button at the top for about 3 seconds.
+- Нажмите и удерживайте кнопку Bluetooth в верхней части примерно 3 секунды.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_11.jpg
-  > :alt: Bluetooth button
+  > :alt: Кнопка Bluetooth
   > ```
 
-- Click on the Setting button on the paired Diaconn G8 Insulin pump.
+- Нажмите кнопку настроек на сопряженной помпе Diaconn G8.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_12.jpg
-  > :alt: Settings button
+  > :alt:Кнопка настроек
   > ```
 
-- Unpair.
+- Разъединение.
 
   > ```{image} ../images/DiaconnG8/DiaconnG8_13.jpg
-  > :alt: Unpair
+  > :alt: Разъединение
   > ```
 
-- Repeat the Bluetooth pairing process for the pump (see above).
+- Повторите процесс подключения к Bluetooth помпы (см. выше).
 
-## Further Information
+## Дополнительная информация
 
-### Diaconn G8 Insulin pump option setting
+### Настройка параметров помпы G8 Diaconn
 
-- Config manager > pump > Diaconn G8 > Settings
-- DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
+- Менеджер конфигурации > помпа > Diaconn G8 > Настройки
+- DIACONN G8 вверху> 3 точки кнопки в правом верхнем углу > Настройки Diaconn G8
 
 ```{image} ../images/DiaconnG8/DiaconnG8_14.jpg
-:alt: Diaconn G8 pump options
+:alt: опции Diaconn G8
 ```
 
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an “Insulin Change” event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs.
-- If the **Log tube change** option is activated, the relevant details are automatically uploaded to the careportal when a “Tube Change” event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a “Battery Change” event occurs, and the PUMP BATTERY CHANGE button in the ACTION tab is deactivated. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
+- Если активирована опция **Отслеживать замену резервуара**, соответствующие детали автоматически загружаются на careportal при возникновении события «Замена инсулина».
+- Если активирована опция **Отслеживать замену катетера**, соответствующие детали автоматически загружаются на careportal при возникновении события «Смена места установки катетера».
+- Если активирована опция **Отслеживать замену инфузионного набора**, соответствующие детали автоматически загружаются на careportal при возникновении события «Замена инфузионного набора».
+- Если активирована опция **Отслеживать замену батареи**, соответствующие детали автоматически загружаются на careportal при возникновении события «Замена батареи, при этом кнопка ЗАМЕНА БАТАРЕИ ПОМПЫ на вкладке ДЕЙСТВИЯ деактивируется». (Примечание: При замене батареи следует остановить все текущие инъекции.)
 
 ```{image} ../images/DiaconnG8/DiaconnG8_15.jpg
-:alt: Diaconn G8 actions menu
+:alt: Меню действий Diaconn G8
 ```
 
-### Extended Bolus function
+### Функция пролонгированного (расширенного) болюса
 
-- If you use extended bolus it will disable closed loop.
-- See [this page](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- Если вы пользуетесь пролонгированным болюсом, замкнутый цикл будет деактивирован.
+- На [этой странице](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) подробно объяснено почему пролонгированный болюс не работает в замкнутом цикле.

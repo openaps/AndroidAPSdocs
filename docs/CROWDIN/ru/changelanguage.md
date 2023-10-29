@@ -5,6 +5,6 @@
 ```
 
 ```{image} images/documentation_language_menu.png
-:alt: Open language menu
+:alt: Открытие меню языка
 :width: 350
 ```
