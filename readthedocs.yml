@@ -1,12 +1,17 @@
-# Formats in addition to HTML
-
-formats:
-   #- pdf
-   - none
-
-# Pip requirements
-requirements_file: ./requirements.txt
+version: 2
 
 # Build Container
 build:
-   image: latest
+   os: ubuntu-22.04
+   tools:
+    python: "3.11"
+
+# Python
+python:
+  install:
+    - requirements: ./requirements.txt
+
+# Sphinx
+sphinx:
+  builder: html
+  fail_on_warning: false
