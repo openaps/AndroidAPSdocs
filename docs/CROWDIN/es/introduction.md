@@ -16,7 +16,7 @@ An artificial pancreas can be thought of as an [“autopilot for your diabetes�
 
 En una aeronave, un piloto automático no realiza completamente el trabajo del piloto humano; el piloto no puede dormirse durante todo el vuelo. El piloto automático ayuda en el trabajo del piloto. Les libera de la carga de monitorizar permanentemente la aeronave, permitiendo al piloto concentrarse en una supervisión más amplia de vez en cuando. El piloto automático recibe señales de varios sensores, una computadora las evalúa junto con las especificaciones del piloto y luego realiza los ajustes necesarios, alertando al piloto ante cualquier preocupación. El piloto ya no tiene que preocuparse por tomar decisiones constantemente.
 
-![image](./images/autopilot.png)
+![imagen](./images/autopilot.png)
 
 ## ¿Qué significa lazo cerrado híbrido?
 
@@ -32,7 +32,7 @@ Several commercial hybrid closed loop systems have been launched, the most recen
 
 ## ¿Qué es Android APS (AAPS)?
 
-![image](./images/basic-outline-of-AAPS.png)
+![imagen](./images/basic-outline-of-AAPS.png)
 
 **Figura 1**. Esquema básico de Android APS (Sistema de Páncreas Artificial), AAPS.
 
@@ -123,35 +123,35 @@ Las características de los diferentes sistemas se muestran en la siguiente tabl
 
 
 
-| Devicestype | Nombre                                                          | [AAPS](https://wiki.aaps.app)            | [Loop](https://loopkit.github.io/loopdocs/) | [Open APS](https://openaps.readthedocs.io/en/latest/) | [iAPS](https://iaps.readthedocs.io/en/latest/) |
-| ----------- | --------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------- | ----------------------------------------------------- | ---------------------------------------------- |
-| Phone       | Android                                                         | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| Phone       | iPhone                                                          | ![unavailable](./images/unavailable.png) | ![available](./images/available.png)        | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| Rig         | tiny computer (1)                                               | ![unavailable](./images/unavailable.png) | ![unavailable](./images/unavailable.png)    | ![available](./images/available.png)                  | ![unavailable](./images/unavailable.png)       |
-| BOMBA       | [Dana I](../Configuration/DanaRS-Insulin-Pump.md)               | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| BOMBA       | [Dana RS](../Configuration/DanaRS-Insulin-Pump.md)              | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| BOMBA       | [Dana R](../Configuration/DanaR-Insulin-Pump.md)                | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| BOMBA       | [Omnipod (Dash)](../Configuration/OmnipodDASH.md) (2)           | ![available](./images/available.png)     | ![available](./images/available.png)        | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| BOMBA       | [Omnipod (Eros)](../Configuration/OmnipodEros.md)               | ![available](./images/available.png)     | ![available](./images/available.png)        | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| BOMBA       | [Diaconn G8](../Configuration/DiaconnG8.md)                     | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| BOMBA       | [EOPatch 2](../Configuration/EOPatch2.md)                       | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| BOMBA       | [Medtrum TouchCare Nano](../Configuration/MedtrumNano.md)       | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| BOMBA       | [Medtrum TouchCare 300U](../Configuration/MedtrumNano.md)       | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| BOMBA       | [Roche Combo](../Configuration/Accu-Chek-Combo-Pump.md)         | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| BOMBA       | [Roche Insight](../Configuration/Accu-Chek-Insight-Pump.md)     | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| BOMBA       | [Medtronic antiguas](../Configuration/MedtronicPump.md)         | ![available](./images/available.png)     | ![available](./images/available.png)        | ![available](./images/available.png)                  | ![available](./images/available.png)           |
-| MCG         | [Dexcom G7](../Hardware/DexcomG7.md)                            | ![available](./images/available.png)     | ![available](./images/available.png)        | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| MCG         | [Dexcom One](../Hardware/DexcomG6.md)                           | ![available](./images/available.png)     | ![available](./images/available.png)        | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| MCG         | [Dexcom G6](../Hardware/DexcomG6.md)                            | ![available](./images/available.png)     | ![available](./images/available.png)        | ![available](./images/available.png)                  | ![available](./images/available.png)           |
-| MCG         | [Dexcom G5](../Hardware/DexcomG5.md)                            | ![available](./images/available.png)     | ![available](./images/available.png)        | ![available](./images/available.png)                  | ![available](./images/available.png)           |
-| MCG         | [Dexcom G4](../Hardware/DexcomG4.md)                            | ![available](./images/available.png)     | ![available](./images/available.png)        | ![available](./images/available.png)                  | ![available](./images/available.png)           |
-| MCG         | [Libre 3](../Hardware/Libre3.md)                                | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| MCG         | [Libre 2](../Hardware/Libre2.md)                                | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| MCG         | [Libre 1](../Hardware/Libre1.md)                                | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| MCG         | [Eversense](../Hardware/Eversense.md)                           | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| MCG         | [MM640G/MM630G](../Hardware/MM640g.md)                          | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| MCG         | [PocTech](../Hardware/PocTech.md)                               | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| MCG         | [Nightscout como origen BG](../Hardware/CgmNightscoutUpload.md) | ![available](./images/available.png)     | ![available](./images/available.png)        | ![available](./images/available.png)                  | ![available](./images/available.png)           |
+| Devicestype | Nombre                                                          | [AAPS](https://wiki.aaps.app)              | [Loop](https://loopkit.github.io/loopdocs/) | [Open APS](https://openaps.readthedocs.io/en/latest/) | [iAPS](https://iaps.readthedocs.io/en/latest/) |
+| ----------- | --------------------------------------------------------------- | ------------------------------------------ | ------------------------------------------- | ----------------------------------------------------- | ---------------------------------------------- |
+| Phone       | Android                                                         | ![disponible](./images/available.png)      | ![no disponible](./images/unavailable.png)  | ![no disponible](./images/unavailable.png)            | ![no disponible](./images/unavailable.png)     |
+| Phone       | iPhone                                                          | ![no disponible](./images/unavailable.png) | ![disponible](./images/available.png)       | ![no disponible](./images/unavailable.png)            | ![disponible](./images/available.png)          |
+| Rig         | tiny computer (1)                                               | ![no disponible](./images/unavailable.png) | ![no disponible](./images/unavailable.png)  | ![disponible](./images/available.png)                 | ![no disponible](./images/unavailable.png)     |
+| BOMBA       | [Dana I](../Configuration/DanaRS-Insulin-Pump.md)               | ![disponible](./images/available.png)      | ![no disponible](./images/unavailable.png)  | ![no disponible](./images/unavailable.png)            | ![no disponible](./images/unavailable.png)     |
+| BOMBA       | [Dana RS](../Configuration/DanaRS-Insulin-Pump.md)              | ![disponible](./images/available.png)      | ![no disponible](./images/unavailable.png)  | ![no disponible](./images/unavailable.png)            | ![no disponible](./images/unavailable.png)     |
+| BOMBA       | [Dana R](../Configuration/DanaR-Insulin-Pump.md)                | ![disponible](./images/available.png)      | ![no disponible](./images/unavailable.png)  | ![no disponible](./images/unavailable.png)            | ![no disponible](./images/unavailable.png)     |
+| BOMBA       | [Omnipod (Dash)](../Configuration/OmnipodDASH.md) (2)           | ![disponible](./images/available.png)      | ![disponible](./images/available.png)       | ![no disponible](./images/unavailable.png)            | ![disponible](./images/available.png)          |
+| BOMBA       | [Omnipod (Eros)](../Configuration/OmnipodEros.md)               | ![disponible](./images/available.png)      | ![disponible](./images/available.png)       | ![no disponible](./images/unavailable.png)            | ![disponible](./images/available.png)          |
+| BOMBA       | [Diaconn G8](../Configuration/DiaconnG8.md)                     | ![disponible](./images/available.png)      | ![no disponible](./images/unavailable.png)  | ![no disponible](./images/unavailable.png)            | ![no disponible](./images/unavailable.png)     |
+| BOMBA       | [EOPatch 2](../Configuration/EOPatch2.md)                       | ![disponible](./images/available.png)      | ![no disponible](./images/unavailable.png)  | ![no disponible](./images/unavailable.png)            | ![no disponible](./images/unavailable.png)     |
+| BOMBA       | [Medtrum TouchCare Nano](../Configuration/MedtrumNano.md)       | ![disponible](./images/available.png)      | ![no disponible](./images/unavailable.png)  | ![no disponible](./images/unavailable.png)            | ![no disponible](./images/unavailable.png)     |
+| BOMBA       | [Medtrum TouchCare 300U](../Configuration/MedtrumNano.md)       | ![disponible](./images/available.png)      | ![no disponible](./images/unavailable.png)  | ![no disponible](./images/unavailable.png)            | ![no disponible](./images/unavailable.png)     |
+| BOMBA       | [Roche Combo](../Configuration/Accu-Chek-Combo-Pump.md)         | ![disponible](./images/available.png)      | ![no disponible](./images/unavailable.png)  | ![no disponible](./images/unavailable.png)            | ![no disponible](./images/unavailable.png)     |
+| BOMBA       | [Roche Insight](../Configuration/Accu-Chek-Insight-Pump.md)     | ![disponible](./images/available.png)      | ![no disponible](./images/unavailable.png)  | ![no disponible](./images/unavailable.png)            | ![no disponible](./images/unavailable.png)     |
+| BOMBA       | [Medtronic antiguas](../Configuration/MedtronicPump.md)         | ![disponible](./images/available.png)      | ![disponible](./images/available.png)       | ![disponible](./images/available.png)                 | ![disponible](./images/available.png)          |
+| MCG         | [Dexcom G7](../Hardware/DexcomG7.md)                            | ![disponible](./images/available.png)      | ![disponible](./images/available.png)       | ![no disponible](./images/unavailable.png)            | ![disponible](./images/available.png)          |
+| MCG         | [Dexcom One](../Hardware/DexcomG6.md)                           | ![disponible](./images/available.png)      | ![disponible](./images/available.png)       | ![no disponible](./images/unavailable.png)            | ![disponible](./images/available.png)          |
+| MCG         | [Dexcom G6](../Hardware/DexcomG6.md)                            | ![disponible](./images/available.png)      | ![disponible](./images/available.png)       | ![disponible](./images/available.png)                 | ![disponible](./images/available.png)          |
+| MCG         | [Dexcom G5](../Hardware/DexcomG5.md)                            | ![disponible](./images/available.png)      | ![disponible](./images/available.png)       | ![disponible](./images/available.png)                 | ![disponible](./images/available.png)          |
+| MCG         | [Dexcom G4](../Hardware/DexcomG4.md)                            | ![disponible](./images/available.png)      | ![disponible](./images/available.png)       | ![disponible](./images/available.png)                 | ![disponible](./images/available.png)          |
+| MCG         | [Libre 3](../Hardware/Libre3.md)                                | ![disponible](./images/available.png)      | ![no disponible](./images/unavailable.png)  | ![no disponible](./images/unavailable.png)            | ![no disponible](./images/unavailable.png)     |
+| MCG         | [Libre 2](../Hardware/Libre2.md)                                | ![disponible](./images/available.png)      | ![no disponible](./images/unavailable.png)  | ![no disponible](./images/unavailable.png)            | ![disponible](./images/available.png)          |
+| MCG         | [Libre 1](../Hardware/Libre1.md)                                | ![disponible](./images/available.png)      | ![no disponible](./images/unavailable.png)  | ![no disponible](./images/unavailable.png)            | ![disponible](./images/available.png)          |
+| MCG         | [Eversense](../Hardware/Eversense.md)                           | ![disponible](./images/available.png)      | ![no disponible](./images/unavailable.png)  | ![no disponible](./images/unavailable.png)            | ![disponible](./images/available.png)          |
+| MCG         | [MM640G/MM630G](../Hardware/MM640g.md)                          | ![disponible](./images/available.png)      | ![no disponible](./images/unavailable.png)  | ![no disponible](./images/unavailable.png)            | ![disponible](./images/available.png)          |
+| MCG         | [PocTech](../Hardware/PocTech.md)                               | ![disponible](./images/available.png)      | ![no disponible](./images/unavailable.png)  | ![no disponible](./images/unavailable.png)            | ![disponible](./images/available.png)          |
+| MCG         | [Nightscout como origen BG](../Hardware/CgmNightscoutUpload.md) | ![disponible](./images/available.png)      | ![disponible](./images/available.png)       | ![disponible](./images/available.png)                 | ![disponible](./images/available.png)          |
 
 _Table notes:_
 1. A **rig** is a small computer which you carry around with you, without a monitor. One supported device type is Intel Edison + Explorer Board and the other Raspberry Pi + Explorer HAT or Adafruit RFM69HCW Bonnet. The first APS were based on this setup, as mobile phones were not capable of running the required algorithms. Use of these systems has declined, as the setup on mobile phones has become easier, and phones have a display included. Intel has also stopped selling the Intel Edison. The excellent OpenAPS algorithms **oref0** and **oref1** are now incorporated in AAPS and iAPS.
@@ -302,11 +302,11 @@ The developers of **AAPS** take safety incredibly seriously, and want others to 
 
 ## How does AAPS get continually developed and improved?
 
-La mayoría de los usuarios de **AAPS** utilizan la versión completamente probada **master** de AAPS, que ha sido sometida a pruebas para detectar errores y problemas antes de ser lanzada a la comunidad. Behind the scenes, the developers try out new improvements, and test these out in “developer” (**dev**) versions of **AAPS** with a user community who are happy to do bug updates at short notice. If the improvements work well, they are then released as a new “master” version of **AAPS**. Any new master release is announced on the Facebook group, so that the mainstream **AAPS** users can read about and update to the new master version.
+La mayoría de los usuarios de **AAPS** utilizan la versión completamente probada **master** de AAPS, que ha sido sometida a pruebas para detectar errores y problemas antes de ser lanzada a la comunidad. Entre bastidores, los desarrolladores prueban nuevas mejoras y las prueban en versiones de "desarrollo" (**dev**) de **AAPS** con una comunidad de usuarios dispuestos a realizar actualizaciones de errores en corto plazo. Si las mejoras funcionan bien, se lanzan como una nueva versión "master" de **AAPS**. Cualquier nueva versión "master" se anuncia en el grupo de Facebook, para que los usuarios habituales de **AAPS** puedan leer sobre ella y actualizar a la nueva versión maestra.
 
-Some experienced and confident **AAPS** users conduct experiments with emerging technologies and with dev versions of the **AAPS** app, which can be interesting for the less adventurous users to read about, without having to do it themselves! People tend to share these experiments on the Facebook group too.
+Some experienced and confident **AAPS** users conduct experiments with emerging technologies and with dev versions of the **AAPS** app, which can be interesting for the less adventurous users to read about, without having to do it themselves! Las personas tienden a compartir estos experimentos en el grupo de Facebook también.
 
-You can read more about some of these experiments and discussion on emerging tech here:
+Puedes obtener más información sobre algunos de estos experimentos y discusiones sobre tecnología emergente aquí:
 
 Tim Street [https://www.diabettech.com/](https://www.diabettech.com/)
 
@@ -314,16 +314,16 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 
 ## Who can benefit from AAPS?
 
-| User Type                                   |
-| ------------------------------------------- |
-| ✔️ type 1 diabetic                          |
-| ✔️ caregiver or parent of a type 1 diabetic |
-| ✔️ blind users type 1 diabetic              |
-| ✔️ *clincians and healthcare professionals  |
+| Tipo de Usuario                                           |
+| --------------------------------------------------------- |
+| ✔️ Personas con diabetes tipo 1                           |
+| ✔️ Cuidadores o padres de una persona con diabetes tipo 1 |
+| ✔️ Usuarios ciegos con diabetes tipo 1                    |
+| ✔️ *Clínicos y profesionales de la salud                  |
 
-The above table assumes that the user has access to both continuous gluocse monitor and insulin pump.
+La tabla anterior supone que el usuario tiene acceso tanto a un monitor continuo de glucosa como a una bomba de insulina.
 
-*All data from **AAPS** can be made available to healthcare professionals via data sharing platforms, including Nightscout that provides logging and real time monitoring of CGM data, insulin delivery, carbohydrate entries, predictions and settings. Nightscout records include daily and weekly reports which can aid healthcare professionals' discussions with type 1 patients with more accurate data on glycemic control and any behavioural considerations.
+*All data from **AAPS** can be made available to healthcare professionals via data sharing platforms, including Nightscout that provides logging and real time monitoring of CGM data, insulin delivery, carbohydrate entries, predictions and settings. Los registros de Nightscout incluyen informes diarios y semanales que pueden ayudar a los profesionales de la salud en sus conversaciones con pacientes con diabetes tipo 1 al proporcionar datos más precisos sobre el control glucémico y consideraciones conductuales.
 
 ### Accessibility for users AAPS who are partially or completely blind
 
@@ -359,21 +359,21 @@ Done, just close the window! The screen reader should work now.
 
 ## What benefits can I get from AAPS?
 
-With investment of your time, **AAPS** can potentially lead to:
+Con inversión de tu tiempo, **AAPS** potencialmente puede llevar a:
 
-- alleviating the stress and burden of managing type 1 diabetes;
+- Aliviar el estrés y la carga de gestionar la diabetes tipo 1;
 
-- reducing the multitude of mundane decisions that arise from type 1 diabetes;
+- Reducir la multitud de decisiones que surgen a raíz de la diabetes tipo 1;
 
-- the provision of personalised and dynamic insulin dosing based on real-time data which can cut down the need for hypo treatments and reduce hyperglycemia episodes;
+- La provisión de dosis de insulina personalizadas y dinámicas basadas en datos en tiempo real, lo que puede reducir la necesidad de tratamientos para hipoglucemias y episodios de hiperglucemia;
 
-- an increased knowledge of insulin management and confidence to better fine tune your settings;
+- Un aumento en el conocimiento sobre la gestión de la insulina y la confianza para ajustar mejor tus configuraciones;
 
-- the ability to create automatic settings (**automations**) that are tailored to fit in with your lifestyle;
+- La capacidad de crear configuraciones automáticas (**automatizaciones**) que se adapten a tu estilo de vida;
 
-- improved sleep quality and overall reduction in the frequency of nighttime interventions;
+- Mejora en la calidad del sueño y reducción general en la frecuencia de intervenciones nocturnas;
 
-- remote monitoring and administration of insulin delivery for caregivers of type 1 diabetics; and
+- Monitorización remota y administración de la entrega de insulina para cuidadores de personas con diabetes tipo 1; y
 
 - streamlining of all your portable diabetic equipment (continuous glucose monitor receiver and insulin controlling devices) by using an Android phone controlled by **AAPS**.
 
