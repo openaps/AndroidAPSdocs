@@ -4,7 +4,7 @@ In addition to the range of possibilities available for remotely controlling _an
 
 A good overview of the extensive options available for following **AAPS** is at [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#) webpage; if you expand the menu on the left-hand side:
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/dfa981c1-5a15-4498-88d2-0fd1462d8242)
+![imagen](https://github.com/openaps/AndroidAPSdocs/assets/94044064/dfa981c1-5a15-4498-88d2-0fd1462d8242)
 
 The most common strategies used in combination with **AAPS** are explained in more detail below.
 
@@ -17,7 +17,7 @@ These are some of the main “follower” apps used by **AAPS** users. All of th
 
 #### 1) Dexcom Follow (compatible with both Android and iOs devices)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/ded350b0-6012-4104-b21c-5d5bfd91aa65)
+![imagen](https://github.com/openaps/AndroidAPSdocs/assets/94044064/ded350b0-6012-4104-b21c-5d5bfd91aa65)
 
 ●   Dexcom Follow is compatible with a wide range of handsets (both Android and iPhone). Dexcom Follow can be used even if you are not using the official Dexcom app to receive sensor data.
 
@@ -46,7 +46,7 @@ For Dexcom Follow, the sensor data is then exported from the AAPS phone either d
 
 #### 2) Nightguard (iOs only)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/f2c7d330-9889-4526-9a5c-bbb012d804ab)
+![imagen](https://github.com/openaps/AndroidAPSdocs/assets/94044064/f2c7d330-9889-4526-9a5c-bbb012d804ab)
 
 Pros (as reported by users):
 
@@ -72,7 +72,7 @@ Cons (as reported by users)
 
 #### 3) Nightwatch (Android only)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/855c3a74-e612-4a6f-8b63-18d286ea0a3f)
+![imagen](https://github.com/openaps/AndroidAPSdocs/assets/94044064/855c3a74-e612-4a6f-8b63-18d286ea0a3f)
 
 
 ●   Nightwatch markets itself as a Nightscout client and monitors the user’s Nightscout glucose levels on either Android phone or tablet.
@@ -121,9 +121,9 @@ An easier solution is therefore to download the **Shuggah** app.
 
 App:
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/03fc0c6a-067a-40ea-8be3-c66d4ce8b5d9)
+![imagen](https://github.com/openaps/AndroidAPSdocs/assets/94044064/03fc0c6a-067a-40ea-8be3-c66d4ce8b5d9)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/fae3ec63-2c2c-4152-ab42-97f9744a8f36)
+![imagen](https://github.com/openaps/AndroidAPSdocs/assets/94044064/fae3ec63-2c2c-4152-ab42-97f9744a8f36)
 
 
 "What is Shuggah?" A group of Ukrainian developers took the project code for xDrip4iOS (which is shared publicly on Github) and released it on the App Store under a business account (the app is free, and their intentions are good). The app had to be slightly modified to add a privacy statement and disclaimer to get past the review, but the rest of the app should be the same as xDrip4iOS. The Shuggah release is not officially managed by the xDrip4iOS developers so it cannot be guaranteed that it will function in the same way as xDrip4iOS, or that Apple won't remove it from the App Store at some point.
@@ -133,9 +133,9 @@ The [XdripiOs Facebook group](https://www.facebook.com/groups/853994615056838/an
 
 ### 6) Sugarmate (iOs)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/340cd555-a9e0-4a20-a131-36c078f5b8ea)
+![imagen](https://github.com/openaps/AndroidAPSdocs/assets/94044064/340cd555-a9e0-4a20-a131-36c078f5b8ea)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/21b83c41-85c6-4619-a702-a65450768855)
+![imagen](https://github.com/openaps/AndroidAPSdocs/assets/94044064/21b83c41-85c6-4619-a702-a65450768855)
 
 
 [Sugarmate](https://sugarmate.io/) is available to download onto iPhones from the App store. Sugarmate is compatible with: ●   Apple iPhone (Requires software version 13.0 or later) ●   Apple iPad (Requires software version 13.0 or later) ●   Google Android (Save web app to your homescreen)
@@ -145,7 +145,7 @@ It has been reported by users of Sugarmate that it can be used with Apple CarPla
 
 ### 7)  [Spike](https://spike-app.com/) on iOS
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/1129ba00-8159-4940-936e-76fd4ae45a2d)
+![imagen](https://github.com/openaps/AndroidAPSdocs/assets/94044064/1129ba00-8159-4940-936e-76fd4ae45a2d)
 
 Spike can be used as a primary receiver or as a follower app, providing BG, alarms and IOB and more. Whilst the website is no longer biDetails are [here](https://spike-app.com/#features2). Details and support can be found on [Facebook](https://www.facebook.com/groups/1973791946274873) and Gitter](https://gitter.im/SpikeiOS/Lobby).
 
@@ -161,7 +161,7 @@ Devices include:
 #### 1. M5 stack
 
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/061edb52-56d2-45f4-b3da-82b2036d7bc6)
+![imagen](https://github.com/openaps/AndroidAPSdocs/assets/94044064/061edb52-56d2-45f4-b3da-82b2036d7bc6)
 
 
 
@@ -172,9 +172,9 @@ The [M5Stack](https://github.com/mlukasek/M5_NightscoutMon) is a small box which
 
 SugarPixel is a device for secondary glucose display alert system for continuous glucose monitoring that connects with Dexcom app or Nightscout app on the user’s smartphone. The device displays real time blood sugar readings. This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customisable display options and native multi-user following.
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/39137beb-17cc-4c87-98b7-cf1831d484cb)
+![imagen](https://github.com/openaps/AndroidAPSdocs/assets/94044064/39137beb-17cc-4c87-98b7-cf1831d484cb)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/87883ebb-9683-4aa8-8014-49c2ca902c93)
+![imagen](https://github.com/openaps/AndroidAPSdocs/assets/94044064/87883ebb-9683-4aa8-8014-49c2ca902c93)
 
 ●   SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with colour-coded glucose values. ●   The standard face displays BG, Trend Arrow, and Delta. Delta is the change + or - from the last reading. ●   SugarPixel can be customised for use in low brightness with the BG and Time face to see the user’s BG reading and current time on the user’s nightstand. ●   SugarPixel’s xolour face utilises the entire display to show a single colour representing the BG value. This enables the user to see BG readings at a distance through the window while outside playing in the backyard, patio, or pool. ●   The Big BG face is useful for nightstand users who wear glasses or contact lenses.
 
