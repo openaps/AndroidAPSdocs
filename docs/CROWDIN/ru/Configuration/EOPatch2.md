@@ -49,49 +49,49 @@ This is a reminder to notify you of the time remaining before the current patch 
 
 ![Image5](../images/EOPatch/Bild5.png)
 
-### сопряжение с Patch
-The Patch pairing screen will be displayed, and pairing will be attempted automatically. If communication is successful, the Bluetooth pairing request notification appears. Click OK and when the Bluetooth pairing request notification appears a second time with the authentication code, select OK again.
+### Сопряжение с Patch
+Появится экран сопряжения патча и автоматически будет выполнено соединение. При успешном обмене данными появляется запрос на подключение Bluetooth. Нажмите ОК, и когда запрос подключения Bluetooth появится второй раз с кодом авторизации, снова выберите ОК.
 
 [Warning]
 
 - For pairing, the patch and the smartphone must be located within 30 cm of each other.
-- After the patch booting is completed, the patch will beep every 3 minutes until the pairing is complete.
+- После загрузки, патч будет издавать звуковой сигнал каждые 3 минуты, пока не будет завершено сопряжение.
 - After booting the patch, the patch application must be completed via the app within 60 minutes. If the application cannot be completed within 60 minutes, the patch should be discarded.
 
 ![Image6](../images/EOPatch/Bild6.png) ![Image7](../images/EOPatch/Bild7.png) ![Image8](../images/EOPatch/Bild8.png)
 
 
 ### patch preparation
-After removing the adhesive tape of the patch, check if the needle is sticking out. If there are no problems with the patch, click NEXT.
+После удаления клейкой ленты патча, проверьте, не торчит ли игла. Если проблем с патчем нет, жмите ДАЛЕЕ.
 
 ![Image9](../images/EOPatch/Bild9.png)
 
 ### Patch attachment
-Insulin should be injected in a spot with subcutaneous fat but few nerves or blood vessels, so it is recommended to use the abdomen, arm, or thigh for the patch attachment site. Choose a patch attachment site and apply the patch after disinfecting the location.
+Инсулин должен вводиться в области с подкожным жиром, где мало нервных окончаний или кровеносных сосудов, поэтому рекомендуется живот или бедро для места крепления патча. Выберите место установки патча, и после дезинфекции этого участка, установите патч.
 
 [Warning]
 
-- Make sure to straighten the side of the patch tape attached to the body evenly, so that the patch adheres completely to the skin.
-- If the patch does not stick completely, air may enter between the patch and the skin, which can weaken the adhesive strength and waterproof effect of the patch.
+- Обязательно разгладьте сторону патча, прикрепляемую к телу равномерно, чтобы патч был полностью прижат к коже.
+- Если патч не приклеится полностью, между ним и кожей попадет воздух, что ослабит прочность крепления и водонепроницаемость патча.
 
 ![Image10](../images/EOPatch/Bild10.png)
 
 ### Safety Check
-When patching is complete, touch Start Safety Check. When the safety check is completed, the patch will beep once.
+Когда патч наклеен, нажмите Начать проверку безопасности. When the safety check is completed, the patch will beep once.
 
 [Warning]
 
-- For safe use, do not turn the needle action lever until the safety check has been completed.
+- Для безопасности не поворачивайте рычаг действия иглы до завершения проверки.
 
 ![Image11](../images/EOPatch/Bild11.png) ![Image12](../images/EOPatch/Bild12.png)
 
 
 ### Inserting the needle
-The needle is inserted by holding around the patch and turning the needle action lever more than 100° in the upward direction of the lever. There is a buzzer sound when the needle is inserted correctly. Turn the needle action lever further clockwise to release the lever. Click NEXT.
+Игла вставляется при охвате патча рукой и повороте рычага введения иглы более чем на 100° вверх. There is a buzzer sound when the needle is inserted correctly. Поверните рычаг иглы дальше по часовой стрелке, чтобы освободить рычаг. Click NEXT.
 
 [Caution]
 
-- If you go to the next step without the buzzer sounding, a needle insertion error warning will appear.
+- Если вы перейдете к следующему шагу, не дожидаясь звука зуммера, появится оповещение об ошибке установки иглы.
 
 ## Discarding the patch
 Patches must be replaced in the case of low insulin levels, usage expiration, and defects. The recommended usage period for each patch is 84 hours after booting the patch.
