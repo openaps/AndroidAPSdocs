@@ -1,6 +1,6 @@
 # Bienvenido/a a la documentación de AAPS
 
-![image](./images/basic-outline-of-AAPS.png)
+![imagen](./images/basic-outline-of-AAPS.png)
 
 AAPS es una aplicación de código abierto para personas que viven con diabetes, dependientes de insulina y que actúa como un sistema de páncreas artificial (APS) en teléfonos inteligentes Android de Google. Utiliza un algoritmo de software OpenAPS que tiene como objetivo hacer lo que hace un páncreas en funcionamiento: mantener los niveles de azúcar en sangre dentro de límites saludables mediante la administración automatizada de insulina (AID). Además, necesitas una bomba de insulina compatible y aprobada por la FDA/CE, así como un medidor continuo de glucosa.
 
