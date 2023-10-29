@@ -7,17 +7,15 @@ In spring 2022, the Dexcom G7 received its CE certificate and was sold at the en
 
 Noteworthy is the fact that the G7 system, compared to the G6, does not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app). Consequently, the values have to be smoothed to be able to use them sensibly in AAPS. 
 
-There are **two** possibilities (as of 02/'23).
+![G7 english](https://github.com/blaqone/AndroidAPSdocs/assets/37814299/6fe30b84-227a-4bae-a9a5-527cee341dbf)
 
-![DexcomG7.md](../images/DexcomG7.png)
-
-## 1.  Patched Dexcom G7 App
+## 1.  Patched Dexcom G7 App (DiAKEM)
 
 **Note: AAPS 3.2.0.0 or higher is required!**
 
 ### Install a new patched (!) G7 app and start the sensor
 
-A patched Dexcom G7 app gives acess to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+A patched Dexcom G7 app (DiAKEM) gives acess to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
 Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
 
@@ -40,7 +38,13 @@ The smoothing of glucose values can be activated by enabling the "Average smooth
 
 **Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 values.
 
-## 2. Xdrip+ (companion mode) 
+## 2. Xdrip+ (direct connection to G7)
+
+- Follow the instructions here: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- In AAPS select  > Configuration > BG source > xDrip+.
+Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md)
+
+## 3. Xdrip+ (companion mode) 
 
 -   Download and install Xdrip+: [xdrip](https://github.com/NightscoutFoundation/xDrip) 
 - As data source in Xdrip "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
