@@ -101,6 +101,8 @@ Module <./Module/module.md>
 
 Building the APK <./Installing-AndroidAPS/Building-APK.md>
 
+New Building the APK <./Installing-AndroidAPS/Building-the-App.md>
+
 Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
 
 Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
