@@ -30,26 +30,26 @@ This is a reminder to notify you of the time remaining before the current patch 
 
 ![Image3](../images/EOPatch/Bild3.png)
 
-## Connecting the Patch
+## Подключение Patch
 
 ### Move to patch connection screen
 
-Select EOPATCH2 at the top of the home screen and click the ACTIVATE PATCH button at the bottom left.
+Выберите EOPATCH2 в верхней части главного экрана и нажмите кнопку АКТИВИРОВАТЬ PATCH в левом нижнем углу.
 
 ![Image4](../images/EOPatch/Bild4.png)
 
-### Connecting the patch
-Insert the syringe needle into the insulin inlet on the patch and then slowly push the piston to inject the insulin. When insulin is filled with more than 80U, the patch makes a booting sound (1 buzzer) and boots. After confirming the buzzer sound, click the START PAIRING button on the screen.
+### Подключение Patch
+Вставьте иглу шприца в углубление для инсулина на Patch и медленно толкайте поршень, чтобы ввести инсулин. Когда инсулин наполнен более чем 80ед, патч делает звук загрузки (зуммер) и загружается. After confirming the buzzer sound, click the START PAIRING button on the screen.
 
 [Warning]
 
 - Do not turn the needle action lever until instructed. It can cause serious problems during injection or safety checks otherwise.
-- The amount of insulin that can be injected into the patch is 80~200U. If you inject less than 80U into the patch initially, the patch will not work.
-- Take the insulin to be put into the patch from the refrigerator and leave it at room temperature for 15 to 30 minutes beforehand. The temperature of the insulin to be injected must be at least 10°C.
+- The amount of insulin that can be injected into the patch is 80~200U. Если изначально ввести менее 80ед в патч, он не будет работать.
+- Заблаговременно достаньте из холодильника инсулин, который будете вводить в патч и оставьте его при комнатной температуре на 15 - 30 минут. The temperature of the insulin to be injected must be at least 10°C.
 
 ![Image5](../images/EOPatch/Bild5.png)
 
-### patch pairing
+### сопряжение с Patch
 The Patch pairing screen will be displayed, and pairing will be attempted automatically. If communication is successful, the Bluetooth pairing request notification appears. Click OK and when the Bluetooth pairing request notification appears a second time with the authentication code, select OK again.
 
 [Warning]
