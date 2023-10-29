@@ -111,7 +111,6 @@ Historically, it has been difficult to get hold of the app of the iOs or "Apple"
 A free, modified version of xDrip+4iOs** has become available as **Shuggah**. This can be downloaded directly from the Apple App store on iPhone or tablet. 
 
 :::{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
-
 :class: dropdown
 
 
