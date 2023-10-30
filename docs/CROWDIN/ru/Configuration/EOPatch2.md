@@ -133,9 +133,9 @@ Select EOPATCH2 at the top of the home screen and click the SUSPEND button at th
 | Ошибка самотестирования   | Происходит, когда патч обнаруживает непредвиденную ошибку при самотестировании после загрузки.                                                                                       |
 | Inappropriate temperature | Происходит, когда патч находится вне нормального диапазона рабочих температур. Чтобы убрать сигнал, патч должен быть помещен в соответствующую рабочую температуру (от 4,4 до 37°C). |
 | Needle insertion Error    | Происходит из-за ненормального ввода иглы при установке патча. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.            |
-| Patch battery Error       | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                             |
-| Patch activation Error    | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                              |
-| Patch Error               | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                             |
+| Patch battery Error       | Происходит непосредственно перед отключением внутренней батареи патча и выключением.                                                                                                 |
+| Patch activation Error    | Происходит, когда приложение не может завершить процесс установки патча в течение 60 минут после запуска.                                                                            |
+| Ошибка патча              | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                             |
 
 ### Warning
 
