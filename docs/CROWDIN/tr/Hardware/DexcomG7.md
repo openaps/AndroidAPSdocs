@@ -7,17 +7,15 @@
 
 G7 sisteminin G6 ile karşılaştırıldığında ne uygulamada ne de okuyucuda değerleri düzgünleştirmemesi dikkat çekicidir. Bununla ilgili daha fazla ayrıntıya [buradan](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app) ulaşabilirsiniz. Sonuç olarak, AAPS'de mantıklı bir şekilde kullanabilmek için değerlerin yumuşatılması gerekir.
 
-**iki** olasılık vardır (02/'23 itibarıyla).
+![G7 english](https://github.com/blaqone/AndroidAPSdocs/assets/37814299/6fe30b84-227a-4bae-a9a5-527cee341dbf)
 
-![DexcomG7.md](../images/DexcomG7.png)
-
-## 1.  Yamalı Dexcom G7 Uygulaması
+## 1.  Patched Dexcom G7 App (DiAKEM)
 
 **Note: AAPS 3.2.0.0 or higher is required!**
 
 ### Yeni yamalı (!) bir G7 uygulaması kurun ve sensörü başlatın
 
-Yamalı bir Dexcom G7 uygulaması, Dexcom G7 verilerine erişim sağlar. Bu uygulama şu anda G7 verilerini alamadığından, BYODA uygulaması değildir.
+A patched Dexcom G7 app (DiAKEM) gives acess to the Dexcom G7 data. Bu uygulama şu anda G7 verilerini alamadığından, BYODA uygulaması değildir.
 
 Daha önce kullandıysanız orijinal Dexcom uygulamasını kaldırın (Çalışmakta olan bir sensör oturumuna devam edilebilir - uygulamayı kaldırmadan önce sensör kodunu not edin!)
 
@@ -39,7 +37,12 @@ Glikoz değerlerinin yumuşatılması, Konfigürasyon ayarlarında "Ortalama yum
 
 ** Üstel Yumuşatma ** G7 değerlerinin anlamlı kullanımı için **ETKİN** olmalıdır.
 
-## 2. Xdrip+ (tamamlayıcı mod)
+## 2. Xdrip+ (direct connection to G7)
+
+- Follow the instructions here: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- AAPS'de > Yapılandırma > KŞ kaynağı > xDrip+. Ayarları [xDrip+ ayarları](../Configuration/xdrip.md) sayfasındaki açıklamalara göre düzenleyin.
+
+## 3. Xdrip+ (tamamlayıcı mod)
 
 -   Xdrip+'ı indirin ve kurun: [xdrip](https://github.com/NightscoutFoundation/xDrip)
 - Xdrip'te veri kaynağı olarak "Companion App" seçilmeli ve Gelişmiş Ayarlar altında > Bluetooth Ayarları> "Companion Bluetooth" etkinleştirilmelidir.

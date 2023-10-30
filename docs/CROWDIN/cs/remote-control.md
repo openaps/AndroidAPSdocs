@@ -404,8 +404,9 @@ Many of the possible smartwatch options available to **AAPS** users are detailed
 
 There are currently five main ways in which smartwatches are used in conjunction with **AAPS**. These are shown in the table below: 
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/1a5461e3-abce-4e51-90ec-a03dbc352061)
 
+
+![29-10-23, updated AAPSClient watchoption table](https://github.com/openaps/AndroidAPSdocs/assets/94044064/bbbe0e84-1a8c-4163-8a0b-dcf91144af14)
 
 
 
@@ -491,18 +492,13 @@ Now reinstall the latest version of Android Studio.
 
 ### How to generate the AndroidAPS.wear apk
 
-As a summary, the build process for the Wear apk is very similar to that for the "full" phone apk, the difference is that in Android Studio you need to select “**AndroidAPS.wear**”  in the drop-down menu (which is the default), and as build variant choose “**fullRelease**”. This will generate the **AAPS** Wear apk file:
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/55500278-a8ac-421a-ab41-cc0919d39426)
-
-If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping.
+As a summary, the build process for the Wear apk is very similar to that for the "full" phone apk, the difference is that in Android Studio you need to select “**AndroidAPS.wear**”  in the drop-down menu (which is the default), and as build variant choose “**fullRelease**”. This will generate the **AAPS** Wear apk file.  If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping.
 
 #### Step-by-step guide for building the AndroidAPS.wear apk
 
 The following guide assumes you have reinstalled the latest version of Android studio (scenario below has used Giraffe 2022.3.1)).
 
 ![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/e8e3b7f3-f82e-425a-968c-cc196434a5f8)
-
 
 To get back here:
 
@@ -542,7 +538,15 @@ The next screen should show this:
 
 And select “fullRelease”.
 
-Be patient - the Wear OS apk should now be built in around 10-20 minutes, depending on the speed of your internet connection.
+Be patient - the **AAPS** Wear apk should be built in around 10-20 minutes, depending on the speed of your internet connection.
+
+Troubleshooting -  if you get an error about "uncommitted changes", see the [troubleshooting guide](troubleshooting_androidstudio.md)
+
+In the process of building the 3.2 full AAPS app (and in fact any signed app), Android Studio generates a .json file. This then causes errors with "uncommitted changes" when you try to build the next signed app, like the **AAPS** wear app. The quickest way to resolve this is to navigate to the folder where the full AAPS app has been built, your folder is probably something like:
+
+C:\Users\Your Name\StudioProjects\AndroidAPS\app\aapsclient\release.
+
+Either delete, or move the unneeded .json file out of the folder. Then try to build the **AAPS** wear app again. If that doesn't work, the more detailed [troubleshooting guide](troubleshooting_androidstudio.md)  will help you to identify the specific file causing the issue, which could also be your keystore file.
 
 ### How to set up a Samsung Galaxy 4 smartwatch with **AAPS**
 
@@ -550,30 +554,53 @@ This section assumes you are totally new to Smartwatches, and gives you basic or
 
 _This guide assumes the Samsung Galaxy watch you are setting up is running Wear OS version 3 or lower._ If you are setting up a watch running Wear OS 4/OneUI 5 or later, you will need to use a new ADB pairing process, this is explained in the Samsung software on your phone and will be updated here in due course. Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
 
-
 #### Basic smartwatch familiarity
+
+After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable" “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
 
 There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
 
 https://www.youtube.com/watch?v=tSVkqWNmO2c
 
-The phone app “Galaxy Wearable” also has an instruction manual section in it.
+The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. Depending on your version, this may prompt you to install a further 3rd app “galaxy watch 4 plugin” from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
 
-**Setting up a Samsung account:** You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 363 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
+##### Setting up a Samsung account
 
-### Step-by-Step installation of the **AAPS** wear.apk on the watch
+You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 363 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy wearable" “samsung”  and “Easy Fire tools”:
 
-Step 1)  Download _Easy Fire Tools_ on phone
+### Transferring the Wear app onto your AAPS phone
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/81ceb8f3-dfa6-468b-b9d0-c31b885bc104)
+Loading the Wear.apk from Android Studio to your phone can be done either by:
+
+a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
+
+b)  cut and paste Wear.apk from Android Studio onto your Gdrive.
+
+
+You can use either Wear Installer 2 or Easy Fire tools to side-load AAPS onto the watch. Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained.
+
+
+### Using Wear Installer 2 to side-load AAPS wear from the phone onto the watch
 
  ![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/43577a66-f762-4c11-a3b3-4d6d704d26c7)
 
-Open galaxy wearable, search for the watch, attempt to pair. Depending on your version, this may prompt you to install a further 3rd app “galaxy watch 4 plugin” from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
+Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
 
-Step 2)     Make yourself a developer in the watch (once set up and connected to phone):
+which provides all the necessary detail (best to open the video on a separate device so you can watch it whilst setting up the phone).
+
+As mentioned in the video, once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
+
+Alternatively, you can:
+
+:::{admonition} #### Use Easy Fire tools to side-load the **AAPS** wear on the watch
+:class: dropdown
+
+1)   Download _Easy Fire Tools_ from playstore onto phone
+
+![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/81ceb8f3-dfa6-468b-b9d0-c31b885bc104)
+
+2)  Make yourself a developer in the watch (once set up and connected to phone):
 
 Go to settings >about watch (bottom option) >- software info > software version.
 
@@ -581,16 +608,11 @@ Rapidly tap on “ software version” until a notification appears that the wat
 
 In “developer options”, turn on “ADB debugging” and “wireless debugging”. The latter option then reveals the IP address of the watch, the final two digits of which changes each time the watch is paired with a new phone. It will be something like: **167.177.0.20.** 5555 (ignore the last 4 digits). Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS.
 
-STEP 3)     Enter IP address **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). Then click the plug socket icon on the top right.
+![24-10-23, watch ADB debug pic](https://github.com/openaps/AndroidAPSdocs/assets/94044064/643f4e8b-09f3-4a8d-8277-76b1839a5c3a)
+
+STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). Then click the plug socket icon on the top right.
 
 ![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/b927041f-cc53-4cde-9f77-11cd517c9be0)
-
-
-STEP 4) Loading the Wear.apk from Android Studio to your phone can be done either by:
-
-a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
-
-b)  cut and paste Wear.apk from Android Studio onto your Gdrive.
 
 
 ![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/00b2fb8b-5996-4b71-894e-516d63469e1b)
@@ -608,23 +630,12 @@ Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the 
 
 ![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/2c398a34-b865-4aa1-9c53-d83dfef052a7)
 
+:::
 
-Another option, instead of Easy Fire Tools is to use [Wear Installer 2](https://www.youtube.com/watch?v=ejrmH-JEeE0):
-
-#### To use Wear Installer 2
-
-Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and is accompanied with a handy ‘how to sideload’ [video](https://play.google.com/store/search?q=wear+installer+2&c=apps)
-
-on how to carry out Step 2) but with slight variation:
-
-![24-10-23, watch ADB debug pic](https://github.com/openaps/AndroidAPSdocs/assets/94044064/643f4e8b-09f3-4a8d-8277-76b1839a5c3a)
-
-
-Once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
 
 ### Setting up the connection to the watch from AAPS on the Phone
 
-The final step is to configure **AAPS** on the phone to interact with the **AAPS** ‘Wear” on the watch. To do this, enable the Wear plugin in Config Builder:
+The final step is to configure **AAPS** on the phone to interact with **AAPS** Wear” on the watch. To do this, enable the Wear plugin in Config Builder:
 
 ●   Go to the AAPS app on the phone
 
@@ -764,7 +775,4 @@ Although it was discontinued a few years ago, if you are using a Sony Smartwatch
 ### Watchfaces for Wear OS
 
 Further details about the watchfaces and configurations for complications can be found [here](https://androidaps.readthedocs.io/en/latest/Configuration/Watchfaces.html)
-
-If you only want to follow **AAPS** rather than send any commands, see the [Following-only section](docs/EN/following-only.md) for more options. 
-
 
