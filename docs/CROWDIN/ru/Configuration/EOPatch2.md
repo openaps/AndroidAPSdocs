@@ -125,17 +125,17 @@ Select EOPATCH2 at the top of the home screen and click the SUSPEND button at th
 
 Ниже разъясняются различные типы оповещений.
 
-| Сигналы оповещения        | Описание                                                                                                                                                                                    |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir           | Происходит когда в резервуаре кончается инсулин.                                                                                                                                            |
-| Срок действия патча истек | Происходит, когда истекло время использования патча, и инъекции инсулина невозможны.                                                                                                        |
-| Закупорка                 | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                           |
-| Ошибка самотестирования   | Происходит, когда патч обнаруживает непредвиденную ошибку при самотестировании после загрузки.                                                                                              |
-| Inappropriate temperature | Происходит, когда патч находится вне нормального диапазона рабочих температур. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition.    |
-| Needle insertion Error    | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line. |
-| Patch battery Error       | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                                    |
-| Patch activation Error    | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                     |
-| Patch Error               | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                    |
+| Сигналы оповещения        | Описание                                                                                                                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Empty reservoir           | Происходит когда в резервуаре кончается инсулин.                                                                                                                                     |
+| Срок действия патча истек | Происходит, когда истекло время использования патча, и инъекции инсулина невозможны.                                                                                                 |
+| Закупорка                 | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                    |
+| Ошибка самотестирования   | Происходит, когда патч обнаруживает непредвиденную ошибку при самотестировании после загрузки.                                                                                       |
+| Inappropriate temperature | Происходит, когда патч находится вне нормального диапазона рабочих температур. Чтобы убрать сигнал, патч должен быть помещен в соответствующую рабочую температуру (от 4,4 до 37°C). |
+| Needle insertion Error    | Происходит из-за ненормального ввода иглы при установке патча. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.            |
+| Patch battery Error       | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                             |
+| Patch activation Error    | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                              |
+| Patch Error               | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                             |
 
 ### Warning
 
