@@ -102,40 +102,40 @@ This is a reminder to notify you of the time remaining before the current patch 
 ![Image13](../images/EOPatch/Bild13.png) ![Image14](../images/EOPatch/Bild14.png) ![Image15](../images/EOPatch/Bild15.png) ![Image16](../images/EOPatch/Bild16.png)
 
 ## Приостановка и возобновление подачи инсулина
-Приостановка подачи инсулина также отменяет как пролонгированный болюс, так и временный базал. When resuming insulin delivery, the canceled extended bolus and temporary basal will not be resumed. And when insulin delivery is suspended, the patch will give a sound every 15 minutes.
+Приостановка подачи инсулина также отменяет как пролонгированный болюс, так и временный базал. When resuming insulin delivery, the canceled extended bolus and temporary basal will not be resumed. И при приостановке подачи инсулина, патч будет издавать звуковой сигнал каждые 15 минут.
 
-### Suspending insulin delivery
+### Приостановка подачи инсулина
 Select EOPATCH2 at the top of the home screen and click the SUSPEND button at the bottom right. When you select CONFIRM in the confirmation box, a time selection box appears. If you select the CONFIRM button after selecting the time, the insulin delivery will be suspended for the set amount of time.
 
 ![Image17](../images/EOPatch/Bild17.png) ![Image18](../images/EOPatch/Bild18.png) ![Image19](../images/EOPatch/Bild19.png)
 
 
-### Resuming insulin delivery
-Select EOPATCH2 at the top of the home screen and click the RESUME button at the bottom right. Insulin delivery will resume by selecting CONFIRM in the confirmation dialog box.
+### Возобновление подачи инсулина
+Выберите EOPATCH2 в верхней части главного экрана и нажмите кнопку RESUME (ВОЗОБНОВИТЬ) в правом нижнем углу. Insulin delivery will resume by selecting CONFIRM in the confirmation dialog box.
 
 ![Image20](../images/EOPatch/Bild20.png) ![Image21](../images/EOPatch/Bild21.png)
 
-## Alarms/Warnings
+## Оповещения/Предупреждения
 
 ### Alarm
 
-Alarms are issued for emergency situations of the highest priority and require immediate action. The alarm signal does not disappear or time out until it is acknowledged. An alarm occurs when there is a problem with the patch being used, so there may be cases where the patch in use needs to be discarded and replaced with a new patch. The warning is displayed as a dialog box and switching to another screen is not possible until processing is completed.
+Оповещения происходят в чрезвычайных ситуациях, требующих незамедлительных действий. Сигнал оповещения не прекращается по времени и не исчезает до тех пор, пока он не принят. Сигнал оповещения подается, когда возникает проблема с патчем, и могут возникнуть ситуации, когда используемый патч должен быть снят и заменен новым. Предупреждение отображается как диалоговое окно, переключение на другой экран невозможно до подтверждения приема.
 
 ![Image22](../images/EOPatch/Bild22.png) ![Image23](../images/EOPatch/Bild23.png)
 
-The different types of alarms are explained below.
+Ниже разъясняются различные типы оповещений.
 
-| Alarms                     | Explanation                                                                                                                                                                                                         |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir            | Occurs when the patch’s reservoir runs out of insulin.                                                                                                                                                              |
-| Patch expired              | Occurs when the patch usage time has expired, and no further insulin injections are possible.                                                                                                                       |
-| Occlusion                  | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
-| Power on self-test failure | Occurs when the patch finds an unexpected error during the post-boot self-test process.                                                                                                                             |
-| Inappropriate temperature  | Occurs when the patch is outside the normal operating temperature range during patch application and use. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition. |
-| Needle insertion Error     | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
-| Patch battery Error        | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                                                            |
-| Patch activation Error     | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                                             |
-| Patch Error                | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                                            |
+| Сигналы оповещения        | Описание                                                                                                                                                                                    |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Empty reservoir           | Происходит когда в резервуаре кончается инсулин.                                                                                                                                            |
+| Срок действия патча истек | Происходит, когда истекло время использования патча, и инъекции инсулина невозможны.                                                                                                        |
+| Закупорка                 | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                           |
+| Ошибка самотестирования   | Происходит, когда патч обнаруживает непредвиденную ошибку при самотестировании после загрузки.                                                                                              |
+| Inappropriate temperature | Происходит, когда патч находится вне нормального диапазона рабочих температур. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition.    |
+| Needle insertion Error    | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line. |
+| Patch battery Error       | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                                    |
+| Patch activation Error    | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                     |
+| Patch Error               | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                    |
 
 ### Warning
 
@@ -145,7 +145,7 @@ A warning occurs in a medium or low-priority situation. When a warning occurs, i
 
 The different types of warnings are explained below.
 
-| Warnings                     | Explanation                                                                                                                           |
+| Warnings                     | Описание                                                                                                                              |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | End of insulin suspend       | Occurs when the time set by the user has elapsed after the insulin infusion suspension has been completed.                            |
 | Low reservoir                | Occurs when the remaining amount of insulin in the patch is below the set amount.                                                     |
