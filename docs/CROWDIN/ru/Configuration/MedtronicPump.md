@@ -15,15 +15,15 @@ The driver does not work with any newer models, including all models ending in G
 
 ## Требования к аппаратному и программному обеспечению
 
-- **Phone:** The Medtronic driver should work with any android phone that supports Bluetooth connections. **IMPORTANT: Phone manufacturers Bluetooth implementations can vary so how each phone model behaves can vary. For example, some phones will handle enabling/disabling Bluetooth differently. This can impact the user experience when AAPS needs to reconnect to your Rileylink type device.**
-- **RileyLink Compatible Device:** Android phones cannot communicate to Medtronic pumps without a seperate device to handle communications. This device will link with your phone via Bluetooth and with your pump via a compatible radio connection. The first such device was called a Rileylink but a number of other options are now available which can offer additional functionality.
+- **Телефон:** Драйвер Medtronic должен работать с любым телефоном на Android, поддерживающим Bluetooth-соединения. **ВАЖНО: Исполнение Bluetooth разное у разных производителей телефонов, поэтому разные модели телефонов ведут себя по-разному. Например, некоторые телефоны по-разному. включают/отключают Bluetooth. Это может повлиять на опыт пользователя, когда AAPS необходимо переподключиться к устройству типа Rileylink.**
+- **Устройство, совместимое с RileyLink:** телефоны на Android не могут общаться с помпами Medtronic без отдельного устройства коммуникации. Это устройство соединяется с телефоном через Bluetooth и с помпой через совместимое радио соединение. Первое подобное устройство называлось Rileylink, но в настоящее время доступны и другие варианты с дополнительным функционалом.
     
-    - Rileylink available at [getrileylink.org](https://getrileylink.org/product/rileylink916)
+    - Rileylink можно заказать на [getrileylink.org](https://getrileylink.org/product/rileylink916)
     - Orangelink available at [getrileylink.org](https://getrileylink.org/product/orangelink)
     - Emalink (multiple model options) available at [github.com](https://github.com/sks01/EmaLink)
-    - Gnarl (some additional DIY required) details available at [github.com](https://github.com/ecc1/gnarl)
+    - Gnarl (требуется немного самостоятельной работы) подробности на [github.com](https://github.com/ecc1/gnarl)
 
-A comparision chart for the various Rileylink compatible devices can be found at [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
+Диаграмма сравнения различных совместимых с Rileylink устройств на [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
 
 (MedtronicPump-configuration-of-the-pump)=
 
