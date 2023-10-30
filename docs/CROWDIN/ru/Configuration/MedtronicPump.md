@@ -2,16 +2,16 @@
 
 The driver does not work with any newer models, including all models ending in G (530G, 600-series [630G, 640G, 670G], 700-series [770G, 780G], etc.).
 
-The following model and firmware combinations are compatible:
+Следующие комбинации моделей и прошивок совместимы:
 
 - 512/712 (any firmware version)
 - 515/715 (any firmware version)
 - 522/722 (any firmware version)
-- 523/723 (firmware 2.4A or lower)
-- 554/754 EU release (firmware 2.6A or lower)
-- 554/754 Canada release (firmware 2.7A or lower)
+- 523/723 (прошивка 2.4 или ниже)
+- 554/754 версия ЕС (прошивка 2.6A или ниже)
+- 554/754 Канадская версия (прошивка 2.7A или ниже)
 
-You can find out how to check the firmware on the pumps at [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) or [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
+Проверьте прошивку в соответствии с инструкциями в [OpenAPS документы](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) и [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
 ## Требования к аппаратному и программному обеспечению
 
