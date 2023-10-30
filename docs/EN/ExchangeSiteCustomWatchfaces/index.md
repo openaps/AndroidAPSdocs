@@ -17,6 +17,18 @@ The column information should include:
 - **Zip-File** is link to the Zip-File to download it. The Zip-Files must be stored in the ExchangeSiteCustomWatchfaces folder.
 - **How to contact you?** is the way you can be contacted e.g. Discord, FB messenger, .... This field is not mandatory but helpful especially for new users.
 
+Normal Table
+
 | ID| Name | Description | Zip-File | How to contact you?|
 |---|------|-------------|----------|--------------------|
 |   |      |             |          |                    |
+
+
+Grid Layout
+
+|                                                                                                                                |                                                                 |                                                                 |                                                                 |
+|--------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------|-----------------------------------------------------------------|-----------------------------------------------------------------|
+| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../images/Watchface_DigitalStyle.png)| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../images/Watchface_DigitalStyle.png)| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../images/Watchface_DigitalStyle.png)| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../images/Watchface_DigitalStyle.png)|
+| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../images/Watchface_DigitalStyle.png)| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../images/Watchface_DigitalStyle.png)| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../images/Watchface_DigitalStyle.png)| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../images/Watchface_DigitalStyle.png)|
+| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../images/Watchface_DigitalStyle.png)| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../images/Watchface_DigitalStyle.png)| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../images/Watchface_DigitalStyle.png)| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../images/Watchface_DigitalStyle.png)|
+| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../images/Watchface_DigitalStyle.png)| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../images/Watchface_DigitalStyle.png)| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../images/Watchface_DigitalStyle.png)| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../images/Watchface_DigitalStyle.png)|
