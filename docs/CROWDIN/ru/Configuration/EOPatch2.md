@@ -76,7 +76,7 @@ This is a reminder to notify you of the time remaining before the current patch 
 
 ![Image10](../images/EOPatch/Bild10.png)
 
-### Safety Check
+### Проверка безопасности
 Когда патч наклеен, нажмите Начать проверку безопасности. When the safety check is completed, the patch will beep once.
 
 [Warning]
@@ -94,15 +94,15 @@ This is a reminder to notify you of the time remaining before the current patch 
 - Если вы перейдете к следующему шагу, не дожидаясь звука зуммера, появится оповещение об ошибке установки иглы.
 
 ## Discarding the patch
-Patches must be replaced in the case of low insulin levels, usage expiration, and defects. The recommended usage period for each patch is 84 hours after booting the patch.
+Патчи должны быть заменены при низких уровнях инсулина, истечении срока использования и дефектах. Рекомендуемый период использования для каждого патча составляет 84 часа после запуска.
 
 ### Discarding the patch
-Select EOPATCH2 at the top of the home screen and click the DISCARD/CHANGE PATCH button at the bottom. On the next screen, click the DISCARD PATCH button. A dialog box appears to confirm once more and if you select the DISCARD PATCH button, the disposal is completed.
+Выберите EOPATCH2 в верхней части главного экрана и нажмите кнопку УТИЛИЗИРОВАТЬ/ЗАМЕНИТЬ PATCH в левом нижнем углу. On the next screen, click the DISCARD PATCH button. Появляется диалоговое окно, чтобы повторно подтвердить команду, и, при выборе кнопки DISCARD PATCH, удаление завершено.
 
 ![Image13](../images/EOPatch/Bild13.png) ![Image14](../images/EOPatch/Bild14.png) ![Image15](../images/EOPatch/Bild15.png) ![Image16](../images/EOPatch/Bild16.png)
 
-## Suspending and Resuming Insulin Delivery
-Suspending insulin delivery also cancels both extended bolus and temporary basal. When resuming insulin delivery, the canceled extended bolus and temporary basal will not be resumed. And when insulin delivery is suspended, the patch will give a sound every 15 minutes.
+## Приостановка и возобновление подачи инсулина
+Приостановка подачи инсулина также отменяет как пролонгированный болюс, так и временный базал. When resuming insulin delivery, the canceled extended bolus and temporary basal will not be resumed. And when insulin delivery is suspended, the patch will give a sound every 15 minutes.
 
 ### Suspending insulin delivery
 Select EOPATCH2 at the top of the home screen and click the SUSPEND button at the bottom right. When you select CONFIRM in the confirmation box, a time selection box appears. If you select the CONFIRM button after selecting the time, the insulin delivery will be suspended for the set amount of time.
