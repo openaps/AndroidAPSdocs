@@ -182,6 +182,8 @@ Automation with 3rd party apps <./Usage/automationwithapp.md>
 
 Android auto <./Usage/Android-auto.md>
 
+Custom Watchface reference document <./Usage/Custom_Watchface_Reference.md>
+
 ```
 
 ```{toctree}
