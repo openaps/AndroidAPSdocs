@@ -7,17 +7,15 @@ Au printemps 2022, le Dexcom G7 a reçu son certificat CE et a été vendu fin o
 
 Il est à noter que le système G7, par rapport au G6, ne lisse pas les valeurs, ni dans l'application, ni dans le lecteur. Plus de détails disponibles [ici](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app). Par conséquent, les valeurs doivent être lissées pour pouvoir les utiliser de manière raisonnable dans AAPS.
 
-Il y a **deux possibilités** (à partir de 02/2023).
+![G7 english](https://github.com/blaqone/AndroidAPSdocs/assets/37814299/6fe30b84-227a-4bae-a9a5-527cee341dbf)
 
-![DexcomG7.md](../images/DexcomG7.png)
-
-## 1.  Application Dexcom G7 patchée
+## 1.  Patched Dexcom G7 App (DiAKEM)
 
 **Note: AAPS 3.2.0.0 or higher is required!**
 
 ### Installez la nouvelle application G7 patchée et démarrez le capteur
 
-L'application Dexcom G7 patchée donne accès aux données Dexcom G7. Ce n'est pas l'application BYODA car cette application ne peut pas recevoir de données G7 pour le moment.
+A patched Dexcom G7 app (DiAKEM) gives acess to the Dexcom G7 data. Ce n'est pas l'application BYODA car cette application ne peut pas recevoir de données G7 pour le moment.
 
 Désinstallez l'application Dexcom originale si vous l'avez utilisée avant (une session de capteur peut être poursuivie - notez le code du capteur avant de retirer l'application!)
 
@@ -39,7 +37,12 @@ Le lissage des valeurs de glucose peut être activé en activant le plugin "liss
 
 **Lissage Exponentiel** **DOIT** être activé pour que les valeurs G7 soient pertinentes.
 
-## 2. Xdrip+ (mode compagnon)
+## 2. Xdrip+ (direct connection to G7)
+
+- Follow the instructions here: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- Dans AAPS, sélectionnez  > Configuration > source de glycémie > xDrip+. Ajustez les paramètres xDrip+ en fonction des explications sur la page des paramètres xDrip+  [paramètres xDrip+](../Configuration/xdrip.md)
+
+## 3. Xdrip+ (mode compagnon)
 
 -   Téléchargez et installez xDrip+ : [xdrip](https://github.com/NightscoutFoundation/xDrip)
 - Sélectionnez comme source de glycémie dans xDrip "Companion App". Puis dans "Paramètres moins courant" allez dans "Paramètres Bluetooth" et sélectionnez "Companion Bluetooth".

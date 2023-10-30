@@ -7,17 +7,15 @@ Seit Ende Oktober 2022 ist der Dexcom G7, nachdem er die CE-Zertifizierung im Fr
 
 Der G7 glättet weder in der (Dexcom) App noch im Lesegerät die Glukosewerte. Dies ist anders als es beim G6 war. Mehr Details dazu findest Du [hier](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app). Um die Messwerte des G7 in AAPS sinnvoll nutzen zu können, müssen diese geglättet werden.
 
-Es gibt aktuell (Februar 2023) **zwei** Wege dies zu tun.
+![G7 english](https://github.com/blaqone/AndroidAPSdocs/assets/37814299/6fe30b84-227a-4bae-a9a5-527cee341dbf)
 
-![DexcomG7.md](../images/DexcomG7.png)
-
-## 1.  Gepatchte Dexcom G7 App
+## 1.  Patched Dexcom G7 App (DiAKEM)
 
 **Note: AAPS 3.2.0.0 or higher is required!**
 
 ### Installiere eine neue gepatchte (!) G7-App und starte den Sensor
 
-Eine gepatchte Dexcom G7-App ermöglicht den Zugriff auf die Dexcom G7-Daten. Dies ist nicht die BYODA-App. BYODA kann derzeit keine Daten direkt vom G7 empfangen.
+A patched Dexcom G7 app (DiAKEM) gives acess to the Dexcom G7 data. Dies ist nicht die BYODA-App. BYODA kann derzeit keine Daten direkt vom G7 empfangen.
 
 Wenn Du bisher die originale Dexcom-App genutzt hast, musst Du diese im ersten Schritt nun deinstallieren. Wenn Du den Sensor-Kopplungscode noch kennst, kannst Du eine laufende Sensorsitzung weiterführen. Bitte merke ihn Dir daher, bevor Du die originale G7-App deinstallierst.
 
@@ -39,7 +37,12 @@ Mit der Auswahl von "Average Smoothing" oder "Exponential Smoothing", kannst Du 
 
 **'Exponential Smoothing'** **MUSS** aktiviert sein, um G7-Sensorwerte sinnvoll nutzen zu können.
 
-## 2. xDrip+ (Companion App)
+## 2. Xdrip+ (direct connection to G7)
+
+- Follow the instructions here: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- Wähle in AAPS unter Konfiguration > BZ-Quelle > "xDrip+" aus. Passe die Einstellungen in xDrip+ so an, wie es unter  [xDrip+ Einstellungen](../Configuration/xdrip.md) beschrieben ist.
+
+## 3. xDrip+ (Companion App)
 
 -   Lade xDrip+ herunter und installiere es: [xDrip+](https://github.com/NightscoutFoundation/xDrip)
 - Wähle in xDrip+ "Companion App" als Datenquelle aus. Zusätzlich muss in den Bluetootheinstellungen (Einstellungen > Erweiterte Einstellungen > Bluetootheinstellungen) "Companion Bluetooth" aktiviert werden.
