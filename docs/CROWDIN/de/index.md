@@ -184,6 +184,8 @@ Android auto <./Usage/Android-auto.md>
 
 Custom Watchface reference document <./Usage/Custom_Watchface_Reference.md>
 
+Exchange Site Custom Watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
+
 ```
 
 ```{toctree}
