@@ -23,7 +23,7 @@ Asegúrate también de habilitar la subida de valores de glucosa en Nightscout: 
 
 ### Paso 2: Configurar AndroidAPS
 
-- En AndroidAPS ve a Tabla de configuraciones > Origen BG y comprueba "'xDrip+"
+- En AndroidAPS ve a Tabla de configuraciones > Origen BG y comprueba "xDrip+"
 - Si AndroidAPS no recibe valores de glucosa cuando el teléfono está en modo avión, utiliza "Identificar receptor"
 - ¡Activa el Suavizado!
 
@@ -61,7 +61,7 @@ Después de un cambio de sensor, xDrip+ detectará automáticamente el nuevo sen
 
 ### Paso 4: Configurar AndroidAPS
 
-- En AndroidAPS ve a Tabla de configuraciones > Origen BG y comprueba "'xDrip+"
+- En AndroidAPS ve a Tabla de configuraciones > Origen BG y comprueba "xDrip+"
 - Si AndroidAPS no recibe valores de glucosa cuando el teléfono está en modo avión, utiliza "Identificar receptor"
 - Desactiva el suavizado (ya activado en xDrip+)
 
