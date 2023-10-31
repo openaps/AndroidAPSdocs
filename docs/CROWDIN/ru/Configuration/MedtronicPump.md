@@ -58,16 +58,16 @@ When configuring your Medtronic pump with the setup wizard it is possible that y
     - для США & Канады применяется частота 916 МГц
     - для остального мира - 868 МГц
 - **Max Basal on Pump (U/h)**: This needs to match the setting set on your pump (see Configuration of the pump above). Again this setting must be carefully selected as it will determine how much AAPS can deliver via your basal rate. This will effectively set the maximum temporary basal rate. As an example, setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
-- **Max Bolus on Pump (U)** (in an hour): This needs to match the setting set on your pump (see Configuration of the pump above). This setting should be carefully considered as it determines how large a bolus AAPS can ever set.
-- **Delay before Bolus is started (s)**: The number of seconds after a bolus is issued before the command is actually sent to the pump. This period of time allows the user to cancel the bolus in the event a bolus command is sent in error. It is not possible to cancel a bolus that has started via AAPS. The only way to cancel a bolus that has already started is to suspend the pump manually followed by resuming it.
-- **Medtronic Encoding**: Determines if the medtronic encoding is carried out. Selecting Hardware encoding (i.e. carried out by the Rileylink compatible device) is preferred as this results in less data being sent. Selecting Software encoding (i.e. carried out by AAPS) can help in the event frequent disconnects are seen. This setting will be ignored if you have firmware version 0.x on Rileylink devices.
-- **Battery Type (Power View)**: In order to correctly determine the remaining battery power level you should select the type of AAA battery in use. When a value other than simple view is selected AAPS will display the remaining calculated battery percentage level and volts. The following options are available:
+- **Макс. базал на помпе (ед./ч.)**: Должен соответствоватьпараметрам помпы (см. Конфигурация помпы выше). Эта настройка должна быть тщательно подобрана, так как определяет, насколько большим может быть болюс, подаваемый с AAPS.
+- **Delay before Bolus is started (s)**: The number of seconds after a bolus is issued before the command is actually sent to the pump. Этот период времени позволяет пользователю отменить болюс в случае, если команда подана по ошибке. It is not possible to cancel a bolus that has started via AAPS. Единственный способ отменить уже начатый болюс - это приостановить помпу вручную, а затем возобновить ее работу.
+- **Medtronic Encoding (кодировка Medtronic)**: Определяет, выполняется ли кодировка Medtronic. Выбор аппаратной кодировки (то есть кодировки, определяемой устройством Rileylink) предпочтительнее, так как приводит к меньшему количеству отправляемых данных. Выбор программной кодировки (т.е. осуществляемой AAPS) может помочь в случае частых отключений. Эта настройка игнорируется, если на устройствах Rileylink установлена прошивка версии 0.x.
+- **Battery Type (Power View)**: In order to correctly determine the remaining battery power level you should select the type of AAA battery in use. Если выбран вариант кроме простого, AAPS будет отображать оставшийся заряд батареи в процентах. The following options are available:
     
-    - Not selected (Simple view)
-    - Alkaline (Extended view)
-    - Lithium (Extended view)
+    - Не выбрано (Простой вид)
+    - Щелочная (Подробный вид)
+    - Литиевая (Подробный вид)
     - NiZn (Extended view)
-    - NiMH (Extended view)
+    - Никель-металлогидридная (Подробный вид)
 - **Bolus/Treatments Debugging**: Select On or Off depending on requirements.
 
 - **RileyLink Configuration**: This option allows you to find and pair your Rileylink compatible device. Selecting this will show any nearby Rileylink compatible devices and the signal strength.
