@@ -52,11 +52,11 @@ When configuring your Medtronic pump with the setup wizard it is possible that y
 
 При настройке AAPS для работы с помпой Medtronic следует задать следующие параметры: (см. рисунок выше)
 
-- **Серийный номер помпы**: Находится на задней панели помпы и начинается с SN. You should only enter the 6 numbers shown without any alpabetic characters (e.g. 123456).
-- **Pump Type**: The model pump you are using (e.g. 522). 
-- **Pump Frequency**: There are two options based on where your pump was originally distributed. Please check the [FAQ](MedtronicPump-faq) if you are unsure which option to select): 
-    - for US & Canada, frequency used is 916 Mhz
-    - for Worldwide, frequency used is 868 Mhz
+- **Серийный номер помпы**: Находится на задней панели помпы и начинается с SN. Вводить надо только 6 цифр, без каких-либо других символов (например, 123456).
+- **Pump Type**: Используемая модель помпы (например, 522). 
+- **Частота помпы**: Есть два варианта, в зависимости от региона рынка. Проверьте [FAQ](MedtronicPump-faq) если не уверены что выбрать): 
+    - для США & Канады применяется частота 916 МГц
+    - для остального мира - 868 МГц
 - **Max Basal on Pump (U/h)**: This needs to match the setting set on your pump (see Configuration of the pump above). Again this setting must be carefully selected as it will determine how much AAPS can deliver via your basal rate. This will effectively set the maximum temporary basal rate. As an example, setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
 - **Max Bolus on Pump (U)** (in an hour): This needs to match the setting set on your pump (see Configuration of the pump above). This setting should be carefully considered as it determines how large a bolus AAPS can ever set.
 - **Delay before Bolus is started (s)**: The number of seconds after a bolus is issued before the command is actually sent to the pump. This period of time allows the user to cancel the bolus in the event a bolus command is sent in error. It is not possible to cancel a bolus that has started via AAPS. The only way to cancel a bolus that has already started is to suspend the pump manually followed by resuming it.
