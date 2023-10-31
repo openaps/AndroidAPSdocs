@@ -2,7 +2,7 @@
 
 ## Overview of the AAPS documentation
 
-Welcome. This documentation aims to guide users on every aspect of the Do-It-Yourself (DIY) system, Android Artificial Pancreas System (**AAPS**), which is also commonly referred to as ‘looping’.
+Bienvenido. This documentation aims to guide users on every aspect of the Do-It-Yourself (DIY) system, Android Artificial Pancreas System (**AAPS**), which is also commonly referred to as ‘looping’.
 
 An expanded index of the documentation can be found [here](index.md), and you can also use the tabs on the left of the page to navigate through the different sections. The [glossary](Getting-Started/Glossary.md) explains terms that you may not be familiar with.
 
@@ -57,17 +57,17 @@ Common brand names of SGLT-2 inhibitors include: Invokana, Farxiga, Jardiance, G
 
 ### Key principles of looping with AAPS
 
-The key principles and concepts of looping must be understood before using **AAPS**. This is achieved by investing your personal time into reading the **AAPS** documentation, and completing the Objectives which aim to provide you with a solid platform for safe and effective use of **AAPS**. The volume of **AAPS** documentation may seem overwhelming at first but be patient and trust the process - with the proper approach, you'll get there!
+The key principles and concepts of looping must be understood before using **AAPS**. This is achieved by investing your personal time into reading the **AAPS** documentation, and completing the Objectives which aim to provide you with a solid platform for safe and effective use of **AAPS**. La cantidad de documentación de **AAPS** puede parecer abrumadora al principio, pero ten paciencia y confía en el proceso; ¡con el enfoque adecuado, lo lograrás!
 
 The speed of progression will depend upon the individual, but be aware that completion of all the objectives typically takes 6 - 9 weeks. Many people start to build, install and setup **AAPS** well in advance of starting to use it. To aid with this, the system has a "virtual pump" which can be used during completion of the early objectives, so that you can become familiar with **AAPS** without actually using it to deliver insulin. A detailed breakdown of the timeline is given below, be aware that by objective 8 of **AAPS** you are closed looping, the later objectives add in additional features like **SMS commands** and **automations** which are useful to some users, but not essential to the core function of **AAPS**.
 
-Success with **AAPS** requires a proactive approach, a willingness to reflect on the BG data and flexibility to make the necessary adjustments to **AAPS** in order to improve your outcomes. Just as it is nearly impossible to learn to play a sport by reading about the rules alone, the same can be said of **AAPS**.
+El éxito con **AAPS** requiere un enfoque proactivo, una disposición para reflexionar sobre los datos de glucosa en sangre (BG) y flexibilidad para realizar los ajustes necesarios en **AAPS** con el fin de mejorar tus resultados. Así como es casi imposible aprender a jugar un deporte solo leyendo las reglas, lo mismo se puede decir de **AAPS**.
 
 #### Plan for delays and minor issues in getting everything set up and running
 
 In the preliminary stages of getting started with **AAPS**, you may experience difficulties getting all the components of the loop communicating effectively with each other (and potential followers), and when fine-tuning your settings. Some glitches cannot be resolved until **AAPS** is used in everyday life, but plenty of help is available on the Facebook group and Discord. Please plan accordingly and choose "good" times, like a quiet morning of a weekend (i.e. not late at night or when you are tired, or before a big meeting or travel) to troubleshoot and resolve issues.
 
-#### Technology compatibility
+#### Compatibilidad tecnológica
 
 **AAPS** is only compatible with certain types of insulin pumps, CGMs and phones, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read the [CGM](Configuration/BG-Source.md), [pump](Getting-Started/Pump-Choices.md) and [phone](Hardware/Phoneconfig.md) sections.
 
@@ -86,7 +86,7 @@ How long it takes to get to closed looping depends on the individual, but an app
 
 #### Keystore & configuration settings export file
 
-A “keystore” (.jks file) is a password encrypted file unique to your own copy of **AAPS**. Your Android phone uses it to ensure that nobody else can upgrade your own copy without the keystore. In short, as part of the **AAPS** build, you should:
+A “keystore” (.jks file) is a password encrypted file unique to your own copy of **AAPS**. Your Android phone uses it to ensure that nobody else can upgrade your own copy without the keystore. En resumen, como parte de la construcción de **AAPS**, debes:
 
 1.  Save the your keystore file (.jks file used to sign your app) in a safe place;
 
@@ -94,19 +94,19 @@ A “keystore” (.jks file) is a password encrypted file unique to your own cop
 
 This will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. On average, there will be 2 **AAPS** updates required each year.
 
-In addition, **AAPS** provides the ability to [export all your configuration settings](Usage/ExportImportSettings.md). This ensures that you can safely recover your system while changing phones, upgrading/reinstalling the application with minimum disruption. 
+In addition, **AAPS** provides the ability to [export all your configuration settings](Usage/ExportImportSettings.md). Esto garantiza que puedas recuperar tu sistema de manera segura al cambiar de teléfono, actualizar o reinstalar la aplicación con la mínima interrupción. 
 
 #### Solución de problemas
 
-Please feel free to reach out to the AAPS community if there is anything you feel unsure about - there is no such thing as a silly question! All users with various levels of experience are encouraged to ask questions. Response times to questions are usually quick due to the number of **AAPS** users.
+No dudes en ponerte en contacto con la comunidad de AAPS si hay algo de lo que te sientes inseguro. ¡No existen preguntas tontas! All users with various levels of experience are encouraged to ask questions. Response times to questions are usually quick due to the number of **AAPS** users.
 
 ##### [ask our facebook group](https://www.facebook.com/groups/AndroidAPSUsers/)
 
 ##### [ask our discord channel](https://discord.com/channels/629952586895851530/629954570394533889)
 
-### Section overview
+### Resumen de la sección
 
-AAPS documentation is made up of the following Sections:
+La documentación de AAPS se compone de las siguientes secciones:
 
 #### [What do I need?](Module/module.md)
 

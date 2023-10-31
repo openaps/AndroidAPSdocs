@@ -37,7 +37,7 @@ SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in th
 (module-phone)=
 ### Phone
 
-The current version of AAPS requires an Android smartphone with Google Android 9.0 or above. So if you are thinking about a new phone, Android 9 is recommended at a minimum but optimally choose Android 10 or 12. Users are strongly encouraged to keep their build of AAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AAPS version 2.6.1.4, suitable for older Android versions, remains available from the [old repository.](https://github.com/miloskozak/AAPS)
+The current version of AAPS requires an Android smartphone with Google Android 9.0 or above. So if you are thinking about a new phone, Android 9 is recommended at a minimum but optimally choose Android 10 or 12. For older Android versions, older AAPS versions are available see: [Release notes](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version)
 
 Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
@@ -49,13 +49,19 @@ Any problems with the spreadsheet please send an email to [hardware@androidaps.o
 
 AAPS **currently** works with
 
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)  (Old driver that uses the additional Ruffy app)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md) (New driver, available starting with AndroidAPS v.3.2)
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
 - [DanaR](../Configuration/DanaR-Insulin-Pump.md)
-- [Dana-i/RS](../Configuration/DanaRS-Insulin-Pump.md)
-- [some old Medtronic pumps](../Configuration/MedtronicPump.md) from upcoming version 2.4 ([additional communication device](module-additional-communication-device) needed)
-- [Omnipod Eros](../Configuration/OmnipodEros.md) ([additional communication device](module-additional-communication-device) needed)
+- [DanaRS](../Configuration/DanaRS-Insulin-Pump.md)
+- [Dana-i](../Configuration/DanaRS-Insulin-Pump.md)
+- [Diaconn G8 ](../Configuration/DiaconnG8.md)
+- [EOPatch2](../Configuration/EOPatch2.md)
+- [Omnipod Eros](../Configuration/OmnipodEros.md)  ([additional communication device](module-additional-communication-device) needed)
 - [Omnipod DASH](../Configuration/OmnipodDASH.md)
+- [Medtrum Nano](../Configuration/MedtrumNano.md)
+- [Medtrum 300U](../Configuration/MedtrumNano.md)
+- Certain older [Medtronic](../Configuration/MedtronicPump.md) ([additional communication device](module-additional-communication-device) needed)
 
 If no additional communication device  is mentioned the communication betweeen insulin pump and AAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
 
@@ -89,13 +95,16 @@ The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice ho
 
 This is just a short overview of all compatible CGMs/FGM with AAPS. For further details, look [here](../Configuration/BG-Source.md). Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
 
+- [Dexcom G7](../Hardware/DexcomG7.md): Works with xDrip+ or patched app
 - [Dexcom G6](../Hardware/DexcomG6.md): BOYDA is recommended as of version 3.0 (see [release notes](Releasenotes-important-hints-3-0-0) for details). xDrip+ must be at least version 2022.01.14 or newer
 - [Dexcom G5](../Hardware/DexcomG5.md): It works with xDrip+ app or patched Dexcom app
 - [Dexcom G4](../Hardware/DexcomG4.md): These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
-- [Libre 2](../Hardware/Libre2.md): It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
+- [Libre 3](../Hardware/Libre3.md): It works with xDrip+ (no transmitter needed)
+- [Libre 2](../Hardware/Libre2.md): It works with xDrip+ (no transmitter needed)
 - [Libre 1](../Hardware/Libre1.md): You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
 - [Eversense](../Hardware/Eversense.md): It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
 - [Enlite (MM640G/MM630G)](../Hardware/MM640g.md): quite complicated with a lot of extra stuff
+- [Poctech](../Hardware/PocTech.md)
 
 ### Nightscout
 
@@ -113,7 +122,7 @@ The basic component of the system. Before installing the app, you have to build 
 
 ### Smartwatch
 
-You can choose any smartwatch with Android Wear 1.x and above. Most loopers wear a Sony Smartwatch 3 (SWR50) as it is the only watch that can get readings from Dexcom G5/G5 when phone is out of range. Some other watches can be patched to work as a standalone receiver as well (see [this documentation](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5) for more details).
+You can choose any smartwatch with Android Wear 1.x and above. Most loopers wear a Sony Smartwatch 3 (SWR50) as it is the only watch that can get readings from Dexcom G6/G5 when phone is out of range. Some other watches can be patched to work as a standalone receiver as well (see [this documentation](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5) for more details).
 
 Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). There are different watchfaces for use with AAPS, which you can find [here](../Configuration/Watchfaces.md).
 

@@ -2,7 +2,7 @@
 
 ![image](./images/basic-outline-of-AAPS.png)
 
-AAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. It uses an openAPS software algorithm which aims to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need a supported and FDA/CE approved insulin pump, and a continuous glucose meter.
+AAPS - это приложение с открытым кодом для людей, живущих с инсулинзависимым сахарным диабетом, которое работает как система искусственной поджелудочной железы (ИПЖ) на базе телефонов с операционной системой Андроид. It uses an openAPS software algorithm which aims to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need a supported and FDA/CE approved insulin pump, and a continuous glucose meter.
 
 Interested? Read more about AAPS in the [introduction](introduction.md).
 
@@ -19,14 +19,14 @@ The foundation of AAPS safety features discussed in this documentation is built 
 ```{note}
 **Disclaimer and Warning**
 
-- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout в настоящее время не пытается соответствовать принципам конфиденциальности HIPAA. Use Nightscout and AAPS at your own risk, and do not use the information or code to make medical decisions.
+- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout в настоящее время не обеспечивает соблюдение политик конфиденциальности HIPAA (Health Insurance Portability and Accountability Act — Акт о мобильности и подотчётности медицинского страхования). Use Nightscout and AAPS at your own risk, and do not use the information or code to make medical decisions.
 - Use of code from github.com is without warranty or formal support of any kind. Пожалуйста, ознакомьтесь с ЛИЦЕНЗИЕЙ этого репозитория.
-- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Их использование - в информационных целях и не подразумевает какой-либо принадлежности к ним или их одобрения.
+- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Они используются в информационных целях и не подразумевается какой-либо принадлежности к ним или их одобрения.
 
 Please note - this project has no association with and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
 ```
 
-## How to read the documentation?
+## Как читать документацию?
 
 We have provided this subsection of the documentation especially for those who are new to concept of Do-It-Yourself-APS (Artificial-Pancreas-Systems) in order to best show how to get acquainted with the information we consider to be the most important, especially in terms of understanding the reasons behind the "limits" set in place when you are first beginning your AAPS journey. These safety limits have been developed over many years by observations of the inadvertent mistakes that new users are most likely to make when first learning to set up, build, and then successfully loop with AAPS - as most often those mistakes occur simply because the user was so excited to get started using the system that they may have forgotten to sit down and dedicate the time needed to understand the information within this documentation thoroughly. We have all been there!
 
@@ -158,6 +158,8 @@ Objectives <./Usage/Objectives.md>
 
 OpenAPS features <./Usage/Open-APS-features.md>
 
+Dynamic ISF <./Usage/DynamicISF.md>
+
 COB calculation <./Usage/COB-calculation.md>
 
 Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
@@ -179,6 +181,10 @@ Open Humans Uploader <./Configuration/OpenHumans.md>
 Automation with 3rd party apps <./Usage/automationwithapp.md>
 
 Android auto <./Usage/Android-auto.md>
+
+Custom Watchface reference document <./Usage/Custom_Watchface_Reference.md>
+
+Exchange Site Custom Watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
@@ -275,9 +281,9 @@ Sandbox <./Sandbox/sandbox1.md>
 ```{note}
 **Disclaimer And Warning**
 
-- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout в настоящее время не пытается соответствовать принципам конфиденциальности HIPAA. Use Nightscout and AAPS at your own risk, and do not use the information or code to make medical decisions.
+- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout в настоящее время не обеспечивает соблюдение политик конфиденциальности HIPAA (Health Insurance Portability and Accountability Act — Акт о мобильности и подотчётности медицинского страхования). Use Nightscout and AAPS at your own risk, and do not use the information or code to make medical decisions.
 - Use of code from github.com is without warranty or formal support of any kind. Пожалуйста, ознакомьтесь с ЛИЦЕНЗИЕЙ этого репозитория.
-- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Их использование - в информационных целях и не подразумевает какой-либо принадлежности к ним или их одобрения.
+- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Они используются в информационных целях и не подразумевается какой-либо принадлежности к ним или их одобрения.
 
 Please note - this project has no association with and is not endorsed by: [SOOIL](<https://www.sooil.com/eng/>), [Dexcom](<https://www.dexcom.com/>), [Accu-Chek, Roche Diabetes Care](<https://www.accu-chek.com/>) or [Medtronic](<https://www.medtronic.com/>)
 

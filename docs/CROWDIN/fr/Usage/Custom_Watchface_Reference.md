@@ -9,17 +9,17 @@ Custom Watchface is an open format designed for AAPS and associated to the new "
 Watchface file is a simple zip file, but to be recognize as a Watchface file, it must containts:
 
 - One image file named CustomWatchface (can be bitmap files `CustomWatchface.jpg`, `CustomWatchface.png` or a vector `CustomWatchface.svg`). This file is the little icon used to select the watchface when you click on "Load Watchface" button, and also the image visible within AAPS Wear plugin
-- One file named `CustomWatchface.json`. This second file is the core file that will include all information required to design the watchface. This json file must be valid (it's probably the most tricky point when you edit manually this file within a text editor, because an missing or additional comma is enough to brake the json format). This json file must also include a `"metadata"` bloc with a `"name"` key with not empty value. This will be the name of your custom watchface (see §§§ below)
+- One file named `CustomWatchface.json` (see [Json structure](cwf-reference-json-structure) below). This second file is the core file that will include all information required to design the watchface. This json file must be valid (it's probably the most tricky point when you edit manually this file within a text editor, because an missing or additional comma is enough to brake the json format). This json file must also include a `"metadata"` bloc with a `"name"` key with not empty value. This will be the name of your custom watchface (see [Metada settings](cwf-reference-metadata-settings) below)
 - the size of this zip should be as small as possible (less than about 350kb). If this file is too big, it will just be blocked and not transmitted to the watch.
 
 The zip file can also containts some additional resource files:
 
-- HardCoded file names for images that will be used used into standard views included into watchface (like `Background`, `CoverChart`... see §§§ below). All these files can be either `jpg`, `png` or `svg` format. but for most of them, you will have to use `png` or `svg` that manage transparency (jpg are smaller in size compared to png, but with no transparency). Note that the best quality associated to the smallest size will generally be with svg files (vector format).
+- HardCoded file names for images that will be used used into standard views included into watchface (like `Background`, `CoverChart`... see [List of hardcoded resource files](cwf-reference-list-of-hardcoded-resource-files) below). All these files can be either `jpg`, `png` or `svg` format. but for most of them, you will have to use `png` or `svg` that manage transparency (jpg are smaller in size compared to png, but with no transparency). Note that the best quality associated to the smallest size will generally be with svg files (vector format).
 - addtional resource files with free names. These additional files can be either image files, or font files (`ttf` and `otf` format are accepted for fonts). Note that for these additional files, the `filename` (without extension) will be used as the keyValue, within json file, to specify where or when these files should be used
   - image files are often used as background of text views or for dynamic animation (like battery level from 0% to 100%)
   - font files allow you to use dedicated fonts within your watchface
 
-
+(cwf-reference-json-structure)=
 
 ## Json structure
 
@@ -30,6 +30,8 @@ json files can be edited in Notepad (or notepad++) text editor (prefer notepad++
 - A block of data starts by `{`  and ends by `}`
 - the json file is a whole block so it starts by  `{`  and ends by `}`, and inside this file all embeded blocks are associated to a `"key"` that should be unique within the block
 - To improve readibility of json file, it's generally indented (each new key is on a new line, each new block is shifted on the right by 4 spaces characters)
+
+(cwf-reference-metadata-settings)=
 
 ### metadata settings
 
@@ -52,9 +54,11 @@ Note that `/` used for the date is a special character, so to be recognize corre
 
 You can see in some json file an additional key `"filename"`, this key will be automatically created or updated when the custom watchface will be loaded within AAPS (it will be used to show to the user the zip filename within exports folder), so you can remove this key within metadata block.
 
+(cwf-reference-general-parameter-settings)=
+
 ### General parameter settings
 
-After the first block with metadata, you will set some global parameters (see §§§), this allow you to set Graph colors (Carbs, Bolus, BG values...), and also default colors for value in range, hyper or hypo (default colors of BG value and arrows)
+After the first block with metadata, you will set some general parameters (see [List of general parameters](cwf-reference-list-of-general-parameters) below), this allow you to set Graph colors (Carbs, Bolus, BG values...), and also default colors for value in range, hyper or hypo (default colors of BG value and arrows)
 
 See below an example of general parameters
 
@@ -70,6 +74,8 @@ See below an example of general parameters
 "pointSize": 2,
 "enableSecond": true,
 ```
+(cwf-reference-imageview-settings)=
+
 ### ImageView settings
 
 Custom image can be tuned using correct filename associated to each ImageView included into custom watchface Layout, then the json block is only here to define the position, the size, if the view is visible or not, and optionally tune the color:
@@ -91,6 +97,8 @@ To have second_hand colored with default BG color (lowRange, midRange or highRan
 ```json
     "color": "bgColor"
 ```
+
+(cwf-reference-textview-settings)=
 
 ### TextView settings
 
@@ -138,6 +146,8 @@ If you want to customize background image of a text view, then you can use the k
 
 You also have 4 specific textViews (named freetext1 to freetext4) that have a specific parameter `"textvalue":` that can be used to set for example a label
 
+(cwf-reference-chartview-settings)=
+
 ### ChartView settings
 
 Chart view is a very specific view that can share some parameters with ImageView or with TextView...
@@ -154,6 +164,8 @@ Standard settings for this view is very simple:
 },
 ```
 The 2 additional parameters you can include for Chart view is a background color (default is transparent), using `"color"` key or a background image using `"background"` key.
+
+(cwf-reference-how-to-build-watchface)=
 
 ## How to build/design your first Watchface
 
@@ -223,11 +235,11 @@ Then within json file all views are sorted from the Back to the Top (this will h
 
 
 
-
-
-
+(cwf-reference-advanced-features)=
 
 ## Advanced features
+
+(cwf-reference-preference-feature)=
 
 ### Preferences Feature
 
@@ -265,6 +277,8 @@ In example below Gota watchface has one required parameter. If authorization is 
 ![Required parameters](../images/CustomWatchface_2.jpg)
 
 
+
+(cwf-reference-twinview-feature)=
 
 ### TwinView Feature
 
@@ -314,15 +328,17 @@ If the twin views are positioned vertically, in this case you must use the key `
     "leftOffsetTwinHidden": -25
 },
 ```
+(cwf-reference-dyndata-feature)=
+
 ### DynData Feature
 
-DynData is the most powerfull feature if you want to include some animation within you watchface, according to some internal values (like BG value, BG level, delta, % of battery... see list of available data here §§§)
+DynData is the most powerfull feature if you want to include some animation within you watchface, according to some internal values (like BG value, BG level, delta, % of battery... see list of available data [here](cwf-reference-dyndata-key-values))
 
 To illustrate this feature, I will take the example of AAPS (SteamPunk) watchface:
 
 ![CustomWatchface_4](../images/CustomWatchface_4.png)
 
-In this watchface, we will have to manage the rotation of BG value (from 30 degrees to 330 degrees) on the right, the dynamic range of avg_delta (scale up to 5mgdl, 10mgdl or 20mgdl according to value), the rotation of pointer that should be synchronized to the scale, and also the different layer of the views...
+In this watchface, we will have to manage the [rotation of BG value](cwf-reference-background-management) (from 30 degrees to 330 degrees) on the right, the [dynamic range of avg_delta](cwf-reference-avg-delta-management) (scale up to 5mgdl, 10mgdl or 20mgdl according to value), the [rotation of pointer](cwf-reference-dynamic-rotation-management) that should be synchronized to the scale, and also the different layer of the views...
 
 To be able to manage this Watchface, see below all the images included into the zip file:
 
@@ -333,6 +349,8 @@ Note: to be able to see the transparency, all these images are on a yellow backg
 - On the first row, Background.jpg and CoverPlate.png will be automatically mapped with associated view (default views filename), and steampunk_pointer.png will be managed by dynData
 - On the second row you see the 3 scales of dynamic range for avg_delta that will also be managed by dynData
 - On the third row, chartBackground.jpg will be linked manually within chart view, HourHand.png and finally MinuteHand.png files will be automatically mapped with associated views
+
+(cwf-reference-background-management)=
 
 #### **Background management**
 
@@ -378,7 +396,7 @@ The block defined within `"background"`view was named `"rotateSgv"`, it's the fi
 
 This block is simple: you have a first key named `"valueKey":` that will be used to define which value should be used. in this case `"sgv"` is a "keyValue" that defines BG value (note that in most cases the keyValue has the same name that the view that shows this information).
 
-Concerning BG value, default min data is set to 39mgdl and max  data is set to 400mgdl (see below §§§ all available keyValues and associated min/max data values).
+Concerning BG value, default min data is set to 39mgdl and max  data is set to 400mgdl (see [DynData reference key values](cwf-reference-dyndata-key-values) below all available keyValues and associated min/max data values).
 
 Within `"rotateSgv"` block the two additional keys (`"minData":` and `"maxData":`) will be used to tune min and max data to 30 and 330. With these min and max values, we will be able to directly use data value (without any convertion) to rotate background in degrees. In this situation all BG values above 330mgdl will be limited to 330, upper limit of the image.
 
@@ -398,6 +416,8 @@ Of course, the sizing and positioning of the view must be done to the pixel!
     "background": "chartBackground"
 },
 ```
+(cwf-reference-avg-delta-management)=
+
 #### **Avg delta management**
 
 To be able to manage dynamic range of avg delta, we will use the four freetext views. freetext1 will be used to manage the image scale, and freetext2 to freetext4 will be used to manage pointer rotation according to scale.
@@ -449,6 +469,8 @@ Then we will use a serie of images, starting from `"image1":` to `"image8":`. Th
 - `image1` will define image to show when avg_delta is equal or close to `minData` and the image with the highest number (here `image8`) will be used to define the image that should be shown when avg_delta is equal or close to `maxData`
 - between -20mgdl and 20mgdl, the overall range is 40mgdl, devided by 8 (number of images provided), we will have 8 steps of 5mgdl
 - Now we can map background images according to avg_delta value, starting from the lowest values: between -20 and -15, and also between -15 and -10 we will use  `steampunk_gauge_mgdl_20` for the scale, then between -10 and -5 `steampunk_gauge_mgdl_10`, and so on until +15 and +20 where we will again use `steampunk_gauge_mgdl_20` background image
+
+(cwf-reference-dynamic-rotation-management)=
 
 **freetext2 to freetext4**
 
@@ -575,7 +597,7 @@ To finish the overview of dynData feature, we will take a look on battery manage
 ```
 You can see here that these both views share the same `dynData` block named `batteryIcons`. It's possible because by default attached data is the one of the view (to without specifying a  `"valueKey":` key within  `batteryIcons` block, it will be applied with `uploader_battery` data or `rig_battery` data according to the view).
 
-Note these two views also use TwinView feature explain here §§§.
+Note these two views also use TwinView feature explain [here](cwf-reference-twinview-feature).
 
 Now lets take a look on dynData block:
 
@@ -594,11 +616,262 @@ Here we use exactly the same logic that for dynamic background image, but with d
 - `"fontColor1"` (dark red) will be used for all values below 20%, and white will be used for all values above this threshold.
 - If you want to lower the threshold to "below 10%", you just have to add 5 additional keys from `"fontColor6"` to `"fontColor10"` , but you can also adjust each color if you want progressive variation from green to yellow, orange and red...
 
+(cwf-reference-dynpref-feature)=
+
+### DynPref Feature
+
+Before reading this chapter, you have to understand how [dynData](cwf-reference-dyndata-feature) works, because DynPref is an advanced usage of DynData: You will now be able to adjust each DynData bloc according to preferences set by the user:
+
+To illustrate DynPref feature, we will use two example:
+
+- Steampunk watchface (simple use to include into the same watchface mgdl and mmol version, watchface will automatically switch according to unit selected into aaps).
+- AAPS V2 watchface will combine different preferences to be able to manage text color and background according to dark and match divider preferences.
+
+#### Simple usage of dynPref within Steampunk watchface
+
+Within Steampunk, we have to set of images according to units: `background` image that will have BG scale and will turn according to BG value. and `freeText1` that contains dynamic scale according to avgDelta value.To be able to have one watchface that will automatically show correct units, we should select image according to unit selected.
+
+To do that we will replace `dynData` key by a `dynPref`key within view block:
+
+```json
+ "background": {
+    "width": 400,
+    "height": 400,
+    "topmargin": 0,
+    "leftmargin": 0,
+    "dynPref": "rotateSgv",
+    "rotationOffset": true,
+    "visibility": "visible"
+},
+```
+Usage of `dynPref`keys will be very close to `dynData`keys explained in previous chapter
+
+Now we will take a look at the end of the json file, after `dynData` block:
+
+```json
+"dynData": {
+    ...
+},
+"dynPref": {
+    "rotateSgv": {
+        "prefKey": "key_units",
+        "true": {
+            "valueKey": "sgv",
+            "minData": 30,
+            "maxData": 330,
+            "invalidImage": "Background_mgdl",
+            "image1": "Background_mgdl"
+        },
+        "false": {
+            "valueKey": "sgv",
+            "minData": 30,
+            "maxData": 330,
+            "invalidImage": "Background_mmol",
+            "image1": "Background_mmol"
+        }
+    },
+    ...
+}
+```
+You can see that the dynpref key defined within `background` view block (`"dynPref": "rotateSgv"`) exists into the `dynPref` json block included at the end of json file:
+
+This block should contains a `"prefKey"`key that will define which preference should be used. In this example the key `"key_units"` is linked to units selected within AAPS on phone, and value is `"true"`if selected unit is mgdl, `"false"`if selected unit is mmol.
+
+Then you will find two json blocks that will use "dynData" format, and that will be used according to selected preference
+
+Note that the "HardCoded" file name for Background image is now replaced by a dynamic image that will be the same wathever the BG value (`Background_mgdl.png`file if key_units is "true", `Background_mmol.png` if key_units is false), and we also include an `"invalidImage" key to allways have a background image even if no data has been received from the phone.
+
+#### Combine different preferences within dynPref with AAPS V2
+
+Most of the time, when you set a preference, it's not to get "dynamic behaviour", but only the results according to what you select, but within dynPref, it's considered as a dynamic feature...
+
+- when in `dynData`you specify one full block of parameters (with images, fontColor, Color, ...), with dynData, you will be able to combine each parameter according to one specific preference.
+- Here we will see how match devider preference will be associated to dark preference to show when it's enabled (true) white text on black background on dark watchface (dark parameter true) or black text on white background on light watchface (dark false)...
+
+First lets see the beginning of json file:
+
+```json
+"dynPrefColor": "prefColorDark",
+"pointSize": 2,
+"enableSecond": false,
+"background": {
+    "width": 400,
+    "height": 400,
+    "topmargin": 0,
+    "leftmargin": 0,
+    "visibility": "visible",
+    "dynPref": "dark"
+},
+```
+`"dynPrefColor": "prefColorDark"` will specify the dynPref block of all default colors outside views. These colors will be tuned according to dark parameter within `"prefColorDark"`:
+
+And at the end, within the `dynPref` block, you will have a specific dynPref block for default colors:
+
+```json
+    "prefColorDark": {
+        "prefKey": "key_dark",
+        "true": {
+            "highColor": "#FFFF00",
+            "midColor": "#00FF00",
+            "lowColor": "#FF0000",
+            "lowBatColor": "#E53935",
+            "carbColor": "#FB8C00",
+            "basalBackgroundColor": "#0000FF",
+            "basalCenterColor": "#64B5F6",
+            "gridColor": "#FFFFFF"
+        },
+        "false": {
+            "highColor": "#A0A000",
+            "midColor": "#00A000",
+            "lowColor": "#A00000",
+            "lowBatColor": "#E53935",
+            "carbColor": "#D07C00",
+            "basalBackgroundColor": "#0000A0",
+            "basalCenterColor": "#64B5F6",
+            "gridColor": "#303030"
+        }
+    }
+```
+The difference between this dynPref block and the other standard dynPref blocks used for views is that here you don't have a dynData block for each value of `"key_dark"` parameter, but only the list of main colors (`highColor`, `midColor` , ...)
+
+Lets now take a look on items included into the "divider banner" (in example below `"basalRate"` view linked to `"matchDivider"` dynPref view:
+
+```json
+"basalRate": {
+    "width": 90,
+    "height": 32,
+    "topmargin": 127,
+    "leftmargin": 242,
+    "rotation": 0,
+    ...
+    "leftOffsetTwinHidden": 33,
+    "dynPref": "matchDivider"
+},
+```
+Then within dynPref block, you can see that Match divider parameter (`key_match_divider` key), include the 2 blocks "true" and "false", but these two blocs are only used to define that view will use either "dark" dynBlock (so exactly the same background and text color than the otherviews outside the banner), or "white" dynBLock that will set opposite colors for background and text...
+
+```json
+    "matchDivider": {
+        "prefKey": "key_match_divider",
+        "true": {
+            "dynPref": "dark"
+        },
+        "false": {
+            "dynPref": "white"
+        }
+    },
+    "dark": {
+        "prefKey": "key_dark",
+        "true": {
+            "color1": "#000000",
+            "fontColor1": "#FFFFFF"
+        },
+        "false": {
+            "color1": "#FFFFFF",
+            "fontColor1": "#000000"
+        }
+    },
+```
+Note that here you are within a "dynData" block, then to define a color or a fontColor, you will use a dynData (not specified here), and a single step (`"color1"` and `'fontColor1'` are used)
+
+- for all parameter other than `image` default "invalid value (if not set specifically by `"invalidColor"` key or `"invalidFontColor"` keys) will be `"color1"` and `"fontColor1"`.
 
 
-## Key and Key value reference
+
+Then we will see a third example with iob views (`iob1` and `iob2`), where we will use smaller text for detailled iob and bigger text for total iob:
+
+```json
+"iob1": {
+    "width": 125,
+    "height": 33,
+    "topmargin": 168,
+    "leftmargin": 275,
+    "rotation": 0,
+    "visibility": "visible",
+    "textsize": 19,
+    ...
+    "dynPref": "prefIob1"
+},
+"iob2": {
+    "width": 125,
+    "height": 33,
+    "topmargin": 196,
+    "leftmargin": 275,
+    "rotation": 0,
+    "visibility": "visible",
+    "textsize": 24,
+    ...
+    "leftOffsetTwinHidden": -10,
+    "dynPref": "prefIob2"
+},
+```
+You will see within default view settings the text size (19 on `iob1` and 24 on `iob2`) and the two different `dynPref` block that should tune textsize (according to detailed iob parameter), and colors (according to dark parameter)
+
+```json
+    "prefIob1": {
+        "prefKey": "key_show_detailed_iob",
+        "true": {
+            "dynPref": "dark",
+            "textsize1": 24
+        },
+        "false": {
+            "dynPref": "dark"
+        }
+    },
+    "prefIob2": {
+        "prefKey": "key_show_detailed_iob",
+        "true": {
+            "dynPref": "dark",
+            "textsize1": 19
+        },
+        "false": {
+            "dynPref": "dark"
+        }
+    },
+```
+You can see here that according to detailed iob parameter (`"key_show_detailed_iob"` key), when it's "true" then textsize is defined to a fix value bigger than default (24 instead of 19): this is done using textsize "step" feature, within only one value so one step... (note that for all parameter others than images,if invalidTextSize is not set, then textsize1 will be used for invalid data)
+
+Then "dark" dynPref block will be used to set colorand fontColor
+
+In this example the dynData block that will be used for iob1 view will be if detailed IOB is enabled and dark enabled:
+
+```
+{
+    "color1": "#000000",
+    "fontColor1": "#FFFFFF",
+    "textsize1": 24
+},
+```
+
+So the text will be inwhite on black background and the size 24 will replace default size of 19 set into the view
+
+The dynData block that will be used for the same view iob1 if detailed IOB is disabled and dark disabled will be:
+
+```
+{
+    "color1": "#FFFFFF",
+    "fontColor1": "#000000"
+},
+```
+
+Now the text will be in black on white background with a size of 19
+
+#### Tips and tricks for dynPref
+
+- You can combine as many pref than you want, but be carefull, the number of blocks to describe can increase very fast (it's exponential): if you chain 3 parameters and you want to define all situations, you will have 8 blocks to describe, if each parameter has only 2 values...
+- Be carefull to not build "infinite loop" (for example if dynpref1 block should be completed by dynpref2 block that should be completed by dynpref1 block...). In this case the dynpref blocks will be considered as invalid...
+- Do not forget to include the numéric index after the key (when you use for example `"textsize"`key within a view, you will have to use `"textsize1"`within the dynPref  value block, because it's a "dynData" format, so linked to value with a single step in this case)
+- Only one key `"valueKey"` should be set for one view, so if the final `dynData` block is built from several `dynPref`blocks, do not include several `"valueKey"`  (and associated `"minData"`, `"maxData"`, ...)
+
+(cwf-reference-key-and-keyvalue-reference)=
+
+## Key and KeyValue reference
+
+(cwf-reference-list-of-metadata-keys)=
 
 ### List of Metadata keys
+
+(cwf-reference-list-of-standard-metadata-keys)=
 
 #### List of Standard information metadata keys
 
@@ -610,6 +883,8 @@ Here we use exactly the same logic that for dynamic background image, but with d
 | cwf_version    | Watchface plugin compatible with the design of your watchface                                                   |
 | author_version | The author can specify here the version of his watchface                                                        |
 | comment        | Free text that can be used to give some information or limitation of current watchface                          |
+
+(cwf-reference-preference-keys)=
 
 #### Preference keys
 
@@ -630,6 +905,7 @@ Here we use exactly the same logic that for dynamic background image, but with d
 | key_show_bg               | true if your design requires `sgv` information (BG value)                                                                                                                                                                                                    |
 | key_show_loop_status      | true if your design requires `loop` information (loop status and ago)                                                                                                                                                                                        |
 | key_show_week_number      | true if your design requires `week_number` information (loop status and ago)                                                                                                                                                                                 |
+| key_show_date             | true if your design requires `Date`, `Month` or `Day of the week` information                                                                                                                                                                                |
 
 #### Internal keys
 
@@ -637,6 +913,8 @@ Here we use exactly the same logic that for dynamic background image, but with d
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | filename          | This key will be created (or updated) automatically when the watchface is loaded and will contains local zip filename within exports folder                                                   |
 | cwf_authorization | this key will be created (when the watchface is loaded) and updated each time authorization preference is changed in Wear settings, and it will be used to synchronize authorization to watch |
+
+(cwf-reference-list-of-general-parameters)=
 
 ### List of General parameters
 
@@ -655,7 +933,7 @@ Here we use exactly the same logic that for dynamic background image, but with d
 | dayNameFormat        | "E" (default): from "E" to "EEEE" specify dayname format (number, short name, full name) tbc                                                                                                                                                              |
 | monthFormat          | "MMM" (default): from "M" to "MMMM" specify month format (number, short name, full name)                                                                                                                                                                  |
 
-
+(cwf-reference-list-of-hardcoded-resource-files)=
 
 ### List of HardCoded resource files
 
@@ -680,6 +958,8 @@ For most images, High and Low suffix allow tuning of image according to BG level
 | ArrowDoubleDown                                                 | ↓↓ (default): image of double arrow down                                                                                                                                 |
 
 For each above filenames, extension can be either .jpg, .png or .svg. But be carefull, .jpg doesn't manage transparency (so most of the files should be with .png or .svg to not hide view that are behind...)
+
+(cwf-reference-list-of-view-keys)=
 
 ### List of View keys
 
@@ -722,9 +1002,11 @@ This list is sorted from background to foreground this is very important when yo
 | minute_hand      | Image View          |                                                                                                        |                         |
 | second_hand      | Image View          |                                                                                                        |                         |
 
-
+(cwf-reference-list-of-json-keys)=
 
 ### List of Json keys
+
+(cwf-reference-common-keys)=
 
 #### Common keys
 
@@ -745,6 +1027,9 @@ This list is sorted from background to foreground this is very important when yo
 | twinView             | string  | key of the other view (generally the other view also include the twinView parameter with the key of this view in it)                                                                   |
 | topOffsetTwinHidden  | int     | number of pixel to shift view position vertically if twin view is hidden (positive or negative value)<br />topOffsetTwinHidden = (topOffset twinView - topOffset thisView)/2     |
 | leftOffsetTwinHidden | int     | number of pixel to shift view position horizontally if twin view is hidden (positive or negative value)<br />leftOffsetTwinHidden= (leftOffset twinView - leftOffset thisView)/2 |
+| dynPref              | string  | key block name that will specify dynamic pref to link and associated animation (colors, image, shift, rotation)<br />`"dynPref": "customName",` (see below )                     |
+
+(cwf-reference-textview-keys)=
 
 #### TextView keys
 
@@ -760,20 +1045,26 @@ This list is sorted from background to foreground this is very important when yo
 | color      | string  | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRVVBB"`: color code in RVB format, hexdecimal values #FF0000 is red<br />`"#AARRVVBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embeded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on imagae<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, infront of background image |
 | textvalue  | string  | Key specific to the 4 free text views included into the layout (from freetext1 to freetext4), this allow you to set the text that should be included (can be a label, or just `:` if you want to add a separator between hour view and minute view...)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
-#### ImageView key
+(cwf-reference-imageview-keys)=
+
+#### ImageView keys
 
 | Key   | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ----- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | color | string | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRVVBB"`: color code in RVB format, hexdecimal values #FF0000 is red<br />`"#AARRVVBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embeded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on imagae<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, infront of background image |
 
-#### chartView keys
+(cwf-reference-chartview-keys)=
+
+#### ChartView keys
 
 | Key        | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ---------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | color      | string | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRVVBB"`: color code in RVB format, hexdecimal values #FF0000 is red<br />`"#AARRVVBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embeded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on imagae<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, infront of background image |
 | background | string | `resource_filename` you can include a resource image as background of the text view (resource file will be resized to fit heigth and width of text view, but keeping image ratio). text value will be in front of background image.<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, infront of background image                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
-### key values
+(cwf-reference-key-values)=
+
+### Key values
 
 | Key value                  | key        | comment                                                                           |
 | -------------------------- | ---------- | --------------------------------------------------------------------------------- |
@@ -796,26 +1087,38 @@ This list is sorted from background to foreground this is very important when yo
 | bold_italic                | fontStyle  |                                                                                   |
 | italic                     | fontStyle  |                                                                                   |
 
+(cwf-reference-dyndata-keys)=
+
 ### DynData keys
 
-| Key                 | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| dynData             | block  | define the block of all dynamic data blocs that will be used for the views. generally aafter the last view.<br />All the keys defined within this block will be used as key Value within view block:<br />`"dynData": { dynData blocks }`<br />and each block is defined by a custom name and several keys inside:<br />`"customName": { one dynData block }`                                                                                    |
-| valueKey            | string | name of dynamic data to use (generally same that associated view key).<br />If not existing, the default will be the values used for the view that uses this block. <br />for example you can define one block to customize battery level percentage without specifying valueKey, and then use the same block to customize uploader_battery and rig_battery                                                                                                |
-| minData             | int    | specify the minimum value to take into account for AAPS data : for example if value is sgv (unit mgdl internaly), if minData is set to 50, all bg values below 50mgdl will be set to 50.<br />- Note that minData and maxData will be used to calculate dynamic values (in pixel or in degrees).                                                                                                                                                                   |
-| maxData             | int    | specify the maximum value to take into account for AAPS data : for example if value is sgv (unit mgdl internaly), if maxData is set to 330, all bg values above 330mgdl will be set to 330.                                                                                                                                                                                                                                                                              |
-| leftOffset          | block  | Specify the horizontal shift of the view according to min and max values in pixels.<br />- It includes minValue key, maxValueKey and invalidValue key (optional)<br />- If data is below or equal minData, then the view will be shifted to minValue pixels, and if data is above or equal to maxData, then the view will be shifted to maxValue pixels<br />Note that to apply this shift leftOffset should be set to true within the view            |
-| topOffset           | block  | Specify the vertical shift of the view according to min and max values in pixels.<br />- It includes minValue key, maxValueKey and invalidValue key (optional)<br />- If data is below or equal minData, then the view will be shifted to minValue pixels, and if data is above or equal to maxData, then the view will be shifted to maxValue pixels<br />Note that to apply this shift topOffset should be set to true within the view               |
-| rotationOffset      | block  | Specify the rotation angle in degrees of the view according to min and max values in pixels.<br />- It includes minValue key, maxValueKey and invalidValue key (optional)<br />- If data is below or equal minData, then the view will rotate by minValue degrees, and if data is above or equal to maxData, then the view will rotate by maxValue degrees<br />Note that to apply this rotation, rotationOffset should be set to true within the view |
-| minValue            | int    | result value to apply to the view (key only applicable within a leftOffset, topOffset or rotationOffset block)                                                                                                                                                                                                                                                                                                                                                           |
-| maxValue            | int    | result value to apply to the view (key only applicable within a leftOffset, topOffset or rotationOffset block)                                                                                                                                                                                                                                                                                                                                                           |
-| invalidValue        | int    | result value to apply to the view if data is invalid (key only applicable within a leftOffset, topOffset or rotationOffset block)                                                                                                                                                                                                                                                                                                                                        |
-| invalidImage        | string | `resource_filename` to use for the ImageView or background TextView if the data is invalid                                                                                                                                                                                                                                                                                                                                                                               |
-| image*1_to_n*     | string | `resource_filename` image to use for each step between minData (or close to minData) with image1 and maxData (or close to maxData) with image*n*<br />If for example your put 5 images (from image1 to image5), the range between minData and maxData will be divided in 5 steps and according to data value, the corresponding image will be shown                                                                                                                |
-| invalidFontColor    | string | Manage invalid fontColor<br />`"#RRVVBB"` or `"#AARRVVBB"`: Color to use if an invalid data is received (can be transparent if AA=00)                                                                                                                                                                                                                                                                                                                              |
-| fontColor*1_to_n* | string | Manage fontColor<br />`"#RRVVBB"` or `"#AARRVVBB"`: color to use for each step between minData (or close to minData) with fontColor1 and maxData (or close to maxData) with fontColor*n*                                                                                                                                                                                                                                                                           |
-| invalidColor        | string | Manage invalid background color or image color<br />`"#RRVVBB"` or `"#AARRVVBB"`: Color to use if an invalid data is received (can be transparent if AA=00)                                                                                                                                                                                                                                                                                                        |
-| color*1_to_n*     | string | Manage background color or image Color<br />`"#RRVVBB"` or `"#AARRVVBB"`: color to use for each step between minData (or close to minData) with color1 and maxData (or close to maxData) with color*n*                                                                                                                                                                                                                                                             |
+| Key                      | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ------------------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| dynData                  | block  | define the block of all dynamic data blocks that will be used for the views. generally after the last view.<br />All the keys defined within this block will be used as key Value within view block:<br />`"dynData": { dynData blocks }`<br />and each block is defined by a custom name and several keys inside:<br />`"customName": { one dynData block }`                                                                                    |
+| valueKey                 | string | name of dynamic data to use (generally same that associated view key).<br />If not existing, the default will be the values used for the view that uses this block. <br />for example you can define one block to customize battery level percentage without specifying valueKey, and then use the same block to customize uploader_battery and rig_battery                                                                                                |
+| minData                  | int    | specify the minimum value to take into account for AAPS data : for example if value is sgv (unit mgdl internaly), if minData is set to 50, all bg values below 50mgdl will be set to 50.<br />- Note that minData and maxData will be used to calculate dynamic values (in pixel or in degrees).                                                                                                                                                                   |
+| maxData                  | int    | specify the maximum value to take into account for AAPS data : for example if value is sgv (unit mgdl internaly), if maxData is set to 330, all bg values above 330mgdl will be set to 330.                                                                                                                                                                                                                                                                              |
+| leftOffset               | block  | Specify the horizontal shift of the view according to min and max values in pixels.<br />- It includes minValue key, maxValueKey and invalidValue key (optional)<br />- If data is below or equal minData, then the view will be shifted to minValue pixels, and if data is above or equal to maxData, then the view will be shifted to maxValue pixels<br />Note that to apply this shift leftOffset should be set to true within the view            |
+| topOffset                | block  | Specify the vertical shift of the view according to min and max values in pixels.<br />- It includes minValue key, maxValueKey and invalidValue key (optional)<br />- If data is below or equal minData, then the view will be shifted to minValue pixels, and if data is above or equal to maxData, then the view will be shifted to maxValue pixels<br />Note that to apply this shift topOffset should be set to true within the view               |
+| rotationOffset           | block  | Specify the rotation angle in degrees of the view according to min and max values in pixels.<br />- It includes minValue key, maxValueKey and invalidValue key (optional)<br />- If data is below or equal minData, then the view will rotate by minValue degrees, and if data is above or equal to maxData, then the view will rotate by maxValue degrees<br />Note that to apply this rotation, rotationOffset should be set to true within the view |
+| minValue                 | int    | result value to apply to the view (key only applicable within a leftOffset, topOffset or rotationOffset block)                                                                                                                                                                                                                                                                                                                                                           |
+| maxValue                 | int    | result value to apply to the view (key only applicable within a leftOffset, topOffset or rotationOffset block)                                                                                                                                                                                                                                                                                                                                                           |
+| invalidValue             | int    | result value to apply to the view if data is invalid (key only applicable within a leftOffset, topOffset or rotationOffset block)                                                                                                                                                                                                                                                                                                                                        |
+| invalidImage             | string | `resource_filename` to use for the ImageView or background TextView if the data is invalid                                                                                                                                                                                                                                                                                                                                                                               |
+| image*1_to_n*          | string | `resource_filename` image to use for each step between minData (or close to minData) with image1 and maxData (or close to maxData) with image*n*<br />If for example your put 5 images (from image1 to image5), the range between minData and maxData will be divided in 5 steps and according to data value, the corresponding image will be shown                                                                                                                |
+| invalidFontColor         | string | Manage fontColor steps if the data is invalid<br />`"#RRVVBB"` or `"#AARRVVBB"`: Color to use if an invalid data is received (can be transparent if AA=00)                                                                                                                                                                                                                                                                                                         |
+| fontColor*1_to_n*      | string | Manage fontColor steps<br />`"#RRVVBB"` or `"#AARRVVBB"`: color to use for each step between minData (or close to minData) with fontColor1 and maxData (or close to maxData) with fontColor*n*                                                                                                                                                                                                                                                                     |
+| invalidColor             | string | Manage background color or image color steps if the data is invalid<br />`"#RRVVBB"` or `"#AARRVVBB"`: Color to use if an invalid data is received (can be transparent if AA=00)                                                                                                                                                                                                                                                                                   |
+| color*1_to_n*          | string | Manage background color or image Color steps<br />`"#RRVVBB"` or `"#AARRVVBB"`: color to use for each step between minData (or close to minData) with color1 and maxData (or close to maxData) with color*n*                                                                                                                                                                                                                                                       |
+| invalidTextSize          | int    | Manage text size steps if the data is invalid                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| textsize*1_to_n*       | int    | Manage text size to use for each step between minData (or close to minData) with textsize1 and maxData (or close to maxData) with textsize*n*                                                                                                                                                                                                                                                                                                                            |
+| invalidLeftOffset        | int    | Manage leftOffset steps if the data is invalid                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| leftOffset*1_to_n*     | int    | Manage leftOffset to use for each step between minData (or close to minData) with leftOffset1 and maxData (or close to maxData) with leftOffset*n*<br />Note, can be used with dynPref to shift a view when another is hidden...                                                                                                                                                                                                                                   |
+| invalidTopOffset         | int    | Manage topOffset steps if the data is invalid                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| topOffset*1_to_n*      | int    | Manage topOffset to use for each step between minData (or close to minData) with topOffset1 and maxData (or close to maxData) with topOffset*n*<br />Note, can be used with dynPref to shift a view when another is hidden...                                                                                                                                                                                                                                      |
+| invalidRotationOffset    | int    | Manage rotationOffset steps if the data is invalid                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| rotationOffset*1_to_n* | int    | Manage rotationOffset to use for each step between minData (or close to minData) with rotationOffset1 and maxData (or close to maxData) with rotationOffset*n*                                                                                                                                                                                                                                                                                                           |
+
+(cwf-reference-dyndata-key-values)=
 
 ### DynData key values
 
@@ -835,3 +1138,30 @@ This list is sorted from background to foreground this is very important when yo
 | month            | valueKey | default minData = 1<br />default maxData = 12                                                                                                                                                                                                               |
 | week_number      | valueKey | default minData = 1<br />default maxData = 53                                                                                                                                                                                                               |
 
+(cwf-reference-dynpref-keys)=
+
+### DynPref keys
+
+| Key          | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dynPref      | block  | define the block of all dynamic preference blocks that will be used for the views. Generally after the last view or after the dynData block.<br />All the keys defined within this block will be used as key Value within view block:<br />`"dynPref": { dynPref blocks }`<br />and each block is defined by a custom name and several keys inside:<br />`"customName": { one dynPref block }`                                                                                                                |
+| dynPref      | string | *Within a view Block*<br />name of dynamic dynPref block to use (generally same that associated view key or associated preference).                                                                                                                                                                                                                                                                                                                                                                                             |
+| dynPref      | string | *Within a partial dynData Block included into a dynPref Block*<br />name of dynamic dynPref block to use to complete the dynData block. This allow you to tune a dynData block according to several preferences                                                                                                                                                                                                                                                                                                                 |
+| dynPrefColor | string | this key is specific to the main block with all main colors (highColor, midColor, lowColor, graph colors...). you will use it if you want to tune main colors according to preferences                                                                                                                                                                                                                                                                                                                                                |
+| prefKey      | string | specify the preference key Value that will be used to get user preferences (see [PrefKey values](cwf-reference-prefkey-values) below). This key should be used within a `dynPref` block.<br />Then according to preference key, the `dynPref`block should contains as many keys than prefKey has values.<br />Note that most of the time preferences are "Boolean" so you should find within the dynPref block these two dynData blocks: <br />`"true": { dynData Block },`<br />`"false": { dynData Block }` |
+| true         | block  | most preferences will set a boolean `"true"` or `"false"`. You will specify the dynData block to use if preference selected by user is true.<br />Note that if the block also contains a `"dynPref":`key, the dynData block wil be merged with other block. This allow you to tune for example color according to one preference, and textsize according to another preference                                                                                                                                                  |
+| false        | block  | most preferences will set a boolean `"true"` or `"false"`. You will specify the dynData block to use if preference selected by user is false.<br />Note that if the block also contains a `"dynPref":`key, the dynData block wil be merged with other block. This allow you to tune for example color according to one preference, and textsize according to another preference                                                                                                                                                 |
+
+(cwf-reference-prefkey-values)=
+
+### PrefKey values
+
+All keys included into **Preference keys** chapter above can be used to tune view parameters
+
+You can also you these additional key below included into AAPS (Custom) specific parameters:
+
+| Key                 | type    | comment                                                                                                                                                                                                                                                                                                                                                             |
+| ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| key_units           | boolean | *true*: if units selected on AAPS is mgdl<br />*false*: if units selected on AAPS is mmol                                                                                                                                                                                                                                                                     |
+| key_dark            | boolean | *true*: to use a dark background<br />false: to use a light background<br />Note: this parameter is often use into previous AAPS watchfaces (AAPS, AAPS V2...)                                                                                                                                                                                          |
+| key_match_divider | boolean | *true*: divider included into AAPS, AAPS v2 watchfaces will not be visible<br />*false*: divider included into AAPS, AAPS v2 watchfaces will be visible<br />Note: this setting is often combine with dark preference (using `dynPref` key into `dynData`block) to set text color (and background) on the same or opposite color than dark parameter... |

@@ -215,7 +215,7 @@ This is a note. ::: ::::
 
 This is a note. :::
 
-#### Warnings
+#### Предупреждения
 
 :::: :::{admonition} Warning :class: warning
 

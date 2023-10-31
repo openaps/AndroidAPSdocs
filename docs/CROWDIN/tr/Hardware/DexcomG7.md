@@ -1,13 +1,5 @@
 # Dexcom G7
 
-```{admonition} Only available in dev branch
-:class: not
-
-Bu özellik yalnızca dev (geliştirici) sürümünde mevcuttur, master'da mevcut değildir.
-
-Lütfen uyarılara dikkat edin ve [dev sürümü oluşturma](../Installing-AndroidAPS/Dev_branch.md) bölümündeki talimatları izleyin.
-
-```
 
 ## Ön Bilgi
 
@@ -15,15 +7,15 @@ Lütfen uyarılara dikkat edin ve [dev sürümü oluşturma](../Installing-Andro
 
 G7 sisteminin G6 ile karşılaştırıldığında ne uygulamada ne de okuyucuda değerleri düzgünleştirmemesi dikkat çekicidir. Bununla ilgili daha fazla ayrıntıya [buradan](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app) ulaşabilirsiniz. Sonuç olarak, AAPS'de mantıklı bir şekilde kullanabilmek için değerlerin yumuşatılması gerekir.
 
-**iki** olasılık vardır (02/'23 itibarıyla).
+![G7 english](https://github.com/blaqone/AndroidAPSdocs/assets/37814299/6fe30b84-227a-4bae-a9a5-527cee341dbf)
 
-![DexcomG7.md](../images/DexcomG7.png)
+## 1.  Patched Dexcom G7 App (DiAKEM)
 
-## 1.  Yamalı Dexcom G7 Uygulaması
+**Note: AAPS 3.2.0.0 or higher is required!**
 
 ### Yeni yamalı (!) bir G7 uygulaması kurun ve sensörü başlatın
 
-Yamalı bir Dexcom G7 uygulaması, Dexcom G7 verilerine erişim sağlar. Bu uygulama şu anda G7 verilerini alamadığından, BYODA uygulaması değildir.
+A patched Dexcom G7 app (DiAKEM) gives acess to the Dexcom G7 data. Bu uygulama şu anda G7 verilerini alamadığından, BYODA uygulaması değildir.
 
 Daha önce kullandıysanız orijinal Dexcom uygulamasını kaldırın (Çalışmakta olan bir sensör oturumuna devam edilebilir - uygulamayı kaldırmadan önce sensör kodunu not edin!)
 
@@ -35,11 +27,7 @@ Yamalı uygulamada sensör kodunu girin.
 
 Isınma aşamasından sonra, değerler her zamanki gibi G7 uygulamasında görüntülenir.
 
-### geliştirici (dev) sürümünde yeni bir imzalı APK oluşturun
-
-AAPS'de G7 Uygulamasından değerleri alabilmek ve alınan değerleri yumuşatmak için bir değişiklik gereklidir.
-
-Bu nedenle, resmi geliştirici sürümü için imzalı yeni bir APK oluşturun ve cep telefonunuza yükleyin.
+### Configuration in AAPS
 
 AAPS'deki yapılandırma için
 - Konfigürasyon ayarlarında 'BYODA'yı seçin - (şimdilik BYODA uygulaması olmasa bile!)
@@ -49,7 +37,12 @@ Glikoz değerlerinin yumuşatılması, Konfigürasyon ayarlarında "Ortalama yum
 
 ** Üstel Yumuşatma ** G7 değerlerinin anlamlı kullanımı için **ETKİN** olmalıdır.
 
-## 2. Xdrip+ (tamamlayıcı mod)
+## 2. Xdrip+ (direct connection to G7)
+
+- Follow the instructions here: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- AAPS'de > Yapılandırma > KŞ kaynağı > xDrip+. Ayarları [xDrip+ ayarları](../Configuration/xdrip.md) sayfasındaki açıklamalara göre düzenleyin.
+
+## 3. Xdrip+ (tamamlayıcı mod)
 
 -   Xdrip+'ı indirin ve kurun: [xdrip](https://github.com/NightscoutFoundation/xDrip)
 - Xdrip'te veri kaynağı olarak "Companion App" seçilmeli ve Gelişmiş Ayarlar altında > Bluetooth Ayarları> "Companion Bluetooth" etkinleştirilmelidir.

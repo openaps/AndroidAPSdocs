@@ -2,5 +2,5 @@
 
 Si tienes cualquier otro MCG configurado que envía los datos a [Nightscout](https://nightscout.github.io/) entonces
 
--   In AAPS Preferences enter your Nightscout website and API secret.
--   Select NSClient in ConfigBuilder (setting in AAPS).
+-   En las preferencias de AAPS, ingresa tu sitio web de Nightscout y la API Secret.
+-   Selecciona NSClient en la Tabla de configuraciones (ajuste en AAPS).

@@ -161,6 +161,8 @@ Objectives <./Usage/Objectives.md>
 
 OpenAPS features <./Usage/Open-APS-features.md>
 
+Dynamic ISF <./Usage/DynamicISF.md>
+
 COB calculation <./Usage/COB-calculation.md>
 
 Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
@@ -182,6 +184,10 @@ Open Humans Uploader <./Configuration/OpenHumans.md>
 Automation with 3rd party apps <./Usage/automationwithapp.md>
 
 Android auto <./Usage/Android-auto.md>
+
+Custom Watchface reference document <./Usage/Custom_Watchface_Reference.md>
+
+Exchange Site Custom Watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 

@@ -49,13 +49,13 @@ In order to allow users with older Android to use older version of AAPS new vers
 
 - AAPS 3.2 requires at least WearOS API level 28 (Android 9)
 
-## Version 3.2.0
+## Version 3.2.0.0 dedicated to @Philoul
 
-Release date: XX-XX-2023
+Release date: 23-10-2023
 
 ### Důležitá poznámky
 
-- NS 15 is required. At the moment "dev" branch of NS main repository
+- NS 15 is required
 - While using websockets in NS v3 plugin treatments entered through NS UI (plus button) and other applications using v1 API are not sent to AAPS. This will be fixed in future release of NS. Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internaly. The same is valid for AAPS and AAPSClient itself.
 - Websockets in v3 plugin works similiar way to v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the oposite side it means delays in exchanging data.
 - If you are using xdrip as cgm source you must select it again after update due to internal changes
@@ -77,6 +77,7 @@ Release date: XX-XX-2023
 - Tidepool support @MilosKozak
 - Smoothing plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
 - DynamicISF plugin @Chris Wilson, @tim2000s
+- Garmin watchface & HeartRate support @buessow
 - New logo @thiagomsoares
 - New watchface @Philoul
 - fixed tons of issues from 3.1 version
@@ -90,7 +91,10 @@ Release date: XX-XX-2023
 - more database maintenance options @MilosKozak
 - AAPSClient provides info if main phone is plugged in electricity @MilosKozak
 - Change in BolusWizard. If CGM is not available percentage is ignored (ie 100% is used)
-- new 150k+ lines of code, changed 156k lines
+- migration to kts build system @MilosKozak
+- improved CI integration @MilosKozak @buessow
+- tests cleaup @ryanhaining @MilosKozak
+- new 110k+ lines of code, changed 240k lines, 6884 changed files
 
 ## Version 3.1.0
 

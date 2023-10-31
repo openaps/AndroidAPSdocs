@@ -150,35 +150,41 @@ Tercihler <./Configuration/Preferences.md>
 ```
 
 ```{toctree}
-:caption: AAPS Kullanımı
+:caption: AAPS Usage
 
-AAPS ekranları <./Getting-Started/Screenshots.md>
+AAPS screens <./Getting-Started/Screenshots.md>
 
-Görevler <./Usage/Objectives.md>
+Objectives <./Usage/Objectives.md>
 
-OpenAPS özellikleri <./Usage/Open-APS-features.md>
+OpenAPS features <./Usage/Open-APS-features.md>
 
-AKRB hesaplama <./Usage/COB-calculation.md>
+Dynamic ISF <./Usage/DynamicISF.md>
 
-Duyarlılık algılama <./Configuration/Sensitivity-detection-and-COB.md>
+COB calculation <./Usage/COB-calculation.md>
 
-Profil değiştirme <./Usage/Profiles.md>
+Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
 
-Geçici hedefler <./Usage/temptarget.md>
+Profile switch <./Usage/Profiles.md>
 
-Yayma karbonhidratlar <./Usage/Extended-Carbs.md>
+Temp-targets <./Usage/temptarget.md>
 
-Otomasyon <./Usage/Automation.md>
+Extended carbs <./Usage/Extended-Carbs.md>
 
-Otoduyarlılık (yaln. gel. modda) <./Usage/autune.md>
+Automation <./Usage/Automation.md>
 
-Bakımportalı (devam etmiyor) <./Usage/CPbefore26.md>
+Autotune (dev only) <./Usage/autotune.md>
 
-Open Humans Yükleyici <./Configuration/OpenHumans.md>
+Careportal (discontinued) <./Usage/CPbefore26.md>
 
-3. taraf uygulamalarla otomasyon <./Usage/automationwithapp.md>
+Open Humans Uploader <./Configuration/OpenHumans.md>
+
+Automation with 3rd party apps <./Usage/automationwithapp.md>
 
 Android auto <./Usage/Android-auto.md>
+
+Custom Watchface reference document <./Usage/Custom_Watchface_Reference.md>
+
+Exchange Site Custom Watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 

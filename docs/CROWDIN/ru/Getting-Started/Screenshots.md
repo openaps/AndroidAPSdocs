@@ -1,15 +1,15 @@
-# AAPS screens
+# Экраны AAPS
 
 ## Главный экран
 
 ![Главный экран V2.7](../images/Home2020_Homescreen.png)
 
-This is the first screen you will come across when you open AAPS and it contains most of the information that you will need day to day.
+Это первый экран, который вы увидите при открытии приложения AAPS. Он отображает почти всю необходимую вам изо дня в день информацию.
 
 ### Раздел А - Вкладки
 
-* Navigate between the various AAPS modules.
-* Также можно переходить между экранами свайпом влево или вправо.
+* Переход между различными модулями AAPS.
+* Между экранами можно также переходить свайпом влево или вправо.
 * Отображаемые здесь вкладки можно выбрать в [Конфигураторе](Config-Builder-tab-or-hamburger-menu).
 
 (Screenshots-section-b-profile-target)=
@@ -31,7 +31,7 @@ This is the first screen you will come across when you open AAPS and it contains
 
 * Текущее целевое значение глюкозы крови (ГК) отображается на правой панели.
 * Короткое нажатие позволяет установить [временную цель](../Usage/temptarget.md).
-* Если установлена временная цель - панель будет желтой, а в скобках отображается оставшееся время ее активности в минутах.
+* Если установлена временная цель - панель будет желтой, в скобках отображается оставшееся время ее активности в минутах.
 
 (Screenshots-visualization-of-dynamic-target-adjustment)=
 
@@ -104,7 +104,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 Следует выяснить, почему данные ГК дублируются:
 
 * Активирован ли мост Dexcom на вашем сайте NS? Отключите мост, перейдя в Heroku (или к другому провайдеру хостинга), отредактируйте переменную «enable» и удалите "bridge". (Для Heroku [подробности можно найти здесь](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
-* Имеется ли несколько источников передачи данных ГК в Nightscout (NS)? Если вы используете самостоятельно собранное приложение BYODA, включите загрузку в AAPS, но не включайте её в xDrip+.
+* Данные о ГК передаются в ваш Nightscout (NS) с нескольких источников? Если вы используете самостоятельно собранное приложение BYODA, включите загрузку в AAPS, но не включайте её в xDrip+.
 * Есть ли подписчики, фоловеры, которые могут получать вашу ГК и также снова передавать ее на ваш сайт NS?
 * Последний вариант: В AAPS перейдите в настройки NS Client выберите настройки синхронизации и отключите опцию "Принимать данные CGM из NS".
 
@@ -123,20 +123,20 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
    * Непрерывный поток также нарушается скачками данных.
    * Поэтому желтый предупреждающий знак будет «всегда включен» для пользователей libre.
 
-### Раздел D - IOB, COD, BR и AS
+### Раздел D - АктИнс, АктУгл, БС и AS
 
 ![Section D](../images/Home2020_TBR.png)
 
 * Иконка шприца: инсулин "на борту" (IOB, АктИнс) - количество активного инсулина в теле
    
-   * Значение активного инсулина IOB будет нулевым при подаче только стандартного базального и когда нет остатков от предыдущих болюсов. 
+   * Значение активного инсулина IOB будет равно нулю, если активна только база текущего профиля и нет остаточного инсулина от предыдущих болюсов. 
    * IOB может быть отрицательным если был период с пониженным относительно текущего профиля базалом.
    * Нажмите на иконку (только короткое нажатие), чтобы увидеть как IOB распределяется между базой и болюсом.
 
 * Иконка колоска: [углеводы "на борту"](../Usage/COB-calculation.md) (COB, АктУгл) - количество еще не усвоенных углеводов из тех, чтоб были введены ранее. Иконка мерцает, если необходимо съесть дополнительные углеводы.
 
 * Иконка с фиолетовой линией: базальная скорость (BR, БС) - иконка изменяется в соответствии с текущими настройками базала (прямая линия при базе 100%) 
-   * Нажмите на иконку (только короткое нажатие), чтобы увидеть подробности базала (значение текущего базала, время начала, остаток/общая продолжительность в минутах)
+   * Кратко нажмите на иконку, чтобы увидеть подробности базала (значение текущего базала, время начала, остаток/общая продолжительность в минутах)
 * Иконка со стрелками вверх и вниз: отображает статус [Автосенса](Open-APS-features-autosens) (AS) (включен или отключен) и текущий расчет под иконкой
 
 #### Требуются углеводы
@@ -177,7 +177,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
    
    * Прогнозирование
    * Базал
-   * Активность-кривая действия инсулина
+   * Нагрузка - кривая действия инсулина
 
 #### Активация дополнительной информации
 
@@ -190,21 +190,21 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 #### Линии прогнозирования
 
-* ** Оранжевая ** линия: [АктУгл (COB) ](../Usage/COB-calculation.md) (цвет используется для представления активных углеводов COB и углеводов в целом)
+* **Оранжевая** линия: [АктУгл (COB)](../Usage/COB-calculation.md) (цвет используется для представления активных углеводов COB и углеводов в целом)
    
    Линия предсказания показывает, где будет ГК (а не сами активные углеводы COB) на основе текущих настроек помпы с учетом того, что отклонения вследствие усвоения углеводов останутся постоянными. Эта линия появляется только при известном наличии активных углеводов COB.
 
-* **Темно-синяя ** линия: активный инсулин IOB (цвет обычно используется для отображения активного инсулина IOB и инсулина)
+* **Темно-синяя** линия: активный инсулин IOB (цвет обычно используется для отображения активного инсулина IOB и инсулина)
    
    Линия предсказания показывает, что будет происходить только под воздействием инсулина. Например, если вы ввели инсулин, а потом не ели никаких углеводы.
 
-* ** Голубая ** линия: нулевой временный базал (предсказанная ГК, если будет установлена временная базальная скорость в 0%)
+* **Голубая** линия: нулевой временный базал (предсказанная ГК, если будет установлена временная базальная скорость в 0%)
    
    В строке прогноза показано, как изменится линия траектории активного инсулина IOB, если помпа прекратит подачу инсулина (0% TBR).
    
    *Эта линия появляется только когда используется алгоритм [СМБ](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb).*
 
-* ** Темно-желтая ** линия: [ непредвиденный прием пищи UAM ](Sensitivity-detection-and-COB-sensitivity-oref1)
+* **Темно-желтая** линия: [непредвиденный прием пищи UAM](Sensitivity-detection-and-COB-sensitivity-oref1)
    
    Незапланированный прием пищи - обнаружение значительного повышения уровня глюкозы, как следствие приема пищи, выброса адреналина или других факторов. Линия предсказания аналогична оранжевой линии активных углеводов COB, но предполагает, что отклонения будут понижаться с постоянной скоростью (за счет увеличения текущей скорости сокращения).
    
@@ -230,7 +230,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 * **Тонкая желтая** линия отображает активность инсулина. 
 * Она основана на ожидаемом падении ГК из-за действия инсулина в системе, если не присутствуют другие факторы (например, углеводы).
 
-### Раздел G - дополнительные графики
+### Раздел G - Дополнительные графики
 
 * Можно активировать до четырех дополнительных графиков ниже главного графика.
 * Чтобы настроить дополнительные графики - щелкните по треугольнику справа от [главного](Screenshots-section-f-main-graph) и прокрутите вниз.
@@ -279,7 +279,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 * Внутреннее значение, используемое в алгоритме.
 
-### Раздел H-Кнопки
+### Раздел H - Кнопки
 
 ![Homescreen buttons](../images/Home2020_Buttons.png)
 
@@ -287,46 +287,46 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
    
    * При потере подключения к помпе кнопка инсулина не видна.
 
-* Other Buttons have to be setup in [preferences]Preferences-buttons).
+* Отображение других кнопок можно задать в Настройках \[preferences\] (п.м. Начало - Кнопки).
 
 #### Инсулин
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-* To give a certain amount of insulin without using [bolus calculator](Screenshots-bolus-wizard).
-* By checking the box you can automatically start your [eating soon temp target](Preferences-default-temp-targets).
-* Если не хотите подавать болюс с помпы, а только отметить количество инсулина (например, поданного шприц-ручкой), отметьте соответствующий флажок.
+* Подает заданное количество инсулина без использования [калькулятора болюса](Screenshots-bolus-wizard).
+* Можно автоматически начать [ВЦ Ожидаемый прием пищи](Preferences-default-temp-targets), поставив флажок рядом с этой опцией.
+* Если не хотите подавать болюс с помпы, а только сделать запись о введенном инсулине (например, поданного шприц-ручкой), поставьте флажок рядом с соответствующей опцией.
 
 #### Углеводы
 
 ![Carbs button](../images/Home2020_ButtonCarbs.png)
 
-* Чтобы сделать запись об углеводах без подачи болюса.
-* Certain [pre-set temporary targets](Preferences-default-temp-targets) can be set directly by checking the box.
-* Смещение по времени: Когда будете употреблять/употребили в пищу углеводы (в минутах).
-* Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.md)
+* Делает запись об углеводах без подачи болюса.
+* Можно активировать [заранее настроенную временную цель](Preferences-default-temp-targets) поставив рядом с ней флажок.
+* Смещение по времени: сколько минут пройдет до момента начала приема пищи (или уже прошло с этого момента).
+* Длительность действия: для ["растягивания" углеводов](../Usage/Extended-Carbs.md)
 * Можно использовать кнопки для быстрого приращения количества углеводов.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](Preferences-nsclient).
+* Примечания будут загружены в Nightscout - в зависимости от ваших настроек [клиента NS](Preferences-nsclient).
 
 #### Калькулятор
 
-* See Bolus Wizard [section below](Screenshots-bolus-wizard)
+* Смотрите раздел "Мастер Болюса" [ниже](Screenshots-bolus-wizard)
 
 #### Калибровки
 
-* Отправляет калибровку в xDrip + или открывает диалог калибровки Dexcom.
-* Must be activated in [preferences](Preferences-buttons).
+* Отправляет калибровку в xDrip+ или открывает диалог калибровки Dexcom.
+* Активируется в [настройках](Preferences-buttons).
 
 #### CGM / НМГ
 
-* Открывает xDrip +.
+* Открывает xDrip+.
 * Кнопка Назад возвращает в AAPS.
-* Must be activated in [preferences](Preferences-buttons).
+* Активируется в [настройках](Preferences-buttons).
 
 #### Мастер быстрых настроек
 
-* Легко вводите количество углеводов и задайте основы расчетов.
-* Details are setup in [preferences](Preferences-quick-wizard).
+* Быстрый ввод заранее заданного количества углеводов с предварительно настроенными параметрами расчета дозы.
+* Параметры задаются в [настройках](Preferences-quick-wizard).
 
 (Screenshots-bolus-wizard)=
 
@@ -334,26 +334,26 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus this is where you will normally make it from.
+Чаще всего вы будете вводить болюс на еду именно отсюда.
 
 ### Раздел I
 
 * Поле ГК обычно уже заполнено данными с мониторинга. Если мониторинг ГК не работает, то поле будет пустым. 
-* В поле УГЛЕВОДЫ вводим рассчитанное нами количество углеводов - или эквивалент - на которые хотим дать болюс. 
-* Поле CORR-для корректировки - если вы по какой-либо причине хотите изменить конечную дозу.
+* В поле УГЛЕВОДЫ вводим рассчитанное нами количество углеводов - или эквивалент - на которое хотим дать болюс. 
+* Поле КОРРЕКЦИЯ - для корректировки, если вы по какой-либо причине хотите изменить конечную дозу.
 * Поле CARB TIME предназначено для предварительной подачи болюса, так что вы можете сообщить системе о задержке в приеме углеводов. Вы можете добавить отрицательное число в это поле, если даете болюс на прошлые углеводы.
 
 (Screenshots-eating-reminder)=
 
 #### Напоминание о приеме пищи
 
-* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AAPS
+* Для напоминания о "будущих" углеводах можно поставить флажок в поле рядом с иконкой будильника (флажок поставится автоматически, если вы указали время в будущем), в этом случае в указанное время сработает оповещение о необходимости начать есть заведенные в AAPS углеводы
    
    ![Мастер болюса с напоминанием о питании](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Раздел J
 
-* SUPER BOLUS - это когда базальный инсулин следующих двух часов добавляется к подаваемому болюсу, а следующие два часа подается нулевой временный базал TBR, чтобы поглотить лишний инсулин. The option only shows when "Enable [superbolus](Preferences-superbolus) in wizard" is set in the [preferences overview](Preferences-overview).
+* СУПЕРБОЛЮС означает, что к обычной дозе вводимого сейчас болюса будет добавлена база следующих 2 часов, а ВБС на это время будет установлен в ноль, чтобы компенсировать этот дополнительный инсулин. Эта опция появляется только если отмечена опция "активировать [суперболюс](Preferences-superbolus)" в [настройках Начало](Preferences-overview).
 * Идея заключается в том, чтобы доставить инсулин по возможности раньше и, желательно, сократить пики.
 * Подробная информация находится на сайте [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
@@ -361,7 +361,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * Показывает рассчитываемый болюс. 
 * Если количество активного инсулина превышает рассчитанный болюс, то оно просто покажет количество углеводов, которые еще требуются.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](Preferences-nsclient).
+* Примечания будут загружены в Nightscout - в зависимости от ваших настроек [клиента NS](Preferences-nsclient).
 
 ### Раздел L
 
@@ -382,9 +382,9 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
 
-* If you see the warning above after using bolus wizard, AAPS has detected that the calculated COB value maybe wrong.
-* So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
-* For details see the hints on [COB calculation page](COB-calculation-detection-of-wrong-cob-values).
+* Если после использования мастера болюса вы видите сообщение выше, то AAPS обнаружил, что рассчитанное значение активных углеводов может быть неправильным.
+* Так что, если вы хотите повторно подать болюс после предыдущей еды с активными углеводами, учитывайте возможность передозировки! 
+* Подробнее см. подсказки на [странице расчета активных углеводов СOB](COB-calculation-detection-of-wrong-cob-values).
 
 (Screenshots-action-tab)=
 
@@ -455,11 +455,11 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ![Профиль Инсулина](../images/Screenshot_insulin_profile.png)
 
-* This shows the activity profile of the insulin you have chosen in [config builder](Config-Builder-insulin). 
-* ФИОЛЕТОВАЯ линия показывает, сколько инсулина остается после ввода по мере рассасывания, а СИНЯЯ линия показывает его активность.
-* The important thing to note is that the decay has a long tail. 
-* If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
-* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AAPS algorithm.
+* Это профиль активности инсулина, который вы выбрали в [конфигураторе](Config-Builder-insulin). 
+* ФИОЛЕТОВАЯ линия показывает, сколько инсулина остается после ввода по мере его усваивания, а СИНЯЯ линия показывает его активность.
+* Важно отметить, что усваивание инсулина имеет большую остаточную длительность (хвосты). 
+* Если вы раньше управляли помпой вручную, то, вероятно, привыкли считать, что инсулин усваивается примерно за 3,5 часа. 
+* Тем не менее, когда вы используете замкнутый цикл длинные хвосты имеют важное значение при расчетах, т. к. все эти незначительные хвостики складываются и становятся значимыми в дальнейших расчетах AAPS.
 
 For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 

@@ -5,7 +5,7 @@
 - AndroidAPS te permite controlar el teléfono de un niño de forma remota mediante mensajes de texto. Si activas esta función "SMS Communicator", recuerda siempre que el teléfono configurado para dar comandos remotos podría ser robado. Por lo que protege siempre el móvil con código PIN. Se recomienda usar una contraseña compleja o usar datos biométricos.
 - Además, se recomienda permitir a un [segundo número de teléfono](SMS-Commands-authorized-phone-numbers) para comandos SMS. Por lo que puedes utilizar el segundo número para [desactivar temporalmente](SMS-Commands-other) los comandos SMS en caso de que que pierdas o te roben el teléfono principal.
 - AndroidAPS también te avisará por mensaje de texto si tus comandos remotos, tales como bolos o cambios de perfil, se han llevado a cabo. Es aconsejable, por seguridad, configurar esta función para que los textos de confirmación se envíen al menos a dos números de teléfono diferentes, así si falla (o ha sido robado) uno, quedará el otro.
-- **Si envías un bolo por mensaje de texto, debes introducir los carbohidratos a través de Nightscout (NSClient, Web,...)!** Si no lo haces, la insulina activa será correcta, pero los carbohidratos serán demasiado bajos, lo que podría provocar que no se realicen correcciones, ya que AAPS asume que tiene demasiada insulina activa.
+- **Si administras una dosis de insulina a través de comandos SMS, debes ingresar los carbohidratos a través de Nightscout (AAPSClient, sitio web...)** Si no lo haces, la cantidad de insulina activa en el organismo (IOB) podría ser incorrecta, lo que potencialmente llevaría a no realizar una corrección adecuada, ya que AAPS asumiría que tienes demasiada insulina activa.
 - Desde la versión 2.7 de AndroidAPS se debe utilizar una aplicación de autenticación por contraseña de un sólo uso, para mejorar la seguridad al usar la opción de comandos SMS.
 
 ## Configurar comandos SMS
@@ -14,9 +14,9 @@
 :alt: Configuración de comandos SMS
 ```
 
-- La mayoría de los ajustes de los objetivos temporales, seguidor de AAPS, etc. se pueden realizar en la [Aplicación NSClient](../Children/Children.md) en un teléfono Android con una conexión a Internet.
+- La mayoría de los ajustes de, objetivos temporales, seguidor de AAPS, etc., se pueden hacer a través de la aplicación [AAPSClient](../Children/Children.md) en un teléfono Android con conexión a internet.
 - Los bolos no pueden poner mediante Nightscout, pero se pueden usar los comandos SMS.
-- Si utilizas un iPhone como seguidor y, por tanto, no puedes utilizar la aplicación NSClient, tienes a tu disposición comandos SMS adicionales.
+- Si utilizas un iPhone como seguidor y, por lo tanto, no puedes usar la aplicación AAPSClient, hay comandos SMS adicionales disponibles.
 - En los ajustes de tu teléfono Android, ve a aplicaciones > AAPS > Permisos y activa el de SMS
 
 (SMS-Commands-authorized-phone-numbers)=
@@ -158,7 +158,7 @@ No se permite el bolo remoto en los próximos 15 minutos (este valor sólo es ed
 ### Otros
 
 - TREATMENTS REFRESH \* Respuesta: Actualizar tratamientos desde NS
-- NSCLIENT RESTART \* Respuesta: Reiniciar NSCLIENT con 1 receptor
+- AAPSClient RESTART \* Respuesta: AAPSClient RESTART 1 receptor
 - PUMP \* Respuesta: Última conexión: hace 1 minuto. Temp: 0,00U/h @11:38. 5/30 min. IOB: 0,5 U. Reservorio: 34 U. Batería: 100%
 - PUMP CONNECT \* Respuesta: Bomba reconectada
 - PUMP DISCONNECT *30* \* Respuesta: Para desconectar la bomba durante *30* minutos, responda con el código de la aplicación de autenticación del usuario seguido del PIN

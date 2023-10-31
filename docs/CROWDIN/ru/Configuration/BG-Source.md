@@ -1,8 +1,8 @@
-# CGMS/FGMS Configuration
+# Конфигурация постоянного/флеш-мониторинга CGMS/FGMS
 
 * [Общие настройки](../Hardware/GeneralCGMRecommendation.md)
-* [Data Smoothing](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)
-* [xDrip+Settings](./xdrip.md)
+* [Сглаживание данных](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)
+* [Настройки xDrip+](./xdrip.md)
 * [Dexcom G7](../Hardware/DexcomG7.md)
 * [Dexcom G6](../Hardware/DexcomG6.md)
 * [Dexcom G5](../Hardware/DexcomG5.md)
@@ -12,5 +12,5 @@
 * [Libre 1](../Hardware/Libre1.md)
 * [Eversense](../Hardware/Eversense.md)
 * [MM640g/MM630g](../Hardware/MM640g.md)
-* [PocTech](../Hardware/PocTech.md)
-* [Nightscout as BG Source](../Hardware/CgmNightscoutUpload.md)
+* [Poctech](../Hardware/PocTech.md)
+* [Nightscout как источник ГК](../Hardware/CgmNightscoutUpload.md)

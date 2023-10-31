@@ -1,6 +1,6 @@
 # Bienvenido/a a la documentación de AAPS
 
-![image](./images/basic-outline-of-AAPS.png)
+![imagen](./images/basic-outline-of-AAPS.png)
 
 AAPS es una aplicación de código abierto para personas que viven con diabetes, dependientes de insulina y que actúa como un sistema de páncreas artificial (APS) en teléfonos inteligentes Android de Google. Utiliza un algoritmo de software OpenAPS que tiene como objetivo hacer lo que hace un páncreas en funcionamiento: mantener los niveles de azúcar en sangre dentro de límites saludables mediante la administración automatizada de insulina (AID). Además, necesitas una bomba de insulina compatible y aprobada por la FDA/CE, así como un medidor continuo de glucosa.
 
@@ -150,35 +150,41 @@ Preferencias <./Configuration/Preferences.md>
 ```
 
 ```{toctree}
-:caption: Uso de AAPS
+:caption: AAPS Usage
 
-Pantallas de AAPS <./Getting-Started/Screenshots.md>
+AAPS screens <./Getting-Started/Screenshots.md>
 
-Objetivos <./Usage/Objectives.md>
+Objectives <./Usage/Objectives.md>
 
-Funciones de OpenAPS <./Usage/Open-APS-features.md>
+OpenAPS features <./Usage/Open-APS-features.md>
 
-Cálculos de COB <./Usage/COB-calculation.md>
+Dynamic ISF <./Usage/DynamicISF.md>
 
-Detección de sensibilidad <./Configuration/Sensitivity-detection-and-COB.md>
+COB calculation <./Usage/COB-calculation.md>
 
-Cambio de perfil <./Usage/Profiles.md>
+Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
 
-Objetivos temporales <./Usage/temptarget.md>
+Profile switch <./Usage/Profiles.md>
 
-Carbohidratos extendidos <./Usage/Extended-Carbs.md>
+Temp-targets <./Usage/temptarget.md>
 
-Automatización <./Usage/Automation.md>
+Extended carbs <./Usage/Extended-Carbs.md>
 
-Autotune (sólo en rama dev) <./Usage/autotune.md>
+Automation <./Usage/Automation.md>
 
-Careportal (descontinuado) <./Usage/CPbefore26.md>
+Autotune (dev only) <./Usage/autotune.md>
 
-Cargador de datos en Open Humans <./Configuration/OpenHumans.md>
+Careportal (discontinued) <./Usage/CPbefore26.md>
 
-Automatización con aplicaciones de terceros <./Usage/automationwithapp.md>
+Open Humans Uploader <./Configuration/OpenHumans.md>
 
-Android Auto <./Usage/Android-auto.md>
+Automation with 3rd party apps <./Usage/automationwithapp.md>
+
+Android auto <./Usage/Android-auto.md>
+
+Custom Watchface reference document <./Usage/Custom_Watchface_Reference.md>
+
+Exchange Site Custom Watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 

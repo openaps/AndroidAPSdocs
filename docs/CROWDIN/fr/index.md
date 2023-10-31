@@ -150,32 +150,41 @@ Préférences <./Configuration/Preferences.md>
 ```
 
 ```{toctree}
-:caption: Utilisation d'AAPS
+:caption: AAPS Usage
 
-Les écrans d'AAPS <./Getting-Started/Screenshots.md>
+AAPS screens <./Getting-Started/Screenshots.md>
 
-Objectifs <./Usage/Objectives.rst>
-Fonctionnalités d'OpenAPS <./Usage/Open-APS-features.md>
+Objectives <./Usage/Objectives.md>
 
-Calcul des GA <./Usage/COB-calculation.md>
+OpenAPS features <./Usage/Open-APS-features.md>
 
-Estimation de la Sensibilité <./Configuration/Sensitivity-detection-and-COB.md>
+Dynamic ISF <./Usage/DynamicISF.md>
 
-Changement de profil <./Usage/Profiles.md>
+COB calculation <./Usage/COB-calculation.md>
 
-Cibles Temporaires <./Usage/temptarget.md>
+Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
 
-Glucides étendus <./Usage/Extended-Carbs.md>
+Profile switch <./Usage/Profiles.md>
 
-Automatisation <./Usage/Automation.md>
+Temp-targets <./Usage/temptarget.md>
 
-Careportal (supprimé) <./Usage/CPbefore26.md>
+Extended carbs <./Usage/Extended-Carbs.md>
 
-Téléversement Open Humans <../Configuration/OpenHumans.md>
+Automation <./Usage/Automation.md>
 
-Automatisation avec des applications tierces <./Usage/automationwithapp.md>
+Autotune (dev only) <./Usage/autotune.md>
+
+Careportal (discontinued) <./Usage/CPbefore26.md>
+
+Open Humans Uploader <./Configuration/OpenHumans.md>
+
+Automation with 3rd party apps <./Usage/automationwithapp.md>
 
 Android auto <./Usage/Android-auto.md>
+
+Custom Watchface reference document <./Usage/Custom_Watchface_Reference.md>
+
+Exchange Site Custom Watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 

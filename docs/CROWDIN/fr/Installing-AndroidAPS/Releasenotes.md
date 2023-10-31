@@ -49,13 +49,13 @@ Afin de permettre aux utilisateurs ayant une ancienne version d'Android d'utilis
 
 - AAPS 3.2 requires at least WearOS API level 28 (Android 9)
 
-## Version 3.2.0
+## Version 3.2.0.0 dedicated to @Philoul
 
-Date de sortie : XX-XX-2023
+Release date: 23-10-2023
 
 ### Conseils importants
 
-- NS 15 est requis. Pour le moment la branche "dev" du dépôt principal NS
+- NS 15 is required
 - Lors de l'utilisation de websockets dans le plugin NS v3, les traitements entrés par l'interface utilisateur NS (bouton plus) et d'autres applications utilisant l'API v1 ne sont pas envoyées à AAPS. Cela sera corrigé dans la prochaine version de NS. Toujours utiliser le même client (v1 ou v3) dans AAPS et AAPSClient jusqu'à ce que NS passe entièrement à v3 en interne. Il en va de même pour AAPS et AAPSClient.
 - Les Websockets avec le plugin v3 fonctionnent de manière similiaire au plugin v1. Sans websockets activés,  AAPS télécharge régulièrement à partir de NS, ce qui devrait réduire la consommation d'énergie parce que NS n'est pas connecté de façon permanente. D'un autre côté, cela signifie des retards dans l'échange de données.
 - Si vous utilisez xdrip comme source MGC, vous devez le sélectionner à nouveau après la mise à jour en raison de changements internes
@@ -77,6 +77,7 @@ Date de sortie : XX-XX-2023
 - Support Tidepool @MilosKozak
 - Plugin Lissage @MilosKozak, @justmara, Lissage Exponentiel @nichi (Tsunami), Lissage moyen @jbr7rr
 - DynamicISF plugin @Chris Wilson, @tim2000s
+- Garmin watchface & HeartRate support @buessow
 - New logo @thiagomsoares
 - New watchface @Philoul
 - Correction de tonnes de problèmes de la version 3.1
@@ -90,7 +91,10 @@ Date de sortie : XX-XX-2023
 - more database maintenance options @MilosKozak
 - AAPSClient transmet les informations si le téléphone principal est branché @MilosKozak
 - Change in BolusWizard. Si la MGC n'est pas disponible, le pourcentage est ignoré (100% est utilisé)
-- new 150k+ lines of code, changed 156k lines
+- migration to kts build system @MilosKozak
+- improved CI integration @MilosKozak @buessow
+- tests cleaup @ryanhaining @MilosKozak
+- new 110k+ lines of code, changed 240k lines, 6884 changed files
 
 ## Version 3.1.0
 

@@ -6,14 +6,6 @@ This is list of some Pumps floating around there, and status of support for them
 
 * * *
 
-### EOPatch2 ([Homepage](http://www.eoflow.com/eng/main/main.html))
-
-**Loop status:** Is a hot Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea). Without commitment look out for AAPS 3.2.
-
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
-
-* * *
-
 ### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
 **Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)

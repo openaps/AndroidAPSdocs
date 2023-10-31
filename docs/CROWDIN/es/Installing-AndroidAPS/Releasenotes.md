@@ -45,22 +45,22 @@ Se han lanzado nuevas versiones de AAPS que sólo comprueban la versión de Andr
 
 ## Versión de WearOS
 
-- AAPS 3.2 requires at least WearOS API level 28 (Android 9)
+- AAPS 3.2 requiere al menos la API 28 de WearOS (Android 9)
 
-## Versión 3.2.0
+## Version 3.2.0.0 dedicada a @Philoul
 
-Fecha de lanzamiento: XX-XX-2023
+Fecha de lanzamiento: 23-10-2023
 
 ### Notas importantes
 
-- NS 15 es necesario. Por el momento, en la rama "dev" del repositorio principal de NS.
+- NS 15 es necesario
 - Al utilizar websockets en el plugin NS v3,  los tratamientos introducidos a través de NS UI (botón más) y otras aplicaciones que utilizan la API v1, no se envían a AAPS. Esto se solucionará en futuras versiones de NS. Utiliza siempre el mismo cliente (v1 o v3) en AAPS y AAPSClient hasta que NS cambie completamente a v3 internamente. Lo mismo es válido para AAPS y el propio AAPSClient.
 - Websockets en el plugin v3 funciona de forma similar al plugin v1. Sin websockets habilitados, AAPS programa regularmente descargas desde NS, lo que debería reducir el consumo de batería, porque NS no está permanentemente conectado. En el lado opuesto, supone retrasos en el intercambio de datos.
 - Si está utilizando xDrip+ como fuente de datos de glucosa, debes seleccionarlo de nuevo después de la actualización, debido a cambios internos.
 - Tidepool puede utilizarse como sustituto de NS para superar el primer objetivo.
 - Si envías datos a xDrip+, debes configurar el plugin de sincronización de xDrip+. Para recibir BGs de AAPS en xDrip, debe estar seleccionada la fuente de datos hardware "xDrip+ Sync Follower".
 - Si quieres cambiar al controlador ComboV2, Ruffy debe ser desinstalado y la bomba emparejado de nuevo a AAPS
-- In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
+- Para utilizar el complemento ISFDinámico, debes iniciar el Objetivo 11 (todos los anteriores deben estar en estado terminado para permitir el inicio del  objetivo 11)
 
 
 ### Cambios
@@ -74,21 +74,25 @@ Fecha de lanzamiento: XX-XX-2023
 - Plugin NSClient v3 @MilosKozak
 - Soporte para Tidepool @MilosKozak
 - Pulgin de suavizado @MilosKozak, @justmara, Suavizado Exponencial @nichi (Tsunami), Suavizado Promedio @jbr7rr
-- DynamicISF plugin @Chris Wilson, @tim2000s
-- New logo @thiagomsoares
-- New watchface @Philoul
+- Algoritmo ISF Dinámico @Chris Wilson, @tim2000s
+- Integración Relojes Garmin & Soporte de ritmo cardiaco @buessow
+- Nuevo logo @thiagomsoares
+- Nuevas esferas @Philoul
 - Corregidos muchos problemas de la versión 3.1
 - Permitir añadir notas desde más lugares @Sergey Zorchenko
-- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
+- Correcciones de la interfaz gráfica @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
 - Nuevos comandos SMS para Lazo LGS/Cerrado @pzadroga
 - Traducciones Wear @Andries-Smit
 - Traslado de comunicaciones con xDrip+ a un módulo independiente @MilosKozak
 - Cambios internos: actualización de versiones de librerías, migración a rx3, nueva estructura de módulos @MilosKozak
 - Correcciones en el controlador de Diaconn @miyeongkim
-- more database maintenance options @MilosKozak
+- Más opciones de mantenimiento de la base de datos @MilosKozak
 - AAPSClient proporciona información si el teléfono principal está conectado a la electricidad @MilosKozak
 - Cambio en asistente de bolo. Si el MCG no está disponible, se ignora el porcentaje (es decir, se utiliza el 100%)
-- new 150k+ lines of code, changed 156k lines
+- Migración al sistema de compilación KTS @MilosKozak
+- Mejora en la integración de CI @MilosKozak y @buessow
+- Limpieza de pruebas @ryanhaining @MilosKozak
+- 110k+ nuevas líneas de código, 240k líneas modificadas, 6884 archivos modificados
 
 ## Versión 3.1.0
 

@@ -210,9 +210,9 @@ Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal
 
 ## Nightscout ayarları
 
-### AAPS NSClient 'izin verilmiyor' diyor ve veri yüklemiyor. Bu durumda ne yapabilirim?
+### AAPSClient says 'not allowed' and does not upload data. Bu durumda ne yapabilirim?
 
-NSClient'te 'Bağlantı ayarları'nı kontrol edin. Belki de aslında izin verilen bir WLAN'da değilsiniz veya 'Yalnızca şarj oluyorsa' seçeneğini etkinleştirdiniz ve şarj kablonuz bağlı değil.
+In AAPSClient check 'Connection settings'. Belki de aslında izin verilen bir WLAN'da değilsiniz veya 'Yalnızca şarj oluyorsa' seçeneğini etkinleştirdiniz ve şarj kablonuz bağlı değil.
 
 ## CGM ayarları
 
@@ -425,16 +425,16 @@ Telefonunuz AAPS hizmetlerini veya bluetooth'u askıya alarak RL ile bağlantıs
 
 3 nokta menüsü, tedavileri seçin, ardından silmek istediğiniz tedavinin ana başlığını seçin.
 
-## NSClient Remote app Yapılandırma ve Kullanma
+## Configuring and Using the AAPSClient remote app
 
-AAPS, NSClient uygulaması ve isteğe bağlı olarak Android Wear saatlerinde çalışan ilgili Wear uygulaması aracılığıyla uzaktan izlenebilir ve kontrol edilebilir. NSClient (remote) uygulamasının AAPS'deki NSClient yapılandırmasından farklı olduğunu ve NSClient (remote) Wear uygulamasının AAPS Wear uygulamasından farklı olduğunu unutmayın; açıklığa kavuşturmak için uzak uygulamalar 'NSClient remote' ve ' NSClient remote Wear' uygulamalarına bakabilirsiniz.
+AAPS can be monitored and controlled remotely via the AAPSClient app and optionally via the associated Wear app running on Android Wear watches. Note that the AAPSClient (remote) app is distinct from the NSClient configuration in AAPS, and the AAPSClient (remote) Wear app is distinct from the AAPS Wear app--for clarity the remote apps will be referred to as 'AAPSClient remote' and 'AAPS remote Wear' apps.
 
-NSClient remote işlevselliğini etkinleştirmek için şunları yapmanız gerekir: 1) NSClient remote uygulamasını yükleyin (sürüm, kullanılan AAPS sürümüyle eşleşmelidir) 2) NSClient remote uygulamasını çalıştırın, gerekli izinleri vermek ve Nightscout sitenize erişimi yapılandırmak için yapılandırma sihirbazında ilerleyin. 3) Bu noktada, NSClient remote uygulamasının başlangıcını Nightscout sitenize kaydeden bazı Alarm seçeneklerini ve/veya gelişmiş ayarları devre dışı bırakmak isteyebilirsiniz. Bu yapıldıktan sonra, NSClient remote Nightscout sitenizden Profil verilerini indirecek, 'Genel Bakış' sekmesi CGM verilerini ve bazı AAPS verilerini gösterecek (ancak grafik verilerini göstermeyebilir) ve bir profilin henüz ayarlanmadığını gösterecektir. 4) Profili etkinleştirmek için:
+To enable AAPSClient remote functionality you must: 1) Install the AAPSClient remote app (the version should match the version of AAPS being used) 2) Run the AAPSClient remote app and proceed through the configuration wizard to grant required permissions and configure access to your Nightscout site. 3) At this point you may want to disable some of the Alarm options, and/or advanced settings which log the start of the AAPSClient remote app to your Nightscout site. Once this is done, AAPSClient remote will download Profile data from your Nightscout site, the 'Overview' tab will display CGM data and some AAPS data, but but may not display graph data, and will indicate that a profile isn't yet set. 4) Profili etkinleştirmek için:
 
 - AAPS > NSClient > Seçenekler'de uzaktan profil senkronizasyonunu etkinleştirin
-- Profili NSClient remote > Profil'de etkinleştirin Bu yapıldıktan sonra profil ayarlanarak NSClient remote AAPS'den gelen tüm verileri göstermelidir. İpucu: Grafik hala eksikse, bir güncellemeyi tetiklemek için grafik ayarlarını değiştirmeyi deneyin. 5) AAPS NSClient tarafından uzaktan kontrolü etkinleştirmek için, AAPS > NSClient > Seçenekler aracılığıyla uzaktan kontrol edebilmek istediğiniz AAPS özelliklerini (Profil değişiklikleri, Geçici Hedefler, Karbonhidratlar, vb.) seçerek etkinleştirin. Bu değişiklikler yapıldıktan sonra, AAPS'i Nightscout veya NSClient remote aracılığıyla uzaktan kontrol edebileceksiniz.
+- Activate the profile in NSClient remote > Profile After doing so, the profile will be set, and AAPSClient remote should display all data from AAPS. İpucu: Grafik hala eksikse, bir güncellemeyi tetiklemek için grafik ayarlarını değiştirmeyi deneyin. 5) To enable remote control by the AAPSClient, selectively enable the aspects of AAPS (Profile changes, Temp Targets, Carbs, etc.) that you would like to be able to control remotely via AAPS > NSClient > Options . Once these changes are made, you'll be able to remotely control AAPS via either Nightscout or AAPSClient remote.
 
-AAPS'yi NSClient Remote Wear Uygulaması aracılığıyla izlemek/kontrol etmek istiyorsanız, hem NSClient Remote hem de ilgili Wear uygulamasının yüklenmesine ihtiyacınız olacaktır. NSClient remote Wear uygulamasını derlemek için, AAPS wear uygulamasını kurmak/yapılandırmak için standart talimatları izleyin, ancak derlerken NSClient varyantını seçin.
+If you'd like to monitor/control AAPS via the AAPSClient remote Wear App, you'll need both AAPSClient remote and the associated Wear app to be installed. To compile the AAPSClient remote Wear app, follow the standard instructions for installing/configuring the AAPS wear app, except when compiling it, choose the AAPSClient variant.
 
 ## Kırmızı üçgen uyarısı alıyorum / AAPS kapalı döngüyü etkinleştirmiyor / Döngü LGS'de kalıyor / Sarı üçgen uyarısı alıyorum
 

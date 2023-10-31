@@ -210,9 +210,9 @@
 
 ## הגדרות Nightscout
 
-### בלשונית NSClient רשום 'not allowed' ונתונים לא נשלחים ל-Nightscout. מה אפשר לעשות?
+### AAPSClient says 'not allowed' and does not upload data. מה אפשר לעשות?
 
-בלשונית NSClient בדקו את 'הגדרות חיבור'. יכול להיות שאתם כרגע משתמשים ברשת אלחוטית שלא מאפשרת פעילות או שהפעלתם 'במצב טעינה בלבד' וכבל הטעינה לא מחובר.
+In AAPSClient check 'Connection settings'. יכול להיות שאתם כרגע משתמשים ברשת אלחוטית שלא מאפשרת פעילות או שהפעלתם 'במצב טעינה בלבד' וכבל הטעינה לא מחובר.
 
 ## הגדרות חיישנים
 
@@ -425,16 +425,16 @@ AndroidAPS אינו פועל ב"מצב מפתחים". AAPS מציג את ההו�
 
 תפריט 3 נקודות, בחרו טיפולים ואז שוב תפריט 3 נקודות שם יש אפשרויות זמינות שונות.
 
-## הגדרה ושימוש באפליקציית NSClient מרחוק
+## Configuring and Using the AAPSClient remote app
 
-ניתן לנטר ולשלוט ב-AAPS מרחוק באמצעות אפליקציית NSClient ובאופן אופציונלי באמצעות אפליקציית AAPS ל-WearOS הפועלת בשעוני Android Wear. שימו לב שהאפליקציה NSClient (העוקבת) נבדלת מ-NSClient שב-AAPS בטלפון הראשי, ואפליקציית Wear NSClient (העוקבת) נבדלת מאפליקציית AAPS Wear--למען הבהירות, האפליקציות המרוחקות יכונו 'NSClient מרוחק' ו-Wear NSClient מרוחק'.
+AAPS can be monitored and controlled remotely via the AAPSClient app and optionally via the associated Wear app running on Android Wear watches. Note that the AAPSClient (remote) app is distinct from the NSClient configuration in AAPS, and the AAPSClient (remote) Wear app is distinct from the AAPS Wear app--for clarity the remote apps will be referred to as 'AAPSClient remote' and 'AAPS remote Wear' apps.
 
-כדי להפעיל פונקציונליות מרחוק של NSClient, עליכם: (1) להתקין את האפליקציה העוקבת NSClient (הגרסה צריכה להתאים לגרסה של AAPS שבה נעשה שימוש) (2) הפעלה של אפליקציית NSClient עוקבת והמשך דרך אשף התצורה כדי להעניק הרשאות נדרשות ולהגדיר גישה לאתר Nightscout האישי. (3) בשלב זה ייתכן שתרצו להשבית חלק מאפשרויות האזעקה ו\או הגדרות מתקדמות אשר רושמות את ההתחלה של אפליקציית NSClient מרחוק באתר ה-Nightscout. ברגע שזה נעשה, NSClient העוקב יוריד נתוני פרופיל מאתר ה-Nightscout, הכרטיסייה 'סקירה כללית' תציג נתוני חיישן סוכר ונתוני AAPS, אך ייתכן שלא יציג נתוני גרפים, ותציין שפרופיל עדיין לא הוגדר. (4) כדי להפעיל את הפרופיל:
+To enable AAPSClient remote functionality you must: 1) Install the AAPSClient remote app (the version should match the version of AAPS being used) 2) Run the AAPSClient remote app and proceed through the configuration wizard to grant required permissions and configure access to your Nightscout site. 3) At this point you may want to disable some of the Alarm options, and/or advanced settings which log the start of the AAPSClient remote app to your Nightscout site. Once this is done, AAPSClient remote will download Profile data from your Nightscout site, the 'Overview' tab will display CGM data and some AAPS data, but but may not display graph data, and will indicate that a profile isn't yet set. (4) כדי להפעיל את הפרופיל:
 
 - אפשרו סנכרון פרופיל מרחוק ב-AAPS > מסך NSClient > תפריט 3 נקודות או גלגל שיניים > העדפות NSClient > סינכרון 
-- הפעילו את הפרופיל בעוקב NSClient > פרופיל לאחר שתעשו כך, הפרופיל יוגדר, ועוקב NSClient אמור להציג את כל הנתונים מ-AAPS. רמז: אם הגרף עדיין חסר, נסו לשנות את הגדרות הגרף כדי לאלץ עדכון. (5) כדי לאפשר שליטה מרחוק על ידי NSClient, הפעילו באופן סלקטיבי את האפשרויות של AAPS (שינויי פרופיל, ערכי מטרה זמניים, פחמימות וכו') שבהם תרצו להיות מסוגלים לשלוט מרחוק דרך AAPS > מסך NSClient > תפריט 3 נקודות או גלגל שיניים > העדפות NSClient > סינכרון. לאחר ביצוע שינויים אלה, תוכלו לשלוט מרחוק ב-AAPS באמצעות אתר Nightscout או אפליקציית NSClient.
+- Activate the profile in NSClient remote > Profile After doing so, the profile will be set, and AAPSClient remote should display all data from AAPS. רמז: אם הגרף עדיין חסר, נסו לשנות את הגדרות הגרף כדי לאלץ עדכון. 5) To enable remote control by the AAPSClient, selectively enable the aspects of AAPS (Profile changes, Temp Targets, Carbs, etc.) that you would like to be able to control remotely via AAPS > NSClient > Options . Once these changes are made, you'll be able to remotely control AAPS via either Nightscout or AAPSClient remote.
 
-אם תרצו לנטר\לשלוט ב-AAPS באמצעות אפליקציית Wear של NSClient מרחוק, תצטרכו להתקין גם את האפליקציית המעקב NSClient וגם את אפליקציית Wear המשויכת לה. כדי לבנות את אפליקציית Wear של NSClient, עקבו אחר ההוראות הסטנדרטיות להתקנה\הגדרה של אפליקציית AAPS wear ושימו לב לבחור בגרסת NSClient במקום Full release.
+If you'd like to monitor/control AAPS via the AAPSClient remote Wear App, you'll need both AAPSClient remote and the associated Wear app to be installed. To compile the AAPSClient remote Wear app, follow the standard instructions for installing/configuring the AAPS wear app, except when compiling it, choose the AAPSClient variant.
 
 ## יש לי משולש אדום \ AAPS לא מאפשר לולאה סגורה \ לולאות נשארות בהשהייה עקב סוכר נמוך \ יש לי משולש צהוב
 

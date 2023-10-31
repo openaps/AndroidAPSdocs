@@ -303,9 +303,9 @@
 (Preferences-minimal-request-change)=
 ### Minimal request change \[%\]
 
-- When using open loop you will receive notifications every time AAPS recommends to adjust basal rate.
+- При открытогм цикле вы будете получать уведомления каждый раз, когда AAPS рекомендует скорректировать базальную скорость.
 - To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
-- This defines the relative change required to trigger a notification.
+- Он определяет относительное изменение, необходимое для активации уведомления.
 
 (Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)=
 ## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
@@ -416,7 +416,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 - The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB.
 
-- At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+- At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Этот параметр не приводит к отказам.
 
 - To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc.
 

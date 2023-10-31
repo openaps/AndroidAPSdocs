@@ -4,11 +4,11 @@
 
 ![Ανοίξτε το αρχείο Διαμόρφωσης (config builder)](../images/ConfBuild_Open_AAPS30.png)
 
-Η Διαμόρφωση (Conf) είναι η καρτέλα όπου μπορείτε να ενεργοποιήσετε και να απενεργοποιήσετε τις λειτουργικές δυνατότητες. The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AAPS. Σε περίπτωση που το δεξιό κουτάκια δεν είναι ενεργοποιημένα, μπορείτε να φτάσετε στη λειτουργία χρησιμοποιώντας το μενού hamburger (D) στην πάνω αριστερή γωνία της οθόνης.
+Η Διαμόρφωση (Conf) είναι η καρτέλα όπου μπορείτε να ενεργοποιήσετε και να απενεργοποιήσετε τις λειτουργικές δυνατότητες. Τα κουτάκια στην αριστερή πλευρά (A) σας επιτρέπουν να επιλέξετε ποιο θα χρησιμοποιηθεί, τα κουτάκια στη δεξιά πλευρά (C) σας επιτρέπουν να τα δείτε ως καρτέλα (E) στο AndroidAPS. Σε περίπτωση που το δεξιό κουτάκια δεν είναι ενεργοποιημένα, μπορείτε να φτάσετε στη λειτουργία χρησιμοποιώντας το μενού hamburger (D) στην πάνω αριστερή γωνία της οθόνης.
 
 Όπου υπάρχουν διαθέσιμες πρόσθετες ρυθμίσεις στο μενού, μπορείτε να κάνετε κλικ στο γρανάζι (B), ο οποίος θα σας μεταφέρει στις συγκεκριμένες ρυθμίσεις εντός των προτιμήσεων.
 
-**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AAPS. Πιέστε το μενού 3 κουκκίδων στην πάνω δεξιά πλευρά της οθόνης (F) και επιλέξτε 'Οδηγός εγκατάστασης' για να το χρησιμοποιήσετε.
+**Πρώτη ρύθμιση:** Καθώς ο Οδηγός ρυθμίσεων AAPS 2.0 σας καθοδηγεί στη διαδικασία της ρύθμισης του AndroidAPS. Πιέστε το μενού 3 κουκκίδων στην πάνω δεξιά πλευρά της οθόνης (F) και επιλέξτε 'Οδηγός εγκατάστασης' για να το χρησιμοποιήσετε.
 
 ![Κουτάκια Διαμόρφωση και γρανάζι](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
@@ -16,7 +16,7 @@
 
 ## Καρτέλα ή μενού Χάμπουργκερ
 
-With the checkbox under the eye symbol you can decide how to open the corresponding program section.
+Με το πλαίσιο ελέγχου κάτω από το σύμβολο του ματιού μπορείτε να αποφασίσετε πώς να ανοίξετε την αντίστοιχη ενότητα του προγράμματος.
 
 ![Καρτέλα ή μενού Χάμπουργκερ](../images/ConfBuild_TabOrHH_AAPS30.png)
 
@@ -24,10 +24,10 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 ## Προφίλ
 
-* Επιλέξτε το βασικό προφίλ που θέλετε να χρησιμοποιήσετε. See [Profiles](../Usage/Profiles.md) page for more setup information.
-* As of AAPS 3.0, only the local profile is available.
+* Επιλέξτε το βασικό προφίλ που θέλετε να χρησιμοποιήσετε. Ανατρέξτε στη σελίδα [Προφίλ](../Usage/Profiles.md) για περισσότερες πληροφορίες εγκατάστασης.
+* Από το AAPS 3.0, μόνο το τοπικό προφίλ είναι διαθέσιμο.
 
-Ωστόσο, είναι εφικτό να συγχρονιστεί ένα προφίλ Nightscout σε ένα τοπικό προφίλ. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Παρακαλούμε δείτε τις παρακάτω οδηγίες. Αυτό μπορεί να είναι χρήσιμο αν σημαντικές αλλαγές σε ένα πιο εκτεταμένο προφίλ μπορούν να εισαχθούν πιο εύκολα μέσω της διεπαφής web, e.. για να αντιγράψετε χειροκίνητα δεδομένα από ένα υπολογιστικό φύλλο.
+Ωστόσο, είναι εφικτό να συγχρονιστεί ένα προφίλ Nightscout σε ένα τοπικό προφίλ. Για να γίνει αυτό, ωστόσο, είναι σημαντικό να κλωνοποιηθεί ολόκληρη η εγγραφή βάσης δεδομένων που αποτελείται από πολλά προφίλ στον επεξεργαστή Nightscout. Παρακαλούμε δείτε τις παρακάτω οδηγίες. Αυτό μπορεί να είναι χρήσιμο αν σημαντικές αλλαγές σε ένα πιο εκτεταμένο προφίλ μπορούν να εισαχθούν πιο εύκολα μέσω της διεπαφής web, e.. για να αντιγράψετε χειροκίνητα δεδομένα από ένα υπολογιστικό φύλλο.
 
 (Config-Builder-local-profile)=
 
@@ -47,29 +47,29 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 Αν κάνετε οποιεσδήποτε αλλαγές στο προφίλ σας, βεβαιωθείτε ότι επεξεργάζεστε το σωστό προφίλ. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
 
-#### Clone profile switch
+#### Κλωνοποιήστε την αλλαγή του προφίλ
 
 Μπορείτε να δημιουργήσετε εύκολα ένα νέο τοπικό προφίλ από μια αλλαγή προφίλ. Σε αυτή την περίπτωση η χρονική μετατόπιση και το ποσοστό θα εφαρμοστούν στο νέο τοπικό προφίλ.
 
 1. Κάντε κλικ στις τρεις τελείες στην επάνω δεξιά γωνία.
 2. Επιλέξτε 'Θεραπείες'.
 3. Πατήστε το σύμβολο αστέρι για να αποκτήσετε πρόσβαση μ στη σελίδα αλλαγής προφίλ.
-4. Select the desired profile switch and press "Clone".
-5. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
+4. Επιλέξτε την επιθυμητή αλλαγή προφίλ και πατήστε "clone ".
+5. Μπορείτε να επεξεργαστείτε το νέο τοπικό προφίλ (LP) στην καρτέλα (tab) ή στο hamburger μενού.
 
-![Clone profile switch](../images/LocalProfile_ClonePS_AAPS30.png)
+![Κλωνοποιήστε την αλλαγή του προφίλ](../images/LocalProfile_ClonePS_AAPS30.png)
 
 (Config-Builder-upload-local-profiles-to-nightscout)=
 
 #### Ανεβάστε τα τοπικά προφίλ στο nightscout
 
-Τα τοπικά προφίλ μπορούν επίσης να ανέβουν στο nightscout. The settings can be found in [NSClient preferences](Preferences-nsclient).
+Τα τοπικά προφίλ μπορούν επίσης να ανέβουν στο nightscout. Μπορείτε να βρείτε τις ρυθμίσεις στις [προτιμήσεις NSClient](Preferences-nsclient).
 
 ![Ανεβάστε το τοπικό προφίλ στο nightscout](../images/LocalProfile_UploadNS_AASP30.png)
 
 #### Αλλάξτε το προφίλ στο πρόγραμμα επεξεργασίας προφίλ Nightscout
 
-You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](Preferences-nsclient).
+You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. Μπορείτε να βρείτε τις ρυθμίσεις στις [προτιμήσεις NSClient](Preferences-nsclient).
 
 It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
 
@@ -91,7 +91,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 ![Τύπος Ινσουλίνης](../images/ConfBuild_Insulin_AAPS30.png)
 
 * Επιλέξτε τον τύπο ινσουλίνης που χρησιμοποιείτε.
-* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
+* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. Περισσότερες πληροφορίες παρατίθενται στα έγγραφα [OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
 * Οι καμπύλες θα ποικίλλουν βασιζόμενες στην DIA και στην ώρα κορύφωσης.
     
     * Η ΜΩΒ γραμμή δείχνει πόση **ινσουλίνη παραμένει** μετά την ένεση καθώς εξασθενεί με το χρόνο.
@@ -250,7 +250,7 @@ You can view your sensitivity on the homescreen by selecting SEN and watching th
 
 Το AAPS έχει ένα πρόγραμμα εκμάθησης (στόχοι) που πρέπει να εκπληρώσετε βήμα προς βήμα. Αυτό θα σας καθοδηγήσει με ασφάλεια με στη δημιουργία ενός συστήματος κλειστού κυκλώματος. Εξασφαλίζει ότι έχετε ρυθμίσει τα πάντα σωστά και καταλαβαίνετε τι ακριβώς κάνει το σύστημα. Αυτός είναι ο μόνος τρόπος για να εμπιστευτείτε το σύστημα.
 
-Θα πρέπει [να εξάγετε τις ρυθμίσεις σας](../Usage/ExportImportSettings.md) (συμπεριλαμβανομένης της προόδου των στόχων) σε τακτική βάση. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
+Θα πρέπει [να εξάγετε τις ρυθμίσεις σας](../Usage/ExportImportSettings.md) (συμπεριλαμβανομένης της προόδου των στόχων) σε τακτική βάση. Σε περίπτωση που πρέπει να αντικαταστήσετε το smartphone σας αργότερα (νέα αγορά, ζημιά οθόνης κ. λπ.), μπορείτε απλώς να εισαγάγετε αυτές τις ρυθμίσεις.
 
 Δες τη σελίδα [Στόχοι](../Usage/Objectives.md) για περισσότερες πληροφορίες.
 

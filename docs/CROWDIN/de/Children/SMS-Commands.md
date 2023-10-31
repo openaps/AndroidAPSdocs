@@ -5,7 +5,7 @@
 - AAPS allows you to control a child's phone remotely via text message. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Befehle eingerichtet ist, gestohlen werden kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code. Es wird ein starkes Passwort oder biometrischer Schutz empfohlen.
 - Außerdem ist es empfehlenswert, eine [zweite Telefonnummer](SMS-Commands-authorized-phone-numbers) für SMS Kommandos einzurichten. Dann kannst Du die zweite Nummer nutzen, um den SMS-Kommunikator [vorübergehend zu deaktivieren](SMS-Commands-other), falls Dein Smartphone verloren geht oder gestohlen wird.
 - AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
-- **Wenn Du einen Bolus über SMS-Kommandos abgibst, musst Du die Kohlenhydrate über Nightscout (NSClient, Webseite...) eingeben!** Wenn Du das unterlässt, ist zwar das IOB korrekt, aber die COB sind zu gering. Dies kann dazu führen, dass notwendige Korrekturboli nicht abgegeben werden, da AAPS davon ausgeht, dass Du zu viel aktives Insulin hast.
+- **If you bolus through SMS Commands you must enter carbs through Nightscout (AAPSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
 - As of AAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
 
 ## SMS-Kommandos einrichten
@@ -14,9 +14,9 @@
 :alt: SMS-Kommandos einrichten
 ```
 
-- Die meisten Anpassungen der temporären Ziele, AAPS folgen etc. können über die [NSClient-App](../Children/Children.md) auf einem Android-Smartphone durchgeführt werden.
+- Most of the adjustments of temp targets, following AAPS etc. can be done on [AAPSClient app](../Children/Children.md) on an Android phone with an internet connection.
 - Boli können nicht über Nightscout abgegeben werden, aber Du kannst dafür SMS-Kommandos verwenden.
-- Falls Du als Follower ein iPhone verwendest und daher die NSClient-App nicht nutzen kannst, gibt es weitere SMS-Kommandos.
+- If you use an iPhone as a follower and therefore cannot use AAPSClient app, there are additional SMS commands available.
 - Gehe dazu in den Systemeinstellungen deines Android-Telefons zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
 
 (SMS-Commands-authorized-phone-numbers)=
@@ -158,7 +158,7 @@ Ein Bolus via SMS ist innerhalb von 15 Minuten nach der letzten Bolusgabe in AAP
 ### Andere
 
 - TREATMENTS REFRESH \* Antwort: Behandlungen von NS aktualisieren
-- NSCLIENT RESTART \* Antwort: NSCLIENT RESTART 1 receivers
+- AAPSClient RESTART \* Response: AAPSClient RESTART 1 receivers
 - PUMP \* Antwort: Letzte Verbindung: vor 1 Min. Temp: 0.00E/h @11:38 5/30min IOB: 0.5E Reserv: 34E Batt: 100
 - PUMP CONNECT \* Antwort: Pumpe erneut verbunden
 - PUMP DISCONNECT *30* \* Um die Pumpe für *30* Minuten zu trennen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
