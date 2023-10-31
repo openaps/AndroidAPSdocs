@@ -1,5 +1,7 @@
 # Exchange site for custom watchfaces
 
+![limiting-work-in-progress.jpg](../images/limiting-work-in-progress.jpg)
+
 Here you can download Zip-Files with custom watchfaces user have prepared and want to share with you.
 
 The Zip-Files are uploaded via a Pull Request into Github as usual.
