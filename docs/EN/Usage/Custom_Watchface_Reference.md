@@ -4,15 +4,15 @@ This page is for Designer of new Watchfaces, it will list all the key words and 
 
 ## Custom Watchface format
 
-Custom Watchface is an open format designed for AAPS and associated to the new "Custom Watchface" available on Watch
+Custom Watchface is an open format designed for AAPS and associated to the new "AAPS (Custom)" watchface available on Watch
 
-Watchface file is a simple zip file, but to be recognize as a Watchface file, it must containts:
+Watchface file is a simple zip file, but to be recognize as a Watchface file, it must contains:
 
 - One image file named CustomWatchface (can be bitmap files `CustomWatchface.jpg`, `CustomWatchface.png` or a vector `CustomWatchface.svg`). This file is the little icon used to select the watchface when you click on "Load Watchface" button, and also the image visible within AAPS Wear plugin
-- One file named `CustomWatchface.json` (see [Json structure](cwf-reference-json-structure) below). This second file is the core file that will include all information required to design the watchface. This json file must be valid (it's probably the most tricky point when you edit manually this file within a text editor, because an missing or additional comma is enough to brake the json format). This json file must also include a `"metadata"` bloc with a `"name"` key with not empty value. This will be the name of your custom watchface (see [Metada settings](cwf-reference-metadata-settings) below)
-- the size of this zip should be as small as possible (less than about 350kb). If this file is too big, it will just be blocked and not transmitted to the watch.
+- One file named `CustomWatchface.json` (see [Json structure](cwf-reference-json-structure) below). This second file is the core file that will include all information required to design the watchface. This json file must be valid (it's probably the most tricky point when you edit manually this file within a text editor, because an missing or additional comma is enough to break the json format). This json file must also include a `"metadata"` bloc with a `"name"` key with not empty value. This will be the name of your custom watchface (see [Metadata settings](cwf-reference-metadata-settings) below)
+- the size of this zip should be as small as possible (less than about 500kb). If this file is too big, it will just be blocked and not transmitted to the watch.
 
-The zip file can also containts some additional resource files:
+The zip file can also contains some additional resource files:
 
 - HardCoded file names for images that will be used used into standard views included into watchface (like `Background`, `CoverChart`... see [List of hardcoded resource files](cwf-reference-list-of-hardcoded-resource-files) below). All these files can be either `jpg`, `png` or `svg` format. but for most of them, you will have to use `png` or `svg` that manage transparency (jpg are smaller in size compared to png, but with no transparency). Note that the best quality associated to the smallest size will generally be with svg files (vector format).
 - addtional resource files with free names. These additional files can be either image files, or font files (`ttf` and `otf` format are accepted for fonts). Note that for these additional files, the `filename` (without extension) will be used as the keyValue, within json file, to specify where or when these files should be used
@@ -40,14 +40,14 @@ This block is the first block included into the json file and is mandatory. It c
 See below an example of metadata block:
 
 ```json
-    "metadata": {
-        "name": "Default Watchface",
-        "author": "myName",
-        "created_at": "07\/10\/2023",
-        "author_version": "1.0",
-        "cwf_version": "1.0",
-        "comment": "Default watchface, you can click on EXPORT WATCHFACE button to generate a template"
-    },
+"metadata": {
+    "name": "Default Watchface",
+    "author": "myName",
+    "created_at": "07\/10\/2023",
+    "author_version": "1.0",
+    "cwf_version": "1.0",
+    "comment": "Default watchface, you can click on EXPORT WATCHFACE button to generate a template"
+},
 ```
 
 Note that `/` used for the date is a special character, so to be recognize correctly within json file, you have to put before an "escape" character `\`
@@ -95,14 +95,14 @@ See below an example of an Image block for second_hand, (in this case there are 
 To have second_hand colored with default BG color (lowRange, midRange or highRange), you just have to modify the latest ligne with the keyValue `bgColor`
 
 ```json
-	"color": "bgColor"
+    "color": "bgColor"
 ```
 
 (cwf-reference-textview-settings)=
 
 ### TextView settings
 
-TexView have more available parameters compare to ImageView: you can tune rotation (integer value in degrees), textsize (integer value in pixel), gravity (to define if text value will be centered (default value), or aligned left or right), and set the font, fontStyle and fontColor
+TexView have more available parameters compare to ImageView: you can tune rotation (integer value in degrees), textsize (integer value in pixel), gravity (to define if text value will be centered (default value), or aligned left or right), set the font, fontStyle and fontColor, and also background color of the TextView
 
 ```json
 "basalRate": {
@@ -119,7 +119,7 @@ TexView have more available parameters compare to ImageView: you can tune rotati
     "fontColor": "#BDBDBD"
 },
 ```
-Note that if you don't want to manage one view within your watchface, then put the `"visibility"`key to `"gone"`but also set size and position outside visible area like that:
+Note that if you don't want to manage one view within your watchface, then put the `"visibility"` key to `"gone"` but also set size and position outside visible area like that:
 
 ```json
 "second": {
@@ -138,10 +138,10 @@ Note that if you don't want to manage one view within your watchface, then put t
 ```
 If size and position are within visible area, you can get some "flash" of the hidden value during the refresh of the watchface.
 
-If you want to customize background image of a text view, then you can use the key `"background":` and put the filename of image included into zip file as keyValue.
+If you want to customize background image of a text view, then you can use the key `"background":` and put the filename of image included into zip file as keyValue, you can also just change the background color using `"color:"` key.
 
 ```json
-	"background": "fileName"
+"background": "fileName"
 ```
 
 You also have 4 specific textViews (named freetext1 to freetext4) that have a specific parameter `"textvalue":` that can be used to set for example a label
@@ -189,7 +189,7 @@ When you want to design your first watchface, the best is to start by the defaul
 - You can get zip file by clicking on "Export Template" button within Wear plugin and get zip file within AAPS/exports folder
 - Note that you will need to have a watch connected to AAPS to see Custom Watchface buttons (but watch is also required to check, test and tune your custom watchface)
 
-Default watchface is very simple and zip file will containts only the 2 files: 
+Default watchface is very simple and zip file will contains only the 2 files: 
 
 - CustomWatchface.png (image of default watchface for WF selection)
 - CustomWatchface.json
@@ -233,7 +233,69 @@ When you design your first watchface, you have to know that everything is organi
 
 Then within json file all views are sorted from the Back to the Top (this will help you to remember what is behind what...)
 
+If you design or tune your first custom watchface, start by simple things: change visibility of some views, include a dedicated background image without changing json file...
 
+### Manage colors
+
+Within json file, you will have several keys to specify colors: `"color"`, `"fontColor"`for views, but also `"highColor"`, `"midColor"`, `"lowColor"`, ... (see [List of General Parameters](cwf-reference-list-of-general-parameters))
+
+Colors are specified with a text field that starts by `#` followed by RRGGBB (Red, Green, Blue) values in hexadecimal format:
+
+- `"#FFFFFF"` is white, and `"#000000"` is black, `"#FF0000"` is red...
+
+You can also include 2 additional values for alpha layer and specify a transparency level (AARRGGBB):
+
+- `"#00000000"`is completly transparent, and `"#FF000000"` is completly opaque ( so  `"#FF000000"` is equivalent to  `"#000000"`)
+
+You can also use the specific keyvalue `"bgColor"` to automatically use `"highColor"`, `"midColor"`, `"lowColor"` specified in general parameters according to BG Value:
+
+- `"fontColor": "bgColor",` will automatically set the font color of the view according to BG Value
+- Note that `sgv` (for BG Value) and `direction` (for trend arrow) views automatically apply BG colors set into general parameters (for these 2 views, if you want to have different colors, you will have to use advanced [dynData](cwf-reference-dyndata-feature) feature with one step color...)
+
+For more information concerning ImageViews and `"color":` key, see dedicated chapter [Tune image color](cwf-reference-tune-image-color) below.
+
+### Include Hardcoded images
+
+the easiest way to start tuning your watchface is to include within zip file some images with a specific names (see [List of Hardcoded resource files](cwf-reference-list-of-hardcoded-resource-files))
+
+- Image should be in `.jpg`, `.png` or `.svg` format. but be carefull, jpg doesn't manage transparency, so should be only used for background layer. For all intermediate layers (cover_chart, cover_plate, hands) use eather `.png`or `.svg` image
+
+- If you have a vector image editor (like for example Illustrator), prefer this format that will produce small text files with `.svg` extension the best quality.
+- You should take care to use exact filename (including High/lower case)
+
+Now if you want a dedicated backgoung image, you only have to include within the zip file a file named `Background.jpg` (without changing anything else. send zip file into the watch and check result!.
+
+If you want to customize hour_hand, minute_hand or second_hand for an analog watch, simply include `HourHand.png` (or `HourHand.svg`), `MinuteHand.png` and `SecondHand.png`.
+
+- these images will automatically rotate around the center of the image, so the images should be set to 00:00:00 (and for a "full frame" analog watch, use a size of 400 x 400 px positioned at top 0 left 0)
+
+You can also noticed within [List of Hardcoded resource files](cwf-reference-list-of-hardcoded-resource-files) that for each image view, you have two additional hardcoded filenames `High` and `Low` (for example you can include other images named `BackgroundHigh.jpg` and `BackgroundLow.jpg` within zip file). then image will automatically change according to you BG level (within Range, Hyper or Hypo). See AIMICO watchface as example.
+
+(cwf-reference-tune-image-color)=
+
+### Tune image color
+
+`"color"` key can  be used to tune default image color: 
+
+- applied on background view, it will set the background color (default black)
+- applied on cover_plate (simple dial) or hands, it will change the default image (white) by the color specified (including `"bgColor"`)
+
+When you apply `"color"` key on a bitmap image (`.jpg` or `.png`), color will apply an interresting effect on color saturation. So you will still recognize your bitmap.
+
+Finally on `.svg` image file, `"color"`key will have no effect, consider color of vector files as hardcoded within the image. If you want to change colors, you will have to include several `svg` files, and use advanced [dynData](cwf-reference-dyndata-feature) feature to change it
+
+### Use additional fonts for TextViews
+
+Several defaults font are already available within wear apk (see font keys included into [key values](cwf-reference-key-values) chapter). But if you want to use additional fonts not available as default, you can include addtional fonts within zip file:
+
+- the 2 accepted font format are `.ttf` and `.otf` files
+- if you include a custom font within zip file, for example with a file named `myCustomFont.ttf`, then you will have to use the filename to use it within json file for a TextView:
+
+```
+"font": "myCustomFont",
+```
+
+Keep in mind that some fonts can be included into big files (and you are limited to a maximum size for zip file). So if you only use very few characters (numbers, `.`, `,`), you can use free tools to remove unused characters (for example [here](https://products.aspose.app/font/generator/ttf-to-ttf)) and then reduce font size.
 
 (cwf-reference-advanced-features)=
 
@@ -257,15 +319,15 @@ But this feature should be used with care. Preferences are common with all other
 If you still need some very specific settings to have a correct display (in example below, if there is not enough space for detailed iob, you can "force" this parameter to `false` of your watch, you can include within metadata block some settings constraint like that
 
 ```json
-    "metadata": {
-        "name": "Default Watchface",
-        "author": "myName",
-        "created_at": "07\/10\/2023",
-        "author_version": "1.0",
-        "cwf_version": "1.0",
-        "comment": "Default watchface, you can click on EXPORT WATCHFACE button to generate a template",
-        "key_show_detailed_iob": false
-    },
+"metadata": {
+    "name": "Default Watchface",
+    "author": "myName",
+    "created_at": "07\/10\/2023",
+    "author_version": "1.0",
+    "cwf_version": "1.0",
+    "comment": "Default watchface, you can click on EXPORT WATCHFACE button to generate a template",
+    "key_show_detailed_iob": false
+},
 ```
 
 If user authorize custom watchface to modify watch parameter (setting within wear plugin) then Show detailed iob will be set to "disable", and locked to disable (no modification of this parameter possible, until authorization is disabled within wear plugin parameter, or another watchface is selected)
@@ -384,13 +446,13 @@ Now we will go at the end of the file, after the last view:
     "visibility": "gone"
 },
 "dynData": {
-	"rotateSgv": {
+    "rotateSgv": {
         "valueKey": "sgv",
         "minData": 30,
         "maxData": 330
-	},
+    },
 ```
-You can see that after the latest view (`"second_hand"`), we added a new `"dynData": { ... }` block that  will containts all the animations:
+You can see that after the latest view (`"second_hand"`), we added a new `"dynData": { ... }` block that  will contains all the animations:
 
 The block defined within `"background"`view was named `"rotateSgv"`, it's the first block you will find into `"dynData"`!
 
@@ -442,20 +504,20 @@ Note that the removed bottom part of these images has been used as background of
 For this view we include the link to another `"dynData"`block named `avgDeltaBackground`. This block will manage avgDelta scale according to avgDelta value.
 
 ```json
-    "avgDeltaBackground": {
-        "valueKey": "avg_delta",
-        "minData": -20,
-        "maxData": 20,
-        "invalidImage": "steampunk_gauge_mgdl_5",
-		"image1": "steampunk_gauge_mgdl_20",
-        "image2": "steampunk_gauge_mgdl_20",
-        "image3": "steampunk_gauge_mgdl_10",
-        "image4": "steampunk_gauge_mgdl_5",
-        "image5": "steampunk_gauge_mgdl_5",
-        "image6": "steampunk_gauge_mgdl_10",
-        "image7": "steampunk_gauge_mgdl_20",
-        "image8": "steampunk_gauge_mgdl_20"
-    },
+"avgDeltaBackground": {
+    "valueKey": "avg_delta",
+    "minData": -20,
+    "maxData": 20,
+    "invalidImage": "steampunk_gauge_mgdl_5",
+    "image1": "steampunk_gauge_mgdl_20",
+    "image2": "steampunk_gauge_mgdl_20",
+    "image3": "steampunk_gauge_mgdl_10",
+    "image4": "steampunk_gauge_mgdl_5",
+    "image5": "steampunk_gauge_mgdl_5",
+    "image6": "steampunk_gauge_mgdl_10",
+    "image7": "steampunk_gauge_mgdl_20",
+    "image8": "steampunk_gauge_mgdl_20"
+},
 ```
 - `"valueKey":` will make the link with `"avg_delta"` value
 - min and max Data will also limit the range to the maximum value available within this watchface (from -20mgdl to 20mgdl). For mmol users, keep in mind that all internal values are always in mgdl within AAPS.
@@ -511,24 +573,24 @@ For these views will will combine dynamic images and rotation feature explained 
 Here each view is dedicated to a specific scale (so is linked to a dedicated dynData block), you can alos notice that `"rotationOffset":` key is enabled for these 3 views.Now take a look on the first dynData block:
 
 ```json
-	"avgDelta5": {
-		"valueKey": "avg_delta",
-		"minData": -20,
-		"maxData": 20,
-		"rotationOffset": {
-			"minValue": -120,
-			"maxValue": 120
-		},
-		"invalidImage": "null",
-		"image1": "null",
-		"image2": "null",
-		"image3": "null",
-		"image4": "steampunk_pointer",
-		"image5": "steampunk_pointer",
-		"image6": "null",
-		"image7": "null",
-		"image8": "null"
-	},
+"avgDelta5": {
+    "valueKey": "avg_delta",
+    "minData": -20,
+    "maxData": 20,
+    "rotationOffset": {
+        "minValue": -120,
+        "maxValue": 120
+    },
+    "invalidImage": "null",
+    "image1": "null",
+    "image2": "null",
+    "image3": "null",
+    "image4": "steampunk_pointer",
+    "image5": "steampunk_pointer",
+    "image6": "null",
+    "image7": "null",
+    "image8": "null"
+},
 ```
 Here, even if dynamic range will be used only between -5 and +5 avg_delta datas, it's important to keep the overall range of -20, +20mgdl to ensure that the pointer will be synchronize with the background during scale switches. That's why we keep the same overall range than for `avgDeltaBackground`  and the same number ot steps (8 images).
 
@@ -602,14 +664,14 @@ Note these two views also use TwinView feature explain [here](cwf-reference-twin
 Now lets take a look on dynData block:
 
 ```json
-	"batteryIcons": {
-		"invalidFontColor": "#00000000",
-		"fontColor1": "#A00000",
-		"fontColor2": "#000000",
-		"fontColor3": "#000000",
-		"fontColor4": "#000000",
-		"fontColor5": "#000000"		
-	},
+"batteryIcons": {
+    "invalidFontColor": "#00000000",
+    "fontColor1": "#A00000",
+    "fontColor2": "#000000",
+    "fontColor3": "#000000",
+    "fontColor4": "#000000",
+    "fontColor5": "#000000"        
+},
 ```
 Here we use exactly the same logic that for dynamic background image, but with dedicated keys (`"invalidFontColor"` and  `"fontColor1"` to `"fontColor5"` to specify 5 steps of 20% each one).
 
@@ -620,7 +682,7 @@ Here we use exactly the same logic that for dynamic background image, but with d
 
 ### DynPref Feature
 
-Before reading this chapter, you have to understand how [dynData](cwf-reference-dyndata-feature) works, because DynPref is an advanced usage of DynData: You will now be able to adjust each DynData bloc according to preferences set by the user:
+Before reading this chapter, you have to understand how [dynData](cwf-reference-dyndata-feature) works, because DynPref is an advanced usage of DynData: You will now be able to adjust each DynData block according to preferences set by the user:
 
 To illustrate DynPref feature, we will use two example:
 
@@ -639,8 +701,8 @@ To do that we will replace `dynData` key by a `dynPref`key within view block:
     "height": 400,
     "topmargin": 0,
     "leftmargin": 0,
-	"dynPref": "rotateSgv",
-	"rotationOffset": true,
+    "dynPref": "rotateSgv",
+    "rotationOffset": true,
     "visibility": "visible"
 },
 ```
@@ -653,23 +715,23 @@ Now we will take a look at the end of the json file, after `dynData` block:
     ...
 },
 "dynPref": {
-	"rotateSgv": {
-		"prefKey": "key_units",
-		"true": {
-			"valueKey": "sgv",
-			"minData": 30,
-			"maxData": 330,
-			"invalidImage": "Background_mgdl",
-			"image1": "Background_mgdl"
-		},
-		"false": {
-			"valueKey": "sgv",
-			"minData": 30,
-			"maxData": 330,
-			"invalidImage": "Background_mmol",
-			"image1": "Background_mmol"
-		}
-	},
+    "rotateSgv": {
+        "prefKey": "key_units",
+        "true": {
+            "valueKey": "sgv",
+            "minData": 30,
+            "maxData": 330,
+            "invalidImage": "Background_mgdl",
+            "image1": "Background_mgdl"
+        },
+        "false": {
+            "valueKey": "sgv",
+            "minData": 30,
+            "maxData": 330,
+            "invalidImage": "Background_mmol",
+            "image1": "Background_mmol"
+        }
+    },
     ...
 }
 ```
@@ -685,7 +747,7 @@ Note that the "HardCoded" file name for Background image is now replaced by a dy
 
 Most of the time, when you set a preference, it's not to get "dynamic behaviour", but only the results according to what you select, but within dynPref, it's considered as a dynamic feature...
 
-- when in `dynData`you specify one full block of parameters (with images, fontColor, Color, ...), with dynData, you will be able to combine each parameter according to one specific preference.
+- when in `dynData`you specify one full block of parameters (with images, fontColor, Color, ...), with `dynPref`, you will be able to combine each parameter according to one specific preference.
 - Here we will see how match devider preference will be associated to dark preference to show when it's enabled (true) white text on black background on dark watchface (dark parameter true) or black text on white background on light watchface (dark false)...
 
 First lets see the beginning of json file:
@@ -700,7 +762,7 @@ First lets see the beginning of json file:
     "topmargin": 0,
     "leftmargin": 0,
     "visibility": "visible",
-	"dynPref": "dark"
+    "dynPref": "dark"
 },
 ```
 `"dynPrefColor": "prefColorDark"` will specify the dynPref block of all default colors outside views. These colors will be tuned according to dark parameter within `"prefColorDark"`:
@@ -708,29 +770,29 @@ First lets see the beginning of json file:
 And at the end, within the `dynPref` block, you will have a specific dynPref block for default colors:
 
 ```json
-	"prefColorDark": {
-		"prefKey": "key_dark",
-		"true": {
-			"highColor": "#FFFF00",
-			"midColor": "#00FF00",
-			"lowColor": "#FF0000",
-			"lowBatColor": "#E53935",
-			"carbColor": "#FB8C00",
-			"basalBackgroundColor": "#0000FF",
-			"basalCenterColor": "#64B5F6",
-			"gridColor": "#FFFFFF"
-		},
-		"false": {
-			"highColor": "#A0A000",
-			"midColor": "#00A000",
-			"lowColor": "#A00000",
-			"lowBatColor": "#E53935",
-			"carbColor": "#D07C00",
-			"basalBackgroundColor": "#0000A0",
-			"basalCenterColor": "#64B5F6",
-			"gridColor": "#303030"
-		}
-	}
+"prefColorDark": {
+    "prefKey": "key_dark",
+    "true": {
+        "highColor": "#FFFF00",
+        "midColor": "#00FF00",
+        "lowColor": "#FF0000",
+        "lowBatColor": "#E53935",
+        "carbColor": "#FB8C00",
+        "basalBackgroundColor": "#0000FF",
+        "basalCenterColor": "#64B5F6",
+        "gridColor": "#FFFFFF"
+    },
+    "false": {
+        "highColor": "#A0A000",
+        "midColor": "#00A000",
+        "lowColor": "#A00000",
+        "lowBatColor": "#E53935",
+        "carbColor": "#D07C00",
+        "basalBackgroundColor": "#0000A0",
+        "basalCenterColor": "#64B5F6",
+        "gridColor": "#303030"
+    }
+}
 ```
 The difference between this dynPref block and the other standard dynPref blocks used for views is that here you don't have a dynData block for each value of `"key_dark"` parameter, but only the list of main colors (`highColor`, `midColor` , ...)
 
@@ -744,33 +806,33 @@ Lets now take a look on items included into the "divider banner" (in example bel
     "leftmargin": 242,
     "rotation": 0,
     ...
-	"leftOffsetTwinHidden": 33,
-	"dynPref": "matchDivider"
+    "leftOffsetTwinHidden": 33,
+    "dynPref": "matchDivider"
 },
 ```
 Then within dynPref block, you can see that Match divider parameter (`key_match_divider` key), include the 2 blocks "true" and "false", but these two blocs are only used to define that view will use either "dark" dynBlock (so exactly the same background and text color than the otherviews outside the banner), or "white" dynBLock that will set opposite colors for background and text...
 
 ```json
-	"matchDivider": {
-		"prefKey": "key_match_divider",
-		"true": {
-			"dynPref": "dark"
-		},
-		"false": {
-			"dynPref": "white"
-		}
-	},
-	"dark": {
-		"prefKey": "key_dark",
-		"true": {
-			"color1": "#000000",
-			"fontColor1": "#FFFFFF"
-		},
-		"false": {
-			"color1": "#FFFFFF",
-			"fontColor1": "#000000"
-		}
-	},
+"matchDivider": {
+    "prefKey": "key_match_divider",
+    "true": {
+        "dynPref": "dark"
+    },
+    "false": {
+        "dynPref": "white"
+    }
+},
+"dark": {
+    "prefKey": "key_dark",
+    "true": {
+        "color1": "#000000",
+        "fontColor1": "#FFFFFF"
+    },
+    "false": {
+        "color1": "#FFFFFF",
+        "fontColor1": "#000000"
+    }
+},
 ```
 Note that here you are within a "dynData" block, then to define a color or a fontColor, you will use a dynData (not specified here), and a single step (`"color1"` and `'fontColor1'` are used)
 
@@ -790,7 +852,7 @@ Then we will see a third example with iob views (`iob1` and `iob2`), where we wi
     "visibility": "visible",
     "textsize": 19,
     ...
-	"dynPref": "prefIob1"
+    "dynPref": "prefIob1"
 },
 "iob2": {
     "width": 125,
@@ -801,33 +863,33 @@ Then we will see a third example with iob views (`iob1` and `iob2`), where we wi
     "visibility": "visible",
     "textsize": 24,
     ...
-	"leftOffsetTwinHidden": -10,
-	"dynPref": "prefIob2"
+    "leftOffsetTwinHidden": -10,
+    "dynPref": "prefIob2"
 },
 ```
 You will see within default view settings the text size (19 on `iob1` and 24 on `iob2`) and the two different `dynPref` block that should tune textsize (according to detailed iob parameter), and colors (according to dark parameter)
 
 ```json
-	"prefIob1": {
-		"prefKey": "key_show_detailed_iob",
-		"true": {
-			"dynPref": "dark",
-			"textsize1": 24
-		},
-		"false": {
-			"dynPref": "dark"
-		}
-	},
-	"prefIob2": {
-		"prefKey": "key_show_detailed_iob",
-		"true": {
-			"dynPref": "dark",
-			"textsize1": 19
-		},
-		"false": {
-			"dynPref": "dark"
-		}
-	},
+"prefIob1": {
+    "prefKey": "key_show_detailed_iob",
+    "true": {
+        "dynPref": "dark",
+        "textsize1": 24
+    },
+    "false": {
+        "dynPref": "dark"
+    }
+},
+"prefIob2": {
+    "prefKey": "key_show_detailed_iob",
+    "true": {
+        "dynPref": "dark",
+        "textsize1": 19
+    },
+    "false": {
+        "dynPref": "dark"
+    }
+},
 ```
 You can see here that according to detailed iob parameter (`"key_show_detailed_iob"` key), when it's "true" then textsize is defined to a fix value bigger than default (24 instead of 19): this is done using textsize "step" feature, within only one value so one step... (note that for all parameter others than images,if invalidTextSize is not set, then textsize1 will be used for invalid data)
 
@@ -957,7 +1019,7 @@ For most images, High and Low suffix allow tuning of image according to BG level
 | ArrowSingleDown                                     | ↓ (default): image of single arrow down                      |
 | ArrowDoubleDown                                     | ↓↓ (default): image of double arrow down                     |
 
-For each above filenames, extension can be either .jpg, .png or .svg. But be carefull, .jpg doesn't manage transparency (so most of the files should be with .png or .svg to not hide view that are behind...)
+For each above filenames, extension can be either `.jpg`, `.png` or `.svg`. But be carefull, `.jpg`doesn't manage transparency (so most of the files should be with .png or .svg to not hide view that are behind...)
 
 (cwf-reference-list-of-view-keys)=
 
@@ -1156,7 +1218,7 @@ This list is sorted from background to foreground this is very important when yo
 
 ### PrefKey values
 
-All keys included into **Preference keys** chapter above can be used to tune view parameters 
+All keys included into [Preference keys](cwf-reference-preference-keys) chapter above can be used to tune view parameters 
 
 You can also you these additional key below included into AAPS (Custom) specific parameters:
 
