@@ -2,7 +2,7 @@
 
 Here you can download Zip-Files with custom watchfaces user have prepared and want to share with you.
 
-The Zip-Files can be uploaded in the folder "ExchangeSiteCustomWatchfaces"via a Pull Request into Github as usual.
+The Zip-Files can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into Github as usual.
 
 During merge of the pull request the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
 
