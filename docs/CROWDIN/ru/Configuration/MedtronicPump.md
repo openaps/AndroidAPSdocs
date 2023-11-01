@@ -112,21 +112,21 @@ Pump history is retrieved every 5 minutes and stored locally. Only the previous 
 
 The RL Status dialog has two tabs:
 
-- **Settings**: Shows settings about the RileyLink compatible device: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
-- **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
+- **Settings**: Shows settings about the RileyLink compatible device: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Типом устройства всегда является Medtronic Pump, Модель - ваша версия модели, Серийный номер-сконфигурированный серийный номер, Частота помпы- Частота на которой работает связь помпы, Последняя частота-последняя используемая частота связи.
+- ** История **: Показывает хронологию связи, элементы с RyleyLink показывают изменения состояния RileyLink, Medtronic показывает, какие команды были отправлены на помпу.
 
 ## Действия
 
-When the Medtronic driver is used, two additional actions are added to Actions Tab:
+При использовании драйвера Medtronic добавляются два дополнительных действия на вкладке Действия:
 
-- **Wake and Tune Up** - In the event that AAPS hasn't connected to your pump for a sustained period (it should connect every 5 minutes), you can force a Tune Up. This will try to contact your pump, by searching all of the possible radio frequencies used by your pump. In the event a succesful connection is made the succesful frequency will be set as the default.
-- **Reset RileyLink Config** - If you reset your RileyLink compatible device you may need to use this action so that device can be reconfigured (frequency set, frequency type set, encoding configured).
+- ** Пробуждение и настройка **-Если вы видите, что AndroidAPS не связывался с помпой в течение какого-то времени (он должен связываться каждые 5 минут), вы можете нажать кнопку Настройка. AAPS попытается связаться с помпой, пробуя все возможные радиочастоты, используемые помпой. При успешном подключении удачная частота будет использоваться по умолчанию.
+- ** Сброс конфигурации RileyLink **-При перезагрузке RileyLink/GNARL необходимо выполнить эту команду, чтобы переконфигурировать устройство (частота, тип частоты, кодировка).
 
 ## Важные Примечания
 
 ### Special attention in NS configuration needed
 
-AAPS is using serial number for synchronization and serial number is exposed to NS. Because knowledge of serial number of old Medtronic pump can be used to control the pump remotely take special care to hardening NS site preventing leakage of SN of your pump. See https://nightscout.github.io/nightscout/security/
+AAPS использует серийный номер для синхронизации и серийный номер показывается в NS. Поскольку знание серийно номера старых помп Medtronic может быть использовано для дистанционного управления, следует позаботиться о мерах безопасности сайта NS. See https://nightscout.github.io/nightscout/security/
 
 ### OpenAPS users
 
