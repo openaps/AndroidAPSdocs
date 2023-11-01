@@ -4,31 +4,31 @@ These instructions are for configuring the Medtrum insulin pump.
 
 This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Только вы несете ответственность за то, что делаете.
 
-## Pump capabilities with AAPS
+## Возможности работы с AAPS
 * All loop functionality supported (SMB, TBR etc)
-* Automatic DST and timezone handling
-* Extended bolus is not supported by AAPS driver
+* Автоматическое определение сезонного времени и часового пояса
+* Пролонгированный болюс не поддерживается драйвером AAPS
 
 ## Hardware and Software Requirements
 * **Compatible Medtrum pumpbase and reservoir patches**
     - Currently supported:
-        - Medtrum TouchCare Nano with pumpbase refs: **MD0201** and **MD8201**.
+        - Medtrum TouchCare Nano с помповой базой моделей: **MD0201** и **MD8201**.
         - Medtrum TouchCare 300U with pumpbase ref: **MD8301**.
-        - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
-* **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../Installing-AndroidAPS/Building-APK.md) instructions.
+        - Если у вас есть неподдерживаемая модель и вы хотите пожертвовать аппаратное обеспечение или помощь в тестировании, пожалуйста, свяжитесь с нами через discord [здесь](https://discordapp.com/channels/629952586895851530/1076120802476441641).
+* **Версия 3.2.0.0 или новее, собранная и установленная** с помощью инструкций [Build APK](../Installing-AndroidAPS/Building-APK.md).
 * **Compatible Android phone** with a BLE Bluetooth connection
-    - See AAPS [Release Notes](../Installing-AndroidAPS/Releasenotes.md)
+    - См. AAPS [Примечания к выпуску](../Installing-AndroidAPS/Releasenotes.md)
 * [**Continuous Glucose Monitor (CGM)**](BG-Source.md)
 
 ## Подготовка к работе
 
-**SAFETY FIRST** Do not attempt this process in an environment where you cannot recover from an error (extra patches, insulin, and pump control devices are must-haves).
+**БЕЗОПАСНОСТЬ на первом месте** Не пытайтесь выполнять этот процесс в среде, где нет возможности исправить ошибку (дополнительные патчи, инсулин, устройства управления помпой обязательны).
 
-**The PDM and Medtrum App will not work with a patch that is activated by AAPS.** Previously you may have used your PDM or Medtrum app to send commands to your pump. For security reasons you can only use the activated patch with the device or app that was used to activate it.
+**Пульт PDM и приложение Medtrum не будут работать с патчем, активированным при помощи AAPS** Прежде, возможно, вы уже пользовались этим устройством и приложением для отправки команд на помпу. В целях безопасности можно пользоваться только активированным патчем с устройством или приложением, которое использовалось для его активации.
 
-*This does NOT mean that you should throw away your PDM. It is recommended to keep it somewhere safe as a backup in case of emergencies, for instance if your phone gets lost or AAPS is not working correctly.*
+*Это НЕ означает, что следует выбросить ваш пульт PDM. Рекомендуется хранить его в надежном месте в качестве резервной копии в случае возникновения чрезвычайных ситуаций, например, если ваш телефон потеряется или AAPS работает неправильно.*
 
-**Your pump will not stop delivering insulin when it is not connected to AAPS** Default basal rates are programmed on the pump as defined in the current active profile. As long as AAPS is operational, it will send temporary basal rate commands that run for a maximum of 120 minutes. If for some reason the pump does not receive any new commands (for instance because communication was lost due to pump - phone distance) the pump will fall back to the default basal rate programmed on the pump once the Temporary Basal Rate ends.
+**Помпа не перестанет доставлять инсулин, если она не подключена к AAPS** Скорости Базала запрограммированы на помпе, как указано в текущем активном профиле. As long as AAPS is operational, it will send temporary basal rate commands that run for a maximum of 120 minutes. If for some reason the pump does not receive any new commands (for instance because communication was lost due to pump - phone distance) the pump will fall back to the default basal rate programmed on the pump once the Temporary Basal Rate ends.
 
 **30 min Basal Rate Profiles are NOT supported in AAPS.** **The AAPS Profile does not support a 30 minute basal rate time frame** If you are new to AAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Medtrum pump hardware itself supports the 30 min basal rate profile increments, AAPS is not able to take them into account with its algorithms currently.
 
