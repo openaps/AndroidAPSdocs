@@ -72,27 +72,27 @@ When configuring your Medtronic pump with the setup wizard it is possible that y
 
 - **Конфигурация RileyLink Configuration**: Эта опция позволяет вам найти и связать устройство, совместимое с Rileylink. При этом выборе будут показаны устройства, совместимые с Rileylink, и уровень их сигнала.
 - **Использование сканирования Scanning** активирует сканирование Bluetooth перед подключением к устройствам RileyLink. Это должно повысить надежность подключения к устройству.
-- **Show battery level reported by OrangeLink/EmaLink/DiaLink** This feature is only supported on newer link devices such as the EmaLink or OrangeLink. Values will be shown in the Medtronic tab in AnroidAPS. 
-- **Set neutral temp basals** By default Medtronic pumps beep on the hour when a temporary basal rate is active. Enabling this option can help reduce the number of beeps heard by interupting a temporary basal at the hour change in order to supress the beep.
+- **Показать уровень заряда батареи OrangeLink/EmaLink/DiaLink** Эта функция поддерживается только на новых устройствах связи, таких как EmaLink или OrangeLink. Значения будут показаны на вкладке Medtronic в AnroidAPS. 
+- **Установить нейтральный врем базал**: По умолчанию помпы Medtronic издают сигнал каждый час, когда активна временная базальная скорость. Включение этой опции поможет уменьшить количество сигналов, издаваемых во время работы временного базала.
 
 ## Вкладка MEDTRONIC (MDT)
 
-![MDT Tab](../images/Medtronic02.png) When AAPS is configured to use a Medtronic pump a MDT tab will be shown in the list of tabs at the top of the screen. This tab displays the current pump status information along with some Medtronic specific actions.
+![MDT Tab](../images/Medtronic02.png) Когда AAPS сконфигурирован на использование помп Medtronic, в списке вкладок в верхней части экрана появится вкладка MDT. Эта вкладка отображает текущую информацию о статусе помпы наряду с некоторыми действиями Medtronic.
 
-- **RileyLink Status**: The current status of the connection between your phone and Rileylink compatible device. This should show as Connected at all times. Any other status may require user intervention. 
-- **RileyLink Battery**: The current battery level of your EmaLink or OrangeLink device. Dependent on selecting "Show battery level reported by OrangeLink/EmaLink/DiaLink device" in the Medtronic Pump Configuration menu.
-- **Pump Status**: The current status of the pump connection. As the pump will not be constantly connected this will primarily show the sleep icon. There are a number of possible other status including "Waking Up" when AAPS is trying to issue a command or other possible pump commands such as "Get Time", "Set TBR", etc.
+- **Статус RileyLink Status**: Текущий статус подключения телефона к устройству, совместимому с RileyLink. Здесь всегда должно быть Connectel (сопряжено). Любой другой статус требует вмешательства пользователя. 
+- **Батарея RileyLink Battery**: Текущий уровень заряда батареи устройства EmaLink или OrangeLink. В зависимости от выбора "Показать уровень заряда батареи, OrangeLink/EmaLink/DiaLink", в меню конфигурации.
+- **Статус помпы**: Статус соединения с помпой. Так как помпа не будет соединена постоянно, здесь в основном показывается пиктограмма сна. Существуют другие возможные статусы, например «Пробуждение», когда AAPS пытается выдать команду или другие возможные команды, такие как «Получить время помпы», "Установить TBR" и т. д.
 - **Battery**: Shows battery status based on the value chosen for Battery Type (Power View) in the Medtronic Pump Configuration menu. 
-- **Last connection**: How long ago the last succesful pump connection happened.
+- **Предыдущее соединение**: Как давно произошло последнее успешное подключение помпы.
 - **Last Bolus**: How long ago the last succesful bolus was delivered.
 - **Base Basal Rate**: This is the base basal rate that runs on pump at this hour in your active Profile.
-- **Temp basal**: Temp basal currently being delivered which can be 0 units per hour.
-- **Reservoir**: How much insulin is in reservoir (updated at least every hour).
+- **Врем базал Temp basal**: Временный базал в настоящее время, может быть и 0 единиц в час.
+- ** Резервуар **: Сколько инсулина находится в картридже (обновляется по крайней мере каждый час).
 - **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
 
-At the bottom of the screen there are three buttons:
+В нижней части экрана расположены три кнопки:
 
-- **Refresh** is for refreshing the current status of the pump. This should only be used if the connection was lost for a sustained period as this will require a full data refresh (retrieve history, get/set time, get profile, get battery status, etc).
+- **Обновить** для обновления текущего статуса помпы. Ей следует пользоваться только в случае, когда соединение отсутствовало в течение длительного периода, так как потребует полного обновления данных (получение истории, установка времени, получение профиля, получение статуса батареи и т. д.).
 - **Pump History**: Shows pump history (see [below](MedtronicPump-pump-history))
 - **RL Stats**: Show RL Stats (see [below](MedtronicPump-rl-status-rileylink-status))
 
