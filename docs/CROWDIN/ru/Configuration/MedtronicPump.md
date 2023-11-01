@@ -126,31 +126,31 @@ The RL Status dialog has two tabs:
 
 ### Special attention in NS configuration needed
 
-AAPS использует серийный номер для синхронизации и серийный номер показывается в NS. Поскольку знание серийно номера старых помп Medtronic может быть использовано для дистанционного управления, следует позаботиться о мерах безопасности сайта NS. See https://nightscout.github.io/nightscout/security/
+AAPS использует серийный номер для синхронизации и серийный номер показывается в NS. Поскольку знание серийно номера старых помп Medtronic может быть использовано для дистанционного управления, следует позаботиться о мерах безопасности сайта NS. См. https://nightscout.github.io/nightscout/security/
 
 ### OpenAPS users
 
-OpenAPS users should note that AAPS with Medtronic uses a completely different approach than OpenAPS. Using AAPS the primary method of interacting with th pump is via your phone. In normal use cases it is likely that the only time it is required to use the pump menu is when changing resevoirs. This is very different when using OpenAPS where at least some of a bolus is usually delivered via the quick bolus buttons. In the event the pump is used to manually deliver a bolus there can be issues if AAPS attempts to deliver one at the same time. There are checks to try and prevent issues in such cases but this should still be avoided where possible.
+Пользователи OpenAPS должны иметь в виду, что AAPS с Medtronic использует совершенно иную методику, чем OpenAPS. При использовании AAPS основным методом взаимодействия с помпой является работа через телефон. In normal use cases it is likely that the only time it is required to use the pump menu is when changing resevoirs. Это отличается от OpenAPS, когда по крайней мере некоторые болюсы подаются через кнопки быстрого болюса. В том случае, если помпа используется для ручной подачи болюса, могут возникнуть проблемы, если AAPS пытается подать болюс одновременно с помпой. There are checks to try and prevent issues in such cases but this should still be avoided where possible.
 
 ### Logging
 
-In the event you need to troubleshoot your Medtronic pump function select the menu icon in the upper left corner of the screen, select Maintainance and Log Settings. For troubleshooting any Medtronic issues Pump, PumpComm, PumpBTComm should be checked.
+В случае необходимости устранения неполадок в работе Medtronic выберите меню в левом верхнем углу экрана, выберите Обслуживание и лог настроек. Для устранения неполадок необходимо проверить Pump, PumpComm, PumpBTComm.
 
-### Medtronic CGM
+### Мониторинг Medtronic
 
 Medtronic CGM is currently NOT supported.
 
-### Manual use of pump
+### Использование помпы вручную
 
-You should avoid manually bolusing or setting TBRs on your pump. All such commands should be sent via AAPS. In the event manual commands are used there must be a delay of at least 3 minutes between them in order to reduce the risk of any issues.
+Не следует выполнять болюсы или установку временного базала вручную с помпы. Эти команды должны отправляться через AAPS. В случае подачи команд вручную, между ними следует выдерживать не менее 3 минут, чтобы уменьшить риск возникновения проблем.
 
-### Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AAPS
+### Изменения часового пояса, сезонное время и путешествия с помпой Medtronic и AAPS
 
-AAPS will automatically detect Timezone changes and will update the Pump's time when your phone switches to the new time.
+AAPS автоматически определит изменения часового пояса и обновит время помпы, когда телефон перейдет на новое время.
 
-Travelling east means you are going to be adding hours to the current time (ex. from GMT+0 to GMT+2) will not result in any issues as there will be no overlap (e.g. it won't be possible to have the same hour twice). Travelling west however can result in issues as you are effectively going back in time which can result in incorrect IOB data.
+Путешествие на восток означает, что потребуется добавлять часы к текущему времени (напр. from GMT+0 to GMT+2) will not result in any issues as there will be no overlap (e.g. it won't be possible to have the same hour twice). Однако перелет на запад может привести к возникновению проблем, так как вы фактически переноситесь в обратное время, а это приведет к неправильной оценке IOB.
 
-The issues seen when travelling west are known to the developers and work on a possible solution is ongoing. See https://github.com/andyrozman/RileyLinkAAPS/issues/145 for more detail. For now, please be aware that this issue may occur and carefully monitor when changing time zones.
+Проблемы, которые наблюдаются при перелетах на запад, известны разработчикам, которые работают над возможным решением. Дополнительную информацию см. на https://github.com/andyrozman/RileyLinkAAPS/issues/145. На данный момент помните о существовании проблемы и тщательно следите за временем при пересечении часовых поясов.
 
 ### Is a GNARL a fully compatible Rileylink combatible device?
 
