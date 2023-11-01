@@ -2,7 +2,7 @@
 
 The driver does not work with any newer models, including all models ending in G (530G, 600-series [630G, 640G, 670G], 700-series [770G, 780G], etc.).
 
-Следующие комбинации моделей и прошивок совместимы:
+Для работы с AAPS подходят следующие комбинации моделей и прошивок:
 
 - 512/712 (any firmware version)
 - 515/715 (any firmware version)
@@ -35,9 +35,9 @@ The driver does not work with any newer models, including all models ending in G
 - **Установить Max Basal** (На помпе нажмите ACT -- Basal, --затем выберите Max Basal Rate(макс скорость базала) Например, установка этого значения в четыре раза выше максимальной стандартной скорости позволит задавать временную скорость базала на 400%. The maximum value permitted by the pump is 34.9 units per hour.
 - **Set Max Bolus** (On the pump press Act and to to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept. Максимальное разрешенное значение помпы составляет 25 ед.
 - **Set profile to Standard**. (На помпе нажмите ACT, перейдите в Базал, а затем Select Patterns (выбрать рисунок профиля). Помпе понадобится только один профиль, а AAPS будет управлять различными профилями на телефоне. Другие профили не требуются.
-- **Set Temporary Basal Rate type** (On the pump press Act and go to Basal and then Temp Basal Type). Выберите Абсолютный (не в процентах).
+- **Set Temporary Basal Rate type** (On the pump press Act and go to Basal and then Temp Basal Type). Выберите Absolute Абсолютный (не в процентах).
 
-## Medtronic Configuration of Phone/AAPS
+## Конфигурация помп Medtronic и телефона /AAPS
 
 - **Не подключайте устройство, совместимое с RileyLink, к меню Bluetooth на телефоне.** Привязка через меню Bluetooth телефона не позволит AAPS видеть совместимое устройство Rileylink при выполнении дальнейших инструкций.
 - Отключите автоматический поворот экрана на телефоне. On certain devices automatic screen rotation causes Bluetooth sessions to restart which would cause issues for your Medtronic pump. 
@@ -68,10 +68,10 @@ When configuring your Medtronic pump with the setup wizard it is possible that y
     - Литиевая (Подробный вид)
     - NiZn (Extended view)
     - Никель-металлогидридная (Подробный вид)
-- **Bolus/Treatments Debugging**: Select On or Off depending on requirements.
+- **Отладка болюсов/терапии Bolus/Treatments Debugging**: Выберите Вкл или Выкл в зависимости от потребности.
 
-- **RileyLink Configuration**: This option allows you to find and pair your Rileylink compatible device. Selecting this will show any nearby Rileylink compatible devices and the signal strength.
-- **Use Scanning** Activates Bluetooth scanning before connecting with your Rileylink Compatible devices. This should improve the reliability of your connection to the device.
+- **Конфигурация RileyLink Configuration**: Эта опция позволяет вам найти и связать устройство, совместимое с Rileylink. При этом выборе будут показаны устройства, совместимые с Rileylink, и уровень их сигнала.
+- **Использование сканирования Scanning** активирует сканирование Bluetooth перед подключением к устройствам RileyLink. Это должно повысить надежность подключения к устройству.
 - **Show battery level reported by OrangeLink/EmaLink/DiaLink** This feature is only supported on newer link devices such as the EmaLink or OrangeLink. Values will be shown in the Medtronic tab in AnroidAPS. 
 - **Set neutral temp basals** By default Medtronic pumps beep on the hour when a temporary basal rate is active. Enabling this option can help reduce the number of beeps heard by interupting a temporary basal at the hour change in order to supress the beep.
 
