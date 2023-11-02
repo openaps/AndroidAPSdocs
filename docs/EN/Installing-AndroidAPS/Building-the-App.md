@@ -58,8 +58,7 @@ If you have not done so already, install Gdrive on your PC: 
 
 #### Install Google drive (“Gdrive”) on your PC
 
-Please see enclosed step-by-step 4 minutes video  here:\
-<https://drive.google.com/file/d/1EnaQ7U8U7M84vOFjcMRoB43dNwqUuLty/view?usp=drive_link>
+Please see enclosed step-by-step 4 minutes video  here:<https://youtu.be/lZs2_HOnUQ0>
 
 1. Go to <https://drive.google.com/> 
 
@@ -87,7 +86,7 @@ Please see enclosed step-by-step 4 minutes video  here:\
      ![](../images/Building-the-App/building_0016.png)
 
 7. Download & install the “google drive” on your phone from the playstore link\
-   If you need more details, you can see the step-by-step 2 minutes video here: <https://drive.google.com/file/d/1--qwxp95cG8pwCv1pDFZuuOl6ue22W4H/view?usp=drive_link> 
+   If you need more details, you can see the step-by-step 2 minutes video here: <https://youtu.be/1ev-DhnlJ5I> 
 
    - If you use an *aaps dedicated account*, make sure that you configure google drive to use the correct one by clicking on the profile picture if you use a dedidcated a…  
 
