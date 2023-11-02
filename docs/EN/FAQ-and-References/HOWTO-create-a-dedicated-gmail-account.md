@@ -1,11 +1,17 @@
 ## How to set up a dedicated Google account for AAPS
-Video: <https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link> 
+
+
 
 #### Step-by-step guide to setting up a separate Google account and drive: 
 
 In this example: 
 - Your existing “_Everyday_” Google account is <donald.muck42@gmail.com>  using Gmail; ![](../images/Building-the-App/building_0002.png)
 - new “_AAPS_” email account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
+
+Either follow thIS step-by-step guide OR watch the video:  
+Video: <https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link> 
+
+
 
 Things to consider:
 
