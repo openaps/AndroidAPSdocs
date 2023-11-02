@@ -1,6 +1,6 @@
 # Medtrum Nano / 300U
 
-These instructions are for configuring the Medtrum insulin pump.
+Настройка инсулиновой помпы Medtrum. (на сайте производителя помпа именуется насосом, что в общем-то верно. Но мы будем следовать устоявшейся традиции и именовать ее помпой - прим. перев.).
 
 This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Только вы несете ответственность за то, что делаете.
 
@@ -36,29 +36,29 @@ This software is part of a DIY artificial pancreas solution and is not a product
 
 ## Настройки
 
-CAUTION: When activating a patch with AAPS you **MUST** disable all other devices that can talk to the Medtrum pumpbase. e.g. active PDM and Medtrum app. Make sure you have your pumpbase and pumpbase SN ready for activation of a new patch.
+CAUTION: When activating a patch with AAPS you **MUST** disable all other devices that can talk to the Medtrum pumpbase. например, активный пульт управления помпой PDM и приложение Medtrum. Убедитесь, что готова помповая база, есть ее серийный номер для активации нового патча.
 
 ### Step 1: Select Medtrum pump
 
 #### Option 1: New installations
 
-If you are installing AAPS for the first time, the **Setup Wizard** will guide you through installing AAPS. Select “Medtrum” when you reach Pump selection.
+Если вы устанавливаете AAPS впервые, вам поможет **Мастер настройки**. Когда дойдете до выбора помпы, выбирайте Medtrum.
 
-If in doubt you can also select “Virtual Pump” and select “Medtrum” later, after setting up AAPS (see option 2).
+Если сомневаетесь, можете выбрать «Виртуальную помпу» и выбрать «Medtrum» после настройки AAPS (см. опцию 2).
 
 ![Setup Wizard](../images/medtrum/SetupWizard.png)
 
 #### Option 2: The Config Builder
 
-On an existing installation you can select the **Medtrum** pump from the [Config Builder](Config-Builder.md#config-builder-profile):
+При существующих опциях установки вы можете выбрать помпу **Medtrum** из [конфигуратора](Config-Builder.md#config-builder-profile):
 
-On the top-left hand corner **hamburger menu** select **Config Builder**\ ➜\ **Pump**\ ➜\ **Medtrum**\ by selecting the **Enable button** titled **Medtrum**.
+В левом верхнем углу из **выпадающего меню** выберите **Конфигуратор**\ ➜\ **Помпа**\ ➜\ **Medtrum**\, включив кнопку **Medtrum**.
 
-Selecting the **checkbox** next to the **Settings Gear** will allow the Medtrum overview to be displayed as a tab in the AAPS interface titled **Medtrum**. Checking this box will facilitate your access to the Medtrum commands when using AAPS and is highly recommended.
+Поставив флажок в **клетке** напротив **шестеренки настроек** вы активируете вкладку Medtrum в интерфейсе AAPS. Установка этого флажка облегчит доступ к командам Medtrum при использовании AAPS и настоятельно рекомендуется.
 
 ![Конфигуратор](../images/medtrum/ConfigBuilder.png)
 
-### Step 2: Change Medtrum settings
+### Шаг 2: Изменение настроек Medtrum
 
 Enter the Medtrum settings by tapping the **Settings Gear** of the Medtrum module in the Config Builder .
 
