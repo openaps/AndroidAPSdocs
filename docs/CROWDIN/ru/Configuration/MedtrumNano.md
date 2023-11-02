@@ -60,95 +60,95 @@ CAUTION: When activating a patch with AAPS you **MUST** disable all other device
 
 ### Шаг 2: Изменение настроек Medtrum
 
-Enter the Medtrum settings by tapping the **Settings Gear** of the Medtrum module in the Config Builder .
+Введите настройки Medtrum, нажав на **шестеренку** модуля Medtrum в Конфигураторе.
 
 ![Medtrum Settings](../images/medtrum/MedtrumSettings.png)
 
-#### Serial Number:
+#### Серийный номер:
 
-Enter the serial number of your pumpbase here as noted on the pumpbase. Make sure the serial number is correct and there are no spaces added (You can either use capital or lowercase).
+Введите здесь серийный номер вашей помповой базы, находящийся на ее корпусе. Убедитесь, что серийный номер указан правильно и без пробелов (можно использовать заглавные или строчные буквы).
 
-NOTE: This setting can only be changed when there is no patch active.
+ПРИМЕЧАНИЕ: Этот параметр может быть изменен только при отсутствии активного патча.
 
-#### Alarm settings
+#### Настройки оповещений
 
-***Default: Beep.***
+***По умолчанию: звуковой сигнал.***
 
-This setting changes the way that the pump will alert you when there is a warning or error.
+Этот параметр изменяет способ оповещения об ошибке или предупреждении.
 
-- Beep > The patch will beep on alarms and warnings
-- Silent > The patch will not alert you on alarms and warnings
+- Звуковой сигнал > Патч будет издавать звуковой сигнал при оповещениях и предупреждениях
+- Без звука > патч не будет издавать звука при оповещениях и предупреждениях
 
-Note: In silent mode AAPS will still sound the alarm depending on your phone's volume settings. If you do not respond to the alarm, the patch will eventually beep.
+Примечание: В беззвучном режиме AAPS по-прежнему будет подавать сигнал в зависимости от настроек громкости вашего телефона. Если вы не реагируете на сигнал, патч в конечном итоге загудит.
 
-#### Notification on pump warning
+#### Уведомление об оповещениях помпы
 
-***Default: Enabled.***
+***По умолчанию: включено.***
 
-This settings changes the way AAPS will show notification on non ciritical pump warnings. When enabled a Notification will be shown on the phone when a pump warning occurs, including:
-    - Low battery
-    - Low reservoir (20 Units)
-    - Patch expiration warning
+Эти настройки изменяют способ оповещения AAPS о некритичных предупреждениях помпы. When enabled a Notification will be shown on the phone when a pump warning occurs, including:
+    - Низкий заряд батареи
+    - В резервуаре мало инсулина (20 ед.)
+    - Напоминание об истечении срока патча
 
-In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#active-alarms).
+В любом случае эти предупреждения также отображаются на экране Medtrum в разделе [Активные оповещения](#active-alarms).
 
-#### Patch Expiration
+#### Окончание срока действия патча
 
-***Default: Enabled.***
+***По умолчанию: включено.***
 
-This setting changes the behavior of the patch. When enabled the patch will expire after 3 days and give an audible warning if you have sound enabled. After 3 days and 8 hours the patch will stop working.
+This setting changes the behavior of the patch. Если включено, срок работы патча истечет через 3 дня, о чем при включенном звуке будет выдано звуковое предупреждение. Через 3 дня и 8 часов патч перестанет работать.
 
-If this setting is disabled, the patch will not warn you and will continue running until the patch battery or reservoir runs out.
+Если этот параметр отключен, патч не будет предупреждать вас и продолжит работать, пока не закончится заряд батареи патча или не опустеет резервуар.
 
-#### Pump expiry warning
+#### Предупреждение об истечении срока помпы
 
-***Default: 72 hours.***
+***По умолчанию: 72 часа.***
 
-This setting changes the time of the expiration warning, when [Patch Expiration](#patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
+Эта настройка изменяет время предупреждения об [истечении срока действия патча](#patch-expiration), AAPS выдаст уведомление в заданное время после активации.
 
-#### Hourly Maximum Insulin
+#### Максимальное количество инсулина в час
 
-***Default: 25U.***
+***По умолчанию: 25 ед.***
 
-This setting changes the maximum amount of insulin that can be delivered in one hour. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#reset-alarms).
+Эта настройка изменяет максимальное количество инсулина, которое может быть подано в течение одного часа. Если этот предел превышен, патч будет приостановлен и подаст сигнал. Это оповещение может быть сброшено при нажатии на кнопку сброса на общем меню - см [Сброс оповещений](#reset-alarms).
 
-Set this to a sensible value for your insulin requirements.
+Установите это значение на разумную величину вашей потребности.
 
-#### Daily Maximum Insulin
+#### Максимальное количество инсулина в сутки
 
-***Default: 80U.***
+***По умолчанию: 80 ед.***
 
-This setting changes the maximum amount of insulin that can be delivered in one day. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#reset-alarms).
+Эта настройка изменяет максимальное количество инсулина, которое может быть подано в течение одного дня. Если этот предел превышен, патч будет приостановлен и подаст сигнал. Это оповещение может быть сброшено при нажатии на кнопку сброса на общем меню - см [Сброс оповещений](#reset-alarms).
 
-Set this to a sensible value for your insulin requirements.
+Установите это значение на разумную величину вашей потребности.
 
-### Step 2b: AAPS Alerts settings
+### Шаг 2b: Настройки оповещений AAPS
 
-Go to preferences
+Перейдите к настройкам
 
-#### Pump:
+#### Помпа:
 
 ##### BT Watchdog
 
-Go to preferences and select **Pump**:
+Перейдите в настройки и выберите **Помпа**:
 
 ![BT Watchdog](../images/medtrum/BTWatchdogSetting.png)
 
 ##### BT Watchdog
 
-This setting will try to work around any BLE issues. It will try to reconnect to the pump when the connection is lost. It will also try to reconnect to the pump when the pump is unreachable for a certain amount of time.
+Этот параметр попытается обойти любые проблемы блутус BLE. Он активирует попытки снова подключиться к помпе при потере соединения. Кроме того, он будет переподключаться к помпе, когда она недоступен в течение определенного промежутка времени.
 
-Enable this setting if you experience frequent connection issues with your pump.
+Включите этот параметр при частых проблемах соединения с помпой.
 
-#### Local Alerts:
+#### Локальные оповещения:
 
-Go to preferences and select **Local Alerts**:
+Перейдите в настройки и выберите **Локальные оповещения**:
 
 ![Local Alerts](../images/medtrum/LocalAlertsSettings.png)
 
-##### Alert if pump is unreachable
+##### Оповещать в случае недоступности помпы
 
-***Default: Enabled.***
+***По умолчанию: включено.***
 
 This setting is forced to enabled when the Medtrum driver is enabled. It will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
 
@@ -275,47 +275,47 @@ This shows the current state of the pump. For example:
 
 This shows the current basal type.
 
-##### Basal rate:
+##### Скорость базала:
 
 This shows the current basal rate.
 
-##### Last bolus:
+##### предыдущий болюс:
 
 This shows the last bolus that was delivered.
 
-##### Active bolus:
+##### Активный болюс:
 
 This shows the active bolus that is currently being delivered.
 
-##### Active alarms:
+##### Активные оповещения:
 
 This shows any active alarms that are currently active.
 
-##### Reservoir:
+##### резервуар:
 
 This shows the current reservoir level.
 
-##### Battery:
+##### батарея:
 
 This shows the current battery voltage of the patch.
 
-##### Pump type:
+##### Тип помпы:
 
 This shows the current pump type number.
 
-##### FW version:
+##### Версия ПО:
 
 This shows the current firmware version of the patch.
 
-##### Patch no:
+##### Номер патча:
 
 This shows the sequence number of the activated patch. This number is incremented every time a new patch is activated.
 
-##### Patch expires:
+##### Патч заканчивается:
 
 This shows the date and time when the patch will expire.
 
-##### Refresh:
+##### Обновить:
 
 This button will refresh the status of the patch.
 
@@ -323,11 +323,11 @@ This button will refresh the status of the patch.
 
 This button will start the process to change the patch. See [Activate patch](#activate-patch) for more information.
 
-### Reset alarms
+### Сбросить оповещения
 
 The alarm button will appear on the overview screen when there is an active alarm that can be reset. Pressing this button will reset the alarms and resume insulin delivery if the patch has been suspended due to the alarm. E.g. when suspended due to a maximum daily insulin delivery alarm.
 
-![Reset alarms](../images/medtrum/ResetAlarms.png)
+![Сбросить оповещения](../images/medtrum/ResetAlarms.png)
 
 Press the **Reset Alarms** button to reset the alarms and resume normal operation.
 
