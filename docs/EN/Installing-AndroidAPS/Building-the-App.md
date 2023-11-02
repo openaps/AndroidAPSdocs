@@ -4,7 +4,7 @@ Prerequisites: 
 
 - You have read the whole of this section “**3. Building the App**” before starting
 
-- You have a windows’ PC and a Android phone (which will host the AAPS app) are running supported versions (windows 10+,  Android 9+)  and **all the latest security updates, have internet access and admin privileges**, since some steps require downloading and installing programs.
+- You have a computer and a Android phone (which will host the AAPS app) are running recent supported versions (windows 10+,  Android 9+,...)  and **all the latest security updates, have internet access and admin privileges**, since some steps require downloading and installing programs. 
 
 - The Android phone is already tied to your personal”everyday”  email such as a Gmail account.\
   In this tutorial we use an alias "Donald Muck" with email address: <donald.muck42@gmail.com> as an example
@@ -16,9 +16,9 @@ Prerequisites: 
   - **AAPS** will receive BG from the CGM
   - **AAPS** will send BG & Treatments to NightScout.
 
-Note: There are several ways to build and configure an **AAPS** system. Here we provide a step-by-step guide for building and installing the AAPS app for the most common scenario (Windows PC). 
+Note: There are several ways to build and configure an **AAPS** system. Here we provide a step-by-step guide for building and installing the AAPS app for the most common scenario (Windows 11 PC & Android 13). 
 
-## **Windows PC setup & building AAPS**
+## **Computer setup & building AAPS**
 
 This section will get you ready for building AAPS, by setting up a dedicated email account, and downloading and installing  **Android Studio** You will then download **AAPS** source code from the internet and  build the AAPS app This includes several steps to facilitate day-to-day use, any required maintenance, tracking and troubleshooting.
 
@@ -35,7 +35,7 @@ Potential advantages of using a dedicated Google account for AAPS: 
 :class: note
 
 - Dedicated Google drive space means you will not risk filling up your personal Google drive limit with **Export Preferences**.
-- Each version of **AAPS** (and supporting apps like xdrip+, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
+- Each version of **AAPS** (and supporting apps like xdrip+, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your Computer or phone is stolen/lost/broken you will still have access.
 - By harmonizing the setup, it will make online support simpler across users with similar folder structure.
 - Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
 - Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
@@ -47,16 +47,16 @@ follow the instructions in our  ![HOW TO create a dedicated gmail account](../FA
 
 
 
-### **Mount google drive(s) on your PC & Phone**
+### **Mount google drive(s) on your Computer & Phone**
 
 (⌛About 10 minutes )\
 ![](../images/Building-the-App/building_0015.png)
 
-A Gmail account provides access to free cloud storage from Gdrive which can be accessed directly as a “virtual” drive from both your PC AND your phone. The scenario below will show you how to use this feature in order to simplify sharing files between the phone and the PC and backup important settings/files in Gdrive.
+A Gmail account provides access to free cloud storage from Gdrive which can be accessed directly as a “virtual” drive from both your Computer AND your phone. The scenario below will show you how to use this feature in order to simplify sharing files between the phone and the Computer and backup important settings/files in Gdrive.
 
-If you have not done so already, install Gdrive on your PC: 
+If you have not done so already, install Gdrive on your Computer: 
 
-#### Install Google drive (“Gdrive”) on your PC
+#### Install Google drive (“Gdrive”) on your Computer
 
 Please see enclosed step-by-step 4 minutes video  here:<https://youtu.be/lZs2_HOnUQ0>
 
@@ -66,9 +66,9 @@ Please see enclosed step-by-step 4 minutes video  here:<https://youtu.be/lZs2_HO
 
 3. From the gear icon next to your profile picture select “Get drive for desktop”  
 
-4. Download & Install the Gdrive application on your PC
+4. Download & Install the Gdrive application on your Computer
 
-5. By default,Gdrive will appear on your PC as G:\My Drive, create 3 subfolders under My Drive:
+5. By default,Gdrive will appear on your Computer as G:\My Drive, create 3 subfolders under My Drive:
 
    - AAPS\_APK  \
      (to store your own versions of the AAPS application as you build it and update it overtime)
@@ -285,7 +285,7 @@ On the Android Studio welcome screen click “Customize” (1) on the left and t
 
 - Eventually git.exe cannot be found automatically or the Test will result in an error (1):\
   ![Git not found](../images/Building-the-App/building_0037.png)\
-  In this case click on the folder icon (2).
+  In this case, if you can't locate git's location or didn't save it in your cheat sheet click on the folder icon (2).
 - Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find “git.exe” if you are unsure where git has been installed. You are looking for a file named “git.exe”, located in \*_\bin\*_ folder.
 - Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3) and click “OK” (4).\
   ![Select git manually](../images/Building-the-App/building_0038.png)
