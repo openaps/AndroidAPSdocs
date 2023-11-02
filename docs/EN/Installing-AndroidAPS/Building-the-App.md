@@ -107,7 +107,7 @@ Nightscout is mainly used to correlate data collected from the CGM and the pump�
 
 If you don’t already have one, you will need a Nightscout server]\(link to AAPS docs about Nightscout options) to use **AAPS**.  
 
-This can be done very simply by using a paid hosting service ($5-$15 per month), or you can do it for free using cloud providers (about 1h to setup with Azure) or \[Heroku]\(https\://nightscout.github.io/vendors/heroku/new\_user/) or self-hosting solutions.\
+This can be done very simply by using a paid hosting service ($5-$15 per month), or you can do it for free using cloud providers (about 1h to setup with Azure) or self-hosting solutions.\
  
 
 A Nightscout account is currently required to pass objective 1 of the AAPS setup, and for most AAPS users it is a key reporting/analysis tool for you and your careteam. 
