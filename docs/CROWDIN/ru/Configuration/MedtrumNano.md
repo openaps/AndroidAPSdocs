@@ -152,82 +152,82 @@ This setting changes the behavior of the patch. Если включено, ср�
 
 This setting is forced to enabled when the Medtrum driver is enabled. It will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
 
-For safety reasons this setting cannot be disabled.
+В целях безопасности эта настройка не отключается.
 
-##### Pump unreachable threshold [min]
+##### Порог недоступности помпы [min]
 
 ***Default: 30 min.***
 
-This setting changes the time after which AAPS will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
+Этот параметр изменяет время, после которого AAPS будет оповещать вас о недоступности помпы. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
 
-This setting can be changed when using Medtrum pump but it is recommended to set it at 30 minutes for safety reasons.
+Эта настройка может быть изменена на Medtrum, но по соображениям безопасности рекомендуется оставить 30 минут.
 
-### Step 3: Activate patch
+### Шаг 3: Активировать патч
 
-**Before you continue:**
-- Have your Medtrum Nano pumpbase and a reservoir patch ready.
-- Make sure that AAPS is properly set up and a [profile is activated](../Usage/Profiles.md).
-- Other devices that can talk to the Medtrum pump are disabled (PDM and Medtrum app)
+**Прежде чем продолжить:**
+- Приготовьте к работе помповую базу Medtrum Nano и резервуар патча.
+- Убедитесь, что AAPS правильно настроен и [профиль активирован](../Usage/Profiles.md).
+- Другие устройства, которые могут общаться с помпой Medtrum отключены (пульт PDM и приложение Medtrum)
 
-#### Activate patch from the Medtrum overview Tab
+#### Активируйте патч из вкладки Medtrum
 
-Navigate to the [Medtrum TAB](#overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
+Перейдите к [вкладке Medtrum](#overview) в интерфейсе AAPS и нажмите кнопку **Сменить Патч** в правом нижнем углу.
 
-If a patch is already active, you will be prompted to deactivate this patch first. see [Deactivate Patch](#deactivate-patch).
+Если патч активен, вам будет предложено сначала деактивировать его. см. [Деактивация патча](#deactivate-patch).
 
-Follow the prompts to fill and activate a new patch. Please note - it is important to only connect the pumpbase to the reservoir patch at the step when you are prompted to do so. **You must only put the pump on your body and insert the cannula when prompted to during the activation process (after priming is complete).**
+Следуйте подсказкам и активируйте новый патч. Обратите внимание - на этом этапе при подсказке важно подключить только базу помпы к резервуару патча. **Поместить помпу на тело и и вставить катетер следует при появлении запроса в процессе активации (после заполнения резервуара).**
 
-##### Start Activation
+##### Начните активацию
 
-![Start Activation](../images/medtrum/activation/StartActivation.png)
+![Начните активацию](../images/medtrum/activation/StartActivation.png)
 
-At this step, double check your serial number and make sure the pumpbase is not connected to the patch yet.
+На этом шаге дважды нажмите на свой серийный номер и убедитесь, что база помпы еще не подключена к патчу.
 
-Press **Next** to continue.
+Нажмите **Далее** для продолжения.
 
-##### Fill the patch
+##### Заполните патч
 
-![Fill the patch](../images/medtrum/activation/FillPatch.png)
+![Заполните патч](../images/medtrum/activation/FillPatch.png)
 
-Once the patch is detected and filled with a minimum of 70Units of insulin, press **Next** will appear.
+После того, патч определился и заполнился минимумом 70 ед. инсулина, появится кнопка **Далее**. Нажмите ее.
 
-##### Prime the patch
+##### Первичное заполнение (прайм) катетера
 
 ![Half press](../images/medtrum/activation/HalfPress.png)
 
 Do not remove the safety lock and press the needle button on the patch.
 
-Press **Next** to start prime
+Нажмите **Далее** для начала заполнения
 
 ![Prime progress](../images/medtrum/activation/PrimeProgress.png)
 
 ![Prime complete](../images/medtrum/activation/PrimeComplete.png)
 
-Once the prime is complete, press **Next** to continue.
+По завершении первичного заполнения катетера нажмите **Далее**.
 
-##### Attach Patch
+##### Прикрепите патч
 
 ![Attach patch](../images/medtrum/activation/AttachPatch.png)
 
-Clean the skin, remove stickers and attach the patch to your body. Remove safety lock and press the needle button on the patch to insert the cannula.
+Очистите кожу, удалите наклейки и прикрепите патч к телу. Снимите предохранительный замок и нажмите на кнопку иглы на патче, чтобы вставить катетер.
 
-Press **Next** to activate the patch.
+Нажмите **Далее** для активации патча.
 
-##### Activate Patch
+##### Активируйте патч
 
 ![Activate patch](../images/medtrum/activation/ActivatePatch.png)
 
-When activation is complete, the following screen will appear
+По завершении активации появится следующий экран
 
 ![Activation complete](../images/medtrum/activation/ActivationComplete.png)
 
-Press **OK** to return to main screen.
+Нажмите **OK** для возврата к главному экрану.
 
-### Deactivate patch
+### Деактивация патча
 
 To deactivate a currently active patch, go to the [Medtrum TAB](#overview) in the AAPS interface and press the **Change Patch** button.
 
-![Deactivate patch](../images/medtrum/activation/DeactivatePatch.png)
+![Деактивация патча](../images/medtrum/activation/DeactivatePatch.png)
 
 You will be asked to confirm that you wish to deactivate the current patch. **Please note that this action is not reversable.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. If you are not ready to activate a new patch, press **Cancel** to return to the main screen.
 
