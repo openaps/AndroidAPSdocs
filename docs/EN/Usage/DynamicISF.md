@@ -34,6 +34,6 @@ Future ISF uses the same TDD value as generated above, taking the adjustment fac
 
 Otherwise, minimum predicted BG is used.
 
-### Adjust sensitivity and BG setting
+### Adjust sensitivity and basal setting
 
-This setting replaces Autosens, and uses the last 24h TDD/7D TDD as the basis for adjusting calculated ISF and also for increasing and decreasing basal rate, in the same way that standard Autosens does. 
+If activated DynISF uses the last 24h TDD/7D TDD as the basis for adjusting calculated ISF and also for increasing and decreasing basal rate, in the same way that standard Autosens does. 
