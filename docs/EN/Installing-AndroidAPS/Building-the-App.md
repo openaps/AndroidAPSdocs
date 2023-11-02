@@ -178,7 +178,7 @@ Git is a program that allows developers to track changes in their code and colla
 ![](../images/Building-the-App/building_0021.png)
 
 A video recording of the installation is available here:\
-<https://drive.google.com/file/d/1-fWdqT7HoplP2m5M9IxCAldlkwuOJbmG/view?usp=drive_link>
+<https://youtu.be/6glFOHpZGXA>
 
 #### Download Git
 
@@ -323,7 +323,7 @@ Note: Even if you uninstall Android Studio, most of these files will remain, mak
 
 Please follow the steps below\
 (If needed, you can find an installation demo video recording here:\
-<https://drive.google.com/file/d/1-jH5izbSwrMc2jTNi9fC84FNjevnKUh-/view?usp=drive_link> )
+<https://youtu.be/t_U8YSg1mwM> )
 
 - On the Android Studio welcome screen select “Projects” (1) on the left and then “Get from VCS” (2). (VCS stands for Version Control System, which in our case is the Git program you just configured earlier.)\
   ![Android Studio wizard](../images/Building-the-App/building_0040.png)
@@ -383,8 +383,8 @@ In order to run AAPS on the phone the application needs to integrate with Androi
   :::
 
 Please follow the steps below\
-(If needed, you can find an installation video recording here:\
-<https://drive.google.com/file/d/10k9bvqkvunBThnZU2yL5OENkeH59tuVj/view?usp=drive_link> )
+(If needed, you can find an installation video recording here:
+<https://youtu.be/kOwv3JlsQ0k> )
 
 - In the menu, go to File (1) > Settings (2) (or Android Studio > Preferences on Mac).\
   ![](../images/Building-the-App/building_0051.png)
