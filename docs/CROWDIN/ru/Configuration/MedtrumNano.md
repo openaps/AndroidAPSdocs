@@ -229,7 +229,7 @@ To deactivate a currently active patch, go to the [Medtrum TAB](#overview) in th
 
 ![Деактивация патча](../images/medtrum/activation/DeactivatePatch.png)
 
-Вам будет предложено подтвердить отключение текущего патча. **Please note that this action is not reversable.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. If you are not ready to activate a new patch, press **Cancel** to return to the main screen.
+Вам будет предложено подтвердить отключение текущего патча. **Обратите внимание, что это действие необратимо.** После завершения деактивации, вы можете нажать **Далее** для активации нового патча. Если вы не готовы активировать новый патч, нажмите кнопку **Отмена** для выхода на главный экран.
 
 ![Deactivate progress](../images/medtrum/activation/DeactivateProgress.png)
 
@@ -237,29 +237,29 @@ If Android APS in unable to deactivate the patch (For instance because the pumpb
 
 ![Deactivate complete](../images/medtrum/activation/DeactivateComplete.png)
 
-Once deactivation is complete, press **OK** to return to main screen or press **Next** to continue the process to activate a new patch.
+После завершения деактивации, нажмите **OK** для возврата в главное окно или нажмите **Далее** для продолжения активации нового патча.
 
-### Resume interrupted activation
+### Возобновить прерванную активацию
 
-If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#overview) in the AAPS interface and press the **Change Patch** button.
+Если активация патча прервана, например, потому, что села батарея телефона, можно возобновить процесс, перейдя на вкладку [Medtrum](#overview) и нажав кнопку **Заменить Patch**.
 
-![Resume interrupted activation](../images/medtrum/activation/ActivationInProgress.png)
+![Возобновить прерванную активацию](../images/medtrum/activation/ActivationInProgress.png)
 
-Press **Next** to continue the activation process. Press **Discard** to discard the current patch session and make it possible to activate a new patch.
+Нажмите **Далее** чтобы продолжить активацию патча. Нажмите **Завершить пользование патчем** для сброса текущего патча и активации нового.
 
 ![Reading activation status](../images/medtrum/activation/ReadingActivationStatus.png)
 
-The driver will try to determine the current status of the patch activation. If this was successful it will go into the activation progress at the current step.
+Драйвер попробует определить текущий статус активации патча. Если это пройдет успешно, то на текущем шаге начнется активация.
 
 ## Общие замечания
 
-The overview contains the current status of the Medtrum patch. It also contains buttons to change the patch, reset alarms and refresh the status.
+На обзорном экране отражен текущий статус патча Medtrum. На нем также находятся кнопки для замены патча, сброса оповещений и обновления статуса.
 
 ![Medtrum Overview](../images/medtrum/Overview.png)
 
-##### BLE Status:
+##### Статус BLE:
 
-This shows the current status of the Bluetooth connection to the pumpbase.
+Показывает текущий статус подключения Bluetooth к помповой базе.
 
 ##### Last connected:
 
@@ -267,17 +267,17 @@ This shows the last time the pump was connected to AAPS.
 
 ##### Pump state:
 
-This shows the current state of the pump. For example:
-    - ACTIVE : The pump is activated and running normally
-    - STOPPED: The patch is not activated
+Показывает текущее состояние помпы. Например:
+    - АКТИВНА: помпа активирована и работает в обычном режиме
+    - ОСТАНОВЛЕНА: Патч не активирован
 
-##### Basal type:
+##### тип базала:
 
-This shows the current basal type.
+Показывает текущий тип базала.
 
 ##### Скорость базала:
 
-This shows the current basal rate.
+Показывает текущую базальную скорость.
 
 ##### предыдущий болюс:
 
@@ -285,7 +285,7 @@ This shows the last bolus that was delivered.
 
 ##### Активный болюс:
 
-This shows the active bolus that is currently being delivered.
+Показывает подающийся болюс.
 
 ##### Активные оповещения:
 
@@ -293,7 +293,7 @@ This shows any active alarms that are currently active.
 
 ##### резервуар:
 
-This shows the current reservoir level.
+Показывает текущий уровень резервуара.
 
 ##### батарея:
 
@@ -305,27 +305,27 @@ This shows the current pump type number.
 
 ##### Версия ПО:
 
-This shows the current firmware version of the patch.
+Показывает текущую версию прошивки патча.
 
 ##### Номер патча:
 
-This shows the sequence number of the activated patch. This number is incremented every time a new patch is activated.
+Показывает порядковый номер активированного патча. Номер увеличивается каждый раз при активации нового патча.
 
 ##### Патч заканчивается:
 
-This shows the date and time when the patch will expire.
+Показывает дату и время окончания срока работы патча.
 
 ##### Обновить:
 
-This button will refresh the status of the patch.
+Эта кнопка обновляет статус патча.
 
 ##### Change patch:
 
-This button will start the process to change the patch. See [Activate patch](#activate-patch) for more information.
+Эта кнопка запустит процесс замены патча. Смотрите [Активировать патч](#activate-patch) для получения дополнительной информации.
 
 ### Сбросить оповещения
 
-The alarm button will appear on the overview screen when there is an active alarm that can be reset. Pressing this button will reset the alarms and resume insulin delivery if the patch has been suspended due to the alarm. E.g. when suspended due to a maximum daily insulin delivery alarm.
+Кнопка оповещения появляется на главном экране, когда есть активное оповещение, которое может быть убрано с экрана. Нажатие этой кнопки сбросит оповещение и возобновит подачу инсулина, если работа патча была приостановлен из-за оповещения. E.g. when suspended due to a maximum daily insulin delivery alarm.
 
 ![Сбросить оповещения](../images/medtrum/ResetAlarms.png)
 
