@@ -97,7 +97,7 @@ Please see enclosed step-by-step 4 minutes video  here:<https://youtu.be/lZs2_HO
 :::{admonition} why Nightscout?
 :class: note
 
-Nightscout is mainly used to correlate data collected from the CGM and the pump  and generate reports which can be viewed by you and your careteam. Nightscout also has a large set of additional features including for \[caregivers]\(https\://androidaps.readthedocs.io/en/rework-project/remote-control.html#nightscout) you can read more about Nightscout in general \[here]\(<https://nightscout.github.io/#>)  
+Nightscout is mainly used to correlate data collected from the CGM and the pump  and generate reports which can be viewed by you and your careteam. Nightscout also has a large set of additional features including for [remote caregivers](https://androidaps.readthedocs.io/en/rework-project/remote-control.html#nightscout) you can read more about Nightscout in general [here](<https://nightscout.github.io/#>)  
 
 :::
 
@@ -215,7 +215,7 @@ Android Studio is a programme to programme programmes!  Basically, it is a stud
 
 :::
 
-As of July 2023, using Android Studio (version:_Giraffe 2022.3.1_) you can still follow these steps and screenshots taken originally from Android Studio (version: _Flamingo 2022.2.1)_. Screens can change in future versions of Android Studio. But you should be able to find your way through. [Help from the community](https://androidaps.readthedocs.io/en/rework-project/Where-To-Go-For-Help/Connect-with-other-users.html) is provided.\
+As of July 2023, using Android Studio (version:_Giraffe 2022.3.1_) you can still follow these steps and screenshots. Screens can change in future versions of Android Studio. But you should be able to find your way through. [Help from the community](https://androidaps.readthedocs.io/en/rework-project/Where-To-Go-For-Help/Connect-with-other-users.html) is provided.\
 If you need more assistance you can see a screen recording  of an install here: <https://drive.google.com/file/d/1-hi1UD1bsY5R-NzFJd20tPQTsulBjcOC/view?usp=drive_link> 
 
 One of the most important things when installing Android Studio: **Be patient!** During installation and setup, Android Studio is downloading a lot of packages and this  takes time!.
