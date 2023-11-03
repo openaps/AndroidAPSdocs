@@ -229,7 +229,7 @@ To deactivate a currently active patch, go to the [Medtrum TAB](#overview) in th
 
 ![Деактивация патча](../images/medtrum/activation/DeactivatePatch.png)
 
-You will be asked to confirm that you wish to deactivate the current patch. **Please note that this action is not reversable.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. If you are not ready to activate a new patch, press **Cancel** to return to the main screen.
+Вам будет предложено подтвердить отключение текущего патча. **Please note that this action is not reversable.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. If you are not ready to activate a new patch, press **Cancel** to return to the main screen.
 
 ![Deactivate progress](../images/medtrum/activation/DeactivateProgress.png)
 
