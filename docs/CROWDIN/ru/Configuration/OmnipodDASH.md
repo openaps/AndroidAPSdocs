@@ -8,15 +8,15 @@ These instructions are for configuring the **Omnipod DASH** generation pump **(N
 
 These are the specifications of the **Omnipod DASH** and what differentiates it from the **Omnipod EROS**:
 
-* The DASH pods are identified by a blue needle cap (EROS has a clear needle cap). The pods are otherwise identical in terms of physical dimensions
-* No need for a separate Omnipod to BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
-* BT connection only when needed, connects to send command and disconnects right after !
-* No more "no connection to link device / pod" errors
-* AAPS will wait for pod accessibility to send commands
-* On activation, AAPS will find and connect a new DASH pod.
-* Expected range: 5-10 meters (YMMV)
+* Поды DASH отличаются синим колпачком на иголке (EROS имеет прозрачный колпачок). По физическим размерам поды идентичны
+* Нет необходимости в отдельном устройстве блутус BLE для связи с подом (типа RileyLink, OrangeLink, или EmaLink).
+* Соединение блутус только при необходимости, подключается для передачи команды и отключается сразу после этого!
+* Теперь не бывает ошибок "Нет связи с устройством / подом"
+* AAPS будет ждать доступности пода для отправки команд
+* При активации, AAPS найдет и подключит новый под DASH.
+* Ожидаемый диапазон: 5-10 метров (может индивидуально отличаться)
 
-## Hardware/Software Requirements
+## Требования к аппаратному и программному обеспечению
 
 * A new **Omnipod DASH Pod** (Identified by blue needle cap)
 
