@@ -16,9 +16,9 @@ This software is part of a DIY artificial pancreas solution and is not a product
         - Medtrum TouchCare Nano 300Uс помповой базой модели: **MD8301**.
         - Если у вас есть неподдерживаемая модель и вы хотите пожертвовать аппаратное обеспечение или помощь в тестировании, пожалуйста, свяжитесь с нами через discord [здесь](https://discordapp.com/channels/629952586895851530/1076120802476441641).
 * **Версия 3.2.0.0 или новее, собранная и установленная** с помощью инструкций [Build APK](../Installing-AndroidAPS/Building-APK.md).
-* **Compatible Android phone** with a BLE Bluetooth connection
+* **Совместимый Android-телефон** с рабочим модулем BLE Bluetooth
     - См. AAPS [Примечания к выпуску](../Installing-AndroidAPS/Releasenotes.md)
-* [**Continuous Glucose Monitor (CGM)**](BG-Source.md)
+* [**Непрерывный мониторинг гликемии**](BG-Source.md)
 
 ## Подготовка к работе
 
