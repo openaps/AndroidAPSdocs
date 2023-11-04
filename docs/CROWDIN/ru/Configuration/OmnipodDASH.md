@@ -96,7 +96,7 @@ These instructions will assume that you are starting a new pod session; if this 
 
 Ensure that the new pod and the phone running AAPS are within close proximity of each other and click the **Next** button.
 
-**NOTE**: Just in case you get the below error message (this can happen), do not panic. Click on the **Retry** button. In most situations activation will continue successfully.
+**ПРИМЕЧАНИЕ**: Если вы получите сообщение об ошибке ниже (это может произойти), не паникуйте. Click on the **Retry** button. В большинстве случаев активация будет продолжена успешно.
 
 ![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
