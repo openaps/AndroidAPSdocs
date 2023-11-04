@@ -58,7 +58,7 @@ These instructions will assume that you are starting a new pod session; if this 
 
 ### Option 2: The Config Builder
 
-On an existing installation you can select the **DASH** pump from the Config builder:
+После установки AAPS можно выбрать помпу **DASH**в конфигураторе:
 
 On the top-left hand corner **hamburger menu** select **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**.
 
