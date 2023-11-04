@@ -77,7 +77,7 @@ Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜
 > 
 > ![Enable_Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Enable_Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
 
-### Verification of Omnipod Driver Selection
+### Верификация выбора драйвера Omnipod
 
 *Note: If you have exited the Setup Wizard early without selecting your RileyLink, the Omnipod Driver is enabled but you will still need to select your RileyLink.  You may see the Omnipod (POD) tab appear as it does below*
 
@@ -133,7 +133,7 @@ Before you can activate a pod please ensure you have properly configured and con
 
     > ![Activate_Pod_1](../images/omnipod/Activate_Pod_1.png) ![Activate_Pod_2](../images/omnipod/Activate_Pod_2.png)
 
-02. The **Fill Pod** screen is displayed. Fill a new pod with at least 80 units of insulin and listen for two beeps indicating that the pod is ready to be primed. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use 12 to 15 units.
+02. Появится экран **Заполнить Pod**. Заполните новый Pod по меньшей мере 80 единицами инсулина и дождитесь двух звуковых сигналов, подтверждающих, что Pod готов к первичному заполнению катетера. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use 12 to 15 units.
 
     > ![Activate_Pod_3](../images/omnipod/Activate_Pod_3.png)
     > 
@@ -482,7 +482,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 
 > ![Omnipod_Tab_Pod_Management](../images/omnipod/Omnipod_Tab_Pod_Management.png)
 
-- **Activate Pod**
+- **Активация Пода**
 
   > ![activate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
   > 
