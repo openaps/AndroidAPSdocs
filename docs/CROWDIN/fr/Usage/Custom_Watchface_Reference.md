@@ -1,20 +1,20 @@
-# Custom Watchface reference document
+# Document de référence cadrans personnalisés
 
-This page is for Designer of new Watchfaces, it will list all the key words and features available when you want to create or animate a new watchface
+Cette page est destinée aux concepteurs de nouveaux cadrans de montre, elle liste tous les mots clés et les fonctionnalités disponibles lorsque vous voulez créer ou animer une nouveau cadran
 
-## Custom Watchface format
+## Format des Cadrans personnalisés
 
-Custom Watchface is an open format designed for AAPS and associated to the new "AAPS (Custom)" watchface available on Watch
+Le format des Cadrans personnalisés est ouvert et conçu specialement pour AAPS, il est associé au nouveau cadran "AAPS (perso)" disponible sur la montre
 
-Watchface file is a simple zip file, but to be recognize as a Watchface file, it must contains:
+Le fichier Cadran est un fichier zip simple, mais pour être reconnu comme Cadran AAPS, il doit contenir:
 
-- One image file named CustomWatchface (can be bitmap files `CustomWatchface.jpg`, `CustomWatchface.png` or a vector `CustomWatchface.svg`). This file is the little icon used to select the watchface when you click on "Load Watchface" button, and also the image visible within AAPS Wear plugin
-- One file named `CustomWatchface.json` (see [Json structure](cwf-reference-json-structure) below). This second file is the core file that will include all information required to design the watchface. This json file must be valid (it's probably the most tricky point when you edit manually this file within a text editor, because an missing or additional comma is enough to break the json format). This json file must also include a `"metadata"` bloc with a `"name"` key with not empty value. This will be the name of your custom watchface (see [Metadata settings](cwf-reference-metadata-settings) below)
-- the size of this zip should be as small as possible (less than about 500kb). If this file is too big, it will just be blocked and not transmitted to the watch.
+- Un fichier image nommé CustomWatchface (cela peut être un fichier bitmap `CustomWatchface.jpg`, `CustomWatchface.png` ou un fichier vecteur `CustomWatchface.svg`). Ce fichier est la petite icône utilisée pour sélectionner le cadran lorsque vous cliquez sur le bouton "Charger le cadran", et aussi l'image visible dans le plugin AAPS Wear
+- Un fichier nommé `CustomWatchface.json` (voir [Structure Json](cwf-reference-json-structure) ci-dessous). Ce deuxième fichier est le fichier principal qui contient toutes les informations nécessaires pour le cadran. Ce fichier json doit être valide (c'est probablement le point le plus délicat lorsque vous éditez manuellement ce fichier dans un éditeur de texte, parce qu'une simple virgule manquante ou additionnelle est suffisante pour casser le format json). Ce fichier json doit également inclure un bloc `"metadata"` avec une clé `"name"` contenant une valeur non vide. Ce sera le nom de votre cadran personnalisé (voir [Paramètres metadata](cwf-reference-metadata-settings) ci-dessous)
+- la taille de ce zip devrait être aussi petite que possible (moins de 500 ko). Si ce fichier est trop volumineux, il sera juste bloqué et ne sera pas transmis à la montre.
 
-The zip file can also contains some additional resource files:
+Le fichier zip peut également contenir des fichiers de ressources supplémentaires :
 
-- HardCoded file names for images that will be used used into standard views included into watchface (like `Background`, `CoverChart`... see [List of hardcoded resource files](cwf-reference-list-of-hardcoded-resource-files) below). All these files can be either `jpg`, `png` or `svg` format. but for most of them, you will have to use `png` or `svg` that manage transparency (jpg are smaller in size compared to png, but with no transparency). Note that the best quality associated to the smallest size will generally be with svg files (vector format).
+- Des noms de fichiers codés en dur pour les images qui seront utilisées dans les vues standards incluses dans watchface (comme `Background`, `CoverChart`... voir [Liste des fichiers de ressources codés en dur](cwf-reference-list-of-hardcoded-resource-files) ci-dessous). All these files can be either `jpg`, `png` or `svg` format. but for most of them, you will have to use `png` or `svg` that manage transparency (jpg are smaller in size compared to png, but with no transparency). Note that the best quality associated to the smallest size will generally be with svg files (vector format).
 - addtional resource files with free names. These additional files can be either image files, or font files (`ttf` and `otf` format are accepted for fonts). Note that for these additional files, the `filename` (without extension) will be used as the keyValue, within json file, to specify where or when these files should be used
   - image files are often used as background of text views or for dynamic animation (like battery level from 0% to 100%)
   - font files allow you to use dedicated fonts within your watchface
@@ -997,7 +997,7 @@ Now the text will be in black on white background with a size of 19
 
 (cwf-reference-list-of-hardcoded-resource-files)=
 
-### List of HardCoded resource files
+### Liste des fichiers de ressources codés en dur
 
 For most images, High and Low suffix allow tuning of image according to BG level (in Range, Hyper or Hypo)
 
