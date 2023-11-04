@@ -40,21 +40,21 @@ These instructions will assume that you are starting a new pod session; if this 
 
 **Your pod will not stop delivering insulin when it is not connected to AAPS**. Default basal rates are programmed on the pod on activation as defined in the current active profile. Когда работает AAPS, он будет отправлять временные команды на изменение базала, каждая из которх устанавливает базал максимум на 120 минут. Если по каким-то причинам под не получает никаких новых команд (например, вследствие потери связи с подом из-за расстояния до телефона), он автоматически вернется к базальной скорости по умолчанию.
 
-**30 -минутные профили базала НЕ поддерживаются в AAPS.** **Профиль AAPS не поддерживает 30-минутный базальный интервал** Если вы новичок в AAPS и устанавливаете базальный профиль впервые, имейте в виду, что получасовые базальные скорости не поддерживаются в AAPS, и следует настроить свой базальный профиль на часовые интервалы. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Omnipod Dash hardware itself supports the 30 min basal rate profile increments, AAPS is not able to take them into account with its algorithms currently.
+**30 -минутные профили базала НЕ поддерживаются в AAPS.** **Профиль AAPS не поддерживает 30-минутный базальный интервал** Если вы новичок в AAPS и устанавливаете базальный профиль впервые, имейте в виду, что получасовые базальные скорости не поддерживаются в AAPS, и следует настроить свой базальный профиль на часовые интервалы. Например, если ваша базальная скорость 1,1 ед., начинается в 09:30, длится 2 часа и заканчивается в 11:30, такие настройки работать не будут. Следует изменить базал в 1,1 единицы на диапазон времени с 9:00 до 11:00 или с 10:00 до 12:00. Несмотря на то, что аппаратное обеспечение Omnipod Dash поддерживает профили с 30-минутными отрезками базальной скорости, AAPS в настоящее время не в состоянии учесть их с помощью своих алгоритмов.
 
-**0U/h profile basal rates are NOT supported in AAPS** While the DASH pods do support a zero basal rate, since AAPS uses multiples of the profile basal rate to determine automated treatment it cannot function with a zero basal rate. A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.
+**Скорость базала 0 ед/ч НЕ поддерживается в AAPS** Несмотря на то, что Omnipod Dash поддерживает нулевую базальную скорость; AAPS использует множество базальных профилей для автоматической терапии и поэтому не может функционировать с нулевой базовой скоростью. A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.
 
-## Enabling the Dash Driver in AAPS
+## Включение драйвера Dash в AAPS
 
-You can enable the Dash driver in AAPS in **two ways**:
+Активировать драйвер Omnipod Dash в AAPS можно **двумя способами**:
 
 ### Option 1: New installations
 
-When you are installing AAPS for the first time, the **Setup Wizard** will guide you through installing AAPS. Select “DASH” when you reach Pump selection.
+Когда вы устанавливаете AAPS впервые, вам поможет **Мастер настройки**. Когда дойдете до выбора помпы, выбирайте DASH.
 
 ![Enable_Dash_1](../images/DASH_images/Enable_Dash/Enable_Dash_1.png)
 
-When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up AAPS (see option 2).
+Если сомневаетесь, можете выбрать «Виртуальную помпу» и выбрать «DASH» после настройки AAPS (см. вариант 2).
 
 ### Option 2: The Config Builder
 
