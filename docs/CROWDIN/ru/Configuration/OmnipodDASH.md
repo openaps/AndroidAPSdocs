@@ -100,15 +100,15 @@ Ensure that the new pod and the phone running AAPS are within close proximity of
 
 ![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
-3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself).  A green checkmark will be shown upon successful priming, and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
+3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself).  По завершении первичного заполнения на экране появится зеленая галочка и и станет активной кнопка **Далее**. Нажмите на кнопку **Далее** для завершения инициализации и появления экрана **Подключить Pod**.
 
 ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
-4. Next, prepare the infusion site of the new pod. Remove the pod's plastic needle cap. If you see something that sticks out of the pod, cancel the process and start with a new pod. If everything looks OK, take off the white paper backing from the adhesive and apply the pod to the selected site on your body. When finished, click on the **Next** button.
+4. Затем подготавливаем инфузионный отсек нового пода. Снимите пластиковый колпачок иглы. Если вы видите нечто лишнее, торчащее из пода, отмените процесс и возьмите новый под. If everything looks OK, take off the white paper backing from the adhesive and apply the pod to the selected site on your body. When finished, click on the **Next** button.
 
 ![Activate_Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
 
-5. The **Attach Pod** dialog box will now appear. **click on the OK button ONLY if you are ready to deploy the cannula**.
+5. Теперь появится диалоговое окно **Подключить Pod**. **click on the OK button ONLY if you are ready to deploy the cannula**.
 
 ![Activate_Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
 
