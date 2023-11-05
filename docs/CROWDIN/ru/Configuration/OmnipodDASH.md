@@ -191,7 +191,7 @@ Ensure that the new pod and the phone running AAPS are within close proximity of
 
 Дальнейшее описание поможет вам подтверждать получение и убирать звуковые сигналы, когда активное время Pod достигнет 72 часов (3х суток). Этот предел времени для оповещения определен в настройках сигналов **Времени до выключения** Dash. Максимальная продолжительность работы Pod составляет 80 часов (3е суток + 8 часов), однако производитель (Insulet) рекомендует не превышать 72 часа (3х суток).
 
-1. When the defined **Hours before shutdown** warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and pod change will be required soon. You can verify this on the **DASH** tab, the **Pod expires: (1)** field will show the exact time the pod will expire (72 hours after activation), and the text will turn **red** after this time has passed. Under the **Active Pod alerts (2)** field the status message **Pod will expire soon** is displayed. This also will trigger displaying the **SILENCE ALERTS (3)** button.
+1. When the defined **Hours before shutdown** warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and pod change will be required soon. Проверить срок замены можно на вкладке **DASH** в поле **Срок действия Пода истекает(1)**, где показывается точное время с момента активации и текст этот становится **красным** спустя 72 часа после активации. В поле **Активные оповещения помпы (2)** отображается сообщение о статусе **Срок работы Pod истекает**. Также появится кнопка **заглушить сигналы оповещения (3)**.
 
 ![ACK_alerts_1](../images/DASH_images/ACK_Alerts/ACK_ALERTS_1.png)
 
