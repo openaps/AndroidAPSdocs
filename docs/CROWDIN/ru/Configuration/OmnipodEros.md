@@ -143,15 +143,15 @@ Before you can activate a pod please ensure you have properly configured and con
 
     > ![Activate_Pod_4](../images/omnipod/Activate_Pod_4.png) ![Activate_Pod_5](../images/omnipod/Activate_Pod_5.png)
 
-04. Upon successful priming a green checkmark will be shown and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
+04. Upon successful priming a green checkmark will be shown and the **Next** button will become enabled. Нажмите на кнопку **Далее** для завершения инициализации и появления экрана **Подключить Pod**.
 
     > ![Activate_Pod_6](../images/omnipod/Activate_Pod_6.png)
 
-05. Next, prepare the infusion site of the new pod. Remove the pod's plastic needle cap and white paper backing from the adhesive and apply the pod to your usually selected site on your body. When finished, click on the **Next** button.
+05. Затем подготавливаем инфузионный отсек нового пода. Remove the pod's plastic needle cap and white paper backing from the adhesive and apply the pod to your usually selected site on your body. When finished, click on the **Next** button.
 
     > ![Activate_Pod_7](../images/omnipod/Activate_Pod_7.png)
 
-06. The **Attach Pod** dialog box will now appear. **ONLY click on the OK button if you are ready to deploy the cannula**.
+06. Теперь появится диалоговое окно **Подключить Pod**. **ONLY click on the OK button if you are ready to deploy the cannula**.
 
     > ![Activate_Pod_8](../images/omnipod/Activate_Pod_8.png)
 
