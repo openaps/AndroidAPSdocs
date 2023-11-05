@@ -149,7 +149,7 @@ Ensure that the new pod and the phone running AAPS are within close proximity of
 
 ![Deactivate_Pod_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)    ![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
 
-2. On the **Deactivate Pod** screen, click on the **Next** button to begin the process of deactivating the pod. Вы получите подтверждающий звуковой сигнал о том, что деактивация прошла успешно.
+2. На экране **Деактивировать Pod** нажмите кнопку **Далее** для начала процесса деактивации пода. Вы получите подтверждающий звуковой сигнал о том, что деактивация прошла успешно.
 
 ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg) ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
 
@@ -169,9 +169,9 @@ Ensure that the new pod and the phone running AAPS are within close proximity of
 
 ### Возобновление подачи инсулина
 
-**Note**: During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can be suspended. Read [**Delivery suspended**](OmnipodDASH) in the troubleshooting section for more details.
+**Примечание**: При переключениях профиля, под должен приостановить подачу инсулина перед установкой нового базального профиля. Если связь между двумя командами не удается, подача может быть приостановлена. Read [**Delivery suspended**](OmnipodDASH) in the troubleshooting section for more details.
 
-Use this command to instruct the active, currently suspended pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal profile. The pod will again accept commands for bolus, TBR, and SMB.
+Применяйте эту команду, чтобы приостановленный Pod возобновил подачу инсулина. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal profile. Pod снова будет принимать команды на болюс, TBR и SMB.
 
 1. Go to the **DASH** tab and ensure the **Pod status (1)** field displays **SUSPENDED**, then press the **RESUME DELIVERY (2)** button to start the process to instruct the current pod to resume normal insulin delivery. A message **RESUME DELIVERY** will display in the **Pod Status (3)** field.
 
@@ -181,15 +181,15 @@ Use this command to instruct the active, currently suspended pod to resume insul
 
 ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
 
-3. The **DASH** tab will update the **Pod status (1)** field to display **RUNNING,** and the **Resume Delivery** button will no longer be displayed
+3. Вкладка **DASH** обновит поле **статус помпы (1)**и отобразит **ВЫПОЛНЯЕТСЯ,** кнопка **Возобновить подачу** больше не будет отображаться
 
 ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
 
-### Silencing Pod Alerts
+### Отключение звуковых оповещений пода
 
-*NOTE - The SILENCE ALERTS button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the SILENCE ALERTS button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
+*ПРИМЕЧАНИЕ - Кнопка ЗАГЛУШИТЬ СИГНАЛЫ ОПОВЕЩЕНИЯ доступна на вкладке **DASH** только когда срабатывают оповещения об истечении срока действия пода или о малом количестве инсулина в резервуаре. Если кнопка ЗАГЛУШИТЬ СИГНАЛЫ ОПОВЕЩЕНИЯ не видна, но вы слышите звуковые сигналы из Pod, попробуйте "Обновить статус Pod".*
 
-The process below will show you how to acknowledge and dismiss pod beeps when the active pod time reaches the warning time limit before the pod expiration of 72 hours (3 days). This warning time limit is defined in the **Hours before shutdown** Dash alerts setting. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hours (3 days) limit.
+Дальнейшее описание поможет вам подтверждать получение и убирать звуковые сигналы, когда активное время Pod достигнет 72 часов (3х суток). Этот предел времени для оповещения определен в настройках сигналов **Времени до выключения** Dash. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hours (3 days) limit.
 
 1. When the defined **Hours before shutdown** warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and pod change will be required soon. You can verify this on the **DASH** tab, the **Pod expires: (1)** field will show the exact time the pod will expire (72 hours after activation), and the text will turn **red** after this time has passed. Under the **Active Pod alerts (2)** field the status message **Pod will expire soon** is displayed. This also will trigger displaying the **SILENCE ALERTS (3)** button.
 
