@@ -175,7 +175,7 @@ Before you can activate a pod please ensure you have properly configured and con
 
     > ![Activate_Pod_13](../images/omnipod/Activate_Pod_13.png)
 
-10. The **Pod management** menu screen should now display with the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. This is because a pod is now active and you cannot activate an additional pod without deactivating the currently active pod first.
+10. The **Pod management** menu screen should now display with the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. Это потому, что под активен и вы не можете активировать дополнительный под без деактивации текущего.
 
     Click on the back button on your phone to return to the **Omnipod (POD)** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
 
