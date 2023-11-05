@@ -189,7 +189,7 @@ Ensure that the new pod and the phone running AAPS are within close proximity of
 
 *ПРИМЕЧАНИЕ - Кнопка ЗАГЛУШИТЬ СИГНАЛЫ ОПОВЕЩЕНИЯ доступна на вкладке **DASH** только когда срабатывают оповещения об истечении срока действия пода или о малом количестве инсулина в резервуаре. Если кнопка ЗАГЛУШИТЬ СИГНАЛЫ ОПОВЕЩЕНИЯ не видна, но вы слышите звуковые сигналы из Pod, попробуйте "Обновить статус Pod".*
 
-Дальнейшее описание поможет вам подтверждать получение и убирать звуковые сигналы, когда активное время Pod достигнет 72 часов (3х суток). Этот предел времени для оповещения определен в настройках сигналов **Времени до выключения** Dash. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hours (3 days) limit.
+Дальнейшее описание поможет вам подтверждать получение и убирать звуковые сигналы, когда активное время Pod достигнет 72 часов (3х суток). Этот предел времени для оповещения определен в настройках сигналов **Времени до выключения** Dash. Максимальная продолжительность работы Pod составляет 80 часов (3е суток + 8 часов), однако производитель (Insulet) рекомендует не превышать 72 часа (3х суток).
 
 1. When the defined **Hours before shutdown** warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and pod change will be required soon. You can verify this on the **DASH** tab, the **Pod expires: (1)** field will show the exact time the pod will expire (72 hours after activation), and the text will turn **red** after this time has passed. Under the **Active Pod alerts (2)** field the status message **Pod will expire soon** is displayed. This also will trigger displaying the **SILENCE ALERTS (3)** button.
 
