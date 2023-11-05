@@ -4,6 +4,7 @@ Freestyle Libre 3 (FSL3) requires a unique setup to receive BG values in to AAPS
 
 ![FL3](https://github.com/blaqone/AndroidAPSdocs/assets/37814299/d912c1d3-06d2-4b58-ad7c-025ca1980fae)
 
+!!! Version 3.2.0.1 of AndroidAPS does not support 1-minute values. Acceleration and Smoothing does not work with 1-minute values. !!!
 
 The below methods for achieving this are using the separate app Juggluco. [Link].(https://www.juggluco.nl/Juggluco/download.html)
 It uses Juggluco to receive raw, 1-minute interval data from the sensor which is then passed to xDrip+ or AAPS. 
