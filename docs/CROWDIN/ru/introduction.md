@@ -1,20 +1,20 @@
-# Introduction to APS and AAPS
+# Введение в APS и AAPS
 
-## What is an “Artificial Pancreas System”?
+## Что такое система искусственной поджелудочной железы”?
 
-A human pancreas does a lot of things besides regulating blood sugar. However, the term **“Artificial Pancreas System” (APS)** usually refers to a system which works to automatically keep blood sugar levels within healthy limits.
+Человеческая поджелудочная железа делает много, помимо регулирования содержания сахара в крови. Однако, термин **«Система Искусственной Поджелудочной Железы» (APS)** обычно относится к системе, которая работает для автоматического поддержания уровня сахара в крови в здоровых пределах.
 
-The most basic way to do this is by detecting **glucose levels**, using these values to do **calculations**, and then delivering the (predicted) right amount of **insulin** to the body. It repeats the calculation, every few minutes, 24/7. It uses **alarms** and **alerts** to inform the user if intervention or attention is needed. This system is typically made up of a **glucose sensor**, an **insulin pump** and an **app** on a phone.
+Основным способом поддерживать этот уровень является определение **уровней гликемии**, выполнение **расчетов** и подачи (прогнозируемого) корректного количества **инсулина** в организм. Система производит эти расчеты каждые несколько минут, 24/7. Она подает **звуковые сигналы** и **оповещения** для информирования пользователя о необходимости вмешательства или для привлечения его внимания. Эта система обычно состоит из **сенсора гликемии**, **инсулиновой помпы** и **приложения** на телефоне.
 
-You can read more about the different artificial pancreas systems currently in use and in development in this 2022 review article:
+Больше о существующих в настоящее время системах искусственной поджелудочной железы и о разработках см. в этой статье 2022 года:
 
 ![Frontiers](./images/FRONTIERS_Logo_Grey_RGB.png) [Future Directions in Closed-Loop Technology](https://www.frontiersin.org/articles/10.3389/fendo.2022.919942/full#:~:text=Fully%20closed%2Dloop%20systems%2C%20unlike,user%20input%20for%20mealtime%20boluses).
 
-In the near future, some so-called "dual-hormone" systems will also have the ability to infuse glucagon alongside insulin, with the aim of preventing severe hypos and allowing even tighter blood glucose control.
+В недалеком будущем некоторые системы так называемого "двойного гормона" научатся вводить глюкагон наряду с инсулином, с целью предотвращения тяжелых гипогликемий и обеспечения более жесткого контроля глюкозы в крови.
 
 An artificial pancreas can be thought of as an [“autopilot for your diabetes”](https://www.artificialpancreasbook.com/). What does that mean?
 
-In an aircraft, an autopilot does not do the complete job of the human pilot, the pilot cannot sleep through the entire flight. The autopilot aids the work of the pilot. It relieves them of the burden of permanently monitoring the aircraft, allowing the pilot to concentrate on wider monitoring from time to time. The autopilot receives signals from various sensors, a computer evaluates them together with the pilot’s specifications and then makes the necessary adjustments, alerting the pilot to any concerns. The pilot no longer has to worry about constantly making decisions.
+В самолете автопилот не выполняет всю работу за человека, пилот не может спать на протяжении всего полета. The autopilot aids the work of the pilot. Он освобождает его от бремени постоянного наблюдения за самолетом, позволяя пилоту время от времени концентрироваться на более широком контроле. Автопилот получает сигналы от различных датчиков, компьютер оценивает их наряду со спецификациями пилота, а затем вносит необходимые корректировки, оповещая пилота о любых сложностях. Пилоту не нужно постоянно принимать решения.
 
 ![image](./images/autopilot.png)
 
