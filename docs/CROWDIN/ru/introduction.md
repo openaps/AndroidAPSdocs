@@ -69,15 +69,15 @@ Users can easily add or remove modules or functionality, and **AAPS** can be use
 
  a) The ability to set a lower glucose target 30 min before eating; you can set the target as low as 72 mg/dL (4.0 mmol/L).
 
- b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule  to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in an 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). Автоматизация продлится согласно запланированному вами времени. Such an automation could be set to only be active on certain days of the week, at certain times of day, and even at certain locations.
+ b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule  to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in an 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). Автоматизация продлится согласно запланированному вами времени. Такая автоматизация может срабатывать в определенные дни недели, в определенное время суток, и даже в определенных местах.
 
- c) If your child is on a trampoline with no advance notice, **AAPS** allows insulin  suspension for a set time period, directly via the phone.
+ c) если Ваш ребенок неожиданно оказался на батуте, **AAPS** позволит приостановить подачу инсулина на заданный период времени непосредственно по телефону.
 
- d) After reconnecting a tubed pump which has been disconnected for  swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. Any insulin not required can be overridden by just “cancelling” the missed basal.
+ d) After reconnecting a tubed pump which has been disconnected for  swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. Любой лишний инсулин может быть переопределен простой "отменой" пропущенной базы.
 
  e) **AAPS** has the facility for you to set different profiles for different situations and easily switch between them. For example, features which make the algorithm quicker to bring down elevated BG (like supermicro boluses (“**SMB**”), unannounced meals, (“**UAM**”) can be set to only work during the daytime, if you are worried about night-time hypos.
 
-These are all examples, the full range of features gives huge flexibility for daily life including sport, illness, hormone cycles _etc_. Ultimately, it is for the user to decide how to use this flexibility, and there is no one-size-fits-all automation for this.
+These are all examples, the full range of features gives huge flexibility for daily life including sport, illness, hormone cycles _etc_. В конечном счете, пользователь сам должен решить, как использовать эти возможности, универсальной автоматизации для всех не существует.
 
 #### 3) **Remote monitoring**
 There are multiple possible monitoring channels (Sugarmate, Dexcom Follow, Xdrip+, Android Auto _etc._) which are useful for parents/carers and adults in certain scenarios (sleeping/driving) who need customisable alerts. In some apps (Xdrip+) you can also turn alarms off totally, which is great if you have a new sensor “soaking” or settling down that you don’t want to loop with yet.
