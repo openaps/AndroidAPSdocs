@@ -48,11 +48,11 @@ Since OpenAPS is only compatible with certain older insulin pumps, **AAPS** (whi
 
 The **Android smartphone** will also need to have another app installed on it as well as **AAPS**. This is either a modified Dexcom app called build-your-own dexcom app [**BYODA**](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) or [**Xdrip+**](https://xdrip.readthedocs.io/en/latest/install/usethedoc/). This additional app receives glucose data from a sensor (**2**) by bluetooth, and then sends the data internally on the phone to the **AAPS app**.
 
-Приложение **AAPS** использует процесс принятия решений (**алгоритм**), созданный на базе OpenAPS. Новички начинают использовать базовый алгоритм **oref0**, но при работе с AAPS можно переключиться на более новый алгоритм **oref1**. Выбор алгоритма (ореф1 или ореф), зависит от того, что вам лучше подходит.  In both cases, the algorithm takes into account multiple factors, and performs rapid calculations every time a new reading comes in from the sensor. The algorithm then sends instructions to the insulin pump (**3**) on how much insulin to deliver by bluetooth. All the information can be sent by mobile data or wifi to the internet (**4**). This data can also be shared with followers if desired, and/or collected for analysis.
+Приложение **AAPS** использует процесс принятия решений (**алгоритм**), созданный на базе OpenAPS. Новички начинают использовать базовый алгоритм **oref0**, но при работе с AAPS можно переключиться на более новый алгоритм **oref1**. Выбор алгоритма (ореф1 или ореф), зависит от того, что вам лучше подходит.  В обоих случаях алгоритм учитывает множество факторов и выполняет быстрые вычисления каждый раз, когда поступает новые данные с сенсора. The algorithm then sends instructions to the insulin pump (**3**) on how much insulin to deliver by bluetooth. All the information can be sent by mobile data or wifi to the internet (**4**). This data can also be shared with followers if desired, and/or collected for analysis.
 
-## What are the advantages of the AAPS system?
+## Преимущества системы AAPS
 
-The OpenAPS algorithm used by **AAPS** controls blood sugar levels in the absence of user input, according to the users’ defined parameters (important ones being basal rates, insulin sensitivity factors, insulin-to-carb ratios, duration of insulin activity etc.), reacting every 5 minutes to the new sensor data. Some of the reported advantages of using AAPS are extensive fine-tunable options, automations and increased transparency of the system for the patient/caregiver. This can result in better control over your (or your dependant’s) diabetes, which in turn may give improved quality of life and increased peace of mind.
+Алгоритм OpenAPS, используемый **AAPS** контролирует уровни сахара в крови при отсутствии вводимых пользователем данных, в соответствии с заданными параметрами (наиболее важные из них базальная скорость, коэффициент чувствительности к инсулину ISF, углеводный коэффициент IC, продолжительность действия инсулина и т. д.), реагируя каждые 5 минут на новые данные от сенсора. Ко многим отмеченным пользователями преимуществам AAPS относятся множество тонких настроек, автоматизация и прозрачность системы для пациентов/опекунов. This can result in better control over your (or your dependant’s) diabetes, which in turn may give improved quality of life and increased peace of mind.
 
 ### **Specific advantages include:**
 
@@ -61,7 +61,7 @@ To read about the safety features of the algorithms, known as oref0 and oref1, [
 
 #### 1) **Hardware flexibility**
 
-**AAPS** works with a wide range of insulin pumps and sensors. So for example, if you develop an allergy to Dexcom sensor patch glue, you could switch to using a Libre sensor instead. That offers flexibility as life changes. You don't have to rebuild or reinstall the **AAPS** app, just tick a different box in the app to change your hardware. AAPS is independent of particular pump drivers and also contains a "virtual pump" so users can safely experiment before using it on themselves.
+**AAPS** works with a wide range of insulin pumps and sensors. Например, если у вас аллергия на пластырь сенсора Dexcom, можно перейти на Libre. Это дает свободу при изменениях в жизни. You don't have to rebuild or reinstall the **AAPS** app, just tick a different box in the app to change your hardware. AAPS is independent of particular pump drivers and also contains a "virtual pump" so users can safely experiment before using it on themselves.
 
 #### 2) **Highly customisable, with wide parameters**
 
@@ -69,7 +69,7 @@ Users can easily add or remove modules or functionality, and **AAPS** can be use
 
  a) The ability to set a lower glucose target 30 min before eating; you can set the target as low as 72 mg/dL (4.0 mmol/L).
 
- b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule  to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in an 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). The automation will last according to the scheduled time you set. Such an automation could be set to only be active on certain days of the week, at certain times of day, and even at certain locations.
+ b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule  to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in an 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). Автоматизация продлится согласно запланированному вами времени. Such an automation could be set to only be active on certain days of the week, at certain times of day, and even at certain locations.
 
  c) If your child is on a trampoline with no advance notice, **AAPS** allows insulin  suspension for a set time period, directly via the phone.
 
