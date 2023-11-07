@@ -4,6 +4,7 @@ Freestyle Libre 3 (FSL3) requires a unique setup to receive BG values in to AAPS
 
 ![FL3](https://github.com/blaqone/AndroidAPSdocs/assets/37814299/d912c1d3-06d2-4b58-ad7c-025ca1980fae)
 
+!!! Version 3.2.0.1 of AndroidAPS does not support 1-minute values. Acceleration and Smoothing does not work with 1-minute values. !!!
 
 The below methods for achieving this are using the separate app Juggluco. [Link].(https://www.juggluco.nl/Juggluco/download.html)
 It uses Juggluco to receive raw, 1-minute interval data from the sensor which is then passed to xDrip+ or AAPS. 
@@ -14,24 +15,7 @@ Juggluco can also pass data to LibreView for sharing with health care providers 
 Within xDrip+ the sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl (-2.2 mmol/l to +1.1 mmol/l) to compensate for differences between a manual meter reading and the sensor readings.
 
 ## Methode 1: 1-minute-readings
-While it is possible to pass data directly from Juggluco to AAPS at 1-minute intervals, this would likely in additional battery drain. 
-When you select a NON-Dexcom BG source, AAPS does not upload blood glucose values to Nightscout. Normally, Xdrip handles this task. However, if you are not using Xdrip, as shown here, Juggluco must upload the values to Nightscout.
-
-### Step 1: Setup Juggluco
-Download and install the Juggluco app from [here](https://www.juggluco.nl/Juggluco/download.html).
-Follow the instructions [here]( https://www.juggluco.nl/Juggluco/libre3/) to start a FL3 sensor. 
-
-Make sure you send the glucose calues to AAPS+: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco can send three types of such broadcasts: The **xDrip local broadcast** was originally used by xDrip and can be used to send glucose values to AAPS.
-
-Make sure you also enable Nightscout uploading of glucose values: Settings ->Uploader->Enter your Nightscout URL with port and your api_secret. Enable and save!
-
-### Step 2: Configure AndroidAPS
-
-- In AndroidAPS go to Config Builder -> BG Source and check "xDrip+"
-- If AndroidAPS does not receive BG values when phone is in airplane mode, use "Identify receiver"
-- Turn on Smoothing!
-
-As of now, when using Libre 3 as a BG source, the "Always enable SMB" and "Enable SMB by Carbs" options cannot be enabled in the SMB algorithm. The BG values from Libre 3 are not smooth enough to use safely. 
+Version 3.2.0.1 of AndroidAPS does not support 1-minute values. Acceleration and Smoothing does not work with 1-minute values. 
 
 
 ## Methode 2: 5-minute-readings 
