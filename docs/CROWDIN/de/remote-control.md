@@ -444,7 +444,11 @@ These are the currently available AAPS-dedicated watchfaces:
 
 More information about the possible smartwatch faces and their functions can be found in [Smartwatches](Hardware/Smartwatch.md)
 
-### Smartwatch Option 1) Standalone watch running **AAPS**
+#### Watchfaces for Wear OS
+
+Further details about the watchfaces and configurations for complications, including how to make your own, can be found [here](https://androidaps.readthedocs.io/en/latest/Configuration/Watchfaces.html)
+
+### Option 1) Standalone Watch running **AAPS**
 
 It sounds like an attractive option, right? However, at present, only a few enthusiasts are experimenting with **AAPS**  on a stand-alone watch. There are a limited number of smartwatches with a reasonable interface which also which work well with standalone use of **AAPS** and your CGM app. Popular models include the LEMFO LEM 14, 15 and 16. You will need to load the watch with the **AAPS** "full" apk (the apk which is usually installed on a smartphone) rather than the **AAPS** "wear" apk.
 
@@ -462,7 +466,7 @@ Additional challenges are that it is hard to get sufficient battery life, and wa
 
 If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS**  Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
-### Smartwatch Option 2) **AAPS** on watch, for remote control of **AAPS** on a phone
+### Option 2) **AAPS** on watch, for remote control of **AAPS** on a phone
 
 Similarly to using a follower phone with either AAPSClient, Nightscout or SMS commands (link to sections) a smartwatch can be used to remotely control **AAPS** and provide full profile data. A key difference to using a follower phone is that the smartwatch to **AAPS** phone link is via bluetooth and does not require an authenticator code. As a side-note, users have reported that if both smartwatch and phone linked by bluetooth are also on the same wifi network, the watch may also interact with the smartphone over the wifi, giving a longer range of communication.
 
@@ -476,13 +480,13 @@ A smartwatch needs to have **Android wear** software (ideally 10 or higher) to b
 
 Specific How-to guides for setting up **AAPS** on the [Samsung Galaxy Watch 4 (40mm)](link) is given below. The [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) watch is also a popular choice. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](https://androidaps.readthedocs.io/en/latest/make-a-PR.html) to share your findings with the wider AAPS community.
 
-#### Building the AAPS Wear apk
+#### The AAPS Wear apk
 
-The Wear OS App of **AAPS**  (“Wear OS apk”) required for the smartwatch has been separated from the "full" **AAPS** build for the Android phone. Therefore you have to generate a second APK to install onto the watch (which is done by side-loading it from the phone). It is strongly recommended that the Wear OS apk file is built immediately after first building the full **AAPS** apk for the phone. Not only is this very quick to do if you are [building **AAPS** for the first time](link to building **AAPS** for the first time), but it will avoid any potential compatibility issues when you try to set up the watch-phone communication. The **AAPS** Wear apk on the watch is unlikely to be compatible with the **AAPS** phone apk if they have been built in different versions of Android Studio, or if months have past since the initial **AAPS** build.
+The Wear OS App of **AAPS**  (“Wear OS apk”) required for the smartwatch has been separated from the "full" **AAPS** build for the Android phone. Therefore you have to generate a second installation file, or apk, to install **AAPS** wear onto the watch (which is done by side-loading it from the phone). It is strongly recommended that the **AAPS** Wear apk file is built immediately after first building the full **AAPS** apk for the phone. Not only is this very quick to do if you are [building **AAPS** for the first time](link to building **AAPS** for the first time), but it will avoid any potential compatibility issues when you try to set up the watch-phone communication. The **AAPS** Wear apk on the watch is unlikely to be compatible with the **AAPS** phone apk if they have been built in different versions of Android Studio, or if months have past since the initial **AAPS** build.
 
-If you are already using **AAPS** on a phone and you did not build both the phone and watch (wear) **AAPS** apks at the same time, to ensure success it is therefore best to do a fresh build of both apk files at the same time, if you are setting up a smartwatch for Option 2. If you have already installed Android studio, then uninstall and then reinstall Android studio and do the build as outlined below, building the AAPS phone and watch apks at the same time, using the same **keystore file**.
+If you are already using **AAPS** on a phone and you did not build both the phone and watch (wear) **AAPS** apks at the same time, to ensure success it is therefore best to do a fresh build of both apk files at the same time. If you have already installed Android studio, then you may wish to uninstall and then reinstall Android studio as outlined below, and build the AAPS phone and watch apks at the same time, using the same **keystore file**.
 
-##### How to uninstall Android Studio
+#### How to uninstall Android Studio
 
 Make sure your keystore file is safely stored elsewhere on your computer, outside of the Android Studio folders.
 
@@ -490,11 +494,9 @@ There are several steps required to completely remove Android Studio from a comp
 
 Now reinstall the latest version of Android Studio.
 
-### How to generate the AndroidAPS.wear apk
+#### Building the **AAPS** Wear apk
 
-As a summary, the build process for the Wear apk is very similar to that for the "full" phone apk, the difference is that in Android Studio you need to select “**AndroidAPS.wear**”  in the drop-down menu (which is the default), and as build variant choose “**fullRelease**”. This will generate the **AAPS** Wear apk file.  If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping.
-
-#### Step-by-step guide for building the AndroidAPS.wear apk
+As a summary, the build process for the Wear apk is very similar to that for the "full" phone apk, the difference is that in Android Studio you need to select “**AndroidAPS.wear**”  in the drop-down menu, and as build variant choose “**fullRelease**”. This will generate the **AAPS** Wear apk file.  If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping.
 
 The following guide assumes you have reinstalled the latest version of Android studio (scenario below has used Giraffe 2022.3.1)).
 
@@ -548,13 +550,13 @@ C:\Users\Your Name\StudioProjects\AndroidAPS\app\aapsclient\release.
 
 Either delete, or move the unneeded .json file out of the folder. Then try to build the **AAPS** wear app again. If that doesn't work, the more detailed [troubleshooting guide](troubleshooting_androidstudio.md)  will help you to identify the specific file causing the issue, which could also be your keystore file.
 
-### How to set up a Samsung Galaxy 4 smartwatch with **AAPS**
+#### How to set up a Samsung Galaxy 4 smartwatch with **AAPS**
 
 This section assumes you are totally new to Smartwatches, and gives you basic orientation of a popular watch, the **Galaxy Watch 4**, followed by a step-by-step guide to setup **AAPS** on the watch.
 
 _This guide assumes the Samsung Galaxy watch you are setting up is running Wear OS version 3 or lower._ If you are setting up a watch running Wear OS 4/OneUI 5 or later, you will need to use a new ADB pairing process, this is explained in the Samsung software on your phone and will be updated here in due course. Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
 
-#### Basic smartwatch familiarity
+##### Basic smartwatch familiarity
 
 After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable" “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
 
@@ -568,8 +570,7 @@ The app “Galaxy Wearable” also has an instruction manual section in it. Open
 
 You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 363 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
 
-
-### Transferring the Wear app onto your AAPS phone
+##### Transferring the **AAPS** Wear app onto your **AAPS** phone
 
 Loading the Wear.apk from Android Studio to your phone can be done either by:
 
@@ -580,20 +581,19 @@ b)  cut and paste Wear.apk from Android Studio onto your Gdrive.
 
 You can use either Wear Installer 2 or Easy Fire tools to side-load AAPS onto the watch. Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained.
 
-
-### Using Wear Installer 2 to side-load AAPS wear from the phone onto the watch
+##### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
 
  ![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/43577a66-f762-4c11-a3b3-4d6d704d26c7)
 
-Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
+Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
 
-which provides all the necessary detail (best to open the video on a separate device so you can watch it whilst setting up the phone).
+This provides all the necessary detail (best to open the video on a separate device so you can watch it whilst setting up the phone).
 
 As mentioned in the video, once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
 
 Alternatively, you can:
 
-:::{admonition} #### Use Easy Fire tools to side-load the **AAPS** wear on the watch
+:::{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
 :class: dropdown
 
 1)   Download _Easy Fire Tools_ from playstore onto phone
@@ -618,7 +618,7 @@ STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the
 ![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/00b2fb8b-5996-4b71-894e-516d63469e1b)
 
 
-STEP 5) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  Wear.apk onto the smartwatch using Easy Fire tools
+STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  Wear.apk onto the smartwatch using Easy Fire tools
 
 Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the smartwatch:
 
@@ -633,11 +633,11 @@ Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the 
 :::
 
 
-### Setting up the connection to the watch from AAPS on the Phone
+##### Setting up the connection between the watch and the phone from **AAPS**
 
 The final step is to configure **AAPS** on the phone to interact with **AAPS** Wear” on the watch. To do this, enable the Wear plugin in Config Builder:
 
-●   Go to the AAPS app on the phone
+●   Go to the **AAPS** app on the phone
 
 ●   Select > Config Builder in the left-hand Hamburger tab
 
@@ -653,64 +653,71 @@ If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, 
 
 ![24-10-23, successful galaxy watch photo](https://github.com/openaps/AndroidAPSdocs/assets/94044064/628e46d8-c7dc-4741-9eba-ae83f396c04c)
 
-**Problembehandlung**
+#### Troubleshooting the **AAPS** watch- **AAPS** phone communication
 1.  If EasyFire tools does not connect or if you are receiving ‘authorisation failed’ > check IP address has been correctly entered.
 2.  Check that the smartwatch is connected to the internet (and not just connected to the phone via Bluetooth).
 3.  Check that the **AAPS** Phone and smartwatch are paired or linked in Samsung app.
 4.  It may also help to do a hard restart of Phone and smartwatch (meaning turning phone on and off)
-5.  Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have downloaded the **correct AAPS apk version for Wear OS**. If your AAPS wear.apk version is listed as any of the following: a) “wear-AAPSClient-release’; b) ‘wear-full-release.aab’; or c) the word ‘debug’ appears in the title, you have not selected the correct Wear OS apk version during the build.
+5.  Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** apk version onto the watch. If your AAPS wear.apk version is listed as any of the following: a) “wear-AAPSClient-release’; b) ‘wear-full-release.aab’; or c) the word ‘debug’ appears in the title, you have not selected the correct Wear OS apk version during the build.
 6.  Check that your router is not isolating the devices from one another.
 
 More troubleshooting tips can be found [here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
 
+#### Troubleshooting Sony smartwatch setup
 
-#### Controlling AAPS from the Wear OS.apk Watch
+Although it was discontinued a few years ago, if you are using a Sony Smartwatch SW 3 please see here for a troubleshooting guide: [Troubleshooting Sony Smartwatch SW 3](https://androidaps.readthedocs.io/en/latest/Usage/SonySW3.html)
 
-The following functions can be triggered from the smartwatch: ●   set a temporary target ●   use the bolus calculator (calculation variables can be defined in settings on the phone) ●   administer eCarbs ●   administer a bolus (insulin + carbs) ●   watch settings ●   status ●   check pump status ●   check loop status ●   check and change profile, CPP (Circadian Percentage Profile = time shift + percentage) ●   show TDD (Total daily dose = bolus + basal per day)
 
-#### Direct communication with the watch using Whatsapp
+##### Controlling AAPS from the Wear Watch
 
-It is possible to add additional apps to the watch, like Whatsapp, for messaging between parents and kids. It is important only to have ONE Google account associated with the phone, or the watch will not bring this data across. You need to be 13 or older to have a Samsung account, and this needs to be set up in the same email address which is used on the Android phone.
+The following functions can be triggered from the smartwatch:
+
+●   set a temporary target
+
+●   use the bolus calculator (calculation variables can be defined in settings on the phone)
+
+●   administer eCarbs
+
+●   administer a bolus (insulin + carbs)
+
+●   watch settings
+
+●   status
+
+●   check pump status
+
+●   check loop status
+
+●   check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+
+●   show TDD (Total daily dose = bolus + basal per day)
+
+#### Communication from caregivers to the watch using other apps (like Whatsapp)
+
+It is possible to add additional apps to the watch, like Whatsapp, for messaging (for example) between caregivers and kids. It is important only to have ONE Google account associated with the phone, or the watch will not bring this data across. You need to be 13 or older to have a Samsung account, and this needs to be set up in the same email address which is used on the Android phone.
 
 A video explaining getting Whatsapp setup for messaging on the Galaxy 4 watch (you can’t get full functionality of Whatsapp) is shown [here](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
 
 Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and the watch makes it possible for Whatsapp messages to announce with a slight vibration, and also for the Whatsapp message to display over the existing watchface.
 
-### Smartwatch Option 3: AAPSClient on a watch for remote control of **AAPS** on a phone
+### Option 3) AAPSClient on a watch for remote control of **AAPS** on a phone
 
-The software, AAPSClient Wear apk, can be downloaded directly from [Github](https://github.com/nightscout/AndroidAPS/releases/).
+The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [Github](https://github.com/nightscout/AndroidAPS/releases/).
 
-The user does not have to build the AAPSClient wear apk on Android Studio providing the user is downloading the correct version from Github that is compatible with the **AAPS** version as operated on the master phone
-
-To download the software, click on the required app:
+To download the software, click on the required app (in this screenshot, either **wear-aapsclient-release_3.2.0.1** or **wear-aapsclient2-release_3.2.0.1** would work, there are two versions in case you need a copy for a second caregiver watch):
 
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/40b33fbd-e2f4-49e6-a974-ddf663693e2c)
+![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d)
 
 
 
-Then go to  _downloads_ on your computer. On Windows, this will show the right hand ribbon:
-
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/87e5eaab-53c5-434b-bad7-bba1910f2f94)
+Then "save as" and save the file to a convenient location on your computer.
 
 
 
-Once downloaded, click _show in folder_
+The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](remote-control.md#transferring-the-wear-app-onto-your-aaps-phone)
 
-
-
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/39892cb3-6d1e-4146-a5d2-7c313d3bdd78)
-
-
-The Wear.AAPSClient.apk can now be either:
-
-1.  transferred by a USB cable;
-2.  dragged into your G drive folder. Please follow steps above on how to transfer the Wear.AAPSClient.apk onto the watch.
-
-
-### 4) Limited Nightscout (and other options) on a watch - Fitbit watches
+### Option 4) Limited Nightscout (and other options) on a watch - Fitbit watches
 
 
 
@@ -720,59 +727,22 @@ The Wear.AAPSClient.apk can now be either:
 
 **"Sentinel"** is a clockface developed by [Ryan Chen](http://ryanwchen.com/sentinel.html) for his family and shared for free for the Fitbit smart watches: Sense1/2, Versa 2/3/4. it is not compatible with the FitBit Luxe since this is only a fitness tracker. Sentinel can be downloaded from the [FitBit mobile app](https://gallery.fitbit.com/details/5f75448f-413d-4ece-a53d-b969c6afea7c).
 
-It allows the monitoring of 1, 2, or 3 individual's blood glucose numbers using either Dexcom Share, Nightscout, or a combination of the two as data sources. You can also use xDrip+ or SpikeApp if used with local web server mode. Users can set custom alarms and submit events using Nightscout's careportal functionality directly from the watch to help track insulin-on-board (IOB), carbs-on-board (COB), enter meal information (carb count and bolus amount), and BG check values. All will appear on the Nightscout timeline-graph, and as updated values in the IOB and COB fields. Community support can be found at the dedicated [Facebook group, Sentinel](https://www.facebook.com/groups/3185325128159614)
+It allows the monitoring of 1, 2, or 3 individual's blood glucose numbers using either Dexcom Share, Nightscout, or a combination of the two as data sources.
 
-There are additional options for FitBit watches which appear to be for monitoring only. This includes [Glance](https://glancewatchface.com/). These additional options are described [here](https://nightscout.github.io/nightscout/wearable/#fitbit)
+You can also use xDrip+ or SpikeApp if used with local web server mode. Users can set custom alarms and submit events using Nightscout's careportal functionality directly from the watch to help track insulin-on-board (IOB), carbs-on-board (COB), enter meal information (carb count and bolus amount), and BG check values.
 
-### Option 5 **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
+All will appear on the Nightscout timeline-graph, and as updated values in the IOB and COB fields. Community support can be found at the dedicated [Facebook group, Sentinel.](https://www.facebook.com/groups/3185325128159614)
 
-There are a wide range of affordable smartwatches which can provide glucose display only. If you are using Nightscout, then a good overview of all the options is [here](https://nightscout.github.io/nightscout/wearable/#)
+There are additional options for FitBit watches which appear to be for monitoring only. This includes [Glance](https://glancewatchface.com/). These additional options are described in the [Nightscout webpages.](https://nightscout.github.io/nightscout/wearable/#fitbit)
 
-here we are summarising some of the options popular with AAPS users:
+### Option 5) **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
 
-a)  **Xiaomi and Amazfit watches**
+These options are described in more detail in the ["following only"](docs/EN/following-only.md) section of the documentation.
 
-A developer called Artem has created xDrip integration for various smartwatch models, mostly for Xiaomi (_e.g._ Mi band) and Amazfit brands:
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/4dba454b-f808-4e9e-bfc6-aba698e006f8)
+In general, there are a wide range of affordable smartwatches which can provide glucose display only. If you are using Nightscout, then a good overview of all the options are described in the [Nightscout pages](https://nightscout.github.io/nightscout/wearable/#)
 
 
-You can read more about them, including how to set-up at his website [here](https://bigdigital.home.blog/). The advantage of these watches is that they are small and relatively affordable (the Xiaomi Mi Band 5 has a RRP of £39.99 GBP). They are a popular option especially for kids and those with smaller wrists to wear.
-
-#### b) Pebble watch
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/52032f3b-c871-4342-b8e7-659c285a39c8)
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/935d28bb-a909-4ca8-850d-6a765bd4fcde)
 
 
-Pebble watches [now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 - 2016, and may still be available second-hand. Fitbit took over Pebble’s assets. Pebble users can use the Urchin watchface to view Nightscout data. Displayed data options include IOB, currently active temp basal rate and predictions. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS**  then send either an SMS or pushover notification.
 
-#### c) [Bluejay GTS watch](https://bluejay.website/shop/product/bluejay-gts-26)
-
-
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74)
-
-
-This is a unique piece of technology which can receive glucose data **directly** from the Dexcom G6 transmitter. It is not widely known that a Dexcom G6 transmitter actually broadcasts the current glucose data on _two_ separate channels, a phone channel and a pump channel. The Bluejay GTS watch runs a modified version of Xdrip+ software, and can be set to receive glucose data on either channel, so if **AAPS **  is using the phone channel, then the Bluejay GTS watch can use the pump channel.
-
-The Bluejay GTS watch is small, waterproof and reasonably affordable (currently £115 GBP) and can be shipped internationally from the UK. The key advantage is that it is currently the only watch which is completely independent of both the phone and the looping system. So, for example, if you disconnect the pump and the **AAPS**  phone at the beach or flume park, and are out of range of the AAPS phone, you can still get readings from the Dexcom G6 directly to the Bluejay watch.
-
-Reported disadvantages are that it doesn’t always pickup a reading every 5 min, and the battery is not replaceable. The Bluejay GTS watch runs a modified version of Xdrip+ software, and it currently doesn’t work with other Dexcom versions (G7) or Libre sensors.
-
-#### d) Apple watch
-
-Check [Nightscout on your watch](https://nightscout.github.io/nightscout/wearable/#):
-
-Options include Nightguard, sugarmate, Gluco-Tracker, nsapple and Loop Follow.
-
-
-### Troubleshooting Sony smartwatch setup
-
-Although it was discontinued a few years ago, if you are using a Sony Smartwatch SW 3 please see here for a troubleshooting guide: [Troubleshooting Sony Smartwatch SW 3](https://androidaps.readthedocs.io/en/latest/Usage/SonySW3.html)
-
-
-### Watchfaces for Wear OS
-
-Further details about the watchfaces and configurations for complications can be found [here](https://androidaps.readthedocs.io/en/latest/Configuration/Watchfaces.html)
 
