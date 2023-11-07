@@ -11,7 +11,7 @@ AAPS has a series of Objectives that need to be completed to walk you through th
 - Выберите свой источник данных ГК.  См. [Источники ГК](../Configuration/BG-Source.md) для дополнительной информации.
 - Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AAPS driver for looping) to ensure your pump status can communicate with AAPS.
 - If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AAPS.
-- Следуйте инструкциям по настройке [Nightscout](../Installing-AndroidAPS/Nightscout.md), чтобы он мог получать и отображать данные ГК и терапии из AndroidAPS.
+- You need to establish a data repository/reporting platform to complete this objective. That can be accomplished with either Nightscout or Tidepool (or both). Follow instructions at the [Nightscout](../Installing-AndroidAPS/Nightscout.md) or [Tidepool](../Installing-AndroidAPS/Tidepool.md) page for instructions.
 - Обратите внимание: URL в Клиенте NS **не должен содержать строку /api/v1/** в конце - см. подробнее в [настройках Клиент NS](Preferences-nsclient).
 
 *You may need to wait for the next blood glucose reading to arrive before AAPS will recognise it.*
