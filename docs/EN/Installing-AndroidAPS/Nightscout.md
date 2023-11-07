@@ -53,16 +53,15 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
 
 While Nightscout is an free open source software which you can download yourself free of charge you need
 
-a) a cloud service provider to host your own nightscout instance
-b) invest time to setup your nightscout instance and MongoDB and
-c) operate your nightscout instance which can be as easy as updating from time to time the nightscout instance or much more complex if errors occur.
+1. a cloud service provider to host your own nightscout instance
 
-An alternative can be to pay for these service and get rid of these tasks.
+1. invest time to setup your nightscout instance and MongoDB and
 
-Here you find a alphabetical list of possible service providers.
+1. operate your nightscout instance which can be as easy as updating from time to time the nightscout instance or much more complex if errors occur.
 
+An alternative can be to pay for these SaaS services and get rid of these tasks.
+
+Here you find a randomly ordered list of possible service providers.
 We will not recommend any of them but we want to give new users a place to jump to their web site and inform themself!
 
-<https://ns.10be.de/en/index.html>
-
-<https://t1pal.com/>
+| [![ns.10be.de](../images/ns.10be.de-logo_halb_klein.jpg)](https://ns.10be.de/en/index.html) | [![T1Pal](../images/t1_pal_bear_bw.png)](https://t1pal.com/) |
