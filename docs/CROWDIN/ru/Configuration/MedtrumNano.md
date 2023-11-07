@@ -1,353 +1,353 @@
 # Medtrum Nano / 300U
 
-These instructions are for configuring the Medtrum insulin pump.
+Настройка инсулиновой помпы Medtrum. (на сайте производителя помпа именуется насосом, что в общем-то верно. Но мы будем следовать устоявшейся традиции и именовать ее помпой - прим. перев.).
 
 This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Только вы несете ответственность за то, что делаете.
 
-## Pump capabilities with AAPS
-* All loop functionality supported (SMB, TBR etc)
-* Automatic DST and timezone handling
-* Extended bolus is not supported by AAPS driver
+## Возможности работы с AAPS
+* Поддерживаются все функции замкнутого цикла (SMB, TBR и т. д.)
+* Автоматическое определение сезонного времени и часового пояса
+* Пролонгированный болюс не поддерживается драйвером AAPS
 
 ## Hardware and Software Requirements
-* **Compatible Medtrum pumpbase and reservoir patches**
-    - Currently supported:
-        - Medtrum TouchCare Nano with pumpbase refs: **MD0201** and **MD8201**.
-        - Medtrum TouchCare 300U with pumpbase ref: **MD8301**.
-        - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
-* **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../Installing-AndroidAPS/Building-APK.md) instructions.
-* **Compatible Android phone** with a BLE Bluetooth connection
-    - See AAPS [Release Notes](../Installing-AndroidAPS/Releasenotes.md)
-* [**Continuous Glucose Monitor (CGM)**](BG-Source.md)
+* **Совместимые помповые базы и патчи резервуаров**
+    - В настоящее время поддерживается:
+        - Medtrum TouchCare Nano с помповой базой моделей: **MD0201** и **MD8201**.
+        - Medtrum TouchCare Nano 300Uс помповой базой модели: **MD8301**.
+        - Если у вас есть неподдерживаемая модель и вы хотите пожертвовать аппаратное обеспечение или помощь в тестировании, пожалуйста, свяжитесь с нами через discord [здесь](https://discordapp.com/channels/629952586895851530/1076120802476441641).
+* **Версия 3.2.0.0 или новее, собранная и установленная** с помощью инструкций [Build APK](../Installing-AndroidAPS/Building-APK.md).
+* **Совместимый Android-телефон** с рабочим модулем BLE Bluetooth
+    - См. AAPS [Примечания к выпуску](../Installing-AndroidAPS/Releasenotes.md)
+* [**Непрерывный мониторинг гликемии**](BG-Source.md)
 
 ## Подготовка к работе
 
-**SAFETY FIRST** Do not attempt this process in an environment where you cannot recover from an error (extra patches, insulin, and pump control devices are must-haves).
+**БЕЗОПАСНОСТЬ на первом месте** Не пытайтесь выполнять этот процесс в среде, где нет возможности исправить ошибку (дополнительные патчи, инсулин, устройства управления помпой обязательны).
 
-**The PDM and Medtrum App will not work with a patch that is activated by AAPS.** Previously you may have used your PDM or Medtrum app to send commands to your pump. For security reasons you can only use the activated patch with the device or app that was used to activate it.
+**Пульт PDM и приложение Medtrum не будут работать с патчем, активированным при помощи AAPS** Прежде, возможно, вы уже пользовались этим устройством и приложением для отправки команд на помпу. В целях безопасности можно пользоваться только активированным патчем с устройством или приложением, которое использовалось для его активации.
 
-*This does NOT mean that you should throw away your PDM. It is recommended to keep it somewhere safe as a backup in case of emergencies, for instance if your phone gets lost or AAPS is not working correctly.*
+*Это НЕ означает, что следует выбросить ваш пульт PDM. Рекомендуется хранить его в надежном месте в качестве резервной копии в случае возникновения чрезвычайных ситуаций, например, если ваш телефон потеряется или AAPS работает неправильно.*
 
-**Your pump will not stop delivering insulin when it is not connected to AAPS** Default basal rates are programmed on the pump as defined in the current active profile. As long as AAPS is operational, it will send temporary basal rate commands that run for a maximum of 120 minutes. If for some reason the pump does not receive any new commands (for instance because communication was lost due to pump - phone distance) the pump will fall back to the default basal rate programmed on the pump once the Temporary Basal Rate ends.
+**Помпа не перестанет доставлять инсулин, если она не подключена к AAPS** Скорости Базала запрограммированы на помпе, как указано в текущем активном профиле. Когда работает AAPS, он будет отправлять временные команды на изменение базала, каждая из которх устанавливает базал максимум на 120 минут. Если по каким-то причинам помпа не получаетновых команд (например, из-за потери связи с помпой из-за расстояния до телефона), то после окончания временной базальной скорости. помпа вернется к стандартному базалу, предустановленному на помпе.
 
-**30 min Basal Rate Profiles are NOT supported in AAPS.** **The AAPS Profile does not support a 30 minute basal rate time frame** If you are new to AAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Medtrum pump hardware itself supports the 30 min basal rate profile increments, AAPS is not able to take them into account with its algorithms currently.
+**30 -минутные профили базала НЕ поддерживаются в AAPS.** **Профиль AAPS не поддерживает 30-минутный базальный интервал** Если вы новичок в AAPS и устанавливаете базальный профиль впервые, имейте в виду, что получасовые базальные скорости не поддерживаются в AAPS, и следует настроить свой базальный профиль на часовые интервалы. Например, если ваша базальная скорость 1,1 ед., начинается в 09:30, длится 2 часа и заканчивается в 11:30, такие настройки работать не будут. Следует изменить базал в 1,1 единицы на диапазон времени с 9:00 до 11:00 или с 10:00 до 12:00. Несмотря на то, что аппаратное обеспечение помпы Medtrum поддерживает профили с 30-минутными отрезками базальной скорости, AAPS в настоящее время не в состоянии учесть их с помощью своих алгоритмов.
 
-**0U/h profile basal rates are NOT supported in AAPS** While the Medtrum pump does support a zero basal rate, AAPS uses multiples of the profile basal rate to determine automated treatment and therefore cannot function with a zero basal rate. A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.
+**Скорость базала 0 ед/ч НЕ поддерживается в AAPS** Помпа Medtrum не поддерживает нулевую базальную скорость; AAPS использует множество базальных профилей для автоматической терапии и поэтому не может функционировать с нулевой базовой скоростью. A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.
 
 ## Настройки
 
-CAUTION: When activating a patch with AAPS you **MUST** disable all other devices that can talk to the Medtrum pumpbase. e.g. active PDM and Medtrum app. Make sure you have your pumpbase and pumpbase SN ready for activation of a new patch.
+Внимание: Активируя патч при помощи AAPS **ОБЯЗАТЕЛЬНО** отключите все другие устройства, которые могут связываться с помповой базой Medtrum. например, активный пульт управления помпой PDM и приложение Medtrum. Убедитесь, что готова помповая база, есть ее серийный номер для активации нового патча.
 
-### Step 1: Select Medtrum pump
+### Шаг 1: Выберите помпу Medtrum
 
 #### Option 1: New installations
 
-If you are installing AAPS for the first time, the **Setup Wizard** will guide you through installing AAPS. Select “Medtrum” when you reach Pump selection.
+Если вы устанавливаете AAPS впервые, вам поможет **Мастер настройки**. Когда дойдете до выбора помпы, выбирайте Medtrum.
 
-If in doubt you can also select “Virtual Pump” and select “Medtrum” later, after setting up AAPS (see option 2).
+Если сомневаетесь, можете выбрать «Виртуальную помпу» и выбрать «Medtrum» после настройки AAPS (см. опцию 2).
 
-![Setup Wizard](../images/medtrum/SetupWizard.png)
+![Мастер настройки](../images/medtrum/SetupWizard.png)
 
 #### Option 2: The Config Builder
 
-On an existing installation you can select the **Medtrum** pump from the [Config Builder](Config-Builder.md#config-builder-profile):
+При существующих опциях установки вы можете выбрать помпу **Medtrum** из [конфигуратора](Config-Builder.md#config-builder-profile):
 
-On the top-left hand corner **hamburger menu** select **Config Builder**\ ➜\ **Pump**\ ➜\ **Medtrum**\ by selecting the **Enable button** titled **Medtrum**.
+В левом верхнем углу из **выпадающего меню** выберите **Конфигуратор**\ ➜\ **Помпа**\ ➜\ **Medtrum**\, включив кнопку **Medtrum**.
 
-Selecting the **checkbox** next to the **Settings Gear** will allow the Medtrum overview to be displayed as a tab in the AAPS interface titled **Medtrum**. Checking this box will facilitate your access to the Medtrum commands when using AAPS and is highly recommended.
+Поставив флажок в **клетке** напротив **шестеренки настроек** вы активируете вкладку Medtrum в интерфейсе AAPS. Установка этого флажка облегчит доступ к командам Medtrum при использовании AAPS и настоятельно рекомендуется.
 
 ![Конфигуратор](../images/medtrum/ConfigBuilder.png)
 
-### Step 2: Change Medtrum settings
+### Шаг 2: Изменение настроек Medtrum
 
-Enter the Medtrum settings by tapping the **Settings Gear** of the Medtrum module in the Config Builder .
+Введите настройки Medtrum, нажав на **шестеренку** модуля Medtrum в Конфигураторе.
 
-![Medtrum Settings](../images/medtrum/MedtrumSettings.png)
+![Настройки Medtrum](../images/medtrum/MedtrumSettings.png)
 
-#### Serial Number:
+#### Серийный номер:
 
-Enter the serial number of your pumpbase here as noted on the pumpbase. Make sure the serial number is correct and there are no spaces added (You can either use capital or lowercase).
+Введите здесь серийный номер вашей помповой базы, находящийся на ее корпусе. Убедитесь, что серийный номер указан правильно и без пробелов (можно использовать заглавные или строчные буквы).
 
-NOTE: This setting can only be changed when there is no patch active.
+ПРИМЕЧАНИЕ: Этот параметр может быть изменен только при отсутствии активного патча.
 
-#### Alarm settings
+#### Настройки оповещений
 
-***Default: Beep.***
+***По умолчанию: звуковой сигнал.***
 
-This setting changes the way that the pump will alert you when there is a warning or error.
+Этот параметр изменяет способ оповещения об ошибке или предупреждении.
 
-- Beep > The patch will beep on alarms and warnings
-- Silent > The patch will not alert you on alarms and warnings
+- Звуковой сигнал > Патч будет издавать звуковой сигнал при оповещениях и предупреждениях
+- Без звука > патч не будет издавать звука при оповещениях и предупреждениях
 
-Note: In silent mode AAPS will still sound the alarm depending on your phone's volume settings. If you do not respond to the alarm, the patch will eventually beep.
+Примечание: В беззвучном режиме AAPS по-прежнему будет подавать сигнал в зависимости от настроек громкости вашего телефона. Если вы не реагируете на сигнал, патч в конечном итоге загудит.
 
-#### Notification on pump warning
+#### Уведомление об оповещениях помпы
 
-***Default: Enabled.***
+***По умолчанию: включено.***
 
-This settings changes the way AAPS will show notification on non ciritical pump warnings. When enabled a Notification will be shown on the phone when a pump warning occurs, including:
-    - Low battery
-    - Low reservoir (20 Units)
-    - Patch expiration warning
+Эти настройки изменяют способ оповещения AAPS о некритичных предупреждениях помпы. При активации на телефоне показываются уведомления с помпы, включая:
+    - Низкий заряд батареи
+    - В резервуаре мало инсулина (20 ед.)
+    - Напоминание об истечении срока патча
 
-In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#active-alarms).
+В любом случае эти предупреждения также отображаются на экране Medtrum в разделе [Активные оповещения](#active-alarms).
 
-#### Patch Expiration
+#### Окончание срока действия патча
 
-***Default: Enabled.***
+***По умолчанию: включено.***
 
-This setting changes the behavior of the patch. When enabled the patch will expire after 3 days and give an audible warning if you have sound enabled. After 3 days and 8 hours the patch will stop working.
+Этот параметр изменяет поведение патча. Если включено, срок работы патча истечет через 3 дня, о чем при включенном звуке будет выдано звуковое предупреждение. Через 3 дня и 8 часов патч перестанет работать.
 
-If this setting is disabled, the patch will not warn you and will continue running until the patch battery or reservoir runs out.
+Если этот параметр отключен, патч не будет предупреждать вас и продолжит работать, пока не закончится заряд батареи патча или не опустеет резервуар.
 
-#### Pump expiry warning
+#### Предупреждение об истечении срока помпы
 
-***Default: 72 hours.***
+***По умолчанию: 72 часа.***
 
-This setting changes the time of the expiration warning, when [Patch Expiration](#patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
+Эта настройка изменяет время предупреждения об [истечении срока действия патча](#patch-expiration), AAPS выдаст уведомление в заданное время после активации.
 
-#### Hourly Maximum Insulin
+#### Максимальное количество инсулина в час
 
-***Default: 25U.***
+***По умолчанию: 25 ед.***
 
-This setting changes the maximum amount of insulin that can be delivered in one hour. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#reset-alarms).
+Эта настройка изменяет максимальное количество инсулина, которое может быть подано в течение одного часа. Если этот предел превышен, патч будет приостановлен и подаст сигнал. Это оповещение может быть сброшено при нажатии на кнопку сброса на общем меню - см [Сброс оповещений](#reset-alarms).
 
-Set this to a sensible value for your insulin requirements.
+Установите это значение на разумную величину вашей потребности.
 
-#### Daily Maximum Insulin
+#### Максимальное количество инсулина в сутки
 
-***Default: 80U.***
+***По умолчанию: 80 ед.***
 
-This setting changes the maximum amount of insulin that can be delivered in one day. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#reset-alarms).
+Эта настройка изменяет максимальное количество инсулина, которое может быть подано в течение одного дня. Если этот предел превышен, патч будет приостановлен и подаст сигнал. Это оповещение может быть сброшено при нажатии на кнопку сброса на общем меню - см [Сброс оповещений](#reset-alarms).
 
-Set this to a sensible value for your insulin requirements.
+Установите это значение на разумную величину вашей потребности.
 
-### Step 2b: AAPS Alerts settings
+### Шаг 2b: Настройки оповещений AAPS
 
-Go to preferences
+Перейдите к настройкам
 
-#### Pump:
+#### Помпа:
 
 ##### BT Watchdog
 
-Go to preferences and select **Pump**:
+Перейдите в настройки и выберите **Помпа**:
 
 ![BT Watchdog](../images/medtrum/BTWatchdogSetting.png)
 
 ##### BT Watchdog
 
-This setting will try to work around any BLE issues. It will try to reconnect to the pump when the connection is lost. It will also try to reconnect to the pump when the pump is unreachable for a certain amount of time.
+Этот параметр попытается обойти любые проблемы блутус BLE. Он активирует попытки снова подключиться к помпе при потере соединения. Кроме того, он будет переподключаться к помпе, когда она недоступен в течение определенного промежутка времени.
 
-Enable this setting if you experience frequent connection issues with your pump.
+Включите этот параметр при частых проблемах соединения с помпой.
 
-#### Local Alerts:
+#### Локальные оповещения:
 
-Go to preferences and select **Local Alerts**:
+Перейдите в настройки и выберите **Локальные оповещения**:
 
-![Local Alerts](../images/medtrum/LocalAlertsSettings.png)
+![Локальные оповещения](../images/medtrum/LocalAlertsSettings.png)
 
-##### Alert if pump is unreachable
+##### Оповещать в случае недоступности помпы
 
-***Default: Enabled.***
+***По умолчанию: включено.***
 
-This setting is forced to enabled when the Medtrum driver is enabled. It will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
+Эта настройка включается принудительно при активации драйвере Medtrum. Она оповестит вас, когда помпа недоступна. Это может произойти, когда помпа находится вне досягаемости или не отвечает из-за дефектного расположения помповой базы, Например, при поступлении воды между помповой базой и патчем.
 
-For safety reasons this setting cannot be disabled.
+В целях безопасности эта настройка не отключается.
 
-##### Pump unreachable threshold [min]
+##### Порог недоступности помпы [min]
 
-***Default: 30 min.***
+***Значение по умолчанию: 30 мин.***
 
-This setting changes the time after which AAPS will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
+Этот параметр изменяет время, после которого AAPS будет оповещать вас о недоступности помпы. Это может произойти, когда помпа находится вне досягаемости или не отвечает из-за дефектного расположения помповой базы, Например, при поступлении воды между помповой базой и патчем.
 
-This setting can be changed when using Medtrum pump but it is recommended to set it at 30 minutes for safety reasons.
+Эта настройка может быть изменена на Medtrum, но по соображениям безопасности рекомендуется оставить 30 минут.
 
-### Step 3: Activate patch
+### Шаг 3: Активировать патч
 
-**Before you continue:**
-- Have your Medtrum Nano pumpbase and a reservoir patch ready.
-- Make sure that AAPS is properly set up and a [profile is activated](../Usage/Profiles.md).
-- Other devices that can talk to the Medtrum pump are disabled (PDM and Medtrum app)
+**Прежде чем продолжить:**
+- Приготовьте к работе помповую базу Medtrum Nano и резервуар патча.
+- Убедитесь, что AAPS правильно настроен и [профиль активирован](../Usage/Profiles.md).
+- Другие устройства, которые могут общаться с помпой Medtrum отключены (пульт PDM и приложение Medtrum)
 
-#### Activate patch from the Medtrum overview Tab
+#### Активируйте патч из вкладки Medtrum
 
-Navigate to the [Medtrum TAB](#overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
+Перейдите к [вкладке Medtrum](#overview) в интерфейсе AAPS и нажмите кнопку **Сменить Патч** в правом нижнем углу.
 
-If a patch is already active, you will be prompted to deactivate this patch first. see [Deactivate Patch](#deactivate-patch).
+Если патч активен, вам будет предложено сначала деактивировать его. см. [Деактивация патча](#deactivate-patch).
 
-Follow the prompts to fill and activate a new patch. Please note - it is important to only connect the pumpbase to the reservoir patch at the step when you are prompted to do so. **You must only put the pump on your body and insert the cannula when prompted to during the activation process (after priming is complete).**
+Следуйте подсказкам и активируйте новый патч. Обратите внимание - на этом этапе при подсказке важно подключить только базу помпы к резервуару патча. **Поместить помпу на тело и и вставить катетер следует при появлении запроса в процессе активации (после заполнения резервуара).**
 
-##### Start Activation
+##### Начните активацию
 
-![Start Activation](../images/medtrum/activation/StartActivation.png)
+![Начните активацию](../images/medtrum/activation/StartActivation.png)
 
-At this step, double check your serial number and make sure the pumpbase is not connected to the patch yet.
+На этом шаге дважды нажмите на свой серийный номер и убедитесь, что база помпы еще не подключена к патчу.
 
-Press **Next** to continue.
+Нажмите **Далее** для продолжения.
 
-##### Fill the patch
+##### Заполните патч
 
-![Fill the patch](../images/medtrum/activation/FillPatch.png)
+![Заполните патч](../images/medtrum/activation/FillPatch.png)
 
-Once the patch is detected and filled with a minimum of 70Units of insulin, press **Next** will appear.
+После того, патч определился и заполнился минимумом 70 ед. инсулина, появится кнопка **Далее**. Нажмите ее.
 
-##### Prime the patch
+##### Первичное заполнение (прайм) катетера
 
-![Half press](../images/medtrum/activation/HalfPress.png)
+![Полунажатие](../images/medtrum/activation/HalfPress.png)
 
-Do not remove the safety lock and press the needle button on the patch.
+Не удаляйте защитный замок и не нажимайте кнопку иглы на патче.
 
-Press **Next** to start prime
+Нажмите **Далее** для начала заполнения
 
-![Prime progress](../images/medtrum/activation/PrimeProgress.png)
+![Ход первичного заполнения](../images/medtrum/activation/PrimeProgress.png)
 
-![Prime complete](../images/medtrum/activation/PrimeComplete.png)
+![Завершение заполнения системы](../images/medtrum/activation/PrimeComplete.png)
 
-Once the prime is complete, press **Next** to continue.
+По завершении первичного заполнения катетера нажмите **Далее**.
 
-##### Attach Patch
+##### Прикрепите патч
 
-![Attach patch](../images/medtrum/activation/AttachPatch.png)
+![Закрепление патча](../images/medtrum/activation/AttachPatch.png)
 
-Clean the skin, remove stickers and attach the patch to your body. Remove safety lock and press the needle button on the patch to insert the cannula.
+Очистите кожу, удалите наклейки и прикрепите патч к телу. Снимите предохранительный замок и нажмите на кнопку иглы на патче, чтобы вставить катетер.
 
-Press **Next** to activate the patch.
+Нажмите **Далее** для активации патча.
 
-##### Activate Patch
+##### Активируйте патч
 
-![Activate patch](../images/medtrum/activation/ActivatePatch.png)
+![Активация патча](../images/medtrum/activation/ActivatePatch.png)
 
-When activation is complete, the following screen will appear
+По завершении активации появится следующий экран
 
-![Activation complete](../images/medtrum/activation/ActivationComplete.png)
+![Активация завершена](../images/medtrum/activation/ActivationComplete.png)
 
-Press **OK** to return to main screen.
+Нажмите **OK** для возврата к главному экрану.
 
-### Deactivate patch
+### Деактивация патча
 
-To deactivate a currently active patch, go to the [Medtrum TAB](#overview) in the AAPS interface and press the **Change Patch** button.
+Чтобы деактивировать патч, зайдите на [вкладку Medtrum](#overview) интерфейса AAPS и нажмите кнопку **Заменить Patch**.
 
-![Deactivate patch](../images/medtrum/activation/DeactivatePatch.png)
+![Деактивация патча](../images/medtrum/activation/DeactivatePatch.png)
 
-You will be asked to confirm that you wish to deactivate the current patch. **Please note that this action is not reversable.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. If you are not ready to activate a new patch, press **Cancel** to return to the main screen.
+Вам будет предложено подтвердить отключение текущего патча. **Обратите внимание, что это действие необратимо.** После завершения деактивации, вы можете нажать **Далее** для активации нового патча. Если вы не готовы активировать новый патч, нажмите кнопку **Отмена** для выхода на главный экран.
 
-![Deactivate progress](../images/medtrum/activation/DeactivateProgress.png)
+![Ход деактивации](../images/medtrum/activation/DeactivateProgress.png)
 
-If Android APS in unable to deactivate the patch (For instance because the pumpbase has already been removed from the reservoir patch), you may press **Discard** to forget the current patch session and make it possible to activate a new patch.
+Если AAPS не может деактивировать патч (например, потому что помповая база уже была отсоединена от резервуара патча), можно нажать **Discard** (завершить пользование патчем), чтобы забыть сессию текущего патча и активировать новый патч.
 
-![Deactivate complete](../images/medtrum/activation/DeactivateComplete.png)
+![Деактивация завершена](../images/medtrum/activation/DeactivateComplete.png)
 
-Once deactivation is complete, press **OK** to return to main screen or press **Next** to continue the process to activate a new patch.
+После завершения деактивации, нажмите **OK** для возврата в главное окно или нажмите **Далее** для продолжения активации нового патча.
 
-### Resume interrupted activation
+### Возобновить прерванную активацию
 
-If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#overview) in the AAPS interface and press the **Change Patch** button.
+Если активация патча прервана, например, потому, что села батарея телефона, можно возобновить процесс, перейдя на вкладку [Medtrum](#overview) и нажав кнопку **Заменить Patch**.
 
-![Resume interrupted activation](../images/medtrum/activation/ActivationInProgress.png)
+![Возобновить прерванную активацию](../images/medtrum/activation/ActivationInProgress.png)
 
-Press **Next** to continue the activation process. Press **Discard** to discard the current patch session and make it possible to activate a new patch.
+Нажмите **Далее** чтобы продолжить активацию патча. Нажмите **Завершить пользование патчем** для сброса текущего патча и активации нового.
 
-![Reading activation status](../images/medtrum/activation/ReadingActivationStatus.png)
+![Чтение статуса активации](../images/medtrum/activation/ReadingActivationStatus.png)
 
-The driver will try to determine the current status of the patch activation. If this was successful it will go into the activation progress at the current step.
+Драйвер попробует определить текущий статус активации патча. Если это пройдет успешно, то на текущем шаге начнется активация.
 
 ## Общие замечания
 
-The overview contains the current status of the Medtrum patch. It also contains buttons to change the patch, reset alarms and refresh the status.
+На обзорном экране отражен текущий статус патча Medtrum. На нем также находятся кнопки для замены патча, сброса оповещений и обновления статуса.
 
-![Medtrum Overview](../images/medtrum/Overview.png)
+![Обзорный экран Medtrum](../images/medtrum/Overview.png)
 
-##### BLE Status:
+##### Статус BLE:
 
-This shows the current status of the Bluetooth connection to the pumpbase.
+Показывает текущий статус подключения Bluetooth к помповой базе.
 
-##### Last connected:
+##### Последнее подключение:
 
-This shows the last time the pump was connected to AAPS.
+Показывает, когда помпа подключалась к AAPS.
 
-##### Pump state:
+##### Статус помпы:
 
-This shows the current state of the pump. For example:
-    - ACTIVE : The pump is activated and running normally
-    - STOPPED: The patch is not activated
+Показывает текущее состояние помпы. Например:
+    - АКТИВНА: помпа активирована и работает в обычном режиме
+    - ОСТАНОВЛЕНА: Патч не активирован
 
-##### Basal type:
+##### тип базала:
 
-This shows the current basal type.
+Показывает текущий тип базала.
 
-##### Basal rate:
+##### Скорость базала:
 
-This shows the current basal rate.
+Показывает текущую базальную скорость.
 
-##### Last bolus:
+##### предыдущий болюс:
 
-This shows the last bolus that was delivered.
+Показывает предыдущий успешный болюс.
 
-##### Active bolus:
+##### Активный болюс:
 
-This shows the active bolus that is currently being delivered.
+Показывает подающийся болюс.
 
-##### Active alarms:
+##### Активные оповещения:
 
-This shows any active alarms that are currently active.
+Показывает действующие оповещения.
 
-##### Reservoir:
+##### резервуар:
 
-This shows the current reservoir level.
+Показывает текущий уровень резервуара.
 
-##### Battery:
+##### батарея:
 
-This shows the current battery voltage of the patch.
+Показывает текущий заряд батареи.
 
-##### Pump type:
+##### Тип помпы:
 
-This shows the current pump type number.
+Показывает номер текущего типа помпы.
 
-##### FW version:
+##### Версия ПО:
 
-This shows the current firmware version of the patch.
+Показывает текущую версию прошивки патча.
 
-##### Patch no:
+##### Номер патча:
 
-This shows the sequence number of the activated patch. This number is incremented every time a new patch is activated.
+Показывает порядковый номер активированного патча. Номер увеличивается каждый раз при активации нового патча.
 
-##### Patch expires:
+##### Патч заканчивается:
 
-This shows the date and time when the patch will expire.
+Показывает дату и время окончания срока работы патча.
 
-##### Refresh:
+##### Обновить:
 
-This button will refresh the status of the patch.
+Эта кнопка обновляет статус патча.
 
-##### Change patch:
+##### Заменить патч:
 
-This button will start the process to change the patch. See [Activate patch](#activate-patch) for more information.
+Эта кнопка запустит процесс замены патча. Смотрите [Активировать патч](#activate-patch) для получения дополнительной информации.
 
-### Reset alarms
+### Сбросить оповещения
 
-The alarm button will appear on the overview screen when there is an active alarm that can be reset. Pressing this button will reset the alarms and resume insulin delivery if the patch has been suspended due to the alarm. E.g. when suspended due to a maximum daily insulin delivery alarm.
+Кнопка оповещения появляется на главном экране, когда есть активное оповещение, которое может быть убрано с экрана. Нажатие этой кнопки сбросит оповещение и возобновит подачу инсулина, если работа патча была приостановлен из-за оповещения. E.g. при приостановке из-за сигнала о достижения максимума суточной подачи инсулина.
 
-![Reset alarms](../images/medtrum/ResetAlarms.png)
+![Сбросить оповещения](../images/medtrum/ResetAlarms.png)
 
-Press the **Reset Alarms** button to reset the alarms and resume normal operation.
+Нажмите кнопку **Убрать оповещения** для сброса оповещений и возобновления нормальной работы.
 
 ## Устранение неполадок
 
-### Activation interrupted
+### Активация прервана
 
-If the activation process is interrupted for example by and empty phone battery or phone crash. The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#resume-interrupted-activation)
+Если активация прервана, например, из-за низкого заряда батареи телефона или поломки телефона. Процесс активации может быть возобновлен если перейти на экран замены патча и следовать шагам, изложенным здесь: [Возобновление прерванной активации](#resume-interrupted-activation)
 
-### Preventing patch faults
+### Предотвращение сбоев в работе патча
 
-The patch can give a variety of errors. To prevent frequent errors:
-- Make sure the pumpbase is properly seated in the patch and no gaps are visible.
-- When filling the patch do not apply excessive force to the plunger. Do not try to fill the patch beyond the maximum that applies to your model.
+Патч может совершить множество ошибок. Во избежание частых ошибок:
+- Убедитесь, что помповая база правильно закреплена в патче и не видно никаких зазоров.
+- При заполнении патча не применяйте чрезмерную силу к плунжеру. Не пытайтесь заполнять патч сверх максимума, применимого к вашей модели.
 
-## Where to get help
+## Куда обращаться за помощью
 
-All of the development work for the Medtrum driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
+Вся работа по совершенствованию драйвера Medtrum выполняется на основе **добровольности**; просим Вас помнить об этом и, прежде чем запрашивать помощь, придерживаться следующих рекомендаций:
 
 -  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#Medtrum* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
+-  **Уровень 1:** Если вы все еще сталкиваетесь с проблемами, которые вы не можете решить, изучая документацию, перейдите в канал *#Medtrum* на **Discord** с помощью [этой ссылки-приглашения](https://discord.gg/4fQUWHZ4Mw).
 -  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.md).
 -  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
