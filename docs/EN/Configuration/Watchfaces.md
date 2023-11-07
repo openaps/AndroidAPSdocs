@@ -1,47 +1,4 @@
-# AAPS on Wear OS smartwatch
-
-You can install AAPS app on your **Wear OS based** smartwatch.
-Watch version of AAPS allows you to:
-* **display data on your watch**: by providing [custom watchfaces](Watchfaces-aaps-watchfaces) or in standard watchfaces with use of [complications](Watchfaces-complications)
-* **control AAPS on phone**: to bolus, set a temporary target etc.
-
-### Before you buy watch...
-
-* Some features like _complications_ require Wear OS version 2.0 or newer to work
-* Google rebranded _Android Wear 1.x_ to _Wear OS_ from version 2.x, so when it says _Android Wear_ it may indicate older 1.x version of system
-* If description of smartwatch indicates only compatibility with _Android_ and _iOS_ - it **does not** means it runs on _Wear OS_ - it may as well be some other sort of Vendor specific OS **which is not compatible with AAPS wear!**
-* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
-
-### Building Wear OS version of AAPS
-
-The Wear OS App of AAPS has been seperated from the AAPS build for the Android mobile. Therefore you have to generate a second signed APK. Select as module "AndroidAPS.wear" and as build variant "fullRelease" and a second apk file for the Wear OS clock is generated when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpcontrolRelease" which will allow you to just remote control the pump without looping).
-
-From March 2021 you need to sideload AAPS onto the watch, it is no longer accessible via the watch's Google Play Store.  You can sideload using [Wear Installer](https://youtu.be/8HsfWPTFGQI) which you will need to install on both your watch and phone.  The Wear Installer app can be downloaded from the Google Play Store. The linked video from Malcolm Bryant the developer of Wear Installer gives you detailed instructions to
-a) download the apk to your mobile
-b) setup the Android Debugger on the wear
-c) use Wear Installer on mobile and wear to sideload the AAPS wear app to the mobile.
-Once you have selected AAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
-
-### Setup on the Phone
-
-Within AAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
-
-## Controlling AAPS from Watch
-
-AAPS is designed to be _controlled_ by Android Wear watches. If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
-
-The following functions can be triggered from the watch:
-* set a temporary target
-* use the bolus calculator (calculation variables can be defined in [settings](Config-Builder-wear) on the phone)
-* administer eCarbs
-* administer a bolus (insulin + carbs)
-* watch settings
-* status
-    * check pump status
-    * check loop status
-    * check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
-    * show TDD (Total daily dose = bolus + basal per day)
-
+# Operation of AAPS via your Wear OS smartwatch
 (Watchfaces-aaps-watchfaces)=
 
 ## AAPS Watchfaces
@@ -352,19 +309,6 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 *  Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
 *  Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
 *  If Complications does not update data - check first if AAPS watchfaces work at all.
-
-### Sony Smartwatch 3
-
-* The Sony Smartwach 3 is one of the most popular watches to be used with AAPS.
-* Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AAPS 2.7 and above.
-* A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.md).
-
-## View Nightscout data
-
-If you are using another looping system and want to _view_ your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the AAPSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "AAPSClientRelease".  There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
-
-# Pebble
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to _view_ looping data (if uploaded to Nightscout), but you will not be able to interact with AAPS through the watch.  You can choose fields to display such as IOB and currently active temp basal rate and predictions.  If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AAPS then send either SMS or pushover notification.
 
 # Garmin
 Therer are a couple of watch faces for Garmin that integrate with xDrip or Nightscout on the [Garmin ConnectIQ store](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30). 
