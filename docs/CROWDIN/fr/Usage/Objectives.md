@@ -11,7 +11,7 @@ Si vous voulez revenir en arrière sur les objectifs terminés voir les [explica
 - Sélectionnez la source de glycémie adaptée à votre configuration.  Voir [Source GLY](../Configuration/BG-Source.md) pour plus d'informations.
 - Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AAPS driver for looping) to ensure your pump status can communicate with AAPS.
 - If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AAPS.
-- Suivez les instructions de la page [Nightscout](../Installing-AndroidAPS/Nightscout.md) pour s'assurer que Nightscout peut recevoir et afficher ces données.
+- You need to establish a data repository/reporting platform to complete this objective. That can be accomplished with either Nightscout or Tidepool (or both). Follow instructions at the [Nightscout](../Installing-AndroidAPS/Nightscout.md) or [Tidepool](../Installing-AndroidAPS/Tidepool.md) page for instructions.
 - Notez que l'URL dans NSClient doit être **SANS /api/v1/** à la fin - voir les [paramètres NSClient dans les Préférences](Preferences-nsclient).
 
 *You may need to wait for the next blood glucose reading to arrive before AAPS will recognise it.*
