@@ -1,47 +1,8 @@
-# AAPS en relojes inteligentes con Wear OS
-
-Puedes instalar la aplicación de AAPS en tu reloj **con sistema Wear OS**. La versión de AAPS para el reloj te permite:
-
-* **Visualizar datos en el reloj**: proporcionando [esferas personalizadas](Watchfaces-aaps-watchfaces) o el uso de [complicaciones](Watchfaces-complications) con esferas estándar.
-* **Controlar AAPS desde el teléfono**: pner bolos, establecer objetivos temporales, etc.
-
-### Antes de comprar un reloj...
-
-* Algunas características como las *complicaciones* requieren la versión 2.0 de Wear OS o más reciente, para que funcione
-* Google renombró *Android Wear 1.x* a *Wear OS* desde la versión 2.x, por lo que que cuando se dice *Android Wear*, se puede estar hablando de la versión 1.x más antigua del sistema.
-* Si la descripción del reloj indica sólo compatibilidad con *Android* e *iOS* - esto **no** significa que pueda ejecutar *Wear OS* - puede significar también que funciona con otro sistema operativo esfecífico del fabricante **que no es compatible con la aplicación AAPS para el reloj**
-* Consulta la [lista de teléfonos y relojes probados](Phones-list-of-tested-phones) y [pregunta a la comunidad ](../Where-To-Go-For-Help/Connect-with-other-users.md) si tienes dudas con la compatibilidad del reloj.
-
-### Construyendo la versión de AAPS para Wear OS
-
-The Wear OS App of AAPS has been seperated from the AAPS build for the Android mobile. Therefore you have to generate a second signed APK. Select as module "AndroidAPS.wear" and as build variant "fullRelease" and a second apk file for the Wear OS clock is generated when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpcontrolRelease" which will allow you to just remote control the pump without looping).
-
-From March 2021 you need to sideload AAPS onto the watch, it is no longer accessible via the watch's Google Play Store. You can sideload using [Wear Installer](https://youtu.be/8HsfWPTFGQI) which you will need to install on both your watch and phone. The Wear Installer app can be downloaded from the Google Play Store. The linked video from Malcolm Bryant the developer of Wear Installer gives you detailed instructions to a) download the apk to your mobile b) setup the Android Debugger on the wear c) use Wear Installer on mobile and wear to sideload the AAPS wear app to the mobile. Once you have selected AAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
-
-### Configuración en el teléfono
-
-Within AAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
-
-## Control AAPS desde el reloj
-
-AAPS is designed to be *controlled* by Android Wear watches. Si desea bolo etc. desde el reloj entonces dentro de "Configuración de Reloj" que necesitas para activar "Controles desde el Reloj".
-
-The following functions can be triggered from the watch:
-
-* Establecer un objetivo temporal
-* use the bolus calculator (calculation variables can be defined in [settings](Config-Builder-wear) on the phone)
-* Administrar carbohidratos extendidos (eCarbs)
-* administrar un bolo (insulina + carbohidratos)
-* ajustes del reloj
-* estado 
-    * comprobar estado de la infusora
-    * comprobar estado del lazo
-    * comprobar y cambiar perfil, CPP (Perfil en Porcentaje circadiano= turno de tiempo + porcentaje)
-    * mostrar TDD (dosis diaria total = bolos + basal por día)
+# Operation of AAPS via your Wear OS smartwatch
 
 (Watchfaces-aaps-watchfaces)=
 
-## Esferas de AAPS
+## AAPS Watchfaces
 
 There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
@@ -49,7 +10,7 @@ Ensure notifications from AAPS are not blocked on the watch. Confirmation of act
 
 To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
 
-## Pantallas disponibles
+## Watchfaces available
 
 ![Available watchfaces](../images/Watchface_Types.png)
 
@@ -61,7 +22,7 @@ To get faster to the AAPS menu, do a double tap on your BG. With a double tap on
 
 * Color, lines and circle are configurable in setting menu on cog-sign of watchface chooser menu.
 
-## Leyenda de esferas AAPSv2
+## AAPSv2 watchface - Legend
 
 ![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
 
@@ -85,34 +46,34 @@ I - carbs (carbs on board | e-carbs in the future)
 
 J - insulin on board (from bolus | from basal)
 
-## Acceso al menú principal de AAPS
+## Accessing main menu of AAPS
 
-Para acceder al menú principal de AAPS puedes utilizar una de las siguientes opciones:
+To access main menu of AAPS you can use on of following options:
 
-* Pulsar dos veces sobre el valor de glucosa
-* Pulsar sobre el icono de AAPS en el menú de aplicaciones del reloj
-* Pulsar sobre Complicación de AAPS (si se ha configurado para el menú)
+* double tap on your BG value
+* select AAPS icon in watch applications menu
+* tap on AAPS complication (if configured for menu)
 
-## Ajustes (desde el reloj)
+## Settings (in wear watch)
 
-Para acceder a los ajustes del reloj, accede desde el menú principal de AAPS, desliza hacia arriba y selecciona "Ajustes".
+To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
 
-La estrella rellena significa que la opción está activada (**Activado**), y el icono de estrella con hueco indica que la característica está desactivadoa(**Desactivado**):
+Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
 
 ![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
-### Parámetros complementarios de AAPS
+### AAPS companion parameters
 
-* **Vibrar en bolos** (por defecto `Activado`):
-* **Unidades usadas en las acciones** (por defecto `mg/dl`): si está **Activado** las unidades para las acciones están en `mg/dl`, si está **Desactivado** la unidad es `mmol/l`. Se utiliza cuando se establece un OT desde el reloj.
+* **Vibrate on Bolus** (default `On`):
+* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
 
 (Watchfaces-watchface-settings)=
 
-### Ajustes de las esferas
+### Watchface settings
 
-* <**Mostrar fecha** (por defecto `Desactivado`): la fecha no está disponible en todas las esferas.
-* **Mostrar IOB** (por defecto `Activado`): Mostrar o no el valor de la insulina activa (IOB). El ajuste para el valor detallado está dentro los parámetros de AAPS)
-* **Mostrar COB** (predeterminado `Activado`): Mostrar o no el valor de los carbohidratos (COB)
+* **Show Date** (default `Off`): note, date is not available on all watchfaces
+* **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
+* **Show COB** (default `On`): Display or not COB value
 * **Show Delta** (default `On`): Display or not the BG variation of the last 5 minutes
 * **Show AvgDelta** (default `On`): Display or not the average BG variation of the last 15 minutes
 * **Show Phone Battery** (default `On`): Phone battery in %. Red if below 30% .
@@ -153,15 +114,15 @@ La estrella rellena significa que la opción está activada (**Activado**), y el
 * **Wizard in Menu** (default `On`): Allow wizard interface in main menu to input Carbs and set Bolus from watch
 * **Prime in Menu** (default `Off`): Allow Prime / Fill action from watch
 * **Single Target** (default `On`):
-    
-    * `On`: you set a single value for TT
-    * `Off`: you set Low target and high target for TT
+  
+  * `On`: you set a single value for TT
+  * `Off`: you set Low target and high target for TT
 
 * **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
 
 (Watchfaces-complications)=
 
-## Compilaciones
+## Complications
 
 *Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
 
@@ -208,13 +169,13 @@ Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpa
 ### Complication related settings
 
 * **Complication Tap Action** (default `Default`): Decides which dialog is opened when user taps complication: 
-    * *Default*: action specific to complication type *(see list above)*
-    * *Menu*: AAPS main menu
-    * *Wizard*: bolus wizard - bolus calculator
-    * *Bolus*: direct bolus value entry
-    * *eCarb*: eCarb configuration dialog
-    * *Status*: status sub-menu
-    * *None*: Disables tap action on AAPS complications
+  * *Default*: action specific to complication type *(see list above)*
+  * *Menu*: AAPS main menu
+  * *Wizard*: bolus wizard - bolus calculator
+  * *Bolus*: direct bolus value entry
+  * *eCarb*: eCarb configuration dialog
+  * *Status*: status sub-menu
+  * *None*: Disables tap action on AAPS complications
 * **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on the font, and that can be very watchface-specific. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
 
 ## Wear OS Tiles
@@ -235,13 +196,10 @@ Before using the tiles, you have to switch on "Control from Watch" in the "Wear 
 
 Depending on your Wear OS version, brand and smartphone there are two ways of enabling the tiles:
 
-1. On your watch, from your watch face; 
-    * Swipe right to left till you reach the "+ Add tiles" 
-    * Select one of the tiles.
-2. On your phone open the companion app for your watch. 
-    * For Samsung open "Galaxy Wearable", or for other brands "Wear OS"
-    * In the click on the section "Tiles", followed by "+ Add" button
-    * Find the AAPS tile you like to add by selecting it. ![Wear phone add tile](../images/wear_companion_app_add_tile.png) The order of the tiles can be changed by dragging and dropping
+1. On your watch, from your watch face; - Swipe right to left till you reach the "+ Add tiles" - Select one of the tiles.
+2. On your phone open the companion app for your watch. - For Samsung open "Galaxy Wearable", or for other brands "Wear OS" 
+  * In the click on the section "Tiles", followed by "+ Add" button
+  * Find the AAPS tile you like to add by selecting it. ![Wear phone add tile](../images/wear_companion_app_add_tile.png) The order of the tiles can be changed by dragging and dropping
 
 The content of the tiles can be customized by long-pressing a tile and clicking the "Edit" or "gear icon" button.
 
@@ -345,20 +303,6 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
 * Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
 * If Complications does not update data - check first if AAPS watchfaces work at all.
-
-### Sony Smartwatch 3
-
-* The Sony Smartwach 3 is one of the most popular watches to be used with AAPS.
-* Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AAPS 2.7 and above.
-* A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.md).
-
-## View Nightscout data
-
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the AAPSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "AAPSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
-
-# Pebble
-
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AAPS then send either SMS or pushover notification.
 
 # Garmin
 
