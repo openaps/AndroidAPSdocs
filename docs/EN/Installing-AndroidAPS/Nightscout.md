@@ -64,4 +64,6 @@ An alternative can be to pay for these SaaS services and get rid of these tasks.
 Here you find a randomly ordered list of possible service providers.
 We will not recommend any of them but we want to give new users a place to jump to their web site and inform themself!
 
+|                                                                                             |                                                              |
+|---------------------------------------------------------------------------------------------|--------------------------------------------------------------|
 | [![ns.10be.de](../images/ns.10be.de-logo_halb_klein.jpg)](https://ns.10be.de/en/index.html) | [![T1Pal](../images/t1_pal_bear_bw.png)](https://t1pal.com/) |
