@@ -33,4 +33,4 @@ Otherwise, minimum predicted BG is used.
 
 ### Adjust sensitivity and BG setting
 
-This setting replaces Autosens, and uses the last 24h TDD/7D TDD as the basis for adjusting calculated ISF and also for increasing and decreasing basal rate, in the same way that standard Autosens does. 
+This setting replaces Autosens, and uses the last 24h TDD/7D TDD as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. This calculated value is also used to adjust target, if the options to adjust target with sensitivity are enabled. unlike Autosens, this option does not adjust ISF values. 
