@@ -33,4 +33,4 @@ De lo contrario, se utiliza la glucosa prevista mínima.
 
 ### Ajustar la sensibilidad y la configuración de glucosa
 
-Esta configuración reemplaza Autosens y utiliza la base del cálculo del ISF ajustado y también para aumentar y disminuir la tasa basal de acuerdo al cociente de la TDD de las últimas 24 horas sobre la TDD de los últimos 7 días, de la misma manera que lo hace Autosens estándar. 
+This setting replaces Autosens, and uses the last 24h TDD/7D TDD as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. This calculated value is also used to adjust target, if the options to adjust target with sensitivity are enabled. unlike Autosens, this option does not adjust ISF values. 
