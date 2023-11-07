@@ -158,7 +158,7 @@ Vzdálený bolus není povolen do 15 minut (tato hodnota je upravitelná pouze v
 ### Jiné
 
 - TREATMENTS REFRESH \* Odpověď: Obnovit ošetření z NS
-- AAPSClient RESTART \* Response: AAPSClient RESTART 1 receivers
+- NSClient RESTART \* Response: NSCLIENT RESTART SENT
 - PUMP \* Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 - PUMP CONNECT \* Odpověď: Pumpa znovu připojena
 - PUMP DISCONNECT *30* \* Odpověď: Pro odpojení pumpy na *30* minut odpověz pomocí SMS s kódem z aplikace Authenticator pro User následováno kódem PIN
