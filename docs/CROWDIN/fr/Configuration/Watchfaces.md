@@ -1,279 +1,237 @@
-# AAPS sur montres Wear OS
-
-You can install AAPS app on your **Wear OS based** smartwatch. La version montre de AAPS vous permet de:
-
-* **display data on your watch**: by providing [custom watchfaces](Watchfaces-aaps-watchfaces) or in standard watchfaces with use of [complications](Watchfaces-complications)
-* **contrôler AAPS du téléphone** : pour faire un bolus, définir une cible temporaire, etc.
-
-### Avant d'acheter la montre...
-
-* Certaines fonctions comme les *complications* nécessitent une version 2.0 ou plus récente de Wear OS
-* Google a rebaptisé *Android Wear 1.x* en *Wear OS* depuis la version 2.x, donc quand il est indiqué *Android Wear* il est possible que ce soit une ancienne version 1.x du système
-* Si la description indique seulement *Compatibilité avec Android* et *iOS* - cela **ne signifie pas** que la montre fonctionne sous *Wear OS* - cela peut tout à fait être une autre sorte de système d'exploitation spécifique au fournisseur **qui n'est pas compatible avec les cadrans AAPS wear!**
-* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
-
-### Construction de la version Wear OS d'AAPS
-
-L’application Wear OS de AAPS a été séparée de la compilation de AAPS pour Android mobile. Par conséquent, vous devez générer un second APK signé. Sélectionnez le module "AndroidAPS.wear" avec la variante "fullRelease" et un 2ème fichier apk pour la montre Wear OS est généré quand vous [générez l'APK](../Installing-AndroidAPS/Building-APK.md) (ou encore "pumpcontrolRelease" qui vous permettra de juste controler la pompe sans boucler).
-
-À partir de mars 2021, vous devez mettre AAPS sur la montre, il n'est plus accessible via le Google Play Store de la montre. Vous pouvez utiliser [Wear Installer](https://youtu.be/8HsfWPTFGQI) que vous devrez installer sur votre montre et votre téléphone. L'application Wear Installer peut être téléchargée depuis le Google Play Store. La vidéo liée de Malcolm Bryant le développeur de Wear Installer vous donne des instructions détaillées pour a) télécharger l'apk sur votre mobile b) configurer le Débogueur Android sur la montre c) utiliser Wear Installer sur le mobile et la montre pour installer la version Wear OS de AAPS sur la montre. Once you have selected AAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
-
-### Configuration sur le téléphone
-
-Within AAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
-
-## Contrôler AAPS depuis la montre
-
-AAPS is designed to be *controlled* by Android Wear watches. Si vous voulez commander AAPS depuis la montre (bolus etc) alors dans les "Paramètres Wear" vous devez activer "Commandes depuis la montre".
-
-Les fonctions suivantes peuvent être déclenchées à partir de la montre :
-
-* définir une cible temporaire
-* utiliser l'assistant bolus (les paramètres à prendre en compte dans le calculs peuvent être définis dans [Paramètres de l'Assistant](Config-Builder-wear) sur le téléphone)
-* administrer des eGlucides
-* administrer un bolus (insuline + glucides)
-* afficher les paramètres sur la montre
-* état 
-    * vérifier l'état de la pompe
-    * vérifier l'état de la pompe
-    * vérifier et modifier le profil (décalage horaire + pourcentage)
-    * montrer la DTQ (Dose Totale Quotidienne = bolus + basale par jour)
+# Operation of AAPS via your Wear OS smartwatch
 
 (Watchfaces-aaps-watchfaces)=
 
-## Cadrans AAPS
+## AAPS Watchfaces
 
-Il y a plusieurs cadrans à choisir qui incluent le delta moyen, l'IA, le débit temporaire de basal actuel et les profils de basal + le graphique de lecture MGC.
+There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
-Ensure notifications from AAPS are not blocked on the watch. La confirmation de l'action (par ex. bolus, cible temporaire) est envoyée par une notification que vous devrez glisser et cocher.
+Ensure notifications from AAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
 
-Pour accéder plus rapidement au menu AAPS, appuyez deux fois sur votre Gly. Avec un double appui sur la courbe Gly vous pouvez changer l'échelle de temps.
+To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
 
-## Cadrans disponibles
+## Watchfaces available
 
-![Cadrans disponibles](../images/Watchface_Types.png)
+![Available watchfaces](../images/Watchface_Types.png)
 
 (Watchfaces-new-watchface-as-of-AAPS-2-8)=
 
 ### New watchface as of AAPS 2.8
 
-![Cadran Digital](../images/Watchface_DigitalStyle.png)
+![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
 
-* La couleur, les lignes et le cercle sont personnalisables via la roue crantée du menu de sélection du cadran.
+* Color, lines and circle are configurable in setting menu on cog-sign of watchface chooser menu.
 
-## Cadran AAPSv2 - Légende
+## AAPSv2 watchface - Legend
 
 ![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
 
-A - temps écoulé depuis le dernier calcul de la boucle
+A - time since last loop run
 
-B - lecture du capteur MGC
+B - CGM reading
 
-C - nombre de minutes depuis la dernière lecture MGC
+C - minutes since last CGM reading
 
-D - changement par rapport à la dernière lecture MGC (en mmol ou mg/dl)
+D - change compared to last CGM reading (in mmol or mg/dl)
 
-E - variation moyenne des lectures MGC depuis 15 minutes
+E - average change CGM reading last 15 minutes
 
-F - niveau de batterie du téléphone
+F - phone battery
 
-G - débits de basal (en U/h ou en % pendant un DBT)
+G - basal rate (shown in U/h during standard rate and in % during TBR)
 
-H - IG (BGI) Impact Glycémique -> l'augmentation ou diminution que "devrait" avoir la glycémie en fonction de l'activité de l'insuline seule.
+H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
-I - glucides (glucides actifs | e-glucides à venir)
+I - carbs (carbs on board | e-carbs in the future)
 
-J - Insuline Active (de bolus | de basal)
+J - insulin on board (from bolus | from basal)
 
-## Accès menu principal de AAPS
+## Accessing main menu of AAPS
 
-Pour accéder au menu principal d'AAPS, vous pouvez utiliser les options suivantes :
+To access main menu of AAPS you can use on of following options:
 
-* double appui sur votre valeur de glycémie
-* sélectionnez l'icône AAPS dans les applications de la montre
-* appuyez sur la complication AAPS (si configuré pour le menu)
+* double tap on your BG value
+* select AAPS icon in watch applications menu
+* tap on AAPS complication (if configured for menu)
 
-## Paramètres (dans la montre)
+## Settings (in wear watch)
 
-Pour accéder aux paramètres du cadran, entrez dans le menu principal AAPS, faites glisser vers le haut et sélectionnez "Paramètres".
+To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
 
-L'étoile remplie est pour l'état activé (**On**), et l'étoile vide indique que le paramètre est désactivé (**Off**) :
+Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
 
-![Paramètres On/Off](../images/Watchface_Settings_On_Off.png)
+![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
-### Paramètres du compagnon AAPS
+### AAPS companion parameters
 
-* **Vibrer sur Bolus** (par défaut `Oui`):
-* **Unités des Actions** (par défaut `mg/dl`) : si **On** l'unité des actions est `mg/dl`, si **Off** l'unité est `mmol/l`. Utilisé lors de la définition d'une CT à partir de la montre.
+* **Vibrate on Bolus** (default `On`):
+* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
 
 (Watchfaces-watchface-settings)=
 
-### Paramètres cadran
+### Watchface settings
 
-* **Afficher Date** (par défaut `Off`): remarque, la date n'est pas disponible sur tous les cadrans
-* **Afficher IA** (par défaut `On`) : afficher ou non la valeur de l'IA (le paramétrage de l'affichage des valeurs détaillées est dans les paramètres Wear du Générateur de configurations de AAPS)
-* **Afficher GA** (par défaut `On`) : afficher ou non la valeur GA
-* **Afficher Delta** (par défaut `On`) : afficher ou non la variation de Gly des 5 dernières minutes
-* ** Afficher Delta Moyen** (par défaut `On`) : afficher ou non la variation moyenne des Gly des 15 dernières minutes
-* **Afficher Batterie Téléphone** (par défaut `On`) : batterie du téléphone en %. Rouge si en dessous de 30%.
-* **Afficher Batterie Système** (par défaut `Off`) : la batterie système est une synthèse de la batterie du Téléphone, de la pompe et de la pile du capteur (en général la plus faible des 3 valeurs)
-* **Afficher Basale** (par défaut `On`) : afficher ou non le débit de basal (en U/h ou en % si DBT)
-* **Afficher État Boucle** (par défaut `On`) : afficher ou non le nombre de minutes depuis le dernier calcul de boucle (les flèches autour de la valeur deviennent rouge si au-dessus de 15').
-* **Afficher Glycémie** (par défaut `On`) : afficher ou non la dernière valeur de glycémie
-* **Afficher flèche** (par défaut `On`) : afficher ou non la flèche de tendance Gly
-* **Afficher Min Passées** (par défaut `On`) : afficher ou non le nombre de minutes depuis la dernière lecture.
-* **Sombre** (par défaut `On`) : Vous pouvez changer l'arrière plan du cadran de noir à blanc (sauf pour les cadrans Cockpit et Steampunk)
-* **Surbrillance Basale** (par défaut `Off`) : Améliorer la visibilité des débits de basal et basales temporaires
-* **Séparateur** (par défaut `Off`) : pour les cadrans AAPS, AAPSv2 et AAPS(Large), affiche le fond du séparateur contrasté avec l'arrière plan (**Off**) ou de la même couleur que l'arrière plan (**On**)
-* **Echelle Graphique** (par défaut `3 heures`) : vous pouvez sélectionner dans le sous-menu de la durée max de votre graphique entre 1 heure et 5 heures.
+* **Show Date** (default `Off`): note, date is not available on all watchfaces
+* **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
+* **Show COB** (default `On`): Display or not COB value
+* **Show Delta** (default `On`): Display or not the BG variation of the last 5 minutes
+* **Show AvgDelta** (default `On`): Display or not the average BG variation of the last 15 minutes
+* **Show Phone Battery** (default `On`): Phone battery in %. Red if below 30% .
+* **Show Rig Battery** (default `Off`): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
+* **Show Basal Rate** (default `On`): Display or not current basal rate (in U/h or in % if TBR)
+* **Show Loop Status** (default `On`): show how many minutes since last loop run (arrows around value turn red if above 15').
+* **Show BG** (default `On`): Display or not last BG value
+* **Show Direction Arrow** (default `On`): Display or not BG trend arrow
+* **Show Ago** (default `On`): show how many minutes since last reading.
+* **Dark** (default `On`): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
+* **Highlight Basals** (default `Off`): Improve the visibility of basal rate and temp basals
+* **Matching divider** (default `Off`): For AAPS, AAPSv2 and AAPS(Large) watchfaces, show contrast background for divider (**Off**) or match divider with the background color (**On**)
+* **Chart Timeframe** (default `3 hours`): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
 
-### Paramètre Interface Utilisateur
+### User Interface setting
 
-* **Design de saisie** : avec ce parametre, vous pouvez sélectionner la position des boutons "+" et "-" quand vous entrez des commandes pour AAPS (CT, Insuline, Glucides...)
+* **Input Design**: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
 
-![Choix de l'interface d'entrée](../images/Watchface_InputDesign.png)
+![Input design options](../images/Watchface_InputDesign.png)
 
-### Paramètres spécifiques à certains cadrans
+### Specific watchface parameters
 
 #### Cadran Steampunk
 
-* **Précision Delta** (par défaut `Moyenne`)
+* **Delta Granularity** (default `Medium`)
 
-![Jauge Steampunk](../images/Watchface_Steampunk_Gauge.png)
+![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
 #### Cercle WF
 
-* **Gros chiffres** (par défaut `Off`) : Augmenter la taille du texte pour améliorer la visibilité
-* **Historique** (par défaut `Off`) : Afficher graphiquement l'historique des Gly avec des cercles gris à l'intérieur de l'anneau vert de l'heure
-* **Historique Léger** (par défaut `On`) : cercles plus discrets avec un gris foncé
-* **Animations** (par défaut `On`) : Si activé, sur les montres supportée et hors mode économie d'énergie basse résolution, le cercle du cadran est animé
+* **Big Numbers** (default `Off`): Increase text size to improve visibility
+* **Ring History** (default `Off`): View graphically BG history with gray rings inside the hour's green ring
+* **Light Ring History** (default `On`): Ring history more discreet with a darker gray
+* **Animations** (default `On`): When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
 
-### Paramètres des commandes
+### Commands settings
 
-* **Assistant dans Menu** (par défaut `On`) : Autoriser l'action Assistant dans le menu principal pour renseigner les Glucides et faire des Bolus à partir de la montre
-* **Amorcer dans Menu** (par défaut `Off`) : Autoriser l'action Amorcer/Remplir à partir de la montre
-* **Cible unique** (par défaut `On`):
-    
-    * `On`: vous définissez une valeur unique pour une CT
-    * `Off`: vous définissez une cible basse et haute pour une CT
+* **Wizard in Menu** (default `On`): Allow wizard interface in main menu to input Carbs and set Bolus from watch
+* **Prime in Menu** (default `Off`): Allow Prime / Fill action from watch
+* **Single Target** (default `On`):
+  
+  * `On`: you set a single value for TT
+  * `Off`: you set Low target and high target for TT
 
-* **Assistant Pourcentage** (par défaut `Off`) : Autoriser la correction du bolus à partir de l'assistant (valeur saisie en pourcentage avant la confirmation)
+* **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
 
 (Watchfaces-complications)=
 
 ## Complications
 
-La *complication* est un terme issu de l'horlogerie traditionnelle, il décrit l'ajout à la montre principale d'une autre petite fenêtre ou sous-cadran (avec date, jour de la semaine, phase lunaire, etc.). Wear OS 2.0 apporte cette métaphore pour permettre aux fournisseurs de données personnalisés, comme la météo, les notifications, compteurs de fitness et plus encore, d'ajouter ces informations à tous les cadrans qui supportent les complications.
+*Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
 
 AAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
 
-Les complications servent également de **raccourci** aux fonctions AAPS. En appuyant dessus, vous pouvez ouvrir les menus et dialogues de AAPS (selon la complication et la configuration).
+Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
 
 ![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
 
-### Types de Complication
+### Complication Types
 
-AAPS Wear OS ne fournit que des données brutes, selon les formats prédéfinis. Il revient au cadran récepteur de décider où et comment mettre en forme les complications, y compris sa mise en page, sa bordure, sa couleur et sa police. Parmi les nombreux types de complications Wear OS disponibles, AAPS utilise :
+AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
 
-* `TEXTE COURT` - Contient deux lignes de texte, 7 caractères chacune, parfois appelés valeur et étiquette. Il est généralement affiché à l'intérieur d'un cercle ou d'une petite pilule - l'un au-dessous de l'autre, ou côte à côte. C'est une complication très compacte. AAPS essaye de supprimer les caractères inutiles pour l'ajuster : en arrondissant les valeurs, en supprimant les zéros de début et de fin des valeurs, etc.
-* `TEXTE LONG` - Contient deux lignes de texte, d'environ 20 caractères chacune. Il est généralement affiché à l'intérieur d'un rectangle ou d'une longue pilule - l'une en dessous d'un autre. Il est utilisé pour plus de détails et des statuts textuels.
-* `PLAGE DE VALEUR` - Utilisée pour les valeurs d'une plage prédéfinie, comme un pourcentage. Il contient une icône, une étiquette et est généralement rendu en tant que cadran de progression circulaire.
-* `GRANDE IMAGE` - Image d'arrière-plan personnalisée qui peut être utilisée (si pris en charge par le cadran) en arrière-plan.
+* `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Usually rendered inside a circle or small pill - one below another, or side by side. It is a very space-limited complication. AAPS tries to remove unnecessary characters to fit-in: by rounding values, removing leading and trailing zeroes from values, etc.
+* `LONG TEXT` - Contains two lines of text, about 20 characters each. Usually rendered inside a rectangle or long pill - one below another. It is used for more details and textual status.
+* `RANGED VALUE` - Used for values from predefined range, like a percentage. It contains icon, label and is usually rendered as circle progress dial.
+* `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
 
-### Paramètres des complications
+### Complication Setup
 
-Pour ajouter une complication à un cadran, configurez-le par un appui long et cliquez sur la roue crantée en dessous. Selon la façon dont s'effectue le paramétrage du cadran - soit cliquez sur les espaces réservés, soit entrez dans le menu de paramétrage des complications du cadran. Les complications de AAPS sont regroupées dans le sous-menu AAPS.
+To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
 
-Quand vous configurez les complications dans un cadran, Wear OS présente et filtre la liste des complications qui sont adaptées à la zone sélectionnée dans le cadran. Si certaines complications ne sont pas dans la liste, c'est probablement parce qu'elle ne peut pas être utilisée à cet endroit.
+When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
 
-### Complications fournies par AAPS
+### Complications provided by AAPS
 
 AAPS provides following complications:
 
-![Liste des complications AAPS](../images/Watchface_Complications_List.png)
+![AAPS_Complications_List](../images/Watchface_Complications_List.png)
 
-* **Gly, GA & IA** (`TEXTE COURT`, ouvre *Menu*) : Affiche *Débit de Basal* sur la première ligne et *Glucides Actifs* et *Insuline Active* sur la deuxième ligne.
-* **Glycémie** (`TEXTE COURT`, ouvre *Menu*) : Affiche la valeur de la *Glycémie* et la flèche de *tendance* sur la première ligne et *l'âge de la mesure* et le *delta Gly* sur la deuxième ligne.
-* **GA & IA** (`TEXTE COURT`, ouvre *Menu*) : affiche *Glucides Actifs* sur la première ligne et *Insuline Active* sur la deuxième ligne.
-* **GA Détaillé** (`TEXTE COURT`, ouvre *Assistant*) : affiche la valeur courante de *Glucides Actifs* sur la première ligne et les glucides planifiés (Glucides étendus à venir) sur la deuxième ligne.
-* **Icone GA** (`TEXTE COURT`, ouvre *Assistant*) : affiche la valeur de *Glucides Actifs* avec une icône statique.
-* **Statut Complet** (`TEXTE LONG`, ouvre *Menu*) : Indique que la plupart des données en même temps : *Glycémie* et flèche de *tendance*, *Delta Gly* et *âge de la mesure* sur la première ligne. Sur la deuxième ligne *Glucides Actifs*, *Insuline Active* et *Débit de basal*.
-* **Statut Complet (inversé)** (`TEXTE LONG`, ouvre *Menu*) : Même données que pour le *Statut Complet*, mais les lignes sont inversées. Peut être utilisé dans certains cadrans qui ignorent l'une des deux lignes dans les `TEXTE LONG`
-* **IA Détaillé** (`TEXTE COURT`, ouvre *Bolus*) : Affiche l'*Insuline Active* totale sur la première ligne et la part d'*IA* pour le *Bolus* et la *Basale* sur la deuxième ligne.
-* **Icone IA** (`TEXTE COURT`, ouvre *Bolus*) : Affiche la valeur *Insuline Active* avec une icône statique.
-* **Batterie du téléphone** (`PLAGE DE VALEURS`, ouvre *Etats*) : Affiche le pourcentage de batterie du téléphone AAPS, tel que signalé par AAPS. Affichée avec une jauge de pourcentage avec de l'icône de la batterie qui reflète la valeur envoyée. Il peut ne pas être mis à jour en temps réel, mais lorsque d'autres données importantes de AAPS changent (en général: toutes les ~ 5 minutes avec une nouvelle mesure de *Glycémie*).
+* **BR, CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Basal Rate* on the first line and *Carbs on Board* and *Insulin on Board* on the second line.
+* **Blood Glucose** (`SHORT TEXT`, opens *Menu*): Displays *Blood Glucose* value and *trend* arrow on the first line and *measurement age* and *BG delta* on the second line.
+* **CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Carbs on Board* on the first line and *Insulin on Board* on the second line.
+* **CoB Detailed** (`SHORT TEXT`, opens *Wizard*): Displays current active *Carbs on Board* on the first line and planned (future, eCarbs) Carbs on the second line.
+* **CoB Icon** (`SHORT TEXT`, opens *Wizard*): Displays *Carbs on Board* value with a static icon.
+* **Full Status** (`LONG TEXT`, opens *Menu*): Shows most of the data at once: *Blood Glucose* value and *trend* arrow, *BG delta* and *measurement age* on the first line. On the second line *Carbs on Board*, *Insulin on Board* and *Basal Rate*.
+* **Full Status (flipped)** (`LONG TEXT`, opens *Menu*): Same data as for standard *Full Status*, but lines are flipped. Can be used in watchfaces which ignores one of two lines in `LONG TEXT`
+* **IoB Detailed** (`SHORT TEXT`, opens *Bolus*): Displays total *Insulin on Board* on the first line and split of *IoB* for *Bolus* and *Basal* part on the second line.
+* **IoB Icon** (`SHORT TEXT`, opens *Bolus*): Displays *Insulin on Board* value with a static icon.
+* **Uploader/Phone Battery** (`RANGED VALUE`, opens *Status*): Displays battery percentage of AAPS phone (uploader), as reported by AAPS. Displayed as percentage gauge with a battery icon that reflects reported value. It may be not updated in real-time, but when other important AAPS data changes (usually: every ~5 minutes with new *Blood Glucose* measurement).
 
-De plus, il y a trois complications de type `IMAGE LARGE` : **Fond d'écran noir**, **fond d'écran gris** et **fond d'écran clair**, affichant une image AAPS statique.
+Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.
 
-### Paramètres des complications
+### Complication related settings
 
-* **Action Appui Complication** (par défaut `Défaut`) : Décide de l'action qui s'ouvre lorsque l'utilisateur appui sur la Complication : 
-    * *Défaut* : action spécifique à chaque complication *(voir la liste ci-dessus)*
-    * *Menu* : menu principal AAPS
-    * *Assistant* : assistant bolus - calculateur bolus
-    * *Bolus* : Bolus et glucides saisis directement
-    * *eGlucides* : boîte de dialogue de configuration eGlucides
-    * *Etats* : sous-menu d'états
-    * *Aucun* : Désactive l'action sur les complications AAPS
-* **Unicode dans Complications** (par défaut `On`) : Si `On`, la complication utilise des caractères Unicode pour les symboles tels que `Δ` Delta, `⁞` séparateur de point vertical ou `⎍` symbole du débit de basal. Le rendu de ces symboles dépend de la police, et cela peut être très spécifique au cadran. Cette option permet de désactiver les symboles `Unicode` quand c'est nécessaire - si la police utilisée par le cadran personnalisé ne prend pas en charge ces symboles - pour éviter les problèmes graphiques.
+* **Complication Tap Action** (default `Default`): Decides which dialog is opened when user taps complication: 
+  * *Default*: action specific to complication type *(see list above)*
+  * *Menu*: AAPS main menu
+  * *Wizard*: bolus wizard - bolus calculator
+  * *Bolus*: direct bolus value entry
+  * *eCarb*: eCarb configuration dialog
+  * *Status*: status sub-menu
+  * *None*: Disables tap action on AAPS complications
+* **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on the font, and that can be very watchface-specific. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
 
-## Tuiles Wear OS
+## Wear OS Tiles
 
-Les tuiles Wear OS fournissent un accès facile aux informations et aux actions utilisateur pour faire les choses. Les tuiles ne sont disponibles que sur montres Android fonctionnant sur Wear Os version 2.0 et supérieure.
+Wear OS Tiles provide easy access to users' information and actions to get things done. The tiles are only available on Android smartwatches running on Wear Os version 2.0 and higher.
 
-Les tuiles vous permettent d'accéder rapidement aux actions de l'application AAPS sans passer par le menu de la montre. Les tuiles sont optionnelles et peuvent être ajoutées et configurées par l'utilisateur.
+Tiles allow you to quickly access actions on the AAPS application without going through the watch face menu. The tiles are optional and can be added and configured by the user.
 
-Les tuiles sont utilisées « à côté » de n'importe quel cadran de montre. Pour accéder à une tuile, une fois activé, glissez de droite à gauche sur votre cadran pour les afficher.
+The tiles are used "next to" any watch face. To access a tile, when enabled, swipe right to left on your watch face to show them.
 
-Veuillez noter que les tuiles n'affichent pas l'état courant de l'application AAPS et ne feront qu'une demande, qui devra-t être confirmée sur la montre avant d'être appliquée.
+Please note; that the tiles do not hold the actual state of the AAPS phone app and will only make a request, which has to be confirmed on the watch before it is applied.
 
-## Comment ajouter les tuiles :
+## How to add Tiles
 
-Avant d'utiliser les tuiles, vous devez activer "Commandes depuis la montre" dans les paramètres "Wear OS" d'AAPS.
+Before using the tiles, you have to switch on "Control from Watch" in the "Wear OS" settings of Android APS.
 
 ![Wear phone preferences enabled](../images/wear_phone_preferences.jpg)
 
-Selon votre version de Wear OS, la marque et le smartphone il y a deux façons d'activer les tuiles :
+Depending on your Wear OS version, brand and smartphone there are two ways of enabling the tiles:
 
-1. Sur votre montre, depuis votre cadran : 
-    * Glissez de droite à gauche jusqu'à ce que vous atteigniez le "+ Ajouter des tuiles" 
-    * Sélectionnez une des tuiles.
-2. Sur votre téléphone, ouvrez l'application compagnon pour votre montre. 
-    * Pour Samsung ouvrez "Galaxy Wearable", ou pour d'autres marques "Wear OS"
-    * Cliquez sur la section "Tuiles", puis sur le bouton "+ Ajouter"
-    * Trouvez la tuile AAPS que vous souhaitez ajouter en la sélectionnant. ![Wear phone add tile](../images/wear_companion_app_add_tile.png) L'ordre des tuiles peut être modifié en glisser-déposer
+1. On your watch, from your watch face; - Swipe right to left till you reach the "+ Add tiles" - Select one of the tiles.
+2. On your phone open the companion app for your watch. - For Samsung open "Galaxy Wearable", or for other brands "Wear OS" 
+  * In the click on the section "Tiles", followed by "+ Add" button
+  * Find the AAPS tile you like to add by selecting it. ![Wear phone add tile](../images/wear_companion_app_add_tile.png) The order of the tiles can be changed by dragging and dropping
 
-Le contenu des tuiles peut être personnalisé en appuyant longuement sur une tuile et en cliquant sur le bouton "Éditer" ou l'icône "Engrenage".
+The content of the tiles can be customized by long-pressing a tile and clicking the "Edit" or "gear icon" button.
 
-### Tuile APS(Actions)
+### APS(Actions) Tile
 
-La tuile d'action peut contenir de 1 à 4 boutons d'action définis par l'utilisateur. Pour configurer, appuyez longuement sur la tuile, qui affichera les options de configuration. Des actions similaires sont également disponibles via le menu de montre standard.
+The action tile can hold 1 to 4 user-defined action buttons. To configure, long-press the tile, which will show the configuration options. Similar actions are also available through the standard watch menu.
 
-Les actions prises en charge dans la tuile d'action peuvent envoyer des requêtes dans l'application AAPS pour
+Actions supported in the Action tile can request the AAPS phone app for:
 
-* **Calc** : faire un calcul de bolus, basé sur l'entrée de glucides et avec un pourcentage optionnel [1]
-* **Insuline** : demander l'injection d'insuline en entrant les unités d'insuline
-* **Traitement** : demander à la fois l'injection d'insuline et ajouter des glucides
-* **Glucides** : ajouter des glucides (étendus)
-* **TempT** : définir une cible temporaire personnalisée ainsi que sa durée
+* **Calc**; do a bolus calculation, based on carb input and optional a percentage [1]
+* **Insulin**; request insulin delivery by entering the unit of insulin
+* **Treatment**; request both insulin delivery and add carbs
+* **Carbs**; add (extended) carbs
+* **TempT**; set a custom temporary target and duration
 
 ![Wear action tile, sample calculator](../images/wear_actions.png)
 
-[1] Via, le menu Wear OS, réglez l'option "Pourcentage de Calculateur" à "ON" pour afficher le pourcentage d'entrée dans la calculatrice de bolus. Le pourcentage par défaut est basé sur les paramètres du téléphone dans la section "Aperçu" ["Injecter cette partie de Bolus calculée par l’assistant en %"](Config-Builder.html#advanced-settings) Quand l'utilisateur ne fournit pas de pourcentage, la valeur par défaut du téléphone est utilisée. Configurez les autres paramètres de l'assistant bolus dans l'application téléphone via "Préférences" "Paramètres de l'assistant".
+[1] Via, the Wear OS menu, set the "Calculator Percentage" option to "ON" to show the percentage input in the bolus calculator. The default percentage is based on the phone settings in the"Overview" section ["Deliver this part of the bolus wizard result %"](Config-Builder.html#advanced-settings) When the user does not provide a percentage, the default value from the phone is used. Configure the other parameters for the bolus calculator in the phone app via "Preferences" "Wizard Settings".
 
-### AAPS(Cible Temp)
+### AAPS(Temp Target) Tile
 
-La tuile cible temporaire peut demander une cible temporaire basée sur les préréglages du téléphone AAPS. Configurez l'heure prédéfinie et les cibles à travers les paramètres de l'application téléphone en allant dans "Préférences", "Aperçu", ["Cibles temporaires par défaut"](Config-Builder.html#default-temp-targets) et définissez la durée et les cibles pour chaque raccourci. Configurez les actions visibles sur la tuile à travers les paramètres de tuile. Faites un appui long sur la tuile pour afficher les options de configuration et sélectionnez 1 à 4 options :
+The Temp Target Tile can request a temporary target based on AAPS phone presets. Configure preset time and targets through the phone app setting by going to "Preferences", "Overview", ["Default Temp-Targets"](Config-Builder.html#default-temp-targets) and set the duration and targets for each preset. Configure the visible actions on the tile through the tile settings. Long press the tile to show the configuration options and select 1 to 4 options:
 
-* **Activité** : pour le sport
-* **Hypo** : pour augmenter la cible pendant le traitement d'une hypo
-* **Repas imminent** : pour baisser la cible et augmenter l'insuline à bord
-* **Manuel** : pour définir une cible temporaire personnalisée ainsi que sa durée
-* **Annuler** : pout arrêter la cible temporaire actuelle
+* **Activity**; for sport
+* **Hypo**; to raise the target during hypo treatment
+* **Eating soon**; to lower the target to raise the insulin on board
+* **Manual**; set a custom temporary target and duration
+* **Cancel**; to stop the current temporary target
 
 ![Wear actions tile edit](../images/wear_tile_tempt_edit.png)
 
-### AAPS(Assistant rapide)
+### AAPS(QuickWizard)Tile
 
 The QuickWizard tile can hold 1 to 4 quick wizard action buttons, defined with the phone app[2]. See [QuickWizard](Config-Builder.html#quickwizard-settings). You can set standard meals (carbs and calculation method for the bolus) to be displayed on the tile depending on the time of the day. Ideal for the most common meals/snacks you eat during the day. You can specify if the quick wizard buttons will show on the phone, watch, or both. Please note that the phone can show only one quick wizard button at a time. The quick wizard setup also can specify a custom percentage of the insulin for the bolus. The custom percentage enables you to vary, for example, snack at 120%, slow absorbing breakfast 80% and hypo treatment sugar snack at 0%
 
@@ -281,27 +239,27 @@ The QuickWizard tile can hold 1 to 4 quick wizard action buttons, defined with t
 
 [2] Wear OS limits tiles update frequency to only once every 30 seconds. When you notice that the changes on your phone are not reflected on the tile, consider; waiting 30 seconds, using the "Resend all data" button from the Wear OS section of AAPS, or removing the tile and adding it again. To change the order of the QuickWizard buttons dragging an item up or down.
 
-## Toujours actif
+## Always on
 
-La durée de vie de la batterie pour les montres Android Wear OS est un défi. Certaines montres tiennent jusqu'à 30 heures avant de les recharger. L'écran doit être éteint pour avoir une économie d'énergie optimale lorsqu'il n'est pas utilisé. La plupart des montres prennent en charge l'affichage "Toujours actif".
+Long battery life for Android Wear OS smartwatches is a challenge. Some smartwatches get as much as 30 hours before recharging. The display should be switched off for optimal power saving when not in use. Most watches support the “Always on” display.
 
-Depuis AAPS version 3, nous pouvons utiliser une « interface utilisateur simplifiée » en mode toujours actif. Cette interface utilisateur ne contient que la glycémie, la direction et l'heure. Cette interface est optimisée avec des mises à jour moins fréquentes, montrant moins d’informations et allumant moins de pixels pour économiser de l’énergie sur les écrans OLED.
+Since AAPS version 3, we can use a “Simplify UI” during always-on-mode. This UI only contains the blood glucose, direction, and time. This UI is power-optimized with less frequent updates, showing less information and lightening fewer pixels to save power on OLED displays.
 
-Le mode Interface simplifiée est disponible pour les montres : AAPS, AAPS V2, Grand-graph, Digital, Steampunk et Cockpit. L'interface simplifiée est optionnelle et est configurée via les paramètres du cadran de la montre. (faites un appui long sur le cadran et cliquez sur "Editer" ou sur la roue crantée).Sélectionnez la configuration "Interface simplifiée" et activez "Toujours allumé" ou "Toujours allumé et pendant la charge".
+The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “Always on” or “Always on and charging”.
 
-### Mode nuit
+### Night-time mode
 
-Lors de la charge, il serait utile que l'affichage reste « toujours actif » et montre votre glycémie pendant la nuit. Cependant, les cadrans standards de la montre sont trop clairs et ont trop d'informations, et les détails sont difficiles à lire avec des yeux endormis. Par conséquent, nous avons ajouté une option pour le cadran afin de simplifier l'interface utilisateur lors de la charge si c'est activé dans les paramètres.
+While charging, it would be helpful if the display could stay “always-on” and show your blood glucose during the night. However, the standard watch-faces are too bright and have too much information, and the details are hard to read with sleepy eyes. Therefore, we added an option for the watch-face to simplify the UI only during charging when set in the configuration.
 
-Le mode Interface simplifiée est disponible pour les montres : AAPS, AAPS V2, Grand-graph, Digital, Steampunk et Cockpit. L'interface simplifiée est optionnelle et est configurée via les paramètres du cadran de la montre. (faites un appui long sur le cadran et cliquez sur "Editer" ou sur la roue crantée).Sélectionnez la configuration "Interface simplifiée" et activez "Pendant la charge" ou "Toujours allumé et pendant la charge".
+The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “During charging” or “Always on and charging”
 
-Les options de développement Android permettent à votre montre de rester réveillée pendant la charge. To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Activez le paramètre "Laisser activé pendant la charge" dans les options du développeur.
+The Android developer options enable your watch to stay awake during charging. To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options”.
 
-Remarque : tous les afficheurs ne sont pas bien gérés. Il peut entrainer une détérioration de l'écran, en particulier sur les anciens écrans OLED. Les montres diminueront généralement l'éclairage de l'écran pour éviter le déteriorer; veuillez consulter le manuel utilisateur, le fabricant ou internet pour obtenir des conseils.
+Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
 
-![Cadran Mode Nuit](../images/Watchface_nightstand.jpg)
+![Watchface Nightstand](../images/Watchface_nightstand.jpg)
 
-![Interface simplifiée](../images/Watchface_simplified_ui.png)
+![Simplified UI](../images/Watchface_simplified_ui.png)
 
 ## Snooze Alert shortcut
 
@@ -321,44 +279,30 @@ If an experienced battery span is shorter than a day (from dusk to dawn), here a
 
 Main battery-demanding areas are:
 
-* Affichage actif avec rétroéclairage (pour LED) ou en mode pleine intensité (pour OLED)
-* Le rendu à l'écran
-* Communication radio via Bluetooth
+* Active display with a backlight on (for LED) or in full intensity mode (for OLED)
+* Rendering on screen
+* Radio communication over Bluetooth
 
 Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in *display time* area:
 
-* Les cadrans standards sont généralement mieux optimisés que ceux personnalisés, téléchargés depuis le store.
-* Il est préférable d'utiliser des cadrans qui limitent la quantité de données affichées en mode inactif/veille.
-* Soyez conscient lorsque vous utilisez d'autres Complications, comme les widgets météo de tiers - ou d'autres encore - qui utilisent des données provenant de sources externes.
-* Commencez par des cadrans plus simples. Ajoutez une complication à la fois et observez comment elle affecte la durée de vie de la batterie.
-* Essayez d'utiliser le thème **Sombre** pour les montres AAPS, et [**Séparateur invisible**](Watchfaces-watchface-settings). Sur les montres OLED, cela limitera la quantité de pixels allumés et limitera la consommation.
-* Vérifiez ce qui fonctionne le mieux sur votre montre : les cadrans AAPS standards ou d'autres cadrans avec les Complications AAPS.
-* Observez sur quelques jours, avec différents profils d'activités. La plupart des montres activent l'affichage sur le regard, des mouvements de poignet et d'autres déclencheurs liés à l'utilisation.
-* Vérifiez les paramètres du système global qui affectent les performances : notifications, durée du rétro éclairage, affichage actif quand le GPS est activé.
-* Vérifiez la [liste des téléphones et des montres testés](Phones-list-of-tested-phones) et [demandez à la communauté](../Where-To-Go-For-Help/Connect-with-other-users.md) pour avoir le retour d'expérience des autres utilisateurs et sur la durée de vie des batteries.
-* **Nous ne pouvons pas garantir que les données affichées sur les Cadrans ou les complications sont à jour**. A la fin, c'est Wear OS qui décide quand mettre à jour le cadran ou la complication. Même lorsque l'application AAPS demande une mise à jour, le système peut décider de reporter ou d'ignorer les mises à jour pour préserver la batterie. En cas de doute et de batterie de montre faible - faites toujours une double vérification avec l'application AAPS sur le téléphone.
+* Stock watchfaces are usually better optimized than custom one, downloaded from the store.
+* It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
+* Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
+* Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
+* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](Watchfaces-watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
+* Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
+* Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
+* Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
+* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
+* **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
 
 (Watchfaces-troubleshooting-the-wear-app)=
 
 ## Troubleshooting the wear app:
 
-* Parfois, cela peut aider de resynchroniser AAPS avec la montre car cela peut être un peu lent quand il le fait tout seul : Wear / Renvoyer toutes les données
-* Activez le débogage ADB dans les Options Développeur (sur la montre), connectez la montre via l'USB et démarrez l'application Wear une fois dans Android Studio.
-* Si les Complications ne mettent pas à jour les données - vérifiez d'abord si les cadrans AAPS fonctionnent correctement.
-
-### Sony Smartwatch 3
-
-* La montre Sony Smartwatch 3 est l'une des plus populaires utilisée avec AAPS.
-* Malheureusement, Google a abandonné la prise en charge des appareils sous Wear OS 1.5 à l'automne 2020. This leads to problems when using Sony SW3 with AAPS 2.7 and above.
-* Une solution de contournement possible peut être trouvée sur cette [page de dépannage](../Usage/SonySW3.md).
-
-## View Nightscout data
-
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the AAPSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "AAPSClientRelease". Il y a plusieurs cadrans à choisir qui incluent le delta moyen, l'IA, le débit temporaire de basal actuel et les profils de basal + le graphique de lecture MGC.
-
-# Pebble
-
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AAPS then send either SMS or pushover notification.
+* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
+* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
+* If Complications does not update data - check first if AAPS watchfaces work at all.
 
 # Garmin
 
