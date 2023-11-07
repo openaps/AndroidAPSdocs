@@ -51,18 +51,18 @@ Wir gehen davon aus, dass du bereits eine Nightscout Seite hast. Falls nicht, ge
 
 * Klicke auf "Speichern" am oberen Rand des Fensters.
 
-## Halb-automatische Nightscout Einrichtung
+## Nightscout as a paid SaaS (Software as a Service)
 
-Looper Martin Schiftan hat seinen Service einer halb-automatischen Nightscout Einrichtung für viele Jahre kostenfrei angeboten. Nachdem die Nutzerzahl stark angestiegen ist, gilt dies auch für die Kosten und er muss seit Oktober 2021 eine geringe Abogebühr - ab €4,17 pro Monat - erheben.
+While Nightscout is an free open source software which you can download yourself free of charge you need
 
-**Vorteile**
+1. a cloud service provider to host your own nightscout instance
 
-* Du kannst Nightscout mit ein paar Klicks einrichten und direkt verwenden. 
-* Deutlich weniger manueller Aufwand, da Martin versucht, die Administration so weit als möglich zu automatisieren.
-* Alle Einstellungen können über eine benutzerfreundliche Web-Oberfläche vorgenommen werden. 
-* Eine automatisierte Basalratenüberprüfung mit Autotune ist ebenfalls enthalten. 
-* Die Server befinden sich in Deutschland und Finnland.
+2. invest time to setup your nightscout instance and MongoDB and
 
-<https://ns.10be.de/en/index.html>
+3. operate your nightscout instance which can be as easy as updating from time to time the nightscout instance or much more complex if errors occur.
 
-Eine Alternative wäre beispielsweise <https://t1pal.com/> - ab $11,99 pro Monat.
+An alternative can be to pay for these SaaS services and get rid of these tasks.
+
+Here you find a randomly ordered list of possible service providers. We will not recommend any of them but we want to give new users a place to jump to their web site and inform themself!
+
+| [![ns.10be.de](../images/ns.10be.de-logo_halb_klein.jpg)](https://ns.10be.de/en/index.html) | [![T1Pal](../images/t1_pal_bear_bw.png)](https://t1pal.com/) |
