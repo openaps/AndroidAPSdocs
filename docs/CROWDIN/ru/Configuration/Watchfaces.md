@@ -1,47 +1,8 @@
-# AAPS на смарт-часах с Wear OS
-
-You can install AAPS app on your **Wear OS based** smartwatch. Версия на часах позволяет:
-
-* **display data on your watch**: by providing [custom watchfaces](Watchfaces-aaps-watchfaces) or in standard watchfaces with use of [complications](Watchfaces-complications)
-* **контролировать AAPS на телефоне**: чтобы подать болюс, установить временную цель и т. д.
-
-### Перед тем как купить часы...
-
-* Некоторые * дополнения *, требуют Wear OS версии 2.0 или новее
-* Google переименовал *Android Wear 1.x* в *Wear OS* начиная с версии 2.x, так что *Android Wear* может означать старую версию 1.x системы
-* Если описание смарт-часов указывает только на совместимость с * Android * и * iOS *-то это не **означает**, что они работают в * Wear OS *, - это может быть другой тип ОС от производителя часов, ** который несовместим с wear AAPS! **
-* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
-
-### Создание Wear-версии AAPS
-
-The Wear OS App of AAPS has been seperated from the AAPS build for the Android mobile. Therefore you have to generate a second signed APK. Select as module "AndroidAPS.wear" and as build variant "fullRelease" and a second apk file for the Wear OS clock is generated when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpcontrolRelease" which will allow you to just remote control the pump without looping).
-
-С марта 2021 года требуется самостоятельно устанавливать AAPS на часы, программа больше не доступна через циферблаты на Google Play. Его можно установить через [Wear Installer](https://youtu.be/8HsfWPTFGQI), который устанавливается как на часы, так и на телефон. The Wear Installer app can be downloaded from the Google Play Store. The linked video from Malcolm Bryant the developer of Wear Installer gives you detailed instructions to a) download the apk to your mobile b) setup the Android Debugger on the wear c) use Wear Installer on mobile and wear to sideload the AAPS wear app to the mobile. Once you have selected AAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
-
-### Настройка на телефоне
-
-Within AAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
-
-## Контроль AAPS с часов
-
-AAPS is designed to be *controlled* by Android Wear watches. Если вы хотите подавать болюс и т. д. с часов, тогда в настройках часов Wear следует включить «Управление с часов».
-
-С часов можно запустить следующие функции:
-
-* установить временные целевые значения СК
-* use the bolus calculator (calculation variables can be defined in [settings](Config-Builder-wear) on the phone)
-* расписать eCarbs
-* подать болюс (инсулин + углеводы)
-* настройки часов
-* статус 
-    * проверить состояние помпы
-    * проверьте состояние замкнутого цикла
-    * проверить и изменить профиль, CPP (Circadian Percentage Profile = time shift + percentage)
-    * показать TDD (Общая суточная доза = болюс + базал в день)
+# Operation of AAPS via your Wear OS smartwatch
 
 (Watchfaces-aaps-watchfaces)=
 
-## Циферблаты AAPS
+## AAPS Watchfaces
 
 There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
@@ -49,7 +10,7 @@ Ensure notifications from AAPS are not blocked on the watch. Confirmation of act
 
 To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
 
-## Доступные циферблаты
+## Watchfaces available
 
 ![Available watchfaces](../images/Watchface_Types.png)
 
@@ -59,9 +20,9 @@ To get faster to the AAPS menu, do a double tap on your BG. With a double tap on
 
 ![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
 
-* Цвет, линии и круг настраиваются через меню - шестеренку в меню выбора циферблата.
+* Color, lines and circle are configurable in setting menu on cog-sign of watchface chooser menu.
 
-## Циферблат AAPSv2 - Legend
+## AAPSv2 watchface - Legend
 
 ![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
 
@@ -85,15 +46,15 @@ I - carbs (carbs on board | e-carbs in the future)
 
 J - insulin on board (from bolus | from basal)
 
-## Доступ к главному меню AAPS
+## Accessing main menu of AAPS
 
 To access main menu of AAPS you can use on of following options:
 
-* дважды нажмите на значение ГК
-* выбрать значок AAPS в меню приложения часов
-* нажмите AAPS (если сконфигурировано в меню)
+* double tap on your BG value
+* select AAPS icon in watch applications menu
+* tap on AAPS complication (if configured for menu)
 
-## Параметры (в часах Wear)
+## Settings (in wear watch)
 
 To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
 
@@ -101,67 +62,67 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 ![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
-### Параметры спутника AAPS
+### AAPS companion parameters
 
-* ** Вибрировать при болюсе ** (по умолчанию ` Вкл`):
-* ** Единицы для принятия действий ** (по умолчанию ` мг/дл `): если ** Вкл** то на основе ` мг/дл `, если ** Выкл ** то на основе ` ммоль/л `. Используется при установке временной цели ТТ с часов.
+* **Vibrate on Bolus** (default `On`):
+* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
 
 (Watchfaces-watchface-settings)=
 
-### Параметры циферблатов
+### Watchface settings
 
-* ** Показать дату ** (значение по умолчанию `Выкл `): примечание: дата доступна не на всех циферблатах
-* ** Показывать активный инсулин IOB ** (значение по умолчанию ` Вкл`): (детализация задается в параметрах Wear в AAPS)
-* ** Показать активные углеводы COB ** (по умолчанию ` Вкл `): Показывать или не показывать значение COB
-* ** Показать дельту ** (по умолчанию ` Вкл `): Показывать или не показывать изменение ГК за последние 5 минут
-* ** Показывать среднюю дельту ** (по умолчанию ` Вкл `): Показывать или не показывать среднее изменение ГК за последние 15 минут
-* ** Показывать заряд батареи телефона ** (по умолчанию ` Вкл `): Батарея телефона в%. Красная, если ниже 30%.
-* ** Показать батарею платформы ** (по умолчанию ` Выкл`): Батарея платформы - это интегральная величина заряда батареи телефона, помпы и трансмиттера (как правило, наименьшее из трех значений)
-* ** Показать базальную скорость ** (по умолчанию ` Вкл `): показывать на экране или нет текущую скорость базала (в ед/ч или в%, если TBR)
-* ** Показать состояние цикла ** (по умолчанию ` Вкл`): показывает время в мин после недавней работы цикла (стрелки вокруг значения покраснеют, если выше 15 ').
-* **Показать ГК** (по умолчанию `Вкл`): показывать или не показывать последнее значение ГК
-* **Показать стрелку тренда** (по умолчанию `Вкл`): показывать или не показывать стрелку тренда ГК
-* ** Показать Истекшее время ** (по умолчанию ` Вкл `): показать, сколько минут прошло с момента последнего поступления данных.
-* **Темный фон ** (по умолчанию `Вкл`): Можно переключиться с темного фона на светлый фон (за исключением циферблатов Cockpit и Steampunk)
-* ** Выделять базал ** (по умолчанию ` Выкл `): Улучшить видимость скорости базала и временных базалов
-* **Разделитель в цвет** (по умолчанию `Выкл`): для циферблатов AAPS, AAPSv2 и AAPS(Крупный), показывать контрастный фон разделителя (**Выкл.**) или разделитель совпадает с цветом фона (**Вкл.**)
-* ** Охват времени графика ** (по умолчанию ` 3 часа `): в подменю можно выбрать максимальное время от 1 часа до 5 часов.
+* **Show Date** (default `Off`): note, date is not available on all watchfaces
+* **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
+* **Show COB** (default `On`): Display or not COB value
+* **Show Delta** (default `On`): Display or not the BG variation of the last 5 minutes
+* **Show AvgDelta** (default `On`): Display or not the average BG variation of the last 15 minutes
+* **Show Phone Battery** (default `On`): Phone battery in %. Red if below 30% .
+* **Show Rig Battery** (default `Off`): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
+* **Show Basal Rate** (default `On`): Display or not current basal rate (in U/h or in % if TBR)
+* **Show Loop Status** (default `On`): show how many minutes since last loop run (arrows around value turn red if above 15').
+* **Show BG** (default `On`): Display or not last BG value
+* **Show Direction Arrow** (default `On`): Display or not BG trend arrow
+* **Show Ago** (default `On`): show how many minutes since last reading.
+* **Dark** (default `On`): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
+* **Highlight Basals** (default `Off`): Improve the visibility of basal rate and temp basals
+* **Matching divider** (default `Off`): For AAPS, AAPSv2 and AAPS(Large) watchfaces, show contrast background for divider (**Off**) or match divider with the background color (**On**)
+* **Chart Timeframe** (default `3 hours`): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
 
-### Настройка интерфейса пользователя
+### User Interface setting
 
-* **Дизайн ввода**: этим параметром вы можете выбрать положение кнопок "+" и "-" при вводе команд для AAPS (TT, Insulin, Carbs...)
+* **Input Design**: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
 
 ![Input design options](../images/Watchface_InputDesign.png)
 
-### Специфические параметры циферблатов
+### Specific watchface parameters
 
 #### Циферблат Стимпанк
 
-* **Зернистость** (по умолчанию `Средняя`)
+* **Delta Granularity** (default `Medium`)
 
 ![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
 #### Круглый циферблат
 
-* ** Крупные цифры ** (по умолчанию ` Выкл.`): Увеличить размер текста для улучшения видимости
-* ** Кольца хронологии ** (значение по умолчанию ` Выкл.`): Графическое представление хронологии ГК серыми кольцами в зеленом кольце часа
-* ** Кольца хронологии неярко ** (значение по умолчанию ` Вкл.`): Графическое представление хронологии ГК более темными серыми кольцами в зеленом кольце часа
-* ** Анимация ** (по умолчанию ` Вкл. `): Во включенном состоянии, при поддержке циферблатом и не в режиме энергосбережения, анимация циферблата
+* **Big Numbers** (default `Off`): Increase text size to improve visibility
+* **Ring History** (default `Off`): View graphically BG history with gray rings inside the hour's green ring
+* **Light Ring History** (default `On`): Ring history more discreet with a darker gray
+* **Animations** (default `On`): When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
 
-### Настройки команд
+### Commands settings
 
-* ** Помощник в меню ** (по умолчанию ` Вкл. `): Разрешить интерфейс помощника в главном меню для ввода углеводов и подачи болюса с циферблата часов
-* ** Первичное заполнение ** (по умолчанию ` Выкл. `): Разрешить действие Prime/Fill с часов
-* ** Единичная цель ** (по умолчанию ` Вкл `):
-    
-    * ` Вкл. `: задается одно значение для временной цели TT
-    * ` Выкл. `: задается низкое и высокое значение временной цели TT
+* **Wizard in Menu** (default `On`): Allow wizard interface in main menu to input Carbs and set Bolus from watch
+* **Prime in Menu** (default `Off`): Allow Prime / Fill action from watch
+* **Single Target** (default `On`):
+  
+  * `On`: you set a single value for TT
+  * `Off`: you set Low target and high target for TT
 
-* **Процент мастера** (по умолчанию `Выкл.`): разрешить коррекцию болюса с мастера (значение вводится в процентах до уведомления подтверждения)
+* **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
 
 (Watchfaces-complications)=
 
-## Усложнения (дополнительные функции)
+## Complications
 
 *Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
 
@@ -171,51 +132,51 @@ Complications also serve as **shortcut** to AAPS functions. By tapping them you 
 
 ![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
 
-### Типы усложнений (дополнительных функций)
+### Complication Types
 
 AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
 
-* ` SHORT TEXT `-Содержит две строки текста, по 7 символов каждый, иногда именуется значением и меткой. Обычно отображаетя внутри круга или небольшой таблетки - один под другим, или сбоку друг от друга. Это очень ограниченное размерами усложнение. AAPS пытается удалить ненужные символы чтобы уместить информацию: округляет значения, удаляет начальные и хвостовые нули из значений и т. д.
-* `ДЛИННЫЙ ТЕКСТ` - содержит две строки текста, около 20 знаков в каждой. Обычно выводится внутри прямоугольника или длинной таблетки-один ниже другого. Он используется для более детальной информации в виде текста.
-* `ВРЕМЯ В ЦЕЛЕВОМ ДИАПАЗОНЕ`-используется для значений из предопределенного диапазона, например, в процентах. Он содержит иконку, ярлык и обычно отображается в виде круга с достигнутыми значениями.
-* ` КРУПНОЕ ИЗОБРАЖЕНИЕ`-пользовательское фоновое изображение, которое можно использовать (при поддержке циферблатом) в качестве фона.
+* `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Usually rendered inside a circle or small pill - one below another, or side by side. It is a very space-limited complication. AAPS tries to remove unnecessary characters to fit-in: by rounding values, removing leading and trailing zeroes from values, etc.
+* `LONG TEXT` - Contains two lines of text, about 20 characters each. Usually rendered inside a rectangle or long pill - one below another. It is used for more details and textual status.
+* `RANGED VALUE` - Used for values from predefined range, like a percentage. It contains icon, label and is usually rendered as circle progress dial.
+* `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
 
-### Настройка усложнений (дополнительных функций)
+### Complication Setup
 
 To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
 
 When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
 
-### Усложнения, предоставляемые AAPS
+### Complications provided by AAPS
 
 AAPS provides following complications:
 
 ![AAPS_Complications_List](../images/Watchface_Complications_List.png)
 
-* ** BR, CoB & IoB ** (` КРАТКИЙ ТЕКСТ `, открывается через * Меню *): Отображает * Скорость базального инсулина* на первой строке, * Активные углеводы* и * Активный инсулин * на второй.
-* ** Глюкоза крови ** (` КРАТКИЙ ТЕКСТ`, открывает * Меню *): Отображает * Кровь глюкозы * и * trend * стрелка на первой строке и * возраст измерений * и * дельта * на второй строке.
-* **Акт Угл CoB & Акт инс IoB ** (` КРАТКИЙ ТЕКСТ `, открывается через * Меню *): Отображает * Активные углеводы COB * на первой строке и *Активный инсулин* на второй.
-* **Акт Угл CoB Подробно ** (` КРАТКИЙ ТЕКСТ `, открывается через * Мастер *): Отображает актуальные * Активные углеводы COB * на первой строке и планируемые (e-Углеводы) на второй.
-* ** Значок CoB ** (`КРАТКИЙ ТЕКСТ`, открывает * Wizard *): Отображает значение *Активные углеводы* со статичной иконкой.
-* **Подробно** (` ПОЛНЫЙ ТЕКСТ `, открывает * Меню *): Содержит большую часть данных одновременно: * Глюкозу крови * и * тренд *, * дельту ГК* и * время от измерения * в первой строке. На второй строке * Активные углеводы *, *Активный инсулин * and * Базальную скорость *.
-* ** Полный статус (перевернут) ** (`ДЛИННЫЙ ТЕКСТ `, открывается через * Меню *): те же данные, что и для стандартного * Полного состояние *, но текст перевернут. Может быть использован в циферблатах, которые игнорируют одну из двух строк `ДЛИННОГО ТЕКСТА`
-* ** IOB Подробно ** (` КРАТКИЙ ТЕКСТ `, открывается через *Болюс*): Отображает суммарный * Активный инсулин IOB * на первой строке и разделение * IOB * на * Болюсный* и * Базальный* на второй.
-* ** Значок IoB ** (`КРАТКИЙ ТЕКСТ`, открывается через * Болюс *): Отображает величину *Активных углеводов IOB* со статичной иконкой.
-* ** Загрузчик/батарея телефона ** (`ДИАПАЗОН ВЕЛИЧИН `, открывает * Состояние *): Показывает процент батареи с телефона с AAPS (загрузчика). Выводится в виде процентной шкалы с значком батареи, отражающий сообщаемые значения. Он обновляется не в режиме реального времени, а наряду с изменением других важных данных AAPS (обычно: каждые ~ 5 минут с новым значением * гликемии *).
+* **BR, CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Basal Rate* on the first line and *Carbs on Board* and *Insulin on Board* on the second line.
+* **Blood Glucose** (`SHORT TEXT`, opens *Menu*): Displays *Blood Glucose* value and *trend* arrow on the first line and *measurement age* and *BG delta* on the second line.
+* **CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Carbs on Board* on the first line and *Insulin on Board* on the second line.
+* **CoB Detailed** (`SHORT TEXT`, opens *Wizard*): Displays current active *Carbs on Board* on the first line and planned (future, eCarbs) Carbs on the second line.
+* **CoB Icon** (`SHORT TEXT`, opens *Wizard*): Displays *Carbs on Board* value with a static icon.
+* **Full Status** (`LONG TEXT`, opens *Menu*): Shows most of the data at once: *Blood Glucose* value and *trend* arrow, *BG delta* and *measurement age* on the first line. On the second line *Carbs on Board*, *Insulin on Board* and *Basal Rate*.
+* **Full Status (flipped)** (`LONG TEXT`, opens *Menu*): Same data as for standard *Full Status*, but lines are flipped. Can be used in watchfaces which ignores one of two lines in `LONG TEXT`
+* **IoB Detailed** (`SHORT TEXT`, opens *Bolus*): Displays total *Insulin on Board* on the first line and split of *IoB* for *Bolus* and *Basal* part on the second line.
+* **IoB Icon** (`SHORT TEXT`, opens *Bolus*): Displays *Insulin on Board* value with a static icon.
+* **Uploader/Phone Battery** (`RANGED VALUE`, opens *Status*): Displays battery percentage of AAPS phone (uploader), as reported by AAPS. Displayed as percentage gauge with a battery icon that reflects reported value. It may be not updated in real-time, but when other important AAPS data changes (usually: every ~5 minutes with new *Blood Glucose* measurement).
 
 Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.
 
-### Параметры, связанные с усложнениями
+### Complication related settings
 
-* **Действия при шлепке по значку усложнений** (по умолчанию ` Default `): определяет, какой диалог открывается при нажатии на усложнение: 
-    * * По умолчанию*: действия, связанные с типом усложнения * (см. список выше) *
-    * * Меню *: главное меню AAPS
-    * *мастер*: болюс мастер - калькулятор болюса
-    * * Болюс *: прямой ввод величины болюса
-    * * eCarb *: диалоговое окно конфигурации eCarb
-    * * Состояние *: подменю состояния
-    * * Отсутствует *: Отключает действие по шлепку для усложнений AAPS
-* **Unicode в усложнениях** (по умолчанию - `Вкл`): в положении `Вкл`, будут использоваться символы Unicode для таких величин как `Δ` суммарное изменение `⁞` вертикальный точечный разделитель или `⎍` символ базальной скорости. Отрисовка их зависит от шрифта, который специфичен для каждого циферблата. Эта опция позволяет при необходимости отключать символы Unicode (` Выкл `)- если шрифт, используемый циферблатом, их не поддерживает-чтобы избежать ошибок графики.
+* **Complication Tap Action** (default `Default`): Decides which dialog is opened when user taps complication: 
+  * *Default*: action specific to complication type *(see list above)*
+  * *Menu*: AAPS main menu
+  * *Wizard*: bolus wizard - bolus calculator
+  * *Bolus*: direct bolus value entry
+  * *eCarb*: eCarb configuration dialog
+  * *Status*: status sub-menu
+  * *None*: Disables tap action on AAPS complications
+* **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on the font, and that can be very watchface-specific. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
 
 ## Wear OS Tiles
 
@@ -235,13 +196,10 @@ Before using the tiles, you have to switch on "Control from Watch" in the "Wear 
 
 Depending on your Wear OS version, brand and smartphone there are two ways of enabling the tiles:
 
-1. On your watch, from your watch face; 
-    * Swipe right to left till you reach the "+ Add tiles" 
-    * Select one of the tiles.
-2. On your phone open the companion app for your watch. 
-    * For Samsung open "Galaxy Wearable", or for other brands "Wear OS"
-    * In the click on the section "Tiles", followed by "+ Add" button
-    * Find the AAPS tile you like to add by selecting it. ![Wear phone add tile](../images/wear_companion_app_add_tile.png) The order of the tiles can be changed by dragging and dropping
+1. On your watch, from your watch face; - Swipe right to left till you reach the "+ Add tiles" - Select one of the tiles.
+2. On your phone open the companion app for your watch. - For Samsung open "Galaxy Wearable", or for other brands "Wear OS" 
+  * In the click on the section "Tiles", followed by "+ Add" button
+  * Find the AAPS tile you like to add by selecting it. ![Wear phone add tile](../images/wear_companion_app_add_tile.png) The order of the tiles can be changed by dragging and dropping
 
 The content of the tiles can be customized by long-pressing a tile and clicking the "Edit" or "gear icon" button.
 
@@ -345,20 +303,6 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
 * Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
 * If Complications does not update data - check first if AAPS watchfaces work at all.
-
-### Sony Smartwatch 3
-
-* The Sony Smartwach 3 is one of the most popular watches to be used with AAPS.
-* К сожалению, осенью 2020 года Google прекратил поддержку устройств с операционной системой OS 1.5. This leads to problems when using Sony SW3 with AAPS 2.7 and above.
-* A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.md).
-
-## View Nightscout data
-
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the AAPSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "AAPSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
-
-# Смарт-часы Pebble
-
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AAPS then send either SMS or pushover notification.
 
 # Garmin
 
