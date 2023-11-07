@@ -49,17 +49,20 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
 * Click "Save" at the top of the panel.
 
 
-## Semi-automated Nightscout setup
+## Nightscout as a paid SaaS (Software as a Service)
 
-Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
+While Nightscout is an free open source software which you can download yourself free of charge you need
 
-**Benefits**
-* You can install Nightscout with a few clicks and use it directly. 
-* Reduction of manual work as Martin tries to automate the administration.
-* All settings can be made via a user-friendly web interface. 
-* The service includes an automated basal rate check using Autotune. 
-* The servers are located in Germany and Finland.
+a) a cloud service provider to host your own nightscout instance
+b) invest time to setup your nightscout instance and MongoDB and
+c) operate your nightscout instance which can be as easy as updating from time to time the nightscout instance or much more complex if errors occur.
+
+An alternative can be to pay for these service and get rid of these tasks.
+
+Here you find a alphabetical list of possible service providers.
+
+We will not recommend any of them but we want to give new users a place to jump to their web site and inform themself!
 
 <https://ns.10be.de/en/index.html>
 
-An alternative would be <https://t1pal.com/> - starting at $11,99 per month.
+<https://t1pal.com/>
