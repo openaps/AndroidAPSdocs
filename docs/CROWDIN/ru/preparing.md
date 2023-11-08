@@ -2,7 +2,7 @@
 
 ## Overview of the AAPS documentation
 
-Welcome. This documentation aims to guide users on every aspect of the Do-It-Yourself (DIY) system, Android Artificial Pancreas System (**AAPS**), which is also commonly referred to as ‘looping’.
+Добро пожаловать. This documentation aims to guide users on every aspect of the Do-It-Yourself (DIY) system, Android Artificial Pancreas System (**AAPS**), which is also commonly referred to as ‘looping’.
 
 An expanded index of the documentation can be found [here](index.md), and you can also use the tabs on the left of the page to navigate through the different sections. The [glossary](Getting-Started/Glossary.md) explains terms that you may not be familiar with.
 
@@ -57,7 +57,7 @@ Common brand names of SGLT-2 inhibitors include: Invokana, Farxiga, Jardiance, G
 
 ### Key principles of looping with AAPS
 
-The key principles and concepts of looping must be understood before using **AAPS**. This is achieved by investing your personal time into reading the **AAPS** documentation, and completing the Objectives which aim to provide you with a solid platform for safe and effective use of **AAPS**. The volume of **AAPS** documentation may seem overwhelming at first but be patient and trust the process - with the proper approach, you'll get there!
+The key principles and concepts of looping must be understood before using **AAPS**. This is achieved by investing your personal time into reading the **AAPS** documentation, and completing the Objectives which aim to provide you with a solid platform for safe and effective use of **AAPS**. Объем документации **AAPS** может вначале ошеломить, но терпение и правильный подход приведут вас к цели!
 
 The speed of progression will depend upon the individual, but be aware that completion of all the objectives typically takes 6 - 9 weeks. Many people start to build, install and setup **AAPS** well in advance of starting to use it. To aid with this, the system has a "virtual pump" which can be used during completion of the early objectives, so that you can become familiar with **AAPS** without actually using it to deliver insulin. A detailed breakdown of the timeline is given below, be aware that by objective 8 of **AAPS** you are closed looping, the later objectives add in additional features like **SMS commands** and **automations** which are useful to some users, but not essential to the core function of **AAPS**.
 
@@ -67,7 +67,7 @@ The speed of progression will depend upon the individual, but be aware that comp
 
 In the preliminary stages of getting started with **AAPS**, you may experience difficulties getting all the components of the loop communicating effectively with each other (and potential followers), and when fine-tuning your settings. Some glitches cannot be resolved until **AAPS** is used in everyday life, but plenty of help is available on the Facebook group and Discord. Please plan accordingly and choose "good" times, like a quiet morning of a weekend (i.e. not late at night or when you are tired, or before a big meeting or travel) to troubleshoot and resolve issues.
 
-#### Technology compatibility
+#### Совместимость с технологиями
 
 **AAPS** is only compatible with certain types of insulin pumps, CGMs and phones, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read the [CGM](Configuration/BG-Source.md), [pump](Getting-Started/Pump-Choices.md) and [phone](Hardware/Phoneconfig.md) sections.
 
@@ -86,7 +86,7 @@ How long it takes to get to closed looping depends on the individual, but an app
 
 #### Keystore & configuration settings export file
 
-A “keystore” (.jks file) is a password encrypted file unique to your own copy of **AAPS**. Your Android phone uses it to ensure that nobody else can upgrade your own copy without the keystore. In short, as part of the **AAPS** build, you should:
+A “keystore” (.jks file) is a password encrypted file unique to your own copy of **AAPS**. Your Android phone uses it to ensure that nobody else can upgrade your own copy without the keystore. Короче говоря, в рамках сборки **AAPS** вам следует:
 
 1.  Save the your keystore file (.jks file used to sign your app) in a safe place;
 
@@ -98,7 +98,7 @@ In addition, **AAPS** provides the ability to [export all your configuration set
 
 #### Устранение неполадок
 
-Please feel free to reach out to the AAPS community if there is anything you feel unsure about - there is no such thing as a silly question! All users with various levels of experience are encouraged to ask questions. Response times to questions are usually quick due to the number of **AAPS** users.
+Не стесняйтесь связаться с сообществом AAPS, даже если уверены в том, что у вас глупый вопрос! All users with various levels of experience are encouraged to ask questions. Response times to questions are usually quick due to the number of **AAPS** users.
 
 ##### [ask our facebook group](https://www.facebook.com/groups/AndroidAPSUsers/)
 
@@ -106,7 +106,7 @@ Please feel free to reach out to the AAPS community if there is anything you fee
 
 ### Обзор раздела
 
-AAPS documentation is made up of the following Sections:
+Документация ААПС состоит из следующих разделов:
 
 #### [What do I need?](Module/module.md)
 
