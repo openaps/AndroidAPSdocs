@@ -1,6 +1,6 @@
 # Добро пожаловать в Документацию по AndroidAPS (AAPS)
 
-![image](./images/basic-outline-of-AAPS.png)
+![изображение](./images/basic-outline-of-AAPS.png)
 
 AAPS - это приложение с открытым кодом для людей, живущих с инсулинзависимым сахарным диабетом, которое работает как система искусственной поджелудочной железы (ИПЖ) на базе телефонов с операционной системой Андроид. It uses an openAPS software algorithm which aims to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need a supported and FDA/CE approved insulin pump, and a continuous glucose meter.
 
