@@ -94,7 +94,7 @@ A “keystore” (.jks file) is a password encrypted file unique to your own cop
 
 This will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. On average, there will be 2 **AAPS** updates required each year.
 
-In addition, **AAPS** provides the ability to [export all your configuration settings](Usage/ExportImportSettings.md). This ensures that you can safely recover your system while changing phones, upgrading/reinstalling the application with minimum disruption. 
+In addition, **AAPS** provides the ability to [export all your configuration settings](Usage/ExportImportSettings.md). Это гарантирует, что вы можете безопасно восстановить вашу систему при смене телефонов, обновлении/переустановке приложения с минимальными затратами времени. 
 
 #### Устранение неполадок
 
@@ -104,7 +104,7 @@ Please feel free to reach out to the AAPS community if there is anything you fee
 
 ##### [ask our discord channel](https://discord.com/channels/629952586895851530/629954570394533889)
 
-### Section overview
+### Обзор раздела
 
 AAPS documentation is made up of the following Sections:
 
