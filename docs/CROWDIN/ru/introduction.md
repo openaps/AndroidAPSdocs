@@ -302,11 +302,11 @@ The developers of **AAPS** take safety incredibly seriously, and want others to 
 
 ## How does AAPS get continually developed and improved?
 
-Most **AAPS** users use the fully tested **master** version of AAPS, which has been tested for bugs and problems, before being released to the community. Behind the scenes, the developers try out new improvements, and test these out in “developer” (**dev**) versions of **AAPS** with a user community who are happy to do bug updates at short notice. If the improvements work well, they are then released as a new “master” version of **AAPS**. Any new master release is announced on the Facebook group, so that the mainstream **AAPS** users can read about and update to the new master version.
+Большинство пользователей **AAPS** работает с полностью протестированной и обкатанной **master** версиюей AAPS. Behind the scenes, the developers try out new improvements, and test these out in “developer” (**dev**) versions of **AAPS** with a user community who are happy to do bug updates at short notice. Если улучшения работают нормально, они будут выпущены в качестве новой "master" версии **AAPS**. Каждая новая мастер-версия анонсируется в группе Facebook и основные пользователи **AAPS **получают об этом своевременную информацию.
 
-Some experienced and confident **AAPS** users conduct experiments with emerging technologies and with dev versions of the **AAPS** app, which can be interesting for the less adventurous users to read about, without having to do it themselves! People tend to share these experiments on the Facebook group too.
+Some experienced and confident **AAPS** users conduct experiments with emerging technologies and with dev versions of the **AAPS** app, which can be interesting for the less adventurous users to read about, without having to do it themselves! Сообщения об этих экспериментах можно найти в группе Facebook.
 
-You can read more about some of these experiments and discussion on emerging tech here:
+Подробнее о некоторых из этих экспериментов и обсуждение новых технологий можно прочитать здесь:
 
 Tim Street [https://www.diabettech.com/](https://www.diabettech.com/)
 
@@ -314,16 +314,16 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 
 ## Who can benefit from AAPS?
 
-| User Type                                   |
-| ------------------------------------------- |
-| ✔️ type 1 diabetic                          |
-| ✔️ caregiver or parent of a type 1 diabetic |
-| ✔️ blind users type 1 diabetic              |
-| ✔️ *clincians and healthcare professionals  |
+| Тип пользователя                                        |
+| ------------------------------------------------------- |
+| ✔️ люди с диабетом первого типа                         |
+| ✔️ опекуны и/или родители детей с диабетом первого типа |
+| ✔️ слепые пользователи с диабетом первого типа          |
+| ✔️ *медработники и специалисты здравоохранения          |
 
-The above table assumes that the user has access to both continuous gluocse monitor and insulin pump.
+Приведенная выше таблица предполагает, что пользователь имеет доступ как к непрерывному мониторингу гликемии, так и к инсулиновой помпе.
 
-*All data from **AAPS** can be made available to healthcare professionals via data sharing platforms, including Nightscout that provides logging and real time monitoring of CGM data, insulin delivery, carbohydrate entries, predictions and settings. Nightscout records include daily and weekly reports which can aid healthcare professionals' discussions with type 1 patients with more accurate data on glycemic control and any behavioural considerations.
+*All data from **AAPS** can be made available to healthcare professionals via data sharing platforms, including Nightscout that provides logging and real time monitoring of CGM data, insulin delivery, carbohydrate entries, predictions and settings. Записи Nightscout включают ежедневные и еженедельные отчеты, которые могут помочь специалистам здравоохранения обсудить с пациентами диабета первого типа все мероприятия по компенсации и контролю диабета.
 
 ### Accessibility for users AAPS who are partially or completely blind
 
@@ -359,21 +359,21 @@ Done, just close the window! The screen reader should work now.
 
 ## What benefits can I get from AAPS?
 
-With investment of your time, **AAPS** can potentially lead to:
+Если вы готовы потратить свое время, **AAPS** поможет вам:
 
 - alleviating the stress and burden of managing type 1 diabetes;
 
-- reducing the multitude of mundane decisions that arise from type 1 diabetes;
+- • сократить количество решений, вытекающих из диабета;
 
-- the provision of personalised and dynamic insulin dosing based on real-time data which can cut down the need for hypo treatments and reduce hyperglycemia episodes;
+- получить персонализированные динамические дозировки инсулина на основе данных, получаемых в режиме реального времени, которые могут сократить потребность в купировании эпизодов гипо- и гипергликемии;
 
-- an increased knowledge of insulin management and confidence to better fine tune your settings;
+- повысить знания об управлении инсулинотерапией и уверенность в настройке ваших параметров;
 
-- the ability to create automatic settings (**automations**) that are tailored to fit in with your lifestyle;
+- научиться создавать сценарии **автоматизации**, подходящие вашему стилю жизни;
 
-- improved sleep quality and overall reduction in the frequency of nighttime interventions;
+- - улучшить качество сна и сократить частоту пробуждений в ночное время;
 
-- remote monitoring and administration of insulin delivery for caregivers of type 1 diabetics; and
+- осуществлять дистанционный мониторинг и подачу инсулинов при уходе за лицами с диабетом; и
 
 - streamlining of all your portable diabetic equipment (continuous glucose monitor receiver and insulin controlling devices) by using an Android phone controlled by **AAPS**.
 
