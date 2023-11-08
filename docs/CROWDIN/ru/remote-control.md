@@ -6,7 +6,7 @@ There are four highly effective tools for remotely managing **AAPS**:
 
 The first three are mostly appropriate for carers/parents, but smartwatches are very useful for carers/parents **and** for adults with diabetes themselves.
 
-![image](images/remote-control-01.png)
+![изображение](images/remote-control-01.png)
 
 #### Considerations when setting up remote control of **AAPS** for a child
 
@@ -39,20 +39,20 @@ The **SMS Commands Table** below shows all the possible SMS commands. _Example v
 
 ### SMS commands tables
 
-![image](images/remote-control-02.png)
+![изображение](images/remote-control-02.png)
 
-![image](images/remote-control-03.png)
+![изображение](images/remote-control-03.png)
 
-![image](images/remote-control-04.png)
+![изображение](images/remote-control-04.png)
 
-![image](images/remote-control-05.png)
+![изображение](images/remote-control-05.png)
 
 (authentication-or-not)=
 ### Authentication or not?
 
 You may notice from the table above that some SMS commands give an immediate response, and some SMS commands require **authenticating** with a security code from an additional app and a PIN (see below (link for more detail). A simple enquiry like “**bg**” (which requests an update on current glucose) is quick to type, doesn’t need authenticating, and returns the **AAPS** status information shown below:
 
-![image](images/remote-control-06.png)
+![изображение](images/remote-control-06.png)
 
 Commands which need more security require a code to be entered, for example:
 
@@ -88,7 +88,7 @@ These Authenticator apps produce a time-limited, one-time 6-digit password, simi
 
 2) **Check phone settings:** In the **AAPS** phone settings go to Apps > AndroidAPS > Permissions  > SMS  > Allow SMS
 
-![image](images/remote-control-08.png)
+![изображение](images/remote-control-08.png)
 
 3) **Date and time synching:** In both the **AAPS** phone and the caregiver phone, check the date and time are synched. Exactly how you do this depends on your specific handsets, you may need to try out different settings.
 
@@ -100,17 +100,17 @@ Some options may be greyed out, due to needing admin via a family account if the
 
 #### i) Now that the phone settings have been checked, in the **AAPS** app itself, use the left hand hamburger menu to navigate to Config Builder:
 
-![image](images/remote-control-09.png)
+![изображение](images/remote-control-09.png)
 
 #### ii) Enable “SMS communicator” by checking the boxes, then click the “cog” to get to the SMS communicator preferences screen:
 
-![image](images/remote-control-10.png)
+![изображение](images/remote-control-10.png)
 
 _Note - as an alternative route to Config Builder, you can also use the new “SMS Communicator tab” at the top of the AAPS screen, then right click on the custom right hand hamburger menu for that page, to get to the SMS communicator preferences screen._
 
 #### iii) On the preferences screen enable “allow remote commands via SMS”:
 
-![image](images/remote-control-11.png)
+![изображение](images/remote-control-11.png)
 
 #### iv) Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
 
@@ -127,7 +127,7 @@ Note that the “+” in front of the number may or may not be required based on
 If you have more than one phone number to add, separate them by semicolons, with NO space between numbers (this is critical!). Select “OK”:
 
 
-![image](images/remote-control-12.png)
+![изображение](images/remote-control-12.png)
 
 #### v) Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
 
@@ -139,7 +139,7 @@ PIN requirements are:
 
 •not sequential numbers (_i.e._ 1234)
 
-![image](images/remote-control-13.png)
+![изображение](images/remote-control-13.png)
 
 #### vi) On the preferences screen select “Authenticator setup”
 
@@ -162,7 +162,7 @@ Code to check: 4570512401
 If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. The process is now complete, there is no “OK” button you need to press after entering the code:
 
 
-![image](images/remote-control-14.png)
+![изображение](images/remote-control-14.png)
 
 You should now be set up with SMS commands.
 
@@ -170,7 +170,7 @@ You should now be set up with SMS commands.
 
 1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the AAPS phone. You should get a response similar to that shown here:
 
-![image](images/remote-control-15.png)
+![изображение](images/remote-control-15.png)
 
 2)  Now try an SMS command that requires the authenticator. To do this, send a text from the caregiver’s phone with the required command to the**AAPS** phone (_e.g._ “target hypo”). The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by an additional secret **PIN** known only to caregivers/followers (a string of ten digits in total, assuming your PIN is only 4 digits).
 
@@ -184,7 +184,7 @@ This example is shown below, with the SMS command “target hypo” to set a hyp
 
 Commands must be sent in English. The response should be in your local language. When you try sending an SMS command for the first time, try it in the presence of the AAPS phone, to see how it works:
 
-![image](images/remote-control-16.png)
+![изображение](images/remote-control-16.png)
 
 The caregiver’s phone will receive a SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully. There are several possible reasons the command may not be successful:
 
@@ -204,7 +204,7 @@ If your command is successful, you will receive a reply to confirm this. If ther
 
 Common errors are shown in the examples below:
 
-![image](images/remote-control-17.png)
+![изображение](images/remote-control-17.png)
 
 ### Additional safety notes on SMS commands
 
@@ -253,7 +253,7 @@ Using SMS commands may generate a lot of automated messages from the AAPS phone 
 There was a report of SMS commands stopping after an update on a Samsung Galaxy S10 phone. This was solved by disabling ‘send as chat message’.
 
 
-![image](images/remote-control-18.png)
+![изображение](images/remote-control-18.png)
 
 #### Q. How can I fix issues with the Android Messages App?
 
@@ -274,21 +274,21 @@ _Note that **NSClient** has been replaced by **AAPSClient** for AAPS version 3.2
 
 For versions of AAPS which are older than AAPS 3.2, if you have a caregiver/parent Android phone you can directly download and install the [**AAPSClient**](https://github.com/nightscout/AndroidAPS/releases/) app. **AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver tabs that will remotely action commands in **AAPS**:
 
-![image](images/remote-control-19.png)
+![изображение](images/remote-control-19.png)
 
 There are 2 versions of the app you can [download](https://github.com/nightscout/AndroidAPS/releases/), **AAPSClient** & **AAPSClient2**. The only difference between the two versions is the app name. This allows you to install the **AAPSClient** app twice on the same phone, to follow two different people or Nightscout accounts at the same time.
 
-![image](images/remote-control-20.png)
+![изображение](images/remote-control-20.png)
 
 To download AAPSClient, click on app-AAPSClient-release-3.1.0.3.apk
 
 Then go to  _downloads_ on your computer. On Windows, -downloads_ will show the right hand ribbon:
 
-![image](images/remote-control-21.png)
+![изображение](images/remote-control-21.png)
 
 Once downloaded, click _show in folder_
 
-![image](images/remote-control-22.png)
+![изображение](images/remote-control-22.png)
 
 The apk can now be either:
 
@@ -313,25 +313,25 @@ As well as Nightscout being a server in “the Cloud”, there is also a dedicat
 
 Once you have installed the **Nightscout** app on your iPhone, open the app and follow the set-up prompts, entering your Nightscout address (see below, left). The form of this may vary depending on how your Nightscout is hosted. (_e.g._ http://youraddresshere.herokuapp.com). Then enter your Nightscout API secret (see below, right). If not prompted for your API password, then you need to enter this by clicking on the padlock at the top of the app:
 
-![image](images/remote-control-24.png)
+![изображение](images/remote-control-24.png)
 
 More info on setup is available directly from [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
 When you first log in, you will have a very simple display (below, left). Customise the display options, by selecting the “hamburger” in the top right and scrolling down:
 
-![image](images/remote-control-25.png)
+![изображение](images/remote-control-25.png)
 
 Scroll down through to “Settings”. You may wish to change the “scale” to “linear” as the default for the BG display is logarithmic, and under “render basal” select “default” so that the pump basal shows up. Continue to scroll down until you get to “show plugins”. You need to make sure “careportal” is checked, and can also select various other metrics (most useful are: IOB, care portal, pump, cannula age, insulin age, basal profile and OpenAPS).
 
-![image](images/remote-control-26.png)
+![изображение](images/remote-control-26.png)
 
-![image](images/remote-control-27.png)
+![изображение](images/remote-control-27.png)
 
 Importantly, you now need to click “save” at the bottom for these changes to take effect.
 
 After pressing “save” the app will return to your main Nightscout screen which will look a little like this:
 
-![image](images/remote-control-28.png)
+![изображение](images/remote-control-28.png)
 
 Looking in more detail at the top left menu of the Nightscout app:
 
@@ -339,9 +339,9 @@ Looking in more detail at the top left menu of the Nightscout app:
 
 There is a huge amount of information on the status of the **AAPS** system in the grey tabs (and even more information is revealed if you tap the tab) on this screen:
 
-![image](images/remote-control-30.png)
+![изображение](images/remote-control-30.png)
 
-![image](images/remote-control-31.png)
+![изображение](images/remote-control-31.png)
 
 ### Sending treatments through the Nightscout app to AAPS
 
@@ -360,7 +360,7 @@ Some of the most useful **Nightscout** commands are described in the table below
 
 #### Nightscout command table
 
-![image](images/remote-control-33.png)
+![изображение](images/remote-control-33.png)
 
 Read more about **Nightscout** options [here](https://nightscout.github.io/)
 
@@ -436,11 +436,11 @@ If you install **AAPS** wear.apk on a **Wear OS** watch, there are a range of di
 
 Examples of complications (where AAPS is embedded in an existing watchface) are shown here:
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/04d591ca-9f2e-4479-ac9e-ab689815745d)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/04d591ca-9f2e-4479-ac9e-ab689815745d)
 
 These are the currently available AAPS-dedicated watchfaces:
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/67fd75f3-721c-438d-be01-1a8e03532290)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/67fd75f3-721c-438d-be01-1a8e03532290)
 
 More information about the possible smartwatch faces and their functions can be found in [Smartwatches](Hardware/Smartwatch.md)
 
@@ -460,9 +460,9 @@ Most of the frustrations of standalone **AAPS** watches come from interacting wi
 
 Additional challenges are that it is hard to get sufficient battery life, and watches with sufficient battery are often bulky and thick. Users report fighting with the OS and power-saving settings, difficulty in starting sensors on the watch, poor bluetooth range (for maintaining connection with both the sensor and pump) and questionable water resistance. Examples are shown in the photos below (photo credit: Janvier Doyon).
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/6d787373-bc0c-404d-89aa-54d3127c4a6f)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/6d787373-bc0c-404d-89aa-54d3127c4a6f)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/5d2feecc-3f10-4767-b143-1a72da2b9bd4)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/5d2feecc-3f10-4767-b143-1a72da2b9bd4)
 
 If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS**  Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
@@ -500,11 +500,11 @@ As a summary, the build process for the Wear apk is very similar to that for the
 
 The following guide assumes you have reinstalled the latest version of Android studio (scenario below has used Giraffe 2022.3.1)).
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/e8e3b7f3-f82e-425a-968c-cc196434a5f8)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/e8e3b7f3-f82e-425a-968c-cc196434a5f8)
 
 To get back here:
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/37f4589c-6097-49d4-b0b9-087664914198)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/37f4589c-6097-49d4-b0b9-087664914198)
 
 continue to follow the instructions.
 
@@ -513,29 +513,29 @@ Follow the prompts through the different screens until you are given an option w
 
 Next Step go to "Build" in the ribbon
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/b2cccc84-85b6-4ee1-800b-7c6dcb9dd857)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/b2cccc84-85b6-4ee1-800b-7c6dcb9dd857)
 
 
 Go to Build > Generate Signed Bundle / APK
 
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/f488fe36-8cb9-4d81-9d94-5f742a1aaaee)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/f488fe36-8cb9-4d81-9d94-5f742a1aaaee)
 
 Select > Android APK Bundle:
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/e8f4b996-c46e-4a31-831e-fdcc4d0d677c)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/e8f4b996-c46e-4a31-831e-fdcc4d0d677c)
 
 
 Select in Module: AndroidAPSwear
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/cceaa832-70e6-4ad5-95ec-a82e2a6add1e)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/cceaa832-70e6-4ad5-95ec-a82e2a6add1e)
 
 Enter keystore file at the default location. Your keystore path will depend where you have stored your Keystore. For this scenario the keystore path was located: C:\Program Files\Android\Android Studio\jbr\bin
 
 
 The next screen should show this:
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/87ce7943-256e-449e-8439-8f9fd5bef05e)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/87ce7943-256e-449e-8439-8f9fd5bef05e)
 
 
 And select “fullRelease”.
@@ -583,7 +583,7 @@ You can use either Wear Installer 2 or Easy Fire tools to side-load AAPS onto th
 
 ##### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
 
- ![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/43577a66-f762-4c11-a3b3-4d6d704d26c7)
+ ![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/43577a66-f762-4c11-a3b3-4d6d704d26c7)
 
 Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
 
@@ -598,7 +598,7 @@ Alternatively, you can:
 
 1)   Download _Easy Fire Tools_ from playstore onto phone
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/81ceb8f3-dfa6-468b-b9d0-c31b885bc104)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/81ceb8f3-dfa6-468b-b9d0-c31b885bc104)
 
 2)  Make yourself a developer in the watch (once set up and connected to phone):
 
@@ -612,23 +612,23 @@ In “developer options”, turn on “ADB debugging” and “wireless debuggin
 
 STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). Then click the plug socket icon on the top right.
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/b927041f-cc53-4cde-9f77-11cd517c9be0)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/b927041f-cc53-4cde-9f77-11cd517c9be0)
 
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/00b2fb8b-5996-4b71-894e-516d63469e1b)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/00b2fb8b-5996-4b71-894e-516d63469e1b)
 
 
 STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  Wear.apk onto the smartwatch using Easy Fire tools
 
 Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the smartwatch:
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3)
 
 
  Next step > accept the authorisation request on the smartwatch
 
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/2c398a34-b865-4aa1-9c53-d83dfef052a7)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/2c398a34-b865-4aa1-9c53-d83dfef052a7)
 
 :::
 
@@ -643,7 +643,7 @@ The final step is to configure **AAPS** on the phone to interact with **AAPS** W
 
 ●   Tick for Wear selection under General
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/ae6d75a1-1829-4d2e-b0dc-153e31e4a466)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/ae6d75a1-1829-4d2e-b0dc-153e31e4a466)
 
 
 To change to a different **AAPS**  watchface, press on the home screen of the watch and it will come to “customise”. Then swipe right until you get to all the **AAPS**  faces.
@@ -707,7 +707,7 @@ The software for the watch, **AAPSClient** Wear apk, can be downloaded directly 
 To download the software, click on the required app (in this screenshot, either **wear-aapsclient-release_3.2.0.1** or **wear-aapsclient2-release_3.2.0.1** would work, there are two versions in case you need a copy for a second caregiver watch):
 
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d)
 
 
 
@@ -721,7 +721,7 @@ The **AAPSClient** wear apk can be transferred to your phone and side-loaded ont
 
 
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/98620770-2fb3-47af-a13e-28af7db69096)
+![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/98620770-2fb3-47af-a13e-28af7db69096)
 
 
 
