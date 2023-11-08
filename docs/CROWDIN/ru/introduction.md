@@ -186,9 +186,9 @@ A more accurate question is probably “is it safe **compared** with my current 
 
 2.  Установите сигналы оповещения вашего мониторинга для высоких и низких уровней ГК.
 
-3.  Отслеживайте подачу инсулина через интернет. Пользователи Nightscout могут установить дополнительные сигналы тревоги для различных ситуаций, включая условия, которые имеют гораздо больше вероятности, чем атаки злоумышленника. In addition to highs and lows, Nightscout can display diagnostic data useful for verifying that the pump is operating as desired, including current IOB, pump temporary basal history, pump bolus history. It can also be configured to proactively alert users to undesirable conditions, such as predicted highs and lows, low insulin reservoir, and low pump battery.
+3.  Отслеживайте подачу инсулина через интернет. Пользователи Nightscout могут установить дополнительные сигналы тревоги для различных ситуаций, включая условия, которые имеют гораздо больше вероятности, чем атаки злоумышленника. Помимо высоких и низких сахаров, Nightscout отображает диагностические данные, полезные для проверки работы помпы, включая активный инсулин IOB, историю болюсов и временной базальной скорости помпы. Он также может быть настроен на оповещение о нежелательных условиях, таких как прогнозируемые высокие и низкие уровни гликемии, запасах инсулина в резервуаре и низкий заряд батареи в помпе.
 
-If a malicious attack was made on your insulin pump, these strategies would significantly mitigate the risk. Every potential **AAPS** user needs to weigh the risks associated with using **AAPS**, versus the risks of using a different system.
+Если на вашу инсулиновую помпу будет произведена атака злоумышленника, выше приведенные стратегии значительно снизят риски. Каждый потенциальный пользователь **AAPS** должен взвесить риски, связанные с использованием **AAPS**, по сравнению с рисками использования другой системы.
 
 #### Safety considerations around improving blood glucose control too fast
 
@@ -203,7 +203,7 @@ Use original supplies such as inserters, cannulas and insulin containers approve
 Do not take SGLT-2 inhibitors (gliflozins) when using **AAPS** as they incalculably lower blood sugar levels. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](preparing-safety-first).
 
 (introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)=
-## How can I approach discussing AAPS with my clinical team?
+## Как мне подойти к обсуждению AAPS с врачами?
 
 Users are encouraged to speak with their clinicians about their intention to use **AAPS**. Please do not be afraid to have an honest conversation with your diabetes team if you intend to use **AAPS** (or any other DIY loop, for that matter). Transparency and trust between patient and doctor is paramount.
 
