@@ -275,17 +275,17 @@ Doctors (at least in the UK) are not prohibited from prescribing unlicensed medi
 
 ## Why can’t I just download AAPS and use it straight away?
 
-The **AAPS** app is not provided in Google Play - you have to build it from source code by yourself for legal reasons. **AAPS** is unlicensed, meaning that it does not have approval by any regulatory body authority in any country. **AAPS** is deemed to be carrying out a medical experiment on yourself, and is carried out at the user’s own risk.
+Приложение нельзя найти в Google Play - его следует самостоятельно собрать из исходного кода по юридическим причинам. **AAPS** не имеет лицензии, то есть не имеет одобрения ни от одного регулирующего органа ни в одной стране. **AAPS** is deemed to be carrying out a medical experiment on yourself, and is carried out at the user’s own risk.
 
 Setting up the system requires patience, determination and the gradual development of technical knowledge. All the information and support can be found in these documents, elsewhere online, or from others who have already done it. Over 10,000 people have successfully built and are currently using **AAPS** worldwide.
 
-The developers of **AAPS** take safety incredibly seriously, and want others to have a good experience of using **AAPS**. That is why it is essential that every user (or carer, if the user is a child):
+The developers of **AAPS** take safety incredibly seriously, and want others to have a good experience of using **AAPS**. Поэтому важно, чтобы каждый пользователь (или опекун, если пользователь является ребенком):
 
 - builds the AAPS system themself and works through the **objectives** so that they have reasonably good personalised settings and understand the basics of how **AAPS** works by the time they “close the loop”;
 
-- backs up their system by exporting and saving important files (like keystore and settings .json file) somewhere safe, so you can setup again quickly if needed;
+- периодически осуществлял резервное копирование системы, экспортируя и сохраняя важные файлы (например, keystore и settings.json) в безопасном месте, чтобы иметь возможность при необходимости снова быстро настроить систему;
 
-- updates to newer master versions as and when they become available; and
+- устанавливал обновления версий master по мере их доступности; и
 
 - обслуживал систему и следил за ней, чтобы она работала правильно.
 
