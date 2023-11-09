@@ -732,12 +732,16 @@ The software for the watch, **AAPSClient** Wear apk, can be downloaded directly 
 
 To download the software, click on the required app (in this screenshot, either **wear-aapsclient-release_3.2.0.1** or **wear-aapsclient2-release_3.2.0.1** would work, there are two versions in case you need a copy for a second caregiver watch):
 
+![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/2308c075-f41c-45bc-9c0f-3938beeaaafb)
+
+
+Then "save as" and save the file to a convenient location on your computer:
+
 
 ![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d)
 
    
-
-Then "save as" and save the file to a convenient location on your computer. 
+ 
 
 
 
@@ -763,9 +767,9 @@ There are additional options for FitBit watches which appear to be for monitorin
 
 ### Option 5) **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
 
-These options are described in more detail in the ["following only"](docs/EN/following-only.md) section of the documentation. 
+These options are described in more detail in the ["following only"](following-only.md) section of the documentation. 
 
-In general, there are a wide range of affordable smartwatches which can provide glucose display only. If you are using Nightscout, then a good overview of all the options are described in the [Nightscout pages](https://nightscout.github.io/nightscout/wearable/#)
+In general, there are a wide range of affordable smartwatches which can provide glucose display only. If you are using Nightscout, then a good overview of all the options are described in the [Nightscout pages](https://nightscout.github.io/nightscout/wearable/#).
 
 
 
