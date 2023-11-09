@@ -57,13 +57,13 @@ Since OpenAPS is only compatible with certain older insulin pumps, **AAPS** (whi
 ### **К практическим преимуществам относятся:**
 
 #### 1) Встроенная безопасность
-To read about the safety features of the algorithms, known as oref0 and oref1, [click here](https://openaps.org/reference-design/). The user is in control of their own safety constraints.
+To read about the safety features of the algorithms, known as oref0 and oref1, [click here](https://openaps.org/reference-design/). Пользователь контролирует свои собственные ограничения безопасности.
 
-#### 1) **Hardware flexibility**
+#### 1) **Аппаратная гибкость**
 
-**AAPS** works with a wide range of insulin pumps and sensors. Например, если у вас аллергия на пластырь сенсора Dexcom, можно перейти на Libre. Это дает свободу при изменениях в жизни. You don't have to rebuild or reinstall the **AAPS** app, just tick a different box in the app to change your hardware. AAPS is independent of particular pump drivers and also contains a "virtual pump" so users can safely experiment before using it on themselves.
+**AAPS** работает с широким спектром помп и сенсоров. Например, если у вас аллергия на пластырь сенсора Dexcom, можно перейти на Libre. Это дает свободу при изменениях в жизни. Пересобирать или переустанавливать приложение **AAPS** не требуется, просто установите флажок в приложении, чтобы изменить ваше оборудование. AAPS не зависит от конкретных драйверов помп и содержит "виртуальную помпу", чтобы пользователи могли безопасно экспериментировать, прежде чем применять самостоятельно.
 
-#### 2) **Highly customisable, with wide parameters**
+#### 2) **Настраиваемость в широком диапазоне**
 
 Users can easily add or remove modules or functionality, and **AAPS** can be used in both open and closed loop mode. Here are some examples of the possibilities with the **AAPS** system:
 
