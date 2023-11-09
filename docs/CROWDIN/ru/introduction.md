@@ -65,17 +65,17 @@ To read about the safety features of the algorithms, known as oref0 and oref1, [
 
 #### 2) **Настраиваемость в широком диапазоне**
 
-Users can easily add or remove modules or functionality, and **AAPS** can be used in both open and closed loop mode. Here are some examples of the possibilities with the **AAPS** system:
+Пользователи могут легко добавлять/удалять модули и функциональность, а **AAPS** может работать как в режиме открытого, так и закрытого цикла. Вот примеры возможностей с системой **AAPS**:
 
- a) The ability to set a lower glucose target 30 min before eating; you can set the target as low as 72 mg/dL (4.0 mmol/L).
+ a) Возможность задавать нижнюю цель ГК за 30 минут до еды; цель может быть ниже 72 мг/дЛ (4.0 ммоль/L).
 
- b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule  to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in an 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). Автоматизация продлится согласно запланированному вами времени. Такая автоматизация может срабатывать в определенные дни недели, в определенное время суток, и даже в определенных местах.
+ b) если у вас резистентность к инсулину, приводящая к высоким сахарам, **AAPS** позволяет установить правило **автоматизации**: если ГК поднимается выше 8 ммоль/л (144 мг/дл), происходит переход на 120% профиля (что приводит к увеличению базала на 20% и других параметров, в сравнении с обычной настройкой **профиля**). Автоматизация продлится согласно запланированному вами времени. Такая автоматизация может срабатывать в определенные дни недели, в определенное время суток, и даже в определенных местах.
 
  c) если Ваш ребенок неожиданно оказался на батуте, **AAPS** позволит приостановить подачу инсулина на заданный период времени непосредственно по телефону.
 
- d) After reconnecting a tubed pump which has been disconnected for  swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. Любой лишний инсулин может быть переопределен простой "отменой" пропущенной базы.
+ d) после повторного подключения помпы которая была отключена перед купанием, AAPS будет рассчитывать базальный инсулин, который вы пропустили при отключении и осторожно введет его, согласно вашей текущей ГК. Любой лишний инсулин может быть переопределен простой "отменой" пропущенной базы.
 
- e) **AAPS** has the facility for you to set different profiles for different situations and easily switch between them. For example, features which make the algorithm quicker to bring down elevated BG (like supermicro boluses (“**SMB**”), unannounced meals, (“**UAM**”) can be set to only work during the daytime, if you are worried about night-time hypos.
+ f) **AAPS** дает возможность настраивать различные профили для различных ситуаций и легко переключаться между ними. Функции, которые делают алгоритм более быстрым для снижения высокой ГК (например, супермикроболюсы («SMB»), неожиданный прием пищи, (“**UAM**”) могут быть настроены на работу только в дневное время, если вы боитесь ночных гипогликемий.
 
 These are all examples, the full range of features gives huge flexibility for daily life including sport, illness, hormone cycles _etc_. В конечном счете, пользователь сам должен решить, как использовать эти возможности, универсальной автоматизации для всех не существует.
 
