@@ -237,16 +237,16 @@ These instructions are for configuring the **Omnipod DASH** generation pump **(N
 
 ### Fields
 
-* **Bluetooth Address:** Displays the current bluetooth address of the connected Pod.
-* **Bluetooth Status:** Displays the current connection status.
-* **Sequence Number:** Displays the sequence number of the active POD.
-* **Firmware Version:** Displays the firmware version for the active connection.
-* **Time on Pod:** Displays the current time on the Pod.
+* **АдресBluetooth-:** Отображает текущий bluetooth адрес подключенного Pod.
+* **Статус Bluetooth:** Отображает текущее состояние соединения.
+* **Порядковый Номер** Отображает номер последовательности активного POD.
+* **Версия прошивки:** Отображает версию прошивки для активного соединения.
+* **Время на Pod:** Отображает текущее время на Pod.
 * **Pod expires:** Displays the date and time when the Pod will expire.
-* **Pod status:** Displays the Pod status.
-* **Last connection:** Displays time of last communication with the Pod.
+* **Статус Pod:** Отображает статус пода.
+* **Прошлое подключение:** Отображает время последней связи с Pod.
 
-   - *Moments ago* - less than 20 seconds ago.
+   - *Только что* - меньше 20 секунд назад.
    - *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
    - *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
    - *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
