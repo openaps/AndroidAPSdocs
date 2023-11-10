@@ -247,18 +247,18 @@ These instructions are for configuring the **Omnipod DASH** generation pump **(N
 * **Прошлое подключение:** Отображает время последней связи с Pod.
 
    - *Только что* - меньше 20 секунд назад.
-   - *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
-   - *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
-   - *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
+   - *Менее минуты назад* - более 20, но менее 60 секунд назад.
+   - *1 минуту назад* - более 60, но менее 120 секунд (2 мин)
+   - *XX минут назад* - более 2 минут назад, определяется величиной XX
 
-* **Last bolus:** Displays the amount of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
-* **Base Basal rate:** Displays the basal rate programmed for the current time from the basal rate profile.
-* **Temp basal rate:** Displays the currently running Temporary Basal Rate in the following format
+* **Предыдущий болюс:** Отображает величину болюса, отправленного в активный Pod с указанием в скобках как давно он был подан.
+* **Базовая скорость базала:** Отображает базовую скорость, запрограммированную на текущее время из профиля базала.
+* **Временная скорость базала:** Отображает текущую временную скорость базала в следующем формате
 
-   - {Units per hour} @{TBR start time}  ({minutes run}/{total minutes TBR will be run})
+   - {ед./час} @{ время начала врем. базала TBR} ({мин. прошло}/{всего минут TBR})
    - *Example:* 0.00U/h @18:25 ( 90/120 minutes)
 
-* **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below 50 U, the exact units are displayed.
+* **Резервуар:** Показывает 50+ед. когда в резервуаре остается более 50 ед. Ниже 50 ед. показывается точное кол-во единиц.
 * **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. This includes insulin used for activating and priming.
 * **Errors:** Displays the last error encountered. Review the [Pod history](OmnipodDASH-view-pod-history) and log files for past errors and more detailed information.
 *  **Active pod alerts:** Reserved for currently running alerts on the active pod.
