@@ -229,7 +229,7 @@ These instructions are for configuring the **Omnipod DASH** generation pump **(N
 
 ## Вкладка DASH
 
-Below is an explanation of the layout and meaning of the icons and status fields on the **DASH** tab in the main AAPS interface.
+Ниже приведено объяснение расположения и значения иконок и информационных полей на вкладке **DASH** в главном интерфейсе AAPS.
 
 *NOTE: If any message in the **DASH** tab status fields report (uncertain), then you will need to press the Refresh button to clear it and refresh the pod status.*
 
