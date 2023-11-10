@@ -410,7 +410,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 - **Last connection:** Displays the last time communication with the active pod was achieved.
 
-- *Moments ago* - less than 20 seconds ago.
+- *Только что* - меньше 20 секунд назад.
 - *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
 - *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
 - *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
