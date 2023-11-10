@@ -199,7 +199,7 @@ Ensure that the new pod and the phone running AAPS are within close proximity of
 
 ![ACK_alerts_2](../images/DASH_images/ACK_Alerts/ACK_ALERTS_2.png)
 
-3. После **успешного отключения** оповещений активный Pod издаст **два сигнала** и на экране появится подтверждающее сообщение **активные оповещения помпы отключены**. Click the **OK** button to confirm and dismiss the dialog.
+3. После **успешного отключения** оповещений активный Pod издаст **два сигнала** и на экране появится подтверждающее сообщение **активные оповещения заглушены**. Click the **OK** button to confirm and dismiss the dialog.
 
 
 ![ACK_alerts_3](../images/DASH_images/ACK_Alerts/ACK_ALERTS_3.png)
