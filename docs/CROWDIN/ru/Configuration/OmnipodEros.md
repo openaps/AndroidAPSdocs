@@ -411,20 +411,20 @@ Below is an explanation of the layout and meaning of the icons and status fields
 - **Last connection:** Displays the last time communication with the active pod was achieved.
 
 - *Только что* - меньше 20 секунд назад.
-- *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
-- *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
-- *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
+- *Менее минуты назад* - более 20, но менее 60 секунд назад.
+- *1 минуту назад* - более 60, но менее 120 секунд (2 мин)
+- *XX минут назад* - более 2 минут назад, определяется величиной XX
 
 - **Last bolus:** Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
 
-- **Base Basal rate:** Displays the basal rate programmed for the current time from the basal rate profile.
+- **Базовая скорость базала:** Отображает базовую скорость, запрограммированную на текущее время из профиля базала.
 
-- **Temp basal rate:** Displays the currently running Temporary Basal Rate in the following format
+- **Временная скорость базала:** Отображает текущую временную скорость базала в следующем формате
 
 - Units / hour @ time TBR was issued (minutes run / total minutes TBR will be run)
 - *Example:* 0.00U/h @18:25 ( 90/120 minutes)
 
-- **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below this value the exact units are displayed in yellow text.
+- **Резервуар:** Показывает 50+ед. когда в резервуаре остается более 50 ед. Below this value the exact units are displayed in yellow text.
 
 - **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. *Note this is an approximation as priming and filling the pod is not an exact process.*
 
