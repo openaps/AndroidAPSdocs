@@ -142,7 +142,7 @@
 - It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
 
 (Preferences-buttons)=
-### Buttons
+### Кнопки
 
 - Define which buttons are visible on the bottom of your home screen.
 
