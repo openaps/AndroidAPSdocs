@@ -103,11 +103,11 @@ Bunlar olağan gradle senkronizasyon hatalarıdır:
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
-### Android Gradle eklentisinin çalışması için Java 11 gerekir
+### Android Gradle plugin requires Java 17 to run
 
   Bu hata mesajıyla karşılaşabilirsiniz:
 
-  ![Android Gradle eklentisinin çalışması için Java 11 gerekir](../images/studioTroubleshooting/11_GradleJDK.png)
+  ![Android Gradle plugin requires Java 17 to run](../images/studioTroubleshooting/11_GradleJDK.png)
 
   Gradle ayarlarını açmak için "Gradle Settings" (1) üzerine tıklayın.
 
@@ -115,13 +115,13 @@ Bunlar olağan gradle senkronizasyon hatalarıdır:
 
   ![Gradle Ayarları](../images/studioTroubleshooting/09_GradleSettings.png)
 
-  Gradle ayarları iletişim kutusunu açtığınızda, "Gradle JDK" da seçenekleri (1) açın ve "Gömülü JDK sürümü"nü (2) seçin.
+  When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "jbr-17" (2), which should be located within your Android Studion installation directory.
 
   ![Gradle Ayarları](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
   Ayarlar iletişim kutusunu kaydetmek ve kapatmak için "Tamam"a basın.
 
-  *Önemli*: "Gradle JDK" ayarını görmüyorsanız, Android Studio'yu güncellememiş olabilirsiniz. Android Studio 2021.1.1 Bumblebee) veya daha yenisini kullandığınızdan emin olun.
+  *Önemli*: "Gradle JDK" ayarını görmüyorsanız, Android Studio'yu güncellememiş olabilirsiniz. Make sure you are using Android Studio 2022.3 Giraffe) or newer.
 
   Şimdi bir [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync) tetiklemeniz gerekiyor
 
