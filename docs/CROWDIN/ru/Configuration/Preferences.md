@@ -1,24 +1,24 @@
 # Настройки
 
-- **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+- **Откройте настройки** нажав меню в правом верхнем углу начального экрана.
 
   ```{image} ../images/Pref2020_Open2.png
   :alt:Открыть настройки
   ```
 
-- You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
+- Перейдите непосредственно к настройкам определенной вкладки (например, вкладки помпы), открыв эту вкладку и нажав на настройки конкретного модуля расширения.
 
   ```{image} ../images/Pref2020_OpenPlugin2.png
   :alt: Открыть параметры расширений
   ```
 
-- **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+- **Подменю** можно раскрыть, нажав на стрелку слева от пункта меню.
 
   ```{image} ../images/Pref2020_Submenu2.png
   :alt: Открыть подменю
   ```
 
-- With the **filter** on top of the preferences screen you can quickly access certain preferences. Просто начните вводить часть текста, который вы ищете.
+- С помощью **фильтра** наверху экрана настроек можно быстро перейти к нужной настройке. Просто начните вводить часть текста, который вы ищете.
 
   ```{image} ../images/Pref2021_Filter.png
   :alt:Фильтр настроек
@@ -32,25 +32,25 @@
 (Preferences-general)=
 ## Общие настройки
 
-**Units**
+**Единицы**
 
-- Set units to mmol/l or mg/dl depending on your preferences.
+- В зависимости от предпочтений установите единицы mmol/l или mg/dl.
 
-**Language**
+**Язык**
 
-- New option to use phone's default language (recommended).
+- Появился новый пункт для выбора - System default - язык телефона по умолчанию (рекомендуется выбрать этот вариант).
 
-- In case you want AAPS in a different language than your standard phone language you can choose from a broad variety.
+- Если вы хотите, чтобы в вашем AAPS использовался другой язык - выберите его из предложенных вариантов.
 
-- If you use different languages you might sometimes see a language mix. This is due to an android issue that overriding the default android language sometimes doesn't work.
+- Если вы используете в AAPS язык, отличный от системного, то иногда будете видеть кашу из языков. Это связано с тем, что иногда на телефонах с Android не удается переопределить используемый по умолчанию язык в приложении.
 
   ```{image} ../images/Pref2020_General.png
   :alt: Preferences > General
   ```
 
-**Patient name**
+**Имя пациента**
 
-- Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+- Может быть полезно, если необходимо отличать несколько различных настроек (например - у вас два ребенка с СД1).
 
 (Preferences-protection)=
 ### Защита
@@ -58,15 +58,15 @@
 (Preferences-master-password)=
 #### Главный пароль
 
-- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7. **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
+- Необходим для [экспорта настроек](../Usage/ExportImportSettings.md), т. к. они шифруются начиная с версии 2.7. **Защита биометрией (отпечаток пальца, распознавание лица) может не работать на некоторых телефонах OnePlus. Это известная проблема телефонов OnePlus.**
 
-- Open Preferences (three-dot menu on top right of home screen)
+- Откройте настройки (трехточечное меню в правом верхнем углу начального экрана)
 
-- Click triangle below "General"
+- Нажмите на галочку слева от заголовка "Общее"
 
-- Click "Master-Password"
+- Нажмите "Главный пароль"
 
-- Enter password, confirm password and click ok.
+- Введите пароль, подтвердите пароль и нажмите кнопку Ok.
 
   ```{image} ../images/MasterPW.png
   :alt: Установить основной пароль
