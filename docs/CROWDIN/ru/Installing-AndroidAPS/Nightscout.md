@@ -4,32 +4,32 @@
 
 ## Вопросы безопасности
 
-Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
+Помимо отчетов Nightscout можно также использовать для управления AAPS. Например, вы можете задать временные цели или добавить будущие углеводы. Эта информация будет подхвачена в AAPS, которая будет выполнять соответствующие действия. Поэтому стоит задуматься над тем, как обеспечить безопасность веб-сайта Nightcut.
 
 ### Настройки Nightscout
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
+Можно запретить общий доступ к сайту Nightscout с помощью [ идентификационных ролей ](https://nightscout.github.io/nightscout/security).
 
 ### AAPS settings
 
-There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs.
+В параметрах AAPS есть функция только загрузки NS (без синхронизации). При этом AAPS не отбирает изменения, внесенные в Nightscout, такие как временные цели или будущие углеводы.
 
 * Коснитесь 3-точечного меню в правом верхнем углу на домашней странице AAPS.
 * Выберите "Параметры".
 * Прокрутите страницу вниз и выберите "Дополнительные параметры".
 * Активируйте "только загрузку NS"
 
-![Nightscout upload only](../images/NSsafety.png)
+![Только выгрузка в Nightscout](../images/NSsafety.png)
 
 ### Дополнительные параметры защиты
 
-Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
+Регулярно обновляйте программное обеспечение телефона, как описано в разделе [ безопасность прежде всего](../Getting-Started/Safety-first.md).
 
 (Nightscout-manual-nightscout-setup)=
 
 ## Установка Nightscout вручную
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
+Предполагается, что у вас уже есть сайт Nightscout, если же нет - зайдите на страницу [ Nightscout ](http://nightscout.github.io/nightscout/new_user/) для получения полных инструкций по настройке; приведенные ниже инструкции описывают параметры, которые также потребуется добавить на сайт Nightscout. Сайт Nightscut должен быть по крайней мере версии 10 (отображается как 0.10...), поэтому убедитесь, что вы запускаете [ последнюю версию ](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version); в противном случае появится сообщение об ошибке в приложении AAPS. Некоторые люди находят, что алгоритмы ИПЖ требуют больше трафика, чем квоты Azure, поэтому Heroku предпочтительнее.
 
 * Перейдите на https://herokuapp.com/
 
