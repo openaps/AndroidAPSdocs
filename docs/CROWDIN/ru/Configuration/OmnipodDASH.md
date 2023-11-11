@@ -259,39 +259,39 @@ These instructions are for configuring the **Omnipod DASH** generation pump **(N
    - *Example:* 0.00U/h @18:25 ( 90/120 minutes)
 
 * **Резервуар:** Показывает 50+ед. когда в резервуаре остается более 50 ед. Ниже 50 ед. показывается точное кол-во единиц.
-* **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. This includes insulin used for activating and priming.
-* **Errors:** Displays the last error encountered. Review the [Pod history](OmnipodDASH-view-pod-history) and log files for past errors and more detailed information.
-*  **Active pod alerts:** Reserved for currently running alerts on the active pod.
+* **Всего подано** Отображает общее количество единиц инсулина, доставленных из резервуара. Сюда входит инсулин, используемый для активации и заполнения инфузионного набора.
+* **Errors:** Displays the last error encountered. Просмотрите [Журнал Pod](OmnipodDASH-view-pod-history) и файлы журналов для поиска прошлых ошибок и более подробной информации.
+*  **Активные оповещения Pod** зарезервировано для текущих оповещений на активном Pod.
 
 ### Кнопки
 
 
-![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) : Sends a refresh command to the active pod to update communication.
+![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) : Отправляет команду refresh в активный Pod для обновления коммуникации.
 
-   * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
-   * See the Troubleshooting section below for additional information.
+   * Используйте для обновления статуса pod и сброса полей статуса, содержащих текст (не подтверждено).
+   * Дополнительную информацию см. в разделе Устранение неполадок ниже.
 
-![POD_MGMT_Icon](../images/DASH_images/POD_MGMT_LOGO.png) : Navigates to the Pod management menu.
+![POD_MGMT_Icon](../images/DASH_images/POD_MGMT_LOGO.png) : Перейдите в меню управления Pod.
 
-![ack_alert_logo](../images/DASH_images/ack_alert_logo.png) : When pressed this will disable the pod alerts beeps and notifications (expiry, low reservoir..).
+![ack_alert_logo](../images/DASH_images/ack_alert_logo.png) : При нажатии отключает звуки и уведомления (истечение срока действия, мало инсулина в резервуаре..).
 
-   * Button is displayed only when pod time is past expiration warning time.
-   * Upon successful dismissal, this icon will no longer appear.
+   * Кнопка отображается только после появления предупреждения об истечении срока действия.
+   * После успешного сброса, этот значок не будет отображаться.
 
-![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png) : Resumes the currently suspended insulin delivery in the active pod.
+![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png) : Возобновляет приостановленную подачу инсулина в активном Pod.
 
-### Pod Management Menu
+### Меню управления помпой
 
-Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (0)** button from the **DASH** tab. ![DASH_Tab_2](../images/DASH_images/DASH_Tab/DASH_Tab_2.png) ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
+Ниже приведено значение иконок в меню **Управление помпой **, доступном после нажатием кнопки **УПРАВЛЕНМЕ ПОМПОЙ (0)** на вкладке **DASH**. ![DASH_Tab_2](../images/DASH_images/DASH_Tab/DASH_Tab_2.png) ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
-* 1 - [**Activate Pod**](OmnipodDASH-activate-pod) : Primes and activates a new pod.
-* 2 - [**Deactivate Pod**](OmnipodDASH-deactivate-pod) : Deactivates the currently active pod.
-* 3 - **Play Test Beep** : Plays a single test beep on the pod when pressed.
-* 4 - [**Pod history**](OmnipodDASH-view-pod-history) : Displays the active pod activity history.
+* 1 - [**Активировать Pod**](OmnipodDASH-activate-pod) : Заполняет катетер и активирует новый Pod.
+* 2 - [**Деактивировать Pod**](OmnipodDASH-deactivate-pod) : Деактивирует активный под.
+* 3 - **Воспроизвести тестовый звуковой сигнал** : При нажатии воспроизводит один тестовый сигнал на поде.
+* 4 - [**Журнал Pod **](OmnipodDASH-view-pod-history) : Отображает историю активности.
 
 (DanaRS-Insulin-Pump-dash-settings)=
 
-## Dash Settings
+## Настройки Dash
 
 The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. Поставив флажок в **клетке** напротив **шестеренки настроек** вы активируете вкладку DASH в интерфейсе AAPS.
 
