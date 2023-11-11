@@ -2,7 +2,7 @@
 
 These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**). The Omnipod driver is available as part of AAPS (AAPS) as of version 2.8.
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Только вы несете ответственность за то, что делаете.**
+**Это программное обеспечение - часть алгоритма самостоятельно настраиваемой ИПЖ; она не является коммерческим продуктом, но требует, чтобы вы прочитали, узнали и поняли, как ей пользоваться. Только вы несете ответственность за то, что делаете.**
 
 ```{contents}
 :backlinks: entry
@@ -370,7 +370,7 @@ This screen provides information in reverse chronological order of each state or
    > 
    > ![RileyLink_Statistics_History_3](../images/omnipod/RileyLink_Statistics_History_3.png)
 
-##### Fields
+##### Поля
 
 > - **Date & Time**: In reverse chronological order the timestamp of each event.
 > - **Device:** The device to which the current action or state is referring.
@@ -386,7 +386,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 > ![Omnipod_Tab](../images/omnipod/Omnipod_Tab.png)
 
-### Fields
+### Поля
 
 - **RileyLink Status:** Displays the current connection status of the RileyLink
 
@@ -422,13 +422,13 @@ Below is an explanation of the layout and meaning of the icons and status fields
 - **Временная скорость базала:** Отображает текущую временную скорость базала в следующем формате
 
 - Units / hour @ time TBR was issued (minutes run / total minutes TBR will be run)
-- *Example:* 0.00U/h @18:25 ( 90/120 minutes)
+- *Пример:* 0.00ед./ч. @18:25 ( 90/120 мин.)
 
 - **Резервуар:** Показывает 50+ед. когда в резервуаре остается более 50 ед. Below this value the exact units are displayed in yellow text.
 
 - **Всего подано** Отображает общее количество единиц инсулина, доставленных из резервуара. *Note this is an approximation as priming and filling the pod is not an exact process.*
 
-- **Errors:** Displays the last error encountered. Review the [Pod history](OmnipodEros-view-pod-history), [RileyLink history](OmnipodEros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
+- **Ошибки:** Отображает последнюю возникшую ошибку. Review the [Pod history](OmnipodEros-view-pod-history), [RileyLink history](OmnipodEros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
 
 - **Активные оповещения Pod** зарезервировано для текущих оповещений на активном Pod. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
 
@@ -601,7 +601,7 @@ Allows for scanning of a pod communication device. The Omnipod driver cannot sel
 
 Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
-*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Сброс уведомления НЕ удалит оповещение, ЕСЛИ НЕ включено автоматическое подтверждение получения оповещений. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.*
+*Примечание: уведомления AAPS выдаются ВСЕГДА для любого оповещения после связи с pod с момента срабатывания оповещения. Сброс уведомления НЕ удалит оповещение, ЕСЛИ НЕ включено автоматическое подтверждение получения оповещений. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.*
 
 - **\*Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
 - **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
@@ -674,18 +674,18 @@ This process will show how to add a new pod communication device to the Omnipod 
 
    > ![RileyLink_Setup_Add_3](../images/omnipod/RileyLink_Setup_Add_3.png) ![RileyLink_Setup_Add_4](../images/omnipod/RileyLink_Setup_Add_4.png)
 
-## Actions (ACT) Tab
+## Вкладка Действия (ACT)
 
 This tab is well documented in the main AAPS documentation but there are a few items on this tab that are specific to how the Omnipod pod differs from tube based pumps, especially after the processes of applying a new pod.
 
-1. Go to the **Actions (ACT)** tab in the main AAPS interface.
-2. Under the **Careportal (1)** section the following 3 fields will have their **age reset** to 0 days and 0 hours **after each pod change**: **Insulin** and **Cannula**. This is done because of how the Omnipod pump is built and operates. The **pump battery** and **insulin reservoir** are self contained inside of each pod. Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours).
+1. Перейдите на вкладку **Действия (ACT)** в главном интерфейсе AAPS.
+2. Under the **Careportal (1)** section the following 3 fields will have their **age reset** to 0 days and 0 hours **after each pod change**: **Insulin** and **Cannula**. Это происходит из-за устройства и принципа работы Omnipod. **Батарея помпы** и **резервуар инсулина** в каждом поде свои. Так как Pod вводит катетер непосредственно в кожу на месте установки, в помпах Omnipod не применяется традиционная трубка. *Поэтому после замены пода значение каждой из этих величин автоматически сбрасывается на ноль***Возраст батареи помпы**не отображается поскольку он всегда больше срока работы пода (максимум 80 часов).
 
 > ![Actions_Tab](../images/omnipod/Actions_Tab.png)
 
 ### Levels
 
-**Insulin Level**
+**Уровень инсулина**
 
 Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This is because it is not known exactly how much insulin was put in the pod, only that when the 2 beeps are triggered while filling the pod that over 85 units have been injected. A Pod can hold a maximum of 200 units. Priming can also introduce variance as it is not and exact process.  With both of these factors, the Omnipod driver has been written to give the best approximation of insulin remaining in the reservoir.
 
