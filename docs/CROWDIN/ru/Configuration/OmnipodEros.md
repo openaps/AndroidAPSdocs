@@ -569,7 +569,7 @@ The Omnipod driver settings are configurable from the top-left hand corner **ham
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png)
 
-The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
+Группы настроек перечислены ниже; вы можете включить или отключить их через переключатель большинства функций описанных ниже:
 
 ![Omnipod_Settings_3](../images/omnipod/Omnipod_Settings_3.png)
 
@@ -590,18 +590,18 @@ Allows for scanning of a pod communication device. The Omnipod driver cannot sel
 
 ### Звуковые сигналы подтверждения
 
-Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
+Обеспечивает звуковые сигналы подтверждения от Pod об успешной подаче болюса, изменении базала, SMB и TBR.
 
 - **\*Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
 - **\*Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
 - **\*SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
-- **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
+- **Звуковой сигнал временного базала TBR включен** Включить или отключить подтверждающие сигналы при установке или отмене TBR.
 
 ### Оповещения
 
 Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
-*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.*
+*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Сброс уведомления НЕ удалит оповещение, ЕСЛИ НЕ включено автоматическое подтверждение получения оповещений. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.*
 
 - **\*Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
 - **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
@@ -613,9 +613,9 @@ Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, 
 
 Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus events were successful.
 
-*NOTE: These are notifications only, no audible beep alerts are made.*
+*ПРИМЕЧАНИЕ: Это только уведомления, звуковые оповещения об ошибках не производится.*
 
-- **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
+- **Звук для неопределенных уведомлений TBR включен:** Включите или отключите этот параметр, чтобы вызвать звуковое оповещение и визуальное уведомление, когда AAPs неизвестно, был ли установлен TBR.
 - **\*Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
 - **\*Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
 
