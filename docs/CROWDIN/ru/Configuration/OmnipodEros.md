@@ -426,11 +426,11 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 - **Резервуар:** Показывает 50+ед. когда в резервуаре остается более 50 ед. Below this value the exact units are displayed in yellow text.
 
-- **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. *Note this is an approximation as priming and filling the pod is not an exact process.*
+- **Всего подано** Отображает общее количество единиц инсулина, доставленных из резервуара. *Note this is an approximation as priming and filling the pod is not an exact process.*
 
 - **Errors:** Displays the last error encountered. Review the [Pod history](OmnipodEros-view-pod-history), [RileyLink history](OmnipodEros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
 
-- **Active pod alerts:** Reserved for currently running alerts on the active pod. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
+- **Активные оповещения Pod** зарезервировано для текущих оповещений на активном Pod. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
 
 ### Icons
 
@@ -440,7 +440,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
   > 
   > Sends a refresh command to the active pod to update communication
   > 
-  > Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
+  > Используйте для обновления статуса pod и сброса полей статуса, содержащих текст (не подтверждено).
   > 
   > See the [Troubleshooting section](OmnipodEros-troubleshooting) below for additional information.
 
@@ -476,7 +476,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
   > 
   > > Resumes the currently suspended, active pod
 
-### Pod Management Menu
+### Меню управления помпой
 
 Below is an explanation of the layout and meaning of the icons on the **Pod Management** menu accessed from the **Omnipod (POD)** tab.
 
