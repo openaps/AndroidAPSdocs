@@ -355,9 +355,9 @@
 Показано количество инсулина, указанное Omnipod DASH. Вместе с тем Pod сообщает только о фактическом уровне инсулина, когда он ниже 50 единиц. До этого будет отображаться "выше 50 единиц". Уровень, указанный помпой, в большинстве случаев не является точным: в резервуар будет оставаться несколько дополнительных единиц инсулина. Вкладка "DASH" покажет следующие величины:
 
   * **больше 50 единиц** - Pod сообщает о более 50 единиц в настоящее время.
-  * **Below 50 Units** - The amount of insulin remaining in the reservoir as reported by the Pod.
+  * **Ниже 50 ед.**- Количество инсулина, остающегося в резервуаре по данным, полученным от Pod.
 
-Additional note:
+Дополнительные замечания:
   * **SMS** - Returns value or 50+U for SMS responses
   * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
 
