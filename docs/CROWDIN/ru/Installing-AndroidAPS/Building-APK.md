@@ -6,8 +6,8 @@
 
 ## Важные Примечания
 
-* Please use **[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** or newer to build the apk.
-* [Windows 10 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
+* Используйте **[ Android Studio версии 2020.3.1 ](https://developer.android.com/studio/)** или новее для построения apk.
+* [Windows 10 для 32-разрядных систем](troubleshooting_androidstudio-unable-to-start-daemon-process) не поддерживается в Android Studio 2020.3.1
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 
@@ -49,82 +49,82 @@
 </tbody>
 </table>
 
-Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **It is strongly recommended to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file but note that the building process can take a long time to complete, although once started, you can leave it running unattended.
+Имейте в виду, что и **64-разрядная процессор, и 64-разрядная ОС являются обязательным условием.** Если ваша система не соответствует этому условию, вы должны изменить аппаратное или программное обеспечение или всю систему. **It is strongly recommended to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file but note that the building process can take a long time to complete, although once started, you can leave it running unattended.
 
 * * *
 
 ### Эта статья разделена на две части.
 
-* In the overview part there is an explanation on what steps are necessary to build the APK file.
-* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AAPS users" or in the Discord chat [Android APS](https://discord.gg/4fQUWHZ4Mw) so that we can have a look at this.
+* В обзорной части находится объяснение того, какие шаги необходимы для создания файла APK.
+* В пошаговой инструкции вы найдете снимки экранов установки. Поскольку версии Android Studio - среды разработки программного обеспечения, в которой мы будем создавать APK - меняются очень быстро, точного соответствия вашей сборке вы не увидите, но общее представление о том, как это делается, получите. Android Studio работает на Windows, Mac OS X и Linux, и между каждой платформой возможны незначительные различия. If you find that something important is wrong or missing, please inform the facebook group "AAPS users" or in the Discord chat [Android APS](https://discord.gg/4fQUWHZ4Mw) so that we can have a look at this.
 
 ## Общие замечания
 
-In general, the steps necessary to build the APK file:
+В целом, шаги, необходимые для создания файла APK таковы:
 
 1. [Установите Git](../Installing-AndroidAPS/git-install.md)
 2. [Установите Android Studio](Building-APK-install-android-studio)
 3. [Задайте путь к git в параметрах Android Studio](Building-APK-set-git-path-in-preferences)
 4. [Download AAPS code](Building-APK-download-AAPS-code)
 5. [Загрузите Android SDK](Building-APK-download-android-sdk)
-6. [Build the app](Building-APK-generate-signed-apk) (generate signed apk)
+6. [Постройте приложение ](Building-APK-generate-signed-apk) (сгенерируйте подписанный apk)
 7. [Перенесите файл apk на телефон](Building-APK-transfer-apk-to-smartphone)
 8. [Идентифицируйте ресивер при использовании xDrip+](xdrip-identify-receiver)
 
 ## Пошаговое руководство
 
-Detailed description of the steps necessary to build the APK file.
+Подробное описание шагов, необходимых для создания файла APK.
 
 ## Установите git (если у вас его нет)
 
-Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.md).
+Следуйте инструкциям на странице установки [git](../Installing-AndroidAPS/git-install.md).
 
 (Building-APK-install-android-studio)=
 
 ## Установите Android Studio
 
-The following screenshots have been taken from Android Studio Version Arctic Fox | 2020.3.1. Screens can change in future versions of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
+The following screenshots have been taken from Android Studio Version Arctic Fox | 2020.3.1. Screens can change in future versions of Android Studio. Но у вас должно получиться. [Здесь можно найти помощь участников](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
-One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
+Одна из наиболее важных заповедей при установке Android Studio: ** Будьте терпеливы! ** Во время установки и настройки Android Studio загружает многие элементы, которые отнимают время.
 
 Download [Android Studio from here](https://developer.android.com/studio/install.html) and install it on your computer.
 
 On first start you will find the setup wizard:
 
-Select "Do not import settings" as you have not used it before.
+Выберите "Не импортировать настройки", так как вы не использовали их раньше.
 
-![Do not import settings](../images/studioSetup/01_ImportSettings.png)
+![Не импортируйте настройки](../images/studioSetup/01_ImportSettings.png)
 
-Decide whether you want to share data with Google or not.
+Решите, хотите ли вы совместно использовать данные с Google или нет.
 
-![Share data with Google](../images/studioSetup/02_DataSharing.png)
+![Обмен данными с Google](../images/studioSetup/02_DataSharing.png)
 
-On the following screen click "Next".
+На следующем экране нажмите кнопку "Далее".
 
-![Welcome screen](../images/studioSetup/03_Welcome.png)
+![Экран приветствия](../images/studioSetup/03_Welcome.png)
 
-Select "Standard" installation and click "Next".
+Выберите "Стандартная" установка и нажмите "Далее".
 
-![Standard installation](../images/studioSetup/04_InstallType.png)
+![Стандартная установка](../images/studioSetup/04_InstallType.png)
 
-Select the theme for the user interface you like. (In this manual we used "Light".) Then click "Next".
+Для интерфейса выберите тему, которая вам нравится. (В этом руководстве мы использовали "Светлую".) Затем нажмите кнопку "Далее".
 
 > ***Note:*** This is just the color scheme. You can select whatever you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK but the following screenshots might look different.
 
-![UI color scheme](../images/studioSetup/05_UITheme.png)
+![Цветовая схема интерфейса](../images/studioSetup/05_UITheme.png)
 
-Click "Next" on the "Verify Settings" dialog.
+Нажмите "Далее" в диалоге "Подтвердить настройки".
 
-![Verify settings](../images/studioSetup/06_Overview.png)
+![Подтвердить настройки](../images/studioSetup/06_Overview.png)
 
 Click on all three license agreement parts and select "Agree". When you have agreed to all, the "Finish" button will be enabled and you can "Finish".
 
     ![Agree license agreements](../images/studioSetup/07_LicenseAgreement.png)
     
 
-Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
+Подождите, пока Android Studio скачивает дополнительные компоненты и будет терпеливы. После того, как все загрузится кнопка "Готово", станет синей. Теперь нажмите на кнопку.
 
-![Downloading components](../images/studioSetup/08_Downloading.png)
+![Загрузка компонентов](../images/studioSetup/08_Downloading.png)
 
 (Building-APK-download-AAPS-code)=
 
@@ -136,7 +136,7 @@ Wait while Android Studio downloads additional components and be patient. Once e
     
     * If you already opened Android Studio and do not see the welcome screen anymore select File (1) > New (2) > Project from Version Control... (3)
         
-        ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
+        ![Извлечение проекта из системы управления версиями в Android Studio](../images/AndroidStudio_FileNew.PNG)
     
     * We will now tell Android Studio were to get the code from:
     
@@ -148,11 +148,11 @@ Wait while Android Studio downloads additional components and be patient. Once e
         
         ![Clone Git](../images/studioSetup/21_CloneURL.png)
 
-* Click button "Clone" (5).
+* Нажмите кнопку "Клонировать" (5).
     
-    ![Clone repository](../images/studioSetup/22_Cloning.png)
+    ![Клонирование репозитория](../images/studioSetup/22_Cloning.png)
 
-* Do not click "Background" while repository is cloned!
+* Не нажимайте "Background", пока клонируется репозиторий!
 
 * After the repository is cloned successfully, Android Studio will open the cloned project.
 
@@ -162,27 +162,27 @@ Wait while Android Studio downloads additional components and be patient. Once e
 
 * In the status bar at the bottom you will see the information that Android Studio is running background tasks.
     
-    ![Background tasks](../images/studioSetup/24_GradleSyncRunning.png)
+    ![Фоновые задания](../images/studioSetup/24_GradleSyncRunning.png)
 
 * Windows only: Grant access if your firewall is asking for permission.
     
-    ![Firewall permission java](../images/AndroidStudio361_18.png)
+    ![Разрешение брандмауэра (Java)](../images/AndroidStudio361_18.png)
 
 * Once the background tasks are finished you will probably see an error saying that errors occurred (1) or (2) or (3).
     
-    ![SDK licence](../images/studioSetup/25_SyncFailed.png)
+    ![Лицензия SDK](../images/studioSetup/25_SyncFailed.png)
     
     Don't worry, this will be solved soon!
 
 (Building-APK-set-git-path-in-preferences)=
 
-## Set git path in preferences
+## Задайте путь к git в параметрах
 
 Make sure [git is installed](../Installing-AndroidAPS/git-install.md) on your computer and you have restarted your computer since installing.
 
 On the Android Studio welcome screen click "Customize" (1) on the left and then select the link "All settings..." (2):
 
-![Android Studio settings from welcome screen](../images/studioSetup/10_WizardSettings.png)
+![Параметры Android Studio с экрана приветствия](../images/studioSetup/10_WizardSettings.png)
 
 ### Windows
 
@@ -194,11 +194,11 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * Double-click "Version Control" (1) to open the sub-menu.
 
-* Click Git (2).
+* Нажмите Git (2).
 * Make sure update method "Merge" (3) is selected.
-* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4).
+* Проверьте, может ли Android Studio найти путь к файлу git.exe автоматически, нажав кнопку "Тест" (4).
     
-    ![Android Studio settings](../images/studioSetup/11_GitPath.png)
+    ![Параметры Android Studio](../images/studioSetup/11_GitPath.png)
 
 * If automatic setting is successful git version will be displayed next to the path.
     
