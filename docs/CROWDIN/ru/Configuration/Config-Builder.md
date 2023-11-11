@@ -183,7 +183,7 @@
 
 * [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (требуется установка утилиты ruffy для сопряжения с помпой) (с новым встроенным драйвером в новых версиях AAPS уже не требуется- прим перев)
 * [Omnompod Eros](OmnipodEros.md)
-* [Omnipod DASH](OmnipodDASH.md)
+* [Помпа Omnipod DASH](OmnipodDASH.md)
 * [Medtronic](MedtronicPump.md)
 * [Diaconn G8](DiaconnG8.md)
 * MDI инъекции инсулина шприцем/шприц-ручкой (на основе предложений от AAPS по ведению терапии)
