@@ -6,125 +6,125 @@
 
 * * *
 
-### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
+### Помпа Ypsomed ([Домашняя страница](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
+**Статус реализации:** Версии 1 - 1.5 (2Q/2018) не являются кандидатами для ИПЖ. Несмотря на то, что они имеют BT, коммуникация очень ограничена и однонаправлена: помпа -> приложение. К концу 2022 года (в Германии) планируется выпустить новую версию помпы, названную DOSE (1.6), которая позволит подавать болюсы и устанавливать ВБС. Планы о разработке собственного приложения были отменены и было принято решение о сотрудничестве с CamAPS (поддержка уже реализована) и использовать их решение для замкнутого цикла. Подробнее см. на этой [странице](https://www.mylife-diabetescare.com/en/loop-program.html)
 
-**Hardware requirement for AAPS:** None. It's BT enabled.
+**Требования к оборудованию для AAPS:** Никаких. В помпе есть блутус-связь.
 
-**Comments:** Dose version of pump had very heavy encryption added, so there is big probababilty that this pump won't be supported by AAPS in near future (or ever). We had developer working with Ypsomed and helping with medical trials, so maybe his version of driver will be alowed to be released, but this is just small possibility of that. You can find more information on our discord in channel "ypsopump-talk".
-
-* * *
-
-### Kaleido ([Homepage](https://www.hellokaleido.com/))
-
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
-
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**Комментарии:** Версия DOSE использует очень сильное шифрование, поэтому велика вероятность того, что AAPS не будет поддерживать эту помпу в ближайшем будущем (или когда либо). У нас был разработчик, работающий с Ypsomed и помогавший проводить медицинские испытания, поэтому, возможно, его версия драйвера будет выпущена, но это маловероятно. Больше информации можно найти в нашем дискорде на канале "ypsopump-talk".
 
 * * *
 
-### Equil (pump from Aidex/GlucoRx/MicroTechMD) ([Homepage](https://www.glucorx.ie/glucorx-equil/))
+### Kaleido ([Домашняя страница](https://www.hellokaleido.com/))
 
-**Loop status:** Is a Loop candidate.
+**Статус реализации:** В настоящее время не поддерживается какой-либо системой ИПЖ. Помпа является кандидатом на работу с ИПЖ, но поскольку протокол ее работы неизвестен, поддержка появится не очень скоро.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
-
-**Comment:** Some people started looking into supporting pump in AAPS, but this is still in beginning phases. You can find more information on our discord in channel "equil".
+**Требования к оборудованию для AAPS:** По-видимому, никаких. В помпе есть блутус-связь.
 
 * * *
 
-### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
+### Equil (помпа от Aidex/GlucoRx/MicroTechMD) ([Домашняя страница](https://www.glucorx.ie/glucorx-equil/))
 
-**Loop status:** Is a Loop candidate.
+**Статус реализации:** Является кандидатом для ИПЖ.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Требования к оборудованию для AAPS:** Никаких. Похоже, что блутус-связь имеется.
 
-**Comments:** There are some developers looking into decoding the protocol, but so far this is only in preliminary phases.
-
-* * *
-
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
-
-**Loop status:** Not yet loopable.
-
-While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
-
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Комментарии:** Исследования возможности использовать помпу в AAPS уже ведутся, однако они находятся на начальном этапе. Больше информации можно найти в нашем дискорде на канале "equil".
 
 * * *
 
-### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### ACCU-Chek Solo ([Домашняя страница](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Loop status:** All 3 pumps will be Loop candidates.
+**Статус реализации:** Является кандидатом для ИПЖ.
 
-They plan to release t:Mobi first (previously called t:sport) at end of 2022 or in 2023. Afterwards they will release t:slim X3 (2023 maybe) and after that t:Mobi Tubeless. t:mobi's will be controlable only over phone app, while X3 will look similar as X2, with some new nifty features (remote update of firmware, remote control over phone app, etc).
+**Требования к оборудованию для AAPS:** Никаких. Похоже, что блутус-связь имеется.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Комментарии:** Есть некоторые разработчики, ведущие декодирование протокола, но пока только на предварительном этапе.
+
+* * *
+
+### Tandem: t:slim X2 ([Домашняя страница](https://www.tandemdiabetes.com/))
+
+**Статус реализации:** Пока не пригодна.
+
+Хотя в прошлом компания не допускала контроля помпы с внешних устройств, за последние несколько лет правила изменились. Компания решила обновить помпу t:slim X2 и допустить возможность удаленного контроля (через приложение t:connect), это означает, что мы можем рассчитывать на управление помпой через AAPS в будущем. В ближайшее время планируется обновить прошивку помпы (в этом или в следующем году, а затем появится беструбочная помпа t:sport). Пока нет информации о том, какие операции можно будет выполнять на t:connect (разумеется, подача болюса, а все остальное пока неизвестно).
+
+**Требования к оборудованию для AAPS:** Никаких. Похоже, что блутус-связь имеется.
+
+* * *
+
+### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Домашняя страница](https://www.tandemdiabetes.com/about-us/pipeline))
+
+**Статус реализации:** Все 3 помпы будут кандидатами в ИПЖ.
+
+Планируется сперва выпустить t:Mobi (ранее называвшейся t:sport) в конце 2022 или в 2023 году. Далее будет выпущена t:slim X3 (возможно, в 2023) и уже после этого t:Mobi Tubeless. t:mobi можно будет управлять только приложением с телефона, в то время как X3 будет выглядеть примерно как X2 и иметь некоторые новые возможности (дистанционное обновление прошивки, удаленное управление с телефона и т. п.).
+
+**Требования к оборудованию для AAPS:** Никаких. Похоже, что блутус-связь имеется.
 
 * * *
 
 ### Medtronic Bluetooth
 
-**Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
+**Комментарии:** Эта помпа, выйдет в ближайшие несколько лет и, как планируется, будет иметь поддержку в ПО Tidepool Loop ([см. эту статью](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration)).
 
-### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
+### Инсулиновая помпа Willсare ([ Домашняя страница ](http://shinmyungmedi.com/en/))
 
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+**Статус реализации:** В настоящий момент не является кандидатом, но их сотрудники связывались с нами, и они заинтересованы в том, чтобы сделать помпу пригодной для ИПЖ (на данный момент в помпе отсутствуют команды get/set profile).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Требования к оборудованию для AAPS:** Никаких. Похоже, что блутус-связь имеется.
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+** Комментарии: ** Поскольку компания заинтересована в интеграции с AAPS, они могут сами предпринять необходимые действия.
 
 * * *
 
 ## Помпы, снятые с производства (компании больше не работают)
 
-### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
+### Помпа Cellnovo ([см. businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**Статус реализации:** В настоящее время не поддерживается какой-либо системой ИПЖ. Помпа является кандидатом на работу с ИПЖ, но поскольку протокол ее работы неизвестен, поддержка появится не очень скоро.
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**Требования к оборудованию для AAPS:** По-видимому, никаких. В помпе есть блутус-связь.
 
-**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+**Примечание о товаре:** Похоже, что компания решила выйти из бизнеса Подробнее в этой [статье](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
 ## Помпы, неспособные к работе в качестве компонента ИПЖ
 
 ### Animas Vibe
 
-**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump business (J&J).
+**Статус реализации:** Не пригодна. Нет возможности дистанционного управления. **Примечание:** помпа снята с продажи. Компания вышла из бизнеса (J&J).
 
 * * *
 
 ### Animas Ping
 
-**Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
+**Статус реализации:** Не пригодна. Она имеет возможность подачи болюса, но не временного базала TBR. **Примечание** Была снята с продажи после выхода Animas Vibe.
 
 ## Требования к пригодности помп для ИПЖ
 
-**Prerequisite**
+**Предварительные условия**
 
 - Помпа должна поддерживать дистанционное управление. (блутус, радио и т. п.)
 - Протокол взломан/документирован/и т. д.
 
-**Minimal requirement**
+**Минимальные требования**
 
 - Устанавливать временную скорость базала
 - Получать сведения о состоянии
 - Отменять временную базальную скорость
 
-**For oref1(SMB) or Bolusing:**
+**Для oref1(SMB) или болюсов:**
 
 - Настраивать подачу болюса
 
-**Good to have**
+**Желательно иметь**
 
 - Отмену болюса
 - Получать профиль базала (почти требование)
 - Устанавливать профиль базала (хорошо иметь)
 - Чтение истории 
 
-**Other (not required but good to have)**
+**Другое (не обязательно, но желательно)**
 
 - Настраивать пролонгированный болюс
 - Отменять пролонгированный болюс
@@ -133,6 +133,6 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 * * *
 
-### Other pumps support
+### Поддержка других помп
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Если у вас есть какие-либо другие помпы, для которых вы хотите увидеть статус, пожалуйста, свяжитесь со мной (@andyrozman на gitter).
