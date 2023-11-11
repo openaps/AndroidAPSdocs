@@ -293,34 +293,34 @@ These instructions are for configuring the **Omnipod DASH** generation pump **(N
 
 ## Настройки Dash
 
-The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. Поставив флажок в **клетке** напротив **шестеренки настроек** вы активируете вкладку DASH в интерфейсе AAPS.
+Настройки помпы Dash доступны из левого верхнего **выпадающего меню** выберите **Конфигуратор(1)**\ ➜\ **Помпа**\ ➜\ **Dash**\ ➜\ **Шестеренка настроек (3)** включив ** радио кнопку (2) **с маркировкой **Dash**. Поставив флажок в **клетке** напротив **шестеренки настроек** вы активируете вкладку DASH в интерфейсе AAPS.
 
 ![Dash_settings_1](../images/DASH_images/Dash_settings/Dash_settings_1.png) ![Dash_settings_2](../images/DASH_images/Dash_settings/Dash_settings_2.png)
 
-**NOTE:** A faster way to access the **Dash settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **DASH** tab and selecting **Dash preferences (2)** from the dropdown menu.
+**ПРИМЕЧАНИЕ:** Более быстрый способ доступа к настройкам **Dash** - через меню **3 точки (1)** в правом верхнем углу вкладки **DASH** выбрать **Настройки Dash (2)** из выпадающего меню.
 
 ![Dash_settings_3](../images/DASH_images/Dash_settings/Dash_settings_3.png)
 
-The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
+Группы настроек перечислены ниже; вы можете включить или отключить их через переключатель большинства функций описанных ниже:
 
 ![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
-*NOTE: An asterisk (\*) denotes the default setting is enabled.*
+*ПРИМЕЧАНИЕ: Знак (\*) обозначает значение по умолчанию.*
 
 ### Звуковые сигналы подтверждения
 
-Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
+Обеспечивает звуковые сигналы подтверждения от Pod об успешной подаче болюса, изменении базала, SMB и TBR.
 
-* **Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
-* **Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
-* **SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
-* **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
+* **Звуковой сигнал болюса включен** Включить или отключить подтверждающие сигналы при подаче болюса.
+* **Звуковой сигнал базала включен:** Включить или отключить звуки подтверждения, когда установлена новая базальная скорость, отменена или изменена действующая базальная скорость.
+* **Звуковой сигнал микроболюсов SMB включен** Включить или отключить подтверждающие сигналы при подаче микроболюсов.
+* **Звуковой сигнал временного базала TBR включен** Включить или отключить подтверждающие сигналы при установке или отмене TBR.
 
 ### Оповещения
 
-Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the defined threshold units.
+Оповещения AAPS об истечении срока, выключении, низком резервуаре на основе заданных пороговых значений.
 
-*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the **DASH** tab and press the **Silence ALERTS button**.*
+*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Сброс уведомления НЕ удалит оповещение, ЕСЛИ НЕ включено автоматическое подтверждение получения оповещений. Чтобы ВРУЧНУЮ убрать оповещение следует открыть вкладку **DASH** и нажать кнопку **Заглущать СИГНАЛЫ ОПОВЕЩЕНИЯ**.*
 
 * **Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
 * **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
@@ -329,22 +329,22 @@ Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the de
 
 ### Уведомления
 
-Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus, and delivery suspended events were successful.
+Выдает уведомления AAPS и звуковые оповещения, когда нет уверенности в успешных TBR, SMB, болюсах или приостановленных событиях.
 
-*NOTE: These are notifications only, no audible beep alerts are made.*
+*ПРИМЕЧАНИЕ: Это только уведомления, звуковые оповещения об ошибках не производится.*
 
-* **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
-* **Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
-* **Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
-* **Sound when delivery suspended notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when suspend delivery was successfully delivered.
+* **Звук для неопределенных уведомлений TBR включен:** Включите или отключите этот параметр, чтобы вызвать звуковое оповещение и визуальное уведомление, когда AAPs неизвестно, был ли установлен TBR.
+* **Звук для неопределенных уведомлений SMB включен:** Включите или отключите этот параметр, чтобы вызвать звуковое оповещение и визуальное уведомление, когда AAPs неизвестно, был ли успешно подан микроболюс SMB.
+* **Звук для неопределенных уведомлений о болюсах включен:** Включите или отключите этот параметр, чтобы вызвать звуковое оповещение и визуальное уведомление, когда AAPs неизвестно, был ли успешно подан болюс.
+* **Звук уведомлений о приостановленной подаче болюсов включен:** Включите или отключите этот параметр, чтобы вызвать звуковое оповещение и визуальное уведомление, когда успешно возобновлена приостановленная подача болюса.
 
 ## Actions (ACT) Tab
 
-This tab is well documented in the main AAPS documentation but there are a few items on this tab that are specific to how the Omnipod Dash pod differs from tube based pumps, especially after the processes of applying a new pod.
+Эта вкладка хорошо описана в основной документации AAPS, но на этой вкладке есть несколько элементов, которые специфичны для Omnipod Dash и отличаются от проводных помп, особенно после установки нового пода.
 
 1. Go to the **Actions (ACT)** tab in the main AAPS interface.
 
-2. Under the **Careportal (1)** section the **Insulin** and **Cannula** filds will have their **age reset** to 0 days and 0 hours **after each pod change**. This is done because of how the Omnipod pump is built and operates. Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours). The **pump battery** and **insulin reservoir** are self contained inside of each pod.
+2. В секции **портал терапии (1)** поля **Инсулин** и **Катетер помпы** п**осле каждой замены пода** сбрасывают свой **отработанный срок (возраст)** на 0 дней и 0 часов. This is done because of how the Omnipod pump is built and operates. Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours). The **pump battery** and **insulin reservoir** are self contained inside of each pod.
 
 ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
