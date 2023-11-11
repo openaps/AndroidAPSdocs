@@ -1,8 +1,8 @@
-# Omnipod DASH
+# Помпа Omnipod DASH
 
-These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**. The Omnipod driver is available as part of AAPS (AAPS) as of version 3.0.
+Эти инструкции для настройки помпы **Omnipod DASH** **(НЕ Omnipod Eros)**. Драйвер для Omnipod доступен как часть AAPS (AAPS) начиная с версии 3.0.
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Только вы несете ответственность за то, что делаете.**
+**Это программное обеспечение - часть алгоритма самостоятельно настраиваемой ИПЖ; она не является коммерческим продуктом, но требует, чтобы вы прочитали, узнали и поняли, как ей пользоваться. Только вы несете ответственность за то, что делаете.**
 
 ## Технические характеристики Omnipod DASH
 
@@ -231,18 +231,18 @@ These instructions are for configuring the **Omnipod DASH** generation pump **(N
 
 Ниже приведено объяснение расположения и значения иконок и информационных полей на вкладке **DASH** в главном интерфейсе AAPS.
 
-*NOTE: If any message in the **DASH** tab status fields report (uncertain), then you will need to press the Refresh button to clear it and refresh the pod status.*
+*ПРИМЕЧАНИЕ: Если в каком-то из информационных полей вкладки **DASH**появляется сообщение "не подтверждено" нажмите кнопку Обновить для получения точного статуса.*
 
 ![DASH_Tab_1](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
-### Fields
+### Поля
 
 * **АдресBluetooth-:** Отображает текущий bluetooth адрес подключенного Pod.
 * **Статус Bluetooth:** Отображает текущее состояние соединения.
 * **Порядковый Номер** Отображает номер последовательности активного POD.
 * **Версия прошивки:** Отображает версию прошивки для активного соединения.
 * **Время на Pod:** Отображает текущее время на Pod.
-* **Pod expires:** Displays the date and time when the Pod will expire.
+* Срок работы Pod истекает.
 * **Статус Pod:** Отображает статус пода.
 * **Прошлое подключение:** Отображает время последней связи с Pod.
 
@@ -256,11 +256,11 @@ These instructions are for configuring the **Omnipod DASH** generation pump **(N
 * **Временная скорость базала:** Отображает текущую временную скорость базала в следующем формате
 
    - {ед./час} @{ время начала врем. базала TBR} ({мин. прошло}/{всего минут TBR})
-   - *Example:* 0.00U/h @18:25 ( 90/120 minutes)
+   - *Пример:* 0.00ед./ч. @18:25 ( 90/120 мин.)
 
 * **Резервуар:** Показывает 50+ед. когда в резервуаре остается более 50 ед. Ниже 50 ед. показывается точное кол-во единиц.
 * **Всего подано** Отображает общее количество единиц инсулина, доставленных из резервуара. Сюда входит инсулин, используемый для активации и заполнения инфузионного набора.
-* **Errors:** Displays the last error encountered. Просмотрите [Журнал Pod](OmnipodDASH-view-pod-history) и файлы журналов для поиска прошлых ошибок и более подробной информации.
+* **Ошибки:** Отображает последнюю возникшую ошибку. Просмотрите [Журнал Pod](OmnipodDASH-view-pod-history) и файлы журналов для поиска прошлых ошибок и более подробной информации.
 *  **Активные оповещения Pod** зарезервировано для текущих оповещений на активном Pod.
 
 ### Кнопки
@@ -320,7 +320,7 @@ These instructions are for configuring the **Omnipod DASH** generation pump **(N
 
 Оповещения AAPS об истечении срока, выключении, низком резервуаре на основе заданных пороговых значений.
 
-*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Сброс уведомления НЕ удалит оповещение, ЕСЛИ НЕ включено автоматическое подтверждение получения оповещений. Чтобы ВРУЧНУЮ убрать оповещение следует открыть вкладку **DASH** и нажать кнопку **Заглущать СИГНАЛЫ ОПОВЕЩЕНИЯ**.*
+*Примечание: уведомления AAPS выдаются ВСЕГДА для любого оповещения после связи с pod с момента срабатывания оповещения. Сброс уведомления НЕ удалит оповещение, ЕСЛИ НЕ включено автоматическое подтверждение получения оповещений. Чтобы ВРУЧНУЮ убрать оповещение следует открыть вкладку **DASH** и нажать кнопку **Заглущать СИГНАЛЫ ОПОВЕЩЕНИЯ**.*
 
 * **Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
 * **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
@@ -338,23 +338,23 @@ These instructions are for configuring the **Omnipod DASH** generation pump **(N
 * **Звук для неопределенных уведомлений о болюсах включен:** Включите или отключите этот параметр, чтобы вызвать звуковое оповещение и визуальное уведомление, когда AAPs неизвестно, был ли успешно подан болюс.
 * **Звук уведомлений о приостановленной подаче болюсов включен:** Включите или отключите этот параметр, чтобы вызвать звуковое оповещение и визуальное уведомление, когда успешно возобновлена приостановленная подача болюса.
 
-## Actions (ACT) Tab
+## Вкладка Действия (ACT)
 
 Эта вкладка хорошо описана в основной документации AAPS, но на этой вкладке есть несколько элементов, которые специфичны для Omnipod Dash и отличаются от проводных помп, особенно после установки нового пода.
 
-1. Go to the **Actions (ACT)** tab in the main AAPS interface.
+1. Перейдите на вкладку **Действия (ACT)** в главном интерфейсе AAPS.
 
-2. В секции **портал терапии (1)** поля **Инсулин** и **Катетер помпы** п**осле каждой замены пода** сбрасывают свой **отработанный срок (возраст)** на 0 дней и 0 часов. This is done because of how the Omnipod pump is built and operates. Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours). The **pump battery** and **insulin reservoir** are self contained inside of each pod.
+2. В секции **портал терапии (1)** поля **Инсулин** и **Катетер помпы** п**осле каждой замены пода** сбрасывают свой **отработанный срок (возраст)** на 0 дней и 0 часов. Это происходит из-за устройства и принципа работы Omnipod. Так как Pod вводит катетер непосредственно в кожу на месте установки, в помпах Omnipod не применяется традиционная трубка. *Поэтому после замены пода значение каждой из этих величин автоматически сбрасывается на ноль***Возраст батареи помпы**не отображается поскольку он всегда больше срока работы пода (максимум 80 часов). **Батарея помпы** и **резервуар инсулина** в каждом поде свои.
 
 ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
 ### Уровень
 
-**Insulin Level**
+**Уровень инсулина**
 
-Insulin level displayed is the amount reported by Omnipod DASH. However, the pod only reports the actual insulin reservoir level when it is below 50 units. Until then “Above 50 units” will be displayed. The amount reported is not exact: when the pod reports ‘empty’ in most cases the reservoir will still have some additional units of insulin left. The omnipod DASH overview tab will display as described the below:
+Показано количество инсулина, указанное Omnipod DASH. Вместе с тем Pod сообщает только о фактическом уровне инсулина, когда он ниже 50 единиц. До этого будет отображаться "выше 50 единиц". Уровень, указанный помпой, в большинстве случаев не является точным: в резервуар будет оставаться несколько дополнительных единиц инсулина. Вкладка "DASH" покажет следующие величины:
 
-  * **Above 50 Units** - The Pod reports more than 50 units currently in the reservoir.
+  * **больше 50 единиц** - Pod сообщает о более 50 единиц в настоящее время.
   * **Below 50 Units** - The amount of insulin remaining in the reservoir as reported by the Pod.
 
 Additional note:
