@@ -709,9 +709,9 @@ Battery level reporting is a setting that can be enabled to return the current b
 
 ## Устранение неполадок
 
-### Pod Failures
+### Сбои в работе Pod
 
-Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be found [here](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+Поды иногда подводят из-за различных проблем, включая аппаратные неполадки в самих Pod. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be found [here](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
 
 ### Preventing error 49 pod failures
 
