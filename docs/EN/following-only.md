@@ -200,7 +200,7 @@ Pebble watches [now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch)))
 #### c) [Bluejay GTS watch](https://bluejay.website/shop/product/bluejay-gts-26) 
 
 
-![image](./images/94044064/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74.png)
+![image](./images/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74.png)
 
 
 This is a unique piece of technology which can receive glucose data **directly** from the Dexcom G6 transmitter. It is not widely known that a Dexcom G6 transmitter actually broadcasts the current glucose data on _two_ separate channels, a phone channel and a pump channel. The Bluejay GTS watch runs a modified version of Xdrip+ software, and can be set to receive glucose data on either channel, so if **AAPS **  is using the phone channel, then the Bluejay GTS watch can use the pump channel. 
