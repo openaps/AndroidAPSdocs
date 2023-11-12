@@ -7,7 +7,7 @@ Au printemps 2022, le Dexcom G7 a reçu son certificat CE et a été vendu fin o
 
 Il est à noter que le système G7, par rapport au G6, ne lisse pas les valeurs, ni dans l'application, ni dans le lecteur. Plus de détails disponibles [ici](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app). Par conséquent, les valeurs doivent être lissées pour pouvoir les utiliser de manière raisonnable dans AAPS.
 
-![G7 english](https://github.com/blaqone/AndroidAPSdocs/assets/37814299/6fe30b84-227a-4bae-a9a5-527cee341dbf)
+![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
 ## 1.  Patched Dexcom G7 App (DiAKEM)
 
