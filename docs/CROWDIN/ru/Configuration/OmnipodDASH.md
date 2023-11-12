@@ -359,20 +359,20 @@
 
 Дополнительные замечания:
   * **SMS** - Returns value or 50+U for SMS responses
-  * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
+  * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Более новые версии покажут 50 + когда более 50 единиц.
 
 ## Устранение неполадок
 
-(OmnipodDASH-delivery-suspended)=
+(OmnipodDASH-подача-приостановлена)=
 
 ### Delivery suspended
 
-  * There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero TBR for x minutes.
-  * During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can stay suspended. When this happens:
-     - There will be no insulin delivery, that includes Basal, SMB, Manual bolusing etc.
-     - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened.
-     - AAPS will try to set the new basal profile every 15 minutes.
-     - AAPS will show a notification informing that the delivery is suspended every 15min, if the delivery is still suspended (resume delivery failed).
+  * There is no suspend button anymore. Если требуется «приостановить» Pod, установите 0 TBR на x минут.
+  * При переключениях профиля, под должен приостановить подачу инсулина перед установкой нового базального профиля. Если между двумя командами происходит обрыв связи, подача может быть приостановлена. Когда это происходит:
+     - Подачи инсулина не будет, включая Базал, SMB, болюс и т. д.
+     - Может быть уведомление о том, что одна из команд не подтверждена: это зависит от того, когда произошел сбой.
+     - AAPS попытается установить новый базальный профиль каждые 15 минут.
+     - AAPS будет показывать уведомление, что подача приостановлена каждые 15 минут, (если возобновить подачу не удалось).
      - The [**Resume delivery**](OmnipodDASH-resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
      - If AAPS fail to resume delivery on its own (this happens if the Pod is unreachable, sound is muted, etc), the pod will start beeping 4 time every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20minutes.
   * For unconfirmed commands, "refresh pod status" should confirm/deny them.
