@@ -131,21 +131,21 @@ Before you can activate a pod please ensure you have properly configured and con
 
 01. Navigate to the **Omnipod (POD)** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
 
-    > ![Activate_Pod_1](../images/omnipod/Activate_Pod_1.png) ![Activate_Pod_2](../images/omnipod/Activate_Pod_2.png)
+    > ![Активировать Pod_1](../images/omnipod/Activate_Pod_1.png) ![Активировать Pod_2](../images/omnipod/Activate_Pod_2.png)
 
 02. Появится экран **Заполнить Pod**. Заполните новый Pod по меньшей мере 80 единицами инсулина и дождитесь двух звуковых сигналов, подтверждающих, что Pod готов к первичному заполнению катетера. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use 12 to 15 units.
 
-    > ![Activate_Pod_3](../images/omnipod/Activate_Pod_3.png)
+    > ![Активировать Pod_3](../images/omnipod/Activate_Pod_3.png)
     > 
     > Ensure the new pod and RileyLink are within close proximity of each other (~30cm or less) and click the **Next** button.
 
 03. На экране **Инициализация Pod**, Pod начнет первичное заполнение ( вы услышите щелчок с серией последующих тикающих звуков пока заполняется под). If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, [move the RileyLink closer](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
 
-    > ![Activate_Pod_4](../images/omnipod/Activate_Pod_4.png) ![Activate_Pod_5](../images/omnipod/Activate_Pod_5.png)
+    > ![Активировать Pod_4](../images/omnipod/Activate_Pod_4.png) ![Активировать Pod_5](../images/omnipod/Activate_Pod_5.png)
 
 04. Upon successful priming a green checkmark will be shown and the **Next** button will become enabled. Нажмите на кнопку **Далее** для завершения инициализации и появления экрана **Подключить Pod**.
 
-    > ![Activate_Pod_6](../images/omnipod/Activate_Pod_6.png)
+    > ![Активировать Pod_6](../images/omnipod/Activate_Pod_6.png)
 
 05. Затем подготавливаем инфузионный отсек нового пода. Remove the pod's plastic needle cap and white paper backing from the adhesive and apply the pod to your usually selected site on your body. По завершении нажмите кнопку **Далее**.
 
@@ -153,7 +153,7 @@ Before you can activate a pod please ensure you have properly configured and con
 
 06. Теперь появится диалоговое окно **Подключить Pod**. **ONLY click on the OK button if you are ready to deploy the cannula**.
 
-    > ![Activate_Pod_8](../images/omnipod/Activate_Pod_8.png)
+    > ![Активировать Pod_8](../images/omnipod/Activate_Pod_8.png)
 
 07. After pressing **OK**, it may take some time before the Omnipod responds and inserts the cannula (1-2 minutes maximum), so be patient.
 
@@ -163,17 +163,17 @@ Before you can activate a pod please ensure you have properly configured and con
     > 
     > *ПРИМЕЧАНИЕ: Перед установкой катетера рекомендуется ущипнуть кожу рядом с местом ввода катетера. Это уменьшает болевые ощущения при вводе иглы и снижает шансы на развитие окклюзий.*
     > 
-    > ![Activate_Pod_9](../images/omnipod/Activate_Pod_9.png)
+    > ![Активировать Pod_9](../images/omnipod/Activate_Pod_9.png)
     > 
-    > ![Activate_Pod_10](../images/omnipod/Activate_Pod_10.png) ![Activate_Pod_11](../images/omnipod/Activate_Pod_11.png)
+    > ![Активировать Pod_10](../images/omnipod/Activate_Pod_10.png) ![Активировать Pod_11](../images/omnipod/Activate_Pod_11.png)
 
 08. При успешном вводе катетера появляется зеленая галочка и активируется кнопка **Далее**. Нажмите на кнопку **Далее**.
 
-    > ![Activate_Pod_12](../images/omnipod/Activate_Pod_12.png)
+    > ![Активировать Pod_12](../images/omnipod/Activate_Pod_12.png)
 
 09. Появится экран **Pod активирован**. Нажмите на зеленую кнопку **Завершено**. Поздравляем! Вы начали новую активную сессию Pod.
 
-    > ![Activate_Pod_13](../images/omnipod/Activate_Pod_13.png)
+    > ![Активировать Pod_13](../images/omnipod/Activate_Pod_13.png)
 
 10. The **Pod management** menu screen should now display with the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. Это потому, что под активен и вы не можете активировать дополнительный под без деактивации текущего.
 
@@ -181,7 +181,7 @@ Before you can activate a pod please ensure you have properly configured and con
 
     For more details on the information displayed go to the [Omnipod (POD) Tab](OmnipodEros-omnipod-pod-tab) section of this document.
 
-    ![Activate_Pod_14](../images/omnipod/Activate_Pod_14.png) ![Activate_Pod_15](../images/omnipod/Activate_Pod_15.png)
+    ![Активировать Pod_14](../images/omnipod/Activate_Pod_14.png) ![Активировать Pod_15](../images/omnipod/Activate_Pod_15.png)
 
 ### Deactivating a Pod
 
@@ -191,27 +191,27 @@ Under normal circumstances, the life of a pod should run for three days (72 hour
 
 1. Go to the **Omnipod (POD)** tab, click on the **POD MGMT (1)** button, on the **Pod management** screen click on the **Deactivate Pod (2)** button.
 
-   > ![Deactivate_Pod_1](../images/omnipod/Deactivate_Pod_1.png) ![Deactivate_Pod_2](../images/omnipod/Deactivate_Pod_2.png)
+   > ![Деактивировать Pod_1](../images/omnipod/Deactivate_Pod_1.png) ![Деактивировать Pod_2](../images/omnipod/Deactivate_Pod_2.png)
 
 2. On the **Deactivate Pod** screen, first, make sure the RileyLink is in close proximity to the pod but not on top of or right next to the pod, then click on the **Next** button to begin the process of deactivating the pod.
 
-   > ![Deactivate_Pod_3](../images/omnipod/Deactivate_Pod_3.png)
+   > ![Деактивировать Pod_3](../images/omnipod/Deactivate_Pod_3.png)
 
 3. The **Deactivating Pod** screen will appear, and you will receive a confirmation beep from the pod that deactivation was successful.
 
-   > ![Deactivate_Pod_4](../images/omnipod/Deactivate_Pod_4.png)
+   > ![Отключить Pod_4](../images/omnipod/Deactivate_Pod_4.png)
    > 
    > **IF deactivation fails** and you do not receive a confirmation beep, you may receive a **No response from RileyLink** or **No response from Pod message**. Please click on the **Retry (1)** button to attempt deactivation again. If deactivation continues to fail, please click on the **Discard Pod (2)** button to discard the Pod. Теперь вы можете удалить свой pod так как активная сессия завершена. If your Pod has a screaming alarm, you may need to manually silence it (using a pin or a paperclip) as the **Discard Pod (2)** button will not silence it.
    > 
-   > > ![Deactivate_Pod_5](../images/omnipod/Deactivate_Pod_5.png)  ![Deactivate_Pod_6](../images/omnipod/Deactivate_Pod_6.png)
+   > > ![Деактивировать Pod_5](../images/omnipod/Deactivate_Pod_5.png)  ![Деактивировать Pod_6](../images/omnipod/Deactivate_Pod_6.png)
 
 4. После успешной деактивации на экране появится зеленая галочка. Нажмите на кнопку **Далее**, чтобы отобразился экран Pod деактивирован. Теперь вы можете удалить свой pod так как активная сессия завершена.
 
-   > ![Deactivate_Pod_7](../images/omnipod/Deactivate_Pod_7.png)
+   > ![Деактивировать Pod_7](../images/omnipod/Deactivate_Pod_7.png)
 
 5. Click on the green button to return to the **Pod management** screen.
 
-   > ![Deactivate_Pod_8](../images/omnipod/Deactivate_Pod_8.png)
+   > ![Деактивировать Pod_8](../images/omnipod/Deactivate_Pod_8.png)
 
 6. You are now returned to the **Pod management** menu press the back button on your phone to return to the **Omnipod (POD)** tab. Verify that the **RileyLink Status:** field reports **Connected** and the **Pod status:** field displays a **No active Pod** message.
 
@@ -604,9 +604,9 @@ Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, 
 *Примечание: уведомления AAPS выдаются ВСЕГДА для любого оповещения после связи с pod с момента срабатывания оповещения. Сброс уведомления НЕ удалит оповещение, ЕСЛИ НЕ включено автоматическое подтверждение получения оповещений. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.*
 
 - **\*Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
-- **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
+- **Время до выключения**.
 - **\*Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
-- **Number of units:** The number of units at which to trigger the pod low reservoir alert.
+- **Количество единиц:** Количество единиц, на которые можно вызывать предупреждение о низком резервуаре резервуара.
 - **Automatically acknowledge Pod alerts:** When enabled a notification will still be issued however immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
 
 ### Уведомления
@@ -691,8 +691,8 @@ Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This i
 
 > - **Above 50 Units** - Reports a value of 50+U when more than 50 units are currently in the reservoir.
 > - **Below 50 Units** - Reports an approximate calculated value of insulin remaining in the reservoir.
-> - **SMS** - Returns value or 50+U for SMS responses
-> - **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Более новые версии покажут 50 + когда более 50 единиц.
+> - **SMS** - В SMS сообщается реальный остаток в ед. или 50+ед
+> - **Nightscout** - при более чем 50 единиц в Nightscout выгружается значение 50 ед.(версия 14.07 и старше).  Более новые версии покажут 50 + когда более 50 единиц.
 
 **Battery Level**
 
@@ -711,13 +711,13 @@ Battery level reporting is a setting that can be enabled to return the current b
 
 ### Сбои в работе Pod
 
-Поды иногда подводят из-за различных проблем, включая аппаратные неполадки в самих Pod. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be found [here](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+Поды иногда подводят из-за различных проблем, включая аппаратные неполадки в самих Pod. В Insulet с этим лучше не обращаться в, поскольку приложение AAPS пока не получила официального одобрения. A list of fault codes can be found [here](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
 
-### Preventing error 49 pod failures
+### Предотвращение ошибки 49 при сбоях Pod
 
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under the **Config Builder**➜**General**➜**NSClient**➜**cog wheel**➜**Advanced Settings** to prevent possible failures.
+Эта неисправность связана с некорректным состоянием Pod во время команды или ошибки при подаче инсулина. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under the **Config Builder**➜**General**➜**NSClient**➜**cog wheel**➜**Advanced Settings** to prevent possible failures.
 
-### Pump Unreachable Alerts
+### Оповещения о недоступности помпы
 
 It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**➜**Local Alerts**➜**Pump unreachable threshold \[min\]** and setting this to **120**.
 
@@ -727,32 +727,32 @@ It is recommended that pump unreachable alerts be configured to **120 minutes** 
 Please note that importing settings has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
 
 1. Deactivate your pod session. Verify that you do not have an active pod session.
-2. Export your settings and store a copy in a safe place.
+2. Экспортируйте ваши настройки и храните копию в надежном месте.
 3. Uninstall the previous version of AAPS and restart your phone.
 4. Install the new version of AAPS and verify that you do not have an active pod session.
 5. Import your settings and activate your new pod.
 
-### Omnipod driver alerts
+### Оповещения драйвера Omnipod
 
-please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
+please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. Ниже приводится краткая информация об основных оповещениях:
 
 #### No active Pod
 
-No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically silenced.
+No active Pod session detected. Это предупреждение можно временно отклонить, нажав **УБРАТЬ**, но оно будет продолжать срабатывать до тех пор, пока не активирован новый Pod. Once activated this alert is automatically silenced.
 
 #### Pod suspended
 
 Informational alert that Pod has been suspended.
 
-#### Setting basal profile failed. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..
+#### Setting basal profile failed. Delivery might be suspended! Обновите статус Pod вручную на вкладке Omnipod и, при необходимости, возобновите подачу..
 
-Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
+Информационное оповещение о неудачной настройке базального профиля, необходимо нажать *Обновить* на вкладке Omnipod.
 
-#### Unable to verify whether SMB bolus succeeded. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments.
+#### Не удалось проверить, успешна ли подача болюса SMB. Если вы уверены, что болюс не подан, следует вручную удалить запись о СМБ из терапии.
 
 Alert that the SMB bolus success could not be verified, you will need to verify the *Last bolus* field on the Omnipod tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
 
-#### Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.
+#### Неопределено, если "задача bolus/TBR/SMB" завершена, пожалуйста, проверьте правильность выполнения.
 
 Due to the way that the RileyLink and Omnipod communicate, situations can occur where it is *uncertain* if a command was successfully processed. The need to inform the user of this uncertainty was necessary.
 
@@ -786,7 +786,7 @@ The image below shows the optimal way to position the RileyLink during pod activ
 
 All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerate and use the following guidelines when requesting assistance:
 
-- **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
+- **Уровень 0:** Прочитайте соответствующий раздел этой документации, чтобы удостовериться, что вы понимаете, как должна работать функция, с которой вы испытываете трудности.
 - **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
 - **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../Usage/Accessing-logfiles.md).
-- **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+- **Будьте терпеливы - решения проблем часто требуют времени и терпения как от пользователей, так и от разработчиков.**
