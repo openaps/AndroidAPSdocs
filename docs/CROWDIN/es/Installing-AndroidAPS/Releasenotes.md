@@ -55,7 +55,7 @@ Fecha de lanzamiento: 23-10-2023
 
 - NS 15 es necesario
 - Al utilizar websockets en el plugin NS v3,  los tratamientos introducidos a través de NS UI (botón más) y otras aplicaciones que utilizan la API v1, no se envían a AAPS. Esto se solucionará en futuras versiones de NS. Utiliza siempre el mismo cliente (v1 o v3) en AAPS y AAPSClient hasta que NS cambie completamente a v3 internamente. Lo mismo es válido para AAPS y el propio AAPSClient.
-- Websockets en el plugin v3 funciona de forma similar al plugin v1. Sin websockets habilitados, AAPS programa regularmente descargas desde NS, lo que debería reducir el consumo de batería, porque NS no está permanentemente conectado. En el lado opuesto, supone retrasos en el intercambio de datos.
+- Websockets en el plugin v3 funciona de forma similar al plugin v1. Sin websockets habilitados, AAPS programa regularmente descargas desde NS, lo que debería reducir el consumo de batería, porque NS no está permanentemente conectado. En el lado opuesto, supone retrasos en el intercambio de datos. Please read [here](Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
 - Si está utilizando xDrip+ como fuente de datos de glucosa, debes seleccionarlo de nuevo después de la actualización, debido a cambios internos.
 - Tidepool puede utilizarse como sustituto de NS para superar el primer objetivo.
 - Si envías datos a xDrip+, debes configurar el plugin de sincronización de xDrip+. Para recibir BGs de AAPS en xDrip, debe estar seleccionada la fuente de datos hardware "xDrip+ Sync Follower".
@@ -93,6 +93,34 @@ Fecha de lanzamiento: 23-10-2023
 - Mejora en la integración de CI @MilosKozak y @buessow
 - Limpieza de pruebas @ryanhaining @MilosKozak
 - 110k+ nuevas líneas de código, 240k líneas modificadas, 6884 archivos modificados
+
+(Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
+### Important comments on using v3 versus v1 API for Nightscout with AAPS
+
+v1 is the old protocol used for exchanging data between NS web site and NS server. It has many limitations
+- v1 sends only 2 days of data
+- v1 send all 2 days data on every reconnection
+- using websockets is mandatory = permanent connection, more battery compsumption
+- during frequent disconnects to NS connection is paused for 15 minutes to prevent high data usage
+
+v3 is new protocol. More safe and efficient
+- while using tokens you can better define access rights
+- protocol is more efficient on both sides (AAPS & NS)
+- It can read up to 3 months of data from NS
+- you can choose to use or to not use websockets on every device (using means faster updates, not using means lower power compsumption, but slower updates ie. minutes)
+- NSClient is not paused on disconnections
+
+LIMITATIONS
+- NS 15 must be used with AAPS 3.2
+- v3 doesn't see updates done by v1 protocol (probably it will be resolved in some future version of NS)
+- in opposite because of old uneffective method of tracking changes v1 see changes done by v3
+- remember NS still uses v1 internaly so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient on SMS if you want enter data remotely
+
+RECOMMENDED SETTING
+- because of all above you should choose only one method and use it on all devices (remember all other uploaders at time of writing this are using v1). If you decide to go to v3, select v3 in AAPS and all AAPSClients
+- v3 is preffered because of efficiency
+- using websockets or not using with v3 depends on your preference
+- it HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
 
 ## Versión 3.1.0
 
