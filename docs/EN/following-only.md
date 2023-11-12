@@ -4,7 +4,7 @@ In addition to the range of possibilities available for remotely controlling _an
 
 A good overview of the extensive options available for following **AAPS** is at [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#) webpage; if you expand the menu on the left-hand side:
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/dfa981c1-5a15-4498-88d2-0fd1462d8242)
+![image](./images/dfa981c1-5a15-4498-88d2-0fd1462d8242.png)
 
 The most common strategies used in combination with **AAPS** are explained in more detail below.
 
@@ -23,7 +23,7 @@ G)	Spike (iOs)
 
 #### A) Dexcom Follow (compatible with both Android and iOs devices)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/ded350b0-6012-4104-b21c-5d5bfd91aa65)
+![image](./images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
 
 ●	Dexcom Follow is compatible with a wide range of handsets (both Android and iPhone). Dexcom Follow can be used even if you are not using the official Dexcom app to receive sensor data. 
 
@@ -57,7 +57,7 @@ For Dexcom Follow, the sensor data is then exported from the AAPS phone either d
 
 #### B) Nightguard (iOs only)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/f2c7d330-9889-4526-9a5c-bbb012d804ab)
+![image](./images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
 
 Pros (as reported by users): 
 
@@ -83,7 +83,7 @@ Cons (as reported by users)
 
 #### C) Nightwatch (Android only)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/855c3a74-e612-4a6f-8b63-18d286ea0a3f)
+![image](./images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
 
 
 ●	Nightwatch markets itself as a Nightscout client and monitors the user’s Nightscout glucose levels on either Android phone or tablet. 
@@ -136,9 +136,9 @@ An easier solution is therefore to download the **Shuggah** app.
 
 App: 
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/03fc0c6a-067a-40ea-8be3-c66d4ce8b5d9)
+![image](./images/03fc0c6a-067a-40ea-8be3-c66d4ce8b5d9.png)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/fae3ec63-2c2c-4152-ab42-97f9744a8f36)
+![image](./images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
 
 
 "What is Shuggah?"
@@ -149,9 +149,9 @@ The [XdripiOs Facebook group](https://www.facebook.com/groups/853994615056838/an
 
 #### F) Sugarmate (iOs)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/340cd555-a9e0-4a20-a131-36c078f5b8ea)
+![image](./images/340cd555-a9e0-4a20-a131-36c078f5b8ea.png)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/21b83c41-85c6-4619-a702-a65450768855)
+![image](./images/21b83c41-85c6-4619-a702-a65450768855.png)
 
 
 [Sugarmate](https://sugarmate.io/) is available to download onto iPhones from the App store.
@@ -165,7 +165,7 @@ It has been reported by users of Sugarmate that it can be used with Apple CarPla
 
 #### G)  [Spike](https://spike-app.com/) on iOS
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/1129ba00-8159-4940-936e-76fd4ae45a2d)
+![image](./images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
 
 Spike can be used as a primary receiver or as a follower app, providing BG, alarms and IOB and more. Whilst the website is no longer biDetails are [here](https://spike-app.com/#features2). Details and support can be found on [Facebook](https://www.facebook.com/groups/1973791946274873) and Gitter](https://gitter.im/SpikeiOS/Lobby). 
 
@@ -183,16 +183,16 @@ Here we summarise some of the follow-only watch options popular with **AAPS** us
 
 A developer called Artem has created xDrip integration for various smartwatch models, mostly for Xiaomi (_e.g._ Mi band) and Amazfit brands:
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/4dba454b-f808-4e9e-bfc6-aba698e006f8)
+![image](./images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
 
 
 You can read more about them, including how to set-up at his website [here](https://bigdigital.home.blog/). The advantage of these watches is that they are small and relatively affordable (the Xiaomi Mi Band 5 has a RRP of £39.99 GBP). They are a popular option especially for kids and those with smaller wrists to wear.
 
 #### b) Pebble watch
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/52032f3b-c871-4342-b8e7-659c285a39c8)
+![image](./images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/935d28bb-a909-4ca8-850d-6a765bd4fcde)
+![image](./images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
 Pebble watches [now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 - 2016, and may still be available second-hand. Fitbit took over Pebble’s assets. Pebble users can use the Urchin watchface to view Nightscout data. Displayed data options include IOB, currently active temp basal rate and predictions. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS**  then send either an SMS or pushover notification.
@@ -200,7 +200,7 @@ Pebble watches [now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch)))
 #### c) [Bluejay GTS watch](https://bluejay.website/shop/product/bluejay-gts-26) 
 
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74)
+![image](./images/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74.png)
 
 
 This is a unique piece of technology which can receive glucose data **directly** from the Dexcom G6 transmitter. It is not widely known that a Dexcom G6 transmitter actually broadcasts the current glucose data on _two_ separate channels, a phone channel and a pump channel. The Bluejay GTS watch runs a modified version of Xdrip+ software, and can be set to receive glucose data on either channel, so if **AAPS **  is using the phone channel, then the Bluejay GTS watch can use the pump channel. 
@@ -226,7 +226,7 @@ C) PC (Teamviewer)
 #### A) M5 stack
 
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/061edb52-56d2-45f4-b3da-82b2036d7bc6)
+![image](./images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
 
 
 
@@ -238,9 +238,9 @@ The [M5Stack](https://github.com/mlukasek/M5_NightscoutMon) is a small box which
 SugarPixel is a device for secondary glucose display alert system for continuous glucose monitoring that connects with Dexcom app or Nightscout app on the user’s smartphone. The device displays real time blood sugar readings.
 This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customisable display options and native multi-user following.
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/39137beb-17cc-4c87-98b7-cf1831d484cb)
+![image](./images/94044064/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
 
-![image](https://github.com/openaps/AndroidAPSdocs/assets/94044064/87883ebb-9683-4aa8-8014-49c2ca902c93)
+![image](./images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
 ●	SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with colour-coded glucose values.
 ●	The standard face displays BG, Trend Arrow, and Delta. Delta is the change + or - from the last reading.
