@@ -7,7 +7,7 @@ In spring 2022, the Dexcom G7 received its CE certificate and was sold at the en
 
 Noteworthy is the fact that the G7 system, compared to the G6, does not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app). Consequently, the values have to be smoothed to be able to use them sensibly in AAPS. 
 
-![G7 english](https://github.com/blaqone/AndroidAPSdocs/assets/37814299/6fe30b84-227a-4bae-a9a5-527cee341dbf)
+![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
 ## 1.  Patched Dexcom G7 App (DiAKEM)
 
