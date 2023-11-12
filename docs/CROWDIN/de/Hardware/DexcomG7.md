@@ -7,7 +7,7 @@ Seit Ende Oktober 2022 ist der Dexcom G7, nachdem er die CE-Zertifizierung im Fr
 
 Der G7 glättet weder in der (Dexcom) App noch im Lesegerät die Glukosewerte. Dies ist anders als es beim G6 war. Mehr Details dazu findest Du [hier](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app). Um die Messwerte des G7 in AAPS sinnvoll nutzen zu können, müssen diese geglättet werden.
 
-![G7 english](https://github.com/blaqone/AndroidAPSdocs/assets/37814299/6fe30b84-227a-4bae-a9a5-527cee341dbf)
+![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
 ## 1.  Patched Dexcom G7 App (DiAKEM)
 
