@@ -353,7 +353,7 @@ Nightscout on your iPhone has all the same functions as Nightscout on your PC. I
 
 Although you cannot actually bolus insulin, you can however “announce” insulin through Nightscout as a “correction bolus”, although it is not delivered. Because AAPS now takes that fake insulin bolus into account, announcing insulin actually works to make AAPS _less aggressive_, and can be useful for cancelling negative insulin and preventing lows in the event that your profile has been too strong (for example due to prior exercise). You will want to check this for yourself in the presence of the **AAPS** phone, in case your **Nightscout** setup differs.
 
-![24-10-23, cancel negative insulin NS](https://github.com/openaps/AndroidAPSdocs/assets/94044064/0af1dbe4-8aca-466b-816f-8e63758208ca)
+![24-10-23, cancel negative insulin NS](./images/0af1dbe4-8aca-466b-816f-8e63758208ca.png)
 
 
 Some of the most useful **Nightscout** commands are described in the table below.
@@ -406,7 +406,7 @@ There are currently five main ways in which smartwatches are used in conjunction
 
 
 
-![29-10-23, updated AAPSClient watchoption table](https://github.com/openaps/AndroidAPSdocs/assets/94044064/bbbe0e84-1a8c-4163-8a0b-dcf91144af14)
+![29-10-23, updated AAPSClient watchoption table](./images/bbbe0e84-1a8c-4163-8a0b-dcf91144af14.png)
 
 
 
@@ -436,11 +436,11 @@ If you install **AAPS** wear.apk on a **Wear OS** watch, there are a range of di
 
 Examples of complications (where AAPS is embedded in an existing watchface) are shown here:
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/04d591ca-9f2e-4479-ac9e-ab689815745d)
+![изображение](./images/04d591ca-9f2e-4479-ac9e-ab689815745d.png)
 
 These are the currently available AAPS-dedicated watchfaces:
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/67fd75f3-721c-438d-be01-1a8e03532290)
+![изображение](./images/67fd75f3-721c-438d-be01-1a8e03532290.png)
 
 More information about the possible smartwatch faces and their functions can be found in [Smartwatches](Hardware/Smartwatch.md)
 
@@ -460,9 +460,9 @@ Most of the frustrations of standalone **AAPS** watches come from interacting wi
 
 Additional challenges are that it is hard to get sufficient battery life, and watches with sufficient battery are often bulky and thick. Users report fighting with the OS and power-saving settings, difficulty in starting sensors on the watch, poor bluetooth range (for maintaining connection with both the sensor and pump) and questionable water resistance. Examples are shown in the photos below (photo credit: Janvier Doyon).
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/6d787373-bc0c-404d-89aa-54d3127c4a6f)
+![изображение](./images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/5d2feecc-3f10-4767-b143-1a72da2b9bd4)
+![изображение](./images/5d2feecc-3f10-4767-b143-1a72da2b9bd4.png)
 
 If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS**  Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
@@ -500,11 +500,11 @@ As a summary, the build process for the Wear apk is very similar to that for the
 
 The following guide assumes you have reinstalled the latest version of Android studio (scenario below has used Giraffe 2022.3.1)).
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/e8e3b7f3-f82e-425a-968c-cc196434a5f8)
+![изображение](./images/e8e3b7f3-f82e-425a-968c-cc196434a5f8.png)
 
 To get back here:
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/37f4589c-6097-49d4-b0b9-087664914198)
+![изображение](./images/37f4589c-6097-49d4-b0b9-087664914198.png)
 
 continue to follow the instructions.
 
@@ -513,29 +513,29 @@ Follow the prompts through the different screens until you are given an option w
 
 Next Step go to "Build" in the ribbon
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/b2cccc84-85b6-4ee1-800b-7c6dcb9dd857)
+![изображение](./images/b2cccc84-85b6-4ee1-800b-7c6dcb9dd857.png)
 
 
 Go to Build > Generate Signed Bundle / APK
 
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/f488fe36-8cb9-4d81-9d94-5f742a1aaaee)
+![изображение](./images/f488fe36-8cb9-4d81-9d94-5f742a1aaaee.png)
 
 Select > Android APK Bundle:
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/e8f4b996-c46e-4a31-831e-fdcc4d0d677c)
+![изображение](./images/e8f4b996-c46e-4a31-831e-fdcc4d0d677c.png)
 
 
 Select in Module: AndroidAPSwear
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/cceaa832-70e6-4ad5-95ec-a82e2a6add1e)
+![изображение](./images/cceaa832-70e6-4ad5-95ec-a82e2a6add1e.png)
 
 Enter keystore file at the default location. Your keystore path will depend where you have stored your Keystore. For this scenario the keystore path was located: C:\Program Files\Android\Android Studio\jbr\bin
 
 
 The next screen should show this:
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/87ce7943-256e-449e-8439-8f9fd5bef05e)
+![изображение](./images/87ce7943-256e-449e-8439-8f9fd5bef05e.png)
 
 
 And select “fullRelease”.
@@ -583,7 +583,7 @@ You can use either Wear Installer 2 or Easy Fire tools to side-load AAPS onto th
 
 ##### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
 
- ![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/43577a66-f762-4c11-a3b3-4d6d704d26c7)
+ ![изображение](./images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
 
 Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
 
@@ -598,7 +598,7 @@ Alternatively, you can:
 
 1)   Download _Easy Fire Tools_ from playstore onto phone
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/81ceb8f3-dfa6-468b-b9d0-c31b885bc104)
+![изображение](./images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
 
 2)  Make yourself a developer in the watch (once set up and connected to phone):
 
@@ -608,27 +608,27 @@ Rapidly tap on “ software version” until a notification appears that the wat
 
 In “developer options”, turn on “ADB debugging” and “wireless debugging”. The latter option then reveals the IP address of the watch, the final two digits of which changes each time the watch is paired with a new phone. It will be something like: **167.177.0.20.** 5555 (ignore the last 4 digits). Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS.
 
-![24-10-23, watch ADB debug pic](https://github.com/openaps/AndroidAPSdocs/assets/94044064/643f4e8b-09f3-4a8d-8277-76b1839a5c3a)
+![24-10-23, watch ADB debug pic](./images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
 
 STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). Then click the plug socket icon on the top right.
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/b927041f-cc53-4cde-9f77-11cd517c9be0)
+![изображение](./images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
 
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/00b2fb8b-5996-4b71-894e-516d63469e1b)
+![изображение](./images/00b2fb8b-5996-4b71-894e-516d63469e1b.png)
 
 
 STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  Wear.apk onto the smartwatch using Easy Fire tools
 
 Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the smartwatch:
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3)
+![изображение](./images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
 
 
  Next step > accept the authorisation request on the smartwatch
 
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/2c398a34-b865-4aa1-9c53-d83dfef052a7)
+![изображение](./images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
 
 :::
 
@@ -643,7 +643,7 @@ The final step is to configure **AAPS** on the phone to interact with **AAPS** W
 
 ●   Tick for Wear selection under General
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/ae6d75a1-1829-4d2e-b0dc-153e31e4a466)
+![изображение](./images/ae6d75a1-1829-4d2e-b0dc-153e31e4a466)
 
 
 To change to a different **AAPS**  watchface, press on the home screen of the watch and it will come to “customise”. Then swipe right until you get to all the **AAPS**  faces.
@@ -651,7 +651,7 @@ To change to a different **AAPS**  watchface, press on the home screen of the wa
 If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, it will look like this:
 
 
-![24-10-23, successful galaxy watch photo](https://github.com/openaps/AndroidAPSdocs/assets/94044064/628e46d8-c7dc-4741-9eba-ae83f396c04c)
+![24-10-23, successful galaxy watch photo](./images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
 
 #### Troubleshooting the **AAPS** watch- **AAPS** phone communication
 1.  If EasyFire tools does not connect or if you are receiving ‘authorisation failed’ > check IP address has been correctly entered.
@@ -706,13 +706,13 @@ The software for the watch, **AAPSClient** Wear apk, can be downloaded directly 
 
 To download the software, click on the required app (in this screenshot, either **wear-aapsclient-release_3.2.0.1** or **wear-aapsclient2-release_3.2.0.1** would work, there are two versions in case you need a copy for a second caregiver watch):
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/2308c075-f41c-45bc-9c0f-3938beeaaafb)
+![изображение](./images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
 
 
 Then "save as" and save the file to a convenient location on your computer:
 
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d)
+![изображение](./images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
 
 
 
@@ -725,7 +725,7 @@ The **AAPSClient** wear apk can be transferred to your phone and side-loaded ont
 
 
 
-![изображение](https://github.com/openaps/AndroidAPSdocs/assets/94044064/98620770-2fb3-47af-a13e-28af7db69096)
+![изображение](./images/98620770-2fb3-47af-a13e-28af7db69096)
 
 
 
