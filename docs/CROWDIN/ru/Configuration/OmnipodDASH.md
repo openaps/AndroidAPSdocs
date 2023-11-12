@@ -373,15 +373,15 @@
      - Может быть уведомление о том, что одна из команд не подтверждена: это зависит от того, когда произошел сбой.
      - AAPS попытается установить новый базальный профиль каждые 15 минут.
      - AAPS будет показывать уведомление, что подача приостановлена каждые 15 минут, (если возобновить подачу не удалось).
-     - The [**Resume delivery**](OmnipodDASH-resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
-     - If AAPS fail to resume delivery on its own (this happens if the Pod is unreachable, sound is muted, etc), the pod will start beeping 4 time every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20minutes.
-  * For unconfirmed commands, "refresh pod status" should confirm/deny them.
+     - Кнопка [**Возобновить подачу**](OmnipodDASH-resuming-insulin-delivery) будет активна, если пользователь решит возобновить ее вручную.
+     - Если AAPS не может самостоятельно возобновить подачу (это происходит, если Pod недоступен, звук заблокирован и т. д.), Pod начнёт подачу звуковых сигналов 4 раза каждую минуту в течение 3 минут, затем будет повторять каждые 15 минут, если подача не восстановится более 20 минут.
+  * Для неподтвержденных команд "Обновить статус помпы" их подтвердит/запретит.
 
-**Note:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, **so you need to check !**
+**Примечание:** При получении звуковых сигналов от пода, не следует полагать, что подача будет продолжена без проверки телефона, она может остаться приостановленой, **поэтому следует это проверить!**
 
-### Pod Failures
+### Сбои в работе Pod
 
-Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+Поды иногда подводят из-за различных проблем, включая аппаратные неполадки в самих Pod. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
 
 ### Preventing error 49 pod failures
 
