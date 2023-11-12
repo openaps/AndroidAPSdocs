@@ -692,7 +692,7 @@ Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This i
 > - **Above 50 Units** - Reports a value of 50+U when more than 50 units are currently in the reservoir.
 > - **Below 50 Units** - Reports an approximate calculated value of insulin remaining in the reservoir.
 > - **SMS** - Returns value or 50+U for SMS responses
-> - **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
+> - **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Более новые версии покажут 50 + когда более 50 единиц.
 
 **Battery Level**
 
