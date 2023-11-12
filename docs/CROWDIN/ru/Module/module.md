@@ -58,7 +58,7 @@ AAPS **currently** works with
 - [Diaconn G8 ](../Configuration/DiaconnG8.md)
 - [EOPatch2](../Configuration/EOPatch2.md)
 - [Omnipod Eros](../Configuration/OmnipodEros.md)  ([additional communication device](module-additional-communication-device) needed)
-- [Omnipod DASH](../Configuration/OmnipodDASH.md)
+- [Помпа Omnipod DASH](../Configuration/OmnipodDASH.md)
 - [Medtrum Nano](../Configuration/MedtrumNano.md)
 - [Medtrum 300U](../Configuration/MedtrumNano.md)
 - Certain older [Medtronic](../Configuration/MedtronicPump.md) ([additional communication device](module-additional-communication-device) needed)

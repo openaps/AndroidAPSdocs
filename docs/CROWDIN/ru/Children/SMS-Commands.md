@@ -158,7 +158,7 @@
 ### Другое
 
 - TREATMENTS REFRESH \* Ответ: Обновление терапии из NS
-- AAPSCLIENT RESTART \* Ответ: AAPSCLIENT RESTART 1 получателя
+- NSClient RESTART \* Response: NSCLIENT RESTART SENT
 - PUMP \* Ответ: Последнее соед: 1 мин. назад -- Врем базал: 0.00ед/ч @11:38 5/30мин IOB: 0.5ед Резервуар: 34ед Бат: 100
 - PUMP CONNECT \* Ответ: Помпа переподключена
 - PUMP DISCONNECT *30* \* Ответ: Чтобы разъединить связь с помпой на *30* минут ответьте кодом из приложения Authenticator для Пользователя и подтвердите своим PIN-кодом

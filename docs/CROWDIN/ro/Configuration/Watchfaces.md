@@ -1,47 +1,8 @@
-# AAPS pe ceasuri cu Wear OS
-
-You can install AAPS app on your **Wear OS based** smartwatch. Versiunea de ceas a AAPS vă permite să:
-
-* **display data on your watch**: by providing [custom watchfaces](Watchfaces-aaps-watchfaces) or in standard watchfaces with use of [complications](Watchfaces-complications)
-* **controlează AAPS pe telefon**: la bolusare, la stabilirea unei ținte temporare etc.
-
-### Înainte de a cumpăra ceas...
-
-* Unele caracteristici precum *auxiliare* necesita Wear OS versiunea 2.0 sau mai nouă pentru a funcționa
-* Google redenumit de la *Android Wear 1.x* la *Wear OS* de la versiunea 2.x, asa ca atunci cand spune *Android Wear* ar putea indica versiuni de sistem mai vechi de 1.x
-* Dacă descrierea ceasului indică doar compatibilitatea cu *Android* și *iOS* - **nu** înseamnă că rulează pe *Wear OS* - poate fi la fel de bine un alt fel de sistem de operare al unui producător necunoscut **care nu este compatibil cu AAPS!**
-* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
-
-### Construirea versiunii Wear OS pentru AAPS
-
-The Wear OS App of AAPS has been seperated from the AAPS build for the Android mobile. Therefore you have to generate a second signed APK. Select as module "AndroidAPS.wear" and as build variant "fullRelease" and a second apk file for the Wear OS clock is generated when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpcontrolRelease" which will allow you to just remote control the pump without looping).
-
-From March 2021 you need to sideload AAPS onto the watch, it is no longer accessible via the watch's Google Play Store. You can sideload using [Wear Installer](https://youtu.be/8HsfWPTFGQI) which you will need to install on both your watch and phone. The Wear Installer app can be downloaded from the Google Play Store. The linked video from Malcolm Bryant the developer of Wear Installer gives you detailed instructions to a) download the apk to your mobile b) setup the Android Debugger on the wear c) use Wear Installer on mobile and wear to sideload the AAPS wear app to the mobile. Once you have selected AAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
-
-### Configurare pe telefon
-
-Within AAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
-
-## Controlează AAPS de pe Ceas
-
-AAPS is designed to be *controlled* by Android Wear watches. Dacă doriţi să bolusați etc. de pe ceas, în "Setari Wear", trebuie să activaţi "Control de pe Ceas".
-
-Următoarele funcţii pot fi activate de la ceas:
-
-* setarea unei ţinte temporare
-* use the bolus calculator (calculation variables can be defined in [settings](Config-Builder-wear) on the phone)
-* administrare eCarbs
-* administrare un bolus (insulină + carbohidrați)
-* setări ceas
-* stare 
-    * verificați starea pompei pe ecranul acesteia
-    * verificare starea loop
-    * verificare şi modificare profil, CPP (Profil Circadian procentual = shift time + procentaj)
-    * arată TDD (Doza totală zilnică = bolus + bazală pe zi)
+# Operation of AAPS via your Wear OS smartwatch
 
 (Watchfaces-aaps-watchfaces)=
 
-## Fețe de ceas AAPS
+## AAPS Watchfaces
 
 There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
@@ -49,7 +10,7 @@ Ensure notifications from AAPS are not blocked on the watch. Confirmation of act
 
 To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
 
-## Fețe de ceas disponibile
+## Watchfaces available
 
 ![Available watchfaces](../images/Watchface_Types.png)
 
@@ -59,9 +20,9 @@ To get faster to the AAPS menu, do a double tap on your BG. With a double tap on
 
 ![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
 
-* Culoarea, liniile şi cadranul sunt configurabile în meniul de setare pe semnul de cog al meniului de selectare al cadranului ceasului.
+* Color, lines and circle are configurable in setting menu on cog-sign of watchface chooser menu.
 
-## Fețe de ceas AAPSv2 - Legendă
+## AAPSv2 watchface - Legend
 
 ![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
 
@@ -85,15 +46,15 @@ I - carbs (carbs on board | e-carbs in the future)
 
 J - insulin on board (from bolus | from basal)
 
-## Accesarea meniului principal al AAPS
+## Accessing main menu of AAPS
 
 To access main menu of AAPS you can use on of following options:
 
-* apăsaţi de două ori pe valoarea glicemiei
-* selectați pictograma AAPS în meniul de aplicaţii al ceasului
-* apăsaţi pe auxiliare AAPS (dacă este configurat pentru meniu)
+* double tap on your BG value
+* select AAPS icon in watch applications menu
+* tap on AAPS complication (if configured for menu)
 
-## Setări (în ceas)
+## Settings (in wear watch)
 
 To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
 
@@ -101,67 +62,67 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 ![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
-### Parametrii AAPS insoțitor
+### AAPS companion parameters
 
-* **Vibrare la Bolus** (implicit `On`):
-* **Unități pentru Acțiuni** (implicit `mg/dl`): dacă este **On** unitatea de măsură este `mg/dl`, dacă este **Off** unitatea de măsură folosită este `mmol/l`. Folosit la setarea unui TT din ceas.
+* **Vibrate on Bolus** (default `On`):
+* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
 
 (Watchfaces-watchface-settings)=
 
-### Setări fețe de ceas
+### Watchface settings
 
-* **Arată date** (implicit `Off`): notă, datele nu sunt disponibile pe toate fețele ceas
-* **Arată IOB** (implicit `On`): Afișează sau nu valoarea IOB (setarea pentru valoarea detaliată este în parametrii de wear din AAPS)
-* **Arată COB** (implicit `On`): Afișează sau nu valoarea COB
-* **Arată Variația** (implicit `On`): Afișează sau nu variația glicemiei din ultimele 5 minute
-* **Afișează Variația medie** (implicit `On`): Afişează sau nu variaţia medie glicemiei din ultimele 15 minute
-* **Afișare bateria Telefonului** (implicit `On`): Baterie telefon în %. Roşu dacă e sub 30%.
-* **Afișare baterie dispozitiv** (implicit `Off`): Bateria dispozitivului este o sinteză a baterilor din telefon, pompă și senzor (în general, cea mai mică dintre cele 3 valori)
-* **Afişează Rata Bazală** (implicit `On`): Afişare sau nu a ratei bazale curente (în U/h sau în % dacă TBR)
-* **Arată starea Loop** (implicit `On`): arată câte minute au trecut de la ultima buclă activă (săgeţile din jurul valorii devin roşii dacă este peste 15').
-* **Afişează Glicemia** (implicit `On`): Afişează sau nu ultima valoare a glicemiei
-* **Arată Săgeata de Direcție** (implicit `On`): Afișează sau nu săgeata tendinței glicemiei
-* **Arată Vechime** (implicit `On`): arată numărul de minute de la ultima citire.
-* **Fundal** (implicit `On`): Puteţi comuta de pe fundal negru pe fundal alb (cu excepţia fețelor de ceas Cockpit şi Steampunk)
-* **Evidențiere Bazale** (implicit `Off`): Îmbunătățirea vizibilității ratei bazalelor și bazalelor temporare
-* **Potrivire separator** (implicit `Off`): Pentru AAPS, AAPSv2 şi AAPS (Mare) față de ceas, arată contrastul fundalului pentru separator (**Off**) sau potrivește separatorul cu culoarea fundalului (**On**)
-* **Grafic Interval de Timp** (implicit `3 ore`): puteți selecta în sub-meniu intervalul maxim de timp al graficului între 1 oră și 5 ore.
+* **Show Date** (default `Off`): note, date is not available on all watchfaces
+* **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
+* **Show COB** (default `On`): Display or not COB value
+* **Show Delta** (default `On`): Display or not the BG variation of the last 5 minutes
+* **Show AvgDelta** (default `On`): Display or not the average BG variation of the last 15 minutes
+* **Show Phone Battery** (default `On`): Phone battery in %. Red if below 30% .
+* **Show Rig Battery** (default `Off`): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
+* **Show Basal Rate** (default `On`): Display or not current basal rate (in U/h or in % if TBR)
+* **Show Loop Status** (default `On`): show how many minutes since last loop run (arrows around value turn red if above 15').
+* **Show BG** (default `On`): Display or not last BG value
+* **Show Direction Arrow** (default `On`): Display or not BG trend arrow
+* **Show Ago** (default `On`): show how many minutes since last reading.
+* **Dark** (default `On`): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
+* **Highlight Basals** (default `Off`): Improve the visibility of basal rate and temp basals
+* **Matching divider** (default `Off`): For AAPS, AAPSv2 and AAPS(Large) watchfaces, show contrast background for divider (**Off**) or match divider with the background color (**On**)
+* **Chart Timeframe** (default `3 hours`): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
 
-### Setări Interfaţă Utilizator
+### User Interface setting
 
-* **Design de intrare**: cu acest parametru, poți selecta poziția butoanelor "+" și "-" atunci când introduci comenzi pentru AAPS (TT, Insulină, Carbs...)
+* **Input Design**: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
 
 ![Input design options](../images/Watchface_InputDesign.png)
 
-### Parametri specifici pentru fețe de ceas
+### Specific watchface parameters
 
 #### Fața de ceas Steampunk
 
-* **Granularitate Variație** (implicit `Mediu`)
+* **Delta Granularity** (default `Medium`)
 
 ![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
 #### Cadran FațaCeas
 
-* **Marime caractere** (implicit `Off`): Crește dimensiunea textului pentru a îmbunătăți vizibilitatea
-* **Istoric cu cercuri** (implicit`Off`): Vizualizare grafică istoric glicemie cu inele gri în interiorul inelului verde al orei
-* **Istoric cu cerc luminos** (implicit `On`): cercul de istoric este mai discret cu un gri mai inchis
-* **Animații** (implicit `On`): Când este activat și suportat de ceas și nu e în modul rezolutie mica pentru economisirea energiei, cadranul ceasului va fi animat
+* **Big Numbers** (default `Off`): Increase text size to improve visibility
+* **Ring History** (default `Off`): View graphically BG history with gray rings inside the hour's green ring
+* **Light Ring History** (default `On`): Ring history more discreet with a darker gray
+* **Animations** (default `On`): When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
 
-### Setări comenzi
+### Commands settings
 
-* **Asistent în Meniu** (implicit `On`): Permite în meniul principal să se introducă Carbohidrați și să se seteze Bolus din ceas
-* **Meniu amorsare** (implicit`Off`): Permite Amorsare/Umplere de pe ceas
-* **Țintă unică** (implicit `On`):
-    
-    * `On`: ai setat o singură valoare pentru TT
-    * `Off`: ai setat ținta inferioara și superioară pentru TT
+* **Wizard in Menu** (default `On`): Allow wizard interface in main menu to input Carbs and set Bolus from watch
+* **Prime in Menu** (default `Off`): Allow Prime / Fill action from watch
+* **Single Target** (default `On`):
+  
+  * `On`: you set a single value for TT
+  * `Off`: you set Low target and high target for TT
 
-* **Asistent Procentaj** (implicit `Off`): Se permite corecţia bolus din asistent (valoarea introdusă în procente înainte de notificarea de confirmare)
+* **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
 
 (Watchfaces-complications)=
 
-## Auxiliare
+## Complications
 
 *Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
 
@@ -171,51 +132,51 @@ Complications also serve as **shortcut** to AAPS functions. By tapping them you 
 
 ![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
 
-### Tipuri de Auxiliare
+### Complication Types
 
 AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
 
-* `TEXT SCURT ` -Conţine două linii de text, 7 caractere fiecare, denumite uneori valoare şi etichetă. De obicei, redat în interiorul unui cadran sau a unei mici buline - unul sub altul, sau lateral unul de altul. Este un auxiliar foarte limitat ca spaţiu. AAPS încearcă să înlăture caracterele care nu sunt necesare pentru a se potrivi: prin rotunjirea valorilor, înlăturarea zerourilor de la începutul şi sfârşitul valorilor, etc.
-* `TEXT LUNG` - Conține două linii de text, aproximativ 20 de caractere fiecare. De obicei, redat în interiorul unui dreptunghi sau unui cadran lung - unul sub altul. Este folosit pentru mai multe detalii şi stări.
-* `VALOARE INTERVAL` -Folosit pentru valori din intervalul predefinit, ca un procentaj. Conţine pictogramă, etichetă şi este de obicei redată ca un cadran de progres.
-* `IMAGINE MARE` -Imagine personalizată care poate fi folosita (atunci cand este acceptată de ceas) ca fundal.
+* `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Usually rendered inside a circle or small pill - one below another, or side by side. It is a very space-limited complication. AAPS tries to remove unnecessary characters to fit-in: by rounding values, removing leading and trailing zeroes from values, etc.
+* `LONG TEXT` - Contains two lines of text, about 20 characters each. Usually rendered inside a rectangle or long pill - one below another. It is used for more details and textual status.
+* `RANGED VALUE` - Used for values from predefined range, like a percentage. It contains icon, label and is usually rendered as circle progress dial.
+* `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
 
-### Configurare Auxiliare
+### Complication Setup
 
 To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
 
 When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
 
-### Auxiliare furnizate de AAPS
+### Complications provided by AAPS
 
 AAPS provides following complications:
 
 ![AAPS_Complications_List](../images/Watchface_Complications_List.png)
 
-* **BR, CoB & IoB** (`TEXT SCURT`, deschide *Menu*): Afişează *Rata Bazală* pe prima linie şi *Carbohidrați la Bord* şi *Insulină la Bord* pe linia a doua.
-* **Glicemia** (`TEXT SCURT`, deschide *Menu*): Afișează valoarea *Glicemiei* și săgeata de *tendință* pe prima linie iar pe linia a doua *măsurători durată* și *Variația Glicemiei*.
-* **CoB & IoB** (`TEXT SCURT`, deschide*Menu*): Afișează *Carbohidrați la Bord* în prima linie și *Insulină la Bord* în a doua linie.
-* **CoB Detaliat** (`TEXT SCURT`, deschide *Wizard*): Afișează în prima linie *Carbohidrații la Bord* activi și în a doua linie Carbohidrații planificați (viitori, eCarbs).
-* **Iconiță CoB** (`TEXT SCURT`, deschide *Wizard*): Afișează o iconiță statică cu valoarea *Carbohidrați la Bord*.
-* **Stare Completă** (`TEXT LUNG`, deschide *Menu*): Arată majoritatea datelor deodată: valoarea *glicemiei* și săgeata *tendinței*, *variația glicemiei* și *vechimea măsurătorii* pe prima linie. Pe linia a doua linie *Carbohidrați la Bord*, *Insulină la Bord* și *Rata bazală*.
-* **Stare completă (inversat)** (`TEXT LUNG`, deschide *Menu*): Aceleaşi date ca și la *Stare completă*, dar liniile sunt inversate între ele. Poate fi folosit în fețele de ceas care ignoră una din cele două linii în `TEXT LUNG`
-* **IoB Detaliat** (`TEXT SCURT`, deschide *Bolus*): Afișează *Insulina la Bord* totală în prima linie și *IoB* defalcat pentru *Bolus* și *Bazală* în linia a doua.
-* **Iconiță IoB** (`TEXT SCURT`, deschide *Bolus*): Afișează valoarea *Insulinei la Bord* printr-o iconiță statică.
-* **Baterie Telefon/Uploader** (`VALOARE INTERVAL`, deschide *Status*): Afișează în procente bateria telefonului cu AAPS (uploader), așa cum este raportat de AAPS. Prezentat ca un indicator în procente cu o iconiță de baterie care afișează valoarea raportată. Este posibil să nu se actualizeze în timp real, doar atunci când apar alte modificări importante de date AAPS (de obicei: la fiecare ~ 5 minute cu noua valoare a *glicemiei*).
+* **BR, CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Basal Rate* on the first line and *Carbs on Board* and *Insulin on Board* on the second line.
+* **Blood Glucose** (`SHORT TEXT`, opens *Menu*): Displays *Blood Glucose* value and *trend* arrow on the first line and *measurement age* and *BG delta* on the second line.
+* **CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Carbs on Board* on the first line and *Insulin on Board* on the second line.
+* **CoB Detailed** (`SHORT TEXT`, opens *Wizard*): Displays current active *Carbs on Board* on the first line and planned (future, eCarbs) Carbs on the second line.
+* **CoB Icon** (`SHORT TEXT`, opens *Wizard*): Displays *Carbs on Board* value with a static icon.
+* **Full Status** (`LONG TEXT`, opens *Menu*): Shows most of the data at once: *Blood Glucose* value and *trend* arrow, *BG delta* and *measurement age* on the first line. On the second line *Carbs on Board*, *Insulin on Board* and *Basal Rate*.
+* **Full Status (flipped)** (`LONG TEXT`, opens *Menu*): Same data as for standard *Full Status*, but lines are flipped. Can be used in watchfaces which ignores one of two lines in `LONG TEXT`
+* **IoB Detailed** (`SHORT TEXT`, opens *Bolus*): Displays total *Insulin on Board* on the first line and split of *IoB* for *Bolus* and *Basal* part on the second line.
+* **IoB Icon** (`SHORT TEXT`, opens *Bolus*): Displays *Insulin on Board* value with a static icon.
+* **Uploader/Phone Battery** (`RANGED VALUE`, opens *Status*): Displays battery percentage of AAPS phone (uploader), as reported by AAPS. Displayed as percentage gauge with a battery icon that reflects reported value. It may be not updated in real-time, but when other important AAPS data changes (usually: every ~5 minutes with new *Blood Glucose* measurement).
 
 Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.
 
-### Setări legate de Auxiliare
+### Complication related settings
 
-* **Acţiuni pentru auxiliare** (implicit `Default`): Decide ce dialog se deschide când utilizatorul apasă pe auxiliare: 
-    * *Default*: actiune specifică tipului de auxiliar *(vezi lista de mai sus)*
-    * *Menu*: Meniu principal AAPS
-    * *Wizard*: asistent bolusare - calculator pentru bolus
-    * *Bolus*: introducere directă a valorii bolus
-    * *eCarb*: dialog de configurare eCarb
-    * *Status*: submeniul de stare
-    * *None*: Dezactivează acțiunea de atingere a auxiliarelor AAPS
-* **Unicode in auxiliare** (implicit `On`): Când e `On`, auxiliarele vor folosi caractere Unicode pentru simboluri ca `Δ` Delta, `⁞` separator vertical din puncte sau `⎍` simbol pentru Rata Bazală. Afișarea lor depinde de tipul caracterului, și asta poate fi foarte specific. Această opţiune permite comutarea simbolurilor Unicode `Off` dacă este necesar - când caracterul utilizat de către faţa de ceas personalizată nu suportă acele simboluri - pentru a evita erorile grafice.
+* **Complication Tap Action** (default `Default`): Decides which dialog is opened when user taps complication: 
+  * *Default*: action specific to complication type *(see list above)*
+  * *Menu*: AAPS main menu
+  * *Wizard*: bolus wizard - bolus calculator
+  * *Bolus*: direct bolus value entry
+  * *eCarb*: eCarb configuration dialog
+  * *Status*: status sub-menu
+  * *None*: Disables tap action on AAPS complications
+* **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on the font, and that can be very watchface-specific. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
 
 ## Wear OS Tiles
 
@@ -235,13 +196,10 @@ Before using the tiles, you have to switch on "Control from Watch" in the "Wear 
 
 Depending on your Wear OS version, brand and smartphone there are two ways of enabling the tiles:
 
-1. On your watch, from your watch face; 
-    * Swipe right to left till you reach the "+ Add tiles" 
-    * Select one of the tiles.
-2. On your phone open the companion app for your watch. 
-    * For Samsung open "Galaxy Wearable", or for other brands "Wear OS"
-    * In the click on the section "Tiles", followed by "+ Add" button
-    * Find the AAPS tile you like to add by selecting it. ![Wear phone add tile](../images/wear_companion_app_add_tile.png) The order of the tiles can be changed by dragging and dropping
+1. On your watch, from your watch face; - Swipe right to left till you reach the "+ Add tiles" - Select one of the tiles.
+2. On your phone open the companion app for your watch. - For Samsung open "Galaxy Wearable", or for other brands "Wear OS" 
+  * In the click on the section "Tiles", followed by "+ Add" button
+  * Find the AAPS tile you like to add by selecting it. ![Wear phone add tile](../images/wear_companion_app_add_tile.png) The order of the tiles can be changed by dragging and dropping
 
 The content of the tiles can be customized by long-pressing a tile and clicking the "Edit" or "gear icon" button.
 
@@ -345,20 +303,6 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
 * Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
 * If Complications does not update data - check first if AAPS watchfaces work at all.
-
-### Sony Smartwatch 3
-
-* The Sony Smartwach 3 is one of the most popular watches to be used with AAPS.
-* Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AAPS 2.7 and above.
-* A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.md).
-
-## View Nightscout data
-
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the AAPSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "AAPSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
-
-# Pebble
-
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AAPS then send either SMS or pushover notification.
 
 # Garmin
 

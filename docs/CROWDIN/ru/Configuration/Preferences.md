@@ -1,24 +1,24 @@
 # Настройки
 
-- **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+- **Откройте настройки** нажав меню в правом верхнем углу начального экрана.
 
   ```{image} ../images/Pref2020_Open2.png
   :alt:Открыть настройки
   ```
 
-- You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
+- Перейдите непосредственно к настройкам определенной вкладки (например, вкладки помпы), открыв эту вкладку и нажав на настройки конкретного модуля расширения.
 
   ```{image} ../images/Pref2020_OpenPlugin2.png
   :alt: Открыть параметры расширений
   ```
 
-- **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+- **Подменю** можно раскрыть, нажав на стрелку слева от пункта меню.
 
   ```{image} ../images/Pref2020_Submenu2.png
   :alt: Открыть подменю
   ```
 
-- With the **filter** on top of the preferences screen you can quickly access certain preferences. Просто начните вводить часть текста, который вы ищете.
+- С помощью **фильтра** наверху экрана настроек можно быстро перейти к нужной настройке. Просто начните вводить часть текста, который вы ищете.
 
   ```{image} ../images/Pref2021_Filter.png
   :alt:Фильтр настроек
@@ -32,25 +32,25 @@
 (Preferences-general)=
 ## Общие настройки
 
-**Units**
+**Единицы**
 
-- Set units to mmol/l or mg/dl depending on your preferences.
+- В зависимости от предпочтений установите единицы mmol/l или mg/dl.
 
-**Language**
+**Язык**
 
-- New option to use phone's default language (recommended).
+- Появился новый пункт для выбора - System default - язык телефона по умолчанию (рекомендуется выбрать этот вариант).
 
-- In case you want AAPS in a different language than your standard phone language you can choose from a broad variety.
+- Если вы хотите, чтобы в вашем AAPS использовался другой язык - выберите его из предложенных вариантов.
 
-- If you use different languages you might sometimes see a language mix. This is due to an android issue that overriding the default android language sometimes doesn't work.
+- Если вы используете в AAPS язык, отличный от системного, то иногда будете видеть кашу из языков. Это связано с тем, что иногда на телефонах с Android не удается переопределить используемый по умолчанию язык в приложении.
 
   ```{image} ../images/Pref2020_General.png
-  :alt: Preferences > General
+  :alt: Настройки > Общие
   ```
 
-**Patient name**
+**Имя пациента**
 
-- Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+- Может быть полезно, если необходимо отличать несколько различных настроек (например - у вас два ребенка с СД1).
 
 (Preferences-protection)=
 ### Защита
@@ -58,27 +58,27 @@
 (Preferences-master-password)=
 #### Главный пароль
 
-- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7. **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
+- Необходим для [экспорта настроек](../Usage/ExportImportSettings.md), т. к. они шифруются начиная с версии 2.7. **Защита биометрией (отпечаток пальца, распознавание лица) может не работать на некоторых телефонах OnePlus. Это известная проблема телефонов OnePlus.**
 
-- Open Preferences (three-dot menu on top right of home screen)
+- Откройте настройки (трехточечное меню в правом верхнем углу начального экрана)
 
-- Click triangle below "General"
+- Нажмите на галочку слева от заголовка "Общее"
 
-- Click "Master-Password"
+- Нажмите "Главный пароль"
 
-- Enter password, confirm password and click ok.
+- Введите пароль, подтвердите пароль и нажмите кнопку Ok.
 
   ```{image} ../images/MasterPW.png
-  :alt: Установить основной пароль
+  :alt: Установить главный пароль
   ```
 
 #### Защита настроек
 
-- Protect your settings with a password or phone's biometric authentication (i.e. [child is using AAPS](../Children/Children.md)).
+- Защитите свои настройки с помощью пароля или биометрии (полезно в случае, когда [AAPS используется ребенком](../Children/Children.md)).
 
 - Custom password should be used if you want to use master password just for securing [exported settings](../Usage/ExportImportSettings.md).
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](Preferences-master-password).
+- Если вы собираетесь использовать пароль для настроек - нажмите на строчку "Пароль параметров", чтобы задать его. Принцип тот же, что описан [выше](Preferences-master-password).
 
   ```{image} ../images/Pref2020_Protection.png
   :alt: Защита
@@ -86,14 +86,14 @@
 
 #### Защита приложения
 
-- If app is protected you must enter password or use phone's biometric authentication to open AAPS.
-- App will shut down immediately if wrong password is entered - but still run in the background if it was previously opened successfully.
+- Если приложение защищено - вам потребуется вводить пароль приложения или использовать биометрию каждый раз при открытии приложения AAPS.
+- Если введен неверный пароль - приложение будет немедленно закрыто, но все еще будет выполняться в фоне, если до этого было успешно открыто и запущено.
 
 #### Защита болюсов
 
-- Bolus protection might be useful if AAPS is used by a small child and you [bolus via SMS](../Children/SMS-Commands.md).
+- Защита болюсов бывает полезна, если AAPS используется маленьким ребенком и вы [вводите болюсы через SMS](../Children/SMS-Commands.md).
 
-- In the example below you see the prompt for biometric protection. Если биометрическое распознавание не работает, нажмите на пробел над запросом и введите главный пароль.
+- В примере ниже вы видите запрос на биометрическую защиту. Если биометрическое распознавание не работает, нажмите на пробел над запросом и введите главный пароль.
 
   ```{image} ../images/Pref2020_PW.png
   :alt: Биометрическая защита
@@ -102,7 +102,7 @@
 (Preferences-skin)=
 #### Тема оформления
 
-- You can choose from four types of skins:
+- Можно выбрать одну из четырех тем оформления:
 
   ```{image} ../images/Pref2021_SkinWExample.png
   :alt: Выбор оформления + примеры
@@ -139,10 +139,10 @@
 ### Не отключать экран
 
 - Useful while giving a presentation.
-- It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
+- При этом потребляется много энергии, поэтому разумно держать телефон подключенным к зарядному устройству.
 
 (Preferences-buttons)=
-### Buttons
+### Кнопки
 
 - Define which buttons are visible on the bottom of your home screen.
 
@@ -222,7 +222,7 @@
   - сколько времени прошло с момента установки резервуара
   - об уровне заполнения резервуара (в единицах)
   - сколько времени прошло с момента установки канюли
-  - Pump battery age
+  - Батарея помпы работает
   - Pump battery level (%)
 
 - Если превышено пороговое значение, данные показываются желтым цветом.
@@ -242,13 +242,13 @@
 :alt: Preferences > Status Lights
 ```
 
-#### Deliver this part of bolus wizard result
+#### Подать эту часть рекомендации мастера болюса
 
-- General setting to deliver only part of bolus wizard result.
-- Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard.
-- The percentage is shown in bolus wizard.
+- Общая настройка для подачи только части инсулина, рекомендованного мастером болюса.
+- При использовании мастера болюса подается только заданный процент (должен быть от 10 до 100) от вычисленного.
+- Этот процент показан в мастере болюса.
 
-#### Bolus advisor
+#### Помощник болюса
 
 - If you run [Bolus wizard](Screenshots-bolus-wizard) and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
 
@@ -263,14 +263,14 @@
   ```
 
 (Preferences-superbolus)=
-#### Superbolus
+#### Суперболюс
 
 - Option to enable superbolus in bolus wizard.
 - [Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes.
 
 ## Treatment safety
 
-### Patient type
+### Тип пациента
 
 - Safety limits are set based on the age you select in this setting.
 - If you start hitting these hard limits (like max bolus) it's time to move one step up.
@@ -280,15 +280,15 @@
 ### Max allowed bolus \[U\]
 
 - Defines maximum amount of bolus insulin that AAPS is allowed to deliver at once.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose.
+- Эта настройка существует как ограничение безопасности для предотвращения подачи чрезмерного болюса из-за случайного ввода или ошибки пользователя.
+- Рекомендуется установить это значение как разумный предел, приблизительно соответствующий максимальному количеству болюсного инсулина, который вы когда-либо можете подать на еду или на коррекцию.
 - This restriction is also applied to the results of the bolus calculator.
 
 ### Max allowed carbs \[g\]
 
 - Defines the maximum amount of carbs that AAPS bolus calculator is allowed to dose for.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+- Эта настройка существует как ограничение безопасности для предотвращения подачи чрезмерного болюса из-за случайного ввода или ошибки пользователя.
+- Рекомендуется установить это значение как разумный предел, приблизительно соответствующий максимальному количеству углеводов, которые вам когда-либо понадобится на еду.
 
 ## Замкнутый цикл
 
@@ -297,11 +297,11 @@
 
 - Toggle between open and closed looping as well as low glucose suspend (LGS)
 - **Open looping** means TBR suggestions are made based on your data and appear as a notification. After manual confirmation, the command to dose insulin will be transferred to pump. Only if you use virtual pump you have to enter it manually.
-- **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.
+- **Замкнутый цикл** означает, что предложения по изменению скорости временного базала TBR автоматически отправляются на вашу помпу без вашего подтверждения.
 - **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. This means that if blood glucose is dropping it can reduce the basal rate, but if blood glucose is rising then it will only increase the basal rate if the basal IOB is negative (e.g. from a previous Low Glucose Suspend).
 
 (Preferences-minimal-request-change)=
-### Minimal request change \[%\]
+### Минимальный запрос на изменения \[%\]
 
 - При открытогм цикле вы будете получать уведомления каждый раз, когда AAPS рекомендует скорректировать базальную скорость.
 - To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
@@ -320,28 +320,28 @@ Depending on your settings in [config builder](../Configuration/Config-Builder.m
 - Allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably.
 - More details about the settings and Autosens can be found in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-#### Max U/h a Temp Basal can be set to
+#### Максимальное значение ед./ч для скорости временного базала
 
 - Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate.
 - The value is measured in units per hour (U/h).
-- It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**.
+- It is advised to set this to something sensible. Хорошая рекомендация – взять **наивысшую скорость базала** в вашем профиле и **умножить ее на 4**.
 - For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
 - See also [detailed feature description](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 #### Maximum basal IOB OpenAPS can deliver \[U\]
 
-- Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile.
-- Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again.
+- Количество базального инсулина (в единицах) которому позволено накопиться в вашем организме в дополнение к нормальному базальному профилю.
+- По достижении этой величины AAPS перестает подавать дополнительный базальный инсулин до тех пор, пока ваш активный базальный Инсулин (IOB) снова не вернется в этот диапазон.
 - This value **does not consider bolus IOB**, only basal.
-- This value is calculated and monitored independently of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
+- Эта величина вычисляется и отслеживается независимо от скорости вашего обычного базала. Учитывается только дополнительный базал, который свыше обычного.
 
-When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia. This is an important step in order to:
+Когда вы начинаете работать с алгоритмом ИПЖ, **рекомендуется установить максимум активного базальный инсулина IOB на 0 ** на время привыкания к системе. Такая настройка запрещает AAPS давать дополнительный базальный инсулин. В этот период алгоритм AAPS в состоянии ограничить или отключить базу инсулина для предотвращения гипогликемии. Это важный шаг для того чтобы:
 
-- Have a period of time to safely get used to the AAPS system and monitor how it works.
-- Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
-- See how AAPS limits your basal insulin to prevent hypoglycaemia.
+- Безопасно привыкнуть к системе AAPS и тому, как она работает.
+- Совершенствовать свой базальный профиль и лучше настроить фактор чувствительности к инсулину ISF.
+- Увидеть, как AAPS ограничивает ваш базальный инсулин, чтобы предотвратить гипокликемию.
 
-When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 3 to get a value of 1.5 U/h.
+Когда вы почувствуете себя комфортно, то можете позволить системе начать давать вам дополнительный базал, повышая макс. значение активного базального инсулина IOB. Хорошая рекомендация – взять **наивысшую скорость базала** в вашем профиле и **умножить ее на 3**. For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 3 to get a value of 1.5 U/h.
 
 - You can start conservatively with this value and increase it slowly over time.
 - These are guidelines only; everyone's body is different. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.

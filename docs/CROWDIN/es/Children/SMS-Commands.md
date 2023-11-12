@@ -158,7 +158,7 @@ No se permite el bolo remoto en los próximos 15 minutos (este valor sólo es ed
 ### Otros
 
 - TREATMENTS REFRESH \* Respuesta: Actualizar tratamientos desde NS
-- AAPSClient RESTART \* Respuesta: AAPSClient RESTART 1 receptor
+- NSClient RESTART \* Response: NSCLIENT RESTART SENT
 - PUMP \* Respuesta: Última conexión: hace 1 minuto. Temp: 0,00U/h @11:38. 5/30 min. IOB: 0,5 U. Reservorio: 34 U. Batería: 100%
 - PUMP CONNECT \* Respuesta: Bomba reconectada
 - PUMP DISCONNECT *30* \* Respuesta: Para desconectar la bomba durante *30* minutos, responda con el código de la aplicación de autenticación del usuario seguido del PIN

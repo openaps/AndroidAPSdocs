@@ -158,7 +158,7 @@ Ein Bolus via SMS ist innerhalb von 15 Minuten nach der letzten Bolusgabe in AAP
 ### Andere
 
 - TREATMENTS REFRESH \* Antwort: Behandlungen von NS aktualisieren
-- AAPSClient RESTART \* Response: AAPSClient RESTART 1 receivers
+- NSClient RESTART \* Response: NSCLIENT RESTART SENT
 - PUMP \* Antwort: Letzte Verbindung: vor 1 Min. Temp: 0.00E/h @11:38 5/30min IOB: 0.5E Reserv: 34E Batt: 100
 - PUMP CONNECT \* Antwort: Pumpe erneut verbunden
 - PUMP DISCONNECT *30* \* Um die Pumpe für *30* Minuten zu trennen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.

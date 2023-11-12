@@ -158,7 +158,7 @@
 ### Άλλο
 
 - TREATMENTS REFRESH \* Απάντηση: Ανανέωση θεραπευτικών χειρισμών από το NS
-- AAPSClient RESTART \* Response: AAPSClient RESTART 1 receivers
+- NSClient RESTART \* Response: NSCLIENT RESTART SENT
 - PUMP \* Απάντηση: Τελευταία σύνδεση: πριν από 1 λεπτό Temp: 0.00U/h @11:38 5/30min Ενεργή Ινσουλίνη: 0.5U Υπόλοιπο Ρεζερβουάρ: 34U Μπαταρία: 100
 - PUMP CONNECT \* Απάντηση: Η αντλία επανασυνδέθηκε
 - PUMP DISCONNECT *30* \* Απάντηση: Για να αποσυνδέσετε την αντλία για *30* λεπτά απαντήστε με κωδικό από την εφαρμογή ελέγχου ταυτότητας για το Χρήστη, ακολουθούμενο από PIN

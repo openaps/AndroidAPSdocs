@@ -103,11 +103,11 @@ Folge der Anleitung bei [Gradle Resync](troubleshooting_androidstudio-step-3-gra
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
-### Das Android Gradle Plugin benötigt Java 11
+### Android Gradle plugin requires Java 17 to run
 
   Wahrscheinlich bekommst du diese Fehlermeldung:
 
-  ![Das Android Gradle Plugin benötigt Java 11](../images/studioTroubleshooting/11_GradleJDK.png)
+  ![Android Gradle plugin requires Java 17 to run](../images/studioTroubleshooting/11_GradleJDK.png)
 
   Klicke auf "Gradle Settings" (1), um die Gradle Einstellungen zu öffnen.
 
@@ -115,13 +115,13 @@ Folge der Anleitung bei [Gradle Resync](troubleshooting_androidstudio-step-3-gra
 
   ![Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
-  Wenn Du die Gradle Einstellungen geöffnet hast, öffne das Dropdown (1) bei "Gradle JDK" und wähle "Embedded JDK Version" (2).
+  When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "jbr-17" (2), which should be located within your Android Studion installation directory.
 
   ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
   Klicke "OK" um die Einstellungen zu speichern und schließen.
 
-  *Wichtig*: Falls Du die Einstellung "Gradle JDK" nicht siehst, hast Du Android Studio wahrscheinlich nicht upgedatet. Stelle sicher, dass Du Android Studio 2021.1.1 Bumblebee) oder eine neuere Version benutzt.
+  *Wichtig*: Falls Du die Einstellung "Gradle JDK" nicht siehst, hast Du Android Studio wahrscheinlich nicht upgedatet. Make sure you are using Android Studio 2022.3 Giraffe) or newer.
 
   Jetzt ist es notwendig einen [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync) auszulösen
 

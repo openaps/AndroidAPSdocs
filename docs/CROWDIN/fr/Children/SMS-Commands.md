@@ -158,7 +158,7 @@ Un bolus à distance n'est pas possible dans les 15 minutes suivant le dernier b
 ### Autres
 
 - TREATMENTS REFRESH \* Réponse : Actualiser les données depuis NS
-- AAPSClient RESTART \* Response: AAPSClient RESTART 1 receivers
+- NSClient RESTART \* Response: NSCLIENT RESTART SENT
 - POMPE \* Réponse : Dernière conn : il y a 1 min Temp: 0.00U/h @11:38 5/30min IA: 0.5U Réserv: 34U Batt.: 100
 - PUMP CONNECT \* Réponse : Pompe reconnectée
 - PUMP DISCONNECT *30* \* Réponse : Pour déconnecter la pompe pendant *30* min, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
