@@ -1,6 +1,6 @@
-# AAPS Omnipod Insulin Pump Driver Documentation
+# Документация AAPS по доайверам для помп Omnipod
 
-These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**). The Omnipod driver is available as part of AAPS (AAPS) as of version 2.8.
+Эти инструкции для настройки помп Omnipod Eros (**НЕ Omnipod DASH**). Драйвер для Omnipod доступен как составная часть AAPS начиная с версии 2.8.
 
 **Это программное обеспечение - часть алгоритма самостоятельно настраиваемой ИПЖ; она не является коммерческим продуктом, но требует, чтобы вы прочитали, узнали и поняли, как ей пользоваться. Только вы несете ответственность за то, что делаете.**
 
@@ -11,9 +11,9 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 
 ## Hardware and Software Requirements
 
-- **Pod Communication Device**
+- **Устройство связи с Pod**
 
-> Component that bridges communication from your AAPS enabled phone to Eros generation pods.
+> Компонент, позволяющий AAPS общаться с подами Eros.
 > 
 > > - ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
 > > - ![RileyLink / РайлиЛинк](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
@@ -21,11 +21,11 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 > > - ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
 > > - ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
 
-- ![Android_phone](../images/omnipod/Android_phone.png)  **Mobile Phone Device**
+- ![Android_phone](../images/omnipod/Android_phone.png)  **Мобильный Телефон**
 
-> Component that will operate AAPS and send control commands to the Pod communication device.
+> Компонент, который будет работать с AAPS и отправлять команды управления устройству Pod.
 > 
-> > - Supported [Omnipod driver Android phone](https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit) with a version of AAPS 2.8 and related [components setup](index-component-setup)
+> > - Поддерживаемый [телефон на Android с драйвером Omnipod](https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit) версии AAPS 2.8 и позднее с соответствующими [настройками компонентов](index-component-setup)
 
 - ![Omnipod_Pod](../images/omnipod/Omnipod_Pod.png)  **Insulin Delivery Device**
 
