@@ -45,8 +45,6 @@ Setting up AAPS <./Installing-AndroidAPS/setting-up-AAPS.md>
 
 Completing the objectives <./Usage/completing-the-objectives.md>
 
-Updating AAPS <./Installing-AndroidAPS/updating-AAPS.md>
-
 ```
 
 ```{toctree}
