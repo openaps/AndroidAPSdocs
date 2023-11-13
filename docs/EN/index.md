@@ -37,8 +37,15 @@ Introduction <introduction.md>
 :caption: Getting Started
 
 Preparing <preparing.md>
-Building AAPS <buildingAAPS.md>
-Completing the objectives <completingObjetives.md>
+
+Setting up the reporting server <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
+Building AAPS <./Installing-AndroidAPS/building-AAPS.md>
+Installing AAPS <./Installing-AndroidAPS/installing-AAPS.md>
+Setting up AAPS <./Installing-AndroidAPS/setting-up-AAPS.md>
+
+Completing the objectives <./Usage/completing-the-objectives.md>
+
+Updating AAPS <./Installing-AndroidAPS/updating-AAPS.md>
 
 ```
 
