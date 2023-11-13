@@ -105,7 +105,7 @@ You can enable the Omnipod driver in AAPS in **two ways**:
 
 2. После выбора драйвера Omnipod, определите и выберите RileyLink в **Конфигураторе (1)** ➜**Помпа**➜**Omnipod**➜**Иконка шестеренки (Настройки) (2)** ➜**Конфигурация RileyLink (3)**, нажав на текст**Не настроен** или **Адрес MAC (если есть)**.
 
-   > Ensure your RileyLink battery is charged and it is [positioned in close proximity](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Once selected, you can proceed to activate your first pod session. Use the back button on your phone to return to the main AAPS interface.
+   > Убедитесь, что аккумулятор RileyLink заряжен и он [расположен в непосредственной близости от](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 см или менее от телефона) для идентификации AAPS по его MAC-адресу. Сделав выбор, можете перейти к активации первого сеанса Pod. Нажмите кнопку "Назад" на телефоне, чтобы вернуться к основному интерфейсу AAPS.
    > 
    > ![RileyLink_Setup_1](../images/omnipod/RileyLink_Setup_1.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
