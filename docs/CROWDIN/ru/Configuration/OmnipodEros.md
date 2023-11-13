@@ -51,57 +51,57 @@
 
 You can enable the Omnipod driver in AAPS in **two ways**:
 
-### Option 1: The Setup Wizard
+### Вариант 1: Мастер настройки
 
-After installing a new version of AAPS, the **Setup Wizard** will start automatically.  This will also occur during in place upgrades.  If you already have exported your settings from a previous installation you can exit the Setup Wizard and import your old settings.  For new installations proceed below.
+После установки новой версии AAPS **Мастер Настройки** запустится автоматически.  Это также произойдет во время обновления системы.  Если вы уже экспортировали настройки из предыдущей установки, можно выйти из мастера установки и импортировать старые настройки.  Для новых установок смотрите ниже.
 
-Via the **AAPS Setup Wizard (2)** located at the top right-hand corner **three-dot menu (1)** and proceeding through the wizard menus until you arrive at the **Pump** screen. Then select the **Omnipod radio button (3)** .
+Через ** Мастер настройки AAPS (2)** расположенный в правом верхнем углу **трехточечное меню (1)** и через меню мастера, пока не дойдете до экрана выбора помпы ****. Затем выберите **радио кнопку Omnipod (3)**.
 
 > ![Enable_Omnipod_Driver_1](../images/omnipod/Enable_Omnipod_Driver_1.png)  ![Enable_Omnipod_Driver_2](../images/omnipod/Enable_Omnipod_Driver_2.png)
 
-On the same screen, below the pump selection, the **Omnipod Driver Settings** are displayed, under the **RileyLink Configuration** add your RileyLink device by pressing the **Not Set** text.
+На экране выбора помпы отображаются **Настройки драйвера Omnipod**, под конфигурацией **RileyLink Configuration** добавьте устройство RileyLink, нажав текст **не выбрано**.
 
-On the **RileyLink Selection** screen press the **Scan** button and select your RileyLink by scanning for all available Bluetooth devices and selecting your RileyLink from the list. When properly selected you are returned to the pump driver selection screen displaying the Omnipod driver settings showing your selected RileyLink with the MAC address listed.
+На экране **конфигурация RileyLink** нажмите кнопку **Сканировать** и выберите RileyLink, просканировав доступные Bluetooth устройства и выбрав RileyLink из списка. При правильном выборе вы возвращаетесь на экран выбора драйвера помпы с отображением параметров драйвера Omnipod и указанием выбранного вами мак-адреса RileyLink.
 
-Press the **Next** button to proceed with the rest of the **Setup Wizard.**  It can take up to one minute for the selected RileyLink to initialize and the **Next** button to become active.
+Нажмите кнопку **Далее**, чтобы перейти к остальной части **мастера настройки**  Для инициализации выбранного устройства RileyLink может потребоваться до минуты, после чего кнопка **Далее** станет активной.
 
-Detailed steps on how to setup your pod communication device are listed below in the [RileyLink Setup Section](OmnipodEros-rileylink-setup).
+Подробные шаги по настройке устройства связи Pod приведены ниже в разделе [Настройка RileyLink](OmnipodEros-rileylink-setup).
 
-**OR**
+**ИЛИ**
 
 ### Вариант 2: Конфигуратор
 
-Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜**Pump**➜**Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will display the Omnipod menu as a tab in the AAPS interface titled **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
+В левом верхнем углу из **выпадающего меню** выберите **Конфигуратор(1)** ➜**Помпа** ➜ **Omnipod**, включив **радио кнопку(2)** под названием **Omnipod**. Поставив **флажок(4)** напротив **шестеренки настроек(3)** вы активируете вкладку меню Omnipod в интерфейсе AAPS, которая называется **POD**. В документации эта вкладка называется **Omnipod (POD)**.
 
-> **NOTE:** A faster way to access the **Omnipod settings** can be found below in the [Omnipod Settings section](OmnipodEros-omnipod-settings) of this document.
+> **ПРИМЕЧАНИЕ:** Более быстрый способ доступа к настройкам **Omnipod** можно найти ниже в разделе [Настройки Omnipod](OmnipodEros-omnipod-settings) в документации.
 > 
 > ![Enable_Omnipod_Driver_3](../images/omnipod/Enable_Omnipod_Driver_3.png) ![Enable_Omnipod_Driver_4](../images/omnipod/Enable_Omnipod_Driver_4.png)
 
 ### Верификация выбора драйвера Omnipod
 
-*Note: If you have exited the Setup Wizard early without selecting your RileyLink, the Omnipod Driver is enabled but you will still need to select your RileyLink.  You may see the Omnipod (POD) tab appear as it does below*
+*Примечание: Если вы уже вышли из мастера настройки без выбора RileyLink, драйвер Omnipod будет включен, но вам все равно нужно выбрать RileyLink.  Вы увидите вкладку Omnipod (POD) как показано ниже*
 
-To verify that you have enabled the Omnipod driver in AAPS **swipe to the left** from the **Overview** tab, where you will now see an **Omnipod** or **POD** tab.
+Чтобы убедиться, что вы активировали драйвер Omnipod в AAPS **смахните экран влево** из вкладки **Начало** и вы увидите вкладку **Omnipod** или **POD**.
 
 ![Enable_Omnipod_Driver_5](../images/omnipod/Enable_Omnipod_Driver_5.png)
 
-## Omnipod Configuration
+## Конфигурация Omnipod
 
-Please **swipe left** to the **Omnipod (POD)** tab where you will be able to manage all pod and RileyLink functions (some of these functions are not enabled or visible without an active pod session):
+**Смахните главный экран влево** до появления вкладки **Omnipod(POD)**, на которой вы можете управлять всеми функциями пода (некоторые из них неактивны или невидимы вне действующей сессии пода):
 
-> ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png) Refresh Pod connectivity and status
+> ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png) Обновление соединения и статуса Pod
 > 
-> ![pod_management](../images/omnipod/ICONS/omnipod_overview_pod_management.png) Pod Management (Activate, Deactivate, Play test beep, RileyLink Stats and Pod history)
+> ![pod_management](../images/omnipod/ICONS/omnipod_overview_pod_management.png) Управление подом (Активация, Деактивация, проверка звукового сигнала, журнал помпы)
 
 (OmnipodEros-rileylink-setup)=
 
-### RileyLink Setup
+### Настройка RileyLink
 
-If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the [Activating a Pod Section](OmnipodEros-activating-a-pod) below.
+Если RileyLink был успешно сопряжен в мастере установки или на шагах выше, то перейдите к разделу [активации Pod](OmnipodEros-activating-a-pod) ниже.
 
-*Note: A good visual indicator that the RileyLink is not connected is that the Insulin and Calculator buttons on the HOME tab will be missing. This will also occur for about the first 30 seconds after AAPS starts, as it is actively connecting to the RileyLink.*
+*Примечание: Визуальным индикатором того, что RileyLink не подключен, является то, что на главном экране не появятся кнопки инсуллина и калькулятора болюса. Это произойдет примерно в течение первых 30 секунд после запуска AAPS, так как он активно подключается к RileyLink.*
 
-1. Ensure that your RileyLink is fully charged and powered on.
+1. Убедитесь, что RileyLink полностью заряжен и включен.
 
 2. After selecting the Omnipod driver, identify and select your RileyLink from **Config Builder (1)** ➜**Pump**➜**Omnipod**➜**Gear Icon (Settings) (2)** ➜**RileyLink Configuration (3)** by pressing the **Not Set** or **MAC Address (if present)** text.
 
@@ -561,7 +561,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 
 ## Omnipod Settings
 
-The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**➜**Pump**➜**Omnipod**➜**Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled **OMNIPOD** or **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
+The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**➜**Pump**➜**Omnipod**➜**Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled **OMNIPOD** or **POD**. В документации эта вкладка называется **Omnipod (POD)**.
 
 ![Omnipod_Settings_1](../images/omnipod/Omnipod_Settings_1.png)
 
