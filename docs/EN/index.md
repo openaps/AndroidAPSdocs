@@ -38,10 +38,15 @@ Introduction <introduction.md>
 
 Preparing <preparing.md>
 
+```
+
+```{toctree}
+:caption: Setting up AAPS
+
 Setting up the reporting server <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
 Building AAPS <./Installing-AndroidAPS/building-AAPS.md>
 Installing AAPS <./Installing-AndroidAPS/installing-AAPS.md>
-Setting up AAPS <./Installing-AndroidAPS/setting-up-AAPS.md>
+Configuring the AAPS loop<./Installing-AndroidAPS/configuring-the-AAPS-loop.md>
 
 Completing the objectives <./Usage/completing-the-objectives.md>
 
