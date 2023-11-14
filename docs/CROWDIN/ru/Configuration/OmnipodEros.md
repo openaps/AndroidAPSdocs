@@ -185,23 +185,23 @@ You can enable the Omnipod driver in AAPS in **two ways**:
 
 ### Деактивация Pod
 
-Under normal circumstances, the life of a pod should run for three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
+При нормальных условиях ожидаемое время жизни пода 3 дня (72 часа) и дополнительно 8 часов после предупреждения об истечении срока действия, в общей сложности 80 часов.
 
 Для деактивации пода (либо по истечении срока действия, либо из-за сбоя в работе):
 
-1. Go to the **Omnipod (POD)** tab, click on the **POD MGMT (1)** button, on the **Pod management** screen click on the **Deactivate Pod (2)** button.
+1. Зайдите на вкладку **Omnipod (POD)**, нажмите на кнопку **УПРАВЛЕНИЕ ПОМПОЙ(1)** на экране **Управление помпой Omnipod** нажмите кнопку **Деактивировать Pod(2)**.
 
    > ![Деактивировать Pod_1](../images/omnipod/Deactivate_Pod_1.png) ![Деактивировать Pod_2](../images/omnipod/Deactivate_Pod_2.png)
 
-2. On the **Deactivate Pod** screen, first, make sure the RileyLink is in close proximity to the pod but not on top of or right next to the pod, then click on the **Next** button to begin the process of deactivating the pod.
+2. На экране **Деактивировать Pod** сначала убедитесь, что RileyLink находится в непосредственной близости от Pod, но не на самом устройстве или совсем рядом с ними, затем нажмите на кнопку **Далее** для начала процесса деактивации Pod.
 
    > ![Деактивировать Pod_3](../images/omnipod/Deactivate_Pod_3.png)
 
-3. The **Deactivating Pod** screen will appear, and you will receive a confirmation beep from the pod that deactivation was successful.
+3. Появится экран **Деактивация Pod**, и мы получим подтверждение от Pod, что деактивация прошла успешно.
 
    > ![Отключить Pod_4](../images/omnipod/Deactivate_Pod_4.png)
    > 
-   > **IF deactivation fails** and you do not receive a confirmation beep, you may receive a **No response from RileyLink** or **No response from Pod message**. Please click on the **Retry (1)** button to attempt deactivation again. If deactivation continues to fail, please click on the **Discard Pod (2)** button to discard the Pod. Теперь вы можете удалить свой pod так как активная сессия завершена. If your Pod has a screaming alarm, you may need to manually silence it (using a pin or a paperclip) as the **Discard Pod (2)** button will not silence it.
+   > **Если деактивация не удалась** и звуковое подтверждение не прозвучало, может появиться сообщение **Нет ответа от RileyLink** или **Нет ответа от Pod **. Нажмите на кнопку **Повторить (1)** для повторной попытки деактивации. Если деактивация по-прежнему не удается, пожалуйста, нажмите на кнопку **Завершить пользование Подом(2)** для утилизации Pod. Теперь вы можете удалить свой pod так как активная сессия завершена. If your Pod has a screaming alarm, you may need to manually silence it (using a pin or a paperclip) as the **Discard Pod (2)** button will not silence it.
    > 
    > > ![Деактивировать Pod_5](../images/omnipod/Deactivate_Pod_5.png)  ![Деактивировать Pod_6](../images/omnipod/Deactivate_Pod_6.png)
 
@@ -209,33 +209,33 @@ Under normal circumstances, the life of a pod should run for three days (72 hour
 
    > ![Деактивировать Pod_7](../images/omnipod/Deactivate_Pod_7.png)
 
-5. Click on the green button to return to the **Pod management** screen.
+5. Для возврата на экран **Управление помпой Omnipod** нажмите на зеленую кнопку.
 
    > ![Деактивировать Pod_8](../images/omnipod/Deactivate_Pod_8.png)
 
-6. You are now returned to the **Pod management** menu press the back button on your phone to return to the **Omnipod (POD)** tab. Verify that the **RileyLink Status:** field reports **Connected** and the **Pod status:** field displays a **No active Pod** message.
+6. Теперь вы оказались в меню **Управление помпой Omnipodt**; нажмите кнопку "Назад" на телефоне, чтобы вернуться на вкладку **Omnipod (POD)**. Убедитесь, что в поле **Статус RileyLink:** отображается **Подключено**, а поле **Статус помпы:** поле отображает сообщение**Нет активных Pod**.
 
    > ![Deactivate_Pod_9](../images/omnipod/Deactivate_Pod_9.png)  ![Deactivate_Pod_10](../images/omnipod/Deactivate_Pod_10.png)
 
 ### Приостановка и возобновление подачи инсулина
 
-The process below will show you how to suspend and resume insulin pump delivery.
+Приведенный ниже процесс покажет вам, как приостановить и возобновить подачу инсулина.
 
-*NOTE - if you do not see a SUSPEND button*, then it has not been enabled to display in the Omnipod (POD) tab. Enable the **Show Suspend Delivery button in Omnipod tab** setting in the [Omnipod settings](OmnipodEros-omnipod-settings) under **Other**.
+*ПРИМЕЧАНИЕ - если вы не видите кнопку ПРИОСТАНОВИТЬ*, то отображение функции не было включено на вкладке Omnipod (POD). Включите кнопку **Показать приостановку инсулина на вкладке Omnipod** в настройках [Omnipod](OmnipodEros-omnipod-settings) в разделе **Другое**.
 
 #### Suspending Insulin Delivery
 
-Use this command to put the active pod into a suspended state. In this suspended state, the pod will no longer deliver any insulin. This command mimics the suspend function that the original Omnipod PDM issues to an active pod.
+Используйте эту команду, чтобы перевести активный Pod в приостановленное состояние. В этом приостановленном состоянии Pod больше не подает инсулин. Эта команда имитирует функцию приостановки, которую подает оригинальный пульт Omnipod PDM на активный Pod.
 
-1. Go to the **Omnipod (POD)** tab and click on the **SUSPEND (1)** button. The suspend command is sent from the RileyLink to the active pod and the **SUSPEND (3)** button will become greyed out. The **Pod status (2)** will display **SUSPEND DELIVERY**.
+1. Перейдите на вкладку **Omnipod (POD)** и нажмите кнопку **ОСТАНОВ (1)**. Команда приостановки отправляется из RileyLink в активный Pod. При этом кнопка **ОСТАНОВ(3)** становится серой. **Состояние Pod (2)** отображается как **ОСТАНОВ ПОДАЧИ**.
 
    > ![Suspend_Insulin_Delivery_1](../images/omnipod/Suspend_Insulin_Delivery_1.png) ![Suspend_Insulin_Delivery_2](../images/omnipod/Suspend_Insulin_Delivery_2.png)
 
-2. When the suspend command is successfully confirmed by the RileyLink a confirmation dialog will display the message **All insulin delivery has been suspended**. Нажмите **OK** для подтверждения и продолжения.
+2. Когда команда остановить подачу прошла успешно, в диалоговом окне подтверждения будет показано сообщение **Введение инсулина приостановлено**. Нажмите **OK** для подтверждения и продолжения.
 
    > ![Suspend_Insulin_Delivery_3](../images/omnipod/Suspend_Insulin_Delivery_3.png)
 
-3. Your active pod has now suspended all insulin delivery. The **Omnipod (POD)** tab will update the **Pod status (1)** to **Suspended**. The **SUSPEND** button will change to a new **Resume Delivery (2)** button
+3. Активный под теперь приостановил любые подачи инсулина. Вкладка **Omnipod (POD)** обновит статус **Pod (1)** до **приостановлено**. Кнопка **ОСТАНОВ** изменится на новую **Возобновить подачу (2)**
 
    > ![Suspend_Insulin_Delivery_4](../images/omnipod/Suspend_Insulin_Delivery_4.png)
 
