@@ -243,21 +243,21 @@ You can enable the Omnipod driver in AAPS in **two ways**:
 
 Применяйте эту команду, чтобы приостановленный Pod возобновил подачу инсулина. После успешной обработки команды, нормальная подача инсулина возобновится в соответствии с текущим активным профилем базала. Pod снова будет принимать команды на болюс, TBR и SMB.
 
-1. Go to the **Omnipod (POD)** tab and ensure the **Pod status (1)** field displays **Suspended**, then press the **Resume Delivery (2)** button to start the process to instruct the current pod to resume normal insulin delivery. A message **RESUME DELIVERY** will display in the **Pod status (3)** field, signifying the RileyLink is actively sending the command to the suspended pod.
+1. Перейдите на вкладку **Omnipod (POD** и убедитесь, что поле **статус помпы (1)** отображает **ПОМПА ОСТАНОВЛЕНА (ПРИОСТАНОВЛЕНО)**, затем нажмите кнопку **ВОЗОБНОВИТЬ ПОДАЧУ(2)** для передачи команды на Pod о возобновлении подачи инсулина. Сообщение **Возобновить подачу** будет отображаться в поле **Статус Pod (3)**, показывая, что RileyLink активно отправляет команду на остановленный Pod.
 
    > ![Resume_Insulin_Delivery_1](../images/omnipod/Resume_Insulin_Delivery_1.png) ![Resume_Insulin_Delivery_2](../images/omnipod/Resume_Insulin_Delivery_2.png)
 
-2. When the Resume delivery command is successfully confirmed by the RileyLink a confirmation dialog will display the message **Insulin delivery has been resumed**. Нажмите **OK** для подтверждения и продолжения.
+2. Когда команда Возобновить подачу прошла успешно, в диалоговом окне подтверждения появится сообщение **Введение инсулина возобновлено**. Нажмите **OK** для подтверждения и продолжения.
 
    > ![Resume_Insulin_Delivery_3](../images/omnipod/Resume_Insulin_Delivery_3.png)
 
-3. The **Omnipod (POD)** tab will update the **Pod status (1)** field to display **RUNNING,** and the **Resume Delivery** button will now display the **SUSPEND (2)** button.
+3. Вкладка **Omnipod (POD)** обновит поле **статус помпы (1)**и отобразит **ВЫПОЛНЯЕТСЯ,** а кнопка **Возобновить подачу** примет вид **ОСТАНОВ(2)**.
 
    > ![Resume_Insulin_Delivery_4](../images/omnipod/Resume_Insulin_Delivery_4.png)
 
-### Acknowledging Pod Alerts
+### Подтверждение оповещений Pod
 
-*NOTE - if you do not see an ACK ALERTS button, it is because it is conditionally displayed on the Omnipod (POD) tab ONLY when the pod expiration or low reservoir alert has been triggered.*
+*ПРИМЕЧАНИЕ - если вы не видите кнопку "ОПОВЕЩЕНИЕ ПРИНЯТО", то только потому, что оно отображается на вкладке Omnipod (POD), когда срабатывает оповещение о завершении срока действия или низком уровне инсулина в резервуаре.*
 
 The process below will show you how to acknowledge and dismiss pod beeps that occur when the active pod time reaches the warning time limit before the pod expiration of 72 hours (3 days). This warning time limit is defined in the **Hours before shutdown** Omnipod alerts setting. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hour (3 days) limit.
 
