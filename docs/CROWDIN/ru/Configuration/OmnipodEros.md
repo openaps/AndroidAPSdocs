@@ -309,18 +309,18 @@ You can enable the Omnipod driver in AAPS in **two ways**:
 
 #### Восстановление передачи данных с устройства Bluetooth
 
-1. С вкладки **Omnipod (POD)**, когда **Статус RileyLink (1)** отображается как **RileyLink недоступен** нажмите кнопку **УПРАВЛЕНИЕ ПОМПОЙ (2)** и перейдите в соответствующее меню. On the **Pod Management** menu you will see a notification appear actively searching for a RileyLink connection, press the **RileyLink stats (3)** button to access the **RileyLink settings** screen.
+1. С вкладки **Omnipod (POD)**, когда **Статус RileyLink (1)** отображается как **RileyLink недоступен** нажмите кнопку **УПРАВЛЕНИЕ ПОМПОЙ (2)** и перейдите в соответствующее меню. В меню **Управление помпой** вы увидите уведомление о поиске соединения с RileyLink, нажмите кнопку **Статистика RileyLink (3)** и перейдите в экран **настроек RileyLink**.
 
    > ![RileyLink_Bluetooth_Reset_1](../images/omnipod/RileyLink_Bluetooth_Reset_1.png) ![RileyLink_Bluetooth_Reset_2](../images/omnipod/RileyLink_Bluetooth_Reset_2.png)
 
-2. On the **RileyLink Settings (1)** screen under the **RileyLink (2)** section you can confirm both the Bluetooth connection status and error in the **Connection Status and Error: (3)** fields. A *Bluetooth Error* and *RileyLink unreachable* status should be shown. Start the manual Bluetooth reconnection by pressing the **refresh (4)** button in the lower right corner.
+2. На экране **Настройки RileyLink (1)** в разделе **RileyLink (2)** отображается статус Bluetooth-соединения, а также ошибки в поле **состояние соединения и ошибки (3)**. Должен быть показан статус *Ошибка Bluetooth* и *RileyLink недоступен*. Запустите ручное соединение Bluetooth, нажав кнопку **обновить (4)** в правом нижнем углу.
 
    > ![RileyLink_Bluetooth_Reset_3](../images/omnipod/RileyLink_Bluetooth_Reset_3.png)
    > 
-   > If the pod communication device is unresponsive or out of range of the phone while the Bluetooth refresh command is being processed a warning message will display 2 options.
+   > Если Pod не отвечает или находится вне диапазона телефона во время выполнения команды Bluetooth-обновить, предупреждения могут иметь 2 варианта.
 
    - **Mute (1)** will silence this current warning.
-   - **OK (2)** will confirm this warning and allow the user to try to re-establish the Bluetooth connection again.
+   - **OK (2)** подтвердит получение этого предупреждения и позволит пользователю повторно произвести сопряжение Bluetooth.
 
    > ![RileyLink_Bluetooth_Reset_4](../images/omnipod/RileyLink_Bluetooth_Reset_4.png)
 
