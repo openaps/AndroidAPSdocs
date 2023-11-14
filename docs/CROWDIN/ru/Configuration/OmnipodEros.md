@@ -1,4 +1,4 @@
-# Документация AAPS по доайверам для помп Omnipod
+# Документация AAPS по драйверам для помп Omnipod
 
 Эти инструкции для настройки помп Omnipod Eros (**НЕ Omnipod DASH**). Драйвер для Omnipod доступен как составная часть AAPS начиная с версии 2.8.
 
@@ -109,57 +109,57 @@ You can enable the Omnipod driver in AAPS in **two ways**:
    > 
    > ![RileyLink_Setup_1](../images/omnipod/RileyLink_Setup_1.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
-3. On the **RileyLink Selection** screen press the **Scan (4)** button to initiate a bluetooth scan. **Select your RileyLink (5)**  from the list of available Bluetooth devices.
+3. На экране **Выбор RileyLink ** нажмите кнопку **Сканировать (4)** для запуска сканирования bluetooth. **Выберите RileyLink (5)**  из списка доступных устройств. Bluetooth.
 
    > ![RileyLink_Setup_3](../images/omnipod/RileyLink_Setup_3.png) ![RileyLink_Setup_4](../images/omnipod/RileyLink_Setup_4.png)
 
-4. After successful selection you are returned to the Omnipod Settings page listing your **currently selected RileyLink's MAC Address (6).**
+4. После успешного выбора вы возвращаетесь на страницу настроек Omnipod с указанием mac-адреса **выбранного RileyLink (6)**
 
    > ![RileyLink_Setup_5](../images/omnipod/RileyLink_Setup_5.png)
 
-5. Verify that in the **Omnipod (POD)** tab that the **RileyLink Status (1)** appears as **Connected.** The **Pod status (2)** field should show **No active Pod**; if not, please attempt the previous step or exit AAPS to see if this refreshes the connection.
+5. Убедитесь, что на вкладке **Omnipod (POD)** состояние **RileyLink (1)** отображается как **подключено.** Поле **статус помпы (2)** должно показывать **Нет активных Pod**; если нет, пожалуйста, попробуйте предыдущий шаг или выйдите из AAPS для проверки обновления соединения.
 
    > ![RileyLink_Setup_6](../images/omnipod/RileyLink_Setup_6.png)
 
 (OmnipodEros-activating-a-pod)=
 
-### Activating a Pod
+### Активация Pod
 
-Before you can activate a pod please ensure you have properly configured and connected your RileyLink connection in the Omnipod settings
+Перед активацией Pod убедитесь, что вы правильно настроили и подключили RileyLink в настройках Omnipod
 
-*REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Before pairing the Pod's radio signal is weaker, however after it has been paired it will operate at full signal power. During these procedures, make sure that your pod is* [within close proximity](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) but not on top of or right next to the RileyLink.\*
+*ПРЕДУПРЕЖДЕНИЕ: Коммуникация для активации Pod происходит на ограниченной дистанции, что вызвано мерами безопасности. Перед сопряжением радиосигнал Pod более слабый, однако после подключения связь будет работать при полной мощности сигнала. В ходе этих процедур убедитесь, что Pod* [находится в непосредственной близости ](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 см или менее), но не поверх или совсем рядом с RileyLink.\*
 
-01. Navigate to the **Omnipod (POD)** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
+01. Перейдите на вкладку **Omnipod (POD)**, нажмите кнопку **УПРАВЛЕНИЕ помпой (1)**, затем нажмите **Активировать Pod (2)**.
 
     > ![Активировать Pod_1](../images/omnipod/Activate_Pod_1.png) ![Активировать Pod_2](../images/omnipod/Activate_Pod_2.png)
 
-02. Появится экран **Заполнить Pod**. Заполните новый Pod по меньшей мере 80 единицами инсулина и дождитесь двух звуковых сигналов, подтверждающих, что Pod готов к первичному заполнению катетера. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use 12 to 15 units.
+02. Появится экран **Заполнить Pod**. Заполните новый Pod по меньшей мере 80 единицами инсулина и дождитесь двух звуковых сигналов, подтверждающих, что Pod готов к первичному заполнению катетера. При подсчете общего количества инсулина на 3 дня, учитывайте, что первичное заполнение катетера Pod потребует 12-15 единиц инсулина.
 
     > ![Активировать Pod_3](../images/omnipod/Activate_Pod_3.png)
     > 
-    > Ensure the new pod and RileyLink are within close proximity of each other (~30cm or less) and click the **Next** button.
+    > Убедитесь, что новый Pod и телефон с запущенным AAPS находятся в непосредственной близости друг от друга и нажмите кнопку **Далее**.
 
-03. На экране **Инициализация Pod**, Pod начнет первичное заполнение ( вы услышите щелчок с серией последующих тикающих звуков пока заполняется под). If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, [move the RileyLink closer](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
+03. На экране **Инициализация Pod**, Pod начнет первичное заполнение ( вы услышите щелчок с серией последующих тикающих звуков пока заполняется под). Если RileyLink при активации находится вне диапазона, вы получите сообщение об ошибке **Нет ответа от Pod**. В этом случае [переместите RileyLink ближе](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (на расстоянии примерно 30 см или меньше) к Pod, но не сверху или прямо рядом с ним, и нажмите кнопку **Повторить (1)**.
 
     > ![Активировать Pod_4](../images/omnipod/Activate_Pod_4.png) ![Активировать Pod_5](../images/omnipod/Activate_Pod_5.png)
 
-04. Upon successful priming a green checkmark will be shown and the **Next** button will become enabled. Нажмите на кнопку **Далее** для завершения инициализации и появления экрана **Подключить Pod**.
+04. После успешного заполнения катетера появится зеленая галочка, и станет активной кнопка **Далее**. Нажмите на кнопку **Далее** для завершения инициализации и появления экрана **Подключить Pod**.
 
     > ![Активировать Pod_6](../images/omnipod/Activate_Pod_6.png)
 
-05. Затем подготавливаем инфузионный отсек нового пода. Remove the pod's plastic needle cap and white paper backing from the adhesive and apply the pod to your usually selected site on your body. По завершении нажмите кнопку **Далее**.
+05. Затем подготавливаем инфузионный отсек нового пода. Снимите пластмассовый колпачок с иглы, белую бумажную защиту с клеевого слоя и прижмите к обычно выбранному месту на теле. По завершении нажмите кнопку **Далее**.
 
     > ![Activate_Pod_7](../images/omnipod/Activate_Pod_7.png)
 
-06. Теперь появится диалоговое окно **Подключить Pod**. **ONLY click on the OK button if you are ready to deploy the cannula**.
+06. Теперь появится диалоговое окно **Подключить Pod**. **нажимайте на кнопку OK ТОЛЬКО если вы готовы к установке катетера**.
 
     > ![Активировать Pod_8](../images/omnipod/Activate_Pod_8.png)
 
-07. After pressing **OK**, it may take some time before the Omnipod responds and inserts the cannula (1-2 minutes maximum), so be patient.
+07. После нажатия **OK**, понадобится некоторое время для реакции Pod и введения катетера (1-2 минуты максимум), так что наберитесь терпения.
 
-    > If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, move the RileyLink closer (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry** button.
+    > Если RileyLink при активации находится вне диапазона, вы получите сообщение об ошибке **Нет ответа от Pod**. Если это происходит, переместите RileyLink ближе (30 см или менее) но не поверх или совсем рядом с Pod и нажмите кнопку **Повторить**.
     > 
-    > If the RileyLink is out of Bluetooth range or does not have an active connection to the phone, you will receive an error message **No response from RileyLink**. If this occurs, move the RileyLink closer to the phone and click the **Retry** button.
+    > Если RileyLink находится вне диапазона Bluetooth или не имеет активного подключения к телефону, вы получите сообщение об ошибке **Нет ответа от RileyLink**. Если это происходит, передвиньте RileyLink ближе к телефону и нажмите кнопку **Повторить**.
     > 
     > *ПРИМЕЧАНИЕ: Перед установкой катетера рекомендуется ущипнуть кожу рядом с местом ввода катетера. Это уменьшает болевые ощущения при вводе иглы и снижает шансы на развитие окклюзий.*
     > 
@@ -175,7 +175,7 @@ Before you can activate a pod please ensure you have properly configured and con
 
     > ![Активировать Pod_13](../images/omnipod/Activate_Pod_13.png)
 
-10. The **Pod management** menu screen should now display with the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. Это потому, что под активен и вы не можете активировать дополнительный под без деактивации текущего.
+10. На экране меню **управления Pod** кнопка **Активировать Pod (1)** теперь *выключена* и **Деактивировать Pod (2)** *включена*. Это потому, что под активен и вы не можете активировать дополнительный под без деактивации текущего.
 
     Click on the back button on your phone to return to the **Omnipod (POD)** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
 
