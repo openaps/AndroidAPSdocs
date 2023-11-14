@@ -177,13 +177,13 @@ You can enable the Omnipod driver in AAPS in **two ways**:
 
 10. На экране меню **управления Pod** кнопка **Активировать Pod (1)** теперь *выключена* и **Деактивировать Pod (2)** *включена*. Это потому, что под активен и вы не можете активировать дополнительный под без деактивации текущего.
 
-    Click on the back button on your phone to return to the **Omnipod (POD)** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
+    Нажмите на кнопку Назад на телефоне, чтобы вернуться на вкладку **Omnipod (POD)**, которая теперь отображает текущую информацию с Pod, включая скорость базала, заполненность резервуара, введенный инсулин, ошибки и предупреждения.
 
-    For more details on the information displayed go to the [Omnipod (POD) Tab](OmnipodEros-omnipod-pod-tab) section of this document.
+    Более подробно о показываемой информации в разделе [](OmnipodEros-omnipod-pod-tab)Вкладка Omnipod (POD) этого документа.
 
     ![Активировать Pod_14](../images/omnipod/Activate_Pod_14.png) ![Активировать Pod_15](../images/omnipod/Activate_Pod_15.png)
 
-### Deactivating a Pod
+### Деактивация Pod
 
 Under normal circumstances, the life of a pod should run for three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
 
