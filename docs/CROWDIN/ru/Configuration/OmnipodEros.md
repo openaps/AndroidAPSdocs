@@ -259,57 +259,57 @@ You can enable the Omnipod driver in AAPS in **two ways**:
 
 *ПРИМЕЧАНИЕ - если вы не видите кнопку "ОПОВЕЩЕНИЕ ПРИНЯТО", то только потому, что оно отображается на вкладке Omnipod (POD), когда срабатывает оповещение о завершении срока действия или низком уровне инсулина в резервуаре.*
 
-The process below will show you how to acknowledge and dismiss pod beeps that occur when the active pod time reaches the warning time limit before the pod expiration of 72 hours (3 days). This warning time limit is defined in the **Hours before shutdown** Omnipod alerts setting. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hour (3 days) limit.
+Процесс, описанный ниже, поможет подтверждать получение и убирать звуковые сигналы, когда активное время Pod достигнет 72 часов (3‑х суток). Этот предел времени для оповещения определен в настройках сигналов **Времени до выключения** Omnipod. Максимальная продолжительность работы Pod составляет 80 часов (3‑е суток + 8 часов), однако производитель (Insulet) рекомендует не превышать 72 часа (3‑х суток).
 
-*NOTE - If you have enabled the "Automatically acknowledge Pod alerts" setting in Omnipod Alerts, this alert will be handled automatically after the first occurrence and you will NOT need to manually dismiss the alert.*
+*ПРИМЕЧАНИЕ - Если вы включили опцию "Автоматически принимать предупреждения Pod" в Omnipod Alerts, это уведомление будет обработано автоматически после первого вхождения и вам НЕ нужно вручную удалить оповещение.*
 
-1. When the defined **Hours before shutdown** warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and a pod change will soon be required. You can verify this on the **Omnipod (POD)** tab, the **Pod expires: (1)** field will show the exact time the pod will expire (72 hours after activation) and the text will turn **red** after this time has passed, under the **Active Pod alerts (2)** field where the status message **Pod will expire soon** is displayed. This trigger will display the **ACK ALERTS (3)** button. A **system notification (4)** will also inform you of the upcoming pod expiration
+1. По достижении заданного времени предупреждения об ** отключении**, под начнет издавать сигналы о сроке отключения и приближении времени замены. You can verify this on the **Omnipod (POD)** tab, the **Pod expires: (1)** field will show the exact time the pod will expire (72 hours after activation) and the text will turn **red** after this time has passed, under the **Active Pod alerts (2)** field where the status message **Pod will expire soon** is displayed. This trigger will display the **ACK ALERTS (3)** button. **системное уведомление (4)** также сообщит о предстоящем истечении срока работы пода
 
    > ![Acknowledge_Alerts_1](../images/omnipod/Acknowledge_Alerts_1.png) ![Acknowledge_Alerts_2](../images/omnipod/Acknowledge_Alerts_2.png)
 
-2. Go to the **Omnipod (POD)** tab and press the **ACK ALERTS (2)** button (acknowledge alerts). The RileyLink sends the command to the pod to deactivate the pod expiration warning beeps and updates the **Pod status (1)** field with **ACKNOWLEDGE ALERTS**.
+2. Перейдите на вкладку **Omnipod (POD)** и нажмите кнопку **ПОДТВЕРДИТЬ ПОЛУЧЕНИЕ ОПОВЕЩЕНИЯ(1)**). RileyLink отправляет команду на Pod, чтобы деактивировать предупреждение об истечении срока действия Pod, и обновляет состояние **Pod (1)** на ** ОПОВЕЩЕНИЕ ПРИНЯТО**.
 
    > ![Acknowledge_Alerts_3](../images/omnipod/Acknowledge_Alerts_3.png)
 
-3. Upon **successful deactivation** of the alerts, **2 beeps** will be issued by the active pod and a confirmation dialog will display the message **Activate alerts have been acknowledged**. Нажмите кнопку **OK** для того, чтобы подтвердить действие и убрать диалоговое окно.
+3. После **успешного отключения** оповещений активный Pod издаст **два сигнала** и на экране появится подтверждающее сообщение **активные оповещения заглушены**. Нажмите кнопку **OK** для того, чтобы подтвердить действие и убрать диалоговое окно.
 
    > ![Acknowledge_Alerts_4](../images/omnipod/Acknowledge_Alerts_4.png)
    > 
-   > If the RileyLink is out of range of the pod while the acknowledge alerts command is being processed a warning message will display 2 options. **Mute (1)** will silence this current warning. **OK (2)** will confirm this warning and allow the user to try to acknowledge alerts again.
+   > Если RileyLink находится за пределами диапазона приема Pod в то время, пока команда подтверждения оповещений обрабатывается, могут появиться 2 варианта оповещений. **Mute (1)** will silence this current warning. **OK (2)** will confirm this warning and allow the user to try to acknowledge alerts again.
    > 
    > ![Acknowledge_Alerts_5](../images/omnipod/Acknowledge_Alerts_5.png)
 
-4. Go to the **Omnipod (POD)** tab, under the **Active Pod alerts** field, the warning message is no longer displayed and the active pod will no longer issue pod expiration warning beeps.
+4. На вкладке **Omnipod (POD)** в поле **оповещения активного Pod ** больше не будет отображаться предупреждение об истечении срока действия.
 
 (OmnipodEros-view-pod-history)=
 
 ### Просмотр истории Pod
 
-В этом разделе показано, как просмотреть историю активного пода и отфильтровать ее по различным категориям. The pod history tool allows you to view the actions and results committed to your currently active pod during its three day (72 - 80 hours) life.
+В этом разделе показано, как просмотреть историю активного пода и отфильтровать ее по различным категориям. Инструмент истории пода позволяет просматривать действия текущего активного пода за трое суток его жизни (72 - 80 часов).
 
-This feature is useful for verifying boluses, TBRs, basal changes that were given but you may be unsure if they completed. The remaining categories are useful in general for troubleshooting issues and determining the order of events that occurred leading up to a failure.
+Эта функция полезна для проверки болюсов, TBR, изменений базала, но без уверенности в завершении. Остальные категории полезны для решения проблем, а также для определения хода событий, приводящих к сбою.
 
-*NOTE:* **Uncertain** commands will appear in the pod history, however due to their nature you cannot ensure their accuracy.
+*ПРИМЕЧАНИЕ:* В логах Pod появятся **Не подтверждено**, однако из-за характера таких сообщений невозможно опредилить их точность.
 
-1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod management** menu and then press the **Pod history (2)** button to access the pod history screen.
+1. Перейдите на вкладку **Omnipod (POD)**, нажмите на кнопку **УПРАВЛЕНИЕ ПОМПОЙ(1)** чтобы вызвать меню **Управление помпой Omnipod** и нажмите на кнопку **История Pod(2)** для вызова экрана истории.
 
    > ![Pod_History_1](../images/omnipod/Pod_History_1.png) ![Pod_History_2](../images/omnipod/Pod_History_2.png)
 
-2. On the **Pod history** screen, the default category of **All (1)** is displayed showing the **Date and Time (2)** of all pod **Actions (3)** and **Results (4)** in reverse chronological order. Use your phone’s **back button 2 times** to return to the **Omnipod (POD)** tab in the main AAPS interface.
+2. На экране **Журнал Pod** по умолчанию отображается категория **Все (1)** и показываетcz **Дата и время (2)** **Действий (3)** всех Pod и **Результаты (4)** в обратном хронологическом порядке,. Нажмите кнопку назад **на телефоне 2 раза** для возврата на вкладку **Omnipod (POD)** в главном интерфейсе AAPS.
 
    > ![Pod_History_3](../images/omnipod/Pod_History_3.png) ![Pod_History_4](../images/omnipod/Pod_History_4.png)
 
-### View RileyLink Settings and History
+### Просмотр настроек и журнала RileyLink
 
-This section shows you how to review the settings of your active pod and RileyLink along with the communication history of each. This feature, once accessed, is split into two sections: **Settings** and **History**.
+В этом разделе показано, как просмотреть настройки активного пода и RileyLink, а также историю их коммуникаций. Эта функция разделена на два раздела: **Настройки** и **История**.
 
-The primary use of this feature is when your pod communication device is out of the Bluetooth range of your phone after a period of time and the **RileyLink status** reports **RileyLink unreachable**. The **REFRESH** button on the main **Omnipod (POD)** tab will manually attempt to re-establish Bluetooth communication with the currently configured RileyLink in the Omnipod settings.
+Основное использование этой функции происходит ткогда устройство Bluetooth выходит из диапазона связи с телефоном и через некоторое времяи в поле **RileyLink** появляется сообщение **RileyLink недоступен**. Кнопка **ОБНОВИТЬ** на главной вкладке **Omnipod (POD)** при нажатии позволит попытаться восстановить связь Bluetooth с текущим устройством RileyLink.
 
-In the event the **REFRESH** button on the main **Omnipod (POD)** tab does not restore the connection to the pod communication device, please follow the additional steps below for a manual reconnection.
+В случае если кнопка **ОБНОВИТЬ** на главной вкладке **Omnipod (POD)** не восстанавливает соединение, выполните дополнительные шаги, перечисленные ниже для переподключения вручную.
 
-#### Manually Re-establish Pod Communication Device Bluetooth Communication
+#### Восстановление передачи данных с устройства Bluetooth
 
-1. From the **Omnipod (POD)** tab when the **RileyLink Status: (1)** reports **RileyLink unreachable** press the **POD MGMT (2)** button to navigate to the **Pod Management** menu. On the **Pod Management** menu you will see a notification appear actively searching for a RileyLink connection, press the **RileyLink stats (3)** button to access the **RileyLink settings** screen.
+1. С вкладки **Omnipod (POD)**, когда **Статус RileyLink (1)** отображается как **RileyLink недоступен** нажмите кнопку **УПРАВЛЕНИЕ ПОМПОЙ (2)** и перейдите в соответствующее меню. On the **Pod Management** menu you will see a notification appear actively searching for a RileyLink connection, press the **RileyLink stats (3)** button to access the **RileyLink settings** screen.
 
    > ![RileyLink_Bluetooth_Reset_1](../images/omnipod/RileyLink_Bluetooth_Reset_1.png) ![RileyLink_Bluetooth_Reset_2](../images/omnipod/RileyLink_Bluetooth_Reset_2.png)
 
