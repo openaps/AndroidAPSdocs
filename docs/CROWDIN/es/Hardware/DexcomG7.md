@@ -9,13 +9,13 @@ Cabe destacar que el sistema Dexcom G7, en comparación con Dexcom G6, no suaviz
 
 ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
-## 1.  Patched Dexcom G7 App (DiAKEM)
+## 1.  Aplicación Dexcom G7 parcheada (DiAKEM)
 
 **Nota: Es necesario AAPS 3.2.0.0 o superior.**
 
 ### Instale una nueva aplicación parcheada de G7 e inicia el sensor.
 
-A patched Dexcom G7 app (DiAKEM) gives acess to the Dexcom G7 data. Esta no es la aplicación BYODA, ya que esta aplicación no puede recibir datos de Dexcom G7 por el momento.
+Una aplicación Dexcom G7 parcheada (DiAKEM) permite acceder a los datos del sensor Dexcom G7. Esta no es la aplicación BYODA, ya que esta aplicación no puede recibir datos de Dexcom G7 por el momento.
 
 Desinstala la aplicación original de Dexcom si la estabas utilizando antes (puedes continuar una sesión de sensor en curso, pero anota el código del sensor antes de desinstalar la aplicación).
 
@@ -37,9 +37,9 @@ El suavizado de los valores de glucosa puede activarse activando el plugin "Suav
 
 **Suavizado exponencial** **DEBE** estar activado para un uso significativo de los valores G7.
 
-## 2. Xdrip+ (direct connection to G7)
+## 2. xDrip+ (Conexión directa con G7)
 
-- Follow the instructions here: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- Sigue las instrucciones aquí: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
 - En AAPS, selecciona > Configuración > Origen BG > xDrip+. Ajusta la configuración de xDrip+ según las explicaciones de la página de configuración de xDrip+ [Configuración de xDrip+](../Configuration/xdrip.md).
 
 ## 3. xDrip+ (modo companion)
