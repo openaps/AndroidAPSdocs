@@ -4,7 +4,7 @@ El Freestyle Libre 3 (FSL3) requiere una configuración especial para recibir lo
 
 ![FL3](../images/d912c1d3-06d2-4b58-ad7c-025ca1980fae.jpeg)
 
-!!! Version 3.2.0.1 of AndroidAPS does not support 1-minute values. Acceleration and Smoothing does not work with 1-minute values. !!!
+!!! La versión 3.2.0.1 de AndroidAPS no soporta valores de 1 minuto. Acceleration and Smoothing does not work with 1-minute values. !!!
 
 Los siguientes métodos para lograr esto utilizan la aplicación independiente Juggluco. [Link].(https://www.juggluco.nl/Juggluco/download.html) Utiliza Juggluco para recibir datos en bruto en intervalos de 1 minuto del sensor, los cuales luego se envían a xDrip+ o AAPS. Los nuevos sensores se pueden iniciar tanto con la aplicación Libre 3 como directamente en Juggluco. La guía a continuación indica el proceso para iniciar un sensor con la aplicación Juggluco. Si el sensor se ha iniciado con una cuenta de Libreview conectada, también es posible alternar entre Juggluco y la aplicación de Libre 3 como receptor.
 
@@ -13,7 +13,7 @@ Juggluco también puede enviar datos a LibreView para compartirlos con los equip
 Dentro de xDrip+, el sensor se puede calibrar en un rango de -40 mg/dl a +20 mg/dl (-2,2 mmol/l a +1,1 mmol/l) para compensar las diferencias entre una lectura manual de medidor y las lecturas del sensor.
 
 ## Método 1: Lecturas cada minuto
-Version 3.2.0.1 of AndroidAPS does not support 1-minute values. Acceleration and Smoothing does not work with 1-minute values.
+La versión 3.2.0.1 de AndroidAPS no soporta valores de 1 minuto. Acceleration and Smoothing does not work with 1-minute values.
 
 
 ## Método 2: Lecturas cada 5 minutos
