@@ -273,9 +273,11 @@ Estado de las traducciones <./Administration/stateTranslations.md>
 ```
 
 ```{toctree}
-:caption: Área de pruebas (Sandbox)
+:caption: Sandbox
 
-Área de pruebas (Sandbox) <./Sandbox/sandbox1.md>
+Sandbox <./Sandbox/sandbox1.md>
+Crowdin Test <./Sandbox/crowdintest.md>
+
 ```
 
 ```{note}
