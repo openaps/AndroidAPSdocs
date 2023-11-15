@@ -624,43 +624,43 @@ This screen provides information in reverse chronological order of each state or
 Provides advanced settings to assist debugging.
 
 - **Показать кнопку Приостановить подачу на вкладке Omnipod:** Скрыть или показать кнопку приостановки подачи инсулина на вкладке **Omnipod (POD)**.
-- **Show Pulse log button in Pod Management menu:** Hide or display the pulse log button in the **Pod Management** menu.
-- **Show RileyLink Stats button in Pod Management menu:** Hide or display the RileyLink Stats button in the **Pod Management** menu.
-- **\*DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
+- **Показать кнопку журнала импульсов меню управления Pod:** Скрыть или отобразить кнопку журнала импульсов в меню **Управление Pod**.
+- **Показать кнопку статуса RileyLink в меню управления Pod:** Скрыть или отобразить кнопку статуса RileyLink в меню **Управление Pod**.
+- **\Когда включено, определать часовой пояс ** позволяет автоматически определять изменения часового пояса, если телефон используется в зоне, где применяется сезонная смена времени.
 
-### Switching or Removing an Active Pod Communication Device (RileyLink)
+### Переключение или удаление активного устройства связи с Pod (RileyLink)
 
-With many alternative models to the original RileyLink available (such as OrangeLink or EmaLink) or the need to have multiple/backup versions of the same pod communication device (RileyLink), it becomes necessary to switch or remove the selected pod communication device (RileyLink) from Omnipod Setting configuration.
+При наличии множества эквивалентов RileyLink (например, OrangeLink или EmaLink) или при необходимости в резервном устройстве связи (RileyLink), появляется необходимость переключить или удалить выбранное устройство связи (RileyLink) из конфигурации настроек Omnipod.
 
-The following steps will show how to **Remove** and existing pod communication device (RileyLink) as well as **Add** a new pod communication device.  Executing both **Remove** and **Add** steps will switch your device.
+Следующие шаги показывают как **Удалить**активное устройство коммуникации (RileyLink), а также **Добавить** новое устройство.  Выполнение шагов **Удалить** и **Добавить** позволит сменить устройство.
 
-1. Access the **RileyLink Selection** menu by selecting the **3 dot menu (1)** in the upper right hand corner of the **Omnipod (POD)** tab and selecting **Omnipod preferences (2)** from the dropdown menu. On the **Omnipod Settings** menu under **RileyLink Configuration (3)** press the **Not Set** (if no device is selected) or **MAC Address** (if a device is present) text to open the **RileyLink Selection** menu.
+1. Откройте меню **Выбора Rileylink **- через меню **3 точки (1)** в правом верхнем углу вкладки **Omnipod(POD)** и выберите **Настройки Omnipod (2)** из выпадающего меню. В меню **Настройки Omnipod** в разделе **Конфигурация RileyLink(3)** нажмите **Не выбрано** (если не выбрано устройство) или **MAC Address** (если устройство используется), чтобы открыть меню **Выбор RileyLink **.
 
    > ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
 
-### Remove Currently Selected Pod Communication Device (RileyLink)
+### Удаление выбранного устройства связи с Pod (RileyLink)
 
-This process will show how to remove the currently selected pod communication device (RileyLink) from the Omnipod Driver settings.
+Этот процесс покажет, как удалить выбранное устройство связи с POD (RileyLink) из настроек Omnipod Driver.
 
-1. Under **RileyLink Configuration** press the **MAC Address (1)** text to open the **RileyLink Selection** menu.
+1. В **Конфигурации RileyLink** нажмите строку **MAC Address (1)**, чтобы открыть меню **Выбор RileyLink**.
 
    > ![RileyLink_Setup_Remove_1](../images/omnipod/RileyLink_Setup_Remove_1.png)
 
-2. On the **RileyLink Selection** menu the press **Remove (2)** button to remove **your currently selected RileyLink (3)**
+2. В меню **Выбор RileyLink ** нажмите кнопку **Удалить (2)** для удаления **выбранного вами RileyLink (3)**
 
    > ![RileyLink_Setup_Remove_2](../images/omnipod/RileyLink_Setup_Remove_2.png)
 
-3. At the confirmation prompt press **Yes (4)** to confirm the removal of your device.
+3. В запросе подтверждения нажмите **Да (4)** для подтверждения удаления устройства.
 
    > ![RileyLink_Setup_Remove_3](../images/omnipod/RileyLink_Setup_Remove_3.png)
 
-4. You are returned to the **Omnipod Setting** menu where under **RileyLink Configuration** you will now see the device is **Not Set (5)**.  Congratulations, you have now successfully removed your selected pod communication device.
+4. Вы возвращаетесь в меню **Настройки Omnipod**, где в разделе **Конфигурация RileyLink** видно, что устройство **не установлено (5)**.  Поздравляем, вы успешно удалили выбранное устройство коммуникации с Pod.
 
    > ![RileyLink_Setup_Remove_4](../images/omnipod/RileyLink_Setup_Remove_4.png)
 
-### Add Currently Selected Pod Communication Device (RileyLink)
+### Добавить выбранное устройство связи с POD (RileyLink)
 
-This process will show how to add a new pod communication device to the Omnipod Driver settings.
+Этот процесс покажет как добавить новое коммуникационное устройство в настройки Omnipod Driver.
 
 1. Under **RileyLink Configuration** press the **Not Set (1)** text to open the **RileyLink Selection** menu.
 
