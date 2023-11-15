@@ -279,6 +279,8 @@ State of translations <./Administration/stateTranslations.md>
 :caption: Sandbox
 
 Sandbox <./Sandbox/sandbox1.md>
+Crowdin Test <./Sandbox/crowdintest.md>
+
 ```
 
 ```{note}
