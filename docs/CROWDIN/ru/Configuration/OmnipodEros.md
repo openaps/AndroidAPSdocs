@@ -364,7 +364,7 @@ You can enable the Omnipod driver in AAPS in **two ways**:
 
 This screen provides information in reverse chronological order of each state or action that either the RileyLink or currently connected pod is in or has taken. The entire history is only available for the currently active pod, after a pod change this history will be erased and only events from the newly activated pod will be recorded and shown.
 
-1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu, then press the **Pod History (2)** button to view the **Settings** and **History** screen. Click on the **HISTORY (3)** text to display the entire history of the RileyLink and currently active pod session.
+1. Перейдите на вкладку **Omnipod (POD)**, нажмите на кнопку **УПРАВЛЕНИЕ ПОМПОЙ(1)**, чтобы войти в меню **Управление помпой Omnipod**, нажмите на кнопку **История Pod(2)** для вызова экрана **настроек** и **истории**. Нажмите на **ИСТОРИЯ (3)** для отображения всей истории RileyLink и активного Pod.
 
    > ![RileyLink_Statistics_History_1](../images/omnipod/RileyLink_Statistics_History_1.png) ![RileyLink_Statistics_History_2](../images/omnipod/RileyLink_Statistics_History_2.png)
    > 
@@ -372,69 +372,69 @@ This screen provides information in reverse chronological order of each state or
 
 ##### Поля
 
-> - **Date & Time**: In reverse chronological order the timestamp of each event.
+> - **Дата & Время**: В обратном хронологическом порядке временная отметка каждого события.
 > - **Device:** The device to which the current action or state is referring.
-> - **State or Action:** The current state or action performed by the device.
+> - **Состояние или Действие:** Текущее состояние или действие, совершенное устройством.
 
 (OmnipodEros-omnipod-pod-tab)=
 
-## Omnipod (POD) Tab
+## Вкладка Omnipod (POD)
 
-Below is an explanation of the layout and meaning of the icons and status fields on the **Omnipod (POD)** tab in the main AAPS interface.
+Ниже приведено объяснение расположения и значения иконок и информационных полей на вкладке **Omnipod (POD)** в главном интерфейсе AAPS.
 
-*NOTE: If any message in the Omnipod (POD) tab status fields report (uncertain) then you will need to press the Refresh button to clear it and refresh the pod status.*
+*ПРИМЕЧАНИЕ: Если в каком-то из информационных полей вкладки Omnipod (POD) появляется сообщение "не подтверждено" нажмите кнопку Обновить для получения точного статуса.*
 
 > ![Omnipod_Tab](../images/omnipod/Omnipod_Tab.png)
 
 ### Поля
 
-- **RileyLink Status:** Displays the current connection status of the RileyLink
+- **Статус RileyLink:** Отображает текущее состояние соединения RileyLink
 
 - *RileyLink Unreachable* - pod communication device is either not within Bluetooth range of the phone, powered off or has a failure preventing Bluetooth communication.
-- *RileyLink Ready* - pod communication device is powered on and actively initializing the Bluetooth connection
-- *Connected* - pod communication device is powered on, connected and actively able to communicate via Bluetooth.
+- *RileyLink Готов* - устройство связи включено и активно инициализирует соединение Bluetooth
+- *Подключено* - устройство связи включено, подключено и способно активно общаться через Bluetooth.
 
-- **Pod address:** Displays the current address in which the active pod is referenced
+- **адрес Pod:** Отображает текущий адрес, в котором указан активный POD.
 
-- **LOT:** Displays the LOT number of the active pod
+- **Номер партии** Отображает номер партии изготовления активного POD
 
 - **TID:** Displays the serial number of the pod.
 
 - **Firmware Version:** Displays the firmware version of the active pod.
 
-- **Time on Pod:** Displays the current time on the active pod.
+- **Время на Pod:** Отображает текущее время на POD
 
-- **Pod expires:** Displays the date and time when the active pod will expire.
+- **Срок действия Pod истекает:**Отображает дату и время окончания срока работы активного POD.
 
-- **Pod status:** Displays the status of the active pod.
+- **Статус Pod:** Отображает статус активного POD.
 
-- **Last connection:** Displays the last time communication with the active pod was achieved.
+- **Прошлое подключение:** Отображает время последней связи с Pod.
 
 - *Только что* - меньше 20 секунд назад.
 - *Менее минуты назад* - более 20, но менее 60 секунд назад.
 - *1 минуту назад* - более 60, но менее 120 секунд (2 мин)
 - *XX минут назад* - более 2 минут назад, определяется величиной XX
 
-- **Last bolus:** Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
+- **Предыдущий болюс:** Отображает величину болюса, отправленного в активный Pod с указанием в скобках как давно он был подан.
 
 - **Базовая скорость базала:** Отображает базовую скорость, запрограммированную на текущее время из профиля базала.
 
 - **Временная скорость базала:** Отображает текущую временную скорость базала в следующем формате
 
-- Units / hour @ time TBR was issued (minutes run / total minutes TBR will be run)
+- Единицы / час @ время начала TBR (отработаных минут / общее время TBR)
 - *Пример:* 0.00ед./ч. @18:25 ( 90/120 мин.)
 
-- **Резервуар:** Показывает 50+ед. когда в резервуаре остается более 50 ед. Below this value the exact units are displayed in yellow text.
+- **Резервуар:** Показывает 50+ед. когда в резервуаре остается более 50 ед. Ниже этого значения точные единицы отображаются желтым текстом.
 
-- **Всего подано** Отображает общее количество единиц инсулина, доставленных из резервуара. *Note this is an approximation as priming and filling the pod is not an exact process.*
+- **Всего подано** Отображает общее количество единиц инсулина, доставленных из резервуара. *Обратите внимание, что это приблизительная величина, поскольку первичное заполнение POD не является точным процессом.*
 
 - **Ошибки:** Отображает последнюю возникшую ошибку. Review the [Pod history](OmnipodEros-view-pod-history), [RileyLink history](OmnipodEros-rileylink-and-active-pod-history) and log files for past errors and more detailed information.
 
-- **Активные оповещения Pod** зарезервировано для текущих оповещений на активном Pod. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
+- **Активные оповещения Pod** зарезервировано для текущих оповещений на активном Pod. Обычно используется при истечении срока действия pod последние 72 часа, а звуковые оповещения работают.
 
-### Icons
+### Значки
 
-- **REFRESH:**
+- **ОБНОВИТЬ:**
 
   > ![refresh_pod_status](../images/omnipod/ICONS/omnipod_overview_refresh_pod_status.png)
   > 
@@ -442,43 +442,43 @@ Below is an explanation of the layout and meaning of the icons and status fields
   > 
   > Используйте для обновления статуса pod и сброса полей статуса, содержащих текст (не подтверждено).
   > 
-  > See the [Troubleshooting section](OmnipodEros-troubleshooting) below for additional information.
+  > Дополнительную информацию см. в разделе [Устранение неполадок](OmnipodEros-troubleshooting) ниже.
 
-- **POD MGMT:**
+- **УПРАВЛЕНИЕ ПОМПОЙ:**
 
   > ![pod_management](../images/omnipod/ICONS/omnipod_overview_pod_management.png)
   > 
-  > Navigates to the Pod management menu
+  > Ведет в меню управления Pod
 
-- **ACK ALERTS:**
+- **ПРИНЯТЬ ОПОВЕЩЕНИЯ:**
 
   > ![ack_alerts](../images/omnipod/ICONS/omnipod_overview_ack_alerts.png)
   > 
   > When pressed this will disable the pod expiration beeps and notifications.
   > 
-  > Button is displayed only when pod time is past expiration warning time Upon successful dismissal, this icon will no longer appear.
+  > Кнопка отображается только при истечении срока действия предупреждения После успешного сброса, этот значок больше не будет отображаться.
 
-- **SET TIME:**
+- **УСТАНОВИТЬ ВРЕМЯ:**
 
   > ![set_time](../images/omnipod/ICONS/omnipod_overview_set_time.png)
   > 
-  > When pressed this will update the time on the pod with the current time on your phone.
+  > При нажатии синхронизирует время на POD с текущим временем на телефоне.
 
 - **ПРИОСТАНОВИТЬ:**
 
   > ![останов](../images/omnipod/ICONS/omnipod_overview_suspend.png)
   > 
-  > Suspends the active pod
+  > Останавливает активный под
 
 - **RESUME DELIVERY:**
 
   > ![возобновить](../images/omnipod/ICONS/omnipod_overview_resume.png)
   > 
-  > > Resumes the currently suspended, active pod
+  > > Возобновляет остановленный активный под
 
 ### Меню управления помпой
 
-Below is an explanation of the layout and meaning of the icons on the **Pod Management** menu accessed from the **Omnipod (POD)** tab.
+Ниже приводится описание макета и значения иконок в меню **Управление Pod**, доступном из вкладки **Omnipod (POD)**.
 
 > ![Omnipod_Tab_Pod_Management](../images/omnipod/Omnipod_Tab_Pod_Management.png)
 
@@ -486,52 +486,52 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 
   > ![activate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
   > 
-  > Primes and activates a new pod
+  > Заполняет катетер и активирует новый Pod
 
 - **Деактивация Pod**
 
   > ![deactivate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
   > 
-  > Deactivates the currently active pod.
+  > Деактивирует текущий активный Pod.
   > 
-  > A partially paired pod ignores this command.
+  > Частично сопряженный Pod игнорирует эту команду.
   > 
-  > Use this command to deactivate a screaming pod (error 49).
+  > Используйте эту команду, чтобы деактивировать под, издающий звуковое оповещение об окончании срока работы (ошибка 49).
   > 
-  > If the button is disabled (greyed out) use the Discard Pod button.
+  > Если кнопка отключена (высвечивается серым) используйте кнопку Завершить пользование Pod'ом.
 
 - **Воспроизвести тестовый звуковой сигнал**
 
   > ![play_test_beep](../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png)
   > 
-  > Plays a single test beep on the pod when pressed.
+  > Воспроизводит один тестовый сигнал на поде при нажатии.
 
-- **Discard pod**
+- **Завершить пользование Pod'ом**
 
   > ![discard_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_discard_pod.png)
   > 
-  > Deactivates and discards the pod state of an unresponsive pod when pressed.
+  > При нажатии деактивирует и сбрасывает состояние не реагирующего пода.
   > 
-  > Button is only displayed when very specific cases are met as proper deactivation is no longer possible:
+  > Кнопка отображается только тогда, когда происходят нештатные ситуации поскольку надлежащее деактивация уже невозможна:
   > 
-  > > - A **pod is not fully paired** and thus ignores deactivate commands.
-  > > - A **pod is stuck** during the pairing process between steps
-  > > - A **pod simply does not pair at all.**
+  > > - **Pod не полностью сопряжен ** и поэтому игнорирует команды на деактивацию.
+  > > - **Pod завис** между шагами во время процесса сопряжения
+  > > - **Pod просто не сопрягается**
 
 - **Журнал Pod**
 
   > ![pod_history](../images/omnipod/ICONS/omnipod_overview_pod_management_pod_history.png)
   > 
-  > Displays the active pod activity history
+  > Отображает историю активности Pod
 
 - **Статистика RileyLink:**
 
   > ![rileylink_stats](../images/omnipod/ICONS/omnipod_overview_pod_management_rileylink_stats.png)
   > 
-  > Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
+  > Ведетна экран статистики RileyLink, отображающий текущие настройки и историю соединения RileyLink
   > 
   > > - **Settings** - displays RileyLink and active pod settings information
-  > > - **History** - displays RileyLink and Pod communication history
+  > > - **История** - отображает историю коммуникации RileyLink и Pod
 
 - **Сбросить конфигурацию RileyLink**
 
@@ -540,20 +540,20 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
   > When pressed this button resets the currently connected pod communication device configuration.
   > 
   > > - When communication is started, specific data is sent to and set in the RileyLink > - Memory Registers are set > - Communication Protocols are set > - Tuned Radio Frequency is set 
-  > > - See [additional notes](OmnipodEros-reset-rileylink-config-notes) at the end of this table
+  > > - См. [дополнительные замечания](OmnipodEros-reset-rileylink-config-notes) в конце таблицы
 
 - **Читать журнал импульсов:**
 
   > ![pulse_log](../images/omnipod/ICONS/omnipod_overview_pod_management_pulse_log.png)
   > 
-  > > Sends the active pod pulse log to the clipboard
+  > > Отправляет журнал импульсов в буфер обмена
 
 (OmnipodEros-reset-rileylink-config-notes)=
 
-#### *Reset RileyLink Config Notes*
+#### *Сбросить записи конфигурации RileyLink*
 
-- The primary usage of this feature is when the currently active pod communication device is not responding and communication is in a stuck state.
-- If the pod communication device is turned off and then back on, the **Reset RileyLink Config** button needs to be pressed, so that it sets these communication parameters in the pod communication device configuration.
+- Эта функция в основном требуется когда не отвечает активное устройство связи и коммуникация зависла.
+- Если коммуникационное устройство pod выключено, а затем снова включено, необходимо нажать кнопку **Сбросить конфигурацию RileyLink **, чтобы установить параметры связи в конфигурации коммуникационного устройства.
 - If this is NOT done then AAPS will need to be restarted after the pod communication device is power cycled.
 - This button **DOES NOT** need to be pressed when switching between different pod communication devices
 
@@ -561,11 +561,11 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 
 ## Omnipod Settings
 
-The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**➜**Pump**➜**Omnipod**➜**Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled **OMNIPOD** or **POD**. В документации эта вкладка называется **Omnipod (POD)**.
+Настройки драйвера Omnipod доступны из левого верхнего **выпадающего меню** выберите **Конфигуратор**\ ➜\ **Помпа**\ ➜\ **Omnipod **\ ➜\ **Шестеренка настроек (2)** включить ** радио кнопку (1) **с маркировкой **Omnipod** Поставив **флажок (3)** рядом с **шестеренкой настроек(2)** вы активируете вкладку Omnipod в интерфейсе AAPS. В документации эта вкладка называется **Omnipod (POD)**.
 
 ![Omnipod_Settings_1](../images/omnipod/Omnipod_Settings_1.png)
 
-**NOTE:** A faster way to access the **Omnipod settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **Omnipod (POD)** tab and selecting **Omnipod preferences (2)** from the dropdown menu.
+**ПРИМЕЧАНИЕ:** Более быстрый способ доступа к **Настройкам Omnipod** - через меню **3 точки (1)** в правом верхнем углу вкладки **Omnipod(POD)** выбрать **Настройки Omnipod (2)** из выпадающего меню.
 
 ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png)
 
@@ -573,57 +573,57 @@ The Omnipod driver settings are configurable from the top-left hand corner **ham
 
 ![Omnipod_Settings_3](../images/omnipod/Omnipod_Settings_3.png)
 
-*NOTE: An asterisk (\*) denotes the default for a setting is enabled.*
+*ПРИМЕЧАНИЕ: Знак (\*) обозначает что выбрано значение по умолчанию.*
 
 ### RileyLink / РайлиЛинк
 
-Allows for scanning of a pod communication device. The Omnipod driver cannot select more than one pod communication device at a time.
+Позволяет сканировать устройство коммуникации. The Omnipod driver cannot select more than one pod communication device at a time.
 
-- **Show battery level reported by OrangeLink/EmaLink/DiaLink:** Reports the actual battery level of the OrangeLink/EmaLink/Dialink. It is **strongly recommended** that all OrangeLink/EmaLink/DiaLink users enable this setting.
+- **Показать уровень заряда батареи от OrangeLink/EmaLink/DiaLink:** сообщает фактический уровень заряда батареи OrangeLink/EmaLink/Dialink. It is **strongly recommended** that all OrangeLink/EmaLink/DiaLink users enable this setting.
 
-- DOES NOT work with the original RileyLink.
+- НЕ работает с оригинальным RileyLink.
 - May not work with RileyLink alternatives.
-- Enabled - Reports the current battery level for supported pod communication devices.
-- Disabled - Reports a value of n/a.
+- Включено - Отображает текущий уровень заряда для поддерживаемых устройств связи.
+- Отключено - Отображает значение n/a.
 
-- **Enable battery change logging in Actions:** In the Actions menu, the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Some pod communication devices now have the ability to use regular batteries which can be changed.  This option allows you to note that and reset battery age timers.
+- **Включить запись о замене батареи в Действиях:** в меню Действий, кнопка изменения батареи включена, ЕСЛИ вы включили эту настройку и настройку батареи выше.  Some pod communication devices now have the ability to use regular batteries which can be changed.  Эта опция позволяет сбросить таймеры батареи.
 
 ### Звуковые сигналы подтверждения
 
 Обеспечивает звуковые сигналы подтверждения от Pod об успешной подаче болюса, изменении базала, SMB и TBR.
 
-- **\*Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
+- **Звуковой сигнал болюса включен** Включить или отключить подтверждающие сигналы при подаче болюса.
 - **\*Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
-- **\*SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
+- **Звуковой сигнал микроболюсов SMB включен** Включить или отключить подтверждающие сигналы при подаче микроболюсов.
 - **Звуковой сигнал временного базала TBR включен** Включить или отключить подтверждающие сигналы при установке или отмене TBR.
 
 ### Оповещения
 
-Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
+Оповещения AAPS и Nightscout об истечении срока, выключении, низком резервуаре на основе заданных пороговых значений.
 
-*Примечание: уведомления AAPS выдаются ВСЕГДА для любого оповещения после связи с pod с момента срабатывания оповещения. Сброс уведомления НЕ удалит оповещение, ЕСЛИ НЕ включено автоматическое подтверждение получения оповещений. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.*
+*Примечание: уведомления AAPS выдаются ВСЕГДА для любого оповещения после связи с pod с момента срабатывания оповещения. Сброс уведомления НЕ удалит оповещение, ЕСЛИ НЕ включено автоматическое подтверждение получения оповещений. Чтобы ВРУЧНУЮ убрать оповещение следует открыть вкладку Omnipod (POD) и нажать кнопку Заглушать СИГНАЛЫ ОПОВЕЩЕНИЯ.*
 
 - **\*Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
 - **Время до выключения**.
 - **\*Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
 - **Количество единиц:** Количество единиц, на которые можно вызывать предупреждение о низком резервуаре резервуара.
-- **Automatically acknowledge Pod alerts:** When enabled a notification will still be issued however immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
+- **Автоматически признавать Pod уведомления:** Когда включено, уведомление все еще будет выдано однако сразу после первого сообщения от Pod, оно будет автоматически признано, и предупреждение будет закрыто.
 
 ### Уведомления
 
-Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus events were successful.
+Выдает уведомления AAPS и звуковые оповещения, когда нет уверенности в успешных TBR, SMB, болюсах или приостановленных событиях.
 
 *ПРИМЕЧАНИЕ: Это только уведомления, звуковые оповещения об ошибках не производится.*
 
 - **Звук для неопределенных уведомлений TBR включен:** Включите или отключите этот параметр, чтобы вызвать звуковое оповещение и визуальное уведомление, когда AAPs неизвестно, был ли установлен TBR.
-- **\*Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
-- **\*Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
+- **Звук для неопределенных уведомлений SMB включен:** Включите или отключите этот параметр, чтобы вызвать звуковое оповещение и визуальное уведомление, когда AAPs неизвестно, был ли успешно подан микроболюс SMB.
+- **Звук для неопределенных уведомлений о болюсах включен:** Включите или отключите этот параметр, чтобы вызвать звуковое оповещение и визуальное уведомление, когда AAPs неизвестно, был ли успешно подан болюс.
 
 ### Другое
 
 Provides advanced settings to assist debugging.
 
-- **Show Suspend Delivery button in Omnipod tab:** Hide or display the suspend delivery button in the **Omnipod (POD)** tab.
+- **Показать кнопку Приостановить подачу на вкладке Omnipod:** Скрыть или показать кнопку приостановки подачи инсулина на вкладке **Omnipod (POD)**.
 - **Show Pulse log button in Pod Management menu:** Hide or display the pulse log button in the **Pod Management** menu.
 - **Show RileyLink Stats button in Pod Management menu:** Hide or display the RileyLink Stats button in the **Pod Management** menu.
 - **\*DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
