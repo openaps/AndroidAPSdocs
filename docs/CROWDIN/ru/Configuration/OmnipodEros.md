@@ -352,7 +352,7 @@ You can enable the Omnipod driver in AAPS in **two ways**:
 
 ##### Поля устройства (4) - с активным Pod
 
-> - **Тип устройства:** Тип устройства, связывающегося с устройством связи под (Omnipod Pod pump)
+> - **Тип устройства:** Тип устройства, связывающегося с устройством связи (Omnipod Pod pump)
 > - **Модель устройства:** Модель активного устройства, подключенного к устройству связи Pod (текущее название модели модуля Omnipod, т. е. Eros)
 > - **Серийный номер помпы:** Серийный номер активированного в настоящее время пода
 > - **Pump Frequency:** Communication radio frequency the pod communication device has tuned to enable communication between itself and the pod.
