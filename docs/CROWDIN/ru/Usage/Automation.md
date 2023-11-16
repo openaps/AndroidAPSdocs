@@ -65,7 +65,7 @@ Depending on your [settings in config builder](Config-Builder-tab-or-hamburger-m
 
   - Use passive location: AAPS only takes locations when other apps are requesting it
   - Use network location: Location of your Wifi
-  - Use GPS location (Attention! Может привести к чрезмерной разрядке аккумулятора!)
+  - Используйте локатор GPS (Внимание! Может привести к чрезмерной разрядке аккумулятора!)
 
 ### Действие
 
