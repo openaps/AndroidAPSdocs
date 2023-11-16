@@ -159,57 +159,57 @@
 
 - При настройке вы можете определить время, в течение которого кнопка будет видна на главном экране - только одна кнопка в определенный период.
 
-- If you click the quick wizard button AAPS will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
+- При нажатии на кнопку быстрого мастера AAPS будет вычислять и предлагать болюс на углеводы, основанный на ваших текущих коэффициентах (с учетом текущего значения ГК, активного инсулина и т. п.).
 
-- The proposal has to be confirmed before insulin is delivered.
+- Это предложение должно быть подтверждено перед подачей инсулина.
 
   ```{image} ../images/Pref2020_OV_QuickWizard.png
-  :alt: Preferences > Quick Wizard Button
+  :alt: Настройки: > Кнопка Быстрого Мастера
   ```
 
 (Preferences-default-temp-targets)=
-### Default temp targets
+### Временные цели по умолчанию
 
-- [Temp targets (TT)](../Usage/temptarget.md) allow you to define change your blood glucose target for a certain time period.
+- [Временные цели(TT)](../Usage/temptarget.md) позволяют вам задавать целевое значение ГК на определенный период времени.
 
-- With setting of default TT you can easily change your target for activity, eating soon etc.
+- При помощи временных целей TT, заданных по умолчанию, можно легко установить цель при нагрузках, предстоящем питании и т. п.
 
-- Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
+- Выполните долгое нажатие в правом верхнем углу на главном экране или используйте оранжевую кнопку «Углеводы» внизу.
 
   ```{image} ../images/Pref2020_OV_DefaultTT.png
-  :alt: Preferences > Default temp targets
+  :alt: Настройки > Временные цели по умолчанию
   ```
 
 ### Заполнить стандартное количество инсулина
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](Screenshots-action-tab).
-- Pre-set values can be defined in this dialogue.
+- Если вы хотите заполнить инфузионный набор или катетер при помощи AAPS, это можно сделать через вкладку [Действия](Screenshots-action-tab).
+- В этом диалоге можно задать предустановленные значения.
 
 (Preferences-range-for-visualization)=
-### Range for visualization
+### Диапазон визуализации
 
-- Define which part of the graph on the home screen shall be you target range and be filled with green background.
+- Определите, какая часть графика на главном экране будет заполнена зеленым фоном в качестве целевого диапазона.
 
   ```{image} ../images/Pref2020_OV_Range2.png
-  :alt: Preferences > Range for visualization
+  :alt: Настройки > Диапазон визуализации
   ```
 
 ### сокращенные имена табул
 
-- See more tab titles on screen.
+- Видеть больше вкладок на экране.
 
-- For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
+- Например, вкладка 'Помощник болюса OpenAPS AMA' становится 'OAPS', 'ЦЕЛЕВЫЕ ЗНАЧЕНИЯ ГК' становится 'ЦЕЛИ' и т. д.
 
   ```{image} ../images/Pref2020_OV_Tabs.png
-  :alt: Preferences > Tabs
+  :alt: Настройки > Вкладки
   ```
 
-### Show notes field in treatments dialogs
+### Показывать поле примечаний в диалогах терапии
 
 - Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
 
   ```{image} ../images/Pref2020_OV_Notes.png
-  :alt: Preferences > Notes in treatment dialogs
+  :alt: Настройки > Заметки в диалогах по терапии
   ```
 
 (Preferences-status-lights)=
@@ -218,18 +218,18 @@
 - Индикаторы состояния сообщают:
 
   - сколько времени отработал сенсор
-  - Sensor battery level for certain smart readers (see [screenshots page](Screenshots-sensor-level-battery) for details).
+  - Уровень заряда батареи сенсора для некоторых умных ридеров (подробнее см. на странице [снимки экрана](Screenshots-sensor-level-battery)).
   - сколько времени прошло с момента установки резервуара
   - об уровне заполнения резервуара (в единицах)
   - сколько времени прошло с момента установки канюли
-  - Батарея помпы работает
-  - Pump battery level (%)
+  - Батарея помпы работает... (Возраст батареи помпы)
+  - Уровень заряда батареи помпы (%)
 
 - Если превышено пороговое значение, данные показываются желтым цветом.
 
 - Если превышено критическое пороговое значение, значения будут показаны красным цветом.
 
-- In versions prior to AAPS 2.7 settings for status lights had to be made in Nightscout settings.
+- Настройки индикатора состояния должны были быть выполнены в настройках Nightscout в версиях AAPS до 2.7.
 
   ```{image} ../images/Pref2020_OV_StatusLights2.png
   :alt: Preferences > Status Lights
@@ -248,27 +248,27 @@
 - При использовании мастера болюса подается только заданный процент (должен быть от 10 до 100) от вычисленного.
 - Этот процент показан в мастере болюса.
 
-#### Помощник болюса
+#### Мастер болюса
 
-- If you run [Bolus wizard](Screenshots-bolus-wizard) and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+- Если запустить [Мастер Болюса](Screenshots-bolus-wizard) при гликемии выше 10 ммоль (180 мг/дл), то будет предложен болюс на коррекцию.
 
-- If correction bolus is accepted **no carbs** will be recorded.
+- Если болюс на коррекцию принят, **углеводы** не записываются.
 
-- An alarm will be started when glucose value is in good level to start eating.
+- Когда ГК в хорошем диапазоне для начала приема пищи, подается сигнал оповещения.
 
-- You have to enter [Bolus wizard](Screenshots-bolus-wizard) again and enter the amount of carbs you want to eat.
+- В этом случае выполняем повторный вход в [Мастер (Калькулятор) Болюса ](Screenshots-bolus-wizard) и вводим величину углеводов, которые собираемся съесть.
 
   ```{image} ../images/Home2021_BolusWizard_CorrectionOffer.png
-  :alt: Bolus advisor message
+  :alt:Сообщение мастера болюса
   ```
 
 (Preferences-superbolus)=
 #### Суперболюс
 
-- Option to enable superbolus in bolus wizard.
-- [Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes.
+- Опция для включения суперболюса в мастере.
+- [Суперболюс](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) - это идея "заимствовать" некоторое количество инсулина от базальной скорости следующих двух часов, чтобы предотвратить резкие пики.
 
-## Treatment safety
+## Безопасность терапии
 
 ### Тип пациента
 
