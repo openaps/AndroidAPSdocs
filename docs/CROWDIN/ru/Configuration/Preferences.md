@@ -206,7 +206,7 @@
 
 ### Показывать поле примечаний в диалогах терапии
 
-- Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
+- Дает возможность добавить короткие примечания к терапии (мастер болюса, углеводы, инсулин...)
 
   ```{image} ../images/Pref2020_OV_Notes.png
   :alt: Настройки > Заметки в диалогах по терапии
@@ -272,45 +272,45 @@
 
 ### Тип пациента
 
-- Safety limits are set based on the age you select in this setting.
+- Ограничения безопасности устанавливаются на основе возраста, который вы выбираете в этом параметре.
 - If you start hitting these hard limits (like max bolus) it's time to move one step up.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example).
-- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
+- Выбирать возраст выше, чем реальный, не следует, потому что может привести к передозировке при введении ошибочного значения в диалоге инсулина (например, если пропущен десятичный разделитель - точка или запятая).
+- Если вы хотите знать фактические величины жестких ограничений безопасности в коде, перейдите к функции алгоритма на [этой странице](../Usage/Open-APS-features.md).
 
-### Max allowed bolus \[U\]
+### Максимально разрешённый болюс \[ед.\]
 
-- Defines maximum amount of bolus insulin that AAPS is allowed to deliver at once.
+- Максимальное количество болюсного инсулина, разово разрешаемое в AAPS.
 - Эта настройка существует как ограничение безопасности для предотвращения подачи чрезмерного болюса из-за случайного ввода или ошибки пользователя.
 - Рекомендуется установить это значение как разумный предел, приблизительно соответствующий максимальному количеству болюсного инсулина, который вы когда-либо можете подать на еду или на коррекцию.
-- This restriction is also applied to the results of the bolus calculator.
+- Это ограничение также налагается на результаты калькулятора болюса.
 
-### Max allowed carbs \[g\]
+### Макс разрешенные углеводы [г.]
 
-- Defines the maximum amount of carbs that AAPS bolus calculator is allowed to dose for.
+- Это максимальное количество углеводов, на которое калькулятор болюса AAPS может подать дозу инсулина.
 - Эта настройка существует как ограничение безопасности для предотвращения подачи чрезмерного болюса из-за случайного ввода или ошибки пользователя.
 - Рекомендуется установить это значение как разумный предел, приблизительно соответствующий максимальному количеству углеводов, которые вам когда-либо понадобится на еду.
 
 ## Замкнутый цикл
 
 (Preferences-aps-mode)=
-### APS mode
+### Режим APS
 
-- Toggle between open and closed looping as well as low glucose suspend (LGS)
-- **Open looping** means TBR suggestions are made based on your data and appear as a notification. After manual confirmation, the command to dose insulin will be transferred to pump. Only if you use virtual pump you have to enter it manually.
-- **Замкнутый цикл** означает, что предложения по изменению скорости временного базала TBR автоматически отправляются на вашу помпу без вашего подтверждения.
-- **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. This means that if blood glucose is dropping it can reduce the basal rate, but if blood glucose is rising then it will only increase the basal rate if the basal IOB is negative (e.g. from a previous Low Glucose Suspend).
+- Переключение между открытым и замкнутым циклом, а также приостановкой на низких ГК (LGS)
+- Работа в **Открытом цикле** означает, что предложения временного базала TBR делаются на основе ваших данных и отображаются в виде уведомления. После подтверждения вручную, команда о дозировке временного базала передается на помпу. Only if you use virtual pump you have to enter it manually.
+- **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.
+- **Приостановка помпы на низкой ГК** похожа на работу в замкнутом цикле, но переопределяет параметр макс активного инсулина maxIOB на ноль. Это значит, что при падении гликемии базал будет снижен, но когда гликемия будет расти, он повысится только при отрицательном значении активного инсулина IOB (например, после предыдущей остановки подачи инсулина из-за низкой гликемии).
 
 (Preferences-minimal-request-change)=
 ### Минимальный запрос на изменения \[%\]
 
 - При открытогм цикле вы будете получать уведомления каждый раз, когда AAPS рекомендует скорректировать базальную скорость.
-- To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
+- Чтобы уменьшить число уведомлений, можно либо использовать более широкий диапазон целевой ГК, либо увеличить процент минимального запроса на изменения.
 - Он определяет относительное изменение, необходимое для активации уведомления.
 
 (Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)=
-## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
+## Улучшенный ассистент приема пищи (AMA) или Супер Микро Болюс (SMB)
 
-Depending on your settings in [config builder](../Configuration/Config-Builder.md) you can choose between two algorithms:
+В зависимости от настроек в [конфигураторе](../Configuration/Config-Builder.md) можно выбрать между двумя алгоритмами:
 
 - [Advanced meal assist (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
 - [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm for advanced users
