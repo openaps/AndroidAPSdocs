@@ -25,7 +25,7 @@
   ```
 
 ```{contents}
-:backlinks: entry
+:backlinks: запись
 :depth: 2
 ```
 
@@ -76,7 +76,7 @@
 
 - Защитите свои настройки с помощью пароля или биометрии (полезно в случае, когда [AAPS используется ребенком](../Children/Children.md)).
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Usage/ExportImportSettings.md).
+- Если вы хотите, чтобы главный пароль использовался только для [экспорта настроек](../Usage/ExportImportSettings.md). то примените отдельный пароль для настроек.
 
 - Если вы собираетесь использовать пароль для настроек - нажмите на строчку "Пароль параметров", чтобы задать его. Принцип тот же, что описан [выше](Preferences-master-password).
 
@@ -112,7 +112,7 @@
 
 - Различия других тем зависят от ориентации дисплея.
 
-##### Portrait orientation
+##### Портретная ориентация
 
 - Темы **Исходная тема оформления** и **Кнопки всегда в нижней части экрана** идентичны
 - Тема **Большой Экран** имеет увеличенные размеры всех элементов по сравнению с другими темами
@@ -133,12 +133,12 @@
 - В разделе Начало можно определить параметры главного экрана.
 
   ```{image} ../images/Pref2020_OverviewII.png
-  :alt: Preferences > Overview
+  :alt: Настройки > Начало
   ```
 
 ### Не отключать экран
 
-- Useful while giving a presentation.
+- Полезно если делаете презентацию.
 - При этом потребляется много энергии, поэтому разумно держать телефон подключенным к зарядному устройству.
 
 (Preferences-buttons)=
@@ -155,7 +155,7 @@
 (Preferences-quick-wizard)=
 ### Мастер быстрых настроек
 
-- If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
+- Если у вас частые перекусы или приемы пищи, для упрощения расчетов можно воспользоваться кнопкой мастера быстрого ввода.
 
 - При настройке вы можете определить время, в течение которого кнопка будет видна на главном экране - только одна кнопка в определенный период.
 
@@ -232,14 +232,14 @@
 - Настройки индикатора состояния должны были быть выполнены в настройках Nightscout в версиях AAPS до 2.7.
 
   ```{image} ../images/Pref2020_OV_StatusLights2.png
-  :alt: Preferences > Status Lights
+  :alt:Настройки > Сигналы состояния
   ```
 
 (Preferences-advanced-settings-overview)=
-### Advanced Settings (Overview)
+### Расширенные настройки (обзор)
 
 ```{image} ../images/Pref2021_OV_Adv.png
-:alt: Preferences > Status Lights
+:alt:Настройки > Сигналы состояния
 ```
 
 #### Подать эту часть рекомендации мастера болюса
@@ -273,7 +273,7 @@
 ### Тип пациента
 
 - Ограничения безопасности устанавливаются на основе возраста, который вы выбираете в этом параметре.
-- If you start hitting these hard limits (like max bolus) it's time to move one step up.
+- Если вы начинаете достигать верхних ограничений (как например максимальный болюс) пора подняться на один шаг вверх (например, от ребенка перейти к подростку - прим. перев.).
 - Выбирать возраст выше, чем реальный, не следует, потому что может привести к передозировке при введении ошибочного значения в диалоге инсулина (например, если пропущен десятичный разделитель - точка или запятая).
 - Если вы хотите знать фактические величины жестких ограничений безопасности в коде, перейдите к функции алгоритма на [этой странице](../Usage/Open-APS-features.md).
 
@@ -296,8 +296,8 @@
 ### Режим APS
 
 - Переключение между открытым и замкнутым циклом, а также приостановкой на низких ГК (LGS)
-- Работа в **Открытом цикле** означает, что предложения временного базала TBR делаются на основе ваших данных и отображаются в виде уведомления. После подтверждения вручную, команда о дозировке временного базала передается на помпу. Only if you use virtual pump you have to enter it manually.
-- **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.
+- Работа в **Открытом цикле** означает, что предложения временного базала TBR делаются на основе ваших данных и отображаются в виде уведомления. После подтверждения вручную, команда о дозировке временного базала передается на помпу. Если вы пользуетесь виртуальной помпой, необходимо вводить команду вручную.
+- **Замкнутый цикл** означает, что предложения по изменению скорости временного базала TBR автоматически отправляются на вашу помпу без вашего подтверждения.
 - **Приостановка помпы на низкой ГК** похожа на работу в замкнутом цикле, но переопределяет параметр макс активного инсулина maxIOB на ноль. Это значит, что при падении гликемии базал будет снижен, но когда гликемия будет расти, он повысится только при отрицательном значении активного инсулина IOB (например, после предыдущей остановки подачи инсулина из-за низкой гликемии).
 
 (Preferences-minimal-request-change)=
@@ -341,12 +341,12 @@
 - Совершенствовать свой базальный профиль и лучше настроить фактор чувствительности к инсулину ISF.
 - Увидеть, как AAPS ограничивает ваш базальный инсулин, чтобы предотвратить гипокликемию.
 
-Когда вы почувствуете себя комфортно, то можете позволить системе начать давать вам дополнительный базал, повышая макс. значение активного базального инсулина IOB. Хорошая рекомендация – взять **наивысшую скорость базала** в вашем профиле и **умножить ее на 3**. For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 3 to get a value of 1.5 U/h.
+Когда вы почувствуете себя комфортно, то можете позволить системе начать давать вам дополнительный базал, повышая макс. значение активного базального инсулина IOB. Хорошая рекомендация – взять **наивысшую скорость базала** в вашем профиле и **умножить ее на 3**. Например, если максимальная скорость базала в вашем профиле была 0,5 ед./ч, то, умножив ее на 3, вы получите значение 1.5 ед./ч.
 
-- You can start conservatively with this value and increase it slowly over time.
-- These are guidelines only; everyone's body is different. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
+- Вы можете консервативно принять это значение и медленно увеличивать его со временем.
+- Это только руководящие принципы; организмы всех людей отличаются друг от друга. Вы можете понять, что вам требуется больше или меньше, чем рекомендуется здесь, но всегда следует начинать консервативно и регулировать медленно.
 
-**Note: As a safety feature, Max Basal IOB is hard-limited to 7u.**
+**Примечание: В качестве функции безопасности максимально допустимый базальный Max Basal IOB жестко ограничен 7ед.**
 
 #### Autosens
 
@@ -364,7 +364,7 @@
 
 - В отличие от AMA, [SMB](Open-APS-features-super-micro-bolus-smb) не использует временные базальные скорости для контроля уровней глюкозы, а главным образом супермикроболюсы.
 
-- You must have started [objective 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
+- Для микроболюсов SMB необходимо запустить [ цель 9 ](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb).
 
 - Первые три настройки объяснены [выше](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
@@ -414,7 +414,7 @@
 
 - Алгоритм использует BGI (воздействие на глюкозу в крови) для определения поглощения углеводов.
 
-- The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB.
+- Это значение используется только во время пробелов в мониторинге или когда физическая нагрузка "съедает" весь подъем гликемии, которая в ином случае заставила бы алгоритм AAPS поглощать углеводы COB организма.
 
 - В тех случаях, когда на основании реакции гликемии крови невозможно динамически рассчитать усвоение углеводов, алгоритм пользуется значением по умолчанию. Этот параметр не приводит к отказам.
 
@@ -438,18 +438,18 @@
 
 ### Расширенные настройки - коэффициент autosens
 
-- Define min. and max. [autosens](Open-APS-features-autosens) ratio.
+- Определите мин и макс коэффициент [autosens](Open-APS-features-autosens).
 - Обычно стандартные значения (макс. 1.2 и мин. 0.7) не должны меняться.
 
-## Pump settings
+## Настройки помпы
 
 Параметры здесь варьируются в зависимости от того, какой драйвер помпы вы выбрали в [конфигураторе](Config-Builder-pump).  Выполните сопряжение и настройте помпу в соответствии с инструкциями относящимися к помпе:
 
-- [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md)
-- [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md)
+- [Инсулиновая помпа DanaR](../Configuration/DanaR-Insulin-Pump.md)
+- [Инсулиновая помпа DanaRS](../Configuration/DanaRS-Insulin-Pump.md)
 - [Помпа Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
-- [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md)
-- [Medtronic Pump](../Configuration/MedtronicPump.md)
+- [Помпа Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
+- [Помпа Medtronic](../Configuration/MedtronicPump.md)
 
 Для работы AndroidAPS в незамкнутом цикле, в конфигураторе выберите виртуальную помпу.
 
@@ -457,7 +457,7 @@
 ## клиент NS
 
 ```{image} ../images/Pref2020_NSClient.png
-:alt: NSClient
+:alt: Клиент NS
 ```
 
 - Установите адрес и пароль вашего сайта *Nightscout URL* (напр. [https://yourwebsitename.herokuapp. om](https://yourwebsitename.herokuapp.com)и *API секрет* (12-значный пароль который записан в переменных Heroku). (примечание - здесь возможно применение других переменных, в зависимости от провайдера --- прим перев).
@@ -467,7 +467,7 @@
 - Опция *Делать запись о старте приложения в Nightscout* заносит отметку в журнале портала терапии каждый раз при запуске приложения.  Приложение не должно запускаться более одного раза в день; если чаще, то возможна проблема (напр. Оптимизация батареи не отключена для AAPS).
 - При активации, изменения в [локальном профиле](Config-Builder-local-profile) загружаются на ваш сайт NS.
 
-### Connection settings
+### Параметры подключения
 
 ```{image} ../images/ConfBuild_ConnectionSettings.png
 :alt: настройки подключения NSClient
@@ -478,15 +478,15 @@
 - Несколько идентификаторов SSID разделяются точкой с запятой.
 - Чтобы удалить все SSID оставьте поле пустым.
 
-### Alarm options
+### Опции оповещения
 
-- Alarm options allows you to select which default Nightscout alarms to use through the app.
+- Опции звуковых оповещений позволяют выбрать оповещения Nightscout по умолчанию для использования через приложение.
 - Для того, чтобы оповещения работали следует установить Высокий, Низкие и другие срочные значения сигнализации в переменных в [Heroku](https://nightscout.github.io/nightscout/setup_variables/#alarms).
 - Они будут работать только во время подключения к Nightscout и предназначены для родителей/опекунов.
 - Если на телефоне есть источник CGM, то можно использовать оповещения с этого источника.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClient)
+### Расширенные настройки (Клиент NS)
 
 ```{image} ../images/Pref2020_NSClientAdv.png
 :alt: Дополнительные настройки NS клиента
@@ -515,13 +515,13 @@
 - Использовать расположение сети: расположение вашего Wifi
 - Используйте локатор GPS (Внимание! Может привести к чрезмерной разрядке аккумулятора!)
 
-## Local alerts
+## Локальные оповещения
 
 ```{image} ../images/Pref2020_LocalAlerts.png
-:alt: Local alerts
+:alt:Локальные оповещения
 ```
 
-- Settings should be self-explanatory.
+- Настройки самоочевидны.
 
 ## Отбор данных
 
@@ -537,14 +537,14 @@
 :alt: Параметры обслуживания
 ```
 
-- Standard recipient of logs is <logs@androidaps.org>.
-- If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). In this case master password has to be entered each time settings are exported or imported.
+- Отправляйте логи журналов на <logs@androidaps.org>.
+- Если вы выберите *Шифрование экспортированных настроек* они будут зашифрованы вашим мастер-паролем [](Preferences-master-password). В этом случае пароль должен вводиться каждый раз, когда настройки экспортируются или импортируются.
 
-## Open Humans
+## Проект Open Humans
 
-- You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../Configuration/OpenHumans.md).
+- You can help the community by donating your data to research projects! Детали описаны на странице [Open Humans](../Configuration/OpenHumans.md).
 
-- In Preferences you can define when data shall be uploaded
+- В настройках вы можете определить, когда загружать данные
 
-  - only if connected to WiFi
-  - only if charging
+  - загружать только при подключении к WiFi
+  - только при зарядке
