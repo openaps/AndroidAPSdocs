@@ -108,29 +108,29 @@
   :alt: Выбор оформления + примеры
   ```
 
-- 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
+- 'Тема оформления в низком разрешении' содержит укороченные подписи и не показывает возраст сенсора, катетера /уровень инсулина, чтобы освободить больше места на экране с низким разрешением.
 
-- Difference of other skins depend of phone's display orientation.
+- Различия других тем зависят от ориентации дисплея.
 
 ##### Portrait orientation
 
-- **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
-- **Large Display** has an increased size of all graphs compared to other skins
+- Темы **Исходная тема оформления** и **Кнопки всегда в нижней части экрана** идентичны
+- Тема **Большой Экран** имеет увеличенные размеры всех элементов по сравнению с другими темами
 
-##### Landscape orientation
+##### Альбомная ориентация
 
-- Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
+- При использовании **Исходной темы оформления** и темы **Большой экран**придется прокручивать экран вниз, чтобы увидеть кнопки в нижней части экрана
 
-- **Large Display** has an increased size of all graphs compared to other skins
+- Тема **Большой Экран** имеет увеличенные размеры всех элементов по сравнению с другими темами
 
   ```{image} ../images/Screenshots_Skins.png
-  :alt: Skins depending on phone's display orientation
+  :alt: Темы в зависимости от ориентации экрана телефона
   ```
 
 (Preferences-overview)=
 ## Общие замечания
 
-- In overview section you can define preferences for home screen.
+- В разделе Начало можно определить параметры главного экрана.
 
   ```{image} ../images/Pref2020_OverviewII.png
   :alt: Preferences > Overview
@@ -144,12 +144,12 @@
 (Preferences-buttons)=
 ### Кнопки
 
-- Define which buttons are visible on the bottom of your home screen.
+- Определите, какие кнопки будут видны в нижней части главного экрана.
 
-- With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
+- Для простоты ввода при помощи величины приращения можно задать параметры трех кнопок в диалоговых окнах инсулина и углеводов.
 
   ```{image} ../images/Pref2020_OV_Buttons.png
-  :alt: Preferences > Buttons
+  :alt: Настройки > Кнопки
   ```
 
 (Preferences-quick-wizard)=
@@ -157,7 +157,7 @@
 
 - If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
 
-- In setup you define during which time period the button will be visible on your home screen - just one button per period.
+- При настройке вы можете определить время, в течение которого кнопка будет видна на главном экране - только одна кнопка в определенный период.
 
 - If you click the quick wizard button AAPS will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
 
