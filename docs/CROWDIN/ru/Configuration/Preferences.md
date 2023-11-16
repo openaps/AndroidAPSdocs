@@ -465,55 +465,55 @@
 - Если вы застряли на Цели 1, еще раз проверьте поля с адресом и паролем на наличие опечаток.
 - **Убедитесь, что URL-адрес БЕЗ /api/v1/ в конце.**
 - Опция *Делать запись о старте приложения в Nightscout* заносит отметку в журнале портала терапии каждый раз при запуске приложения.  Приложение не должно запускаться более одного раза в день; если чаще, то возможна проблема (напр. Оптимизация батареи не отключена для AAPS).
-- If activated changes in [local profile](Config-Builder-local-profile) are uploaded to your Nightscout site.
+- При активации, изменения в [локальном профиле](Config-Builder-local-profile) загружаются на ваш сайт NS.
 
 ### Connection settings
 
 ```{image} ../images/ConfBuild_ConnectionSettings.png
-:alt: NSClient connection settings
+:alt: настройки подключения NSClient
 ```
 
-- Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-- If you want to use only a specific WiFi network you can enter its WiFi SSID.
-- Multiple SSIDs can be separated by semicolon.
-- To delete all SSIDs enter a blank space in the field.
+- Ограничьте загрузку в Nightscout только через Wi-Fi или даже через Wi-Fi SSID.
+- Если вы хотите использовать только конкретные сети WiFi, в настройках подключения укажите конкретный идентификатор сети WiFi SSID.
+- Несколько идентификаторов SSID разделяются точкой с запятой.
+- Чтобы удалить все SSID оставьте поле пустым.
 
 ### Alarm options
 
 - Alarm options allows you to select which default Nightscout alarms to use through the app.
-- For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Heroku variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- They will only work whilst you have a connection to Nightscout and are intended for parent/carers.
-- If you have the CGM source on your phone (i.e. xDrip+ or BYODA \[Build your own dexcom app\]) then use those alarms instead.
+- Для того, чтобы оповещения работали следует установить Высокий, Низкие и другие срочные значения сигнализации в переменных в [Heroku](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+- Они будут работать только во время подключения к Nightscout и предназначены для родителей/опекунов.
+- Если на телефоне есть источник CGM, то можно использовать оповещения с этого источника.
 
 (Preferences-advanced-settings-nsclient)=
 ### Advanced settings (NSClient)
 
 ```{image} ../images/Pref2020_NSClientAdv.png
-:alt: NS Client advanced settings
+:alt: Дополнительные настройки NS клиента
 ```
 
-- Most options in advanced settings are self-explanatory.
+- Большинство опций в расширенных настройках самоочевидны.
 
-- *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+.
+- *Включить локальные трансляции* передаст данные с портала терапии на другие приложения на телефоне, например xdrip+.
 
-  - You need to [go through AAPS](Config-Builder-bg-source) and enable local broadcast in AAPS to use xDrip+ alarms.
+  - Перейдите в [AAPS](Config-Builder-bg-source) и активируйте локальную передачу данных, чтобы пользоваться оповещениями xDrip+.
 
-- *Always use basal absolute values* must be activated if you want to use Autotune properly. See [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) for more details on Autotune.
+- Если вы хотите правильно использовать Autotune, то включите опцию *Всегда использовать абсолютные значения базала*. Читайте [ документацию OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) для более подробной информации об Autotune.
 
 ## СМС-коммуникатор
 
-- Options will only be displayed if SMS communicator is selected in [Config Builder](Config-Builder-sms-communicator).
-- This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.
-- Further information is described in [SMS Commands](../Children/SMS-Commands.md).
-- Additional safety is obtained through use of an authenticator app and additional PIN at token end.
+- Опции будут показаны только в том случае, если коммуникатор SMS выбран в [Конфигураторе](Config-Builder-sms-communicator).
+- Эта настройка позволяет осуществлять удаленное управление приложением при помощи смс-инструкций, отправляемых на телефон пациента, который выполняет их в AAPS, например, приостанавливая работу цикла или подавая болюсы.
+- Дальнейшая информация описана в [Команды SMS ](../Children/SMS-Commands.md).
+- Дополнительная безопасность обеспечивается с помощью приложения-Аутентификатора и дополнительного PIN-кода в конце сообщения.
 
 ## Автоматизация
 
-Select which location service shall be used:
+Выберите, какая должна использоваться служба определения локации:
 
-- Use passive location: AAPS only takes locations if other apps are requesting it
-- Use network location: Location of your Wi-Fi
-- Use GPS location (Attention! Может привести к чрезмерной разрядке аккумулятора!)
+- Использовать пассивное расположение: AAPS принимает положения только в том случае, если другие приложения запрашивали его
+- Использовать расположение сети: расположение вашего Wifi
+- Используйте локатор GPS (Внимание! Может привести к чрезмерной разрядке аккумулятора!)
 
 ## Local alerts
 
@@ -523,18 +523,18 @@ Select which location service shall be used:
 
 - Settings should be self-explanatory.
 
-## Data choices
+## Отбор данных
 
 ```{image} ../images/Pref2020_DataChoice.png
-:alt: Data choices
+:alt: Отбор данных
 ```
 
-- You can help develop AAPS further by sending crash reports to the developers.
+- Вы можете помочь разработчикам AAPS, посылая отчеты об ошибках.
 
-## Maintenance settings
+## Параметры обслуживания
 
 ```{image} ../images/Pref2020_Maintenance.png
-:alt: Maintenance settings
+:alt: Параметры обслуживания
 ```
 
 - Standard recipient of logs is <logs@androidaps.org>.
