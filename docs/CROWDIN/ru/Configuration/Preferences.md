@@ -350,100 +350,100 @@
 
 #### Autosens
 
-- [Autosens](Open-APS-features-autosens) looks at blood glucose deviations (positive/negative/neutral).
-- It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
-- If you select "Autosens adjust target, too" the algorithm will also modify your glucose target.
+- [Autosens](Open-APS-features-autosens)отслеживает отклонения ГК (положительные/отрицательные/нейтральные).
+- На основе отклонений он пытается выяснить, насколько вы чувствительны/резистентны к инсулину и корректирует базальную скорость и коэффициент чувствительности к инсулину ISF.
+- Если вы выберете "Autosense также подстраивает цели", алгоритм будет менять целевую ГК.
 
-#### Advanced settings (OpenAPS AMA)
+#### Дополнительные настройки (OpenAPS AMA)
 
-- Normally you do not have to change the settings in this dialogue!
-- If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
+- Обычно нет необходимости изменять настройки в этом диалоге!
+- Если все же вы хотите изменить их, обязательно прочтите подробности в документации [OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) для полного понимания ваших действий.
 
 (Preferences-openaps-smb-settings)=
-### OpenAPS SMB settings
+### Настройки OpenAPS SMB
 
-- In contrast to AMA, [SMB](Open-APS-features-super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- В отличие от AMA, [SMB](Open-APS-features-super-micro-bolus-smb) не использует временные базальные скорости для контроля уровней глюкозы, а главным образом супермикроболюсы.
 
 - You must have started [objective 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
-- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- Первые три настройки объяснены [выше](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
-- Details on the different enable options are described in [OpenAPS feature section](Open-APS-features-enable-smb).
+- Подробности различных опций настройки описаны в разделе [возможности OpenAPS ](Open-APS-features-enable-smb).
 
-- *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. This value prevents the system from issuing SMB too often (for example in case of a temp target being set). You should not change this setting unless you know exactly about consequences.
+- *Как часто SMB будут подаваться в минутах* - по умолчанию эта величина определена только в четыре минуты. Эта величина не позволяет системе подавать микроболюсы слишком часто (например, при постановке временной цели). Не следует менять эту настройку, если только точно не осознаете последствия.
 
-- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](Open-APS-features-autosens) will modify your glucose target according to your blood glucose deviations.
+- Если активированы настройки "Чувствительность повышает цель" или "Резистентность понижает цель", [Autosens](Open-APS-features-autosens) меняет целевое значение ГК в соответствии с ее (гликемии) отклонениями.
 
-- If target is modified it will be displayed with a green background on your home screen.
+- Если цель изменена, она будет отображаться в поле целей на зеленом фоне на главном экране.
 
   ```{image} ../images/Home2020_DynamicTargetAdjustment.png
-  :alt: Target modified by autosens
+  :alt: цель изменена автоматически
   ```
 
 (Preferences-carb-required-notification)=
-#### Carb required notification
+#### Уведомление о потребности в углеводах
 
-- This feature is only available if SMB algorithm is selected.
+- Эта функция доступна только если выбран алгоритм супермикроболюсов SMB.
 
-- Eating of additional carbs will be suggested when the reference design detects that it requires carbs.
+- Если алгоритм обнаруживает, что организму требуются дополнительные углеводы, об этом появится сообщение.
 
-- In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
+- Вы получите уведомление, которое может быть отложено на 5, 15 или 30 минут.
 
-- Additionally the required carbs will be displayed in the COB section on your home screen.
+- Кроме того, на главном экране в секции активных углеводов будет показано необходимое количество углеводов.
 
-- A threshold can be defined - minimum amount of carbs needed to trigger a notification.
+- Вы можете сами определить пороговое значение минимального количества углеводов, необходимых для запуска уведомления.
 
 - При желании уведомления об углеводах могут быть переданы в Nightscout. В этом случае сработают стандартные настройки оповещения NS.
 
   ```{image} ../images/Pref2020_CarbsRequired.png
-  :alt: Display carbs required on home screen
+  :alt: необходимые углеводы на главном экране
   ```
 
-#### Advanced settings (OpenAPS SMB)
+#### Дополнительные настройки (OpenAPS AMA)
 
-- Normally you do not have to change the settings in this dialogue!
-- If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
+- Обычно нет необходимости изменять настройки в этом диалоге!
+- Если все же вы хотите изменить их, обязательно прочтите подробности в документации [OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) для полного понимания ваших действий.
 
 ## Настройки усваиваемости
 
 ```{image} ../images/Pref2020_Absorption.png
-:alt: Absorption settings
+:alt:Настройки усваиваемости
 ```
 
 ### min_5m_carbimpact
 
-- The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed.
+- Алгоритм использует BGI (воздействие на глюкозу в крови) для определения поглощения углеводов.
 
 - The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB.
 
-- At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Этот параметр не приводит к отказам.
+- В тех случаях, когда на основании реакции гликемии крови невозможно динамически рассчитать усвоение углеводов, алгоритм пользуется значением по умолчанию. Этот параметр не приводит к отказам.
 
-- To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc.
+- Говоря по-простому, алгоритм "знает" как *должна* вести себя ГК при воздействии дозы инсулина и т. п.
 
-- Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc.
+- При положительном отклонении от ожидаемого поведения некоторые углеводы поглощаются/исчезают. Большие изменения=много углеводов и т. д.
 
-- The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+- По умолчанию величина min_5m_carbimpact определяет поглощение углеводов за 5 минут. Дополнительную информацию см. в документации [OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
-- Standard value for AMA is 5, for SMB it's 8.
+- Стандартное значение для AMA 5, для SMB это 8.
 
-- The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+- График COB на главном экране показывает, когда используется min_5m_impact в виде оранжевого круга в верхней части.
 
   ```{image} ../images/Pref2020_min_5m_carbimpact.png
-  :alt: COB graph
+  :alt: График активных углеводов COB
   ```
 
-### Maximum meal absorption time
+### Максимальное время усвояемости пищи
 
-- If you often eat high fat or protein meals you will need to increase your meal absorption time.
+- Если вы часто едите блюда с высоким содержанием жиров или белка, вам следует увеличить время усвоения пищи.
 
-### Advanced settings - autosens ratio
+### Расширенные настройки - коэффициент autosens
 
 - Define min. and max. [autosens](Open-APS-features-autosens) ratio.
-- Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+- Обычно стандартные значения (макс. 1.2 и мин. 0.7) не должны меняться.
 
 ## Pump settings
 
-The options here will vary depending on which pump driver you have selected in [Config Builder](Config-Builder-pump).  Pair and set your pump up according to the pump related instructions:
+Параметры здесь варьируются в зависимости от того, какой драйвер помпы вы выбрали в [конфигураторе](Config-Builder-pump).  Выполните сопряжение и настройте помпу в соответствии с инструкциями относящимися к помпе:
 
 - [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md)
 - [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md)
@@ -451,7 +451,7 @@ The options here will vary depending on which pump driver you have selected in [
 - [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Medtronic Pump](../Configuration/MedtronicPump.md)
 
-If using AAPS to open loop then make sure you have selected Virtual Pump in config builder.
+Для работы AndroidAPS в незамкнутом цикле, в конфигураторе выберите виртуальную помпу.
 
 (Preferences-nsclient)=
 ## клиент NS
@@ -460,11 +460,11 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 :alt: NSClient
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yourwebsitename.herokuapp.com>) and the *API secret* (a 12 character password recorded in your Heroku variables).
-- This enables data to be read and written between both the Nightscout website and AAPS.
-- Double check for typos here if you are stuck in Objective 1.
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS).
+- Установите адрес и пароль вашего сайта *Nightscout URL* (напр. [https://yourwebsitename.herokuapp. om](https://yourwebsitename.herokuapp.com)и *API секрет* (12-значный пароль который записан в переменных Heroku). (примечание - здесь возможно применение других переменных, в зависимости от провайдера --- прим перев).
+- Это позволит считывать и записывать данные веб-сайту Nightscout и приложению AAPS.
+- Если вы застряли на Цели 1, еще раз проверьте поля с адресом и паролем на наличие опечаток.
+- **Убедитесь, что URL-адрес БЕЗ /api/v1/ в конце.**
+- Опция *Делать запись о старте приложения в Nightscout* заносит отметку в журнале портала терапии каждый раз при запуске приложения.  Приложение не должно запускаться более одного раза в день; если чаще, то возможна проблема (напр. Оптимизация батареи не отключена для AAPS).
 - If activated changes in [local profile](Config-Builder-local-profile) are uploaded to your Nightscout site.
 
 ### Connection settings
