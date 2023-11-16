@@ -312,27 +312,27 @@
 
 В зависимости от настроек в [конфигураторе](../Configuration/Config-Builder.md) можно выбрать между двумя алгоритмами:
 
-- [Advanced meal assist (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm for advanced users
+- [Улучшенный ассистент приема пищи (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - состояние алгоритма на 2017 год
+- [Супер микроболюс (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - самый последний алгоритм для опытных пользователей
 
-### OpenAPS AMA settings
+### Настройки OpenAPS AMA
 
-- Allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably.
-- More details about the settings and Autosens can be found in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+- Позволяет системе быстрее установить высокое временное целевое значение после болюса на еду, ЕСЛИ вы правильно ввели углеводы.
+- Более подробную информацию о настройках и Autosens можно найти в документации [OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 #### Максимальное значение ед./ч для скорости временного базала
 
-- Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate.
-- The value is measured in units per hour (U/h).
+- Эта настройка существует как ограничение безопасности, чтобы не позволить алгоритму ААПС когда-либо задать слишком большую величину скорости базала.
+- Значение задается в единицах в час (ед./ч).
 - It is advised to set this to something sensible. Хорошая рекомендация – взять **наивысшую скорость базала** в вашем профиле и **умножить ее на 4**.
-- For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
-- See also [detailed feature description](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- Например, если максимальная скорость базала в вашем профиле была 0,5 ед./ч, то, умножив ее на 4, вы получите значение 2 ед./ч.
+- См. также [подробное описание функции](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
-#### Maximum basal IOB OpenAPS can deliver \[U\]
+#### Максимальный активный базальный инсулин IOB, разрешенный в OpenAPS [ед.]
 
 - Количество базального инсулина (в единицах) которому позволено накопиться в вашем организме в дополнение к нормальному базальному профилю.
 - По достижении этой величины AAPS перестает подавать дополнительный базальный инсулин до тех пор, пока ваш активный базальный Инсулин (IOB) снова не вернется в этот диапазон.
-- This value **does not consider bolus IOB**, only basal.
+- Это значение **не учитывает болюсный IOB, **только базал.
 - Эта величина вычисляется и отслеживается независимо от скорости вашего обычного базала. Учитывается только дополнительный базал, который свыше обычного.
 
 Когда вы начинаете работать с алгоритмом ИПЖ, **рекомендуется установить максимум активного базальный инсулина IOB на 0 ** на время привыкания к системе. Такая настройка запрещает AAPS давать дополнительный базальный инсулин. В этот период алгоритм AAPS в состоянии ограничить или отключить базу инсулина для предотвращения гипогликемии. Это важный шаг для того чтобы:
