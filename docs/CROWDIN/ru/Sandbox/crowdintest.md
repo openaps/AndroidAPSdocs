@@ -1,9 +1,9 @@
-# Small Crowdin Test
+# Небольшой тест Crowdin
 
-This is a small set for testing the translation with Crowdin.
+Это небольшой текст для тестирования перевода на Crowdin.
 
-We want to see how changes to a sentence affect the existing translation of the entire page.
+Мы хотим увидеть, как изменения в предложении влияют на существующий перевод всей страницы.
 
-Normally, only one sentence should need to be retranslated and not everything.
+Обычно нужно повторно перевести только одно предложение, а не все.
 
-We will see soon.
+Скоро увидим.
