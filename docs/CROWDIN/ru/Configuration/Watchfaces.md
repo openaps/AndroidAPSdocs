@@ -1,6 +1,6 @@
-# Operation of AAPS via your Wear OS smartwatch
+# Работа AAPS с помощью смартчасов на базе Wear OS
 
-(Watchfaces-aaps-watchfaces)=
+(Смарт-часы-аапс-смарт-часы)=
 
 ## Циферблаты AAPS
 
@@ -14,7 +14,7 @@
 
 ![Доступные циферблаты](../images/Watchface_Types.png)
 
-(Watchfaces-new-watchface-as-of-AAPS-2-8)=
+(Смарт-часы-на-версии-AAPS-2-8)=
 
 ### Новые циферблаты начиная с AAPS v.2.8
 
@@ -263,9 +263,9 @@ Note: not all displays can handle always-on very well. It can cause screen burn-
 
 ## Snooze Alert shortcut
 
-It is possible to create a shortcut to snooze the alerts/alarm of AAPS. Muting the sound via your watch is convenient and faster without reaching for your phone. Note; you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
+Можно создать ярлык, чтобы отложить оповещения от AAPS. Отключение звука через часы - удобный и быстрый способ без необходимости обращения к телефону. Обратите внимание; все еще нужно проверить оповещение на телефоне, чтобы выполнить соответствующие действия, но это можно сделать позже. Если в часвх есть две кнопки, одну из них можно привязать к утилите `Убрать оповещения AAPS`.
 
-To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
+Чтобы привязать кнопку на Samsung Watch 4 перейдите в `Настройки > Дополнительные возможности > Настройка кнопок > Двойное нажатие > Отложить оповещения AAPS`
 
 ### Snooze xDrip
 
