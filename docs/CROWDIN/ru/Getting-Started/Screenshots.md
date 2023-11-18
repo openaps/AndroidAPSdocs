@@ -507,31 +507,31 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ## Замкнутый цикл, помощник болюса AMA / микроболюсы SMB
 
-* These tabs show details about the algorithm's calculations and why AAPS acts the way it does.
-* Calculations are each time the system gets a fresh reading from the CGM.
-* For more details see [APS section on config builder page](Config-Builder-aps).
+* Эти вкладки показывают подробную информацию о расчетах алгоритма и почему AAPS действует так, а не иначе.
+* Расчет производится каждый раз, когда система получает свежее данные мониторинга CGM.
+* Дополнительную информацию см. в [разделе APS на вкладке конфигуратора](Config-Builder-aps).
 
 ## Профиль
 
 ![Профиль](../images/Screenshots_Profile.png)
 
-* Profile contains information on your individual diabetes settings:
+* Профиль содержит информацию об индивидуальных настройках диабета:
    
-   * DIA (Duration of Insulin Action)
-   * IC or I:C: Insulin to Carb ratio
+   * DIA (продолжительность действия инсулина)
+   * IC: соотношение Инсулин - Углеводы
    * ISF: Коэффициент чувствительности к инсулину
    * Скорость базала
    * Цель: Уровень глюкозы крови для AAPS
 
-* As of version 3.0 only [local profile](Config-Builder-local-profile) is possible. Локальный профиль может быть отредактирован на вашем смартфоне и синхронизирован с сайтом Nightscout.
+* Начиная с версии 3.0 возможен только [локальный профиль](Config-Builder-local-profile). Локальный профиль может быть отредактирован на вашем смартфоне и синхронизирован с сайтом Nightscout.
 
 (Screenshots-treatment)=
 
 ## Терапия
 
-History of the following treatments:
+История следующих терапевтических действий:
 
-* Bolus & carbs -> option to [remove entries](Screenshots-carb-correction) to correct history
+* Bolus & Carbs -> возможность [удалить записи](Screenshots-carb-correction) для исправления истории
 * [Пролонгированный болюс](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Временная базальная скорость
 * [Временная цель](../Usage/temptarget.md)
