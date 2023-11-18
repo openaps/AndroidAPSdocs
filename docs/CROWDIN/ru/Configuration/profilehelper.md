@@ -19,46 +19,46 @@
 
 1. Выберите 'Помощник профиля' из меню в правом верхнем углу экрана.
 2. Отрегулируйте профиль по умолчанию (на основе набора данных госпиталей), указав возраст ребенка либо суточную дозировку инсулина TDD **либо** вес.
-3. Change screen by clicking on the grey bar labeled 2 on the right.
-4. Long-press 'Current profile' and select DPV Default profile.
+3. Измените экран, нажав на серую полосу 2 справа.
+4. Выполните долгое нажатие на 'Текущий профиль' и выберите "значения для профиля по умолчанию".
 
 ```{image} ../images/ProfileHelperKids2.png
-:alt: Profile Helper Kids 2
+:alt: помощник профиля для детей 2
 ```
 
-5. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
-6. Press button 'COMPARE PROFILES' on top of screen.
+5. Отрегулируйте профиль по умолчанию (на основе набора данных госпиталей), указав возраст ребенка либо суточную дозировку инсулина TDD **либо** вес.
+6. Нажмите кнопку 'СРАВНИТЬ ПРОФИЛИ' в верхней части экрана.
 7. Comparison of the two adjusted profiles will be displayed.
 
-Once you are fine with the profile adjustments you can [clone the profile](profilehelper-clone-profile) as described below.
+После корректировки профиля можно [клонировать профиль](profilehelper-clone-profile) в соответствии с нижеприведенным описанием.
 
-## Compare two profiles
+## Сравнение двух профилей
 
-You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../Usage/Profiles.md) before).
+Можно использовать помощник профиля для сравнения с разными профилями или переключатель профиля (процент одного из ваших профилей в переключателе [профиля](../Usage/Profiles.md).
 
 ```{image} ../images/ProfileHelper1.png
 :alt: Profile Helper 1
 ```
 
 1. Выберите 'Помощник профиля' из меню в правом верхнем углу экрана.
-2. Long-press 'Default profile' and select 'Available profile' for a list of your existing profiles or 'Profile switch' for a list of latest profile switches used.
-3. Long-Press the name of the profile / profile switch ('Aktuell_LP' in screenshot above) and select a profile / profile switch from the list.
-4. Change screen by clicking on the grey bar labeled 2 on the right.
+2. Выполните долгое нажатие на 'Профиль по умолчанию' и выберите 'Доступный профиль' для списка существующих профилей или 'Переключение профиля' для списка последних переключений используемого профиля.
+3. Выполните долгое нажатие на название из переключателя профиля / профиля ('Aktuell_LP" на снимке экрана выше) и выберите профиль из списка.
+4. Измените экран, нажав на серую полосу 2 справа.
 
 ```{image} ../images/ProfileHelper2.png
 :alt: Profile Helper 2
 ```
 
-5. As a standard 'Current profile' is offered as comparison candidate.
-6. If you want a different profile / profile switch long-press 'Current profile' and select either 'Available profile' or 'Profile switch'.
+5. В качестве стандартного для сравнения предлагается "Текущий профиль".
+6. Если вы хотите переключить другой профиль, нажмите 'Текущий профиль' и выберите 'Доступный профиль' или 'Переключение профиля'.
 7. Long-press the name of the profile / profile switch ('Aktuell_LP' in screenshot above) and select a profile / profile switch from the list.
-8. Press button 'COMPARE PROFILES' on top of screen.
+8. Нажмите кнопку 'СРАВНИТЬ ПРОФИЛИ' в верхней части экрана.
 9. Comparison of the two adjusted profiles will be displayed.
 
 (profilehelper-clone-profile)=
-## Clone profile
+## Клонировать профиль
 
-If you use [local profiles](Config-Builder-local-profile) you can clone a profile / profile switch directly from profile helper.
+Если вы используете [локальные профили](Config-Builder-local-profile) то можете клонировать профиль / переключатель профиля непосредственно с помощника.
 
 ```{image} ../images/ProfileHelperClone.png
 :alt: Profile Helper Clone profile / profile switch
