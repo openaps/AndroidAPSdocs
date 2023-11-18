@@ -57,7 +57,7 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 
 Поэтому, начиная с версии 2.6, существует опция пролонгированного болюса для пользователей помп Dana и Insight.
 
-- Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
+- Замкнутый цикл автоматически будет остановлен и переключится на режим открытого цикла на время пролонгированных болюсов.
 - Bolus units, remaining and total time will be shown on homescreen.
 - On Insight pump extended bolus is *not available* if [TBR emulation](Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
