@@ -273,9 +273,11 @@ State of translations <./Administration/stateTranslations.md>
 ```
 
 ```{toctree}
-:caption: Güvenli Alan
+:caption: Sandbox
 
-Güvenli alan <./Sandbox/sandbox1.md>
+Sandbox <./Sandbox/sandbox1.md>
+Crowdin Test <./Sandbox/crowdintest.md>
+
 ```
 
 ```{note}

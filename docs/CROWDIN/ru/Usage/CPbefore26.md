@@ -1,6 +1,6 @@
 # Портал терапии (больше не поддерживается)
 
-Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records. Но портал терапии не подавал никаких команд на помпу! Поэтому, если отметить подачу болюса на этом экране, помпа не получит никаких инструций, а в журнале Nightscout просто появится запись о болюсе. Это вело к многочисленным недоразумениям.
+Здесь повторяются функции которые можно найти на экране Nightscout под символом "+", который позволяет добавлять заметки к терапии. Но портал терапии не подавал никаких команд на помпу! Поэтому, если отметить подачу болюса на этом экране, помпа не получит никаких инструций, а в журнале Nightscout просто появится запись о болюсе. Это вело к многочисленным недоразумениям.
 
 The code originally used to add offline support for careportal did not harmonize with the development of AAPS and was really blocking further coding. **Therefore, decision was made to remove careportal in AAPS version 2.6.**
 

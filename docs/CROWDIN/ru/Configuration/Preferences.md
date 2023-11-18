@@ -25,7 +25,7 @@
   ```
 
 ```{contents}
-:backlinks: entry
+:backlinks: запись
 :depth: 2
 ```
 
@@ -76,7 +76,7 @@
 
 - Защитите свои настройки с помощью пароля или биометрии (полезно в случае, когда [AAPS используется ребенком](../Children/Children.md)).
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Usage/ExportImportSettings.md).
+- Если вы хотите, чтобы главный пароль использовался только для [экспорта настроек](../Usage/ExportImportSettings.md). то примените отдельный пароль для настроек.
 
 - Если вы собираетесь использовать пароль для настроек - нажмите на строчку "Пароль параметров", чтобы задать его. Принцип тот же, что описан [выше](Preferences-master-password).
 
@@ -108,108 +108,108 @@
   :alt: Выбор оформления + примеры
   ```
 
-- 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
+- 'Тема оформления в низком разрешении' содержит укороченные подписи и не показывает возраст сенсора, катетера /уровень инсулина, чтобы освободить больше места на экране с низким разрешением.
 
-- Difference of other skins depend of phone's display orientation.
+- Различия других тем зависят от ориентации дисплея.
 
-##### Portrait orientation
+##### Портретная ориентация
 
-- **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
-- **Large Display** has an increased size of all graphs compared to other skins
+- Темы **Исходная тема оформления** и **Кнопки всегда в нижней части экрана** идентичны
+- Тема **Большой Экран** имеет увеличенные размеры всех элементов по сравнению с другими темами
 
-##### Landscape orientation
+##### Альбомная ориентация
 
-- Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
+- При использовании **Исходной темы оформления** и темы **Большой экран**придется прокручивать экран вниз, чтобы увидеть кнопки в нижней части экрана
 
-- **Large Display** has an increased size of all graphs compared to other skins
+- Тема **Большой Экран** имеет увеличенные размеры всех элементов по сравнению с другими темами
 
   ```{image} ../images/Screenshots_Skins.png
-  :alt: Skins depending on phone's display orientation
+  :alt: Темы в зависимости от ориентации экрана телефона
   ```
 
 (Preferences-overview)=
 ## Общие замечания
 
-- In overview section you can define preferences for home screen.
+- В разделе Начало можно определить параметры главного экрана.
 
   ```{image} ../images/Pref2020_OverviewII.png
-  :alt: Preferences > Overview
+  :alt: Настройки > Начало
   ```
 
 ### Не отключать экран
 
-- Useful while giving a presentation.
+- Полезно если делаете презентацию.
 - При этом потребляется много энергии, поэтому разумно держать телефон подключенным к зарядному устройству.
 
 (Preferences-buttons)=
 ### Кнопки
 
-- Define which buttons are visible on the bottom of your home screen.
+- Определите, какие кнопки будут видны в нижней части главного экрана.
 
-- With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
+- Для простоты ввода при помощи величины приращения можно задать параметры трех кнопок в диалоговых окнах инсулина и углеводов.
 
   ```{image} ../images/Pref2020_OV_Buttons.png
-  :alt: Preferences > Buttons
+  :alt: Настройки > Кнопки
   ```
 
 (Preferences-quick-wizard)=
 ### Мастер быстрых настроек
 
-- If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
+- Если у вас частые перекусы или приемы пищи, для упрощения расчетов можно воспользоваться кнопкой мастера быстрого ввода.
 
-- In setup you define during which time period the button will be visible on your home screen - just one button per period.
+- При настройке вы можете определить время, в течение которого кнопка будет видна на главном экране - только одна кнопка в определенный период.
 
-- If you click the quick wizard button AAPS will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
+- При нажатии на кнопку быстрого мастера AAPS будет вычислять и предлагать болюс на углеводы, основанный на ваших текущих коэффициентах (с учетом текущего значения ГК, активного инсулина и т. п.).
 
-- The proposal has to be confirmed before insulin is delivered.
+- Это предложение должно быть подтверждено перед подачей инсулина.
 
   ```{image} ../images/Pref2020_OV_QuickWizard.png
-  :alt: Preferences > Quick Wizard Button
+  :alt: Настройки: > Кнопка Быстрого Мастера
   ```
 
 (Preferences-default-temp-targets)=
-### Default temp targets
+### Временные цели по умолчанию
 
-- [Temp targets (TT)](../Usage/temptarget.md) allow you to define change your blood glucose target for a certain time period.
+- [Временные цели(TT)](../Usage/temptarget.md) позволяют вам задавать целевое значение ГК на определенный период времени.
 
-- With setting of default TT you can easily change your target for activity, eating soon etc.
+- При помощи временных целей TT, заданных по умолчанию, можно легко установить цель при нагрузках, предстоящем питании и т. п.
 
-- Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
+- Выполните долгое нажатие в правом верхнем углу на главном экране или используйте оранжевую кнопку «Углеводы» внизу.
 
   ```{image} ../images/Pref2020_OV_DefaultTT.png
-  :alt: Preferences > Default temp targets
+  :alt: Настройки > Временные цели по умолчанию
   ```
 
 ### Заполнить стандартное количество инсулина
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](Screenshots-action-tab).
-- Pre-set values can be defined in this dialogue.
+- Если вы хотите заполнить инфузионный набор или катетер при помощи AAPS, это можно сделать через вкладку [Действия](Screenshots-action-tab).
+- В этом диалоге можно задать предустановленные значения.
 
 (Preferences-range-for-visualization)=
-### Range for visualization
+### Диапазон визуализации
 
-- Define which part of the graph on the home screen shall be you target range and be filled with green background.
+- Определите, какая часть графика на главном экране будет заполнена зеленым фоном в качестве целевого диапазона.
 
   ```{image} ../images/Pref2020_OV_Range2.png
-  :alt: Preferences > Range for visualization
+  :alt: Настройки > Диапазон визуализации
   ```
 
 ### сокращенные имена табул
 
-- See more tab titles on screen.
+- Видеть больше вкладок на экране.
 
-- For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
+- Например, вкладка 'Помощник болюса OpenAPS AMA' становится 'OAPS', 'ЦЕЛЕВЫЕ ЗНАЧЕНИЯ ГК' становится 'ЦЕЛИ' и т. д.
 
   ```{image} ../images/Pref2020_OV_Tabs.png
-  :alt: Preferences > Tabs
+  :alt: Настройки > Вкладки
   ```
 
-### Show notes field in treatments dialogs
+### Показывать поле примечаний в диалогах терапии
 
-- Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
+- Дает возможность добавить короткие примечания к терапии (мастер болюса, углеводы, инсулин...)
 
   ```{image} ../images/Pref2020_OV_Notes.png
-  :alt: Preferences > Notes in treatment dialogs
+  :alt: Настройки > Заметки в диалогах по терапии
   ```
 
 (Preferences-status-lights)=
@@ -218,28 +218,28 @@
 - Индикаторы состояния сообщают:
 
   - сколько времени отработал сенсор
-  - Sensor battery level for certain smart readers (see [screenshots page](Screenshots-sensor-level-battery) for details).
+  - Уровень заряда батареи сенсора для некоторых умных ридеров (подробнее см. на странице [снимки экрана](Screenshots-sensor-level-battery)).
   - сколько времени прошло с момента установки резервуара
   - об уровне заполнения резервуара (в единицах)
   - сколько времени прошло с момента установки канюли
-  - Батарея помпы работает
-  - Pump battery level (%)
+  - Батарея помпы работает... (Возраст батареи помпы)
+  - Уровень заряда батареи помпы (%)
 
 - Если превышено пороговое значение, данные показываются желтым цветом.
 
 - Если превышено критическое пороговое значение, значения будут показаны красным цветом.
 
-- In versions prior to AAPS 2.7 settings for status lights had to be made in Nightscout settings.
+- Настройки индикатора состояния должны были быть выполнены в настройках Nightscout в версиях AAPS до 2.7.
 
   ```{image} ../images/Pref2020_OV_StatusLights2.png
-  :alt: Preferences > Status Lights
+  :alt:Настройки > Сигналы состояния
   ```
 
 (Preferences-advanced-settings-overview)=
-### Advanced Settings (Overview)
+### Расширенные настройки (обзор)
 
 ```{image} ../images/Pref2021_OV_Adv.png
-:alt: Preferences > Status Lights
+:alt:Настройки > Сигналы состояния
 ```
 
 #### Подать эту часть рекомендации мастера болюса
@@ -248,91 +248,91 @@
 - При использовании мастера болюса подается только заданный процент (должен быть от 10 до 100) от вычисленного.
 - Этот процент показан в мастере болюса.
 
-#### Помощник болюса
+#### Мастер болюса
 
-- If you run [Bolus wizard](Screenshots-bolus-wizard) and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+- Если запустить [Мастер Болюса](Screenshots-bolus-wizard) при гликемии выше 10 ммоль (180 мг/дл), то будет предложен болюс на коррекцию.
 
-- If correction bolus is accepted **no carbs** will be recorded.
+- Если болюс на коррекцию принят, **углеводы** не записываются.
 
-- An alarm will be started when glucose value is in good level to start eating.
+- Когда ГК в хорошем диапазоне для начала приема пищи, подается сигнал оповещения.
 
-- You have to enter [Bolus wizard](Screenshots-bolus-wizard) again and enter the amount of carbs you want to eat.
+- В этом случае выполняем повторный вход в [Мастер (Калькулятор) Болюса ](Screenshots-bolus-wizard) и вводим величину углеводов, которые собираемся съесть.
 
   ```{image} ../images/Home2021_BolusWizard_CorrectionOffer.png
-  :alt: Bolus advisor message
+  :alt:Сообщение мастера болюса
   ```
 
 (Preferences-superbolus)=
 #### Суперболюс
 
-- Option to enable superbolus in bolus wizard.
-- [Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes.
+- Опция для включения суперболюса в мастере.
+- [Суперболюс](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) - это идея "заимствовать" некоторое количество инсулина от базальной скорости следующих двух часов, чтобы предотвратить резкие пики.
 
-## Treatment safety
+## Безопасность терапии
 
 ### Тип пациента
 
-- Safety limits are set based on the age you select in this setting.
-- If you start hitting these hard limits (like max bolus) it's time to move one step up.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example).
-- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
+- Ограничения безопасности устанавливаются на основе возраста, который вы выбираете в этом параметре.
+- Если вы начинаете достигать верхних ограничений (как например максимальный болюс) пора подняться на один шаг вверх (например, от ребенка перейти к подростку - прим. перев.).
+- Выбирать возраст выше, чем реальный, не следует, потому что может привести к передозировке при введении ошибочного значения в диалоге инсулина (например, если пропущен десятичный разделитель - точка или запятая).
+- Если вы хотите знать фактические величины жестких ограничений безопасности в коде, перейдите к функции алгоритма на [этой странице](../Usage/Open-APS-features.md).
 
-### Max allowed bolus \[U\]
+### Максимально разрешённый болюс \[ед.\]
 
-- Defines maximum amount of bolus insulin that AAPS is allowed to deliver at once.
+- Максимальное количество болюсного инсулина, разово разрешаемое в AAPS.
 - Эта настройка существует как ограничение безопасности для предотвращения подачи чрезмерного болюса из-за случайного ввода или ошибки пользователя.
 - Рекомендуется установить это значение как разумный предел, приблизительно соответствующий максимальному количеству болюсного инсулина, который вы когда-либо можете подать на еду или на коррекцию.
-- This restriction is also applied to the results of the bolus calculator.
+- Это ограничение также налагается на результаты калькулятора болюса.
 
-### Max allowed carbs \[g\]
+### Макс разрешенные углеводы [г.]
 
-- Defines the maximum amount of carbs that AAPS bolus calculator is allowed to dose for.
+- Это максимальное количество углеводов, на которое калькулятор болюса AAPS может подать дозу инсулина.
 - Эта настройка существует как ограничение безопасности для предотвращения подачи чрезмерного болюса из-за случайного ввода или ошибки пользователя.
 - Рекомендуется установить это значение как разумный предел, приблизительно соответствующий максимальному количеству углеводов, которые вам когда-либо понадобится на еду.
 
 ## Замкнутый цикл
 
 (Preferences-aps-mode)=
-### APS mode
+### Режим APS
 
-- Toggle between open and closed looping as well as low glucose suspend (LGS)
-- **Open looping** means TBR suggestions are made based on your data and appear as a notification. After manual confirmation, the command to dose insulin will be transferred to pump. Only if you use virtual pump you have to enter it manually.
+- Переключение между открытым и замкнутым циклом, а также приостановкой на низких ГК (LGS)
+- Работа в **Открытом цикле** означает, что предложения временного базала TBR делаются на основе ваших данных и отображаются в виде уведомления. После подтверждения вручную, команда о дозировке временного базала передается на помпу. Если вы пользуетесь виртуальной помпой, необходимо вводить команду вручную.
 - **Замкнутый цикл** означает, что предложения по изменению скорости временного базала TBR автоматически отправляются на вашу помпу без вашего подтверждения.
-- **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. This means that if blood glucose is dropping it can reduce the basal rate, but if blood glucose is rising then it will only increase the basal rate if the basal IOB is negative (e.g. from a previous Low Glucose Suspend).
+- **Приостановка помпы на низкой ГК** похожа на работу в замкнутом цикле, но переопределяет параметр макс активного инсулина maxIOB на ноль. Это значит, что при падении гликемии базал будет снижен, но когда гликемия будет расти, он повысится только при отрицательном значении активного инсулина IOB (например, после предыдущей остановки подачи инсулина из-за низкой гликемии).
 
 (Preferences-minimal-request-change)=
 ### Минимальный запрос на изменения \[%\]
 
 - При открытогм цикле вы будете получать уведомления каждый раз, когда AAPS рекомендует скорректировать базальную скорость.
-- To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
+- Чтобы уменьшить число уведомлений, можно либо использовать более широкий диапазон целевой ГК, либо увеличить процент минимального запроса на изменения.
 - Он определяет относительное изменение, необходимое для активации уведомления.
 
 (Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)=
-## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
+## Улучшенный ассистент приема пищи (AMA) или Супер Микро Болюс (SMB)
 
-Depending on your settings in [config builder](../Configuration/Config-Builder.md) you can choose between two algorithms:
+В зависимости от настроек в [конфигураторе](../Configuration/Config-Builder.md) можно выбрать между двумя алгоритмами:
 
-- [Advanced meal assist (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm for advanced users
+- [Улучшенный ассистент приема пищи (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - состояние алгоритма на 2017 год
+- [Супер микроболюс (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - самый последний алгоритм для опытных пользователей
 
-### OpenAPS AMA settings
+### Настройки OpenAPS AMA
 
-- Allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably.
-- More details about the settings and Autosens can be found in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+- Позволяет системе быстрее установить высокое временное целевое значение после болюса на еду, ЕСЛИ вы правильно ввели углеводы.
+- Более подробную информацию о настройках и Autosens можно найти в документации [OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 #### Максимальное значение ед./ч для скорости временного базала
 
-- Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate.
-- The value is measured in units per hour (U/h).
+- Эта настройка существует как ограничение безопасности, чтобы не позволить алгоритму ААПС когда-либо задать слишком большую величину скорости базала.
+- Значение задается в единицах в час (ед./ч).
 - It is advised to set this to something sensible. Хорошая рекомендация – взять **наивысшую скорость базала** в вашем профиле и **умножить ее на 4**.
-- For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
-- See also [detailed feature description](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- Например, если максимальная скорость базала в вашем профиле была 0,5 ед./ч, то, умножив ее на 4, вы получите значение 2 ед./ч.
+- См. также [подробное описание функции](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
-#### Maximum basal IOB OpenAPS can deliver \[U\]
+#### Максимальный активный базальный инсулин IOB, разрешенный в OpenAPS [ед.]
 
 - Количество базального инсулина (в единицах) которому позволено накопиться в вашем организме в дополнение к нормальному базальному профилю.
 - По достижении этой величины AAPS перестает подавать дополнительный базальный инсулин до тех пор, пока ваш активный базальный Инсулин (IOB) снова не вернется в этот диапазон.
-- This value **does not consider bolus IOB**, only basal.
+- Это значение **не учитывает болюсный IOB, **только базал.
 - Эта величина вычисляется и отслеживается независимо от скорости вашего обычного базала. Учитывается только дополнительный базал, который свыше обычного.
 
 Когда вы начинаете работать с алгоритмом ИПЖ, **рекомендуется установить максимум активного базальный инсулина IOB на 0 ** на время привыкания к системе. Такая настройка запрещает AAPS давать дополнительный базальный инсулин. В этот период алгоритм AAPS в состоянии ограничить или отключить базу инсулина для предотвращения гипогликемии. Это важный шаг для того чтобы:
@@ -341,210 +341,210 @@ Depending on your settings in [config builder](../Configuration/Config-Builder.m
 - Совершенствовать свой базальный профиль и лучше настроить фактор чувствительности к инсулину ISF.
 - Увидеть, как AAPS ограничивает ваш базальный инсулин, чтобы предотвратить гипокликемию.
 
-Когда вы почувствуете себя комфортно, то можете позволить системе начать давать вам дополнительный базал, повышая макс. значение активного базального инсулина IOB. Хорошая рекомендация – взять **наивысшую скорость базала** в вашем профиле и **умножить ее на 3**. For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 3 to get a value of 1.5 U/h.
+Когда вы почувствуете себя комфортно, то можете позволить системе начать давать вам дополнительный базал, повышая макс. значение активного базального инсулина IOB. Хорошая рекомендация – взять **наивысшую скорость базала** в вашем профиле и **умножить ее на 3**. Например, если максимальная скорость базала в вашем профиле была 0,5 ед./ч, то, умножив ее на 3, вы получите значение 1.5 ед./ч.
 
-- You can start conservatively with this value and increase it slowly over time.
-- These are guidelines only; everyone's body is different. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
+- Вы можете консервативно принять это значение и медленно увеличивать его со временем.
+- Это только руководящие принципы; организмы всех людей отличаются друг от друга. Вы можете понять, что вам требуется больше или меньше, чем рекомендуется здесь, но всегда следует начинать консервативно и регулировать медленно.
 
-**Note: As a safety feature, Max Basal IOB is hard-limited to 7u.**
+**Примечание: В качестве функции безопасности максимально допустимый базальный Max Basal IOB жестко ограничен 7ед.**
 
 #### Autosens
 
-- [Autosens](Open-APS-features-autosens) looks at blood glucose deviations (positive/negative/neutral).
-- It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
-- If you select "Autosens adjust target, too" the algorithm will also modify your glucose target.
+- [Autosens](Open-APS-features-autosens)отслеживает отклонения ГК (положительные/отрицательные/нейтральные).
+- На основе отклонений он пытается выяснить, насколько вы чувствительны/резистентны к инсулину и корректирует базальную скорость и коэффициент чувствительности к инсулину ISF.
+- Если вы выберете "Autosense также подстраивает цели", алгоритм будет менять целевую ГК.
 
-#### Advanced settings (OpenAPS AMA)
+#### Дополнительные настройки (OpenAPS AMA)
 
-- Normally you do not have to change the settings in this dialogue!
-- If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
+- Обычно нет необходимости изменять настройки в этом диалоге!
+- Если все же вы хотите изменить их, обязательно прочтите подробности в документации [OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) для полного понимания ваших действий.
 
 (Preferences-openaps-smb-settings)=
-### OpenAPS SMB settings
+### Настройки OpenAPS SMB
 
-- In contrast to AMA, [SMB](Open-APS-features-super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- В отличие от AMA, [SMB](Open-APS-features-super-micro-bolus-smb) не использует временные базальные скорости для контроля уровней глюкозы, а главным образом супермикроболюсы.
 
-- You must have started [objective 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
+- Для микроболюсов SMB необходимо запустить [ цель 9 ](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb).
 
-- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- Первые три настройки объяснены [выше](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
-- Details on the different enable options are described in [OpenAPS feature section](Open-APS-features-enable-smb).
+- Подробности различных опций настройки описаны в разделе [возможности OpenAPS ](Open-APS-features-enable-smb).
 
-- *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. This value prevents the system from issuing SMB too often (for example in case of a temp target being set). You should not change this setting unless you know exactly about consequences.
+- *Как часто SMB будут подаваться в минутах* - по умолчанию эта величина определена только в четыре минуты. Эта величина не позволяет системе подавать микроболюсы слишком часто (например, при постановке временной цели). Не следует менять эту настройку, если только точно не осознаете последствия.
 
-- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](Open-APS-features-autosens) will modify your glucose target according to your blood glucose deviations.
+- Если активированы настройки "Чувствительность повышает цель" или "Резистентность понижает цель", [Autosens](Open-APS-features-autosens) меняет целевое значение ГК в соответствии с ее (гликемии) отклонениями.
 
-- If target is modified it will be displayed with a green background on your home screen.
+- Если цель изменена, она будет отображаться в поле целей на зеленом фоне на главном экране.
 
   ```{image} ../images/Home2020_DynamicTargetAdjustment.png
-  :alt: Target modified by autosens
+  :alt: цель изменена автоматически
   ```
 
 (Preferences-carb-required-notification)=
-#### Carb required notification
+#### Уведомление о потребности в углеводах
 
-- This feature is only available if SMB algorithm is selected.
+- Эта функция доступна только если выбран алгоритм супермикроболюсов SMB.
 
-- Eating of additional carbs will be suggested when the reference design detects that it requires carbs.
+- Если алгоритм обнаруживает, что организму требуются дополнительные углеводы, об этом появится сообщение.
 
-- In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
+- Вы получите уведомление, которое может быть отложено на 5, 15 или 30 минут.
 
-- Additionally the required carbs will be displayed in the COB section on your home screen.
+- Кроме того, на главном экране в секции активных углеводов будет показано необходимое количество углеводов.
 
-- A threshold can be defined - minimum amount of carbs needed to trigger a notification.
+- Вы можете сами определить пороговое значение минимального количества углеводов, необходимых для запуска уведомления.
 
 - При желании уведомления об углеводах могут быть переданы в Nightscout. В этом случае сработают стандартные настройки оповещения NS.
 
   ```{image} ../images/Pref2020_CarbsRequired.png
-  :alt: Display carbs required on home screen
+  :alt: необходимые углеводы на главном экране
   ```
 
-#### Advanced settings (OpenAPS SMB)
+#### Дополнительные настройки (OpenAPS AMA)
 
-- Normally you do not have to change the settings in this dialogue!
-- If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
+- Обычно нет необходимости изменять настройки в этом диалоге!
+- Если все же вы хотите изменить их, обязательно прочтите подробности в документации [OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) для полного понимания ваших действий.
 
 ## Настройки усваиваемости
 
 ```{image} ../images/Pref2020_Absorption.png
-:alt: Absorption settings
+:alt:Настройки усваиваемости
 ```
 
 ### min_5m_carbimpact
 
-- The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed.
+- Алгоритм использует BGI (воздействие на глюкозу в крови) для определения поглощения углеводов.
 
-- The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB.
+- Это значение используется только во время пробелов в мониторинге или когда физическая нагрузка "съедает" весь подъем гликемии, которая в ином случае заставила бы алгоритм AAPS поглощать углеводы COB организма.
 
-- At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Этот параметр не приводит к отказам.
+- В тех случаях, когда на основании реакции гликемии крови невозможно динамически рассчитать усвоение углеводов, алгоритм пользуется значением по умолчанию. Этот параметр не приводит к отказам.
 
-- To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc.
+- Говоря по-простому, алгоритм "знает" как *должна* вести себя ГК при воздействии дозы инсулина и т. п.
 
-- Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc.
+- При положительном отклонении от ожидаемого поведения некоторые углеводы поглощаются/исчезают. Большие изменения=много углеводов и т. д.
 
-- The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+- По умолчанию величина min_5m_carbimpact определяет поглощение углеводов за 5 минут. Дополнительную информацию см. в документации [OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
-- Standard value for AMA is 5, for SMB it's 8.
+- Стандартное значение для AMA 5, для SMB это 8.
 
-- The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+- График COB на главном экране показывает, когда используется min_5m_impact в виде оранжевого круга в верхней части.
 
   ```{image} ../images/Pref2020_min_5m_carbimpact.png
-  :alt: COB graph
+  :alt: График активных углеводов COB
   ```
 
-### Maximum meal absorption time
+### Максимальное время усвояемости пищи
 
-- If you often eat high fat or protein meals you will need to increase your meal absorption time.
+- Если вы часто едите блюда с высоким содержанием жиров или белка, вам следует увеличить время усвоения пищи.
 
-### Advanced settings - autosens ratio
+### Расширенные настройки - коэффициент autosens
 
-- Define min. and max. [autosens](Open-APS-features-autosens) ratio.
-- Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+- Определите мин и макс коэффициент [autosens](Open-APS-features-autosens).
+- Обычно стандартные значения (макс. 1.2 и мин. 0.7) не должны меняться.
 
-## Pump settings
+## Настройки помпы
 
-The options here will vary depending on which pump driver you have selected in [Config Builder](Config-Builder-pump).  Pair and set your pump up according to the pump related instructions:
+Параметры здесь варьируются в зависимости от того, какой драйвер помпы вы выбрали в [конфигураторе](Config-Builder-pump).  Выполните сопряжение и настройте помпу в соответствии с инструкциями относящимися к помпе:
 
-- [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md)
-- [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md)
+- [Инсулиновая помпа DanaR](../Configuration/DanaR-Insulin-Pump.md)
+- [Инсулиновая помпа DanaRS](../Configuration/DanaRS-Insulin-Pump.md)
 - [Помпа Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
-- [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md)
-- [Medtronic Pump](../Configuration/MedtronicPump.md)
+- [Помпа Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
+- [Помпа Medtronic](../Configuration/MedtronicPump.md)
 
-If using AAPS to open loop then make sure you have selected Virtual Pump in config builder.
+Для работы AndroidAPS в незамкнутом цикле, в конфигураторе выберите виртуальную помпу.
 
 (Preferences-nsclient)=
 ## клиент NS
 
 ```{image} ../images/Pref2020_NSClient.png
-:alt: NSClient
+:alt: Клиент NS
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yourwebsitename.herokuapp.com>) and the *API secret* (a 12 character password recorded in your Heroku variables).
-- This enables data to be read and written between both the Nightscout website and AAPS.
-- Double check for typos here if you are stuck in Objective 1.
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS).
-- If activated changes in [local profile](Config-Builder-local-profile) are uploaded to your Nightscout site.
+- Установите адрес и пароль вашего сайта *Nightscout URL* (напр. [https://yourwebsitename.herokuapp. om](https://yourwebsitename.herokuapp.com)и *API секрет* (12-значный пароль который записан в переменных Heroku). (примечание - здесь возможно применение других переменных, в зависимости от провайдера --- прим перев).
+- Это позволит считывать и записывать данные веб-сайту Nightscout и приложению AAPS.
+- Если вы застряли на Цели 1, еще раз проверьте поля с адресом и паролем на наличие опечаток.
+- **Убедитесь, что URL-адрес БЕЗ /api/v1/ в конце.**
+- Опция *Делать запись о старте приложения в Nightscout* заносит отметку в журнале портала терапии каждый раз при запуске приложения.  Приложение не должно запускаться более одного раза в день; если чаще, то возможна проблема (напр. Оптимизация батареи не отключена для AAPS).
+- При активации, изменения в [локальном профиле](Config-Builder-local-profile) загружаются на ваш сайт NS.
 
-### Connection settings
+### Параметры подключения
 
 ```{image} ../images/ConfBuild_ConnectionSettings.png
-:alt: NSClient connection settings
+:alt: настройки подключения NSClient
 ```
 
-- Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-- If you want to use only a specific WiFi network you can enter its WiFi SSID.
-- Multiple SSIDs can be separated by semicolon.
-- To delete all SSIDs enter a blank space in the field.
+- Ограничьте загрузку в Nightscout только через Wi-Fi или даже через Wi-Fi SSID.
+- Если вы хотите использовать только конкретные сети WiFi, в настройках подключения укажите конкретный идентификатор сети WiFi SSID.
+- Несколько идентификаторов SSID разделяются точкой с запятой.
+- Чтобы удалить все SSID оставьте поле пустым.
 
-### Alarm options
+### Опции оповещения
 
-- Alarm options allows you to select which default Nightscout alarms to use through the app.
-- For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Heroku variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- They will only work whilst you have a connection to Nightscout and are intended for parent/carers.
-- If you have the CGM source on your phone (i.e. xDrip+ or BYODA \[Build your own dexcom app\]) then use those alarms instead.
+- Опции звуковых оповещений позволяют выбрать оповещения Nightscout по умолчанию для использования через приложение.
+- Для того, чтобы оповещения работали следует установить Высокий, Низкие и другие срочные значения сигнализации в переменных в [Heroku](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+- Они будут работать только во время подключения к Nightscout и предназначены для родителей/опекунов.
+- Если на телефоне есть источник CGM, то можно использовать оповещения с этого источника.
 
 (Preferences-advanced-settings-nsclient)=
-### Advanced settings (NSClient)
+### Расширенные настройки (Клиент NS)
 
 ```{image} ../images/Pref2020_NSClientAdv.png
-:alt: NS Client advanced settings
+:alt: Дополнительные настройки NS клиента
 ```
 
-- Most options in advanced settings are self-explanatory.
+- Большинство опций в расширенных настройках самоочевидны.
 
-- *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+.
+- *Включить локальные трансляции* передаст данные с портала терапии на другие приложения на телефоне, например xdrip+.
 
-  - You need to [go through AAPS](Config-Builder-bg-source) and enable local broadcast in AAPS to use xDrip+ alarms.
+  - Перейдите в [AAPS](Config-Builder-bg-source) и активируйте локальную передачу данных, чтобы пользоваться оповещениями xDrip+.
 
-- *Always use basal absolute values* must be activated if you want to use Autotune properly. See [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) for more details on Autotune.
+- Если вы хотите правильно использовать Autotune, то включите опцию *Всегда использовать абсолютные значения базала*. Читайте [ документацию OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) для более подробной информации об Autotune.
 
 ## СМС-коммуникатор
 
-- Options will only be displayed if SMS communicator is selected in [Config Builder](Config-Builder-sms-communicator).
-- This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.
-- Further information is described in [SMS Commands](../Children/SMS-Commands.md).
-- Additional safety is obtained through use of an authenticator app and additional PIN at token end.
+- Опции будут показаны только в том случае, если коммуникатор SMS выбран в [Конфигураторе](Config-Builder-sms-communicator).
+- Эта настройка позволяет осуществлять удаленное управление приложением при помощи смс-инструкций, отправляемых на телефон пациента, который выполняет их в AAPS, например, приостанавливая работу цикла или подавая болюсы.
+- Дальнейшая информация описана в [Команды SMS ](../Children/SMS-Commands.md).
+- Дополнительная безопасность обеспечивается с помощью приложения-Аутентификатора и дополнительного PIN-кода в конце сообщения.
 
 ## Автоматизация
 
-Select which location service shall be used:
+Выберите, какая должна использоваться служба определения локации:
 
-- Use passive location: AAPS only takes locations if other apps are requesting it
-- Use network location: Location of your Wi-Fi
-- Use GPS location (Attention! Может привести к чрезмерной разрядке аккумулятора!)
+- Использовать пассивное расположение: AAPS принимает положения только в том случае, если другие приложения запрашивали его
+- Использовать расположение сети: расположение вашего Wifi
+- Используйте локатор GPS (Внимание! Может привести к чрезмерной разрядке аккумулятора!)
 
-## Local alerts
+## Локальные оповещения
 
 ```{image} ../images/Pref2020_LocalAlerts.png
-:alt: Local alerts
+:alt:Локальные оповещения
 ```
 
-- Settings should be self-explanatory.
+- Настройки самоочевидны.
 
-## Data choices
+## Отбор данных
 
 ```{image} ../images/Pref2020_DataChoice.png
-:alt: Data choices
+:alt: Отбор данных
 ```
 
-- You can help develop AAPS further by sending crash reports to the developers.
+- Вы можете помочь разработчикам AAPS, посылая отчеты об ошибках.
 
-## Maintenance settings
+## Параметры обслуживания
 
 ```{image} ../images/Pref2020_Maintenance.png
-:alt: Maintenance settings
+:alt: Параметры обслуживания
 ```
 
-- Standard recipient of logs is <logs@androidaps.org>.
-- If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). In this case master password has to be entered each time settings are exported or imported.
+- Отправляйте логи журналов на <logs@androidaps.org>.
+- Если вы выберите *Шифрование экспортированных настроек* они будут зашифрованы вашим мастер-паролем [](Preferences-master-password). В этом случае пароль должен вводиться каждый раз, когда настройки экспортируются или импортируются.
 
-## Open Humans
+## Проект Open Humans
 
-- You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../Configuration/OpenHumans.md).
+- You can help the community by donating your data to research projects! Детали описаны на странице [Open Humans](../Configuration/OpenHumans.md).
 
-- In Preferences you can define when data shall be uploaded
+- В настройках вы можете определить, когда загружать данные
 
-  - only if connected to WiFi
-  - only if charging
+  - загружать только при подключении к WiFi
+  - только при зарядке

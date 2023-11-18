@@ -2,19 +2,23 @@
 
 ## Kurti sau, o ne parsisiųsti
 
-**AAPS is not available as download due to regulation for medial devices. Programos kūrimas savo reikmėms yra visiškai teisėtas, tačiau jums neleidžiama perduoti jos kopijos kitiems! Žr. [DUK](../Getting-Started/FAQ.md) dėl išsamesnės informacijos.**
+**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! Žr. [DUK](../Getting-Started/FAQ.md) dėl išsamesnės informacijos.
 
 ## Svarbios pastabos
 
-* Prašome atnaujinti kuo greičiau, kai tik nauja versija yra prieinama. You will receive an [information on the AAPS home screen](Releasenotes-release-notes) about the new version.
-* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
-* Please use **[Android Studio Version 2020.3.1 (Arctic Fox)](https://developer.android.com/studio/)** or newer to build the apk.
-* [Windows 10 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1.
-* Make sure you read the [Release Notes](../Installing-AndroidAPS/Releasenotes.md) for the current version
+* Please update to the new version of **AAPS** as soon as possible after a new release is available.
+* When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
+* The new version will also be announced on Facebook at the time of release.
+* Following the release, please read the [Release Notes](../Installing-AndroidAPS/Releasenotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
+* For **AAPS** versions 2.7 and newer, the location for the new files is at <https://github.com/nightscout/AndroidAPS>.
+* The easiest way to update **AAPS** is to remove the directory with **AAPS** and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
+* If you are unsure about how to do this, you can also completely uninstall and reinstall Android Studio to make sure the build is a success. 
+* Ideally, use the latest version of Android Studio, **[Giraffe, 2022.3.1](https://developer.android.com/studio/)**, but at least **Arctic Fox (2020.3.1)** or newer, to build the updated **AAPS** apk.
+* If building the **AAPS** app using a Windows platform, you will need to use a Windows 64-bit system since 32-bit systems are not supported.
 
-## Overview for updating your AAPS version
+## Overview for updating to a new version of AAPS
 
-1. [Export your settings](../Usage/ExportImportSettings-export-settings) from the existing AAPS version on your phone. You might not need it, but better be save than sorry.
+1. [Export your settings](../Usage/ExportImportSettings-export-settings) from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
 2. [Update local copy](Update-to-new-version-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
 3. [Build signed APK](Update-to-new-version-build-the-signed-apk)
 4. [Transfer the built apk](Building-APK-transfer-apk-to-smartphone) to your phone and install it
