@@ -18,7 +18,7 @@
 
 #### Текущий профиль
 
-![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+![Оставшееся время замененного профиля](../images/Home2020_ProfileSwitch.png)
 
 * Текущий профиль отображается на левой панели.
 * Короткое нажатие открывает подробности о текущем профиле
@@ -27,7 +27,7 @@
 
 #### Целевое значение ГК (Цель)
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+![Оставшаяся продолжительность временной цели](../images/Home2020_TT.png)
 
 * Текущее целевое значение глюкозы крови (ГК) отображается на правой панели.
 * Короткое нажатие позволяет установить [временную цель](../Usage/temptarget.md).
@@ -37,7 +37,7 @@
 
 #### Визуализация динамического изменения цели
 
-![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+![Визуализация динамического изменения цели](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS может динамически изменять установленную цель основываясь на чувствительности, если используется алгоритм СМБ (SMB).
 * Активируйте одну или обе [настройки](Preferences-openaps-smb-settings): 
@@ -125,7 +125,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ### Раздел D - АктИнс, АктУгл, БС и AS
 
-![Section D](../images/Home2020_TBR.png)
+![Раздел D](../images/Home2020_TBR.png)
 
 * Иконка шприца: инсулин "на борту" (IOB, АктИнс) - количество активного инсулина в теле
    
@@ -150,7 +150,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ### Раздел E- Индикаторы состояния
 
-![Section E](../images/Home2020_StatusLights.png)
+![Раздел E](../images/Home2020_StatusLights.png)
 
 * Индикаторы состояния сообщают: 
    * сколько времени прошло с момента установки канюли
@@ -166,7 +166,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ### Раздел F - Основной график
 
-![Section F](../images/Home2020_MainGraph.png)
+![Раздел F](../images/Home2020_MainGraph.png)
 
 * График показывает уровень глюкозы в крови (ГК) считываемый с мониторинга глюкозы (CGM). 
 * Здесь показаны заметки, введенные на вкладке действия, такие как калибровка с глюкометра и записи углеводов, а также переключения профиля. 
@@ -235,7 +235,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 * Можно активировать до четырех дополнительных графиков ниже главного графика.
 * Чтобы настроить дополнительные графики - щелкните по треугольнику справа от [главного](Screenshots-section-f-main-graph) и прокрутите вниз.
 
-![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+![Дополнительные параметры графика](../images/Home2020_AdditionalGraphSetting.png)
 
 * Для добавления дополнительного графика установите флажок с левой стороны его названия (например, \---\---- Граф 1 \---\----).
 
@@ -281,7 +281,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ### Раздел H - Кнопки
 
-![Homescreen buttons](../images/Home2020_Buttons.png)
+![Кнопки главного экрана](../images/Home2020_Buttons.png)
 
 * Кнопки инсулина, углеводов и калькулятора почти 'всегда активны'.
    
@@ -291,7 +291,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 #### Инсулин
 
-![Insulin button](../images/Home2020_ButtonInsulin.png)
+![Кнопка инсулина](../images/Home2020_ButtonInsulin.png)
 
 * Подает заданное количество инсулина без использования [калькулятора болюса](Screenshots-bolus-wizard).
 * Можно автоматически начать [ВЦ Ожидаемый прием пищи](Preferences-default-temp-targets), поставив флажок рядом с этой опцией.
@@ -299,7 +299,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 #### Углеводы
 
-![Carbs button](../images/Home2020_ButtonCarbs.png)
+![Кнопка углеводов](../images/Home2020_ButtonCarbs.png)
 
 * Делает запись об углеводах без подачи болюса.
 * Можно активировать [заранее настроенную временную цель](Preferences-default-temp-targets) поставив рядом с ней флажок.
@@ -332,7 +332,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ## Мастер Болюса
 
-![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
+![Мастер Болюса](../images/Home2020_BolusWizard_v2.png)
 
 Чаще всего вы будете вводить болюс на еду именно отсюда.
 
@@ -380,7 +380,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 #### Неверное обнаружение активных углеводов COB
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+![Медленное усвоение углеводов](../images/Calculator_SlowCarbAbsorption.png)
 
 * Если после использования мастера болюса вы видите сообщение выше, то AAPS обнаружил, что рассчитанное значение активных углеводов может быть неправильным.
 * Так что, если вы хотите повторно подать болюс после предыдущей еды с активными углеводами, учитывайте возможность передозировки! 
@@ -390,31 +390,31 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ## Вкладка "Действия"
 
-![Actions tab](../images/Home2021_Action.png)
+![Вкладка "Действия"](../images/Home2021_Action.png)
 
 ### Действия-раздел M
 
-* Button [profile switch](Profiles-profile-switch) as an alternative to pressing the [current profile](Screenshots-section-b-profile-target) on homescreen.
-* Button [temporary target](temptarget-temp-targets) as an alternative to pressing the [current target](Screenshots-section-b-profile-target) on homescreen.
-* Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
-* Even though [extended boluses](Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+* Кнопка [переключение профиля](Profiles-profile-switch) является альтернативой нажатию [текущий профиль](Screenshots-section-b-profile-target) на главном экране.
+* Кнопка [временная цель](temptarget-temp-targets) - альтернатива [текущей цели](Screenshots-section-b-profile-target) на главном экране.
+* Кнопка начала или отмены временного базала. Обратите внимание, что кнопка меняется с “TEMPBASAL” (ВРЕМБАЗАЛ) на “CANCEL x%” (ОТМЕНА х%), после начала действия.
+* Несмотря на то, что [пролонгированные болюсы](Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment) действительно не работают в замкнутом цикле, некоторые всё равно просили оставить эту опцию.
    
-   * This option is only available for Dana RS and Insight pumps. 
-   * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
-   * Make sure to read the [details](../Usage/Extended-Carbs.md) before using this option.
+   * Эта опция доступна только для помпDana RS и Insight. 
+   * Замкнутый цикл автоматически будет остановлен и переключится на режим открытого цикла на время пролонгированных болюсов.
+   * Не забудьте прочитать [детали](../Usage/Extended-Carbs.md) перед использованием этой опции.
 
 (Screenshots-careportal-section-n)=
 
 ### Портал терапии-раздел N
 
-* Displays information on
+* Отображает информацию о
    
-   * sensor age & level (battery percentage)
-   * insulin age & level (units)
+   * время, отработанное сенсором & уровень заряда (процент заряда батареи)
+   * время нахождения инсулина в картридже & уровень (единицы)
    * отработанное время (возраст) катетера помпы
    * время, отработанное батареей (аккумулятором) помпы & уровень заряда (процент
 
-* Less information will be shown if [low resolution skin](Preferences-skin) is used.
+* Будет показано меньше информации, если используется [ низкое разрешение экрана](Preferences-skin).
 
 (Screenshots-sensor-level-battery)=
 
@@ -422,14 +422,14 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 * Требуется xDrip+ ночная сборка от декабря 10, 2020 или новее.
 * Работает в мониторинге с дополнительным передатчиком, например MiaoMiao 2. (Датчик должен послать информацию об уровне батареи на xDrip+.)
-* Thresholds can be set in [preferences](Preferences-status-lights).
+* Пороговые значения могут быть заданы в [настройках](Preferences-status-lights).
 * Если уровень батареи сенсора совпадает с уровнем заряда аккумулятора телефона, то версия xDrip+, вероятно, слишком старая и нуждается в обновлении.
    
    ![Уровни сенсоров равны уровню батареи телефона](../images/Home2021_ActionSensorBat.png)
 
 ### Портал терапии-раздел О
 
-* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](Screenshots-careportal-section-n).
+* Контроль ГК, заполнение инфузионного набора, установка сенсора и замена батареи помпы - основные данные в [разделе N](Screenshots-careportal-section-n).
 * Кнопка Заполнение инфузионного набора позволяет регистрировать смену места катетера помпы, а также замену картриджа инсулина.
 * Раздел O отражает состояние портала терапии сайта Nightscout. Так что упражнения, объявление и вопрос являются специальными формами заметок.
 
@@ -447,7 +447,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 * Другие принимают за суточную базу TBB диапазон от 32% до 37% от суммарной суточной дозы TDD. 
 * Как и большинство подобных подсказок они имеют ограниченное практическое значение. Примечание: Ваш диабет может быть иным!
 
-![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
+![Браузер журнала + TDD](../images/Home2021_Action_HB_TDD.png)
 
 (Screenshots-insulin-profile))=
 
@@ -461,37 +461,37 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 * Если вы раньше управляли помпой вручную, то, вероятно, привыкли считать, что инсулин усваивается примерно за 3,5 часа. 
 * Тем не менее, когда вы используете замкнутый цикл длинные хвосты имеют важное значение при расчетах, т. к. все эти незначительные хвостики складываются и становятся значимыми в дальнейших расчетах AAPS.
 
-For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+Более подробное обсуждение различных типов инсулина, их профилей активности и почему это важно, см. здесь [Понимание новых кривых IOB на основе экспоненциальных кривых активности](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+Отличная статья об этом: [Почему мы регулярно ошибались в определении длительности действия инсулина (DIA) и почему это важно…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+Еще на эту тему: [Экспоненциальные кривые инсулина + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Статус помпы
 
 ![Статус помпы](../images/Screenshot_PumpStatus.png)
 
-* Different information on pump status. Displayed information depends on your pump model.
-* See [pumps page](../Hardware/pumps.md) for details.
+* Разная информация о состоянии помпы. Отображаемая информация зависит от модели помпы.
+* Смотрите [страницу помпы](../Hardware/pumps.md).
 
 ## Портал терапии
 
-Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
+Здесь повторяются функции которые можно найти на экране Nightscout под символом "+", который позволяет добавлять заметки к терапии.
 
 ### Просмотреть расчет углеводов
 
-![Review carb calculation on t tab](../images/Screenshots_TreatCalc.png)
+![Посмотреть расчет углеводов на вкладке терапии](../images/Screenshots_TreatCalc.png)
 
-* If you have used the [Bolus Wizard](Screenshots-bolus-wizard) to calculate insulin dosage you can review this calculation later on ts tab.
-* Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in ts.)
+* Если вы использовали [Мастер Болюса](Screenshots-bolus-wizard) (Калькулятор) для вычисления дозы инсулина, этот расчет можно увидеть позже на вкладке терапии.
+* Просто нажмите на зеленую ссылку Кальк. (В зависимости от используемой помпы, инсулин и углеводы могут отображаться в одной строчке в записи терапии.)
 
 (Screenshots-carb-correction)=
 
 ### Коррекция углеводов
 
-![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+![Терапия в 1 или 2 линии](../images/Treatment_1or2_lines.png)
 
-Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+На вкладке Лечение можно исправить ошибочные записи углеводов (если вы переоцениваете или недооценили углеводы).
 
 1. Проверьте и запомните фактические активные углеводы COB и активный инсулин IOB на главном экране.
 2. В зависимости от помпы углеводы на вкладке терапии могут быть показаны одной линией с инсулином или в виде отдельной записи (например, для Dana RS).
