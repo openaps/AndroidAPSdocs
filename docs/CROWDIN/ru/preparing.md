@@ -238,9 +238,9 @@ To report any problem with the spreadsheet please email [hardware@androidaps.org
 
 To make a donation of smartphone or smartwatch models that still need testing, please email [donations@androidaps.org](mailto:donations@androidaps.org).
 
-- [List of tested phones](../Getting-Started/Phones.md)
-- [Jelly Pro Settings](../Usage/jelly.md)
-- [Huawei Settings](../Usage/huawei.md)
+- [Список проверенных телефонов](../Getting-Started/Phones.md)
+- [Настройки Jelly Pro](../Usage/jelly.md)
+- [Настройки Huawei](../Usage/huawei.md)
 
 Users are encouraged to keep their phone version of Android up-to-date including with security parameters. However, if you are new with AAPS or are not a technical expert you might want to delay updating your phone until others have done so and confirmed it is safe to do so, on our various forums.
 
