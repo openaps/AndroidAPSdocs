@@ -5,20 +5,20 @@
 1. Найти профиль для детей
 2. Сравнить два профиля или переключателя профиля, чтобы клонировать новый профиль
 
-## Profile for kids (up to 18 years)
+## Профиль для детей (до 18 лет)
 
 **Important note:**
 
-**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+**Помощник профиля предназначен для того, чтобы помочь установить первоначальный профиль для вашего ребенка. Несмотря на то, что помощник профиля основан данных двух различных мед учреждений, перед запуском нового профиля обсудите его с эндокринологом!**
 
-Profile helper offers data sets from two different hospitals for children to find initial profile for your kid up to 18 years.
+Помощник профиля основан на данных двух различных детских больниц и рекомендуется для детей до 18 лет.
 
 ```{image} ../images/ProfileHelperKids1.png
-:alt: Profile Helper Kids 1
+:alt: помощник профиля для детей 1
 ```
 
-1. Select 'Profile helper' from three-dot-menu on the top right side of the screen.
-2. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
+1. Выберите 'Помощник профиля' из меню в правом верхнем углу экрана.
+2. Отрегулируйте профиль по умолчанию (на основе набора данных госпиталей), указав возраст ребенка либо суточную дозировку инсулина TDD **либо** вес.
 3. Change screen by clicking on the grey bar labeled 2 on the right.
 4. Long-press 'Current profile' and select DPV Default profile.
 
@@ -40,7 +40,7 @@ You can use profile helper also to compare to different profiles or profile swit
 :alt: Profile Helper 1
 ```
 
-1. Select 'Profile helper' from three-dot-menu on the top right side of the screen.
+1. Выберите 'Помощник профиля' из меню в правом верхнем углу экрана.
 2. Long-press 'Default profile' and select 'Available profile' for a list of your existing profiles or 'Profile switch' for a list of latest profile switches used.
 3. Long-Press the name of the profile / profile switch ('Aktuell_LP' in screenshot above) and select a profile / profile switch from the list.
 4. Change screen by clicking on the grey bar labeled 2 on the right.
