@@ -23,13 +23,13 @@
 
 Важным фактором безопасности является то, что **быстрое снижение уровня HbA1c и улучшение контроля глюкозы у людей с привычным повышением ГК, могут привести к необратимым нарушениям**. Многие люди с диабетом не знают об этом, и не все медработники информируют своих пациентов об этой проблеме.
 
-Нарушения могут включать **потерю зрения и необратимую нейропатию**. Этого можно избежать, снижая средний уровень глюкозы постепенно. Если в настоящее время у вас повышенный уровень HbA1c и вы переходите на **AAPS** (или любую другую замкнутую систему), _обсудите_ потенциальные риски с эндокринологом и согласуйте с ним график безопасного снижения целевых показателей гликемии. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 10.6 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
+Нарушения могут включать **потерю зрения и необратимую нейропатию**. Этого можно избежать, снижая средний уровень глюкозы постепенно. Если в настоящее время у вас повышенный уровень HbA1c и вы переходите на **AAPS** (или любую другую замкнутую систему), _обсудите_ потенциальные риски с эндокринологом и согласуйте с ним график безопасного снижения целевых показателей гликемии. Вы можете изначально задать более высокие цели в **AAPS** (в настоящее время наиболее высокая цель 10 ммоль/л.) но можно также применять более слабый профиль, а затем постепенно, в течение месяцев, понижать цель.
 
-#### How quickly can I reduce my HbA1c without risking permanent damage?
+#### Как быстро можно понижать HbA1c без риска необратимых последствий?
 
-One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the Hba1C dropped 1%, 2% or 3% respectively over a 6 month period. They suggested that the **"decrease in HbA1c value during any 6-month period should be limited to less than 2% in order to prevent the progression of retinopathy....Too rapid a decrease at the initiation of glycemic control could cause severe or transient exacerbation of the progression of retinopathy."**
+В одном ретроспективном [исследовании](https://pubmed.ncbi.nlm.nih.gov/1464975/) с участием 76 пациентов сообщалось, что риск прогрессирования ретинопатии увеличивался в 1,6 раза, 2,4 раза и 3,8 раза, если уровень Hba1C снижался на 1%, 2% или 3% соответственно в течение 6 месяцев. Было высказано предположение, что **" чтобы предотвратить развитие ретинопатии, снижение HbA1c в течение любого 6-месячного периода не должно превышать 2%,... Слишком быстрое снижение может вызвать тяжелое или преходящее ухудшение ретинопатии."**
 
-N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for a HbA1c calculator tool.
+N.B. Если вы привыкли к другим единицам HbA1c (ммоль/л вместо %), нажмите [здесь](https://www.diabetes.co.uk/hba1c-units-converter.html) для вызова калькулятора HbA1c.
 
 In another retrospective [evaluation](https://academic.oup.com/brain/article/138/1/43/337923) of 954 patients, researchers noted that:
 
