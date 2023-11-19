@@ -65,9 +65,6 @@ In general, the steps necessary to build the APK file:
 4. [Download AAPS code](Building-APK-download-AAPS-code)
 5. [Download Android SDK](Building-APK-download-android-sdk)
 6. [Build the app](Building-APK-generate-signed-apk) (generate signed apk)
-7. [Transfer APK file to your phone](Building-APK-transfer-apk-to-smartphone)
-8. [Identify receiver if using xDrip+](xdrip-identify-receiver)
-
 
 ## Step by step walkthrough
 
@@ -75,10 +72,29 @@ Detailed description of the steps necessary to build the APK file.
 
 ## Install git (if you don't have it)
 
+:::{admonition} why git?
+:class: note
+
+Git is known as a “_Versioning control System_” (VCS).\
+Git is a program that allows developers to track changes in their code and collaborate with each other. You will use Git to make a copy of the AAPS source code from the Github website to your local computer. Then you will use your local copy to build the AAPS phone application. You can also use Git to add your own enhancements in the code and send it back to the developer community etc… 
+
+:::
+
 Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.md).
 
 (Building-APK-install-android-studio)=
 ## Install Android Studio
+
+:::{admonition} why Android Studio?
+:class: note
+Android Studio is a program to program programes!  Basically, it is a studio program which runs on your computer and allows you to:
+
+- Download source code from the internet (using git)
+- Modify (aka programme) some programming language source code (typically in java, kotlin, python… )
+- Upload source code to the internet (using Git)
+- Translate (aka compile) the source code into a binary language which can get executed by a microprocessor
+- Merge this binary with android libraries (aka link) into an Android Application Package program (aka an apk file) which can be executed by an Android device. 
+:::
 
 The following screenshots have been taken from Android Studio Version Flamingo | 2022.2.1. Screens can change in future versions of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
 
@@ -134,13 +150,9 @@ Wait while Android Studio downloads additional components and be patient. Once e
 (Building-APK-set-git-path-in-preferences)=
 ## Set git path in preferences
 
-Make sure [git is installed](../Installing-AndroidAPS/git-install.md) on your computer and you have restarted your computer after installing.
+Make sure [git is installed](../Installing-AndroidAPS/git-install.md) on your computer, Android Studion can find it via the path settings and you have restarted your computer after installing.
 
-
-On the Android Studio welcome screen click "Customize" (1) on the left and then select the link  "All settings..." (2):
-
-   ![Android Studio settings from welcome screen](../images/studioSetup/10_WizardSettings.png)
-
+This is important it will not work without corrrect git installation.
 
 ### Windows
 
@@ -183,6 +195,18 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 (Building-APK-download-AAPS-code)=
 ## Download AAPS code
+
+:::{admonition} why does it take so long the first time?
+:class: note
+
+The first time AAPS is downloaded, Android Studio will connect over the internet to the Github website to download the source code for AAPS. This includes the actual source code of the current version of AAPS as well as past versions and ongoing beta and development files.  This should take about 1 minute. 
+
+Android Studio will then use Gradle (a development tool included  Android studio) to identify other components needed to install these items on your computer. This takes much longer, about 10 minutes the first time.
+
+Later on, when you need to update your application, most of the files will already be present on your local computer and only newer/changed files will be downloaded which should speed up the process. 
+
+Note: Even if you uninstall Android Studio, most of these files will remain, making the reinstallation of Android Studio “_from scratch”_ much faster.\
+:::
 
 * On the Android Studio welcome screen select "Projects" (1) on the left and then "Get from VCS" (2).
 
@@ -232,6 +256,15 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 (Building-APK-download-android-sdk)=
 ## Download Android SDK
 
+:::{admonition} what is an Android SDK?
+:class: note
+
+In order to run AAPS on the phone the application needs to integrate with Android itself. Android provides “_software development kits_” (SDK)  which allow applications like AAPS to interface with an Android operating system. For instance each version of Android might have a slightly different way to handle keyboard inputs and gestures. 
+
+- You will need to instruct Android Studio to use a specific version of the Android SDK to create an image compatible with your phone. Since AAPS 3.x is designed to run on top of Android 9 and above this is the version we will ask Android Studio to download. 
+- Applications built with Android 9 SDK should work with subsequent versions (Android 10,11,12,13,...). However if you need to use an older phone, you will need to use an older version of AAPS as per the documentation\
+:::
+
 * In the menu, go to  File (1) > Settings (2) (or Android Studio > Preferences on Mac).
 
    ![Open settings](../images/studioSetup/30_Settings.png)
@@ -258,8 +291,11 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
    ![Finish SDK installation](../images/studioSetup/35_DownloadSDKfinished.png)
 
+:::{admonition} NEVER UPDATE GRADLE!
+:class: warning
 
-* Android Studio might recommend to update the gradle system. **Never update gradle!** This will lead to difficulties!
+Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties!\
+:::
 
 * If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "More" (1).
 
@@ -274,7 +310,11 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 (Building-APK-generate-signed-apk)=
 ## Generate signed APK
 
-Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+:::{admonition} Why signing Android apps?
+:class: note
+
+Android (like Apple’s iOS) requires each application to be signed to ensure that it can later only get updated from the same trusted source who released the original application.  For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).\
+:::
 
 * After Android Studio is started, wait until all background tasks are finished.
 
@@ -364,14 +404,6 @@ Signing means that you indicate your app to be your own creation but in a digita
    ![File location apk](../images/studioSetup/54_APKlocation.png)
 
 * "app-full-release.apk" (3) is the file you are looking for!
-
-
-(Building-APK-transfer-apk-to-smartphone)=
-## Transfer APK to smartphone
-
-Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
-
-On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
 
 ## Troubleshooting
