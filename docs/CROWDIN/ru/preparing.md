@@ -1,29 +1,29 @@
 # Подготовка к пользованию AAPS
 
-## Overview of the AAPS documentation
+## А. Обзор документации ААПС
 
-Добро пожаловать. This documentation aims to guide users on every aspect of the Do-It-Yourself (DIY) system, Android Artificial Pancreas System (**AAPS**), which is also commonly referred to as ‘looping’.
+Добро пожаловать. Эта документация проведет пользователей по всем аспектам самостоятельно собранной системы искусственной поджелудочной железы Android Artificial Pancreas System (**AAPS**), которую также иногда называют "петля".
 
-An expanded index of the documentation can be found [here](index.md), and you can also use the tabs on the left of the page to navigate through the different sections. The [glossary](Getting-Started/Glossary.md) explains terms that you may not be familiar with.
+[Здесь](index.md) можно найти расширенный указатель документации, оглавление слева поможет найти нужный раздел. [Глоссарий](Getting-Started/Glossary.md) объясняет незнакомые термины.
 
-(preparing-safety-first)=
+(подготовка-безопасность-приоритет) =
 
 ## Безопасность прежде всего
-“With great power comes great responsibility…”
+“С большими возможностями приходит большая ответственность…"
 
-### Technical safety
-**AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](Usage/Objectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
+### Техническая безопасность
+**AAPS** имеет широкий набор функций безопасности. Они накладывают ограничения, которые поэтапно устраняются прохождением [Целей](Usage/Objectives.md), включающих тестирование определенных параметров и ответы на вопросы с несколькими вариантами ответов. Важные функции системы **AAPS** становятся доступны после успешного завершения Целей. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
 
-The [Objectives](Usage/Objectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The [Objectives](Usage/Objectives.md) aim to minimise these issues.
+[Цели](Usage/Objectives.md) были разработаны для максимально полного знакомства с системой **AAPS**, с учетом типичных ошибок и общих тенденций, которые разработчики **AAPS** наблюдали у новых пользователей. Ошибки возникают из-за неопытности новичков и их желания начать работу с **AAPS** как можно быстрее, без изучения необходимых материалов. [Цели](Usage/Objectives.md) должны минимизировать эти ошибки.
 
-### Medical safety
-:::{admonition} Avoid permanent and painful damage to your eyes and nerves
-:class: danger Caution is advised concerning rapid improvements in blood glucose control and lowering of HbA1c
+### Медицинская безопасность
+:::{admonition}{предостережение} Избегайте необратимого нарушения зрительной и неврологической функции
+:class::класс: опасность Рекомендуется соблюдать осторожность при быстром улучшения контроля глюкозы в крови и снижения уровня HbA1c
 :::
 
-An important safety consideration is that a **rapid reduction in HbA1c and improved blood glucose control in those who have had elevated glucose levels for some time can cause permanent damage**. Many people with diabetes are unaware of this, and not all clinicans make their patients aware of this issue.
+Важным фактором безопасности является то, что **быстрое снижение уровня HbA1c и улучшение контроля глюкозы у людей с привычным повышением ГК, могут привести к необратимым нарушениям**. Многие люди с диабетом не знают об этом, и не все медработники информируют своих пациентов об этой проблеме.
 
-This damage can include **sight loss, and permanent neuropathy (pain)**. It is possible to avoid this damage occuring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 10.6 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
+Нарушения могут включать **потерю зрения и необратимую нейропатию**. Этого можно избежать, снижая средний уровень глюкозы постепенно. Если в настоящее время у вас повышенный уровень HbA1c и вы переходите на **AAPS** (или любую другую замкнутую систему), _обсудите_ потенциальные риски с эндокринологом и согласуйте с ним график безопасного снижения целевых показателей гликемии. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 10.6 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
 
 #### How quickly can I reduce my HbA1c without risking permanent damage?
 
