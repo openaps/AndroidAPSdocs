@@ -136,6 +136,7 @@ Pump choices <./Getting-Started/Pump-Choices.md>
 Phones <./Hardware/Phoneconfig.md>
 
 Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
+Tidepool setup <./Installing-AndroidAPS/Tidepool.md>
 
 Smartwatch  <./Hardware/Smartwatch.md>
 
