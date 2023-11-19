@@ -122,19 +122,20 @@ Rama de desarrollo <./Installing-AndroidAPS/Dev_branch.md>
 (index-component-setup)=
 
 ```{toctree}
-:caption: Configuración de Componentes
+:caption: Component Setup
 
-MCG/MFG <./Configuration/BG-Source.md>
+CGM/FGM <./Configuration/BG-Source.md>
 
-Configuraciones de xDrip+ <./Configuration/xdrip.md>
+xDrip Settings <./Configuration/xdrip.md>
 
-Opciones de bombas <./Getting-Started/Pump-Choices.md>
+Pump choices <./Getting-Started/Pump-Choices.md>
 
-Teléfonos <./Hardware/Phoneconfig.md>
+Phones <./Hardware/Phoneconfig.md>
 
-Configuración de Nightscout <./Installing-AndroidAPS/Nightscout.md>
+Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
+Tidepool setup <./Installing-AndroidAPS/Tidepool.md>
 
-Relojes inteligentes <./Hardware/Smartwatch.md>
+Smartwatch  <./Hardware/Smartwatch.md>
 
 ```
 
