@@ -1,4 +1,4 @@
-# Preparing to start with AAPS
+# Подготовка к пользованию AAPS
 
 ## Overview of the AAPS documentation
 
