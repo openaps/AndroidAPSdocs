@@ -31,21 +31,21 @@
 
 N.B. Если вы привыкли к другим единицам HbA1c (ммоль/л вместо %), нажмите [здесь](https://www.diabetes.co.uk/hba1c-units-converter.html) для вызова калькулятора HbA1c.
 
-In another retrospective [evaluation](https://academic.oup.com/brain/article/138/1/43/337923) of 954 patients, researchers noted that:
+В другом ретроспективном [обследовании](https://academic.oup.com/brain/article/138/1/43/337923) 954 пациентов исследователи отмечали:
 
-**"With a decrease in HbA1c of 2–3% points over 3 months there was a 20% absolute risk of developing treatment-induced neuropathy in diabetes, with a decrease in HbA1c of >4% points over 3 months the absolute risk of developing treatment-induced neuropathy in diabetes exceeded 80%."**
+**При снижении HbA1c на 2–3% в течение 3 мес существовал 20% риск развития нейропатии, при снижении HbA1c на > 4% в течение 3 мес риск развития диабетической нейропатии превысил 80%»**
 
-A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this work agreed that to avoid complications **the goal should be to reduce A1c by <2% over 3 months.** You can read other reviews on the topic [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) and [here](https://www.mdpi.com/1999-4923/15/7/1791).
+В [комментарии](https://academic.oup.com/brain/article/138/1/2/340563) к этой работе говорилось, что во избежание осложнений **целью должно стать снижения гликированного гемоглобина на <2% за 3 месяца**. Другие обзоры на эту тему можно найти [здесь](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) и [здесь](https://www.mdpi.com/1999-4923/15/7/1791).
 
-It is generally recognised that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
+Общепризнанно, что _недавно_ диагностированные больные диабетом 1 типа (у которых очень часто высокий HbA1c при диагнозе, до начала инсулиновой терапии), как представляется, могут быстро снизить свой HbA1c сразу же после диагностики, не столкнувшись с рисками, потому что у них не было длительного превышения нормы гликемии. Тем не менее, этот вопрос следует обсудить с врачом.
 
-### No SGLT-2 inhibitors
+### Не использовать SGLT-2 ингибиторы
 
-:::{admonition} NO SGLT-2 inhibitors
-:class: danger SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous.
+{admonition}(предостережение) НЕ ПОЛЬЗУЙТЕСЬ ингибиторами SGLT-2  
+:class:опасность ингибиторы SGLT-2, также называемые глифлозинами, подавляют реабсорбцию глюкозы в почке. Глифлозины непредсказуемо снижают уровень сахара в крови, поэтому их НЕЛЬЗЯ принимать на фоне работы систем замкнутого цикла, таких как AAPS! Существует существенный риск возникновения кетоацидоза и/или гипогликемии! Сочетание этого препарата с системой, которая снижает скорость базала для увеличения ГК является особенно опасным.
 
-In a nutshell:
-- **Example 1: risk of Hypo**
+В общем виде:
+- **Пример 1: риск Гипо**
 > During lunch, you use **AAPS** to bolus based on consuming 45g of glucose. The problem is that unbeknownst to AAPS, the inhibitors cause the body to eliminate some of the carbs resulting in your body having too much insulin compared to the absorbed Carbs, resulting in hypoglycemia.
 
 - **Example 2: risk of Ketoacidosis**
