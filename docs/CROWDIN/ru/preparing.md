@@ -173,7 +173,7 @@ This section is aimed to provide new users with links on resources in order to g
 И **Nightscout** и **AAPS** должны обновляться примерно один раз в год по мере выхода улучшенных версий. Вы получите пошаговые инструкции о том, как это сделать на предварительно сконфигурированном компьютере. In some cases, the update can be delayed, in others it is strongly recommended or considered essential for safety. Уведомления об этих обновлениях будут предоставляться в группах Facebook и на серверах Discord. В примечаниях к выпуску будет разъясняться что нового в версии. Вероятно, многие люди будут задавать схожие вопросы во время обновления, но у всех будет поддержка.
 
 
-## How long will it take?
+## Сколько времени это займет?
 
 Как уже упоминалось ранее, работа с **AAPS** похожа на «путешествие», требующее вложений в виде вашего личного времени. It is not a one-time setup. Текущие оценки построения **AAPS**, установки и настройки программ **AAPS**, мониторинга **CGM** и перехода от незамкнутого цикла к гибридному замкнутому циклу на **AAPS** занимает в целом от 2 до 3 месяцев. Вот как это выглядит:
 
@@ -201,55 +201,55 @@ This section is aimed to provide new users with links on resources in order to g
 
 Once you are fully operational on **AAPS**, you will need to fine tune your setting parameters in order to improve your overall diabetic management.
 
-## Requirements
+## Что потребуется:
 
-### Medical considerations
+### Медицинские соображения
 
-In addition to the medical warnings in the [safety section](preparing-safety-frist) there are also different parameters, depending on which insulin you are using in the pump.
+Помимо медицинских предостережений в разделе [безопасность](preparing-safety-frist) имеются параметры, зависящие от типа инсулина в помпе.
 
-#### Insulin choice
+#### Выбор инсулина
 
-**AAPS** calculations are based on insulin concentrations of 100U/ml (same as pump’s standard). The following types of insulin profile presets are supported:
+Расчеты **AAPS** основаны на концентрации инсулина 100 ед./мл (как и стандарт для помп). Поддерживаются следующие предустановленные профили инсулинов:
 
-- Rapid-Acting Oref: Humalog/NovoRapid/NovoLog
+- Быстродействующий Oref: Humalog/NovoRapid/NovoLog
 - Ultra-Rapid ORef:  Fiasp
 - Lyumjev:
 
-For Experimental/Advanced users only:
-- Free-Peak Oref: Allows you to define peak of the insulin activity
+Только для экспериментов/опытных пользователей:
+- Свободный от пиков Oref: позволяет самостоятельно определить пик активности инсулина
 
 
-### Technical
+### Технические вопросы
 
-This documentation aims to reduce the technical expertise required to an absolute minimum. You will need to use your computer to build the **AAPS** application in Android Studio (step-by-step instructions). You also need to set up a server over the internet in a public cloud, configure several android phone apps and develop expertise in diabetes management. This can be  achieved by moving step-by-step, being patient, and help from the **AAPS** community. If you are already able to navigate the internet, manage your own Gmail emails, and keep your computer up-to-date, then it is a feasible task to build the **AAPS**. Just take your time.
+Цель документации - максимально сократить требуемые технические знания и опыт. Вам понадобится компьютер для создания приложения **AAPS** в Android Studio (пошаговые инструкции). Вам также понадобится настроить сервер в облаке Интернет, несколько приложений для телефонов Android и готовность получить опыт управления диабетом. Этого можно достичь, двигаясь шаг за шагом, проявляя терпение и получая помощь от сообщества **AAPS**. Если вы уже умеете работать в интернете, управлять почтой Gmail, поддерживать компьютер в актуальном состоянии, то создание **AAPS** - вполне посильная задача. Просто не торопитесь.
 
-### Personal
-Understanging and using **AAPS** requires a steep learning curve. It will take time, patience and significant efforts however it can be hugely beneficial as arguably proven by the 10,000 active users of **AAPS**.
+### Персональные моменты
+Understanging and using **AAPS** requires a steep learning curve. Он потребует времени, терпения и значительных усилий, однако в итоге окажется весьма полезным, как это уже доказали 10 000 активных пользователей **AAPS**.
 
-### Smartphones
+### Смартфоны
 
-#### AAPS and Android Versions
-The current version of **AAPS** (3.1.0.3) requires an Android smartphone with Google Android 9.0 or above. If you are considering buying a new phone, (as of July 2023), Android 13 is preferred. Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons, however for users unable to use a device with Android 9.0 or newer, earlier versions of  **AAPS** compatible for older Android versions remain available from our [old repository](https://github.com/miloskozak/AAPS) (check the release notes for legacy versions).
+#### AAPS и версии Android
+Актуальная версия **AAPS**(3.2.0.2) требует телефона на Android с Google Android 9.0 или выше. Если вы рассматриваете покупку нового телефона (по состоянию на июль 2023), предпочтительнее Android 13. Пользователям настоятельно рекомендуется обновлять свою сборку **AAPS** по соображениям безопасности, однако для тех, кому недоступно устройство на Android 9.0 или новее, имеются более ранние версии **AAPS**. Они остаются доступными в нашем [старом репозитории](https://github.com/miloskozak/AAPS) (см. примечания к выпуску устаревших версий).
 
-#### Smartphone model choice
-The exact model you buy depends on the desired function(s). There are currently two spreadsheets recording compatible [smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) and [smartphones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). We encourage people to record their findings of compatibility and any issues [here](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform).
+#### Выбор модели смартфона
+Модель, которую вы покупаете, зависит от желаемых функций. Существует две таблицы, в которых приводятся модели совместимых: [смартфонов](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) и [смартфонов и часов](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). Мы приглашаем пользователей обобщать свой опыт работы с устройствами [здесь](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform).
 
-To report any problem with the spreadsheet please email [hardware@androidaps.org](mailto:hardware@androidaps.org)
+Сообщить о проблемах с таблицей можно по адресу [hardware@androidaps.org](mailto:hardware@androidaps.org)
 
-To make a donation of smartphone or smartwatch models that still need testing, please email [donations@androidaps.org](mailto:donations@androidaps.org).
+Пожертвовать смартфон для тестирования можно, отправив письмо по адресу [donations@androidaps.org](mailto:donations@androidaps.org).
 
 - [Список проверенных телефонов](../Getting-Started/Phones.md)
 - [Настройки Jelly Pro](../Usage/jelly.md)
 - [Настройки Huawei](../Usage/huawei.md)
 
-Users are encouraged to keep their phone version of Android up-to-date including with security parameters. However, if you are new with AAPS or are not a technical expert you might want to delay updating your phone until others have done so and confirmed it is safe to do so, on our various forums.
+Пользователям рекомендуется регулярно обновлять версию Android, включая параметры безопасности. Однако если вы новичок в AAPS или не являетесь техническим экспертом, вы можете отложить обновление телефона до тех пор, пока другие не сделали это, и не подтвердили, что это безопасно, на наших различных форумах.
 
-:::{admonition} delaying Samsung phones updates
-:class: warning Samsung has an unfortunate track record of forcing updates of their phones which cause bluetooth connectivity issues. To disable these forced updates you need to switch the phone to "developper mode" by: go to settings and about then software information, then tap build number u til it confirms you have unlocked developer mode. Got back to main settings menu and you should see a new developer options menu item. Open developer options and scroll to find auto system update and turn it off
+:::{admonition} (предупреждение) отсрочка обновления телефонов Samsung
+:class: (класс) предупреждение У телефонов Samsung есть плохой опыт принудительного обновления, приводящий к проблемам с подключением Bluetooth. Для отключения принудительных обновлений необходимо перевести телефон в "режим разработчика": перейдите в настройки - о телефоне - сведения о ПО - нажимайте на номер сборки 7 раз, пока не разблокируете режим разработчика. Вернитесь в главное меню настроек, и вы увидите новый пункт меню настроек разработчика. Откройте опции разработчика и прокрутите окно, чтобы найти автоматическое обновление системы и выключить его
 :::
 
-:::{admonition} Google Play Protect potential Issue
-:class: warning There have been several reports of **AAPS** being shut down arbitrarily by Google Play Protect every morning. If this happens you will have to go to the google play options and disable “Google Play Protect”. Not all  phone models or all Android versions are affected..
+:::{admonition}(предупреждение) Потенциальная проблема защиты Google Play
+:class:(класс): предупреждение Имеется несколько сообщений о принудительном (каждое утро) выключении **AAPS** со стороны Google Play Protect. Если это произойдет, следует перейти в настройки Google Play и отключить “Google Play Protect”. Это касается не всех моделей и не всех версий Android..
 :::
 
 ## Introduction to your AAPS profile
