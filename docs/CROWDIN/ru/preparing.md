@@ -170,33 +170,33 @@ This section is aimed to provide new users with links on resources in order to g
 
 ### Обслуживание системы **AAPS**
 
-Both **Nightscout** and **AAPS** must be updated approximately once a year, as improved versions are released. You will have step-by-step instructions on how to do this on your preconfigured computer. In some cases, the update can be delayed, in others it is strongly recommended or considered essential for safety. Notification of these updates will be given on the Facebook groups and Discord servers. The release notes will make it clear what the scenario is. There are likely to be many people asking similar questions to you at update time, and you will have support for performing the updates.
+И **Nightscout** и **AAPS** должны обновляться примерно один раз в год по мере выхода улучшенных версий. Вы получите пошаговые инструкции о том, как это сделать на предварительно сконфигурированном компьютере. In some cases, the update can be delayed, in others it is strongly recommended or considered essential for safety. Уведомления об этих обновлениях будут предоставляться в группах Facebook и на серверах Discord. В примечаниях к выпуску будет разъясняться что нового в версии. Вероятно, многие люди будут задавать схожие вопросы во время обновления, но у всех будет поддержка.
 
 
 ## How long will it take?
 
-As mentioned earlier, using **AAPS** is more of a “journey” that requires investment of your personal time. It is not a one-time setup. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 2 to 3 months overall. Here is breakdown:
+Как уже упоминалось ранее, работа с **AAPS** похожа на «путешествие», требующее вложений в виде вашего личного времени. It is not a one-time setup. Текущие оценки построения **AAPS**, установки и настройки программ **AAPS**, мониторинга **CGM** и перехода от незамкнутого цикла к гибридному замкнутому циклу на **AAPS** занимает в целом от 2 до 3 месяцев. Вот как это выглядит:
 
-| Tasks                                                                                                            |   Approx time   |
+| Задачи                                                                                                           | Примерное время |
 | ---------------------------------------------------------------------------------------------------------------- |:---------------:|
-| initial reading of the documentation:                                                                            |    1-2 days     |
-| installing/configuring PC to allow the build:                                                                    |    2-8 hours    |
-| building a Nightscout server:                                                                                    |     1 hour      |
-| installing (xdrip or BYODA or …)                                                                                 |     1 hour      |
-| configuring CGM->xdrip->APPS initially:                                                                          |     1 hour      |
-| configuring AAPS->pump initially:                                                                                |     1 hour      |
-| configuring AAPS->NightScout (reporting only):                                                                   |     1 hour      |
+| ознакомительное чтение документации:                                                                             |    1-2 days     |
+| настройка компьютера для начала сборки:                                                                          |    2-8 hours    |
+| создание сервера Nightscout:                                                                                     |     1 hour      |
+| установка приложений для мониторинга (xdrip, самостоятельно собранное приложение Dexcom BYODA или …)             |     1 hour      |
+| первоначальная настройка мониторинга->xdrip->AAPS:                                                               |     1 hour      |
+| Первоначальная настройка AAPS->помпа:                                                                            |     1 hour      |
+| Настройка AAPS->NightScout (только для отчетов):                                                                 |     1 hour      |
 | optional (for Parents) - configuring NightScout <-> **AAPS** & NSFollowers:                                      |     1 hour      |
 | Цель 1: Настройка визуализации и мониторинга, анализ базальной скорости и коэффициентов                          |     1 hour      |
-| Objective 2: Learn how to control AAPS                                                                           |     2 hour      |
-| Цель 3: Подтвердите ваши знания                                                                                  |  Up to 14 days  |
-| Цель 4: Начните с открытого цикла                                                                                |     7 days      |
-| Цель 5: Глубже понимаем работу системы в режиме незамкнутого цикла, включая ее рекомендации по временным базалам |     7 days      |
-| Цель 6: Начинаем замыкать цикл с Low Glucose Suspend (прекращением подачи инсулина на низких сахарах)            | Up to 5-14 days |
-| Objective 7: Tuning the closed loop, raising maxIOB and gradually lowering BG targets                            |  Up to 7 days   |
-| Цель 8: Настраиваем базал и коэффициенты с последующей активацией auto-sens                                      | Up to 7-14 days |
-| Objective 9: Enabling additional oref1 features, such as super micro bolus (SMB)                                 |  Up to 14 days  |
-| Цель 10: Автоматизация                                                                                           |      1 day      |
+| Objective 2: Learn how to control AAPS                                                                           |     2 часа      |
+| Цель 3: Подтвердите ваши знания                                                                                  |   До 14 дней    |
+| Цель 4: Начните с открытого цикла                                                                                |     7 дней      |
+| Цель 5: Глубже понимаем работу системы в режиме незамкнутого цикла, включая ее рекомендации по временным базалам |     7 дней      |
+| Цель 6: Начинаем замыкать цикл с Low Glucose Suspend (прекращением подачи инсулина на низких сахарах)            |  До 5-14 дней   |
+| Цель 7: Настройка замкнутого цикла с постепенным поднятием макс величины IOB и понижением целевой ГК             |    До 7 дней    |
+| Цель 8: Настраиваем базал и коэффициенты с последующей активацией auto-sens                                      |  До 7-14 дней   |
+| Цель 9: Активация таких дополнительных функций oref1 как супер микро болюс (SMB)                                 |   До 14 дней    |
+| Цель 10: Автоматизация                                                                                           |     1 день      |
 
 
 Once you are fully operational on **AAPS**, you will need to fine tune your setting parameters in order to improve your overall diabetic management.
