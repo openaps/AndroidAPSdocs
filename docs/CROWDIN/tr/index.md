@@ -122,19 +122,20 @@ Geliştirici sürümü <./Installing-AndroidAPS/Dev_branch.md>
 (index-component-setup)=
 
 ```{toctree}
-:caption: Bileşen Kurulumu
+:caption: Component Setup
 
 CGM/FGM <./Configuration/BG-Source.md>
 
-xDrip Ayarları <./Configuration/xdrip.md>
+xDrip Settings <./Configuration/xdrip.md>
 
-Pompa seçenekleri <./Getting-Started/Pump-Choices.md>
+Pump choices <./Getting-Started/Pump-Choices.md>
 
-Telefonlar <./Hardware/Phoneconfig.md>
+Phones <./Hardware/Phoneconfig.md>
 
-Nightscout kurulumu <./Installing-AndroidAPS/Nightscout.md>
+Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
+Tidepool setup <./Installing-AndroidAPS/Tidepool.md>
 
-Akıllı saat <./Hardware/Smartwatch.md>
+Smartwatch  <./Hardware/Smartwatch.md>
 
 ```
 
