@@ -69,36 +69,36 @@ The key principles and concepts of looping must be understood before using **AAP
 
 #### Совместимость с технологиями
 
-**AAPS** is only compatible with certain types of insulin pumps, CGMs and phones, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read the [CGM](Configuration/BG-Source.md), [pump](Getting-Started/Pump-Choices.md) and [phone](Hardware/Phoneconfig.md) sections.
+**AAPS** совместим только с определенными типами инсулиновых помп, систем мониторинга и телефонов; некоторые технологии могут быть недоступными в каких-то странах. Чтобы избежать огорчений, прочтите разделы [мониторинг (CGM)](Configuration/BG-Source.md), [помпа](Getting-Started/Pump-Choices.md) и [телефон](Hardware/Phoneconfig.md).
 
-#### App build time and progressing to full looping
+#### Время сборки приложения и переход к полному циклу
 
-The time to build the **AAPS** app  depends on your level of expertise and technical ability. Typically for inexperienced users, it can take up to half a day or a full day (with help from the community) in order to build **AAPS**. The process will significantly speed up for newer **AAPS** versions, as you become more experienced.
+Время создания **AAPS**зависит от опыта и технических способностей. Обычно у неопытных пользователей сборка **AAPS** может занять до полудня, а иногда и целый день (при поддержке от сообщества). Этот процесс значительно ускорится при сборке новых версий **AAPS**, когда появится больше опыта.
 
-To aid the build process there are dedicated sections:
+Для помощи при сборке существуют специальные разделы:
 
-- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](Getting-Started/FAQ.md) K);
+- Вопросы и ответы при часто возникающих ошибках (в [разделе ](Getting-Started/FAQ.md)K);
 
 - “[How to install AAPS](Installing-AndroidAPS/Building-APK.md)? (Section D) which includes [Troubleshooting](Usage/troubleshooting.md) Subsection.
 
-How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](how-long-will-it-take))
+Время, потраченное на переход к работе в замкнутом цикле, зависит от индивидуальности, но примерную разбивку по времени перехода на AAPS можно найти ([здесь](how-long-will-it-take))
 
 
-#### Keystore & configuration settings export file
+#### Хранилище ключей &  файл экспорта настроек конфигурации
 
-A “keystore” (.jks file) is a password encrypted file unique to your own copy of **AAPS**. Your Android phone uses it to ensure that nobody else can upgrade your own copy without the keystore. Короче говоря, в рамках сборки **AAPS** вам следует:
+«Хранилище ключей» (файл с расширением.jks) - это защищенный паролем файл, уникальный для вашей копии **AAPS**. Телефон использует его, чтобы не дать посторонним без ключа обновить ваш экземпляр программы. Короче говоря, в рамках сборки **AAPS** вам следует:
 
 1.  Save the your keystore file (.jks file used to sign your app) in a safe place;
 
 2.  Keep a note of your password for your keystore file.
 
-This will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. On average, there will be 2 **AAPS** updates required each year.
+Это гарантирует, что каждый раз при создании новой версии **AAPS** можно использовать один и тот же файл ключей. В среднем каждый год будет требоваться 2 обновления AAPS.
 
-In addition, **AAPS** provides the ability to [export all your configuration settings](Usage/ExportImportSettings.md). Это гарантирует, что вы можете безопасно восстановить вашу систему при смене телефонов, обновлении/переустановке приложения с минимальными затратами времени. 
+Кроме того, **AAPS** дает возможность [экспортировать все настройки конфигурации](Usage/ExportImportSettings.md). Это гарантирует, что вы можете безопасно восстановить вашу систему при смене телефонов, обновлении/переустановке приложения с минимальными затратами времени. 
 
 #### Устранение неполадок
 
-Не стесняйтесь связаться с сообществом AAPS, даже если уверены в том, что у вас глупый вопрос! All users with various levels of experience are encouraged to ask questions. Response times to questions are usually quick due to the number of **AAPS** users.
+Не стесняйтесь связаться с сообществом AAPS, даже если уверены в том, что у вас глупый вопрос! Всем пользователям с опытом разного уровня рекомендуется при необходимости задавать вопросы. Вследствие большого числа пользователей **AAPS**, ответы обычно даются быстро, как правило, в течение нескольких часов.
 
 ##### [ask our facebook group](https://www.facebook.com/groups/AndroidAPSUsers/)
 
@@ -112,63 +112,63 @@ In addition, **AAPS** provides the ability to [export all your configuration set
 
 This explains AAPS’ compatibility with CGMs (Continuous Glucose Monitors) and insulin pumps. It also provides a guide on the correct assembly of an AAPS system to ensure that it functions correctly in everyday life.
 
-#### [How to build and install AAPS](Installing-AndroidAPS/Building-APK.md)
+#### [Как собрать и установить AAPS](Installing-AndroidAPS/Building-APK.md)
 
-This section is the manual for building the AAPS. Strict adherence to the step-by-step instructions are required in order to successfully build **AAPS**.  Please take your time.
+This section is the manual for building the AAPS. Для успешной сборки **AAPS** требуется строгое соблюдение пошаговых инструкций.  Please take your time.
 
-#### [Component Setup]
+#### [Настройка компонентов]
 
-This explains how to properly integrate each of the various different separate component parts into **AAPS**, as well as how to set them up to work as seamlessly as possible together. All components are listed under the separate sections including: [CGM/FGM](Configuration/BG-Source.md), [Pumps](Getting-Started/Pump-Choices.md) and [Phones](Hardware/Phoneconfig.md)
+Здесь объясняется, как правильно интегрировать каждый из компонентов **AAPS**, а также настроить их на совместную работу. Все компоненты перечислены в соответствующих разделах, в том числе: [Мониторинг (CGM/FGM)](Configuration/BG-Source.md), [Помпы](Getting-Started/Pump-Choices.md) и [Телефоны](Hardware/Phoneconfig.md)
 
 #### [Configuration](Configuration/Config-Builder.md)
 
 This explains how to set and configure your ‘Profile’, ‘Insulin’, ‘BG Source’, ‘Pump’, ‘Sensitivity Detection’, ‘APS’, ‘Loop’, ‘Treatments’.
 
-#### [AAPS Use](Getting-Started/Screenshots.md)
+#### [Использование AAPS](Getting-Started/Screenshots.md)
 
-This section provides a breakdown of the features provided by AAPS, with screenshots.
+В этом разделе представлена разбивка функций AAPS со снимками экранов.
 
 #### [General Hints](Usage/Timezone-traveling.md)
 
-Useful tricks on how to tackle looping issues such as time zones, and daylight saving (_i.e._ Spring Forward/ - Fall Back).
+Полезные приемы при решении проблем, такие как смена часовых поясов и перехода на сезонное время (_т. е._ Вперед/ - Назад).
 
-#### [AAPS for Children](Children/Children.md)
+#### [AAPS для детей](Children/Children.md)
 
-This is designed for parents or caregivers who want to build an AAPS for their child, or for adults who would like to have a significant other follow their data. It also explains the extra features necessary in order to support and safely control AAPS remotely.
+Раздел предназначен для родителей или попечителей, желающих создать AAPS для своего ребенка, или взрослым, рассчитывающим на подстраховку. Здесь также описываются дополнительные функции, необходимые для удаленного и безопасного управления AAPS.
 
 #### [Устранение неполадок](Usage/troubleshooting.md)
 
-This section contains links to help solve issues when building or using **AAPS**.
+Этот раздел содержит ссылки для решения проблем при создании или использовании **AAPS**.
 
-#### [Frequently asked Questions, FAQ](Getting-Started/FAQ.md)
+#### [Часто задаваемые вопросы (FAQ)](Getting-Started/FAQ.md)
 
-This section addresses specific questions which tend to come up when building or using **AAPS**.
+В этом разделе рассматриваются конкретные вопросы, которые обычно возникают при создании или использовании **AAPS**.
 
 #### [Глоссарий](Getting-Started/Glossary.md)
 
 This contains a list of the acronyms (or short-term names) or defined terms developed specifically for AAP (for instance, the terms ‘ISF’ or ‘TT’ have special meanings in AAPS).
 
-#### [Where to go for help](Where-To-Go-For-Help/Background-reading.md)?
+#### [Куда обращаться за помощью](Where-To-Go-For-Help/Background-reading.md)?
 
 This section is aimed to provide new users with links on resources in order to get help including accessing community support made up of both new and experienced users who can clarify questions, and resolve the usual pitfalls that come with AAPS.
 
-#### [Section For Clinicians](Resources/clinician-guide-to-AndroidAPS.md)
+#### [Раздел для медицинских работников](Resources/clinician-guide-to-AndroidAPS.md)
 
-This is a [section specificially for clinicians](Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
+Этот раздел создан [специально для медработников](Resources/clinician-guide-to-AndroidAPS.md) которые хотят подробнее познакомиться с AAPS и технологией ИПЖ с открытым кодом. Также в предисловии имеются директивы [как разговаривать с эндокринологом](introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team).
 
-## What are we going to build and install?
+## Что мы будем собирать и устанавливать?
 
-### An Android Phone Application: **AAPS**
+### Приложение для телефонов Android: **AAPS**
 
-**AAPS** is fundamentally an app that runs on android smartphones & devices. You are going to build the **AAPS** app (an apk file) yourself, using a step-by-step guide, by downloading the **AAPS** source code from Github, installing the necessary programs (Android Studio, GitHub desktop) on your computer and building your own copy of **AAPS** app. You will then transfer the **AAPS** app across to your smartphone (by email, USB cable _etc._) and install it.
+**AAPS** - приложение, работающее на смартфонах Android & устройствах. Вы самостоятельно создадите приложение **AAPS** (файл. apk), используя пошаговое руководство, загрузив исходный код **AAPS** из Github и попутно установив необходимые программы (Android Studio, GitHub desktop), результатом чего станет собственная копия **AAPS**. После чего приложение **AAPS** будет перенесено на смартфон (по электронной почте, USB кабелю _и т. д._) и установлено.
 
-### A reporting server: NightScout (Tidepool*)
+### Сервер отчетности: NightScout (Tidepool*)
 
-In order to fully take advantage of **AAPS**, you need to setup a Nightscout server. You can do this yourself (link to instructions) or alternatively, pay a small fee for a managed Nightscout service to be set up for you (link to T1 pal 10.be etc). Nightscout is used to collect data from **AAPS** over time and can generate detailed reports correlating CGM and insulin patterns. It is also possible for caregivers to use Nightscout to remotely communicate with the **AAPS** application, to oversee their child’s diabetic management. Such remote communication features include real-time monitoring of glucose and insulin levels, remote bolusing of insulin (by texting) and meal announcements. Attempting to analyse your diabetes performance by looking at CGM data separately from the pump data is like driving a car where the driver is blind and the passenger describes the scene. (*) (as of 26-Jun-2023) Tidepool will be available as an alternative to Nightscout, with the upcoming version 3.2 of **AAPS**.
+Чтобы в полной мере воспользоваться функционалом **AAPS**, необходимо настроить сервер Nightscout. Его можно создать самостоятельно или же оплатив небольшую комиссию за установку (например здесь https://t.me/nightscoutRU). Nightscout используется для сбора данных от **AAPS** и может генерировать подробные отчеты по мониторингу ГК и инсулинотерапии за выбранные периоды времени. Кроме того, опекунам предоставляется возможность работать с Nightscout на удаленной связи с приложением **AAPS** для контроля за диабетом их ребенка. Такие функции удаленной связи включают в себя мониторинг уровня ГК и инсулина, удаленную подачу болюсов (с помощью смс) и информирование о приемах пищи. Анализ эффективности компенсации диабета только на основе мониторинга CGM отдельно от данных помпы – подобно вождению машины, где водитель слепой а пассажир описывает дорогу. (*) (начиная с 26 июня-2023 в качестве альтернативы Nightscout для **AAPS**версии 3.2 и далее будет доступен ресурс Tidepool.
 
 
 
-### Maintenance of the **AAPS** system
+### Обслуживание системы **AAPS**
 
 Both **Nightscout** and **AAPS** must be updated approximately once a year, as improved versions are released. You will have step-by-step instructions on how to do this on your preconfigured computer. In some cases, the update can be delayed, in others it is strongly recommended or considered essential for safety. Notification of these updates will be given on the Facebook groups and Discord servers. The release notes will make it clear what the scenario is. There are likely to be many people asking similar questions to you at update time, and you will have support for performing the updates.
 
