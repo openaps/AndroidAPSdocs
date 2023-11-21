@@ -83,7 +83,7 @@ Depending on your [settings in config builder](Config-Builder-tab-or-hamburger-m
 - процент профиля
 
   - должно быть от 70% до 130%
-  - works only if the previous percentage is 100%
+  - работает только в том случае, если предыдущий процент составляет 100%
 
 After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
 
