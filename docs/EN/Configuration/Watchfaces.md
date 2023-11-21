@@ -3,12 +3,13 @@
 
 ## AAPS Watchfaces
 
-There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.  
+There are several watchfaces to choose from that are included in the base build of the AAPS Wear APK. These watchfaces include average delta, IOB, currently active temp basal rate and basal profiles and a CGM readings graph.
 
-Ensure notifications from AAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
+Ensure notifications from AAPS are not blocked on the watch. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
 
-To get faster to the AAPS menu, do a double tap on your BG.
-With a double tap onto the BG curve you can change the time scale..
+Some available actions on the watchfaces are:
+* Double tap on the BG to get to the AAPS menu
+* Double tap on the BG graph to change the graph's time scale
 
 ## Watchfaces available
 
