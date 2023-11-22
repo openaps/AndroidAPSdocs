@@ -536,11 +536,11 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 * Временная базальная скорость
 * [Временная цель](../Usage/temptarget.md)
 * [Profile switch/смена профиля](../Usage/Profiles.md)
-* [Careportal](CPbefore26-careportal-discontinued) - notes entered through action tab and notes in dialogues
+* [Портал терапии](CPbefore26-careportal-discontinued) - примечания, введенные через вкладку действий и примечания в диалогах
 
 ## Источник ГК - xDrip+, BYODA...
 
-![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
+![Вкладка Источник ГК- здесь xDrip](../images/Screenshots_BGSource.png)
 
 * В зависимости от заданного в параметрах источника ГК эта вкладка называется по-разному.
 * Показывает хронологию показаний мониторинга и предлагает возможность удаления данных при сбое (например, при компрессии сенсора).
@@ -550,5 +550,5 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 ![клиент NS](../images/Screenshots_NSClient.png)
 
 * Показывает состояние соединения с сайтом Nightscout.
-* Settings are made in [preferences](Preferences-nsclient). Вы можете открыть соответствующий раздел, щелкнув по значку шестеренки в верхней правой части экрана.
+* Настройки могут быть сделаны в [параметрах](Preferences-nsclient). Вы можете открыть соответствующий раздел, щелкнув по значку шестеренки в верхней правой части экрана.
 * Для устранения неполадок смотрите эту [страницу](../Usage/Troubleshooting-NSClient.md).
