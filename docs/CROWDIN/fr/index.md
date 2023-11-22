@@ -122,19 +122,20 @@ Branches de développement <./Installing-AndroidAPS/Dev_branch.md>
 (index-component-setup)=
 
 ```{toctree}
-:caption: Configuration des composants
+:caption: Component Setup
 
-MGC/MGF <./Configuration/BG-Source.md>
+CGM/FGM <./Configuration/BG-Source.md>
 
-Paramètres xDrip <./Configuration/xdrip.md>
+xDrip Settings <./Configuration/xdrip.md>
 
-Pompes à insuline <./Hardware/pumps.md>
+Pump choices <./Getting-Started/Pump-Choices.md>
 
-Smartphones <./Hardware/Phoneconfig.md>
+Phones <./Hardware/Phoneconfig.md>
 
-Paramètres Nightscout <./Installing-AndroidAPS/Nightscout.md>
+Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
+Tidepool setup <./Installing-AndroidAPS/Tidepool.md>
 
-Montres connectées  <./Hardware/Smartwatch.md>
+Smartwatch  <./Hardware/Smartwatch.md>
 
 ```
 

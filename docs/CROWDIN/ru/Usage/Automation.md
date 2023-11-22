@@ -6,9 +6,9 @@
 
 Например, при низкой ГК, вы можете решить, что должна автоматически установиться высокая временная цель. Или если вы находитесь в фитнес-центре, вы автоматически получаете временную цель.
 
-Before using Automation, you should be confident with manual [temp targets](./temptarget.html) or profile switches.
+Перед использованием автоматизации следует уверенно овладеть ручным управлением [временными целями](./temptarget.html) или переключением профиля.
 
-Убедитесь, что вы понимаете, как работает автоматизация перед настройкой первого простого правила. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
+Убедитесь, что вы понимаете, как работает автоматизация перед настройкой первого простого правила. **Вместо действий разрешите AAPS только показывать уведомления.**Если вы уверены, что автоматизация инициируется в нужное время, замените уведомление реальным действием.
 
 ```{image} ../images/Automation_ConditionAction_RC3.png
 :alt: условие автоматизации + действие
@@ -21,7 +21,7 @@ Before using Automation, you should be confident with manual [temp targets](./te
 (Automation-important-note)=
 ### Важное примечание
 
-**Automation is still active when you disable loop!**
+**Автоматизация по-прежнему активна при отключении цикла!**
 
 Поэтому при необходимости деактивируйте правила автоматизации на это время. Это можно сделать, сняв галочку в поле слева от названия правила автоматизации.
 
@@ -37,14 +37,14 @@ Depending on your [settings in config builder](Config-Builder-tab-or-hamburger-m
 
 Есть некоторые ограничения:
 
-- The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
-- The profile percentage has to be between 70 % and 130%.
-- There is a 5 min. time limit between executions (and first execution).
+- Значение ГК должно составлять от 72 до 270 мг/дл или от 4 до 15 ммоль/л.
+- Процент профиля должен составлять от 70% до 130%.
+- Существует 5-минутный промежуток времени между выполнениями (и первым выполнением).
 
-**Please be careful:**
+**Пожалуйста, будьте внимательны:**
 
-- **less than -2 means: -3 and lower (-4,-10, etc)**
-- **more than -2 means: -1 and higher (-1, 0, +10, etc)**
+- **менее -2 означает: -3 и ниже (-4, -10 и т. д.)**
+- **более -2 означает: -1 и выше (-1, 0, +10 и т.д)**
 
 ### Условие
 
@@ -52,19 +52,19 @@ Depending on your [settings in config builder](Config-Builder-tab-or-hamburger-m
 
 - connect conditions: you can have several conditions and can link them with
 
-  - "And"
-  - "Or"
-  - "Exclusive or" (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+  - "И"
+  - "Или"
+  - * "Исключительно или" (что означает, что если применяется одно - и только одно из этих условий, то действие (действия) произойдет
 
-- Time vs. recurring time
+- Время и время повторения
 
-  - time =  single time event
+  - время = одно событие времени
   - recurring time = something that happens regularly (i.e. once a week, every working day etc.)
 
-- location: in the config builder (Automation), you can select which location service you want to use:
+- расположение: в конфигураторе (автоматизация), можете выбрать местоположение сервиса, который хотите использовать:
 
-  - Use passive location: AAPS only takes locations when other apps are requesting it
-  - Use network location: Location of your Wifi
+  - Использовать пассивное расположение: AAPS принимает локацию только в том случае, если другие приложения ее запрашивали
+  - Использовать расположение сети: расположение вашего Wifi
   - Используйте локатор GPS (Внимание! Может привести к чрезмерной разрядке аккумулятора!)
 
 ### Действие
@@ -73,17 +73,17 @@ Depending on your [settings in config builder](Config-Builder-tab-or-hamburger-m
 
 - start temp target
 
-  - must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
-  - works only if there is no previous temp target
+  - должно быть между 72 мг/дл и 270 мг/дл (4 ммоль/л и 15 ммоль/л)
+  - работает только в том случае, если нет предыдущей временной цели
 
-- stop temp target
+- остановить врем цель
 
-- notification
+- уведомление
 
-- profile percentage
+- процент профиля
 
-  - must be between 70% and 130%
-  - works only if the previous percentage is 100%
+  - должно быть от 70% до 130%
+  - работает только в том случае, если предыдущий процент составляет 100%
 
 After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
 

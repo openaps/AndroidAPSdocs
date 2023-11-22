@@ -31,6 +31,6 @@ Future ISF is used in the dosing decisions that oref1 makes. Future ISF uses the
 
 Otherwise, minimum predicted BG is used.
 
-### Adjust sensitivity and BG setting
+### Enable TDD based sensitivity ratio for basal and glucose target modification
 
 This setting replaces Autosens, and uses the last 24h TDD/7D TDD as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. This calculated value is also used to adjust target, if the options to adjust target with sensitivity are enabled. unlike Autosens, this option does not adjust ISF values. 

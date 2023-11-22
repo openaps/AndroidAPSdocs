@@ -6,4 +6,4 @@ Wir wollen sehen, wie Änderungen an einem Satz die bestehende Übersetzung der 
 
 Normalerweise sollte nur ein Satz neu übersetzt werden und nicht alles.
 
-Wir werden es bald sehen.
+We can see it now.

@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS / ИПЖ</strong></td>
- <td>AAPS is the name of the Android app - AAPS ist the abbrevation - APS is a abrevation used for artificial pancreas system</td>
+ <td>AAPS - это название приложения для Android - сокращенно AAPS -- APS - это сокращение от системы искусственной поджелудочной железы</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -29,7 +29,7 @@
   </td>
 <tr>
  <td><strong>Android Auto</strong></td>
- <td>Android Auto - это система, разработанная компанией Google LLC для использования функционала телефона на ОС Android в медиасистеме автомобилей. Through Android Auto AAPS can send messages to your compatible and configured infotainment system.</td>
+ <td>Android Auto - это система, разработанная компанией Google LLC для использования функционала телефона на ОС Android в медиасистеме автомобилей. С помощью Android Auto AAPS может посылать сообщения на совместимые, и должным образом настроенные, медиасистемы.</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Android-auto.html">Wiki - android auto</a><br><a href="https://www.android.com/intl/en_en/auto/">Google Android Auto</a></td>
 </tr>
@@ -96,7 +96,7 @@
 </tr>
 <tr>
  <td><strong>CAGE / Возраст канюли/катетера</strong></td>
- <td>cannula age - displayed on the homescreen of AAPS and in Nightscout if information was entered in the actions tab / menu</td>
+ <td>время, отработанное катетером - отображается на начальном экране AAPS и в Найтскауте, если соответствующая информация была указан в приложении</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -150,7 +150,7 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>git in our context here is the tool to mainly download the AAPS sources from Github for the build process. Это система контроля версий для отслеживания изменений в файлах и координации работы над этими файлами в командах. <br>-> необходим для обновления APK</td>
+ <td>git в текущем контексте - это инструмент для загрузки исходного кода AAPS из Github для сборки своего приложения. Это система контроля версий для отслеживания изменений в файлах и координации работы над этими файлами в командах. <br>-> необходим для обновления APK</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - обновление APK</a></td>
 </tr>
@@ -228,7 +228,7 @@
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
- <td>Проект с открытым исходным кодом для доступа к данным мониторинга и создания отчетов. Это  основное хранилище всех ваших диабетических данных.  It is where AAPS is storing the data. Он полезен родителям, для того, чтобы следить  за диабетом своих детей, для отчетов об исторических данных и актуальном состоянии контроля диабета (например, на основании этих данных можно узнать показатели ГГ, TIR), для понимания каких-то паттернов поведения сахаров для улучшения гликемии и т.п.</td>
+ <td>Проект с открытым исходным кодом для доступа к данным мониторинга и создания отчетов. Это  основное хранилище всех ваших диабетических данных.  Место, где AAPS хранит данные. Он полезен родителям, для того, чтобы следить  за диабетом своих детей, для отчетов об исторических данных и актуальном состоянии контроля диабета (например, на основании этих данных можно узнать показатели ГГ, TIR), для понимания каких-то паттернов поведения сахаров для улучшения гликемии и т.п.</td>
  <td>Nightscout Reporter</td>
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>
@@ -276,7 +276,7 @@
 </tr>
 <tr>
  <td><strong>PH/История записей помпы</strong></td>
- <td>pump history - you access it in the treatments which are located on the 3 dot menu on the right side of AAPS main screen</td>
+ <td>история помпы - доступна в Терапии, в правом меню приложения AAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Getting-Started/Screenshots.html#treatment">Снимки экрана</a></td>
 </tr>
@@ -288,7 +288,7 @@
 </tr>
 <tr>
  <td><strong>Профиль</strong></td>
- <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>AAPS v3 only supports local profiles but Nightscout profiles can be copied (synchronized) to AAPS</td>
+ <td>базовые параметры терапии (БС, DIA, УК, ИСФ, целевая ГК) <br>AAPS v3 позволяет использовать только локальные профили, однако профили из Найтскаута также могут быть скопированы (синхронизированы) в AAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - профиль</a></td>
 </tr>
@@ -312,7 +312,7 @@
 </tr>
 <tr>
  <td><strong>SAGE / ВОЗРСенс</strong></td>
- <td>sensor age - displayed on the homescreen of AAPS and in Nightscout if information was entered in the actions tab / menu</td>
+ <td>время, отработанное катетером - отображается на начальном экране AAPS и в Найтскауте, если соответствующая информация была указан в приложении</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
@@ -355,7 +355,7 @@
 <tr>
  <td><strong>Временная Базальная Скорость</strong></td>
  <td>Временный базальный уровень</td>
- <td>TBB / TDD</td>
+ <td>TBR / TDD (ВБС / TDD)</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
