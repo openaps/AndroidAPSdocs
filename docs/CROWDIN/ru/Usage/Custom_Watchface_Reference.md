@@ -346,7 +346,7 @@ In example below Gota watchface has one required parameter. If authorization is 
 
 Twin views provide an easy way to adjust the view position based on the visible views. This does not have the power of a layout entirely made up of LinearLayout, but can handle many common cases.
 
-In example below you can see AAPS (Cockpit) watchface with all views visible within settings, and the same watchface with "Show rig battery" disabled and "Show avg delta" disabled
+На этом примере виден циферблат AAPS (Кокпит) со всеми данными, которые можно сделать видимыми в настройках и тот же циферблат с отключенными опциями "показывать батарею платформы" и "показывать среднее изменение"
 
 ![Twin Views](../images/CustomWatchface_3.jpg)
 
