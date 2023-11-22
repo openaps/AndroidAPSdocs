@@ -1,29 +1,29 @@
-# Document de référence cadrans personnalisés
+# Custom Watchface Reference Document
 
-Cette page est destinée aux concepteurs de nouveaux cadrans de montre, elle liste tous les mots clés et les fonctionnalités disponibles lorsque vous voulez créer ou animer une nouveau cadran
+This page is for designers of new Watchfaces. It will list all the keywords and features available when you want to create or animate a new watchface.
 
-## Format des Cadrans personnalisés
+## Custom Watchface Format
 
-Le format des Cadrans personnalisés est ouvert et conçu specialement pour AAPS, il est associé au nouveau cadran "AAPS (perso)" disponible sur la montre
+Custom Watchface is an open format designed for AAPS and associated to the new "AAPS (Custom)" watchface available on Watch.
 
-Le fichier Cadran est un fichier zip simple, mais pour être reconnu comme Cadran AAPS, il doit contenir:
+The Watchface file is a simple zip file, but to be recognized as a Watchface file, the zip file must contain the following files:
 
-- Un fichier image nommé CustomWatchface (cela peut être un fichier bitmap `CustomWatchface.jpg`, `CustomWatchface.png` ou un fichier vecteur `CustomWatchface.svg`). Ce fichier est la petite icône utilisée pour sélectionner le cadran lorsque vous cliquez sur le bouton "Charger le cadran", et aussi l'image visible dans le plugin AAPS Wear
-- Un fichier nommé `CustomWatchface.json` (voir [Structure Json](cwf-reference-json-structure) ci-dessous). Ce deuxième fichier est le fichier principal qui contient toutes les informations nécessaires pour le cadran. Ce fichier json doit être valide (c'est probablement le point le plus délicat lorsque vous éditez manuellement ce fichier dans un éditeur de texte, parce qu'une simple virgule manquante ou additionnelle est suffisante pour casser le format json). Ce fichier json doit également inclure un bloc `"metadata"` avec une clé `"name"` contenant une valeur non vide. Ce sera le nom de votre cadran personnalisé (voir [Paramètres metadata](cwf-reference-metadata-settings) ci-dessous)
+- Un fichier image nommé CustomWatchface (cela peut être un fichier bitmap `CustomWatchface.jpg`, `CustomWatchface.png` ou un fichier vecteur `CustomWatchface.svg`). This file is the little icon used to select the watchface when you click on "Load Watchface" button, and also the image visible within AAPS Wear plugin.
+- One file named `CustomWatchface.json` (see [JSON structure](cwf-reference-json-structure) below). Ce deuxième fichier est le fichier principal qui contient toutes les informations nécessaires pour le cadran. Ce fichier json doit être valide (c'est probablement le point le plus délicat lorsque vous éditez manuellement ce fichier dans un éditeur de texte, parce qu'une simple virgule manquante ou additionnelle est suffisante pour casser le format json). This JSON file must also include a `"metadata"` bloc with a `"name"` key with not empty value. Ce sera le nom de votre cadran personnalisé (voir [Paramètres metadata](cwf-reference-metadata-settings) ci-dessous)
 - la taille de ce zip devrait être aussi petite que possible (moins de 500 ko). Si ce fichier est trop volumineux, il sera juste bloqué et ne sera pas transmis à la montre.
 
-Le fichier zip peut également contenir des fichiers de ressources supplémentaires :
+The zip file can also contain some additional resource files:
 
-- Des noms de fichiers codés en dur pour les images qui seront utilisées dans les vues standards incluses dans watchface (comme `Background`, `CoverChart`... voir [Liste des fichiers de ressources codés en dur](cwf-reference-list-of-hardcoded-resource-files) ci-dessous). Tous ces fichiers peuvent être au format `jpg`, `png` ou `svg`. mais pour la plupart d'entre elles, vous devrez utiliser les formats `png` ou `svg` qui gèrent la transparence (le format jpg est plus compact que le png, mais sans aucune transparence). Notez que la meilleure qualité associée à la plus petite taille sera généralement obtenue avec les fichiers svg (format vectoriel).
-- des fichiers de ressources supplémentaires avec des noms libres. Ces fichiers supplémentaires peuvent être soit des fichiers image, soit des fichiers de polices de caractères (les formats `ttf` et `otf` sont acceptés pour les polices). Notez que pour ces fichiers supplémentaires, le `nom du fichier` (sans extension) sera utilisé comme valeur de clé, dans le fichier json, pour spécifier où et quand ces fichiers devront être utilisés
+- Hardcoded file names for images that will be used used in standard views included in the watchface (like `Background`, `CoverChart`... see [List of hardcoded resource files](cwf-reference-list-of-hardcoded-resource-files) below). Tous ces fichiers peuvent être au format `jpg`, `png` ou `svg`. mais pour la plupart d'entre elles, vous devrez utiliser les formats `png` ou `svg` qui gèrent la transparence (le format jpg est plus compact que le png, mais sans aucune transparence). Notez que la meilleure qualité associée à la plus petite taille sera généralement obtenue avec les fichiers svg (format vectoriel).
+- Addtional resource files with free names. Ces fichiers supplémentaires peuvent être soit des fichiers image, soit des fichiers de polices de caractères (les formats `ttf` et `otf` sont acceptés pour les polices). Note that for these additional files, the `filename` (without extension) will be used as the keyValue, within JSON file, to specify where or when these files should be used.
   - les fichiers image sont souvent utilisés comme arrière plan de vue texte ou pour une animation dynamique (comme le niveau de la batterie de 0% à 100%)
   - les fichiers de police de caractères vous permettent d'utiliser des polices spécifiques dans votre cadran
 
 (cwf-reference-json-structure)=
 
-## Structure Json
+## JSON Structure
 
-json files can be edited in Notepad (or notepad++) text editor (prefer notepad++ that recognize json and use color formating)
+JSON files can be edited in Notepad (or notepad++) text editor (prefer notepad++ that recognize JSON and use color formating)
 
 - it contains string keys `"string_key":` and key values that can be strings like `"key value"`, integer, boolean like `true`or `false` or block of data.
 - each value is seperated by a comma `,`
@@ -33,7 +33,7 @@ json files can be edited in Notepad (or notepad++) text editor (prefer notepad++
 
 (cwf-reference-metadata-settings)=
 
-### Paramètres metadata
+### Metadata Settings
 
 This block is the first block included into the json file and is mandatory. It contains all the informations associated to this watchface, like the name, the author, the date of creation or update, the author version or the plugin version.
 
