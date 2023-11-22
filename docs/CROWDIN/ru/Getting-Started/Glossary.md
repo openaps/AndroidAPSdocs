@@ -378,13 +378,13 @@
 </tr>
 <tr>
  <td><strong>Virtual pump/виртуальная помпа</strong></td>
- <td>option to try AAPS functions or for PWD using a pump model with no AAPS driver for looping</td>
+ <td>Позволяет узнать возможности AAPS без физического использования настоящей помпы</td>
  <td>Открытый цикл</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>Фоновый рисунок</strong></td>
- <td>AAPS background image</td>
+ <td>Фоновое изображение AAPS</td>
  <td></td>
  <td><a href="../Getting-Started/Phones.html#phone-background">см. страницу телефонов</a></td>
 </tr>
