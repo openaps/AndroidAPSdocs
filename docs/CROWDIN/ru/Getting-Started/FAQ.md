@@ -393,29 +393,29 @@ You find the documentation [here](update3_0-reset-master-password).
 
 Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump.)
 
-The easiest way to get all these parts working together is : 1/ Delete Link from AAPS 2/ Power off Link 3/ AAPS 3 dot menu, quit AAPS 4/ Long press AAPS icon, Android menu, info on app AAPS, Force stop AAPS and then Delete cache memory (Do not delete main memory !) 4bis/ Rarely some phones may need a reboot here. You can try without reboot. 5/Power on Link 6/Start AAPS 7/Pod tab, 3 dot menu, search and connect Link
+Самый простой способ заставить эти части работать - : 1/ Стереть Link из AAPS 2 / Отключить питание Link 3/выйти из AAPS через 3-точечное меню программы 4/ Долгое нажатие на значок AAPS, меню Android, информация о приложении AAPS, Принудительно остановить AAPS и затем очистить память кэша (Не удаляйте основную память !) 4bis/ Некоторым телефонам после этого может понадобиться перезагрузка здесь. Можно попробовать без перезагрузки. 5/ Включить Link 6/Запустить AAPS 7/Вкладка Pod, меню 3 точки, поиск и подключение (Riley)Link
 
-## Build error: file name too long
+## Ошибка сборки: слишком длинное имя файла
 
-While trying to build I get an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "c:\src\AndroidAPS-EROS").
+Во время сборки программы получаю ошибку, что имя файла слишком длинное. Возможные решения: Переместите источники в директорию ближе к корневой директории диска (например "c:\src\AndroidAPS-EROS").
 
-From Android Studio: Make sure "Gradle" is done syncing and indexing after opening the project and pulling from GitHub. Execute a Build->Clean Project before doing a Rebuild Project. Execute File->Invalidate Caches and Restart Android Studio.
+Из Android Studio: Убедитесь, что "Gradle" завершил синхронизацию и индексирование после открытия проекта с GitHub. Execute a Build->Clean Project before doing a Rebuild Project. Выполните команду File>Инвалидация кэша и перезагрузите Android Studio.
 
-## Alert: Running dev version. Closed loop is disabled
+## Внимание: Выполняется версия разработчика (dev). Замкнутый цикл отключен
 
-AAPS is not running in "developer mode". AAPS shows the following message: "running dev version. Closed loop is disabled".
+AAPS не работает в "режиме разработчика". AAPS показывает сообщение: "запуск dev версии. Замкнутый цикл отключен".
 
-Make sure AAPS is running in "developer mode": Place a file named "engineering_mode" at the location "AAPS/extra". Any file will do as long as it is properly named. Make sure to restart AAPS for it to find the file and go into "developer mode".
+Убедитесь, что AAPS запущен в "режиме разработчика": Поместите файл с именем "engineering_mode" в папку "AAPS/extra". Любой файл подойдет если он назван правильно. Обязательно перезапустите AAPS, чтобы найти файл и перейти в "режим разработчика".
 
-Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!).
+Совет: сделайте копию существующего лог-файла и переименуйте его в "engineering_mode" (примечание: без расширения!).
 
-## Where can I find settings files?
+## Где найти файлы настроек?
 
-Settings files will be stored on your phone's internal storage in the directory "/AAPS/preferences". WARNING: Make sure not to lose your password as without it you will not be able to import an encrypted settings file!
+Файлы настроек будут храниться во внутреннем хранилище телефона в каталоге "/AAPS/preferences". ВНИМАНИЕ: Убедитесь что помните пароль, без него вы не сможете импортировать зашифрованный файл настроек!
 
-## How to configure battery savings?
+## Как настроить экономию батареи?
 
-Properly configuring Power Management is important to prevent your Phone's OS to suspend AAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
+Правильная настройка управления питанием важна для предотвращения остановки AAPS и связанных с ним приложений и служб, когда телефон не используется. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
 
 ## Pump unreachable alerts several times a day or at night.
 
