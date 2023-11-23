@@ -151,7 +151,7 @@ PIN requirements are:
 
 ●   Test the one-time passcode from the authenticator app on the caregiver phone followed by your PIN:
 
-Example:
+Пример:
 
 The token from the authenticator app is 457051
 
