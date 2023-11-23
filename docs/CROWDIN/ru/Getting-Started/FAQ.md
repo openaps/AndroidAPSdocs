@@ -21,7 +21,7 @@ AndroidAPS создан для управления помпой и подачи
 First of all, you have to **get loopable hardware components**:
 
 - [Совместимая с AAPS(ИПЖ) инсулиновая помпа](./Pump-Choices.md) 
-- an [Android smartphone](Phones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
+- смартфон на Андроид (Apple iOS не поддерживается в AndroidAPS -рассмотрите вариант [iOS Loop](https://loopkit.github.io/loopdocs/))
 - a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
 
 Во-вторых, нужно **настроить оборудование**. Смотрите [пример установки с пошаговым руководством](Sample-Setup.md).
@@ -63,7 +63,7 @@ There are several blogs with good tips to help you understand the practicalities
 
 ## Какое запасное оборудование рекомендуется брать с собой?
 
-You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AAPS it is strongly recommended to have the following additional equipment with or near to you:
+You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. При пользовании AAPS настоятельно рекомендуется также иметь:
 
 - Банк батарей и кабель для зарядки смартфона, часов и (если это необходимо) BT reader или Link device
 - Pump batteries
@@ -239,10 +239,10 @@ Looping can reduce the pump battery faster than normal use because the system in
     For example, to whitelist on a Samsung phone running Android Pie:
     
     - Go to Settings -> Device Care -> Battery 
-    - Scroll until you find AAPS and select it
+    - Прокрутите страницу пока не найдете AndroidAPS и выберите его
     - De-select "Put app to sleep"
     - ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
-    - Scroll to AAPS and make sure it is de-selected.
+    - Прокрутите страницу до AndroidAPS и убедитесь, что галочка выбора снята.
 
 - clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
 
@@ -304,7 +304,7 @@ The percentage of the profile switch, the value for your activity temp target an
 
 ### Употребление алкоголя
 
-Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AAPS:
+Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. Следует выработать свой собственный метод подхода к этому вопросу с помощью следующих функций в AndroidAPS:
 
 - Deactivating closed loop mode and treating the diabetes manually or
 - setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
@@ -338,7 +338,7 @@ With Dana R and Dana R Korean you don't have to do anything. For other pumps see
 
 ### Госпитализация
 
-If you want to share some information about AAPS and DIY looping with your clinicians, you can print out the [guide to AAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
+Если вы хотите поделиться информацией об AndroidAPS и ИПЖ с врачами, можете распечатать [руководство по AAPS для медработников](../Resources/clinician-guide-to-AndroidAPS.md).
 
 ### На приеме у эндокринолога
 
@@ -383,7 +383,7 @@ You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or
 
 Откройте меню hamburger, запустите мастер настройки и введите новый пароль по запросу. Вы можете выйти из мастера после установки нового пароля.
 
-## How to reset the password in AAPS v3.x
+## Как сбросить пароль в AAPS v3.x
 
 You find the documentation [here](update3_0-reset-master-password).
 
@@ -391,7 +391,7 @@ You find the documentation [here](update3_0-reset-master-password).
 
 На некоторых телефонах Bluetooth разъединяется с Link (RL/OL/EmaL...).
 
-Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump.)
+Некоторые также отмечают плохую коммуникацию с RileyLink (AAPS сообщает, что они подключены, но не выполняют команды)
 
 Самый простой способ заставить эти части работать - : 1/ Стереть Link из AAPS 2 / Отключить питание Link 3/выйти из AAPS через 3-точечное меню программы 4/ Долгое нажатие на значок AAPS, меню Android, информация о приложении AAPS, Принудительно остановить AAPS и затем очистить память кэша (Не удаляйте основную память !) 4bis/ Некоторым телефонам после этого может понадобиться перезагрузка здесь. Можно попробовать без перезагрузки. 5/ Включить Link 6/Запустить AAPS 7/Вкладка Pod, меню 3 точки, поиск и подключение (Riley)Link
 
@@ -444,30 +444,30 @@ If you'd like to monitor/control AAPS via the AAPSClient remote Wear App, you'll
 
 Возможные причины проблемы: xDrip и/или NS достраивают пропущенные ГК.
 
-Желтый треугольник означает нестабильную задержку между показаниями ГК. You don't receive BGs every 5 min regularly or missing BGs. It is often a Libre problem. It also happens when you change G6 transmitter. If the yellow triangle is related to the G6 tansmitter change, it will go away by itself after several hours (around 24h). In case of Libre, the yellow triangle will stay. The loop can be closed and works correctly.
+Желтый треугольник означает нестабильную задержку между показаниями ГК. You don't receive BGs every 5 min regularly or missing BGs. Это зачастую проблема Libre. It also happens when you change G6 transmitter. If the yellow triangle is related to the G6 tansmitter change, it will go away by itself after several hours (around 24h). Если у вас Libre, желтый треугольник останется. Цикл может быть замкнут и будет работать правильно.
 
-## Can I move an active DASH Pod to other hardware?
+## Можно ли перенести активный DASH на другое оборудование?
 
-This is possible. Note that as moving is "unsupported" and "untested" there is some risk involved. Best to try the procedure when your Pod is about to expire so when things go wrong not much is lost.
+Это возможно. Note that as moving is "unsupported" and "untested" there is some risk involved. Best to try the procedure when your Pod is about to expire so when things go wrong not much is lost.
 
-Critical is that pump "state" (which includes it's MAC address) in AAPS and DASH match on reconnecting
+Критично то, что "состояние" помпы (которое включает в себя MAC-адрес) в AAPS и DASH совпадали при переподключении
 
-## Procedure I follow in this:
+## Процедура, которую я применяю:
 
-1) Suspend the DASH pump. This makes sure there are no running or queued commands active when DASH loses connection 2) Put the phone into airplane mode to disable BT (as well as WiFi and Mobile data). This way it is guaranteed AAPS and DASH can not communicate. 3) Export settings (which includes the DASH state) 4) Copy the settings file just exported from the phone (as it is in airplane mode and we do not want to change that, easiest way is using USB cable) 5) Copy the settings file to the alternate phone. 6) Import settings on the alternate phones AAPS. 7) Check the DASH tab to verify it is seeing the Pod. 8) Un-suspend the Pod. 9) Check the DASH tab and confirm it is communicating with the Pod (use the refresh button)
+1) Приостанавливаю DASH. This makes sure there are no running or queued commands active when DASH loses connection 2) Put the phone into airplane mode to disable BT (as well as WiFi and Mobile data). This way it is guaranteed AAPS and DASH can not communicate. 3) Выполняю экспорт настроек (включая состояние DASH) 4) Копирую файл настроек, только что экспортированный с телефона (так как он находится в режиме полета, который мы не хотим изменять, проще всего использовать USB-кабель) 5) Копирую файл настроек на другой телефон. 6) Импортирую настройки на другой телефон с AAPS. 7) Проверяю вкладку DASH, чтобы убедиться, что смартфон видит Pod. 8) Возобновляю работу Pod. 9) Проверяю вкладку DASH и убеждаюсь, что работает связь с Pod (использую кнопку обновления)
 
-Congratulations: you did it!
+Поздравляем! Все получилось!
 
-*Wait!* You still have the main phone thinking it can reconnect to the same DASH:
+*Минутку!!* Ваш прежний телефон все еще считает, что он может подсоединиться к тому же DASH:
 
-1) On the main phone choose "deactivate". This is safe because the phone has no way of communicating with DASH to actually deactivated the Pod (it is still in airplane mode) 2) Deactivation will result in a communications error - this is expected. 3) Just hit "retry" a couple of times until AAPS offers the option to "Discard" the Pod.
+1) На главном телефоне выберите "деактивировать". Это безопасно, потому что телефон не имеет способа связи с DASH для фактического отключения Pod (он все еще находится режиме полета) 2. Деактивация приведет к ошибке связи - это ожидаемо. 3) Просто нажмите "повторить" пару раз до тех пор, пока AAPS не предложит опцию "Завершить пользование" POD'ом.
 
-When Discarded, verify AAPS is reporting "No Active Pod". You can now safely disable airplane mode again.
+По завершении убедитесь, что AAPS на прежнем телефоне сообщает, что «Нет активного Pod». Теперь вы можете безопасно отключить режим полета.
 
-## How do I import settings from earlier versions of AAPS into AAPS v3 ?
+## Как импортировать настройки из предыдущих версий AAPS в AAPS v3 ?
 
-You can only import settings (in AAPS v3) that were exported using AAPS v2.8x or v3.x. If you were using a version of AAPS older than v2.8x or you need to use setting exports older than v2.8x, then you need to install AAPS v2.8 first. Import the older settings of v2.x in v2.8. After checking that all is OK, you can export settings from v2.8. Install AAPS v3 and import v2.8 settings in v3.
+Можно импортировать только те настройки, которые были экспортированы с помощью AAPS v2.8 или v3.x), Если у вас версия AAPS старше v2,8x, или вам нужны настройки версии старше 2.8x,то сначала придется установить версию v2.8. Импортирeqnt старые настройки v2.x в v2.8. После проверки,что все в порядке, можно экспортировать настройки из v2.8 Установите AAPS v3 и импортируйте настройки v2.8 в v3.
 
-If you use the same key to build v2.8 and v3, you won't even have to import settings. You can install v3 over v2.8.
+Если вы используете один и тот же ключ для сборки v2.8 и v3, вам не придется импортировать настройки. Можно установить v3 поверх версии 2.8.
 
-There were some new objectives added. You'll need to validate them.
+There were some new objectives added. Нужно будет их подтвердить.
