@@ -2,7 +2,7 @@
 
 ## Постройте сами вместо того, чтобы загружать
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! См. раздел [ FAQ ](../Getting-Started/FAQ.md).
+**AAPS** is not available to download, due to regulations concerning medical devices. Построить приложение для собственного использования вполне законно, но передавать копию другим не разрешается! См. раздел [ FAQ ](../Getting-Started/FAQ.md).
 
 ## Важные Примечания
 
