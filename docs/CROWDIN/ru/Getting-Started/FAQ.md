@@ -415,36 +415,36 @@ AAPS не работает в "режиме разработчика". AAPS по
 
 ## Как настроить экономию батареи?
 
-Правильная настройка управления питанием важна для предотвращения остановки AAPS и связанных с ним приложений и служб, когда телефон не используется. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
+Правильная настройка управления питанием важна для предотвращения остановки AAPS и связанных с ним приложений и служб, когда телефон не используется. Если не сделать этого, AAPS не сможет выполнить соединения по Bluetooth с сенсором и Rileylink (RL) может быть выключен, что приведет к "отключению "помпы" оповещений "помпа недоступна" и ошибкам связи. На телефоне перейдите в Настройки->Приложения и отключите экономию заряда батареи для AAPS xDrip или самостоятельно собранное приложение BYODA/Dexcom Системное приложение Bluetooth (возможно, необходимо сначала выбрать системные приложения) Или полностью отключить все энергосбережения на телефоне. В результате батарея может разряжаться быстрее, но вы смжете выяснить, не вызывается ли проблема экономией заряда аккумулятора. Способ экономии аккумулятора в значительной степени зависит от марки телефона, модели и/или версии операционной системы. Из-за этого почти невозможно дать инструкции по правильной настройке экономии заряда аккумулятора. Экспериментируйте, чтобы выяснить, какие настройки лучше для вас. Дополнительную информацию см. также в "Не закрывать приложение"
 
-## Pump unreachable alerts several times a day or at night.
+## Оповещения о недоступности помпы появляются несколько раз в день или ночью.
 
-Your phone may be suspending AAPS services or even Bluetooth causing it to loose connection to RL (see battery savings) Consider configuring unreachable alerts to 120 minutes by going to the top right-hand side three-dot menu, selecting Preferences->Local Alerts->Pump unreachable threshold [min].
+Ваш телефон может останавливать службы AAPS или даже Bluetooth, что приведет к потере соединения с RL (см. экономия батареи) Настройте оповещения о недоступносте на 120 минут, перейдя в верхнее правое меню, выберите Настройки->Локальные оповещения>Порог недоступности помпы[min].
 
-## Where can I delete treatments in AAPS v3 ?
+## Где можно удалить записи терапии в AAPS v3 ?
 
-3 dots menu, select treatements, then 3 dots menu again and you have different options available.
+3 точки меню, выберите терапия, затем меню настроек, и получите различные возможные варианты.
 
-## Configuring and Using the AAPSClient remote app
+## Настройка приложения AAPSClient remote (для дистанционного управления)
 
-AAPS can be monitored and controlled remotely via the AAPSClient app and optionally via the associated Wear app running on Android Wear watches. Note that the AAPSClient (remote) app is distinct from the NSClient configuration in AAPS, and the AAPSClient (remote) Wear app is distinct from the AAPS Wear app--for clarity the remote apps will be referred to as 'AAPSClient remote' and 'AAPS remote Wear' apps.
+AAPS можно удаленно контролировать через приложение AAPSClient и, при необходимости, через связанное с ним приложение Wear, работающее на часах Android Wear. Note that the AAPSClient (remote) app is distinct from the NSClient configuration in AAPS, and the AAPSClient (remote) Wear app is distinct from the AAPS Wear app--for clarity the remote apps will be referred to as 'AAPSClient remote' and 'AAPS remote Wear' apps.
 
-To enable AAPSClient remote functionality you must: 1) Install the AAPSClient remote app (the version should match the version of AAPS being used) 2) Run the AAPSClient remote app and proceed through the configuration wizard to grant required permissions and configure access to your Nightscout site. 3) At this point you may want to disable some of the Alarm options, and/or advanced settings which log the start of the AAPSClient remote app to your Nightscout site. Once this is done, AAPSClient remote will download Profile data from your Nightscout site, the 'Overview' tab will display CGM data and some AAPS data, but but may not display graph data, and will indicate that a profile isn't yet set. 4) To activate the profile:
+Чтобы включить дистанционный функционал на AAPSClient дистанционном надо: 1) Установите приложение AAPSClient дистанционный (версия должна совпадать с используемой версией AAPS) 2) Запустите приложение AAPSClient и в мастере настройкипредоставить необходимые разрешения и настройки доступа к вашему сайту Nightscout. 3) На данном этапе вы можете отключить некоторые оповещения, и/или дополнительные настройки, которые регистрируют запуск дистанционного приложения AAPSClient на вашем сайте Nightscout. После этого, дистанционный AAPSClient загрузит данные профиля с сайта Nightscout, на вкладке «Обзор» будут отображаться данные CGM и некоторые данные AAPS, но может не отображать графические данные и указывать, что профиль еще не установлен. 4) Для активизации профиля:
 
 - Enable remote profile synchronization in AAPS > NSClient > Options
-- Activate the profile in NSClient remote > Profile After doing so, the profile will be set, and AAPSClient remote should display all data from AAPS. Hint: If the graph is still missing, try changing the graph settings to trigger an update. 5) To enable remote control by the AAPSClient, selectively enable the aspects of AAPS (Profile changes, Temp Targets, Carbs, etc.) that you would like to be able to control remotely via AAPS > NSClient > Options . Once these changes are made, you'll be able to remotely control AAPS via either Nightscout or AAPSClient remote.
+- Activate the profile in NSClient remote > Profile After doing so, the profile will be set, and AAPSClient remote should display all data from AAPS. Hint: If the graph is still missing, try changing the graph settings to trigger an update. 5) Для включения дистанционного управления AAPSClient, выборочно включите настройки AAPS (изменения профиля, Временные Цели, Углеводы и т. д. которыми хотите дистанционно управлять с помощью AAPS > NSClient > Опции . После внесения этих изменений вы сможете дистанционно управлять AAPS с помощью Nightscout или AAPSClient дистанционного.
 
-If you'd like to monitor/control AAPS via the AAPSClient remote Wear App, you'll need both AAPSClient remote and the associated Wear app to be installed. To compile the AAPSClient remote Wear app, follow the standard instructions for installing/configuring the AAPS wear app, except when compiling it, choose the AAPSClient variant.
+If you'd like to monitor/control AAPS via the AAPSClient remote Wear App, you'll need both AAPSClient remote and the associated Wear app to be installed. Чтобы скомпилировать дистанционное приложение AAPSClient Wear, следуйте стандартным инструкциям по установке/настройке приложения AAPS wear, но при компиляции, выберите вариант AAPSClient.
 
-## I have a red triangle / AAPS won't enable closed loop / Loops stays in LGS / I have a yellow triangle
+## У меня горит красный треугольник / AAPS не включает замкнутый цикл/ цикл остановился на низких (LGS) / у меня горит желтый треугольник
 
-The red and yellow triangles are a security feature in AAPS v3.
+Красный и желтый треугольники являются функцией безопасности в AAPS v3.
 
-Red triangle means that you have duplicate BGs and AAPS can't calculate precisely the deltas. You can't close the loop. You need to delete one BG of each duplicated value in order to clear the red triangle. Go to BYODA or xDRIP tab, long press one line you want to delete, check one of each lines that are doubled (or via 3 dots menu and Delete, depending on your AAPS version). You may need to reset the AAPS databases if there are too many double BGs. In this case, you'll also loose stats, IOB, COB, selected profile.
+Красный треугольник означает, что у вас есть дубликаты данных ГК, и AAPS не может точно рассчитать приращение (дельту). При этом невозможно замкнуть цикл. Чтобы очистить красный треугольник, нужно удалить каждое дублируемое значение ГК. Перейдите на вкладку BYODA или xDRIP, долгое нажатие на одну линию, которую вы хотите удалить, пометьте одну из строк, которые задвоены (или через 3 точки меню и Delete, в зависимости от вашей версии AAPS). Если слишком много двойных ГК потребуется сбросить базы данных AAPS,. При этом вы также потеряете статистику, IOB, COB, выбранный профиль.
 
-Possible origin of the problem: xDrip and/or NS backfilling BGs.
+Возможные причины проблемы: xDrip и/или NS достраивают пропущенные ГК.
 
-The yellow triangle means unstable delay between each BG reading. You don't receive BGs every 5 min regularly or missing BGs. It is often a Libre problem. It also happens when you change G6 transmitter. If the yellow triangle is related to the G6 tansmitter change, it will go away by itself after several hours (around 24h). In case of Libre, the yellow triangle will stay. The loop can be closed and works correctly.
+Желтый треугольник означает нестабильную задержку между показаниями ГК. You don't receive BGs every 5 min regularly or missing BGs. It is often a Libre problem. It also happens when you change G6 transmitter. If the yellow triangle is related to the G6 tansmitter change, it will go away by itself after several hours (around 24h). In case of Libre, the yellow triangle will stay. The loop can be closed and works correctly.
 
 ## Can I move an active DASH Pod to other hardware?
 
