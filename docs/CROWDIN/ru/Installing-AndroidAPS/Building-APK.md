@@ -2,7 +2,7 @@
 
 ## Постройте сами вместо того, чтобы загружать
 
-**AAPS is not available as download due to regulation for medical devices. It is legal to build the app for your own use, but you must not give a copy to others! См. раздел [ FAQ ](../Getting-Started/FAQ.md).**
+**AndroidAPS недоступен для скачивания из-за законодательства, касающегося медицинских устройств. Построить приложение для собственного использования вполне законно, но передавать копию другим не разрешается! См. раздел [ FAQ ](../Getting-Started/FAQ.md).**
 
 ## Важные Примечания
 
@@ -27,8 +27,8 @@
   <tr>
     <td class="tg-baqh"><p align="center">CPU (Only 64 bit)</td>
     <td class="tg-baqh">x86_64 архитектура CPU; ядро Intel или новее, или процессор AMD с поддержкой <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">Чипы на базе ARM или Intel Core 2 поколения или новее с поддержкой <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">среды Hypervisor </span></a></td>
-    <td class="tg-baqh">архитектура процессора x86_64, процессор Intel Core или новее, или процессор AMD с поддержкой AMD-виртуализации (AMD-V) и SSSE3</td>
+    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">архитектура процессора x86_64, процессор Intel Core 2 поколения или новее, или процессор AMD с поддержкой AMD-виртуализации (AMD-V) и SSSE3</td>
   </tr>
   <tr>
     <td class="tg-baqh"><p align="center">Оперативная память</td>
@@ -49,7 +49,7 @@
 </tbody>
 </table>
 
-Имейте в виду, что и **64-разрядная процессор, и 64-разрядная ОС являются обязательным условием.** Если ваша система не соответствует этому условию, вы должны изменить аппаратное или программное обеспечение или всю систему. **It is strongly recommended to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file but note that the building process can take a long time to complete, although once started, you can leave it running unattended.
+Имейте в виду, что и **64-разрядная процессор, и 64-разрядная ОС являются обязательным условием.** Если ваша система не соответствует этому условию, следует изменить аппаратное или программное обеспечение или всю систему. **Рекомендуется использовать SSD(Solid State Disk) вместо HDD(Hard Disk Drive), так как при создании APS-файла потребуется меньше времени.** Рекомендация не является обязательной. Однако вы можете использовать HDD при создании apk файла, но процесс сборки может занять много времени, хотяпосле начала процесс можно оставить без присмотра.
 
 * * *
 
@@ -83,11 +83,11 @@
 
 ## Установите Android Studio
 
-The following screenshots have been taken from Android Studio Version Arctic Fox | 2020.3.1. Screens can change in future versions of Android Studio. Но у вас должно получиться. [Здесь можно найти помощь участников](../Where-To-Go-For-Help/Connect-with-other-users.md).
+Следующие снимки экрана были сделаны из Android Studio Version Arctic Fox | 2020.3.1. Экраны могут меняться в будущих версиях Android Studio. Но у вас должно получиться. [Здесь можно найти помощь участников](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
 Одна из наиболее важных заповедей при установке Android Studio: ** Будьте терпеливы! ** Во время установки и настройки Android Studio загружает многие элементы, которые отнимают время.
 
-Download [Android Studio from here](https://developer.android.com/studio/install.html) and install it on your computer.
+Загрузите [ Android Studio отсюда](https://developer.android.com/studio/install.html) и настройте при первом запуске.
 
 On first start you will find the setup wizard:
 
@@ -95,7 +95,7 @@ On first start you will find the setup wizard:
 
 ![Не импортируйте настройки](../images/studioSetup/01_ImportSettings.png)
 
-Решите, хотите ли вы совместно использовать данные с Google или нет.
+Решите, хотите вы совместно использовать данные с Google или нет.
 
 ![Обмен данными с Google](../images/studioSetup/02_DataSharing.png)
 
@@ -109,7 +109,7 @@ On first start you will find the setup wizard:
 
 Для интерфейса выберите тему, которая вам нравится. (В этом руководстве мы использовали "Светлую".) Затем нажмите кнопку "Далее".
 
-> ***Note:*** This is just the color scheme. You can select whatever you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK but the following screenshots might look different.
+> ***Примечание:*** Это всего лишь цветовая схема. You can select whatever you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK but the following screenshots might look different.
 
 ![Цветовая схема интерфейса](../images/studioSetup/05_UITheme.png)
 
@@ -117,33 +117,33 @@ On first start you will find the setup wizard:
 
 ![Подтвердить настройки](../images/studioSetup/06_Overview.png)
 
-Click on all three license agreement parts and select "Agree". When you have agreed to all, the "Finish" button will be enabled and you can "Finish".
+Нажмите на все три части лицензионного соглашения и выберите "Согласен". Когда вы согласились со всеми, будет включена кнопка "Завершить", и вы можете "Завершить".
 
     ![Agree license agreements](../images/studioSetup/07_LicenseAgreement.png)
     
 
-Подождите, пока Android Studio скачивает дополнительные компоненты и будет терпеливы. После того, как все загрузится кнопка "Готово", станет синей. Теперь нажмите на кнопку.
+Подождите, пока Android Studio скачивает дополнительные компоненты и будьте терпеливы. После того, как все загрузится кнопка "Готово", станет синей. Теперь нажмите на кнопку.
 
 ![Загрузка компонентов](../images/studioSetup/08_Downloading.png)
 
-(Building-APK-download-AAPS-code)=
+(Сборка-APK-загрузка-AAPS-кода)=
 
 ## Download AAPS code
 
-* On the Android Studio welcome screen select "Projects" (1) on the left and then "Get from VCS" (2).
+* На экране Android Studio выберите "Проекты" (1) слева и затем "Получить с VCS" (2).
     
     ![Android Studio wizard](../images/studioSetup/20_ProjectVCS.png)
     
-    * If you already opened Android Studio and do not see the welcome screen anymore select File (1) > New (2) > Project from Version Control... (3)
+    * Если вы уже открыли Android Studio и не видите экран приветствия, то выберите File (1.) > New (2.) > Project from Version Control... (3)
         
         ![Извлечение проекта из системы управления версиями в Android Studio](../images/AndroidStudio_FileNew.PNG)
     
-    * We will now tell Android Studio were to get the code from:
+    * Теперь мы расскажем программе Android Studio, откуда получить код:
     
-    * Make sure you have selected "Repository URL" on the left (1).
+    * Убедитесь, что вы выбрали "URL репозитория" слева (1).
     
-    * Check if "Git" is selected as version control (2).
-    * Copy and paste the URL ```https://github.com/nightscout/AndroidAPS``` to the main AAPS repository into the URL textbox (3).
+    * Отметьте, выбран ли "Git" в качестве контроля версий (2).
+    * Copy and paste the URL ```https://github.com/nightscout/AndroidAPS``` в основной репозиторий AAPS в текстовом поле URL (3).
     * Choose the directory where you want to save the cloned code (4).
         
         ![Clone Git](../images/studioSetup/21_CloneURL.png)
