@@ -233,7 +233,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 - reduce the length of time the LCD stays on (within pump settings menu)
 - reduce the length of time the backlight stays on (within pump settings menu)
 - select notification settings to a beep rather than vibrate (within pump settings menu)
-- only press the buttons on the pump to reload, use AAPS to view all history, battery level and reservoir volume.
+- Нажимать кнопки помпы только для перезагрузки; для просмотра журналов, уровня батареи и объема резервуара помпы пользоваться смартфоном с AAPS.
 - На некоторых телефонах AAPS периодически закрывается для экономии энергии или высвобождения оперативной памяти. Когда AAPS вновь инициализируется, то при каждом старте устанавливает соединение Bluetooth с помпой и перечитывает текущую базальную скорость и журнал болюсов. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout будет получать данные о событии при каждом перезапуске AAPS, что облегчит отслеживание проблемы. Чтобы уменьшить расход батареи при таких событиях, включите AAPS в список разрешенных приложений в настройках батареи телефона и тогда монитор расхода энергии перестанет выключать AAPS.
     
     For example, to whitelist on a Samsung phone running Android Pie:
@@ -251,18 +251,18 @@ Looping can reduce the pump battery faster than normal use because the system in
 
 ### Замена картриджей и катетеров
 
-The change of cartridge cannot be done via AAPS but must be carried out as before directly via the pump.
+Замена картриджей не может осуществляться через AAPS, ее следует как и раньше, делать непосредственно на помпе.
 
-- Long press on "Open Loop"/"Closed Loop" on the Home tab of AAPS and select 'Suspend Loop for 1h'
-- Now nnect the pump and change the reservoir as per pump instructions.
-- Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](CPbefore26-pump) in the actions tab just to record the change.
-- Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
+- Нажмите и удерживайте кнопку "Открытый цикл"/"Замкнутый цикл" на вкладке "Главный экран" AAAPS и выберите "Приостановка цикла на 1ч.'
+- Отключите помпу и замените резервуар в соответствии с инструкцией помпы.
+- Заполнить инфузионный набор можно и непосредственно с помпы. В этом случае пользуйтесь кнопкой [первичное заполнение инфузионного набора](CPbefore26-pump) во вкладке "Действия" только для внесения записи изменений.
+- После переподключения помпы запустите цикл долгим нажатием на 'Приостановлено (X мин.)'.
 
-The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the [PRIME/FILL button](CPbefore26-pump) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
+Однако замена катетера происходит не через функцию "первичного заполнения инфузионного набора" на помпе, но заполняет катетер с помощью болюса, который не отражается в истории болюса. Это означает, что текущая временная скорость базала не прерывается. На вкладке Действия при помощи кнопки [ЗАПОЛНИТЬ](CPbefore26-pump) задайте то количество инсулина, которое необходимого для заполнения инфузионного набора и начните первичное заполнение. Если этого количества недостаточно, повторите заполнение. Вы можете установить кнопки по умолчанию в Настройках > Другое > Заполнить/Инициировать стандартные количества инсулина. В инструкции к инфузионному набору вы найдете объемы единиц для первичного заполнения в зависимости от длины иглы и длины трубки.
 
 ## Фоновый рисунок
 
-You can find the AAPS wallpaper for your phone on the [phones page](Phones-phone-background).
+Обои AAPS можно найти для телефона на странице [ Телефоны ](Phones-phone-background).
 
 ## Повседневное применение
 
@@ -270,11 +270,11 @@ You can find the AAPS wallpaper for your phone on the [phones page](Phones-phone
 
 #### Что делать при приеме душа или ванной?
 
-You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](FAQ-disconnect-pump).
+You can remove the pump while taking a shower or bath. За этот короткий промежуток времени вам может не понадобиться, но вы должны сообщить AAPS о том, что отключились для того, чтобы вычисления IOB были правильными. См. [ описание выше ](FAQ-disconnect-pump).
 
 ### На работе
 
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](Profiles-time-shift) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+В зависимости от вида работы, возможно, вы используете иные методы терапии в рабочие дни. В этом случае есть смысл рассмотреть переключение [профиля](../Usage/Profiles.md) на типичный рабочий день. Например, профиль больше 100% можно установить, если работа не очень тяжелая (напр. сидя за столом), или меньше 100%, если вы активны и на ногах весь день. Также можно рассмотреть возможность установки высокой или низкой временной цели или [смены профиля](Profiles-time-shift), если начинаете намного раньше или позже обычного, или в разные смены. Также можно создать второй профиль (например, дом' и 'работа') и при необходимости переключаться с профиля на профиль.
 
 ## Отдых
 
@@ -300,7 +300,7 @@ The percentage of the profile switch, the value for your activity temp target an
 
 ### Секс
 
-You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. See [description above](FAQ-disconnect-pump).
+Можете снять помпу для "свободы" но следует проинформировать об этом AAPS, чтобы расчеты активного инсулина IOB были правильными. См. [ описание выше ](FAQ-disconnect-pump).
 
 ### Употребление алкоголя
 
@@ -346,50 +346,50 @@ If you want to share some information about AAPS and DIY looping with your clini
 
 You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
 
-# Frequent questions on Discord and their answers...
+# Частые вопросы из Discord и ответы на них...
 
-## My problem is not listed here.
+## Моя проблема здесь не указана.
 
-[Information to get help.](Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Информация о получении помощи.](Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
 ## My problem is not listed here but I found the solution
 
-[Information to get help.](Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Информация о получении помощи.](Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
 **Remind us to add your solution to this list!**
 
 ## AAPS stops everyday around the same time.
 
-Stop Google Play Protect. Check for "cleaning" apps (ie CCleaner etc) and uninstall them. AAPS / 3 dots menu / About / follow the link "Keep app running in the background" to stop all battery optimizations.
+Остановите защиту Google Play Protect. Check for "cleaning" apps (ie CCleaner etc) and uninstall them. AAPS / 3 dots menu / About / follow the link "Keep app running in the background" to stop all battery optimizations.
 
-## How to organize my backups ?
+## Как организовать резервные копии ?
 
-Export settings very regularly: after each pod change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Keep several old export files.
+Регулярно экспортируйте настройки: после замены каждого пода, после изменения профиля, когда подтверждено прохождение цели, если заменили помпу… Даже если ничего не изменится, экспортируйте настройки раз в месяц. Сохраняйте несколько старых файлов экспорта.
 
-Copy on an internet drive (Dropbox, Google etc) : all the apks you used to install apps on your phone (AAPS, xDrip, BYODA, Patched LibreLink…) as well as the exported setting files from all your apps.
+Скопируйте на интернет-диске (Dropbox, Google etc) : все приложения, которые использовали для установки приложений на телефон (AAPS, xDrip, BYODA, Patched LibreLink…), а также экспортированные настройки из всех этих приложений.
 
-## I have problems, errors building the app.
+## Проблемы, ошибки при создании приложения.
 
-Please
+Пожалуйста,
 
-- check [Troubleshooting Android Studio](troubleshooting_androidstudio-troubleshooting-android-studio) for typical errors and
-- the tipps for with a [step by step walktrough](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
+- проверьте [Устранение неполадок Android Studio](troubleshooting_androidstudio-troubleshooting-android-studio) на наличие типичных ошибок и
+- [пошаговые инструкции](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
-## I'm stuck on an objective and need help.
+## Я застрял на цели и нуждаюсь в помощи.
 
-Screen capture the question and answers. Post-it on the Discord AAPS channel. Don't forget to tell which options you choose (or not) and why. You'll get hints and help but you'll need to find the answers.
+Сохраните экран вопросов и ответов. Отправьте сообщение на канал Discord AAPS. Don't forget to tell which options you choose (or not) and why. Вы получите подсказки и помощь, но ответы надо найти самостоятельно.
 
-## How to reset the password in AAPS v2.8.x ?
+## Как сбросить пароль в AAPS v2.8.x ?
 
-Open the hamburger menu, start the Configuration wizard and enter new password when asked. You can quit the wizard after the password phase.
+Откройте меню hamburger, запустите мастер настройки и введите новый пароль по запросу. Вы можете выйти из мастера после установки нового пароля.
 
 ## How to reset the password in AAPS v3.x
 
 You find the documentation [here](update3_0-reset-master-password).
 
-## My link/pump/pod is unresponsive (RL/OL/EmaLink…)
+## Мой Link/помпа/pod не отвечает (RL/OL/EmaLink…)
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaL...).
+На некоторых телефонах Bluetooth разъединяется с Link (RL/OL/EmaL...).
 
 Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump.)
 
