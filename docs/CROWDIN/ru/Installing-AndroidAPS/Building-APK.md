@@ -154,27 +154,27 @@ On first start you will find the setup wizard:
 
 * Не нажимайте "Background", пока клонируется репозиторий!
 
-* After the repository is cloned successfully, Android Studio will open the cloned project.
+* После успешного клонирования репозитория, Android Studio откроет клонированный проект.
 
-* You will be asked whether you want to trust the project. Click on "Trust project"!
+* Вам будет задан вопрос, хотите ли вы доверять проекту. Нажмите на "Доверять проекту"!
     
     ![Trust project](../images/studioSetup/23_TrustProject.png)
 
-* In the status bar at the bottom you will see the information that Android Studio is running background tasks.
+* На шкале состояния появится информация о том, что в Android Studio выполняются фоновые задачи.
     
     ![Фоновые задания](../images/studioSetup/24_GradleSyncRunning.png)
 
-* Windows only: Grant access if your firewall is asking for permission.
+* Только для Windows: предоставьте доступ, если брандмауэр просит разрешение.
     
     ![Разрешение брандмауэра (Java)](../images/AndroidStudio361_18.png)
 
-* Once the background tasks are finished you will probably see an error saying that errors occurred (1) or (2) or (3).
+* После завершения фоновых задач вы увидите сообщение, указывающее на ошибки (1) или (2) или (3).
     
     ![Лицензия SDK](../images/studioSetup/25_SyncFailed.png)
     
-    Don't worry, this will be solved soon!
+    Не волнуйтесь, вскоре они снимутся!
 
-(Building-APK-set-git-path-in-preferences)=
+(Построение-APK-задать-путь-к-git-в-настройках) =
 
 ## Задайте путь к git в параметрах
 
