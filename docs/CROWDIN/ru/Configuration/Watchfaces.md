@@ -4,14 +4,14 @@
 
 ## Циферблаты AAPS
 
-There are several watchfaces to choose from that are included in the base build of the AAPS Wear APK. These watchfaces include average delta, IOB, currently active temp basal rate and basal profiles and a CGM readings graph.
+Есть несколько циферблатов которые включены в базовую сборку APK AAPS Wear APK. Эти циферблаты показывают среднюю дельту ГК, активный инсулин IOB, действующий временный базал, профили базы и график мониторинга.
 
-Убедитесь, что уведомления AAPS не заблокированы на часах. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
+Убедитесь, что уведомления AAPS не заблокированы на часах. Подтверждение действия (например, болюс, временные цели) происходит через уведомления, которые нужно смахнуть в сторону и нажать на галочку.
 
-Some available actions on the watchfaces are:
+Некоторые из доступных действий для циферблатов:
 
-* Double tap on the BG to get to the AAPS menu
-* Double tap on the BG graph to change the graph's time scale
+* Двойное нажатие на ГК, чтобы попасть в меню AAPS
+* Двойное нажатие на график ГК для изменения временной шкалы графика
 
 ## Доступные циферблаты
 
