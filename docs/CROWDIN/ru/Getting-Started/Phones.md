@@ -1,6 +1,6 @@
 (Phones-list-of-tested-phones)=
 
-# List of tested Phones compatible with Omnipod Dash Insulin Pump Pods
+# Список проверенных телефонов, совместимых с помпой Omnipod Dash
 
 Подготовлен список телефонов/смартчасов, подходящих для работы с Omnipod Dash, самой новой помпой из помп, способных работать с AAPS в режиме замкнутого цикла!
 
@@ -10,16 +10,16 @@
 
 Когда наступит время создания нового списка совместимости, мы рекомендуем участникам этой работы связаться с нами!
 
-The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
+Открыть список проверенных телефонов можно по ссылке [список проверенных телефонов, совместимых с инсулиновой помпой Omnipod](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
 
-With CRTL-F you can search in the text of the Google sheet. The sheet is write protected. To record your test of a phone please fill in the [form](https://forms.gle/g7GbSkMCTfFrWKjSA).
+В тексте таблицы Google при помощи CRTL-F можно выполнить поиск. Таблица защищена от записи. Чтобы внести результаты тестирования телефона, заполните [форму](https://forms.gle/g7GbSkMCTfFrWKjSA).
 
-After you fill in the form data the maintainer will check the data and approve it for publishing!
+После заполнения формы группа редакторов проверит данные и утвердит их для публикации!
 
-Any problems with the spreadsheet please contact us directly or via a GitHub issue for the openaps/AndroidAPSDocs project.
+При возникновении сложностей с электронной таблицей свяжитесь с нами непосредственно или по GitHub в рамках проекта openaps/AAPSdocs.
 
 (Phones-phone-background)=
 
 # Обои для телефона
 
-![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
+![заставка телефона](../images/bg_phone_thump.jpg) </br> Дизайн: Thiago :) </br> Если хотите украсить телефон логотипом AndroidAPS, можете скачать фоновое изображение здесь: ![Заставка в высоком разрешении.](../images/bg_phone.jpg)
