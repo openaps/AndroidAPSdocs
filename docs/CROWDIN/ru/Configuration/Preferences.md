@@ -542,7 +542,7 @@
 
 ## Проект Open Humans
 
-- You can help the community by donating your data to research projects! Детали описаны на странице [Open Humans](../Configuration/OpenHumans.md).
+- Вы можете помочь науке, поделившись данными с исследовательскими проектами! Детали описаны на странице [Open Humans](../Configuration/OpenHumans.md).
 
 - В настройках вы можете определить, когда загружать данные
 
