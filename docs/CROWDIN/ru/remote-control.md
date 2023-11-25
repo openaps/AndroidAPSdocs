@@ -1,16 +1,16 @@
 # Remote control of AAPS
-There are four highly effective tools for remotely managing **AAPS**:
+Существует 4 наиболее эффективных инструмента для удаленного управления **AAPS**:
 
-1) [SMS commands](sms-commands) (follower phone can be either Android or iOS), 2) [AAPSClient](aapsclient) (follower phone is Android) 3) [Nightscout](nightscout) (Android, iOS or other computer/device).  
-4) [Smartwatches](smartwatches) (Android)
+1) [SMS команды](sms-commands) (телефон фолловера может быть как Android, так и iOS), 2) [Клиент AAPS](aapsclient) (телефон фолловера только Android), 3) [Nightscout](nightscout) (Android, iOS или любой компьютер/устройство с доступом к браузеру)  
+4) [Умные часы](smartwatches) (Android)
 
-The first three are mostly appropriate for carers/parents, but smartwatches are very useful for carers/parents **and** for adults with diabetes themselves.
+Первые три варианта вполне подходят родителям или опекунам, однако умные часы весьма удобны не только им, но **и** взрослым с диабетом.
 
 ![изображение](images/remote-control-01.png)
 
-#### Considerations when setting up remote control of **AAPS** for a child
+#### Некоторые соображения по поводу настройки удаленного управления **AAPS** для детей
 
-1.  Think about how you will keep the child’s phone in range of their pump and CGM. This can be challenging with children who are too young to be responsible for a phone. Ensuring you select an AAPS phone with a good bluetooth connection range and finding a comfortable way for the child to carry the pump and phone - if they are old/big enough to have the phone on them -  (_e.g._ a [SPI Belt](https://spibelt.com/collections/kids-belts) may help.
+1.  Подумайте о том, каким образом вы обеспечите нахождение телефона ребенка в зоне доступа его помпы и НМГ. Это еще то испытание с маленькими детьми, которые пока не несут ответственность за свой телефон. Ensuring you select an AAPS phone with a good bluetooth connection range and finding a comfortable way for the child to carry the pump and phone - if they are old/big enough to have the phone on them -  (_e.g._ a [SPI Belt](https://spibelt.com/collections/kids-belts) may help.
 2.  Take your time to set-up and test commands with your child next to you, before starting remote treatment and monitoring. Many parents choose school holidays or weekends.
 3.  Make sure other caregivers/teachers are aware of your child's treatment plan and work out how adding in remote control is going to work with/enhance the existing plan.
 4.  Many parents find it helpful to have a separate line of communication with childcare providers, for example a cheap small teacher “follow” phone.
