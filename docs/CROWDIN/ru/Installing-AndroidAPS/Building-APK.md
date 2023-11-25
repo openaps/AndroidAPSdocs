@@ -1,6 +1,6 @@
 # Создание андроид-приложения (APK)
 
-## Постройте сами вместо того, чтобы загружать
+## Постройте сами вместо скачивания
 
 **AndroidAPS недоступен для скачивания из-за законодательства, касающегося медицинских устройств. Построить приложение для собственного использования вполне законно, но передавать копию другим не разрешается! См. раздел [ FAQ ](../Getting-Started/FAQ.md).**
 
@@ -178,37 +178,37 @@ On first start you will find the setup wizard:
 
 ## Задайте путь к git в параметрах
 
-Make sure [git is installed](../Installing-AndroidAPS/git-install.md) on your computer and you have restarted your computer since installing.
+Убедитесь, что [git установлен](../Installing-AndroidAPS/git-install.md) на компьютере и компьютер перезагрузили после установки.
 
-On the Android Studio welcome screen click "Customize" (1) on the left and then select the link "All settings..." (2):
+На экране приветствия Android Studio нажмите кнопку "Настроить" (1) слева и затем выберите ссылку "Все настройкиs..." (2):
 
 ![Параметры Android Studio с экрана приветствия](../images/studioSetup/10_WizardSettings.png)
 
 ### Windows
 
-* As windows user, make sure you have restarted your computer after [installing Git](../Installing-AndroidAPS/git-install.md).
+* Как пользователь Windows, убедитесь, что вы перезагрузили компьютер после [установки Git](../Installing-AndroidAPS/git-install.md).
 
 * In the menu, go to File (1) > Settings (2) (or Android Studio > Preferences on Mac).
     
     ![Open settings](../images/studioSetup/30_Settings.png)
 
-* Double-click "Version Control" (1) to open the sub-menu.
+* Дважды нажмите "Управление версиями" (1) для открытия подменю.
 
 * Нажмите Git (2).
-* Make sure update method "Merge" (3) is selected.
+* Убедитесь, что "Слияние" (merge) (3.) выбрано как метод обновления.
 * Проверьте, может ли Android Studio найти путь к файлу git.exe автоматически, нажав кнопку "Тест" (4).
     
     ![Параметры Android Studio](../images/studioSetup/11_GitPath.png)
 
-* If automatic setting is successful git version will be displayed next to the path.
+* Если автоматическая настройка прошла успешно, то рядом с путем к git будет показана его версия.
     
     ![Git version displayed](../images/studioSetup/12_GitVersion.png)
 
-* Eventually git.exe cannot be found automatically or the Test will result in an error (1):
+* Иногда git.exe не может быть найден автоматически или тест приведет к ошибке (1):
     
     ![Git not found](../images/studioSetup/13_GitVersionError.png)
     
-    In this case click on the folder icon (2).
+    В этом случае нажмите на значок папки (2).
 
 * Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where git has been installed. You are looking for a file named "git.exe", located in **\bin** folder.
 
