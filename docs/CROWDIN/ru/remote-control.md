@@ -10,22 +10,22 @@
 
 #### Некоторые соображения по поводу настройки удаленного управления **AAPS** для детей
 
-1.  Подумайте о том, каким образом вы обеспечите нахождение телефона ребенка в зоне доступа его помпы и НМГ. Это еще то испытание с маленькими детьми, которые пока не несут ответственность за свой телефон. Ensuring you select an AAPS phone with a good bluetooth connection range and finding a comfortable way for the child to carry the pump and phone - if they are old/big enough to have the phone on them -  (_e.g._ a [SPI Belt](https://spibelt.com/collections/kids-belts) may help.
-2.  Take your time to set-up and test commands with your child next to you, before starting remote treatment and monitoring. Many parents choose school holidays or weekends.
-3.  Make sure other caregivers/teachers are aware of your child's treatment plan and work out how adding in remote control is going to work with/enhance the existing plan.
-4.  Many parents find it helpful to have a separate line of communication with childcare providers, for example a cheap small teacher “follow” phone.
+1.  Подумайте о том, каким образом вы обеспечите нахождение телефона ребенка в зоне доступа его помпы и НМГ. Это еще то испытание с маленькими детьми, которые пока не несут ответственность за свой телефон. Убедитесь, что выбрали для AAPS телефон с хорошим качеством и дальностью связи Bluetooth и подобрали удобный для ребенка способ ношения помпы и телефона  (_например, _ можно использовать [поясные сумочки](https://spibelt.com/collections/kids-belts)).
+2.  Найдите время, чтобы спокойно настроить и отладить все удаленные команды, находясь рядом с ребенком, прежде чем начать удаленно подавать команды и следить за сахарами. Многие родители для этого выбирают школьные каникулы или выходные.
+3.  Убедитесь, что учителя или другие ответственные взрослые, в курсе терапии вашего ребенка и выясните, как удаленное управление может повлиять на имеющуюся терапию.
+4.  Многие родители находят полезным иметь отдельное устройство для мониторинга состояния ребенка другими, например недорогой телефон-"фолловер" для учителя.
 5.  Examples for school care plans for children of different ages can be found in the [“files section”](https://www.facebook.com/groups/AndroidAPSUsers/files/) of the **AAPS** Facebook page.
-6.  What is your emergency plan for when remote control does not work (_i.e._ network problems or lost bluetooth connection)?  Always consider what will happen with **AAPS** if you suddenly can’t send a new command. **AAPS** overwrites the pump basal, ISF and ICR with the current profile values. Only use temporary profile switches (_i.e._ with a set time duration) if switching to a stronger insulin profile, in case your remote connection is disrupted. Then the pump will revert to the original profile when the time expires.
+6.  Какие ваши действия на случай, когда удаленное управление не работает (_например_, возникли проблемы с интернетом или потерялся сигнал bluetooth)?  Всегда учитывайте, что может произойти с **AAPS**, если вы внезапно потеряете возможность отправить новую команду. **AAPS** перезапишет значения базы, ФЧИ и УК, указанные в помпе, значениями из текущего профиля. Если вы устанавливаете более агрессивный профиль - всегда делайте его временным (_т.е._ указывайте длительность действия профиля) на случай, если удаленное управление станет недоступным. Помпа вернется к стандартному профилю по истечении указанного времени.
 
-(sms-commands)=
-## 1) SMS Commands
+(sms-команды)=
+## 1) SMS команды
 
-You can control **AAPS** remotely via text (SMS) message through a feature known as **SMS Commands**. SMS commands can be sent to **AAPS**  by _any_ type of phone (iPhone/Android).
+Существует возможность удаленно управлять **AAPS** с помощью текстового (SMS) сообщения на основе **SMS-команд**. Команды SMS можно отправлять на **AAPS** с  _любого_ типа телефона (iPhone|Android).
 
-**SMS commands are really useful:**
-1. For routine remote control
+**SMS-команды очень полезны:**
+1. Для обычного дистанционного управления
 
-2. If you want to remotely bolus insulin
+2. Для дистанционного введения инсулина
 
 3. In a region of poor internet reception, where text messages are able to get through, but data/internet phone reception is limited. This is very useful when going to remote areas (e.g. camping, skiing).
 
