@@ -35,9 +35,9 @@
 При включении **SMS коммуникатора** в **AAPS**, учитывайте, что телефон, который настроен для подачи удаленных команд, может быть украден и/или использован кем-то еще. Всегда блокируйте телефон PIN-кодом. Рекомендуются надежные пароли и/или биометрические замки, отличные от мастер-пароля (пароль, который требуется для изменения настроек **AAPS**). Для корректной работы SMS команд в настройках должен быть активирован второй номер телефона, даже если у вас только один основной опекун/фоллоуэр. Второй номер может понадобиться чтобы временно отключить SMS-коммуникатор (командой **«SMS stop»**), если главный телефон попал в чужие руки. Версии **AAPS** 2.7 и новее также используют приложение [Authenticator](authentication-or-not)).
 
 ### Различные типы SMS команд
-В нижеприведенной таблице команд **SMS** представлены все возможные SMS-команды. Для облегчения понимания приводятся _Примерные значения_. Команды имеют такой же диапазон возможных значений (цели, процентный профиль и т. д.), который разрешен в самом приложении AAPS. The commands below have been listed by how commonly used they are likely to be, the first two tables should have most of the SMS commands you need with full looping.
+В нижеприведенной таблице команд **SMS** представлены все возможные SMS-команды. Для облегчения понимания приводятся _Примерные значения_. Команды имеют такой же диапазон возможных значений (цели, процентный профиль и т. д.), который разрешен в самом приложении AAPS. Команды в таблицах перечислены в том порядке, в котором обычно используются; первые две таблицы содержат большую часть команд SMS для AAPS.
 
-### SMS commands tables
+### Таблицы SMS команд
 
 ![изображение](images/remote-control-02.png)
 
@@ -47,44 +47,44 @@
 
 ![изображение](images/remote-control-05.png)
 
-(authentication-or-not)=
-### Authentication or not?
+(аутентификатор-или нет.)=
+### Нужна ли аутентификация?
 
-You may notice from the table above that some SMS commands give an immediate response, and some SMS commands require **authenticating** with a security code from an additional app and a PIN (see below (link for more detail). A simple enquiry like “**bg**” (which requests an update on current glucose) is quick to type, doesn’t need authenticating, and returns the **AAPS** status information shown below:
+Из приведенной таблицы видно, что некоторые команды SMS дают немедленный ответ, а другие требуют **аутентификации** по коду безопасности из дополнительного приложения и PIN-коду (см. подробнее ниже). Простой запрос, например «**bg**» (запрашивает обновление ГК) быстро вводится, не требует аутентификации и возвращает информацию о статусе **AAPS** - см. ниже:
 
 ![изображение](images/remote-control-06.png)
 
-Commands which need more security require a code to be entered, for example:
+Команды, которым требуется больше безопасности, требуют ввести код, например:
 
 ![SMS authenticated for markdown-smaller](images/remote-control-07.png)
 
-### How to set up SMS commands
+### Как настроить SMS-команды
 
 The overall process is as follows:
 
-**1)    Download an authenticator (caregiver phone)**
+**1) Скачиваем аутентификатор (на телефон родителя/опекуна)**
 
-**2)    Check phone settings (AAPS phone)**
+**2) Проверяем настройки телефона (телефон с AAPS)**
 
-**3)    Date and time synching (caregiver and AAPS phone)**
+**3) Синхронизируем дату и время (телефон родителя и телефон AAPS)**
 
 **4)    AAPS settings (APPS phone)**
 
-**5)    Testing SMS commands works (caregiver and AAPS phone)**
+**5) Проверяем работу команд SMS (телефон родителя и AAPS)**
 
-### Let's get started!
+### Приступим!
 
-1) **Download an authenticator**: On the caregiver phone, download (from the App store or Google play) and install one authenticator of your choice from the list below:
+1) **Скачиваем аутентификатор**: На смартфоне родителя скачиваем (из App store или Google play) и установливаем один из аутентификаторов на выбор из списка ниже:
 
 [**Приложение Authy**](https://authy.com/download/)
 
-[**Google Authenticator - Android / iOS**](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&pli=1)
+[**Аутентификатор Google - Android / iOS**](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&pli=1)
 
 [**LastPass Authenticator**](https://www.lastpass.com/solutions/authentication)
 
 [**FreeOTP Authenticator**](https://freeotp.github.io/)
 
-These Authenticator apps produce a time-limited, one-time 6-digit password, similar to mobile banking or shopping. You can use an alternative Authenticator app, as long as it supports RFC 6238 TOTP tokens. The Microsoft Authenticator does not work.
+Эти приложения содержат ограниченный по времени одноразовый 6-значный пароль. You can use an alternative Authenticator app, as long as it supports RFC 6238 TOTP tokens. The Microsoft Authenticator does not work.
 
 2) **Check phone settings:** In the **AAPS** phone settings go to Apps > AndroidAPS > Permissions  > SMS  > Allow SMS
 
