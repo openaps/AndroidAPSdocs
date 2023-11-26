@@ -1,4 +1,4 @@
-# Remote control of AAPS
+# Дистанционное управление AAPS
 Существует 4 наиболее эффективных инструмента для удаленного управления **AAPS**:
 
 1) [SMS команды](sms-commands) (телефон фолловера может быть как Android, так и iOS), 2) [Клиент AAPS](aapsclient) (телефон фолловера только Android), 3) [Nightscout](nightscout) (Android, iOS или любой компьютер/устройство с доступом к браузеру)  
@@ -27,11 +27,11 @@
 
 2. Для дистанционного введения инсулина
 
-3. In a region of poor internet reception, where text messages are able to get through, but data/internet phone reception is limited. This is very useful when going to remote areas (e.g. camping, skiing).
+3. На территориях с плохо работающим интернетом, где могут проходить текстовые сообщения, а прием данных/интернет ограничен. Полезно при путешествиях в отдаленные районы ( в походах, на лыжных базах и т.п.).
 
-4. If your other methods of remote control (Nightscout/AAPSClient) are temporarily not working
+4. Если другие методы дистанционного управления (Nightscout/AAPSClient) временно не работают
 
-### SMS command safety
+### Безопасность SMS-команд
 If you enable **SMS Communicator** in **AAPS**, consider that the phone which is set up to give remote commands could be stolen, and/or used by someone else. Always lock your phone handset with at least a PIN. A strong password and/ or biometric lock are highly recommended, and ensure this is different from your APK Master password (the password which is required to change **AAPS** settings) . A second phone number must be enabled for SMS commands to work, even if you only have one primary caregiver/follower. You can then use the second number to temporarily disable SMS communicator (with the command **“SMS stop”**) if your main caregiver/parent phone is compromised. Versions of **AAPS** 2.7 and newer also use an [Authenticator app](authentication-or-not)).
 
 ### Different types of SMS commands
