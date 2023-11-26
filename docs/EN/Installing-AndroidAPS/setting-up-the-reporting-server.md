@@ -1,4 +1,4 @@
-# setting up the reporting server
+# Setting up the Reporting Server
 
 There are currently two reporting servers available for use with AAPS:
 
