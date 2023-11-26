@@ -206,19 +206,19 @@ If the entry is correct, the red text “WRONG PIN” will change automatically 
 
 ![изображение](images/remote-control-17.png)
 
-### Additional safety notes on SMS commands
+### Дополнительные примечания о безопасности в SMS-командах
 
-The default minimum time delay between bolus commands is 15 minutes. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
+Минимальная задержка между командами на болюс по умолчанию составляет 15 минут. Из соображений безопасности следует добавить хотя бы два авторизованных номера телефона для уменьшения этого значения. Если вы дистанционно пытаетесь повторно ввестиь болюс в течение 15 минут после предыдущего, вы получите ответ “Дистанционный болюс невозможен. Повторите позже”
 
-If you want to remove the ability of a caregiver phone to send SMS commands, use the emergency button “RESET AUTHENTICATORS” in AAPS (see preferences screenshot above, link) or send the SMS command “SMS stop”. By resetting authenticators you make ALL the caregivers' phones invalid. You will need to set them up again.
+Если вы хотите прекратить возможность отправлять SMS команды с телефона опекуна, используйте экстренную кнопку “RESET AUTHENTICATORS” в AAPS (см. настройки выше, ссылка) или отправьте SMS-команду “SMS stop”. Сбросив аутентификаторы, вы делаете ВСЕ телефоны опекунов недействительными. Вам придется их снова настроить.
 
-### Delivering mealtime boluses through SMS commands
+### Передача SMS-команд о болюсах на еду
 
-Remote bolusing of insulin can _only_ be done via **SMS Commands**, it cannot be actioned through NightScout or AAPSClient. Carbs however, can be announced through any of the three methods. It is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
+Дистанционное введение болюсов _может быть сделано только_ с помощью **SMS команд**, оно не может осуществляться через NightScout или AAPSClient. Однако углеводы могут быть внесены любым из трех методов. В одном SMS-сообщении невозможно отправить углеводы и инсулин. Эти команды должны отправляться отдельно следующим образом:
 
-1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to using the “syringe” icon in **AAPS**. 2)  Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to using the “carbs” tab in **AAPS**.
+1) Отправьте команду на болюс (_например_"bolus2",которая инициирует введение 2 единиц) при помощи SMS, что эквивалентно нажатию на иконку "шприца" в **AAPS**. 2) Отправьте SMS об углеводах (_напр._ “carbs 20” внесет 20 г углеводов). Это эквивалентно использованию иконки “углеводы” в **AAPS**.
 
-**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can use a combination of Nightscout or AAPSClient with SMS commands. Carbs can be announced through Nightscout without any authentication (see instructions sub section below) , and are therefore quicker than SMS commands.
+**Порядок отправки этих команд важен.**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can use a combination of Nightscout or AAPSClient with SMS commands. Carbs can be announced through Nightscout without any authentication (see instructions sub section below) , and are therefore quicker than SMS commands.
 
 ### SMS commands troubleshooting and FAQ
 
