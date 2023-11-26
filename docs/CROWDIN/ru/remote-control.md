@@ -106,25 +106,25 @@ The overall process is as follows:
 
 ![изображение](images/remote-control-10.png)
 
-_Note - as an alternative route to Config Builder, you can also use the new “SMS Communicator tab” at the top of the AAPS screen, then right click on the custom right hand hamburger menu for that page, to get to the SMS communicator preferences screen._
+_Примечание. В качестве альтернативного пути к Конфигуратору можно также использовать новую вкладку «SMS Communicator» в верхней части окна AAPS, затем щелкните правой кнопкой мыши по контекстному меню справа для этой страницы, чтобы перейти к настройкам SMS коммуникатора._
 
-#### iii) On the preferences screen enable “allow remote commands via SMS”:
+#### iii) На экране настроек включите «разрешить удаленные команды с помощью SMS»:
 
 ![изображение](images/remote-control-11.png)
 
 #### iv) Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
 
-UK phone number: +447976304596
+Номер телефона великобритании: +447976304596
 
-US phone number: +11234567890
+Номер телефона сша: +11234567890
 
-FR phone number:  +33612344567
+Номер телефона франции: +33612344567
 
 _etc._
 
-Note that the “+” in front of the number may or may not be required based on your location. To determine this, send a sample text which will show the received format in the SMS Communicator tab.
+Обратите внимание, что «+» перед номером может быть обязательным или не потребуется в зависимости от вашего местоположения. Для определения этого отправьте тестовое сообщение, которое будет отображать полученный формат на вкладке SMS Communicator.
 
-If you have more than one phone number to add, separate them by semicolons, with NO space between numbers (this is critical!). Select “OK”:
+Если у вас есть более одного номера телефона, разделите их точкой с запятой БЕЗ пробела между цифрами (это критично!). Select “OK”:
 
 
 ![изображение](images/remote-control-12.png)
