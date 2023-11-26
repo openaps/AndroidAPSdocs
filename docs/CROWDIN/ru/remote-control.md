@@ -84,25 +84,25 @@ The overall process is as follows:
 
 [**FreeOTP Authenticator**](https://freeotp.github.io/)
 
-Эти приложения содержат ограниченный по времени одноразовый 6-значный пароль. You can use an alternative Authenticator app, as long as it supports RFC 6238 TOTP tokens. The Microsoft Authenticator does not work.
+Эти приложения содержат ограниченный по времени одноразовый 6-значный пароль. Можно использовать любое приложение Authenticator, которое поддерживает маркеры TOTP RFC 6238. Microsoft Authenticator не работает.
 
-2) **Check phone settings:** In the **AAPS** phone settings go to Apps > AndroidAPS > Permissions  > SMS  > Allow SMS
+2) **Проверьте настройки телефона:** В настройках телефона **AAPS** перейдите к приложениям > AAPS > Разрешения  > SMS  > Разрешить SMS
 
 ![изображение](images/remote-control-08.png)
 
-3) **Date and time synching:** In both the **AAPS** phone and the caregiver phone, check the date and time are synched. Exactly how you do this depends on your specific handsets, you may need to try out different settings.
+3) **Синхронизация дат и времени:** В телефоне с **AAPS** и телефоне опекуна, проверьте синхронизацию даты и времени. Как именно вы это делаете, зависит от конкретных моделей телефонов, возможно придется попробовать различные настройки.
 
-Example (for Samsung S23 handset): Settings – general management – date and time- automatic date and time
+Пример (для смартфона Samsung S23): Настройки – общее управление дата и время - автоматическая дата и время
 
-Some options may be greyed out, due to needing admin via a family account if the phone has been set up as a child account. This date and time setting is called “set automatically” on a caregiver/parent iPhone. If you are not sure if you have synched the handsets, don’t worry, you can set up the SMS commands and troubleshoot afterwards if it seems to be causing problems (ask for help if needed).
+Некоторые опции могут быть недоступны (затенены) из-за настроек семейной учетной записи ребенка. Эта настройка даты и времени называется «автоматически» на iPhone опекуна/родителя. Если вы не уверены, синхронизированы ли телефоны, не волнуйтесь, это можно настроить в дальнейшем.
 
-4) **AAPS settings:**
+4) **Настройки AAPS:**
 
-#### i) Now that the phone settings have been checked, in the **AAPS** app itself, use the left hand hamburger menu to navigate to Config Builder:
+#### i) После проверки настроек телефона, в самом приложении **AAPS**, через левое верхнее меню перейдите в Конфигуратор:
 
 ![изображение](images/remote-control-09.png)
 
-#### ii) Enable “SMS communicator” by checking the boxes, then click the “cog” to get to the SMS communicator preferences screen:
+#### ii) Включите «SMS-сообщение», установив флажок, затем нажмите «шестеренку» и получите доступ к экрану настройки SMS-сообщения:
 
 ![изображение](images/remote-control-10.png)
 
