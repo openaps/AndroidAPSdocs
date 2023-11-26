@@ -124,85 +124,85 @@ _etc._
 
 Обратите внимание, что «+» перед номером может быть обязательным или не потребуется в зависимости от вашего местоположения. Для определения этого отправьте тестовое сообщение, которое будет отображать полученный формат на вкладке SMS Communicator.
 
-Если у вас есть более одного номера телефона, разделите их точкой с запятой БЕЗ пробела между цифрами (это критично!). Select “OK”:
+Если у вас более одного номера телефона, разделите их точкой с запятой БЕЗ пробела между цифрами (это критично!). Select “OK”:
 
 
 ![изображение](images/remote-control-12.png)
 
-#### v) Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
+#### v) Выберите PIN-код, который вы (и другие опекуны) будут использовать в конце кода аутентификатора при отправке SMS-команды.
 
-PIN requirements are:
+Требования к PIN-коду:
 
-•3 to 6 digits
+•от 3 до 6 цифр
 
-•not the same digits (_i.e._ 1111 or 1224)
+•не одинаковые цифры (_напр._ 1111 или 1224)
 
-•not sequential numbers (_i.e._ 1234)
+•не последовательные цифры (_напр._ 1234)
 
 ![изображение](images/remote-control-13.png)
 
-#### vi) On the preferences screen select “Authenticator setup”
+#### vi) На экране настроек выберите «Настройка Аутентификации»
 
-●   Follow the step-by-step instructions on the screen.
+● Следуйте пошаговым инструкциям на экране.
 
-●   Open your installed authenticator app on the _caregiver’s phone_ set up a new connection and
+● Откройте установленное приложение-аутентификатор на телефоне _опекуна_ создайте новое соединение и
 
 ●   Use the caregiver phone to scan the QR code provided by **AAPS**, when prompted.
 
-●   Test the one-time passcode from the authenticator app on the caregiver phone followed by your PIN:
+● Проверьте одноразовый код доступа от аутентификатора на телефоне опекуна, за которым следует ваш PIN:
 
 Пример:
 
-The token from the authenticator app is 457051
+Маркер из приложения идентификации-457051
 
-Your mandatory PIN is 2401
+Ваш обязательный PIN-код 2401
 
-Code to check: 4570512401
+Код для проверки: 4570512401
 
-If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. The process is now complete, there is no “OK” button you need to press after entering the code:
+If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. Процесс завершен, нет кнопки "OK", которую нужно нажать после ввода кода:
 
 
 ![изображение](images/remote-control-14.png)
 
-You should now be set up with SMS commands.
+Теперь все готово для работы с помощью SMS-команд.
 
 ### First steps using SMS commands
 
-1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the AAPS phone. You should get a response similar to that shown here:
+1) Чтобы проверить правильность настройки, отправьте «bg» в качестве SMS-сообщения с телефона опекуна на телефон AAPS. Вы должны получить ответ, похожий на этот:
 
 ![изображение](images/remote-control-15.png)
 
-2)  Now try an SMS command that requires the authenticator. To do this, send a text from the caregiver’s phone with the required command to the**AAPS** phone (_e.g._ “target hypo”). The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by an additional secret **PIN** known only to caregivers/followers (a string of ten digits in total, assuming your PIN is only 4 digits).
+2)  Now try an SMS command that requires the authenticator. To do this, send a text from the caregiver’s phone with the required command to the**AAPS** phone (_e.g._ “target hypo”). Телефон опекуна получит смс с предложением ввести пароль аутентификации **с шестизначными цифрами** из приложения-аутентификатора, с последующим секретным **PIN-кодом** известным только родителям/опекунам (строка из десяти цифр в общей сложности, при условии, что ваш PIN-код состоит из 4х цифр).
 
-This example is shown below, with the SMS command “target hypo” to set a hypo temp target:
+Ниже показан пример с командой SMS «target hypo», чтобы установить временную цель гипо:
 
-●   In this example, your PIN is 1289
+● В этом примере ваш PIN-код 1289
 
-●   Code from your authenticator app is 274127
+Маркер из приложения идентификации-274127
 
-●   When prompted, text 2741271289
+● При появлении запроса отправьте текст 2741271289
 
-Commands must be sent in English. The response should be in your local language. When you try sending an SMS command for the first time, try it in the presence of the AAPS phone, to see how it works:
+Команды отправляются на английском языке. Ответ на локальном языке. Когда будете отправлть команду в первый раз, держите оба телефона при себе, чтобы убедиться, что все работает:
 
 ![изображение](images/remote-control-16.png)
 
-The caregiver’s phone will receive a SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully. There are several possible reasons the command may not be successful:
+Телефон опекуна получит SMS от **AAPS** в подтверждение успешного выполнения удаленной команды SMS. Существует несколько возможных причин, по которым команда не проходит:
 
-●   SMS commands setup isn’t complete/correct
+● Настройка SMS-команд не завершена/не корректна
 
-●   You sent a command which had an incorrect format (like “disconnect pump 45” instead of “pump disconnect 45”)
+● Отправлена команда в некорректном формате (например, “disconnect pump 45” вместо “pump disconnect 45”)
 
-●   You used an incorrect, or expired authenticator code (it is usually good to wait a few seconds for a fresh code, if the current one is about to expire)
+● Использован неправильный или просроченный код аутентификации (обычно лучше подождать несколько секунд чтобы получить свежий код, если истекает срок действующего)
 
-●   The code+PIN was OK, but there was a delay in the SMS leaving/arriving, which led AAPS to calculate that the authenticator code had expired
+● Код подтверждения+PIN-код в порядке, но возникла задержка в отправке/прибытии SMS, что заставило AAPS вычислить истекший код аутентификации
 
 ●   The AAPS phone is out of range/contact with the pump
 
-●   The system is already busy delivering a bolus
+● Система уже занята вводом болюса
 
-If your command is successful, you will receive a reply to confirm this. If there is a problem you will receive an error message.
+Если ваша команда успешна, вы получите ответ-подтверждение. Если возникла проблема, вы получите сообщение об ошибке.
 
-Common errors are shown in the examples below:
+Распространенные ошибки приведены в примерах ниже:
 
 ![изображение](images/remote-control-17.png)
 
