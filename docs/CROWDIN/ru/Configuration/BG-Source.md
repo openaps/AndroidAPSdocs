@@ -5,7 +5,7 @@
 * [Настройки xDrip+](./xdrip.md)
 * [Dexcom G7](../Hardware/DexcomG7.md)
 * [Dexcom G6](../Hardware/DexcomG6.md)
-* [Dexcom G5](../Hardware/DexcomG5.md)
+* [Работа с Dexcom G5](../Hardware/DexcomG5.md)
 * [Dexcom G4](../Hardware/DexcomG4.md)
 * [Libre 3](../Hardware/Libre3.md)
 * [Libre 2](../Hardware/Libre2.md)
