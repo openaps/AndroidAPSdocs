@@ -238,39 +238,39 @@ If the entry is correct, the red text “WRONG PIN” will change automatically 
 
 Если не получен ответ на команду SMS, то это может быть по одной из следующих причин:
 
-1) Сообщение не попало на телефон (проблемы с сетью). 2)  **AAPS** все еще обрабатывает запрос (_напр._ болюс, который отнимает некоторое время в зависимости от скорости обмена). 3) Телефон AAPS не имеет хорошего соединения Bluetooth с помпой при получении команды, и ему не удается выполнить команду (обычно это вызывает оповещение на телефоне AAPS). Невозможно остановить команду, которая уже подтверждена (аутентифицирована). Many commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate the effects. For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
+1) Сообщение не попало на телефон (проблемы с сетью). 2)  **AAPS** все еще обрабатывает запрос (_напр._ болюс, который отнимает некоторое время в зависимости от скорости обмена). 3) Телефон AAPS не имеет хорошего соединения Bluetooth с помпой при получении команды, и ему не удается выполнить команду (обычно это вызывает оповещение на телефоне AAPS). Невозможно остановить команду, которая уже подтверждена (аутентифицирована). Многие команды (кроме болюсов и записей об углеводах) могут быть легко отменены или их последствия смягчены. По поводу ошибок в болюсах и записях об углеводах, также можно принять меры. Например, внесена запись о 20 г углеводов, но ваш ребенок съел только 10 г, и нет возможности удалить ее непосредственно в телефоне **AAPS**, вы можете установить высокую временную цель или понизить % профиля, чтобы снизить агрессивность **AAPS**.
 
-#### Q. Why am I getting multiple SMS texts of the same message?
+#### Q. Почему я получаю несколько SMS одного сообщения?
 
-If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. Например, с xDrip+. If so, please ensure that xDrip+ (or any other app) does not upload treatments to NightScout.
+Если же вы неоднократно получаете одно и то же сообщение (_напр._ переключатель профиля) возможно случайно возникло закольцовывание с другими приложениями. Например, с xDrip+. Если это так, убедитесь, что xDrip+ (или любое другое приложение) не загружает данные терапии в NS.
 
-#### Q. I’ve just set up SMS commands and I am now getting far too many text messages. Can I reduce the frequency, or make them stop?
+#### Q. Я только что настроил команды SMS, и теперь получаю слишком много текстовых сообщений. Можно уменьшить их частоту или остановить?
 
-Using SMS commands may generate a lot of automated messages from the AAPS phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your AAPS phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include Whatsapp, Lime, Telegram, and Facebook Messenger.
+Использование SMS команд может генерировать много автоматических сообщений на телефон опекуна. Также могут приходить сообщения типа “basal profile in pump updated” (базальный профиль на помпе обновлен), если в **AAPS** настроена автоматизация. Полезно иметь тарифный план с неограниченным количеством SMS на телефоне AAPS (и на телефонах опекунов), а также отключить уведомления, оповещения или вибрации на SMS. Невозможно пользоваться SMS-командами и не получать эти сообщения. В связи с этим, альтернативный способ общения с ребенком (если он достаточно взрослый) может оказаться более предпочтительным. Альтернативные приложения для коммуникаций с опекунами **AAPS** включают Whatsapp, Lime, Telegram, и Facebook Messenger.
 
-#### Q. Why are SMS commands not working on my Samsung phone?
+#### Q. Почему команды SMS не работают на моем телефоне Samsung?
 
-There was a report of SMS commands stopping after an update on a Samsung Galaxy S10 phone. This was solved by disabling ‘send as chat message’.
+Были сообщения об остановке работы SMS команд после обновления на телефоне Galaxy S10. Решается путем отключения опции "отправлять SMS как сообщения чата".
 
 
 ![изображение](images/remote-control-18.png)
 
-#### Q. How can I fix issues with the Android Messages App?
+#### Q. Как исправить проблемы с приложением Android Messages?
 
-If you are having issues sending or receiving SMS commands with the Android Messages app, disable end-to-end encryption on both caregiver and dependent’s phones:
+Если у вас возникают проблемы с отправкой или получением SMS-команд в приложении Android Messages, отключите сквозное шифрование как на телефоне опекуна, так и на детском телефоне:
 
-●   Open the specific SMS conversation in Messages
+●   Откройте конкретный SMS-диалог в приложении Messages
 
 ●   Select the options ellipsis in the top right corner
 
 ●   select “Details”
 
-●   Activate “Only send SMS and MMS messages”
+●   Активируйте опцию "Отправлять только SMS и MMS”
 
-(aapsclient)=
-## 2) AAPSClient
+(клиентaaps)=
+## 2) Клиент AAPS
 
-_Note that **NSClient** has been replaced by **AAPSClient** for AAPS version 3.2 and higher, check the version release notes for more information._
+_Обратите внимание, что **NSClient** теперь заменен на **AAPSClient** для AAPS версии 3. и выше, подробности см. в примечаниях к версиям._
 
 For versions of AAPS which are older than AAPS 3.2, if you have a caregiver/parent Android phone you can directly download and install the [**AAPSClient**](https://github.com/nightscout/AndroidAPS/releases/) app. **AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver tabs that will remotely action commands in **AAPS**:
 
