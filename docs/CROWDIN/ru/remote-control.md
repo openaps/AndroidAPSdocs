@@ -272,7 +272,7 @@ If the entry is correct, the red text “WRONG PIN” will change automatically 
 
 _Обратите внимание, что **NSClient** теперь заменен на **AAPSClient** для AAPS версии 3. и выше, подробности см. в примечаниях к версиям._
 
-For versions of AAPS which are older than AAPS 3.2, if you have a caregiver/parent Android phone you can directly download and install the [**AAPSClient**](https://github.com/nightscout/AndroidAPS/releases/) app. **AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver tabs that will remotely action commands in **AAPS**:
+Для версий AAPS старше AAPS 3.2, если у вас родительский Android-телефон, вы можете напрямую скачать и установить приложение [**AAPSClien**](https://github.com/nightscout/AndroidAPS/releases/). **AAPSClient** похож внешне на сам **AAPS**, но позволяет опекунам отправлять команды в **AAPS** дистанционно:
 
 ![изображение](images/remote-control-19.png)
 
