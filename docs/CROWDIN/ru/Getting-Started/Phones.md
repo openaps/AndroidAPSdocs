@@ -1,25 +1,25 @@
 (Phones-list-of-tested-phones)=
 
-# List of tested Phones compatible with Omnipod Dash Insulin Pump Pods
+# Список проверенных телефонов, совместимых с помпой Omnipod Dash
 
-Currently, we have a very hard-working behind-the-scenes Maintainer, who is in charge of ensuring the integrity of the Hardware List of all Android Phones/Smartwatches Capable of Looping with the Omnipod Dash; the newest pump driver addition to our ever-expanding network of Bluetooth enabled insulin pumps for use within the AAPS/OpenAPS ecosystem!
+Подготовлен список телефонов/смартчасов, подходящих для работы с Omnipod Dash, самой новой помпой из помп, способных работать с AAPS в режиме замкнутого цикла!
 
-Our Maintainer has spent a lot of time and effort to make sure that its easy for everyone to enter data into the Spreadsheet; via a Google Form with pre-populated information headers for ease of use! This ensures that the existing data on the sheets cannot be accidentally overwritten or deleted. The same experience can be built upon the success of the first again using Google Sheets.
+Потрачено много времени и усилий на то, чтобы облегчить занесение данных в таблицу при помощи формы с удобными информациоными полями! Существующие данные в таблицах не могут быть случайно перезаписаны или удалены. Этот опыт можно использовать с таблицами Google и в дальнейшем.
 
-Thanks to the ease of Google Spreadsheets, close communication amongst early adopters and the ability of pooling their collective knowledge and lessons learned throughout early testing/feedback phases of the Dash pump pod drivers was compiled quite efficiently. The results of the time, information and energy provided by the numerous Early Adopters in providing step-by-step feedback on each new version of the Dash Bluetooth drivers becomes apparent once you open the up what is now a comprehensive Compare/Contrast list of all hardware suited for Looping with the Omnipod Dash, with many Android Phones and Smartwatches tested and ranked for compatibility. In addition, the more incompatible setups are also included in this Spreadshee so that new users will know which hardware to avoid due to issues with connection speed or strength.
+Благодаря простоте таблиц Google, были обобщены знания и уроки, извлеченные на ранних этапах тестирования помпы Dash. Результаты работы представлены в полном списке телефонов Android и смарт-часов, пригодных для работы с Omnipod Dash. Кроме того, здесь представлены и несовместимые устройства, чтобы новые пользователи знали, чего избегать из-за проблем со скоростью или устойчивостью подключения.
 
-When the time comes for another Hardware Compatibility List to be created in the future; we encourage anyone that feels they might enjoy becoming a Maintainer to please contact us!
+Когда наступит время создания нового списка совместимости, мы рекомендуем участникам этой работы связаться с нами!
 
-The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
+Открыть список проверенных телефонов можно по ссылке [список проверенных телефонов, совместимых с инсулиновой помпой Omnipod](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
 
-With CRTL-F you can search in the text of the Google sheet. The sheet is write protected. To record your test of a phone please fill in the [form](https://forms.gle/g7GbSkMCTfFrWKjSA).
+В тексте таблицы Google при помощи CRTL-F можно выполнить поиск. Таблица защищена от записи. Чтобы внести результаты тестирования телефона, заполните [форму](https://forms.gle/g7GbSkMCTfFrWKjSA).
 
-After you fill in the form data the maintainer will check the data and approve it for publishing!
+После заполнения формы группа редакторов проверит данные и утвердит их для публикации!
 
-Any problems with the spreadsheet please contact us directly or via a GitHub issue for the openaps/AndroidAPSDocs project.
+При возникновении сложностей с электронной таблицей свяжитесь с нами непосредственно или по GitHub в рамках проекта openaps/AAPSdocs.
 
 (Phones-phone-background)=
 
 # Обои для телефона
 
-![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
+![заставка телефона](../images/bg_phone_thump.jpg) </br> Дизайн: Thiago :) </br> Если хотите украсить телефон логотипом AndroidAPS, можете скачать фоновое изображение здесь: ![Заставка в высоком разрешении.](../images/bg_phone.jpg)
