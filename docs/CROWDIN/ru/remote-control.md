@@ -368,15 +368,15 @@ Nightscout на iPhone имеет те же функции, что и Nightscout
 
 1). Если вы «застряли» на странице и хотите видеть главное окно снова, просто нажмите «обновить» (внизу по центру) и вернетесь на домашнюю страницу **Nightscout** с графиком ГК.
 
-Чтобы увидеть параметры текущего профиля на телефоне, нажмите на различные иконки на экране над графиком. Больше информации (текущий углеводный коэффициент, чувствительность, часовой пояс и т. д.) можно увидеть нажав «basal»; а нажав на «OpenAPS» получим данные о профиле, текущей цели и т. д. Можно также отслеживать % батареи телефона и % батареи помпы. BWP gives information on what the algorithm thinks will happen in the future, given the IOB and COB.
+Чтобы увидеть параметры текущего профиля на телефоне, нажмите на различные иконки на экране над графиком. Больше информации (текущий углеводный коэффициент, чувствительность, часовой пояс и т. д.) можно увидеть нажав «basal»; а нажав на «OpenAPS» получим данные о профиле, текущей цели и т. д. Можно также отслеживать % батареи телефона и % батареи помпы. Калькулятор болюса дает информацию о прогнозе алгоритма с учетом активного инсулина IOB и активных углеводов COB.
 
-#### Other icons in the menu: what does the pencil (edit) mean?
+#### Другие иконки в меню: что означает карандаш (редактирование)?
 
-You can (technically) use the edit pencil to move or delete bolus or correction treatments from the last 48h.
+Карандаш редактирования поможет (технически) переместить или удалить болюс или коррекцию с графика за последние 48 часов.
 
-More about this [here](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
+Подробнее [здесь](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
 
-Although this could potentially be useful for deleting announced (but not bolused for) carbs, in practice it doesn’t currently work well with **AAPS** and we recommend making changes like this via the **AAPS** app directly.
+Хотя это может пригодиться для удаления внесенных (но не получивших болюса) углеводов, на практике эта функция плохо работает с **AAPS** и мы рекомендуем вносить такие изменения непосредственно через приложение **AAPS**.
 
 (smartwatches)=
 ## 4) Smartwatches
