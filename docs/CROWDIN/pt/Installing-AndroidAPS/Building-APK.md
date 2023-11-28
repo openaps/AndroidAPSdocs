@@ -6,7 +6,7 @@
 
 ## Notas importantes
 
-* Por favor, use o **[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** ou um mais recente para construir o apk.
+* Please use **[Android Studio Giraffe" (2022.3.1)](https://developer.android.com/studio/)** or newer to build the apk.
 * [Windows 10 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
