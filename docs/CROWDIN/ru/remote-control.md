@@ -276,25 +276,25 @@ _Обратите внимание, что **NSClient** теперь замен�
 
 ![изображение](images/remote-control-19.png)
 
-There are 2 versions of the app you can [download](https://github.com/nightscout/AndroidAPS/releases/), **AAPSClient** & **AAPSClient2**. The only difference between the two versions is the app name. This allows you to install the **AAPSClient** app twice on the same phone, to follow two different people or Nightscout accounts at the same time.
+There are 2 versions of the app you can [download](https://github.com/nightscout/AndroidAPS/releases/), **AAPSClient** & **AAPSClient2**. Единственное различие между двумя версиями - наименование приложения. Что позволяет дважды устанавливать приложение **AAPSClient** на один и тот же телефон и следить за двумя разными пользователями или аккаунтами Nightscout одновременно.
 
 ![изображение](images/remote-control-20.png)
 
-To download AAPSClient, click on app-AAPSClient-release-3.1.0.3.apk
+Для загрузки AAPSClient, нажмите на app-AAPSClient-release-3.1.0.3.apk
 
-Then go to  _downloads_ on your computer. On Windows, -downloads_ will show the right hand ribbon:
+Затем перейдите в _загрузки_ на своем компьютере. В Windows, -downloads_ покажется лента справа:
 
 ![изображение](images/remote-control-21.png)
 
-Once downloaded, click _show in folder_
+После загрузки нажмите на _показать в папке_
 
 ![изображение](images/remote-control-22.png)
 
-The apk can now be either:
+Теперь приложение (apk) может быть либо:
 
-Transferred by a USB cable onto the follower phone; or Dragged into G drive folder, and then added onto the follower phone by clicking on app-AAPSClient-release-3.1.0.3.apk
+Перенесено при помощи кабеля USB на телефон опекуна; или перетащено в папку диска G, а затем добавлено на телефон опекуна после нажатия на app-AAPSClient-release-3.0.3.apk
 
-### Features of AAPSClient include:
+### Возможности AAPSClient включают:
 
 ![Sara's AAPSClient table](images/remote-control-23.png)
 
