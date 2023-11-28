@@ -351,22 +351,22 @@ Nightscout на iPhone имеет те же функции, что и Nightscout
 
 ### Отмена отрицательного инсулина во избежание повторных гипо
 
-Although you cannot actually bolus insulin, you can however “announce” insulin through Nightscout as a “correction bolus”, although it is not delivered. Because AAPS now takes that fake insulin bolus into account, announcing insulin actually works to make AAPS _less aggressive_, and can be useful for cancelling negative insulin and preventing lows in the event that your profile has been too strong (for example due to prior exercise). You will want to check this for yourself in the presence of the **AAPS** phone, in case your **Nightscout** setup differs.
+Хотя у нас нет возможности вводить болюсы, мы можем "внести" инсулин через Nightscout как "болюс на коррекцию", который реально не вводится. В этом случае AAPS будет учитывать этот инсулин,, заставляя алгоритм AAPS действовать _менее агрессивно_, что полезно при отмене отрицательного активного инсулина. Это также предотвратит гипогликемию при агрессивно настроенном профиле. Вы можете проверить это самостоятельно в присутствии телефона **AAPS** если настройки **Nightscout** отличаются.
 
 ![24-10-23, cancel negative insulin NS](./images/0af1dbe4-8aca-466b-816f-8e63758208ca.png)
 
 
-Some of the most useful **Nightscout** commands are described in the table below.
+Некоторые полезные команды **Nightscout** приведены в таблице ниже.
 
-#### Nightscout command table
+#### Таблица команд Nightscout
 
 ![изображение](images/remote-control-33.png)
 
-Read more about **Nightscout** options [here](https://nightscout.github.io/)
+Подробнее возможностях **Nightscout** [здесь](https://nightscout.github.io/)
 
-### Tips for getting the most out of the Nightscout app
+### Как извлечь максимум пользы из приложения Nightscout
 
-1). If you get “stuck” on a page and want to be able to see the main screen again, just click “refresh” (bottom middle) and this will take you back to the **Nightscout** homepage with the BG graph.
+1). Если вы «застряли» на странице и хотите видеть главное окно снова, просто нажмите «обновить» (внизу по центру) и вернетесь на домашнюю страницу **Nightscout** с графиком ГК.
 
 To see the current profile which is running on the phone, press the various icons on the screen above the graph. More info (current carb ratio, sensitivity and timezone etc.) can be seen by pressing “basal” and “OpenAPS” gives info about the profile and current target etc. Both the phone battery% and the pump battery % can also be monitored. BWP gives information on what the algorithm thinks will happen in the future, given the IOB and COB.
 
