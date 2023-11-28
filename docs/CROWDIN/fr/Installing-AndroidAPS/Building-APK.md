@@ -7,7 +7,7 @@
 ## Remarques importantes
 
 * Please use **[Android Studio Giraffe" (2022.3.1)](https://developer.android.com/studio/)** or newer to build the apk.
-* [Les systèmes d'exploitation Windows 10 32 bits](troubleshooting_androidstudio-unable-to-start-daemon-process) ne sont pas pris en charge par Android Studio 2020.3.1
+* [Windows 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 
@@ -49,7 +49,7 @@
 </tbody>
 </table>
 
-Veuillez garder à l'esprit que et **CPU 64 bits et un système d'exploitation 64 bits sont des conditions obligatoires.** Si votre système ne répond pas à cette condition, vous devez modifier le matériel ou le logiciel affecté ou tout le système. **Il est fortement recommandé d'utiliser un SSD (Solid State Disk) au lieu d'un HDD (Hard Disk Drive) car cela prend moins de temps lorsque vous construisez le fichier apk d'installation d'AAPS.** Recommandé signifie que c'est juste conseillé mais que ce n'est pas obligatoire. Cependant, vous pouvez toujours utiliser un disque dur lorsque vous construisez un fichier apk, mais notez que le processus de construction peut prendre beaucoup de temps à s'exécuter, si bien qu'une fois démarré, vous pouvez le laisser fonctionner sans surveillance.
+Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **Il est fortement recommandé d'utiliser un SSD (Solid State Disk) au lieu d'un HDD (Hard Disk Drive) car cela prend moins de temps lorsque vous construisez le fichier apk d'installation d'AAPS.** Recommandé signifie que c'est juste conseillé mais que ce n'est pas obligatoire. Cependant, vous pouvez toujours utiliser un disque dur lorsque vous construisez un fichier apk, mais notez que le processus de construction peut prendre beaucoup de temps à s'exécuter, si bien qu'une fois démarré, vous pouvez le laisser fonctionner sans surveillance.
 
 * * *
 
