@@ -392,7 +392,7 @@ Nightscout на iPhone имеет те же функции, что и Nightscout
 
 ### Конкретные преимущества **AAPS** для родителей/опекунов
 
-For a child - if their **AAPS**  phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS**  phone. This can be useful, for example, if the **AAPS** phone is hidden away in a pump belt.
+For a child - if their **AAPS**  phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS**  phone. Это может пригодиться, например, если телефон **AAPS** скрыт в поясе для помпы.
 
 A smartwatch can be used either _in addition_ to, or as an _alternative_ to the PHONE-based options for [remote control](remote-control.md) or [following only](following-only.md).
 
