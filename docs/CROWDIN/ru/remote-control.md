@@ -442,15 +442,15 @@ The first three smartwatch options require the smartwatch to have **Wear OS** in
 
 ![изображение](./images/67fd75f3-721c-438d-be01-1a8e03532290.png)
 
-More information about the possible smartwatch faces and their functions can be found in [Smartwatches](Hardware/Smartwatch.md)
+Более подробную информацию о возможных циферблатах смарт-часов и их функциях можно найти в разделе [Смарт-часы](Hardware/Smartwatch.md)
 
-#### Watchfaces for Wear OS
+#### Циферблаты для Wear OS
 
-Further details about the watchfaces and configurations for complications, including how to make your own, can be found [here](https://androidaps.readthedocs.io/en/latest/Configuration/Watchfaces.html)
+Подробности о циферблатах и конфигурациях усложнений, включая инструкции как сделать собственные, можно найти [здесь](https://androidaps.readthedocs.io/en/latest/Configuration/Watchfaces.html)
 
-### Option 1) Standalone Watch running **AAPS**
+### Вариант 1) Автономные часы с **AAPS**
 
-It sounds like an attractive option, right? However, at present, only a few enthusiasts are experimenting with **AAPS**  on a stand-alone watch. There are a limited number of smartwatches with a reasonable interface which also which work well with standalone use of **AAPS** and your CGM app. Popular models include the LEMFO LEM 14, 15 and 16. You will need to load the watch with the **AAPS** "full" apk (the apk which is usually installed on a smartphone) rather than the **AAPS** "wear" apk.
+Похоже на привлекательный вариант? However, at present, only a few enthusiasts are experimenting with **AAPS**  on a stand-alone watch. Есть немного смарт-часов с удобным интерфейсом, которые также способны работать с **AAPS** и приложением мониторинга. Популярные модели включают LEMFO LEM 14, 15 и 16. You will need to load the watch with the **AAPS** "full" apk (the apk which is usually installed on a smartphone) rather than the **AAPS** "wear" apk.
 
 While there is no clear specification which helps you to know if a watch will work well for standalone **AAPS** use, the following parameters will help:
 
