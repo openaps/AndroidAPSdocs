@@ -450,21 +450,21 @@ The first three smartwatch options require the smartwatch to have **Wear OS** in
 
 ### Вариант 1) Автономные часы с **AAPS**
 
-Похоже на привлекательный вариант? However, at present, only a few enthusiasts are experimenting with **AAPS**  on a stand-alone watch. Есть немного смарт-часов с удобным интерфейсом, которые также способны работать с **AAPS** и приложением мониторинга. Популярные модели включают LEMFO LEM 14, 15 и 16. You will need to load the watch with the **AAPS** "full" apk (the apk which is usually installed on a smartphone) rather than the **AAPS** "wear" apk.
+Похоже на привлекательный вариант? However, at present, only a few enthusiasts are experimenting with **AAPS**  on a stand-alone watch. Есть не так много смарт-часов с удобным интерфейсом, которые также способны работать с **AAPS** и приложением мониторинга. Популярные модели включают LEMFO LEM 14, 15 и 16. На них потребуется установить "полноценное" приложение **AAPS** (которое обычно устанавливается на телефон), а не приложение  **AAPS** "wear".
 
-While there is no clear specification which helps you to know if a watch will work well for standalone **AAPS** use, the following parameters will help:
+Пока нет четкой спецификации, которая поможет узнать, будут ли часы самостоятельно работать с **AAPS**, но ориентиром будут следующие параметры:
 
-1)  Android 10 or newer. 2)  Being able to take the watchface off “square” mode to make text larger and easier to read. 3)  Very good battery life. 4)  Good bluetooth range.
+1)  Android 10 or newer. 2) Возможность выключать "квадратный" режим для увеличения и упрощения чтения текста. 3) Очень хороший срок службы батареи. 4) Хороший диапазон Bluetooth.
 
-Most of the frustrations of standalone **AAPS** watches come from interacting with a tiny screen, and the fact that the current AAPS full app interface has not been designed for a watch. You may prefer to use a stylus to edit **AAPS**  settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
+Большинство разочарований от автономных часов с **AAPS** происходит от взаимодействия с крошечным экраном, и то, что текущий полный интерфейс AAPS не был разработан для часов. Из-за величины экрана возможно понадобится стилус для редактирования настроек **AAPS**  на часах, а некоторые кнопки AAPS могут не отображаться на экране просмотра.
 
-Additional challenges are that it is hard to get sufficient battery life, and watches with sufficient battery are often bulky and thick. Users report fighting with the OS and power-saving settings, difficulty in starting sensors on the watch, poor bluetooth range (for maintaining connection with both the sensor and pump) and questionable water resistance. Examples are shown in the photos below (photo credit: Janvier Doyon).
+Дополнительные проблемы заключаются в том, что трудно получить хороший срок службы батареи, а часы с хорошей батареей часто громоздкие и толстые. Пользователи сообщают о борьбе с настройками энергосбережения, трудностях с запуском сенсоров, плохом диапазоне Bluetooth (для поддержания связи с сенсором и помпой) и сомнительной влагоустойчивости. Примеры на фотографиях ниже (фото: Janvier Doyon).
 
 ![изображение](./images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
 ![изображение](./images/5d2feecc-3f10-4767-b143-1a72da2b9bd4.png)
 
-If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS**  Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
+Если вы заинтересованы в автоном пользовании смарт-часами, прочтите сообщения и комментарии в группе **AAPS**  на Facebook (ищите по "standalone" (автономные) и "Lemfo") и на Discord для дополнительной информации.
 
 ### Option 2) **AAPS** on watch, for remote control of **AAPS** on a phone
 
