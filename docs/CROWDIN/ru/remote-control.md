@@ -396,13 +396,13 @@ For a child - if their **AAPS**  phone is nearby - a caregiver can use a smartwa
 
 A smartwatch can be used either _in addition_ to, or as an _alternative_ to the PHONE-based options for [remote control](remote-control.md) or [following only](following-only.md).
 
-Additionally, unlike parent/carer follower phones (which rely on the mobile network or wifi connection), bluetooth connected smartwatches can be useful in remote locations, like a cave, in a boat, or half-way up a mountain. If both devices (**AAPS** phone and smartwatch) are on the same wifi network, they can also use wifi.
+Кроме этого, в отличие от телефонов родителей/опекунов (которые зависят от мобильной сети или wi-fi связи), смарт-часы с их bluetooth-технологией пригодятся в таких местах, как пещеры, на катере, при восхождении на гору. Если оба устройства ( телефон**AAPS** и смарт-часы) находятся в одной и той же сети Wi-Fi, они также могут использовать wifi.
 
-### Different types of Smartwatch-AAPS interactions
+### Различные типы взаимодействия смарт-часов и AAPS
 
-Many of the possible smartwatch options available to **AAPS** users are detailed at [Nightscout on your watch](https://nightscout.github.io/nightscout/wearable/#), so you are strongly advised to read those pages first to get a good idea of all the possibilities.
+Многие возможноси смарт-часов для пользователей **AAPS** подробно описаны на [Nightscout на ваших часах](https://nightscout.github.io/nightscout/wearable/#), так что рекомендуется сначала ознакомиться с этим источником.
 
-There are currently five main ways in which smartwatches are used in conjunction with **AAPS**. These are shown in the table below: 
+В настоящее время существует пять основных способов использования смарт-часов в связке с **AAPS**. Эти данные приводятся ниже в таблице: 
 
 
 
@@ -411,13 +411,13 @@ There are currently five main ways in which smartwatches are used in conjunction
 
 
 
-Please note this table was prepared in 2023, it is not exhaustive, and additional options are being added all the time.
+Обратите внимание, что таблица была подготовлена в 2023 году, она не является исчерпывающей, дополнительные варианты добавляются постоянно.
 
-### Before you buy a smartwatch…
+### Перед тем как купить смарт-часы…
 
-The exact model of smartwatch you buy depends on the desired function(s). Существует две таблицы, в которых приводятся модели совместимых: [смартфонов](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) и [смартфонов и часов](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435).
+Модель, которую вы покупаете, зависит от желаемых функций. Существует две таблицы, в которых приводятся модели совместимых: [смартфонов](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) и [смартфонов и часов](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435).
 
-There are a huge number of options for smartwatch setups for use with **AAPS**, and this is a quickly moving field as new watches are released. Popular watch brands include Samsung Galaxy, Garmin, Fossil, Mi band and Fitbit. The different options summarised in the Table above are explained in more detail below, to help you decide which smartwatch is right for your situation.
+Существует множество вариантов настройки смарт-часов для работы с **AAPS**, и их число растет по мере появления новых часов. Popular watch brands include Samsung Galaxy, Garmin, Fossil, Mi band and Fitbit. The different options summarised in the Table above are explained in more detail below, to help you decide which smartwatch is right for your situation.
 
 If you are integrating a smartwatch with **AAPS** on a phone with the intention to remotely interact with **AAPS**, you also need to consider if the two devices are compatible with each other, particularly if you have an older, or an unusual phone. We intend to add a specific page to one of the [spreadsheets](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) concerning watch-phone compatibility.
 
