@@ -423,22 +423,22 @@ If you are integrating a smartwatch with **AAPS** on a phone with the intention 
 
 In general, if you only want to follow glucose numbers and not interact with **AAPS**, there are a wider range of affordable and simpler watches you can use.
 
-#### For Smartwatch Options 1 - 3: What _is_ Wear OS?
+#### Для вариантов 1-3 со смарт-часами: _Что такое_ Wear OS?
 
 The first three smartwatch options require the smartwatch to have **Wear OS** installed.
 
-**Wear OS** is the operating system which runs on some modern Android smartwatches. In [2018](https://en.wikipedia.org/wiki/Wear_OS), Google rebranded _Android Wear 1.x to Wear OS_ from version 2.x. So, if a device is labelled “_Android Wear_” rather than **Wear OS** it may indicate an older version. If the description of the smartwatch indicates only _compatibility_ with Android and iOS - it does not mean it is running Wear OS. It may be some other sort of Vendor specific operating system which is not compatible with **AAPS**. To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch will need to be running **Wear OS**, and ideally be Android 10 or newer. As a guide, as of October 2023, the latest release of **Wear OS** is version 4.0 (based on Android 13).
+**Wear OS** - это операционная система некоторых современных смарт-часов Android. В [2018](https://en.wikipedia.org/wiki/Wear_OS), Google сделал ребрендинг _Android Wear 1.x на Wear OS_ начиная с версии 2.x. Поэтому, если устройство маркируется «_Android Wear_», а не **Wear OS** — то мы имеем дело с более старой версией. Если в описании смарт-часов указывается только _совместимость_ с Android и iOS - это не означает, что они работают под управлением Wear OS. Это может быть какая-то другая специальная операционная система, не совместимая с **AAPS**. To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch will need to be running **Wear OS**, and ideally be Android 10 or newer. В качестве ориентира, по состоянию на октябрь 2023 года новейший выпуск **Wear OS** -- версия 4.0 (на основе Android 13).
 
-If you install **AAPS** wear.apk on a **Wear OS** watch, there are a range of different custom **AAPS** watchfaces which  can be  selected. Alternatively, you can use a standard smartphone watchface, with your **AAPS** information included in small tiles known as “complications” on the face. A complication is any feature that is displayed on a watch face in addition to the time. Features like complications require Wear OS version 2.0 or newer to work.
+Если вы устанавливаете **AAPS**wear.apk на часы с **Wear OS**, для этого существует ряд циферблатов **AAPS**. Кроме того, вы можете использовать стандартный циферблат с информацией **AAPS** которая отображается на маленьких плитках, известных как "усложнения". Усложнение - это любая функция, которая отображается на циферблате помимо времени. Такие функции как усложнения, требуют Wear OS версии 2.0 или новее.
 
 
-#### What could my smartwatch look like with remote control of AAPS?
+#### Как выглядят смарт-часы с дистанционным управлением AAPS?
 
-Examples of complications (where AAPS is embedded in an existing watchface) are shown here:
+Здесь показаны примеры усложнений (когда AAPS встроен в существующий циферблат):
 
 ![изображение](./images/04d591ca-9f2e-4479-ac9e-ab689815745d.png)
 
-These are the currently available AAPS-dedicated watchfaces:
+В настоящее время эти циферблаты специально предназначены для AAPS:
 
 ![изображение](./images/67fd75f3-721c-438d-be01-1a8e03532290.png)
 
