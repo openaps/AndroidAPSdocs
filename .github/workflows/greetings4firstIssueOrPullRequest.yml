@@ -1,0 +1,10 @@
+- name: First interaction
+  uses: actions/first-interaction@v1.3.0
+  with:
+    # Token for the repository. Can be passed in using {{ secrets.GITHUB_TOKEN }}
+    repo-token: {{ secrets.GITHUB_TOKEN }}
+    # Comment to post on an individual's first issue
+    issue-message: "Thank you for creating your first issue in the openaps/AndroidAPSDocs repository. We are happy your are helpding us and the community. In case of questions feel free to contact Peter Leimbach via FB messenger directly."
+    # Comment to post on an individual's first pull request
+    pr-message: "Thank you for your pull request in the openaps/AndroidAPSDocs repository. We are happy your are helpding us and the community. In case of questions feel free to contact Peter Leimbach via FB messenger directly."
+          
