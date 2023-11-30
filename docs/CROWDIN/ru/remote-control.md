@@ -484,17 +484,17 @@ a)  **AAPSClient**/Nightscout/**SMS** commands cannot work; or
 
 Приложение ОС Wear OS **AAPS**  («Apk Wear OS»), необходимое для смарт-часов теперь отделено от "полной" сборки **AAPS** для телефонов Android. Поэтому следует создать второй установочный файл, или apk, для установки **AAPS**wear на часы (который параллельно загружается с телефона). Настоятельно рекомендуется, чтобы файл **AAPS** Wear apk был собран сразу же после сборки полноценного **AAPS** apk для телефона. Это не только не займет много времени, но и позволит избежать возможных проблем совместимости при попытке установить связь с телефоном. **AAPS** Wear apk на часах вряд ли будет совместимо с телефоном**AAPS**, если было создано в другой версии Android studio, или если с момента первоначальной сборки **AAPS** истекли месяцы.
 
-If you are already using **AAPS** on a phone and you did not build both the phone and watch (wear) **AAPS** apks at the same time, to ensure success it is therefore best to do a fresh build of both apk files at the same time. If you have already installed Android studio, then you may wish to uninstall and then reinstall Android studio as outlined below, and build the AAPS phone and watch apks at the same time, using the same **keystore file**.
+Если вы уже используете **AAPS** на телефоне, и не собирали сразу оба приложения тогда лучше сделать новую сборку обоих apk файлов одновременно. If you have already installed Android studio, then you may wish to uninstall and then reinstall Android studio as outlined below, and build the AAPS phone and watch apks at the same time, using the same **keystore file**.
 
 #### How to uninstall Android Studio
 
-Make sure your keystore file is safely stored elsewhere on your computer, outside of the Android Studio folders.
+Убедитесь, что файл хранилища ключей безопасно хранится за пределами папок Android Studio.
 
-There are several steps required to completely remove Android Studio from a computer. This is a [good guide](https://www.geeksforgeeks.org/how-to-completely-uninstall-android-studio-on-windows/) if you are using a Windows machine. In the final step of these instructions, you also need to manually remove the folder “StudioProjects”.
+Существует несколько шагов, необходимых для полного удаления Android Studio с компьютера. Вот [хорошее руководство](https://www.geeksforgeeks.org/how-to-completely-uninstall-android-studio-on-windows/) для Windows. На последнем этапе этих инструкций также необходимо вручную удалить папку «StudioProjects».
 
-Now reinstall the latest version of Android Studio.
+Теперь переустановите свежую версию Android Studio.
 
-#### Building the **AAPS** Wear apk
+#### Создание приложения **AAPS** Wear apk
 
 As a summary, the build process for the Wear apk is very similar to that for the "full" phone apk, the difference is that in Android Studio you need to select “**AndroidAPS.wear**”  in the drop-down menu, and as build variant choose “**fullRelease**”. This will generate the **AAPS** Wear apk file.  If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping.
 
