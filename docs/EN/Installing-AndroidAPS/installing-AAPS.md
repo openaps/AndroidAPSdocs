@@ -11,7 +11,7 @@ The next steps are to:
 
 Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](configuring-the-AAPS-loop.md).
    
-## 1. Transfer the **AAPS** APK file to your Android smartphone (using Google Drive)
+## Transfer the **AAPS** APK file to your Android smartphone (using Google Drive)
 
 There are several ways to transfer the **AAPS** APK file from your computer to the smartphone. The easiest way is with a USB cable, moving the file from the computer to the "downloads" folder on the phone. However, we recommend using your **Google Drive** to do the transfer instead. By using **Google Drive**, you automatically have a **backup copy** of the apk file, which will be very useful if you lose or break your computer or smartphone.
 
@@ -29,7 +29,7 @@ c) Right-click in the free area below the files and folders in the **Google Driv
 
 d) The apk file should now be uploaded on Google Drive.
 
-### 2. Install  the **AAPS** APK file on your Android smartphone (using Google Drive)
+## Install  the **AAPS** APK file on your Android smartphone (using Google Drive)
 
 a) Switch to working on your Android smartphone, and start the **Google Drive** app, which should be preinstalled on the phone. 
 
