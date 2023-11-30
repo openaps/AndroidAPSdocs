@@ -1,4 +1,4 @@
-name: Trigger RTD Build
+name: manual Trigger RTD Build
 
 on:
   workflow_dispatch:
