@@ -496,7 +496,7 @@ a)  **AAPSClient**/Nightscout/**SMS** commands cannot work; or
 
 #### Создание приложения **AAPS** Wear apk
 
-As a summary, the build process for the Wear apk is very similar to that for the "full" phone apk, the difference is that in Android Studio you need to select “**AndroidAPS.wear**”  in the drop-down menu, and as build variant choose “**fullRelease**”. This will generate the **AAPS** Wear apk file.  If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping.
+Процесс сборки Wear apk очень похож на процесс "полного" apk, разница в том, что в Android Studio необходимо выбрать “**AndroidAPS. wear**» а в выпадающем меню вариант сборки выберите “**fullRelease**”. Это создаст файл **AAPS** Wear apk.  Вместо этого можно собрать **“pumpcontrolRelease”** из выпадающего меню, которое позволит дистанционно управлять помпой, но вне цикла.
 
 The following guide assumes you have reinstalled the latest version of Android studio (scenario below has used Giraffe 2022.3.1)).
 
@@ -506,17 +506,17 @@ To get back here:
 
 ![изображение](./images/37f4589c-6097-49d4-b0b9-087664914198.png)
 
-continue to follow the instructions.
+продолжайте следовать инструкциям.
 
-Follow the prompts through the different screens until you are given an option with a dropdown menu offering to build the AAPS full apk. At this point, select  “Wear” from the dropdown instead of “AndroidAPS.apk” because you are building the apk for the smartwatch.
+Follow the prompts through the different screens until you are given an option with a dropdown menu offering to build the AAPS full apk. На данном этапе выберите «Wear» из выпадающего списка вместо «AndroidAPS.apk», потому что вы собираете apk для смарт-часов.
 
 
-Next Step go to "Build" in the ribbon
+Следующий шаг перейдите в «Собрать» наверху в ленте
 
 ![изображение](./images/b2cccc84-85b6-4ee1-800b-7c6dcb9dd857.png)
 
 
-Go to Build > Generate Signed Bundle / APK
+Перейти к сборке > Сгенерировать подписанный комплект / APK
 
 
 ![изображение](./images/f488fe36-8cb9-4d81-9d94-5f742a1aaaee.png)
@@ -526,23 +526,23 @@ Select > Android APK Bundle:
 ![изображение](./images/e8f4b996-c46e-4a31-831e-fdcc4d0d677c.png)
 
 
-Select in Module: AndroidAPSwear
+Выберите в модуле: AndroidAPSwear
 
 ![изображение](./images/cceaa832-70e6-4ad5-95ec-a82e2a6add1e.png)
 
-Enter keystore file at the default location. Your keystore path will depend where you have stored your Keystore. For this scenario the keystore path was located: C:\Program Files\Android\Android Studio\jbr\bin
+Введите файл keystore в расположении по умолчанию. Your keystore path will depend where you have stored your Keystore. В нашем варианте путь к хранилищу ключей: C:\Program Files\Android\Android Studio\jbr\bin
 
 
-The next screen should show this:
+Следующий экран должен показать:
 
 ![изображение](./images/87ce7943-256e-449e-8439-8f9fd5bef05e.png)
 
 
-And select “fullRelease”.
+И выберите "fullRelease".
 
-Be patient - the **AAPS** Wear apk should be built in around 10-20 minutes, depending on the speed of your internet connection.
+Наберитесь терпения - **AAPS** Wear apk должен быть собран примерно через 10-20 минут, в зависимости от скорости подключения к Интернету.
 
-Troubleshooting -  if you get an error about "uncommitted changes", see the [troubleshooting guide](troubleshooting_androidstudio.md)
+Устранение неполадок - если появилась ошибка "незапрошенные изменения" см [руководство по устранению неполадок](troubleshooting_androidstudio.md)
 
 In the process of building the 3.2 full AAPS app (and in fact any signed app), Android Studio generates a .json file. This then causes errors with "uncommitted changes" when you try to build the next signed app, like the **AAPS** wear app. The quickest way to resolve this is to navigate to the folder where the full AAPS app has been built, your folder is probably something like:
 
