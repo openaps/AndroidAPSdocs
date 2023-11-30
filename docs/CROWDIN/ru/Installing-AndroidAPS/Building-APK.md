@@ -6,8 +6,8 @@
 
 ## Важные Примечания
 
-* Используйте **[ Android Studio версии 2020.3.1 ](https://developer.android.com/studio/)** или новее для построения apk.
-* [Windows 10 для 32-разрядных систем](troubleshooting_androidstudio-unable-to-start-daemon-process) не поддерживается в Android Studio 2020.3.1
+* Please use **[Android Studio Giraffe" (2022.3.1)](https://developer.android.com/studio/)** or newer to build the apk.
+* [Windows 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 
@@ -49,7 +49,7 @@
 </tbody>
 </table>
 
-Имейте в виду, что и **64-разрядная процессор, и 64-разрядная ОС являются обязательным условием.** Если ваша система не соответствует этому условию, следует изменить аппаратное или программное обеспечение или всю систему. **Рекомендуется использовать SSD(Solid State Disk) вместо HDD(Hard Disk Drive), так как при создании APS-файла потребуется меньше времени.** Рекомендация не является обязательной. Однако вы можете использовать HDD при создании apk файла, но процесс сборки может занять много времени, хотяпосле начала процесс можно оставить без присмотра.
+Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **Рекомендуется использовать SSD(Solid State Disk) вместо HDD(Hard Disk Drive), так как при создании APS-файла потребуется меньше времени.** Рекомендация не является обязательной. Однако вы можете использовать HDD при создании apk файла, но процесс сборки может занять много времени, хотяпосле начала процесс можно оставить без присмотра.
 
 * * *
 

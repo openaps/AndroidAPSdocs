@@ -26,7 +26,7 @@ The profile includes
 
 - BR (Basal rates)
 - ISF (insulin sensitivity factor) is your blood glucose unit per one unit insulin
-- CR (carb ratio) is grams carbohydrate per one unit insulin
+- CR (углеводный коэффициент) количество граммов углеводов, компенсируемое 1 единицей инсулина
 - DIA (duration of insulin acting).
 
 (module-no-use-of-sglt-2-inhibitors)=
