@@ -6,6 +6,8 @@
 No need to translate this.
 ```
 
+What a information.
+
 This is an internal sandbox file for the documentation team to test 
 
 1. markdown syntax and 
