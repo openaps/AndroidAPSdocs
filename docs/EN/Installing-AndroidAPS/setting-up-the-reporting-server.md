@@ -9,7 +9,8 @@ There are currently two reporting servers available for use with **AAPS**:
 
 We recommend using Nightscout.
 
-## Nightscout
+## Nightscout 
+
 
 Nightscout is a powerful platform which has been integrated into **AAPS** for many years. It enables users and caregivers to track the patient's diabetes data in near real-time (only a few minutes may pass between data reception and data provision if there is a sufficient Internet connection between all components involved). It also allows caregivers to send remote commands to **AAPS**.
 
