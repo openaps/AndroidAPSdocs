@@ -1,0 +1,18 @@
+name: friendly message to first time issue or pull request creators.
+
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened]
+
+jobs:
+  check_for_first_interaction:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/first-interaction@main
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: Thank you for creating your first issue in the openaps/AndroidAPSDocs repository. We are happy your are helpding us and the community. In case of questions feel free to contact Peter Leimbach via FB messenger directly.
+          pr-message: Thank you for your pull request in the openaps/AndroidAPSDocs repository. We are happy your are helpding us and the community. In case of questions feel free to contact Peter Leimbach via FB messenger directly.

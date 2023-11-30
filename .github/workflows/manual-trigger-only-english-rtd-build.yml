@@ -1,4 +1,4 @@
-name: Trigger Only English RTD Build
+name: manual Trigger Only English RTD Build
 
 on:
   workflow_dispatch:
