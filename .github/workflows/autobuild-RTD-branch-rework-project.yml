@@ -11,10 +11,6 @@ jobs:
   curl:
     runs-on: ubuntu-latest
     steps:
-    - name: Extract branch name
-      shell: bash
-      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-      id: extract_branch
     - name: curl
       uses: wei/curl@v1
       with:
