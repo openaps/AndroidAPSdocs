@@ -474,7 +474,7 @@ The first three smartwatch options require the smartwatch to have **Wear OS** in
 
 a)  **AAPSClient**/Nightscout/**SMS** commands cannot work; or
 
-б) пользователь не хочет пользоваться системой аутентификации (необходимой для телефона фоллоуэра при вводе данных, выбором временной цели ТТ или внесением углеводов).
+б) пользователь не хочет пользоваться системой аутентификации (необходимой для телефона фоллоуэра при вводе данных, выборе временной цели ТТ или внесении углеводов).
 
 На смарт-часах требуется программное обеспечение **Android wear** (идеально версии 10 или выше), чтобы управлять **AAPS**. Please check the technical specifications of the watch, and check the [spreadsheet of compatible watches](link). Воспользуйтесь поиском или задайте вопрос в группе **AAPS** на Facebook или в Discord если есть сомнения.
 
@@ -544,17 +544,17 @@ Select > Android APK Bundle:
 
 Устранение неполадок - если появилась ошибка "незапрошенные изменения" см [руководство по устранению неполадок](troubleshooting_androidstudio.md)
 
-In the process of building the 3.2 full AAPS app (and in fact any signed app), Android Studio generates a .json file. This then causes errors with "uncommitted changes" when you try to build the next signed app, like the **AAPS** wear app. The quickest way to resolve this is to navigate to the folder where the full AAPS app has been built, your folder is probably something like:
+В процессе сборки полного приложения AAPS 3.2 (и в принципе любого подписанного приложения) Android Studio генерирует файл с расширением .json. Это приводит к ошибкам с "незапрошенными изменениями", когда вы пытаетесь создать следующее подписанное приложение, например **AAPS**wear. Самый быстрый способ решения это переход к папке, в которой было построено полное приложение AAPS, путь к папке, вероятно, выглядит как-то так:
 
 C:\Users\Your Name\StudioProjects\AndroidAPS\app\aapsclient\release.
 
-Either delete, or move the unneeded .json file out of the folder. Then try to build the **AAPS** wear app again. If that doesn't work, the more detailed [troubleshooting guide](troubleshooting_androidstudio.md)  will help you to identify the specific file causing the issue, which could also be your keystore file.
+Удалите или переместите ненужный файл .json из этой папки. Затем попробуйте снова создать приложение **AAPS**. Если это не помогает, то детальная [инструкция по устранению неполадок](troubleshooting_androidstudio.md) поможет определить конкретный файл, вызывающий проблему; им также может оказаться файл хранилища ключей.
 
-#### How to set up a Samsung Galaxy 4 smartwatch with **AAPS**
+#### Как настроить смарт-часы Samsung Galaxy 4 с **AAPS**
 
-This section assumes you are totally new to Smartwatches, and gives you basic orientation of a popular watch, the **Galaxy Watch 4**, followed by a step-by-step guide to setup **AAPS** on the watch.
+Этот раздел предполагает, что вы новичок в смарт-часах; он сориентирует в популярных часах, **Galaxy Watch 4**, и даст пошаговое руководство по настройке **AAPS** на часах.
 
-_This guide assumes the Samsung Galaxy watch you are setting up is running Wear OS version 3 or lower._ If you are setting up a watch running Wear OS 4/OneUI 5 or later, you will need to use a new ADB pairing process, this is explained in the Samsung software on your phone and will be updated here in due course. Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
+_В этом руководстве предполагается, что на часах Samsung Galaxy, с которыми вы сейчас разбираетесь, работает Wear OS версии 3 или ниже._. Если же вы настраиваете часы под управлением Wear OS 4/OneUI 5 или более поздней, то нужно использовать новый процесс сопряжения через ADB, это объясняется в программном обеспечении Samsung на телефоне и будет своевременно здесь обновляться. Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
 
 ##### Basic smartwatch familiarity
 
