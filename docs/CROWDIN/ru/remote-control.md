@@ -632,20 +632,20 @@ You can use either Wear Installer 2 or Easy Fire tools to side-load AAPS onto th
 :::
 
 
-##### Setting up the connection between the watch and the phone from **AAPS**
+##### Настройка связи между часами и телефоном **AAPS**
 
-The final step is to configure **AAPS** on the phone to interact with **AAPS** Wear” on the watch. To do this, enable the Wear plugin in Config Builder:
+Последним шагом является настройка **AAPS** на телефоне для работы с **AAPS** Wear на часах. Для этого включите плагин Wear в Конфигураторе настроек:
 
-●   Go to the **AAPS** app on the phone
+● Перейдите в приложение **AAPS** на телефоне
 
-●   Select > Config Builder in the left-hand Hamburger tab
+● Выберите > Конфигуратор в левой вкладке
 
-●   Tick for Wear selection under General
+● Выберите «Wear» в разделе Синхронизация Конфигуратора
 
 ![изображение](./images/ae6d75a1-1829-4d2e-b0dc-153e31e4a466)
 
 
-To change to a different **AAPS**  watchface, press on the home screen of the watch and it will come to “customise”. Then swipe right until you get to all the **AAPS**  faces.
+Чтобы изменить внешний вид циферблата **AAPS**  выполните долгое нажатие на главный экран часов и перейдите к кастомизации. Затем проведите вправо, пока не дойдете до всех циферблатов **AAPS**.
 
 If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, it will look like this:
 
