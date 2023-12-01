@@ -554,23 +554,23 @@ C:\Users\Your Name\StudioProjects\AndroidAPS\app\aapsclient\release.
 
 Этот раздел предполагает, что вы новичок в смарт-часах; он сориентирует в популярных часах, **Galaxy Watch 4**, и даст пошаговое руководство по настройке **AAPS** на часах.
 
-_В этом руководстве предполагается, что на часах Samsung Galaxy, с которыми вы сейчас разбираетесь, работает Wear OS версии 3 или ниже._. Если же вы настраиваете часы под управлением Wear OS 4/OneUI 5 или более поздней, то нужно использовать новый процесс сопряжения через ADB, это объясняется в программном обеспечении Samsung на телефоне и будет своевременно здесь обновляться. Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
+_В этом руководстве предполагается, что на часах Samsung Galaxy, с которыми вы сейчас разбираетесь, работает Wear OS версии 3 или ниже._. Если же вы настраиваете часы под управлением Wear OS 4/OneUI 5 или более поздней, то нужно использовать новый процесс сопряжения через ADB, это объясняется в программном обеспечении Samsung на телефоне и будет своевременно здесь обновляться. Вот основные параметры настройки для [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) и [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
 
-##### Basic smartwatch familiarity
+##### Базовое знакомство с часами
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable" “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+После базовой настройки часов в соответствии с видео выше, перейдите в playstore на телефоне и загрузите следующие приложения: "Galaxy Wearable" "Samsung" и "Easy Fire tools" или "Wear Installer 2".
 
-There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
+Существует множество сторонних видео на YouTube, которые помогут ознакомиться с этими смарт-часами, например:
 
 https://www.youtube.com/watch?v=tSVkqWNmO2c
 
-The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. Depending on your version, this may prompt you to install a further 3rd app “galaxy watch 4 plugin” from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
+В приложении «Galaxy Wearable» также имеется встроенное руководство. В телефоне откройте приложение galaxy wearable, выполните поиск часов, попытайтесь связать часы с телефоном. В зависимости от вашей версии, в ходе этого может появиться запрос на установку еще одного приложения «galaxy watch 4 plugin» из playstore (потребуется некоторое время для загрузки). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Пройдите через ряд меню и отметьте предпочтения.
 
-##### Setting up a Samsung account
+##### Настройка учетной записи Samsung
 
-You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 363 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
+Вы должны убедиться, что учетная запись электронной почты для настройки учетной записи Samsung имеет дату рождения пользователя старше 13+, ибо в противном случае получить разрешения Samsung не получится. Если вы настроили вашему ребенку до 13 лет детскую учетную запись Gmail и используете этот адрес электронной почты, вы не можете просто изменить его на аккаунт для взрослых. Один из вариантов заключается в том, чтобы изменить текущую дату рождения и сделать текущий возраст 12 лет и 363 дня. На следующий день аккаунт будет преобразован в учётную запись для взрослых, и вы сможете выполнить настройку учетной записи Samsung.
 
-##### Transferring the **AAPS** Wear app onto your **AAPS** phone
+##### Перенос приложения **AAPS** Wear на телефон **AAPS**
 
 Loading the Wear.apk from Android Studio to your phone can be done either by:
 
