@@ -572,45 +572,44 @@ https://www.youtube.com/watch?v=tSVkqWNmO2c
 
 ##### Перенос приложения **AAPS** Wear на телефон **AAPS**
 
-Loading the Wear.apk from Android Studio to your phone can be done either by:
+Загрузка Aapswear.apk из Android Studio на телефон может быть выполнена:
 
 a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
 
-b)  cut and paste Wear.apk from Android Studio onto your Gdrive.
+b) вырежьте и вставьте файл Wear.apk из Android Studio на Gdrive.
 
 
-You can use either Wear Installer 2 or Easy Fire tools to side-load AAPS onto the watch. Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained.
+You can use either Wear Installer 2 or Easy Fire tools to side-load AAPS onto the watch. Здесь мы рекомендуем Wear Installer 2, потому что инструкции и процесс в видео понятны и хорошо описаны.
 
-##### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
+##### Использование Wear Installer 2 для параллельной загрузки **AAPS** на часы
 
  ![изображение](./images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
 
-Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
+Установщик Wear Installer 2, разработанный [Malcolm Bryant](https://www.youtube.com/@Freepoc)загружается из Google Play и может применяться для "побочной" загрузки приложения AAPS wear на часы. В состав приложения входит понятное [видео](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) "как выполнить параллельную загрузку"
 
-This provides all the necessary detail (best to open the video on a separate device so you can watch it whilst setting up the phone).
+В нем есть вся необходимая информация (лучше всего открыть видео на отдельном устройстве, чтобы посмотреть при настройке телефона).
 
-As mentioned in the video, once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
+Как сказано в видео, после завершения установки выключите отладку ADB на часах, чтобы не перегружать аккумулятор смарт-часов.
 
-Alternatively, you can:
+В качестве альтернативы можно:
 
-:::{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
-:class: dropdown
+:::{admonition} (предостережение) Пользуйтесь Easy Fire tools для параллельной загрузки **AAPS**wear на смарт-часы :class: выпадающее
 
-1)   Download _Easy Fire Tools_ from playstore onto phone
+1) Загрузите _Easy Fire Tools_ с playstore на телефон
 
 ![изображение](./images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
 
-2)  Make yourself a developer in the watch (once set up and connected to phone):
+2) Сделайте себя разработчиком часов (после настройки и подключения к телефону):
 
-Go to settings >about watch (bottom option) >- software info > software version.
+Перейдите в настройки >о часах (нижняя опция) >- информация о программном обеспечении > версия ПО.
 
-Rapidly tap on “ software version” until a notification appears that the watch is now in "developer mode". Return to the top of settings menu, scroll to the bottom and see “developer options” below “about watch”.
+Быстро нажимайте на «номер сборки» (7 раз), пока не появится уведомление о том, что часы находятся в «режиме разработчика». Вернитесь в верхнюю часть меню настроек, прокрутите вниз и посмотрите «настройки разработчика» ниже «о часах».
 
-In “developer options”, turn on “ADB debugging” and “wireless debugging”. The latter option then reveals the IP address of the watch, the final two digits of which changes each time the watch is paired with a new phone. It will be something like: **167.177.0.20.** 5555 (ignore the last 4 digits). Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS.
+В «опциях разработчика» включите «Отладку ADB и «беспроводную отладку». Эта последняя опция показывает IP адрес часов, последние две цифры которого меняются каждый раз, когда часы сопрягаются с новым телефоном. Будет что-то вроде **167.177.0.20.** 5555 (игнорируйте последние 4 цифры). Обратите внимание, что последние две цифры (здесь «20») этого адреса будут меняться каждый раз, когда вы меняете телефон для AAPS.
 
 ![24-10-23, watch ADB debug pic](./images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
 
-STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). Then click the plug socket icon on the top right.
+ЩАГ 3) Введите IP адрес _например_ **167.177.0. 0** в Easy Fire tools на телефоне (перейдите в левое выпадающее меню, настройки и введите IP адрес). Then click the plug socket icon on the top right.
 
 ![изображение](./images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
 
@@ -618,14 +617,14 @@ STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the
 ![изображение](./images/00b2fb8b-5996-4b71-894e-516d63469e1b.png)
 
 
-STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  Wear.apk onto the smartwatch using Easy Fire tools
+ШАГ 4) Следуйте инструкциям [здесь](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) для параллельной загрузки (т.е. передачи) Wear.apk на смарт-часы с помощью инструментов Easy Fire
 
-Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the smartwatch:
+Нажмите на сокет "plug-in" в приложении, чтобы загрузить Wear OS.apk на смартфон:
 
 ![изображение](./images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
 
 
- Next step > accept the authorisation request on the smartwatch
+ Следующий шаг > принять запрос на авторизацию на часах
 
 
 ![изображение](./images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
