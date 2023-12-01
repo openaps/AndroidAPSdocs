@@ -474,7 +474,7 @@ The first three smartwatch options require the smartwatch to have **Wear OS** in
 
 a)  **AAPSClient**/Nightscout/**SMS** commands cannot work; or
 
-б) пользователь не хочет пользоваться системой аутентификации (необходимой для телефона фоллоуэра при вводе данных, выбором временной цели ТТ или внесением углеводов).
+б) пользователь не хочет пользоваться системой аутентификации (необходимой для телефона фоллоуэра при вводе данных, выборе временной цели ТТ или внесении углеводов).
 
 На смарт-часах требуется программное обеспечение **Android wear** (идеально версии 10 или выше), чтобы управлять **AAPS**. Please check the technical specifications of the watch, and check the [spreadsheet of compatible watches](link). Воспользуйтесь поиском или задайте вопрос в группе **AAPS** на Facebook или в Discord если есть сомнения.
 
@@ -496,7 +496,7 @@ a)  **AAPSClient**/Nightscout/**SMS** commands cannot work; or
 
 #### Создание приложения **AAPS** Wear apk
 
-As a summary, the build process for the Wear apk is very similar to that for the "full" phone apk, the difference is that in Android Studio you need to select “**AndroidAPS.wear**”  in the drop-down menu, and as build variant choose “**fullRelease**”. This will generate the **AAPS** Wear apk file.  If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping.
+Процесс сборки Wear apk очень похож на процесс "полного" apk, разница в том, что в Android Studio необходимо выбрать “**AndroidAPS. wear**» а в выпадающем меню вариант сборки выберите “**fullRelease**”. Это создаст файл **AAPS** Wear apk.  Вместо этого можно собрать **“pumpcontrolRelease”** из выпадающего меню, которое позволит дистанционно управлять помпой, но вне цикла.
 
 The following guide assumes you have reinstalled the latest version of Android studio (scenario below has used Giraffe 2022.3.1)).
 
@@ -506,17 +506,17 @@ To get back here:
 
 ![изображение](./images/37f4589c-6097-49d4-b0b9-087664914198.png)
 
-continue to follow the instructions.
+продолжайте следовать инструкциям.
 
-Follow the prompts through the different screens until you are given an option with a dropdown menu offering to build the AAPS full apk. At this point, select  “Wear” from the dropdown instead of “AndroidAPS.apk” because you are building the apk for the smartwatch.
+Follow the prompts through the different screens until you are given an option with a dropdown menu offering to build the AAPS full apk. На данном этапе выберите «Wear» из выпадающего списка вместо «AndroidAPS.apk», потому что вы собираете apk для смарт-часов.
 
 
-Next Step go to "Build" in the ribbon
+Следующий шаг перейдите в «Собрать» наверху в ленте
 
 ![изображение](./images/b2cccc84-85b6-4ee1-800b-7c6dcb9dd857.png)
 
 
-Go to Build > Generate Signed Bundle / APK
+Перейти к сборке > Сгенерировать подписанный комплект / APK
 
 
 ![изображение](./images/f488fe36-8cb9-4d81-9d94-5f742a1aaaee.png)
@@ -526,91 +526,90 @@ Select > Android APK Bundle:
 ![изображение](./images/e8f4b996-c46e-4a31-831e-fdcc4d0d677c.png)
 
 
-Select in Module: AndroidAPSwear
+Выберите в модуле: AndroidAPSwear
 
 ![изображение](./images/cceaa832-70e6-4ad5-95ec-a82e2a6add1e.png)
 
-Enter keystore file at the default location. Your keystore path will depend where you have stored your Keystore. For this scenario the keystore path was located: C:\Program Files\Android\Android Studio\jbr\bin
+Введите файл keystore в расположении по умолчанию. Your keystore path will depend where you have stored your Keystore. В нашем варианте путь к хранилищу ключей: C:\Program Files\Android\Android Studio\jbr\bin
 
 
-The next screen should show this:
+Следующий экран должен показать:
 
 ![изображение](./images/87ce7943-256e-449e-8439-8f9fd5bef05e.png)
 
 
-And select “fullRelease”.
+И выберите "fullRelease".
 
-Be patient - the **AAPS** Wear apk should be built in around 10-20 minutes, depending on the speed of your internet connection.
+Наберитесь терпения - **AAPS** Wear apk должен быть собран примерно через 10-20 минут, в зависимости от скорости подключения к Интернету.
 
-Troubleshooting -  if you get an error about "uncommitted changes", see the [troubleshooting guide](troubleshooting_androidstudio.md)
+Устранение неполадок - если появилась ошибка "незапрошенные изменения" см [руководство по устранению неполадок](troubleshooting_androidstudio.md)
 
-In the process of building the 3.2 full AAPS app (and in fact any signed app), Android Studio generates a .json file. This then causes errors with "uncommitted changes" when you try to build the next signed app, like the **AAPS** wear app. The quickest way to resolve this is to navigate to the folder where the full AAPS app has been built, your folder is probably something like:
+В процессе сборки полного приложения AAPS 3.2 (и в принципе любого подписанного приложения) Android Studio генерирует файл с расширением .json. Это приводит к ошибкам с "незапрошенными изменениями", когда вы пытаетесь создать следующее подписанное приложение, например **AAPS**wear. Самый быстрый способ решения это переход к папке, в которой было построено полное приложение AAPS, путь к папке, вероятно, выглядит как-то так:
 
 C:\Users\Your Name\StudioProjects\AndroidAPS\app\aapsclient\release.
 
-Either delete, or move the unneeded .json file out of the folder. Then try to build the **AAPS** wear app again. If that doesn't work, the more detailed [troubleshooting guide](troubleshooting_androidstudio.md)  will help you to identify the specific file causing the issue, which could also be your keystore file.
+Удалите или переместите ненужный файл .json из этой папки. Затем попробуйте снова создать приложение **AAPS**. Если это не помогает, то детальная [инструкция по устранению неполадок](troubleshooting_androidstudio.md) поможет определить конкретный файл, вызывающий проблему; им также может оказаться файл хранилища ключей.
 
-#### How to set up a Samsung Galaxy 4 smartwatch with **AAPS**
+#### Как настроить смарт-часы Samsung Galaxy 4 с **AAPS**
 
-This section assumes you are totally new to Smartwatches, and gives you basic orientation of a popular watch, the **Galaxy Watch 4**, followed by a step-by-step guide to setup **AAPS** on the watch.
+Этот раздел предполагает, что вы новичок в смарт-часах; он сориентирует в популярных часах, **Galaxy Watch 4**, и даст пошаговое руководство по настройке **AAPS** на часах.
 
-_This guide assumes the Samsung Galaxy watch you are setting up is running Wear OS version 3 or lower._ If you are setting up a watch running Wear OS 4/OneUI 5 or later, you will need to use a new ADB pairing process, this is explained in the Samsung software on your phone and will be updated here in due course. Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
+_В этом руководстве предполагается, что на часах Samsung Galaxy, с которыми вы сейчас разбираетесь, работает Wear OS версии 3 или ниже._. Если же вы настраиваете часы под управлением Wear OS 4/OneUI 5 или более поздней, то нужно использовать новый процесс сопряжения через ADB, это объясняется в программном обеспечении Samsung на телефоне и будет своевременно здесь обновляться. Вот основные параметры настройки для [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) и [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
 
-##### Basic smartwatch familiarity
+##### Базовое знакомство с часами
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable" “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+После базовой настройки часов в соответствии с видео выше, перейдите в playstore на телефоне и загрузите следующие приложения: "Galaxy Wearable" "Samsung" и "Easy Fire tools" или "Wear Installer 2".
 
-There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
+Существует множество сторонних видео на YouTube, которые помогут ознакомиться с этими смарт-часами, например:
 
 https://www.youtube.com/watch?v=tSVkqWNmO2c
 
-The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. Depending on your version, this may prompt you to install a further 3rd app “galaxy watch 4 plugin” from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
+В приложении «Galaxy Wearable» также имеется встроенное руководство. В телефоне откройте приложение galaxy wearable, выполните поиск часов, попытайтесь связать часы с телефоном. В зависимости от вашей версии, в ходе этого может появиться запрос на установку еще одного приложения «galaxy watch 4 plugin» из playstore (потребуется некоторое время для загрузки). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Пройдите через ряд меню и отметьте предпочтения.
 
-##### Setting up a Samsung account
+##### Настройка учетной записи Samsung
 
-You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 363 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
+Вы должны убедиться, что учетная запись электронной почты для настройки учетной записи Samsung имеет дату рождения пользователя старше 13+, ибо в противном случае получить разрешения Samsung не получится. Если вы настроили вашему ребенку до 13 лет детскую учетную запись Gmail и используете этот адрес электронной почты, вы не можете просто изменить его на аккаунт для взрослых. Один из вариантов заключается в том, чтобы изменить текущую дату рождения и сделать текущий возраст 12 лет и 363 дня. На следующий день аккаунт будет преобразован в учётную запись для взрослых, и вы сможете выполнить настройку учетной записи Samsung.
 
-##### Transferring the **AAPS** Wear app onto your **AAPS** phone
+##### Перенос приложения **AAPS** Wear на телефон **AAPS**
 
-Loading the Wear.apk from Android Studio to your phone can be done either by:
+Загрузка Aapswear.apk из Android Studio на телефон может быть выполнена:
 
 a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
 
-b)  cut and paste Wear.apk from Android Studio onto your Gdrive.
+b) вырежьте и вставьте файл Wear.apk из Android Studio на Gdrive.
 
 
-You can use either Wear Installer 2 or Easy Fire tools to side-load AAPS onto the watch. Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained.
+You can use either Wear Installer 2 or Easy Fire tools to side-load AAPS onto the watch. Здесь мы рекомендуем Wear Installer 2, потому что инструкции и процесс в видео понятны и хорошо описаны.
 
-##### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
+##### Использование Wear Installer 2 для параллельной загрузки **AAPS** на часы
 
  ![изображение](./images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
 
-Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
+Установщик Wear Installer 2, разработанный [Malcolm Bryant](https://www.youtube.com/@Freepoc)загружается из Google Play и может применяться для "побочной" загрузки приложения AAPS wear на часы. В состав приложения входит понятное [видео](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) "как выполнить параллельную загрузку"
 
-This provides all the necessary detail (best to open the video on a separate device so you can watch it whilst setting up the phone).
+В нем есть вся необходимая информация (лучше всего открыть видео на отдельном устройстве, чтобы посмотреть при настройке телефона).
 
-As mentioned in the video, once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
+Как сказано в видео, после завершения установки выключите отладку ADB на часах, чтобы не перегружать аккумулятор смарт-часов.
 
-Alternatively, you can:
+В качестве альтернативы можно:
 
-:::{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
-:class: dropdown
+:::{admonition} (предостережение) Пользуйтесь Easy Fire tools для параллельной загрузки **AAPS**wear на смарт-часы :class: выпадающее
 
-1)   Download _Easy Fire Tools_ from playstore onto phone
+1) Загрузите _Easy Fire Tools_ с playstore на телефон
 
 ![изображение](./images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
 
-2)  Make yourself a developer in the watch (once set up and connected to phone):
+2) Сделайте себя разработчиком часов (после настройки и подключения к телефону):
 
-Go to settings >about watch (bottom option) >- software info > software version.
+Перейдите в настройки >о часах (нижняя опция) >- информация о программном обеспечении > версия ПО.
 
-Rapidly tap on “ software version” until a notification appears that the watch is now in "developer mode". Return to the top of settings menu, scroll to the bottom and see “developer options” below “about watch”.
+Быстро нажимайте на «номер сборки» (7 раз), пока не появится уведомление о том, что часы находятся в «режиме разработчика». Вернитесь в верхнюю часть меню настроек, прокрутите вниз и посмотрите «настройки разработчика» ниже «о часах».
 
-In “developer options”, turn on “ADB debugging” and “wireless debugging”. The latter option then reveals the IP address of the watch, the final two digits of which changes each time the watch is paired with a new phone. It will be something like: **167.177.0.20.** 5555 (ignore the last 4 digits). Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS.
+В «опциях разработчика» включите «Отладку ADB и «беспроводную отладку». Эта последняя опция показывает IP адрес часов, последние две цифры которого меняются каждый раз, когда часы сопрягаются с новым телефоном. Будет что-то вроде **167.177.0.20.** 5555 (игнорируйте последние 4 цифры). Обратите внимание, что последние две цифры (здесь «20») этого адреса будут меняться каждый раз, когда вы меняете телефон для AAPS.
 
 ![24-10-23, watch ADB debug pic](./images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
 
-STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). Then click the plug socket icon on the top right.
+ЩАГ 3) Введите IP адрес _например_ **167.177.0. 0** в Easy Fire tools на телефоне (перейдите в левое выпадающее меню, настройки и введите IP адрес). Then click the plug socket icon on the top right.
 
 ![изображение](./images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
 
@@ -618,14 +617,14 @@ STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the
 ![изображение](./images/00b2fb8b-5996-4b71-894e-516d63469e1b.png)
 
 
-STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  Wear.apk onto the smartwatch using Easy Fire tools
+ШАГ 4) Следуйте инструкциям [здесь](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) для параллельной загрузки (т.е. передачи) Wear.apk на смарт-часы с помощью инструментов Easy Fire
 
-Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the smartwatch:
+Нажмите на сокет "plug-in" в приложении, чтобы загрузить Wear OS.apk на смартфон:
 
 ![изображение](./images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
 
 
- Next step > accept the authorisation request on the smartwatch
+ Следующий шаг > принять запрос на авторизацию на часах
 
 
 ![изображение](./images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
