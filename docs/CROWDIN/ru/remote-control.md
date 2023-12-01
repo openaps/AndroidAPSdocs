@@ -647,16 +647,16 @@ You can use either Wear Installer 2 or Easy Fire tools to side-load AAPS onto th
 
 Чтобы изменить внешний вид циферблата **AAPS**  выполните долгое нажатие на главный экран часов и перейдите к кастомизации. Затем проведите вправо, пока не дойдете до всех циферблатов **AAPS**.
 
-If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, it will look like this:
+Если приложение **AAPS** Wear.apk успешно загружено в смарт-часы, оно будет выглядеть так:
 
 
 ![24-10-23, successful galaxy watch photo](./images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
 
-#### Troubleshooting the **AAPS** watch- **AAPS** phone communication
-1.  If EasyFire tools does not connect or if you are receiving ‘authorisation failed’ > check IP address has been correctly entered.
-2.  Check that the smartwatch is connected to the internet (and not just connected to the phone via Bluetooth).
-3.  Check that the **AAPS** Phone and smartwatch are paired or linked in Samsung app.
-4.  It may also help to do a hard restart of Phone and smartwatch (meaning turning phone on and off)
+#### Устранение неполадок связки **AAPS**часы-**AAPS** телефон
+1.  Если инструменты EasyFire не сработали, или если «авторизация не выполнена» > проверьте правильность ввода IP-адреса.
+2.  Проверьте, что часы подключены к Интернету (а не просто подключены к телефону через Bluetooth).
+3.  Убедитесь, что телефон и смарт-часы **AAPS** сопряжены и связаны в приложении Samsung.
+4.  Жесткий перезапуск телефона и смарт-часов (включение и выключение телефона и часов) может устранить проблему подключения
 5.  Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** apk version onto the watch. If your AAPS wear.apk version is listed as any of the following: a) “wear-AAPSClient-release’; b) ‘wear-full-release.aab’; or c) the word ‘debug’ appears in the title, you have not selected the correct Wear OS apk version during the build.
 6.  Check that your router is not isolating the devices from one another.
 
