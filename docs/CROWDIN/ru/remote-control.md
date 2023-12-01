@@ -56,7 +56,7 @@
 
 Команды, которым требуется больше безопасности, требуют ввести код, например:
 
-![SMS authenticated for markdown-smaller](images/remote-control-07.png)
+![SMS-аутентифицирована](images/remote-control-07.png)
 
 ### Как настроить SMS-команды
 
@@ -502,13 +502,13 @@ a)  команды **AAPSClient**/Nightscout/**SMS** не работают; ил
 
 ![изображение](./images/e8e3b7f3-f82e-425a-968c-cc196434a5f8.png)
 
-To get back here:
+Чтобы вернуться сюда:
 
 ![изображение](./images/37f4589c-6097-49d4-b0b9-087664914198.png)
 
 продолжайте следовать инструкциям.
 
-Follow the prompts through the different screens until you are given an option with a dropdown menu offering to build the AAPS full apk. На данном этапе выберите «Wear» из выпадающего списка вместо «AndroidAPS.apk», потому что вы собираете apk для смарт-часов.
+Следуйте подсказкам через различные экраны, пока вам не будет предложена опция с выпадающим меню, предлагающим сборку полного AAPS apk. На данном этапе выберите «Wear» из выпадающего списка вместо «AndroidAPS.apk», потому что вы собираете apk для смарт-часов.
 
 
 Следующий шаг перейдите в «Собрать» наверху в ленте
@@ -521,7 +521,7 @@ Follow the prompts through the different screens until you are given an option w
 
 ![изображение](./images/f488fe36-8cb9-4d81-9d94-5f742a1aaaee.png)
 
-Select > Android APK Bundle:
+Выберите > набор APK для Android:
 
 ![изображение](./images/e8f4b996-c46e-4a31-831e-fdcc4d0d677c.png)
 
@@ -530,7 +530,7 @@ Select > Android APK Bundle:
 
 ![изображение](./images/cceaa832-70e6-4ad5-95ec-a82e2a6add1e.png)
 
-Введите файл keystore в расположении по умолчанию. Your keystore path will depend where you have stored your Keystore. В нашем варианте путь к хранилищу ключей: C:\Program Files\Android\Android Studio\jbr\bin
+Введите файл keystore в расположении по умолчанию. Путь к хранилищу ключей будет зависеть от того, где расположено хранилище. В нашем варианте путь к хранилищу ключей: C:\Program Files\Android\Android Studio\jbr\bin
 
 
 Следующий экран должен показать:
@@ -564,7 +564,7 @@ _В этом руководстве предполагается, что на ч
 
 https://www.youtube.com/watch?v=tSVkqWNmO2c
 
-В приложении «Galaxy Wearable» также имеется встроенное руководство. В телефоне откройте приложение galaxy wearable, выполните поиск часов, попытайтесь связать часы с телефоном. В зависимости от вашей версии, в ходе этого может появиться запрос на установку еще одного приложения «galaxy watch 4 plugin» из playstore (потребуется некоторое время для загрузки). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Пройдите через ряд меню и отметьте предпочтения.
+В приложении «Galaxy Wearable» также имеется встроенное руководство. В телефоне откройте приложение galaxy wearable, выполните поиск часов, попытайтесь связать часы с телефоном. В зависимости от вашей версии, в ходе этого может появиться запрос на установку еще одного приложения «galaxy watch 4 plugin» из playstore (потребуется некоторое время для загрузки). Установите его на телефон, а затем попытайтесь снова связать часы и телефон в приложении. Пройдите через ряд меню и отметьте предпочтения.
 
 ##### Настройка учетной записи Samsung
 
@@ -574,12 +574,12 @@ https://www.youtube.com/watch?v=tSVkqWNmO2c
 
 Загрузка Aapswear.apk из Android Studio на телефон может быть выполнена:
 
-a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
+a) при помощи USB-кабеля, разместив файл **AAPS**wear. apk на телефон, а затем выполнив "параллельную загрузку" на часы. Перенесите файл Wear.apk в телефон через USB в папку загрузок; или
 
 b) вырежьте и вставьте файл Wear.apk из Android Studio на Gdrive.
 
 
-You can use either Wear Installer 2 or Easy Fire tools to side-load AAPS onto the watch. Здесь мы рекомендуем Wear Installer 2, потому что инструкции и процесс в видео понятны и хорошо описаны.
+Можно использовать либо Wear Installer 2, либо Easy Fire tools для "побочной" (параллельной) загрузки AAPSwear на часы. Здесь мы рекомендуем Wear Installer 2, потому что инструкции и процесс в видео понятны и хорошо описаны.
 
 ##### Использование Wear Installer 2 для параллельной загрузки **AAPS** на часы
 
@@ -660,7 +660,7 @@ You can use either Wear Installer 2 or Easy Fire tools to side-load AAPS onto th
 5.  Если вам удалось загрузить Wear. телефон, но данных ГК не поступают, _проверьте_, что вы загрузили корректную версию apk **AAPS** на часы. Если ваша версия AAPS wear.apk указана как любая из следующих версий: a) «wear-AAPSClient-release»; b) «wear-full-release». aab’; или c) в заголовке присутствует слово «debug», то выбрана неправильная версия apk OS Wear во время сборки.
 6.  Убедитесь, что ваш роутер не изолирует устройства друг от друга.
 
-More troubleshooting tips can be found [here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
+Общее устранение неполадок можно найти [здесь](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
 
 #### Устранение неполадок со смарт-часами Sony
 
@@ -669,9 +669,9 @@ More troubleshooting tips can be found [here](https://freepoc.org/wear-installer
 
 ##### Контроль AAPS с помощью часов Wear
 
-The following functions can be triggered from the smartwatch:
+С часов можно запустить следующие функции:
 
-●   set a temporary target
+●   установить временные целевые значения ГК
 
 ●   использовать калькулятор болюса (переменные могут быть определены в настройках на телефоне)
 
@@ -683,7 +683,7 @@ The following functions can be triggered from the smartwatch:
 
 ●   статус
 
-●   check pump status
+●   проверить состояние помпы
 
 ●   проверка состояния замкнутого цикла
 
@@ -693,17 +693,17 @@ The following functions can be triggered from the smartwatch:
 
 #### Общение от опекуна к часам при помощи других приложений (например, Whatsapp)
 
-Можно добавить дополнительные приложения в часы, такие как Whatsapp, для обмена сообщениями (например), между опекунами и детьми. It is important only to have ONE Google account associated with the phone, or the watch will not bring this data across. Вам должно быть 13 или старше чтобы иметь учетную запись Samsung, настроеную на тот же электронный адрес, который используется на телефоне Android.
+Можно добавить дополнительные приложения в часы, такие как Whatsapp, для обмена сообщениями (например), между опекунами и детьми. Важно только иметь один аккаунт Google, связанный с телефоном, или часы не передадут эти данные. Вам должно быть 13 или старше чтобы иметь учетную запись Samsung, настроеную на тот же электронный адрес, который используется на телефоне Android.
 
 Видео с настройками Whatsapp для Galaxy 4 (полного функционала не будет) можно найти [здесь](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
 
-Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and the watch makes it possible for Whatsapp messages to announce with a slight vibration, and also for the Whatsapp message to display over the existing watchface.
+Добавление корректировок в приложение **Galaxy wearable** на телефоне **AAPS** и на часах позволяют сообщениям Whatsapp приходить с небольшой вибрацией, а также появляться поверх циферблатов.
 
 ### Вариант 3) AAPS на смарт-часах, для дистанционного управления **AAPS** на телефоне
 
 Программное обеспечение для часов, **AAPSClient** Wear apk, можно загрузить непосредственно с [Github](https://github.com/nightscout/AndroidAPS/releases/).
 
-To download the software, click on the required app (in this screenshot, either **wear-aapsclient-release_3.2.0.1** or **wear-aapsclient2-release_3.2.0.1** would work, there are two versions in case you need a copy for a second caregiver watch):
+Чтобы скачать приложение, нажмите на требуемое приложение (на этом снимке экрана, либо **wear-aapsclient-release_3.2.0.** либо **wear-aapsclient2-release_3.2.0.** будут работать, есть две версии (копия для второго опекуна):
 
 ![изображение](./images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
 
@@ -720,7 +720,7 @@ To download the software, click on the required app (in this screenshot, either 
 
 **AAPSClient** может быть перенесено на телефон и параллельно загружено на часы так же, как и приложение **AAPS** Wear, как подробно описано в [Передача Wear на телефон](remote-control.md#transferring-the-wear-app-onto-your-aaps-phone)
 
-### Option 4) Limited Nightscout (and other options) on a watch - Fitbit watches
+### Вариант 4) Nightscout с ограничениями (и другими опциями) на часах - часы Fitbit
 
 
 
@@ -734,7 +734,7 @@ To download the software, click on the required app (in this screenshot, either 
 
 Также можно использовать xDrip+ или SpikeApp, в локальном режиме веб-сервера. Пользователи могут установить свои сигналы оповещений и отправлять события, используя функциональность портала терапии Nightscout непосредственно с часов для отслеживания инсулина на борту (IOB), активные углеводы(COB), вводить информацию о питании (количество углеводов и болюсов) и проверить ГК.
 
-All will appear on the Nightscout timeline-graph, and as updated values in the IOB and COB fields. Поддержку пользователей можно найти в группе [Facebook, Sentinel.](https://www.facebook.com/groups/3185325128159614)
+Все они появятся в графике Nightscout и в обновленных значениях полей активного инсулина IOB и углеводов COB. Поддержку пользователей можно найти в группе [Facebook, Sentinel.](https://www.facebook.com/groups/3185325128159614)
 
 Есть дополнительные опции для часов FitBit, которые, как представляется, предназначены только для мониторинга. Сюда входит [Glance](https://glancewatchface.com/). Эти дополнительные опции описаны на веб-страницах [Nightscout](https://nightscout.github.io/nightscout/wearable/#fitbit)
 
