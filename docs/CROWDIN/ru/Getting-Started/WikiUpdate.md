@@ -92,19 +92,19 @@
 
 ## Апрель 2020
 
-- [Backdate insulin](CPbefore26-carbs-bolus) (i.e. given by syringe)
-- [Android 6 support will be discontinued in next master version](../Module/module-phone)
+- [инсулин задним числом](CPbefore26-carbs-bolus) (напр. введенный шприцем)
+- [Поддержка Android 6 будет прекращена в следующей мастер-версии](../Модуль/модуль-телефон)
 
 ## Март 2020
 
-- [Build apk with Android Studio 3.6.1](../Installing-AndroidAPS/Building-APK.md)
-- [DanaRS with firmware v3](../Configuration/DanaRS-Insulin-Pump.md) **cannot currently be used with AAPS!**
-- [Extended bolus and switch to open loop](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Update apk with Android Studio 3.6.1](../Installing-AndroidAPS/Update-to-new-version.md)
+- [Построение apk с помощью Android Studio 3.6.1](../Установка AndroidAPS/Создание-APK.md)
+- [DanaRS с прошивкой v3](../Configuration/DanaRS-Insulin-Pump.md) **в настоящее время не может быть использована с AAPS!**
+- [Пролонгированный болюс и переход на открытый цикл](Расширенные-углеводы-пролонгированный- болюс--и-переход-на-открытый-цикл-только-для-помп-dana-и-insight)
+- [Обновление apk с помощью Android Studio 3.6.1](../Installing-AndroidAPS/Обновление-на-новые-версии.md)
 
 ## Февраль 2020
 
-- [Automation caveats](Automation-good-practice-caveats)
+- [Автоматизация - предостережения](Автоматизация--практика-предостережения)
 - [Autosens](Open-APS-features-autosens) - short explanation
 - [Careportal alternatives](../Usage/CPbefore26.md)
 - [Extended bolus](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
@@ -151,16 +151,16 @@
 - [COB - wrong COB value detection](COB-calculation-detection-of-wrong-cob-values)
 - [Устранение неполадок, связанных с dexcom G6](DexcomG6-dexcom-g6-specific-troubleshooting)
 - [Objectives update version 2.5](../Usage/Objectives.md)
-- [Preferences update](../Configuration/Preferences.md)
-- [SGLT-2 inhibitors - do not use when looping](module-no-use-of-sglt-2-inhibitors)
-- [SMS Commands Troubleshooting](SMS-Commands-troubleshooting)
-- [xDrip - update G6 transmitter replacement](xdrip-replace-transmitter)
+- [Обновление настроек](../Configuration/Preferences.md)
+- [SGLT-2 ингибиторы - не использовать с петлей](module-no-use-of-sglt-2-inhibitors)
+- [SMS-команды-устранения неполадок](SMS-Commands-troubleshooting)
+- [xDrip - замена трансмиттера G6 - обновление](xdrip-replace-transmitter)
 
 ## Сентябрь 2019 года
 
 - [Автоматизация](../Usage/Automation.md)
-- [Bolus calculator](Screenshots-wrong-cob-detection) - slow carb absorption
-- [Nightscout security](Nightscout-security-considerations)
+- [Калькулятор болюса](Screenshots-wrong-cob-detection) - медленное поглощение углеводов
+- [Безопасность Nightscout](Nightscout-security-considerations)
 - [Profile timeshift](Profiles-time-shift) (more details)
 - [Удаленный мониторинг](../Children/Children.md)
 - [What is a closed loop system?](../Getting-Started/ClosedLoop.md)
