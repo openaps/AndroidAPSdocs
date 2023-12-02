@@ -1,13 +1,13 @@
-# Docs updates & changes
+# Обновления и изменения в документации
 
 ## Февраль 2022
 
-- [BG quality warning sign](Screenshots-bg-warning-sign) @tanja
-- [Medtronic pump update](../Configuration/MedtronicPump.md) @dottedfingertips
-- [Necessary checks after update to AAPS 3.0](../Installing-AndroidAPS/update3_0.md) @tanja
+- [предупреждающий знак о качестве данных ГК](Screenshots-bg-warning-sign) @tanja
+- [Обновление информации по помпам Medtronic](../Configuration/MedtronicPump.md) @dottedfingertips
+- [Необходимые проверки после обновления до AAPS 3.0](../Installing-AndroidAPS/update3_0.md) @tanja
 - [Omnipod Dash](../Configuration/OmnipodDASH.md) @Freloner @ robertrub @vanelsberg
-- Update docs for AAPS 3.0 (partly) @xJoe
-- [Wear OS for AAPS 3.0](../Configuration/Watchfaces.md) @peterleimbach
+- Обновление документации по AAPS 3.0 (частично) @xJoe
+- [Wear OS для AAPS 3.0](../Configuration/Watchfaces.md) @peterleimbach
 
 ## Январь 2022
 
