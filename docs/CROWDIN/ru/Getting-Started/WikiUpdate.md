@@ -11,84 +11,84 @@
 
 ## Январь 2022
 
-- [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) - update @tanja
+- [Устранение неполадок Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) - обновление @tanja
 
 ## Декабрь 2021
 
-- [Building the APK](../Installing-AndroidAPS/Building-APK.md) - update Android Studio Arctic Fox | 2020.3.1 @tanja
-- [Dana-i](../Configuration/DanaRS-Insulin-Pump.md) information added @MilosKozak
+- [Создание APK](../Installing-AndroidAPS/Building-APK.md) - обновление Android Studio Arctic Fox | 2020.3.1 @tanja
+- [Dana-i](../Configuration/DanaRS-Insulin-Pump.md) добавлена информация @MilosKozak
 
 ## ноябрь 2021
 
-- Best practices for calibrating a [libre 2 sensor](Libre2-best-practices-for-calibrating-a-libre-2-sensor)
-- [ISF](FAQ-impact) reformulation of impact
-- Update [troubleshooting Android stduio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
-- Removed patched [Dexcom](../Hardware/DexcomG6.md) app as it is obsolete
+- Наилучшие методы калибровки [сенсора libre 2 ](Libre2-best-practices-for-calibrating-a-libre-2-sensor)
+- [ISF](FAQ-impact) изменение текста о воздействии
+- Обновление [ устранение неполадок Android Studio ](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
+- Удалено модифицированное приложение [Dexcom](../Hardware/DexcomG6.md) как устаревшее
 
 ## Октябрь 2021
 
-- [Release notes](../Installing-AndroidAPS/Releasenotes.md) AAPS 3.0 beta
+- [Примечания к выпуску](../Installing-AndroidAPS/Releasenotes.md) AAPS 3.0 бета-версия
 
 ## Сентябрь 2021 года
 
-- Recommended computer specification to [build AAPS app](Building-APK-recommended-specification-of-computer-for-building-apk-file)
+- Рекомендуемая спецификация компьютера для [сборки приложения AAPS ](Building-APK-recommended-specification-of-computer-for-building-apk-file)
 
 ## Июнь 2021
 
-- [Watchface sideload](../Configuration/Watchfaces.md)
+- [Сторонняя/параллельная загрузка циферблатов](../Configuration/Watchfaces.md)
 
 ## Апрель 2021
 
-- List of [communication devices](module-additional-communication-device) for Omnipod and Medtronic pumps
-- AAPS predictions in [Nightscout](Nightscout-manual-nightscout-setup)
+- Список [устройств коммуникации](module-additional-communication-device) для помп Omnipod и Medtronic
+- Прогнозирование AAPS в [Nightscout](Nightscout-manual-nightscout-setup)
 
 ## Март 2021
 
-- Dev communication moved from gitter to [discord](https://discord.gg/4fQUWHZ4Mw)
+- * общение ветки разработчиков Dev переместились с gitter на [discord](https://discord.gg/4fQUWHZ4Mw)
 
 ## Февраль 2021
 
-- New navigation bar and [language switch](../changelanguage.md)
+- Новая панель навигации и [переключение языка](../changelanguage.md)
 
 ## Январь 2021
 
-- [Action tab](Screenshots-action-tab) - more details on page 'AAPS screens'
-- Dexcom G6 with [Build Your Own Dexcom App](DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
-- Libre smart reader [battery level](Screenshots-sensor-level-battery)
-- [Objectives](Objectives-objective-3-prove-your-knowledge) - new questions
-- Other [new AAPS 2.8.0 functions](Releasenotes-version-2-8-0)
+- [Вкладка Действия](Screenshots-action-tab) - больше подробностей на странице 'AAPS экраны'
+- Dexcom G6 и [создайте собственное приложение Dexcom](DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
+- [уровень заряда батареи](Screenshots-sensor-level-battery) ридера Libre
+- [Цели](Objectives-objective-3-prove-your-knowledge) - новые вопросы
+- Другие [новые функции AAPS 2.8.0 ](Releasenotes-version-2-8-0)
 
 ## Декабрь 2020
 
-- [Libre 2](../Hardware/Libre2.md) - patched app does not work with US sensors
-- [OpenAPS hard-coded limits](Open-APS-features-overview-of-hard-coded-limits)
-- Sony Smartwatch 3 [Manual Installation of Google Play Service](../Usage/SonySW3.md)
+- [Libre 2 ](../Hardware/Libre2.md) пропатченное приложение не работает с сенсорами США
+- [OpenAPS жёсткие ограничения](Функции Open-APS-: обзор жестких ограничений)
+- Sony Smartwatch 3 [Установка вручную службы Google Play](../Usage/SonySW3.md)
 
 ## Октябрь 2020
 
-- Accu-Chek Combo - update [time adjustment daylight savings time](Timezone-traveling-time-adjustment-daylight-savings-time-dst)
-- Accu-Chek Insight - Option to [upload absolute values](Accu-Chek-Insight-Pump-settings-in-aaps)
-- Logs - more details about [folder location](../Usage/Accessing-logfiles.md)
-- Omnipod Eros - status update
-- [SMS commands - time sync](../Children/SMS-Commands.md)
+- Accu-Chek Combo - обновление [корректировки перехода на сезонное время](Timezone-traveling-time-adjustment-daylight-savings-time-dst)
+- Accu-Chek Insight - Возможность [передавать абсолютные величины](Accu-Chek-Insight-Pump-settings-in-aaps)
+- Журналы - подробнее о [расположении папки](../Usage/Accessing-logfiles.md)
+- Omnipod Eros - обновление статуса
+- [SMS команды - синхронизация времени](../Children/SMS-Commands.md)
 
 ## Сентябрь 2020 года
 
-- Major update for new AAPS version 2.7
-- For details see `release notes <Releasenotes-version-2-7-0>`
+- Большое обновление для новой версии AAPS 2.7
+- Подробнее см `о версии<Releasenotes-version-2-7-0>`
 
 ## Июнь 2020
 
-- [Libre 2](../Hardware/Libre2.md) - more details patched Libre Link app & use of bluetooth transmitters
-- [Time zone travelling](../Usage/Timezone-traveling.md) with Libre 2
+- [Libre 2](../Hardware/Libre2.md) - более подробная информация о пропатченном приложении Libre Link app & использование трансмиттеров Bluetooth
+- [Пересечение часовых поясов в поездках](../Usage/Timezone-traveling.md) с Libre 2
 
 ## Май 2020
 
-- [Extended bolus only for Dana + Insight pumps](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Insight deactivate vibration](Accu-Chek-Insight-Pump-vibration) (firmware 3.x only)
-- [Minimal request rate](Preferences-minimal-request-change) to reduce number of notifications in open loop mode
-- [Patched Libre Link app](Libre2-step-1-build-your-own-patched-librelink-app) - check if correctly patched
-- [Prediction lines](Screenshots-prediction-lines) - more details
+- [Расширенный болюс только для помп Dana + Insight](Расширенные-углероды-пролонгированный- болюс--и-переход-на-открытый-цикл-только-для-помп-dana-и-insight)
+- [Insight отключение вибрации](Accu-Chek-Insight-Pump-vibration) (только прошивка 3.x)
+- [Минимальная частота запросов](Preferences-minimal-request-change) для уменьшения количества уведомлений в режиме открытого цикла
+- [Patched Libre Link app](Libre2-step-1-build-your-own-patched-librelink-app) - проверьте, корректно ли исправлено
+- [Строки прогнозов](Screenshots-prediction-lines) - подробнее
 
 ## Апрель 2020
 
