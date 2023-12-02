@@ -18,6 +18,9 @@ If you want to go back in objectives see [explanation below](Objectives-go-back-
 
 ## Objective 2: Learn how to control AAPS
 
+As part of this objective you to learn to navigate through AAPS screens and to perform basic actions in AAPS which you will come across on a daily basis later. You will learn how to put a screen or a plugin either to the top scrollable menu bar or let it show via the hamburger menue on the top left list of enabled plugins.
+
+Basic navigation tips:
 - Perform several actions in AAPS as described in this objective.
 
 - Click on the orange text "Not completed yet" to access the to-dos.
@@ -27,6 +30,8 @@ If you want to go back in objectives see [explanation below](Objectives-go-back-
   ```{image} ../images/Objective2_V2_5.png
   :alt: Screenshot objective 2
   ```
+- Actions to complete the obejctive are:
+
 
 (Objectives-objective-3-prove-your-knowledge)=
 ## Objective 3: Prove your knowledge
