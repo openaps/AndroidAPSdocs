@@ -10,7 +10,7 @@
 
 ```{admonition} make git.exe available via Windows PATH
 :class: заметка
-Убедитесь, что сможете обратиться к git.exe без префикса, так как Android Studio нуждается в этом для поиска git.exe. It will then automatically sets the path to git.exe correct in the Android Studio settings.
+Убедитесь, что сможете обратиться к git.exe без префикса, так как Android Studio нуждается в этом для поиска git.exe. Тогда путь к git.exe установится автоматически корректно в настройках Android Studio.
 
 ```
 
@@ -67,13 +67,13 @@
 
 - Откройте окно терминала в Android Studio
 
-- Enter `git --version` (without quotation marks and no spaces between the two - \[minus sign\]!) and press Return
+- Введите `git --version` (версия-- git) (без кавычек и без пробелов между знаками минус!) и нажмите Ввод
 
   ```{image} ../images/AndroidStudio_gitversion1.png
   :alt: git-версия
   ```
 
-- If git is installed and connected properly you will receive an information about the installed version that looks as follows:
+- Если git установлен и подключен правильно, вы получите информацию об установленной версии, которая выглядит следующим образом:
 
   ```{image} ../images/AndroidStudio_gitversion2.png
   :alt: результат git-версия
@@ -81,7 +81,7 @@
 
 ## Mac
 
-- Любая версия git должна работать. For example [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
-- Use homebrew to install git: `` `$ brew install git` ``.
+- Любая версия git должна работать. Например [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+- Используйте homebrew для установки git: `$ brew install git.`.
 - Подробности об установке git см. в [официальной git документации](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 - Если вы устанавливаете git через homebrew, то нет необходимости изменять какие-либо настройки. На всякий случай: Их можно найти здесь: Android Studio - Настройки.
