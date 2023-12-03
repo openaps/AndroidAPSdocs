@@ -425,7 +425,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - Careportal tab / menu removed - more details [here](../Usage/CPbefore26.md)
 
-- New [Local Profile plugin](Config-Builder-local-profile)
+- Новый модуль (расширение/плагин) [ Локальный Профиль](Config-Builder-local-profile)
 
   - Local profile can hold more than 1 profile
   - Profiles can be cloned and edited
@@ -435,7 +435,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - SimpleProfile is removed
 
-- [Extended bolus](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
+- [Пролонгированный болюс](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) - закрытый цикл будет отключен
 
 - MDT plugin: Fixed bug with duplicated entries
 
