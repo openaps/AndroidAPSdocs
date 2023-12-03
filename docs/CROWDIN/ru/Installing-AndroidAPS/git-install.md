@@ -4,14 +4,13 @@
 
 ### 1. Загрузите git
 
-- **You have to be online all of the time as Android Studio downloads several updates!**
-- Любая версия git должна работать. For example [https://git-scm.com/download/win](https://git-scm.com/download/win).
-- Make sure to note down the installation path. Он понадобится на следующем шаге.
+- **Вы должны быть в сети когда Android Studio загружает обновления!**
+- Любая версия git должна работать. Например [https://git-scm.com/download/win](https://git-scm.com/download/win).
+- Убедитесь, что знаете путь установки. Он понадобится на следующем шаге.
 
 ```{admonition} make git.exe available via Windows PATH
-:class: note
-
-Make sure that you can call git.exe without the prefing path as Android Studio needs this to find git.exe. It will then automatically sets the path to git.exe correct in the Android Studio settings.
+:class: заметка
+Убедитесь, что сможете обратиться к git.exe без префикса, так как Android Studio нуждается в этом для поиска git.exe. It will then automatically sets the path to git.exe correct in the Android Studio settings.
 
 ```
 
@@ -21,39 +20,39 @@ Make sure that you can call git.exe without the prefing path as Android Studio n
 
 ### 2. Задайте путь к git в параметрах Android Studio
 
-- Open File > Settings
+- Открыть файл > Параметры
 
   ```{image} ../images/Update_GitSettings1.png
   :alt: Android Studio - открыть настройки
   ```
 
-- Click the small triangle next to Version Control (1.) to open the sub-menu.
+- Нажмите на маленький треугольник рядом с Контролем Версий (1.) чтобы открыть подменю.
 
-- Click Git (2.).
+- Нажмите Git (2.).
 
-- Make sure update method "Merge" (3.) is selected.
+- Убедитесь, что выбран метод обновления "Слияние" (merge) (3.).
 
-- Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
+- Проверьте, может ли Android Studio найти путь к файлу git.exe автоматически, нажав кнопку "Тест" (4.)
 
   ```{image} ../images/AndroidStudio361_09.png
   :alt: Android Studio - настройки
   ```
 
-- If automatic setting is successful git version will be displayed.
+- Если автоматическая настройка будет успешной, то будет показана версия git.
 
-- Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
+- Нажмите кнопку "OK" в диалоговом окне (1.) и "OK" в окне параметров (2.).
 
   ```{image} ../images/AndroidStudio361_10.png
   :alt: автоматическая установка git прошла успешно
   ```
 
-- In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
+- В случае, если файл git.exe не найден, нажмите кнопку "OK" в диалоговом окне (1), а затем кнопку с тремя точками (2.).
 
-- Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where it can be found. You are looking for git.exe located in binfolder.
+- Используйте функцию [ поиск ](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) в проводнике Windows для поиска "git.exe", если вы не уверены в том, где его можно найти. Вы ищете файл git.exe, находящийся в папке \bin\.
 
-- Select path to git.exe and make sure you selected the one in **\\bin\\** folder (3.) and click "OK" (4.).
+- * Выберите путь к файлу git.exe, убедиdibcm, что выбрана папка ** \bin\ ** (3.) и нажмите кнопку "OK" (4).
 
-- Close settings window by clicking "OK" button (5.).
+- Закройте окно параметров, нажав кнопку "OK" (5.).
 
   ```{image} ../images/AndroidStudio361_11.png
   :alt: Автоматическая установка git не выполнена
@@ -61,12 +60,12 @@ Make sure that you can call git.exe without the prefing path as Android Studio n
 
 ### 3. Перезагрузитесь
 
-- Reboot your PC to update System Environment.
+- Перезагрузите компьютер, чтобы обновить среду системы.
 
 (git-install-check-git-settings-in-android-studio)=
 ### 4. Проверьте параметры git в Android Studio
 
-- Open Terminal window in Android Studio
+- Откройте окно терминала в Android Studio
 
 - Enter `git --version` (without quotation marks and no spaces between the two - \[minus sign\]!) and press Return
 
