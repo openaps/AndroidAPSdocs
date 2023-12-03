@@ -10,7 +10,7 @@ In the end user license agreement you find important information about the legac
 
 Please read it carefully.
 
-If you don't understand and can't agree to the end user license agreement please don't use AAPS at all!
+If you don't understand or can't agree to the end user license agreement please don't use AAPS at all!
 
 If you understand and agree please click the "I UNDERSTAND AND AGREE" button and follow the setup wizard.
 
@@ -31,6 +31,18 @@ Battery consumption on cell phones is still a sensitive issue, as the performanc
 However, since AAPS needs to run regularly, e.g. to receive the blood sugar every few minutes, to apply the algorithm with which it decides how to deal with it on your behalf based on your specifications, it must be allowed to do so by Android.
 
 You do this by confirming the setting.
+
+Please click the "ASK FOR PERMISSION" button.
+
+![image](../images/setup-wizard/Screenshot_20231202_125750.png)
+
+Please select "AlloW".
+
+![image](../images/setup-wizard/Screenshot_20231202_125813.png)
+
+Android requires special permission for apps if they want to send you notifications.
+
+While it is a good feature to disable notifications e.g. by social media apps it is essential that you allow AAPS to send you notifications,
 
 Please click the "ASK FOR PERMISSION" button.
 
