@@ -202,19 +202,19 @@ Release date: 31-01-2022
 
 - You can start activity temporary target during creation of profile switch @MilosKozak
 
-- NSProfile is gone, just local profile can be used. Local profile can be [synced to NS](update3_0-nightscout-profile-cannot-be-pushed). @MilosKozak.
+- NSProfile отсутствует, остался только локальный профиль. Локальный профиль может быть [синхронизирован с NS](update3_0-nightscout-profile-cannot-be-pushed). @MilosKozak.
 
-- Forgotten [master password reset procedure](update3_0-reset-master-password) @MilosKozak
+- [процедура сброса забытого пароля](update3_0-reset-master-password) @MilosKozak
 
-- User actions tracing @Philoul
+- Отслеживание действий пользователя @Philoul
 
-- New automation TempTargetValue trigger @Philoul
+- Новый триггер автоматизации - значение временной цели - TempTargetValue @Philoul
 
-- New automation Careportal action @Philoul
+- Новая автоматизация на портале терапии @Philoul
 
-- Add Bolus reminder in Carbs Dialog @Philoul
+- Напоминание о дополнительном болюсе в диалоге об углеводах @Philoul
 
-- Bolus Wizard improvement
+- Улучшение калькулятора болюса
 
 - UI improvements @MilosKozak
 
