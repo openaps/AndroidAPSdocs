@@ -165,7 +165,7 @@ Nous ne traduisons pas les images pour le moment.
 
 - Les captures d'écran de pages web doivent être au maximum de **1050 pixels de largeur**.
 - Diagrams of process flows should be up to **1050 pixels wide**.
-- Les captures d'écran de l'application doivent être au maximum de **300 à 400 pixels de largeur**.
+- Screenshots from the app should be up to **500 pixels wide**.
 
 ### Liens
 
