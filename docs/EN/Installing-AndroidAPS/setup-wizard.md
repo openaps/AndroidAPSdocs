@@ -2,7 +2,7 @@
 
 ![image](../images/setup-wizard/Screenshot_20231202_125636.png)
 
-This is just the welcome message which you can skip with the next button.
+This is just the welcome message which you can skip with the "NEXT" button.
 
 ![image](../images/setup-wizard/Screenshot_20231202_125650.png)
 
@@ -12,17 +12,17 @@ Please read it carefully.
 
 If you don't understand and can't agree to the end user license agreement please don't use AAPS at all!
 
-If you understand and agree please click the named button and follow the setup wizard.
+If you understand and agree please click the "I UNDERSTAND AND AGREE" button and follow the setup wizard.
 
 ![image](../images/setup-wizard/Screenshot_20231202_125709.png)
-
-Click the next button.
 
 AAPS needs some requirements to operate correctly.
 
 In the following screens you are asked several question you have to agree to get AAPS working. The wizard itself explains why he asks for the relevant setting.
 
 We try here to give some more background information, translate more technical speak into common language or explain the reason.
+
+Please click the "NEXT" button.
 
 ![image](../images/setup-wizard/Screenshot_20231202_125721.png)
 
@@ -32,7 +32,7 @@ However, since AAPS needs to run regularly, e.g. to receive the blood sugar ever
 
 You do this by confirming the setting.
 
-Please click the "ask for permission" button.
+Please click the "ASK FOR PERMISSION" button.
 
 ![image](../images/setup-wizard/Screenshot_20231202_125833.png)
 
@@ -52,7 +52,7 @@ Android binds the usage of blutetooth communication on the ability to use locati
 
 AAPS uses bluetooth to communicatte in general with your CGMS and pump if it is directly controlled by AAPS and not another app which is used by AAPS. Details may differ from setup to setup.
 
-Please click the "ask for permission" button.
+Please click the "ASK FOR PERMISSION" button.
 
 ![image](../images/setup-wizard/Screenshot_20231202_125939.png)
 
@@ -62,17 +62,17 @@ Please click "While using the app".
 
 ![image](../images/setup-wizard/Screenshot_20231202_130002.png)
 
-Please click the "next" button.
+Please click the "NEXT" button.
 
 ![image](../images/setup-wizard/Screenshot_20231202_130012.png)
 
 AAPS needs to write logging information to the permanent storage of you smartphone. Permanent storage means that it will be available even after rebooting your mobile. Other information is just lost as it was not saved to permanent storage.
 
-Please click the "ask for permission" button.
+Please click the "ASK FOR PERMISSION" button.
 
 ![image](../images/setup-wizard/Screenshot_20231202_130022.png)
 
-Please click the "Allow" button.
+Please click "Allow".
 
 ![image](../images/setup-wizard/Screenshot_20231202_130031.png)
 
@@ -80,7 +80,7 @@ You are getting informed that you have to reboot your smartphone after this chan
 
 Please don't stop the setup wizard now. You can do it after finishing the setup wizard.
 
-Please click the "next" button.
+Please click "OK" and then the "NEXT" button.
 
 ![image](../images/setup-wizard/Screenshot_20231202_130122.png)
 
@@ -88,7 +88,7 @@ As the configuration of AAPS contains some sensitive data (e.g. API_KEY for acce
 
 The second sentence is very important. Please make a backup copy of it e.g. on Google Drive. Google Drive is a good place as it is backuped by Google for you. Your smartphone or pc can crash and may be you have no actual copy.
 
-After filling in the password twice please click the "next" button.
+After filling in the password twice please click the "NEXT" button.
 
 ![image](../images/setup-wizard/Screenshot_20231202_130136.png)
 
@@ -104,23 +104,23 @@ They get
 
 Though it's really helpful.
 
-Please enable the "Rabric Uload" by sliding the slider to the right.
+Please enable the "Fabric Uload" by sliding the slider to the right.
 
 ![image](../images/setup-wizard/Screenshot_20231202_130147.png)
 
-Furthermore you can identify yourself that just in case the developers want to reach out to you for questions or urgend concerns they can reach you.
+Furthermore you can identify yourself that just in case the developers want to reach out to you for questions or urgent concerns.
 
 ![image](../images/setup-wizard/Screenshot_20231202_135748.png)
 
-After filling in your "contact information" click the "ok" button. Contact information can be your identification on Facebook, on Discord, ... Just the information you think is helpful to contact you best.
+After filling in your "contact information" click the "OK" button. Contact information can be your identification on Facebook, on Discord, ... Just the information you think is helpful to contact you best.
 
 ![image](../images/setup-wizard/Screenshot_20231202_135807.png)
 
-Please click the "next" button.
+Please click the "NEXT" button.
 
 ![image](../images/setup-wizard/Screenshot_20231202_135830.png)
 
-Please select if your blood sugar values are in mg/dl or mmol/L and then please click the "next" button.
+Please select if your blood sugar values are in mg/dl or mmol/L and then please click the "NEXT" button.
 
 ![image](../images/setup-wizard/Screenshot_20231202_135853.png)
 
@@ -131,6 +131,8 @@ It is here only for the graphical persentation of the diagram and nothing else.
 Your blood sugar target e.g. is configured in your profile.
 
 Your range to analyze TIR (time in range) is configured in your reporting server.
+
+Please press the "NEXT" button.
 
 ![image](../images/setup-wizard/Screenshot_20231202_140916.png)
 
@@ -146,7 +148,7 @@ In this case we select Nightscout as reporting server and will configure it.
 
 For Tidepool it is even simpler as you only need your personal login information.
 
-Please press the "next" button.
+Please press the "NEXT" button.
 
 ![image](../images/setup-wizard/Screenshot_20231202_140952.png)
 
@@ -158,7 +160,7 @@ Please click on "Nightscout URL".
 
 Enter you Nightscout URL which is your personal nightscout server. It's just an URL you setup yourself or you got from your service provider for nightscout.
 
-Please click the "ok" button.
+Please click the "OK" button.
 
 ![image](../images/setup-wizard/Screenshot_20231202_141131.png)
 
@@ -207,7 +209,7 @@ Enable "Create announcements from errors" and "Create announcements from carbs r
 
 Let "Slow down uploads" disabled. You only use it if for some untypical reasons a lot of information is to be transfered to the nightscout server and the nightscout server is slow in processing this data.
 
-Go back to the screen before and select "next" to go to the next screen.
+Go back to the screen before and select "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_141445.png)
 
@@ -217,7 +219,7 @@ It can be anything. It's just for differantiation.
 
 To keep it simple just enter prename and lastname.
 
-Press "next" to go to the next screen.
+Press "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_141817.png)
 
@@ -227,7 +229,7 @@ Further you configure the maximum allowed bolus for a meal. That means how much 
 
 the second limit is similar but now for the max carb intake you expect.
 
-Press "next" to go to the next screen.
+Press "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_141840.png)
 
@@ -240,7 +242,7 @@ The names on the screen should be self-explaing.
 For advanced users or medical studies there is the possibility to define with Free-Preak Ored your own profil how insulin acts. Please don't use it.
 :::
 
-Press "next" to go to the next screen.
+Press "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_141912.png)
 
@@ -250,12 +252,13 @@ As there are several options available we don't explain the configuration for al
 
 Please look in the documentation of AAPS for your BG source.
 
+Press "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_141925.png)
 
 If you are using Dexcom G6 with BYODA too enable the visibility in the top level menu by clicking the checkbox on the right side.
 
-Press "next" to go to the next screen.
+Press "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
@@ -263,7 +266,7 @@ If you are using Dexcom G6 with BYODA too click on the gearwheel to access the s
 
 Enable the "Upload BG data to NS" and "Log sensor change to NS".
 
-Press "next" to go to the next screen.
+Press "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_142027.png)
 
@@ -282,7 +285,7 @@ You have no chance to be successfully with AAPS either.
 If a robot has got a wrong setup of control set he will fail - consistenly.
 :::
 
-Press "next" to go to the next screen.
+Press "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_142143.png)
 
@@ -294,7 +297,7 @@ You can have several profiles if needed. We only create one hear.
 :class: information
 The used profile here is only to show you how to enter data.
 
-It is not a general good profile or somethind.
+It is not a general good profile or something very well.
 
 Don't use it!
 :::
@@ -311,19 +314,19 @@ Press "ISF".
 
 ![image](../images/setup-wizard/Screenshot_20231202_143009.png)
 
-Enter your IC values.
+Enter your ISF values.
 
 Press "BAS".
 
 ![image](../images/setup-wizard/Screenshot_20231202_143623.png)
 
-Enter your IC values.
+Enter your basal values.
 
 Press "TARG".
 
 ![image](../images/setup-wizard/Screenshot_20231202_143709.png)
 
-Enter your blood sugar target.
+Enter your blood sugar target values.
 
 For open looping it can be a wider range as otherwise AAPS notifies you permanently to change the temporary basal rate or another setting which can be exhausting.
 
@@ -333,17 +336,15 @@ Confirm the target.
 
 ![image](../images/setup-wizard/Screenshot_20231202_143724.png)
 
-Save the profile by clicking on "save".
+Save the profile by clicking on "SAVE".
 
 After saving a new buttom "Activate Profile" occurs.
 
 
 :::{admonition} several defined but only one active profile
 :class: information
-You can several profiles been defined but only one activated profile.
+You can have several profiles been defined but only one activated profile.
 :::
-
-Press "next" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_143741.png)
 
@@ -353,7 +354,10 @@ Press "Activate Profile".
 
 The profile switch dialog appears. In this case let it as preset.
 
+:::{admonition} several defined but only one active profile
+:class: information
 You will learn later how to use this general dialog to handle situations like illness or sport where you need to change your profile suitable for the circumstances.
+:::
 
 Press "OK".
 
@@ -365,7 +369,7 @@ You can confirm it with pressing "OK".
 
 ![image](../images/setup-wizard/Screenshot_20231202_143833.png)
 
-Press "next" to go to the next screen.
+Press "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_143909.png)
 
@@ -377,41 +381,49 @@ If your have alread setup your profile in the steps before and you know how to c
 
 Otherwise leave the setup wizard with the arrow in the top left corner and let AAPS first show you only some blood glucose values. You can come back anytime or use one of the direct configuration options (not using the wizard).
 
-Press "next" to go to the next screen.
+Press "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_143935.png)
 
 In this case I select "Virtual Pump".
 
-Press "next" to go to the next screen.
+Press "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_144014.png)
 
 Let the standard OpenAPS SMB algorithm seleced.
 
+:::{admonition} only use the older algorithm AMA if you know what you are doing
+:class: information
 OpenAPS AMA is an older algorithm which has not supported micro bolus to correct high values. Only use it if you know what you are doing e.g. an experienced OpenAPS user who  migrated to AAPS.
+:::
 
-Press "next" to go to the next screen.
+Press "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 
-Only read the text and change nothing here. Through the limitations which are imposed by the objectives you can't use closed and neither SMB features at the moment.
+Only read the text and change nothing here.
 
+Through the limitations which are imposed by the objectives you can't use neither closed loop nor SMB features at the moment anyway.
+
+:::{admonition} several defined but only one active profile
+:class: information
 Please be patient and trust us that patience will pay off for you. It's a proven experience of thousands of users who are successful looping with AAPS.
+:::
 
-Press "next" to go to the next screen.
+Press "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_144049.png)
 
 Let "Open Loog" selected.
 
-Press "next" to go to the next screen.
+Press "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_144101.png)
 
 Let "Sensitivity Oref1" the standard for the sensitivty plugins selected.
 
-Press "next" to go to the next screen.
+Press "NEXT" to go to the next screen.
 
 ![image](../images/setup-wizard/Screenshot_20231202_144113.png)
 
