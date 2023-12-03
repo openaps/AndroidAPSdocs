@@ -38,24 +38,24 @@
 ### Android 8
 
 - Используйте AAPS версию **2.8.2.1**
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.8.2.1
+- Скачайте код AAPS с <https://github.com/nightscout/AndroidAPS> ветка 2.8.2.1
 
 ### Android 7
 
-- Use AAPS version **2.6.2**
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.6.2
+- Используйте AAPS версию **2.6.2**
+- Скачайте код AAPS с <https://github.com/nightscout/AndroidAPS> ветка 2.6.2
 
-## WearOS version
+## Версия WearOS
 
-- AAPS 3.2 requires at least WearOS API level 28 (Android 9)
+- AAPS 3.2 требует не ниже WearOS API уровня 28 (Android 9)
 
-## Version 3.2.0.0 dedicated to @Philoul
+## Версия 3.2.0.0, посвященная @Philoul
 
-Release date: 23-10-2023
+Дата выпуска: 23-10-2023
 
 ### Важные Примечания
 
-- NS 15 is required
+- Требуется NS 15
 - While using websockets in NS v3 plugin treatments entered through NS UI (plus button) and other applications using v1 API are not sent to AAPS. This will be fixed in future release of NS. Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internaly. The same is valid for AAPS and AAPSClient itself.
 - Websockets in v3 plugin works similiar way to v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the oposite side it means delays in exchanging data. Please read [here](Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
 - If you are using xdrip as cgm source you must select it again after update due to internal changes
