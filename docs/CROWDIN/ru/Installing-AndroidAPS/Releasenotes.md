@@ -445,7 +445,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - Different UI and internal improvements
 
-- [Wear complications](../Configuration/Watchfaces.md)
+- [Усложнения для циферблатов Wear](../Configuration/Watchfaces.md)
 
 - New [SMS commands](../Children/SMS-Commands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
 
