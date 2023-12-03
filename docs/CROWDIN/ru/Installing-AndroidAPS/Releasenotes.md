@@ -1,43 +1,43 @@
 (Releasenotes-release-notes)=
 # Примечания к изменениям в версиях
 
-Please follow the instructions in the [update manual](../Installing-AndroidAPS/Update-to-new-version.md). На ее страницах решаются наиболее распространенные проблемы связанные с обновлениями.
+Следуйте инструкциям [ в руководстве по обновлению](../Installing-AndroidAPS/Update-to-new-version.md). На ее страницах решаются наиболее распространенные проблемы связанные с обновлениями.
 
 Как только будет доступно новое обновление вы получите следующую информацию:
 
 ```{image} ../images/AAPS_LoopDisable90days.png
-:alt: Update info
+:alt: Информация об обновлении
 ```
 
-У вас есть 60 дней для обновления. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../Getting-Started/Glossary.md)) as in [objective 6](../Usage/Objectives.html).
+У вас есть 60 дней для обновления. Если вы не обновитесь в течение 60 дней AAPS войдет в режим LGS (приостановка на низких ГК - см. [глоссарий](../Getting-Started/Glossary.md)), [цель 6](../Usage/Objectives.html).
 
 Если вы не обновитесь еще 30 дней (90 дней с новой даты выпуска) AAPS переключится в режим открытого цикла.
 
-Имейте в виду, что это изменение не предназначено для того, чтобы действовать вам на нервы, а существует по соображениям безопасности. New versions of AAPS do not only provide new features but also important safety fixes. Поэтому необходимо, чтобы каждый пользователь обновлял приложение как можно чаще.. К сожалению, все еще поступают сообщения об ошибках из очень старых версий, поэтому это попытка повысить безопасность каждого пользователя и всего сообщества. Благодарим за понимание!
+Имейте в виду, что это изменение не предназначено для того, чтобы действовать вам на нервы, а существует по соображениям безопасности. Новые версии AndroidAPS не только обеспечивают новые возможности, но и содержат исправления безопасности. Поэтому необходимо, чтобы каждый пользователь обновлял приложение как можно чаще.. К сожалению, все еще поступают сообщения об ошибках из очень старых версий, поэтому это попытка повысить безопасность каждого пользователя и всего сообщества. Благодарим за понимание!
 
 ```{admonition} First version of AAPS
-:class: note
+:class: примечание
 
-The first test version started already in 2015. In 2016 has been the first released version.
+Первая тестовая версия была запущена в 2015 году. В 2016 году была выпущена первая версия.
 
-The chronology of these releases is not available at the moment but as this questions is asked severeal times we document it here.
+Хронология этих выпусков пока не доступна, но так как эти вопросы часто задаются пользователями, мы фиксируем здесь ход событий.
 
 ```
 
 ## Версия Android и версия AAPS
 
-If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS v3 and up as it requires at least Android 9.
+Если смартфон имеет версию Android до Android 9, AAPS 3.. 0 и выше, будут недостуgys так как AAPS требует Android 9 и выше.
 
 Чтобы пользователи более старой версии Android могли применять старые версии AAPS для них была изменена только проверка версий. Никаких других улучшений не включено.
 
 ### Android 9 и выше
 
-- Use latest AAPS version
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS>
+- Пользуйтесь новейшей версией AAPS
+- Скачайте код AAPS с <https://github.com/nightscout/AndroidAPS>
 
 ### Android 8
 
-- Use AAPS version **2.8.2.1**
+- Используйте AAPS версию **2.8.2.1**
 - Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.8.2.1
 
 ### Android 7
