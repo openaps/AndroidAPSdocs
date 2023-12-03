@@ -105,10 +105,10 @@
 ## Февраль 2020
 
 - [Автоматизация - предостережения](Автоматизация--практика-предостережения)
-- [Autosens](Open-APS-features-autosens) - short explanation
-- [Careportal alternatives](../Usage/CPbefore26.md)
-- [Extended bolus](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
-- New [Local Profile plugin](Config-Builder-local-profile)
+- [Autosens](Open-APS-features-autosens) - краткое объяснение
+- [Альтернативы порталу терапии](../Usage/CPbefore26.md)
+- [Пролонгированный болюс](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) - закрытый цикл будет отключен
+- Новый модуль (расширение/плагин) [ Локальный Профиль](Config-Builder-local-profile)
 - [Sample Setup](../Getting-Started/Sample-Setup.md) - update Dexcom G6
 - [Version 2.6.0](Releasenotes-version-2-6-0) - major new features
 - [Wear complications](../Configuration/Watchfaces.md)
