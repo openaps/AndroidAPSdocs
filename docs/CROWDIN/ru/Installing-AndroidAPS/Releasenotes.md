@@ -57,9 +57,9 @@
 
 - Требуется NS 15
 - При подключении к NS через модуль v3 с помощью NS UI (кнопки плюс) и других приложений, использующих v1 APS, терапия не отправляется на AAPS. Это будет исправлено в будущем релизе NS. Всегда пользуйтесь одной и той же версией (v1 или v3) в AAPS и AAPSClient до тех пор, пока NS не полностью не переключится на v3. То же самое верно и для самого AAPS и AAPSClient.
-- Websockets in v3 plugin works similiar way to v1 plugin. Без веб-сокетов AAPS по графику загружает данные из NS, что снижает энергопотребление т. к. NS не подключен постоянно. С другой стороны это означает задержки в обмене данными. Please read [here](Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
-- If you are using xdrip as cgm source you must select it again after update due to internal changes
-- Tidepool can be used as a replacement of NS to pass first objective
+- Веб-сокеты в модуле v3 работают аналогично v1. Без веб-сокетов AAPS по графику загружает данные из NS, что снижает энергопотребление т. к. NS не подключен постоянно. С другой стороны это означает задержки в обмене данными. Прежде чем пользоваться, читайте [здесь](Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)важные комментарии разработчиков!
+- Если вы используете xdrip в качестве источника ГК, из-за внутренних изменений после обновления следует выбрать его снова
+- Для прохождения первой цели в качестве замены Nightscout может использоваться Tidepool
 - If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip it must be selected source "xDrip+ Sync Follower"
 - If you want to switch to ComboV2 driver, Ruffy must be uninstalled and pump paired again to AAPS
 - In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
