@@ -12,7 +12,7 @@ Even writers of the documentation themselves had to setup AAPS and decided to jo
 
 ## setup wizard
 
-Please follow the documentation for the setup wizard [here](./setup-wizard.
+Please follow the documentation for the setup wizard [here](./setup-wizard).
 
 (Smoothing-Blood-Glucose-Data-in-xDrip-smoothing-blood-glucose-data)=
 ## Smoothing blood glucose data
