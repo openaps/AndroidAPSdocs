@@ -60,41 +60,41 @@
 - Веб-сокеты в модуле v3 работают аналогично v1. Без веб-сокетов AAPS по графику загружает данные из NS, что снижает энергопотребление т. к. NS не подключен постоянно. С другой стороны это означает задержки в обмене данными. Прежде чем пользоваться, читайте [здесь](Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)важные комментарии разработчиков!
 - Если вы используете xdrip в качестве источника ГК, из-за внутренних изменений после обновления следует выбрать его снова
 - Для прохождения первой цели в качестве замены Nightscout может использоваться Tidepool
-- If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip it must be selected source "xDrip+ Sync Follower"
-- If you want to switch to ComboV2 driver, Ruffy must be uninstalled and pump paired again to AAPS
-- In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
+- Если вы отправляете на xDrip+ необходимо настроить модуль синхронизации xDrip. Для получения ГК от AAPS в xDrip необходимо выбрать источник "xDrip+ Sync Follower"
+- Если вы хотите переключиться на ComboV2, следует деинсталлировать Ruffy и заново подключить помпу к AAPS
+- Для использования модуля DynISF необходимо запустить Цель 11 (все предыдущие должны быть завершены, чтобы разрешить запуск 11)
 
 
 ### Изменения
 
-- EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
-- ComboV2 pump driver (no need of Ruffy) @dv1
-- Medtrum Nano driver @jbr7rr
-- Korean DanaI support @MilosKozak
-- Glunovo CGM support @christinadamianou
-- G7 support @MilosKozak @rICTx-T1D @khskekec
-- NSClient v3 plugin @MilosKozak
-- Tidepool support @MilosKozak
-- Smoothing plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
-- DynamicISF plugin @Chris Wilson, @tim2000s
-- Garmin watchface & HeartRate support @buessow
-- New logo @thiagomsoares
-- New watchface @Philoul
+- EOPatch2 / GlucomenDay - драйверы помп @jungsomyeonggithub @MilosKozak
+- Драйвер помпы ComboV2 (нет необходимости в Ruffy) @dv1
+- Драйвер Medtrum Nano @jbr7rr
+- * Поддержка корейской Dana-i @MilosKozak
+- Поддержка мониторинга Glunovo @christinadamianou
+- Поддержка G7 @MilosKozak @rICTx-T1D @khskekec
+- Модуль NSClient v3 @MilosKozak
+- Поддержка Tidepool @MilosKozak
+- Модуль для сглаживания @MilosKozak, @justmara, экспоненциальное сглаживание @nichi (Tsunami), Среднее сглаживание @jbr7rr
+- Модуль DynamicISF @Chris Wilson, @tim2000s
+- Циферблат для Garmin & Поддержка сердцебиения @buessow
+- Новый логотип @thiagomsoares
+- Новый циферблат @Philoul
 - fixed tons of issues from 3.1 version
-- allow add notes on more places @Sergey Zorchenko
-- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
-- new SMS commands LOOP LGS/CLOSED @pzadroga
-- wear translations @Andries-Smit
-- xdrip communication moved to separate module @MilosKozak
-- internal changes: updated libs versions, rx3 migration, new modules structure @MilosKozak
-- Diaconn driver fixes @miyeongkim
-- more database maintenance options @MilosKozak
-- AAPSClient provides info if main phone is plugged in electricity @MilosKozak
-- Change in BolusWizard. If CGM is not available percentage is ignored (ie 100% is used)
-- migration to kts build system @MilosKozak
-- improved CI integration @MilosKozak @buessow
-- tests cleaup @ryanhaining @MilosKozak
-- new 110k+ lines of code, changed 240k lines, 6884 changed files
+- больше мест для добавления заметок @Сергей Зорченко
+- Коррекция интерфейса @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
+- новые SMS команды LOOP LGS/CLOSED @pzadroga
+- переводы для wear @Andries-Smit
+- связь с xdrip перенесена в отдельный модуль @MilosKozak
+- внутренние изменения: обновленные версии библиотек, перенос rx3, новая структура модулей @MilosKozak
+- Исправления в драйвере Diaconn @miyeongkim
+- больше вариантов обслуживания базы данных @MilosKozak
+- AAPSClient предоставляет информацию о подключении основного телефона к эликтричеству @MilosKozak
+- Изменение в Калькуляторе болюса. Если ГК не доступна, процент игнорируется (используется 100%)
+- миграция на систему сборки Kts @MilosKozak
+- улучшена интеграция в CI @MilosKozak @buessow
+- чистка тестирования @ryanhaining @MilosKozak
+- новые 110k+ строк кода, изменены 240k строк, 6884 измененных файлов
 
 (Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
 ### Important comments on using v3 versus v1 API for Nightscout with AAPS
