@@ -51,19 +51,19 @@
 
 * Нажмите кнопку "Сохранить" в верхней части панели.
 
-## Nightscout as a paid SaaS (Software as a Service)
+## Nightscout как оплачиваемый SaaS (Software в качестве услуги)
 
-While Nightscout is an free open source software which you can download yourself free of charge you need
+В то время как Nightscout — бесплатное программное обеспечение с открытым исходным кодом, которое можно скачать бесплатно
 
-1. a cloud service provider to host your own Nightscout instance
+1. поставщик облачных сервисов для размещения вашего собственного экземпляра Nightscout
 
-2. invest time to setup your Nightscout instance and MongoDB and
+2. будьте готовы потратить время и настроить свойсайт Nightscout и MongoDB и
 
-3. operate your Nightscout instance which can be as easy as updating from time to time the Nightscout instance or much more complex if errors occur.
+3. управляйте своим сайтом Nightscout, что в принципе легко, и сводится к обновлению версии Nightscout или посложнее, если возникают ошибки.
 
-An alternative can be to pay for these SaaS services and get rid of these tasks.
+Альтернативой может быть оплата услуги SaaS и избавление от этих задач.
 
-Here you find a randomly ordered list of possible service providers. We will not recommend any of them but we want to give new users a place to jump to their web site and inform themself!
+Здесь вы найдете список возможных поставщиков услуг. Мы не рекомендуем ни одного из них, но мы хотим дать новым пользователям возможность перейти на их сайт и сообщить им о себе!
 
 [![ns.10be.de](../images/ns.10be.de-logo_halb_klein.jpg)](https://ns.10be.de/en/index.html)
 
