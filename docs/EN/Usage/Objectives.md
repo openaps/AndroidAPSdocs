@@ -18,7 +18,7 @@ If you want to go back in objectives see [explanation below](Objectives-go-back-
 
 ## Objective 2: Learn how to control AAPS
 
-As part of this objective you learn how to navigate through AAPS screens and how to perform basic actions in AAPS which you will come across on a daily basis later. You will learn how to put a screen or a plugin either to the top scrollable menu bar or let it show via the hamburger menue on the top left list of enabled plugins. 
+As part of this objective you learn how to navigate through AAPS screens and how to perform basic actions in AAPS which you will come across on a daily basis later. You will learn how to put a screen or a plugin either to the top scrollable menu bar or let it show via the hamburger menue on the top left list of enabled plugins. If your are not familiar with the AAPS homescreens and its navigation please refer to [AAPS Screens](../Getting-Started/Screenshots.md). Estimated time to complete this objective: 2 hours.
 
 Basic navigation tips:
 - Perform several actions in AAPS as described in this objective.
