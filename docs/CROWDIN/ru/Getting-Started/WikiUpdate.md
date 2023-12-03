@@ -109,48 +109,48 @@
 - [Альтернативы порталу терапии](../Usage/CPbefore26.md)
 - [Пролонгированный болюс](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) - закрытый цикл будет отключен
 - Новый модуль (расширение/плагин) [ Локальный Профиль](Config-Builder-local-profile)
-- [Sample Setup](../Getting-Started/Sample-Setup.md) - update Dexcom G6
-- [Version 2.6.0](Releasenotes-version-2-6-0) - major new features
-- [Wear complications](../Configuration/Watchfaces.md)
+- [Пример установки](../Getting-Started/Sample-Setup.md) - обновление Dexcom G6
+- [Версия 2.6.0](Releasenotes-version-2-6-0) - основные новые возможности
+- [Усложнения для циферблатов Wear](../Configuration/Watchfaces.md)
 
 ## Январь 2020
 
-- [Manual carb correction](Screenshots-carb-correction) for faulty carb entries
-- [Image size](make-a-PR-image-size) when editing docs
+- [Ручная коррекция углеводов](Screenshots-carb-correction) - для ошибок при занесении
+- [Размер Изображения](make-a-PR-image-size) при редактировании документации
 
 ## Декабрь 2019
 
-- [Android auto](../Usage/Android-auto.md) - setup with screenshots
-- [Accu-Chek Insight & Autotune](Accu-Chek-Insight-Pump-settings-in-aaps) - workaround for usage
-- [Glimp](Config-Builder-bg-source) - version 4.15.57 and newer supported
-- [Watchfaces](../Configuration/Watchfaces.md) - major update, way more details
-- [Watchface complications](Watchfaces-complications) - use your favorite watchface with AAPS data
+- Автомобильное приложение [Android auto ](../Usage/Android-auto.md) - установка со снимками экрана
+- [Accu-Chek Insight & Autotune](Accu-Chek-Insight-Pump-settings-in-aaps) - обходные пути при пользовании
+- [ Glimp ](Config-Builder-bg-source) - поддерживается только версия 4.15.57 и более поздние
+- [Циферблаты](../Configuration/Watchfaces.md) - большое обновление, гораздо больше подробностей
+- [Усложнения для циферблатов](Watchfaces-complications) - пользуйтесь любимыми циферблатами с данными AAPS
 
 ## ноябрь 2019
 
-- [Automation - deactivate when disabling loop](Automation-important-note)
-- [Dexcom G6 replace transmitter update](xdrip-replace-transmitter)
-- [Extended bolus - why they do not work in a loop context](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [FAQ - sports](FAQ-sports)
-- [Homescreen - lines on graph](Screenshots-section-f-main-graph)
-- [Insight - Disable absolute values in NS Client](Accu-Chek-Insight-Pump-settings-in-aaps)
-- [Medtronic pump - possible double entries](../Configuration/MedtronicPump.md)
-- [New Freestyle Libre 2 tutorial](../Hardware/Libre2.md)
-- [Profile switch with percentage - example](../Usage/Profiles.md)
-- [SMS commands update](../Children/SMS-Commands.md)
+- [Автоматизация - отключение при отключении цикла](Automation-important-note)
+- [Замена трансмиттера Dexcom G6 - обновление](xdrip-replace-transmitter)
+- [Расширенный / пролонгированный болюс - почему он не работает в контексте цикла](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [FAQ - спортивные вопросы](FAQ-sports)
+- [Главный экран - линии на графике](Screenshots-section-f-main-graph)
+- [Insight - отключить абсолютные значения в NS Client](Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Помпа Medtronic - возможные задвоения данных](../Configuration/MedtronicPump.md)
+- [Новая инструкция для Freestyle Libre 2](../Hardware/Libre2.md)
+- [Переключение профиля с процентами - пример](../Usage/Profiles.md)
+- [SMS--команды. Обновление](../Children/SMS-Commands.md)
 - [Устранение неполадок Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
-- [Troubleshooting - link collection](../Usage/troubleshooting.md)
-- Update - quick walk-through for experienced users
-- Docs - update [edit](make-a-PR-code-syntax) and [translation](translations#translation-of-the-documentation).
+- [Устранение неполадок - коллекция ссылок](../Usage/troubleshooting.md)
+- Обновление - краткая инструкция для опытных пользователей
+- Документация - обновление [редактирование](make-a-PR-code-syntax) и [перевод](translations#translation-of-the-documentation).
 
 ## Октябрь 2019
 
-- [AAPS version 2.5](Releasenotes-version-2-5-0) updates (especially on [update page](Update-to-new-version.md))
-- [AccuChek Insight - log options](Accu-Chek-Insight-Pump-settings-in-aaps)
-- [COB calculation on separate page](../Usage/COB-calculation.md)
-- [COB - wrong COB value detection](COB-calculation-detection-of-wrong-cob-values)
+- [AAPS версии 2.5](Releasenotes-version-2-5-0) обновления (особенно на странице [обновления](Update-to-new-version.md))
+- [AccuChek Insight - настройки журнала](Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Расчет активных углеводов COB на отдельной странице](../Usage/COB-calculation.md)
+- [Активные углеводы COB - обнаружение неверного значения COB](COB-calculation-detection-of-wrong-cob-values)
 - [Устранение неполадок, связанных с dexcom G6](DexcomG6-dexcom-g6-specific-troubleshooting)
-- [Objectives update version 2.5](../Usage/Objectives.md)
+- [Цели - Обновление для Версии 2.5](../Usage/Objectives.md)
 - [Обновление настроек](../Configuration/Preferences.md)
 - [SGLT-2 ингибиторы - не использовать с петлей](module-no-use-of-sglt-2-inhibitors)
 - [SMS-команды-устранения неполадок](SMS-Commands-troubleshooting)
@@ -161,13 +161,13 @@
 - [Автоматизация](../Usage/Automation.md)
 - [Калькулятор болюса](Screenshots-wrong-cob-detection) - медленное поглощение углеводов
 - [Безопасность Nightscout](Nightscout-security-considerations)
-- [Profile timeshift](Profiles-time-shift) (more details)
+- [Профиль - сдвиг по времени](Profiles-time-shift) (подробности)
 - [Удаленный мониторинг](../Children/Children.md)
-- [What is a closed loop system?](../Getting-Started/ClosedLoop.md)
+- [Что такое система замкнутого цикла?](../Getting-Started/ClosedLoop.md)
 
 ## Август 2019
 
-- Dexcom G6 patched app region
-- [Dexcom G6 new transmitter](xdrip-connect-g6-transmitter-for-the-first-time) ("firefly" / 8G...)
-- [What do I need?](index-what-do-i-need) - new structure & additional information
-- New structure
+- Модифицированное приложение Dexcom G6 - регионы
+- [Dexcom G6 - новый трансмиттер](xdrip-connect-g6-transmitter-for-the-first-time) ("Firefly" / 8G...)
+- [Что понадобится?](index-what-do-i-need) - новая структура & дополнительная информация
+- Новая структура
