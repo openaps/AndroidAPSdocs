@@ -59,24 +59,23 @@ Basic navigation tips:
 
 ## Objective 4: Starting on an open loop
 
-- Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
-- Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AAPS that you have accepted them.  Ensure this data shows in AAPS and Nightscout.
-- Enable [temp targets](../Usage/temptarget.md) if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo.
+As part of this objective you learn how to set tempory basal rates in AAPS and to verify if these basal rate changes are shown in AAPS and Nightscout. If your are not quite sure where to set basal rate changes please refer to [AAPS Screens - ACTIONS tab](../Getting-Started/Screenshots.md). Estimated time to complete this objective: 7 days.
+
+- Activate "Open Loop" either from Preferences, or by long press the Loop icon in the top right of the OVERVIEW screen.
+- Work through the [Preferences](../Configuration/Preferences.md) to set it up for you.
+- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them manually into your pump and confirm in AAPS that you have accepted them. Ensure this data is shown in AAPS and Nightscout.
+- Enable [temp targets](../Usage/temptarget.md) if necessary. Use HYPO temp targets to prevent the system from "overcorrecting" (correction is strong) following a hypo and a raise in blood glucose.
 
 ### Reduce number of notifications
 
-- To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l.
-
-- You might even want to wider upper limit (or disable Open Loop) at night.
-
-- In Preferences you can set a minimum percentage for suggestion of basal rate change.
+- To reduce the number of decisions to be made while in Open Loop set a wide target range like 90 - 150 mg/dl or 5.0 - 8.5 mmol/l.
+- You might even want to widen the upper limit (or disable Open Loop) during the night.
+- You can set a minimum percentage (in "preferences") which needs to be exceeded before basal rate changes are suggested/displayed.
 
   ```{image} ../images/OpenLoop_MinimalRequestChange2.png
   :alt: Open Loop minimal request change
   ```
-
-- Also, you do not need to act every 5 minutes on all suggestions...
+- Good to know: You do not need to act on each and every suggestion ...
 
 ## Objective 5: Understanding your open loop, including its temp basal recommendations
 
