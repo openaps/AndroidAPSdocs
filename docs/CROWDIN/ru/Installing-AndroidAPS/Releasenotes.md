@@ -96,25 +96,25 @@
 - чистка тестирования @ryanhaining @MilosKozak
 - новые 110k+ строк кода, изменены 240k строк, 6884 измененных файлов
 
-(Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
-### Important comments on using v3 versus v1 API for Nightscout with AAPS
+(важные-комментарии-об-использовании-v3-против-v1-API-для-Nightscout-с-AAPS)=
+### Важные комментарии об использовании API v3 по сравнению с v1 для Nightscout с AAPS
 
-v1 is the old protocol used for exchanging data between NS web site and NS server. It has many limitations
-- v1 sends only 2 days of data
-- v1 send all 2 days data on every reconnection
-- using websockets is mandatory = permanent connection, more battery compsumption
-- during frequent disconnects to NS connection is paused for 15 minutes to prevent high data usage
+v1 - это старый протокол обмена данными между сайтом NS и сервером NS. Он имеет много ограничений
+- v1 отправляет данные только за 2 дня
+- v1 отправляет данные за 2 дня при каждом присоединении
+- использование веб-сокетов является обязательным = постоянная связь, больше потребление батареи
+- во время частых отключений соединение с NS приостанавливается на 15 минут для предотвращения большого расходования данных
 
-v3 is new protocol. More safe and efficient
-- while using tokens you can better define access rights
-- protocol is more efficient on both sides (AAPS & NS)
-- It can read up to 3 months of data from NS
-- you can choose to use or to not use websockets on every device (using means faster updates, not using means lower power compsumption, but slower updates ie. minutes)
-- NSClient is not paused on disconnections
+v3 - новый протокол. Более безопасный и эффективный
+- при использовании токенов можно лучше определить права доступа
+- протокол эффективней с обеих сторон (AAPS & NS)
+- Он может читать до 3 месяцев данных NS
+- есть выбор использовать или не использовать веб-сокеты на всех устройствах (использовать означает более быстрые обновления, не использовать означает меньший расход питания, но медленнее обновляется. минуты)
+- NSClient не приостанавливается при отключении
 
-LIMITATIONS
-- NS 15 must be used with AAPS 3.2
-- v3 doesn't see updates done by v1 protocol (probably it will be resolved in some future version of NS)
+ОГРАНИЧЕНИЯ
+- с AAPS 3.2 должен использоваться NS 15
+- v3 не видит обновления, созданные протоколом v1 (вероятно, это будет исправлено в будущих версиях NS)
 - in opposite because of old uneffective method of tracking changes v1 see changes done by v3
 - remember NS still uses v1 internaly so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient on SMS if you want enter data remotely
 
