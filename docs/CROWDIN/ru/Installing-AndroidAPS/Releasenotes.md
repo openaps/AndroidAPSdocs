@@ -115,8 +115,8 @@ v3 - новый протокол. Более безопасный и эффек�
 ОГРАНИЧЕНИЯ
 - с AAPS 3.2 должен использоваться NS 15
 - v3 не видит обновления, созданные протоколом v1 (вероятно, это будет исправлено в будущих версиях NS)
-- in opposite because of old uneffective method of tracking changes v1 see changes done by v3
-- remember NS still uses v1 internaly so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient on SMS if you want enter data remotely
+- наоборот, из-за старого неэффективного метода отслеживания изменений v1 видит изменения, внесенные v3
+- помните, NS внутри себя все еще использует версию v1, поэтому, если у вас v3, то пока что невозможно вводить данные через веб-интерфейс NS. если требуется ввести данные удаленно пользуйтесь AAPSClient и SMS,
 
 RECOMMENDED SETTING
 - because of all above you should choose only one method and use it on all devices (remember all other uploaders at time of writing this are using v1). If you decide to go to v3, select v3 in AAPS and all AAPSClients
