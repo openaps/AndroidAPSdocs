@@ -18,25 +18,15 @@ If you want to go back in objectives see [explanation below](Objectives-go-back-
 
 ## Objective 2: Learn how to control AAPS
 
-As part of this objective you learn how to navigate through AAPS screens and how to perform basic actions in AAPS which you will come across on a daily basis later. You will learn how to put a screen or a plugin either to the top scrollable menu bar or let it show via the hamburger menue on the top left list of enabled plugins. If your are not familiar with the AAPS homescreens and its navigation please refer to [AAPS Screens](../Getting-Started/Screenshots.md). Estimated time to complete this objective: 2 hours.
-
-Basic navigation tips:
 - Perform several actions in AAPS as described in this objective.
+
 - Click on the orange text "Not completed yet" to access the to-dos.
+
 - Links will be provided to guide you in case you are not familiar with a specific action yet.
 
   ```{image} ../images/Objective2_V2_5.png
   :alt: Screenshot objective 2
   ```
-- Tasks to complete the objective are:
-  - Set your profile to 90% for a duration of 10 min (Hint: Long press your profile name on the OVERVIEW screen)
-  - Simulate "taking a shower" by disconnecting your pump in AAPS for a duration of 1h (Hint: press the loop icon on the OVERVIEW screen to open the Loop dialog)
-  - End "taking a shower" by reconnecting your pump (Hint: press the "disconnected"-icon to open the loop dialog)
-  - Create a custom temporary target with a duration of 10 min (Hint: press the target bar on the OVERVIEW screen to bring up the temporary target dialog)
-  - Activate the ACTIONS plugin in CONFIG BUILDER to make it appear on the top scrolloable menu bar (Hint: Go to CONFIG BUILDER and scroll down to 'General")
-  - Display the LOOP plugin's content
-  - Scale the BG-Chart to be able to look at larger or smaller timeframes: toggling between 6h, 12h, 18h 24h of past data (Hint: Tap the chart)
-
 
 (Objectives-objective-3-prove-your-knowledge)=
 ## Objective 3: Prove your knowledge
