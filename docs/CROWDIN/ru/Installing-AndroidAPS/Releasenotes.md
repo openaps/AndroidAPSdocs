@@ -119,88 +119,88 @@ v3 - новый протокол. Более безопасный и эффек�
 - помните, NS внутри себя все еще использует версию v1, поэтому, если у вас v3, то пока что невозможно вводить данные через веб-интерфейс NS. если требуется ввести данные удаленно пользуйтесь AAPSClient и SMS,
 
 RECOMMENDED SETTING
-- because of all above you should choose only one method and use it on all devices (remember all other uploaders at time of writing this are using v1). If you decide to go to v3, select v3 in AAPS and all AAPSClients
-- v3 is preffered because of efficiency
-- using websockets or not using with v3 depends on your preference
-- it HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
+- ввиду вышеизложенного следует выбрать только один метод и использовать его на всех устройствах (все действующие загрузчики в момент написания используют v1). Если вы решите перейти на v3, выберите v3 в AAPS и на всех AAPSClient
+- v3 предпочтительнее из-за большей эффективности
+- использование или неиспользование веб-сокетов с v3 зависит от ваших предпочтений
+- it HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. Все остальные устройства/приложения должны читать только из NS. Тем самым вы предотвратите конфликты и ошибки синхронизации. This is valid for getting BG data to NS using Dexcom Share connector etc. too
 
-## Version 3.1.0
+## Версия 3.1.0
 
-Release date: 19-07-2022
+Дата выпуска: 19-07-2022
 
 (Releasenotes-important-hints-3-1-0)=
 ### Важные Примечания
 
-- after update uninstall Wear app and install new version
-- Omnipod users: update on pod change !!!
+- после обновления удалите приложение Wear и установите новую версию
+- Пользователи Omnipod: обновитесь при смене pod !!!
 
 ### Изменения
 
-- fixed issues from 3.0 version
-- fix application freezing @MilosKozak
-- fixed DASH driver @avereha
-- fixed Dana drivers @MilosKozak
-- huge UI improvement, cleanup and unification, migration to material design, styles, white theme, new icons. @Andries-Smit @MilosKozak @osodebailar @Philoul
+- исправлены неполадки версии 3.0
+- исправлено зависание приложения @MilosKozak
+- исправлен драйвер DASH @avereha
+- исправлены драйверы Dana @MilosKozak
+- значительное улучшен интерфейс, очистка и объединение, переход на material desighn, стили, белые темы, новые иконки. @Andries-Smit @MilosKozak @osodebailar @Philoul
 - widget @MilosKozak
-- Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
-- Watch `Wear OS tiles <../Configuration/Configuration/Watchfaces.mdl#wear-os-tiles>`, translations @Andries-Smit
-- Wear code refactored. Not backward compatible anymore @MilosKozak
-- a11y improvements @Andries-Smit
-- new protection option PIN @Andries-Smit
-- allow graph scale from menu @MilosKozak
-- more statistics available @MilosKozak
-- MDI plugin removed in favor of VirtualPump
-- new automation action: StopProcessing (following rules)
+- Поддержка мониторинга Aidex CGM @andyrozman @markvader (только Pumpcontrol)
+- `Плитки Wear OS<../Configuration/Configuration/Watchfaces.mdl#wear-os-tiles>`, переводы @Andries-Smit
+- Код Wear переделан. Обратной совместимости больше нет @MilosKozak
+- улучшения A11y @Andries-Smit
+- новый параметр защиты PIN @Andries-Smit
+- масштабирование графика из меню @MilosKozak
+- больше статистики @MilosKozak
+- Модуль шприц-ручек удален в пользу виртуальной помпы
+- новое действие автоматизации: Остановка обработки (по правилам)
 
 ## Version 3.0.0
 
-Release date: 31-01-2022
+Дата выпуска: 31-01-2022
 
 (Releasenotes-important-hints-3-0-0)=
 ### Важные Примечания
 
 - **Minimum Android version is 9.0 now.**
-- **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new [profile switch](../Usage/Profiles.md) and start with zero IOB and COB. Планируйте обновление тщательно!!! Лучшая ситуация - без активного инсулина и углеводов
-- Use the same version of AAPS and NSClient
+- **Данные не переносятся в новую базу данных.** Не жалуйтесь, это практически невозможно. Thus after update IOB, COB, treatments etc. will be cleared. Следует создать новый [профиль](../Usage/Profiles.md) и начать с нулевыми IOB и COB. Планируйте обновление тщательно!!! Лучшая ситуация - без активного инсулина и углеводов
+- Используйте одну версию AAPS и NSClient
 
-**Make sure to check and adjust settings after updating to 3.0 as described** [here](../Installing-AndroidAPS/update3_0.md).
+**Проверьте настройки после обновления до 3.0, как описано** [здесь](../Installing-AndroidAPS/update3_0.md).
 
 ### Этапы подготовки
 
-**At least two days before update:**
+**Не менее чем за два дня до обновления:**
 
-- disable Dexcom bridge in Nightscout
-- if you are using G5/G6 and xDrip as a collector, you have to update xDrip to a nightly version newer than 14th January 2022
-- if you are using G5/G6 switching to BYODA as collector is recommended to take advantage of back-smoothing (you can still use xDrip for other purposes, xDrip can receive data from BYODA)
+- отключите Dexcom bridge в Nightscout
+- если вы используете G5/G6 и xDrip в качестве коллектора, вам необходимо обновить xDrip до версии, новее чем 14 января 2022
+- если вы используете G5/G6 рекомендуется переход на самостоятельно собранное приложение BYODA, так как рекомендуется чтобы коллектор использовал обратное сглаживание (вы по-прежнему можете использовать xDrip для других целей, xDrip может получать данные от BYODA)
 
 ### Изменения
 
-- 100k lines changed, 105k new lines of code
+- изменено 100k строк, 105k новых строк кода
 
-- [Omnipod DASH support](../Configuration/OmnipodDASH.md) @AdrianLxM @avereha @bartsopers @vanelsberg
+- [поддержка Omnipod Dash](../Configuration/OmnipodDASH.md) @Freloner @ robertrub @vanelsberg
 
-- [Dana-i support](../Configuration/DanaRS-Insulin-Pump.md) @MilosKozak
+- [поддержка Dana-i](../Configuration/DanaRS-Insulin-Pump.md) @MilosKozak
 
-- [DiaconnG8 support](../Configuration/DiaconnG8.md)
+- [Поддержка DiaconnG8](../Configuration/DiaconnG8.md)
 
-- Glunovo support
+- Поддержка Glunovo
 
-- Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+- Внутренняя база данных обновлена до Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 
-- Lot of code rewritten to Kotlin @MilosKozak
+- Часть кода переписана на Kotlin @MilosKozak
 
-- New internal interface for pump drivers
+- Новый интерфейс для драйверов помп
 
-- NSClient rewritten for better synchronization and more detailed customization @MilosKozak
+- NSClient переписан для лучшей синхронизации и более детальной настройки @MilosKozak
 
-  - Record deletion from NS is not allowed (only invalidation through NSClient)
-  - Record modification from NS is not allowed
-  - Sync setting available without engineering mode (for parents)
-  - Ability to resync data
+  - Удаление записи из NS не допускается (аннулирование только через NSClient)
+  - Модификация записи из NS не допускается
+  - Доступны настройки синхронизации без перехода в инженерный режим (для родителей)
+  - Возможность повторной синхронизации данных
 
-- Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
+- Изменение поведения смены профиля. Теперь имеется различие между Переключением Профилей *(чего хочет пользователь)* и Изменением Профиля *(когда изменение инициируется помпой)* @MilosKozak @Tebbe
 
-- You can start activity temporary target during creation of profile switch @MilosKozak
+- Можно начать выполнение временной цели при создании переключателя профиля @MilosKozak
 
 - NSProfile отсутствует, остался только локальный профиль. Локальный профиль может быть [синхронизирован с NS](update3_0-nightscout-profile-cannot-be-pushed). @MilosKozak.
 
@@ -232,9 +232,9 @@ Release date: 31-01-2022
 
 - CircleCI integration @MilosKozak
 
-- Files location change:
+- Изменение местоположения файлов:
 
-  - /AAPS/extra (engineering mode)
+  - /AAPS/extra (инженерный режим)
   - /AAPS/logs /AAPS/exports
   - /AAPS/preferences
 
@@ -242,26 +242,26 @@ Release date: 31-01-2022
 
 Дата выпуска: 23-01-2021
 
-- Please see also [important hints for version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) below.
+- См. также [важные подсказки для версии 2.8.1.1](Releasenotes-important-hints-2-8-1-1) ниже.
 
 ### Изменения
 
 - stability improvements
-- more tweaking for Android 8+
+- *больше подстроек для Android 8+
 - improved icons
 - watch improvements
 - NSClient fixes
-- Bolus advisor now works with Pumpcontrol and NSClient
+- *Помощник болюса теперь работает с Pumpcontrol и NSClient
 
 ## Версия 2.8.1.1
 
 Дата выпуска: 12-01-2021
 
-(important-hints-2-8-1-1)
+(важные-подсказки-2-8-1-1)
 ### Важные Примечания
 
-- Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
-- If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc).
+- Параметр **NS_UPLOAD_ONLY** (только загрузка в NS) был принудительно включен для всех пользователей 2.8.1.
+- Если вы используете NSClient для ввода временных целей TT, углеводов или переключения профиля, вы должны отключить это в AAPS, но **только в том случае, если синхронизация работает хорошо** (т. е. вы не видите нежелательных изменений данных, таких как спонтанная модификация ТТ, ТБР и т. д.).
 - ATTENTION: DO NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...).
 - NS_UPLOAD_ONLY can only be turned off if engineering mode is enabled.
 
@@ -269,7 +269,7 @@ Release date: 31-01-2022
 
 - RileyLink, Omnipod and MDT pump improvements and fixes
 - forced NS_UPLOAD_ONLY
-- fix for SMB & Dexcom app
+- исправления SMB и приложения Dexcom
 - watchface fixes
 - crash reporting improved
 - gradle reverted to allow direct watchface instalation
@@ -286,9 +286,9 @@ Release date: 31-01-2022
 
 ### Важные Примечания
 
-- **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo.
-- [Objectives have changed.](Objectives-objective-3-prove-your-knowledge) **Finish not completed objectives before update.**
-- Repository location still on <https://github.com/nightscout/AndroidAPS> . If you are not familiar with git the easiest way for update is remove directory with AAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
+- **Минимальная версия теперь Android 8.0.** Для более старых версий Android, все еще можно использовать 2.6.1.4 в старом репозитории.
+- [Изменения в Целях](Objectives-objective-3-prove-your-knowledge) **Завершите незавершенные Цели перед обновлениями**
+- Репозиторий все еще на <https://github.com/nightscout/AndroidAPS> . Если вы не знакомы с Git самый простой способ обновления- удалить каталог с AndroidAPS и [ клонировать заново](../Installing-AndroidAPS/Building-APK.md).
 - Please use [Android Studio 4.1.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ### Новые возможности
