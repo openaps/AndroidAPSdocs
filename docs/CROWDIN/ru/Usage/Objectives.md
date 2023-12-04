@@ -152,7 +152,7 @@ AAPS has a series of Objectives that need to be completed to walk you through th
 
 - Вы должны начать цель 10 для использования [Автоматизации](../Usage/Automation.md).
 - Убедитесь, что вы завершили все предыдущие цели, включая [Цель 3: Подтвердите ваши знания](Objectives#objective-3-prove-your-knowledge).
-- Повторное прохождение более ранних целей не приведет к сбросу более поздних, если они уже были успешно завершены. You will keep all finished objectives!
+- Повторное прохождение более ранних целей не приведет к сбросу более поздних, если они уже были успешно завершены. У вас сохранятся все завершенные цели!
 
 (Objectives-objective-11-DynamicISF)=
 ## Objective 11: Additional Features such as DynamicISF
