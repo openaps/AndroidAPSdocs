@@ -247,11 +247,11 @@ RECOMMENDED SETTING
 ### Изменения
 
 - stability improvements
-- *больше подстроек для Android 8+
+- больше подстроек для Android 8+
 - improved icons
 - watch improvements
 - NSClient fixes
-- *Помощник болюса теперь работает с Pumpcontrol и NSClient
+- Помощник болюса теперь работает с Pumpcontrol и NSClient
 
 ## Версия 2.8.1.1
 
@@ -289,22 +289,22 @@ RECOMMENDED SETTING
 - **Минимальная версия теперь Android 8.0.** Для более старых версий Android, все еще можно использовать 2.6.1.4 в старом репозитории.
 - [Изменения в Целях](Objectives-objective-3-prove-your-knowledge) **Завершите незавершенные Цели перед обновлениями**
 - Репозиторий все еще на <https://github.com/nightscout/AndroidAPS> . Если вы не знакомы с Git самый простой способ обновления- удалить каталог с AndroidAPS и [ клонировать заново](../Installing-AndroidAPS/Building-APK.md).
-- Please use [Android Studio 4.1.1](https://developer.android.com/studio/) or newer to build the apk.
+- Используйте [](https://developer.android.com/studio/) Android Studio версии 4.1.1 или новее для построения apk.
 
 ### Новые возможности
 
-- [Omnipod Eros support](../Configuration/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
-- [bolus advisor](Preferences-bolus-advisor) & [eating reminder](Screenshots-eating-reminder) @MilosKozak
-- [New watchface](Watchfaces-new-watchface-as-of-AAPS-2-8) @rICTx-T1D
+- [Поддержка Omnipod Eros](../Configuration/OmnipodEros.md)@bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda и отдельная благодарность @ps2 @itsmojo, всем остальным, участвующим в разработке драйвера для Omnipod, а также @jlucasvt с GetRileyLink.org
+- [калькулятор болюсаr](Preferences-bolus-advisor) & [напоминания о болюсах](Screenshots-eating-reminder) @MilosKozak
+- [Новые циферблаты](Watchfaces-new-watchface-as-of-AAPS-2-8) @rICTx-T1D
 - Dana RS connection improvements @MilosKozak
 - Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
-- New [Low Ressolution Skin](Preferences-skin)
-- New ["Pregnant" patient type](Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
-- New NSClient tablet layout @MilosKozak
-- NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak
-- [Preferences filter](../Configuration/Preferences.md) @Brian Quinion
-- New pump icons @Rig22 @@teleriddler @osodebailar
-- New [insulin type Lyumjev](Config-Builder-lyumjev)
+- Новый скин в [Низком разрешении](Preferences-skin)
+- Новый тип пациента [Беременность](Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
+- Новый макет вкладки NSClient @MilosKozak
+- Передача данных об инсулине, чувствительности и настройках отображения непосредственно с приложения AAPS @MilosKozak
+- [Фильтр настроек](../Configuration/Preferences.md) @Brian Quinion
+- Новые иконки помп @Rig22 @@teleriddler @osodebailar
+- Новый [тип инсулина Люмжев](Config-Builder-lyumjev)
 - SetupWizard improvements @MilosKozak
 - Security improvements @dlvoy
 - Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
@@ -314,46 +314,46 @@ RECOMMENDED SETTING
 
 Дата выпуска: 24-09-2020
 
-**Make sure to check and adjust settings after updating to 2.7 as described** [here](../Installing-AndroidAPS/update2_7.md).
+**Проверьте настройки после обновления до 2.7, как описано** [здесь](../Installing-AndroidAPS/update2_7.md).
 
-You need at least start [objective 11 (in later versions objective 10!)](Objectives-objective-10-automation) in order to continue using [Automation feature](../Usage/Automation.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](Objectives-objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](Objectives-objective-10-automation). Это не повлияет на другие цели, которые вы уже выполнили. You will keep all finished objectives!
+Чтобы заработала [ автоматизация ](Objectives-objective-10-automation) необходимо начать [ цель 11 (в более поздних версиях Цель 10)](../Usage/Automation.md) (все предыдущие цели должны быть пройдены, иначе начать цель11 невозможно). Если например не пройден экзамен в [Цели 3](Objectives-objective-3-prove-your-knowledge), его надо завершить, прежде чем перейти к [Цели 11](Objectives-objective-10-automation). Это не повлияет на другие цели, которые вы уже выполнили. У вас сохранятся все завершенные цели!
 
 ### Новые возможности
 
-- internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
-- using modules for Dana pumps @MilosKozak
-- [new layout, layout selection](../Getting-Started/Screenshots.md) @MilosKozak
-- new [status lights layout](Preferences-status-lights) @MilosKozak
-- [multiple graphs support](Screenshots-section-f-main-graph) @MilosKozak
-- [Profile helper](../Configuration/profilehelper.md) @MilosKozak
-- visualization of [dynamic target adjustment](Screenshots-visualization-of-dynamic-target-adjustment) @Tornado-Tim
-- new [preferences layout](../Configuration/Preferences.md) @MilosKozak
+- внутреннее использование зависимостей инъекций, библиотеки обновлений, код переписан на kotlin @MilosKozak @AdrianLxM
+- применение модулей для помп Dana @MilosKozak
+- [новый макет, выбор макета](../Getting-Started/Screenshots.md) @MilosKozak
+- новый макет [подсветки статусов](Preferences-status-lights) @MilosKozak
+- [поддержка нескольких графиков](Screenshots-section-f-main-graph) @MilosKozak
+- [Помощник профиля ](../Configuration/profilehelper.md) @MilosKozak
+- визуализация [динамической подстройки целей](Screenshots-visualization-of-dynamic-target-adjustment) @Tornado-Tim
+- новый макет [настроек](../Configuration/Preferences.md) @Brian Quinion
 - SMB algorithm update @Tornado-Tim
-- [Low glucose suspend mode](Preferences-aps-mode) @Tornado-Tim
-- [carbs required notifications](Preferences-carb-required-notification) @twain47 @Tornado-Tim
-- removed Careportal (moved to Actions) @MilosKozak
-- [new encrypted backup format](../Usage/ExportImportSettings.md) @dlvoy
-- [new SMS TOTP authentication](../Children/SMS-Commands.md) @dlvoy
-- [new SMS PUMP CONNECT, DISCONNECT](SMS-Commands-commands) commands @Lexsus
+- [ режим приостановки на низких](Preferences-aps-mode) @Tornado-Tim@
+- [уведомления о потребности в углеводах](Preferences-carb-required-notification) @twain47 @Tornado-Tim
+- удален портал терапии Careportal (перемещен в Действия) @MilosKozak
+- [новый зашифрованный формат резервной копии](../Usage/ExportImportSettings.md) @dlvoy
+- [новая SMS TOTP проверка подлинности](../Children/SMS-Commands.md) @dlvoy
+- [новые команды SMS PUMP CONNECT, DISCONNECT](SMS-Commands-commands) @Lexsus
 - better support for tiny basals on Dana pumps @Mackwe
 - small Insight fixes @TebbeUbben @MilosKozak
-- ["Default language" option](Preferences-general) @MilosKozak
-- vector icons @Philoul
-- [set neutral temps for MDT pump](MedtronicPump-configuration-of-the-pump) @Tornado-Tim
-- History browser improvements @MilosKozak
-- removed OpenAPS MA algorithm @Tornado-Tim
-- removed Oref0 sensitivity @Tornado-Tim
-- [Biometric or password protection](Preferences-protection) for settings, bolus @MilosKozak
-- [new automation trigger](../Usage/Automation.md) @PoweRGbg
-- [Open Humans uploader](../Configuration/OpenHumans.md) @TebbeUbben @AdrianLxM
-- New documentation @Achim
+- ["Язык по умолчанию"](Preferences-general) @MilosKozak
+- векторные иконки @Philoul
+- [установка нейтральные временных базалов для подколок на шприц-ручках MDT ](MedtronicPump-configuration-of-the-pump) @Tornado-Tim
+- Улучшения в журнале @MilosKozak
+- удалён алгоритм OpenAPS MA @Tornado-Tim
+- Удалена чувствительность Oref0 @Tornado-Tim
+- [Биометрическая или парольная защита](Preferences-protection) для болюсов @MilosKozak
+- [новый триггер автоматизации](../Usage/Automation.md) @PoweRGbg
+- [загрузчик Open Humans ](../Configuration/OpenHumans.md) @TebbeUbben @AdrianLxM
+- Новая документация @Achim
 
 (Releasenotes-version-2-6-1-4)=
 ## Версия 2.6.1.4
 
 Дата выпуска: 04-05-2020
 
-Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+Используйте [](https://developer.android.com/studio/) Android Studio версии 3.6.1 или новее для построения apk.
 
 ### Новые возможности
 
@@ -364,7 +364,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 Дата выпуска: 03-05-2020
 
-Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+Используйте [](https://developer.android.com/studio/) Android Studio версии 3.6.1 или новее для построения apk.
 
 ### Новые возможности
 
@@ -375,7 +375,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 Дата выпуска: 19-04-2020
 
-Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+Используйте [](https://developer.android.com/studio/) Android Studio версии 3.6.1 или новее для построения apk.
 
 ### Новые возможности
 
@@ -386,7 +386,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 Дата выпуска: 06-04-2020
 
-Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+Используйте [](https://developer.android.com/studio/) Android Studio версии 3.6.1 или новее для построения apk.
 
 ### Новые возможности
 
@@ -397,33 +397,33 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 Дата выпуска: 21-03-2020
 
-Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+Используйте [](https://developer.android.com/studio/) Android Studio версии 3.6.1 или новее для построения apk.
 
 ### Новые возможности
 
-- Allow to enter only `https://` in NSClient settings
-- Fixed [BGI](../Getting-Started/Glossary.md) displaying bug on watches
-- Fixed small UI bugs
+- Возможность вводить только `https://` в настройках NSClient
+- Исправлена ошибка отображения [воздействия ГК](../Getting-Started/Glossary.md) на часах
+- Исправлены мелкие ошибки интерфейса
 - Fixed Insight crashes
 - Fixed future carbs with Combo pump
 - Fixed [LocalProfile -> NS sync](Config-Builder-upload-local-profiles-to-nightscout)
-- Insight alerts improvements
-- Improved detection of boluses from pump history
-- Fixed NSClient connection settings (wifi, charging)
-- Fixed sending of calibrations to xDrip
+- Улучшения оповещений Insight
+- Улучшено обнаружение болюсов в истории помпы
+- Исправлены параметры соединения NSClient (wifi, зарядка)
+- Исправлена отправка калибровок в xDrip
 
 (Releasenotes-version-2-6-0)=
 ## Версия 2.6.0
 
 Дата выпуска: 29-02-2020
 
-Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+Используйте [](https://developer.android.com/studio/) Android Studio версии 3.6.1 или новее для построения apk.
 
 ### Новые возможности
 
 - Small design changes (startpage...)
 
-- Careportal tab / menu removed - more details [here](../Usage/CPbefore26.md)
+- Вкладка Портал терапии/ удалена из меню - подробнее [здесь](../Usage/CPbefore26.md)
 
 - Новый модуль (расширение/плагин) [ Локальный Профиль](Config-Builder-local-profile)
 
@@ -433,21 +433,21 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
   - Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
   - Veritical NumberPicker for targets
 
-- SimpleProfile is removed
+- SimpleProfile удален
 
 - [Пролонгированный болюс](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) - закрытый цикл будет отключен
 
-- MDT plugin: Fixed bug with duplicated entries
+- Плагин MDT: Исправлена ошибка с дублирующимися записями
 
-- Units are not specified in profile but it's global setting
+- Единицы не указаны в профиле, но это глобальные параметры
 
-- Added new settings to startup wizard
+- Добавлены новые параметры для мастера установки
 
-- Different UI and internal improvements
+- Измененный пользовательский интерфейс и внутренние улучшения
 
 - [Усложнения для циферблатов Wear](../Configuration/Watchfaces.md)
 
-- New [SMS commands](../Children/SMS-Commands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
+- Новые [SMS команды](../Children/SMS-Commands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
 
 - Fixed language support
 
