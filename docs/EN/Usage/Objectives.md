@@ -59,9 +59,9 @@ Basic navigation tips:
 
 ## Objective 4: Starting on an open loop
 
-As part of this objective you learn how to set tempory basal rates in AAPS and to verify if these basal rate changes are shown in AAPS and Nightscout. If your are not quite sure where to set basal rate changes please refer to [AAPS Screens - ACTIONS tab](../Getting-Started/Screenshots.md). Estimated time to complete this objective: 7 days.
+As part of this objective you learn how to set tempory basal rates in AAPS and to verify if these basal rate changes are shown in AAPS and Nightscout. You will run through 20 temporary basal rate changes in AAPS and on your pump. If your are not quite sure where to set basal rate changes in AAPS please refer to [AAPS Screens - ACTIONS tab](../Getting-Started/Screenshots.md). Estimated time to complete this objective: 7 days.
 
-- Activate "Open Loop" either from Preferences, or by long press the Loop icon in the top right of the OVERVIEW screen.
+- Activate "Open Loop" either from "Preferences", or by long pressing the Loop icon in the top right of the OVERVIEW screen.
 - Work through the [Preferences](../Configuration/Preferences.md) to set it up for you.
 - Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them manually into your pump and confirm in AAPS that you have accepted them. Ensure this data is shown in AAPS and Nightscout.
 - Enable [temp targets](../Usage/temptarget.md) if necessary. Use HYPO temp targets to prevent the system from "overcorrecting" (correction is strong) following a hypo and a raise in blood glucose.
@@ -70,12 +70,12 @@ As part of this objective you learn how to set tempory basal rates in AAPS and t
 
 - To reduce the number of decisions to be made while in Open Loop set a wide target range like 90 - 150 mg/dl or 5.0 - 8.5 mmol/l.
 - You might even want to widen the upper limit (or disable Open Loop) during the night.
-- You can set a minimum percentage (in "preferences") which needs to be exceeded before basal rate changes are suggested/displayed.
+- You can set a minimum percentage (menu item: "preferences") which needs to be exceeded before basal rate changes are suggested/displayed.
 
   ```{image} ../images/OpenLoop_MinimalRequestChange2.png
   :alt: Open Loop minimal request change
   ```
-- Good to know: You do not need to act on each and every suggestion ...
+- Good to know: You do not need to action each and every system suggestion ...
 
 ## Objective 5: Understanding your open loop, including its temp basal recommendations
 
