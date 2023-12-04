@@ -79,25 +79,25 @@ As part of this objective you learn how to set tempory basal rates in AAPS and t
 
 ## Objective 5: Understanding your open loop, including its temp basal recommendations
 
-- Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AAPS homescreen](Screenshots-prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+The purpose of objective 5 is to understand the basic idea of basal recommendations by looking at the [determine basal logic] (https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AAPS homescreen](Screenshots-prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab. You will get in touch with AAPS' safety features and learn how to adjust these to your personal situation and needs. Estimated time to complete this objective: 7 days. 
 
-You will want to set your target higher than usual until you are confident in the calculations and settings.  System allows
+You might want to set your target higher than usual until you feel comfortable with AAPS' calculations and settings. AAPS allows
 
-- a low target to be a minimum of 4 mmol (72 mg/dl) or maximum of 10 mmol (180 mg/dl)
-- a high target to be a minimum of 5 mmol (90 mg/dl) and maximum of 15 mmol (225 mg/dl)
-- a temporary target as a single value can be anywhere in the range of 4 mmol to 15 mmol (72 mg/dl to 225 mg/dl)
+- a low target to be a minimum of 4 mmol/l (72 mg/dl) or maximum of 10 mmol/l (180 mg/dl)
+- a high target to be a minimum of 5 mmol/l (90 mg/dl) and maximum of 15 mmol/l (225 mg/dl)
+- a temporary target as a single value can be anywhere in the range between 4 mmol/l and 15 mmol/l (72 mg/dl to 225 mg/dl)
 
-The target is the value that calculations are based on, and not the same as where you aim to keep your blood glucose values within.  If your target is very wide (say, 3 or more mmol \[50 mg/dl or more\] wide), you will often find little AAPS action. This is because blood glucose is eventually predicted to be somewhere in that wide range and therefore not many fluctuating temporary basal rates are suggested.
+This target is the core value calculations are based on, and it's not the same as where you aim to keep your blood glucose values within.  If your target range is very wide (say, 3 or more mmol/l \[50 mg/dl or more\] wide), you will often find little AAPS action. This is because blood glucose is eventually predicted to be somewhere in that wide range and therefore not many fluctuating temporary basal rates are suggested.
 
-You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol \[20 mg/dl or less\] wide) and observe how the behavior of your system changes as a result.
+You may want to experiment with adjusting your targets to a tighter range (say, 1 or less mmol/l \[20 mg/dl or less\] wide) and observe how system behaviour changes based on this.
 
-You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
+Visualisation of your target range (green lines in the graph) can be changed by adjusting appropriate values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
 ```{image} ../images/sign_stop.png
 :alt: Stop sign
 ```
 
-### Stop here if you are open looping with a virtual pump - do not click Verify at the end of this objective.
+### Stop here if you are open looping with a virtual pump - do not click "Verify" at the end of this objective.
 
 ```{image} ../images/blank.png
 :alt: blank
