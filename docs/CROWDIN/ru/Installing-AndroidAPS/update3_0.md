@@ -1,20 +1,20 @@
-# Necessary checks after update to AAPS 3.0
+# Необходимые проверки после обновления AAPS 3.0
 
-* **Minimum Android version is 9.0 now.**
-* **Data is not migrated to new database.**
+* **Минимальная версия Android теперь 9.0.**
+* **Данные не перенесены в новую базу данных.**
 
-  Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new [profile switch](../Usage/Profiles) and start with zero IOB and COB.
+  Не жалуйтесь, это огромные изменения, поэтому просто невозможно. Таким образом после обновления данные IOB, COB, терапии и т. д. Следует создать новый [профиль](../Usage/Profiles) и начать с нулевыми IOB и COB.
 
   Планируйте обновление тщательно!!! Лучшая ситуация - без активного инсулина и углеводов
 
-* Please see the [Release Notes](../Installing-AndroidAPS/Releasenotes) for details on new and changed features.
+* Подробнее о новых и расширенных функциях смотрите [Примечания к выпускаемой версии](../Installing-AndroidAPS/Releasenotes).
 
 
-## Check automations
+## Проверьте настройки автоматизации
 
-* New restrictions were introduced. Check your automations, especially if your conditions are still valid.
-* If one of the conditions is missing, you need to add it again.
-* Red automations contain invalid actions, go and edit them and reset to valid values
+* Были введены новые ограничения. Проверьте настройки автоматизации, особенно если условия остаются в силе.
+* Если одно из условий отсутствует, необходимо добавить его снова.
+* Если строка автоматизации красная, она содержат недопустимые действия, редактируйте их и приведите к допустимым значениям
 
   Example: A profile change to 140% was allowed earlier but is now restriced to 130%.
 
