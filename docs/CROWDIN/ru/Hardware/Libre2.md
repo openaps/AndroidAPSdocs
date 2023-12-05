@@ -14,37 +14,37 @@ The Freestyle Libre 2 system can automatically report dangerous blood glucose le
 
 Вместо оригинального приложения следует установить модифицированное. Следующий датчик, установленный с его помощью, будет передавать текущие значения гликемии приложению xDrip+, работающему на смартфоне через Bluetooth.
 
-Important: To avoid possible problems it may help to first install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. Это не требует дополнительной энергии. Затем установите модифицированное приложение.
+Важно: чтобы избежать возможных проблем, рекомендуем сначала установить и затем деинсталлировать оригинальное приложение на смартфон с поддержкой NFC. NFC has to be enabled. Он не требует дополнительной энергии. Затем установите модифицированное приложение.
 
-The patched app can be identified by the foreground authorization notification. The foreground authorization service improves the connection stability compared to the original app which do not use this service.
+Исправленное приложение можно определить с помощью уведомления об авторизации в главном режиме. Служба проверки прав доступа в основном режиме повышает стабильность соединения по сравнению с исходным приложением, которое не использует эту службу.
 
 ![LibreLink Foreground Service](../images/Libre2_ForegroundServiceNotification.png)
 
-Other indications could be the Linux penguin logo three dot menu -> Info or the font of the patched app. These criteria are optional depending on the app source you choose.
+Other indications could be the Linux penguin logo three dot menu -> Info or the font of the patched app. Эти критерии необязательны и зависят от выбранного источника скачивания приложения.
 
 ![LibreLink Font Check](../images/LibreLinkPatchedCheck.png)
 
-Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and time zone and set at least one alarm in the patched app.
+Убедитесь, что NFC активирована дайте разрешения на обращение к памяти и геолокации, включите автоматическое время и часовой пояс и задайте хотя бы одно оповещение в этом приложении.
 
-Now start the Libre2 sensor with the patched app by simply scanning the sensor. Убедитесь, что заданы все параметры.
+Теперь запустите сенсор Libre2 при помощи модифицированного приложения, просто сканируя сенсор. Убедитесь, что заданы все параметры.
 
 Обязательные параметры для успешного запуска сенсора:
 
--   NFC enabled / BT enabled
--   memory and location permission enabled
--   location service enabled
--   automatic time and time zone setting
--   set at least one alarm in the patched app
+-   NFC включен/BT включен
+-   включено разрешение на память и геолокацию
+-   Включена служба определения местоположения
+-   автоматическое определение времени и часового пояса
+-   задать хотя бы одно оповещение в модифицированном приложении
 
-Обратите внимание, что служба определения расположения является центральным параметром. This is not the app location permission which has to be set also!
+Обратите внимание, что служба определения расположения является центральным параметром. Это не разрешение на доступ к геолокации в приложении, которое также должно быть активировано!
 
 ![LibreLink permissions memory & location](../images/Libre2_AppPermissionsAndLocation.png)
 
 ![automatic time and time zone + alarm settings](../images/Libre2_DateTimeAlarms.png)
 
-Сенсор запоминает устройство, с которого он был запущен. Only this device can receive alarms in the future.
+Сенсор запоминает устройство, с которого он был запущен. Только это устройство может получать оповещения в будущем.
 
-Первая установка соединения с сенсором имеет решающее значение. The LibreLink app tries to establish a wireless connection to the sensor every 30 seconds. Если один или несколько обязательных параметров отсутствуют, их надо скорректировать. У вас нет ограничений по времени для этого. The sensor is constantly trying to setup the connection. Даже если это длится несколько часов. Be patient and try different settings before even think of changing the sensor.
+Первая установка соединения с сенсором имеет решающее значение. Приложение LibreLink пытается установить беспроводное соединение с сенсором каждые 30 секунд. Если один или несколько обязательных параметров отсутствуют, их надо скорректировать. У вас нет ограничений по времени для этого. The sensor is constantly trying to setup the connection. Даже если это длится несколько часов. Будьте терпеливы и попробуйте разные настройки, прежде чем даже подумать о замене сенсора.
 
 As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLink's start screen there is no connection or some other setting blocks LibreLink to signal alarms. Please check if the sound is enabled and all sorts of blocking app notifications are disabled. When the exclamation mark is gone, the connection should be established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
 
