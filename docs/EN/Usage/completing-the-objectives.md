@@ -59,40 +59,43 @@ Basic navigation tips:
 
 ## Objective 4: Starting on an open loop
 
-- Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
-- Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AAPS that you have accepted them.  Ensure this data shows in AAPS and Nightscout.
-- Enable [temp targets](../Usage/temptarget.md) if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo.
+Purpose of this objective is to recognise how often AAPS will evaluate basal rate's impact on blood glucose and recommended temporary basal rate adjustments. As part of this objective you will activate open looping the first time and will perform 20 proposed temporary basal rate changes manually on your pump. Furthermore you will observe temporary and default temporary targets' impact (e.g. for activity or hypo treatments). If your are not familiar with setting a temporay basal rate change in AAPS yet, please refer to the [ACTIONS tab](Screenshots#Screenshots-action-tab). Estimated time to complete this objective: 7 days. This is a mandatory wait time and you can't proceed even if you enacted all basal rate changes already.
+
+- Select Open Loop either from the "Preferences" menu or by presssing and holding the Loop icon on the top left of the OVERVIEW screen.
+- Walk through the [Preferences](../Configuration/Preferences.md) to set it up for you (scroll down to "Loop/APS Mode" and select "Open Loop".
+- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; key them into your (physical) pump and confirm in AAPS that you have accepted them. Ensure these basal rate adjustments show up in AAPS and Nightscout.
+- Enable [temp targets](../Usage/temptarget.md) if necessary. After treating a hypo use hypo temp targets to prevent the system from overcorrecting upon the bounce back.
 
 ### Reduce number of notifications
 
-- To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l.
-
-- You might even want to wider upper limit (or disable Open Loop) at night.
-
-- In Preferences you can set a minimum percentage for suggestion of basal rate change.
+- To reduce the number of proposed basal rate changes while in Open Loop set a wider target range like 90-150 mg/dl or 5.0-8.5 mmol/l.
+- You might even consider to raise your upper limit (or disable Open Loop) at night.
+- You can set a minimum percentage for recommended basal rate changes to change the number of triggered notifications.
 
   ```{image} ../images/OpenLoop_MinimalRequestChange2.png
   :alt: Open Loop minimal request change
   ```
 
-- Also, you do not need to act every 5 minutes on all suggestions...
+- Good to know: You don't need to action each and every system recommendation ...
 
 ## Objective 5: Understanding your open loop, including its temp basal recommendations
 
-- Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AAPS homescreen](Screenshots-prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+As part of this objective you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in AAPS OVERVIEW](Screenshots-prediction-lines)/Nightscout and looking at detailed calculations shown on your OPENAPS tab. Estimated time to complete this objective: 7 days.
 
-You will want to set your target higher than usual until you are confident in the calculations and settings.  System allows
+This objective requires to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](Open-APS-features#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal). This value can be set in Preferences > OpenAPS.
+Make sure this safety setting is set in AAPS and your pump. 
 
-- a low target to be a minimum of 4 mmol (72 mg/dl) or maximum of 10 mmol (180 mg/dl)
-- a high target to be a minimum of 5 mmol (90 mg/dl) and maximum of 15 mmol (225 mg/dl)
-- a temporary target as a single value can be anywhere in the range of 4 mmol to 15 mmol (72 mg/dl to 225 mg/dl)
+You might want to set your target higher than usual until you are comfortable with the calculations and settings. AAPS allows
 
-The target is the value that calculations are based on, and not the same as where you aim to keep your blood glucose values within.  If your target is very wide (say, 3 or more mmol \[50 mg/dl or more\] wide), you will often find little AAPS action. This is because blood glucose is eventually predicted to be somewhere in that wide range and therefore not many fluctuating temporary basal rates are suggested.
+- a low target to be a minimum of 4 mmol/l (72 mg/dl) or maximum of 10 mmol/l (180 mg/dl)
+- a high target to be a minimum of 5 mmol/l (90 mg/dl) and maximum of 15 mmol/l (225 mg/dl)
+- a temporary target as a single value can be anywhere in the range of 4 mmol/l to 15 mmol/l (72 mg/dl to 225 mg/dl)
 
-You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol \[20 mg/dl or less\] wide) and observe how the behavior of your system changes as a result.
+Your target is a core value. All calculations are based on it and it is different from a target range you usually aim to keep your blood glucose values in. If your target is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little AAPS action. This is because blood glucose is predicted to be somewhere in that wide range and thus temporary basal rate changes are suggested rarely.
 
-You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
+You may want to experiment with adjusting your targets being in a tighter range (say, 1 or less mmol/l [20 mg/dl or less] wide) and observe a resulting system behavior.
+
+You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
 ```{image} ../images/sign_stop.png
 :alt: Stop sign
