@@ -35,19 +35,19 @@
 
 ## Сброс главного пароля
 * Теперь можно сбросить главный пароль если вы его забыли.
-* You need to add a file named `PasswordReset` to the `/AAPS/extra` directory on your phones fileystem.
+* Вам нужно добавить файл с именем `PasswordReset` в каталог `/AAPS/extra` в телефонной файловой системе.
 * Перезапустить AAPS.
 * Новый пароль будет серийным номером Вашей активной помпы.
-* For Dash: The serial number is always 4241.
+* Для Даш: Серийный номер всегда 4241.
 * Для EROS он указан на вкладке POD как "Sequence Number"
 
 ## Предупреждающий сигнал под цифрами гликемии
 
 Начиная с Android 3.0, вы можете увидеть предупреждающий знак под числом ГК на главном экране.
 
-  ![Red BG warning](../images/bg_warn_red.png)
+  ![Красное предупреждение о ГК](../images/bg_warn_red.png)
 
-  ![Yellow BG warning](../images/bg_warn_yellow.png)
+  ![Желтое предупреждение о ГК](../images/bg_warn_yellow.png)
 
 Подробнее см. на странице [экранов AAPS](Screenshots-bg-warning-sign)
 
@@ -56,4 +56,4 @@
 
    ![Сообщение об ошибке: данные поступают с другой помпы](../images/Screen_DifferentPump.png)
 
-Чтобы устранить эту неполадку, перейдите в [конфигуратор](Config-Builder-pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.
+Чтобы устранить эту неполадку, перейдите в [конфигуратор](Config-Builder-pump). Переключите помпу на виртуальную и вернитесь на реальную. Состояние помпы будет сброшено.
