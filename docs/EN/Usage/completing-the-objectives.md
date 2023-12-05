@@ -114,21 +114,23 @@ You can adjust (widen or tighten) the graph’s green area, representing your ta
 :alt: Warning sign
 ```
 
-### Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend. High BG values have to be corrected manually by you!
+### Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend. You have to correct high BG values by yourself (manually)!
 
-- Prerequisite: You need a good profile (basal, ISF, IC) already working in AAPS to start with Loop in Low Glucose Suspend mode. Otherwise you can run in a hypo which you have to manually correct. This will help you a lot to avoid having to treat a low glucose over a period of 5 days. **If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios and do NOT start objective 6 at this time.**
-- You don't have to change your settings now. During objective 6, the maxIOB setting is internally set to zero automatically. **This override will be reversed when moving to objective 7.**
-- The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you. If blood glucose is rising then it will only increase basal if the basal IOB is negative from a previous Low Glucose Suspend. Otherwise basal rates will remain the same as your selected profile. **That means that you have to manually handle high values with insulin corrections.**
-- If your basal IOB is negative (see screenshot below) a TBR > 100% can be issued also in objective 6.
+As part of this objective you will close the loop and activate its Low Glucose Suspend (LGS) mode while [max IOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) is set to zero. You have to remain in LGS mode for 5 days to complete this objective. You should use this time to check if your profile settings are bullet-proof and don't trigger LGS events too often. Estimated time to complete this objective: 5 days.
+
+- Prerequisite: It's crucial that your current profile (basal, ISF, IC) is well tested before you close your loop in Low Glucose Suspend mode. Incorrect profile settings might force you into hypo situations which have be  treated manually. A proven profile will help to avoid low glucose treatments during the requested 5 days period. **If you still observe frequent or severe low glucose episodes consider refining your DIA, basal, ISF and carb ratios and do NOT start objective 6 at this time.**
+- You don't have to change your settings by yourself at this point in time. During objective 6, AAPS will take care of setting maxIOB to zero. **This override will be reversed when moving to objective 7.**
+- AAPS will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you. If blood glucose is rising it will only increase basal if basal IOB is negative resulting from a previous Low Glucose Suspend. In all other cases basal rates will remain unchanged from your current profile. **As a consequence you have to handle high values with insulin corrections manually.**
+- If your basal IOB is negative (see screenshot below) a TBR > 100% can be triggered in objective 6 already.
 
 ```{image} ../images/Objective6_negIOB.png
 :alt: Example negative IOB
 ```
 
-- Set your target range slightly higher than you usually aim for, just to be safe and have a bit more scurity buffer.
-- Enable 'Low Glucose Suspend' mode either by by pressing and holding the Loop icon at the top right corner of the home screen and selecting the Loop - LGS mode icon.
-- Watch how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
-- You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.
+- Set your target range slightly higher than you usually would aim at, just to be safe and to add some security buffer.
+- Enable 'Low Glucose Suspend' mode by pressing and holding the Loop icon at the top right corner of the OVERVIEW screen and selecting the Loop - LGS mode icon.
+- Watch active temporary basals by looking at the turquoise basal text on the OVERVIEW screen or the turquoise basal render as part of the OVERVIEW graph.
+- You may temporarily experience spikes following treated hypos without being able to increase basals on the rebound.
 
 (Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets)=
 ## Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
