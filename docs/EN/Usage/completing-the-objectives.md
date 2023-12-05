@@ -1,28 +1,45 @@
 # Objectives
 
-AAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping.  They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
+**AAPS** has a series of **objectives** that you need to complete to progress from basic open looping to hybrid closed looping and full **AAPS** functionality. Completing the **objectives** ensures:
 
-If you are **upgrading phones** then you can [export your settings](../Usage/ExportImportSettings.md) to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to [backup your settings](../Usage/ExportImportSettings.html) frequently just in case.
+* You have configured everything correctly in your **AAPS** setup
+* You have learned about the essential features of **AAPS** 
+* You have a basic understanding of what your system is doing, and therefore why you can trust it.
 
-If you want to go back in objectives see [explanation below](Objectives-go-back-in-objectives).
+
+:::{admonition} Note
+:class: note
+
+Regularly export your **AAPS** settings after completing each **objective**!
+:::
+
+We strongly recommend that you  [export your settings](../Usage/ExportImportSettings.md) after completing each **objective**. This exporting process creates a **settings** (.json) file which you should keep backed-up in one or more safe places (_e.g._ Google Drive, hard disk, email attachment _etc._). This ensures that you keep your progress through the **objectives**, and if you accidentally delete your progress, you can simply re-load it by importing a recent settings file. Having a backup **settings** file is also required if you want to change your **AAPS** smartphone for any reason (upgrading/lost/broken phone _etc._)
+
+The **settings** file will save not only your progress through the objectives, but also your own customised **AAPS** settings such as **max bolus** _etc._  
+
+If you do not have a backup copy of your **settings**, if anything happens to your **AAPS** smartphone you will need to start the **objectives** from the beginning again. 
+
+Overall the **objectives** take around 6 weeks to complete (see [how long will it take?](preparing-how-long-will-it-take?) for a detailed breakdown) from configuring **AAPS** on your smartphone to "basic" hybrid closed looping (from objective 1 to objective 8), so, although you _can_ proceed up to **objective 5** using a **virtual pump** (and using some other method of insulin delivery in the meantime), having to re-complete all the **objectives** because for example, you lost your smartphone, is still something you really want to avoid. 
+
+As well as progressing through the **objectives**, if you want, you can also remove your progress and [go back to an earlier objective](Objectives-go-back-in-objectives). 
 
 ## Objective 1: Setting up visualization and monitoring, analysing basals and ratios
 
-- Select the right blood glucose source for your setup.  See [BG Source](../Configuration/BG-Source.md) for more information.
-- Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AAPS driver for looping) to ensure your pump status can communicate with AAPS.
-- If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AAPS.
-- Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure Nightscout can receive and display this data.
-- Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see [NSClient settings in Preferences](Preferences-nsclient).
+- Select the correct blood glucose source for your setup.  See [BG Source](../Configuration/BG-Source.md) for more information.
+- Select the correct Pump in ConfigBuilder to ensure your pump can communicate with AAPS. Select **virtual pump** if you are using a pump model with no **AAPS** driver for looping, or if you want to work through the early **objectives** while using another system for insulin delivery. 
+- If using a DanaR pump then ensure you have followed the [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and **AAPS**.
+- Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure **Nightscout** can receive and display this data.
+- Note that URL in **NSClient** must be **_without_ "/api/v1/"** at the end - see [NSClient settings in Preferences](Preferences-nsclient).
 
-*You may need to wait for the next blood glucose reading to arrive before AAPS will recognise it.*
+Note - *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognise it.*
 
 ## Objective 2: Learn how to control AAPS
 
-- Perform several actions in AAPS as described in this objective.
+- Perform several actions in **AAPS** as described in this **objective**.
 
 - Click on the orange text "Not completed yet" to access the to-dos.
 
-- Links will be provided to guide you in case you are not familiar with a specific action yet.
+- Links will be provided to guide you, in case you are not familiar with a specific action yet.
 
   ```{image} ../images/Objective2_V2_5.png
   :alt: Screenshot objective 2
@@ -31,7 +48,7 @@ If you want to go back in objectives see [explanation below](Objectives-go-back-
 (Objectives-objective-3-prove-your-knowledge)=
 ## Objective 3: Prove your knowledge
 
-- Pass a multiple-choice exam testing your AAPS knowledge.
+- Pass a multiple-choice exam testing your **AAPS** knowledge.
 
 - Click on the orange text "Not completed yet" to access the page with the question and answering options.
 
@@ -41,24 +58,24 @@ If you want to go back in objectives see [explanation below](Objectives-go-back-
 
 - Links will be provided to guide you in case you are unsure about the correct answers yet.
 
-- The questions for objective 3 have been completely rewritten by native speakers as of AAPS 2.8. The new ones cover the same basic topics plus a few new ones.
-
 - These new questions will lead to some not answered questions even though you have successfully completed objective 3 in previous versions.
 
 - Unanswered questions will affect you only if you start a new objective. In other words: If you have already completed all objectives you can wait and answer the new questions later without loosing AAPS functions.
 
+
+
 ## Objective 4: Starting on an open loop
 
-- Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
+- Select "Open Loop" either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
 - Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AAPS that you have accepted them.  Ensure this data shows in AAPS and Nightscout.
-- Enable [temp targets](../Usage/temptarget.md) if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo.
+- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in **AAPS** that you have accepted them. Check that this data shows in **AAPS** and Nightscout.
+- Enable [temp targets](../Usage/temptarget.md) if necessary. Use hypo temp targets to prevent the system correcting too aggressively because of a raising sensor glucose level after a hypo.
 
 ### Reduce number of notifications
 
-- To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l.
+- To reduce the number of decisions to be made while in Open Loop set a wide target range _e.g._ 90 - 150 mg/dl or 5.0 - 8.5 mmol/l.
 
-- You might even want to wider upper limit (or disable Open Loop) at night.
+- You might want to set a wider upper limit, or even disable Open Loop, at night.
 
 - In Preferences you can set a minimum percentage for suggestion of basal rate change.
 
@@ -68,17 +85,19 @@ If you want to go back in objectives see [explanation below](Objectives-go-back-
 
 - Also, you do not need to act every 5 minutes on all suggestions...
 
+(Objectives-objective-5-Understanding-your-open-loop-including-its-temp-basal-recommendations)=
+
 ## Objective 5: Understanding your open loop, including its temp basal recommendations
 
-- Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AAPS homescreen](Screenshots-prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+- Start to understand the logic behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AAPS homescreen](Screenshots-prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
 
-You will want to set your target higher than usual until you are confident in the calculations and settings.  System allows
+Set your target higher than usual until you are confident in the calculations and settings. **AAPS** allows:
 
-- a low target to be a minimum of 4 mmol (72 mg/dl) or maximum of 10 mmol (180 mg/dl)
-- a high target to be a minimum of 5 mmol (90 mg/dl) and maximum of 15 mmol (225 mg/dl)
-- a temporary target as a single value can be anywhere in the range of 4 mmol to 15 mmol (72 mg/dl to 225 mg/dl)
+- a **low target** of between 4 - 10 mmol/l (72 - 180 mg/dl) 
+- a **high target** of between 5  - 15 mmol/l (90 - 225 mg/dl) 
+- a **temporary target** as a single value between 4 - 15 mmol/l (72 -225 mg/dl)
 
-The target is the value that calculations are based on, and not the same as where you aim to keep your blood glucose values within.  If your target is very wide (say, 3 or more mmol \[50 mg/dl or more\] wide), you will often find little AAPS action. This is because blood glucose is eventually predicted to be somewhere in that wide range and therefore not many fluctuating temporary basal rates are suggested.
+The targets are the values that **AAPS** calculations are based on, and not necessarily the same as where you aim to keep your sensor glucose values within. If your target is very wide (say, 3 or more mmol \[50 mg/dl or more\] wide), you will often see minimal **AAPS** action. This is because blood glucose is eventually predicted to be somewhere in that wide range and therefore not many fluctuating temporary basal rates are suggested.
 
 You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol \[20 mg/dl or less\] wide) and observe how the behavior of your system changes as a result.
 
@@ -87,8 +106,12 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 ```{image} ../images/sign_stop.png
 :alt: Stop sign
 ```
+:::{admonition} If you have been using a virtual pump, change to a real pump now!
+:class: note
 
-### Stop here if you are open looping with a virtual pump - do not click Verify at the end of this objective.
+If you are open looping with a virtual pump stop here. Only click verify at the end of this objective once you have changed to using a "real" physical pump.
+:::
+
 
 ```{image} ../images/blank.png
 :alt: blank
