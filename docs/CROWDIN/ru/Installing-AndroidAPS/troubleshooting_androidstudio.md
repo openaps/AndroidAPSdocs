@@ -3,24 +3,24 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## Потеряно хранилище ключей
-If you use the same keystore when updating AAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
+Если вы используете одно и то же хранилище ключей при обновлении AndroidAPS, вам не нужно деинсталлировать предыдущую версию на смартфоне. Поэтому рекомендуется хранилище ключей размещать в надежном месте.
 
-If you try to install the apk, signed with a different keystore than before, you will get an error message that the installation failed!
+Если вы пытаетесь установить apk, подписанный ключем, отличным от предыдущего, то получите сообщение об ошибке установки!
 
-In case you cannot find your old keystore or its password anymore, proceed as follows:
+На случай, если вы не можете найти свое старое хранилище ключей, выполните следующие действия:
 
-1. [Export settings](ExportImportSettings-export-settings) on your phone.
-2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service...).
-4. Generate signed apk of new version as described on the [Update guide](../Installing-AndroidAPS/Update-to-new-version.md) and transfer it to your phone.
-5. Деинсталлируйте предыдущую версию AAPS на вашем телефоне.
-6. Установите новую версию AAPS на свой телефон.
+1. Выполните [Экспорт настроек](ExportImportSettings-export-settings) на старом телефоне.
+2. Скопируйте или загрузите файл настроек из телефона во внешнее местоположение (напр. компьютер, облачный сервис хранения данных...).
+4. Сгенерируйте подписанное приложение новой версии, как описано в инструкции [Update](../Installing-AndroidAPS/Update-to-new-version.md) и перенесите его на телефон.
+5. Деинсталлируйте предыдущую версию AAPS.
+6. Установите новую версию AAPS на телефон.
 7. [Import settings](ExportImportSettings-import-settings) to restore your objectives and configuration.
-8. Check your battery optimization options and disable them again.
+8. Проверьте параметры оптимизации батареи и отключите их снова.
 
    If you can't find them on your phone copy them from the external storage to your phone.
 8. Keep on looping.
 
-## Gradle Sync failed
+## Ошибка синхронизации Gradle
 Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
 
   ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
