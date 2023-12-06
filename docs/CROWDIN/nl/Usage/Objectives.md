@@ -29,23 +29,34 @@ If you want to go back in objectives see [explanation below](Objectives-go-back-
   ```
 
 (Objectives-objective-3-prove-your-knowledge)=
+
 ## Doel 3: Bewijs jouw kennis
 
-- Pass a multiple-choice exam testing your AAPS knowledge.
+Objective 3 is a multiple choice test based on questions designed to test your theoretical knowledge of **AAPS**.
 
-- Click on the orange text "Not completed yet" to access the page with the question and answering options.
+Some users find Objective 3 to be the most difficult objective to complete. Please do read the AAPS documents in conjunction with the questions. If you are genuinely stuck after researching the **AAPS** documents, please search or ask for help on the Facebook or Discord group. These groups can provide friendly hints or redirect you to the relevant part of the **AAPS** documents.
 
-  ```{image} ../images/Objective3_V2_5.png
-  :alt: Screenshot doel 3
-  ```
+To proceed with Objective 3, click on the orange text “Not completed yet” to access the relevant question. Please read each question and select your answer(s).
 
-- Links will be provided to guide you in case you are unsure about the correct answers yet.
 
-- The questions for objective 3 have been completely rewritten by native speakers as of AAPS 2.8. De vernieuwde vragen gaan grotendeels over dezelfde inhoud, en er zijn een paar nieuwe vragen toegevoegd.
 
-- These new questions will lead to some not answered questions even though you have successfully completed objective 3 in previous versions.
+Within each question, a hyperlink to the **AAPS** documents will guide you to the relevant section of the document which you should read in order to locate the correct answer.
 
-- Unanswered questions will affect you only if you start a new objective. Voor mensen die in een vorige versie alle Doelen al hadden afgerond, geldt dat zij ruim de tijd hebben om deze nieuwe vragen te beantwoorden. Er worden bij hen geen AAPS-functies gedeactiveerd nu deze vragen nog openstaan. Het is wel verstandig om er binnenkort mee aan de slag te gaan; wanneer een volgende versie uitkomt, die wellicht nieuwe functies (en bijbehorende nieuwe Doelen) heeft, dan zou je niet aan een nieuw Doel kunnen beginnen totdat je alle vragen hebt beantwoord.
+
+[Obj3_Screenshot 2023-12-05 223422](https://github.com/openaps/AndroidAPSdocs/assets/137224335/77347516-e24e-459d-98ab-acbb49a3d4e8)![image](https://github.com/openaps/AndroidAPSdocs/assets/137224335/ca756b8e-efbc-4427-b281-ac953ce16718)
+
+
+
+For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time locked for a certain amount of time (60 minutes) before you can go back and answer the question.
+
+
+After updating to a new version of **AAPS**, new questions may be added to cover a prevalent issue picked up by **AAPS** or alternatively to test your knowledge of a new feature of **AAPS** as released.
+
+
+When **AAPS** is installed for the first time, you will have to complete Objective 3 entirely in order to move onto Objective 4. Each objective is required to be completed in sequential order. New features will gradually be unlocked as progress is made through the objectives.
+
+__What happens if new questions are added later to Objective 3?__ From time to time, new features are added to **AAPS** which may require a new question to be added to Objective 3. As a result, any new question added to Objective 3 will be marked as “incomplete” because **AAPS** will require you to action this. As each Objective is independent, you will not lose the existing functionality of **AAPS** providing the other objectives remain completed.
+
 
 ## Doel 4: Beginnen met een open loop
 
