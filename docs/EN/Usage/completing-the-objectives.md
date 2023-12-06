@@ -162,10 +162,10 @@ This recommendation should be seen as a starting point. If you set it to the 3x 
 (Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)=
 ## Objective 8: Adjust basals and ratios if needed, and then enable autosens
 
-As part of this objective you will revist your profile's performance and will use autosens functionality as an indicator for wrong settings. Estimated time to complete this objective: 7 days.
+As part of this objective you will revist your profile's performance and will use autosens functionality as an indicator for wrong settings. Estimated time to complete this objective: >= 14 days.
 
-- You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
-- Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch OVERVIEW's graph white line showing your insulin sensitivity rising or falling due to exercise or hormones etc. and keep an eye on the OpenAPS report tab which shows AAPS adjusting the basals and/or targets accordingly.
+- Let you loop run at least 7 days to check if your basals remain accurate or do a traditional basal test series over one week.
+- If it remains relatvely stable you can enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch OVERVIEW's graph white line showing your insulin sensitivity rising or falling due to exercise or hormones etc. and keep an eye on the OpenAPS report tab which shows AAPS adjusting the basals and/or targets accordingly.
 
 (Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
 ## Objective 9: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)

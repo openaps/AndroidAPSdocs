@@ -185,7 +185,7 @@ As mentioned earlier, using **AAPS** is more of a “journey” that requires in
 | Objective 5: Understanding your open loop, including its temp basal recommendations  | 7 days          |
 | Objective 6: Starting to close the loop with Low Glucose Suspend                     | Up to 5-14 days |
 | Objective 7: Tuning the closed loop, raising maxIOB and gradually lowering BG targets| Up to 7 days    |
-| Objective 8: Adjust basals and ratios if needed, and then enable autosens            | Up to 7-14 days |
+| Objective 8: Adjust basals and ratios if needed, and then enable autosens            | > = 14 days |
 | Objective 9: Enabling additional oref1 features, such as super micro bolus (SMB)     | Up to 14 days   |
 | Objective 10: Automation                                                             | 1 day           |
 
