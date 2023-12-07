@@ -20,6 +20,8 @@ Nightscout is provided as open-source software and users are encouraged to creat
 
 Creating your Nightscout reporting server can require one or more web-based applications that will require maintenance. In order to have a free service, you may need to migrate your Nightscout site and data, if and when providers remove the free tier.
 
+A description of how you can set up Nightscout with the advantages and disadvantages of the various operating options, including an estimate of the costs, can be found [here](https://nightscout.github.io/nightscout/new_user/#free-diy).
+
 ### Option 2 - Pay for a hosted Nightscout service
 
 There are also options from different service providers who host Nightscout for you, with a monthly fee. The costs are manageable, and the advantage of a hosted option is that you do not need to be IT-literate, or have any operating infrastructure. 
@@ -27,7 +29,7 @@ There are also options from different service providers who host Nightscout for 
 
 Existing Nightscout users can reconsider where and how their Nightscout server is hosted from time to time, and change to a different option if it becomes more suitable.
 
-A description of how you can set up Nightscout with the advantages and disadvantages of the various operating options, including an estimate of the costs, can be found [here](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
+Some hosted services are listed [here](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
 
 ## Tidepool
 
