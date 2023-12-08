@@ -13,9 +13,9 @@
 * Двойное нажатие на ГК, чтобы попасть в меню AAPS
 * Двойное нажатие на график ГК для изменения временной шкалы графика
 
-## Changing to an AAPS Watchface on your WearOS watch
+## Переход на циферблат AAPS на часах WearOS
 
-There are a number of watchfaces available in the standard build of the AAPS Wear OS APK build. Once you have installed the AAPS Wear APK on your watch, they will be available. Here are the steps for selecting one:
+В стандартной версии сборки AAPS Wear OS APK доступно несколько циферблатов. После установки AAPS Wear APK на часах они будут доступны. Ниже приведены шаги для выбора:
 
 1. On your watch (assuming WearOS), long press on your current watchface to bring up the watchface selector screen and scroll all the way to the right until you see the "Add Watch Face" button and select it
 
