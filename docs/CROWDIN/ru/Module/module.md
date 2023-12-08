@@ -70,13 +70,13 @@ AAPS **в настоящее время** работает с
 (module-additional-communication-device)=
 #### Дополнительное устройство коммуникации
 
-Для старых помп Medtronic требуется дополнительное устройство коммуникации (кроме вашего телефона) для "перевода" радиосигнала от помпы на Bluetooth. Убедитесь, что выбрана правильная версия для вашей помпы.
+Для старых помп Medtronic требуется дополнительное устройство коммуникации (кроме телефона) для "перевода" радиосигнала от помпы на Bluetooth. Убедитесь, что выбрана правильная версия для вашей помпы.
 
 - ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
 - ![RileyLink / РайлиЛинк](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
 - ![EmaLink](../images/omnipod/EmaLink.png)  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
-- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
-- ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
+- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Контактная информация](mailto:Boshetyn@ukr.net)
+- ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink сайт](https://www.getlooplink.org/) - [Контактная информация](https://jameswedding.substack.com/) - Непроверено
 
 **Какая же самая лучшая помпа для работы с AndroidAPS?**
 
@@ -84,24 +84,24 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 
 Однако преимущества помп Dana R/ RS и Dana-i по сравнению с Combo следующие:
 
-- Помпы Dana сопрягается почти с любым телефоном на Android без необходимости перепрошивки на Lineage OS. If your phone breaks you usually can find easily any phone that works with the Dana pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
-- Initial pairing is simpler with the Dana-i/RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
-- So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
-- The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB.  The Dana-i/RS is configurable that it does neither beep or vibrate.
-- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
-- All pumps AAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
+- Помпы Dana сопрягается почти с любым телефоном на Android без необходимости перепрошивки на Lineage OS. Если телефон сломается, ему быстро найдется замена, которая работает с Dana... С Combo сложнее. (Ситуация может измениться, когда Android 8.1 станет более популярным)
+- Первоначальное сопряжение проходит проще с Dana-i/RS. Но обычно это делается только один раз, так что это свойство важно, если хотите проверить новую функцию на других помпах.
+- So far the Combo works with screen parsing. В целом, это неплохо, но этот процесс идет медленно. Для цикла ИПЖ это не имеет значения, так как он работает в фоновом режиме. Тем не менее, требуется больше времени на соединение и, соответственно, больше возможности его разорвать, что плохо, если вы отошли от телефона, например, во время болюса, когда готовите пищу.
+- Combo вибрирует по завершении временных базалов TBR, Dana вибрирует (или пищит) на микроболюсах SMB. В ночное время вы, скорее всего, будете использовать TBR а не SMB.  Dana-i/RS может быть сконфигурирована так, что не будет ни вибрировать ни пищать.
+- Чтение истории на Dana-i/RS происходит за секунды и позволяет легко заменить телефон в автономном режиме и продолжать работу с появлением новых значений мониторинга CGM.
+- Все помпы, с которыми работает AndroidAPS, изначально водонепроницаемы. Но только помпы Dana также "гарантированно водонепроницаемы" благодаря изолированным отсекам батареи и системы наполнения резервуара.
 
 ### Источник данных гликемии
 
-This is just a short overview of all compatible CGMs/FGM with AAPS. For further details, look [here](../Configuration/BG-Source.md). Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
+Это всего лишь краткий обзор совместимых с AndroidAPS систем мониторинга ГК. Для получения дополнительной информации смотрите [здесь](../Configuration/BG-Source.md). Небольшая подсказка: если данные ГК могут приниматься приложением xDrip+ или на веб-сайте Nightscout, вы можете выбрать xDrip+ (или Nightscout с интернет-соединением) как источник ГК в AAPS.
 
-- [Dexcom G7](../Hardware/DexcomG7.md): Works with xDrip+ or patched app
-- [Dexcom G6](../Hardware/DexcomG6.md): BOYDA is recommended as of version 3.0 (see [release notes](Releasenotes-important-hints-3-0-0) for details). xDrip+ must be at least version 2022.01.14 or newer
-- [Dexcom G5](../Hardware/DexcomG5.md): It works with xDrip+ app or patched Dexcom app
-- [Dexcom G4](../Hardware/DexcomG4.md): These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
-- [Libre 3](../Hardware/Libre3.md): It works with xDrip+ (no transmitter needed)
-- [Libre 2](../Hardware/Libre2.md): It works with xDrip+ (no transmitter needed)
-- [Libre 1](../Hardware/Libre1.md): You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
+- [Dexcom G7](../Hardware/DexcomG7.md): Работает с xDrip+ или модифицированным приложением
+- [Dexcom G6](../Hardware/DexcomG6.md): начиная с версии 3.0 рекомендуется самостоятельно собранное приложение Dexcom BYODA (подробнее см. [примечания к выпуску](Releasenotes-important-hints-3-0-0)). xDrip+ должен быть по крайней мере версии 2022.01.14 или новее
+- [Dexcom G5](../Hardware/DexcomG5.md): Работает с xDrip+ или модифицированным приложением
+- [Dexcom G4](../Hardware/DexcomG4.md): Эти сенсоры достаточно старые, но можно найти инструкции по их использованию с приложением xDrip+
+- [Libre 3](../Hardware/Libre3.md): Работает с xDrip+ (трансмиттер не нужен)
+- [Libre 2](../Hardware/Libre2.md): Работает с xDrip+ (трансмиттер не нужен)
+- [Libre 1](../Hardware/Libre1.md): -Нужен трансмиттер типа Bluecon или MiaoMiao (сборка или покупка) и приложение xDrip+
 - [Eversense](../Hardware/Eversense.md): It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
 - [Enlite (MM640G/MM630G)](../Hardware/MM640g.md): quite complicated with a lot of extra stuff
 - [Poctech](../Hardware/PocTech.md)
