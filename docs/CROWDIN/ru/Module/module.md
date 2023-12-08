@@ -102,13 +102,13 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 - [Libre 3](../Hardware/Libre3.md): Работает с xDrip+ (трансмиттер не нужен)
 - [Libre 2](../Hardware/Libre2.md): Работает с xDrip+ (трансмиттер не нужен)
 - [Libre 1](../Hardware/Libre1.md): -Нужен трансмиттер типа Bluecon или MiaoMiao (сборка или покупка) и приложение xDrip+
-- [Eversense](../Hardware/Eversense.md): It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
-- [Enlite (MM640G/MM630G)](../Hardware/MM640g.md): quite complicated with a lot of extra stuff
+- [Eversense](../Hardware/Eversense.md): Пока что аботает только в сочетании с приложением ESEL и модифицированным приложением Eversense-App (не работает с Dana RS и LineageOS, но Dana RS и Android или Combo и Lineage OS работают)
+- [Enlite (MM640G/MM630G)](../Hardware/MM640g.md): довольно сложно, с множеством дополнительных условий
 - [Poctech](../Hardware/PocTech.md)
 
 ### Nightscout
 
-Nightscout is a open source web application that can log and display your CGM data and AAPS data and creates reports. You can find more information on the [website of the Nightscout project](http://nightscout.github.io/). You can create your own [Nightscout website](https://nightscout.github.io/nightscout/new_user/), use the semi-automated Nightscout setup on [zehn.be](https://ns.10be.de/en/index.html) or host it on your own server (this is for IT experts).
+Nightscout - веб-приложение с открытым исходным кодом, которое может регистрировать/отображать данные мониторинга и AAPS и создавать отчеты. Больше информации на [странице проекта Nightscout](http://nightscout.github.io/). You can create your own [Nightscout website](https://nightscout.github.io/nightscout/new_user/), use the semi-automated Nightscout setup on [zehn.be](https://ns.10be.de/en/index.html) or host it on your own server (this is for IT experts).
 
 Nightscout is independent of the other modules. You will need it to fulfill Objective 1.
 
