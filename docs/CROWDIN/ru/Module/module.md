@@ -108,23 +108,23 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 
 ### Nightscout
 
-Nightscout - веб-приложение с открытым исходным кодом, которое может регистрировать/отображать данные мониторинга и AAPS и создавать отчеты. Больше информации на [странице проекта Nightscout](http://nightscout.github.io/). You can create your own [Nightscout website](https://nightscout.github.io/nightscout/new_user/), use the semi-automated Nightscout setup on [zehn.be](https://ns.10be.de/en/index.html) or host it on your own server (this is for IT experts).
+Nightscout - веб-приложение с открытым исходным кодом, которое может регистрировать/отображать данные мониторинга и AAPS и создавать отчеты. Больше информации на [странице проекта Nightscout](http://nightscout.github.io/). Вы можете создать собственный [сайт Nightscout](https://nightscout.github.io/nightscout/new_user/) _, с автоматизированной установкой Nightscout на [zehn.be](https://ns.10be.de/en/index.html) или разместите его на собственном сервере (для IT экспертов) (и вот еще неплохая бесплатная опция -https://www.youtube.com/watch?v=EDADrteGBnY - единственная загвоздка - видео на английском. но вообще-то там довольно понятно и без перевода - прим. перев.).
 
 Nightscout is independent of the other modules. You will need it to fulfill Objective 1.
 
 Additional information on how to configure Nightscout for use with AAPS can be found [here](../Installing-AndroidAPS/Nightscout.md).
 
-### AAPS-.apk file
+### Файл AAPS-.apk
 
-The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  [here](../Installing-AndroidAPS/Building-APK.md).
+Основной компонент системы. Перед установкой приложения необходимо создать apk-файл ( расширение имен файлов для приложений Android). Инструкции [здесь](../Installing-AndroidAPS/Building-APK.md).
 
-## Optional Modules
+## Дополнительные модули
 
-### Smartwatch
+### Смарт часы
 
-You can choose any smartwatch with Android Wear 1.x and above. Most loopers wear a Sony Smartwatch 3 (SWR50) as it is the only watch that can get readings from Dexcom G6/G5 when phone is out of range. Some other watches can be patched to work as a standalone receiver as well (see [this documentation](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5) for more details).
+Вы можете выбрать смарт-часы с Android Wear 1.x и выше. Большинство пользователей носят Sony Smartwatch 3 (SWR50), поскольку это единственные смарт-часы, которые могут получать данные от Dexcom G5/G5, когда телефон вне доступа. Some other watches can be patched to work as a standalone receiver as well (see [this documentation](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5) for more details).
 
-Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). There are different watchfaces for use with AAPS, which you can find [here](../Configuration/Watchfaces.md).
+Пользователи создают список протестированных телефонов [и часов](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). There are different watchfaces for use with AAPS, which you can find [here](../Configuration/Watchfaces.md).
 
 Для того, чтобы включить в список телефон, который не занесен в таблицу, заполните форму [](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform).
 
