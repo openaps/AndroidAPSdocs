@@ -3,22 +3,32 @@
 (Nightscout-security-considerations)=
 ## Security considerations
 
-Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
+Besides reporting, Nightscout can also be used to remotely control AAPS, meaning you can set temp targets, change or modify profiles, add future carbs or log insulin. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
 
 ### Nightscout settings
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
+You can deny public access (viewing) to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security/#how-to-turn-off-unauthorized-access), this is a matter of privacy.  
+Keep in mind you can only modify data in Nightscout when having an admin token or the API secret.
 
 ### AAPS settings
 
-There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs. 
+You can setup Nightscout to upload only (no sync) in AAPS settings. By doing so AAPS will not pick up and enact changes done in Nightscout. 
 
-* Tap 3-dot menu on top right corner on your AAPS homescreen.
-* Select "Preferences".
-* Scroll down and tap "Advanced settings".
-* Activate "NS upload only
+* Select the NSCLIENT tab from the main menu or in the tabs list.
 
-![Nightscout upload only](../images/NSsafety.png)
+* Open the plugin menu (three dots top right).
+
+* Select "Plugin preferences".
+
+  ![Nightscout upload only](../images/NSsafety1.png)
+
+* Scroll down and tap "Synchronization".
+
+  ![Nightscout upload only](../images/NSsafety2.png)
+
+* Disable all "Receive" options.
+
+![Nightscout upload only](../images/NSsafety3.png)
 
 ### Further security settings
 
@@ -27,39 +37,25 @@ Keep your phone up to date as described in [safety first](../Getting-Started/Saf
 (Nightscout-manual-nightscout-setup)=
 ## Manual Nightscout setup
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site.  Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.  Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
+It is assumed you already have a Nightscout site, if not, visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up. The information below are the settings you will also need to add/modify to your Nightscout site. 
 
-* Go to https://herokuapp.com/
+Please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you might get an error message on your AAPS app. 
 
-* Click your App Service name.
-
-* Click Application settings (azure) or Settings > "Reveal Config Variables (heroku)
-
+* Enter the [variables editing](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration) interface matching your Nightscout platform.
 * Add or edit the variables as follows:
-  * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps`
+  * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal pushover bgi pump openaps`  
+    *Note: Add missing entries to the`ENABLE` variable.*
   * `DEVICESTATUS_ADVANCED` = `true`
   * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged:
+  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is recommended (except for Omnipod):
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26`  
- 
-![Azure](../images/nightscout1.png)
 
-* Click "Save" at the top of the panel.
+* Make sure to save the modifications.
 
 
 ## Semi-automated Nightscout setup
 
-Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
+Use your [vendor](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table) web interface to setup the variables mentioned above, contact the vendor support service if you need help.
 
-**Benefits**
-* You can install Nightscout with a few clicks and use it directly. 
-* Reduction of manual work as Martin tries to automate the administration.
-* All settings can be made via a user-friendly web interface. 
-* The service includes an automated basal rate check using Autotune. 
-* The servers are located in Germany and Finland.
-
-<https://ns.10be.de/en/index.html>
-
-An alternative would be <https://t1pal.com/> - starting at $11,99 per month.
