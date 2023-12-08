@@ -1,29 +1,46 @@
 # Objectives
 
-AAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping.  They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
+**AAPS** has a series of **objectives** that you need to complete to progress from basic open looping to hybrid closed looping and full **AAPS** functionality. Completing the **objectives** ensures:
 
-If you are **upgrading phones** then you can [export your settings](../Usage/ExportImportSettings.md) to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to [backup your settings](../Usage/ExportImportSettings.html) frequently just in case.
+* You have configured everything correctly in your **AAPS** setup
+* You have learned about the essential features of **AAPS** 
+* You have a basic understanding of what your system is doing, and therefore why you can trust it.
 
-If you want to go back in objectives see [explanation below](Objectives-go-back-in-objectives).
+
+:::{admonition} Note
+:class: note
+
+Regularly export your **AAPS** settings after completing each **objective**!
+:::
+
+We strongly recommend that you  [export your settings](../Usage/ExportImportSettings.md) after completing each **objective**. This exporting process creates a **settings** (.json) file which you should keep backed-up in one or more safe places (_e.g._ Google Drive, hard disk, email attachment _etc._). This ensures that you keep your progress through the **objectives**, and if you accidentally delete your progress, you can simply re-load it by importing a recent settings file. Having a backup **settings** file is also required if you want to change your **AAPS** smartphone for any reason (upgrading/lost/broken phone _etc._)
+
+The **settings** file will save not only your progress through the objectives, but also your own customised **AAPS** settings such as **max bolus** _etc._  
+
+If you do not have a backup copy of your **settings**, if anything happens to your **AAPS** smartphone you will need to start the **objectives** from the beginning again. 
+
+Overall the **objectives** take around 6 weeks to complete (see [how long will it take?](preparing-how-long-will-it-take?) for a detailed breakdown) from configuring **AAPS** on your smartphone to "basic" hybrid closed looping (from objective 1 to objective 8), so, although you _can_ proceed up to **objective 5** using a **virtual pump** (and using some other method of insulin delivery in the meantime), having to re-complete all the **objectives** because for example, you lost your smartphone, is still something you really want to avoid. 
+
+As well as progressing through the **objectives**, if you want, you can also remove your progress and [go back to an earlier objective](Objectives-go-back-in-objectives). 
 
 ## Objective 1: Setting up visualization and monitoring, analysing basals and ratios
 
-- Select the right blood glucose source for your setup.  See [BG Source](../Configuration/BG-Source.md) for more information.
-- Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AAPS driver for looping) to ensure your pump status can communicate with AAPS.
-- If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AAPS.
-- Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure Nightscout can receive and display this data.
-- Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see [NSClient settings in Preferences](Preferences-nsclient).
+- Select the correct blood glucose source for your setup.  See [BG Source](../Configuration/BG-Source.md) for more information.
+- Select the correct Pump in ConfigBuilder to ensure your pump can communicate with AAPS. Select **virtual pump** if you are using a pump model with no **AAPS** driver for looping, or if you want to work through the early **objectives** while using another system for insulin delivery. 
+- If using a DanaR pump then ensure you have followed the [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and **AAPS**.
+- Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure **Nightscout** can receive and display this data.
+- Note that URL in **NSClient** must be **_without_ "/api/v1/"** at the end - see [NSClient settings in Preferences](Preferences-nsclient).
 
-*You may need to wait for the next blood glucose reading to arrive before AAPS will recognise it.*
+Note - *You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognise it.*
 
 ## Objective 2: Learn how to control AAPS
 
-As part of this objective you learn how to navigate through AAPS screens and how to perform basic actions in AAPS which you will come across on a daily basis later. You will learn how to put a screen or a plugin either to the top scrollable menu bar or let it show via the hamburger menue on the top left list of enabled plugins. If your are not familiar with the AAPS homescreens and its navigation please refer to [AAPS Screens](../Getting-Started/Screenshots.md). Estimated time to complete this objective: 2 hours.
+- Perform several actions in **AAPS** as described in this **objective**.
 
 Basic navigation tips:
 - Perform several actions in AAPS as described in this objective.
 - Click on the orange text "Not completed yet" to access the to-dos.
-- Links will be provided to guide you in case you are not familiar with a specific action yet.
+- Links will be provided to guide you, in case you are not familiar with a specific action yet.
 
   ```{image} ../images/Objective2_V2_5.png
   :alt: Screenshot objective 2
@@ -41,26 +58,22 @@ Basic navigation tips:
 
 ## Objective 3: Prove your knowledge
 
-Objective 3 is a multiple choice test based on questions designed to test your theoretical knowledge of **AAPS**.
+- Pass a multiple-choice exam testing your **AAPS** knowledge.
 
 Some users find Objective 3 to be the most difficult objective to complete. Please do read the AAPS documents in conjunction with the questions. If you are genuinely stuck after researching the **AAPS** documents, please search or ask for help on the Facebook or Discord group. These groups can provide friendly hints or redirect you to the relevant part of the **AAPS** documents.
 
 To proceed with Objective 3, click on the orange text “Not completed yet” to access the relevant question. Please read each question and select your answer(s).
 
+- These new questions will lead to some not answered questions even though you have successfully completed objective 3 in previous versions.
 
+- To reduce the number of decisions to be made while in Open Loop set a wide target range _e.g._ 90 - 150 mg/dl or 5.0 - 8.5 mmol/l.
 
-Within each question, a hyperlink to the **AAPS** documents will guide you to the relevant section of the document which you should read in order to locate the correct answer.
-
-
-[Obj3_Screenshot 2023-12-05 223422](https://github.com/openaps/AndroidAPSdocs/assets/137224335/77347516-e24e-459d-98ab-acbb49a3d4e8)![image](https://github.com/openaps/AndroidAPSdocs/assets/137224335/ca756b8e-efbc-4427-b281-ac953ce16718)
-
-
-
+- You might want to set a wider upper limit, or even disable Open Loop, at night.
+=======
 For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time locked for a certain amount of time (60 minutes) before you can go back and answer the question.
 
 
 After updating to a new version of **AAPS**, new questions may be added to cover a prevalent issue picked up by **AAPS** or alternatively to test your knowledge of a new feature of **AAPS** as released.
-
 
 When **AAPS** is installed for the first time, you will have to complete Objective 3 entirely in order to move onto Objective 4. Each objective is required to be completed in sequential order. New features will gradually be unlocked as progress is made through the objectives. 
 
@@ -88,6 +101,8 @@ Purpose of this objective is to recognise how often AAPS will evaluate basal rat
 
 - Good to know: You don't need to action each and every system recommendation ...
 
+(Objectives-objective-5-Understanding-your-open-loop-including-its-temp-basal-recommendations)=
+
 ## Objective 5: Understanding your open loop, including its temp basal recommendations
 
 As part of this objective you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in AAPS OVERVIEW](Screenshots-prediction-lines)/Nightscout and looking at detailed calculations shown on your OPENAPS tab. Estimated time to complete this objective: 7 days.
@@ -110,8 +125,12 @@ You can adjust (widen or tighten) the graph’s green area, representing your ta
 ```{image} ../images/sign_stop.png
 :alt: Stop sign
 ```
+:::{admonition} If you have been using a virtual pump, change to a real pump now!
+:class: note
 
-### Stop here if you are open looping with a virtual pump - do not click Verify at the end of this objective.
+If you are open looping with a virtual pump stop here. Only click verify at the end of this objective once you have changed to using a "real" physical pump.
+:::
+
 
 ```{image} ../images/blank.png
 :alt: blank
