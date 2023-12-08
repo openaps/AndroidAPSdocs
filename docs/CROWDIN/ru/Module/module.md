@@ -1,4 +1,4 @@
-# # Обзор компонентов
+# Обзор компонентов
 
 AAPS не просто приложение (самостоятельно собранное), это лишь один из модулей закрытой системы ИПЖ. Прежде чем выбрать конкретные компоненты, следует также изучить особенности [их настройки](index-component-setup).
 
@@ -9,7 +9,7 @@ AAPS не просто приложение (самостоятельно соб
 ```{note}
 **ВАЖНОЕ ЗАМЕЧАНИЕ О БЕЗОПАСНОСТИ**
 
-Безопасность функционирования функций AAPS, обсуждаемых в этой документации, основана на безопасности всех устройств, используемых в вашей системе. В системе "замкнутого цикла" с автоматической дозировкой инсулина допускается использовать только испытанные, работоспособные инсулиновые помпы и системы непрерывного мониторинга глюкозы, которые получили соответствующее разрешение таких зарубежных регуляторов как FDA (США) и CE (Европейский союз). Внесение аппаратных или программных технических изменений в это оборудование может стать причиной неконтролируемого введения инсулина, что может повлечь опасные последствия для пациента. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AAPS system.
+Безопасность функционирования функций AAPS, обсуждаемых в этой документации, основана на безопасности всех устройств, используемых в вашей системе. В системе "замкнутого цикла" с автоматической дозировкой инсулина допускается использовать только испытанные, работоспособные инсулиновые помпы и системы непрерывного мониторинга глюкозы, которые получили соответствующее разрешение таких зарубежных регуляторов как FDA (США) и CE (Европейский союз). Внесение аппаратных или программных технических изменений в это оборудование может стать причиной неконтролируемого введения инсулина, что может повлечь опасные последствия для пациента. *Не используйте* модифицированные, самодельные или испорченные инсулиновые помпы и/или устройства мониторинга для создания системы AAPS.
 
 Допустимо использовать только оригинальные, сертифицированные производителем расходные материалы, такие как инсулиновые картриджи, инфузионные наборы, пристреливатели к ним и т. п. Использование непроверенных или модифицированных материалов может вызвать неточность мониторинга и ошибки дозировки инсулина. Инсулин опасен при неверной дозировке - не рискуйте жизнью, пользуясь неумело переделанными компонентами.
 
@@ -22,7 +22,7 @@ AAPS не просто приложение (самостоятельно соб
 
 Хотя его нельзя сконструировать или купить, это, вероятно, самый недооцениваемый "модуль", существенно важный для системы. Когда алгоритму доверяется управлять диабетом, следует знать правильные настройки, чтобы не допустить серьезных ошибок. Даже если у вас еще нет других модулей, вы можете в сотрудничестве с вашим эндокринологом проверить и адаптировать свой профиль. Большинство пользователей систем ИПЖ используют циклические суточные величины скорости базала (BR), гормональную чувствительность к инсулину ISF и углеводный коэффициент CR.
 
-The profile includes
+Профиль включает
 
 - BR (скорость подачи базового инсулина)
 - ISF (коэффициент чувствительности к инсулину) определяет вашу величину понижения ГК в результате введения 1 единицы инсулина
@@ -37,7 +37,7 @@ SGLT-2 ингибиторы, которые также называются гл
 (module-phone)=
 ### Телефон
 
-The current version of AAPS requires an Android smartphone with Google Android 9.0 or above. Так что если вы думаете о новом телефоне, рекомендуем хотя бы Android 9., но оптимально Android 10 или 12. Для более ранних версий Android имеются предыдущие версии AAPS см.: [примечания к версиям](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version)
+Текущая версия AndroidAPS требует Android-смартфона с Google Android 9.0 или выше. Так что если вы думаете о новом телефоне, рекомендуем хотя бы Android 9., но оптимально Android 10 или 12. Для более ранних версий Android имеются предыдущие версии AAPS см.: [примечания к версиям](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version)
 
 Пользователи создают список протестированных телефонов [и часов](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
@@ -57,7 +57,7 @@ AAPS **в настоящее время** работает с
 - [Dana-i](../Configuration/DanaRS-Insulin-Pump.md)
 - [Diaconn G8 ](../Configuration/DiaconnG8.md)
 - [EOPatch2](../Configuration/EOPatch2.md)
-- [Omnipod Eros](../Configuration/OmnipodEros.md)  ([additional communication device](module-additional-communication-device) needed)
+- [Omnipod Eros](../Configuration/OmnipodEros.md)  (требуется[дополнительное устройство связи](module-additional-communication-device))
 - [Помпа Omnipod DASH](../Configuration/OmnipodDASH.md)
 - [Medtrum Nano](../Configuration/MedtrumNano.md)
 - [Medtrum 300U](../Configuration/MedtrumNano.md)
@@ -65,16 +65,16 @@ AAPS **в настоящее время** работает с
 
 Если не упомянуто дополнительное коммуникационное устройство, то связь между помпой и AndroidAPS происходит за счет встроенного модуля bluetooth без необходимости дополнительного протокола коммуникации.
 
-**Other pumps** that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](../Getting-Started/Future-possible-Pump-Drivers.md) page.
+Подробнее о **других помпах**, которые потенциально могут работать с AAPS можно почитать на странице [(Вероятные) будущие драйверы для помп](../Getting-Started/Future-possible-Pump-Drivers.md).
 
 (module-additional-communication-device)=
 #### Дополнительное устройство коммуникации
 
 Для старых помп Medtronic требуется дополнительное устройство коммуникации (кроме телефона) для "перевода" радиосигнала от помпы на Bluetooth. Убедитесь, что выбрана правильная версия для вашей помпы.
 
-- ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
+- ![OrangeLink](../images/omnipod/OrangeLink.png)  Сайт [OrangeLink ](https://getrileylink.org/product/orangelink)
 - ![RileyLink / РайлиЛинк](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
-- ![EmaLink](../images/omnipod/EmaLink.png)  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
+- ![EmaLink](../images/omnipod/EmaLink.png)  Сайт [Emalink](https://github.com/sks01/EmaLink) - [Контактная информация](mailto:getemalink@gmail.com)
 - ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Контактная информация](mailto:Boshetyn@ukr.net)
 - ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink сайт](https://www.getlooplink.org/) - [Контактная информация](https://jameswedding.substack.com/) - Непроверено
 
@@ -86,7 +86,7 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 
 - Помпы Dana сопрягается почти с любым телефоном на Android без необходимости перепрошивки на Lineage OS. Если телефон сломается, ему быстро найдется замена, которая работает с Dana... С Combo сложнее. (Ситуация может измениться, когда Android 8.1 станет более популярным)
 - Первоначальное сопряжение проходит проще с Dana-i/RS. Но обычно это делается только один раз, так что это свойство важно, если хотите проверить новую функцию на других помпах.
-- So far the Combo works with screen parsing. В целом, это неплохо, но этот процесс идет медленно. Для цикла ИПЖ это не имеет значения, так как он работает в фоновом режиме. Тем не менее, требуется больше времени на соединение и, соответственно, больше возможности его разорвать, что плохо, если вы отошли от телефона, например, во время болюса, когда готовите пищу.
+- На данный момент Combo работает с экранным анализом (для обратного инжиниринга). В целом, это неплохо, но этот процесс идет медленно. Для цикла ИПЖ это не имеет значения, так как он работает в фоновом режиме. Тем не менее, требуется больше времени на соединение и, соответственно, больше возможности его разорвать, что плохо, если вы отошли от телефона, например, во время болюса, когда готовите пищу.
 - Combo вибрирует по завершении временных базалов TBR, Dana вибрирует (или пищит) на микроболюсах SMB. В ночное время вы, скорее всего, будете использовать TBR а не SMB.  Dana-i/RS может быть сконфигурирована так, что не будет ни вибрировать ни пищать.
 - Чтение истории на Dana-i/RS происходит за секунды и позволяет легко заменить телефон в автономном режиме и продолжать работу с появлением новых значений мониторинга CGM.
 - Все помпы, с которыми работает AndroidAPS, изначально водонепроницаемы. Но только помпы Dana также "гарантированно водонепроницаемы" благодаря изолированным отсекам батареи и системы наполнения резервуара.
@@ -110,9 +110,9 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 
 Nightscout - веб-приложение с открытым исходным кодом, которое может регистрировать/отображать данные мониторинга и AAPS и создавать отчеты. Больше информации на [странице проекта Nightscout](http://nightscout.github.io/). Вы можете создать собственный [сайт Nightscout](https://nightscout.github.io/nightscout/new_user/) _, с автоматизированной установкой Nightscout на [zehn.be](https://ns.10be.de/en/index.html) или разместите его на собственном сервере (для IT экспертов) (и вот еще неплохая бесплатная опция -https://www.youtube.com/watch?v=EDADrteGBnY - единственная загвоздка - видео на английском. но вообще-то там довольно понятно и без перевода - прим. перев.).
 
-Nightscout is independent of the other modules. You will need it to fulfill Objective 1.
+Nightscout не зависит от других модулей. Он понадобится для выполнения цели 1.
 
-Additional information on how to configure Nightscout for use with AAPS can be found [here](../Installing-AndroidAPS/Nightscout.md).
+Дополнительную информацию о том, как настроить Nightscout для использования с AAPS можно найти [здесь](../Installing-AndroidAPS/Nightscout.md).
 
 ### Файл AAPS-.apk
 
@@ -122,9 +122,9 @@ Additional information on how to configure Nightscout for use with AAPS can be f
 
 ### Смарт часы
 
-Вы можете выбрать смарт-часы с Android Wear 1.x и выше. Большинство пользователей носят Sony Smartwatch 3 (SWR50), поскольку это единственные смарт-часы, которые могут получать данные от Dexcom G5/G5, когда телефон вне доступа. Some other watches can be patched to work as a standalone receiver as well (see [this documentation](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5) for more details).
+Вы можете выбрать смарт-часы с Android Wear 1.x и выше. Большинство пользователей носят Sony Smartwatch 3 (SWR50), поскольку это единственные смарт-часы, которые могут получать данные от Dexcom G5/G5, когда телефон вне доступа. Некоторые другие часы могут быть модифицированы как самостоятельный коллектор (см. [эту документацию](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5) для подробностей).
 
-Пользователи создают список протестированных телефонов [и часов](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). There are different watchfaces for use with AAPS, which you can find [here](../Configuration/Watchfaces.md).
+Пользователи создают список протестированных телефонов [и часов](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). Есть разные часы для работы с AAPS, которые можно найти [здесь](../Configuration/Watchfaces.md).
 
 Для того, чтобы включить в список телефон, который не занесен в таблицу, заполните форму [](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform).
 
@@ -132,12 +132,12 @@ Additional information on how to configure Nightscout for use with AAPS can be f
 
 ### xDrip +
 
-Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found [here](../Configuration/xdrip.md). Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
+Даже если вам не нужно приложение xDrip+ в качестве источника ГК, вы можете использовать его для оповещений или в качестве дисплея сахаров. Можно настроить столько оповещений сколько хотите, указать время, когда оповещениям разрешено работать, должны ли они иметь приоритет в режиме тишины и т. п. Некоторую информацию об xDrip+ можно найти [здесь](../Configuration/xdrip.md). Имейте в виду, что документация к этому приложению не всегда актуальна, так как проект развивается довольно быстро.
 
-## What to do while waiting for modules
+## Что делать во время ожидания модулей
 
-It sometimes takes a while to get all modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is NECESSARY to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with AAPS. Using this mode, AAPS gives treatment advices you can manually execute.
+Иногда требуется некоторое время, чтобы получить все модули для закрытого цикла ИПЖ. Но не беспокойтесь, можно многое сделать во время ожидания. НЕОБХОДИМО проверить и (где требуется) адаптировать базальную скорость (BR), соотношение инсулин-углеводы (IC), фактор чувствительности к инсулину (ISF) и т. д. И, возможно, незамкнутый цикл может быть хорошим способом проверить систему и познакомиться с AAPS. В этом режиме AAPS дает рекомендации, которые можно выполнить вручную.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../Where-To-Go-For-Help/Background-reading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+Продолжайте читать документацию, общаться с другими пользователями в сети или вне ее, узнавать мнение пользователей (при этом учитывая, что подходят не все рекомендации).
 
-**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/Objectives.md) before each new Objective and setup up your [hardware](index-component-setup).
+**Собрали?** Если собраны все компоненты AAPS (поздравляем!) или, по крайней мере, их достаточно, чтобы начать работу в режиме незамкнутого цикла, сначала следует прочитать [Описание Целей](../Usage/Objectives.md) перед каждой новой целью и настроить [компоненты](index-component-setup).
