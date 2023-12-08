@@ -29,23 +29,34 @@ AAPS has a series of Objectives that need to be completed to walk you through th
   ```
 
 (Objectives-objective-3-prove-your-knowledge)=
+
 ## Цель 3: Подтвердите ваши знания
 
-- Pass a multiple-choice exam testing your AAPS knowledge.
+Objective 3 is a multiple choice test based on questions designed to test your theoretical knowledge of **AAPS**.
 
-- Чтобы открыть сам вопрос и варианты ответов на него - нажмите на оранжевый текст "Не завершено".
+Some users find Objective 3 to be the most difficult objective to complete. Please do read the AAPS documents in conjunction with the questions. If you are genuinely stuck after researching the **AAPS** documents, please search or ask for help on the Facebook or Discord group. These groups can provide friendly hints or redirect you to the relevant part of the **AAPS** documents.
 
-  ```{image} ../images/Objective3_V2_5.png
-  :alt: снимок экрана Цель 3
-  ```
+To proceed with Objective 3, click on the orange text “Not completed yet” to access the relevant question. Please read each question and select your answer(s).
 
-- Если вам требуется помощь с поиском правильного ответа - воспользуйтесь приложенной к вопросу ссылкой на соответствующую статью из этой документации.
 
-- Для версии 2.8 вопросы 3 цели были полностью переработаны носителями языка. Они охватывают как прежние базовые темы, так и несколько новых.
 
-- Поэтому, если вы проходили 3 цель в предыдущих версиях программы - у вас появятся новые неотвеченные вопросы.
+Within each question, a hyperlink to the **AAPS** documents will guide you to the relevant section of the document which you should read in order to locate the correct answer.
 
-- Неотвеченные вопросы окажут влияние только в том случае, если вы еще не прошли все цели и приступаете к новой. Другими словами, если вы уже прошли все цели ранее - вы можете ответить на новые вопросы позднее, не теряя функционал AAPS.
+
+[Obj3_Screenshot 2023-12-05 223422](https://github.com/openaps/AndroidAPSdocs/assets/137224335/77347516-e24e-459d-98ab-acbb49a3d4e8)![изображение](https://github.com/openaps/AndroidAPSdocs/assets/137224335/ca756b8e-efbc-4427-b281-ac953ce16718)
+
+
+
+For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time locked for a certain amount of time (60 minutes) before you can go back and answer the question.
+
+
+After updating to a new version of **AAPS**, new questions may be added to cover a prevalent issue picked up by **AAPS** or alternatively to test your knowledge of a new feature of **AAPS** as released.
+
+
+When **AAPS** is installed for the first time, you will have to complete Objective 3 entirely in order to move onto Objective 4. Each objective is required to be completed in sequential order. New features will gradually be unlocked as progress is made through the objectives.
+
+__What happens if new questions are added later to Objective 3?__ From time to time, new features are added to **AAPS** which may require a new question to be added to Objective 3. As a result, any new question added to Objective 3 will be marked as “incomplete” because **AAPS** will require you to action this. As each Objective is independent, you will not lose the existing functionality of **AAPS** providing the other objectives remain completed.
+
 
 ## Цель 4: Начните с открытого цикла
 
