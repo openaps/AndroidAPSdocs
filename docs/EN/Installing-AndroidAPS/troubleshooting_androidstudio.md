@@ -1,4 +1,4 @@
-(troubleshooting_androidstudio-troubleshooting-android-studio)=
+
 # Troubleshooting Android Studio
 
 (troubleshooting_androidstudio-lost-keystore)=
@@ -248,7 +248,8 @@ However, before deleting Android Studio:
 1) ensure your keystore  folder is stored safely in a folder separate from your C-drive (like a G-Drive) and have your keystore password available for use;
 2) when prompted to delete Android Studio DO NOT delete your Android User Settings i.e. make sure the first box is ticked, and the second box is left unticked when electing the option to delete:
 
-![AS_DELETE_Screenshot_2023-12-03_224103](https://github.com/openaps/AndroidAPSdocs/assets/137224335/b65382fe-3970-45c0-80f0-ce80bfa9db1c)![alt text](../images/file.png)
+![DeleteAS](https://github.com/openaps/AndroidAPSdocs/assets/137224335/a2e4731b-0362-4d41-ae12-33c9717e9a19)
+
 
 **You will also need to make sure that you have uninstalled all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Guidance for complete uninstallation can be found online here:
 
