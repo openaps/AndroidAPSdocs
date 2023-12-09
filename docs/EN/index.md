@@ -46,8 +46,8 @@ Preparing <preparing.md>
 Setting up the reporting server <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
 Building AAPS <./Installing-AndroidAPS/building-AAPS.md>
 Installing AAPS <./Installing-AndroidAPS/installing-AAPS.md>
-Configuring the AAPS loop<./Installing-AndroidAPS/configuring-the-AAPS-loop.md>
-
+Setup Wizard <./Installing-AndroidAPS/setup-wizard.md>
+Change configuration <./Installing-AndroidAPS/change-configuration.md>
 Completing the objectives <./Usage/completing-the-objectives.md>
 
 ```
