@@ -1,7 +1,10 @@
 # setup wizard
 
+## Welcome message
+
 ![image](../images/setup-wizard/Screenshot_20231202_125636.png)
 
+## license agreement
 This is just the welcome message which you can skip with the "NEXT" button.
 
 ![image](../images/setup-wizard/Screenshot_20231202_125650.png)
@@ -13,6 +16,8 @@ Please read it carefully.
 If you don't understand or can't agree to the end user license agreement please don't use AAPS at all!
 
 If you understand and agree please click the "I UNDERSTAND AND AGREE" button and follow the setup wizard.
+
+## required permissions
 
 ![image](../images/setup-wizard/Screenshot_20231202_125709.png)
 
@@ -94,6 +99,8 @@ Please don't stop the setup wizard now. You can do it after finishing the setup 
 
 Please click "OK" and then the "NEXT" button.
 
+## master password
+
 ![image](../images/setup-wizard/Screenshot_20231202_130122.png)
 
 As the configuration of AAPS contains some sensitive data (e.g. API_KEY for accessing the application programming interface of your nightscout server) it is encrypted by a password you can set here.
@@ -101,6 +108,8 @@ As the configuration of AAPS contains some sensitive data (e.g. API_KEY for acce
 The second sentence is very important. Please make a backup copy of it e.g. on Google Drive. Google Drive is a good place as it is backuped by Google for you. Your smartphone or pc can crash and may be you have no actual copy.
 
 After filling in the password twice please click the "NEXT" button.
+
+## fabric upload
 
 ![image](../images/setup-wizard/Screenshot_20231202_130136.png)
 
@@ -130,13 +139,17 @@ After filling in your "contact information" click the "OK" button. Contact infor
 
 Please click the "NEXT" button.
 
+## units (mg/dl <-> mmol/dL
+
 ![image](../images/setup-wizard/Screenshot_20231202_135830.png)
 
 Please select if your blood sugar values are in mg/dl or mmol/L and then please click the "NEXT" button.
 
 ![image](../images/setup-wizard/Screenshot_20231202_135853.png)
 
-Here you select the range for the blood sugar diagram between values are shown as in range. You can leave it in the begining at the standard and adapt later.
+## display settings
+
+ Here you select the range for the blood sugar diagram between values are shown as in range. You can leave it in the begining at the standard and adapt later.
 
 It is here only for the graphical persentation of the diagram and nothing else.
 
@@ -145,6 +158,8 @@ Your blood sugar target e.g. is configured in your profile.
 Your range to analyze TIR (time in range) is configured in your reporting server.
 
 Please press the "NEXT" button.
+
+## synchronization with the reporting server and more
 
 ![image](../images/setup-wizard/Screenshot_20231202_140916.png)
 
@@ -223,6 +238,8 @@ Let "Slow down uploads" disabled. You only use it if for some untypical reasons 
 
 Go back to the screen before and select "NEXT" to go to the next screen.
 
+## patient name
+
 ![image](../images/setup-wizard/Screenshot_20231202_141445.png)
 
 Here you can setup your name in AAPS.
@@ -233,6 +250,8 @@ To keep it simple just enter prename and lastname.
 
 Press "NEXT" to go to the next screen.
 
+## patient type
+
 ![image](../images/setup-wizard/Screenshot_20231202_141817.png)
 
 Here you select your "Patient type" which is important as in the software are different limits defined depending on the age of the patient. This is important for security reason.
@@ -242,6 +261,8 @@ Further you configure the maximum allowed bolus for a meal. That means how much 
 the second limit is similar but now for the max carb intake you expect.
 
 Press "NEXT" to go to the next screen.
+
+## used insulin
 
 ![image](../images/setup-wizard/Screenshot_20231202_141840.png)
 
@@ -255,6 +276,8 @@ For advanced users or medical studies there is the possibility to define with Fr
 :::
 
 Press "NEXT" to go to the next screen.
+
+## blood sugar source
 
 ![image](../images/setup-wizard/Screenshot_20231202_141912.png)
 
@@ -279,6 +302,8 @@ If you are using Dexcom G6 with BYODA too click on the gearwheel to access the s
 Enable the "Upload BG data to NS" and "Log sensor change to NS".
 
 Press "NEXT" to go to the next screen.
+
+## profile
 
 ![image](../images/setup-wizard/Screenshot_20231202_142027.png)
 
@@ -383,6 +408,8 @@ You can confirm it with pressing "OK".
 
 Press "NEXT" to go to the next screen.
 
+## insulin pump
+
 ![image](../images/setup-wizard/Screenshot_20231202_143909.png)
 
 Now you are selecting your insulin pump.
@@ -400,6 +427,8 @@ Press "NEXT" to go to the next screen.
 In this case I select "Virtual Pump".
 
 Press "NEXT" to go to the next screen.
+
+## APS algortihm
 
 ![image](../images/setup-wizard/Screenshot_20231202_144014.png)
 
@@ -425,17 +454,23 @@ Please be patient and trust us that patience will pay off for you. It's a proven
 
 Press "NEXT" to go to the next screen.
 
+## APS mode
+
 ![image](../images/setup-wizard/Screenshot_20231202_144049.png)
 
 Let "Open Loog" selected.
 
 Press "NEXT" to go to the next screen.
 
+## sensitivity detection
+
 ![image](../images/setup-wizard/Screenshot_20231202_144101.png)
 
 Let "Sensitivity Oref1" the standard for the sensitivty plugins selected.
 
 Press "NEXT" to go to the next screen.
+
+## start objective 1
 
 ![image](../images/setup-wizard/Screenshot_20231202_144113.png)
 
