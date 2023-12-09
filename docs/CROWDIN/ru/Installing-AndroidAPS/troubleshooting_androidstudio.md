@@ -97,56 +97,56 @@
 
 (troubleshooting_androidstudio-step-3-gradle-resync)=
 
-#### Step 3: Resync Gradle (again)
+#### Шаг 3: Пересинхронизация Gradle (повторно)
 
-Follow the instructions at [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync).
+Следуйте инструкциям на [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync).
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
-### Android Gradle plugin requires Java 17 to run
+### Для Android Gradle требуется Java 17
 
-  You might experience this error message:
+  Вы можете столкнуться с этой ошибкой:
 
-  ![Android Gradle plugin requires Java 17 to run](../images/studioTroubleshooting/11_GradleJDK.png)
+  ![Для Android Gradle требуется Java 17](../images/studioTroubleshooting/11_GradleJDK.png)
 
   Click on "Gradle Settings" (1) to go to open the gradle settings.
 
-  If you don't have the link to the "Gradle Settings", open the Gradle settings manually by selecting the Gradle Tab on the right border (1), select the tools icon (2) and there the item 'Gradle Settings' (3).
+  Если у вас нет ссылки на "Настройки Gradle", откройте настройки Gradle вручную выбрав вкладку "Gradle" на правой границе (1), выберите значок инструментов (2) и там пункт 'Gradle Settings' (3).
 
   ![Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
-  When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "jbr-17" (2), which should be located within your Android Studion installation directory.
+  Когда вы откроете диалог настроек Gradle, откройте параметры (1) в меню "Gradle JDK" и выберите "jbr-17" (2),, который должен быть расположен в папке установки Android Studio.
 
   ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
-  Press "OK" to save and close the settings dialog.
+  Нажмите "OK" для сохранения и закрытия диалогового окна настроек.
 
-  *Important*: If you don't see the setting "Gradle JDK", you might have not updated Android Studio. Make sure you are using Android Studio 2022.3 Giraffe) or newer.
+  *Важное*: Если вы не видите настройки "Gradle JDK", возможно, вы не обновили Android Studio. Убедитесь, что вы используете Android Studio 2022.3 Giraffe) или новее.
 
-  Now you need to trigger a [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync)
+  Теперь вам нужно запустить [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync)
 
 (troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
 
-### Could not resolve/No cached version
+### Не удалось разрешить/Нет кэшированной версии
 
-  You might get this error message:
+  Вы можете столкнуться с этой ошибкой:
 
-    ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
+    ![Не удалось разрешить... Нет кэшированной версии](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
-  * On the right side, open the Gradle tab (1).
+  * С правой стороны откройте вкладку Gradle (1).
 
-    Make sure the button shown at (2) is *NOT* selected.
+    Убедитесь, что кнопка, показанная на (2), *НЕ* выбрана.
 
     ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Now you need to trigger a [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync)
+  * Теперь вам нужно запустить [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync)
 
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### Не удается запустить демон процесс
 
-  If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
+  Если вы видите подобное сообщение об ошибке, вы, вероятно, используете ОС Windows 10, 32-bit. Это не поддерживается Android Studio 3.5.1 и выше, и, к сожалению, разработчик AAPS. ничего не может сделать.
 
-  If you are using Windows 10 you must use a 64-bit operating system.
+  В Windows 10 следует использовать 64-битную операционную систему.
 
   There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
 
