@@ -21,37 +21,37 @@
 8. Keep on looping.
 
 ## Ошибка синхронизации Gradle
-Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
+Синхронизация Gradle может не работать по различным причинам. Когда выпадает сообщение о том, что синхронизация не удалась, откройте вкладку "Build" (1) в нижней части Android Studio и проверьте, какое отображается сообщение об ошибке (2).
 
   ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
-These are the usual gradle sync failures:
-* [Неодобренные изменения](troubleshooting_androidstudio-uncommitted-changes)
-* [No cached version of ... available](troubleshooting_androidstudio-could-not-resolve-no-cached-version)
-* [Android Gradle requires Java 11 to run](troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)
+Ниже перечислены обычные сбои в синхронизации:
+* [Непринятые изменения](troubleshooting_androidstudio-uncommitted-changes)
+* [Нет кэшированной версии...](troubleshooting_androidstudio-could-not-resolve-no-cached-version)
+* [Для Android Gradle требуется Java 11](troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](troubleshooting_androidstudio-gradle-resync) again.
+*Важно*: После того, как будет устранена конкретная проблемf, следует запустить [синхронизацию gradle ](troubleshooting_androidstudio-gradle-resync) снова.
 
 (troubleshooting_androidstudio-uncommitted-changes)=
-### Неодобренные изменения
+### Непринятые изменения
 
-If you receive a failure message like
+Если получено такое сообщение об ошибке
 
 ![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
-#### Step 1 - Check git installation
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal.
+#### Шаг 1 - Проверьте установку git
+  * Откройте вкладку терминала (1) в нижней части Android Studio и скопируйте следующий текст и вставьте или введите в терминал.
     ```
     git --version
     ```
 
     ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
 
-    Note: There is a space and two hyphens between git and version!
+    Примечание: Между git и version есть пробел и два дефиса!
 
-  * You must receive a message saying what git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](troubleshooting_androidstudio-step-2-check-for-uncommitted-changes).
+  * Вы получите сообщение о том, какая версия git установлена, как на снимке экрана выше. В этом случае перейдите к [Шагу 2](troubleshooting_androidstudio-step-2-check-for-uncommitted-changes).
 
-  * In case you get an message saying
+  * Если вы получите сообщение
     ```
     Git: command not found
     ```
