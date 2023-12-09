@@ -198,7 +198,33 @@ In this objective you will tackle and use "Super Micro Bolus (SMB)" as one core 
 (Objectives-objective-10-automation)=
 ## Objective 10: Automation
 
-- You have to start objective 10 to be able to use [Automation](../Usage/Automation.md).
+You have to start objective 10 to be able to use Automation.
+1) read the documnetation page  [Automation](../Usage/Automation.md) on from begining to end before donig anything.
+2) setup the most basic automation rule;
+for example trigger an android notification in few minutes:
+- select the notification tab
+- from the top right 3 dots menu, select add rule
+- give a taks name "My first automation notification"
+- "edit"  "condition"
+   - click the "+" symbol to add the first trigger
+   - select "Time"  & "OK", it will create a default entry AT TODAY HOUR:MINUTE
+   - click the MINUTE portion to edit the time such that it triggers in a few minutes.. then click ok to close
+   - click "ok"  to close the Triggers screen
+ - "ADD" an "Action"
+   - select "Notification", "OK"
+   - click "Notification" to edit the message(Msg), enter something like "Ny first automation"
+ - wait until the time triggers the notification (note that depanding on your phone, it can be a few minutes late)
+4) setup a more useful automation.
+- The documentation page gives a few example. Since most people eat the same thing for breakfast at the same time every morning before school/work, a fairly common use-case can be to set a "before-breakfast-target" to set a slightly lower temporary target 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consists of  "Start temp target" with a target value and a 30 minutes duration. 
+
+
+## Objective 11: Enabling additional features for daytime use, such as Dynamic Senstivity plugin (DynISF).
+- Ensure that SMB is functioning properly
+- Enable the DynamicISF plugin and identify the appropriate calibration for your body's uniqueness. It is advisable to begin with a value lower than 100% for safety.
+
+
+## Completed!
+
 - Make sure you have completed all objectives including exam [Objectives-objective-3-prove-your-knowledge](Objectives#objective-3-prove-your-knowledge).
 - Completing previous objectives will not effect other objectives you have already finished. You will keep all finished objectives!
 
