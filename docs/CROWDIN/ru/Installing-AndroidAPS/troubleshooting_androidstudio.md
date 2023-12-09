@@ -30,7 +30,7 @@
 * [Нет кэшированной версии...](troubleshooting_androidstudio-could-not-resolve-no-cached-version)
 * [Для Android Gradle требуется Java 11](troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)
 
-*Важно*: После того, как будет устранена конкретная проблемf, следует запустить [синхронизацию gradle ](troubleshooting_androidstudio-gradle-resync) снова.
+*Важно*: После того, как будет устранена конкретная проблема, следует запустить [синхронизацию gradle ](troubleshooting_androidstudio-gradle-resync) снова.
 
 (troubleshooting_androidstudio-uncommitted-changes)=
 ### Непринятые изменения
@@ -55,44 +55,44 @@
     ```
     Git: command not found
     ```
-    your Git installation is not right.
+    то Git установлен неправильно.
 
-  * [Check git installation](git-install-check-git-settings-in-android-studio)
+  * [Проверьте установку git](git-install-check-git-settings-in-android-studio)
 
-  * if on Windows and git was just installed, you should restart your computer to make git globally available after the installation
+  * после установки Git в Windows и, нужно перезапустить компьютер или хотя бы раз выйти и снова войти в систему, чтобы сделать git глобально доступным
 
-  * If Git is installed, you have restarted (if on windows), and git still couldn't found:
+  * Если Git установлен, вы перезапустили его (если в Windows), и git все еще не найден:
 
-  * Search your computer for a file "git.exe".
+  * Выполните поиск в компьютере файла "git.exe".
 
-    Note for yourself, what directory it is in.
+    Отметьте для себя, в каком он каталоге.
 
-  * Go to the Environment variables in windows, select the variable "PATH" and click edit. Add the directory where you have found your git installation.
+  * Перейдите к переменным окружения в окнах, выберите переменную «PATH» и нажмите «Редактировать». Добавьте каталог, где вы нашли вашу установку git.
 
-  * Save and close.
+  * Сохраните и закройте.
 
-  * Restart Android Studio.
+  * Перезапустите Android Studio.
 
-#### Step 2: Check for uncommitted changes.
+#### Шаг 2: Проверьте незафиксированные изменения.
 
-  * In Android Studio, oben the "Commit" Tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * You can see either a "Default changeset" (2) or "Unversioned files" (3):
+  * В Android Studio откройте вкладку Commit (1) слева. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * Вы увидите либо "Изменения по умолчанию" (2) или "Неверсионные файлы" (3):
 
-    * For "Default changeset", you probably updated gradle or changed some of the file contents by mistake.
+    * Для "Default changeset" вы вероятно обновили gradle или по ошибке изменили содержимое файла.
 
-    * Right click on "Default Changeset" and select "Rollback"
+    * Щелкните правой кнопкой мыши на "Изменения по умолчанию" и выберите "Отмена"
 
       ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](troubleshooting_androidstudio-step-3-gradle-resync).
+    * Файлы снова загрузятся с Git сервера. Если других изменений во вкладке Commit нет, перейдите к [Шагу 3](troubleshooting_androidstudio-step-3-gradle-resync).
 
-  * If you can see "Unversioned Files", you might have stored files in your sourecode directory which should be better places somewhere else, e.g. your keystore file.
+  * Если вы видите "Неверсионные файлы", возможно вы храните вы файлы в каталоге источника кода, которым место где-то еще, например ваш файл ключа.
 
-    * Use your regular file explorer on your computer to move or cut and paste that file to a save place.
+    * При помощи обычного файлового проводника на компьютере вырежьте и вставьте этот файл в другое место хранения.
 
-    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AAPS directory anymore.
+    * Вернитесь к Android Studio и нажмите кнопку Обновить (4) на вкладке Commit, чтобы убедиться, что файл больше не хранится в каталоге AAPS.
 
-      If there are no other changes in the commit tab, go to [Step 3](troubleshooting_androidstudio-step-3-gradle-resync).
+      Если других изменений во вкладке Commit нет, перейдите к [Шагу 3](troubleshooting_androidstudio-step-3-gradle-resync).
 
 
 (troubleshooting_androidstudio-step-3-gradle-resync)=
