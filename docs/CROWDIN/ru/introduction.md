@@ -253,68 +253,68 @@ d) Вам доступна техническая поддержка от соо
 
 e) Вы сможете предоставлять **информацию о мониторинге CGM и петле/помпе** в виде объединенных отчетов на совещаниях в клинике (через Nightscout или Tidepool), либо в распечатанном виде, либо на экране (если принесете с собой ноутбук/ планшет). Рационализация данных мониторинга CGM и инсулиновой помпы позволит более эффективно использовать время врача для проверки ваших отчетов и оценки хода терапии.
 
-f) If there is still strong objection from your team, hand your clinician printouts of the reference articles linked here in the text, and give them the link to the **AAPS** clinicians section: [For Clinicians – A General Introduction and Guide to **AAPS**](Resources/clinician-guide-to-AndroidAPS.md)
+f) Если ваши эндокринологи по-прежнему серьезно возражает, дайте им распечатки справочных статей, ссылки на которые приведены здесь в тексте, а также ссылку на раздел **AAPS**: Для медицинских работников[ – общее введение и описание **AAPS**](Resources/clinician-guide-to-AndroidAPS.md)
 
 
 
-#### Support for DIY looping by other clinicians
+#### Поддержка самостоятельно построенных систем ИПЖ со сторонымедицинских работников
 
-The paper published in the [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_)[ (co led by Kings’ and Guy’s and St Thomas’ NHS Foundation Trust, and co lead by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) provides:
+Статья в [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_)(co led by Kings’ and Guy’s and St Thomas’ NHS Foundation Trust, and co lead by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) содержит:
 
-a) **Assurance** for professionals that DIY artificial pancreas systems/ open source as a “safe and effective treatment” option for type 1 diabetes and provides guidance on recommendations, discussions, supports, documentation;
+a) **Гарантии** для специалистов в том, что системы искусственной поджелудочной железы с открытым исходным кодом, собранные своими руками, являются вариантом «безопасного и эффективного лечения» диабета 1 типа, а также дает обзор рекомендаций, дискуссий, поддержки и документации;
 
-b) **Recognition** that open-source automated insulin delivery (“AID”) systems can increase time in range (TIR) while reducing variability in blood glucose concentrations and the amount of hypo and hyperglycaemic episodes in various age groups, genders and communities;
+b) **Признание** того, что системы автоматической подачи инсулина с открытым исходным кодом («AID») могут увеличить время в диапазоне (TIR), одновременно уменьшая вариабельность концентраций глюкозы в крови и количества эпизодов гипо- и гипергликемии в различных возрастных, гендерных группах и сообществах;
 
-c) **Recommendation** that healthcare workers should **support** type 1 patients or their caregivers who choose to manage their diabetes with an open source AID system;
+c) **Рекомендацию** работникам здравоохранения **поддерживать** пациентов с диабетом 1 типа или лиц, осуществляющих уход за ними, которые решили управлять своим диабетом с помощью систем AID (см. выше) с открытым исходным кодом;
 
-d) Recommendation that healthcare workers should attempt to learn about all treatment options that might benefit patients including available open-source AID systems.  If health care professionals do not have resources to educate themselves, or have legal or regulatory concerns, they should consider **cooperating, or teaming up with other healthcare professionals** who do;
+d) Рекомендацию о том, чтобы медицинские работники старались узнать обо всех возможностях лечения, которые могут принести пользу пациентам, включая доступные системы AID с открытым исходным кодом.  Если у медицинских работников нет ресурсов для самостоятельного обучения или у них есть обеспокоенность, связанная с юридическими или нормативными вопросами, им следует рассмотреть возможность **сотрудничества или объединения с другими медицинскими работниками**, у которых такие возможности есть;
 
 e) Emphasis that all users of CGMs should have real-time and open-access to **their own health data** at all times
 
-f) Emphasis that these open source systems have not undergone the same regulatory evaluations as commercially available medical technologies, and there is no commercial technical support. However, **extensive community support is available**; and
+f) заявление, что системы с открытыми исходными кодами не прошли те же нормативные оценки, что и коммерчески доступные медицинские технологии, и не имеют коммерческой технической поддержки. Следует заметить при этом, что имеется **широкая поддержка от пользователей**; а также
 
-g) A recommendation that **regulation and legal frameworks** should be updated to ensure clarity on permitting ethical and effective treatment of such open source systems.
+g) рекомендацию обновить **нормативно-правовую базу** для обеспечения ясности в отношении таких систем с открытым исходным кодом.
 
-Another paper in [Medical Law International, 2021](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)(_4_) also highlights the UK General Medical Council’s ‘consent guidance’ places a strong emphasis on doctor and patients making decisions together. The doctor should explain the potential benefits, risks, burdens and side-effects on DIY APS and may recommend a particular option without pressuring the patient. 
+В другой статье, опубликованной в [Medical Law International, 2021](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)(_4_), подчеркивается, что Генеральный медицинский совет Великобритании в документе "руководство по согласованию" уделяет большое внимание совместному принятию решений врачом и пациентом. Врач должен объяснять потенциальные преимущества, риски, трудности и побочные эффекты самостоятельно построенных систем управления диабетом и рекомендовать конкретный вариант без давления на пациента. 
 
-Ultimately it is up to the patient to weigh up these factors, along with any non-clinical issues relevant to them and decide which treatment option, if any, to accept. 
+В конечном итоге именно пациент должен взвешивать эти факторы, наряду с любыми сопутствующими неклиническими проблемами и решить, какой вариант лечения выбрать. 
 
-If a doctor discovers in a clinic that their patient is looping with a DIY system, they are not exempted from their obligations to monitor the patient, simply because they did not prescribe the particular piece of technology the patient is using; clinicians must continue to monitor patients.
+Если врачи обнаруживают, что их пациент пользуется системой ИПЖ, они не освобождаются от обязательств контролировать пациента только потому, что они не предписывали конкретный элемент технологии, которую пациент использует; медучреждения должны продолжать вести своих пациентов.
 
-Doctors (at least in the UK) are not prohibited from prescribing unlicensed medicines and can use their clinical discretion. They should therefore use their clinical judgement to decide if a DIY APS is suitable for a specific patient, and discuss what they consider to be the pros and cons with the patient.
+Врачи (по крайней мере в Великобритании) не запрещают давать нелицензированные лекарства и могут использовать их на свое усмотрение. Поэтому они должны использовать свои клинические суждения для принятия решения о пригодности АПС для конкретного пациента, и обсудить все “за” и “против” с пациентом.
 
 
 
-#### The articles referenced above, and other useful links and position statements are listed below:
+#### Ниже приводятся упомянутые выше статьи и другие полезные ссылки и заявления:
 
-1. Open-source automated insulin delivery: international consensus statement and practical guidance for health-care professionals [_Lancet Diabetes Endocrinol_, (2022) _10_, 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)
+1. Автоматизированная подача инсулина с открытым исходным кодом: заявление о международном консенсусе и практическое руководство для медицинских работников [_Lancet Diabetes Endocrinol_, (2022) _10_, 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)
 
-2. [In Silico Trials of an Open-Source Android-Based Artificial Pancreas: A New Paradigm to Test Safety and Efficacy of Do-It-Yourself Systems, 2020](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375)
+2. [In Silico Trials Искусственная поджелудочная железа с открытым исходным кодом на базе Android: новая парадигма для проверки безопасности и эффективности самодельных систем, 2020 г](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375)
 
-3. A DIY ‘bionic pancreas’ is changing diabetes care — what's next? [_Nature_ (2023), _620_, 940-941](https://doi.org/10.1038/d41586-023-02648-9)
+3. «Бионическая поджелудочная железа», сделанная своими руками, меняет подход к лечению диабета — что дальше? [_Nature_ (2023), _620_, 940-941](https://doi.org/10.1038/d41586-023-02648-9)
 4. Prescribing unapproved medical devices? The case of DIY artificial pancreas systems [_Medical law international_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
-5. [Berlin Institute of Health position statement, 2022](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
-6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (Diabetes Canada position and guide) [_Canadian Journal of Diabetes_, (2023)_47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
-7.  Netherlands (EN/NL) - for clinicians - [how to help people on open source automated insulin delivery systems](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
-8. First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALLRandomized Pilot Study [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
+5. [Берлинский институт здравоохранения -заявление о позиции, 2022год](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
+6. Автоматизированная подача инсулина своими руками: Руководство для практикующего врача (положение и руководство Diabetes Canada) [_Canadian Journal of Diabetes_, (2023)_47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
+7.  Нидерланды (EN/NL) - для медработников [как помочь людям с автоматизированной системой подачи инсулина](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
+8. Первое использование автоматизированной подачи инсулина с открытым исходным кодом AndroidAPS в сценарии полного замкнутого цикла: рандомизированное пилотное исследование Pancreas4ALL [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
 
-9. Pre-school and school-aged children benefit from the switch from a sensor-augmented pump to an AndroidAPS hybrid closed loop: A retrospective analysis [_Pediatr. Diabetes_ 2021, _22_, 594-604. 2021](https://onlinelibrary.wiley.com/doi/epdf/10.1111/pedi.13190)
+9. Дети дошкольного и школьного возраста получают пользу от перехода от помпы с сенсорным управлением к гибридной замкнутой системе AndroidAPS: ретроспективный анализ [_Pediatr. Diabetes_ 2021, _22_, 594-604. 2021](https://onlinelibrary.wiley.com/doi/epdf/10.1111/pedi.13190)
 
-10. Outcomes of the OPEN project, an EU-funded project into the Outcomes of Patient’s Evidence with Novel, Do-it-Yourself Artificial Pancreas Technology (https://www.open-diabetes.eu/publications)
-
-
+10. Результаты ОТКРЫТОГО проекта, финансируемого ЕС по исследованиям пациентов с использованием новой технологии искусственной поджелудочной железы «Сделай сам» (https://www.open-diabetes.eu/publications)
 
 
 
-## Why can’t I just download AAPS and use it straight away?
 
-Приложение нельзя найти в Google Play - его следует самостоятельно собрать из исходного кода по юридическим причинам. **AAPS** не имеет лицензии, то есть не имеет одобрения ни от одного регулирующего органа ни в одной стране. **AAPS** is deemed to be carrying out a medical experiment on yourself, and is carried out at the user’s own risk.
 
-Создание системы требует терпения, нацеленности на результат и постепенного развития технических знаний. Вся информация и поддержка находится в этой документации или в группах поддержки в интернете. Over 10,000 people have successfully built and are currently using **AAPS** worldwide. 
+## В: Почему нельзя просто скачать AAPS и не начать им сразу же пользоваться?
 
-The developers of **AAPS** take safety incredibly seriously, and want others to have a good experience of using **AAPS**. Поэтому важно, чтобы каждый пользователь (или опекун, если пользователь является ребенком):
+Приложение нельзя найти в Google Play - его следует самостоятельно собрать из исходного кода по юридическим причинам. **AAPS** не имеет лицензии, то есть не имеет одобрения ни от одного регулирующего органа ни в одной стране. **AAPS** рассматривается как проведение медицинского эксперимента на себе, на свой страх и риск.
 
-- builds the AAPS system themself and works through the **objectives** so that they have reasonably good personalised settings and understand the basics of how **AAPS** works by the time they “close the loop”;
+Создание системы требует терпения, нацеленности на результат и постепенного развития технических знаний. Вся информация и поддержка находится в этой документации или в группах поддержки в интернете. Согласно оценкам, более 10000 человек успешно создали и в настоящее время используют **AAPS** во всем мире. 
+
+Разработчики **AAPS** серьезно относятся к безопасности и хотят, чтобы новые пользователи имели положительное впечатление от **AAPS**. Поэтому важно, чтобы каждый пользователь (или опекун, если пользователь является ребенком):
+
+- самостоятельно построил систему AAPS и прошел все **цели** чтобы к началу работы «замкнутого цикла» иметь хорошие персонализированные настройки и понимание основы того, как работает **AAPS**;
 
 - периодически осуществлял резервное копирование системы, экспортируя и сохраняя важные файлы (например, keystore и settings.json) в безопасном месте, чтобы иметь возможность при необходимости снова быстро настроить систему;
 
@@ -324,19 +324,19 @@ The developers of **AAPS** take safety incredibly seriously, and want others to 
 
 
 
-## What is the connectivity of the AAPS system?
+## В: Какова структура системы AAPS?
 
-**Figure 3 (below)** shows one example of the **AAPS** system for a user who do not require any followers interacting with the system. Additional open-source software and platforms which are not shown can also be integrated.  
+**Рисунок 3 (ниже)** показывает один из вариантов системы **AAPS** для пользователя, не нуждающегося в подписчиках (фоллоуэрах), взаимодействующих с системой. Additional open-source software and platforms which are not shown can also be integrated.  
 
 ![21-06-23 AAPS connectivity no followers](./images/AAPS-connectivity-no-followers.png)
 
-**Figure 4 (below)** shows the full potential of the **AAPS** system for a user who has followers and requires a monitor and send adjust the system remotely (like a child with type 1 diabetes). Additional open-source software and platforms which are not shown can also be integrated.  
+**Рисунок 4 (ниже)** показывает полный потенциал системы **AAPS** для пользователя, у которого есть подписчики (фоллоуэры) и которому требуется слежение и отладка системы удаленно (как например ребенку с диабетом первого типа). Additional open-source software and platforms which are not shown can also be integrated.  
 
 ![21-06-23 AAPS overview with followers](./images/AAPS-overview-with-followers.png)
 
 
 
-## How does AAPS get continually developed and improved?
+## В: Каким образом развивается и совершенствуется AAPS?
 
 Большинство пользователей **AAPS** работает с полностью протестированной и обкатанной **master** версиюей AAPS. Параллельно с этим разработчики исследуют и тестируют новые улучшения в ветке "разработчиков" (**dev**) **AAPS**, наряду с теми пользователями, которые готовы проверять нововведения и сообщать о замеченных недостатках. Если улучшения работают нормально, они будут выпущены в качестве новой "master" версии **AAPS**. Каждая новая мастер-версия анонсируется в группе Facebook и основные пользователи **AAPS **получают об этом своевременную информацию. 
 
