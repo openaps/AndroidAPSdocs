@@ -243,15 +243,15 @@ _Table notes:_
 
 Если вы чувствуете, что ваш эндокринолог не поддерживает применение **AAPS**, может помочь следующая аргументация: 
 
-a) Система **AAPS** разработана ПАЦИЕНТАМИ и их опекунами. It has been designed ultimately for safety, but also drawing on in-depth patient experience. There are currently around **10,000** AAPS users worldwide. There is therefore likely to be other patients using DIY looping in your clinic's patient population (whether they know about it or not). 
+a) Система **AAPS** разработана ПАЦИЕНТАМИ и их опекунами. Она разработана в конечном счете для обеспечения безопасности, но также и опираясь на глубокое изучение опыта пациента. В мире сейчас более **10000 ** пользователей AAPS. Таким образом, среди пациентов вашей поликлиники могут быть пациенты, пользующиеся системами ИПЖ (независимо от того, известно об этом или нет). 
 
-b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_ has confirmed that DIY loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_ which highlight the progress of the DIY looping commmunity. 
+б) Недавнее исследование, опубликованное в ведущем международном медицинском журнале [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_, подтвердило, что самостоятельно собранные системы ИПЖ **безопасны** и **эффективны для улучшения контроля состояния больных диабетом **, включая время в диапазоне. В ведущих журналах, таких как [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_, регулярно публикуются статьи, которые обращают внимание на прогресс сообщества пользователей систем ИПЖ. 
 
-c) Starting with **AAPS** involves a _gradual_ migration from “open” loop pumping, through low-glucose suspend, through to hybrid “closed” looping, by completing a number of objectives. There is therefore a structured programme, requiring the user to demonstrate a level of competence at each stage and fine-tuning their basic settings (basal, ISF and ICR) before they can close the loop. 
+c) Начало работы с **AAPS** предполагает _постепенный_ переход с “открытых” систем с приостановкой подачи инсулина на низких сахарах к гибридному циклу путем выполнения ряда целей. Таким образом, существует структурированная программа, требующая от пользователей демонстрации уровня компетентности на каждом этапе и доработки основных настроек (база, чувствительность ISF и углеводный коэффициент ICR), прежде чем они смогут замкнуть цикл. 
 
-d) Technical support is available to you from the DIY community through Github, Discord and Facebook closed groups. 
+d) Вам доступна техническая поддержка от сообщества пользователей через закрытые группы Github, Discord, Facebook и Telegram. 
 
-e) You will be able to provide **both CGM and insulin looping/pumping information** as combined reports at clinic meetings (through Nightscout or Tidepool), either printed out or on-screen (if you bring a laptop/tablet). The streamlining of both CGM and insulin data will allow more effective use of your clinician’s time to review your reports and aid their discussions in assessing your progress.
+e) Вы сможете предоставлять **информацию о мониторинге CGM и петле/помпе** в виде объединенных отчетов на совещаниях в клинике (через Nightscout или Tidepool), либо в распечатанном виде, либо на экране (если принесете с собой ноутбук/ планшет). Рационализация данных мониторинга CGM и инсулиновой помпы позволит более эффективно использовать время врача для проверки ваших отчетов и оценки хода терапии.
 
 f) If there is still strong objection from your team, hand your clinician printouts of the reference articles linked here in the text, and give them the link to the **AAPS** clinicians section: [For Clinicians – A General Introduction and Guide to **AAPS**](Resources/clinician-guide-to-AndroidAPS.md)
 
