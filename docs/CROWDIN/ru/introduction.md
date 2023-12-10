@@ -239,11 +239,11 @@ _Table notes:_
 
 
 
-#### National and International Precedent
+#### Национальные и международные прецеденты
 
-If you feel unsupported by your team to loop with **AAPS**, the following discussion points may help: 
+Если вы чувствуете, что ваш эндокринолог не поддерживает применение **AAPS**, может помочь следующая аргументация: 
 
-a) The **AAPS** system has been designed BY patients and their caregivers. It has been designed ultimately for safety, but also drawing on in-depth patient experience. There are currently around **10,000** AAPS users worldwide. There is therefore likely to be other patients using DIY looping in your clinic's patient population (whether they know about it or not). 
+a) Система **AAPS** разработана ПАЦИЕНТАМИ и их опекунами. It has been designed ultimately for safety, but also drawing on in-depth patient experience. There are currently around **10,000** AAPS users worldwide. There is therefore likely to be other patients using DIY looping in your clinic's patient population (whether they know about it or not). 
 
 b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_ has confirmed that DIY loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_ which highlight the progress of the DIY looping commmunity. 
 
