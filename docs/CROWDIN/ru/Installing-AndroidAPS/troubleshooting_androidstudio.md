@@ -167,18 +167,18 @@
 
   * Нажмите на "Перезагрузить Gradle Project" (3)
 
-## Generate Signed APK generated successfully with 0 build variants
+## Generate Signed APK успешно сгенерировано с 0 вариантами сборки
 
-When you generate the signed apk, you might get the notification that generation was successfully but are told that 0 build variants where generated:
+Когда генерируете подписанное приложение, то можете получить уведомление об успешном завершении, но вариантов сборки - 0:
 
 ![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](Building-APK-generate-signed-apk)) and you will find the generated apk there!
+Это неверное предупреждение. Проверьте каталог, выбранный вами как "Целевая папка" для сборки (шаг [Сгенерировать Подписанные APK](Building-APK-generate-signed-apk)) и вы найдете здесь сгенерированный apk!
 
 
-## App was created with compiler/kotlin warnings
+## Приложение было создано с предупреждениями компилятора/kotlin
 
-If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
+Если ваша сборка успешно завершена, но получено предупреждения компилятора или kotlin (обозначенные желтым или синим восклицательным знаком), то эти предупреждения можно просто проигнорировать.
 
  ![Gradle finished with warnings](../images/studioTroubleshooting/13_BuildWithWarnings.png)
 
