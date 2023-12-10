@@ -204,38 +204,38 @@ _Table notes:_
 
 #### Соображения о безопасности слишком быстрого улучшения контроля гликемии крови
 
-Быстрое снижение HbA1c и улучшение контроля глюкозы в крови кажется привлекательным. Однако _слишком быстрое_ снижение среднего уровня глюкозы в крови путем запуска любой системы с замкнутым контуром может привести к необратимым нарушениям, включая повреждение глаз, и болезненную непроходящую нейропатию. Этого можно избежать просто путем более медленного снижения уровней ГК. If you currently have an elevated HbA1c and are moving to AAPS (or any other closed loop system), please discuss this potential risk with your clinical team before starting, and agree a timeplan with them. More general information on how to reduce your glucose levels safely, including links to medical literature is given in the [safety section [here](preparing-safety-first). 
+Быстрое снижение HbA1c и улучшение контроля глюкозы в крови кажется привлекательным. Однако _слишком быстрое_ снижение среднего уровня глюкозы в крови путем запуска любой системы с замкнутым контуром может привести к необратимым нарушениям, включая повреждение глаз, и болезненную непроходящую нейропатию. Этого можно избежать просто путем более медленного снижения уровней ГК. Если в настоящее время у вас повышенный уровень HbA1c и вы переходите на AAPS (или любую другую замкнутую систему), обсудите потенциальные риски с эндокринологом и согласуйте с ним график безопасного снижения целевых показателей гликемии. Более общая информация о том, как безопасно сократить уровни глюкозы, включая ссылки на медицинскую литературу приведены в разделе [безопасности [здесь](preparing-safety-first). 
 
 
 
-#### Medical safety around devices, consumable supplies and other medications
+#### Безопасность устройств, расходных материалов и других медицинских средств
 
-Use a tested, fully functioning FDA or CE approved insulin pump and CGM for an artificial pancreas loop. Внесение аппаратных или программных технических изменений в это оборудование может стать причиной неконтролируемого введения инсулина, что может повлечь опасные последствия для пациента. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, do not use these for creating an AAPS system. 
+Для системы ИПЖ Используйте испытанные, полностью рабочие, официально одобренные инсулиновую помпу и монитринг ГК. Внесение аппаратных или программных технических изменений в это оборудование может стать причиной неконтролируемого введения инсулина, что может повлечь опасные последствия для пациента. Не пользуйтесь переделанными, самодельными или сломанными инсулиновыми помпами и/или устройствами мониторинга для создания системы AAPS. 
 
-Use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer of your pump and CGM. Использование непроверенных или модифицированных материалов может вызвать неточность мониторинга и ошибки дозировки инсулина. Insulin is highly dangerous when misdosed - please do not play with your life by hacking your supplies.
+Пользуйтесь оригинальными поставками манипуляторов, катетеров и резервуаров, допущенных производителем помпы и системы мониторинга. Использование непроверенных или модифицированных материалов может вызвать неточность мониторинга и ошибки дозировки инсулина. Инсулин опасен при неверной дозировке - не рискуйте жизнью, пользуясь неумело переделанными компонентами.
 
-Do not take SGLT-2 inhibitors (gliflozins) when using **AAPS** as they incalculably lower blood sugar levels. Combining this effect with a system that lowers basal rates in order to increase BG is dangerous, there is more detail about this in the main [safety section](preparing-safety-first).
+Не принимайте ингибиторы SGLT-2 (глифлозины) при использовании **AAPS**, поскольку они непредсказуемо снижают уровни сахара в крови. Сочетание этого эффекта с системой, которая снижает базальные дозы с целью повышения ГК, опасно, более подробно об этом можно прочитать в основном разделе [безопасность](preparing-safety-first).
 
 (introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)=
 
 
 ## Как мне подойти к обсуждению AAPS с врачами?
 
-Users are encouraged to speak with their clinicians about their intention to use **AAPS**. Please do not be afraid to have an honest conversation with your diabetes team if you intend to use **AAPS** (or any other DIY loop, for that matter). Transparency and trust between patient and doctor is paramount. 
+Пользователям рекомендуется говорить со своими эндокринологами о намерении использовать **AAPS**. Не бойтесь честного разговора с врачом, если намерены использовать **AAPS** (или любой другой самостоятельно собранный цикл ИПЖ). Прозрачность и доверие между пациентом и врачом имеют первостепенное значение. 
 
 
 
-### Suggested approach:
+### Предлагаемый подход:
 
-Start a conversation with your clinician to determine their familiarity and attitude towards diabetic technology such as CGMs,  pumps, hybrid loops and commercial looping. Your clinician/endocrinologist should be aware of the basic technology and be willing to discuss with you recent advancements with commercial loop products available within their regions. 
+Начните разговор с врачом, чтобы определить его знакомство и отношение к таким технологии диабета как мониторинг, помповая терапия, гибридные и коммерческие системы замкнутого цикла. Ваш врач/эндокринолог должен знать о базовых технологиях и быть готовым обсудить с Вами достижения в области коммерческих систем замкнутого цикла в регионе. 
 
 
 
-#### Local precedent
+#### Местные прецеденты
 
-Obtain your clinicians/endocrinologists’ views on DIY loop _vs_ commercial looping, and gauge their knowledge in this area. Are they familiar with **AAPS** and can they share with you any helpful experience of working with patients with DIY looping?
+Узнайте мнение врачей/эндокринологов на самостоятельно собранные системы ИПЖ _по сравнению_ с коммерческими и оцените их знания в этой области. Знакомы ли они с **AAPS** и могут ли они поделиться полезным опытом работы с пациентами, пользующимися самостоятельно собранными системами?
 
-Ask if your team has any patients under their care who already use DIY looping. Due to patient confidentiality, doctors cannot pass other patient’s details to you without obtaining the individual’s consent. However, if you want to, you **can** ask them to pass **your** contact details to an existing DIY looping patient if there is one the clinician feels you might "click” with, suggesting that you would be happy for the patient to contact you to discuss DIY looping. Clinicians are not obliged to do this, but some are happy to, since they realise the importance of peer-to-peer support in type 1 diabetes management. You may also find it useful to meet local friendly DIY loopers. This is of course up to you, and not entirely necessary.  
+Спросите, есть ли у них пациенты, которые уже используют замкнутый цикл. В связи с конфиденциальностью врачи не могут передать данные другим пациентам без их на то согласия. Однако, при желании, вы **можете** попросить доктора передать **ваши** контактные данные пациенту, уже работающему с циклом ИПЖ, если есть пациент, с которым, по мнению врача, вы могли бы пообщаться, чтобы обсудить петлю. Медицинские работники не обязаны, но некоторые будут рады, так как осознают важность поддержки равноправия пациентов в управлении диабетом 1 типа. You may also find it useful to meet local friendly DIY loopers. Это, конечно, целиком на ваше усмотрение.  
 
 
 
