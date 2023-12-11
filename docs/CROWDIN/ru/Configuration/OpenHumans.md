@@ -27,45 +27,45 @@
 1. Если это еще не сделано, создайте свой аккаунт на [Open Humans](https://www.openhumans.org). Можете для этого использовать существующие учетные записи Google или Facebook, если хотите.
 2. Включите модуль “Open Humans” в [Конфигураторе](../Configuration/Config-Builder.md).
 3. При помощи значка шестеренки откройте его настройки. You can restrict upload to times when phone uses Wi-Fi and/or is charged.
-4. Open the Open Humans Plugin (either trough OH tab or hamburger menu) and click 'LOGIN'.
+4. Откройте модуль Open Humans (в меню через вкладку OH или через выпадающее меню и нажмите - "ВОЙТИ").
 
 ```{image} ../images/OHUploader1.png
 :alt: Open Humans Config Builder
 ```
 
-5. Read the given information about the Open Humans Uploader and terms of use carefully.
-6. Confirm by checking the box and click 'LOGIN'.
-7. Open Humans website will be opened. Login with your credentials.
-8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
-9. Click button 'Authorize project'.
+5. Внимательно прочтите информацию о Загрузчике Open Humans и условиях пользования.
+6. Подтвердите, установив флажок и нажмите 'ВОЙТИ'.
+7. Open Humans website will be opened. Войдите под своей учетной записью.
+8. Решите, хотите ли вы скрыть ваше членство в AAPS загрузчике в профиле Open Humans.
+9. Нажмите кнопку «Авторизовать проект».
 
 ```{image} ../images/OHUploader2.png
 :alt: Open Humans Terms of Use + Login
 ```
 
 10. Returning to AAPS you will see a prompt that login succeeded.
-11. Keep Open Humans Uploader plugin and phone turned on for setup to complete.
-12. After clicking close you will see your member ID. Queue sizes > 0 shows that there is still data to be uploaded.
-13. Click 'LOGOUT' if you want to stop uploading data to Open Humans.
-14. Android notification will inform you about running upload.
+11. Держите модуль Open Humans и телефон включенными для завершения установки.
+12. После нажатия на кнопку "Закрыть" вы увидите ваш идентификатор участника. Размер очереди > 0 показывает, что еще есть загружаемые данные.
+13. Нажмите 'ВЫХОД', если хотите остановить загрузку данных для Open Humans.
+14. Уведомление Android сообщит о работающей загрузке.
 
 ```{image} ../images/OHUploader3.png
-:alt: Open Humans finish setup
+:alt: завершение настройки Open Humans
 ```
 
-15. You can manage your data by logging in to the [Open Humans website](https://www.openhumans.org).
+15. Управлять своими данными теперь можно, войдя на сайт [Open Humans](https://www.openhumans.org).
 
 ```{image} ../images/OHWeb.png
-:alt: Open Humans manage data
+:alt: управление данными Open Humans
 ```
 
-## Sharing Opportunities
+## Совместные возможности
 
-### [The 'OPEN' project](https://www.open-diabetes.eu/)
+### ['Открытый' проект](https://www.open-diabetes.eu/)
 
-The 'OPEN' project brings together an international and intersectoral consortium of patient innovators, clinicians, social scientists, computer scientists and patient advocacy organizations in order to investigate various aspects of Do-it-Yourself Artificial Pancreas Systems (DIY APS) that are used by an increasing number of people with diabetes. For more details see their [website](https://www.open-diabetes.eu/).
+"ОТКРЫТЫЙ" проект объединяет международный и межсекторальный консорциум пациентов, медиков, ученых в области социальных наук, компьютерщиков и организации по защите прав пациентов для изучения различных аспектов систем искусственной поджелудочной железы (DIY APS), число которых постоянно растет. Подробности - на их [сайте](https://www.open-diabetes.eu/).
 
-September 2020 the 'OPEN' project launched a [survey](https://survey.open-diabetes.eu/) including the option to donate data you uploaded to Open Humans. A [tutorial](https://open-diabetes.eu/en/open-survey/survey-tutorials/) how to donate your data to the 'OPEN' project is available on their site and within the survey itself.
+В сентябре 2020 Открытый проект начал [исследование](https://survey.open-diabetes.eu/), включающее возможность предоставлять свои данные проекту Open Humans. [Инструкция](https://open-diabetes.eu/en/open-survey/survey-tutorials/) по предоставлению своих данных Открытому проекту доступна на их сайте наряду с самим исследованием.
 
 ### [OpenAPS Data Commons](https://www.openhumans.org/activity/openaps-data-commons/)
 
