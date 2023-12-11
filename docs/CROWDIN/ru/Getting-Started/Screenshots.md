@@ -535,7 +535,7 @@
 * [Пролонгированный болюс](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Временная базальная скорость
 * [Временная цель](../Usage/temptarget.md)
-* [Profile switch/смена профиля](../Usage/Profiles.md)
+* [Переключение профиля](../Usage/Profiles.md)
 * [Портал терапии](CPbefore26-careportal-discontinued) - примечания, введенные через вкладку действий и примечания в диалогах
 
 ## Источник ГК - xDrip+, BYODA...
