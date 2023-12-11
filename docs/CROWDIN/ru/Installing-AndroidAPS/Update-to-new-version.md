@@ -2,15 +2,15 @@
 
 ## Постройте сами вместо скачивания
 
-**AAPS** is not available to download, due to regulations concerning medical devices. Построить приложение для собственного использования вполне законно, но передавать копию другим не разрешается! См. раздел [ FAQ ](../Getting-Started/FAQ.md).
+**AAPS** недоступен для скачивания из-за законодательства, касающегося медицинских устройств. Построить приложение для собственного использования вполне законно, но передавать копию другим не разрешается! См. раздел [ FAQ ](../Getting-Started/FAQ.md).
 
 ## Важные Примечания
 
-* Please update to the new version of **AAPS** as soon as possible after a new release is available.
-* When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
-* The new version will also be announced on Facebook at the time of release.
-* Following the release, please read the [Release Notes](../Installing-AndroidAPS/Releasenotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-* For **AAPS** versions 2.7 and newer, the location for the new files is at <https://github.com/nightscout/AndroidAPS>.
+* Обновите **AAPS** как можно быстрее после выхода новой версии.
+* Когда доступна новая версия, в самом приложении **AAPS** появляется информационный баннер об этом.
+* О новой версии также выходит объявление на Facebook во время релиза.
+* После выхода новой версии внимательно прочитайте [Примечания к выпуску](../Installing-AndroidAPS/Releasenotes.md) и, прежде чем приступать к обновлению, задайте интересующие вас вопросы сообществу на Facebook или Discord,.
+* Для **AAPS** версий 2.7 и выше, местоположение новых файлов на <https://github.com/nightscout/AndroidAPS>.
 * The easiest way to update **AAPS** is to remove the directory with **AAPS** and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
 * If you are unsure about how to do this, you can also completely uninstall and reinstall Android Studio to make sure the build is a success. 
 * Ideally, use the latest version of Android Studio, **[Giraffe, 2022.3.1](https://developer.android.com/studio/)**, but at least **Arctic Fox (2020.3.1)** or newer, to build the updated **AAPS** apk.
