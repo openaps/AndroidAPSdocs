@@ -1,16 +1,16 @@
-# Necessary checks after update coming from AAPS 2.6
+# Необходимые проверки после обновления при переходе с AAPS 2.6
 
-- The program code was changed significantly when switching to AAPS 2.7.
-- Therefore it is important that you make some changes or check settings after the update.
-- Please see [release notes](Releasenotes-version-2-7-0) for details on new and extended features.
+- Программный код был существенно изменен при переходе на AAPS 2.7.
+- Поэтому важно проверить и/или изменить настройки после обновления.
+- Подробнее о новых и расширенных функциях смотрите [Примечания к выпускаемой версии](Releasenotes-version-2-7-0).
 
 ## Проверяем источник ГК
 
-- Check if BG source is correct after update.
-- Especially when using [xDrip+](../Configuration/xdrip.md) it might happen, that BG source is changed to Dexcom app (patched).
-- Open [Config builder](Config-Builder-bg-source) (hamburger menu on top left side of home screen)
-- Scroll down to "BG source".
-- Select correct BG source if changes are necessary.
+- Проверьте, корректен ли источник ГК после обновления.
+- При использовании [xDrip+ ](../Configuration/xdrip.md) возможно, что источник ГК изменится на приложение Dexcom (модифицированное).
+- Откройте [Конфигуратор](Config-Builder-bg-source) (выпадающее меню в левой верхней части главного экрана)
+- Прокрутите вниз до "источник ГК".
+- Выберите правильный источник ГК.
 
 ```{image} ../images/ConfBuild_BG.png
 :alt: источник ГК
@@ -18,15 +18,15 @@
 
 ## Завершаем экзамен
 
-- AAPS 2.7 contains new objective 11 (in later versions renumbered to objective 10!) for [automation](../Usage/Automation.md).
-- You have to finish exam ([objective 3 and 4](Objectives-objective-3-prove-your-knowledge)) in order to complete [objective 11](Objectives-objective-10-automation).
-- If for example you did not finish the exam in [objective 3](../Usage/Objectives-objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](Objectives-objective-10-automation).
+- AAPS 2.7 содержит новую цель 11 (в последующих версиях перенумерована до цели 10!) [автоматизация](../Usage/Automation.md).
+- Следует выполнить экзамен ([цели 3 и 4](Objectives-objective-3-prove-your-knowledge)) чтобы завершить [цель 11](Objectives-objective-10-automation).
+- Если например не пройден экзамен в [Цели 3](../Usage/Objectives-objective-3-prove-your-knowledge), его надо завершить, прежде чем перейти к [Цели 11](Objectives-objective-10-automation).
 - Это не повлияет на другие цели, которые вы уже выполнили. У вас сохранятся все завершенные цели!
 
 ## Установите главный пароль
 
 - Необходим для [экспорта настроек](../Usage/ExportImportSettings.md), т. к. они шифруются начиная с версии 2.7.
-- Open Preferences (three-dot-menu on top right of home screen)
+- Откройте настройки (нажав три точки меню в верхней правой части главного экрана)
 - Нажмите на галочку слева от заголовка "Общее"
 - Нажмите "Главный пароль"
 - Введите пароль, подтвердите пароль и нажмите кнопку Ok.
@@ -37,30 +37,30 @@
 
 ## Экспорт настроек
 
-- AAPS 2.7 uses a new encrypted backup format.
-- You must [export your settings](../Usage/ExportImportSettings.md) after updating to version 2.7.
-- Settings files from previous versions can only be imported in AAPS 2.7. Экспорт будет в новом формате.
-- Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
-- If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version.
-- All settings as well as finished objectives will remain as they were in the previous version.
-- In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the [troubleshooting section](troubleshooting_androidstudio-lost-keystore).
+- AAPS 2.7 использует новый зашифрованный формат резервного копирования.
+- После обновления до версии 2.7. следует [экспортировать настройки](../Usage/ExportImportSettings.md).
+- Импорт настроек из предыдущих версий возможен только в AAPS 2.7. Экспорт будет в новом формате.
+- Не забудьте сохранить экспортированные настройки не только на телефоне, но и по крайней мере в одном безопасном месте (на ПК, в облачном хранилище...).
+- Если вы собираете AAPS 2.7 с тем же хранилищем ключей, что и в предыдущих версиях, вы можете установить новую версию, не удаляя предыдущую.
+- Все настройки, а также завершенные цели останутся такими же, как и в предыдущей версии.
+- В случае, если вы потеряли файл хранилища ключей версии 2.7 с новыми настройками хранилища, импортируйте из предыдущей версии, как описано в разделе [устранения неполадок](troubleshooting_androidstudio-lost-keystore).
 
 ## Autosens (подсказка - не требует действий)
 
-- Autosens is changed to a dynamic switching model which replicates the reference design.
-- Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. Он выберет более чувствительный вариант.
+- Autosens изменен на динамическую модель, которая воспроизводит оригинальное решение.
+- Начиная с AAPS 2.7 Autosens будет переключаться между окнами в 24 и 8 часов для вычисления чувствительности. Он выберет более чувствительный вариант.
 - Если пользователи перешли с oref1, они, вероятно, заметят, что система может быть менее динамичной из-за различий в 24 или 8 часах чувствительности.
 
 ## Создание пароля для Dana RS (если используется Dana RS)
 
-- Pump password for [Dana RS](../Configuration/DanaRS-Insulin-Pump.md) was not checked in previous versions.
-- Open Preferences (three-dot-menu on top right of screen)
-- Scroll down and click triangle next to "Dana RS".
-- Click "Pump password (v1 only)"
-- Enter pump password ([Default password](DanaRS-Insulin-Pump-default-password) is different depending on firmware version) and click OK.
+- Пароль помпы [Dana RS](../Configuration/DanaRS-Insulin-Pump.md) в предыдущих версиях не проверялся.
+- Откройте настройки, нажав три точки меню в верхней правой части главного экрана
+- Прокрутите вниз и нажмите треугольник рядом с "Dana RS".
+- Нажмите на "Пароль помпы (только v1)"
+- Введите пароль помпы ([Пароль по умолчанию](DanaRS-Insulin-Pump-default-password) отличается в зависимости от версии прошивки) и нажмите OK.
 
 ```{image} ../images/DanaRSPW.png
 :alt: задать пароль Dana RS
 ```
 
-To change password on Dana RS follow instructions on [DanaRS page](DanaRS-Insulin-Pump-change-password-on-pump).
+Для смены пароля на Dana RS следуйте инструкциям на странице [DanaRS](DanaRS-Insulin-Pump-change-password-on-pump).

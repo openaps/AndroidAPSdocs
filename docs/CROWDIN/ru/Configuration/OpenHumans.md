@@ -2,31 +2,31 @@
 
 ## Поделитесь своими данными с исследователями
 
-Вы можете помочь науке, поделившись данными с исследовательскими проектами! This helps scientists to pay it forward, develop new scientific ideas and broaden the open mind of open source closed loop systems. AAPS is ready to synchronize your data with [Open Humans](https://www.openhumans.org), a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data.
+Вы можете помочь науке, поделившись данными с исследовательскими проектами! Это помогает ученым помогать другим людям, развивать новые научные идеи и расширять диапазон возможностей систем замкнутого цикла с открытым исходным кодом. AAPS готов к синхронизации данных с [Open Humans](https://www.openhumans.org), платформой, позволяющей подключаться, загружать и хранить ваши персональные данные – такие, как генетика, активность и данные о здоровье.
 
-You retain full control about what happens to your data and what projects you want to support by giving them access to your data. Depending on the project you have joined, data is evaluated and used by them in different ways and extent.
+Вы сохраняете полный контроль над тем, что происходит с вашими данными и какие проекты вы хотите поддержать, предоставляя им доступ к вашим данным. В зависимости от проекта, к которому вы присоединились, данные оцениваются и используются разными способами.
 
-The following data will be uploaded to your Open Humans account:
+Следующие данные будут загружены в вашу учетную запись Open Humans:
 
 - Glucose values
 - Careportal events (except notes)
 - Extended boluses
-- Profile switches
-- Total daily doses
-- Temporary basals
-- Temp targets
+- Переключения профиля
+- Суммарные суточные дозы
+- Временная базальная скорость
+- Временные цели
 - Настройки
-- Application version
-- Device model
-- Screen dimensions
+- Версия приложения
+- Модель устройства
+- Размеры экрана
 
-Secret or private information such as your Nightscout URL or API secret will not be uploaded.
+Секретная или конфиденциальная информация, такая как URL-адрес Nightscout или API secret, не загружается.
 
 ## Настройки
 
-1. Create your account on [Open Humans](https://www.openhumans.org) if not already done. You can reuse your existing Google or Facebook accounts if you wish to.
-2. Enable the “Open Humans” plugin in [Config Builder](../Configuration/Config-Builder.md).
-3. Open its setting using the cog wheel button. You can restrict upload to times when phone uses Wi-Fi and/or is charged.
+1. Если это еще не сделано, создайте свой аккаунт на [Open Humans](https://www.openhumans.org). Можете для этого использовать существующие учетные записи Google или Facebook, если хотите.
+2. Включите модуль “Open Humans” в [Конфигураторе](../Configuration/Config-Builder.md).
+3. При помощи значка шестеренки откройте его настройки. You can restrict upload to times when phone uses Wi-Fi and/or is charged.
 4. Open the Open Humans Plugin (either trough OH tab or hamburger menu) and click 'LOGIN'.
 
 ```{image} ../images/OHUploader1.png
