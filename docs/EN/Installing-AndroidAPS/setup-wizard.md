@@ -2,13 +2,30 @@
 
 When you first start AAPS you are guided through the setup wizward to setup the basic configuration.
 
-It's not mandatory to get all things configured in the first run as
-- you can always go back to the setup wizard or
-- change only relevant part of the configuration in a direct approach the relevant part.
+The setup wizard is intended to help you configure all the necessary configurations for AAPS in one go.
 
-Though please relax if your are setting up AAPS the first time and expect that you might ask the community for help to answer some of your questions.
+That means you are guided by AAPS not to forget something. Especially the permission settings are fundamental to setup AAPS.
 
-Even writers of the documentation themselves had to setup AAPS and decided to joint the documentation team to bring their experiences back to improve the documenation for other new starters.
+But it's not mandatory to get all things configured in the first run as there are three choices available to change the configuration after the setup wizard. They will be explained directly after the setup wizard. It's okay if you skip some points if you are unsure and configure them later.
+
+During and direct after the setup wizard nothing tremendous happens. Until you can enable your DIY APS loop you have to follow the objectives to get feature after feature enabled.  You start the first objective at the end of the setup wizard. You are the master of AAPS, not the other way around.
+
+:::{admonition} preview objectives
+:class: note
+If you can't stand to know what happens next with the objectives, please read [Completing the objectives](../Usage/completing-the-objectives.md) but come back here to run the setup wizard first.
+
+:::
+
+From the experience of the last years we know that especially new starters feel themself under pressure to setup AAPS fast.
+
+Of course we all want to get the setup done as quickly as possible, but compared to the time of a life it's not that important and the benefits of a well runing AAPS loop can be huge.
+
+If you find a question somewhere that you can't find the answer to in the documentation, please ask the community. Information on how to ask the community is documented in [Connect with other users](../Where-To-Go-For-Help/Connect-with-other-users.md).
+
+:::{admonition} preview objectives
+:class: note
+If there is an error in the documentation or you have a better idea for a representation, please join the "contact documentation team" on Facebook or the Discord chat "WeAreNotWating/androidaps-wiki".
+:::
 
 ## Welcome message
 
@@ -19,9 +36,7 @@ This is just the welcome message which you can skip with the "NEXT" button.
 
 ![image](../images/setup-wizard/Screenshot_20231202_125650.png)
 
-In the end user license agreement you find important information about the legacl aspects of using AAPS.
-
-Please read it carefully.
+In the end user license agreement you find important information about the legacl aspects of using AAPS. Please read it carefully.
 
 If you don't understand or can't agree to the end user license agreement please don't use AAPS at all!
 
@@ -295,7 +310,7 @@ Select the BG source you are using.
 
 As there are several options available we don't explain the configuration for all of them here. We are using Dexcom G6 with the BYODA app in our example here.
 
-Please look in the documentation of AAPS for your BG source.
+Please read the documentation for your [BG source](../Configuration/BG-Source.md).
 
 Press "NEXT" to go to the next screen.
 
@@ -429,6 +444,8 @@ You get an important warning dialog. Please read it and press "OK".
 If your have alread setup your profile in the steps before and you know how to connect your pump as you already read the documentation about this feel free to connect it now. It will not harm if you followed the instruction in the setup wizard until here.
 
 Otherwise leave the setup wizard with the arrow in the top left corner and let AAPS first show you only some blood glucose values. You can come back anytime or use one of the direct configuration options (not using the wizard).
+
+Please read the documentation for your [insulin pump](../Getting-Started/Pump-Choices.md).
 
 Press "NEXT" to go to the next screen.
 
