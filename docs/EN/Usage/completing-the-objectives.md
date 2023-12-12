@@ -25,9 +25,12 @@ As well as progressing through the **objectives**, if you want, you can also rem
 
 ## Objective 1: Setting up visualization and monitoring, analysing basals and ratios
 
-- Select the correct blood glucose source for your setup.  See [BG Source](../Configuration/BG-Source.md) for more information.
-- Select the correct Pump in ConfigBuilder to ensure your pump can communicate with AAPS. Select **virtual pump** if you are using a pump model with no **AAPS** driver for looping, or if you want to work through the early **objectives** while using another system for insulin delivery. 
-- If using a DanaR pump then ensure you have followed the [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and **AAPS**.
+- AAPS checks if your basic technical setup is working.
+
+If not you have to reconfigure until the basic technical setup works for AAPS. 
+
+- Select the correct CGMS/FGMS in [Config Builder](../Configuration/Config-Builder.md).  See [BG Source](../Configuration/BG-Source.md) for more information.
+- Select the correct Pump in [Config Builder](../Configuration/Config-Builder.md) to ensure your pump can communicate with AAPS. Select **virtual pump** if you are using a pump model with no **AAPS** driver for looping, or if you want to work through the early **objectives** while using another system for insulin delivery. See [insulin pump](../Getting-Started/Pump-Choices.md) for more information.
 - Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure **Nightscout** can receive and display this data.
 - Note that URL in **NSClient** must be **_without_ "/api/v1/"** at the end - see [NSClient settings in Preferences](Preferences-nsclient).
 
