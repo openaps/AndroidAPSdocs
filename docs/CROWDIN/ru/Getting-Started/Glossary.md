@@ -293,7 +293,7 @@
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - профиль</a></td>
 </tr>
 <tr>
- <td><strong>Profile switch/смена профиля</strong></td>
+ <td><strong>Переключение профиля</strong></td>
  <td>(частичное) Изменение профиля или процентное увеличение/уменьшение.</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Profiles.html">Wiki - смена профиля</a></td>

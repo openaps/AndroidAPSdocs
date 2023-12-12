@@ -46,20 +46,20 @@ Other indications could be the Linux penguin logo three dot menu -> Info or the 
 
 Первая установка соединения с сенсором имеет решающее значение. Приложение LibreLink пытается установить беспроводное соединение с сенсором каждые 30 секунд. Если один или несколько обязательных параметров отсутствуют, их надо скорректировать. У вас нет ограничений по времени для этого. The sensor is constantly trying to setup the connection. Даже если это длится несколько часов. Будьте терпеливы и попробуйте разные настройки, прежде чем даже подумать о замене сенсора.
 
-As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLink's start screen there is no connection or some other setting blocks LibreLink to signal alarms. Please check if the sound is enabled and all sorts of blocking app notifications are disabled. When the exclamation mark is gone, the connection should be established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
+As long as you see a red exclamation mark ("!") в левом верхнем углу стартового экрана LibreLink означает, что нет соединения или какая-то другая настройка не позволяет LibreLink издавать оповещения. Please check if the sound is enabled and all sorts of blocking app notifications are disabled. Когда восклицательный знак исчезнет, соединение будет установлено и значения гликемии отправятся на смартфон. Это должно произойти не более чем через 5 минут.
 
 ![LibreLink no connection](../images/Libre2_ExclamationMark.png)
 
-If the exclamation mark remains or you get an error message, this can have several reasons:
+Если восклицательный знак остается или сприходят ообщения об ошибке, это может иметь несколько причин:
 
--   Android location service is not granted - please enable it in the system settings
--   automatic time and time zone not set - please change the settings accordingly
--   activate alarms - at least one of the three alarms must be activated in LibreLink
--   Bluetooth is switched off - please switch on
--   sound is blocked
--   app notifications are blocked
--   idle screen notifications are blocked
--   you have a faulty Libre 2 sensor from a production LOT number with a 'K' followed by 8 digits. You find this printed on the yellow package. These sensors have to be replaced as they don't function on bluetooth.
+-   Не предоставлено разрешение службе определения местоположения Android  - включите ее в системных настройках
+-   автоматическое время и часовой пояс не заданы - измените настройки
+-   активируйте оповещения - по крайней мере один из трех сигналов в LibreLink
+-   Bluetooth выключен - включите
+-   звук заблокирован
+-   уведомления приложений заблокированы
+-   неактивные уведомления на экране заблокированы
+-   you have a faulty Libre 2 sensor from a production LOT number with a 'K' followed by 8 digits. Вы найдете этот номер на желтой упаковке. Эти сенсоры должны быть заменены, поскольку они не работают с bluetooth.
 
 Перезапуск телефона помогает, возможно, придется перезапустить несколько раз. As soon as the connection is established, the red exclamation mark disappears and the most important step is taken. It may happen that depending on system settings the exclamation mark remains but you still get readings. В обоих случаях нет причин беспокоиться. Sensor and phone are now connected, every minute a blood sugar value is transmitted.
 
