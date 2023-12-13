@@ -114,7 +114,7 @@ This explains AAPS’ compatibility with CGMs (Continuous Glucose Monitors) and 
 
 #### [Как собрать и установить AAPS](Installing-AndroidAPS/Building-APK.md)
 
-This section is the manual for building the AAPS. Для успешной сборки **AAPS** требуется строгое соблюдение пошаговых инструкций.  Please take your time.
+This section is the manual for building the AAPS. Для успешной сборки **AAPS** требуется строгое соблюдение пошаговых инструкций.  Не торопитесь.
 
 #### [Настройка компонентов]
 
