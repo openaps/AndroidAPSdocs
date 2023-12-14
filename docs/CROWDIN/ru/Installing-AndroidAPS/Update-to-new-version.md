@@ -11,7 +11,7 @@
 * О новой версии также выходит объявление на Facebook во время релиза.
 * После выхода новой версии внимательно прочитайте [Примечания к выпуску](../Installing-AndroidAPS/Releasenotes.md) и, прежде чем приступать к обновлению, задайте интересующие вас вопросы сообществу на Facebook или Discord,.
 * Для **AAPS** версий 2.7 и выше, местоположение новых файлов на <https://github.com/nightscout/AndroidAPS>.
-* The easiest way to update **AAPS** is to remove the directory with **AAPS** and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
+* Самый простой способ обновить **AAPS** - это удалить директорию с **AAPS** и [заново клонировать](../Installing-AndroidAPS/Building-APK.md).
 * Если у вас нет уверенности в том, как это сделать, можно удалить и переустановить Android Studio, чтобы убедиться, что сборка успешна. 
 * В идеале, используйте последнюю версию Android Studio,, **[Giraffe, 2022.3.1](https://developer.android.com/studio/)**, но по крайней мере **Arctic Fox (2020.3.1)** или новее для сборки обновленной **AAPS** apk.
 * При создании приложения **AAPS** с использованием платформы Windows, требуется 64-разрядная система Windows, поскольку 32-разрядные системы не поддерживаются.
@@ -21,7 +21,7 @@
 1. [Экспортируйте настройки](../Usage/ExportImportSettings-export-settings) из существующей версии **AAPS** на телефоне. Возможно, это не потребуется, но лучше обезопасить себя, чем потом жалеть.
 2. [Обновите локальную копию](Update-to-new-version-update-your-local-copy) исходного кода AAPS (Git->Fetch и Git -> Pull)
 3. [Постройте подписанный APK](Update-to-new-version-build-the-signed-apk)
-4. [Transfer the built apk](Building-APK-transfer-apk-to-smartphone) to your phone and install it
+4. [Перенесите собранное приложение](Building-APK-transfer-apk-to-smartphone) на телефон и установите его
 5. [Проверьте версию](Update-to-new-version-check-aaps-version-on-phone) в AAPS
 6. В зависимости от [источника ГК](../Configuration/BG-Source.md) убедитесь, что в xDrip отмечен [identify receiver](xdrip-identify-receiver)или воспользуйтесь ['самостоятельно собранным приложением Dexcom BYODA'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 
@@ -69,7 +69,7 @@
 
 (Update-to-new-version-build-the-signed-apk)=
 
-## 3. Build the Signed APK
+## 3. Построение подписанного приложения APK
 
 Ваш исходный код теперь текущая версия. Пора построить подписанное приложение apk, как описано в разделе [собираем подписанное приложениес apk](Building-APK-generate-signed-apk).
 
@@ -85,11 +85,11 @@
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-## 6. Check AAPS version on phone
+## 6. Проверьте версию AAPS на телефоне
 
 После установки нового приложения, проверьте версию AAPS, нажав на выпадающее меню вверху справа "о приложении". Вы увидете текущую версию.
 
-![AAPS version installed](../images/Update_VersionCheck282.png)
+![Установленная версия AAPS](../images/Update_VersionCheck282.png)
 
 # Устранение неполадок
 
