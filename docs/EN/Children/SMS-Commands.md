@@ -126,6 +126,12 @@ Commands must be sent in English, the response will be in your local language if
 - LOOP RESUME
   \* Response: Loop resumed
 
+- LOOP CLOSED
+  \* Response: Current loop mode: Closed Loop
+
+- LOOP LGS
+  \* Response: Current loop mode: Low Glucose Suspend
+
 ### CGM data
 
 - BG
