@@ -41,60 +41,60 @@
 
 * Откройте существующий проект AAPS при помощи Android Studio. Может потребоваться выбрать проект. (дважды) нажмите на проект AAPS.
     
-    ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
+    ![Android Studio - Выберите проект](../images/update/01_ProjectSelection.png)
 
 * В строке меню Android Studio, выберите Git -> Выбрать
     
-    ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+    ![Android Studio - получение Git](../images/update/02_GitFetch.png)
 
 * Вы увидите сообщение в правом нижнем углу, что выборка прошла успешно.
     
-    ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
+    ![Меню Android Studio - Git - Успешное получение](../images/update/03_GitFetchSuccessful.png)
 
 * В меню теперь выберите Git -> Получить
     
-    ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+    ![Android Studio - получение Git](../images/update/04_GitPull.png)
 
 * Оставьте все параметры как есть (источник/master) и выберите Получить
     
-    ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
+    ![Android Studio - Git - Диалог Pull](../images/update/05_GitPullOptions.png)
 
 * Подождите, пока идет загрузка, вы увидите информацию о процессе в нижней панели. По окончании появится сообщение об успехе. Примечание: Обновленные файлы могут отличаться! Это не индикатор
     
-    ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+    ![Android Studio - Pull успешно](../images/update/06_GitPullSuccess.png)
 
 * Синхронизация Gradle будет запущена на пару секунд, чтобы загрузить некоторые зависимости. Дождитесь завершения процесса.
     
-    ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
+    ![Android Studio - Синхронизация Gradle](../images/studioSetup/40_BackgroundTasks.png)
 
 (Update-to-new-version-build-the-signed-apk)=
 
 ## 3. Build the Signed APK
 
-Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](Building-APK-generate-signed-apk).
+Ваш исходный код теперь текущая версия. Пора построить подписанное приложение apk, как описано в разделе [собираем подписанное приложениес apk](Building-APK-generate-signed-apk).
 
-## 4. Transfer the apk
+## 4. Перемещение apk
 
-You need to transfer the apk to your phone so you can install it.
+Следуето перенести apk на телефон, чтобы установить.
 
-See the instructions for [Transfer APK to smartphone](Building-APK-transfer-apk-to-smartphone)
+См. инструкции для [Передача APK на смартфон](Building-APK-transfer-apk-to-smartphone)
 
-## 5. Install apk
+## 5. Установка apk
 
-На телефоне необходимо разрешить установку из неизвестных источников. Инструкции, как это сделать, можно найти в интернете (например [здесь](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) или [здесь](https://www.androidcentral.com/unknown-sources)). Note: If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates. For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk.
+На телефоне необходимо разрешить установку из неизвестных источников. Инструкции, как это сделать, можно найти в интернете (например [здесь](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) или [здесь](https://www.androidcentral.com/unknown-sources)). Примечание: Если вы завершили сборку с тем же ключом в Android Studio, то вам не нужно удалять существующее приложение на телефоне. Когда вы устанавливаете apk, следуйте подсказкам для установки обновлений. Для других сценариев, таких как создание нового хранилища ключей в Android Studio, нужно удалить старое приложение перед установкой apk.
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
 ## 6. Check AAPS version on phone
 
-After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+После установки нового приложения, проверьте версию AAPS, нажав на выпадающее меню вверху справа "о приложении". Вы увидете текущую версию.
 
 ![AAPS version installed](../images/Update_VersionCheck282.png)
 
 # Устранение неполадок
 
-If anything goes wrong, don't panic.
+Если что-то пойдёт не так, не паникуйте.
 
-Take a breath!
+Выдохните!
 
-Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) if your problem is already documented!
+См. отдельную страницу [ устранение неполадок Android Studio ](../Installing-AndroidAPS/troubleshooting_androidstudio), возможно решение проблемы там уже есть!
