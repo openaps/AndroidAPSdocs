@@ -1,8 +1,8 @@
 # Автоматизация при помощи стороннего приложения Android Automate
 
-**This article has been written before AAPS version 2.5. There is an [automation plugin in AAPS](./Automation.md) itself with AAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
+**Эта статья была написана перед появлением AndroidAPS версии 2.5. В AndroidAPS 2.5. теперь есть [ модуль автоматизации ](./Automation.md). Таким образом, это описание может быть полезно, но только для опытных пользователей.**
 
-As AAPS is a hybrid closed loop system, some user interaction is necessary though (e.g. tell the loop that you are walking, eating soon, lying on the sofa...). Frequent manual user inputs can be automated via external tools like Automate or IFTTT to extend the recent AAPS functionality.
+Так как AAPS-гибридная замкнутая система замкнутого цикла, необходимо некоторое взаимодействие пользователя с алгоритмом (например, сообщить ему, что вы на прогулке, ожидаете приема пищи, лежите на диване...). Часто вводимые вручную пользовательские данные можно автоматизировать с помощью таких внешних инструментов, как Automate или IFTTT, что расширяет функциональность AAPS.
 
 ## Приложение Android Automate
 
