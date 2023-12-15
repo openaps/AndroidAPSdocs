@@ -1,16 +1,16 @@
 (Open-APS-features-DynamicISF)=
-## DynamicISF (DynISF)
-DynamicISF was added in AAPS version 3.2 and requires you to start Objective 11 to use. Select DynamicISF in the config builder > APS to activate. It is recommended only for advanced users that have a good handle on AAPS controls and monitoring.
+## DynamicISF (DynISF)- Динамическое изменение коэффициента чувствительности к инсулину
+DynamicISF was added in AAPS version 3.2 and requires you to start Objective 11 to use. Select DynamicISF in the config builder > APS to activate. Этот режим рекомендуется только опытным пользователям, которые научились хорошо управлять и следить за работой AAPS.
 
-Please note that to use Dynamic ISF effectively, the AndroidAPS database needs a minimum of five days of data.
+Обратите внимание, что для эффективной работы динамического ISF, база данных AndroidAPS должна содержать не менее пяти дней данных.
 
-DynamicISF adapts the insulin sensitivity factor dynamically based on total daily dose of insulin (TDD) and current and predicted blood glucose values.
+DynamicISF подстраивает фактор чувствительности инсулина на основе общей суточной дозе инсулина (TDD) и величин текущего и прогнозируемого содержания глюкозы в крови.
 
-Dynamic ISF uses Chris Wilson’s model to determine ISF instead of a static profile settings.
+Динамический ISF использует модель Криса Уилсона (Chris Wilson) для определения ISF вместо статических настроек профиля.
 
-The equation implemented is: ISF = 1800 / (TDD * Ln (( glucose / insulin divisor) +1 ))
+Применяется уравнение: ISF = 1800 / (TDD * Ln (( глюкоза / инсулин дивизор) +1))
 
-The implementation uses the equation to calculate current ISF and in the oref1 predictions for IOB, ZT and UAM. It is not used for COB.
+Реализация использует уравнение для расчета нынешний фактор ISF и прогнозы активного инсулина, нулевого временного базала и непредвиденного приема пищи. Активные углеводы COB не участвуют в модели.
 
 ### TDD / общая суточная доза инсулина
 This uses a combination of the 7 day average TDD, the previous day’s TDD and a weighted average of the last eight hours of insulin use extrapolated out for 24 hours. The total daily dose used in the above equation is weighted one third to each of the above values.
