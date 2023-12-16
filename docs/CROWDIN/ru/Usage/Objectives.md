@@ -1,17 +1,17 @@
 # Цели
 
-AAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping.  Цели позволяют удостовериться, что все настроено правильно, что вы понимаете что, как и почему делает программа, и что ей можно доверять.
+AAPS ставит ряд Целей, которые необходимо выполнить, чтобы изучить все возможности и настройки программы для дальнейшей безопасной работы.  Цели позволяют удостовериться, что все настроено правильно, что вы понимаете что, как и почему делает программа, и что ей можно доверять.
 
-Если вы **обновляете телефон**, то можете [экспортировать настройки](../Usage/ExportImportSettings.md) чтобы сохранить прохождение целей. При этом будут сохранен не только ваш прогресс в прохождении целей, но и настройки безопасности, такие как максимальный болюс и т. п. Если вы не сделаете экспорт-импорт настроек - вам придется заново проходить все цели.  Рекомендуется периодически [делать бекап актуальных настроек](../Usage/ExportImportSettings.html),  на всякий случай.
+Если вы **обновляете телефон**, то можете [экспортировать настройки](../Usage/ExportImportSettings.md) чтобы сохранить прохождение целей. При этом будут сохранен не только ваш прогресс в прохождении целей, но и настройки безопасности, такие как максимальный болюс и т. п. Если вы не сделаете экспорт-импорт настроек - вам придется заново проходить все цели.  Рекомендуется на всякий случай периодически [делать резервную копию актуальных настроек](../Usage/ExportImportSettings.html).
 
 Если вы захотите снова пройти цели - смотрите [объяснения ниже](Objectives-go-back-in-objectives).
 
 ## Цель 1: Настройка визуализации и мониторинга, анализ базальной скорости и коэффициентов
 
 - Выберите свой источник данных ГК.  См. [Источники ГК](../Configuration/BG-Source.md) для дополнительной информации.
-- Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AAPS driver for looping) to ensure your pump status can communicate with AAPS.
-- If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AAPS.
-- You need to establish a data repository/reporting platform to complete this objective. That can be accomplished with either Nightscout or Tidepool (or both). Follow instructions at the [Nightscout](../Installing-AndroidAPS/Nightscout.md) or [Tidepool](../Installing-AndroidAPS/Tidepool.md) page for instructions.
+- Выберите нужную помпу в Конфигураторе (если нет возможности подключить помпу к телефону - вберите виртуальную помпу), чтобы подключить ее к AAPS.
+- При работе с [помпой Dana R ](../Configuration/DanaR-Insulin-Pump.md) следуйте отдельным инструкциям по привязке помпы к AndroidAPS.
+- Для достижения этой цели необходимо создать хранилище данных/платформу для отчетов. Это можно сделать с помощью Nightscout или Tidepool (или обоих). Follow instructions at the [Nightscout](../Installing-AndroidAPS/Nightscout.md) or [Tidepool](../Installing-AndroidAPS/Tidepool.md) page for instructions.
 - Обратите внимание: URL в Клиенте NS **не должен содержать строку /api/v1/** в конце - см. подробнее в [настройках Клиент NS](Preferences-nsclient).
 
 *You may need to wait for the next blood glucose reading to arrive before AAPS will recognise it.*
