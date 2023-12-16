@@ -122,6 +122,10 @@ Les commandes doivent être envoyées en anglais, la réponse sera dans votre la
 
 - LOOP RESUME \* Réponse : Boucle relancée
 
+- LOOP CLOSED \* Response: Current loop mode: Closed Loop
+
+- LOOP LGS \* Response: Current loop mode: Low Glucose Suspend
+
 ### Données MGC
 
 - Gly \* Réponse: Dernière G: 5,6 il y a 4 min, Delta: 2 mmol, IA: 0.20U (Bolus: 0.10U Basal: 0.10U)
