@@ -98,7 +98,9 @@ Git is a program that allows you to track changes in code and to collaborate wit
 
 ![Git_installed](../images/Building-the-App/Hedgehog/001_check_git_installed.png)
 
-2. If you don’t have Git installed, download and install the latest version for your system from [**here**](https://git-scm.com/downloads). Any recent Git version should work, for both Mac and Windows.
+2. If you don’t have Git installed, download and install the latest version for your system from [**here**](https://git-scm.com/downloads). Any recent Git version should work, select the correct version according to your system, either Mac, Windows and Linux. 
+
+**Note for Mac users:** the Git webpage will also guide you to install an additional program called "homebrew" to aid the installation. If you install Git via homebrew, there is no need to change any preferences.
 
 (Make_a_note_of_Git_path)=
 
@@ -109,12 +111,6 @@ Git is a program that allows you to track changes in code and to collaborate wit
 *  After the install, if you forgot to make a note of the where Git was installed, you can find it as follows: type "git" into the PC search bar, right click on "Git bash", select "open file location" hover over the "Git bash" icon with your mouse, which will then reveal where it is installed. 
 
 * Reboot your computer before the next step.
-
-#### Note for Mac users
-
-- Use homebrew to install git: `` `$ brew install git` ``.
-- For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-- If you install git via homebrew there is no need to change any preferences.
 
 (Building-APK-install-android-studio)=
 ### Install Android Studio
@@ -281,9 +277,7 @@ _Optional_ - If you want to clear the pop-up for **"project update recommended"*
 ![AS_close_gradle_popup](../images/Building-the-App/Hedgehog/20_close_popup.png)
 
 
- If any errors occur, do not continue with the following steps, consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio) for known problems:
-
-   ![Gradle Sync Error](../images/studioSetup/41_GradleSyncError.png)
+ If any errors occur, do not continue with the following steps, consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio) for known problems.
 
 Now close Android Studio (select _File_-_Exit_). 
 
@@ -303,30 +297,28 @@ Now we will tell Android studio where to find Git, which you installed [earlier]
 
 *  Now select "**Git**" (2). 
 *  In the lower middle of the page, make sure update method "Merge" (3) is selected.
-*  Check if **Android Studio** can locate path to git.exe automatically by clicking the button "Test" (4):
+*  Check if **Android Studio** can automatically locate the correct path to **git.exe** automatically by clicking the button "Test" (4):
 
 ![Gitpath](../images/Building-the-App/Hedgehog/22_Git_path.png)
 
 
-* If the automatic setting is successful, the Git version will be displayed next to the path.
+* If the automatic setting is successful, your current version of **Git** will be displayed next to the path.
 
    ![Git_version_displayed](../images/Building-the-App/Hedgehog/23_Git__path_success.png)
 
 
-* If you find that git.exe is not found automatically, or that "Test" results in an error (1), you can either manually enter the path which you saved [earlier](Make_a_note_of_Git_path), or click on the folder icon (2):
+* If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error (1), you can either manually enter the path which you saved [earlier](Make_a_note_of_Git_path), or click on the folder icon (2) and manually navigating to the directory where **git.exe** is stored:
 
   ![Git not found](../images/studioSetup/13_GitVersionError.png)
 
 
-* Use the [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where git has been installed. You are looking for a file named "git.exe", located in **\bin\** folder.
+* Use the [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where git has been installed. How to do this is explained [above](Make_a_note_of_Git_path) in more detail.
 
-* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3) and click "OK" (4).
+* If you have manually selected it, check your selected Git path with the "Test" button as described above.
 
-  ![Select git manually](../images/studioSetup/14_GitManualSelection.png)
+When the Git version is displayed next to the path (see screenshot above) you have completed this stage successfully and you can close the Android Studio "Settings" window by clicking the "**OK**" button (5):
 
-* Check your selected Git path again with the "Test" button as described above.
-
-When the Git version is displayed next to the path (see screenshot above), close settings window by clicking the "**OK**" button (5).
+  ![Git_path_OK](../images/Building-the-App/Hedgehog/23a_Git_path_OK.png)
 
 
 (Building-APK-generate-signed-apk)=
@@ -335,7 +327,7 @@ When the Git version is displayed next to the path (see screenshot above), close
 :::{admonition} Why does the AAPS app need to be "signed"?
 :class: dropdown
 
-Android (like Apple’s iOs) requires each application to be _signed_, to ensure that later it can only be updated from the same trusted source that released the original application. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
 :::
 
 * In the menu bar, click "Build" (1), select "Generate Signed Bundle/APK (2)
@@ -344,81 +336,79 @@ Android (like Apple’s iOs) requires each application to be _signed_, to ensure
 
 * Select "APK" instead of "Android App Bundle" and click "Next":
 
-   ![APK instead of bundle](../images/Building-the-App/Hedgehog/26_generate_APK.png)
+![APK instead of bundle](../images/Building-the-App/Hedgehog/26_generate_APK.png)
 
-Updated up to here
-----------------------
-
-* Make sure that module is set to "AAPS.app" (1).
+* In the next screen, make sure that "Module" is set to "AAPS.app" (1).
 * Click "Create new..." (2) to start creating your key store.
 
-   **_Note:_** A key store in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords.
+**_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
 
-   ![Create key store](../images/studioSetup/44_KeystoreNew.png)
+![Create_key_store](../images/Building-the-App/Hedgehog/27_new_keystore.png)
 
-* Click the folder symbol to select a path on your computer for your key store.
+* Click the "folder" symbol (1) to select a path on your computer for your key store:
 
-   ![Create key store](../images/studioSetup/45_KeystoreDialog.png)
+![Create key store](../images/Building-the-App/Hedgehog/28_new_keystore_path.png)
 
-* Select the path where your key store shall be saved (1).
+* Click on the drop-down menu (1), to select where you want to save your keystore file. In this example, it is being saved in "My Documents" (2). Do not save the keystore in same folder as your Android Studio files (StudioProject). Type in a simple name for your key store (3) and confirm it with "OK" (4):
 
-   ![Create key store](../images/studioSetup/46_KeystorePath.png)
-
-  **_Warning: Do not save in same folder as project. You must use a different directory!_**
-  A good location would be your home folder.
-
-* Type a file name for your key store (2) and confirm with "OK" (3).
+![Create key store](../images/Building-the-App/Hedgehog/29_choose_keystore_file.png)
 
 
-* Enter (2) and confirm (3) the password for your key store.
-  ![Select key store path](../images/studioSetup/47_KeystoreDialog.png)
+This will take you back to the previous screen. Your chosen location for saving the key store file is shown. 
 
-  **_Note:_** Passwords for key store and key do not have to be very sophisticated. Make sure to remember those or make a note in a safe place. In case you will not remember your passwords in the future, see [troubleshooting for lost key store](troubleshooting_androidstudio-lost-keystore).
+Now choose a simple password (make a note of it), enter it in the password box (1), and confirm it (2).  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [troubleshooting for lost key store](troubleshooting_androidstudio-lost-keystore).
 
-* Enter an alias (4) for your key. Choose whatever you like.
+The default alias (3) for your key is "key0", leave this unchanged.
 
-* Enter (5) and confirm (6) the password for your key
+You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm (5) it.
 
-* Validity (7) is 25 years by default. You do not have to change the default value.
+The validity (6) is 25 years by default, leave it as it is.
 
-* First and last name must be entered (8). All other information is optional.
+Enter your first and last name (8). No other information needs to be added.
 
-* Click "OK" (9) when you are done.
+Click "OK" (9) to continue:
 
-* Make sure the box to remember passwords is checked (1). So you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version).
-* Click "Next" (2).
+![Select key store path](../images/Building-the-App/Hedgehog/30_new_keystore.png)
 
-   ![Remember passwords](../images/studioSetup/48_KeystoreSave.png)
+On the "Generate signed bundle or APK" page, the path to your keystore will now be displayed. Now re-enter the Key Store password (1) and Key password (2), and tick the box to remember passwords is checked (3), so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Click "Next" (4):
 
-* Select build variant "fullRelease" (1) and press "Create".
+![Remember passwords](../images/Building-the-App/Hedgehog/31_generate_APK.png)
 
-   ![Select build variant](../images/studioSetup/49_BuildVariant.png)
 
-* Android Studio will show "Gradle Build running" at the bottom. This takes some time, depending on your computer and internet connection. **Be patient!**
+On the next screen, select build variant "fullRelease" (1) and click "Create" (2).
 
-   ![Gradle Running](../images/studioSetup/50_GradleRunning.png)
+   ![Select build variant](../images/Building-the-App/Hedgehog/32_full_release.png)
 
-* Android Studio will display the information "Generate Signed APK" after build is finished.
+Android Studio will now build the **AAPS** apk. It will show "Gradle Build running" at the bottom right. The process takes some time, depending on your computer and internet connection, **be patient!** If you want to watch the progress of the build, click on the small hammer "build" at the bottom of Android Studio:
 
-   ![Build finished](../images/studioSetup/51_BuildFinished.png)
+![Gradle Running](../images/Building-the-App/Hedgehog/33_Studio_building1.png)
+
+Now you can watch the building progress:
+
+![Android_Studio_building](../images/Building-the-App/Hedgehog/34_Studio_building2.png)
+
+Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". If you miss this, click on the notification "locate or analyse the APK" (yellow highlight) at the very bottom of the screen to bring up the Notifications:
+
+![Build finished](../images/Building-the-App/Hedgehog/35_Studio__built_success.png)
+
+
 
 _If the build was not successful, refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio)._
 
-* Click on the notification "Generate signed APK" in the bottom right corner of the screen to expand it.
+In the Notifications box, click on the blue link "locate":
 
-* Click on the link "locate".
+![Locate build](../images/Building-the-App/Hedgehog/35_Studio__built_locate.png)
+   Your file manager/explorer will open. Navigate to the directory "full" (1) > "release" (2).
 
-   ![Locate build](../images/studioSetup/52_BuildLocate.png)
- * If the notification is gone, you can always open the "Event log" and select the same link there.
-    ![Build successfully - event log](../images/studioSetup/53_EventLog.png)
+   ![File location apk](../images/Building-the-App/Hedgehog/36_locate_apk.png)
 
-* Your file manager/explorer will open. Navigate to the directory "full" (1) > "release" (2).
+Open the folder "release". The file "app-full-release.apk" (1) is the **AAPS** apk that you have just built, you will be transferring this file to your smartphone in the next section of the docs: 
 
-   ![File location apk](../images/studioSetup/54_APKlocation.png)
+_Optional at this stage - if you are planning to also build the "**AAPS** wear" app for your smartwatch so you that can remotely control **AAPS**, now delete the "output-metadata" .json file (2) from this folder, to avoid the error of [uncommitted changes](troubleshooting_androidstudio-uncommitted-changes) during the **AAPS** wear build_:
 
-* "app-full-release.apk" (3) is the file you are looking for!
+![apk_file](../images/Building-the-App/Hedgehog/37_full_release_apk.png)
 
-Congratulations! Now you have built the **AAPS** apk file, you can move to the next stage of [Transferring and Installing AAPS](Transferring-and-installing-AAPS.md).
+Congratulations! Now you have built the **AAPS** apk file, you can move to the next stage of [Transferring and Installing **AAPS**](Transferring-and-installing-AAPS.md).
 
 
 
