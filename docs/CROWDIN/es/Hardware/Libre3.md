@@ -12,17 +12,17 @@ Juggluco también puede enviar datos a LibreView para compartirlos con los equip
 
 Dentro de xDrip+, el sensor se puede calibrar en un rango de -40 mg/dl a +20 mg/dl (-2,2 mmol/l a +1,1 mmol/l) para compensar las diferencias entre una lectura manual de medidor y las lecturas del sensor.
 
-## Método 1: Lecturas cada minuto
+## Method 1: 1-minute-readings
 La versión 3.2.0.1 de AndroidAPS no soporta valores de 1 minuto. Acceleration and Smoothing does not work with 1-minute values.
 
 
-## Método 2: Lecturas cada 5 minutos
+## Method 2: 5-minute-readings
 Este método utiliza Juggluco para recibir datos brutos con intervalos de 1 minuto del sensor, los cuales luego se envían a xDrip+ para ser suavizados en datos con intervalos de 5 minutos que se pasan a AAPS.
 
 ### Paso 1: Configurar Juggluco
 Descarga e instala la aplicación Juggluco desde [aquí](https://www.juggluco.nl/Juggluco/download.html). Sigue las instrucciones [aquí](https://www.juggluco.nl/Juggluco/libre3/)
 
-Asegúrate de enviar los valores de glucosa a xDrip+: En la configuración de Juggluco, puedes configurarlo para enviar el valor de glucosa a otras aplicaciones. Juggluco puede enviar tres tipos de estas transmisiones: La **transmisión de Librelink** se utilizaba originalmente en la aplicación parcheada de Librelink y se puede usar para enviar valores de glucosa a xDrip+
+Make sure you send the glucose values to Xdrip+: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco puede enviar tres tipos de estas transmisiones: La **transmisión de Librelink** se utilizaba originalmente en la aplicación parcheada de Librelink y se puede usar para enviar valores de glucosa a xDrip+
 
 ### Paso 2: Configurar xDrip+
 
