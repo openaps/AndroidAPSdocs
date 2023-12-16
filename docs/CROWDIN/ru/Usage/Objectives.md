@@ -1,24 +1,24 @@
 # Цели
 
-AAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping.  Цели позволяют удостовериться, что все настроено правильно, что вы понимаете что, как и почему делает программа, и что ей можно доверять.
+AAPS ставит ряд Целей, которые необходимо выполнить, чтобы изучить все возможности и настройки программы для дальнейшей безопасной работы.  Цели позволяют удостовериться, что все настроено правильно, что вы понимаете что, как и почему делает программа, и что ей можно доверять.
 
-Если вы **обновляете телефон**, то можете [экспортировать настройки](../Usage/ExportImportSettings.md) чтобы сохранить прохождение целей. При этом будут сохранен не только ваш прогресс в прохождении целей, но и настройки безопасности, такие как максимальный болюс и т. п. Если вы не сделаете экспорт-импорт настроек - вам придется заново проходить все цели.  Рекомендуется периодически [делать бекап актуальных настроек](../Usage/ExportImportSettings.html),  на всякий случай.
+Если вы **обновляете телефон**, то можете [экспортировать настройки](../Usage/ExportImportSettings.md) чтобы сохранить прохождение целей. При этом будут сохранен не только ваш прогресс в прохождении целей, но и настройки безопасности, такие как максимальный болюс и т. п. Если вы не сделаете экспорт-импорт настроек - вам придется заново проходить все цели.  Рекомендуется на всякий случай периодически [делать резервную копию актуальных настроек](../Usage/ExportImportSettings.html).
 
 Если вы захотите снова пройти цели - смотрите [объяснения ниже](Objectives-go-back-in-objectives).
 
 ## Цель 1: Настройка визуализации и мониторинга, анализ базальной скорости и коэффициентов
 
 - Выберите свой источник данных ГК.  См. [Источники ГК](../Configuration/BG-Source.md) для дополнительной информации.
-- Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AAPS driver for looping) to ensure your pump status can communicate with AAPS.
-- If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AAPS.
-- You need to establish a data repository/reporting platform to complete this objective. That can be accomplished with either Nightscout or Tidepool (or both). Follow instructions at the [Nightscout](../Installing-AndroidAPS/Nightscout.md) or [Tidepool](../Installing-AndroidAPS/Tidepool.md) page for instructions.
-- Обратите внимание: URL в Клиенте NS **не должен содержать строку /api/v1/** в конце - см. подробнее в [настройках Клиент NS](Preferences-nsclient).
+- Выберите нужную помпу в Конфигураторе (если нет возможности подключить помпу к телефону - вберите виртуальную помпу), чтобы подключить ее к AAPS.
+- При работе с [помпой Dana R ](../Configuration/DanaR-Insulin-Pump.md) следуйте отдельным инструкциям по привязке помпы к AndroidAPS.
+- Для достижения этой цели необходимо создать хранилище данных/платформу для отчетов. Это можно сделать с помощью Nightscout или Tidepool (или обоих). Следуйте инструкциям на странице [Nightscout](../Installing-AndroidAPS/Nightscout.md) или [Tidepool](../Installing-AndroidAPS/Tidepool.md).
+- Обратите внимание: URL в AAPSClient **не должен содержать строку /api/v1/** в конце - см. подробнее в [настройках Клиент NS](Preferences-nsclient).
 
-*You may need to wait for the next blood glucose reading to arrive before AAPS will recognise it.*
+*Возможно, потребуется дождаться следующего значения ГК, прежде чем AAPS распознает его и примет в обработку.*
 
-## Objective 2: Learn how to control AAPS
+## Цель 2: Научитесь контролировать AAPS
 
-- Perform several actions in AAPS as described in this objective.
+- Выполните несколько действий в AAPS, которые описаны в этой цели.
 
 - Нажмите на оранжевый текст «Не завершено» для доступа к каждому заданию.
 
@@ -29,38 +29,49 @@ AAPS has a series of Objectives that need to be completed to walk you through th
   ```
 
 (Objectives-objective-3-prove-your-knowledge)=
+
 ## Цель 3: Подтвердите ваши знания
 
-- Pass a multiple-choice exam testing your AAPS knowledge.
+Цель3 - это тест с множественным выбором на основе вопросов, призванных проверить теоретические знания **AAPS**.
 
-- Чтобы открыть сам вопрос и варианты ответов на него - нажмите на оранжевый текст "Не завершено".
+Некоторые пользователи считают цель 3 самой трудной. Прочитайте документы ААПС в сочетании с вопросами. Если вы действительно застряли после изучения документации **AAPS**, найдите или запросите помощь в Facebook или группе Discord. Эти группы могут дать подсказки или перенаправить вас на соответствующую часть документов **AAPS**.
 
-  ```{image} ../images/Objective3_V2_5.png
-  :alt: снимок экрана Цель 3
-  ```
+Чтобы приступить к реализации цели 3, нажмите на оранжевый текст «Не завершено», чтобы получить доступ к соответствующему вопросу. Прочтите каждый вопрос и выберите ответ(ы).
 
-- Если вам требуется помощь с поиском правильного ответа - воспользуйтесь приложенной к вопросу ссылкой на соответствующую статью из этой документации.
 
-- Для версии 2.8 вопросы 3 цели были полностью переработаны носителями языка. Они охватывают как прежние базовые темы, так и несколько новых.
 
-- Поэтому, если вы проходили 3 цель в предыдущих версиях программы - у вас появятся новые неотвеченные вопросы.
+В каждом вопросе есть гиперссылка на документы **AAPS** для поиска правильного ответа.
 
-- Неотвеченные вопросы окажут влияние только в том случае, если вы еще не прошли все цели и приступаете к новой. Другими словами, если вы уже прошли все цели ранее - вы можете ответить на новые вопросы позднее, не теряя функционал AAPS.
+
+[Obj3_Screenshot 2023-12-05 223422](https://github.com/openaps/AndroidAPSdocs/assets/137224335/77347516-e24e-459d-98ab-acbb49a3d4e8)![изображение](https://github.com/openaps/AndroidAPSdocs/assets/137224335/ca756b8e-efbc-4427-b281-ac953ce16718)
+
+
+
+Для каждого вопроса правильным может быть больше одного ответа! Если выбран неверный ответ, вопрос будет заблокирован на определенное время (60 минут), прежде чем вы сможете вернуться и ответить на вопрос.
+
+
+После обновления до новой версии **AAPS**, могут быть добавлены новые вопросы для преодоления распространенных затруднений **AAPS** или, по мере появления, для проверки знаний о новых функциях **AAPS**.
+
+
+Когда **AAPS** устанавливается в первый раз, необходимо полностью пройти цель 3 для того, чтобы перейти к цели 4. Каждая цель должна быть выполнена в последовательном порядке. Постепенно, по мере преодоления целей, будут открываться новые возможности приложения.
+
+__Что произойдет, если в цель 3 позднее будут добавлены новые вопросы?__ Время от времени в **AAPS** добавляются новые функции, что может потребовать добавления нового вопроса к цели 3. В результате любой новый вопрос, добавленный к цели 3, будет помечен как «незавершенный», потому что **AAPS** потребует на него ответа. Поскольку каждая цель независима, вы не потеряете существующую функциональность **AAPS** при условии, что другие цели останутся выполненными.
+
 
 ## Цель 4: Начните с открытого цикла
 
 - Выберите открытый цикл либо в настройках, либо нажав кнопку "Открытый цикл" в левом верхнем углу главного экрана.
 - Зайдите в [Настройки](../Configuration/Preferences.md) и измените их исходя из своих потребностей.
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AAPS that you have accepted them.  Ensure this data shows in AAPS and Nightscout.
-- Применяйте [временные цели (ВЦ)](../Usage/temptarget.md) при необходимости. Используйте ВЦ Гипо для купирования гипогликемии, чтобы предотвратить слишком активное скалывание растущей после купирования гипо ГК.
+- Вручную активируйте по крайней мере 20 предложений временного базала на протяжении 7 дней, введите их в помпу и подтвердите в AAPS что вы их приняли.  Убедитесь, что изменения появились как в AAPS, так и в Nightscout.
+- При необходимости применяйте [временные цели (ВЦ)](../Usage/temptarget.md). Используйте ВЦ Гипо для купирования гипогликемии, чтобы предотвратить слишком активное скалывание растущей после купирования гипо ГК.
 
 ### Сократите количество уведомлений
 
 - Для сокращения количества предложений во время работы в режиме Открытого цикла установите широкий целевой диапазон, например, 90-150 мг/дл или 5,0-8,5 ммоль/л.
 
-- Возможно, вы захотите увеличить верхнюю границу диапазона на ночь (или вовсе отключить цикл на это время).
+- Возможно, вам захочется увеличить верхнюю границу диапазона на ночь (или вовсе отключить цикл на это время).
 
-- В Настройках можно указать процент изменения базала, "минимальный запрос на изменения", при превышении которого система предложит вам внести соответствующие изменения в помпе.
+- В настройках можно установить минимальный процент для предложений по изменению базальной скорости.
 
   ```{image} ../images/OpenLoop_MinimalRequestChange2.png
   :alt: изменение минимального запроса на незамкнутом цикле
@@ -70,7 +81,7 @@ AAPS has a series of Objectives that need to be completed to walk you through th
 
 ## Цель 5: Глубже понимаем работу системы в режиме незамкнутого цикла, включая ее рекомендации по временным базалам
 
-- Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AAPS homescreen](Screenshots-prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+- Начинаем вникать в рекомендации по временному базалу, изучая [логику определения базала](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), а также [линии прогнозируемой гликемии на главном экране AAPS](Screenshots-prediction-lines) / Nightscout и результаты вычислений на вкладке OpenAps).
 
 Целевые значения гликемии следует несколько завысить до тех пор, пока вы не убедитесь в правильности всех вычислений и настроек.  Система позволяет
 
@@ -101,19 +112,19 @@ AAPS has a series of Objectives that need to be completed to walk you through th
 :alt: предупреждающий знак
 ```
 
-### Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend. High BG values have to be corrected manually by you!
+### В цели 6 система не будет пытаться снижать высокие сахара, так как здесь она ограничена только приостановкой на низкой ГК. Высокие значения ГК необходимо корректировать самостоятельно!
 
-- Prerequisite: You need a good profile (basal, ISF, IC) already working in AAPS to start with Loop in Low Glucose Suspend mode. Otherwise you can run in a hypo which you have to manually correct. This will help you a lot to avoid having to treat a low glucose over a period of 5 days. **If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios and do NOT start objective 6 at this time.**
-- You don't have to change your settings now. During objective 6, the maxIOB setting is internally set to zero automatically. **This override will be reversed when moving to objective 7.**
-- The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you. If blood glucose is rising then it will only increase basal if the basal IOB is negative from a previous Low Glucose Suspend. Otherwise basal rates will remain the same as your selected profile. **That means that you have to manually handle high values with insulin corrections.**
-- If your basal IOB is negative (see screenshot below) a TBR > 100% can be issued also in objective 6.
+- Prerequisite: You need a good profile (basal, ISF, IC) already working in AAPS to start with Loop in Low Glucose Suspend mode. Иначе можно уйти в гипогликемию, которую придется компенсировать вручную. Это позволит вам эффективно избегать гип на протяжении более 5 дней. **Если у вас еще часто случаются эпизоды гипогликемии, или они бывают очень сильными, то вам следует пересмотреть настройки DIA, базала, ISF или IC и пока НЕ приступать к выполнению 6 цели.**
+- You don't have to change your settings now. На протяжении выполнения Цели 6 значение maxIOB будет считаться равным 0. **This override will be reversed when moving to objective 7.**
+- Система будет основывать свои расчеты на maxIOB = 0, а значит при резком снижении ГК сможет уменьшить базальную скорость. Если ГК растет, то базальная скорость будет увеличена только если IOB будет отрицательным в связи с отработавшим алгоритмом приостановки на низких. В ином случае скорость базала будет соответствовать значению из профиля. **Это значит, что вам необходимо вручную компенсировать повышение ГК.**
+- Если текущее значение IOB отрицательное (см. снимки экрана ниже), то при прохождении цели 6 может также быть установлена ВБС> 100%.
 
 ```{image} ../images/Objective6_negIOB.png
 :alt: Пример отрицательного IOB
 ```
 
-- Set your target range slightly higher than you usually aim for, just to be safe and have a bit more scurity buffer.
-- Enable 'Low Glucose Suspend' mode either by by pressing and holding the Loop icon at the top right corner of the home screen and selecting the Loop - LGS mode icon.
+- В качестве дополнительной предосторожности установите целевой диапазон немного шире, чем ваш обычный.
+- Включите режим «Приостановка на низких» нажав и удерживая значок Цикла в правом верхнем углу главного экрана и выбрав значок «Цикл - LGS».
 - Watch how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
 - Возможны временные пики вслед за мерами против гипогликемии без возможности увеличить базу на откате._
 

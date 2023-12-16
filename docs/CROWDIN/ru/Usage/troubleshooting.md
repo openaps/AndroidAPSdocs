@@ -1,12 +1,12 @@
 # Устранение неполадок
 
-Вы можете найти много информации об устранении неполадок на страницах этого документа. На этой странице собраны ссылки, которые помогут найти решения вашей проблемы.
+Много информации об устранении неполадок можно найти на страницах этого документа. На этой странице собраны ссылки, которые помогут найти решения вашей проблемы.
 
-Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.html).
+Дополнительную полезную информацию можно также найти в часто задаваемых вопросах [FAQ](../Getting-Started/FAQ.html).
 
-## AAPS app
+## Приложение AAPS
 
-### Building & updating
+### Сборка и обновление
 
 * [Потеряно хранилище ключей](troubleshooting_androidstudio-lost-keystore)
 * [Troubleshooting AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
@@ -16,7 +16,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 
   ![Ошибка: Базал не выровнен по часам](../images/Screen_DifferentPump.png)
 
-* [Pump - data from different pump](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
+* [Помпа - данные с разных помп](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
 
   ![Сообщение об ошибке: данные с другой помпы](../images/BasalNotAlignedToHours2.png)
 

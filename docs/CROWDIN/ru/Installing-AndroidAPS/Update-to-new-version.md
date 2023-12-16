@@ -2,99 +2,99 @@
 
 ## Постройте сами вместо скачивания
 
-**AAPS** is not available to download, due to regulations concerning medical devices. Построить приложение для собственного использования вполне законно, но передавать копию другим не разрешается! См. раздел [ FAQ ](../Getting-Started/FAQ.md).
+**AAPS** недоступен для скачивания из-за законодательства, касающегося медицинских устройств. Построить приложение для собственного использования вполне законно, но передавать копию другим не разрешается! См. раздел [ FAQ ](../Getting-Started/FAQ.md).
 
 ## Важные Примечания
 
-* Please update to the new version of **AAPS** as soon as possible after a new release is available.
-* When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
-* The new version will also be announced on Facebook at the time of release.
-* Following the release, please read the [Release Notes](../Installing-AndroidAPS/Releasenotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-* For **AAPS** versions 2.7 and newer, the location for the new files is at <https://github.com/nightscout/AndroidAPS>.
-* The easiest way to update **AAPS** is to remove the directory with **AAPS** and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
-* If you are unsure about how to do this, you can also completely uninstall and reinstall Android Studio to make sure the build is a success. 
-* Ideally, use the latest version of Android Studio, **[Giraffe, 2022.3.1](https://developer.android.com/studio/)**, but at least **Arctic Fox (2020.3.1)** or newer, to build the updated **AAPS** apk.
-* If building the **AAPS** app using a Windows platform, you will need to use a Windows 64-bit system since 32-bit systems are not supported.
+* Обновите **AAPS** как можно быстрее после выхода новой версии.
+* Когда доступна новая версия, в самом приложении **AAPS** появляется информационный баннер об этом.
+* О новой версии также выходит объявление на Facebook во время релиза.
+* После выхода новой версии внимательно прочитайте [Примечания к выпуску](../Installing-AndroidAPS/Releasenotes.md) и, прежде чем приступать к обновлению, задайте интересующие вас вопросы сообществу на Facebook или Discord,.
+* Для **AAPS** версий 2.7 и выше, местоположение новых файлов на <https://github.com/nightscout/AndroidAPS>.
+* Самый простой способ обновить **AAPS** - это удалить директорию с **AAPS** и [заново клонировать](../Installing-AndroidAPS/Building-APK.md).
+* Если у вас нет уверенности в том, как это сделать, можно удалить и переустановить Android Studio, чтобы убедиться, что сборка успешна. 
+* В идеале, используйте последнюю версию Android Studio,, **[Giraffe, 2022.3.1](https://developer.android.com/studio/)**, но по крайней мере **Arctic Fox (2020.3.1)** или новее для сборки обновленной **AAPS** apk.
+* При создании приложения **AAPS** с использованием платформы Windows, требуется 64-разрядная система Windows, поскольку 32-разрядные системы не поддерживаются.
 
-## Overview for updating to a new version of AAPS
+## Обзор порядка обновления до новой версии AAPS
 
-1. [Export your settings](../Usage/ExportImportSettings-export-settings) from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
-2. [Update local copy](Update-to-new-version-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
-3. [Build signed APK](Update-to-new-version-build-the-signed-apk)
-4. [Transfer the built apk](Building-APK-transfer-apk-to-smartphone) to your phone and install it
-5. [Check the version](Update-to-new-version-check-aaps-version-on-phone) in AAPS
-6. Depending on your [BG source](../Configuration/BG-Source.md) make sure to [identify receiver](xdrip-identify-receiver) in xDrip or use the ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+1. [Экспортируйте настройки](../Usage/ExportImportSettings-export-settings) из существующей версии **AAPS** на телефоне. Возможно, это не потребуется, но лучше обезопасить себя, чем потом жалеть.
+2. [Обновите локальную копию](Update-to-new-version-update-your-local-copy) исходного кода AAPS (Git->Fetch и Git -> Pull)
+3. [Постройте подписанный APK](Update-to-new-version-build-the-signed-apk)
+4. [Перенесите собранное приложение](Building-APK-transfer-apk-to-smartphone) на телефон и установите его
+5. [Проверьте версию](Update-to-new-version-check-aaps-version-on-phone) в AAPS
+6. В зависимости от [источника ГК](../Configuration/BG-Source.md) убедитесь, что в xDrip отмечен [identify receiver](xdrip-identify-receiver)или воспользуйтесь ['самостоятельно собранным приложением Dexcom BYODA'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
+Если возникают сложности, см. отдельную страницу [ устранение неполадок Android Studio ](../Installing-AndroidAPS/troubleshooting_androidstudio).
 
-## 1. Export your settings
+## 1. Экспорт настроек
 
-See the [Export & import settings](ExportImportSettings-export-settings) page if you don't remember how to do this.
+Смотрите [Настройки экспорта & импорта](ExportImportSettings-export-settings), если не помните, как это сделать.
 
 (Update-to-new-version-update-your-local-copy)=
 
-## 2. Update your local copy
+## 2. Обновление локальной копии
 
-As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
+Начиная с версии 2.7 местоположение репозитория изменено на <https://github.com/nightscout/AndroidAPS>. Если вы не знакомы с Git самый простой способ обновления- удалить каталог с AAPS и [ клонировать заново](../Installing-AndroidAPS/Building-APK.md).
 
-If you have already changed the URL or update from version 2.8.x, follow these steps:
+Если вы уже изменили URL или обновляетесь с версии 2.8.x, выполните следующее:
 
-* Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
+* Откройте существующий проект AAPS при помощи Android Studio. Может потребоваться выбрать проект. (дважды) нажмите на проект AAPS.
     
-    ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
+    ![Android Studio - Выберите проект](../images/update/01_ProjectSelection.png)
 
-* In the menu bar of Android Studio, select Git -> Fetch
+* В строке меню Android Studio, выберите Git -> Выбрать
     
-    ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+    ![Android Studio - получение Git](../images/update/02_GitFetch.png)
 
-* You will see a message in the lower right corner that Fetch was successful.
+* Вы увидите сообщение в правом нижнем углу, что выборка прошла успешно.
     
-    ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
+    ![Меню Android Studio - Git - Успешное получение](../images/update/03_GitFetchSuccessful.png)
 
-* In the menu bar, now select Git -> Pull
+* В меню теперь выберите Git -> Получить
     
-    ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+    ![Android Studio - получение Git](../images/update/04_GitPull.png)
 
-* Leave all options as they are (origin/master) and select Pull
+* Оставьте все параметры как есть (источник/master) и выберите Получить
     
-    ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
+    ![Android Studio - Git - Диалог Pull](../images/update/05_GitPullOptions.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message. Note: The files that were updated may vary! This is not an indication
+* Подождите, пока идет загрузка, вы увидите информацию о процессе в нижней панели. По окончании появится сообщение об успехе. Примечание: Обновленные файлы могут отличаться! Это не индикатор
     
-    ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+    ![Android Studio - Pull успешно](../images/update/06_GitPullSuccess.png)
 
-* Gradle Sync will be running a couple of seconds to download some dependencies. Wait until it is finished.
+* Синхронизация Gradle будет запущена на пару секунд, чтобы загрузить некоторые зависимости. Дождитесь завершения процесса.
     
-    ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
+    ![Android Studio - Синхронизация Gradle](../images/studioSetup/40_BackgroundTasks.png)
 
 (Update-to-new-version-build-the-signed-apk)=
 
-## 3. Build the Signed APK
+## 3. Построение подписанного приложения APK
 
-Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](Building-APK-generate-signed-apk).
+Ваш исходный код теперь текущая версия. Пора построить подписанное приложение apk, как описано в разделе [собираем подписанное приложениес apk](Building-APK-generate-signed-apk).
 
-## 4. Transfer the apk
+## 4. Перемещение apk
 
-You need to transfer the apk to your phone so you can install it.
+Следуето перенести apk на телефон, чтобы установить.
 
-See the instructions for [Transfer APK to smartphone](Building-APK-transfer-apk-to-smartphone)
+См. инструкции для [Передача APK на смартфон](Building-APK-transfer-apk-to-smartphone)
 
-## 5. Install apk
+## 5. Установка apk
 
-На телефоне необходимо разрешить установку из неизвестных источников. Инструкции, как это сделать, можно найти в интернете (например [здесь](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) или [здесь](https://www.androidcentral.com/unknown-sources)). Note: If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates. For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk.
+На телефоне необходимо разрешить установку из неизвестных источников. Инструкции, как это сделать, можно найти в интернете (например [здесь](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) или [здесь](https://www.androidcentral.com/unknown-sources)). Примечание: Если вы завершили сборку с тем же ключом в Android Studio, то вам не нужно удалять существующее приложение на телефоне. Когда вы устанавливаете apk, следуйте подсказкам для установки обновлений. Для других сценариев, таких как создание нового хранилища ключей в Android Studio, нужно удалить старое приложение перед установкой apk.
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-## 6. Check AAPS version on phone
+## 6. Проверьте версию AAPS на телефоне
 
-After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+После установки нового приложения, проверьте версию AAPS, нажав на выпадающее меню вверху справа "о приложении". Вы увидете текущую версию.
 
-![AAPS version installed](../images/Update_VersionCheck282.png)
+![Установленная версия AAPS](../images/Update_VersionCheck282.png)
 
 # Устранение неполадок
 
-If anything goes wrong, don't panic.
+Если что-то пойдёт не так, не паникуйте.
 
-Take a breath!
+Выдохните!
 
-Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) if your problem is already documented!
+См. отдельную страницу [ устранение неполадок Android Studio ](../Installing-AndroidAPS/troubleshooting_androidstudio), возможно решение проблемы там уже есть!

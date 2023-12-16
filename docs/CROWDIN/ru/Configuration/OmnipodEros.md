@@ -15,11 +15,11 @@
 
 > Компонент, позволяющий AAPS общаться с подами Eros.
 > 
-> > - ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
+> > - ![OrangeLink](../images/omnipod/OrangeLink.png)  Сайт [OrangeLink ](https://getrileylink.org/product/orangelink)
 > > - ![RileyLink / РайлиЛинк](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
-> > - ![EmaLink](../images/omnipod/EmaLink.png)  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
-> > - ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
-> > - ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
+> > - ![EmaLink](../images/omnipod/EmaLink.png)  Сайт [Emalink](https://github.com/sks01/EmaLink) - [Контактная информация](mailto:getemalink@gmail.com)
+> > - ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Контактная информация](mailto:Boshetyn@ukr.net)
+> > - ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink сайт](https://www.getlooplink.org/) - [Контактная информация](https://jameswedding.substack.com/) - Непроверено
 
 - ![Телефон на Android](../images/omnipod/Android_phone.png)  **Мобильный Телефон**
 
@@ -107,19 +107,19 @@
 
    > Убедитесь, что аккумулятор RileyLink заряжен и он [расположен в непосредственной близости от](OmnipodEros-optimal-omnipod-and-rileylink-positioning) (~30 см или менее от телефона) для идентификации AAPS по его MAC-адресу. Сделав выбор, можете перейти к активации первого сеанса Pod. Нажмите кнопку "Назад" на телефоне, чтобы вернуться к основному интерфейсу AAPS.
    > 
-   > ![RileyLink_Setup_1](../images/omnipod/RileyLink_Setup_1.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
+   > ![Настройка_RileyLink_1](../images/omnipod/RileyLink_Setup_1.png) ![Настройка_RileyLink_2](../images/omnipod/RileyLink_Setup_2.png)
 
 3. На экране **Выбор RileyLink ** нажмите кнопку **Сканировать (4)** для запуска сканирования bluetooth. **Выберите RileyLink (5)**  из списка доступных устройств. Bluetooth.
 
-   > ![RileyLink_Setup_3](../images/omnipod/RileyLink_Setup_3.png) ![RileyLink_Setup_4](../images/omnipod/RileyLink_Setup_4.png)
+   > ![Настройка_RileyLink_3](../images/omnipod/RileyLink_Setup_3.png) ![Настройка_RileyLink_4](../images/omnipod/RileyLink_Setup_4.png)
 
 4. После успешного выбора вы возвращаетесь на страницу настроек Omnipod с указанием mac-адреса **выбранного RileyLink (6)**
 
-   > ![RileyLink_Setup_5](../images/omnipod/RileyLink_Setup_5.png)
+   > ![Настройка_RileyLink_5](../images/omnipod/RileyLink_Setup_5.png)
 
 5. Убедитесь, что на вкладке **Omnipod (POD)** состояние **RileyLink (1)** отображается как **подключено.** Поле **статус помпы (2)** должно показывать **Нет активных Pod**; если нет, пожалуйста, попробуйте предыдущий шаг или выйдите из AAPS для проверки обновления соединения.
 
-   > ![RileyLink_Setup_6](../images/omnipod/RileyLink_Setup_6.png)
+   > ![Настройка_RileyLink_6](../images/omnipod/RileyLink_Setup_6.png)
 
 (OmnipodEros-activating-a-pod)=
 
@@ -149,7 +149,7 @@
 
 05. Затем подготавливаем инфузионный отсек нового пода. Снимите пластмассовый колпачок с иглы, белую бумажную защиту с клеевого слоя и прижмите к обычно выбранному месту на теле. По завершении нажмите кнопку **Далее**.
 
-    > ![Activate_Pod_7](../images/omnipod/Activate_Pod_7.png)
+    > ![Настройка_RileyLink_7](../images/omnipod/Activate_Pod_7.png)
 
 06. Теперь появится диалоговое окно **Подключить Pod**. **нажимайте на кнопку OK ТОЛЬКО если вы готовы к установке катетера**.
 
@@ -215,7 +215,7 @@
 
 6. Теперь вы оказались в меню **Управление помпой Omnipodt**; нажмите кнопку "Назад" на телефоне, чтобы вернуться на вкладку **Omnipod (POD)**. Убедитесь, что в поле **Статус RileyLink:** отображается **Подключено**, а поле **Статус помпы:** поле отображает сообщение**Нет активных Pod**.
 
-   > ![Deactivate_Pod_9](../images/omnipod/Deactivate_Pod_9.png)  ![Deactivate_Pod_10](../images/omnipod/Deactivate_Pod_10.png)
+   > ![Деактивация_Pod_9](../images/omnipod/Deactivate_Pod_9.png)  ![Деактивация_Pod_10](../images/omnipod/Deactivate_Pod_10.png)
 
 ### Приостановка и возобновление подачи инсулина
 
@@ -229,15 +229,15 @@
 
 1. Перейдите на вкладку **Omnipod (POD)** и нажмите кнопку **ОСТАНОВ (1)**. Команда приостановки отправляется из RileyLink в активный Pod. При этом кнопка **ОСТАНОВ(3)** становится серой. **Состояние Pod (2)** отображается как **ОСТАНОВ ПОДАЧИ**.
 
-   > ![Suspend_Insulin_Delivery_1](../images/omnipod/Suspend_Insulin_Delivery_1.png) ![Suspend_Insulin_Delivery_2](../images/omnipod/Suspend_Insulin_Delivery_2.png)
+   > ![Приостановка_инсулина_1](../images/omnipod/Suspend_Insulin_Delivery_1.png) ![Приостановка_инсулина_2](../images/omnipod/Suspend_Insulin_Delivery_2.png)
 
 2. Когда команда остановить подачу прошла успешно, в диалоговом окне подтверждения будет показано сообщение **Введение инсулина приостановлено**. Нажмите **OK** для подтверждения и продолжения.
 
-   > ![Suspend_Insulin_Delivery_3](../images/omnipod/Suspend_Insulin_Delivery_3.png)
+   > ![Приостановка_инсулина_3](../images/omnipod/Suspend_Insulin_Delivery_3.png)
 
 3. Активный под теперь приостановил любые подачи инсулина. Вкладка **Omnipod (POD)** обновит статус **Pod (1)** до **приостановлено**. Кнопка **ОСТАНОВ** изменится на новую **Возобновить подачу (2)**
 
-   > ![Suspend_Insulin_Delivery_4](../images/omnipod/Suspend_Insulin_Delivery_4.png)
+   > ![Приостановка_инсулина_4](../images/omnipod/Suspend_Insulin_Delivery_4.png)
 
 #### Возобновление подачи инсулина
 
@@ -245,15 +245,15 @@
 
 1. Перейдите на вкладку **Omnipod (POD** и убедитесь, что поле **статус помпы (1)** отображает **ПОМПА ОСТАНОВЛЕНА (ПРИОСТАНОВЛЕНО)**, затем нажмите кнопку **ВОЗОБНОВИТЬ ПОДАЧУ(2)** для передачи команды на Pod о возобновлении подачи инсулина. Сообщение **Возобновить подачу** будет отображаться в поле **Статус Pod (3)**, показывая, что RileyLink активно отправляет команду на остановленный Pod.
 
-   > ![Resume_Insulin_Delivery_1](../images/omnipod/Resume_Insulin_Delivery_1.png) ![Resume_Insulin_Delivery_2](../images/omnipod/Resume_Insulin_Delivery_2.png)
+   > ![Возобновить_инсулин_1](../images/omnipod/Resume_Insulin_Delivery_1.png) ![Возобновить_инсулин_2](../images/omnipod/Resume_Insulin_Delivery_2.png)
 
 2. Когда команда Возобновить подачу прошла успешно, в диалоговом окне подтверждения появится сообщение **Введение инсулина возобновлено**. Нажмите **OK** для подтверждения и продолжения.
 
-   > ![Resume_Insulin_Delivery_3](../images/omnipod/Resume_Insulin_Delivery_3.png)
+   > ![Возобновить_инсулин_3](../images/omnipod/Resume_Insulin_Delivery_3.png)
 
 3. Вкладка **Omnipod (POD)** обновит поле **статус помпы (1)**и отобразит **ВЫПОЛНЯЕТСЯ,** а кнопка **Возобновить подачу** примет вид **ОСТАНОВ(2)**.
 
-   > ![Resume_Insulin_Delivery_4](../images/omnipod/Resume_Insulin_Delivery_4.png)
+   > ![Возобновить_инсулин_4](../images/omnipod/Resume_Insulin_Delivery_4.png)
 
 ### Подтверждение оповещений Pod
 
@@ -263,21 +263,21 @@
 
 *ПРИМЕЧАНИЕ - Если вы включили опцию "Автоматически принимать предупреждения Pod" в Omnipod Alerts, это уведомление будет обработано автоматически после первого вхождения и вам НЕ нужно вручную удалить оповещение.*
 
-1. По достижении заданного времени предупреждения об ** отключении**, под начнет издавать сигналы о сроке отключения и приближении времени замены. Проверить срок замены можно на вкладке **Omnipod (POD)** в поле **Срок действия Пода истекает(1)**, где показывается точное время с момента активации и текст этот становится **красным** спустя 72 часа после активации. This trigger will display the **ACK ALERTS (3)** button. **системное уведомление (4)** также сообщит о предстоящем истечении срока работы пода
+1. По достижении заданного времени предупреждения об ** отключении**, под начнет издавать сигналы о сроке отключения и приближении времени замены. Проверить срок замены можно на вкладке **Omnipod (POD)** в поле **Срок действия Пода истекает(1)**, где показывается точное время с момента активации и текст этот становится **красным** спустя 72 часа после активации. Это вызовет кнопку **заглушить сигналы оповещения (3)**. **системное уведомление (4)** также сообщит о предстоящем истечении срока работы пода
 
-   > ![Acknowledge_Alerts_1](../images/omnipod/Acknowledge_Alerts_1.png) ![Acknowledge_Alerts_2](../images/omnipod/Acknowledge_Alerts_2.png)
+   > ![Подтверждение_Оповещений_1](../images/omnipod/Acknowledge_Alerts_1.png) ![Подтверждение_Оповещений_2](../images/omnipod/Acknowledge_Alerts_2.png)
 
 2. Перейдите на вкладку **Omnipod (POD)** и нажмите кнопку **ПОДТВЕРДИТЬ ПОЛУЧЕНИЕ ОПОВЕЩЕНИЯ(1)**). RileyLink отправляет команду на Pod, чтобы деактивировать предупреждение об истечении срока действия Pod, и обновляет состояние **Pod (1)** на ** ОПОВЕЩЕНИЕ ПРИНЯТО**.
 
-   > ![Acknowledge_Alerts_3](../images/omnipod/Acknowledge_Alerts_3.png)
+   > ![Подтверждение_Оповещений_3](../images/omnipod/Acknowledge_Alerts_3.png)
 
 3. После **успешного отключения** оповещений активный Pod издаст **два сигнала** и на экране появится подтверждающее сообщение **активные оповещения заглушены**. Нажмите кнопку **OK** для того, чтобы подтвердить действие и убрать диалоговое окно.
 
-   > ![Acknowledge_Alerts_4](../images/omnipod/Acknowledge_Alerts_4.png)
+   > ![Подтверждение_Оповещений_4](../images/omnipod/Acknowledge_Alerts_4.png)
    > 
    > Если RileyLink находится за пределами диапазона приема Pod в то время, пока команда подтверждения оповещений обрабатывается, могут появиться 2 варианта оповещений. **Отключить звук(1)** заглушит текущее предупреждение. **OK (2)** подтвердит это предупреждение и разрешит пользователю повторно принимать оповещения.
    > 
-   > ![Acknowledge_Alerts_5](../images/omnipod/Acknowledge_Alerts_5.png)
+   > ![Подтверждение_Оповещений_5](../images/omnipod/Acknowledge_Alerts_5.png)
 
 4. На вкладке **Omnipod (POD)** в поле **оповещения активного Pod ** больше не будет отображаться предупреждение об истечении срока действия.
 
@@ -293,11 +293,11 @@
 
 1. Перейдите на вкладку **Omnipod (POD)**, нажмите на кнопку **УПРАВЛЕНИЕ ПОМПОЙ(1)** чтобы вызвать меню **Управление помпой Omnipod** и нажмите на кнопку **История Pod(2)** для вызова экрана истории.
 
-   > ![Pod_History_1](../images/omnipod/Pod_History_1.png) ![Pod_History_2](../images/omnipod/Pod_History_2.png)
+   > ![Журнал_Pod_1](../images/omnipod/Pod_History_1.png) ![Журнал_Pod_2](../images/omnipod/Pod_History_2.png)
 
 2. На экране **Журнал Pod** по умолчанию отображается категория **Все (1)** и показываетcz **Дата и время (2)** **Действий (3)** всех Pod и **Результаты (4)** в обратном хронологическом порядке,. Нажмите кнопку назад **на телефоне 2 раза** для возврата на вкладку **Omnipod (POD)** в главном интерфейсе AAPS.
 
-   > ![Pod_History_3](../images/omnipod/Pod_History_3.png) ![Pod_History_4](../images/omnipod/Pod_History_4.png)
+   > ![Журнал_Pod_3](../images/omnipod/Pod_History_3.png) ![Журнал_Pod_4](../images/omnipod/Pod_History_4.png)
 
 ### Просмотр настроек и журнала RileyLink
 
@@ -311,24 +311,24 @@
 
 1. С вкладки **Omnipod (POD)**, когда **Статус RileyLink (1)** отображается как **RileyLink недоступен** нажмите кнопку **УПРАВЛЕНИЕ ПОМПОЙ (2)** и перейдите в соответствующее меню. В меню **Управление помпой** вы увидите уведомление о поиске соединения с RileyLink, нажмите кнопку **Статистика RileyLink (3)** и перейдите в экран **настроек RileyLink**.
 
-   > ![RileyLink_Bluetooth_Reset_1](../images/omnipod/RileyLink_Bluetooth_Reset_1.png) ![RileyLink_Bluetooth_Reset_2](../images/omnipod/RileyLink_Bluetooth_Reset_2.png)
+   > ![RileyLink_Bluetooth_Перезапуск_1](../images/omnipod/RileyLink_Bluetooth_Reset_1.png) ![RileyLink_Bluetooth_Сброс_2](../images/omnipod/RileyLink_Bluetooth_Reset_2.png)
 
 2. На экране **Настройки RileyLink (1)** в разделе **RileyLink (2)** отображается статус Bluetooth-соединения, а также ошибки в поле **состояние соединения и ошибки (3)**. Должен быть показан статус *Ошибка Bluetooth* и *RileyLink недоступен*. Запустите ручное соединение Bluetooth, нажав кнопку **обновить (4)** в правом нижнем углу.
 
-   > ![RileyLink_Bluetooth_Reset_3](../images/omnipod/RileyLink_Bluetooth_Reset_3.png)
+   > ![RileyLink_Bluetooth_Сброс_3](../images/omnipod/RileyLink_Bluetooth_Reset_3.png)
    > 
    > Если Pod не отвечает или находится вне диапазона телефона во время выполнения команды Bluetooth-обновить, предупреждения могут иметь 2 варианта.
 
    - **Отключить звук(1)** заглушит текущее предупреждение.
    - **OK (2)** подтвердит получение этого предупреждения и позволит пользователю повторно произвести сопряжение Bluetooth.
 
-   > ![RileyLink_Bluetooth_Reset_4](../images/omnipod/RileyLink_Bluetooth_Reset_4.png)
+   > ![RileyLink_Bluetooth_Сброс_4](../images/omnipod/RileyLink_Bluetooth_Reset_4.png)
 
 3. Если **Соединение Bluetooth** не восстановится, попробуйте вручную **выключить** и затем **включить** функцию Bluetooth в телефоне.
 
 4. После успешного переподключения Bluetooth RileyLink, поле **статуса подключения: (1)** должно сообщать, что **RileyLink готов**. Поздравляем, теперь вы подключились к AAPS с настроенными устройствами!
 
-   > ![RileyLink_Bluetooth_Reset_5](../images/omnipod/RileyLink_Bluetooth_Reset_5.png)
+   > ![RileyLink_Bluetooth_Сброс_5](../images/omnipod/RileyLink_Bluetooth_Reset_5.png)
 
 #### Коммуникационное устройство Pod и активные настройки Pod
 
@@ -336,9 +336,9 @@
 
 1. Перейдите на вкладку **Omnipod (POD)**, нажмите на кнопку **УПРАВЛЕНИЕ ПОМПОЙ(1)**, чтобы вызвать меню **Управление помпой Omnipod**, затем нажмите кнопку **Статистика RileylLnk(2)** для вызова экрана настроек **RileyLink(3)**и **активного пода (4)**.
 
-   > ![RileyLink_Statistics_Settings_1](../images/omnipod/RileyLink_Statistics_Settings_1.png) ![RileyLink_Statistics_Settings_2](../images/omnipod/RileyLink_Statistics_Settings_2.png)
+   > ![RileyLink_Статистика_Настройки_1](../images/omnipod/RileyLink_Statistics_Settings_1.png) ![RileyLink_Статистика_Настройки_2](../images/omnipod/RileyLink_Statistics_Settings_2.png)
    > 
-   > ![RileyLink_Statistics_Settings_3](../images/omnipod/RileyLink_Statistics_Settings_3.png)
+   > ![RileyLink_Статистика_Настройки_3](../images/omnipod/RileyLink_Statistics_Settings_3.png)
 
 ##### Поля RileyLink (3)
 
@@ -366,9 +366,9 @@
 
 1. Перейдите на вкладку **Omnipod (POD)**, нажмите на кнопку **УПРАВЛЕНИЕ ПОМПОЙ(1)**, чтобы войти в меню **Управление помпой Omnipod**, нажмите на кнопку **История Pod(2)** для вызова экрана **настроек** и **истории**. Нажмите на **ИСТОРИЯ (3)** для отображения всей истории RileyLink и активного Pod.
 
-   > ![RileyLink_Statistics_History_1](../images/omnipod/RileyLink_Statistics_History_1.png) ![RileyLink_Statistics_History_2](../images/omnipod/RileyLink_Statistics_History_2.png)
+   > ![RileyLink_Статистика_Журнал_1](../images/omnipod/RileyLink_Statistics_History_1.png) ![RileyLink_Статистика_Журнал_2](../images/omnipod/RileyLink_Statistics_History_2.png)
    > 
-   > ![RileyLink_Statistics_History_3](../images/omnipod/RileyLink_Statistics_History_3.png)
+   > ![RileyLink_Статистика_Журнал_3](../images/omnipod/RileyLink_Statistics_History_3.png)
 
 ##### Поля
 
@@ -452,7 +452,7 @@
 
 - **ПРИНЯТЬ ОПОВЕЩЕНИЯ:**
 
-  > ![ack_alerts](../images/omnipod/ICONS/omnipod_overview_ack_alerts.png)
+  > ![принять_оповещения](../images/omnipod/ICONS/omnipod_overview_ack_alerts.png)
   > 
   > При нажатии отключает звуковые оповещения и уведомления об истечении срока действия.
   > 
@@ -460,7 +460,7 @@
 
 - **УСТАНОВИТЬ ВРЕМЯ:**
 
-  > ![set_time](../images/omnipod/ICONS/omnipod_overview_set_time.png)
+  > ![установка_времени](../images/omnipod/ICONS/omnipod_overview_set_time.png)
   > 
   > При нажатии синхронизирует время на POD с текущим временем на телефоне.
 
@@ -480,17 +480,17 @@
 
 Ниже приводится описание макета и значения иконок в меню **Управление Pod**, доступном из вкладки **Omnipod (POD)**.
 
-> ![Omnipod_Tab_Pod_Management](../images/omnipod/Omnipod_Tab_Pod_Management.png)
+> ![Вкладка_Omnipod_Pod_Управление](../images/omnipod/Omnipod_Tab_Pod_Management.png)
 
 - **Активация Pod**
 
-  > ![activate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
+  > ![активировать Pod](../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png)
   > 
   > Заполняет катетер и активирует новый Pod
 
 - **Деактивация Pod**
 
-  > ![deactivate_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
+  > ![деактивировать Pod](../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png)
   > 
   > Деактивирует текущий активный Pod.
   > 
@@ -502,13 +502,13 @@
 
 - **Воспроизвести тестовый звуковой сигнал**
 
-  > ![play_test_beep](../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png)
+  > ![воспроизвести_проверочный_сигнал](../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png)
   > 
   > Воспроизводит один тестовый сигнал на поде при нажатии.
 
 - **Завершить пользование Pod'ом**
 
-  > ![discard_pod](../images/omnipod/ICONS/omnipod_overview_pod_management_discard_pod.png)
+  > ![завершить_Pod](../images/omnipod/ICONS/omnipod_overview_pod_management_discard_pod.png)
   > 
   > При нажатии деактивирует и сбрасывает состояние не реагирующего пода.
   > 
@@ -520,13 +520,13 @@
 
 - **Журнал Pod**
 
-  > ![pod_history](../images/omnipod/ICONS/omnipod_overview_pod_management_pod_history.png)
+  > ![журнал_Pod](../images/omnipod/ICONS/omnipod_overview_pod_management_pod_history.png)
   > 
   > Отображает историю активности Pod
 
 - **Статистика RileyLink:**
 
-  > ![rileylink_stats](../images/omnipod/ICONS/omnipod_overview_pod_management_rileylink_stats.png)
+  > ![rileylink_статистика](../images/omnipod/ICONS/omnipod_overview_pod_management_rileylink_stats.png)
   > 
   > Ведетна экран статистики RileyLink, отображающий текущие настройки и историю соединения RileyLink
   > 
@@ -535,7 +535,7 @@
 
 - **Сбросить конфигурацию RileyLink**
 
-  > ![reset_rileylink_config](../images/omnipod/ICONS/omnipod_overview_pod_management_reset_rileylink_config.png)
+  > ![сбросить_rileylink_config](../images/omnipod/ICONS/omnipod_overview_pod_management_reset_rileylink_config.png)
   > 
   > При нажатии эта кнопка сбрасывает текущую конфигурацию подключенного коммуникационного устройства.
   > 
@@ -544,7 +544,7 @@
 
 - **Читать журнал импульсов:**
 
-  > ![pulse_log](../images/omnipod/ICONS/omnipod_overview_pod_management_pulse_log.png)
+  > ![журнал_импульса](../images/omnipod/ICONS/omnipod_overview_pod_management_pulse_log.png)
   > 
   > > Отправляет журнал импульсов в буфер обмена
 
@@ -563,15 +563,15 @@
 
 Настройки драйвера Omnipod доступны из левого верхнего **выпадающего меню** выберите **Конфигуратор**\ ➜\ **Помпа**\ ➜\ **Omnipod **\ ➜\ **Шестеренка настроек (2)** включить ** радио кнопку (1) **с маркировкой **Omnipod** Поставив **флажок (3)** рядом с **шестеренкой настроек(2)** вы активируете вкладку Omnipod в интерфейсе AAPS. В документации эта вкладка называется **Omnipod (POD)**.
 
-![Omnipod_Settings_1](../images/omnipod/Omnipod_Settings_1.png)
+![Параметры_Omnipod_1](../images/omnipod/Omnipod_Settings_1.png)
 
 **ПРИМЕЧАНИЕ:** Более быстрый способ доступа к **Настройкам Omnipod** - через меню **3 точки (1)** в правом верхнем углу вкладки **Omnipod(POD)** выбрать **Настройки Omnipod (2)** из выпадающего меню.
 
-![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png)
+![Параметры_Omnipod_2](../images/omnipod/Omnipod_Settings_2.png)
 
 Группы настроек перечислены ниже; вы можете включить или отключить их через переключатель большинства функций описанных ниже:
 
-![Omnipod_Settings_3](../images/omnipod/Omnipod_Settings_3.png)
+![Параметры_Omnipod_3](../images/omnipod/Omnipod_Settings_3.png)
 
 *ПРИМЕЧАНИЕ: Знак (\*) обозначает что выбрано значение по умолчанию.*
 
@@ -603,7 +603,7 @@
 
 *Примечание: уведомления AAPS выдаются ВСЕГДА для любого оповещения после связи с pod с момента срабатывания оповещения. Сброс уведомления НЕ удалит оповещение, ЕСЛИ НЕ включено автоматическое подтверждение получения оповещений. Чтобы ВРУЧНУЮ убрать оповещение следует открыть вкладку Omnipod (POD) и нажать кнопку Заглушать СИГНАЛЫ ОПОВЕЩЕНИЯ.*
 
-- **\*Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
+- ***Включено напоминание об истечении срока действия:** Включение или отключение напоминания о истечении срока действия струи для срабатывания по достижении определенного количества часов до завершения работы.
 - **Время до выключения**.
 - **Предупреждение о низком уровне резервуара включено:** Включить или отключить оповещение, когда достигается нижний лимит определенный в поле Количество единиц емкости.
 - **Количество единиц:** Количество единиц, на которые можно вызывать предупреждение о низком резервуаре резервуара.
@@ -636,7 +636,7 @@
 
 1. Откройте меню **Выбора Rileylink **- через меню **3 точки (1)** в правом верхнем углу вкладки **Omnipod(POD)** и выберите **Настройки Omnipod (2)** из выпадающего меню. В меню **Настройки Omnipod** в разделе **Конфигурация RileyLink(3)** нажмите **Не выбрано** (если не выбрано устройство) или **MAC Address** (если устройство используется), чтобы открыть меню **Выбор RileyLink **.
 
-   > ![Omnipod_Settings_2](../images/omnipod/Omnipod_Settings_2.png) ![RileyLink_Setup_2](../images/omnipod/RileyLink_Setup_2.png)
+   > ![Параметры_Omnipod_2](../images/omnipod/Omnipod_Settings_2.png) ![Настройка_RileyLink_2](../images/omnipod/RileyLink_Setup_2.png)
 
 ### Удаление выбранного устройства связи с Pod (RileyLink)
 
@@ -644,19 +644,19 @@
 
 1. В **Конфигурации RileyLink** нажмите строку **MAC Address (1)**, чтобы открыть меню **Выбор RileyLink**.
 
-   > ![RileyLink_Setup_Remove_1](../images/omnipod/RileyLink_Setup_Remove_1.png)
+   > ![RileyLink_Настройки_Удаление_1](../images/omnipod/RileyLink_Setup_Remove_1.png)
 
 2. В меню **Выбор RileyLink ** нажмите кнопку **Удалить (2)** для удаления **выбранного вами RileyLink (3)**
 
-   > ![RileyLink_Setup_Remove_2](../images/omnipod/RileyLink_Setup_Remove_2.png)
+   > ![RileyLink_Настройки_Удаление_2](../images/omnipod/RileyLink_Setup_Remove_2.png)
 
 3. В запросе подтверждения нажмите **Да (4)** для подтверждения удаления устройства.
 
-   > ![RileyLink_Setup_Remove_3](../images/omnipod/RileyLink_Setup_Remove_3.png)
+   > ![RileyLink_Настройки_Удаление_3](../images/omnipod/RileyLink_Setup_Remove_3.png)
 
 4. Вы возвращаетесь в меню **Настройки Omnipod**, где в разделе **Конфигурация RileyLink** видно, что устройство **не установлено (5)**.  Поздравляем, вы успешно удалили выбранное устройство коммуникации с Pod.
 
-   > ![RileyLink_Setup_Remove_4](../images/omnipod/RileyLink_Setup_Remove_4.png)
+   > ![RileyLink_Настройки_Удаление_4](../images/omnipod/RileyLink_Setup_Remove_4.png)
 
 ### Добавить выбранное устройство связи с POD (RileyLink)
 
@@ -664,15 +664,15 @@
 
 1. В меню **Конфигурация RileyLink ** нажмите строку **не установлено (1)**, чтобы открыть меню **Выбор RileyLink**.
 
-   > ![RileyLink_Setup_Add_1](../images/omnipod/RileyLink_Setup_Add_1.png)
+   > ![RileyLink_Настройки_Добавление_1](../images/omnipod/RileyLink_Setup_Add_1.png)
 
 2. Нажмите кнопку **Сканировать (2)** для сканирования доступных устройств Bluetooth.
 
-   > ![RileyLink_Setup_Add_2](../images/omnipod/RileyLink_Setup_Add_2.png)
+   > ![RileyLink_Настройки_Добавление_2](../images/omnipod/RileyLink_Setup_Add_2.png)
 
 3. Выберите **RileyLink (3)** из списка доступных устройств и вы попадете в меню **Настройки Omnipod** с отображением **MAC адреса (4)** вновь выбранного устройства.  Поздравляем, вы успешно выбрали ваше устройство связи с POD.
 
-   > ![RileyLink_Setup_Add_3](../images/omnipod/RileyLink_Setup_Add_3.png) ![RileyLink_Setup_Add_4](../images/omnipod/RileyLink_Setup_Add_4.png)
+   > ![RileyLink_Настройки_Добавление_3](../images/omnipod/RileyLink_Setup_Add_3.png) ![RileyLink_Настройки_Добавление_4](../images/omnipod/RileyLink_Setup_Add_4.png)
 
 ## Вкладка Действия (ACT)
 
@@ -681,7 +681,7 @@
 1. Перейдите на вкладку **Действия (ACT)** в главном интерфейсе AAPS.
 2. В секции **портал терапии (1)** поля **Инсулин** и **Катетер помпы** **после каждой замены пода** сбрасывают свой **отработанный срок (возраст)** на 0 дней и 0 часов. Это происходит из-за устройства и принципа работы Omnipod. **Батарея помпы** и **резервуар инсулина** в каждом поде свои. Так как Pod вводит катетер непосредственно в кожу на месте установки, в помпах Omnipod не применяется традиционная трубка. *Поэтому после замены пода значение каждой из этих величин автоматически сбрасывается на ноль***Возраст батареи помпы**не отображается поскольку он всегда больше срока работы пода (максимум 80 часов).
 
-> ![Actions_Tab](../images/omnipod/Actions_Tab.png)
+> ![Вкладка_Действия](../images/omnipod/Actions_Tab.png)
 
 ### Уровни
 
@@ -772,7 +772,7 @@
 
 ![Toroid_w_CS](../images/omnipod/Toroid_w_CS.png)
 
-> *(Fig 1. Схематическое изображение спиралевидной многонаправленной антенны*
+> *(рис. 1. Схематическое изображение спиралевидной многонаправленной антенны*
 
 Из соображений безопасности *активация* должна выполняться на расстоянии * ближе (~30 см или меньше)* чем другие операции, такие как введение болюса, установка TBR или просто обновление состояния Pod. В связи с характером передачи сигнала с антенны RileyLink, не рекомендуется размещать под поверх или слишком близко к RileyLink.
 
@@ -780,7 +780,7 @@
 
 *Примечание: Если после оптимального позиционирования Pod и RileyLink не удается установить соединение, это может быть вызвано низким зарядом батареи, который уменьшает диапазон антенны RileyLink. Чтобы избежать этого, убедитесь, что RileyLink хорошо заряжен или подключен к зарядному кабелю во время этого процесса.*
 
-![Omnipod_pod_and_RileyLink_Position](../images/omnipod/Omnipod_pod_and_RileyLink_Position.png)
+![Расположение_Omnipod_Pod_и_RileyLink_](../images/omnipod/Omnipod_pod_and_RileyLink_Position.png)
 
 ## Где получить помощь по драйверу Omnipod
 

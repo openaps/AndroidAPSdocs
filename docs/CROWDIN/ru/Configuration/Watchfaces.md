@@ -13,27 +13,27 @@
 * Двойное нажатие на ГК, чтобы попасть в меню AAPS
 * Двойное нажатие на график ГК для изменения временной шкалы графика
 
-## Changing to an AAPS Watchface on your WearOS watch
+## Переход на циферблат AAPS на часах WearOS
 
-There are a number of watchfaces available in the standard build of the AAPS Wear OS APK build. Once you have installed the AAPS Wear APK on your watch, they will be available. Here are the steps for selecting one:
+В стандартной версии сборки AAPS Wear OS APK доступно несколько циферблатов. После установки AAPS Wear APK на часах они будут доступны. Ниже приведены шаги для выбора:
 
-1. On your watch (assuming WearOS), long press on your current watchface to bring up the watchface selector screen and scroll all the way to the right until you see the "Add Watch Face" button and select it
+1. На ваших часах (предполагается, что это WearOS), долгое нажатие на циферблат и двигаться вправо, пока не увидите кнопку "Добавить циферблат" и не выберете его
 
-![Screenshot_20231123_124657_sysui](https://github.com/openaps/AndroidAPSdocs/assets/10778155/efd4268f-0536-4a31-9ba1-f98108f32483)
+![Снимок_экрана_20231123_124657_sysui](https://github.com/openaps/AndroidAPSdocs/assets/10778155/efd4268f-0536-4a31-9ba1-f98108f32483)
 
-2. Scroll to the bottom of the list until you see the "Downloaded" section and find "AAPS (Custom)" and click the middle of the image to add it to your shortlist of current watchfaces. Don't worry about the current appearance of the "AAPS (Custom)" watchface, we will select your preferred skin in the next step.
+2. Прокрутите вниз списка до раздела "Загруженные" и найдите "AAPS (Custom)" и нажмите на середину изображения, чтобы добавить его в список текущих циферблатов. Не беспокойтесь о текущем внешнем виде циферблата "AAPS (Custom)", на следующем шаге мы выберем предпочитаемый вами скин.
 
-![Screenshot_20231123_124619_sysui](https://github.com/openaps/AndroidAPSdocs/assets/10778155/036dc7c4-6672-46c8-b604-8810a16a2eb3)
+![Снимок_экрана_20231123_124619_sysui](https://github.com/openaps/AndroidAPSdocs/assets/10778155/036dc7c4-6672-46c8-b604-8810a16a2eb3)
 
-3. Now open AAPS on your phone and go to the Wear plugin (enable it in Config Builder (under Synchronization) if you don't see it in your current plugins along the top).
+3. Теперь откройте AAPS на телефоне и перейдите в расширение Wear (включите его в Конфигураторе (под Синхронизацией), если не видите его в текущих плагинах вверху).
 
-![Screenshot_20231123_090941_AAPS](https://github.com/openaps/AndroidAPSdocs/assets/10778155/5df23fa3-791b-4c9a-999a-251391a82835)
+![Снимок_экрана_20231123_090941_AAPS](https://github.com/openaps/AndroidAPSdocs/assets/10778155/5df23fa3-791b-4c9a-999a-251391a82835)
 
-4. Click on the "Load Watchface" button and select the watchface that you like
+4. Нажмите на кнопку "Загрузить циферблат" и выберите понравившийся
 
-![Screenshot_20231123_130410_AAPS](https://github.com/openaps/AndroidAPSdocs/assets/10778155/adde2eca-1df7-4382-b9ab-346819c35d9d)
+![Снимок_экрана_20231123_130410_AAPS](https://github.com/openaps/AndroidAPSdocs/assets/10778155/adde2eca-1df7-4382-b9ab-346819c35d9d)
 
-5. Check your watch, the "AAPS (Custom)" watchface should now be displaying the skin that you have selected. Give it a few seconds to refresh. You may now customize the complications, etc. by long pressing the watchface and then pressing the "Customize" button on the watchface image.
+5. Проверьте часы, циферблат AAPS (Custom)" теперь должны отображать выбранной вами. Дайте несколько секунд для обновления. Теперь вы можете настроить усложнения и т. д. долгим нажатием на циферблат и нажатием кнопки «Настроить» на изображении циферблата.
 
 ## Доступные циферблаты
 

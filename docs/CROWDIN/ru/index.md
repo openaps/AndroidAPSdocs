@@ -2,14 +2,14 @@
 
 ![изображение](./images/basic-outline-of-AAPS.png)
 
-AAPS - это приложение с открытым кодом для людей, живущих с инсулинзависимым сахарным диабетом, которое работает как система искусственной поджелудочной железы (ИПЖ) на базе телефонов с операционной системой Андроид. It uses an openAPS software algorithm which aims to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need a supported and FDA/CE approved insulin pump, and a continuous glucose meter.
+AAPS - это приложение с открытым кодом для людей, живущих с инсулинзависимым сахарным диабетом, которое работает как система искусственной поджелудочной железы (ИПЖ) на базе телефонов с операционной системой Андроид. Приложение использует алгоритм openAPS, который запрограммирован делать то же, что и настоящая поджелудочная железа: поддерживать уровень глюкозы крови в заданных пределах с использованием автоматизированной подачи инсулина (АДИ, AID). Кроме того, вам потребуется сертифицированная инсулиновая помпа и непрерывный мониторинг глюкозы.
 
-Interested? Read more about AAPS in the [introduction](introduction.md).
+Заинтересовались? Читайте подробнее во [введении](introduction.md).
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
+**ВАЖНОЕ ЗАМЕЧАНИЕ О БЕЗОПАСНОСТИ**
 
-The foundation of AAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. В системе "замкнутого цикла" с автоматической дозировкой инсулина допускается использовать только испытанные, работоспособные инсулиновые помпы и системы непрерывного мониторинга глюкозы, которые получили соответствующее разрешение таких зарубежных регуляторов как FDA (США) и CE (Европейский союз). Внесение аппаратных или программных технических изменений в это оборудование может стать причиной неконтролируемого введения инсулина, что может повлечь опасные последствия для пациента. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AAPS system.
+Безопасность функционирования функций AAPS, обсуждаемых в этой документации, основана на безопасности всех устройств, используемых в вашей системе. В системе "замкнутого цикла" с автоматической дозировкой инсулина допускается использовать только испытанные, работоспособные инсулиновые помпы и системы непрерывного мониторинга глюкозы, которые получили соответствующее разрешение таких зарубежных регуляторов как FDA (США) и CE (Европейский союз). Внесение аппаратных или программных технических изменений в это оборудование может стать причиной неконтролируемого введения инсулина, что может повлечь опасные последствия для пациента. *Не используйте* модифицированные, самодельные или испорченные инсулиновые помпы и/или устройства мониторинга для создания системы AAPS.
 
 Допустимо использовать только оригинальные, сертифицированные производителем расходные материалы, такие как инсулиновые картриджи, инфузионные наборы, пристреливатели к ним и т. п. Использование непроверенных или модифицированных материалов может вызвать неточность мониторинга и ошибки дозировки инсулина. Инсулин опасен при неверной дозировке - не рискуйте жизнью, пользуясь неумело переделанными компонентами.
 
@@ -17,277 +17,278 @@ The foundation of AAPS safety features discussed in this documentation is built 
 ```
 
 ```{note}
-**Disclaimer and Warning**
+**Отказ от ответственности и Предупреждения**
 
-- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout в настоящее время не обеспечивает соблюдение политик конфиденциальности HIPAA (Health Insurance Portability and Accountability Act — Акт о мобильности и подотчётности медицинского страхования). Use Nightscout and AAPS at your own risk, and do not use the information or code to make medical decisions.
-- Use of code from github.com is without warranty or formal support of any kind. Пожалуйста, ознакомьтесь с ЛИЦЕНЗИЕЙ этого репозитория.
-- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Они используются в информационных целях и не подразумевается какой-либо принадлежности к ним или их одобрения.
+- Вся информация, идеи и код, описанные здесь, предназначены только для ознакомительных и образовательных целей. Nightscout в настоящее время не обеспечивает соблюдение политик конфиденциальности HIPAA (Health Insurance Portability and Accountability Act — Акт о мобильности и подотчётности медицинского страхования). Используйте Nightscout и AAPS на свой собственный риск, не используйте информацию или код для принятия медицинских решений.
+- Использование кода с github.com не имеет никакой гарантии и какой-либо официальной поддержки. Пожалуйста, ознакомьтесь с ЛИЦЕНЗИЕЙ этого репозитория.
+- Все наименования продуктов и компаний, товарные знаки, услуги по обслуживанию, зарегистрированные товарные знаки и зарегистрированные службы являются собственностью соответствующих владельцев. Они используются в информационных целях и не подразумевается какой-либо принадлежности к ним или их одобрения.
 
-Please note - this project has no association with and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
+Обратите внимание, что этот проект не имеет связи и одобрения от: [SOOIL] (http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care] (https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) или [Medtronic](https://www.medtronic.com/).
 ```
 
 ## Как читать документацию?
 
-We have provided this subsection of the documentation especially for those who are new to concept of Do-It-Yourself-APS (Artificial-Pancreas-Systems) in order to best show how to get acquainted with the information we consider to be the most important, especially in terms of understanding the reasons behind the "limits" set in place when you are first beginning your AAPS journey. Эти ограничения безопасности были разработаны на протяжении многих лет в результате наблюдений за непреднамеренными ошибками, которые появляются у новых пользователей при обучении создании и первом успешном запуске AAPS - как правило, эти ошибки возникают просто потому, что пользователь был так рад начату работы с системой, что забыл посвятить время глубокому пониманию информации в этой документации. Мы все были такими!
+Мы предоставили этот подраздел документации специально для тех, кто не знаком с концепцией "Сделай-сам-APS" (система искусственной поджелудочной железы), чтобы наилучшим образом показать, как ознакомиться с информацией, которую мы считаем наиболее важной, особенно с точки зрения понимания причин «ограничений», установленных, когда вы впервые начинаете свой путь с AAPS. Эти ограничения безопасности были разработаны на протяжении многих лет в результате наблюдений за непреднамеренными ошибками, которые появляются у новых пользователей при обучении создании и первом успешном запуске AAPS - как правило, эти ошибки возникают просто потому, что пользователь был так рад начату работы с системой, что забыл посвятить время глубокому пониманию информации в этой документации. Мы все были такими!
 
-Конечно, подход, "читать все подряд" имеет основания и, конечно, он правилен. Однако новички нередко перегружаются объемом и разнообразием информации, которую они пытаются понять всю сразу! Поэтому эти несколько разделов предназначены дать основы знаний, необходимых для успешного запуска выбранной вами конфигурации с минимумом исправлений. Новые пользователи могут вернуться к этому руководству, когда столкнутся с незнакомыми аспектами системы; и напомнить о том, где можно найти документацию с более подробной информацией. Важно также изложить возможности AAPS на начальном этапе, поскольку некоторые необходимые инструменты в настоящее время недоступны (из-за возможностей инсулиновых помп или мониторинга CGM в некоторых странах).) или просто предлагают меньший/иной функционал, чем предполагалось изначально. Finally, it is important to acknowledge that many experience-related aspects inside this documentation only become pertinent as you begin to use AAPS in real-time. Точно так же, как почти невозможно научиться отлично играть в спортивные игры, только изучив правила, требуется сочетание изучения основ функционирования AAPS и применения этих правил при освоении AAPS.
+Конечно, подход, "читать все подряд" имеет основания и, конечно, он правилен. Однако новички нередко перегружаются объемом и разнообразием информации, которую они пытаются понять всю сразу! Поэтому эти несколько разделов предназначены дать основы знаний, необходимых для успешного запуска выбранной вами конфигурации с минимумом исправлений. Новые пользователи могут вернуться к этому руководству, когда столкнутся с незнакомыми аспектами системы; и напомнить о том, где можно найти документацию с более подробной информацией. Важно также изложить возможности AAPS на начальном этапе, поскольку некоторые необходимые инструменты в настоящее время недоступны (из-за возможностей инсулиновых помп или мониторинга CGM в некоторых странах).) или просто предлагают меньший/иной функционал, чем предполагалось изначально. Наконец, важно признать, что многие аспекты этой документации становятся актуальными только по мере того, как вы начнете пользоватися AAPS в реальном времени. Точно так же, как почти невозможно научиться отлично играть в спортивные игры, только изучив правила, требуется сочетание изучения основ функционирования AAPS и применения этих правил при освоении AAPS.
 
-The [Getting started](Getting-Started/Safety-first.md) subsection is a must read to understand the general concept of what an artificial pancreas system is designed to do; and is especially pertinent for users of AAPS.
+Подраздел [Начало работы](Getting-Started/Safety-first.md) необходимо прочитать, чтобы понять общую концепцию, для чего нужна система искусственной поджелудочной железы; это особенно актуально для пользователей AAPS.
 
-The subsection [What do I need?](Module/module.md) specifies the CGMs (Continuous Glucose Monitors) and insulin pumps which are are available for use with AAPS. This subsection is important to understand so that your AAPS system can be assembled and built correctly the first time around and will function well in real world situations.
+Подраздел [Что мне нужно?](Module/module.md) перечисляет системы непрерывного мониторинга глюкозы и инсулиновые помпы, которые доступны для AAPS. Он важен для того, чтобы система AAPS была собрана и правильно построена в первый раз вокруг и хорошо работала в реальных ситуациях.
 
-The subsection [Where to go for help?](Where-To-Go-For-Help/Connect-with-other-users.html) should help direct you to the best places to go to find help depending upon your levels of experience with AAPS. This is very important so that you don't feel left out, especially at the beginning, and so that you can get in touch with others as quickly as possible, clarify questions and solve the usual pitfalls as quickly as possible. Experience shows that a lot of people are already using AAPS successfully, but everyone has a question at some point that they couldn't solve on their own. The nice thing is, however, that due to the large number of users, the response times to questions are usually very quick, typically only a few hours. Don’t worry about requesting help, as there is no such thing as a dumb question! We encourage users of any/all levels of experience to ask as many questions as they feel is necessary to help get them up and running safely. Just try it out please.
+Подраздел [Куда обратиться за помощью?](Where-To-Go-For-Help/Connect-with-other-users.html) поможет найти куда обратиться за помощью, в зависимости от вашего опыта работы с AAPS. Важно, чтобы вы не чувствовали себя оставленными без поддержки, особенно в начале, и для того, чтобы быстрее связаться с другими, прояснять вопросы и решать обычные заблуждения. Опыт показывает, что многие пользователи AAPS имеют вопросы, которые они не смогли решить самостоятельно. Из-за большого числа пользователей, время ответа на вопросы обычно небольшое, как правило, несколько часов. Не беспокойтесь о запросе помощи, так как глупых вопросов не бывает! Призываем пользователей любого уровня задавать столько вопросов, сколько необходимо для безопасной работы. Просто попробуйте.
 
-In the subsection [Glossary](Getting-Started/Glossary.md) we have compiled a list of the acronyms (or short-term names) used throughout AAPS. For example, where to go to find out what the terms ISF or TT, stand for in in the more common (longer) terms.
+В подразделе [Глоссарий](Getting-Started/Glossary.md) мы собрали сокращения (или короткие названия), используемые в AAPS. Например, где можно выяснить, что значат сокращения ISF или TT.
 
-For parents who want to build AAPS for their children, we recommend the subsection [AAPS for children](Children/Children.md) , as there you will find more advanced information specifically tailored for learning the extra steps necessary in order to remotely control your child's AAPS app as well as a more comprehensive safety profile as compared to adults. You need to be able to support your children and understand the all the advanced concepts that AAPS offers to help you succeed.
+Для родителей, желающих создать AAPS для своих детей, мы рекомендуем подраздел [AAPS для детей](Children/Children.md), где находится подробная информация о дистанционном управлении AAPS вашего ребенка и более полный профиль безопасности по сравнению с взрослыми. Вы должны иметь возможность успешно контролировать своих детей и понимать все передовые возможности, которые предлагает AAPS.
 
-Now that you have a solid understanding of the concepts that AAPS uses, know where to go for the the necessary tools to build your APS and are familiar with where to get help in case of an emergency, it is the right time to start building the app! The subsection [How to install AAPS?](Installing-AAPS/Building-APK.md) shows you this in detail. Since the requirements are very different from anything you might have set up in the past, we recommend that you really follow the instructions, step-by-step the first few times you build the app, so that you have a stronger sense of how the app building process is supposed to behave when all directions are followed exactly. Please remember to take your time. Later this will go very quickly when you build the app again for a new version. That way you will have a greater chance of noticing when something doesn't going as planned before too many steps are out of line. It is important to save the your keystore file (.jks file used to sign your app) in a safe place, so that you can always use that exact same keystore file and password each and every time you are asked to create a new updated version of AAPS, as this file is what makes sure that each new version of the app "remembers" all the information that you have provided to it in previous versions of the app and thus ensure that the updates will go as smoothly as possible. On average, you can assume that there will be one new version and 2-3 required updates per year. This number is based on experience and may change in the future. But we do want to at least give you a general guideline on what to expect. When you are more experienced at building updated AAPS app versions all the steps that are required in building an updated app will only take 15-30 minutes, on average. However, in the beginning there can be a rather steep learning curve as these steps are not always considered intuitive by new users! So do not get frustrated if you find that it takes half a day or a whole day with some help from the community before you are finally finished with the update process. If you find that you are getting very frustrated just take a short break, and oftentimes; after a stroll around the block or two...you'll find that you are better able to approach the problem again. We have also compiled a list of questions and answers to most of the typical errors that are likely to occur the first few updates located within the FAQs section; as well as within "How to install AAPS?" that provides additional information in the subsection "Troubleshooting".
+Теперь, когда у вас есть четкое представление о концепциях, которые использует AAPS, вы знаете, где найти необходимые инструменты для создания своей системы APS, знаете, где можно получить помощь в случае сложностей, самое время приступить к созданию приложения! В подразделе [Как установить AAPS?](Installing-AAPS/Building-APK.md) это подробно описано. Поскольку требования сильно отличаются от всего, что вы, возможно, устанавливали раньше, мы рекомендуем следовать инструкциям, шаг за шагом в первые несколько раз при создании приложения, чтобы у вас было более четкое представление о том, как происходит процесс если все указания выполняются в точности. Помните, что спешить здесь не надо. В дальнейшем, когда вы будете собирать новую версию, все пойдет гораздо быстрее. Таким образом, у вас будет больше возможностей заметить, что что-то пошло не так, не отклоняясь слишком далеко. Важно сохранить файл хранилища ключей (файл.jks, используемый для подписи приложения) в безопасном месте, чтобы всегда использовать один и тот же файл хранилища ключей и пароль при создании новой версии AAPS, поскольку именно этот файл гарантирует, что каждая новая версия приложения «запоминает» всю информацию, которую вы предоставили ей в предыдущих версиях приложения, и, таким образом, обновления будут проходить максимально гладко. В среднем можно предполагать, что будет одна новая версия и 2-3 обязательных обновления в год. Эта цифра основана на опыте и может измениться в будущем. Но мы хотим дать вам представление о том, чего ожидать. Когда вы наберетесь опыта в обновлении AAPS, все шаги, необходимые для создания обновлённого приложения, займут в среднем всего 15-30 минут. Однако, в начале кривая обучения может быть довольно крутой, так как многие шаги не всегда интуитивно понятны для новых пользователей! Так что не отчаивайтесь, если обнаружите, что у вас ушло полдня или даже целый день не без помощи сообщества до того, как вы наконец закончили процесс обновления. Если вы почувствуете разочарование, сделайте небольшой перерыв и часто, после прогулки, вы обнаружите, что готовы возобновить работу. Мы также составили список вопросов и ответов на большинство типичных трудностей, с, которыми, скорее всего, пользователи столкнутся при первых нескольких обновлениях, Они расположены в разделе FAQ; а также в разделе "Как установить AAPS? котораый имеет подраздел "Устранение неполадок".
 
-The subsection [Component Setup](Configuration/BG-Source.md) explains how to properly integrate each of the various different separate component parts into AAPS, as well as how to set them up to work as seamlessly as possible together. All components are listed under the separate sections: CGM/FGM, xDrip Settings, Pumps, Phones, Nightscout setup, and Smartwatches. The sensor (BG) values and control of the insulin pump are particularly important information to understand. The subsection [Configuration](Configuration/BG-Source.md) describes the best pump configurations to use in AAPS.
+Подраздел [Настройка компонентов](Configuration/BG-Source.md) объясняет, как правильно интегрировать отдельные модули в AAPS, а также как настроить их на совместную работу. All components are listed under the separate sections: CGM/FGM, xDrip Settings, Pumps, Phones, Nightscout setup, and Smartwatches. The sensor (BG) values and control of the insulin pump are particularly important information to understand. Подраздел [Конфигурация](Configuration/BG-Source.md) описывает конфигурации помп для AAPS.
 
-This is followed by a particularly important subsection [AAPS Usage](Getting-Started/Screenshots.md), in which you are slowly introduced to the full usage of what AAPS has to offer via a safe and carefully calibrated step-by-step gradual process designed to make sure that you/your child are thoroughly familiar and comfortable navigating all the different levels and menu configurations before graduating on the next phase, each commonly referred to as the next Objective, until you are have enough experience to begin using the more advanced options available within the app. These Objectives are specially designed in such a way that will gradually unlock more possibilities of AAPS and switch from Open Loop to Closed Loop.
+Далее следует особо важный подраздел [Использование AAPS](Getting-Started/Screenshots.md), в котором происходт постепенное введение в пользование AAPS через безопасный поэтапный процесс, разработанный для того, чтобы вы/ваш ребенок были хорошо подготовлены к пользованию более сложными опциями в приложении. Эти цели специально разработаны таким образом, чтобы постепенно разблокировать больше возможностей AAPS и переключиться с открытого на закрытый цикл.
 
-After that there is a subsection [General Hints](Usage/Timezone-traveling.md) with e.g. information on how to deal with the crossing of time zones as well as knowing what to do during the Spring Forward - Fall Back daylight saving time changes which will occur twice a year while using AAPS.
+Кроме того, есть подраздел [Общие подсказки](Usage/Timezone-traveling.md) напр. Информация о том, как иметь дело с пересечением часовых поясов, а также о том, что делать во время перехода на сезонное время - два раза в год при использовании AAPS.
 
-There is a subsection for the [clinicians](Resources/clinician-guide-to-AAPS.md) who have expressed interest in open source artificial pancreas technology such as AAPS, or for patients who want to share such information with their clinicians.
+Есть подраздел для [медицинских работников](Resources/clinician-guide-to-AAPS.md), которые проявили интерес к технологии искусственной поджелудочной железы, такой как AAPS, или для пациентов, которые хотят делиться этой информацией со своими лечащими врачами.
 
-Finally, in the subsection [How to help?](make-a-PR.md) we would like to provide you with information so that you are able to suggest small or larger changes to the documentation yourself and work together with us on the documentation. We further need support for [translation of the documentation](translations.md) By the way, it also very helpful for everyone if you could provide links to the corresponding documentation (or screenshots of where the links are located within the Documentation if you are not familiar with how to send a link) when answering questions from other users. That way the correct information can easily be located again should other users also be trying to find answers to the same types of questions in the future.
+Наконец, в подразделе [Как помочь?](make-a-PR.md) мы даем информацию, о том, как предложить небольшие или большие изменения в документации и вместе с нами работать над ней. Нам также нужна поддержка для [перевода документации](translations.md) - очень удобно давать ссылки на соответствующую документацию при ответе на вопросы других пользователей. Таким образом, правильная информация будет доступна, если другие также попытаются найти ответы на те же вопросы в будущем.
 
 ```{toctree}
-:caption: Change language
+:caption: Изменить язык
 
-Change language <./changelanguage.md>
+Изменить язык <./changelanguage.md>
 
 ```
 
 ```{toctree}
-:caption: Home
+:caption: Главная
 
-Introduction <./introduction.md>
-
-```
-
-```{toctree}
-:caption: Getting started
-
-Preparing <preparing.md>
-
-Docs updates & changes <./Getting-Started/WikiUpdate.md>
+Введение <./introduction.md>
 
 ```
 
 ```{toctree}
-:caption: Remote control and following
+:caption: Начало работы
 
-Remote control <remote-control.md>
-Following-only <following-only.md>
+Подготовка <preparing.md>
+
+Обновления документов &; изменения </Getting-Started/WikiUpdate.md>
+
+```
+
+```{toctree}
+:caption: дистанционное управление и слежение
+
+дистанционное управление <remote-control.md>
+только для фоллоуэров <following-only.md>
 
 ```
 
 (index-what-do-i-need)=
 
 ```{toctree}
-:caption: What do I need
+:caption: Что мне потребуется 
 
-CGM/FGM choices <./Configuration/BG-Source.md>
+выбор CGM/FGM <./Configuration/BG-Source.md>
 
-Pump choices <./Getting-Started/Pump-Choices.md>
+Выбор помпы <./Getting-Started/Pump-Choices.md>
 
-Module <./Module/module.md>
+Модуль <./Module/module.md>
 
 ```
 
 ```{toctree}
-:caption: How to Install AAPS
+:caption: Установка AAPS
 
-Building the APK <./Installing-AndroidAPS/Building-APK.md>
+Построение приложения APK <./Installing-AndroidAPS/Building-APK.md>
 
-Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
+Обновление на новую версию или ветку <./Installing-AndroidAPS/Update-to-new-version.md>
 
-Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
+Подсказки и проверки после перехода на AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
 
-Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
+Проверки после обновления на AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
 
-Install git <./Installing-AndroidAPS/git-install.md>
+Установка git <./Installing-AndroidAPS/git-install.md>
 
-Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
+Устранение неполадок <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
 
-Release notes <./Installing-AndroidAPS/Releasenotes.md>
+Примечания к версиям <./Installing-AndroidAPS/Releasenotes.md>
 
-Dev branch <./Installing-AndroidAPS/Dev_branch.md>
+Ветка Dev <./Installing-AndroidAPS/Dev_branch.md>
 
 ```
 
 (index-component-setup)=
 
 ```{toctree}
-:caption: Component Setup
+:caption: Настройка компонентов
 
 CGM/FGM <./Configuration/BG-Source.md>
 
 xDrip Settings <./Configuration/xdrip.md>
 
-Pump choices <./Getting-Started/Pump-Choices.md>
+Выбор помпы <./Getting-Started/Pump-Choices.md>
 
-Phones <./Hardware/Phoneconfig.md>
+Телефоны <./Hardware/Phoneconfig.md>
 
-Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
-Tidepool setup <./Installing-AndroidAPS/Tidepool.md>
+Настройка Nightscout <./Installing-AndroidAPS/Nightscout.md>
 
-Smartwatch  <./Hardware/Smartwatch.md>
+Настройка Tidepool <./Installing-AndroidAPS/Tidepool.md>
+
+Часы  <./Hardware/Smartwatch.md>
 
 ```
 
 (index-configuration)=
 
 ```{toctree}
-:caption: Configuration
+:caption: Конфигурация
 
-Config builder <./Configuration/Config-Builder.md>
+Конфигуратор <./Configuration/Config-Builder.md>
 
-Preferences <./Configuration/Preferences.md>
+Настройки <./Configuration/Preferences.md>
 
 ```
 
 ```{toctree}
-:caption: AAPS Usage
+:caption: Работа с AAPS
 
-AAPS screens <./Getting-Started/Screenshots.md>
+Экраны AAPS <./Getting-Started/Screenshots.md>
 
-Objectives <./Usage/Objectives.md>
+Цели <./Usage/Objectives.md>
 
-OpenAPS features <./Usage/Open-APS-features.md>
+Возможности OpenAPS <./Usage/Open-APS-features.md>
 
-Dynamic ISF <./Usage/DynamicISF.md>
+Динамический ISF <./Usage/DynamicISF.md>
 
-COB calculation <./Usage/COB-calculation.md>
+Подсчет активных углеводов COB <./Usage/COB-calculation.md>
 
-Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
+Определение чувствительности <./Configuration/Sensitivity-detection-and-COB.md>
 
-Profile switch <./Usage/Profiles.md>
+Переключение профиля <./Usage/Profiles.md>
 
-Temp-targets <./Usage/temptarget.md>
+Временные цели <./Usage/temptarget.md>
 
-Extended carbs <./Usage/Extended-Carbs.md>
+Растянутые углеводы <./Usage/Extended-Carbs.md>
 
-Automation <./Usage/Automation.md>
+Автоматизация <./Usage/Automation.md>
 
 Autotune (dev only) <./Usage/autotune.md>
 
-Careportal (discontinued) <./Usage/CPbefore26.md>
+Портал терапииl (discontinued) <./Usage/CPbefore26.md>
 
 Open Humans Uploader <./Configuration/OpenHumans.md>
 
-Automation with 3rd party apps <./Usage/automationwithapp.md>
+Автоматизация со сторонними приложениями <./Usage/automationwithapp.md>
 
-Android auto <./Usage/Android-auto.md>
+Android авто <./Usage/Android-auto.md>
 
-Custom Watchface reference document <./Usage/Custom_Watchface_Reference.md>
+Документация по настраиваемые циферблаты <./Usage/Custom_Watchface_Reference.md>
 
-Exchange Site Custom Watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
-
-```
-
-```{toctree}
-:caption: General Hints
-
-Crossing timezones with pumps <./Usage/Timezone-traveling.md>
-
-Accessing logfiles <./Usage/Accessing-logfiles.md>
-
-Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
-
-Export/Import Settings <./Usage/ExportImportSettings.md>
-
-xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
+Сайт обмена настраиваемыми циферблатами <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
 ```{toctree}
-:caption: AAPS for children
+:caption: Общие советы
 
-Remote monitoring <./Children/Children.md>
+Пересечение часовых поясов с помпой<./Usage/Timezone-traveling. d>
 
-SMS commands <./Children/SMS-Commands.md>
+Доступ к лог-файлам <./Usage/Accessing-logfiles.md>
 
-Profile helper <./Configuration/profilehelper.md>
+Accu-Chek Combo советы по основному использованию <. Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
 
-```
+Экспорт/Импорт настроек <./Usage/ExportImportSettings.md>
 
-```{toctree}
-:caption: Full Closed Loop
-
-Full Closed Loop <./Usage/FullClosedLoop.md>
+инженерный режим xDrip <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 ```
 
 ```{toctree}
-:caption: Troubleshooting
+:caption: AAPS для детей
 
-Troubleshooting <./Usage/troubleshooting.md>
+Удаленный мониторинг <./Children/Children.md>
 
-Nightscout client <./Usage/Troubleshooting-NSClient.md>
+SMS команды <./Children/SMS-Commands.md>
+
+Помощник профиля <./Configuration/profilehelper.md>
 
 ```
 
 ```{toctree}
-:caption: FAQ
+:caption: Полный замкнутый цикл
+
+Полный замкнутый цикл <./Usage/FullClosedLoop.md>
+
+```
+
+```{toctree}
+:caption: Устранение неполадок
+
+Устранение неполадок <./Usage/troubleshooting.md>
+
+AAPSClient <./Usage/Troubleshooting-NSClient.md>
+
+```
+
+```{toctree}
+:caption: Часто задаваемые вопросы
 
 FAQ <./Getting-Started/FAQ.md>
 ```
 
 ```{toctree}
-:caption: Glossary
+:caption: Глоссарий
 
-Glossary <./Getting-Started/Glossary.md>
+Глоссарий <./Getting-Started/Glossary.md>
 ```
 
 ```{toctree}
-:caption: Where to go for help
+:caption: Куда обратиться за помощью
 
-Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
+Полезные ресурсы для чтения перед запуском <. Where-To-Go-For-Help/Background-reading.md>
 
-Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
+Куда обратиться за помощью <. Where-To-Go-For-Help/Connect-with-other-users.md>
 
-Docs updates & changes <./Getting-Started/WikiUpdate.md>
-
-```
-
-```{toctree}
-:caption: For Clinicians
-
-For Clinicians <./Resources/clinician-guide-to-AndroidAPS.md>
-```
-
-```{toctree}
-:caption: How to help
-
-How to help <./Getting-Started/How-can-I-help.md>
-
-How to translate the app and docs <./translations.md>
-
-How to edit the docs <./make-a-PR.md>
-
-State of translations <./Administration/stateTranslations.md>
+Обновления документации & изменения <./Getting-Started/WikiUpdate.md>
 
 ```
 
 ```{toctree}
-:caption: Sandbox
+:caption: для медицинских работников
 
-Sandbox <./Sandbox/sandbox1.md>
+для клиник <./Resources/clinician-guide-to-AndroidAPS.md>
+```
+
+```{toctree}
+:caption: Как помочь
+
+как помочь <./Getting-Started/How-can-I-help. d>
+
+Как перевести приложение и документацию <./translations. d>
+
+Как редактировать документы <./make-a-PR.md>
+
+Состояние переводов <./Administration/stateTranslations.md>
+
+```
+
+```{toctree}
+:caption: песочница
+
+Песочница <./Sandbox/sandbox1.md>
 Crowdin Test <./Sandbox/crowdintest.md>
 
 ```
 
 ```{note}
-**Disclaimer And Warning**
+**Отказ от ответственности и Предупреждения**
 
-- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout в настоящее время не обеспечивает соблюдение политик конфиденциальности HIPAA (Health Insurance Portability and Accountability Act — Акт о мобильности и подотчётности медицинского страхования). Use Nightscout and AAPS at your own risk, and do not use the information or code to make medical decisions.
-- Use of code from github.com is without warranty or formal support of any kind. Пожалуйста, ознакомьтесь с ЛИЦЕНЗИЕЙ этого репозитория.
-- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Они используются в информационных целях и не подразумевается какой-либо принадлежности к ним или их одобрения.
+- Вся информация, идеи и код, описанные здесь, предназначены только для ознакомительных и образовательных целей. Nightscout в настоящее время не обеспечивает соблюдение политик конфиденциальности HIPAA (Health Insurance Portability and Accountability Act — Акт о мобильности и подотчётности медицинского страхования). Используйте Nightscout и AAPS на свой собственный риск, не используйте информацию или код для принятия медицинских решений.
+- Использование кода с github.com не имеет никакой гарантии и какой-либо официальной поддержки. Пожалуйста, ознакомьтесь с ЛИЦЕНЗИЕЙ этого репозитория.
+- Все наименования продуктов и компаний, товарные знаки, услуги по обслуживанию, зарегистрированные товарные знаки и зарегистрированные службы являются собственностью соответствующих владельцев. Они используются в информационных целях и не подразумевается какой-либо принадлежности к ним или их одобрения.
 
-Please note - this project has no association with and is not endorsed by: [SOOIL](<https://www.sooil.com/eng/>), [Dexcom](<https://www.dexcom.com/>), [Accu-Chek, Roche Diabetes Care](<https://www.accu-chek.com/>) or [Medtronic](<https://www.medtronic.com/>)
+Обратите внимание, что этот проект не имеет связи с и одобрения от: ` SOOIL <https://www.sooil.com/eng/>` _, ` Dexcom <https://www.dexcom.com/>` _, ` Accu-Chek, Roche Diabet Care <https://www.accu-chek.com/>` _ или ` Medtronic <https://www.medtronic.com/>` _
 
 ```
