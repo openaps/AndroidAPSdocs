@@ -1,10 +1,10 @@
 # Android Auto
 
-AAPS is capable to send you information about your actual state as message directly into Android Auto in your car.
+AAPS способен отправлять информацию в качестве сообщения непосредственно в Android Auto в автомобиле.
 
 :::{admonition} version and last change information :class: dropdown date of last edit: 07/05/2023
 
-versions used for documentation:
+версии, используемые для документации:
 
 * AAPS 3.2.0-dev-i
 * Android Auto: 9.3.631434-release :::

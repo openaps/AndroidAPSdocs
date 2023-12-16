@@ -31,7 +31,7 @@
 
 ### Где найти Автоматизацию
 
-Depending on your [settings in config builder](Config-Builder-tab-or-hamburger-menu) you will either find [Automation](Config-Builder#automation) in hamburger menu or as a tab.
+В зависимости от [настроек в конфигураторе](Config-Builder-tab-or-hamburger-menu) [Автоматизацию](Config-Builder#automation) можно найти в выпадающем меню или в виде вкладки.
 
 ### Общие настройки
 
@@ -50,7 +50,7 @@ Depending on your [settings in config builder](Config-Builder-tab-or-hamburger-m
 
 Вы можете выбрать между несколькими условиями. Некоторые моменты здесь объясняются, но основное легко понять и оно не все здесь описано:
 
-- connect conditions: you can have several conditions and can link them with
+- условия соединения: можно иметь несколько условий и связать их с помощью
 
   - "И"
   - "Или"
@@ -59,7 +59,7 @@ Depending on your [settings in config builder](Config-Builder-tab-or-hamburger-m
 - Время и время повторения
 
   - время = одно событие времени
-  - recurring time = something that happens regularly (i.e. once a week, every working day etc.)
+  - периодическое время = то, что происходит регулярно (т.е. раз в неделю, каждый рабочий день и т. д.)
 
 - расположение: в конфигураторе (автоматизация), можете выбрать местоположение сервиса, который хотите использовать:
 
@@ -71,7 +71,7 @@ Depending on your [settings in config builder](Config-Builder-tab-or-hamburger-m
 
 Можно выбрать одно или несколько действий:
 
-- start temp target
+- начать врем цель
 
   - должно быть между 72 мг/дл и 270 мг/дл (4 ммоль/л и 15 ммоль/л)
   - работает только в том случае, если нет предыдущей временной цели
@@ -85,10 +85,10 @@ Depending on your [settings in config builder](Config-Builder-tab-or-hamburger-m
   - должно быть от 70% до 130%
   - работает только в том случае, если предыдущий процент составляет 100%
 
-After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
+После добавления ваших действий, **не забудьте изменить значения по умолчанию** на те, которые требуются, нажав на значения по умолчанию.
 
 ```{image} ../images/Automation_Default_V2_5.png
-:alt: Automation default vs. set values
+:alt: автоматизация по умолчанию vs.заданные величины
 ```
 
 (Automation-sort-automation-rules)=
@@ -109,34 +109,34 @@ After adding your action, **don't forget to change the default values** to what 
 ```
 
 (Automation-good-practice-caveats)=
-## Good practice & caveats
+## Рекомендации & предостережения
 
-- When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
+- Когда вы начинаете пользоваться средствами автоматизации или создаете новое правило, добавьте уведомление об этом, пока не убедитесь, что правило хорошо работает.
 
-- Watch the rule results.
+- Наблюдайте за результатами работы правила.
 
-- Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg \< 180 mg/dl)
+- Постарайтесь не делать условия слишком легкими (например, ЕСЛИ ГК > 80 мг/дл И ГК\< < 180 мг/дл)
 
-  **Doubly important if action is a profile switch!**
+  **Вдвойне важно, если правило активирует переключатель профиля!**
 
-- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](Open-APS-features-autosens) back to 0.
+- Попробуйте использовать временные цели Temp Targets вместо переключателей профиля Profile Switches. Временные цели TT не сбрасывают [Autosens](Open-APS-features-autosens) на 0.
 
-- Make sure Profile switches are made sparingly and preferably at a last resort.
+- Убедитесь, что переключатели профиля создаются с осторожностью и желательно как крайняя мера.
 
-  - Profile switching renders [Autosens](Open-APS-features-autosens) useless for a min of 6 hours.
+  - Переключение профиля делает [Autosens](Open-APS-features-autosens) бесполезным минимум на 6 часов.
 
-- Profile switching will not reset the profile back to your base profile
+- Переключение профилей не сбросит профиль назад на базовый профиль
 
-  - You have to make another rule to set this back or do it manually!
-  - Increased risk of hypoglycemia if profile switch does not expire or reset back to base profile.
+  - Вы должны создать еще одно правило, чтобы вернуть профиль или сделать это вручную!
+  - Повышенный риск гипогликемии в случае, если время работы нового профиля не истечет или не сбросится назад на базовый профиль.
 
 ## Примеры
 
 Это просто примеры вариантов настройки, не советы. Не воспроизводите их, не зная, что вы делаете или зачем вам это нужно.
 
-- Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
-- Setting temp target for activities based on time, location, connection to a bluetooth device...
-- Setting eating soon temp targets based on time, location...
+- Переключение профилей для вашей повседневной деятельности (например, школа, тренажерный зал, выходные, рабочий день...) с использованием геолокации, wifi, времени и т. д.
+- Настройка временной цели исходя из времени, местоположения, подключения к bluetooth устройствам...
+- Настройка временной цели ожидаемый прием пищи на основе времени, геолокации...
 
 ### Временная Цель Низкая ГК
 
@@ -158,12 +158,12 @@ After adding your action, **don't forget to change the default values** to what 
 
 Опасайтесь неправильно использовать автоматизацию. Это может привести к трудностям и даже опасности для здоровья. Примеры неправильного применения:
 
-- Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
-- Setting profile to compensate food
-- Setting profile without duration
-- Creating one way rules (i.e. do something but don't undo it by another rule)
-- Creating long term rules
+- Попытка полностью переопределить алгоритм вместо помощи (т.е. изменение профиля вместо настройки basal, IC и т. д.)
+- Установка профиля для компенсации приема пищи
+- Установка профиля без определения продолжительности
+- Создание правил одной линии (т.е. выполните что-нибудь, но не отмена этого другим правилом)
+- Создание долгосрочных правил
 
 ## Альтернативы
 
-Для опытных пользователей есть и другие возможности для автоматизации задач с помощью IFTTT или приложения других разработчиков Android под названием Automate. Some examples can be found [here](./automationwithapp.html).
+Для опытных пользователей есть и другие возможности для автоматизации задач с помощью IFTTT или приложения других разработчиков Android под названием Automate. Некоторые примеры можно найти [здесь](./automationwithapp.html).

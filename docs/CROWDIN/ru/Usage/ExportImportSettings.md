@@ -1,4 +1,4 @@
-# Export & import settings
+# Экспорт & импорт настроек
 
 ## Когда следует экспортировать настройки?
 
@@ -11,91 +11,91 @@
 На компьютере с Windows 10 это выглядит так:
 
 ```{image} ../images/AAPS_ExImportSettingsWin.png
-:alt: AAPS Preferences phone connected to computer
+:alt: AAPS настройки телефона, подключенного к компьютеру
 ```
 
-## Export Path
-The exports will be placed in this folder on your phone:
+## Директория экспорта
+Экспортируемые настройки помещаются в эту папку на телефоне:
 
 /Internal Storage/AAPS/preferences
 
-This storage location cannot be changed in the AAPS settings.
+Это место хранения не может быть изменено в настройках AAPS.
 
-## Экспортированные данные
+## Экспортируемые данные
 
-Среди прочего следующая информация является частью экспорта настроек:
+Следующая информация является частью экспорта настроек:
 
-- [Automation](../Usage/Automation.md) events
-- [Config builder](../Configuration/Config-Builder.md) settings
-- [Local profile](Config-Builder-local-profile) settings
-- [Objectives](../Usage/Objectives.md) status incl. [exam results](Objectives-objective-3-prove-your-knowledge)
-- [Preferences](../Configuration/Preferences.md) incl. [NS Client settings](Preferences-nsclient)
+- События [автоматизации](../Usage/Automation.md)
+- [Настройки Конфигуратора](../Configuration/Config-Builder.md)
+- Настройки [ Локального Профиля](Config-Builder-local-profile)
+- Состояние прохождения [Целей](../Usage/Objectives.md) включая [результаты экзамена](Objectives-objective-3-prove-your-knowledge)
+- [Настройки](../Configuration/Preferences.md) включая [настройки AAPSClient ](Preferences-nsclient)
 
 ## Зашифрованный файл резервной копии
 
-Settings backup is encrypted by a master password that can be set in [Preferences](Preferences-master-password) .
+Резервная копия настроек зашифрована мастер-паролем, который может быть задан в [Настройках](Preferences-master-password).
 
 (ExportImportSettings-export-settings)=
 ## Экспорт настроек
 
-- Hamburger menu (top left corner of screen)
+- Сэндвич-меню (в верхнем левом углу экрана)
 - Обслуживание
 - Экспорт настроек
 
 ```{image} ../images/AAPS_ExportSettings1.png
-:alt: AAPS export settings 1
+:alt: AAPS экспорт настроек 1
 ```
 
-- Date and time of export will be added to the file name automatically and displayed together with the path.
-- Click 'OK'.
-- Enter [master password](Preferences-master-password) and click 'OK'.
-- Successful export will be prompted at bottom of the screen.
+- Дата и время экспорта добавляются в имя файла автоматически и видны вместе с путем к файлу.
+- Нажмите "OK'.
+- Введите [Главный пароль](Preferences-master-password) и нажмите 'OK'.
+- Сообщение об успехе операции появится в нижней части экрана.
 
 ```{image} ../images/AAPS_ExportSettings2.png
-:alt: AAPS export settings 2
+:alt: AAPS экспорт настроек 2
 ```
 
 (ExportImportSettings-import-settings)=
 ## Выполните импорт настроек
 
-**Do not import settings while on an active Pod session** - see [Omnipod page for details](OmnipodEros-import-settings-from-previous-aaps).
+**Не импортируйте настройки во время активной сессии Pod** - подробности см. на странице [Omnipod ](OmnipodEros-import-settings-from-previous-aaps).
 
-- Hamburger menu (top left corner of screen)
+- Сэндвич-меню (в верхнем левом углу экрана)
 - Обслуживание
 - Выполните импорт настроек
 
 ```{image} ../images/AAPS_ImportSettings1.png
-:alt: AAPS import settings 1
+:alt: AAPS импорт настроек 1
 ```
 
-- All files from folder AAPS/preferences/ on your phone will be shown in the list.
-- Select file.
-- Confirm import by clicking 'OK'.
-- Enter [master password](Preferences-master-password) and click 'OK'.
+- Все файлы из папки AAPS/preferences/ на телефоне будут показаны в списке.
+- Выберите файл.
+- Подтвердите согласие на импорт, нажав кнопку OK'.
+- Введите [Главный пароль](Preferences-master-password) и нажмите 'OK'.
 
 ```{image} ../images/AAPS_ImportSettings2.png
-:alt: AAPS import settings 2
+:alt: AAPS импорт настроек 2
 ```
 
-- Details on the preference file will be shown.
-- Last option to cancel import.
-- Click 'Import'.
-- Confirm message by clicking 'OK'.
-- AAPS will be restarted in order to activate imported preferences.
+- Будет показана подробная информация о файле настроек.
+- Последняя опция для отмены импорта.
+- Нажмите 'Import'.
+- Подтвердите сообщение, нажав кнопку OK'.
+- AAPS будет перезапущен для активации импортированных настроек.
 
 ### Примечание для пользователей Dana RS
 
 - Поскольку настройки подключения помпы также переносятся на новый телефон, AAPS на новом телефоне уже будет "знать" помпу и не запустит сканирование bluetooth.
-- Please pair new phone and pump manually.
+- Выполните сопряжение нового телефона и помпы вручную.
 
 ### Импорт настроек из предыдущих версий (перед AAPS 2.7)
 
-- The "old" settings file (called 'AndroidAPSPreferences' - without file extension) must be in root folder of your smartphone (/storage/emulated/0).
-- Do not put the "old" file in the same folder as the new exported settings (AAPS/preferences).
-- You will find the "old" file on the bottom of the list in the import dialogue.
+- Старый файл настроек (названный 'AndroidAPSPreferences' - без расширения файла) должен быть в корневой папке вашего смартфона (/storage/emulated/0).
+- Не помещайте старый файл в ту же папку, что и новые экспортированные настройки (AAPS/preferences).
+- Старый файл находится в нижней части списка в диалоге импорта.
 
 ## Перенос файла настроек
 
-- Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
-- Manuals can be found on the web, i.e. [Android help pages](https://support.google.com/android/answer/9064445?hl=en).
-- If you experience problems with the transferred file try another way to transfer file.
+- Лучший способ переноса файла настроек на новый телефон - через кабель USB или облачный сервис (напр. Google Drive.
+- Руководства можно найти в Интернете, например [страницы помощи Android](https://support.google.com/android/answer/9064445?hl=en).
+- Если возникли проблемы с передачей файла, попробуйте другой способ передачи файла.
