@@ -122,6 +122,10 @@ Commands must be sent in English, the response will be in your local language if
 
 - LOOP RESUME \* Odpověď: Smyčka obnovena
 
+- LOOP CLOSED \* Response: Current loop mode: Closed Loop
+
+- LOOP LGS \* Response: Current loop mode: Low Glucose Suspend
+
 ### CGM data
 
 - BG \* Odpověď: poslední BG: 5.6 před 4min Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Bazál: 0.10U)
