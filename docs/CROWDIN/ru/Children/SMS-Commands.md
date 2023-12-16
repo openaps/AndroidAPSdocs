@@ -122,6 +122,10 @@
 
 - LOOP RESUME \* Ответ: Цикл возобновлен
 
+- LOOP CLOSED \* Response: Current loop mode: Closed Loop
+
+- LOOP LGS \* Response: Current loop mode: Low Glucose Suspend
+
 ### Данные мониторинга
 
 - BG \* Ответ: Новая ГК: 5.6 4мин назад, Дельта: -0,2 ммоль, Активный инсулин IOB: 0.20 ед. (Болюс: 0.10 ед. Базал: 0.10 ед.)
