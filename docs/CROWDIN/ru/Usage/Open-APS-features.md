@@ -4,8 +4,8 @@
 
 ## Autosens
 
-* Autosens-это алгоритм, который смотрит на отклонения глюкозы в крови (позитивное/отрицательное/нейтральное).
-* Он попытается определить, насколько вы чувствительны/резистентны на основании этих отклонений.
+* Autosens-это алгоритм, который отслеживает отклонения ГК (позитивное/отрицательное/нейтральное).
+* Он пытается определить, насколько вы чувствительны/резистентны на основании этих отклонений.
 * Реализация oref в ** OpenAPS ** выполняется на основе комбинации данных за 24 и 8 часов. Он использует тот, который является более чувствительным.
 * В версиях до AAPS 2.7 пользователю приходилось выбирать между 8 или 24 часами вручную.
 * Начиная с AAPS 2.7 Autosens сам будет переключаться между 24 и 8 часами для вычисления чувствительности. Он выберет более чувствительный вариант. 
@@ -20,9 +20,9 @@
 
 SMB, the shortform of 'super micro bolus', is the latest OpenAPS feature (from 2018) within the Oref1 algorithm. In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly **small super microboluses**. In situations where AMA would add 1.0 IU insulin using a temporary basal rate, SMB delivers several super microboluses in small steps at **5 minute intervals**, e.g. 0.4 IU, 0.3 IU, 0.2 IU and 0.1 IU. At the same time (for safety reasons) the actual basal rate is set to 0 IU/h for a certain period to prevent overdose (**'zero-temping'**). This allows the system adjust the blood glucose faster than with the temporary basal rate increase in AMA.
 
-Thanks to SMB, it may be sufficient for meals containing only "slow" carbs to inform the system of the planned amount of carbohydrate and leave the rest to AAPS. However, this may lead to higher postprandial (post-meal) peaks because pre-bolusing isn’t possible. Or you can give, if necessary with pre-bolusing, a **start bolus**, which **only partly** covers the carbohydrates (e.g. 2/3 of the estimated amount) and let SMB provide the rest.
+Благодаря микроболюсам SMB для блюд, содержащих только "медленные" углеводы, достаточно сообщить системе о запланированном количестве углеводов, в остальном положившись на AAPS. Однако это может дать более высокие постпрандиальные (после приема пищи) пики, поскольку преболюс не вводился. Или, если нужен пре-болюс, можно ввести ** стартовый болюс**, который ** только частично** покрывает углеводы (например, 2/3 от расчетного количества), а остальное введут микроболюсы SMB.
 
-The SMB feature contains some safety mechanisms:
+Функция SMB содержит некоторые механизмы безопасности:
 
 1. Самой большой однократной дозой SMB может быть только наименьшее значение от:
     
@@ -30,7 +30,7 @@ The SMB feature contains some safety mechanisms:
     * половина требуемого в данный момент количества инсулина, или
     * оставшаяся часть maxIOB в настройках.
 
-2. Возможно, вы обратите внимание на частые низкие временные базалы (называемые "low temp") или временные базалы по 0 ед/ч (называемые "zero temp"). This is by design for safety reasons and has no negative effects if the profile is set correctly. Кривая активного инсулина более значима, чем линия временного базала.
+2. Возможно, вы обратите внимание на частые низкие временные базалы (называемые "low temp") или временные базалы по 0 ед/ч (называемые "zero temp"). Это происходит по соображениям безопасности и не имеет отрицательных последствий, если профиль установлен правильно. Кривая активного инсулина более значима, чем линия временного базала.
 
 3. Дополнительные расчеты для прогнозирования гликемии, (например, для непредвиденного приема прищи UAM). Даже без ручного ввода количества углеводов, UAM может автоматически определить значительное увеличение уровней ГК вследствие приема пищи, повышения адреналина или других факторов и попытаться компенсировать повышение при помощи SMB. Для безопасности, эта функция работает и в обратном направлении и может остановить подачу супер микроболюса при неожиданном понижении ГК. Поэтому функция UAM всегда должна быть активирована в алгоритме SMB.
 
@@ -64,14 +64,14 @@ AAPS limits the value as follows:
 
 ### Максимальное общее количество активного инсулина IOB, которое не может превысить OpenAPS (OpenAPS "max-iob")
 
-This value determines the maxIOB that AAPS will remain under while running in closed loop mode. If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
+Эта величина определяет максимальное значение активного инсулина IOB, при котором AAPS будет оставаться в режиме замкнутого цикла. If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
 
 Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In AMA, maxIOB was just a safety-parameter for basal IOB, while in SMB-mode, it also includes bolus IOB. A good start is
 
     maxIOB = средний болюс на еду + троекратный макс. базал
     
 
-Be careful and patient and only change the settings step by step. It is different for everyone and can also depend on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in [AMA](Open-APS-features-max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
+Be careful and patient and only change the settings step by step. Эта величина для каждого своя, а также зависит от средней общей суточной дозы (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in [AMA](Open-APS-features-max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 * Ребенок: 3
 * Подросток: 7
@@ -91,7 +91,7 @@ Here, you can choose if you want to use the [sensitivity detection](../Configura
 
 ### Включить супер микро болюс SMB
 
-Enable this to use SMB functionality. If disabled, no SMBs will be given.
+Включите, чтобы использовать функционал SMB. Если отключено, то SMB не вводятся.
 
 ### Enable SMB with high temp targets
 
