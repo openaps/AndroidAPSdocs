@@ -18,7 +18,7 @@ The first three are mostly appropriate for carers/parents, but smartwatches are 
 6.  What is your emergency plan for when remote control does not work (_i.e._ network problems or lost bluetooth connection)?  Always consider what will happen with **AAPS** if you suddenly can’t send a new command. **AAPS** overwrites the pump basal, ISF and ICR with the current profile values. Only use temporary profile switches (_i.e._ with a set time duration) if switching to a stronger insulin profile, in case your remote connection is disrupted. Then the pump will revert to the original profile when the time expires.
 
 (sms-commands)=
-## 1) SMS Commands
+## SMS Commands
 
 You can control **AAPS** remotely via text (SMS) message through a feature known as **SMS Commands**. SMS commands can be sent to **AAPS**  by _any_ type of phone (iPhone/Android).
 
@@ -43,7 +43,7 @@ The **SMS Commands Table** below shows all the possible SMS commands. _Example v
 
 ![image](images/remote-control-03.png)
 
-![image](images/remote-control-04.png)
+![image](images/SMScommands/01_SMS_CommandTable_Loop.png)
 
 ![image](images/remote-control-05.png)
 
@@ -98,21 +98,21 @@ Some options may be greyed out, due to needing admin via a family account if the
 
 4) **AAPS settings:**
 
-#### i) Now that the phone settings have been checked, in the **AAPS** app itself, use the left hand hamburger menu to navigate to Config Builder:
+i) Now that the phone settings have been checked, in the **AAPS** app itself, use the left hand hamburger menu to navigate to Config Builder:
 
 ![image](images/remote-control-09.png)
 
-#### ii) Enable “SMS communicator” by checking the boxes, then click the “cog” to get to the SMS communicator preferences screen:
+ii) Enable “SMS communicator” by checking the boxes, then click the “cog” to get to the SMS communicator preferences screen:
 
 ![image](images/remote-control-10.png)
 
 _Note - as an alternative route to Config Builder, you can also use the new “SMS Communicator tab” at the top of the AAPS screen, then right click on the custom right hand hamburger menu for that page, to get to the SMS communicator preferences screen._
 
-#### iii) On the preferences screen enable “allow remote commands via SMS”:
+iii) On the preferences screen enable “allow remote commands via SMS”:
 
 ![image](images/remote-control-11.png)
 
-#### iv) Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
+iv) Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
 
 UK phone number: +447976304596
 
@@ -129,7 +129,7 @@ If you have more than one phone number to add, separate them by semicolons, with
 
 ![image](images/remote-control-12.png)
 
-#### v) Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
+v) Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
 
 PIN requirements are:
 
@@ -141,7 +141,7 @@ PIN requirements are:
 
 ![image](images/remote-control-13.png)
 
-#### vi) On the preferences screen select “Authenticator setup”
+vi) On the preferences screen select “Authenticator setup”
 
 ●   Follow the step-by-step instructions on the screen.
 
@@ -268,7 +268,7 @@ If you are having issues sending or receiving SMS commands with the Android Mess
 ●   Activate “Only send SMS and MMS messages”
 
 (aapsclient)=
-## 2) AAPSClient
+## AAPSClient
 
 _Note that **NSClient** has been replaced by **AAPSClient** for AAPS version 3.2 and higher, check the version release notes for more information._
 
@@ -276,23 +276,19 @@ For versions of AAPS which are older than AAPS 3.2, if you have a caregiver/pare
 
 ![image](images/remote-control-19.png)
 
-There are 2 versions of the app you can [download](https://github.com/nightscout/AndroidAPS/releases/), **AAPSClient** & **AAPSClient2**. The only difference between the two versions is the app name. This allows you to install the **AAPSClient** app twice on the same phone, to follow two different people or Nightscout accounts at the same time.
+There are 2 versions of the app you can [download](https://github.com/nightscout/AndroidAPS/releases/), **AAPSClient** & **AAPSClient2**. The only difference between the two versions is the app name. This allows you to install the **AAPSClient** app twice on the same phone, to follow two different people or Nightscout accounts at the same time. To download AAPSClient, click on "app-AAPSClient-release" (it may be a newer version to that shown in the screenshot):
 
-![image](images/remote-control-20.png)
-
-To download AAPSClient, click on app-AAPSClient-release-3.1.0.3.apk
+![image](images/SMScommands/02_AAPSClient_download.png)
 
 Then go to  _downloads_ on your computer. On Windows, -downloads_ will show the right hand ribbon:
 
-![image](images/remote-control-21.png)
+![image](images/SMScommands/03_AAPSClient_download_folder.png)
 
-Once downloaded, click _show in folder_
-
-![image](images/remote-control-22.png)
+Once downloaded, click _show in folder_ to locate the file.
 
 The apk can now be either:
 
-Transferred by a USB cable onto the follower phone; or Dragged into G drive folder, and then added onto the follower phone by clicking on app-AAPSClient-release-3.1.0.3.apk
+Transferred by a USB cable onto the follower phone; or Dragged into Google drive folder, and then added onto the follower phone by clicking on the "app-AAPSClient-release" file.
 
 ### Features of AAPSClient include:
 
@@ -307,7 +303,7 @@ Remote control through **AAPSClient** is only recommended if your synchronizatio
 A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **AAPSClient** is installed on the parents phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. This will show current BG, loop status and allow carb entry, temp targets and profile changes. It will NOT allow bolusing from the WearOS app. You can read more about Smartwatches [here](smartwatches).
 
 (nightscout)=
-## 3) Nightscout
+## Nightscout
 
 As well as Nightscout being a server in “the Cloud”, there is also a dedicated **Nightscout** app which can be downloaded directly from the App Store on your iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](AAPSClient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](link) app from the Playstore.
 
@@ -542,13 +538,13 @@ And select “fullRelease”.
 
 Be patient - the **AAPS** Wear apk should be built in around 10-20 minutes, depending on the speed of your internet connection.
 
-Troubleshooting -  if you get an error about "uncommitted changes", see the [troubleshooting guide](troubleshooting_androidstudio.md)
+### Trikčių šalinimas
 
-In the process of building the 3.2 full AAPS app (and in fact any signed app), Android Studio generates a .json file. This then causes errors with "uncommitted changes" when you try to build the next signed app, like the **AAPS** wear app. The quickest way to resolve this is to navigate to the folder where the full AAPS app has been built, your folder is probably something like:
+In the process of building the 3.2 full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. This then causes errors with [uncommitted changes](troubleshooting_androidstudio-uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. The quickest way to resolve this is to navigate to the folder where the full AAPS app has been built, your folder is probably something like:
 
 C:\Users\Your Name\StudioProjects\AndroidAPS\app\aapsclient\release.
 
-Either delete, or move the unneeded .json file out of the folder. Then try to build the **AAPS** wear app again. If that doesn't work, the more detailed [troubleshooting guide](troubleshooting_androidstudio.md)  will help you to identify the specific file causing the issue, which could also be your keystore file.
+Either delete, or move the unneeded .json file out of the folder. Then try to build the **AAPS** wear app again. If that doesn't work, the more detailed [troubleshooting guide](troubleshooting_androidstudio-troubleshooting-android-studio) will help you to identify the specific file causing the issue, which could also be your keystore file.
 
 #### How to set up a Samsung Galaxy 4 smartwatch with **AAPS**
 
