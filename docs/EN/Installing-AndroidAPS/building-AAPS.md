@@ -290,7 +290,7 @@ If you have not restarted your computer since installing or updating Git, restar
 Now we will tell Android studio where to find Git, which you installed [earlier](Install-Git).
 * Make sure you have restarted your computer after [installing Git](Install-Git).
 * Open **Android Studio** (you can find it by searching in the Start menu). 
-* In the top right corner of **Android Studio**, navigate to _File-Settings_ (Windows) or _Android Studio > Preferences_ (Mac). This opens the following window, click to expand the dropdown called "version control" (1):
+* In the top left corner of **Android Studio**, navigate to _File-Settings_ (Windows) or _Android Studio > Preferences_ (Mac). This opens the following window, click to expand the dropdown called "version control" (1):
 
 ![version_control](../images/Building-the-App/Hedgehog/21_AS_version_control.png)
 
@@ -364,9 +364,9 @@ You now need a password for your key. To keep it simple, if you want, you can us
 
 The validity (6) is 25 years by default, leave it as it is.
 
-Enter your first and last name (8). No other information needs to be added.
+Enter your first and last name (7). No other information needs to be added.
 
-Click "OK" (9) to continue:
+Click "OK" (8) to continue:
 
 ![Select key store path](../images/Building-the-App/Hedgehog/30_new_keystore.png)
 
@@ -404,7 +404,7 @@ In the Notifications box, click on the blue link "locate":
 
 Open the folder "release". The file "app-full-release.apk" (1) is the **AAPS** apk that you have just built, you will be transferring this file to your smartphone in the next section of the docs: 
 
-_Optional at this stage - if you are planning to also build the "**AAPS** wear" app for your smartwatch so you that can remotely control **AAPS**, now delete the "output-metadata" .json file (2) from this folder, to avoid the error of [uncommitted changes](troubleshooting_androidstudio-uncommitted-changes) during the **AAPS** wear build_:
+_Optional at this stage - if you are planning to also build the "**AAPS** wear" app for your smartwatch so you can remotely control **AAPS**, delete the "output-metadata" .json file (2) from this folder, to avoid the error of [uncommitted changes](troubleshooting_androidstudio-uncommitted-changes) during the **AAPS** wear app build_:
 
 ![apk_file](../images/Building-the-App/Hedgehog/37_full_release_apk.png)
 
