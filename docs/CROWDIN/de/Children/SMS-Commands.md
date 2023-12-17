@@ -122,6 +122,10 @@ Commands must be sent in English, the response will be in your local language if
 
 - LOOP RESUME \* Antwort: Loop wurde fortgesetzt
 
+- LOOP CLOSED \* Response: Current loop mode: Closed Loop
+
+- LOOP LGS \* Response: Current loop mode: Low Glucose Suspend
+
 ### CGM-Daten
 
 - BG \* Antwort: Letzter BZ: 5.6 4min her, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
