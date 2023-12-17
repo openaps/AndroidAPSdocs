@@ -18,7 +18,7 @@
 6.  Какие ваши действия на случай, когда удаленное управление не работает (_например_, возникли проблемы с интернетом или потерялся сигнал bluetooth)?  Всегда учитывайте, что может произойти с **AAPS**, если вы внезапно потеряете возможность отправить новую команду. **AAPS** перезапишет значения базы, ФЧИ и УК, указанные в помпе, значениями из текущего профиля. Если вы устанавливаете более агрессивный профиль - всегда делайте его временным (_т.е._ указывайте длительность действия профиля) на случай, если удаленное управление станет недоступным. Помпа вернется к стандартному профилю по истечении указанного времени.
 
 (sms-команды)=
-## 1) SMS команды
+## SMS команды
 
 Существует возможность удаленно управлять **AAPS** с помощью текстового (SMS) сообщения на основе **SMS-команд**. Команды SMS можно отправлять на **AAPS** с  _любого_ типа телефона (iPhone|Android).
 
@@ -43,7 +43,7 @@
 
 ![изображение](images/remote-control-03.png)
 
-![изображение](images/remote-control-04.png)
+![изображение](images/SMScommands/01_SMS_CommandTable_Loop.png)
 
 ![изображение](images/remote-control-05.png)
 
@@ -98,201 +98,197 @@
 
 4) **Настройки AAPS:**
 
-#### i) После проверки настроек телефона, в самом приложении **AAPS**, через левое верхнее меню перейдите в Конфигуратор:
+i) Now that the phone settings have been checked, in the **AAPS** app itself, use the left hand hamburger menu to navigate to Config Builder:
 
 ![изображение](images/remote-control-09.png)
 
-#### ii) Включите «SMS-сообщение», установив флажок, затем нажмите «шестеренку» и получите доступ к экрану настройки SMS-сообщения:
+ii) Enable “SMS communicator” by checking the boxes, then click the “cog” to get to the SMS communicator preferences screen:
 
 ![изображение](images/remote-control-10.png)
 
-_Примечание. В качестве альтернативного пути к Конфигуратору можно также использовать новую вкладку «SMS Communicator» в верхней части окна AAPS, затем щелкните правой кнопкой мыши по контекстному меню справа для этой страницы, чтобы перейти к настройкам SMS коммуникатора._
+_Note - as an alternative route to Config Builder, you can also use the new “SMS Communicator tab” at the top of the AAPS screen, then right click on the custom right hand hamburger menu for that page, to get to the SMS communicator preferences screen._
 
-#### iii) На экране настроек включите «разрешить удаленные команды с помощью SMS»:
+iii) On the preferences screen enable “allow remote commands via SMS”:
 
 ![изображение](images/remote-control-11.png)
 
-#### iv) Введите номер телефона опекуна/родителя. Включите код страны и исключите первый "0" номера телефона, как показано на примерах:
+iv) Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
 
-Номер телефона великобритании: +447976304596
+UK phone number: +447976304596
 
-Номер телефона сша: +11234567890
+US phone number: +11234567890
 
-Номер телефона франции: +33612344567
+FR phone number:  +33612344567
 
-_и т. д._
+_etc._
 
-Обратите внимание, что «+» перед номером может быть обязательным или не потребуется в зависимости от вашего местоположения. Для определения этого отправьте тестовое сообщение, которое будет отображать полученный формат на вкладке SMS Communicator.
+Note that the “+” in front of the number may or may not be required based on your location. To determine this, send a sample text which will show the received format in the SMS Communicator tab.
 
-Если у вас более одного номера телефона, разделите их точкой с запятой БЕЗ пробела между цифрами (это критично!). Выберите "OK":
+If you have more than one phone number to add, separate them by semicolons, with NO space between numbers (this is critical!). Select “OK”:
 
 
 ![изображение](images/remote-control-12.png)
 
-#### v) Выберите PIN-код, который вы (и другие опекуны) будут использовать в конце кода аутентификатора при отправке SMS-команды.
+v) Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
 
-Требования к PIN-коду:
+PIN requirements are:
 
-•от 3 до 6 цифр
+•3 to 6 digits
 
-•не одинаковые цифры (_напр._ 1111 или 1224)
+•not the same digits (_i.e._ 1111 or 1224)
 
-•не последовательные цифры (_напр._ 1234)
+•not sequential numbers (_i.e._ 1234)
 
 ![изображение](images/remote-control-13.png)
 
-#### vi) На экране настроек выберите «Настройка Аутентификации»
+vi) On the preferences screen select “Authenticator setup”
 
-● Следуйте пошаговым инструкциям на экране.
+●   Follow the step-by-step instructions on the screen.
 
-● Откройте установленное приложение-аутентификатор на телефоне _опекуна_ создайте новое соединение и
+●   Open your installed authenticator app on the _caregiver’s phone_ set up a new connection and
 
-● Телефоном опекуна сканируйте QR-код от **AAPS**, при подсказке.
+●   Use the caregiver phone to scan the QR code provided by **AAPS**, when prompted.
 
-● Проверьте одноразовый код доступа от аутентификатора на телефоне опекуна, за которым следует ваш PIN:
+●   Test the one-time passcode from the authenticator app on the caregiver phone followed by your PIN:
 
 Пример:
 
-Маркер из приложения идентификации-457051
+The token from the authenticator app is 457051
 
-Ваш обязательный PIN-код 2401
+Your mandatory PIN is 2401
 
-Код для проверки: 4570512401
+Code to check: 4570512401
 
-Если запись правильна, красный текст «WRONG PIN» автоматически изменится на «OK». Процесс завершен, нет кнопки "OK", которую нужно нажать после ввода кода:
+If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. The process is now complete, there is no “OK” button you need to press after entering the code:
 
 
 ![изображение](images/remote-control-14.png)
 
-Теперь все готово для работы с помощью SMS-команд.
+You should now be set up with SMS commands.
 
 ### Первые шаги работы с помощью SMS команд
 
-1) Чтобы проверить правильность настройки, отправьте «bg» в качестве SMS-сообщения с телефона опекуна на телефон AAPS. Вы должны получить ответ, похожий на этот:
+1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the AAPS phone. You should get a response similar to that shown here:
 
 ![изображение](images/remote-control-15.png)
 
-2) Теперь попробуйте команду SMS, которая требует аутентификатора. Для этого с телефона опекуна отправьте смс с нужной командой на телефон с **AAPS** (_напр._ "target hypo" (цель гипо)). Телефон опекуна получит смс с предложением ввести пароль аутентификации **с шестизначными цифрами** из приложения-аутентификатора, с последующим секретным **PIN-кодом** известным только родителям/опекунам (строка из десяти цифр в общей сложности, при условии, что ваш PIN-код состоит из 4х цифр).
+2)  Now try an SMS command that requires the authenticator. To do this, send a text from the caregiver’s phone with the required command to the**AAPS** phone (_e.g._ “target hypo”). The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by an additional secret **PIN** known only to caregivers/followers (a string of ten digits in total, assuming your PIN is only 4 digits).
 
-Ниже показан пример с командой SMS «target hypo», чтобы установить временную цель гипо:
+This example is shown below, with the SMS command “target hypo” to set a hypo temp target:
 
-● В этом примере ваш PIN-код 1289
+●   In this example, your PIN is 1289
 
-Маркер из приложения идентификации-274127
+●   Code from your authenticator app is 274127
 
-● При появлении запроса отправьте текст 2741271289
+●   When prompted, text 2741271289
 
-Команды отправляются на английском языке. Ответ на локальном языке. Когда будете отправлть команду в первый раз, держите оба телефона при себе, чтобы убедиться, что все работает:
+Commands must be sent in English. The response should be in your local language. When you try sending an SMS command for the first time, try it in the presence of the AAPS phone, to see how it works:
 
 ![изображение](images/remote-control-16.png)
 
-Телефон опекуна получит SMS от **AAPS** в подтверждение успешного выполнения удаленной команды SMS. Существует несколько возможных причин, по которым команда не проходит:
+The caregiver’s phone will receive a SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully. There are several possible reasons the command may not be successful:
 
-● Настройка SMS-команд не завершена/не корректна
+●   SMS commands setup isn’t complete/correct
 
-● Отправлена команда в некорректном формате (например, “disconnect pump 45” вместо “pump disconnect 45”)
+●   You sent a command which had an incorrect format (like “disconnect pump 45” instead of “pump disconnect 45”)
 
-● Использован неправильный или просроченный код аутентификации (обычно лучше подождать несколько секунд чтобы получить свежий код, если истекает срок действующего)
+●   You used an incorrect, or expired authenticator code (it is usually good to wait a few seconds for a fresh code, if the current one is about to expire)
 
-● Код подтверждения+PIN-код в порядке, но возникла задержка в отправке/прибытии SMS, что заставило AAPS вычислить истекший код аутентификации
+●   The code+PIN was OK, but there was a delay in the SMS leaving/arriving, which led AAPS to calculate that the authenticator code had expired
 
-● Телефон AAPS вне диапазона/контакта с помпой
+●   The AAPS phone is out of range/contact with the pump
 
-● Система уже занята вводом болюса
+●   The system is already busy delivering a bolus
 
-Если ваша команда успешна, вы получите ответ-подтверждение. Если возникла проблема, вы получите сообщение об ошибке.
+If your command is successful, you will receive a reply to confirm this. If there is a problem you will receive an error message.
 
-Распространенные ошибки приведены в примерах ниже:
+Common errors are shown in the examples below:
 
 ![изображение](images/remote-control-17.png)
 
 ### Дополнительные примечания о безопасности в SMS-командах
 
-Минимальная задержка между командами на болюс по умолчанию составляет 15 минут. Из соображений безопасности следует добавить хотя бы два авторизованных номера телефона для уменьшения этого значения. Если вы дистанционно пытаетесь повторно ввестиь болюс в течение 15 минут после предыдущего, вы получите ответ “Дистанционный болюс невозможен. Повторите позже”
+The default minimum time delay between bolus commands is 15 minutes. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
 
-Если вы хотите прекратить возможность отправлять SMS команды с телефона опекуна, используйте экстренную кнопку “RESET AUTHENTICATORS” в AAPS (см. настройки выше, ссылка) или отправьте SMS-команду “SMS stop”. Сбросив аутентификаторы, вы делаете ВСЕ телефоны опекунов недействительными. Вам придется их снова настроить.
+If you want to remove the ability of a caregiver phone to send SMS commands, use the emergency button “RESET AUTHENTICATORS” in AAPS (see preferences screenshot above, link) or send the SMS command “SMS stop”. By resetting authenticators you make ALL the caregivers' phones invalid. You will need to set them up again.
 
 ### Передача SMS-команд о болюсах на еду
 
-Дистанционное введение болюсов _может быть сделано только_ с помощью **SMS команд**, оно не может осуществляться через NightScout или AAPSClient. Однако углеводы могут быть внесены любым из трех методов. В одном SMS-сообщении невозможно отправить углеводы и инсулин. Эти команды должны отправляться отдельно следующим образом:
+Remote bolusing of insulin can _only_ be done via **SMS Commands**, it cannot be actioned through NightScout or AAPSClient. Carbs however, can be announced through any of the three methods. It is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
 
-1) Отправьте команду на болюс (_например_"bolus2",которая инициирует введение 2 единиц) при помощи SMS, что эквивалентно нажатию на иконку "шприца" в **AAPS**. 2) Отправьте SMS об углеводах (_напр._ “carbs 20” внесет 20 г углеводов). Это эквивалентно использованию иконки “углеводы” в **AAPS**.
+1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to using the “syringe” icon in **AAPS**. 2)  Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to using the “carbs” tab in **AAPS**.
 
-**Порядок отправки этих команд важен.**. Если любым методом внести запись о значительном количестве углеводов при активированнной функции SMB, **AAPS** может моментально отреагировать, введя часть болюса. Поэтому если _после_ этого отправить команду на болюс, может возникнуть задержка с выполнением и появится сообщение "вводится болюс", после которого придется проверять количество инсулина, введенного в виде микроболюса. Или, если вы не обнаружили SMB, а ваш собственный болюс также введен успешно, может оказаться, что на еду отправлено слишком много инсулина. Поэтому, если дистанционно отправлять команду на болюсы, следует всегда вводить болюс _перед_ внесением записи об углеводах. Если предпочитаете, можно использовать сочетание Nightscout или AAPSClient с командами SMS. Запись об углеводах вносится в Nightscout без проверки подлинности (см. раздел инструкций ниже), и поэтому происходит быстрее чем SMS-команды.
+**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can use a combination of Nightscout or AAPSClient with SMS commands. Carbs can be announced through Nightscout without any authentication (see instructions sub section below) , and are therefore quicker than SMS commands.
 
 ### Ответы на часто задаваемые вопросы по SMS-командам и устранение неполадок
 
-#### В: Что _не может быть_ выполнено при помощи команд SMS?
+#### Q: What _can’t_ we do with SMS commands?
 
-**Невозможно переключиться на _временный_ профиль (т. е. нельзя например установить профиль "нагрузка" на 60 мин.), но можно просто переключить профиль на неопределенное время. Временные профили можно устанавливать через Nightscout или AAPSClient.</p>
+1)  **You cannot set a _temporary_ profile switch** (so for example, setting “profile exercise“ for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profiles switches can instead be set through Nightscout or AAPSClient.
 
-2)  **Нельзя отменить автоматизацию** или **задать определенные пользователем цели**, но есть другие решения: представьте себе обычную цель профиля 5.5. В AAPS установлена автоматизация всегда устанавливать высокую цель 7.0 между 14.30 и 15.00 из-за урока физкультуры в школе, а условием срабатывания автоматизации является "отсутствие врем. целей". На этой неделе незадолго до занятий вам сообщили о замене урока физкультуры на ланч с пиццей, но ваш ребенок уже в школе с телефоном AAPS. Если высокая временная цель 7.0 запускается автоматизацией, а вы ее отменили (на телефоне AAPS или удаленно), то условия для автоматизации все равно соблюдены, и **AAPS** просто установит высокую цель еще раз, минутой позже.
+2)  **You cannot cancel automations** or **set user-defined targets** but there are approximate solutions: As an example, imagine the normal profile target is 5.5. You have set an automation in AAPS, to always set a high target of 7.0 between 2.30pm and 3.30pm because of a sports class in school, and a condition of the automation is that “no temp target exists”. This week, you have been told at short notice that the sports class is cancelled, and is being replaced by a pizza-eating session, but your kid is already at school with the AAPS phone. If the high temporary target of 7.0 is started by the automation and you cancel it (on the AAPS phone, or remotely) the conditions for the automation are still met and **AAPS** will simply set the high target again, a minute later.
 
-**Если у вас есть доступ к телефону AAPS**, вы можете отключить/изменить автоматизацию, или, если вы не хотите этого делать, вы можете просто установить новую временную цель 5.6 на 60 минут на вкладке Действия или нажав на кнопку Цель. Это помешало бы автоматизации устанавить высокую цель 7.0.
+**If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min under the Actions Tab or by pressing on the target tab. This would prevent the automation from setting the high target of 7.0.
 
-**Если же у вас нет доступа телефону с AAPS** SMS команда может приблизительно исправить ситуацию: например, с помощью команды «target meal (ожидаемый прием пищи) установить цель 5.0 на 45 минут (другие цели по умолчанию 8.0 для нагрузки или гипо, см. таблицу). Но командами SMS нельзя указать _точную_ величину (например, 5.6 на 60 мин.), для этого понадобится AAPSClient или Nightscout.
+**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use AAPSClient or Nightscout to do this.
 
-#### В: Что произойдет, если я передумаю отдавать команду, которую только что отправил?
+#### Q: What happens if I change my mind about a command I have just sent?
 
-**AAPS** выполняет только самую свежую команду. Поэтому, если вы отправили «bolus 1.5», а затем, не аутентифицируясь, новую команду «bolus 1», то она проигнорирует предыдущую команду 1.5. AAPS всегда отправляет на телефон опекуна подтверждение SMS команды, до ввода кода аутентификации, а также ответ после действий.
+**AAPS** will only deliver on the most recent command. So, if you type “bolus 1.5”, and then, without authenticating, you send a new command “bolus 1”, it will ignore the earlier 1.5 command. AAPS will always send the caregiver's phone a response to confirm what the SMS command is before you are prompted to enter the authentication code, as well as a response following the action.
 
-Если не получен ответ на команду SMS, то это может быть по одной из следующих причин:
+If you don’t get a response to an SMS command it could be for one of these reasons:
 
-1) Сообщение не попало на телефон (проблемы с сетью). 2)  **AAPS** все еще обрабатывает запрос (_напр._ болюс, который отнимает некоторое время в зависимости от скорости обмена). 3) Телефон AAPS не имеет хорошего соединения Bluetooth с помпой при получении команды, и ему не удается выполнить команду (обычно это вызывает оповещение на телефоне AAPS). Невозможно остановить команду, которая уже подтверждена (аутентифицирована). Многие команды (кроме болюсов и записей об углеводах) могут быть легко отменены или их последствия смягчены. По поводу ошибок в болюсах и записях об углеводах, также можно принять меры. Например, внесена запись о 20 г углеводов, но ваш ребенок съел только 10 г, и нет возможности удалить ее непосредственно в телефоне **AAPS**, вы можете установить высокую временную цель или понизить % профиля, чтобы снизить агрессивность **AAPS**.
+1)  The message has not got through to the phone (network issues). 2)  **AAPS** is still in the process of processing the request (_e.g._ a bolus, which can take some time to deliver depending on your bolus rate). 3)  The AAPS phone does not have good bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the AAPS phone). You cannot stop a command once it has been authenticated. Many commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate the effects. For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
 
-#### В. Почему я получаю несколько SMS одного сообщения?
+#### Q. Why am I getting multiple SMS texts of the same message?
 
-Если же вы неоднократно получаете одно и то же сообщение (_напр._ переключатель профиля) возможно случайно возникло закольцовывание с другими приложениями. Например, с xDrip+. Если это так, убедитесь, что xDrip+ (или любое другое приложение) не загружает данные терапии в NS.
+If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. Например, с xDrip+. If so, please ensure that xDrip+ (or any other app) does not upload treatments to NightScout.
 
-#### В. Я только что настроил команды SMS, и теперь получаю слишком много текстовых сообщений. Можно уменьшить их частоту или остановить?
+#### Q. I’ve just set up SMS commands and I am now getting far too many text messages. Can I reduce the frequency, or make them stop?
 
-Использование SMS команд может генерировать много автоматических сообщений на телефон опекуна. Также могут приходить сообщения типа “basal profile in pump updated” (базальный профиль на помпе обновлен), если в **AAPS** настроена автоматизация. Полезно иметь тарифный план с неограниченным количеством SMS на телефоне AAPS (и на телефонах опекунов), а также отключить уведомления, оповещения или вибрации на SMS. Невозможно пользоваться SMS-командами и не получать эти сообщения. В связи с этим, альтернативный способ общения с ребенком (если он достаточно взрослый) может оказаться более предпочтительным. Альтернативные приложения для коммуникаций с опекунами **AAPS** включают Whatsapp, Lime, Telegram, и Facebook Messenger.
+Using SMS commands may generate a lot of automated messages from the AAPS phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your AAPS phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include Whatsapp, Lime, Telegram, and Facebook Messenger.
 
-#### В. Почему команды SMS не работают на моем телефоне Samsung?
+#### Q. Why are SMS commands not working on my Samsung phone?
 
-Были сообщения об остановке работы SMS команд после обновления на телефоне Galaxy S10. Решается путем отключения опции "отправлять SMS как сообщения чата".
+There was a report of SMS commands stopping after an update on a Samsung Galaxy S10 phone. This was solved by disabling ‘send as chat message’.
 
 
 ![изображение](images/remote-control-18.png)
 
-#### В. Как исправить проблемы с приложением Android Messages?
+#### Q. How can I fix issues with the Android Messages App?
 
-Если у вас возникают проблемы с отправкой или получением SMS-команд в приложении Android Messages, отключите сквозное шифрование как на телефоне опекуна, так и на детском телефоне:
+If you are having issues sending or receiving SMS commands with the Android Messages app, disable end-to-end encryption on both caregiver and dependent’s phones:
 
-●   Откройте конкретный SMS-диалог в приложении Messages
+●   Open the specific SMS conversation in Messages
 
-●   Выберите параметры в правом верхнем углу
+●   Select the options ellipsis in the top right corner
 
-●   выберите "Подробности”
+●   select “Details”
 
-●   Активируйте опцию "Отправлять только SMS и MMS”
+●   Activate “Only send SMS and MMS messages”
 
-(клиентaaps)=
-## 2) Клиент AAPS
+(aapsclient)=
+## AAPSClient
 
-_Обратите внимание, что **NSClient** теперь заменен на **AAPSClient** для AAPS версии 3. и выше, подробности см. в примечаниях к версиям._
+_Note that **NSClient** has been replaced by **AAPSClient** for AAPS version 3.2 and higher, check the version release notes for more information._
 
-Для версий AAPS старше AAPS 3.2, если у вас родительский Android-телефон, вы можете напрямую скачать и установить приложение [**AAPSClien**](https://github.com/nightscout/AndroidAPS/releases/). **AAPSClient** похож внешне на сам **AAPS**, но позволяет опекунам отправлять команды в **AAPS** дистанционно:
+For versions of AAPS which are older than AAPS 3.2, if you have a caregiver/parent Android phone you can directly download and install the [**AAPSClient**](https://github.com/nightscout/AndroidAPS/releases/) app. **AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver tabs that will remotely action commands in **AAPS**:
 
 ![изображение](images/remote-control-19.png)
 
-Можно [загрузить](https://github.com/nightscout/AndroidAPS/releases/) две версии приложения **AAPSClient** & **AAPSClient2**. Единственное различие между двумя версиями - наименование приложения. Что позволяет дважды устанавливать приложение **AAPSClient** на один и тот же телефон и следить за двумя разными пользователями или аккаунтами Nightscout одновременно.
+There are 2 versions of the app you can [download](https://github.com/nightscout/AndroidAPS/releases/), **AAPSClient** & **AAPSClient2**. The only difference between the two versions is the app name. This allows you to install the **AAPSClient** app twice on the same phone, to follow two different people or Nightscout accounts at the same time. To download AAPSClient, click on "app-AAPSClient-release" (it may be a newer version to that shown in the screenshot):
 
-![изображение](images/remote-control-20.png)
+![изображение](images/SMScommands/02_AAPSClient_download.png)
 
-Для загрузки AAPSClient, нажмите на app-AAPSClient-release-3.1.0.3.apk
+Then go to  _downloads_ on your computer. On Windows, -downloads_ will show the right hand ribbon:
 
-Затем перейдите в _загрузки_ на своем компьютере. В Windows, -downloads_ покажется лента справа:
+![изображение](images/SMScommands/03_AAPSClient_download_folder.png)
 
-![изображение](images/remote-control-21.png)
-
-После загрузки нажмите на _показать в папке_
-
-![изображение](images/remote-control-22.png)
+Once downloaded, click _show in folder_ to locate the file.
 
 Теперь приложение (apk) может быть либо:
 
-Перенесено при помощи кабеля USB на телефон опекуна; или перетащено в папку диска G, а затем добавлено на телефон опекуна после нажатия на app-AAPSClient-release-3.0.3.apk
+Transferred by a USB cable onto the follower phone; or Dragged into Google drive folder, and then added onto the follower phone by clicking on the "app-AAPSClient-release" file.
 
 ### Возможности AAPSClient включают:
 
@@ -307,7 +303,7 @@ _Обратите внимание, что **NSClient** теперь замен�
 Смарт-часы - полезный инструмент в управлении **AAPS** у детей. Возможны несколько различных конфигураций. Если AAPSClient установлен на родительский телефон,, приложение [AAPSClient WearOS](https://github.com/nightscout/AndroidAPS/releases/) может быть установлено на смарт-часах, сопряженных с родительским телефоном. На них будет отображаться текущая ГК, статус замкнутого цикла, возможность вписать углеводы, временные цели и изменения профиля. Возможности ввести болюс с приложения на WearOS не будет. Подробнее о смарт-часах [читайте здесь](smartwatches).
 
 (nightscout)=
-## 3) Nightscout
+## Nightscout
 
 Кроме того, что Nightscout является сервером в «Облаке», также есть специальное приложение **Nightscout**, которое можно загрузить непосредственно из App Store на iPhone. Для телефонов на Android нет специального приложения Nightscout и лучше использовать [**AAPSClient**](AAPSClient), или, если вам нужно только наблюдать и не отправлять терапию, то можете скачать и установить приложение [Nightwatch](link) из Playstore.
 
@@ -542,13 +538,13 @@ a)  команды **AAPSClient**/Nightscout/**SMS** не работают; ил
 
 Наберитесь терпения - **AAPS** Wear apk должен быть собран примерно через 10-20 минут, в зависимости от скорости подключения к Интернету.
 
-Устранение неполадок - если появилась ошибка "незапрошенные изменения" см [руководство по устранению неполадок](troubleshooting_androidstudio.md)
+### Устранение неполадок
 
-В процессе сборки полного приложения AAPS 3.2 (и в принципе любого подписанного приложения) Android Studio генерирует файл с расширением .json. Это приводит к ошибкам с "незапрошенными изменениями", когда вы пытаетесь создать следующее подписанное приложение, например **AAPS**wear. Самый быстрый способ решения это переход к папке, в которой было построено полное приложение AAPS, путь к папке, вероятно, выглядит как-то так:
+In the process of building the 3.2 full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. This then causes errors with [uncommitted changes](troubleshooting_androidstudio-uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. Самый быстрый способ решения это переход к папке, в которой было построено полное приложение AAPS, путь к папке, вероятно, выглядит как-то так:
 
 C:\Users\Your Name\StudioProjects\AndroidAPS\app\aapsclient\release.
 
-Удалите или переместите ненужный файл .json из этой папки. Затем попробуйте снова создать приложение **AAPS**. Если это не помогает, то детальная [инструкция по устранению неполадок](troubleshooting_androidstudio.md) поможет определить конкретный файл, вызывающий проблему; им также может оказаться файл хранилища ключей.
+Удалите или переместите ненужный файл .json из этой папки. Затем попробуйте снова создать приложение **AAPS**. If that doesn't work, the more detailed [troubleshooting guide](troubleshooting_androidstudio-troubleshooting-android-studio) will help you to identify the specific file causing the issue, which could also be your keystore file.
 
 #### Как настроить смарт-часы Samsung Galaxy 4 с **AAPS**
 
