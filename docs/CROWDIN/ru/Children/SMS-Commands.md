@@ -122,9 +122,9 @@
 
 - LOOP RESUME \* Ответ: Цикл возобновлен
 
-- LOOP CLOSED \* Response: Current loop mode: Closed Loop
+- ЦИКЛ ЗАМКНУТ \* Ответ: Текущий режим: Закрытый цикл
 
-- LOOP LGS \* Response: Current loop mode: Low Glucose Suspend
+- ПРИОСТАНОВКА НА НИЗКИХ \* Ответ: Текущий режим: Закрытый цикл
 
 ### Данные мониторинга
 
