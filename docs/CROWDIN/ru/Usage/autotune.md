@@ -1,17 +1,17 @@
-# How to use Autotune plugin (dev only)
+# Как использовать расширение Autotune (только для dev)
 
-Documentation about Autotune algorythm can be found in [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
+Подробнее об алгоритме Autotune можно прочитать в [документации OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
-Autotune plugin is an implementation of OpenAPS autotune algorythm within AAPS.
+Расширение Autotune - это реализация алгоритма autotune OpenAPS в среде AAPS.
 
-**Currently Autotune Plugin is only available in dev branch and with Engineering mode.**
+**В настоящее время модуль Autotune доступен только в ветке dev и в режиме разработчика.**
 
-## Autotune user interface
+## Интерфейс пользователя Autotune
 
 ![Autotune default screen](../images/Autotune/Autotune_1b.png)
 
-- You can select in the Profile dropdown menu the input profile you want to tune (by default your current active profile is selected)
-  - Note: each time you select a new profile, previous results will be removed and Tune days parameter will be set to default value
+- В выпадающем меню профилей можно выбрать профиль, который хотите настроить (по умолчанию выбран ваш текущий активный профиль)
+  - Примечание: каждый раз при выборе нового профиля, предыдущие данные будут удалены и параметр дней настройки Tune будет установлен в значение по умолчанию
 - Then Tune days is to select the number of days used in calculation to tune your profile. The minimum value is 1 day and the maximum value 30 days. This number should not be too small to get correct iterative and smooth results (above 7 days for each calculation)
   - Note: each time you change Tune days parameter, previous results will be removed
 - Last Run is a link that recover your latest valid calculation. If you didn't launch Autotune on current day, or if previous results was removed with a modification of calculation parameter above, then you can recover parameters and results of the latest successfull run.
