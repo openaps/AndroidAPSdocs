@@ -1,38 +1,40 @@
-# change configuration
+# Making changes to your AAPS configuration
 
-After you completed the setup wizard you don't need to run it again if you want to change only parts of the configuration.
+After you have completed the **Setup Wizard** you don't need to run the entire Wizard again if you want to only change parts of the configuration.
 
-You have got three choices too change the configuration depending on which level you want to change the configuration. All three choices change the same configuration. You can take the choice you want to every time.
+There are three routes to change the different configuration settings, which route you take is simply a matter of convenience, each route leads to the same configuration settings. 
 
-1. config builder,
-1. three dot menu on the right and select "preferences" and
-1. three dot menu on the right and select "plugin preferences".
+These are as follows: 
 
-Here we explain which option to use best for which use case.
+1. Config builder,
+1. Three dot menu on the right and select "preferences" or
+1. Three dot menu on the right and select "plugin preferences".
 
-## config builder
+Here we explain which option is most convenient for each situation:
 
-The config builder is used if you want to enable plugins and their visibility in the top level menu. You can decide on the visibilty itself because some plugins visibilty is not important for you though you can disable the visibilty.
+## Config builder
 
-Disabled plugins can not be made visible as this makes no sense at all.
+The **config builder** is used if you want to **enable plugins** and their **visibility** in the top level menu. If they are enabled, they will still run, you can decide if you want to be able to see them in the top menu or not. 
 
-You can see it as the base configurator after you used the setup wizard.
+Plugins which you have not enabled (_i.e._ disabled) plugins can not be made visible. For example, when you first start with **AAPS** on **objective 1**, you cannot yet use **automations**, so the **automations** plugin cannot be enabled and made visible in the top menu. 
 
-The documentation of the config builder is available [here](../Configuration/Config-Builder.md).
+**Config builder** is the easiest way to further modify your configuration after you have used the **Setup Wizard**.
 
-## preferences
+The documentation relating to the config builder is available [here](../Configuration/Config-Builder.md).
 
-The preferences dialog is  called via the top right three dot menu on the home screen of AAPS. It gives you the possibilty to change the configuration of all enabled plugins at once.
+## Preferences
 
-This is nice if you are not really shure where to look for an configuration option but a bit tedious if you know you want to change the configuration for just one plugin.
+The preferences dialogue can be reached via the top right three dot menu on the **home screen** of AAPS. It gives you the possibilty to change the configuration of **all enabled plugins at once**.
+
+This is a good route if you are not really sure where to look for an configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
 
 The documentation of the preferences is available [here](../Configuration/Preferences.md).
 
 
-## plugin preferences
+## Plugin preferences
 
-The plugin preferences dialog is  called via the top right three dot menu on the home screen of AAPS. It gives you the possibilty to change the configuration of all enabled plugins at once.
+The **plugin preferences** dialogue can be reached via the top right three dot menu on the home screen of AAPS. It provides the possibilty to change the configuration of all enabled plugins at once.
 
-This is nice if you know that you e.g. just want to change the configuration for BYODA. Then you select the tab BYODA in the top level menu off AAPS and then select in the top right three dot menu the "plugin preferences" entry. You are placed directly in the preferences dialog for the BYODA plugin.
+This is a good route if you know that _e.g._ you _just_ want to change the configuration for BYODA. Then, you would select the tab "BYODA" on the top menu of **AAPS**, and then once you are on the BYODA page, in the top right, select the three dot menu and then the "plugin preferences" entry. You are taken directly to the preferences dialogue specifically for the BYODA plugin.
 
-As this is a short cut of the general preferences dialog the documentation of the preferences is available [here](../Configuration/Preferences.md).
+This is a "short cut" to the general preferences dialogue, the documentation of the preferences is available [here](../Configuration/Preferences.md).
