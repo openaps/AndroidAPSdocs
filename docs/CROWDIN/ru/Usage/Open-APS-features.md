@@ -95,29 +95,29 @@ Here, you can choose if you want to use the [sensitivity detection](../Configura
 
 ### Enable SMB with high temp targets
 
-If this setting is enabled, SMB will be allowed, but not necessarily enabled, when there is a high temporary target active (defined as anything above 100mg/dl regardless of profile target). This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, SMBs can be disabled by setting a temp target above 100mg/dl. This option will also disable SMB regardless of what other condition is trying to enable SMB.
+Если включен этот параметр, SMB будут разрешены, но не обязательно включены, когда действует высокая временная цель (что-либо выше 100 мг/дл независимо от цели профиля). Эта опция нужна для отключения микроболюсов SMB, когда параметр отключен. Например, если эта опция отключена, микроболюсы можно отключить, установив временную цель выше 100mg/dl. Эта опция также отключает SMB независимо от того, какое другое условие пытается включить микроболюс.
 
-If this setting is enabled, SMB will only be enabled with a high temp target if Enable SMB with temp targets is also enabled.
+Если этот параметр включен, SMB будут включены только с высокой временной целью, если при этом также включены SMB с временными целями.
 
 (Open-APS-features-enable-smb-always)=
 
 ### Enable SMB always
 
-If this setting is enabled, SMB is enabled always (independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if “Enable SMB with high temp targets” is disabled and a high temp target is set SMBs will be disabled. For safety reasons, this option is only available for BG sources with a good filtering system for noisy data. Currently it is only an available option with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. If a BG value has too large of a deviation, the G5/G6 doesn’t send it and waits for the next value in 5 minutes.
+Если включена эта настройка, микроболюсы SMB работают всегда (независимо от активных углеводов COB, временных целей или болюсов). If this setting is enabled, the rest of the enable settings below will have no effect. Однако, если отключена настройка «Включить SMB с высокими временными целями» и задается высокая временная цель, SMB будут отключены. По соображениям безопасности, эта опция возможна только для источников ГК с хорошей системой фильтрации зашумленных данных. Currently it is only an available option with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Если значение ГК имеет слишком большое отклонение, G5/G6 не отправляет его и ожидает следующего значения через 5 минут.
 
-For other CGM/FGM like Freestyle Libre, ‘SMB always’ is deactivated until xDrip+ has a better noise smoothing plugin. You can find more [here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Для других систем мониторинга, таких как Freestyle Libre, функция ‘всегда включать SMB’ будет оставаться неактивной пока в xDrip+ не появится более адекватное расширение для сглаживания данных. Подробнее [здесь](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Enable SMB with COB
 
-If this setting is enabled, SMB is enabled when the COB is greater than 0.
+Если этот параметр включен, SMB включаются при активных углеводах COB больше 0.
 
 ### Enable SMB with temp targets
 
-If this setting is enabled, SMB is enabled when there is any temp target set (eating soon, activity, hypo, custom). If this setting is enabled but "Enable SMB with high temp targets" is disabled, SMB will be enabled when a low temp target is set (below 100mg/dl) but disabled when a high temp target is set.
+Если включена эта настройка, то SMB включаются при наличии любой временной цели (ожидаемый прием пищи, нагрузка, гипо, пользовательский). Если эта настройка включена, но отключено "Включить SMB с высокими временными целями", SMB будут включаться при низком значении цели (менее 100мг/дл), но отключены, если установлена высокая временная цель.
 
 ### Активировать супер микро болюс SMB после углеводов
 
-If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB has reached 0. For safety reasons, this option is only available for BG sources with a nice filtering system for noisy data. Currently it is only an available option with a Dexcom G5 or G6 if using the ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. If a BG value has too large of a deviation, the G5/G6 doesn’t send it and waits for the next value in 5 minutes.
+Если это включено, то микроболюсы SMB работают в течение 6 часов после внесения углеводов, даже если значение COB достигло 0. For safety reasons, this option is only available for BG sources with a nice filtering system for noisy data. Currently it is only an available option with a Dexcom G5 or G6 if using the ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Если значение ГК имеет слишком большое отклонение, G5/G6 не отправляет его и ожидает следующего значения через 5 минут.
 
 For other CGM/FGM like Freestyle Libre, 'Enable SMB after carbs' is deactivated until xDrip+ has a better noise smoothing plugin. You can find [more information here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
@@ -127,21 +127,21 @@ For other CGM/FGM like Freestyle Libre, 'Enable SMB after carbs' is deactivated 
 
 This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
-Making this value larger allows the SMB to be more aggressive. You should start with the default value of 30 minutes. After some experience, increase the value in 15 minutes increments and observe the effects over multiple meals.
+Увеличение этого значения позволяет микроболюсам SMB вести себя более агрессивно. Начать следует со значения по умолчанию в 30 минут. После некоторого опыта, увеличивайте это значение приращениями по 15 минут и наблюдайте за эффектом при многократном приеме пищи.
 
-It is recommended not to set the value higher than 90 minutes, as this would lead to a point where the algorithm might not be able to accommodate a decreasing BG with 0 U/h basal ('zero-temp'). You should also set alarms, especially if you are still testing new settings, which will warn you well before a hypo.
+Рекомендуется не устанавливать это значение выше 90 минут, так как существует вероятность достижения точки, после которой алгоритм не сможет контролировать снижающуюся гликемию при нулевом временном базале 0 ед/ч ('zero-temp'). Следует также установить оповещения о низкой ГК, особенно если вы только тестируете новые настройки.
 
 Default value: 30 min.
 
 ### Включить непредвиденный прием пищи UAM
 
-With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful if you forget to tell AAPS about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increasements caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decrease, it can stop SMBs earlier.
+With this option enabled, the SMB algorithm can recognize unannounced meals. Это полезно, если вы забыли сообщить алгоритму AAPS о съеденных углеводах или неверно оценили их количество или съеденное богато жирами и белками и действует дольше чем ожидалось. Без ввода углеводов алгоритм UAM может распознать быстрое увеличение глюкозы, вызванное углеводами, адреналином и т. д., и попытается компенсировать его при помощи микроболюсов SMB. И наоборот: если гликемия падает быстро, то настройка поможет остановить SMB раньше времени.
 
 **Therefore, UAM should always be activated when using SMB.**
 
 ### Высокая врем. цель temptarget повышает чувствительность
 
-If you have this option enabled, the insulin sensitivity will be increased while having a temporary target above 100 mg/dl or 5.6 mmol/l. This means, the ISF will rise while IC and basal will decrease. This will effectively make AAPS less aggressive when you set a high temp target.
+Если эта опция включена, то чувствительность инсулина будет увеличена при временной цели более 100 мг/дл или 5.6 ммол/л. This means, the ISF will rise while IC and basal will decrease. Это сделает поведение алгоритма AAPS менее агрессивным, когда вы устанавливаете высокую временную цель.
 
 ### Низкая временная цель temptarget снижает чувствительность
 
