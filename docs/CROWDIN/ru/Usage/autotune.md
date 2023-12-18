@@ -12,11 +12,11 @@
 
 - В выпадающем меню профилей можно выбрать профиль, который хотите настроить (по умолчанию выбран ваш текущий активный профиль)
   - Примечание: каждый раз при выборе нового профиля, предыдущие данные будут удалены и параметр дней настройки Tune будет установлен в значение по умолчанию
-- Then Tune days is to select the number of days used in calculation to tune your profile. The minimum value is 1 day and the maximum value 30 days. This number should not be too small to get correct iterative and smooth results (above 7 days for each calculation)
-  - Note: each time you change Tune days parameter, previous results will be removed
-- Last Run is a link that recover your latest valid calculation. If you didn't launch Autotune on current day, or if previous results was removed with a modification of calculation parameter above, then you can recover parameters and results of the latest successfull run.
-- Warning show you for example some information about selected profile (if you have several IC values or several ISF values)
-  - Note: Autotune calculation works with only a single IC and a single ISF value. There is currently no existing Autotune algorythm to tune a circadian IC or circadian ISF. If your input profile  has several values, you can see in warning section the average value taken into account to tune your profile.
+- Затем необходимо выбрать количество дней, используемых при расчете для настройки профиля. Минимальное значение составляет 1 день и максимальное 30 дней. Это число не должно быть слишком маленьким, чтобы получить правильные итеративные и сглаженные результаты (более 7 дней для каждого расчета)
+  - Примечание: каждый раз при изменении параметра дней настройки предыдущие результаты будут удалены
+- Последнее выполнение - это ссылка, восстанавливающая предыдущий корректный расчёт. Если вы не запускали Autotune в текущий день, или если предыдущие результаты были удалены с модификацией параметра вычисления выше, то вы можете восстановить параметры и результаты последнего успешного запуска.
+- Предупреждение показывает некоторую информацию о выбранном профиле (если у вас есть несколько значений IC или несколько значений ISF)
+  - Примечание: Расчет Autotune работает только с одним углеводным коэффициентом и одним значением ISF. В настоящее время не существует алгоритма Autotune для настройки суточных почасовых ISF или углеводных коэффициентов. Если профиль имеет несколько значений, вы увидите предупреждение о среднем значении, принятом для настройки профиля.
 - Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, DIA, IC, ISF, basal and target)
   - Note: Autotune will only tune your IC (single value), ISF (single value) and basal (with circadian variation). Units, DIA and target will remain unchanged in output profile.
 
