@@ -46,15 +46,9 @@ Preparing <preparing.md>
 Setting up the reporting server <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
 Dedicated Google account for AAPS(optional)<./Installing-AndroidAPS/Dedicated-Google-account-for-AAPS.md>
 Building AAPS <./Installing-AndroidAPS/building-AAPS.md>
-<<<<<<< Updated upstream
-Installing AAPS <./Installing-AndroidAPS/installing-AAPS.md>
-Setup Wizard <./Installing-AndroidAPS/setup-wizard.md>
-Change configuration <./Installing-AndroidAPS/change-configuration.md>
-=======
 Transferring and Installing AAPS <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
-Configuring the AAPS loop<./Installing-AndroidAPS/configuring-the-AAPS-loop.md>
-
->>>>>>> Stashed changes
+Setup Wizard<./Installing-AndroidAPS/setup-wizard.md>
+Change AAPS configuration<./Installing-AndroidAPS/configuring-the-AAPS-loop.md>
 Completing the objectives <./Usage/completing-the-objectives.md>
 
 ```
