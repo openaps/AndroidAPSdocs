@@ -1,8 +1,8 @@
-# Как использовать расширение Autotune (только для ветки разработчиков (dev))
+# Как использовать модуль Autotune (только для ветки разработчиков (dev))
 
 Подробнее об алгоритме Autotune можно прочитать в [документации OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
-Расширение Autotune - это реализация алгоритма autotune OpenAPS в среде AAPS.
+Модуль Autotune - это реализация алгоритма autotune OpenAPS в среде AAPS.
 
 **В настоящее время модуль Autotune доступен только в ветке dev и в режиме разработчика.**
 
@@ -41,90 +41,90 @@
 
 - Кнопка "Сравнить профили" открывает окно сравнения профилей. Профиль на входе синий, а на выходе ("Настроенный") - красный.
 
-  - Note: in the example below input profile has circadian variation for IC and ISF, but output calculated profile has a single value. If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](autotune-circadian-ic-or-isf-profile) below.
+  - Примечание: в примере ниже профиль на входе имеет циклические суточные отклонения для IC и ISF, но профиль на выходе имеет одно значение. Если вам важно получить выходной профиль с меняющимися значениями в зависимости от времени суток см. [Посуточный профиль для IC или ISF](autotune-circadian-ic-or-isf-profile) ниже.
 
   ![Autotune Compare profiles](../images/Autotune/Autotune_5.png)
 
-- If you trust results (low percentage of variation between input profile and output profile), you can click on "Activate profile" button and then click on OK to validated.
+- Если вы доверяете результатам (низкий процент изменений между входным профилем и выходным профилем), нажмите на кнопку "Активировать профиль" и затем на OK для подтверждения.
 
-  - Activate Tuned profile will automatically create a new profile "Tuned" in your Local profile plugin.
-  - If you already have a profile named "Tuned" in your local profile plugin, then this profile will be updated with calculated Autotune profile before the activation
+  - Активация профиля Tuned автоматически создаст новый профиль "Tuned" в модуле Локальный профиль.
+  - Если у вас уже есть профиль с названием "Tuned" (подстроенный) в локальном модуле профиля, то он будет обновлен на рассчитанный профиль Autotune до активации
 
   ![Autotune Activate profile](../images/Autotune/Autotune_6.png)
 
-- If you think Tuned profile must be adjusted (for example if you think some variation are too important), then you can click on "Copy to local profile" button
+- Если вы считаете, что профиль Tuned должен быть скорректирован (например, если некоторые вариации слишком важны), вы можете нажать на кнопку "Копировать в локальный профиль"
 
-  - A new profile with the prefix "Tuned" and the date and time of the run will be created in local profile plugin
+  - Новый профиль с префиксом "Tuned" и датой и временем запуска будет создан в локальном модуле профиля
 
 ![Autotune Copy to local profile](../images/Autotune/Autotune_7.png)
 
-- You can then select local profile to edit the Tuned profile (it will be selected by default when you open Local profile plugin)
+- Затем вы можете выбрать локальный профиль для редактирования подстроенного профиля Tuned (он будет выбран по умолчанию при открытии локального модуля профиля)
 
-  - the values in local profile will but rounded in the user interface to your pump capabilities
+  - значения в локальном профиле, будут округлены в соответствии с возможностями вашей помпы
 
   ![Autotune local profile update](../images/Autotune/Autotune_8.png)
 
-- If you want to replace your input profile with Autotune result, click on "Update input profile" button and validate the Popup with OK
+- Если вы захотите заменить свой профиль на результат Autotune, нажмите на кнопку "Обновить профиль ввода" и нажмите OK во всплывшем окне
 
-  - Note: if you click on "Activate profile" after "Update input profile", then you will activate your updated profile and not the default "Tuned" profile?
+  - Примечание: если нажать на "Активировать профиль" после "Обновить входной профиль", то вы активируете свой обновленный профиль, а не "Tuned" по умолчанию.
 
   ![Autotune Update input profile](../images/Autotune/Autotune_9.png)
 
-- If you have updated your input profile, then the "Update input profile" button is replaced by "Revert input profile" button (see screenshot below). You can that way immediatly see if your current input profile in Local profile plugin already include the result of last run or not. You also have the possibility to recover you input profile without autotune result with this button
+- Если вы обновили свой профиль ввода, то кнопка «Обновить профиль ввода» заменяется кнопкой «Вернуть профиль ввода» (см. снимок экрана ниже). Вы можете сразу же увидеть, содержит ли ваш текущий профиль ввода в локальном модуле результат последнего запуска или нет. Также есть возможность восстановить профиль ввода без результатов autotune с помощью этой кнопки
 
   ![Autotune Update input profile](../images/Autotune/Autotune_10.png)
 
 
 
-## Autotune settings
+## Настройки Autotune
 
 (autotune-plugin-settings)=
 
-### Autotune plugin settings
+### Настройки модуля Autotune
 
 ![Autotune default screen](../images/Autotune/Autotune_11.png)
 
-- Automation Switch Profile (default Off): see [Run Autotune with an automation rule](autotune-run-autotune-with-an-automation-rule) below. If you change this setting to On, the input profile will automatically be updated by the Tuned profile, and it will be activated.
-  - **Be Carefull, you must trust and verified during several following days that after an update and activation of Tuned profile without modification, it improves your loop**
+- Переключение профиля при Автоматизации (по умолчанию выключено): см. [Запуск Autotune с правилом автоматизации](autotune-run-autotune-with-an-automation-rule) ниже. Если изменить эту настройку на Включить, профиль ввода будет автоматически обновлен профилем Tuned и активирован.
+  - **Будьте внимательны, в течение нескольких следующих дней следите, чтобы после обновления и активации настроенного профиля ваша система заработала лучше по сравнен с профилем без изменений**
 
-- Categorize UAM as basal (default On): This setting is for the users using AndroidAPS without any carbs entered (Full UAM). It will prevent (when Off) to categorize UAM as basal.
-  - Note: if you have at least one hour of Carbs absorption detected during one day, then all data categorized as "UAM" will be categorized as basal, whatever this setting (On or Off)
-- Number of days of data (default 5): You can define default value with this setting. Each time your select a new profile in Autotune plugin, Tune days parameter will be replaced by this default value
-- Apply average result in circadian IC/ISF (default Off): see [Circadian IC or ISF profile](autotune-circadian-ic-or-isf-profile) below.
+- Классифицировать UAM как базал (по умолчанию Вкл.): Этот параметр предназначен для пользователей, использующих AAPS без ввода углеводов (Полный UAM). Это помешает (когда Выключено) классифицировать UAM как базал.
+  - Примечание: если в течение одного дня обнаружен по крайней мере один час абсорбции углеводов, тогда все данные, классифицированные как UAM, будут классифицированы как basal, вне зависимости от того, включен параметр или выключен
+- Количество дней данных (по умолчанию 5): Для этого параметра можно задать значение по умолчанию. Каждый раз, когда вы выбираете новый профиль в модуле Autotune, параметр "дней для анализа" будет заменен на это значение по умолчанию
+- Применить средний суточный результат IC/ISF (по умолчанию Off): см. [Circadian IC или ISF профиль](autotune-circadian-ic-or-isf-profile) ниже.
 
 ### Другие настройки
 
-- Autotune also uses Max autosens ratio and Min autotsens ratio to limit variation. You can see and adjust these values in Config Builder > Sensitivity detection plugin > Settings > Advanced Settings
+- Autotune also uses Max autosens ratio and Min autotsens ratio to limit variation. Эти параметры можно увидеть и настроить в Конфигураторе > Модуль определения чувствительности > Настройки > Расширенные настройки
 
   ![Autotune default screen](../images/Autotune/Autotune_12.png)
 
 
 
-## Advanced feature
+## Дополнительные возможности
 
-(autotune-circadian-ic-or-isf-profile)=
+(autotune--циркадный-профиль-ic-или-isf)=
 
-### Circadian IC or ISF profile
+### Циркадный профиль IC или ISF
 
-- If you have important variation of IC and/or you ISF in your profile, and you fully trust in your circadian time and variation, then you can set "Apply average result in circadiant IC/ISF"
+- Если в профиле присутствуют существенные вариации IC и/или ISF, и вы полностью доверяете своим циркадным биоритмам, то можно активировать параметр "Применять средний результат в циркадных IC/ISF"
 
-  - Note that Autotune calculation will always be done with a single value, and circadian variation will not be tuned by Autotune. This setting only apply average variation calculated for IC and/or ISF on your circadian values
+  - Обратите внимание, что вычисление Autotune всегда будет выполняться с одним значением, а циркадные вариации не будут подстроены при помощи Autotune. This setting only apply average variation calculated for IC and/or ISF on your circadian values
 
-- See on screenshot below Tuned profile with Apply average variation Off (on the left) and On (on the right)
+- На снимке экрана ниже настроенный профиль с отключенной опцией "применять средний вариант значения" слева и с включенной - справа
 
   ![Autotune default screen](../images/Autotune/Autotune_13.png)
 
 
 
-### Tune specific days of the week
+### Настройка определенных дней недели
 
-- If you click on the checkbox with the eye on the right of "Rune days" parameter, you will see the day selection. You can specify which day of the week should be included in Autotune calculation (in screenshot below you can see an example for "working days" with Saturday and Sunday removed from autotune calculation)
-  - If the number of day included in Autotune calculation is lower than the number of Tune days, then you will see how many days will be included on the right of Tune days selector (10 days in the example below)
-  - This setting gives good results only if the number of remaining days is not to small (for example if you Tune a specific profile for week end days with only Sunday and Saturday selected, you should select a minimum of 21 or 28 Tune days to have 6 or 8 days included in Autotune calculation)
+- Если нажать на галочку с глазом справа от параметра "Дней для анализа", вы увидите дни недели для отбора. Можно указать, какой день недели войдет в расчет Autotune (на снимке экрана пример для "рабочих дней" с неотмеченными для расчета autotune субботой и воскресеньем)
+  - Если количество дней, включенных в расчет Autotune меньше, чем количество дней для настройки то вы увидите, сколько дней будет включено справа от селектора настраиваемых дней (10 дней в примере ниже)
+  - Этот параметр дает хорошие результаты только в том случае, если количество оставшихся дней не слишком мало (например, если вы настраиваете конкретный профиль на выходные дни только с выбранным воскресеньем и субботой, следует выбрать не менее 21 или 28 дней, чтобы было 6 или 8 дней для расчета Autotune)
 
 ![Autotune default screen](../images/Autotune/Autotune_14b.png)
 
-- During Autotune calculation, you can see the progress of the calculations ("Partial result day 3 / 10 tuned" on example below)
+- Во время вычисления Autotune вы можете увидеть прогресс вычислений ("Частичный результат дня 3/10 для расчета" на примере внизу)
 
   ![Autotune default screen](../images/Autotune/Autotune_15b.png)
 
