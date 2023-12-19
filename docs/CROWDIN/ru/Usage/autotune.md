@@ -1,4 +1,4 @@
-# Как использовать расширение Autotune (только для dev)
+# Как использовать расширение Autotune (только для ветки разработчиков (dev))
 
 Подробнее об алгоритме Autotune можно прочитать в [документации OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
@@ -17,29 +17,29 @@
 - Последнее выполнение - это ссылка, восстанавливающая предыдущий корректный расчёт. Если вы не запускали Autotune в текущий день, или если предыдущие результаты были удалены с модификацией параметра вычисления выше, то вы можете восстановить параметры и результаты последнего успешного запуска.
 - Предупреждение показывает некоторую информацию о выбранном профиле (если у вас есть несколько значений IC или несколько значений ISF)
   - Примечание: Расчет Autotune работает только с одним углеводным коэффициентом и одним значением ISF. В настоящее время не существует алгоритма Autotune для настройки суточных почасовых ISF или углеводных коэффициентов. Если профиль имеет несколько значений, вы увидите предупреждение о среднем значении, принятом для настройки профиля.
-- Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, DIA, IC, ISF, basal and target)
-  - Note: Autotune will only tune your IC (single value), ISF (single value) and basal (with circadian variation). Units, DIA and target will remain unchanged in output profile.
+- Проверьте вкладку профиля и убедитесь, что все величины установлены корректно (единицы, DIA, IC, ISF, базал и цели)
+  - Примечание: Autotune подстроит только углеводный коэффициент IC (единичное значение), ISF (единичное значение) и базальный профиль (с вариацией в пределах суток). Единицы, продолжительность действия инсулина и цель останутся неизменными в итоговом профиле.
 
-- "Run Autotune" will launch Autotune calculation with selected profile and the number of Tune days
-  - Note: Autotune calculation can take a long time. Once launched, you can switch to another view (home, ...) and come back later in Autotune plugin to see results
+- "Запустить Autotune" запустит расчет Autotune с выбранным профилем и количеством дней, выбранных для подстройки
+  - Примечание: Расчет Autotune может занять длительное время. После запуска autotune можно переключиться на другое окно (главый экран и. п., ...) и вернуться позже в Autotune, чтобы увидеть результаты
 
 ![Autotune Run start](../images/Autotune/Autotune_2b.png)
 
-- Then during the run you will see intermediate results below
+- Затем во время запуска вы увидите промежуточные результаты
 
-  - Note: During run, settings are locked, so you cannot change anymore selected input profile or the number of day. You will have to wait the end of current calculation if you want to launch another run with other parameters.
+  - Примечание: Во время работы Autotune настройки заблокированы, поэтому изменить выбранный входной профиль или количество суток, участвующих в анализе, уже нельзя. Если требуется запустить другой анализ с другими параметрами, дождитесь окончания текущего расчета.
 
   ![Autotune during run](../images/Autotune/Autotune_3b.png)
 
-- When Autotune calculation is finished, you will see the result (Tuned profile) and four buttons below.
+- По завершении вычисления Autotune вы увидите результат - настроенный профиль (Tuned profile) и четыре кнопки.
 
 ![Autotune Result](../images/Autotune/Autotune_4b.png)
 
-- It's important to always compare input profile (column "Profile"), output profile (column "Tuned") and the percentage of variation for each value (Column "%").
+- Важно всегда сравнивать входной профиль (столбец "Профиль"), выходной профиль (столбец "Настроено") и процент изменений каждого значения (столбец "%").
 
-- For basal rates, you also have the number of "missing days". You have missing days when Autotune don't have enough data categorized as "Basal" to tune basal rate for this period (for example after each meal when you have carbs absorption). This number should be as low as possible especially when basal is important (for example during the night or at the end of the afternoon)
+- Для базальной скорости имеется "количество недостающих дней". Недостающие дни появляются когда Autotune не хватает данных в категории «Basal» для настройки базовой скорости за этот период (например, после каждой еды, когда идет поглощение углеводов). Это число должно быть как можно более низким, особенно если базал важен (например, в ночь или в конце второй половине дня)
 
-- The "Compare profiles" button open the profile comparator view. Input profile is in blue, and output profile (named "Tuned") is in red.
+- Кнопка "Сравнить профили" открывает окно сравнения профилей. Профиль на входе синий, а на выходе ("Настроенный") - красный.
 
   - Note: in the example below input profile has circadian variation for IC and ISF, but output calculated profile has a single value. If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](autotune-circadian-ic-or-isf-profile) below.
 
