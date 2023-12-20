@@ -132,25 +132,25 @@
 
 (autotune-run-autotune-with-an-automation-rule)=
 
-## Run Autotune with an automation rule
+## Запустить Autotune с правилом автоматизации
 
-First step is to define correct trigger for an automation rule with Autotune:
+Первый шаг заключается в определении правильной отправной точки (триггера) для правила автоматизации с автонастройкой:
 
-Note: for more information on how to set an automation rule, see [here](./Automation.md).
+Примечание: подробнее о создании правил для автоматизации см [здесь](./Automation.md).
 
-- You should select Recurring time trigger: only run Autotune once per day, and autotune is designed to be runned daily (each new run you shift one day later and quickly profile modification should be tiny)
+- Следует выбрать время повторения триггера: запускать Autotune только один раз в сутки, ежедневно (после каждого нового выполнения Autotune смещать график на день вперед и делать небольшие быстрые модификации профиля)
 
   ![Autotune default screen](../images/Autotune/Autotune_16.png)
 
-- It's better at the beginning to run Autotune during the day to be able to check results. If you want to run Autotune during the night, you have to select in the trigger 4AM or later to include current day in next Autotune Calculation.
+- Вначале лучше запускать Autotune днем, чтобы иметь возможность проверить результаты. Если вы хотите запустить Autotune ночью, в триггере следует выбрать 4 часа ночи или позже, чтобы включить текущий день в следующий запуск Autotune.
 
   ![Autotune default screen](../images/Autotune/Autotune_17.png)
 
-- Then you can select "Run Autotune" Action in the list
+- Затем можно выбрать действие "Запустить Autotune" из списка
 
   ![Autotune default screen](../images/Autotune/Autotune_18.png)
 
-- You can then select Autotune Action to adjust parameters for your run. Default parameters are "Active Profile", default Tune days value defined in Autotune Plugin preferences, and All days are selected.
+- Затем выберите Действие Autotune чтобы настроить параметры запуска. Параметры по умолчанию - "Активный профиль", значение дней в настройках модуля Autotune по умолчанию - выбраны все дни.
 
   ![Autotune default screen](../images/Autotune/Autotune_19b.png)
 
