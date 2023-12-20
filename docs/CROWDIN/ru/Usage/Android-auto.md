@@ -13,10 +13,10 @@ AAPS способен отправлять информацию в качест�
 
 AAPS uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of Auto Audio in the car.
 
-That means that
+Это означает, что
 
 * you must configure AAPS to use system notifications for alerts and notifications and
-* as AAPS is an unoffical App allow the use of "unknown sources" with Android Auto.
+* поскольку AAPS неофициальное приложени, то дать разрешение для "неизвестных источников" с Android Auto.
 
 ![AAPS CGM data on Android Auto](../images/android_auto_01.png)
 
