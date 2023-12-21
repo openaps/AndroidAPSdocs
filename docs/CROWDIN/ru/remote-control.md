@@ -98,81 +98,81 @@
 
 4) **Настройки AAPS:**
 
-i) Now that the phone settings have been checked, in the **AAPS** app itself, use the left hand hamburger menu to navigate to Config Builder:
+i) После проверки настроек телефона, в самом приложении **AAPS**, через левое верхнее меню перейдите в Конфигуратор:
 
 ![изображение](images/remote-control-09.png)
 
-ii) Enable “SMS communicator” by checking the boxes, then click the “cog” to get to the SMS communicator preferences screen:
+ii) Включите «SMS-коммуникатор», установив флажок, затем нажмите «шестеренку» и получите доступ к экрану настройки SMS-коммуникатора:
 
 ![изображение](images/remote-control-10.png)
 
-_Note - as an alternative route to Config Builder, you can also use the new “SMS Communicator tab” at the top of the AAPS screen, then right click on the custom right hand hamburger menu for that page, to get to the SMS communicator preferences screen._
+_Примечание. В качестве альтернативного пути к Конфигуратору можно также использовать новую вкладку «SMS-коммуникатор» в верхней части окна AAPS, затем щелкните правой кнопкой мыши по контекстному меню справа для этой страницы, чтобы перейти к настройкам SMS коммуникатора._
 
-iii) On the preferences screen enable “allow remote commands via SMS”:
+iii) На экране настроек включите «разрешить удаленные команды с помощью SMS»:
 
 ![изображение](images/remote-control-11.png)
 
-iv) Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
+iv) Введите номер телефона опекуна/родителя. Включите код страны и исключите первый "0" номера телефона, как показано на примерах:
 
-UK phone number: +447976304596
+Номер телефона великобритании: +447976304596
 
-US phone number: +11234567890
+Номер телефона сша: +11234567890
 
-FR phone number:  +33612344567
+Номер телефона франции: +33612344567
 
-_etc._
+_и т. д._
 
-Note that the “+” in front of the number may or may not be required based on your location. To determine this, send a sample text which will show the received format in the SMS Communicator tab.
+Обратите внимание, что «+» перед номером может быть обязательным или не потребуется в зависимости от вашего местоположения. Для определения этого отправьте тестовое сообщение, которое будет отображать полученный формат на вкладке SMS Communicator.
 
-If you have more than one phone number to add, separate them by semicolons, with NO space between numbers (this is critical!). Select “OK”:
+Если у вас более одного номера телефона, разделите их точкой с запятой БЕЗ пробела между цифрами (это критично!). Выберите "OK":
 
 
 ![изображение](images/remote-control-12.png)
 
-v) Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
+v) Выберите PIN-код, который вы (и другие опекуны) будут использовать в конце кода аутентификатора при отправке SMS-команды.
 
-PIN requirements are:
+Требования к PIN-коду:
 
-•3 to 6 digits
+•от 3 до 6 цифр
 
-•not the same digits (_i.e._ 1111 or 1224)
+•не одинаковые цифры (_напр._ 1111 или 1224)
 
-•not sequential numbers (_i.e._ 1234)
+•не последовательные цифры (_напр._ 1234)
 
 ![изображение](images/remote-control-13.png)
 
-vi) On the preferences screen select “Authenticator setup”
+vi) На экране настроек выберите «Настройка Аутентификации»
 
-●   Follow the step-by-step instructions on the screen.
+● Следуйте пошаговым инструкциям на экране.
 
-●   Open your installed authenticator app on the _caregiver’s phone_ set up a new connection and
+● Откройте установленное приложение-аутентификатор на телефоне _опекуна_ создайте новое соединение и
 
-●   Use the caregiver phone to scan the QR code provided by **AAPS**, when prompted.
+● Телефоном опекуна сканируйте QR-код от **AAPS**, при подсказке.
 
-●   Test the one-time passcode from the authenticator app on the caregiver phone followed by your PIN:
+● Проверьте одноразовый код доступа от аутентификатора на телефоне опекуна, за которым следует ваш PIN:
 
 Пример:
 
-The token from the authenticator app is 457051
+Маркер из приложения идентификации-457051
 
-Your mandatory PIN is 2401
+Ваш обязательный PIN-код 2401
 
-Code to check: 4570512401
+Код для проверки: 4570512401
 
-If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. The process is now complete, there is no “OK” button you need to press after entering the code:
+Если запись правильна, красный текст «WRONG PIN» автоматически изменится на «OK». Процесс завершен, нет кнопки "OK", которую нужно нажать после ввода кода:
 
 
 ![изображение](images/remote-control-14.png)
 
-You should now be set up with SMS commands.
+Теперь все готово для работы с помощью SMS-команд.
 
 ### Первые шаги работы с помощью SMS команд
 
-1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the AAPS phone. You should get a response similar to that shown here:
+1) Чтобы проверить правильность настройки, отправьте «bg» в качестве SMS-сообщения с телефона опекуна на телефон AAPS. Вы должны получить ответ, похожий на этот:
 
 ![изображение](images/remote-control-15.png)
 
-2)  Now try an SMS command that requires the authenticator. To do this, send a text from the caregiver’s phone with the required command to the**AAPS** phone (_e.g._ “target hypo”). The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by an additional secret **PIN** known only to caregivers/followers (a string of ten digits in total, assuming your PIN is only 4 digits).
+2) Теперь попробуйте команду SMS, которая требует аутентификатора. Для этого с телефона опекуна отправьте смс с нужной командой на телефон с **AAPS** (_напр._ "target hypo" (цель гипо)). The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by an additional secret **PIN** known only to caregivers/followers (a string of ten digits in total, assuming your PIN is only 4 digits).
 
 This example is shown below, with the SMS command “target hypo” to set a hypo temp target:
 
@@ -276,7 +276,7 @@ For versions of AAPS which are older than AAPS 3.2, if you have a caregiver/pare
 
 ![изображение](images/remote-control-19.png)
 
-There are 2 versions of the app you can [download](https://github.com/nightscout/AndroidAPS/releases/), **AAPSClient** & **AAPSClient2**. The only difference between the two versions is the app name. This allows you to install the **AAPSClient** app twice on the same phone, to follow two different people or Nightscout accounts at the same time. To download AAPSClient, click on "app-AAPSClient-release" (it may be a newer version to that shown in the screenshot):
+There are 2 versions of the app you can [download](https://github.com/nightscout/AndroidAPS/releases/), **AAPSClient** & **AAPSClient2**. The only difference between the two versions is the app name. This allows you to install the **AAPSClient** app twice on the same phone, to follow two different people or Nightscout accounts at the same time. Для загрузки AAPSClient, нажмите на "app-AAPSClient-release" (это может быть более новая версия, чем на снимке экрана):
 
 ![изображение](images/SMScommands/02_AAPSClient_download.png)
 
@@ -284,11 +284,11 @@ Then go to  _downloads_ on your computer. On Windows, -downloads_ will show the 
 
 ![изображение](images/SMScommands/03_AAPSClient_download_folder.png)
 
-Once downloaded, click _show in folder_ to locate the file.
+После загрузки нажмите _показать в папке_ для поиска файла.
 
 Теперь приложение (apk) может быть либо:
 
-Transferred by a USB cable onto the follower phone; or Dragged into Google drive folder, and then added onto the follower phone by clicking on the "app-AAPSClient-release" file.
+Перенесено при помощи кабеля USB на телефон опекуна; или перетащено в папку Google диска, а затем добавлено на телефон опекуна после нажатия на app-AAPSClient-release-3. apk.
 
 ### Возможности AAPSClient включают:
 
@@ -540,11 +540,11 @@ a)  команды **AAPSClient**/Nightscout/**SMS** не работают; ил
 
 ### Устранение неполадок
 
-In the process of building the 3.2 full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. This then causes errors with [uncommitted changes](troubleshooting_androidstudio-uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. Самый быстрый способ решения это переход к папке, в которой было построено полное приложение AAPS, путь к папке, вероятно, выглядит как-то так:
+В процессе сборки полного приложения **AAPS** 3.2 (и в принципе любого подписанного приложения) Android Studio генерирует файл с расширением .json. Это приводит к ошибкам с [незапрошенными изменениями](troubleshooting_androidstudio-uncommitted-changes), когда создается следующее подписанное приложение, например **AAPS**wear. Самый быстрый способ решения это переход к папке, в которой было построено полное приложение AAPS, путь к папке, вероятно, выглядит как-то так:
 
 C:\Users\Your Name\StudioProjects\AndroidAPS\app\aapsclient\release.
 
-Удалите или переместите ненужный файл .json из этой папки. Затем попробуйте снова создать приложение **AAPS**. If that doesn't work, the more detailed [troubleshooting guide](troubleshooting_androidstudio-troubleshooting-android-studio) will help you to identify the specific file causing the issue, which could also be your keystore file.
+Удалите или переместите ненужный файл .json из этой папки. Затем попробуйте снова создать приложение **AAPS**. Если это не помогает, то детальная [инструкция по устранению неполадок](troubleshooting_androidstudio-troubleshooting-android-studio) поможет определить конкретный файл, вызывающий проблему; им также может оказаться файл хранилища ключей.
 
 #### Как настроить смарт-часы Samsung Galaxy 4 с **AAPS**
 
