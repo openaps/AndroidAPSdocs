@@ -43,7 +43,7 @@ The full closed loop system may **not** be **for everyone**:
 
 ## Pre-requisites for full closed looping
 
-The main attraction of full closed looping would be that you could get close to the dream of an artificial pancreas. Indeed, it promises very easy everyday use. **“Just eat!”**
+L’intérêt principal de la boucle fermée complète serait que vous pourriez vous approcher du rêve d’un pancréas artificiel. Indeed, it promises very easy everyday use. **“Just eat!”**
 
 ### Well-tuned hybrid closed loop
 
