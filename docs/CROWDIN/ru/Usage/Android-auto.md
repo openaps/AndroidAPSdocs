@@ -2,7 +2,7 @@
 
 AAPS способен отправлять информацию в качестве сообщения непосредственно в Android Auto в автомобиле.
 
-:::{admonition} version and last change information :class: dropdown date of last edit: 07/05/2023
+:::{admonition} версия информация о изменениях :class: выпадающий дата редактирования: 07/05/2023
 
 версии, используемые для документации:
 
@@ -11,79 +11,79 @@ AAPS способен отправлять информацию в качест�
 
 ## Что потребуется:
 
-AAPS uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of Auto Audio in the car.
+AAPS использует функцию Android Auto, которая позволяет отправлять сообщения из приложений на мобильном устройстве на дисплей Auto Audio в автомобиле.
 
 Это означает, что
 
-* you must configure AAPS to use system notifications for alerts and notifications and
+* следует разрешить AAPS работу с системными уведомлениями
 * поскольку AAPS неофициальное приложени, то дать разрешение для "неизвестных источников" с Android Auto.
 
-![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+![Данные AAPS CGM на Android Auto](../images/android_auto_01.png)
 
-(Android-auto-AAPS-settings-for-android-auto)=
+(Параметры-AndroidAPS-для-Android-Auto)=
 
-## use system notifications in AAPS for alerts and notifications
+## для оповещений и предупреждений включите системные уведомления
 
-Open 3-dot-menu on top right of home screen and selecting **Preferences**
+Откройте меню в правом верхнем углу экрана и выберите **Настройки**
 
-![Use system notifications for alerts and notifications](../images/android_auto_02.png)
+![Использовать системные уведомления для предупреждений и уведомлений](../images/android_auto_02.png)
 
-In **Local Alerts** activate **Use system notifications for alerts and notifications**
+В **Локальных оповещениях** активируйте **Использовать системные уведомления для оповещений и уведомлений**
 
-![Use system notifications for alerts and notifications](../images/android_auto_03.png)
+![Использовать системные уведомления для предупреждений и уведомлений](../images/android_auto_03.png)
 
-Please check now that you get notifications from AASP on the mobile before you walk to your car!
+Проверьте, что вы получаете уведомления от AAPS на мобильном телефоне, прежде чем идти к автомобилю!
 
-![Use system notifications for alerts and notifications](../images/android_auto_04.png)
+![Использовать системные уведомления для предупреждений и уведомлений](../images/android_auto_04.png)
 
-(Android-auto-AAPS-settings-in-android-auto-app-on-your-phone)=
+(Android авто-AAPS-настройки-в--android-auto-на-телефоне)=
 
-## allow the use of "unknown sources" with Android Auto.
+## в Android Auto разрешите использование "неизвестных источников".
 
-As AAPS is no official Android Auto app notifications have to be activated for "unknown sources" in Android Auto. This is done through the use of the developer mode which we will show you here.
+Так как AAPS не является официальным приложением Android Auto, в Android Auto. нужно активировать уведомления из "неизвестных источников". Это делается с помощью режима разработчика, который мы покажем здесь.
 
-Go to your car and connect your mobile with the cars audio system.
+Перейдите к своему автомобилю и подключите мобильный телефон к аудиосистеме автомобиля.
 
-You should now see a screen similar to this screen.
+Должен появиться экран, похожий на этот.
 
-![Enable developer mode](../images/android_auto_05.png)
+![Включите режим разработчика](../images/android_auto_05.png)
 
-Press on the **setting** icon to start the configuration.
+Нажмите на иконку **настроек** чтобы начать конфигурацию.
 
-Scroll down to the end of the page and select **see more in the phone**.
+Прокрутите вниз до конца страницы и выберите **см. больше в телефоне**.
 
-![Enable developer mode](../images/android_auto_06.png)
+![Включите режим разработчика](../images/android_auto_06.png)
 
-Now on the mobile we will activate the developer mode.
+Теперь, на мобильном устройстве, активируем режим разработчика.
 
-the first screen looks like this. Scroll down to the end of the page.
+первый экран выглядит так. Прокрутите вниз до конца страницы.
 
-![Enable developer mode](../images/android_auto_07.png)
+![Включите режим разработчика](../images/android_auto_07.png)
 
-There you see the version of Android Auto listed. Tap 10 times (in word ten) on the version of Android Auto. With this hidden combination you are open the developer mode.
+Там в списке вы видите версию Android Auto. Нажмите 10 раз (буквально десять) на версию Android Auto. С этой скрытой комбинацией вы открываете режим разработчика.
 
-![Enable developer mode](../images/android_auto_08.png)
+![Включите режим разработчика](../images/android_auto_08.png)
 
-Confirm that you want to enable the developer mode in the modal dialog "Allow development settings?".
+Подтвердите, что вы хотите включить режим разработчика в диалоге "Разрешить настройки разработки?".
 
-![Enable developer mode](../images/android_auto_09.png)
+![Включите режим разработчика](../images/android_auto_09.png)
 
-In the **developer settings** enable the "Unknown sources".
+В настройках **разработчика** включите "Неизвестные источники".
 
-![Enable developer mode](../images/android_auto_10.png)
+![Включите режим разработчика](../images/android_auto_10.png)
 
-Now you can quit developer mode if you want. Tap three dots menu on the top right to do so.
+Теперь можно выйти из режима разработчика. Чтобы сделать это, нажмите на три точки меню вверху справа.
 
-## Show notifications in car
+## Показывать уведомления в автомобиле
 
-Tap the **number icon** on the lower right side in Android Auto in your car.
+Коснитесь **значка № ** на нижней панели меню Android Авто в автомобиле.
 
-![number icon - Android Auto in car](../images/android_auto_11.png)
+![иконка номера - Android Auto в автомобиле](../images/android_auto_11.png)
 
-Your CGM value wil be shown as follows.
+Значения гликемии будут показаны следующим образом.
 
-![AAPS CGM data on Android Auto](../images/android_auto_01.png)
+![Данные AAPS CGM на Android Auto](../images/android_auto_01.png)
 
-## Troubleshooting:
+## Устранение неполадок:
 
-* If you don't see the notification, check if you [allowed AAPS to show notifications](Android-auto-AAPS-settings-for-android-auto) in Android and if [Android Auto has access rights to notifications](Android-auto-AAPS-settings-in-android-auto-app-on-your-phone).
+* Если уведомление не показано, проверьте, даны ли разрешения [ показывать уведомления AAPS](Android-auto-AAPS-settings-for-android-auto) в Android и имеет ли [ Android Auto права доступа к уведомлениям ](Android-auto-AAPS-settings-in-android-auto-app-on-your-phone).
