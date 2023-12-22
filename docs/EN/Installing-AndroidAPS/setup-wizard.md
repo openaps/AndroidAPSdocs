@@ -1,6 +1,6 @@
 # AAPS Setup Wizard
 
-When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. For example, the **permission settings** are fundamental to set up **AAPS** correctly.
+When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. For example, the **permission settings** are fundamental for setting up **AAPS** correctly.
 
 However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimise/change the configuration. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
 
@@ -12,7 +12,7 @@ If you are keen to know the structure of the objectives, please read [Completing
 
 :::
 
-From the experience of the last few years, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve. 
+From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve. 
 
 So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
 
@@ -55,7 +55,7 @@ Please click the "NEXT" button:
 
 Battery consumption on smartphones is still a consideration, as the performance of the batteries is still quite limited. Therefore, the Android operating system on your smartphone is quite restrictive about allowing applications to run and consume CPU time, and therefore battery power.
 
-However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels on your behalf, based on your specifications. Therefore it must be allowed to do so by Android.
+However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Therefore it must be allowed to do so by Android.
 
 You do this by confirming the setting.
 
@@ -132,7 +132,7 @@ Click "OK" and then the "NEXT" button:
 
 ### Master password
 
-As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing the application programming interface of your Nightscout server) it is encrypted by a password you can set here.
+As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
 
 The second sentence is very important, please **DO NOT LOSE YOUR MASTER PASSWORD**. Please make a note of it _e.g._ on Google Drive. Google Drive is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
 
@@ -188,7 +188,7 @@ The values you choose only affect the graphical presentation of the diagram, and
 
 Your glucose target _e.g._ is configured separately in your profile.
 
-Your range to analyze TIR (time in range) is configured in your reporting server.
+Your range to analyze TIR (time in range) is configured separately in your reporting server.
 
 Please press the "NEXT" button:
 
@@ -198,7 +198,7 @@ Please press the "NEXT" button:
 
 Here you are configuring the data upload to your reporting server.
 
-You could do other configurations here too, but for the first run that's all you should do.
+You could do other configurations here too, but for the first run we will just focus on the reporting server.
 
 If you are not able to set it up at the moment, skip it for now. You can configure it later.
 
@@ -225,7 +225,7 @@ Please click on "Nightscout URL":
 
 ![image](../images/setup-wizard/Screenshot_20231202_140952.png)
 
-Enter you Nightscout URL which is your personal nightscout server. It's just an URL you setup yourself, or you were given from your service provider for Nightscout.
+Enter you Nightscout URL which is your personal Nightscout server. It's just an URL you setup yourself, or you were given from your service provider for Nightscout.
 
 Please click the "OK" button:
 
@@ -256,9 +256,7 @@ Go back to the previous screen and select "Alarm option":
 
 ![image](../images/setup-wizard/Screenshot_20231202_141310.png)
 
-At the moment, leave the switches disabled. We only walked to the screen to make you familar with possible options you might configure in the future. 
-
-At the moment there is no need to do it.
+For now, leave the switches disabled. We only walked to the screen to make you familar with possible options you might configure in the future. At the moment there is no need to do it.
 
 Go back to the previous screen before and select "Connection settings". 
 
@@ -275,7 +273,7 @@ Go back to the screen before and select "Advanced Settings".
 
 ![image](../images/setup-wizard/Screenshot_20231202_141326.png)
 
-Enable "Log app start to NS" is you want get information about this in the reporting server.
+Enable "Log app start to NS" if you want get this information in the reporting server. It can help you to know remotely if and when the app has been restarted, particularly as a caregiver. 
 
 It might be interesting to see if **AAPS** is correctly configured now, but later it is usually not that important to be able to see **AAPS** stopping or starting in Nightscout.
 
@@ -304,7 +302,7 @@ Press "NEXT" to go to the next screen.
 
 Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
 
-Here is where you also configure the **maximum allowed bolus** for a meal. That is, the largest bolus you need to give to cover your typical meals? It's a security feature to help avoid accidentally overdosing when you are bolusing for meal.
+Here is where you also configure the **maximum allowed bolus** for a meal. That is, the largest bolus you need to give to cover your typical meals. It's a security feature to help avoid accidentally overdosing when you are bolusing for meal.
 
 The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
 
@@ -318,7 +316,7 @@ Select the type of insulin being used in the pump.
 
 The insulin names should be self-explanatory.
 
-:::{admonition} don't use the Free-Peak Oref unless you know what you are doing
+:::{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
 :class: danger
 For advanced users or medical studies there is the possibility to define with "Free-Peak Oref" a customised profile of how insulin acts. Please don't use it unless you are an expert, usually the pre-defined values work well for each branded insulin.
 :::
@@ -330,16 +328,12 @@ Press "NEXT" to go to the next screen:
 
 ### Blood sugar source
 
-Select the BG source you are using.
+Select the BG source you are using. Please read the documentation for your [BG source](../Configuration/BG-Source.md).
 
-As there are several options available we don't explain the configuration for all of them here. We are using Dexcom G6 with the BYODA app in our example here.
+As there are several options available, we don't explain the configuration for all of them here. We are using Dexcom G6 with the BYODA app in our example here:
 
-Please read the documentation for your [BG source](../Configuration/BG-Source.md).
-
-Press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141912.png)
-
 
 
 If you are using Dexcom G6 with BYODA, enable the visibility in the top level menu by clicking the tickbox on the right side.
@@ -372,15 +366,14 @@ It's required that you have determined and discussed your profile with your doct
 If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
 :::
 
-Press "NEXT" to go to the next screen:
+Press "NEXT" to go to the next screen. Enter a "profile name":
 
 ![image](../images/setup-wizard/Screenshot_20231202_142027.png)
 
-Enter a "profile name".
 
 You can have several profiles in the long-term if needed. We only create one here.
 
-:::{admonition} Profile only for documentation purpose - not for your useage
+:::{admonition} Profile only for tutorial - not for your usage
 :class: information
 The example profile here is only to show you how to enter data.
 
@@ -389,41 +382,36 @@ It is not intended to be an accurate profile or something very well optimised, b
 Don't use it for actually looping!
 :::
 
-Enter your Duration of insulin action (DIA) in hours.
-
-Press "IC".
+Enter your Duration of insulin Action (DIA) in hours. Then press "IC":
 
 
 ![image](../images/setup-wizard/Screenshot_20231202_142143.png)
 
 
-Enter your IC values.
-
+Enter your IC values:
 ![image](../images/setup-wizard/Screenshot_20231202_142903.png)
 
-Press "ISF".
+Press "ISF". Enter your ISF values:
 
 ![image](../images/setup-wizard/Screenshot_20231202_143009.png)
 
-Enter your ISF values.
 
-Press "BAS".
+Press "BAS". Enter your basal values:
 
 ![image](../images/setup-wizard/Screenshot_20231202_143623.png)
 
-Enter your basal values.
 
-Press "TARG".
-
-![image](../images/setup-wizard/Screenshot_20231202_143709.png)
-
-Enter your blood sugar target values.
+Press "TARG". Enter your blood sugar target values.
 
 For open looping this target can be a wider range, as otherwise **AAPS** notifies you permanently to change the temporary basal rate or another setting, which can be exhausting.
 
-Later for closed looping you will generally have only one value for top and bottom. That makes it easier for **AAPS** to hit the target and give you better overall diabetes control.
+Later, for closed looping, you will generally have only one value for top and bottom. That makes it easier for **AAPS** to hit the target and give you better overall diabetes control.
 
-Confirm the target, save the profile by clicking on "SAVE":
+Enter/confirm the target values: 
+
+![image](../images/setup-wizard/Screenshot_20231202_143709.png)
+
+Save the profile by clicking on "SAVE":
 
 ![image](../images/setup-wizard/Screenshot_20231202_143724.png)
 
@@ -435,26 +423,36 @@ After saving a new buttom "Activate Profile" occurs.
 You can have several profiles defined, but only one activated profile running at any given time.
 :::
 
+Press "Activate Profile":
+
 ![image](../images/setup-wizard/Screenshot_20231202_143741.png)
 
-Press "Activate Profile".
 
-![image](../images/setup-wizard/Screenshot_20231202_143808.png)
 
-The profile switch dialog appears. In this case let it stay as preset.
+
+
+The profile switch dialogue appears. In this case let it stay as preset.
 
 :::{admonition} Several defined but only one active profile
 :class: information
 You will learn later how to use this general dialog to handle situations like illness or sport, where you need to change your profile suitable for the circumstances.
 :::
 
-Press "OK".
 
-![image](../images/setup-wizard/Screenshot_20231202_143822.png)
+Press "OK":
+
+
+![image](../images/setup-wizard/Screenshot_20231202_143808.png)
+
+
 
 A confirmation dialog for the profile switch appears.
 
 You can confirm it with pressing "OK". Press "NEXT" to go to the next screen:
+
+![image](../images/setup-wizard/Screenshot_20231202_143822.png)
+
+Your profile has now been set:
 
 ![image](../images/setup-wizard/Screenshot_20231202_143833.png)
 
@@ -484,13 +482,13 @@ Press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_143935.png)
 
-### APS algortihm
+### APS algorithm
 
-Let the standard OpenAPS SMB algorithm reamin selected.
+Let the standard OpenAPS AMA algorithm remain selected.
 
-:::{admonition} Only use the older algorithm **AMA** if you know what you are doing
+:::{admonition} Only use the newer algorithm **SMB** if you know what you are doing
 :class: information
-OpenAPS AMA is an older algorithm which does not support micro boluses to correct high values. Only use it now if you know what you are doing _e.g._ an experienced OpenAPS user who  migrated to **AAPS**.
+OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. It is the default setting for the earlier objectives before SMB features can be used.
 :::
 
 Press "NEXT" to go to the next screen:
@@ -530,7 +528,7 @@ Here we start Objective 1, even if at the moment our setup is not completely rea
 
 But this is the start.
 
-Press the green "START" to to start objective 1.
+Press the green "START" to to start objective 1:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144113.png)
 
