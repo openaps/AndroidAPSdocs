@@ -78,6 +78,18 @@ AAPS - это приложение с открытым кодом для люд�
 ```
 
 ```{toctree}
+:caption: Setting up AAPS
+
+Setting up the reporting server <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
+Dedicated Google account for AAPS (optional)<./Installing-AndroidAPS/Dedicated-Google-account-for-AAPS.md>
+Building AAPS <./Installing-AndroidAPS/building-AAPS.md>
+Transferring and Installing AAPS <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
+Setup Wizard<./Installing-AndroidAPS/setup-wizard.md>
+Change AAPS configuration<./Installing-AndroidAPS/change-configuration.md>
+Completing the objectives <./Usage/completing-the-objectives.md>
+```
+
+```{toctree}
 :caption: дистанционное управление и слежение
 
 дистанционное управление <remote-control.md>
@@ -85,108 +97,75 @@ AAPS - это приложение с открытым кодом для люд�
 
 ```
 
-(index-what-do-i-need)=
-
 ```{toctree}
-:caption: Что мне потребуется 
+:caption: Advanced Setting up APPS
 
-выбор CGM/FGM <./Configuration/BG-Source.md>
+Release notes <./Installing-AndroidAPS/Releasenotes.md>
 
-Выбор помпы <./Getting-Started/Pump-Choices.md>
+Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
 
-Модуль <./Module/module.md>
+Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 
 ```
 
 ```{toctree}
-:caption: Установка AAPS
+:caption: Полный замкнутый цикл
 
-Построение приложения APK <./Installing-AndroidAPS/Building-APK.md>
-
-Обновление на новую версию или ветку <./Installing-AndroidAPS/Update-to-new-version.md>
-
-Подсказки и проверки после перехода на AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
-
-Проверки после обновления на AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
-
-Установка git <./Installing-AndroidAPS/git-install.md>
-
-Устранение неполадок <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
-
-Примечания к версиям <./Installing-AndroidAPS/Releasenotes.md>
-
-Ветка Dev <./Installing-AndroidAPS/Dev_branch.md>
+Полный замкнутый цикл <./Usage/FullClosedLoop.md>
 
 ```
 
 (index-component-setup)=
 
 ```{toctree}
-:caption: Настройка компонентов
+:caption: Component Setup
 
 CGM/FGM <./Configuration/BG-Source.md>
 
 xDrip Settings <./Configuration/xdrip.md>
 
-Выбор помпы <./Getting-Started/Pump-Choices.md>
+Pump choices <./Getting-Started/Pump-Choices.md>
 
-Телефоны <./Hardware/Phoneconfig.md>
+Phones <./Hardware/Phoneconfig.md>
 
-Настройка Nightscout <./Installing-AndroidAPS/Nightscout.md>
-
-Настройка Tidepool <./Installing-AndroidAPS/Tidepool.md>
-
-Часы  <./Hardware/Smartwatch.md>
-
-```
-
-(index-configuration)=
-
-```{toctree}
-:caption: Конфигурация
-
-Конфигуратор <./Configuration/Config-Builder.md>
-
-Настройки <./Configuration/Preferences.md>
+Smartwatch  <./Hardware/Smartwatch.md>
 
 ```
 
 ```{toctree}
-:caption: Работа с AAPS
+:caption: AAPS Usage
 
-Экраны AAPS <./Getting-Started/Screenshots.md>
+AAPS screens <./Getting-Started/Screenshots.md>
 
-Цели <./Usage/Objectives.md>
+OpenAPS features <./Usage/Open-APS-features.md>
 
-Возможности OpenAPS <./Usage/Open-APS-features.md>
+Dynamic ISF <./Usage/DynamicISF.md>
 
-Динамический ISF <./Usage/DynamicISF.md>
+COB calculation <./Usage/COB-calculation.md>
 
-Подсчет активных углеводов COB <./Usage/COB-calculation.md>
+Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
 
-Определение чувствительности <./Configuration/Sensitivity-detection-and-COB.md>
+Profile switch <./Usage/Profiles.md>
 
-Переключение профиля <./Usage/Profiles.md>
+Temp-targets <./Usage/temptarget.md>
 
-Временные цели <./Usage/temptarget.md>
+Extended carbs <./Usage/Extended-Carbs.md>
 
-Растянутые углеводы <./Usage/Extended-Carbs.md>
-
-Автоматизация <./Usage/Automation.md>
+Automation <./Usage/Automation.md>
 
 Autotune (dev only) <./Usage/autotune.md>
 
-Портал терапииl (discontinued) <./Usage/CPbefore26.md>
+Careportal (discontinued) <./Usage/CPbefore26.md>
 
 Open Humans Uploader <./Configuration/OpenHumans.md>
 
-Автоматизация со сторонними приложениями <./Usage/automationwithapp.md>
+Automation with 3rd party apps <./Usage/automationwithapp.md>
 
-Android авто <./Usage/Android-auto.md>
+Android auto <./Usage/Android-auto.md>
 
-Документация по настраиваемые циферблаты <./Usage/Custom_Watchface_Reference.md>
+Custom Watchface reference document <./Usage/Custom_Watchface_Reference.md>
 
-Сайт обмена настраиваемыми циферблатами <./ExchangeSiteCustomWatchfaces/index.md>
+Exchange Site Custom Watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
@@ -202,24 +181,6 @@ Accu-Chek Combo советы по основному использованию 
 Экспорт/Импорт настроек <./Usage/ExportImportSettings.md>
 
 инженерный режим xDrip <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
-
-```
-
-```{toctree}
-:caption: AAPS для детей
-
-Удаленный мониторинг <./Children/Children.md>
-
-SMS команды <./Children/SMS-Commands.md>
-
-Помощник профиля <./Configuration/profilehelper.md>
-
-```
-
-```{toctree}
-:caption: Полный замкнутый цикл
-
-Полный замкнутый цикл <./Usage/FullClosedLoop.md>
 
 ```
 
@@ -271,6 +232,15 @@ FAQ <./Getting-Started/FAQ.md>
 Как редактировать документы <./make-a-PR.md>
 
 Состояние переводов <./Administration/stateTranslations.md>
+
+```
+
+```{toctree}
+:caption: Legacy
+
+Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
+
+Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
 
 ```
 
