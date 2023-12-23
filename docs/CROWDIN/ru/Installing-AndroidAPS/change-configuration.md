@@ -4,7 +4,7 @@
 
 Есть три способа внесения изменений в настройки конфигурации. Какой из них выбираете вы - это просто вопрос удобства, каждый ведет к тем же настройкам конфигурации.
 
-These are as follows:
+Вот они:
 
 1. Конфигуратор,
 2. Выпадающее меню справа и выберите "настройки" или
@@ -24,16 +24,16 @@ These are as follows:
 
 ## Настройки
 
-The preferences dialogue can be reached via the top right three dot menu on the **home screen** of AAPS. It gives you the possibilty to change the configuration of **all enabled plugins at once**.
+Через правое верхнее выпадающее меню **главного экрана** AAPS можно получить доступ к настройкам. Это дает возможность изменить конфигурацию **всех включенных модулей/расширений сразу**.
 
-This is a good route if you are not really sure where to look for an configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
+Это хороший маршрут, если нет уверенности, где найти какую-то опцию из конфигурации, но он длинноват, если вам хочется изменить настройку только одного конкретного модуля.
 
-The documentation of the preferences is available [here](../Configuration/Preferences.md).
+Документация по настройкам доступна [здесь](../Configuration/Preferences.md).
 
-## Plugin preferences
+## Настройки расширений
 
-The **plugin preferences** dialogue can be reached via the top right three dot menu on the home screen of AAPS. It provides the possibilty to change the configuration of all enabled plugins at once.
+Через правое верхнее выпадающее меню **главного экрана** AAPS можно получить доступ к **настройкам расширений**. Он дает возможность изменить конфигурацию всех включенных модулей/расширений сразу.
 
-This is a good route if you know that _e.g._ you _just_ want to change the configuration for BYODA. Then, you would select the tab "BYODA" on the top menu of **AAPS**, and then once you are on the BYODA page, in the top right, select the three dot menu and then the "plugin preferences" entry. You are taken directly to the preferences dialogue specifically for the BYODA plugin.
+Это хороший маршрут, если_например._ вы _просто_ хотите изменить конфигурацию для самостоятельно собранного приложения Dexcom BYODA. Затем выберите вкладку "BYODA" в верхнем меню **AAPS** и на странице BYODA, в правом верхнем углу выберите меню с тремя точками, а затем "Настройки расширения". Вы попадаете сразу к диалогу настроек специально для расширения BYODA.
 
-This is a "short cut" to the general preferences dialogue, the documentation of the preferences is available [here](../Configuration/Preferences.md).
+Это "короткая ссылка" к общим настройкам, документация по настройкам доступна [здесь](../Configuration/Preferences.md).
