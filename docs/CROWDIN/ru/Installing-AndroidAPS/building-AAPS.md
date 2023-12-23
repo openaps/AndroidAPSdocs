@@ -1,17 +1,17 @@
-# Building AAPS
+# Построение AAPS
 
 ## Постройте сами вместо скачивания
 
-**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
+**Приложение AAPS (файл apk) не доступно для скачивания из-за законодательных норм, связанных с медицинскими устройствами. Построить приложение для собственного пользования вполне законно, но передавать копию другим не разрешается!**
 
-See [FAQ page](../Getting-Started/FAQ.md) for details.
+Подробнее см. [Страница FAQ](../Getting-Started/FAQ.md).
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 
-## Computer and software specifications for building AAPS
+## Технические характеристики компьютера и программного обеспечения для построения AAPS
 
-- Please use the **[Android Studio version called "Hedgehog"(2023.1.1)](https://developer.android.com/studio/)** to build the apk. If you use an older version, please use one which is no older than "**Giraffe**".
-- [Windows 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
+- Пользуйтесь **[версией Android Studio под названием "Hedgehog"(2023.1.1)](https://developer.android.com/studio/)** для сборки apk. Если ву вас более старая версия, используйте ту, которая не старше версии "**Giraffe**".
+- [32-разрядные системы Windows](troubleshooting_androidstudio-unable-to-start-daemon-process) не поддерживаются в Android Studio. Имейте в виду, что и 64-разрядная процессор, и 64-разрядная ОС являются обязательным условием. Если ваша система не соответствует этому условию, следует изменить аппаратное или программное обеспечение или всю систему.
 
 <table class="tg">
 <thead>
@@ -39,7 +39,7 @@ See [FAQ page](../Getting-Started/FAQ.md) for details.
   </tr>
   <tr>
     <td class="tg-baqh"><p align="center">Разрешение</td>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">минимум 1280 x 800 <br></td>
   </tr>
   <tr>
     <td class="tg-baqh"><p align="center">Интернет</td>
