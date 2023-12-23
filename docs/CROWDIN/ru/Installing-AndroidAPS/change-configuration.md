@@ -1,18 +1,18 @@
-# Making changes to your AAPS configuration
+# Внесение изменений в конфигурацию AAPS
 
-After you have completed the **Setup Wizard** you don't need to run the entire Wizard again if you want to only change parts of the configuration.
+После завершения **Мастера установки** больше не нужно запускать весь Мастер, чтобы изменить часть конфигурации.
 
-There are three routes to change the different configuration settings, which route you take is simply a matter of convenience, each route leads to the same configuration settings.
+Есть три способа внесения изменений в настройки конфигурации. Какой из них выбираете вы - это просто вопрос удобства, каждый ведет к тем же настройкам конфигурации.
 
 These are as follows:
 
-1. Config builder,
-2. Three dot menu on the right and select "preferences" or
-3. Three dot menu on the right and select "plugin preferences".
+1. Конфигуратор,
+2. Выпадающее меню справа и выберите "настройки" или
+3. Выпадающее меню справа и выберите "настройки расширений".
 
-Here we explain which option is most convenient for each situation:
+Здесь мы объясним, какой вариант наиболее удобно для каждой ситуации:
 
-## Config builder
+## Конфигуратор
 
 The **config builder** is used if you want to **enable plugins** and their **visibility** in the top level menu. If they are enabled, they will still run, you can decide if you want to be able to see them in the top menu or not.
 
