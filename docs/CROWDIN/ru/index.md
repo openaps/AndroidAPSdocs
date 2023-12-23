@@ -78,15 +78,15 @@ AAPS - это приложение с открытым кодом для люд�
 ```
 
 ```{toctree}
-:caption: Setting up AAPS
+:caption: Настройка AAPS
 
-Setting up the reporting server <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
-Dedicated Google account for AAPS (optional)<./Installing-AndroidAPS/Dedicated-Google-account-for-AAPS.md>
-Building AAPS <./Installing-AndroidAPS/building-AAPS.md>
-Transferring and Installing AAPS <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
-Setup Wizard<./Installing-AndroidAPS/setup-wizard.md>
-Change AAPS configuration<./Installing-AndroidAPS/change-configuration.md>
-Completing the objectives <./Usage/completing-the-objectives.md>
+Настройка сервера отчетов <. Установка AndroidAPS/setting-up-the-reporting-server.md>
+выделенный Google аккаунт для AAPS (опционально)<. Установка AndroidAPS/Dedicated-Google-account-for-AAPS.md>
+Создание AAPS <./Installing-AndroidAPS/building-AAPS.md>
+Перенос и Установка AAPS <. Установка AndroidAPS/Transferring-and-installing-AAPS.md>
+Мастер установки<./Installing-AndroidAPS/setup-wizard.md>
+Изменение конфигурации AAPS<. Установка AndroidAPS/change-configuration.md>
+Выполнение задач <./Usage/completing-the-objectives.md>
 ```
 
 ```{toctree}
@@ -98,13 +98,13 @@ Completing the objectives <./Usage/completing-the-objectives.md>
 ```
 
 ```{toctree}
-:caption: Advanced Setting up APPS
+:caption: Расширенная настройка APPS
 
-Release notes <./Installing-AndroidAPS/Releasenotes.md>
+Примечания к выпуску <. Установка AndroidAPS/Releasenotes.md>
 
-Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
+Обновление до новой версии или ветки <. Установка AndroidAPS/Update-to-new-version.md>
 
-Dev branch <./Installing-AndroidAPS/Dev_branch.md>
+ветви <./Installing-AndroidAPS/Dev_branch.md>
 
 ```
 
@@ -115,57 +115,57 @@ Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 
 ```
 
-(index-component-setup)=
+(Указатель-настройка-компонентов)=
 
 ```{toctree}
-:caption: Component Setup
+:caption: Настройка компонентов
 
 CGM/FGM <./Configuration/BG-Source.md>
 
-xDrip Settings <./Configuration/xdrip.md>
+Настройки xDrip <./Configuration/xdrip.md>
 
-Pump choices <./Getting-Started/Pump-Choices.md>
+Выбор помпы <./Getting-Started/Pump-Choices.md>
 
-Phones <./Hardware/Phoneconfig.md>
+Телефоны <./Hardware/Phoneconfig.md>
 
-Smartwatch  <./Hardware/Smartwatch.md>
+Часы  <./Hardware/Smartwatch.md>
 
 ```
 
 ```{toctree}
-:caption: AAPS Usage
+:caption: Работа с AAPS
 
-AAPS screens <./Getting-Started/Screenshots.md>
+Экраны AAPS <./Getting-Started/Screenshots.md>
 
-OpenAPS features <./Usage/Open-APS-features.md>
+Возможности OpenAPS <./Usage/Open-APS-features.md>
 
-Dynamic ISF <./Usage/DynamicISF.md>
+Динамический ISF <./Usage/DynamicISF.md>
 
-COB calculation <./Usage/COB-calculation.md>
+Подсчет активных углеводов COB <./Usage/COB-calculation.md>
 
-Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
+Определение чувствительности <./Configuration/Sensitivity-detection-and-COB.md>
 
-Profile switch <./Usage/Profiles.md>
+Переключение профиля <./Usage/Profiles.md>
 
-Temp-targets <./Usage/temptarget.md>
+Временные цели <./Usage/temptarget.md>
 
-Extended carbs <./Usage/Extended-Carbs.md>
+Растянутые углеводы <./Usage/Extended-Carbs.md>
 
-Automation <./Usage/Automation.md>
+Автоматизация <./Usage/Automation.md>
 
-Autotune (dev only) <./Usage/autotune.md>
+Autotune (только dev) <./Usage/autotune.md>
 
-Careportal (discontinued) <./Usage/CPbefore26.md>
+Портал терапииl (прекращен) <./Usage/CPbefore26.md>
 
 Open Humans Uploader <./Configuration/OpenHumans.md>
 
-Automation with 3rd party apps <./Usage/automationwithapp.md>
+Автоматизация со сторонними приложениями <./Usage/automationwithapp.md>
 
-Android auto <./Usage/Android-auto.md>
+Android авто <./Usage/Android-auto.md>
 
-Custom Watchface reference document <./Usage/Custom_Watchface_Reference.md>
+Документация по настраиваемым циферблатам <./Usage/Custom_Watchface_Reference.md>
 
-Exchange Site Custom Watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
+Сайт обмена настраиваемыми циферблатами <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
@@ -236,11 +236,11 @@ FAQ <./Getting-Started/FAQ.md>
 ```
 
 ```{toctree}
-:caption: Legacy
+:caption: Прежнее
 
-Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
+Подсказки и проверки после обновления до AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
 
-Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
+Проверки после обновления до AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
 
 ```
 
