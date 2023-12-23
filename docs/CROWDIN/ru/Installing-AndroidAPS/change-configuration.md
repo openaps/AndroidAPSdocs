@@ -14,13 +14,13 @@ These are as follows:
 
 ## Конфигуратор
 
-The **config builder** is used if you want to **enable plugins** and their **visibility** in the top level menu. If they are enabled, they will still run, you can decide if you want to be able to see them in the top menu or not.
+**Конфигуратор** используется, если вы хотите **включить расширения** и их **видимость** в меню верхнего уровня. Если они включены, вы можете решить, сделать их видимыми в верхнем меню или нет.
 
-Plugins which you have not enabled (_i.e._ disabled) plugins can not be made visible. For example, when you first start with **AAPS** on **objective 1**, you cannot yet use **automations**, so the **automations** plugin cannot be enabled and made visible in the top menu.
+Расширения, которые не включены (то есть отключены), нельзя сделанть видимыми. Например, когда **AAPS** запущен на **цели 1**, нельзя активировать **автоматизацию**, так что модуль/расширение **автоматизация** нельзя сделать видимым в верхнем меню.
 
-**Config builder** is the easiest way to further modify your configuration after you have used the **Setup Wizard**.
+**Конфигуратор** - самый простой способ изменить конфигурацию после выполнения **Мастера установки**.
 
-The documentation relating to the config builder is available [here](../Configuration/Config-Builder.md).
+Документацию относящуюся к конфигуратору можно найти [здесь](../Configuration/Config-Builder.md).
 
 ## Настройки
 
