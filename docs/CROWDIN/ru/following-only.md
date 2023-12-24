@@ -1,31 +1,31 @@
-# Following AAPS (no interaction with the AAPS system)
+# Слежение за работой AAPS (без взаимодействия с системой)
 
-In addition to the range of possibilities available for remotely controlling _and_ following **AAPS** which are described at [remote control](docs/EN/remote-control.md), there are several additional apps and devices which the community has developed, to simply follow numbers (glucose levels and other information), without interacting with AAPS.
+Помимо возможностей удаленного управления _и_слежения за работой**AAPS**, которые описаны в разделе [дистанционное управление](docs/EN/remote-control.md), существует еще несколько приложений и устройств, разработанных сообществом пользователей с целью просто следить за цифрами (ГК и другой информацией), не взаимодействуя с AAPS.
 
-A good overview of the extensive options available for following **AAPS** is at [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#) webpage; if you expand the menu on the left-hand side:
+Обзор возможностей, доступных для наблюдения работы **AAPS**, можно найти на веб-странице [фоллоуэры Nightscout](https://nightscout.github.io/nightscout/downloaders/#); развернув меню слева:
 
 ![изображение](./images/dfa981c1-5a15-4498-88d2-0fd1462d8242.png)
 
-The most common strategies used in combination with **AAPS** are explained in more detail below.
+Наиболее распространенные сценарии сочетания работы **AAPS** с наблюдением приведены ниже.
 
-### 1) Smartphone apps
+### 1) Приложения на смартфоне
 
-These are some of the main “follower” apps used by **AAPS** users. All of these apps are “free”:
+Наиболее популярные приложения для отслеживания работы **AAPS**. Все эти приложения бесплатны:
 
-A)  Dexcom Follow (Android/iOs) B)  Nightguard (iOs) C)  Nightwatch (Android) D)  xDrip+ (Android) E)  Shuggah (iOs) F)  Sugarmate (iOs) G)  Spike (iOs)
+A) Dexcom Follow (Android/iOs) B) Nightguard (iOs) C) Nightwatch (Android) D) xDrip+ (Android) E) Shuggah (iOs) F) Sugarmate (iOs) G) Spike (iOs)
 
 
-#### A) Dexcom Follow (compatible with both Android and iOs devices)
+#### A) Dexcom Follow (совместимо с устройствами на Android и iOs)
 
 ![изображение](./images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
 
-●   Dexcom Follow is compatible with a wide range of handsets (both Android and iPhone). Dexcom Follow can be used even if you are not using the official Dexcom app to receive sensor data.
+● Dexcom Follow совместимо со многими телефонами (Android и iPhone). Dexcom Follow можно использовать, даже если вы не используете официальное приложение Dexcom для получения данных.
 
-●   Many caregivers are familiar with Dexcom Follow, preferring its clear interface over something more complicated.
+● Многие родители/опекуны знакомы с Dexcom Follow, предпочитая его четкий интерфейс чему-то более сложному.
 
-●   Dexcom Follow is very good for teachers/grandparents and people who know very little about diabetes and sugar levels. It has customisable alerts (BG level, what sound to play etc). Alarms can be completely switched off if needed, which is very useful if you have a sensor which is still settling down and creating multiple fake lows.
+● Dexcom Follow очень хорош для учителей/бабушек и дедушек и людей, которые мало знают о диабете и гликемии. Он имеет настраиваемые оповещения (уровень ГК, какой звук воспроизводить и т. д.). Оповещения могут быть полностью выключены, что очень полезно, если сенсор еще прирабатывается и передает много заниженных значений.
 
-##### setting up Dexcom Follow: how-to-guide
+##### настройка Dexcom Follow: инструкция
 
 If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app. You should also be able to send invitations to Dexcom Follow from Xdrip+ (settings - cloud upload-Dexcom share server upload, see instructions here:
 
