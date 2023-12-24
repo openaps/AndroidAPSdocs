@@ -27,17 +27,17 @@ A) Dexcom Follow (Android/iOs) B) Nightguard (iOs) C) Nightwatch (Android) D) xD
 
 ##### настройка Dexcom Follow: инструкция
 
-If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app. You should also be able to send invitations to Dexcom Follow from Xdrip+ (settings - cloud upload-Dexcom share server upload, see instructions here:
+У вас есть возможность отправлять приглашения подписчикам из самостоятельно собранного приложения Dexcom BYODA. Вы также можете отправлять приглашения на Dexcom Follow из Xdrip+ (настройки - загрузка в облако-Dexcom share server upload, смотрите инструкции здесь:
 
 https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
-However, some users have reported not being able to send invite emails to Dexcom followers from these third-party apps. In Xdrip+ the invite request may just result in the message “invite not sent”.
+Тем не менее, некоторые пользователи сообщили, что не могут отправлять приглашения подписчикам Dexcom из сторонних приложений. В Xdrip+ запрос на приглашение может только привести к отправке сообщения «Приглашение не отправлено».
 
-If you find it difficult to invite new Dexcom Followers from these 3rd party apps, then one solution is to install the official Dexcom G6 app, send the invite, and then uninstall the official app.
+Если вам трудно пригласить новых подписчиков Dexcom из этих сторонних приложений, тогда одним из решений является установка официального приложения Dexcom G6, отправка приглашение, а затем удаление официального приложения.
 
-The steps to do this are as follows:
+Для этого выполните следующие шаги:
 
-1)  Install the official “Dexcom G6” app on _any_ smartphone (Android/iPhone), this can be the Follower phone, if it is more convenient. 2)  Log in with your Dexcom username and password, this is the same login details you would use for Dexcom Clarity, if you are already a current Dexcom/Clarity customer. If you don’t have a Dexcom login, there is the option to create a new login at this point.   
+1) Установите официальное приложение «Dexcom G6» на _любой смартфон_ (Android/iPhone), это может быть телефон фоллоуэра, если вам так удобнее. 2)  Log in with your Dexcom username and password, this is the same login details you would use for Dexcom Clarity, if you are already a current Dexcom/Clarity customer. If you don’t have a Dexcom login, there is the option to create a new login at this point.   
 3)  Swipe through the introduction menus. 4)  Add “no code” for the sensor code. 5)  Under Transmitter SN select “enter manually” and enter any valid transmitter code (use one of your expired transmitter codes, if you know one, so it doesn’t interfere with the running of your current transmitter, they follow a specific format of certain numbers and letters: “NLNNNL” and only use certain combinations, so it’s easiest to use one you already know is valid). 6)  Once the app is trying to find the transmitter and sensor, you will be able to invite followers: select the small three dots in the top left of the app, and add new follower. You can also use this if one of your followers has changed their handset and needs a fresh invite, here you can delete them from the follower list and resend a new invite email for them to use on their new handset. 7)  On the Follower phone, install Dexcom Follow by downloading it from the App Store (iPhone) or Play (Android). Set up the Dexcom Follow app, and you will be prompted to open your email to find the invite to be a Follower.    
 8)  You can now delete the official Dexcom G6 app.
 
