@@ -98,22 +98,22 @@ https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
 Появилась бесплатная модифицированная версия xDrip+4iOs** известная как **Shuggah**. Она загружается непосредственно из Apple App store на iPhone или планшет.
 
-:::{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
+:::{admonition} Информация о том, как получить оригинальное приложение **xDrip4iOS** 
 :class: dropdown
 
 
- [**xDrip4iOS**](https://xdrip4ios.readthedocs.io/en/latest/?fbclid=IwAR3lmPR2O9lgZW7xLi1GHdH8SeeMRtekmBiZFlEBCrM13BoJph0uezao_gQ) is an Apple version of **xDrip+**, and the [XdripiOs Facebook group](https://www.facebook.com/groups/853994615056838/announcements) is the main community support. **xDrip4iOS** can connect to many different CGM systems and transmitters and display blood glucose values, charts and statistics as well as provide alarms. It can also upload to Nightscout or act as a [follower app for Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). However, it is difficult to actually _get_ the **xDrip4iOS** app for your phone.
+ [**xDrip4iOS**](https://xdrip4ios.readthedocs.io/en/latest/?fbclid=IwAR3lmPR2O9lgZW7xLi1GHdH8SeeMRtekmBiZFlEBCrM13BoJph0uezao_gQ) — версия **xDrip+** для Apple, поддержка в группе [XdripiOS Facebook](https://www.facebook.com/groups/853994615056838/announcements). **xDrip4iOS** может подключаться к различным системам CGM и трансмиттерам и отображать значения ГК, графики и статистику, а также подавать звуковые оповещения. Оно также может загружать данные в Nightscout или выполнять роль [фоллоуэра для Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). Однако, _получить_ приложение **xDrip4iOS** довольно трудно.
 
-"How can I get **xDrip4iOS** on my iPhone?" There are two options:
-1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) then you can build your own xDrip4iOS by following the instructions below:
+"Как получить **xDrip4iOS** на iPhone?" Есть два варианта:
+1. Если у вас есть учетная запись разработчика Mac и Apple (99 EUR/USD в год), то можно создать свой собственный xDrip4iOS по инструкциям ниже:
 
-https://xdrip4ios.readthedocs.io/en/latest/install/build/
+https://xdrip4ios.readthedocs.io/ru/latest/install/build/
 
 If you want, you can then become a "releaser" and share a Personal Testflight with up to 100 other people to help them: https://xdrip4ios.readthedocs.io/.../personal_testflight/
 
-2. You join the [XdripiOs Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and monitor the posts… wait for somebody to offer an invitation to their Personal Testflight releases in the group._**You are not permitted to ask for the app**_ (read their group rules).
+2. Присоединившись к группе [Xdrip4iOS Facebook](https://www.facebook.com/groups/853994615056838/announcements) наблюдайте за записями… в ожидании личного приглашения к выпускам в группе._**Вам не разрешается запрашивать приложение**_ (прочтите их групповые правила).
 
-An easier solution is therefore to download the **Shuggah** app.
+Таким образом, легче загрузить приложение **Shuggah**.
 
 :::
 
@@ -126,24 +126,24 @@ App:
 ![изображение](./images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
 
 
-"What is Shuggah?" A group of Ukrainian developers took the project code for xDrip4iOS (which is shared publicly on Github) and released it on the App Store under a business account (the app is free, and their intentions are good). The app had to be slightly modified to add a privacy statement and disclaimer to get past the review, but the rest of the app should be the same as xDrip4iOS. The Shuggah release is not officially managed by the xDrip4iOS developers so it cannot be guaranteed that it will function in the same way as xDrip4iOS, or that Apple won't remove it from the App Store at some point.
+"Что такое Shuggah?" Группа украинских разработчиков взяла код проекта xDrip4iOS (он опубликован на Github) и выпустила его в App Store под бизнес-учетной записью (приложение бесплатное, группа не имеет плохих намерений). Приложение было немного изменено, добавлено заявление о конфиденциальности и отказ от ответственности, но в остальном приложение такое же, как xDrip4iOS. Shuggah официально не контролируется разработчиками xDrip4iOS, поэтому нельзя гарантировать, что приложение будет работать так же, как и xDrip4iOS, или что Apple когда-нибудь не удалит его из App Store.
 
-The [XdripiOs Facebook group](https://www.facebook.com/groups/853994615056838/announcements) supports xDrip4iOS, Shuggah, as well as the Apple Watch app.
+[Группа Facebook xDrip4iOS](https://www.facebook.com/groups/853994615056838/announcements) поддерживает xDrip4iOS, Shuggah, а также приложение Apple Watch.
 
 
-#### F) Sugarmate (iOs)
+#### f) Sugarmate (iOS)
 
 ![изображение](./images/340cd555-a9e0-4a20-a131-36c078f5b8ea.png)
 
 ![изображение](./images/21b83c41-85c6-4619-a702-a65450768855.png)
 
 
-[Sugarmate](https://sugarmate.io/) is available to download onto iPhones from the App store. Sugarmate is compatible with: ●   Apple iPhone (Requires software version 13.0 or later) ●   Apple iPad (Requires software version 13.0 or later) ●   Google Android (Save web app to your homescreen)
+[Sugarmate](https://sugarmate.io/) можно закачать из App Store. Sugarmate совместим с: ● Apple iPhone (Требуется программное обеспечение версии 13. или позднее) ● Apple iPad (Требуется программное обеспечение версии 13. или позднее) ● Google Android (Сохраните веб-приложение на домашнем экране)
 
-It has been reported by users of Sugarmate that it can be used with Apple CarPlay in the USA to display glucose readings when driving. It is not yet established if this is possible in countries outside the USA. If you know more about this, please add details in here to the documentation by completing a pull-request (link) which is quick and easy to do.
+Пользователи Sugarmate сообщают что приложение совместимо с Apple CarPlay в США для отображения данных гликемии во время вождения. Пока еще не установлено, возможно ли это в странах за пределами США. Если вы знаете больше об этом, добавьте подробности в документацию, заполнив запрос на слияние который быстро и легко сделать.
 
 
-#### G)  [Spike](https://spike-app.com/) on iOS
+#### G)  [Spike](https://spike-app.com/) на iOS
 
 ![изображение](./images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
 
