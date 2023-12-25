@@ -44,7 +44,7 @@ https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 Для Dexcom Follow, данные сенсора затем экспортируются с телефона AAPS либо непосредственно из BYODA, или из Xdrip+, в зависимости от того, какое приложение используется.
 
 
-#### B) Nightguard (только для iOs)
+#### B) Nightguard (только для iOS)
 
 ![изображение](./images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
 
@@ -56,47 +56,47 @@ https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
 ● Настройка оповещений (высокая, низкая ГК, пропущенные данные за 15-45 минут.
 
-● Быстрый рост/падение за 2-5 последовательных (вы выбираете) показания. Can also choose the delta between two individual readings
+● Быстрый рост/падение за 2-5 последовательных (вы выбираете) показания. Можно также выбрать значения дельты между двумя данными
 
-●   Smart snooze so doesn't alert if levels are moving in right direction
+● Умный сброс оповещений, если уровни движутся в правильном направлении
 
-●   There is a Care tab which appears to enable you to set a new temp target for a certain duration, delete the temp target or enter carbs.
+● Есть вкладка терапии, которая, позволяет установить новую временную цель на определенный срок, удалить временную цель или ввести углеводы.
 
-Cons (as reported by users)
+Недостатки (по сообщениям пользователей)
 
-●   Only available for iOS
+● Доступно только для iOS
 
-●   The TT shows as 5 mmol regardless of which TT level is set
+● Временная цель ТТ показывается как 5 ммол, независимо от того, какой уровень установлен на самом  деле
 
-●   Never shows Temp Basal rate even though it shows TB
+● Никогда не показывает временную скорость базала, несмотря на то, что есть графа TB
 
-#### C) Nightwatch (Android only)
+#### C) Nightwatch (только для Android)
 
 ![изображение](./images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
 
 
-●   Nightwatch markets itself as a Nightscout client and monitors the user’s Nightscout glucose levels on either Android phone or tablet.
+● Nightwatch позиционируется как клиент Nightscout и отслеживает уровни глюкозы пользователя на телефоне или планшете.
 
-●   The app can be downloaded from Google play and displays BG data in real time.
+● Приложение загружается из Google Play и отображает ГК в режиме реального времени.
 
-●   The user can be alerted with customised noisy low and high alarms set.
+● Пользователь может быть оповещен настраиваемым сигналами на зашумленные низкие и высокие значения ГК.
 
-●   BG data can be viewed in either mmol/L or mg/dL.
+● Данные ГК отображаются в ммоль/л или мг/дл.
 
-●   It requires Android 5.0 and up.
+● Требуется Android 5.0 и выше.
 
-●   It has a dark Ul, large readings and buttons, designed for usage at night.
+● Имеет темный интерфейс, большие цифры и кнопки для ночного времени.
 
-#### D) xDrip+ (Android only)
+#### D) xDrip+ (только для Android)
 
-Followers can be alarmed by using the xDrip+ in follower mode.  [xDrip+](../Configuration/xdrip.md). (mainly BG values and **alarms**)
+Фоллоуэры могут оповещаться с помощью xDrip+ в режиме подписчика.  [xDrip+](../Configuration/xdrip.md). (в основном значения ГК и **оповещения**)
 
 
 #### E) Shuggah (iOs only)
 
-Historically, it has been difficult to get hold of the app of the iOs or "Apple" version of xDrip+ (known as **xDrip4iOS**), in order to follow **AAPS**.
+Исторически было трудно найти приложение xDrip+ для iOS ( **xDrip4iOS**) для слежения за **AAPS**.
 
-A free, modified version of xDrip+4iOs** has become available as **Shuggah**. This can be downloaded directly from the Apple App store on iPhone or tablet.
+Появилась бесплатная модифицированная версия xDrip+4iOs** известная как **Shuggah**. Она загружается непосредственно из Apple App store на iPhone или планшет.
 
 :::{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
