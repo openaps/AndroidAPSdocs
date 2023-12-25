@@ -37,26 +37,26 @@ https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
 Для этого выполните следующие шаги:
 
-1) Установите официальное приложение «Dexcom G6» на _любой смартфон_ (Android/iPhone), это может быть телефон фоллоуэра, если вам так удобнее. 2)  Log in with your Dexcom username and password, this is the same login details you would use for Dexcom Clarity, if you are already a current Dexcom/Clarity customer. If you don’t have a Dexcom login, there is the option to create a new login at this point.   
-3)  Swipe through the introduction menus. 4)  Add “no code” for the sensor code. 5)  Under Transmitter SN select “enter manually” and enter any valid transmitter code (use one of your expired transmitter codes, if you know one, so it doesn’t interfere with the running of your current transmitter, they follow a specific format of certain numbers and letters: “NLNNNL” and only use certain combinations, so it’s easiest to use one you already know is valid). 6)  Once the app is trying to find the transmitter and sensor, you will be able to invite followers: select the small three dots in the top left of the app, and add new follower. You can also use this if one of your followers has changed their handset and needs a fresh invite, here you can delete them from the follower list and resend a new invite email for them to use on their new handset. 7)  On the Follower phone, install Dexcom Follow by downloading it from the App Store (iPhone) or Play (Android). Set up the Dexcom Follow app, and you will be prompted to open your email to find the invite to be a Follower.    
-8)  You can now delete the official Dexcom G6 app.
+1) Установите официальное приложение «Dexcom G6» на _любой смартфон_ (Android/iPhone), это может быть телефон фоллоуэра, если вам так удобнее. 2) Войдите c именем пользователя и паролем Dexcom, это те же данные, что и для Dexcom Clarity, если вы уже клиент Dexcom/Clarity. Если у вас нет учетной записи Dexcom, можно создать новый логин.   
+3) Пролистайте вводные меню. 4) В разделе код сенсора (sensor code) введите "no code". 5) В разделе № трансмиттера (transmitter SN) введите любой валидный код трансмиттера (можно ввести номер истекшего) чтобы не произошло вмешательства в работу текущего; он имеет определенный формат чисел и букв: «NLNNL» и только в определенные комбинации, так что проще всего использовать то, что известно наверняка). 6) Когда приложение попытается найти трансмиттер и сенсор, вы сможете пригласить фоллоуэров: выберите выпадающее меню в левом верхнем углу приложения и добавьте новых подписчиков. Эту процедуру также можно использовать, если один из фоллоуэров сменил телефон и нуждается в свежем приглашении, здесь вы можете удалить его из списка подписчиков и отправить новое приглашение на новый смартфон. 7) На телефоне фоллоуэра установите Dexcom Follow скачав его из App Store (iPhone) или Google Play (Android). Настройте приложение Dexcom Follow и вам будет предложено открыть электронную почту, найти приглашение и стать подписчиком.    
+8) Теперь можно удалить официальное приложение Dexcom G6.
 
-For Dexcom Follow, the sensor data is then exported from the AAPS phone either directly from BYODA, or from Xdrip+, depending on which app you are using.
+Для Dexcom Follow, данные сенсора затем экспортируются с телефона AAPS либо непосредственно из BYODA, или из Xdrip+, в зависимости от того, какое приложение используется.
 
 
-#### B) Nightguard (iOs only)
+#### B) Nightguard (только для iOs)
 
 ![изображение](./images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
 
-Pros (as reported by users):
+Достоинства (как указывают пользователи):
 
-●   simple, user-friendly interface.
+● простой и удобный интерфейс.
 
-●   Swipe button or shake phone to snooze alarms at different intervals ranging from 5 mins to 24 hours
+● Сдвиньте кнопку или встряхните телефон для прекращения оповещений на период  от 5 минут до 24 часов
 
-●   Customise alarms (high, low alerts, missed readings when no data for 15-45 minutes.
+● Настройка оповещений (высокая, низкая ГК, пропущенные данные за 15-45 минут.
 
-●   Fast rise/drop over 2-5 consecutive readings (you choose). Can also choose the delta between two individual readings
+● Быстрый рост/падение за 2-5 последовательных (вы выбираете) показания. Can also choose the delta between two individual readings
 
 ●   Smart snooze so doesn't alert if levels are moving in right direction
 
