@@ -517,9 +517,9 @@ a)  команды **AAPSClient**/Nightscout/**SMS** не работают; ил
 
 ![изображение](./images/f488fe36-8cb9-4d81-9d94-5f742a1aaaee.png)
 
-Выберите > набор APK для Android:
+Select > APK:
 
-![изображение](./images/e8f4b996-c46e-4a31-831e-fdcc4d0d677c.png)
+![изображение](./images/Installation_Screenshot_39b.PNG)
 
 
 Выберите в модуле: AndroidAPSwear
