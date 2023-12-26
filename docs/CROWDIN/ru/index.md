@@ -78,6 +78,18 @@ AAPS - это приложение с открытым кодом для люд�
 ```
 
 ```{toctree}
+:caption: Настройка AAPS
+
+Настройка сервера отчетов <. Установка AndroidAPS/setting-up-the-reporting-server.md>
+выделенный Google аккаунт для AAPS (опционально)<. Установка AndroidAPS/Dedicated-Google-account-for-AAPS.md>
+Создание AAPS <./Installing-AndroidAPS/building-AAPS.md>
+Перенос и Установка AAPS <. Установка AndroidAPS/Transferring-and-installing-AAPS.md>
+Мастер установки<./Installing-AndroidAPS/setup-wizard.md>
+Изменение конфигурации AAPS<. Установка AndroidAPS/change-configuration.md>
+Выполнение задач <./Usage/completing-the-objectives.md>
+```
+
+```{toctree}
 :caption: дистанционное управление и слежение
 
 дистанционное управление <remote-control.md>
@@ -85,69 +97,38 @@ AAPS - это приложение с открытым кодом для люд�
 
 ```
 
-(index-what-do-i-need)=
-
 ```{toctree}
-:caption: Что мне потребуется 
+:caption: Расширенная настройка APPS
 
-выбор CGM/FGM <./Configuration/BG-Source.md>
+Примечания к выпуску <. Установка AndroidAPS/Releasenotes.md>
 
-Выбор помпы <./Getting-Started/Pump-Choices.md>
+Обновление до новой версии или ветки <. Установка AndroidAPS/Update-to-new-version.md>
 
-Модуль <./Module/module.md>
+ветви <./Installing-AndroidAPS/Dev_branch.md>
 
 ```
 
 ```{toctree}
-:caption: Установка AAPS
+:caption: Полный замкнутый цикл
 
-Построение приложения APK <./Installing-AndroidAPS/Building-APK.md>
-
-Обновление на новую версию или ветку <./Installing-AndroidAPS/Update-to-new-version.md>
-
-Подсказки и проверки после перехода на AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
-
-Проверки после обновления на AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
-
-Установка git <./Installing-AndroidAPS/git-install.md>
-
-Устранение неполадок <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
-
-Примечания к версиям <./Installing-AndroidAPS/Releasenotes.md>
-
-Ветка Dev <./Installing-AndroidAPS/Dev_branch.md>
+Полный замкнутый цикл <./Usage/FullClosedLoop.md>
 
 ```
 
-(index-component-setup)=
+(Указатель-настройка-компонентов)=
 
 ```{toctree}
 :caption: Настройка компонентов
 
 CGM/FGM <./Configuration/BG-Source.md>
 
-xDrip Settings <./Configuration/xdrip.md>
+Настройки xDrip <./Configuration/xdrip.md>
 
 Выбор помпы <./Getting-Started/Pump-Choices.md>
 
 Телефоны <./Hardware/Phoneconfig.md>
 
-Настройка Nightscout <./Installing-AndroidAPS/Nightscout.md>
-
-Настройка Tidepool <./Installing-AndroidAPS/Tidepool.md>
-
 Часы  <./Hardware/Smartwatch.md>
-
-```
-
-(index-configuration)=
-
-```{toctree}
-:caption: Конфигурация
-
-Конфигуратор <./Configuration/Config-Builder.md>
-
-Настройки <./Configuration/Preferences.md>
 
 ```
 
@@ -155,8 +136,6 @@ xDrip Settings <./Configuration/xdrip.md>
 :caption: Работа с AAPS
 
 Экраны AAPS <./Getting-Started/Screenshots.md>
-
-Цели <./Usage/Objectives.md>
 
 Возможности OpenAPS <./Usage/Open-APS-features.md>
 
@@ -174,9 +153,9 @@ xDrip Settings <./Configuration/xdrip.md>
 
 Автоматизация <./Usage/Automation.md>
 
-Autotune (dev only) <./Usage/autotune.md>
+Autotune (только dev) <./Usage/autotune.md>
 
-Портал терапииl (discontinued) <./Usage/CPbefore26.md>
+Портал терапииl (прекращен) <./Usage/CPbefore26.md>
 
 Open Humans Uploader <./Configuration/OpenHumans.md>
 
@@ -184,7 +163,7 @@ Open Humans Uploader <./Configuration/OpenHumans.md>
 
 Android авто <./Usage/Android-auto.md>
 
-Документация по настраиваемые циферблаты <./Usage/Custom_Watchface_Reference.md>
+Документация по настраиваемым циферблатам <./Usage/Custom_Watchface_Reference.md>
 
 Сайт обмена настраиваемыми циферблатами <./ExchangeSiteCustomWatchfaces/index.md>
 
@@ -202,24 +181,6 @@ Accu-Chek Combo советы по основному использованию 
 Экспорт/Импорт настроек <./Usage/ExportImportSettings.md>
 
 инженерный режим xDrip <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
-
-```
-
-```{toctree}
-:caption: AAPS для детей
-
-Удаленный мониторинг <./Children/Children.md>
-
-SMS команды <./Children/SMS-Commands.md>
-
-Помощник профиля <./Configuration/profilehelper.md>
-
-```
-
-```{toctree}
-:caption: Полный замкнутый цикл
-
-Полный замкнутый цикл <./Usage/FullClosedLoop.md>
 
 ```
 
@@ -271,6 +232,15 @@ FAQ <./Getting-Started/FAQ.md>
 Как редактировать документы <./make-a-PR.md>
 
 Состояние переводов <./Administration/stateTranslations.md>
+
+```
+
+```{toctree}
+:caption: Прежнее
+
+Подсказки и проверки после обновления до AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
+
+Проверки после обновления до AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
 
 ```
 

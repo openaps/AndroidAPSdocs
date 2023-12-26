@@ -1,49 +1,49 @@
 # Dexcom G7
 
 
-## Fundamental in advance
+## Основательно с самого начала
 
-In spring 2022, the Dexcom G7 received its CE certificate and was sold at the end of October '22.
+Весной 2022, Dexcom G7 получил сертификат одобрения CE и поступил в продажу в конце октября 2022.
 
-Noteworthy is the fact that the G7 system, compared to the G6, does not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app). Consequently, the values have to be smoothed to be able to use them sensibly in AAPS.
+Следует отметить, что система G7 по сравнению с G6 не сглаживает значения ни в приложении, ни в ридере. Подробнее об этом [здесь](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app). Следовательно, чтобы иметь возможность разумно использовать их в АAAPS, значения должны быть сглажены,.
 
-![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
+![G7 английский](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
-## 1.  Patched Dexcom G7 App (DiAKEM)
+## 1.  Модифицированное приложение Dexcom G7 (DiAKEM)
 
-**Note: AAPS 3.2.0.0 or higher is required!**
+**Примечание: Требуется AAPS 3.2.0.0 или выше!**
 
-### Install a new patched (!) G7 app and start the sensor
+### Установите новое модифицированное (!) приложение G7 и запустите сенсор
 
-A patched Dexcom G7 app (DiAKEM) gives acess to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+Модифицированное приложение Dexcom G7 (DiAKEM) даёт доступ к данным Dexcom G7. Это другое приложение чем самостоятельно собранное приложение Dexcom BYODA, в данный момент BYODA не может получать данные G7.
 
-Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
+Удалите оригинальное приложение Dexcom, если вы его использовали прежде (Рабочая сессия сенсора может продолжаться - запишите код датчика перед удалением приложения!)
 
-Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
+Скачайте и установите модифицированное приложение.apk [отсюда](https://github.com/authorgambel/g7/releases).
 
-Enter sensor code in the patched app.
+Введите код сенсора в модифицированном приложении.
 
-Follow the general recommendations for CGM hygiene and sensor placement found [here](../Hardware/GeneralCGMRecommendation.md).
+Следуйте общим рекомендациям по гигиене мониторинга и размещению сенсоров, которые можно найти [здесь](../Hardware/GeneralCGMRecommendation.md).
 
-After the warm-up phase, the values are displayed as usual in the G7 app.
+После фазы прогрева, данные ГК отображаются в обычном приложении G7.
 
-### Configuration in AAPS
+### Конфигурация в AAPS
 
-For the configuration in AAPS
-- Select 'BYODA' in the configuration generator - even if it is not the BYODA app!
-- If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
+Для конфигурации в AAPS
+- Выберите 'BYODA' в генераторе конфигурации, даже если это не приложение BYODA!
+- Если AAPS не получает данных ГК, переключитесь на другой источник ГК, а затем снова на 'BYODA'.
 
-The smoothing of glucose values can be activated by enabling the "Average smoothing" or "Exponential Smoothing" plugin in the Config Builder. To disable select the "No Smoothing" option. "Exponential smoothing" is more aggressive and rewrites the newest Glucose Value but is good in dealing with heavy noise. "Average smoothing" is much like the back smoothing that was in BYODA G6 and only rewrites the past values but not the current value and therefore has a faster response time.
+Сглаживание значений гликемии можно активировать, выбрав модуль "Среднее сглаживание" или "Экспоненциальное сглаживание" в Конфигураторе. Чтобы отключить сглаживание, выберите опцию "Без сглаживания". "Экспоненциальное сглаживание" более агрессивно и перезаписывает новейшие значения ГК, но хорошо для борьбы с сильными шумами. "Среднее сглаживание" очень похоже на обратное сглаживание, применявшееся в BYODA G6 и перезаписывает только прошлые значения, а не текущее значение, и поэтому происходит быстрее.
 
-**Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 values.
+**Экспоненциальное сглаживание** **ДОЛЖНО** быть включено для качественного использования G7.
 
-## 2. Xdrip+ (direct connection to G7)
+## 2. Xdrip+ (прямое подключение к G7)
 
-- Follow the instructions here: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- In AAPS select  > Configuration > BG source > xDrip+. Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md)
+- Следуйте инструкциям здесь: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- В AAPS выберите  > Configuration > источник ГК > xDrip+. Отрегулируйте параметры xDrip+ в соответствии с пояснениями на странице настроек xDrip+  [настройки xDrip+](../Configuration/xdrip.md)
 
-## 3. Xdrip+ (companion mode)
+## 3. Xdrip+ (режим спутника)
 
--   Download and install Xdrip+: [xdrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in Xdrip "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
-- In AAPS select  > Configuration > BG source > xDrip+. Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md) 
+-   Скачайте и установите Xdrip+: [xdrip](https://github.com/NightscoutFoundation/xDrip)
+- В качестве источника данных в Xdrip должен быть выбран "Companion Bluetooth" в разделе Менее распространенные настройки > Настройки Bluetooth > поставьте галочку рядом с "Companion Bluetooth".
+- В AAPS выберите  > Configuration > источник ГК > xDrip+. Отрегулируйте параметры xDrip+ в соответствии с пояснениями на странице настроек xDrip+  [настройки xDrip+](../Configuration/xdrip.md) 

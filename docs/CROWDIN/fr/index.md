@@ -78,6 +78,18 @@ Docs updates & changes <./Getting-Started/WikiUpdate.md>
 ```
 
 ```{toctree}
+:caption: Setting up AAPS
+
+Setting up the reporting server <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
+Dedicated Google account for AAPS (optional)<./Installing-AndroidAPS/Dedicated-Google-account-for-AAPS.md>
+Building AAPS <./Installing-AndroidAPS/building-AAPS.md>
+Transferring and Installing AAPS <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
+Setup Wizard<./Installing-AndroidAPS/setup-wizard.md>
+Change AAPS configuration<./Installing-AndroidAPS/change-configuration.md>
+Completing the objectives <./Usage/completing-the-objectives.md>
+```
+
+```{toctree}
 :caption: Remote control and following
 
 Remote control <remote-control.md>
@@ -85,37 +97,21 @@ Following-only <following-only.md>
 
 ```
 
-(index-what-do-i-need)=
-
 ```{toctree}
-:caption: Que dois-je faire
+:caption: Advanced Setting up APPS
 
-Choix MGC/MGF <./Configuration/BG-Source.md>
+Release notes <./Installing-AndroidAPS/Releasenotes.md>
 
-Choix de pompe <./Getting-Started/Pump-Choices.md>
+Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
 
-Module <./Module/module.md>
+Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 
 ```
 
 ```{toctree}
-:caption: Comment installer AndroidAPS
+:caption: Boucle Fermée complète
 
-Construire l'APK <./Installing-AndroidAPS/Building-APK.md>
-
-Télécharger la nouvelle version ou branche <./Installing-AndroidAPS/Update-to-new-version.md>
-
-Vérifications à faire après la mise à jour vers AAPS 3.0 <./Installing-AndroidAPS/update3_0.md>
-
-Vérifications à faire après la mise à jour vers AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
-
-Installer git <./Installing-AndroidAPS/git-install.md>
-
-Dépannage d'Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
-
-Notes de versions <./Installing-AndroidAPS/Releasenotes.md>
-
-Branches de développement <./Installing-AndroidAPS/Dev_branch.md>
+Boucle Fermée complète <./Usage/FullClosedLoop.md>
 
 ```
 
@@ -132,21 +128,7 @@ Pump choices <./Getting-Started/Pump-Choices.md>
 
 Phones <./Hardware/Phoneconfig.md>
 
-Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
-Tidepool setup <./Installing-AndroidAPS/Tidepool.md>
-
 Smartwatch  <./Hardware/Smartwatch.md>
-
-```
-
-(index-configuration)=
-
-```{toctree}
-:caption: Configuration
-
-Configuration <./Configuration/Config-Builder.md>
-
-Préférences <./Configuration/Preferences.md>
 
 ```
 
@@ -154,8 +136,6 @@ Préférences <./Configuration/Preferences.md>
 :caption: AAPS Usage
 
 AAPS screens <./Getting-Started/Screenshots.md>
-
-Objectives <./Usage/Objectives.md>
 
 OpenAPS features <./Usage/Open-APS-features.md>
 
@@ -201,24 +181,6 @@ Conseils d'utilisation de l'Accu-Chek Combo <./Usage/Accu-Chek-Combo-Tips-for-Ba
 Export/Import des paramètres <./Usage/ExportImportSettings.md>
 
 Mode ingénierie xDrip <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
-
-```
-
-```{toctree}
-:caption: AAPS pour les enfants
-
-Surveillance à distance <./Children/Children.md>
-
-Commandes SMS <./Children/SMS-Commands.md>
-
-Assistant de profil <./Configuration/profilehelper.md>
-
-```
-
-```{toctree}
-:caption: Boucle Fermée complète
-
-Boucle Fermée complète <./Usage/FullClosedLoop.md>
 
 ```
 
@@ -270,6 +232,15 @@ How to translate the app and docs <./translations.md>
 How to edit the docs <./make-a-PR.md>
 
 State of translations <./Administration/stateTranslations.md>
+
+```
+
+```{toctree}
+:caption: Legacy
+
+Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
+
+Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
 
 ```
 
