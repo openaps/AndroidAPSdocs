@@ -92,7 +92,7 @@ https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 Фоллоуэры могут оповещаться с помощью xDrip+ в режиме подписчика.  [xDrip+](../Configuration/xdrip.md). (в основном значения ГК и **оповещения**)
 
 
-#### E) Shuggah (iOs only)
+#### E) Shuggah (только для iOS)
 
 Исторически было трудно найти приложение xDrip+ для iOS ( **xDrip4iOS**) для слежения за **AAPS**.
 
@@ -109,7 +109,7 @@ https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
 https://xdrip4ios.readthedocs.io/ru/latest/install/build/
 
-If you want, you can then become a "releaser" and share a Personal Testflight with up to 100 other people to help them: https://xdrip4ios.readthedocs.io/.../personal_testflight/
+Если хотите, то можете стать "релизером" и поделиться своей версией приложения (Personal Testflight) со 100 другими: https://xdrip4ios.readthedocs.io/.../personal_testflight/
 
 2. Присоединившись к группе [Xdrip4iOS Facebook](https://www.facebook.com/groups/853994615056838/announcements) наблюдайте за записями… в ожидании личного приглашения к выпускам в группе._**Вам не разрешается запрашивать приложение**_ (прочтите их групповые правила).
 
@@ -119,7 +119,7 @@ If you want, you can then become a "releaser" and share a Personal Testflight wi
 
 #### [Shuggah](https://apps.apple.com/sa/app/shuggah/id1586789452)
 
-App:
+Приложение:
 
 ![изображение](./images/03fc0c6a-067a-40ea-8be3-c66d4ce8b5d9.png)
 
@@ -131,7 +131,7 @@ App:
 [Группа Facebook xDrip4iOS](https://www.facebook.com/groups/853994615056838/announcements) поддерживает xDrip4iOS, Shuggah, а также приложение Apple Watch.
 
 
-#### f) Sugarmate (iOS)
+#### F) Sugarmate (iOS)
 
 ![изображение](./images/340cd555-a9e0-4a20-a131-36c078f5b8ea.png)
 
@@ -147,58 +147,58 @@ App:
 
 ![изображение](./images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
 
-Spike can be used as a primary receiver or as a follower app, providing BG, alarms and IOB and more. Whilst the website is no longer biDetails are [here](https://spike-app.com/#features2). Details and support can be found on [Facebook](https://www.facebook.com/groups/1973791946274873) and Gitter](https://gitter.im/SpikeiOS/Lobby).
+Spike может использоваться и как первичный приемник и как приложение-фоллоуэр, показывающее ГК, сигналы оповещений, активный инсулин IOB и многое другое. Сайта больше не существует. Подробно [здесь](https://spike-app.com/#features2). Подробности и поддержку можно найти на [Facebook](https://www.facebook.com/groups/1973791946274873) и Gitter](https://gitter.im/SpikeiOS/Lobby).
 
-To install Spike, see [here](https://spike-app.com/#installation)
+Чтобы установить Spike, см. [здесь](https://spike-app.com/#installation)
 
-### 2) Smartwatches for **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
+### 2) Смарт-часы для **мониторинга AAPS** (полные данные профиля или только гликемия), при том, когда **AAPS** работает на телефоне.
 
-Smartwatch options which also allow interaction with **AAPS** are described in the ["remote control"](remote-control.md) section of the documentation.
+Опции смарт-часов, которые позволяют взаимодействовать с **AAPS**, описаны в разделе [дистанционное управление](remote-control.md) документации.
 
-There are a wide range of affordable smartwatches which can provide display only. If you are using Nightscout, then a good overview of all the options is [here](https://nightscout.github.io/nightscout/wearable/#)
+Существует множество доступных смарт-часов, которые дают только отображение ГК. Если вы пользуетесь сайтом Nightscout, то хороший обзор вариантов дан [здесь](https://nightscout.github.io/nightscout/wearable/#)
 
-Here we summarise some of the follow-only watch options popular with **AAPS** users:
+Здесь дан обзор некоторых популярных срели пользователей **AAPS** моделей смарт-часов, применяемых только для слежения:
 
-#### a) **Xiaomi and Amazfit watches**
+#### а) Часы **Xiaomi и Amazfit**
 
-A developer called Artem has created xDrip integration for various smartwatch models, mostly for Xiaomi (_e.g._ Mi band) and Amazfit brands:
+Разработчик по имени Артем создал интеграцию xDrip для различных моделей смарт-часов, в основном для брендов Xiaomi (_например_ Mi band) и Amazfit:
 
 ![изображение](./images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
 
 
-You can read more about them, including how to set-up at his website [here](https://bigdigital.home.blog/). The advantage of these watches is that they are small and relatively affordable (the Xiaomi Mi Band 5 has a RRP of £39.99 GBP). They are a popular option especially for kids and those with smaller wrists to wear.
+Подробности об этих моделях и их настройке [здесь](https://bigdigital.home.blog/). Преимущество этих часов заключается в том, что они небольшие и относительно доступные (Xiaomi Mi Band 5 продается за £39.99 GBP). Они особенно популярны как часы для детей и людей с небольшими запястьями.
 
-#### b) Pebble watch
+#### b) Часы Pebble
 
 ![изображение](./images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
 
 ![изображение](./images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
-Pebble watches [now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 - 2016, and may still be available second-hand. Fitbit took over Pebble’s assets. Pebble users can use the Urchin watchface to view Nightscout data. Displayed data options include IOB, currently active temp basal rate and predictions. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS**  then send either an SMS or pushover notification.
+Часы Pebble, [снятые с производства](https://en.wikipedia.org/wiki/Pebble_(watch))), были в продаже с 2013 по 2016 год, и их до сих пор можно приобрести на вторичном рынке. Активы Pebble перешли к Fitbit. Пользователи Pebble могут пользоваться циферблатом Urchin для просмотра данных Nightscout. Отображаемые данные включают активный инсулин IOB, действующий временный базал и прогнозирование. В случае открытого цикла вы можете использовать алгоритм IFTTT для создания апплета, который сообщает об уведомлениях от **AAPS**, вслед за чем можно отправить либо SMS, либо push-уведомление.
 
-#### c) [Bluejay GTS watch](https://bluejay.website/shop/product/bluejay-gts-26)
+#### c) смарт-часы [Bluejay GTS](https://bluejay.website/shop/product/bluejay-gts-26)
 
 
 ![изображение](./images/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74.png)
 
 
-This is a unique piece of technology which can receive glucose data **directly** from the Dexcom G6 transmitter. It is not widely known that a Dexcom G6 transmitter actually broadcasts the current glucose data on _two_ separate channels, a phone channel and a pump channel. The Bluejay GTS watch runs a modified version of Xdrip+ software, and can be set to receive glucose data on either channel, so if **AAPS **  is using the phone channel, then the Bluejay GTS watch can use the pump channel.
+Это уникальное устройство может получать данные гликемии **непосредственно** с трансмиттера Dexcom G6. Малоизвестно, что трансмиттер Dexcom G6 передает текущие данные гликемии по _двум_ отдельным каналам: телефонному каналу и каналу помпы. В часах Bluejay GTS используется модифицированная версия программного обеспечения Xdrip+, и их можно настроить на получение данных о глюкозе по любому каналу, поэтому, если **AAPS ** использует телефонный канал, то часы Bluejay GTS могут использовать канал помпы.
 
-The Bluejay GTS watch is small, waterproof and reasonably affordable (currently £115 GBP) and can be shipped internationally from the UK. The key advantage is that it is currently the only watch which is completely independent of both the phone and the looping system. So, for example, if you disconnect the pump and the **AAPS**  phone at the beach or flume park, and are out of range of the AAPS phone, you can still get readings from the Dexcom G6 directly to the Bluejay watch.
+Часы Bluejay GTS небольшие, водонепроницаемые, доступны по цене (в настоящее время 115 фунтов стерлингов) и могут быть доставлены по всему миру из Великобритании. Главное их преимущество заключается в том, что часы полностью независимы как от телефона, так и от системы ИПЖ. Так, например, если вы отсоедините помпу и телефон **AAPS** на пляже или в парке и находитесь вне зоны действия телефона AAPS, то все равно сможете получать данные с Dexcom G6 сразу на часы.
 
-Reported disadvantages are that it doesn’t always pickup a reading every 5 min, and the battery is not replaceable. The Bluejay GTS watch runs a modified version of Xdrip+ software, and it currently doesn’t work with other Dexcom versions (G7) or Libre sensors.
+Недостатки, о которых сообщают пользователи, заключаются в том, что они не всегда снимают показания каждые 5 минут, а батарея не подлежит замене. В часах Bluejay GTS используется модифицированная версия программного обеспечения Xdrip+, и в настоящее время они не работают с другими версиями Dexcom (G7) или датчиками Libre.
 
-#### d) Apple watch
+#### d) Часы Apple
 
-Check [Nightscout on your watch](https://nightscout.github.io/nightscout/wearable/#):
+Проверьте [Nightscout на часах](https://nightscout.github.io/nightscout/wearable/#):
 
-Options include Nightguard, sugarmate, Gluco-Tracker, nsapple and Loop Follow.
+Выбор состоит из Nightguard, sugarmate, Gluco-Tracker, nsapple и слежение Loop Follow.
 
 
-### 3) Devices for following AAPS
+### 3) Устройства для слежения за AAPS
 
-Devices include: A)  M5 stack/M5 stickC B)  Sugarpixel C) PC (Teamviewer)
+Устройства включают: A) M5 stack/M5 stickC B) Sugarpixel C) PC (Teamviewer)
 
 #### A) M5 stack
 
@@ -208,21 +208,21 @@ Devices include: A)  M5 stack/M5 stickC B)  Sugarpixel C) PC (Teamviewer)
 
 
 
-The [M5Stack](https://github.com/mlukasek/M5_NightscoutMon) is a small box which can be programmed for many applications, one of which is displaying sensor glucose values and trends, IOB and COB. It is in a plastic box, equipped with a colour display, micro SD card slot, 3 buttons, speaker and internal battery. It is a great blood sugar monitor and is relatively easy to set-up if you have a Nightscout account. Users typically run it on their home wifi, but some users report using it as a display when motorbiking, by running it off a phone wifi hotspot.
+[M5Stack](https://github.com/mlukasek/M5_NightscoutMon) — это небольшой блок, который можно запрограммировать для множества приложений, одно из которых — отображение значений и тенденций уровня глюкозы сенсора, IOB и COB. Он находится в пластиковой коробке, оснащен цветным дисплеем, слотом для карт Micro SD, 3 кнопками, динамиком и внутренним аккумулятором. Это отличный монитор уровня сахара в крови, и его относительно легко настроить, если у вас есть учетная запись Nightscout. Он обычно применяется в домашних сетях Wi-Fi, но некоторые сообщают, что используют его в качестве дисплея при езде на мотоцикле, запуская его через точку доступа Wi-Fi на телефоне.
 
 #### B) Sugarpixel
 
-SugarPixel is a device for secondary glucose display alert system for continuous glucose monitoring that connects with Dexcom app or Nightscout app on the user’s smartphone. The device displays real time blood sugar readings. This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customisable display options and native multi-user following.
+SugarPixel — это устройство для системы вторичного оповещения об уровне глюкозы для приложений Dexcom или Nightscout на смартфоне пользователя. Устройство отображает показания уровня сахара в крови в режиме реального времени. Этот аппаратный монитор CGM оснащен звуковыми оповещениями, генерирующими случайные сигналы (которые невероятно громкие), вибрационными оповещениями для людей с нарушениями слуха, настраиваемыми параметрами отображения и встроенным многопользовательским сопровождением.
 
 ![изображение](./images/94044064/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
 
 ![изображение](./images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
-●   SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with colour-coded glucose values. ●   The standard face displays BG, Trend Arrow, and Delta. Delta is the change + or - from the last reading. ●   SugarPixel can be customised for use in low brightness with the BG and Time face to see the user’s BG reading and current time on the user’s nightstand. ●   SugarPixel’s xolour face utilises the entire display to show a single colour representing the BG value. This enables the user to see BG readings at a distance through the window while outside playing in the backyard, patio, or pool. ●   The Big BG face is useful for nightstand users who wear glasses or contact lenses.
+● SugarPixel имеет несколько вариантов отображения в мг/дл и ммоль/л в соответствии с потребностями пользователя с цветовой кодировкой значений гликемии. Стандартный циферблат отображает ГК, стрелку тренда и дельту изменений. Дельта - это изменение + или - от последнего показания. ● SugarPixel можно настроить дна работы при низкой яркости, они показывают гликемию и текущее время, что удобно в ночное время на тумбочке пользователя. ● Цветной экран SugarPixel использует весь дисплей для отображения одного цвета, обозначающего значение ГК. Это позволяет пользователю видеть значения ГК на расстоянии через окно, находясь в бассейне, во дворе или на веранде. Большой циферблат хорош для тех, кто носит очки или контактные линзы.
 
 
-#### C) PC(Teamviwer)
-Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting.
+#### C) ПК (Teamviwer)
+Некоторые пользователи считают, что полнофункциональный инструмент удаленного доступа, такой как [TeamViewer](https://www.teamviewer.com/), может оказаться полезным для удаленного устранения неполадок.
 
 
  
