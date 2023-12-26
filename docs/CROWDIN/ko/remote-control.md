@@ -517,9 +517,9 @@ Go to Build > Generate Signed Bundle / APK
 
 ![image](./images/f488fe36-8cb9-4d81-9d94-5f742a1aaaee.png)
 
-Select > Android APK Bundle:
+Select > APK:
 
-![image](./images/e8f4b996-c46e-4a31-831e-fdcc4d0d677c.png)
+![image](./images/Installation_Screenshot_39b.PNG)
 
 
 Select in Module: AndroidAPSwear
