@@ -3,9 +3,9 @@
 To use your Libre as a CGM that is getting new BG values every 5 minutes without having to scan the sensor,
 you need to buy an NFC to Bluetooth bridge (commercially available devices, based on the obsolete [LimiTTer](https://github.com/JoernL/LimiTTer) project).
 
-:::{admonition} Libre 1 US and Libre Pro
+:::{admonition} Libre 2, Libre 1 US and Libre Pro
 :class: warning
-Verify the bridge you want to use is compatible with the sensor  
+Verify the bridge and the app you want to use are compatible with your sensor.  
 :::
 
 Several bridges are available on the market:
@@ -34,7 +34,7 @@ details.
 ## 1. Using xDrip+
 
 -   xDrip+ supports Miaomiao, Bubble, Blucon, Atom and LibreAlarm.
--   Download and install [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases). You also need [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) for Libre 1 US.
+-   Download and install [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases). You also need [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) for Libre 1 US (and Libre 2 EU).
 -   In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data
     Locally and select ON.
 -   In xDrip+ go to Settings > Interapp Compatibility > Accept

@@ -1,23 +1,18 @@
 # Freestyle Libre 2
 
-The Freestyle Libre 2 system can automatically report dangerous blood
-glucose levels. The Libre2 Sensor sends the current blood sugar level to
-a receiver (reader or smartphone) every minute. The receiver triggers an
-alarm if necessary. With a self-modified LibreLink app and the xDrip+
-app, you can continuously receive and display your blood sugar level on
-your smartphone.
+The Freestyle Libre 2 sensor is now a real CGM even with the official app. Still, LibreLink cannot send data to AAPS. There are several solutions to use it with AAPS.
 
-The sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl
-(-2,2 mmol/l to +1,1 mmol/l) to adjust differences between finger prick
-measurements and sensor readings.
+## 1. Use a bridge like Libre 1
 
-BG readings can also be done using a BT transmitter like with the
-Libre1.
+BG readings can also be done using a BT transmitter like with the [Libre 1](../Libre1).  
+Check the bridge and app you want to use are compatible with your sensor.
 
-Important note : This does not work with the US version of the Freestyle
-2 sensor ! The US version will only connect to a reader, not a phone.
+## 2. Use the patched LibreLink app with xDrip+
 
-## Step 1: Build your own patched LibreLink-App
+:::{admonition} Libre 2 EU only
+:class: warning
+The patched app is an old version (22/4/2019) and might not be compatible with recent Android releases.  
+:::
 
 For legal reasons, the so-called patching has to be done by yourself.
 Use search engines to find the corresponding links. There are mainly two
@@ -156,7 +151,7 @@ of a running sensor to a different device which not has started the
 sensor. Please google in diabetes related German forums how this could
 be done.
 
-## Step 2: Install and configure xDrip+ app
+### Step 2: Install and configure xDrip+ app
 
 The blood sugar values are received on the smartphone by the xDrip+ App.
 
@@ -182,7 +177,7 @@ The blood sugar values are received on the smartphone by the xDrip+ App.
 
 ![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
 
-## Step 3: Start sensor
+### Step 3: Start sensor
 
 In xDrip+ start the sensor with "Start Sensor" and "not today".
 
@@ -198,7 +193,7 @@ After a sensor change xDrip+ will automatically detect the new sensor
 and will delete all calibration data. You may check you bloody BG after
 activation and make a new initial calibration.
 
-## Step 4: Configure AAPS (for looping only)
+### Step 4: Configure AAPS (for looping only)
 
 -   In AAPS go to Config Builder > BG Source and check 'xDrip+'
 -   If AAPS does not receive BG values when phone is in airplane
@@ -212,9 +207,9 @@ glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for
 more details.
 
 (Libre2-experiences-and-troubleshooting)=
-## Experiences and Troubleshooting
+### Experiences and Troubleshooting
 
-### Connectivity
+#### Connectivity
 
 The connectivity is extraordinarily good. With the exception of Huawei
 mobile phones, all current smartphones seem to work well. The reconnect
@@ -227,7 +222,7 @@ another phone. It may also help to set the sensor with the internal BT
 antenna pointing down. The slit on the applicator must be pointing down
 when setting the sensor.
 
-### Value smoothing & raw values
+#### Value smoothing & raw values
 
 Technically, the current blood sugar value is transmitted to xDrip+
 every minute. A weighted average filter calculates a smoothed value over
@@ -247,7 +242,7 @@ as using the smoothed line to make proper therapy decisions.
 
 ![xDrip+ advanced settings Libre 2 & raw values](../images/Libre2_RawValues.png)
 
-### Sensor runtime
+#### Sensor runtime
 
 The sensor runtime is fixed to 14 days. The 12 extra hours of Libre1 no
 longer exist. xDrip+ shows additional sensor information after enabling
@@ -259,7 +254,7 @@ log under "New sensor found".
 
 ![Libre 2 start time](../images/Libre2_Starttime.png)
 
-### New sensor
+#### New sensor
 
 A sensor exchange takes place on-the-fly: Set new sensor shortly before
 activation. As soon as xDrip+ receives no more data from the old sensor,
@@ -281,7 +276,7 @@ Libre2 sensor here! You do not need to start the sensor in xDrip+.
 
 ![xDrip+ missing data when changing Libre 2 sensor](../images/Libre2_GapNewSensor.png)
 
-### Calibration
+#### Calibration
 
 You can calibrate the Libre2 with an offset of -40 mg/dl to +20 mg/dL
 \[-2,2 mmol/l to +1,1 mmol/l\] (intercept). The slope isn't changeable
