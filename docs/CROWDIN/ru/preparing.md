@@ -108,19 +108,19 @@
 
 Документация ААПС состоит из следующих разделов:
 
-#### [What do I need?](Module/module.md)
+#### [Что необходимо?](Module/module.md)
 
 Здесь объясняется совместимость AAPS с системами мониторинга CGM и инсулиновыми помпами. Также дано руководство по правильной сборке системы AAPS чтобы она функционировала корректно.
 
 #### [Как собрать и установить AAPS](Installing-AndroidAPS/Building-APK.md)
 
-This section is the manual for building the AAPS. Для успешной сборки **AAPS** требуется строгое соблюдение пошаговых инструкций.  Не торопитесь.
+В этом разделе дано руководство по построению AAPS. Для успешной сборки **AAPS** требуется строгое соблюдение пошаговых инструкций.  Не торопитесь.
 
 #### [Настройка компонентов]
 
 Здесь объясняется, как правильно интегрировать каждый из компонентов **AAPS**, а также настроить их на совместную работу. Все компоненты перечислены в соответствующих разделах, в том числе: [Мониторинг (CGM/FGM)](Configuration/BG-Source.md), [Помпы](Getting-Started/Pump-Choices.md) и [Телефоны](Hardware/Phoneconfig.md)
 
-#### [Configuration](Configuration/Config-Builder.md)
+#### [Конфигурация](Configuration/Config-Builder.md)
 
 Здесь объясняется, как настроить «Профиль», «Insulin», «Источник ГК», «Помпа», «Определение чувствительности», «APS», «Цикл», «Терапия».
 
@@ -128,7 +128,7 @@ This section is the manual for building the AAPS. Для успешной сбо
 
 В этом разделе представлена разбивка функций AAPS со снимками экранов.
 
-#### [General Hints](Usage/Timezone-traveling.md)
+#### [Общие советы](Usage/Timezone-traveling.md)
 
 Полезные приемы при решении проблем, такие как смена часовых поясов и перехода на сезонное время (_т. е._ Вперед/ - Назад).
 
@@ -146,11 +146,11 @@ This section is the manual for building the AAPS. Для успешной сбо
 
 #### [Глоссарий](Getting-Started/Glossary.md)
 
-This contains a list of the acronyms (or short-term names) or defined terms developed specifically for AAP (for instance, the terms ‘ISF’ or ‘TT’ have special meanings in AAPS).
+Здесь содержится список сокращений или терминов, разработанных специально для AAPS (например, термины "ISF" или "TT" имеют специальное значение в AAPS).
 
 #### [Куда обращаться за помощью](Where-To-Go-For-Help/Background-reading.md)?
 
-This section is aimed to provide new users with links on resources in order to get help including accessing community support made up of both new and experienced users who can clarify questions, and resolve the usual pitfalls that come with AAPS.
+Целью этого раздела является предоставление новым пользователям ссылок на ресурсы помощи, включая доступ к поддержке сообщества, состоящего как из новых, так и из опытных пользователей, которые могут ответить на вопросы и устранить ошибки, при работе с AAPS.
 
 #### [Раздел для медицинских работников](Resources/clinician-guide-to-AndroidAPS.md)
 
