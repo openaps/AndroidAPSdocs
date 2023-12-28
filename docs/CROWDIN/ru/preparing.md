@@ -100,9 +100,9 @@
 
 Не стесняйтесь связаться с сообществом AAPS, даже если уверены в том, что у вас глупый вопрос! Всем пользователям с опытом разного уровня рекомендуется при необходимости задавать вопросы. Вследствие большого числа пользователей **AAPS**, ответы обычно даются быстро, как правило, в течение нескольких часов.
 
-##### [ask our facebook group](https://www.facebook.com/groups/AndroidAPSUsers/)
+##### [задайте вопрос в группе Facebook](https://www.facebook.com/groups/AndroidAPSUsers/)
 
-##### [ask our discord channel](https://discord.com/channels/629952586895851530/629954570394533889)
+##### [задайте вопрос на канале discord](https://discord.com/channels/629952586895851530/629954570394533889)
 
 ### Обзор раздела
 
@@ -110,7 +110,7 @@
 
 #### [What do I need?](Module/module.md)
 
-This explains AAPS’ compatibility with CGMs (Continuous Glucose Monitors) and insulin pumps. It also provides a guide on the correct assembly of an AAPS system to ensure that it functions correctly in everyday life.
+Здесь объясняется совместимость AAPS с системами мониторинга CGM и инсулиновыми помпами. Также дано руководство по правильной сборке системы AAPS чтобы она функционировала корректно.
 
 #### [Как собрать и установить AAPS](Installing-AndroidAPS/Building-APK.md)
 
@@ -122,7 +122,7 @@ This section is the manual for building the AAPS. Для успешной сбо
 
 #### [Configuration](Configuration/Config-Builder.md)
 
-This explains how to set and configure your ‘Profile’, ‘Insulin’, ‘BG Source’, ‘Pump’, ‘Sensitivity Detection’, ‘APS’, ‘Loop’, ‘Treatments’.
+Здесь объясняется, как настроить «Профиль», «Insulin», «Источник ГК», «Помпа», «Определение чувствительности», «APS», «Цикл», «Терапия».
 
 #### [Использование AAPS](Getting-Started/Screenshots.md)
 
