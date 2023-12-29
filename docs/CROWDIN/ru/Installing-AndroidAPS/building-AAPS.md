@@ -182,7 +182,7 @@ Now select "Finish":
 
 ![загрузка компонентов](../images/Building-the-App/13_downloading_components.png)
 
-Once everything is downloaded, the "Finish" button turns blue, and you can click it:
+По завершении загрузки, кнопка "Готово" становится синей, и на нее можно нажать:
 
 ![finished\_download\_components](../images/Building-the-App/14_finished_downloading_components.png)
 
