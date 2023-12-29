@@ -96,23 +96,23 @@ Git — это программа, позволяющая отслеживать
 
 (Запомните_путь_к_Git)=
 
-- During the installation, when you are asked to "select destination location" make a note of _where_ Git is being installed (the "**installation path**") you will need to check it in the next step. It will be something similar to "C:\Program Files\Git\cmd\git.exe"
+- Во время установки, когда программа попросит "выбрать место установки", заметьте, куда устанавливается Git ("**путь установки**"), это понадобится на следующем шаге. Это будет что-то вроде "C:\Program Files\Git\cmd\git.exe"
 
-- As you proceed through several steps of the Git installation, just accept all the default options.
+- По мере прохождения нескольких шагов установки Git, принимайте все параметры по умолчанию.
 
-- After the install, if you forgot to make a note of the where Git was installed, you can find it as follows: type "git" into the PC search bar, right click on "Git bash", select "open file location" hover over the "Git bash" icon with your mouse, which will then reveal where it is installed.
+- После установки, если вы забыли место установкин Git, вы можете найти его следующим образом: введите "git" в строке поиска ПК, щелкните правой кнопкой мыши на "Git bash", выберите "открыть местоположение файла", наведите курсор мыши на значок "Git bash"., который затем покажет, где он установлен.
 
-- Reboot your computer before the next step.
+- Перезагрузите компьютер перед следующим шагом.
 
 (Building-APK-install-android-studio)=
 
 ### Установите Android Studio
 
-- **You have to be online all of the time during the following steps, as Android Studio downloads several updates**
+- \*\* Следует постоянно находиться в Сети во время выполнения следующих шагов, так как Android Studio загружает несколько обновлений\*\*
 
-:::{admonition} What is Android Studio?
-:class: dropdown
-Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes.
+:::{admonition} Что такое Android Studio?
+:class: выпадающий
+Android Studio — это программа, которая запускается на вашем компьютере. Она позволяет загружать исходный код из Интернета (используя Git) и создавать приложения для смартфона (и смарт-часов). You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes.
 :::
 
 The following screenshots have been taken from Android Studio Version **Hedgehog**.
