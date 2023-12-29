@@ -153,34 +153,34 @@ Now select "Finish":
 
 ![Делиться данными с Google](../images/Building-the-App/08_Googlesharedata.png)
 
-You will now get a message about a missing software development kit (SDK) (don't worry, this will be solved soon), select "Next":
+Теперь вы получите сообщение о недостающем пакете разработки ПО (SDK) (не волнуйтесь, скоро вопрос будет решен), выберите "Далее":
 
-![missingSDK](../images/Building-the-App/09_MissingSDK.png)
+![недостающий пакет SDK](../images/Building-the-App/09_MissingSDK.png)
 
-The software should autoselect the required (SDK) and choose a location.
+Программное обеспечение должно автоматически выбрать недостающие данные (SDK) и директорию установки.
 
-:::{admonition} What is an Android SDK?
+:::{admonition} Что такое Android SDK?
 
-In order to run **AAPS** on the phone the application needs to integrate with Android itself. Android provides “_software development kits_” (SDK) which allow apps like **AAPS** to interface with an Android operating system.
+Чтобы запустить **AAPS** на телефоне, приложение должно интегрироваться с системой Android. Android предоставляет “_software development kits_” (пакеты разработки ПО) (SDK), которые позволяют **AAPS** взаимодействовать с операционной системой Android.
 :::
 
-The SDK platform package does **not** relate to the version of Android running on your phone, but to the build of **AAPS**. **AAPS** version 3.2 (and newer) builds on top of API level 34, which is automatically selected in the **Hedgehog** version of **Android Studio**. Therefore, simply click "Next":
+Пакет SDK относится **не** к версии Android на телефоне, а к самой сборке **AAPS**. **AAPS** версии 3.2 (и новее) строится поверх API 34, которая автоматически выбирается в версии **Hedgehog** **Android Studio**. Поэтому просто нажмите "Далее":
 
-![SDKcomponents\_setup](../images/Building-the-App/10_SDKComponents_setup.png)
+![установка компонентов SDK](../images/Building-the-App/10_SDKComponents_setup.png)
 
-When asked to verify settings, just select "Next":
+На запрос о проверке настроек, просто выберите "Далее":
 
-![verify\_settings](../images/Building-the-App/11_Verify_settings.png)
+![подтверждение настроек](../images/Building-the-App/11_Verify_settings.png)
 
-When asked about the Licence Agreement, select "Accept" and then click "Finish":
+На запрос о Лицензионном Соглашении, выберите "Принять" и нажмите "Готово":
 
-![licence\_agreement](../images/Building-the-App/12_Licence_agreement.png)
+![лицензионное соглашение](../images/Building-the-App/12_Licence_agreement.png)
 
-> **_Note:_**  Depending on your set-up, the licenses to be accepted might vary from what is shown in the screenshot.
+> **_Примечание:_** В зависимости от вашей установки, принимаемые лицензии могут отличаться от того, что показано на снимке экрана.
 
-Wait while Android Studio downloads additional components, this may take a few minutes:
+Подождите, пока Android Studio загружает дополнительные компоненты, это может занять несколько минут:
 
-![downloading\_components](../images/Building-the-App/13_downloading_components.png)
+![загрузка компонентов](../images/Building-the-App/13_downloading_components.png)
 
 Once everything is downloaded, the "Finish" button turns blue, and you can click it:
 
