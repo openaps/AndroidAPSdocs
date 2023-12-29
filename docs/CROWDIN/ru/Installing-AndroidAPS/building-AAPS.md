@@ -145,13 +145,13 @@ Android Studio — это программа, которая запускает�
 
 Now select "Finish":
 
-![closeASsetup](../images/Building-the-App/07_CloseAS_Setup.png)
+![завершите установку AS](../images/Building-the-App/07_CloseAS_Setup.png)
 
-Android Studio will now start.
+Теперь запустите Android Studio.
 
-Decide whether you want to share data with Google or not (if unsure, just select "Don't send").
+Решите, хотите ли вы обмениваться данными с Google (если не уверены, просто выберите "Не отсылать").
 
-![Share data with Google](../images/Building-the-App/08_Googlesharedata.png)
+![Делиться данными с Google](../images/Building-the-App/08_Googlesharedata.png)
 
 You will now get a message about a missing software development kit (SDK) (don't worry, this will be solved soon), select "Next":
 
