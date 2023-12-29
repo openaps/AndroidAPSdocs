@@ -48,47 +48,47 @@
 </tbody>
 </table>
 
-**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
+\*\*Настоятельно рекомендуется (но не обязательно) использовать SSD (Solid State Disk) вместо жесткого диска (Hard Disk Drive), так как при сборке AAPS файла потребуется меньше времени. \* Использовать HDD при создании файла apk **AAPS** можно. Процесс сборки приложения при этом может занять много времени, но после начала можно оставить его без присмотра.
 
-## Help and support during the building process
+## Помощь и поддержка в процессе сборки
 
-If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../Installing-AndroidAPS/troubleshooting_androidstudio) section, please consult that first.
+Если вы столкнулись с трудностями в процессе создания приложения **AAPS**, сначала обратитесь к разделу [**устранение проблем с Android Studio**](../Installing-AndroidAPS/troubleshooting_androidstudio).
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](docs/EN/make-a-PR.md).
+Если вы считаете, что что-то в инструкциях по сборке неправильно, отсутствует или сбивает с толку, свяжитесь с другими пользователями \*\* AAPS \*\* на [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) или [Discord](https://discord.gg/4fQUWHZ4Mw). Если вы хотите что-то изменить самостоятельно (обновить снимки экрана _etc_), отправьте [запрос на слияние (PR)](docs/EN/make-a-PR.md).
 
-## Step-by-step guide to building the AAPS app
+## Пошаговое руководство по созданию приложения AAPS
 
-The overall steps for building the **AAPS** apk file are as follows:
+В общем виде шаги по созданию файла **AAPS** apk следующие:
 
-4.1 [Install Git](Install-Git)
+4.1 [Установить Git](Install-Git)
 
-4.2 [Install Android Studio](Building-APK-install-android-studio)
+4.2 [Установить Android Studio](Building-APK-install-android-studio)
 
-4.3 [Download AAPS code](Building-APK-download-AAPS-code)
+4.3 [Скачать код AAPS](Building-APK-download-AAPS-code)
 
-4.4. [Set Git path in Android Studio preferences](Building-APK-set-git-path-in-preferences)
+4.4. [Установить путь к Git в настройках Android Studio](Building-APK-set-git-path-in-preferences)
 
 4.5. [Build AAPS "signed" apk](Building-APK-generate-signed-apk)
 
-In this guide you will find _example_ screenshots of building of **AAPS** apk file. Because  **Android Studio** - the software which we use to build the **AAPS** apk - is regularly updated, these screenshots may not be identical to your installation, but they should still be possible to follow.
+В этом руководстве вы найдете _примерные_ снимки экрана при построении приложения **AAPS**. Поскольку \*\* Android Studio\*\* - программное обеспечение, которое мы используем для создания \*\* AAPS\*\*  - регулярно обновляется, эти снимки могут не совпадать с ходом вашей установки, но они дают представление о процессе.
 
-Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might be also be minor differences in the steps for the different  platforms.
+Поскольку \*\* Android Studio \*\* работает на платформах Windows, Mac OS X и Linux, также могут быть незначительные расхождения в шагах для разных платформ.
 
-(Install-Git)=
+(Установить git)=
 
-### Install Git (if you don't have it)
+### Установите git (если у вас его нет)
 
 :::{admonition} Why Git?
 
-Git is known as a “_Versioning Control System_” (VCS).\
-Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the Github website to your local computer. Then, you will use Git on your computer to build the **AAPS** application (apk).
+Git известен как “_Versioning Control System_” (VCS) (система контроля версий)
+Git — это программа, позволяющая отслеживать изменения в коде и сотрудничать с разработчиками. Вам понадобится Git для переноса копии исходного кода **AAPS** с веб-сайта Github на свой локальный компьютер. Затем вы будете использовать Git на своем компьютере для сборки приложения **AAPS** (apk).
 :::
 
-#### Steps for Installing Git
+#### Шаги по установке Git
 
-1. Check that you don’t already have **Git** installed. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](Building-APK-install-android-studio):
+1. Проверьте, установлен ли у вас **Git**. Это можно сделать, набрав “git” в строке поиска Windows – если вы увидите \*\* “Git bash”\*\* или какую-либо другую форму Git, то он уже установлен, и можно сразу перейти к [установке Android Studio] (Сборка-APK-установка-android-studio):
 
-![Git\_installed](../images/Building-the-App/001_check_git_installed.png)
+![Git\_установлен](../images/Building-the-App/001_check_git_installed.png)
 
 2. If you don’t have Git installed, download and install the latest version for your system from [**here**](https://git-scm.com/downloads). Any recent Git version should work, select the correct version according to your system, either Mac, Windows and Linux.
 
