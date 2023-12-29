@@ -112,36 +112,36 @@ Git — это программа, позволяющая отслеживать
 
 :::{admonition} Что такое Android Studio?
 :class: выпадающий
-Android Studio — это программа, которая запускается на вашем компьютере. Она позволяет загружать исходный код из Интернета (используя Git) и создавать приложения для смартфона (и смарт-часов). You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes.
+Android Studio — это программа, которая запускается на вашем компьютере. Она позволяет загружать исходный код из Интернета (используя Git) и создавать приложения для смартфона (и смарт-часов). "Сломать" текущую версию **AAPS** которая работает у вас на смартфоне, создав новое или обновленное приложение на ПК с помощью Android Studio невозможно, это совершенно разные процессы.
 :::
 
-The following screenshots have been taken from Android Studio Version **Hedgehog**.
+Следующие снимки экрана были сделаны на версии **Hedgehog** (ёжик) Android Studio.
 
-One of the most important things when installing Android Studio is **be patient!** During installation and setup, Android Studio is downloading a lot of stuff which will take time.
+Самая важная заповедь при установке Android Studio: Будьте терпеливы! Во время установки и настройки Android Studio загружает много элементов, которые отнимают время.
 
-Download the latest version of Android Studio from [**here**](https://developer.android.com/studio#downloads), locate it in your browser downloads folder, and install it on your computer:
+Скачайте новую версию Android Studio [**отсюда**](https://developer.android.com/studio#downloads), найдите её в папке загрузок браузера и установите на свой компьютер:
 
-![Download Android Studio](../images/Building-the-App/01_InstallAS_Hedgehog.png)
+![Загрузка Android Studio](../images/Building-the-App/01_InstallAS_Hedgehog.png)
 
-When you first start Android Studio, you will be greeted as follows:
+При первом запуске Android Studio, прогамма приветствует вас:
 
-![Welcome](../images/Building-the-App/02_Welcome_AS_Hedgehog.png)
+![Добро пожаловать](../images/Building-the-App/02_Welcome_AS_Hedgehog.png)
 
-select "Next":
+выберите "Далее":
 
-![ChooseASComponents](../images/Building-the-App/03_choose_AS_components.png)
+![Выбор компонентов AS](../images/СборкаApp/03_choose_AS_components.png)
 
-Leave the boxes checked, and select "Next":
+Оставьте флажки отмеченными и выберите «Далее»:
 
-![ChooseASlocation](../images/Building-the-App/04_AS_Install_location.png)
+![Выберите расположение AS](../images/Building-the-App/04_AS_Install_location.png)
 
-Allow the installation at the default location suggested, and select "Next":
+Разрешите установку в директорию по умолчанию и выберите "Далее":
 
-![SmartMenulocation](../images/Building-the-App/04_AS_StartMenu.png)
+![расположение смарт-меню AS](../images/Building-the-App/04_AS_Install_location.png)
 
-When asked to choose the Smart Menu Folder, simply select "Install". You will now need to wait a few minutes while Android Studio is being installed. You should then see that the Installation is Complete, select "Next":
+Когда появится запрос на выбор папки смарт-меню просто выберите "Install". Теперь нужно подождать несколько минут во время установки Android Studio. Затем вы увидите, что установка завершена, выберите "Далее":
 
-![installationcomplete](../images/Building-the-App/06_Installation_Complete.png)
+![установка завершена](../images/Building-the-App/06_Installation_Complete.png)
 
 Now select "Finish":
 
