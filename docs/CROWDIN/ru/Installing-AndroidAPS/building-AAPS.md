@@ -184,40 +184,39 @@ Now select "Finish":
 
 По завершении загрузки, кнопка "Готово" становится синей, и на нее можно нажать:
 
-![finished\_download\_components](../images/Building-the-App/14_finished_downloading_components.png)
+![загрузка компонентов завершена](../images/Building-the-App/14_finished_downloading_components.png)
 
-You are now greeted with the "Welcome to Android Studio" screen:
+Вас приветствует экран «Добро пожаловать в Android Studio»:
 
-![Welcome\_AS](../images/Building-the-App/15_Welcome_AS.png)
+![Добро пожаловать\_AS](../images/Building-the-App/15_Welcome_AS.png)
 
 (Сборка-APK-загрузка-AAPS-кода)=
 
-### Download the AAPS code
+### Загрузите код AAPS
 
-:::{admonition} Why can it take a long time to download the AAPS code?
+:::{admonition} Почему загрузка кода AAPS занимает много времени?
 
-The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute.
+Когда **AAPS** загружается первый раз, Android Studio подключается к веб-сайту Github, чтобы скачать исходный код для **AAPS**. Это займет около 1 минуты.
 
-Android Studio will then use **Gradle** (a development tool in  Android studio) to identify other components needed to install these items on your computer.
+Android Studio затем будет использовать **Gradle** (инструмент разработки в Android studio) для определения других компонентов для установки.
 
 :::
 
-On the Android Studio Welcome screen, check that "**Projects**" (1) is highlighted on the left. Then click "**Get from VCS**" (2) at the top right:
+На экране приветствия Android Studio убедитесь, что "**Проекты**" (1) подсвечены слева. Затем нажмите "**Получить из VCS**" (2) вверху справа:
 
-![Get\_from\_VCS](../images/Building-the-App/16_Get_from_VCS.png)
+![Получить из системы контроля версий\_VCS](../images/Building-the-App/16_Get_from_VCS.png)
 
-- We will now tell Android Studio where to get the code from:
+- Теперь мы скажем программе Android Studio, откуда получить код:
 
-- "Repository URL" should be selected (by default) on the left (1).
+- Должен быть выбран "URL репозитория" (по умолчанию) слева (1).
 
-- "Git" should be selected (by default) as version control (2).
+- В качестве системы управления версиями должен быть выбран "Git" (по умолчанию) (2).
 
-Now copy this URL:````
+Теперь скопируйте этот URL:```
       https://github.com/nightscout/AndroidAPS.git
-      ```
-````
+```
 
-and paste it into the URL textbox (3).
+и вставьте его в текстовое поле URL (3).
 
 - Check the (default) directory for saving the cloned code is sensible (4).
 
