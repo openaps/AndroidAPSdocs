@@ -232,26 +232,26 @@ Android Studio затем будет использовать **Gradle** (инс
 
 ![Доверять проекту](../images/Building-the-App/18a_trust_project.png)
 
-- If your firewall asks for permission, grant access:
+- Если брандмауэр запрашивает разрешение, предоставьте доступ:
 
-![Firewall permission java](../images/AndroidStudio361_18.png)
+![Разрешение брандмауэру java](../images/AndroidStudio361_18.png)
 
-If asked if you want to import settings, select "Do not import settings". We don't want to import settings from previous installations:
+Если будет спрошено, хотите ли вы импортировать настройки, выберите «Не импортировать настройки». Мы не хотим импортировать настройки из предыдущих установок:
 
-![Do not import settings](../images/studioSetup/01_ImportSettings.png)
+![Не импортировать настройки](../images/studioSetup/01_ImportSettings.png)
 
-После успешного клонирования репозитория, Android Studio откроет клонированный проект. Wait patiently (this may take a few minutes), and particularly, do not update the project as suggested in the pop-up:
+После успешного клонирования репозитория, Android Studio откроет клонированный проект. Дождитесь (это может занять несколько минут), и не обновляйте проект, как это предлагается во всплывающем окне:
 
-![AS\_download\_dependencies](../images/Building-the-App/19_downloading_dependencies.png)
+![загрузка взаимозависимостей компонентов\_AS](../images/Building-the-App/19_downloading_dependencies.png)
 
-:::{admonition} NEVER UPDATE GRADLE!
+:::{admonition} НИКОГДА НЕ ОБНОВЛЯЙТЕ GRADLE!
 
-Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
+Android Studio может рекомендовать обновить систему gradle. **Никогда не обновляйте gradle!** Это может привести к трудностям.
 :::
 
-_Optional_ - If you want to clear the pop-up for **"project update recommended"**, click on the blue text "More" (1). In the dialog box the select "Don't ask for this project" (2).
+_Optional_ - If you want to clear the pop-up for **"project update recommended"**, click on the blue text "More" (1). В диалоговом окне выберите "Don't rask for this project" (2).
 
-![AS\_close\_gradle\_popup](../images/Building-the-App/20_close_popup.png)
+![AS\_закрытие\_окна\_gradle](../images/Building-the-App/20_close_popup.png)
 
 If any errors occur, do not continue with the following steps, consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio) for known problems.
 
