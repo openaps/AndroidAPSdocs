@@ -68,7 +68,7 @@
 
 4.4. [Установить путь к Git в настройках Android Studio](Building-APK-set-git-path-in-preferences)
 
-4.5. [Build AAPS "signed" apk](Building-APK-generate-signed-apk)
+4.5. [Создать "подписанное" apk-приложение AAPS](Building-APK-generate-signed-apk)
 
 В этом руководстве вы найдете _примерные_ снимки экрана при построении приложения **AAPS**. Поскольку \*\* Android Studio\*\* - программное обеспечение, которое мы используем для создания \*\* AAPS\*\*  - регулярно обновляется, эти снимки могут не совпадать с ходом вашей установки, но они дают представление о процессе.
 
@@ -78,7 +78,7 @@
 
 ### Установите git (если у вас его нет)
 
-:::{admonition} Why Git?
+:::{admonition} Почему Git?
 
 Git известен как “_Versioning Control System_” (VCS) (система контроля версий)
 Git — это программа, позволяющая отслеживать изменения в коде и сотрудничать с разработчиками. Вам понадобится Git для переноса копии исходного кода **AAPS** с веб-сайта Github на свой локальный компьютер. Затем вы будете использовать Git на своем компьютере для сборки приложения **AAPS** (apk).
@@ -143,7 +143,7 @@ Android Studio — это программа, которая запускает�
 
 ![установка завершена](../images/Building-the-App/06_Installation_Complete.png)
 
-Now select "Finish":
+Выберите "Готово":
 
 ![завершите установку AS](../images/Building-the-App/07_CloseAS_Setup.png)
 
@@ -249,7 +249,7 @@ Android Studio затем будет использовать **Gradle** (инс
 Android Studio может рекомендовать обновить систему gradle. **Никогда не обновляйте gradle!** Это может привести к трудностям.
 :::
 
-_Optional_ - If you want to clear the pop-up for **"project update recommended"**, click on the blue text "More" (1). В диалоговом окне выберите "Don't rask for this project" (2).
+_На ваше усмотрение_ - Если хотите очистить всплывающее окно **"рекомендуется обновить проект"**, нажмите на синий текст "Больше" (1). В диалоговом окне выберите "Don't rask for this project" (2).
 
 ![AS\_закрытие\_окна\_gradle](../images/Building-the-App/20_close_popup.png)
 
@@ -283,15 +283,15 @@ _Optional_ - If you want to clear the pop-up for **"project update recommended"*
 
 - Если вы обнаружите, что \*\*git.exe \*\* не найден автоматически, или что нажатие кнопки "Проверить" приводит к ошибке (1), вы можете либо вручную ввести путь, который вы сохранили [ранее] (Make_a_note_of_Git_path), либо щелкнуть по значку папки (2) и вручную перейти к каталогу где хранится \*\*git.exe \*\*:
 
-  ![Git not found](../images/studioSetup/13_GitVersionError.png)
+  ![Git не найден](../images/studioSetup/13_GitVersionError.png)
 
-- Use the [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where git has been installed. How to do this is explained [above](Make_a_note_of_Git_path) in more detail.
+- Используйте [функцию поиска](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) в проводнике Windows, чтобы найти "git.exe", если не уверены, где был установлен git. Как это сделать, более подробно объясняется [выше](Make_a_note_of_Git_path).
 
 - Если вы выбрали его вручную, проверьте выбранный путь к Git кнопкой «Тест», как описано выше.
 
 Когда версия Git отображается рядом с его директорией (см. скриншот выше), вы успешно завершили этот этап и теперь можете закрыть окно "Настройки" Android Studio нажатием кнопки "**OK**" (5):
 
-![Git\_path\_OK](../images/Building-the-App/23a_Git_path_OK.png)
+![Путь\_к\_Git\_OK](../images/Building-the-App/23a_Git_path_OK.png)
 
 (Сборка-APK-генерировать-подписанный-apk)=
 
@@ -299,7 +299,7 @@ _Optional_ - If you want to clear the pop-up for **"project update recommended"*
 
 :::{admonition} Зачем "подписывать" приложение AAPS?
 
-Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. Подробнее об этом по [этой ссылке](https://developer.android.com/studio/publish/app-signing.html#generate-key). For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
+Android требует, чтобы каждое приложение было _подписано_, чтобы гарантировать, что позже оно может быть обновлено только из того же надежного источника, который выпустил исходное приложение. Подробнее об этом по [этой ссылке](https://developer.android.com/studio/publish/app-signing.html#generate-key). Для наших целей это просто означает, что мы генерируем файл подписи или "хранилища ключей" и используем его при создании приложения **AAPS**.
 :::
 
 - В строке меню нажмите кнопку "Создать" (1) и выберите "Генерировать подписанный пакет/APK (2)
@@ -321,59 +321,59 @@ Android requires each app to be _signed_, to ensure that it can only be updated 
 
 ![Создание\_хранилища\_ключей](../images/Building-the-App/28_new_keystore.png)
 
-- Click on the drop-down menu (1), to select where you want to save your keystore file. In this example, it is being saved in "My Documents" (2). Do not save the keystore in same folder as your Android Studio files (StudioProject). Type in a simple name for your key store (3) and confirm it with "OK" (4):
+- Нажмите на раскрывающееся меню (1), чтобы выбрать место файла хранилища ключей. В этом примере он сохраняется в "Моих документах" (2). Не размещайте хранилище ключей в ту же папку, что и файлы Android Studio (StudioProject). Введите имя файла хранилища ключей (3) и подтвердите, нажав "OK" (4):
 
-![Create key store](../images/Building-the-App/29_choose_keystore_file.png)
+![Создание\_хранилища\_ключей](../images/Building-the-App/29_choose_keystore_file.png)
 
-This will take you back to the previous screen. Your chosen location for saving the key store file is shown.
+Вернёмся на предыдущий экран. Здесь показано выбранное вами расположение для сохранения файла хранилища ключей.
 
-Now choose a simple password (make a note of it), enter it in the password box (1), and confirm it (2).  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [troubleshooting for lost key store](troubleshooting_androidstudio-lost-keystore).
+Теперь выберите простой пароль (запишите его), введите в поле пароля (1), и подтвердите (2).  Примечание: Пароли для хранилища ключей и ключей не должны быть сложными. Если вы потеряете пароль, смотрите [решение проблем при потере ключей](troubleshooting_androidstudio-lost-keystore).
 
-The default alias (3) for your key is "key0", leave this unchanged.
+По умолчанию псевдоним (3) для вашего ключа это "key0", оставьте его без изменений.
 
-You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm (5) it.
+Теперь вам нужен пароль для ключа. Для простоты можете использовать тот же пароль, что и для хранилища ключей выше. Введите пароль (4) и подтвердите (5).
 
-The validity (6) is 25 years by default, leave it as it is.
+Срок действия (6) 25 лет по умолчанию, оставьте его как есть.
 
-Enter your first and last name (7). No other information needs to be added.
+Введите имя и фамилию (7). Другой информации не нужно.
 
-Click "OK" (8) to continue:
+Нажмите "OK" (8), чтобы продолжить:
 
-![Select key store path](../images/Building-the-App/30_new_keystore.png)
+![Выберите путь к хранилищу ключей](../images/Building-the-App/30_new_keystore.png)
 
-On the "Generate signed bundle or APK" page, the path to your keystore will now be displayed. Now re-enter the Key Store password (1) and Key password (2), and tick the box to remember passwords is checked (3), so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Click "Next" (4):
+На странице "Генерировать подписанный пакет или APK" теперь будет показан путь к вашему хранилищу. Теперь повторно введите пароль хранилища ключей (1) и пароль ключа (2) и установите флажок запоминать пароли (3), чтобы не пришлось вводить их снова при следующей сборке apk (или при обновлении до новой версии AAPS). Нажмите "Далее" (4):
 
-![Remember passwords](../images/Building-the-App/31_generate_APK.png)
+![Запомните пароли](../images/Building-the-App/31_generate_APK.png)
 
-On the next screen, select build variant "fullRelease" (1) and click "Create" (2).
+На следующем экране выберите вариант сборки "fullRelease" (1) и нажмите "Create " (создать) (2).
 
-![Select build variant](../images/Building-the-App/32_full_release.png)
+![Выберите вариант сборки](../images/Building-the-App/32_full_release.png)
 
-Android Studio will now build the **AAPS** apk. It will show "Gradle Build running" at the bottom right. The process takes some time, depending on your computer and internet connection, **be patient!** If you want to watch the progress of the build, click on the small hammer "build" at the bottom of Android Studio:
+Android Studio теперь создаст приложение **AAPS** apk. В правом нижнем углу появится сообщение "Gradle Build running". Процесс занимает некоторое время, в зависимости от вашего компьютера и подключения к Интернету, \*\* наберитесь терпения!\*\* Если хотите следить за ходом сборки, нажмите на маленький молоточек "build" внизу Android Studio:
 
-![Gradle Running](../images/Building-the-App/33_Studio_building1.png)
+![Выполняется Gradle](../images/Building-the-App/33_Studio_building1.png)
 
-Now you can watch the building progress:
+Теперь вы можете наблюдать за ходом построения приложения:
 
-![Android\_Studio\_building](../images/Building-the-App/34_Studio_building2.png)
+![Android Studio выполняет сборку приложения](../images/Building-the-App/34_Studio_building2.png)
 
-Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". If you miss this, click on the notification "locate or analyse the APK" (yellow highlight) at the very bottom of the screen to bring up the Notifications:
+После завершения сборки Android Studio выведет сообщение "СБОРКА ЗАВЕРШЕНА УСПЕШНО.". Вы увидите всплывающее уведомление, на которое можете нажать, чтобы найти файл ("locate"). Если вы пропустили этот момент, нажмите на уведомление "найти или анализировать APK" (выделено желтым цветом) в самом низу экрана, чтобы открыть уведомления:
 
-![Build finished](../images/Building-the-App/35_Studio__built_success.png)
+![Сборка завершена](../images/Building-the-App/35_Studio__built_success.png)
 
-_If the build was not successful, refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio)._
+_Если сборка не удалась, обратитесь к разделу [Проблемы и их решения](../Installing-AndroidAPS/troubleshooting_androidstudio)._
 
-In the Notifications box, click on the blue link "locate":
+В окне Уведомления нажмите на синюю ссылку "locate":
 
-![Locate build](../images/Building-the-App/35_Studio__built_locate.png)
-Your file manager/explorer will open. Перейдите в директорию "full" (1) > "release" (2).
+![Найти сборку](../images/Building-the-App/35_Studio__built_locate.png)
+Откроется файловый менеджер. Перейдите в директорию "full" (1) > "release" (2).
 
-![File location apk](../images/Building-the-App/36_locate_apk.png)
+![Определение местонахождения файла apk](../images/Building-the-App/36_locate_apk.png)
 
-Open the folder "release". The file "app-full-release.apk" (1) is the **AAPS** apk that you have just built, you will be transferring this file to your smartphone in the next section of the docs:
+Откройте папку "release". Файл "app-full-release.apk" (1) - это только что созданный apk-файл **APPS**, в следующем разделе документации описано как перенести этот файл на телефон:
 
-_Optional at this stage - if you are planning to also build the "**AAPS** wear" app for your smartwatch so you can remotely control **AAPS**, delete the "output-metadata" .json file (2) from this folder, to avoid the error of [uncommitted changes](troubleshooting_androidstudio-uncommitted-changes) during the **AAPS** wear app build_:
+_ Опционально на данном этапе - если вы планируете также создать приложение "\*\* AAPS \*\* wear" для смарт- часов, удалите файл "output-metadata" .json (2) из этой папки, чтобы избежать ошибки [uncommitted изменения](устранение неполадок_androidstudio-незафиксированные изменения) во время сборки приложения **AAPS** wear_:
 
-![apk\_file](../images/Building-the-App/37_full_release_apk.png)
+![файл приложения_apk(../images/Building-the-App/37_full_release_apk.png)
 
-Поздравляем! Now you have built the **AAPS** apk file, you can move to the next stage of [Transferring and Installing **AAPS**](Transferring-and-installing-AAPS.md).
+Поздравляем! Теперь вы создали **AAPS** apk и можете перейти к следующему этапу [Перенос и Установка **AAPS**](Transferring-and-installing-AAPS.md).
