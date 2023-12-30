@@ -218,19 +218,19 @@ Android Studio затем будет использовать **Gradle** (инс
 
 и вставьте его в текстовое поле URL (3).
 
-- Check the (default) directory for saving the cloned code is sensible (4).
+- Есть смысл проверить место сохранения клонированного кода (директорию по умолчанию) (4).
 
-- Now click the button "Clone" (5).
+- Теперь нажмите кнопку "Клонировать" (5).
 
-![Select\_URL](../images/Building-the-App/17_select_URL.png)
+![Выберите\_URL](../images/Building-the-App/17_select_URL.png)
 
-You will now see a screen telling you that the repository is being cloned:
+Теперь вы увидите экран, сообщающий, что репозиторий клонируется:
 
-![cloning\_repository](../images/Building-the-App/18_cloning_repository.png)
+![репозиторий\_клонируется](../images/Building-the-App/18_cloning_repository.png)
 
-At some point, you may be asked whether you want to trust the project. Click on "Trust project":
+В какой-то момент вам будет задан вопрос, хотите ли вы доверять проекту. Нажмите на "Доверять проекту":
 
-![Trust project](../images/Building-the-App/18a_trust_project.png)
+![Доверять проекту](../images/Building-the-App/18a_trust_project.png)
 
 - If your firewall asks for permission, grant access:
 
