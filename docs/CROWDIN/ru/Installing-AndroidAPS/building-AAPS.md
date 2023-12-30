@@ -255,54 +255,54 @@ _Optional_ - If you want to clear the pop-up for **"project update recommended"*
 
 При возникновении каких-либо ошибок не выполняйте следующие действия, обратитесь к разделу [Устранение неполадок](../Установка-AndroidAPS/устранение неполадок_androidstudio) для выявления известных проблем.
 
-Now close Android Studio (select _File_-_Exit_).
+Теперь закройте Android Studio (выберите _Файл_-_Выход_).
 
-If you have not restarted your computer since installing or updating Git, restart your computer now, and then re-open Android Studio.
+Если вы не перезапускали компьютер после установки или обновления Git, перезапустите компьютер сейчас, а затем вновь откройте Android Studio.
 
 (Построение-APK-задать-путь-к-git-в-настройках) =
 
 ### Задайте путь к git в параметрах Android Studio
 
-Now we will tell Android studio where to find Git, which you installed [earlier](Install-Git).
+Теперь мы скажем Android Studio, где найти Git, который был установлен [ранее](Install-Git).
 
-- Make sure you have restarted your computer after [installing Git](Install-Git).
-- Open **Android Studio** (you can find it by searching in the Start menu).
-- In the top left corner of **Android Studio**, navigate to _File-Settings_ (Windows) or _Android Studio > Preferences_ (Mac). This opens the following window, click to expand the dropdown called "version control" (1):
+- Убедитесь, что вы перезагрузили компьютер после [установки Git](Install-Git).
+- Откройте **Android Studio** (ее можно найти через меню Пуск).
+- В левом верхнем углу **Android Studio** перейдите в _настройки_ (Windows) или _Android Studio > установки_ (Mac). Это откроет следующее окно, из выпадающего списка выберите "управление версиями" (1):
 
-![version\_control](../images/Building-the-App/21_AS_version_control.png)
+![управление версиями (VC)](../images/Строительство-App/21_AS_version_control.png)
 
-- Now select "**Git**" (2).
-- In the lower middle of the page, make sure update method "Merge" (3) is selected.
-- Check if **Android Studio** can automatically locate the correct path to **git.exe** automatically by clicking the button "Test" (4):
+- Теперь выберите "**Git**" (2).
+- В нижней части середины страницы выберите метод обновления "Merge" (слияние) (3).
+- Проверьте, может ли Android Studio автоматически найти путь к файлу **git.exe**, нажав кнопку "Тест" (4):
 
-![Gitpath](../images/Building-the-App/22_Git_path.png)
+![путь\_к\_Git](../images/Building-the-App/22_Git_path.png)
 
-- If the automatic setting is successful, your current version of **Git** will be displayed next to the path.
+- Если автоматическая настройка прошла успешно, то рядом с путем к **Git** будет показана его версия.
 
-  ![Git\_version\_displayed](../images/Building-the-App/23_Git__path_success.png)
+  ![Показана\_версия\_Git](../images/Building-the-App/23_Git__path_success.png)
 
-- If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error (1), you can either manually enter the path which you saved [earlier](Make_a_note_of_Git_path), or click on the folder icon (2) and manually navigating to the directory where **git.exe** is stored:
+- Если вы обнаружите, что \*\*git.exe \*\* не найден автоматически, или что нажатие кнопки "Проверить" приводит к ошибке (1), вы можете либо вручную ввести путь, который вы сохранили [ранее] (Make_a_note_of_Git_path), либо щелкнуть по значку папки (2) и вручную перейти к каталогу где хранится \*\*git.exe \*\*:
 
   ![Git not found](../images/studioSetup/13_GitVersionError.png)
 
 - Use the [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where git has been installed. How to do this is explained [above](Make_a_note_of_Git_path) in more detail.
 
-- If you have manually selected it, check your selected Git path with the "Test" button as described above.
+- Если вы выбрали его вручную, проверьте выбранный путь к Git кнопкой «Тест», как описано выше.
 
-When the Git version is displayed next to the path (see screenshot above) you have completed this stage successfully and you can close the Android Studio "Settings" window by clicking the "**OK**" button (5):
+Когда версия Git отображается рядом с его директорией (см. скриншот выше), вы успешно завершили этот этап и теперь можете закрыть окно "Настройки" Android Studio нажатием кнопки "**OK**" (5):
 
 ![Git\_path\_OK](../images/Building-the-App/23a_Git_path_OK.png)
 
 (Сборка-APK-генерировать-подписанный-apk)=
 
-### Build the AAPS "signed" APK
+### Построение подписанного приложения AAPS apk
 
-:::{admonition} Why does the AAPS app need to be "signed"?
+:::{admonition} Зачем "подписывать" приложение AAPS?
 
-Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
+Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. Подробнее об этом по [этой ссылке](https://developer.android.com/studio/publish/app-signing.html#generate-key). For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
 :::
 
-- In the menu bar, click "Build" (1), select "Generate Signed Bundle/APK (2)
+- В строке меню нажмите кнопку "Build" (1) и выберите "Generate Signed Bundle/APK (2)
 
 ![Build apk](../images/Building-the-App/25_build_apk.png)
 
