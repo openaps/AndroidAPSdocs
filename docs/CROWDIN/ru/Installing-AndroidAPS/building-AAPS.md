@@ -302,20 +302,20 @@ _Optional_ - If you want to clear the pop-up for **"project update recommended"*
 Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. Подробнее об этом по [этой ссылке](https://developer.android.com/studio/publish/app-signing.html#generate-key). For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
 :::
 
-- В строке меню нажмите кнопку "Build" (1) и выберите "Generate Signed Bundle/APK (2)
+- В строке меню нажмите кнопку "Создать" (1) и выберите "Генерировать подписанный пакет/APK (2)
 
-![Build apk](../images/Building-the-App/25_build_apk.png)
+![Создание apk](../images/Building-the-App/25_build_apk.png)
 
-- Select "APK" instead of "Android App Bundle" and click "Next":
+- Выберите "APK" вместо "Android App Bundle" и нажмите "Далее":
 
-![APK instead of bundle](../images/Building-the-App/26_generate_APK.png)
+![APK вместо пакета](../images/Building-the-App/26_generate_APK.png)
 
-- In the next screen, make sure that "Module" is set to "AAPS.app" (1).
-- Click "Create new\..." (2) to start creating your key store.
+- На следующем экране убедитесь, что "Module" установлен в "AAPS.app" (1).
+- Нажмите "Создать новый..." (2) для создания хранилища ключей.
 
-**_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
+**_Примечание:_** Хранилище ключей - это файл, в котором хранится информация о подписи приложения. Он зашифрован и информация защищена паролями.
 
-![Create\_key\_store](../images/Building-the-App/27_new_keystore.png)
+![Создание\_хранилища\_ключей](../images/Строительство-App/27_new_keystore.png)
 
 - Click the "folder" symbol (1) to select a path on your computer for your key store:
 
