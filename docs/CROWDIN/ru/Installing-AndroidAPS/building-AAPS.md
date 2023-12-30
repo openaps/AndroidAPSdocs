@@ -319,7 +319,7 @@ Android requires each app to be _signed_, to ensure that it can only be updated 
 
 - Нажмите на символ папки и выберите путь к хранилищу ключей:
 
-![Create key store](../images/Building-the-App/28_new_keystore_path.png)
+![Создание\_хранилища\_ключей](../images/Building-the-App/28_new_keystore.png)
 
 - Click on the drop-down menu (1), to select where you want to save your keystore file. In this example, it is being saved in "My Documents" (2). Do not save the keystore in same folder as your Android Studio files (StudioProject). Type in a simple name for your key store (3) and confirm it with "OK" (4):
 
