@@ -317,7 +317,7 @@ Android requires each app to be _signed_, to ensure that it can only be updated 
 
 ![Создание\_хранилища\_ключей](../images/Строительство-App/27_new_keystore.png)
 
-- Click the "folder" symbol (1) to select a path on your computer for your key store:
+- Нажмите на символ папки и выберите путь к хранилищу ключей:
 
 ![Create key store](../images/Building-the-App/28_new_keystore_path.png)
 
