@@ -253,7 +253,7 @@ _Optional_ - If you want to clear the pop-up for **"project update recommended"*
 
 ![AS\_закрытие\_окна\_gradle](../images/Building-the-App/20_close_popup.png)
 
-If any errors occur, do not continue with the following steps, consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio) for known problems.
+При возникновении каких-либо ошибок не выполняйте следующие действия, обратитесь к разделу [Устранение неполадок](../Установка-AndroidAPS/устранение неполадок_androidstudio) для выявления известных проблем.
 
 Now close Android Studio (select _File_-_Exit_).
 
