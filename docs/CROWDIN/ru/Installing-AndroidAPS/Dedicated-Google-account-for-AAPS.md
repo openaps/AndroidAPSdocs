@@ -51,43 +51,43 @@
 #### Перейдите на https\://account.google.com
 
 Если вы уже вошли в Google, то будете перенаправлены на свою повседневную страницу **Моя учетная запись**.
-(1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)
-(2) select “_add another account_”.
+(1) Щелкните в верхнем правом углу страницы на вашем профиле картинку (в данном случае просто ![](../images/Building-the-App/building_0002.png)
+(2) выберите “_добавить новую учетную запись_”.
 
 ![](../images/Building-the-App/building_0005.png)
 
-#### Enter your NEW dedicated account details: 
+#### Введите данные вашей новой учетной записи
 
-- Enter the new account: 
-- Create Account
-- for my personal use. 
+- Введите название новой учетной записи
+- Создайте учётную запись
+- для личного пользования
 
-#### Enter your persona:
+#### Введите личные данные:
 
-- Enter firstname
+- Введите имя
 - lastname
-- birthdate (needs to be an Adult age)
+- дату рождения (должна быть для взрослого)
 
-#### Choose your NEW email address & password
+#### Выберите НОВЫЙ адрес электронной почты и пароль
 
-This example appends “.AAPS” to Donald Muck’s existing one…\
-Set a password
+В этом примере учетная запись “.AAPS” добавляется к существующей записи Donald Muck…\
+задайте пароль
 
-####  Enter a phone number which can receive the SMS verification
+#### введите номер телефона, который может получить SMS-подтверждение
 
-Gmail will now send you a unique code to enter for validation.
+Теперь Gmail отправит вам уникальный код для проверки.
 
-#### Enter the recovery email address 
+#### Введите email для восстановления
 
-In this case it will be your existing “_everyday_” email…
+В этом случае он будет вашим существующим повседневным электронным адресом…
 
-#### Finish setting up the account
+#### Завершите регистрацию учетной записи
 
-Gmail will display the account name. It will ask you to accept Gmail’s terms and conditions & confirm your personalization settings.
+Gmail покажет имя аккаунта. Он попросит вас принять условия Gmail и подтвердить настройки персонализации.
 
-#### Customize the new profile display
+#### Настройте отображение нового профиля
 
-At this point you should be on Gmail’s MyAccount page showing your new **AAPS**-dedicated email account. The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png)
+На этот момент вы должны быть на странице MyAccount Gmail, где отображается ваша новая учетная запись **AAPS**. The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png)
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
