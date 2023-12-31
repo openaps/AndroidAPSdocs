@@ -87,7 +87,7 @@ Gmail покажет имя аккаунта. Он попросит вас пр�
 
 #### Настройте отображение нового профиля
 
-На этот момент вы должны быть на странице MyAccount Gmail, где отображается ваша новая учетная запись **AAPS**. The profile picture will be set by default to the first letter of your name. Change it to something unique to avoid confusion… in this example, Donald.Muck.AAPS has replaced ![](../images/Building-the-App/building_0002.png) with ![](../images/Building-the-App/building_0003.png)
+На этот момент вы должны быть на странице MyAccount Gmail, где отображается ваша новая учетная запись **AAPS**. По умолчанию изображение профиля будет установлено на первую букву вашего имени. Измените его на что-то уникальное, чтобы избежать путаницы… в этом примере Donald Muck AAPSзаменил ![](../images/Building-the-App/building_0002.png) на ![](../images/Building-the-App/building_0003.png)
 
 ![](../images/Building-the-App/building_0007.png)\
 ![](../images/Building-the-App/building_0008.png)
@@ -95,33 +95,33 @@ Gmail покажет имя аккаунта. Он попросит вас пр�
 #### Open the Gmail website on both windows to configure the new account
 
 So that you don’t need to monitor a separate email account, forward all the emails from the new **AAPS**-dedicated account to your everyday account \
-This part can be a bit confusing, since you will have to switch back and forth between both accounts. To make it easier, open 2 separate browser windows on top of each other:
+This part can be a bit confusing, since you will have to switch back and forth between both accounts. Чтобы упростить задачу, откройте два отдельных окна браузера поверх друг друга:
 
-1. Move your existing browser to the top of your screen and resize it such that it only takes about half of the top of the screen… 
-2. Right click on your Browser logo in your taskbar 
-3. From the menu select “New Window”... and adjust it so it only takes the bottom half of the screen.
+1. Переместите ваш существующий браузер в верхнюю часть экрана и измените его размер до половины верхней части экрана
+2. Щелкните правой кнопкой мыши по логотипу браузера в панели задач
+3. В меню выберите “Новое окно”... и настройте его так, чтобы он занимал только нижнюю половину экрана.
 
-Open https\://gmail.com  in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. (if needed you can always switch accounts by clicking on the profile picture and selecting the correct one.
+Откройте https\://gmail.com в каждом окне браузера. Убедитесь, что ваша персональная учетная запись вверху и новая специальная учетная запись **AAPS** внизу, и что ее легко распознать по картинке профиля в правом верхнем углу. (в случае необходимости, всегда можно переключать учетные записи, нажав на изображение профиля и выбрав правильное изображение.
 
 ![](../images/Building-the-App/building_0009.png)
 
-Your Gmail homepages screen should look like this:\
+Ваш экран Gmail должен выглядеть так:\
 ![](../images/Building-the-App/building_0010.png)
 
 #### In the new Gmail account (bottom window), open Gmail settings… 
 
 - Click on the gear on the left of the profile picture 
-- then select “**See all Settings**”
+- затем выберите "**Просмотреть все настройки**"
 
 ![](../images/Building-the-App/building_0011.png)
 
-#### Setup forwarding…
+#### Настройка переадресации…
 
-- Click on the “Forwarding and POP/IMAP” Setting tab
-- Click on “add a forwarding address”
-- Add your “everyday” email address
-- Gmail will send a verification code to your “everyday” email address. 
-- You will switch back to your everyday profile and click on the link to verify that you accept the forwarding (or get the code from Gmail’s verification email in your “everyday” Gmail window and cut and paste it in your “new AAPS dedicated” Gmail window).
+- Нажмите на вкладку «Переадресация и POP/IMAP»
+- Нажмите «добавить адрес переадресации»
+- Добавьте свой повседневный адрес электронной почты
+- Gmail отправит код подтверждения на ваш "повседневный" электронный адрес
+- Вернитесь к своему повседневному профилю и щелкните ссылку, чтобы подтвердить, что вы принимаете переадресацию (или получите код из письма с подтверждением Gmail в своем «повседневном» окне Gmail, а затем вырежете и вставите его в свое «новое выделенное для AAPS» окно Gmail).
 
 There is quite a bit of back and forth between the windows but this will ensure that when you check your “everyday” account emails you will also see the emails forwarded from your AAPS dedicated account such as Gmail alerts.
 
