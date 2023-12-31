@@ -1,12 +1,12 @@
-# A dedicated Google account for AAPS (optional)
+# Специальная учетная запись Google для AAPS (необязательно)
 
-Some **AAPS** users prefer to use their main email account for **AAPS** as well. Alternatively, some **AAPS** users (or their caregivers) set-up a dedicated **AAPS** email account - this is optional, we give an example of how to do it below.
+Некоторые пользователи **AAPS** предпочитают использовать свою главную учетную запись электронной почты для **AAPS**. Напротив, другие заводят специальную учетную запись электронной почты именно для **AAPS** - но это необязательно, мы приводим пример того, как это сделать ниже.
 
-If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go straight to the next section, [building AAPS](building-AAPS.md).
+Если вы не намерены создавать выделенную учетную запись Gmail для **AAPS**, просто перейдите к следующему разделу, [построения AAPS](building-AAPS.md).
 
-:::{admonition} Advantages of a dedicated Google account for AAPS
+:::{admonition} Преимущества специальной учетной записи Google для AAPS
 
-- Dedicated Google drive space means you will not risk filling up your personal Google drive limit with **Export Preferences**.
+- Выделенное место на Google диске снимает риск превышения лимита персонального дискового пространства **экспортированными настройками**.
 - Each version of **AAPS** (and supporting apps like xdrip+, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
 - By harmonizing the setup, it will make online support simpler across users with similar folder structure.
 - Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
