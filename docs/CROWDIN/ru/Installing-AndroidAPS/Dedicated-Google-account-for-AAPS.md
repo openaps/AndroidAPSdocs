@@ -46,11 +46,11 @@
 На таком примере
 
 - Ваша существующая повседневная учетная запись donald.muck42\@gmail.com; ![](../images/Building-the-App/building_0002.png)
-- Your new “_AAPS_” Gmail account will be: donald.muck42.aaps\@gmail.com; ![](../images/Building-the-App/building_0003.png)
+- Ваша новая учетная запись Gmail “_AAPS_” будет: donald.muck42.aaps\@gmail.com; ![](../images/Building-the-App/building_0003.png)
 
-#### Go to https\://account.google.com 
+#### Перейдите на https\://account.google.com
 
-If you are already logged into Google, this will direct you to your “Everyday” **My Account** page.
+Если вы уже вошли в Google, то будете перенаправлены на свою повседневную страницу **Моя учетная запись**.
 (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)
 (2) select “_add another account_”.
 
