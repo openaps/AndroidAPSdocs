@@ -48,6 +48,8 @@ Enable Compatible Broadcast (6).
 
 If you have also activated `Accept treatments` in xDrip+ and `Enable broadcasts to xDrip+` in AAPS xDrip+ plugin, then xDrip+ will receive insulin, carbs and basal rate information from AAPS.
 
+If you enable `Accept Calibrations`, xDrip+ will use the calibrations from AAPS. Be careful when you use this feature with Dexcom sensors: read [this](https://navid200.github.io/xDrip/docs/Calibrate-G6.html) first.
+
 Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time AAPS sends a basal/profile change.
 
 ![xDrip+ Basic Settings 5](../images/xDrip_Basic5.png)
@@ -60,6 +62,15 @@ Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time A
 * Pay attention: Auto-correction sometimes tend to change i to capital letter. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip+.
 
    ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+
+## Use AAPS to calibrate in xDrip+
+
+-   If you want to be able to use AAPS to calibrate then in xDrip+
+    go to Settings > Interapp Compatibility > Accept Calibrations and
+    select ON. You may also want to review the options in Settings >
+    Less Common Settings > Advanced Calibration Settings.
+
+
 
 ## Dexcom G6
 
@@ -121,7 +132,7 @@ Follow [these instruction](https://navid200.github.io/xDrip/docs/Starting-G6.htm
 ### Extend transmitter life
 
 * [Lifetime](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) cannot be extended for Firefly transmitters: only rebatteried or modified transmitters.
-* Follow [these instructions](https://navid200.github.io/xDrip/docs/Hard-Reset.html).
+* Follow [these instructions](https://navid200.github.io/xDrip/docs/Hard-Reset.html) for non-Firefly transmitters.
 
 (xdrip-replace-transmitter)=
 
@@ -139,7 +150,7 @@ Follow [these instruction](https://navid200.github.io/xDrip/docs/Starting-G6.htm
 
 * Remove transmitter (and sensor if replacing sensor). To remove transmitter without removing sensor see [this](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), or this video [https://youtu.be/AAhBVsc6NZo](https://youtu.be/AAhBVsc6NZo).
 * Put the old transmitter far away to prevent reconnection. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% sure no one is turning the microwave on.
-* Follow [these instruction](https://navid200.github.io/xDrip/docs/Starting-G6.html).
+* Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 * Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
 
 
@@ -232,6 +243,22 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
   → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
 
 ![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+
+
+
+## Libre 2 patched app
+
+* Set the data source to Libre patched app.
+
+  → Hamburger Menu (1) → Settings (2) → Select Libre (patched App) in Hardware Data source (3)
+
+  ![xDrip+ Libre Patched app 1](../images/xDrip_Libre_Patched01.png)
+
+-   You can add `BgReading:d,xdrip libre_receiver:v` under Less
+    Common Settings->Extra Logging Settings->Extra tags for logging.
+    This will log additional error messages for trouble shooting.
+
+![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
 
 
 

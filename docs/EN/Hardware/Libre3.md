@@ -30,7 +30,8 @@ Make sure you send the glucose values to Xdrip+: In Juggluco's settings you can 
 
 The blood glucose values are received by the xDrip+ app on the smartphone.
 
-- If not already set up, download the xDrip+ app and install one of the latest nightly builds from [here](https://github.com/NightscoutFoundation/xDrip/releases).
+- If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow
+  instructions on [xDrip+ settings page](../Configuration/xdrip.md).
 - In xDrip+ select "Libre2 (patched app)" as data source.
 - Disable battery optimization and allow background activity for the xDrip+ app.
 - If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for troubleshooting.

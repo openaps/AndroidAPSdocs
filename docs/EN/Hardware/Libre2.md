@@ -2,10 +2,27 @@
 
 The Freestyle Libre 2 sensor is now a real CGM even with the official app. Still, LibreLink cannot send data to AAPS. There are several solutions to use it with AAPS.
 
-## 1. Use a bridge like Libre 1
+## 1. Using a Bluetooth bridge and OOP
 
-BG readings can also be done using a BT transmitter like with the [Libre 1](../Libre1).  
-Check the bridge and app you want to use are compatible with your sensor.
+Bluetooth transmitters can be used with the Libre 2 (EU) and an [out of process algorithm](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) app. You can receive blood sugar readings every 5 minutes like with the [Libre 1](../Libre1). 
+
+Check the bridge and app you want to use are compatible with your sensor and xDrip+ (older Blucon and recent ones won't work, Miaomiao 1 needs firmware 39 and Miaomiao 2 firmware 7).
+
+The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre 2 do a 10 to 25 minutes smoothing to avoid certain jumps. See below [Value smoothing & raw values](#value-smoothing-raw-values). OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
+
+There are some good reasons to use a Bluetooth transmitter:
+
+-   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the the readers like values with "calibrate based on glucose".  
+    Make sure to leave OOP1 disabled (2).
+    
+    → Hamburger Menu → Settings → Less common settings → Other misc. options
+
+![OOP2 Calibration](../images/Libre2_OOP2Calibration.png)
+
+-   The Libre 2 sensor can be used 14.5 days as the Libre 1
+-   8 hours Backfilling is fully supported
+
+Remark: The transmitter can be used in parallel to the LibreLink app without interfering with it.
 
 ## 2. Use the patched LibreLink app with xDrip+
 
@@ -14,7 +31,9 @@ Check the bridge and app you want to use are compatible with your sensor.
 The patched app is an old version (22/4/2019) and might not be compatible with recent Android releases.  
 :::
 
-For legal reasons, the so-called patching has to be done by yourself.
+### Step 1: Build the patched app
+
+For legal reasons, "patching" has to be done by yourself.
 Use search engines to find the corresponding links. There are mainly two
 variants: The recommended original patched app blocks any internet
 traffic to avoid tracking. The other variant supports LibreView which
@@ -30,13 +49,13 @@ enabled. This costs no extra power. Then install the patched app.
 
 The patched app can be identified by the foreground authorization
 notification. The foreground authorization service improves the
-connection stability compared to the original app which do not use this
+connection stability compared to the original app which does not use this
 service.
 
 ![LibreLink Foreground Service](../images/Libre2_ForegroundServiceNotification.png)
 
-Other indications could be the Linux penguin logo three dot menu -> Info
-or the font of the patched app. These criteria are optional depending on
+Other indications could be the Linux penguin logo in the three dot menu -> Info
+or the font of the patched app (2) different from the original app (1). These criteria are optional depending on
 the app source you choose.
 
 ![LibreLink Font Check](../images/LibreLinkPatchedCheck.png)
@@ -44,6 +63,8 @@ the app source you choose.
 Ensure that NFC is activated, enable the memory and location permission
 for the patched app, enable automatic time and time zone and set at
 least one alarm in the patched app.
+
+### Step 2: Start the sensor with the patched app
 
 Now start the Libre2 sensor with the patched app by simply scanning the
 sensor. Ensure to have set all settings done.
@@ -138,7 +159,7 @@ for scanning via NFC. There is no time limitation to start that. You
 could use a parallel phone for example on day 5 or so. The parallel
 phones(s) could upload the blood sugar values into the Abbott Cloud
 (LibreView). LibreView can generate reports for your diabetes team.
-There are many parents who absolutely need this.
+There are many patients who absolutely need this.
 
 Please note that the original patched app **does not have any connection
 to the internet** to avoid tracking.
@@ -151,37 +172,21 @@ of a running sensor to a different device which not has started the
 sensor. Please google in diabetes related German forums how this could
 be done.
 
-### Step 2: Install and configure xDrip+ app
+### Step 3: Install and configure xDrip+ app
 
 The blood sugar values are received on the smartphone by the xDrip+ App.
 
--   If not already set up then download xDrip+ app and install one of
-    the latest nightly builds from
-    [here](https://github.com/NightscoutFoundation/xDrip/releases).
--   In xDrip+ select "Libre2 patched" or "Libre 2 (patched App)" as data source
--   If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less
-    Common Settings->Extra Logging Settings->Extra tags for logging.
-    This will log additional error messages for trouble shooting.
--   In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data
-    Locally and select ON.
--   In xDrip+ go to Settings > Interapp Compatibility > Accept
-    Treatments and select OFF.
--   to enable AAPS to receive blood sugar levels (version 2.5.x and
-    later) from xDrip+ please set [Settings > Interapp Settings >
-    Identify Receiver
-    "info.nightscout.androidaps"](xdrip-identify-receiver)
--   If you want to be able to use AAPS to calibrate then in xDrip+
-    go to Settings > Interapp Compatibility > Accept Calibrations and
-    select ON. You may also want to review the options in Settings >
-    Less Common Settings > Advanced Calibration Settings.
+-   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
+-   Set xDrip+ with the [patched app data source](../Configuration/xdrip.md#lbre-2-patched-app).
+-   Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
 
-![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
+### Step 4: Start sensor
 
-### Step 3: Start sensor
+- → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Answer "Not Today" (4).
 
-In xDrip+ start the sensor with "Start Sensor" and "not today".
+![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
-In fact this will not physically start any Libre2 sensor or interact
+This will not physically start any Libre2 sensor or interact
 with them in any case. This is simply to indicate xDrip+ that a new
 sensor is delivering blood sugar levels. If available, enter two bloody
 measured values for the initial calibration. Now the blood glucose
@@ -190,10 +195,10 @@ e.g. because you were too far away from your phone, will not be
 backfilled.
 
 After a sensor change xDrip+ will automatically detect the new sensor
-and will delete all calibration data. You may check you bloody BG after
+and will delete all calibration data. You may check you blood glucose after
 activation and make a new initial calibration.
 
-### Step 4: Configure AAPS (for looping only)
+### Step 5: Configure AAPS (for looping only)
 
 -   In AAPS go to Config Builder > BG Source and check 'xDrip+'
 -   If AAPS does not receive BG values when phone is in airplane
@@ -203,8 +208,7 @@ activation and make a new initial calibration.
 Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB
 always’ and ‘Enable SMB after carbs’ within SMB algorithm. The BG values
 of Libre 2 are not smooth enough to use it safely. See [Smoothing blood
-glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for
-more details.
+glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 
 (Libre2-experiences-and-troubleshooting)=
 ### Experiences and Troubleshooting
@@ -226,8 +230,13 @@ when setting the sensor.
 
 Technically, the current blood sugar value is transmitted to xDrip+
 every minute. A weighted average filter calculates a smoothed value over
-the last 25 minutes. This is mandatory for looping. The curves look
-smooth and the loop results are great. The raw values on which the
+the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+
+→ Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
+
+![xDrip+ advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
+
+This is mandatory for looping. The curves look smooth and the loop results are great. The raw values on which the
 alarms are based jitter a little more, but correspond to the values that
 the reader also displays. In addition, the raw values can be displayed
 in the xDrip+ graph in order to be able to react in time to rapid
@@ -239,6 +248,8 @@ sensor info is available in the system menu.
 The raw values are very helpful when the blood sugar is moving fast.
 Even if the dots are jumpier you would detect the tendency much better
 as using the smoothed line to make proper therapy decisions.
+
+→ Hamburger menu → Settings → Less common settings → Advanced settings for Libre 2
 
 ![xDrip+ advanced settings Libre 2 & raw values](../images/Libre2_RawValues.png)
 
@@ -280,7 +291,7 @@ Libre2 sensor here! You do not need to start the sensor in xDrip+.
 
 You can calibrate the Libre2 with an offset of -40 mg/dl to +20 mg/dL
 \[-2,2 mmol/l to +1,1 mmol/l\] (intercept). The slope isn't changeable
-as the Libre2 is much more accurate compared to the Libe1. Please check
+as the Libre2 is much more accurate compared to the Libre1. Please check
 by fingerpricking early after setting a new sensor. It is known that
 there can arise big differences to the blood measurements. To be on the
 safe side, calibrate every 24 - 48 hours. The values are accurate up to
@@ -297,24 +308,6 @@ for safety reasons. Unfortunately, when scanning with the App,
 additional checks are made. The app can deactivate the sensor even
 though the sensor is OK. Currently the internal test is too strict. I
 have completely stopped scanning and haven't had a failure since then.
-
-### Time zone travelling
-
-In other [time zones](../Usage/Timezone-traveling.md) there are two
-strategies for looping:
-
-Either
-
-1.  leave the smartphone time unchanged and shift the basal profile
-    (smartphone in flight mode) or
-2.  delete the pump history and change the smartphone time to local
-    time.
-
-Method 1. is great as long as you don't have to set a new Libre2 sensor
-on-site. If in doubt, choose method 2., especially if the trip takes
-longer. If you set a new sensor, the automatic time zone must be set, so
-method 1. would be disturbed. Please check before, if you are somewhere
-else, you can run otherwise fast into problems.
 
 ### Experiences
 
@@ -336,48 +329,6 @@ bit pulled out of the tissue and will measure different results then.
 Mostly probably you will see jumping values in xDrip+. Or the difference
 to the bloody values change. Please replace the sensor immediately! The
 results are inaccurate now.
-
-## Using bluetooth transmitter and OOP
-
-Bluetooth transmitter can be used with the Libre2 with the latest xDrip+
-nightlys and the Libre2 OOP app. You can receive blood sugar readings
-every 5 minutes as well as with the Libre1. Please refer to the miaomiao
-website to find a description. This will also work with the Bubble
-device and in the future with other transmitter devices. The blucon
-should work but has not been tested yet.
-
-Old Libre1 transmitter devices cannot be used with the Libre2 OOP. They
-need to be replaced with a newer version or have a firmware upgrade for
-proper operation. MM1 with newest firmware is unfortunately not working
-yet - searching for root cause is currently ongoing.
-
-The Libre2 OOP is creating the same BG readings as with the original
-reader or the LibreLink app via NFC scan. AAPS with Libre2 do a 25
-minutes smoothing to avoid certain jumps. OOP generates readings every 5
-minutes with the average of the last 5 minutes. Therefore the BG
-readings are not that smooth but match the original reader device and
-faster follow the "real" BG readings. If you try to loop with OOP please
-enable all smoothing settings in xDrip+.
-
-The Droplet transmitter is working with Libre2 also but uses an internet
-service instead. Please refer to FB or a search engine to get further
-information. The MM2 with the tomato app also seems to use an internet
-service. For both devices you have to take care to have a proper
-internet connection to get your BG readings.
-
-Even if the patched LibreLink app approach is smart there may be some
-reasons to use a bluetooth transmitter:
-
--   the BG readings are identical to the reader results
--   the Libre2 sensor can be used 14.5 days as with the Libre1 before
--   8 hours Backfilling is fully supported.
--   get BG readings during the one hour startup time of a new sensor
-
-Remark: The transmitter can be used in parallel to the LibreLink app. It
-doesn't disturb the patched LibreLink app operation.
-
-Remark #2: The OOP algorithm cannot be calibrated yet. This will be
-changed in the future.
 
 # Best practices for calibrating a libre 2 sensor
 
