@@ -44,8 +44,8 @@ Tidepool - это проект с [открытым исходным кодом]
 Учетную запись Tidepool можно создать [здесь](https://app.tidepool.org/signup).
 
 :::{admonition} **AAPS** имеет встроенный загрузчик Tidepool
-:class: note
-You do **not** need to use the uploader app to Tidepool: **AAPS** will upload blood glucose, treatments and basal for you. You only need a personal account with Tidepool. Do not upload your data with the separate Tidepool uploader tool as it will lead to duplicate values.\
+:class: примечание
+Вам \*\* не \*\* придется использовать загрузчик для Tidepool: \*\* AAPS \*\* сам загрузит данные о содержании глюкозы в крови, методах лечения и скорости базала. Нужно только иметь персональную учетную запись на Tidepool. Не загружайте данные с помощью загрузчика Tidepool так как это приведет к дублированию данных.\
 :::
 
-Once you have set up your reporting server, you can now either set up a [dedicated Google account for AAPS use](Dedicated-Google-account-for-AAPS.md), or go straight to [building the AAPS app](building-AAPS.md).
+После настройки сервера отчетов вы можете либо создать [выделенную учетную запись Google для AAPS](Dedicated-Google-account-for-AAPS.md), либо перейти непосредственно к [созданию приложения AAPS](building-AAPS.md).
