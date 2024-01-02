@@ -122,6 +122,10 @@ Los comandos deben enviarse en inglés, la respuesta será en tu idioma local si
 
 - LOOP RESUME \* Respuesta: El lazo se ha reanudado
 
+- LOOP CLOSED \* Response: Current loop mode: Closed Loop
+
+- LOOP LGS \* Response: Current loop mode: Low Glucose Suspend
+
 ### Datos del MCG
 
 - BG \* Respuesta: Última BG: 5.6 hace 4min, Delta: -0,2 mmol, IOB: 0.20U (Bolo: 0.10U Basal: 0.10U)

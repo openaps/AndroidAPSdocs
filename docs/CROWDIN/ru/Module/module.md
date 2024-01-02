@@ -59,8 +59,8 @@ AAPS **в настоящее время** работает с
 - [EOPatch2](../Configuration/EOPatch2.md)
 - [Omnipod Eros](../Configuration/OmnipodEros.md)  (требуется[дополнительное устройство связи](module-additional-communication-device))
 - [Помпа Omnipod DASH](../Configuration/OmnipodDASH.md)
-- [Medtrum Nano](../Configuration/MedtrumNano.md)
-- [Medtrum 300U](../Configuration/MedtrumNano.md)
+- [Инсулиновая помпа Medtrum Nano](../Configuration/MedtrumNano.md)
+- [Инсулиновая помпа Medtrum 300U](../Configuration/MedtrumNano.md)
 - Некоторые старые [Medtronic](../Configuration/MedtronicPump.md) (требуется[дополнительное устройство связи](module-additional-communication-device))
 
 Если не упомянуто дополнительное коммуникационное устройство, то связь между помпой и AndroidAPS происходит за счет встроенного модуля bluetooth без необходимости дополнительного протокола коммуникации.

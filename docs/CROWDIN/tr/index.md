@@ -78,6 +78,18 @@ Docs updates & changes <./Getting-Started/WikiUpdate.md>
 ```
 
 ```{toctree}
+:caption: Setting up AAPS
+
+Setting up the reporting server <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
+Dedicated Google account for AAPS (optional)<./Installing-AndroidAPS/Dedicated-Google-account-for-AAPS.md>
+Building AAPS <./Installing-AndroidAPS/building-AAPS.md>
+Transferring and Installing AAPS <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
+Setup Wizard<./Installing-AndroidAPS/setup-wizard.md>
+Change AAPS configuration<./Installing-AndroidAPS/change-configuration.md>
+Completing the objectives <./Usage/completing-the-objectives.md>
+```
+
+```{toctree}
 :caption: Remote control and following
 
 Remote control <remote-control.md>
@@ -85,37 +97,21 @@ Following-only <following-only.md>
 
 ```
 
-(index-what-do-i-need)=
-
 ```{toctree}
-:caption: Neye ihtiyacım var?
+:caption: Advanced Setting up APPS
 
-CGM/FGM seçenekleri <./Configuration/BG-Source.md>
+Release notes <./Installing-AndroidAPS/Releasenotes.md>
 
-Pompa seçenekleri <./Getting-Started/Pump-Choices.md>
+Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
 
-Modül <./Module/module.md>
+Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 
 ```
 
 ```{toctree}
-:caption: AAPS Nasıl Yüklerim?
+:caption: Tam Kapalı Döngü
 
-APK Oluşturma <./Installing-AndroidAPS/Building-APK.md>
-
-Yeni bir sürüme veya yan sürüme güncelleme <./Installing-AndroidAPS/Update-to-new-version.md>
-
-AAPS 3.0 güncellemesinden sonra İpuçları ve Kontroller <./Installing-AndroidAPS/update3_0.md>
-
-AAPS 2.7 güncellemesinden sonraki kontroller <./Installing-AndroidAPS/update2_7.md> 
-
-Git kurulumu <./Installing-AndroidAPS/git-install.md>
-
-Android Studio'da Sorun Giderme <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
-
-Sürüm notları <./Installing-AndroidAPS/Releasenotes.md>
-
-Geliştirici sürümü <./Installing-AndroidAPS/Dev_branch.md>
+Tam Kapalı Döngü <./Usage/FullClosedLoop.md>
 
 ```
 
@@ -132,21 +128,7 @@ Pump choices <./Getting-Started/Pump-Choices.md>
 
 Phones <./Hardware/Phoneconfig.md>
 
-Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
-Tidepool setup <./Installing-AndroidAPS/Tidepool.md>
-
 Smartwatch  <./Hardware/Smartwatch.md>
-
-```
-
-(index-configuration)=
-
-```{toctree}
-:caption: Konfigürasyon
-
-Konfigürasyon ayarları <./Configuration/Config-Builder.md>
-
-Tercihler <./Configuration/Preferences.md>
 
 ```
 
@@ -154,8 +136,6 @@ Tercihler <./Configuration/Preferences.md>
 :caption: AAPS Usage
 
 AAPS screens <./Getting-Started/Screenshots.md>
-
-Objectives <./Usage/Objectives.md>
 
 OpenAPS features <./Usage/Open-APS-features.md>
 
@@ -201,24 +181,6 @@ Temel kullanım için Accu-Chek Combo ipuçları <./Usage/Accu-Chek-Combo-Tips-f
 Ayarları Dışa/İçe Aktarma <./Usage/ExportImportSettings.md>
 
 xDrip mühendislik modu <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
-
-```
-
-```{toctree}
-:caption: Çocuklar için AAPS
-
-Uzaktan izleme <./Children/Children.md>
-
-SMS komutları <./Children/SMS-Commands.md>
-
-Profil yardımcısı <./Configuration/profilehelper.md>
-
-```
-
-```{toctree}
-:caption: Tam Kapalı Döngü
-
-Tam Kapalı Döngü <./Usage/FullClosedLoop.md>
 
 ```
 
@@ -270,6 +232,15 @@ How to translate the app and docs <./translations.md>
 How to edit the docs <./make-a-PR.md>
 
 State of translations <./Administration/stateTranslations.md>
+
+```
+
+```{toctree}
+:caption: Legacy
+
+Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
+
+Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
 
 ```
 

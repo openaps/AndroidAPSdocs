@@ -122,6 +122,10 @@ Komutlar İngilizce olarak gönderilmelidir, yanıt dizesi ise programınızın 
 
 - LOOP RESUME \* Yanıt: Döngü devam ettirildi
 
+- LOOP CLOSED \* Response: Current loop mode: Closed Loop
+
+- LOOP LGS \* Response: Current loop mode: Low Glucose Suspend
+
 ### CGM (Sürekli glikoz ölçüm) verileri
 
 - BG \* Yanıt: Son KŞ: 5,6 4 dakika önce, Delta: -0,2 mmol, IOB: 0,20U (Bolus: 0,10U Bazal: 0,10U)

@@ -122,6 +122,10 @@
 
 - LOOP RESUME \* Απάντηση: Επανέναρξη κυκλώματος
 
+- LOOP CLOSED \* Response: Current loop mode: Closed Loop
+
+- LOOP LGS \* Response: Current loop mode: Low Glucose Suspend
+
 ### Δεδομένα CGM
 
 - BG \* Απάντηση: Τελευταία τιμή γλυκόζης: BG: 105 πριν 4 λεπτά, Delta: -6 mg/dl, Ενεργή ινσουλίνη: 0.20U (Δόση ινσουλίνης: 0.10U Bασική ινσουλίνη: 0.10U)

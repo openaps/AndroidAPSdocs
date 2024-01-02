@@ -1,36 +1,36 @@
-(Open-APS-features-DynamicISF)=
-## DynamicISF (DynISF)
-DynamicISF was added in AAPS version 3.2 and requires you to start Objective 11 to use. Select DynamicISF in the config builder > APS to activate. It is recommended only for advanced users that have a good handle on AAPS controls and monitoring.
+(возможности_Open-APS-DynamicISF)=
+## DynamicISF (DynISF)- Динамическое изменение коэффициента чувствительности к инсулину
+Динамический ISF был добавлен в AAPS версии 3.2 и требует прохождения цели 11. Выберите Динамический ISF в Конфигураторе >. Этот режим рекомендуется только опытным пользователям, которые научились хорошо управлять работой AAPS.
 
-Please note that to use Dynamic ISF effectively, the AndroidAPS database needs a minimum of five days of data.
+Обратите внимание, что для эффективной работы динамического ISF, база данных AndroidAPS должна содержать не менее пяти дней данных.
 
-DynamicISF adapts the insulin sensitivity factor dynamically based on total daily dose of insulin (TDD) and current and predicted blood glucose values.
+DynamicISF подстраивает фактор чувствительности инсулина на основе общей суточной дозе инсулина (TDD) и величин текущего и прогнозируемого содержания глюкозы в крови.
 
-Dynamic ISF uses Chris Wilson’s model to determine ISF instead of a static profile settings.
+Динамический ISF использует модель Криса Уилсона (Chris Wilson) для определения ISF вместо статических настроек профиля.
 
-The equation implemented is: ISF = 1800 / (TDD * Ln (( glucose / insulin divisor) +1 ))
+Применяется уравнение: ISF = 1800 / (TDD * Ln (( глюкоза / делитель инсулина) +1))
 
-The implementation uses the equation to calculate current ISF and in the oref1 predictions for IOB, ZT and UAM. It is not used for COB.
+Реализация использует уравнение для расчета текущего фактора ISF и прогнозы активного инсулина ISF, нулевого временного базала ZT и непредвиденного приема пищи UAM. Активные углеводы COB не участвуют в модели.
 
 ### TDD / общая суточная доза инсулина
-This uses a combination of the 7 day average TDD, the previous day’s TDD and a weighted average of the last eight hours of insulin use extrapolated out for 24 hours. The total daily dose used in the above equation is weighted one third to each of the above values.
+Эта величина содержит комбинацию 7-дневной суммарной суточной дозы TDD, суммарной суточной дозы за предшествующий этим суткам день и средневзвешенное значение последних восьми часов использования инсулина, экстраполированное на 24 часа. Общая суточная доза используемая в уравнении берет по одной трети средневзвзвешенной величины каждого из трех вышеперечисленных значений.
 
-### Insulin Divisor
-The insulin divisor depends on the peak of the insulin used and is inversely proportional to the peak time. For Lyumjev this value is 75, for Fiasp, 65 and regular rapid insulin, 55.
+### Делитель Инсулина
+Делитель инсулина зависит от пика используемого инсулина и обратно пропорционален времени до пика. Для Люмжева его значение 75, для Фиаспа 65 и для обычных быстрых инсулинов 55.
 
-### Dynamic ISF Adjustment Factor
-The adjustment factor allows the user to specify a value between 1% and 300%. This acts as a multiplier on the TDD value and results in the ISF values becoming smaller (ie more insulin required to move glucose levels a small amount) as the value is increased above 100% and larger (i.e. less insulin required to move glucose levels a small amount) as the value is decreased below 100%.
+### Коэффициент настройки динамического диапазона чувствительности ISF
+Этот корректировочный коэффициент позволяет пользователю указать значение от 1% до 300%. Он выступает как множитель суммарной суточной дозы TDD и уменьшает ISF (и, соответственно, требует больше инсулина на понижение ГК), когда его значение идет вверх от 100% и, наоборот, увеличивает ISF (то есть требует меньше инсулина для понижения ГК), когда его величина опускается от 100% вниз.
 
-### Future ISF
+### Прогнозируемая чувствительность к инсулину ISF
 
-Future ISF is used in the dosing decisions that oref1 makes. Future ISF uses the same TDD value as generated above, taking the adjustment factor into account. It then uses different glucose values dependent on the case:
+Прогнозируемая ISF используется при принятии алгоритмом oref1 решений о дозировках. Прогнозируемая ISF базируется на той же величине TDD, что и описанная выше, с учетом корректировочного коэффициента. Далее в расчет берутся различные значения ГК, в зависимости от ситуации:
 
-* If levels are flat, within +/- 3 mg/dl, and predicted BG is above target, a combination of 50% minimum predicted BG and 50% current BG is used.
+* Если величины в пределах плоской шкалы, +/- 3 мг/дл и прогнозируемый уровень ГК выше целевого, используется комбинация из 50% минимально прогнозируемой и 50% текущей ГК.
 
-* If eventual BG is above target and glucose levels are increasing, or eventual BG is above current BG, current BG is used.
+* Если конечная ГК выше цели и ее уровни увеличиваются или конечная ГК выше текущей, используется текущее значение ГК.
 
-Otherwise, minimum predicted BG is used.
+В других случаях используется минимальная прогнозируемая ГК.
 
-### Enable TDD based sensitivity ratio for basal and glucose target modification
+### Включить коэффициент чувствительности на основе суточной дозировки инсулина TDD для изменения базальной скорости и целевых значений гликемии
 
-This setting replaces Autosens, and uses the last 24h TDD/7D TDD as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. This calculated value is also used to adjust target, if the options to adjust target with sensitivity are enabled. Unlike Autosens, this option does not adjust ISF values. 
+Эта настройка заменяет Autosens и использует последние 24 часа суточной дозы TDD/7дней TDD в качестве основы для увеличения и снижения базальной скорости, точно так же, как и стандартный Autosens. Эта вычисляемая величина также применяется для подстройки цели, если включены опции подстройки целей в зависимости от чувствительности. В отличие от Autosens, эта опция не корректирует значения ISF. 

@@ -1,29 +1,50 @@
 # Работа с Freestyle Libre 1
 
-Чтобы использовать Libre в качестве постоянного мониторинга, который получает новые значения гликемии каждые 5 минут, нужно сначала приобрести адаптер NFC - Bluetooth:
+Чтобы использовать Libre в качестве мониторинга, который получает новые значения гликемии каждые 5 минут без необходимости сканирования сенсора, нужно сначала приобрести адаптер NFC - Bluetooth (коммерчески доступные устройства, основанные на устаревшем проекте [LimiTTer](https://github.com/JoernL/LimiTTer)).
 
--   MiaoMiao-Reader <https://www.miaomiao.cool/>
--   Blukon Nightrider [https://www.ambrosiasys.com/our-products/blucon](https://www.ambrosiasys.com/our-products/blucon/)
--   Bubble `https://bubbleshop.eu/ <https://bubbleshop.eu/>`_  или для русских пользователей  `https://vk.com/saharmonitor/ <https://vk.com/saharmonitor/>
+:::{admonition} (предостережение)Libre 1 US и Libre Pro :class: предупреждение Проверьте, совместим ли ваш адаптер bluetooth с сенсором  
+:::
 
-Кроме того, можно использовать часы, Sony Smartwatch 3, имеющие чип NFC, который можно включить как коллектор. Однако перечисленные выше NFC адаптеры Bluetooth предлагают удобнее для большинства пользователей.
+На рынке имеется несколько адаптеров:
+
+-   [MiaoMiao Reader](https://www.miaomiao.cool/) (версия 1, 2 или 3) также доступны на AliExpress.
+-   [Blucon Nightrider](https://www.ambrosiasys.com/our-products/blucon/) (недавние версии прошивки могут быть несовместимы со всеми приложениями, приложение поставщика не транслирует данные в AAPS)
+-   [Bubble (или Bubble Mini)](https://www.bubblesmartreader.com/) от европейских поставщиков ([Bubblan](https://www.bubblan.org/), [BubbleShop](https://bubbleshop.eu/)) или для российских пользователей [здесь](https://vk.com/saharmonitor/). Также доступны на AliExpress.
+-   Atom для российских пользователей.
+
+Исторически, можно использовать часы, Sony Smartwatch 3 (SWR50), имеющие чип NFC, который можно включить как коллектор. Однако перечисленные выше адаптеры NFC Bluetooth гораздо удобнее, их предпочитает большинство пользователей, желающих иметь постоянный мониторинг с Libre 1 (не американской).
 
 -   Sony Smartwatch 3 (SWR50)  <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
 В настоящее время, если Libre 1 используется в качестве источника ГК, невозможно активировать «Включать SMB всегда» и «Включить SMB после приема углеводов». Значения ГК Libre 1 недостаточно сглажены для безопасного пользования. Подробнее см [Сглаживание данных ГК](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
-## При использовании xdrip+
+## 1. Использование xDrip+
 
--   Если это еще не сделано, скачайте xdrip+ и следуйте инструкциям для [LimiTTEer ](https://github.com/JoernL/LimiTTer)или [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki).
+-   xDrip+ поддерживает Miaomiao, Bubble, Blucon, Atom и LibreAlarm.
+-   Скачайте и установите [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases). Вам также понадобится [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) для Libre 1 США.
 -   В xdrip, перейдите в настройки > настройки интеграции с приложениями > трансляция данных локально и выберите Включить (ON).
 -   В xdrip+ перейдите в настройки > интеграция с приложениями > принимать терапию и выберите ВЫКЛ (OFF).
 -   Если вы хотите, чтобы AAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > > интеграция с приложениями >> принимать калибровки и выберите ВКЛ (ON). Возможно вы также захотите рассмотреть варианты в настройках >> менее распространенные параметры >> дополнительные параметры калибровки.
--   В конфигуратоге (настройки AAPS) выберите xdrip.
+-   В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите xDrip+.
 -   Для настройки xDrip+ со снимками экрана перейдите на [страницу настроек xDrip+](../Configuration/xdrip.md). Там есть раздел базовых настроек xDrip+ и параметров Freestyle Libre.
 -   Если AAPS не получает значения ГК, когда телефон находится в режиме авиаперелета пользуйтесь функцией "Установить получателя" в соответствии с описанием на странице [настроек xDrip+](../Configuration/xdrip.md).
 
-## При использовании Glimp
+## 2. Использование Glimp
 
+-   Glimp поддерживает Miaomiao, Blucon и Bubble.
 -   Вам понадобится Glimp версии 4.15.57 или выше. Более старые версии не поддерживаются.
--   Если это еще не сделано, скачайте Glimp и следуйте инструкциям в разделе [Nightscout](https://nightscout.github.io/uploader/setup/#glimp).
--   В конфигуратоге (настройки AAPS) выберите Glimp.
+-   Установите [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia).
+-   В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите Glimp.
+
+## 3. Использование Tomato
+
+- Tomato является приложением поставщика для Miaomiao.
+- Установите [Tomato](http://tomato.cool/#download_page) и следуйте [инструкциям поставщика ](http://tomato.cool/how-to-broadcast-data-to-android-aps/tips/).
+- В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите Tomato.
+
+## 4. Использование Diabox
+
+- Diabox - это приложение поставщика для Bubble.
+- Установите [Diabox](https://t.me/s/DiaboxApp). В Настройках, Интеграция, включите "Делиться данными с другими приложениями".
+
+- В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите xDrip+.

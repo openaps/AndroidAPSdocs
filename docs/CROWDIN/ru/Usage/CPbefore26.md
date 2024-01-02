@@ -2,58 +2,58 @@
 
 Здесь повторяются функции которые можно найти на экране Nightscout под символом "+", который позволяет добавлять заметки к терапии. Но портал терапии не подавал никаких команд на помпу! Поэтому, если отметить подачу болюса на этом экране, помпа не получит никаких инструций, а в журнале Nightscout просто появится запись о болюсе. Это вело к многочисленным недоразумениям.
 
-The code originally used to add offline support for careportal did not harmonize with the development of AAPS and was really blocking further coding. **Therefore, decision was made to remove careportal in AAPS version 2.6.**
+Код портала терапии изначально предназначался для оффлайн-поддержки AAPS, но в итоге не гармонизировался с разработкой AAPS и блокировал дальнейшее кодирование. **Поэтому, начиная с версии AAPS 2.6 принято решение удалить его из системы</p>
 
-Most functions of careportal can still be found either in actions or the start screen. The actions can be reached either via actions tab or hamburger menu - depending on your settings in [config builder](../Configuration/Config-Builder.md).
+Большинство функций портала терапии все еще можно найти либо на вкладке действий, либо на стартовом экране. Запустить их можно либо с помощью вкладки действий или - в зависимости от настроек - через [конфигуратор](../Configuration/Config-Builder.md).
 
-This page will show where you can find the functions previously available in careportal.
+На этой странице видно где можно найти функции, ранее доступные в портале терапии.
 
-## Activity & feedback
+## Активность & обратная связь
 
 ```{image} ../images/Careportal_25_26_1_IIb.png
-:alt: Careportal activity & feedback
+:alt: активность на портале терапии & обратная связь
 ```
 
-- Age information was moved to actions tab / menu.
-- BG check was moved to actions tab / menu.
-- Temporary target was moved to actions tab / menu.
-- Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](CPbefore26-carbs-bolus) on this page).
+- Информация по возрастам была перемещена на вкладку действий / меню.
+- Проверка ГК была перемещена на вкладку действий / меню.
+- Временные цели были перемещены на вкладку действий / меню.
+- Нагрузка больше не применяется, но вы можно использовать поле заметок в диалоговом окне при выполнении таких действий, как введение болюса и т. д. (см. снимок экрана в разделе [углеводы & болюс](CPbefore26-carbs-bolus) на этой странице).
 
 (CPbefore26-carbs-bolus)=
 
-## Carbs & bolus
+## Углеводы & болюс
 
 ```{image} ../images/Careportal_25_26_2_IIa.png
-:alt: Careportal carbs & bolus
+:alt: Портал терапии углеводы & болюс
 ```
 
-- To note a bolus - no matter if for snack, meal or correction - use the insulin button on the homescreen **and make sure to tick "Do not bolus, record only"!**
+- Чтобы внести запись о болюсе - независимо от того, закуска еда или коррекция - используйте кнопку инсулина на главном экране и не забудьте отметить галочкой **Не вводить болюс, только внести запись**
 
-- Option to backdate insulin - i.e. if you forgot to register insulin given by syringe - will only be available if checkbox "Do not bolus, record only" is ticked.
+- Возможность ввести запись об инсулине задним числом - например, когда инсулин вводился шприц-ручкой - появляется только если галочкой отмечено "Не вводить болюс, только внести запись".
 
   ```{image} ../images/Careportal_25_26_5.png
-  :alt: Backdate insulin via insulin button
+  :alt: Запись об инсулине задним числом через кнопку инсулина
   ```
 
-- For carbs correction use the carbs button on the homescreen.
+- Для коррекции углеводов применяйте кнопку углеводов на главном экране.
 
-- Temporary basal rates can be started and stopped through the button in actions tab / menu. Please note that the button changes from "TEMPBASAL" to "CANCEL x%" when a temporary basal rate is set.
+- Временные базальные скорости могут быть запущены и остановлены через кнопку на вкладке действий / меню. Обратите внимание, что кнопка меняется с “TEMPBASAL” (ВРЕМБАЗАЛ) на “CANCEL x%” (ОТМЕНА х%), после установки временного базала.
 
-## CGM & OpenAPS
+## МОНИТОРИНГ ГК; OPENAPS
 
 ```{image} ../images/Careportal_25_26_3_IIa.png
-:alt: Careportal CGM & OpenAPS
+:alt: CGM & OpenAPS
 ```
 
-- CGM sensor insert can now be found in the actions tab / menu.
-- All other functions from this section have been removed. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](CPbefore26-carbs-bolus) on this page).
+- Время установки сенсора CGM теперь находится на вкладке действий / меню.
+- Все другие функции из этого раздела были удалены. Вы можете использовать поле заметок в диалоговом окне при выполнении таких действий, как введение болюса и т. д. (см. снимок экрана в разделе [углеводы & болюс](CPbefore26-carbs-bolus) на этой странице).
 
 ## Помпа
 
 ```{image} ../images/Careportal_25_26_4_IIb.png
-:alt: Careportal Pump
+:alt: Портал Терапии Помпа
 ```
 
-- Pump site and insulin cartridge change can be reach by using the button "prime/fill" in actions tab / menu.
-- Profile switch was moved to actions tab / menu.
-- Pump battery change was moved to actions tab / menu.
+- Смена места катетера помпы и картриджа инсулина может быть отмечена с помощью кнопки "прайм/заполнение" на вкладке действий / меню.
+- Переключение профиля было перемещено на вкладку действий / меню.
+- Замена батареи помпы была перемещена на вкладку действий / меню.
