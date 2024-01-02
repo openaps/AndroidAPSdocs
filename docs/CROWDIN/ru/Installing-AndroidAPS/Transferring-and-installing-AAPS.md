@@ -1,4 +1,4 @@
-# Transferring, and Installing AAPS on your smartphone
+# Перенос и установка AAPS на смартфон
 
 In the previous section, [building **AAPS**](../building-AAPS.md), you built the **AAPS** app (which is an .apk file) on a computer.
 
