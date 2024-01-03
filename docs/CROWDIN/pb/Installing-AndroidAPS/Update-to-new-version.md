@@ -11,9 +11,7 @@
 * The new version will also be announced on Facebook at the time of release.
 * Following the release, please read the [Release Notes](../Installing-AndroidAPS/Releasenotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
 * For **AAPS** versions 2.7 and newer, the location for the new files is at <https://github.com/nightscout/AndroidAPS>.
-* The easiest way to update **AAPS** is to remove the directory with **AAPS** and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
-* If you are unsure about how to do this, you can also completely uninstall and reinstall Android Studio to make sure the build is a success. 
-* Ideally, use the latest version of Android Studio, **[Giraffe, 2022.3.1](https://developer.android.com/studio/)**, but at least **Arctic Fox (2020.3.1)** or newer, to build the updated **AAPS** apk.
+* You need to use the latest version of Android Studio, **[Hedgehog, 2023.1.1](https://developer.android.com/studio/)**. 
 * If building the **AAPS** app using a Windows platform, you will need to use a Windows 64-bit system since 32-bit systems are not supported.
 
 ## Overview for updating to a new version of AAPS
