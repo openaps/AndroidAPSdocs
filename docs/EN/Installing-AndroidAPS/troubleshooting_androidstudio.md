@@ -105,7 +105,16 @@ If you receive a failure message like
 
 Follow the instructions at [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync).
 
-(troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
+(troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)
+
+### Incompatible version of Android Gradle plugin
+
+  If you experience the following error message
+  
+  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+  
+  You are using an outdated version of Android Studio. 
+  In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
 
 ### Android Gradle plugin requires Java 17 to run
 
