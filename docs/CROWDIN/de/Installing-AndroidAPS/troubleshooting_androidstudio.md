@@ -14,11 +14,12 @@ Falls Du deinen alten keystore oder das dazugehörige Passwort nicht mehr wieder
 4. Erstelle ein signiertes Apk für die neue Version, wie es im [Update Guide](../Installing-AndroidAPS/Update-to-new-version.md) beschrieben ist und übertrage es auf dein Smartphone.
 5. Deinstallieren die Vorgängerversion von AAPS auf Deinem Smartphone.
 6. Installiere die neue AAPS-Version auf Deinem Smartphone.
-7. [Einstellungen importieren](ExportImportSettings-import-settings), um Zielsetzungen und Konfiguration wiederherzustellen.
-8. Prüfe deine Einstellungen und deaktiviere den Energiesparmodus.
+7. [Import settings](ExportImportSettings-import-settings) to restore your objectives and configuration.
 
    Falls du die Einstellungen nicht findest, kopiere sie von deinem externen Speicher auf dein Smartphone.
-8. Loope weiter!
+
+8. Prüfe deine Einstellungen und deaktiviere den Energiesparmodus.
+9. Keep on looping.
 
 ## Gradle Sync schlägt fehl
 Der Gradle Sync kann aus verschiedenen Gründen fehlschlagen. Falls Du einen Hinweis bekommst, dass der Gradle Sync fehlgeschlagen ist ("Gradle Sync failed"), öffne den "Build" Reiter (1) im unteren Bereich von Android Studio und überprüfe welche Fehlermeldung (2) du angezeigt bekommst.
@@ -102,6 +103,14 @@ Falls Du eine Fehlermeldung bekommst, die so aussieht
 Folge der Anleitung bei [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync).
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
+
+### Incompatible version of Android Gradle plugin
+
+  If you experience the following error message
+
+  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+
+  You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
 
 ### Android Gradle plugin requires Java 17 to run
 
