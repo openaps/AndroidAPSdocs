@@ -486,7 +486,7 @@ v3 - новый протокол. Более безопасный и эффек�
 
 ### Важные Примечания
 
-- Используйте [ Android Studio 3.5.1 ](https://developer.android.com/studio/) или новее для [ построения apk ](../Installing-AndroidAPS/Building-APK.md) или [обновлений](../Installing-AndroidAPS/Update-to-new-version.html).
+- Используйте [ Android Studio 3.5.1 ](https://developer.android.com/studio/) или новее для [ сборки apk ](../Installing-AndroidAPS/Building-APK.md) или [обновлений](../Installing-AndroidAPS/Update-to-new-version.html).
 - Если вы используете xDrip должен быть указан.[идентификатор приемника](xdrip-identify-receiver).
 - Если вы используете Dexcom G6 с модифицированным приложением Dexcom, вам понадобится версия из папки [2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 - Поддержка Glimp версии 4.15.57 и новее.
