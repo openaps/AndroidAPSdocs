@@ -78,15 +78,14 @@ AAPS - это приложение с открытым кодом для люд�
 ```
 
 ```{toctree}
-:caption: Настройка AAPS
+:caption: Setting up AAPS
 
-Настройка сервера отчетов <. Установка AndroidAPS/setting-up-the-reporting-server.md>
-выделенный Google аккаунт для AAPS (опционально)<. Установка AndroidAPS/Dedicated-Google-account-for-AAPS.md>
-Создание AAPS <./Installing-AndroidAPS/building-AAPS.md>
-Перенос и Установка AAPS <. Установка AndroidAPS/Transferring-and-installing-AAPS.md>
-Мастер установки<./Installing-AndroidAPS/setup-wizard.md>
-Изменение конфигурации AAPS<. Установка AndroidAPS/change-configuration.md>
-Выполнение задач <./Usage/completing-the-objectives.md>
+Setting up the reporting server <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
+Building AAPS <./Installing-AndroidAPS/building-AAPS.md>
+Transferring and Installing AAPS <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
+Setup Wizard<./Installing-AndroidAPS/setup-wizard.md>
+Change AAPS configuration<./Installing-AndroidAPS/change-configuration.md>
+Completing the objectives <./Usage/completing-the-objectives.md>
 ```
 
 ```{toctree}
@@ -98,13 +97,15 @@ AAPS - это приложение с открытым кодом для люд�
 ```
 
 ```{toctree}
-:caption: Расширенная настройка APPS
+:caption: Advanced Setting up APPS
 
-Примечания к выпуску <. Установка AndroidAPS/Releasenotes.md>
+Release notes <./Installing-AndroidAPS/Releasenotes.md>
 
-Обновление до новой версии или ветки <. Установка AndroidAPS/Update-to-new-version.md>
+Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
 
-ветви <./Installing-AndroidAPS/Dev_branch.md>
+Dev branch <./Installing-AndroidAPS/Dev_branch.md>
+
+Dedicated Google account for AAPS (optional)<./Installing-AndroidAPS/Dedicated-Google-account-for-AAPS.md>
 
 ```
 
@@ -133,39 +134,41 @@ CGM/FGM <./Configuration/BG-Source.md>
 ```
 
 ```{toctree}
-:caption: Работа с AAPS
+:caption: AAPS Usage
 
-Экраны AAPS <./Getting-Started/Screenshots.md>
+AAPS screens <./Getting-Started/Screenshots.md>
 
-Возможности OpenAPS <./Usage/Open-APS-features.md>
+OpenAPS features <./Usage/Open-APS-features.md>
 
-Динамический ISF <./Usage/DynamicISF.md>
+Dynamic ISF <./Usage/DynamicISF.md>
 
-Подсчет активных углеводов COB <./Usage/COB-calculation.md>
+COB calculation <./Usage/COB-calculation.md>
 
-Определение чувствительности <./Configuration/Sensitivity-detection-and-COB.md>
+Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
 
-Переключение профиля <./Usage/Profiles.md>
+Profile switch <./Usage/Profiles.md>
 
-Временные цели <./Usage/temptarget.md>
+Temp-targets <./Usage/temptarget.md>
 
-Растянутые углеводы <./Usage/Extended-Carbs.md>
+Extended carbs <./Usage/Extended-Carbs.md>
 
-Автоматизация <./Usage/Automation.md>
+Automation <./Usage/Automation.md>
 
-Autotune (только dev) <./Usage/autotune.md>
+Autotune (dev only) <./Usage/autotune.md>
 
-Портал терапииl (прекращен) <./Usage/CPbefore26.md>
+Careportal (discontinued) <./Usage/CPbefore26.md>
 
 Open Humans Uploader <./Configuration/OpenHumans.md>
 
-Автоматизация со сторонними приложениями <./Usage/automationwithapp.md>
+Automation with 3rd party apps <./Usage/automationwithapp.md>
 
-Android авто <./Usage/Android-auto.md>
+Android auto <./Usage/Android-auto.md>
 
-Документация по настраиваемым циферблатам <./Usage/Custom_Watchface_Reference.md>
+Custom Watchface reference document <./Usage/Custom_Watchface_Reference.md>
 
-Сайт обмена настраиваемыми циферблатами <./ExchangeSiteCustomWatchfaces/index.md>
+Exchange Site Custom Watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
+
+Sport with AAPS <./Usage/making-sport-with-AAPS.md>
 
 ```
 
