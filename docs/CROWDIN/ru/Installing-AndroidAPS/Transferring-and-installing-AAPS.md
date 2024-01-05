@@ -4,16 +4,16 @@
 
 The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, Xdrip+ or another CGM reciever app) to your Android smartphone, and then **install** the app(s).
 
-Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](configuring-the-AAPS-loop.md).
+После установки **AAPS** на смартфон, можно переходить к [**конфигурации цикла AAPS**](configuring-the-AAPS-loop.md).
 
-There are several ways to transfer the **AAPS** APK file from your computer to the smartphone. Here we explain two different ways:
+Есть несколько способов переноса файла **AAPS** с компьютера на телефон. Здесь мы объясняем два различных способа:
 
-- Option 1-  Use a USB cable
-- Option 2 -  Use your Google drive (Gdrive)
+- Способ 1 - при помощи USB-кабеля
+- Способ 2 - при помощи Google диска (Gdrive)
 
 Please note that transfer by email might cause difficulties, and is discouraged.
 
-## Option 1. Use a USB cable to transfer files
+## Option 1. Использовать кабель USB для передачи файлов
 
 The easiest way to transfer the AAPS apk file is with a  [USB cable](https://support.google.com/android/answer/9064445?hl=en). Transfer the file from its location on your computer to the "downloads" folder on the phone.
 
