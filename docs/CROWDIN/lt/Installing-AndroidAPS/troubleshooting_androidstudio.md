@@ -15,10 +15,11 @@ In case you cannot find your old keystore or its password anymore, proceed as fo
 5. Pašalinkite ankstesnę AAPS versiją iš savo išmaniojo telefono.
 6. Įdiekite naują AAPS versiją į savo išmanųjį telefoną.
 7. [Import settings](ExportImportSettings-import-settings) to restore your objectives and configuration.
-8. Check your battery optimization options and disable them again.
 
    If you can't find them on your phone copy them from the external storage to your phone.
-8. Keep on looping.
+
+8. Check your battery optimization options and disable them again.
+9. Keep on looping.
 
 ## Gradle Sync failed
 Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
@@ -102,6 +103,14 @@ If you receive a failure message like
 Follow the instructions at [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync).
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
+
+### Incompatible version of Android Gradle plugin
+
+  If you experience the following error message
+
+  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+
+  You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
 
 ### Android Gradle plugin requires Java 17 to run
 
