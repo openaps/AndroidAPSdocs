@@ -15,10 +15,11 @@ In case you cannot find your old keystore or its password anymore, proceed as fo
 5. Uninstall previous AAPS version on your phone.
 6. Install new AAPS version on your phone.
 7. [Import settings](ExportImportSettings-import-settings) to restore your objectives and configuration.
-8. Check your battery optimization options and disable them again.
 
    If you can't find them on your phone copy them from the external storage to your phone.
-8. Keep on looping.
+   
+8. Check your battery optimization options and disable them again.
+9. Keep on looping.
 
 ## Gradle Sync failed
 Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
