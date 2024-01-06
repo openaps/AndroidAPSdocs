@@ -105,7 +105,7 @@ If you receive a failure message like
 
 Follow the instructions at [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync).
 
-(troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)
+(troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
 ### Incompatible version of Android Gradle plugin
 

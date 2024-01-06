@@ -2,19 +2,21 @@
 
 In this section we want to address the topic of sport with AAPS.
 
+The aim is to show you how AAPS can help you to continue doing your favorite sport more easily or even to start doing it. It is relatively common for new type 1 diabetics to ask whether exercise is still possible for them, even if the answer in the training courses is actually a clear yes. Exercise is not only good for healthy people, but also for type 1 diabetics and even moderate exercise can even help to stabilize the blood sugar curve overall.
+
 :::{admonition} consult with your diabetes team after reading
 :class: information
 Please consult your diabetes team before applying what you have read here. They know your T1D setting best and can give you further tips or even suggest a different approach in your particular case.
 
 :::
 
-The aim is to show you how AAPS can help you to continue doing your favorite sport more easily or even to start doing it.
-
 The difficulty here is that the prerequisites that someone brings with them and the expectations of what sport means to them are very different.
 
 Since we can assume that experienced top athletes with T1D who use AAPS are unlikely to look it up here, we deliberately set the bar low for ourselves when writing and for you when reading and using it, so that as many people as possible can benefit from it.
 
 Since even sport as a category is far too imprecise, as the effects of endurance sports differ greatly from strength training, for example, we are trying to break it down by type of sport.
+
+To be concrete and give you something you can test yourself we arrange the explanaiton around a concrete example and explain to you they action, reactions and effects.
 
 :::{admonition} more examples wanted
 :class: information
@@ -27,9 +29,16 @@ It's really about the basics. Your experience, which you share here, can help ot
 
 ##  Cycling
 
-The first example we have chosen is cycling.
+:::{admonition} take a friend with you - at least on your first trials
+:class: information
+A gerneral very good idea can be to take a good friend with you on the first rides.
+This is especially important if you are not experienced in T1D.
+Always keep in mind please: arrival comes before speed! Safety for you and the others in road traffic is very, very important.
+:::
 
-Specifically, let's take about 60 minutes of cycling on a flat route with a moderate heart rate as an example.
+### Example
+
+Let's take about 60 minutes of cycling on a flat route with a moderate heart rate as an example.
 
 1. we take a flat route in order to have an even load for the first exercise. This is not about performance, but purely about learning how you should react to changes in blood glucose.
 1. we take the heart rate as an indicator of the load, as it is easy to see whether you are under load or not.
@@ -138,28 +147,38 @@ After succesfully mastering this simple example you could go for further targets
 
 Based on my experiences I would not expect to come back 100% with time in range over the whole and every ride.
 
+### Tipps
+
 I already gave some tipps for during the ride above.
 
 Here are some further tipps what can go wrong and how you can act to prevent it or react to compensate it.
 
-:::{admonition} take a friend with you - at least on your first trials
-:class: information
-A gerneral very good idea can be to take a good friend with you on the first rides.
-This is especially important if you are not experienced in T1D.
-Always keep in mind please: arrival comes before speed! Safety for you and the others in road traffic is very, very important.
-:::
+#### sky rocket high after ride
+During the ride everything was fine but after siting down and relax the blood sugar go sky rocket high.
 
-1. During the ride everything was fine but after siting down and relax the blood sugar go sky rocket high.
-Possible reason: This happens when you have drunk too much dissolved glucose.
-Reaction: Drink 500 ml water, go to the shower and then control again. Latest after 30 minutes think about giving a correction bolus but be careful when it is short for bed time. Therefore it can be very good to make the first try runs on weekend mornings.
-Action: Next time be a bit more cautious in drinking from the dissolved glucose.
+**Possible reason:** This happens when you have drunk too much dissolved glucose.
 
-1. During the ride you are going into hypo and can't recover your blood sugar during cycling
-Possible reason: Your body cannot absorb enough carbohydrates quickly enough during exercise.
-Reaction: Take a rest and corrrect your blood sugar with drinking dissolved glucose. Stay calm: arrival comes before speed.
-Action: Did you started with IoB near 0? Have you eaten a small amount of middle fast carbs? Can you increase this or are the not fast enough for your body? Is it possible to prevent going into hypo by reducing the factor for the profile switch? Have you disbaled SMBs during ride as explained above?
+**Reaction:** Drink 500 ml water, go to the shower and then control again. Latest after 30 minutes think about giving a correction bolus but be careful when it is short for bed time. Therefore it can be very good to make the first try runs on weekend mornings.
 
-1. During the right your blood sugar goes sky rocket high
-Possible reason: You have got taken too much carbs for your IoB at that time. Beneath for sure the typical technical problems with your insulin pump like leakage or blockage of the catheder!
-Reaction: If it is too high for you take a rest and correct with a bolus. Keep in mind that you must ride home and therefore make it carefully. Drink 500 ml pure water without carbs. Stay calm: arrival comes before speed.
-Action: Have you eaten too much? Especially have you drunk too much from the  dissolved glucose during the ride? Is your percentage of reduction the profile during profile switch too low and you can increase this?
+**Action:** Next time be a bit more cautious in drinking from the dissolved glucose.
+
+#### hypo during ride
+
+During the ride you are going into hypo and can't recover your blood sugar during cycling.
+
+**Possible reason:** Your body cannot absorb enough carbohydrates quickly enough during exercise.
+
+**Reaction:** Take a rest and corrrect your blood sugar with drinking dissolved glucose. Stay calm: arrival comes before speed.
+
+**Action:** Did you started with IoB near 0? Have you eaten a small amount of middle fast carbs? Can you increase this or are the not fast enough for your body? Is it possible to prevent going into hypo by reducing the factor for the profile switch? Have you disbaled SMBs during ride as explained above?
+
+#### sky rocket high during ride
+
+During the ride your blood sugar goes sky rocket high.
+
+**Possible reason:** You have got taken too much carbs for your IoB at that time. Beneath for sure the typical technical problems with your 
+insulin pump like leakage or blockage of the catheder!
+
+**Reaction:** If it is too high for you take a rest and correct with a bolus. Keep in mind that you must ride home and therefore make it carefully. Drink 500 ml pure water without carbs. Stay calm: arrival comes before speed.
+
+**Action:** Have you eaten too much? Especially have you drunk too much from the  dissolved glucose during the ride? Is your percentage of reduction the profile during profile switch too low and you can increase this?

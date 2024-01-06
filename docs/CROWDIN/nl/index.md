@@ -81,7 +81,6 @@ Docs updates & changes <./Getting-Started/WikiUpdate.md>
 :caption: Setting up AAPS
 
 Setting up the reporting server <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
-Dedicated Google account for AAPS (optional)<./Installing-AndroidAPS/Dedicated-Google-account-for-AAPS.md>
 Building AAPS <./Installing-AndroidAPS/building-AAPS.md>
 Transferring and Installing AAPS <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
 Setup Wizard<./Installing-AndroidAPS/setup-wizard.md>
@@ -105,6 +104,8 @@ Release notes <./Installing-AndroidAPS/Releasenotes.md>
 Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
 
 Dev branch <./Installing-AndroidAPS/Dev_branch.md>
+
+Dedicated Google account for AAPS (optional)<./Installing-AndroidAPS/Dedicated-Google-account-for-AAPS.md>
 
 ```
 
@@ -166,6 +167,8 @@ Android auto <./Usage/Android-auto.md>
 Custom Watchface reference document <./Usage/Custom_Watchface_Reference.md>
 
 Exchange Site Custom Watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
+
+Sport with AAPS <./Usage/making-sport-with-AAPS.md>
 
 ```
 
