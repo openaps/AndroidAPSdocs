@@ -58,4 +58,6 @@ details.
 - Diabox is the vendor app for Bubble.
 - Install [Diabox](https://t.me/s/DiaboxApp). In Settings, Integration, enable Share data with other apps.
 
+![Diabox](../images/Diabox.png)
+
 - Select xDrip+ for BG Source in ConfigBuilder (setting in AAPS).

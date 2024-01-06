@@ -2,7 +2,7 @@
 
 The Freestyle Libre 2 sensor is now a real CGM even with the official app. Still, LibreLink cannot send data to AAPS. There are several solutions to use it with AAPS.
 
-## 1. Using a Bluetooth bridge and OOP
+## 1. Use a Bluetooth bridge and OOP
 
 Bluetooth transmitters can be used with the Libre 2 (EU) and an [out of process algorithm](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) app. You can receive blood sugar readings every 5 minutes like with the [Libre 1](../Libre1). 
 
@@ -20,11 +20,47 @@ There are some good reasons to use a Bluetooth transmitter:
 ![OOP2 Calibration](../images/Libre2_OOP2Calibration.png)
 
 -   The Libre 2 sensor can be used 14.5 days as the Libre 1
--   8 hours Backfilling is fully supported
+-   8 hours backfilling is fully supported
 
 Remark: The transmitter can be used in parallel to the LibreLink app without interfering with it.
 
-## 2. Use the patched LibreLink app with xDrip+
+## 2. Use xDrip+ direct connection
+
+:::{admonition} Libre 2 EU only
+:class: warning
+xDrip+ doesn't support direct connection to Libre 2 US and AUS.  
+:::
+
+- Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [this latest OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) as the one in the document is obsolete.
+- Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
+
+-   Select xDrip+ for BG Source in ConfigBuilder (setting in AAPS).
+
+## 3. Use Diabox
+
+- Install [Diabox](https://t.me/s/DiaboxApp). In Settings, Integration, enable Share data with other apps.
+
+![Diabox](../images/Diabox.png)
+
+- Select xDrip+ for BG Source in ConfigBuilder (setting in AAPS).
+
+## 4. Use Juggluco
+
+- Download and install the Juggluco app from [here](https://www.juggluco.nl/Juggluco/download.html).
+- Follow the instructions [here]( https://www.juggluco.nl/Juggluco/index.html/)
+- In Settings, enable xDrip+ broadcast (which doesn't send data to xDrip+ but to AAPS).
+
+![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
+
+- Select xDrip+ for BG Source in ConfigBuilder (setting in AAPS).
+
+:::{admonition} Use with xDrip+
+:class: note
+You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
+![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  
+You will then need to set xDrip+ data source to Libre 2 Patched App to receive data from Juggluco.:::
+
+## 5. Use the patched LibreLink app with xDrip+
 
 :::{admonition} Libre 2 EU only
 :class: warning
@@ -34,10 +70,9 @@ The patched app is an old version (22/4/2019) and might not be compatible with r
 ### Step 1: Build the patched app
 
 For legal reasons, "patching" has to be done by yourself.
-Use search engines to find the corresponding links. There are mainly two
+Use search engines to find the corresponding links. There are two
 variants: The recommended original patched app blocks any internet
-traffic to avoid tracking. The other variant supports LibreView which
-may be needed by your doctor.
+traffic to avoid tracking. The other variant supports LibreView.
 
 The patched app has to be installed instead of the original app. The
 next sensor started with it will transmit the current BG values to the
@@ -84,18 +119,17 @@ the app location permission which has to be set also!
 
 ![automatic time and time zone + alarm settings](../images/Libre2_DateTimeAlarms.png)
 
-The sensor remembers the device it was started from. Only this device
-can receive alarms in the future.
+Once the sensor started with the patched app, you won't be able to connect it to another app/phone. If you uninstall the patched app, you will lose alarms and continuous BG readings.
 
 The first connection setup to the sensor is critical. The LibreLink app
 tries to establish a wireless connection to the sensor every 30 seconds.
 If one or more mandatory settings are missing they have to be adjusted.
 You have no time limit to do that. The sensor is constantly trying to
 setup the connection. Even if is last some hours. Be patient and try
-different settings before even think of changing the sensor.
+different settings before even thinking of changing the sensor.
 
 As long as you see a red exclamation mark ("!") on the upper left corner
-of the LibreLink's start screen there is no connection or some other
+of the LibreLink start screen there is no connection or some other
 setting blocks LibreLink to signal alarms. Please check if the sound is
 enabled and all sorts of blocking app notifications are disabled. When
 the exclamation mark is gone, the connection should be established and
@@ -117,10 +151,6 @@ have several reasons:
 -   sound is blocked
 -   app notifications are blocked
 -   idle screen notifications are blocked
--   you have a faulty Libre 2 sensor from a production LOT number with a
-    'K' followed by 8 digits. You find this printed on the yellow
-    package. These sensors have to be replaced as they don't function on
-    bluetooth.
 
 Restarting the phone can help, you may have to do it several times. As
 soon as the connection is established, the red exclamation mark
@@ -134,7 +164,7 @@ connected, every minute a blood sugar value is transmitted.
 In rare case it could help to empty the bluetooth cache and/or reset all
 network connections via the system menu. This removes all connected
 bluetooth devices which may help to setup a proper bluetooth connection.
-That procedure is save as the started sensor is remembered by the
+That procedure is safe as the started sensor is remembered by the
 patched LibreLink app. Nothing additional has to be done here. Simply
 wait for the patched app to connect to the sensor.
 
@@ -159,14 +189,13 @@ for scanning via NFC. There is no time limitation to start that. You
 could use a parallel phone for example on day 5 or so. The parallel
 phones(s) could upload the blood sugar values into the Abbott Cloud
 (LibreView). LibreView can generate reports for your diabetes team.
-There are many patients who absolutely need this.
 
 Please note that the original patched app **does not have any connection
 to the internet** to avoid tracking.
 
 However there is a variant of the patched app supporting LibreView with
 enabled internet access. Please be aware that your data is transferred
-to the cloud then. But your diadoc tool- and reporting chain is fully
+to the cloud then. But your endo team reporting is fully
 supported then. With that variant it is also possible to move the alarms
 of a running sensor to a different device which not has started the
 sensor. Please google in diabetes related German forums how this could
@@ -215,12 +244,11 @@ glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more detail
 
 #### Connectivity
 
-The connectivity is extraordinarily good. With the exception of Huawei
-mobile phones, all current smartphones seem to work well. The reconnect
-rate in case of connection loss is phenomenal. The connection can break
+The connectivity is good with most phones, with the exception of Huawei
+mobile phones. The connection can break
 off if the mobile phone is in the pocket opposite the sensor or if you
-are outdoors. When I am gardening, I use to wear my phone on the sensor
-side of my body. In rooms, where Bluetooth spreads over reflections, no
+are outdoors. Wear your phone on the sensor
+side of your body. In rooms, where Bluetooth spreads over reflections, no
 problems should occur. If you have connectivity problems please test
 another phone. It may also help to set the sensor with the internal BT
 antenna pointing down. The slit on the applicator must be pointing down
@@ -289,15 +317,11 @@ Libre2 sensor here! You do not need to start the sensor in xDrip+.
 
 #### Calibration
 
-You can calibrate the Libre2 with an offset of -40 mg/dl to +20 mg/dL
-\[-2,2 mmol/l to +1,1 mmol/l\] (intercept). The slope isn't changeable
-as the Libre2 is much more accurate compared to the Libre1. Please check
-by fingerpricking early after setting a new sensor. It is known that
-there can arise big differences to the blood measurements. To be on the
-safe side, calibrate every 24 - 48 hours. The values are accurate up to
-the end of the sensor and do not jitter as with the Libre1. However, if
-the sensor is completely off, this will not change. The sensor should
-then be replaced immediately.
+You can calibrate the Libre2 ****with an offset of -40 mg/dl to +20 mg/dL**
+\[-2,2 mmol/l to +1,1 mmol/l\]** (intercept). The slope isn't changeable. Please check
+by fingerpricking after setting a new sensor, keeping in mind it might not be accurate in the first 12 hours after insertion. Since there can be large differences to the blood measurements, verify every 24 hours and calibrate if necessary. If
+the sensor is completely off after a few days, it should
+then be replaced.
 
 ### Plausibility checks
 
@@ -306,31 +330,9 @@ values. As soon as the sensor moves on the arm or is lifted slightly,
 the values may start to fluctuate. The Libre2 sensor will then shut down
 for safety reasons. Unfortunately, when scanning with the App,
 additional checks are made. The app can deactivate the sensor even
-though the sensor is OK. Currently the internal test is too strict. I
-have completely stopped scanning and haven't had a failure since then.
+though the sensor is OK. Currently the internal test is too strict. Avoid scanning the sensor with another phone to reduce the risk of unexpected sensor shutdown.
 
-### Experiences
-
-Altogether it is one of the smallest CGM systems on the market. Small,
-no transmitter necessary and mostly very accurate values without
-fluctuations. After approx. 12 hours running-in phase with deviations of
-up to 30 mg/dl (1,7 mmol/l)the deviations are typical smaller than 10
-mg/dl (0,6 mmol/l). Best results at the rear orbital arm, other setting
-points with caution! No need to set a new sensor one day ahead for
-soaking. That would disturb the internal levelling mechanism.
-
-There seem to be bad sensors from time to time, which are far away from
-the blood values. It stays that way. These should be immediately
-replaced.
-
-If the sensor moved a little bit on the skin or is lifted somehow this
-can cause bad results. The filament which sits in the tissue is a little
-bit pulled out of the tissue and will measure different results then.
-Mostly probably you will see jumping values in xDrip+. Or the difference
-to the bloody values change. Please replace the sensor immediately! The
-results are inaccurate now.
-
-# Best practices for calibrating a libre 2 sensor
+# Best practices for calibrating a Libre 2 sensor
 
 To get the best results when calibrating a libre 2 sensor there are some
 “rules” you should follow. They apply independently of the software
@@ -372,7 +374,7 @@ libre 2 values.
 5.  Avoid calibration when not required. This might sound silly but it
     is not recommended to add a new calibration if the blood glucose to
     flesh glucose level difference is only ±10 mg/dl (e.g. blood glucose
-    level: 95, Libre sensor 100 -> do NOT add the 9l, blood glucose
+    level: 95, Libre sensor 100 -> do NOT add the 95, blood glucose
     level: 95, Libre sensor 115 -> add the 95 to be taken into account
     for the calibration)
 
