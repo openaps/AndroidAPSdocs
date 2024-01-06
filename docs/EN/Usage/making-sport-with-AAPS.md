@@ -15,7 +15,7 @@ This is especially important if you are not experienced in T1D.
 Always keep in mind please: arrival comes before speed! Safety for you and the others in road traffic is very, very important.
 :::
 
-The aim is to show you how AAPS can help you to continue doing your favorite sport more easily or even to start doing it.
+The aim is to show you how AAPS can help you to continue doing your favorite sport more easily or even to start doing it. It is relatively common for new type 1 diabetics to ask whether exercise is still possible for them, even if the answer in the training courses is actually a clear yes. Exercise is not only good for healthy people, but also for type 1 diabetics and even moderate exercise can even help to stabilize the blood sugar curve overall.
 
 The difficulty here is that the prerequisites that someone brings with them and the expectations of what sport means to them are very different.
 
