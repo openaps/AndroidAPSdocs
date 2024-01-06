@@ -14,11 +14,12 @@
 4. Сгенерируйте подписанное приложение новой версии, как описано в инструкции [Update](../Installing-AndroidAPS/Update-to-new-version.md) и перенесите его на телефон.
 5. Деинсталлируйте предыдущую версию AAPS.
 6. Установите новую версию AAPS на телефон.
-7. [Импортируйте настройки](ExportImportSettings-import-settings) для восстановления целей и конфигурации.
-8. Проверьте параметры оптимизации батареи и отключите их снова.
+7. [Import settings](ExportImportSettings-import-settings) to restore your objectives and configuration.
 
    Если не можете найти их, скопируйте из внешнего накопителя на ваш телефон.
-8. Продолжайте пользоваться системой AAPS.
+
+8. Проверьте параметры оптимизации батареи и отключите их снова.
+9. Keep on looping.
 
 ## Ошибка синхронизации Gradle
 Синхронизация Gradle может не работать по различным причинам. Когда выпадает сообщение о том, что синхронизация не удалась, откройте вкладку "Build" (1) в нижней части Android Studio и проверьте, какое отображается сообщение об ошибке (2).
@@ -102,6 +103,14 @@
 Следуйте инструкциям на [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync).
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
+
+### Incompatible version of Android Gradle plugin
+
+  If you experience the following error message
+
+  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+
+  You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
 
 ### Для Android Gradle требуется Java 17
 
