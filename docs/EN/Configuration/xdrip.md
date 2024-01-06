@@ -1,6 +1,8 @@
 # xDrip+ settings
 
-If not already set up, then download [xDrip+](https://jamorham.github.io/#xdrip-plus):
+If not already set up, then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
+
+Disable battery optimization and allow background activity for the xDrip+ app.
 
 You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features or are using sensors that are being actively integrated (like G7), in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -65,12 +67,8 @@ Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time A
 
 ## Use AAPS to calibrate in xDrip+
 
--   If you want to be able to use AAPS to calibrate then in xDrip+
-    go to Settings > Interapp Compatibility > Accept Calibrations and
-    select ON. You may also want to review the options in Settings >
-    Less Common Settings > Advanced Calibration Settings.
-
-
+-   If you want to be able to use AAPS to calibrate then in xDrip+ go to Settings → Interapp Compatibility → Accept Calibrations and select ON. 
+-   You may also want to review the options in Settings → Less Common Settings → Advanced Calibration Settings.
 
 ## Dexcom G6
 
@@ -113,7 +111,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 **For second and following transmitters see [Extend transmitter life](xdrip-extend-transmitter-life) below.**
 
-Follow [these instruction](https://navid200.github.io/xDrip/docs/Starting-G6.html).
+Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
 (xdrip-transmitter-battery-status)=
 

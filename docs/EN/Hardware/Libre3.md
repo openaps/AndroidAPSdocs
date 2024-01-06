@@ -34,15 +34,19 @@ Make sure you send the glucose values to Xdrip+: In Juggluco's settings you can 
 
 The blood glucose values are received by the xDrip+ app on the smartphone.
 
-- If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow
-  instructions on [xDrip+ settings page](../Configuration/xdrip.md).
+- If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../Configuration/xdrip.md).
 - In xDrip+ select "Libre2 (patched app)" as data source.
-- Disable battery optimization and allow background activity for the xDrip+ app.
-- If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for troubleshooting.
-- In xDrip+ go to Settings -> Interapp Compatibility -> Transfer data locally and select ON.
-- In xDrip+, go to Settings -> Interapp Compatibility -> Accept Treatments and select OFF.
-- To allow AAPS to receive blood glucose values (from version 2.5.x) from xDrip+, please enable Settings -> Interapp Settings -> Identify Receiver "info.nightscout.androidaps".
-- If you want to use AndroidAPS for calibration, go to Settings -> Interapp compatibility -> Accept calibrations in xDrip+ and select ON. It's also best to check the options under Settings -> Less General Settings -> Check Advanced Calibration Settings.
+- If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings → Extra Logging Settings → Extra tags for logging. This will log additional error messages for troubleshooting.
+
+![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
+
+- Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+
+  → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
+
+  ![xDrip+ advanced settings Libre 2 & raw values](C:\Data\50 - My Projects\AAPS\AndroidAPSdocs\docs\EN\images\xDrip_Libre3_Smooth.png)
+
+  
 
 ### Step 3: Start sensor within xDrip
 

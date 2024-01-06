@@ -58,7 +58,8 @@ xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 :class: note
 You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
 ![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  
-You will then need to set xDrip+ data source to Libre 2 Patched App to receive data from Juggluco.:::
+You will then need to set xDrip+ data source to Libre 2 Patched App to receive data from Juggluco.  
+:::
 
 ## 5. Use the patched LibreLink app with xDrip+
 
@@ -141,12 +142,9 @@ a maximum of 5 minutes.
 If the exclamation mark remains or you get an error message, this can
 have several reasons:
 
--   Android location service is not granted - please enable it in the
-    system settings
--   automatic time and time zone not set - please change the settings
-    accordingly
--   activate alarms - at least one of the three alarms must be activated
-    in LibreLink
+-   Android location service is not granted - please enable it in system settings
+-   automatic time and time zone not set - please change settings accordingly
+-   activate alarms - at least one of the three alarms must be activated in LibreLink
 -   Bluetooth is switched off - please switch on
 -   sound is blocked
 -   app notifications are blocked
@@ -195,8 +193,7 @@ to the internet** to avoid tracking.
 
 However there is a variant of the patched app supporting LibreView with
 enabled internet access. Please be aware that your data is transferred
-to the cloud then. But your endo team reporting is fully
-supported then. With that variant it is also possible to move the alarms
+to the cloud then. But your endo team reporting is fully supported then. With that variant it is also possible to move the alarms
 of a running sensor to a different device which not has started the
 sensor. Please google in diabetes related German forums how this could
 be done.
@@ -256,9 +253,7 @@ when setting the sensor.
 
 #### Value smoothing & raw values
 
-Technically, the current blood sugar value is transmitted to xDrip+
-every minute. A weighted average filter calculates a smoothed value over
-the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
 
 → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
@@ -285,10 +280,10 @@ as using the smoothed line to make proper therapy decisions.
 
 The sensor runtime is fixed to 14 days. The 12 extra hours of Libre1 no
 longer exist. xDrip+ shows additional sensor information after enabling
-Advanced Settings for Libre2 \> "show Sensors Infos" in the system menu
+Advanced Settings for Libre2 → "show Sensors Infos" in the system menu
 like the starting time. The remaining sensor time can also be seen in
 the patched LibreLink app. Either in the main screen as remaining days
-display or as the sensor start time in the three-point menu->Help->Event
+display or as the sensor start time in the three-point menu → Help → Event
 log under "New sensor found".
 
 ![Libre 2 start time](../images/Libre2_Starttime.png)
@@ -317,7 +312,7 @@ Libre2 sensor here! You do not need to start the sensor in xDrip+.
 
 #### Calibration
 
-You can calibrate the Libre2 ****with an offset of -40 mg/dl to +20 mg/dL**
+You can calibrate the Libre2 **with an offset of -40 mg/dl to +20 mg/dL
 \[-2,2 mmol/l to +1,1 mmol/l\]** (intercept). The slope isn't changeable. Please check
 by fingerpricking after setting a new sensor, keeping in mind it might not be accurate in the first 12 hours after insertion. Since there can be large differences to the blood measurements, verify every 24 hours and calibrate if necessary. If
 the sensor is completely off after a few days, it should
