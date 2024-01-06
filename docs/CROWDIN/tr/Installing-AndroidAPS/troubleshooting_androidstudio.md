@@ -14,11 +14,12 @@ Eski keystore'unuzu veya parolasını artık bulamıyorsanız, aşağıdakileri 
 4. [Güncelleme kılavuzunda](../Installing-AndroidAPS/Update-to-new-version.md) açıklandığı gibi yeni sürümün imzalı apk'sını oluşturun ve telefonunuza aktarın.
 5. Telefonunuzdaki önceki AAPS sürümünü kaldırın.
 6. Telefonunuza yeni AAPS sürümünü yükleyin.
-7. Hedeflerinizi ve yapılandırmanızı geri yüklemek için [ayarları içe aktarın](ExportImportSettings-import-settings).
-8. Pil optimizasyon seçeneklerinizi kontrol edin ve tekrar devre dışı bırakın.
+7. [Import settings](ExportImportSettings-import-settings) to restore your objectives and configuration.
 
    Bunları telefonunuzda bulamazsanız, harici depolama biriminden telefonunuza kopyalayın.
-8. Döngü yapmaya devam edin.
+
+8. Pil optimizasyon seçeneklerinizi kontrol edin ve tekrar devre dışı bırakın.
+9. Keep on looping.
 
 ## Gradle Sync başarısız oldu
 Gradle Synchronize çeşitli nedenlerle başarısız olabilir. Gradle senkronizasyonunun başarısız olduğunu söyleyen bir mesaj aldığınızda, Android Studio'nun altındaki "Oluştur" sekmesini (1) açın ve hangi hata mesajının (2) görüntülendiğini kontrol edin.
@@ -102,6 +103,14 @@ Bunlar olağan gradle senkronizasyon hatalarıdır:
 [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync)'deki talimatları izleyin.
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
+
+### Incompatible version of Android Gradle plugin
+
+  If you experience the following error message
+
+  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+
+  You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
 
 ### Android Gradle plugin requires Java 17 to run
 
