@@ -4,7 +4,7 @@
 * [Data Smoothing](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)
 * [xDrip+Settings](./xdrip.md)
 * [Dexcom G7](../Hardware/DexcomG7.md)
-* [Dexcom G6/ONE](../Hardware/DexcomG6.md)
+* [Dexcom G6](../Hardware/DexcomG6.md)
 * [Dexcom G5](../Hardware/DexcomG5.md)
 * [Libre 3](../Hardware/Libre3.md)
 * [Libre 2](../Hardware/Libre2.md)
