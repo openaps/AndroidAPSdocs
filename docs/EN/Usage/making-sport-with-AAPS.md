@@ -16,6 +16,8 @@ Since we can assume that experienced top athletes with T1D who use AAPS are unli
 
 Since even sport as a category is far too imprecise, as the effects of endurance sports differ greatly from strength training, for example, we are trying to break it down by type of sport.
 
+To be concrete and give you something you can test yourself we arrange the explanaiton around a concrete example and explain to you they action, reactions and effects.
+
 :::{admonition} more examples wanted
 :class: information
 If you are interested in sharing your experiences, please contact the Documentation Team to discuss how your input can be included.
@@ -27,8 +29,6 @@ It's really about the basics. Your experience, which you share here, can help ot
 
 ##  Cycling
 
-The first example we have chosen is cycling.
-
 :::{admonition} take a friend with you - at least on your first trials
 :class: information
 A gerneral very good idea can be to take a good friend with you on the first rides.
@@ -36,7 +36,9 @@ This is especially important if you are not experienced in T1D.
 Always keep in mind please: arrival comes before speed! Safety for you and the others in road traffic is very, very important.
 :::
 
-Specifically, let's take about 60 minutes of cycling on a flat route with a moderate heart rate as an example.
+### Example
+
+Let's take about 60 minutes of cycling on a flat route with a moderate heart rate as an example.
 
 1. we take a flat route in order to have an even load for the first exercise. This is not about performance, but purely about learning how you should react to changes in blood glucose.
 1. we take the heart rate as an indicator of the load, as it is easy to see whether you are under load or not.
@@ -145,11 +147,13 @@ After succesfully mastering this simple example you could go for further targets
 
 Based on my experiences I would not expect to come back 100% with time in range over the whole and every ride.
 
+### Tipps
+
 I already gave some tipps for during the ride above.
 
 Here are some further tipps what can go wrong and how you can act to prevent it or react to compensate it.
 
-### sky rocket high after ride
+#### sky rocket high after ride
 During the ride everything was fine but after siting down and relax the blood sugar go sky rocket high.
 
 **Possible reason:** This happens when you have drunk too much dissolved glucose.
@@ -158,7 +162,7 @@ During the ride everything was fine but after siting down and relax the blood su
 
 **Action:** Next time be a bit more cautious in drinking from the dissolved glucose.
 
-### hypo during ride
+#### hypo during ride
 
 During the ride you are going into hypo and can't recover your blood sugar during cycling.
 
@@ -168,7 +172,7 @@ During the ride you are going into hypo and can't recover your blood sugar durin
 
 **Action:** Did you started with IoB near 0? Have you eaten a small amount of middle fast carbs? Can you increase this or are the not fast enough for your body? Is it possible to prevent going into hypo by reducing the factor for the profile switch? Have you disbaled SMBs during ride as explained above?
 
-### sky rocket high during ride
+#### sky rocket high during ride
 
 During the ride your blood sugar goes sky rocket high.
 
