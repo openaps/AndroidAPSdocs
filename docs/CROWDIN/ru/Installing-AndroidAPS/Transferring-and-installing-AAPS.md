@@ -45,11 +45,11 @@ The next steps are to **transfer** the **AAPS** APK file (as well as other apps 
 
 После установки этот шаг завершен.
 
-you should see the **AAPS** icon and be able to open the app.
+на экране приложений в телефоне появится значок **AAPS**, нажав на который вы сможете открыть приложение.
 
 ```{warning}
-**IMPORTANT SAFETY NOTICE**
-Did you remeber to disallow the installation from Google Drive?
+**ВАЖНОЕ НАПОМИНАНИЕ БЕЗОПАСНОСТИ**
+Вы не забыли отменить разрешение на установку приложений из Google Drive?
 ```
 
 ## Please go on with [configuring the AAPS loop](configuring-the-AAPS-loop.md).
