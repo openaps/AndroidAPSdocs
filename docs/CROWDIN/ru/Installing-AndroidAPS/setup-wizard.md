@@ -10,20 +10,20 @@
 
 :::
 
-From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
+По опыту мы знаем, что новички стараются как можно быстрее настроить \*\* AAPS \*\*, а это может привести к разочарованию, поскольку на обучение уйдет немало времени.
 
-So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
+Поэтому настраивайте работу AAPS не спеша, так как преимущества хорошо работающей системы компенсируют все временные неудобства.
 
-:::{admonition} Ask for Help
-:class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../Where-To-Go-For-Help/Connect-with-other-users.md).
+:::{admonition} Обращение за помощью
+:class: примечание
+Если в документации найдена ошибка или у вас есть идея, как объяснить что=то получше, обратитесь за помощью к сообществу по этой инструкции [Связаться с другими пользователями](../Куда-Обратиться-за-помощью/Связаться-с-другими-пользователями.md).
 :::
 
-## Step-wise guide to the AAPS Setup Wizard
+## Пошаговое руководство к Мастеру установки AAPS
 
-### Welcome message
+### Приветственное сообщение
 
-This is just the welcome message which you can skip with the "NEXT" button:
+Это просто приветственное сообщение, которое можно пропустить, нажав кнопку "ДАЛЕЕ":
 
 ![image](../images/setup-wizard/Screenshot_20231202_125636.png)
 
