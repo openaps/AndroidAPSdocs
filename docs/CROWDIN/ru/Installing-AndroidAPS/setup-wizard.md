@@ -41,15 +41,15 @@
 
 для корректной работы **AAPS** требуются некоторые условия.
 
-In the following screens you are asked several questions you have to agree to, to get **AAPS** working. The Wizard itself explains why it asks for the relevant setting.
+На следующих экранах задано несколько условий которые надо принять для корректной работы **AAPS**. Мастер сам объясняет, почему он запрашивает соответствующие разрешения или настройки.
 
-In this screen, we aim to give some more background information, translate more technical speak into common language or explain the reason.
+На этом экране мы даем дополнительную справочную информацию, переводим с технического языка на общий или объясняем причину.
 
-Please click the "NEXT" button:
+Нажмите кнопку «ДАЛЕЕ»:
 
-![image](../images/setup-wizard/Screenshot_20231202_125709.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125709.png)
 
-Battery consumption on smartphones is still a consideration, as the performance of the batteries is still quite limited. Therefore, the Android operating system on your smartphone is quite restrictive about allowing applications to run and consume CPU time, and therefore battery power.
+Расход батареи на смартфонах все еще является сложной задачей, поскольку производительность батарей по-прежнему весьма ограничена. Операционная система Android довольно неохотно разрешает приложениям запускатьсся и расходоавать время работы процессора, а, следовательно, и заряд батареи.
 
 However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Therefore it must be allowed to do so by Android.
 

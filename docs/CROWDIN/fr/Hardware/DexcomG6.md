@@ -68,7 +68,7 @@ Pour en savoir plus sur les détails et les raisons de ces recommandations, cons
 
 ### Dépannage général
 
-Les dépannages généraux concernant les MGC peuvent être trouvés [ici](./GeneralCGMRecommendation.html#depannage).
+General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.md#troubleshooting).
 
 ### Nouvel émetteur avec capteur en cours
 

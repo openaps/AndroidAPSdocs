@@ -1,98 +1,102 @@
 # xDrip+ ayarları
 
-xDrip+ ile ilgili ek bilgi için lütfen [xDrip dokümantasyonu](https://xdrip.readthedocs.io/en/latest/.)'na bakın.
+If not already set up, then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
-Henüz kurulu değilse [xDrip+](https://jamorham.github.io/#xdrip-plus)'ı indirin.
+Disable battery optimization and allow background activity for the xDrip+ app.
 
-**Bu dokümantasyon yalnızca Android telefonlara yüklü xDrip+ içindir.** Orjinal Android xDrip+ ile hiçbir ilgisi olmayan "iOS için xDrip" uygulaması da mevcuttur.
-
-2018 sonbaharı/sonundan sonra üretilen G6 vericileri için (yani seri no. 80 veya 81 ile başlayanlar) [ana](https://jamorham.github.io/#xdrip-plus) sürümünü kullanabilirsiniz.
-
-Dexcom G6 vericinizin seri numarası 8G...,8H veya 8J ile başlıyorsa [latest nightly build derlemelerinden](https://github.com/NightscoutFoundation/xDrip/releases) birini kullanabilirsiniz.
-
-Telefonunuz Android 10 çalıştırıyorsa ve xDrip+ ana sürüm ile ilgili sorun yaşıyorsanız [nightly build 2019/12/31 veya sonrasını](https://github.com/NightscoutFoundation/xDrip/releases) deneyin.
+You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features or are using sensors that are being actively integrated (like G7), in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Tüm CGM & FGM sistemleri için temel ayarlar
 
-* Temel URL'yi doğru ayarladığınızdan emin olun. ( http**s**:// sonunda **S** dahil olmak üzere "http:// şeklinde değil")
-   
-   örn. https://API_SECRET@your-app-name.herokuapp.com/api/v1/
-   
-   -> Hamburger Menüsü (ana ekranın sol üst kısmı) -> Ayarlar-> Buluta Yükleme-> Nightscout Senkronizasyonu (REST-API) -> Temel URL
+### Disable Nightscout upload
 
-* `Otomatik Kalibrasyon`'u devre dışı bırakın `Otomatik Kalibrasyon` onay kutusu işaretliyse, `Verileri indir` öğesini bir kez etkinleştirin, ardından `Otomatik Kalibrasyon` onay kutusunu kaldırın ve `Verileri indir` öğesini devre dışı bırakın, aksi takdirde tedaviler (insülin & karbonhidratlar) Nightscout'a iki kez eklenecektir.
+Starting with AAPS 3.2, you shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
 
-* `Ek Seçenekler`'e dokunun
+→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) -> Nightscout Sync (REST-API)(4) → Switch **OFF** `Enabled` (5)
 
-* `Tedavileri yükle` ve `Verileri geri doldur` seçeneğini devre dışı bırakın.
-   
-   **Güvenlik uyarısı : xDrip+'tan "Tedavileri yükle" seçeneğini devre dışı bırakmalısınız, aksi takdirde tedaviler AAPS'de iki katına çıkarak yanlış AKRB (aktif karbonhidrat) ve AİNS (aktif insülin) hesaplanmasına neden olabilir.**
+![xDrip+ Temel Ayarlar 1](../images/xDrip_Basic1.png)
 
-* `Hatalarda uyarı ver` seçeneği de devre dışı bırakılmalıdır. Aksi takdirde, wifi/mobil ağın çok kötü olması veya sunucunun müsait olmaması durumunda her 5 dakikada bir alarm alırsınız.
-   
-   ![xDrip+ Temel Ayarlar 1](../images/xDrip_Basic1.png)
-   
-   ![xDrip+ Temel Ayarlar 2](../images/xDrip_Basic2.png)
+#### Disable automatic calibration and treatments
 
-* **Ugy.lar-arası ayarlar** (Yayın) AAPS kullanacaksanız ve veriler AAPS'e iletilecekse, Uygulamalar Arası ayarlarda xDrip+'da yayını etkinleştirmeniz gerekir.
+If you use an older version of AAPS (before 3.2), make sure to deactivate `Automatic Calibration` (7) If the checkbox for `Automatic Calibration` is checked, activate `Download treatments` (6) once, then remove the checkbox for `Automatic Calibration` and deactivate `Download treatments` again.
 
-* Değerlerin eşit olması için `Ekranda Görünen Glikoz Değerini Gönder` seçeneğini etkinleştirmelisiniz.
+![xDrip+ Temel Ayarlar 2](../images/xDrip_Basic2.png)
 
-* AAPS'de `Tedavileri kabul et` ve "Yerel olarak yayınla"yı da etkinleştirdiyseniz, xDrip+ AAPS'den insülin, karbonhidrat ve bazal oran bilgilerini alır ve hipo tahminini vb. tahmin edebilir. Bu daha doğrudur.
-   
-   ![xDrip+ Temel Ayarlar 3](../images/xDrip_Basic3.png)
+Tap `Extra Options`(8)
+
+:::{admonition} Safety warning :class: warning You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.  
+:::
+
+Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill data` (11).
+
+Option `Alert on failures` should also be deactivated (10). Otherwise you will get an alarm every 5 minutes in case Wi-Fi/mobile network issues or if the server is not available.
+
+![xDrip+ Temel Ayarlar 3](../images/xDrip_Basic3.png)
+
+### **Inter-app Settings** (Broadcast)
+
+If you are going to use AAPS and the data should be forwarded to i.e. AAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
+
+→ Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
+
+In order for the values to be identical in AAPS with respect to xDrip+, you should activate `Send the displayed glucose value` (5).
+
+Enable Compatible Broadcast (6).
+
+![xDrip+ Basic Settings 4](../images/xDrip_Basic4.png)
+
+If you have also activated `Accept treatments` in xDrip+ and `Enable broadcasts to xDrip+` in AAPS xDrip+ plugin, then xDrip+ will receive insulin, carbs and basal rate information from AAPS.
+
+If you enable `Accept Calibrations`, xDrip+ will use the calibrations from AAPS. Be careful when you use this feature with Dexcom sensors: read [this](https://navid200.github.io/xDrip/docs/Calibrate-G6.html) first.
+
+Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time AAPS sends a basal/profile change.
+
+![xDrip+ Basic Settings 5](../images/xDrip_Basic5.png)
 
 (xdrip-identify-receiver)=
 
-### Alıcı tanımlama
+#### Alıcı tanımlama
 
-* Yerel yayınla ilgili sorunlar keşfederseniz (AAPS, xDrip+'dan KŞ değerleri almıyor) Ayarlar > Uygulamalar arası ayarlar > Alıcıyı tanımlayın'a gidin ve AAPS derlemesi için `info.nightscout.androidaps` girin (PumpControl yapısını kullanıyorsanız `info.nightscout.aapspumpcontrol` girin!!).
-* Lütfen Dikkat: Otomatik düzeltme bazen i'yi büyük harfe çevirme eğilimindedir. `info.nightscout.androidaps` yazarken **yalnızca küçük harf kullanmalısınız** (veya PumpControl için `info.nightscout.aapspumpcontrol`). I büyük harf olursa, APPS xDrip+'dan KŞ değerlerini alamaz.
-   
-   ![xDrip+ Temel Uyg.-Arası Ayarlar Alıcıyı tanımlayın](../images/xDrip_InterApp_NS.png)
+- If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to → Hamburger Menu (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
+- Lütfen Dikkat: Otomatik düzeltme bazen i'yi büyük harfe çevirme eğilimindedir. `info.nightscout.androidaps` yazarken **yalnızca küçük harf kullanmalısınız** (veya PumpControl için `info.nightscout.aapspumpcontrol`). I büyük harf olursa, APPS xDrip+'dan KŞ değerlerini alamaz.
+    
+    ![xDrip+ Temel Uyg.-Arası Ayarlar Alıcıyı tanımlayın](../images/xDrip_InterApp_NS.png)
 
-## xDrip+ & Dexcom G6
+## Use AAPS to calibrate in xDrip+
 
-* Dexcom G6 vericisi, Dexcom alıcısına (veya alternatif olarak t:slim pompasına) ve telefonunuzdaki bir uygulamaya aynı anda bağlanabilir.
-* xDrip+'ı alıcı olarak kullanmadan önce Dexcom uygulamasını telefonunuzdan kaldırın. **xDrip+ ve Dexcom uygulamasını vericiye aynı anda bağlayamazsınız!**
-* Dexcom clarity uygulamasını kullanıyorsanız ve xDrip+ alarmlarından yararlanmak istiyorsanız xDrip+'ta yerel yayın ile [Kendi Dexcom Uygulamanızı Oluşturun (BYODA)](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) kullanın.
+- If you want to be able to use AAPS to calibrate then in xDrip+ go to Settings → Interapp Compatibility → Accept Calibrations and select ON. 
+- You may also want to review the options in Settings → Less Common Settings → Advanced Calibration Settings.
+
+## Dexcom G6
+
+- Dexcom G6 vericisi, Dexcom alıcısına (veya alternatif olarak t:slim pompasına) ve telefonunuzdaki bir uygulamaya aynı anda bağlanabilir.
+- xDrip+'ı alıcı olarak kullanmadan önce Dexcom uygulamasını telefonunuzdan kaldırın. **xDrip+ ve Dexcom uygulamasını vericiye aynı anda bağlayamazsınız!**
+- If you need Clarity and want to profit from xDrip+ features, use the [Build Your Own Dexcom App](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+, or use xDrip+ as a Companion app receiving notifications from the official Dexcom app.
 
 ### G6 verici seri numarasına bağlı xDrip+ sürümü
 
-* 2018 sonbaharı/sonundan sonra üretilen G6 vericileri için (yani seri no. 80 veya 81 ile başlayanlar) [master "ana sürüm"](https://jamorham.github.io/#xdrip-plus) kullanabilirsiniz. 
-* Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [2019/07/28 veya daha üst sürümü](https://github.com/NightscoutFoundation/xDrip/releases) deneyin.
+- All G6 transmitters manufactured after fall/end 2018 are called "Firefly". They do not allow sensor restart without [removing the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), they do not send raw data. It is recommended to use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
+- Old rebatteried transmitters and modified trasmitters allow sensor life extension and restarts, they also send raw data. You can use the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
 
 ### Dexcom'a özel ayarlar
 
-* G5/G6 Hata Ayıklama Ayarlarını Açın -> Hamburger Menüsü (ana ekranın sol üst köşesinde) -> Ayarlar -> G5/G6 Hata Ayıklama Ayarları ![xDrip+ Ayarlarını Açın](../images/xDrip_Dexcom_SettingsCall.png)
-
-* Aşağıdaki ayarları etkinleştirin
-   
-   * `OB1 Toplayıcıyı kullanın`
-   * `Yerel Algoritma` (SMB kullanmak istiyorsanız önemlidir)
-   * `G6 Desteği`
-   * `OB1 bağlantısını kes`
-   * `OB1 bağlantısına izin ver`
-* Diğer tüm seçenekler devre dışı bırakılmalıdır
-* Pil uyarı seviyesini 280'e ayarlayın (G5/G6 Hata Ayıklama Ayarlarının alt kısmı)
-   
-   ![xDrip+ G5/G6 Hata Ayıklama Ayarları](../images/xDrip_Dexcom_DebugSettings.png)
+- Follow [these instructions](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html) to setup xDrip+.
 
 ### "Önleyici yeniden başlatma" önerilmez
 
-**8G, 8H veya 8J ile başlıyan Dexcom verici numaralarında, önleyici yeniden başlatmalar çalışmıyor ve sensörü tamamen kullanılmaz hale getirebilir!**
+**Only rebatteried or modified Dexcom transmitters. [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) do not work with standard transmitters and will stop the sensor completely: you need to [remove the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html) to restart the sensor.**
 
 Dexcom sensörlerinde otomatik olarak süre uzatma (`önleyici yeniden başlatma`), yeniden başlatmanın ardından 9. günde KŞ değerlerinde "atlamalara" yol açabileceğinden önerilmez.
 
 ![Öncelikli Yeniden Başlatmadan Sonra xDrip+ ölçüm farkı](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-Açık olan şu ki, G6'yı kullanmak, başlangıçta düşünülenden biraz daha karmaşık olabilir. Güvenli bir şekilde kullanmak için dikkat edilmesi gereken birkaç nokta vardır:
+Güvenli bir şekilde kullanmak için dikkat edilmesi gereken birkaç nokta vardır:
 
-* xDrip+ veya Spike'ta yerel verileri kalibrasyon koduyla kullanıyorsanız, yapılacak en güvenli şey, sensörün "önleyici yeniden başlatılmasına" izin vermemektir.
-* Önleyici yeniden başlatma kullanmanız gerekiyorsa, değişikliği gözlemleyebileceğiniz ve gerekirse kalibre edebileceğiniz günün bir saatinde yaptığınızdan emin olun. 
-* Sensörleri yeniden başlatıyorsanız, en güvenli sonuçlar için 11. ve 12. günlerde fabrika kalibrasyonu olmadan yapın ya da kalibrasyona hazır olduğunuzdan ve sapmaları göz önünde bulundurduğunuzdan ve gerekirse kalibrasyon ile düzeltebildiğinizden emin olun.
-* Fabrika kalibrasyonu ile "Pre-soaking" ön ısınma denilen sensörü daha önce verici olmadan doku sıvısına "alışacak" şekilde yerleştirmek, muhtemelen glikoz değerlerinde sapmalara yol açar. 'pre-soak' ön ısınma yapıyorsanız, en iyi sonuçları almak için muhtemelen sensörü kalibre etmeniz gerekecektir.
-* Meydana gelebilecek değişiklikler konusunda dikkatli değilseniz, fabrikada kalibre edilmemiş moda dönmek ve sistemi bir G5 gibi kullanmak daha iyi olabilir.
+- xDrip+ veya Spike'ta yerel verileri kalibrasyon koduyla kullanıyorsanız, yapılacak en güvenli şey, sensörün "önleyici yeniden başlatılmasına" izin vermemektir.
+- Önleyici yeniden başlatma kullanmanız gerekiyorsa, değişikliği gözlemleyebileceğiniz ve gerekirse kalibre edebileceğiniz günün bir saatinde yaptığınızdan emin olun. 
+- Sensörleri yeniden başlatıyorsanız, en güvenli sonuçlar için 11. ve 12. günlerde fabrika kalibrasyonu olmadan yapın ya da kalibrasyona hazır olduğunuzdan ve sapmaları göz önünde bulundurduğunuzdan ve gerekirse kalibrasyon ile düzeltebildiğinizden emin olun.
+- Fabrika kalibrasyonu ile "Pre-soaking" ön ısınma denilen sensörü daha önce verici olmadan doku sıvısına "alışacak" şekilde yerleştirmek, muhtemelen glikoz değerlerinde sapmalara yol açar. 'pre-soak' ön ısınma yapıyorsanız, en iyi sonuçları almak için muhtemelen sensörü kalibre etmeniz gerekecektir.
+- Meydana gelebilecek değişiklikler konusunda dikkatli değilseniz, fabrikada kalibre edilmemiş moda dönmek ve sistemi bir G5 gibi kullanmak daha iyi olabilir.
 
 Bu önerilerin ayrıntıları ve nedenleri hakkında daha fazla bilgi edinmek için Tim Street tarafından yayınlanan [www.diabettech.com](https://www.diabettech.com) adresindeki [makalenin tamamını](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) okuyun.
 
@@ -102,267 +106,138 @@ Bu önerilerin ayrıntıları ve nedenleri hakkında daha fazla bilgi edinmek i�
 
 **İkinci ve sonraki vericiler için aşağıdaki [Verici ömrünü uzatma](xdrip-extend-transmitter-life) konusuna bakın.**
 
-2018 sonbaharı/sonundan sonra üretilen G6 vericileri için (yani seri no. 80 veya 81 ile başlayanlar) [master "ana sürüm"](https://jamorham.github.io/#xdrip-plus) kullanabilirsiniz.
-
-Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [2019/07/28 veya daha üst sürümü](https://github.com/NightscoutFoundation/xDrip/releases) deneyin.
-
-* Orijinal Dexcom alıcısını kapatın (kullanılıyorsa).
-* `Kaynak Sihirbazı Butonunu` etkinleştirmek için ana ekrandaki kırmızı xDrip kan damlası simgesine uzun basın.
-* OB1& Yerel Mod dahil varsayılan ayarları otomatik kuran Kaynak Sihirbazı Düğmesini kullanın 
-   * Bu sihirbaz ilk kurulumda size rehberlik eder.
-   * İlk kez kullanıyorsanız, vericinizin seri numarasına ihtiyacınız olacaktır.
-
-* Yeni vericinin seri numarasını girin (verici paketinin üzerinde veya vericinin arkasında). `0` (sıfır) ve `O` (büyük harf O)'yu karıştırmamaya dikkat edin.
-   
-   ![xDrip+ Dexcom Verici Seri Numarası](../images/xDrip_Dexcom_TransmitterSN.png)
-
-* Yeni sensör takın (değiştiriyorsanız)
-
-* Vericiyi sensöre yerleştirin
-* "DexcomXX" ile eşleştirmeyi isteyen "XX"in verici seri numarasının son iki karakteri olduğu bir mesaj gelirse, kabul edin ("eşleştir"e dokunun)
-* Sistem Durumu -> Klasik Durum Sayfası -> G5/G6 durumu -> PhoneServiceState'de aşağıdaki bilgiler gösterilmeden yeni sensör başlatmayın:
-   
-   * 80 veya 81 ile başlayan vericilerde: "Veri var ss:dd" (ör "Veri var 19:04")
-   * 8G, 8H veya 8J ile başlayan vericilerde: "Glikoz ss:dd" (örn. "Got glucose 19:04") veya "Got no raw ss:dd" (örn. "Got no raw 19:04")
-   
-   ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
-
-* Sensörü başlat (değiştiriyorsanız)
-   
-   -> Ekranın alt kısmına yakın bir yerde, birkaç dakika sonra `Isınma x,x saat kaldı` görüntülenmelidir.
-
--> Vericinizin seri numarası 8G, 8H veya 8J ile başlamıyorsa ve herhangi bir zaman bildirimi yoksa, birkaç dakika sonra sensörü durdurup yeniden başlatın.
-
-* Toplayıcıyı yeniden başlatın (sistem durumu - sensörü değiştirmediyseniz)
-* xDrip+ ilk okumaları göstermeden önce orijinal Dexcom alıcısını (kullanılıyorsa) açmayın.
-* `Kaynak Sihirbazı Butonunu` devre dışı bırakmak için ana ekrandaki kırmızı xDrip kan damlası simgesine uzun basın.
-   
-   ![xDrip+ Dexcom Verici 1](../images/xDrip_Dexcom_Transmitter01.png)
-   
-   ![xDrip+ Dexcom Verici 2](../images/xDrip_Dexcom_Transmitter02.png)
-   
-   ![xDrip+ Dexcom Verici 3](../images/xDrip_Dexcom_Transmitter03.png)
-   
-   ![xDrip+ Dexcom Verici 4](../images/xDrip_Dexcom_Transmitter04.png)
+Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
 (xdrip-transmitter-battery-status)=
 
 ### Verici pil durumu
 
-* Verici pil durumu sistem durumunda kontrol edilebilir (Ana ekranda sol üstte Hamburger menüsü)
-* İkinci ekranı görmek için bir kez sola kaydırın. ![xDrip+ İlk Verici 4](../images/xDrip_Dexcom_Battery.png)
+- Battery status can be controlled in system status  
+    → Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen.
 
-* Vericinin pil bitmesi nedeniyle "kullanım dışı kaldığı" kesin değerler bilinmemektedir. Verici “kullanım dışı” kaldıktan sonra aşağıdaki bilgiler çevrimiçi olarak yayınlandı:
-   
-   * Gönderi 1: Verici günleri: 151 / Voltaj A: 297 / Voltaj B: 260 / Direnç: 2391
-   * Gönderi 2: Verici günleri: 249 / Voltaj A: 275 (hata anında)
+![xDrip+ System status](../images/xDrip_Dexcom_Battery.png)
+
+- See [here](https://navid200.github.io/xDrip/docs/Battery-condition.html) for more information.
 
 (xdrip-extend-transmitter-life)=
 
 ### Verici ömrünü uzatın
 
-* Şimdiye kadar 8G, 8H veya 8J seri nosu ile başlayan vericilerin ömrü uzatılamamıştır. Aynı durum 81 seri nosu ile başlayıp yazılımı 1.6.5.27 olan vericiler için de geçerlidir. (bkz. xDrip+ Sistem Durumu - G5/G6 durumu [ekran görüntüsü](xdrip-transmitter-battery-status)nde gösterildiği gibi).
-* Sensörlerin başlatılmasındaki zorlukları önlemek için verici ömrünün 100. gününden önce uzatılması şiddetle tavsiye edilir.
-* 81 seri no ile başlayan ve yazılımı 1.6.5.**27**olan bir verici 100. günden sonra yalnızca [mühendislik modu](nabling-Engineering-Mode-in-xDrip) açılır ve 'yerel mod' devre dışı bırakılır ise süre uzatma mümkündür (hamburger menüsü -> ayarlar -> G5/G6 hata ayıklama ayarları -> yerel algoritma) çünkü verici hard reset mümkün DEĞİLDİR.
-* Verici ömrü uzatılırken çalışan sensör oturumu durdurulacaktır. Bu nedenle vericiyi sensör değişiminden önce uzatın ve 2 saatlik yeni bir ısınma aşaması olacağını unutmayın.
-* Sensörü hamburger menüsü aracılığıyla manuel olarak durdurun.
-* `mühendislik moduna` geçin: 
-   * şırıngayı temsil eden xDrip başlangıç ekranının sağ üstündeki karaktere dokunun
-   * ardından sağ alt köşedeki mikrofon simgesine uzun dokunun
-   * Açılan metin kutusuna "enable engineering mode" yazın 
-   * "tamam" ı tıklayın
-   * Google Konuşma motoru etkinse (ingilizce), sesli komutu da ingilizce olarak söyleyebilirsiniz: "enable engineering mode". 
-* G5 hata ayıklama ayarlarına gidin ve `OB1 toplayıcısını kullan` öğesinin etkinleştirildiğinden emin olun.
-* "hard reset transmitter" sesli komutunu kullanın.
-* Vericinin bir sonraki veri alımıyla birlikte sesli komut yürütülecektir.
-* Sistem durumuna bakarak (Hamburger menüsü -> sistem durumu) verici durumunu takip edin.
-* Yaklaşık 10 dk. sonra 'Classic Status Page' sayfasına geçip (sağa kaydırın) ve 'Toplayıcıyı yeniden başlat'ı tıklayın. Bu, yeni bir sensör başlatmaya gerek kalmadan sensör günlerini 0'a ayarlayacaktır.
-* Alternatif: İkinci sistem durumu ekranında "Phone Service State: Hard Reset maybe failed" mesajını görürseniz, sensörü başlatmanız yeterlidir. Bu mesaj kaybolacaktır.
-   
-   ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
-
-* Başarılı uzatma ve sensörün başlatılmasından sonra verici günleri 0 olacaktır.
+- [Lifetime](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) cannot be extended for Firefly transmitters: only rebatteried or modified transmitters.
+- Follow [these instructions](https://navid200.github.io/xDrip/docs/Hard-Reset.html) for non-Firefly transmitters.
 
 (xdrip-replace-transmitter)=
 
 ### Vericiyi değiştirme
 
-2018 sonbaharı/sonundan sonra üretilen G6 vericileri için (yani seri no. 80 veya 81 ile başlayanlar) [master "ana sürüm"](https://jamorham.github.io/#xdrip-plus) kullanabilirsiniz.
+- Orijinal Dexcom alıcısını kapatın (kullanılıyorsa).
+- [Stop sensor](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html) (only if replacing sensor).
 
-Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nightly build derlemelerinden](https://github.com/NightscoutFoundation/xDrip/releases) birini kullanabilirsiniz.
+- xDrip sistem durumunda VE akıllı telefonların BT ayarlarında cihazı unutun (Dexcom?? olarak görünen ?? yerinde are the last two digits of the transmitter serial no.)  
+    → Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen → Forget Device (5).
 
-* Orijinal Dexcom alıcısını kapatın (kullanılıyorsa).
-* Sensörü Durdurun (yalnızca sensör değiştiriliyorsa)
-   
-   Gerçekten durdurulduğundan emin olun:
-   
-   İkinci "G5/G6 Status" ekranının yaklaşık yarısında `Queue Items`'a bakın - `(1) Stop Sensor` gibi bir şey göreceksiniz.
-   
-   Bu gidene kadar bekleyin - (genellikle birkaç dakika) Sensör Durumu "Stopped" olmalıdır (ekran görüntüsüne bakın).
-   
-   -> Sensörü durdurmadan vericiyi çıkarmak için bu videoyu <https://youtu.be/AAhBVsc6NZo> izleyin.
-   
-   ![xDrip+ Dexcom Sensörü Durdur 1](../images/xDrip_Dexcom_StopSensor.png)
-   
-   ![xDrip+ Dexcom Sensörü Durdur 2](../images/xDrip_Dexcom_StopSensor2.png)
+![xDrip+ System status](../images/xDrip_Dexcom_StopSensor.png)
 
-* xDrip sistem durumunda VE akıllı telefonların BT ayarlarında cihazı unutun (Dexcom?? olarak görünen ?? yerinde verici seri numarasının son iki hanesi olan)
-   
-   ![xDrip+ Cihazı unut](../images/xDrip_Dexcom_ForgetDevice.png)
-
-* Vericiyi (ve sensörü değiştiriyorsanız sensörü) çıkarın
-
-* Yeniden bağlanmayı önlemek için eski vericiyi uzağa koyun. Mikrodalga, bunun için mükemmel bir Faraday kalkanıdır - ancak kimsenin mikrodalgayı açmaması için güç kablosunu prizden çekin.
-* `Kaynak Sihirbazı Butonunu` etkinleştirmek için ana ekrandaki kırmızı xDrip kan damlası simgesine uzun basın.
-* OB1& Yerel Mod dahil varsayılan ayarları otomatik kuran Kaynak Sihirbazı Düğmesini kullanın 
-   * Bu sihirbaz ilk kurulumda size rehberlik eder.
-   * İlk kez kullanacaksanız, vericinizin seri numarasına ihtiyacınız olacaktır.
-* Yeni vericinin seri numarasını girin. 0 (sıfır) ve O'yu (büyük harf o) karıştırmamaya dikkat edin.
-* Yeni sensör takın (değiştiriyorsanız).
-* Vericiyi sensöre yerleştirin - **Sensörü hemen başlatmayın!**
-* Yeni "Firefly Vericileri" (seri numarası 8G, 8H veya 8J ile başlayanlar) yalnızca yerel modda (native mode) kullanılabilir.
-* Yeni "Firefly Vericileri" için aşağıdaki seçenekler etkinleştirilmemelidir (seri numarası 8G, 8H veya 8J ile başlayanlar):
-   
-   * Önleyici Yeniden Başlatma (devre dışı bırakın!)
-   * Sensörü Yeniden Başlat (devre dışı bırakın!)
-   * xDrip algoritmasına dönüş (devre dışı bırakın!)
-   
-   ![Firefly vericileri için ayarlar](../images/xDrip_Dexcom_FireflySettings.png)
-
-* Aşağıdaki bilgilerden birinin görüntülendiğini Klasik Durum Sayfası -> G5/G6 durumu -> PhoneServiceState satırında kontrol edin:
-   
-   * 80 veya 81 seri no ile başlayan verici için: "Got data ss:dd" (i.e. "Got data 19:04")
-   * 8G, 8H veya 8J seri no ile başlayan vericiler için: "Got glucose ss:dd" (örn. "Got glucose 19:04") veya "Got no raw ss:dd" (örn. "Got now raw 19:04")
-   
-   ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
-
-* Yeni sensör başlatılmadan önce vericinin xDrip ile birkaç kez iletişim kurması gerektiğinden 15 dakika bekleyin. Pil verileri, verici yazılımı bilgilerinin altında gösterilecektir.
-   
-   ![Firefly verici pil verileri](../images/xDrip_Dexcom_FireflyBattery.png)
-
-* Sensörü başlatın ancak sakın "Bugün değil" butonuna BASMAYIN! Her zaman "Evet, bugün" ! butonunu kullanın.
-
-* Toplayıcıyı yeniden başlatın (sistem durumunda - "sensörü değiştirmediyseniz")
-* xDrip+ ilk okumaları göstermeden önce orijinal Dexcom alıcısını (kullanılıyorsa) açmayın.
-* `Kaynak Sihirbazı Butonunu` devre dışı bırakmak için ana ekrandaki kırmızı xDrip kan damlası simgesine uzun basın.
-   
-   ![xDrip+ Dexcom Verici 1](../images/xDrip_Dexcom_Transmitter01.png)
-   
-   ![xDrip+ Dexcom Verici 2](../images/xDrip_Dexcom_Transmitter02.png)
-   
-   ![xDrip+ Dexcom Verici 3](../images/xDrip_Dexcom_Transmitter03.png)
-   
-   ![xDrip+ Dexcom Verici 4](../images/xDrip_Dexcom_Transmitter04.png)
+- Remove transmitter (and sensor if replacing sensor). To remove transmitter without removing sensor see [this](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), or this video <https://youtu.be/AAhBVsc6NZo>.
+- Yeniden bağlanmayı önlemek için eski vericiyi uzağa koyun. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% sure no one is turning the microwave on.
+- Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
+- xDrip+ ilk okumaları göstermeden önce orijinal Dexcom alıcısını (kullanılıyorsa) açmayın.
 
 ### Yeni sensör başlatma
 
-* Orijinal Dexcom alıcısını kapatın (kullanılıyorsa).
-* Gerekirse sensörü durdurun
-   
-   Gerçekten durdurulduğundan emin olun:
-   
-   İkinci "G5/G6 Status" ekranının yaklaşık yarısında `Queue Items`'a bakın - `(1) Stop Sensor` gibi bir şey göreceksiniz.
-   
-   Bu gidene kadar bekleyin - (genellikle birkaç dakika)
-   
-   ![xDrip+ Dexcom Sensörü Durdur 1](../images/xDrip_Dexcom_StopSensor.png)
-   
-   ![xDrip+ Dexcom Sensörü Durdur 2](../images/xDrip_Dexcom_StopSensor2.png)
+- Orijinal Dexcom alıcısını kapatın (kullanılıyorsa).
+- Stop sensor following [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html).
 
-* Kontakları (vericinin arka tarafını) alkolle temizleyin ve kurumaya bırakın.
-
-* Yeni sensör başlatma durumunda, `Sensörü Yeniden Başlat` ve `Önleyici yeniden başlatma`'yı devre dışı bırakın (Hamburger menüsü -> Ayarlar -> G5/G6 Hata Ayıklama Ayarları). Bu adımı atlarsanız ve bu işlevler etkinse, yeni sensör düzgün başlamaz.
-   
-   ![xDrip+ Önleyici Yeniden Başlatma](../images/xDrip_Dexcom_Restart.png)
-
-* Sensör Başlatma
-   
-   **Yeni Firefly vericileri için** (seri numarası 8G, 8H veya 8J ile başlayanlar) **için bu zorunludur, diğer tüm vericiler için ise sensörün durdurulması ve yeni sensörün başlatılması arasında yaklaşık 15 dakika beklenilmesi tavsiye edilir.(ikinci sistem durumu ekranında `Sensor Status: Stopped` "sensör durumu: durduruldu" gösterilene kadar). geri tarih ayarlaması YAPMAYIN!** her zaman sensör başlatmada "Evet, bugün" butonunu kullanın.
-
-* Zamanı ayarla
-   
-   * G6 Native modunu kullanmak için 2 saatlik ısınmayı beklemeniz gerekir (yani yerleştirme zamanı şimdidir).
-   * xDrip+ algoritmasını kullanıyorsanız, ısınmayı önlemek için 2 saatten daha önce bir süre ayarlayabilirsiniz. Okumalar çok düzensiz olabilir. Bu nedenle, bu tavsiye edilmez.
-* Sensör kodunu girin (sensör ambalajının üzerinde) 
-   * İleride gerekeceği için kodu saklayın (örn. verici değişimi ve yeniden sensör başlatma için)
-   * Kod ayrıca [xDrip+ günlüklerinde](xdrip-retrieve-sensor-code) bulunabilir. xDrip+ ana ekranında 3 nokta menüsünü tıklayın ve `Olay Günlüklerini Görüntüle`'yi seçin.
-* G6'yı "native mode" kullanırsanız kalibrasyon gerekmez. xDrip+, 2 saatlik ısınmadan sonra okumaları otomatik olarak gösterecektir.
-* xDrip+ ilk okumaları göstermeden önce orijinal Dexcom Alıcısını (kullanılıyorsa) açmayın.
-   
-   ![xDrip+ Dexcom Sensörü Başlat 1](../images/xDrip_Dexcom_SensorStart01.png)
-   
-   ![xDrip+ Dexcom Sensörü Başlat 2](../images/xDrip_Dexcom_SensorStart02.png)
+- Insert and then start a new sensor following [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
 (xdrip-retrieve-sensor-code)=
 
 ### Sensör kodunu öğrenme
 
-* 2019/05/18 tarihli master (ana) ve sonraki sürümlerde sensör kodu sistem durumunda gösterilir (Ana ekranda sol üstte Hamburger menüsü\--->Sistem durumu).
-* İkinci ekranı görmek için bir kez sola kaydırın.
-   
-   ![xDrip Dexcom Sensör Kodu Alma 2](../images/xDrip_Dexcom_SensorCode2.png)
+→ Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen → Calibration Code.
 
-* Dexcom sensör kodu, xDrip+ günlüklerinde de bulunabilir.
-
-* 3 nokta menüye dokunun (ana ekranda sağ üst taraf)
-* `Olay Günlüklerini Görüntüle` öğesini seçin ve "code" olarak arama yapın.
-   
-   ![xDrip Dexcom Sensör Kodu Alma](../images/xDrip_Dexcom_SensorCode.png)
+![xDrip Dexcom Sensör Kodu Alma 2](../images/xDrip_Dexcom_SensorCode2.png)
 
 (xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
 
-## Dexcom G5/G6 ve xDrip+ ile İlgili Sorunları Giderme
+### Dexcom G5/G6 ve xDrip+ ile İlgili Sorunları Giderme
 
-### Vericiyi bağlamada sorun
+#### Vericiyi bağlamada sorun
 
-* Verici, akıllı telefonunuzun bluetooth ayarlarında görülmelidir.
-* Verici Dexcom?? olarak gösterilir ve ?? yerinde vericinizin seri numarasının son iki hanesini temsil eder. (örn. DexcomHY).
-* Sistem durumunu xDrip'te açın (ana ekranın sol üst tarafındaki hamburger menüsü).
-* Vericinizin ilk durum sayfasında ('classic status page') gösterilip gösterilmediğini kontrol edin.
-* Yoksa: Akıllı telefonunuzun bluetooth ayarlarından cihazı silin ve toplayıcıyı yeniden başlatın.
-* Yaklaşık 5 dakika bekleyin. Dexcom vericisi otomatik olarak yeniden bağlanana kadar.
+Follow [these instructions](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html).
 
-### Yeni sensör başlatılırken oluaşabilecek sorunlar
+#### Yeni sensör başlatılırken oluaşabilecek sorunlar
 
-Lütfen Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa aşağıdaki yöntemin çalışmayabileceğini unutmayın.
+Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html).
 
-* Sistem durumunda sensör "FAILED: Sensor Failed Start" olarak göründüğünde;
-* Sensörü durdurun
-* Telefonuzu yeniden başlatın
-* Sensörü 0000 koduyla başlatın (dört kez sıfır)
-* 15 dakika bekleyin
-* Sensörü durdurun
-* Sensörü "gerçek" kodla başlatın (yapışkan koruyucunun üzerine basılmıştır)
+## Libre 1
 
-xDrip "Süre: 1 dakika" (vb.) saymaya başlarsa xDrip günlüklerini kontrol edin. Yalnızca xDrip+ günlüklerinde, xdrip+'ın bir sensörü durdurup durdurmadığını erken bir aşamada tespit edebilirsiniz. En son durum, başlangıç ekranının altında her zaman doğru gösterilmiyor.
+- Setup your NFC to Bluetooth bridge in xDrip+
+    
+    → Hamburger Menu (1) → Settings (2) → Less common settings (3) → Bluetooth Settings (4)
 
-## xDrip+ & Freestyle Libre
+- In Bluetooth Settings set the checkboxes exactly as in the screenshots below (5)
+    
+    - Disable watchdogs as they will reset the phone Bluetooth and interrupt your pump connection.
+    
+    ![xDrip+ Libre Bluetooth Ayarları 1](../images/xDrip_Libre_BTSettings1.png)
 
-### Libre'ye özel ayarlar
+- You can try to enable the following settings (7)
+    
+    - Taramayı kullan
+    - Trust Auto-Connect
+    - Use Background Scans
 
-* Bluetooth Ayarlarını Aç -> Hamburger Menüsü (ana ekranın sol üst köşesinde) -> Ayarlar -> aşağı kaydır -> Gelişmiş ayarlar -> Bluetooth Ayarları
-   
-   ![xDrip+ Libre Bluetooth Ayarları 1](../images/xDrip_Libre_BTSettings1.png)
+- If you easily lose connection to the bridge or have difficulties recovering connection, **DISABLE THEM** (8).
+    
+    ![xDrip+ Libre Bluetooth Ayarları 2](../images/xDrip_Libre_BTSettings2.png)
 
-* Aşağıdaki ayarları etkinleştirin
-   
-   * `Bluetooth'u aç` 
-   * `Taramayı kullan`
-   * `Her zaman hizmetleri keşfedin`
-
-* Diğer tüm seçenekler devre dışı bırakılmalıdır
-   
-   ![xDrip+ Libre Bluetooth Ayarları 2](../images/xDrip_Libre_BTSettings2.png)
+- Leave all other options disabled unless you know why you want to enable them.
+    
+    ![xDrip+ Libre Bluetooth Settings 3](../images/xDrip_Libre_BTSettings3.png)
 
 ### Libre akıllı okuyucu pil seviyesi
 
-* MiaoMiao 2 gibi akıllı okuyucuların pil seviyesi AAPS'de görüntülenebilir.
-* Ayrıntıları [ekran görüntüleri sayfasında](Screenshots-sensor-level-battery) bulabilirsiniz.
+- Battery level of bridges such as MiaoMiao and Bubble can be displayed in AAPS (not Blucon).
+- Ayrıntıları [ekran görüntüleri sayfasında](Screenshots-sensor-level-battery) bulabilirsiniz.
 
 ### Libre Vericiyi Bağla & sensörü başlat
 
-![xDrip+ Libre Verici & Sensör başlatma 1](../images/xDrip_Libre_Transmitter01.png)
+- If your sensor requires it (Libre 2 EU and Libre 1 US) install the [latest out of process algorithm](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view).
 
-![xDrip+ Libre Verici & Sensör başlatma 2](../images/xDrip_Libre_Transmitter02.png)
+- Your sensor must be already started using the vendor app or the reader (xDrip+ cannot start or stop Libre sensors).
+
+- Set the data source to Libre Bluetooth.
+    
+    → Hamburger Menu (1) → Settings (2) → Select Libre Bluetooth in Hardware Data source (3)
+    
+    ![xDrip+ Libre Verici & Sensör başlatma 1](../images/xDrip_Libre_Transmitter01.png)
+
+- Scan Bluetooth and connect the bridge.
+    
+    → Hamburger Menu (1) → Scan Bluetooth (2) → Less common settings (3) → Bluetooth Settings (4)
+    
+    - If xDrip+ can't find the bridge, make sure it's not connected to the vendor app. Put it in charge and reset it.
+    
+    ![xDrip+ Libre Verici & Sensör başlatma 2](../images/xDrip_Libre_Transmitter02.png)
+
+- Start the sensor in xDrip+.
+    
+    :::{admonition} Safety warning :class: warning Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.  
+    :::
+    
+    → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
 
 ![xDrip+ Libre Verici & Sensör başlatma 3](../images/xDrip_Libre_Transmitter03.png)
+
+## Libre 2 patched app
+
+- Set the data source to Libre patched app.
+    
+    → Hamburger Menu (1) → Settings (2) → Select Libre (patched App) in Hardware Data source (3)
+    
+    ![xDrip+ Libre Patched app 1](../images/xDrip_Libre_Patched01.png)
+
+- You can add `BgReading:d,xdrip libre_receiver:v` under Less Common Settings->Extra Logging Settings->Extra tags for logging. Bu, sorun giderme için ek hata mesajlarını günlüğe kaydeder.
+
+![xDrip LibreLink oturum açma](../images/Libre2_Tags.png)

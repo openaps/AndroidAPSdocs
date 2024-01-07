@@ -15,6 +15,8 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 ## Метод 1: 1-минутные замеры
 Версия 3.2.0.1 AndroidAPS не поддерживает 1-минутные значения. Ускорение и сглаживание не работает с 1-минутными значениями.
 
+![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
+
 
 ## Метод 2: 5-минутные замеры
 Каждую минуту Juggluco получает необработанные данные с сенсора, которые затем передаются xDrip+ для сглаживания в 5-минутном интервале, которые в свою очередь передаются в AAPS.
@@ -22,20 +24,27 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 ### Шаг 1: Настройка Juggluco
 Скачайте и установите приложение Juggluco [отсюда](https://www.juggluco.nl/Juggluco/download.html). Следуйте [этой](https://www.juggluco.nl/Juggluco/libre3/) инструкции
 
-Убедитесь, что данные ГК отправляются в Xdrip+: В настройках Juggluco можно выбрать отправку значений глюкозы другим приложениям. Juggluco может отправить три типа трансляций: Трансляция **Librelink** изначально использовалась модифицированным приложением Librelink и может отправлять значения ГК в xDrip+
+Убедитесь, что данные ГК отправляются в Xdrip+: В настройках Juggluco можно выбрать отправку значений глюкозы другим приложениям. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip+
+
+![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)
 
 ### Шаг 2: Настройка xDrip
 
 Приложение xDrip+ получает значения ГК на телефоне.
 
-- Если это еще не сделано, загрузите xDrip+ и установите одну из последних ночных сборок [отсюда](https://github.com/NightscoutFoundation/xDrip/releases).
+- If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../Configuration/xdrip.md).
 - В xDrip+ в качестве источника данных выберите "Libre (patched app)".
-- Отключите оптимизацию заряда батареи и разрешите фоновую активность приложению xDrip+.
-- При необходимости введите "BgReading:d, xdrip libr_receiver:v" в разделе Менее распространенные настройки ->Дополнительные настройки журналирования-> Дополнительные теги для добавления в журнал. Это позволит записывать дополнительные сообщения об ошибках для устранения неисправностей.
-- В xDrip+, перейдите в настройки > настройки интеграций с приложениями> локальная трансляция данных и выберите Включить (ON).
-- В xdrip+ перейдите в настройки > настройки интеграций с приложениями > принимать терапию и выберите ВЫКЛ (OFF).
-- для включения приема ГК с xdrip (версия AAPS 2.5.x и выше) установите Настройки > Настройки интеграций с приложениями > установить получателя "info.nightscout.androidaps".
-- Если вы хотите использовать AndroidAPS для калибровки, перейдите в Настройки -> настройки интеграций с приложениями -> Принимать калибровки в xDrip+ и выберите ВКЛ. Проверьте >> менее распространенные настройки >> дополнительные параметры калибровки.
+- If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings → Extra Logging Settings → Extra tags for logging. Это позволит записывать дополнительные сообщения об ошибках для устранения неисправностей.
+
+![xDrip+ LibreLink журналы](../images/Libre2_Tags.png)
+
+- Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+
+  → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
+
+  !\[xDrip+ advanced settings Libre 2 & raw values\](C:\Data\50 - My Projects\AAPS\AndroidAPSdocs\docs\EN\images\xDrip_Libre3_Smooth.png)
+
+
 
 ### Шаг 3: Запуск сенсора в xDrip
 

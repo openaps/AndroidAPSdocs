@@ -68,7 +68,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### General troubleshooting
 
-General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.html#troubleshooting).
+General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.md#troubleshooting).
 
 ### 센서 사용 중에 새로운 트랜스미터로 바꾸기
 

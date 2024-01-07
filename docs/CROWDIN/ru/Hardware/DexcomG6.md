@@ -68,7 +68,7 @@
 
 ### Устранение неполадок - общее
 
-Общее устранение неполадок мониторинга можно найти [здесь](./GeneralCGMRecommendation.html#troubleshooting).
+General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.md#troubleshooting).
 
 ### Установка нового трансмиттера на работающий сенсор
 
