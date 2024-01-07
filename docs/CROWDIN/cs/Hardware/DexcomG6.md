@@ -68,7 +68,7 @@ Chcete-li se dozvědět další informace o podrobnostech a důvodech pro tato d
 
 ### Obecné řešení problémů
 
-General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.html#troubleshooting).
+General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.md#troubleshooting).
 
 ### Nový vysílač se spuštěným senzorem
 
