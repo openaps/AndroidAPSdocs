@@ -1,45 +1,45 @@
-# AAPS Setup Wizard
+# Мастер установки AAPS
 
-When you first start **AAPS** you are guided by the "**Setup Wizard**", to quickly setup all the basic configurations of your app in one go. **Setup Wizard** guides you, in order to avoid forgetting something crucial. For example, the **permission settings** are fundamental for setting up **AAPS** correctly.
+При первом запуске **AAPS** вашими действиями руководит **Мастер установки**, который не даст упустить из виду основные параметры приложения. **Мастер установки** охватывает все важные моменты. Например, **настройки разрешений** критически важны для правильной работы **AAPS**.
 
-However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimise/change the configuration. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
+Однако применение **Мастера установки** не обязательно, из него можно легко выйти и вернуться к нему позже. Наряду с **Мастером установки** существуют три способа оптимизации или изменения конфигурации. О них расскажем в следующем разделе. Итак, если пропустить некоторые этапы в мастере установки, их можно легко выполнить позже.
 
-During, and directly after using the **Setup Wizard** you may not notice any significant observable changes in **AAPS**. To enable your **AAPS** loop, you have to follow the **Objectives** to enable feature after feature. You will start **Objective 1** at the end of the Setup Wizard. You are the master of **AAPS**, not the other way around.
+В ходе и непосредственно после **Мастера установки** можно не заметить какие-то существенные изменения в **AAPS**. Чтобы активировать замкнутый цикл **AAPS**, необходимо пройти **цели**, и последовательно разблокировать функцию за функцией. В конце мастера установки. будет запущена **Цель 1**. Вы являетесь хозяином **AAPS**, а не наоборот.
 
-:::{admonition} Preview Objectives
+:::{admonition} Просмотр целей
 
 :::
 
-From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
+По опыту мы знаем, что новички стараются как можно быстрее настроить \*\* AAPS \*\*, а это может привести к разочарованию, поскольку на обучение уйдет немало времени.
 
-So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
+Поэтому настраивайте работу AAPS не спеша, так как преимущества хорошо работающей системы компенсируют все временные неудобства.
 
-:::{admonition} Ask for Help
-:class: note
-If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../Where-To-Go-For-Help/Connect-with-other-users.md).
+:::{admonition} Обращение за помощью
+:class: примечание
+Если в документации найдена ошибка или у вас есть идея, как объяснить что=то получше, обратитесь за помощью к сообществу по этой инструкции [Связаться с другими пользователями](../Куда-Обратиться-за-помощью/Связаться-с-другими-пользователями.md).
 :::
 
-## Step-wise guide to the AAPS Setup Wizard
+## Пошаговое руководство к Мастеру установки AAPS
 
-### Welcome message
+### Приветственное сообщение
 
-This is just the welcome message which you can skip with the "NEXT" button:
+Это просто приветственное сообщение, которое можно пропустить, нажав кнопку "ДАЛЕЕ":
 
-![image](../images/setup-wizard/Screenshot_20231202_125636.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125636.png)
 
-### License agreement
+### Лицензионное соглашение
 
-In the end user license agreement there is important information about the legal aspects of using **AAPS**. Please read it carefully.
+В лицензионном соглашении с пользователем имеется важная информация о правовых аспектах пользования **AAPS**. Внимательно изучите его.
 
-If you don't understand, or can't agree to the end user license agreement please don't use **AAPS** at all!
+Если вы не понимаете лицензионного соглашения или не можете согласиться с ним, не пользуйтесь системой **AAPS**!
 
-If you understand and agree, please click the "I UNDERSTAND AND AGREE" button and follow the Setup Wizard:
+Если вы понимаете и соглашаетесь, нажмите кнопку "I UNDERSTAND AND AGREE" и следуйте подсказкам Мастера установки:
 
-![image](../images/setup-wizard/Screenshot_20231202_125650.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125636.png)
 
-### Required permissions
+### Необходимые разрешения
 
-**AAPS** needs some requirements to operate correctly.
+для корректной работы **AAPS** требуются некоторые условия.
 
 In the following screens you are asked several questions you have to agree to, to get **AAPS** working. The Wizard itself explains why it asks for the relevant setting.
 
