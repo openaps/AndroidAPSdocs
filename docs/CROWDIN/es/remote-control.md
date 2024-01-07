@@ -639,7 +639,7 @@ The final step is to configure **AAPS** on the phone to interact with **AAPS** W
 
 ●   Tick for Wear selection under General
 
-![imagen](./images/ae6d75a1-1829-4d2e-b0dc-153e31e4a466)
+![imagen](./images/ae6d75a1-1829-4d2e-b0dc-153e31e4a466.png)
 
 
 To change to a different **AAPS**  watchface, press on the home screen of the watch and it will come to “customise”. Then swipe right until you get to all the **AAPS**  faces.
@@ -721,7 +721,7 @@ The **AAPSClient** wear apk can be transferred to your phone and side-loaded ont
 
 
 
-![imagen](./images/98620770-2fb3-47af-a13e-28af7db69096)
+![imagen](./images/98620770-2fb3-47af-a13e-28af7db69096.png)
 
 
 
