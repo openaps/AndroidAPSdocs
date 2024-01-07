@@ -1,10 +1,10 @@
-# Мастер настройки AAPS
+# Мастер установки AAPS
 
-При первом запуске **AAPS** вашими действиями руководит **Мастер настройки**, который не даст упустить из виду основные параметры приложения. **Мастер настройки** охватывает все важные моменты. Например, **настройки разрешений** критически важны для правильной работы **AAPS**.
+При первом запуске **AAPS** вашими действиями руководит **Мастер установки**, который не даст упустить из виду основные параметры приложения. **Мастер установки** охватывает все важные моменты. Например, **настройки разрешений** критически важны для правильной работы **AAPS**.
 
-However, it's not mandatory to get everything completely configured in the first run of using the **Setup Wizard** and you can easily exit the Wizard and come back to it later. There are three routes available after the **Setup Wizard** to further optimise/change the configuration. These will be explained in the next section. So, it's okay if you skip some points in the Setup Wizard, you can easily configure them later.
+Однако применение **Мастера установки** не обязательно, из него можно легко выйти и вернуться к нему позже. Наряду с **Мастером установки** существуют три способа оптимизации или изменения конфигурации. О них расскажем в следующем разделе. Итак, если пропустить некоторые этапы в мастере установки, их можно легко выполнить позже.
 
-During, and directly after using the **Setup Wizard** you may not notice any significant observable changes in **AAPS**. To enable your **AAPS** loop, you have to follow the **Objectives** to enable feature after feature. You will start **Objective 1** at the end of the Setup Wizard. You are the master of **AAPS**, not the other way around.
+В ходе и непосредственно после **Мастера установки** можно не заметить какие-то существенные изменения в **AAPS**. Чтобы активировать замкнутый цикл **AAPS**, необходимо пройти **цели**, и последовательно разблокировать функцию за функцией. You will start **Objective 1** at the end of the Setup Wizard. You are the master of **AAPS**, not the other way around.
 
 :::{admonition} Preview Objectives
 
