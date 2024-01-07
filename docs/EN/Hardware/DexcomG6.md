@@ -59,12 +59,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### General troubleshooting
 
-<<<<<<< Updated upstream
-General Troubleshoothing for CGMs can be found
-[here](./GeneralCGMRecommendation.md#troubleshooting).
-=======
-General Troubleshooting for CGMs can be found [here](./GeneralCGMRecommendation.html#troubleshooting).
->>>>>>> Stashed changes
+General Troubleshooting for CGMs can be found [here](./GeneralCGMRecommendation.md#troubleshooting).
 
 ### New transmitter with running sensor
 
