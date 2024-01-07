@@ -68,7 +68,7 @@ What’s clear is that using the G6 is perhaps a little more complex than it as 
 
 ### General troubleshooting
 
-General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.html#troubleshooting).
+General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.md#troubleshooting).
 
 ### Νέος πομπός με αισθητήρα λειτουργίας που λειτουργούσε
 
