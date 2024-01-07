@@ -1,12 +1,12 @@
-# Exchange site for custom watchfaces
+# Austausch-Plattform für eigene Zifferblätter (custom watchfaces)
 
-Here you can download Zip-Files with custom watchfaces user have prepared and want to share with you.
+Hier kannst Du die Zip-Dateien für eigene Zifferblätter, die andere Nutzende erstellt haben und teilen wollen, herunterladen.
 
-The Zip-Files can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into Github as usual.
+Die ZIP-Dateien können wie gewohnt über einen Pull Request in Github in den Ordner "ExchangeSiteCustomWatchfaces" hochgeladen werden.
 
-During merge of the pull request the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
+Beim Zusammenführen (Merge) des Pull Requests wird das Dokumentationsteam die Datei "CustomWatchface.png" extrahieren und den Dateinamen des Bildes vorne um den Dateinamen der ZIP-Datei ergänzen.
 
-Grid Layout (sort by ascending alphabetical order)
+Tabellendarstellung (aufsteigend alphabetisch sortiert)
 
 |                                                                                                                                                         |                                                                                                                                                       |                                                                                                                                                       |                                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
