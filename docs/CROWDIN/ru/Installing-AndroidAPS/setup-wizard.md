@@ -25,21 +25,21 @@
 
 Это просто приветственное сообщение, которое можно пропустить, нажав кнопку "ДАЛЕЕ":
 
-![image](../images/setup-wizard/Screenshot_20231202_125636.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125636.png)
 
-### License agreement
+### Лицензионное соглашение
 
-In the end user license agreement there is important information about the legal aspects of using **AAPS**. Please read it carefully.
+В лицензионном соглашении с пользователем имеется важная информация о правовых аспектах пользования **AAPS**. Внимательно изучите его.
 
-If you don't understand, or can't agree to the end user license agreement please don't use **AAPS** at all!
+Если вы не понимаете лицензионного соглашения или не можете согласиться с ним, не пользуйтесь системой **AAPS**!
 
-If you understand and agree, please click the "I UNDERSTAND AND AGREE" button and follow the Setup Wizard:
+Если вы понимаете и соглашаетесь, нажмите кнопку "I UNDERSTAND AND AGREE" и следуйте подсказкам Мастера установки:
 
-![image](../images/setup-wizard/Screenshot_20231202_125650.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125636.png)
 
-### Required permissions
+### Необходимые разрешения
 
-**AAPS** needs some requirements to operate correctly.
+для корректной работы **AAPS** требуются некоторые условия.
 
 In the following screens you are asked several questions you have to agree to, to get **AAPS** working. The Wizard itself explains why it asks for the relevant setting.
 
