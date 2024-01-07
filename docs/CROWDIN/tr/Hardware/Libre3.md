@@ -15,6 +15,8 @@ Within xDrip+ the sensor can be calibrated in the range of -40 mg/dl to +20 mg/d
 ## Method 1: 1-minute-readings
 Version 3.2.0.1 of AndroidAPS does not support 1-minute values. Acceleration and Smoothing does not work with 1-minute values.
 
+![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
+
 
 ## Method 2: 5-minute-readings
 This method uses Juggluco to receive raw, 1-minute interval data from the sensor which is then passed to xDrip+ to be smoothed into 5-minute interval data to be passed to AAPS.
@@ -22,20 +24,27 @@ This method uses Juggluco to receive raw, 1-minute interval data from the sensor
 ### Step 1: Setup Juggluco
 Download and install the Juggluco app from [here](https://www.juggluco.nl/Juggluco/download.html). Follow the instructions [here](https://www.juggluco.nl/Juggluco/libre3/)
 
-Make sure you send the glucose values to Xdrip+: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco can send three types of such broadcasts: The **Librelink broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip+
+Make sure you send the glucose values to Xdrip+: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip+
+
+![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)
 
 ### Step 2: Setup xDrip
 
 The blood glucose values are received by the xDrip+ app on the smartphone.
 
-- If not already set up, download the xDrip+ app and install one of the latest nightly builds from [here](https://github.com/NightscoutFoundation/xDrip/releases).
+- If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../Configuration/xdrip.md).
 - In xDrip+ select "Libre2 (patched app)" as data source.
-- Disable battery optimization and allow background activity for the xDrip+ app.
-- If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for troubleshooting.
-- In xDrip+ go to Settings -> Interapp Compatibility -> Transfer data locally and select ON.
-- In xDrip+, go to Settings -> Interapp Compatibility -> Accept Treatments and select OFF.
-- To allow AAPS to receive blood glucose values (from version 2.5.x) from xDrip+, please enable Settings -> Interapp Settings -> Identify Receiver "info.nightscout.androidaps".
-- If you want to use AndroidAPS for calibration, go to Settings -> Interapp compatibility -> Accept calibrations in xDrip+ and select ON. It's also best to check the options under Settings -> Less General Settings -> Check Advanced Calibration Settings.
+- If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings → Extra Logging Settings → Extra tags for logging. This will log additional error messages for troubleshooting.
+
+![xDrip LibreLink oturum açma](../images/Libre2_Tags.png)
+
+- Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+
+  → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
+
+  !\[xDrip+ advanced settings Libre 2 & raw values\](C:\Data\50 - My Projects\AAPS\AndroidAPSdocs\docs\EN\images\xDrip_Libre3_Smooth.png)
+
+
 
 ### Step 3: Start sensor within xDrip
 
