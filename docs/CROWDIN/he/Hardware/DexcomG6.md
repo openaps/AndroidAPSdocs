@@ -68,7 +68,7 @@
 
 ### פיתרון בעיות כלליות
 
-פתרון בעיות כלליות עבור חיישנים ניתן למצוא [כאן](./GeneralCGMRecommendation.html#troubleshooting).
+General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.md#troubleshooting).
 
 ### משדר חדש עם חיישן שכבר מופעל
 
