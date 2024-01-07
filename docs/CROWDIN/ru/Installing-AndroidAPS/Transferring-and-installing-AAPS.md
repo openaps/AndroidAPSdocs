@@ -2,18 +2,18 @@
 
 В предыдущем разделе [сборка **AAPS**](../building-AAPS.md), вы создали **AAPS** (файл .apk).на компьютере.
 
-The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, Xdrip+ or another CGM reciever app) to your Android smartphone, and then **install** the app(s).
+Следующие шаги - **перенести** файл **AAPS** APK (а также другие необходимые приложения, такие как BYODA, Xdrip+ или другое приложение для мониторинга CGM на Android-смартфон, а затем **установить** приложение(я).
 
 После установки **AAPS** на смартфон, можно переходить к [**конфигурации цикла AAPS**](configuring-the-AAPS-loop.md).
 
 Есть несколько способов переноса файла **AAPS** с компьютера на телефон. Здесь мы объясняем два различных способа:
 
-- Option 1 -  Use your Google drive (Gdrive)
+- Способ 1 - при помощи Google диска (Gdrive)
 - Способ 2 - при помощи USB-кабеля
 
 Обратите внимание, что передача по почте не рекомендуется.
 
-## Option 1. Использовать диск Google для передачи файлов
+## Вариант 1. Использовать диск Google для передачи файлов
 
 Откройте [Google.com](https://www.google.com/) в веб-браузере и войдите в учетную запись Google.
 
@@ -52,14 +52,14 @@ The next steps are to **transfer** the **AAPS** APK file (as well as other apps 
 Вы не забыли отменить разрешение на установку приложений из Google Drive?
 ```
 
-## Please go on with [configuring the AAPS loop](configuring-the-AAPS-loop.md).
+## Продолжайте[настройку цикла AAPS](configuring-the-AAPS-loop.md).
 
-## Option 2. Использовать кабель USB для передачи файлов
+## Вариант 2. Использовать кабель USB для передачи файлов
 
-The second way to transfer the AAPS apk file is with a  [USB cable](https://support.google.com/android/answer/9064445?hl=en).
+Второй способ переноса установочного файла apk AAPS - при помощи [кабеля USB](https://support.google.com/android/answer/9064445?hl=ru).
 
-Transfer the file from its location on your computer to the "downloads" folder on the phone.
+Переместите файл с места расположения на компьютере в папку "Загрузки" на телефоне.
 
-On your phone, you will have to allow installation from unknown sources. Explanations of how to do this can be found on the internet (_e.g._ [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+На телефоне необходимо разрешить установку из неизвестных источников. Как это сделать, объясняется в Интернете (_например._ [здесь](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) или [здесь](https://www.androidcentral.com/unknown-sources)).
 
-Once you have transferred the file by dragging it across, to install it, open the "downloads" folder on the phone, press the AAPS apk and select "install". You can then proceed to the next step, [Setup Wizard](../Installing-AndroidAPS/setup-wizard.md), which will help you setup the **AAPS** app and loop on your smartphone.
+После того, как вы перетащите файл в папку загрузок откройте папку "downloads" на телефоне, нажмите на значок установочного файла AAPS apk и выберите команду "install" (установить). Затем можно перейти к следующему шагу [Setup Wizard](../Installing-AndroidAPS/setup-wizard.md), который поможет настроить цикл **AAPS** на смартфоне.
