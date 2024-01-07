@@ -1,6 +1,6 @@
 # Building AAPS
 
-## Build yourself instead of download
+## 다운로드 대신에 당신 스스로 빌드하세요
 
 **The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
 
