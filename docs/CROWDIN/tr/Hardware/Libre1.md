@@ -2,7 +2,7 @@
 
 To use your Libre as a CGM that is getting new BG values every 5 minutes without having to scan the sensor, you need to buy an NFC to Bluetooth bridge (commercially available devices, based on the obsolete [LimiTTer](https://github.com/JoernL/LimiTTer) project).
 
-:::{admonition} Libre 1 US and Libre Pro :class: warning Verify the bridge you want to use is compatible with the sensor  
+:::{admonition} Libre 2, Libre 1 US and Libre Pro :class: warning Verify the bridge and the app you want to use are compatible with your sensor.  
 :::
 
 Several bridges are available on the market:
@@ -21,13 +21,10 @@ Halihazırda, Libre 1'i KŞ kaynağı olarak kullanıyorsanız, SMB algoritması
 ## 1. Using xDrip+
 
 -   xDrip+ supports Miaomiao, Bubble, Blucon, Atom and LibreAlarm.
--   Download and install [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases). You also need [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) for Libre 1 US.
--   xdrip'te Ayarlar > Yerel-Uygulama ayarlarına gidin ve > Verileri Yerel Olarak Yayınlayını AÇIK seçin.
--   xDrip+'da Ayarlar > Uyg.lar-arası ayarlar > Tedaviyi Kabul Et'e gidin ve KAPALI'yı seçin.
--   If you want to be able to use AAPS to calibrate, then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. Ayarlar > Daha Az Ortak Ayarlar> Gelişmiş Kalibrasyon Ayarları'ndaki seçenekleri de gözden geçirmek isteyebilirsiniz.
+-   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
+-   Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
+-    You also need [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) for Libre 1 US (and Libre 2 EU).
 -   Select xDrip+ for BG Source in ConfigBuilder (setting in AAPS).
--   Ekran görüntülü xDrip+ ayarları için [xDrip+ ayarlarına bakın](../Configuration/xdrip.md). Temel xDrip ayarları ve Freestyle Libre xDrip ayarları için bir bölüm mevcuttur.
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as described in the [xDrip+ settings page](../Configuration/xdrip.md).
 
 ## 2. Using Glimp
 
@@ -46,5 +43,7 @@ Halihazırda, Libre 1'i KŞ kaynağı olarak kullanıyorsanız, SMB algoritması
 
 - Diabox is the vendor app for Bubble.
 - Install [Diabox](https://t.me/s/DiaboxApp). In Settings, Integration, enable Share data with other apps.
+
+![Diabox](../images/Diabox.png)
 
 - Select xDrip+ for BG Source in ConfigBuilder (setting in AAPS).

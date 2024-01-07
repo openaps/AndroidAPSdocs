@@ -68,7 +68,7 @@ Bu önerilerin ayrıntıları ve nedenleri hakkında daha fazla bilgi edinmek i�
 
 ### Genel sorun giderme
 
-CGM'ler için Genel Sorun Giderme [burada](./GeneralCGMRecommendation.html#troubleshooting). bulunabilir.
+General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.md#troubleshooting).
 
 ### Çalışan sensörle yeni verici
 

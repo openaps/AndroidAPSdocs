@@ -68,7 +68,7 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 
 ### Allgemeine Problembehandlung
 
-Allgemeine Vorschläge für die Problemlösung bei CGMs findest Du [hier](./GeneralCGMRecommendation.html#troubleshooting).
+General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.md#troubleshooting).
 
 ### Neuer Transmitter bei laufendem Sensor
 
