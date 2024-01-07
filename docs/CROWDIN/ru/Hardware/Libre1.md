@@ -2,7 +2,7 @@
 
 Чтобы использовать Libre в качестве мониторинга, который получает новые значения гликемии каждые 5 минут без необходимости сканирования сенсора, нужно сначала приобрести адаптер NFC - Bluetooth (коммерчески доступные устройства, основанные на устаревшем проекте [LimiTTer](https://github.com/JoernL/LimiTTer)).
 
-:::{admonition} (предостережение)Libre 1 US и Libre Pro :class: предупреждение Проверьте, совместим ли ваш адаптер bluetooth с сенсором  
+:::{admonition} Libre 2, Libre 1 US and Libre Pro :class: warning Verify the bridge and the app you want to use are compatible with your sensor.  
 :::
 
 На рынке имеется несколько адаптеров:
@@ -21,13 +21,10 @@
 ## 1. Использование xDrip+
 
 -   xDrip+ поддерживает Miaomiao, Bubble, Blucon, Atom и LibreAlarm.
--   Скачайте и установите [xDrip+](https://github.com/NightscoutFoundation/xDrip/releases). Вам также понадобится [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) для Libre 1 США.
--   В xdrip, перейдите в настройки > настройки интеграции с приложениями > трансляция данных локально и выберите Включить (ON).
--   В xdrip+ перейдите в настройки > интеграция с приложениями > принимать терапию и выберите ВЫКЛ (OFF).
--   Если вы хотите, чтобы AAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > > интеграция с приложениями >> принимать калибровки и выберите ВКЛ (ON). Возможно вы также захотите рассмотреть варианты в настройках >> менее распространенные параметры >> дополнительные параметры калибровки.
+-   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
+-   Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
+-    You also need [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) for Libre 1 US (and Libre 2 EU).
 -   В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите xDrip+.
--   Для настройки xDrip+ со снимками экрана перейдите на [страницу настроек xDrip+](../Configuration/xdrip.md). Там есть раздел базовых настроек xDrip+ и параметров Freestyle Libre.
--   Если AAPS не получает значения ГК, когда телефон находится в режиме авиаперелета пользуйтесь функцией "Установить получателя" в соответствии с описанием на странице [настроек xDrip+](../Configuration/xdrip.md).
 
 ## 2. Использование Glimp
 
@@ -46,5 +43,7 @@
 
 - Diabox - это приложение поставщика для Bubble.
 - Установите [Diabox](https://t.me/s/DiaboxApp). В Настройках, Интеграция, включите "Делиться данными с другими приложениями".
+
+![Diabox](../images/Diabox.png)
 
 - В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите xDrip+.
