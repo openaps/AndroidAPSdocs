@@ -19,7 +19,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 -   The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
 -   When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
--   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+-   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+. You can also use xDrip+ as a companion app of the official Dexcom app, but you might experience delays in BG readings.
 -   If not already set up, download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../Configuration/xdrip.md).
 -   Select xDrip+ in ConfigBuilder (setting in AAPS).
 -   Adjust settings in xDrip+ according to [xDrip+ settings page](../Configuration/xdrip.md)
@@ -33,7 +33,7 @@ To learn more about the details and reasons for these recommendations read the [
     G5/ONE/G7 sensors!)
 -   This app lets you use your Dexcom G6 with any Android smartphone.
 -   Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously (**do not stop** the currently running sensor)
--   Install downloaded apk
+-   Install the downloaded apk
 -   Enter sensor code and transmitter serial no. in patched app.
 -   In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
 -   After short time BYODA should pick-up transmitter signal.
@@ -63,4 +63,4 @@ General Troubleshooting for CGMs can be found [here](./GeneralCGMRecommendation.
 
 ### New transmitter with running sensor
 
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at <https://youtu.be/tx-kTsrkNUM> and [here](https://navid200.github.io/xDrip/docs/Remove-transmitter.html).
+If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at <https://youtu.be/tx-kTsrkNUM> and another one [here](https://navid200.github.io/xDrip/docs/Remove-transmitter.html).
