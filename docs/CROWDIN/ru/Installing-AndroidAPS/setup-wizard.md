@@ -89,41 +89,41 @@ Android увязывает использование Bluetooth со служб�
 
 Нажмите кнопку "ASK FOR PERMISSION"(запросить разрешение):
 
-![image](../images/setup-wizard/Screenshot_20231202_125924.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125924.png)
 
-This is important. Otherwise **AAPS** can not work properly at all.
+Это важно. Иначе \*\* AAPS\*\* вообще не сможет работать должным образом.
 
-Click "While using the app":
+Выберите "При использовании приложения":
 
-![image](../images/setup-wizard/Screenshot_20231202_125939.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125939.png)
 
-Click the "NEXT" button:
+Нажмите кнопку «ДАЛЕЕ»:
 
-![image](../images/setup-wizard/Screenshot_20231202_130002.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_130002.png)
 
-**AAPS** needs to log information to the permanent storage of your smartphone. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
+**AAPS** должен сохранять информацию в постоянной памяти телефона. Постоянная память означает, что информация будет доступна даже после перезагрузки телефона. Остальная информация теряется, поскольку она не сохраняется в постоянной памяти.
 
 Нажмите кнопку "ASK FOR PERMISSION"(запросить разрешение):
 
-![image](../images/setup-wizard/Screenshot_20231202_130012.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_130012.png)
 
-Click "Allow":
+Нажмите "Разрешить":
 
-![image](../images/setup-wizard/Screenshot_20231202_130022.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_130022.png)
 
-You are being informed that you have to reboot your smartphone after this change to take effect.
+Сообщается, что после внесения этого изменения необходимо перезагрузить телефон.
 
-Please **don't stop the Setup Wizard now**. You can do it after finishing the Setup Wizard.
+**Не останавливайте мастер установки сейчас**. Перезагрузить телефон можно после завершения мастера установки.
 
-Click "OK" and then the "NEXT" button:
+Нажмите кнопку "OK", затем "ДАЛЕЕ":
 
-![image](../images/setup-wizard/Screenshot_20231202_130031.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_130031.png)
 
 ### Главный пароль
 
-As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
+Так как конфигурация **AAPS** содержит некоторые конфиденциальные данные (_напр. API_KEY для доступа к серверу Nightscout), здесь можно установить пароль.
 
-The second sentence is very important, please **DO NOT LOSE YOUR MASTER PASSWORD**. Please make a note of it _e.g._ on Google Drive. Google Drive is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+Второе предложение очень важно, **НЕ ПОТЕРЯЙТЕ ГЛАВНЫЙ ПАРОЛЬ**. Please make a note of it _e.g._ on Google Drive. Google Drive is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
 
 After filling in the password twice, please click the "NEXT" button:
 
@@ -156,7 +156,7 @@ After filling in your "contact information" click the "OK" button. Contact infor
 
 ![image](../images/setup-wizard/Screenshot_20231202_135748.png)
 
-Click the "NEXT" button:
+Нажмите кнопку «ДАЛЕЕ»:
 
 ![image](../images/setup-wizard/Screenshot_20231202_135807.png)
 
