@@ -157,7 +157,7 @@
 
   В Windows 10 следует использовать 64-битную операционную систему.
 
-  В Интернете много инструкций как определить разрядность операционной системы - 32-bit или 64-bit - например,[эта](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
+  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
   ![снимок экрана не удалось запустить процесс демона](../images/AndroidStudioWin10_32bitError.png)
 
