@@ -69,7 +69,7 @@
 
 #### Изменить профиль в редакторе профиля Nighscout
 
-Можно синхронизировать изменения в профиле в редакторе профиля Nighscout с локальными профилями. Настройки можно найти в [ настройках AAPSClient ](Preferences-nsclient).
+You can synchronize changes to the profile in the Nighscout profile editor to local profiles. Настройки можно найти в [ настройках AAPSClient ](Preferences-nsclient).
 
 Необходимо клонировать активные данные всей базы данных Nightscout для профилей, а не просто профиль с синей стрелкой! Новые записи базы данных сохраняют текущую дату и могут быть активированы на вкладке "local profile".
 
@@ -151,7 +151,7 @@
 
 Выберите источник данных ГК - см. страничку [Источник ГК](BG-Source.md) для получения дополнительной информации по настройкам.
 
-![Источник ГК в конфигураторе](../images/ConfBuild_BGSource_AAPS30.png)
+![Источник ГК в конфигураторе](../images/ConfBuild_BG.png)
 
 * [Самостоятельно собранное приложение Dexcom (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
 * [xDrip +](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
