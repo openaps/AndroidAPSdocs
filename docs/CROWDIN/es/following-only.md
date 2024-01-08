@@ -214,7 +214,7 @@ The [M5Stack](https://github.com/mlukasek/M5_NightscoutMon) is a small box which
 
 SugarPixel is a device for secondary glucose display alert system for continuous glucose monitoring that connects with Dexcom app or Nightscout app on the user’s smartphone. The device displays real time blood sugar readings. This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customisable display options and native multi-user following.
 
-![imagen](./images/94044064/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
+![imagen](./images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
 
 ![imagen](./images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 

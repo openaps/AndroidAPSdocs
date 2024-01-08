@@ -157,7 +157,7 @@ Folge der Anleitung bei [Gradle Resync](troubleshooting_androidstudio-step-3-gra
 
   Falls du Windows 10 verwendest, brauchst du ein 64-bit Betriebssystem.
 
-  Es gibt viele Anleitungen im Internet, um herauszufinden, ob du ein 32-bit oder 64-bit Betriebssystem hast - z. B.: [diese hier](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
+  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
   ![Screenshot konnte den Daemon-Prozess nicht starten](../images/AndroidStudioWin10_32bitError.png)
 

@@ -45,7 +45,7 @@ Remark: The transmitter can be used in parallel to the LibreLink app without int
 ## 4. Use Juggluco
 
 - Download and install the Juggluco app from [here](https://www.juggluco.nl/Juggluco/download.html).
-- Follow the instructions [here](https://www.juggluco.nl/Juggluco/index.html/)
+- Follow the instructions [here](https://www.juggluco.nl/Juggluco/index.html)
 - In Settings, enable xDrip+ broadcast (which doesn't send data to xDrip+ but to AAPS).
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
