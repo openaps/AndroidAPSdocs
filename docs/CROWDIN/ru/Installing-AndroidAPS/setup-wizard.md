@@ -33,7 +33,7 @@
 
 Если вы не понимаете лицензионного соглашения или не можете согласиться с ним, не пользуйтесь системой **AAPS**!
 
-Если вы понимаете и соглашаетесь, нажмите кнопку "I UNDERSTAND AND AGREE" и следуйте подсказкам Мастера установки:
+Если вы понимаете и соглашаетесь, нажмите кнопку "I UNDERSTAND AND AGREE" (я принимаю и соглашаюсь) и следуйте подсказкам Мастера установки:
 
 ![снимок экрана](../images/setup-wizard/Screenshot_20231202_125636.png)
 
@@ -51,43 +51,43 @@
 
 Расход батареи на смартфонах все еще является сложной задачей, поскольку производительность батарей по-прежнему весьма ограничена. Операционная система Android довольно неохотно разрешает приложениям запускатьсся и расходоавать время работы процессора, а, следовательно, и заряд батареи.
 
-However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Therefore it must be allowed to do so by Android.
+Однако **AAPS** должен запускаться регулярно, _напр. каждые несколько минут чтобы получать данные о гликемии и применять алгоритм на основе настроек профиля. Поэтому Android должен разрешить эти действия без препятствий.
 
 You do this by confirming the setting.
 
-Please click the "ASK FOR PERMISSION" button:
+Нажмите кнопку "ASK FOR PERMISSION"(запросить разрешение):
 
-![image](../images/setup-wizard/Screenshot_20231202_125721.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125721.png)
 
-Please select "Allow":
+Выберите "Разрешить:
 
-![image](../images/setup-wizard/Screenshot_20231202_125750.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125750.png)
 
-Android requires special permission for apps if they want to send you notifications.
+Android требует специального разрешения для уведомлений от приложений.
 
-While it is a good feature to disable notifications _e.g._ from  social media apps, it is essential that you allow **AAPS** to send you notifications.
+Хотя иногда полезно отключать уведомления _например._ из социальных сетей, важно разрешить **AAPS** отправлять уведомления.
 
-Please click the "ASK FOR PERMISSION" button:
+Нажмите кнопку "ASK FOR PERMISSION"(запросить разрешение):
 
-![image](../images/setup-wizard/Screenshot_20231202_125813.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125813.png)
 
-Select the "AAPS" app:
+Выберите приложение "AAPS":
 
-![image](../images/setup-wizard/Screenshot_20231202_125833.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125833.png)
 
-Enable "Allow display over other apps" by sliding the slider to the right:
+Включите "Разрешить поверх других приложений", сдвинув переключатель вправо:
 
-![image](../images/setup-wizard/Screenshot_20231202_125843.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125843.png)
 
-The slider should look this way if it is enabled:
+Так выглядит переключатель во включенном положении:
 
-![image](../images/setup-wizard/Screenshot_20231202_125851.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125851.png)
 
-Android links the use of bluetooth communication to the ability to use location services. Perhaps you have seen it with other apps too. It's common to need location permission if you want to access bluetooth.
+Android увязывает использование Bluetooth со службой определения местоположения. Возможно, вы замечали это у других приложений. Обычно, если нужен доступ к Bluetooth, требуется разрешение на определение местоположения.
 
-**AAPS** uses bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Details may differ from setup to setup.
+\*\* AAPS \*\* использует Bluetooth для связи с системой мониторинга гликемии CGM и инсулиновой помпой, они напрямую управляются \*\* AAPS \*\*. Детали могут различаться в зависимости от настроек.
 
-Click the "ASK FOR PERMISSION" button:
+Нажмите кнопку "ASK FOR PERMISSION"(запросить разрешение):
 
 ![image](../images/setup-wizard/Screenshot_20231202_125924.png)
 
@@ -103,7 +103,7 @@ Click the "NEXT" button:
 
 **AAPS** needs to log information to the permanent storage of your smartphone. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
 
-Click the "ASK FOR PERMISSION" button:
+Нажмите кнопку "ASK FOR PERMISSION"(запросить разрешение):
 
 ![image](../images/setup-wizard/Screenshot_20231202_130012.png)
 
