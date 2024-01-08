@@ -212,8 +212,10 @@ Android Studio затем будет использовать **Gradle** (инс
 
 - В качестве системы управления версиями должен быть выбран "Git" (по умолчанию) (2).
 
-Теперь скопируйте этот URL:```
-      https://github.com/nightscout/AndroidAPS.git
+Now copy this URL:
+
+```
+https://github.com/nightscout/AndroidAPS.git
 ```
 
 и вставьте его в текстовое поле URL (3).
