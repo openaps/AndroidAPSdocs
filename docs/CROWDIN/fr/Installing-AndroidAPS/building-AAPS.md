@@ -212,10 +212,11 @@ On the Android Studio Welcome screen, check that "**Projects**" (1) is highlight
 
 - "Git" should be selected (by default) as version control (2).
 
-Maintenant copiez ce lien :````
-      https://github.com/nightscout/AndroidAPS.git
-      ```
-````
+Now copy this URL:
+
+```
+https://github.com/nightscout/AndroidAPS.git
+```
 
 and paste it into the URL textbox (3).
 
