@@ -69,7 +69,7 @@ Yerel profiller ayrıca Nightscout'a yüklenebilir. Ayarlar [NSClient tercihleri
 
 #### Nighscout profil düzenleyicide profili değiştir
 
-Nightscout profil düzenleyicisindeki profildeki değişiklikleri yerel profillerle senkronize edebilirsiniz. Ayarlar [NSClient tercihlerinde](Preferences-nsclient) bulunabilir.
+You can synchronize changes to the profile in the Nighscout profile editor to local profiles. Ayarlar [NSClient tercihlerinde](Preferences-nsclient) bulunabilir.
 
 Sadece mavi oklu bir profili değil, tüm aktif profiller için Nightscout veritabanı kayıtlarını klonlamak gerekir. Yeni veritabanı kayıtları daha sonra güncel tarihi taşır ve "yerel profil" sekmesi aracılığıyla etkinleştirilebilir.
 
@@ -151,7 +151,7 @@ Ayrıntılar, [profil yardımcısı sayfasında](../Configuration/profilehelper.
 
 Kullanmakta olduğunuz kan şekeri kaynağını seçin - daha fazla kurulum bilgisi için [KŞ Kaynağı](BG-Source.md) sayfasına bakın.
 
-![Konfigürasyon ayarları KŞ kaynağı](../images/ConfBuild_BGSource_AAPS30.png)
+![Konfigürasyon ayarları KŞ kaynağı](../images/ConfBuild_BG.png)
 
 * [Kendi Dexcom Uygulamanızı Oluşturun (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
