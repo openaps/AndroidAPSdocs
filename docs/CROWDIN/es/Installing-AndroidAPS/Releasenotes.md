@@ -58,7 +58,7 @@ Fecha de lanzamiento: 23-10-2023
 - Websockets en el plugin v3 funciona de forma similar al plugin v1. Sin websockets habilitados, AAPS programa regularmente descargas desde NS, lo que debería reducir el consumo de batería, porque NS no está permanentemente conectado. En el lado opuesto, supone retrasos en el intercambio de datos. Please read [here](Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
 - Si está utilizando xDrip+ como fuente de datos de glucosa, debes seleccionarlo de nuevo después de la actualización, debido a cambios internos.
 - Tidepool puede utilizarse como sustituto de NS para superar el primer objetivo.
-- Si envías datos a xDrip+, debes configurar el plugin de sincronización de xDrip+. Para recibir BGs de AAPS en xDrip, debe estar seleccionada la fuente de datos hardware "xDrip+ Sync Follower".
+- Si envías datos a xDrip+, debes configurar el plugin de sincronización de xDrip+. In order to receive BGs from AAPS in xDrip, “xDrip+ Sync Follower” must be selected as source
 - Si quieres cambiar al controlador ComboV2, Ruffy debe ser desinstalado y la bomba emparejado de nuevo a AAPS
 - Para utilizar el complemento ISFDinámico, debes iniciar el Objetivo 11 (todos los anteriores deben estar en estado terminado para permitir el inicio del  objetivo 11)
 
