@@ -157,7 +157,7 @@ Bunlar olağan gradle senkronizasyon hatalarıdır:
 
   Windows 10 kullanıyorsanız 64 bit işletim sistemi kullanmanız gerekir.
 
-  İnternette 32 bit mi yoksa 64 bit mi işletim sisteminiz olduğunu nasıl belirleyeceğinize dair birçok kılavuz var - ör. [bu web sayfası](https://www.howtogeek.com/howto/21726/how-do-i -know-if-im-running-32-bit-or-64-bit-windows-answers/).
+  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
   ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
 

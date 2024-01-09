@@ -229,9 +229,10 @@ On the Android Studio Welcome screen, check that "**Projects**" (1) is highlight
 
 
 Now copy this URL:
-      ```
-      https://github.com/nightscout/AndroidAPS.git
-      ```
+
+```
+https://github.com/nightscout/AndroidAPS.git
+```
 
 and paste it into the URL textbox (3).
 

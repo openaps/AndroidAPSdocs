@@ -64,7 +64,9 @@ To proceed with **Objective 3**, click on the orange text “**Not completed yet
 
 - To reduce the number of decisions you are asked to make while in Open Loop, set a wide target range _e.g._ 90 - 150 mg/dl or 5.0 - 8.5 mmol/l.
 
-- # You might want to set a wider upper limit, or even disable Open Loop, at night.For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time-locked for a certain amount of time (60 minutes) before you can go back and answer the question again. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
+- You might want to set a wider upper limit, or even disable Open Loop, at night.
+
+For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time-locked for a certain amount of time (60 minutes) before you can go back and answer the question again. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
 
 When **AAPS** is installed for the first time, you will have to complete the whole of **Objective 3** before moving on to **Objective 4**. Each objective is required to be completed in sequential order. New features will gradually be unlocked as progress is made through the objectives.
 

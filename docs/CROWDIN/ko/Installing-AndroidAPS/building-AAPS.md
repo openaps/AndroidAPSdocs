@@ -1,6 +1,6 @@
 # Building AAPS
 
-## Build yourself instead of download
+## 다운로드 대신에 당신 스스로 빌드하세요
 
 **The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
 
@@ -212,10 +212,11 @@ On the Android Studio Welcome screen, check that "**Projects**" (1) is highlight
 
 - "Git" should be selected (by default) as version control (2).
 
-Now copy this URL:````
-      https://github.com/nightscout/AndroidAPS.git
-      ```
-````
+Now copy this URL:
+
+```
+https://github.com/nightscout/AndroidAPS.git
+```
 
 and paste it into the URL textbox (3).
 

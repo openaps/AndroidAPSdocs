@@ -33,7 +33,7 @@
 
 Если вы не понимаете лицензионного соглашения или не можете согласиться с ним, не пользуйтесь системой **AAPS**!
 
-Если вы понимаете и соглашаетесь, нажмите кнопку "I UNDERSTAND AND AGREE" и следуйте подсказкам Мастера установки:
+Если вы понимаете и соглашаетесь, нажмите кнопку "I UNDERSTAND AND AGREE" (я принимаю и соглашаюсь) и следуйте подсказкам Мастера установки:
 
 ![снимок экрана](../images/setup-wizard/Screenshot_20231202_125636.png)
 
@@ -41,89 +41,89 @@
 
 для корректной работы **AAPS** требуются некоторые условия.
 
-In the following screens you are asked several questions you have to agree to, to get **AAPS** working. The Wizard itself explains why it asks for the relevant setting.
+На следующих экранах задано несколько условий которые надо принять для корректной работы **AAPS**. Мастер сам объясняет, почему он запрашивает соответствующие разрешения или настройки.
 
-In this screen, we aim to give some more background information, translate more technical speak into common language or explain the reason.
+На этом экране мы даем дополнительную справочную информацию, переводим с технического языка на общий или объясняем причину.
 
-Please click the "NEXT" button:
+Нажмите кнопку «ДАЛЕЕ»:
 
-![image](../images/setup-wizard/Screenshot_20231202_125709.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125709.png)
 
-Battery consumption on smartphones is still a consideration, as the performance of the batteries is still quite limited. Therefore, the Android operating system on your smartphone is quite restrictive about allowing applications to run and consume CPU time, and therefore battery power.
+Расход батареи на смартфонах все еще является сложной задачей, поскольку производительность батарей по-прежнему весьма ограничена. Операционная система Android довольно неохотно разрешает приложениям запускатьсся и расходоавать время работы процессора, а, следовательно, и заряд батареи.
 
-However, **AAPS** needs to run regularly, _e.g._ to receive the glucose readings every few minutes and then apply the algorithm to decide how to deal with your glucose levels, based on your specifications. Therefore it must be allowed to do so by Android.
+Однако **AAPS** должен запускаться регулярно, _напр. каждые несколько минут чтобы получать данные о гликемии и применять алгоритм на основе настроек профиля. Поэтому Android должен разрешить эти действия без препятствий.
 
 You do this by confirming the setting.
 
-Please click the "ASK FOR PERMISSION" button:
+Нажмите кнопку "ASK FOR PERMISSION"(запросить разрешение):
 
-![image](../images/setup-wizard/Screenshot_20231202_125721.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125721.png)
 
-Please select "Allow":
+Выберите "Разрешить:
 
-![image](../images/setup-wizard/Screenshot_20231202_125750.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125750.png)
 
-Android requires special permission for apps if they want to send you notifications.
+Android требует специального разрешения для уведомлений от приложений.
 
-While it is a good feature to disable notifications _e.g._ from  social media apps, it is essential that you allow **AAPS** to send you notifications.
+Хотя иногда полезно отключать уведомления _например._ из социальных сетей, важно разрешить **AAPS** отправлять уведомления.
 
-Please click the "ASK FOR PERMISSION" button:
+Нажмите кнопку "ASK FOR PERMISSION"(запросить разрешение):
 
-![image](../images/setup-wizard/Screenshot_20231202_125813.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125813.png)
 
-Select the "AAPS" app:
+Выберите приложение "AAPS":
 
-![image](../images/setup-wizard/Screenshot_20231202_125833.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125833.png)
 
-Enable "Allow display over other apps" by sliding the slider to the right:
+Включите "Разрешить поверх других приложений", сдвинув переключатель вправо:
 
-![image](../images/setup-wizard/Screenshot_20231202_125843.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125843.png)
 
-The slider should look this way if it is enabled:
+Так выглядит переключатель во включенном положении:
 
-![image](../images/setup-wizard/Screenshot_20231202_125851.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125851.png)
 
-Android links the use of bluetooth communication to the ability to use location services. Perhaps you have seen it with other apps too. It's common to need location permission if you want to access bluetooth.
+Android увязывает использование Bluetooth со службой определения местоположения. Возможно, вы замечали это у других приложений. Обычно, если нужен доступ к Bluetooth, требуется разрешение на определение местоположения.
 
-**AAPS** uses bluetooth to communicate with your CGM and insulin pump if they are directly controlled by **AAPS** and not another app which is used by **AAPS**. Details may differ from setup to setup.
+\*\* AAPS \*\* использует Bluetooth для связи с системой мониторинга гликемии CGM и инсулиновой помпой, они напрямую управляются \*\* AAPS \*\*. Детали могут различаться в зависимости от настроек.
 
-Click the "ASK FOR PERMISSION" button:
+Нажмите кнопку "ASK FOR PERMISSION"(запросить разрешение):
 
-![image](../images/setup-wizard/Screenshot_20231202_125924.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125924.png)
 
-This is important. Otherwise **AAPS** can not work properly at all.
+Это важно. Иначе \*\* AAPS\*\* вообще не сможет работать должным образом.
 
-Click "While using the app":
+Выберите "При использовании приложения":
 
-![image](../images/setup-wizard/Screenshot_20231202_125939.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_125939.png)
 
-Click the "NEXT" button:
+Нажмите кнопку «ДАЛЕЕ»:
 
-![image](../images/setup-wizard/Screenshot_20231202_130002.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_130002.png)
 
-**AAPS** needs to log information to the permanent storage of your smartphone. Permanent storage means that it will be available even after rebooting your smartphone. Other information is just lost, as it is not saved to permanent storage.
+**AAPS** должен сохранять информацию в постоянной памяти телефона. Постоянная память означает, что информация будет доступна даже после перезагрузки телефона. Остальная информация теряется, поскольку она не сохраняется в постоянной памяти.
 
-Click the "ASK FOR PERMISSION" button:
+Нажмите кнопку "ASK FOR PERMISSION"(запросить разрешение):
 
-![image](../images/setup-wizard/Screenshot_20231202_130012.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_130012.png)
 
-Click "Allow":
+Нажмите "Разрешить":
 
-![image](../images/setup-wizard/Screenshot_20231202_130022.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_130022.png)
 
-You are being informed that you have to reboot your smartphone after this change to take effect.
+Сообщается, что после внесения этого изменения необходимо перезагрузить телефон.
 
-Please **don't stop the Setup Wizard now**. You can do it after finishing the Setup Wizard.
+**Не останавливайте мастер установки сейчас**. Перезагрузить телефон можно после завершения мастера установки.
 
-Click "OK" and then the "NEXT" button:
+Нажмите кнопку "OK", затем "ДАЛЕЕ":
 
-![image](../images/setup-wizard/Screenshot_20231202_130031.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_130031.png)
 
 ### Главный пароль
 
-As the configuration of **AAPS** contains some sensitive data (_e.g._ API_KEY for accessing your Nightscout server) it is encrypted by a password you can set here.
+Так как конфигурация **AAPS** содержит некоторые конфиденциальные данные (_напр. API_KEY для доступа к серверу Nightscout), здесь можно установить пароль.
 
-The second sentence is very important, please **DO NOT LOSE YOUR MASTER PASSWORD**. Please make a note of it _e.g._ on Google Drive. Google Drive is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+Второе предложение очень важно, **НЕ ПОТЕРЯЙТЕ ГЛАВНЫЙ ПАРОЛЬ**. Please make a note of it _e.g._ on Google Drive. Google Drive is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
 
 After filling in the password twice, please click the "NEXT" button:
 
@@ -156,7 +156,7 @@ After filling in your "contact information" click the "OK" button. Contact infor
 
 ![image](../images/setup-wizard/Screenshot_20231202_135748.png)
 
-Click the "NEXT" button:
+Нажмите кнопку «ДАЛЕЕ»:
 
 ![image](../images/setup-wizard/Screenshot_20231202_135807.png)
 

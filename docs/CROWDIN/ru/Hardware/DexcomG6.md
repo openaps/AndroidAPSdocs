@@ -2,51 +2,47 @@
 
 ## Сначала основное
 
--   Следуйте общей рекомендации по гигиене и установке сенсоров мониторинга CGM [здесь](../Hardware/GeneralCGMRecommendation.md).
--   С трансмиттерами G6, изготовленных после осени/конца 2018 года, пользуйтесь одной из [новых версий ночных сборок xDrip+ ](https://github.com/NightscoutFoundation/xDrip/releases). У этих трансмиттеров новая прошивка и стабильная версия xDrip+ (2019/01/10) с ней не работает.
+-   Follow general CGM hygiene and setting sensor recommendation [here](../Hardware/GeneralCGMRecommendation.md).
 
 ## Общие рекомендации по использованию G6 с системами ИПЖ
 
-Применение G6 немного сложнее, чем казалось раньше. Для правильного применения необходимо иметь в виду следующие моменты:
+Для правильного применения необходимо иметь в виду следующие моменты:
 
--   Если вы включили работу с нативными данными с кодом калибровки в xDrip или Spike, в целях безопасности не следует разрешать упреждающий (preemptive) перезапуск сенсора.
--   Если все же упреждающие перезапуски необходимы, то они должны происходить в то время, когда есть возможность следить за изменениями и при необходимости калибровать.
--   Если вы перезапускаете сенсор, делайте это либо без заводской калибровки для безопасных результатов в дни 11 и 12, либо будьте готовы калибровать и следить за изменениями.
--   "Предварительное замачивание" (установка сенсора намного раньше его старта в приложении) G6 с заводской калибровкой приведет к вариациям в данных. Если вы все же делаете "предварительное замачивание", то для получения лучших результатов вам, вероятно, понадобится калибровать сенсор.
--   Если вы не планируете отслеживать все возможные отклонения, то лучше вернуться к традиционному режиму калибровки и использовать систему как G5.
+-   If you are using a rebatteried or modded transmitter with xDrip+, the safest thing to do is **disable** preemptive restarts of the sensor that are anyway not needed for xDrip+.
+-   "Предварительное погружение" (установка сенсора намного раньше его старта в приложении) G6 с заводской калибровкой приведет к отклонениям в данных. Если вы все же делаете "предварительное замачивание", то для получения лучших результатов вам, вероятно, понадобится калибровать сенсор.
 
-Подробнее о деталях и причинах этих рекомендаций читайте [полную статью](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) Tim Street на [www.diabettech.com](https://www.diabettech.com).
+To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
 
 ## При использовании G6 с xdrip+
 
--   Трансмиттер Dexcom G6 может одновременно подключаться к ресиверу Dexcom (или к помпе T:slim) и приложению на вашем телефоне.
--   При использовании xDrip+ в качестве приемника сначала удалите приложение Dexcom. **Невозможно одновременно подключить к трансмиттеру приложения xDrip+ и Dexcom!**
--   Если вам нужен функционал оригинального приложения Clarity и оповещения от xDrip +, пользуйтесь [модифицированным приложением Dexcom ](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) с локальной передачей данных в xDrip +.
--   Если это еще не сделано, загрузите приложение [xDrip+](https://github.com/NightscoutFoundation/xDrip) и следуйте инструкциям на [странице настроек xDrip+](../Configuration/xdrip.md).
+-   Трансмиттер Dexcom G6 может одновременно подключаться к ресиверу Dexcom (или к помпе T:slim) и одному приложению на вашем телефоне.
+-   При использовании xDrip+ в качестве приемника сначала удалите приложение Dexcom. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
+-   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+-   If not already set up, download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../Configuration/xdrip.md).
 -   В конфигуратоге (настройки AndroidAPS) выберите xdrip.
--   Настройте параметры xDrip+ в соответствии со [ страницей настроек xDrip+](../Configuration/xdrip.md)
--   Если AAPS не получает значения ГК, когда телефон находится в режиме авиаперелета пользуйтесь функцией "Установить получателя" в соответствии с описанием на странице [настроек xDrip+](../Configuration/xdrip.md).
+-   Adjust settings in xDrip+ according to [xDrip+ settings page](../Configuration/xdrip.md)
+-   If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## При использовании G6 с созданием собственного Dexcom приложения
 
--   *С декабря 2020 года [самостоятельно собранное приложение Dexcom (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) также поддерживает локальную передачу на AAPS и/или xDrip + ( кроме сенсоров G5!)
+-   As of December 2020 [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) (BYODA) also supports local broadcast to AAPS and/or xDrip+ (not for G5/ONE/G7 sensors!)
 -   Это приложение позволяет использовать Dexcom G6 с любым смартфоном Android.
--   Деинсталлируйте оригинальное приложение Dexcom или модифицированное приложение Dexcom, если пользовались ими ранее.
+-   Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously (**do not stop** the currently running sensor)
 -   Установите загруженное приложение
 -   * Введите код сенсора и серийный номер трансмиттера в модифицированном приложении.
--   В настройках телефона перейдите к приложению > Dexcom G6> > разрешения >> дополнительные разрешения и нажмите 'Получать доступ к приложению Dexcom'.
--   Через некоторое время приложение должно подхватить сигнал трансмиттера. (Если нет, вам придется остановить сенсор и запустить новый.)
+-   In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
+-   Через некоторое время приложение должно подхватить сигнал трансмиттера.
 
 ### Настройки для AAPS
 
 -   Выберите 'приложение Dexcom (модифицированное)' в конфигураторе.
--   Если вы не получаете никаких значений, выберите любой другой источник данных, а затем снова выберите 'приложение Dexcom (модифицированное)', чтобы запустить требование разрешений на соединения между AAPS и самостоятельно собранным приложением Dexcom.
+-   If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
 
 ### Настройки для xDrip+
 
 -   Выберите '640G/Eversense' в качестве источника данных.
--   * Для получения значений необходимо выполнить команду 'start Sensor' в xDrip +. Это не повлияет на сенсор контролируемый самостоятельно собранным приложением Dexcom.
+-   Command 'start sensor' must be performed in xDrip+ in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
 
 
 (DexcomG6-troubleshooting-g6)=
@@ -54,22 +50,12 @@
 
 ### Устранение неполадок, связанных с dexcom G6
 
--   Трансмиттеры с серийными номерами, начинающимися с 80 или 81, требуют, по крайней мере, последнюю стабильную версию xDrip мая 2019 года или более позднюю ночную сборку.
--   Трансмиттеры с серийными номерами, начинающимися с 8G, требуют по крайней мере ночную сборку 25 июля 2019 года или новее.
--   Приложения xDrip + и Dexcom не могут быть одновременно подключены к трансмиттеру.
--   Подождите не менее 15 мин. между остановкой и началом работы сенсора.
--   Не отматывайте обратно время установки. Отвечайте на вопрос "сенсор установлен сегодня?" всегда "Да, сегодня".
--   Не активируйте "перезапускать сенсор" при установке нового сенсора
--   Не запускайте новый сенсор прежде чем на классической странице состояния не появится следующая информация Страница-> Состояние G5/G6-> PhoneServiceState:
-    -   С трансмиттерами, серийный номер которых начинается с 80 или 81: "Got data hh:mm" (напр. "Got data 19:04 ")
-    -   С трансмиттерами, серийный номер которых начинается с 8G или 8H: "Got glucose hh:mm" (напр. "Got glucose 19:04 ") или "Got no raw hh:mm" (i.e. "Got no raw 19:04")
-
-![xDrip PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
+-   Scroll down to **Troubleshooting** [here](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
 ### Устранение неполадок - общее
 
-Общее устранение неполадок мониторинга можно найти [здесь](./GeneralCGMRecommendation.html#troubleshooting).
+General Troubleshooting for CGMs can be found [here](./GeneralCGMRecommendation.md#troubleshooting).
 
 ### Установка нового трансмиттера на работающий сенсор
 
-Если вы меняете трансмиттер во время работы сенсора, вы можете попробовать снять его, не повредив платформу сенсора. См. видео `https://youtu.be/tx-kTsrkNUM .</p>
+If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at <https://youtu.be/tx-kTsrkNUM> and [here](https://navid200.github.io/xDrip/docs/Remove-transmitter.html).

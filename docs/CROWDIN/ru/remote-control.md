@@ -272,11 +272,18 @@ vi) На экране настроек выберите «Настройка А�
 
 _Обратите внимание, что **NSClient** теперь заменен на **AAPSClient** для AAPS версии 3. и выше, подробности см. в примечаниях к версиям._
 
-Для версий AAPS старше AAPS 3.2, если у вас родительский Android-телефон, вы можете напрямую скачать и установить приложение [**AAPSClien**](https://github.com/nightscout/AndroidAPS/releases/). **AAPSClient** похож внешне на сам **AAPS**, но позволяет опекунам отправлять команды в **AAPS** дистанционно:
+For versions of AAPS which are older than AAPS 3.2, if you have a caregiver/parent Android phone you can directly download and install the [**AAPSClient**](https://github.com/nightscout/AndroidAPS/releases/) apk. **AAPSClient** похож внешне на сам **AAPS**, но позволяет опекунам отправлять команды в **AAPS** дистанционно:
 
 ![изображение](images/remote-control-19.png)
 
-Можно [загрузить](https://github.com/nightscout/AndroidAPS/releases/) две версии приложения **AAPSClient** & **AAPSClient2**. Единственное различие между двумя версиями - наименование приложения. Что позволяет дважды устанавливать приложение **AAPSClient** на один и тот же телефон и следить за двумя разными пользователями или аккаунтами Nightscout одновременно. Для загрузки AAPSClient, нажмите на "app-AAPSClient-release" (это может быть более новая версия, чем на снимке экрана):
+There are 2 versions of the apk that can be [downloaded](https://github.com/nightscout/AndroidAPS/releases/),  **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below.
+
+**AAPSClient** can be installed on a single phone or multiple follower phones (i.e. parent 1’s follower phone and parent 2’s follower phone) in order for both caregivers to be granted access and remote control a patient's **AAPS** phone.
+
+Should a caregiver require a second copy of **AAPSClient** to remote control a additional patient with a nightscout account, they should install **AAPSClient2** in addition to **AAPSClient**. **AAPSClient 2** allows a single caregiver to install the **AAPSClient** apk twice on the same follower phone in order to be given simultaneous access and remote control to two different patients.
+
+To download **AAPSClient**, click on “app-AAPSClient-release” (it may be a newer version to that shown in the screenshot):
+
 
 ![изображение](images/SMScommands/02_AAPSClient_download.png)
 
@@ -638,7 +645,7 @@ b) вырежьте и вставьте файл Wear.apk из Android Studio н
 
 ● Выберите «Wear» в разделе Синхронизация Конфигуратора
 
-![изображение](./images/ae6d75a1-1829-4d2e-b0dc-153e31e4a466)
+![изображение](./images/ae6d75a1-1829-4d2e-b0dc-153e31e4a466.png)
 
 
 Чтобы изменить внешний вид циферблата **AAPS**  выполните долгое нажатие на главный экран часов и перейдите к кастомизации. Затем проведите вправо, пока не дойдете до всех циферблатов **AAPS**.
@@ -720,7 +727,7 @@ b) вырежьте и вставьте файл Wear.apk из Android Studio н
 
 
 
-![изображение](./images/98620770-2fb3-47af-a13e-28af7db69096)
+![изображение](./images/98620770-2fb3-47af-a13e-28af7db69096.png)
 
 
 
