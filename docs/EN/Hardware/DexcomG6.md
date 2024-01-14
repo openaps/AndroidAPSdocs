@@ -18,22 +18,25 @@ Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-lo
 
 - If you are using a recent (Firefly) transmitter, preemptive restarts are **ignored**.
 - If you are using a modded transmitter you do **not need** to use preemptive restarts.
-
 -   If you are using an old rebatteried transmitter, the safest thing to do is **disable** [preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html). Though, in this case you will have to use the G6 in non-[native mode](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) (which is unadvisable as it disables factory calibration), or else the sensor will stop after 10 days.
 -   The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
 -   When using xDrip+ as receiver uninstall the Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
 -   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+. You can also use xDrip+ as a companion app of the official Dexcom app, but you might experience delays in BG readings.
 -   If not already set up, download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../Configuration/xdrip.md).
--   Select xDrip+ in ConfigBuilder (setting in AAPS).
--   Adjust settings in xDrip+ according to [xDrip+ settings page](../Configuration/xdrip.md)
--   If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on [xDrip+ settings
-    page](../Configuration/xdrip.md).
+-   Select xDrip+ in ConfigBuilder.
+
+![xDrip+ BG Source](../images/ConfBuild_BG_xDrip.png)
+
+- Adjust settings in xDrip+ according to [xDrip+ settings page](../Configuration/xdrip.md)
 
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## If using G6 with Build Your Own Dexcom App
 
 -   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+ (not for
     G5/ONE/G7 sensors!)
+
+![BYODA broadcast options](../images/BYODA.png)
+
 -   This app lets you use your Dexcom G6 with any Android smartphone.
 -   Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously (**do not stop** the currently running sensor)
 -   Install the downloaded apk
@@ -44,6 +47,9 @@ Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-lo
 ### Settings for AAPS
 
 -   Select 'Dexcom App (patched)' in config builder.
+
+![xDrip+ BG Source](../images/ConfBuild_BG_BYODA.png)
+
 -   If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for
     permissions to establish the connection between AAPS and BYODA-broadcast.
 
