@@ -10,8 +10,6 @@ The easiest way to use Eversense with AAPS is to install the EU or US modified [
 
 As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple delta" in AAPS.
 
-- Set "MM640g" as BG source in the [Configuration Builder](../Configuration/Config-Builder.md) in AAPS.
-
-![xDrip+ BG Source](../images/ConfBuild_BG_MM640g.png)
+- Set "MM640g" as BG source in in [ConfigBuilder, BG Source](/Configuration/Config-Builder.md#bg-source).
 
 You can find the instruction for using xDrip with an Eversense [here](https://github.com/BernhardRo/Esel/tree/master/apk).

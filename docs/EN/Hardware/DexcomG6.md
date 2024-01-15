@@ -23,9 +23,7 @@ Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-lo
 -   When using xDrip+ as receiver uninstall the Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
 -   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+. You can also use xDrip+ as a companion app of the official Dexcom app, but you might experience delays in BG readings.
 -   If not already set up, download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../Configuration/xdrip.md).
--   Select xDrip+ in ConfigBuilder.
-
-![xDrip+ BG Source](../images/ConfBuild_BG_xDrip.png)
+-   Select xDrip+ in in [ConfigBuilder, BG Source](/Configuration/Config-Builder.md#bg-source).
 
 - Adjust settings in xDrip+ according to [xDrip+ settings page](../Configuration/xdrip.md)
 
@@ -46,9 +44,7 @@ Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-lo
 
 ### Settings for AAPS
 
--   Select 'Dexcom App (patched)' in config builder.
-
-![xDrip+ BG Source](../images/ConfBuild_BG_BYODA.png)
+-   Select 'Dexcom App (patched)' in in [ConfigBuilder, BG Source](/Configuration/Config-Builder.md#bg-source).
 
 -   If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for
     permissions to establish the connection between AAPS and BYODA-broadcast.

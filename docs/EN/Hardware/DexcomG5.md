@@ -26,9 +26,7 @@ These apps are not compatible with recent Android versions.
 
 -   Start sensor
 
-- Select Dexcom App (patched) in ConfigBuilder.
-
-![BYODA BG Source](../images/ConfBuild_BG_BYODA.png)
+- Select Dexcom App (patched) in in [ConfigBuilder, BG Source](/Configuration/Config-Builder.md#bg-source).
 
 -   If you want to use xDrip alarms via local broadcast: in xDrip
     hamburger menu > settings > hardware data source > 640G /EverSense.

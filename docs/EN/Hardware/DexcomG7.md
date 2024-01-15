@@ -30,9 +30,7 @@ After the warm-up phase, the values are displayed as usual in the G7 app.
 ### Configuration in AAPS
 
 For the configuration in AAPS
-- Select 'BYODA' in the configuration generator - even if it is not the BYODA app!
-
-![xDrip+ BG Source](../images/ConfBuild_BG_BYODA.png)
+- Select 'BYODA' in in [ConfigBuilder, BG Source](/Configuration/Config-Builder.md#bg-source) - even if it is not the BYODA app!
 
 - If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
 
@@ -44,9 +42,7 @@ The smoothing of glucose values can be activated by enabling the "Average smooth
 ## 2. xDrip+ (direct connection to G7)
 
 - Follow the instructions here: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- In AAPS select  > Configuration > BG source > xDrip+.
-
-![xDrip+ BG Source](../images/ConfBuild_BG_xDrip.png)
+- Select  xDrip+ in [ConfigBuilder, BG Source](/Configuration/Config-Builder.md#bg-source).
 
 - Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md)
 
@@ -54,8 +50,6 @@ The smoothing of glucose values can be activated by enabling the "Average smooth
 
 -   Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip) 
 - As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
--   In AAPS select  > Configuration > BG source > xDrip+.
-
-![xDrip+ BG Source](../images/ConfBuild_BG_xDrip.png)
+-   Select  xDrip+ in in [ConfigBuilder, BG Source](/Configuration/Config-Builder.md#bg-source).
 
 -   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md) 
