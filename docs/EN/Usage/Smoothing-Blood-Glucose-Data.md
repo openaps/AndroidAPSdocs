@@ -11,12 +11,15 @@ Additionally, as of version 3.2, AAPS offers the option to smooth the data withi
 
 ## Exponential smoothing
 
-This is the recommended option to start with as it is most aggressive in resolving noise and rewrites the most recent value. 
+This is the recommended option to start with as it is most aggressive in resolving noise and rewrites the most recent value.  
+Use this option with G7, G6 non-native (xDrip+), Libre 1, Libre 2 and 3 from Juggluco. 
 
 ## Average smoothing
 
-This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data. 
+This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.  
+Use this option with noisy G6 sensors (BYODA and xDrip+ native). 
 
 ## No Smoothing
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to AAPS. 
+Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to AAPS.  
+Use this option with G6 (BYODA), Libre 2 and 3 from xDrip+ (already smoothed by the app).
