@@ -277,23 +277,23 @@ To keep it simple just enter first name and last name.
 
 Here you select your "Patient type" which is important, as the **AAPS** software has different limits, depending on the age of the patient. This is important for security and safety reasons.
 
-Here is where you also configure the **maximum allowed bolus** for a meal. That is, the largest bolus you need to give to cover your typical meals. It's a security feature to help avoid accidentally overdosing when you are bolusing for meal.
+Здесь также можyj настроить **максимальный разрешенный болюс** на прием пищи. То есть, самый большой болюс, который можно ввести на свои обычные блюда. Это мера безопасности, которая помогает избежать случайной передозировки, когда вводится болюс на еду.
 
-The second limit is similar in concept, but relates to the max carbohydrate intake you expect.
+Второе ограничение аналогично по концепции, но относится к максимальному ожидаемому потреблению углеводов.
 
-After setting these values, press "NEXT" to go to the next screen:
+После установки этих значений нажмите "ДАЛЕЕ" и перейдите на следующий экран:
 
-![image](../images/setup-wizard/Screenshot_20231202_141817.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_141817.png)
 
-### Used insulin
+### Применяемый инсулин
 
-Select the type of insulin being used in the pump.
+Выберите тип инсулина, используемого в помпе.
 
-The insulin names should be self-explanatory.
+Названия инсулинов должны быть самоочевидными.
 
-:::{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
-:class: danger
-For advanced users or medical studies there is the possibility to define with "Free-Peak Oref" a customised profile of how insulin acts. Please don't use it unless you are an expert, usually the pre-defined values work well for each branded insulin.
+:::{admonition} Не выбирайте"Свободный от пиков Oref", если не знаете, что это такое
+:class: опасность
+Для опытных пользователей или медицинских исследований существует возможность определить индивидуальный профиль Oref и пик действия инсулина. Please don't use it unless you are an expert, usually the pre-defined values work well for each branded insulin.
 :::
 
 Press "NEXT" to go to the next screen:
