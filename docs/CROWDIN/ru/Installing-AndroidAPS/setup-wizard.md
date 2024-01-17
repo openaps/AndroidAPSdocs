@@ -293,24 +293,24 @@ Here you select your "Patient type" which is important, as the **AAPS** software
 
 :::{admonition} Не выбирайте"Свободный от пиков Oref", если не знаете, что это такое
 :class: опасность
-Для опытных пользователей или медицинских исследований существует возможность определить индивидуальный профиль Oref и пик действия инсулина. Please don't use it unless you are an expert, usually the pre-defined values work well for each branded insulin.
+Для опытных пользователей или медицинских исследований существует возможность определить индивидуальный профиль Oref и пик действия инсулина. Не выбирайте его, если не являетесь экспертом, обычно заранее определенные значения хорошо работают для каждого бренда инсулина.
 :::
 
-Press "NEXT" to go to the next screen:
+Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
-![image](../images/setup-wizard/Screenshot_20231202_141840.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_141840.png)
 
 ### Blood sugar source
 
-Select the BG source you are using. Please read the documentation for your [BG source](../Configuration/BG-Source.md).
+Выберите используемый вами источник ГК Изучите документацию по вашему [источнику ГК](../Configuration/BG-Source.md).
 
-As there are several options available, we don't explain the configuration for all of them here. We are using Dexcom G6 with the BYODA app in our example here:
+Поскольку доступно несколько вариантов, мы не объясняем здесь конфигурацию каждого. В нашем примере мы приводим Dexcom G6 с самостоятельно собранным приложением BYODA:
 
-![image](../images/setup-wizard/Screenshot_20231202_141912.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_141912.png)
 
-If you are using Dexcom G6 with BYODA, enable the visibility in the top level menu by clicking the tickbox on the right side.
+Если вы используете Dexcom G6 с BYODA, активируйте видимость его меню, поставив галочку справа.
 
-After making your selection, press "NEXT" to go to the next screen:
+После установки этих значений нажмите "ДАЛЕЕ" и перейдите на следующий экран:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141925.png)
 
@@ -318,7 +318,7 @@ If you are using Dexcom G6 with BYODA, click on the "cog/gearwheel" to access th
 
 Enable the "Upload BG data to NS" and "Log sensor change to NS".
 
-Press "NEXT" to go to the next screen:
+Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
@@ -402,7 +402,7 @@ Press "OK":
 
 A confirmation dialog for the profile switch appears.
 
-You can confirm it with pressing "OK". Press "NEXT" to go to the next screen:
+You can confirm it with pressing "OK". Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
 ![image](../images/setup-wizard/Screenshot_20231202_143822.png)
 
@@ -428,7 +428,7 @@ Please read the documentation for your [insulin pump](../Getting-Started/Pump-Ch
 
 In this case we select "Virtual Pump".
 
-Press "NEXT" to go to the next screen:
+Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
 ![image](../images/setup-wizard/Screenshot_20231202_143935.png)
 
@@ -443,7 +443,7 @@ The reason SMB is disabled in the beginning is because the SMB feature enables f
 OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
 :::
 
-Press "NEXT" to go to the next screen:
+Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144014.png)
 
@@ -451,7 +451,7 @@ Only read the text and change nothing here.
 
 Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
 
-Press "NEXT" to go to the next screen:
+Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 
@@ -459,7 +459,7 @@ Press "NEXT" to go to the next screen:
 
 Let "Open Loop" remain selected.
 
-Press "NEXT" to go to the next screen:
+Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144049.png)
 
@@ -467,7 +467,7 @@ Press "NEXT" to go to the next screen:
 
 Let "Sensitivity Oref1" the standard for the sensitivty plugins selected.
 
-Press "NEXT" to go to the next screen:
+Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144101.png)
 
