@@ -123,52 +123,52 @@ Android увязывает использование Bluetooth со служб�
 
 Так как конфигурация **AAPS** содержит некоторые конфиденциальные данные (_напр. API_KEY для доступа к серверу Nightscout), здесь можно установить пароль.
 
-Второе предложение очень важно, **НЕ ПОТЕРЯЙТЕ ГЛАВНЫЙ ПАРОЛЬ**. Please make a note of it _e.g._ on Google Drive. Google Drive is a good place as it is backed up by Google for you. Your smartphone or PC can crash and you may have no actual copy. If you forget your Master Password, it can be difficult to recover your profile configuration and progress through the **Objectives** at a later date.
+Второе предложение очень важно, **НЕ ПОТЕРЯЙТЕ ГЛАВНЫЙ ПАРОЛЬ**. Please make a note of it _e.g._ on Google Drive. Google Drive - хорошее место, так как он создан специально для подобных целей. Телефон или ПК могут выйти из строя, оставив нас без актуальной копии. Если вы забыли главный пароль, то будет трудно восстановить конфигурацию профиля и прохождение **Целей**.
 
-After filling in the password twice, please click the "NEXT" button:
+После двукратного ввода пароля нажмите кнопку "Далее":
 
 ![image](../images/setup-wizard/Screenshot_20231202_130122.png)
 
-### Fabric upload
+### Загрузка отчета для разработчиков в Fabric
 
-Here you can setup the usage of an automated crash and usage reporting service.
+Здесь вы можете настроить автоматизированную службу отчетов о пользовании приложением и сбоях.
 
-It's not mandatory, but it is good practice to use it.
+Это не обязательно, но рекомендуется.
 
-It helps the developers to better understand your usage of the app, and informs them about crashes which happen.
+Это помогает разработчикам лучше понимать как пользователи работают с приложением и информирует о происходящих сбоях.
 
-They get:
+Они получают:
 
 1. The information that the app crashed, which they would not otherwise know since in their own set-up everything works fine and
-2. In the send data (crash information), there is information about the circumstances under which the crash happened, and what kind of configuration is being used.
+2. В отправляемых данных (информация о сбоях) содержится информация о обстоятельствах, при которых произошел сбой, а также о конфигурации приложения.
 
-So it helps the developers to improve the app.
+Что помогает разработчикам улучшить приложение.
 
 Please enable the "Fabric Upload" by sliding the slider to the right:
 
-![image](../images/setup-wizard/Screenshot_20231202_130136.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_130136.png)
 
-Furthermore you can identify yourself that just in case the developers want to reach out to you for questions or urgent concerns:
+Кроме того, вы можете определить что разработчики могут связаться с вами только по неотложным проблемам:
 
 ![image](../images/setup-wizard/Screenshot_20231202_130147.png)
 
-After filling in your "contact information" click the "OK" button. Contact information can be your identification on Facebook, on Discord, ... Just the information you think is helpful to contact you through the best route:
+Заполнив "контактную информацию" нажмите кнопку "ОК". Контактная информация может быть учетная запись в Facebook, на Discord, ... Просто информация для связи с вами наилучшим способом:
 
-![image](../images/setup-wizard/Screenshot_20231202_135748.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_135748.png)
 
 Нажмите кнопку «ДАЛЕЕ»:
 
-![image](../images/setup-wizard/Screenshot_20231202_135807.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_135807.png)
 
-### Units (mg/dl <-> mmol/dL)
+### Единицы (мг/дл <-> ммоль/л)
 
-Please select if your glucose values are in mg/dl or mmol/L and then please click the "NEXT" button:
+Выберите, в каких единицах хотите видеть значения гликемии -- в мг/дл или ммоль/л, затем нажмите кнопку "ДАЛЕЕ":
 
-![image](../images/setup-wizard/Screenshot_20231202_135830.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_135830.png)
 
-### Display settings
+### Параметры экрана
 
-Here you select the range for the sensor glucose display, which will be shown as "in range" between the values you set. You can leave it as the default values for now, and edit it later.
+Здесь выбираем диапазон значений, в котором хотим видеть свою гликемию. Его можно оставить заданным по умолчанию и отредактировать позже.
 
 The values you choose only affect the graphical presentation of the diagram, and nothing else.
 
