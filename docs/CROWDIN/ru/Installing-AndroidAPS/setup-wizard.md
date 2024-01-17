@@ -192,7 +192,7 @@ Please enable the "Fabric Upload" by sliding the slider to the right:
 
 In this example we select Nightscout as reporting server, and will configure it.
 
-:::{admonition}  Make sure to choose the correct **NSClient** version for your needs!
+:::{admonition}  Выберите версию **NSClient** под свои задачи!
 
 Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout, in which case, choose the first option "**NSClient**" until further notice.
 :::
