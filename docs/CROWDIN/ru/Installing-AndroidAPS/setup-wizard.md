@@ -168,27 +168,27 @@ Please enable the "Fabric Upload" by sliding the slider to the right:
 
 ### Параметры экрана
 
-Здесь выбираем диапазон значений, в котором хотим видеть свою гликемию. Его можно оставить заданным по умолчанию и отредактировать позже.
+Здесь выбираем диапазон значений, в котором хотим видеть свою гликемию. Его можно оставить заданным по умолчанию и отредактировать в дальнейшем.
 
-The values you choose only affect the graphical presentation of the diagram, and nothing else.
+Эти значения влияют только на графическое отображение ГК и больше ни на что.
 
-Your glucose target _e.g._ is configured separately in your profile.
+Так, например, целевые значения гликемии задаются отдельно в профиле.
 
-Your range to analyze TIR (time in range) is configured separately in your reporting server.
+Величины для анализа TIR (времени в целевом диапазоне) конфигурируются отдельно при создании отчетов на сервере отчетов.
 
-Please press the "NEXT" button:
+Нажмите кнопку «ДАЛЕЕ»:
 
-![image](../images/setup-wizard/Screenshot_20231202_135853.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_135853.png)
 
-### Synchronization with the reporting server and more
+### Синхронизация с сервером отчетов и другие вопросы
 
-Here you are configuring the data upload to your reporting server.
+Здесь вы настраиваете загрузку данных на сервер отчетов.
 
-You could do other configurations here too, but for the first run we will just focus on the reporting server.
+Здесь также можно выполнить другие настройки, но для первого запуска мы сосредоточимся на сервере отчетов.
 
-If you are not able to set it up at the moment, skip it for now. You can configure it later.
+Если вам неудобно заниматься этим в данный момент, пропустите их. Их можно сделать потом.
 
-If you select an item here on the left tick box, on the right you can then ticking the visibility (eye) box, which will place this plugin in the upper menu on the **AAPS** home screen. Please select the visibility too if you configure your reporting server at this point.
+Если вы выберете элемент, отметив его галочкой слева, то справа можно поставить галочку на видимость этого элемента (пиктограмма глаза), что одновременно включает этот модуль в верхнее меню на главном экране **AAPS**. Если на этом этапе вы настраиваете сервер отчетов, для него тоже выбирайте видимость.
 
 In this example we select Nightscout as reporting server, and will configure it.
 
