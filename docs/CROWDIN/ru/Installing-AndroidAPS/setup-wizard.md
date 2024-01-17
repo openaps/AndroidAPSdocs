@@ -197,81 +197,81 @@ In this example we select Nightscout as reporting server, and will configure it.
 Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout, in which case, choose the first option "**NSClient**" until further notice.
 :::
 
-For Tidepool it is even simpler, as you only need your personal login information.
+Для Tidepool проще, так как требуются только персональные данные для входа.
 
-After making your selection, please press the "NEXT" button:
+Выбрав нужный вариант, нажмите кнопку «ДАЛЕЕ»:
 
-![image](../images/setup-wizard/Screenshot_20231202_140916.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_140916.png)
 
-Here you are configuring the Nightscout reporting server.
+Здесь вы настраиваете сервер отчетов Nightscout.
 
-Please click on "Nightscout URL":
+Нажмите на "URL-адрес Nightscout":
 
-![image](../images/setup-wizard/Screenshot_20231202_140952.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_140952.png)
 
-Enter you Nightscout URL which is your personal Nightscout server. It's just an URL you setup yourself, or you were given from your service provider for Nightscout.
+Enter you Nightscout URL which is your personal Nightscout server. Это просто URL-адрес, который вы настроили самостоятельно, или он был предоставлен поставщиком услуг Nightscout.
 
-Please click the "OK" button:
+Нажмите кнопку "OK":
 
-![image](../images/setup-wizard/Screenshot_20231202_141051.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_141051.png)
 
-Enter your nightscout access token. This is the access token for your Nightscout server you configured. Without this token, access will not work.
+Введите атрибут защиты доступа к Nightscout. Это код доступа для Nightscout, настроенный вами. Без него доступа не будет.
 
-If you don't have it at the moment please check the documentation for setting up the reporting server in the **AAPS** documentation.
+Если в данный момент у вас его нет, см. настройку сервера отчетов в документации **AAPS**.
 
 After filling in the "**NS access token**" and clicking "OK", please click on the "Synchronization" button:
 
-![image](../images/setup-wizard/Screenshot_20231202_141131.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_141131.png)
 
 Please select "Upload data to NS" if you already configured nightscout in the previous steps of the Setup Wizard.
 
-If you have stored profiles on Nightscout and want to download them to **AAPS**, enable "Receive profile store":
+Если вы хранили профили на Nightscout и хотите загрузить их в **AAPS**, включите "Принимать хранилище профилей":
 
-![image](../images/setup-wizard/Screenshot_20231202_141219.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_141219.png)
 
-Go back to the previous screen and select "Alarm option":
+Вернитесь на предыдущий экран и выберите "Опции оповещения":
 
-![image](../images/setup-wizard/Screenshot_20231202_141310.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_141310.png)
 
-For now, leave the switches disabled. We only walked to the screen to make you familar with possible options you might configure in the future. At the moment there is no need to do it.
+Пока что оставьте переключатели неактивными. Мы зашли на этот экран только чтобы показать параметры, которые можно настроить в будущем. В настоящий момент такой необходимости нет.
 
-Go back to the previous screen before and select "Connection settings".
+Вернитесь на предыдущий экран и выберите "Параметры подключения".
 
-Here you can configure how to transfer your data to the reporting server.
+Здесь вы можете настроить способ передачи данных на сервер отчетов.
 
-Caregivers must enable "use cellular connection" as otherwise the smartphone which serves the dependant/child can not upload data outside of WiFi range _e.g._ on the way to school.
+Лица, осуществляющие уход, должны включить опцию "использовать сотовую связь", поскольку в противном случае смартфон, обслуживающий иждивенца/ребенка, не сможет передавать данные за пределы зоны действия Wi-Fi, например, по дороге в школу.
 
-Other **AAPS** users can disable the tranfer via cellular connection if they want to save data or battery.
+Другие пользователи **AAPS** могут отключить передачу данных через сотовое соединение, если хотят экономить данные или батарею.
 
-If in doubt, just leave all enabled.
+Если сомневаетесь, просто оставьте все включенным.
 
-Go back to the screen before and select "Advanced Settings".
+Вернитесь на предыдущий экран и выберите "Дополнительные настройки".
 
-![image](../images/setup-wizard/Screenshot_20231202_141326.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_141326.png)
 
-Enable "Log app start to NS" if you want get this information in the reporting server. It can help you to know remotely if and when the app has been restarted, particularly as a caregiver.
+Включите "Передать в NS запись о начале работы приложения", если хотите получить эту информацию на сервере отчетов. Это может помочь вам удаленно узнать, было ли перезапущено приложение и когда именно, особенно если вы лицо, осуществляющее уход.
 
-It might be interesting to see if **AAPS** is correctly configured now, but later it is usually not that important to be able to see **AAPS** stopping or starting in Nightscout.
+На начальном этапе интересно посмотреть, правильно ли настроен \*\* AAPS **, но потом уже не так важно видеть, как \*\* AAPS** останавливается или запускается в Nightscout.
 
-Enable "Create announcements from errors" and "Create announcements from carbs required alerts".
+Включите "Создавать оповещение на основе названия ошибки" и "Создавать оповещения из напоминаний о необходимых углеводах".
 
-Leave "Slow down uploads" disabled. You would only use it in unusual circumstances if for example a lot of information is to be transfered to the Nightscout server, and the Nightscout server is being slow in processing this data.
+Leave "Slow down uploads" disabled. Эта функция может пригодиться только в необычных обстоятельствах, если, например, на сервер Nightscout необходимо передать много информации, а Nightscout медленно обрабатывает данные.
 
-Go back to the screen before and select "NEXT" to go to the next screen:
+Вернитесь к предыдущему экрану и выберите "ДАЛЕЕ", чтобы перейти к следующему экрану:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141351.png)
 
 ### Имя пациента
 
-Here you can setup your name in **AAPS**.
+Здесь указываем свое имя в **AAPS**.
 
-It can be anything. It's just for differentiating users.
+Можете выбрать любое. Это нужно, чтобы различать пользователей.
 
 To keep it simple just enter first name and last name.
 
-Press "NEXT" to go to the next screen.
+Нажмите "ДАЛЕЕ" и перейдите к следующему экрану.
 
-![image](../images/setup-wizard/Screenshot_20231202_141445.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_141445.png)
 
 ### Тип пациента
 
@@ -335,7 +335,7 @@ It's required that you have determined and discussed your profile with your doct
 If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia.
 :::
 
-Press "NEXT" to go to the next screen. Enter a "profile name":
+Нажмите "ДАЛЕЕ" и перейдите к следующему экрану. Enter a "profile name":
 
 ![image](../images/setup-wizard/Screenshot_20231202_142027.png)
 
@@ -422,7 +422,7 @@ Otherwise, leave the Setup Wizard, using the arrow in the top left corner and le
 
 Please read the documentation for your [insulin pump](../Getting-Started/Pump-Choices.md).
 
-Press "NEXT" to go to the next screen.
+Нажмите "ДАЛЕЕ" и перейдите к следующему экрану.
 
 ![image](../images/setup-wizard/Screenshot_20231202_143909.png)
 
