@@ -314,30 +314,30 @@ Here you select your "Patient type" which is important, as the **AAPS** software
 
 ![image](../images/setup-wizard/Screenshot_20231202_141925.png)
 
-If you are using Dexcom G6 with BYODA, click on the "cog/gearwheel" to access the settings for BYODA.
+При использовании самостоятельно собранным приложением BYODA для Dexcom G6 нажмите на "шестеренку" для доступа к настройкам BYODA.
 
-Enable the "Upload BG data to NS" and "Log sensor change to NS".
+Включите «Загружать данные ГК в NS» и «Вносить запись о замене сенсора в NS».
 
 Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
-![image](../images/setup-wizard/Screenshot_20231202_141958.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_141958.png)
 
 ### Профиль
 
-Now we are entering a very important part of the Setup Wizard.
+Теперь мы переходим к очень важной части мастера установки.
 
-Please read the documentation about profiles before you try to enter your profile details on the following screen.
+Прежде чем вводить данные профиля на следующем экране, ознакомьтесь с документацией по профилям.
 
-:::{admonition} Working profile required - no exceptions here !
+:::{admonition} Требуется работающий профиль - здесь нет исключений !
 
-It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
+Важно определить и обсудить ваш профиль с эндокринологом, провести успешное тестирование базального инсулина, определить фактор чувствительности к инсулину ISF и углеводный коэффициент IC!
 
-If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia.
+Если роботу задать неверные вводные данные, то он все время будет работать неправильно. **AAPS** может работать только с той информацией, которая ему предоставлена. Если профиль слишком сильный, вы рискуете гипогликемией, а если он слишком слабый,- то гипергликемией.
 :::
 
-Нажмите "ДАЛЕЕ" и перейдите к следующему экрану. Enter a "profile name":
+Нажмите "ДАЛЕЕ" и перейдите к следующему экрану. Введите "название профиля":
 
-![image](../images/setup-wizard/Screenshot_20231202_142027.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_142027.png)
 
 You can have several profiles in the long-term if needed. We only create one here.
 
