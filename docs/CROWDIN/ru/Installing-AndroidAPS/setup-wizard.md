@@ -360,130 +360,130 @@ Here you select your "Patient type" which is important, as the **AAPS** software
 
 ![снимок экрана](../images/setup-wizard/Screenshot_20231202_143009.png)
 
-Press "BAS". Enter your basal values:
+Нажмите "БАЗАЛ". Введите значения базального профиля:
 
-![image](../images/setup-wizard/Screenshot_20231202_143623.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_143623.png)
 
-Press "TARG". Enter your blood sugar target values.
+Нажмите "ЦЕЛЬ". Введите целевые значения сахара в крови.
 
-For open looping this target can be a wider range, as otherwise **AAPS** notifies you permanently to change the temporary basal rate or another setting, which can be exhausting.
+Для открытого цикла этот целевой диапазон может быть шире, так как в противном случае **AAPS** постоянно уведомляет вас об изменении временной базальной скорости или другой настройки, что надоедает.
 
-Later, for closed looping, you will generally have only one value for top and bottom. That makes it easier for **AAPS** to hit the target and give you better overall diabetes control.
+Позднее для замкнутого цикла у вас обычно будет одно значение для верхней и нижней границы. Это облегчает работу **AAPS** по достижению целевого диапазона и общий контроль над диабетом.
 
-Enter/confirm the target values:
+Введите/подтвердите целевые значения:
 
 ![image](../images/setup-wizard/Screenshot_20231202_143709.png)
 
-Save the profile by clicking on "SAVE":
+Сохраните профиль, нажав "СОХРАНИТЬ":
 
-![image](../images/setup-wizard/Screenshot_20231202_143724.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_143724.png)
 
-After saving a new buttom "Activate Profile" occurs.
+После сохранения профиля появляется новая кнопка "Активировать профиль".
 
-:::{admonition} Several defined but only one active profile
-:class: information
-You can have several profiles defined, but only one activated profile running at any given time.
+:::{admonition} Несколько заданных, но только один активный профиль
+:class: информация
+Можно иметь несколько заданных профилей, но в каждый данный момент активен только один.
 :::
 
-Press "Activate Profile":
+Нажмите "Активировать профиль":
 
-![image](../images/setup-wizard/Screenshot_20231202_143741.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_143741.png)
 
-The profile switch dialogue appears. In this case let it stay as preset.
+Появляется диалог переключения профиля. В этом случае он останется как предустановленный.
 
-:::{admonition} Several defined but only one active profile
-:class: information
-You will learn later how to use this general dialog to handle situations like illness or sport, where you need to change your profile suitable for the circumstances.
+:::{admonition} Несколько заданных, но только один активный профиль
+:class: информация
+В дальнейшем вы узнаете, как пользоваться этим диалогом в таких ситуациях, как болезнь или спорт, когда есть необходимость изменить профиль.
 :::
 
-Press "OK":
+Нажмите "OK":
 
-![image](../images/setup-wizard/Screenshot_20231202_143808.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_143808.png)
 
-A confirmation dialog for the profile switch appears.
+Появляется диалог подтверждения переключения профиля.
 
-You can confirm it with pressing "OK". Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
+Подтвердите нажав кнопку "OK". Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
-![image](../images/setup-wizard/Screenshot_20231202_143822.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_143822.png)
 
-Your profile has now been set:
+Ваш профиль установлен:
 
-![image](../images/setup-wizard/Screenshot_20231202_143833.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_143833.png)
 
 ### Инсулиновая помпа
 
-Now you are selecting your insulin pump.
+Теперь выберем инсулиновую помпу.
 
-You get an important warning dialog. Please read it, and press "OK".
+Появится важный диалог предупреждения. Прочитайте его и нажмите "OK".
 
-If your have already setup your profile in the steps before and you know how to connect your pump, feel free to connect it now.
+Если ваш профиль уже установлен на предыдущих шагах и вы знаете, как подключить помпу, сделайте это сейчас.
 
-Otherwise, leave the Setup Wizard, using the arrow in the top left corner and let **AAPS** first show you some blood glucose values. You can come back anytime or use one of the direct configuration options (not using the Wizard).
+В ином случае, выйдите из мастера установки через стрелку в верхнем левом углу и дождитесь, когда **AAPS**отобразит несколько значений ГК. Вы можете вернуться к этому в любое время или использовать один из параметров прямой конфигурации (минуя мастер).
 
-Please read the documentation for your [insulin pump](../Getting-Started/Pump-Choices.md).
+Ознакомьтесь с документацией по вашей [инсулиновой помпе](../Getting-Started/Pump-Choices.md).
 
 Нажмите "ДАЛЕЕ" и перейдите к следующему экрану.
 
-![image](../images/setup-wizard/Screenshot_20231202_143909.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_143009.png)
 
-In this case we select "Virtual Pump".
+В данном случае мы выберем "Виртуальную помпу".
 
 Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
-![image](../images/setup-wizard/Screenshot_20231202_143935.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_143935.png)
 
 ### Алгоритм APS
 
-Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name the SMB feature of the algorithm is disabled until you are familar with AAPS and already worked through the first objectives. OpenAPS SMB is newer and in general better compared to the OpenAPS AMA anyway.
+Примените алгоритм OpenAPS SMB. Несмотря на название, функция алгоритма микроболюсов SMB отключена до полного знакомства с AAPS и прохождения первых целей. В любом случае алгоритм OpenAPS SMB новее и лучше по сравнению с OpenAPS AMA.
 
-The reason SMB is disabled in the beginning is because the SMB feature enables faster reaction on blood sugar increase through the Super Micro Bolus instead of increasing the basal rate percentage. As in the begining your profile is in general not as good as after some time of experience the feature is disabled in the begining.
+Причина, по которой SMB отключён в начале, заключается в том, что функция SMB позволяет быстрее реагировать на увеличение сахара в крови через супермикроболюсы, а не повышать базальную скорость. Поскольку на начальном этапе ваш профиль в целом не так хорош, как с приобретением опыта, эта функция сначала отключена.
 
-:::{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
-:class: information
-OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
+:::{admonition} Пользуйтесь старым алгоритмом **OpenAPS AMA**, если хорошо понимаете, что делаете
+:class: информация
+OpenAPS AMA является самым простым алгоритмом, который не поддерживает микроболюсы для коррекции высоких значений ГК. Могут возникнуть ситуации, когда лучше использовать этот алгоритм, но, как правило, это не рекомендуется.
 :::
 
 Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
-![image](../images/setup-wizard/Screenshot_20231202_144014.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_144014.png)
 
-Only read the text and change nothing here.
+Только прочтите текст и ничего не меняйте.
 
-Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
+В связи с ограничениями, налагаемыми **Целями**, вы все равно не сможете активировать "замкнутый цикл" или "SMB" на этом этапе.
 
 Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
-![image](../images/setup-wizard/Screenshot_20231202_144025.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_144025.png)
 
 ### Режим APS
 
-Let "Open Loop" remain selected.
+Оставьте выбранным "Открытый цикл".
 
 Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
-![image](../images/setup-wizard/Screenshot_20231202_144049.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_144049.png)
 
 ### Определение чувствительности
 
-Let "Sensitivity Oref1" the standard for the sensitivty plugins selected.
+Выберите "Чувствительность Oref1" в качестве модуля чувствительности.
 
 Нажмите "ДАЛЕЕ" и перейдите к следующему экрану:
 
-![image](../images/setup-wizard/Screenshot_20231202_144101.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_144101.png)
 
-### Start Objective 1
+### Начните выполнение Цели 1
 
-You are entering now the Objectives. The qualification for access to further **AAPS** features.
+Здесь вы приступаете к Целям. Это приобретение навыков для доступа к дополнительным функциям **AAPS**.
 
-Here we start Objective 1, even if at the moment our setup is not completely ready to successfully complete this Objective.
+Здесь мы запускаем цель 1, даже если на данный момент наши настройки не полностью готовы к завершению этой цели.
 
-But this is the start.
+Но это – начало.
 
-Press the green "START" to to start objective 1:
+Нажмите на зеленую надпись "СТАРТ" для запуска Цели 1:
 
-![image](../images/setup-wizard/Screenshot_20231202_144113.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_144113.png)
 
-You see that you already made some progress, but other areas are to be done.
+Вы видите, что уже добились определенного прогресса, но другие области еще не завершены.
 
 Press "FINISH" to go to the next screen.
 
