@@ -339,26 +339,26 @@ Here you select your "Patient type" which is important, as the **AAPS** software
 
 ![снимок экрана](../images/setup-wizard/Screenshot_20231202_142027.png)
 
-You can have several profiles in the long-term if needed. We only create one here.
+В дальнейшем при необходимости можно настроить несколько профилей. Мы здесь создадим только один.
 
-:::{admonition} Profile only for tutorial - not for your usage
+:::{admonition} Профиль только для обучения - не для использования
 
-It is not intended to be an accurate profile or something very well optimised, because each person's needs are so different.
+Он не должен быть точным или хорошо оптимизированным, потребности разные у каждого человека.
 
-Don't use it for actually looping!
+Еще раз напоминаем - это учебный профиль, не применяйте его!
 :::
 
-Enter your Duration of insulin Action (DIA) in hours. Then press "IC":
+Введите время действия инсулина (DIA) в часах. Затем нажмите "IC" (углеводный коэффициент):
 
-![image](../images/setup-wizard/Screenshot_20231202_142143.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_142143.png)
 
-Enter your IC values:
+Введите значения вашего углеводного коэффициента IC:
 
-![image](../images/setup-wizard/Screenshot_20231202_142903.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_142903.png)
 
-Press "ISF". Enter your ISF values:
+Нажмите "ISF" (фактор чувствительности к инсулину). Введите ваши значения фактора чувствительности к инсулину ISF:
 
-![image](../images/setup-wizard/Screenshot_20231202_143009.png)
+![снимок экрана](../images/setup-wizard/Screenshot_20231202_143009.png)
 
 Press "BAS". Enter your basal values:
 
