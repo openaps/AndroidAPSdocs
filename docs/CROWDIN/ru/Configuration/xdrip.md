@@ -32,15 +32,15 @@
 
 ![основные настройки xDrip+ 3](../images/xDrip_Basic3.png)
 
-### **Настройки интеграции приложений** (Трансляция)
+### **Настройки интеграций с приложениями** (Трансляция)
 
-If you are going to use AAPS and the data should be forwarded to i.e. AAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
+При работе AAPS необходимы данные гликемии, которые передаются при помощи локальной передачи данных. Она включается в настройках интеграции с приложениями.
 
-→ Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
+→ Сэндвич-меню (1) → Настройки (2) → Настройки интеграций с приложениями (3) → Локальная трансляция данных **ВКЛ** (4)
 
 In order for the values to be identical in AAPS with respect to xDrip+, you should activate `Send the displayed glucose value` (5).
 
-Enable Compatible Broadcast (6).
+Включите совместимую трансляцию (6).
 
 ![xDrip+ Basic Settings 4](../images/xDrip_Basic4.png)
 
