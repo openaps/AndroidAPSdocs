@@ -1,33 +1,32 @@
 # Настройки xDrip+
 
-If not already set up, then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
+Если это еще не сделано, загрузите [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
 Отключите оптимизацию заряда батареи и разрешите фоновую активность приложению xDrip+.
 
-You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features or are using sensors that are being actively integrated (like G7), in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
+Вы можете безопасно загрузить [ новую (стабильную) версию APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), если только вам не нужны новейшие функции или вы пользуетесь сенсорами, которые активно интегрируются (как G7). В этом случае следует загружать т. н. [Ночную сборку](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Основные настройки для всех систем мониторинга
 
-### Disable Nightscout upload
+### Отключите выгрузку в Nightscout
 
-Starting with AAPS 3.2, you shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+Начиная с AAPS 3.2, не позволяйте никаким другим приложениям загружать данные (уровень глюкозы в крови и терапию) в Nightscout.
 
-→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) -> Nightscout Sync (REST-API)(4) → Switch **OFF** `Enabled` (5)
+→ Сэндвич-меню (1) → Настройки (2) → Загрузка в облако(3) -> Синхронизация с Nightscout (REST-API)(4) → Передать данные в NS **** `Выключено` (5)
 
 ![основные настройки xDrip+ 1](../images/xDrip_Basic1.png)
 
-#### Disable automatic calibration and treatments
+#### Отключите автоматическую калибровку и терапию
 
-If you use an older version of AAPS (before 3.2), make sure to deactivate `Automatic Calibration` (7) If the checkbox for `Automatic Calibration` is checked, activate `Download treatments` (6) once, then remove the checkbox for `Automatic Calibration` and deactivate `Download treatments` again.
+Если вы используете более старую версию AAPS (до версии 3.2), обязательно отключите `автоматическую калибровку` (7) Если установлен флажок для `Автоматической калибровки`, активируйте `Загрузку терапии` (6) один раз, затем снимите флажок с `Автоматической калибровки` и снова деактивируйте `Загрузку терапии`.
 
 ![основные настройки xDrip+ 2](../images/xDrip_Basic2.png)
 
-Tap `Extra Options`(8)
+Если Нажать на `Дополнительные опции`)
 
-:::{admonition} Safety warning :class: warning You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.  
-:::
+:::Предупреждение безопасности: Следует деактивировать "Загружать лечение/назначения" с xDrip, иначе в AAPS эти величины удвоятся, что приведет к неверному количеству активных углеводов COB и активного инсулина IOB:::
 
-Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill data` (11).
+Отключите `Загрузку терапии`(9) и убедитесь, что вы ** НЕ будете** пользоваться `Обратным заполнением данных` (11).
 
 Option `Alert on failures` should also be deactivated (10). Otherwise you will get an alarm every 5 minutes in case Wi-Fi/mobile network issues or if the server is not available.
 
