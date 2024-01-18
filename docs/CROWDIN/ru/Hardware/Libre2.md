@@ -30,7 +30,7 @@ Remark: The transmitter can be used in parallel to the LibreLink app without int
 :::
 
 - Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [this latest OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) as the one in the document is obsolete.
-- Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
+- Следуйте инструкциям по установке на странице настроек [xDrip+](../Configuration/xdrip.md).
 
 -   В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите xDrip+.
 
@@ -138,9 +138,9 @@ Once the sensor started with the patched app, you won't be able to connect it to
 
 Значения гликемии передаются на смартфон приложением xDrip+.
 
--   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
+-   Вы можете безопасно загрузить [ новую (стабильную) версию APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), если только вам не нужны новейшие функции. В этом случае следует загружать т. н. [Ночную сборку](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Set xDrip+ with the [patched app data source](../Configuration/xdrip.md#lbre-2-patched-app).
--   Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
+-   Следуйте инструкциям по установке на странице настроек [xDrip+](../Configuration/xdrip.md).
 
 ### Step 4: Start sensor
 
