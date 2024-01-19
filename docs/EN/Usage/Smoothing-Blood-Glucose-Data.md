@@ -1,7 +1,7 @@
 (Smoothing-Blood-Glucose-Data)=
 # Smoothing blood glucose data
 
-If BG data is jumpy/noisy AAPS may dose insulin incorrectly resulting in high or low BG. If you observe errors in your CGM data it is important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM configuration or sensor problems/site issues. You may need to replace your CGM sensor to resolve this.
+If **BG** data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in highs or lows. If you observe errors in your CGM data it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or CGM sensor site issue (which may require replacing the CGM sensor)
 
 Some CGM systems have internal algorithms to detect the noise level in the readings and AAPS can use this information to avoid giving SMBs if the BG data is too unreliable. However, some CGMs do not transmit this data and for these BG sources 'Enable SMB always' and 'Enable SMB after carbs' are disabled for safety reasons.
 
@@ -21,5 +21,7 @@ Use this option with noisy G6 sensors (BYODA and xDrip+ native).
 
 ## No Smoothing
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to AAPS.  
-Use this option with G6 (BYODA), Libre 2 and 3 from xDrip+ (already smoothed by the app).
+Use this option:
+
+- only if your CGM data is being properly smoothed by your collector app before being transmitted to AAPS; or 
+- with G6 (BYODA), Libre 2 and 3 from xDrip+ (already smoothed by the app).
