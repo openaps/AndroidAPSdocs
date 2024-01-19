@@ -44,24 +44,24 @@ In order for the values to be identical in AAPS with respect to xDrip+, you shou
 
 ![xDrip+ Basic Settings 4](../images/xDrip_Basic4.png)
 
-If you have also activated `Accept treatments` in xDrip+ and `Enable broadcasts to xDrip+` in AAPS xDrip+ plugin, then xDrip+ will receive insulin, carbs and basal rate information from AAPS.
+Если вы также включили `принимать статусы извне` в xDrip+ и `Включить передачу в xDrip+` в плагине AAPS xDrip+, то xDrip+ будет получать информацию об инсулинах, углеводах и базальной скорости от AAPS.
 
-If you enable `Accept Calibrations`, xDrip+ will use the calibrations from AAPS. Be careful when you use this feature with Dexcom sensors: read [this](https://navid200.github.io/xDrip/docs/Calibrate-G6.html) first.
+Если вы включите `Принимать калибровки`, xDrip+ будет использовать калибровки AAPS. Будьте осторожны при использовании этой функции с сенсорами Dexcom: сначала прочитайте [это](https://navid200.github.io/xDrip/docs/Calibrate-G6.html).
 
-Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time AAPS sends a basal/profile change.
+Не забудьте отключить звуки импорта, чтобы xDrip+ не издавал звуковые сигналы каждый раз, когда AAPS отправляет изменения базы/профиля.
 
 ![xDrip+ Basic Settings 5](../images/xDrip_Basic5.png)
 
 (xdrip-identify-receiver)=
 
-#### Идентификатор ресивера
+#### Установить получателя
 
-- If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to → Hamburger Menu (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
+- Если возникают проблемы с локальной трансляцией (AAPS не получает значения ГК из xDrip+), перейдите в сэндвич-меню → (1) Настройки (2) → Настройки интеграций с приложениями (3) → Установить получателя (7) и введите `info.nightscout.androidaps` для сборки AAPS (если сборка PumpControl, вместо этого введите `info.nightscout.aapspumpcontrol`!!).
 - Внимание: Автокоррекция, как правило, меняет i на прописную букву. **Используйте только строчные буквы** при вводе `info.nightscout.androidaps` (или `info.nightscout.aapspumpcontrol` для PumpControl). Прописная I не позволит AAPS получать данные ГК из xDrip+.
     
     ![xDrip+ Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-## Use AAPS to calibrate in xDrip+
+## Используйте AAPS для калибровки в xDrip+
 
 - If you want to be able to use AAPS to calibrate then in xDrip+ go to Settings → Interapp Compatibility → Accept Calibrations and select ON. 
 - You may also want to review the options in Settings → Less Common Settings → Advanced Calibration Settings.
