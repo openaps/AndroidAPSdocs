@@ -64,7 +64,7 @@ In order for the values to be identical in AAPS with respect to xDrip+, you shou
 ## Используйте AAPS для калибровки в xDrip+
 
 - If you want to be able to use AAPS to calibrate then in xDrip+ go to Settings → Interapp Compatibility → Accept Calibrations and select ON. 
-- You may also want to review the options in Settings → Less Common Settings → Advanced Calibration Settings.
+- Другие варианты см. в Настройках → Менее распространенные настройки → Расширенная калибровка/Дополнительные параметры калибровки.
 
 ## Dexcom G6
 
@@ -74,16 +74,16 @@ In order for the values to be identical in AAPS with respect to xDrip+, you shou
 
 ### Версия xDrip+ в зависимости от серии трансмиттера G6.
 
-- All G6 transmitters manufactured after fall/end 2018 are called "Firefly". They do not allow sensor restart without [removing the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), they do not send raw data. It is recommended to use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
-- Old rebatteried transmitters and modified trasmitters allow sensor life extension and restarts, they also send raw data. You can use the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
+- All G6 transmitters manufactured after fall/end 2018 are called "Firefly". Они не позволяют перезапустить сенсор без [ извлечения трансмиттера](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), они не отправляют необработанные данные. Рекомендуется использовать самые свежие [Ночные сборки](https://github.com/NightscoutFoundation/xDrip/releases) xDrip+.
+- Трансмиттеры с замененными старыми батареями и модифицированные трансмиттеры позволяют продлить срок службы сенсора и перезапускать его, они также отправляют необработанные данные. You can use the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
 
 ### Настройки для работы с Dexcom
 
-- Follow [these instructions](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html) to setup xDrip+.
+- Для настройки xDrip+ следуйте [этой инструкции](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html).
 
 ### Упреждающие перезапуски не рекомендуются
 
-**Only rebatteried or modified Dexcom transmitters. [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) do not work with standard transmitters and will stop the sensor completely: you need to [remove the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html) to restart the sensor.**
+**Только перезаряженные или модифицированные трансмиттеры Dexcom. [Упреждающий перезапуск](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) не работает со стандартными трансмиттерами и приводит к полной остановке сенсора: следует [ извлечь трансмиттер](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), чтобы перезапустить сенсор.**
 
 Автоматическое продление работы сенсоров Dexcom (`упреждающие перезапуски, preemtive restarts`) не рекомендуется, так как может привести к скачкам значений ГК на 9 день после перезапуска.
 
@@ -111,49 +111,49 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.ht
 
 ### Состояние батареи трансмиттера
 
-- Battery status can be controlled in system status  
-    → Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen.
+- Состояние батареи можно контролировать в разделе Состояние системы  
+    → Сэндвич-меню (1) → Состояние системы (2) → На классической странице состояния (3), сдвиньте экран влево (4), чтобы перейти к → Экрану состояния G5/G6/G7.
 
 ![xDrip+ System status](../images/xDrip_Dexcom_Battery.png)
 
-- See [here](https://navid200.github.io/xDrip/docs/Battery-condition.html) for more information.
+- Подробнее [здесь](https://navid200.github.io/xDrip/docs/Battery-condition.html).
 
 (xdrip-extend-transmitter-life)=
 
 ### Увеличение срока работы трансмиттера
 
-- [Lifetime](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) cannot be extended for Firefly transmitters: only rebatteried or modified transmitters.
-- Follow [these instructions](https://navid200.github.io/xDrip/docs/Hard-Reset.html) for non-Firefly transmitters.
+- <[Срок службы](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) трансмиттеров Firefly не может быть продлен: возможность остается только для тех, в которых заменена батарея или для модифицированных трансмиттеров.
+- Следуйте [этим инструкциям](https://navid200.github.io/xDrip/docs/Hard-Reset.html) для трансмиттеров, отличных от Firefly.
 
 (xdrip-replace-transmitter)=
 
 ### Замена трансмиттера
 
 - Выключите оригинальный ресивер Dexcom (если используете).
-- [Stop sensor](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html) (only if replacing sensor).
+- Нажмите на [Остановить сенсор](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html) (только при замене сенсора).
 
-- Забудьте устройство в системном состоянии XDrip и в настройках BT смартфона (показывается как Dexcom?? где ?? are the last two digits of the transmitter serial no.)  
-    → Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen → Forget Device (5).
+- Забудьте устройство в системном состоянии XDrip и в настройках BT смартфона (показывается как Dexcom?? где ?? являются последними двумя цифрами серийного номера трансмиттера)  
+    → Сэндвич - меню (1) → Состояние системы (2) → На классической странице состояния (3) сдвиньте экран влево (4), чтобы перейти к → Экрану состояния G5/G6 /G7 → Забыть устройство (5).
 
 ![xDrip+ System status](../images/xDrip_Dexcom_StopSensor.png)
 
 - Remove transmitter (and sensor if replacing sensor). To remove transmitter without removing sensor see [this](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), or this video <https://youtu.be/AAhBVsc6NZo>.
-- Поместите старый трансмиттер подальше, чтобы предотвратить повторное соединение. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% sure no one is turning the microwave on.
+- Поместите старый трансмиттер подальше, чтобы предотвратить повторное соединение. Микроволновая печь является идеальным щитом Фарадея - но отключите кабель питания, чтобы быть на 100% уверенным, что никто ее не включит.
 - Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 - Не включайте оригинальный ресивер Dexcom (если им пользуетесь) до появления первых данных в xDrip+.
 
 ### Новый сенсор
 
 - Выключите оригинальный ресивер Dexcom (если используете).
-- Stop sensor following [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html).
+- Остановите сенсор по [этим инструкциям](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html).
 
-- Insert and then start a new sensor following [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
+- Вставьте и запустите новый сенсор по [этим инструкциям](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
 (xdrip-retrieve-sensor-code)=
 
 ### Получение кода сенсора
 
-→ Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen → Calibration Code.
+→ Сэндвич-меню (1) → Состояние системы (2) → На классической странице состояния (3), сдвиньте экран влево (4), чтобы перейти к → Экрану состояния G5/G6/G7 → Код калибровки.
 
 ![xDrip+ Получение кода сенсора Dexcom 2](../images/xDrip_Dexcom_SensorCode2.png)
 
@@ -163,15 +163,15 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.ht
 
 #### Проблемы сопряжения с трансмиттером
 
-Follow [these instructions](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html).
+Следуйте [этим инструкциям](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html).
 
 #### Проблемы при запуске нового сенсора
 
-Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html).
+Следуйте [этим инструкциям](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html).
 
 ## Libre 1
 
-- Setup your NFC to Bluetooth bridge in xDrip+
+- Настройте мост NFC - Bluetooth в xDrip+
     
     → Hamburger Menu (1) → Settings (2) → Less common settings (3) → Bluetooth Settings (4)
 
