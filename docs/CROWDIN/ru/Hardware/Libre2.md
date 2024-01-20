@@ -1,6 +1,6 @@
 # Freestyle Libre 2
 
-The Freestyle Libre 2 sensor is now a real CGM even with the official app. Still, LibreLink cannot send data to AAPS. There are several solutions to use it with AAPS.
+Сенсор Freestyle Libre 2 теперь является полноценным непрерывным мониторингом даже с официальным приложением. Тем не менее, LibreLink не в состоянии отправлять данные в AAPS. There are several solutions to use it with AAPS.
 
 ## 1. Use a Bluetooth bridge and OOP
 
