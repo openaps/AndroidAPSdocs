@@ -57,30 +57,30 @@ Check the bridge and app you want to use are compatible with your sensor and xDr
 Затем в модифицированном приложении Libre 2 следует установить источником данных xDrip+, чтобы получать данные из Juggluco.  
 :::
 
-## 5. Use the patched LibreLink app with xDrip+
+## 5. Использовать модифицированное приложение LibreLink с xDrip+
 
-:::{admonition} Libre 2 EU only :class: warning The patched app is an old version (22/4/2019) and might not be compatible with recent Android releases.  
+:::{admonition} предостережение только Libre 2 для EU :class: предупреждение Модифицированное приложение имеет старую версию (22/4/2019) и может быть несовместимо с последними версиями Android.  
 :::
 
-### Step 1: Build the patched app
+### Шаг 1: Создаем модифицированное приложение
 
-For legal reasons, "patching" has to be done by yourself. Используйте поисковые системы для поиска соответствующих ссылок. There are two variants: The recommended original patched app blocks any internet traffic to avoid tracking. The other variant supports LibreView.
+По юридическим причинам установка так называемого патча выполняется самостоятельно. Используйте поисковые системы для поиска соответствующих ссылок. Существует два варианта: рекомендуемое оригинальное модифицированное приложение блокирует любой интернет-трафик, чтобы избежать отслеживания. Другой вариант поддерживает LibreView.
 
 Вместо оригинального приложения следует установить модифицированное. Следующий датчик, установленный с его помощью, будет передавать текущие значения гликемии приложению xDrip+, работающему на смартфоне через Bluetooth.
 
 Важно: чтобы избежать возможных проблем, рекомендуем сначала установить и затем деинсталлировать оригинальное приложение на смартфон с поддержкой NFC. NFC должен быть включен. Он не требует дополнительной энергии. Затем установите модифицированное приложение.
 
-Исправленное приложение можно определить с помощью уведомления об авторизации в главном режиме. The foreground authorization service improves the connection stability compared to the original app which does not use this service.
+Исправленное приложение можно определить с помощью уведомления об авторизации в главном режиме. Служба агрессивной авторизации повышает стабильность соединения по сравнению с исходным приложением, которое не использует эту службу.
 
 ![LibreLink (основной режим)](../images/Libre2_ForegroundServiceNotification.png)
 
-Other indications could be the Linux penguin logo in the three dot menu -> Info or the font of the patched app (2) different from the original app (1). Эти критерии необязательны и зависят от выбранного источника скачивания приложения.
+Другими признаками могут быть логотип пингвина Linux в меню с тремя точками -> Шрифт информации и приложения (2), отличается от оригинального приложения (1). Эти критерии необязательны и зависят от выбранного источника скачивания приложения.
 
 ![Проверка шрифтов LibreLink](../images/LibreLinkPatchedCheck.png)
 
 Убедитесь, что NFC активирована дайте разрешения на обращение к памяти и геолокации, включите автоматическое время и часовой пояс и задайте хотя бы одно оповещение в этом приложении.
 
-### Step 2: Start the sensor with the patched app
+### Шаг 2: Запускаем сенсор при помощи модифицированного приложения
 
 Теперь запустите сенсор Libre2 при помощи модифицированного приложения, просто сканируя сенсор. Убедитесь, что заданы все параметры.
 
@@ -98,7 +98,7 @@ Other indications could be the Linux penguin logo in the three dot menu -> Info 
 
 ![автоматическое определение времени и часового пояса + настройки оповещений](../images/Libre2_DateTimeAlarms.png)
 
-Once the sensor started with the patched app, you won't be able to connect it to another app/phone. If you uninstall the patched app, you will lose alarms and continuous BG readings.
+После того, как сенсор запустится при помощи модифицированного приложения, его нельзя будет подключить к другому приложению / телефону. Если удалить приложение, будут утрачены оповещения и непрерывный поток данных ГК.
 
 Первая установка соединения с сенсором имеет решающее значение. Приложение LibreLink пытается установить беспроводное соединение с сенсором каждые 30 секунд. Если один или несколько обязательных параметров отсутствуют, их надо скорректировать. У вас нет ограничений по времени для этого. Сенсор постоянно пытается установить соединение. Даже если это длится несколько часов. Be patient and try different settings before even thinking of changing the sensor.
 
@@ -108,9 +108,9 @@ Once the sensor started with the patched app, you won't be able to connect it to
 
 Если восклицательный знак остается или сприходят ообщения об ошибке, это может иметь несколько причин:
 
--   Android location service is not granted - please enable it in system settings
--   automatic time and time zone not set - please change settings accordingly
--   activate alarms - at least one of the three alarms must be activated in LibreLink
+-   Служба определения местоположения Android не получила разрешений - включите ее в системных настройках
+-   автоматическое время и часовой пояс не заданы - измените настройки
+-   активируйте оповещения - по крайней мере один из трех сигналов в LibreLink
 -   Bluetooth выключен - включите
 -   звук заблокирован
 -   уведомления приложений заблокированы
