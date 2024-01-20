@@ -15,7 +15,7 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 ## Метод 1: 1-минутные замеры
 Версия 3.2.0.1 AndroidAPS не поддерживает 1-минутные значения. Ускорение и сглаживание не работает с 1-минутными значениями.
 
-![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
+![Трансляция Juggluco в AAPS](../images/Juggluco_AAPS.png)
 
 
 ## Метод 2: 5-минутные замеры
@@ -38,9 +38,9 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 
 ![xDrip+ LibreLink журналы](../images/Libre2_Tags.png)
 
-- Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+- Technically, the current blood sugar value is transmitted to xDrip+ every minute. По умолчанию фильтр средневзвешенного значения вычисляет сглаженное значение за последние 25 минут. Этот период можно изменить в меню функций сканирования NFC.
 
-  → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
+  → Сэндвич-меню → Настройки →Функция сканирования NFC→ Сглаживать данные libre 3 при использовании метода xxx
 
   !\[xDrip+ advanced settings Libre 2 & raw values\](C:\Data\50 - My Projects\AAPS\AndroidAPSdocs\docs\EN\images\xDrip_Libre3_Smooth.png)
 
