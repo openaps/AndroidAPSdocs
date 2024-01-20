@@ -1,32 +1,32 @@
 # Freestyle Libre 2
 
-Сенсор Freestyle Libre 2 теперь является полноценным непрерывным мониторингом даже с официальным приложением. Тем не менее, LibreLink не в состоянии отправлять данные в AAPS. There are several solutions to use it with AAPS.
+Сенсор Freestyle Libre 2 теперь является полноценным непрерывным мониторингом даже с официальным приложением. Тем не менее, LibreLink не в состоянии отправлять данные в AAPS. Для взаимодействия Libre 2 с AAPS существует несколько решений.
 
-## 1. Use a Bluetooth bridge and OOP
+## 1. Использовать мост Bluetooth и алгоритм OOP
 
-Bluetooth transmitters can be used with the Libre 2 (EU) and an [out of process algorithm](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) app. You can receive blood sugar readings every 5 minutes like with the [Libre 1](../Libre1).
+Трансмиттеры Bluetooth Libre 2 (EU) можно использовать с приложением [алгоритма выхода из процесса](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) OOP. В этом случае Вы будете получать показания сахара крови каждые 5 минут, так же как и с Libre1.
 
 Check the bridge and app you want to use are compatible with your sensor and xDrip+ (older Blucon and recent ones won't work, Miaomiao 1 needs firmware 39 and Miaomiao 2 firmware 7).
 
-The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre 2 do a 10 to 25 minutes smoothing to avoid certain jumps. See below [Value smoothing & raw values](#value-smoothing-raw-values). OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
+Алгоритм ООП Libre2 выдает те же показания BГк, что и при использовании оригинального ридера или приложения LibreLink при сканировании NFC. Во избежание скачков, AAPS с Libre2 производит сглаживание в пределах от 10 до 25 минут. См. ниже [Сглаживание показаний & необоаботанные данные](#value-smoothing-raw-values). OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
 
-There are some good reasons to use a Bluetooth transmitter:
+Есть несколько веских причин пользоваться передатчиком Bluetooth:
 
--   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the the readers like values with "calibrate based on glucose".  
-  Make sure to leave OOP1 disabled (2).
+-   Вы можете выбрать различные стратегии калибровки OOP2 (1): получать значения с ридера, "без калибровки", калибровать сенсор, как Libre 1 "на основе необработанных данных", или, в конечном счете, калибровать значения "на основе глюкозы".  
+  Убедитесь, что OOP1 отключен (2).
 
-    → Hamburger Menu → Settings → Less common settings → Other misc. options
+    → Сэндвич-меню → Настройки →Менее распространенные настройки → Другие разные настройки. Варианты
 
 ![OOP2 Calibration](../images/Libre2_OOP2Calibration.png)
 
--   The Libre 2 sensor can be used 14.5 days as the Libre 1
--   8 hours backfilling is fully supported
+-   Libre2 может работать 14,5 дней как и Libre1
+-   Полностью поддерживается восьмичасовое обратное заполнение данными
 
-Remark: The transmitter can be used in parallel to the LibreLink app without interfering with it.
+Замечание: Трансмиттер можно использовать параллельно с приложением LibreLink.
 
-## 2. Use xDrip+ direct connection
+## 2. Использовать прямое подключение xDrip+
 
-:::{admonition} Libre 2 EU only :class: warning xDrip+ doesn't support direct connection to Libre 2 US and AUS.  
+:::{admonition}{предостережение} только для Libre 2 ЕС :класс: предупреждение xDrip+ не поддерживает прямое подключение к Libre 2 США и Австралии.  
 :::
 
 - Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [this latest OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) as the one in the document is obsolete.
