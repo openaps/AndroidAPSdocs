@@ -34,7 +34,7 @@ Check the bridge and app you want to use are compatible with your sensor and xDr
 
 -   В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите xDrip+.
 
-## 3. Use Diabox
+## 3. Использовать Diabox
 
 - Установите [Diabox](https://t.me/s/DiaboxApp). В Настройках, Интеграция, включите "Делиться данными с другими приложениями".
 
@@ -42,19 +42,19 @@ Check the bridge and app you want to use are compatible with your sensor and xDr
 
 - В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите xDrip+.
 
-## 4. Use Juggluco
+## 4. Использовать Juggluco
 
 - Скачайте и установите приложение Juggluco [отсюда](https://www.juggluco.nl/Juggluco/download.html).
-- Follow the instructions [here](https://www.juggluco.nl/Juggluco/index.html)
-- In Settings, enable xDrip+ broadcast (which doesn't send data to xDrip+ but to AAPS).
+- Следуйте инструкциям [здесь](https://www.juggluco.nl/Juggluco/index.html)
+- В Настройках включите трансляцию в xDrip+ (посылает данные не в xDrip+, а в AAPS).
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
 - В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите xDrip+.
 
-:::{admonition} Use with xDrip+ :class: note You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
+:::{admonition}{предостерижение} Использовать с xDrip+ :class: :класс: примечание Вы можете настроить Juggluco на трансляцию в xDrip + при помощи модифицированного приложения Libre (следует отключить трансляцию xDrip +), чтобы выполнить калибровку (смотрите здесь) и избежать ежеминутной отправки данных в AAPS.  
 ![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  
-You will then need to set xDrip+ data source to Libre 2 Patched App to receive data from Juggluco.  
+Затем в модифицированном приложении Libre 2 следует установить источником данных xDrip+, чтобы получать данные из Juggluco.  
 :::
 
 ## 5. Use the patched LibreLink app with xDrip+
