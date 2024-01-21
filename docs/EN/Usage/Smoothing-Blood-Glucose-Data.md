@@ -11,17 +11,23 @@ Additionally, as of version 3.2, AAPS offers the option to smooth the data withi
 
 ## Exponential smoothing
 
-This is the recommended option to start with as it is most aggressive in resolving noise and rewrites the most recent value.  
-Use this option with G7, G6 non-native (xDrip+), Libre 1, Libre 2 and 3 from Juggluco. 
+This is the recommended option to start with as it is most aggressive in resolving noise and rewrites the most recent value.
 
 ## Average smoothing
 
-This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.  
-Use this option with noisy G6 sensors (BYODA and xDrip+ native). 
+This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.
 
 ## No Smoothing
 
-Use this option:
+Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to AAPS.
 
-- only if your CGM data is being properly smoothed by your collector app before being transmitted to AAPS; or 
-- with G6 (BYODA), Libre 2 and 3 from xDrip+ (already smoothed by the app).
+## Suggestions to use smoothing
+
+|                                                              | Exponential |   Average   |    None     |
+| ------------------------------------------------------------ | :---------: | :---------: | :---------: |
+| G5 and G6 with BYODA or xDrip+ **[native](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)** |             |  If noisy   | Recommended |
+| Refurbished G5 and G6 with xDrip+ **[non-native](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)** |  If noisy   | Recommended |             |
+| G7                                                           | Recommended |             |             |
+| Libre 1 or Juggluco                                          | Recommended |             |             |
+| Libre 2 and 3 from xDrip+                                    |             |             | Recommended |
+
