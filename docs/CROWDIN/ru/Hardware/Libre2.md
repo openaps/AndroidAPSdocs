@@ -32,7 +32,7 @@
 - Следуйте [этим инструкциям](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) для настройки xDrip+, но обязательно загрузите [эту новую версию OOP 2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view), поскольку та, что приведена в документе, устарела.
 - Следуйте инструкциям по установке на странице настроек [xDrip+](../Configuration/xdrip.md).
 
--   В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите xDrip+.
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 ## 3. Использовать Diabox
 
@@ -40,7 +40,7 @@
 
 ![Diabox](../images/Diabox.png)
 
-- В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите xDrip+.
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 ## 4. Использовать Juggluco
 
@@ -50,7 +50,7 @@
 
 ![Трансляция Juggluco в AAPS](../images/Juggluco_AAPS.png)
 
-- В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите xDrip+.
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 :::{admonition}{предостерижение} Использовать с xDrip+ :class: :класс: примечание Вы можете настроить Juggluco на трансляцию в xDrip + при помощи модифицированного приложения Libre (следует отключить трансляцию xDrip +), чтобы выполнить калибровку (смотрите здесь) и избежать ежеминутной отправки данных в AAPS.  
 ![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  
@@ -155,6 +155,9 @@
 ### Шаг 5: Настраиваем AAPS (для работы в замкнутом/незамкнутом цикле)
 
 -   В AAPS перейдите в Конфигуратор > Источник ГК и выберите 'xDrip+'
+
+![xDrip+ BG Source](../images/ConfBuild_BG_xDrip.png)
+
 -   Если AAPS не получает значения ГК, когда телефон находится в режиме авиаперелета пользуйтесь функцией "Установить получателя" в соответствии с описанием [настроек xDrip+](xdrip-identify-receiver).
 
 До настоящего времени, при выборе Libre 2 в качестве источника данных ГК, в алгоритме SMB невозможно активировать «Включить SMB всегда» и «Включить SMB после углеводов». Значения BG Libre 2 недостаточно сглажены, чтобы их безопасно использовать. Подробнее см. [Сглаживание данных Гк](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
