@@ -2,7 +2,7 @@
 
 ## Сначала основное
 
--   Follow general CGM hygiene and setting sensor recommendation [here](../Hardware/GeneralCGMRecommendation.md).
+-   Следуйте общим рекомендациям по гигиене и установке сенсоров мониторинга CGM, изложенным [здесь](../Hardware/GeneralCGMRecommendation.md).
 
 ## Общие рекомендации по использованию G6 с системами ИПЖ
 
