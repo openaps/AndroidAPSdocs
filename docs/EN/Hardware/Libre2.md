@@ -34,7 +34,7 @@ xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 - Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [this latest OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) as the one in the document is obsolete.
 - Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
 
--   Select xDrip+ for BG Source in ConfigBuilder (setting in AAPS).
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 ## 3. Use Diabox
 
@@ -42,7 +42,7 @@ xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ for BG Source in ConfigBuilder (setting in AAPS).
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 ## 4. Use Juggluco
 
@@ -52,7 +52,7 @@ xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
-- Select xDrip+ for BG Source in ConfigBuilder (setting in AAPS).
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 :::{admonition} Use with xDrip+
 :class: note
@@ -227,6 +227,9 @@ activation and make a new initial calibration.
 ### Step 5: Configure AAPS (for looping only)
 
 -   In AAPS go to Config Builder > BG Source and check 'xDrip+'
+
+![xDrip+ BG Source](../images/ConfBuild_BG_xDrip.png)
+
 -   If AAPS does not receive BG values when phone is in airplane
     mode, use 'Identify receiver' as describe on [xDrip+ settings
     page](xdrip-identify-receiver).
