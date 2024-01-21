@@ -69,7 +69,7 @@
 
 #### Изменить профиль в редакторе профиля Nighscout
 
-You can synchronize changes to the profile in the Nighscout profile editor to local profiles. Настройки можно найти в [ настройках AAPSClient ](Preferences-nsclient).
+Можно синхронизировать изменения в профиле с локальными профилями в редакторе профиля Nighscout. Настройки можно найти в [ настройках AAPSClient ](Preferences-nsclient).
 
 Необходимо клонировать активные данные всей базы данных Nightscout для профилей, а не просто профиль с синей стрелкой! Новые записи базы данных сохраняют текущую дату и могут быть активированы на вкладке "local profile".
 
