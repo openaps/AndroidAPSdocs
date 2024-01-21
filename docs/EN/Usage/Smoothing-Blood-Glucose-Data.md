@@ -25,8 +25,8 @@ Use this option only if your CGM data is being properly smoothed by your collect
 
 |                                                              | Exponential |   Average   |    None     |
 | ------------------------------------------------------------ | :---------: | :---------: | :---------: |
-| G5 and G6 with BYODA or xDrip+ **[native](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)** |             |  If noisy   | Recommended |
-| Refurbished G5 and G6 with xDrip+ **[non-native](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)** |  If noisy   | Recommended |             |
+| G5 and G6 with BYODA  <br />or xDrip+ **[native](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)** |             |  If noisy   | Recommended |
+| Refurbished G5 and G6  <br />with xDrip+ **[non-native](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)** |  If noisy   | Recommended |             |
 | G7                                                           | Recommended |             |             |
 | Libre 1 or Juggluco                                          | Recommended |             |             |
 | Libre 2 and 3 from xDrip+                                    |             |             | Recommended |
