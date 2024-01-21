@@ -2,28 +2,29 @@
 
 ## Si se utiliza G5 con xdrip+
 
--   If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow instructions on nightscout ([G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support).
--   In xdrip go to Settings > Inter-app settings > Broadcast Data Locally and select ON.
--   In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
--   If you want to be able to use AAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
--   Select xdrip in ConfigBuilder (setting in AAPS).
--   If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md) .
+-   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you want specific newly developed features.
+-   Setup xDrip+ with G5 following [these instructions](https://navid200.github.io/xDrip/docs/G5-Recommended-Settings.html).
+-   Setup xDrip+ reading the [xDrip+ settings page](../Configuration/xdrip.md) .
+-   Select xDrip+ in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 ## Si utiliza G5 con la aplicación Dexcom parcheada
 
+:::{admonition} Legacy apps :class: warning These apps are not compatible with recent Android versions.  
+:::
+
 -   Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5).
 
-    -   Folder 2.3 is for users of AAPS 2.3, folder 2.4 for users of AAPS 2.5.
+    -   Folder 2.4 was for users of AAPS 2.5 and above.
     -   Open <https://play.google.com/store/search?q=dexcom%20g5> on your computer. La región estará visible en el URL.
 
     ![Region in Dexcom G5 URL](../images/DexcomG5regionURL.PNG)
 
--   Stop sensor and uninstall the original Dexcom app, if not already done.
+-   Force stop and uninstall the original Dexcom app, if not already done.
 
 -   Install downloaded apk
 
 -   Start sensor
 
--   Select Dexcom App (patched) in ConfigBuilder (setting in AAPS).
+- Select Dexcom App (patched) in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 -   If you want to use xDrip alarms via local broadcast: in xDrip hamburger menu > settings > hardware data source > 640G /EverSense.
