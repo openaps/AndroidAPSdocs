@@ -30,20 +30,25 @@ Après la phase de préchauffage, les valeurs s'affichent comme d'habitude dans 
 ### Configuration in AAPS
 
 Pour la configuration dans AAPS
-- Sélectionnez 'BYODA' dans l'onglet configuration - même si ce n'est pas l'application BYODA !
-- Si AAPS ne reçoit aucune valeur, passer à une autre source de glycémie, puis revenez à 'BYODA' pour permettre la requête d'approbation de l'échange de données entre AAPS et BYODA.
+- Select 'BYODA' in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source) - even if it is not the BYODA app!
+
+- If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
 
 Le lissage des valeurs de glucose peut être activé en activant le plugin "lissage moyen" ou "lissage exponentiel" dans le Générateur de configuration. Pour désactiver cette option, sélectionnez l'option "Sans lissage". Le "lissage exponentiel" est plus agressif et réécrit la plus récente valeur de glucose, mais est avantageux dans la gestion des valeurs trop bruitées. Le "lissage moyen" ressemble beaucoup au lissage arrière qui était dans BYODA G6 et ne réécrit que les valeurs passées, mais pas la valeur actuelle et a donc un temps de réponse plus rapide.
 
 **Lissage Exponentiel** **DOIT** être activé pour que les valeurs G7 soient pertinentes.
 
-## 2. Xdrip+ (direct connection to G7)
+## 2. xDrip+ (direct connection to G7)
 
 - Follow the instructions here: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- Dans AAPS, sélectionnez  > Configuration > source de glycémie > xDrip+. Ajustez les paramètres xDrip+ en fonction des explications sur la page des paramètres xDrip+  [paramètres xDrip+](../Configuration/xdrip.md)
+- Select  xDrip+ in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-## 3. Xdrip+ (mode compagnon)
+- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md)
 
--   Téléchargez et installez xDrip+ : [xdrip](https://github.com/NightscoutFoundation/xDrip)
-- Sélectionnez comme source de glycémie dans xDrip "Companion App". Puis dans "Paramètres moins courant" allez dans "Paramètres Bluetooth" et sélectionnez "Companion Bluetooth".
-- Dans AAPS, sélectionnez  > Configuration > source de glycémie > xDrip+. Ajustez les paramètres xDrip+ en fonction des explications sur la page des paramètres xDrip+  [paramètres xDrip+](../Configuration/xdrip.md) 
+## 3. xDrip+ (companion mode)
+
+-   Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
+-   Select  xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+
+-   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md) 
