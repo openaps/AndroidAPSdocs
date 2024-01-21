@@ -1,4 +1,4 @@
 # Для пользователей PocTech CT-100
 
 - Установите приложение PocTech
-- В конфигуратоге (настройки AndroidAPS) выберите PocTech
+- Select PocTech App in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
