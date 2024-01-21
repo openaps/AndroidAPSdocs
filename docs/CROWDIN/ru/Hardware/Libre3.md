@@ -24,17 +24,17 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 ### Шаг 1: Настройка Juggluco
 Скачайте и установите приложение Juggluco [отсюда](https://www.juggluco.nl/Juggluco/download.html). Следуйте [этой](https://www.juggluco.nl/Juggluco/libre3/) инструкции
 
-Убедитесь, что данные ГК отправляются в Xdrip+: В настройках Juggluco можно выбрать отправку значений глюкозы другим приложениям. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip+
+Убедитесь, что данные ГК отправляются в Xdrip+: В настройках Juggluco можно выбрать отправку значений глюкозы другим приложениям. Juggluco может отправить три типа трансляций: Трансляция **Librelink** изначально использовалась модифицированным приложением Librelink и может отправлять значения Гк в xDrip+
 
-![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)
+![Трансляция Juggluco в xDrip+](../images/Juggluco_xDrip.png)
 
 ### Шаг 2: Настройка xDrip
 
 Приложение xDrip+ получает значения ГК на телефоне.
 
-- If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../Configuration/xdrip.md).
+- Если это еще не сделано, скачайте [xDrip+](https://github.com/NightscoutFoundation/xDrip) и следуйте инструкциям на странице настроек [xDrip+](../Configuration/xdrip.md).
 - В xDrip+ в качестве источника данных выберите "Libre (patched app)".
-- If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings → Extra Logging Settings → Extra tags for logging. Это позволит записывать дополнительные сообщения об ошибках для устранения неисправностей.
+- При необходимости введите "BgReading:d, xdrip libr_receiver:v" в разделе Менее распространенные настройки -Дополнительные настройки журналирования- Дополнительные теги для добавления в журнал. Это позволит записывать дополнительные сообщения об ошибках для устранения неисправностей.
 
 ![xDrip+ LibreLink журналы](../images/Libre2_Tags.png)
 
@@ -42,7 +42,7 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 
   → Сэндвич-меню → Настройки →Функция сканирования NFC→ Сглаживать данные libre 3 при использовании метода xxx
 
-  !\[xDrip+ advanced settings Libre 2 & raw values\](C:\Data\50 - My Projects\AAPS\AndroidAPSdocs\docs\EN\images\xDrip_Libre3_Smooth.png)
+  !\[xDrip+ расширенные настройки Libre 2 & необработанные значения\](C:\Data\50 - Мои проекты\AAPS\AndroidAPSdocs\docs\EN\images\xDrip_Libre3_Smooth.png)
 
 
 
