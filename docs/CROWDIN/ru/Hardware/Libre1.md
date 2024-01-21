@@ -24,20 +24,20 @@
 -   Вы можете безопасно загрузить [ новую (стабильную) версию APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), если только вам не нужны новейшие функции. В этом случае следует загружать т. н. [Ночную сборку](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Следуйте инструкциям по установке на странице настроек [xDrip+](../Configuration/xdrip.md).
 -    Вам также нужен [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) для Libre 1 США (и Libre 2 EU).
--   В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите xDrip+.
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 ## 2. Использование Glimp
 
--   Glimp поддерживает Miaomiao, Blucon и Bubble.
--   Вам понадобится Glimp версии 4.15.57 или выше. Более старые версии не поддерживаются.
+-   Glimp supports Miaomiao, Blucon and Bubble for Libre 1 and Libre 2 EU.
+-   Вам понадобится Glimp версии 4.15.57 или выше. Older versions are not supported.
 -   Установите [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia).
--   В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите Glimp.
+-   Select Glimp in in [ConfigBuilder, BG Source.](../Configuration/Config-Builder.md#bg-source)
 
 ## 3. Использование Tomato
 
 - Tomato является приложением поставщика для Miaomiao.
 - Установите [Tomato](http://tomato.cool/#download_page) и следуйте [инструкциям поставщика ](http://tomato.cool/how-to-broadcast-data-to-android-aps/tips/).
-- В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите Tomato.
+- Select Tomato in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 ## 4. Использование Diabox
 
@@ -46,4 +46,4 @@
 
 ![Diabox](../images/Diabox.png)
 
-- В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите xDrip+.
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
