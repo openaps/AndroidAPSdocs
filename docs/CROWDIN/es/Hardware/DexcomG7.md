@@ -30,20 +30,25 @@ Tras la fase de calentamiento, los valores se muestran como de costumbre en la a
 ### Configuración en AAPS
 
 Para la configuración en AAPS
-- Selecciona "BYODA" en la tabla de configuraciones, aunque no sea la aplicación BYODA.
-- Si AAPS no recibe ningún valor, cambie a otro Orige de BG y, a continuación, vuelve a "BYODA" para invocar la consulta para aprobar el intercambio de datos entre AAPS y BYODA.
+- Select 'BYODA' in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source) - even if it is not the BYODA app!
+
+- If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
 
 El suavizado de los valores de glucosa puede activarse activando el plugin "Suavizado promedio" o "Suavizado exponencial" en la tabla de configuraciones. Para desactivarlo, selecciona la opción "Sin suavizado". "Suavizado exponencial" es más agresivo y reescribe el valor de glucosa más reciente, pero es bueno para tratar el ruido pesado. "Suavizado promedio" es muy parecido al suavizado que se hacía con Dexcom G6 BYODA y sólo reescribe los valores pasados pero no el valor actual y por lo tanto, tiene un tiempo de respuesta más rápido.
 
 **Suavizado exponencial** **DEBE** estar activado para un uso significativo de los valores G7.
 
-## 2. xDrip+ (Conexión directa con G7)
+## 2. xDrip+ (direct connection to G7)
 
 - Sigue las instrucciones aquí: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- En AAPS, selecciona > Configuración > Origen BG > xDrip+. Ajusta la configuración de xDrip+ según las explicaciones de la página de configuración de xDrip+ [Configuración de xDrip+](../Configuration/xdrip.md).
+- Select  xDrip+ in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-## 3. xDrip+ (modo companion)
+- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md)
 
--   Descarga e instala xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- Como fuente de datos hardware en xDrip debes seleccionar "Companion App" y en Ajustes menos comunes > Ajustes Bluetooth > debes activar "Companion Bluetooth".
-- En AAPS, selecciona > Configuración > Origen BG > xDrip+. Ajusta la configuración de xDrip+ según las explicaciones de la página de configuración de xDrip+ [Configuración de xDrip+](../Configuration/xdrip.md). 
+## 3. xDrip+ (companion mode)
+
+-   Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
+-   Select  xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+
+-   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md) 
