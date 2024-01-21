@@ -14,12 +14,12 @@
 4. Сгенерируйте подписанное приложение новой версии, как описано в инструкции [Update](../Installing-AndroidAPS/Update-to-new-version.md) и перенесите его на телефон.
 5. Деинсталлируйте предыдущую версию AAPS.
 6. Установите новую версию AAPS на телефон.
-7. [Import settings](ExportImportSettings-import-settings) to restore your objectives and configuration.
+7. [Импортируйте настройки](ExportImportSettings-import-settings) для восстановления целей и конфигурации.
 
    Если не можете найти их, скопируйте из внешнего накопителя на ваш телефон.
 
 8. Проверьте параметры оптимизации батареи и отключите их снова.
-9. Keep on looping.
+9. Продолжайте пользоваться системой AAPS.
 
 ## Ошибка синхронизации Gradle
 Синхронизация Gradle может не работать по различным причинам. Когда выпадает сообщение о том, что синхронизация не удалась, откройте вкладку "Build" (1) в нижней части Android Studio и проверьте, какое отображается сообщение об ошибке (2).
@@ -104,13 +104,13 @@
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
-### Incompatible version of Android Gradle plugin
+### Несовместимая версия плагина Android Gradle
 
-  If you experience the following error message
+  Если вы сталкиваетесь со следующими ошибками
 
-  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+  ![Несовместимая версия плагина Android Gradle](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 
-  You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
+  Вы используете устаревшую версию Android Studio. В меню перейдите в "Справка > Проверить наличие обновлений и установить любые обновления и расширения Android Studio.
 
 ### Для Android Gradle требуется Java 17
 
@@ -157,7 +157,7 @@
 
   В Windows 10 следует использовать 64-битную операционную систему.
 
-  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+  В интернете множество рекомендаций, как определить, у вас 32-или 64-битная ОС- например [эта](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
   ![снимок экрана не удалось запустить процесс демона](../images/AndroidStudioWin10_32bitError.png)
 
