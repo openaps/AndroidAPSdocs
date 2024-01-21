@@ -6,7 +6,7 @@
 
 Подробнее см. [Страница FAQ](../Getting-Started/FAQ.md).
 
-(Building-APK-recommended-specification-of-computer-for-building-apk-file)=
+(Рекомендуемые спецификации компьютеров для сборки файла apk)=
 
 ## Технические характеристики компьютера и программного обеспечения для построения AAPS
 
@@ -104,7 +104,7 @@ Git — это программа, позволяющая отслеживать
 
 - Перезагрузите компьютер перед следующим шагом.
 
-(Building-APK-install-android-studio)=
+(Сборка-APK-установка-android-studio)=
 
 ### Установите Android Studio
 
@@ -212,10 +212,12 @@ Android Studio затем будет использовать **Gradle** (инс
 
 - В качестве системы управления версиями должен быть выбран "Git" (по умолчанию) (2).
 
-Now copy this URL:
+Теперь скопируйте URL-адрес:
 
 ```
 https://github.com/nightscout/AndroidAPS.git
+ 
+Context | Edit Context
 ```
 
 и вставьте его в текстовое поле URL (3).
