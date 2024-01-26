@@ -201,8 +201,8 @@ Once everything is downloaded, the "Finish" button turns blue, and you can click
 
 ![finished_download_components](../images/Building-the-App/14_finished_downloading_components.png)
 
-
-You are now greeted with the "Welcome to Android Studio" screen:
+You are now greeted with the "Welcome to Android Studio" screen.  
+See that Meet the New UI suggestion bottom right? **Do not** Enable New UI.
 
 ![Welcome_AS](../images/Building-the-App/15_Welcome_AS.png)
 
@@ -260,11 +260,22 @@ If asked if you want to import settings, select "Do not import settings". We don
 
 ![Do not import settings](../images/studioSetup/01_ImportSettings.png)
 
+After the repository is cloned successfully, Android Studio will open the cloned project. Wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
 
-After the repository is cloned successfully, Android Studio will open the cloned project. Wait patiently (this may take a few minutes), and particularly, do not update the project as suggested in the pop-up:
+:::{admonition} **My screen looks different...**
+:class: dropdown
+
+You might have enabled the New UI by mistake.  
+Click on the cog top right and select Switch to Classic UI.  
+Restart Android Studio to validate the change.
+
+![Switch to Classic UI](../images/Building-the-App/OldUI.png)
+
+
+
+:::
 
 ![AS_download_dependencies](../images/Building-the-App/19_downloading_dependencies.png)
-
 
 :::{admonition} NEVER UPDATE GRADLE!
 :class: warning
@@ -410,7 +421,6 @@ _Optional at this stage - if you are planning to also build the "**AAPS** wear" 
 ![apk_file](../images/Building-the-App/37_full_release_apk.png)
 
 Congratulations! Now you have built the **AAPS** apk file, you can move to the next stage of [Transferring and Installing **AAPS**](Transferring-and-installing-AAPS.md).
-
 
 
 
