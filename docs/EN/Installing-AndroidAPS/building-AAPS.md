@@ -265,8 +265,8 @@ After the repository is cloned successfully, Android Studio will open the cloned
 :::{admonition} **My screen looks different...**
 :class: dropdown
 
-You might have enabled the New UI by mistake.  
-Click on the cog top right and select Switch to Classic UI.  
+You might have enabled the new graphic **U**ser **I**nterface (i.e. the appearance of Android Studio) by mistake.  
+Click on the cog top right and select "**Switch to Classic UI...**" to return to the view used in this documentation.  
 Restart Android Studio to validate the change.
 
 ![Switch to Classic UI](../images/Building-the-App/OldUI.png)
