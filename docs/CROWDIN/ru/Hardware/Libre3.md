@@ -15,7 +15,7 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 ## Метод 1: 1-минутные замеры
 Версия 3.2.0.1 AndroidAPS не поддерживает 1-минутные значения. Ускорение и сглаживание не работает с 1-минутными значениями.
 
-![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
+![Трансляция Juggluco в AAPS](../images/Juggluco_AAPS.png)
 
 
 ## Метод 2: 5-минутные замеры
@@ -24,25 +24,25 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 ### Шаг 1: Настройка Juggluco
 Скачайте и установите приложение Juggluco [отсюда](https://www.juggluco.nl/Juggluco/download.html). Следуйте [этой](https://www.juggluco.nl/Juggluco/libre3/) инструкции
 
-Убедитесь, что данные ГК отправляются в Xdrip+: В настройках Juggluco можно выбрать отправку значений глюкозы другим приложениям. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip+
+Убедитесь, что данные ГК отправляются в Xdrip+: В настройках Juggluco можно выбрать отправку значений глюкозы другим приложениям. Juggluco может отправить три типа трансляций: Трансляция **Librelink** изначально использовалась модифицированным приложением Librelink и может отправлять значения Гк в xDrip+
 
-![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)
+![Трансляция Juggluco в xDrip+](../images/Juggluco_xDrip.png)
 
 ### Шаг 2: Настройка xDrip
 
 Приложение xDrip+ получает значения ГК на телефоне.
 
-- If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../Configuration/xdrip.md).
+- Если это еще не сделано, скачайте [xDrip+](https://github.com/NightscoutFoundation/xDrip) и следуйте инструкциям на странице настроек [xDrip+](../Configuration/xdrip.md).
 - В xDrip+ в качестве источника данных выберите "Libre (patched app)".
-- If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings → Extra Logging Settings → Extra tags for logging. Это позволит записывать дополнительные сообщения об ошибках для устранения неисправностей.
+- При необходимости введите "BgReading:d, xdrip libr_receiver:v" в разделе Менее распространенные настройки -Дополнительные настройки журналирования- Дополнительные теги для добавления в журнал. Это позволит записывать дополнительные сообщения об ошибках для устранения неисправностей.
 
 ![xDrip+ LibreLink журналы](../images/Libre2_Tags.png)
 
-- Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+- Технически, текущее значение сахара в крови передается на xDrip + каждую минуту. По умолчанию фильтр средневзвешенного значения вычисляет сглаженное значение за последние 25 минут. Этот период можно изменить в меню функций сканирования NFC.
 
-  → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
+  → Сэндвич-меню → Настройки →Функция сканирования NFC→ Сглаживать данные libre 3 при использовании метода xxx
 
-  !\[xDrip+ advanced settings Libre 2 & raw values\](C:\Data\50 - My Projects\AAPS\AndroidAPSdocs\docs\EN\images\xDrip_Libre3_Smooth.png)
+  !\[xDrip+ расширенные настройки Libre 2 & необработанные значения\](C:\Data\50 - Мои проекты\AAPS\AndroidAPSdocs\docs\EN\images\xDrip_Libre3_Smooth.png)
 
 
 
@@ -56,8 +56,9 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 
 ### Шаг 4: Настройка AndroidAPS
 
-- В AAPS перейдите в Конфигуратор > Источник ГК и выберите 'xDrip+"
-- Если AndroidAPS не получает значения BG, когда телефон находится в режиме авиаперелета, проверьте, заполнено ли поле «Идентифицировать приемник»
+- Select xDrip+ in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+
+- If AndroidAPS does not receive BG values when phone is in airplane mode, use "Identify receiver"
 - Выключите сглаживание (уже сделано в Xdrip+)
 
 На данный момент при использовании Libre 3 в качестве источника ГК в алгоритме SMB невозможно включить опцию "Всегда включать SMB" и "Включать SMB после углеводов". Значения ГК Libre 3 недостаточно сглажены для безопасного пользования.
@@ -68,13 +69,13 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 
 1. Откройте Juggluco и посмотрите серийный номер текущего сенсора
 
-![Серийный номер Libre](../images/libre3/step\_13.jpg)
+![Серийный номер Libre](../images/libre3/step/_13.jpg)
 
 2. Теперь просто сканируйте новый сенсор с помощью NFC телефона. Juggluco покажет уведомление, если процесс запущен успешно.
 3. Когда вы готовы деактивировать старый сенсор, откройте меню Juggluco, щелкнув в любом месте в левом верхнем углу экрана.
 4. Выберите истекший сенсор и нажмите "Прервать"
 
-![Завершить работу сенсора](../images/libre3/step\_14.jpg)
+![Завершить работу сенсора](../images/libre3/step/_14.jpg)
 
 Примечание: Когда активны два сенсора, Juggluco будет отправлять наиболее свежие значения с любого сенсора на xDrip+. Если сенсоры не откалиброваны и соответствующим образом считывают ГК, это может вызвать скачущие значения в xDrip+. Если вы остановите неправильный сенсор, то сможете снова активировать его, просто просканировав сенсор.
 

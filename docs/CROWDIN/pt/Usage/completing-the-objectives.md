@@ -44,7 +44,7 @@ Note - _You may need to wait for the next sensor glucose reading to arrive befor
   :alt: Captura de ecrã do Objetivo 2  
   ```
 - Tasks to complete **Objective 2** are:
-  - Set your profile to 90% for a duration of 10 min ((_Hint_: Long press your profile name on the OVERVIEW screen)
+  - Set your profile to 90% for a duration of 10 min (_Hint_: Long press your profile name on the OVERVIEW screen) (_Note_: AAPS does not accept basal rates below 0.05U/hr. If your profile includes any rates 0.06U/hr or lower you will need to create a new profile with higher basal rates before completing this task. Switch back to your normal profile after completing this task.)
   - Simulate "taking a shower" by disconnecting your pump in **AAPS** for a duration of 1h (_Hint_: press the loop icon on the OVERVIEW screen to open the Loop dialogue)
   - End "taking a shower" by reconnecting your pump (_Hint_: press the "disconnected"-icon to open the loop dialog)
   - Create a custom temporary target with a duration of 10 min (_Hint_: press the target bar on the OVERVIEW screen to bring up the temporary target dialog)

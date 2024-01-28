@@ -30,20 +30,25 @@
 ### Конфигурация в AAPS
 
 Для конфигурации в AAPS
-- Выберите 'BYODA' в генераторе конфигурации, даже если это не приложение BYODA!
-- Если AAPS не получает данных ГК, переключитесь на другой источник ГК, а затем снова на 'BYODA'.
+- Select 'BYODA' in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source) - even if it is not the BYODA app!
+
+- If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
 
 Сглаживание значений гликемии можно активировать, выбрав модуль "Среднее сглаживание" или "Экспоненциальное сглаживание" в Конфигураторе. Чтобы отключить сглаживание, выберите опцию "Без сглаживания". "Экспоненциальное сглаживание" более агрессивно и перезаписывает новейшие значения ГК, но хорошо для борьбы с сильными шумами. "Среднее сглаживание" очень похоже на обратное сглаживание, применявшееся в BYODA G6 и перезаписывает только прошлые значения, а не текущее значение, и поэтому происходит быстрее.
 
 **Экспоненциальное сглаживание** **ДОЛЖНО** быть включено для качественного использования G7.
 
-## 2. Xdrip+ (прямое подключение к G7)
+## 2. xDrip+ (direct connection to G7)
 
 - Следуйте инструкциям здесь: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- В AAPS выберите  > Configuration > источник ГК > xDrip+. Отрегулируйте параметры xDrip+ в соответствии с пояснениями на странице настроек xDrip+  [настройки xDrip+](../Configuration/xdrip.md)
+- Select  xDrip+ in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-## 3. Xdrip+ (режим спутника)
+- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md)
 
--   Скачайте и установите Xdrip+: [xdrip](https://github.com/NightscoutFoundation/xDrip)
-- В качестве источника данных в Xdrip должен быть выбран "Companion Bluetooth" в разделе Менее распространенные настройки > Настройки Bluetooth > поставьте галочку рядом с "Companion Bluetooth".
-- В AAPS выберите  > Configuration > источник ГК > xDrip+. Отрегулируйте параметры xDrip+ в соответствии с пояснениями на странице настроек xDrip+  [настройки xDrip+](../Configuration/xdrip.md) 
+## 3. xDrip+ (companion mode)
+
+-   Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
+-   Select  xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+
+-   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md) 

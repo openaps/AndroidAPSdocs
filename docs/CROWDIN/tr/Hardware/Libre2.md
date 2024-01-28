@@ -32,7 +32,7 @@ Remark: The transmitter can be used in parallel to the LibreLink app without int
 - Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [this latest OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) as the one in the document is obsolete.
 - Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
 
--   Select xDrip+ for BG Source in ConfigBuilder (setting in AAPS).
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 ## 3. Use Diabox
 
@@ -40,7 +40,7 @@ Remark: The transmitter can be used in parallel to the LibreLink app without int
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ for BG Source in ConfigBuilder (setting in AAPS).
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 ## 4. Use Juggluco
 
@@ -50,7 +50,7 @@ Remark: The transmitter can be used in parallel to the LibreLink app without int
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
-- Select xDrip+ for BG Source in ConfigBuilder (setting in AAPS).
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 :::{admonition} Use with xDrip+ :class: note You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
 ![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  
@@ -155,6 +155,9 @@ Bir sensör değişikliğinden sonra xDrip+ yeni sensörü otomatik olarak algı
 ### Step 5: Configure AAPS (for looping only)
 
 -   In AAPS go to Config Builder > BG Source and check 'xDrip+'
+
+![xDrip+ BG Source](../images/ConfBuild_BG_xDrip.png)
+
 -   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](xdrip-identify-receiver).
 
 Halihazırda, Libre 2'i KŞ kaynağı olarak kullanıyorsanız, SMB algoritmasında "SMB'yi her zaman etkinleştir" ve "Karbonhidrattan sonra SMB'yi etkinleştir"i işaretleyemezsiniz. Libre 2'in KŞ değerleri, bu seçenekleri güvenle kullanmak için yeterince düzgün değildir. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.

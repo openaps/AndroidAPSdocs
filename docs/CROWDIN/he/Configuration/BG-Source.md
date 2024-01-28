@@ -1,7 +1,7 @@
 # CGMS/FGMS Configuration
 
 * [כללי](../Hardware/GeneralCGMRecommendation.md)
-* [החלקת נתונים](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)
+* [החלקת נתונים](../Usage/Smoothing-Blood-Glucose-Data.md)
 * [הגדרות xDrip+](./xdrip.md)
 * [Dexcom G7](../Hardware/DexcomG7.md)
 * [Dexcom G6](../Hardware/DexcomG6.md)

@@ -1,7 +1,7 @@
 # Configuración de MCGs/MFGs
 
 * [General](../Hardware/GeneralCGMRecommendation.md)
-* [Suavizado de datos](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)
+* [Suavizado de datos](../Usage/Smoothing-Blood-Glucose-Data.md)
 * [Configuración de xDrip+](./xdrip.md)
 * [Dexcom G7](../Hardware/DexcomG7.md)
 * [Dexcom G6](../Hardware/DexcomG6.md)

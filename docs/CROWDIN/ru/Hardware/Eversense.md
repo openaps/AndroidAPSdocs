@@ -4,6 +4,12 @@
 
 **Предупреждение: после удаления старого приложения, ваши локальные данные старше одной недели будут утрачены!**
 
-Чтобы получить данные в AndroidAPS, необходимо установить [ESEL](https://github.com/BernhardRo/Esel/releases), там включить"Отправлять на AAPS и xDrip" и выбрать "MM640g" в качестве источника ГК в [Конфигураторе](../Configuration/Config-Builder.md) AndroidAPS. Поскольку данные ГК от Eversense могут быть зашумленными, рекомендуется в ESEL включить "Smooth Data" (сглаживать данные), а не "Всегда использовать усредненную короткую дельту вместо простых данных".
+- To get your data to AAPS, you need to install [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/debug/app-debug.apk) and enable "Send to AAPS and xDrip", disable "Send to NightScout".
+
+![ESEL Broadcast](../images/ESEL.png)
+
+Поскольку данные ГК от Eversense могут быть зашумленными, рекомендуется в ESEL включить "Smooth Data" (сглаживать данные), а не "Всегда использовать усредненную короткую дельту вместо простых данных".
+
+- Set "MM640g" as BG source in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 Инструкцию по использованию xDrip с Eversense можно найти [здесь](https://github.com/BernhardRo/Esel/tree/master/apk).

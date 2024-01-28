@@ -30,20 +30,25 @@ Isınma aşamasından sonra, değerler her zamanki gibi G7 uygulamasında görü
 ### Configuration in AAPS
 
 AAPS'deki yapılandırma için
-- Konfigürasyon ayarlarında 'BYODA'yı seçin - (şimdilik BYODA uygulaması olmasa bile!)
-- AAPS herhangi bir değer almazsa, başka bir KŞ kaynağına geçin ve ardından AAPS ile BYODA arasındaki veri alışverişini onaylama sorgusunu başlatmak için 'BYODA'ya geri dönün.
+- Select 'BYODA' in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source) - even if it is not the BYODA app!
+
+- If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
 
 Glikoz değerlerinin yumuşatılması, Konfigürasyon ayarlarında "Ortalama yumuşatma" veya "Üstsel yumuşatma" eklentisi etkinleştirilerek gerçekleştirilir. Devre dışı bırakmak için "Yumuşatma Yok" seçeneğini seçin. "Üstsel yumuşatma" daha agresiftir ve en yeni Glikoz Değerini yeniden yazar, ancak yoğun gürültüyle başa çıkmada iyidir. "Ortalama yumuşatma", BYODA G6'daki geri düzeltmeye çok benzer ve yalnızca geçmiş değerleri yeniden yazar fakat mevcut değer değildir ve bu nedenle daha hızlı yanıt süresine sahiptir.
 
 ** Üstel Yumuşatma ** G7 değerlerinin anlamlı kullanımı için **ETKİN** olmalıdır.
 
-## 2. Xdrip+ (direct connection to G7)
+## 2. xDrip+ (direct connection to G7)
 
 - Follow the instructions here: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- AAPS'de > Yapılandırma > KŞ kaynağı > xDrip+. Ayarları [xDrip+ ayarları](../Configuration/xdrip.md) sayfasındaki açıklamalara göre düzenleyin.
+- Select  xDrip+ in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-## 3. Xdrip+ (tamamlayıcı mod)
+- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md)
 
--   Xdrip+'ı indirin ve kurun: [xdrip](https://github.com/NightscoutFoundation/xDrip)
-- Xdrip'te veri kaynağı olarak "Companion App" seçilmeli ve Gelişmiş Ayarlar altında > Bluetooth Ayarları> "Companion Bluetooth" etkinleştirilmelidir.
-- AAPS'de > Yapılandırma > KŞ kaynağı > xDrip+. Ayarları [xDrip+ ayarları](../Configuration/xdrip.md) sayfasındaki açıklamalara göre düzenleyin. 
+## 3. xDrip+ (companion mode)
+
+-   Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
+-   Select  xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+
+-   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md) 

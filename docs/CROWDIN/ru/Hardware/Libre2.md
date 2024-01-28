@@ -1,86 +1,86 @@
 # Freestyle Libre 2
 
-The Freestyle Libre 2 sensor is now a real CGM even with the official app. Still, LibreLink cannot send data to AAPS. There are several solutions to use it with AAPS.
+Сенсор Freestyle Libre 2 теперь является полноценным непрерывным мониторингом даже с официальным приложением. Тем не менее, LibreLink не в состоянии отправлять данные в AAPS. Для взаимодействия Libre 2 с AAPS существует несколько решений.
 
-## 1. Use a Bluetooth bridge and OOP
+## 1. Использовать мост Bluetooth и алгоритм OOP
 
-Bluetooth transmitters can be used with the Libre 2 (EU) and an [out of process algorithm](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) app. You can receive blood sugar readings every 5 minutes like with the [Libre 1](../Libre1).
+Трансмиттеры Bluetooth Libre 2 (EU) можно использовать с приложением [алгоритма выхода из процесса](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) OOP. В этом случае Вы будете получать показания сахара крови каждые 5 минут, так же как и с Libre1.
 
-Check the bridge and app you want to use are compatible with your sensor and xDrip+ (older Blucon and recent ones won't work, Miaomiao 1 needs firmware 39 and Miaomiao 2 firmware 7).
+Убедитесь, что мост и приложение, которое вы хотите использовать, совместимы с вашим сенсором и xDrip+ (более старые модели Blucon не будут работать, Miaomiao 1 требует прошивки 39 и Miaomiao 2 прошивки 7).
 
-The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre 2 do a 10 to 25 minutes smoothing to avoid certain jumps. See below [Value smoothing & raw values](#value-smoothing-raw-values). OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
+Алгоритм ООП Libre2 выдает те же показания BГк, что и при использовании оригинального ридера или приложения LibreLink при сканировании NFC. Во избежание скачков, AAPS с Libre2 производит сглаживание в пределах от 10 до 25 минут. См. ниже [Сглаживание показаний & необоаботанные данные](#value-smoothing-raw-values). Алгоритм программы генерирует данные каждые 5 минут со сглаживанием по среднему значению за последние 5 минут. Поэтому значения ГК не выглядят гладкими, а совпадают с показаниями оригинального устройства считывания и быстрее следуют "реальным". Если вы хотите пользоваться алгоритмом OOP, включите все настройки сглаживания в xDrip+.
 
-There are some good reasons to use a Bluetooth transmitter:
+Есть несколько веских причин пользоваться передатчиком Bluetooth:
 
--   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the the readers like values with "calibrate based on glucose".  
-  Make sure to leave OOP1 disabled (2).
+-   Вы можете выбрать различные стратегии калибровки OOP2 (1): получать значения с ридера, "без калибровки", калибровать сенсор, как Libre 1 "на основе необработанных данных", или, в конечном счете, калибровать значения "на основе глюкозы".  
+  Убедитесь, что OOP1 отключен (2).
 
-    → Hamburger Menu → Settings → Less common settings → Other misc. options
+    → Сэндвич-меню → Настройки →Менее распространенные настройки → Другие разные настройки. Варианты
 
-![OOP2 Calibration](../images/Libre2_OOP2Calibration.png)
+![Калибровка OOP2](../images/Libre2_OOP2Calibration.png)
 
--   The Libre 2 sensor can be used 14.5 days as the Libre 1
--   8 hours backfilling is fully supported
+-   Libre2 может работать 14,5 дней как и Libre1
+-   Полностью поддерживается восьмичасовое обратное заполнение данными
 
-Remark: The transmitter can be used in parallel to the LibreLink app without interfering with it.
+Замечание: Трансмиттер можно использовать параллельно с приложением LibreLink.
 
-## 2. Use xDrip+ direct connection
+## 2. Использовать прямое подключение xDrip+
 
-:::{admonition} Libre 2 EU only :class: warning xDrip+ doesn't support direct connection to Libre 2 US and AUS.  
+:::{admonition}{предостережение} только для Libre 2 ЕС :класс: предупреждение xDrip+ не поддерживает прямое подключение к Libre 2 США и Австралии.  
 :::
 
-- Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [this latest OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) as the one in the document is obsolete.
-- Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
+- Следуйте [этим инструкциям](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) для настройки xDrip+, но обязательно загрузите [эту новую версию OOP 2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view), поскольку та, что приведена в документе, устарела.
+- Следуйте инструкциям по установке на странице настроек [xDrip+](../Configuration/xdrip.md).
 
--   В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите xDrip+.
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-## 3. Use Diabox
+## 3. Использовать Diabox
 
 - Установите [Diabox](https://t.me/s/DiaboxApp). В Настройках, Интеграция, включите "Делиться данными с другими приложениями".
 
 ![Diabox](../images/Diabox.png)
 
-- В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите xDrip+.
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-## 4. Use Juggluco
+## 4. Использовать Juggluco
 
 - Скачайте и установите приложение Juggluco [отсюда](https://www.juggluco.nl/Juggluco/download.html).
-- Follow the instructions [here](https://www.juggluco.nl/Juggluco/index.html)
-- In Settings, enable xDrip+ broadcast (which doesn't send data to xDrip+ but to AAPS).
+- Следуйте инструкциям [здесь](https://www.juggluco.nl/Juggluco/index.html)
+- В Настройках включите трансляцию в xDrip+ (посылает данные не в xDrip+, а в AAPS).
 
-![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
+![Трансляция Juggluco в AAPS](../images/Juggluco_AAPS.png)
 
-- В качестве источника данных гликемии в конфигураторе (настройки AAPS) выберите xDrip+.
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-:::{admonition} Use with xDrip+ :class: note You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
+:::{admonition}{предостерижение} Использовать с xDrip+ :class: :класс: примечание Вы можете настроить Juggluco на трансляцию в xDrip + при помощи модифицированного приложения Libre (следует отключить трансляцию xDrip +), чтобы выполнить калибровку (смотрите здесь) и избежать ежеминутной отправки данных в AAPS.  
 ![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  
-You will then need to set xDrip+ data source to Libre 2 Patched App to receive data from Juggluco.  
+Затем в модифицированном приложении Libre 2 следует установить источником данных xDrip+, чтобы получать данные из Juggluco.  
 :::
 
-## 5. Use the patched LibreLink app with xDrip+
+## 5. Использовать модифицированное приложение LibreLink с xDrip+
 
-:::{admonition} Libre 2 EU only :class: warning The patched app is an old version (22/4/2019) and might not be compatible with recent Android releases.  
+:::{admonition} предостережение только Libre 2 для EU :class: предупреждение Модифицированное приложение имеет старую версию (22/4/2019) и может быть несовместимо с последними версиями Android.  
 :::
 
-### Step 1: Build the patched app
+### Шаг 1: Создаем модифицированное приложение
 
-For legal reasons, "patching" has to be done by yourself. Используйте поисковые системы для поиска соответствующих ссылок. There are two variants: The recommended original patched app blocks any internet traffic to avoid tracking. The other variant supports LibreView.
+По юридическим причинам установка так называемого патча выполняется самостоятельно. Используйте поисковые системы для поиска соответствующих ссылок. Существует два варианта: рекомендуемое оригинальное модифицированное приложение блокирует любой интернет-трафик, чтобы избежать отслеживания. Другой вариант поддерживает LibreView.
 
 Вместо оригинального приложения следует установить модифицированное. Следующий датчик, установленный с его помощью, будет передавать текущие значения гликемии приложению xDrip+, работающему на смартфоне через Bluetooth.
 
 Важно: чтобы избежать возможных проблем, рекомендуем сначала установить и затем деинсталлировать оригинальное приложение на смартфон с поддержкой NFC. NFC должен быть включен. Он не требует дополнительной энергии. Затем установите модифицированное приложение.
 
-Исправленное приложение можно определить с помощью уведомления об авторизации в главном режиме. The foreground authorization service improves the connection stability compared to the original app which does not use this service.
+Исправленное приложение можно определить с помощью уведомления об авторизации в главном режиме. Служба агрессивной авторизации повышает стабильность соединения по сравнению с исходным приложением, которое не использует эту службу.
 
 ![LibreLink (основной режим)](../images/Libre2_ForegroundServiceNotification.png)
 
-Other indications could be the Linux penguin logo in the three dot menu -> Info or the font of the patched app (2) different from the original app (1). Эти критерии необязательны и зависят от выбранного источника скачивания приложения.
+Другими признаками могут быть логотип пингвина Linux в меню с тремя точками -> Шрифт информации и приложения (2), отличается от оригинального приложения (1). Эти критерии необязательны и зависят от выбранного источника скачивания приложения.
 
 ![Проверка шрифтов LibreLink](../images/LibreLinkPatchedCheck.png)
 
 Убедитесь, что NFC активирована дайте разрешения на обращение к памяти и геолокации, включите автоматическое время и часовой пояс и задайте хотя бы одно оповещение в этом приложении.
 
-### Step 2: Start the sensor with the patched app
+### Шаг 2: Запускаем сенсор при помощи модифицированного приложения
 
 Теперь запустите сенсор Libre2 при помощи модифицированного приложения, просто сканируя сенсор. Убедитесь, что заданы все параметры.
 
@@ -98,19 +98,19 @@ Other indications could be the Linux penguin logo in the three dot menu -> Info 
 
 ![автоматическое определение времени и часового пояса + настройки оповещений](../images/Libre2_DateTimeAlarms.png)
 
-Once the sensor started with the patched app, you won't be able to connect it to another app/phone. If you uninstall the patched app, you will lose alarms and continuous BG readings.
+После того, как сенсор запустится при помощи модифицированного приложения, его нельзя будет подключить к другому приложению / телефону. Если удалить приложение, будут утрачены оповещения и непрерывный поток данных ГК.
 
-Первая установка соединения с сенсором имеет решающее значение. Приложение LibreLink пытается установить беспроводное соединение с сенсором каждые 30 секунд. Если один или несколько обязательных параметров отсутствуют, их надо скорректировать. У вас нет ограничений по времени для этого. Сенсор постоянно пытается установить соединение. Даже если это длится несколько часов. Be patient and try different settings before even thinking of changing the sensor.
+Первая установка соединения с сенсором имеет решающее значение. Приложение LibreLink пытается установить беспроводное соединение с сенсором каждые 30 секунд. Если один или несколько обязательных параметров отсутствуют, их надо скорректировать. У вас нет ограничений по времени для этого. Сенсор постоянно пытается установить соединение. Даже если это длится несколько часов. Будьте терпеливы и пробуйте другие настройки, прежде чем даже подумать о замене сенсора.
 
-Если вы видите красный восклицательный знак ("!") on the upper left corner of the LibreLink start screen there is no connection or some other setting blocks LibreLink to signal alarms. Проверьте, включен ли звук и отключены ли все виды блокировок уведомлений от приложений. Когда восклицательный знак исчезнет, соединение будет установлено и значения гликемии отправятся на смартфон. Это должно произойти не более чем через 5 минут.
+Если вы видите красный восклицательный знак ("!") в левом верхнем углу начального экрана Libre Link, это значит, что отсутствует подключение или какая-либо другая настройка блокирует подачу сигналов Libre Link. Проверьте, включен ли звук и отключены ли все виды блокировок уведомлений от приложений. Когда восклицательный знак исчезнет, соединение будет установлено и значения гликемии отправятся на смартфон. Это должно произойти не более чем через 5 минут.
 
 ![LibreLink нет соединения](../images/Libre2_ExclamationMark.png)
 
 Если восклицательный знак остается или сприходят ообщения об ошибке, это может иметь несколько причин:
 
--   Android location service is not granted - please enable it in system settings
--   automatic time and time zone not set - please change settings accordingly
--   activate alarms - at least one of the three alarms must be activated in LibreLink
+-   Служба определения местоположения Android не получила разрешений - включите ее в системных настройках
+-   автоматическое время и часовой пояс не заданы - измените настройки
+-   активируйте оповещения - по крайней мере один из трех сигналов в LibreLink
 -   Bluetooth выключен - включите
 -   звук заблокирован
 -   уведомления приложений заблокированы
@@ -120,7 +120,7 @@ Once the sensor started with the patched app, you won't be able to connect it to
 
 ![Соединение LibreLink установлено](../images/Libre2_Connected.png)
 
-Иногда может помочь очистка кэша bluetooth и/или сброс всех сетевых соединений через меню системы. Это удалит все подключенные устройства bluetooth и, возможно восстановит правильное соединение. That procedure is safe as the started sensor is remembered by the patched LibreLink app. Ничего дополнительного здесь не требуется. Просто подождите подключения модифицированного приложения к сенсору.
+Иногда может помочь очистка кэша bluetooth и/или сброс всех сетевых соединений через меню системы. Это удалит все подключенные устройства bluetooth и, возможно восстановит правильное соединение. Эта процедура безопасна, поскольку запущенный сенсор уже запомнен модифицированным приложением LibreLink. Ничего дополнительного здесь не требуется. Просто подождите подключения модифицированного приложения к сенсору.
 
 После успешного подключения при необходимости можно изменить настройки смартфона. Это не рекомендуется, но вы можете захотеть экономить энергию. Служба определения местоположения может быть отключена, громкость установлена на ноль, сигналы снова отключены. Данные сахара крови в любом случае передаются.
 
@@ -132,59 +132,62 @@ Once the sensor started with the patched app, you won't be able to connect it to
 
 Обратите внимание, что модифицированное приложение не имеет подключения к Интернету, чтобы избежать отслеживания.
 
-Однако существует вариант модифицированного приложения с включенным доступом в Интернет для поддержки LibreView. В этом случае имейте в виду, что данные передаются в облако. But your endo team reporting is fully supported then. С помощью такого варианта можно также перенести оповещения сенсора на другое устройство, которое не запускало сенсор. Подробно о том, как это сделать, можно найти поиском google на немецких диабетических форумах.
+Однако существует вариант модифицированного приложения с включенным доступом в Интернет для поддержки LibreView. В этом случае имейте в виду, что данные передаются в облако. Но в этом случае отчеты для вашего эндокринолока полностью поддк=ерживаются. С помощью такого варианта можно также перенести оповещения сенсора на другое устройство, которое не запускало сенсор. Подробно о том, как это сделать, можно найти поиском google на немецких диабетических форумах.
 
-### Step 3: Install and configure xDrip+ app
+### Шаг 3: Устанавливаем и настраиваем приложение xDrip+
 
 Значения гликемии передаются на смартфон приложением xDrip+.
 
--   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
--   Set xDrip+ with the [patched app data source](../Configuration/xdrip.md#lbre-2-patched-app).
--   Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
+-   Вы можете безопасно загрузить [ новую (стабильную) версию APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), если только вам не нужны новейшие функции. В этом случае следует загружать т. н. [Ночную сборку](https://github.com/NightscoutFoundation/xDrip/releases).
+-   Настройте xDrip+ с [модифицированным приложением LibreLink в качестве источника данных ГК](../Configuration/xdrip.md#lbre-2-patched-app).
+-   Следуйте инструкциям по установке на странице настроек [xDrip+](../Configuration/xdrip.md).
 
-### Step 4: Start sensor
+### Шаг 4: Запускаем сенсор
 
-- → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Answer "Not Today" (4).
+- → Сэндвич-меню (1) → Запустить сенсор (2) → Запустить сенсор (3) → Ответ "Не сегодня" (4).
 
 ![xDrip+ запуск трансмиттера Libre & Сенсора 3](../images/xDrip_Libre_Transmitter03.png)
 
-This will not physically start any Libre2 sensor or interact with them in any case. Это нужно для того, чтобы указать xDrip+, что новый сенсор начал передавать ГК. Если доступно, введите два замера крови для начальной калибровки. Теперь значения глюкозы крови должны отображаться в xDrip+ каждые 5 минут. Пропущенные данные, например из-за того, что вы были далеко от телефона, не будут восстановлены.
+На самом деле эта команда физически не запустит сенсор Libre2 и не начнет взаимодействие с ним. Это нужно для того, чтобы указать xDrip+, что новый сенсор начал передавать ГК. Если доступно, введите два замера крови для начальной калибровки. Теперь значения глюкозы крови должны отображаться в xDrip+ каждые 5 минут. Пропущенные данные, например из-за того, что вы были далеко от телефона, не будут восстановлены.
 
-После смены сенсора xDrip+ автоматически определит новый и удалит все данные калибровки. You may check you blood glucose after activation and make a new initial calibration.
+После смены сенсора xDrip+ автоматически определит новый и удалит все данные калибровки. После активации можно измерить ГК и выполнить новую начальную калибровку.
 
-### Step 5: Configure AAPS (for looping only)
+### Шаг 5: Настраиваем AAPS (для работы в замкнутом/незамкнутом цикле)
 
 -   В AAPS перейдите в Конфигуратор > Источник ГК и выберите 'xDrip+'
+
+![xDrip+ BG Source](../images/ConfBuild_BG_xDrip.png)
+
 -   Если AAPS не получает значения ГК, когда телефон находится в режиме авиаперелета пользуйтесь функцией "Установить получателя" в соответствии с описанием [настроек xDrip+](xdrip-identify-receiver).
 
-До настоящего времени, при выборе Libre 2 в качестве источника данных ГК, в алгоритме SMB невозможно активировать «Включить SMB всегда» и «Включить SMB после углеводов». Значения BG Libre 2 недостаточно сглажены, чтобы их безопасно использовать. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+До настоящего времени, при выборе Libre 2 в качестве источника данных ГК, в алгоритме SMB невозможно активировать «Включить SMB всегда» и «Включить SMB после углеводов». Значения BG Libre 2 недостаточно сглажены, чтобы их безопасно использовать. Подробнее см. [Сглаживание данных Гк](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 (Libre2-experiences-and-troubleshooting)=
 ### Опыт и устранение неполадок
 
 #### Связь
 
-The connectivity is good with most phones, with the exception of Huawei mobile phones. Связь может прерваться, если мобильный телефон находится в кармане напротив сенсора или когда вы на улице. Wear your phone on the sensor side of your body. В помещениях, где устройства Bluettooth работают за счет отражений, нет никаких проблем. Если возникают проблемы с подключением, попробуйте другой телефон. Также может помочь установка сенсора антенной BT вниз. При установке сенсора прорезь на аппликаторе должна быть направлена вниз.
+У большинства телефонов связь хорошая, за исключением мобильных телефонов Huawei. Связь может прерваться, когда мобильный телефон находится в кармане напротив сенсора или когда вы на улице. Носите телефон на теле со стороны сенсора. В помещениях, где устройства Bluettooth работают за счет отражений, нет никаких проблем. Если возникают проблемы с подключением, попробуйте другой телефон. Также может помочь установка сенсора антенной BT вниз. При установке сенсора прорезь на аппликаторе должна быть направлена вниз.
 
 #### Сглаживание данных & необработанные данные
 
-Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+Технически, текущее значение сахара в крови передается на xDrip + каждую минуту. По умолчанию фильтр средневзвешенного значения вычисляет сглаженное значение за последние 25 минут. Этот период можно изменить в меню функций сканирования NFC.
 
-→ Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
+→ Сэндвич-меню → Настройки →Функция сканирования NFC→ Сглаживать данные libre 3 при использовании метода xxx
 
 ![xDrip + дополнительные параметры Libre 2 & необработанные данные](../images/xDrip_Libre3_Smooth.png)
 
-Это обязательно для цикла. The curves look smooth and the loop results are great. Необработаные значения, на которых основаны оповещения, имеют несколько больший разборос, но в конечном счете соответствуют показателям ридера. Кроме того, необработанные значения могут отображаться на графике xDrip+, чтобы имелась возможность своевременно реагировать на быстрые изменения. Переключитесь на Менее распространенные Настройки\ > Расширенные настройки для Libre2 \>"показывать необработанные значения" и "показывать Информацию с сенсора". После этого "необработанные" значения будут дополнительно отображается в виде небольших белых точек, а в меню системы будет доступна дополнительная информация о сенсоре.
+Это обязательно для цикла. Кривые выглядят гладкими, и результаты работы цикла великолепны. Необработаные значения, на которых основаны оповещения, имеют несколько больший разборос, но в конечном счете соответствуют показателям ридера. Кроме того, необработанные значения могут отображаться на графике xDrip+, чтобы имелась возможность своевременно реагировать на быстрые изменения. Переключитесь на Менее распространенные Настройки\ > Расширенные настройки для Libre2 \>"показывать необработанные значения" и "показывать Информацию с сенсора". После этого "необработанные" значения будут дополнительно отображается в виде небольших белых точек, а в меню системы будет доступна дополнительная информация о сенсоре.
 
 Необработанные данные очень полезны при быстрых изменениях ГК. Даже если точки идут вразброс, для принятия решений по терапии тенденция видна гораздо лучше, чем при сглаживании.
 
-→ Hamburger menu → Settings → Less common settings → Advanced settings for Libre 2
+→ Сэндвич-меню → Настройки →Менее распространенные настройки → Advanced settings for Libre 2 (дополнительные настройки для Libre 2)
 
 ![xDrip + дополнительные параметры Libre 2 & необработанные данные](../images/Libre2_RawValues.png)
 
 #### Время работы сенсора
 
-Рабочее время сенсора фиксируется на 14 дней. 12 дополнительных часов Либре1 больше не существует. xDrip+ shows additional sensor information after enabling Advanced Settings for Libre2 → "show Sensors Infos" in the system menu like the starting time. Оставшееся время сенсора можно также увидеть в модифицированном приложении LibreLink. Either in the main screen as remaining days display or as the sensor start time in the three-point menu → Help → Event log under "New sensor found".
+Рабочее время сенсора фиксируется на 14 дней. 12 дополнительных часов Либре1 больше не существует. xDrip + показывает дополнительную информацию о сенсорах после включения дополнительных настроек для Libre2 → "показывать информацию о датчиках" в системном меню, например, время запуска. Оставшееся время сенсора можно также увидеть в модифицированном приложении LibreLink. Либо на главном экране как отображение оставшихся дней, либо как время запуска сенсора в трехточечном меню → Справка → Журнал событий в разделе "Новый сенсор найден".
 
 ![Libre 2 время запуска](../images/Libre2_Starttime.png)
 
@@ -200,13 +203,13 @@ Technically, the current blood sugar value is transmitted to xDrip+ every minute
 
 #### Калибровка
 
-You can calibrate the Libre2 **with an offset of -40 mg/dl to +20 mg/dL \[-2,2 mmol/l to +1,1 mmol/l\]** (intercept). The slope isn't changeable. Please check by fingerpricking after setting a new sensor, keeping in mind it might not be accurate in the first 12 hours after insertion. Since there can be large differences to the blood measurements, verify every 24 hours and calibrate if necessary. If the sensor is completely off after a few days, it should then be replaced.
+Libre2 можно калибровать **с погрешностью -40 мг/дл до +20 мг/dL [-2,2 ммоль/л до +1,1 ммоль/л] **(intercept). Угловой коэффициент не изменяется. Проверьте глюкометром после установки нового сенсора, имея в виду, что в первые 12 часов после установки данные могут быть неточны. Поскольку показатели ГК могут сильно отличаться, проверяйте каждые 24 часа и при необходимости калибруйте. Если через несколько дней показания сенсора совершенно не совпадают с глюкометром, сенсор следует заменить.
 
 ### Верификация
 
-Сенсоры Libre2 способны выполнять самопроверку для обнаружения плохих сенсоров. Как только сенсор смещается на руке или слегка приподнимается, данные могут начать колебаться. После этого датчик Libre2 отключится по соображениям безопасности. К сожалению, при сканировании при помощи приложения, проводятся дополнительные проверки. Приложение может отключить сенсор, даже если он исправен. В настоящее время внутренний тест слишком жесткий. Avoid scanning the sensor with another phone to reduce the risk of unexpected sensor shutdown.
+Сенсоры Libre2 способны выполнять самопроверку для обнаружения плохих сенсоров. Как только сенсор смещается на руке или слегка приподнимается, данные могут начать колебаться. После этого датчик Libre2 отключится по соображениям безопасности. К сожалению, при сканировании при помощи приложения, проводятся дополнительные проверки. Приложение может отключить сенсор, даже если он исправен. В настоящее время внутренний тест слишком жесткий. Избегайте сканирования сенсора другим телефоном, чтобы уменьшить риск его неожиданного отключения.
 
-# Best practices for calibrating a Libre 2 sensor
+# Наилучшие методы калибровки Libre 2
 
 Существует несколько "правил" для лучших результатов калибровки сенсоров Libre 2. Они не зависят от программного обеспечения (например, модифицированное приложение libre2, oop2, …), для обработки значений Libre2 .
 
@@ -214,6 +217,6 @@ You can calibrate the Libre2 **with an offset of -40 mg/dl to +20 mg/dL \[-2,2 m
 2.  На самом деле этот уровень автоматически учитывается при соблюдении правила 1, но надо удостовериться, что при контрольных замерах график гликемии также ровный в течение 15 минут и более. Не сравнивайте замеры на падениях и подъемах. Важно: замеры можно производить в любое время, но калибруйте только на ровных!
 3.  Поскольку калибровка на ровных является хорошей основой, рекомендуется также калибровать сенсор только в пределах желаемого целевого диапазона, например от 70 до 160 мг/дл. Libre2 не работает в широком диапазоне, например от 50 мг/дл до 350 мг/дл (по крайней мере не линейно), поэтому калибруйте только в нужном диапазоне. -> Просто имейте в виду, что значения за пределами диапазона калибровки не будут точными.
 4.  Не калибруйте слишком часто. Частые калибровки в основном приводят к ухудшению результатов. Когда сенсор дает хорошие результаты в на ровных сахарах, просто не добавляйте новых калибровок, так как это не будет иметь нужного эффекта. Достаточно перепроверять точность каждые 3-5 дней (конечно, на ровных).
-5.  Избегайте калибровок, когда это не требуется. This might sound silly but it is not recommended to add a new calibration if the blood glucose to flesh glucose level difference is only ±10 mg/dl (e.g. blood glucose level: 95, Libre sensor 100 -> do NOT add the 95, blood glucose level: 95, Libre sensor 115 -> add the 95 to be taken into account for the calibration)
+5.  Избегайте калибровок, когда это не требуется. Это может показаться глупым, но не рекомендуется добавлять новую калибровку, если разница в уровне глюкозы в крови составляет всего ±10 мг/дл (например, уровень глюкозы в крови: 95, сенсор Libre 100 -> НЕ добавляйте калибровку 95, уровень глюкозы в крови: 95, сенсор Libre 115 -> добавьте калибровку 95)
 
 Некоторые общие замечания: После активации нового сенсора и при окончании его срока службы, имеет смысл чаще проводить сравнительные измерения чем раз в 3-5 дней, как указано в правиле № 4. В новых и старых сенсорах чаще требуются перекалибровки. Время от времени сенсор не передает допустимых значений. Наиболее вероятно, что значение сенсора намного нижепо сравнению с фактическим уровнем глюкозы в крови ( например, сенсор: 50 mg/dl, ГК: 130 mg/dl) даже после калибровки. В этом случае добиться полезных результатов от сенсора не удастся. Например, при использовании модифицированного приложения можно максимально добавить смещение +20 мг/dl. Когда сенсор дает слишком низкие значения, не сомневаясь заменяйте его, так как ситуация не улучшится. Даже если сенсор неисправен, при слишком частых низких значениях, попробуйте другие участки тела. Даже на официально одобренных участках (верхняя часть руки) могут быть локации, где сенсоры не дают верных показаний. Методом проб и ошибок добивайтесь лучших результатов.

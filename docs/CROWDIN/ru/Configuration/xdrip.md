@@ -1,90 +1,89 @@
 # Настройки xDrip+
 
-If not already set up, then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
+Если это еще не сделано, загрузите [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
 Отключите оптимизацию заряда батареи и разрешите фоновую активность приложению xDrip+.
 
-You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features or are using sensors that are being actively integrated (like G7), in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
+Вы можете безопасно загрузить [ новую (стабильную) версию APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), если только вам не нужны новейшие функции или вы пользуетесь сенсорами, которые активно интегрируются (как G7). В этом случае следует загружать т. н. [Ночную сборку](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Основные настройки для всех систем мониторинга
 
-### Disable Nightscout upload
+### Отключите выгрузку в Nightscout
 
-Starting with AAPS 3.2, you shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+Начиная с AAPS 3.2, не позволяйте никаким другим приложениям загружать данные (уровень глюкозы в крови и терапию) в Nightscout.
 
-→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) -> Nightscout Sync (REST-API)(4) → Switch **OFF** `Enabled` (5)
+→ Сэндвич-меню (1) → Настройки (2) → Загрузка в облако(3) -> Синхронизация с Nightscout (REST-API)(4) → Передать данные в NS **** `Выключено` (5)
 
 ![основные настройки xDrip+ 1](../images/xDrip_Basic1.png)
 
-#### Disable automatic calibration and treatments
+#### Отключите автоматическую калибровку и терапию
 
-If you use an older version of AAPS (before 3.2), make sure to deactivate `Automatic Calibration` (7) If the checkbox for `Automatic Calibration` is checked, activate `Download treatments` (6) once, then remove the checkbox for `Automatic Calibration` and deactivate `Download treatments` again.
+Если вы используете более старую версию AAPS (до версии 3.2), обязательно отключите `автоматическую калибровку` (7) Если установлен флажок для `Автоматической калибровки`, активируйте `Загрузку терапии` (6) один раз, затем снимите флажок с `Автоматической калибровки` и снова деактивируйте `Загрузку терапии`.
 
 ![основные настройки xDrip+ 2](../images/xDrip_Basic2.png)
 
-Tap `Extra Options`(8)
+Если Нажать на `Дополнительные опции`)
 
-:::{admonition} Safety warning :class: warning You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.  
-:::
+:::Предупреждение безопасности: Следует деактивировать "Загружать лечение/назначения" с xDrip, иначе в AAPS эти величины удвоятся, что приведет к неверному количеству активных углеводов COB и активного инсулина IOB:::
 
-Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill data` (11).
+Отключите `Загрузку терапии`(9) и убедитесь, что вы ** НЕ будете** пользоваться `Обратным заполнением данных` (11).
 
-Option `Alert on failures` should also be deactivated (10). Otherwise you will get an alarm every 5 minutes in case Wi-Fi/mobile network issues or if the server is not available.
+Опция `Оповещение при сбоях` также должна быть отключена(10). Иначе вы будете получать сигнал каждые 5 минут если wifi/мобильная сеть слабые или сервер недоступен.
 
 ![основные настройки xDrip+ 3](../images/xDrip_Basic3.png)
 
-### **Inter-app Settings** (Broadcast)
+### **Настройки интеграций с приложениями** (Трансляция)
 
-If you are going to use AAPS and the data should be forwarded to i.e. AAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
+При работе AAPS необходимы данные гликемии, которые передаются при помощи локальной передачи данных. Она включается в настройках интеграции с приложениями.
 
-→ Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
+→ Сэндвич-меню (1) → Настройки (2) → Настройки интеграций с приложениями (3) → Локальная трансляция данных **ВКЛ** (4)
 
-In order for the values to be identical in AAPS with respect to xDrip+, you should activate `Send the displayed glucose value` (5).
+Для того чтобы не было расхождений между приложениями, необходимо активировать `Отправлять отображаемый уровень ГК` (5).
 
-Enable Compatible Broadcast (6).
+Включите совместимую трансляцию (6).
 
-![xDrip+ Basic Settings 4](../images/xDrip_Basic4.png)
+![основные настройки xDrip+ 4](../images/xDrip_Basic4.png)
 
-If you have also activated `Accept treatments` in xDrip+ and `Enable broadcasts to xDrip+` in AAPS xDrip+ plugin, then xDrip+ will receive insulin, carbs and basal rate information from AAPS.
+Если вы также включили `принимать статусы извне` в xDrip+ и `Включить передачу в xDrip+` в плагине AAPS xDrip+, то xDrip+ будет получать информацию об инсулинах, углеводах и базальной скорости от AAPS.
 
-If you enable `Accept Calibrations`, xDrip+ will use the calibrations from AAPS. Be careful when you use this feature with Dexcom sensors: read [this](https://navid200.github.io/xDrip/docs/Calibrate-G6.html) first.
+Если вы включите `Принимать калибровки`, xDrip+ будет использовать калибровки AAPS. Будьте осторожны при использовании этой функции с сенсорами Dexcom: сначала прочитайте [это](https://navid200.github.io/xDrip/docs/Calibrate-G6.html).
 
-Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time AAPS sends a basal/profile change.
+Не забудьте отключить звуки импорта, чтобы xDrip+ не издавал звуковые сигналы каждый раз, когда AAPS отправляет изменения базы/профиля.
 
-![xDrip+ Basic Settings 5](../images/xDrip_Basic5.png)
+![основные настройки xDrip+ 5](../images/xDrip_Basic5.png)
 
 (xdrip-identify-receiver)=
 
-#### Идентификатор ресивера
+#### Установить получателя
 
-- If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to → Hamburger Menu (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
+- Если возникают проблемы с локальной трансляцией (AAPS не получает значения ГК из xDrip+), перейдите в сэндвич-меню → (1) Настройки (2) → Настройки интеграций с приложениями (3) → Установить получателя (7) и введите `info.nightscout.androidaps` для сборки AAPS (если сборка PumpControl, вместо этого введите `info.nightscout.aapspumpcontrol`!!).
 - Внимание: Автокоррекция, как правило, меняет i на прописную букву. **Используйте только строчные буквы** при вводе `info.nightscout.androidaps` (или `info.nightscout.aapspumpcontrol` для PumpControl). Прописная I не позволит AAPS получать данные ГК из xDrip+.
     
     ![xDrip+ Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-## Use AAPS to calibrate in xDrip+
+## Используйте AAPS для калибровки в xDrip+
 
-- If you want to be able to use AAPS to calibrate then in xDrip+ go to Settings → Interapp Compatibility → Accept Calibrations and select ON. 
-- You may also want to review the options in Settings → Less Common Settings → Advanced Calibration Settings.
+- Если вы хотите, чтобы AAPS мог калибровать показания гликемии, в xDrip +, перейдите в Настройки → Настройки интеграций с приложениями → Принимать калибровки и выберите ВКЛ (ON). 
+- Другие варианты см. в Настройках → Менее распространенные настройки → Расширенная калибровка/Дополнительные параметры калибровки.
 
 ## Dexcom G6
 
 - Трансмиттер Dexcom G6 может одновременно подключаться к ресиверу Dexcom (или к помпе T:slim) и одному приложению на вашем телефоне.
 - При использовании xDrip+ в качестве приемника сначала удалите приложение Dexcom. **Невозможно одновременно подключить к трансмиттеру приложения xDrip+ и Dexcom!**
-- If you need Clarity and want to profit from xDrip+ features, use the [Build Your Own Dexcom App](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+, or use xDrip+ as a Companion app receiving notifications from the official Dexcom app.
+- Если вам нужно ПО Clarity и вы хотите максимально воспользоваться функционалом xDrip+, применяйте [Самостоятельно собранное приложение Dexcom BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) с локальной трансляцией на xDrip+ или же xDrip + в качестве приложения-компаньона, получающего уведомления от официального приложения Dexcom.
 
 ### Версия xDrip+ в зависимости от серии трансмиттера G6.
 
-- All G6 transmitters manufactured after fall/end 2018 are called "Firefly". They do not allow sensor restart without [removing the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), they do not send raw data. It is recommended to use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
-- Old rebatteried transmitters and modified trasmitters allow sensor life extension and restarts, they also send raw data. You can use the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
+- Все трансмиттеры G6, изготовленные после осени/конца 2018 называют "Firefly" (светлячок). Они не позволяют перезапустить сенсор без [ извлечения трансмиттера](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), они не отправляют необработанные данные. Рекомендуется использовать самые свежие [Ночные сборки](https://github.com/NightscoutFoundation/xDrip/releases) xDrip+.
+- Трансмиттеры с замененными старыми батареями и модифицированные трансмиттеры позволяют продлить срок службы сенсора и перезапускать его, они также отправляют необработанные данные. В этом случае можно пользоваться [свежей стабильной версией APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
 
 ### Настройки для работы с Dexcom
 
-- Follow [these instructions](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html) to setup xDrip+.
+- Для настройки xDrip+ следуйте [этой инструкции](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html).
 
 ### Упреждающие перезапуски не рекомендуются
 
-**Only rebatteried or modified Dexcom transmitters. [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) do not work with standard transmitters and will stop the sensor completely: you need to [remove the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html) to restart the sensor.**
+**Только перезаряженные или модифицированные трансмиттеры Dexcom. [Упреждающий перезапуск](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) не работает со стандартными трансмиттерами и приводит к полной остановке сенсора: следует [ извлечь трансмиттер](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), чтобы перезапустить сенсор.**
 
 Автоматическое продление работы сенсоров Dexcom (`упреждающие перезапуски, preemtive restarts`) не рекомендуется, так как может привести к скачкам значений ГК на 9 день после перезапуска.
 
@@ -106,55 +105,55 @@ Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time A
 
 **Для второго и следующих трансмиттеров смотрите [Продление срока работы трансмиттера](xdrip-extend-transmitter-life) ниже.**
 
-Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
+Следуйте [этим инструкциям](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
 (xdrip-transmitter-battery-status)=
 
 ### Состояние батареи трансмиттера
 
-- Battery status can be controlled in system status  
-    → Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen.
+- Состояние батареи можно контролировать в разделе Состояние системы  
+    → Сэндвич-меню (1) → Состояние системы (2) → На классической странице состояния (3), сдвиньте экран влево (4), чтобы перейти к → Экрану состояния G5/G6/G7.
 
-![xDrip+ System status](../images/xDrip_Dexcom_Battery.png)
+![состояние системы xDrip+](../images/xDrip_Dexcom_Battery.png)
 
-- See [here](https://navid200.github.io/xDrip/docs/Battery-condition.html) for more information.
+- Подробнее [здесь](https://navid200.github.io/xDrip/docs/Battery-condition.html).
 
 (xdrip-extend-transmitter-life)=
 
 ### Увеличение срока работы трансмиттера
 
-- [Lifetime](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) cannot be extended for Firefly transmitters: only rebatteried or modified transmitters.
-- Follow [these instructions](https://navid200.github.io/xDrip/docs/Hard-Reset.html) for non-Firefly transmitters.
+- <[Срок службы](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) трансмиттеров Firefly не может быть продлен: возможность остается только для тех, в которых заменена батарея или для модифицированных трансмиттеров.
+- Следуйте [этим инструкциям](https://navid200.github.io/xDrip/docs/Hard-Reset.html) для трансмиттеров, отличных от Firefly.
 
 (xdrip-replace-transmitter)=
 
 ### Замена трансмиттера
 
 - Выключите оригинальный ресивер Dexcom (если используете).
-- [Stop sensor](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html) (only if replacing sensor).
+- Нажмите на [Остановить сенсор](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html) (только при замене сенсора).
 
-- Забудьте устройство в системном состоянии XDrip и в настройках BT смартфона (показывается как Dexcom?? где ?? are the last two digits of the transmitter serial no.)  
-    → Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen → Forget Device (5).
+- Забудьте устройство в системном состоянии XDrip и в настройках BT смартфона (показывается как Dexcom?? где ?? являются последними двумя цифрами серийного номера трансмиттера)  
+    → Сэндвич - меню (1) → Состояние системы (2) → На классической странице состояния (3) сдвиньте экран влево (4), чтобы перейти к → Экрану состояния G5/G6 /G7 → Забыть устройство (5).
 
-![xDrip+ System status](../images/xDrip_Dexcom_StopSensor.png)
+![состояние системы xDrip+](../images/xDrip_Dexcom_StopSensor.png)
 
-- Remove transmitter (and sensor if replacing sensor). To remove transmitter without removing sensor see [this](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), or this video <https://youtu.be/AAhBVsc6NZo>.
-- Поместите старый трансмиттер подальше, чтобы предотвратить повторное соединение. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% sure no one is turning the microwave on.
-- Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
+- Удалите трансмиттер (и сенсор при замене). Как удалить трансмиттер без остановки сенсора, см. видео <https://youtu.be/AAhBVsc6NZo>.
+- Поместите старый трансмиттер подальше, чтобы предотвратить повторное соединение. Микроволновая печь является идеальным щитом Фарадея - но отключите кабель питания, чтобы быть на 100% уверенным, что никто ее не включит.
+- Следуйте [этим инструкциям](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 - Не включайте оригинальный ресивер Dexcom (если им пользуетесь) до появления первых данных в xDrip+.
 
 ### Новый сенсор
 
 - Выключите оригинальный ресивер Dexcom (если используете).
-- Stop sensor following [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html).
+- Остановите сенсор по [этим инструкциям](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html).
 
-- Insert and then start a new sensor following [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
+- Вставьте и запустите новый сенсор по [этим инструкциям](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
 (xdrip-retrieve-sensor-code)=
 
 ### Получение кода сенсора
 
-→ Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen → Calibration Code.
+→ Сэндвич-меню (1) → Состояние системы (2) → На классической странице состояния (3), сдвиньте экран влево (4), чтобы перейти к → Экрану состояния G5/G6/G7 → Код калибровки.
 
 ![xDrip+ Получение кода сенсора Dexcom 2](../images/xDrip_Dexcom_SensorCode2.png)
 
@@ -164,80 +163,80 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.ht
 
 #### Проблемы сопряжения с трансмиттером
 
-Follow [these instructions](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html).
+Следуйте [этим инструкциям](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html).
 
 #### Проблемы при запуске нового сенсора
 
-Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html).
+Следуйте [этим инструкциям](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html).
 
 ## Libre 1
 
-- Setup your NFC to Bluetooth bridge in xDrip+
+- Настройте мост NFC - Bluetooth в xDrip+
     
-    → Hamburger Menu (1) → Settings (2) → Less common settings (3) → Bluetooth Settings (4)
+    → Сэндвич-меню (1) → Настройки (2) →Менее распространенные настройки (3) → Настройки Bluetooth (4)
 
-- In Bluetooth Settings set the checkboxes exactly as in the screenshots below (5)
+- В настройках Bluetooth установите флажки точно так же, как на экране ниже (5)
     
-    - Disable watchdogs as they will reset the phone Bluetooth and interrupt your pump connection.
+    - Отключите режим перезапуска watchdog, так как он сбрасывает Bluetooth телефона и прерывает связь с помпой.
     
     ![xDrip+ настройки Libre Bluetooth 1](../images/xDrip_Libre_BTSettings1.png)
 
-- You can try to enable the following settings (7)
+- Можно попробовать включить следующие настройки (7)
     
     - Использовать сканирование
-    - Trust Auto-Connect
-    - Use Background Scans
+    - Доверять автоподключению
+    - Использовать фоновые сканирования
 
-- If you easily lose connection to the bridge or have difficulties recovering connection, **DISABLE THEM** (8).
+- Если при этом теряется соединение с мостом или возникают трудности с восстановлением соединения, **ОТКЛЮЧИТЕ ИХ** (8).
     
     ![xDrip+ настройки Libre Bluetooth 2](../images/xDrip_Libre_BTSettings2.png)
 
-- Leave all other options disabled unless you know why you want to enable them.
+- Оставьте все остальные параметры отключенными, если только не знаете, почему хотите их включить.
     
-    ![xDrip+ Libre Bluetooth Settings 3](../images/xDrip_Libre_BTSettings3.png)
+    ![xDrip+ настройки Libre Bluetooth 3](../images/xDrip_Libre_BTSettings3.png)
 
 ### Уровень батареи Libre smart reader
 
-- Battery level of bridges such as MiaoMiao and Bubble can be displayed in AAPS (not Blucon).
+- Уровень заряда батареи таких мостов, как Miao Miao и Bubble (но не Blucon), отображается в AAPS.
 - Подробности можно найти на странице [снимков экрана](Screenshots-sensor-level-battery).
 
 ### Подключите трансмиттер Libre и запустите сенсор
 
-- If your sensor requires it (Libre 2 EU and Libre 1 US) install the [latest out of process algorithm](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view).
+- Если сенсор нуждается в этом (Libre 2 EU и Libre 1 US), установите [ новейший алгоритм out-of-process ](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view).
 
-- Your sensor must be already started using the vendor app or the reader (xDrip+ cannot start or stop Libre sensors).
+- Сенсор должен быть уже запущен с помощью приложения поставщика или при помощи ридера (xDrip+ не может запускать или останавливать сенсоры Libre).
 
-- Set the data source to Libre Bluetooth.
+- Установите источник данных на Libre Bluetooth.
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre Bluetooth in Hardware Data source (3)
+    → Сэндвич-меню (1) → Настройки (2) → Выберите Libre Bluetooth в качестве аппаратного Источника данных (3)
     
     ![xDrip+ запуск трансмиттера Libre & Сенсора 1](../images/xDrip_Libre_Transmitter01.png)
 
-- Scan Bluetooth and connect the bridge.
+- Сканируйте Bluetooth и подключите мост.
     
-    → Hamburger Menu (1) → Scan Bluetooth (2) → Less common settings (3) → Bluetooth Settings (4)
+    → Сэндвич-меню (1) → Искать устройства Bluetooth (2) →Менее распространенные настройки (3) → Настройки Bluetooth (4)
     
-    - If xDrip+ can't find the bridge, make sure it's not connected to the vendor app. Put it in charge and reset it.
+    - Если xDrip+ не может найти мост, убедитесь, что он не подключен к приложению поставщика. Зарядите его и выполните сброс его настроек.
     
     ![xDrip+ запуск трансмиттера Libre & Сенсора 2](../images/xDrip_Libre_Transmitter02.png)
 
-- Start the sensor in xDrip+.
+- Запустите сенсор в xDrip+.
     
-    :::{admonition} Safety warning :class: warning Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.  
+    {admonition} Предостережение безопасности :class: предупреждение Не используйте данные сенсора до окончания часового прогрева: значения могут быть чрезвычайно высокими и вызвать неверные решения AAPS.  
     :::
     
-    → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
+    → Сэндвич-меню (1) → Запустить сенсор (2) → Запустить сенсор (3) → Введите точное время запуска ридером или оригинальным приложением. Если запускали не сегодня, выберите "Не сегодня" (4).
 
 ![xDrip+ запуск трансмиттера Libre & Сенсора 3](../images/xDrip_Libre_Transmitter03.png)
 
-## Libre 2 patched app
+## Модифицированное приложение Libre 2
 
-- Set the data source to Libre patched app.
+- Установите источник данных на Libre (patched app).
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre (patched App) in Hardware Data source (3)
+    → Сэндвич-меню (1) → Настройки (2) → Выберите Libre (patched app) в качестве аппаратного Источника данных (3)
     
-    ![xDrip+ Libre Patched app 1](../images/xDrip_Libre_Patched01.png)
+    ![xDrip+ Модифицированное приложение Libre Patched app 1](../images/xDrip_Libre_Patched01.png)
 
-- You can add `BgReading:d,xdrip libre_receiver:v` under Less Common Settings->Extra Logging Settings->Extra tags for logging. Это позволит записывать сообщения об ошибках для устранения неисправностей.
+- Можно добавить `Bg Reading:d,vdrip libre_receiver:v` в разделе Менее распространенные настройки-> Дополнительные настройки журнала->Дополнительные теги для ведения журнала. Это позволит записывать сообщения об ошибках для устранения неисправностей.
 
 ![xDrip+ LibreLink журналы](../images/Libre2_Tags.png)

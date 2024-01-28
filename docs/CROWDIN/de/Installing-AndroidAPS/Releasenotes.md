@@ -60,7 +60,7 @@ Release date: 23-10-2023
 - Websockets funktionieren im v3 Plugin ähnlich zum v1 Plugin. Mit deaktivierten Websockets plant AAPS regelmäßige NS-Downloads ein. Da NS damit dann nicht mehr permanent verbunden ist, wird so der Stromverbrauch reduziert. Das bedeutet allerdings auch, dass Daten seltener ausgetauscht werden (Datenaktualität). Please read [here](Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
 - Wenn xDrip als BZ-Quelle genutzt wird, muss diese nach dem Update noch einmal neu eingestellt werden (bedingt durch interne Anpassungen).
 - Um das erste Objective (Ziel) zu erreichen, kann anstelle von Nightscout nun auch Tidepool genutzt werden.
-- Wenn Daten an xDrip+ gesendet werden sollen, muss xDrip- Synchronisierungs-Plugin konfiguriert werden. Um Glukosewerte aus AAPS in xDrip+ zu empfangen, muss als Datenquelle "xDrip+ Sync Follower" ausgewählt werden.
+- Wenn Daten an xDrip+ gesendet werden sollen, muss xDrip- Synchronisierungs-Plugin konfiguriert werden. In order to receive BGs from AAPS in xDrip, “xDrip+ Sync Follower” must be selected as source
 - Wenn auf den ComboV2-Treiber gewechselt werden soll, muss Ruffy deinstalliert und die Pumpe erneut mit AAPS gekoppelt werden.
 - In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
 

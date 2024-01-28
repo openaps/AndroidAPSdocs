@@ -1,7 +1,7 @@
 # Конфигурация постоянного/флеш-мониторинга CGMS/FGMS
 
 * [Общие настройки](../Hardware/GeneralCGMRecommendation.md)
-* [Сглаживание данных](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)
+* [Сглаживание данных](../Usage/Smoothing-Blood-Glucose-Data.md)
 * [Настройки xDrip+](./xdrip.md)
 * [Dexcom G7](../Hardware/DexcomG7.md)
 * [Dexcom G6](../Hardware/DexcomG6.md)

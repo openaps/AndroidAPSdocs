@@ -30,20 +30,25 @@ Nach der Aufwärmphase werden die Glukosewerte wie üblich in der G7-App angezei
 ### Configuration in AAPS
 
 Zur Konfiguration von AAPS
-- Wähle 'BYODA' in der Konfiguration als BZ-Quelle (auch wenn es tatsächlich die gepatchte G7-App ist!)
-- Sollte AAPS keine Werte empfangen, wechsel auf eine andere BZ-Quelle und dann wieder zurück auf 'BYODA'. Damit löst Du Berechtigungsabfrage zum Datenaustausch zwischen AAPS und BYODA aus.
+- Select 'BYODA' in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source) - even if it is not the BYODA app!
+
+- If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
 
 Mit der Auswahl von "Average Smoothing" oder "Exponential Smoothing", kannst Du die Glättung der empfangenen Glukosewerte aktivieren. Wenn Du die Funktion deaktivieren möchtest, wähle "Keine Glättung" aus. "Exponential smoothing" ist aggressiver und schreibt die letzten Glukosewerte neu, und hilft dabei mit verrauschten Werten umgehen zu können. "Average smoothing" verhält sich ähnlich wie die nachträgliche Glättung (back smoothing) in BYODA G6 und schreibt die älteren Werte nicht aber den aktuellen Wert neu. Damit kann schneller reagiert werden.
 
 **'Exponential Smoothing'** **MUSS** aktiviert sein, um G7-Sensorwerte sinnvoll nutzen zu können.
 
-## 2. Xdrip+ (direct connection to G7)
+## 2. xDrip+ (direct connection to G7)
 
 - Follow the instructions here: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- Wähle in AAPS unter Konfiguration > BZ-Quelle > "xDrip+" aus. Passe die Einstellungen in xDrip+ so an, wie es unter  [xDrip+ Einstellungen](../Configuration/xdrip.md) beschrieben ist.
+- Select  xDrip+ in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-## 3. xDrip+ (Companion App)
+- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md)
 
--   Lade xDrip+ herunter und installiere es: [xDrip+](https://github.com/NightscoutFoundation/xDrip)
-- Wähle in xDrip+ "Companion App" als Datenquelle aus. Zusätzlich muss in den Bluetootheinstellungen (Einstellungen > Erweiterte Einstellungen > Bluetootheinstellungen) "Companion Bluetooth" aktiviert werden.
-- Wähle in AAPS unter Konfiguration > BZ-Quelle > "xDrip+" aus. Passe die Einstellungen in xDrip+ so an, wie es unter  [xDrip+ Einstellungen](../Configuration/xdrip.md) beschrieben ist. 
+## 3. xDrip+ (companion mode)
+
+-   Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
+-   Select  xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+
+-   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md) 

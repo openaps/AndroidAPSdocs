@@ -60,7 +60,7 @@ Release date: 23-10-2023
 - v3 eklentisindeki websockets, v1 eklentisine benzer şekilde çalışır. AAPS, etkinleştirilmiş web yuvaları olmadan, NS'den düzenli olarak indirmeleri planlar ve bu, NS kalıcı olarak bağlı olmadığı için daha düşük güç tüketir. Bu da karşı tarafta, veri alışverişinde gecikmeler anlamına gelir. Please read [here](Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
 - Cgm kaynağı olarak xdrip kullanıyorsanız, dahili değişiklikler nedeniyle güncellemeden sonra tekrar seçmelisiniz.
 - Tidepool, ilk görevi geçmek için NS yerine kullanılabilir
-- xDrip+'a gönderirseniz, xDrip senkronizasyon eklentisini yapılandırmanız gerekir. AAPS'den xDrip'te KŞ almak için "xDrip+ Sync Follower" kaynağı seçilmelidir.
+- xDrip+'a gönderirseniz, xDrip senkronizasyon eklentisini yapılandırmanız gerekir. In order to receive BGs from AAPS in xDrip, “xDrip+ Sync Follower” must be selected as source
 - ComboV2 sürücüsüne geçmek istiyorsanız, Ruffy'nin kaldırılması ve pompanın AAPS ile yeniden eşleştirilmesi gerekir.
 - In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
 

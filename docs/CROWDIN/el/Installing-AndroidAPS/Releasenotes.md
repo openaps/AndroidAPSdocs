@@ -60,7 +60,7 @@ Release date: 23-10-2023
 - Websockets in v3 plugin works similiar way to v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the oposite side it means delays in exchanging data. Please read [here](Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
 - If you are using xdrip as cgm source you must select it again after update due to internal changes
 - Tidepool can be used as a replacement of NS to pass first objective
-- If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip it must be selected source "xDrip+ Sync Follower"
+- If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip, “xDrip+ Sync Follower” must be selected as source
 - If you want to switch to ComboV2 driver, Ruffy must be uninstalled and pump paired again to AAPS
 - In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
 

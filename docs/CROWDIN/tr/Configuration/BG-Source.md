@@ -1,7 +1,7 @@
 # CGMS/FGMS Konfigürasyonu
 
 * [Genel](../Hardware/GeneralCGMRecommendation.md)
-* [Veri Yumuşatma](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)
+* [Veri Yumuşatma](../Usage/Smoothing-Blood-Glucose-Data.md)
 * [xDrip+ ayarları](./xdrip.md)
 * [Dexcom G7](../Hardware/DexcomG7.md)
 * [Dexcom G6](../Hardware/DexcomG6.md)
