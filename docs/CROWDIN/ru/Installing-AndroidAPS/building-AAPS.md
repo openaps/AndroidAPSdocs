@@ -186,7 +186,8 @@ Android Studio — это программа, которая запускает�
 
 ![загрузка компонентов завершена](../images/Building-the-App/14_finished_downloading_components.png)
 
-Вас приветствует экран «Добро пожаловать в Android Studio»:
+You are now greeted with the "Welcome to Android Studio" screen.\
+See that Meet the New UI suggestion bottom right? **Do not** Enable New UI.
 
 ![Добро пожаловать\_AS](../images/Building-the-App/15_Welcome_AS.png)
 
@@ -244,7 +245,17 @@ Context | Edit Context
 
 ![Не импортировать настройки](../images/studioSetup/01_ImportSettings.png)
 
-После успешного клонирования репозитория, Android Studio откроет клонированный проект. Дождитесь (это может занять несколько минут), и не обновляйте проект, как это предлагается во всплывающем окне:
+После успешного клонирования репозитория, Android Studio откроет клонированный проект. Wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
+
+:::{admonition} **My screen looks different...**
+
+You might have enabled the new graphic **U**ser **I**nterface (i.e. the appearance of Android Studio) by mistake.\
+Click on the cog top right and select "**Switch to Classic UI...**" to return to the view used in this documentation.\
+Restart Android Studio to validate the change.
+
+![Switch to Classic UI](../images/Building-the-App/OldUI.png)
+
+:::
 
 ![загрузка взаимозависимостей компонентов\_AS](../images/Building-the-App/19_downloading_dependencies.png)
 
