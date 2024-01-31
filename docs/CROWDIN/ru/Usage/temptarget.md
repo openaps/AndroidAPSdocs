@@ -2,7 +2,7 @@
 
 ## Что такое временные цели и где можно их задать и сконфигурировать?
 
-A **Temp-Target** (or short **TT**) is an **AAPS** feature that allows the user to alter their **BG** target range for planned activities. This is achieved by **AAPS** manipulating the user’s insulin usage.
+**Временная Цель** (или сокращенно **ВЦ**) - это функция ** AAPS**, которая позволяет изменять целевой диапазон **ГК** для запланированных действий. Это достигается за счет того, что **AAPS** вносит корректировки в расходование инсулина пользователем.
 
 **AAPS** provides for three **Temp-Target** options suitable for exercise (**Temp-Target- Activity**), meals (**Temp-Target- Eating soon**) and predicted hypoglycemia (**Temp-Target-Hypo**). **Temp-Targets** are located under the **Actions tab**.
 
