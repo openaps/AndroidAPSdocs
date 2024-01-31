@@ -28,16 +28,16 @@
 
 ## 2. Использование Glimp
 
--   Glimp supports Miaomiao, Blucon and Bubble for Libre 1 and Libre 2 EU.
--   Вам понадобится Glimp версии 4.15.57 или выше. Older versions are not supported.
+-   Glimp поддерживает Miaomiao, Blucon и Bubble для Libre 1 и Libre 2 EU.
+-   Вам понадобится Glimp версии 4.15.57 или выше. Более старые версии не поддерживаются.
 -   Установите [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia).
--   Select Glimp in in [ConfigBuilder, BG Source.](../Configuration/Config-Builder.md#bg-source)
+-   В [Конфигураторе, Источник ГК](../Configuration/Config-Builder.md#bg-source) выберите Glimp
 
 ## 3. Использование Tomato
 
 - Tomato является приложением поставщика для Miaomiao.
 - Установите [Tomato](http://tomato.cool/#download_page) и следуйте [инструкциям поставщика ](http://tomato.cool/how-to-broadcast-data-to-android-aps/tips/).
-- Select Tomato in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+- В [Конфигураторе, Источник ГК](../Configuration/Config-Builder.md#bg-source) выберите Tomato.
 
 ## 4. Использование Diabox
 
