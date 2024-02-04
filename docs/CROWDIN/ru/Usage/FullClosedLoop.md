@@ -1,22 +1,22 @@
-# Full Closed Loop
+# Полностью замкнутый цикл
 
-## Full vs. Hybrid Closed Loop (FCL, HCL)
+## Полный или гибридный замкнутый циклы (FCL, HCL)
 
-### Definitions
+### Определения
 
-In **hybrid closed loop** you gave at least one bolus prior to meals. This pushed your loop often into a temporary shut-off (temporary zero basal) and generally only into a co-management role while that given bolus was strongly active.
+В **гибридном замкнутом цикле** вы получали, по крайней мере, один болюс перед едой. Часто это переводило петлю в режим приостановки (с нулевой ВБС) и в основном, только в режиме совместного управления, пока болюс на еду оставался активным.
 
-Also, prior to each meal, you made inputs about the carb, fat, and protein intake, and also gave indications (generally in settings, plus every day related to each meal) related to estimated carb absorption times.
+Кроме того, перед каждым приёмом пищи вы вводили данные о количестве углеводов, жира и белка. А также меняли углеводные коэффициенты (обычно в настройках, на ежедневный завтрак, обед и ужин).
 
-AAPS also allows **full closed looping without the user giving any boli**, and without making carb inputs, in a mode called UAM = un-announced meals.
+AAPS также имеет режим **полного замкнутого цикла без подачи пользователем каких-либо болюсов** и без ввода углеводов в режиме, называемом UAM = необъявленный приём пищи (UAM).
 
-- Note that **UAM** can also be switched on in hybrid closed looping, in which case it just means that the algorithm tolerates wrong carb inputs better.
+- Обратите внимание, что **UAM** также можно включить в гибридном замкнутом цикле, и в этом случае алгоритм лучше справляется с неправильно указанным количеством углеводов.
 
-- It is discussed controversially whether e.g. for particularly high carb meals, or for people with certain eating habits or sensitivity swings, a mode with small pre-bolusses might be preferable or even needed. This would basically be a hybrid closed loop without carb info, and therefore a variant of HCL really. We stick to FCL as really **without user boli**, and once you tuned your FCL, you might even remove all „useless“ buttons on the bottom of your AAPS main screen.
+- Обсуждается вопрос о том, что для еды с особенно высоким содержанием углеводов или для людей с определенными привычками в еде или перепадами чувствительности режим с небольшими болюсами на еду может быть предпочтительнее или нужнее. По сути, это будет гибридный замкнутый цикл без информации об углеводах и, следовательно, один из вариантов использования гибридного замкнутого цикла (HCL). Мы рассматриваем полный замкнутый цикл как режим **без болюсов**, и как только вы настроите этот режим, вы даже сможете убрать все «бесполезные» кнопки в нижней части главного экрана AAPS.
 
-### What to expect?
+### Чего ожидать?
 
-In 2022/23 a first medical study was conducted and published that showed patients can achieve comparatively good results with AAPS in a simple FCL mode:
+В 2022/23 году было проведено и опубликовано первое медицинское исследование, которое показало, что пациенты могут достичь сравнительно хороших результатов с помощью AAPS в режиме полностью замкнутого цикла:
 
 > 16 adolescents with T1D (HbA1c range 43-75), and duration of diabetes of 9-15 years underwent three distinct 3-day periods of camp living, while using a modified and locked version of AndroidAPS 3.1.03. **Results:** The glycemia was controlled by the system 95% time of the study and the proportion of time below 3.9 mmol/L did not exceed 1% over the whole study period (0.72%). The HCL scenario reached significantly higher percentage of time below 3 mmol/L (HCL 1.05% vs. MA 0.0% vs. FCL 0.0%; P = 0.05) compared to other scenarios. **No difference was observed among the scenarios in the percentage of time between 3.9 and 10 mmol/L** (HCL 83.3% vs. MA 79.85% vs. **FCL 81.03%**, P = 0.58) corresponding to mean glycemia (HCL 6.65 mmol/L vs. MA 7.34 mmol/L vs. FCL 7.05 mmol/L, P = 0.28). No difference was observed in the mean daily dose of insulin or in the daily carbohydrate intake. No serious adverse event occurred during the study period. **Conclusions:** Our pilot study showed that **FCL might be a realistic mode of treatment** for people with T1D.
 
