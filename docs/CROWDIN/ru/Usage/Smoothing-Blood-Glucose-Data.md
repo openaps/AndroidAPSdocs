@@ -2,32 +2,31 @@
 
 # Сглаживание данных гликемии
 
-If **BG** data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in highs or lows. Если вы заметили ошибки в данных мониторинга CGM, важно отключить цикл до тех пор, пока проблема не будет решена. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or CGM sensor site issue (which may require replacing the CGM sensor)
+Если данные гликемии скачкообразны/зашумлены, AAPS может дозировать инсулин неправильно, что приведет к высокой или низкой ГК. Если вы заметили ошибки в данных мониторинга CGM, важно отключить цикл до тех пор, пока проблема не будет решена. В зависимости от системы мониторинга, эти проблемы могут возникнуть из-за конфигурации НМГ в **AAPS** (как описано ниже); или из-за некорректной работы сенсора (что может потребовать его замену)
 
 Некоторые системы CGM имеют внутренние алгоритмы для обнаружения уровня шума данных, и AAPS может использовать эту информацию чтобы избежать ввода микроболюсов, если данные ГК слишком ненадежны. Однако некоторые системы мониторинга не передают такие данные и для этих источников опции "Всегда включать супер микро болюс SMB" и "Включать SMB после углеводов" отключены по соображениям безопасности.
 
-Кроме того, начиная с версии 3.2 AAPS предлагает возможность сглаживать данные в рамках AAPS. There are three options available in the [Config Builder](../Configuration/Config-Builder.md).
+Кроме того, начиная с версии 3.2 AAPS предлагает возможность сглаживать данные в рамках AAPS. Есть три варианта в [Конфигураторе](../Configuration/Config-Builder.md).
 
-![Smoothing](../images/ConfBuild_Smoothing.png)
+![Сглаживание](../images/ConfBuild_Smoothing.png)
 
-## Exponential smoothing
+## Простое экспоненциальное сглаживание
 
-This is the recommended option to start with as it is most aggressive in resolving noise and rewrites the most recent value.
+Рекомендуется начинать с этой опции, так как она наиболее агрессивна в снятии шума и перезаписывает самое последнее значение.
 
-## Average smoothing
+## Среднее сглаживание
 
-This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.
+Этот вариант схож с ретроспективным сглаживанием, который ранее был реализован на некоторых платформах мониторинга CGM. Оно более реактивно к новым изменениям и поэтому более подвержено неправильному реагированию на зашумленные данные CGM.
 
-## No Smoothing
+## Без сглаживания
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to AAPS.
+Выбирайте эту опцию только в том случае, если данные ГК должным образом сглаживаются приложением коллектора до передачи в AAPS.
 
-## Suggestions to use smoothing
+## Предложения использовать сглаживание
 
-|                                                                                                                        | Exponential |   Average   |     None    |
-| ---------------------------------------------------------------------------------------------------------------------- | :---------: | :---------: | :---------: |
-| G5 and G6 with BYODA  <br />or xDrip+ **[native](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)**        |             |   If noisy  | Recommended |
-| Refurbished G5 and G6  <br />with xDrip+ **[non-native](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)** |   If noisy  | Recommended |             |
-| G7                                                                                                                     | Recommended |             |             |
-| Libre 1 or Juggluco                                                                                                    | Recommended |             |             |
-| Libre 2 and 3 from xDrip+                                                                                              |             |             | Recommended |
+|                       | Экспоненциальное |        Среднее        |  Отсутствует  |
+| --------------------- | :--------------: | :-------------------: | :-----------: |
+| G5 и G6               |                  | При зашумлении данных | Рекомендуемое |
+| G7                    |   Рекомендуемое  |                       |               |
+| Libre 1 или Juggluco  |   Рекомендуемое  |                       |               |
+| Libre 2 и 3 от xDrip+ |                  |                       | Рекомендуемое |

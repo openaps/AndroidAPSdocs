@@ -1,24 +1,24 @@
-# Full Closed Loop
+# Полностью замкнутый цикл
 
-## Full vs. Hybrid Closed Loop (FCL, HCL)
+## Полный или гибридный замкнутый циклы (FCL, HCL)
 
-### Definitions
+### Определения
 
-In **hybrid closed loop** you gave at least one bolus prior to meals. This pushed your loop often into a temporary shut-off (temporary zero basal) and generally only into a co-management role while that given bolus was strongly active.
+В **гибридном замкнутом цикле** вы получали, по крайней мере, один болюс перед едой. Часто это переводило петлю в режим приостановки (с нулевой ВБС) и в основном, только в режиме совместного управления, пока болюс на еду оставался активным.
 
-Also, prior to each meal, you made inputs about the carb, fat, and protein intake, and also gave indications (generally in settings, plus every day related to each meal) related to estimated carb absorption times.
+Кроме того, перед каждым приёмом пищи вы вводили данные о количестве углеводов, жира и белка. А также меняли углеводные коэффициенты (обычно в настройках, на ежедневный завтрак, обед и ужин).
 
-AAPS also allows **full closed looping without the user giving any boli**, and without making carb inputs, in a mode called UAM = un-announced meals.
+AAPS также имеет режим **полного замкнутого цикла без подачи пользователем каких-либо болюсов** и без ввода углеводов в режиме, называемом UAM = необъявленный приём пищи (UAM).
 
-- Note that **UAM** can also be switched on in hybrid closed looping, in which case it just means that the algorithm tolerates wrong carb inputs better.
+- Обратите внимание, что **UAM** также можно включить в гибридном замкнутом цикле, и в этом случае алгоритм лучше справляется с неправильно указанным количеством углеводов.
 
-- It is discussed controversially whether e.g. for particularly high carb meals, or for people with certain eating habits or sensitivity swings, a mode with small pre-bolusses might be preferable or even needed. This would basically be a hybrid closed loop without carb info, and therefore a variant of HCL really. We stick to FCL as really **without user boli**, and once you tuned your FCL, you might even remove all „useless“ buttons on the bottom of your AAPS main screen.
+- Обсуждается вопрос о том, что для еды с особенно высоким содержанием углеводов или для людей с определенными привычками в еде или перепадами чувствительности режим с небольшими болюсами на еду может быть предпочтительнее или нужнее. По сути, это будет гибридный замкнутый цикл без информации об углеводах и, следовательно, один из вариантов использования гибридного замкнутого цикла (HCL). Мы рассматриваем полный замкнутый цикл как режим **без болюсов**, и как только вы настроите этот режим, вы даже сможете убрать все «бесполезные» кнопки в нижней части главного экрана AAPS.
 
-### What to expect?
+### Чего ожидать?
 
-In 2022/23 a first medical study was conducted and published that showed patients can achieve comparatively good results with AAPS in a simple FCL mode:
+В 2022/23 году было проведено и опубликовано первое медицинское исследование, которое показало, что пациенты могут достичь сравнительно хороших результатов с помощью AAPS в режиме полностью замкнутого цикла:
 
-> 16 adolescents with T1D (HbA1c range 43-75), and duration of diabetes of 9-15 years underwent three distinct 3-day periods of camp living, while using a modified and locked version of AndroidAPS 3.1.03. **Results:** The glycemia was controlled by the system 95% time of the study and the proportion of time below 3.9 mmol/L did not exceed 1% over the whole study period (0.72%). The HCL scenario reached significantly higher percentage of time below 3 mmol/L (HCL 1.05% vs. MA 0.0% vs. FCL 0.0%; P = 0.05) compared to other scenarios. **No difference was observed among the scenarios in the percentage of time between 3.9 and 10 mmol/L** (HCL 83.3% vs. MA 79.85% vs. **FCL 81.03%**, P = 0.58) corresponding to mean glycemia (HCL 6.65 mmol/L vs. MA 7.34 mmol/L vs. FCL 7.05 mmol/L, P = 0.28). No difference was observed in the mean daily dose of insulin or in the daily carbohydrate intake. No serious adverse event occurred during the study period. **Conclusions:** Our pilot study showed that **FCL might be a realistic mode of treatment** for people with T1D.
+> 16 adolescents with T1D (HbA1c range 43-75), and duration of diabetes of 9-15 years underwent three distinct 3-day periods of camp living, while using a modified and locked version of AndroidAPS 3.1.03. **Результат:** Гликемия контролировалась системой в течение 95% времени исследования, а доля времени ниже 3,9 ммоль/л не превышала 1% за весь период исследования (0,72%). The HCL scenario reached significantly higher percentage of time below 3 mmol/L (HCL 1.05% vs. MA 0.0% vs. FCL 0.0%; P = 0.05) compared to other scenarios. **Между сценариями в процентах времени между 3,9 и 10 ммоль/л** (HCL 83,3% против МА 79,85% против **FCL 81,03%**, Р = 0,58), не наблюдалось различий, что соответствует средней гликемии (HCL 6,65 ммоль/л против МА 7,34 ммоль/л против FCL 7,05 ммоль/л, Р = 0,28). В средней дневной дозе инсулина или в ежедневном потреблении углеводов различий не наблюдалось. No serious adverse event occurred during the study period. **Выводы:** Наше пилотное исследование показало, что **полный замкнутый цикл FCL может быть реалистичным способом лечения** для людей с диабетом 1го типа.
 
 Source:
 
@@ -28,45 +28,45 @@ Source:
 
 For you to enjoy the promised reduced daily burden, you will have to:
 
-- check whether you have all pre-requisites for FCL
-- set up a couple of Automations
-- go through a learning and tuning stage in which you adjust the settings, notably those in your Automations. The suggestions that follow guide you in this process.
+- соответствовать всем предварительным требованиям для полного замкнутого цикла FCL
+- настроить несколько вариантов правил в меню Автоматизация
+- пройти этапы обучения и конфигурирования, научиться управлять настройками, особенно в меню Автоматизация. Приведенные ниже рекомендации помогут вам в этом процессе.
 
-### General considerations why (not to) move from hybrid to full closed loop
+### Общие соображения, почему стоит (или не стоит) переходить от гибридного к полному замкнутому циклу
 
-The full closed loop system may **not** be **for everyone**:
+Полный замкнутый цикл подходит **не ** **всем**:
 
-- While some full closed loopers using Automations achieve TIR (70-180) around 90%  and HbA1c under 6%, you might prefer tighter control. Notably, **minimizing values over 140 mg/dl at diets with rapid carbs** probably requires pre-bolussing.
-- Are you up for an informed and mindful approach towards a highly personalized calibration of your system? The **personalized tuning** can be **challenging**. This is definitely not for you if you were overwhelmed already with setting basal rate and ISFs. But balance it against what you could gain every day without counting any carbs. You might also value the gained deeper knowledge from analyzing and tuning your loop’s reponse to your meals.
-- While meal management gets very easy, **activity** management might get a bit more difficult, especially considering most of us probably like to limit sports snacks, in an attempt to control body weight.
-- Unfortunately, there are additional difficulties to establish a full closed loop for **kids** (see next section, pre-requisites)
+- Некоторые пользователи полного замкнутого цикла, применяющие Автоматизацию, достигают около 90% времени в целевом диапазоне TIR (70-180 / 3,8-10) и HbA1c ниже 6%, но, возможно вы предпочитаете более тонкий контроль. Примечательно, что **снижение показателей, превышающих 140 мг/дл (7,7 ммоль/л) при приёме быстрых углеводов **, вероятно, требует предварительного введения болюса.
+- Are you up for an informed and mindful approach towards a highly personalized calibration of your system? The **personalized tuning** can be **challenging**. This is definitely not for you if you were overwhelmed already with setting basal rate and ISFs. But balance it against what you could gain every day without counting any carbs. В результате внимательного изучения настроек своей петли,. вы получите более глубокие знания.
+- В то время как управление приемом пищи становится очень простым, управление при **физических нагрузках** сложнее, особенно если учесть, что многие ограничивают перекусы при занятии спортом в целях контроля веса.
+- К сожалению, существуют дополнительные трудности при использовании полного замкнутого цикла для **детей** (см. следующий раздел, требования для полного замкнутого цикла)
 
-## Pre-requisites for full closed looping
+## Требования для полного замкнутого цикла
 
-The main attraction of full closed looping would be that you could get close to the dream of an artificial pancreas. Indeed, it promises very easy everyday use. **“Just eat!”**
+Главной привлекательностью полностью замкнутого цикла будет то, что вы сможете приблизиться к мечте об искусственной поджелудочной железе. Действительно, режим обещает очень простое повседневное использование. **“Просто ешь!”**
 
-### Well-tuned hybrid closed loop
+### Правильно настроенный гибридный замкнутый цикл
 
-It is advisable to first establish a well-tuned hybrid closed loop before considering the transition to FCL. There are two important reasons for this:
+Прежде чем рассматривать переход на полностью замкнутый цикл, желательно сначала иметь хорошо настроенную систему с гибридным циклом. Для этого есть две важных причины:
 
-- The UAM full closed loop requires a highly personalized (individual) tuning of settings, so the loop will give insulin mimicking YOUR successful hybrid closed loop mode.
-- The UAM full closed loop comes with new parameters (in your Automations) to be set and tuned. It would be **problematic to set and tune these additional parameters before the basics were tuned “right”**. Errors could easily be balanced with counter-errors. This can work in single scenarios, but would create a highly unstable system, hard to re-calibrate better later. Also, as seen by many early testers and also in the above quoted study, you should expect to reach comparable %TIR with your *FCL* as you see today in your *HCL*. The switch is not about performance, but about convenience, -  after a bit of inconvenience: **The heart of this FCL method is a DIY set up of Automations that you have to do for yourself, analyzing *your data*, both, from *your* successful HCL, and from your initial FCL experience when tuning your settings.** This is no self-adjusting off the shelf wonder-product! The programmers of the software, and writers of this wiki, assume no responsibility. You have to find out for yourself whether and how you may want to make use of the tools, and suggested ways they might be used.
+- Полный замкнутый цикл с необъявленным приёмом пищи UAM требует тщательного подбора индивидуальных настроек, так что петля будет подавать инсулин, подражая ВАШЕМУ уже хорошо отлаженному гибридному режиму.
+- Полностью замкнутый контур UAM поставляется с новыми параметрами (в меню Автоматизация), которые необходимо устанавливать и подстраивать. Было бы **проблематично установить и настроить эти дополнительные параметры до того, как основные параметры будут настроены «правильно»**. Ошибочные настройки могут легко компенсироваться ошибками настроек других параметров. Это работает в отдельных сценариях, но создаст крайне нестабильную систему, которую впоследствии будет трудно откалибровать. Кроме того, как заметили первые пользователи тестовых версий, а также согласно приведенному выше исследованию, вы должны ожидать сопоставимого %TIR в режиме *замкнутого цикла*, который вы видите сегодня в своём *гибридном цикле*. В переходе на закрытый цикл речь идет не о производительности, а об удобстве, — после небольшого упорства в настройке: **Ключевое в закрытом цикле — это самостоятельная настройка автоматизации, которую вы должны выполнить самостоятельно, анализируя *ваши данные*, как из *вашего* успешного гибридного цикла, так и из из вашего первоначального опыта с замкнутым циклом при настройке параметров.** Это не самонастраивающийся готовый чудо-продукт! Программисты AndroidAPS и авторы этой документации не берут на себя ответственности. Вы должны сами понять, хотите ли вы пользоваться этими инструментами и изучить способы их применения.
 
 ### Fast insulin (Lyumjev, Fiasp)
 
-If the user does not bolus for meals, clearly a very fast insulin is needed so, upon realization of a starting meal-related glucose rise, the loop has any chance to eventually keep glucose in range (by common definition, under 180 mg/dl (10 mmol/l)).
+Если пользователь не вводит болюс во время еды, очевидно, что необходим инсулин очень короткого действия, чтобы после обнаружения повышения уровня глюкозы при приёме пищи, петля имела шансы поддерживать уровень глюкозы в допустимых пределах (по общему определению, (ниже 180 мг/дл или 10 ммоль/л).
 
-A modelling study (details see LINK FullLoop V2/March2023; there section 2.2) can show in quantitative terms that *faster insulins*
+Моделирующее исследование (подробности см по ссылке Full Loop V2/Март 2023; там же раздел 2.2) показывает, что *инсулины короткого действия*
 
 Source:
 
-1) ![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg) IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
+1) ![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg) Журнал IEEE Control Systems, ResearchGate [ Искусственная поджелудочная железа и контроль приема пищи: Обзор постпрандиальной регуляции уровня глюкозы при сахарном диабете 1 типа](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
-- will result in significantly **lower** glucose **peaks** than slower insulins
-- **tolerate** a couple of minutes **delayed** first meal bolus while not incurring unacceptable height of peaks
-- **minimize the effect** on glucose peak **from different** carb load (**meal sizes**).
+- дают значительно **более низкие** **пики** глюкозы, по сравнению с медленными инсулинами
+- **легко переносят** **задержку болюса на пару минут ** при первом приеме пищи, не допуская при этом неприемлемых пиков
+- **минимизируют влияние** на пик глюкозы **от различных** углеводных нагрузок (**объемов приема пищи**).
 
-In conclusion, do not attempt FCL with other insulin than Lyumjev or Fiasp, unless, maybe, if you are on a very moderate to low carb diet.
+В заключении, если только вы не находитесь на очень умеренной низкоуглеводной диете, не пытайтесь применять режим закрытого цикла с иными инсулинами кроме Lyumjev или Fiasp,.
 
 Many users of Fiasp or of Lyumjev observe frequent **occlusions**, even after optimizing things like needle length or SMB delivery speed. It seems very important to have an eye on the time a **cannula (or pod)** is in use (many find **48 hrs** to be the **limit**), and whether hard-to-explain glucose rises happen at ever increasing „fake“ iob.
 

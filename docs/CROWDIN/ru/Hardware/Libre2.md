@@ -32,7 +32,7 @@
 - Следуйте [этим инструкциям](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) для настройки xDrip+, но обязательно загрузите [эту новую версию OOP 2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view), поскольку та, что приведена в документе, устарела.
 - Следуйте инструкциям по установке на странице настроек [xDrip+](../Configuration/xdrip.md).
 
--   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+-   В [Конфигураторе, Источник ГК](../Configuration/Config-Builder.md#bg-source) выберите xDrip+.
 
 ## 3. Использовать Diabox
 
@@ -40,7 +40,7 @@
 
 ![Diabox](../images/Diabox.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+- В [Конфигураторе, Источник ГК](../Configuration/Config-Builder.md#bg-source) выберите xDrip+.
 
 ## 4. Использовать Juggluco
 
@@ -50,7 +50,7 @@
 
 ![Трансляция Juggluco в AAPS](../images/Juggluco_AAPS.png)
 
-- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+- В [Конфигураторе, Источник ГК](../Configuration/Config-Builder.md#bg-source) выберите xDrip+.
 
 :::{admonition}{предостерижение} Использовать с xDrip+ :class: :класс: примечание Вы можете настроить Juggluco на трансляцию в xDrip + при помощи модифицированного приложения Libre (следует отключить трансляцию xDrip +), чтобы выполнить калибровку (смотрите здесь) и избежать ежеминутной отправки данных в AAPS.  
 ![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  

@@ -56,9 +56,9 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 
 ### Шаг 4: Настройка AndroidAPS
 
-- Select xDrip+ in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+- В [Конфигураторе, Источник ГК](../Configuration/Config-Builder.md#bg-source) выберите xDrip+.
 
-- If AndroidAPS does not receive BG values when phone is in airplane mode, use "Identify receiver"
+- Если AndroidAPS не получает значения BG, когда телефон находится в режиме авиаперелета, проверьте, заполнено ли поле «Идентифицировать приемник»
 - Выключите сглаживание (уже сделано в Xdrip+)
 
 На данный момент при использовании Libre 3 в качестве источника ГК в алгоритме SMB невозможно включить опцию "Всегда включать SMB" и "Включать SMB после углеводов". Значения ГК Libre 3 недостаточно сглажены для безопасного пользования.

@@ -186,7 +186,8 @@ Once everything is downloaded, the "Finish" button turns blue, and you can click
 
 ![finished\_download\_components](../images/Building-the-App/14_finished_downloading_components.png)
 
-You are now greeted with the "Welcome to Android Studio" screen:
+You are now greeted with the "Welcome to Android Studio" screen.\
+See that Meet the New UI suggestion bottom right? **Do not** Enable New UI.
 
 ![Welcome\_AS](../images/Building-the-App/15_Welcome_AS.png)
 
@@ -242,7 +243,17 @@ If asked if you want to import settings, select "Do not import settings". We don
 
 ![Do not import settings](../images/studioSetup/01_ImportSettings.png)
 
-After the repository is cloned successfully, Android Studio will open the cloned project. Wait patiently (this may take a few minutes), and particularly, do not update the project as suggested in the pop-up:
+After the repository is cloned successfully, Android Studio will open the cloned project. Wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
+
+:::{admonition} **My screen looks different...**
+
+You might have enabled the new graphic **U**ser **I**nterface (i.e. the appearance of Android Studio) by mistake.\
+Click on the cog top right and select "**Switch to Classic UI...**" to return to the view used in this documentation.\
+Restart Android Studio to validate the change.
+
+![Switch to Classic UI](../images/Building-the-App/OldUI.png)
+
+:::
 
 ![AS\_download\_dependencies](../images/Building-the-App/19_downloading_dependencies.png)
 
