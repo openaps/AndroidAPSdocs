@@ -1,6 +1,6 @@
 # Полный замкнутый цикл
 
-## Полный или гибридный замкнутый циклы (FCL, HCL)
+## Полный замкнутый цикл против гибридного (FCL vs HCL)
 
 ### Определения
 
@@ -99,7 +99,7 @@ Setting up a full closed loop is relatively easy for people whose diet does not 
 
 #### Technically stable system
 
-Полный замкнутый цикл требует технически стабильной системы 24/7, особенно в отношении надежных сигналов **НМГ**, но также и стабильность **Bluetooth-соединения** с помпой ****, и предотвращения (или по крайней мере раннего распознавания) закупорки. Это может потребовать внимания, например, к поддержанию хорошо заряженных компонентов и нахождению в непосредственной близости от них; частой замене канюли (или пода), чтобы уменьшить риск закупорки; и всегда иметь необходимые расходники. **В зависимости от применяемой системы, опыта ее использования и образа жизни, эти аспекты могут в большей или меньшей степени вас ограничивать.**
+Полный замкнутый цикл требует технически стабильной системы 24/7, особенно в отношении надежных сигналов **НМГ**, но также и стабильность **Bluetooth-соединения** с помпой ****, и предотвращения (или по крайней мере раннего распознавания) закупорки. Это может потребовать внимания, например, к поддержанию хорошо заряженных компонентов и нахождению в непосредственной близости от них; частой замене канюли (или пода), чтобы уменьшить риск закупорки; и всегда иметь необходимые расходники. **В зависимости от опыта работы с системой вашего образа жизни, эти моменты могут в большей или меньшей степени вас ограничивать.**
 
 Full closed looping requires a 24/7 technically stable system, especially regarding reliable CGM signals, but also Bluetooth stability with the pump, and avoiding (or at least early recognition of) occlusion. Это может потребовать внимания, например, к поддержанию хорошо заряженных компонентов и нахождению в непосредственной близости от них; частой замене канюли (или пода), чтобы уменьшить риск закупорки; и всегда иметь необходимые расходники. В зависимости от применяемой системы, опыта ее использования и образа жизни, эти аспекты могут в большей или меньшей степени вас ограничивать.
 
@@ -109,22 +109,22 @@ Full closed looping requires a 24/7 technically stable system, especially regard
 
 Алгоритм **полного замкнутого цикла** настроен на обнаружение приема пищи и автоматическое введение инсулина для компенсации повышения уровня глюкозы. Установка высокой временной target and lower %profile right away (effective already around meal start) would be a problem.
 
-Unusual activity levels therefore likely require **disciplined preparation** (especially **if you want to keep the need to snack during sports low**). In nights after an active day it can be smart to keep a lowered% profile, and set, for the hours after the evening meal is fully digested, an elevated (>100 mg/dl) glucose target, with “no SMBs at elevated target” selected in AAPS preferences.
+Высокий уровень физической активности потребует ** предварительной подготовки** (особенно **если вы хотите не увеличивать потребность в перекусах во время занятий спортом**). Ночью после активного дня имеет смысл установить пониженный % профиля и устанавливать на несколько часов после полного усваивания ужина повышенный (> 100 мг/дл) целевой уровень глюкозы с отключенной опцией "включать SMB при высоких временных целях" в настройках алгоритма ИПЖ AAPS.
 
 #### Hurdles for kids
 
-To establish and maintain a FCL for kids brings about some extra challenges if:
+Настройка и поддержание полностью замкнутого цикла для детей сопровождается дополнительными сложностями, если:
 
 - Lyumjev is not available or well tolerated
-- Hourly basal rate is very low, providing a poor basis for big SMBs
-- Diet is rich in sweet components. With the typical low blood volume of a small body, strong tendency towards very high bg spikes!
-- Going through marked changes of insulin sensitivity or of circadian pattern makes it difficult to keep the FCL appropriately tuned.
+- Часовая базальная доза очень низкая, что является плохой основой для SMB
+- Диета богата сладкими продуктами. With the typical low blood volume of a small body, strong tendency towards very high bg spikes!
+- Изменение чувствительности к инсулину, изменение циркадных ритмов затрудняют поддержание правильной настройки замкнутого цикла.
 
-There are a couple of parents and kids pioneering this area, too. This paper highlights areas that would require some minimum compliance; in the end it comes down to whether the achieved results are at least comparable to where everyone stood in her/his everyday hybrid closed loop.
+Имеется несколько родителей с детьми, которые ведут изучение этих вопросов. Данная работа заостряет внимание на соблюдении требований применения алгоритмов замкнутого цикла; и в конце концов сводится к сопоставлению результатов с тем, что имелось бы при обычном использовании гибридного замкнутого цикла.
 
 #### Time required for setting-up
 
-Lastly, before enjoying a functioning full closed loop you need to have a period of a some weeks with some free time and „free head“ for set-up –. Can you get, in the time you are willing to invest, to a result that you consider good-enough is really the question. Depending on your „habits“, and which – if any - compromises (like doing cannula/pod changes more often, never starting meals when bg sits high … ) are you willing to make (and everyday able to stick to), for the ease of not having to deal with assessing meals and bolussing for them?
+Наконец, прежде чем применять полный замкнутый цикл, следует иметь несколько недель свободного времени и «свободную голову» для настройки. Сможете ли вы получить желательный результат, за время, которое готовы потратить на настройку? Depending on your „habits“, and which – if any - compromises (like doing cannula/pod changes more often, never starting meals when bg sits high … ) are you willing to make (and everyday able to stick to), for the ease of not having to deal with assessing meals and bolussing for them?
 
 ## Enabling boosted SMBs; safety
 
