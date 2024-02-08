@@ -124,32 +124,32 @@ Full closed looping requires a 24/7 technically stable system, especially regard
 
 #### Time required for setting-up
 
-Наконец, прежде чем применять полный замкнутый цикл, следует иметь несколько недель свободного времени и «свободную голову» для настройки. Сможете ли вы получить желательный результат, за время, которое готовы потратить на настройку? Depending on your „habits“, and which – if any - compromises (like doing cannula/pod changes more often, never starting meals when bg sits high … ) are you willing to make (and everyday able to stick to), for the ease of not having to deal with assessing meals and bolussing for them?
+Наконец, прежде чем применять полный замкнутый цикл, следует иметь несколько недель свободного времени и «свободную голову» для настройки. Сможете ли вы получить желательный результат, за время, которое готовы потратить на настройку? В зависимости от привычек» и готовности к компромиссам (например, чаще менять катетер/POD, не начинать прием пищи при высокой гликемии … ) готовы ли вы (и можете ли придерживаться этого каждый день), во имя того, чтобы не приходилось считать углеводы и вводить болюс на компенсацию?
 
 ## Enabling boosted SMBs; safety
 
-In hybrid closed looping, strong safety restrictions are implemented regarding bolus sizes that can be automatically given by the loop.
+В гибридном замкнутом цикле применяются строгие ограничения безопасности в отношении размера болюсов, подаваемых автоматически.
 
-However, in full closed loop application, loopers themselves do no longer give a sizeable bolus around meal start. Then clearly size limits on SMBs must be widened to make the loop capable of giving large enough SMBs.
+Однако, при замкнутом цикле пользователи больше самостоятельно не подают предварительного болюса перед приёмом пищи. Поэтому, лимиты SMB должны быть увеличены, чтобы петля могла подавать достаточно большие микроболюсы на компенсацию приёма пищи.
 
-As you are operating with AAPS Master release, it is suggested you set in AAPS preferences the largest setting for maximum allowed SMB size the loop can give (maxUAMSMBBasalMinutes=120, i.e. 2 hours worth of basal at that daytime).
+Поскольку вы используете Master версию AAPS, вам рекомендуется установить в настройках AAPS максимально допустимый размер SMB, который может дать петля (maxUAMSMBBasalMinutes=120, т. е. 2 часа базальной дозы в дневное время).
 
-> If your basal rate is very low, the resulting SMB limits might be too low to allow good-enough control of your post-prandial glucose rises. In that case the solution might be to avoid diets with strong spikes and later switch to a AAPS dev variant that offers a new parameter in SMB delivery settings: smb_max_range_extension. It expands the standard maximum of 2 h worth of basal by a factor of >1. (Additionally, the default 50% SMB delivery ratio might be levated in dev variants).
+> If your basal rate is very low, the resulting SMB limits might be too low to allow good-enough control of your post-prandial glucose rises. В этом случае решением может быть отказ от пищи с сильными пиками, а затем переключение на версию AAPS для разработчиков, который предлагает новый параметр в настройках доставки SMB: smb_max_range_extension. Он увеличивает стандартный максимум 2-часовой базальной дозы > чем в 1 раз. (Кроме того, 50%-ный коэффициент SMB, может быть повышен в dev-версиях для разработчиков).
 
-Going to the max. limits on SMB size in AAPS Master will not make the FCL mode inheritantly less safe. In contrary, you replace your big meal bolus by several smaller ones that you enable your loop to give you, and even with some minutes of delay. This virtually eliminates the hypo risk in the first 1-2 hours of any meal. In hour 3 and thereafter, there should not be much difference because in HCL and FCL the loop manages with the same algorithm.
+Переход к максимальным лимитам SMB в AAPS в основной версии Master не сделает режим замкнутого цикла менее безопасным. Наоборот, вы замените свой болюс на еду несколькими болюсами поменьше, которые вы позволяете подавать вашей петле, даже с задержками во времени. Это практически исключает риск гипогликемии в первые 1-2 часа при любом приёме пищи. Через 3 часа и позднее большой разницы быть не должно, поскольку в случае с гибридным и закрытом циклами петля работает по одному и тому же алгоритму.
 
-**Follow the instruction** to enable AAPS **to mimick your bolussing via a couple of SMBs**.
+**Следуйте инструкциям**, чтобы позволить AAPS, ** имитировать подачу инсулина через введение нескольких СуперМикроБолюсов (СМБ)**.
 
-Check the SMB tab from time to time to see whether your SMBs are allowed to be large enough to deliver the insulinReq as needed for your full closed loop around meal starts.
+Время от времени проверяйте вкладку SMB, чтобы убедиться, что микроболюсы SMB достаточно велики и вводят требуемое количество инсулина insulinReq при приёме пищи в режиме полного замкнутого цикла.
 
-If not, your tuning efforts will sometimes come to nothing!
+Иначе, все ваши усилия по настройке параметров не приведут ни к чему!
 
-:::{admonition} Boosting ISF can become dangerous
+:::{admonition} Повышение ISF может быть опасным
 :class: danger
 
-Carefully observe/analyze the SMB sizes that, briefly after meal start, result from your settings. Tune in steps, and do not vary more than 1 or 2 parameters at a time.
+Carefully observe/analyze the SMB sizes that, briefly after meal start, result from your settings. Настраивайте пошагово и никогда не меняйте более 1 или 2 параметров одновременно.
 
-Setting must work good-enough for your (!) variety of meals.
+Настройки следует отлаживать именно для вашего (!) типа питания.
 :::
 
 ## Meal detection/your Automations for boosting
