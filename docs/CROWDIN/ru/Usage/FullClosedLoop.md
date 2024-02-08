@@ -105,9 +105,9 @@ Full closed looping requires a 24/7 technically stable system, especially regard
 
 #### Preparing for activity/sports
 
-To prepare for activity / sports /exercise,  the normal protocol with a pump or **hybrid** closed loop is to take actions that reduce insulin on board prior to exercise.
+Чтобы подготовиться к активности / занятию спортом / упражнениям, стандартный протокол для помпы или петли с **гибридным** замкнутым циклом заключается в принятии мер по снижению уровня активного инсулина перед тренировкой.
 
-With your **full closed loop**, the algorithm is tuned to detect meals and to give you insulin to counter glucose rises automatically. Setting a high temp. target and lower %profile right away (effective already around meal start) would be a problem.
+Алгоритм **полного замкнутого цикла** настроен на обнаружение приема пищи и автоматическое введение инсулина для компенсации повышения уровня глюкозы. Установка высокой временной target and lower %profile right away (effective already around meal start) would be a problem.
 
 Unusual activity levels therefore likely require **disciplined preparation** (especially **if you want to keep the need to snack during sports low**). In nights after an active day it can be smart to keep a lowered% profile, and set, for the hours after the evening meal is fully digested, an elevated (>100 mg/dl) glucose target, with “no SMBs at elevated target” selected in AAPS preferences.
 
