@@ -152,23 +152,23 @@ Carefully observe/analyze the SMB sizes that, briefly after meal start, result f
 Настройки следует отлаживать именно для вашего (!) типа питания.
 :::
 
-## Meal detection/your Automations for boosting
+## Обнаружение приёма пищи/ваша Автоматизация для повышения эффективности
 
-For successful full closed looping, ISF is the key tuning parameter. When utilizating AAPS Master + Automations, a **> 100% profile change must automatically be triggered upon meal recognition** (via glucose deltas), and provide the sharpened ISF.
+Для успешного замкнутого цикла фактор чувствительности к инсулину – ФЧИ (ISF) является ключевым параметром настройки. При использовании основной версии AAPS Master + настройки меню Автоматизация **> 100%-ное изменение профиля должно запускаться автоматически при распознавании приема пищи** (через параметр дельты) и обеспечивать более чёткий ISF.
 
-AAPS Master allows up to 130% temp. profile in Hybrid Closed Loop mode. Boosting the ISF is done in 3 steps:
+AAPS Master позволяет повышать до 130% временный профиль в режиме гибридного замкнутого цикла. Повышение ISF осуществляется в три шага:
 
-- Step 1 is to look up the ISF applicable for this meal time hour in the profile, and see whether e.g. Autosens suggest a modification that takes care of the current (last few hours’) insulin sensitivity status of the body.
-- Step 2 applies a factor (1/profile%, as set in your Automation) to boost ISF.
-- Step 3 is a check, that the suggested ISF falls within set safety limits.
+- Шаг 1 - посмотреть значение ISF, соответсвующего этому времени суток питания в профиле, и проверить, предлагает ли Autosens изменение, которое отслеживает текущий (за последние несколько часов) индекс чувствительности к инсулину.
+- Шаг 2 - применяет коэффициент (1/% профиля, как установлено в вашей Автоматизации) для повышения ISF.
+- Шаг 3 - проверка, что предлагаемый ISF попадает в установленные лимиты безопасности.
 
-### FCL Automation templates
+### Шаблоны Автоматизации для закрытого цикла
 
-Boxes to tick at the top: You always have the options:
+Отметьте галочки вверху: у вас есть несколько вариантов:
 
-- In the list of all your Automations, you can tick the check-mark (to left of each field) OFF => This de-activates that Automation.  For instance you could do this for all breakfast related FCL Automations to go to Hybrid Closed Looping for breakfast(s).
-- In each Automation event template, you can tick the box for **User action** => Then the defined Actions will not automatically be executed when Conditions apply. Rather, your AAPS main screen will alert you whenever your FCL would automatically give a SMB. You have the opportunity then to say yes or no. This is **extremely useful in your tuning phase**.                                                                                                                        
-  This feature can be very valueable also everyday. An example would be, if you see the “foot to floor” syndrome (suddenly rising glucose when getting up), but want to prevent a fully automatic “breakfast started” response.
+- В списке ваших Автоматизаций вы можете поставить галочку (слева от каждого поля) OFF => Это отключает Автоматизацию.  Например, вы можете применить это для всех Автоматизаций замкнутого цикла, связанных с завтраком, чтобы использовать гибридный замкнутый цикл только для завтрака(ов).
+- В каждом шаблоне Автоматизации можно отметить галочкой **Действия пользователя** => Тогда, при наступлении Условий, определенные действия не будут выполняться автоматически. Вместо этого, на главном экране AAPS будет появляться предупреждение всякий раз, когда замкнутый цикл автоматически вводит микроболюс SMB. И у вас будет возможность подтверждения "да" или "нет". Это **особенно полезно на этапе отладки настроек**.                                                                                                                        
+  Этот функционал будет полезен на каждый день. Как пример, вы можете наблюдать «утреннюю зарю» (растущий уровень глюкозы по утрам при пробуждении), но хотите предотвратить ложное определение начала приёма пищи системой.
 
 The following section shows in detail how you can bundle a whole series of conditions to describe situations in which the AndroidAPS loop should increase (or decrease) insulin delivery.                                                                                                                                      As ISF cannot directly be tuned, raising profile% over 100% will do the same for our purposes.
 
