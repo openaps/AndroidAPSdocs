@@ -74,34 +74,34 @@ AAPS также имеет режим **полного замкнутого ци
 
 ### Качественный непрерывный мониторинг глюкозы
 
-Вы больше не вводите болюс, связанный с количеством еды; ВСЮ работу по инсулинотерапии проделывает алгоритм! Поскольку значения уровня глюкозы являются основой расчётов для алгоритма, **изучите**  1) принципы работы **своей системы мониторинга** 2) когда и как могут изменяться значения уровня глюкозы при использовании промежуточных приложений для передачи показаний, зависимость от срока использования сенсора 3) в частности, как и где выполняется любое сглаживание, и что это может означать для ваших настроек, в особенности, как вы определяете дельту, которая является признаком начала приема пищи.
+Вы больше не вводите болюс, связанный с количеством еды; ВСЮ работу по инсулинотерапии проделывает алгоритм! Поскольку уровень глюкозы является основой расчётов для алгоритма, **изучите**  1) работу **своей системы мониторинга** 2) вариабельность уровня глюкозы у приложений-посредников при передаче показаний в зависимости от срока работы сенсора 3) в частности, как выполняется сглаживание показаний, как оно влияет на настройки, в особенности, на определение дельты, сигнализирующей о начале приема пищи.
 
-Around meals, a stable Bluetooth connectivity is absolutely essential, too, so CGM, loop, and pump can do their job without losing more valueable time.
+Между приёмами пищи, необходима стабильная связь Bluetooth, чтобы сенсор, приложения и помпа могли выполнять свою работу без потери времени на принятие решения.
 
-Then, but even more importantly in all other day and night times, the CGM should not produce any artefacts (jumpy values) that the loop could **misinterpret** as sign of a starting meal. Note that also calibrations could produce jumps.
+Еще более важно, чтобы в любое время дня и ночи, сенсор мониторинга глюкозы не выдавал никаких шумов (неравномерных значений), которые могли бы быть **неверно интерпретированы** алгоритмом, как признак начала приема пищи. Обратите внимание, что калибровки также могут давать неожиданные скачки значений.
 
-The best way currently is to use Dexcom G5 or **G6**, and to ensure via **overlapping** right and left arm sensor and transmitter utilization, that always good quality values can be used by the loop. Other ways are possible, but come with a lot of monitoring effort (via watch) and occasional time-outs for the loop.
+​ На данный момент лучшим вариантом является использование сенсоров Dexcom G5 или **G6** и совместное считывание значений **с перекрытием** при использовании сенсоров на правой и левой руке, что обеспечивает хорошее качество данных для петли. Возможны и другие способы, но они сопровождаются большими усилиями по мониторингу (с использованием часов) и случайными перерывами для петли.
 
-### Meal-related limitations
+### Ограничения, относящиеся к приему пищи
 
-Setting up a full closed loop is relatively easy for people whose diet does not consist **mainly** of components with **rapid high effect on blood glucose**, and whose meal patterns do not wildly vary day-to-day. They do not have to be low carb.
+Setting up a full closed loop is relatively easy for people whose diet does not consist **mainly** of components with **rapid high effect on blood glucose**, and whose meal patterns do not wildly vary day-to-day. Пища не обязательно должна быть низкоуглеводной.
 
-Fat or protein rich diets, or slow digestion/gastroparesis, make things easier rather than harder for the full closed loop because late carbs nicely cover for inevitable “tails” of late action from boli needed around peak time.
+Богатый белком и жирами рацион или методы, замедляющие пищеварение, скорее помогают режиму замкнутого цикла, потому что медленно поступающие углеводы прекрасно компенсируют неизбежные "хвосты" от запоздалых болюсов, необходимых для пикового времени.
 
 ![Glycemic index and effect on blood glucose](../images/fullClosedLoop01.png)
 
-The most difficult meals are those with exclusively very high and high EBG components (see red in the picture): Not only does glucose shoot up rapidly, but also there is not much of a fat/protein/fibre component to balance the inevitable “tail” of insulin activity that would come with attempts to control the high glucose earlier on.
+Самыми сложными являются блюда с исключительно высоким и высоким гликемическим индексом EBG (см. красный цвет на рисунке): они не только быстро повышают уровень глюкозы, но и не имеют достаточно жиров, белков и клетчатки, чтобы сбалансировать неизбежный «хвост» активности инсулина, который мог возникнуть при попытках контролировать высокий уровень глюкозы ранее.
 
-**Erratic consumption of snacks and sweet drinks** that are loaded with fast resorbing carbs is a problem.
+Проблемой также является **беспорядочное употребление снеков и сладких напитков**, содержащих быстро усваивающиеся углеводы.
 
 
-### Lifestyle-related limitations
+### Ограничения, относящиеся к образу жизни
 
 #### Technically stable system
 
-Full closed looping requires a 24/7 technically stable system, especially regarding reliable **CGM** signals, but also **Bluetooth stability** with the **pump**, and avoiding (or at least early recognition of) occlusion. This could require attention to details like keeping all components well charged and in close proximity; making cannula (or pod) changes always early enough to lower the risk of occlusion; having always potentially needed parts with you. **Depending on your system, your experience with it, but also on your acceptance and general lifestyle, these aspects may or may not limit you.**
+Полный замкнутый цикл требует технически стабильной системы 24/7, особенно в отношении надежных сигналов **НМГ**, но также и стабильность **Bluetooth-соединения** с помпой ****, и предотвращения (или по крайней мере раннего распознавания) закупорки. Это может потребовать внимания, например, к поддержанию хорошо заряженных компонентов и нахождению в непосредственной близости от них; частой замене канюли (или пода), чтобы уменьшить риск закупорки; и всегда иметь необходимые расходники. **В зависимости от применяемой системы, опыта ее использования и образа жизни, эти аспекты могут в большей или меньшей степени вас ограничивать.**
 
-Full closed looping requires a 24/7 technically stable system, especially regarding reliable CGM signals, but also Bluetooth stability with the pump, and avoiding (or at least early recognition of) occlusion. This could require attention to details like keeping all components well charged and in close proximity; making cannula (or pod) changes always early enough to lower the risk of occlusion; having always potentially needed parts with you. Depending on your system, your experience with it, but also on your acceptance and general lifestyle, these aspects may or may not limit you.
+Full closed looping requires a 24/7 technically stable system, especially regarding reliable CGM signals, but also Bluetooth stability with the pump, and avoiding (or at least early recognition of) occlusion. Это может потребовать внимания, например, к поддержанию хорошо заряженных компонентов и нахождению в непосредственной близости от них; частой замене канюли (или пода), чтобы уменьшить риск закупорки; и всегда иметь необходимые расходники. В зависимости от применяемой системы, опыта ее использования и образа жизни, эти аспекты могут в большей или меньшей степени вас ограничивать.
 
 #### Preparing for activity/sports
 
