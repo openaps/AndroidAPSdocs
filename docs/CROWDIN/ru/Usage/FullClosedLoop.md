@@ -216,19 +216,19 @@ You need to “stage” these two (+ maybe a third) Automations to fit with what
 
 ### порог активного инсулина IOB
 
-Часто Автоматизация #1 и/или #2 приводит к увеличению активного инсулина IOB до уровня, которого обычно достаточно для **вашего** приема пищи. For personalized tuning, look in your hybrid closed loop data at the max iob values that occur with well-managed meals (often: your meal bolus), and above which magnitude a hypo (or requirement for extra carbs) occured at the end.
+Часто Автоматизация #1 и/или #2 приводит к увеличению активного инсулина IOB до уровня, которого обычно достаточно для **вашего** приема пищи. Для персонализированной настройки, посмотрите в данные гибридного цикла на максимальные значения IOB, которые возникают при правильно компенсированном приёме пищи (часто: ваш болюс на еду), и выше какой величины в конце возникает гипо (потребность в дополнительных углеводах).
 
-Sensible **iob thresholds** at which you should reduce aggressiveness of your loop, might not be the same for every meal. But especially in the first hour after the start of a meal, which is very crucial in the UAM mode, these data differ little for me: Just about 30g/hour get absorbed, and to define a meaningful iob independent of the exact meal can be possible.
+Разумные **ограничения активного инсулина IOB**, при которых следует снизить агрессивность цикла, могут не совпадать для разных видов пищи. Но особенно в первый час после начала еды, что очень важно в режиме UAM, у меня эти данные мало отличаются: усваивается всего около 30 г/час, и определить оптимальный уровень IOB независимо от конкретного приема пищи вполне возможно.
 
-For exceptional meals, or to lower it if sports follow, the iob threshold can rapidly be set differently in your Automation.
+В настройках Автоматизации можно быстро изменить порог активного инсулина для нестандартной еды или предстоящих занятий спортом.
 
-Automation(#3),”iobTH reached => SMBs off”, is defined to end (or pause, until another wave of carb-related rise hits) the aggressive SMB boosting.
+Автоматизация (#3), "Порог акт инс достигнут => микроболюсы отключены" устанавливается для прекращения агрессивного повышения СМБ (или их приостановки до новой волны подъема, связанного с углеводами).
 
 ![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop04.png)
 
-Automation #3
+Автоматизация #3
 
-It tells the loop that above your set **iob threshold** it's better not to use any more SMBs
+Сообщает петле, что при превышении **порога активного инсулина IOB** лучше остановить подачу СМБ
 
 - The given example does that by setting TT=111 (which is kind of arbitrary; pick a number>100 that you easy recognize as your automated SMB shut-off)
 - In AndroidAPS Preferences/ SMB Settings generally do not allow SMB at elevated target).                                                                                                                   
