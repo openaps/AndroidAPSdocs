@@ -189,25 +189,25 @@ AAPS Master позволяет повышать до 130% временный п�
 Мониторинг с большим разбросом данных поставит вас в затруднительное положение, потому что для безопасности нужно «уравновесить» значение дельты, однозначно соответствующее началу приема пищи. That means:
 
 - замкнутый цикл теряет дополнительное время, что приводит к более высоким пикам глюкозы и снижению % ГК в целевом диапазоне TIR
-- because you cannot use a earlier or smaller delta which could trigger, also without a meal, the SMBs that are supposed to make up for a user bolus in FCL.
+- потому что вы не можете использовать более раннюю или меньшую дельту, которая должна инициировать микроболюсы, также без приема пищи, которые компенсируют болюсы, подаваемые вручную в закрытом цикле.
 
-Furthermore, first rises after a meal are characterized by **low iob** present. With that in mind, an Automation(#1) for a dinner might look like this:
+Кроме того, первые подъемы после еды характеризуются **низким уровнем активного инсулина IOB**. С учетом этого, Автоматизация(#1) для ужина может выглядеть следующим образом:
 
 ![8mg jump 130% ioby4](../images/fullClosedLoop02.png)
 
-Automation #1
+Автоматизация #1
 
-If conditions apply, the loop would give 1 or 2 SMBs in the next 12 minutes, using a boosted ISF according to the set elevated profile%  (in the example, a 30% boost of insulinReq). As long as these conditions apply, the Automation rule extends by another 12 minutes. A low carb meal might have slower bg rise characteristics. It would benefit from another Automation (#2) that kicks in at lower delta, and gives a weaker insulin boost.
+Если условия наступили, петля выдаст 1 или 2 СуперМикроБолюса в течение следующих 12 минут, используя повышенный ISF в соответствии с установленным процентом повышенного профиля (в примере повышение на 30% инсулиновой потребности insulinReq). Пока эти условия применимы, правило Автоматизации распространяется на следующие 12 минут. Низкоуглеводная еда может иметь более низкие характеристики роста уровня ГК. Для такой пищи полезна еще одна Автоматизация (#2), которая срабатывает при более низкой дельте и дает более слабую подачу инсулина.
 
 ![>=5mg jump 115%, iob<5.5](../images/fullClosedLoop03.png)
 
-The same Automation probably will kick in also in higher carb meals, once the steep rise as defined in Automation#1 is over.
+Та же Автоматизация, возможно, сработает и при приеме пищи с высоким содержанием углеводов, как только закончится резкий подъем, определенный в Автоматизации #1.
 
-You need to “stage” these two (+ maybe a third) Automations to fit with what you see in your meal (variety) => Setting appropriate jump sizes, iob citeria, and amplifications will be an iterative tuning process.  Also, if you include appropriate time slots in the Conditions, you can easy do different Automations for your different daily meals times (breakfast, lunch, dinner).
+You need to “stage” these two (+ maybe a third) Automations to fit with what you see in your meal (variety) => Setting appropriate jump sizes, iob citeria, and amplifications will be an iterative tuning process.  Кроме того, если в Условия добавить соответствующие временные интервалы, вы сможете легко создавать различные автоматизации для разных приемов пищи (завтрак, обед, ужин).
 
-Note that, still in the rise phase (!), the "overflow" of  iob must be blocked so that the late effects of the **insulin** (the "**tail**" after 3-5 hours) will not exceed the braking capacity of the loop through zero-temping (“taking away” basal, to reduce hypo risk).
+Обратите внимание, что еще в фазе подъема гликемии (!) необходимо блокировать «переполнение» активного инсулина IOB, чтобы отдаленные последствия **инсулина**,(«**хвост**» через 3-5 часов) не превышал ограничение подачи инсулина петлёй при помощи временной нулевой базальной скорости («снятие» базала для снижения риска гипогликемии).
 
-With large meals there is **sometimes a second increase**. By then, usually also the iob has dropped a bit, and the more aggressive Automations take effect again. (Check that your iob condition in Automation #2 is not set too low to for this to happen).
+При большом приёме пищи **иногда наблюдается вторичное увеличение уровня глюкозы**. К этому времени, обычно, уровень активного инсулина немного падает, и более агрессивная Автоматизация снова вступает в силу. (Убедитесь, что критерий активного инсулина в Автоматизации #2 не слишком низок, чтобы это смогло произойти).
 
 Soon after a few intial SMBs were given comes a **balanced phase** where moderate addition of insulin should cover the additional carbs absorbed. (Except in low carb meals, where the loop might see too weak of a bg rise, and go into zero-temping right away already now).
 
