@@ -209,14 +209,14 @@ You need to “stage” these two (+ maybe a third) Automations to fit with what
 
 При большом приёме пищи **иногда наблюдается вторичное увеличение уровня глюкозы**. К этому времени, обычно, уровень активного инсулина немного падает, и более агрессивная Автоматизация снова вступает в силу. (Убедитесь, что критерий активного инсулина в Автоматизации #2 не слишком низок, чтобы это смогло произойти).
 
-Soon after a few intial SMBs were given comes a **balanced phase** where moderate addition of insulin should cover the additional carbs absorbed. (Except in low carb meals, where the loop might see too weak of a bg rise, and go into zero-temping right away already now).
+Вскоре, после введения нескольких начальных СМБ наступает **сбалансированная фаза**, когда умеренное добавление инсулина должно компенсировать поглощение оставшихся углеводов. (За исключением блюд с низким содержанием углеводов, где петля может определять слишком слабый уровень повышения глюкозы в крови, и может уже сразу перейти в режим с нулевой базальной скоростью).
 
-The AndroidAPS main screen (where you always see cob=0 in UAM full loop) might in this phase ask for more carbs required. In UAM mode that simply means, you could make a very rough plausibility check: Is that amount of carbs likely in your body, un-absorbed from your meal just about an hour ago (about which you gave your loop no info)?
+Главный экран AndroidAPS (где вы всегда видите АктУгл=0 в полном цикле с необъявленным приёмом пищи UAM) может на этой фазе запросить больше требуемых углеводов. В режиме UAM это просто означает, что можно сделать очень приблизительную проверку на достоверность значения: вероятно ли такое количество неусвоившихся углеводов спустя всего час после еды (о чем петле не была дана информация)?
 
 
-### iob threshold
+### порог активного инсулина IOB
 
-Often, Automations #1 and/or #2 make iob rise to heights that typically are enough for **your** meals. For personalized tuning, look in your hybrid closed loop data at the max iob values that occur with well-managed meals (often: your meal bolus), and above which magnitude a hypo (or requirement for extra carbs) occured at the end.
+Часто Автоматизация #1 и/или #2 приводит к увеличению активного инсулина IOB до уровня, которого обычно достаточно для **вашего** приема пищи. For personalized tuning, look in your hybrid closed loop data at the max iob values that occur with well-managed meals (often: your meal bolus), and above which magnitude a hypo (or requirement for extra carbs) occured at the end.
 
 Sensible **iob thresholds** at which you should reduce aggressiveness of your loop, might not be the same for every meal. But especially in the first hour after the start of a meal, which is very crucial in the UAM mode, these data differ little for me: Just about 30g/hour get absorbed, and to define a meaningful iob independent of the exact meal can be possible.
 
