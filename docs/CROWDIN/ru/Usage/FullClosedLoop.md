@@ -230,16 +230,16 @@ You need to “stage” these two (+ maybe a third) Automations to fit with what
 
 Сообщает петле, что при превышении **порога активного инсулина IOB** лучше остановить подачу СМБ
 
-- The given example does that by setting TT=111 (which is kind of arbitrary; pick a number>100 that you easy recognize as your automated SMB shut-off)
-- In AndroidAPS Preferences/ SMB Settings generally do not allow SMB at elevated target).                                                                                                                   
-  The insulinReq will then have to be delivered with much more caution through the bottleneck of TBRs
+- В приведённом фото-примере это делается путем установки временной цели ВЦ=111 (6.2 ммоль/л - число является произвольным; выберите число >100 (> 5.6 ммоль/л), при котором должна отключиться автоматическая подача СМБ)
+- В AndroidAPS меню Настройки/ Настройки СМБ, как правило, не разрешают СМБ с повышенной целью).                                                                                                                   
+  После этого количество требуемого инсулина insulinReq должно быть доставлено с гораздо большей осторожностью через ВБС
 
-**Caution: Automation #3 only works when there is no active TT.** So, in case you worked with EatingSoonTT, it must be ended by that time, which usually should be 30-40 mnutes after meal start.
+**Внимание: Автоматизация #3 работает только при отсутствии временной цели ВЦ.** Итак, если вы ранее устанавливали "Включить временную цель TT Ожидаемый прием пищи" перед приёмом пищи, её действие должно закончиться ко времени, которое обычно составляет 30-40 минут после начала приема пищи.
 
-One idea how to do this automatically would be an Automation that ends an eventually running EatingSoonTT under the condition that iob >65% * iobTH.
-> Ways to work with EatingSoonTT Some loopers set (by pressing the TT button, or automated via a lowered profile glucose target if eating time slots are fairly fixed) an EatingSoonTT roughly an hour or more before meal start, just to guarantee a low starting glucose and a bit of positive iob. But, assuming the FCL is anyways always en route towards target, this might not yield much and you might rather just define an Automation that sets an EatingSoonTT at recognition of meal start (glucose delta, or acceleration = delta > avg delta). A low TT is important in this stage because any SMB is calculated by your loop using (predicted glucose minus TT)/sens, so a small TT makes the resulting insulinReq. bigger.
+Один из способов, как сделать это автоматически, может быть Автоматизация, которая в конечном итоге завершает действие "Включить временную цель TT Ожидаемый прием пищи" при Условии, что активный инсулин iob >65% * Порога активного инсулина iobTH.
+> Способы работы с ВЦ Ожидаемый прием пищи EatingSoonTT Некоторые пользователи устанавливают (нажав кнопку ВЦ, или с помощью пониженной цели в профиле, если приём пищи происходит по расписанию) "Целевое значение ГК при ожидаемом приеме пищи eatingsoon" примерно за час до начала еды или чуть больше, просто чтобы гарантировать низкий уровень глюкозы и немного положительного активного инсулина IOB. Но учитывая, что при закрытом цикле петля в любом случае всегда стремится к цели, это может не дать преимуществ, и вместо этого вы можете просто создать Автоматизацию, которая устанавливает цель при ожидаемом приёме пищи EatingSoonTT, как только определит начало приёма пищи (дельта ГК или ускорение = дельта > средняя дельта). Низкое значение временной цели ВЦ важно в этой фазе, поскольку любой СМБ рассчитывается алгоритмом по формуле (прогнозируемый ГК минус ВЦ)/Чувствительность ISF, поэтому чем меньше значение ВЦ, тем требуемое количество инсулина insulinReq. будет больше.
 
-After the first boosted SMBs were given, your set iobTH and Automation #3 should strike a good balance of limiting the glucose peak, but also not leading to a hypo after the meal.
+После подачи первых супермикроболюсов СМБ, вы устанавливаете Порог активного инсулина iobTH, а «Автоматизация #3» должна обеспечить хороший баланс, ограничивая пик глюкозы, но также не приводя к гипогликемии после еды.
 
 In case for instance your breakfast totally deviates in carb content from your average dinner, you may benefit from defining Automations that apply in the respective times of day, and have different iobTH (possibly also different deltas, and different %profile set). Both, you with defining your meal spectrum and settings (notably, iobTH), and the loop managing the unfolding bg curve, must accept certain peak heights for reducing hypo danger towards the end of the DIAs from SMBs.
 
