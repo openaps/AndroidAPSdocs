@@ -241,7 +241,7 @@ You need to “stage” these two (+ maybe a third) Automations to fit with what
 
 После подачи первых супермикроболюсов СМБ, вы устанавливаете Порог активного инсулина iobTH, а «Автоматизация #3» должна обеспечить хороший баланс, ограничивая пик глюкозы, но также не приводя к гипогликемии после еды.
 
-In case for instance your breakfast totally deviates in carb content from your average dinner, you may benefit from defining Automations that apply in the respective times of day, and have different iobTH (possibly also different deltas, and different %profile set). Both, you with defining your meal spectrum and settings (notably, iobTH), and the loop managing the unfolding bg curve, must accept certain peak heights for reducing hypo danger towards the end of the DIAs from SMBs.
+В случае, если завтрак полностью отличается по содержанию углеводов от среднего ужина, полезно создать Автоматизацию, которая применяется в соответствующее время дня и имеет разные значения порога активного инсулина iobTH (возможно, также разные дельты и другой набор %p профиля). Both, you with defining your meal spectrum and settings (notably, iobTH), and the loop managing the unfolding bg curve, must accept certain peak heights for reducing hypo danger towards the end of the DIAs from SMBs.
 
 ### Stagnation at high bg values
 
