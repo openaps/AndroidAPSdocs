@@ -255,15 +255,15 @@ You need to “stage” these two (+ maybe a third) Automations to fit with what
 
 Автоматизация #5
 
-Автоматизация #5, "Высокая ГК после еды", также подходит для гибридного цикла.
+Автоматизация #5, "Высокая ГК после еды", подходит и для гибридного цикла.
 
-In addition, a termination-Automation #5, “Stop pmH”, is needed, so that the aggressiveness of the insulin administration is reduced, as soon as the glucose value is falling. (However, often the loop will limit more insulin anyways for hypo prevention because predicted glucose runs low already).
+Кроме того, Автоматизация #5, “Stop post-meal High”, применяется для снижения агрессивности подачи инсулина как только начинает падать уровень глюкозы. (Однако часто петля всё равно ограничивает большее количество инсулина для предотвращения гипогликемии, поскольку прогнозируемый уровень глюкозы уже снижается).
 
-### Hypo prevention
+### Предотвращение гипогликемии
 
-The core problem here is of course that the UAM full closed loop (without carb inputs) can have **no idea how many g of carbs are still available** for absorption, and might use up that “tail” insulin, without you going into a hypo from it.
+Основная проблема здесь заключается в том, что замкнутый цикл (без объявленных углеводов UAM) **не имеет данных о том, сколько углеводов **, которые могли бы покрыть этот «хвостовой» инсулин, еще доступны для усваивания без риска перехода в зону гипогликемии.
 
-Using boosted SMBs, the loop “caught up” with what we formerly did with a meal bolus. But, **at the “tail” end of insulin activity, hypo prevention can become a serious topic**.
+Используя повышенные микроболюсы СМБ, петля «догоняет» то, что мы раньше делали с обычным болюсом на еду. Но **в конце периода активности инсулина, профилактика гипогликемии может стать важным вопросом**.
 
 In preparation for your full closed loop Automations, you therefore must take a closer look at the **time course of iob** for typical meals, and judge **when it becomes too much, and how you can catch that by tuning your Automations**. That is definitely possible, because we have several adjusting screws. However, it can get a bit tricky to get it “right”, so it reasonably works for your variety of meals.
 
