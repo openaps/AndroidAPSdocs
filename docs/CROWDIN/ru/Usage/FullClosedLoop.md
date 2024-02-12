@@ -271,7 +271,7 @@ In preparation for your full closed loop Automations, you therefore must take a 
 
 Чтобы предотвратить гипогликемию в послеобеденные 3 – 5 часов, уменьшите агрессивность алгоритма и не допускайте избытка активного инсулина. Конкретные способы:
 
-- Become milder and milder with the ISF already during the glucose rise, as in Automation examples #1 and #2 given.
+- Постепенно ослабляйте коэффициент чувствительности ISF уже во время повышения уровня глюкозы, как в приведенных примерах Автоматизации #1 и #2.
 - Define the iob threshold, from which the loop is made significantly more cautious (Automation #3, above). Note this iob can be exceeded, by the last SMB before it went into effect; and then further by TBRs if the loop sees insulinReq. Carbs getting absorbed will provide a counter-movement towards lower iob.
 - The iob threshold could be differentiated according to meals: By cloning the automations, you could easily differentiate for breakfast, lunch, and dinner time slots (or even for geo-locations, like company cafeteria, or at mother-in-law etc)  
   >You could differentiate within these time slots even further by setting different TTs for low carb vs. fast carb, etc., and thus be able to “code for” different meal classes that may occur at this time of day, and call them up with Automations specially tuned for them.(That is probably not not necessary, unless your diet habits do vary a lot.).
