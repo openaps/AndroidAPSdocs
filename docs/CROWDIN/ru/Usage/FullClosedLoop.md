@@ -263,13 +263,13 @@ You need to “stage” these two (+ maybe a third) Automations to fit with what
 
 Основная проблема здесь заключается в том, что замкнутый цикл (без объявленных углеводов UAM) **не имеет данных о том, сколько углеводов **, которые могли бы покрыть этот «хвостовой» инсулин, еще доступны для усваивания без риска перехода в зону гипогликемии.
 
-Используя повышенные микроболюсы СМБ, петля «догоняет» то, что мы раньше делали с обычным болюсом на еду. Но **в конце периода активности инсулина, профилактика гипогликемии может стать важным вопросом**.
+Используя повышенные микроболюсы СМБ, петля «догоняет» то, что мы раньше делали с обычным болюсом на еду. Но **в конце периода активности инсулина, на первое место выходит профилактика гипогликемии**.
 
-In preparation for your full closed loop Automations, you therefore must take a closer look at the **time course of iob** for typical meals, and judge **when it becomes too much, and how you can catch that by tuning your Automations**. That is definitely possible, because we have several adjusting screws. However, it can get a bit tricky to get it “right”, so it reasonably works for your variety of meals.
+In preparation for your full closed loop Automations, you therefore must take a closer look at the **time course of iob** for typical meals, and judge **when it becomes too much, and how you can catch that by tuning your Automations**. Это несомненно возможно, потому что у нас есть несколько вариантов настройки. Однако настроить это «правильно» может оказаться немного сложно, чтобы настройки подходили для вашего разнообразия блюд.
 
-Generally, it makes no sense to keep optimising settings for one kind of meal. Once you have a good-enough setting e.g. for one kind of lunch you frequently have, test how this works with other kinds, and how you would “compromise”.
+Как правило, не имеет смысла оптимизировать настройки для одного вида питания. Как только появятся хорошие настройки для любимого обеда, следует проверить, как они работают с другими продуктами, а где потребуются «компромиссы».
 
-In order to prevent hypo in post-meal hours 3 – 5, reduce the aggressiveness before too much iob comes together. Specific approaches:
+Чтобы предотвратить гипогликемию в послеобеденные 3 – 5 часов, уменьшите агрессивность алгоритма и не допускайте избытка активного инсулина. Конкретные способы:
 
 - Become milder and milder with the ISF already during the glucose rise, as in Automation examples #1 and #2 given.
 - Define the iob threshold, from which the loop is made significantly more cautious (Automation #3, above). Note this iob can be exceeded, by the last SMB before it went into effect; and then further by TBRs if the loop sees insulinReq. Carbs getting absorbed will provide a counter-movement towards lower iob.
