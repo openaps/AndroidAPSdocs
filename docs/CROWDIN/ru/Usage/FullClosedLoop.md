@@ -241,21 +241,21 @@ You need to “stage” these two (+ maybe a third) Automations to fit with what
 
 После подачи первых супермикроболюсов СМБ, вы устанавливаете Порог активного инсулина iobTH, а «Автоматизация #3» должна обеспечить хороший баланс, ограничивая пик глюкозы, но также не приводя к гипогликемии после еды.
 
-В случае, если завтрак полностью отличается по содержанию углеводов от среднего ужина, полезно создать Автоматизацию, которая применяется в соответствующее время дня и имеет разные значения порога активного инсулина iobTH (возможно, также разные дельты и другой набор %p профиля). Both, you with defining your meal spectrum and settings (notably, iobTH), and the loop managing the unfolding bg curve, must accept certain peak heights for reducing hypo danger towards the end of the DIAs from SMBs.
+В случае, если завтрак полностью отличается по содержанию углеводов от среднего ужина, полезно создать Автоматизацию, которая применяется в соответствующее время дня и имеет разные значения порога активного инсулина iobTH (возможно, также разные дельты и другой набор %p профиля). И вы, определяя свой спектр питания и настройки (в частности, порог активного инсулина iobTH), и алгоритм петли, управляющий кривой уровня глюкозы в крови, должны смириться с определенными скачками уровня глюкозы, тем самым снижая опасность гипогликемии к концу времени действия инсулина DIA от подачи супермикроболюсов СМБ.
 
-### Stagnation at high bg values
+### Застой на высоких значениях ГК
 
-In case, after a “rich” meal, a long-lasting stagnation with **high glucose** value is seen, Automation #6 (below, left),"post-meal High”, helps deal with fatty acid resistance: After multi-course meals, large greasy pizza, raclette evening, the glucose curve can form two humps or, very often, an elongated high plateau.
+Если после «обильного» приема пищи наблюдается длительная задержка **на высоких значениях глюкозы**, то Автоматизация #6 (внизу, слева), «Высокий уровень после еды» поможет справиться с резистентностью к жирным кислотам: После приема пищи из нескольких блюд (большая жирная пицца, вечерний раклет) кривая глюкозы может образовывать два горба или, очень часто, удлиненное высокое плато.
 
 ![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop05.png)
 
-Automation #4
+Автоматизация #4
 
 ![iob >5.5...111 TT = SMBs off 16m](../images/fullClosedLoop06.png)
 
-Automation #5
+Автоматизация #5
 
-Automation #5, “post-meal High”, is also suitable in hybrid closed loop.
+Автоматизация #5, "Высокая ГК после еды", также подходит для гибридного цикла.
 
 In addition, a termination-Automation #5, “Stop pmH”, is needed, so that the aggressiveness of the insulin administration is reduced, as soon as the glucose value is falling. (However, often the loop will limit more insulin anyways for hypo prevention because predicted glucose runs low already).
 
