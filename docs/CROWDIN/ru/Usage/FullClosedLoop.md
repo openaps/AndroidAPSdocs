@@ -152,7 +152,7 @@ Carefully observe/analyze the SMB sizes that, briefly after meal start, result f
 Настройки следует отлаживать именно для вашего (!) типа питания.
 :::
 
-## Обнаружение приёма пищи/ваша Автоматизация для повышения эффективности
+## Обнаружение приёма пищи/ Автоматизация для повышения эффективности
 
 Для успешного замкнутого цикла фактор чувствительности к инсулину – ФЧИ (ISF) является ключевым параметром настройки. При использовании основной версии AAPS Master + настройки меню Автоматизация **> 100%-ное изменение профиля должно запускаться автоматически при распознавании приема пищи** (через параметр дельты) и обеспечивать более чёткий ISF.
 
@@ -273,12 +273,12 @@ In preparation for your full closed loop Automations, you therefore must take a 
 
 - Постепенно ослабляйте коэффициент чувствительности ISF уже во время повышения уровня глюкозы, как в приведенных примерах Автоматизации #1 и #2.
 - Определите порог активного инсулина IOB, за которым алгоритм цикла становится менее агрессивным (Автоматизация #3 выше). Обратите внимание, что это значение IOB может быть превышено уже до введения последнего SMB; а затем, если алгоритм видит потребность InsulinReq, усугублено временными базалами. Усвоение углеводов обеспечит обратное движение в сторону уменьшения активного инсулина IOB.
-- The iob threshold could be differentiated according to meals: By cloning the automations, you could easily differentiate for breakfast, lunch, and dinner time slots (or even for geo-locations, like company cafeteria, or at mother-in-law etc)  
-  >You could differentiate within these time slots even further by setting different TTs for low carb vs. fast carb, etc., and thus be able to “code for” different meal classes that may occur at this time of day, and call them up with Automations specially tuned for them.(That is probably not not necessary, unless your diet habits do vary a lot.).
+- Порог акт инс IOB можно изменять в зависимости от приёма пищи: клонируя Автоматизацию можно легко подстраиваться под завтрак, обед и ужин (или даже в зависимости от геолокации, например, в корпоративной столовой, у тещи и т. д.)  
+  >Эти временные интервалы можно дальше разделить, устанавливая разные ВЦ для низкоуглеводных и быстрых углеводов и т. д., и, таким образом, иметь возможность «кодировать» разные виды питания в разное время дня, и активировать их с помощью специально подобранной для них Автоматизации.
 
-Before a special meal challenge, you can raise your iob threshold, or make another change in any of your Automations within under 5 seconds, right from your AndroidAPS main screen (burger top left; or Automations tab, depending how you configured your AAPS.).
+Перед особенно большим приёмом пищи можно повысить порог активного инсулина IOB или внести другое изменение в любую из Автоматизаций буквально за 5 секунд прямо с главного экрана AndroidAPS (три горизонтальные полоски вверху слева или вкладка «Автоматизация», в зависимости от того, как вы настроили AAPS.).
 
-The hypo danger some hours after the meal is essentially a question of whether your meal composition was such, that the **insulin tails from fighting the bulk of carbs** will be **consumed by “extended carbs”** (excessive/delayed carb absorption/protein/fat/fibre).
+Опасность гипогликемии через несколько часов после еды, по существу, зависит от того, будет ли **оставшийся инсулин** **расходоваться на покрытие «пролонгированных углеводов»** (излишних/замедленных углеводов/белков/жиров/клетчатки).
 
 Over time you will learn patterns, tune your Automations – maybe even adjust your eating habits a bit, e.g. just enjoy the occasional late little(!) snack that may help maintain a good **balance of insulin activity and carb absorption** for the **entire** meal (digestion, absorption) time, and thus make life for your loop (and for yourself) easier.
 
