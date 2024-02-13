@@ -280,11 +280,11 @@ In preparation for your full closed loop Automations, you therefore must take a 
 
 Опасность гипогликемии через несколько часов после еды, по существу, зависит от того, будет ли **оставшийся инсулин** **расходоваться на покрытие «пролонгированных углеводов»** (излишних/замедленных углеводов/белков/жиров/клетчатки).
 
-Over time you will learn patterns, tune your Automations – maybe even adjust your eating habits a bit, e.g. just enjoy the occasional late little(!) snack that may help maintain a good **balance of insulin activity and carb absorption** for the **entire** meal (digestion, absorption) time, and thus make life for your loop (and for yourself) easier.
+Со временем вы изучите закономерности, настроите свою Автоматизацию – возможно, даже немного скорректируете свои привычки в еде, чтобы, например, просто получать удовольствие от случайного (!) перекуса, который поможет поддерживать хороший **баланс между активностью инсулина и усвоением углеводов**.
 
-### Order of prorgrammed Automations
+### Очерёдность применимости настроек Автоматизаций
 
-Problems can arise with overlapping definitions in Automations. Example: The problem is that delta >8 is also delta >5, i.e. there may be two competing Automations. What does the loop do then? It always decides according to the sequence in which your Automations appear when looking into the burger menue / AndroidAPS main screen.  Example: The delta > +8 rule must come first (and launch the strongest boost if all conditions apply); then comes the check for delta >5 (and a milder response). If done the other way round, the delta>8 rule would never come into effect because the delta>5 already applies, case closed.
+В Автоматизациях могут возникнуть проблемы с дублирующимися определениями. Например: одно значение настройки delta >8 переопределяется другим значением >5, таким образом у нас появились 2 конфликтующих значения в меню Автоматизация. Что делает алгоритм замкнутого цикла в таком случае? It always decides according to the sequence in which your Automations appear when looking into the burger menue / AndroidAPS main screen.  Example: The delta > +8 rule must come first (and launch the strongest boost if all conditions apply); then comes the check for delta >5 (and a milder response). If done the other way round, the delta>8 rule would never come into effect because the delta>5 already applies, case closed.
 > Tip for "house cleaning" in your Automations: Order changes are very easy to make. If you press on a list entry in AAPS/Automations, you can move the Automation in question to another position. So you can quickly (re-)arrange.
 
 Also it is very easy and quick to adjust any conditions or actions at any time, within seconds, just on your AndroidAPS smartphone; for instance if you head into a very special eating event. (But don’t forget to set it back to normal on/for the next day).
