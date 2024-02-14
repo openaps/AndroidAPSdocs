@@ -297,41 +297,41 @@ You need to “stage” these two (+ maybe a third) Automations to fit with what
 
 Разумно использовать самодостаточный замкнутый цикл для приемов пищи (временных интервалов), где работает Автоматизация, и отключать, когда вы хотите использовать гибридный цикл (или еще не определили ни одной Автоматизации в переходный период).
 
-For instance, it is perfectly possible, without any extra steps after Automations for dinner time slots are defined, to do FCL only for dinners, while breakfast and lunch are done in hybrid closed loop as you are used to.
+Например, вполне возможно, после того как вы задали Автоматизацию для времени ужина, без каких-либо дополнительных шагов настроить Автоматизации самодостаточного замкнутого цикла только на время ужина, в то время как завтрак и обед выполняются в привычном гибридном замкнутом цикле.
 
 
-### Are the pre-conditions for FCL still given?
+### Соблюдены ли все предварительные условия для самодостаточного замкнутого цикла?
 
 - Is the basic profile still correct?
 - Has the CGM quality deteriorated
 - etc (see section pre-requisites)
 
-### Glucose goes too high
+### Уровень глюкозы поднимается слишком высоко
 
-- Meals are not recognized asap
-    - Check regarding Bluetooth (in)stability
-    - Check whether you could set smaller deltas to trigger first SMB
-    - Experiment with an aperetif, soup acouple of minutes before meal start
-- SMBs are too weak
-    - Check order of Automations (e.g.: big delta before small delta)
-    - Check (real-time) in SMB tab whether hourly profile basal and set minutes (max 120) limit allowed SMB size
-    - Check (real-time) in SMB tab whether %profile must  be set bigger
+- Момент приёма пищи не распознается вовремя
+    - Проверьте стабильность Bluetooth-соединений
+    - Проверьте, можете ли вы установить меньшие значения дельты для подачи первого болюса на приём пищи
+    - Экспериментируйте с аперитивом, супом за несколько минут до начала еды
+- Слишком малые дозы микроболюсов SMB
+    - Проверьте очерёдность в списке меню Автоматизации (например: большее значение дельты перед малой дельтой)
+    - Проверьте на вкладке SMB (в реальном времени), установлены ли в профиле лимиты в минутах (максимум 120) и размер SMB
+    - Проверьте (непосредственно в момент роста) на вкладке SMB, нужно ли настроить бОльший %p профиля
 - If all your settings are at the limit, you may have to live with the temporary high, or adjust your diet.
-> If you are ready to use AAPS dev variants, you could also employ one that allows further expanded SMB sizes. Some users also resort to using a small pre-bolus in their “FCL”. However, this interferes with how glucose curve and hence detection of rises and triggered SMBs behave, and is therefore not easy to implement with convincing overall benefit.
-- An important observation by pilot users was, that how your glucose and iob curves approach meal start matters a lot regarding how you peak from carbs: Going down (e.g. towards a set EatingSoonTT), building some iob, and curving already towards strong positive acceleration seems very helpful to keep peaks low.
+> Если вы готовы использовать AAPS версии для разработчиков, вы можете использовать ту, которая позволяет увеличить размер SMB. Некоторые пользователи также прибегают к небольшим преболюсам в своих "самодостаточных системах замкнутого цикла". Однако это влияет на рисунок кривой гликемии и, следовательно, на обнаружение подъемов и на момент запуска микроболюсов SMB, и поэтому концепцию нелегко реализовать с убедительным позитивным результатом.
+- Важным наблюдением со стороны группы испытуемых было то, какую тенденцию ваши кривые глюкозы и активного инсулина (IOB) имеют к моменту приема пищи, это оказывает существенное влияние на пики от приёма углеводов: Снижение уровня (напр. настройка "Включить временную цель TT Ожидаемый прием пищи") позволяет увеличить содержание активного инсулина IOB и удерживать пики в более низких пределах.
 
-### Glucose goes too low
+### Уровень глюкозы падает слишком низко
 
-- Meals are falsely recognized
-    - Check whether you could set bigger deltas to trigger first SMB
-    - Click “User action” in the related Automation, so in the futurte you can ad hoc decide to block execution of the Automatiojn if not meal-related
-    - To prevent snacks from triggering SMBs as for a meal, set a TT>100 when snacking (as you would do in sports and for anti-hypo snacks, anyways)
-- SMBs deliver overall too much insulin
-    - Check (real-time) in SMB tab whether SMB range extention must be set smaller
-    - Check (real-time) in SMB tab whether %profile must  be set smaller
-    - SMB delivery ratio probably can be set smaller. Note in this case, it works across the bord for all SMBs (all time slots),
-- Problems with insulin “tail” after meals
-    - You may need to take a snack (seeing hypo prediction) or glucose tablets (if already in hypo zone). But note that the carbs required the loop might tell you at some point are very likely exaggerated as the loop has absolutely zero info on your carb intake (while you may be able to guess how mnuch more, incl. from fats and proteins) is still waiting to be absorbed.
+- Некорректно определяется время начала приёма пищи
+    - Проверьте, можете ли вы установить бОльшие значения дельты для автоматического срабатывания первого болюса на еду
+    - Отметьте галочкой «Действия пользователя» в соответствующей Автоматизации, чтобы в дальнейшем иметь возможность на месте решить, остановить ли выполнение Автоматизации, если приёма пищи на самом деле не было
+    - Чтобы не допустить того, чтобы перекусы вызывали подачу СМБ как на полноценный приём пищи, установите ВЦ>100 (> 5.6 ммоль/л) при перекусах (как вы делали бы при занятиях спортом и для предотвращения гипогликемий)
+- SMB вводят слишком много инсулина
+    - Проверьте (в реальном времени) на вкладке СМБ, должен ли быть уменьшен диапазон расширения СМБ
+    - Проверьте (в реальном времени) на вкладке СМБ, следует ли уменьшить %p профиля
+    - Коэффициент SMB вероятно должен быть меньше, чем установлен. Обратите внимание, что это работает для всех SMB (все временные слоты)
+- Проблемы с инсулиновым «хвостом» после еды
+    - Возможно, потребуется перекус (из-за прогноза гипогликемии) или прием таблеток декстрозы (если вы уже в зоне гипогликемии). But note that the carbs required the loop might tell you at some point are very likely exaggerated as the loop has absolutely zero info on your carb intake (while you may be able to guess how mnuch more, incl. from fats and proteins) is still waiting to be absorbed.
     - A valueable information would be whether the problem originates mostly in the bg rise phase already. Then setting a lower iobTH might be an easy remedy.
     - If the need for additional carbs happens frequently, note down how many grams were needed (not counting what you eventually took too much and required extra insulin again).  Then use your profile IC value to estimate how much insulin less the SMBs should have delivered, and go with this info into your tuning (regarding the % profile in the Automations, or maybe also your set iobTH). This may relate to the SMBs given when glucose was high, or also extending regarding also the SMBs during the glucose rise.
     - It could well be that you simply have to accept higher glucose peaks for not going low. Or change diet to something with lower amounts of carbs, and higher amount of proteien and fats.
