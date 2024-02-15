@@ -53,7 +53,7 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
 * [Edit your variables](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
 * Add or edit the variables as follows:
-  * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover bgi pump openaps`
+  * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   * `DEVICESTATUS_ADVANCED` = `true`
   * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
@@ -63,7 +63,7 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
 
 * Save the modifications. Your Nightscout site should now allow you to display the pills. You can force default display adding them in `SHOW_PLUGINS`.
 
-  * `SHOW_PLUGINS` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover bgi pump openaps`
+  * `SHOW_PLUGINS` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
 
   ![Nightscout Pills](../images/nightscout1.png)
 
