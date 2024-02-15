@@ -133,41 +133,39 @@ CGM/FGM <./Configuration/BG-Source.md>
 ```
 
 ```{toctree}
-:caption: Работа AAPS 
+:caption: AAPS Usage
 
-рабочие экраны AAPS <./Getting-Started/Screenshots.md>
+AAPS screens <./Getting-Started/Screenshots.md>
 
-Функционал OpenAPS <./Usage/Open-APS-features.md>
+OpenAPS features <./Usage/Open-APS-features.md>
 
-Динамический ISF <./Usage/DynamicISF.md>
+Dynamic ISF <./Usage/DynamicISF.md>
 
-Подсчет активных углеводов COB <./Usage/COB-calculation.md>
+COB calculation <./Usage/COB-calculation.md>
 
-Определение чувствительности <./Configuration/Sensitivity-detection-and-COB.md>
+Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
 
-Переключение профиля <./Usage/Profiles.md>
+Profile switch <./Usage/Profiles.md>
 
-Временные цели <./Usage/temptarget.md>
+Temp-targets <./Usage/temptarget.md>
 
-Пролонгированные углеводы <./Usage/Extended-Carbs.md>
+Extended carbs <./Usage/Extended-Carbs.md>
 
-Автоматизация <./Usage/Automation.md>
+Automation <./Usage/Automation.md>
 
-Автонастройка Autotune (dev only) <./Usage/autotune.md>
+Autotune (dev only) <./Usage/autotune.md>
 
-Портал терапии (остановлен) <./Usage/CPbefore26.md>
+Careportal (discontinued) <./Usage/CPbefore26.md>
 
-Загрузчик Open Humans <./Configuration/OpenHumans.md>
+Open Humans Uploader <./Configuration/OpenHumans.md>
 
-Автоматизация при помощи сторонних приложений <./Usage/automationwithapp.md>
+Automation with 3rd party apps <./Usage/automationwithapp.md>
 
 Android auto <./Usage/Android-auto.md>
 
-Документация по настраиваемым циферблатам <./Usage/Custom_Watchface_Reference.md>
+Custom Watchface reference document <./Usage/Custom_Watchface_Reference.md>
 
-Сайт обмена самостоятельно спроектированными циферблатами <./ExchangeSiteCustomWatchfaces/index.md>
-
-Спорт с AAPS <./Usage/making-sport-with-AAPS.md>
+Exchange Site Custom Watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
