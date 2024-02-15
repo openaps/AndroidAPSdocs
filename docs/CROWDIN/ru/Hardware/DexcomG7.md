@@ -5,38 +5,38 @@
 
 Весной 2022, Dexcom G7 получил сертификат одобрения CE и поступил в продажу в конце октября 2022.
 
-Следует отметить, что система G7 по сравнению с G6 не сглаживает значения ни в приложении, ни в ридере. Подробнее об этом [здесь](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app). Следовательно, чтобы иметь возможность разумно использовать их в АAAPS, значения должны быть сглажены,.
+Следует отметить, что система G7 по сравнению с G6 не сглаживает значения ни в приложении, ни в ридере. Подробнее об этом [здесь](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ![G7 английский](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
+:::{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
+:class: warning **Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 values.  
+:::
+
 ## 1.  Модифицированное приложение Dexcom G7 (DiAKEM)
 
-**Примечание: Требуется AAPS 3.2.0.0 или выше!**
+**Note: AAPS 3.2.0.0 or higher is required!**
 
 ### Установите новое модифицированное (!) приложение G7 и запустите сенсор
 
-Модифицированное приложение Dexcom G7 (DiAKEM) даёт доступ к данным Dexcom G7. Это другое приложение чем самостоятельно собранное приложение Dexcom BYODA, в данный момент BYODA не может получать данные G7.
+A patched Dexcom G7 app (DiAKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
-Удалите оригинальное приложение Dexcom, если вы его использовали прежде (Рабочая сессия сенсора может продолжаться - запишите код датчика перед удалением приложения!)
+Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
 
-Скачайте и установите модифицированное приложение.apk [отсюда](https://github.com/authorgambel/g7/releases).
+Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
 
-Введите код сенсора в модифицированном приложении.
+Enter sensor code in the patched app.
 
-Следуйте общим рекомендациям по гигиене мониторинга и размещению сенсоров, которые можно найти [здесь](../Hardware/GeneralCGMRecommendation.md).
+Follow the general recommendations for CGM hygiene and sensor placement found [here](../Hardware/GeneralCGMRecommendation.md).
 
-После фазы прогрева, данные ГК отображаются в обычном приложении G7.
+After the warm-up phase, the values are displayed as usual in the G7 app.
 
 ### Конфигурация в AAPS
 
-Для конфигурации в AAPS
+For the configuration in AAPS
 - Выберите самостоятельно собранное приложение 'BYODA' в [конфигураторе, источник ГК](../Configuration/Config-Builder.md#bg-source)- даже если это не BYODA!
 
 - Если AAPS не получает данных ГК, переключитесь на другой источник ГК, а затем снова на 'BYODA'.
-
-Сглаживание значений гликемии можно активировать, выбрав модуль "Среднее сглаживание" или "Экспоненциальное сглаживание" в Конфигураторе. Чтобы отключить сглаживание, выберите опцию "Без сглаживания". "Экспоненциальное сглаживание" более агрессивно и перезаписывает новейшие значения ГК, но хорошо для борьбы с сильными шумами. "Среднее сглаживание" очень похоже на обратное сглаживание, применявшееся в BYODA G6 и перезаписывает только прошлые значения, а не текущее значение, и поэтому происходит быстрее.
-
-**Экспоненциальное сглаживание** **ДОЛЖНО** быть включено для качественного использования G7.
 
 ## 2. xdrip+ (прямое подключение к G7)
 
