@@ -5,9 +5,13 @@
 
 2022 baharında Dexcom G7 CE sertifikasını aldı ve '22 Ekim'in sonunda satılmaya başladı.
 
-G7 sisteminin G6 ile karşılaştırıldığında ne uygulamada ne de okuyucuda değerleri düzgünleştirmemesi dikkat çekicidir. Bununla ilgili daha fazla ayrıntıya [buradan](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app) ulaşabilirsiniz. Sonuç olarak, AAPS'de mantıklı bir şekilde kullanabilmek için değerlerin yumuşatılması gerekir.
+G7 sisteminin G6 ile karşılaştırıldığında ne uygulamada ne de okuyucuda değerleri düzgünleştirmemesi dikkat çekicidir. Bununla ilgili daha fazla ayrıntıya [buradan](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app) ulaşabilirsiniz.
 
 ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
+
+:::{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
+:class: warning **Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 values.  
+:::
 
 ## 1.  Patched Dexcom G7 App (DiAKEM)
 
@@ -15,28 +19,24 @@ G7 sisteminin G6 ile karşılaştırıldığında ne uygulamada ne de okuyucuda 
 
 ### Yeni yamalı (!) bir G7 uygulaması kurun ve sensörü başlatın
 
-A patched Dexcom G7 app (DiAKEM) gives acess to the Dexcom G7 data. Bu uygulama şu anda G7 verilerini alamadığından, BYODA uygulaması değildir.
+A patched Dexcom G7 app (DiAKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
-Daha önce kullandıysanız orijinal Dexcom uygulamasını kaldırın (Çalışmakta olan bir sensör oturumuna devam edilebilir - uygulamayı kaldırmadan önce sensör kodunu not edin!)
+Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
 
-patched.apk dosyasını [buradan](https://github.com/authorgambel/g7/releases) indirip yükleyin.
+Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
 
-Yamalı uygulamada sensör kodunu girin.
+Enter sensor code in the patched app.
 
-[Burada](../Hardware/GeneralCGMRecommendation.md) bulunan CGM hijyeni ve sensör yerleşimi için genel önerileri uygulayın.
+Follow the general recommendations for CGM hygiene and sensor placement found [here](../Hardware/GeneralCGMRecommendation.md).
 
-Isınma aşamasından sonra, değerler her zamanki gibi G7 uygulamasında görüntülenir.
+After the warm-up phase, the values are displayed as usual in the G7 app.
 
 ### Configuration in AAPS
 
-AAPS'deki yapılandırma için
+For the configuration in AAPS
 - Select 'BYODA' in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source) - even if it is not the BYODA app!
 
 - If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
-
-Glikoz değerlerinin yumuşatılması, Konfigürasyon ayarlarında "Ortalama yumuşatma" veya "Üstsel yumuşatma" eklentisi etkinleştirilerek gerçekleştirilir. Devre dışı bırakmak için "Yumuşatma Yok" seçeneğini seçin. "Üstsel yumuşatma" daha agresiftir ve en yeni Glikoz Değerini yeniden yazar, ancak yoğun gürültüyle başa çıkmada iyidir. "Ortalama yumuşatma", BYODA G6'daki geri düzeltmeye çok benzer ve yalnızca geçmiş değerleri yeniden yazar fakat mevcut değer değildir ve bu nedenle daha hızlı yanıt süresine sahiptir.
-
-** Üstel Yumuşatma ** G7 değerlerinin anlamlı kullanımı için **ETKİN** olmalıdır.
 
 ## 2. xDrip+ (direct connection to G7)
 
