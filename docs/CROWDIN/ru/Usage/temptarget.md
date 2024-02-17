@@ -2,45 +2,45 @@
 
 ## Что такое временные цели, где их можно задать и сконфигурировать?
 
-**Временная Цель** (или сокращенно **ВЦ**) - это функция ** AAPS**, которая позволяет изменять целевой диапазон **ГК** для запланированных действий. Это достигается за счет того, что **AAPS** вносит корректировки в расходование инсулина пользователем.
+**Временная Цель** (или сокращенно **ВЦ**) - это функция ** AAPS**, которая позволяет изменять целевой диапазон **ГК** в зависимости от вида активности в течение дня (приём пищи, физ нагрузка). Это достигается за счет того, что **AAPS** вносит корректировки в расходование инсулина пользователем.
 
 **AAPS** предусматривает три варианта ** временных целей **, подходящих для физических упражнений (**Временная цель- Нагрузка**), приема пищи (**Временная цель- Ожидаемый прием пищи**) и прогнозируемой гипогликемии (**Временная цель-Гипо**). **Временные цели** находятся на вкладке **Действия**.
 
-Пользователи должны иметь реалистичные ожидания при выборе **Временной цели** в **AAPS**. The success of attaining a desired **BG** target will vary depending on a multiple factors ranging from: the reliability of the user’s **AAPS** settings, overall **BG** control, **IOB**, insulin sensitivity, insulin resistance, level of exertion undertaken during the exercise and so forth.
+Пользователи должны иметь реалистичные ожидания при выборе **Временной цели** в **AAPS**. Успех достижения желаемого целевого показателя **ГК** будет зависеть от множества факторов: точности настроек **AAPS**, общего контроля уровня **ГК**, **количества активного инсулиноа IOB**, параметра чувствительности к инсулину, резистентности к инсулину, интенсивности нагрузок и т. д.
 
-A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**.
+Для достижения желаемого значения **ГК** может потребоваться около 30 минут или больше с момента активации **Временной Цели**. **AAPS** не в состоянии достичь целевой **ГК** немедленно, и пользователи должны помнить об этом при использовании **Врем-Цели**.
 
-The table below summarises the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**, and **Temp-Target-Hypo**.
+В таблице ниже приведены особенности **Врем-Цель-Нагрузка**, **Врем-цель-Ожидаемый приём пищи** и **Врем-Цель-Гипо**.
 
 ![TT1_Screenshot 2024-01-26 231223](https://github.com/openaps/AndroidAPSdocs/assets/137224335/73eeadf1-c17e-4955-afd8-f49c281331e3)
 
-## Where can I select a Temp-Target?
+## Как выбрать временную цель?
 
-1. go to **Actions** tab in **AAPS**;
-2. select **Temporary Target** button; and then
-3. select desired **Temp-Target**
+1. перейдите во вкладку **Действия** главного экрана **AAPS**;
+2. выберите иконку **Временная Цель**; и затем
+3. настройте желаемые параметры **Врем-Цели**
 
 ![TT2_Screenshot 2024-01-26 194028](https://github.com/openaps/AndroidAPSdocs/assets/137224335/9b53d358-dc97-4dc5-9ffc-3d24bceea203)
 
-Alternatively, **Temp-Target** can be activated in the “Carbs” button (step 1) by selecting the desired **Temp-Target** in the shortcuts (step 2) as shown below:
+Кроме этого, **Врем-Цель** можно активировать с помощью кнопки «Углеводы» (шаг 1), выбрав нужную **Врем-Цель** в иконках (шаг 2), как показано ниже:
 
 ![TT3_Screenshot 2024-01-26 194318](https://github.com/openaps/AndroidAPSdocs/assets/137224335/a0627667-fb73-4791-8a1a-328eaaf1af2a)
 
-## Where can I change the default Temp-Target and override with my own preferences?
+## Как изменить временную цель по умолчанию и переопределить её своими собственными значениями?
 
-To reconfigure the ‘BG target range’ and ‘duration’ allocated to the user’s default **Temp-Target** settings, go to the menu in **AAPS** on the top right hand corner and
+Чтобы изменить «целевой диапазон ГК» и «продолжительность», для настроек по умолчанию **Врем-Цель**, перейдите в меню **AAPS** в правом верхнем углу и
 
-1. select **Preferences** 
-2. scroll down to 'Overview’ 
-3. select ‘Default Temp-Targets’
-4. step 4 indicates (below) where to change **TT- Eating soon** time period
-5. step 5 indicates (below) where to change **TT - Eating soon** **BG** target range (and the same steps can be repeated for **TT -Activity** and **TT - Hypo**.
+1. выберите **Настройки** 
+2. прокрутите вниз до "Обзор" 
+3. выберите 'Временные цели по умолчанию’
+4. шаг 4 указывает (ниже), где изменить временной диапазон **ВЦ- Ожидаемый приём пищи**
+5. шаг 5 указывает (ниже), где изменить **целевое значение ГК при ожидаемом приеме пищи eatingsoon** (и те же шаги можно повторить для **целевое значение ГК при физической нагрузке** и **целевое значение ГК при гипо**.
 
 ![TT7_Screenshot 2024-01-26 213136](https://github.com/openaps/AndroidAPSdocs/assets/137224335/82cc08af-82bf-49e2-9a66-178fc9f6aa56)
 
-## How do I cancel a Temp-Target?
+## Как отменить Врем-Цель?
 
-To cancel a **Temp-Target** running, select the “Cancel” button in **Temporary Target** under the **Actions** tab as shown below.
+Чтобы отменить запущенную **Врем-Цель**, нажмите кнопку “Отмена” в разделе **Временная Цель** во вкладке **Действия**, как показано ниже.
 
 ![TT5_Screenshot 2024-01-26 195309](https://github.com/openaps/AndroidAPSdocs/assets/137224335/a9299ec6-34ef-43da-a36c-4c06340878dc)
 
@@ -48,16 +48,16 @@ Or short-click on the ‘BG Target’ in the yellow/green box located in the top
 
 ![Задать врем цель](../images/TempTarget_Set2.png)
 
-## How do I select a “Default-Temp-Targets”
+## Как выбрать "Временные цели по умолчанию"
 
-To select a **Default-Temp-Target**, the user can short click on the target in the right corner on the top in the overview-tab to show **Temp Target** dialog and click on 'Eating Soon', 'Activity' or 'Hypo' button, or use the shortcuts in the orange 'Carbs' button.
+Чтобы выбрать **Временные цели по умолчанию**, пользователь может кратковременно нажать по цели в правом верхнем углу вкладки "Начало", перейти в диалоговое окно **Временные Цели**, и нажать на кнопки «Ожидаемый приём пищи», «Активность», «Гипо» или воспользоваться ярлыками на оранжевой кнопке «Углеводы».
 
-- To slightly adjust the values of a **Default-Temp-Target**t, *long press* the 'Eating Soon', 'Activity' or 'Hypo' button and then edit the values in the Target or Duration fields.
-- If a **Temp target** is running, an additional "Cancel" button is shown in dialog to cancel it.
+- Чтобы слегка изменить значения **Временных-Целей-по-умолчанию**t, *длительно нажмите* кнопку «Ожидаемый приём пищи», «Активность» или «Гипо», а затем отредактируйте значения в полях «Цель» или «Длительность».
+- Если **Временная цель** запущена, в диалоговом окне отображается дополнительная кнопка «Отмена» для ее отмены.
 
 ## Временная цель Гипо 
 
-**Temp-Target Hypo** enables **AAPS** to prevent the user from experiencing low blood sugar by reducing insulin intake. If the user predicts their **BG** will go low: usually, **AAPS** should handle it, but much will depend on the stability of the user’s **AAPS'** settings. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
+**Временная-Цель Гипо** позволяет **AAPS** предотвратить снижение уровня сахара в крови пользователя за счет снижения потребления инсулина. Если пользователь прогнозирует, что его **ГК** снизится: обычно система **AAPS** должна самостоятельно справится с этим, но многое будет зависеть от правильности настроек пользователя **AAPS**. A **Temp-Target Hypo** enables the user to get ahead of the predicted low and update **AAPS** to reduce insulin.
 
 Sometimes when hypo-treated carbs are eaten, the user's **BG** can rapidly rise, and **AAPS** will correct against the fast rising **BG** by enabling **SMBs**.
 
