@@ -87,7 +87,7 @@ Be to, žmogaus elgesys, išmoktas valdant diabetą rankiniu būdų, dažnai dar
 
 ## OpenAPS
 
-**Šis vadovas paimtas ir pritaikytas iš [OpenAPS Medicinos vadovas](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html). **OpenAPS yra sistema, kuri sukurta veikti mažame nešiojamame kompiuteryje (paprastai vadinama „rig“). AAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AAPS, with the main difference being the hardware platform where each peace of software is run.
+**Šis vadovas paimtas ir pritaikytas iš [OpenAPS Medicinos vadovas](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html). **OpenAPS yra sistema, kuri sukurta veikti mažame nešiojamame kompiuteryje (paprastai vadinama „rig“). AAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AAPS, with the main difference being the hardware platform where each piece of software is run.
 
 ## Summary
 
