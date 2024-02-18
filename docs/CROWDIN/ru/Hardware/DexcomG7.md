@@ -9,8 +9,8 @@
 
 ![G7 английский](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
-:::{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
-:class: warning **Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 values.  
+:::{admonition} [Метод сглаживания](../Usage/Smoothing-Blood-Glucose-Data)
+:class: warning Для корректных показаний G7**ДОЛЖНО** быть включено **Экспоненциальное Сглаживание**   
 :::
 
 ## 1.  Модифицированное приложение Dexcom G7 (DiAKEM)
@@ -19,21 +19,21 @@
 
 ### Установите новое модифицированное (!) приложение G7 и запустите сенсор
 
-A patched Dexcom G7 app (DiAKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+Модифицированное приложение Dexcom G7 (DiAKEM) обеспечивает доступ к данным Dexcom G7. Это приложение отличается от самостоятельно собранного приложения Dexcom BYODA; BYODA не может получать данные G7.
 
-Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
+Удалите оригинальное приложение Dexcom, если вы его использовали прежде (Рабочая сессия сенсора может продолжаться - запишите код сенсора перед удалением приложения!)
 
-Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
+Скачайте и установите patched.apk [по ссылке](https://github.com/authorgambel/g7/releases).
 
-Enter sensor code in the patched app.
+Введите код сенсора в модифицированном приложении.
 
-Follow the general recommendations for CGM hygiene and sensor placement found [here](../Hardware/GeneralCGMRecommendation.md).
+Следуйте общим рекомендациям по гигиене НМГ и установке сенсора, которые можно найти [здесь](../Hardware/GeneralCGMRecommendation.md).
 
-After the warm-up phase, the values are displayed as usual in the G7 app.
+После фазы прогрева, данные ГК отображаются как обычно в приложении G7.
 
 ### Конфигурация в AAPS
 
-For the configuration in AAPS
+Для конфигурации в AAPS
 - Выберите самостоятельно собранное приложение 'BYODA' в [конфигураторе, источник ГК](../Configuration/Config-Builder.md#bg-source)- даже если это не BYODA!
 
 - Если AAPS не получает данных ГК, переключитесь на другой источник ГК, а затем снова на 'BYODA'.
