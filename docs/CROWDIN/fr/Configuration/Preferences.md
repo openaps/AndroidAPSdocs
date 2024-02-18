@@ -461,12 +461,51 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 :alt: NSClient
 ```
 
-- Définissez votre *URL Nightscout* (par ex. <https://yourwebsitename.herokuapp.com>) et l'*API secret* (un mot de passe de 12 caractères enregistré dans vos variables Heroku).
+Original communication protocol, can be used with older Nightscout versions.
+
+- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
+  - **Vérifiez bien que l'URL est SANS /api/v1/ à la fin.**
+- The *[API secret](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)* (a 12 character password recorded in your Nightscout variables).
 - This enables data to be read and written between both the Nightscout website and AAPS.
 - Vérifiez deux fois les fautes de frappe ici si vous êtes coincé dans l'objectif 1.
-- **Vérifiez bien que l'URL est SANS /api/v1/ à la fin.**
-- *Log app start to NS* enregistre une note dans Careportal Nightscout à chaque démarrage de l'application.  L'application ne devrait pas avoir besoin de démarrer plus d'une fois par jour; si c'est plus souvent, cela suggère un problème (par ex. l'optimisation de la batterie n'est pas désactivée pour AAPS).
-- If activated changes in [local profile](Config-Builder-local-profile) are uploaded to your Nightscout site.
+
+## NSClientV3
+
+```{image} ../images/Pref2024_NSClientV3.png
+:alt: NSClientV3
+```
+
+[New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
+
+:::{admonition} V3 data uploaders
+:class: warning When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.  
+:::
+
+- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
+  - **Vérifiez bien que l'URL est SANS /api/v1/ à la fin.**
+- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in **NS access token** (not your API Secret!).
+- This enables data to be read and written between both the Nightscout website and AAPS.
+- Vérifiez deux fois les fautes de frappe ici si vous êtes coincé dans l'objectif 1.
+- Leave Connect to websockets enabled (recommended).
+
+### Synchronization
+
+Synchronization choices will depend on the way you will want to use AAPS.
+
+You can select which data you want to [upload and download to or from Nightscout](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
+
+### Options d'alarme
+
+```{image} ../images/Pref2024_NSClient_Alarms.png
+:alt: Alarm options
+```
+
+- Alarm options allows you to select which Nightscout alarms to use through the app. AAPS will alarm when a Nightscout alarms trigger.
+  - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+  - They will only work whilst you have a connection to Nightscout and are intended for parent/caregivers.
+  - If you have the CGM source on your phone (i.e. xDrip+ or BYODA) then use those alarms instead of Nightscout Alarms.
+- Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the AAPS notifications bar.
+- You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
 
 ### Paramètres de connexion
 
@@ -474,32 +513,20 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 :alt: Paramètres de connexion NSClient
 ```
 
+- Connection settings define when Nightscout connection will be enabled.
 - Restreignez le téléchargement de Nightscout au Wi-Fi seulement ou même à certains SSID Wi-Fi.
 - Si vous souhaitez utiliser uniquement un réseau WiFi spécifique, vous pouvez entrer son SSID.
 - Plusieurs SSID peuvent être séparés par un point-virgule.
 - Pour supprimer tous les SSID, entrez un espace dans la zone.
 
-### Options d'alarme
-
-- Les options d'alarme vous permettent de sélectionner les alarmes Nightscout par défaut à utiliser via l'application.
-- Pour que les alarmes sonnent, vous devez définir les valeurs de seuil des alarmes Urgent High, High, Low et Urgent Low dans vos [variables Heroku](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- Elles ne fonctionneront que si vous avez une connexion avec Nightscout et sont destinées aux parents/aidants.
-- Si vous avez la source MGC sur votre téléphone (par ex. xDrip+ ou BYODA \[Construisez votre propre application dexcom\]) puis utilisez ces alarmes à la place.
-
 (Preferences-advanced-settings-nsclient)=
 ### Paramètres avancés (NSClient)
 
-```{image} ../images/Pref2020_NSClientAdv.png
+```{image} ../images/Pref2024_NSClientAdv.png
 :alt: Paramètres avancés NSClient
 ```
 
-- La plupart des options dans les paramètres avancés sont explicites.
-
-- *Activer les transmissions locales* partagera vos données vers d'autres applications sur le téléphone, telles que xDrip+.
-
-  - You need to [go through AAPS](Config-Builder-bg-source) and enable local broadcast in AAPS to use xDrip+ alarms.
-
-- *Utiliser toujours les valeurs absolues du basal* doit être activé si vous souhaitez utiliser Autotune correctement. Voir la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) pour plus de détails sur Autotune.
+Options in advanced settings are self-explanatory.
 
 ## Communicateur SMS
 
