@@ -133,39 +133,39 @@ CGM/FGM <./Configuration/BG-Source.md>
 ```
 
 ```{toctree}
-:caption: AAPS Usage
+:caption: Работа с AAPS
 
-AAPS screens <./Getting-Started/Screenshots.md>
+Экраны AAPS <./Getting-Started/Screenshots.md>
 
-OpenAPS features <./Usage/Open-APS-features.md>
+Возможности OpenAPS <./Usage/Open-APS-features.md>
 
-Dynamic ISF <./Usage/DynamicISF.md>
+Динамический ISF <./Usage/DynamicISF.md>
 
-COB calculation <./Usage/COB-calculation.md>
+Подсчет активных углеводов COB <./Usage/COB-calculation.md>
 
-Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
+Определение чувствительности <./Configuration/Sensitivity-detection-and-COB.md>
 
-Profile switch <./Usage/Profiles.md>
+Переключение профиля <./Usage/Profiles.md>
 
-Temp-targets <./Usage/temptarget.md>
+Временные цели <./Usage/temptarget.md>
 
-Extended carbs <./Usage/Extended-Carbs.md>
+Растянутые углеводы <./Usage/Extended-Carbs.md>
 
-Automation <./Usage/Automation.md>
+Автоматизация <./Usage/Automation.md>
 
-Autotune (dev only) <./Usage/autotune.md>
+Autotune (только dev) <./Usage/autotune.md>
 
-Careportal (discontinued) <./Usage/CPbefore26.md>
+Портал терапииl (прекращен) <./Usage/CPbefore26.md>
 
 Open Humans Uploader <./Configuration/OpenHumans.md>
 
-Automation with 3rd party apps <./Usage/automationwithapp.md>
+Автоматизация со сторонними приложениями <./Usage/automationwithapp.md>
 
-Android auto <./Usage/Android-auto.md>
+Android авто <./Usage/Android-auto.md>
 
-Custom Watchface reference document <./Usage/Custom_Watchface_Reference.md>
+Документация по настраиваемым циферблатам <./Usage/Custom_Watchface_Reference.md>
 
-Exchange Site Custom Watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
+Сайт обмена настраиваемыми циферблатами <./ExchangeSiteCustomWatchfaces/index.md>
 
 ```
 
