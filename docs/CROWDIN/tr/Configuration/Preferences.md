@@ -460,12 +460,51 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 :alt: NSClient
 ```
 
-- *Nightscout URL'nizi* (ör. <https://yourwebsitename.herokuapp.com>) ve *API parolanızı* (Heroku değişkenlerinde kaydedilmiş 12 karakterlik bir şifre) ayarlayın.
+Original communication protocol, can be used with older Nightscout versions.
+
+- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
+  - **URL'nin sonunda /api/v1/ OLMADAN olduğundan emin olun.**
+- The *[API secret](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)* (a 12 character password recorded in your Nightscout variables).
 - This enables data to be read and written between both the Nightscout website and AAPS.
 - Hedef 1'de takılıp kalırsanız, burada yazım hatalarını iki kez kontrol edin.
-- **URL'nin sonunda /api/v1/ OLMADAN olduğundan emin olun.**
-- *NS'de Uyg. günlüğünün başlatılması* uygulama her başlatıldığında Nightscout bakım portalına girişlerinize bir not kaydeder.  Uygulamanın günde bir defadan fazla başlatılması gerekmez. Bundan daha sık olması bir sorun olduğunu gösterir (örneğin. pil optimizasyonu AAPS için devre dışı bırakılmamıştır).
-- Etkinleştirilirse, [yerel profildeki](Config-Builder-local-profile) değişiklikler Nightscout sitenize yüklenir.
+
+## NSClientV3
+
+```{image} ../images/Pref2024_NSClientV3.png
+:alt: NSClientV3
+```
+
+[New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
+
+:::{admonition} V3 data uploaders
+:class: warning When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.  
+:::
+
+- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
+  - **URL'nin sonunda /api/v1/ OLMADAN olduğundan emin olun.**
+- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in **NS access token** (not your API Secret!).
+- This enables data to be read and written between both the Nightscout website and AAPS.
+- Hedef 1'de takılıp kalırsanız, burada yazım hatalarını iki kez kontrol edin.
+- Leave Connect to websockets enabled (recommended).
+
+### Synchronization
+
+Synchronization choices will depend on the way you will want to use AAPS.
+
+You can select which data you want to [upload and download to or from Nightscout](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
+
+### Alarm türleri
+
+```{image} ../images/Pref2024_NSClient_Alarms.png
+:alt: Alarm options
+```
+
+- Alarm options allows you to select which Nightscout alarms to use through the app. AAPS will alarm when a Nightscout alarms trigger.
+  - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+  - They will only work whilst you have a connection to Nightscout and are intended for parent/caregivers.
+  - If you have the CGM source on your phone (i.e. xDrip+ or BYODA) then use those alarms instead of Nightscout Alarms.
+- Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the AAPS notifications bar.
+- You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
 
 ### Bağlantı Ayarları
 
@@ -473,32 +512,20 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 :alt: NSClient bağlantı ayarları
 ```
 
+- Connection settings define when Nightscout connection will be enabled.
 - Nightscout yüklemesini yalnızca Wi-Fi ile veya hatta belirli Wi-Fi SSID'leri ile sınırlayın.
 - Yalnızca belirli bir WiFi ağını kullanmak istiyorsanız, WiFi SSID'sini girebilirsiniz.
 - Birden çok SSID noktalı virgülle ayrılabilir.
 - Tüm SSID'leri silmek için alana boşluk girin.
 
-### Alarm türleri
-
-- Alarm seçenekleri, uygulama aracılığıyla hangi varsayılan Nightscout alarmlarının kullanılacağını seçmenize olanak tanır.
-- Alarmların çalması için [Heroku değişkenlerinizde](https://nightscout.github.io/nightscout/setup_variables/#alarms) Acil Yüksek, Yüksek, Düşük ve Acil Düşük alarm değerlerini ayarlamanız gerekir.
-- Yalnızca Nightscout ile bağlantınız varken çalışırlar ve ebeveynler/bakıcılar için tasarlanmıştır.
-- Telefonunuzda CGM kaynağı varsa (ör. xDrip+ veya BYODA \[Kendi dexcom uygulamanızı oluşturun\]) bunun yerine bu alarmları kullanın.
-
 (Preferences-advanced-settings-nsclient)=
 ### Gelişmiş Ayarlar (NSClient)
 
-```{image} ../images/Pref2020_NSClientAdv.png
+```{image} ../images/Pref2024_NSClientAdv.png
 :alt: NS Client gelişmiş ayarlar
 ```
 
-- Gelişmiş ayarlardaki çoğu seçenek kendi açıklamasını içerir.
-
-- *Yerel yayınları etkinleştir*, verilerinizi telefondaki xDrip+ gibi diğer uygulamalarla paylaşacaktır.
-
-  - xDrip+ alarmlarını kullanmak için [AAPS'e geçmeniz](Config-Builder-bg-source) ve AAPS'de yerel yayını etkinleştirmeniz gerekir.
-
-- Autotune'u doğru kullanmak istiyorsanız *Her zaman bazal mutlak değerleri kullan* etkinleştirilmelidir. Autotune hakkında daha fazla ayrıntı için [OpenAPS dokümanlarına](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) bakın.
+Options in advanced settings are self-explanatory.
 
 ## SMS Kominikatör
 
