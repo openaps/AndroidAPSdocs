@@ -28,7 +28,7 @@
 В противном случае вам придется перенастраивать до тех пор, пока базовая настройка не будет работать корректно для **AAPS**.
 
 - Выберите правильный источник данных ГК CGMS/FGMS в [Конфигураторе](../Configuration/Config-Builder.md).  См. [источник СК](../Configuration/BG-Source.md) для дополнительной информации.
-- Выберите помпу в [Конфигураторе](../Configuration/Config-Builder.md) и обеспечьте связь помпы с AAPS. Select **virtual pump** if you are using a pump model with no **AAPS** driver for looping, or if you want to work through the early **objectives** while using another system for insulin delivery. See [insulin pump](../Getting-Started/Pump-Choices.md) for more information.
+- Выберите помпу в [Конфигураторе](../Configuration/Config-Builder.md) и обеспечьте связь помпы с AAPS. Выберите **виртуальную помпу**, если используете помпу, работа которой не поддерживается в **AAPS** или если хотите пройти **цели обучения** заранее, пока используете другую систему введения инсулина. See [insulin pump](../Getting-Started/Pump-Choices.md) for more information.
 - Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure **Nightscout** can receive and display this data.
 - Note that URL in **NSClient** must be **_without_ "/api/v1/"** at the end - see [NSClient settings in Preferences](Preferences-nsclient).
 
