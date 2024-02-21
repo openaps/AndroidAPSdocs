@@ -28,24 +28,24 @@
 В противном случае вам придется перенастраивать до тех пор, пока базовая настройка не будет работать корректно для **AAPS**.
 
 - Выберите правильный источник данных ГК CGMS/FGMS в [Конфигураторе](../Configuration/Config-Builder.md).  См. [источник СК](../Configuration/BG-Source.md) для дополнительной информации.
-- Выберите помпу в [Конфигураторе](../Configuration/Config-Builder.md) и обеспечьте связь помпы с AAPS. Выберите **виртуальную помпу**, если используете помпу, работа которой не поддерживается в **AAPS** или если хотите пройти **цели обучения** заранее, пока используете другую систему введения инсулина. See [insulin pump](../Getting-Started/Pump-Choices.md) for more information.
-- Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure **Nightscout** can receive and display this data.
+- Выберите помпу в [Конфигураторе](../Configuration/Config-Builder.md) и обеспечьте связь помпы с AAPS. Выберите **виртуальную помпу**, если используете помпу, работа которой не поддерживается в **AAPS** или если хотите пройти **цели обучения** заранее, пока используете другую систему введения инсулина. Дополнительную информацию см. в разделе [инсулиновая помпа](../Getting-Started/Pump-Choices.md).
+- Следуйте инструкциям на странице [Nightscout](../Installing-AndroidAPS/Nightscout.md), чтобы убедиться, что **Nightscout** может получать и отображать данные.
 - Note that URL in **NSClient** must be **_without_ "/api/v1/"** at the end - see [NSClient settings in Preferences](Preferences-nsclient).
 
-Note - _You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognise it._
+Возможно, потребуется дождаться следующего значения ГК, прежде чем AAPS распознает его и примет в обработку.\*
 
 ## Цель 2: Научитесь контролировать AAPS
 
-- Perform several actions in **AAPS** as described in this **objective**.
+- Выполните следующие шаги в **AAPS**, как описано в этой **цели**.
 - Нажмите на оранжевый текст «Не завершено» для доступа к каждому заданию.
-- Links will be provided to guide you, in case you are not familiar with a specific action yet.
+- Если вы еще не знаете как выполнить действие, вам будут предоставлены ссылки на инструкции.
 
   ```{image} ../images/Objective2_V2_5.png
   :alt: снимок экрана Цель 2
   ```
-- Tasks to complete **Objective 2** are:
-  - Set your profile to 90% for a duration of 10 min (_Hint_: Long press your profile name on the OVERVIEW screen) (_Note_: AAPS does not accept basal rates below 0.05U/hr. If your profile includes any rates 0.06U/hr or lower you will need to create a new profile with higher basal rates before completing this task. Switch back to your normal profile after completing this task.)
-  - Simulate "taking a shower" by disconnecting your pump in **AAPS** for a duration of 1h (_Hint_: press the loop icon on the OVERVIEW screen to open the Loop dialogue)
+- Задачи для выполнения **Цели 2**:
+  - Установите свой профиль в 90% на 10 минут (_Подсказка_: нажмите и удерживайте на имени своего профиля на экране НАЧАЛО) (_Примечание_: AAPS не принимает базальные дозы ниже 0,05 ЕД/ч. Если ваш профиль содержит базальные дозы 0,06 ЕД/ч или ниже, вам потребуется создать новый профиль с более высокими базальными дозами, прежде чем выполнять эту задачу. Вернитесь к своему обычному профилю после выполнения этого задания.)
+  - Симитируйте «принятие душа», отключив помпу в **AAPS** на 1 час (_Подсказка_: нажмите значок петли на экране НАЧАЛО, чтобы открыть диалоговое окно «Цикл»)
   - End "taking a shower" by reconnecting your pump (_Hint_: press the "disconnected"-icon to open the loop dialog)
   - Create a custom temporary target with a duration of 10 min (_Hint_: press the target bar on the OVERVIEW screen to bring up the temporary target dialog)
   - Activate the **ACTIONS** plugin in **CONFIG BUILDER** to make it appear on the top scrollable menu bar (_Hint_: Go to **CONFIG BUILDER** and scroll down to 'General")
