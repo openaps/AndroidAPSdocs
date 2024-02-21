@@ -33,6 +33,10 @@ contenus::
 (Preferences-general)=
 ## Généralités
 
+```{image} ../images/Pref2020_General.png
+:alt: Preferences > General
+```
+
 **Unités**
 
 - Définissez les unités mmol/l ou mg/dl selon vos préférences.
@@ -45,9 +49,6 @@ contenus::
 
 - Si vous utilisez des langues différentes, vous pouvez parfois voir un mélange de langues. Cela est dû à un problème Android, le remplacement de la langue par défaut d'Android parfois ne fonctionne pas.
 
-  ```{image} ../images/Pref2020_General.png
-  :alt: Preferences > General
-  ```
 
 **Nom du patient**
 
@@ -57,9 +58,14 @@ contenus::
 ### Protection
 
 (Preferences-master-password)=
+
+```{image} ../images/Pref2020_General2.png
+:alt: Preferences > General - Protection
+```
+
 #### Mot de passe principal
 
-- Nécessaire pour pouvoir [exporter les paramètres](../Usage/ExportImportSettings.md) car ils sont chiffrés depuis la version 2.7. **La protection biométrique ne fonctionne pas sur les téléphones OnePlus. Ceci est un problème connu de OnePlus sur certains téléphones.**
+- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted from version 2.7. **La protection biométrique ne fonctionne pas sur les téléphones OnePlus. Ceci est un problème connu de OnePlus sur certains téléphones.**
 
 - Ouvrez les préférences (menu trois points en haut à droite de l'écran d'accueil)
 
@@ -106,7 +112,7 @@ contenus::
 - Vous pouvez choisir parmi quatre thèmes :
 
   ```{image} ../images/Pref2021_SkinWExample.png
-  :alt: Sélection du theme + exemples
+  :alt: Select skin
   ```
 
 - Le thème 'Basse résolution' a des étiquettes plus courte et "âge/niveau" ont été enlevé dans la zone Careportal de l'onglet Action pour avoir plus d'espace disponible sur un écran de très basse résolution.
@@ -147,10 +153,18 @@ contenus::
 
 - Définissez quels boutons sont visibles en bas de votre écran d'accueil.
 
+  ```{image} ../images/Pref2020_OV_Buttons.png
+  :alt: Preferences > Buttons
+  ```
+
 - Avec les paramètres incrément, vous pouvez définir les quantités pour les trois boutons des boîtes de dialogue glucides et insuline pour une entrée facile.
 
-  ```{image} ../images/Pref2020_OV_Buttons.png
-  :alt: Préférences > Boutons
+  ```{image} ../images/Pref2020_OV_Buttons2.png
+  :alt: Preferences > Buttons > Insulin
+  ```
+
+  ```{image} ../images/Pref2020_OV_Buttons3.png
+  :alt: Preferences > Buttons > Carbs
   ```
 
 (Preferences-quick-wizard)=
@@ -160,11 +174,15 @@ contenus::
 
 - Dans le paramétrage, vous définissez au cours de quelle période le bouton sera visible sur votre écran d'accueil - ne définissez qu'un bouton par période.
 
+  ```{image} ../images/Pref2020_OV_QuickWizard.png
+  :alt: Preferences > Quick Wizard Button Setup
+  ```
+
 - Si vous cliquez sur le bouton Assistant Rapide, AAPS calculera et proposera un bolus pour ces glucides en fonction de vos valeurs actuelles (glycémie ou insuline active si configurées).
 
 - La proposition doit être confirmée avant l'injection de l'insuline.
 
-  ```{image} ../images/Pref2020_OV_QuickWizard.png
+  ```{image} ../images/Pref2020_OV_QuickWizard2.png
   :alt: Préférences > Bouton Assistant rapide
   ```
 
@@ -175,11 +193,17 @@ contenus::
 
 - Avec la configuration de CT par défaut, vous pouvez facilement changer vos cibles d'activité, de repas imminent, etc.
 
-- Faites un appui long sur votre cible dans le coin supérieur droit de l'écran d'accueil ou utilisez les raccourcis dans le bouton orange « Glucides » en bas.
-
   ```{image} ../images/Pref2020_OV_DefaultTT.png
   :alt: Preferences > Default temp targets
   ```
+
+- Faites un appui long sur votre cible dans le coin supérieur droit de l'écran d'accueil ou utilisez les raccourcis dans le bouton orange « Glucides » en bas.
+
+  ```{image} ../images/Pref2020_OV_DefaultTT2.png
+  :alt: Preferences > Use default temp targets
+  ```
+
+###
 
 ### Insuline par défaut pour Amorcer/Remplir
 
@@ -240,28 +264,8 @@ contenus::
 ### Paramètres avancés (Aperçu)
 
 ```{image} ../images/Pref2021_OV_Adv.png
-:alt: Preferences > Status Lights
+:alt: Preferences > Advanced Settings
 ```
-
-#### Injecter cette partie de Bolus calculée par l’assistant
-
-- Paramètre général permettant de ne livrer qu'une partie du résultat de l'assistant de bolus.
-- Seul le pourcentage défini (doit être compris entre 10 et 100) du bolus calculé est délivré lors de l'utilisation de l'assistant bolus.
-- Le pourcentage est affiché dans l'assistant de bolus.
-
-#### Assistant bolus
-
-- If you run [Bolus wizard](Screenshots-bolus-wizard) and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
-
-- Si le bolus de correction est accepté, **aucun glucide** ne sera enregistré.
-
-- Une alarme sera déclenchée lorsque la glycémie est au bon niveau pour commencer à manger.
-
-- You have to enter [Bolus wizard](Screenshots-bolus-wizard) again and enter the amount of carbs you want to eat.
-
-  ```{image} ../images/Home2021_BolusWizard_CorrectionOffer.png
-  :alt: Message assistant bolus
-  ```
 
 (Preferences-superbolus)=
 #### Superbolus
@@ -281,14 +285,14 @@ contenus::
 ### Maximum Bolus autorisé \[U\]
 
 - Défini la quantité maximale d’insuline que AAPS est autorisé à administrer en une fois lors d'un bolus.
-- Ce paramètre existe comme une limite de sécurité pour empêcher l'administration d’un bolus trop important dû à une saisie accidentelle ou une erreur de l’utilisateur.
+- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
 - Il est recommandé de définir cette valeur à un montant raisonnable qui correspond approximativement à la quantité maximale d’insuline de bolus que vous êtes susceptible d’avoir besoin pour un repas ou pour une dose de correction.
 - Cette restriction s’applique également aux résultats de l'assistant bolus.
 
 ### Maximum de Glucides autorisé \[g\]
 
 - Défini la quantité maximale de glucides que l'assistant bolus de AAPS est autorisée à utiliser.
-- Ce paramètre existe comme une limite de sécurité pour empêcher l'administration d’un bolus trop important dû à une saisie accidentelle ou une erreur de l’utilisateur.
+- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
 - Il est recommandé de définir cette valeur à un montant raisonnable qui correspond approximativement à la quantité maximale de glucides que vous êtes susceptible d’avoir dans d'un repas.
 
 ## Boucle
