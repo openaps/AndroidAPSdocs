@@ -32,6 +32,10 @@
 (Preferences-general)=
 ## Genel
 
+```{image} ../images/Pref2020_General.png
+:alt: Tercihler > Genel
+```
+
 **Ünite**
 
 - Kullanımınıza bağlı olarak birimleri mmol/l veya mg/dl olarak ayarlayın.
@@ -44,9 +48,6 @@
 
 - Sistem dlinden farklı bir dil kullanıyorsanız bazen dilin karıştığını görebilirsiniz. Bunun nedeni, varsayılan Android dilini geçersiz kılmanın bazen çalışmadığı bir Android sorunudur.
 
-  ```{image} ../images/Pref2020_General.png
-  :alt: Tercihler > Genel
-  ```
 
 **Hasta Adı**
 
@@ -56,9 +57,14 @@
 ### Güvenlik
 
 (Preferences-master-password)=
+
+```{image} ../images/Pref2020_General2.png
+:alt: Preferences > General - Protection
+```
+
 #### Ana parola
 
-- 2.7 sürümünden itibaren şifrelenmiş oldukları için [ayarları dışa aktarabilmek](../Usage/ExportImportSettings.md) için gereklidir. **Biyometrik koruma, OnePlus telefonlarda çalışmayabilir. Bu bazı OnePlus telefonlarında bilinen bir sorunudur.**
+- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted from version 2.7. **Biyometrik koruma, OnePlus telefonlarda çalışmayabilir. Bu bazı OnePlus telefonlarında bilinen bir sorunudur.**
 
 - Tercihleri Açın (ana ekranın sağ üst köşesindeki üç noktalı menü)
 
@@ -105,7 +111,7 @@
 - Dört çeşit görünüm arasından seçim yapabilirsiniz:
 
   ```{image} ../images/Pref2021_SkinWExample.png
-  :alt: Görünüm seçimi + örnekler
+  :alt: Select skin
   ```
 
 - 'Düşük çözünürlüklü görünüm', düşük çözünürlüklü ekranda daha fazla kullanılabilir alana sahip olmak için daha kısa etiket ve yaş/seviye satırı kaldırılmış olarak gelir.
@@ -146,10 +152,18 @@
 
 - Ana ekranınızın altında hangi butonların görüneceğini tanımlayın.
 
+  ```{image} ../images/Pref2020_OV_Buttons.png
+  :alt: Preferences > Buttons
+  ```
+
 - Karbonhidrat ve insülin diyalogundaki üç artış butonu ile kolay giriş için miktar tanımlayabilirsiniz.
 
-  ```{image} ../images/Pref2020_OV_Buttons.png
-  :alt: Tercihler > Butonlar
+  ```{image} ../images/Pref2020_OV_Buttons2.png
+  :alt: Preferences > Buttons > Insulin
+  ```
+
+  ```{image} ../images/Pref2020_OV_Buttons3.png
+  :alt: Preferences > Buttons > Carbs
   ```
 
 (Preferences-quick-wizard)=
@@ -159,11 +173,15 @@
 
 - Oluştururken, butonun ana ekranınızda günün hangi saatlerinde görüneceğini belirleyebilirsiniz. - her periyot için bir buton görünür.
 
+  ```{image} ../images/Pref2020_OV_QuickWizard.png
+  :alt: Preferences > Quick Wizard Button Setup
+  ```
+
 - Hızlı sihirbaz düğmesini tıklarsanız AAPS, mevcut ayarlarınıza göre girdiğiniz karbonhidrat için bir bolus hesaplar ve önerir (ayarlanmışsa kan şekeri değerini veya aktif insülini de dikkate alarak).
 
 - İnsülin verilmeden önce önerinin onaylanması gerekir.
 
-  ```{image} ../images/Pref2020_OV_QuickWizard.png
+  ```{image} ../images/Pref2020_OV_QuickWizard2.png
   :alt: Tercihler > Hızlı Asistan Butonu
   ```
 
@@ -174,11 +192,17 @@
 
 - Varsayılan GH ayarı ile aktivite, yakında öğün vb. butonlar için hedefinizi kolayca değiştirebilirsiniz.
 
-- Hedefinizi, ana ekranın sağ üst köşesindeki hedefinize uzun basarak veya alttaki turuncu “Karbonhidrat” düğmesindeki kısayolları kullanarak değiştirebilirsiniz.
-
   ```{image} ../images/Pref2020_OV_DefaultTT.png
   :alt: Tercihler > Varsayılan geçici hedefler
   ```
+
+- Hedefinizi, ana ekranın sağ üst köşesindeki hedefinize uzun basarak veya alttaki turuncu “Karbonhidrat” düğmesindeki kısayolları kullanarak değiştirebilirsiniz.
+
+  ```{image} ../images/Pref2020_OV_DefaultTT2.png
+  :alt: Preferences > Use default temp targets
+  ```
+
+###
 
 ### Standart insülin miktarlarını Hazırla/Doldur
 
@@ -239,28 +263,8 @@
 ### Gelişmiş ayarlar
 
 ```{image} ../images/Pref2021_OV_Adv.png
-:alt: Tercihler > Durum Işıkları
+:alt: Preferences > Advanced Settings
 ```
-
-#### Bolus sihirbazı sonucunun bu kadarını ilet
-
-- Bolus sihirbazı sonucunun yalnızca bir kısmını iletmek için genel ayar.
-- Bolus sihirbazı kullanılırken hesaplanan bolusun yalnızca ayarlanan yüzdesi (10 ile 100 arasında olmalıdır) iletilir.
-- Yüzde, bolus sihirbazında gösterilir.
-
-#### Bolus danışmanı
-
-- [Bolus sihirbazını](Screenshots-bolus-wizard) çalıştırırsanız ve glikoz değeriniz 10 mmol'ün (180 mg/dl) üzerindeyse, bir düzeltme bolusu sunulur.
-
-- Düzeltme bolusu kabul edilirse **hiç karbonhidrat** kaydedilmez.
-
-- Yemeğe başlamak için glikoz değeri iyi seviyede olduğunda bir alarm başlatılacaktır.
-
-- Tekrar [Bolus sihirbazına](Screenshots-bolus-wizard) girmeniz ve yemek istediğiniz karbonhidrat miktarını girmeniz gerekir.
-
-  ```{image} ../images/Home2021_BolusWizard_CorrectionOffer.png
-  :alt: Bolus danışmanı mesajı
-  ```
 
 (Preferences-superbolus)=
 #### Süperbolus
@@ -280,14 +284,14 @@
 ### Maks izin verilen bolus \[Ü\]
 
 - AAPS'in bolus olarak bir kerede iletmesine izin verilen maksimum insülin miktarını tanımlar.
-- Bu ayar, yanlış giriş veya kullanıcı hatası nedeniyle büyük miktarda bolus verilmesini önlemek için bir güvenlik sınırıdır.
+- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
 - Bunu, bir öğün veya düzeltme dozu için ihtiyaç duyabileceğiniz maksimum bolus insülin dozuna karşılık gelen makul bir miktara ayarlamanız önerilir.
 - Bu kısıtlama, bolus hesaplayıcısına da uygulanır.
 
 ### Maks izin verilen karbonhidrat \[g\]
 
 - AAPS bolus hesaplayıcısının dozlamasına izin verilen maksimum karbonhidrat miktarını tanımlar.
-- Bu ayar, yanlış giriş veya kullanıcı hatası nedeniyle büyük miktarda bolus verilmesini önlemek için bir güvenlik sınırıdır.
+- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
 - Bunu, bir yemek için ihtiyaç duyabileceğiniz maksimum karbonhidrat miktarına kabaca karşılık gelen makul bir miktara ayarlamanız önerilir.
 
 ## Döngü
