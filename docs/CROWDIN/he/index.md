@@ -253,6 +253,7 @@ Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
 
 Sandbox <./Sandbox/sandbox1.md>
 Crowdin Test <./Sandbox/crowdintest.md>
+Image Scaling <./Sandbox/imagescaling.md>
 
 ```
 
