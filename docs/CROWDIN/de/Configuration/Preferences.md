@@ -32,6 +32,10 @@
 (Preferences-general)=
 ## Allgemein
 
+```{image} ../images/Pref2020_General.png
+:alt: Einstellungen > Allgemein
+```
+
 **Einheiten**
 
 - Stelle die Einheiten auf mmol/l oder mg/dl je nach deiner Vorliebe ein.
@@ -44,9 +48,6 @@
 
 - Falls sich die Systemsprache deines Smartphones und die ausgewählte Sprache für AAPS unterscheiden, kann dies manchmal zu einem Sprachmix führen. Dies ist auf ein Android-Problem zurückzuführen, sodass das Überschreiben der Standardsprache einer App manchmal nicht korrekt funktioniert.
 
-  ```{image} ../images/Pref2020_General.png
-  :alt: Einstellungen > Allgemein
-  ```
 
 **Name des Patienten**
 
@@ -56,9 +57,14 @@
 ### Schutz
 
 (Preferences-master-password)=
+
+```{image} ../images/Pref2020_General2.png
+:alt: Preferences > General - Protection
+```
+
 #### Master-Passwort
 
-- Die [exportierten Einstellungen](../Usage/ExportImportSettings.md) sind ab Version 2.7 verschlüsselt. **Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus auf einigen Telefonen.**
+- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted from version 2.7. **Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus auf einigen Telefonen.**
 
 - Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 
@@ -105,7 +111,7 @@
 - Du kannst zwischen vier Darstellungsarten wählen:
 
   ```{image} ../images/Pref2021_SkinWExample.png
-  :alt: Auswahl der Darstellungsart + Beispiel Unterschied niedrige Auflösung
+  :alt: Select skin
   ```
 
 - * Bei der 'Darstellung für niedrige Auflösungen' werden die Beschriftungen kürzer dargestellt und im Careportal einige Angaben entfernt, um auf Bildschirmen mit sehr niedriger Auflösung mehr Platz zu gewinnen.
@@ -146,10 +152,18 @@
 
 - Lege fest welche Schaltflächen am unteren Rand des Homescreens sichtbar sind.
 
+  ```{image} ../images/Pref2020_OV_Buttons.png
+  :alt: Preferences > Buttons
+  ```
+
 - Mit den Erhöhungszahlen kannst du die Schrittweiten definieren, die in den KH- und Insulin-Dialogen benutzt werden und so die dortigen Eingaben vereinfachen.
 
-  ```{image} ../images/Pref2020_OV_Buttons.png
-  :alt: Einstellungen > Buttons
+  ```{image} ../images/Pref2020_OV_Buttons2.png
+  :alt: Preferences > Buttons > Insulin
+  ```
+
+  ```{image} ../images/Pref2020_OV_Buttons3.png
+  :alt: Preferences > Buttons > Carbs
   ```
 
 (Preferences-quick-wizard)=
@@ -159,11 +173,15 @@
 
 - In der Konfiguration legst du fest, in welchem Zeitraum die Schaltfläche auf dem Homescreen zu sehen sein soll. Es ist nur eine Schaltfläche pro Zeitraum möglich.
 
+  ```{image} ../images/Pref2020_OV_QuickWizard.png
+  :alt: Preferences > Quick Wizard Button Setup
+  ```
+
 - Wenn du auf den QuickWizard-Button klickst, berechnet AAPS für diese Kohlenhydrate einen Bolus basierend auf Deinen aktuellen Faktoren (unter Berücksichtigung des Blutzuckerwertes oder des Insulins an Bord, wenn eingerichtet) und schlägt diesen vor.
 
 - Der Vorschlag muss bestätigt werden, bevor Insulin abgegeben wird.
 
-  ```{image} ../images/Pref2020_OV_QuickWizard.png
+  ```{image} ../images/Pref2020_OV_QuickWizard2.png
   :alt: Einstellungen > Quick Wizard Button
   ```
 
@@ -174,11 +192,17 @@
 
 - Mit dem Setzen von Standard-TT kannst Du Dein Ziel für Aktivität, Bald essen, usw. einfach verändern.
 
-- Drücke lange auf deinen Zielwert in der oberen rechten Ecke auf dem Home-Bildschirm oder verwende die Shortcuts im orange "Kohlenhydrate" (Carbs)-Button am unteren Rand.
-
   ```{image} ../images/Pref2020_OV_DefaultTT.png
   :alt: "Einstellungen > Vordefinierte temporäre Ziele"
   ```
+
+- Drücke lange auf deinen Zielwert in der oberen rechten Ecke auf dem Home-Bildschirm oder verwende die Shortcuts im orange "Kohlenhydrate" (Carbs)-Button am unteren Rand.
+
+  ```{image} ../images/Pref2020_OV_DefaultTT2.png
+  :alt: Preferences > Use default temp targets
+  ```
+
+###
 
 ### Füll-/Vorfüll-Standardmengen
 
@@ -239,28 +263,8 @@
 ### Erweiterte Einstellungen (Übersicht)
 
 ```{image} ../images/Pref2021_OV_Adv.png
-:alt: Einstellungen > Status Lights
+:alt: Preferences > Advanced Settings
 ```
-
-#### Abgabe nur eines Teils der vom Bolus-Rechner ermittelten Insulinmenge
-
-- Systemweite Einstellung, dass nur ein Teil des im Bolus Kalkulator berechneten Insulins abgegeben wird.
-- Nur der eingestellte prozentuale Anteil (muss zwischen 10 und 100 liegen) wird abgegeben.
-- Der Prozentsatz wird auch im Bolus Kalkulator angezeigt.
-
-#### Bolus-Berater
-
-- Wenn Du den [Bolus-Rechner](Screenshots-bolus-wizard) nutzt und Dein Glukosewert über 180 mg/dl (10 mmol) liegt, wird ein Korrekturbolus vorgeschlagen.
-
-- Wenn Du den Vorschlag akzeptierst, werden **keine Kohlenhydrate** aufgezeichnet.
-
-- Wenn den Glukosewert auf einem guten Level für das Essen liegt, wirst Du benachrichtigt.
-
-- Du musst erneut den [Bolus-Rechner](Screenshots-bolus-wizard) aufrufen und die Menge der Kohlenhydrate, die Du essen möchtest, eingeben.
-
-  ```{image} ../images/Home2021_BolusWizard_CorrectionOffer.png
-  :alt: Nachricht des Bolus-Beraters
-  ```
 
 (Preferences-superbolus)=
 #### Superbolus
@@ -280,14 +284,14 @@
 ### Maximal erlaubter Bolus \[U\]
 
 - Definiert die maximale Menge an Bolusinsulin, die AAPS auf einmal liefern darf.
-- Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhindern.
+- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
 - Es wird empfohlen, das auf eine vernünftige Menge zu setzen, die ungefähr der maximalen Abgabemenge von Bolus Insulin entspricht, das Du für eine Mahlzeitenkorrektur brauchst.
 - Diese Einschränkung gilt auch für die Ergebnisse des Bolus-Rechners.
 
 ### Maximal erlaubte Kohlenhydrate \[g\]
 
 - Dies ist die maximale Menge an Kohlenhydraten, für die der AAPS Bolus-Rechner eine Dosis berechnen darf.
-- Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhindern.
+- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
 - Es wird empfohlen, das auf eine vernünftige Menge zu setzen, die ungefähr der maximalen Menge an Kohlenhydraten entspricht, die du vermutlich jemals für eine Mahlzeit brauchen wirst.
 
 ## Loop
