@@ -245,10 +245,11 @@ FAQ <./Getting-Started/FAQ.md>
 ```
 
 ```{toctree}
-:caption: песочница
+:caption: Sandbox
 
-Песочница <./Sandbox/sandbox1.md>
+Sandbox <./Sandbox/sandbox1.md>
 Crowdin Test <./Sandbox/crowdintest.md>
+Image Scaling <./Sandbox/imagescaling.md>
 
 ```
 
