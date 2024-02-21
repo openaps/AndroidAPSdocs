@@ -32,6 +32,10 @@
 (Preferences-general)=
 ## Bendrieji
 
+```{image} ../images/Pref2020_General.png
+:alt: Preferences > General
+```
+
 **Units**
 
 - Set units to mmol/l or mg/dl depending on your preferences.
@@ -44,9 +48,6 @@
 
 - If you use different languages you might sometimes see a language mix. This is due to an android issue that overriding the default android language sometimes doesn't work.
 
-  ```{image} ../images/Pref2020_General.png
-  :alt: Preferences > General
-  ```
 
 **Patient name**
 
@@ -56,9 +57,14 @@
 ### Protection
 
 (Preferences-master-password)=
+
+```{image} ../images/Pref2020_General2.png
+:alt: Preferences > General - Protection
+```
+
 #### Master password
 
-- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7. **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
+- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted from version 2.7. **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
 
 - Open Preferences (three-dot menu on top right of home screen)
 
@@ -105,7 +111,7 @@
 - You can choose from four types of skins:
 
   ```{image} ../images/Pref2021_SkinWExample.png
-  :alt: Select skin + examples
+  :alt: Select skin
   ```
 
 - 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
@@ -146,10 +152,18 @@
 
 - Define which buttons are visible on the bottom of your home screen.
 
-- With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
-
   ```{image} ../images/Pref2020_OV_Buttons.png
   :alt: Preferences > Buttons
+  ```
+
+- With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
+
+  ```{image} ../images/Pref2020_OV_Buttons2.png
+  :alt: Preferences > Buttons > Insulin
+  ```
+
+  ```{image} ../images/Pref2020_OV_Buttons3.png
+  :alt: Preferences > Buttons > Carbs
   ```
 
 (Preferences-quick-wizard)=
@@ -159,11 +173,15 @@
 
 - In setup you define during which time period the button will be visible on your home screen - just one button per period.
 
+  ```{image} ../images/Pref2020_OV_QuickWizard.png
+  :alt: Preferences > Quick Wizard Button Setup
+  ```
+
 - If you click the quick wizard button AAPS will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
 
 - The proposal has to be confirmed before insulin is delivered.
 
-  ```{image} ../images/Pref2020_OV_QuickWizard.png
+  ```{image} ../images/Pref2020_OV_QuickWizard2.png
   :alt: Preferences > Quick Wizard Button
   ```
 
@@ -174,11 +192,17 @@
 
 - With setting of default TT you can easily change your target for activity, eating soon etc.
 
-- Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
-
   ```{image} ../images/Pref2020_OV_DefaultTT.png
   :alt: Preferences > Default temp targets
   ```
+
+- Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
+
+  ```{image} ../images/Pref2020_OV_DefaultTT2.png
+  :alt: Preferences > Use default temp targets
+  ```
+
+###
 
 ### Standartiniai insulino kiekiai kateterio/kaniulės užpildymui
 
@@ -239,28 +263,8 @@
 ### Advanced Settings (Overview)
 
 ```{image} ../images/Pref2021_OV_Adv.png
-:alt: Preferences > Status Lights
+:alt: Preferences > Advanced Settings
 ```
-
-#### Deliver this part of bolus wizard result
-
-- General setting to deliver only part of bolus wizard result.
-- Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard.
-- The percentage is shown in bolus wizard.
-
-#### Bolus advisor
-
-- If you run [Bolus wizard](Screenshots-bolus-wizard) and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
-
-- If correction bolus is accepted **no carbs** will be recorded.
-
-- An alarm will be started when glucose value is in good level to start eating.
-
-- You have to enter [Bolus wizard](Screenshots-bolus-wizard) again and enter the amount of carbs you want to eat.
-
-  ```{image} ../images/Home2021_BolusWizard_CorrectionOffer.png
-  :alt: Bolus advisor message
-  ```
 
 (Preferences-superbolus)=
 #### Superbolus
