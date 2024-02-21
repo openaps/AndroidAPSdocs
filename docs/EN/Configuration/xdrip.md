@@ -225,7 +225,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 
 - Scan Bluetooth and connect the bridge.
 
-  → Hamburger Menu (1) → Scan Bluetooth (2) → Less common settings (3) → Bluetooth Settings (4)
+  → Hamburger Menu (1) → Scan Bluetooth (2) → Scan (3)
 
   - If xDrip+ can't find the bridge, make sure it's not connected to the vendor app. Put it in charge and reset it.
 
