@@ -1,51 +1,51 @@
-# Completing the Objectives
+# Прохождение целей
 
-**AAPS** has a series of **objectives** that you need to complete to progress from basic open looping to hybrid closed looping and full **AAPS** functionality. Completing the **objectives** ensures:
+**AAPS** имеет ряд **целей**, которые необходимо выполнить, чтобы перейти от базового открытого цикла к гибридному закрытому циклу и полной функциональности **AAPS**. Выполнение **целей** удостоверяет:
 
-- You have configured everything correctly in your **AAPS** setup
-- You have learned about the essential features of **AAPS**
-- You have a basic understanding of what your system is doing, and therefore why you can trust it.
+- Что вы всё правильно настроили в **AAPS**
+- Вы изучили основной функционал **AAPS**
+- У вас есть базовое понимание того, что делает ваша система, и, следовательно, почему вы можете ей доверять.
 
-:::{admonition} Note
+:::{admonition} Примечание
 
-Regularly export your **AAPS** settings after completing each **objective**!
+Регулярно делайте экспорт настроек **AAPS** после выполнения каждой **цели**!
 :::
 
-We strongly recommend that you  [export your settings](../Usage/ExportImportSettings.md) after completing each **objective**. This exporting process creates a **settings** (.json) file which you should keep backed-up in one or more safe places (_e.g._ Google Drive, hard disk, email attachment _etc._). This ensures that you keep your progress through the **objectives**, and if you accidentally delete your progress, you can simply re-load it by importing a recent settings file. Having a backup **settings** file is also required if you want to change your **AAPS** smartphone for any reason (upgrading/lost/broken phone _etc._)
+Настоятельно рекомендуем [экспортировать настройки](../Usage/ExportImportSettings.md) после завершения каждой **цели**. В процессе экспорта создается файл **настроек** (.json), резервную копию которого следует сохранить в одном или нескольких безопасных местах (_например, Google Drive, жёсткий диск, вложение к электронной почте _и т. д._). Это гарантирует сохранение прогресса в достижении **целей**, возможность легко восстановить его в случае случайного удаления, при помощи импорта последнего файла настроек. Наличие резервной копии файла **настроек** также пригодится, если вы хотите сменить смартфон **AAPS** по какой-либо причине (обновление/потеря/сломанный телефон _и т. д._)
 
-The **settings** file will save not only your progress through the objectives, but also your own customised **AAPS** settings such as **max bolus** _etc._
+В файле **settings** будет сохраняться не только ваш прогресс в выполнении целей обучения, но и ваши собственные настройки **AAPS**, такие как **максимальный болюс** _и т. д._
 
-If you do not have a backup copy of your **settings**, if anything happens to your **AAPS** smartphone you will need to start the **objectives** from the beginning again.
+Если у вас не будет резервной копии **настроек**, и если что-нибудь случится со смартфоном **AAPS**, вам придется проходить **цели обучения** с самого начала.
 
-Overall the **objectives** take around 6 weeks to complete (see [how long will it take?](preparing-how-long-will-it-take?) for a detailed breakdown) from configuring **AAPS** on your smartphone to "basic" hybrid closed looping (from objective 1 to objective 8), so, although you _can_ proceed up to **objective 5** using a **virtual pump** (and using some other method of insulin delivery in the meantime), having to re-complete all the **objectives** because for example, you lost your smartphone, is still something you really want to avoid.
+В целом, выполнение **целей обучения** занимает около 6 недель (подробнее см. [сколько времени это может занять?](preparing-how-long-will-it-take?)) от настройки **AAPS** на смартфоне до "базового" гибридного замкнутого цикла (от цели 1 до цели 8), поэтому, хотя к **цели 5** и можно перейти, используя **виртуальную помпу** (при этом вводя инсулин каким-то другим методом), никому не хочется заново проходить все **цели** из-за потери или поломки телефона.
 
-As well as progressing through the **objectives**, if you want, you can also remove your progress and [go back to an earlier objective](Objectives-go-back-in-objectives).
+Помимо прохождения **целей обучения**, свое продвижение можно удалить и [вернуться к предыдущей цели](Objectives-go-back-in-objectives).
 
 ## Цель 1: Настройка визуализации и мониторинга, анализ базальной скорости и коэффициентов
 
-- **AAPS** checks if your basic technical setup is working.
+- **AAPS** проверяет, работает ли ваши базовые настройки.
 
-If not you have to reconfigure until the basic technical setup works for **AAPS**.
+В противном случае вам придется перенастраивать до тех пор, пока базовая настройка не будет работать корректно для **AAPS**.
 
-- Select the correct CGMS/FGMS in [Config Builder](../Configuration/Config-Builder.md).  See [BG Source](../Configuration/BG-Source.md) for more information.
-- Select the correct Pump in [Config Builder](../Configuration/Config-Builder.md) to ensure your pump can communicate with AAPS. Select **virtual pump** if you are using a pump model with no **AAPS** driver for looping, or if you want to work through the early **objectives** while using another system for insulin delivery. See [insulin pump](../Getting-Started/Pump-Choices.md) for more information.
-- Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure **Nightscout** can receive and display this data.
+- Выберите правильный источник данных ГК CGMS/FGMS в [Конфигураторе](../Configuration/Config-Builder.md).  См. [источник СК](../Configuration/BG-Source.md) для дополнительной информации.
+- Выберите помпу в [Конфигураторе](../Configuration/Config-Builder.md) и обеспечьте связь помпы с AAPS. Выберите **виртуальную помпу**, если используете помпу, работа которой не поддерживается в **AAPS** или если хотите пройти **цели обучения** заранее, пока используете другую систему введения инсулина. Дополнительную информацию см. в разделе [инсулиновая помпа](../Getting-Started/Pump-Choices.md).
+- Следуйте инструкциям на странице [Nightscout](../Installing-AndroidAPS/Nightscout.md), чтобы убедиться, что **Nightscout** может получать и отображать данные.
 - Note that URL in **NSClient** must be **_without_ "/api/v1/"** at the end - see [NSClient settings in Preferences](Preferences-nsclient).
 
-Note - _You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognise it._
+Возможно, потребуется дождаться следующего значения ГК, прежде чем AAPS распознает его и примет в обработку.\*
 
 ## Цель 2: Научитесь контролировать AAPS
 
-- Perform several actions in **AAPS** as described in this **objective**.
+- Выполните следующие шаги в **AAPS**, как описано в этой **цели**.
 - Нажмите на оранжевый текст «Не завершено» для доступа к каждому заданию.
-- Links will be provided to guide you, in case you are not familiar with a specific action yet.
+- Если вы еще не знаете как выполнить действие, вам будут предоставлены ссылки на инструкции.
 
   ```{image} ../images/Objective2_V2_5.png
   :alt: снимок экрана Цель 2
   ```
-- Tasks to complete **Objective 2** are:
-  - Set your profile to 90% for a duration of 10 min (_Hint_: Long press your profile name on the OVERVIEW screen) (_Note_: AAPS does not accept basal rates below 0.05U/hr. If your profile includes any rates 0.06U/hr or lower you will need to create a new profile with higher basal rates before completing this task. Switch back to your normal profile after completing this task.)
-  - Simulate "taking a shower" by disconnecting your pump in **AAPS** for a duration of 1h (_Hint_: press the loop icon on the OVERVIEW screen to open the Loop dialogue)
+- Задачи для выполнения **Цели 2**:
+  - Установите свой профиль в 90% на 10 минут (_Подсказка_: нажмите и удерживайте на имени своего профиля на экране НАЧАЛО) (_Примечание_: AAPS не принимает базальные дозы ниже 0,05 ЕД/ч. Если ваш профиль содержит базальные дозы 0,06 ЕД/ч или ниже, вам потребуется создать новый профиль с более высокими базальными дозами, прежде чем выполнять эту задачу. Вернитесь к своему обычному профилю после выполнения этого задания.)
+  - Симитируйте «принятие душа», отключив помпу в **AAPS** на 1 час (_Подсказка_: нажмите значок петли на экране НАЧАЛО, чтобы открыть диалоговое окно «Цикл»)
   - End "taking a shower" by reconnecting your pump (_Hint_: press the "disconnected"-icon to open the loop dialog)
   - Create a custom temporary target with a duration of 10 min (_Hint_: press the target bar on the OVERVIEW screen to bring up the temporary target dialog)
   - Activate the **ACTIONS** plugin in **CONFIG BUILDER** to make it appear on the top scrollable menu bar (_Hint_: Go to **CONFIG BUILDER** and scroll down to 'General")

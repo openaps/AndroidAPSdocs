@@ -333,6 +333,11 @@
 
 ## Устранение неполадок
 
+### Connection issues
+
+If you are experiencing connection timeouts or other connection issues:
+- In Android application settings for AAPS: Set location permission to "Allow all the time".
+
 ### Активация прервана
 
 Если активация прервана, например, из-за низкого заряда батареи телефона или поломки телефона. Процесс активации может быть возобновлен если перейти на экран замены патча и следовать шагам, изложенным здесь: [Возобновление прерванной активации](#resume-interrupted-activation)

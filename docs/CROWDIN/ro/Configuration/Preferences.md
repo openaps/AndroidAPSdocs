@@ -32,6 +32,10 @@
 (Preferences-general)=
 ## General
 
+```{image} ../images/Pref2020_General.png
+:alt: Preferences > General
+```
+
 **Units**
 
 - Set units to mmol/l or mg/dl depending on your preferences.
@@ -44,9 +48,6 @@
 
 - If you use different languages you might sometimes see a language mix. This is due to an android issue that overriding the default android language sometimes doesn't work.
 
-  ```{image} ../images/Pref2020_General.png
-  :alt: Preferences > General
-  ```
 
 **Patient name**
 
@@ -56,9 +57,14 @@
 ### Protecţie
 
 (Preferences-master-password)=
+
+```{image} ../images/Pref2020_General2.png
+:alt: Preferences > General - Protection
+```
+
 #### Parola principală
 
-- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7. **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
+- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted from version 2.7. **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
 
 - Open Preferences (three-dot menu on top right of home screen)
 
@@ -105,7 +111,7 @@
 - You can choose from four types of skins:
 
   ```{image} ../images/Pref2021_SkinWExample.png
-  :alt: Selecție fundal + exemple
+  :alt: Select skin
   ```
 
 - 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
@@ -146,10 +152,18 @@
 
 - Define which buttons are visible on the bottom of your home screen.
 
-- With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
-
   ```{image} ../images/Pref2020_OV_Buttons.png
   :alt: Preferences > Buttons
+  ```
+
+- With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
+
+  ```{image} ../images/Pref2020_OV_Buttons2.png
+  :alt: Preferences > Buttons > Insulin
+  ```
+
+  ```{image} ../images/Pref2020_OV_Buttons3.png
+  :alt: Preferences > Buttons > Carbs
   ```
 
 (Preferences-quick-wizard)=
@@ -159,11 +173,15 @@
 
 - In setup you define during which time period the button will be visible on your home screen - just one button per period.
 
+  ```{image} ../images/Pref2020_OV_QuickWizard.png
+  :alt: Preferences > Quick Wizard Button Setup
+  ```
+
 - If you click the quick wizard button AAPS will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
 
 - The proposal has to be confirmed before insulin is delivered.
 
-  ```{image} ../images/Pref2020_OV_QuickWizard.png
+  ```{image} ../images/Pref2020_OV_QuickWizard2.png
   :alt: Preferences > Quick Wizard Button
   ```
 
@@ -174,11 +192,17 @@
 
 - With setting of default TT you can easily change your target for activity, eating soon etc.
 
-- Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
-
   ```{image} ../images/Pref2020_OV_DefaultTT.png
   :alt: Preferences > Default temp targets
   ```
+
+- Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
+
+  ```{image} ../images/Pref2020_OV_DefaultTT2.png
+  :alt: Preferences > Use default temp targets
+  ```
+
+###
 
 ### Umplere/Amorsare - cantități standard de insulină
 
@@ -239,28 +263,8 @@
 ### Setări avansate (Privire generală)
 
 ```{image} ../images/Pref2021_OV_Adv.png
-:alt: Preferences > Status Lights
+:alt: Preferences > Advanced Settings
 ```
-
-#### Livreaza doar aceasta partea din cantitatea calculata de asistent
-
-- General setting to deliver only part of bolus wizard result.
-- Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard.
-- The percentage is shown in bolus wizard.
-
-#### Consilier bolus
-
-- If you run [Bolus wizard](Screenshots-bolus-wizard) and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
-
-- If correction bolus is accepted **no carbs** will be recorded.
-
-- An alarm will be started when glucose value is in good level to start eating.
-
-- You have to enter [Bolus wizard](Screenshots-bolus-wizard) again and enter the amount of carbs you want to eat.
-
-  ```{image} ../images/Home2021_BolusWizard_CorrectionOffer.png
-  :alt: mesaj consilier bolus
-  ```
 
 (Preferences-superbolus)=
 #### Superbolus
@@ -460,12 +464,51 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 :alt: NSClient
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yourwebsitename.herokuapp.com>) and the *API secret* (a 12 character password recorded in your Heroku variables).
+Original communication protocol, can be used with older Nightscout versions.
+
+- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
+  - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
+- The *[API secret](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)* (a 12 character password recorded in your Nightscout variables).
 - This enables data to be read and written between both the Nightscout website and AAPS.
 - Double check for typos here if you are stuck in Objective 1.
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS).
-- If activated changes in [local profile](Config-Builder-local-profile) are uploaded to your Nightscout site.
+
+## NSClientV3
+
+```{image} ../images/Pref2024_NSClientV3.png
+:alt: NSClientV3
+```
+
+[New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
+
+:::{admonition} V3 data uploaders
+:class: warning When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.  
+:::
+
+- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
+  - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
+- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in **NS access token** (not your API Secret!).
+- This enables data to be read and written between both the Nightscout website and AAPS.
+- Double check for typos here if you are stuck in Objective 1.
+- Leave Connect to websockets enabled (recommended).
+
+### Synchronization
+
+Synchronization choices will depend on the way you will want to use AAPS.
+
+You can select which data you want to [upload and download to or from Nightscout](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
+
+### Opțiuni alarmare
+
+```{image} ../images/Pref2024_NSClient_Alarms.png
+:alt: Alarm options
+```
+
+- Alarm options allows you to select which Nightscout alarms to use through the app. AAPS will alarm when a Nightscout alarms trigger.
+  - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+  - They will only work whilst you have a connection to Nightscout and are intended for parent/caregivers.
+  - If you have the CGM source on your phone (i.e. xDrip+ or BYODA) then use those alarms instead of Nightscout Alarms.
+- Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the AAPS notifications bar.
+- You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
 
 ### Setări conexiune
 
@@ -473,32 +516,20 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 :alt: NSClient setări de conexiune
 ```
 
+- Connection settings define when Nightscout connection will be enabled.
 - Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
 - If you want to use only a specific WiFi network you can enter its WiFi SSID.
 - Multiple SSIDs can be separated by semicolon.
 - To delete all SSIDs enter a blank space in the field.
 
-### Opțiuni alarmare
-
-- Alarm options allows you to select which default Nightscout alarms to use through the app.
-- For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Heroku variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- They will only work whilst you have a connection to Nightscout and are intended for parent/carers.
-- If you have the CGM source on your phone (i.e. xDrip+ or BYODA \[Build your own dexcom app\]) then use those alarms instead.
-
 (Preferences-advanced-settings-nsclient)=
 ### Setări avansate (NSClient)
 
-```{image} ../images/Pref2020_NSClientAdv.png
+```{image} ../images/Pref2024_NSClientAdv.png
 :alt: Setări avansate NS Client
 ```
 
-- Most options in advanced settings are self-explanatory.
-
-- *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+.
-
-  - You need to [go through AAPS](Config-Builder-bg-source) and enable local broadcast in AAPS to use xDrip+ alarms.
-
-- *Always use basal absolute values* must be activated if you want to use Autotune properly. See [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) for more details on Autotune.
+Options in advanced settings are self-explanatory.
 
 ## Comunicator SMS
 

@@ -32,6 +32,10 @@
 (Preferences-general)=
 ## Общие настройки
 
+```{image} ../images/Pref2020_General.png
+:alt: Настройки > Общие
+```
+
 **Единицы**
 
 - В зависимости от предпочтений установите единицы mmol/l или mg/dl.
@@ -44,9 +48,6 @@
 
 - Если вы используете в AAPS язык, отличный от системного, то иногда будете видеть кашу из языков. Это связано с тем, что иногда на телефонах с Android не удается переопределить используемый по умолчанию язык в приложении.
 
-  ```{image} ../images/Pref2020_General.png
-  :alt: Настройки > Общие
-  ```
 
 **Имя пациента**
 
@@ -56,9 +57,14 @@
 ### Защита
 
 (Preferences-master-password)=
+
+```{image} ../images/Pref2020_General2.png
+:alt: Preferences > General - Protection
+```
+
 #### Главный пароль
 
-- Необходим для [экспорта настроек](../Usage/ExportImportSettings.md), т. к. они шифруются начиная с версии 2.7. **Защита биометрией (отпечаток пальца, распознавание лица) может не работать на некоторых телефонах OnePlus. Это известная проблема телефонов OnePlus.**
+- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted from version 2.7. **Защита биометрией (отпечаток пальца, распознавание лица) может не работать на некоторых телефонах OnePlus. Это известная проблема телефонов OnePlus.**
 
 - Откройте настройки (трехточечное меню в правом верхнем углу начального экрана)
 
@@ -105,7 +111,7 @@
 - Можно выбрать одну из четырех тем оформления:
 
   ```{image} ../images/Pref2021_SkinWExample.png
-  :alt: Выбор оформления + примеры
+  :alt: Select skin
   ```
 
 - 'Тема оформления в низком разрешении' содержит укороченные подписи и не показывает возраст сенсора, катетера /уровень инсулина, чтобы освободить больше места на экране с низким разрешением.
@@ -146,10 +152,18 @@
 
 - Определите, какие кнопки будут видны в нижней части главного экрана.
 
+  ```{image} ../images/Pref2020_OV_Buttons.png
+  :alt: Preferences > Buttons
+  ```
+
 - Для простоты ввода при помощи величины приращения можно задать параметры трех кнопок в диалоговых окнах инсулина и углеводов.
 
-  ```{image} ../images/Pref2020_OV_Buttons.png
-  :alt: Настройки > Кнопки
+  ```{image} ../images/Pref2020_OV_Buttons2.png
+  :alt: Preferences > Buttons > Insulin
+  ```
+
+  ```{image} ../images/Pref2020_OV_Buttons3.png
+  :alt: Preferences > Buttons > Carbs
   ```
 
 (Preferences-quick-wizard)=
@@ -159,11 +173,15 @@
 
 - При настройке вы можете определить время, в течение которого кнопка будет видна на главном экране - только одна кнопка в определенный период.
 
+  ```{image} ../images/Pref2020_OV_QuickWizard.png
+  :alt: Preferences > Quick Wizard Button Setup
+  ```
+
 - При нажатии на кнопку быстрого мастера AAPS будет вычислять и предлагать болюс на углеводы, основанный на ваших текущих коэффициентах (с учетом текущего значения ГК, активного инсулина и т. п.).
 
 - Это предложение должно быть подтверждено перед подачей инсулина.
 
-  ```{image} ../images/Pref2020_OV_QuickWizard.png
+  ```{image} ../images/Pref2020_OV_QuickWizard2.png
   :alt: Настройки: > Кнопка Быстрого Мастера
   ```
 
@@ -174,11 +192,17 @@
 
 - При помощи временных целей TT, заданных по умолчанию, можно легко установить цель при нагрузках, предстоящем питании и т. п.
 
-- Выполните долгое нажатие в правом верхнем углу на главном экране или используйте оранжевую кнопку «Углеводы» внизу.
-
   ```{image} ../images/Pref2020_OV_DefaultTT.png
   :alt: Настройки > Временные цели по умолчанию
   ```
+
+- Выполните долгое нажатие в правом верхнем углу на главном экране или используйте оранжевую кнопку «Углеводы» внизу.
+
+  ```{image} ../images/Pref2020_OV_DefaultTT2.png
+  :alt: Preferences > Use default temp targets
+  ```
+
+###
 
 ### Заполнить стандартное количество инсулина
 
@@ -239,28 +263,8 @@
 ### Расширенные настройки (обзор)
 
 ```{image} ../images/Pref2021_OV_Adv.png
-:alt:Настройки > Сигналы состояния
+:alt: Preferences > Advanced Settings
 ```
-
-#### Подать эту часть рекомендации мастера болюса
-
-- Общая настройка для подачи только части инсулина, рекомендованного мастером болюса.
-- При использовании мастера болюса подается только заданный процент (должен быть от 10 до 100) от вычисленного.
-- Этот процент показан в мастере болюса.
-
-#### Мастер болюса
-
-- Если запустить [Мастер Болюса](Screenshots-bolus-wizard) при гликемии выше 10 ммоль (180 мг/дл), то будет предложен болюс на коррекцию.
-
-- Если болюс на коррекцию принят, **углеводы** не записываются.
-
-- Когда ГК в хорошем диапазоне для начала приема пищи, подается сигнал оповещения.
-
-- В этом случае выполняем повторный вход в [Мастер (Калькулятор) Болюса ](Screenshots-bolus-wizard) и вводим величину углеводов, которые собираемся съесть.
-
-  ```{image} ../images/Home2021_BolusWizard_CorrectionOffer.png
-  :alt:Сообщение мастера болюса
-  ```
 
 (Preferences-superbolus)=
 #### Суперболюс
@@ -280,14 +284,14 @@
 ### Максимально разрешённый болюс \[ед.\]
 
 - Максимальное количество болюсного инсулина, разово разрешаемое в AAPS.
-- Эта настройка существует как ограничение безопасности для предотвращения подачи чрезмерного болюса из-за случайного ввода или ошибки пользователя.
+- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
 - Рекомендуется установить это значение как разумный предел, приблизительно соответствующий максимальному количеству болюсного инсулина, который вы когда-либо можете подать на еду или на коррекцию.
 - Это ограничение также налагается на результаты калькулятора болюса.
 
 ### Макс разрешенные углеводы [г.]
 
 - Это максимальное количество углеводов, на которое калькулятор болюса AAPS может подать дозу инсулина.
-- Эта настройка существует как ограничение безопасности для предотвращения подачи чрезмерного болюса из-за случайного ввода или ошибки пользователя.
+- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
 - Рекомендуется установить это значение как разумный предел, приблизительно соответствующий максимальному количеству углеводов, которые вам когда-либо понадобится на еду.
 
 ## Замкнутый цикл
@@ -460,12 +464,51 @@
 :alt: Клиент NS
 ```
 
-- Установите адрес и пароль вашего сайта *Nightscout URL* (напр. [https://yourwebsitename.herokuapp. om](https://yourwebsitename.herokuapp.com)и *API секрет* (12-значный пароль который записан в переменных Heroku). (примечание - здесь возможно применение других переменных, в зависимости от провайдера --- прим перев).
+Original communication protocol, can be used with older Nightscout versions.
+
+- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
+  - **Убедитесь, что URL-адрес БЕЗ /api/v1/ в конце.**
+- The *[API secret](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)* (a 12 character password recorded in your Nightscout variables).
 - Это позволит считывать и записывать данные веб-сайту Nightscout и приложению AAPS.
 - Если вы застряли на Цели 1, еще раз проверьте поля с адресом и паролем на наличие опечаток.
-- **Убедитесь, что URL-адрес БЕЗ /api/v1/ в конце.**
-- Опция *Делать запись о старте приложения в Nightscout* заносит отметку в журнале портала терапии каждый раз при запуске приложения.  Приложение не должно запускаться более одного раза в день; если чаще, то возможна проблема (напр. Оптимизация батареи не отключена для AAPS).
-- При активации, изменения в [локальном профиле](Config-Builder-local-profile) загружаются на ваш сайт NS.
+
+## NSClientV3
+
+```{image} ../images/Pref2024_NSClientV3.png
+:alt: NSClientV3
+```
+
+[New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
+
+:::{admonition} V3 data uploaders
+:class: warning When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.  
+:::
+
+- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
+  - **Убедитесь, что URL-адрес БЕЗ /api/v1/ в конце.**
+- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in **NS access token** (not your API Secret!).
+- Это позволит считывать и записывать данные веб-сайту Nightscout и приложению AAPS.
+- Если вы застряли на Цели 1, еще раз проверьте поля с адресом и паролем на наличие опечаток.
+- Leave Connect to websockets enabled (recommended).
+
+### Synchronization
+
+Synchronization choices will depend on the way you will want to use AAPS.
+
+You can select which data you want to [upload and download to or from Nightscout](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
+
+### Опции оповещения
+
+```{image} ../images/Pref2024_NSClient_Alarms.png
+:alt: Alarm options
+```
+
+- Alarm options allows you to select which Nightscout alarms to use through the app. AAPS will alarm when a Nightscout alarms trigger.
+  - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+  - They will only work whilst you have a connection to Nightscout and are intended for parent/caregivers.
+  - If you have the CGM source on your phone (i.e. xDrip+ or BYODA) then use those alarms instead of Nightscout Alarms.
+- Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the AAPS notifications bar.
+- You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
 
 ### Параметры подключения
 
@@ -473,32 +516,20 @@
 :alt: настройки подключения NSClient
 ```
 
+- Connection settings define when Nightscout connection will be enabled.
 - Ограничьте загрузку в Nightscout только через Wi-Fi или даже через Wi-Fi SSID.
 - Если вы хотите использовать только конкретные сети WiFi, в настройках подключения укажите конкретный идентификатор сети WiFi SSID.
 - Несколько идентификаторов SSID разделяются точкой с запятой.
 - Чтобы удалить все SSID оставьте поле пустым.
 
-### Опции оповещения
-
-- Опции звуковых оповещений позволяют выбрать оповещения Nightscout по умолчанию для использования через приложение.
-- Для того, чтобы оповещения работали следует установить Высокий, Низкие и другие срочные значения сигнализации в переменных в [Heroku](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- Они будут работать только во время подключения к Nightscout и предназначены для родителей/опекунов.
-- Если на телефоне есть источник CGM, то можно использовать оповещения с этого источника.
-
 (Preferences-advanced-settings-nsclient)=
 ### Расширенные настройки (Клиент NS)
 
-```{image} ../images/Pref2020_NSClientAdv.png
+```{image} ../images/Pref2024_NSClientAdv.png
 :alt: Дополнительные настройки NS клиента
 ```
 
-- Большинство опций в расширенных настройках самоочевидны.
-
-- *Включить локальные трансляции* передаст данные с портала терапии на другие приложения на телефоне, например xdrip+.
-
-  - Перейдите в [AAPS](Config-Builder-bg-source) и активируйте локальную передачу данных, чтобы пользоваться оповещениями xDrip+.
-
-- Если вы хотите правильно использовать Autotune, то включите опцию *Всегда использовать абсолютные значения базала*. Читайте [ документацию OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) для более подробной информации об Autotune.
+Options in advanced settings are self-explanatory.
 
 ## СМС-коммуникатор
 

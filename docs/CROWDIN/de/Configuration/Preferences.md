@@ -32,6 +32,10 @@
 (Preferences-general)=
 ## Allgemein
 
+```{image} ../images/Pref2020_General.png
+:alt: Einstellungen > Allgemein
+```
+
 **Einheiten**
 
 - Stelle die Einheiten auf mmol/l oder mg/dl je nach deiner Vorliebe ein.
@@ -44,9 +48,6 @@
 
 - Falls sich die Systemsprache deines Smartphones und die ausgewählte Sprache für AAPS unterscheiden, kann dies manchmal zu einem Sprachmix führen. Dies ist auf ein Android-Problem zurückzuführen, sodass das Überschreiben der Standardsprache einer App manchmal nicht korrekt funktioniert.
 
-  ```{image} ../images/Pref2020_General.png
-  :alt: Einstellungen > Allgemein
-  ```
 
 **Name des Patienten**
 
@@ -56,9 +57,14 @@
 ### Schutz
 
 (Preferences-master-password)=
+
+```{image} ../images/Pref2020_General2.png
+:alt: Preferences > General - Protection
+```
+
 #### Master-Passwort
 
-- Die [exportierten Einstellungen](../Usage/ExportImportSettings.md) sind ab Version 2.7 verschlüsselt. **Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus auf einigen Telefonen.**
+- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted from version 2.7. **Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus auf einigen Telefonen.**
 
 - Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 
@@ -105,7 +111,7 @@
 - Du kannst zwischen vier Darstellungsarten wählen:
 
   ```{image} ../images/Pref2021_SkinWExample.png
-  :alt: Auswahl der Darstellungsart + Beispiel Unterschied niedrige Auflösung
+  :alt: Select skin
   ```
 
 - * Bei der 'Darstellung für niedrige Auflösungen' werden die Beschriftungen kürzer dargestellt und im Careportal einige Angaben entfernt, um auf Bildschirmen mit sehr niedriger Auflösung mehr Platz zu gewinnen.
@@ -146,10 +152,18 @@
 
 - Lege fest welche Schaltflächen am unteren Rand des Homescreens sichtbar sind.
 
+  ```{image} ../images/Pref2020_OV_Buttons.png
+  :alt: Preferences > Buttons
+  ```
+
 - Mit den Erhöhungszahlen kannst du die Schrittweiten definieren, die in den KH- und Insulin-Dialogen benutzt werden und so die dortigen Eingaben vereinfachen.
 
-  ```{image} ../images/Pref2020_OV_Buttons.png
-  :alt: Einstellungen > Buttons
+  ```{image} ../images/Pref2020_OV_Buttons2.png
+  :alt: Preferences > Buttons > Insulin
+  ```
+
+  ```{image} ../images/Pref2020_OV_Buttons3.png
+  :alt: Preferences > Buttons > Carbs
   ```
 
 (Preferences-quick-wizard)=
@@ -159,11 +173,15 @@
 
 - In der Konfiguration legst du fest, in welchem Zeitraum die Schaltfläche auf dem Homescreen zu sehen sein soll. Es ist nur eine Schaltfläche pro Zeitraum möglich.
 
+  ```{image} ../images/Pref2020_OV_QuickWizard.png
+  :alt: Preferences > Quick Wizard Button Setup
+  ```
+
 - Wenn du auf den QuickWizard-Button klickst, berechnet AAPS für diese Kohlenhydrate einen Bolus basierend auf Deinen aktuellen Faktoren (unter Berücksichtigung des Blutzuckerwertes oder des Insulins an Bord, wenn eingerichtet) und schlägt diesen vor.
 
 - Der Vorschlag muss bestätigt werden, bevor Insulin abgegeben wird.
 
-  ```{image} ../images/Pref2020_OV_QuickWizard.png
+  ```{image} ../images/Pref2020_OV_QuickWizard2.png
   :alt: Einstellungen > Quick Wizard Button
   ```
 
@@ -174,11 +192,17 @@
 
 - Mit dem Setzen von Standard-TT kannst Du Dein Ziel für Aktivität, Bald essen, usw. einfach verändern.
 
-- Drücke lange auf deinen Zielwert in der oberen rechten Ecke auf dem Home-Bildschirm oder verwende die Shortcuts im orange "Kohlenhydrate" (Carbs)-Button am unteren Rand.
-
   ```{image} ../images/Pref2020_OV_DefaultTT.png
   :alt: "Einstellungen > Vordefinierte temporäre Ziele"
   ```
+
+- Drücke lange auf deinen Zielwert in der oberen rechten Ecke auf dem Home-Bildschirm oder verwende die Shortcuts im orange "Kohlenhydrate" (Carbs)-Button am unteren Rand.
+
+  ```{image} ../images/Pref2020_OV_DefaultTT2.png
+  :alt: Preferences > Use default temp targets
+  ```
+
+###
 
 ### Füll-/Vorfüll-Standardmengen
 
@@ -239,28 +263,8 @@
 ### Erweiterte Einstellungen (Übersicht)
 
 ```{image} ../images/Pref2021_OV_Adv.png
-:alt: Einstellungen > Status Lights
+:alt: Preferences > Advanced Settings
 ```
-
-#### Abgabe nur eines Teils der vom Bolus-Rechner ermittelten Insulinmenge
-
-- Systemweite Einstellung, dass nur ein Teil des im Bolus Kalkulator berechneten Insulins abgegeben wird.
-- Nur der eingestellte prozentuale Anteil (muss zwischen 10 und 100 liegen) wird abgegeben.
-- Der Prozentsatz wird auch im Bolus Kalkulator angezeigt.
-
-#### Bolus-Berater
-
-- Wenn Du den [Bolus-Rechner](Screenshots-bolus-wizard) nutzt und Dein Glukosewert über 180 mg/dl (10 mmol) liegt, wird ein Korrekturbolus vorgeschlagen.
-
-- Wenn Du den Vorschlag akzeptierst, werden **keine Kohlenhydrate** aufgezeichnet.
-
-- Wenn den Glukosewert auf einem guten Level für das Essen liegt, wirst Du benachrichtigt.
-
-- Du musst erneut den [Bolus-Rechner](Screenshots-bolus-wizard) aufrufen und die Menge der Kohlenhydrate, die Du essen möchtest, eingeben.
-
-  ```{image} ../images/Home2021_BolusWizard_CorrectionOffer.png
-  :alt: Nachricht des Bolus-Beraters
-  ```
 
 (Preferences-superbolus)=
 #### Superbolus
@@ -280,14 +284,14 @@
 ### Maximal erlaubter Bolus \[U\]
 
 - Definiert die maximale Menge an Bolusinsulin, die AAPS auf einmal liefern darf.
-- Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhindern.
+- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
 - Es wird empfohlen, das auf eine vernünftige Menge zu setzen, die ungefähr der maximalen Abgabemenge von Bolus Insulin entspricht, das Du für eine Mahlzeitenkorrektur brauchst.
 - Diese Einschränkung gilt auch für die Ergebnisse des Bolus-Rechners.
 
 ### Maximal erlaubte Kohlenhydrate \[g\]
 
 - Dies ist die maximale Menge an Kohlenhydraten, für die der AAPS Bolus-Rechner eine Dosis berechnen darf.
-- Diese Einstellung ist eine Sicherheitsgrenze, um die Abgabe eines massiven Bolus aufgrund einer versehentlichen Eingabe oder eines Benutzerfehlers zu verhindern.
+- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
 - Es wird empfohlen, das auf eine vernünftige Menge zu setzen, die ungefähr der maximalen Menge an Kohlenhydraten entspricht, die du vermutlich jemals für eine Mahlzeit brauchen wirst.
 
 ## Loop
@@ -460,12 +464,51 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 :alt: NSClient
 ```
 
-- Gib Deine *Nightscout URL* (z.B. <https://yourwebsitename.herokuapp.com>) und das *API secret* (ein 12-stelliges Passwort, dass Du in den Variablen bei Heroku definiert hast) ein.
+Original communication protocol, can be used with older Nightscout versions.
+
+- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
+  - **Stelle sicher, dass die URL NICHT mit /api/v1/ endet.**
+- The *[API secret](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)* (a 12 character password recorded in your Nightscout variables).
 - This enables data to be read and written between both the Nightscout website and AAPS.
 - Überprüfe die Eingaben auf Tippfehler, wenn du bei Ziel 1 hängen bleibst.
-- **Stelle sicher, dass die URL NICHT mit /api/v1/ endet.**
-- *Logge App-Start in Nightscout* schreibt jedes Mal, wenn AAPS startet, eine Notiz in Dein Nightscout Careportal.  Die App sollte maximal einmal am Tag neu gestartet werden. Mehrere Einträge am Tag könnten ein Hinweis auf ein Problem sein (z.B.  Akkuoptimierung für AAPS nicht deaktiviert).
-- Falls aktiviert, werden Änderungen Deines [lokalen Profils](Config-Builder-local-profile) zu Nightscout hochgeladen.
+
+## NSClientV3
+
+```{image} ../images/Pref2024_NSClientV3.png
+:alt: NSClientV3
+```
+
+[New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
+
+:::{admonition} V3 data uploaders
+:class: warning When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.  
+:::
+
+- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
+  - **Stelle sicher, dass die URL NICHT mit /api/v1/ endet.**
+- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in **NS access token** (not your API Secret!).
+- This enables data to be read and written between both the Nightscout website and AAPS.
+- Überprüfe die Eingaben auf Tippfehler, wenn du bei Ziel 1 hängen bleibst.
+- Leave Connect to websockets enabled (recommended).
+
+### Synchronization
+
+Synchronization choices will depend on the way you will want to use AAPS.
+
+You can select which data you want to [upload and download to or from Nightscout](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
+
+### Alarm-Optionen
+
+```{image} ../images/Pref2024_NSClient_Alarms.png
+:alt: Alarm options
+```
+
+- Alarm options allows you to select which Nightscout alarms to use through the app. AAPS will alarm when a Nightscout alarms trigger.
+  - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+  - They will only work whilst you have a connection to Nightscout and are intended for parent/caregivers.
+  - If you have the CGM source on your phone (i.e. xDrip+ or BYODA) then use those alarms instead of Nightscout Alarms.
+- Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the AAPS notifications bar.
+- You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
 
 ### Verbindungseinstellungen
 
@@ -473,32 +516,20 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 :alt: NSClient Verbindungseinstellungen
 ```
 
+- Connection settings define when Nightscout connection will be enabled.
 - Beschränken den Nightscout-Upload auf WLAN-Verbindungen oder sogar auf bestimmte WLAN-SSIDs.
 - Wenn Du nur ein bestimmtes WLAN-Netzwerk verwenden möchtest, kannst du dessen WiFi SSID eingeben.
 - Mehrere SSIDs können durch Semikolon (Strichpunkt) getrennt werden.
 - Gib zum Löschen aller SSIDs ein Leerzeichen in das Feld ein.
 
-### Alarm-Optionen
-
-- In den Alarm-Optionen legst Du fest, welche Standard-Nightscout-Alarme in AAPS angezeigt werden sollen.
-- Damit die Alarme ausgelöst werden können, musst Du in den [Heroku Variablen](https://nightscout.github.io/nightscout/setup_variables/#alarms) Werte für Urgent High, High, Low und Urgent Low Alarme setzen.
-- Diese funktionieren nur, wenn Du eine Online-Verbindung mit Nightscout hast und sind vor allem für Eltern und Betreuer gedacht.
-- Wenn Du Deine CGM-Quelle direkt auf dem Smartphone hast (z.B. xDrip+ oder BYODA \[Build your own dexcom app\]) verwende stattdessen die Alarme dieser App.
-
 (Preferences-advanced-settings-nsclient)=
 ### Erweiterte Einstellungen (Nightscout-Client)
 
-```{image} ../images/Pref2020_NSClientAdv.png
+```{image} ../images/Pref2024_NSClientAdv.png
 :alt: NS-Client - erweiterte Einstellungen
 ```
 
-- Die meisten Optionen in den erweiterten Einstellungen sind selbsterklärend.
-
-- *Aktiviere lokale Broadcasts* teilt deine Daten mit anderen Apps auf dem Smartphone (z. B. xDrip+).
-
-  - Du musst [über AAPS gehen](Config-Builder-bg-source) und lokale Broadcast in AAPS aktivieren, um xDrip+ Alarme nutzen zu können.
-
-- *Verwende absolute statt prozentuale Basalwerte beim Upload zu Nightscout.* muss aktiviert werden, wenn Du Autotune einsetzen willst. In der [OpenAPS Dokumentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) findest Du Details zu Autotune.
+Options in advanced settings are self-explanatory.
 
 ## SMS Kommunikator
 

@@ -32,6 +32,10 @@
 (Preferences-general)=
 ## Genel
 
+```{image} ../images/Pref2020_General.png
+:alt: Tercihler > Genel
+```
+
 **Ünite**
 
 - Kullanımınıza bağlı olarak birimleri mmol/l veya mg/dl olarak ayarlayın.
@@ -44,9 +48,6 @@
 
 - Sistem dlinden farklı bir dil kullanıyorsanız bazen dilin karıştığını görebilirsiniz. Bunun nedeni, varsayılan Android dilini geçersiz kılmanın bazen çalışmadığı bir Android sorunudur.
 
-  ```{image} ../images/Pref2020_General.png
-  :alt: Tercihler > Genel
-  ```
 
 **Hasta Adı**
 
@@ -56,9 +57,14 @@
 ### Güvenlik
 
 (Preferences-master-password)=
+
+```{image} ../images/Pref2020_General2.png
+:alt: Preferences > General - Protection
+```
+
 #### Ana parola
 
-- 2.7 sürümünden itibaren şifrelenmiş oldukları için [ayarları dışa aktarabilmek](../Usage/ExportImportSettings.md) için gereklidir. **Biyometrik koruma, OnePlus telefonlarda çalışmayabilir. Bu bazı OnePlus telefonlarında bilinen bir sorunudur.**
+- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted from version 2.7. **Biyometrik koruma, OnePlus telefonlarda çalışmayabilir. Bu bazı OnePlus telefonlarında bilinen bir sorunudur.**
 
 - Tercihleri Açın (ana ekranın sağ üst köşesindeki üç noktalı menü)
 
@@ -105,7 +111,7 @@
 - Dört çeşit görünüm arasından seçim yapabilirsiniz:
 
   ```{image} ../images/Pref2021_SkinWExample.png
-  :alt: Görünüm seçimi + örnekler
+  :alt: Select skin
   ```
 
 - 'Düşük çözünürlüklü görünüm', düşük çözünürlüklü ekranda daha fazla kullanılabilir alana sahip olmak için daha kısa etiket ve yaş/seviye satırı kaldırılmış olarak gelir.
@@ -146,10 +152,18 @@
 
 - Ana ekranınızın altında hangi butonların görüneceğini tanımlayın.
 
+  ```{image} ../images/Pref2020_OV_Buttons.png
+  :alt: Preferences > Buttons
+  ```
+
 - Karbonhidrat ve insülin diyalogundaki üç artış butonu ile kolay giriş için miktar tanımlayabilirsiniz.
 
-  ```{image} ../images/Pref2020_OV_Buttons.png
-  :alt: Tercihler > Butonlar
+  ```{image} ../images/Pref2020_OV_Buttons2.png
+  :alt: Preferences > Buttons > Insulin
+  ```
+
+  ```{image} ../images/Pref2020_OV_Buttons3.png
+  :alt: Preferences > Buttons > Carbs
   ```
 
 (Preferences-quick-wizard)=
@@ -159,11 +173,15 @@
 
 - Oluştururken, butonun ana ekranınızda günün hangi saatlerinde görüneceğini belirleyebilirsiniz. - her periyot için bir buton görünür.
 
+  ```{image} ../images/Pref2020_OV_QuickWizard.png
+  :alt: Preferences > Quick Wizard Button Setup
+  ```
+
 - Hızlı sihirbaz düğmesini tıklarsanız AAPS, mevcut ayarlarınıza göre girdiğiniz karbonhidrat için bir bolus hesaplar ve önerir (ayarlanmışsa kan şekeri değerini veya aktif insülini de dikkate alarak).
 
 - İnsülin verilmeden önce önerinin onaylanması gerekir.
 
-  ```{image} ../images/Pref2020_OV_QuickWizard.png
+  ```{image} ../images/Pref2020_OV_QuickWizard2.png
   :alt: Tercihler > Hızlı Asistan Butonu
   ```
 
@@ -174,11 +192,17 @@
 
 - Varsayılan GH ayarı ile aktivite, yakında öğün vb. butonlar için hedefinizi kolayca değiştirebilirsiniz.
 
-- Hedefinizi, ana ekranın sağ üst köşesindeki hedefinize uzun basarak veya alttaki turuncu “Karbonhidrat” düğmesindeki kısayolları kullanarak değiştirebilirsiniz.
-
   ```{image} ../images/Pref2020_OV_DefaultTT.png
   :alt: Tercihler > Varsayılan geçici hedefler
   ```
+
+- Hedefinizi, ana ekranın sağ üst köşesindeki hedefinize uzun basarak veya alttaki turuncu “Karbonhidrat” düğmesindeki kısayolları kullanarak değiştirebilirsiniz.
+
+  ```{image} ../images/Pref2020_OV_DefaultTT2.png
+  :alt: Preferences > Use default temp targets
+  ```
+
+###
 
 ### Standart insülin miktarlarını Hazırla/Doldur
 
@@ -239,28 +263,8 @@
 ### Gelişmiş ayarlar
 
 ```{image} ../images/Pref2021_OV_Adv.png
-:alt: Tercihler > Durum Işıkları
+:alt: Preferences > Advanced Settings
 ```
-
-#### Bolus sihirbazı sonucunun bu kadarını ilet
-
-- Bolus sihirbazı sonucunun yalnızca bir kısmını iletmek için genel ayar.
-- Bolus sihirbazı kullanılırken hesaplanan bolusun yalnızca ayarlanan yüzdesi (10 ile 100 arasında olmalıdır) iletilir.
-- Yüzde, bolus sihirbazında gösterilir.
-
-#### Bolus danışmanı
-
-- [Bolus sihirbazını](Screenshots-bolus-wizard) çalıştırırsanız ve glikoz değeriniz 10 mmol'ün (180 mg/dl) üzerindeyse, bir düzeltme bolusu sunulur.
-
-- Düzeltme bolusu kabul edilirse **hiç karbonhidrat** kaydedilmez.
-
-- Yemeğe başlamak için glikoz değeri iyi seviyede olduğunda bir alarm başlatılacaktır.
-
-- Tekrar [Bolus sihirbazına](Screenshots-bolus-wizard) girmeniz ve yemek istediğiniz karbonhidrat miktarını girmeniz gerekir.
-
-  ```{image} ../images/Home2021_BolusWizard_CorrectionOffer.png
-  :alt: Bolus danışmanı mesajı
-  ```
 
 (Preferences-superbolus)=
 #### Süperbolus
@@ -280,14 +284,14 @@
 ### Maks izin verilen bolus \[Ü\]
 
 - AAPS'in bolus olarak bir kerede iletmesine izin verilen maksimum insülin miktarını tanımlar.
-- Bu ayar, yanlış giriş veya kullanıcı hatası nedeniyle büyük miktarda bolus verilmesini önlemek için bir güvenlik sınırıdır.
+- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
 - Bunu, bir öğün veya düzeltme dozu için ihtiyaç duyabileceğiniz maksimum bolus insülin dozuna karşılık gelen makul bir miktara ayarlamanız önerilir.
 - Bu kısıtlama, bolus hesaplayıcısına da uygulanır.
 
 ### Maks izin verilen karbonhidrat \[g\]
 
 - AAPS bolus hesaplayıcısının dozlamasına izin verilen maksimum karbonhidrat miktarını tanımlar.
-- Bu ayar, yanlış giriş veya kullanıcı hatası nedeniyle büyük miktarda bolus verilmesini önlemek için bir güvenlik sınırıdır.
+- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
 - Bunu, bir yemek için ihtiyaç duyabileceğiniz maksimum karbonhidrat miktarına kabaca karşılık gelen makul bir miktara ayarlamanız önerilir.
 
 ## Döngü
@@ -460,12 +464,51 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 :alt: NSClient
 ```
 
-- *Nightscout URL'nizi* (ör. <https://yourwebsitename.herokuapp.com>) ve *API parolanızı* (Heroku değişkenlerinde kaydedilmiş 12 karakterlik bir şifre) ayarlayın.
+Original communication protocol, can be used with older Nightscout versions.
+
+- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
+  - **URL'nin sonunda /api/v1/ OLMADAN olduğundan emin olun.**
+- The *[API secret](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)* (a 12 character password recorded in your Nightscout variables).
 - This enables data to be read and written between both the Nightscout website and AAPS.
 - Hedef 1'de takılıp kalırsanız, burada yazım hatalarını iki kez kontrol edin.
-- **URL'nin sonunda /api/v1/ OLMADAN olduğundan emin olun.**
-- *NS'de Uyg. günlüğünün başlatılması* uygulama her başlatıldığında Nightscout bakım portalına girişlerinize bir not kaydeder.  Uygulamanın günde bir defadan fazla başlatılması gerekmez. Bundan daha sık olması bir sorun olduğunu gösterir (örneğin. pil optimizasyonu AAPS için devre dışı bırakılmamıştır).
-- Etkinleştirilirse, [yerel profildeki](Config-Builder-local-profile) değişiklikler Nightscout sitenize yüklenir.
+
+## NSClientV3
+
+```{image} ../images/Pref2024_NSClientV3.png
+:alt: NSClientV3
+```
+
+[New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
+
+:::{admonition} V3 data uploaders
+:class: warning When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.  
+:::
+
+- Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
+  - **URL'nin sonunda /api/v1/ OLMADAN olduğundan emin olun.**
+- In Nightscout, create an *[Admin token](https://nightscout.github.io/nightscout/security/#create-a-token)* (requires [Nightscout 15](https://nightscout.github.io/update/update/) to use the V3 API) and enter it in **NS access token** (not your API Secret!).
+- This enables data to be read and written between both the Nightscout website and AAPS.
+- Hedef 1'de takılıp kalırsanız, burada yazım hatalarını iki kez kontrol edin.
+- Leave Connect to websockets enabled (recommended).
+
+### Synchronization
+
+Synchronization choices will depend on the way you will want to use AAPS.
+
+You can select which data you want to [upload and download to or from Nightscout](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
+
+### Alarm türleri
+
+```{image} ../images/Pref2024_NSClient_Alarms.png
+:alt: Alarm options
+```
+
+- Alarm options allows you to select which Nightscout alarms to use through the app. AAPS will alarm when a Nightscout alarms trigger.
+  - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+  - They will only work whilst you have a connection to Nightscout and are intended for parent/caregivers.
+  - If you have the CGM source on your phone (i.e. xDrip+ or BYODA) then use those alarms instead of Nightscout Alarms.
+- Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the AAPS notifications bar.
+- You can change stale data and urgent stale data alarms threshold when no data is received from Nightscout after a certain time.
 
 ### Bağlantı Ayarları
 
@@ -473,32 +516,20 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 :alt: NSClient bağlantı ayarları
 ```
 
+- Connection settings define when Nightscout connection will be enabled.
 - Nightscout yüklemesini yalnızca Wi-Fi ile veya hatta belirli Wi-Fi SSID'leri ile sınırlayın.
 - Yalnızca belirli bir WiFi ağını kullanmak istiyorsanız, WiFi SSID'sini girebilirsiniz.
 - Birden çok SSID noktalı virgülle ayrılabilir.
 - Tüm SSID'leri silmek için alana boşluk girin.
 
-### Alarm türleri
-
-- Alarm seçenekleri, uygulama aracılığıyla hangi varsayılan Nightscout alarmlarının kullanılacağını seçmenize olanak tanır.
-- Alarmların çalması için [Heroku değişkenlerinizde](https://nightscout.github.io/nightscout/setup_variables/#alarms) Acil Yüksek, Yüksek, Düşük ve Acil Düşük alarm değerlerini ayarlamanız gerekir.
-- Yalnızca Nightscout ile bağlantınız varken çalışırlar ve ebeveynler/bakıcılar için tasarlanmıştır.
-- Telefonunuzda CGM kaynağı varsa (ör. xDrip+ veya BYODA \[Kendi dexcom uygulamanızı oluşturun\]) bunun yerine bu alarmları kullanın.
-
 (Preferences-advanced-settings-nsclient)=
 ### Gelişmiş Ayarlar (NSClient)
 
-```{image} ../images/Pref2020_NSClientAdv.png
+```{image} ../images/Pref2024_NSClientAdv.png
 :alt: NS Client gelişmiş ayarlar
 ```
 
-- Gelişmiş ayarlardaki çoğu seçenek kendi açıklamasını içerir.
-
-- *Yerel yayınları etkinleştir*, verilerinizi telefondaki xDrip+ gibi diğer uygulamalarla paylaşacaktır.
-
-  - xDrip+ alarmlarını kullanmak için [AAPS'e geçmeniz](Config-Builder-bg-source) ve AAPS'de yerel yayını etkinleştirmeniz gerekir.
-
-- Autotune'u doğru kullanmak istiyorsanız *Her zaman bazal mutlak değerleri kullan* etkinleştirilmelidir. Autotune hakkında daha fazla ayrıntı için [OpenAPS dokümanlarına](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) bakın.
+Options in advanced settings are self-explanatory.
 
 ## SMS Kominikatör
 

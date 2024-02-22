@@ -52,7 +52,7 @@ AAPS можно настроить на принятие команд Nightscout
 
 * Добавьте или измените переменные следующим образом:
   
-  * ` ENABLE ` = ` careportal boluscalc food bwp cage sage iob cob basal ar2 rawbg pushover bgi pump openaps `
+  * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   * ` DEVICESTATUS_ADVANCED ` = ` true `
   * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
@@ -62,7 +62,7 @@ AAPS можно настроить на принятие команд Nightscout
 
 * Сохраните изменения. Ваш сайт Nightscout теперь должен разрешитьотображение таблеток. Можно принудительно отобразить их по умолчанию, добавив их в `SHOW_PLUGINS`.
   
-  * ` SHOW_PLUGINS ` = ` careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover bgi pump openaps `
+  * `SHOW_PLUGINS` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   
   ![Таблетки Nightscout](../images/nightscout1.png)
 

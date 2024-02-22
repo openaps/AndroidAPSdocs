@@ -5,38 +5,38 @@
 
 En la primavera de 2022, Dexcom G7 recibió el certificado CE y se vendió a finales de octubre del mismo año.
 
-Cabe destacar que el sistema Dexcom G7, en comparación con Dexcom G6, no suaviza los valores, ni en la app, ni en el lector. Más detalles al respecto [aquí](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app). Por consiguiente, hay que suavizar los valores para poder utilizarlos con sentido en AAPS.
+Cabe destacar que el sistema Dexcom G7, en comparación con Dexcom G6, no suaviza los valores, ni en la app, ni en el lector. Más detalles al respecto [aquí](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
+:::{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
+:class: warning **Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 values.  
+:::
+
 ## 1.  Aplicación Dexcom G7 parcheada (DiAKEM)
 
-**Nota: Es necesario AAPS 3.2.0.0 o superior.**
+**Note: AAPS 3.2.0.0 or higher is required!**
 
 ### Instale una nueva aplicación parcheada de G7 e inicia el sensor.
 
-Una aplicación Dexcom G7 parcheada (DiAKEM) permite acceder a los datos del sensor Dexcom G7. Esta no es la aplicación BYODA, ya que esta aplicación no puede recibir datos de Dexcom G7 por el momento.
+A patched Dexcom G7 app (DiAKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
-Desinstala la aplicación original de Dexcom si la estabas utilizando antes (puedes continuar una sesión de sensor en curso, pero anota el código del sensor antes de desinstalar la aplicación).
+Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
 
-Descarga e instala la aplicación patched.apk [aquí](https://github.com/authorgambel/g7/releases).
+Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
 
-Introduce el código del sensor en la aplicación parcheada.
+Enter sensor code in the patched app.
 
-Sigue las recomendaciones generales para la higiene del MCG y la colocación del sensor que encontrará [aquí](../Hardware/GeneralCGMRecommendation.md).
+Follow the general recommendations for CGM hygiene and sensor placement found [here](../Hardware/GeneralCGMRecommendation.md).
 
-Tras la fase de calentamiento, los valores se muestran como de costumbre en la aplicación G7.
+After the warm-up phase, the values are displayed as usual in the G7 app.
 
 ### Configuración en AAPS
 
-Para la configuración en AAPS
+For the configuration in AAPS
 - Select 'BYODA' in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source) - even if it is not the BYODA app!
 
 - If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
-
-El suavizado de los valores de glucosa puede activarse activando el plugin "Suavizado promedio" o "Suavizado exponencial" en la tabla de configuraciones. Para desactivarlo, selecciona la opción "Sin suavizado". "Suavizado exponencial" es más agresivo y reescribe el valor de glucosa más reciente, pero es bueno para tratar el ruido pesado. "Suavizado promedio" es muy parecido al suavizado que se hacía con Dexcom G6 BYODA y sólo reescribe los valores pasados pero no el valor actual y por lo tanto, tiene un tiempo de respuesta más rápido.
-
-**Suavizado exponencial** **DEBE** estar activado para un uso significativo de los valores G7.
 
 ## 2. xDrip+ (direct connection to G7)
 

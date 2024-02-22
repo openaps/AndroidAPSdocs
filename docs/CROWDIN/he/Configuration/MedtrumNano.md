@@ -333,6 +333,11 @@ Press the **Reset Alarms** button to reset the alarms and resume normal operatio
 
 ## פתרון בעיות
 
+### Connection issues
+
+If you are experiencing connection timeouts or other connection issues:
+- In Android application settings for AAPS: Set location permission to "Allow all the time".
+
 ### Activation interrupted
 
 If the activation process is interrupted for example by and empty phone battery or phone crash. The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#resume-interrupted-activation)
