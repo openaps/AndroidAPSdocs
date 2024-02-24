@@ -31,20 +31,16 @@ export const en = defineConfig({
 
     sidebar: [
       {
-        text: "Home",
-        link: "/",
-      },
-      {
         text: "Getting Started",
         collapsed: false,
         items: [
           {
             text: "Introduction", // What is AndroidAPS and what can it do?
-            link: "/Getting-Started",
+            link: "/introduction",
           },
           {
             text: "Preparing", // What do I need to get started?
-            link: "/Phones",
+            link: "",
           },
           {
             text: "Components setup",
@@ -52,37 +48,37 @@ export const en = defineConfig({
             items: [
               {
                 text: "CGM / FGM",
-                link: "/Getting-Started",
+                link: "",
               },
               {
                 text: "xDrip Settings",
-                link: "/Getting-Started",
+                link: "",
               },
               {
                 text: "Pump",
-                link: "/Getting-Started",
+                link: "",
               },
               {
                 text: "Phone",
-                link: "/Getting-Started",
+                link: "",
               },
               {
                 text: "Smartwatch",
-                link: "/Getting-Started",
+                link: "",
               },
             ],
           },
           {
             text: "Building AAPS",
-            link: "/advanced/runner",
+            link: "",
           },
           {
             text: "Initial setup",
-            link: "/advanced/metadata",
+            link: "",
           },
           {
             text: "Towards closed loop", // completing the objectives
-            link: "/advanced/reporters",
+            link: "",
           },
         ],
       },
@@ -94,28 +90,7 @@ export const en = defineConfig({
       {
         text: "Advanced Topics",
         collapsed: true,
-        items: [
-          {
-            text: "Preparing",
-            link: "/Phones",
-          },
-          {
-            text: "Runner API",
-            link: "/advanced/runner",
-          },
-          {
-            text: "Task Metadata",
-            link: "/advanced/metadata",
-          },
-          {
-            text: "Extending Reporters",
-            link: "/advanced/reporters",
-          },
-          {
-            text: "Custom Pool",
-            link: "/advanced/pool",
-          },
-        ],
+        items: [],
       },
       {
         text: "Troubleshooting",

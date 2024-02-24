@@ -6,25 +6,23 @@ AAPS is an open source app for people living with insulin-dependent diabetes tha
 
 Interested? Read more about AAPS in the [introduction](introduction.md).
 
-```{warning}
-**IMPORTANT SAFETY NOTICE**
+::: danger IMPORTANT SAFETY NOTICE
 
 The foundation of AAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AAPS system.
 
 Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
 
 Last not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels.  The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
-```
+:::
 
-```{note}
-**Disclaimer and Warning**
+::: warning Disclaimer and Warning
 
 - All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AAPS at your own risk, and do not use the information or code to make medical decisions.
 - Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
 - All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
 
 Please note - this project has no association with and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
-```
+:::
 
 ## How to read the documentation?
 
@@ -54,6 +52,7 @@ There is a subsection for the [clinicians](Resources/clinician-guide-to-AAPS.md)
 
 Finally, in the subsection [How to help?](make-a-PR.md) we would like to provide you with information so that you are able to suggest small or larger changes to the documentation yourself and work together with us on the documentation. We further need support for [translation of the documentation](translations.md) By the way, it also very helpful for everyone if you could provide links to the corresponding documentation (or screenshots of where the links are located within the Documentation if you are not familiar with how to send a link) when answering questions from other users. That way the correct information can easily be located again should other users also be trying to find answers to the same types of questions in the future.
 
+<!--
 ```{toctree}
 :caption: Change language
 
@@ -253,9 +252,10 @@ Crowdin Test <./Sandbox/crowdintest.md>
 Image Scaling <./Sandbox/imagescaling.md>
 
 ```
+-->
 
-```{note}
-**Disclaimer And Warning**
+
+::: warning Disclaimer And Warning
 
 - All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AAPS at your own risk, and do not use the information or code to make medical decisions.
 - Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
@@ -263,4 +263,4 @@ Image Scaling <./Sandbox/imagescaling.md>
 
 Please note - this project has no association with and is not endorsed by: [SOOIL](<https://www.sooil.com/eng/>), [Dexcom](<https://www.dexcom.com/>), [Accu-Chek, Roche Diabetes Care](<https://www.accu-chek.com/>) or [Medtronic](<https://www.medtronic.com/>)
 
-```
+:::

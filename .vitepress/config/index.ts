@@ -5,13 +5,15 @@ import { en } from "./en";
 export default defineConfig({
   title: "AndroidAPS",
 
-  srcDir: "docs/EN",
+  // TODO
+  srcDir: "test",
+  ignoreDeadLinks: true,
 
   lastUpdated: true,
   cleanUrls: true,
   metaChunk: true,
   sitemap: {
-    hostname: "https://docs.androidaps.com",
+    hostname: "https://wiki.aaps.app",
   },
 
   head: [
@@ -36,10 +38,10 @@ export default defineConfig({
     //   "meta",
     //   {
     //     property: "og:image",
-    //     content: "https://docs.androidaps.com/androidaps-og.jpg",
+    //     content: "https://wiki.aaps.app/androidaps-og.jpg",
     //   },
     // ],
-    ["meta", { property: "og:url", content: "https://docs.androidaps.com/" }],
+    ["meta", { property: "og:url", content: "https://wiki.aaps.app/" }],
   ],
 
   themeConfig: {
