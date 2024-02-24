@@ -1,0 +1,18 @@
+{
+  "dependencies": {},
+  "devDependencies": {
+    "vitepress": "^1.0.0-rc.44",
+    "@types/bun": "latest"
+  },
+  "name": "androidapsdocs",
+  "module": "index.ts",
+  "type": "module",
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  }
+}
