@@ -51,9 +51,9 @@ export default defineConfig({
       { icon: "github", link: "https://github.com/nightscout/AndroidAPS" },
     ],
 
-    // search: {
-    //   provider: "local",
-    // },
+    search: {
+      provider: "local",
+    },
   },
 
   markdown: {
