@@ -87,21 +87,15 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-```{image} ../images/sign_stop.png
-:alt: Stoppzeichen
-```
+![Stoppzeichen](../images/sign_stop.png)
 
 ### Falls Du eine virtuelle Pumpe verwendest darfst Du nicht zum 6. Ziel wechseln. Klicke nicht auf 'Bestätigen/Verify' am Ende des 5. Ziels.
 
-```{image} ../images/blank.png
-:alt: leer
-```
+![leer](../images/blank.png)
 
 ## Ziel 6: Closed Loop mit Abschaltung bei niedrigen Glukose-Werten
 
-```{image} ../images/sign_warning.png
-:alt: Warnzeichen
-```
+![Warnzeichen](../images/sign_warning.png)
 
 ### Der Closed Loop korrigiert im Objective 6 keine hohen BZ-Werte, da nur low glucose suspend zum Einsatz kommt. Hohe BZ-Werte müssen daher von Dir manuell korrigiert werden!
 
@@ -165,7 +159,4 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 Wenn Du aus welchem Grund auch immer ein Objective (Ziel) neu starten willst, klicke auf "Ziel neu starten".
 
-```{image} ../images/Objective_ClearFinished.png
-:alt: Objective (Ziel) neu starten
-
-```
+![Objective (Ziel) neu starten](../images/Objective_ClearFinished.png)

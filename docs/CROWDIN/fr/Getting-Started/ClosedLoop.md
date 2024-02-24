@@ -1,8 +1,6 @@
 # Qu'est ce qu'un Système de boucle fermée ?
 
-```{image} ../images/autopilot.png
-:alt: AAPS est comme un pilote automatique
-```
+![AAPS est comme un pilote automatique](../images/autopilot.png)
 
 Un système de boucle fermée du pancréas artificiel combine différents composants afin de vous faciliter la gestion du diabète. Dans son grand livre [Automated Insulin Delivery](https://www.artificialpancreasbook.com/) Dana M. Lewis, une des fondatrices du mouvement "Open Source closed loop" (Boucle fermée en open Source), appelle cela ["pilote automatique pour votre diabète"](https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps). Mais qu'est-ce que cela signifie ?
 

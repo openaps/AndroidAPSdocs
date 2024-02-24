@@ -32,9 +32,7 @@
 (Preferences-general)=
 ## General
 
-```{image} ../images/Pref2020_General.png
-:alt: Preferences > General
-```
+![Preferences > General](../images/Pref2020_General.png)
 
 **Units**
 
@@ -58,9 +56,7 @@
 
 (Preferences-master-password)=
 
-```{image} ../images/Pref2020_General2.png
-:alt: Preferences > General - Protection
-```
+![Preferences > General - Protection](../images/Pref2020_General2.png)
 
 #### Contraseña maestra
 
@@ -262,9 +258,7 @@
 (Preferences-advanced-settings-overview)=
 ### Advanced Settings (Overview)
 
-```{image} ../images/Pref2021_OV_Adv.png
-:alt: Preferences > Advanced Settings
-```
+![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
 
 (Preferences-superbolus)=
 #### Superbolo
@@ -410,9 +404,7 @@ Cuando se sienta cómodo, puede permitir que el sistema comience a administrarle
 
 ## Ajustes absorción
 
-```{image} ../images/Pref2020_Absorption.png
-:alt: Absorption settings
-```
+![Absorption settings](../images/Pref2020_Absorption.png)
 
 ### min_5m_carbimpact
 
@@ -460,9 +452,7 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 (Preferences-nsclient)=
 ## NSClient
 
-```{image} ../images/Pref2020_NSClient.png
-:alt: NSClient
-```
+![NSClient](../images/Pref2020_NSClient.png)
 
 Original communication protocol, can be used with older Nightscout versions.
 
@@ -474,9 +464,7 @@ Original communication protocol, can be used with older Nightscout versions.
 
 ## NSClientV3
 
-```{image} ../images/Pref2024_NSClientV3.png
-:alt: NSClientV3
-```
+![NSClientV3](../images/Pref2024_NSClientV3.png)
 
 [New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
@@ -499,9 +487,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Opciones de alarma
 
-```{image} ../images/Pref2024_NSClient_Alarms.png
-:alt: Alarm options
-```
+![Alarm options](../images/Pref2024_NSClient_Alarms.png)
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. AAPS will alarm when a Nightscout alarms trigger.
   - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -512,9 +498,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Ajustes conexión
 
-```{image} ../images/ConfBuild_ConnectionSettings.png
-:alt: NSClient connection settings
-```
+![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
 
 - Connection settings define when Nightscout connection will be enabled.
 - Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
@@ -525,9 +509,7 @@ You can select which data you want to [upload and download to or from Nightscout
 (Preferences-advanced-settings-nsclient)=
 ### Advanced settings (NSClient)
 
-```{image} ../images/Pref2024_NSClientAdv.png
-:alt: NS Client advanced settings
-```
+![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
 
 Options in advanced settings are self-explanatory.
 
@@ -548,25 +530,19 @@ Select which location service shall be used:
 
 ## Alarma local
 
-```{image} ../images/Pref2020_LocalAlerts.png
-:alt: Local alerts
-```
+![Local alerts](../images/Pref2020_LocalAlerts.png)
 
 - Settings should be self-explanatory.
 
 ## Data choices
 
-```{image} ../images/Pref2020_DataChoice.png
-:alt: Data choices
-```
+![Data choices](../images/Pref2020_DataChoice.png)
 
 - You can help develop AAPS further by sending crash reports to the developers.
 
 ## Maintenance settings
 
-```{image} ../images/Pref2020_Maintenance.png
-:alt: Maintenance settings
-```
+![Maintenance settings](../images/Pref2020_Maintenance.png)
 
 - Standard recipient of logs is <logs@androidaps.org>.
 - If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). In this case master password has to be entered each time settings are exported or imported.

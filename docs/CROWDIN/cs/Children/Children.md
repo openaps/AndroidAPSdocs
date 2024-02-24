@@ -1,8 +1,6 @@
 # Vzdálené monitorování
 
-```{image} ../images/KidsMonitoring.png
-:alt: Monitorování dětí
-```
+![Monitorování dětí](../images/KidsMonitoring.png)
 
 AAPS nabízí několik možností pro vzdálené monitorování dětí a také umožňuje odesílání vzdálených příkazů. Samozřejmě můžete také použít vzdálené monitorování, abyste sledovali svého partnera nebo přítele.
 

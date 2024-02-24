@@ -10,9 +10,7 @@
 
 במחשב Windows 10 זה נראה כך:
 
-```{image} ../images/AAPS_ExImportSettingsWin.png
-:alt: AAPS Preferences phone connected to computer
-```
+![AAPS Preferences phone connected to computer](../images/AAPS_ExImportSettingsWin.png)
 
 ## Export Path
 The exports will be placed in this folder on your phone:
@@ -42,18 +40,14 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - תחזוקה
 - ייצוא הגדרות
 
-```{image} ../images/AAPS_ExportSettings1.png
-:alt: AAPS export settings 1
-```
+![AAPS export settings 1](../images/AAPS_ExportSettings1.png)
 
 - Date and time of export will be added to the file name automatically and displayed together with the path.
 - Click 'OK'.
 - Enter [master password](Preferences-master-password) and click 'OK'.
 - Successful export will be prompted at bottom of the screen.
 
-```{image} ../images/AAPS_ExportSettings2.png
-:alt: AAPS export settings 2
-```
+![AAPS export settings 2](../images/AAPS_ExportSettings2.png)
 
 (ExportImportSettings-import-settings)=
 ## ייבוא הגדרות
@@ -64,18 +58,14 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - תחזוקה
 - ייבוא הגדרות
 
-```{image} ../images/AAPS_ImportSettings1.png
-:alt: AAPS import settings 1
-```
+![AAPS import settings 1](../images/AAPS_ImportSettings1.png)
 
 - כל הקבצים מהתיקייה /AAPS/preferences בטלפון יוצגו ברשימה.
 - בחרו קובץ.
 - אשרו ייבוא על ידי לחיצה על 'אישור'.
 - Enter [master password](Preferences-master-password) and click 'OK'.
 
-```{image} ../images/AAPS_ImportSettings2.png
-:alt: AAPS import settings 2
-```
+![AAPS import settings 2](../images/AAPS_ImportSettings2.png)
 
 - יוצגו פרטים על קובץ ההעדפות.
 - זוהי ההזדמנות האחרונה לביטול הייבוא.

@@ -238,9 +238,7 @@
 (Preferences-advanced-settings-overview)=
 ### Advanced Settings (Overview)
 
-```{image} ../images/Pref2021_OV_Adv.png
-:alt: Preferences > Status Lights
-```
+![Preferences > Status Lights](../images/Pref2021_OV_Adv.png)
 
 #### Deliver this part of bolus wizard result
 
@@ -406,9 +404,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 ## Absorption settings
 
-```{image} ../images/Pref2020_Absorption.png
-:alt: Absorption settings
-```
+![Absorption settings](../images/Pref2020_Absorption.png)
 
 ### min_5m_carbimpact
 
@@ -456,9 +452,7 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 (Preferences-nsclient)=
 ## NSClient
 
-```{image} ../images/Pref2020_NSClient.png
-:alt: NSClient
-```
+![NSClient](../images/Pref2020_NSClient.png)
 
 - Set your *Nightscout URL* (i.e. <https://yourwebsitename.herokuapp.com>) and the *API secret* (a 12 character password recorded in your Heroku variables).
 - This enables data to be read and written between both the Nightscout website and AAPS.
@@ -469,9 +463,7 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 
 ### Connection settings
 
-```{image} ../images/ConfBuild_ConnectionSettings.png
-:alt: NSClient connection settings
-```
+![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
 
 - Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
 - If you want to use only a specific WiFi network you can enter its WiFi SSID.
@@ -488,9 +480,7 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 (Preferences-advanced-settings-nsclient)=
 ### Advanced settings (NSClient)
 
-```{image} ../images/Pref2020_NSClientAdv.png
-:alt: NS Client advanced settings
-```
+![NS Client advanced settings](../images/Pref2020_NSClientAdv.png)
 
 - Most options in advanced settings are self-explanatory.
 
@@ -517,25 +507,19 @@ Select which location service shall be used:
 
 ## Local alerts
 
-```{image} ../images/Pref2020_LocalAlerts.png
-:alt: Local alerts
-```
+![Local alerts](../images/Pref2020_LocalAlerts.png)
 
 - Settings should be self-explanatory.
 
 ## Data choices
 
-```{image} ../images/Pref2020_DataChoice.png
-:alt: Data choices
-```
+![Data choices](../images/Pref2020_DataChoice.png)
 
 - You can help develop AAPS further by sending crash reports to the developers.
 
 ## Maintenance settings
 
-```{image} ../images/Pref2020_Maintenance.png
-:alt: Maintenance settings
-```
+![Maintenance settings](../images/Pref2020_Maintenance.png)
 
 - Standard recipient of logs is <logs@androidaps.org>.
 - If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). In this case master password has to be entered each time settings are exported or imported.

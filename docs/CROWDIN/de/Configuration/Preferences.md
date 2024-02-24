@@ -32,9 +32,7 @@
 (Preferences-general)=
 ## Allgemein
 
-```{image} ../images/Pref2020_General.png
-:alt: Einstellungen > Allgemein
-```
+![Einstellungen > Allgemein](../images/Pref2020_General.png)
 
 **Einheiten**
 
@@ -58,9 +56,7 @@
 
 (Preferences-master-password)=
 
-```{image} ../images/Pref2020_General2.png
-:alt: Preferences > General - Protection
-```
+![Preferences > General - Protection](../images/Pref2020_General2.png)
 
 #### Master-Passwort
 
@@ -262,9 +258,7 @@
 (Preferences-advanced-settings-overview)=
 ### Erweiterte Einstellungen (Übersicht)
 
-```{image} ../images/Pref2021_OV_Adv.png
-:alt: Preferences > Advanced Settings
-```
+![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
 
 (Preferences-superbolus)=
 #### Superbolus
@@ -410,9 +404,7 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 
 ## Resorptions-Einstellungen
 
-```{image} ../images/Pref2020_Absorption.png
-:alt: Resorptions-Einstellungen
-```
+![Resorptions-Einstellungen](../images/Pref2020_Absorption.png)
 
 ### min_5m_carbimpact
 
@@ -460,9 +452,7 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 (Preferences-nsclient)=
 ## Nightscout-Client
 
-```{image} ../images/Pref2020_NSClient.png
-:alt: NSClient
-```
+![NSClient](../images/Pref2020_NSClient.png)
 
 Original communication protocol, can be used with older Nightscout versions.
 
@@ -474,9 +464,7 @@ Original communication protocol, can be used with older Nightscout versions.
 
 ## NSClientV3
 
-```{image} ../images/Pref2024_NSClientV3.png
-:alt: NSClientV3
-```
+![NSClientV3](../images/Pref2024_NSClientV3.png)
 
 [New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
@@ -499,9 +487,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Alarm-Optionen
 
-```{image} ../images/Pref2024_NSClient_Alarms.png
-:alt: Alarm options
-```
+![Alarm options](../images/Pref2024_NSClient_Alarms.png)
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. AAPS will alarm when a Nightscout alarms trigger.
   - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -512,9 +498,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Verbindungseinstellungen
 
-```{image} ../images/ConfBuild_ConnectionSettings.png
-:alt: NSClient Verbindungseinstellungen
-```
+![NSClient Verbindungseinstellungen](../images/ConfBuild_ConnectionSettings.png)
 
 - Connection settings define when Nightscout connection will be enabled.
 - Beschränken den Nightscout-Upload auf WLAN-Verbindungen oder sogar auf bestimmte WLAN-SSIDs.
@@ -525,9 +509,7 @@ You can select which data you want to [upload and download to or from Nightscout
 (Preferences-advanced-settings-nsclient)=
 ### Erweiterte Einstellungen (Nightscout-Client)
 
-```{image} ../images/Pref2024_NSClientAdv.png
-:alt: NS-Client - erweiterte Einstellungen
-```
+![NS-Client - erweiterte Einstellungen](../images/Pref2024_NSClientAdv.png)
 
 Options in advanced settings are self-explanatory.
 
@@ -548,25 +530,19 @@ Wähle aus, welcher Standortservice verwendet werden soll:
 
 ## Lokale Alarme
 
-```{image} ../images/Pref2020_LocalAlerts.png
-:alt: Lokale Alarme
-```
+![Lokale Alarme](../images/Pref2020_LocalAlerts.png)
 
 - Einstellungen sollten selbsterklärend sein.
 
 ## Datenübermittlung
 
-```{image} ../images/Pref2020_DataChoice.png
-:alt: Datenübermittlung
-```
+![Datenübermittlung](../images/Pref2020_DataChoice.png)
 
 - Du kannst bei der Weiterentwicklung von AAPS unterstützen, indem Du Absturzberichte an die Entwickler sendest.
 
 ## Wartungseinstellungen
 
-```{image} ../images/Pref2020_Maintenance.png
-:alt: Wartungseinstellungen
-```
+![Wartungseinstellungen](../images/Pref2020_Maintenance.png)
 
 - Standardempfänger von Protokollen ist <logs@androidaps.org>.
 - Wenn Du *Exportierte Daten verschlüsseln* auswählst, werden diese mit Deinem [Master Password](Preferences-master-password) verschlüsselt. In diesem Fall muss das Master-Passwort jedes Mal eingegeben werden, wenn die Einstellungen ex- oder importiert werden.

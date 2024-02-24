@@ -10,9 +10,7 @@
 
 На компьютере с Windows 10 это выглядит так:
 
-```{image} ../images/AAPS_ExImportSettingsWin.png
-:alt: AAPS настройки телефона, подключенного к компьютеру
-```
+![AAPS настройки телефона, подключенного к компьютеру](../images/AAPS_ExImportSettingsWin.png)
 
 ## Директория экспорта
 Экспортируемые настройки помещаются в эту папку на телефоне:
@@ -42,18 +40,14 @@
 - Обслуживание
 - Экспорт настроек
 
-```{image} ../images/AAPS_ExportSettings1.png
-:alt: AAPS экспорт настроек 1
-```
+![AAPS экспорт настроек 1](../images/AAPS_ExportSettings1.png)
 
 - Дата и время экспорта добавляются в имя файла автоматически и видны вместе с путем к файлу.
 - Нажмите "OK'.
 - Введите [Главный пароль](Preferences-master-password) и нажмите 'OK'.
 - Сообщение об успехе операции появится в нижней части экрана.
 
-```{image} ../images/AAPS_ExportSettings2.png
-:alt: AAPS экспорт настроек 2
-```
+![AAPS экспорт настроек 2](../images/AAPS_ExportSettings2.png)
 
 (ExportImportSettings-import-settings)=
 ## Выполните импорт настроек
@@ -64,18 +58,14 @@
 - Обслуживание
 - Выполните импорт настроек
 
-```{image} ../images/AAPS_ImportSettings1.png
-:alt: AAPS импорт настроек 1
-```
+![AAPS импорт настроек 1](../images/AAPS_ImportSettings1.png)
 
 - Все файлы из папки AAPS/preferences/ на телефоне будут показаны в списке.
 - Выберите файл.
 - Подтвердите согласие на импорт, нажав кнопку OK'.
 - Введите [Главный пароль](Preferences-master-password) и нажмите 'OK'.
 
-```{image} ../images/AAPS_ImportSettings2.png
-:alt: AAPS импорт настроек 2
-```
+![AAPS импорт настроек 2](../images/AAPS_ImportSettings2.png)
 
 - Будет показана подробная информация о файле настроек.
 - Последняя опция для отмены импорта.

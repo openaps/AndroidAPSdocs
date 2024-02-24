@@ -15,9 +15,7 @@ Android Studio'nun Git.exe'yi bulmak için bu yere ihtiyaç duyacağından Git.e
 
 ```
 
-```{image} ../images/Update_GitPath.png
-:alt: Git kurulum yolu
-```
+![Git kurulum yolu](../images/Update_GitPath.png)
 
 ### 2. Android Studio'da git yolunu ayarla
 

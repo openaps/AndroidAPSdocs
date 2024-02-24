@@ -15,9 +15,7 @@ Make sure that you can call git.exe without the prefing path as Android Studio n
 
 ```
 
-```{image} ../images/Update_GitPath.png
-:alt: Git diegimo kelias
-```
+![Git diegimo kelias](../images/Update_GitPath.png)
 
 ### 2. Nustatykite git kelią Android Studio programoje
 

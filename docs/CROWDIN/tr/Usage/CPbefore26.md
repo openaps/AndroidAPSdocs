@@ -10,9 +10,7 @@ Bu sayfa, daha önce bakım portalında mevcut olan işlevleri nerede bulabilece
 
 ## Etkinlik & geri bildirim
 
-```{image} ../images/Careportal_25_26_1_IIb.png
-:alt: Bakım Portalı etkinliği & geri bildirim
-```
+![Bakım Portalı etkinliği & geri bildirim](../images/Careportal_25_26_1_IIb.png)
 
 - Yaş bilgisi işlemler sekmesine / menüsüne taşındı.
 - KŞ kontrolü işlemler sekmesine / menüsüne taşındı.
@@ -23,9 +21,7 @@ Bu sayfa, daha önce bakım portalında mevcut olan işlevleri nerede bulabilece
 
 ## Karbonhidratlar & bolus
 
-```{image} ../images/Careportal_25_26_2_IIa.png
-:alt: Bakım Portalı karbonhidrat & bolus
-```
+![Bakım Portalı karbonhidrat & bolus](../images/Careportal_25_26_2_IIa.png)
 
 - Bir bolusu not etmek için - ne için olursa olsun ister atıştırmalık ister öğün veya düzeltme için - ana ekrandaki insülin düğmesini kullanın ** ve "Bolus Yapma, sadece kaydedin"i işaretlediğinizden emin olun!**
 
@@ -41,18 +37,14 @@ Bu sayfa, daha önce bakım portalında mevcut olan işlevleri nerede bulabilece
 
 ## CGM & OpenAPS
 
-```{image} ../images/Careportal_25_26_3_IIa.png
-:alt: Bakım Portalı CGM & OpenAPS
-```
+![Bakım Portalı CGM & OpenAPS](../images/Careportal_25_26_3_IIa.png)
 
 - CGM sensör eki artık eylemler sekmesinde / menüsünde bulunabilir.
 - Bu bölümdeki diğer tüm işlevler kaldırılmıştır. Bolus vermek gibi bir eylem gerçekleştirirken diyalog kutusundaki not alanını kullanabilirsiniz ([Bu sayfadaki karbonhidratlar & bolus](CPbefore26-carbs-bolus) bölümündeki ekran görüntülerine bakabilirsiniz).
 
 ## Pompa
 
-```{image} ../images/Careportal_25_26_4_IIb.png
-:alt: Bakım Portalı Pompa
-```
+![Bakım Portalı Pompa](../images/Careportal_25_26_4_IIb.png)
 
 - İşlemler sekmesi/menüsündeki "hazırla/doldur" butonunu kullanarak pompa yeri ve insülin rezervuarı değişimine ulaşılabilir.
 - Profil değiştirme işlemler sekmesine / menüsüne taşındı.

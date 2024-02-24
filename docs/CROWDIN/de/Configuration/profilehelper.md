@@ -13,18 +13,14 @@ Der Profil-Helfer ermöglicht zwei Funktionen:
 
 Profil-Helfer bietet Datensätze von zwei verschiedenen Kinderkrankenhäusern an, um ein anfängliches Profil für Dein Kind (bis 18 Jahre) zu finden.
 
-```{image} ../images/ProfileHelperKids1.png
-:alt: Profile Helper Kids 1
-```
+![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
 
 1. Wähle 'Profil-Helfer' aus dem Drei-Punkte-Menü oben rechts auf dem Bildschirm.
 2. Passe das Standardprofil (basierend auf dem Krankenhausdatensatz) an, indem Du das Alter des Kindes eingibst sowie entweder das Gesamt-TDD **oder** das Gewicht eingibst.
 3. Wechsele den Bildschirm, indem du auf die rechte, graue Schaltfläche mit der Bezeichnung '2' klickst.
 4. Drücke lange auf 'Aktuelles Profil' und wähle das DPV Standardprofil aus.
 
-```{image} ../images/ProfileHelperKids2.png
-:alt: Profile Helper Kids 2
-```
+![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
 
 5. Passe das DPV-Standardprofil (basierend auf einem anderen Krankenhausdatensatz) an, indem Du das Alter des Kindes, den Prozentsatz der Basalrate sowie entweder das Gesamt-TDD **oder** das Gewicht eingibst.
 6. Drücke die Schaltfläche 'PROFILE VERGLEICHEN' oben auf dem Bildschirm.
@@ -36,18 +32,14 @@ Wenn Du mit den Profilanpassungen zufrieden bist, kannst Du das [Profil klonen](
 
 Du kannst den Profil-Helfer auch verwenden, um Profile oder Profilwechsel (um einen Prozentsatz geändertes [Profil](../Usage/Profiles.md)) miteinander zu vergleichen.
 
-```{image} ../images/ProfileHelper1.png
-:alt: Profile Helper 1
-```
+![Profile Helper 1](../images/ProfileHelper1.png)
 
 1. Wähle 'Profil-Helfer' aus dem Drei-Punkte-Menü oben rechts auf dem Bildschirm.
 2. Drücke lange auf 'Standard-Profil' und wähle 'Verfügbares Profil' für eine Liste Deiner vorhandenen Profile oder 'Profilwechsel' für eine Liste der zuletzt verwendeten Profilwechsel.
 3. Drücke lange auf den Namen des Profils / Profilwechsels ('Aktuell_LP' im obigen Screenshot) und wähle ein Profil / einen Profilwechsel aus der Liste.
 4. Wechsele den Bildschirm, indem du auf die rechte, graue Schaltfläche mit der Bezeichnung '2' klickst.
 
-```{image} ../images/ProfileHelper2.png
-:alt: Profile Helper 2
-```
+![Profile Helper 2](../images/ProfileHelper2.png)
 
 5. Standardmäßig wird 'Aktuelles Profil' als Vergleichskandidat angeboten.
 6. Wenn Du ein anderes Profil / einen anderen Profilwechsel verwenden möchtest, drücke lange auf 'Aktuelles Profil' und wähle entweder 'Verfügbares Profil' oder 'Profilwechsel'.
@@ -60,9 +52,7 @@ Du kannst den Profil-Helfer auch verwenden, um Profile oder Profilwechsel (um ei
 
 Wenn Du [lokale Profile](Config-Builder-local-profile) verwendest, kannst Du ein Profil / einen Profilwechsel direkt vom Profil-Helfer klonen.
 
-```{image} ../images/ProfileHelperClone.png
-:alt: Profile Helper Clone Profil / Profilwechsel
-```
+![Profile Helper Clone Profil / Profilwechsel](../images/ProfileHelperClone.png)
 
 1. Wähle das gewünschte Profil / den Profilwechsel aus wie oben beschrieben.
 2. Falls Du 'Standard-Profil' oder 'DPV-Standardprofil' verwendest (basierend auf Datensätzen aus Kinderkrankenhäusern), musst Du sicherstellen, dass Du die richtigen Einstellungen für das Alter, den Prozentsatz der Basalrate und TDD/Gewicht eingibst.

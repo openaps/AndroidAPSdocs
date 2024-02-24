@@ -10,9 +10,7 @@ Les paramètres exportés doivent être copiés sur un stockage cloud ou sur vot
 
 Sur un ordinateur Windows 10, cela ressemble à ceci :
 
-```{image} ../images/AAPS_ExImportSettingsWin.png
-:alt: AAPS Preferences phone connected to computer
-```
+![AAPS Preferences phone connected to computer](../images/AAPS_ExImportSettingsWin.png)
 
 ## Export Path
 The exports will be placed in this folder on your phone:
@@ -42,18 +40,14 @@ La sauvegarde des paramètres est chiffrée par un mot de passe principal qui pe
 - Maintenance
 - Exporter les paramètres
 
-```{image} ../images/AAPS_ExportSettings1.png
-:alt: AAPS export settings 1
-```
+![AAPS export settings 1](../images/AAPS_ExportSettings1.png)
 
 - La date et l'heure d'exportation seront automatiquement ajoutées au nom du fichier et affichées avec le chemin.
 - Cliquez sur 'OK'.
 - Entrez le [mot de passe principal](Preferences-master-password) et cliquez sur 'OK'.
 - L'exportation réussie sera affichée en bas de l'écran.
 
-```{image} ../images/AAPS_ExportSettings2.png
-:alt: AAPS export settings 2
-```
+![AAPS export settings 2](../images/AAPS_ExportSettings2.png)
 
 (ExportImportSettings-import-settings)=
 ## Importer les paramètres
@@ -64,18 +58,14 @@ La sauvegarde des paramètres est chiffrée par un mot de passe principal qui pe
 - Maintenance
 - Importer les paramètres
 
-```{image} ../images/AAPS_ImportSettings1.png
-:alt: AAPS import settings 1
-```
+![AAPS import settings 1](../images/AAPS_ImportSettings1.png)
 
 - Tous les fichiers présents dans le dossier AAPS/préférences/ de votre téléphone seront affichés dans la liste.
 - Sélectionnez un fichier.
 - Confirmez l'importation en cliquant sur 'OK'.
 - Entrez le [mot de passe principal](Preferences-master-password) et cliquez sur 'OK'.
 
-```{image} ../images/AAPS_ImportSettings2.png
-:alt: AAPS import settings 2
-```
+![AAPS import settings 2](../images/AAPS_ImportSettings2.png)
 
 - Les détails du fichier de préférences seront affichés.
 - C'est la dernière possibilité pour annuler l'importation.

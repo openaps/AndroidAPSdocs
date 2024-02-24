@@ -4,7 +4,4 @@
 Выбор языка был перемещен в нижнюю панель левого меню. Нажмите на нижнюю панель, чтобы открыть меню выбора языка.
 ```
 
-```{image} images/documentation_language_menu.png
-:alt: Открытие меню языка
-:width: 350
-```
+![Открытие меню языка](images/documentation_language_menu.png =350)

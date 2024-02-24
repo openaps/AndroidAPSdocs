@@ -15,21 +15,15 @@ eCarbs zijn koolhydraten die over meerdere uren worden uitgespreid. Voor standaa
 
 To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
 
-```{image} ../images/eCarbs_Dialog.png
-:alt: Koolhydraten invoeren
-```
+![Koolhydraten invoeren](../images/eCarbs_Dialog.png)
 
 Je ziet de eCarbs in de grafiek terug als kleine beetjes van 1 a 2 gram in de toekomst. En je ziet dat er nog 9 gram koolhydraten achter COB staan, tussen haakjes omdat het toekomstige koolhydraten zijn.
 
-```{image} ../images/eCarbs_Graph.png
-:alt: eCarbs in grafiek
-```
+![eCarbs in grafiek](../images/eCarbs_Graph.png)
 
 Op de Behandelingen tab zie je koolhydraten staan, ze zijn donker oranje omdat ze in de toekomst zijn:
 
-```{image} ../images/eCarbs_Treatment.png
-:alt: vertraagde koolhydraten in de Behandelingen tab
-```
+![vertraagde koolhydraten in de Behandelingen tab](../images/eCarbs_Treatment.png)
 
 ______________________________________________________________________
 
@@ -61,9 +55,7 @@ Daarom is er vanaf versie 2.6 een optie voor een vertraagde bolus toegevoegd, de
 - Bolus units, remaining and total time will be shown on homescreen.
 - On Insight pump extended bolus is *not available* if [TBR emulation](Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
-```{image} ../images/ExtendedBolus2_6.png
-:alt: vertraagde bolus in AAPS 2.6
-```
+![vertraagde bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 
 (Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Waarom vertraagde bolussen niet werken in een closed loop

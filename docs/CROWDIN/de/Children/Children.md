@@ -1,8 +1,6 @@
 # Kontrolle aus der Ferne
 
-```{image} ../images/KidsMonitoring.png
-:alt: Kinder aus der Ferne kontrollieren
-```
+![Kinder aus der Ferne kontrollieren](../images/KidsMonitoring.png)
 
 AAPS offer several options for remote monitoring of children and also allows to send remote commands. Of course you can also use remote monitoring to follow your partner or friend.
 

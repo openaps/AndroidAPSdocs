@@ -10,9 +10,7 @@
 
 ## Configurar comandos SMS
 
-```{image} ../images/SMSCommandsSetup.png
-:alt: Configuración de comandos SMS
-```
+![Configuración de comandos SMS](../images/SMSCommandsSetup.png)
 
 - La mayoría de los ajustes de, objetivos temporales, seguidor de AAPS, etc., se pueden hacer a través de la aplicación [AAPSClient](../Children/Children.md) en un teléfono Android con conexión a internet.
 - Los bolos no pueden poner mediante Nightscout, pero se pueden usar los comandos SMS.
@@ -100,9 +98,7 @@
 
 Los comandos deben enviarse en inglés, la respuesta será en tu idioma local si la cadena de respuesta ya está [traducida](translations-translate-strings-for-AAPS-app).
 
-```{image} ../images/SMSCommands.png
-:alt: Ejemplo de Comandos SMS
-```
+![Ejemplo de Comandos SMS](../images/SMSCommands.png)
 
 ### Loop
 
@@ -185,9 +181,7 @@ Si la otra aplicación está instalada en varios teléfonos, asegúrate de desac
 
 Hubo un informe sobre comandos SMS que dejaron de funcionar después de una actualización en el teléfono Galaxy S10. Podría resolverse desactivando 'Enviar como mensaje de chat'.
 
-```{image} ../images/SMSdisableChat.png
-:alt: Desactivar SMS como mensaje de chat
-```
+![Desactivar SMS como mensaje de chat](../images/SMSdisableChat.png)
 ### Aplicación Mensajes de Android
 
 Si tienes problemas para enviar o recibir comandos SMS con la aplicación Mensajes de Android, desactiva el cifrado de extremo a extremo en los teléfonos tanto del cuidador como del niño.

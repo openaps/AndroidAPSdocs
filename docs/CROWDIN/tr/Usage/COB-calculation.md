@@ -17,17 +17,13 @@ Karbonhidratlar, hangi hassasiyet algoritmasının kullanıldığına bağlı ol
 
 Emilmeyen karbonhidratlar belirtilen süreden sonra kesilir.
 
-```{image} ../images/cob_oref0_orange_II.png
-:alt: Oref1
-```
+![Oref1](../images/cob_oref0_orange_II.png)
 
 ### AAPS, Ağırlıklı Ortalama
 
 emilim, belirtilen süreden sonra `AKRB == 0` olarak hesaplanır
 
-```{image} ../images/cob_aaps2_orange_II.png
-:alt: AAPS, WheitedAverage
-```
+![AAPS, WheitedAverage](../images/cob_aaps2_orange_II.png)
 
 KŞ sapmalarından hesaplanan değer yerine minimum karbonhidrat emilimi (min_5m_carbimpact) kullanılırsa, AKRB grafiğinde turuncu bir nokta görünür.
 
@@ -41,9 +37,7 @@ AAPS, bir önceki öğünden AKRB ile bolus yapmak üzereyseniz, algoritma mevcu
 
 Normalde AAPS, karbonhidrat emilimini KŞ sapmaları yoluyla tespit eder. Karbonhidratları girdiyseniz, ancak AAPS bunların KŞ sapmaları aracılığıyla tahmini emilimini göremezse, bunun yerine emilimi hesaplamak için [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) yöntemini kullanır. ('fallback' olarak adlandırılır). Bu yöntem, KŞ sapmalarını dikkate almadan yalnızca minimum karbonhidrat emilimini hesapladığı için yanlış AKRB değerlerine yol açabilir.
 
-```{image} ../images/Calculator_SlowCarbAbsorption.png
-:alt: Yanlış AKRB değerine ilişkin ipucu
-```
+![Yanlış AKRB değerine ilişkin ipucu](../images/Calculator_SlowCarbAbsorption.png)
 
 Yukarıdaki ekran görüntüsünde, karbonhidrat emiliminin %41'i sapmalardan tespit edilen değer yerine min_5m_carbimpact tarafından matematiksel olarak hesaplanmıştır.  Bu, belki de algoritma tarafından hesaplanandan daha az aktif karbonhidratınız olduğu anlamına gelir.
 

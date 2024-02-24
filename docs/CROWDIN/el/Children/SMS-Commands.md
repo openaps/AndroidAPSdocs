@@ -10,9 +10,7 @@
 
 ## Ρύθμιση εντολών μηνυμάτων (SMS commands)
 
-```{image} ../images/SMSCommandsSetup.png
-:alt: Ρύθμιση εντολών μηνυμάτων
-```
+![Ρύθμιση εντολών μηνυμάτων](../images/SMSCommandsSetup.png)
 
 - Most of the adjustments of temp targets, following AAPS etc. can be done on [AAPSClient app](../Children/Children.md) on an Android phone with an internet connection.
 - Δεν μπορείτε να χορηγήσετε δόση ινσουλίνης μέσω του Nightscout, αλλά μπορείτε μέσω μηνυμάτων SMS.
@@ -100,9 +98,7 @@
 
 Οι εντολές πρέπει να στέλνονται στα αγγλικά, η απάντηση θα είναι στη γλώσσα σας αν οι απαντήσεις είναι ήδη [μεταφρασμένες](translations-translate-strings-for-AAPS-app).
 
-```{image} ../images/SMSCommands.png
-:alt: Παράδειγμα εντολών μηνυμάτων
-```
+![Παράδειγμα εντολών μηνυμάτων](../images/SMSCommands.png)
 
 ### Κύκλωμα
 
@@ -185,9 +181,7 @@ If the other app is installed on multiple phones make sure to deactivate upload 
 
 There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabling 'send as chat message'.
 
-```{image} ../images/SMSdisableChat.png
-:alt: Disable SMS as chat message
-```
+![Disable SMS as chat message](../images/SMSdisableChat.png)
 ### Android Messages App
 
 If you are having issues sending or receiving SMS commands with the Android Messages app disable end-to-end ecryption on both caregiver and child's phones.

@@ -87,21 +87,15 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-```{image} ../images/sign_stop.png
-:alt: Stop sign
-```
+![Stop sign](../images/sign_stop.png)
 
 ### עצרו כאן אם אתם משתמשים במשאבה וירטואלית - אל תלחצו על "אמת" לסיום משימה זו.
 
-```{image} ../images/blank.png
-:alt: blank
-```
+![blank](../images/blank.png)
 
 ## משימה 6: מתחילים לסגור לולאה עם השהיה עקב ערך סוכר נמוך
 
-```{image} ../images/sign_warning.png
-:alt: Warning sign
-```
+![Warning sign](../images/sign_warning.png)
 
 ### הלולאה הסגורה שבמשימה 6 לא תתקן ערכי סוכר גבוהים כי היא מוגבלת להפסקת הזרקת אינסולין כתיקון לסוכר נמוך. עליכם לתקן סוכר גבוה ידנית בעצמכם!
 
@@ -165,6 +159,4 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 אם ברצונכם לחזור על משימה מכל סיבה שהיא, ניתן לעשות זאת ע"י לחיצה על "ביטול השלמה".
 
-```{image} ../images/Objective_ClearFinished.png
-:alt: Go back in objectives
-```
+![Go back in objectives](../images/Objective_ClearFinished.png)

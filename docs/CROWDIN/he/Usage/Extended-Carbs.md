@@ -15,21 +15,15 @@
 
 To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
 
-```{image} ../images/eCarbs_Dialog.png
-:alt: הזנת פחמימות
-```
+![הזנת פחמימות](../images/eCarbs_Dialog.png)
 
 פחמימות ממושכות בלשונית סקירה כללית, שימו לב לפחמימות בסוגריים בשדה הפחמימות, המציג את הפחמימות העתידיות:
 
-```{image} ../images/eCarbs_Graph.png
-:alt: eCarbs in graph
-```
+![eCarbs in graph](../images/eCarbs_Graph.png)
 
 ערכים של פחמימות עתידיות נצבעים בכתום כהה בלשונית הטיפולים:
 
-```{image} ../images/eCarbs_Treatment.png
-:alt: eCarbs in future in treatment tab
-```
+![eCarbs in future in treatment tab](../images/eCarbs_Treatment.png)
 
 ______________________________________________________________________
 
@@ -61,9 +55,7 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 - Bolus units, remaining and total time will be shown on homescreen.
 - On Insight pump extended bolus is *not available* if [TBR emulation](Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
-```{image} ../images/ExtendedBolus2_6.png
-:alt: Extended bolus in AAPS 2.6
-```
+![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 
 (Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### הסיבה לכך שבולוסים מושהים לא יעבדו בלולאה סגורה

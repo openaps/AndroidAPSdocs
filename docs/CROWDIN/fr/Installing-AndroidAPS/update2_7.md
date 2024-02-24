@@ -12,9 +12,7 @@
 - Faites défiler vers le bas jusqu'à "Source des glycémies".
 - Sélectionnez la bonne source de glycémie si des changements sont nécessaires.
 
-```{image} ../images/ConfBuild_BG.png
-:alt: source Gly
-```
+![source Gly](../images/ConfBuild_BG.png)
 
 ## Terminer les objectifs
 
@@ -31,9 +29,7 @@
 - Cliquez sur " Mot de passe principal "
 - Entrez le mot de passe, confirmez le et cliquez sur OK.
 
-```{image} ../images/MasterPW.png
-:alt: Définir le mot de passe principal
-```
+![Définir le mot de passe principal](../images/MasterPW.png)
 
 ## Exporter les paramètres
 
@@ -59,8 +55,6 @@
 - Cliquez sur "Mot de passe pompe (v1 uniquement)"
 - Entrez le mot de passe de la pompe (Le [mot de passe par défaut](DanaRS-Insulin-Pump-default-password) est différent selon la version du firmware) et cliquez sur OK.
 
-```{image} ../images/DanaRSPW.png
-:alt: Définir le mot de passe Dana RS
-```
+![Définir le mot de passe Dana RS](../images/DanaRSPW.png)
 
 Pour changer le mot de passe sur Dana RS, suivez les instructions sur la [page DanaRS](DanaRS-Insulin-Pump-change-password-on-pump).

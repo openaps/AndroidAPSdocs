@@ -1,8 +1,6 @@
 # Volgen op afstand
 
-```{image} ../images/KidsMonitoring.png
-:alt: Kinderen volgen
-```
+![Kinderen volgen](../images/KidsMonitoring.png)
 
 AAPS offer several options for remote monitoring of children and also allows to send remote commands. Of course you can also use remote monitoring to follow your partner or friend.
 

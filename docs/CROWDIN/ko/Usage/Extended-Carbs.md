@@ -15,21 +15,15 @@ eCarbs(확장 탄수화물) 는 여러 시간에 걸쳐 나뉜 탄수화물양�
 
 To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
 
-```{image} ../images/eCarbs_Dialog.png
-:alt: 탄수화물 입력
-```
+![탄수화물 입력](../images/eCarbs_Dialog.png)
 
 홈 탭의 eCarbs는 COB 항목에서 괄호안의 수치로 향후 소화될 탄수화물의 양을 보여준다.
 
-```{image} ../images/eCarbs_Graph.png
-:alt: 그래프에서 eCarbs
-```
+![그래프에서 eCarbs](../images/eCarbs_Graph.png)
 
 향후 소화될 탄수화물 양은 관리 탭에서 진한 오렌지 색으로 표시된다.
 
-```{image} ../images/eCarbs_Treatment.png
-:alt: 관리 탭에서 eCarbs
-```
+![관리 탭에서 eCarbs](../images/eCarbs_Treatment.png)
 
 ______________________________________________________________________
 
@@ -61,9 +55,7 @@ That's why as of version 2.6 there is an option for an extended bolus for users 
 - Bolus units, remaining and total time will be shown on homescreen.
 - On Insight pump extended bolus is *not available* if [TBR emulation](Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
-```{image} ../images/ExtendedBolus2_6.png
-:alt: Extended bolus in AAPS 2.6
-```
+![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 
 (Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Why extended boluses won't work in a closed loop environment

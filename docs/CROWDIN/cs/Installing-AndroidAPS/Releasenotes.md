@@ -5,9 +5,7 @@ Please follow the instructions in the [update manual](../Installing-AndroidAPS/U
 
 Jakmile bude k dispozici nová aktualizace, obdržíte následující informace:
 
-```{image} ../images/AAPS_LoopDisable90days.png
-:alt: Update info
-```
+![Update info](../images/AAPS_LoopDisable90days.png)
 
 Pak máte 60 dnů na aktualizaci. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../Getting-Started/Glossary.md)) as in [objective 6](../Usage/Objectives.html).
 

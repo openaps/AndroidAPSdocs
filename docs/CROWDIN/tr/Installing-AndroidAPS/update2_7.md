@@ -12,9 +12,7 @@
 - "KŞ kaynağı"na ilerleyin.
 - Değişiklik gerekliyse doğru KŞ kaynağını seçin.
 
-```{image} ../images/ConfBuild_BG.png
-:alt: KŞ kaynağı
-```
+![KŞ kaynağı](../images/ConfBuild_BG.png)
 
 ## Sınavı bitir
 
@@ -31,9 +29,7 @@
 - "Ana-Parola" ya tıklayın
 - Parolayı girin, onaylayın ve Tamam'a tıklayın.
 
-```{image} ../images/MasterPW.png
-:alt: Ana parola tanımlama
-```
+![Ana parola tanımlama](../images/MasterPW.png)
 
 ## Dışa aktarma ayarları
 
@@ -59,8 +55,6 @@
 - "Pompa şifresi (yalnızca v1)"e tıklayın
 - Pompa parolasını girin ([Varsayılan parola](DanaRS-Insulin-Pump-default-password) aygıt yazılımı sürümüne göre farklıdır) ve Tamam'ı tıklayın.
 
-```{image} ../images/DanaRSPW.png
-:alt: Dana RS şifresini ayarlayın
-```
+![Dana RS şifresini ayarlayın](../images/DanaRSPW.png)
 
 Dana RS'de şifreyi değiştirmek için [DanaRS sayfasındaki](DanaRS-Insulin-Pump-change-password-on-pump) talimatları izleyin.

@@ -29,9 +29,7 @@ Nightscout URL'niz veya API secret şifreniz gibi gizli veya özel bilgileriniz 
 3. Dişli çark düğmesini kullanarak ayarını açın. Yüklemeyi telefonun Wi-Fi kullandığı ve/veya şarj olduğu zamanlara sınırlayabilirsiniz.
 4. Open Humans eklentisini açın (OH sekmesinden veya hamburger menüsünden) ve 'GİRİŞ'e tıklayın.
 
-```{image} ../images/OHUploader1.png
-:alt: Open Humans Konfigürasyon Ayarları
-```
+![Open Humans Konfigürasyon Ayarları](../images/OHUploader1.png)
 
 5. Open Humans Uploader hakkında verilen bilgileri ve kullanım koşullarını dikkatlice okuyun.
 6. Kutuyu işaretleyerek onaylayın ve 'GİRİŞ'e tıklayın.
@@ -39,9 +37,7 @@ Nightscout URL'niz veya API secret şifreniz gibi gizli veya özel bilgileriniz 
 8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
 9. 'Projeyi yetkilendir' düğmesine tıklayın.
 
-```{image} ../images/OHUploader2.png
-:alt: Open Humans Kullanım Koşulları + Giriş
-```
+![Open Humans Kullanım Koşulları + Giriş](../images/OHUploader2.png)
 
 10. AAPS'ye geri döndüğünüzde, girişin başarılı olduğunu belirten bir istem göreceksiniz.
 11. Kurulumun tamamlanması için Open Humans Uploader eklentisini ve telefonu açık tutun.
@@ -49,15 +45,11 @@ Nightscout URL'niz veya API secret şifreniz gibi gizli veya özel bilgileriniz 
 13. Open Humans'a veri yüklemeyi durdurmak istiyorsanız 'ÇIKIŞ'ı tıklayın.
 14. Android bildirimi, yüklemeyi çalıştırma hakkında sizi bilgilendirecektir.
 
-```{image} ../images/OHUploader3.png
-:alt: Open Humans kurulumu bitir
-```
+![Open Humans kurulumu bitir](../images/OHUploader3.png)
 
 15. Verilerinizi [ Open Humans Web Sitesi ](https://www.openhumans.org) 'ne giriş yaparak yönetebilirsiniz.
 
-```{image} ../images/OHWeb.png
-:alt: Open Humans verilerinizi yönetin
-```
+![Open Humans verilerinizi yönetin](../images/OHWeb.png)
 
 ## Verilerinizi paylaşmanın yolları
 

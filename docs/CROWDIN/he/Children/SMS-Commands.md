@@ -10,9 +10,7 @@
 
 ## Setup SMS commands
 
-```{image} ../images/SMSCommandsSetup.png
-:alt: SMS Commands Setup
-```
+![SMS Commands Setup](../images/SMSCommandsSetup.png)
 
 - Most of the adjustments of temp targets, following AAPS etc. can be done on [AAPSClient app](../Children/Children.md) on an Android phone with an internet connection.
 - Boluses can't be given through Nightscout, but you can use SMS commands.
@@ -100,9 +98,7 @@
 
 Commands must be sent in English, the response will be in your local language if the response string is already [translated](translations-translate-strings-for-AAPS-app).
 
-```{image} ../images/SMSCommands.png
-:alt: SMS Commands Example
-```
+![SMS Commands Example](../images/SMSCommands.png)
 
 ### לולאה
 
@@ -185,9 +181,7 @@ If the other app is installed on multiple phones make sure to deactivate upload 
 
 There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabling 'send as chat message'.
 
-```{image} ../images/SMSdisableChat.png
-:alt: Disable SMS as chat message
-```
+![Disable SMS as chat message](../images/SMSdisableChat.png)
 ### Android Messages App
 
 If you are having issues sending or receiving SMS commands with the Android Messages app disable end-to-end ecryption on both caregiver and child's phones.

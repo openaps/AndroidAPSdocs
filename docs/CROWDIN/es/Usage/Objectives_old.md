@@ -87,21 +87,15 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-```{image} ../images/sign_stop.png
-:alt: Señal de parada
-```
+![Señal de parada](../images/sign_stop.png)
 
 ### Parar aquí si usted está lazo abierto con una bomba virtual - no haga clic en Comprobar al final de este objetivo.
 
-```{image} ../images/blank.png
-:alt: en blanco
-```
+![en blanco](../images/blank.png)
 
 ## Objetivo 6: Empezando a cerrar el lazo con Baja Glucosa Suspender
 
-```{image} ../images/sign_warning.png
-:alt: Señal de advertencia
-```
+![Señal de advertencia](../images/sign_warning.png)
 
 ### El lazo cerrado no corregirá los valores de bg alto en el objetivo 6, ya que se limita a la suspensión por baja glucosa. ¡Los valores altos de BG tienen que ser corregidos manualmente por usted!
 
@@ -165,6 +159,4 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 If you want to go back in objectives for whatever reason you can do so by clicking at "clear finished".
 
-```{image} ../images/Objective_ClearFinished.png
-:alt: Go back in objectives
-```
+![Go back in objectives](../images/Objective_ClearFinished.png)

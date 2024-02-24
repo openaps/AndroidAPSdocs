@@ -87,21 +87,15 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-```{image} ../images/sign_stop.png
-:alt: Stop sign
-```
+![Stop sign](../images/sign_stop.png)
 
 ### Stop here if you are open looping with a virtual pump - do not click Verify at the end of this objective.
 
-```{image} ../images/blank.png
-:alt: blank
-```
+![blank](../images/blank.png)
 
 ## Objective 6: Starting to close the loop with Low Glucose Suspend
 
-```{image} ../images/sign_warning.png
-:alt: Warning sign
-```
+![Warning sign](../images/sign_warning.png)
 
 ### Closed loop will not correct high bg values in objective 6 as it is limited to low glucose suspend. High bg values have to be corrected manually by you!
 
@@ -165,6 +159,4 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 If you want to go back in objectives for whatever reason you can do so by clicking at "clear finished".
 
-```{image} ../images/Objective_ClearFinished.png
-:alt: Go back in objectives
-```
+![Go back in objectives](../images/Objective_ClearFinished.png)

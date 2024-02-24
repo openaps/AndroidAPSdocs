@@ -125,26 +125,20 @@ You may want to experiment with adjusting your targets being in a tighter range 
 
 You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-```{image} ../images/sign_stop.png
-:alt: Stop sign
-```
+![Stop sign](../images/sign_stop.png)
 
 :::{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 
 If you are open looping with a virtual pump stop here. Only click verify at the end of this Objective once you have changed to using a "real" physical pump.
 :::
 
-```{image} ../images/blank.png
-:alt: blank
-```
+![blank](../images/blank.png)
 
 (Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)=
 
 ## Objectif 6 : Démarrage de la boucle fermée avec le système AGB ( Arrêt pour Glycémie Basse )
 
-```{image} ../images/sign_warning.png
-:alt: Warning sign
-```
+![Warning sign](../images/sign_warning.png)
 
 :::{admonition}  Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend only!
 :class: Note
@@ -167,9 +161,7 @@ This means that when you are on Objective 6, if sensor glucose levels are droppi
 
 - If your basal IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in objective 6.
 
-```{image} ../images/Objective6_negIOB.png
-:alt: Exemple IA négative
-```
+![Exemple IA négative](../images/Objective6_negIOB.png)
 
 - Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
 - Enable 'Low Glucose Suspend' mode by pressing and holding the Loop icon at the top right corner of the OVERVIEW screen and selecting the Loop - LGS mode icon.
@@ -190,9 +182,7 @@ Estimated time to complete this objective: 1 day.
 
 Cette recommandation doit être considérée comme un point de départ. If you set it to the 3x and you are seeing AAPS giving too much insulin as glucose levels rise, then lower the "Maximum total IOB OpenAPS can’t go over" value. Alternatively, if you are very resistant, raise it very cautiously.
 
-```{image} ../images/MaxDailyBasal2.png
-:alt: max daily basal
-```
+![max daily basal](../images/MaxDailyBasal2.png)
 
 - Once confident on how much IOB suits your looping patterns, reduce your targets to your desired level.
 
@@ -257,9 +247,7 @@ You have to start **Objective 10** to be able to use Automations.
 
 If you want to go back in **objectives** progress for whatever reason you can do so by clicking at "clear finished".
 
-```{image} ../images/Objective_ClearFinished.png
-:alt: Retour arrières objectifs
-```
+![Retour arrières objectifs](../images/Objective_ClearFinished.png)
 
 ## Objectifs dans Android APS avant la version 3.0
 

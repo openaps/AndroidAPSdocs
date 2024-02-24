@@ -40,9 +40,7 @@ Upper and lower case is irrelevant when sending commands.
 
 Commands must be send in English, response will be in your local language if the response string is already [translated](../translations#translate-strings-for-androidaps-app).
 
-```{image} ../images/SMSCommands.png
-:alt: SMS Commands Example
-```
+![SMS Commands Example](../images/SMSCommands.png)
 
 ### Loop
 
@@ -143,6 +141,4 @@ If the other app is installed on multiple phones make sure to deactive upload on
 
 There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
 
-```{image} ../images/SMSdisableChat.png
-:alt: Disable SMS as chat message
-```
+![Disable SMS as chat message](../images/SMSdisableChat.png)

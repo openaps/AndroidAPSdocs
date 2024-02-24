@@ -1,8 +1,6 @@
 # Monitoramento Remoto
 
-```{image} ../images/KidsMonitoring.png
-:alt: Monitoring children
-```
+![Monitoring children](../images/KidsMonitoring.png)
 
 AAPS offer several options for remote monitoring of children and also allows to send remote commands. Of course you can also use remote monitoring to follow your partner or friend.
 

@@ -15,9 +15,7 @@ Make sure that you can call git.exe without the prefing path as Android Studio n
 
 ```
 
-```{image} ../images/Update_GitPath.png
-:alt: Git installation path
-```
+![Git installation path](../images/Update_GitPath.png)
 
 ### 2. הגדירו נתיב git ב-Android Studio
 

@@ -96,22 +96,16 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-```{image} ../images/sign_stop.png
-:alt: Stop sign
-```
+![Stop sign](../images/sign_stop.png)
 
 ### Stop here if you are open looping with a virtual pump - do not click Verify at the end of this objective.
 
-```{image} ../images/blank.png
-:alt: blank
-```
+![blank](../images/blank.png)
 
 (Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)=
 ## Objective 6: Starting to close the loop with Low Glucose Suspend
 
-```{image} ../images/sign_warning.png
-:alt: Warning sign
-```
+![Warning sign](../images/sign_warning.png)
 
 ### Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend. High BG values have to be corrected manually by you!
 
@@ -120,9 +114,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 - The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you. If blood glucose is rising then it will only increase basal if the basal IOB is negative from a previous Low Glucose Suspend. Otherwise basal rates will remain the same as your selected profile. **That means that you have to manually handle high values with insulin corrections.**
 - If your basal IOB is negative (see screenshot below) a TBR > 100% can be issued also in objective 6.
 
-```{image} ../images/Objective6_negIOB.png
-:alt: Example negative IOB
-```
+![Example negative IOB](../images/Objective6_negIOB.png)
 
 - Set your target range slightly higher than you usually aim for, just to be safe and have a bit more scurity buffer.
 - Enable 'Low Glucose Suspend' mode either by by pressing and holding the Loop icon at the top right corner of the home screen and selecting the Loop - LGS mode icon.
@@ -176,9 +168,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 If you want to go back in objectives for whatever reason you can do so by clicking at "clear finished".
 
-```{image} ../images/Objective_ClearFinished.png
-:alt: Go back in objectives
-```
+![Go back in objectives](../images/Objective_ClearFinished.png)
 
 ## Objectives in Android APS before version 3.0
 

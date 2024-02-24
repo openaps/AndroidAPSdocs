@@ -17,17 +17,13 @@ Carbs will also be absorbed via the methods described below based on what sensit
 
 Niet-opgenomen koolhydraten worden afgekapt (naar nul) na bepaalde tijd.
 
-```{image} ../images/cob_oref0_orange_II.png
-:alt: Oref1
-```
+![Oref1](../images/cob_oref0_orange_II.png)
 
 ### AAPS, Gewogen gemiddelde
 
 absorption is calculated to have `COB == 0` after specified time
 
-```{image} ../images/cob_aaps2_orange_II.png
-:alt: AAPS, Gewogen gemiddelde
-```
+![AAPS, Gewogen gemiddelde](../images/cob_aaps2_orange_II.png)
 
 Als de door jou ingestelde minimale koolhydraten absorptie (min_5min_carbimpact) wordt gebruikt in plaats van de waarde berekend op basis van afwijkingen, verschijnt een oranje stip op jouw COB grafiek.
 
@@ -41,9 +37,7 @@ AAPS waarschuwt je als je op het punt staat om een bolus te gaan geven wanneer j
 
 Normaalgesproken detecteert AAPS carb absorptie dmv BG afwijkingen. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called 'fallback'). Aangezien deze methode slechts de minimale koolhydraten absorptie berekent zonder rekening te houden met BG afwijkingen, kan dit leiden tot onjuiste COB waarden.
 
-```{image} ../images/Calculator_SlowCarbAbsorption.png
-:alt: Detectie van verkeerde COB waarden
-```
+![Detectie van verkeerde COB waarden](../images/Calculator_SlowCarbAbsorption.png)
 
 In de bovenstaand screenshot werd bij het berekenen van de koolhydraat absorptie 41% van de tijd de min_5m_carbimpact gebruikt, in plaats van de waarde die is gedetecteerd dmv afwijkingen.  Dit betekent dat je misschien minder koolhydraten aan boord hebt dan berekend door het algoritme.
 

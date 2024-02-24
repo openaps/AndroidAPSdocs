@@ -32,9 +32,7 @@
 (Preferences-general)=
 ## General
 
-```{image} ../images/Pref2020_General.png
-:alt: Preferences > General
-```
+![Preferences > General](../images/Pref2020_General.png)
 
 **Units**
 
@@ -58,9 +56,7 @@
 
 (Preferences-master-password)=
 
-```{image} ../images/Pref2020_General2.png
-:alt: Preferences > General - Protection
-```
+![Preferences > General - Protection](../images/Pref2020_General2.png)
 
 #### Parola principală
 
@@ -262,9 +258,7 @@
 (Preferences-advanced-settings-overview)=
 ### Setări avansate (Privire generală)
 
-```{image} ../images/Pref2021_OV_Adv.png
-:alt: Preferences > Advanced Settings
-```
+![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
 
 (Preferences-superbolus)=
 #### Superbolus
@@ -410,9 +404,7 @@ Când te vei simți confortabil, poti permite sistemului să înceapă livrarea 
 
 ## Setări absorbție
 
-```{image} ../images/Pref2020_Absorption.png
-:alt: Setări pentru absorbţie
-```
+![Setări pentru absorbţie](../images/Pref2020_Absorption.png)
 
 ### min_5m_carbimpact
 
@@ -460,9 +452,7 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 (Preferences-nsclient)=
 ## Client NS
 
-```{image} ../images/Pref2020_NSClient.png
-:alt: NSClient
-```
+![NSClient](../images/Pref2020_NSClient.png)
 
 Original communication protocol, can be used with older Nightscout versions.
 
@@ -474,9 +464,7 @@ Original communication protocol, can be used with older Nightscout versions.
 
 ## NSClientV3
 
-```{image} ../images/Pref2024_NSClientV3.png
-:alt: NSClientV3
-```
+![NSClientV3](../images/Pref2024_NSClientV3.png)
 
 [New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
@@ -499,9 +487,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Opțiuni alarmare
 
-```{image} ../images/Pref2024_NSClient_Alarms.png
-:alt: Alarm options
-```
+![Alarm options](../images/Pref2024_NSClient_Alarms.png)
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. AAPS will alarm when a Nightscout alarms trigger.
   - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -512,9 +498,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Setări conexiune
 
-```{image} ../images/ConfBuild_ConnectionSettings.png
-:alt: NSClient setări de conexiune
-```
+![NSClient setări de conexiune](../images/ConfBuild_ConnectionSettings.png)
 
 - Connection settings define when Nightscout connection will be enabled.
 - Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
@@ -525,9 +509,7 @@ You can select which data you want to [upload and download to or from Nightscout
 (Preferences-advanced-settings-nsclient)=
 ### Setări avansate (NSClient)
 
-```{image} ../images/Pref2024_NSClientAdv.png
-:alt: Setări avansate NS Client
-```
+![Setări avansate NS Client](../images/Pref2024_NSClientAdv.png)
 
 Options in advanced settings are self-explanatory.
 
@@ -548,25 +530,19 @@ Selectaţi ce serviciu de locaţie va fi folosit:
 
 ## Alerte locale
 
-```{image} ../images/Pref2020_LocalAlerts.png
-:alt: Alerte locale
-```
+![Alerte locale](../images/Pref2020_LocalAlerts.png)
 
 - Settings should be self-explanatory.
 
 ## Selecție date
 
-```{image} ../images/Pref2020_DataChoice.png
-:alt: Selecție date
-```
+![Selecție date](../images/Pref2020_DataChoice.png)
 
 - You can help develop AAPS further by sending crash reports to the developers.
 
 ## Setări Întreţinere
 
-```{image} ../images/Pref2020_Maintenance.png
-:alt: Setări Întreţinere
-```
+![Setări Întreţinere](../images/Pref2020_Maintenance.png)
 
 - Standard recipient of logs is <logs@androidaps.org>.
 - If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). În acest caz, parola principală trebuie să fie introdusă de fiecare dată când setările sunt exportate sau importate.

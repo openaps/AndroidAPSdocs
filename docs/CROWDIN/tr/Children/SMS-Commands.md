@@ -10,9 +10,7 @@
 
 ## SMS Komutları kurulumu
 
-```{image} ../images/SMSCommandsSetup.png
-:alt: SMS Komutları kurulumu
-```
+![SMS Komutları kurulumu](../images/SMSCommandsSetup.png)
 
 - Most of the adjustments of temp targets, following AAPS etc. can be done on [AAPSClient app](../Children/Children.md) on an Android phone with an internet connection.
 - Boluslar Nightscout üzerinden verilemez, ancak SMS komutlarını kullanabilirsiniz.
@@ -100,9 +98,7 @@
 
 Komutlar İngilizce olarak gönderilmelidir, yanıt dizesi ise programınızın bu kısmı [tercüme edilmiş ](translations-translate-strings-for-AAPS-app) ise yerel dilinizde olacaktır.
 
-```{image} ../images/SMSCommands.png
-:alt: Örnek SMS Komutları
-```
+![Örnek SMS Komutları](../images/SMSCommands.png)
 
 ### Döngü
 
@@ -185,9 +181,7 @@ Diğer uygulama birden fazla telefona yüklenmişse, hepsinde yüklemeyi devre d
 
 Galaxy S10 telefonundaki bir güncellemeden sonra SMS komutlarının çalışmadığına dair bir rapor mevcuttur. Telefon ayarlarından 'send as chat message' devre dışı bırakılarak çözülebilir.
 
-```{image} ../images/SMSdisableChat.png
-:alt: SMS as chat message devre dışı
-```
+![SMS as chat message devre dışı](../images/SMSdisableChat.png)
 ### Android Mesajları Uygulaması
 
 Android Mesaj uygulamasıyla SMS komutları gönderip alırken sorun yaşıyorsanız, hem ebeveyn hem de çocuğun telefonlarında uçtan uca şifrelemeyi devre dışı bırakın.
