@@ -1,0 +1,13 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": ["bunx"],
+  "ignorePaths": [
+    "**/node_modules/**/*",
+    "pnpm-lock.yaml",
+    ".gitignore",
+    ".git/**/*",
+    ".cspell.json",
+    "docs/CROWDIN/**/*"
+  ]
+}
