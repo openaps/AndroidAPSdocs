@@ -1,12 +1,13 @@
 import { defineConfig } from "vitepress";
 import { en } from "./en";
+import { de } from "./de";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "AndroidAPS",
 
   // TODO
-  srcDir: "test",
+  srcDir: "docs/content/",
   ignoreDeadLinks: true,
 
   lastUpdated: true,
@@ -64,17 +65,24 @@ export default defineConfig({
   },
 
   locales: {
-    root: { label: "English", ...en },
+    root: {
+      label: "English",
+      lang: "en",
+      link: "/en/",
+      ...en,
+    },
     de: {
       label: "Deutsch",
       lang: "de",
-      // link: "/de/",
+      link: "/de/",
+      ...de,
     },
-    zh: {
-      label: "简体中文",
-      lang: "zh",
-      // link: "/zh/",
-    },
+    // fr: {
+    //   label: "Français",
+    //   lang: "fr",
+    //   link: "/fr/",
+    //   ...en,
+    // },
   },
 
   vite: {

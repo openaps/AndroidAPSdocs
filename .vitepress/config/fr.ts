@@ -1,13 +1,13 @@
 import { defineConfig } from "vitepress";
 
 export const en = defineConfig({
-  lang: "en-US",
+  lang: "fr",
   description: "Opensource automated insulin delivery system (closed loop)",
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: "Getting started", link: "/en/introduction" },
+      { text: "Getting started", link: "/fr/introduction" },
       { text: "FAQ", link: "/" },
       {
         text: "Resources",
@@ -31,7 +31,7 @@ export const en = defineConfig({
     sidebar: [
       {
         text: "Home",
-        link: "/en/welcome",
+        link: "/fr/welcome",
       },
       {
         text: "Getting Started",
@@ -39,7 +39,7 @@ export const en = defineConfig({
         items: [
           {
             text: "Introduction", // What is AndroidAPS and what can it do?
-            link: "/en/introduction",
+            link: "/fr/introduction",
           },
           {
             text: "Preparing", // What do I need to get started?

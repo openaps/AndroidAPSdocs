@@ -1,13 +1,13 @@
 import { defineConfig } from "vitepress";
 
-export const en = defineConfig({
-  lang: "en-US",
-  description: "Opensource automated insulin delivery system (closed loop)",
+export const de = defineConfig({
+  lang: "de",
+  description: "Automatische OpenSource Insulin Abgabe System (closed loop)",
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: "Getting started", link: "/en/introduction" },
+      { text: "Erste Schritte", link: "/de/introduction" },
       { text: "FAQ", link: "/" },
       {
         text: "Resources",
@@ -30,23 +30,23 @@ export const en = defineConfig({
 
     sidebar: [
       {
-        text: "Home",
-        link: "/en/welcome",
+        text: "Start",
+        link: "/de/welcome",
       },
       {
-        text: "Getting Started",
+        text: "Erste Schritte",
         collapsed: false,
         items: [
           {
-            text: "Introduction", // What is AndroidAPS and what can it do?
-            link: "/en/introduction",
+            text: "Einleitung", // What is AndroidAPS and what can it do?
+            link: "/de/introduction",
           },
           {
-            text: "Preparing", // What do I need to get started?
+            text: "Vorbereitung", // What do I need to get started?
             link: "",
           },
           {
-            text: "Components setup",
+            text: "Komponenten einrichten",
             collapsed: true,
             items: [
               {
@@ -54,15 +54,15 @@ export const en = defineConfig({
                 link: "",
               },
               {
-                text: "xDrip Settings",
+                text: "xDrip Einstellungen",
                 link: "",
               },
               {
-                text: "Pump",
+                text: "Pumpe",
                 link: "",
               },
               {
-                text: "Phone",
+                text: "Smartphone",
                 link: "",
               },
               {
@@ -72,31 +72,31 @@ export const en = defineConfig({
             ],
           },
           {
-            text: "Building AAPS",
+            text: "AAPS bauen",
             link: "",
           },
           {
-            text: "Initial setup",
+            text: "Initiale Einrichtung",
             link: "",
           },
           {
-            text: "Towards closed loop", // completing the objectives
+            text: "Zum closed loop system", // completing the objectives
             link: "",
           },
         ],
       },
       {
-        text: "AAPS Usage",
+        text: "AAPS Benutzung",
         collapsed: true,
         items: [],
       },
       {
-        text: "Advanced Topics",
+        text: "Fortgeschrittene Theme",
         collapsed: true,
         items: [],
       },
       {
-        text: "Troubleshooting",
+        text: "Fehlerbehebung",
         collapsed: true,
         items: [],
       },
@@ -110,11 +110,11 @@ export const en = defineConfig({
         collapsed: true,
         items: [
           {
-            text: "Where to find help",
+            text: "Wie du Hilfe bekommst",
             items: [],
           },
           {
-            text: "Contributing",
+            text: "Beitragen",
             collapsed: true,
             items: [],
           },
@@ -125,11 +125,11 @@ export const en = defineConfig({
     editLink: {
       pattern:
         "https://github.com/openaps/AndroidAPSdocs/edit/master/docs/EN/:path",
-      text: "Edit this page",
+      text: "Bearbeite diese Seite",
     },
 
     footer: {
-      message: "Released under the AGPL-3.0 License.",
+      message: "Veröffentlicht unter der AGPL-3.0 Lizenz.",
       copyright: "© Copyright AndroidAPS community",
     },
   },
