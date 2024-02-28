@@ -504,10 +504,10 @@
 ```
 
 - Опции звуковых оповещений позволяют выбрать оповещения Nightscout по умолчанию для использования через приложение. AAPS будет подавать звуковые сигналы при срабатывании оповещений Nightscout.
-  - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-  - They will only work whilst you have a connection to Nightscout and are intended for parent/caregivers.
-  - If you have the CGM source on your phone (i.e. xDrip+ or BYODA) then use those alarms instead of Nightscout Alarms.
-- Create notifications from Nightscout [announcements](https://nightscout.github.io/nightscout/discover/#announcement) will echo Nightscout announcements in the AAPS notifications bar.
+  - Для того, чтобы работали оповещения, следует настроить значения переменных для Чрезвычайно Высокой, Высокой, Низкой и Чрезвычайно Низкой ГК в переменных [Nightscout](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+  - Они будут работать только во время подключения к Nightscout и предназначены для родителей/опекунов.
+  - Если на телефоне есть источник мониторинга CGM (например xDrip+ или самостоятельно собранное приложение BYODA), то используйте сигналы этих приложений вместо оповещений Nightscout.
+- [Оповещения ](https://nightscout.github.io/nightscout/discover/#announcement)Nightscout при соответствующих настройках будут повторяться в строке уведомлений AAPS.
 - Вы можете изменять порог срабатывания оповещений при отсутствии данных от Nightscout в течение определенного времени.
 
 ### Параметры подключения
