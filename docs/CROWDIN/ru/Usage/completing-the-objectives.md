@@ -77,26 +77,26 @@
 
 ## Цель 4: Начните с открытого цикла
 
-The purpose of this objective is to recognise how often **AAPS** will evaluate the basal rate's impact on glucose levels, and recommend temporary basal rate adjustments. As part of this objective, you will activate open looping for the first time, and will perform 20 proposed temporary basal rate changes manually on your pump. Furthermore, you will observe temporary and default temporary targets' impact (_e.g._ for activity or hypo treatments). If you are not familiar with setting a temporay basal rate change in **AAPS** yet, please refer to the [ACTIONS tab](Screenshots#Screenshots-action-tab).
+Эта цель обучения нужна, чтобы показать, как часто **AAPS** будет оценивать влияние базальной дозы на уровень гликемии и как часто он рекомендует изменить базальную скорость. В рамках этой цели обучения вы впервые активируете открытый цикл, и вручную смените скорость временного базала до 20 раз. Кроме того, вы увидите влияние временных целей и Временных Целей По Умолчанию (например, при физической нагрузке или гипотерапии). Если вы еще не знакомы со сменой временной базальной скорости в **AAPS**, обратитесь к [вкладке ДЕЙСТВИЯ](Screenshots#Screenshots-action-tab).
 
-Estimated time to complete this objective: **7 days**. This is a mandatory wait time. You can't proceed to the next Objective, even if you enacted all basal rate changes already.
+Расчетное время для прохождения этой цели: **7 дней**. Это обязательное время ожидания. Вы не сможете перейти к следующей цели раньше, даже если выполнили все изменения базальной скорости.
 
-- Select Open Loop either from the "Preferences" menu or by presssing and holding the Loop icon on the top left of the OVERVIEW screen.
-- Walk through the [Preferences](../Configuration/Preferences.md) to set it up for you (scroll down to "Loop/APS Mode" and select "Open Loop".
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; key them into your (physical) pump and confirm in AAPS that you have accepted them. Ensure these basal rate adjustments show up in AAPS and Nightscout.
-- Enable [temp targets](../Usage/temptarget.md) if necessary. After treating a hypo use hypo temp targets to prevent the system from overcorrecting upon the bounce back.
+- Выберите «ОТКРЫТЫЙ ЦИКЛ» либо в меню «Настройки», либо нажав и удерживая значок «Цикл» в левой верхней части экрана НАЧАЛО.
+- Просмотрите [Настройки](../Configuration/Preferences.md), чтобы настроить его для себя (прокрутите вниз до «Режим APS» и выберите «ОТКРЫТЫЙ ЦИКЛ».
+- Вручную активируйте по крайней мере 20 предложений временного базала на протяжении 7 дней, введите их в помпу (физическую) и подтвердите в AAPS что вы их приняли. Убедитесь, что эти изменения базальной дозы отображаются в AAPS и Nightscout.
+- При необходимости включите [временные Цели](../Usage/temptarget.md). После купирования гипогликемии используйте Временную Цель Гипо, чтобы предотвратить чрезмерную коррекцию системы при откате (при постгипогликемической гипергликемии).
 
 ### Сократите количество уведомлений
 
-- To reduce the number of proposed basal rate changes while in Open Loop set a wider target range like 90-150 mg/dl or 5.0-8.5 mmol/l.
-- You might even consider to raise your upper limit (or disable Open Loop) at night.
-- You can set a minimum percentage for recommended basal rate changes to change the number of triggered notifications.
+- Чтобы уменьшить количество предлагаемых изменений базальной скорости в режиме открытого цикла, установите более широкий целевой диапазон, например 90–150 мг/дл или 5,0–8,5 ммоль/л.
+- Вы можете увеличить верхнюю границу диапазона на ночь (или вовсе отключить открытый цикл на это время).
+- Вы можете установить минимальный процент предлагаемых изменений базальной скорости, чтобы повлиять на количество уведомлений.
 
   ```{image} ../images/OpenLoop_MinimalRequestChange2.png
   :alt: изменение минимального запроса на незамкнутом цикле
   ```
 
-:::{admonition} You don't need to action each and every system recommendation!
+:::{admonition} Нет необходимости применять каждую рекомендацию системы!
 :class: Note
 :::
 
@@ -104,18 +104,18 @@ Estimated time to complete this objective: **7 days**. This is a mandatory wait 
 
 ## Цель 5: Глубже понимаем работу системы в режиме незамкнутого цикла, включая ее рекомендации по временным базалам
 
-As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in AAPS OVERVIEW](Screenshots-prediction-lines)/Nightscout and looking at detailed calculations shown on your OPENAPS tab.
+В **Цели 5** вы начнете понимать, как формируются рекомендации по временному базальному инсулину. Сюда входит [определение логики базальной скорости](https\://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal. tml), анализ влияния с помощью наблюдения [линий прогноза в AAPS OVERVIEW](Screenshots-prediction-lines)/Nightscout и детальных расчетов, показанных на вкладке OPENAPS.
 
-Estimated time to complete this objective: 7 days.
+Расчетное время для прохождения этой цели: 7 дней.
 
 This Objective requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](Open-APS-features#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal). This value can be set in Preferences > OpenAPS.
-Make sure this safety setting is set in both **AAPS** and your insulin pump.
+Убедитесь, что эта настройка безопасности установлена как в **AAPS**, так и в помпе.
 
-You might want to set your target higher than usual until you are comfortable with the calculations and settings.
+Целевые значения гликемии следует несколько завысить до тех пор, пока вы не убедитесь в правильности всех вычислений и настроек.
 
-**AAPS** allows:
+**AAPS** допускает:
 
-- a low target to be a minimum of 4 mmol/l (72 mg/dl) or maximum of 10 mmol/l (180 mg/dl)
+- установить нижнюю границу целевого значения ГК в диапазоне между 4 ммоль/л (72 мг/дл) и 10 ммоль/л (180 мг/дл)
 - a high target to be a minimum of 5 mmol/l (90 mg/dl) and maximum of 15 mmol/l (225 mg/dl)
 - a temporary target as a single value can be anywhere in the range of 4 mmol/l to 15 mmol/l (72 mg/dl to 225 mg/dl)
 
@@ -202,7 +202,7 @@ Estimated time to complete this objective: 1 day.
 
 As part of this objective you will revist your profile's performance and will use autosens functionality as an indicator for wrong settings.
 
-Estimated time to complete this objective: 7 days.
+Расчетное время для прохождения этой цели: 7 дней.
 
 - You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
 - Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch OVERVIEW's graph white line showing your insulin sensitivity rising or falling due to exercise or hormones etc. and keep an eye on the OpenAPS report tab which shows **AAPS** adjusting the basals and/or targets accordingly.
