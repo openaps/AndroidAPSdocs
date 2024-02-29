@@ -64,9 +64,11 @@ If you think something in the building instructions is wrong, missing or confusi
 
 ## Step-by-step guide to building the AAPS app
 
-> [!WARNING]
-> If you have built AndroidAPS before, you don't need to take all the following steps again. 
-> Please jump directly to the [update guide](../Installing-AndroidAPS/Update-to-new-version.html)!
+:::{admonition} WARNING
+:class: warning
+If you have built AndroidAPS before, you don't need to take all the following steps again.
+Please jump directly to the [update guide](../Installing-AndroidAPS/Update-to-new-version.html)!
+:::
 
 The overall steps for building the **AAPS** apk file are as follows:
 
@@ -246,8 +248,10 @@ and paste it into the URL textbox (3).
 
 * Check the (default) directory for saving the cloned code is sensible (4). 
 
-> [!IMPORTANT]
-> Make a note of the directory. It is where your sourcecode is stored! 
+:::{admonition} INFORMATION
+:class: information
+Make a note of the directory. It is where your sourcecode is stored!
+:::
 
 * Now click the button "Clone" (5).
 
@@ -361,14 +365,18 @@ Android requires each app to be _signed_, to ensure that it can only be updated 
 * In the next screen, make sure that "Module" is set to "AAPS.app" (1).
 
 (Building-APK-wearapk)=
-> [!INFORMATION]
-> If you want to create the apk for your watch, you need to select AAPS.wear!
+:::{admonition} INFORMATION!
+:class: information
+If you want to create the apk for your watch, you need to select AAPS.wear!
+:::
 
 * Click "Create new..." (2) to start creating your key store.
 
-> [!INFORMATION]
-> You will only need to create the keystore once.
-> If you have build AndroidAPS before, do NOT create a new keystore but select your existing one!
+:::{admonition} INFORMATION!
+:class: information
+You will only need to create the keystore once.
+If you have build AndroidAPS before, do NOT create a new keystore but select your existing one!
+:::
 
 **_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
 
@@ -385,8 +393,10 @@ Android requires each app to be _signed_, to ensure that it can only be updated 
 
 This will take you back to the previous screen. Your chosen location for saving the key store file is shown.
 
-> [!WARNING]
-> Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AndroidAPS update!
+:::{admonition} WARNING!
+:class: warning
+Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AndroidAPS update!
+:::
 
 Now choose a simple password (make a note of it), enter it in the password box (1), and confirm it (2).  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [troubleshooting for lost key store](troubleshooting_androidstudio-lost-keystore).
 
@@ -394,8 +404,10 @@ The default alias (3) for your key is "key0", leave this unchanged.
 
 You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm (5) it.
 
-> [!WARNING]
-> Note down these passwords! You will need them when you build the next AndroidAPS update!
+:::{admonition} WARNING!
+:class: warning
+Note down these passwords! You will need them when you build the next AndroidAPS update!
+:::
 
 The validity (6) is 25 years by default, leave it as it is.
 
