@@ -138,7 +138,7 @@ When you first start Android Studio, you will be greeted as follows:
 
 ![Welcome](../images/Building-the-App/02_Welcome_AS_Hedgehog.png)
 
- select "Next":
+Select "Next":
 
 ![ChooseASComponents](../images/Building-the-App/03_choose_AS_components.png)
 
@@ -222,7 +222,7 @@ Android Studio will then use **Gradle** (a development tool in  Android studio) 
 
 :::
 
-On the Android Studio Welcome screen, check that "**Projects**" (1) is highlighted on the left. Then click "**Get from VCS**" (2) at the top right:
+On the Android Studio Welcome screen, check that "**Projects**" (1) is highlighted on the left. Then click "**Get from VCS**" (2) on the right:
 
 ![Get_from_VCS](../images/Building-the-App/16_Get_from_VCS.png)
 
@@ -240,7 +240,10 @@ https://github.com/nightscout/AndroidAPS.git
 
 and paste it into the URL textbox (3).
 
-* Check the (default) directory for saving the cloned code is sensible (4).
+* Check the (default) directory for saving the cloned code is sensible (4). 
+
+> [!IMPORTANT]
+> Make a note of the directory. It is where your sourcecode is stored! 
 
 * Now click the button "Clone" (5).
 
@@ -256,7 +259,7 @@ At some point, you may be asked whether you want to trust the project. Click on 
   ![Trust project](../images/Building-the-App/18a_trust_project.png)
 
 
-* If your firewall asks for permission, grant access:
+Only for Windows users: If your firewall asks for permission, grant access:
 
  ![Firewall permission java](../images/AndroidStudio361_18.png)
 
@@ -293,18 +296,15 @@ _Optional_ - If you want to clear the pop-up for **"project update recommended"*
 ![AS_close_gradle_popup](../images/Building-the-App/20_close_popup.png)
 
 
- If any errors occur, do not continue with the following steps, consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio) for known problems.
-
-Now close Android Studio (select _File_-_Exit_). 
-
-If you have not restarted your computer since installing or updating Git, restart your computer now, and then re-open Android Studio. 
+For Windows users only:
+If you have not restarted your computer since installing or updating Git, close Android Studio now. Then restart your computer, and re-open Android Studio. 
 
 
 (Building-APK-set-git-path-in-preferences)=
 ### Set git path in Android Studio preferences
 
 Now we will tell Android studio where to find Git, which you installed [earlier](Install-Git).
-* Make sure you have restarted your computer after [installing Git](Install-Git).
+* Windows users only: Make sure you have restarted your computer after [installing Git](Install-Git).
 * Open **Android Studio** (you can find it by searching in the Start menu). 
 * In the top left corner of **Android Studio**, navigate to _File-Settings_ (Windows) or _Android Studio > Preferences_ (Mac). This opens the following window, click to expand the dropdown called "version control" (1):
 
@@ -355,7 +355,16 @@ Android requires each app to be _signed_, to ensure that it can only be updated 
 ![APK instead of bundle](../images/Building-the-App/26_generate_APK.png)
 
 * In the next screen, make sure that "Module" is set to "AAPS.app" (1).
+
+(Building-APK-wearapk)=
+> [!INFORMATION]
+> If you want to create the apk for your watch, you need to select AAPS.wear!
+
 * Click "Create new..." (2) to start creating your key store.
+
+> [!INFORMATION]
+> You will only need to create the keystore once.
+> If you have build AndroidAPS before, do NOT create a new keystore but select your existing one!
 
 **_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
 
@@ -370,13 +379,19 @@ Android requires each app to be _signed_, to ensure that it can only be updated 
 ![Create key store](../images/Building-the-App/29_choose_keystore_file.png)
 
 
-This will take you back to the previous screen. Your chosen location for saving the key store file is shown. 
+This will take you back to the previous screen. Your chosen location for saving the key store file is shown.
+
+> [!WARNING]
+> Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AndroidAPS update!
 
 Now choose a simple password (make a note of it), enter it in the password box (1), and confirm it (2).  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [troubleshooting for lost key store](troubleshooting_androidstudio-lost-keystore).
 
 The default alias (3) for your key is "key0", leave this unchanged.
 
 You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm (5) it.
+
+> [!WARNING]
+> Note down these passwords! You will need them when you build the next AndroidAPS update!
 
 The validity (6) is 25 years by default, leave it as it is.
 
@@ -420,7 +435,6 @@ In the Notifications box, click on the blue link "locate":
 
 Open the folder "release". The file "app-full-release.apk" (1) is the **AAPS** apk that you have just built, you will be transferring this file to your smartphone in the next section of the docs: 
 
-_Optional at this stage - if you are planning to also build the "**AAPS** wear" app for your smartwatch so you can remotely control **AAPS**, delete the "output-metadata" .json file (2) from this folder, to avoid the error of [uncommitted changes](troubleshooting_androidstudio-uncommitted-changes) during the **AAPS** wear app build_:
 
 ![apk_file](../images/Building-the-App/37_full_release_apk.png)
 
