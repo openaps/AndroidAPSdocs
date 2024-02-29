@@ -11,7 +11,7 @@ See [FAQ page](../Getting-Started/FAQ.md) for details.
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 ## Computer and software specifications for building AAPS
 
-* Please use the **[Android Studio version called "Hedgehog"(2023.1.1)](https://developer.android.com/studio/)** to build the apk. If you use an older version, please use one which is no older than "**Giraffe**".
+* Please use the **[Android Studio version called "Hedgehog"(2023.1.1) or "Iguana"(2023.2.1)](https://developer.android.com/studio/)** to build the apk. Older versions of Android Studio need to be updated first! 
 * [Windows 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.  
 
 <table class="tg">
@@ -162,6 +162,10 @@ Now select "Finish":
 
 Android Studio will now start. 
 
+If asked if you want to import settings, select "Do not import settings". We don't want to import settings from previous installations:
+
+![Do not import settings](../images/studioSetup/01_ImportSettings.png)
+
 Decide whether you want to share data with Google or not (if unsure, just select "Don't send").
 
    ![Share data with Google](../images/Building-the-App/08_Googlesharedata.png)
@@ -263,24 +267,24 @@ Only for Windows users: If your firewall asks for permission, grant access:
 
  ![Firewall permission java](../images/AndroidStudio361_18.png)
 
-If asked if you want to import settings, select "Do not import settings". We don't want to import settings from previous installations:
+After the repository is cloned successfully, Android Studio will open the cloned project. 
 
-![Do not import settings](../images/studioSetup/01_ImportSettings.png)
 
-After the repository is cloned successfully, Android Studio will open the cloned project. Wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
-
-:::{admonition} **My screen looks different...**
-:class: dropdown
-
-You might have enabled the new graphic **U**ser **I**nterface (i.e. the appearance of Android Studio) by mistake.  
 Click on the cog top right and select "**Switch to Classic UI...**" to return to the view used in this documentation.  
-Restart Android Studio to validate the change.
 
 ![Switch to Classic UI](../images/Building-the-App/OldUI.png)
 
+Restart Android Studio to make the changes effective.
+
+![Confirm restart of Android Studio](../images/Building-the-App/18b_ConfirmRestartUI.png)
+
+You might get one or both of the following warnings about running processes. It's save to abort them!
+
+![Confirm abort background processes](../images/Building-the-App/18c_AbortBackgroundTasks.png) ![Confirm process AndroidAPS import](../images/Building-the-App/18d_AbortProcessImport.png)
 
 
-:::
+When Android Studio opened again, wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
+
 
 ![AS_download_dependencies](../images/Building-the-App/19_downloading_dependencies.png)
 
