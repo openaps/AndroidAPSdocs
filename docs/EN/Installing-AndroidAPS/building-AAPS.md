@@ -212,7 +212,6 @@ Once everything is downloaded, the "Finish" button turns blue, and you can click
 ![finished_download_components](../images/Building-the-App/14_finished_downloading_components.png)
 
 You are now greeted with the "Welcome to Android Studio" screen.  
-See that Meet the New UI suggestion bottom right? **Do not** Enable New UI.
 
 ![Welcome_AS](../images/Building-the-App/15_Welcome_AS.png)
 
@@ -274,7 +273,9 @@ Only for Windows users: If your firewall asks for permission, grant access:
 After the repository is cloned successfully, Android Studio will open the cloned project. 
 
 
-Click on the cog top right and select "**Switch to Classic UI...**" to return to the view used in this documentation.  
+Click on the cog top right and select "**Switch to Classic UI...**" to return to the view used in this documentation.
+
+If you do not see that cog, don't worry. You already use the classic UI!
 
 ![Switch to Classic UI](../images/Building-the-App/OldUI.png)
 
