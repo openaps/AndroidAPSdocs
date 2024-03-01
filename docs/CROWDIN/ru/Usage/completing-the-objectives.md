@@ -131,7 +131,7 @@
 
 :::{admonition} Если до этого вы использовали виртуальную помпу, переключитесь на настоящую инсулиновую помпу прямо сейчас!
 
-Если вы используете открытый цикл с виртуальной помпой, остановитесь на этой цели. Only click verify at the end of this Objective once you have changed to using a "real" physical pump.
+Если вы используете открытый цикл с виртуальной помпой, остановитесь на этой цели. Нажмите «Подтвердить» в конце этой цели только после того, как перейдете на использование «настоящей» физической помпы.
 :::
 
 ```{image} ../images/blank.png
@@ -146,22 +146,22 @@
 :alt: предупреждающий знак
 ```
 
-:::{admonition}  Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend only!
-:class: Note
-You will still need to correct high BG values by yourself (manually with corrections by pump or pen)!
+:::{admonition}  Замкнутый цикл не будет корректировать высокие значения ГК в цели 6, поскольку он ограничен только приостановкой на низком уровне глюкозы!
+:class: Примечание
+Вам придётся корректировать высокие значения ГК самостоятельно (вручную с помощью помпы или ручки)!
 :::
 
-As part of **Objective 6** you will close the loop and activate its Low Glucose Suspend (LGS) mode while [max IOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) is set to zero. You have to remain in LGS mode for 5 days to complete this objective. You should use this time to check if your profile settings are accurate and don't trigger LGS events too often.
+В рамках **Цели 6** вы замкнёте цикл и активируете режим приостановки помпы на низкой ГК (LGS), пока значение [max IOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over- openaps-max-iob) установлено на ноль. Для достижения этой цели вы должны оставаться в режиме LGS в течение 5 дней. Следует использовать это время, чтобы убедиться в правильности настроек профиля и что события по приостановке помпы на низкой ГК не запускаются слишком часто.
 
-Estimated time to complete this objective: 5 days.
+Расчетное время для прохождения этой цели: 5 дней.
 
-It's crucial that your current profile (basal, ISF, IC) is well tested before you close your loop in Low Glucose Suspend mode. Incorrect profile settings might force you into hypo situations which have be  treated manually. An accurate profile will help to avoid needing low glucose treatments during the 5 days period.
+Крайне важно, чтобы текущие параметры профиля (базал, ISF, IC) были тщательно протестированы, прежде чем вы закроете цикл в режиме приостановки помпы на низком ГК. Неправильные настройки профиля могут привести к гипогликемиям, которые придется купировать вручную. Точные настройки профиля помогут избежать необходимости в купировании гипогликемии в течение 5-дневного периода.
 
-**If you still observe frequent or severe low glucose episodes consider refining your DIA, basal, ISF and carb ratios.**
+**Если эпизоды низкой гликемии все же сохраняются, поправьте параметры DIA (продолжительность действия инсулина), скорость базала, ISF (фактор чувствительности к инсулину) и пропорции инсулин-углеводы.**
 
-During objective 6, **AAPS** will take care of setting maxIOB to zero. **This override will be reversed when moving to objective 7.**
+Во время выполнения цели 6 **AAPS** обнуляет maxIOB. **Это переопределение будет отменено при переходе к цели 7.**
 
-This means that when you are on Objective 6, if sensor glucose levels are dropping, **AAPS** will reduce basal insulin delivery for you. If sensor glucose levels are rising, **AAPS** will only increase the basal rate above your profile value if basal IOB is negative as a result of from a previous Low Glucose Suspend. Otherwise, **AAPS** will not increase basal above your current profile value, even if glucose levels are rising. This caution is to avoid hypos as you are learning to use **AAPS**.
+Это означает, что при выполнении цели 6, если уровень глюкозы падает, **AAPS** снизит количество базального инсулина. If sensor glucose levels are rising, **AAPS** will only increase the basal rate above your profile value if basal IOB is negative as a result of from a previous Low Glucose Suspend. Otherwise, **AAPS** will not increase basal above your current profile value, even if glucose levels are rising. This caution is to avoid hypos as you are learning to use **AAPS**.
 
 **As a consequence, you have to handle high glucose values with manual insulin bolus corrections.**
 
