@@ -161,40 +161,40 @@
 
 Во время выполнения цели 6 **AAPS** обнуляет maxIOB. **Это переопределение будет отменено при переходе к цели 7.**
 
-Это означает, что при выполнении цели 6, если уровень глюкозы падает, **AAPS** снизит количество базального инсулина. If sensor glucose levels are rising, **AAPS** will only increase the basal rate above your profile value if basal IOB is negative as a result of from a previous Low Glucose Suspend. Otherwise, **AAPS** will not increase basal above your current profile value, even if glucose levels are rising. This caution is to avoid hypos as you are learning to use **AAPS**.
+Это означает, что при выполнении цели 6, если уровень глюкозы падает, **AAPS** снизит количество базального инсулина. Если уровень глюкозы сенсора повышается, **AAPS** увеличит базальную дозу выше значения вашего профиля только в том случае, если базальный IOB отрицательный в результате предыдущей Приостановки помпы на Низкой ГК (LGS). В противном случае, **AAPS** не увеличит базальную скорость вашего профиля, даже если уровень глюкозы растёт. Эта сделано, чтобы избежать гипогликемии, когда вы только учитесь пользоваться **AAPS**.
 
-**As a consequence, you have to handle high glucose values with manual insulin bolus corrections.**
+**Как следствие, вам придётся корректировать высокие значения глюкозы вручную, через болюс.**
 
-- If your basal IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in objective 6.
+- Если ваш базальный IOB отрицательный (см. снимок экрана ниже), временная базальная скорость (TBR) > 100% может быть активирована в цели 6.
 
 ```{image} ../images/Objective6_negIOB.png
 :alt: Пример отрицательного IOB
 ```
 
-- Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
-- Enable 'Low Glucose Suspend' mode by pressing and holding the Loop icon at the top right corner of the OVERVIEW screen and selecting the Loop - LGS mode icon.
-- Watch active temporary basals by looking at the turquoise basal text on the OVERVIEW screen or the turquoise basal render as part of the OVERVIEW graph.
-- You may temporarily experience spikes following treated hypos without being able to increase basals on the rebound.
+- В качестве дополнительной предосторожности установите целевой диапазон немного шире, чем ваш обычный.
+- Включите режим «РЕЖИМ ОСТАНОВКИ НА НИЗКИХ LGS» нажав и удерживая значок Цикла в правом верхнем углу главного экрана и выбрав значок «Приостановка помпы на низкой ГК».
+- Активные временные базалы отображаются бирюзовым цветом на экране OVERVIEW в виде текста или как часть графика.
+- Возможны временные пики вслед за мерами против гипогликемии без возможности увеличить базу на откате.
 
 (Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets)=
 
 ## Цель 7: Настройка замкнутого цикла с поднятием макс величины IOB выше 0 и постепенным понижением целевой ГК
 
-To complete **Objective 7** you have to close your loop and raise your [maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob). maxIOB was zeroed out automatically in **objective 6**. This is now reverted. **AAPS** will start to use your defined maxIOB value to correct high glucose values.
+Для прохождения **Цели 7** нужно замкнуть цикл и повысить свой [maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob). maxIOB был автоматически обнулен в **цели 6**. Сейчас это обнуление отменено. **AAPS** начнёт использовать заданное вами значение maxIOB для коррекции высоких значений глюкозы.
 
-Estimated time to complete this objective: 1 day.
+Расчётное время для прохождения этой цели: 1 день.
 
-- Select 'Closed Loop' either from [Preferences](../Configuration/Preferences.md) or by pressing and holding the Loop icon at the top right corner of the OVERVIEW screen, over a period of 1 day.
+- В течение одного дня выберите "Замкнутый цикл" либо в [Настройках](../Configuration/Preferences.md), либо нажав и удерживая значок цикла в правом верхнем углу главного экрана НАЧАЛО.
 
-- Поднимите значение "Максимальный суммарный активный инсулин которое не может превысить алгоритм OpenAPS " (в OpenAPS называется "max-iob") выше 0. The default recommendation is "average mealbolus + 3x max daily basal" (for the SMB algorithm) or "3x max daily basal" (for the AMA algorithm) but you should slowly work up to this maximum until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
+- Поднимите значение "Максимальный суммарный активный инсулин которое не может превысить алгоритм OpenAPS " (в OpenAPS называется "max-iob") выше 0. Рекомендация по умолчанию - "средний болюс на прием пищи + 3-кратная максимальная базальная доза" (для алгоритма SMB) или "3-кратная максимальная базальная доза" (для более старого алгоритма AMA), но переходить к этому следует постепенно, пока не убедитесь, что настройки подходят для вас (максимальная базальная доза (в течение суток) = максимальное почасовое значение в любой временной отрезок дня).
 
-Эта рекомендация должна рассматриваться как отправная точка. If you set it to the 3x and you are seeing AAPS giving too much insulin as glucose levels rise, then lower the "Maximum total IOB OpenAPS can’t go over" value. Alternatively, if you are very resistant, raise it very cautiously.
+Эта рекомендация должна рассматриваться как отправная точка. Если вы установили это значение в 3 раза и видите, что AAPS выдает слишком много инсулина при повышении уровня глюкозы, тогда уменьшите значение "Максимальное общее количество IOB, которое не может превысить OpenAPS ". Кроме того, если у вас значительная резистентность, поднимайте его с осторожностью.
 
 ```{image} ../images/MaxDailyBasal2.png
 :alt: максимальный суточный базал
 ```
 
-- Once confident on how much IOB suits your looping patterns, reduce your targets to your desired level.
+- Определив величину активного инсулина IOB, подходящую именно вам, понизьте целевое значение ГК до желаемого уровня.
 
 (Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)=
 
