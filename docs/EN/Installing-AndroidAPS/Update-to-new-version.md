@@ -29,9 +29,10 @@ See the [Export & import settings](ExportImportSettings-export-settings) page if
 (Update-to-new-version-update-your-local-copy)=
 ## 2. Update your local copy
 
-As of version 2.7 repository location changed to [https://github.com/nightscout/AndroidAPS](https://github.com/nightscout/AndroidAPS). If you are not familiar with git the easiest way for update is remove directory with AAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
+If the last version you built is 2.8.x or newer, you can follow this guide.
 
-If you have already changed the URL or update from version 2.8.x, follow these steps:
+If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
+
 
 * Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
 
