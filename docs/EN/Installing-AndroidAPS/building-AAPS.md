@@ -67,7 +67,7 @@ If you think something in the building instructions is wrong, missing or confusi
 :::{admonition} WARNING
 :class: warning
 If you have built AndroidAPS before, you don't need to take all the following steps again.
-Please jump directly to the [update guide](../Installing-AndroidAPS/Update-to-new-version.html)!
+Please jump directly to the [update guide](../Installing-AndroidAPS/Update-to-new-version)!
 :::
 
 The overall steps for building the **AAPS** apk file are as follows:
