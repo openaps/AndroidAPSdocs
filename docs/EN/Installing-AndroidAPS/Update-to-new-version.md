@@ -9,9 +9,7 @@
 * When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
 * The new version will also be announced on Facebook at the time of release.
 * Following the release, please read the [Release Notes](../Installing-AndroidAPS/Releasenotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-* For **AAPS** versions 2.7 and newer, the location for the new files is at [https://github.com/nightscout/AndroidAPS](https://github.com/nightscout/AndroidAPS).
-* You need to use the latest version of Android Studio, **[Hedgehog, 2023.1.1](https://developer.android.com/studio/)**. 
-* If building the **AAPS** app using a Windows platform, you will need to use a Windows 64-bit system since 32-bit systems are not supported.
+* You need to use version **[Hedgehog (2023.1.1) or Iguana (2023.2.1)](https://developer.android.com/studio/)** of Android Studio. If your version is older, please update first Android Studio first! 
 
 ## Overview for updating to a new version of AAPS
 
