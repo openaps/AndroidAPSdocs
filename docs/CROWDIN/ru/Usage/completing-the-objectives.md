@@ -108,7 +108,7 @@
 
 Расчетное время для прохождения этой цели: 7 дней.
 
-This Objective requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](Open-APS-features#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal). This value can be set in Preferences > OpenAPS.
+Эта цель требует, чтобы вы определили и установили "максимально возможную для установки величину временного базала" (макс базал) согласно описанию в [OpenAPS-features](Open-APS-features#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal). Это значение может быть установлено в Настройках > OpenAPS.
 Убедитесь, что эта настройка безопасности установлена как в **AAPS**, так и в помпе.
 
 Целевые значения гликемии следует несколько завысить до тех пор, пока вы не убедитесь в правильности всех вычислений и настроек.
@@ -116,22 +116,22 @@ This Objective requires you to determine and set your “Max U/h a temp basal ca
 **AAPS** допускает:
 
 - установить нижнюю границу целевого значения ГК в диапазоне между 4 ммоль/л (72 мг/дл) и 10 ммоль/л (180 мг/дл)
-- a high target to be a minimum of 5 mmol/l (90 mg/dl) and maximum of 15 mmol/l (225 mg/dl)
-- a temporary target as a single value can be anywhere in the range of 4 mmol/l to 15 mmol/l (72 mg/dl to 225 mg/dl)
+- установить верхнюю границу целевого значения ГК в диапазоне между 5 ммоль/л (90 мг/дл) и 15 ммоль/л (225 мг/дл)
+- временная цель может иметь любое значение от 4 до 15ммоль (72 мг/дл до 225 мг/дл)
 
-Your target is a core value. All calculations are based on it. It is different from a target range which you usually aim to keep your blood glucose values in. If your target is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little **AAPS** action. This is because sensor glucose is predicted to be somewhere in that wide range, and thus temporary basal rate changes are rarely suggested.
+Ваша цель является основным значением. Все расчеты основаны на нем. Оно отличается от целевого диапазона, в котором вы обычно стремитесь поддерживать значения уровня глюкозы в крови. Если целевой диапазон широк (скажем, 3 или более ммоль/л [50 мг/дл или более]), реакция **AAPS** незначительна. Это связано с тем, что, по прогнозам уровня глюкозы он всё ещё находится где-то в этом широком диапазоне, и поэтому, временные изменения базальной скорости предлагаются редко.
 
-You may want to experiment with adjusting your targets being in a tighter range (say, 1 or less mmol/l [20 mg/dl or less] wide) and observe a resulting system behaviour.
+Можно поэкспериментировать и задать более близкие значения (например, чтобы их разность не превышала 1 ммоль) и наблюдать, как в результате изменится поведение системы.
 
-You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
+Вы можете скорректировать (расширить или сузить) зеленую область графика, представляющую ваш целевой диапазон, введя значения в [Настройки](../Configuration/Preferences.md) > Диапазон для визуализации.
 
 ```{image} ../images/sign_stop.png
 :alt: знак "Стоп"
 ```
 
-:::{admonition} If you have been using a virtual pump, change to a real insulin pump now!
+:::{admonition} Если до этого вы использовали виртуальную помпу, переключитесь на настоящую инсулиновую помпу прямо сейчас!
 
-If you are open looping with a virtual pump stop here. Only click verify at the end of this Objective once you have changed to using a "real" physical pump.
+Если вы используете открытый цикл с виртуальной помпой, остановитесь на этой цели. Only click verify at the end of this Objective once you have changed to using a "real" physical pump.
 :::
 
 ```{image} ../images/blank.png
