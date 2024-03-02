@@ -10,9 +10,7 @@
 * Когда доступна новая версия, в самом приложении **AAPS** появляется информационный баннер об этом.
 * О новой версии также выходит объявление на Facebook во время релиза.
 * После выхода новой версии внимательно прочитайте [Примечания к выпуску](../Installing-AndroidAPS/Releasenotes.md) и, прежде чем приступать к обновлению, задайте интересующие вас вопросы сообществу на Facebook или Discord,.
-* Для **AAPS** версий 2.7 и выше, местоположение новых файлов на <https://github.com/nightscout/AndroidAPS>.
-* You need to use the latest version of Android Studio, **[Hedgehog, 2023.1.1](https://developer.android.com/studio/)**. 
-* При создании приложения **AAPS** с использованием платформы Windows, требуется 64-разрядная система Windows, поскольку 32-разрядные системы не поддерживаются.
+* You need to use version **[Hedgehog (2023.1.1) or Iguana (2023.2.1)](https://developer.android.com/studio/)** of Android Studio. If your version is older, please update first Android Studio first! 
 
 ## Обзор порядка обновления до новой версии AAPS
 
@@ -33,9 +31,7 @@
 
 ## 2. Обновление локальной копии
 
-Начиная с версии 2.7 местоположение репозитория изменено на <https://github.com/nightscout/AndroidAPS>. Если вы не знакомы с Git самый простой способ обновления- удалить каталог с AAPS и [ клонировать заново](../Installing-AndroidAPS/Building-APK.md).
-
-Если вы уже изменили URL или обновляетесь с версии 2.8.x, выполните следующее:
+:::{admonition} WARNING :class: warning If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../Installing-AndroidAPS/building-AAPS), as this guide will not work for you! :::
 
 * Откройте существующий проект AAPS при помощи Android Studio. Может потребоваться выбрать проект. (дважды) нажмите на проект AAPS.
     
@@ -96,3 +92,5 @@
 Выдохните!
 
 См. отдельную страницу [ устранение неполадок Android Studio ](../Installing-AndroidAPS/troubleshooting_androidstudio), возможно решение проблемы там уже есть!
+
+If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
