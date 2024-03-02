@@ -10,9 +10,7 @@
 * When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
 * The new version will also be announced on Facebook at the time of release.
 * Following the release, please read the [Release Notes](../Installing-AndroidAPS/Releasenotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-* For **AAPS** versions 2.7 and newer, the location for the new files is at <https://github.com/nightscout/AndroidAPS>.
-* You need to use the latest version of Android Studio, **[Hedgehog, 2023.1.1](https://developer.android.com/studio/)**. 
-* If building the **AAPS** app using a Windows platform, you will need to use a Windows 64-bit system since 32-bit systems are not supported.
+* You need to use version **[Hedgehog (2023.1.1) or Iguana (2023.2.1)](https://developer.android.com/studio/)** of Android Studio. If your version is older, please update first Android Studio first! 
 
 ## Overview for updating to a new version of AAPS
 
@@ -33,9 +31,7 @@ Allez voir la page [Exporter & importer les paramètres](ExportImportSettings-ex
 
 ## 2. Mettez à jour votre copie locale
 
-À partir de la version 2.7, l'emplacement du code a été déplacé vers <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
-
-Si vous avez déjà modifié l'URL ou ou que vous faite la mise à jour à partir de la version 2.8.x, suivez ces étapes :
+:::{admonition} WARNING :class: warning If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../Installing-AndroidAPS/building-AAPS), as this guide will not work for you! :::
 
 * Open your existing AAPS project with Android Studio. Vous devrez peut-être sélectionner votre projet. (Double) click on the AAPS project.
     
@@ -96,3 +92,5 @@ Si quelque chose ne va pas, ne paniquez pas.
 Respirez un bon coup !
 
 Ensuite, consultez la page [de dépannage d'Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) pour voir si votre problème est déjà documenté !
+
+If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
