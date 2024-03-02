@@ -46,57 +46,57 @@
 - Задачи для выполнения **Цели 2**:
   - Установите свой профиль в 90% на 10 минут (_Подсказка_: нажмите и удерживайте на имени своего профиля на экране НАЧАЛО) (_Примечание_: AAPS не принимает базальные дозы ниже 0,05 ЕД/ч. Если ваш профиль содержит базальные дозы 0,06 ЕД/ч или ниже, вам потребуется создать новый профиль с более высокими базальными дозами, прежде чем выполнять эту задачу. Вернитесь к своему обычному профилю после выполнения этого задания.)
   - Симитируйте «принятие душа», отключив помпу в **AAPS** на 1 час (_Подсказка_: нажмите значок петли на экране НАЧАЛО, чтобы открыть диалоговое окно «Цикл»)
-  - End "taking a shower" by reconnecting your pump (_Hint_: press the "disconnected"-icon to open the loop dialog)
-  - Create a custom temporary target with a duration of 10 min (_Hint_: press the target bar on the OVERVIEW screen to bring up the temporary target dialog)
-  - Activate the **ACTIONS** plugin in **CONFIG BUILDER** to make it appear on the top scrollable menu bar (_Hint_: Go to **CONFIG BUILDER** and scroll down to 'General")
-  - Display the LOOP plugin's content
-  - Scale the BG-Chart to be able to look at larger or smaller timeframes: toggling between 6h, 12h, 18h 24h of past data (_Hint_: Tap the chart)
+  - Завершите приём душа, повторно подключив помпу (_Подсказка_: нажмите на значок «Разъединено», чтобы открыть диалоговое окно цикла)
+  - Создайте временную цель c продолжительностью 10 минут (_Подсказка_: нажмите на панель цели в экране НАЧАЛО, чтобы открыть диалоговое окно временной цели)
+  - Активируйте плагин **ДЕЙСТВИЯ** в **Конфигураторе**, чтобы он появился в верхней строке прокручиваемого меню (_Подсказка_: перейдите в **Конфигуратор** и прокрутите вниз до пункта «Общее»)
+  - Отобразите содержимое плагина Замкнутый Цикл
+  - Масштабируйте диаграмму ГК, переключаясь между 6 часами, 12 часами, 18 часами и 24 часами данных за прошедшее время (_Подсказка_: короткое касание графика)
 
 (Objectives-objective-3-prove-your-knowledge)=
 
 ## Цель 3: Подтвердите ваши знания
 
-- Pass a multiple-choice exam testing your **AAPS** knowledge.
+- Пройдите тест с выбором варианта ответа для проверки на знание AndroidAPS.
 
-Some users find **Objective 3** to be the most difficult objective to complete. Please do read the **AAPS** documents in conjunction with the questions. If you are genuinely stuck after researching the **AAPS** documents, please search the Facebook group for "Objective 3" (because it is likely that your question has been asked- and answered - before). If you are still stuck, ask in a post on either the Facebook or Discord group. These groups can provide friendly hints, or redirect you to the relevant part of the **AAPS** documents.
+Некоторые пользователи считают **Цель 3** самой трудной. Прочитайте документацию **AAPS** вместе с вопросами. Если вы надолго застряли на цели после изучения документации **AAPS**, можете выполнить поиск в группе Facebook по запросу «Цель 3» (вполне вероятно, что ваш вопрос уже задавался и на него уже был дан ответ). Если вы все ещё застряли, спросите в группе Facebook или Discord. Эти группы могут дать подсказки или перенаправить вас на соответствующую часть документации AAPS.
 
-To proceed with **Objective 3**, click on the orange text “**Not completed yet**” to access the relevant question. Please read each question carefully and select your answer(s).
+Чтобы приступить к реализации цели 3, нажмите на оранжевый текст «Не завершено», чтобы получить доступ к соответствующему вопросу. Прочтите внимательно все вопросы и выберите ответ(ы).
 
-- To reduce the number of decisions you are asked to make while in Open Loop, set a wide target range _e.g._ 90 - 150 mg/dl or 5.0 - 8.5 mmol/l.
+- Чтобы уменьшить количество предлагаемых изменений базальной скорости в режиме открытого цикла, установите более широкий целевой диапазон, например 90–150 мг/дл или 5,0–8,5 ммоль/л.
 
-- You might want to set a wider upper limit, or even disable Open Loop, at night.
+- Вы можете увеличить верхнюю границу диапазона на ночь или вовсе отключить цикл на это время.
 
-Для каждого вопроса правильным может быть больше одного ответа! If an incorrect answer is selected, the question will be time-locked for a certain amount of time (60 minutes) before you can go back and answer the question again. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
+Для каждого вопроса правильным может быть больше одного ответа! Если выбран неверный ответ, вопрос будет заблокирован на определенное время (60 минут), прежде чем вы сможете вернуться и ответить на вопрос. Имейте в виду, что порядок ответов может измениться при следующей попытке ответа,, чтобы убедиться, что вы внимательно прочитали их и действительно понимали правильность (или нет) каждого ответа.
 
-When **AAPS** is installed for the first time, you will have to complete the whole of **Objective 3** before moving on to **Objective 4**. Каждая цель должна быть выполнена в последовательном порядке. Постепенно, по мере преодоления целей, будут открываться новые возможности приложения.
+Когда **AAPS** устанавливается в первый раз, необходимо полностью пройти **цель 3** для того, чтобы перейти к **цели 4**. Каждая цель должна быть выполнена в последовательном порядке. Постепенно, по мере преодоления целей, будут открываться новые возможности приложения.
 
-:::{admonition}  **What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?**
+:::{admonition}  **Что произойдет, если к Цели добавятся новые вопросы при обновлении до более новой версии APPS?**
 :class: Note
-From time to time, new features are added to **AAPS** which may require a new question to be added to the Objectives, particularly Objective 3. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other Objectives remain completed.
+Время от времени в **AAPS** добавляется новая функциональность, что может потребовать добавления нового вопроса к Целям обучения, особенно к Цели 3. В результате любой новый вопрос, добавленный к **Цели 3**, будет помечен как «незавершённый», поскольку **AAPS** потребует от вас выполнить это действие. Не волнуйтесь, поскольку каждая **Цель** независима, вы **не потеряете существующую функциональность AAPS**, при условии, что другие Цели останутся выполненными.
 :::
 
 ## Цель 4: Начните с открытого цикла
 
-The purpose of this objective is to recognise how often **AAPS** will evaluate the basal rate's impact on glucose levels, and recommend temporary basal rate adjustments. As part of this objective, you will activate open looping for the first time, and will perform 20 proposed temporary basal rate changes manually on your pump. Furthermore, you will observe temporary and default temporary targets' impact (_e.g._ for activity or hypo treatments). If you are not familiar with setting a temporay basal rate change in **AAPS** yet, please refer to the [ACTIONS tab](Screenshots#Screenshots-action-tab).
+Эта цель обучения нужна, чтобы показать, как часто **AAPS** будет оценивать влияние базальной дозы на уровень гликемии и как часто он рекомендует изменить базальную скорость. В рамках этой цели обучения вы впервые активируете открытый цикл, и вручную смените скорость временного базала до 20 раз. Кроме того, вы увидите влияние временных целей и Временных Целей По Умолчанию (например, при физической нагрузке или гипотерапии). Если вы еще не знакомы со сменой временной базальной скорости в **AAPS**, обратитесь к [вкладке ДЕЙСТВИЯ](Screenshots#Screenshots-action-tab).
 
-Estimated time to complete this objective: **7 days**. This is a mandatory wait time. You can't proceed to the next Objective, even if you enacted all basal rate changes already.
+Расчетное время для прохождения этой цели: **7 дней**. Это обязательное время ожидания. Вы не сможете перейти к следующей цели раньше, даже если выполнили все изменения базальной скорости.
 
-- Select Open Loop either from the "Preferences" menu or by presssing and holding the Loop icon on the top left of the OVERVIEW screen.
-- Walk through the [Preferences](../Configuration/Preferences.md) to set it up for you (scroll down to "Loop/APS Mode" and select "Open Loop".
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; key them into your (physical) pump and confirm in AAPS that you have accepted them. Ensure these basal rate adjustments show up in AAPS and Nightscout.
-- Enable [temp targets](../Usage/temptarget.md) if necessary. After treating a hypo use hypo temp targets to prevent the system from overcorrecting upon the bounce back.
+- Выберите «ОТКРЫТЫЙ ЦИКЛ» либо в меню «Настройки», либо нажав и удерживая значок «Цикл» в левой верхней части экрана НАЧАЛО.
+- Просмотрите [Настройки](../Configuration/Preferences.md), чтобы настроить его для себя (прокрутите вниз до «Режим APS» и выберите «ОТКРЫТЫЙ ЦИКЛ».
+- Вручную активируйте по крайней мере 20 предложений временного базала на протяжении 7 дней, введите их в помпу (физическую) и подтвердите в AAPS что вы их приняли. Убедитесь, что эти изменения базальной дозы отображаются в AAPS и Nightscout.
+- При необходимости включите [временные Цели](../Usage/temptarget.md). После купирования гипогликемии используйте Временную Цель Гипо, чтобы предотвратить чрезмерную коррекцию системы при откате (при постгипогликемической гипергликемии).
 
 ### Сократите количество уведомлений
 
-- To reduce the number of proposed basal rate changes while in Open Loop set a wider target range like 90-150 mg/dl or 5.0-8.5 mmol/l.
-- You might even consider to raise your upper limit (or disable Open Loop) at night.
-- You can set a minimum percentage for recommended basal rate changes to change the number of triggered notifications.
+- Чтобы уменьшить количество предлагаемых изменений базальной скорости в режиме открытого цикла, установите более широкий целевой диапазон, например 90–150 мг/дл или 5,0–8,5 ммоль/л.
+- Вы можете увеличить верхнюю границу диапазона на ночь (или вовсе отключить открытый цикл на это время).
+- Вы можете установить минимальный процент предлагаемых изменений базальной скорости, чтобы повлиять на количество уведомлений.
 
   ```{image} ../images/OpenLoop_MinimalRequestChange2.png
   :alt: изменение минимального запроса на незамкнутом цикле
   ```
 
-:::{admonition} You don't need to action each and every system recommendation!
+:::{admonition} Нет необходимости применять каждую рекомендацию системы!
 :class: Note
 :::
 
@@ -104,34 +104,34 @@ Estimated time to complete this objective: **7 days**. This is a mandatory wait 
 
 ## Цель 5: Глубже понимаем работу системы в режиме незамкнутого цикла, включая ее рекомендации по временным базалам
 
-As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in AAPS OVERVIEW](Screenshots-prediction-lines)/Nightscout and looking at detailed calculations shown on your OPENAPS tab.
+В **Цели 5** вы начнете понимать, как формируются рекомендации по временному базальному инсулину. Сюда входит [определение логики базальной скорости](https\://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal. tml), анализ влияния с помощью наблюдения [линий прогноза в AAPS OVERVIEW](Screenshots-prediction-lines)/Nightscout и детальных расчетов, показанных на вкладке OPENAPS.
 
-Estimated time to complete this objective: 7 days.
+Расчетное время для прохождения этой цели: 7 дней.
 
-This Objective requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](Open-APS-features#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal). This value can be set in Preferences > OpenAPS.
-Make sure this safety setting is set in both **AAPS** and your insulin pump.
+Эта цель требует, чтобы вы определили и установили "максимально возможную для установки величину временного базала" (макс базал) согласно описанию в [OpenAPS-features](Open-APS-features#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal). Это значение может быть установлено в Настройках > OpenAPS.
+Убедитесь, что эта настройка безопасности установлена как в **AAPS**, так и в помпе.
 
-You might want to set your target higher than usual until you are comfortable with the calculations and settings.
+Целевые значения гликемии следует несколько завысить до тех пор, пока вы не убедитесь в правильности всех вычислений и настроек.
 
-**AAPS** allows:
+**AAPS** допускает:
 
-- a low target to be a minimum of 4 mmol/l (72 mg/dl) or maximum of 10 mmol/l (180 mg/dl)
-- a high target to be a minimum of 5 mmol/l (90 mg/dl) and maximum of 15 mmol/l (225 mg/dl)
-- a temporary target as a single value can be anywhere in the range of 4 mmol/l to 15 mmol/l (72 mg/dl to 225 mg/dl)
+- установить нижнюю границу целевого значения ГК в диапазоне между 4 ммоль/л (72 мг/дл) и 10 ммоль/л (180 мг/дл)
+- установить верхнюю границу целевого значения ГК в диапазоне между 5 ммоль/л (90 мг/дл) и 15 ммоль/л (225 мг/дл)
+- временная цель может иметь любое значение от 4 до 15ммоль (72 мг/дл до 225 мг/дл)
 
-Your target is a core value. All calculations are based on it. It is different from a target range which you usually aim to keep your blood glucose values in. If your target is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little **AAPS** action. This is because sensor glucose is predicted to be somewhere in that wide range, and thus temporary basal rate changes are rarely suggested.
+Ваша цель является основным значением. Все расчеты основаны на нем. Оно отличается от целевого диапазона, в котором вы обычно стремитесь поддерживать значения уровня глюкозы в крови. Если целевой диапазон широк (скажем, 3 или более ммоль/л [50 мг/дл или более]), реакция **AAPS** незначительна. Это связано с тем, что, по прогнозам уровня глюкозы он всё ещё находится где-то в этом широком диапазоне, и поэтому, временные изменения базальной скорости предлагаются редко.
 
-You may want to experiment with adjusting your targets being in a tighter range (say, 1 or less mmol/l [20 mg/dl or less] wide) and observe a resulting system behaviour.
+Можно поэкспериментировать и задать более близкие значения (например, чтобы их разность не превышала 1 ммоль) и наблюдать, как в результате изменится поведение системы.
 
-You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
+Вы можете скорректировать (расширить или сузить) зеленую область графика, представляющую ваш целевой диапазон, введя значения в [Настройки](../Configuration/Preferences.md) > Диапазон для визуализации.
 
 ```{image} ../images/sign_stop.png
 :alt: знак "Стоп"
 ```
 
-:::{admonition} If you have been using a virtual pump, change to a real insulin pump now!
+:::{admonition} Если до этого вы использовали виртуальную помпу, переключитесь на настоящую инсулиновую помпу прямо сейчас!
 
-If you are open looping with a virtual pump stop here. Only click verify at the end of this Objective once you have changed to using a "real" physical pump.
+Если вы используете открытый цикл с виртуальной помпой, остановитесь на этой цели. Нажмите «Подтвердить» в конце этой цели только после того, как перейдете на использование «настоящей» физической помпы.
 :::
 
 ```{image} ../images/blank.png
@@ -146,55 +146,55 @@ If you are open looping with a virtual pump stop here. Only click verify at the 
 :alt: предупреждающий знак
 ```
 
-:::{admonition}  Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend only!
-:class: Note
-You will still need to correct high BG values by yourself (manually with corrections by pump or pen)!
+:::{admonition}  Замкнутый цикл не будет корректировать высокие значения ГК в цели 6, поскольку он ограничен только приостановкой на низком уровне глюкозы!
+:class: Примечание
+Вам придётся корректировать высокие значения ГК самостоятельно (вручную с помощью помпы или ручки)!
 :::
 
-As part of **Objective 6** you will close the loop and activate its Low Glucose Suspend (LGS) mode while [max IOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) is set to zero. You have to remain in LGS mode for 5 days to complete this objective. You should use this time to check if your profile settings are accurate and don't trigger LGS events too often.
+В рамках **Цели 6** вы замкнёте цикл и активируете режим приостановки помпы на низкой ГК (LGS), пока значение [max IOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over- openaps-max-iob) установлено на ноль. Для достижения этой цели вы должны оставаться в режиме LGS в течение 5 дней. Следует использовать это время, чтобы убедиться в правильности настроек профиля и что события по приостановке помпы на низкой ГК не запускаются слишком часто.
 
-Estimated time to complete this objective: 5 days.
+Расчетное время для прохождения этой цели: 5 дней.
 
-It's crucial that your current profile (basal, ISF, IC) is well tested before you close your loop in Low Glucose Suspend mode. Incorrect profile settings might force you into hypo situations which have be  treated manually. An accurate profile will help to avoid needing low glucose treatments during the 5 days period.
+Крайне важно, чтобы текущие параметры профиля (базал, ISF, IC) были тщательно протестированы, прежде чем вы закроете цикл в режиме приостановки помпы на низком ГК. Неправильные настройки профиля могут привести к гипогликемиям, которые придется купировать вручную. Точные настройки профиля помогут избежать необходимости в купировании гипогликемии в течение 5-дневного периода.
 
-**If you still observe frequent or severe low glucose episodes consider refining your DIA, basal, ISF and carb ratios.**
+**Если эпизоды низкой гликемии все же сохраняются, поправьте параметры DIA (продолжительность действия инсулина), скорость базала, ISF (фактор чувствительности к инсулину) и пропорции инсулин-углеводы.**
 
-During objective 6, **AAPS** will take care of setting maxIOB to zero. **This override will be reversed when moving to objective 7.**
+Во время выполнения цели 6 **AAPS** обнуляет maxIOB. **Это переопределение будет отменено при переходе к цели 7.**
 
-This means that when you are on Objective 6, if sensor glucose levels are dropping, **AAPS** will reduce basal insulin delivery for you. If sensor glucose levels are rising, **AAPS** will only increase the basal rate above your profile value if basal IOB is negative as a result of from a previous Low Glucose Suspend. Otherwise, **AAPS** will not increase basal above your current profile value, even if glucose levels are rising. This caution is to avoid hypos as you are learning to use **AAPS**.
+Это означает, что при выполнении цели 6, если уровень глюкозы падает, **AAPS** снизит количество базального инсулина. Если уровень глюкозы сенсора повышается, **AAPS** увеличит базальную дозу выше значения вашего профиля только в том случае, если базальный IOB отрицательный в результате предыдущей Приостановки помпы на Низкой ГК (LGS). В противном случае, **AAPS** не увеличит базальную скорость вашего профиля, даже если уровень глюкозы растёт. Эта сделано, чтобы избежать гипогликемии, когда вы только учитесь пользоваться **AAPS**.
 
-**As a consequence, you have to handle high glucose values with manual insulin bolus corrections.**
+**Как следствие, вам придётся корректировать высокие значения глюкозы вручную, через болюс.**
 
-- If your basal IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in objective 6.
+- Если ваш базальный IOB отрицательный (см. снимок экрана ниже), временная базальная скорость (TBR) > 100% может быть активирована в цели 6.
 
 ```{image} ../images/Objective6_negIOB.png
 :alt: Пример отрицательного IOB
 ```
 
-- Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
-- Enable 'Low Glucose Suspend' mode by pressing and holding the Loop icon at the top right corner of the OVERVIEW screen and selecting the Loop - LGS mode icon.
-- Watch active temporary basals by looking at the turquoise basal text on the OVERVIEW screen or the turquoise basal render as part of the OVERVIEW graph.
-- You may temporarily experience spikes following treated hypos without being able to increase basals on the rebound.
+- В качестве дополнительной предосторожности установите целевой диапазон немного шире, чем ваш обычный.
+- Включите режим «РЕЖИМ ОСТАНОВКИ НА НИЗКИХ LGS» нажав и удерживая значок Цикла в правом верхнем углу главного экрана и выбрав значок «Приостановка помпы на низкой ГК».
+- Активные временные базалы отображаются бирюзовым цветом на экране OVERVIEW в виде текста или как часть графика.
+- Возможны временные пики вслед за мерами против гипогликемии без возможности увеличить базу на откате.
 
 (Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets)=
 
 ## Цель 7: Настройка замкнутого цикла с поднятием макс величины IOB выше 0 и постепенным понижением целевой ГК
 
-To complete **Objective 7** you have to close your loop and raise your [maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob). maxIOB was zeroed out automatically in **objective 6**. This is now reverted. **AAPS** will start to use your defined maxIOB value to correct high glucose values.
+Для прохождения **Цели 7** нужно замкнуть цикл и повысить свой [maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob). maxIOB был автоматически обнулен в **цели 6**. Сейчас это обнуление отменено. **AAPS** начнёт использовать заданное вами значение maxIOB для коррекции высоких значений глюкозы.
 
-Estimated time to complete this objective: 1 day.
+Расчётное время для прохождения этой цели: 1 день.
 
-- Select 'Closed Loop' either from [Preferences](../Configuration/Preferences.md) or by pressing and holding the Loop icon at the top right corner of the OVERVIEW screen, over a period of 1 day.
+- В течение одного дня выберите "Замкнутый цикл" либо в [Настройках](../Configuration/Preferences.md), либо нажав и удерживая значок цикла в правом верхнем углу главного экрана НАЧАЛО.
 
-- Поднимите значение "Максимальный суммарный активный инсулин которое не может превысить алгоритм OpenAPS " (в OpenAPS называется "max-iob") выше 0. The default recommendation is "average mealbolus + 3x max daily basal" (for the SMB algorithm) or "3x max daily basal" (for the AMA algorithm) but you should slowly work up to this maximum until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
+- Поднимите значение "Максимальный суммарный активный инсулин которое не может превысить алгоритм OpenAPS " (в OpenAPS называется "max-iob") выше 0. Рекомендация по умолчанию - "средний болюс на прием пищи + 3-кратная максимальная базальная доза" (для алгоритма SMB) или "3-кратная максимальная базальная доза" (для более старого алгоритма AMA), но переходить к этому следует постепенно, пока не убедитесь, что настройки подходят для вас (максимальная базальная доза (в течение суток) = максимальное почасовое значение в любой временной отрезок дня).
 
-Эта рекомендация должна рассматриваться как отправная точка. If you set it to the 3x and you are seeing AAPS giving too much insulin as glucose levels rise, then lower the "Maximum total IOB OpenAPS can’t go over" value. Alternatively, if you are very resistant, raise it very cautiously.
+Эта рекомендация должна рассматриваться как отправная точка. Если вы установили это значение в 3 раза и видите, что AAPS выдает слишком много инсулина при повышении уровня глюкозы, тогда уменьшите значение "Максимальное общее количество IOB, которое не может превысить OpenAPS ". Кроме того, если у вас значительная резистентность, поднимайте его с осторожностью.
 
 ```{image} ../images/MaxDailyBasal2.png
 :alt: максимальный суточный базал
 ```
 
-- Once confident on how much IOB suits your looping patterns, reduce your targets to your desired level.
+- Определив величину активного инсулина IOB, подходящую именно вам, понизьте целевое значение ГК до желаемого уровня.
 
 (Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)=
 
@@ -202,7 +202,7 @@ Estimated time to complete this objective: 1 day.
 
 As part of this objective you will revist your profile's performance and will use autosens functionality as an indicator for wrong settings.
 
-Estimated time to complete this objective: 7 days.
+Расчетное время для прохождения этой цели: 7 дней.
 
 - You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
 - Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch OVERVIEW's graph white line showing your insulin sensitivity rising or falling due to exercise or hormones etc. and keep an eye on the OpenAPS report tab which shows **AAPS** adjusting the basals and/or targets accordingly.

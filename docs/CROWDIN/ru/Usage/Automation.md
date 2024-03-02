@@ -10,11 +10,11 @@ There are a wide range of automation options, and users are encouraged to study 
 
 ## How Automation can help
 
-1) **Decreasing decision fatigue:** The primary benefit of **automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. [Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) estimates that an average of 180 additional daily decisions have to be made by those living with Type 1 diabetes. **Automations** can lessen the mental load, freeing up the user’s mental energy for other aspects of life.
+1. **Decreasing decision fatigue:** The primary benefit of **automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. [Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) estimates that an average of 180 additional daily decisions have to be made by those living with Type 1 diabetes. **Automations** can lessen the mental load, freeing up the user’s mental energy for other aspects of life.
 
-2) **Potentially improving glycemic control:** for example, **automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sport scheduled at school on Tuesdays at 10am and Thursdays at 2pm and always needs a high temp target actioned 30 min before these activities, these can be actioned by automation.
+1. **Potentially improving glycemic control:** for example, **automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sport scheduled at school on Tuesdays at 10am and Thursdays at 2pm and always needs a high temp target actioned 30 min before these activities, these can be actioned by automation.
 
-3) **Enabling AAPS to be highly customised** to be more or less aggressive in specific situations, according to user preference. For example, triggering a temporary reduced profile% for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing profile is too strong.
+1. **Enabling AAPS to be highly customised** to be more or less aggressive in specific situations, according to user preference. For example, triggering a temporary reduced profile% for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing profile is too strong.
 
 The example below illustrates how an **Automation** can enable steps to be eliminated. The user has set an **Automation** to trigger a 5 am ‘Temp Target Exercise’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
 
@@ -22,17 +22,17 @@ The example below illustrates how an **Automation** can enable steps to be elimi
 
 ## Key considerations before starting with Automations
 
-1) Before setting up an **Automation**, you should have reasonable BG control with **AAPS**. **Automations** should not be used to compensate for sub-optimal basal, ISF or ICR settings (discussed further below). Avoid setting an automated **Profile switch** to compensate for BG rises due to _e.g._ food, these are better dealt with via other strategies (SMBs etc).
+1. Before setting up an **Automation**, you should have reasonable BG control with **AAPS**. **Automations** should not be used to compensate for sub-optimal basal, ISF or ICR settings (discussed further below). Avoid setting an automated **Profile switch** to compensate for BG rises due to _e.g._ food, these are better dealt with via other strategies (SMBs etc).
 
-2) As with any technology, **CGMs** and **Pumps** and **phones** can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed.
+1. As with any technology, **CGMs** and **Pumps** and **phones** can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed.
 
-4) **Requirements for automations are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which automations are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need the automations set up for school sports or daily exercise, or need to adjust the timings.
+1. **Requirements for automations are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which automations are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need the automations set up for school sports or daily exercise, or need to adjust the timings.
 
-5) Automations may conflict with each other, and it is good to review any new automation(s) setting carefully in a safe environment, and understand why an automation may or may not have triggered in the way you expect.
+1. Automations may conflict with each other, and it is good to review any new automation(s) setting carefully in a safe environment, and understand why an automation may or may not have triggered in the way you expect.
 
-6) If using Autosense, try to use **Temp Targets** instead of **Profile Switches**. **Temp Targets** do not reset Autosens back to 0. **Profile Switches** reset Autosens.
+1. If using Autosense, try to use **Temp Targets** instead of **Profile Switches**. **Temp Targets** do not reset Autosens back to 0. **Profile Switches** reset Autosens.
 
-7) Most automations should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the automation, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/l for 30 min" or "start profile 110% for 10 min" _and_ "start temp target of 5.0 mmol/l for 10 min". Using automations to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
+1. Most automations should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the automation, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/l for 30 min" or "start profile 110% for 10 min" _and_ "start temp target of 5.0 mmol/l for 10 min". Using automations to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
 
 ## When can I start using Automation?
 
@@ -265,5 +265,5 @@ Check your rule prioritisation order as discussed above here.
 
 ## Alternatives to Automations
 
-Для опытных пользователей есть и другие возможности для автоматизации задач с помощью IFTTT или приложения других разработчиков Android под названием Automate. 
+For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. 
 
