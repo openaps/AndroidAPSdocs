@@ -200,11 +200,11 @@
 
 ## Цель 8: Настраиваем базал и коэффициенты с последующей активацией autosens
 
-As part of this objective you will revist your profile's performance and will use autosens functionality as an indicator for wrong settings.
+В этой цели вы проверите производительность своего профиля и будете использовать функцию авточувствительности autosens в качестве индикатора неправильных настроек.
 
 Расчетное время для прохождения этой цели: 7 дней.
 
-- You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
+- Для разовой проверки точности настроек базала можно применить [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) или выполнить традиционный базальный тест.
 - Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch OVERVIEW's graph white line showing your insulin sensitivity rising or falling due to exercise or hormones etc. and keep an eye on the OpenAPS report tab which shows **AAPS** adjusting the basals and/or targets accordingly.
 
 (Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
