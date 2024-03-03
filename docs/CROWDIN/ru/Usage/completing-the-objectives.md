@@ -205,13 +205,13 @@
 Расчетное время для прохождения этой цели: 7 дней.
 
 - Для разовой проверки точности настроек базала можно применить [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) или выполнить традиционный базальный тест.
-- Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch OVERVIEW's graph white line showing your insulin sensitivity rising or falling due to exercise or hormones etc. and keep an eye on the OpenAPS report tab which shows **AAPS** adjusting the basals and/or targets accordingly.
+- Активируйте авточувствительность [autosens](../Usage/Open-APS-features.md) на 7 дней и понаблюдайте за тем, как ведет себя белая линия чувствительности к инсулину на графике экрана НАЧАЛО в результате нагрузок, гормонов и т. п.,не забывая о вкладке отчетов OpenAPS, где AAPS соответствующим образом корректирует базальные дозы и/или целевой ГК.
 
 (Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
 
 ## Цель 9: Активация таких дополнительных функций для дневного времени как супер микро болюс SMB
 
-In this objective you will tackle and use "Super Micro Bolus (SMB)" as one core functionality. After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, reasonable starting point with SMBs and why basal is set to zero temporarily after SMBs are given (zero-temping). Estimated time to complete this objective: 28 days.
+In this objective you will tackle and use "Super Micro Bolus (SMB)" as one core functionality. После изучения документации, вы хорошо понимаете, что такое микроболюсы SMB, как они работают, когда следует начать ими пользоваться и почему базал временно устанавливается на нуль после введения микроболюса (нулевой временный базал). Estimated time to complete this objective: 28 days.
 
 - The [SMB section in this documentation](Open-APS-features-super-micro-bolus-smb) and [oref1 coverage in the openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand SMB and the concept of zero-temping.
 - Once done, you [raise maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working well. maxIOB now includes all IOB, not just accumulated basal. This threshold pauses SMBs until IOB drops below this value (_e.g._ maxIOB is set to 7 U and a bolus of 8 U is given to cover a meal: SMBs will be paused and not given unless IOB drops below 7 U). A good start is setting maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) as reference)
