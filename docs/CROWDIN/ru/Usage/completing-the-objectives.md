@@ -211,11 +211,11 @@
 
 ## Цель 9: Активация таких дополнительных функций для дневного времени как супер микро болюс SMB
 
-In this objective you will tackle and use "Super Micro Bolus (SMB)" as one core functionality. После изучения документации, вы хорошо понимаете, что такое микроболюсы SMB, как они работают, когда следует начать ими пользоваться и почему базал временно устанавливается на нуль после введения микроболюса (нулевой временный базал). Estimated time to complete this objective: 28 days.
+In this objective you will tackle and use "Super Micro Bolus (SMB)" as one core functionality. После изучения документации, вы будете понимать, что такое микроболюсы SMB, как они работают, когда следует начать ими пользоваться и почему базал временно устанавливается на нуль после введения микроболюса (нулевой временный базал). Расчетное время для прохождения этой цели: 28 дней.
 
-- The [SMB section in this documentation](Open-APS-features-super-micro-bolus-smb) and [oref1 coverage in the openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand SMB and the concept of zero-temping.
-- Once done, you [raise maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working well. maxIOB now includes all IOB, not just accumulated basal. This threshold pauses SMBs until IOB drops below this value (_e.g._ maxIOB is set to 7 U and a bolus of 8 U is given to cover a meal: SMBs will be paused and not given unless IOB drops below 7 U). A good start is setting maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) as reference)
-- Change "min_5m_carbimpact"-parameter (Preferences > Absorbtion settings > min_5m_carbimpact) to 8 as you move from an OpenAPS AMA algorithm to OpenAPS SMB. For AMAs the default value is 3. Read more about this setting [here](../Configuration/Preferences.html#min-5m-carbimpact)
+- Чтобы понимать концепцию микроболюсов SMB и нулевой временной базальной скорости, следует обязательно изучить [Раздел SMB в этой документации](Open-APS-features-super-micro-bolus-smb) и [обзор oref1 в openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
+- Затем, чтобы заставить микроболюсы SMB работать должным образом, следует поднять значение [maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob). maxIOB теперь учитывает весь активный инсулин IOB, а не только накопленный базал. This threshold pauses SMBs until IOB drops below this value (_e.g._ maxIOB is set to 7 U and a bolus of 8 U is given to cover a meal: SMBs will be paused and not given unless IOB drops below 7 U). Хорошим началом является установка maxIOB = средний болюс на прием пищи + 3-кратная максимальная базальная доза ( максимальная базальная доза = максимальное значение базала за час в любой период дня - см. подробнее [цель 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets)
+- Change "min_5m_carbimpact"-parameter (Preferences > Absorbtion settings > min_5m_carbimpact) to 8 as you move from an OpenAPS AMA algorithm to OpenAPS SMB. Для AMA значение по умолчанию равно 3. Подробнее об этом параметре [здесь](../Configuration/Preferences.html#min-5m-carbimpact)
 
 (Objectives-objective-10-automation)=
 
@@ -223,14 +223,14 @@ In this objective you will tackle and use "Super Micro Bolus (SMB)" as one core 
 
 You have to start **Objective 10** to be able to use Automations.
 
-1. Read the documentation page  [Automation](../Usage/Automation.md) first.
-2. Set-up the most basic automation rule;
-   for example trigger an Android notification in few minutes:
+1. Сначала прочитайте страницу документации  [Автоматизация](../Usage/Automation.md).
+2. Задайте самое базовое правило Автоматизации;
+   например, срабатывание уведомления Android в течении нескольких минут:
 
-- Select the notification tab
-- From the top right 3 dots menu, select add rule
-- Give a task name "My first automation notification"
-- "edit"  "condition"
+- Выберите вкладку уведомления
+- В правом верхнем углу меню выберите добавить правило
+- Дайте название задаче "Моё первое уведомление"
+- "отредактируйте" "условие"
   - click the "+" symbol to add the first trigger
   - select "Time"  & "OK", it will create a default entry AT TODAY HOUR:MINUTE
   - click the MINUTE portion to edit the time such that it triggers in a few minutes. Then click ok to close
