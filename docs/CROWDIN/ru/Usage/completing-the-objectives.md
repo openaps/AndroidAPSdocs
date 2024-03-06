@@ -231,7 +231,7 @@ You have to start **Objective 10** to be able to use Automations.
 - В правом верхнем углу меню выберите добавить правило
 - Дайте название задаче "Моё первое уведомление"
 - "отредактируйте" "условие"
-  - click the "+" symbol to add the first trigger
+  - нажмите на "+", чтобы добавить первое условие запуска
   - select "Time"  & "OK", it will create a default entry AT TODAY HOUR:MINUTE
   - click the MINUTE portion to edit the time such that it triggers in a few minutes. Then click ok to close
   - click "ok"  to close the Triggers screen
