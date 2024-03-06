@@ -2,7 +2,7 @@
 
 ## Что такое автоматизация?
 
-"**Automation**" является функцией **AAPS**, которая позволяет упростить управление диабетом пользователя путем автоматических изменений в подачу инсулина. **Automations** allow **AAPS** to be highly personalised for individual users.
+"**Automation**" является функцией **AAPS**, которая позволяет упростить управление диабетом пользователя путем автоматических изменений в подачу инсулина. **Автоматизации** позволяют пользователям **AAPS<** подстраивать его работу под свои индивидуальные потребности.
 
 An **Automation** instructs **AAPS** to carry out a specific action, as a result of one or more conditions or triggers. This can be for irregular episodic events, like low or high BG, a set amount of negative IOB. It can also be for recurring events, for example a meal or exercise at a certain time of day, or when the user is located within a certain distance of GPS location or WIFI SSID area.
 
