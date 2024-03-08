@@ -155,41 +155,41 @@
 
 זמן משוער להשלמת משימה זו: 5 ימים.
 
-It's crucial that your current profile (basal, ISF, IC) is well tested before you close your loop in Low Glucose Suspend mode. Incorrect profile settings might force you into hypo situations which have be  treated manually. An accurate profile will help to avoid needing low glucose treatments during the 5 days period.
+קריטי שהפרופיל הנוכחי שלכם (בזאלים, ISF, IC) ייבדק היטב לפני שתסגרו את הלולאה שלכם במצב השעייה עקב סוכר נמוך. הגדרות פרופיל שגויות עלולות להוביל למצבי היפו שיטופלו באופן ידני. פרופיל מדויק יעזור להימנע מאירועי היפוגליקמיה במהלך 5 הימים.
 
-**If you still observe frequent or severe low glucose episodes consider refining your DIA, basal, ISF and carb ratios.**
+**אם אתם חווים אירועי היפוגליקמיה תכופים או חמורים, שקלו לשפר את יחס ה-DIA, המינונים הבזאליים, ה-ISF וה-IC.**
 
-During objective 6, **AAPS** will take care of setting maxIOB to zero. **הגדרה זו תבוטל לאחר התחלת משימה 7.**
+במהלך משימה 6, **AAPS** ידאג להגדיר את maxIOB לאפס בעצמו. **הגדרה זו תבוטל לאחר התחלת משימה 7.**
 
-This means that when you are on Objective 6, if sensor glucose levels are dropping, **AAPS** will reduce basal insulin delivery for you. If sensor glucose levels are rising, **AAPS** will only increase the basal rate above your profile value if basal IOB is negative as a result of from a previous Low Glucose Suspend. Otherwise, **AAPS** will not increase basal above your current profile value, even if glucose levels are rising. This caution is to avoid hypos as you are learning to use **AAPS**.
+משמעות הדבר היא שכאשר אתם במשימה 6, אם רמות הסוכר יורדות, **AAPS** יפחית את מתן האינסולין הבזאלי. אם רמות הסוכר עולות, **AAPS** יגדיל את המינון הבזאלי מעל הערך שבפרופיל, רק אם האינסולין הפעיל הבזאלי שלילי כתוצאה מהשעיה קודמת של עקב גלוקוז נמוך. אחרת, **AAPS** לא יעלה את המינון הבזאלי מעל הערך שבפרופיל, גם כשרמות הסוכר עולות. זהו אמצעי זהירות כדי להימנע מהיפוגליקמיות בזמן שאתם לומדים להשתמש **AAPS**.
 
-**As a consequence, you have to handle high glucose values with manual insulin bolus corrections.**
+**כתוצאה מכך, עליכם להתמודד עם ערכי סוכר גבוהים עם תיקוני בולוס אינסולין ידניים.**
 
-- If your basal IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in objective 6.
+- אם האינסולין הפעיל (IOB) הבזאלי שלכם שלילי (ראה צילום מסך למטה) ניתן להפעיל מינון בזאלי זמני (TBR) גבוה מ-100% במשימה 6.
 
 ```{image} ../images/Objective6_negIOB.png
 :alt: Example negative IOB
 ```
 
-- Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
-- Enable 'Low Glucose Suspend' mode by pressing and holding the Loop icon at the top right corner of the OVERVIEW screen and selecting the Loop - LGS mode icon.
-- Watch active temporary basals by looking at the turquoise basal text on the OVERVIEW screen or the turquoise basal render as part of the OVERVIEW graph.
+- הגדירו את טווח המטרה שלכם מעט גבוה יותר ממה שאליו אתם בדרך כלל מכוונים אליו, רק ליתר ביטחון.
+- הפעילו את מצב "השעיית סוכר נמוך" על ידי לחיצה ממושכת על סמל הלולאה בפינה השמאלית העליונה של מסך הבית בחירה בסמל מצב לולאה - השהיה עקב ערך סוכר נמוך (ירוק מקווקו).
+- צפו במינונים הבזאליים הזמניים הפעילים על ידי המופיע כטקסט בצבע טורקיז או בגרף, במסך הבית.
 - ייתכן שתחוו קפיצות בסוכר לאחר טיפול בהיפוגליקמיות באופן זמני בגלל שאין עליה במינון הבזאלי לאחר היציאה מהיפוגליקמיה.
 
 (Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets)=
 
 ## משימה 7: כוונון לולאה סגורה, העלאת האינסולין הפעיל המרבי מ-0 והורדה מדורגת של ערכי המטרה
 
-To complete **Objective 7** you have to close your loop and raise your [maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob). maxIOB was zeroed out automatically in **objective 6**. This is now reverted. **AAPS** will start to use your defined maxIOB value to correct high glucose values.
+בכדי להשלים את **משימה 7** אתם תסגרו את הלולאה ותעלו את [maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob). maxIOB אופס אוטומטית ב**משימה 6**. איפוס זה מבוטל עכשיו. **AAPS** יתחיל להשתמש בערך maxIOB שהגדרתם כדי לתקן ערכי סוכר גבוהים.
 
-Estimated time to complete this objective: 1 day.
+זמן משוער להשלמת משימה זו: יום אחד.
 
-- Select 'Closed Loop' either from [Preferences](../Configuration/Preferences.md) or by pressing and holding the Loop icon at the top right corner of the OVERVIEW screen, over a period of 1 day.
+- בחרו 'לולאה סגורה' ב[העדפות](../Configuration/Preferences.md) או על ידי לחיצה ממושכת על סמל הלולאה בפינה השמאלית העליונה של מסך הבית, והמתינו יום אחד.
 
 - העלו את 'מינון אינסולין פעיל מרבי ממנו OpenAPS לא יחרוג' (נקרא גם 'max-IOB' ב-OpenAPS) ליותר מ-0 במשך יממה אחת. המלצת ברירת המחדל היא X3 המינון הבזאלי המקסימלי (עבור אלגוריתם AMA הישן, שנמצא בשימוש של משתמשים חדשים) או X3 המינון הבזאלי המקסימלי + בולוס ארוחה ממוצע (עבור אלגוריתם SMB). עליכם להתקדם אל ערך זה באופן מדורג עד שהגדרה זו עובדת היטב.
   מינון בזאלי מקסימלי = המינון הבזאלי המרבי שניתן בשעה כלשהי ביממה.
 
-המלצה זו היא נקודת התחלה. If you set it to the 3x and you are seeing AAPS giving too much insulin as glucose levels rise, then lower the "Maximum total IOB OpenAPS can’t go over" value. Alternatively, if you are very resistant, raise it very cautiously.
+המלצה זו היא נקודת התחלה. אם אתם מגדירים אותו כ-x3 ואתם רואים ש-AAPS מזריק יותר מדי אינסולין כשרמות הגלוקוז עולות, אז הורידו את הערך "בזאלי פעיל מרבי ש-OpenAPS יכול לספק". לחילופין, אם התנגודת שלכם גבוהה, העלו אותו בהדרגה.
 
 ```{image} ../images/MaxDailyBasal2.png
 :alt: max daily basal
@@ -201,11 +201,11 @@ Estimated time to complete this objective: 1 day.
 
 ## משימה 8: התאמת המינון בזאלי והיחסים במקרה הצורך ולאחר מכן הפעלת Autosens
 
-As part of this objective you will revist your profile's performance and will use autosens functionality as an indicator for wrong settings.
+כחלק ממשימה זו, אתם תחדדו את ביצועי הפרופיל שלכם ותשתמשו בתכונת ה-autosens כאינדיקטור להגדרות שגויות.
 
 זמן משוער להשלמת משימה זו: 7 ימים.
 
-- You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
+- אתם יכולים להשתמש ב-[autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) כפעולה חד פעמית כדי לבדוק שהתוכנית הבזאלית שלכם מדוייקת או לבצע בדיקה מסורתית.
 - הפעילו autosens למשך 7 ימים וצפו בהתנהגות עקום כתוצאה משינויים הורמונליים, פעילות גופנית וכו'. עקום הרגישות הלבן נמצא הוא גרף משני במסך הבית (יש להפעילו).
 
 (Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
@@ -224,26 +224,26 @@ As part of this objective you will revist your profile's performance and will us
 
 חובה להתחיל את משימה 10 כדי להיות מסוגלים להשתמש באוטומציות.
 
-1. Read the documentation page  [Automation](../Usage/Automation.md) first.
-2. Set-up the most basic automation rule;
-   for example trigger an Android notification in few minutes:
+1. קראו תחילה את דף התיעוד [אוטומציה](../Usage/Automation.md).
+2. הגדר את כלל האוטומציה הבסיסי ביותר;
+   לדוגמה, הפעל הודעת אנדרואיד בעוד מספר דקות:
 
-- Select the notification tab
-- From the top right 3 dots menu, select add rule
-- Give a task name "My first automation notification"
-- "edit"  "condition"
-  - click the "+" symbol to add the first trigger
-  - select "Time"  & "OK", it will create a default entry AT TODAY HOUR:MINUTE
-  - click the MINUTE portion to edit the time such that it triggers in a few minutes. Then click ok to close
-  - click "ok"  to close the Triggers screen
-- "ADD" an "Action"
-  - select "Notification", "OK"
-  - click "Notification" to edit the message(Msg), enter something like "Ny first automation"
-- wait until the time triggers the notification (note that depanding on your phone, it can be a few minutes late)
+- בחרו את לשונית האוטומציות
+- בתפריט 3 הנקודות השמאלי העליון, בחר הוספת כלל
+- קראו לאוטומציה בשם, לדוגמה "האוטומציה הראשונה שלי"
+- תנאי: עריכה
+  - לחצו על "+" כדי להוסיף את הטריגר הראשון
+  - בחר "זמן" ו-"אישור", זה יצור ערך ברירת מחדל "ב- שעה שעה:דקה עכשיו"
+  - לחצו על השעה כדי לערוך את הזמן כך שיופעל בעוד מספר דקות. לאחר מכן לחצו על אישור כדי לסגור
+  - לחצו על "אישור" כדי לסגור את מסך הטריגרים
+- פעולה: הוספה
+  - בחרו "התראה", "אישור"
+  - לחצו על "התראה" כדי לערוך את ההודעה (הודעה), הזינו משהו כמו "אוטומציה ראשונה"
+- המתינו עד שיגיע הזמן שיפעיל את ההתראה (שים לב שבהתאם לטלפון שלך, זה יכול להיות באיחור של כמה דקות)
 
-4. Experiment with setting up a more useful automation.
+4. התנסו עם הגדרת אוטומציה שימושית יותר.
 
-- The documentation page gives a few examples, and you can search for "automation" screenshots on the Facebook group. Since most people eat the same thing for breakfast at the same time every morning before school/work, a fairly common use-case can be to set a "before-breakfast-target" to set a slightly lower temporary target 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consists of  "Start temp target" with a target value and a 30 minutes duration.
+- דף התיעוד נותן כמה דוגמאות, וניתן לחפש צילומי מסך "אוטומציה" בקבוצת הפייסבוק. מכיוון שרוב האנשים אוכלים את אותו הדבר לארוחת בוקר באותה שעה בכל בוקר לפני הלימודים/עבודה, מקרה שימוש נפוץ למדי יכול להיות להגדיר ערך מטרה "לפני ארוחת הבוקר" כדי להגדיר ערך מטרה זמני מעט נמוך 30 דקות לפני ארוחת הבוקר. במקרה כזה, סביר להניח שהתנאי שלכם יכלול "זמן חוזרני" המורכב מבחירת ימים ספציפיים בשבוע (לדוגמה: ראשון, שני, שלישי, רביעי, חמישי) ושעה מסוימת (06:30 בבוקר). הפעולה תהיה מורכבת מ-"הפעלת ערך מטרה זמני" עם ערך יעד ומשך 30 דקות.
 
 ## משימה 11: הפעלת פונקציות נוספות לשימוש במשך היום כמו רגישות דינאמית).
 
