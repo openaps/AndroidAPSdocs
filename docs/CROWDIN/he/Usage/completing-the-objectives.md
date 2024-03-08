@@ -108,8 +108,8 @@
 
 זמן משוער להשלמת משימה זו: 7 ימים.
 
-This Objective requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](Open-APS-features#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal). This value can be set in Preferences > OpenAPS.
-Make sure this safety setting is set in both **AAPS** and your insulin pump.
+משימה זו מחייבת אתכם לקבוע ולהגדיר את הערך "מינון בזאלי זמני מקסימלי" כמתואר ב-[תכונות OpenAPS](Open-APS-features#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal). ניתן להגדיר ערך זה בהעדפות > OpenAPS AMA.
+יש לוודא שהגדרת בטיחות זו מוגדרת גם ב-**AAPS** וגם במשאבת האינסולין.
 
 רצוי שתקבעו ערכי מטרה גבוהים מהרגיל עד אשר תבטחו בהגדרות ובחישובי הלופ.
 
@@ -212,11 +212,11 @@ As part of this objective you will revist your profile's performance and will us
 
 ## משימה 9: אפשרו פונקציות oref1 כגון סופר מיקרובולוס (SMB), בשעות היום
 
-In this objective you will tackle and use "Super Micro Bolus (SMB)" as one core functionality. After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, reasonable starting point with SMBs and why basal is set to zero temporarily after SMBs are given (zero-temping). Estimated time to complete this objective: 28 days.
+במטרה זו תתמודדו ותשתמשו ב"סופר מיקרו בולוס (SMB)" ככלי מרכזי. לאחר קריאות החובה תהיה לכם הבנה טובה של מהו SMB, איך הוא עובד, נקודת התחלה סבירה של הגדרות שימוש ב-SMB ומדוע הבזאלי מוגדר כאפס באופן זמני לאחר מתן SMB. זמן משוער להשלמת משימה זו: 28 ימים.
 
-- The [SMB section in this documentation](Open-APS-features-super-micro-bolus-smb) and [oref1 coverage in the openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand SMB and the concept of zero-temping.
-- לאחר מכן, עליכם [להעלות את מגבלת האינסולין הפעיל המרבי] (Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) כדי לאפשר ל-SMB לתפקד כראוי. מעכשיו, האינסולין הפעיל המרבי כולל את כל האינסולין המוזרק, לא רק את הבזאלי. This threshold pauses SMBs until IOB drops below this value (_e.g._ maxIOB is set to 7 U and a bolus of 8 U is given to cover a meal: SMBs will be paused and not given unless IOB drops below 7 U). אפשר להעריך את ערך האינסולין הפעיל המרבי עם החישוב: בולוס ארוחה ממוצע + X3 המינון הבזאלי המרבי שיש ביממה - ראו ב[משימה 7] (Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) כדוגמה)
-- Change "min_5m_carbimpact"-parameter (Preferences > Absorbtion settings > min_5m_carbimpact) to 8 as you move from an OpenAPS AMA algorithm to OpenAPS SMB. For AMAs the default value is 3. Read more about this setting [here](../Configuration/Preferences.html#min-5m-carbimpact)
+- [קטע SMB בתיעוד זה](Open-APS-features-super-micro-bolus-smb) ו-[oref1 ב-openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) הם קריאת חובה כדי להבין את SMB ואת הרעיון של בזאלי זמני 0.
+- לאחר מכן, עליכם [להעלות את מגבלת האינסולין הפעיל המרבי] (Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) כדי לאפשר ל-SMB לתפקד כראוי. מעכשיו, האינסולין הפעיל המרבי כולל את כל האינסולין המוזרק, לא רק את הבזאלי. סף זה משהה את מתן ה-SMB עד שהאינסולין הפעיל (IOB) יורד אל מתחת לערך זה (_למשל_ maxIOB מוגדר ל-7 יח' וניתן בולוס של 8 יח' לכיסוי ארוחה: הזרקת SMB יושהה ולא יינתן אלא אם IOB יורד אל מתחת ל-7 יח'). אפשר להעריך את ערך האינסולין הפעיל המרבי עם החישוב: בולוס ארוחה ממוצע + X3 המינון הבזאלי המרבי שיש ביממה - ראו ב[משימה 7] (Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) כדוגמה)
+- שנו את הפרמטר "min_5m_carbimpact" (העדפות > הגדרות ספיגה > min_5m_carbimpact) ל-8 כשאתם עוברים מאלגוריתם OpenAPS AMA ל-OpenAPS SMB. עבור AMA ערך ברירת המחדל הוא 3. קראו עוד על הגדרה זו [כאן](../Configuration/Preferences.html#min-5m-carbimpact)
 
 (Objectives-objective-10-automation)=
 
@@ -247,10 +247,10 @@ In this objective you will tackle and use "Super Micro Bolus (SMB)" as one core 
 
 ## משימה 11: הפעלת פונקציות נוספות לשימוש במשך היום כמו רגישות דינאמית).
 
-- Ensure that SMB is functioning properly
-- Read the documentation concerning Dynamic ISF [here](../Usage/DynamicISF.md)
-- Search the Facbook and Discord groups for discussions around Dynamic ISF and read about other users experiences and recommendations.
-- Enable the **DynamicISF plugin** and identify the appropriate calibration for your body's uniqueness. It is advisable to begin with a value lower than 100% for safety reasons.
+- ודאו ש-SMB פועל כראוי
+- קראו את ההוראות של Dynamic ISF [כאן](../Usage/DynamicISF.md)
+- חפשו בקבוצות הפייסבוק והדיסקורד אחר דיונים סביב Dynamic ISF וקראו על חוויות והמלצות ממשתמשים אחרים.
+- הפעילו את התוסף **DynamicISF** וזהו את הכיול המתאים בדיוק לגופכם. רצוי להתחיל עם ערך נמוך מ-100% מטעמי בטיחות.
 
 (Objectives-go-back-in-objectives)=
 
