@@ -119,19 +119,19 @@
 - ערך מטרה עליון 90 mg/dl עד 225 mg/dl
 - ערך מטרה זמני כערך יחיד יכול להיות בטווח 72 עד 225 mg/dl
 
-Your target is a core value. All calculations are based on it. It is different from a target range which you usually aim to keep your blood glucose values in. אם טווח המטרה שלכם רחב מאוד (לדוגמה טווח של 50 mg/dl), אתם תראו מעט פעילות של **AAPS**. This is because sensor glucose is predicted to be somewhere in that wide range, and thus temporary basal rate changes are rarely suggested.
+ערך המטרה שלכם הוא ערך מרכזי. כל החישובים מבוססים עליו. הוא שונה מטווח יעד שאליו שואפים לשמור על ערכי הגלוקוז בדם. אם טווח המטרה שלכם רחב מאוד (לדוגמה טווח של 50 mg/dl), אתם תראו מעט פעילות של AAPS. הסיבה לכך היא שצפוי כי הגלוקוז נמצא איפשהו בטווח הרחב הזה ולכן מוצעים שינויים במינונים הבזאליים לעיתים רחוקות.
 
 ייתכן שתרצו להתנסות בכיוונונים של ערכי המטרה להקטנת טווח המטרה (20 mg/dl ואף פחות) ולצפות בהתנהגות המערכת כתוצאה מכך.
 
-You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
+אפשר להתאים אישית (להרחיב או להצר) את השטח הירוק של הגרף, המייצג את טווח המטרה שלכם, על ידי הזנת ערכים שונים ב[העדפות](../Configuration/Preferences.md) > טווח להצגה.
 
 ```{image} ../images/sign_stop.png
 :alt: Stop sign
 ```
 
-:::{admonition} If you have been using a virtual pump, change to a real insulin pump now!
+:::{admonition} אם השתמשתם במשאבה וירטואלית עד כה, שנו למשאבת אינסולין אמיתית עכשיו!
 
-If you are open looping with a virtual pump stop here. Only click verify at the end of this Objective once you have changed to using a "real" physical pump.
+אם אתם משתמשים בלולאה פתוחה עם משאבה וירטואלית עצרו כאן. לחצו על אימות בסוף משימה זו רק לאחר שעברתם להשתמש במשאבה "אמיתית".
 :::
 
 ```{image} ../images/blank.png
@@ -148,12 +148,12 @@ If you are open looping with a virtual pump stop here. Only click verify at the 
 
 :::{admonition}  הלולאה הסגורה שבמשימה 6 לא תתקן ערכי סוכר גבוהים כי היא מוגבלת להפסקת הזרקת אינסולין כתיקון לסוכר נמוך!
 :class: Note
-You will still need to correct high BG values by yourself (manually with corrections by pump or pen)!
+עדיין תצטרכו לתקן ערכי סוכר גבוהים בעצמכם (ידנית עם תיקונים באמצעות משאבה או עט)!
 :::
 
-As part of **Objective 6** you will close the loop and activate its Low Glucose Suspend (LGS) mode while [max IOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) is set to zero. You have to remain in LGS mode for 5 days to complete this objective. You should use this time to check if your profile settings are accurate and don't trigger LGS events too often.
+כחלק מ**משימה 6** אתם תסגרו את הלולאה ותפעילו מצב השעייה עקב גלוקוז נמוך (LGS) בו [אינסולין פעיל מקסימלי](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) מוגדר אפס. עליכם להישאר במצב LGS למשך 5 ימים כדי להשלים את משימה זו. כדאי לנצל את הזמן הזה כדי לבדוק אם הגדרות הפרופיל שלכם מדויקות ואינן מפעילות אירועי היפו לעתים קרובות מדי.
 
-Estimated time to complete this objective: 5 days.
+זמן משוער להשלמת משימה זו: 5 ימים.
 
 It's crucial that your current profile (basal, ISF, IC) is well tested before you close your loop in Low Glucose Suspend mode. Incorrect profile settings might force you into hypo situations which have be  treated manually. An accurate profile will help to avoid needing low glucose treatments during the 5 days period.
 
