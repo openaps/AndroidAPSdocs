@@ -188,7 +188,7 @@ As mentioned earlier, using **AAPS** is more of a “journey” that requires in
 | configuring AAPS->NightScout (reporting only):                                        |     1 hour      |
 | optional (for Parents) - configuring NightScout <-> **AAPS** & NSFollowers:           |     1 hour      |
 | משימה 1: הגדרת ויזואליזציה, ניטור, ניתוח המינון הבזאלי והיחסים                        |     1 hour      |
-| Objective 2: Learn how to control AAPS                                                |     2 hour      |
+| משימה 2: לימדו כיצד לשלוט בממשק AndoridAPS                                            |     2 hour      |
 | משימה 3: הוכיחו את הידע שלכם                                                          |  Up to 14 days  |
 | משימה 4: התחלת לופ פתוח                                                               |     7 days      |
 | משימה 5: העמקת הבנת הלולאה הפתוחה, לרבות המינונים הבזאליים הזמניים וההמלצות           |     7 days      |
