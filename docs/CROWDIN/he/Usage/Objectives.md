@@ -32,68 +32,68 @@
 
 ## משימה 3: הוכיחו את הידע שלכם
 
-Objective 3 is a multiple choice test based on questions designed to test your theoretical knowledge of **AAPS**.
+מטרה 3 היא מבחן רב ברירה (אמריקאי) עם שאלות שנועדו לבחון את הידע התיאורטי שלכם ב-**AAPS**.
 
-Some users find Objective 3 to be the most difficult objective to complete. Please do read the AAPS documents in conjunction with the questions. If you are genuinely stuck after researching the **AAPS** documents, please search or ask for help on the Facebook or Discord group. These groups can provide friendly hints or redirect you to the relevant part of the **AAPS** documents.
+חלק מהמשתמשים רואים המשימה 3 כמשימה הקשה ביותר. חובה לקרוא את מסמכי AAPS יחד עם השאלות. אם אתם באמת תקועים לאחר קריאה מעמיקה במסמכי **AAPS**, חפשו או בקשו עזרה בקבוצות ה- Facebook או Discord של AAPS. קבוצות אלה יכולות לספק רמזים או להפנות אתכם לחלק הרלוונטי במסמכי **AAPS**.
 
-To proceed with Objective 3, click on the orange text “Not completed yet” to access the relevant question. Please read each question and select your answer(s).
+כדי לבצע את המשימה, לחצו על הטקסט הכתום "עדיין לא הושלם" כדי לגשת לשאלה הרלוונטית. יש לקרוא את השאלות ולבחור את תשובותיכם.
 
 
 
-Within each question, a hyperlink to the **AAPS** documents will guide you to the relevant section of the document which you should read in order to locate the correct answer.
+לכל שאלה מצורף קישור למסמכי **AAPS** שינחה אותכם לחלק הרלוונטי של ההוראות שעליכם לקרוא כדי לענות על השאלה.
 
 
 [Obj3_Screenshot 2023-12-05 223422](https://github.com/openaps/AndroidAPSdocs/assets/137224335/77347516-e24e-459d-98ab-acbb49a3d4e8)![image](https://github.com/openaps/AndroidAPSdocs/assets/137224335/ca756b8e-efbc-4427-b281-ac953ce16718)
 
 
 
-For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time locked for a certain amount of time (60 minutes) before you can go back and answer the question.
+לכל שאלה עשויה להיות יותר מתשובה אחת נכונה! אם נבחרה תשובה שגויה, השאלה תינעל למשך 60 דקות שבתומן תוכלו לחזור ולענות עליה.
 
 
-After updating to a new version of **AAPS**, new questions may be added to cover a prevalent issue picked up by **AAPS** or alternatively to test your knowledge of a new feature of **AAPS** as released.
+לאחר עדכון לגרסה חדשה של **AAPS**, שאלות חדשות עשויות להיתווסף למשימה 3 על מנת לכסות תכונות חדשות המתווספות בעדכוני התוכנה או תקלות שנמצאו בגרסה קודמת.
 
 
-When **AAPS** is installed for the first time, you will have to complete Objective 3 entirely in order to move onto Objective 4. Each objective is required to be completed in sequential order. New features will gradually be unlocked as progress is made through the objectives.
+כאשר **AAPS** מותקן בפעם הראשונה, תצטרכו להשלים את משימה 3 בכללותה כדי לעבור הלאה למשימה 4. ניתן לסיים משימה רק אם כל המשימות הקודמות לה מושלמות. תכונות חדשות יפתחו בהדרגה ככל שתתקדם דרך היעדים.
 
-__What happens if new questions are added later to Objective 3?__ From time to time, new features are added to **AAPS** which may require a new question to be added to Objective 3. As a result, any new question added to Objective 3 will be marked as “incomplete” because **AAPS** will require you to action this. As each Objective is independent, you will not lose the existing functionality of **AAPS** providing the other objectives remain completed.
+__מה קורה אם שאלות חדשות יתווספו מאוחר יותר ליעד 3?__ מעת לעת, תכונות חדשות מתווספות ל-**AAPS** והן עשויות לדרוש הוספת שאלה חדשה למשימה 3. לכן, כל שאלה חדשה שתתווסף למשימה 3 תסומן כ"לא הושלמה" ויהיה עליכם לענות עליה. מכיוון שכל משימה היא עצמאית, לא תאבדו את הפונקציונליות הקיימת של **AAPS** בתנאי שהמשימות האחרות מושלמות.
 
 
 ## משימה 4: התחלת לופ פתוח
 
-- Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
-- Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AAPS that you have accepted them.  Ensure this data shows in AAPS and Nightscout.
-- Enable [temp targets](../Usage/temptarget.md) if necessary. הפעילו ערך מטרה זמני היפו כדי למנוע מהמערכת לתקן ביתר עליות ברמת הסוכר בעת יציאה מהיפוגליקמיה.
+- בחרו בלולאה פתוחה בהעדפות או ע"י לחיצה ארוכה על סמל הלופ בחלק העליון של המסך הראשי, בצד שמאל (אם שפת AAPS היא עברית).
+- עברו מחדש על ההעדפות כדי לוודא שהכל מוגדר כרצוי.
+- אשרו באופן ידני לפחות 20 הצעות לשינוי במינון הבזאלי הזמני על פני תקופה של 7 ימים. בשימוש במשאבה וירטואלית הזינו את השינויים המוצעים במשאבה ואשרו ב-AAPS שביצעתם אותן.  וודאו ששינויי המינון נרשמים ב-AndroidAPS וב-Nightscout.
+- הפעילו [ערכי מטרה זמניים](../Usage/temptarget.md) במידת הצורך. הפעילו ערך מטרה זמני היפו כדי למנוע מהמערכת לתקן ביתר עליות ברמת הסוכר בעת יציאה מהיפוגליקמיה.
 
 ### צמצום מספר התראות הלולאה הפתוחה
 
-- To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l.
+- על מנת לצמצם את מספר ההמלצות של הלולאה הפתוחה, הגדירו טווח ערכי מטרה רחב כמו לדוגמה 90-150 mg/dl או 5-8.5 mmol/l.
 
-- You might even want to wider upper limit (or disable Open Loop) at night.
+- תוכלו גם להגדיר ערך מטרה עליון גבוה עוד יותר ואף לכבות את הלופ בלילה.
 
-- In Preferences you can set a minimum percentage for suggestion of basal rate change.
+- בהעדפות אתם יכולים להגדיר את אחוז השינוי המינימלי הדרוש להפעלת הצעה לשינוי במינונים הבזאליים.
 
   ```{image} ../images/OpenLoop_MinimalRequestChange2.png
   :alt: Open Loop minimal request change
   ```
 
-- Also, you do not need to act every 5 minutes on all suggestions...
+- זכרו שאתם לא חייבים להגיב לכל המלצה של הלופ, כל 5 דקות...
 
 ## משימה 5: העמקת הבנת הלולאה הפתוחה, לרבות המינונים הבזאליים הזמניים וההמלצות
 
-- Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AAPS homescreen](Screenshots-prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+- התחילו לנסות להבין את המחשבה שמאחורי המלצת המינון הבזאלי הזמני ע"י קריאת [לוגיקת קביעת מינון בזאלי](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), את [עקום התחזית במסך הבית](Screenshots-prediction-lines) או בנייטסקאוט ואת סיכום הפלטים של החישובים המופיעים בלשונית OpenAPS.
 
 רצוי שתקבעו ערכי מטרה גבוהים מהרגיל עד אשר תבטחו בהגדרות ובחישובי הלופ.  המערכת מאפשרת
 
-- a low target to be a minimum of 4 mmol (72 mg/dl) or maximum of 10 mmol (180 mg/dl)
-- a high target to be a minimum of 5 mmol (90 mg/dl) and maximum of 15 mmol (225 mg/dl)
-- a temporary target as a single value can be anywhere in the range of 4 mmol to 15 mmol (72 mg/dl to 225 mg/dl)
+- ערך מטרה תחתון 72 mg/dl עד 180 mg/dl
+- ערך מטרה עליון 90 mg/dl עד 225 mg/dl
+- ערך מטרה זמני כערך יחיד יכול להיות בטווח 72 עד 225 mg/dl
 
-ערך המטרה הוא הערך עליו מבוססים החישובים והוא לא ערך הסוכר אליו אתם מתכוונים להגיע בפועל.  If your target is very wide (say, 3 or more mmol \[50 mg/dl or more\] wide), you will often find little AAPS action. זה בגלל שרמת הסוכר בדם צפויה להיות בתוך הטווח המטרה הרחב הזה ולכן לא יומלצו הרבה שינויים במינון הבזאלי.
+ערך המטרה הוא הערך עליו מבוססים החישובים והוא לא ערך הסוכר אליו אתם מתכוונים להגיע בפועל.  אם טווח המטרה שלכם רחב מאוד (לדוגמה טווח של 50 mg/dl), אתם תראו מעט פעילות של AAPS. זה בגלל שרמת הסוכר בדם צפויה להיות בתוך הטווח המטרה הרחב הזה ולכן לא יומלצו הרבה שינויים במינון הבזאלי.
 
-You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol \[20 mg/dl or less\] wide) and observe how the behavior of your system changes as a result.
+ייתכן שתרצו להתנסות בכיוונונים של ערכי המטרה להקטנת טווח המטרה (20 mg/dl ואף פחות) ולצפות בהתנהגות המערכת כתוצאה מכך.
 
-You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
+תוכלו לצפות בטווח רחב יותר (עקום ירוק) בגרף עבור ערכי סוכר בהם אתם מעוניינים ע"י בחירת ערכים [בהעדפות > סקירה כללית > טווח הצגה](../Configuration/Preferences.md).
 
 ```{image} ../images/sign_stop.png
 :alt: Stop sign
@@ -131,7 +131,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 (Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets)=
 ## משימה 7: כוונון לולאה סגורה, העלאת האינסולין הפעיל המרבי מ-0 והורדה מדורגת של ערכי המטרה
 
-- Select 'Closed Loop' either from [Preferences](../Configuration/Preferences.md) or by pressing and holding the Loop icon at the top right corner of the home screen, over a period of 1 day.
+- בחרו 'לולאה סגורה' מתוך [העדפות](../Configuration/Preferences.md) או על ידי לחיצה ממושכת על סמל הלולאה בפינה השמאלית העליונה של מסך הבית, במשך יום אחד.
 
 - העלו את 'מינון אינסולין פעיל מרבי ממנו OpenAPS לא יחרוג' (נקרא גם 'max-IOB' ב-OpenAPS) ליותר מ-0 במשך יממה אחת. המלצת ברירת המחדל היא X3 המינון הבזאלי המקסימלי (עבור אלגוריתם AMA הישן, שנמצא בשימוש של משתמשים חדשים) או X3 המינון הבזאלי המקסימלי + בולוס ארוחה ממוצע (עבור אלגוריתם SMB). עליכם להתקדם אל ערך זה באופן מדורג עד שהגדרה זו עובדת היטב. מינון בזאלי מקסימלי = המינון הבזאלי המרבי שניתן בכל שעה שהיא ביממה.
 
@@ -149,7 +149,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 - תוכלו להשתמש ב-[autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) באופן חד פעמי לבדיקת השינוי במינון הבזאלי או שתעשו בדיקת בזאלי מסורתית.
 - הפעילו [autosens](../Usage/Open-APS-features.md) למשך 7 ימים וצפו בהתנהגות עקום כתוצאה משינויים הורמונליים, פעילות גופנית וכו'. עקום הרגישות הלבן נמצא הוא גרף משני במסך הבית (יש להפעילו).
 
-*Don’t forget to record your looping in* [this form](https://bit.ly/nowlooping) *logging AAPS as your type of DIY loop software, if you have not already done so.*
+*אל תשכחו לרשום את עצמכם* [בטופס הזה](https://bit.ly/nowlooping) *לרישום סוג הלופ שלכם כ-AndroidAPS אם טרם עשיתם זאת.*
 
 (Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
 ## משימה 9: אפשרו פונקציות oref1 כגון סופר מיקרובולוס (SMB), בשעות היום
