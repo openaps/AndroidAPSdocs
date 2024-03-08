@@ -11,9 +11,9 @@
 
 **הערה:** פחמימות ממושכות אינן מוגבלות לארוחות כבדות העשירות בשומן או חלבון: ניתן להשתמש בהן גם כדי לעזור בכל מצב שבו יש השפעות שמעלות את רמת הסוכר בדם כמו שימוש בתרופות כגון קורטיקוסטרואידים.
 
-## המכניקה של השימוש בפחמימות ממושכות
+## אופן השימוש בפחמימות ממושכות
 
-To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
+בכדי להזין פחמימות ממושכות, הגדירו משך זמן בתיבת הדו-שיח *פחמימות* בלשונית הסקירה הכללית, את סך הפחמימות ובאופן אופציונלי היסט זמן (*המספרים למטה הם רק דוגמאות, תצטרכו לנסות את הערכים שלכם כדי להגיע לתגובת גלוקוז נכונה*):
 
 ```{image} ../images/eCarbs_Dialog.png
 :alt: הזנת פחמימות
@@ -33,22 +33,22 @@ To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the t
 
 ______________________________________________________________________
 
-A way to handle fat and protein with that feature is described here: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
+דרך לטפל בשומן וחלבון בעזרת תכונה זו מתוארת כאן: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
 
 ______________________________________________________________________
 
 ## תצורה מומלצת, תרחיש לדוגמה והערות חשובות
 
-The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
+התצורה המומלצת היא להשתמש בתוסף OpenAPS SMB, כאשר בולוסי SMB מופעלים וכאשר האפשרות *הפעלת SMB עם פחמ' פעילות* מופעלת.
 
-A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *calculator* and then use the *carbs* button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
+עבור פיצה ניתן לתת בולוס (חלקי) מראש באמצעות ה*מחשבון* ולאחר מכן להשתמש בלחצן *פחמימות* כדי להזין את הפחמימות הנותרות עם משך 4-6 שעות, החל לאחר שעה או שעתיים.
 
-**Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. בארוחות דלות פחמימות שעתירות שומן\חלבון זה עשוי להספיק להשתמש רק בפחמימות ממושכות ללא בולוסים מקדימים ידניים (ראו את הפוסט בבלוג למעלה). כאשר נוצר רישום פחמימות ממושכות, נוצרת גם תיעוד בנייטסקאוט לתיעוד כל התשומות, כדי להקל על איטרציה ושיפור התשומות.
+**הערות חשובות:** חובה לבדוק בעצמכם ולגלות מהם הערכים המתאימים לכם. תוכלו גם להתאים בזהירות את ההגדרה *מקסימום הדקות של בזאלי אליו SMB מוגבל* כדי לגרום לאלגוריתם להיות אגרסיבי יותר או פחות. בארוחות דלות פחמימות שעתירות שומן\חלבון זה עשוי להספיק להשתמש רק בפחמימות ממושכות ללא בולוסים מקדימים ידניים (ראו את הפוסט בבלוג למעלה). כאשר נוצר רישום פחמימות ממושכות, נוצרת גם תיעוד בנייטסקאוט לתיעוד כל התשומות, כדי להקל על איטרציה ושיפור התשומות.
 
 (Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
-## בולוס מושהה ומדוע לא יעבוד במערכת לולאה סגורה?
+## בולוס מושהה ומדוע הוא לא יעבוד במערכת לולאה סגורה?
 
-כפי שהוזכר לעיל בולוסים ממושכים או מרובי גלים לא באמת עובדים בסביבת לולאה סגורה. [See below](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
+כפי שהוזכר לעיל בולוסים ממושכים או מרובי גלים לא באמת עובדים בסביבת לולאה סגורה. לפרטים נוספים לחצו [כאן](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)
 
 (Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### בולוס מושהה ומעבר ללולאה פתוחה - משאבת Dana ו-Insight בלבד
@@ -58,8 +58,8 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 לכן החל מגרסה 2.6 ישנה אפשרות לבולוס מושהה למשתמשי משאבות Dana ו-Insight.
 
 - לולאה סגורה תיעצר אוטומטית ותעבור למצב לולאה פתוחה למשך זמן פעילות הבולוס הממושך.
-- Bolus units, remaining and total time will be shown on homescreen.
-- On Insight pump extended bolus is *not available* if [TBR emulation](Accu-Chek-Insight-Pump-settings-in-aaps) is used.
+- יחידות הבולוס, הזמן הנותר והזמן הכולל יוצגו במסך הבית.
+- במשאבות Insight בולוס מושהה *אינו זמין* אם נעשה שימוש ב[אמולציית בזאלי זמני](Accu-Chek-Insight-Pump-settings-in-aaps).
 
 ```{image} ../images/ExtendedBolus2_6.png
 :alt: Extended bolus in AAPS 2.6
@@ -68,11 +68,11 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 (Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### הסיבה לכך שבולוסים מושהים לא יעבדו בלולאה סגורה
 
-1. הלופ קובע שיש לספק עכשיו 1.55 יח'\שעה. לא משנה לאלגוריתם אם זה מוזרק כבולוס מושהה או כמינון בזאלי זמני. למעשה, חלק מהמשאבות משתמשות בבולוס המושהה. מה צריך לקרות? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
+1. הלופ קובע שיש לספק עכשיו 1.55 יח'\שעה. לאלגוריתם לא משנה אם המינון הזה יוזרק כבולוס מושהה או כמינון בזאלי זמני. למעשה, חלק מהמשאבות משתמשות בבולוס המושהה. מה צריך לקרות? רוב המשאבות מפסיקות את הבולוס המושהה -> לא היינו צריכים להפעיל אותו.
 
 2. אם הזנו בולוס מושהה מראש, מה צריך לקרות באלגוריתם?
 
    1. האם זה אמור להיות מחושב כנייטרלי יחד עם המינון הבזאלי בחישוב של הלולאה? ואז הלולאה אמורה להיות מסוגלת גם להפחית את הבולוס אם למשל יורדים מדי וכל האינסולין ה"נייטרלי" נלקח?
    2. האם פשוט להוסיף את הבולוס המושהה? אז פשוט צריך לתת ללופ להמשיך? אפילו בהיפו הכי חריף? זהו אינו פיתרון טוב, יש היפו צפוי אבל אסור למנוע אותו?
 
-3. האינסולין הפעיל שהבולוס המושהה מוסיף מתממש לאחר 5 דקות במדידה הבאה. בהתאם, הלולאה תיתן פחות בזאלי. So not much changes... except that the possibility of hypo avoidance is taken.
+3. השפעת האינסולין הפעיל שהמצטבר בגלל הבולוס המושהה מתממשת לאחר 5 דקות במדידה הבאה. בהתאם, הלולאה תיתן פחות בזאלי. כך אין הרבה שינויים, חוץ משנבחרה האפשרות בה יש הימנעות מהיפוגליקמיה.
