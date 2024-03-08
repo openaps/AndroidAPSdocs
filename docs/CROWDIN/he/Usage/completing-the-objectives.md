@@ -17,22 +17,22 @@
 
 אם לא יהיה לכם עותק גיבוי של **ההגדרות** שלכם, במקרה שמשהו יקרה למכשירכם תצטרכו להתחיל שוב את **משימות** מההתחלה.
 
-Overall the **objectives** take around 6 weeks to complete (see [how long will it take?](preparing-how-long-will-it-take?) for a detailed breakdown) from configuring **AAPS** on your smartphone to "basic" hybrid closed looping (from objective 1 to objective 8), so, although you _can_ proceed up to **objective 5** using a **virtual pump** (and using some other method of insulin delivery in the meantime), having to re-complete all the **objectives** because for example, you lost your smartphone, is still something you really want to avoid.
+בסך הכל **המשימות** לוקחות 6 שבועות בערך (להרחבה ראו [כמה זמן זה ייקח?](preparing-how-long-will-it-take?) ) מהתקנת **AAPS** במכשירכם ועד הפעלת לולאה סגורה "בסיסית" היברידית (ממשימה 1 עד 8), כך שעל אף ש_ניתן_ להתקדם עד **משימה 5** באמצעות **משאבה וירטואלית** (ובאמצעות שימוש בשיטה אחרת של מתן אינסולין בינתיים), עדיין רצוי מאוד להימנע מהצורך להשלים מחדש את כל **המשימות** כי למשל, איבדתם את הסמארטפון.
 
-As well as progressing through the **objectives**, if you want, you can also remove your progress and [go back to an earlier objective](Objectives-go-back-in-objectives).
+בנוסף להתקדמות **במשימות**, אם תרצו, ניתן לבטל את ההתקדמות ו[לחזור על משימות קודמות](Objectives-go-back-in-objectives).
 
 ## משימה 1: הגדרת ויזואליזציה, ניטור, ניתוח המינון הבזאלי והיחסים
 
-- **AAPS** checks if your basic technical setup is working.
+- **AAPS** בודק אם התצורה הטכנית הבסיסית שלכם עובדת.
 
-If not you have to reconfigure until the basic technical setup works for **AAPS**.
+אם היא לא עובדת, עליכם להגדירה מחדש עד שתפעל כראוי.
 
-- Select the correct CGMS/FGMS in [Config Builder](../Configuration/Config-Builder.md).  See [BG Source](../Configuration/BG-Source.md) for more information.
-- Select the correct Pump in [Config Builder](../Configuration/Config-Builder.md) to ensure your pump can communicate with AAPS. Select **virtual pump** if you are using a pump model with no **AAPS** driver for looping, or if you want to work through the early **objectives** while using another system for insulin delivery. See [insulin pump](../Getting-Started/Pump-Choices.md) for more information.
-- Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure **Nightscout** can receive and display this data.
-- Note that URL in **NSClient** must be **_without_ "/api/v1/"** at the end - see [NSClient settings in Preferences](Preferences-nsclient).
+- בחרו את החיישן שלכם ב-[בונה התצורה](../Configuration/Config-Builder.md).  ראו [מקור נתוני סוכר](../Configuration/BG-Source.md) לפרטים נוספים.
+- בחרו את המשאבה הנכונה ב[בונה התצורה](../Configuration/Config-Builder.md) כדי להבטיח שהמשאבה שלכם תוכל לתקשר עם AAPS. בחרו **משאבה וירטואלית** אם אתם משתמשים בדגם משאבה שבו **AAPS** אינו תומך, או אם ברצונכם לעבוד על **המשימות** הראשונות תוך שימוש במערכת אחרת למתן אינסולין. ראו [משאבת אינסולין](../Getting-Started/Pump-Choices.md) למידע נוסף.
+- עקבו אחר הוראות [נייטסקאוט](../Installing-AndroidAPS/Nightscout.md) כדי לוודא ש-**Nightscout** מקבל ומציג את הנתונים.
+- שימו לב שכתובת אתר הנייטסקאוט שב-NSClient **חייב להיות ללא הסיומת /api/v1/** - ראו [הגדרות NSClient בהעדפות](Preferences-nsclient).
 
-Note - _You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognise it._
+שימו לב - _ייתכן שתצטרכו לחכות לקריאת הסוכר הבאה שתגיע כל מנת ש-**AAPS** יזהה אותה._
 
 ## משימה 2: לימדו כיצד לשלוט בממשק AndoridAPS
 
@@ -43,14 +43,14 @@ Note - _You may need to wait for the next sensor glucose reading to arrive befor
   ```{image} ../images/Objective2_V2_5.png
   :alt: Screenshot objective 2
   ```
-- Tasks to complete **Objective 2** are:
-  - Set your profile to 90% for a duration of 10 min (_Hint_: Long press your profile name on the OVERVIEW screen) (_Note_: AAPS does not accept basal rates below 0.05U/hr. If your profile includes any rates 0.06U/hr or lower you will need to create a new profile with higher basal rates before completing this task. Switch back to your normal profile after completing this task.)
-  - Simulate "taking a shower" by disconnecting your pump in **AAPS** for a duration of 1h (_Hint_: press the loop icon on the OVERVIEW screen to open the Loop dialogue)
-  - End "taking a shower" by reconnecting your pump (_Hint_: press the "disconnected"-icon to open the loop dialog)
-  - Create a custom temporary target with a duration of 10 min (_Hint_: press the target bar on the OVERVIEW screen to bring up the temporary target dialog)
-  - Activate the **ACTIONS** plugin in **CONFIG BUILDER** to make it appear on the top scrollable menu bar (_Hint_: Go to **CONFIG BUILDER** and scroll down to 'General")
-  - Display the LOOP plugin's content
-  - Scale the BG-Chart to be able to look at larger or smaller timeframes: toggling between 6h, 12h, 18h 24h of past data (_Hint_: Tap the chart)
+- הפעולות להשלמת **משימה 2** הן:
+  - להגדיר פרופיל זמני של 90% למשך 10 דקות (_רמז_: לחצו לחיצה ארוכה על שם הפרופיל במסך ראשי) (_הערה_: AAPS אינו מקבל מינונים בזאליים הנמוכים מ-0.05 יח'\שעה. אם הפרופיל כולל מינונים של 0.06 יח'\שעה ומטה, תצטרכו ליצור פרופיל חדש עם מינונים גבוהים יותר לצורך השלמת משימה זו. עברו חזרה לפרופיל הרגיל שלכם לאחר השלמת משימה זו.)
+  - הדמיית "מקלחת" על ידי ניתוק המשאבה ב-**AAPS** למשך שעה אחת (_רמז_: לחצו על סמל הלולאה במסך הבית כדי לפתוח את תיבת הדו-שיח של הלולאה)
+  - סיימו "להתקלח" על ידי חיבור מחדש של המשאבה (_רמז_: לחצו על הסמל "מנותק" האפור כדי לפתוח את תיבת הדו-שיח של הלולאה)
+  - צרו ערך מטרה זמני מותאם אישית עם משך זמן של 10 דקות (_רמז_: לחצו על כפתור ערך המטרה במסך OVERVIEW כדי להעלות את תיבת הדו-שיח של ערך המטרה הזמני)
+  - הפעלת מסך **פעולות** ב**בונה התצורה** כדי שיופיע בשורת התפריט העליונה הניתנת לגלילה הצידה (_רמז_: ב**בונה התצורה** גללו מטה אל "כללי")
+  - הצגת תוכן של התוסף **לולאה** (סימון V בתיבה המסומנת בעין)
+  - שינוי קנה המידה של גרף רמת הסוכר כדי לראות מסגרות זמן גדולות או קטנות יותר: מעבר בין 6 שעות, 12 שעות, 18 שעות ו-24 שעות של נתוני עבר (_רמז_: לחצו לחיצות ארוכות על הגרף)
 
 (Objectives-objective-3-prove-your-knowledge)=
 
@@ -58,7 +58,7 @@ Note - _You may need to wait for the next sensor glucose reading to arrive befor
 
 - היבחנו במבחן אמריקאי שיבדוק את ידיעתכם ב-AndroidAPS.
 
-חלק מהמשתמשים רואים המשימה 3 כמשימה הקשה ביותר. חובה לקרוא את מסמכי AAPS יחד עם השאלות. If you are genuinely stuck after researching the **AAPS** documents, please search the Facebook group for "Objective 3" (because it is likely that your question has been asked- and answered - before). If you are still stuck, ask in a post on either the Facebook or Discord group. קבוצות אלה יכולות לספק רמזים או להפנות אתכם לחלק הרלוונטי במסמכי AAPS.
+חלק מהמשתמשים רואים המשימה 3 כמשימה הקשה ביותר. חובה לקרוא את מסמכי AAPS יחד עם השאלות. אם אתם באמת תקועים לאחר קריאה מעמיקה במסמכי **AAPS**, חפשו "Objective 3" בקבוצות ה- Facebook או Discord של AAPS (סביר מאוד שכבר דנו בשאלתכם בעבר). אם אתם עדיין תקועים לאחר קריאת מסמכי **AAPS**, שאלו את שאלתכם בקבוצות ה-Facebook או Discord של AAPS. קבוצות אלה יכולות לספק רמזים או להפנות אתכם לחלק הרלוונטי במסמכי AAPS.
 
 כדי לבצע את המשימה, לחצו על הטקסט הכתום "עדיין לא הושלם" כדי לגשת לשאלה הרלוונטית. יש לקרוא את השאלות ולבחור את תשובותיכם.
 
@@ -66,37 +66,37 @@ Note - _You may need to wait for the next sensor glucose reading to arrive befor
 
 - תוכלו גם להגדיר ערך מטרה עליון גבוה עוד יותר ואף לכבות את הלופ בלילה.
 
-לכל שאלה עשויה להיות יותר מתשובה אחת נכונה! אם נבחרה תשובה שגויה, השאלה תינעל למשך 60 דקות ובתומן תוכלו לחזור ולענות עליה. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
+לכל שאלה עשויה להיות יותר מתשובה אחת נכונה! אם נבחרה תשובה שגויה, השאלה תינעל למשך 60 דקות ובתומן תוכלו לחזור ולענות עליה. שימו לב שייתכן שסדר התשובות ישתנה כאשר תנסו לענות שוב, זאת כדי לוודא שאתם קוראים אותן בעיון ובאמת מבינים תוכנו כל משפט.
 
 כאשר AAPS מותקן בפעם הראשונה, תצטרכו להשלים את **משימה 3** בכללותה כדי לעבור הלאה ל**משימה 4**. ניתן לסיים משימה רק אם כל המשימות הקודמות לה מושלמות. תכונות חדשות יפתחו בהדרגה ככל שתתקדם דרך היעדים.
 
-:::{admonition}  **What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?**
+:::{admonition}  **מה קורה אם שאלות חדשות מתווספות למשימה כאשר אני מעדכן לגרסה חדשה יותר של AAPS?**
 :class: Note
-From time to time, new features are added to **AAPS** which may require a new question to be added to the Objectives, particularly Objective 3. לכן, כל שאלה חדשה שתתווסף למשימה 3 תסומן כ"לא הושלמה" ויהיה עליכם לענות עליה. מכיוון שכל משימה היא עצמאית, לא תאבדו את הפונקציונליות הקיימת של AAPS בתנאי שהמשימות האחרות מושלמות.
+מעת לעת, תכונות חדשות מתווספות ל-**AAPS**, העשויות לדרוש הוספת שאלה חדשה למשימות, במיוחד משימה 3. לכן, כל שאלה חדשה שתתווסף למשימה 3 תסומן כ"לא הושלמה" ויהיה עליכם לענות עליה. מכיוון שכל משימה היא עצמאית, לא תאבדו את הפונקציונליות הקיימת של AAPS בתנאי שהמשימות האחרות מושלמות.
 :::
 
 ## משימה 4: התחלת לופ פתוח
 
-The purpose of this objective is to recognise how often **AAPS** will evaluate the basal rate's impact on glucose levels, and recommend temporary basal rate adjustments. As part of this objective, you will activate open looping for the first time, and will perform 20 proposed temporary basal rate changes manually on your pump. Furthermore, you will observe temporary and default temporary targets' impact (_e.g._ for activity or hypo treatments). If you are not familiar with setting a temporay basal rate change in **AAPS** yet, please refer to the [ACTIONS tab](Screenshots#Screenshots-action-tab).
+מטרת משימה זו היא לזהות באיזו תדירות **AAPS** יעריך את השפעת המינון הבזאלי על רמות הגלוקוז ולהמליץ על שינויים זמניים במינונים. כחלק משימה זו, אתם תפעילו לולאה פתוחה בפעם הראשונה ותבצעו ידנית 20 שינויים זמניים המוצעים, במינוניים הבזאליים. בנוסף אתם תתנסו בהשפעת ברירות המחדל של המטרות הזמניות (_למשל_ עבור פעילות גופנית או טיפולים בהיפו). אם אינכם מכירים את ההגדרה של שינוי זמני במינון הבזאלי ב-**AAPS**, אנא עיינו בלשונית [פעולות](Screenshots#Screenshots-action-tab).
 
-Estimated time to complete this objective: **7 days**. This is a mandatory wait time. You can't proceed to the next Objective, even if you enacted all basal rate changes already.
+זמן משוער להשלמת משימה זו: **7 ימים**. חובה להמתין את זמן זה. אינכם יכולים להמשיך אל המשימה הבאה, גם אם ביצעתם כבר את כל השינויים הזמניים במינונים הבזאליים.
 
 - בחרו בלולאה פתוחה בהעדפות או ע"י לחיצה ארוכה על סמל הלופ בחלק העליון של המסך הראשי, בצד שמאל (אם שפת AAPS היא עברית).
-- Walk through the [Preferences](../Configuration/Preferences.md) to set it up for you (scroll down to "Loop/APS Mode" and select "Open Loop".
-- אשרו באופן ידני לפחות 20 הצעות לשינוי במינון הבזאלי הזמני על פני תקופה של 7 ימים. בשימוש במשאבה וירטואלית הזינו את השינויים המוצעים במשאבה ואשרו ב-AAPS שביצעתם אותן. Ensure these basal rate adjustments show up in AAPS and Nightscout.
-- אפשרו [ערכי מטרה זמניים] (../Usage/temptarget.md) במקרה הצורך. After treating a hypo use hypo temp targets to prevent the system from overcorrecting upon the bounce back.
+- כנסו ל[העדפות](../Configuration/Preferences.md) והגדירו את הלולאה (גללו מטה אל "לולאה\מצב לולאה ובחרו "לולאה פתוחה".
+- אשרו באופן ידני לפחות 20 הצעות לשינוי במינון הבזאלי הזמני על פני תקופה של 7 ימים. בשימוש במשאבה וירטואלית הזינו את השינויים המוצעים במשאבה ואשרו ב-AAPS שביצעתם אותן. ודאו כי ההתאמות במינונים הבזאליים שאישרתם מופיעות ב-AAPS וב-Nightscout.
+- אפשרו [ערכי מטרה זמניים](../Usage/temptarget.md) במקרה הצורך. לאחר טיפול בהיפו, השתמשו בערך מטרה היפו כדי למנוע מהמערכת לתקן ביתר על החזרה מההיפו.
 
 ### צמצום מספר התראות הלולאה הפתוחה
 
 - על מנת לצמצם את מספר ההמלצות של הלולאה הפתוחה, הגדירו טווח ערכי מטרה רחב כמו לדוגמה 90-150 mg/dl או 5-8.5 mmol/l.
 - תוכלו גם להגדיר ערך מטרה עליון גבוה עוד יותר ואף לכבות את הלופ בלילה.
-- You can set a minimum percentage for recommended basal rate changes to change the number of triggered notifications.
+- כדי לשנות את כמות ההמלצות אתם יכולים להגדיר את אחוז השינוי המינימלי הדרוש להפעלת הצעה לשינוי במינונים הבזאליים.
 
   ```{image} ../images/OpenLoop_MinimalRequestChange2.png
   :alt: Open Loop minimal request change
   ```
 
-:::{admonition} You don't need to action each and every system recommendation!
+:::{admonition} אתם לא צריכים לאשר כל המלצת מהמערכת!
 :class: Note
 :::
 
@@ -104,9 +104,9 @@ Estimated time to complete this objective: **7 days**. This is a mandatory wait 
 
 ## משימה 5: העמקת הבנת הלולאה הפתוחה, לרבות המינונים הבזאליים הזמניים וההמלצות
 
-As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in AAPS OVERVIEW](Screenshots-prediction-lines)/Nightscout and looking at detailed calculations shown on your OPENAPS tab.
+במסגרת **משימה 5** אתם תתחילו להבין כיצד מחושבות המלצות בזאליות זמניות. זה כולל את [לוגיקת קביעת מינון בזאלי](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), ניתוח ההשפעה על ידי התבוננות [עקומי חיזוי במסך הראשי](Screenshots-prediction-lines)/Nightscout והסתכלות על חישובים מפורטים המוצגים בלשונית OPENAPS.
 
-Estimated time to complete this objective: 7 days.
+זמן משוער להשלמת משימה זו: 7 ימים.
 
 This Objective requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](Open-APS-features#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal). This value can be set in Preferences > OpenAPS.
 Make sure this safety setting is set in both **AAPS** and your insulin pump.
@@ -119,9 +119,9 @@ Make sure this safety setting is set in both **AAPS** and your insulin pump.
 - ערך מטרה עליון 90 mg/dl עד 225 mg/dl
 - ערך מטרה זמני כערך יחיד יכול להיות בטווח 72 עד 225 mg/dl
 
-Your target is a core value. All calculations are based on it. It is different from a target range which you usually aim to keep your blood glucose values in. If your target is very wide (say, 3 or more mmol/l [50 mg/dl or more] wide), you will often find little **AAPS** action. This is because sensor glucose is predicted to be somewhere in that wide range, and thus temporary basal rate changes are rarely suggested.
+Your target is a core value. All calculations are based on it. It is different from a target range which you usually aim to keep your blood glucose values in. אם טווח המטרה שלכם רחב מאוד (לדוגמה טווח של 50 mg/dl), אתם תראו מעט פעילות של **AAPS**. This is because sensor glucose is predicted to be somewhere in that wide range, and thus temporary basal rate changes are rarely suggested.
 
-You may want to experiment with adjusting your targets being in a tighter range (say, 1 or less mmol/l [20 mg/dl or less] wide) and observe a resulting system behaviour.
+ייתכן שתרצו להתנסות בכיוונונים של ערכי המטרה להקטנת טווח המטרה (20 mg/dl ואף פחות) ולצפות בהתנהגות המערכת כתוצאה מכך.
 
 You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
@@ -146,7 +146,7 @@ If you are open looping with a virtual pump stop here. Only click verify at the 
 :alt: Warning sign
 ```
 
-:::{admonition}  Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend only!
+:::{admonition}  הלולאה הסגורה שבמשימה 6 לא תתקן ערכי סוכר גבוהים כי היא מוגבלת להפסקת הזרקת אינסולין כתיקון לסוכר נמוך!
 :class: Note
 You will still need to correct high BG values by yourself (manually with corrections by pump or pen)!
 :::
@@ -174,7 +174,7 @@ This means that when you are on Objective 6, if sensor glucose levels are droppi
 - Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
 - Enable 'Low Glucose Suspend' mode by pressing and holding the Loop icon at the top right corner of the OVERVIEW screen and selecting the Loop - LGS mode icon.
 - Watch active temporary basals by looking at the turquoise basal text on the OVERVIEW screen or the turquoise basal render as part of the OVERVIEW graph.
-- You may temporarily experience spikes following treated hypos without being able to increase basals on the rebound.
+- ייתכן שתחוו קפיצות בסוכר לאחר טיפול בהיפוגליקמיות באופן זמני בגלל שאין עליה במינון הבזאלי לאחר היציאה מהיפוגליקמיה.
 
 (Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets)=
 
@@ -203,7 +203,7 @@ Estimated time to complete this objective: 1 day.
 
 As part of this objective you will revist your profile's performance and will use autosens functionality as an indicator for wrong settings.
 
-Estimated time to complete this objective: 7 days.
+זמן משוער להשלמת משימה זו: 7 ימים.
 
 - You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
 - הפעילו autosens למשך 7 ימים וצפו בהתנהגות עקום כתוצאה משינויים הורמונליים, פעילות גופנית וכו'. עקום הרגישות הלבן נמצא הוא גרף משני במסך הבית (יש להפעילו).
@@ -215,14 +215,14 @@ Estimated time to complete this objective: 7 days.
 In this objective you will tackle and use "Super Micro Bolus (SMB)" as one core functionality. After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, reasonable starting point with SMBs and why basal is set to zero temporarily after SMBs are given (zero-temping). Estimated time to complete this objective: 28 days.
 
 - The [SMB section in this documentation](Open-APS-features-super-micro-bolus-smb) and [oref1 coverage in the openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand SMB and the concept of zero-temping.
-- Once done, you [raise maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working well. maxIOB now includes all IOB, not just accumulated basal. This threshold pauses SMBs until IOB drops below this value (_e.g._ maxIOB is set to 7 U and a bolus of 8 U is given to cover a meal: SMBs will be paused and not given unless IOB drops below 7 U). A good start is setting maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) as reference)
+- לאחר מכן, עליכם [להעלות את מגבלת האינסולין הפעיל המרבי] (Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) כדי לאפשר ל-SMB לתפקד כראוי. מעכשיו, האינסולין הפעיל המרבי כולל את כל האינסולין המוזרק, לא רק את הבזאלי. This threshold pauses SMBs until IOB drops below this value (_e.g._ maxIOB is set to 7 U and a bolus of 8 U is given to cover a meal: SMBs will be paused and not given unless IOB drops below 7 U). אפשר להעריך את ערך האינסולין הפעיל המרבי עם החישוב: בולוס ארוחה ממוצע + X3 המינון הבזאלי המרבי שיש ביממה - ראו ב[משימה 7] (Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) כדוגמה)
 - Change "min_5m_carbimpact"-parameter (Preferences > Absorbtion settings > min_5m_carbimpact) to 8 as you move from an OpenAPS AMA algorithm to OpenAPS SMB. For AMAs the default value is 3. Read more about this setting [here](../Configuration/Preferences.html#min-5m-carbimpact)
 
 (Objectives-objective-10-automation)=
 
 ## משימה 10: אוטומציות
 
-You have to start **Objective 10** to be able to use Automations.
+חובה להתחיל את משימה 10 כדי להיות מסוגלים להשתמש באוטומציות.
 
 1. Read the documentation page  [Automation](../Usage/Automation.md) first.
 2. Set-up the most basic automation rule;
