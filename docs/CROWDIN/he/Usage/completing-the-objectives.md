@@ -34,10 +34,10 @@ If not you have to reconfigure until the basic technical setup works for **AAPS*
 
 Note - _You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognise it._
 
-## Objective 2: Learn how to control AAPS
+## משימה 2: לימדו כיצד לשלוט בממשק AndoridAPS
 
 - Perform several actions in **AAPS** as described in this **objective**.
-- Click on the orange text "Not completed yet" to access the to-dos.
+- לחצו על הטקסט הכתום "עוד לא הושלם" כדי לפתוח את סעיפי המשימה.
 - Links will be provided to guide you, in case you are not familiar with a specific action yet.
 
   ```{image} ../images/Objective2_V2_5.png
