@@ -66,9 +66,9 @@ To proceed with **Objective 3**, click on the orange text “**Not completed yet
 
 - You might want to set a wider upper limit, or even disable Open Loop, at night.
 
-For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time-locked for a certain amount of time (60 minutes) before you can go back and answer the question again. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
+לכל שאלה עשויה להיות יותר מתשובה אחת נכונה! If an incorrect answer is selected, the question will be time-locked for a certain amount of time (60 minutes) before you can go back and answer the question again. Be aware that the order of the answers may have changed when you next try to answer, this is to make sure you read them carefully and really understand the validity (or not) of each response.
 
-When **AAPS** is installed for the first time, you will have to complete the whole of **Objective 3** before moving on to **Objective 4**. Each objective is required to be completed in sequential order. New features will gradually be unlocked as progress is made through the objectives.
+When **AAPS** is installed for the first time, you will have to complete the whole of **Objective 3** before moving on to **Objective 4**. ניתן לסיים משימה רק אם כל המשימות הקודמות לה מושלמות. תכונות חדשות יפתחו בהדרגה ככל שתתקדם דרך היעדים.
 
 :::{admonition}  **What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?**
 :class: Note
