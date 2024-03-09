@@ -12,9 +12,9 @@
 
 1. **Уменьшение забот, связанных с принятием решений:** Основное преимущество **автоматизации** заключается в освобождении пользователя от бремени ручного вмешательства в работу **AAPS**. [Исследования](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) показывают, что людям с сахарным диабетом 1 типа, приходится принимать в среднем 180 дополнительных решений в день. **Автоматизация** может уменьшить эту нагрузку, высвобождая умственную энергию пользователя для других аспектов жизни.
 
-1. **Potentially improving glycemic control:** for example, **automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sport scheduled at school on Tuesdays at 10am and Thursdays at 2pm and always needs a high temp target actioned 30 min before these activities, these can be actioned by automation.
+1. **Потенциально улучшит гликемический контроль: ** например, **автоматизация** может обеспечить, чтобы ** Временные целевые показатели** устанавливались по мере необходимости, даже во время напряженного графика или периодов забывчивости. Например, если у ребенка с сахарным диабетом запланированы занятия спортом в школе по вторникам в 10 утра и четвергам в 14: 00, и ему всегда нужно, чтобы за 30 минут до этих занятий включалась временная высокая цель, это может быть обеспечено автоматизацией.
 
-1. **Enabling AAPS to be highly customised** to be more or less aggressive in specific situations, according to user preference. For example, triggering a temporary reduced profile% for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing profile is too strong.
+1. <**Позволяет тщательно настраивать AAPS**, чтобы быть более или менее агрессивными в конкретных ситуациях, в зависимости от предпочтений пользователя. For example, triggering a temporary reduced profile% for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing profile is too strong.
 
 The example below illustrates how an **Automation** can enable steps to be eliminated. The user has set an **Automation** to trigger a 5 am ‘Temp Target Exercise’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
 
