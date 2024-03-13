@@ -59,7 +59,7 @@ To deactivate an **Automation** rule, untick the box left of the name of the **A
 ![Alt text](../images/automation_2024-02-12_20-56-08.png)
 
 
-When setting up an automation, you can first test it by activating the ‘notification’ option under "Actions". This triggers **AAPS** to first display a notification rather than actually automating an action. When you are comfortable that the notification has been triggered at the correct time/conditions, the **Automation** rule can be updated to replace the ‘Notification’ with an ‘Action’.
+При настройке автоматизации сначала можно проверить ее, включив опцию «notification (уведомление)» в разделе «Действия». Это заставляет**AAPS** сначала вывести уведомление, а не автоматизировать действие. Когда вы убедитесь, что уведомление запущено в правильное время/ при правильных условиях, правило **Автоматизации** может быть обновлено, с заменой "Уведомления" на ‘Действие’.
 
 ![Alt text](../images/automation_2024-02-12_20-55-05.png)
 
