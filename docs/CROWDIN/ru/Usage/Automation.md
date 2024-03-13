@@ -32,7 +32,7 @@
 
 1. При использовании Autosense попробуйте использовать **Временные цели** вместо **Переключателя профилей**. **Временные цели TT** не сбрасывают Autosens на 0. **Переключатели профиля** сбрасывают Autosens.
 
-1. Most automations should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the automation, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/l for 30 min" or "start profile 110% for 10 min" _and_ "start temp target of 5.0 mmol/l for 10 min". Using automations to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
+1. Большинство автоматизаций следует устанавливать на **ограниченный промежуток времени**, после чего **AAPS** при необходимости повторно оценит и повторит автоматизацию. Например, "начать временную цель 7,0 ммоль/л продолжительностью 30 мин" или "начать профиль 110% продолжительностью 10 мин" _ и_ "начать временную цель 5,0 ммоль/л продолжительностью 10 мин". Использование автоматизации для внесения постоянных изменений (например, для повышения %p профиля) может привести к гипогликемии.
 
 ## When can I start using Automation?
 
