@@ -34,27 +34,27 @@
 
 1. Большинство автоматизаций следует устанавливать на **ограниченный промежуток времени**, после чего **AAPS** при необходимости повторно оценит и повторит автоматизацию. Например, "начать временную цель 7,0 ммоль/л продолжительностью 30 мин" или "начать профиль 110% продолжительностью 10 мин" _ и_ "начать временную цель 5,0 ммоль/л продолжительностью 10 мин". Использование автоматизации для внесения постоянных изменений (например, для повышения %p профиля) может привести к гипогликемии.
 
-## When can I start using Automation?
+## Когда начать применять Автоматизацию?
 
-When you start Objective 10.
+При запуске Цели 10.
 
-## Where are Automations located in AAPS?
+## Где находятся настройки автоматизации в AAPS?
 
-Depending on your [config builder](../Installing-AndroidAPS/change-configuration.md#config-builder) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
+В зависимости от настроек [конфигуратора](../Installing-AndroidAPS/change-configuration.md#config-builder) **Automation** находится либо в выпадающем сэндвич-меню, либо в виде вкладки с **AAPS**.
 
-## How can I set up an Automation?
+## Как настроить автоматизацию?
 
-To set up an **Automation** create a ‘rule’ with **AAPS** as follows:
+Чтобы настроить **Automation** создайте правило **AAPS** следующим образом:
 
-* Give your ‘rule’ a title;
+* Дайте название вашему "правилу";
 * Select at least one ‘Condition’; and
-* Select one ‘Action’;
-* Check the right box to the **Automation** event is ‘ticked’ to activate the automation:
+* Выберите одно «действие»;
+* Установите правый флажок события **Automation** для активации автоматизации:
 
 ![Alt text](../images/automation_2024-02-12_20-55-35.png)
 
 
-To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. The example below shows an **Automation**  entitled ‘Low Glucose TT’ as either activated (‘ticked) or deactivated (‘unticked’).
+To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. В приведенном ниже примере показаны **Automation**  под названием «Low Glucose TT» как активированный («помеченный) или деактивированный («unticked»).
 
 ![Alt text](../images/automation_2024-02-12_20-56-08.png)
 
