@@ -149,58 +149,58 @@ Several conditions can be linked with
 
 отсутствуют
 
-**Actions:** **Profile** percentage
+**Действия:** процент **Профиля**
 
 **Варианты:**
 
-* **Profile** must be between 70% and 130%
+* **Профиль** должен быть между 70% и 130%
 * работает только в том случае, если предыдущий процент составляет 100%
 
-Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
+После добавления «Действия» значения по умолчанию должны быть изменены на желаемую величину путем нажатия и изменения значения по умолчанию.
 
 ![Alt text](../images/automation_2024-02-12_20-57-07.png)
 
 ![Alt text](../images/automation_2024-02-12_20-57-29.png)
 
 ## The order of the automations in the list matters
- **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘low hypoglycemia’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+ <**AAPS** автоматизирует правила в порядке предпочтения, начиная с верхней части списка **Автоматизация**. For example, if the ‘low hypoglycemia’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
 
 
 ![Alt text](../images/automation_2024-02-12_20-57-48.png-500x.png)
 
-To reprioritise the **Automation** rules, click and hold the four-lines-button on the right side of the screen. Reorder the  **Automations** by moving the rules up or down.
+Чтобы изменить приоритет **Правил автоматизации**, нажмите и удерживайте кнопку с четырьмя строками в правой части экрана. Reorder the  **Automations** by moving the rules up or down.
 
 ![Alt text](../images/automation_2024-02-12_20-58-00.png-500x.png)
 
-## How to delete Automation rules
+## Как удалить правила автоматизации
 
 To delete an **Automation** rule click on the trash icon.
 
 ![Alt text](../images/automation_2024-02-12_20-58-26.png-500x.png)
 
-## Examples of Automations
+## Примеры Автоматизации
 
-Below are examples of **Automations**. Further discussion on **Automations** and how users have individualised their  **Automation** can be found in Facebook discussions groups or on Discord. The examples below should not be replicated without the user having a good understanding of how the **Automation** will work.
+Ниже приведены примеры **Автоматизаций**. Further discussion on **Automations** and how users have individualised their  **Automation** can be found in Facebook discussions groups or on Discord. Приведенные ниже примеры не следует воспроизводить без хорошего понимания пользователем того, как будет работать **Автоматизация**.
 
 ### Временная Цель Низкая ГК
 
-This **Automation**  triggers an automatic ‘Temp Target Hypo’ when low **BG** is at a certain threshold.
+Эта **Автоматизация** запускает автоматическую  "Временную Цель Гипо", когда низкая **ГК** находится на определенном пороговом уровне.
 
 ![Alt text](../images/automation_2024-02-12_21-04-01.png-500x.png)
 
-### Lunch Time Temp Target (with ‘Location’)
+### Временная цель Обеденный перерыв (с "Локацией")
 
 ![Alt text](../images/automation_2024-02-12_21-04-25.png-500x.png)
 
-This **Automation** has been created for a user who eats their lunch at work around the same time every weekday but triggered only if the user is situated within a set ‘location’.  So if the user is not at work one day, this Automation will be activated.
+Эта **Автоматизация** была создана для пользователя, который обедает на работе примерно в одно и то же время каждый будний день, но запускается только в том случае, если пользователь находится в пределах заданного ‘местоположения’.  Таким образом, если пользователь однажды не окажется на работе, эта автоматизация НЕ будет активирована.
 
-This **Automation** will set a low Temp Target (Eating Soon) at 13:00 to drive ‘BG, to 90mg (or 5 mmol/l) in preparation for lunch.
+Эта **Автоматизация** установит Низкую Временную цель (ожидаемый прием пищи) в 13:00, чтобы снизить уровень ГК до 90 мг (или 5 ммоль/л) при подготовке к обеду.
 
-The ‘Trigger’ location is set by inputting the latitude and longitude GPS coordinates as below:
+"Инициирующее" местоположение устанавливается путем ввода GPS-координат широты и долготы, как показано ниже:
 
 ![Alt text](../images/automation_2024-02-12_21-04-40.png-500x.png)
 
-Because of the ‘And’ connection, the **Automation** only happens during the ‘chosen time’ and if the user is at the selected location.
+Из-за союза "И" **Автоматизация** происходит только в "выбранное" время при нахождении пользователя на предопределенном месте.
 
 The **Automation** will not be triggered on any other time at this location or on this time outside of 100 metres set GPS coordinates.
 
