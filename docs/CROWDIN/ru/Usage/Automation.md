@@ -104,54 +104,54 @@ To deactivate an **Automation** rule, untick the box left of the name of the **A
 
 There are various ‘Conditions’ that can be selected by the user. The list below is non-exhaustive:
 
-**Condition:** connect conditions
+**Условие** связка условий
 
-**Options:**
+**Варианты:**
 
 Several conditions can be linked with
-* “And”
-* “Or”
-* “Exclusive or” (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+* “И”
+* “Или”
+* * "Исключительно либо" (что означает, что если применяется одно - и только одно из этих условий, то действие (действия) произойдет
 
-**Condition:** time vs. recurring time
+**Условие:** время и время повторения
 
-**Options:**
+**Варианты:**
 
-* time = single time event
+* время = одно событие времени
 * периодическое время = то, что происходит регулярно (т.е. раз в неделю, каждый рабочий день и т. д.)
 
-**Condition:** location
+**Условие:** место
 
-**Options:**
+**Варианты:**
 
 * in the **config builder** (Automation), the user can select their required location service.
 
 **Condition:** location service
 
-**Options:**
+**Варианты:**
 
 * Use passive location: **AAPS** only takes locations when other apps are requesting it.
-* Use network location: Location of your Wifi.
-* Используйте локатор GPS (Внимание! This can cause excessive battery drain!)
+* Использовать расположение сети: расположение вашего Wifi.
+* Используйте локатор GPS (Внимание! Может привести к чрезмерной разрядке аккумулятора!)
 
 ## Действие
 
-**Actions:** start **Temp Target**
+**Действия:** начать **Временную цель**
 
-**Options:**
+**Варианты:**
 
-* **BG** must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
-* **TT** works only if there is no previous Temp Target
+* **ГК** должна быть между 72 мг/дл и 270 мг/дл (4 ммоль/л и 15 ммоль/л)
+* **ВЦ** работает только в том случае, если нет предыдущей временной цели
 
 **Actions:** stop **Temp Target**
 
-**Options:**
+**Варианты:**
 
-none
+отсутствуют
 
 **Actions:** **Profile** percentage
 
-**Options:**
+**Варианты:**
 
 * **Profile** must be between 70% and 130%
 * работает только в том случае, если предыдущий процент составляет 100%
