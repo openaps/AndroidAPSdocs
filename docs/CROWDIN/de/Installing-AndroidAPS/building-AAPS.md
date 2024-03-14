@@ -10,7 +10,7 @@ See [FAQ page](../Getting-Started/FAQ.md) for details.
 
 ## Computer and software specifications for building AAPS
 
-- Please use the **[Android Studio version called "Hedgehog"(2023.1.1)](https://developer.android.com/studio/)** to build the apk. If you use an older version, please use one which is no older than "**Giraffe**".
+- Please use the **[Android Studio version called "Hedgehog"(2023.1.1) or "Iguana"(2023.2.1)](https://developer.android.com/studio/)** to build the apk. Older versions of Android Studio need to be updated first!
 - [Windows 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
 
 <table class="tg">
@@ -57,6 +57,12 @@ If you run into difficulties in the process of building the **AAPS** app, there 
 If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../make-a-PR.md).
 
 ## Step-by-step guide to building the AAPS app
+
+:::{admonition} WARNING
+:class: warning
+If you have built AndroidAPS before, you don't need to take all the following steps again.
+Please jump directly to the [update guide](../Installing-AndroidAPS/Update-to-new-version)!
+:::
 
 The overall steps for building the **AAPS** apk file are as follows:
 
@@ -127,7 +133,7 @@ When you first start Android Studio, you will be greeted as follows:
 
 ![Welcome](../images/Building-the-App/02_Welcome_AS_Hedgehog.png)
 
-select "Next":
+Select "Next":
 
 ![ChooseASComponents](../images/Building-the-App/03_choose_AS_components.png)
 
@@ -148,6 +154,10 @@ Now select "Finish":
 ![closeASsetup](../images/Building-the-App/07_CloseAS_Setup.png)
 
 Android Studio will now start.
+
+If asked if you want to import settings, select "Do not import settings". We don't want to import settings from previous installations:
+
+![Do not import settings](../images/studioSetup/01_ImportSettings.png)
 
 Decide whether you want to share data with Google or not (if unsure, just select "Don't send").
 
@@ -186,8 +196,7 @@ Once everything is downloaded, the "Finish" button turns blue, and you can click
 
 ![finished\_download\_components](../images/Building-the-App/14_finished_downloading_components.png)
 
-You are now greeted with the "Welcome to Android Studio" screen.\
-See that Meet the New UI suggestion bottom right? **Do not** Enable New UI.
+You are now greeted with the "Welcome to Android Studio" screen.
 
 ![Welcome\_AS](../images/Building-the-App/15_Welcome_AS.png)
 
@@ -203,7 +212,7 @@ Android Studio will then use **Gradle** (a development tool in  Android studio) 
 
 :::
 
-On the Android Studio Welcome screen, check that "**Projects**" (1) is highlighted on the left. Then click "**Get from VCS**" (2) at the top right:
+On the Android Studio Welcome screen, check that "**Projects**" (1) is highlighted on the left. Then click "**Get from VCS**" (2) on the right:
 
 ![Get\_from\_VCS](../images/Building-the-App/16_Get_from_VCS.png)
 
@@ -223,6 +232,11 @@ and paste it into the URL textbox (3).
 
 - Check the (default) directory for saving the cloned code is sensible (4).
 
+:::{admonition} INFORMATION
+:class: information
+Make a note of the directory. It is where your sourcecode is stored!
+:::
+
 - Now click the button "Clone" (5).
 
 ![Select\_URL](../images/Building-the-App/17_select_URL.png)
@@ -235,25 +249,27 @@ At some point, you may be asked whether you want to trust the project. Click on 
 
 ![Trust project](../images/Building-the-App/18a_trust_project.png)
 
-- If your firewall asks for permission, grant access:
+Only for Windows users: If your firewall asks for permission, grant access:
 
 ![Firewall permission java](../images/AndroidStudio361_18.png)
 
-If asked if you want to import settings, select "Do not import settings". We don't want to import settings from previous installations:
+After the repository is cloned successfully, Android Studio will open the cloned project.
 
-![Do not import settings](../images/studioSetup/01_ImportSettings.png)
+Click on the cog top right and select "**Switch to Classic UI...**" to return to the view used in this documentation.
 
-After the repository is cloned successfully, Android Studio will open the cloned project. Wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
-
-:::{admonition} **My screen looks different...**
-
-You might have enabled the new graphic **U**ser **I**nterface (i.e. the appearance of Android Studio) by mistake.\
-Click on the cog top right and select "**Switch to Classic UI...**" to return to the view used in this documentation.\
-Restart Android Studio to validate the change.
+If you do not see that cog, don't worry. You already use the classic UI!
 
 ![Switch to Classic UI](../images/Building-the-App/OldUI.png)
 
-:::
+Restart Android Studio to make the changes effective.
+
+![Confirm restart of Android Studio](../images/Building-the-App/18b_ConfirmRestartUI.png)
+
+You might get one or both of the following warnings about running processes. It's save to abort them!
+
+![Confirm abort background processes](../images/Building-the-App/18c_AbortBackgroundTasks.png) ![Confirm process AndroidAPS import](../images/Building-the-App/18d_AbortProcessImport.png)
+
+When Android Studio opened again, wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
 
 ![AS\_download\_dependencies](../images/Building-the-App/19_downloading_dependencies.png)
 
@@ -266,11 +282,8 @@ _Optional_ - If you want to clear the pop-up for **"project update recommended"*
 
 ![AS\_close\_gradle\_popup](../images/Building-the-App/20_close_popup.png)
 
-If any errors occur, do not continue with the following steps, consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio) for known problems.
-
-Now close Android Studio (select _File_-_Exit_).
-
-If you have not restarted your computer since installing or updating Git, restart your computer now, and then re-open Android Studio.
+For Windows users only:
+If you have not restarted your computer since installing or updating Git, close Android Studio now. Then restart your computer, and re-open Android Studio.
 
 (Building-APK-set-git-path-in-preferences)=
 
@@ -278,7 +291,7 @@ If you have not restarted your computer since installing or updating Git, restar
 
 Now we will tell Android studio where to find Git, which you installed [earlier](Install-Git).
 
-- Make sure you have restarted your computer after [installing Git](Install-Git).
+- Windows users only: Make sure you have restarted your computer after [installing Git](Install-Git).
 - Open **Android Studio** (you can find it by searching in the Start menu).
 - In the top left corner of **Android Studio**, navigate to _File-Settings_ (Windows) or _Android Studio > Preferences_ (Mac). This opens the following window, click to expand the dropdown called "version control" (1):
 
@@ -324,7 +337,20 @@ Android requires each app to be _signed_, to ensure that it can only be updated 
 ![APK instead of bundle](../images/Building-the-App/26_generate_APK.png)
 
 - In the next screen, make sure that "Module" is set to "AAPS.app" (1).
+
+(Building-APK-wearapk)=
+:::{admonition} INFORMATION!
+:class: information
+If you want to create the apk for your watch, you need to select AAPS.wear!
+:::
+
 - Click "Create new\..." (2) to start creating your key store.
+
+:::{admonition} INFORMATION!
+:class: information
+You will only need to create the keystore once.
+If you have build AndroidAPS before, do NOT create a new keystore but select your existing one!
+:::
 
 **_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
 
@@ -340,11 +366,21 @@ Android requires each app to be _signed_, to ensure that it can only be updated 
 
 This will take you back to the previous screen. Your chosen location for saving the key store file is shown.
 
+:::{admonition} WARNING!
+:class: warning
+Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AndroidAPS update!
+:::
+
 Now choose a simple password (make a note of it), enter it in the password box (1), and confirm it (2).  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [troubleshooting for lost key store](troubleshooting_androidstudio-lost-keystore).
 
 The default alias (3) for your key is "key0", leave this unchanged.
 
 You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm (5) it.
+
+:::{admonition} WARNING!
+:class: warning
+Note down these passwords! You will need them when you build the next AndroidAPS update!
+:::
 
 The validity (6) is 25 years by default, leave it as it is.
 
@@ -384,8 +420,6 @@ Your file manager/explorer will open. Navigiere zum Verzeichnis "full" (1) > "re
 ![File location apk](../images/Building-the-App/36_locate_apk.png)
 
 Open the folder "release". The file "app-full-release.apk" (1) is the **AAPS** apk that you have just built, you will be transferring this file to your smartphone in the next section of the docs:
-
-_Optional at this stage - if you are planning to also build the "**AAPS** wear" app for your smartwatch so you can remotely control **AAPS**, delete the "output-metadata" .json file (2) from this folder, to avoid the error of [uncommitted changes](troubleshooting_androidstudio-uncommitted-changes) during the **AAPS** wear app build_:
 
 ![apk\_file](../images/Building-the-App/37_full_release_apk.png)
 
