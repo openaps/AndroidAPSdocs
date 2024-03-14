@@ -46,6 +46,10 @@ Rejoindre le groupe Facebook principal [AAPS](https://www.facebook.com/groups/19
 * [ Looped-NL-BE ](https://www.facebook.com/groups/117102135652893): utilisateurs néerlandais d'OpenAPS, Loop et AndroidAPS
 * [MGC dans le cloud Néerlandais](https://www.facebook.com/groups/1764754560436596)
 
+### Poland
+
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabates support group)
+
 ### Suède
 
 * [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (utilisateurs suédois d'OpenAPS, Loop et AndroidAPS)
