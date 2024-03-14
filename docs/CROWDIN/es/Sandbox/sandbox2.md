@@ -30,3 +30,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 ## This is a test
 
 This is a test if labels must be unique.
+
+### This is spare information from the docs
+
+cut from index:
+
+There are "limits" set in place when you are first beginning your AAPS journey. Estos límites de seguridad se han desarrollado a lo largo de muchos años mediante observaciones de los errores inadvertidos que los nuevos usuarios son más propensos a cometer cuando aprenden por primera vez a configurar, construir y luego loopear con éxito con AAPS. La mayoría de las veces, estos errores ocurren simplemente porque el usuario estaba tan emocionado por comenzar a usar el sistema que pueden haber olvidado sentarse y dedicar el tiempo necesario para comprender completamente la información dentro de esta documentación.
+
