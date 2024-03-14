@@ -30,7 +30,7 @@
 - Выберите правильный источник данных ГК CGMS/FGMS в [Конфигураторе](../Configuration/Config-Builder.md).  См. [источник СК](../Configuration/BG-Source.md) для дополнительной информации.
 - Выберите помпу в [Конфигураторе](../Configuration/Config-Builder.md) и обеспечьте связь помпы с AAPS. Выберите **виртуальную помпу**, если используете помпу, работа которой не поддерживается в **AAPS** или если хотите пройти **цели обучения** заранее, пока используете другую систему введения инсулина. Дополнительную информацию см. в разделе [инсулиновая помпа](../Getting-Started/Pump-Choices.md).
 - Следуйте инструкциям на странице [Nightscout](../Installing-AndroidAPS/Nightscout.md), чтобы убедиться, что **Nightscout** может получать и отображать данные.
-- Note that URL in **NSClient** must be **_without_ "/api/v1/"** at the end - see [NSClient settings in Preferences](Preferences-nsclient).
+- Обратите внимание, что URL-адрес в **NSClient** должен быть **_без_ "/api/v1/"** в конце — см. [Настройки NSClient] (Preferences-nsclient).
 
 Возможно, потребуется дождаться следующего значения ГК, прежде чем AAPS распознает его и примет в обработку.\*
 
@@ -97,7 +97,7 @@
   ```
 
 :::{admonition} Нет необходимости применять каждую рекомендацию системы!
-:class: Note
+:class: Примечание
 :::
 
 (Objectives-objective-5-Understanding-your-open-loop-including-its-temp-basal-recommendations)=
@@ -200,62 +200,62 @@
 
 ## Цель 8: Настраиваем базал и коэффициенты с последующей активацией autosens
 
-As part of this objective you will revist your profile's performance and will use autosens functionality as an indicator for wrong settings.
+В этой цели вы проверите производительность своего профиля и будете использовать функцию авточувствительности autosens в качестве индикатора неправильных настроек.
 
 Расчетное время для прохождения этой цели: 7 дней.
 
-- You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
-- Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch OVERVIEW's graph white line showing your insulin sensitivity rising or falling due to exercise or hormones etc. and keep an eye on the OpenAPS report tab which shows **AAPS** adjusting the basals and/or targets accordingly.
+- Для разовой проверки точности настроек базала можно применить [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) или выполнить традиционный базальный тест.
+- Активируйте авточувствительность [autosens](../Usage/Open-APS-features.md) на 7 дней и понаблюдайте за тем, как ведет себя белая линия чувствительности к инсулину на графике экрана НАЧАЛО в результате нагрузок, гормонов и т. п.,не забывая о вкладке отчетов OpenAPS, где AAPS соответствующим образом корректирует базальные дозы и/или целевой ГК.
 
 (Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
 
 ## Цель 9: Активация таких дополнительных функций для дневного времени как супер микро болюс SMB
 
-In this objective you will tackle and use "Super Micro Bolus (SMB)" as one core functionality. After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, reasonable starting point with SMBs and why basal is set to zero temporarily after SMBs are given (zero-temping). Estimated time to complete this objective: 28 days.
+При выполнении цели в качестве единственной главной функциональности будет использоваться «Супер микроболюс SMB ». После изучения документации, вы будете понимать, что такое микроболюсы SMB, как они работают, когда следует начать ими пользоваться и почему базал временно устанавливается на нуль после введения микроболюса (нулевой временный базал). Расчетное время для прохождения этой цели: 28 дней.
 
-- The [SMB section in this documentation](Open-APS-features-super-micro-bolus-smb) and [oref1 coverage in the openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand SMB and the concept of zero-temping.
-- Once done, you [raise maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working well. maxIOB now includes all IOB, not just accumulated basal. This threshold pauses SMBs until IOB drops below this value (_e.g._ maxIOB is set to 7 U and a bolus of 8 U is given to cover a meal: SMBs will be paused and not given unless IOB drops below 7 U). A good start is setting maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) as reference)
-- Change "min_5m_carbimpact"-parameter (Preferences > Absorbtion settings > min_5m_carbimpact) to 8 as you move from an OpenAPS AMA algorithm to OpenAPS SMB. For AMAs the default value is 3. Read more about this setting [here](../Configuration/Preferences.html#min-5m-carbimpact)
+- Чтобы понимать концепцию микроболюсов SMB и нулевой временной базальной скорости, следует обязательно изучить [Раздел SMB в этой документации](Open-APS-features-super-micro-bolus-smb) и [обзор oref1 в openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
+- Затем, чтобы заставить микроболюсы SMB работать должным образом, следует поднять значение [maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob). maxIOB теперь учитывает весь активный инсулин IOB, а не только накопленный базал. Этот порог приостанавливает микроболюсы до тех пор, пока активный инсулин IOB не упадет ниже этого значения (_например_ maxIOB установлен на 7 ЕД и подаётся болюс 8 ЕД на приём пищи: микроболюсы будут приостановлены и не будут вводиться, пока IOB не упадет ниже 7 ЕД). Хорошим началом является установка maxIOB = средний болюс на прием пищи + 3-кратная максимальная базальная доза ( максимальная базальная доза = максимальное значение базала за час в любой период дня - см. подробнее [цель 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets)
+- Установите параметр "min_5m_carbimpact" (Настройки > Настройки усваиваемости > min_5m_carbimpact) на 8 при переходе от алгоритма OpenAPS AMA к алгоритму OpenAPS SMB. Для AMA значение по умолчанию равно 3. Подробнее об этом параметре [здесь](../Configuration/Preferences.html#min-5m-carbimpact)
 
 (Objectives-objective-10-automation)=
 
 ## Цель 10: Автоматизация
 
-You have to start **Objective 10** to be able to use Automations.
+Для использования Автоматизации необходимо начать цель 10.
 
-1. Read the documentation page  [Automation](../Usage/Automation.md) first.
-2. Set-up the most basic automation rule;
-   for example trigger an Android notification in few minutes:
+1. Сначала прочитайте страницу документации  [Автоматизация](../Usage/Automation.md).
+2. Задайте самое базовое правило Автоматизации;
+   например, срабатывание уведомления Android в течении нескольких минут:
 
-- Select the notification tab
-- From the top right 3 dots menu, select add rule
-- Give a task name "My first automation notification"
-- "edit"  "condition"
-  - click the "+" symbol to add the first trigger
-  - select "Time"  & "OK", it will create a default entry AT TODAY HOUR:MINUTE
-  - click the MINUTE portion to edit the time such that it triggers in a few minutes. Then click ok to close
-  - click "ok"  to close the Triggers screen
-- "ADD" an "Action"
-  - select "Notification", "OK"
-  - click "Notification" to edit the message(Msg), enter something like "Ny first automation"
-- wait until the time triggers the notification (note that depanding on your phone, it can be a few minutes late)
+- Выберите вкладку уведомления
+- В правом верхнем углу меню выберите добавить правило
+- Дайте название задаче "Моё первое уведомление"
+- "отредактируйте" "условие"
+  - нажмите на "+", чтобы добавить первое условие запуска
+  - выберите "Time" и "OK", он создаст запись по умолчанию СЕГОДНЯ ЧАСЫ:МИНУТЫ
+  - нажмите на MINUTE чтобы выставить время, которое сработает через несколько минут. Затем нажмите ok, чтобы закрыть
+  - нажмите "Ok" для закрытия экрана условий запуска
+- "Добавьте" - "Действие"
+  - выберите "Уведомление", "OK"
+  - нажмите "Уведомление" для редактирования сообщения (Msg), введите что-то вроде "Моя первая автоматизация"
+- подождите, пока наступит установленное время и активирует уведомление (обратите внимание, что в зависимости от телефона оно может опоздать на несколько минут)
 
-4. Experiment with setting up a more useful automation.
+4. Потренируйтесь с созданием более полезных автоматизаций.
 
-- The documentation page gives a few examples, and you can search for "automation" screenshots on the Facebook group. Since most people eat the same thing for breakfast at the same time every morning before school/work, a fairly common use-case can be to set a "before-breakfast-target" to set a slightly lower temporary target 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consists of  "Start temp target" with a target value and a 30 minutes duration.
+- В документации даётся несколько примеров, и по слову "automation" в группе Facebook можно найти снимки экранов. Поскольку большинство людей каждое утро перед школой/работой едят одно и то же, довольно распространенным вариантом использования может быть установка «цели-перед-завтраком», чтобы установить немного более низкую временную цель за 30 минут до завтрака. В этом случае условие, вероятно, будет включать "время повторения", которое заключается в выборе конкретных дней недели (понедельник, вторник, среда, четверг, пятница) и определенное время (06:30 утра). Действие будет состоять из "Начать врем цель" с установленным целевым значением продолжительностью 30 минут.
 
-## Objective 11: Enabling additional features for daytime use, such as Dynamic Senstivity plugin (DynISF).
+## Цель 11: Включение дополнительных функций для ежедневного использования, таких как модуль Dynamic Senstivity (DynISF).
 
-- Ensure that SMB is functioning properly
-- Read the documentation concerning Dynamic ISF [here](../Usage/DynamicISF.md)
-- Search the Facbook and Discord groups for discussions around Dynamic ISF and read about other users experiences and recommendations.
-- Enable the **DynamicISF plugin** and identify the appropriate calibration for your body's uniqueness. It is advisable to begin with a value lower than 100% for safety reasons.
+- Убедитесь, что SMB работает правильно
+- Прочитайте документацию по динамическому ISF [по ссылке](../Usage/DynamicISF.md)
+- Найдите группы Facbook и Discord для обсуждения динамического ISF и ознакомьтесь с опытом и рекомендациями других пользователей.
+- Включите **плагин DynamicISF** и определите соответствующую калибровку для Вашего организма. Рекомендуется начинать с значения ниже 100% по соображениям безопасности.
 
 (Objectives-go-back-in-objectives)=
 
 ## Возможность возврата к предыдущим целям
 
-If you want to go back in **objectives** progress for whatever reason you can do so by clicking at "clear finished".
+Если вы по какой-либо причине хотите вернуться к более ранним целям, можете сделать это, нажав на "Сбросить пройденные".
 
 ```{image} ../images/Objective_ClearFinished.png
 :alt: Вернуться в цели
@@ -263,4 +263,4 @@ If you want to go back in **objectives** progress for whatever reason you can do
 
 ## Цели в Android APS до версии 3.0
 
-One objective was removed when **AAPS** version 3.0 was released.  Users of Android APS version 2.8.2.1 who are on older Android software (_i.e._ earlier than version 9) will be using an older set of Objectives which can be found [here](../Usage/Objectives_old.md).
+Одна из целей была удалена после выхода Android APS 3.0.  Для пользователей Android APS версии 2.8.2.1 на старых телефонах (версия ОС Android ниже 9) будет использован прежний набор целей, который можно найти [тут](../Usage/Objectives_old.md).

@@ -1,6 +1,6 @@
-# Preparing to start with AAPS
+# מתכוננים להתחיל עם AAPS
 
-## Overview of the AAPS documentation
+## סקירה כללית של תיעוד AAPS
 
 Welcome. This documentation aims to guide users on every aspect of the Do-It-Yourself (DIY) system, Android Artificial Pancreas System (**AAPS**), which is also commonly referred to as ‘looping’.
 
@@ -11,7 +11,7 @@ An expanded index of the documentation can be found [here](index.md), and you ca
 ## Safety First
 “With great power comes great responsibility…”
 
-### Technical safety
+### בטיחות טכנית
 **AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](Usage/Objectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
 
 The [Objectives](Usage/Objectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The [Objectives](Usage/Objectives.md) aim to minimise these issues.
@@ -39,7 +39,7 @@ A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this wo
 
 It is generally recognised that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
 
-### No SGLT-2 inhibitors
+### אסור להשתמש במעכבי SGLT-2
 
 :::{admonition} NO SGLT-2 inhibitors
 :class: danger SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous.
@@ -181,14 +181,14 @@ As mentioned earlier, using **AAPS** is more of a “journey” that requires in
 | ------------------------------------------------------------------------------------- |:---------------:|
 | initial reading of the documentation:                                                 |    1-2 days     |
 | installing/configuring PC to allow the build:                                         |    2-8 hours    |
-| building a Nightscout server:                                                         |     1 hour      |
-| installing (xdrip or BYODA or …)                                                      |     1 hour      |
-| configuring CGM->xdrip->APPS initially:                                               |     1 hour      |
-| configuring AAPS->pump initially:                                                     |     1 hour      |
-| configuring AAPS->NightScout (reporting only):                                        |     1 hour      |
-| optional (for Parents) - configuring NightScout <-> **AAPS** & NSFollowers:           |     1 hour      |
-| משימה 1: הגדרת ויזואליזציה, ניטור, ניתוח המינון הבזאלי והיחסים                        |     1 hour      |
-| Objective 2: Learn how to control AAPS                                                |     2 hour      |
+| building a Nightscout server:                                                         |     שעה אחת     |
+| installing (xdrip or BYODA or …)                                                      |     שעה אחת     |
+| configuring CGM->xdrip->APPS initially:                                               |     שעה אחת     |
+| configuring AAPS->pump initially:                                                     |     שעה אחת     |
+| configuring AAPS->NightScout (reporting only):                                        |     שעה אחת     |
+| optional (for Parents) - configuring NightScout <-> **AAPS** & NSFollowers:           |     שעה אחת     |
+| משימה 1: הגדרת ויזואליזציה, ניטור, ניתוח המינון הבזאלי והיחסים                        |     שעה אחת     |
+| משימה 2: לימדו כיצד לשלוט בממשק AndoridAPS                                            |     2 hour      |
 | משימה 3: הוכיחו את הידע שלכם                                                          |  Up to 14 days  |
 | משימה 4: התחלת לופ פתוח                                                               |     7 days      |
 | משימה 5: העמקת הבנת הלולאה הפתוחה, לרבות המינונים הבזאליים הזמניים וההמלצות           |     7 days      |
