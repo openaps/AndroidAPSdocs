@@ -202,7 +202,7 @@ To delete an **Automation** rule click on the trash icon.
 
 Из-за союза "И" **Автоматизация** происходит только в "выбранное" время при нахождении пользователя на предопределенном месте.
 
-The **Automation** will not be triggered on any other time at this location or on this time outside of 100 metres set GPS coordinates.
+**Автоматизация ** не будет активирована ни в какое другое время в этом месте или в это время за пределами 100 метров от установленных GPS-координат.
 
 ### WIFI SSID Location Automation
 
