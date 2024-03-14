@@ -63,36 +63,36 @@ To deactivate an **Automation** rule, untick the box left of the name of the **A
 
 ![Alt text](../images/automation_2024-02-12_20-55-05.png)
 
-:::{admonition} Important note
-:class: note
+:::{admonition} Важное примечание
+:class: примечание
 
-Automations are still active when the Loop is disabled!
+Автоматизации активны даже когда цикл отключен!
 :::
 
 
-## Safety limits
+## Ограничения безопасности
 
-There are safety limits set for **Automations**:
+Для **Автоматизации** установлены ограничения безопасности:
 
-* The **glucose** value has to be between 72 and 270 mg/dl (or 4 and 15 mmol/l).
-* The **Profile** percentage has to be between 70% and 130%.
-* There is a 5 minute time limit between executions of  **Automation** (and first execution).
+* Значение ГК должно составлять от 72 до 270 мг/дл или от 4 до 15 ммоль/л).
+* Процент **профиля** должен составлять от 70% до 130%.
+* Существует 5-минутный промежуток времени между выполнениями **Автоматизации** (и ее первым выполнением).
 
-## Correct use of negative values
+## Правильное использование отрицательных значений
 
-:::{admonition} Warning
-:class: warning
+:::{admonition} Предупреждение
+:class: предупреждение
 
-Please be careful when selecting a negative value in Automation
+Будьте осторожны при выборе отрицательных значений в Автоматизации
 :::
 
-Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. Например:
+Необходимо соблюдать осторожность при выборе «отрицательного значения» в «Условиях», как например «менее чем» в **Automations**. Например:
 
 ![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
 
-**Example 1:** Creating a Condition **"is lesser than"** "-0.1" will:
+**Пример 1:** Создание условия **"меньше, чем"** "-0,1" приведет к:
 
-Trigger an **Automation** for any number which is **strictly** less than** -0.1. This includes numbers like -0.2, -0.3, -0.4 and so on. Remember that -0.1 itself **is not** included in this condition. (The condition "is equal or lesser than -0.1" _would_ include -0.1).
+Запустит **Automation** для любого числа, которое **строго** меньше, чем** -0,1. Сюда войдут такие числа как -0.2, -0.3, -0.4 и так далее. Помните, что -0,1 само **не** включен в это условие. (The condition "is equal or lesser than -0.1" _would_ include -0.1).
 
 **Example 2:** Creating a Condition "is greater than" -0.1 will:
 
