@@ -206,31 +206,31 @@ To delete an **Automation** rule click on the trash icon.
 
 ### Автоматизация по локации SSID WIFI
 
-Using WIFI SSID is a good option to trigger an **Automation** while within range of a specific wifi network (than compared with GPS), it is fairly precise, uses less battery and works in enclosed spaces where GPS and other location services might not be available.
+Использование SSID WI-Fi - хороший вариант для запуска **автоматизации** по нахождению в зоне действия определенной сети Wi-Fi (по сравнению с GPS), он достаточно точен, потребляет меньше заряда батареи и работает в закрытых помещениях, где GPS и другие службы определения местоположения могут быть недоступны.
 
-Here is another example of setting up a **Temp Target** for work days only before breakfast(1).
-
-
-The **Automation** will trigger at 05:30am only on Monday-Friday(2)  
-and while being connected to a home wifi network (3).
+Еще один пример установки **Временной Цели** на рабочие дни только перед завтраком (1).
 
 
-It will then set a**Temp Target**  of 75mg/dl for 30 minutes (4). One of the advantages of including the location is that it will not trigger if the user is travelling on vacation for instance.
+Автоматизация **** запустится в 05:30am только в понедельник-пятницу (2)  
+и при подключении к домашней сети wifi (3).
+
+
+Затем будет установлена **временная цель**  в 75мг/dl на 30 минут (4). Одно из преимуществ включения местоположения заключается в том, что правило не будет срабатывать, если пользователь путешествует в отпуске, например.
 
 ![Alt text](../images/automation_2024-02-12_21-05-02.png-500x.png)
 
-Here is the screenshot detailing the **Automation**  triggers:
+Вот снимок экрана с подробным описанием активаторов **автоматизации**:
 
-1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
-1) WIFI SSID = My_Home_Wifi_Name
+1) Под основным “И” (для запуска должны быть выполнены оба условия) 1) Повторяющееся время = пн, вт, ср, чт, пт в 5:30 утра   
+1) SSID WI-FI = Имя WiFi_Мой_дом
 
 ![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
 
-## Automation Logs
+## Журналы автоматизации
 
-**AAPS** has a log of the most recent **Automation** triggered at the bottom of the screen under the **Automation** tab.
+В <**AAPS** ведется журнал недавно сработавших **автоматизаций** в нижней части экрана на вкладке **Автоматизация**.
 
-In the example below the logs indicate:
+В приведенном ниже примере журнал показывает:
 
 (1) at 01:58 am, the “Low BG triggers temp hypo profile” is activated
 * glucose value is less than 75mg/dl;
