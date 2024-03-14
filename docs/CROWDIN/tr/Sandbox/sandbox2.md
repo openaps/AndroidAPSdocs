@@ -30,3 +30,10 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 ## Bu bir testtir
 
 Etiketlerin benzersiz olması gerekiyorsa bu bir testtir.
+
+### This is spare information from the docs
+
+cut from index:
+
+There are "limits" set in place when you are first beginning your AAPS journey. Bu güvenlik sınırları, yeni kullanıcıların AAPS'yi ilk kez kurmayı, oluşturmayı ve ardından başarılı bir şekilde döngü yapmayı öğrenirken yanlışlıkla yapmaları muhtemel olan hataların gözlemlenmesiyle uzun yıllar boyunca geliştirilmiştir. Kullanıcılar sistemi kullanmaya başlamak için o kadar heyecanlılar ki, çoğu zaman oturup bu dokümantasyondaki bilgileri tam olarak anlamak için gereken zamanı ayırmayı unutuyorlar.
+
