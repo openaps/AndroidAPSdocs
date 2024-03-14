@@ -46,6 +46,10 @@ Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/190019
 * [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): OpenAPS, Loop ir AndroidAPS olandiškai kalbantys vartotojai
 * [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
 
+### Poland
+
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabates support group)
+
 ### Švedija
 
 * [Looped Sweden](https://www.facebook.com/groups/661514380864081/) Švedijoje gyvenantys OpenAPS, Loop ir AndroidAPS vartotojai
