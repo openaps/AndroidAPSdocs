@@ -46,6 +46,10 @@ Ana [AndroidAPS Facebook grubuna](https://www.facebook.com/groups/19001953402018
 * [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Hollandaca konuşan OpenAPS, Loop ve AndroidAPS kullanıcıları
 * [Bulutta CGM Hollanda](https://www.facebook.com/groups/1764754560436596)
 
+### Poland
+
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabates support group)
+
 ### İsveç
 
 * [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (OpenAPS, Loop ve AndroidAPS'in İsveç merkezli kullanıcıları)
