@@ -92,13 +92,13 @@ To deactivate an **Automation** rule, untick the box left of the name of the **A
 
 **Пример 1:** Создание условия **"меньше, чем"** "-0,1" приведет к:
 
-Запустит **Automation** для любого числа, которое **строго** меньше, чем** -0,1. Сюда войдут такие числа как -0.2, -0.3, -0.4 и так далее. Помните, что -0,1 само **не** включен в это условие. (The condition "is equal or lesser than -0.1" _would_ include -0.1).
+Запустит **Automation** для любого числа, которое **строго** меньше, чем** -0,1. Сюда войдут такие числа как -0.2, -0.3, -0.4 и так далее. Помните, что -0,1 само **не** включен в это условие. (условие "меньше или равно -0,1" _включало бы_ -0,1).
 
-**Example 2:** Creating a Condition "is greater than" -0.1 will:
+**Пример 2:** Создание условия "больше, чем" -0,1 приведет к:
 
-Trigger an **Automation** for any number which is **greater than** -0.1. This includes numbers like 0, 0.2, 0.4, and any other positive number.
+Запустит **Автоматизацию** для любого числа, которое **строго** больше, чем** -0,1. Сюда входят такие числа как 0, 0,2, 0,4 и любые другие положительные числа.
 
-It is important to carefully consider the exact intention of your **Automation** when choosing these conditions and values.
+Важно тщательно учитывать точное назначение **автоматизации** при выборе этих условий и значений.
 
 ## Automation Conditions
 
