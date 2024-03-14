@@ -204,7 +204,7 @@ To delete an **Automation** rule click on the trash icon.
 
 **Автоматизация ** не будет активирована ни в какое другое время в этом месте или в это время за пределами 100 метров от установленных GPS-координат.
 
-### WIFI SSID Location Automation
+### Автоматизация по локации SSID WIFI
 
 Using WIFI SSID is a good option to trigger an **Automation** while within range of a specific wifi network (than compared with GPS), it is fairly precise, uses less battery and works in enclosed spaces where GPS and other location services might not be available.
 
