@@ -6,7 +6,7 @@
 
 [Здесь](index.md) можно найти расширенный указатель документации, оглавление слева поможет найти нужный раздел. [Глоссарий](Getting-Started/Glossary.md) объясняет незнакомые термины.
 
-## Structure of the documentation
+## Структура документации
 
 Newcomers to **AAPS** can quickly become overwhelmed by the volume and technical detail in the **AAPS** documentation. This section is for those who are new to concept of Do-It-Yourself-APS (Artificial-Pancreas-Systems) and walks you through the documentation structure, highlighting the sections which are most important when you start with **AAPS** so you can successfully run your chosen setup with as few problems as possible.
 
