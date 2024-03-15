@@ -1,6 +1,6 @@
 # Android Auto
 
-**AAPS** is capable of sending you information about your current status as a message, directly into Android Auto in your car.
+** AAPS ** может отправлять информацию о ваших текущих данных в виде сообщения непосредственно в Android Auto в автомобиле.
 
 :::{admonition} версия информация о изменениях :class: выпадающий дата редактирования: 07/05/2023
 
@@ -11,20 +11,20 @@
 
 ## Что потребуется:
 
-**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of Auto Audio in the car.
+**AAPS** используют функцию Android Auto, которая позволяет перенаправлять сообщения из приложений на мобильном устройстве на дисплей аудиосистемы автомобиля.
 
-That means that:
+Это означает, что:
 
-* You must configure **AAPS** to use system notifications for alerts and notifications and
-* As **AAPS** is an unofficial App, allow the use of "unknown sources" with Android Auto.
+* Следует разрешить **AAPS** работу с системными уведомлениями
+* Поскольку **AAPS** неофициальное приложени, то следует дать разрешение для "неизвестных источников" в Android Auto.
 
 ![Данные AAPS CGM на Android Auto](../images/android_auto_01.png)
 
 (Параметры-AndroidAPS-для-Android-Auto)=
 
-## Use system notifications in AAPS for alerts and notifications
+## Для оповещений и предупреждений включите системные уведомления
 
-Open 3-dot-menu on top right of **AAPS** home screen and select **Preferences**
+Откройте меню в правом верхнем углу экрана **AAPS** и выберите **Настройки**
 
 ![Использовать системные уведомления для предупреждений и уведомлений](../images/android_auto_02.png)
 
@@ -32,15 +32,15 @@ Open 3-dot-menu on top right of **AAPS** home screen and select **Preferences**
 
 ![Использовать системные уведомления для предупреждений и уведомлений](../images/android_auto_03.png)
 
-Please check now that you get notifications from **AAPS** on the phone before you walk to your car!
+Проверьте, что вы получаете уведомления от AAPS на мобильном телефоне, прежде чем переходить к автомобилю!
 
 ![Использовать системные уведомления для предупреждений и уведомлений](../images/android_auto_04.png)
 
 (Android авто-AAPS-настройки-в--android-auto-на-телефоне)=
 
-## Allow the use of "unknown sources" with Android Auto.
+## В Android Auto разрешите использоВание "неизВестных источникоВ".
 
-As **AAPS** is not an official Android Auto app, notifications have to be activated for "unknown sources" in Android Auto. Это делается с помощью режима разработчика, который мы покажем здесь.
+Так как AAPS не является официальным приложением Android Auto, в Android Auto. нужно активировать уведомления из "неизвестных источников". Это делается с помощью режима разработчика, который мы покажем здесь.
 
 Перейдите к своему автомобилю и подключите мобильный телефон к аудиосистеме автомобиля.
 
@@ -56,11 +56,11 @@ As **AAPS** is not an official Android Auto app, notifications have to be activa
 
 Теперь, на мобильном устройстве, активируем режим разработчика.
 
-The first screen looks like this. Прокрутите вниз до конца страницы.
+Первый экран выглядит так. Прокрутите вниз до конца страницы.
 
 ![Включите режим разработчика](../images/android_auto_07.png)
 
-Там в списке вы видите версию Android Auto. Нажмите 10 раз (буквально десять) на версию Android Auto. With this hidden combination you have now enabled developer mode.
+Там в списке вы видите версию Android Auto. Нажмите 10 раз (буквально десять) на версию Android Auto. Этой скрытой комбинацией вы открываете режим разработчика.
 
 ![Включите режим разработчика](../images/android_auto_08.png)
 
@@ -80,7 +80,7 @@ The first screen looks like this. Прокрутите вниз до конца 
 
 ![иконка номера - Android Auto в автомобиле](../images/android_auto_11.png)
 
-Your CGM data will be shown as follows:
+Значения гликемии будут показаны следующим образом:
 
 ![Данные AAPS CGM на Android Auto](../images/android_auto_01.png)
 
