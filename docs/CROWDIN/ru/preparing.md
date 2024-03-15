@@ -8,13 +8,13 @@
 
 ## Структура документации
 
-Newcomers to **AAPS** can quickly become overwhelmed by the volume and technical detail in the **AAPS** documentation. This section is for those who are new to concept of Do-It-Yourself-APS (Artificial-Pancreas-Systems) and walks you through the documentation structure, highlighting the sections which are most important when you start with **AAPS** so you can successfully run your chosen setup with as few problems as possible.
+Новые пользователи **AAPS** могут быстро устать от объема и технических подробностей документации **AAPS**. Этот раздел предназначен для тех, кто не знаком с концепцией Do-It-Yourself-APS (системы искусственной поджелудочной железы), и знакомит вас со структурой документации, выделяя разделы, которые наиболее важны при работе с **AAPS**, чтобы успешно справиться с большим количеством возможных сложностей.
 
-New users can refer back to this guide when they run into unfamiliar aspects of the system, to work out where to locate more in-depth information (there is also a handy "search" function on the left panel).
+Новые пользователи могут вернуться к этому руководству, когда столкнутся с незнакомыми аспектами системы, чтобы понять, где найти подробную информацию (на левой панели также есть удобная функция "поиск").
 
-We aim to make it easy to determine both the capabilities and limitations of **AAPS**. It can be disappointing to discover after investing time in reading the documentation that you might not have a compatible pump or CGM, or that **AAPS** offers different functionality than hoped for.
+Мы стремимся упростить определение как возможностей, так и ограничений **AAPS**. Потратив время на чтение документации, вы можете с разочарованием обнаружить, что у вас, возможно, нет совместимой помпы или системы мониторинга CGM, или что **AAPS** предлагает функционал, отличный от ожидаемого.
 
-Many experience-related details in the **AAPS** documentation make more sense when you are actually using **AAPS** in real-time. Just as it is difficult to learn a sport only by reading the rules, it takes a combination of learning the foundations of the rules for safely operating **AAPS** and then learning how best to apply those rules as you start to use **AAPS**.
+Многие детали, связанные с опытом, в документации **APPS**становятся понятнее, когда вы на самом деле работаете с **APPS** в режиме реального времени. Точно так же, как трудно освоить вид спорта, только читая правила, необходимо изучать правила безопасной эксплуатации **AAPS**, и применять эти правила, начав использовать **AAPS**.
 
 (подготовка-безопасность-приоритет) =
 
