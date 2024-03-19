@@ -38,15 +38,15 @@ export const en = defineConfig({
         collapsed: false,
         items: [
           {
-            text: "Introduction", // What is AndroidAPS and what can it do?
+            text: "Introduction to AAPS",
             link: "/en/introduction",
           },
           {
-            text: "Preparing", // What do I need to get started?
+            text: "Preparing for AAPS",
             link: "",
           },
           {
-            text: "Components setup",
+            text: "Technical components",
             collapsed: true,
             items: [
               {
@@ -81,6 +81,20 @@ export const en = defineConfig({
           },
           {
             text: "Towards closed loop", // completing the objectives
+            link: "",
+          },
+        ],
+      },
+      {
+        text: "Remote control and following",
+        collapsed: false,
+        items: [
+          {
+            text: "Remote control",
+            link: "",
+          },
+          {
+            text: "Following-only",
             link: "",
           },
         ],
