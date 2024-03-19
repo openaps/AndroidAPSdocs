@@ -2,7 +2,7 @@
 
 These instructions are for configuring the Medtrum insulin pump.
 
-** תוכנה זו היא חלק מפתרון לבלב מלאכותי DIY ואינו מוצר אך דורש ממכם לקרוא, ללמוד ולהבין את המערכת, כולל את אופן השימוש בה. האחריות על השימוש במערכת היא עליכם בלבד.
+תוכנה זו היא חלק מפתרון לבלב מלאכותי DIY ואינו מוצר אך דורש ממכם לקרוא, ללמוד ולהבין את המערכת, כולל את אופן השימוש בה. האחריות על השימוש במערכת היא עליכם בלבד.
 
 ## Pump capabilities with AAPS
 * All loop functionality supported (SMB, TBR etc)
@@ -30,7 +30,7 @@ These instructions are for configuring the Medtrum insulin pump.
 
 **Your pump will not stop delivering insulin when it is not connected to AAPS** Default basal rates are programmed on the pump as defined in the current active profile. As long as AAPS is operational, it will send temporary basal rate commands that run for a maximum of 120 minutes. If for some reason the pump does not receive any new commands (for instance because communication was lost due to pump - phone distance) the pump will fall back to the default basal rate programmed on the pump once the Temporary Basal Rate ends.
 
-**30 min Basal Rate Profiles are NOT supported in AAPS.** **The AAPS Profile does not support a 30 minute basal rate time frame** If you are new to AAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. לדוגמה, אם יש מינון בזאלי של למשל 1.1 יחידות שמתחיל בשעה 09:30 ויש לו משך של שעתיים ומסתיים בשעה 11:30, זה לא יעבוד. יהיה עליכם לעדכן את המינון של 1.1 יחידות לטווח זמן של 09:00-11:00 או 10:00-12:00. Even though the Medtrum pump hardware itself supports the 30 min basal rate profile increments, AAPS is not able to take them into account with its algorithms currently.
+**פרופילי בזאלי המתחילים בשעות לא עגולות אינם נתמכים ב-AndroidAPS.** **פרופיל ברירת המחדל ב-AndroidAPS אינו תומך במסגרת זמן של מינון בזאלי של 30 דקות** אם אתם חדשים ב-AndroidAPS ואתם מגדירים את הפרופיל הבזאלי הבסיסי שלך בפעם הראשונה, חשוב לשים לב שמינונים שמתחילים בשעה לא עגולה אינם נתמכים, ותצטרכו להתאים את פרופיל הבזאלי שלך כך שמינון יתחיל בשעה עגולה. לדוגמה, אם יש מינון בזאלי של למשל 1.1 יחידות שמתחיל בשעה 09:30 ויש לו משך של שעתיים ומסתיים בשעה 11:30, זה לא יעבוד. יהיה עליכם לעדכן את המינון של 1.1 יחידות לטווח זמן של 09:00-11:00 או 10:00-12:00. Even though the Medtrum pump hardware itself supports the 30 min basal rate profile increments, AAPS is not able to take them into account with its algorithms currently.
 
 **0U/h profile basal rates are NOT supported in AAPS** While the Medtrum pump does support a zero basal rate, AAPS uses multiples of the profile basal rate to determine automated treatment and therefore cannot function with a zero basal rate. A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.
 
@@ -354,5 +354,5 @@ All of the development work for the Medtrum driver is done by the community on a
 
 -  **רמה 0** קראו את הסעיף הרלוונטי בתיעוד זה כדי להבטיח שאתם מבינים כיצד להשתמש במה שאתם מתקשים איתו.
 -  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#Medtrum* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues) if it exists, please confirm/comment/add information on your problem. אם לא, צרו [בעיה חדשה](https://github.com/nightscout/AndroidAPS/issues) וצרפו את [קובצי היומן (Log) שלכם](../Usage/Accessing-logfiles.md).
+-  **רמה 2:** חפשו בעיות קיימות כדי לראות אם הבעיה שלכם כבר דווחה ב-[בעיות](https://github.com/nightscout/AAPS/issues) אם היא קיימת, אנא אשרו/הגיבו/הוסיפו מידע על הבעיה שלכם. אם לא, צרו [בעיה חדשה](https://github.com/nightscout/AndroidAPS/issues) וצרפו את [קובצי היומן (Log) שלכם](../Usage/Accessing-logfiles.md).
 -  **היו סבלניים - רוב חברי הקהילה שלנו מורכבים ממתנדבים בעלי אופי טוב, ופתרון בעיות דורש לעתים קרובות זמן וסבלנות מצד המשתמשים והמפתחים כאחד.**

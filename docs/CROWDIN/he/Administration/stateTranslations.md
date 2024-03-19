@@ -1,6 +1,6 @@
-# state of translation for app and the documentation
+# סטטוס תרגום האפליקציה והתיעוד
 
-The state is once per hour updated and reflects only the state in Crowdin.
+מצב התרגום מעודכן פעם בשעה ומשקף את מצב התרגום ב-Crowdin.
 
 :::{tip}
 
@@ -17,14 +17,14 @@ The acceptance of the PR is a manual task which will be done es fast as possible
 
 :::
 
-## state app translation
+## סטטוס תרגום האפליקציה
 
-State of the **app** translations per language (country code, percentage translation, percentage proofreading).
+סטטוס תרגום **האפליקציה** לשפות השונות (קוד מדינה, האחוזים שתורגמו, האחוזים שאושרו שנית לאחר הגהה).
 
-![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
+![סטטוס תרגום האפליקציה](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-## state documentation translation
+## סטטוס תרגום התיעוד
 
-State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
+סטטוס תרגום **התיעוד** לשפות השונות (קוד מדינה, האחוזים שתורגמו, האחוזים שאושרו שנית לאחר הגהה).
 
-![state documentation translation](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+![סטטוס תרגום התיעוד](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
