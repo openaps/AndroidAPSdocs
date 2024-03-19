@@ -24,9 +24,7 @@ Si vous voulez revenir en arrière sur les objectifs terminés voir les [explica
 
 - Des liens seront fournis pour vous guider si vous n'êtes pas encore familiarisé avec une action spécifique.
 
-  ```{image} ../images/Objective2_V2_5.png
-  :alt: Screenshot objective 2
-  ```
+  ![Screenshot objective 2](../images/Objective2_V2_5.png)
 
 (Objectives-objective-3-prove-your-knowledge)=
 
@@ -73,9 +71,7 @@ __What happens if new questions are added later to Objective 3?__ From time to t
 
 - Dans les Préférences, vous pouvez définir un pourcentage minimum pour suggérer un changement de débit de basal.
 
-  ```{image} ../images/OpenLoop_MinimalRequestChange2.png
-  :alt: Boucle ouverte Changement minimum
-  ```
+  ![Boucle ouverte Changement minimum](../images/OpenLoop_MinimalRequestChange2.png)
 
 - De plus, vous n'avez pas besoin d'agir toutes les 5 minutes sur toutes les suggestions...
 
@@ -95,22 +91,16 @@ Vous pouvez essayer d'ajuster vos cibles pour qu'elles soient plus proches les u
 
 Vous pouvez afficher une plage plus large (lignes vertes) sur le graphique pour la zone dans laquelle vous souhaitez maintenir votre glycémie en entrant différentes valeurs dans [Préférences](../Configuration/Preferences.md) > Fourchette de visualisation.
 
-```{image} ../images/sign_stop.png
-:alt: Stop sign
-```
+![Stop sign](../images/sign_stop.png)
 
 ### Arrêtez-vous ici si vous est en boucle ouverte avec une pompe virtuelle - ne cliquez pas sur Vérifier à la fin de cet objectif.
 
-```{image} ../images/blank.png
-:alt: blank
-```
+![blank](../images/blank.png)
 
 (Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)=
 ## Objectif 6 : Démarrage de la boucle fermée avec le système AGB ( Arrêt pour Glycémie Basse )
 
-```{image} ../images/sign_warning.png
-:alt: Warning sign
-```
+![Warning sign](../images/sign_warning.png)
 
 ### La boucle fermée ne corrigera pas les glycémies élevées dans l'objectif 6, car elle est limitée à la suspension glycémie basse. Les hyperglycémies doivent être corrigées manuellement par vous !
 
@@ -119,9 +109,7 @@ Vous pouvez afficher une plage plus large (lignes vertes) sur le graphique pour 
 - Le système remplacera vos paramètres maxIA à zéro, ce qui signifie que si la glycémie diminue, il peut réduire le débit de basal pour vous. Si la glycémie augmente, elle n'augmentera le débit de basal que si l'IA basale est négative du fait d'un Arrêt Glycémie Basse antérieur. Sinon, vos débits de basal resteront les mêmes que votre profil sélectionné. **Cela signifie que vous devez gérer manuellement vos glycémies élevées avec des corrections d'insuline.**
 - Si votre IA basale est négative (voir copie d'écran ci-dessous) un DBT > 100% peut également être diffusé à l'objectif 6.
 
-```{image} ../images/Objective6_negIOB.png
-:alt: Exemple IA négative
-```
+![Exemple IA négative](../images/Objective6_negIOB.png)
 
 - Définissez votre cible légèrement plus haut que vous ne le faites habituellement, simplement pour être sûr et avoir un peu plus de marge de scurité.
 - Activez le mode 'Arrêt Glycémie Basse' en appuyant sur l'icône Boucle en haut à droite de l'écran d'accueil et en sélectionnant l'icône Boucle AGB.
@@ -137,9 +125,7 @@ Vous pouvez afficher une plage plus large (lignes vertes) sur le graphique pour 
 
   Cette recommandation doit être considérée comme un point de départ. Si vous paramétrez 3 x et que vous constatez des variations trop importantes et rapides, alors diminuez cette valeur. Si vous êtes très résistant, augmentez la un peu à la fois.
 
-  ```{image} ../images/MaxDailyBasal2.png
-  :alt: max daily basal
-  ```
+  ![max daily basal](../images/MaxDailyBasal2.png)
 
 - Une fois confiant sur la quantité d'IA qui convient à votre profil de boucle, réduisez ensuite vos cibles jusqu'au niveau souhaité.
 
@@ -175,9 +161,7 @@ Vous pouvez afficher une plage plus large (lignes vertes) sur le graphique pour 
 
 Si vous voulez revenir en arrière sur les objectifs terminés pour quelque raison que ce soit, vous pouvez le faire en cliquant sur "Refaire l'objectif".
 
-```{image} ../images/Objective_ClearFinished.png
-:alt: Retour arrières objectifs
-```
+![Retour arrières objectifs](../images/Objective_ClearFinished.png)
 
 ## Objectifs dans Android APS avant la version 3.0
 

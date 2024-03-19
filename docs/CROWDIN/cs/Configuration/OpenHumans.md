@@ -29,9 +29,7 @@ Tajné nebo soukromé informace, jako je adresa vašeho Nightscoutu nebo API hes
 3. Pomocí ozubeného kolečka otevřete jeho nastavení. Můžete nahrávání dat omezit pouze na dobu, kdy je telefon na Wi-Fi a/nebo na nabíječce.
 4. Otevřete plugin Open Humans (buď přes záložku OH, nebo přes hamburgerové menu) a klepněte na 'LOGIN'.
 
-```{image} ../images/OHUploader1.png
-:alt: Open Humans v Konfiguraci
-```
+![Open Humans v Konfiguraci](../images/OHUploader1.png)
 
 5. Pozorně si přečtěte uvedené informace o nástroji Open Humans Uploader a podmínkách jeho použití.
 6. Potvrďte zaškrtnutím políčka a klepněte na 'LOGIN'.
@@ -39,9 +37,7 @@ Tajné nebo soukromé informace, jako je adresa vašeho Nightscoutu nebo API hes
 8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
 9. Klepněte na tlačítko 'Authorize project'.
 
-```{image} ../images/OHUploader2.png
-:alt: Podmínky použití a přihlášení k Open Humans
-```
+![Podmínky použití a přihlášení k Open Humans](../images/OHUploader2.png)
 
 10. Vrátíte-li se do AAPS, uvidíte zprávu o tom, že přihlášení bylo úspěšné.
 11. Ponechejte plugin Open Humans Uploader i telefon zapnuté, aby bylo možné nastavení dokončit.
@@ -49,15 +45,11 @@ Tajné nebo soukromé informace, jako je adresa vašeho Nightscoutu nebo API hes
 13. Chcete-li přestat nahrávat data do Open Humans, klepněte na 'LOGOUT'.
 14. Oznámení systému Android vás bude informovat o probíhajícím nahrávání.
 
-```{image} ../images/OHUploader3.png
-:alt: Závěrečné nastavení Open Humans
-```
+![Závěrečné nastavení Open Humans](../images/OHUploader3.png)
 
 15. You can manage your data by logging in to the [Open Humans website](https://www.openhumans.org).
 
-```{image} ../images/OHWeb.png
-:alt: Správa dat Open Humans
-```
+![Správa dat Open Humans](../images/OHWeb.png)
 
 ## Možnosti sdílení
 

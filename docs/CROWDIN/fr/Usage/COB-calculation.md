@@ -17,17 +17,13 @@ Carbs will also be absorbed via the methods described below based on what sensit
 
 Les glucides non absorbés sont coupés après un certain temps
 
-```{image} ../images/cob_oref0_orange_II.png
-:alt: Oref1
-```
+![Oref1](../images/cob_oref0_orange_II.png)
 
 ### AAPS, Moyenne pondérée
 
 l'absorption est calculée pour avoir `GA == 0` après la durée spécifiée
 
-```{image} ../images/cob_aaps2_orange_II.png
-:alt: AAPS, Moyenne pondérée
-```
+![AAPS, Moyenne pondérée](../images/cob_aaps2_orange_II.png)
 
 Si l'absorption minimale de glucides (min_5m_carbimpact) est utilisée à la place de la valeur calculée à partir des écarts de GLY, un point orange apparaît sur le graphique GA.
 
@@ -41,9 +37,7 @@ AAPS vous avertit si vous êtes sur le point de faire un bolus avec des GA d'un 
 
 Normalement, AAPS détecte l'absorption des glucides par des écarts de glycémie. Si vous avez entré des glucides, mais que AAPS ne peut pas voir leur absorption estimée via les variations de GLY, il utilisera la méthode [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) pour calculer l'absorption à la place (appelée 'fallback'). Comme cette méthode ne calcule que l'absorption minimale de glucides sans tenir compte des écarts de GLY, elle peut conduire à des valeurs de GA incorrectes.
 
-```{image} ../images/Calculator_SlowCarbAbsorption.png
-:alt: soupçon de GA erronés
-```
+![soupçon de GA erronés](../images/Calculator_SlowCarbAbsorption.png)
 
 Dans la capture d'écran ci-dessus, 41% du temps l'absorption de glucides a été mathématiquement calculée par le min_5m_carbimpact au lieu de la valeur détectée par les variations de GLY.  Cela signifie que vous avez peut-être moins de glucides actifs que calculé par l'algorithme.
 

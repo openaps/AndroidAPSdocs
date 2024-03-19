@@ -17,17 +17,13 @@ Carbs will also be absorbed via the methods described below based on what sensit
 
 Nestrávené sacharidy jsou odříznuty po určené době
 
-```{image} ../images/cob_oref0_orange_II.png
-:alt: Oref1
-```
+![Oref1](../images/cob_oref0_orange_II.png)
 
 ### AAPS, Vážený průměr
 
 absorption is calculated to have `COB == 0` after specified time
 
-```{image} ../images/cob_aaps2_orange_II.png
-:alt: AAPS, Vážený průměr
-```
+![AAPS, Vážený průměr](../images/cob_aaps2_orange_II.png)
 
 Jestliže je použitá minimální absorpce sacharidů (min_5m_carbimpact) namísto hodnoty vypočtené z odchylek, tak se v COB grafu objeví oranžová tečka.
 
@@ -41,9 +37,7 @@ AAPS warns you if you are about to bolus with COB from a previous meal and the a
 
 Obvykle AAPS detekuje absorpci sacharidů prostřednictvím odchylek glykémií. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called 'fallback'). Protože tato metoda počítá pouze minimální absorbci sacharidů, aniž by zvážila odchylky glykémií, může to vést k chybným hodnotám COB.
 
-```{image} ../images/Calculator_SlowCarbAbsorption.png
-:alt: Pokyn pro chybnou hodnotu COB
-```
+![Pokyn pro chybnou hodnotu COB](../images/Calculator_SlowCarbAbsorption.png)
 
 In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  To znamená, že možná máte méně zbývajících sacharidů, než vypočteno.
 

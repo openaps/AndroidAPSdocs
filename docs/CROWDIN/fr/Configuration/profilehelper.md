@@ -13,18 +13,14 @@ L'assistant profil a deux fonctions :
 
 L'assistant de profil propose un ensemble de données d'enfants provenant de deux hôpitaux différents pour vous permettre de trouver un profil initial pour votre enfant jusqu'à 18 ans.
 
-```{image} ../images/ProfileHelperKids1.png
-:alt: Assistant Profil Enfant 1
-```
+![Assistant Profil Enfant 1](../images/ProfileHelperKids1.png)
 
 1. Sélectionnez 'Assistant profil' dans le menu trois points en haut à droite de l'écran.
 2. Ajustez le profil par défaut (basé sur le jeu de données de l'hôpital) en entrant l'âge de l'enfant et le DTQ **ou** le poids.
 3. Changez l'écran en cliquant sur la barre grise « 2 » à droite.
 4. Appuyez sur 'Profil actuel' et sélectionnez 'Profil par défaut DPV'.
 
-```{image} ../images/ProfileHelperKids2.png
-:alt: Assistant Profil Enfant 2
-```
+![Assistant Profil Enfant 2](../images/ProfileHelperKids2.png)
 
 5. Ajustez le Profil par défaut DPV (basé sur le jeu de données d'un autre hôpital) en entrant l'âge, le pourcentage de basal et aussi le DTQ **ou** le poids.
 6. Appuyez sur le bouton 'COMPARER LES PROFILS' en haut de l'écran.
@@ -36,18 +32,14 @@ Une fois que vous êtes d'accord avec les réglages du profil, vous pouvez [dupl
 
 Vous pouvez également utiliser l'assistant de profil pour comparer à différents profils ou changements de profil (pourcentage de l'un des profils utilisés dans un précédent [changement de profil](../Usage/Profiles.md)).
 
-```{image} ../images/ProfileHelper1.png
-:alt: Assistant Profil 1
-```
+![Assistant Profil 1](../images/ProfileHelper1.png)
 
 1. Sélectionnez 'Assistant profil' dans le menu trois points en haut à droite de l'écran.
 2. Appuyez sur « Profil par défaut » et sélectionnez « Profils disponibles » pour la liste de vos profils existants ou « Changement de profil » pour avoir la liste des derniers changements de profil effectués.
 3. Appuyez sur le nom du profil ('Aktuell_LP' dans la capture d'écran ci-dessus) et sélectionnez un Profil /Changement de profil dans la liste.
 4. Changez l'écran en cliquant sur la barre grise « 2 » à droite.
 
-```{image} ../images/ProfileHelper2.png
-:alt: Assistant Profil 2
-```
+![Assistant Profil 2](../images/ProfileHelper2.png)
 
 5. Par défaut, le « Profil actuel » est proposé pour faire la comparaison.
 6. Si vous voulez sélectionner un autre, appuyez sur « Profil actuel » et sélectionnez « Profils disponibles » ou « Changement de profil ».
@@ -60,9 +52,7 @@ Vous pouvez également utiliser l'assistant de profil pour comparer à différen
 
 Si vous utilisez des [profils locaux](Config-Builder-local-profile), vous pouvez dupliquer un Profil / Changement de profil directement depuis l'assistant de profil.
 
-```{image} ../images/ProfileHelperClone.png
-:alt: Assistant profile Dupliquer le Profil / Changement de profil
-```
+![Assistant profile Dupliquer le Profil / Changement de profil](../images/ProfileHelperClone.png)
 
 1. Sélectionnez le Profil / Changement de profil désiré comme décrit ci-dessus.
 2. Si vous utilisez « Profil par défaut » ou « Profil par défaut DPV » (basé sur un ensemble de données d'hôpitaux pour enfants) assurez-vous que vous entrez les paramètres corrects pour l'âge, le pourcentage de basal et DTQ / poids.

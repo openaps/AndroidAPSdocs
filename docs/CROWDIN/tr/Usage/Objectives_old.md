@@ -28,9 +28,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 - Links will be provided to guide you in case you are not familiar with a specific action yet.
 
-  ```{image} ../images/Objective2_V2_5.png
-  :alt: Screenshot Görev 2
-  ```
+  ![Screenshot Görev 2](../images/Objective2_V2_5.png)
 
 ## Görev 3: Bilginizi kanıtlayın
 
@@ -38,9 +36,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 - Click on the orange text "Not completed yet" to access the page with the question and answering options.
 
-  ```{image} ../images/Objective3_V2_5.png
-  :alt: Screenshot Görev 3
-  ```
+  ![Screenshot Görev 3](../images/Objective3_V2_5.png)
 
 - Links will be provided to guide you in case you are unsure about the correct answers yet.
 
@@ -65,9 +61,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 - In Preferences you can set a minimum percentage for suggestion of basal rate change.
 
-  ```{image} ../images/OpenLoop_MinimalRequestChange2.png
-  :alt: Açık Döngü minimum istek değişikliği
-  ```
+  ![Açık Döngü minimum istek değişikliği](../images/OpenLoop_MinimalRequestChange2.png)
 
 - Also, you do not need to act every 5 minutes on all suggestions...
 
@@ -87,21 +81,15 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-```{image} ../images/sign_stop.png
-:alt: Dur işareti
-```
+![Dur işareti](../images/sign_stop.png)
 
 ### Sanal bir pompa ile açık döngü yapıyorsanız burada durun - bu hedefin sonunda sakın Doğrula'ya tıklamayın.
 
-```{image} ../images/blank.png
-:alt: boş
-```
+![boş](../images/blank.png)
 
 ## Görev 6: Düşük KŞ'de Duraklatma ile döngüyü kapatmaya başlamak
 
-```{image} ../images/sign_warning.png
-:alt: Uyarı işareti
-```
+![Uyarı işareti](../images/sign_warning.png)
 
 ### Kapalı döngü, düşük glikoz duraklatma ile sınırlı olduğundan, görev 6'daki yüksek kş değerlerini düzeltmeyecektir. Yüksek kş değerleri sizin tarafınızdan manuel olarak düzeltilmelidir!
 
@@ -117,9 +105,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 - The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the basal IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.
 
-  ```{image} ../images/Objective6_negIOB.png
-  :alt: Örnek negatif AİNS
-  ```
+  ![Örnek negatif AİNS](../images/Objective6_negIOB.png)
 
 - If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
 
@@ -131,9 +117,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
   Bu öneri bir başlangıç noktası olarak görülmelidir. 3x'e ayarladıysanız ve sizi sert ve hızlı şekilde düşürüyorsa, o sayıyı düşürün. Eğer çok dirençliyseniz, her seferinde çok az yükseltin.
 
-  ```{image} ../images/MaxDailyBasal2.png
-  :alt: maks günlük bazal
-  ```
+  ![maks günlük bazal](../images/MaxDailyBasal2.png)
 
 - Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
 
@@ -165,6 +149,4 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 Herhangi bir nedenle görevlere geri dönmek istiyorsanız, bunu "Komple tamamlandı" seçeneğine tıklayarak yapabilirsiniz.
 
-```{image} ../images/Objective_ClearFinished.png
-:alt: Görevlere geri dön
-```
+![Görevlere geri dön](../images/Objective_ClearFinished.png)

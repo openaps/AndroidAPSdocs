@@ -1,8 +1,6 @@
 # Closed loop 시스템이란 어떤 것일까요?
 
-```{image} ../images/autopilot.png
-:alt: AAPS는 오토파일럿과 유사합니다.
-```
+![AAPS는 오토파일럿과 유사합니다.](../images/autopilot.png)
 
 인공 췌장 closed loop 시스템은 당뇨병 관리를 좀 더 편리하게 하기 위해 다양한 구성 요소들을 결합한 것입니다. In her great book [Automated Insulin Delivery](https://www.artificialpancreasbook.com/) Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an ["autopilot for your diabetes"](https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps). 과연 이게 무엇을 의미할까요?
 

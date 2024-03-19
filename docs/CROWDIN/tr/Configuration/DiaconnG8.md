@@ -101,18 +101,14 @@
 - Yapılandırma Yöneticisi > pompa > Diaconn G8 > Ayarlar
 - Üstte DIACONN G8> sağ üstte 062 nokta düğmesi> Diaconn G8 Tercihleri
 
-```{image} ../images/DiaconnG8/DiaconnG8_14.jpg
-:alt: Diaconn G8 pompa seçenekleri
-```
+![Diaconn G8 pompa seçenekleri](../images/DiaconnG8/DiaconnG8_14.jpg)
 
 - **Rezervuar değişikliğini günlüğe kaydet** seçeneği aktif ise, bir “İnsülin Değişimi” olayı meydana geldiğinde ilgili detaylar bakım portalına otomatik olarak yüklenir.
 - **İğne değişimini kaydet** seçeneği aktif ise “Set Değişikliği” olayı gerçekleştiğinde ilgili detaylar otomatik olarak bakım portalına yüklenir.
 - **Hortum değiştirmeyi günlüğe kaydet** seçeneği aktif ise, “Hortum Değiştirme” olayı gerçekleştiğinde ilgili detaylar otomatik olarak bakım potalına yüklenir.
 - **Pil değişimini kaydet** seçeneği aktif ise “Pil Değişikliği” olayı gerçekleştiğinde ilgili detaylar otomatik olarak bakım portalına yüklenir ve EYLEM sekmesindeki POMPA BATARYA DEĞİŞİMİ butonu devre dışı bırakılır. (Not: Pili değiştirmek için lütfen önce devam eden tüm enjeksiyon işlevlerini durdurun.)
 
-```{image} ../images/DiaconnG8/DiaconnG8_15.jpg
-:alt: Diaconn G8 eylemler menüsü
-```
+![Diaconn G8 eylemler menüsü](../images/DiaconnG8/DiaconnG8_15.jpg)
 
 ### Yayma Blosu fonksiyonu
 

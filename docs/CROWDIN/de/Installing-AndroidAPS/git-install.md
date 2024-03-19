@@ -15,17 +15,13 @@ Achte darauf, dass die Datei git.exe später ohne den Installationspfad mit ange
 
 ```
 
-```{image} ../images/Update_GitPath.png
-:alt: Git Installationspfad
-```
+![Git Installationspfad](../images/Update_GitPath.png)
 
 ### 2. Pfad zu git in Android Studio festlegen
 
 - Öffne File > Settings
 
-  ```{image} ../images/Update_GitSettings1.png
-  :alt: Android Studio - Einstellungen öffnen
-  ```
+  ![Android Studio - Einstellungen öffnen](../images/Update_GitSettings1.png)
 
 - Klicke auf das kleine Dreieck neben Version Control (1.), um das Untermenü zu öffnen.
 
@@ -35,17 +31,13 @@ Achte darauf, dass die Datei git.exe später ohne den Installationspfad mit ange
 
 - Prüfe durch klicken des Buttons "Test" (4.), ob Android Studio den Pfad zu git.exe automatisch ermitteln kann.
 
-  ```{image} ../images/AndroidStudio361_09.png
-  :alt: Android Studio settings
-  ```
+  ![Android Studio settings](../images/AndroidStudio361_09.png)
 
 - Wenn die automatische Einstellung möglich ist, wird die Git-Version angezeigt.
 
 - Klicke im Dialogfenster auf "OK" (1.) und dann im Einstellungsfenster nochmals auf "OK" (2.).
 
-  ```{image} ../images/AndroidStudio361_10.png
-  :alt: Automatische git Installation erfolgreich
-  ```
+  ![Automatische git Installation erfolgreich](../images/AndroidStudio361_10.png)
 
 - Falls git.exe nicht gefunden werden kann, schließe das Dialogfenster mit "OK" (1.) und klicke dann auf den Button mit den drei Punkten (2.).
 
@@ -55,9 +47,7 @@ Achte darauf, dass die Datei git.exe später ohne den Installationspfad mit ange
 
 - Schließe das Einstellungs-Fenster durch Klick auf "OK" (5.).
 
-  ```{image} ../images/AndroidStudio361_11.png
-  :alt: Automatische Git-Installation fehlgeschlagen
-  ```
+  ![Automatische Git-Installation fehlgeschlagen](../images/AndroidStudio361_11.png)
 
 ### 3. Starte den Rechner neu
 
@@ -70,15 +60,11 @@ Achte darauf, dass die Datei git.exe später ohne den Installationspfad mit ange
 
 - Gib `git --version` (ohne Anführungszeiten und ohne das Leerzeichen zwischen den zwei - \[Minuszeichen\]!) und drücke Return
 
-  ```{image} ../images/AndroidStudio_gitversion1.png
-  :alt: git - -version
-  ```
+  ![git - -version](../images/AndroidStudio_gitversion1.png)
 
 - Wenn git installiert und richtig verbunden ist, erhältst Du eine Information über die installierte Version, die wie folgt aussieht:
 
-  ```{image} ../images/AndroidStudio_gitversion2.png
-  :alt: Ergebnis git-version
-  ```
+  ![Ergebnis git-version](../images/AndroidStudio_gitversion2.png)
 
 ## Mac
 

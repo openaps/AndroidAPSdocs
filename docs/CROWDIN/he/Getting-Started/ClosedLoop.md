@@ -1,8 +1,6 @@
 # מהי מערכת לולאה סגורה (לופ סגור)?
 
-```{image} ../images/autopilot.png
-:alt: AAPS is like an autopilot
-```
+![AAPS is like an autopilot](../images/autopilot.png)
 
 מערכת לבלב מלאכותי בלולאה סגורה משלבת רכיבים שונים על מנת להקל את ניהול הסוכרת. In her great book [Automated Insulin Delivery](https://www.artificialpancreasbook.com/) Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an ["autopilot for your diabetes"](https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps). מה זה אומר?
 

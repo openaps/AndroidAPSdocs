@@ -29,9 +29,7 @@ Les informations secrètes ou privées telles que votre URL Nightscout ou votre 
 3. Ouvrez son réglage en utilisant le bouton roue crantée. Vous pouvez restreindre le téléversement au périodes où le téléphone utilise le Wi-Fi et/ou est en charge.
 4. Ouvrez le Plugin Open Humans (dans l'onglet OH ou via le menu hamburger) et cliquez sur 'CONNEXION'.
 
-```{image} ../images/OHUploader1.png
-:alt: Configuration Open Humans
-```
+![Configuration Open Humans](../images/OHUploader1.png)
 
 5. Lisez attentivement les informations fournies à propos du téléversement Open Humans et les conditions d'utilisation.
 6. Confirmez en cochant la case et cliquez sur 'CONNEXION'.
@@ -39,9 +37,7 @@ Les informations secrètes ou privées telles que votre URL Nightscout ou votre 
 8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
 9. Cliquez sur le bouton 'Authorize project'.
 
-```{image} ../images/OHUploader2.png
-:alt: Conditions d'utilisation d'Open Humans + Connexion
-```
+![Conditions d'utilisation d'Open Humans + Connexion](../images/OHUploader2.png)
 
 10. En retournant à AAPS, vous verrez un message de connexion réussie.
 11. Garder le plugin Open Humans Uploader et le téléphone activés pour que l'installation se termine.
@@ -49,15 +45,11 @@ Les informations secrètes ou privées telles que votre URL Nightscout ou votre 
 13. Cliquez sur 'DECONNEXION' si vous voulez arrêter de télécharger des données vers Open Humans.
 14. La notification Android vous informera sur le téléversement en cours.
 
-```{image} ../images/OHUploader3.png
-:alt: Open Humans fin de la configuration
-```
+![Open Humans fin de la configuration](../images/OHUploader3.png)
 
 15. Vous pouvez gérer vos données en vous connectant sur le [site web Open Humans](https://www.openhumans.org).
 
-```{image} ../images/OHWeb.png
-:alt: Open Humans management des données
-```
+![Open Humans management des données](../images/OHWeb.png)
 
 ## Opportunités de partage
 

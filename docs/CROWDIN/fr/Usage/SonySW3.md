@@ -48,14 +48,10 @@ La solution de contournement suivante devrait prolonger la durée d'utilisation 
 
 - Dans le terminal, entrez cette commande "adb install -r -g aplicationname.apk" (donc dans notre cas "adb install -r -g SW3fix.apk").
 
-  ```{image} ../images/SonySW3_Terminal1.png
-  :alt: Commande Terminal
-  ```
+  ![Commande Terminal](../images/SonySW3_Terminal1.png)
 
 - Attendez environ 4–5 minutes pour que l'installation se termine.
 
-  ```{image} ../images/SonySW3_Terminal2.png
-  :alt: Installation réussie du terminal
-  ```
+  ![Installation réussie du terminal](../images/SonySW3_Terminal2.png)
 
 - Une fois terminé, redémarrez votre montre et vous devriez voir que les applications commencent à se synchroniser rapidement.
