@@ -87,15 +87,21 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-![Stop sign](../images/sign_stop.png)
+```{image} ../images/sign_stop.png
+:alt: Stop sign
+```
 
 ### Arrêtez-vous ici si vous est en boucle ouverte avec une pompe virtuelle - ne cliquez pas sur Vérifier à la fin de cet objectif.
 
-![blank](../images/blank.png)
+```{image} ../images/blank.png
+:alt: blank
+```
 
 ## Objectif 6 : Démarrage de la boucle fermée avec le système AGB ( Arrêt pour Glycémie Basse )
 
-![Warning sign](../images/sign_warning.png)
+```{image} ../images/sign_warning.png
+:alt: Warning sign
+```
 
 ### La boucle fermée ne corrigera pas les valeurs de glycémies élevées dans l'objectif 6, car elle est limitée à la suspension glycémie basse. Les hyperglycémies doivent être corrigées manuellement par vous !
 
@@ -159,4 +165,6 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 Si vous voulez revenir en arrière sur les objectifs terminés pour quelque raison que ce soit, vous pouvez le faire en cliquant sur "Refaire l'objectif".
 
-![Retour arrières objectifs](../images/Objective_ClearFinished.png)
+```{image} ../images/Objective_ClearFinished.png
+:alt: Retour arrières objectifs
+```

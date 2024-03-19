@@ -87,15 +87,21 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-![знак "Стоп"](../images/sign_stop.png)
+```{image} ../images/sign_stop.png
+:alt: знак "Стоп"
+```
 
 ### Остановитесь здесь, если пользуетесь незамкнутым циклом с виртуальной помпой - не нажимайте на кнопку «Верифицировать» в конце цели.
 
-![пусто](../images/blank.png)
+```{image} ../images/blank.png
+:alt: пусто
+```
 
 ## Цель 6: Начинаем замыкать цикл с Low Glucose Suspend (прекращением подачи инсулина на низких сахарах)
 
-![предупреждающий знак](../images/sign_warning.png)
+```{image} ../images/sign_warning.png
+:alt: предупреждающий знак
+```
 
 ### Замкнутый цикл не будет исправлять значения высокой ГК в цели 6, поскольку он ограничен приостановкой подачи инсулина на низких сахарах. Вы сами вручную должны корректировать высокие значения ГК!
 
@@ -159,4 +165,6 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 Если вы хотите вернуться к целям по какой-либо причине, вы можете сделать это, нажав на "очистить завершенное".
 
-![Вернуться в цели](../images/Objective_ClearFinished.png)
+```{image} ../images/Objective_ClearFinished.png
+:alt: Вернуться в цели
+```

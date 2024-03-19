@@ -1,6 +1,8 @@
 # Kapalı Döngü Sistemi Nedir?
 
-![AAPS AAPS sanki bir otopilot gibidir](../images/autopilot.png)
+```{image} ../images/autopilot.png
+:alt: AAPS AAPS sanki bir otopilot gibidir
+```
 
 Yapay pankreas kapalı döngü sistemi, diyabet yönetimini sizin için daha kolay hale getirmek için farklı bileşenleri birleştirir. Açık kaynaklı kapalı döngü hareketinin kurucularından biri olan Dana M. Lewis, [Otomatik İnsülin İletimi](https://www.artificialpancreasbook.com/) adlı harika kitabında, onu ["diyabetiniz için otomatik pilot"](https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps) olarak adlandırıyor. Ama bu ne anlama geliyor?
 

@@ -87,15 +87,21 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-![Znaménko Stop](../images/sign_stop.png)
+```{image} ../images/sign_stop.png
+:alt: Znaménko Stop
+```
 
 ### Zastavte se zde, pokud používáte otevřenou smyčku s virtuální pumpou – neklikejte na tlačítko Zkontrolovat na konci tohoto cíle.
 
-![prázdný](../images/blank.png)
+```{image} ../images/blank.png
+:alt: prázdný
+```
 
 ## Cíl 6: Začátek uzavřené smyčky - s pozastavením pumpy při nízké glykémii
 
-![Varování](../images/sign_warning.png)
+```{image} ../images/sign_warning.png
+:alt: Varování
+```
 
 ### U 6. cíle nebude uzavřená smyčka korigovat vysokou glykémii, bude pouze zastavovat před nízkou. Na vysoké glykémie musíte ručně dopíchnout vy sami!
 
@@ -159,4 +165,6 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 Chcete-li se z jakéhokoliv důvodu vrátit k předchozímu cíli, stačí tak učinit kliknutím na „vymazat dokončené“.
 
-![Návrat zpět](../images/Objective_ClearFinished.png)
+```{image} ../images/Objective_ClearFinished.png
+:alt: Návrat zpět
+```

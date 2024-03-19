@@ -127,7 +127,9 @@ You may want to experiment with adjusting your targets being in a tighter range 
 
 You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-![Stop sign](../images/sign_stop.png)
+```{image} ../images/sign_stop.png
+:alt: Stop sign
+```
 :::{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
@@ -135,12 +137,16 @@ If you are open looping with a virtual pump stop here. Only click verify at the 
 :::
 
 
-![blank](../images/blank.png)
+```{image} ../images/blank.png
+:alt: blank
+```
 
 (Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)=
 ## Objective 6: Starting to close the loop with Low Glucose Suspend
 
-![Warning sign](../images/sign_warning.png)
+```{image} ../images/sign_warning.png
+:alt: Warning sign
+```
 :::{admonition}  Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend only!
 :class: Note
 You will still need to correct high BG values by yourself (manually with corrections by pump or pen)!
@@ -162,7 +168,9 @@ This means that when you are on Objective 6, if sensor glucose levels are droppi
 
 - If your basal IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in objective 6.
 
-![Example negative IOB](../images/Objective6_negIOB.png)
+```{image} ../images/Objective6_negIOB.png
+:alt: Example negative IOB
+```
 
 - Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
 - Enable 'Low Glucose Suspend' mode by pressing and holding the Loop icon at the top right corner of the OVERVIEW screen and selecting the Loop - LGS mode icon.
@@ -242,7 +250,9 @@ for example trigger an Android notification in few minutes:
 
 If you want to go back in **objectives** progress for whatever reason you can do so by clicking at "clear finished".
 
-![Go back in objectives](../images/Objective_ClearFinished.png)
+```{image} ../images/Objective_ClearFinished.png
+:alt: Go back in objectives
+```
 
 ## Objectives in Android APS before version 3.0
 

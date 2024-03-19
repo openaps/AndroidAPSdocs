@@ -1,6 +1,8 @@
 # Čo je to Uzavretý Okruh?
 
-![AAPS je ako autopilot](../images/autopilot.png)
+```{image} ../images/autopilot.png
+:alt: AAPS je ako autopilot
+```
 
 Uzavretý okruh využíva rôzne komponenty aby pre vás bol manažment diabetu jednoduchší. In her great book [Automated Insulin Delivery](https://www.artificialpancreasbook.com/) Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an ["autopilot for your diabetes"](https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps). Ale čo to vlastne znamená?
 

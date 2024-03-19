@@ -125,20 +125,26 @@
 
 אפשר להתאים אישית (להרחיב או להצר) את השטח הירוק של הגרף, המייצג את טווח המטרה שלכם, על ידי הזנת ערכים שונים ב[העדפות](../Configuration/Preferences.md) > טווח להצגה.
 
-![Stop sign](../images/sign_stop.png)
+```{image} ../images/sign_stop.png
+:alt: Stop sign
+```
 
 :::{admonition} אם השתמשתם במשאבה וירטואלית עד כה, שנו למשאבת אינסולין אמיתית עכשיו!
 
 אם אתם משתמשים בלולאה פתוחה עם משאבה וירטואלית עצרו כאן. לחצו על אימות בסוף משימה זו רק לאחר שעברתם להשתמש במשאבה "אמיתית".
 :::
 
-![blank](../images/blank.png)
+```{image} ../images/blank.png
+:alt: blank
+```
 
 (Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)=
 
 ## משימה 6: מתחילים לסגור לולאה עם השהיה עקב ערך סוכר נמוך
 
-![Warning sign](../images/sign_warning.png)
+```{image} ../images/sign_warning.png
+:alt: Warning sign
+```
 
 :::{admonition}  הלולאה הסגורה שבמשימה 6 לא תתקן ערכי סוכר גבוהים כי היא מוגבלת להפסקת הזרקת אינסולין כתיקון לסוכר נמוך!
 :class: Note
@@ -161,7 +167,9 @@
 
 - אם האינסולין הפעיל (IOB) הבזאלי שלכם שלילי (ראה צילום מסך למטה) ניתן להפעיל מינון בזאלי זמני (TBR) גבוה מ-100% במשימה 6.
 
-![Example negative IOB](../images/Objective6_negIOB.png)
+```{image} ../images/Objective6_negIOB.png
+:alt: Example negative IOB
+```
 
 - הגדירו את טווח המטרה שלכם מעט גבוה יותר ממה שאליו אתם בדרך כלל מכוונים אליו, רק ליתר ביטחון.
 - הפעילו את מצב "השעיית סוכר נמוך" על ידי לחיצה ממושכת על סמל הלולאה בפינה השמאלית העליונה של מסך הבית בחירה בסמל מצב לולאה - השהיה עקב ערך סוכר נמוך (ירוק מקווקו).
@@ -183,7 +191,9 @@
 
 המלצה זו היא נקודת התחלה. אם אתם מגדירים אותו כ-x3 ואתם רואים ש-AAPS מזריק יותר מדי אינסולין כשרמות הגלוקוז עולות, אז הורידו את הערך "בזאלי פעיל מרבי ש-OpenAPS יכול לספק". לחילופין, אם התנגודת שלכם גבוהה, העלו אותו בהדרגה.
 
-![max daily basal](../images/MaxDailyBasal2.png)
+```{image} ../images/MaxDailyBasal2.png
+:alt: max daily basal
+```
 
 - כאשר תרגישו שערך האינסולין הפעיל מתאים לפעולת הלופ שלכם, הורידו את ערכי מטרה שלכם כרצונכם.
 
@@ -248,7 +258,9 @@
 
 אם ברצונכם לחזור על משימה מכל סיבה שהיא, ניתן לעשות זאת ע"י לחיצה על "ביטול השלמה".
 
-![Go back in objectives](../images/Objective_ClearFinished.png)
+```{image} ../images/Objective_ClearFinished.png
+:alt: Go back in objectives
+```
 
 ## משימות ב- AndroidAPS לפני גרסה 3.0
 

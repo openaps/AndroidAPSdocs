@@ -87,15 +87,21 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-![Dur işareti](../images/sign_stop.png)
+```{image} ../images/sign_stop.png
+:alt: Dur işareti
+```
 
 ### Sanal bir pompa ile açık döngü yapıyorsanız burada durun - bu hedefin sonunda sakın Doğrula'ya tıklamayın.
 
-![boş](../images/blank.png)
+```{image} ../images/blank.png
+:alt: boş
+```
 
 ## Görev 6: Düşük KŞ'de Duraklatma ile döngüyü kapatmaya başlamak
 
-![Uyarı işareti](../images/sign_warning.png)
+```{image} ../images/sign_warning.png
+:alt: Uyarı işareti
+```
 
 ### Kapalı döngü, düşük glikoz duraklatma ile sınırlı olduğundan, görev 6'daki yüksek kş değerlerini düzeltmeyecektir. Yüksek kş değerleri sizin tarafınızdan manuel olarak düzeltilmelidir!
 
@@ -159,4 +165,6 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 Herhangi bir nedenle görevlere geri dönmek istiyorsanız, bunu "Komple tamamlandı" seçeneğine tıklayarak yapabilirsiniz.
 
-![Görevlere geri dön](../images/Objective_ClearFinished.png)
+```{image} ../images/Objective_ClearFinished.png
+:alt: Görevlere geri dön
+```

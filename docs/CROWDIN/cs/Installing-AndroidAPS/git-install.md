@@ -15,7 +15,9 @@ Make sure that you can call git.exe without the prefing path as Android Studio n
 
 ```
 
-![Instalační cesta Gitu](../images/Update_GitPath.png)
+```{image} ../images/Update_GitPath.png
+:alt: Instalační cesta Gitu
+```
 
 ### 2. Nastavení git v Android Studiu
 

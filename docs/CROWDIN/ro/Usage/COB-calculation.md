@@ -17,13 +17,17 @@ Carbs will also be absorbed via the methods described below based on what sensit
 
 Unabsorbed carbs are cut off after specified time
 
-![Oref1](../images/cob_oref0_orange_II.png)
+```{image} ../images/cob_oref0_orange_II.png
+:alt: Oref1
+```
 
 ### AAPS, WeightedAverage
 
 absorption is calculated to have `COB == 0` after specified time
 
-![AAPS, WheitedAverage](../images/cob_aaps2_orange_II.png)
+```{image} ../images/cob_aaps2_orange_II.png
+:alt: AAPS, WheitedAverage
+```
 
 If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from BG deviations, an orange dot appears on COB graph.
 
@@ -37,7 +41,9 @@ AAPS warns you if you are about to bolus with COB from a previous meal and the a
 
 Normally AAPS detects carb absorption through BG deviations. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called 'fallback'). As this method calculates only the minimal carb absorption without considering BG deviations, it might lead to incorrect COB values.
 
-![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
+```{image} ../images/Calculator_SlowCarbAbsorption.png
+:alt: Hint on wrong COB value
+```
 
 In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  This means that maybe you are having less carbs on board than calculated by the algorithm.
 

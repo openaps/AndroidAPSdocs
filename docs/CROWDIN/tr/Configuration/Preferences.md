@@ -32,7 +32,9 @@
 (Preferences-general)=
 ## Genel
 
-![Tercihler > Genel](../images/Pref2020_General.png)
+```{image} ../images/Pref2020_General.png
+:alt: Tercihler > Genel
+```
 
 **Ünite**
 
@@ -56,7 +58,9 @@
 
 (Preferences-master-password)=
 
-![Preferences > General - Protection](../images/Pref2020_General2.png)
+```{image} ../images/Pref2020_General2.png
+:alt: Preferences > General - Protection
+```
 
 #### Ana parola
 
@@ -258,7 +262,9 @@
 (Preferences-advanced-settings-overview)=
 ### Gelişmiş ayarlar
 
-![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
+```{image} ../images/Pref2021_OV_Adv.png
+:alt: Preferences > Advanced Settings
+```
 
 (Preferences-superbolus)=
 #### Süperbolus
@@ -404,7 +410,9 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 ## Emilim ayarları
 
-![Emilim ayarları](../images/Pref2020_Absorption.png)
+```{image} ../images/Pref2020_Absorption.png
+:alt: Emilim ayarları
+```
 
 ### min_5m_carbimpact
 
@@ -452,7 +460,9 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 (Preferences-nsclient)=
 ## NSClient
 
-![NSClient](../images/Pref2020_NSClient.png)
+```{image} ../images/Pref2020_NSClient.png
+:alt: NSClient
+```
 
 Original communication protocol, can be used with older Nightscout versions.
 
@@ -464,7 +474,9 @@ Original communication protocol, can be used with older Nightscout versions.
 
 ## NSClientV3
 
-![NSClientV3](../images/Pref2024_NSClientV3.png)
+```{image} ../images/Pref2024_NSClientV3.png
+:alt: NSClientV3
+```
 
 [New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
@@ -487,7 +499,9 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Alarm türleri
 
-![Alarm options](../images/Pref2024_NSClient_Alarms.png)
+```{image} ../images/Pref2024_NSClient_Alarms.png
+:alt: Alarm options
+```
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. AAPS will alarm when a Nightscout alarms trigger.
   - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -498,7 +512,9 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Bağlantı Ayarları
 
-![NSClient bağlantı ayarları](../images/ConfBuild_ConnectionSettings.png)
+```{image} ../images/ConfBuild_ConnectionSettings.png
+:alt: NSClient bağlantı ayarları
+```
 
 - Connection settings define when Nightscout connection will be enabled.
 - Nightscout yüklemesini yalnızca Wi-Fi ile veya hatta belirli Wi-Fi SSID'leri ile sınırlayın.
@@ -509,7 +525,9 @@ You can select which data you want to [upload and download to or from Nightscout
 (Preferences-advanced-settings-nsclient)=
 ### Gelişmiş Ayarlar (NSClient)
 
-![NS Client gelişmiş ayarlar](../images/Pref2024_NSClientAdv.png)
+```{image} ../images/Pref2024_NSClientAdv.png
+:alt: NS Client gelişmiş ayarlar
+```
 
 Options in advanced settings are self-explanatory.
 
@@ -530,19 +548,25 @@ Hangi konum hizmetinin kullanılacağını seçin:
 
 ## Yerel uyarılar
 
-![Yerel uyarılar](../images/Pref2020_LocalAlerts.png)
+```{image} ../images/Pref2020_LocalAlerts.png
+:alt: Yerel uyarılar
+```
 
 - Ayarlar açıklayıcı olmalıdır.
 
 ## Veri seçenekleri
 
-![Veri seçenekleri](../images/Pref2020_DataChoice.png)
+```{image} ../images/Pref2020_DataChoice.png
+:alt: Veri seçenekleri
+```
 
 - Geliştiricilere kilitlenme raporları göndererek AAPS'nin daha da geliştirilmesine yardımcı olabilirsiniz.
 
 ## Bakım ayarları
 
-![Bakım ayarları](../images/Pref2020_Maintenance.png)
+```{image} ../images/Pref2020_Maintenance.png
+:alt: Bakım ayarları
+```
 
 - Günlüklerin standart alıcısı <logs@androidaps.org>'dur.
 - *Dışa aktarılan ayarları şifrele*'yi seçerseniz, bunlar [ana parolanız](Preferences-master-password) ile şifrelenir. Bu durumda, ayarlar her dışa aktarıldığında veya içe aktarıldığında ana parola girilmelidir.

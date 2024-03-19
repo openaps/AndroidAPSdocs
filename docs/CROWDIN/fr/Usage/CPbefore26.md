@@ -10,7 +10,9 @@ Cette page indique où retrouver les fonctions précédemment disponibles dans C
 
 ## Activité & Feedback
 
-!["Careportal activitées & feedback"](../images/Careportal_25_26_1_IIb.png)
+```{image} ../images/Careportal_25_26_1_IIb.png
+:alt: "Careportal activitées & feedback"
+```
 
 - Les informations d'âge ont été déplacées dans l'onglet/menu Actions.
 - La vérification de glycémie a été déplacée dans l'onglet/menu Actions.
@@ -21,7 +23,9 @@ Cette page indique où retrouver les fonctions précédemment disponibles dans C
 
 ## Glucides et bolus
 
-![Careportal Glucides et bolus](../images/Careportal_25_26_2_IIa.png)
+```{image} ../images/Careportal_25_26_2_IIa.png
+:alt: Careportal Glucides et bolus
+```
 
 - Pour renseigner un bolus - peu importe si c'est pour une collation, un repas ou une correction - utilisez le bouton Insuline sur l'écran d'accueil **et assurez vous de cocher "Ne pas administrer de bolus, enregistrer uniquement"!**
 
@@ -37,14 +41,18 @@ Cette page indique où retrouver les fonctions précédemment disponibles dans C
 
 ## MGC et OpenAPS
 
-![Careportal MGC et OpenAPS](../images/Careportal_25_26_3_IIa.png)
+```{image} ../images/Careportal_25_26_3_IIa.png
+:alt: Careportal MGC et OpenAPS
+```
 
 - L'insertion d'un capteur MGC est maintenant dans l'onglet/menu Actions.
 - Toutes les autres fonctions de cette section ont été supprimées. Vous pouvez utiliser le champ Notes dans les boîtes de dialogue lorsque vous entrez des bolus, insuline etc. (voir la copie d'écran dans la section [Glucides et bolus](CPbefore26-carbs-bolus) de cette page).
 
 ## Pompe
 
-![Careportal Pompe](../images/Careportal_25_26_4_IIb.png)
+```{image} ../images/Careportal_25_26_4_IIb.png
+:alt: Careportal Pompe
+```
 
 - Le changement de Canule et de la cartouche de la pompe est possible en utilisant le bouton Amorcer/Remplir dans l'onglet/menu Actions.
 - Le changement de Profil a été déplacé vers l'onglet/menu Actions.

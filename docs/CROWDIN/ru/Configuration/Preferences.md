@@ -32,7 +32,9 @@
 (Preferences-general)=
 ## Общие настройки
 
-![Настройки > Общие](../images/Pref2020_General.png)
+```{image} ../images/Pref2020_General.png
+:alt: Настройки > Общие
+```
 
 **Единицы**
 
@@ -408,7 +410,9 @@
 
 ## Настройки усваиваемости
 
-![Настройки усваиваемости](../images/Pref2020_Absorption.png)
+```{image} ../images/Pref2020_Absorption.png
+:alt:Настройки усваиваемости
+```
 
 ### min_5m_carbimpact
 
@@ -456,7 +460,9 @@
 (Preferences-nsclient)=
 ## клиент NS
 
-![Клиент NS](../images/Pref2020_NSClient.png)
+```{image} ../images/Pref2020_NSClient.png
+:alt: Клиент NS
+```
 
 Оригинальный протокол коммуникации, может использоваться с более ранними версиями Nightscout.
 
@@ -475,7 +481,7 @@
 [Новый протокол, начиная с AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) - безопаснее и эффективнее.
 
 :::{admonition} V3 загрузчики данных
-:class: предупреждение При использовании NSClientV3, все загрузчики должны иметь API V3. Поскольку большинство из них пока несовместимы, это означает, что **следует разрешить AAPS загружать все данные** (BG, процедуры, ...) в Nightscout и отключить все остальные загрузчики, если они не совместимы с версией 3.
+:class: предупреждение При использовании NSClientV3, все загрузчики должны иметь API V3. Поскольку большинство из них пока несовместимы, это означает, что **следует разрешить AAPS загружать все данные** (BG, процедуры, ...) в Nightscout и отключить все остальные загрузчики, если они не совместимы с версией 3.  
 :::
 
 - Создайте свой сайт *Nightscout URL* (напр. <https://yoursitename.yourplaform.dom>).
@@ -506,7 +512,9 @@
 
 ### Параметры подключения
 
-![настройки подключения NSClient](../images/ConfBuild_ConnectionSettings.png)
+```{image} ../images/ConfBuild_ConnectionSettings.png
+:alt: настройки подключения NSClient
+```
 
 - Настройки подключения определяют, когда включено соединение с Nightscout.
 - Ограничьте загрузку в Nightscout только через Wi-Fi или даже через Wi-Fi SSID.
@@ -517,7 +525,9 @@
 (Preferences-advanced-settings-nsclient)=
 ### Расширенные настройки (Клиент NS)
 
-![Дополнительные настройки NS клиента](../images/Pref2024_NSClientAdv.png)
+```{image} ../images/Pref2024_NSClientAdv.png
+:alt: Дополнительные настройки NS клиента
+```
 
 Большинство опций в расширенных настройках самоочевидны.
 
@@ -538,19 +548,25 @@
 
 ## Локальные оповещения
 
-![Локальные оповещения](../images/Pref2020_LocalAlerts.png)
+```{image} ../images/Pref2020_LocalAlerts.png
+:alt:Локальные оповещения
+```
 
 - Настройки самоочевидны.
 
 ## Отбор данных
 
-![Отбор данных](../images/Pref2020_DataChoice.png)
+```{image} ../images/Pref2020_DataChoice.png
+:alt: Отбор данных
+```
 
 - Вы можете помочь разработчикам AAPS, посылая отчеты об ошибках.
 
 ## Параметры обслуживания
 
-![Параметры обслуживания](../images/Pref2020_Maintenance.png)
+```{image} ../images/Pref2020_Maintenance.png
+:alt: Параметры обслуживания
+```
 
 - Отправляйте логи журналов на <logs@androidaps.org>.
 - Если вы выберите *Шифрование экспортированных настроек* они будут зашифрованы вашим мастер-паролем [](Preferences-master-password). В этом случае пароль должен вводиться каждый раз, когда настройки экспортируются или импортируются.

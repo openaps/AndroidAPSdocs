@@ -34,6 +34,8 @@ You might try to change settings for noise blocking in xdrip (Settings - Inter-A
 
 ### Negative Sensor Age
 
-![Negative sensor age](../images/Troubleshooting_SensorAge.png)
+```{image} ../images/Troubleshooting_SensorAge.png
+:alt: Negative sensor age
+```
 
 This occurs if there is either a double "CGM Sensor Insert" entry in careportal or a sensor insert with wrong date. Go to treatments tab > careportal and delete the wrong entry.

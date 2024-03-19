@@ -4,4 +4,7 @@
 תפריט בחירת השפה הועבר למגירה התחתונה של התפריט השמאלי. נא ללחוץ על הסרגל התחתון כדי לפתוח את תפריט בחירת השפה.
 ```
 
-![פתיחת תפריט שפה](images/documentation_language_menu.png =350)
+```{image} images/documentation_language_menu.png
+:alt: פתיחת תפריט שפה
+:width: 350
+```

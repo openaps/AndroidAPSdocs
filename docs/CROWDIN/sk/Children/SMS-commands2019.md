@@ -30,7 +30,9 @@
 
 Commands must be send in English, response will be in your local language if the response string is already [translated](../translations#translate-strings-for-androidaps-app).
 
-![SMS Commands Example](../images/SMSCommands.png)
+```{image} ../images/SMSCommands.png
+:alt: SMS Commands Example
+```
 
 ### Loop
 
@@ -104,4 +106,6 @@ Commands must be send in English, response will be in your local language if the
 
 There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
 
-![Disable SMS as chat message](../images/SMSdisableChat.png)
+```{image} ../images/SMSdisableChat.png
+:alt: Disable SMS as chat message
+```

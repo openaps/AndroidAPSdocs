@@ -21,13 +21,17 @@ If build completed successfully but you get Kotlin compiler warnings then just i
 
 App was build successfully and can be transferred to phone.
 
-![ignore Kotline compiler warning](../images/GIT_WarningIgnore.PNG)
+```{image} ../images/GIT_WarningIgnore.PNG
+:alt: ignore Kotline compiler warning
+```
 
 ## Key was created with errors
 
 When creating a new keystore for building the signed APK, on Windows the following error message might appear
 
-![Key was created with errors](../images/AndroidStudio35SigningKeys.png)
+```{image} ../images/AndroidStudio35SigningKeys.png
+:alt: Key was created with errors
+```
 
 This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
 
@@ -35,13 +39,17 @@ This seems to be a bug with Android Studio 3.5.1 and its shipped Java environmen
 
 If you get a failure message like this
 
-![Warning could not download](../images/GIT_Offline1.jpg)
+```{image} ../images/GIT_Offline1.jpg
+:alt: Warning could not download
+```
 
 make sure that ‘Offline work’ is disabled.
 
 File -> Settings
 
-![Settings offline work](../images/GIT_Offline2.jpg)
+```{image} ../images/GIT_Offline2.jpg
+:alt: Settings offline work
+```
 
 ## Error: buildOutput.apkData must not be null
 
@@ -63,7 +71,9 @@ If you see an error message like the one below you probably use a Windows 10 32-
 
 There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
 
-![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+```{image} ../images/AndroidStudioWin10_32bitError.png
+:alt: Screenshot Unable to start daemon process
+```
 
 ## No CGM data
 
@@ -74,7 +84,9 @@ There are a lot of manuals on the internet how to determine wether you have a 32
 
 If you receive failure message like
 
-![Failure uncommitted changes](../images/GIT_TerminalCheckOut0.PNG)
+```{image} ../images/GIT_TerminalCheckOut0.PNG
+:alt: Failure uncommitted changes
+```
 
 ### Option 1 - Check git installation
 
@@ -87,7 +99,9 @@ If you receive failure message like
 
 - In Android Studio select VCS -> GIT -> Reset HEAD
 
-![Reset HEAD](../images/GIT_TerminalCheckOut3.PNG)
+```{image} ../images/GIT_TerminalCheckOut3.PNG
+:alt: Reset HEAD
+```
 
 ### Option 3 - Check for updates
 
@@ -107,7 +121,9 @@ If you receive failure message like
 
 ## App not installed
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+```{image} ../images/Update_AppNotInstalled.png
+:alt: phone app note installed
+```
 
 - Make sure you have transferred the “app-full-release.apk” file to your phone.
 - If "App not installed" is displayed on your phone follow these steps:

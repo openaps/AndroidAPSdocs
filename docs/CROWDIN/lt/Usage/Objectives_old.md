@@ -87,15 +87,21 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-![Stop ženklas](../images/sign_stop.png)
+```{image} ../images/sign_stop.png
+:alt: Stop ženklas
+```
 
 ### Jei naudojate virtualią pomp ir atvirą ciklą - nespauskite Patvirtinti šio tikslo pabaigoje.
 
-![tuščias](../images/blank.png)
+```{image} ../images/blank.png
+:alt: tuščias
+```
 
 ## Tikslas 6: pradėkite Uždaro ciklo (Closed Loop) režimą su pompos stabdymu esant žemai gliukozei
 
-![Įspėjamasis ženklas](../images/sign_warning.png)
+```{image} ../images/sign_warning.png
+:alt: Įspėjamasis ženklas
+```
 
 ### Uždaras ciklas nekoreguos aukštos glikemijos 6 tiksle, nes jį apriboja sustabdymas dėl žemos gliukozės. Todėl jūs turite patys koreguoti aukštą glikemiją!
 
@@ -159,4 +165,6 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 Jei dėl bet kokios priežasties norite grįžti į tikslų pradžią, galite tai padaryti paspaudę "išvalyti užbaigtus".
 
-![Grįžti į tikslus](../images/Objective_ClearFinished.png)
+```{image} ../images/Objective_ClearFinished.png
+:alt: Grįžti į tikslus
+```

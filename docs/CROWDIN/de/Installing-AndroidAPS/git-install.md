@@ -15,7 +15,9 @@ Achte darauf, dass die Datei git.exe später ohne den Installationspfad mit ange
 
 ```
 
-![Git Installationspfad](../images/Update_GitPath.png)
+```{image} ../images/Update_GitPath.png
+:alt: Git Installationspfad
+```
 
 ### 2. Pfad zu git in Android Studio festlegen
 

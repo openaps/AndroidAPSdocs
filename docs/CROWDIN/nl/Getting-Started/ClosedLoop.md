@@ -1,6 +1,8 @@
 # Wat is een closed loop systeem?
 
-![AAPS is als een automatische piloot](../images/autopilot.png)
+```{image} ../images/autopilot.png
+:alt: AAPS is als een automatische piloot
+```
 
 Een closed loop systeem combineert verschillende onderdelen om zo de zorg voor jouw diabetes makkelijker te maken. In haar boek [Automated Insulin Delivery](https://www.artificialpancreasbook.com/) noemt Dana M. Lewis, een van de grondleggers van de open-source-beweging, een ["automatische piloot voor je diabetes"](https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps). Maar wat betekent dat?
 

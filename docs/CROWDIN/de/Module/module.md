@@ -2,7 +2,9 @@
 
 AAPS ist nicht einfach eine (selbst erstellte) App, es ist eines von verschiedenen Modulen Deines Closed Loop Systems. Bevor Du Dich für die einzelnen Komponenten entscheidest, solltest Du einen Blick auf das [Komponenten-Setup](index-component-setup), werfen.
 
-![Übersicht der Komponenten](../images/modules.png)
+```{image} ../images/modules.png
+:alt: Übersicht der Komponenten
+```
 
 ```{note}
 **WICHTIGER SICHERHEITSHINWEIS**

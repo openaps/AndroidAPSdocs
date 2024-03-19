@@ -46,7 +46,6 @@ extensions = [
 
 myst_enable_extensions = [
   "colon_fence",
-  "attrs_inline"
 ]
 
 myst_heading_anchors = 3

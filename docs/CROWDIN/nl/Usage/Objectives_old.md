@@ -87,15 +87,21 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-![Stop-teken](../images/sign_stop.png)
+```{image} ../images/sign_stop.png
+:alt: Stop-teken
+```
 
 ### Stop hier als je een virtuele pomp gebruikt en in Open Loop wilt blijven - klik NIET op Verificatie aan het einde van dit doel.
 
-![blanco](../images/blank.png)
+```{image} ../images/blank.png
+:alt: blanco
+```
 
 ## Doel 6: Starten in Closed Loop met bescherming tegen lage BG
 
-![Waarschuwings-teken](../images/sign_warning.png)
+```{image} ../images/sign_warning.png
+:alt: Waarschuwings-teken
+```
 
 ### De closed loop zal hoge glucosewaarden in doel 6 niet naar beneden kunnen brengen, omdat in dit doel alleen nog de 'pompstop voor laag' functie geactiveerd is. Om hoge glucosewaarden naar beneden te krijgen, moet je zelf nog handmatig ingrijpen!
 
@@ -159,4 +165,6 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 Als je om welke reden dan ook terug wilt gaan in de leerdoelen druk dan op "voltooiing wissen".
 
-![Teruggaan in doelen](../images/Objective_ClearFinished.png)
+```{image} ../images/Objective_ClearFinished.png
+:alt: Teruggaan in doelen
+```

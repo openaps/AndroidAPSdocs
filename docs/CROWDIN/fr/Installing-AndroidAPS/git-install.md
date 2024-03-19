@@ -15,7 +15,9 @@ Assurez-vous que vous pouvez appeler git.exe sans le chemin de prédilection car
 
 ```
 
-![Chemin d'installation de Git](../images/Update_GitPath.png)
+```{image} ../images/Update_GitPath.png
+:alt: Chemin d'installation de Git
+```
 
 ### 2. Définir le chemin d’accès git dans Android Studio
 

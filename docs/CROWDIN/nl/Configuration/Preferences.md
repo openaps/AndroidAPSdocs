@@ -32,7 +32,9 @@
 (Preferences-general)=
 ## General
 
-![Preferences > General](../images/Pref2020_General.png)
+```{image} ../images/Pref2020_General.png
+:alt: Preferences > General
+```
 
 **Units**
 
@@ -56,7 +58,9 @@
 
 (Preferences-master-password)=
 
-![Preferences > General - Protection](../images/Pref2020_General2.png)
+```{image} ../images/Pref2020_General2.png
+:alt: Preferences > General - Protection
+```
 
 #### Masterwachtwoord
 
@@ -258,7 +262,9 @@
 (Preferences-advanced-settings-overview)=
 ### Geavanceerde instellingen (Overzicht)
 
-![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
+```{image} ../images/Pref2021_OV_Adv.png
+:alt: Preferences > Advanced Settings
+```
 
 (Preferences-superbolus)=
 #### Superbolus
@@ -404,7 +410,9 @@ Pas na een tijd mag je het systeem toestaan om extra basale insuline te geven do
 
 ## Opname instellingen
 
-![Opname instellingen](../images/Pref2020_Absorption.png)
+```{image} ../images/Pref2020_Absorption.png
+:alt: Opname instellingen
+```
 
 ### min_5m_carbimpact
 
@@ -452,7 +460,9 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 (Preferences-nsclient)=
 ## NSClient
 
-![NSClient](../images/Pref2020_NSClient.png)
+```{image} ../images/Pref2020_NSClient.png
+:alt: NSClient
+```
 
 Original communication protocol, can be used with older Nightscout versions.
 
@@ -464,7 +474,9 @@ Original communication protocol, can be used with older Nightscout versions.
 
 ## NSClientV3
 
-![NSClientV3](../images/Pref2024_NSClientV3.png)
+```{image} ../images/Pref2024_NSClientV3.png
+:alt: NSClientV3
+```
 
 [New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
@@ -487,7 +499,9 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Alarm opties
 
-![Alarm options](../images/Pref2024_NSClient_Alarms.png)
+```{image} ../images/Pref2024_NSClient_Alarms.png
+:alt: Alarm options
+```
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. AAPS will alarm when a Nightscout alarms trigger.
   - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -498,7 +512,9 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Verbindings instellingen
 
-![NSClient verbindingsinstellingen](../images/ConfBuild_ConnectionSettings.png)
+```{image} ../images/ConfBuild_ConnectionSettings.png
+:alt: NSClient verbindingsinstellingen
+```
 
 - Connection settings define when Nightscout connection will be enabled.
 - Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
@@ -509,7 +525,9 @@ You can select which data you want to [upload and download to or from Nightscout
 (Preferences-advanced-settings-nsclient)=
 ### Geavanceerde instellingen (NSClient)
 
-![NSClient geavanceerde instellingen](../images/Pref2024_NSClientAdv.png)
+```{image} ../images/Pref2024_NSClientAdv.png
+:alt: NSClient geavanceerde instellingen
+```
 
 Options in advanced settings are self-explanatory.
 
@@ -530,19 +548,25 @@ Selecteer welke locatieservice moet worden gebruikt:
 
 ## Lokaal gegenereerde waarschuwingen
 
-![Lokale waarschuwingen](../images/Pref2020_LocalAlerts.png)
+```{image} ../images/Pref2020_LocalAlerts.png
+:alt: Lokale waarschuwingen
+```
 
 - Settings should be self-explanatory.
 
 ## Data Keuzes
 
-![Data keuzes](../images/Pref2020_DataChoice.png)
+```{image} ../images/Pref2020_DataChoice.png
+:alt: Data keuzes
+```
 
 - You can help develop AAPS further by sending crash reports to the developers.
 
 ## Onderhoud instellingen
 
-![Onderhoud instellingen](../images/Pref2020_Maintenance.png)
+```{image} ../images/Pref2020_Maintenance.png
+:alt: Onderhoud instellingen
+```
 
 - Standard recipient of logs is <logs@androidaps.org>.
 - If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). In dat geval moet het masterwachtwoord elke keer dat de instellingen worden geëxporteerd of geïmporteerd, worden ingevoerd.

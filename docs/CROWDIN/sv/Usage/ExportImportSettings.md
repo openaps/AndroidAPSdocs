@@ -23,7 +23,9 @@ On a Windows 10 computer it looks like this:
   - Export settings
   - File location will be shown
 
-![AndroidAPS export settings](../images/AAPS_ExportSettings.png)
+```{image} ../images/AAPS_ExportSettings.png
+:alt: AndroidAPS export settings
+```
 
 - **Transfer** settings from old to new phone using the file location shown during export
 

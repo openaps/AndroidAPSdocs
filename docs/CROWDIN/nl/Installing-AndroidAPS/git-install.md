@@ -15,7 +15,9 @@ Make sure that you can call git.exe without the prefing path as Android Studio n
 
 ```
 
-![Git locatie](../images/Update_GitPath.png)
+```{image} ../images/Update_GitPath.png
+:alt: Git locatie
+```
 
 ### 2. Stel git path in Android Studio in
 
