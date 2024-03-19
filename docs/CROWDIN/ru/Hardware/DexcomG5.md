@@ -1,29 +1,30 @@
-# Dexcom G5
+# Работа с Dexcom G5
 
 ## При использовании G5 с xdrip+
 
--   If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow instructions on nightscout ([G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support).
--   In xdrip go to Settings > Inter-app settings > Broadcast Data Locally and select ON.
--   In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
--   If you want to be able to use AAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
--   Select xdrip in ConfigBuilder (setting in AAPS).
--   If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md) .
+-   Вы можете безопасно загрузить [свежую рабочую версию APK (стабильную)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), если только вам не нужны конкретные недавно разработанные функции.
+-   Настройте xDrip+ с G5 по [этим инструкциям](https://navid200.github.io/xDrip/docs/G5-Recommended-Settings.html).
+-   Выберите xDrip+ на [страница настроек xDrip+ ](../Configuration/xdrip.md).
+-   В [Конфигураторе, Источник ГК](../Configuration/Config-Builder.md#bg-source) выберите xDrip+.
 
 ## При пользовании G5 с помощью модифицированного приложения Dexcom
 
--   Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5).
+:::{admonition} устаревшие приложения :class: предупреждения Эти приложения несовместимы с новыми версиями Android.  
+:::
 
-    -   Folder 2.3 is for users of AAPS 2.3, folder 2.4 for users of AAPS 2.5.
-    -   Open <https://play.google.com/store/search?q=dexcom%20g5> on your computer. Регион будет виден в URL.
+-   Скачайте apk с <https://github.com/dexcomapp/dexcomapp>, и выберите версию по потребностям (mg/dl или mmol/l, G5).
 
-    ![Region in Dexcom G5 URL](../images/DexcomG5regionURL.PNG)
+    -   Папка 2.4 была для пользователей AAPS 2.5 и выше.
+    -   Откройте <https://play.google.com/store/search?q=dexcom%20g5> на компьютере. Регион будет виден в URL.
 
--   Stop sensor and uninstall the original Dexcom app, if not already done.
+    ![Регион в URL Dexcom G5](изображение:../images/DexcomG5regionURL.PNG)
 
--   Install downloaded apk
+-   Остановите и удалите оригинальное приложение Dexcom, если это еще не сделано.
 
--   Start sensor
+-   Установите загруженное приложение
 
--   Select Dexcom App (patched) in ConfigBuilder (setting in AAPS).
+-   Запустите сенсор
 
--   If you want to use xDrip alarms via local broadcast: in xDrip hamburger menu > settings > hardware data source > 640G /EverSense.
+- В [Конфигураторе, Источник СК](../Configuration/Config-Builder.md#bg-source) выберите "Самостоятельно собранное приложение Dexcom".
+
+-   Если хотите использовать xDrip-оповещения через локальную трансляцию: в сэндвич-меню xDrip >> настройки> > источник данных ГК>> 640G /EverSense.

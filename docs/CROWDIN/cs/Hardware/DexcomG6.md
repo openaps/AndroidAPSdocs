@@ -2,46 +2,50 @@
 
 ## Základní nastavení
 
--   Postupujte podle obecných opatření při používání CGM a doporučení pro nastavení senzoru [zde](../Hardware/GeneralCGMRecommendation.md).
--   For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly built xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+-   Follow general CGM hygiene and setting sensor recommendation [here](../Hardware/GeneralCGMRecommendation.md).
 
 ## Obecné tipy pro použití smyčky s G6
 
-What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
+- Recent transmitters are called Firefly. Sensors cannot be restarted without removing the transmitter, which itself cannot be reset, they also do not generate raw data.
 
--   Pokud používáte nativní data s kalibračním algoritmem aplikace xDrip+ nebo Spike, nejbezpečnější postup je zakázat preemptivní restartování senzoru.
--   Pokud musíte preemptivní restarty používat, pak se ujistěte, že senzor zavádíte v takovou denní dobu, kdy můžete sledovat změny a v případě potřeby provést kalibraci.
--   Jestliže senzory restartujete, udělejte to bez tovární kalibrace, aby byly výsledky 11 a 12 den co nejbezpečnější, nebo buďte připraveni provést kalibrace a sledujte odchylku.
--   Pre-soaking of the G6 with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
--   Jestliže nechcete sledovat změny, ke kterým může docházet, možná bude lepší přepnout na režim bez továrních kalibrací a používat systém jako G5.
+- If you are restarting sensors, ensure you are ready to calibrate and keep an eye on variation.
 
-Chcete-li se dozvědět další informace o podrobnostech a důvodech pro tato doporučení, přečtěte si [kompletní článek](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) který sepsal Tim Street na adrese [www.diabettech.com](https://www.diabettech.com).
+- Nastřelení senzoru G6 předem v kombinaci s tovární kalibrací pravděpodobně povede k odchylkám ve výsledcích měření. Jestliže nastřelujete senzor s předstihem, pak jej pravděpodobně v zájmu co nejlepších výsledků bude nutné zkalibrovat.
+
+Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
 
 ## Používáte-li G6 s aplikací xDrip+
 
+- If you are using a recent (Firefly) transmitter, preemptive restarts are **ignored**.
+- If you are using a modded transmitter you do **not need** to use preemptive restarts.
+-   If you are using an old rebatteried transmitter, the safest thing to do is **disable** [preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html). Though, in this case you will have to use the G6 in non-[native mode](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) (which is unadvisable as it disables factory calibration and doesn't filter noisy readings), or else the sensor will stop after 10 days.
 -   Vysílač Dexcom G6 může být připojen současně k přijímači Dexcom (nebo pumpě t:slim) a zároveň k vašemu telefonu.
--   Pokud používáte xDrip+ jako přijímač, nejprve odinstalujte aplikaci Dexcom. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
--   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
--   If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow instructions on [xDrip+ settings page](../Configuration/xdrip.md).
--   Select xDrip+ in ConfigBuilder (setting in AAPS).
--   Nastavte xDrip+ podle popisu konfigurace na stránce \<../Configuration/xdrip.md>\`\_\_
--   Pokud AAPS nedostává hodnoty glykémie, když je telefon v režimu letadlo, použijte volbu 'Identify receiver' tak, jak je popsáno v [popisu nastavení xDrip+](../Configuration/xdrip.md).
+-   When using xDrip+ as receiver uninstall the Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
+-   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+. You can also use xDrip+ as a companion app of the official Dexcom app, but you might experience delays in BG readings.
+-   If not already set up, download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../Configuration/xdrip.md).
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+
+- Adjust settings in xDrip+ according to [xDrip+ settings page](../Configuration/xdrip.md)
 
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## Pokud chcete použít G6 s vlastní vytvořenou upravenou Dexcom aplikací
 
--   As of December 2020 [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) (BYODA) also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
+-   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+ (not for G5/ONE/G7 sensors!)
+
+![BYODA broadcast options](../images/BYODA.png)
+
 -   Tato aplikace vám umožní používat vysílač Dexcom G6 s libovolným telefonem s Androidem.
--   Odinstalujte originální Dexcom aplikaci nebo upravenou Dexcom aplikaci, pokud jste již dříve používali kteroukoli z nich.
--   Nainstalujte stažený apk
+-   Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously (**do not stop** the currently running sensor)
+-   Install the downloaded apk
 -   Enter sensor code and transmitter serial no. in patched app.
 -   In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
--   Po krátkém čase by BYODA měla zachytit signál vysílače. (If not you will have to stop sensor and start new one.)
+-   Po krátkém čase by BYODA měla zachytit signál vysílače.
 
 ### Settings for AAPS
 
--   V konfiguraci vyberte 'Dexcom aplikace (upravená)'.
--   Pokud neobdržíte žádné hodnoty, vyberte jiný zdroj dat, následně opět vyberte 'Dexcom aplikace (upravená)', abyste spustili proces získání oprávnění pro navázání lokálního spojení mezi AAPS a upravenou Dexcom aplikací.
+-   Select 'Dexcom App (patched)' in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+
+-   If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
 
 ### Nastavení pro xDrip+
 
@@ -54,22 +58,12 @@ Chcete-li se dozvědět další informace o podrobnostech a důvodech pro tato d
 
 ### Dexcom G6 konkrétní řešení problémů
 
--   Transmitters with serial no. starting with 80 or 81 need at least last stable xDrip+ version from May 2019 or a newer nightly build.
--   Transmitters with serial no. starting with 8G need at least nightly build from July 25th, 2019 or newer.
--   xDrip+ and Dexcom app cannot be connected with the transmitter at the same time.
--   Wait at least 15 min. between stopping and starting a sensor.
--   Nepoužívejte zadání dřívějšího času. Answer question "Did you insert it today?" always with "Yes, today".
--   Nepovolujte "restartování senzoru" při nastavení nového senzoru
--   Nespuštějte nový senzor dokud nejsou zobrazeny následující informace na obrazovce > Stav G5/G6-> PhoneServiceState:
-    -   Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-    -   Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
-
-![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
+-   Scroll down to **Troubleshooting** [here](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 
 ### Obecné řešení problémů
 
-General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.html#troubleshooting).
+General Troubleshooting for CGMs can be found [here](./GeneralCGMRecommendation.md#troubleshooting).
 
 ### Nový vysílač se spuštěným senzorem
 
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at <https://youtu.be/tx-kTsrkNUM>.
+If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found [here](https://navid200.github.io/xDrip/docs/Remove-transmitter.html). If you opt for [this solution](https://youtu.be/tx-kTsrkNUM) instead, you must be careful to avoid [damaging sensor contacts](https://navid200.github.io/xDrip/docs/Petroleum-jelly-in-Dexcom-G6-Sensor.html) with the strip.

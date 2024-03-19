@@ -87,7 +87,7 @@ Navíc návyky pacientů (získané při ruční kompenzaci diabetu) mají čast
 
 ## OpenAPS
 
-**Tato příručka byla převzata z [Příručky k OpenAPS pro lékaře](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS je systém vyvinutý tak, aby běžel na malém přenosném počítači (který se obecně označuje jako „rig“). AAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AAPS, with the main difference being the hardware platform where each peace of software is run.
+**Tato příručka byla převzata z [Příručky k OpenAPS pro lékaře](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS je systém vyvinutý tak, aby běžel na malém přenosném počítači (který se obecně označuje jako „rig“). AAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AAPS, with the main difference being the hardware platform where each piece of software is run.
 
 ## Shrnutí
 

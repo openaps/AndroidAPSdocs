@@ -14,6 +14,13 @@ Op een Windows-10 computer ziet het er zo uit:
 :alt: AAPS Preferences phone connected to computer
 ```
 
+## Export Path
+The exports will be placed in this folder on your phone:
+
+/Internal Storage/AAPS/preferences
+
+This storage location cannot be changed in the AAPS settings.
+
 ## Ge-exporteerde gegevens
 
 Onder andere de volgende gegevens uit jouw instellingen worden ge-exporteerd:

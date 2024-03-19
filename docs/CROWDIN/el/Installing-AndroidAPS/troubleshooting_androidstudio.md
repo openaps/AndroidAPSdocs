@@ -15,10 +15,11 @@ In case you cannot find your old keystore or its password anymore, proceed as fo
 5. Uninstall previous AAPS version on your phone.
 6. Install new AAPS version on your phone.
 7. [Import settings](ExportImportSettings-import-settings) to restore your objectives and configuration.
-8. Check your battery optimization options and disable them again.
 
    If you can't find them on your phone copy them from the external storage to your phone.
-8. Keep on looping.
+
+8. Check your battery optimization options and disable them again.
+9. Keep on looping.
 
 ## Gradle Sync failed
 Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
@@ -103,11 +104,19 @@ Follow the instructions at [Gradle Resync](troubleshooting_androidstudio-step-3-
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
-### Android Gradle plugin requires Java 11 to run
+### Incompatible version of Android Gradle plugin
+
+  If you experience the following error message
+
+  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+
+  You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
+
+### Android Gradle plugin requires Java 17 to run
 
   You might experience this error message:
 
-  ![Android Gradle plugin requires Java 11 to run](../images/studioTroubleshooting/11_GradleJDK.png)
+  ![Android Gradle plugin requires Java 17 to run](../images/studioTroubleshooting/11_GradleJDK.png)
 
   Click on "Gradle Settings" (1) to go to open the gradle settings.
 
@@ -115,13 +124,13 @@ Follow the instructions at [Gradle Resync](troubleshooting_androidstudio-step-3-
 
   ![Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
-  When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "Embedded JDK version" (2).
+  When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "jbr-17" (2), which should be located within your Android Studion installation directory.
 
   ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
   Press "OK" to save and close the settings dialog.
 
-  *Important*: If you don't see the setting "Gradle JDK", you might have not updated Android Studio. Make sure you are using Android Studio 2021.1.1 Bumblebee) or newer.
+  *Important*: If you don't see the setting "Gradle JDK", you might have not updated Android Studio. Make sure you are using Android Studio 2022.3 Giraffe) or newer.
 
   Now you need to trigger a [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync)
 
@@ -148,7 +157,7 @@ Follow the instructions at [Gradle Resync](troubleshooting_androidstudio-step-3-
 
   If you are using Windows 10 you must use a 64-bit operating system.
 
-  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
+  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
   ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
 

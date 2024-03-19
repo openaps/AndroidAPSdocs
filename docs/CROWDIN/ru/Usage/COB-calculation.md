@@ -1,17 +1,17 @@
-# Вычисление активных углеводов COB
+# Подсчет активных углеводов COB
 
-## How does AAPS calculate the COB value?
+## Как AAPS вычисляет значение COB?
 
-When carbs are entered as part of a meal or correction, AAPS adds them to the current carbs on board (COB). AAPS then absorbs (removes) carbs based on observed deviations to BG values. The rate of absorption depends on the carb sensitivity factor. This is not a profile value but is calculated as ISF/IC and is how many mg/dl 1g of carbs will raise your BG.
+При вводе углеводов как части приема пищи или коррекции, AAPS добавляет их к текущим активным углеводам (COB). Затем AAPS поглощает (удаляет) углеводы на основе наблюдаемых отклонений от значений ГК. Степень поглощения зависит от чувствительности к углеводам. Это не величина профиля, но рассчитывается как ISF/IC и показывает на сколько мг/дл повысится ГК от приема 1г углеводов.
 
-The formula is: `absorbed_carbs = deviation * ic / isf` It means:
-* increasing ic will increase carbs absorbed every 5 minutes thus shorten total time of absorption
-* increasing isf will decrease carbs absorbed every 5 minutes thus prolong total time of absorption
-* changing profile % increase/decrease both values thus has no impact on carbs absorption time
+Применяемая формула: `поглощенные_углеводы = отклонение * ic / isf` Это означает:
+* увеличение углеводного коэффициента IC увеличивает количество углеводов, поглощаемых каждые 5 минут, тем самым сокращая общее время поглощения
+* увеличение фактора чувствительности к инсулину ISF снижает количество углеводов, поглощаемых каждые 5 минут, тем самым увеличивая общее время поглощения
+* изменение профиля на % увеличивает/уменьшает обе величины и, таким образом, не влияет на время поглощения углеводов
 
-For example, if your profile ISF is 100 and your IC is 5, your CSF would be 20. For every 20 mg/dl your BG goes up, 1g of carbs are absorbed by AAPS. Positive IOB also effects this calculation. So, if AAPS expected your BG to go down by 20 mg/dl because of IOB and it instead stayed flat, it would also absorb 1g of carbs.
+Например, если ISF вашего профиля 100, а ваш IC - 5, ваш CSF будет 20. За каждые 20 мг/дл (чуть больше 1 ммоль/л) на которые поднимется ГК, AAPS спишет 1г углеводов. Положительное значение активного инсулина IOB также влияет на расчет. Таким образом, если AAPS рассчитывал, что ГК снизится на 20 мг/дл из-за активного инсулина IOB, а она не опустилась, он все равно спишет 1г углеводов.
 
-Carbs will also be absorbed via the methods described below based on what sensitivity algorithm is used.
+Углеводы также поглощаются методами, описанными ниже, на основе выбранного алгоритма чувствительности.
 
 ### Oref1
 
@@ -23,7 +23,7 @@ Carbs will also be absorbed via the methods described below based on what sensit
 
 ### AAPS, Средневзвешенное значение
 
-absorption is calculated to have `COB == 0` after specified time
+усвоение рассчитывается как `COB == 0` после заданного времени
 
 ```{image} ../images/cob_aaps2_orange_II.png
 :alt: AAPS, средневзвешенное значение
@@ -37,9 +37,9 @@ absorption is calculated to have `COB == 0` after specified time
 
 AAPS предупреждает о том, что вы собираетесь подавать болюс при активных углеводах COB, оставшихся от предыдущего приема пищи, и алгоритм считает, что текущий расчет COB может быть неправильным. В этом случае он даст дополнительный подсказку на экране подтверждения калькулятора болюса.
 
-### How does AAPS detect wrong COB values?
+### Как AndroidAPS обнаруживает неправильные значения активных углеводов COB?
 
-Обычно AAPS обнаруживает усвоение углеводов через отклонения ГК. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called 'fallback'). Поскольку этот метод вычисляет только минимальное поглощение углеводов без учета отклонений гК, это может привести к неправильным значениям COB.
+Обычно AAPS обнаруживает усвоение углеводов через отклонения ГК. В случае, если вы ввели углеводы, но AAPS не может оценить их усвоение с помощью отклонений ГК, то для вычисления поглощения система будет использовать метод [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) (так называемый 'запасной вариант'). Поскольку этот метод вычисляет только минимальное поглощение углеводов без учета отклонений ГК, это может привести к неправильным значениям активных углеводов COB.
 
 ```{image} ../images/Calculator_SlowCarbAbsorption.png
 :alt: Подсказка о неверном значении COB
@@ -49,18 +49,18 @@ AAPS предупреждает о том, что вы собираетесь п
 
 ### Как относиться к этому предупреждению?
 
-- Consider to cancel the treatment - press Cancel instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving COB unticked.
-- In case you are sure you need a correction bolus, enter it manually.
-- In any case be careful not to overdose!
+- -Подумайте об отмене действия -нажмите кнопку Отмена, а не ОК.
+- -Снова рассчитайте свой предстоящий прием пищи с помощью калькулятора болюса, сняв галочку с активных углеводов COB.
+- -Если вы уверены, что нужен болюс на коррекцию, введите его вручную.
+- -В любом случае, будьте осторожны, чтобы не допустить передозировки!
 
-### Почему алгоритм неправильно распознает COB?
+### Почему алгоритм неправильно распознает активные углеводы COB?
 
-- Maybe you overestimated carbs when entering them.
-- Activity / exercise after your previous meal
-- I:C needs adjustment
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA)
+- -Возможно, вы переоценили количество углеводов при их вводе.
+- Активность/нагрузка после предыдущего приема пищи
+- -Углеводный коэффициент I:C нуждается в корректировке
+- Значение для min_5m_carbimpact неверно (рекомендуется 8 для алгоритма SMB, 3 для OpenAPS AMA)
 
 ## Ручная коррекция введенных углеводов
 
-If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described [here](Screenshots-carb-correction).
+Если вы переоценили или недооценили количество углеводов, это можно исправить на вкладке назначений и вкладке Действия как описано [здесь](Screenshots-carb-correction).

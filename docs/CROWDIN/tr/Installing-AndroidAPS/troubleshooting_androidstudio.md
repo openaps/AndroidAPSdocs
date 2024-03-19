@@ -14,11 +14,12 @@ Eski keystore'unuzu veya parolasını artık bulamıyorsanız, aşağıdakileri 
 4. [Güncelleme kılavuzunda](../Installing-AndroidAPS/Update-to-new-version.md) açıklandığı gibi yeni sürümün imzalı apk'sını oluşturun ve telefonunuza aktarın.
 5. Telefonunuzdaki önceki AAPS sürümünü kaldırın.
 6. Telefonunuza yeni AAPS sürümünü yükleyin.
-7. Hedeflerinizi ve yapılandırmanızı geri yüklemek için [ayarları içe aktarın](ExportImportSettings-import-settings).
-8. Pil optimizasyon seçeneklerinizi kontrol edin ve tekrar devre dışı bırakın.
+7. [Import settings](ExportImportSettings-import-settings) to restore your objectives and configuration.
 
    Bunları telefonunuzda bulamazsanız, harici depolama biriminden telefonunuza kopyalayın.
-8. Döngü yapmaya devam edin.
+
+8. Pil optimizasyon seçeneklerinizi kontrol edin ve tekrar devre dışı bırakın.
+9. Keep on looping.
 
 ## Gradle Sync başarısız oldu
 Gradle Synchronize çeşitli nedenlerle başarısız olabilir. Gradle senkronizasyonunun başarısız olduğunu söyleyen bir mesaj aldığınızda, Android Studio'nun altındaki "Oluştur" sekmesini (1) açın ve hangi hata mesajının (2) görüntülendiğini kontrol edin.
@@ -103,11 +104,19 @@ Bunlar olağan gradle senkronizasyon hatalarıdır:
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
-### Android Gradle eklentisinin çalışması için Java 11 gerekir
+### Incompatible version of Android Gradle plugin
+
+  If you experience the following error message
+
+  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+
+  You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
+
+### Android Gradle plugin requires Java 17 to run
 
   Bu hata mesajıyla karşılaşabilirsiniz:
 
-  ![Android Gradle eklentisinin çalışması için Java 11 gerekir](../images/studioTroubleshooting/11_GradleJDK.png)
+  ![Android Gradle plugin requires Java 17 to run](../images/studioTroubleshooting/11_GradleJDK.png)
 
   Gradle ayarlarını açmak için "Gradle Settings" (1) üzerine tıklayın.
 
@@ -115,13 +124,13 @@ Bunlar olağan gradle senkronizasyon hatalarıdır:
 
   ![Gradle Ayarları](../images/studioTroubleshooting/09_GradleSettings.png)
 
-  Gradle ayarları iletişim kutusunu açtığınızda, "Gradle JDK" da seçenekleri (1) açın ve "Gömülü JDK sürümü"nü (2) seçin.
+  When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "jbr-17" (2), which should be located within your Android Studion installation directory.
 
   ![Gradle Ayarları](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
   Ayarlar iletişim kutusunu kaydetmek ve kapatmak için "Tamam"a basın.
 
-  *Önemli*: "Gradle JDK" ayarını görmüyorsanız, Android Studio'yu güncellememiş olabilirsiniz. Android Studio 2021.1.1 Bumblebee) veya daha yenisini kullandığınızdan emin olun.
+  *Önemli*: "Gradle JDK" ayarını görmüyorsanız, Android Studio'yu güncellememiş olabilirsiniz. Make sure you are using Android Studio 2022.3 Giraffe) or newer.
 
   Şimdi bir [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync) tetiklemeniz gerekiyor
 
@@ -148,7 +157,7 @@ Bunlar olağan gradle senkronizasyon hatalarıdır:
 
   Windows 10 kullanıyorsanız 64 bit işletim sistemi kullanmanız gerekir.
 
-  İnternette 32 bit mi yoksa 64 bit mi işletim sisteminiz olduğunu nasıl belirleyeceğinize dair birçok kılavuz var - ör. [bu web sayfası](https://www.howtogeek.com/howto/21726/how-do-i -know-if-im-running-32-bit-or-64-bit-windows-answers/).
+  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
   ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
 

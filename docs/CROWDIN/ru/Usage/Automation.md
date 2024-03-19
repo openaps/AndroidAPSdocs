@@ -1,169 +1,269 @@
 # Автоматизация
 
-## Что такое автоматизация
+## Что такое автоматизация?
 
-Для одинаковых частых событий приходится изменять одни и те же параметры. Чтобы избежать лишней работы, можно автоматизировать событие, если вы можете описать его достаточно точно и позволить ему делать это автоматически.
+"**Automation**" является функцией **AAPS**, которая позволяет упростить управление диабетом пользователя путем автоматических изменений в подачу инсулина. **Автоматизации** позволяют пользователям **AAPS<** подстраивать его работу под свои индивидуальные потребности.
 
-Например, при низкой ГК, вы можете решить, что должна автоматически установиться высокая временная цель. Или если вы находитесь в фитнес-центре, вы автоматически получаете временную цель.
+Каждый конкретный скрипт Автоматизации **** инструктирует **AAPS** выполнять определенное действие в результате одного или нескольких условий, или триггеров. Такими активаторами могут быть назначены нерегулярные эпизодические событий вроде низкого или высого сахара крови, или некоторая заданная величина отрицательного активного инсулина IOB в организме. Ими также могут стать периодические мероприятия, например, прием пищи или физ нагрузки в определенное время суток, или когда пользователь находится в пределах определенного местоположения GPS или зоны WIFI SSID.
 
-Before using Automation, you should be confident with manual [temp targets](./temptarget.html) or profile switches.
+Существует большой выбор опций автоматизации, и пользователям рекомендуется изучать их в приложении **AAPS** в разделе автоматизации. Можно также найти группы пользователей **AAPS** на **Facebook**, **Discord**, Telegram и т. п. для обмена примерами автоматизации с другими пользователями.
 
-Убедитесь, что вы понимаете, как работает автоматизация перед настройкой первого простого правила. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
+## Как может помочь автоматизация
 
-```{image} ../images/Automation_ConditionAction_RC3.png
-:alt: условие автоматизации + действие
-```
+1. **Уменьшение забот, связанных с принятием решений:** Основное преимущество **автоматизации** заключается в освобождении пользователя от бремени ручного вмешательства в работу **AAPS**. [Исследования](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) показывают, что людям с сахарным диабетом 1 типа, приходится принимать в среднем 180 дополнительных решений в день. **Автоматизация** может уменьшить эту нагрузку, высвобождая умственную энергию пользователя для других аспектов жизни.
 
-## Как пользоваться
+1. **Потенциально улучшит гликемический контроль: ** например, **автоматизация** может обеспечить, чтобы ** Временные целевые показатели** устанавливались по мере необходимости, даже во время напряженного графика или периодов забывчивости. Например, если у ребенка с сахарным диабетом запланированы занятия спортом в школе по вторникам в 10 утра и четвергам в 14: 00, и ему всегда нужно, чтобы за 30 минут до этих занятий включалась временная высокая цель, это может быть обеспечено автоматизацией.
 
-Чтобы настроить автоматизацию, нужно дать ей заголовок, выбрать хотя бы одно условие и одно действие.
+1. <**Позволяет тщательно настраивать AAPS**, чтобы быть более или менее агрессивными в конкретных ситуациях, в зависимости от предпочтений пользователя. Например, срабатывание временного пониженного % профиля на заданный период времени, если активный инсулин **IOB** стал отрицательным посреди ночи, что указывает на чрезмерную агрессивность профиля действующего.
 
-(Automation-important-note)=
-### Важное примечание
+Приводимый ниже пример показывает, как **Автоматизация** может активировать шаги для устранения забот. Пользователь настроил **Автоматизацию** на запуск "Временной цели Нагрузка" в 5 утра, чтобы обеспечить себе оптимальную гликемию **ГК** и **активный инсулин IOB** для зарядки в 6 утра:
 
-**Automation is still active when you disable loop!**
+![Alt text](../images/automation_2024-02-12_20-54-49.png)
 
-Поэтому при необходимости деактивируйте правила автоматизации на это время. Это можно сделать, сняв галочку в поле слева от названия правила автоматизации.
+## Основные соображения перед началом применения автоматизации
 
-```{image} ../images/Automation_ActivateDeactivate.png
-:alt: Активировать и деактивировать правило автоматизации
-```
+1. Перед настройкой **Автоматизации**необходимо иметь надлежащий контроль ГК с помощью **AAPS**. <**Автоматизация** не должна применяться для компенсации неоптимизированной базы, коэффициента чувствительности ISF или углеводного коэффициента IC (обсуждается ниже). Избегайте установки автоматизации на **переключение профиля** для компенсации повышения ГК _например_, вследствие приема пищи, с этим лучше справляться с помощью других стратегий (микроболюсов и т.п.).
 
-### Где найти Автоматизацию
+1. Как любые другие технологии, <мониторинги ГК</strong>, **помпы** и **телефоны** могут работать со сбоями: технические проблемы или ошибки сенсоров могут нарушить работу **автоматизации** и потребовать ручного вмешательства.
 
-Depending on your [settings in config builder](Config-Builder-tab-or-hamburger-menu) you will either find [Automation](Config-Builder#automation) in hamburger menu or as a tab.
+1. **Требования к автоматизации могут меняться при изменении хода событий**. При смене между периодами работы/школы/отпуска, установите в календаре напоминание о том, какие автоматизации активны (их легко активировать и деактивировать). Например, если вы едете в отпуск, то больше не нуждаетесь в автоматизации для занятий физподготовкой или занятий в зале, или же требуется корректировать время.
 
-### Общие настройки
+1. Режимы автоматизации могут конфликтовать друг с другом, поэтому рекомендуется тщательно просмотреть любые новые настройки автоматизации в безопасной среде и понять, почему автоматизация может сработать, а может и не сработать в соответствии с ожиданиями.
 
-Есть некоторые ограничения:
+1. При использовании Autosense попробуйте использовать **Временные цели** вместо **Переключателя профилей**. **Временные цели TT** не сбрасывают Autosens на 0. **Переключатели профиля** сбрасывают Autosens.
 
-- The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
-- The profile percentage has to be between 70 % and 130%.
-- There is a 5 min. time limit between executions (and first execution).
+1. Большинство автоматизаций следует устанавливать на **ограниченный промежуток времени**, после чего **AAPS** при необходимости повторно оценит и повторит автоматизацию. Например, "начать временную цель 7,0 ммоль/л продолжительностью 30 мин" или "начать профиль 110% продолжительностью 10 мин" _ и_ "начать временную цель 5,0 ммоль/л продолжительностью 10 мин". Использование автоматизации для внесения постоянных изменений (например, для повышения %p профиля) может привести к гипогликемии.
 
-**Please be careful:**
+## Когда начать применять Автоматизацию?
 
-- **less than -2 means: -3 and lower (-4,-10, etc)**
-- **more than -2 means: -1 and higher (-1, 0, +10, etc)**
+При запуске Цели 10.
 
-### Условие
+## Где находятся настройки автоматизации в AAPS?
 
-Вы можете выбрать между несколькими условиями. Некоторые моменты здесь объясняются, но основное легко понять и оно не все здесь описано:
+В зависимости от настроек [конфигуратора](../Installing-AndroidAPS/change-configuration.md#config-builder) **Automation** находится либо в выпадающем сэндвич-меню, либо в виде вкладки с **AAPS**.
 
-- connect conditions: you can have several conditions and can link them with
+## Как настроить автоматизацию?
 
-  - "And"
-  - "Or"
-  - "Exclusive or" (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+Чтобы настроить **Automation** создайте правило **AAPS** следующим образом:
 
-- Time vs. recurring time
+* Дайте название вашему "правилу";
+* Select at least one ‘Condition’; and
+* Выберите одно «действие»;
+* Установите правый флажок события **Automation** для активации автоматизации:
 
-  - time =  single time event
-  - recurring time = something that happens regularly (i.e. once a week, every working day etc.)
+![Alt text](../images/automation_2024-02-12_20-55-35.png)
 
-- location: in the config builder (Automation), you can select which location service you want to use:
 
-  - Use passive location: AAPS only takes locations when other apps are requesting it
-  - Use network location: Location of your Wifi
-  - Use GPS location (Attention! Может привести к чрезмерной разрядке аккумулятора!)
+To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. В приведенном ниже примере показаны **Automation**  под названием «Low Glucose TT» как активированный («помеченный) или деактивированный («unticked»).
 
-### Действие
+![Alt text](../images/automation_2024-02-12_20-56-08.png)
 
-Можно выбрать одно или несколько действий:
 
-- start temp target
+При настройке автоматизации сначала можно проверить ее, включив опцию «notification (уведомление)» в разделе «Действия». Это заставляет**AAPS** сначала вывести уведомление, а не автоматизировать действие. Когда вы убедитесь, что уведомление запущено в правильное время/ при правильных условиях, правило **Автоматизации** может быть обновлено, с заменой "Уведомления" на ‘Действие’.
 
-  - must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
-  - works only if there is no previous temp target
+![Alt text](../images/automation_2024-02-12_20-55-05.png)
 
-- stop temp target
+:::{admonition} Важное примечание
+:class: примечание
 
-- notification
+Автоматизации активны даже когда цикл отключен!
+:::
 
-- profile percentage
 
-  - must be between 70% and 130%
-  - works only if the previous percentage is 100%
+## Ограничения безопасности
 
-After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
+Для **Автоматизации** установлены ограничения безопасности:
 
-```{image} ../images/Automation_Default_V2_5.png
-:alt: Automation default vs. set values
-```
+* Значение ГК должно составлять от 72 до 270 мг/дл или от 4 до 15 ммоль/л).
+* Процент **профиля** должен составлять от 70% до 130%.
+* Существует 5-минутный промежуток времени между выполнениями **Автоматизации** (и ее первым выполнением).
 
-(Automation-sort-automation-rules)=
-### Выбор правил автоматизации
+## Правильное использование отрицательных значений
 
-Для отбора правил автоматизации нажмите и удерживайте кнопку с четырьмя строками в правой части экрана и двигайтесь вверх или вниз.
+:::{admonition} Предупреждение
+:class: предупреждение
 
-```{image} ../images/Automation_Sort.png
-:alt: Выбор правил автоматизации
-```
+Будьте осторожны при выборе отрицательных значений в Автоматизации
+:::
 
-### Удаление правил автоматизации
+Необходимо соблюдать осторожность при выборе «отрицательного значения» в «Условиях», как например «менее чем» в **Automations**. Например:
 
-Для удаления правила автоматизации нажмите на значок корзины.
+![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
 
-```{image} ../images/Automation_Delete.png
-:alt: Выбор правила автоматизации
-```
+**Пример 1:** Создание условия **"меньше, чем"** "-0,1" приведет к:
 
-(Automation-good-practice-caveats)=
-## Good practice & caveats
+Запустит **Automation** для любого числа, которое **строго** меньше, чем** -0,1. Сюда войдут такие числа как -0.2, -0.3, -0.4 и так далее. Помните, что -0,1 само **не** включен в это условие. (условие "меньше или равно -0,1" _включало бы_ -0,1).
 
-- When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
+**Пример 2:** Создание условия "больше, чем" -0,1 приведет к:
 
-- Watch the rule results.
+Запустит **Автоматизацию** для любого числа, которое **строго** больше, чем** -0,1. Сюда входят такие числа как 0, 0,2, 0,4 и любые другие положительные числа.
 
-- Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg \< 180 mg/dl)
+Важно тщательно учитывать точное назначение **автоматизации** при выборе этих условий и значений.
 
-  **Doubly important if action is a profile switch!**
+## Automation Conditions
 
-- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](Open-APS-features-autosens) back to 0.
+There are various ‘Conditions’ that can be selected by the user. The list below is non-exhaustive:
 
-- Make sure Profile switches are made sparingly and preferably at a last resort.
+**Условие** связка условий
 
-  - Profile switching renders [Autosens](Open-APS-features-autosens) useless for a min of 6 hours.
+**Варианты:**
 
-- Profile switching will not reset the profile back to your base profile
+Several conditions can be linked with
+* “И”
+* “Или”
+* * "Исключительно либо" (что означает, что если применяется одно - и только одно из этих условий, то действие (действия) произойдет
 
-  - You have to make another rule to set this back or do it manually!
-  - Increased risk of hypoglycemia if profile switch does not expire or reset back to base profile.
+**Условие:** время и время повторения
 
-## Примеры
+**Варианты:**
 
-Это просто примеры вариантов настройки, не советы. Не воспроизводите их, не зная, что вы делаете или зачем вам это нужно.
+* время = одно событие времени
+* периодическое время = то, что происходит регулярно (т.е. раз в неделю, каждый рабочий день и т. д.)
 
-- Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
-- Setting temp target for activities based on time, location, connection to a bluetooth device...
-- Setting eating soon temp targets based on time, location...
+**Условие:** место
+
+**Варианты:**
+
+* in the **config builder** (Automation), the user can select their required location service.
+
+**Condition:** location service
+
+**Варианты:**
+
+* Use passive location: **AAPS** only takes locations when other apps are requesting it.
+* Использовать расположение сети: расположение вашего Wifi.
+* Используйте локатор GPS (Внимание! Может привести к чрезмерной разрядке аккумулятора!)
+
+## Действие
+
+**Действия:** начать **Временную цель**
+
+**Варианты:**
+
+* **ГК** должна быть между 72 мг/дл и 270 мг/дл (4 ммоль/л и 15 ммоль/л)
+* **ВЦ** работает только в том случае, если нет предыдущей временной цели
+
+**Actions:** stop **Temp Target**
+
+**Варианты:**
+
+отсутствуют
+
+**Действия:** процент **Профиля**
+
+**Варианты:**
+
+* **Профиль** должен быть между 70% и 130%
+* работает только в том случае, если предыдущий процент составляет 100%
+
+После добавления «Действия» значения по умолчанию должны быть изменены на желаемую величину путем нажатия и изменения значения по умолчанию.
+
+![Alt text](../images/automation_2024-02-12_20-57-07.png)
+
+![Alt text](../images/automation_2024-02-12_20-57-29.png)
+
+## The order of the automations in the list matters
+ <**AAPS** автоматизирует правила в порядке предпочтения, начиная с верхней части списка **Автоматизация**. For example, if the ‘low hypoglycemia’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+
+
+![Alt text](../images/automation_2024-02-12_20-57-48.png-500x.png)
+
+Чтобы изменить приоритет **Правил автоматизации**, нажмите и удерживайте кнопку с четырьмя строками в правой части экрана. Reorder the  **Automations** by moving the rules up or down.
+
+![Alt text](../images/automation_2024-02-12_20-58-00.png-500x.png)
+
+## Как удалить правила автоматизации
+
+To delete an **Automation** rule click on the trash icon.
+
+![Alt text](../images/automation_2024-02-12_20-58-26.png-500x.png)
+
+## Примеры Автоматизации
+
+Ниже приведены примеры **Автоматизаций**. Further discussion on **Automations** and how users have individualised their  **Automation** can be found in Facebook discussions groups or on Discord. Приведенные ниже примеры не следует воспроизводить без хорошего понимания пользователем того, как будет работать **Автоматизация**.
 
 ### Временная Цель Низкая ГК
 
-```{image} ../images/Automation2.png
-:alt: Автоматизация2
-```
+Эта **Автоматизация** запускает автоматическую  "Временную Цель Гипо", когда низкая **ГК** находится на определенном пороговом уровне.
 
-Эта автоматизация для тех, кто хочет автоматически активировать временную цель ГИПО при низкой ГК.
+![Alt text](../images/automation_2024-02-12_21-04-01.png-500x.png)
 
-### Временная Цель Время Обеда
+### Временная цель Обеденный перерыв (с "Локацией")
 
-```{image} ../images/Automation3.png
-:alt: Автоматизация3
-```
+![Alt text](../images/automation_2024-02-12_21-04-25.png-500x.png)
 
-Эта автоматизация для тех, кто обедает на работе в одно и то же время каждую неделю. Если он/она в определенное время (перед обедом) находится в определенном месте, автоматизация задает более низкую временную цель (ожидаемый прием пищи). Из-за союза "И" это происходит только в определенное время в определенном месте. Поэтому эта автоматизация не работает в любое другое время на этом месте или в это же время, но когда человек находится дома.
+Эта **Автоматизация** была создана для пользователя, который обедает на работе примерно в одно и то же время каждый будний день, но запускается только в том случае, если пользователь находится в пределах заданного ‘местоположения’.  Таким образом, если пользователь однажды не окажется на работе, эта автоматизация НЕ будет активирована.
 
-### Неправильное использование автоматизации
+Эта **Автоматизация** установит Низкую Временную цель (ожидаемый прием пищи) в 13:00, чтобы снизить уровень ГК до 90 мг (или 5 ммоль/л) при подготовке к обеду.
 
-Опасайтесь неправильно использовать автоматизацию. Это может привести к трудностям и даже опасности для здоровья. Примеры неправильного применения:
+"Инициирующее" местоположение устанавливается путем ввода GPS-координат широты и долготы, как показано ниже:
 
-- Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
-- Setting profile to compensate food
-- Setting profile without duration
-- Creating one way rules (i.e. do something but don't undo it by another rule)
-- Creating long term rules
+![Alt text](../images/automation_2024-02-12_21-04-40.png-500x.png)
 
-## Альтернативы
+Из-за союза "И" **Автоматизация** происходит только в "выбранное" время при нахождении пользователя на предопределенном месте.
 
-Для опытных пользователей есть и другие возможности для автоматизации задач с помощью IFTTT или приложения других разработчиков Android под названием Automate. Some examples can be found [here](./automationwithapp.html).
+**Автоматизация ** не будет активирована ни в какое другое время в этом месте или в это время за пределами 100 метров от установленных GPS-координат.
+
+### Автоматизация по локации SSID WIFI
+
+Using WIFI SSID is a good option to trigger an **Automation** while within range of a specific wifi network (than compared with GPS), it is fairly precise, uses less battery and works in enclosed spaces where GPS and other location services might not be available.
+
+Here is another example of setting up a **Temp Target** for work days only before breakfast(1).
+
+
+The **Automation** will trigger at 05:30am only on Monday-Friday(2)  
+and while being connected to a home wifi network (3).
+
+
+It will then set a**Temp Target**  of 75mg/dl for 30 minutes (4). One of the advantages of including the location is that it will not trigger if the user is travelling on vacation for instance.
+
+![Alt text](../images/automation_2024-02-12_21-05-02.png-500x.png)
+
+Here is the screenshot detailing the **Automation**  triggers:
+
+1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
+1) WIFI SSID = My_Home_Wifi_Name
+
+![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
+
+## Automation Logs
+
+**AAPS** has a log of the most recent **Automation** triggered at the bottom of the screen under the **Automation** tab.
+
+In the example below the logs indicate:
+
+(1) at 01:58 am, the “Low BG triggers temp hypo profile” is activated
+* glucose value is less than 75mg/dl;
+* delta is negative (ie: the BG is going down);
+* time is within 01:00 am and 06:00 am.
+
+The **Automation** will:
+* set a **Temp Target** to 110mg/dl for 40 minutes;
+* start a temporary **Profile** at 50% for 40 minutes.
+
+(2) at 03:38 am,  the “High carb after low at night” is triggered
+* time is between 01:05 am and 06:00 am;
+* glucose value is greater than 110mg/dl.
+
+The **Automation** will:
+* change **Profile** to LocalProfile1 (ie: cancel the temporary profile if any)
+* stop **Temp Target** (if any)
+
+![Alt text](../images/automation_2024-02-12_21-05-56.png-500x.png)
+
+## Устранение неполадок
+
+* Problem: __My automations are not being triggered by AAPS?__
+
+Check the box to the right of  **Automation** event is ‘ticked’ to ensure the rule is activated.
+
+![Alt text](../images/automation_2024-02-12_21-06-12.png-500x.png)
+
+* Problem: __My automations are being triggered in the wrong order.__
+
+Check your rule prioritisation order as discussed above here.
+
+## Alternatives to Automations
+
+For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. 
+

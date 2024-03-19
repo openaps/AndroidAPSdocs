@@ -1,169 +1,269 @@
 # Automatizavimas
 
-## Kas yra Automatizavimas
+## What is an Automation?
 
-Dėl nuolatinių, pasikartojančių įvykių gali būti, kad visada turite pakeisti tuos pačius parametrus. Norėdami išvengti papildomo darbo, galite pabandyti automatizuoti visą reikalą (jei galite jį pakankamai tiksliai nurodyti).
+"**Automation**" is an **AAPS** feature which can simplify a user’s diabetes management by making automatic changes to insulin delivery. **Automations** allow **AAPS** to be highly personalised for individual users.
 
-pvz.,  galite sukurti aukšto tikslo veiksmų rinkinį, kuris automatiškai suaktyvinamas, kai gliukozės kiekis kraujyje yra mažas. Arba, jei esate savo sporto klube, laikinas tikslas gali būti suaktyvintas automatiškai.
+An **Automation** instructs **AAPS** to carry out a specific action, as a result of one or more conditions or triggers. This can be for irregular episodic events, like low or high BG, a set amount of negative IOB. It can also be for recurring events, for example a meal or exercise at a certain time of day, or when the user is located within a certain distance of GPS location or WIFI SSID area.
 
-Before using Automation, you should be confident with manual [temp targets](./temptarget.html) or profile switches.
+There are a wide range of automation options, and users are encouraged to study these within the **AAPS** app, in the automation section. You can also search the **AAPS** user groups on **Facebook** and **Discord** for automation examples from other users.
 
-Įsitikinkite, kad jūs tikrai suprantate, kaip automatizavimas veikia prieš nustatant savo pirmąjį paprastą taisyklę. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
+## How Automation can help
 
-```{image} ../images/Automation_ConditionAction_RC3.png
-:alt: Automatizavimo būsena + veiksmai
-```
+1. **Decreasing decision fatigue:** The primary benefit of **automations** is to relieve the user from the burden of having to make manual interventions in **AAPS**. [Research](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6286423/#ref4) estimates that an average of 180 additional daily decisions have to be made by those living with Type 1 diabetes. **Automations** can lessen the mental load, freeing up the user’s mental energy for other aspects of life.
 
-## Kaip naudoti
+1. **Potentially improving glycemic control:** for example, **automations** can help ensure **Temp Targets** are always set when needed, even during busy schedules or periods of forgetfulness. For example, if a child with diabetes has sport scheduled at school on Tuesdays at 10am and Thursdays at 2pm and always needs a high temp target actioned 30 min before these activities, these can be actioned by automation.
 
-Norėdami nustatyti automatizavimą, jūs turite suteikti jam pavadinimą, bent vieną sąlygą ir bent vieną atliktiną veiksmą.
+1. **Enabling AAPS to be highly customised** to be more or less aggressive in specific situations, according to user preference. For example, triggering a temporary reduced profile% for a set period of time if negative **IOB** develops in the middle of the night, indicating that the existing profile is too strong.
 
-(Automation-important-note)=
-### Svarbios pastabos
+The example below illustrates how an **Automation** can enable steps to be eliminated. The user has set an **Automation** to trigger a 5 am ‘Temp Target Exercise’ to ensure their **BG** and **IOB** are optimal, in preparation for their 6 am exercise:
 
-**Automation is still active when you disable loop!**
+![Alt text](../images/automation_2024-02-12_20-54-49.png)
 
-So make sure to deactivate automation rules during these occasions if necessary. Norėdami tai padaryti, pašalinkite varnelę laukelyje, esančiame automatizavimo taisyklės pavadinimo kairėje.
+## Key considerations before starting with Automations
 
-```{image} ../images/Automation_ActivateDeactivate.png
-:alt: Įjungti ir išjungti automatizavimo taisyklę
-```
+1. Before setting up an **Automation**, you should have reasonable BG control with **AAPS**. **Automations** should not be used to compensate for sub-optimal basal, ISF or ICR settings (discussed further below). Avoid setting an automated **Profile switch** to compensate for BG rises due to _e.g._ food, these are better dealt with via other strategies (SMBs etc).
 
-### Where to find Automation
+1. As with any technology, **CGMs** and **Pumps** and **phones** can malfunction: Technical issues or sensor errors can disrupt the **Automation** actions, and manual intervention may be needed.
 
-Depending on your [settings in config builder](Config-Builder-tab-or-hamburger-menu) you will either find [Automation](Config-Builder#automation) in hamburger menu or as a tab.
+1. **Requirements for automations are likely to change as routines change**. When changing between work/school/holiday periods, set a reminder in your calendar to review which automations are currently active (they are easy to activate and de-activate). For example, if you go on holiday, and no longer need the automations set up for school sports or daily exercise, or need to adjust the timings.
 
-### Bendrieji
+1. Automations may conflict with each other, and it is good to review any new automation(s) setting carefully in a safe environment, and understand why an automation may or may not have triggered in the way you expect.
 
-Yra kai kurie apribojimai:
+1. If using Autosense, try to use **Temp Targets** instead of **Profile Switches**. **Temp Targets** do not reset Autosens back to 0. **Profile Switches** reset Autosens.
 
-- The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
-- The profile percentage has to be between 70 % and 130%.
-- There is a 5 min. time limit between executions (and first execution).
+1. Most automations should only be set for a **limited time duration**, after which **AAPS** can re-evaluate and repeat the automation, if necessary, and if the condition is still met. For example, "start temp target of 7.0 mmol/l for 30 min" or "start profile 110% for 10 min" _and_ "start temp target of 5.0 mmol/l for 10 min". Using automations to create permanent changes (e.g. to stronger %profile) risks hypoglycemia.
 
-**Please be careful:**
+## When can I start using Automation?
 
-- **less than -2 means: -3 and lower (-4,-10, etc)**
-- **more than -2 means: -1 and higher (-1, 0, +10, etc)**
+When you start Objective 10.
 
-### Sąlyga
+## Where are Automations located in AAPS?
 
-Jūs galite pasirinkti tarp kelių sąlygų. Čia minimos tik kelios, tačiau dauguma jų yra savaime suprantamos, todėl čia nėra aprašytos:
+Depending on your [config builder](../Installing-AndroidAPS/change-configuration.md#config-builder) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
 
-- connect conditions: you can have several conditions and can link them with
+## How can I set up an Automation?
 
-  - "And"
-  - "Or"
-  - "Exclusive or" (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+To set up an **Automation** create a ‘rule’ with **AAPS** as follows:
 
-- Time vs. recurring time
+* Give your ‘rule’ a title;
+* Select at least one ‘Condition’; and
+* Select one ‘Action’;
+* Check the right box to the **Automation** event is ‘ticked’ to activate the automation:
 
-  - time =  single time event
-  - recurring time = something that happens regularly (i.e. once a week, every working day etc.)
+![Alt text](../images/automation_2024-02-12_20-55-35.png)
 
-- location: in the config builder (Automation), you can select which location service you want to use:
 
-  - Use passive location: AAPS only takes locations when other apps are requesting it
-  - Use network location: Location of your Wifi
-  - Use GPS location (Attention! Gali sukelti pernelyg didelį akumuliatoriaus sunaudojimą!)
+To deactivate an **Automation** rule, untick the box left of the name of the **Automation**. The example below shows an **Automation**  entitled ‘Low Glucose TT’ as either activated (‘ticked) or deactivated (‘unticked’).
 
-### Veiksmas
+![Alt text](../images/automation_2024-02-12_20-56-08.png)
 
-Galite pasirinkti vieną ar daugiau veiksmų:
 
-- start temp target
+When setting up an automation, you can first test it by activating the ‘notification’ option under "Actions". This triggers **AAPS** to first display a notification rather than actually automating an action. When you are comfortable that the notification has been triggered at the correct time/conditions, the **Automation** rule can be updated to replace the ‘Notification’ with an ‘Action’.
 
-  - must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
-  - works only if there is no previous temp target
+![Alt text](../images/automation_2024-02-12_20-55-05.png)
 
-- stop temp target
+:::{admonition} Important note
+:class: note
 
-- notification
+Automations are still active when the Loop is disabled!
+:::
 
-- profile percentage
 
-  - must be between 70% and 130%
-  - works only if the previous percentage is 100%
+## Safety limits
 
-After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
+There are safety limits set for **Automations**:
 
-```{image} ../images/Automation_Default_V2_5.png
-:alt: Automation default vs. set values
-```
+* The **glucose** value has to be between 72 and 270 mg/dl (or 4 and 15 mmol/l).
+* The **Profile** percentage has to be between 70% and 130%.
+* There is a 5 minute time limit between executions of  **Automation** (and first execution).
 
-(Automation-sort-automation-rules)=
-### Rūšiuoti automatizavimo taisykles
+## Correct use of negative values
 
-Norint rūšiuoti automatizavimo taisykles, paspauskite ir palaikykite keturių linijų mygtuką ekrano dešinėje pusėje ir tempkite žemyn ar aukštyn.
+:::{admonition} Warning
+:class: warning
 
-```{image} ../images/Automation_Sort.png
-:alt: Rūšiuoti automatizavimo taisykles
-```
+Please be careful when selecting a negative value in Automation
+:::
 
-### Ištrinti automatizavimo taisykles
+Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. For example:
 
-To delete an automation rule click on trash icon.
+![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
 
-```{image} ../images/Automation_Delete.png
-:alt: Ištrinti automatizavimo taisyklę
-```
+**Example 1:** Creating a Condition **"is lesser than"** "-0.1" will:
 
-(Automation-good-practice-caveats)=
-## Good practice & caveats
+Trigger an **Automation** for any number which is **strictly** less than** -0.1. This includes numbers like -0.2, -0.3, -0.4 and so on. Remember that -0.1 itself **is not** included in this condition. (The condition "is equal or lesser than -0.1" _would_ include -0.1).
 
-- When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
+**Example 2:** Creating a Condition "is greater than" -0.1 will:
 
-- Watch the rule results.
+Trigger an **Automation** for any number which is **greater than** -0.1. This includes numbers like 0, 0.2, 0.4, and any other positive number.
 
-- Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg \< 180 mg/dl)
+It is important to carefully consider the exact intention of your **Automation** when choosing these conditions and values.
 
-  **Doubly important if action is a profile switch!**
+## Automation Conditions
 
-- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](Open-APS-features-autosens) back to 0.
+There are various ‘Conditions’ that can be selected by the user. The list below is non-exhaustive:
 
-- Make sure Profile switches are made sparingly and preferably at a last resort.
+**Condition:** connect conditions
 
-  - Profile switching renders [Autosens](Open-APS-features-autosens) useless for a min of 6 hours.
+**Options:**
 
-- Profile switching will not reset the profile back to your base profile
+Several conditions can be linked with
+* “And”
+* “Or”
+* “Exclusive or” (which means that if one - and only one of the - conditions applies, the action(s) will happen)
 
-  - You have to make another rule to set this back or do it manually!
-  - Increased risk of hypoglycemia if profile switch does not expire or reset back to base profile.
+**Condition:** time vs. recurring time
 
-## Pavyzdžiai
+**Options:**
 
-Tai yra tiesiog pavyzdžiai, ne patarimai. Jūs neturėtumėte tiesiog jų kopijuoti, nebūdami tikri, ką tiksiai darote, ir nežinodami, kodėl jums jų reikia.
+* time = single time event
+* recurring time = something that happens regularly (i.e. once a week, every working day etc.)
 
-- Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
-- Setting temp target for activities based on time, location, connection to a bluetooth device...
-- Setting eating soon temp targets based on time, location...
+**Condition:** location
+
+**Options:**
+
+* in the **config builder** (Automation), the user can select their required location service.
+
+**Condition:** location service
+
+**Options:**
+
+* Use passive location: **AAPS** only takes locations when other apps are requesting it.
+* Use network location: Location of your Wifi.
+* Use GPS location (Attention! This can cause excessive battery drain!)
+
+## Veiksmas
+
+**Actions:** start **Temp Target**
+
+**Options:**
+
+* **BG** must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
+* **TT** works only if there is no previous Temp Target
+
+**Actions:** stop **Temp Target**
+
+**Options:**
+
+none
+
+**Actions:** **Profile** percentage
+
+**Options:**
+
+* **Profile** must be between 70% and 130%
+* works only if the previous percentage is 100%
+
+Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
+
+![Alt text](../images/automation_2024-02-12_20-57-07.png)
+
+![Alt text](../images/automation_2024-02-12_20-57-29.png)
+
+## The order of the automations in the list matters
+ **AAPS** will automate the rules created in the order of preference, starting from the top of the **Automation** list. For example, if the ‘low hypoglycemia’  **Automation** is the most important **Automation**, above all other rules, then this  **Automation** should appear at the top of the user’s **Automation** list as demonstrated below:
+
+
+![Alt text](../images/automation_2024-02-12_20-57-48.png-500x.png)
+
+To reprioritise the **Automation** rules, click and hold the four-lines-button on the right side of the screen. Reorder the  **Automations** by moving the rules up or down.
+
+![Alt text](../images/automation_2024-02-12_20-58-00.png-500x.png)
+
+## How to delete Automation rules
+
+To delete an **Automation** rule click on the trash icon.
+
+![Alt text](../images/automation_2024-02-12_20-58-26.png-500x.png)
+
+## Examples of Automations
+
+Below are examples of **Automations**. Further discussion on **Automations** and how users have individualised their  **Automation** can be found in Facebook discussions groups or on Discord. The examples below should not be replicated without the user having a good understanding of how the **Automation** will work.
 
 ### Žemos glikemijos laikinas tikslas
 
-```{image} ../images/Automation2.png
-:alt: Automation2
-```
+This **Automation**  triggers an automatic ‘Temp Target Hypo’ when low **BG** is at a certain threshold.
 
-Tai tiems, kurie nori automatiškai nustatyti laikiną žemos glikemijos tikslą, kai jų cukraus kiekis kraujyje yra mažas.
+![Alt text](../images/automation_2024-02-12_21-04-01.png-500x.png)
 
-### Pietų laiko laikinas tikslas
+### Lunch Time Temp Target (with ‘Location’)
 
-```{image} ../images/Automation3.png
-:alt: Automation3
-```
+![Alt text](../images/automation_2024-02-12_21-04-25.png-500x.png)
 
-Šis pavyzdys skirtas tiems, kurie pietus darbe valgo kiekvieną dieną tuo pačiu metu. Jei jis ar ji tam tikru laiku yra jų valgymo vietoje, automatizavimas, laukdamas pietų, uždės laikiną žemą tikslą (netrukus valgysiu). Dėl ryšio „Ir“ tai vyksta tik tam tikrą valandą ir jei jis ar ji yra tinkamoje vietoje. Taigi automatizavimas neveiks visai kitu metu, arba tuo metu, jei žmogus lieka namuose, ar ilgiau būna darbe.
+This **Automation** has been created for a user who eats their lunch at work around the same time every weekday but triggered only if the user is situated within a set ‘location’.  So if the user is not at work one day, this Automation will be activated.
 
-### Neteisingai naudojamas Automatizavimas
+This **Automation** will set a low Temp Target (Eating Soon) at 13:00 to drive ‘BG, to 90mg (or 5 mmol/l) in preparation for lunch.
 
-Atkreipkite dėmesį, jei netinkamai naudojate automatizavimo funkciją. Tai gali sukelti sunkumų ir net kelti pavojų jūsų sveikatai. Neteisingo naudojimo pavyzdžiai:
+The ‘Trigger’ location is set by inputting the latitude and longitude GPS coordinates as below:
 
-- Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
-- Setting profile to compensate food
-- Setting profile without duration
-- Creating one way rules (i.e. do something but don't undo it by another rule)
-- Creating long term rules
+![Alt text](../images/automation_2024-02-12_21-04-40.png-500x.png)
 
-## Alternatyvos
+Because of the ‘And’ connection, the **Automation** only happens during the ‘chosen time’ and if the user is at the selected location.
 
-For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found [here](./automationwithapp.html).
+The **Automation** will not be triggered on any other time at this location or on this time outside of 100 metres set GPS coordinates.
+
+### WIFI SSID Location Automation
+
+Using WIFI SSID is a good option to trigger an **Automation** while within range of a specific wifi network (than compared with GPS), it is fairly precise, uses less battery and works in enclosed spaces where GPS and other location services might not be available.
+
+Here is another example of setting up a **Temp Target** for work days only before breakfast(1).
+
+
+The **Automation** will trigger at 05:30am only on Monday-Friday(2)  
+and while being connected to a home wifi network (3).
+
+
+It will then set a**Temp Target**  of 75mg/dl for 30 minutes (4). One of the advantages of including the location is that it will not trigger if the user is travelling on vacation for instance.
+
+![Alt text](../images/automation_2024-02-12_21-05-02.png-500x.png)
+
+Here is the screenshot detailing the **Automation**  triggers:
+
+1) Under the main “AND” (both conditions need to be met to trigger) 1) Recurring time = M,T,W,T,F At 5:30am  
+1) WIFI SSID = My_Home_Wifi_Name
+
+![Alt text](../images/automation_2024-02-12_21-05-16.png-500x.png)
+
+## Automation Logs
+
+**AAPS** has a log of the most recent **Automation** triggered at the bottom of the screen under the **Automation** tab.
+
+In the example below the logs indicate:
+
+(1) at 01:58 am, the “Low BG triggers temp hypo profile” is activated
+* glucose value is less than 75mg/dl;
+* delta is negative (ie: the BG is going down);
+* time is within 01:00 am and 06:00 am.
+
+The **Automation** will:
+* set a **Temp Target** to 110mg/dl for 40 minutes;
+* start a temporary **Profile** at 50% for 40 minutes.
+
+(2) at 03:38 am,  the “High carb after low at night” is triggered
+* time is between 01:05 am and 06:00 am;
+* glucose value is greater than 110mg/dl.
+
+The **Automation** will:
+* change **Profile** to LocalProfile1 (ie: cancel the temporary profile if any)
+* stop **Temp Target** (if any)
+
+![Alt text](../images/automation_2024-02-12_21-05-56.png-500x.png)
+
+## Trikčių šalinimas
+
+* Problem: __My automations are not being triggered by AAPS?__
+
+Check the box to the right of  **Automation** event is ‘ticked’ to ensure the rule is activated.
+
+![Alt text](../images/automation_2024-02-12_21-06-12.png-500x.png)
+
+* Problem: __My automations are being triggered in the wrong order.__
+
+Check your rule prioritisation order as discussed above here.
+
+## Alternatives to Automations
+
+For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. 
+

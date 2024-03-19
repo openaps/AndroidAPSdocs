@@ -14,11 +14,12 @@ Si vous ne trouvez plus votre ancien fichier de clés ou son mot de passe, proc�
 4. Générez l'apk signé de la nouvelle version comme décrit dans le [Guide de mise à jour](../Installing-AndroidAPS/Update-to-new-version.md) et transférez-le sur votre téléphone.
 5. Désinstaller la précédente version de AAPS sur votre téléphone.
 6. Installez la nouvelle version de AAPS sur votre téléphone.
-7. [Importer les paramètres](ExportImportSettings-import-settings) pour restaurer vos objectifs et votre configuration.
-8. Vérifiez vos options d'optimisation de la batterie et désactivez-les à nouveau.
+7. [Import settings](ExportImportSettings-import-settings) to restore your objectives and configuration.
 
    Si vous ne pouvez pas les trouver sur votre téléphone, copiez les depuis le stockage externe vers votre téléphone.
-8. Continuez à boucler.
+
+8. Vérifiez vos options d'optimisation de la batterie et désactivez-les à nouveau.
+9. Keep on looping.
 
 ## Gradle Sync en échec
 Gradle Sync peut échouer pour diverses raisons. Quand vous recevez un message indiquant que la synchronisation gradle a échouée, ouvrez l'onglet "Build" (1) en bas d'Android Studio et vérifiez quel message d'erreur (2) est affiché.
@@ -103,11 +104,19 @@ Suivez les instructions à [Gradle Resync](troubleshooting_androidstudio-step-3-
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
-### Android Gradle requires Java 11 to run
+### Incompatible version of Android Gradle plugin
+
+  If you experience the following error message
+
+  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+
+  You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
+
+### Android Gradle plugin requires Java 17 to run
 
   Si vous rencontrez ce message d'erreur :
 
-  ![Android Gradle requires Java 11 to run](../images/studioTroubleshooting/11_GradleJDK.png)
+  ![Android Gradle plugin requires Java 17 to run](../images/studioTroubleshooting/11_GradleJDK.png)
 
   Cliquez sur "Gradle Settings" (1) pour ouvrir les paramètres du gradle.
 
@@ -115,13 +124,13 @@ Suivez les instructions à [Gradle Resync](troubleshooting_androidstudio-step-3-
 
   ![Configuration de Gradle](../images/studioTroubleshooting/09_GradleSettings.png)
 
-  Lorsque vous avez ouvert la boîte de dialogue des paramètres Gradle, ouvrez les options (1) à "Gradle JDK" et sélectionnez "Embedded JDK version" (2).
+  When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "jbr-17" (2), which should be located within your Android Studion installation directory.
 
   ![Configuration de Gradle](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
   Appuyez sur "OK" pour enregistrer et fermer la boîte de dialogue des paramètres.
 
-  *Important* : Si vous ne voyez pas le paramètre "Gradle JDK", vous n'avez peut-être pas mis à jour Android Studio. Assurez-vous que vous utilisez Android Studio 2021.1.1 Bumblebee) ou plus récent.
+  *Important* : Si vous ne voyez pas le paramètre "Gradle JDK", vous n'avez peut-être pas mis à jour Android Studio. Make sure you are using Android Studio 2022.3 Giraffe) or newer.
 
   Maintenant vous devez faire une [Resynchronisation Gradle](troubleshooting_androidstudio-step-3-gradle-resync)
 
@@ -148,7 +157,7 @@ Suivez les instructions à [Gradle Resync](troubleshooting_androidstudio-step-3-
 
   Si vous utilisez Windows 10, vous devez utiliser un système d'exploitation 64 bits.
 
-  Il y a beaucoup de documentation sur Internet pour savoir si vous avez un OS 32 bits ou 64 bits - par ex. [celle-ci](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
+  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
   ![Copie d'écran Impossible de démarrer le processus daemon](../images/AndroidStudioWin10_32bitError.png)
 

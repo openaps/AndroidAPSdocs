@@ -1,29 +1,49 @@
 # Freestyle Libre 1
 
-על מנת להשתמש בחיישן Libre כחיישן רציף המספק מדידה כל 5 דקות יש לקנות מתאם NFC לבלוטות' כדוגמת:
+To use your Libre as a CGM that is getting new BG values every 5 minutes without having to scan the sensor, you need to buy an NFC to Bluetooth bridge (commercially available devices, based on the obsolete [LimiTTer](https://github.com/JoernL/LimiTTer) project).
 
--   MiaoMiao (גרסה 1 או 2) <https://www.miaomiao.cool/>
--   Blucon Nightrider <https://www.ambrosiasys.com/our-products/blucon/>
--   Bubble  <https://bubbleshop.eu/> או למשתמשים ברוסיה   <https://vk.com/saharmonitor/>
+:::{admonition} Libre 2, Libre 1 US and Libre Pro :class: warning Verify the bridge and the app you want to use are compatible with your sensor.  
+:::
 
-בנוסף אפשר להשתמש בשעון ספציפי, Sony Smartwatch 3, לו מקלט NFC שניתן להפעילו כקורא NFC. המתאמים הרשומים מעלה הם פתרונות פשוטים ועדיפים במרבית המקרים בהם משתמשים ב-Libre 1 כחיישן רציף.
+Several bridges are available on the market:
+
+-   [MiaoMiao Reader](https://www.miaomiao.cool/) (version 1, 2 or 3) also available on AliExpress.
+-   [Blucon Nightrider](https://www.ambrosiasys.com/our-products/blucon/) (mind recent firmware versions might not be compatible with all apps, the vendor app does not broadcast data to AAPS)
+-   [Bubble (or Bubble Mini)](https://www.bubblesmartreader.com/) from European vendors ([Bubblan](https://www.bubblan.org/), [BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). Also available on AliExpress.
+-   Atom for Russian users.
+
+Historically it is possible to use a specific watch, the Sony Smartwatch 3 (SWR50) which has an NFC chip that can be enabled and used as an NFC collector. However the custom NFC to Bluetooth bridges listed above offer a less complex solution and would be used by the majority of those wanting to use their Libre 1 (non-US) as a CGM.
 
 -   Sony Smartwatch 3 (SWR50) <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
 נכון להיום, אם משתמשים ב-Libre 1 כמקור נתונים, לא ניתן להפעיל את האפשרויות ‘הפעל SMB תמיד’ ו-‘הפעל SMB אחרי פחמימות‘ בהגדרות אלגוריתם ה-SMB. מדידות הסוכר של Libre 1 אינן חלקות מספיק לשימוש בטוח עם SMB. ראו [שיפור נתוני סוכר](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) לקבלת פרטים נוספים.
 
-## אם משתמשים ב-xDrip+
+## 1. Using xDrip+
 
--   אם עוד לא התקנתם את xDrip+, הורידו ועקבו אחר ההוראות של [LimiTTEer](https://github.com/JoernL/LimiTTer) או [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki).
--   ב-xDrip+ נווטו להגדרות > הגדרות לשיתוף פעולה בין אפליקציות > הפץ על הטלפון והפעילו.
--   ב-xDrip+ נווטו להגדרות > הגדרות לשיתוף פעולה בין אפליקציות > קבל טיפולים ובחרו כבוי.
--   If you want to be able to use AAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. ייתכן שתצטרכו לבדוק את ההגדרות שבהגדרות > הגדרות פחות נפוצות > כיול מתקדם.
--   Select xDrip+ in ConfigBuilder (setting in AAPS).
--   התאימו את ההגדרות ב-xDrip+ לפי [דף הוראות   xDrip+](../Configuration/xdrip.md). ישנו חלק להגדרה בסיסית של xDrip+ והגדרות מיוחדות לשימוש ב-Freestyle Libre עם xDrip+.
--   אם AAPS אינו מקבל ערכי סוכר כאשר הטלפון במצב טיסה השתמשו ב'זהה מקלט' כפי שמתואר בהגדרות [xDrip+ דף](../Configuration/xdrip.md).
+-   xDrip+ supports Miaomiao, Bubble, Blucon, Atom and LibreAlarm.
+-   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
+-   Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
+-    You also need [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) for Libre 1 US (and Libre 2 EU).
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-## אם משתמשים ב-Glimp
+## 2. Using Glimp
 
--   תצטרכו להשתמש בגרסת Glimp 4.15.57 ומעלה. גרסאות ישנות יותר לא נתמכות.
--   אם לא הוגדרה כבר, אפשר להוריד את Glimp ולעקוב אחר ההוראות ב[נייטסקאוט](https://nightscout.github.io/uploader/setup/#glimp).
--   Select Glimp in ConfigBuilder (setting in AAPS).
+-   Glimp supports Miaomiao, Blucon and Bubble for Libre 1 and Libre 2 EU.
+-   תצטרכו להשתמש בגרסת Glimp 4.15.57 ומעלה. Older versions are not supported.
+-   Install [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia).
+-   Select Glimp in in [ConfigBuilder, BG Source.](../Configuration/Config-Builder.md#bg-source)
+
+## 3. Using Tomato
+
+- Tomato is the vendor app for Miaomiao.
+- Install [Tomato](http://tomato.cool/#download_page) and follow the vendor [instructions](http://tomato.cool/how-to-broadcast-data-to-android-aps/tips/).
+- Select Tomato in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+
+## 4. Using Diabox
+
+- Diabox is the vendor app for Bubble.
+- Install [Diabox](https://t.me/s/DiaboxApp). In Settings, Integration, enable Share data with other apps.
+
+![Diabox](../images/Diabox.png)
+
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).

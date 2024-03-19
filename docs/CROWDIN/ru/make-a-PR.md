@@ -165,7 +165,7 @@ We are not translating images at the moment.
 
 - Screenshots from web pages images should be up to **1050 pixels wide**.
 - Diagrams of process flows should be up to **1050 pixels wide**.
-- Screenshots from the app should be up to **300 to 400 pixels wide**.
+- Screenshots from the app should be up to **500 pixels wide**.
 
 ### Links
 
@@ -331,7 +331,7 @@ There are times when it might be appropriate to use a passive.
 
 A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalisations are formed from verbs.
 
-For example:
+Например:
 
 | Verb      | Nominalisation |
 | --------- | -------------- |

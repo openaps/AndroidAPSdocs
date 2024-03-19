@@ -87,7 +87,7 @@ As a clinician who may not have experience with AAPS or DIY closed loops, you ma
 
 ## OpenAPS
 
-** Αυτός ο οδηγός εγκρίθηκε από τον [ Οδηγό του κλινικού για το OpenAPS ](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html). ** Το OpenAPS είναι ένα σύστημα που αναπτύσσεται για να τρέχει σε ένα μικρό φορητό υπολογιστή (που γενικά αναφέρεται ως "rig"). AAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AAPS, with the main difference being the hardware platform where each peace of software is run.
+** Αυτός ο οδηγός εγκρίθηκε από τον [ Οδηγό του κλινικού για το OpenAPS ](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html). ** Το OpenAPS είναι ένα σύστημα που αναπτύσσεται για να τρέχει σε ένα μικρό φορητό υπολογιστή (που γενικά αναφέρεται ως "rig"). AAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AAPS, with the main difference being the hardware platform where each piece of software is run.
 
 ## Summary
 

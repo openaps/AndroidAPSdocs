@@ -87,7 +87,7 @@ Darüber hinaus beeinflusst das menschliche Verhalten, das in der manuellen Diab
 
 ## OpenAPS
 
-**Dieser Leitfaden wurde aus dem [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html) übernommen und angepasst.** OpenAPS ist ein System, das für den Betrieb auf einem kleinen tragbaren Computer (allgemein als "Rig" bezeichnet) entwickelt wurde. AAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AAPS, with the main difference being the hardware platform where each peace of software is run.
+**Dieser Leitfaden wurde aus dem [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html) übernommen und angepasst.** OpenAPS ist ein System, das für den Betrieb auf einem kleinen tragbaren Computer (allgemein als "Rig" bezeichnet) entwickelt wurde. AAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AAPS, with the main difference being the hardware platform where each piece of software is run.
 
 ## Zusammenfassung
 

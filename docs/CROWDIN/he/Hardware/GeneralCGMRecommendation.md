@@ -8,11 +8,12 @@
 -   נסו לכייל כשהסוכר יציב, כלומר שיש סדרה של נקודות עם חץ שטוח  (בדרך כלל מספיקות 15-30 דקות)
 -   הימנעו מכיול כאשר רמות הסוכר נעות מעלה או מטה.
 -   בצעו "מספיק" כיולים - באפליקציות רשמיות, תתבקשו   לבצע בדיקות פעם או פעמיים ביום. במערכות עשה זאת בעצמך ייתכן שלא תתבקשו והיזהרו משימוש ללא כיולים.
+-   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
 -   אם אפשר, כיילו עם חלק מהקריאות שלך בטווח נמוך יותר (72-90 מ"ג/ד"ל) וחלק ברמה קצת יותר גבוהה (126-160 מ"ג/ד"ל) כי כך מסופק טווח טוב יותר עבור כיול הנקודה\שיפוע.
 
 ## הדבקת חיישן Dexcom G6
 
-בעת החדרת החיישן, מומלץ לא ללחוץ חזק מדי על מכשיר ההחדרה על מנת למנוע דימום. חוט החיישן לא אמור לבוא במגע עם דם.
+בעת החדרת החיישן, מומלץ לא ללחוץ חזק מדי על מכשיר ההחדרה על מנת למנוע דימום. The sensor contacts should not come into contact with blood.
 
 לאחר החדרת החיישן, ניתן ללחוץ את המשדר לתוך החיישן. זהירות! תחילה הרכיבו את הצד המרובע ולאחר מכן לחצו כלפי מטה על הצד העגול.
 
@@ -25,7 +26,7 @@ Bluetooth connection may be disturbed by other nearby Bluetooth devices such as 
 
 ### שגיאות חיישן
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor thread should not come into contact with blood.
+If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor contacts should not come into contact with blood.
 
 Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
 

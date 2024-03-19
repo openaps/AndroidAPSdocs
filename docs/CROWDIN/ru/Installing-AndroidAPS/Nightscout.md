@@ -4,42 +4,55 @@
 
 ## Вопросы безопасности
 
-Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
+Помимо отчетов Nightscout можно также использовать для управления AAPS. Например, вы можете задать временные цели или добавить будущие углеводы. Эта информация будет подхвачена в AAPS, которая будет выполнять соответствующие действия. Поэтому стоит задуматься над тем, как обеспечить безопасность веб-сайта Nightcut.
+
+Будьте предельно осторожны при использовании Nightscout в качестве источника данных AAPS.
 
 ### Настройки Nightscout
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
+Доступ посторонних к сайту Nightscout может быть запрещен при помощи [ролей верификации](https://nightscout.github.io/nightscout/security): делитесь своим URL-адресом с token (маркером) `для чтения`, но не `для администрирования`.
 
-### AAPS settings
+`API_SECRET `для Nightscout является главным паролем вашего сайта: не делитесь им публично.
 
-There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs.
+### Настройки AAPS
 
-* Коснитесь 3-точечного меню в правом верхнем углу на домашней странице AAPS.
-* Выберите "Параметры".
-* Прокрутите страницу вниз и выберите "Дополнительные параметры".
-* Активируйте "только загрузку NS"
+AAPS можно настроить на принятие команд Nightscout (изменения профиля, терапии, ...) или полностью отключить его.
 
-![Nightscout upload only](../images/NSsafety.png)
+* Войдите в настройки модуля NSClient или NSClientV3 через 1) Главный вид -> Конфигуратор -> Синхронизация -> клиент NS / NSClientV3 - шестерёнка настроек 2) вкладку NSCLIENT -> Меню трех точек -> Настройки расширений
+* Включите загрузку всех данных в Nightscout (3), так как это теперь стандартный метод, если только источник ГК не Nightscout.  
+  Если источником данных гликемии AAPS является Nightscout **не** включайте выгрузку (передачу данных) ГК в Nightscout (3).
+* Не включайте Получать/заполнять данные мониторинга CGM (4) если только Nightscout не является источником данных ГК.
+
+![Только выгрузка в Nightscout](../images/NSsafety.png)
+
+#### Не синхронизировать с Nightscout
+
+Отключение этих опций гарантирует, что изменения Nightscout не будут использоваться в AAPS.
+
+![Только выгрузка в Nightscout](../images/NSsafety2.png)
+
+#### Принимать изменения Nightscout
+
+Включение этих опций позволяет удаленно изменять настройки AAPS через Nightscout, Например, модификация и изменение профилей, временных целей, внесение записей об углеводах, которые будут учтены в AAPS.  
+Обратите внимание, что записи об инсулине будут выполняться в виде "Не вводить болюс, только внести запись".
+
+![Только выгрузка в Nightscout](../images/NSsafety3.png)
 
 ### Дополнительные параметры защиты
 
-Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
+Регулярно обновляйте программное обеспечение телефона, как описано в разделе [ безопасность прежде всего](../Getting-Started/Safety-first.md).
 
 (Nightscout-manual-nightscout-setup)=
 
 ## Установка Nightscout вручную
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
+Предполагается, что у вас уже есть сайт Nightscout, если же нет - зайдите на страницу [ Nightscout ](http://nightscout.github.io/nightscout/new_user/) для получения полных инструкций по настройке; приведенные ниже инструкции описывают параметры, которые также потребуется добавить на сайт Nightscout. Для AAPS 3.2 сайт Nightscout должен быть не ниже 15 версии, поэтому убедитесь, что у вас [новая версия](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version), иначе AAPS будет выдавать сообщение об ошибке.
 
-* Перейдите на https://herokuapp.com/
-
-* Нажмите на имя службы приложения.
-
-* Щелкните по параметрам приложения (azure) или Settings > " Reveal Config Variables (heroku)
+* [Редактирование переменных](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
 * Добавьте или измените переменные следующим образом:
   
-  * ` ENABLE ` = ` careportal boluscalc food bwp cage sage iob cob basal ar2 rawbg pushover bgi pump openaps `
+  * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   * ` DEVICESTATUS_ADVANCED ` = ` true `
   * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
@@ -47,22 +60,12 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
     * ` PUMP_WARN_BATT_P ` = ` 51 `
     * ` PUMP_URGENT_BATT_P ` = ` 26 ` 
 
-![Azure](../images/nightscout1.png)
+* Сохраните изменения. Ваш сайт Nightscout теперь должен разрешитьотображение таблеток. Можно принудительно отобразить их по умолчанию, добавив их в `SHOW_PLUGINS`.
+  
+  * `SHOW_PLUGINS` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
+  
+  ![Таблетки Nightscout](../images/nightscout1.png)
 
-* Нажмите кнопку "Сохранить" в верхней части панели.
+## Nightscout как оплачиваемый SaaS (Software в качестве услуги)
 
-## Полуавтоматизированная установка Nightscout
-
-Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
-
-**Benefits**
-
-* Можно установить Nightscout в несколько щелчков и сразу же начать им пользоваться. 
-* Сокращение ручной работы поскольку Martin пытается автоматизировать администрирование.
-* Все настройки можно задать с помощью удобного для пользователя веб-интерфейса. 
-* Услуга включает автоматическую проверку базальной скорости с помощью автонастройки. 
-* Серверы расположены в Германии и Финляндии.
-
-<https://ns.10be.de/en/index.html>
-
-An alternative would be <https://t1pal.com/> - starting at $11,99 per month.
+Используйте веб-интерфейс поставщика сервиса для внесения переменных. При необходимости свяжитесь со службой поддержки поставщика.

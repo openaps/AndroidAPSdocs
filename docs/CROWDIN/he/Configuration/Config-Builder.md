@@ -69,7 +69,7 @@
 
 #### שינוי הפרופיל בעורך הפרופיל של נייטסקאוט
 
-ניתן לסנכרן שינויים בפרופיל בנייטסקאוט אל הפרופיל המקומי. ניתן למצוא את ההגדרות ב[העדפות NSClient](Preferences-nsclient).
+You can synchronize changes to the profile in the Nighscout profile editor to local profiles. ניתן למצוא את ההגדרות ב[העדפות NSClient](Preferences-nsclient).
 
 זה הכרחי לשכפל את כלל מסד הנתונים הפעיל ולא רק פרופיל אחד עם החץ הכחול! התאריך העדכני נרשם עם מסד הנתונים החדש וניתן להפעילו בלשונית "פרופיל מקומי".
 
@@ -151,7 +151,7 @@
 
 Select the blood glucose source you are using - see [BG Source](BG-Source.md) page for more setup information.
 
-![Config Builder BG source](../images/ConfBuild_BGSource_AAPS30.png)
+![Config Builder BG source](../images/ConfBuild_BG.png)
 
 * [בנה אפליקציית Dexcom בעצמך (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)

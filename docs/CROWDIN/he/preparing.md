@@ -1,6 +1,6 @@
-# Preparing to start with AAPS
+# מתכוננים להתחיל עם AAPS
 
-## Overview of the AAPS documentation
+## סקירה כללית של תיעוד AAPS
 
 Welcome. This documentation aims to guide users on every aspect of the Do-It-Yourself (DIY) system, Android Artificial Pancreas System (**AAPS**), which is also commonly referred to as ‘looping’.
 
@@ -11,7 +11,7 @@ An expanded index of the documentation can be found [here](index.md), and you ca
 ## Safety First
 “With great power comes great responsibility…”
 
-### Technical safety
+### בטיחות טכנית
 **AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](Usage/Objectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
 
 The [Objectives](Usage/Objectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The [Objectives](Usage/Objectives.md) aim to minimise these issues.
@@ -39,7 +39,7 @@ A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this wo
 
 It is generally recognised that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
 
-### No SGLT-2 inhibitors
+### אסור להשתמש במעכבי SGLT-2
 
 :::{admonition} NO SGLT-2 inhibitors
 :class: danger SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous.
@@ -172,7 +172,7 @@ In order to fully take advantage of **AAPS**, you need to setup a Nightscout ser
 
 Both **Nightscout** and **AAPS** must be updated approximately once a year, as improved versions are released. You will have step-by-step instructions on how to do this on your preconfigured computer. In some cases, the update can be delayed, in others it is strongly recommended or considered essential for safety. Notification of these updates will be given on the Facebook groups and Discord servers. The release notes will make it clear what the scenario is. There are likely to be many people asking similar questions to you at update time, and you will have support for performing the updates.
 
-
+(preparing-how-long-will-it-take?)=
 ## How long will it take?
 
 As mentioned earlier, using **AAPS** is more of a “journey” that requires investment of your personal time. It is not a one-time setup. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 2 to 3 months overall. Here is breakdown:
@@ -181,14 +181,14 @@ As mentioned earlier, using **AAPS** is more of a “journey” that requires in
 | ------------------------------------------------------------------------------------- |:---------------:|
 | initial reading of the documentation:                                                 |    1-2 days     |
 | installing/configuring PC to allow the build:                                         |    2-8 hours    |
-| building a Nightscout server:                                                         |     1 hour      |
-| installing (xdrip or BYODA or …)                                                      |     1 hour      |
-| configuring CGM->xdrip->APPS initially:                                               |     1 hour      |
-| configuring AAPS->pump initially:                                                     |     1 hour      |
-| configuring AAPS->NightScout (reporting only):                                        |     1 hour      |
-| optional (for Parents) - configuring NightScout <-> **AAPS** & NSFollowers:           |     1 hour      |
-| משימה 1: הגדרת ויזואליזציה, ניטור, ניתוח המינון הבזאלי והיחסים                        |     1 hour      |
-| Objective 2: Learn how to control AAPS                                                |     2 hour      |
+| building a Nightscout server:                                                         |     שעה אחת     |
+| installing (xdrip or BYODA or …)                                                      |     שעה אחת     |
+| configuring CGM->xdrip->APPS initially:                                               |     שעה אחת     |
+| configuring AAPS->pump initially:                                                     |     שעה אחת     |
+| configuring AAPS->NightScout (reporting only):                                        |     שעה אחת     |
+| optional (for Parents) - configuring NightScout <-> **AAPS** & NSFollowers:           |     שעה אחת     |
+| משימה 1: הגדרת ויזואליזציה, ניטור, ניתוח המינון הבזאלי והיחסים                        |     שעה אחת     |
+| משימה 2: לימדו כיצד לשלוט בממשק AndoridAPS                                            |     2 hour      |
 | משימה 3: הוכיחו את הידע שלכם                                                          |  Up to 14 days  |
 | משימה 4: התחלת לופ פתוח                                                               |     7 days      |
 | משימה 5: העמקת הבנת הלולאה הפתוחה, לרבות המינונים הבזאליים הזמניים וההמלצות           |     7 days      |
@@ -264,7 +264,7 @@ The duration of insulin action is set to a single value in AAPS, because your pu
 #### **Glucose targets**
 Glucose targets are set according to your personal preferences. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117/mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am. A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell AAPS to be more or less aggressive, while still keeping your glucose levels in range. The **figure below** shows an example of how the DIA and glucose targets could be set in an AAPS profile.
 
-![24-07-23, profile basics - DIA and target](https://github.com/openaps/AndroidAPSdocs/assets/94044064/f3904cc3-3d9e-497e-a3b6-3a49650053e6)
+![24-07-23, profile basics - DIA and target](./images/f3904cc3-3d9e-497e-a3b6-3a49650053e6.png)
 
 
 For the final three parameters, basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in your insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Brights Spots and Landmines”](https://brightspotsandlandmines.org/Bright_Spots_and_Landmines_by_Adam_Brown.pdf) by Adam Brown is an excellent book to read.
@@ -297,7 +297,7 @@ Example: TDD = 40 U Approx ISF (mg/dl) = 1700/40 = 43 Approx ISF (mmol/L) = 94/4
 
 See the **figure below** for an example of how the basal rates and ISF values could be set in an AAPS profile.
 
-![24-07-23, profile basics - basal and ISF](https://github.com/openaps/AndroidAPSdocs/assets/94044064/55c8ed24-e24e-4caa-9c17-294fa93cb84a)
+![24-07-23, profile basics - basal and ISF](./images/55c8ed24-e24e-4caa-9c17-294fa93cb84a.png)
 
 #### **Insulin to Carb ratio (ICR)**
 
@@ -313,7 +313,7 @@ If your ICR is weaker, perhaps 1:20, you would only need 0.5U of insulin to cove
 
 As shown in the **figure below**, when entering these values into an AAPS profile, we just enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
 
-![24-07-23, profile basics - ICR](https://github.com/openaps/AndroidAPSdocs/assets/94044064/7741eefb-cae5-45c5-a9e5-8eae5ead3f48)
+![24-07-23, profile basics - ICR](./images/7741eefb-cae5-45c5-a9e5-8eae5ead3f48.png)
 
 
 #### **Why should I try to get my profile settings right? Can’t the loop just take care of it?**
