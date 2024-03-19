@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /introduction
+      link: /en/introduction
   image:
     src: /androidaps-logo.png
     alt: AndroidAPS

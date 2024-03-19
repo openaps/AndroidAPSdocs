@@ -7,7 +7,7 @@ export default defineConfig({
   title: "AndroidAPS",
 
   // TODO
-  srcDir: "docs/content/",
+  srcDir: "docs/CROWDIN/",
   ignoreDeadLinks: true,
 
   lastUpdated: true,
