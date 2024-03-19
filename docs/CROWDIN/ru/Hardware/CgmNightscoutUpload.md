@@ -1,6 +1,10 @@
 # Для пользователей других систем мониторинга, передающих данные в Nightscout
 
-If you have any other CGM set up that sends your data to [Nightscout](https://nightscout.github.io/) then
+Если у вас другая система мониторинга отправляющая даннные **только** в [Nightscout](https://nightscout.github.io/).
 
--   In AAPS Preferences enter your Nightscout website and API secret.
--   Select NSClient in ConfigBuilder (setting in AAPS).
+```{important}
+Этот источник данных не будет работать, когда вы находитесь в автономном режиме, когда имеются проблемы с сетью или когда ваш сайт Nightscout недоступен. Используйте с осторожностью.
+```
+
+-   Информация о настройке NSClient с сайтом Nightscout.
+-   В [Конфигураторе, в качестве источника ГК](/Configuration/Config-Builder.md#bg-source) выберите ГК с клиента Nightscout.

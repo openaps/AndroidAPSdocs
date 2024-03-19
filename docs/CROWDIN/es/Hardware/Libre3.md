@@ -2,54 +2,49 @@
 
 El Freestyle Libre 3 (FSL3) requiere una configuración especial para recibir los valores de glucosa en sangre en AAPS. Hay dos posibles formas de obtener los valores de Freestyle Libre 3 (FSL3) en AAPS.
 
-![FL3](https://github.com/blaqone/AndroidAPSdocs/assets/37814299/d912c1d3-06d2-4b58-ad7c-025ca1980fae)
+![FL3](../images/d912c1d3-06d2-4b58-ad7c-025ca1980fae.jpeg)
 
+**La versión 3.2.0.1 de AndroidAPS no soporta valores de 1 minuto. Acceleration and Smoothing does not work with 1-minute values.**
 
-Los siguientes métodos para lograr esto utilizan la aplicación independiente Juggluco. [Link].(https://www.juggluco.nl/Juggluco/download.html) Utiliza Juggluco para recibir datos en bruto en intervalos de 1 minuto del sensor, los cuales luego se envían a xDrip+ o AAPS. Los nuevos sensores se pueden iniciar tanto con la aplicación Libre 3 como directamente en Juggluco. La guía a continuación indica el proceso para iniciar un sensor con la aplicación Juggluco. Si el sensor se ha iniciado con una cuenta de Libreview conectada, también es posible alternar entre Juggluco y la aplicación de Libre 3 como receptor.
+Los siguientes métodos para lograr esto utilizan la aplicación independiente Juggluco. It uses Juggluco to receive raw, 1-minute interval data from the sensor which is then passed to xDrip+ or AAPS. Los nuevos sensores se pueden iniciar tanto con la aplicación Libre 3 como directamente en Juggluco. La guía a continuación indica el proceso para iniciar un sensor con la aplicación Juggluco. Si el sensor se ha iniciado con una cuenta de Libreview conectada, también es posible alternar entre Juggluco y la aplicación de Libre 3 como receptor.
 
 Juggluco también puede enviar datos a LibreView para compartirlos con los equipos médicos, cuando el sensor se inicia con la aplicación Libre 3.
 
 Dentro de xDrip+, el sensor se puede calibrar en un rango de -40 mg/dl a +20 mg/dl (-2,2 mmol/l a +1,1 mmol/l) para compensar las diferencias entre una lectura manual de medidor y las lecturas del sensor.
 
-## Método 1: Lecturas cada minuto
-Si bien es posible transmitir datos directamente desde Juggluco a AAPS en intervalos de 1 minuto, esto probablemente ocasionará un mayor consumo de batería. Cuando seleccionas una fuente de glucosa en sangre NO relacionada con Dexcom, AAPS no carga los valores de glucosa en sangre en Nightscout. Normalmente, xDrip+ se encarga de esta tarea. Sin embargo, si no estás utilizando xDrip`+, como se muestra aquí, Juggluco debe cargar los valores en Nightscout.
+## Method 1: 1-minute-readings
+La versión 3.2.0.1 de AndroidAPS no soporta valores de 1 minuto. Acceleration and Smoothing does not work with 1-minute values.
 
-### Paso 1: Configurar Juggluco
-Descarga e instala la aplicación Juggluco desde [aquí](https://www.juggluco.nl/Juggluco/download.html). Sigue las instrucciones [aquí](https://www.juggluco.nl/Juggluco/libre3/) para iniciar un sensor FL3.
-
-Asegúrate de enviar los valores de glucosa a AAPS+: En la configuración de Juggluco, puedes configurarlo para enviar su valor de glucosa a otras aplicaciones. Juggluco puede enviar tres tipos de estas transmisiones: La **transmisión local de xDrip** se utilizaba originalmente en xDrip+ y puede usarse para enviar valores de glucosa a AAPS.
-
-Asegúrate también de habilitar la subida de valores de glucosa en Nightscout: Ajustes ->Subida->E Ingresa tu URL de Nightscout con el puerto y tu API Secret. ¡Habilita y guarda!
-
-### Paso 2: Configurar AndroidAPS
-
-- En AndroidAPS ve a Tabla de configuraciones > Origen BG y comprueba "'xDrip+"
-- Si AndroidAPS no recibe valores de glucosa cuando el teléfono está en modo avión, utiliza "Identificar receptor"
-- ¡Activa el Suavizado!
-
-Hasta el momento, al usar Libre 3 como fuente de glucosa, las opciones "Habilitar SMB siempre" y "Habilitar SMB con carbohidratos" no pueden activarse con el algoritmo de SMB. Los valores de glucosa de Libre 3 no son lo suficientemente suaves como para usarlos de manera segura.
+![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
 
-## Método 2: Lecturas cada 5 minutos
+## Method 2: 5-minute-readings
 Este método utiliza Juggluco para recibir datos brutos con intervalos de 1 minuto del sensor, los cuales luego se envían a xDrip+ para ser suavizados en datos con intervalos de 5 minutos que se pasan a AAPS.
 
 ### Paso 1: Configurar Juggluco
 Descarga e instala la aplicación Juggluco desde [aquí](https://www.juggluco.nl/Juggluco/download.html). Sigue las instrucciones [aquí](https://www.juggluco.nl/Juggluco/libre3/)
 
-Asegúrate de enviar los valores de glucosa a xDrip+: En la configuración de Juggluco, puedes configurarlo para enviar el valor de glucosa a otras aplicaciones. Juggluco puede enviar tres tipos de estas transmisiones: La **transmisión de Librelink** se utilizaba originalmente en la aplicación parcheada de Librelink y se puede usar para enviar valores de glucosa a xDrip+
+Make sure you send the glucose values to Xdrip+: In Juggluco's settings you can configure Juggluco to send its glucose value to other apps. Juggluco can send three types of such broadcasts: The **Patched Libre broadcast** was originally used by the patched Librelink app and can be used to send glucose values to xDrip+
+
+![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)
 
 ### Paso 2: Configurar xDrip+
 
 Los valores de glucosa en sangre son recibidos por la aplicación xDrip+ en el teléfono móvil.
 
-- Si aún no está configurada, descarga la aplicación xDrip+ e instala una de las últimas versiones desde [aquí](https://github.com/NightscoutFoundation/xDrip/releases).
+- If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../Configuration/xdrip.md).
 - En xDrip+, selecciona "Libre2 (patched app)" como fuente de datos hardware.
-- Desactiva la optimización de la batería y permite la actividad en segundo plano para la aplicación xDrip+.
-- Si es necesario, ingrese "BgReading:d,xdrip libre_receiver:v" en Ajustes menos comunes->Opciones de registro adicionales->Etiquetas extras para el registro. Esto registrará mensajes de error adicionales para solucionar problemas
-- En xDrip+ ve a Ajustes -> Ajustes entre aplicacoines -> Transmitir localmente y selecciona ON.
-- In xDrip+, ve a Ajustes -> Ajustes entre aplicaciones -> Aceptar tratamientos y selecciona OFF.
-- Para permitir que AAPS reciba valores de glucosa en sangre (a partir de la versión 2.5.x) de xDrip+, habilita Ajustes-> Ajustes entre aplicaciones -> Identificar receptor "info.nightscout.androidaps".
-- Si quieres usar AndroidAPS para las calibraciones, ve a Ajustes -> Ajustes entre aplicaciones -> Aceptar calibraciones y selecciona ON. También es recomendable revisar las opciones en Ajustes -> Ajustes menos comunes -> Verificar la configuración de Calibración Avanzada.
+- If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings → Extra Logging Settings → Extra tags for logging. Esto registrará mensajes de error adicionales para solucionar problemas
+
+![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
+
+- Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
+
+  → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
+
+  !\[xDrip+ advanced settings Libre 2 & raw values\](C:\Data\50 - My Projects\AAPS\AndroidAPSdocs\docs\EN\images\xDrip_Libre3_Smooth.png)
+
+
 
 ### Paso 3: Iniciar el sensor desde xDrip+
 
@@ -61,8 +56,9 @@ Después de un cambio de sensor, xDrip+ detectará automáticamente el nuevo sen
 
 ### Paso 4: Configurar AndroidAPS
 
-- En AndroidAPS ve a Tabla de configuraciones > Origen BG y comprueba "'xDrip+"
-- Si AndroidAPS no recibe valores de glucosa cuando el teléfono está en modo avión, utiliza "Identificar receptor"
+- Select xDrip+ in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+
+- If AndroidAPS does not receive BG values when phone is in airplane mode, use "Identify receiver"
 - Desactiva el suavizado (ya activado en xDrip+)
 
 Hasta el momento, al usar Libre 3 como fuente de glucosa, las opciones "Habilitar SMB siempre" y "Habilitar SMB con carbohidratos" no pueden activarse con el algoritmo de SMB. Los valores de glucosa de Libre 3 no son lo suficientemente suaves como para usarlos de manera segura.
@@ -73,13 +69,13 @@ Hasta el momento, al usar Libre 3 como fuente de glucosa, las opciones "Habilita
 
 1. Abre Juggluco y toma nota del número de serie del sensor existente
 
-![Libre serial number](../images/libre3/step\_13.jpg)
+![Libre serial number](../images/libre3/step/_13.jpg)
 
 2. Ahora simplemente escanea tu nuevo sensor con el lector NFC de tu teléfono. Juggluco mostrará una notificación si el proceso se ha iniciado con éxito.
 3. Cuando estés listo para desactivar el antiguo sensor, abre el menú de Juggluco haciendo clic en cualquier lugar en el espacio vacío en la esquina superior izquierda de la pantalla.
 4. Selecciona el sensor caducado y pulsa sobre "Finalizar"
 
-![Terminate sensor](../images/libre3/step\_14.jpg)
+![Terminate sensor](../images/libre3/step/_14.jpg)
 
 Nota: Cuando hay dos sensores activos, Juggluco enviará el valor más reciente de cualquiera de los dos sensores a xDrip+. Si los sensores no están calibrados y no leen la glucosa en sangre de manera similar, esto puede dar como resultado valores de glucosa en sangre irregulares que se envían a xDrip+ Si terminas el sensor incorrecto, puedes reactivarlo simplemente escaneándolo de nuevo.
 

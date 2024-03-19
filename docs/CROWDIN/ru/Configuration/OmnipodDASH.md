@@ -1,470 +1,470 @@
-# Omnipod DASH
+# Помпа Omnipod DASH
 
-These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**. The Omnipod driver is available as part of AAPS (AAPS) as of version 3.0.
+Эти инструкции для настройки помпы **Omnipod DASH** **(НЕ Omnipod Eros)**. Драйвер для Omnipod доступен как часть AAPS (AAPS) начиная с версии 3.0.
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Только вы несете ответственность за то, что делаете.**
+**Это программное обеспечение - часть алгоритма самостоятельно настраиваемой ИПЖ; она не является коммерческим продуктом, но требует, чтобы вы прочитали, узнали и поняли, как ей пользоваться. Только вы несете ответственность за то, что делаете.**
 
-## Omnipod DASH specifications
+## Технические характеристики Omnipod DASH
 
-These are the specifications of the **Omnipod DASH** and what differentiates it from the **Omnipod EROS**:
+Характеристики **Omnipod DASH** и ее отличия от **Omnipod EROS**:
 
-* The DASH pods are identified by a blue needle cap (EROS has a clear needle cap). The pods are otherwise identical in terms of physical dimensions
-* No need for a separate Omnipod to BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
-* BT connection only when needed, connects to send command and disconnects right after !
-* No more "no connection to link device / pod" errors
-* AAPS will wait for pod accessibility to send commands
-* On activation, AAPS will find and connect a new DASH pod.
-* Expected range: 5-10 meters (YMMV)
+* Поды DASH отличаются синим колпачком на иголке (EROS имеет прозрачный колпачок). По физическим размерам поды идентичны
+* Нет необходимости в отдельном устройстве блутус BLE для связи с подом (типа RileyLink, OrangeLink, или EmaLink).
+* Соединение блутус только при необходимости, подключается для передачи команды и отключается сразу после этого!
+* Теперь не бывает ошибок "Нет связи с устройством / подом"
+* AAPS будет ждать доступности пода для отправки команд
+* При активации, AAPS найдет и подключит новый под DASH.
+* Ожидаемый диапазон: 5-10 метров (может индивидуально отличаться)
 
-## Hardware/Software Requirements
+## Требования к аппаратному и программному обеспечению
 
-* A new **Omnipod DASH Pod** (Identified by blue needle cap)
+* Новый **под Omnipod DASH** (определяется по синему колпачку иглы)
 
-![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
+![Под Omnipod](../images/DASH_images/Omnipod_Pod.png)
 
-* **Compatible Android phone** with a BLE Bluetooth connection
-   -  Not all phone hardware and Android versions are guaranteed to work. Please check [**DASH Tested phones**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
-   - **Important note: There have been multiple cases of permanent, non-recoverable connection losses when using older pods with firmware version 3.XX.X. Be careful when using these old pods with AAPS, especially with other Bluetooth devices connected!** Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connections might be disturbed by other devices linked to the phone that is running AAPS, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.
-   -  **Version 3.0 or newer of AAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.md) instructions.
-* [**Continuous Glucose Monitor (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
+* **Совместимый Android-телефон** с рабочим модулем BLE Bluetooth
+   -  Не все смартфоны и версии Android гарантированно работают. Пожалуйста, проверьте [**протестированные с DASH телефоны**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) или просто попробуйте с вашим телефоном и сообщите нам результат (модель смартфона, географический регион, версия Android, работает / работает с замечаниями / не работает).
+   - **Важно: было много случаев постоянных, невосстановимых потерь соединения при использовании старых подов с прошивкой версии 3.XX.X. Будьте осторожны при использовании этих старых подов с AAPS, особенно с другими подключенными Bluetooth-устройствами!** Имейте в виду, что драйвер Omnipod Dash соединяется с подом по Bluetooth каждый раз, когда отправляет команду, и отсоединяется сразу после этого. Соединения Bluetooth могут быть нарушены другими устройствами, связанными с телефоном, на котором работает AAPS, такими как беспроводные наушники и т. д... (что в редких случаях может вызвать проблемы подключения, погрешности при активации или после нее на некоторых моделях телефонов).
+   -  **Версия 3.0. или новее, собранная и установленная** с помощью инструкций [**Соберите собственное приложение AAPS**](../Installing-AndroidAPS/Building-APK.md).
+* [**Непрерывный мониторинг гликемии**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
-These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and begin this process on your following pod change.
+В этих инструкциях предполагается, что вы запускаете новую сессию пода; если это не так, дождитесь замены и начните этот процесс со следующего пода.
 
-## Before You Begin
+## Подготовка к работе
 
-**SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, and phone devices are must-haves).
+**БЕЗОПАСНОСТЬ на первом месте** Не пытайтесь выполнять этот процесс в среде, где нет возможности исправить ошибку (дополнительные поды, инсулин, устройства управления помпой обязательны).
 
-**Your Omnipod Dash PDM will no longer work after the AAPS Dash driver activates your pod.** Previously you used your Dash PDM to send commands to your Dash pod. An Dash pod only allows a single device to send commands to communicate with it. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. This means that once you activate an Dash pod with your Android phone through the AAPS Dash driver, **you will no longer be able to use your PDM with that pod**. The AAPS Dash driver in your Android phone is now your acting PDM.
+**Пульт PDM не будет работать с Omnipod Dash после того, как драйвер Dash активирует под.** Раньше пульт PDM служил для отправки команд на под Dash. Dash Pod позволяет отправлять команды только одному устройству для связи с ним. Устройство, которое успешно активирует под - единственное устройство, которому с этого момента будет разрешено с ним общаться. Это означает, что после активации пода с телефона через драйвер AAPS Dash driver, **вы больше не сможете пользоваться пультом PDM с этим подом**. Драйвер AAPS Dash в вашем телефоне отныне будет пультом PDM для пода.
 
-*This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or AAPS is not working correctly.*
+*Это НЕ означает, что вы должны выбросить PDM, рекомендуется хранить его как запасной на случай чрезвычайных ситуаций, например, когда телефон потеряется или AAPS работает неправильно.*
 
-**Your pod will not stop delivering insulin when it is not connected to AAPS**. Default basal rates are programmed on the pod on activation as defined in the current active profile. As long as AAPS is operational it will send basal rate commands that run for a maximum of 120 minutes. When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod - phone distance) the pod will automatically fall back to default basal rates.
+**Ваш под не перестанет вводить инсулин, если он не подключён к AAPS**. Базальная скорость программируется на поде при активации в соответствии с вашим текущим активным профилем. Когда работает AAPS, он будет отправлять временные команды на изменение базала, каждая из которх устанавливает базал максимум на 120 минут. Если по каким-то причинам под не получает никаких новых команд (например, вследствие потери связи с подом из-за расстояния до телефона), он автоматически вернется к базальной скорости по умолчанию.
 
-**30 min Basal Rate Profiles are NOT supported in AAPS.** **The AAPS Profile does not support a 30 minute basal rate time frame** If you are new to AAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Omnipod Dash hardware itself supports the 30 min basal rate profile increments, AAPS is not able to take them into account with its algorithms currently.
+**30 -минутные профили базала НЕ поддерживаются в AAPS.** **Профиль AAPS не поддерживает 30-минутный базальный интервал** Если вы новичок в AAPS и устанавливаете базальный профиль впервые, имейте в виду, что получасовые базальные скорости не поддерживаются в AAPS, и следует настроить свой базальный профиль на часовые интервалы. Например, если ваша базальная скорость 1,1 ед., начинается в 09:30, длится 2 часа и заканчивается в 11:30, такие настройки работать не будут. Следует изменить базал в 1,1 единицы на диапазон времени с 9:00 до 11:00 или с 10:00 до 12:00. Несмотря на то, что аппаратное обеспечение Omnipod Dash поддерживает профили с 30-минутными отрезками базальной скорости, AAPS в настоящее время не в состоянии учесть их с помощью своих алгоритмов.
 
-**0U/h profile basal rates are NOT supported in AAPS** While the DASH pods do support a zero basal rate, since AAPS uses multiples of the profile basal rate to determine automated treatment it cannot function with a zero basal rate. A temporary zero basal rate can be achieved through the "Disconnect pump" function or through a combination of Disable Loop/Temp Basal Rate or Suspend Loop/Temp Basal Rate.
+**Скорость базала 0 ед/ч НЕ поддерживается в AAPS** Несмотря на то, что Omnipod Dash поддерживает нулевую базальную скорость; AAPS использует множество базальных профилей для автоматической терапии и поэтому не может функционировать с нулевой базовой скоростью. Нулевая временная скорость базала может быть достигнута с помощью функции "Отсоединить помпу" или путем комбинации команд Деактивировать цикл/Временная базальная скорость или Приостановить цикл/Временная базальная скорость.
 
-## Enabling the Dash Driver in AAPS
+## Включение драйвера Dash в AAPS
 
-You can enable the Dash driver in AAPS in **two ways**:
+Активировать драйвер Omnipod Dash в AAPS можно **двумя способами**:
 
-### Option 1: New installations
+### Вариант 1: При начальной установке
 
-When you are installing AAPS for the first time, the **Setup Wizard** will guide you through installing AAPS. Select “DASH” when you reach Pump selection.
+Когда вы устанавливаете AAPS впервые, вам поможет **Мастер настройки**. Когда дойдете до выбора помпы, выбирайте DASH.
 
-![Enable_Dash_1](../images/DASH_images/Enable_Dash/Enable_Dash_1.png)
+![Включить Dash_1](../images/DASH_images/Enable_Dash/Enable_Dash_1.png)
 
-When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up AAPS (see option 2).
+Если сомневаетесь, можете выбрать «Виртуальную помпу» и выбрать «DASH» после настройки AAPS (см. вариант 2).
 
-### Option 2: The Config Builder
+### Вариант 2: Конфигуратор
 
-On an existing installation you can select the **DASH** pump from the Config builder:
+После установки AAPS можно выбрать помпу **DASH**в конфигураторе:
 
-On the top-left hand corner **hamburger menu** select **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**.
+В левом верхнем углу из **выпадающего меню** выберите **Конфигуратор**\ ➜\ **Помпа**\ ➜\ **Dash**\, включив кнопку **Dash**.
 
-Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the AAPS interface titled **DASH**. Checking this box will facilitate your access to the DASH commands when using AAPS.
+Поставив флажок в **клетке** напротив **шестеренки настроек** вы активируете вкладку DASH в интерфейсе AAPS. Установка этого флажка облегчит доступ к командам Dash при использовании AAPS.
 
-**NOTE:** A faster way to access the [**Dash settings**](DanaRS-Insulin-Pump-dash-settings) can be found below in the Dash settings section of this document.
+**ПРИМЕЧАНИЕ:** Быстрый способ доступа к настройкам [**Dash**](DanaRS-Insulin-Pump-dash-settings) находится ниже в разделе настроек Dash в этом документе.
 
-![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
+![Включить Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
-### Verification of Omnipod Driver Selection
+### Верификация выбора драйвера Omnipod
 
-To verify that you have enabled the Dash driver in AAPS, if you have checked the box (4), **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab. If you have not checked the box, you’ll find the DASH tab in the hamburger menu upper left.
+Чтобы убедиться в правильном выборе драйвера Dash, смахните главный экран влево и найдите вкладку **DASH**. Если вы не отметили этот драйвер галочкой на странице конфигурации,, вы найдете вкладку DASH в левом верхнем меню. (похоже, в новейших версиях AAPS левого выпадающего меню нет. - прим. перев.).
 
-![Enable_Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
+![Включить Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
-## Dash Configuration
+## Настройка помпы Omnipod Dash
 
-Please **swipe left** to the **DASH** tab where you will be able to manage all pod functions (some of these functions are not enabled or visible without an active pod session):
+**Смахните главный экран влево** до появления вкладки **DASH**, на которой вы сможете управлять всеми функциями пода (некоторые из них неактивны или невидимы вне действующей сессии пода):
 
-![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) Refresh Pod connectivity and status, be able to silence pod alarms when the pod beeps
+![Обновить Лого](../images/DASH_images/Refresh_LOGO.png) Обновите соединение и статус пода, научитесь убирать его звуковые оповещения
 
-![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) Pod Management (Activate, Deactivate, Play test beep, and Pod history)
+![УПРАВЛЕНИЕ ПОМПОЙ](../images/DASH_images/POD_MGMT_LOGO.png) Управление подом (Активация, Деактивация, проверка звукового сигнала, журнал помпы)
 
-(OmnipodDASH-activate-pod)=
+(OmnipodDASH-активация-пода)=
 
-### Activate Pod
+### Активация Pod
 
-1. Navigate to the **DASH** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
+1. Перейдите на вкладку **DASH**, нажмите кнопку **УПРАВЛЕНИЕ помпой (1)**, затем нажмите **Активировать Pod (2)**.
 
-![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
+![Активировать Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)    ![Активировать Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
-2. The **Fill Pod** screen is displayed. Fill a new pod with at least 80 units of insulin and listen for two beeps indicating that the pod is ready to be primed. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use about 3-10 units.
+2. Появится экран **Заполнить Pod**. Заполните новый Pod по меньшей мере 80 единицами инсулина и дождитесь двух звуковых сигналов, подтверждающих, что Pod готов к первичному заполнению катетера. При подсчете общего количества инсулина на 3 дня, учитывайте, что первичное заполнение катетера Pod потребует около 3-10 единиц инсулина.
 
-![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
+![Активировать Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)    ![Активировать Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
 
-Ensure that the new pod and the phone running AAPS are within close proximity of each other and click the **Next** button.
+Убедитесь, что новый под и телефон с запущенным AAPS находятся в непосредственной близости друг от друга и и нажмите кнопку **Далее**.
 
-**NOTE**: Just in case you get the below error message (this can happen), do not panic. Click on the **Retry** button. In most situations activation will continue successfully.
+**ПРИМЕЧАНИЕ**: Если вы получите сообщение об ошибке ниже (это может произойти), не паникуйте. Нажмите на кнопку **Повторить**. В большинстве случаев активация будет продолжена успешно.
 
-![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
+![Активировать Pod_3](../images/DASH_images/Activate_pod_error.png)
 
-3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself).  A green checkmark will be shown upon successful priming, and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
+3. На экране **Инициализация Pod**, Pod начнет первичное заполнение ( вы услышите щелчок с серией последующих тикающих звуков пока заполняется под).  По завершении первичного заполнения на экране появится зеленая галочка и и станет активной кнопка **Далее**. Нажмите на кнопку **Далее** для завершения инициализации и появления экрана **Подключить Pod**.
 
-![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
+![Активировать Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Активировать Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
-4. Next, prepare the infusion site of the new pod. Remove the pod's plastic needle cap. If you see something that sticks out of the pod, cancel the process and start with a new pod. If everything looks OK, take off the white paper backing from the adhesive and apply the pod to the selected site on your body. When finished, click on the **Next** button.
+4. Затем подготавливаем инфузионный отсек нового пода. Снимите пластиковый колпачок иглы. Если вы видите нечто лишнее, торчащее из пода, отмените процесс и возьмите новый под. Если все выглядит нормально, снимите белую бумажную защиту с клеевого слоя и наложите на выбранное место установки. По завершении нажмите кнопку **Далее**.
 
-![Activate_Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
+![Активировать Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
 
-5. The **Attach Pod** dialog box will now appear. **click on the OK button ONLY if you are ready to deploy the cannula**.
+5. Теперь появится диалоговое окно **Подключить Pod**. **нажимайте на кнопку OK ТОЛЬКО если вы готовы к установке катетера**.
 
-![Activate_Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
+![Активировать Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
 
-6. After pressing **OK**, it may take some time before the Dash pod responds and inserts the cannula (1-2 minutes maximum), so be patient.
+6. После нажатия **OK**, понадобится некоторое время для ответа пода и введения катетера (1-2 минуты максимум), так что наберитесь терпения.
 
- *NOTE: Before the cannula is inserted, it is good practice to pinch the skin near the cannula insertion point. This ensures a smooth insertion of the needle and will decrease your chances of developing occlusions.*
+ *ПРИМЕЧАНИЕ: Перед установкой катетера рекомендуется ущипнуть кожу рядом с местом ввода катетера. Это уменьшает болевые ощущения при вводе иглы и снижает шансы на развитие окклюзий.*
 
-![Activate_Pod_10](../images/DASH_images/Activate_Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH_images/Activate_Pod/Activate_Pod_11.jpg)
+![Активировать Pod_10](../images/DASH_images/Activate_Pod/Activate_Pod_10.png)    ![Активировать Pod_11](../images/DASH_images/Activate_Pod/Activate_Pod_11.jpg)
 
-7. A green checkmark appears, and the **Next** button becomes enabled upon successful cannula insertion. Click on the **Next** button.
+7. При успешном вводе катетера появляется зеленая галочка и активируется кнопка **Далее**. Нажмите на кнопку **Далее**.
 
-![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
+![Активировать Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
 
-9. The **Pod activated** screen is displayed. Click on the green **Finished** button. Congratulations! You have now started a new active pod session.
+9. Появится экран **Pod активирован**. Нажмите на зеленую кнопку **Завершено**. Поздравляем! Вы начали новую активную сессию Pod.
 
-![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
+![Активировать Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
 
-10. The **Pod management** menu screen should now display the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. This is because a pod is now active and you cannot activate an additional pod without deactivating the currently active pod first.
+10. На экране меню **управления Pod** кнопка **Активировать Pod (1)** теперь *выключена* и **Деактивировать Pod (2)** *включена*. Это потому, что под активен и вы не можете активировать дополнительный под без деактивации текущего.
 
-    Click on the back button on your phone to return to the **DASH** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
+    Нажмите на кнопку Назад на телефоне, чтобы вернуться на вкладку **DASH**, которая теперь отображает текущую информацию о Pod включая скорость базала, наполненность резервуара, введенный инсулин, ошибки и предупреждения.
 
-    For more details on the information displayed go to the [**DASH Tab**](OmnipodDASH-dash-tab) section of this document.
+    Более подробно о показываемой информации в разделе [**Вкладка DASH**](OmnipodDASH-dash-tab) этого документа.
 
-![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
+![Активировать Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)    ![Активировать Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-It is good practice to export settings AFTER activating the pod. Do this at each pod change and once a month, copy the exported file to your internet drive. see [**Export settings Doc**](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
+Настройки лучше всего экспортировать ПОСЛЕ активации Pod. Делайте это при каждой замене пода и раз в месяц, копируйте экспортированный файл на ваш интернет-диск. см. [** экспорт параметров **](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
 
 
-(OmnipodDASH-deactivate-pod)=
+(OmnipodDASH-деактивация-пода)=
 
-### Deactivate Pod
+### Деактивация Pod
 
-Under normal circumstances, the expected lifetime of a pod is three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
+При нормальных условиях ожидаемое время жизни пода 3 дня (72 часа) и дополнительно 8 часов после предупреждения об истечении срока действия, в общей сложности 80 часов.
 
-To deactivate a pod (either from expiration or from a pod failure):
+Для деактивации пода (либо по истечении срока действия, либо из-за сбоя в работе):
 
-1. Go to the **DASH** tab, click on the **POD MGMT (1)** button, on the **Pod management** screen click on the **Deactivate Pod (2)** button.
+1. Зайдите на вкладку **DASH**, нажмите на кнопку **УПРАВЛЕНИЕ ПОМПОЙ(1)** на экране **Управление помпой Omnipod** и нажмите на кнопку **Деактивировать Pod(2)**.
 
-![Deactivate_Pod_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)    ![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
+![Деактивировать Pod_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)    ![Деактивировать Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
 
-2. On the **Deactivate Pod** screen, click on the **Next** button to begin the process of deactivating the pod. You will receive a confirmation beep from the pod that deactivation was successful.
+2. На экране **Деактивировать Pod** нажмите кнопку **Далее** для начала процесса деактивации пода. Вы получите подтверждающий звуковой сигнал о том, что деактивация прошла успешно.
 
-![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg) ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
+![Деактивировать Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg) ![Отключить Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
 
-3. A green checkmark will appear upon successful deactivation. Click on the **Next** button to display the pod deactivated screen. You may now remove your pod as the active session has been deactivated.
+3. После успешной деактивации на экране появится зеленая галочка. Нажмите на кнопку **Далее**, чтобы отобразился экран Pod деактивирован. Теперь вы можете удалить свой pod так как активная сессия завершена.
 
-![Deactivate_Pod_5](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_5.jpg)
+![Деактивировать Pod_5](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_5.jpg)
 
-4. Click on the green button to return to the **Pod Management** screen.
+4. Для возврата на экран **Управление помпой Omnipod** нажмите на зеленую кнопку.
 
-![Deactivate_Pod_6](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_6.jpg)
+![Деактивировать Pod_6](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_6.jpg)
 
-5. You are now on the **Pod Management** menu; press the back button on your phone to return to the **DASH** tab. Verify that the **Pod status:** field displays a **No active Pod** message.
+5. Теперь вы оказались в меню **Управление помпой Omnipodt**; нажмите кнопку "Назад" на телефоне, чтобы вернуться на вкладку **DASH**. Убедитесь, что **Статус помпы:** отображает сообщение **Нет активных Pod**.
 
-![Deactivate_Pod_7](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_8.jpg)
+![Деактивировать Pod_7](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_7.png) ![Деактивировать Pod_8](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_8.jpg)
 
-(OmnipodDASH-resuming-insulin-delivery)=
+(OmnipodDASH-возобновление-подачи-инсулина)=
 
-### Resuming Insulin Delivery
+### Возобновление подачи инсулина
 
-**Note**: During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can be suspended. Read [**Delivery suspended**](OmnipodDASH) in the troubleshooting section for more details.
+**Примечание**: При переключениях профиля, под должен приостановить подачу инсулина перед установкой нового базального профиля. Если связь между двумя командами не удается, подача может быть приостановлена. Прочтите раздел [**Введение инсулина приостановлено**](OmnipodDASH) для получения более подробной информации.
 
-Use this command to instruct the active, currently suspended pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal profile. The pod will again accept commands for bolus, TBR, and SMB.
+Применяйте эту команду, чтобы приостановленный Pod возобновил подачу инсулина. После успешной обработки команды, нормальная подача инсулина возобновится в соответствии с текущим активным профилем базала. Pod снова будет принимать команды на болюс, TBR и SMB.
 
-1. Go to the **DASH** tab and ensure the **Pod status (1)** field displays **SUSPENDED**, then press the **RESUME DELIVERY (2)** button to start the process to instruct the current pod to resume normal insulin delivery. A message **RESUME DELIVERY** will display in the **Pod Status (3)** field.
+1. Перейдите на вкладку **DASH** и убедитесь, что поле **статус Pod (1)** отображает **ПОМПА ОСТАНОВЛЕНА (ПРИОСТАНОВЛЕНО)**, затем нажмите кнопку **ВОЗОБНОВИТЬ ПОДАЧУ(2)** для передачи команды на Pod о возобновлении подачи инсулина. В поле **Статус Pod (3)** будет отображаться **ПОДАЧА ВОЗОБНОВЛЕНА**.
 
-![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)   ![Resume_2](../images/DASH_images/Resume/Resume_2.jpg)
+![Возобновить 1](../images/DASH_images/Resume/Resume_1.jpg)   ![Возобновить_2](../images/DASH_images/Resume/Resume_2.jpg)
 
-2. When the Resume delivery command is successful, a confirmation dialog will display the message **Insulin delivery has been resumed**. Click **OK** to confirm and proceed.
+2. Когда команда Возобновить подачу прошла успешно, в диалоговом окне подтверждения будет показано сообщение **Подача инсулина возобновлена**. Нажмите **OK** для подтверждения и продолжения.
 
-![Resume_3](../images/DASH_images/Resume/Resume_3.png)
+![Возобновить 3](../images/DASH_images/Resume/Resume_3.png)
 
-3. The **DASH** tab will update the **Pod status (1)** field to display **RUNNING,** and the **Resume Delivery** button will no longer be displayed
+3. Вкладка **DASH** обновит поле **статус помпы (1)**и отобразит **ВЫПОЛНЯЕТСЯ,** кнопка **Возобновить подачу** больше не будет отображаться
 
-![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
+![Возобновить_4](../images/DASH_images/Resume/Resume_4.jpg)
 
-### Silencing Pod Alerts
+### Отключение звуковых оповещений пода
 
-*NOTE - The SILENCE ALERTS button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the SILENCE ALERTS button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
+*ПРИМЕЧАНИЕ - Кнопка ЗАГЛУШИТЬ СИГНАЛЫ ОПОВЕЩЕНИЯ доступна на вкладке **DASH** только когда срабатывают оповещения об истечении срока действия пода или о малом количестве инсулина в резервуаре. Если кнопка ЗАГЛУШИТЬ СИГНАЛЫ ОПОВЕЩЕНИЯ не видна, но вы слышите звуковые сигналы из Pod, попробуйте "Обновить статус Pod".*
 
-The process below will show you how to acknowledge and dismiss pod beeps when the active pod time reaches the warning time limit before the pod expiration of 72 hours (3 days). This warning time limit is defined in the **Hours before shutdown** Dash alerts setting. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hours (3 days) limit.
+Дальнейшее описание поможет вам подтверждать получение и убирать звуковые сигналы, когда активное время Pod достигнет 72 часов (3х суток). Этот предел времени для оповещения определен в настройках сигналов **Времени до выключения** Dash. Максимальная продолжительность работы Pod составляет 80 часов (3е суток + 8 часов), однако производитель (Insulet) рекомендует не превышать 72 часа (3х суток).
 
-1. When the defined **Hours before shutdown** warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and pod change will be required soon. You can verify this on the **DASH** tab, the **Pod expires: (1)** field will show the exact time the pod will expire (72 hours after activation), and the text will turn **red** after this time has passed. Under the **Active Pod alerts (2)** field the status message **Pod will expire soon** is displayed. This also will trigger displaying the **SILENCE ALERTS (3)** button.
+1. По достижении заданного времени предупреждения об ** отключении**, под начнет издавать сигналы о сроке отключения и приближении времени замены. Проверить срок замены можно на вкладке **DASH** в поле **Срок действия Пода истекает(1)**, где показывается точное время с момента активации и текст этот становится **красным** спустя 72 часа после активации. В поле **Активные оповещения помпы (2)** отображается сообщение о статусе **Срок работы Pod истекает**. Также появится кнопка **заглушить сигналы оповещения (3)**.
 
 ![ACK_alerts_1](../images/DASH_images/ACK_Alerts/ACK_ALERTS_1.png)
 
-2. Go to the **DASH** tab and press the **SILENCE ALERTS (2)** button . AAPS sends the command to the pod to deactivate the pod expiration warning beeps and updates the **Pod status (1)** field with **ACKNOWLEDGE ALERTS**.
+2. Перейдите на вкладку **DASH** и нажмите кнопку **ВЫКЛЮЧИТЬ ЗВУКОВЫЕ ОПОВЕЩЕНИЯ(2)**. AAPS отправляет команду на Pod, чтобы деактивировать предупреждение об истечении срока действия Pod, и обновляет состояние **Pod (1)** на ** ОПОВЕЩЕНИЕ ПРИНЯТО**.
 
 ![ACK_alerts_2](../images/DASH_images/ACK_Alerts/ACK_ALERTS_2.png)
 
-3. Upon **successful deactivation** of the alerts, **2 beeps** will be issued by the active pod and a confirmation dialog will display the message **Activate alerts have been Silenced**. Click the **OK** button to confirm and dismiss the dialog.
+3. После **успешного отключения** оповещений активный Pod издаст **два сигнала** и на экране появится подтверждающее сообщение **активные оповещения заглушены**. Нажмите кнопку **OK** для того, чтобы подтвердить действие и убрать диалоговое окно.
 
 
 ![ACK_alerts_3](../images/DASH_images/ACK_Alerts/ACK_ALERTS_3.png)
 
-4. Go to the **DASH** tab. Under the **Active Pod alerts** field, the warning message is no longer displayed, and the active pod will no longer issue pod expiration warning beeps.
+4. Перейдите на вкладку **DASH**. В поле **оповещения активного Pod ** больше не отображается предупреждение об истечении срока действия.
 
-(OmnipodDASH-view-pod-history)=
+(OmnipodDASH--просмотр-истории) =
 
-### View Pod History
+### Просмотр истории Pod
 
-This section shows you how to review your active pod history and filter by different action categories. The pod history tool allows you to view the actions and results committed to your currently active pod during its three days (72 - 80 hours) life.
+В этом разделе показано, как просмотреть историю активного пода и отфильтровать ее по различным категориям. Инструмент истории пода позволяет просматривать действия текущего активного пода за трое суток (72 - 80 часов).
 
-This feature is helpful in verifying boluses, TBRs and basal commands that were sent to the pod. The remaining categories are useful for troubleshooting issues and determining the order of events that occurred leading up to a failure.
+Эта функция полезна для верификации болюсов, временной скорости базала TBR и команд на изменение базала, которые были отправлены на под. Остальные категории полезны для решения проблем, а также для определения хода событий, приводящих к сбою.
 
-*NOTE:* **Only the last command can be uncertain**. New commands *will not be sent* until the **last 'uncertain' command becomes 'confirmed' or 'denied'**. The way to 'fix' uncertain commands is to **'refresh pod status'**.
+*ПРИМЕЧАНИЕ:* **Только последняя команда может быть неопределенной**. Новые команды *не отправляются/0> пока **последняя команда 'не подтверждено' не станет 'подтверждено' или 'отклонено'**. 'Исправить' неопределенную команду можно нажав **обновить статус пода **.</p>
 
-1. Go to the **DASH** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu and then press the **Pod history (2)** button to access the pod history screen.
+1. Перейдите на вкладку **DASH**, нажмите на кнопку **УПРАВЛЕНИЕ ПОМПОЙ(1)** чтобы вызвать меню **Управление помпой Omnipod** и нажмите на кнопку **История Pod(2)** для вызова экрана истории.
 
-![Pod_history_1](../images/DASH_images/Pod_History/Pod_history_1.jpg) ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
+![Под_история_1](../images/DASH_images/Pod_History/Pod_history_1.jpg) ![Под_история_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
 
-2. On the **Pod history** screen, the default category of **All (1)** is displayed, showing the **Date and Time (2)** of all pod **Actions (3)** and **Results (4)** in reverse chronological order. Use your phone’s **back button 2 times** to return to the **DASH** tab in the main AAPS interface.
+2. На экране **под историей** по умолчанию отображается категория **Все (1)** и показывает **Дату и время (2)** всех подов **Действия (3)** и **Результаты (4)** в обратном хронологическом порядке,. Нажмите кнопку назад **в телефоне 2 раза** для возврата на вкладку **DASH** в главном интерфейсе AAPS.
 
 
-![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
+![Под-история_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Под_история_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
 
-(OmnipodDASH-dash-tab)=
+(OmnipodDASH-dash-вкладка)=
 
-## DASH Tab
+## Вкладка DASH
 
-Below is an explanation of the layout and meaning of the icons and status fields on the **DASH** tab in the main AAPS interface.
+Ниже приведено объяснение расположения и значения иконок и информационных полей на вкладке **DASH** в главном интерфейсе AAPS.
 
-*NOTE: If any message in the **DASH** tab status fields report (uncertain), then you will need to press the Refresh button to clear it and refresh the pod status.*
+*ПРИМЕЧАНИЕ: Если в каком-то из информационных полей вкладки **DASH**появляется сообщение "не подтверждено" нажмите кнопку Обновить для получения точного статуса.*
 
 ![DASH_Tab_1](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
-### Fields
+### Поля
 
-* **Bluetooth Address:** Displays the current bluetooth address of the connected Pod.
-* **Bluetooth Status:** Displays the current connection status.
-* **Sequence Number:** Displays the sequence number of the active POD.
-* **Firmware Version:** Displays the firmware version for the active connection.
-* **Time on Pod:** Displays the current time on the Pod.
-* **Pod expires:** Displays the date and time when the Pod will expire.
-* **Pod status:** Displays the Pod status.
-* **Last connection:** Displays time of last communication with the Pod.
+* **АдресBluetooth-:** Отображает текущий bluetooth адрес подключенного Pod.
+* **Статус Bluetooth:** Отображает текущее состояние соединения.
+* **Порядковый Номер** Отображает номер последовательности активного POD.
+* **Версия прошивки:** Отображает версию прошивки для активного соединения.
+* **Время на Pod:** Отображает текущее время на Pod.
+* Срок работы Pod истекает.
+* **Статус Pod:** Отображает статус пода.
+* **Прошлое подключение:** Отображает время последней связи с Pod.
 
-   - *Moments ago* - less than 20 seconds ago.
-   - *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
-   - *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
-   - *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
+   - *Только что* - меньше 20 секунд назад.
+   - *Менее минуты назад* - более 20, но менее 60 секунд назад.
+   - *1 минуту назад* - более 60, но менее 120 секунд (2 мин)
+   - *XX минут назад* - более 2 минут назад, определяется величиной XX
 
-* **Last bolus:** Displays the amount of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
-* **Base Basal rate:** Displays the basal rate programmed for the current time from the basal rate profile.
-* **Temp basal rate:** Displays the currently running Temporary Basal Rate in the following format
+* **Предыдущий болюс:** Отображает величину болюса, отправленного в активный Pod с указанием в скобках как давно он был подан.
+* **Базовая скорость базала:** Отображает базовую скорость, запрограммированную на текущее время из профиля базала.
+* **Временная скорость базала:** Отображает текущую временную скорость базала в следующем формате
 
-   - {Units per hour} @{TBR start time}  ({minutes run}/{total minutes TBR will be run})
-   - *Example:* 0.00U/h @18:25 ( 90/120 minutes)
+   - {ед./час} @{ время начала врем. базала TBR} ({мин. прошло}/{всего минут TBR})
+   - *Пример:* 0.00ед./ч. @18:25 ( 90/120 мин.)
 
-* **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below 50 U, the exact units are displayed.
-* **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. This includes insulin used for activating and priming.
-* **Errors:** Displays the last error encountered. Review the [Pod history](OmnipodDASH-view-pod-history) and log files for past errors and more detailed information.
-*  **Active pod alerts:** Reserved for currently running alerts on the active pod.
+* **Резервуар:** Показывает 50+ед. когда в резервуаре остается более 50 ед. Ниже 50 ед. показывается точное кол-во единиц.
+* **Всего подано** Отображает общее количество единиц инсулина, доставленных из резервуара. Сюда входит инсулин, используемый для активации и заполнения инфузионного набора.
+* **Ошибки:** Отображает последнюю возникшую ошибку. Просмотрите [Журнал Pod](OmnipodDASH-view-pod-history) и файлы журналов для поиска прошлых ошибок и более подробной информации.
+*  **Активные оповещения Pod** зарезервировано для текущих оповещений на активном Pod.
 
-### Buttons
+### Кнопки
 
 
-![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) : Sends a refresh command to the active pod to update communication.
+![Обновить](../images/DASH_images/Refresh_LOGO.png) : Отправляет команду refresh в активный Pod для обновления коммуникации.
 
-   * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
-   * See the Troubleshooting section below for additional information.
+   * Используйте для обновления статуса pod и сброса полей статуса, содержащих текст (не подтверждено).
+   * Дополнительную информацию см. в разделе Устранение неполадок ниже.
 
-![POD_MGMT_Icon](../images/DASH_images/POD_MGMT_LOGO.png) : Navigates to the Pod management menu.
+![Значок POD_MGMT_](../images/DASH_images/POD_MGMT_LOGO.png) : Перейдите в меню управления Pod.
 
-![ack_alert_logo](../images/DASH_images/ack_alert_logo.png) : When pressed this will disable the pod alerts beeps and notifications (expiry, low reservoir..).
+![ack_alert_logo](../images/DASH_images/ack_alert_logo.png) : При нажатии отключает звуки и уведомления (истечение срока действия, мало инсулина в резервуаре..).
 
-   * Button is displayed only when pod time is past expiration warning time.
-   * Upon successful dismissal, this icon will no longer appear.
+   * Кнопка отображается только после появления предупреждения об истечении срока действия.
+   * После успешного сброса, этот значок не будет отображаться.
 
-![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png) : Resumes the currently suspended insulin delivery in the active pod.
+![Значок RESUME_](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png) : Возобновляет приостановленную подачу инсулина в активном Pod.
 
-### Pod Management Menu
+### Меню управления помпой
 
-Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (0)** button from the **DASH** tab. ![DASH_Tab_2](../images/DASH_images/DASH_Tab/DASH_Tab_2.png) ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
+Ниже приведено значение иконок в меню **Управление помпой **, доступном после нажатием кнопки **УПРАВЛЕНМЕ ПОМПОЙ (0)** на вкладке **DASH**. ![DASH_Tab_2](../images/DASH_images/DASH_Tab/DASH_Tab_2.png) ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
-* 1 - [**Activate Pod**](OmnipodDASH-activate-pod) : Primes and activates a new pod.
-* 2 - [**Deactivate Pod**](OmnipodDASH-deactivate-pod) : Deactivates the currently active pod.
-* 3 - **Play Test Beep** : Plays a single test beep on the pod when pressed.
-* 4 - [**Pod history**](OmnipodDASH-view-pod-history) : Displays the active pod activity history.
+* 1 - [**Активировать Pod**](OmnipodDASH-activate-pod) : Заполняет катетер и активирует новый Pod.
+* 2 - [**Деактивировать Pod**](OmnipodDASH-deactivate-pod) : Деактивирует активный под.
+* 3 - **Воспроизвести тестовый звуковой сигнал** : При нажатии воспроизводит один тестовый сигнал на поде.
+* 4 - [**Журнал Pod **](OmnipodDASH-view-pod-history) : Отображает историю активности.
 
 (DanaRS-Insulin-Pump-dash-settings)=
 
-## Dash Settings
+## Настройки Dash
 
-The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the AAPS interface titled **DASH**.
+Настройки помпы Dash доступны из левого верхнего **выпадающего меню** выберите **Конфигуратор(1)**\ ➜\ **Помпа**\ ➜\ **Dash**\ ➜\ **Шестеренка настроек (3)** включив ** радио кнопку (2) **с маркировкой **Dash**. Поставив флажок в **клетке** напротив **шестеренки настроек** вы активируете вкладку DASH в интерфейсе AAPS.
 
-![Dash_settings_1](../images/DASH_images/Dash_settings/Dash_settings_1.png) ![Dash_settings_2](../images/DASH_images/Dash_settings/Dash_settings_2.png)
+![Dash_settings 1](../images/DASH_images/Dash_settings/Dash_settings_1.png) ![Dash_settings_2](../images/DASH_images/Dash_settings/Dash_settings_2.png)
 
-**NOTE:** A faster way to access the **Dash settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **DASH** tab and selecting **Dash preferences (2)** from the dropdown menu.
+**ПРИМЕЧАНИЕ:** Более быстрый способ доступа к настройкам **Dash** - через меню **3 точки (1)** в правом верхнем углу вкладки **DASH** выбрать **Настройки Dash (2)** из выпадающего меню.
 
-![Dash_settings_3](../images/DASH_images/Dash_settings/Dash_settings_3.png)
+![Dash_settings 3](../images/DASH_images/Dash_settings/Dash_settings_3.png)
 
-The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
+Группы настроек перечислены ниже; вы можете включить или отключить их через переключатель большинства функций описанных ниже:
 
 ![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
-*NOTE: An asterisk (\*) denotes the default setting is enabled.*
+*ПРИМЕЧАНИЕ: Знак (\*) обозначает значение по умолчанию.*
 
-### Confirmation beeps
+### Звуковые сигналы подтверждения
 
-Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
+Обеспечивает звуковые сигналы подтверждения от Pod об успешной подаче болюса, изменении базала, SMB и TBR.
 
-* **Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
-* **Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
-* **SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
-* **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
+* **Звуковой сигнал болюса включен** Включить или отключить подтверждающие сигналы при подаче болюса.
+* **Звуковой сигнал базала включен:** Включить или отключить звуки подтверждения, когда установлена новая базальная скорость, отменена или изменена действующая базальная скорость.
+* **Звуковой сигнал микроболюсов SMB включен** Включить или отключить подтверждающие сигналы при подаче микроболюсов.
+* **Звуковой сигнал временного базала TBR включен** Включить или отключить подтверждающие сигналы при установке или отмене TBR.
 
-### Alerts
+### Оповещения
 
-Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the defined threshold units.
+Оповещения AAPS об истечении срока, выключении, низком резервуаре на основе заданных пороговых значений.
 
-*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the **DASH** tab and press the **Silence ALERTS button**.*
+*Примечание: уведомления AAPS выдаются ВСЕГДА для любого оповещения после связи с pod с момента срабатывания оповещения. Сброс уведомления НЕ удалит оповещение, ЕСЛИ НЕ включено автоматическое подтверждение получения оповещений. Чтобы ВРУЧНУЮ убрать оповещение следует открыть вкладку **DASH** и нажать кнопку **Заглущать СИГНАЛЫ ОПОВЕЩЕНИЯ**.*
 
-* **Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
-* **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
-* **Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
-* **Number of units:** The number of units at which to trigger the pod low reservoir alert.
+* **Включено напоминание об истечении срока действия:** Включение или отключение напоминания о истечении срока действия струи для срабатывания по достижении определенного количества часов до завершения работы.
+* **Время до выключения**.
+* **Предупреждение о низком уровне резервуара включено:** Включить или отключить оповещение, когда лимит нижнего емкости достигается как определено в поле Количество единиц емкости.
+* **Количество единиц:** Количество единиц, на которые можно вызывать предупреждение о низком резервуаре резервуара.
 
-### Notifications
+### Уведомления
 
-Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus, and delivery suspended events were successful.
+Выдает уведомления AAPS и звуковые оповещения, когда нет уверенности в успешных TBR, SMB, болюсах или приостановленных событиях.
 
-*NOTE: These are notifications only, no audible beep alerts are made.*
+*ПРИМЕЧАНИЕ: Это только уведомления, звуковые оповещения об ошибках не производится.*
 
-* **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
-* **Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
-* **Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
-* **Sound when delivery suspended notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when suspend delivery was successfully delivered.
+* **Звук для неопределенных уведомлений TBR включен:** Включите или отключите этот параметр, чтобы вызвать звуковое оповещение и визуальное уведомление, когда AAPs неизвестно, был ли установлен TBR.
+* **Звук для неопределенных уведомлений SMB включен:** Включите или отключите этот параметр, чтобы вызвать звуковое оповещение и визуальное уведомление, когда AAPs неизвестно, был ли успешно подан микроболюс SMB.
+* **Звук для неопределенных уведомлений о болюсах включен:** Включите или отключите этот параметр, чтобы вызвать звуковое оповещение и визуальное уведомление, когда AAPs неизвестно, был ли успешно подан болюс.
+* **Звук уведомлений о приостановленной подаче болюсов включен:** Включите или отключите этот параметр, чтобы вызвать звуковое оповещение и визуальное уведомление, когда успешно возобновлена приостановленная подача болюса.
 
-## Actions (ACT) Tab
+## Вкладка Действия (ACT)
 
-This tab is well documented in the main AAPS documentation but there are a few items on this tab that are specific to how the Omnipod Dash pod differs from tube based pumps, especially after the processes of applying a new pod.
+Эта вкладка хорошо описана в основной документации AAPS, но на этой вкладке есть несколько элементов, которые специфичны для Omnipod Dash и отличаются от проводных помп, особенно после установки нового пода.
 
-1. Go to the **Actions (ACT)** tab in the main AAPS interface.
+1. Перейдите на вкладку **Действия (ACT)** в главном интерфейсе AAPS.
 
-2. Under the **Careportal (1)** section the **Insulin** and **Cannula** filds will have their **age reset** to 0 days and 0 hours **after each pod change**. This is done because of how the Omnipod pump is built and operates. Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours). The **pump battery** and **insulin reservoir** are self contained inside of each pod.
+2. В секции **портал терапии (1)** поля **Инсулин** и **Катетер помпы** п**осле каждой замены пода** сбрасывают свой **отработанный срок (возраст)** на 0 дней и 0 часов. Это происходит из-за устройства и принципа работы Omnipod. Так как Pod вводит катетер непосредственно в кожу на месте установки, в помпах Omnipod не применяется традиционная трубка. *Поэтому после замены пода значение каждой из этих величин автоматически сбрасывается на ноль***Возраст батареи помпы**не отображается поскольку он всегда больше срока работы пода (максимум 80 часов). **Батарея помпы** и **резервуар инсулина** в каждом поде свои.
 
 ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
-### Level
+### Уровень
 
-**Insulin Level**
+**Уровень инсулина**
 
-Insulin level displayed is the amount reported by Omnipod DASH. However, the pod only reports the actual insulin reservoir level when it is below 50 units. Until then “Above 50 units” will be displayed. The amount reported is not exact: when the pod reports ‘empty’ in most cases the reservoir will still have some additional units of insulin left. The omnipod DASH overview tab will display as described the below:
+Показано количество инсулина, указанное Omnipod DASH. Вместе с тем Pod сообщает только о фактическом уровне инсулина, когда он ниже 50 единиц. До этого будет отображаться "выше 50 единиц". Уровень, указанный помпой, в большинстве случаев не является точным: в резервуар будет оставаться несколько дополнительных единиц инсулина. Вкладка "DASH" покажет следующие величины:
 
-  * **Above 50 Units** - The Pod reports more than 50 units currently in the reservoir.
-  * **Below 50 Units** - The amount of insulin remaining in the reservoir as reported by the Pod.
+  * **больше 50 единиц** - Pod сообщает о более 50 единиц в настоящее время.
+  * **Ниже 50 ед.**- Количество инсулина, остающегося в резервуаре по данным, полученным от Pod.
 
-Additional note:
-  * **SMS** - Returns value or 50+U for SMS responses
-  * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
+Дополнительные замечания:
+  * **SMS** - В SMS сообщается реальный остаток в ед. или 50+ед
+  * **Nightscout** - при более чем 50 единиц в Nightscout выгружается значение 50 ед.(версия 14.07 и старше).  Более новые версии покажут 50 + когда более 50 единиц.
 
 ## Устранение неполадок
 
-(OmnipodDASH-delivery-suspended)=
+(OmnipodDASH-подача-приостановлена)=
 
-### Delivery suspended
+### Подача приостановлена
 
-  * There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero TBR for x minutes.
-  * During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can stay suspended. When this happens:
-     - There will be no insulin delivery, that includes Basal, SMB, Manual bolusing etc.
-     - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened.
-     - AAPS will try to set the new basal profile every 15 minutes.
-     - AAPS will show a notification informing that the delivery is suspended every 15min, if the delivery is still suspended (resume delivery failed).
-     - The [**Resume delivery**](OmnipodDASH-resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
-     - If AAPS fail to resume delivery on its own (this happens if the Pod is unreachable, sound is muted, etc), the pod will start beeping 4 time every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20minutes.
-  * For unconfirmed commands, "refresh pod status" should confirm/deny them.
+  * Кнопки приостановки больше нет. Если требуется «приостановить» Pod, установите 0 TBR на x минут.
+  * При переключениях профиля, под должен приостановить подачу инсулина перед установкой нового базального профиля. Если между двумя командами происходит обрыв связи, подача может быть приостановлена. Когда это происходит:
+     - Подачи инсулина не будет, включая Базал, SMB, болюс и т. д.
+     - Может быть уведомление о том, что одна из команд не подтверждена: это зависит от того, когда произошел сбой.
+     - AAPS попытается установить новый базальный профиль каждые 15 минут.
+     - AAPS будет показывать уведомление, что подача приостановлена каждые 15 минут, (если возобновить подачу не удалось).
+     - Кнопка [**Возобновить подачу**](OmnipodDASH-resuming-insulin-delivery) будет активна, если пользователь решит возобновить ее вручную.
+     - Если AAPS не может самостоятельно возобновить подачу (это происходит, если Pod недоступен, звук заблокирован и т. д.), Pod начнёт подачу звуковых сигналов 4 раза каждую минуту в течение 3 минут, затем будет повторять каждые 15 минут, если подача не восстановится более 20 минут.
+  * Для неподтвержденных команд "Обновить статус помпы" их подтвердит/запретит.
 
-**Note:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, **so you need to check !**
+**Примечание:** При получении звуковых сигналов от пода, не следует полагать, что подача будет продолжена без проверки телефона, она может остаться приостановленой, **поэтому следует это проверить!**
 
-### Pod Failures
+### Сбои в работе Pod
 
-Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+Поды иногда подводят из-за различных проблем, включая аппаратные неполадки в самих Pod. В Insulet с этим лучше не обращаться в, поскольку приложение AAPS пока не получила официального одобрения. Список ошибок [**можно найти здесь**](https://github.com/openaps/openomni/wiki/Fault-event-codes) для помощи в определении причины.
 
-### Preventing error 49 pod failures
+### Предотвращение ошибки 49 при сбоях Pod
 
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. This is when the driver and Pod disagree on the actual state. The Pod (out of a build-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod. The exact origin of a “49 pod failure” often is hard to trace. In situations that are suspected for this failure to occur (for instance on application crashes, running a development version or re-installation).
+Эта неисправность связана с некорректным состоянием Pod во время команды или ошибки при подаче инсулина. В этот момент драйвер и Pod не согласны с фактическим состоянием. Под (из мер встроенной безопасности) реагирует неисправимым кодом ошибки 49 (0x31), заканчивающимся "кричащим": длинным раздражающим звуковым сигналом который можно остановить, только пробив отверстие в соответствующем месте на задней стороне Pod. Точное происхождение "ошибки 49" зачастую трудно отследить. В ситуациях, когда имеются подозрения в возникновении такой ошибки (например, при сбоях приложения, выполнении версии разработки или переустановке).
 
-### Pump Unreachable Alerts
+### Оповещения о недоступности помпы
 
-When no communication can be established with the pod for a preconfigured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by going to the top right-hand side three-dot menu, selecting **Preferences**\ ➜\ **Local Alerts**\ ➜\ **Pump unreachable threshold [min]**. Recommended value is alerting after **120** minutes.
+Когда связь с стружкой не может быть установлена в течение запланированного времени, дается оповещение «Помпа недоступна». Оповещения о недоступности помпы можно настроить перейдя в верхнее правое трехточечное меню, выбрав **Настройки**\ ➜\ **Локальные оповещения**\ ➜\ **Порог оповещения Помпа недоступна [min]**. Рекомендуемое величина задержки оповещания **120** минут.
 
-### Export  Settings
+### Настройки экспорта
 
-Exporting AAPS settings enables you to restore all your settings, and maybe more importantly, all your Objectives. You may need to restore settings to the “last known working situation” or after uninstalling/reinstalling AAPS or in case of phone loss, reinstalling on the new phone.
+Экспорт настроек AAPS позволяет восстановить все настройки, и все ваши цели. Может потребоваться восстановление настроек в «последней известной рабочей ситуации» или после удаления/переустановки AAPS или в случае потери телефона, переустановки на новый телефон.
 
-Note: The active pod information is included in the exported settings. If you import an "old" exported file, your actual pod will "die". There is no other alternative. In some cases (like a _programmed_ phone change), you may need to use the exported file to restore AndroisAPS settings **while keeping the current active Pod**. In this case it is important to only use the recently exported settings file containing the pod currently active.
+Примечание: Активная информация о поде включена в экспортируемые настройки. Если вы импортируете "старый" файл, ваш реальный под "недействителен". Других альтернатив нет. В некоторых случаях (например, при _запрограммированной_ смене телефона) вам может потребоваться использовать экспортированный файл для восстановления настроек Aaps **с сохранением текущего активного пода**. В этом случае необходимо использовать только недавно экспортированный файл настроек, содержащий именно этот под.
 
-**It is good practice to do an export immediately after activating a pod**. This way you will always be able to restore the current active Pod in case of a problem. For instance when moving to another backup phone.
+**Полезно сделать экспорт сразу же после активации пода**. Таким образом вы всегда сможете восстановить текущий активный Pod в случае проблемы. Например, при перемещении на другой резервный телефон.
 
-Regularly copy your exported settings to a safe place (as a cloud drive) that can be accessible by any phone when needed (e.g. in case of a phone loss or factory reset of the actual phone).
+Регулярно копируйте экспортированные настройки в безопасное место (как облачный диск), которые могут быть доступны по мере необходимости на любом телефоне (eнапример, в случае потери телефона или сбросе актуального телефона).
 
-### Import Settings
+### Импорт настроек
 
-**WARNING** Please note that importing settings will possibly import an outdated Pod status. As a result, there is a risk of losing the active Pod! (see **Exporting Settings**). It is better to only try it when no other options are available.
+**ВНИМАНИЕ** Обратите внимание, что при импорте настроек может быть импортирован устаревший статус пода. В результате существует риск потери активного Pod! (см. **Экспорт настроек**). Лучше пробовать этот вариант только когда другие опции не доступны.
 
-When importing settings with an active Pod, make sure the export was done with the currently active pod.
+При импорте настроек с активным Pod, убедитесь, что экспорт был сделан с активныого pod.
 
-**Importing while on an active Pod:** (you risk losing the Pod!)
+**Импорт во время активного Pod:** (вы рискуете потерять Pod!)
 
-1. Make sure you are importing settings that were recently exported with the currently active Pod.
-2. Import your settings
-3. Check all preferences
+1. Убедитесь, что вы импортируете настройки, которые были недавно экспортированы с текущим активным Pod.
+2. Импортируйте настройки
+3. Проверьте все настройки
 
-**Importing (no active Pod session)**
+**Импорт (нет активных сессий Pod)**
 
-1. Importing any recent export should work (see above)
-2. Import your settings.
-3. Check all preferences.
-4. You may need to **Deactivate** the "non exixting" pod if the imported settings included any active pod data.
+1. Должен работать импорт последнего экспорта (см. выше)
+2. Импортируйте настройки.
+3. Проверьте все настройки.
+4. Возможно, вам придется **деактивировать** «несуществующий» под, если импортированные настройки включают какие-либо активные данные пода.
 
-### Importing settings that contain Pod state from an inactive Pod
+### Импорт настроек, которые содержат состояние Pod из неактивного Pod
 
-When importing settings containing data for a Pod that is no longer active, AAPS will try to connect with it, which will obviously fail. You can not activate a new Pod in this situation.
+При импорте параметров, содержащих данные Pod, которые больше не активны, AAPS попытается соединиться с ним, что не сработает. В этой ситуации невозможно активировать новый Pod.
 
-To remove the old Pod session “try” to de-activate the Pod. The de-activation will fail. Select “Retry”. After the second or third retry you will get the option to remove the pod. Once the old pod is removed you will be able to activate a new Pod.
+Чтобы удалить старую сессию Pod «попытайтесь» деактивировать Pod. Деактивация не удастся. Выберите "Повторить". После второго или третьего повтора вы получите возможность удалить Pod. Как только старый Pod будет удален, вы сможете активировать новый/.
 
-### Reinstalling AAPS
+### Переустановка AAPS
 
-When uninstalling AAPS you will lose all your settings, objectives and the current Pod session. To restore them make sure you have a recent exported settings file available!
+При удалении AAPS вы потеряете все ваши настройки, цели и текущую сессию Pod. Чтобы восстановить их, убедитесь, что у вас есть недавний экспортированный файл настроек!
 
-When on an active Pod, make also sure that you have an export for the current Pod session or you will lose the currently active Pod when importing older settings.
+При активном Pod, также убедитесь, что у вас есть экспорт текущей сессии Pod. Иначе вы потеряете активный Pod при импорте старых настроек.
 
-1. Export your settings and store a copy in a safe place.
-2. Uninstall AAPS and restart your phone.
-3. Install the new version of AAPS.
-4. Import your settings
-5. Verify all preferences (optionally import settings again)
-6. Activate a new Pod
-7. When done: Export current settings
+1. Экспортируйте ваши настройки и храните копию в надежном месте.
+2. Удалите AAPS и перезапустите телефон.
+3. Установить новую версию AAPS.
+4. Импортируйте настройки
+5. Проверьте все настройки (опционально импортировать настройки снова)
+6. Активируйте новый Pod
+7. Когда закончите: Экспортируйте текущие настройки
 
-### Updating AAPS to a newer version
+### Обновление AAPS до более новой версии
 
-In most cases there is no need to uninstall. You can do an “in-place” install by starting the installation for the new version. This is also possible when on an active Pod  session.
+В большинстве случаев нет необходимости удалять. Вы можете установить "на месте", начав установку новой версии. Это также возможно при активном Pod.
 
-1. Export your settings.
-2. Install  the new AAPS version.
-3. Verify the installation was successful
-4. RESUME the Pod or activate a new Pod.
-5. When done: Export current settings.
+1. Экспортируйте настройки.
+2. Установите новую версию AAPS.
+3. Убедитесь, что установка прошла успешно
+4. ВОЗОБНОВИТЬ Pod или активировать новый Pod.
+5. Когда закончите: Экспортируйте текущие настройки.
 
-### Omnipod driver alerts
+### Оповещения драйвера Omnipod
 
-Please note that the Omnipod Dash driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
+Обратите внимание, что драйвер Omnipod Dash содержит множество уоповещений на вкладке **Начало**, большинство из них являются информационными и могут быть отключены, в то время как некоторые предоставляют пользователю возможности устранения причин оповещения. Ниже приводится краткая информация об основных оповещениях:
 
-* No active Pod No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically be silenced.
-* Pod suspended Informational alert that Pod has been suspended.
-* Setting basal profile failed : Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed.. Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
-* Unable to verify whether SMB bolus succeeded. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments. Alert that the SMB bolus command success could not be verified, you will need to verify the *Last bolus* field on the DASH tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
-* Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.
+* Нет активных Pod Активных сеансов Pod не обнаружено. Это предупреждение можно временно отклонить, нажав **УБРАТЬ**, но оно будет продолжать срабатывать до тех пор, пока не активирован новый Pod. После активации это предупреждение автоматически заглушается.
+* Pod приостановил Информационное оповещение, что работа Pod приостановлена.
+* Не удалось установить базальный профиль: Подача инсулина может быть приостановлена! Обновите статус Pod вручную на вкладке Omnipod и, при необходимости, возобновите подачу.. Информационное оповещение о неудачной настройке базального профиля, необходимо нажать *Обновить* на вкладке Omnipod.
+* Не удалось проверить, успешна ли подача болюса SMB. Если вы уверены, что болюс не подан, следует вручную удалить запись о СМБ из терапии. Предупреждение:, следуетт проверить поле *Last bolus* на вкладке DASH, чтобы понять, удался ли SMB, и если нет, удалите этот элемент из вкладки Терапия.
+* Неопределено, если "задача bolus/TBR/SMB" завершена, пожалуйста, проверьте правильность выполнения.
 
-## Where to get help for Omnipod DASH driver
+## Где получить помощь по драйверу Omnipod DASH
 
-All of the development work for the Omnipod DASH driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
+Вся работа по совершенствованию драйвера Omnipod DASH выполняется на **добровольной** основе просим помнить об этом и, прежде чем запрашивать помощь, придерживаться следующих рекомендаций:
 
--  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#AAPS* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.md).
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+-  **Уровень 0:** Прочитайте соответствующий раздел этой документации, чтобы удостовериться, что вы понимаете, как должна работать функция, с которой вы испытываете трудности.
+-  **Уровень 1:** Если вы все еще сталкиваетесь с проблемами, которые не можете решить, изучая документацию, перейдите в канал *#AAPS* на **Discord** с помощью [этой ссылки-приглашения](https://discord.gg/4fQUWHZ4Mw).
+-  **Уровень 2:** Ищите среди существующих проблем, отмечена ли она в [Issues](https://github.com/nightscout/AAPS/issues) если она существует, подтвердите/комментарий/добавьте информацию о вашей проблеме. Если нет, создайте [новую проблему](https://github.com/nightscout/AndroidAPS/issues) и прикрепите [ваши файлы журналов](../Usage/Accessing-logfiles.md).
+-  **Будьте терпеливы - решения проблем часто требуют времени и терпения как от пользователей, так и от разработчиков.**

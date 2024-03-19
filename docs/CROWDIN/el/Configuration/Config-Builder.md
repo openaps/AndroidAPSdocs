@@ -69,7 +69,7 @@
 
 #### Αλλάξτε το προφίλ στο πρόγραμμα επεξεργασίας προφίλ Nightscout
 
-You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. Μπορείτε να βρείτε τις ρυθμίσεις στις [προτιμήσεις NSClient](Preferences-nsclient).
+You can synchronize changes to the profile in the Nighscout profile editor to local profiles. Μπορείτε να βρείτε τις ρυθμίσεις στις [προτιμήσεις NSClient](Preferences-nsclient).
 
 It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
 
@@ -151,7 +151,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 
 Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
 
-![Διαμόρφωση BG πηγή](../images/ConfBuild_BGSource_AAPS30.png)
+![Διαμόρφωση BG πηγή](../images/ConfBuild_BG.png)
 
 * [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)

@@ -69,7 +69,7 @@ Les profils locaux peuvent également être téléchargés sur Nightscout. Les p
 
 #### Changer de profil dans l'éditeur de profil Nighscout
 
-Vous pouvez synchroniser les modifications du profil depuis l'éditeur de profil Nighscout vers les profils locaux. Les paramètres peuvent être trouvés dans [les préférences NSClient](Preferences-nsclient).
+You can synchronize changes to the profile in the Nighscout profile editor to local profiles. Les paramètres peuvent être trouvés dans [les préférences NSClient](Preferences-nsclient).
 
 Il est nécessaire de cloner toute la base de données Nightscout active pour les profils, et pas seulement le profil avec la flèche bleue ! Les nouveaux enregistrements de la base de données portent ensuite la date courante et peuvent être activés via l'onglet "Profil local".
 
@@ -151,7 +151,7 @@ Les détails sont expliqués sur la [page d'aide des profils](../Configuration/p
 
 Sélectionnez la source de glycémie que vous utilisez - consultez la page [Source Gly](BG-Source.md) pour plus d'informations sur la configuration.
 
-![Générateur de Configuration Source de Glycémie](../images/ConfBuild_BGSource_AAPS30.png)
+![Générateur de Configuration Source de Glycémie](../images/ConfBuild_BG.png)
 
 * [Construisez votre propre application Dexcom (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)

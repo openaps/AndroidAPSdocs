@@ -9,5 +9,5 @@
 * [Omnipod DASH](../Configuration/OmnipodDASH.md)
 * [Medtrum Nano](../Configuration/MedtrumNano.md)
 * [Medtrum 300U](../Configuration/MedtrumNano.md)
-* [Medtronic pump](../Configuration/MedtronicPump.md)
-* [Future possible pump drivers](../Getting-Started/Future-possible-Pump-Drivers.md)
+* [משאבת Medtronic](../Configuration/MedtronicPump.md)
+* [משאבות עתידיות אפשריות](../Getting-Started/Future-possible-Pump-Drivers.md)

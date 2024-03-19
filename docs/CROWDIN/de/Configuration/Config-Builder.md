@@ -69,7 +69,7 @@ Lokale Profile können auch zu Nightscout hochgeladen werden. Die Einstellungen 
 
 #### Profil im Nighscout Profil-Editor ändern
 
-Du kannst Änderungen am Profil im Nighscout Profil-Editor mit lokalen Profilen synchronisieren. Die Einstellungen sind in den [NSClient Einstellungen](Preferences-nsclient)zu finden.
+You can synchronize changes to the profile in the Nighscout profile editor to local profiles. Die Einstellungen sind in den [NSClient Einstellungen](Preferences-nsclient)zu finden.
 
 Es ist erforderlich, alle aktiven Datensätze der gesamten Nightscout Datenbank für die Profile zu klonen und nicht nur ein Profil mit dem blauen Pfeil! Die neuen Datensätze tragen dann das aktuelle Datum und können über die Registerkarte "lokales Profil" aktiviert werden.
 
@@ -151,7 +151,7 @@ Details werden auf der separaten [Profil-Helfer-Seite](../Configuration/profileh
 
 Hier kannst du auswählen, aus welcher Quelle AAPS die BZ-Werte empfangen soll. Weitere Informationen findest du auf der Seite [BZ-Quelle](BG-Source.md).
 
-![Konfigurations-Generator - BZ-Quelle](../images/ConfBuild_BGSource_AAPS30.png)
+![Konfigurations-Generator - BZ-Quelle](../images/ConfBuild_BG.png)
 
 * [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) - Wähle zusätzlich in den Einstellungen “Sende BZ-Werte zu xDrip+”, wenn du die xDrip+ Alarme nutzen willst.
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)

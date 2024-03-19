@@ -126,6 +126,12 @@ Commands must be sent in English, the response will be in your local language if
 - LOOP RESUME
   \* Response: Loop resumed
 
+- LOOP CLOSED
+  \* Response: Current loop mode: Closed Loop
+
+- LOOP LGS
+  \* Response: Current loop mode: Low Glucose Suspend
+
 ### CGM data
 
 - BG
@@ -184,8 +190,8 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 
 - TREATMENTS REFRESH
   \* Response: Refresh treatments from NS
-- AAPSClient RESTART
-  \* Response: AAPSClient RESTART 1 receivers
+- NSClient RESTART
+  \* Response: NSCLIENT RESTART SENT
 - PUMP
   \* Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 - PUMP CONNECT

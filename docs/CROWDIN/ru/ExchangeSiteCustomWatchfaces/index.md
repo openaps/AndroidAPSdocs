@@ -1,36 +1,15 @@
-# Exchange site for custom watchfaces
+# Сайт для обмена самостоятельно собранными циферблатами
 
-![limiting-work-in-progress.jpg](../images/limiting-work-in-progress.jpg)
+Здесь вы можете скачать Zip-файлы с пользовательскими часами, которые подготовили пользователи и хотели поделиться с вами.
 
-Here you can download Zip-Files with custom watchfaces user have prepared and want to share with you.
+Zip-файлы можно загрузить в папку "Изменение местоположения для пользовательских часов" с помощью Pull Request на Github.
 
-The Zip-Files are uploaded via a Pull Request into Github as usual.
+Во время слияния запроса на слияние команда авторов документации извлечет файл мойциферблат.png и заменит его именем Zip-файла.
 
-The pull request needs to include:
+Разметка сетки (в алфавитном порядке)
 
-- an entry in the table below and
-- the Zip-File with the customer watchface in the folder "ExchangeSiteCustomWatchfaces".
-
-The column information should include:
-
-- **ID** is just a unique ascending number.
-- **Name** is the name of the custom watchface you want him to give for identification by name.
-- **Description** is a short description of what makes it's special interest for others.
-- **Zip-File** is link to the Zip-File to download it. The Zip-Files must be stored in the ExchangeSiteCustomWatchfaces folder.
-- **How to contact you?** is the way you can be contacted e.g. Discord, FB messenger, .... This field is not mandatory but helpful especially for new users.
-
-Normal Table
-
-| ID | Name | Описание | Zip-File | How to contact you? |
-| -- | ---- | -------- | -------- | ------------------- |
-|    |      |          |          |                     |
-
-
-Grid Layout
-
-|                                                                                                                                              |                                                                                                                                              |                                                                                                                                              |                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../ExchangeSiteCustomWatchfaces/AAPS-V2.zip) | [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../ExchangeSiteCustomWatchfaces/AAPS-V2.zip) | [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../ExchangeSiteCustomWatchfaces/AAPS-V2.zip) | [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../ExchangeSiteCustomWatchfaces/AAPS-V2.zip) |
-| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../ExchangeSiteCustomWatchfaces/AAPS-V2.zip) | [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../ExchangeSiteCustomWatchfaces/AAPS-V2.zip) | [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../ExchangeSiteCustomWatchfaces/AAPS-V2.zip) | [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../ExchangeSiteCustomWatchfaces/AAPS-V2.zip) |
-| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../ExchangeSiteCustomWatchfaces/AAPS-V2.zip) | [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../ExchangeSiteCustomWatchfaces/AAPS-V2.zip) | [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../ExchangeSiteCustomWatchfaces/AAPS-V2.zip) | [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../ExchangeSiteCustomWatchfaces/AAPS-V2.zip) |
-| [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../ExchangeSiteCustomWatchfaces/AAPS-V2.zip) | [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../ExchangeSiteCustomWatchfaces/AAPS-V2.zip) | [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../ExchangeSiteCustomWatchfaces/AAPS-V2.zip) | [![Watchface Digital Style](../images/Watchface_DigitalStyle.png) <br> **Digital Style**](../ExchangeSiteCustomWatchfaces/AAPS-V2.zip) |
+|                                                                                                                                                         |                                                                                                                                                     |                                                                                                                                                     |                                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Циферблат AAPS_V2](../ExchangeSiteCustomWatchfaces/AAPS_V2-CustomWatchface.png) <br> **AAPS_V2**](../ExchangeSiteCustomWatchfaces/AAPS_V2.zip) | [![AAPS / ИПЖ](../ExchangeSiteCustomWatchfaces/AAPS-CustomWatchface.png) <br> **AAPS**](../ExchangeSiteCustomWatchfaces/AAPS.zip)             | [![Кокпит](../ExchangeSiteCustomWatchfaces/Cockpit-CustomWatchface.png) <br> **Cockpit**](../ExchangeSiteCustomWatchfaces/Cockpit.zip)        | [![Cтимпанк](../ExchangeSiteCustomWatchfaces/SteamPunk-CustomWatchface.png) <br> **Стимпанк**](../ExchangeSiteCustomWatchfaces/SteamPunk.zip) |
+| [![Cтимпанк](../ExchangeSiteCustomWatchfaces/SteamPunk-CustomWatchface.png) <br> **Стимпанк**](../ExchangeSiteCustomWatchfaces/SteamPunk.zip)     | [![Cтимпанк](../ExchangeSiteCustomWatchfaces/SteamPunk-CustomWatchface.png) <br> **Стимпанк**](../ExchangeSiteCustomWatchfaces/SteamPunk.zip) | [![Cтимпанк](../ExchangeSiteCustomWatchfaces/SteamPunk-CustomWatchface.png) <br> **Стимпанк**](../ExchangeSiteCustomWatchfaces/SteamPunk.zip) | [![Cтимпанк](../ExchangeSiteCustomWatchfaces/SteamPunk-CustomWatchface.png) <br> **Стимпанк**](../ExchangeSiteCustomWatchfaces/SteamPunk.zip) |
+| [![Кокпит](../ExchangeSiteCustomWatchfaces/Cockpit-CustomWatchface.png) <br> **Cockpit**](../ExchangeSiteCustomWatchfaces/Cockpit.zip)            | [![Кокпит](../ExchangeSiteCustomWatchfaces/Cockpit-CustomWatchface.png) <br> **Cockpit**](../ExchangeSiteCustomWatchfaces/Cockpit.zip)        | [![Кокпит](../ExchangeSiteCustomWatchfaces/Cockpit-CustomWatchface.png) <br> **Кокпит**](../ExchangeSiteCustomWatchfaces/Cockpit.zip)         | [![Кокпит](../ExchangeSiteCustomWatchfaces/Cockpit-CustomWatchface.png) <br> **Cockpit**](../ExchangeSiteCustomWatchfaces/Cockpit.zip)        |

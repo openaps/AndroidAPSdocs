@@ -227,10 +227,6 @@ Default value: 2
 
 * * *
 
-### Autosens (זיהוי רגישות)
-
-DynamicISF replaces the traditional oref1 deviation based Autosens model and instead uses rolling 24 hour TDD / 7-day average TDD. This is used to adjust basal and targets when the options are selected in preferences.
-
 (Open-APS-features-overview-of-hard-coded-limits)=
 
 ## Overview of hard-coded limits

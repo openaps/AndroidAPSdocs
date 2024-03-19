@@ -1,85 +1,85 @@
 # Устранение неполадок
 
-Вы можете найти много информации об устранении неполадок на страницах этого документа. На этой странице собраны ссылки, которые помогут найти решения вашей проблемы.
+Много информации об устранении неполадок можно найти на страницах этого документа. На этой странице собраны ссылки, которые помогут найти решения вашей проблемы.
 
-Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.html).
+Дополнительную полезную информацию можно также найти в часто задаваемых вопросах [FAQ](../Getting-Started/FAQ.html).
 
-## AAPS app
+## Приложение AAPS
 
-### Building & updating
+### Сборка и обновление
 
 * [Потеряно хранилище ключей](troubleshooting_androidstudio-lost-keystore)
-* [Troubleshooting AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
+* [Устранение неполадок Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 
 ### Настройки
 * [Профиль](Profiles-troubleshooting-profile-errors)
 
   ![Ошибка: Базал не выровнен по часам](../images/Screen_DifferentPump.png)
 
-* [Pump - data from different pump](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
+* [Помпа - данные с разных помп](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
 
   ![Сообщение об ошибке: данные с другой помпы](../images/BasalNotAlignedToHours2.png)
 
-* [Nightscout Client](../Usage/Troubleshooting-NSClient.html)
+* [Клиент Nightscout](../Usage/Troubleshooting-NSClient.html)
 
 ### Применение
-* [Wrong carb values](COB-calculation-detection-of-wrong-cob-values)
+* [Неверные значения углеводов](COB-calculation-detection-of-wrong-cob-values)
 
    ![Ошибка: Медленное поглощение углеводов](../images/Calculator_SlowCarbAbsorption.png)
 
-* [SMS commands](SMS-Commands-troubleshooting)
+* [SMS-команды](SMS-Commands-troubleshooting)
 
-### Frequent bluetooth connection problems
+### Частые проблемы с подключением Bluetooth
 
-This can happen with various pumps. Apart from excluding AAPS from any battery optimization, you can also exclude the system bluetooth app from battery optimization. This can help in some cases. Depending on the phone you use, you will find the bluetooth app differently.
+Это может произойти с различными помпами. Помимо того, что AAPS должен быть исключен из оптимизации батареи, можно также исключить системное приложение Bluetooth из оптимизации батареи. В некоторых случаях это может помочь. В зависимости от используемого телефона приложение bluetooth находится по-разному.
 
-Here are examples how to find them on specific android phones.
-
-
-#### Pixel phones (stock android)
-
-* Go to the android settings, select "Apps".
-
-  ![Android Settings¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
-
-* Select "See all apps"
-
-  ![See all apps](../images/troubleshooting/pixel/02_apps.png)
-
-* On the menu on the right, select "Show system" apps.
-
-  ![Show system apps](../images/troubleshooting/pixel/03_allapps.png)
-
-* Now search and select the app "Bluetooth".
-
-  ![Bluetooth app](../images/troubleshooting/pixel/03_bluetooth.png)
-
-* Click the "App battery usage" and select "Not optimized".
-
-  ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
+Вот примеры того, как найти их на конкретных Android-телефонах.
 
 
-#### Samsung phones
+#### ТелефоныPixel (стоковый android)
 
-* Go to the android settings, select "Apps"
+* Перейдите в настройки Android и выберите "Приложения".
 
-* On the icon that supposedly changes the sorting algorithm (1), select "Show system apps" (2).
+  ![Настройки Android¦приложений](../images/troubleshooting/pixel/01_androidsettings.png)
 
-  ![App Filter](../images/troubleshooting/samsung/Samsung01_Apps.png)
+* Выберите "Просмотреть все приложения"
 
-  ![Show system apps](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+  ![Просмотреть все приложения](../images/troubleshooting/pixel/02_apps.png)
 
-* Now search the bluetooth app and select it to see its settings.
+* В меню справа выберите "Показать системные приложения".
 
-  ![Bluetooth App](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+  ![Показать системные приложения](../images/troubleshooting/pixel/03_allapps.png)
 
-* Select "battery".
+* Теперь найдите и выберите приложение "Bluetooth".
+
+  ![Приложение Bluetooth](../images/troubleshooting/pixel/03_bluetooth.png)
+
+* Нажмите кнопку "Использование батареи приложением" и выберите "Не оптимизировать".
+
+  ![Оптимизация батареи BT](../images/troubleshooting/pixel/04_btunrestricted.png)
+
+
+#### Телефоны Samsung
+
+* Перейдите в настройки Android и выберите "Приложения"
+
+* На значке, который вроде бы изменяет алгоритм сортировки (1), выберите "Показать системные приложения" (2).
+
+  ![Фильтр приложений](../images/troubleshooting/samsung/Samsung01_Apps.png)
+
+  ![Показать системные приложения](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+
+* Теперь найдите приложение bluetooth и выберите его для просмотра настроек.
+
+  ![Приложение Bluetooth](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+
+* Выберите "Батарея".
 
   ![Батарея](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
-* Set it to "Not optimized"
+* Установите на "Не оптимизировать"
 
-  ![Not optimized](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
+  ![Оптимизация отключена](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
 
 ## CGM /  НМГ
@@ -88,13 +88,13 @@ Here are examples how to find them on specific android phones.
 * [Dexcom G6](DexcomG6-troubleshooting-g6)
 * [Libre 3](Libre3-experiences-and-troubleshooting)
 * [Libre 2](Libre2-experiences-and-troubleshooting)
-* [xDrip - no CGM data](xdrip-identify-receiver)
-* [xDrip - Dexcom troubleshooting](xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [xDrip - нет данных CGM](xdrip-identify-receiver)
+* [xDrip - Устранение неполадок Dexcom](xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ## Помпы
 
 * [DanaRS](DanaRS-Insulin-Pump-dana-rs-specific-errors)
-* [Accu-Chek Combo general](Accu-Chek-Combo-Tips-for-Basic-usage)
+* [Accu-Chek Combo общее](Accu-Chek-Combo-Tips-for-Basic-usage)
 * [Accu-Chek Combo + Ruffy](Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
 * [Accu-Chek Insight](Accu-Chek-Insight-Pump-insight-specific-errors)
 * [Medtronic + RileyLink](MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
@@ -102,9 +102,9 @@ Here are examples how to find them on specific android phones.
 ## Телефоны
 
 * [Jelly](../Usage/jelly.md)
-* [Huawei bluetooth & battery optimization](../Usage/huawei.md)
+* [Huawei bluetooth & оптимизация батареи](../Usage/huawei.md)
 
 ## Смарт-часы
 
-* [Troubleshooting Wear app](Watchfaces-troubleshooting-the-wear-app)
+* [Устранение неполадок в приложении Wear](Watchfaces-troubleshooting-the-wear-app)
 * [Sony Smartwatch 3](../Usage/SonySW3.md)

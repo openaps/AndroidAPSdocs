@@ -69,7 +69,7 @@ Místní profily lze také nahrát do Nightscoutu. Nastavení najdete v [nastave
 
 #### Změna profilu v Nightscout editoru profilu
 
-Změny provedené v Nightscout editoru profilu můžete synchronizovat do místního profilu. Nastavení najdete v [nastavení NSClientu](Preferences-nsclient).
+You can synchronize changes to the profile in the Nighscout profile editor to local profiles. Nastavení najdete v [nastavení NSClientu](Preferences-nsclient).
 
 Je nezbytné naklonovat všechny aktuální aktivní záznamy v databázi Nightscout, a ne pouze profil s modrou šipkou! Nové databázové záznamy pak obsahují aktuální datum a lze je aktivovat pomocí záložky "místní profil".
 
@@ -151,7 +151,7 @@ Podrobnosti jsou vysvětleny na stránce nápovědy [pomocník s profilem](../Co
 
 Vyberte jaký zdroj glykémií používáte. Viz stránka [Zdroj glykémie](BG-Source.md) pro další informace o nastavení.
 
-![Konfigurace zdroje glykémie](../images/ConfBuild_BGSource_AAPS30.png)
+![Konfigurace zdroje glykémie](../images/ConfBuild_BG.png)
 
 * [Sestav si vlastní Dexcom aplikaci (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)

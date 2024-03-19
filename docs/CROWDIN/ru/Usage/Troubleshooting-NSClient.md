@@ -1,16 +1,16 @@
-(Troubleshooting-NSClient-troubleshooting-nsclient)=
+(Устранение неполадок - NSClient-устранение неполадок - nsclient)=
 
-# Устранение неисправностей клиента Nightscout
+# Устранение неисправностей AAPSClient (старые названия- Клиент NS, NSClient - прим. перев.)
 
-NSClient relies on stable communication with Nightscout. An unstable connection leads to synchronization errors and high data usage.
+Для правильной работы AAPSClient требуется стабильное соединение с сайтом Nightscout. Нестабильная связь приводит к ошибкам синхронизации и высокой интенсивности использования данных.
 
-If nobody is following you on Nightscout you can choose to pause NSClient to save battery life or you can choose to setup NSClient so that it only connects when on Wi-Fi and/or during charging.
+Если никто не следит за вами на Nightscout - вы можете приостановить AAPSClient для экономии заряда аккумулятора или вы можете настроить NSClient таким образом, чтобы он подключался только по Wi-Fi и/или во время зарядки.
 
 * Как обнаружить нестабильную связь?
 
-Go to NSClient tab in AAPS and watch the log. The expected behavior is to receive a PING every ~30s and almost no reconnection messages. Если вы видите много повторных попыток соединения, то это свидетельство проблем со связью.
+Перейдите на вкладку NSClient в AAPS и просмотрите журнал событий. Обычно отклик PING происходит каждые ~ 30 секунд и сообщения о повторном подключении не поступают. Если вы видите много повторных попыток соединения, то это свидетельство проблем со связью.
 
-Since AAPS version 2.0, when such behavior is detected, NSClient is paused for 15 minutes and the message "NSClient malfunction" is displayed on the main Overview screen.
+Начиная с версии AndroidAPS 2.0, при обнаружении такого поведения, происходит приостановка NSClient на 15 минут и на главном экране появляется сообщение "Сбой (ошибка) NSClient".
 
 * перезапуск
 
@@ -22,24 +22,24 @@ Since AAPS version 2.0, when such behavior is detected, NSClient is paused for 1
 
 * Проблемы с телефоном
 
-Android может перевести телефон в спящий режим. Check if you have an exception for AAPS in your phones power options to allow it to run in the background all the time.
+Android может перевести телефон в спящий режим. Убедитесь, что AAPS в опциях питания имеет разрешение на постоянную работу в фоновом режиме.
 
-Check the NSClient again when in strong network signal location.
+Проверьте Клиент NS заново, находясь в зоне с хорошим уровнем сигнала.
 
-Try another phone.
+Попробуйте другой телефон.
 
 * Nightscout
 
-If your site is hosted on Azure, many people have found that connection issues have improved since moving to Heroku.
+Если ваш сайт размещен на Azure: Многие люди обнаружили, что проблемы подключения уменьшились после перехода на Heroku.
 
-A workaround to connection issues in Azure is to set in Application settings HTTP protocol to 2.0 and Websockets to ON
+Для решения проблем подключения в Azure необходимо ВКЛЮЧИТЬ в настройках приложения HTTP протокол 2.0 и Websockets
 
-* No BG reading from Nightscout
+* Нет данных ГК из Nightscout
 
-If AAPS connects to Nightscout correctly but does BG displays as N/A. Go to NSCLIENT tab, press the 3 dot menu top right, Click NSClient Preferences -> Synchronization turn on "Receive/backfill CGM data".
+Если AAPS правильно подключается к Nightscout, но ГК отображается как n/a Перейдите на вкладку NSCLIENT, нажмите в верхней части меню с тремя точками, нажмите NSClient Preferences -> полная синхронизация.
 
-* If you still get an error...
+* Если все еще приходят сообщения об ошибке...
 
-Check the size of your database in MongoDB (or via the database size plugin in nightscout). If you are using the free tier in MongoDB, 496MB means it is full and needs to be cleaned up. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
+Проверьте размер вашей базы данных в MongoDB (или через плагин размера базы данных в NS). Если вы используете бесплатный платежный план в MongoDB, то 496MB означает, что база заполнена и ее следует очистить. [Следуйте этим инструкциям Nightscout для проверки размера вашей базы данных и удаления данных](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
 
-Before clearing data from your database and if you haven't already set it up, you should consider donating your AAPS data to the Open Humans project (for research). The instructions are on the [OpenHumans configuration page](../Configuration/OpenHumans).
+Перед очисткой данных из базы данных и подумайте о передаче своих данных AAPS в проект Open Humans (для исследований). Инструкции находятся на [странице конфигурации OpenHumans](../Configuration/OpenHumans).

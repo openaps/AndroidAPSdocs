@@ -122,6 +122,10 @@ Komutlar İngilizce olarak gönderilmelidir, yanıt dizesi ise programınızın 
 
 - LOOP RESUME \* Yanıt: Döngü devam ettirildi
 
+- LOOP CLOSED \* Response: Current loop mode: Closed Loop
+
+- LOOP LGS \* Response: Current loop mode: Low Glucose Suspend
+
 ### CGM (Sürekli glikoz ölçüm) verileri
 
 - BG \* Yanıt: Son KŞ: 5,6 4 dakika önce, Delta: -0,2 mmol, IOB: 0,20U (Bolus: 0,10U Bazal: 0,10U)
@@ -158,7 +162,7 @@ Son gerçekleşen bolus komutundan sonra 15 dakika için uzaktan bolusa izin ver
 ### Diğer
 
 - TREATMENTS REFRESH \* Yanıt: Tedavileri NS'den yenile
-- AAPSClient RESTART \* Response: AAPSClient RESTART 1 receivers
+- NSClient RESTART \* Response: NSCLIENT RESTART SENT
 - PUMP \* Yanıt: Son Bağlantı: 1dk önce Geçici: 0.00Ü/sa @11:38 5/30dk. AİNS: 0.5U Rezerv: 34Ü Pil: 100
 - PUMP CONNECT \* Yanıt: Pompa yeniden bağlandı
 - PUMP DISCONNECT *30* \* Yanıt: *30* dakika boyunca pompanın bağlantısını kesmek için Kullanıcı için Authenticator uygulamasından gelen kodu ve ardından PIN kodunu girerek yanıt verin

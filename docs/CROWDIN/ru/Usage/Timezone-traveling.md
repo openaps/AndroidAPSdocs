@@ -8,9 +8,9 @@
 
 ## DanaRv2 / DanaRS
 
-These pumps need a special care because AAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
+Эти помпы требуют особого внимания, т. к. AAPS использует историю помпы, но электронный журнал помпы не имеет штампа часового пояса. **Это означает, что если вы просто измените часовой пояс в телефоне, записи будут читаться с различным часовым поясом и произойдет их задвоение.**
 
-To avoid this there are two possibilities:
+Во избежание этого существует две возможности:
 
 ### Вариант 1: продолжать пользоваться домашним временем и специально созданным профилем сдвига по времени
 
@@ -26,13 +26,13 @@ To avoid this there are two possibilities:
    
    * напр. Vienna -> New York: сдвиг профиля +6 часов
    * напр. Vienna -> Sydney: сдвиг профиля --8 часов
-* Probably not an option if using [patched LibreLink app](Libre2-time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
+* Возможно, не подойдет при использовании модифицированного приложения [LibreLink app](Libre2-time-zone-travelling) поскольку при запуске нового сенсора Libre 2 на смартфоне должен быть настроен автоматический выбор времени.
 
 ### Вариант 2: Удалить историю работы помпы
 
 * В настройках телефона отключите 'Автоматический выбор даты и времени' (изменение часового пояса вручную)
 
-When get out of plane:
+Когда выйдете из самолета:
 
 * выключите помпу
 * измените часовой пояс на телефоне
@@ -46,45 +46,45 @@ When get out of plane:
 
 ## Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Драйвер автоматически синхрониззирует время на помпе и на телефоне.
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change.
+Insight также регистрирует прошедшие записи и момент смены времени и продолжительность до текущего момента. Таким образом, правильное время может быть определено в AAPS, несмотря на изменение времени.
 
-It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
+Это может вызвать неточности в определении суммарных суточных доз инсулина TDD. Однако это не должно быть проблемой.
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+Поэтому пользователю Insight не нужно беспокоиться об изменениях часового пояса и изменении времени. Данное правило содержит один недостаток: у помпы Insight очень маленькая внутренняя батарея для хранения времени. во время замены "настоящей" батареи. Если замена батареи занимает слишком много времени, то в этой внутренней батарее может кончиться заряд, время на часах будет сброшено, и вам будет предложено ввести новое время и дату после ее установки. В этом случае все записи до замены батареи пропускаются в расчётах в AAPS, так как правильное время должным образом не может быть определено.
 
 ## Помпа Accu Chek Combo
 
-The [new Combo driver](../Configuration/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the new driver programs into the pump. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
+[Новый драйвер Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md) автоматически синхрониззирует время на помпе и на телефоне. Combo не может хранить часовые пояса, только местное время, и новый драйвер программирует в помпе именно текущее местное время. Кроме того, драйвер хранит часовой пояс в локальных настройках AAPS, чтобы иметь возможность преобразовать местное время помпы в текущее время при смещении часового пояса. Пользователю не надо ничего делать; если время в Combo слишком сильно отклоняется от текущего времени телефона, время помпы регулируется автоматически.
 
-Note that this takes some time, however, since it can only be done in the remote-terminal mode, which is generally slow. This is a Combo limitation that cannot be overcome.
+Заметьте, что это занимает некоторое время, так как происходит в режиме дистанционного терминала, который работает медленно. Это ограничение Combo не может быть преодолено.
 
-The old, Ruffy-based driver does not adjust the time automatically. The user has to do that manually. See below for the steps necessary to do that safely in case the timezone / daylight savings is the reason for the change.
+Старый, основанный на Ruffy драйвер не настраивает время автоматически. Пользователь должен делать это вручную. Ниже вы можете ознакомиться с шагами, необходимыми для безопасной перенастройки в случае, если причиной изменения является часовой пояс / сезонное время.
 
 (Timezone-traveling-time-adjustment-daylight-savings-time-dst)=
 
 ## Medtrum
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Драйвер автоматически синхрониззирует время на помпе и на телефоне.
 
-Timezone changes keep the history in tact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and IOB. If you change time manually double check the IOB.
+Изменения часового пояса не затрагивают историю, их смена может повлиять только на зачение суммарной суточной дозы TDD. Изменение вручную времени на телефоне может вызвать проблемы с историей и активным инсулином IOB. Если вы меняете время вручную, проверьте IOB.
 
-When the timezone or time changes running TBR's are stopped.
+Когда изменяются часовой пояс или время, временная скорость базала TBR будет остановлена.
 
 # Корректировки при переходе на летнее/зимнее время (DST)
 
-Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
+В зависимости от настроек помпы и мониторинга скачки времени могут приводить к проблемам. В помпе Combo, например, происходит повторное считывание истории, что ведет к задваиванию данных. Так что настраивайте переход на новое время днем а не ночью.
 
-If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
+Если вы подаете болюс при помощи калькулятора болюса, не применяйте в рассчетах активные углеводы COB и активный инсулин IOB если не уверены в их абсолютной точности -- лучше ими не пользоваться пару часов после перехода на новое время.
 
-(Timezone-traveling-accu-chek-combo)=
+(Пересечение-часовых-поясов-accu-chek-combo)=
 
 ## Помпа Accu Chek Combo
 
-**NOTE**: As mentioned above, this secton is only valid for the old, Ruffy-based driver. The new driver adjusts date and time and DST automatically.
+**ПРИМЕЧАНИЕ**: Как уже говорилось выше, этот раздел относится к старому драйверу, основанному на Ruffy. Новый драйвер настраивает дату, текущее и сезонное время автоматически.
 
-AAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
+AndroidAPS подает оповещение, если время на помпе и на телефоне различается слишком сильно. При переходе на летнее/зимнее время это происходило бы посреди ночи. Чтобы предотвратить это и не нарушать свой сон, выполните следующие шаги:
 
 ### Действия перед переводом времени
 
@@ -98,7 +98,7 @@ AAPS will issue an alarm if the time between pump and phone differs too much. In
    * Список таких стран здесь [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * Для среднеевропейского времени CET это может быть "Браззавиль" (Kongo). Измените часовой пояс телефона на Kongo.
 
-3. In AAPS refresh your pump.
+3. В AndroidAPS обновите связь с помпой.
 
 4. Перейдите на вкладку терапии... Если видите дублирующие записи:
    
@@ -109,11 +109,11 @@ AAPS will issue an alarm if the time between pump and phone differs too much. In
 
 ### Действия после перевода времени
 
-A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
+Хорошее время для перехода - при малом IOB. Например, за час до завтрака, (все болюсы в истории помпы будут представлены в виде небольших SMB. И COB и IOB должны быть близки к нулю)
 
 1. Измените часовой пояс на ваше текущее местоположение и включите автоматический часовой пояс.
-2. AAPS will soon start alerting you that the Combo’s clock doesn’t match. Обновите время помпы вручную с помощью экрана и кнопок помпы.
-3. On the AAPS “Combo” screen, press Refresh.
+2. AAPS вскоре начнет подавать оповещения, что время устройства не совпадает с Combo. Обновите время помпы вручную с помощью экрана и кнопок помпы.
+3. На вкладке AAPS “Combo” нажмите Обновить.
 4. Затем перейдите на вкладку терапии и проверьте, есть ли события в будущем. Их не должно быть много.
    
    * НЕ нажимайте "Удалить записи в будущем"
@@ -131,8 +131,8 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 
 * Переключение на DST производится автоматически. Никаких действий не требуется.
 
-## Other pumps
+## Другие помпы
 
-* This feature is available since AAPS version 2.2.
-* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
-* You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
+* Эта функция доступна начиная с AAPS версии 2.2.
+* Во избежание непредвиденных сложностей Цикл будет деактивирован на 3 часа после перехода на новое время. Это делается по соображениям безопасности (напр. слишком большой активный инсулин IOB из-за задваивания болюсов перед переходом на летнее/зимнее время).
+* На главном экране до перехода на новое время появится уведомление о том, что цикл будет временно отключен. Это сообщение появится без звука, вибрации или чего-нибудь подобного.

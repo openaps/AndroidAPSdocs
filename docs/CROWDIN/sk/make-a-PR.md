@@ -165,7 +165,7 @@ We are not translating images at the moment.
 
 - Screenshots from web pages images should be up to **1050 pixels wide**.
 - Diagrams of process flows should be up to **1050 pixels wide**.
-- Screenshots from the app should be up to **300 to 400 pixels wide**.
+- Screenshots from the app should be up to **500 pixels wide**.
 
 ### Links
 

@@ -5,45 +5,50 @@
 
 En la primavera de 2022, Dexcom G7 recibió el certificado CE y se vendió a finales de octubre del mismo año.
 
-Cabe destacar que el sistema Dexcom G7, en comparación con Dexcom G6, no suaviza los valores, ni en la app, ni en el lector. Más detalles al respecto [aquí](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app). Por consiguiente, hay que suavizar los valores para poder utilizarlos con sentido en AAPS.
+Cabe destacar que el sistema Dexcom G7, en comparación con Dexcom G6, no suaviza los valores, ni en la app, ni en el lector. Más detalles al respecto [aquí](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
-![G7 english](https://github.com/blaqone/AndroidAPSdocs/assets/37814299/6fe30b84-227a-4bae-a9a5-527cee341dbf)
+![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
-## 1.  Patched Dexcom G7 App (DiAKEM)
+:::{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
+:class: warning **Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 values.  
+:::
 
-**Nota: Es necesario AAPS 3.2.0.0 o superior.**
+## 1.  Aplicación Dexcom G7 parcheada (DiAKEM)
+
+**Note: AAPS 3.2.0.0 or higher is required!**
 
 ### Instale una nueva aplicación parcheada de G7 e inicia el sensor.
 
-A patched Dexcom G7 app (DiAKEM) gives acess to the Dexcom G7 data. Esta no es la aplicación BYODA, ya que esta aplicación no puede recibir datos de Dexcom G7 por el momento.
+A patched Dexcom G7 app (DiAKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
-Desinstala la aplicación original de Dexcom si la estabas utilizando antes (puedes continuar una sesión de sensor en curso, pero anota el código del sensor antes de desinstalar la aplicación).
+Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
 
-Descarga e instala la aplicación patched.apk [aquí](https://github.com/authorgambel/g7/releases).
+Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
 
-Introduce el código del sensor en la aplicación parcheada.
+Enter sensor code in the patched app.
 
-Sigue las recomendaciones generales para la higiene del MCG y la colocación del sensor que encontrará [aquí](../Hardware/GeneralCGMRecommendation.md).
+Follow the general recommendations for CGM hygiene and sensor placement found [here](../Hardware/GeneralCGMRecommendation.md).
 
-Tras la fase de calentamiento, los valores se muestran como de costumbre en la aplicación G7.
+After the warm-up phase, the values are displayed as usual in the G7 app.
 
 ### Configuración en AAPS
 
-Para la configuración en AAPS
-- Selecciona "BYODA" en la tabla de configuraciones, aunque no sea la aplicación BYODA.
-- Si AAPS no recibe ningún valor, cambie a otro Orige de BG y, a continuación, vuelve a "BYODA" para invocar la consulta para aprobar el intercambio de datos entre AAPS y BYODA.
+For the configuration in AAPS
+- Select 'BYODA' in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source) - even if it is not the BYODA app!
 
-El suavizado de los valores de glucosa puede activarse activando el plugin "Suavizado promedio" o "Suavizado exponencial" en la tabla de configuraciones. Para desactivarlo, selecciona la opción "Sin suavizado". "Suavizado exponencial" es más agresivo y reescribe el valor de glucosa más reciente, pero es bueno para tratar el ruido pesado. "Suavizado promedio" es muy parecido al suavizado que se hacía con Dexcom G6 BYODA y sólo reescribe los valores pasados pero no el valor actual y por lo tanto, tiene un tiempo de respuesta más rápido.
+- If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
 
-**Suavizado exponencial** **DEBE** estar activado para un uso significativo de los valores G7.
+## 2. xDrip+ (direct connection to G7)
 
-## 2. Xdrip+ (direct connection to G7)
+- Sigue las instrucciones aquí: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- Select  xDrip+ in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-- Follow the instructions here: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- En AAPS, selecciona > Configuración > Origen BG > xDrip+. Ajusta la configuración de xDrip+ según las explicaciones de la página de configuración de xDrip+ [Configuración de xDrip+](../Configuration/xdrip.md).
+- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md)
 
-## 3. xDrip+ (modo companion)
+## 3. xDrip+ (companion mode)
 
--   Descarga e instala xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- Como fuente de datos hardware en xDrip debes seleccionar "Companion App" y en Ajustes menos comunes > Ajustes Bluetooth > debes activar "Companion Bluetooth".
-- En AAPS, selecciona > Configuración > Origen BG > xDrip+. Ajusta la configuración de xDrip+ según las explicaciones de la página de configuración de xDrip+ [Configuración de xDrip+](../Configuration/xdrip.md). 
+-   Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
+-   Select  xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+
+-   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md) 

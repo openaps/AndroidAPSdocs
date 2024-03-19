@@ -9,39 +9,39 @@
 
 Одобрение выполняется человеком. Как некоммерческая организация мы не выставляем какие-либо сроки, но обычно одобрение занимает меньше 1 дня. Если вы не получили одобрения - пожалуйста, обратитесь к команде документации через Facebook или Discord (русскоязычные пользователи могут написать в группу AndroidApsGroup в Telegram).
 
-    <br />* When we approve you, click the flag
-       ![When we approve you, click the flag](./images/translation_flags.png)
+    <br />* Когда мы утвердим вас, нажмите на флажок
+    ![Когда мы утвердим вас, нажмите на флажок](./images/translation_flags.png)
     
-    ## Translation of the app
+    ## Перевод приложения
     
-    (translations-translate-strings-for-AAPS-app)=
-    ### Translate strings for AAPS app
+    (переводы-перевести-строки-для-приложения-AAPS-)=
+    ### Перевод строк для приложения AAPS
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. Если вы не настроили строки, которые хотите переводить - для начала нажмите кнопку "Translate All" ("Перевести всё"). Отобразятся требующие перевода строки.
+    * Если у вас нет предпочтений в отношении строк, которые вы переводите, просто нажмите кнопку "Перевести все", и приступайте к работе. Если вы не настроили строки, которые хотите переводить - для начала нажмите кнопку "Translate All" ("Перевести всё"). Отобразятся требующие перевода строки.
     
        ![Click translate all](./images/translations-click-translate-all.png)
     
     * Если вы хотите перевести какой-то конкретный файл - найдите его с помощью поля для поиска или в структуре файлов, нажмите на него и начните переводить строчку за строчкой.
     
-       ![Click strings.xml](./images/translations-click-strings.png)
+       ![Нажмите строки.xml](./images/translations-click-strings.png)
     
-    * Translate sentences on left side by adding new translated text or use & edit suggestion 
+    * Переведите предложения слева, добавив новый переведенный текст или воспользуйтесь предлагаемым вариантом перевода & редактируйте предложенное
     
-       ![Translation app](./images/translations-translate.png)
-    
-    
-    ### Proofread strings for AAPS app
-    
-    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
-    
-       ![Proofreading mode app](./images/translations-proofreading-mode.png) 
+    ![Приложение для перевода](./images/translations-translate.png)
     
     
-      and approve translated texts 
+    ### Вычитайте строки для приложения AAPS
     
-       ![approve text](./images/translations-proofreading.png)
+    * Корректоры начинают с выбора "Корректура" при входе с начального экрана языка.
     
-    When a proofreader approves a translation it will be added to the next version of AAPS.
+       ![Приложение в режиме корректуры](./изображения / переводы-режим корректуры.png)
+    
+    
+    и утвердить переведенные тексты
+    
+    ![утвердить текст](./изображения/переводы-корректура.png)
+    
+    Когда корректор одобрит перевод, он будет добавлен в следующую версию AAPS.
     
     (translations-translation-of-the-documentation)=
     ## Translation of the documentation

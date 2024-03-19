@@ -122,6 +122,10 @@ Los comandos deben enviarse en inglés, la respuesta será en tu idioma local si
 
 - LOOP RESUME \* Respuesta: El lazo se ha reanudado
 
+- LOOP CLOSED \* Response: Current loop mode: Closed Loop
+
+- LOOP LGS \* Response: Current loop mode: Low Glucose Suspend
+
 ### Datos del MCG
 
 - BG \* Respuesta: Última BG: 5.6 hace 4min, Delta: -0,2 mmol, IOB: 0.20U (Bolo: 0.10U Basal: 0.10U)
@@ -158,7 +162,7 @@ No se permite el bolo remoto en los próximos 15 minutos (este valor sólo es ed
 ### Otros
 
 - TREATMENTS REFRESH \* Respuesta: Actualizar tratamientos desde NS
-- AAPSClient RESTART \* Respuesta: AAPSClient RESTART 1 receptor
+- NSClient RESTART \* Response: NSCLIENT RESTART SENT
 - PUMP \* Respuesta: Última conexión: hace 1 minuto. Temp: 0,00U/h @11:38. 5/30 min. IOB: 0,5 U. Reservorio: 34 U. Batería: 100%
 - PUMP CONNECT \* Respuesta: Bomba reconectada
 - PUMP DISCONNECT *30* \* Respuesta: Para desconectar la bomba durante *30* minutos, responda con el código de la aplicación de autenticación del usuario seguido del PIN

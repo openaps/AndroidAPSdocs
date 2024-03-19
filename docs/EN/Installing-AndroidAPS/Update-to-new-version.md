@@ -2,20 +2,19 @@
 
 ## Build yourself instead of download
 
-**AAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
+**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.
 
 ## Important notes
+* Please update to the new version of **AAPS** as soon as possible after a new release is available.
+* When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
+* The new version will also be announced on Facebook at the time of release.
+* Following the release, please read the [Release Notes](../Installing-AndroidAPS/Releasenotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
+* You need to use version **[Hedgehog (2023.1.1) or Iguana (2023.2.1)](https://developer.android.com/studio/)** of Android Studio. If your version is older, please update first Android Studio first! 
 
-* Please update as soon as possible after a new release is available. You will receive an [information on the AAPS home screen](Releasenotes-release-notes) about the new version.
-* As of version 2.7 repository location changed to [https://github.com/nightscout/AndroidAPS](https://github.com/nightscout/AndroidAPS). If you are not familiar with git the easiest way for update is remove directory with AAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
-* Please use **[Android Studio Version 2020.3.1 (Arctic Fox)](https://developer.android.com/studio/)** or newer to build the apk.
-* [Windows 10 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1.
-* Make sure you read the [Release Notes](../Installing-AndroidAPS/Releasenotes.md) for the current version
+## Overview for updating to a new version of AAPS
 
-## Overview for updating your AAPS version
-
-1. [Export your settings](../Usage/ExportImportSettings-export-settings) from the existing AAPS version on your phone.
-You might not need it, but better be save than sorry.
+1. [Export your settings](../Usage/ExportImportSettings-export-settings) from the existing **AAPS** version on your phone.
+You might not need it, but better be safe than sorry.
 2. [Update local copy](Update-to-new-version-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
 3. [Build signed APK](Update-to-new-version-build-the-signed-apk)
 4. [Transfer the built apk](Building-APK-transfer-apk-to-smartphone) to your phone and install it
@@ -30,9 +29,10 @@ See the [Export & import settings](ExportImportSettings-export-settings) page if
 (Update-to-new-version-update-your-local-copy)=
 ## 2. Update your local copy
 
-As of version 2.7 repository location changed to [https://github.com/nightscout/AndroidAPS](https://github.com/nightscout/AndroidAPS). If you are not familiar with git the easiest way for update is remove directory with AAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
-
-If you have already changed the URL or update from version 2.8.x, follow these steps:
+:::{admonition} WARNING
+:class: warning
+If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../Installing-AndroidAPS/building-AAPS), as this guide will not work for you!
+:::
 
 * Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
 
@@ -93,3 +93,5 @@ If anything goes wrong, don't panic.
 Take a breath!
 
 Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) if your problem is already documented!
+
+If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).

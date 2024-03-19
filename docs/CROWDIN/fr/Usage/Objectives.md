@@ -11,7 +11,7 @@ Si vous voulez revenir en arrière sur les objectifs terminés voir les [explica
 - Sélectionnez la source de glycémie adaptée à votre configuration.  Voir [Source GLY](../Configuration/BG-Source.md) pour plus d'informations.
 - Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AAPS driver for looping) to ensure your pump status can communicate with AAPS.
 - If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AAPS.
-- Suivez les instructions de la page [Nightscout](../Installing-AndroidAPS/Nightscout.md) pour s'assurer que Nightscout peut recevoir et afficher ces données.
+- You need to establish a data repository/reporting platform to complete this objective. That can be accomplished with either Nightscout or Tidepool (or both). Follow instructions at the [Nightscout](../Installing-AndroidAPS/Nightscout.md) or [Tidepool](../Installing-AndroidAPS/Tidepool.md) page for instructions.
 - Notez que l'URL dans NSClient doit être **SANS /api/v1/** à la fin - voir les [paramètres NSClient dans les Préférences](Preferences-nsclient).
 
 *You may need to wait for the next blood glucose reading to arrive before AAPS will recognise it.*
@@ -29,23 +29,34 @@ Si vous voulez revenir en arrière sur les objectifs terminés voir les [explica
   ```
 
 (Objectives-objective-3-prove-your-knowledge)=
+
 ## Objectif 3 : Prouver ses connaissances
 
-- Pass a multiple-choice exam testing your AAPS knowledge.
+Objective 3 is a multiple choice test based on questions designed to test your theoretical knowledge of **AAPS**.
 
-- Cliquez sur le texte orange "Pas encore terminé" pour accéder à la page avec la question et répondre aux options.
+Some users find Objective 3 to be the most difficult objective to complete. Please do read the AAPS documents in conjunction with the questions. If you are genuinely stuck after researching the **AAPS** documents, please search or ask for help on the Facebook or Discord group. These groups can provide friendly hints or redirect you to the relevant part of the **AAPS** documents.
 
-  ```{image} ../images/Objective3_V2_5.png
-  :alt: Screenshot objective 3
-  ```
+To proceed with Objective 3, click on the orange text “Not completed yet” to access the relevant question. Please read each question and select your answer(s).
 
-- Des liens sont fournis pour vous guider si vous n'êtes pas certain d'avoir les bonnes réponses.
 
-- Les questions pour l'objectif 3 ont été entièrement réécrites par des locuteurs natifs depuis AAPS 2.8. Les nouvelles questions couvrent les mêmes sujets de base et quelques nouveaux sujets.
 
-- Même si vous avez réussi l'objectif 3 dans les versions précédentes, cet objectif contiendra de nouvelles questions non répondues.
+Within each question, a hyperlink to the **AAPS** documents will guide you to the relevant section of the document which you should read in order to locate the correct answer.
 
-- Les questions non répondues ne vous affecteront que si vous commencez un nouvel objectif. En d'autres termes, si vous avez déjà terminé tous les objectifs, vous pouvez attendre et répondre aux nouvelles questions un peu plus tard sans perdre de fonctions AAPS.
+
+[Obj3_Screenshot 2023-12-05 223422](https://github.com/openaps/AndroidAPSdocs/assets/137224335/77347516-e24e-459d-98ab-acbb49a3d4e8)![image](https://github.com/openaps/AndroidAPSdocs/assets/137224335/ca756b8e-efbc-4427-b281-ac953ce16718)
+
+
+
+For each question, there may be more than one answer that is correct! If an incorrect answer is selected, the question will be time locked for a certain amount of time (60 minutes) before you can go back and answer the question.
+
+
+After updating to a new version of **AAPS**, new questions may be added to cover a prevalent issue picked up by **AAPS** or alternatively to test your knowledge of a new feature of **AAPS** as released.
+
+
+When **AAPS** is installed for the first time, you will have to complete Objective 3 entirely in order to move onto Objective 4. Each objective is required to be completed in sequential order. New features will gradually be unlocked as progress is made through the objectives.
+
+__What happens if new questions are added later to Objective 3?__ From time to time, new features are added to **AAPS** which may require a new question to be added to Objective 3. As a result, any new question added to Objective 3 will be marked as “incomplete” because **AAPS** will require you to action this. As each Objective is independent, you will not lose the existing functionality of **AAPS** providing the other objectives remain completed.
+
 
 ## Objectif 4 : Démarrage de la boucle ouverte
 

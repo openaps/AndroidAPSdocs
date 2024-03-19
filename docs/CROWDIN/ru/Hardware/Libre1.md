@@ -1,29 +1,49 @@
-# Freestyle Libre 1
+# Работа с Freestyle Libre 1
 
-To use your Libre as a CGM that is getting new BG values every 5 minutes you first need to buy a NFC to Bluetooth adapter like:
+Чтобы использовать Libre в качестве мониторинга, который получает новые значения гликемии каждые 5 минут без необходимости сканирования сенсора, нужно сначала приобрести адаптер NFC - Bluetooth (коммерчески доступные устройства, основанные на устаревшем проекте [LimiTTer](https://github.com/JoernL/LimiTTer)).
 
--   MiaoMiao Reader (version 1 or 2) <https://www.miaomiao.cool/>
--   Blucon Nightrider <https://www.ambrosiasys.com/our-products/blucon/>
--   Bubble <https://bubbleshop.eu/> or for Russian users <https://vk.com/saharmonitor/>
+:::{admonition} (предостережение)Libre2, Libre 1 US и Libre Pro :class: предупреждение Убедитесь, что мост и приложение, которым вы собираетесь пользоваться, совместимы с вашим сенсором  
+:::
 
-Additionally it is possible to use a specific watch, the Sony Smartwatch 3 which has an NFC chip which can be enabled and can be used as a NFC collector. However the custom NFC to Bluetooth adapters listed above offer a less complex solution and would be used by the majority of those wanting to use their Libre 1 as a CGM.
+На рынке имеется несколько адаптеров:
 
--   Sony Smartwatch 3 (SWR50) <https://github.com/pimpimmi/LibreAlarm/wiki/>
+-   [MiaoMiao Reader](https://www.miaomiao.cool/) (версия 1, 2 или 3) также доступны на AliExpress.
+-   [Blucon Nightrider](https://www.ambrosiasys.com/our-products/blucon/) (недавние версии прошивки могут быть несовместимы со всеми приложениями, приложение поставщика не транслирует данные в AAPS)
+-   [Bubble (или Bubble Mini)](https://www.bubblesmartreader.com/) от европейских поставщиков ([Bubblan](https://www.bubblan.org/), [BubbleShop](https://bubbleshop.eu/)) или для российских пользователей [здесь](https://vk.com/saharmonitor/). Также доступны на AliExpress.
+-   Atom для российских пользователей.
 
-As it currently stands, if using Libre 1 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within the SMB algorithm. The BG values of Libre 1 are not smooth enough to use it safely. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+Исторически, можно использовать часы, Sony Smartwatch 3 (SWR50), имеющие чип NFC, который можно включить как коллектор. Однако перечисленные выше адаптеры NFC Bluetooth гораздо удобнее, их предпочитает большинство пользователей, желающих иметь постоянный мониторинг с Libre 1 (не американской).
 
-## При использовании xdrip+
+-   Sony Smartwatch 3 (SWR50)  <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
--   If not already set up then download xDrip+ and follow instructions on [LimiTTEer](https://github.com/JoernL/LimiTTer) or [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki).
--   In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
--   In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
--   If you want to be able to use AAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
--   Select xDrip+ in ConfigBuilder (setting in AAPS).
--   For settings in xDrip+ with screenshots see [xDrip+ settings page](../Configuration/xdrip.md). There is a part for basic xDrip+ settings and for Freestyle Libre xDrip+ settings.
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md).
+В настоящее время, если Libre 1 используется в качестве источника ГК, невозможно активировать «Включать SMB всегда» и «Включить SMB после приема углеводов». Значения ГК Libre 1 недостаточно сглажены для безопасного пользования. Подробнее см [Сглаживание данных ГК](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
-## При использовании Glimp
+## 1. Использование xDrip+
 
--   You will need Glimp version 4.15.57 or newer. Older versions are not supported.
--   If not already set up then download Glimp and follow instructions on [Nightscout](https://nightscout.github.io/uploader/setup/#glimp).
--   Select Glimp in ConfigBuilder (setting in AAPS).
+-   xDrip+ поддерживает Miaomiao, Bubble, Blucon, Atom и LibreAlarm.
+-   Вы можете безопасно загрузить [ новую (стабильную) версию APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), если только вам не нужны новейшие функции. В этом случае следует загружать т. н. [Ночную сборку](https://github.com/NightscoutFoundation/xDrip/releases).
+-   Следуйте инструкциям по установке на странице настроек [xDrip+](../Configuration/xdrip.md).
+-    Вам также нужен [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) для Libre 1 США (и Libre 2 EU).
+-   В [Конфигураторе, Источник ГК](../Configuration/Config-Builder.md#bg-source) выберите xDrip+.
+
+## 2. Использование Glimp
+
+-   Glimp поддерживает Miaomiao, Blucon и Bubble для Libre 1 и Libre 2 EU.
+-   Вам понадобится Glimp версии 4.15.57 или выше. Более старые версии не поддерживаются.
+-   Установите [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia).
+-   В [Конфигураторе, Источник ГК](../Configuration/Config-Builder.md#bg-source) выберите Glimp
+
+## 3. Использование Tomato
+
+- Tomato является приложением поставщика для Miaomiao.
+- Установите [Tomato](http://tomato.cool/#download_page) и следуйте [инструкциям поставщика ](http://tomato.cool/how-to-broadcast-data-to-android-aps/tips/).
+- В [Конфигураторе, Источник ГК](../Configuration/Config-Builder.md#bg-source) выберите Tomato.
+
+## 4. Использование Diabox
+
+- Diabox - это приложение поставщика для Bubble.
+- Установите [Diabox](https://t.me/s/DiaboxApp). В Настройках, Интеграция, включите "Делиться данными с другими приложениями".
+
+![Diabox](../images/Diabox.png)
+
+- В [Конфигураторе, Источник ГК](../Configuration/Config-Builder.md#bg-source) выберите xDrip+.

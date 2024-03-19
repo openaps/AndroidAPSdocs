@@ -8,11 +8,12 @@ Quel que soit le système CGM que vous utilisez, si vous allez utiliser un calib
 -   Essayez de calibrer lorsque vous avez une série de mesures avec une flèche plate (15-30 minutes sont habituellement suffisantes)
 -   Évitez de calibrer lorsque les glycémie montent ou descendent.
 -   Faites "assez" de calibrations - sur les applications officielles, vous serez invité à effectuer des vérifications une ou deux fois par jour. Sur les systèmes DIY, vous pouvez ne pas être sollicités pour calibrer, mais soyez prudents si vous continuez sans calibration.
+-   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
 -   Si c'est possible, calibrez avec certaines de vos lectures dans une plage basse (4-5mmol/l ou 72-90mg/dl) et certains à un niveau légèrement plus élevé (7-9mmol/l ou 126-160mg/dl) car cela offre une meilleure gamme pour le calibrage des points par rapport à la pente.
 
 ## Réglage du capteur (G6)
 
-Lors de la mise en place du capteur, il est recommandé de ne pas appuyer trop fermement sur le serteur pour éviter les saignements. Le fil du capteur ne doit pas entrer en contact avec le sang.
+Lors de la mise en place du capteur, il est recommandé de ne pas appuyer trop fermement sur le serteur pour éviter les saignements. The sensor contacts should not come into contact with blood.
 
 Après la mise en place du capteur, l'émetteur peut être cliqué dans son support. Attention ! Cliquez d'abord sur le côté carré, puis appuyez sur le côté rond.
 
@@ -25,7 +26,7 @@ La connexion Bluetooth peut être perturbée par d'autres appareils Bluetooth vo
 
 ### Erreurs de capteur
 
-Si des erreurs de capteur récurrentes se produisent, essayez de positionner votre capteur ailleurs sur votre corps. Le fil du capteur ne doit pas entrer en contact avec le sang.
+Si des erreurs de capteur récurrentes se produisent, essayez de positionner votre capteur ailleurs sur votre corps. The sensor contacts should not come into contact with blood.
 
 Souvent une "erreur de capteur" peut être corrigée en buvant immédiatement et en massant autour du capteur !
 
