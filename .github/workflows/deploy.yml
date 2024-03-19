@@ -1,0 +1,69 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - master
+  workflow_dispatch:
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    permissions:
+      pull-requests: write # allow surge-preview to create/update PR comments
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies 📦
+        run: python3 -m pip install -r requirements.txt
+
+      - name: Build 🏗️
+        env:
+          LANG_DIR: ./docs/EN
+        run: sphinx-build -M html $LANG_DIR _build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _build/
+
+      - uses: afc163/surge-preview@v1
+        if: github.event_name == 'pull_request'
+        with:
+          surge_token: ${{ secrets.SURGE_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          teardown: "true"
+          dist: _build/
+          build: echo "dummy"
+
+  deploy:
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+    runs-on: ubuntu-latest
+    needs: build
+     # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+    steps:
+      - name: Deploy to GitHub Pages 🚀
+        uses: actions/deploy-pages@v4
+        id: deployment
