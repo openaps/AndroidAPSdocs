@@ -2,19 +2,27 @@
 
 - **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
-  ![Otevřít nastavení](../images/Pref2020_Open2.png)
+  ```{image} ../images/Pref2020_Open2.png
+  :alt: Otevřít nastavení
+  ```
 
 - You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
 
-  ![Otevřít nastavení pluginu](../images/Pref2020_OpenPlugin2.png)
+  ```{image} ../images/Pref2020_OpenPlugin2.png
+  :alt: Otevřít nastavení pluginu
+  ```
 
 - **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
 
-  ![Otevřít submenu](../images/Pref2020_Submenu2.png)
+  ```{image} ../images/Pref2020_Submenu2.png
+  :alt: Otevřít submenu
+  ```
 
 - With the **filter** on top of the preferences screen you can quickly access certain preferences. Stačí začít psát část textu, který hledáte.
 
-  ![Předvolby > Filtry](../images/Pref2021_Filter.png)
+  ```{image} ../images/Pref2021_Filter.png
+  :alt: Předvolby > Filtry
+  ```
 
 ```{contents}
 :backlinks: entry
@@ -24,7 +32,9 @@
 (Preferences-general)=
 ## Obecné
 
-![Preferences > General](../images/Pref2020_General.png)
+```{image} ../images/Pref2020_General.png
+:alt: Preferences > General
+```
 
 **Units**
 
@@ -48,7 +58,9 @@
 
 (Preferences-master-password)=
 
-![Preferences > General - Protection](../images/Pref2020_General2.png)
+```{image} ../images/Pref2020_General2.png
+:alt: Preferences > General - Protection
+```
 
 #### Hlavní heslo
 
@@ -62,7 +74,9 @@
 
 - Enter password, confirm password and click ok.
 
-  ![Nastavení hlavního hesla](../images/MasterPW.png)
+  ```{image} ../images/MasterPW.png
+  :alt: Nastavení hlavního hesla
+  ```
 
 #### Ochrana nastavení
 
@@ -72,7 +86,9 @@
 
 - If you are using a custom password click on line "Settings password" to set password as described [above](Preferences-master-password).
 
-  ![Ochrana](../images/Pref2020_Protection.png)
+  ```{image} ../images/Pref2020_Protection.png
+  :alt: Ochrana
+  ```
 
 #### Ochrana aplikace
 
@@ -85,14 +101,18 @@
 
 - In the example below you see the prompt for biometric protection. Pokud biometrické ověření nefunguje, klepněte na místo nad bílou výzvou k zadání, a zadejte hlavní heslo.
 
-  ![Výzva pro biometrickou ochranu](../images/Pref2020_PW.png)
+  ```{image} ../images/Pref2020_PW.png
+  :alt: Výzva pro biometrickou ochranu
+  ```
 
 (Preferences-skin)=
 #### Vzhled
 
 - You can choose from four types of skins:
 
-  ![Select skin](../images/Pref2021_SkinWExample.png)
+  ```{image} ../images/Pref2021_SkinWExample.png
+  :alt: Select skin
+  ```
 
 - 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
 
@@ -109,14 +129,18 @@
 
 - **Large Display** has an increased size of all graphs compared to other skins
 
-  ![Vzhledy v závislosti na orientaci telefonu](../images/Screenshots_Skins.png)
+  ```{image} ../images/Screenshots_Skins.png
+  :alt: Vzhledy v závislosti na orientaci telefonu
+  ```
 
 (Preferences-overview)=
 ## Přehled
 
 - In overview section you can define preferences for home screen.
 
-  ![Preferences > Overview](../images/Pref2020_OverviewII.png)
+  ```{image} ../images/Pref2020_OverviewII.png
+  :alt: Preferences > Overview
+  ```
 
 ### Nechat obrazovku zapnutou
 
@@ -128,13 +152,19 @@
 
 - Define which buttons are visible on the bottom of your home screen.
 
-  ![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
+  ```{image} ../images/Pref2020_OV_Buttons.png
+  :alt: Preferences > Buttons
+  ```
 
 - With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
 
-  ![Preferences > Buttons > Insulin](../images/Pref2020_OV_Buttons2.png)
+  ```{image} ../images/Pref2020_OV_Buttons2.png
+  :alt: Preferences > Buttons > Insulin
+  ```
 
-  ![Preferences > Buttons > Carbs](../images/Pref2020_OV_Buttons3.png)
+  ```{image} ../images/Pref2020_OV_Buttons3.png
+  :alt: Preferences > Buttons > Carbs
+  ```
 
 (Preferences-quick-wizard)=
 ### Průvodce rychlým bolusem
@@ -143,13 +173,17 @@
 
 - In setup you define during which time period the button will be visible on your home screen - just one button per period.
 
-  ![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
+  ```{image} ../images/Pref2020_OV_QuickWizard.png
+  :alt: Preferences > Quick Wizard Button Setup
+  ```
 
 - If you click the quick wizard button AAPS will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
 
 - The proposal has to be confirmed before insulin is delivered.
 
-  ![Preferences > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
+  ```{image} ../images/Pref2020_OV_QuickWizard2.png
+  :alt: Preferences > Quick Wizard Button
+  ```
 
 (Preferences-default-temp-targets)=
 ### Výchozí nastavení dočasných cílů
@@ -158,11 +192,15 @@
 
 - With setting of default TT you can easily change your target for activity, eating soon etc.
 
-  ![Preferences > Default temp targets](../images/Pref2020_OV_DefaultTT.png)
+  ```{image} ../images/Pref2020_OV_DefaultTT.png
+  :alt: Preferences > Default temp targets
+  ```
 
 - Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
 
-  ![Preferences > Use default temp targets](../images/Pref2020_OV_DefaultTT2.png)
+  ```{image} ../images/Pref2020_OV_DefaultTT2.png
+  :alt: Preferences > Use default temp targets
+  ```
 
 ###
 
@@ -176,7 +214,9 @@
 
 - Define which part of the graph on the home screen shall be you target range and be filled with green background.
 
-  ![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
+  ```{image} ../images/Pref2020_OV_Range2.png
+  :alt: Preferences > Range for visualization
+  ```
 
 ### Krátké názvy modulů
 
@@ -184,13 +224,17 @@
 
 - For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
 
-  ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
+  ```{image} ../images/Pref2020_OV_Tabs.png
+  :alt: Preferences > Tabs
+  ```
 
 ### Zobrazovat kolonku poznámky v dialozích ošetření
 
 - Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
 
-  ![Preferences > Notes in treatment dialogs](../images/Pref2020_OV_Notes.png)
+  ```{image} ../images/Pref2020_OV_Notes.png
+  :alt: Preferences > Notes in treatment dialogs
+  ```
 
 (Preferences-status-lights)=
 ### Stavové indikátory
@@ -211,12 +255,16 @@
 
 - In versions prior to AAPS 2.7 settings for status lights had to be made in Nightscout settings.
 
-  ![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
+  ```{image} ../images/Pref2020_OV_StatusLights2.png
+  :alt: Preferences > Status Lights
+  ```
 
 (Preferences-advanced-settings-overview)=
 ### Rozšířená nastavení (přehled)
 
-![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
+```{image} ../images/Pref2021_OV_Adv.png
+:alt: Preferences > Advanced Settings
+```
 
 (Preferences-superbolus)=
 #### Superbolus
@@ -332,7 +380,9 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 
 - If target is modified it will be displayed with a green background on your home screen.
 
-  ![Cíl upraven Autosens](../images/Home2020_DynamicTargetAdjustment.png)
+  ```{image} ../images/Home2020_DynamicTargetAdjustment.png
+  :alt: Cíl upraven Autosens
+  ```
 
 (Preferences-carb-required-notification)=
 #### Oznámení vyžadovaných sacharidů
@@ -349,7 +399,9 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 
 - V případě potřeby může být notifikace vyžadovaných sacharidů odeslána do Nightscoutu. Notifikace se pak zobrazí v Nightscoutu a bude vysílána.
 
-  ![Zobrazení požadovaných sacharidů na domovské obrazovce](../images/Pref2020_CarbsRequired.png)
+  ```{image} ../images/Pref2020_CarbsRequired.png
+  :alt: Zobrazení požadovaných sacharidů na domovské obrazovce
+  ```
 
 #### Pokročilé nastavení (OpenAPS AMA)
 
@@ -358,7 +410,9 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 
 ## Nastavení absorpce sacharidů
 
-![Nastavení absorpce sacharidů](../images/Pref2020_Absorption.png)
+```{image} ../images/Pref2020_Absorption.png
+:alt: Nastavení absorpce sacharidů
+```
 
 ### min_5m_carbimpact
 
@@ -378,7 +432,9 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 
 - The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
 
-  ![COB graf](../images/Pref2020_min_5m_carbimpact.png)
+  ```{image} ../images/Pref2020_min_5m_carbimpact.png
+  :alt: COB graf
+  ```
 
 ### Max. doba absorpce sacharidů
 
@@ -404,7 +460,9 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 (Preferences-nsclient)=
 ## NSClient
 
-![NSClient](../images/Pref2020_NSClient.png)
+```{image} ../images/Pref2020_NSClient.png
+:alt: NSClient
+```
 
 Original communication protocol, can be used with older Nightscout versions.
 
@@ -416,7 +474,9 @@ Original communication protocol, can be used with older Nightscout versions.
 
 ## NSClientV3
 
-![NSClientV3](../images/Pref2024_NSClientV3.png)
+```{image} ../images/Pref2024_NSClientV3.png
+:alt: NSClientV3
+```
 
 [New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
@@ -439,7 +499,9 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Nastavení alarmů
 
-![Alarm options](../images/Pref2024_NSClient_Alarms.png)
+```{image} ../images/Pref2024_NSClient_Alarms.png
+:alt: Alarm options
+```
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. AAPS will alarm when a Nightscout alarms trigger.
   - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -450,7 +512,9 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Nastavení připojení
 
-![Nastavení připojení NSClient](../images/ConfBuild_ConnectionSettings.png)
+```{image} ../images/ConfBuild_ConnectionSettings.png
+:alt: Nastavení připojení NSClient
+```
 
 - Connection settings define when Nightscout connection will be enabled.
 - Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
@@ -461,7 +525,9 @@ You can select which data you want to [upload and download to or from Nightscout
 (Preferences-advanced-settings-nsclient)=
 ### Rozšířená nastavení (NSClient)
 
-![Rozšířené nastavení NSClient](../images/Pref2024_NSClientAdv.png)
+```{image} ../images/Pref2024_NSClientAdv.png
+:alt: Rozšířené nastavení NSClient
+```
 
 Options in advanced settings are self-explanatory.
 
@@ -482,19 +548,25 @@ Vyberte, jaká služba určování polohy se použije:
 
 ## Místní výstrahy
 
-![Místní upozornění](../images/Pref2020_LocalAlerts.png)
+```{image} ../images/Pref2020_LocalAlerts.png
+:alt: Místní upozornění
+```
 
 - Settings should be self-explanatory.
 
 ## Možnosti dat
 
-![Možnosti dat](../images/Pref2020_DataChoice.png)
+```{image} ../images/Pref2020_DataChoice.png
+:alt: Možnosti dat
+```
 
 - You can help develop AAPS further by sending crash reports to the developers.
 
 ## Nastavení údržby
 
-![Nastavení údržby](../images/Pref2020_Maintenance.png)
+```{image} ../images/Pref2020_Maintenance.png
+:alt: Nastavení údržby
+```
 
 - Standard recipient of logs is <logs@androidaps.org>.
 - If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). V tomto případě je nutné při každém exportu nebo importu nastavení zadat hlavní heslo.
