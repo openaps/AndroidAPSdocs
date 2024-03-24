@@ -2,47 +2,28 @@
 
 ![imagen](./images/basic-outline-of-AAPS.png)
 
-AAPS es una aplicación de código abierto para personas que viven con diabetes, dependientes de insulina y que actúa como un sistema de páncreas artificial (APS) en teléfonos inteligentes Android de Google. Utiliza un algoritmo de software OpenAPS que tiene como objetivo hacer lo que hace un páncreas en funcionamiento: mantener los niveles de azúcar en sangre dentro de límites saludables mediante la administración automatizada de insulina (AID). Además, necesitas una bomba de insulina compatible y aprobada por la FDA/CE, así como un medidor continuo de glucosa.
+Android APS (**AAPS**) is an open source app for people living with insulin-dependent diabetes. It is an artificial pancreas system (APS) which runs on Android smartphones. **AAPS** uses an openAPS software algorithm and aims to do what a real pancreas does: keep blood sugar levels within healthy limits by using automated insulin dosing. To use **AAPS** you need **three** compatible devices: an Android phone, a FDA/CE approved insulin pump, and a continuous glucose meter (CGM).
 
-¿Estás interesado? Lee más sobre AAPS en la [introducción](introduction.md).
+This documentation explains how to setup and use **AAPS**. You can navigate through the **AAPS** documentation either through the menu on the left (and the handy "**Search docs**" function), or by using the [index](Index-of-the-AAPS-Documentation.md) at the bottom of this page.
 
-```{warning}
-**IMPORTANT SAFETY NOTICE**
+## Overview of the AAPS documentation ("The docs")
 
-The foundation of AAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. Es importante que sólo utilice una bomba de insulina y una bomba de insulina y MCG aprobados por la FDA o CE, para cerrar un lazo de dosificación de insulina automatizado. Las modificaciones de hardware o software a estos componentes pueden causar una dosificación inesperada de la insulina, causando un riesgo significativo para el usuario. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AAPS system.
+Under "Getting Started", the [Introduction](introduction.md) explains the general concept of what an artificial pancreas system (APS) is designed to do. It outlines the background of looping in general, why **AAPS** was developed, compares **AAPS** to other systems, and addresses safety. It gives suggestions about how to talk to your clinical team about **AAPS**, explains why you need to build the **AAPS** app yourself rather than just downloading it, and gives an overview of the typical connectivity of an **AAPS** system. It also addresses accessibility, and who is likely to benefit from **AAPS**.
 
-Además, es igualmente importante utilizar los suministros originales, como los insertadores, las canulas y los recipientes de insulina aprobados por el fabricante para su uso con la bomba o MCG. El uso de suministros no probados o modificados puede provocar inexactitud del MCG y errores de dosificación de la insulina. Insulina es muy peligrosa cuando se malinterpreta-por favor, no juegas con tu vida hackeando con tus suministros.
+[Preparing for AAPS](preparing.md) gives more detail about safety considerations, and the phones, CGMs (Continuous Glucose Monitors) and insulin pumps which are compatible with **AAPS**. It gives an overview of the process you will go through, and provides an approximate timeline for gaining full functionality of **AAPS**. This section gets you technically prepared to assemble your **AAPS** setup as quickly and efficiently as possible.
 
-Por último pero no por ello menos importante, no hay que tomar inhibidores SGLT-2 (gliflozins) ya que reducen incalculablemente los niveles de azúcar en sangre.  La combinación con un sistema que reduce las tasas basales para aumentar la BG es especialmente peligrosa, ya que debido al gliflozin este aumento en BG podría no suceder y podría derivar en un peligroso estado de falta de insulina.
-```
+Now that you have a solid understanding of the process, you can start assembling your **AAPS** loop. The **Setting up AAPS** section contains step-by-step instructions to do this. It covers choosing and [setting up your reporting server](setting-up-the-reporting-server.md) (Nightscout or Tidepool) so you can review and share your data, getting your computer ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone. It also covers setting up the **AAPS** app using the setup Wizard, linking it with your CGM app, and either a real or virtual insulin pump, as well as linking **AAPS** to your reporting server. You then progress through the objectives, which will help you to optimise your settings as you unlock the full functionality of the **AAPS** app.
 
-```{note}
-**Aviso y Advertencia**
+The [Remote control and Following](remote-control.md) section highlights a real strength of **AAPS**, which is that there are a wide range of possibilities for remotely sending commands to, or simply following the data from **AAPS**. This is equally useful for carers who want to use **AAPS** for minors, and for adults with diabetes who either want to monitor their sugars (and other metrics) more conveniently than just on their phone (on a watch, in the car _etc._), or wish to have significant others to also monitor the data. This section also provides guidance for using Android auto so you can view glucose levels in the car.
 
-- Toda la información, ideas y código descritos aquí tienen la única finalidad de ser informativos y educativos. Actualmente Nightscout no dispone de HIPAA privacy compliance. Utilice Nightscout y AAPS bajo su propio riesgo y no utilice la información o el código para tomar decisiones médicas.
-- El uso del código de github.com se realiza sin garantía ni soporte formal de ningún tipo. Por favor revise el repositorio de Licencia para más detalles.
-- Todos los nombres de productos y empresas, marcas comerciales, marcas de servicio, marcas registradas y marcas de servicio registradas, son propiedad de sus respectivos titulares. Su uso aquí es informativo y no implica afiliación o pago por ello.
-
-Ten en cuenta que este proyecto no tiene ninguna asociación, ni está respaldado por: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
-```
-
-## ¿Cómo leer la documentación?
-
-Hemos proporcionado esta subsección de la documentación especialmente para aquellos que son nuevos en el concepto de Do-It-Yourself-APS (Sistemas de Páncreas Artificial) con el fin de mostrar mejor cómo familiarizarse con la información que consideramos más importante, especialmente en términos de comprender las razones detrás de los 'límites' establecidos cuando estás comenzando tu viaje con AAPS. Estos límites de seguridad se han desarrollado a lo largo de muchos años mediante observaciones de los errores inadvertidos que los nuevos usuarios son más propensos a cometer cuando aprenden por primera vez a configurar, construir y luego loopear con éxito con AAPS. La mayoría de las veces, estos errores ocurren simplemente porque el usuario estaba tan emocionado por comenzar a usar el sistema que pueden haber olvidado sentarse y dedicar el tiempo necesario para comprender completamente la información dentro de esta documentación. ¡Todos hemos pasado por eso!
-
-Ciertamente, el enfoque de 'leer todo' tiene mérito y es cierto. Sin embargo, no es raro que los recién llegados se sientan abrumados rápidamente por la gran cantidad y variedad de nueva información que se espera que comprendan de una vez. Entonces, las próximas subsecciones tienen como objetivo establecer los cimientos más importantes del conocimiento necesario para ejecutar con éxito la configuración que elijas con la menor cantidad de problemas posible. Los nuevos usuarios pueden consultar esta guía cuando se encuentren con aspectos del sistema con los que aún no están familiarizados, y recordar dónde buscar dentro de la documentación para encontrar información más detallada, según sea necesario. También es importante exponer las capacidades de AAPS de manera transparente, ya que a veces puede ser decepcionante descubrir en medio de la lectura de la documentación que ciertas herramientas necesarias actualmente no están disponibles para su uso (debido a restricciones en los tipos de bombas de insulina o MCGs disponibles en algunos países en comparación con otros, etc.) o simplemente ofrecen menos/diferente funcionalidad de la que se asumió inicialmente. Finalmente, es importante reconocer que muchos aspectos relacionados con la experiencia dentro de esta documentación solo cobran relevancia a medida que comienzas a utilizar AAPS en tiempo real. Así como es casi imposible aprender a jugar un deporte perfectamente solo leyendo las reglas, se necesita una combinación de primero aprender los fundamentos de las reglas para operar AAPS de manera segura y después dedicar tiempo a aprender cómo aplicar mejor esas reglas mientras avanzas a través de los pasos del lazo con AAPS.
-
-La subsección [Comenzando](Getting-Started/Safety-first.md) es una lectura obligada para comprender el concepto general de lo que un sistema de páncreas artificial está diseñado para hacer; y es especialmente relevante para los usuarios de AAPS.
-
-La subsección [¿Qué necesito?](Module/module.md) especifica los medidores continuos de glucosa (MCGs) y las bombas de insulina que están disponibles para su uso con AAPS. Esta subsección es importante para entender cómo ensamblar y construir correctamente tu sistema de AAPS la primera vez y que funcione bien en situaciones del mundo real.
-
-La subsección [¿Dónde buscar ayuda?](Where-To-Go-For-Help/Connect-with-other-users.html) debería ayudarte a dirigirte a los mejores lugares para encontrar ayuda, dependiendo de tu nivel de experiencia con AAPS. Esto es muy importante para que no te sientas excluido, especialmente al principio, y para que puedas ponerte en contacto con otros lo más rápido posible, aclarar preguntas y resolver los problemas habituales de la manera más rápida posible. La experiencia demuestra que muchas personas ya están utilizando AAPS con éxito, pero en algún momento todos tienen una pregunta que no pueden resolver por sí mismos. Lo bueno, es que debido al gran número de usuarios, los tiempos de respuesta a las preguntas suelen ser muy rápidos, generalmente en unas pocas horas. No te preocupes por pedir ayuda, ¡porque no existen las preguntas tontas! Animamos a los usuarios de cualquier nivel de experiencia a hacer todas las preguntas que consideren necesarias para ayudarlos a ponerse en marcha de manera segura. Por favor, inténtalo.
+La subsección [¿Dónde buscar ayuda?](Where-To-Go-For-Help/Connect-with-other-users.html) debería ayudarte a dirigirte a los mejores lugares para encontrar ayuda, dependiendo de tu nivel de experiencia con AAPS. Esto es muy importante para que no te sientas excluido, especialmente al principio, y para que puedas ponerte en contacto con otros lo más rápido posible, aclarar preguntas y resolver los problemas habituales de la manera más rápida posible. La experiencia demuestra que muchas personas ya están utilizando AAPS con éxito, pero en algún momento todos tienen una pregunta que no pueden resolver por sí mismos. Due to the large number of users, the response times to questions are usually very quick, typically only a few hours. Don’t worry about asking for help, there is no such thing as a dumb question! Animamos a los usuarios de cualquier nivel de experiencia a hacer todas las preguntas que consideren necesarias para ayudarlos a ponerse en marcha de manera segura.
 
 En la subsección [Glosario](Getting-Started/Glossary.md) hemos compilado una lista de los acrónimos (o nombres abreviados) utilizados en todo AAPS. Por ejemplo, dónde buscar para averiguar qué significan los términos FSI o OT en los términos más comunes (más largos).
 
-Para los padres que desean construir AAPS para sus hijos, recomendamos la subsección [AAPS para niños](Children/Children.md), ya que allí encontrarás información más avanzada específicamente diseñada para aprender los pasos adicionales necesarios para controlar remotamente la aplicación de AAPS de tu hijo, así como un perfil de seguridad más completo en comparación con los adultos. Debes poder apoyar a tus hijos y comprender todos los conceptos avanzados que AAPS ofrece para ayudarte a tener éxito.
+  Dado que los requisitos son muy diferentes a cualquier cosa que hayas configurado en el pasado, recomendamos que sigas las instrucciones paso a paso las primeras veces que construyas la aplicación, para que tengas una mejor idea de cómo se supone que debe comportarse el proceso de construcción de la aplicación cuando se siguen todas las instrucciones exactamente. Por favor, recuerda tomarte tu tiempo. Más adelante, esto irá muy rápido cuando construyas la aplicación nuevamente para una nueva versión. De esta manera, tendrás una mayor probabilidad de darte cuenta cuando algo no vaya según lo planeado antes de que muchas etapas estén fuera de lugar. Es importante guardar tu archivo keystore (.jks, utilizado para firmar tu aplicación) en un lugar seguro, para que siempre puedas usar ese mismo archivo de almacén de claves y contraseña cada vez que se te pida crear una nueva versión actualizada de AAPS. Este archivo es lo que garantiza que cada nueva versión de la aplicación 'recuerde' toda la información que le has proporcionado en versiones anteriores de la aplicación y, por lo tanto, asegura que las actualizaciones se realicen de la manera más fluida posible. En promedio, puedes asumir que habrá una nueva versión y de 2 a 3 actualizaciones necesarias por año. Este número se basa en la experiencia y puede cambiar en el futuro. Pero al menos queremos brindarte una guía general sobre qué esperar. Cuando tengas más experiencia en la construcción de versiones actualizadas de la aplicación AAPS, todos los pasos que se requieren en la construcción de una aplicación actualizada solo tomarán de 15 a 30 minutos, de promedio. Sin embargo, al principio puede haber una curva de aprendizaje bastante pronunciada, ya que estos pasos no siempre son intuitivos para los nuevos usuarios. Así que no te frustres si descubres que te lleva medio día o un día completo, con algo de ayuda de la comunidad, antes de que finalmente termines con el proceso de actualización. Si descubres que te estás frustrando mucho, simplemente toma un breve descanso, y muchas veces, después de dar un paseo por la calle, te darás cuenta de que estás en mejores condiciones para abordar el problema nuevamente.
 
-Ahora que tienes una comprensión sólida de los conceptos que AAPS utiliza, sabes dónde obtener las herramientas necesarias para construir tu APS y estás familiarizado con dónde obtener ayuda en caso de una emergencia, ¡es el momento adecuado para comenzar a construir la aplicación! La subsección [Cómo instalar AAPS?](Installing-AAPS/Building-APK.md) te muestra esto en detalle. Dado que los requisitos son muy diferentes a cualquier cosa que hayas configurado en el pasado, recomendamos que sigas las instrucciones paso a paso las primeras veces que construyas la aplicación, para que tengas una mejor idea de cómo se supone que debe comportarse el proceso de construcción de la aplicación cuando se siguen todas las instrucciones exactamente. Por favor, recuerda tomarte tu tiempo. Más adelante, esto irá muy rápido cuando construyas la aplicación nuevamente para una nueva versión. De esta manera, tendrás una mayor probabilidad de darte cuenta cuando algo no vaya según lo planeado antes de que muchas etapas estén fuera de lugar. Es importante guardar tu archivo keystore (.jks, utilizado para firmar tu aplicación) en un lugar seguro, para que siempre puedas usar ese mismo archivo de almacén de claves y contraseña cada vez que se te pida crear una nueva versión actualizada de AAPS. Este archivo es lo que garantiza que cada nueva versión de la aplicación 'recuerde' toda la información que le has proporcionado en versiones anteriores de la aplicación y, por lo tanto, asegura que las actualizaciones se realicen de la manera más fluida posible. En promedio, puedes asumir que habrá una nueva versión y de 2 a 3 actualizaciones necesarias por año. Este número se basa en la experiencia y puede cambiar en el futuro. Pero al menos queremos brindarte una guía general sobre qué esperar. Cuando tengas más experiencia en la construcción de versiones actualizadas de la aplicación AAPS, todos los pasos que se requieren en la construcción de una aplicación actualizada solo tomarán de 15 a 30 minutos, de promedio. Sin embargo, al principio puede haber una curva de aprendizaje bastante pronunciada, ya que estos pasos no siempre son intuitivos para los nuevos usuarios. Así que no te frustres si descubres que te lleva medio día o un día completo, con algo de ayuda de la comunidad, antes de que finalmente termines con el proceso de actualización. Si descubres que te estás frustrando mucho, simplemente toma un breve descanso, y muchas veces, después de dar un paseo por la calle, te darás cuenta de que estás en mejores condiciones para abordar el problema nuevamente. También hemos compilado una lista de preguntas y respuestas para la mayoría de los errores típicos que es probable que ocurran en las primeras actualizaciones, que se encuentran en la sección de preguntas frecuentes (FAQs), así como en 'Cómo instalar AAPS?', que proporciona información adicional en la subsección 'Resolución de problemas'.
+
+  También hemos compilado una lista de preguntas y respuestas para la mayoría de los errores típicos que es probable que ocurran en las primeras actualizaciones, que se encuentran en la sección de preguntas frecuentes (FAQs), así como en 'Cómo instalar AAPS?', que proporciona información adicional en la subsección 'Resolución de problemas'.
 
 La subsección [Configuración de componentes](Configuration/BG-Source.md) explica cómo integrar correctamente cada una de las diversas partes separadas del componente en AAPS, así como cómo configurarlas para que funcionen de la manera más fluida posible juntas. All components are listed under the separate sections: CGM/FGM, xDrip Settings, Pumps, Phones, Nightscout setup, and Smartwatches. The sensor (BG) values and control of the insulin pump are particularly important information to understand. La subsección [Configuración](Configuration/BG-Source.md) describe las mejores configuraciones de bomba para usar en AAPS.
 
@@ -52,28 +33,42 @@ Después de eso, hay una subsección [Consejos generales](Usage/Timezone-traveli
 
 Hay una subsección para los [clínicos](Resources/clinician-guide-to-AAPS.md) que han expresado interés en la tecnología de páncreas artificial de código abierto, como AAPS, o para los pacientes que desean compartir esa información con sus clínicos.
 
-Finalmente, en la subsección [¿Cómo ayudar?](make-a-PR.md), nos gustaría proporcionarte información para que puedas sugerir cambios pequeños o grandes en la documentación por ti mismo y trabajar junto con nosotros en la documentación. Necesitamos además apoyo para la [traducción de la documentación](translations.md). Por cierto, también es muy útil para todos si puedes proporcionar enlaces a la documentación correspondiente (o capturas de pantalla de dónde se encuentran los enlaces dentro de la documentación si no estás familiarizado con cómo enviar un enlace) al responder preguntas de otros usuarios. De esta manera, la información correcta se puede ubicar fácilmente nuevamente en caso de que otros usuarios también estén tratando de encontrar respuestas a las mismas preguntas en el futuro.
+Finalmente, en la subsección [¿Cómo ayudar?](make-a-PR.md), nos gustaría proporcionarte información para que puedas sugerir cambios pequeños o grandes en la documentación por ti mismo y trabajar junto con nosotros en la documentación. We further need support for [translation of the documentation](translations.md). It also very helpful for everyone if you could provide links to the corresponding documentation (or screenshots of where the links are located within the Documentation if you are not familiar with how to send a link) when answering questions from other users. De esta manera, la información correcta se puede ubicar fácilmente nuevamente en caso de que otros usuarios también estén tratando de encontrar respuestas a las mismas preguntas en el futuro.
+
+ Interested in getting started with **AAPS**? Read more about **AAPS** in the [Introduction](introduction.md).
+
+:::{admonition} SAFETY NOTICE
+:class: danger The safety of **AAPS** relies on the safety features of your hardware (phone, pump, CGM). Only use a fully functioning FDA/CE approved insulin pump and CGM. Do not use broken, modified or self-built insulin pumps or CGM receivers. Only use original consumable supplies (inserters, cannulas and insulin reservoirs) approved by the manufacturer for use with your pump and CGM. Using untested or modified supplies can cause inaccuracy and insulin dosing errors, resulting in significant risk to the user.
+
+Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower blood sugar levels. You increase the risk diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels.
+:::
+
+:::{admonition} Disclaimer
+:class: note
+
+- All information and code described here is for informational and educational purposes only. Use [Nightscout](https://nightscout.github.io/) and **AAPS** at your own risk, and do not use the information or code to make medical decisions. Actualmente Nightscout no dispone de HIPAA privacy compliance.
+- Use of code from github.com is without warranty or formal support of any kind. Por favor revise el repositorio de Licencia para más detalles.
+- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Su uso aquí es informativo y no implica afiliación o pago por ello.
+
+**AAPS** has no association with, and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
+
+:::
+
+(AAPS-Documentation-Index)=
+
+## AAPS Documentation Index
 
 ```{toctree}
 :caption: Cambiar idioma
 
 Cambiar idioma <./changelanguage.md>
-
 ```
-
 ```{toctree}
-:caption: Inicio
+:caption: Getting started
 
-Introducción <./introduction.md>
+Introduction to AAPS <./introduction.md>
 
-```
-
-```{toctree}
-:caption: Empezando
-
-Preparando <preparing.md>
-
-Actualizaciones & cambios en la documentación <./Getting-Started/WikiUpdate.md>
+Preparing for AAPS <preparing.md>
 
 ```
 
@@ -89,10 +84,11 @@ Completing the objectives <./Usage/completing-the-objectives.md>
 ```
 
 ```{toctree}
-:caption: Control remoto y seguimiento
+:caption: Remote control and following
 
-Control remoto <remote-control.md>
-Sólo seguimiento <following-only.md>
+Remote control <remote-control.md>
+Following-only <following-only.md>
+Android auto <./Usage/Android-auto.md>
 
 ```
 
@@ -162,7 +158,7 @@ Open Humans Uploader <./Configuration/OpenHumans.md>
 
 Automation with 3rd party apps <./Usage/automationwithapp.md>
 
-Android auto <./Usage/Android-auto.md>
+
 
 Custom Watchface reference document <./Usage/Custom_Watchface_Reference.md>
 
@@ -251,16 +247,5 @@ Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
 Sandbox <./Sandbox/sandbox1.md>
 Crowdin Test <./Sandbox/crowdintest.md>
 Image Scaling <./Sandbox/imagescaling.md>
-
-```
-
-```{note}
-**Descargo de Responsabilidad y Advertencia**
-
-- Toda la información, ideas y código descritos aquí están destinados únicamente con fines informativos y educativos. Actualmente Nightscout no dispone de HIPAA privacy compliance. Utilice Nightscout y AAPS bajo su propio riesgo y no utilice la información o el código para tomar decisiones médicas.
-- El uso del código de github.com se realiza sin garantía ni soporte formal de ningún tipo. Por favor revise el repositorio de Licencia para más detalles.
-- Todos los nombres de productos y empresas, marcas comerciales, marcas de servicio, marcas registradas y marcas de servicio registradas, son propiedad de sus respectivos titulares. Su uso aquí es informativo y no implica afiliación o pago por ello.
-
-Ten en cuenta que este proyecto no tiene ninguna asociación ni está respaldado por: [SOOIL](<https://www.sooil.com/eng/>), [Dexcom](<https://www.dexcom.com/>), [Accu-Chek, Roche Diabetes Care](<https://www.accu-chek.com/>) or [Medtronic](<https://www.medtronic.com/>)
 
 ```

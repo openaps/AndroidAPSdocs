@@ -46,6 +46,10 @@ For support on CGM sources please use the Facebook groups or discord channels fo
 * [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Ολλανδόφωνοι χρήστες του OpenAPS, Loop and AndroidAPS
 * [CGM στο cloud της Ολλανδίας](https://www.facebook.com/groups/1764754560436596)
 
+### Poland
+
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabates support group)
+
 ### Sweden
 
 * [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (Sweden based users of OpenAPS, Loop and AndroidAPS)
