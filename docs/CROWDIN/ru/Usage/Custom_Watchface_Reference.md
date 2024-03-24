@@ -1,6 +1,6 @@
-# Custom Watchface Reference Document
+# Cправочная информация по самостоятельно создаваемым циферблатам
 
-This page is for designers of new Watchfaces. It will list all the keywords and features available when you want to create or animate a new watchface.
+Эта страница предназначена для создателей новых циферблатов. Здесь будут перечислены все ключевые моменты и функции, доступные при создании или анимировании новых циферблатов.
 
 ## Custom Watchface Format
 
