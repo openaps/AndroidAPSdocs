@@ -14,7 +14,7 @@
 
 Zip-файл может также содержать дополнительные файлы ресурсов:
 
-- Hardcoded file names for images that will be used used in standard views included in the watchface (like `Background`, `CoverChart`... see [List of hardcoded resource files](cwf-reference-list-of-hardcoded-resource-files) below). All these files can be either `jpg`, `png` or `svg` format. but for most of them, you will have to use `png` or `svg` that manage transparency (jpg are smaller in size compared to png, but with no transparency). Note that the best quality associated to the smallest size will generally be with svg files (vector format).
+- Аппаратно закодированные имена файлов изображений, которые будут использоваться в циферблатах (например, `Фон`, `Схема обложки`... см [Список аппаратно закодированных исходных файлов](cwf-reference-list-of-hardcoded-resource-files) ниже). All these files can be either `jpg`, `png` or `svg` format. but for most of them, you will have to use `png` or `svg` that manage transparency (jpg are smaller in size compared to png, but with no transparency). Note that the best quality associated to the smallest size will generally be with svg files (vector format).
 - Addtional resource files with free names. These additional files can be either image files, or font files (`ttf` and `otf` format are accepted for fonts). Note that for these additional files, the `filename` (without extension) will be used as the keyValue, within JSON file, to specify where or when these files should be used.
   - image files are often used as background of text views or for dynamic animation (like battery level from 0% to 100%)
   - font files allow you to use dedicated fonts within your watchface
