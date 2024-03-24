@@ -12,7 +12,9 @@
 - Scroll down to "BG source".
 - Select correct BG source if changes are necessary.
 
-![BG source](../images/ConfBuild_BG.png)
+```{image} ../images/ConfBuild_BG.png
+:alt: BG source
+```
 
 ## Finish exam
 
@@ -29,7 +31,9 @@
 - Click "Master-Password"
 - Enter password, confirm password and click ok.
 
-![Set master password](../images/MasterPW.png)
+```{image} ../images/MasterPW.png
+:alt: Set master password
+```
 
 ## Eksport ustawień
 
@@ -55,6 +59,8 @@
 - Click "Pump password (v1 only)"
 - Enter pump password ([Default password](DanaRS-Insulin-Pump-default-password) is different depending on firmware version) and click OK.
 
-![Set Dana RS password](../images/DanaRSPW.png)
+```{image} ../images/DanaRSPW.png
+:alt: Set Dana RS password
+```
 
 To change password on Dana RS follow instructions on [DanaRS page](DanaRS-Insulin-Pump-change-password-on-pump).
