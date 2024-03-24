@@ -2,14 +2,14 @@
 
 Эта страница предназначена для создателей новых циферблатов. Здесь будут перечислены все ключевые моменты и функции, доступные при создании или анимировании новых циферблатов.
 
-## Custom Watchface Format
+## Формат настраиваемых циферблатов
 
-Custom Watchface is an open format designed for AAPS and associated to the new "AAPS (Custom)" watchface available on Watch.
+Настраиваемый циферблат - это открытый формат, разработанный для AAPS и связанный с новым интерфейсом "AAPS (Custom)", доступным на часах.
 
-The Watchface file is a simple zip file, but to be recognized as a Watchface file, the zip file must contain the following files:
+Файл циферблата - это простой zip-файл, но он должен распознаваться как файл Watchface и должен содержать следующие файлы:
 
-- One image file named CustomWatchface (can be bitmap files `CustomWatchface.jpg`, `CustomWatchface.png` or a vector `CustomWatchface.svg`). This file is the little icon used to select the watchface when you click on "Load Watchface" button, and also the image visible within AAPS Wear plugin.
-- One file named `CustomWatchface.json` (see [JSON structure](cwf-reference-json-structure) below). This second file is the core file that will include all information required to design the watchface. This json file must be valid (it's probably the most tricky point when you edit manually this file within a text editor, because an missing or additional comma is enough to break the json format). This JSON file must also include a `"metadata"` bloc with a `"name"` key with not empty value. This will be the name of your custom watchface (see [Metadata settings](cwf-reference-metadata-settings) below)
+- Один файл изображения под названием CustomWatchface (пользовательский циферблат) (это может быть растровый файл `CustomWatchface.jpg`, `CustomWatchface.png` или векторный `CustomWatchface.svg`). Этот файл представляет собой маленькую иконку, используемую для выбора циферблата часов, когда вы нажимаете на кнопку "Загрузить циферблат", а также изображение, видимое из модуля расширения AAPS Wear.
+- Один файл с именем `CustomWatchface.json` (см. [структуру JSON](cwf-reference-json-structure) ниже). Этот второй файл является главным файлом, который будет содержать всю информацию, необходимую для создания циферблата часов. Этот файл json должен быть валидным, допустимым (вероятно, самый сложный момент при редактировании этого файла вручную в текстовом редакторе, потому что пропущенной или дополнительной запятой достаточно, чтобы нарушить формат json). This JSON file must also include a `"metadata"` bloc with a `"name"` key with not empty value. This will be the name of your custom watchface (see [Metadata settings](cwf-reference-metadata-settings) below)
 - the size of this zip should be as small as possible (less than about 500kb). If this file is too big, it will just be blocked and not transmitted to the watch.
 
 The zip file can also contain some additional resource files:
