@@ -15,15 +15,21 @@ iAV yra angliavandeniai, kurie pasiskirsto per kelias valandas. Įprastam maistu
 
 To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
 
-![Įveskite angliavandenius](../images/eCarbs_Dialog.png)
+```{image} ../images/eCarbs_Dialog.png
+:alt: Įveskite angliavandenius
+```
 
 Pagrindiniame ekrane atkreipkite dėmesį į angliavandenius skliausteliuose AAO lauke - tai rodomi angliavandeniai, likę ateičiai:
 
-![iAV grafike](../images/eCarbs_Graph.png)
+```{image} ../images/eCarbs_Graph.png
+:alt: iAV grafike
+```
 
 Ateities angliavandeniai Terapijos skirtuke žymimi tamsiai oranžine spalva:
 
-![ateities iAV Terapijos skirtuke](../images/eCarbs_Treatment.png)
+```{image} ../images/eCarbs_Treatment.png
+:alt: ateities iAV Terapijos skirtuke
+```
 
 ______________________________________________________________________
 
@@ -55,7 +61,9 @@ Kai kurie žmonės vis dar prašė parinkties AAPS naudoti ištęstinius bolusus
 - Bolus units, remaining and total time will be shown on homescreen.
 - On Insight pump extended bolus is *not available* if [TBR emulation](Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
-![Ištęstas bolusas AAPS 2.6](../images/ExtendedBolus2_6.png)
+```{image} ../images/ExtendedBolus2_6.png
+:alt: Ištęstas bolusas AAPS 2.6
+```
 
 (Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Kodėl ištęstas bolusas neveiks uždaro ciklo aplinkoje
