@@ -2,17 +2,17 @@
 
 # Сглаживание данных гликемии
 
-Если данные гликемии скачкообразны/зашумлены, AAPS может дозировать инсулин неправильно, что приведет к высокой или низкой ГК. Если вы заметили ошибки в данных мониторинга CGM, важно отключить цикл до тех пор, пока проблема не будет решена. В зависимости от системы мониторинга, эти проблемы могут возникнуть из-за конфигурации НМГ в **AAPS** (как описано ниже); или из-за некорректной работы сенсора (что может потребовать его замену)
+If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. Если вы заметили ошибки в данных мониторинга CGM, важно отключить цикл до тех пор, пока проблема не будет решена. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
 
-Некоторые системы CGM имеют внутренние алгоритмы для обнаружения уровня шума данных, и AAPS может использовать эту информацию чтобы избежать ввода микроболюсов, если данные ГК слишком ненадежны. Однако некоторые системы мониторинга не передают такие данные и для этих источников опции "Всегда включать супер микро болюс SMB" и "Включать SMB после углеводов" отключены по соображениям безопасности.
+Some CGM systems have internal algorithms to detect the noise level in the readings, and **AAPS** can use this information to avoid giving SMBs if the BG data is too unreliable. Однако некоторые системы мониторинга не передают такие данные и для этих источников опции "Всегда включать супер микро болюс SMB" и "Включать SMB после углеводов" отключены по соображениям безопасности.
 
-Кроме того, начиная с версии 3.2 AAPS предлагает возможность сглаживать данные в рамках AAPS. Есть три варианта в [Конфигураторе](../Configuration/Config-Builder.md).
+Additionally, as of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Есть три варианта в [Конфигураторе](../Configuration/Config-Builder.md).
 
 ![Сглаживание](../images/ConfBuild_Smoothing.png)
 
 ## Простое экспоненциальное сглаживание
 
-Рекомендуется начинать с этой опции, так как она наиболее агрессивна в снятии шума и перезаписывает самое последнее значение.
+This is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value.
 
 ## Среднее сглаживание
 
@@ -20,7 +20,7 @@
 
 ## Без сглаживания
 
-Выбирайте эту опцию только в том случае, если данные ГК должным образом сглаживаются приложением коллектора до передачи в AAPS.
+Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
 
 ## Предложения использовать сглаживание
 
