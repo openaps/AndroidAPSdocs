@@ -239,8 +239,8 @@
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Raporları</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
 <tr>
- <td><strong>NS Client (Nightscout İstemcisi)</strong></td>
- <td>Nightscout sitenize bağlanmak için AAPS'in bir parçası</td>
+ <td><strong>NS Client or AAPS Client</strong></td>
+ <td>a remote control feature that can be used by caregivers via a follower phone to follow a user's AAPS by connecting to the user's Nightscout site</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Viki - NS Client</a></td>
 </tr>
@@ -293,12 +293,16 @@
  <td><a href="../Configuration/Config-Builder.html#profile">Viki - profil</a></td>
 </tr>
 <tr>
- <td><strong>Profil değiştir</strong></td>
- <td>(geçici) kullanılan profil değişikliği veya profilde yüzde artış/azalma</td>
+ <td><strong>Profile Switch</strong></td>
+ <td>a (temporary) switching of user's Profile to a different Profile saved within AAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Profiles.html">Viki - profil değiştir</a></td>
 </tr>
 <tr>
+ <td><strong>Profile Percentage</strong></td>
+ <td>a (temporary) percentage increase or decrease applied to a user's Profile for a selected time period </td>
+ <td>&nbsp;</td>
+ <td><a href="../Usage/Profiles.html">Viki - profil değiştir</a></td>
  <td><strong>REZ</strong></td>
  <td>giriş ekranda durum ışığı- gecikmiş rezervuar değişikliği</td>
  <td>Pil / Rezeruar / Sensör</td>
