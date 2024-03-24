@@ -29,7 +29,9 @@ Informații secrete sau private, cum ar fi Nightscout URL sau API secret nu vor 
 3. Deschide setarea folosind iconița roata dințată. Poți restricționa încărcarea pe durata în care telefonul utilizează Wi-Fi și/sau este conectat la un încărcător.
 4. Deschide conectarea Open Humans (fir prin secțiunea OH sau meniul complet) și apasă pe 'LOGIN'.
 
-![Open Humans Config Builder](../images/OHUploader1.png)
+```{image} ../images/OHUploader1.png
+:alt: Open Humans Config Builder
+```
 
 5. Citește cu atenție informațiile furnizate despre funcția de Open Humans Uploader și termenii de utilizare.
 6. Confirmă prin bifarea căsuţei şi apasă pe "LOGIN".
@@ -37,7 +39,9 @@ Informații secrete sau private, cum ar fi Nightscout URL sau API secret nu vor 
 8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
 9. Apăsați butonul „Autorizează proiectul”.
 
-![Open Humans Termeni de utilizare + Autentificare](../images/OHUploader2.png)
+```{image} ../images/OHUploader2.png
+:alt: Open Humans Termeni de utilizare + Autentificare
+```
 
 10. Când revii la AAPS vei vedea logare reușită.
 11. Pentru finalizarea configurării păstrează conectarea Open Humans Uploader pornita și telefonul deschis.
@@ -45,11 +49,15 @@ Informații secrete sau private, cum ar fi Nightscout URL sau API secret nu vor 
 13. Apasă pe 'LOGOUT' dacă vrei să oprești încărcarea datelor în Open Humans.
 14. Notificările Android te vor informa despre încărcarea în curs.
 
-![Open Humans termină configurarea](../images/OHUploader3.png)
+```{image} ../images/OHUploader3.png
+:alt: Open Humans termină configurarea
+```
 
 15. You can manage your data by logging in to the [Open Humans website](https://www.openhumans.org).
 
-![Open Humans management date](../images/OHWeb.png)
+```{image} ../images/OHWeb.png
+:alt: Open Humans management date
+```
 
 ## Oportunități de partajare
 
