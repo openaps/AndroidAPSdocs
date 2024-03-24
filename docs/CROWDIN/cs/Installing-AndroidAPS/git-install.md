@@ -15,13 +15,17 @@ Make sure that you can call git.exe without the prefing path as Android Studio n
 
 ```
 
-![Instalační cesta Gitu](../images/Update_GitPath.png)
+```{image} ../images/Update_GitPath.png
+:alt: Instalační cesta Gitu
+```
 
 ### 2. Nastavení git v Android Studiu
 
 - Open File > Settings
 
-  ![Android Studio - otevřete nastavení](../images/Update_GitSettings1.png)
+  ```{image} ../images/Update_GitSettings1.png
+  :alt: Android Studio - otevřete nastavení
+  ```
 
 - Click the small triangle next to Version Control (1.) to open the sub-menu.
 
@@ -31,13 +35,17 @@ Make sure that you can call git.exe without the prefing path as Android Studio n
 
 - Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
 
-  ![Nastavení Android Studia](../images/AndroidStudio361_09.png)
+  ```{image} ../images/AndroidStudio361_09.png
+  :alt: Nastavení Android Studia
+  ```
 
 - If automatic setting is successful git version will be displayed.
 
 - Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
 
-  ![Automatická instalace gitu byla úspěšná](../images/AndroidStudio361_10.png)
+  ```{image} ../images/AndroidStudio361_10.png
+  :alt: Automatická instalace gitu byla úspěšná
+  ```
 
 - In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
 
@@ -47,7 +55,9 @@ Make sure that you can call git.exe without the prefing path as Android Studio n
 
 - Close settings window by clicking "OK" button (5.).
 
-  ![Automatická instalace gitu selhala](../images/AndroidStudio361_11.png)
+  ```{image} ../images/AndroidStudio361_11.png
+  :alt: Automatická instalace gitu selhala
+  ```
 
 ### 3. Restart
 
@@ -60,11 +70,15 @@ Make sure that you can call git.exe without the prefing path as Android Studio n
 
 - Enter `git --version` (without quotation marks and no spaces between the two - \[minus sign\]!) and press Return
 
-  ![git - -version](../images/AndroidStudio_gitversion1.png)
+  ```{image} ../images/AndroidStudio_gitversion1.png
+  :alt: git - -version
+  ```
 
 - If git is installed and connected properly you will receive an information about the installed version that looks as follows:
 
-  ![result git-version](../images/AndroidStudio_gitversion2.png)
+  ```{image} ../images/AndroidStudio_gitversion2.png
+  :alt: result git-version
+  ```
 
 ## Mac
 
