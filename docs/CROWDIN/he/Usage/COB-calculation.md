@@ -17,17 +17,13 @@ Carbs will also be absorbed via the methods described below based on what sensit
 
 פחמימות שלא נספגו נעלמות לאחר זמן מוגדר
 
-```{image} ../images/cob_oref0_orange_II.png
-:alt: Oref1
-```
+![Oref1](../images/cob_oref0_orange_II.png)
 
 ### רגישות AAPS, רגישות משוקללת ממוצעת
 
 absorption is calculated to have `COB == 0` after specified time
 
-```{image} ../images/cob_aaps2_orange_II.png
-:alt: AAPS, WheitedAverage
-```
+![AAPS, WheitedAverage](../images/cob_aaps2_orange_II.png)
 
 אם נעשה שימוש בספיגת פחמימות מינימלית (min_5m_carbimpact) במקום בערך המחושב לפי סטיות ברמת הסוכר, מופיעה נקודה כתומה על גרף הפחמ' הפעילות (COB).
 
@@ -41,9 +37,7 @@ AAPS מזהיר אם אתם עומדים לקבל בולוס עם COB מארוח
 
 בדרך כלל AAPS מזהה ספיגת פחמימות באמצעות סטיות ברמת הסוכר. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called 'fallback'). מכיוון ששיטה זו מחשבת רק את ספיגת הפחמימות המינימלית מבלי להתחשב בסטיות של רמת הסוכר, היא עלולה להוביל לערכי COB שגויים.
 
-```{image} ../images/Calculator_SlowCarbAbsorption.png
-:alt: Hint on wrong COB value
-```
+![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
 
 בצילום המסך למעלה, 41% מזמן ספיגת הפחמימות חושב מתמטית לפי min_5m_carbimpact במקום הערך שזוהה מהסטיות.  זה אומר שאולי יש לכם פחות פחמימות פעילות ממה שחושב על ידי האלגוריתם.
 

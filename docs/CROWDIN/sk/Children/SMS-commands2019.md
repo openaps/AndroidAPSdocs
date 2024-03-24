@@ -18,9 +18,7 @@
 
 - In AndroidAPS go to Preferences > SMS Communicator and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons, no spaces or other characters anywhere - i.e. +4412345678;+4412345679) and also enable 'Allow remote commands via SMS'.
 
-  ```{image} ../images/SMSCommandsSetup.png
-  :alt: SMS Commands Setup
-  ```
+  ![SMS Commands Setup](../images/SMSCommandsSetup.png)
 
 - Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the commands below in **CAPITAL LETTERS**, the phone will respond to confirm success of command or status requested. Confirm command by sending the code provided in SMS from AndroidAPS phone where neccessary.
 
@@ -30,9 +28,7 @@
 
 Commands must be send in English, response will be in your local language if the response string is already [translated](../translations#translate-strings-for-androidaps-app).
 
-```{image} ../images/SMSCommands.png
-:alt: SMS Commands Example
-```
+![SMS Commands Example](../images/SMSCommands.png)
 
 ### Loop
 
@@ -106,6 +102,4 @@ Commands must be send in English, response will be in your local language if the
 
 There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabeling 'send as chat message'.
 
-```{image} ../images/SMSdisableChat.png
-:alt: Disable SMS as chat message
-```
+![Disable SMS as chat message](../images/SMSdisableChat.png)

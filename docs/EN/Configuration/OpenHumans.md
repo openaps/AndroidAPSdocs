@@ -30,9 +30,7 @@ Secret or private information such as your Nightscout URL or API secret will not
 3. Open its setting using the cog wheel button. You can restrict upload to times when phone uses Wi-Fi and/or is charged.
 4. Open the Open Humans Plugin (either trough OH tab or hamburger menu) and click 'LOGIN'.
 
-```{image} ../images/OHUploader1.png
-:alt: Open Humans Config Builder
-```
+![Open Humans Config Builder](../images/OHUploader1.png)
 
 5. Read the given information about the Open Humans Uploader and terms of use carefully.
 6. Confirm by checking the box and click 'LOGIN'.
@@ -40,9 +38,7 @@ Secret or private information such as your Nightscout URL or API secret will not
 8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
 9. Click button 'Authorize project'.
 
-```{image} ../images/OHUploader2.png
-:alt: Open Humans Terms of Use + Login
-```
+![Open Humans Terms of Use + Login](../images/OHUploader2.png)
 
 10. Returning to AAPS you will see a prompt that login succeeded.
 11. Keep Open Humans Uploader plugin and phone turned on for setup to complete.
@@ -50,15 +46,11 @@ Secret or private information such as your Nightscout URL or API secret will not
 13. Click 'LOGOUT' if you want to stop uploading data to Open Humans.
 14. Android notification will inform you about running upload.
 
-```{image} ../images/OHUploader3.png
-:alt: Open Humans finish setup
-```
+![Open Humans finish setup](../images/OHUploader3.png)
 
 15. You can manage your data by logging in to the [Open Humans website](https://www.openhumans.org).
 
-```{image} ../images/OHWeb.png
-:alt: Open Humans manage data
-```
+![Open Humans manage data](../images/OHWeb.png)
 
 ## Sharing Opportunities
 

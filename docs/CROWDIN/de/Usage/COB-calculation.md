@@ -17,17 +17,13 @@ Carbs will also be absorbed via the methods described below based on what sensit
 
 Nicht absorbierte Kohlenhydrate werden nach der eingestellten Zeit verworfen, werden also bei Berechnungen nicht mehr berücksichtigt
 
-```{image} ../images/cob_oref0_orange_II.png
-:alt: Oref1
-```
+![Oref1](../images/cob_oref0_orange_II.png)
 
 ### AAPS, WeightedAverage
 
 Die Kohlenhydratresorption wird auf Basis der angegebenen Zeit berechnet, so dass nach deren Ablauf  `COB == 0` gilt.
 
-```{image} ../images/cob_aaps2_orange_II.png
-:alt: AAPS, WeightedAverage
-```
+![AAPS, WeightedAverage](../images/cob_aaps2_orange_II.png)
 
 Falls die minimale Kohlenhydrat-Resorption (min_5m_carbimpact) statt einem aus den Entwicklungen des BZ berechneten Wert genutzt wird, wird in der COB-Kurve ein orangener Punkt angezeigt.
 
@@ -41,9 +37,7 @@ AAPS warnt Dich, wenn Du mit aktiven Kohlenhydraten von einer vorherigen Mahlzei
 
 Normalerweise erkennt AAPS die Kohlenhydrat-Resorption auf Basis der Entwicklung der BZ-Werte. Für den Fall, dass Du Kohlenhydrate eingegeben hast, aber AAPS deren erwartete Absorption nicht durch BZ-Veränderungen erkennen kann, wird die Methode \` min_5m_carbimpact \<../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#resorptions-einstellungen> \` _ verwendet, um die Absorption zu berechnen (so genanntes 'Fallback '). Da diese Methode nur die minimale Kohlenhydrat-Resorption ohne Berücksichtigung von BZ-Änderungen berechnet, kann dies zu falschen COB-Werten führen.
 
-```{image} ../images/Calculator_SlowCarbAbsorption.png
-:alt: Hinweis fehlerhafte COB Werte
-```
+![Hinweis fehlerhafte COB Werte](../images/Calculator_SlowCarbAbsorption.png)
 
 In der Abbildung oben wurde 41% der Kohlenhydrat-Resorption durch min_5m_carbimpact statt des Wertes, der bei Abweichungen festgestellt wurde, mathematisch berechnet.  Das bedeutet, dass evtl. weniger Kohlenhydrate noch im Körper aktiv sind als der Algorithmus berechnet hat.
 

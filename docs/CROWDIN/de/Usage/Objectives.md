@@ -24,9 +24,7 @@ Wenn Du eines der Objectives (Ziele) neu starten willst, folge der [Anleitung we
 
 - Links zum Wiki helfen Dir weiter, falls Du an der einen oder anderen Stelle noch nicht so sicher sein solltest.
 
-  ```{image} ../images/Objective2_V2_5.png
-  :alt: Screenshot Ziel 2
-  ```
+  ![Screenshot Ziel 2](../images/Objective2_V2_5.png)
 
 (Objectives-objective-3-prove-your-knowledge)=
 
@@ -73,9 +71,7 @@ __What happens if new questions are added later to Objective 3?__ From time to t
 
 - In den Einstellungen kannst Du einen minimalen Prozentwert setzen, der erreicht werden muss, bevor eine Änderung der Basalrate vorgeschlagen wird.
 
-  ```{image} ../images/OpenLoop_MinimalRequestChange2.png
-  :alt: Open Loop Mindeständerung
-  ```
+  ![Open Loop Mindeständerung](../images/OpenLoop_MinimalRequestChange2.png)
 
 - Auch musst Du nicht alle fünf Minuten auf jeden einzelnen Vorschlag reagieren...
 
@@ -95,22 +91,16 @@ Vielleicht möchtest Du mit der Anpassung der Werte für einen engeren Zielberei
 
 Du kannst die Anzeige Deines Zielbereichs (grüne Linien) durch die Änderung der Werte für die Niedrig-/ und Hoch-Markierungen in den [Einstellungen](../Configuration/Preferences.md) > Zielbereich für die Grafikanzeige anpassen.
 
-```{image} ../images/sign_stop.png
-:alt: Stoppzeichen
-```
+![Stoppzeichen](../images/sign_stop.png)
 
 ### Falls Du eine virtuelle Pumpe verwendest darfst Du nicht zum 6. Ziel wechseln. Klicke nicht auf 'Bestätigen/Verify' am Ende des 5. Ziels.
 
-```{image} ../images/blank.png
-:alt: leer
-```
+![leer](../images/blank.png)
 
 (Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)=
 ## Ziel 6: Closed Loop mit Abschaltung bei niedrigen Glukose-Werten
 
-```{image} ../images/sign_warning.png
-:alt: Warnzeichen
-```
+![Warnzeichen](../images/sign_warning.png)
 
 ### Im Ziel 6 wird die Basalrate bei zu erwartenden niedrigen Glukose-Werten abgeschaltet werden. Der 'closed loop' wird im Ziel 6 keinen Korrekturbolus bei hohen Werten abgeben. Hohe Glukose-Werte müssen von Dir manuell korrigiert werden!
 
@@ -119,9 +109,7 @@ Du kannst die Anzeige Deines Zielbereichs (grüne Linien) durch die Änderung de
 - Das System wird Deinen maxIOB Wert auf Null setzen (und Deinen Wert damit überschreiben). Wenn Deine Glukosewerte dann fallen, kann AAPS damit Deine Basalrate reduzieren oder aussetzen. Sollten die Glukosewerte steigen, wird das Basal nur dann erhöht, wenn Dein IOB negativ ist (z.B. nach dem Aussetzen der Basalrate wg. vorangegangener niedriger Werte). In allen anderen Fällen wird die Standard-Basalrate Deines aktuellen Profils verwendet. **Hohe Werte müssen deshalb von Dir manuell mit Insulin korrigiert werden.**
 - Wenn Dein Basal-IOB negativ ist (siehe Bildschirmausschnitt unten), kann auch im Ziel 6 eine TBR > 100% gesetzt werden.
 
-```{image} ../images/Objective6_negIOB.png
-:alt: Beispiel negatives IOB
-```
+![Beispiel negatives IOB](../images/Objective6_negIOB.png)
 
 - Nutze einen zusätzlichen Sicherheitspuffer, in dem Du Deinen Zielbereich etwas höher setzt, als Du es normalerweise tun würdest.
 - Aktiviere den Modus 'Low Glucose Suspend' (Abschaltung bei niedrigen Glukosewerten), indem Du lange auf das Loop-Symbol in der oberen rechten Bildschirmecke drückst (und festhälst) und dann den LGS-Modus auswählst.
@@ -137,9 +125,7 @@ Du kannst die Anzeige Deines Zielbereichs (grüne Linien) durch die Änderung de
 
   Betrachte diese Empfehlung als Ausgangspunkt. Wenn Du den Faktor '3x' verwendest und feststellst, dass AAPS Deinen BZ zu stark senkt, reduziere diesen Faktor (z.B. auf '2x'). Wenn Du Insulinresistenzen feststellst, kannst Du diesen Faktor vorsichtig Schritt für Schritt erhöhen.
 
-  ```{image} ../images/MaxDailyBasal2.png
-  :alt: max daily basal
-  ```
+  ![max daily basal](../images/MaxDailyBasal2.png)
 
 - Wenn Du zuverlässig weißt, welcher IOB Deinem Looping-Muster entspricht, dann senke Deinen Zielbereich auf den gewünschten Wert.
 
@@ -175,10 +161,7 @@ Du kannst die Anzeige Deines Zielbereichs (grüne Linien) durch die Änderung de
 
 Wenn Du aus welchem Grund auch immer ein Objective (Ziel) neu starten willst, klicke auf "Ziel neu starten".
 
-```{image} ../images/Objective_ClearFinished.png
-:alt: Objective (Ziel) neu starten
-
-```
+![Objective (Ziel) neu starten](../images/Objective_ClearFinished.png)
 
 ## Objectives (Ziele) in Android APS-Versionen vor 3.0
 

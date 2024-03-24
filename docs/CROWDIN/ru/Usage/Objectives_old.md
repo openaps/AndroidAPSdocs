@@ -28,9 +28,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 - Links will be provided to guide you in case you are not familiar with a specific action yet.
 
-  ```{image} ../images/Objective2_V2_5.png
-  :alt: снимок экрана Цель 2
-  ```
+  ![снимок экрана Цель 2](../images/Objective2_V2_5.png)
 
 ## Цель 3: доказательство знаний
 
@@ -38,9 +36,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 - Click on the orange text "Not completed yet" to access the page with the question and answering options.
 
-  ```{image} ../images/Objective3_V2_5.png
-  :alt: снимок экрана Цель 3
-  ```
+  ![снимок экрана Цель 3](../images/Objective3_V2_5.png)
 
 - Links will be provided to guide you in case you are unsure about the correct answers yet.
 
@@ -65,9 +61,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 - In Preferences you can set a minimum percentage for suggestion of basal rate change.
 
-  ```{image} ../images/OpenLoop_MinimalRequestChange2.png
-  :alt: изменение минимального запроса на незамкнутом цикле
-  ```
+  ![изменение минимального запроса на незамкнутом цикле](../images/OpenLoop_MinimalRequestChange2.png)
 
 - Also, you do not need to act every 5 minutes on all suggestions...
 
@@ -87,21 +81,15 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-```{image} ../images/sign_stop.png
-:alt: знак "Стоп"
-```
+![знак "Стоп"](../images/sign_stop.png)
 
 ### Остановитесь здесь, если пользуетесь незамкнутым циклом с виртуальной помпой - не нажимайте на кнопку «Верифицировать» в конце цели.
 
-```{image} ../images/blank.png
-:alt: пусто
-```
+![пусто](../images/blank.png)
 
 ## Цель 6: Начинаем замыкать цикл с Low Glucose Suspend (прекращением подачи инсулина на низких сахарах)
 
-```{image} ../images/sign_warning.png
-:alt: предупреждающий знак
-```
+![предупреждающий знак](../images/sign_warning.png)
 
 ### Замкнутый цикл не будет исправлять значения высокой ГК в цели 6, поскольку он ограничен приостановкой подачи инсулина на низких сахарах. Вы сами вручную должны корректировать высокие значения ГК!
 
@@ -117,9 +105,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 - The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the basal IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.
 
-  ```{image} ../images/Objective6_negIOB.png
-  :alt: Пример отрицательного IOB
-  ```
+  ![Пример отрицательного IOB](../images/Objective6_negIOB.png)
 
 - If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
 
@@ -131,9 +117,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
   Эта рекомендация должна рассматриваться как отправная точка. Если вы установили троекратную величину и видите признаки того, что для вас это слишком жестко, понизьте ее. Если у вас высокая резистентность повышайте эту величину постепенно.
 
-  ```{image} ../images/MaxDailyBasal2.png
-  :alt: максимальный суточный базал
-  ```
+  ![максимальный суточный базал](../images/MaxDailyBasal2.png)
 
 - Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
 
@@ -165,6 +149,4 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 Если вы хотите вернуться к целям по какой-либо причине, вы можете сделать это, нажав на "очистить завершенное".
 
-```{image} ../images/Objective_ClearFinished.png
-:alt: Вернуться в цели
-```
+![Вернуться в цели](../images/Objective_ClearFinished.png)

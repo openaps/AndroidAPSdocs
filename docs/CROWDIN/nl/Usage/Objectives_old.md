@@ -28,9 +28,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 - Links will be provided to guide you in case you are not familiar with a specific action yet.
 
-  ```{image} ../images/Objective2_V2_5.png
-  :alt: Screenshot doel 2
-  ```
+  ![Screenshot doel 2](../images/Objective2_V2_5.png)
 
 ## Doel 3: Bewijs jouw kennis
 
@@ -38,9 +36,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 - Click on the orange text "Not completed yet" to access the page with the question and answering options.
 
-  ```{image} ../images/Objective3_V2_5.png
-  :alt: Screenshot doel 3
-  ```
+  ![Screenshot doel 3](../images/Objective3_V2_5.png)
 
 - Links will be provided to guide you in case you are unsure about the correct answers yet.
 
@@ -65,9 +61,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 - In Preferences you can set a minimum percentage for suggestion of basal rate change.
 
-  ```{image} ../images/OpenLoop_MinimalRequestChange2.png
-  :alt: Open Loop Minimale verzoek voor aanpassing
-  ```
+  ![Open Loop Minimale verzoek voor aanpassing](../images/OpenLoop_MinimalRequestChange2.png)
 
 - Also, you do not need to act every 5 minutes on all suggestions...
 
@@ -87,21 +81,15 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-```{image} ../images/sign_stop.png
-:alt: Stop-teken
-```
+![Stop-teken](../images/sign_stop.png)
 
 ### Stop hier als je een virtuele pomp gebruikt en in Open Loop wilt blijven - klik NIET op Verificatie aan het einde van dit doel.
 
-```{image} ../images/blank.png
-:alt: blanco
-```
+![blanco](../images/blank.png)
 
 ## Doel 6: Starten in Closed Loop met bescherming tegen lage BG
 
-```{image} ../images/sign_warning.png
-:alt: Waarschuwings-teken
-```
+![Waarschuwings-teken](../images/sign_warning.png)
 
 ### De closed loop zal hoge glucosewaarden in doel 6 niet naar beneden kunnen brengen, omdat in dit doel alleen nog de 'pompstop voor laag' functie geactiveerd is. Om hoge glucosewaarden naar beneden te krijgen, moet je zelf nog handmatig ingrijpen!
 
@@ -117,9 +105,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 - The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the basal IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.
 
-  ```{image} ../images/Objective6_negIOB.png
-  :alt: Voorbeeld negatieve IOB
-  ```
+  ![Voorbeeld negatieve IOB](../images/Objective6_negIOB.png)
 
 - If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
 
@@ -131,9 +117,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
   Deze aanbeveling moet als uitgangspunt worden beschouwd. Als je op de 3x zit en je ziet dat het systeem de neiging heeft om jouw bloedglucose te laag uit te laten komen, pas dan deze instelling aan naar een lager getal. Als je zeer insulineresistent bent, pas dan deze instelling met kleine stapjes aan naar een hoger getal.
 
-  ```{image} ../images/MaxDailyBasal2.png
-  :alt: max dagelijkse basaal
-  ```
+  ![max dagelijkse basaal](../images/MaxDailyBasal2.png)
 
 - Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
 
@@ -165,6 +149,4 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 Als je om welke reden dan ook terug wilt gaan in de leerdoelen druk dan op "voltooiing wissen".
 
-```{image} ../images/Objective_ClearFinished.png
-:alt: Teruggaan in doelen
-```
+![Teruggaan in doelen](../images/Objective_ClearFinished.png)

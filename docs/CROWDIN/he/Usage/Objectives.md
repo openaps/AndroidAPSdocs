@@ -24,9 +24,7 @@
 
 - מצורפים קישורים על מנת להדריך אתכם בביצוע הסעיפים.
 
-  ```{image} ../images/Objective2_V2_5.png
-  :alt: Screenshot objective 2
-  ```
+  ![Screenshot objective 2](../images/Objective2_V2_5.png)
 
 (Objectives-objective-3-prove-your-knowledge)=
 
@@ -73,9 +71,7 @@ __מה קורה אם שאלות חדשות יתווספו מאוחר יותר ל
 
 - בהעדפות אתם יכולים להגדיר את אחוז השינוי המינימלי הדרוש להפעלת הצעה לשינוי במינונים הבזאליים.
 
-  ```{image} ../images/OpenLoop_MinimalRequestChange2.png
-  :alt: Open Loop minimal request change
-  ```
+  ![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
 
 - זכרו שאתם לא חייבים להגיב לכל המלצה של הלופ, כל 5 דקות...
 
@@ -95,22 +91,16 @@ __מה קורה אם שאלות חדשות יתווספו מאוחר יותר ל
 
 תוכלו לצפות בטווח רחב יותר (עקום ירוק) בגרף עבור ערכי סוכר בהם אתם מעוניינים ע"י בחירת ערכים [בהעדפות > סקירה כללית > טווח הצגה](../Configuration/Preferences.md).
 
-```{image} ../images/sign_stop.png
-:alt: Stop sign
-```
+![Stop sign](../images/sign_stop.png)
 
 ### עצרו כאן אם אתם משתמשים במשאבה וירטואלית - אל תלחצו על "אמת" לסיום משימה זו.
 
-```{image} ../images/blank.png
-:alt: blank
-```
+![blank](../images/blank.png)
 
 (Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)=
 ## משימה 6: מתחילים לסגור לולאה עם השהיה עקב ערך סוכר נמוך
 
-```{image} ../images/sign_warning.png
-:alt: Warning sign
-```
+![Warning sign](../images/sign_warning.png)
 
 ### הלולאה הסגורה שבמשימה 6 לא תתקן ערכי סוכר גבוהים כי היא מוגבלת להפסקת הזרקת אינסולין כתיקון לסוכר נמוך. עליכם לתקן סוכר גבוה ידנית בעצמכם!
 
@@ -119,9 +109,7 @@ __מה קורה אם שאלות חדשות יתווספו מאוחר יותר ל
 - The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you. If blood glucose is rising then it will only increase basal if the basal IOB is negative from a previous Low Glucose Suspend. Otherwise basal rates will remain the same as your selected profile. **That means that you have to manually handle high values with insulin corrections.**
 - If your basal IOB is negative (see screenshot below) a TBR > 100% can be issued also in objective 6.
 
-```{image} ../images/Objective6_negIOB.png
-:alt: Example negative IOB
-```
+![Example negative IOB](../images/Objective6_negIOB.png)
 
 - Set your target range slightly higher than you usually aim for, just to be safe and have a bit more scurity buffer.
 - Enable 'Low Glucose Suspend' mode either by by pressing and holding the Loop icon at the top right corner of the home screen and selecting the Loop - LGS mode icon.
@@ -137,9 +125,7 @@ __מה קורה אם שאלות חדשות יתווספו מאוחר יותר ל
 
   המלצה זו היא נקודת התחלה. אם הגדרתם X3 בזאלי מרבי ואתם חווים תגובות חריפות ומהירות ברמת הסוכר, הורידו את ערך. אם יש לכם תנגודת גבוהה, הגדילו את הערך בעדינות ובאופן מדורג.
 
-  ```{image} ../images/MaxDailyBasal2.png
-  :alt: max daily basal
-  ```
+  ![max daily basal](../images/MaxDailyBasal2.png)
 
 - כאשר תרגישו שערך האינסולין הפעיל מתאים לפעולת הלופ שלכם, הורידו את ערכי מטרה שלכם כרצונכם.
 
@@ -175,9 +161,7 @@ __מה קורה אם שאלות חדשות יתווספו מאוחר יותר ל
 
 אם ברצונכם לחזור על משימה מכל סיבה שהיא, ניתן לעשות זאת ע"י לחיצה על "ביטול השלמה".
 
-```{image} ../images/Objective_ClearFinished.png
-:alt: Go back in objectives
-```
+![Go back in objectives](../images/Objective_ClearFinished.png)
 
 ## משימות ב- AndroidAPS לפני גרסה 3.0
 

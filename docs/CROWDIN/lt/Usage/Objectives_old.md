@@ -28,9 +28,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 - Links will be provided to guide you in case you are not familiar with a specific action yet.
 
-  ```{image} ../images/Objective2_V2_5.png
-  :alt: 2 tikslo ekrano vaizdas
-  ```
+  ![2 tikslo ekrano vaizdas](../images/Objective2_V2_5.png)
 
 ## Objective 3: Prove your knowledge
 
@@ -38,9 +36,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 - Click on the orange text "Not completed yet" to access the page with the question and answering options.
 
-  ```{image} ../images/Objective3_V2_5.png
-  :alt: 3 tikslo ekrano vaizdas
-  ```
+  ![3 tikslo ekrano vaizdas](../images/Objective3_V2_5.png)
 
 - Links will be provided to guide you in case you are unsure about the correct answers yet.
 
@@ -65,9 +61,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 - In Preferences you can set a minimum percentage for suggestion of basal rate change.
 
-  ```{image} ../images/OpenLoop_MinimalRequestChange2.png
-  :alt: Atvirojo ciklo minimalaus pokyčio užklausa
-  ```
+  ![Atvirojo ciklo minimalaus pokyčio užklausa](../images/OpenLoop_MinimalRequestChange2.png)
 
 - Also, you do not need to act every 5 minutes on all suggestions...
 
@@ -87,21 +81,15 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-```{image} ../images/sign_stop.png
-:alt: Stop ženklas
-```
+![Stop ženklas](../images/sign_stop.png)
 
 ### Jei naudojate virtualią pomp ir atvirą ciklą - nespauskite Patvirtinti šio tikslo pabaigoje.
 
-```{image} ../images/blank.png
-:alt: tuščias
-```
+![tuščias](../images/blank.png)
 
 ## Tikslas 6: pradėkite Uždaro ciklo (Closed Loop) režimą su pompos stabdymu esant žemai gliukozei
 
-```{image} ../images/sign_warning.png
-:alt: Įspėjamasis ženklas
-```
+![Įspėjamasis ženklas](../images/sign_warning.png)
 
 ### Uždaras ciklas nekoreguos aukštos glikemijos 6 tiksle, nes jį apriboja sustabdymas dėl žemos gliukozės. Todėl jūs turite patys koreguoti aukštą glikemiją!
 
@@ -117,9 +105,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 - The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the basal IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.
 
-  ```{image} ../images/Objective6_negIOB.png
-  :alt: Neigiamo AIO pavyzdys
-  ```
+  ![Neigiamo AIO pavyzdys](../images/Objective6_negIOB.png)
 
 - If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
 
@@ -131,9 +117,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
   Ši rekomendacija turėtų būti laikoma atskaitos tašku. Jei naudosite koeficientą 3x ir pastebėsite, kad AAPS veikia per daug agresyviai, sumažinkite šį koeficientą (pvz., 2x, ...). Jei esate rezistentiškas, galite po truputį jį pakelti.
 
-  ```{image} ../images/MaxDailyBasal2.png
-  :alt: max daily basal
-  ```
+  ![max daily basal](../images/MaxDailyBasal2.png)
 
 - Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
 
@@ -165,6 +149,4 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 Jei dėl bet kokios priežasties norite grįžti į tikslų pradžią, galite tai padaryti paspaudę "išvalyti užbaigtus".
 
-```{image} ../images/Objective_ClearFinished.png
-:alt: Grįžti į tikslus
-```
+![Grįžti į tikslus](../images/Objective_ClearFinished.png)

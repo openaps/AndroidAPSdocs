@@ -29,9 +29,7 @@ Geheime of persoonlijke informatie zoals je Nightscout URL of API-secret zal nie
 3. Open de instellingen door op het tandwiel icoontje te tikken. Je kunt uploaden beperken tot momenten wanneer jouw telefoon gebruik maakt van Wi-Fi en/of wordt opgeladen.
 4. Open de Open Humans Plugin (via het menu OH-tabblad of hamburger menu) en klik op 'LOGIN'.
 
-```{image} ../images/OHUploader1.png
-:alt: Open Humans Configurator
-```
+![Open Humans Configurator](../images/OHUploader1.png)
 
 5. Lees de informatie over de Open Humans Uploader en de gebruiksvoorwaarden zorgvuldig.
 6. Bevestig door het vakje te selecteren en op 'LOGIN' te klikken.
@@ -39,9 +37,7 @@ Geheime of persoonlijke informatie zoals je Nightscout URL of API-secret zal nie
 8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
 9. Klik op de knop 'Authorize project'.
 
-```{image} ../images/OHUploader2.png
-:alt: Open Humans Gebruikersvoorwaarden + Login
-```
+![Open Humans Gebruikersvoorwaarden + Login](../images/OHUploader2.png)
 
 10. Als je teruggaat naar AAPS ziet je een melding dat het aanmelden is gelukt.
 11. Laat de Open Humans Uploader plugin en telefoon ingeschakeld om de setup te voltooien.
@@ -49,15 +45,11 @@ Geheime of persoonlijke informatie zoals je Nightscout URL of API-secret zal nie
 13. Klik op 'LOGOUT' als je wilt stoppen met het uploaden van gegevens naar Open Humans.
 14. Je zult een Android melding zien met informatie over de voortgang van jouw upload.
 
-```{image} ../images/OHUploader3.png
-:alt: Open Humans setup afronden
-```
+![Open Humans setup afronden](../images/OHUploader3.png)
 
 15. You can manage your data by logging in to the [Open Humans website](https://www.openhumans.org).
 
-```{image} ../images/OHWeb.png
-:alt: Open Humans gegevens beheren
-```
+![Open Humans gegevens beheren](../images/OHWeb.png)
 
 ## Gegevens delen met onderzoeksprojecten
 

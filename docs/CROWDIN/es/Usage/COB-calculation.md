@@ -17,17 +17,13 @@ Los carbohidratos también se absorven mediante los métodos descritos a continu
 
 Los carbohidratos no absorbidos se eliminarán después del tiempo especificado
 
-```{image} ../images/cob_oref0_orange_II.png
-:alt: Sensibilidad Oref1
-```
+![Sensibilidad Oref1](../images/cob_oref0_orange_II.png)
 
 ### Sensibilidad promedio ponderada
 
 La absorción se calcula para tener `COB == 0` después del tiempo especificado
 
-```{image} ../images/cob_aaps2_orange_II.png
-:alt: Sensibilidad promedio ponderada
-```
+![Sensibilidad promedio ponderada](../images/cob_aaps2_orange_II.png)
 
 Si se utiliza la absorción mínima de carbohidratos (min_5m_carbimpact) en lugar del valor calculado a partir de las desviaciones de BG, aparece un punto naranja en el gráfico COB.
 
@@ -41,9 +37,7 @@ AAPS te avisa si estás a punto de poner un bolo con carbohidratos (COB) de una 
 
 Normalmente AAPS detecta la absorción de carbohidratos a través de las desviaciones de la glucemia. En el caso de que se hayan introducido carbohidratos, pero AAPS no pueda calcular su absorción estimada mediante las desviaciones de la glucosa, utilizará el método [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) para calcular la absorción (el llamado 'fallback'). Como este método sólo calcula la absorción mínima de carbohidratos sin tener en cuenta las desviaciones de glucosa, podría dar lugar a valores de carbohidratos (COB) incorrectos.
 
-```{image} ../images/Calculator_SlowCarbAbsorption.png
-:alt: Sugerencia sobre un valor incorrecto de COB
-```
+![Sugerencia sobre un valor incorrecto de COB](../images/Calculator_SlowCarbAbsorption.png)
 
 En la captura de pantalla anterior, el 41% de las veces, la absorción de carbohidratos se calculó matemáticamente mediante el uso de min_5m_carbimpact, en lugar del valor detectado a partir de las desviaciones.  Esto significa que tal vez estás consumiendo menos carbohidratos de los calculados por el algoritmo.
 

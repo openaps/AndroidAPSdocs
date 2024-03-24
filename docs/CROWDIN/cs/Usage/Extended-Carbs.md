@@ -15,21 +15,15 @@ eSacharady jsou sacharidy, jejichž působení se rozlévá do několika hodin. 
 
 To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
 
-```{image} ../images/eCarbs_Dialog.png
-:alt: Enter carbs
-```
+![Enter carbs](../images/eCarbs_Dialog.png)
 
 eSacharidy na hlavní stránce. Všimněte si sacharidů v závorkách v poli COB, které představují sacharidy v budoucnosti:
 
-```{image} ../images/eCarbs_Graph.png
-:alt: eCarbs in graph
-```
+![eCarbs in graph](../images/eCarbs_Graph.png)
 
 Sacharidové vstupy, které jsou plánované v budoucnosti, jsou zbarvené tmavě oranžovou barvou na záložce ošetření:
 
-```{image} ../images/eCarbs_Treatment.png
-:alt: eCarbs in future in treatment tab
-```
+![eCarbs in future in treatment tab](../images/eCarbs_Treatment.png)
 
 ______________________________________________________________________
 
@@ -61,9 +55,7 @@ That's why as of version 2.6 there is an option for an extended bolus for users 
 - Bolus units, remaining and total time will be shown on homescreen.
 - On Insight pump extended bolus is *not available* if [TBR emulation](Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
-```{image} ../images/ExtendedBolus2_6.png
-:alt: Extended bolus in AAPS 2.6
-```
+![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 
 (Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Why extended boluses won't work in a closed loop environment

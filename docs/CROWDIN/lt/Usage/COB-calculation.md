@@ -17,17 +17,13 @@ Carbs will also be absorbed via the methods described below based on what sensit
 
 Neįsisavinti angliavandeniai yra nebeskaičiuojami po nustatyto laiko
 
-```{image} ../images/cob_oref0_orange_II.png
-:alt: Oref1
-```
+![Oref1](../images/cob_oref0_orange_II.png)
 
 ### AAPS, SvertinisVidurkis
 
 absorption is calculated to have `COB == 0` after specified time
 
-```{image} ../images/cob_aaps2_orange_II.png
-:alt: AAPS, SvertinisVidurkis
-```
+![AAPS, SvertinisVidurkis](../images/cob_aaps2_orange_II.png)
 
 Jei minimalus angliavandenių įsisavinimas (min_5m_carbimpact) yra naudojamas vietoj reikšmių, apskaičiuotų iš KG svyravimų, atsiranda oranžinis taškas AAO grafike.
 
@@ -41,9 +37,7 @@ AAPS įspėja jus, jei jūs ketinate bolusuoti su AAO iš prieš tai buvusio val
 
 Įprastai AAPS nustato angliavandenių įsisavinimą pagal KG svyravimus. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called 'fallback'). Kadangi šis metodas skaičiuoja tik minimalų angliavandenių įsisavinimą nekreipiant dėmesio į KG svyravimus, tai gali lemti neteisingas AAO reikšmes.
 
-```{image} ../images/Calculator_SlowCarbAbsorption.png
-:alt: Užuomina apie neteisingą AAO reikšmę
-```
+![Užuomina apie neteisingą AAO reikšmę](../images/Calculator_SlowCarbAbsorption.png)
 
 In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  Tai reiškia, kad gal jūsų turite mažiau aktyvių angliavandenių organizme nei apskaičiuota algoritmo.
 

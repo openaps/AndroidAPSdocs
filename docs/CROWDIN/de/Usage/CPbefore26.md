@@ -10,9 +10,7 @@ Auf dieser Seite zeigen wir, wo die bisher über das Careportal verfügbaren Fun
 
 ## Aktivität & Feedback
 
-```{image} ../images/Careportal_25_26_1_IIb.png
-:alt: "Careportal - Aktivität\xE4t & Feedback"
-```
+!["Careportal - Aktivität\xE4t & Feedback"](../images/Careportal_25_26_1_IIb.png)
 
 - Alter-Informationen wurden in Aktionen-Tab / Menü verschoben.
 - BZ Test wurde auf den Tab / in das Menü "Aktionen" verschoben.
@@ -23,17 +21,13 @@ Auf dieser Seite zeigen wir, wo die bisher über das Careportal verfügbaren Fun
 
 ## Kohlenhydrate & Bolus
 
-```{image} ../images/Careportal_25_26_2_IIa.png
-:alt: Careportal Kohlenhydrate & Bolus
-```
+![Careportal Kohlenhydrate & Bolus](../images/Careportal_25_26_2_IIa.png)
 
 - Um einen Bolus - unabhängig ob für eine Mahlzeit, einen Snack oder zur Korrektur - als Notiz zu vermerken, nutze den Insulin-Button auf dem Startbildschirm **und achte darauf "Bolus nur erfassen" anzukreuzen.**
 
 - Die Option, Insulineinträge in der Vergangenheit zu machen - z.B. wenn Du vergessen hast, per Spritze injiziertes Insulin zu vermerken - ist nur verfügbar, wenn die Checkbox "Bolus nur erfassen" angehakt ist.
 
-  ```{image} ../images/Careportal_25_26_5.png
-  :alt: Insulin in der Vergangenheit erfassen
-  ```
+  ![Insulin in der Vergangenheit erfassen](../images/Careportal_25_26_5.png)
 
 - Für eine "Kohlenhydrat Korrektur" kannst Du den Button "Kohlenhydrate" auf dem Startbildschirm verwenden.
 
@@ -41,18 +35,14 @@ Auf dieser Seite zeigen wir, wo die bisher über das Careportal verfügbaren Fun
 
 ## CGM & OpenAPS
 
-```{image} ../images/Careportal_25_26_3_IIa.png
-:alt: Careportal CGM & OpenAPS
-```
+![Careportal CGM & OpenAPS](../images/Careportal_25_26_3_IIa.png)
 
 - Das Setzen des CGM-Sensors kannst Du jetzt im Tab / Menü "Aktionen" erfassen.
 - Alle anderen Funktionen aus diesem Abschnitt wurden entfernt. Wenn Du eine Aktion wie z.B. Bolusabgabe dokumentieren möchtest, nutze das Notizfeld im Dialogfeld (siehe Screenshot im Bereich [Kohlenhydrate & Bolus](CPbefore26-carbs-bolus) auf dieser Seite).
 
 ## Pumpe
 
-```{image} ../images/Careportal_25_26_4_IIb.png
-:alt: Careportal Pumpe
-```
+![Careportal Pumpe](../images/Careportal_25_26_4_IIb.png)
 
 - Katheter- und Reservoirwechsel können über die Schaltfläche "Katheterwechsel" im Tab / Menü "Aktionen" erfasst werden.
 - Der Profilwechsel wurde auf den Tab / in das Menü "Aktionen" verschoben.
