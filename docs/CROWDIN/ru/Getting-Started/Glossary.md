@@ -239,8 +239,8 @@
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
 <tr>
- <td><strong>NS Client or AAPS Client</strong></td>
- <td>a remote control feature that can be used by caregivers via a follower phone to follow a user's AAPS by connecting to the user's Nightscout site</td>
+ <td><strong>Клиент NS или клиент AAPS</strong></td>
+ <td>функция дистанционного управления, которая может использоваться опекунами при помощи телефона-фоллоуэра для отслеживания приложений пользователя путем подключения к сайту Nightscout</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - клиент NS</a></td>
 </tr>
@@ -293,14 +293,14 @@
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - профиль</a></td>
 </tr>
 <tr>
- <td><strong>Profile Switch</strong></td>
- <td>a (temporary) switching of user's Profile to a different Profile saved within AAPS</td>
+ <td><strong>смена профиля</strong></td>
+ <td>(временное) переключение профиля пользователя на другой профиль, сохраненный в AAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Profiles.html">Wiki - смена профиля</a></td>
 </tr>
 <tr>
- <td><strong>Profile Percentage</strong></td>
- <td>a (temporary) percentage increase or decrease applied to a user's Profile for a selected time period </td>
+ <td><strong>Процент профиля</strong></td>
+ <td>(временное) процентное увеличение или уменьшение, применяемое к профилю пользователя на выбранный период времени </td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Profiles.html">Wiki - смена профиля</a></td>
  <td><strong>RES / Резервуар, РЕЗ</strong></td>
