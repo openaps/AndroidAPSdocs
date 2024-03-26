@@ -12,7 +12,9 @@
 - Scroll down to "BG source".
 - Select correct BG source if changes are necessary.
 
-![Zdroj glykémie](../images/ConfBuild_BG.png)
+```{image} ../images/ConfBuild_BG.png
+:alt: Zdroj glykémie
+```
 
 ## Dokončit cíle
 
@@ -29,7 +31,9 @@
 - Click "Master-Password"
 - Enter password, confirm password and click ok.
 
-![Nastavení hlavního hesla](../images/MasterPW.png)
+```{image} ../images/MasterPW.png
+:alt: Nastavení hlavního hesla
+```
 
 ## Exportovat nastavení
 
@@ -55,6 +59,8 @@
 - Click "Pump password (v1 only)"
 - Enter pump password ([Default password](DanaRS-Insulin-Pump-default-password) is different depending on firmware version) and click OK.
 
-![Nastavení hesla Dana RS](../images/DanaRSPW.png)
+```{image} ../images/DanaRSPW.png
+:alt: Nastavení hesla Dana RS
+```
 
 To change password on Dana RS follow instructions on [DanaRS page](DanaRS-Insulin-Pump-change-password-on-pump).

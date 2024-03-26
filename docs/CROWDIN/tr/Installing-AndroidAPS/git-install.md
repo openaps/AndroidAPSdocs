@@ -15,13 +15,17 @@ Android Studio'nun Git.exe'yi bulmak için bu yere ihtiyaç duyacağından Git.e
 
 ```
 
-![Git kurulum yolu](../images/Update_GitPath.png)
+```{image} ../images/Update_GitPath.png
+:alt: Git kurulum yolu
+```
 
 ### 2. Android Studio'da git yolunu ayarla
 
 - Dosyayı Aç > Ayarlar
 
-  ![Android Studio - ayarları aç](../images/Update_GitSettings1.png)
+  ```{image} ../images/Update_GitSettings1.png
+  :alt: Android Studio - ayarları aç
+  ```
 
 - Alt menüyü açmak için Sürüm Kontrolü (1.) yanındaki küçük üçgene tıklayın.
 
@@ -31,13 +35,17 @@ Android Studio'nun Git.exe'yi bulmak için bu yere ihtiyaç duyacağından Git.e
 
 - "Test" düğmesine tıklayarak Android Studio'nun git.exe yolunu otomatik olarak bulup bulamayacağını kontrol edin (4.)
 
-  ![Android Studio ayarları](../images/AndroidStudio361_09.png)
+  ```{image} ../images/AndroidStudio361_09.png
+  :alt: Android Studio ayarları
+  ```
 
 - Otomatik ayar başarılı olursa git versiyonu görüntülenecektir.
 
 - İletişim kutusunda (1.) "OK" ve ayarlar penceresinde (2.) "OK" düğmesini tıklayın.
 
-  ![Otomatik git kurulumu başarılı](../images/AndroidStudio361_10.png)
+  ```{image} ../images/AndroidStudio361_10.png
+  :alt: Otomatik git kurulumu başarılı
+  ```
 
 - Git.exe dosyasının bulunamaması durumunda iletişim kutusundaki (1.) "OK" ve ardından üç noktalı (2.) düğmeyi tıklayın.
 
@@ -47,7 +55,9 @@ Android Studio'nun Git.exe'yi bulmak için bu yere ihtiyaç duyacağından Git.e
 
 - "OK" butonuna (5.) tıklayarak ayarlar penceresini kapatın.
 
-  ![Otomatik git kurulumu başarısız](../images/AndroidStudio361_11.png)
+  ```{image} ../images/AndroidStudio361_11.png
+  :alt: Otomatik git kurulumu başarısız
+  ```
 
 ### 3. Yeniden başlat
 
@@ -60,11 +70,15 @@ Android Studio'nun Git.exe'yi bulmak için bu yere ihtiyaç duyacağından Git.e
 
 - `git --version` girin (tırnak işaretleri olmadan ve iki - \[eksi işareti\]! arasında boşluk bırakmadan!) ve Return tuşuna basın
 
-  ![git - -version](../images/AndroidStudio_gitversion1.png)
+  ```{image} ../images/AndroidStudio_gitversion1.png
+  :alt: git - -version
+  ```
 
 - Git düzgün bir şekilde kurulur ve bağlanırsa, kurulu sürüm hakkında aşağıdaki gibi görünen bir bilgi alacaksınız:
 
-  ![git-version durumu](../images/AndroidStudio_gitversion2.png)
+  ```{image} ../images/AndroidStudio_gitversion2.png
+  :alt: git-version durumu
+  ```
 
 ## Mac
 

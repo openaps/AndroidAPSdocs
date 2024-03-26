@@ -239,8 +239,8 @@
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
 <tr>
- <td><strong>NS Client / Клиент NS</strong></td>
- <td>Клиентская часть AAPS для обмена данными с сервером (сайтом) Nightscout.</td>
+ <td><strong>Клиент NS или клиент AAPS</strong></td>
+ <td>функция дистанционного управления, которая может использоваться опекунами при помощи телефона-фоллоуэра для отслеживания приложений пользователя путем подключения к сайту Nightscout</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - клиент NS</a></td>
 </tr>
@@ -293,12 +293,16 @@
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - профиль</a></td>
 </tr>
 <tr>
- <td><strong>Переключение профиля</strong></td>
- <td>(частичное) Изменение профиля или процентное увеличение/уменьшение.</td>
+ <td><strong>смена профиля</strong></td>
+ <td>(временное) переключение профиля пользователя на другой профиль, сохраненный в AAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Profiles.html">Wiki - смена профиля</a></td>
 </tr>
 <tr>
+ <td><strong>Процент профиля</strong></td>
+ <td>(временное) процентное увеличение или уменьшение, применяемое к профилю пользователя на выбранный период времени </td>
+ <td>&nbsp;</td>
+ <td><a href="../Usage/Profiles.html">Wiki - смена профиля</a></td>
  <td><strong>RES / Резервуар, РЕЗ</strong></td>
  <td>меняющая цвет надпись состояния наполненности резервуара на главном экране</td>
  <td>BAT / CAN / SEN</td>

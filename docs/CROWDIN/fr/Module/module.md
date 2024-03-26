@@ -2,7 +2,9 @@
 
 AAPS n'est pas seulement une application (faite vous même), c'est juste un des modules fonctionnels de votre système de boucle fermée. Avant de décider des composants, ce serait une bonne idée de jeter aussi un oeil à la [configuration des composants](index-component-setup).
 
-![Aperçu des composants](../images/modules.png)
+```{image} ../images/modules.png
+:alt: Aperçu des composants
+```
 
 ```{note}
 **AVIS DE SÉCURITÉ IMPORTANT**

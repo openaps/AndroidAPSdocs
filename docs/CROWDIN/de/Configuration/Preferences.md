@@ -2,19 +2,27 @@
 
 - **Öffne die Einstellungen** durch einen Klick auf das 3-Punkte-Menü rechts oben auf dem Startbildschirm.
 
-  ![Einstellungen öffnen](../images/Pref2020_Open2.png)
+  ```{image} ../images/Pref2020_Open2.png
+  :alt: Einstellungen öffnen
+  ```
 
 - Du kannst direkt zu den Einstellungen für einen bestimmten Tab (z.B. Pumpen-Tab) springen, indem Du diesen Tab öffnest und auf Plugin-Einstellungen klickst.
 
-  ![Plugin-Einstellungen öffnen](../images/Pref2020_OpenPlugin2.png)
+  ```{image} ../images/Pref2020_OpenPlugin2.png
+  :alt: Plugin-Einstellungen öffnen
+  ```
 
 - **Untermenüs** können geöffnet werden, indem Du auf das Dreieck unter dem Untermenü-Titel klicken.
 
-  ![Untermenü öffnen](../images/Pref2020_Submenu2.png)
+  ```{image} ../images/Pref2020_Submenu2.png
+  :alt: Untermenü öffnen
+  ```
 
 - Mit der **Filter-Funktion** ganz oben auf dieser Seite kannst Du schnell die gesuchten Einstellungen finden. Beginne einfach mit der Eingabe eines Teils des Textes, nach dem du suchst.
 
-  ![Filter in Einstellungen](../images/Pref2021_Filter.png)
+  ```{image} ../images/Pref2021_Filter.png
+  :alt: Filter in Einstellungen
+  ```
 
 ```{contents}
 :backlinks: entry
@@ -24,7 +32,9 @@
 (Preferences-general)=
 ## Allgemein
 
-![Einstellungen > Allgemein](../images/Pref2020_General.png)
+```{image} ../images/Pref2020_General.png
+:alt: Einstellungen > Allgemein
+```
 
 **Einheiten**
 
@@ -48,7 +58,9 @@
 
 (Preferences-master-password)=
 
-![Preferences > General - Protection](../images/Pref2020_General2.png)
+```{image} ../images/Pref2020_General2.png
+:alt: Preferences > General - Protection
+```
 
 #### Master-Passwort
 
@@ -62,7 +74,9 @@
 
 - Gib ein Passwort ein, bestätige es und klicke auf OK.
 
-  ![Master-Password festlegen](../images/MasterPW.png)
+  ```{image} ../images/MasterPW.png
+  :alt: Master-Password festlegen
+  ```
 
 #### Schutz der Einstellungen
 
@@ -72,7 +86,9 @@
 
 - Wenn Du ein 'benutzerdefiniertes Kennwort' verwendest, klicke auf die Zeile 'Passwort für Einstellungen', um das Kennwort wie [oben beschrieben](Preferences-master-password) festzulegen.
 
-  ![Schutz](../images/Pref2020_Protection.png)
+  ```{image} ../images/Pref2020_Protection.png
+  :alt: Schutz
+  ```
 
 #### Schutz der App
 
@@ -85,14 +101,18 @@
 
 - Im Beispiel unten siehst du die Aufforderung zur biometrischen Freigabe. Falls die biometrische Authentifizierung nicht funktioniert, klicke in den Bereich oberhalb der weißen Eingabeaufforderung und gib das Master-Passwort ein.
 
-  ![Freigabe mit biometrischer Authentifizierung](../images/Pref2020_PW.png)
+  ```{image} ../images/Pref2020_PW.png
+  :alt: Freigabe mit biometrischer Authentifizierung
+  ```
 
 (Preferences-skin)=
 #### Erscheinungsbild
 
 - Du kannst zwischen vier Darstellungsarten wählen:
 
-  ![Select skin](../images/Pref2021_SkinWExample.png)
+  ```{image} ../images/Pref2021_SkinWExample.png
+  :alt: Select skin
+  ```
 
 - * Bei der 'Darstellung für niedrige Auflösungen' werden die Beschriftungen kürzer dargestellt und im Careportal einige Angaben entfernt, um auf Bildschirmen mit sehr niedriger Auflösung mehr Platz zu gewinnen.
 
@@ -109,14 +129,18 @@
 
 - **Großer Bildschirm** zeigt alle Diagramme größer an.
 
-  ![Darstellungsart abhängig von der Ausrichtung des Smartphones](../images/Screenshots_Skins.png)
+  ```{image} ../images/Screenshots_Skins.png
+  :alt: Darstellungsart abhängig von der Ausrichtung des Smartphones
+  ```
 
 (Preferences-overview)=
 ## Übersicht
 
 - In Übersicht kannst du Einstellungen für den Homescreen festlegen.
 
-  !["Einstellungen > Übersicht](../images/Pref2020_OverviewII.png)
+  ```{image} ../images/Pref2020_OverviewII.png
+  :alt: "Einstellungen > Übersicht
+  ```
 
 ### Bildschirm aktiv lassen
 
@@ -128,13 +152,19 @@
 
 - Lege fest welche Schaltflächen am unteren Rand des Homescreens sichtbar sind.
 
-  ![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
+  ```{image} ../images/Pref2020_OV_Buttons.png
+  :alt: Preferences > Buttons
+  ```
 
 - Mit den Erhöhungszahlen kannst du die Schrittweiten definieren, die in den KH- und Insulin-Dialogen benutzt werden und so die dortigen Eingaben vereinfachen.
 
-  ![Preferences > Buttons > Insulin](../images/Pref2020_OV_Buttons2.png)
+  ```{image} ../images/Pref2020_OV_Buttons2.png
+  :alt: Preferences > Buttons > Insulin
+  ```
 
-  ![Preferences > Buttons > Carbs](../images/Pref2020_OV_Buttons3.png)
+  ```{image} ../images/Pref2020_OV_Buttons3.png
+  :alt: Preferences > Buttons > Carbs
+  ```
 
 (Preferences-quick-wizard)=
 ### Quick Wizard
@@ -143,13 +173,17 @@
 
 - In der Konfiguration legst du fest, in welchem Zeitraum die Schaltfläche auf dem Homescreen zu sehen sein soll. Es ist nur eine Schaltfläche pro Zeitraum möglich.
 
-  ![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
+  ```{image} ../images/Pref2020_OV_QuickWizard.png
+  :alt: Preferences > Quick Wizard Button Setup
+  ```
 
 - Wenn du auf den QuickWizard-Button klickst, berechnet AAPS für diese Kohlenhydrate einen Bolus basierend auf Deinen aktuellen Faktoren (unter Berücksichtigung des Blutzuckerwertes oder des Insulins an Bord, wenn eingerichtet) und schlägt diesen vor.
 
 - Der Vorschlag muss bestätigt werden, bevor Insulin abgegeben wird.
 
-  ![Einstellungen > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
+  ```{image} ../images/Pref2020_OV_QuickWizard2.png
+  :alt: Einstellungen > Quick Wizard Button
+  ```
 
 (Preferences-default-temp-targets)=
 ### Vordefinierte temporäre Ziele
@@ -158,11 +192,15 @@
 
 - Mit dem Setzen von Standard-TT kannst Du Dein Ziel für Aktivität, Bald essen, usw. einfach verändern.
 
-  !["Einstellungen > Vordefinierte temporäre Ziele"](../images/Pref2020_OV_DefaultTT.png)
+  ```{image} ../images/Pref2020_OV_DefaultTT.png
+  :alt: "Einstellungen > Vordefinierte temporäre Ziele"
+  ```
 
 - Drücke lange auf deinen Zielwert in der oberen rechten Ecke auf dem Home-Bildschirm oder verwende die Shortcuts im orange "Kohlenhydrate" (Carbs)-Button am unteren Rand.
 
-  ![Preferences > Use default temp targets](../images/Pref2020_OV_DefaultTT2.png)
+  ```{image} ../images/Pref2020_OV_DefaultTT2.png
+  :alt: Preferences > Use default temp targets
+  ```
 
 ###
 
@@ -176,7 +214,9 @@
 
 - Lege fest, welcher Bereich der Grafik auf dem Startbildschirm der Zielbereich sein und grün hinterlegt werden soll.
 
-  !["Einstellungen > \xDCberblick"](../images/Pref2020_OV_Range2.png)
+  ```{image} ../images/Pref2020_OV_Range2.png
+  :alt: "Einstellungen > \xDCberblick"
+  ```
 
 ### Kurze Tab-Überschriften
 
@@ -184,13 +224,17 @@
 
 - Zum Beispiel wird die 'OpenAPS AMA' -Registerkarte zu 'OAPS', 'Objectives (Ziele)' wird zu 'ZIEL' usw.
 
-  ![Einstellungen > Tabs](../images/Pref2020_OV_Tabs.png)
+  ```{image} ../images/Pref2020_OV_Tabs.png
+  :alt: Einstellungen > Tabs
+  ```
 
 ### Möglichkeit zur Erfassung von Notizen in Behandlungsdialogen
 
 - Gibt dir die Möglichkeit, kurze Textnotizen zu Deinen Behandlungen hinzuzufügen (z.B. im Bolus-Rechner, den Buttons für Insulin und Kohlenhydrate etc.)
 
-  ![Einstellungen > Notizen im Behandlungsdialog](../images/Pref2020_OV_Notes.png)
+  ```{image} ../images/Pref2020_OV_Notes.png
+  :alt: Einstellungen > Notizen im Behandlungsdialog
+  ```
 
 (Preferences-status-lights)=
 ### Statusanzeige
@@ -211,12 +255,16 @@
 
 - In Versionen vor AAPS 2.7 mussten Einstellungen für Statusanzeigen in Nightscout-Einstellungen vorgenommen werden.
 
-  ![Einstellungen > Status Lights](../images/Pref2020_OV_StatusLights2.png)
+  ```{image} ../images/Pref2020_OV_StatusLights2.png
+  :alt: Einstellungen > Status Lights
+  ```
 
 (Preferences-advanced-settings-overview)=
 ### Erweiterte Einstellungen (Übersicht)
 
-![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
+```{image} ../images/Pref2021_OV_Adv.png
+:alt: Preferences > Advanced Settings
+```
 
 (Preferences-superbolus)=
 #### Superbolus
@@ -332,7 +380,9 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 
 - Wenn der Zielwert angepasst wird, wird dies durch einen grünen Hintergrund des Zielwerts angezeigt.
 
-  ![Von Autosens angepasster Zielwert](../images/Home2020_DynamicTargetAdjustment.png)
+  ```{image} ../images/Home2020_DynamicTargetAdjustment.png
+  :alt: Von Autosens angepasster Zielwert
+  ```
 
 (Preferences-carb-required-notification)=
 #### Kohlenhydrat-Vorschlag
@@ -349,7 +399,9 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 
 - Auf Wunsch können die Kohlenhydrat-Vorschläge an Nightscout gesandt werden. In diesem Fall wird eine Ankündigung angezeigt und verteilt.
 
-  ![Kohlenhydrat-Vorschlag auf dem Startbildschirm](../images/Pref2020_CarbsRequired.png)
+  ```{image} ../images/Pref2020_CarbsRequired.png
+  :alt: Kohlenhydrat-Vorschlag auf dem Startbildschirm
+  ```
 
 #### Erweiterte Einstellungen (OpenAPS SMB)
 
@@ -358,7 +410,9 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 
 ## Resorptions-Einstellungen
 
-![Resorptions-Einstellungen](../images/Pref2020_Absorption.png)
+```{image} ../images/Pref2020_Absorption.png
+:alt: Resorptions-Einstellungen
+```
 
 ### min_5m_carbimpact
 
@@ -378,7 +432,9 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 
 - Im COB-Diagramm auf dem Startbildschirm werden Zeiten, in denen min_5m_impact verwendet wird, mit einem orangenen Punkt auf der Diagrammlinie markiert.
 
-  ![COB-Diagramm](../images/Pref2020_min_5m_carbimpact.png)
+  ```{image} ../images/Pref2020_min_5m_carbimpact.png
+  :alt: COB-Diagramm
+  ```
 
 ### Maximale Dauer des Essens-Resorption
 
@@ -404,7 +460,9 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 (Preferences-nsclient)=
 ## Nightscout-Client
 
-![NSClient](../images/Pref2020_NSClient.png)
+```{image} ../images/Pref2020_NSClient.png
+:alt: NSClient
+```
 
 Original communication protocol, can be used with older Nightscout versions.
 
@@ -416,7 +474,9 @@ Original communication protocol, can be used with older Nightscout versions.
 
 ## NSClientV3
 
-![NSClientV3](../images/Pref2024_NSClientV3.png)
+```{image} ../images/Pref2024_NSClientV3.png
+:alt: NSClientV3
+```
 
 [New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
@@ -439,7 +499,9 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Alarm-Optionen
 
-![Alarm options](../images/Pref2024_NSClient_Alarms.png)
+```{image} ../images/Pref2024_NSClient_Alarms.png
+:alt: Alarm options
+```
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. AAPS will alarm when a Nightscout alarms trigger.
   - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -450,7 +512,9 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Verbindungseinstellungen
 
-![NSClient Verbindungseinstellungen](../images/ConfBuild_ConnectionSettings.png)
+```{image} ../images/ConfBuild_ConnectionSettings.png
+:alt: NSClient Verbindungseinstellungen
+```
 
 - Connection settings define when Nightscout connection will be enabled.
 - Beschränken den Nightscout-Upload auf WLAN-Verbindungen oder sogar auf bestimmte WLAN-SSIDs.
@@ -461,7 +525,9 @@ You can select which data you want to [upload and download to or from Nightscout
 (Preferences-advanced-settings-nsclient)=
 ### Erweiterte Einstellungen (Nightscout-Client)
 
-![NS-Client - erweiterte Einstellungen](../images/Pref2024_NSClientAdv.png)
+```{image} ../images/Pref2024_NSClientAdv.png
+:alt: NS-Client - erweiterte Einstellungen
+```
 
 Options in advanced settings are self-explanatory.
 
@@ -482,19 +548,25 @@ Wähle aus, welcher Standortservice verwendet werden soll:
 
 ## Lokale Alarme
 
-![Lokale Alarme](../images/Pref2020_LocalAlerts.png)
+```{image} ../images/Pref2020_LocalAlerts.png
+:alt: Lokale Alarme
+```
 
 - Einstellungen sollten selbsterklärend sein.
 
 ## Datenübermittlung
 
-![Datenübermittlung](../images/Pref2020_DataChoice.png)
+```{image} ../images/Pref2020_DataChoice.png
+:alt: Datenübermittlung
+```
 
 - Du kannst bei der Weiterentwicklung von AAPS unterstützen, indem Du Absturzberichte an die Entwickler sendest.
 
 ## Wartungseinstellungen
 
-![Wartungseinstellungen](../images/Pref2020_Maintenance.png)
+```{image} ../images/Pref2020_Maintenance.png
+:alt: Wartungseinstellungen
+```
 
 - Standardempfänger von Protokollen ist <logs@androidaps.org>.
 - Wenn Du *Exportierte Daten verschlüsseln* auswählst, werden diese mit Deinem [Master Password](Preferences-master-password) verschlüsselt. In diesem Fall muss das Master-Passwort jedes Mal eingegeben werden, wenn die Einstellungen ex- oder importiert werden.

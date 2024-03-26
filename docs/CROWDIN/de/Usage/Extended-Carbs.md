@@ -15,15 +15,21 @@ eCarbs sind Kohlenhydrate, die sich über mehrere Stunden verteilen. Bei einer S
 
 Um eCarbs einzugeben, wird im "Kohlenhydrate" Dialog auf der Übersichtseite die Dauer, die Kohlenhydrate und optional der Zeitversatz eingegeben (*Die unten aufgeführten Zahlen sind nur Beispiele, du muss deinen eigenen Werte ausprobieren, um bei deinen Anwendungsfällen zu einer zufriedenstellenden Glukoseantwort zu kommen*):
 
-![Eingabe Kohlenhydrate](../images/eCarbs_Dialog.png)
+```{image} ../images/eCarbs_Dialog.png
+:alt: Eingabe Kohlenhydrate
+```
 
 Die eCarbs auf dem Homescreen, beachte die Kohlenhydrate in Klammern im COB-Feld, was die für die Zukunft verbliebenen Kohlenhydrate zeigt:
 
-![eCarbs im Diagramm](../images/eCarbs_Graph.png)
+```{image} ../images/eCarbs_Graph.png
+:alt: eCarbs im Diagramm
+```
 
 Kohlenhydrat-Einträge, die in der Zukunft liegen, sind auf dem Behandlungen-Reiter dunkelorange:
 
-![eCarbs in der Zukunft im Reiter Behandlungen](../images/eCarbs_Treatment.png)
+```{image} ../images/eCarbs_Treatment.png
+:alt: eCarbs in der Zukunft im Reiter Behandlungen
+```
 
 ______________________________________________________________________
 
@@ -55,7 +61,9 @@ Daher gibt es ab Version 2.6 für Nutzer der Dana- und Insight-Pumpe eine Option
 - Die Einheiten des verzögerten Bolus, die verbleibende und die Gesamtzeit werden auf der Startseite angezeigt.
 - Wenn die Insight mit [TBR emulation](Accu-Chek-Insight-Pump-settings-in-aaps) genutzt wird, steht der verzögerte Bolus *nicht zur Verfügung*.
 
-![Verzögerter Bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
+```{image} ../images/ExtendedBolus2_6.png
+:alt: Verzögerter Bolus in AAPS 2.6
+```
 
 (Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Warum ein verzögerter Bolus beim Loopen nicht funktioniert

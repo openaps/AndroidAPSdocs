@@ -2,17 +2,17 @@
 
 # Lissage des données de glycémie
 
-If **BG** data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in highs or lows. If you observe errors in your CGM data it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or CGM sensor site issue (which may require replacing the CGM sensor)
+If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors in your CGM data it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
 
-Some CGM systems have internal algorithms to detect the noise level in the readings and AAPS can use this information to avoid giving SMBs if the BG data is too unreliable. Cependant, certaines MGC ne transmettent pas ces données et, pour ces sources de glycémie, 'Activer le SMB toujours' et 'Activer le SMB après les glucides' sont désactivés pour des raisons de sécurité.
+Some CGM systems have internal algorithms to detect the noise level in the readings, and **AAPS** can use this information to avoid giving SMBs if the BG data is too unreliable. Cependant, certaines MGC ne transmettent pas ces données et, pour ces sources de glycémie, 'Activer le SMB toujours' et 'Activer le SMB après les glucides' sont désactivés pour des raisons de sécurité.
 
-Additionally, as of version 3.2, AAPS offers the option to smooth the data within AAPS. There are three options available in the [Config Builder](../Configuration/Config-Builder.md).
+Additionally, as of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. There are three options available in the [Config Builder](../Configuration/Config-Builder.md).
 
 ![Smoothing](../images/ConfBuild_Smoothing.png)
 
 ## Exponential smoothing
 
-This is the recommended option to start with as it is most aggressive in resolving noise and rewrites the most recent value.
+This is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value.
 
 ## Average smoothing
 
@@ -20,7 +20,7 @@ This option works similar to back smoothing that was previously implemented on c
 
 ## No Smoothing
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to AAPS.
+Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
 
 ## Suggestions to use smoothing
 

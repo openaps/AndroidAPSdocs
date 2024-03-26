@@ -15,15 +15,21 @@ Les eGlucides sont des glucides qui sont actifs pendant plusieurs heures. Pour l
 
 Pour entrer des eGlucides, définissez une durée dans la boîte de dialogue *Glucides* dans l'onglet Aperçu, le total des glucides et optionnellement un décalage horaire (les *nombres ci-dessous ne sont que des exemples, vous devrez essayer vos propres valeurs pour arriver à une glycémie satisfaisante pour vos cas d'utilisation*) :
 
-![Entrer les glucides](../images/eCarbs_Dialog.png)
+```{image} ../images/eCarbs_Dialog.png
+:alt: Entrer les glucides
+```
 
 Les eGlucides dans l’onglet Accueil, notez les glucides entre parenthèses dans le champ GA, qui montre les glucides à venir :
 
-![eGlucides dans le graphique](../images/eCarbs_Graph.png)
+```{image} ../images/eCarbs_Graph.png
+:alt: eGlucides dans le graphique
+```
 
 Les glucides qui se seront pris en compte plus tard sont en orange foncé dans l'onglet Traitement :
 
-![eGlucides à venir dans l'onglet Traitement](../images/eCarbs_Treatment.png)
+```{image} ../images/eCarbs_Treatment.png
+:alt: eGlucides à venir dans l'onglet Traitement
+```
 
 ______________________________________________________________________
 
@@ -55,7 +61,9 @@ C'est pourquoi à partir de la version 2.6, il y a une option pour un bolus éte
 - La quantité d'insuline, le temps restant et le temps total seront affichés sur la page d'accueil.
 - Sur les pompes Insight, les bolus étendus *ne sont pas disponibles* si [Activer l'émulation de DBT](Accu-Chek-Insight-Pump-settings-in-aaps) est activé.
 
-![Bolus étendus dans AAPS 2.6](../images/ExtendedBolus2_6.png)
+```{image} ../images/ExtendedBolus2_6.png
+:alt: Bolus étendus dans AAPS 2.6
+```
 
 (Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Pourquoi les bolus étendus ne marchent pas avec une boucle fermée

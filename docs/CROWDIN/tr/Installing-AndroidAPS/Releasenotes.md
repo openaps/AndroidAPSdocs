@@ -5,7 +5,9 @@ Lütfen [güncelleme kılavuzundaki](../Installing-AndroidAPS/Update-to-new-vers
 
 Yeni bir güncelleme çıkar çıkmaz aşağıdaki bilgileri alacaksınız:
 
-![Güncelleme bilgisi](../images/AAPS_LoopDisable90days.png)
+```{image} ../images/AAPS_LoopDisable90days.png
+:alt: Güncelleme bilgisi
+```
 
 O zaman güncellemek için 60 gününüz var. Bu 60 gün içinde güncelleme yapmazsanız AAPS, [görev 6](../Usage/Objectives.html) daki gibi LGS'ye geri döner (düşük glikoz askıya alma - [sözlüğe](../Getting-Started/Glossary.md) bakın).
 

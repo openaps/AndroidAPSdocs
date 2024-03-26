@@ -10,7 +10,9 @@ Exported settings should be copied to a cloud storage or your computer, better t
 
 On a Windows 10 computer it looks like this:
 
-![AAPS Preferences phone connected to computer](../images/AAPS_ExImportSettingsWin.png)
+```{image} ../images/AAPS_ExImportSettingsWin.png
+:alt: AAPS Preferences phone connected to computer
+```
 
 ## Export Path
 The exports will be placed in this folder on your phone:
@@ -40,14 +42,18 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - Maintenance
 - Exportar definições
 
-![AAPS export settings 1](../images/AAPS_ExportSettings1.png)
+```{image} ../images/AAPS_ExportSettings1.png
+:alt: AAPS export settings 1
+```
 
 - Date and time of export will be added to the file name automatically and displayed together with the path.
 - Click 'OK'.
 - Enter [master password](Preferences-master-password) and click 'OK'.
 - Successful export will be prompted at bottom of the screen.
 
-![AAPS export settings 2](../images/AAPS_ExportSettings2.png)
+```{image} ../images/AAPS_ExportSettings2.png
+:alt: AAPS export settings 2
+```
 
 (ExportImportSettings-import-settings)=
 ## Importar configurações
@@ -58,14 +64,18 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - Maintenance
 - Importar configurações
 
-![AAPS import settings 1](../images/AAPS_ImportSettings1.png)
+```{image} ../images/AAPS_ImportSettings1.png
+:alt: AAPS import settings 1
+```
 
 - All files from folder AAPS/preferences/ on your phone will be shown in the list.
 - Select file.
 - Confirm import by clicking 'OK'.
 - Enter [master password](Preferences-master-password) and click 'OK'.
 
-![AAPS import settings 2](../images/AAPS_ImportSettings2.png)
+```{image} ../images/AAPS_ImportSettings2.png
+:alt: AAPS import settings 2
+```
 
 - Details on the preference file will be shown.
 - Last option to cancel import.

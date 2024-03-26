@@ -12,7 +12,9 @@
 - Scrolle nach unten zu "BZ-Quelle".
 - Ändere bei Bedarf die BZ-Quelle.
 
-![BZ-Quelle](../images/ConfBuild_BG.png)
+```{image} ../images/ConfBuild_BG.png
+:alt: BZ-Quelle
+```
 
 ## Prüfung abschließen
 
@@ -29,7 +31,9 @@
 - Klicke auf "Master-Passwort".
 - Gib ein Passwort ein, bestätige es und klicke auf OK.
 
-![Master-Password festlegen](../images/MasterPW.png)
+```{image} ../images/MasterPW.png
+:alt: Master-Password festlegen
+```
 
 ## Exportiere die Einstellungen
 
@@ -55,6 +59,8 @@
 - Klicke auf "Pumpen-Passwort (nur v1)".
 - Gib das Passwort der Pumpe ein ([Standard-Passwort](DanaRS-Insulin-Pump-default-password) unterscheidet sich je nach Firmware Version) und klicke OK.
 
-![Dana RS Passwort setzen](../images/DanaRSPW.png)
+```{image} ../images/DanaRSPW.png
+:alt: Dana RS Passwort setzen
+```
 
 Wie Du das Passwort Deiner Pumpe ändern kannst, ist auf der [DanaRS Seite](DanaRS-Insulin-Pump-change-password-on-pump) beschrieben.

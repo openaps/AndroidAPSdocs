@@ -2,7 +2,9 @@
 
 AAPS yalnızca (kendin-yap) bir uygulama değildir, kapalı döngü sisteminizin birkaç modülünden yalnızca biridir. Bileşenlere karar vermeden önce, [bileşen kurulumuna](index-component-setup) da bir göz atmak iyi bir fikir olacaktır.
 
-![Bileşen Kurulumu](../images/modules.png)
+```{image} ../images/modules.png
+:alt: Bileşen Kurulumu
+```
 
 ```{note}
 ** ÖNEMLİ GÜVENLİK BİLDİRİMİ **

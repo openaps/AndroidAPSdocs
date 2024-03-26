@@ -1,6 +1,8 @@
 # ניטור מרחוק
 
-![Monitoring children](../images/KidsMonitoring.png)
+```{image} ../images/KidsMonitoring.png
+:alt: Monitoring children
+```
 
 מערכת AndroidAPS מציעה מספר אפשרויות לניטור מרחוק ושליחת פקודות מרחוק לטיפול בילדים. באותה מידה ניתן לנטר מרחוק גם את בן\\בת הזוג או חבר.
 

@@ -48,10 +48,14 @@ The following workaround should extend the time the Sony Smartwatch 3 can be use
 
 - In terminal enter this command „adb install -r -g aplicationname.apk“ (so in our case „adb install -r -g SW3fix.apk“).
 
-  ![Terminal command](../images/SonySW3_Terminal1.png)
+  ```{image} ../images/SonySW3_Terminal1.png
+  :alt: Terminal command
+  ```
 
 - Wait for about 4–5 minutes for installation to complete.
 
-  ![Terminal successful installation](../images/SonySW3_Terminal2.png)
+  ```{image} ../images/SonySW3_Terminal2.png
+  :alt: Terminal successful installation
+  ```
 
 - Once it's done, restart your watch and you should see the apps beginning to synchronize themself promptly.

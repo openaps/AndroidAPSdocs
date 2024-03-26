@@ -239,8 +239,8 @@
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a> <br> <a href="https://www.facebook.com/nightrep/">NS Reporter @Facebook</a></td>
 </tr>
 <tr>
- <td><strong>NS Client</strong></td>
- <td>fait partie d'AAPS pour se connecter à votre site Nightscout</td>
+ <td><strong>NS Client or AAPS Client</strong></td>
+ <td>a remote control feature that can be used by caregivers via a follower phone to follow a user's AAPS by connecting to the user's Nightscout site</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
@@ -293,12 +293,16 @@
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profil</a></td>
 </tr>
 <tr>
- <td><strong>Changement de profil</strong></td>
- <td>(temporaire) changement du profil utilisé ou augmentation / diminution du pourcentage</td>
+ <td><strong>Profile Switch</strong></td>
+ <td>a (temporary) switching of user's Profile to a different Profile saved within AAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Profiles.html">Wiki - changement de profil</a></td>
 </tr>
 <tr>
+ <td><strong>Profile Percentage</strong></td>
+ <td>a (temporary) percentage increase or decrease applied to a user's Profile for a selected time period </td>
+ <td>&nbsp;</td>
+ <td><a href="../Usage/Profiles.html">Wiki - changement de profil</a></td>
  <td><strong>RES</strong></td>
  <td>alerte de changement de réservoir sur l'écran d'accueil</td>
  <td>CAN / INS / BAT</td>

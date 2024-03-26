@@ -24,7 +24,9 @@ If you want to go back in objectives see [explanation below](Objectives-go-back-
 
 - Links will be provided to guide you in case you are not familiar with a specific action yet.
 
-  ![Screenshot doel 2](../images/Objective2_V2_5.png)
+  ```{image} ../images/Objective2_V2_5.png
+  :alt: Screenshot doel 2
+  ```
 
 (Objectives-objective-3-prove-your-knowledge)=
 
@@ -71,7 +73,9 @@ __What happens if new questions are added later to Objective 3?__ From time to t
 
 - In Preferences you can set a minimum percentage for suggestion of basal rate change.
 
-  ![Open Loop Minimale verzoek voor aanpassing](../images/OpenLoop_MinimalRequestChange2.png)
+  ```{image} ../images/OpenLoop_MinimalRequestChange2.png
+  :alt: Open Loop Minimale verzoek voor aanpassing
+  ```
 
 - Also, you do not need to act every 5 minutes on all suggestions...
 
@@ -91,16 +95,22 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-![Stop-teken](../images/sign_stop.png)
+```{image} ../images/sign_stop.png
+:alt: Stop-teken
+```
 
 ### Stop hier als je een virtuele pomp gebruikt en in Open Loop wilt blijven - klik NIET op Verificatie aan het einde van dit doel.
 
-![blanco](../images/blank.png)
+```{image} ../images/blank.png
+:alt: blanco
+```
 
 (Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)=
 ## Doel 6: Starten in Closed Loop met bescherming tegen lage BG
 
-![Waarschuwings-teken](../images/sign_warning.png)
+```{image} ../images/sign_warning.png
+:alt: Waarschuwings-teken
+```
 
 ### Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend. High BG values have to be corrected manually by you!
 
@@ -109,7 +119,9 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 - The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you. If blood glucose is rising then it will only increase basal if the basal IOB is negative from a previous Low Glucose Suspend. Otherwise basal rates will remain the same as your selected profile. **That means that you have to manually handle high values with insulin corrections.**
 - If your basal IOB is negative (see screenshot below) a TBR > 100% can be issued also in objective 6.
 
-![Voorbeeld negatieve IOB](../images/Objective6_negIOB.png)
+```{image} ../images/Objective6_negIOB.png
+:alt: Voorbeeld negatieve IOB
+```
 
 - Set your target range slightly higher than you usually aim for, just to be safe and have a bit more scurity buffer.
 - Enable 'Low Glucose Suspend' mode either by by pressing and holding the Loop icon at the top right corner of the home screen and selecting the Loop - LGS mode icon.
@@ -125,7 +137,9 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
   Deze aanbeveling moet als uitgangspunt worden beschouwd. If you set to the 3x and you are seeing moves that push you too hard and fast then lower that number. If you are very resistant, raise it very little at a time.
 
-  ![max dagelijkse basaal](../images/MaxDailyBasal2.png)
+  ```{image} ../images/MaxDailyBasal2.png
+  :alt: max dagelijkse basaal
+  ```
 
 - Once confident on how much IOB suits your looping patterns, then reduce your targets to your desired level.
 
@@ -161,7 +175,9 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 Als je om welke reden dan ook terug wilt gaan in de leerdoelen druk dan op "voltooiing wissen".
 
-![Teruggaan in doelen](../images/Objective_ClearFinished.png)
+```{image} ../images/Objective_ClearFinished.png
+:alt: Teruggaan in doelen
+```
 
 ## Objectives in Android APS before version 3.0
 

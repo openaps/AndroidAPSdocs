@@ -10,7 +10,9 @@
 
 ## SMS-Kommandos einrichten
 
-![SMS-Kommandos einrichten](../images/SMSCommandsSetup.png)
+```{image} ../images/SMSCommandsSetup.png
+:alt: SMS-Kommandos einrichten
+```
 
 - Most of the adjustments of temp targets, following AAPS etc. can be done on [AAPSClient app](../Children/Children.md) on an Android phone with an internet connection.
 - Boli können nicht über Nightscout abgegeben werden, aber Du kannst dafür SMS-Kommandos verwenden.
@@ -35,7 +37,9 @@
 
   - Gib die zusätzliche(n) Telefonnummer(n) getrennt durch Semikolon ohne Leerzeichen ein.
 
-    ![SMS-Kommandos Setup mehrerer Nummern](../images/SMSCommandsSetupSpace2.png)
+    ```{image} ../images/SMSCommandsSetupSpace2.png
+    :alt: SMS-Kommandos Setup mehrerer Nummern
+    ```
 
 ### Minuten zwischen Bolus-Kommandos
 
@@ -96,7 +100,9 @@
 
 Commands must be sent in English, the response will be in your local language if the response string is already [translated](translations-translate-strings-for-AAPS-app).
 
-![Beispiele für SMS-Kommandos](../images/SMSCommands.png)
+```{image} ../images/SMSCommands.png
+:alt: Beispiele für SMS-Kommandos
+```
 
 ### Loop
 
@@ -179,7 +185,9 @@ Wenn die andere App auf mehreren Smartphones installiert ist, musst Du den Uploa
 
 Es gab einen Hinweis, dass nach einem Update die SMS Kommandos auf einem Galaxy S10 nicht mehr funktioniert haben. Dies konnte durch Abschalten der Option 'als Chat Message senden' behoben werden.
 
-![SMS als Chatnachricht deaktivieren](../images/SMSdisableChat.png)
+```{image} ../images/SMSdisableChat.png
+:alt: SMS als Chatnachricht deaktivieren
+```
 ### Android Messages App
 
 If you are having issues sending or receiving SMS commands with the Android Messages app disable end-to-end ecryption on both caregiver and child's phones.

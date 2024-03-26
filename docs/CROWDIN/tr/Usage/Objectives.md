@@ -24,7 +24,9 @@ Görevlere geri dönmek istiyorsanız [aşağıdaki açıklamaya](Objectives-go-
 
 - Henüz belirli bir eyleme aşina değilseniz, size rehberlik edecek bağlantılar sağlanacaktır.
 
-  ![Screenshot Görev 2](../images/Objective2_V2_5.png)
+  ```{image} ../images/Objective2_V2_5.png
+  :alt: Screenshot Görev 2
+  ```
 
 (Objectives-objective-3-prove-your-knowledge)=
 
@@ -71,7 +73,9 @@ __What happens if new questions are added later to Objective 3?__ From time to t
 
 - Tercihler'de bazal oran değişikliği önerisi için bir minimum yüzde belirleyebilirsiniz.
 
-  ![Açık Döngü minimum istek değişikliği](../images/OpenLoop_MinimalRequestChange2.png)
+  ```{image} ../images/OpenLoop_MinimalRequestChange2.png
+  :alt: Açık Döngü minimum istek değişikliği
+  ```
 
 - Ayrıca her öneriye her 5 dakikada bir cevap vermek zorunda da değilsiniz...
 
@@ -91,16 +95,22 @@ Hedeflerinizi birbirine daha yakın bir aralık (diyelim ki 1 veya daha az mmol 
 
 [Tercihler](../Configuration/Preferences.md)'de > Görselleştirme Aralığına farklı değerler girerek kan şekerinizi içinde tutmayı amaçladığınız değerler için grafik üzerinde daha geniş bir aralık (yeşil çizgiler) görüntüleyebilirsiniz.
 
-![Dur işareti](../images/sign_stop.png)
+```{image} ../images/sign_stop.png
+:alt: Dur işareti
+```
 
 ### Sanal bir pompa ile açık döngü yapıyorsanız burada durun - bu hedefin sonunda sakın Doğrula'ya tıklamayın.
 
-![boş](../images/blank.png)
+```{image} ../images/blank.png
+:alt: boş
+```
 
 (Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)=
 ## Görev 6: Düşük KŞ'de Duraklatma ile döngüyü kapatmaya başlamak
 
-![Uyarı işareti](../images/sign_warning.png)
+```{image} ../images/sign_warning.png
+:alt: Uyarı işareti
+```
 
 ### Kapalı döngü, düşük glikoz duraklatma ile sınırlı olduğundan, görev 6'daki yüksek KŞ değerlerini düzeltmeyecektir. Yüksek KŞ değerleri sizin tarafınızdan manuel olarak düzeltilmelidir!
 
@@ -109,7 +119,9 @@ Hedeflerinizi birbirine daha yakın bir aralık (diyelim ki 1 veya daha az mmol 
 - Sistem, maxAİNS ayarınızı sıfır olarak geçersiz kılar; bu, kan şekerinin düşmesi durumunda sizin için bazalı düşürebileceği anlamına gelir. Kan şekeri yükseliyorsa, yalnızca bazal AİNS önceki bir Düşük Glikoz Askıya Alma işlemine göre negatifse bazal artacaktır. Aksi takdirde, bazal oranlar seçtiğiniz profille aynı kalacaktır. **Bu, yüksek KŞ değerleriyle insülin düzeltmeleri yaparak manuel başa çıkmanız gerektiği anlamına gelir.**
 - Bazal AİNS negatifse (aşağıdaki ekran görüntüsüne bakın) Görev 6'da da bir GBO > %100 verilebilir.
 
-![Örnek negatif AİNS](../images/Objective6_negIOB.png)
+```{image} ../images/Objective6_negIOB.png
+:alt: Örnek negatif AİNS
+```
 
 - Güvende olmak ve daha fazla koruma tamponuna sahip olmak için hedef aralığınızı genellikle biraz daha yüksek tutun.
 - Ana ekranın sağ üst köşesindeki Döngü simgesini basılı tutarak ve Döngü - LGS modu simgesini seçerek 'Düşük Glikoz Askıya Alma' modunu etkinleştirin.
@@ -125,7 +137,9 @@ Hedeflerinizi birbirine daha yakın bir aralık (diyelim ki 1 veya daha az mmol 
 
   Bu öneri bir başlangıç noktası olarak görülmelidir. 3x'e ayarladıysanız ve sizi sert ve hızlı şekilde düşürüyorsa, o sayıyı düşürün. Eğer çok dirençliyseniz, her seferinde çok az yükseltin.
 
-  ![maks günlük bazal](../images/MaxDailyBasal2.png)
+  ```{image} ../images/MaxDailyBasal2.png
+  :alt: maks günlük bazal
+  ```
 
 - Döngü modellerinize ne kadar AİNS uyduğundan emin olduktan sonra hedeflerinizi istediğiniz seviyeye indirin.
 
@@ -161,7 +175,9 @@ Hedeflerinizi birbirine daha yakın bir aralık (diyelim ki 1 veya daha az mmol 
 
 Herhangi bir nedenle görevlere geri dönmek istiyorsanız, bunu "Komple tamamlandı" seçeneğine tıklayarak yapabilirsiniz.
 
-![Görevlere geri dön](../images/Objective_ClearFinished.png)
+```{image} ../images/Objective_ClearFinished.png
+:alt: Görevlere geri dön
+```
 
 ## 3.0 sürümünden önceki Android APS'deki görevler
 

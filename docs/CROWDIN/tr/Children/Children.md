@@ -1,6 +1,8 @@
 # Uzaktan İzleme
 
-![Çocukları izleme](../images/KidsMonitoring.png)
+```{image} ../images/KidsMonitoring.png
+:alt: Çocukları izleme
+```
 
 AAPS, çocukların uzaktan izlenmesi için çeşitli seçenekler sunar ve ayrıca uzaktan sms komutları göndermeye izin verir. Elbette, partnerinizi veya arkadaşınızı takip etmek için de uzaktan izlemeyi kullanabilirsiniz.
 

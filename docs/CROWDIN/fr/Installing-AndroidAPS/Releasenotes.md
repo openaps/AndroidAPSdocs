@@ -5,7 +5,9 @@ Veuillez suivre les instructions de la page [Mise à jour vers une nouvelle vers
 
 Vous recevrez les informations suivantes dès qu'une nouvelle mise à jour sera disponible :
 
-![Information de mise à jour](../images/AAPS_LoopDisable90days.png)
+```{image} ../images/AAPS_LoopDisable90days.png
+:alt: Information de mise à jour
+```
 
 Ensuite, vous avez 60 jours pour mettre à jour. Si vous ne faites pas de mise à jour au cours de ces 60 jours, AAPS retournera en mode AGB (Arrêt Glycémie Basse - cf. [glossaire](../Getting-Started/Glossary.md)) comme dans [l'objective 6](../Usage/Objectives.html).
 

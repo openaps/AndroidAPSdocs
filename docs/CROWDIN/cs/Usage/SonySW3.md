@@ -48,10 +48,14 @@ Následující postup by měl prodloužit dobu, po kterou lze hodinky Sony Smart
 
 - In terminal enter this command „adb install -r -g aplicationname.apk“ (so in our case „adb install -r -g SW3fix.apk“).
 
-  ![Příkaz terminálu](../images/SonySW3_Terminal1.png)
+  ```{image} ../images/SonySW3_Terminal1.png
+  :alt: Příkaz terminálu
+  ```
 
 - Wait for about 4–5 minutes for installation to complete.
 
-  ![Terminál – úspěšná instalace](../images/SonySW3_Terminal2.png)
+  ```{image} ../images/SonySW3_Terminal2.png
+  :alt: Terminál – úspěšná instalace
+  ```
 
 - Once it's done, restart your watch and you should see the apps beginning to synchronize themself promptly.

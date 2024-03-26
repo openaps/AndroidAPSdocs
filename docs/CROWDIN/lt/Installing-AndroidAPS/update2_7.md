@@ -12,7 +12,9 @@
 - Scroll down to "BG source".
 - Select correct BG source if changes are necessary.
 
-![KG šaltinis](../images/ConfBuild_BG.png)
+```{image} ../images/ConfBuild_BG.png
+:alt: KG šaltinis
+```
 
 ## Baigti egzaminą
 
@@ -29,7 +31,9 @@
 - Click "Master-Password"
 - Enter password, confirm password and click ok.
 
-![Nustatyti pagrindinį slaptažodį](../images/MasterPW.png)
+```{image} ../images/MasterPW.png
+:alt: Nustatyti pagrindinį slaptažodį
+```
 
 ## Eksportuoti nustatymus
 
@@ -55,6 +59,8 @@
 - Click "Pump password (v1 only)"
 - Enter pump password ([Default password](DanaRS-Insulin-Pump-default-password) is different depending on firmware version) and click OK.
 
-![Nustatyti Dana RS slaptažodį](../images/DanaRSPW.png)
+```{image} ../images/DanaRSPW.png
+:alt: Nustatyti Dana RS slaptažodį
+```
 
 To change password on Dana RS follow instructions on [DanaRS page](DanaRS-Insulin-Pump-change-password-on-pump).

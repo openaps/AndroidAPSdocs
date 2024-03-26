@@ -15,15 +15,21 @@ yKarb, birkaç saat içinde parçalanan karbonhidratlardır. Yağ/protein içeri
 
 yKarb girmek için, genel bakış (Giriş) sekmesindeki *Karbonhidrat* iletişim kutusunda bir süre, toplam karbonhidrat ve isteğe bağlı olarak bir zaman kayması ayarlayın (*aşağıdaki sayılar sadece örnektir, kullanım durumlarınız için tatmin edici glikoz yanıtına ulaşmak için kendi değerlerinizi denemeniz gerekecektir*):
 
-![Karbonhidrat girişi](../images/eCarbs_Dialog.png)
+```{image} ../images/eCarbs_Dialog.png
+:alt: Karbonhidrat girişi
+```
 
 Genel bakış (Giriş) sekmesindeki yKarb, gelecekte karbonhidratları gösteren AKRB alanındaki parantez içindeki karbonhidratları not edin:
 
-![Grafikteki yKarb](../images/eCarbs_Graph.png)
+```{image} ../images/eCarbs_Graph.png
+:alt: Grafikteki yKarb
+```
 
 Gelecekteki karbonhidrat girişleri, tedavi sekmesinde koyu turuncu renktedir:
 
-![Tedavi sekmesinde gelecekteki yKarb](../images/eCarbs_Treatment.png)
+```{image} ../images/eCarbs_Treatment.png
+:alt: Tedavi sekmesinde gelecekteki yKarb
+```
 
 ______________________________________________________________________
 
@@ -55,7 +61,9 @@ Bu nedenle 2.6 sürümünden itibaren Dana ve Insight pompa kullanıcıları iç
 - Kalan Bolus ve toplam süre ana ekranda gösterilecektir.
 - [GBO emulasyonu](Accu-Chek-Insight-Pump-settings-in-aaps) kullanılıyor ise Insight pompasında yayma bolus *mevcut değildir.*
 
-![AAPS 2.6'da yayma bolus](../images/ExtendedBolus2_6.png)
+```{image} ../images/ExtendedBolus2_6.png
+:alt: AAPS 2.6'da yayma bolus
+```
 
 (Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Yayma boluslar neden kapalı döngü ortamında çalışmaz?
