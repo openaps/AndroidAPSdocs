@@ -58,7 +58,7 @@ Zip-файл может также содержать дополнительны
 
 ### Общие настройки параметров
 
-After the first block with metadata, you will set some general parameters (see [List of general parameters](cwf-reference-list-of-general-parameters) below), this allow you to set Graph colors (Carbs, Bolus, BG values...), and also default colors for value in range, hyper or hypo (default colors of BG value and arrows)
+После первого блока с метаданными задаются некоторые общие параметры (смотрите [Список общих параметров](cwf-reference-list-of-general-parameters) ниже), которые позволят настроить цвета графика (углеводы, болюсные дозы, значения ГК...), а также цвета по умолчанию для значений в диапазоне, гипер или гипо- (цвета значений ГК и стрелок по умолчанию)
 
 See below an example of general parameters
 
