@@ -63,24 +63,24 @@ Zip-файл может также содержать дополнительны
 Ниже представлен пример общих параметров
 
 ```json
-"highColor": "#FFFF00",
-"midColor": "#00FF00",
-"lowColor": "#FF0000",
-"lowBatColor": "#E53935",
-"carbColor": "#FB8C00",
-"basalBackgroundColor": "#0000FF",
-"basalCenterColor": "#64B5F6",
-"gridColor": "#FFFFFF",
-"pointSize": 2,
-"enableSecond": true,
+""цвет высоких": "#FFFF00",
+""цвет средних": "#00FF00",
+""цвет низких": "#FF0000",
+""Цвет низкого заряда батареи": "#E53935",
+""цвет углеводов": "#FB8C00",
+""цвет фона базала": "#0000FF",
+""цвет базального центра": "#64B5F6",
+""цвет сетки": "#FFFFFF",
+"Размер точки": 2,
+""включить секунды": true,
 ```
 (cwf-reference-imageview-settings)=
 
-### ImageView settings
+### Настройки режима просмотра
 
-Custom image can be tuned using correct filename associated to each ImageView included into custom watchface Layout, then the json block is only here to define the position, the size, if the view is visible or not, and optionally tune the color:
+Нужное изображение можно настроить, используя правильное имя файла, привязанное к каждому ImageView, включенному в пользовательский макет циферблата, в этом случае блок json здесь только для определения позиции, размера, видимости/невидимости, и при необходимости настройки цвета:
 
-See below an example of an Image block for second_hand, (in this case there are no image included into zip file so default second hand image will be used, but tuned with a custom color.
+См. ниже пример блока изображения для секундной стрелки (в данном случае изображение не включено в zip-файл, поэтому будет использовано стандартное изображение, но настроенное с пользовательским цветом.
 
 ```json
 "second_hand": {
@@ -92,7 +92,7 @@ See below an example of an Image block for second_hand, (in this case there are 
     "color": "#BC906A"
 }
 ```
-To have second_hand colored with default BG color (lowRange, midRange or highRange), you just have to modify the latest ligne with the keyValue `bgColor`
+Чтобы секундная_стрелка была окрашена в цвет ГК по умолчанию (низкий диапазон, средний диапазон или высокий диапазон), нужно просто изменить последний линь ligne с помощью величины KeyValue `bgColor`
 
 ```json
     "color": "bgColor"
@@ -100,9 +100,9 @@ To have second_hand colored with default BG color (lowRange, midRange or highRan
 
 (cwf-reference-textview-settings)=
 
-### TextView settings
+### Настройки TextView
 
-TexView have more available parameters compare to ImageView: you can tune rotation (integer value in degrees), textsize (integer value in pixel), gravity (to define if text value will be centered (default value), or aligned left or right), set the font, fontStyle and fontColor, and also background color of the TextView
+TexView имеет больше доступных параметров по сравнению с ImageView: можно настроить поворот (целое значение в градусах), размер текста (целое значение в пикселях), гравитацию (чтобы определить, будет ли текстовое значение центрировано (значение по умолчанию) или выровнено влево или вправо), установить шрифт, FontStyle и fontColor, а также цвет фона текстового представления
 
 ```json
 "basalRate": {
