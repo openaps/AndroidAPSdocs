@@ -133,7 +133,6 @@ Updating to a new version of AAPS <./Installing-AndroidAPS/Update-to-new-version
 Where can I get help with AAPS <./Where-To-Go-For-Help/Connect-with-other-users.md>
 General Troubleshooting <./Usage/troubleshooting.md>
 Troubleshooting AAPSClient <./Usage/Troubleshooting-NSClient.md>
-
 How to report bugs/request features
 Accessing logfiles <./Usage/Accessing-logfiles.md>
 Help! My AAPS phone is broken/stolen/lost
@@ -149,9 +148,8 @@ Compatible pumps <./Getting-Started/Pump-Choices.md>
 Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
 Compatible CGMs <./Configuration/BG-Source.md>
 Compatible phones  <./Hardware/Phoneconfig.md>
-Smartwatches  <./Hardware/Smartwatch.md>
-Custom Watchface reference document <./Usage/Custom_Watchface_Reference.md>
-Exchange Site Custom Watchfaces <./ExchangeSiteCustomWatchfaces/index.md>
+Operation of Wear AAPS on a Smartwatch <./Configuration/Watchfaces.md>
+How to customise your AAPS watchface <./Usage/Custom_Watchface_Reference.md>
 xDrip Settings <./Configuration/xdrip.md>
 Autotune <./Usage/autotune.md>
 
