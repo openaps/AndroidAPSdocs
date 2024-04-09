@@ -1,4 +1,4 @@
-# Cправочная информация по самостоятельно создаваемым циферблатам
+# Cправочная информация по самостоятельно создаваемым циферблатам часов
 
 Эта страница предназначена для создателей новых циферблатов. Здесь будут перечислены все ключевые моменты и функции, доступные при создании или анимировании новых циферблатов.
 
@@ -14,73 +14,73 @@
 
 Zip-файл может также содержать дополнительные файлы ресурсов:
 
-- Аппаратно закодированные имена файлов изображений, которые будут использоваться в циферблатах (например, `Фон`, `Схема обложки`... см [Список аппаратно закодированных исходных файлов](cwf-reference-list-of-hardcoded-resource-files) ниже). All these files can be either `jpg`, `png` or `svg` format. but for most of them, you will have to use `png` or `svg` that manage transparency (jpg are smaller in size compared to png, but with no transparency). Note that the best quality associated to the smallest size will generally be with svg files (vector format).
-- Addtional resource files with free names. These additional files can be either image files, or font files (`ttf` and `otf` format are accepted for fonts). Note that for these additional files, the `filename` (without extension) will be used as the keyValue, within JSON file, to specify where or when these files should be used.
-  - image files are often used as background of text views or for dynamic animation (like battery level from 0% to 100%)
-  - font files allow you to use dedicated fonts within your watchface
+- Аппаратно закодированные имена файлов изображений, которые будут использоваться в циферблатах (например, `Фон`, `Схема обложки`... см [Список аппаратно закодированных исходных файлов](cwf-reference-list-of-hardcoded-resource-files) ниже). All these files can be either `jpg`, `png` or `svg` format. но для большинства из них следует использовать `png` или `svg`, которые управляют прозрачностью (jpg меньше по размеру по сравнению с png, но без прозрачности). Обратите внимание, что наилучшее качество, связанное с наименьшим размером, обычно имеют svg файлы (векторный формат).
+- Файлы дополнительных ресурсов с произвольными именами. Эти дополнительные файлы могут быть либо файлами изображений, либо файлами шрифтов (для шрифтов возможны форматы `tf` и ` otf`). Учтите, что для этих дополнительных файлов `имя файла` (без расширения) будет использоваться в качестве значения ключа keyValue в файле JSON, чтобы указать, где или когда должны использоваться эти файлы.
+  - файлы изображений часто используются в качестве фона для текстов или для динамической анимации (например, уровень заряда батареи от 0% до 100%).
+  - файлы шрифтов позволяют использовать специальные шрифты на циферблате часов
 
 (cwf-reference-json-structure)=
 
 ## JSON Structure
 
-JSON files can be edited in Notepad (or notepad++) text editor (prefer notepad++ that recognize JSON and use color formating)
+Файлы JSON можно редактировать в текстовом редакторе Notepad (или notepad++) (лучше notepad++, который распознает JSON и цветовое форматирование)
 
 - it contains string keys `"string_key":` and key values that can be strings like `"key value"`, integer, boolean like `true`or `false` or block of data.
-- each value is seperated by a comma `,`
-- A block of data starts by `{`  and ends by `}`
-- the json file is a whole block so it starts by  `{`  and ends by `}`, and inside this file all embeded blocks are associated to a `"key"` that should be unique within the block
-- To improve readibility of json file, it's generally indented (each new key is on a new line, each new block is shifted on the right by 4 spaces characters)
+- каждое значение разделяется запятой `,`
+- Блок данных начинается `{`  и заканчивается `}`
+- файл json представляет собой целый блок, поэтому он начинается с `{` и заканчивается на `}`, и внутри этого файла все встроенные блоки связаны с `"ключом"`, который должен быть уникальным внутри блока
+- Чтобы улучшить читаемость json-файла, он обычно имеет отступ (каждый новый ключ находится на новой строке, каждый новый блок смещен вправо на 4 пробела)
 
 (cwf-reference-metadata-settings)=
 
-### Metadata Settings
+### Настройки метаданных
 
-This block is the first block included into the json file and is mandatory. It contains all the informations associated to this watchface, like the name, the author, the date of creation or update, the author version or the plugin version.
+Этот блок первым включается в файл json, и является обязательным. Он содержит всю информацию, связанную с циферблатом, такую как название, имя автора, дата создания или обновления, номер авторской версии или версии расширения.
 
-See below an example of metadata block:
+Ниже приведен пример блока метаданных:
 
 ```json
-"metadata": {
-    "name": "Default Watchface",
-    "author": "myName",
-    "created_at": "07\/10\/2023",
-    "author_version": "1.0",
-    "cwf_version": "1.0",
-    "comment": "Default watchface, you can click on EXPORT WATCHFACE button to generate a template"
+"метаданные": {
+""имя": "Циферблат часов по умолчанию",
+"автор": "myName",
+"created_at": "07\/10\/2023",
+" author_version": "1.0",
+"cwf_version": "1.0",
+"комментарий": "Циферблат по умолчанию, вы можете нажать на кнопку ЭКСПОРТ циферблата, чтобы сгенерировать шаблон"
 },
 ```
 
-Note that `/` used for the date is a special character, so to be recognize correctly within json file, you have to put before an "escape" character `\`
+Обратите внимание, что `/`, используемый для обозначения даты, является специальным символом, поэтому для правильного распознавания в файле json перед ним следует поставить символ "escape" `\`
 
-You can see in some json file an additional key `"filename"`, this key will be automatically created or updated when the custom watchface will be loaded within AAPS (it will be used to show to the user the zip filename within exports folder), so you can remove this key within metadata block.
+В каком-либо json-файле можно увидеть дополнительный ключ `"имя файла"`, этот ключ будет автоматически создан или обновлен, когда пользовательский циферблат часов будет загружен в AAPS (он будет демонстрировать пользователю имя zip-файла в папке экспорта), этот ключ находится в блоке метаданных и его можно удалить.
 
 (cwf-reference-general-parameter-settings)=
 
-### General parameter settings
+### Общие настройки параметров
 
-After the first block with metadata, you will set some general parameters (see [List of general parameters](cwf-reference-list-of-general-parameters) below), this allow you to set Graph colors (Carbs, Bolus, BG values...), and also default colors for value in range, hyper or hypo (default colors of BG value and arrows)
+После первого блока с метаданными задаются некоторые общие параметры (см [Список общих параметров](cwf-reference-list-of-general-parameters) ниже), которые позволят настроить цвета графика (углеводы, болюсные дозы, значения ГК...), а также цвета по умолчанию для значений в диапазоне, гипер или гипо- (цвета значений ГК и стрелок по умолчанию)
 
-See below an example of general parameters
+Ниже представлен пример общих параметров
 
 ```json
-"highColor": "#FFFF00",
-"midColor": "#00FF00",
-"lowColor": "#FF0000",
-"lowBatColor": "#E53935",
-"carbColor": "#FB8C00",
-"basalBackgroundColor": "#0000FF",
-"basalCenterColor": "#64B5F6",
-"gridColor": "#FFFFFF",
-"pointSize": 2,
-"enableSecond": true,
+""цвет высоких": "#FFFF00",
+""цвет средних": "#00FF00",
+""цвет низких": "#FF0000",
+""Цвет низкого заряда батареи": "#E53935",
+""цвет углеводов": "#FB8C00",
+""цвет фона базала": "#0000FF",
+""цвет базального центра": "#64B5F6",
+""цвет сетки": "#FFFFFF",
+"Размер точки": 2,
+""включить секунды": true,
 ```
 (cwf-reference-imageview-settings)=
 
-### ImageView settings
+### Настройки режима просмотра
 
-Custom image can be tuned using correct filename associated to each ImageView included into custom watchface Layout, then the json block is only here to define the position, the size, if the view is visible or not, and optionally tune the color:
+Нужное изображение можно настроить, используя правильное имя файла, привязанное к каждому ImageView, включенному в пользовательский макет циферблата, в этом случае блок json здесь только для определения позиции, размера, видимости/невидимости, и при необходимости настройки цвета:
 
-See below an example of an Image block for second_hand, (in this case there are no image included into zip file so default second hand image will be used, but tuned with a custom color.
+См. ниже пример блока изображения для секундной стрелки (в данном случае изображение не включено в zip-файл, поэтому будет использовано стандартное изображение, но настроенное с пользовательским цветом.
 
 ```json
 "second_hand": {
@@ -92,7 +92,7 @@ See below an example of an Image block for second_hand, (in this case there are 
     "color": "#BC906A"
 }
 ```
-To have second_hand colored with default BG color (lowRange, midRange or highRange), you just have to modify the latest ligne with the keyValue `bgColor`
+Чтобы секундная_стрелка была окрашена в цвет ГК по умолчанию (низкий диапазон, средний диапазон или высокий диапазон), нужно просто изменить последний линь ligne с помощью величины KeyValue `bgColor`
 
 ```json
     "color": "bgColor"
@@ -100,9 +100,9 @@ To have second_hand colored with default BG color (lowRange, midRange or highRan
 
 (cwf-reference-textview-settings)=
 
-### TextView settings
+### Настройки TextView
 
-TexView have more available parameters compare to ImageView: you can tune rotation (integer value in degrees), textsize (integer value in pixel), gravity (to define if text value will be centered (default value), or aligned left or right), set the font, fontStyle and fontColor, and also background color of the TextView
+TexView имеет больше доступных параметров по сравнению с ImageView: можно настроить поворот (целое значение в градусах), размер текста (целое значение в пикселях), гравитацию (чтобы определить, будет ли текстовое значение центрировано (значение по умолчанию) или выровнено влево или вправо), установить шрифт, FontStyle и fontColor, а также цвет фона текстового представления
 
 ```json
 "basalRate": {

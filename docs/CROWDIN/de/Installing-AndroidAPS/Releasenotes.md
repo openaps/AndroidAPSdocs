@@ -5,7 +5,9 @@ Eine Schritt-für-Schritt-Anleitung des Updates findest Du [hier](../Installing-
 
 Folgende Information wird angezeigt, sobald ein neues Update zur Verfügung steht:
 
-![Update info](../images/AAPS_LoopDisable90days.png)
+```{image} ../images/AAPS_LoopDisable90days.png
+:alt: Update info
+```
 
 Dann hast Du 60 Tage Zeit, das Update durchzuführen. Wenn Du nicht innerhalb dieser 60 Tage updatest, wird AndroidAPS in den LGS-Modus (Reduzierung der Baslarate bei niedrigen Glukosewerten, keine Korrektur zu hoher BZ-Werte - siehe [Glossar](../Getting-Started/Glossary.md)) wie im [Objective 6](../Usage/Objectives.html) zurückgesetzt.
 

@@ -48,10 +48,14 @@ Aşağıdaki geçici çözüm, Sony Smartwatch 3'ün kullanım süresini uzataca
 
 - Komut isteminde „adb install -r -g aplicationname.apk“ komutunu girin (bizim durumumuzda „adb install -r -g SW3fix.apk“).
 
-  ![Terminal komutu](../images/SonySW3_Terminal1.png)
+  ```{image} ../images/SonySW3_Terminal1.png
+  :alt: Terminal komutu
+  ```
 
 - Kurulumun tamamlanması için yaklaşık 4-5 dakika bekleyin.
 
-  ![Terminal başarılı kurulum](../images/SonySW3_Terminal2.png)
+  ```{image} ../images/SonySW3_Terminal2.png
+  :alt: Terminal başarılı kurulum
+  ```
 
 - Bittiğinde, saatinizi yeniden başlatın ve uygulamaların kendisini hemen senkronize etmeye başladığını görmelisiniz.

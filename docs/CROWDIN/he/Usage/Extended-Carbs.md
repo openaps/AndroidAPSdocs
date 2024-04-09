@@ -15,15 +15,21 @@
 
 בכדי להזין פחמימות ממושכות, הגדירו משך זמן בתיבת הדו-שיח *פחמימות* בלשונית הסקירה הכללית, את סך הפחמימות ובאופן אופציונלי היסט זמן (*המספרים למטה הם רק דוגמאות, תצטרכו לנסות את הערכים שלכם כדי להגיע לתגובת גלוקוז נכונה*):
 
-![הזנת פחמימות](../images/eCarbs_Dialog.png)
+```{image} ../images/eCarbs_Dialog.png
+:alt: הזנת פחמימות
+```
 
 פחמימות ממושכות בלשונית סקירה כללית, שימו לב לפחמימות בסוגריים בשדה הפחמימות, המציג את הפחמימות העתידיות:
 
-![eCarbs in graph](../images/eCarbs_Graph.png)
+```{image} ../images/eCarbs_Graph.png
+:alt: eCarbs in graph
+```
 
 ערכים של פחמימות עתידיות נצבעים בכתום כהה בלשונית הטיפולים:
 
-![eCarbs in future in treatment tab](../images/eCarbs_Treatment.png)
+```{image} ../images/eCarbs_Treatment.png
+:alt: eCarbs in future in treatment tab
+```
 
 ______________________________________________________________________
 
@@ -55,7 +61,9 @@ ______________________________________________________________________
 - יחידות הבולוס, הזמן הנותר והזמן הכולל יוצגו במסך הבית.
 - במשאבות Insight בולוס מושהה *אינו זמין* אם נעשה שימוש ב[אמולציית בזאלי זמני](Accu-Chek-Insight-Pump-settings-in-aaps).
 
-![Extended bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
+```{image} ../images/ExtendedBolus2_6.png
+:alt: Extended bolus in AAPS 2.6
+```
 
 (Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### הסיבה לכך שבולוסים מושהים לא יעבדו בלולאה סגורה

@@ -29,7 +29,9 @@ Vertrauliche oder private Informationen wie z. B. Deine Nightscout-URL oder das 
 3. Öffne dessen Einstellungen durch einen Klick auf das Zahnradsymbol. Du kannst das Hochladen auf die Zeiten beschränken, in denen Du Dich im WLAN befindest und/oder zu denen das Smartphone geladen wird.
 4. Öffne das Open-Humans-Plugin (entweder über den OH Tab oder Hamburger-Menü) und klicke auf 'LOGIN'.
 
-![Open Humans Konfigurations-Generator](../images/OHUploader1.png)
+```{image} ../images/OHUploader1.png
+:alt: Open Humans Konfigurations-Generator
+```
 
 5. Lies die angezeigten Informationen über den Open Humans Uploader und die Nutzungsbedingungen sorgfältig.
 6. Bestätige, indem Du das Kästchen markierst und auf 'LOGIN' klickst.
@@ -37,7 +39,9 @@ Vertrauliche oder private Informationen wie z. B. Deine Nightscout-URL oder das 
 8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
 9. Klicke auf die Schaltfläche 'Authorize project'.
 
-![Open Humans Nutzungsbedingungen + Login](../images/OHUploader2.png)
+```{image} ../images/OHUploader2.png
+:alt: Open Humans Nutzungsbedingungen + Login
+```
 
 10. Danach kehrst Du zu AAPS zurück. Dort wird der erfolgreiche Login bestätigt.
 11. Das Smartphone muss eingeschaltet und das Open Humans Plugin geöffnet bleiben, um die Einrichtung abschließen zu können.
@@ -45,11 +49,15 @@ Vertrauliche oder private Informationen wie z. B. Deine Nightscout-URL oder das 
 13. Klicke auf 'LOGOUT', wenn Du das Hochladen von Daten zu Open Humans stoppen möchtest.
 14. Der laufende Upload wird in den Android-Benachrichtigungen angezeigt.
 
-![Open Humans Einrichtung beenden](../images/OHUploader3.png)
+```{image} ../images/OHUploader3.png
+:alt: Open Humans Einrichtung beenden
+```
 
 15. Deine Daten kannst Du auf der [Open Humans Website](https://www.openhumans.org) verwalten.
 
-![Open Humans Datenverwaltung](../images/OHWeb.png)
+```{image} ../images/OHWeb.png
+:alt: Open Humans Datenverwaltung
+```
 
 ## Möglichkeiten zum Teilen Deiner Daten
 
