@@ -489,7 +489,7 @@ If you are interested in setting up a standalone watch, read the posts and comme
 
 ### Option 2) **AAPS** on watch, for remote control of **AAPS** on a phone
 
-Similarly to using a follower phone with either AAPSClient, Nightscout or SMS commands (link to sections) a smartwatch can be used to remotely control **AAPS** and provide full profile data. A key difference to using a follower phone is that the smartwatch to **AAPS** phone link is via bluetooth and does not require an authenticator code. As a side-note, users have reported that if both smartwatch and phone linked by bluetooth are also on the same wifi network, the watch may also interact with the smartphone over the wifi, giving a longer range of communication.
+Similarly to using a follower phone with either AAPSClient, Nightscout or SMS commands (link to sections) a smartwatch can be used to remotely control **AAPS** and provide full profile data. A key difference to using a follower phone is that the smartwatch to **AAPS** phone link is via bluetooth and does not require an authenticator code. As a side-note, users have reported that if both smartwatch and **AAPS** phone linked by bluetooth are also a wifi network, the watch may also interact with the **AAPS** phone over the wifi, giving a longer range of communication. This includes remote delivery of a bolus where the caregiver with the **AAPS** watch and T1D child (with **AAPS** phone) are in different locations and which can useful in circumstances where the T1D child is in school.
 
 A remote control smartwatch is therefore often useful in any situation where:
 
@@ -517,7 +517,6 @@ In the final step of these instructions, you also need to manually remove the fo
 Now reinstall the latest version of Android Studio.
 
 #### Building the **AAPS** Wear apk
-
 As a summary, the build process for the Wear apk is very similar to that for the "full" phone apk, the difference is that in Android Studio you need to select “**AndroidAPS.wear**”  in the drop-down menu, and as build variant choose “**fullRelease**”. This will generate the **AAPS** Wear apk file.  If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping. 
 
 The following guide assumes you have reinstalled the latest version of Android studio (scenario below has used Giraffe 2022.3.1)).
@@ -720,6 +719,8 @@ As a brief overview, the following functions can be triggered from the smartwatc
 ●	check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
 
 ●	show TDD (Total daily dose = bolus + basal per day)
+
+●	Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to a Wifi network)
 
 #### Communication from caregivers to the watch using other apps (like Whatsapp)
 
