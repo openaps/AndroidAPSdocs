@@ -44,7 +44,7 @@ The blood glucose values are received by the xDrip+ app on the smartphone.
 
   → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-  ![xDrip+ advanced settings Libre 2 & raw values](C:\Data\50 - My Projects\AAPS\AndroidAPSdocs\docs\EN\images\xDrip_Libre3_Smooth.png)
+  ![xDrip+ advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
 
   
 
