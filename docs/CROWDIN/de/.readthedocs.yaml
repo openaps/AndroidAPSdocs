@@ -9,7 +9,7 @@ build:
 # Python
 python:
   install:
-    - requirements: ../requirements.txt
+    - requirements: docs/CROWDIN/requirements.txt
 
 # Sphinx
 sphinx:
