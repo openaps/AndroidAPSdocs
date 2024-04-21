@@ -9,9 +9,10 @@ build:
 # Python
 python:
   install:
-    - requirements: ./requirements.txt
+    - requirements: requirements.txt
 
 # Sphinx
 sphinx:
   builder: html
   fail_on_warning: false
+  configuration: docs/CROWDIN/ko/conf.py
