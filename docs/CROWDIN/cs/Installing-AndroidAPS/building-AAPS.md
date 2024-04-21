@@ -344,7 +344,7 @@ Android requires each app to be _signed_, to ensure that it can only be updated 
 If you want to create the apk for your watch, you need to select AAPS.wear!
 :::
 
-- Click "Create new\..." (2) to start creating your key store.
+- Click "Create new..." (2) to start creating your key store.
 
 :::{admonition} INFORMATION!
 :class: information
