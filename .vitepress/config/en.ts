@@ -34,7 +34,7 @@ export const en = defineConfig({
         link: "/en/welcome",
       },
       {
-        text: "Getting Started",
+        text: "1) Getting Started",
         collapsed: false,
         items: [
           {
@@ -50,15 +50,11 @@ export const en = defineConfig({
             collapsed: true,
             items: [
               {
-                text: "CGM / FGM",
-                link: "",
-              },
-              {
-                text: "xDrip Settings",
-                link: "",
-              },
-              {
                 text: "Pump",
+                link: "",
+              },
+              {
+                text: "CGM / FGM",
                 link: "",
               },
               {
@@ -71,67 +67,207 @@ export const en = defineConfig({
               },
             ],
           },
+        ],
+      },
+      {
+        text: "2) Setting up AAPS",
+        collapsed: true,
+        items: [
+          {
+            text: "Setting up the reporting server",
+            link: "",
+          },
           {
             text: "Building AAPS",
             link: "",
           },
           {
-            text: "Initial setup",
+            text: "Transferring and installing AAPS",
             link: "",
           },
           {
-            text: "Towards closed loop", // completing the objectives
+            text: "Setup wizard",
+            link: "",
+          },
+          {
+            text: "Change AAPS configuration",
+            link: "",
+          },
+          {
+            text: "Completing the objectives",
             link: "",
           },
         ],
       },
       {
-        text: "Remote control and following",
-        collapsed: false,
+        text: "3) Remote AAPS Features",
+        collapsed: true,
         items: [
           {
             text: "Remote control",
             link: "",
           },
           {
-            text: "Following-only",
+            text: "Following only",
+            link: "",
+          },
+          {
+            text: "Android auto",
             link: "",
           },
         ],
       },
       {
-        text: "AAPS Usage",
-        collapsed: true,
-        items: [],
-      },
-      {
-        text: "Advanced Topics",
-        collapsed: true,
-        items: [],
-      },
-      {
-        text: "Troubleshooting",
-        collapsed: true,
-        items: [],
-      },
-      {
-        text: "FAQ",
-        collapsed: true,
-        items: [],
-      },
-      {
-        text: "Community",
+        text: "4) Daily life with AAPS",
         collapsed: true,
         items: [
           {
-            text: "Where to find help",
-            items: [],
+            text: "AAPS screens",
+            link: "",
           },
           {
-            text: "Contributing",
-            collapsed: true,
-            items: [],
+            text: "Key AAPS features",
+            link: "",
           },
+          {
+            text: "COB calculation",
+            link: "",
+          },
+          {
+            text: "Sensitivity detection",
+            link: "",
+          },
+          {
+            text: "Profile switch",
+            link: "",
+          },
+          {
+            text: "Temp targets",
+            link: "",
+          },
+          {
+            text: "Extend carbs",
+            link: "",
+          },
+          {
+            text: "Automations",
+            link: "",
+          },
+          {
+            text: "Dynamic ISF",
+            link: "",
+          },
+          {
+            text: "Pump and cannulas",
+            link: "",
+          },
+          {
+            text: "Timezone travelling with pumps",
+            link: "",
+          },
+          {
+            text: "Time adjustment daylight savings time (DST)",
+            link: "",
+          },
+        ],
+      },
+      {
+        text: "5) Maintenance of AAPS",
+        collapsed: true,
+        items: [
+          {
+            text: "Creating and restoring backups",
+            link: "",
+          },
+          {
+            text: "Restoring from your backups on a new phone or fresh installation of AAPS",
+            link: "",
+          },
+          {
+            text: "Version release notes",
+            link: "",
+          },
+          {
+            text: "Updating to a new version or branch",
+            link: "",
+          },
+          {
+            text: "Troubleshooting",
+            link: "",
+          },
+        ],
+      },
+      {
+        text: "6) Advanced AAPS options",
+        collapsed: true,
+        items: [
+          {
+            text: "Full closed loop",
+            link: "",
+          },
+          {
+            text: "Dev branch",
+            link: "",
+          },
+          {
+            text: "xDrip engineering mode",
+            link: "",
+          },
+        ],
+      },
+      {
+        text: "7) Troubleshooting & Getting help",
+        collapsed: true,
+        items: [
+          {
+            text: "Where can I get help with AAPS?",
+            link: ""
+          },
+          {
+            text: "General troubleshooting",
+            link: ""
+          },
+          {
+            text: "Troubleshooting AAPSClient",
+            link: ""
+          },
+          {
+            text: "Accessing log files",
+            link: ""
+          }
+        ],
+      },
+      {
+        text: "8) Community",
+        collapsed: true,
+        items: [
+          {
+            text: "How to help?",
+            link: ""
+          },
+          {
+            text: "How to edit the docs?",
+            link: ""
+          },
+          {
+            text: "How to translate the app and docs?",
+            link: ""
+          },
+          {
+            text: "State of translations",
+            link: ""
+          }
+        ],
+      },
+      {
+        text: "9) Miscellaneous",
+        collapsed: true,
+        items: [
+          { text: "Glossary", link: "" },
+          { text: "Legal", link: "" },
+          { text: "Acknowledgements", link: "" },
+          { text: "References", link: "" },
+          { text: "Sandbox", link: "" },
         ],
       },
     ],
