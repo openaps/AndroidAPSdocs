@@ -121,6 +121,12 @@ If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB
 
 For other CGM/FGM like Freestyle Libre, 'Enable SMB after carbs' is deactivated until xDrip+ has a better noise smoothing plugin. You can find [more information here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
+### How frequently SMBs will be given in min
+
+This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. Note that the loop runs every time a glucose value comes in (generally 5 minutes). Subtract 2 minute to give loop additional time to complete. E.g if you want SMB to be given every loop run, set this to 3 minutes.
+
+Default value: 3 min.
+
 (Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
 
 ### Max minutes of basal to limit SMB to
@@ -138,6 +144,14 @@ Default value: 30 min.
 With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful if you forget to tell AAPS about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increasements caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decrease, it can stop SMBs earlier.
 
 **Therefore, UAM should always be activated when using SMB.**
+
+### Sensitivity raises target
+
+If this option is enabled, the sensitivity detection (autosens) can raise the target when sensitivity is detected (below 100%). In this case your target will be raised by the percentage of the detected sensitivity.
+
+### Resistance lowers target
+
+If this option is enabled, the sensitivity detection (autosens) can lower the target when resistance is detected (above 100%). In this case your target will be lowered by the percentage of the detected resistance.
 
 ### High temp-target raises sensitivity
 

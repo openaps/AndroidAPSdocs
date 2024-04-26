@@ -28,9 +28,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 - Links will be provided to guide you in case you are not familiar with a specific action yet.
 
-  ```{image} ../images/Objective2_V2_5.png
-  :alt: Captura de pantalla de objetivo 2
-  ```
+  ![Captura de pantalla de objetivo 2](../images/Objective2_V2_5.png)
 
 ## Objetivo 3: Demuestra tus conocimientos
 
@@ -38,9 +36,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 - Click on the orange text "Not completed yet" to access the page with the question and answering options.
 
-  ```{image} ../images/Objective3_V2_5.png
-  :alt: Captura de pantalla de objetivo 3
-  ```
+  ![Captura de pantalla de objetivo 3](../images/Objective3_V2_5.png)
 
 - Links will be provided to guide you in case you are unsure about the correct answers yet.
 
@@ -65,9 +61,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 - In Preferences you can set a minimum percentage for suggestion of basal rate change.
 
-  ```{image} ../images/OpenLoop_MinimalRequestChange2.png
-  :alt: Open Loop minimal request change
-  ```
+  ![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
 
 - Also, you do not need to act every 5 minutes on all suggestions...
 
@@ -87,21 +81,15 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-```{image} ../images/sign_stop.png
-:alt: Señal de parada
-```
+![Señal de parada](../images/sign_stop.png)
 
 ### Parar aquí si usted está lazo abierto con una bomba virtual - no haga clic en Comprobar al final de este objetivo.
 
-```{image} ../images/blank.png
-:alt: en blanco
-```
+![en blanco](../images/blank.png)
 
 ## Objetivo 6: Empezando a cerrar el lazo con Baja Glucosa Suspender
 
-```{image} ../images/sign_warning.png
-:alt: Señal de advertencia
-```
+![Señal de advertencia](../images/sign_warning.png)
 
 ### El lazo cerrado no corregirá los valores de bg alto en el objetivo 6, ya que se limita a la suspensión por baja glucosa. ¡Los valores altos de BG tienen que ser corregidos manualmente por usted!
 
@@ -117,9 +105,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 - The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the basal IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.
 
-  ```{image} ../images/Objective6_negIOB.png
-  :alt: Example negative IOB
-  ```
+  ![Example negative IOB](../images/Objective6_negIOB.png)
 
 - If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
 
@@ -131,9 +117,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
   Esta recomendación debe considerarse como un punto de partida. Si se establece en el 3x y se están viendo movimientos que le empuja a cambios fuertes y rápidos, a continuación, baje ese número. Si eres muy resistente, levanta un poco a la vez.
 
-  ```{image} ../images/MaxDailyBasal2.png
-  :alt: max basal diaria
-  ```
+  ![max basal diaria](../images/MaxDailyBasal2.png)
 
 - Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
 
@@ -165,6 +149,4 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 If you want to go back in objectives for whatever reason you can do so by clicking at "clear finished".
 
-```{image} ../images/Objective_ClearFinished.png
-:alt: Go back in objectives
-```
+![Go back in objectives](../images/Objective_ClearFinished.png)

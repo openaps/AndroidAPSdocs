@@ -44,7 +44,7 @@ The blood glucose values are received by the xDrip+ app on the smartphone.
 
   → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-  ![xDrip+ advanced settings Libre 2 & raw values](C:\Data\50 - My Projects\AAPS\AndroidAPSdocs\docs\EN\images\xDrip_Libre3_Smooth.png)
+  ![xDrip+ advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
 
   
 
@@ -71,13 +71,13 @@ As of now, when using Libre 3 as a BG source, the "Always enable SMB" and "Enabl
 
 1. Open Juggluco and note the serial number of the existing sensor
 
-![Libre serial number](../images/libre3/step/_13.jpg)
+![Libre serial number](../images/libre3/step_13.jpg)
 
 2. Now simply scan your new sensor with your phone’s NFC reader. Juggluco will display a notice if the process had been started successfully.
 3. When you are ready to deactivate the old sensor, then open the Juggluco menu by clicking anywhere in the empty space in the upper left hand corner of the screen.
 4. Select the exired sensor and tap "Terminate"
 
-![Terminate sensor](../images/libre3/step/_14.jpg)
+![Terminate sensor](../images/libre3/step_14.jpg)
 
 Note: When two sensors are active Juggluco will send the most recent value from either sensor to xDrip+. If the sensors are not calibrated and reading BG similarly, this may result in jumpy BG values being reported to xDrip+. If you terminate the wrong sensor, you can reactivate it by simply scanning the sensor.
 

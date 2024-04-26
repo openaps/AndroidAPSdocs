@@ -1,0 +1,14 @@
+name: Tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: oven-sh/setup-bun@v1
+      - name: spellcheck
+        run: |
+          bunx cspell lint --no-progress --gitignore '{**,.*}/{*,.*}'

@@ -10,21 +10,15 @@ eCarbs aren't limited to fatty / protein heavy meals: they can be also be used t
 
 To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift:
 
-```{image} ../images/eCarbs_Dialog.png
-:alt: Enter carbs
-```
+![Enter carbs](../images/eCarbs_Dialog.png)
 
 The eCarbs on the overview tab, note the carbs in brackets at the COB field, which shows the carbs in the future:
 
-```{image} ../images/eCarbs_Graph.png
-:alt: eCarbs in graph
-```
+![eCarbs in graph](../images/eCarbs_Graph.png)
 
 Carb entries which are in the future are coloured in dark orange on the treatment tab:
 
-```{image} ../images/eCarbs_Treatment.png
-:alt: eCarbs in future in treatment tab
-```
+![eCarbs in future in treatment tab](../images/eCarbs_Treatment.png)
 
 ______________________________________________________________________
 

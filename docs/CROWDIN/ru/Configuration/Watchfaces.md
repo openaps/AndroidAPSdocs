@@ -329,8 +329,39 @@ AAPS дает возможность отображать следующие н�
 * Включите отладку ADB в настройках разработчика (инженерное меню на часах), подключите часы через USB к компьютеру и запустите приложение Wear в Android Studio.
 * Если в усложнении не происходит обновление данных, то сначала проверьте, работает ли циферблат AAPS вообще.
 
-# Garmin
+## Garmin
 
 Есть несколько циферблатов для Garmin, которые интегрируются с xDrip или Nightscout в магазине [Garmin ConnectIQ](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30). AAPS Glucose Watch интегрируется непосредственно с AAPS. Он отображает данные о состоянии цикла (активный инсулин, временный базал) в дополнение к ГК и посылает данные о частоте сердечных ритмов в AAPS. Его еще нельзя скачать из магазина ConnectIQпоскольку необходимое расширение AAPS доступно начиная с AAPS версии 3.2. Если хотите протестировать, свяжитесь с robert.b на [Discord](https://discord.com/invite/4fQUWHZ4Mw).
 
 ![Снимок экрана](../images/Garmin_WF.png) ![Снимок экрана](../images/Garmin_WF-annotated.png)
+
+## Additional AAPS custom watchfaces are also available
+
+If you want to build your own watchface, follow the [guide here](../Usage/Custom_Watchface_Reference.md).
+
+Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into Github. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
+
+Here you can download Zip-Files with custom watchfaces made by other users:
+
+Разметка сетки (в алфавитном порядке)
+
+|                                                                                                                                                                            |                                                                                                                                                                           |                                                                                                                                                                       |                                                                                                                                                                       |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Циферблат AAPS_V2](../ExchangeSiteCustomWatchfaces/AAPS_V2-CustomWatchface.png)   
+**AAPS_V2**](../ExchangeSiteCustomWatchfaces/AAPS_V2.zip)                            | [![AAPS / ИПЖ](../ExchangeSiteCustomWatchfaces/AAPS-CustomWatchface.png)   
+**AAPS**](../ExchangeSiteCustomWatchfaces/AAPS.zip)                                           | [![Кокпит](../ExchangeSiteCustomWatchfaces/Cockpit-CustomWatchface.png)   
+**Cockpit**](../ExchangeSiteCustomWatchfaces/Cockpit.zip)                                  | [![Cтимпанк](../ExchangeSiteCustomWatchfaces/SteamPunk-CustomWatchface.png)   
+**SteamPunk**](../ExchangeSiteCustomWatchfaces/SteamPunk.zip)                          |
+| [![AIMICO](../ExchangeSiteCustomWatchfaces/AIMICO-V1_1-CustomWatchface.png)   
+**AIMICO**](../ExchangeSiteCustomWatchfaces/AIMICO-V1_1.zip)                                | [![Analog G-Watch](../ExchangeSiteCustomWatchfaces/Analog_G-Watch-CustomWatchface.png)   
+**Analog G-Watch**](../ExchangeSiteCustomWatchfaces/Analog_G-Watch.zip)         | [![Digital G-Watch](../ExchangeSiteCustomWatchfaces/Digital_G-Watch-CustomWatchface.png)   
+**Digital G-Watch**](../ExchangeSiteCustomWatchfaces/Digital_G-Watch.zip) | [![SimpleDigital](../ExchangeSiteCustomWatchfaces/SimpleDigital_v1.3-CustomWatchface.png)   
+**SimpleDigital**](../ExchangeSiteCustomWatchfaces/SteamPunk.zip)        |
+| [![Gears](../ExchangeSiteCustomWatchfaces/Gears-CustomWatchface.jpg)   
+**Gears**](../ExchangeSiteCustomWatchfaces/Gears.zip)                                              | [![Gota](../ExchangeSiteCustomWatchfaces/Gota-CustomWatchface.png)   
+**Gota**](../ExchangeSiteCustomWatchfaces/Gota_v2.4.zip)                                            | [![LuckyLoopKoeln](../ExchangeSiteCustomWatchfaces/LuckyLoopKoeln-CustomWatchface.png)   
+**LuckyLoopKoeln**](../ExchangeSiteCustomWatchfaces/LuckyLoopKoeln.zip)     | [![Robby watchface](../ExchangeSiteCustomWatchfaces/Robby_watchface-CustomWatchface.png)   
+**Robby watchface**](../ExchangeSiteCustomWatchfaces/Robby_watchface.zip) |
+| [![DigitalBigGraph](../ExchangeSiteCustomWatchfaces/DigitalBigGraph-CustomWatchface.png)   
+**DigitalBigGraph**](../ExchangeSiteCustomWatchfaces/DigitalBigGraph_v1.5.zip) | [![PinkFloydTheWall](../ExchangeSiteCustomWatchfaces/PinkFloydTheWall-CustomWatchface.png)   
+**PinkFloydTheWall**](../ExchangeSiteCustomWatchfaces/PinkFloydTheWall.zip) |                                                                                                                                                                       |                                                                                                                                                                       |

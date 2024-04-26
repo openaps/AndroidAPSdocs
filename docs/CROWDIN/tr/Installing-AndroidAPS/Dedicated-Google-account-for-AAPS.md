@@ -45,10 +45,10 @@ These are the steps outlined in the video:
 
 In this example: 
 
-- Your existing “_Everyday_” Google account is donald.muck42\@gmail.com ; ![](../images/Building-the-App/building_0002.png)
-- Your new “_AAPS_” Gmail account will be: donald.muck42.aaps\@gmail.com; ![](../images/Building-the-App/building_0003.png)
+- Your existing “_Everyday_” Google account is donald.muck42@gmail.com ; ![](../images/Building-the-App/building_0002.png)
+- Your new “_AAPS_” Gmail account will be: donald.muck42.aaps@gmail.com; ![](../images/Building-the-App/building_0003.png)
 
-#### Go to https\://account.google.com 
+#### Go to https://account.google.com 
 
 If you are already logged into Google, this will direct you to your “Everyday” **My Account** page.
 (1) Click on the top right of the page on your profile picture (in this case, a simple ![](../images/Building-the-App/building_0002.png)
@@ -101,7 +101,7 @@ This part can be a bit confusing, since you will have to switch back and forth b
 2. Right click on your Browser logo in your taskbar 
 3. From the menu select “New Window”... and adjust it so it only takes the bottom half of the screen.
 
-Open https\://gmail.com  in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. (if needed you can always switch accounts by clicking on the profile picture and selecting the correct one.
+Open https://gmail.com  in each browser window. Make sure your personal account is on top and the new dedicated **AAPS** account is on the bottom, and is easily identifiable by the profile picture in the top right corner. (if needed you can always switch accounts by clicking on the profile picture and selecting the correct one.
 
 ![](../images/Building-the-App/building_0009.png)
 

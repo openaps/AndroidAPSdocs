@@ -1,8 +1,6 @@
 # ¿Qué es un Sistema de Lazo Cerrado?
 
-```{image} ../images/autopilot.png
-:alt: AAPS como un piloto automático
-```
+![AAPS como un piloto automático](../images/autopilot.png)
 
 Un sistema de lazo cerrado de páncreas artificial combina diferentes componentes para facilitar la gestión de la diabetes para ti. En su excelente libro ["Automated Insulin Delivery"](https://www.artificialpancreasbook.com/), Dana M. Lewis, una de las fundadoras del movimiento de lazo cerrado de código abierto, lo denomina un ["piloto automático para tu diabetes"](https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps). Pero, ¿Qué quiere decir esto?
 

@@ -4,9 +4,7 @@
 
 For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. I.e. when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. Before using Automation, you should be confident with manual [temp targets](./temptarget.html) or profile switches.
 
-```{image} ../images/Automation_ConditionAction_RC3.png
-:alt: Automation condition + action
-```
+![Automation condition + action](../images/Automation_ConditionAction_RC3.png)
 
 ## How to use it
 
@@ -18,9 +16,7 @@ To set up an automation, you have to give it a title, select at least one condit
 
 So make sure to deactivate Automation rules during these occations if neccessary. You can do so by untiking the box left of the name of your automation rule.
 
-```{image} ../images/Automation_ActivateDeactivate.png
-:alt: Activate and deactivaten automation rule
-```
+![Activate and deactivaten automation rule](../images/Automation_ActivateDeactivate.png)
 
 ### General
 
@@ -76,9 +72,7 @@ You can choose one or more actions:
 
 After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
 
-```{image} ../images/Automation_Default_V2_5.png
-:alt: Automation default vs. set values
-```
+![Automation default vs. set values](../images/Automation_Default_V2_5.png)
 
 ## Good practice
 
@@ -95,17 +89,13 @@ These are just set up examples, no advises. Don't reproduce it without being awa
 
 ### Low Glucose Temp Target
 
-```{image} ../images/Automation2.png
-:alt: Automation2
-```
+![Automation2](../images/Automation2.png)
 
 This is made by a person that wants to get an automatically hypo temp target when having a hypo.
 
 ### Lunch Time Temp Target
 
-```{image} ../images/Automation3.png
-:alt: Automation3
-```
+![Automation3](../images/Automation3.png)
 
 These example is made by a person, that has lunch at the same time during the week. If it is at a certain time at its lunch location, it gets a lower temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the certain time and the  location. So it does not work at any other time at this location or at this time when the persons stays home or works longer.
 

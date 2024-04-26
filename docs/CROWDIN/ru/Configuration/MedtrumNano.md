@@ -333,10 +333,10 @@
 
 ## Устранение неполадок
 
-### Connection issues
+### Проблемы подключения
 
-If you are experiencing connection timeouts or other connection issues:
-- In Android application settings for AAPS: Set location permission to "Allow all the time".
+Если долго не происходит подключение или другие проблемы с подключением:
+- В настройках приложений Android для AAPS: Установите разрешение на местоположение на "Разрешать все время".
 
 ### Активация прервана
 

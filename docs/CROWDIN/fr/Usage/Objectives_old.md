@@ -28,9 +28,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 - Links will be provided to guide you in case you are not familiar with a specific action yet.
 
-  ```{image} ../images/Objective2_V2_5.png
-  :alt: Screenshot objective 2
-  ```
+  ![Screenshot objective 2](../images/Objective2_V2_5.png)
 
 ## Objectif 3 : Prouver ses connaissances
 
@@ -38,9 +36,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 - Click on the orange text "Not completed yet" to access the page with the question and answering options.
 
-  ```{image} ../images/Objective3_V2_5.png
-  :alt: Screenshot objective 3
-  ```
+  ![Screenshot objective 3](../images/Objective3_V2_5.png)
 
 - Links will be provided to guide you in case you are unsure about the correct answers yet.
 
@@ -65,9 +61,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
 
 - In Preferences you can set a minimum percentage for suggestion of basal rate change.
 
-  ```{image} ../images/OpenLoop_MinimalRequestChange2.png
-  :alt: Boucle ouverte Changement minimum
-  ```
+  ![Boucle ouverte Changement minimum](../images/OpenLoop_MinimalRequestChange2.png)
 
 - Also, you do not need to act every 5 minutes on all suggestions...
 
@@ -87,21 +81,15 @@ You may want to experiment with adjusting your targets to be a closer together r
 
 You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
 
-```{image} ../images/sign_stop.png
-:alt: Stop sign
-```
+![Stop sign](../images/sign_stop.png)
 
 ### Arrêtez-vous ici si vous est en boucle ouverte avec une pompe virtuelle - ne cliquez pas sur Vérifier à la fin de cet objectif.
 
-```{image} ../images/blank.png
-:alt: blank
-```
+![blank](../images/blank.png)
 
 ## Objectif 6 : Démarrage de la boucle fermée avec le système AGB ( Arrêt pour Glycémie Basse )
 
-```{image} ../images/sign_warning.png
-:alt: Warning sign
-```
+![Warning sign](../images/sign_warning.png)
 
 ### La boucle fermée ne corrigera pas les valeurs de glycémies élevées dans l'objectif 6, car elle est limitée à la suspension glycémie basse. Les hyperglycémies doivent être corrigées manuellement par vous !
 
@@ -117,9 +105,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 - The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the basal IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.
 
-  ```{image} ../images/Objective6_negIOB.png
-  :alt: Exemple IA négative
-  ```
+  ![Exemple IA négative](../images/Objective6_negIOB.png)
 
 - If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
 
@@ -131,9 +117,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
   Cette recommandation doit être considérée comme un point de départ. Si vous paramétrez 3 x et que vous constatez des variations dures et rapides, alors diminuez cette valeur. Si vous êtes très résistant, augmentez la un peu à la fois.
 
-  ```{image} ../images/MaxDailyBasal2.png
-  :alt: max daily basal
-  ```
+  ![max daily basal](../images/MaxDailyBasal2.png)
 
 - Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
 
@@ -165,6 +149,4 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 Si vous voulez revenir en arrière sur les objectifs terminés pour quelque raison que ce soit, vous pouvez le faire en cliquant sur "Refaire l'objectif".
 
-```{image} ../images/Objective_ClearFinished.png
-:alt: Retour arrières objectifs
-```
+![Retour arrières objectifs](../images/Objective_ClearFinished.png)

@@ -156,7 +156,7 @@
 
 -   В AAPS перейдите в Конфигуратор > Источник ГК и выберите 'xDrip+'
 
-![xDrip+ BG Source](../images/ConfBuild_BG_xDrip.png)
+![Источник ГК в xDrip+](../images/ConfBuild_BG_xDrip.png)
 
 -   Если AAPS не получает значения ГК, когда телефон находится в режиме авиаперелета пользуйтесь функцией "Установить получателя" в соответствии с описанием [настроек xDrip+](xdrip-identify-receiver).
 

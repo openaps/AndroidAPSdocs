@@ -102,18 +102,14 @@
 - Config manager > pump > Diaconn G8 > Settings
 - DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
 
-```{image} ../images/DiaconnG8/DiaconnG8_14.jpg
-:alt: Diaconn G8 pump options
-```
+![Diaconn G8 pump options](../images/DiaconnG8/DiaconnG8_14.jpg)
 
 - If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an “Insulin Change” event occurs.
 - If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs.
 - If the **Log tube change** option is activated, the relevant details are automatically uploaded to the careportal when a “Tube Change” event occurs.
 - If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a “Battery Change” event occurs, and the PUMP BATTERY CHANGE button in the ACTION tab is deactivated. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
 
-```{image} ../images/DiaconnG8/DiaconnG8_15.jpg
-:alt: Diaconn G8 actions menu
-```
+![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
 
 ### Extended Bolus function
 
