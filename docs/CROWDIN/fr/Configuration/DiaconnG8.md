@@ -56,7 +56,7 @@
 
 ## Dépannage Bluetooth
 
-**Que faire dans le cas d'une connexion Bluetooth instable avec la pompe.**
+**What to do in the case of an unstable Bluetooth connection with the pump.**
 
 ### Méthode 1) Vérifiez à nouveau la pompe une fois la connexion à AAPS terminée.
 
@@ -101,18 +101,14 @@
 - Configuration > Pompe > Diaconn G8 > Paramètres
 - DIACONN G8 en haut à droite> Menu 3 points en haut à droite > Préférences Diaconn G8
 
-```{image} ../images/DiaconnG8/DiaconnG8_14.jpg
-:alt: Options de la pompe Diaconn G8
-```
+![Diaconn G8 pump options](../images/DiaconnG8/DiaconnG8_14.jpg)
 
 - Si l'option **Enreg. changement de réservoir** est activée, les informations sont automatiquement téléchargées sur Careportal quand un événement « Changement d'insuline » se produit.
 - Si l'option **Enreg. changement de site** est activée, les informations sont automatiquement téléchargées sur Careportal lorsqu'un événement "Changement de site" se produit.
 - Si l'option **Enreg. changement de tubulure** est activée, les informations sont automatiquement téléchargées sur Careportal lorsqu'un événement « Changement de tubulure » se produit.
 - Si l'option **Enreg. changement de pile** est activée, les informations sont automatiquement téléchargées sur Careportal lorsqu'un événement "Changement de pile" se produit, et le bouton CHANGEMENT PILE POMPE dans l'onglet ACTION est désactivé. (Note: Pour changer la pile, veuillez arrêter toutes les fonctions d'injection en cours avant de continuer.)
 
-```{image} ../images/DiaconnG8/DiaconnG8_15.jpg
-:alt: Menu d'actions du Diaconn G8
-```
+![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
 
 ### Fonction Bolus Étendu
 
