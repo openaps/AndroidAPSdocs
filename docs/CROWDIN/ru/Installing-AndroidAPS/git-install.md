@@ -9,22 +9,19 @@
 - Убедитесь, что знаете путь установки. Он понадобится на следующем шаге.
 
 ```{admonition} make git.exe available via Windows PATH
-:class: заметка
-Убедитесь, что сможете обратиться к git.exe без префикса, так как Android Studio нуждается в этом для поиска git.exe. Тогда путь к git.exe установится автоматически корректно в настройках Android Studio.
+:class: note
+
+Make sure that you can call git.exe without the prefing path as Android Studio needs this to find git.exe. It will then automatically sets the path to git.exe correct in the Android Studio settings.
 
 ```
 
-```{image} ../images/Update_GitPath.png
-Путь установки Git
-```
+![Git installation path](../images/Update_GitPath.png)
 
 ### 2. Задайте путь к git в параметрах Android Studio
 
 - Открыть файл > Параметры
 
-  ```{image} ../images/Update_GitSettings1.png
-  :alt: Android Studio - открыть настройки
-  ```
+  ![Android Studio - open settings](../images/Update_GitSettings1.png)
 
 - Нажмите на маленький треугольник рядом с Контролем Версий (1.) чтобы открыть подменю.
 
@@ -34,17 +31,13 @@
 
 - Проверьте, может ли Android Studio найти путь к файлу git.exe автоматически, нажав кнопку "Тест" (4.)
 
-  ```{image} ../images/AndroidStudio361_09.png
-  :alt: Android Studio - настройки
-  ```
+  ![Android Studio settings](../images/AndroidStudio361_09.png)
 
 - Если автоматическая настройка будет успешной, то будет показана версия git.
 
 - Нажмите кнопку "OK" в диалоговом окне (1.) и "OK" в окне параметров (2.).
 
-  ```{image} ../images/AndroidStudio361_10.png
-  :alt: автоматическая установка git прошла успешно
-  ```
+  ![Automatic git installation succeeded](../images/AndroidStudio361_10.png)
 
 - В случае, если файл git.exe не найден, нажмите кнопку "OK" в диалоговом окне (1), а затем кнопку с тремя точками (2.).
 
@@ -54,9 +47,7 @@
 
 - Закройте окно параметров, нажав кнопку "OK" (5.).
 
-  ```{image} ../images/AndroidStudio361_11.png
-  :alt: Автоматическая установка git не выполнена
-  ```
+  ![Automatic git installation failed](../images/AndroidStudio361_11.png)
 
 ### 3. Перезагрузитесь
 
@@ -69,15 +60,11 @@
 
 - Введите `git --version` (версия-- git) (без кавычек и без пробелов между знаками минус!) и нажмите Ввод
 
-  ```{image} ../images/AndroidStudio_gitversion1.png
-  :alt: git-версия
-  ```
+  ![git - -version](../images/AndroidStudio_gitversion1.png)
 
 - Если git установлен и подключен правильно, вы получите информацию об установленной версии, которая выглядит следующим образом:
 
-  ```{image} ../images/AndroidStudio_gitversion2.png
-  :alt: результат git-версия
-  ```
+  ![result git-version](../images/AndroidStudio_gitversion2.png)
 
 ## Mac
 

@@ -1,28 +1,20 @@
 # Настройки
 
-- **Откройте настройки** нажав меню в правом верхнем углу начального экрана.
+- **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
-  ```{image} ../images/Pref2020_Open2.png
-  :alt:Открыть настройки
-  ```
+  ![Open preferences](../images/Pref2020_Open2.png)
 
 - Перейдите непосредственно к настройкам определенной вкладки (например, вкладки помпы), открыв эту вкладку и нажав на настройки конкретного модуля расширения.
 
-  ```{image} ../images/Pref2020_OpenPlugin2.png
-  :alt: Открыть параметры расширений
-  ```
+  ![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
 
 - **Подменю** можно раскрыть, нажав на стрелку слева от пункта меню.
 
-  ```{image} ../images/Pref2020_Submenu2.png
-  :alt: Открыть подменю
-  ```
+  ![Open submenu](../images/Pref2020_Submenu2.png)
 
 - С помощью **фильтра** наверху экрана настроек можно быстро перейти к нужной настройке. Просто начните вводить часть текста, который вы ищете.
 
-  ```{image} ../images/Pref2021_Filter.png
-  :alt:Фильтр настроек
-  ```
+  ![Preferences filter](../images/Pref2021_Filter.png)
 
 ```{contents}
 :backlinks: запись
@@ -32,9 +24,7 @@
 (Preferences-general)=
 ## Общие настройки
 
-```{image} ../images/Pref2020_General.png
-:alt: Настройки > Общие
-```
+![Preferences > General](../images/Pref2020_General.png)
 
 **Единицы**
 
@@ -58,9 +48,7 @@
 
 (Preferences-master-password)=
 
-```{image} ../images/Pref2020_General2.png
-:alt: Настройки > Общие - Защита
-```
+![Preferences > General - Protection](../images/Pref2020_General2.png)
 
 #### Главный пароль
 
@@ -74,9 +62,7 @@
 
 - Введите пароль, подтвердите пароль и нажмите кнопку Ok.
 
-  ```{image} ../images/MasterPW.png
-  :alt: Установить главный пароль
-  ```
+  ![Установите главный пароль](../images/MasterPW.png)
 
 #### Защита настроек
 
@@ -86,9 +72,7 @@
 
 - Если вы собираетесь использовать пароль для настроек - нажмите на строчку "Пароль параметров", чтобы задать его. Принцип тот же, что описан [выше](Preferences-master-password).
 
-  ```{image} ../images/Pref2020_Protection.png
-  :alt: Защита
-  ```
+  ![Защита](../images/Pref2020_Protection.png)
 
 #### Защита приложения
 
@@ -101,18 +85,14 @@
 
 - В примере ниже вы видите запрос на биометрическую защиту. Если биометрическое распознавание не работает, нажмите на пробел над запросом и введите главный пароль.
 
-  ```{image} ../images/Pref2020_PW.png
-  :alt: Биометрическая защита
-  ```
+  ![Prompt biometric protection](../images/Pref2020_PW.png)
 
 (Preferences-skin)=
 #### Тема оформления
 
 - Можно выбрать одну из четырех тем оформления:
 
-  ```{image} ../images/Pref2021_SkinWExample.png
-  :alt: Выбор внешнего вида
-  ```
+  ![Select skin](../images/Pref2021_SkinWExample.png)
 
 - 'Тема оформления в низком разрешении' содержит укороченные подписи и не показывает возраст сенсора, катетера /уровень инсулина, чтобы освободить больше места на экране с низким разрешением.
 
@@ -129,18 +109,14 @@
 
 - Тема **Большой Экран** имеет увеличенные размеры всех элементов по сравнению с другими темами
 
-  ```{image} ../images/Screenshots_Skins.png
-  :alt: Темы в зависимости от ориентации экрана телефона
-  ```
+  ![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
 
 (Preferences-overview)=
 ## Общие замечания
 
 - В разделе Начало можно определить параметры главного экрана.
 
-  ```{image} ../images/Pref2020_OverviewII.png
-  :alt: Настройки > Начало
-  ```
+  ![Preferences > Overview](../images/Pref2020_OverviewII.png)
 
 ### Не отключать экран
 
@@ -152,19 +128,13 @@
 
 - Определите, какие кнопки будут видны в нижней части главного экрана.
 
-  ```{image} ../images/Pref2020_OV_Buttons.png
-  :alt: Настройки > Кнопки
-  ```
+  ![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
 
 - Для простоты ввода при помощи величины приращения можно задать параметры трех кнопок в диалоговых окнах инсулина и углеводов.
 
-  ```{image} ../images/Pref2020_OV_Buttons2.png
-  :alt: Настройки > Кнопки > Инсулин
-  ```
+  ![Preferences > Buttons > Insulin](../images/Pref2020_OV_Buttons2.png)
 
-  ```{image} ../images/Pref2020_OV_Buttons3.png
-  :alt: Настройки > Кнопки > Углеводы
-  ```
+  ![Preferences > Buttons > Carbs](../images/Pref2020_OV_Buttons3.png)
 
 (Preferences-quick-wizard)=
 ### Мастер быстрых настроек
@@ -173,17 +143,13 @@
 
 - При настройке вы можете определить время, в течение которого кнопка будет видна на главном экране - только одна кнопка в определенный период.
 
-  ```{image} ../images/Pref2020_OV_QuickWizard.png
-  :alt: Настройки: > Кнопка Мастера Быстрой настройки
-  ```
+  ![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
 
 - При нажатии на кнопку быстрого мастера AAPS будет вычислять и предлагать болюс на углеводы, основанный на ваших текущих коэффициентах (с учетом текущего значения ГК, активного инсулина и т. п.).
 
 - Это предложение должно быть подтверждено перед подачей инсулина.
 
-  ```{image} ../images/Pref2020_OV_QuickWizard2.png
-  :alt: Настройки: > Кнопка Быстрого Мастера
-  ```
+  ![Preferences > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
 
 (Preferences-default-temp-targets)=
 ### Временные цели по умолчанию
@@ -192,15 +158,11 @@
 
 - При помощи временных целей TT, заданных по умолчанию, можно легко установить цель при нагрузках, предстоящем питании и т. п.
 
-  ```{image} ../images/Pref2020_OV_DefaultTT.png
-  :alt: Настройки > Временные цели по умолчанию
-  ```
+  ![Preferences > Default temp targets](../images/Pref2020_OV_DefaultTT.png)
 
 - Выполните долгое нажатие в правом верхнем углу на главном экране или используйте оранжевую кнопку «Углеводы» внизу.
 
-  ```{image} ../images/Pref2020_OV_DefaultTT2.png
-  :alt: Настройки > Временные цели по умолчанию
-  ```
+  ![Preferences > Use default temp targets](../images/Pref2020_OV_DefaultTT2.png)
 
 ###
 
@@ -214,9 +176,7 @@
 
 - Определите, какая часть графика на главном экране будет заполнена зеленым фоном в качестве целевого диапазона.
 
-  ```{image} ../images/Pref2020_OV_Range2.png
-  :alt: Настройки > Диапазон визуализации
-  ```
+  ![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
 
 ### сокращенные имена табул
 
@@ -224,17 +184,13 @@
 
 - Например, вкладка 'Помощник болюса OpenAPS AMA' становится 'OAPS', 'ЦЕЛЕВЫЕ ЗНАЧЕНИЯ ГК' становится 'ЦЕЛИ' и т. д.
 
-  ```{image} ../images/Pref2020_OV_Tabs.png
-  :alt: Настройки > Вкладки
-  ```
+  ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
 
 ### Показывать поле примечаний в диалогах терапии
 
 - Дает возможность добавить короткие примечания к терапии (мастер болюса, углеводы, инсулин...)
 
-  ```{image} ../images/Pref2020_OV_Notes.png
-  :alt: Настройки > Заметки в диалогах по терапии
-  ```
+  ![Preferences > Notes in treatment dialogs](../images/Pref2020_OV_Notes.png)
 
 (Preferences-status-lights)=
 ### Индикаторы состояния
@@ -255,16 +211,12 @@
 
 - Настройки индикатора состояния должны были быть выполнены в настройках Nightscout в версиях AAPS до 2.7.
 
-  ```{image} ../images/Pref2020_OV_StatusLights2.png
-  :alt:Настройки > Сигналы состояния
-  ```
+  ![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
 
 (Preferences-advanced-settings-overview)=
 ### Расширенные настройки (обзор)
 
-```{image} ../images/Pref2021_OV_Adv.png
-:alt: Настройки > Дополнительные настройки
-```
+![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
 
 (Preferences-superbolus)=
 #### Суперболюс
@@ -380,9 +332,7 @@
 
 - Если цель изменена, она будет отображаться в поле целей на зеленом фоне на главном экране.
 
-  ```{image} ../images/Home2020_DynamicTargetAdjustment.png
-  :alt: цель изменена автоматически
-  ```
+  ![Target modified by autosens](../images/Home2020_DynamicTargetAdjustment.png)
 
 (Preferences-carb-required-notification)=
 #### Уведомление о потребности в углеводах
@@ -399,9 +349,7 @@
 
 - При желании уведомления об углеводах могут быть переданы в Nightscout. В этом случае сработают стандартные настройки оповещения NS.
 
-  ```{image} ../images/Pref2020_CarbsRequired.png
-  :alt: необходимые углеводы на главном экране
-  ```
+  ![Display carbs required on home screen](../images/Pref2020_CarbsRequired.png)
 
 #### Дополнительные настройки (OpenAPS AMA)
 
@@ -410,9 +358,7 @@
 
 ## Настройки усваиваемости
 
-```{image} ../images/Pref2020_Absorption.png
-:alt:Настройки усваиваемости
-```
+![Настройки усваиваемости](../images/Pref2020_Absorption.png)
 
 ### min_5m_carbimpact
 
@@ -432,9 +378,7 @@
 
 - График COB на главном экране показывает, когда используется min_5m_impact в виде оранжевого круга в верхней части.
 
-  ```{image} ../images/Pref2020_min_5m_carbimpact.png
-  :alt: График активных углеводов COB
-  ```
+  ![COB graph](../images/Pref2020_min_5m_carbimpact.png)
 
 ### Максимальное время усвояемости пищи
 
@@ -460,9 +404,7 @@
 (Preferences-nsclient)=
 ## клиент NS
 
-```{image} ../images/Pref2020_NSClient.png
-:alt: Клиент NS
-```
+![клиент NS](../images/Pref2020_NSClient.png)
 
 Оригинальный протокол коммуникации, может использоваться с более ранними версиями Nightscout.
 
@@ -474,9 +416,7 @@
 
 ## Клиент NSV3
 
-```{image} ../images/Pref2024_NSClientV3.png
-:alt: Клиент NSV3
-```
+![Клиент NSV3](../images/Pref2024_NSClientV3.png)
 
 [Новый протокол, начиная с AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) - безопаснее и эффективнее.
 
@@ -499,9 +439,7 @@
 
 ### Опции оповещения
 
-```{image} ../images/Pref2024_NSClient_Alarms.png
-:alt: настройки оповещений
-```
+![Опции оповещения](../images/Pref2024_NSClient_Alarms.png)
 
 - Опции звуковых оповещений позволяют выбрать оповещения Nightscout по умолчанию для использования через приложение. AAPS будет подавать звуковые сигналы при срабатывании оповещений Nightscout.
   - Для того, чтобы работали оповещения, следует настроить значения переменных для Чрезвычайно Высокой, Высокой, Низкой и Чрезвычайно Низкой ГК в переменных [Nightscout](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -512,9 +450,7 @@
 
 ### Параметры подключения
 
-```{image} ../images/ConfBuild_ConnectionSettings.png
-:alt: настройки подключения NSClient
-```
+![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
 
 - Настройки подключения определяют, когда включено соединение с Nightscout.
 - Ограничьте загрузку в Nightscout только через Wi-Fi или даже через Wi-Fi SSID.
@@ -525,9 +461,7 @@
 (Preferences-advanced-settings-nsclient)=
 ### Расширенные настройки (Клиент NS)
 
-```{image} ../images/Pref2024_NSClientAdv.png
-:alt: Дополнительные настройки NS клиента
-```
+![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
 
 Большинство опций в расширенных настройках самоочевидны.
 
@@ -548,25 +482,19 @@
 
 ## Локальные оповещения
 
-```{image} ../images/Pref2020_LocalAlerts.png
-:alt:Локальные оповещения
-```
+![Локальные оповещения](../images/Pref2020_LocalAlerts.png)
 
 - Настройки самоочевидны.
 
 ## Отбор данных
 
-```{image} ../images/Pref2020_DataChoice.png
-:alt: Отбор данных
-```
+![Отбор данных](../images/Pref2020_DataChoice.png)
 
 - Вы можете помочь разработчикам AAPS, посылая отчеты об ошибках.
 
 ## Параметры обслуживания
 
-```{image} ../images/Pref2020_Maintenance.png
-:alt: Параметры обслуживания
-```
+![Параметры обслуживания](../images/Pref2020_Maintenance.png)
 
 - Отправляйте логи журналов на <logs@androidaps.org>.
 - Если вы выберите *Шифрование экспортированных настроек* они будут зашифрованы вашим мастер-паролем [](Preferences-master-password). В этом случае пароль должен вводиться каждый раз, когда настройки экспортируются или импортируются.

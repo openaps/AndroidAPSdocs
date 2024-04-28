@@ -5,9 +5,7 @@ Eine Schritt-für-Schritt-Anleitung des Updates findest Du [hier](../Installing-
 
 Folgende Information wird angezeigt, sobald ein neues Update zur Verfügung steht:
 
-```{image} ../images/AAPS_LoopDisable90days.png
-:alt: Update info
-```
+![Update-Info](../images/AAPS_LoopDisable90days.png)
 
 Dann hast Du 60 Tage Zeit, das Update durchzuführen. Wenn Du nicht innerhalb dieser 60 Tage updatest, wird AndroidAPS in den LGS-Modus (Reduzierung der Baslarate bei niedrigen Glukosewerten, keine Korrektur zu hoher BZ-Werte - siehe [Glossar](../Getting-Started/Glossary.md)) wie im [Objective 6](../Usage/Objectives.html) zurückgesetzt.
 
@@ -18,7 +16,7 @@ Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln,
 ```{admonition} First version of AAPS
 :class: note
 
-Die erste Testversion gab es bereits 2015. In 2016 has been the first released version.
+Die erste Testversion gab es bereits 2015. In 2016 wurde dann das erste Release veröffentlicht.
 
 Da die Releasefolge und deren Veröffenlichungszeitpunkte immer wieder erfragt werden, haben wir diese hier - sofern verfügbar - zusammengetragen.
 
@@ -45,84 +43,84 @@ Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zw
 - Verwende AAPS Version **2.6.2**.
 - Download des AAPS Code unter <https://github.com/nightscout/AndroidAPS> branch 2.6.2
 
-## WearOS version
+## Wear OS-Version
 
-- AAPS 3.2 requires at least WearOS API level 28 (Android 9)
+- AAPS 3.2 benötigt mindestens Wear OS API level 28 (Android 9)
 
-## Version 3.2.0.0 dedicated to @Philoul
+## Version 3.2.0.0 ist @Philoul gewidmet
 
-Release date: 23-10-2023
+Erscheinungsdatum: 23.10.2023
 
 ### Wichtige Hinweise
 
-- NS 15 is required
+- Nightscout Version 15 ist zwingend erforderlich
 - Wenn Websockets in NS v3 genutzt werden, werden Behandlungen, die über die NS Oberfläche (Plus-Button) oder andere Anwendungen, die die V1 API nutzen, eingegeben werden, nicht an AAPS gesendet. Dies wird in einer der kommenden NS-Versionen behoben werden. Verwende immer den gleichen Client (v1 oder v3) in AAPS und AAPSClient, bis NS intern auf v3 umgestellt ist. Das Gleiche gilt für AAPS und den AAPSClient selbst.
-- Websockets funktionieren im v3 Plugin ähnlich zum v1 Plugin. Mit deaktivierten Websockets plant AAPS regelmäßige NS-Downloads ein. Da NS damit dann nicht mehr permanent verbunden ist, wird so der Stromverbrauch reduziert. Das bedeutet allerdings auch, dass Daten seltener ausgetauscht werden (Datenaktualität). Please read [here](Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) the important comments from the dev team before you use it!
+- Websockets funktionieren im v3 Plugin ähnlich zum v1 Plugin. Mit deaktivierten Websockets plant AAPS regelmäßige NS-Downloads ein. Da NS damit dann nicht mehr permanent verbunden ist, wird so der Stromverbrauch reduziert. Das bedeutet allerdings auch, dass Daten seltener ausgetauscht werden (Datenaktualität). Bevor Du es nutzt, lies Dir die wichtigen [Hinweise des Entwicklungsteams](Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS) durch!
 - Wenn xDrip als BZ-Quelle genutzt wird, muss diese nach dem Update noch einmal neu eingestellt werden (bedingt durch interne Anpassungen).
 - Um das erste Objective (Ziel) zu erreichen, kann anstelle von Nightscout nun auch Tidepool genutzt werden.
-- Wenn Daten an xDrip+ gesendet werden sollen, muss xDrip- Synchronisierungs-Plugin konfiguriert werden. In order to receive BGs from AAPS in xDrip, “xDrip+ Sync Follower” must be selected as source
+- Wenn Daten an xDrip+ gesendet werden sollen, muss xDrip- Synchronisierungs-Plugin konfiguriert werden. Um Glukosewerte von AAPS in xDrip zu erhalten, muss "xDrip+ Sync Follower" als Quelle ausgewählt sein
 - Wenn auf den ComboV2-Treiber gewechselt werden soll, muss Ruffy deinstalliert und die Pumpe erneut mit AAPS gekoppelt werden.
-- In order to use DynISF plugin you have to start Objective 11 (all previous must be in finished state to allow start of 11)
+- Um die Funktion "dynamischer ISF" nutzen zu können, muss das Ziel 11 gestartet worden sein. Zum Starten des Ziels 11 müssen die Ziele 1-10 abgeschlossen bzw. erreicht sein.
 
 
 ### Änderungen
 
 - EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
 - ComboV2 Pumpentreiber (Ruffy nicht mehr benötigt) @dv1
-- Medtrum Nano driver @jbr7rr
+- Medtrum Nano Unterstützung @jbr7rr
 - Unterstützung für Dana-i @MilosKozak
 - Glunovo CGM support @christinadamianou
 - G7-Unterstützung @MilosKozak @rICTx-T1D @khskekec
 - NSClient v3 plugin @MilosKozak
 - Tidepool support @MilosKozak
 - Glättungs-Plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
-- DynamicISF plugin @Chris Wilson, @tim2000s
-- Garmin watchface & HeartRate support @buessow
-- New logo @thiagomsoares
-- New watchface @Philoul
+- Funktion "Dynamischer ISF" hinzugefügt @Chris Wilson, @tim2000s
+- Garmin Zifferblatt & Herzfrequenz-Unterstützung @buessow
+- Neues Logo @thiagomsoares
+- Neues Zifferblatt (Watchface) @Philoul
 - Tonnenweise Version 3.1-Probleme gelöst
 - Notizen an mehr Stellen zugelassen @Sergey Zorchenko
-- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
+- Fehler in der Benutzeroberfläche behoben @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
 - Neue SMS-Befehle LOOP LGS/CLOSED @pzadroga
 - Übersetzungen für Wear @Andries-Smit
 - xDrip-Kommunikation in eigenes Modul ausgelagert @MilosKozak
 - Interne Änderungen: aktualisierte Bibliotheken-Versionen, rx3-Migration, neue Modulstrukturen @MilosKozak
 - Diaconn-Treiber korrigiert @miyeongkim
-- more database maintenance options @MilosKozak
+- Weitere Optionen zur Datenbank-Pflege @MilosKozak
 - AAPSClient liefert Info, ob das Loop-Smartphone geladen wird @MilosKozak
 - Änderung im Bolus-Rechner: Wenn CGM-Daten fehlen, wird der Prozentsatz ignoriert (d.h. 100% wird genutzt)
-- migration to kts build system @MilosKozak
-- improved CI integration @MilosKozak @buessow
-- tests cleaup @ryanhaining @MilosKozak
-- new 110k+ lines of code, changed 240k lines, 6884 changed files
+- Umstellung auf das KTS Build System @MilosKozak
+- Verbesserung der CI-Integration @MilosKozak @buessow
+- Bereinigung der Tests @ryanhaining @MilosKozak
+- Mehr als 110.000 neue Codezeilen, 240.000 Zeilen geändert, 6.884 Dateien angepasst
 
 (Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)=
-### Important comments on using v3 versus v1 API for Nightscout with AAPS
+### Wichtige Hinweise zur Nutzung der Nightscout v3 vs. v1 API mit AAPS
 
-v1 is the old protocol used for exchanging data between NS web site and NS server. It has many limitations
-- v1 sends only 2 days of data
-- v1 send all 2 days data on every reconnection
-- using websockets is mandatory = permanent connection, more battery compsumption
-- during frequent disconnects to NS connection is paused for 15 minutes to prevent high data usage
+v1 ist das alte, für den Datenaustausch zwischen NS-Website und NS-Server verwendete, Protokoll. Es hat viele Beschränkungen
+- v1 sendet nur Daten für 2 Tage
+- v1 sendet bei jedem Reconnect alle Daten der zwei Tage erneut
+- Websockets müssen zwingend genutzt werden = permanente Verbindung, höherer Akkuverbrauch
+- Bei wiederholten Reconnects mit Nightscout wird die Verbindung für 15 Minuten pausiert, um eine erhöhte Datennutzung zu verhindern
 
-v3 is new protocol. More safe and efficient
-- while using tokens you can better define access rights
-- protocol is more efficient on both sides (AAPS & NS)
-- It can read up to 3 months of data from NS
-- you can choose to use or to not use websockets on every device (using means faster updates, not using means lower power compsumption, but slower updates ie. minutes)
-- NSClient is not paused on disconnections
+v3 ist das neue Protokoll. Es ist sicherer und effizienter
+- Mit Token lassen sich Zugriffsrechte besser definieren
+- Das Protokoll ist auf AAPS & NS-Seite Seite effizienter
+- Es kann Daten der letzten 3 Monate von NS auslesen
+- Du kannst entscheiden, ob Du Websockets auf allen Geräten nutzen möchtest oder nicht. Wenn Du sie nutzt, bekommst Du schnellere Updates. Nutzt Du sie nicht, hast Du einen niedrigeren Akkuverbrauch, aber langsamere Updates.
+- Der NSClient wird bei Verbindungsabbrüchen nicht angehalten (pausiert)
 
-LIMITATIONS
-- NS 15 must be used with AAPS 3.2
-- v3 doesn't see updates done by v1 protocol (probably it will be resolved in some future version of NS)
-- in opposite because of old uneffective method of tracking changes v1 see changes done by v3
-- remember NS still uses v1 internaly so far thus is not possible to enter data through NS web UI if you are using v3. You must use AAPSClient on SMS if you want enter data remotely
+EINSCHRÄNKUNGEN
+- NS 15 muss mit AAPS 3.2 verwendet werden
+- V3 erkennt keine Updates, die durch das V1 Protokoll vorgenommen wurden. Das wird vermutlich in einer der kommenden Nightscout-Versionen behoben sein
+- Im umgekehrten Fall erkennt V1, durch die wenig effiziente Art Änderungen nachzuverfolgen, Änderungen, die durch V3 vorgenommen wurden
+- Bitte habe im Kopf, dass Nighscout intern immer noch V1 nutzt, und es deswegen nicht möglich ist Daten über die Nightscout-Weboberfläche einzugeben, sofern Du V3 verwendest. Um die Daten remote einzugeben, musst Du SMS über den AAPSClient nutzen
 
-RECOMMENDED SETTING
-- because of all above you should choose only one method and use it on all devices (remember all other uploaders at time of writing this are using v1). If you decide to go to v3, select v3 in AAPS and all AAPSClients
-- v3 is preffered because of efficiency
-- using websockets or not using with v3 depends on your preference
-- it HIGHLY recommended to let AAPS gather all data and then upload it to NS as a single uploader. All other devices/applications should only read from NS. By doing it you'll prevent conflicts and sync errors. This is valid for getting BG data to NS using Dexcom Share connector etc. too
+EMPFOHLENE EINSTELLUNGEN
+- Aus den oben beschriebenen Gründen solltest Du auf allen Deinen Geräten die gleiche Methode verwenden (Hinweis: zum Redaktionsschluss nutzen alle Uploader derzeit noch V1). Wenn Du Dich für V3 entscheidest, wähle in AAPS und allen AAPSClients V3
+- Aus Effizienzgründen wird V3 bevorzugt
+- Der Einsatz von Websockets mit V3 oder nicht ist Geschmackssache
+- Es wird DRINGEND empfohlen AAPS die Daten sammeln zu lassen und dann zentral als einziger Uploader an Nightscout übertragen lassen. Alle anderen Geräte und Anwendungen sollten Daten von Nightscout lediglich auslesen. Dadurch vermeidest Du Synchronisierungsfehler und -konflikte. Dies gilt auch für die Übermittlung der Glukosewerte an Nightscout mit dem Dexcom Share Connector o. ä. Tools
 
 ## Version 3.1.0
 

@@ -1,36 +1,36 @@
 (Open-APS-features-DynamicISF)=
-## DynamicISF (DynISF)
-DynamicISF was added in AAPS version 3.2 and requires you to start Objective 11 to use. Select DynamicISF in the config builder > APS to activate. It is recommended only for advanced users that have a good handle on AAPS controls and monitoring.
+## Dynamischer ISF (DynISF)
+Dynamischer ISF ist seit der AAPS-Version 3.2 als Funktion verfügbar. Um es nutzen zu können, muss das Ziel (Objective) 11 bestanden und erreicht sein. Tippe in der KONFIGURATION > APS auf 'Dynamischer ISF', um es einzuschalten. Diese Funktion wird nur erfahrenen Nutzenden empfohlen, die sicher im Umgang mit AAPS sind und das System sehr genau beobachten.
 
-Please note that to use Dynamic ISF effectively, the AndroidAPS database needs a minimum of five days of data.
+Um den dynamischen ISF sinnvoll nutzen zu können, sollten mindestens 5 Tage historischer Daten in der AAPS-Datenbank vorliegen.
 
-DynamicISF adapts the insulin sensitivity factor dynamically based on total daily dose of insulin (TDD) and current and predicted blood glucose values.
+Die Funktion "dynamischer ISF" passt den Insulinempfindlichkeitsfaktor (ISF) auf Basis der täglichen Gesamtinsulinmenge (TDD), dem aktuellen und dem erwarteten Glukosewerten dynamisch an.
 
-Dynamic ISF uses Chris Wilson’s model to determine ISF instead of a static profile settings.
+Der Dynamische ISF verwendet das Modell von Chris Wilson anstelle statischer Profileinstellungen, um den ISF zu ermitteln.
 
-The equation implemented is: ISF = 1800 / (TDD * Ln (( glucose / insulin divisor) +1 ))
+Die Berechnungsformel ist: ISF = 1800 / (TDD * Ln (( Glukose / Insulindivisor) +1 ))
 
-The implementation uses the equation to calculate current ISF and in the oref1 predictions for IOB, ZT and UAM. It is not used for COB.
+Die Implementierung verwendet die Formel zur Berechnung des aktuellen ISF und in den oref1-Vorhersagen für IOB, ZT und UAM. Er wird nicht für die COB verwendet.
 
 ### TDD
-This uses a combination of the 7 day average TDD, the previous day’s TDD and a weighted average of the last eight hours of insulin use extrapolated out for 24 hours. The total daily dose used in the above equation is weighted one third to each of the above values.
+Dies verwendet eine Kombination aus dem TDD-Durchschnitt der letzten 7 Tage, dem -TDD des vorangegangenen Tages und einem gewichteten Durchschnitt des Insulinbedarfs der letzten acht Stunden, extrapoliert auf 24 Stunden. Die in der obigen Gleichung verwendete Gesamtdosis wird mit einem Drittel gegenüber den übrigen Werten berücksichtigt.
 
-### Insulin Divisor
-The insulin divisor depends on the peak of the insulin used and is inversely proportional to the peak time. For Lyumjev this value is 75, for Fiasp, 65 and regular rapid insulin, 55.
+### Insulindivisor
+Der Insulindivisor ist vom Wirkmaximum des genutzten Insulins abhängig und ist umgekehrt proportional zum Wirkmaximum. Für Lyumjev ist dieser Wert 75, für Fiasp 65, und übliches schnell wirkendes Insulin 55.
 
-### Dynamic ISF Adjustment Factor
-The adjustment factor allows the user to specify a value between 1% and 300%. This acts as a multiplier on the TDD value and results in the ISF values becoming smaller (ie more insulin required to move glucose levels a small amount) as the value is increased above 100% and larger (i.e. less insulin required to move glucose levels a small amount) as the value is decreased below 100%.
+### Dynamischer ISF Anpassungsfaktor
+Der Anpassungsfaktor kann zwischen 1% und 300% eingestellt werden. Dieser Anpassungfaktor ist ein Multiplikator auf den TDD-Wert und führt dazu, dass die ISF-Werte kleiner werden (d.h. es ist mehr Insulin erforderlich, um den Glukosespiegel zu verändern), wenn der Wert über 100% angehoben wird und die ISF-Werte größer werden (weniger Insulin erforderlich, um den Glukosespiegel zu verändern), wenn der Wert unter 100% abgesenkt wird.
 
-### Future ISF
+### Zukünftiger ISF
 
-Future ISF is used in the dosing decisions that oref1 makes. Future ISF uses the same TDD value as generated above, taking the adjustment factor into account. It then uses different glucose values dependent on the case:
+Zukünftiger ISF wird bei den Dosierentscheidungen von oref1 eingesetzt. Der zukünftige ISF verwendet den gleichen TDD-Wert unter Berücksichtigung des Anpassungsfaktors wie er oben berechnet wurde. Er verwendet dann, abhängig von der jeweiligen Situation, unterschiedliche Glukosewerte:
 
-* If levels are flat, within +/- 3 mg/dl, and predicted BG is above target, a combination of 50% minimum predicted BG and 50% current BG is used.
+* Wenn der Glukosespiegel stabil (+/- 3mg/dl) ist, und der vorhergesagte Glukosewert über dem Zielwert liegt, wird eine Kombination aus des unteren vorhergesagten Glukosewertes und des aktuellen Glukosewertes (jeweils 50%) verwendet.
 
-* If eventual BG is above target and glucose levels are increasing, or eventual BG is above current BG, current BG is used.
+* Wenn der erwartete Glukosewert über dem Zielwert liegt und die Glukosewerte steigen oder der erwartete Glukosewert liegt über dem aktuellen Wert, dann wird der aktuelle Glukosewert in der Berechnung genutzt.
 
-Otherwise, minimum predicted BG is used.
+In allen anderen Fällen wird der untere vorhergesagte Glukosewert verwendet.
 
-### Enable TDD based sensitivity ratio for basal and glucose target modification
+### Aktivieren des TDD-basierten Empfindlichkeitsverhältnises für Basal und Glukose-Zielwertanpassungen (Empfindlichkeit und BZ anpassen)
 
-This setting replaces Autosens, and uses the last 24h TDD/7D TDD as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. This calculated value is also used to adjust target, if the options to adjust target with sensitivity are enabled. Unlike Autosens, this option does not adjust ISF values. 
+Diese Einstellung ersetzt Autosens, und nutzt die letzten 24h TDD/7D TDD als Basis für die Erhöhung und Verringerung der Basalrate auf die gleiche Weise wie Standard Autosens es tut. Dieser berechnete Wert wird auch verwendet, um das Ziel anzupassen, wenn die Optionen "Empfindlichkeit und Glukosewert anpassen" aktiviert ist. Im Gegensatz zu Autosens wird durch diese Option der ISF-Werte nicht angepasst. 

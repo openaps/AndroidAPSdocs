@@ -1,39 +1,39 @@
 # Tidepool
 
-Tidepool is a third party tool that collects data regarding BG, insulin and carbs and can be used to analyze and share this data with your clinical team. As of AAPS version 3.2 it can be used as an alternative to Nightscout for satisfying part of Objective 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
+Tidepool ist ein Drittanbieter-Hilfsmittel, das Therapiedaten (u.a. Glukosewerte, Insulin und Kohlenhydrate) sammelt, die dann analysiert und mit Deinem Diabetes-Team geteilt werden können. Seit der AAPS-Version 3.2 kann Tidepool als Alternative zu Nightscout genutzt werden, um das Ziel (Objective) 1 zu erfüllen. Er kann auch in Kombination mit Nightscout als alternative Berichtsplattform eingesetzt werden, die sich gut in klinische Umgebungen integriert. Dies kann die gewünschte Option für Kinder, die AAPS verwenden, sein, die eine Remoteüberwachung und -steuerung von Nightscout einsetzen wollen, aber auch eine Berichtsplattform haben wollen, mit der ihr klinisches Team besser vertraut ist.
 
-It is important to understand the tidepool is for reporting only. It is NOT a real-time follow app. If you need to have followers apart from the main AAPS phone you must setup Nightscout as well.
+Wichtig ist zu wissen, dass Tidepool lediglich für die Erstellung von Berichten genutzt werden kann. Es ist KEINE Echtzeit-Follower-App. Wenn Du, neben dem eigentlichen AAPS-Smartphone, weitere Follower benötigst, musst Du auch Nightscout einrichten.
 
-Note: the Tidepool organization is also working on bringing the iOS Loop product to market with FDA approval. This effort has nothing to do with their data reporting platform or AAPS.
+Hinweis: Die Tidepool-Organisation arbeitet auch daran, den iOS Loop als Produkt mit einer FDA-Genehmigung auf den Markt zu bringen. Diese Anstrengungen sind unabhängig von deren Reportingplattform und AAPS.
 
-## Step 1 - Setup a tidepool account
+## Schritt 1 - Ein Tidepool-Konto erstellen
 
--Navigate to tidepool.org
+- Rufe "tidepool.org" auf
 
--Select “Personal Sign Up” or “Sign Up”
+- Gehe auf “Personal Sign Up” oder “Sign Up”
 
--Create and document an email and password
+- Erstelle eine E-Mail und Password-Kombination
 
--Select “Personal Account” and click “Continue”
+- Wähle “Personal Account” aus und klicke auf “Continue”
 
--Complete the patient information section and accept the terms of use
+- Vervollständige den Abschnitt mit den Patienteninformationen und akzeptiere die Nutzungsbedingungen
 
--Verify your email address via the instructions received to your email
+- Bestätige Deine E-Mail-Adresse in der E-Mail, die Du bekommen hast
 
-## Step 2 - Enter credentials into AAPS
+## Schritt 2 - Zugangsdaten in AAPS eingeben
 
--Select the three-line “hamburger” menu in the top left and the select “Config Builder” (if “Config Builder is not located there it will instead be one of the tabs along the top)
+- Gehe in AAPS in die KONFIGIURATION (eigener Tab oder über das Hamburger-Menü oben links)
 
--Scroll down to the “Synchronization” section and select the check mark to the left of “Tidepool”
+- Scrolle bis zum Abschnitt "Synchronisierung" herunter und aktiviere das Feld neben "Tidepool"
 
--Click the gear icon to the right of “Tidepool”
+- Klicke auf das Zahnradsymbol rechts neben "Tidepool"
 
--Enter the username and password you created in Step 1 above
+- Gib Deinen Benutzernamen und das Anmeldekennwort (aus Schritt 1) ein
 
--Click “Test Tidepool Login”
+- Klicke auf "Teste den Tidepool Login"
 
--If you get the “Successfully logged into Tidepool” message you have successfully connected. If not, confirm your credentials are correct and that you have verified your email address with Tidepool.
+- Wenn Du die Nachricht "Successfully logged into Tidepool" bekommst, konnte die Verbindung erfolgreich hergestellt werden. Falls nicht, überprüfe bitte, ob Deine Zugangsdaten korrekt sind und Du Deine E-Mail-Adresse in der Bestätigungsmail tatsächlich bestätigt hast.
 
--Click on “Connection settings” and set based on your personal preferences
+- Klicke auf "Verbindungs-Einstellungen" und aktiviere je nach Bedarf die entsprechenden Optionen
 
-For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
+Für weitere Hilfe dazu, wie Du Deine Daten, sobald nach Tidepool hochgeladen wurden, nutzen kannst, gehe bitte auf [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)

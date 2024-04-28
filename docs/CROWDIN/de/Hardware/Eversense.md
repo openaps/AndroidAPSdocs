@@ -1,6 +1,6 @@
 # Für Eversense Nutzer
 
-The easiest way to use Eversense with AAPS is to install the EU or US modified [Eversense app](https://cr4ck3d3v3r53n53.club/) (and uninstall the original one first).
+Am einfachsten kann man Eversense mit AAPS nutzen, indem man die EU oder modifizierte US [Eversense-App](https://cr4ck3d3v3r53n53.club/) installiert (zunächst muss die Original-App deinstalliert werden).
 
 **Warnung: Durch die Deinstallation der alten App, werden Deine lokalen historischen Daten (älter als eine Woche) verloren gehen!**
 

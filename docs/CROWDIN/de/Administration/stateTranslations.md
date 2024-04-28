@@ -4,14 +4,14 @@ Der Status wird einmal pro Stunde aktualisiert und spiegelt nur den Zustand in C
 
 :::{tip}
 
-Be careful the percentage of proofreading must be lower then the percentage of translations but they decided to show it on top of the translations. It's better to look only at the percentage level of translations to see if work is to be done.
+Bitte vorsichtig sein. Der Prozentsatz des Korrekturlesens muss niedriger sein als der Prozentsatz der Übersetzungen, aber es wurde beschlossen den Status über den eigentlichen Übersetzungen zu zeigen. Es ist besser daher besser, sich nur den Prozentsatz der Übersetzungen anzusehen, um zu sehen, ob noch etwas zu erledigen ist.
 
 :::
 
-:::{admonition} needed time for final publication
+:::{admonition} Dauer bis zur endgültigen Veröffentlichung
 :class: note
 
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+Nach der Crowdin-Übersetzung wird täglich eine Synchronisierung mit Github durchgeführt, um so die Übersetzungen als Pull-Request (PR) an Github zu übertragen.
 
 Die Akzeptanz der PR ist eine manuelle Aufgabe, die so schnell als möglich erledigt wird.
 

@@ -3,7 +3,7 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## Verlorener Keystore
-If you use the same keystore when updating AAPS you do not have to uninstall the previous version on your smartphone. Daher wird empfohlen, den Keystore an einem sicheren Platz zu speichern.
+Wenn Du beim Update von AAPS denselben "Keystore" verwendest, musst Du die Vorgängerversion von AAPS auf Deinem Smartphone nicht deinstallieren. Daher wird empfohlen, den Keystore an einem sicheren Platz zu speichern.
 
 Wenn Du versuchst das apk zu installieren und es mit einem anderen keystore signiert wurde als zuvor, bekommst Du einen Fehler, dass die Installation fehlgeschlagen ist!
 
@@ -14,12 +14,12 @@ Falls Du deinen alten keystore oder das dazugehörige Passwort nicht mehr wieder
 4. Erstelle ein signiertes Apk für die neue Version, wie es im [Update Guide](../Installing-AndroidAPS/Update-to-new-version.md) beschrieben ist und übertrage es auf dein Smartphone.
 5. Deinstallieren die Vorgängerversion von AAPS auf Deinem Smartphone.
 6. Installiere die neue AAPS-Version auf Deinem Smartphone.
-7. [Import settings](ExportImportSettings-import-settings) to restore your objectives and configuration.
+7. [Importiere die Einstellungen](ExportImportSettings-import-settings), um sowohl Deinen Fortschritt bei den Zielen (Objectives), als auch Deine Konfiguration wieder herzustellen.
 
    Falls du die Einstellungen nicht findest, kopiere sie von deinem externen Speicher auf dein Smartphone.
 
 8. Prüfe deine Einstellungen und deaktiviere den Energiesparmodus.
-9. Keep on looping.
+9. Loope weiter!
 
 ## Gradle Sync schlägt fehl
 Der Gradle Sync kann aus verschiedenen Gründen fehlschlagen. Falls Du einen Hinweis bekommst, dass der Gradle Sync fehlgeschlagen ist ("Gradle Sync failed"), öffne den "Build" Reiter (1) im unteren Bereich von Android Studio und überprüfe welche Fehlermeldung (2) du angezeigt bekommst.
@@ -91,7 +91,7 @@ Falls Du eine Fehlermeldung bekommst, die so aussieht
 
     * Benutze deinen Datei Explorer und verschiebe die Datei an einen Ort, außerhalb des Source Code Projekts.
 
-    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AAPS directory anymore.
+    * Gehe zurück zu Android Studio und klicke den Refresh Button (4) im Commit Tab, um sicherzustellen, dass die Datei nicht mehr im AAPS-Ordner liegt.
 
       Falls keine weiteren Änderungen im Commit Tab zu sehen sind, gehe zu [Schritt 3](troubleshooting_androidstudio-step-3-gradle-resync).
 
@@ -104,19 +104,19 @@ Folge der Anleitung bei [Gradle Resync](troubleshooting_androidstudio-step-3-gra
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
-### Incompatible version of Android Gradle plugin
+### Inkompatibilität der Android Gradle Plugin Version
 
-  If you experience the following error message
+  Wenn Du die folgende Fehlermeldung erhältst,
 
-  ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+  ![Inkompatibilität der Android Gradle Plugin Version](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 
-  You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
+  nutzt Du eine veraltete Version des Android Studios. Gehe im Menü zu Help > Check for updates und installiere die neueste Version des Android Studios und deren Plugins.
 
-### Android Gradle plugin requires Java 17 to run
+### Das Android Gradle Plugin benötigt Java 17
 
   Wahrscheinlich bekommst du diese Fehlermeldung:
 
-  ![Android Gradle plugin requires Java 17 to run](../images/studioTroubleshooting/11_GradleJDK.png)
+  ![Das Android Gradle Plugin benötigt Java 17](../images/studioTroubleshooting/11_GradleJDK.png)
 
   Klicke auf "Gradle Settings" (1), um die Gradle Einstellungen zu öffnen.
 
@@ -124,13 +124,13 @@ Folge der Anleitung bei [Gradle Resync](troubleshooting_androidstudio-step-3-gra
 
   ![Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
-  When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "jbr-17" (2), which should be located within your Android Studion installation directory.
+  Wenn Du die "Gradle settings" geöffnet hast, öffne die Optionen (1) unter "Gradle JDK" und wähle "jbr-17" (2) aus, das sich im Android Studio Installations-Ordner befinden sollte.
 
   ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
   Klicke "OK" um die Einstellungen zu speichern und schließen.
 
-  *Wichtig*: Falls Du die Einstellung "Gradle JDK" nicht siehst, hast Du Android Studio wahrscheinlich nicht upgedatet. Make sure you are using Android Studio 2022.3 Giraffe) or newer.
+  *Wichtig*: Falls Du die Einstellung "Gradle JDK" nicht siehst, hast Du Android Studio wahrscheinlich nicht upgedatet. Bitte nutze Android Studio 2022.3 Giraffe) oder neuer.
 
   Jetzt ist es notwendig einen [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync) auszulösen
 
@@ -157,7 +157,7 @@ Folge der Anleitung bei [Gradle Resync](troubleshooting_androidstudio-step-3-gra
 
   Falls du Windows 10 verwendest, brauchst du ein 64-bit Betriebssystem.
 
-  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+  Es gibt im Internet eine Reihe von Anleitungen (wie z.B. [diese](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d)), die beschreiben, wie Du herausfindest, ob Du ein 32-Bit oder 64-Bit Betriebssystem hast.
 
   ![Screenshot konnte den Daemon-Prozess nicht starten](../images/AndroidStudioWin10_32bitError.png)
 
@@ -172,7 +172,7 @@ Folge der Anleitung bei [Gradle Resync](troubleshooting_androidstudio-step-3-gra
 
     ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
-  * Right-click on AAPS (2)
+  * Rechtsklick auf AAPS (2)
 
   * Klicke auf "Reload Gradle Project" (3)
 
@@ -203,7 +203,7 @@ Beim Erstellen eines neuen Keystores zum Erstellen der signierten APK wird unter
 Dies scheint ein Fehler in Android Studio 3.5.1 und seiner Java-Umgebung in Windows zu sein. Der Schlüssel wird korrekt erstellt, aber eine Empfehlung wird fälschlicherweise als Fehler angezeigt. Dies kann momentan ignoriert werden.
 
 
-## No CGM data is received by AAPS
+## AAPS empfängt keine CGM-Daten
 
 * Falls Du gepatchte Dexcom G6-App verwendest: Diese App ist veraltet. Verwende stattdessen die [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app)  App.
 
@@ -238,7 +238,7 @@ Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, 
 
     Oder verwende einfach einen neuen keystore.
 
-3. Build app from scratch as described [here](Building-APK-download-AAPS-code).
+3. Erstelle die App von Grund auf neu wie [hier](Building-APK-download-AAPS-code) beschrieben.
 
 4. Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
 5. [Importiere Einstellungen](../Usage/ExportImportSettings) erneut, um deine Zielsetzungen und Einstellungen wiederherzustellen.
