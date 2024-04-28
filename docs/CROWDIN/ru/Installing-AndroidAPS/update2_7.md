@@ -12,9 +12,7 @@
 - Прокрутите вниз до "источник ГК".
 - Выберите правильный источник ГК.
 
-```{image} ../images/ConfBuild_BG.png
-:alt: источник ГК
-```
+![BG source ( Источник данных ГК )](../images/ConfBuild_BG.png)
 
 ## Завершаем экзамен
 
@@ -31,9 +29,7 @@
 - Нажмите "Главный пароль"
 - Введите пароль, подтвердите пароль и нажмите кнопку Ok.
 
-```{image} ../images/MasterPW.png
-:alt: Установить главный пароль
-```
+![Установите главный пароль](../images/MasterPW.png)
 
 ## Экспорт настроек
 
@@ -59,8 +55,6 @@
 - Нажмите на "Пароль помпы (только v1)"
 - Введите пароль помпы ([Пароль по умолчанию](DanaRS-Insulin-Pump-default-password) отличается в зависимости от версии прошивки) и нажмите OK.
 
-```{image} ../images/DanaRSPW.png
-:alt: задать пароль Dana RS
-```
+![Set Dana RS password](../images/DanaRSPW.png)
 
 Для смены пароля на Dana RS следуйте инструкциям на странице [DanaRS](DanaRS-Insulin-Pump-change-password-on-pump).
