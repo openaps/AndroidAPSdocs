@@ -10,12 +10,12 @@
 * Gehe in der Pumpe zum Hauptmenü -> Einstellen -> Suchen
 * Gehe auf dem Handy zu den Bluetootheinstellungen und suche Geräte in der Nähe. Wähle die Seriennummer deiner Dana und gebe das Passwort ein (Standard ist entweder 1234 oder 0000). Falls die Dana nicht angezeigt wird, starte das Handy neu und wechsle die Batterie der Dana. Wiederhole anschließend diesen Schritt.
 
-* In AAPS go to Config Builder and select the type of DanaR you have (DanaR, DanaR Korean, DanaRv2)
+* Gehe in AAPS auf den Reiter KONFIGURATION und wähle Deine Dana Version (DanaR, DanaR Korean, DanaRv2) aus.
 
 * Rufe in AAPS das Drei-Punkte-Menü auf. Drücke auf Einstellungen.
 * Drücke auf "DanaR Bluetooth Gerät" und wähle deine Seriennummer aus.
 * Wähle "Pumpen-Passwort" und gib das Passwort ein. (Standard ist 1234).
-* If you want AAPS to allow basal rate above 200%, enable Use extended boluses for >200%. Das bedeutet aber, dass während eines verlängerten Mahlzeitenbolus nicht mit hohen temporären Basalraten loopen kannst.
+* Wenn AAPS Basalraten von mehr als 200 % setzen sollen darf, aktiviere "Benutze verlängerten Bolus für hohe temp. Basalraten". Das bedeutet aber, dass während eines verlängerten Mahlzeitenbolus nicht mit hohen temporären Basalraten loopen kannst.
 * Unter "DanaR Pumpen-Einstellungen" kannst du auch die Bolus-Geschwindigkeit (12s/1IE, 30s/1IE oder 60s/1IE) einstellen.
 * Stelle auf der Pumpe die Basalschritte auf 0,01 IE/h.
 * Stelle auf der Pumpe die Bolusschritte auf 0,01 IE/h.
