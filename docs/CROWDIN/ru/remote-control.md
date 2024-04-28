@@ -474,7 +474,7 @@ Further details about the watchfaces, and day-to-day use, including how to make 
 
 ### Вариант 2) **AAPS** на смарт-часах, для дистанционного управления **AAPS** на телефоне
 
-Аналогично использованию телефона фоллоуэра либо с AAPSClient, Nightscout или SMS (ссылка на разделы) смарт-часы можно использовать для удаленного управления **AAPS** и предоставления полных данных профиля. Ключевое различие с телефоном фоллоуэра заключается в том, что смарт-часы связываются с **AAPS** через Bluetooth и не требуют кода аутентификатора. Пользователи сообщают, что если смарт-часы и телефон, связанные по Bluetooth, находятся в одной сети Wi-Fi, часы также могут взаимодействовать с смартфоном по wifi, давая более широкий диапазон возможностей.
+Аналогично использованию телефона фоллоуэра либо с AAPSClient, Nightscout или SMS (ссылка на разделы) смарт-часы можно использовать для удаленного управления **AAPS** и предоставления полных данных профиля. Ключевое различие с телефоном фоллоуэра заключается в том, что смарт-часы связываются с **AAPS** через Bluetooth и не требуют кода аутентификатора. As a side-note, users have reported that if both smartwatch and **AAPS** phone linked by bluetooth are also a wifi network, the watch may also interact with the **AAPS** phone over the wifi, giving a longer range of communication. This includes remote delivery of a bolus where the caregiver with the **AAPS** watch and T1D child (with **AAPS** phone) are in different locations and which can useful in circumstances where the T1D child is in school.
 
 Таким образом, смарт-часы дистанционного управления полезны когда:
 
@@ -501,7 +501,6 @@ Specific How-to guides for setting up **AAPS** on the popular [Samsung Galaxy Wa
 Теперь переустановите свежую версию Android Studio.
 
 #### Создание приложения **AAPS** Wear apk
-
 Процесс сборки Wear apk очень похож на процесс "полного" apk, разница в том, что в Android Studio необходимо выбрать “**AndroidAPS. wear**» а в выпадающем меню вариант сборки выберите “**fullRelease**”. Это создаст файл **AAPS** Wear apk.  Вместо этого можно собрать **“pumpcontrolRelease”** из выпадающего меню, которое позволит дистанционно управлять помпой, но вне цикла.
 
 Это руководство предполагает, что вы переустановили версию Android studio( Giraffe 2022.3.1)).
@@ -694,6 +693,8 @@ As a brief overview, the following functions can be triggered from the smartwatc
 ●   check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
 
 ●   show TDD (Total daily dose = bolus + basal per day)
+
+●   Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to a Wifi network)
 
 #### Communication from caregivers to the watch using other apps (like Whatsapp)
 
