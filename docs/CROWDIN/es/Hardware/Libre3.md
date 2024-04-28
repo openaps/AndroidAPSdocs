@@ -42,7 +42,7 @@ Los valores de glucosa en sangre son recibidos por la aplicación xDrip+ en el t
 
   → Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-  !\[xDrip+ advanced settings Libre 2 & raw values\](C:\Data\50 - My Projects\AAPS\AndroidAPSdocs\docs\EN\images\xDrip_Libre3_Smooth.png)
+  ![xDrip+ advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
 
 
 
@@ -69,13 +69,13 @@ Hasta el momento, al usar Libre 3 como fuente de glucosa, las opciones "Habilita
 
 1. Abre Juggluco y toma nota del número de serie del sensor existente
 
-![Libre serial number](../images/libre3/step/_13.jpg)
+![Libre serial number](../images/libre3/step_13.jpg)
 
 2. Ahora simplemente escanea tu nuevo sensor con el lector NFC de tu teléfono. Juggluco mostrará una notificación si el proceso se ha iniciado con éxito.
 3. Cuando estés listo para desactivar el antiguo sensor, abre el menú de Juggluco haciendo clic en cualquier lugar en el espacio vacío en la esquina superior izquierda de la pantalla.
 4. Selecciona el sensor caducado y pulsa sobre "Finalizar"
 
-![Terminate sensor](../images/libre3/step/_14.jpg)
+![Terminate sensor](../images/libre3/step_14.jpg)
 
 Nota: Cuando hay dos sensores activos, Juggluco enviará el valor más reciente de cualquiera de los dos sensores a xDrip+. Si los sensores no están calibrados y no leen la glucosa en sangre de manera similar, esto puede dar como resultado valores de glucosa en sangre irregulares que se envían a xDrip+ Si terminas el sensor incorrecto, puedes reactivarlo simplemente escaneándolo de nuevo.
 
