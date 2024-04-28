@@ -2,30 +2,28 @@
 
 ## Sicherheitshinweise
 
-- AAPS allows you to control a child's phone remotely via text message. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Befehle eingerichtet ist, gestohlen werden kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code. Es wird ein starkes Passwort oder biometrischer Schutz empfohlen.
+- AAPS (z.B. auf dem Smartphone eines Kindes) kann über SMS-Befehle 'remote' gesteuert werden. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Befehle eingerichtet ist, gestohlen werden kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code. Es wird ein starkes Passwort oder biometrischer Schutz empfohlen.
 - Außerdem ist es empfehlenswert, eine [zweite Telefonnummer](SMS-Commands-authorized-phone-numbers) für SMS Kommandos einzurichten. Dann kannst Du die zweite Nummer nutzen, um den SMS-Kommunikator [vorübergehend zu deaktivieren](SMS-Commands-other), falls Dein Smartphone verloren geht oder gestohlen wird.
-- AAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
-- **If you bolus through SMS Commands you must enter carbs through Nightscout (AAPSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
-- As of AAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
+- Wenn das Remote-Kommando (z.B. Bolusabgabe oder Profilwechsel) abgeschlossen ist, wird dies mit einer entsprechenden SMS von AAPS bestätigt. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
+- **Wenn Du einen Bolus über SMS-Kommandos abgibst, musst Du die Kohlenhydrate über Nightscout (NSClient, Webseite...) eingeben!** Wenn Du das unterlässt, ist zwar das aktive Insulin (IOB) korrekt, aber die COB sind zu gering. Dies kann dazu führen, dass notwendige Korrekturboli nicht abgegeben werden, da AAPS davon ausgeht, dass Du zu viel aktives Insulin hast.
+- Seit AAPS Version 2.7 muss eine Authentifizierungs-App mit einem zeitbasierten Einmalpasswort verwendet werden, um die Sicherheit bei der Verwendung von SMS-Kommandos zu erhöhen.
 
 ## SMS-Kommandos einrichten
 
-```{image} ../images/SMSCommandsSetup.png
-:alt: SMS-Kommandos einrichten
-```
+![SMS Commands Setup](../images/SMSCommandsSetup.png)
 
-- Most of the adjustments of temp targets, following AAPS etc. can be done on [AAPSClient app](../Children/Children.md) on an Android phone with an internet connection.
+- Die meisten Anpassungen der temporären Ziele, AAPS folgen etc. können über die [AAPSClient-App](../Children/Children.md) auf einem Android-Smartphone durchgeführt werden.
 - Boli können nicht über Nightscout abgegeben werden, aber Du kannst dafür SMS-Kommandos verwenden.
-- If you use an iPhone as a follower and therefore cannot use AAPSClient app, there are additional SMS commands available.
+- Falls Du als Follower ein iPhone verwendest und daher die AAPSClient-App nicht nutzen kannst, gibt es weitere SMS-Kommandos.
 - Gehe dazu in den Systemeinstellungen deines Android-Telefons zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
 
 (SMS-Commands-authorized-phone-numbers)=
 
 ### Erlaubte Telefonnummern
 
-- In AAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
+- In AAPS gehst Du zu **Einstellungen > SMS-Kommunikator** und trägst die Telefonnummer(n) ein, die dazu berechtigt werden soll(en), Kommandos an AAPS zu senden. Mehrere Nummern werden dabei durch Semikolon ohne Leerzeichen getrennt (z.B. +6412345678;+6412345679)
 
-- Note that the "+" in front of the number may or may not be required based on your location. To determine this send a sample text which will show the received format in the SMS Communicator tab.
+- Bitte beachte, dass je nach Deinem Standort ein vorangestelltes "+" erforderlich sein kann. Um das herauszufinden kannst Du eine Testnachricht senden und auf dem SMS-Kommunikator-Tab nachschauen, welches Format die Telefonnummer hat.
 
 - Aktiviere 'Erlaube Fernsteuerung per SMS zulassen'.
 
@@ -37,9 +35,7 @@
 
   - Gib die zusätzliche(n) Telefonnummer(n) getrennt durch Semikolon ohne Leerzeichen ein.
 
-    ```{image} ../images/SMSCommandsSetupSpace2.png
-    :alt: SMS-Kommandos Setup mehrerer Nummern
-    ```
+    ![SMS-Kommandos Setup mehrerer Nummern](../images/SMSCommandsSetupSpace2.png)
 
 ### Minuten zwischen Bolus-Kommandos
 
@@ -83,7 +79,7 @@
 
 ## SMS-Kommandos verwenden
 
-- Send a SMS to the phone with AAPS running from your approved phone number(s) using any of the [commands](SMS-Commands-commands) below.
+- Sende eine SMS von Deiner/Deinen erlaubte/n Telefonnummer(n) an das Smartphone, auf dem AAPS läuft und nutze dabei eines der [Kommandos](SMS-Commands-commands) unten.
 
 - Das AAPS-Smartphone wird antworten, um sich die Durchführung des übermittelten Kommandos bestätigen zu lassen oder um den angeforderten Status zu übermitteln.
 
@@ -98,11 +94,9 @@
 (SMS-Commands-commands)=
 ## Kommandos
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](translations-translate-strings-for-AAPS-app).
+Kommandos müssen in Englisch gesendet werden, die Antwort erhältst Du in Deiner lokalen Sprache, wenn die Zeichenfolge bereits [übersetzt ist](translations-translate-strings-for-AAPS-app).
 
-```{image} ../images/SMSCommands.png
-:alt: Beispiele für SMS-Kommandos
-```
+![SMS Commands Example](../images/SMSCommands.png)
 
 ### Loop
 
@@ -122,9 +116,9 @@ Commands must be sent in English, the response will be in your local language if
 
 - LOOP RESUME \* Antwort: Loop wurde fortgesetzt
 
-- LOOP CLOSED \* Response: Current loop mode: Closed Loop
+- LOOP CLOSED \* Antwort: Aktueller Loop-Modus: Closed Loop
 
-- LOOP LGS \* Response: Current loop mode: Low Glucose Suspend
+- LOOP LGS \* Antwort: Aktueller Loop-Modus: Unterbrechung bei niedrigem BZ (LGS)
 
 ### CGM-Daten
 
@@ -162,7 +156,7 @@ Ein Bolus via SMS ist innerhalb von 15 Minuten nach der letzten Bolusgabe in AAP
 ### Andere
 
 - TREATMENTS REFRESH \* Antwort: Behandlungen von NS aktualisieren
-- NSClient RESTART \* Response: NSCLIENT RESTART SENT
+- NSCLIENT RESTART \* Antwort: NSCLIENT RESTART SENT
 - PUMP \* Antwort: Letzte Verbindung: vor 1 Min. Temp: 0.00E/h @11:38 5/30min IOB: 0.5E Reserv: 34E Batt: 100
 - PUMP CONNECT \* Antwort: Pumpe erneut verbunden
 - PUMP DISCONNECT *30* \* Um die Pumpe für *30* Minuten zu trennen, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
@@ -185,13 +179,11 @@ Wenn die andere App auf mehreren Smartphones installiert ist, musst Du den Uploa
 
 Es gab einen Hinweis, dass nach einem Update die SMS Kommandos auf einem Galaxy S10 nicht mehr funktioniert haben. Dies konnte durch Abschalten der Option 'als Chat Message senden' behoben werden.
 
-```{image} ../images/SMSdisableChat.png
-:alt: SMS als Chatnachricht deaktivieren
-```
-### Android Messages App
+![SMS als Chatnachricht deaktivieren](../images/SMSdisableChat.png)
+### Android Nachrichten App
 
-If you are having issues sending or receiving SMS commands with the Android Messages app disable end-to-end ecryption on both caregiver and child's phones.
- - open the specific SMS conversation in Messages
- - Select the options ellipisis in the top right corner
- - select "Details"
- - Activate "Only send SMS and MMS messages"
+Wenn Du Probleme beim Senden oder Empfangen der SMS mit der Android Nachrichten App haben solltest, deaktiviere die Ende-zu-Ende-Verschlüsselung sowohl auf dem Smartphone des Kindes, als auch auf dem 'Follower'-Smartphone.
+ - Öffne den entsprechenden SMS-Nachrichtenverlauf
+ - Klicke auf die drei Punkte in der oberen rechten Ecke
+ - Wähle DETAILS aus
+ - Aktiviere NUR ALS SMS/MMS SENDEN
