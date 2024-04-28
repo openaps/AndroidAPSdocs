@@ -25,7 +25,7 @@ Der nachfolgend beschriebene Workaround ermöglicht die Weiternutzung der Sony S
 ## 3. Aktiviere die ADB Debugging Optionen auf Deiner Sony Smartwatch 3
 
 - Aktiviere den Entwicklermodus: Settings (Einstellungen) -> About (Über) -> Build number
-- Or it could be Settings --> System --> About -->  --> Versions --> Build number
+- Oder Einstellungen > System > Über >  > Versionen > Build-Nummer
 
 - Klicke 'build number' 7 mal an.
 - Gehe nun zu Settings (Einstellungen) --> Developer Options (Entwickleroptionen) --> ADB Debugging (enable)
@@ -48,14 +48,10 @@ Der nachfolgend beschriebene Workaround ermöglicht die Weiternutzung der Sony S
 
 - Gib im Terminalfenster das Kommando „adb install -r -g aplicationname.apk“ (Wenn Du die APK-Datei wie oben vorgeschlagen benannt hast, lautet das korrekte Kommando „adb install -r -g SW3fix.apk“).
 
-  ```{image} ../images/SonySW3_Terminal1.png
-  :alt: Terminal Befehl
-  ```
+  ![Terminal command](../images/SonySW3_Terminal1.png)
 
 - Warte 4 - 5 Minuten bis die Installation abgeschlossen ist.
 
-  ```{image} ../images/SonySW3_Terminal2.png
-  :alt: Terminal erfolgreiche Installation
-  ```
+  ![Terminal erfolgreiche Installation](../images/SonySW3_Terminal2.png)
 
 - Die Apps sollten sich dann direkt neu synchronisieren.
