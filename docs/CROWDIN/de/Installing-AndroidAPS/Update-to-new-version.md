@@ -2,23 +2,23 @@
 
 ## Kein Download möglich - APK muss selbst erstellt werden
 
-**AAPS** is not available to download, due to regulations concerning medical devices. Es ist zulässig, die App für den eigenen Gebrauch zu erstellen, aber du darfst keine Kopie an andere weitergeben! Weitere Informationen findest Du auf der [FAQ Seite](../Getting-Started/FAQ.md).
+Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist **AAPS** nicht als Download verfügbar. Es ist zulässig, die App für den eigenen Gebrauch zu erstellen, aber du darfst keine Kopie an andere weitergeben! Weitere Informationen findest Du auf der [FAQ Seite](../Getting-Started/FAQ.md).
 
 ## Wichtige Hinweise
 
-* Please update to the new version of **AAPS** as soon as possible after a new release is available.
-* When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
-* The new version will also be announced on Facebook at the time of release.
-* Following the release, please read the [Release Notes](../Installing-AndroidAPS/Releasenotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
-* You need to use version **[Hedgehog (2023.1.1) or Iguana (2023.2.1)](https://developer.android.com/studio/)** of Android Studio. If your version is older, please update first Android Studio first! 
+* Aktualisiere so bald wie möglich auf die neueste **AAPS**-Version, nachdem sie verfügbar ist.
+* Sobald eine neue Version verfügbar ist, wird Dir in der **AAPS**-App ein Hinweis darüber angezeigt.
+* Wenn eine neue Version verfügbar ist, wird darüber auch auf Facebook informiert.
+* Nach der Veröffentlichung lies bitte die [Versionshinweise](../Installing-AndroidAPS/Releasenotes.md) (Release Notes) genau durch, und kläre mögliche Fragen in der Community auf Facebook oder Discord, bevor Du mit dem Update weiter machst.
+* Nutze bitte nur die Android Studio Versionen **[Hedgehog (2023.1.1) oder Iguana (2023.2.1)](https://developer.android.com/studio/)**. Nutzt Du derzeit eine ältere Version, aktualisiere bitte zuerst Dein Android Studio! 
 
-## Overview for updating to a new version of AAPS
+## Übersicht zum Aktualisieren auf eine neue AAPS Version
 
-1. [Export your settings](../Usage/ExportImportSettings-export-settings) from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
-2. [Update local copy](Update-to-new-version-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
+1. [Exportiere Deine Einstellungen](../Usage/ExportImportSettings-export-settings) der"alten" **AAPS** Version auf Deinem Smartphone. Vielleicht brauchst Du sie nicht, aber sicher ist sicher.
+2. Führe ein [Update Deiner lokalen Kopie](Update-to-new-version-update-your-local-copy) des AAPS Sourcecodes durch (Git > Fetch und Git > Pull)
 3. [Erstelle signierte APK](Update-to-new-version-build-the-signed-apk)
 4. [Übertrage die erstellte APK-Datei](Building-APK-transfer-apk-to-smartphone) auf Dein Smartphone und installiere sie.
-5. [Check the version](Update-to-new-version-check-aaps-version-on-phone) in AAPS
+5. [Prüfe die Version](Update-to-new-version-check-aaps-version-on-phone) in AAPS
 6. Stelle abhängig von Deiner [BZ-Quelle](../Configuration/BG-Source.md) sicher, dass Du ['identify receiver'](xdrip-identify-receiver) in xDrip+ gesetzt hast oder verwende die ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 
 Für den Fall, dass Probleme auftreten, findest Du Lösungsansätze auf der separaten Seite für [Fehlerbehebung von Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
@@ -31,9 +31,9 @@ Falls Du Dir nicht mehr sicher bist, wie dies genau funktioniert, findest Du die
 
 ## 2. Führe ein Update deiner lokalen Version durch
 
-:::{admonition} WARNING :class: warning If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../Installing-AndroidAPS/building-AAPS), as this guide will not work for you! :::
+:::{admonition} WARNUNG :class: warning Wenn Du von einer Version älter als 2.8.x kommend aktualisieren möchtest, befolge bitte die Hilfestellungen, um einen [Neuen Clone](../Installing-AndroidAPS/building-AAPS) zu erstellen, da diese Anleitung sonst nicht funktionieren wird! :::
 
-* Open your existing AAPS project with Android Studio. Möglicherweise musst Du Dein Projekt wählen. (Double) click on the AAPS project.
+* Öffne Dein bestehendes AAPS-Projekt mit Android Studio. Möglicherweise musst Du Dein Projekt wählen. Klicke (doppelt) auf das AAPS-Projekt.
     
     ![Android Studio - Projekt auswählen](../images/update/01_ProjectSelection.png)
 
@@ -75,7 +75,7 @@ Siehe die Anleitung für [APK auf Smartphone übertragen](Building-APK-transfer-
 
 ## 5. APK installieren
 
-On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)). Hinweis: Wenn Du beim Erstellen Deinen bestehenden 'key store' im Android Studio verwendest hast, muss die alte AAPS nicht vom Smartphone deinstalliert werden. Um die APK zu installieren, folge den Anweisungen während des Updatevorgangs. In allen anderen Fällen (z.B. wenn ein neuer 'key store' für das Signieren der APK genutzt wurde), muss die alte App gelöscht werden, bevor die neue Version installiert werden kann.
+Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. Anleitungen dazu findest Du im Internet (z.B. hier</0a> oder [hier](https://www.androidcentral.com/unknown-sources)). Hinweis: Wenn Du beim Erstellen Deinen bestehenden 'key store' im Android Studio verwendest hast, muss die alte AAPS nicht vom Smartphone deinstalliert werden. Um die APK zu installieren, folge den Anweisungen während des Updatevorgangs. In allen anderen Fällen (z.B. wenn ein neuer 'key store' für das Signieren der APK genutzt wurde), muss die alte App gelöscht werden, bevor die neue Version installiert werden kann.</p> 
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
@@ -93,4 +93,4 @@ Tief durchatmen!
 
 Wirf dann einen Blick auf die Lösungsansätze der separaten Seite zur [Fehlerbehebung für Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio). In den meisten Fällen dürfte Dein Problem und eine Lösung dort zu finden sein.
 
-If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
+Wenn Du weitere Hilfe brauchst, kontaktiere bitte andere **AAPS**-Nutzende auf [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) oder [Discord](https://discord.gg/4fQUWHZ4Mw).
