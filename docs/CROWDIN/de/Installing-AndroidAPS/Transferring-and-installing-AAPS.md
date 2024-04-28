@@ -1,4 +1,4 @@
-# Transferring and Installing AAPS on your smartphone
+# AAPS auf Dein Smartphone übertragen und installieren
 
 In the previous section, [building **AAPS**](../building-AAPS.md), you built the **AAPS** app (which is an .apk file) on a computer.
 
@@ -8,12 +8,12 @@ Following installation of **AAPS** on the smartphone, you will then be able to m
 
 There are several ways to transfer the **AAPS** APK file from your computer to the smartphone. Here we explain two different ways:
 
-- Option 1 -  Use your Google drive (Gdrive)
-- Option 2 -  Use a USB cable
+- Option 1 -  Google-Laufwerk (Goggle Drive) verwenden
+- Option 2 - USB-Kabel verwenden
 
 Please note that transfer by email might cause difficulties, and is discouraged.
 
-## Option 1. Use Google drive to transfer files
+## Option 1. Google-Laufwerk zum Übertragen von Dateien verwenden
 
 Open [Google.com](https://www.google.com/) in your web browser and login to your Google Account.
 
@@ -54,12 +54,12 @@ Did you remeber to disallow the installation from Google Drive?
 
 ## Please go on with [configuring the AAPS loop](configuring-the-AAPS-loop.md).
 
-## Option 2. Use a USB cable to transfer files
+## Option 2. USB-Kabel zum Übertragen von Dateien verwenden
 
-The second way to transfer the AAPS apk file is with a  [USB cable](https://support.google.com/android/answer/9064445?hl=en).
+Der zweite Weg, um die AAPS-APK-Datei zu übertragen, ein [USB-Kabel](https://support.google.com/android/answer/9064445?hl=de) zu nutzen.
 
-Transfer the file from its location on your computer to the "downloads" folder on the phone.
+Übertrage die Datei von Deinem Computer in den "Downloads"-Ordner auf dem Smartphone.
 
-On your phone, you will have to allow installation from unknown sources. Explanations of how to do this can be found on the internet (_e.g._ [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. Wie das geht kannst Du im Internet nachlesen (_z.B._ [hier](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) oder [hier](https://www.androidcentral.com/unknown-sources)).
 
-Once you have transferred the file by dragging it across, to install it, open the "downloads" folder on the phone, press the AAPS apk and select "install". You can then proceed to the next step, [Setup Wizard](../Installing-AndroidAPS/setup-wizard.md), which will help you setup the **AAPS** app and loop on your smartphone.
+Sobald Du die Datei per Drag & Drop übertragen hast, kannst Du sie installieren. Öffne dazu den "Downloads"-Ordner auf dem Smartphone und tippe auf die AAPS-apk. Wählen dann "installieren" aus. Du kannst dann mit dem nächsten Schritt fortfahren, [Einrichtungsassistent](../Installing-AndroidAPS/setup-wizard.md), bei dem Du **AAPS**-App und den Loop auf Deinem Smartphone einrichtest.
