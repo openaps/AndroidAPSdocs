@@ -101,18 +101,14 @@
 - Hamburger Menü > Konfiguration > Pumpe > Diaconn G8 > Einstellungen
 - DIACONN G8 oben> 3-Punkte-Knopf oben rechts > Diaconn G8-Einstellungen
 
-```{image} ../images/DiaconnG8/DiaconnG8_14.jpg
-:alt: Diaconn G8 Pumpenoptionen
-```
+![Diaconn G8 Pumpenoptionen](../images/DiaconnG8/DiaconnG8_14.jpg)
 
 - Wenn die Option **Reservoirwechsel protokollieren** aktiviert ist, werden die entsprechenden Details automatisch in das Careportal hochgeladen, wenn das Ereignis "Insulinwechsel" eintritt.
 - Ist die Option **Kanülenwechsel protokollieren** aktiviert, werden bei einem Kanülenwechsel die entsprechenden Details automatisch in das Careportal hochgeladen.
 - Wenn die Option **Schlauchwechsel protokollieren** aktiviert ist, werden die relevanten Details automatisch in das Careportal hochgeladen.
 - Wenn die Option **Batteriewechsel protokollieren** aktiviert ist, werden die relevanten Details neim Batteriewechsel automatisch in das Pflegeportal hochgeladen und die Schaltfläche PUMPENBATTERIEWECHSEL auf der Registerkarte AKTION ist deaktiviert. (Hinweis: Um die Batterie zu wechseln, stoppe bitte alle laufenden Injektionsvorgänge.)
 
-```{image} ../images/DiaconnG8/DiaconnG8_15.jpg
-:alt: Diaconn G8 Aktionsmenü
-```
+![Diaconn G8 Aktionsmenü](../images/DiaconnG8/DiaconnG8_15.jpg)
 
 ### Funktion verzögerter Bolus
 
