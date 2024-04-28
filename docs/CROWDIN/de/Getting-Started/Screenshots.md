@@ -1,14 +1,14 @@
-# AAPS screens
+# AAPS-Bildschirme
 
 ## Die Startseite
 
 ![Startbildschirm v2.7](../images/Home2020_Homescreen.png)
 
-This is the first screen you will come across when you open AAPS and it contains most of the information that you will need day to day.
+Wenn du AAPS öffnest, ist dies die erste Ansicht. Sie enthält die meisten der täglich benötigten Informationen.
 
 ### Abschnitt A - Register
 
-* Navigate between the various AAPS modules.
+* Wechsele zwischen den verschiedenen AAPS-Modulen.
 * Alternativ kannst Du die Bildschirme wechseln, indem Du nach links oder rechts wischst.
 * Anzuzeigende Tabs können unter [KONFIGURATION](Config-Builder-tab-or-hamburger-menu) ausgewählt werden.
 
@@ -347,7 +347,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
 #### Essens-Erinnerung
 
-* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AAPS
+* Falls Du einen Spritz-Ess-Abstand verwendest, kannst Du die Alarmfunktion verwenden. (Diese wird bei der Eingabe von Kohlenhydraten in der Zukunft automatisch aktiviert.) Du wirst dann nach Ablauf der eingegebenen Zeit ans Essen erinnert
    
    ![Bolus-Rechner mit Essenserinnerung](../images/Home2021_BolusWizard_EatingReminder.png)
 
@@ -382,7 +382,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
 ![Langsamer Kohlenhydrat-Abbau](../images/Calculator_SlowCarbAbsorption.png)
 
-* If you see the warning above after using bolus wizard, AAPS has detected that the calculated COB value maybe wrong.
+* Wenn Du nach Verwendung des Bolus-Assistenten die obige Warnung siehst, hat AAPS erkannt, dass die aktiven Kohlenhydrate (COB) eventuell nicht korrekt berechnet werden konnten.
 * Wenn Du kurz nach einer vorangegangenen Mahlzeit erneut einen Bolus abgeben willst, solltest Du Dir der Gefahr einer Überdosierung bewusst sein! 
 * Weitere Hinweise findest Du auf der Seite zur [Berechnung der aktiven Kohlenhydrate (COB)](COB-calculation-detection-of-wrong-cob-values).
 
@@ -459,7 +459,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 * Die LILA Linie zeigt an, wie viel Insulin nach der Injektion verbleibt und wie es im Zeitverlauf abnimmt. Die BLAUE Linie veranschaulicht die Aktivität des Insulins.
 * Wichtig zu beachten ist, dass der Ablauf deutlich länger dauert, als gemein hin angenommen. 
 * Von der klassischen umpentherapie bist du es wahrscheinlich gewohnt anzunehmen, dass das Insulin nach ca. 3 1/2 Stunden vollständig abgebaut ist. 
-* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AAPS algorithm.
+* Allerdings spielt der langsamere Abbau beim Loopen eine wichtige Rolle, da die Berechnungen deutlich präziser sind und sich diese geringen Mengen unter den rekursiven Berechnungen des AAPS Algorithmus aufsummieren.
 
 Für weitere Informationen zu den verschiedenen Insulintypen, ihren Aktivitätsprofilen und warum dies alles eine Rolle spielt, lies bitte diesen Artikel: [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
 
