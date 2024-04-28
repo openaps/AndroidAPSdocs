@@ -29,9 +29,7 @@
 3. При помощи значка шестеренки откройте его настройки. Вы можете ограничить загрузку когда телефон использует Wi-Fi и/или заряжается.
 4. Откройте модуль Open Humans (в меню через вкладку OH или через выпадающее меню и нажмите - "ВОЙТИ").
 
-```{image} ../images/OHUploader1.png
-:alt: Конфигуратор Open Humans
-```
+![Open Humans Config Builder](../images/OHUploader1.png)
 
 5. Внимательно прочтите информацию о Загрузчике Open Humans и условиях пользования.
 6. Подтвердите, установив флажок и нажмите 'ВОЙТИ'.
@@ -39,9 +37,7 @@
 8. Решите, хотите ли вы скрыть ваше членство в AAPS загрузчике в профиле Open Humans.
 9. Нажмите кнопку «Авторизовать проект».
 
-```{image} ../images/OHUploader2.png
-:alt: Условия Пользования + Вход Open Humans
-```
+![Open Humans Terms of Use + Login](../images/OHUploader2.png)
 
 10. Возвращаясь в AAPS, вы увидитеподтверждение успешного входа в систему.
 11. Держите модуль Open Humans и телефон включенными для завершения установки.
@@ -49,15 +45,11 @@
 13. Нажмите 'ВЫХОД', если хотите остановить загрузку данных для Open Humans.
 14. Уведомление Android сообщит о работающей загрузке.
 
-```{image} ../images/OHUploader3.png
-:alt: завершение настройки Open Humans
-```
+![Open Humans finish setup](../images/OHUploader3.png)
 
 15. Управлять своими данными теперь можно, войдя на сайт [Open Humans](https://www.openhumans.org).
 
-```{image} ../images/OHWeb.png
-:alt: управление данными Open Humans
-```
+![Open Humans manage data](../images/OHWeb.png)
 
 ## Совместные возможности
 
