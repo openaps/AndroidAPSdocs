@@ -1,10 +1,7 @@
 # שינוי שפה
 
 ```{note}
-תפריט בחירת השפה הועבר למגירה התחתונה של התפריט השמאלי. נא ללחוץ על הסרגל התחתון כדי לפתוח את תפריט בחירת השפה.
+The language selection have been moved to the bottom drawer of the left menu. Please click on the bottom bar to open language selection menu.
 ```
 
-```{image} images/documentation_language_menu.png
-:alt: פתיחת תפריט שפה
-:width: 350
-```
+![Open language menu](images/documentation_language_menu.png){w=350px align=center}
