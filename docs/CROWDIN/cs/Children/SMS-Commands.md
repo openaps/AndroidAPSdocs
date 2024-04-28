@@ -10,9 +10,7 @@
 
 ## Nastavení SMS příkazů
 
-```{image} ../images/SMSCommandsSetup.png
-:alt: Nastavení SMS příkazů
-```
+![SMS Commands Setup](../images/SMSCommandsSetup.png)
 
 - Most of the adjustments of temp targets, following AAPS etc. can be done on [AAPSClient app](../Children/Children.md) on an Android phone with an internet connection.
 - Bolusy přes Nightscout nepošlete. Můžete to ale provést pomocí SMS příkazů.
@@ -37,9 +35,7 @@
 
   - Přidejte další číslo(a) oddělené středníkem, bez mezery.
 
-    ```{image} ../images/SMSCommandsSetupSpace2.png
-    :alt: SMS příkazy – nastavení více čísel
-    ```
+    ![SMS Commands Setup multiple numbers](../images/SMSCommandsSetupSpace2.png)
 
 ### Minut mezi příkazy pro bolus
 
@@ -100,9 +96,7 @@
 
 Commands must be sent in English, the response will be in your local language if the response string is already [translated](translations-translate-strings-for-AAPS-app).
 
-```{image} ../images/SMSCommands.png
-:alt: příklad SMS příkazu
-```
+![SMS Commands Example](../images/SMSCommands.png)
 
 ### Smyčka
 
@@ -185,9 +179,7 @@ Je-li tato jiná aplikace nainstalovaná na více telefonech, deaktivujte upload
 
 Po aktualizaci telefonu Galaxy S10 bylo hlášeno, že SMS příkazy přestaly fungovat. Lze to vyřešit vypnutím možnosti "odesílat zprávy jako konverzace".
 
-```{image} ../images/SMSdisableChat.png
-:alt: Zakázat odesílání SMS jako konverzace
-```
+![Disable SMS as chat message](../images/SMSdisableChat.png)
 ### Android Messages App
 
 If you are having issues sending or receiving SMS commands with the Android Messages app disable end-to-end ecryption on both caregiver and child's phones.
