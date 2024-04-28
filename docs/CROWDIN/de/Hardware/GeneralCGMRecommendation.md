@@ -8,12 +8,12 @@ Welches CGM-System Du auch immer verwendest, wenn Du blutbasierte Kalibrierung v
 -   Kalibriere immer dann, wenn Du stabile Werte hast (Messwerte auf einem Niveau und waagerechter Pfeil). In der Regel reicht ein Zeitraum von 15 - 30 Minuten aus.
 -   Vermeide die Kalibrierung, wenn der Glukoselevel steigt oder fällt.
 -   Kalibriere "ausreichend" oft. Die offiziellen Apps fordern Dich ein oder zwei Mal pro Tag zum blutigen Test auf. Bei DIY Systemen ist das evtl. nicht der Fall und Du solltest vorsichtig sein, ohne die empfohlenen Kalibrierungen zu arbeiten.
--   For sensors not requiring or not allowing calibration, check at least daily real blood sugar. AAPS will be as safe as your sensor readings are reliable.
+-   Überprüfe Deinen echten Glukosewert mindestens einmal am Tag, wenn Du Sensoren nutzt, die keine Kalibrierung benötigen oder zulassen. AAPS ist nur so sicher, wie Deine Sensorwerte verlässlich sind.
 -   Falls möglich, kalibriere mal mit Werten im niedrigen Bereich (72 - 90 mg/dl bzw. 4 - 5 mmol) und mal im erhöhten Bereich (126 - 160 mg/dl bzw. 7 - 9 mmol).  Dies führt zu besseren Ergebnissen, da sich die Kalibrierungsgerade leichter durch zwei entferntere Punkte legen lässt.
 
 ## Sensor setzen (Dexcom G6)
 
-Beim Setzen des Sensors darf die Setzhilfe nicht zu stark auf die Haut gedrückt werden, um Blutungen zu vermeiden. The sensor contacts should not come into contact with blood.
+Beim Setzen des Sensors darf die Setzhilfe nicht zu stark auf die Haut gedrückt werden, um Blutungen zu vermeiden. Die Sensorkontakte sollten nicht mit Blut in Berührung kommen.
 
 Nach dem Setzen des Sensors wird der Transmitter in den Halter auf dem Sensorpflaster eingeklickt. Achtung! Zuerst auf der rechteckigen Seite einführen und danach auf der runden Seite nach unten Drücken bis der Transmitter mit einem Klick einrastet.
 
@@ -26,7 +26,7 @@ Die Bluetooth-Verbindung kann durch andere Bluetooth-Geräte, die sich in der N�
 
 ### Sensorfehler
 
-Wenn Sensorfehler wiederholt auftreten, probiere den Sensor an einer anderen Körperstelle zu setzen. The sensor contacts should not come into contact with blood.
+Wenn Sensorfehler wiederholt auftreten, probiere den Sensor an einer anderen Körperstelle zu setzen. Die Sensorkontakte sollten nicht mit Blut in Berührung kommen.
 
 Oftmals kann ein Sensorfehler durch sofortiges Trinken und "Massage" an der Sensorsetzstelle beseitigt werden.
 
