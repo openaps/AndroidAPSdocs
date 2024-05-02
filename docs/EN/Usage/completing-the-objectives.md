@@ -121,7 +121,7 @@ Your target is a core value. All calculations are based on it. It is different f
 
 You may want to experiment with adjusting your targets being in a tighter range (say, 1 or less mmol/l [20 mg/dl or less] wide) and observe a resulting system behaviour.
 
-You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
+You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Overview > Range for Visualisation.
 
 ![Stop sign](../images/sign_stop.png)
 :::{admonition} If you have been using a virtual pump, change to a real insulin pump now!
