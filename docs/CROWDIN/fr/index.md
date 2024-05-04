@@ -45,7 +45,7 @@ N'utilisez pas **AAPS** si vous prenez des inhibiteurs de SGLT-2 (gliflozines), 
 
 - Toutes les informations et le code décrits ici le sont à des fins d'information et d'éducation uniquement. L'utilisation de [Nightscout](https://nightscout.github.io/) et **AAPS** se fait sous votre propre responsabilité. N'utilisez pas les informations ni le code pour prendre des décisions médicales. Nightscout n'a actuellement entrepris aucune démarche pour se conformer à la loi sur la confidentialité des données médicales HIPAA aux États-Unis, ni dans aucun autre pays.
 - L'utilisation du code de github.com est sans garantie ni support formel d'aucune sorte. Veuillez consulter la LICENCE de ce référentiel pour plus de détails.
-- Tous les noms de produits et de sociétés, marques commerciales, marques de service, marques déposées, sont la propriété de leurs détenteurs respectifs. Leur utilisation est à titre informatif et n'implique aucune affiliation avec eux ni aucune approbation de leur part.
+- Tous les noms de produits et de sociétés, marques commerciales, marques de service, marques déposées, sont la propriété de leurs détenteurs respectifs. La description de leur utilisation est à titre informatif et n'implique aucune affiliation avec ces sociétés ni aucune approbation de leur part.
 
 **AAPS** n'a aucun lien avec, et n'est pas approuvé par : [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) ou [Medtronic](https://www.medtronic.com/).
 
