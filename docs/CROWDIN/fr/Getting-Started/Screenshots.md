@@ -1,16 +1,16 @@
-# AAPS screens
+# Les écrans d'AAPS
 
 ## Écran d'accueil
 
 ![Écran d'accueil V2.7](../images/Home2020_Homescreen.png)
 
-This is the first screen you will come across when you open AAPS and it contains most of the information that you will need day to day.
+Ceci est le premier écran que vous verrez quand vous ouvrirez AAPS, il contient la plupart des informations dont vous aurez besoin au jour le jour.
 
 ### Section A - Onglets
 
-* Navigate between the various AAPS modules.
-* Vous pouvez également changer d'écrans en glissant vers la gauche ou la droite.
-* Displayed tabs can be selected in [config builder](Config-Builder-tab-or-hamburger-menu).
+* Permet de naviguer entre les différents modules AAPS.
+* Vous pouvez également changer d'écran en glissant vers la gauche ou la droite.
+* Les onglets affichés ici peuvent être configurés dans le menu [Configuration](Config-Builder-tab-or-hamburger-menu).
 
 (Screenshots-section-b-profile-target)=
 
@@ -22,7 +22,7 @@ This is the first screen you will come across when you open AAPS and it contains
 
 * Le profil actuel est affiché dans la barre de gauche.
 * Un appui court sur le profil permet de voir les détails du profil
-* Long press profile bar to [switch between different profiles](Profiles-profile-switch).
+* Un appui long sur le bouton de profil permet de [changer de profil](Profiles-profile-switch).
 * Si le changement de profil a été effectué avec une durée, le temps restant en minutes est indiqué entre parenthèses.
 
 #### Cible
@@ -40,7 +40,7 @@ This is the first screen you will come across when you open AAPS and it contains
 ![Visualisation de l'ajustement dynamique de la cible](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS peut ajuster dynamiquement votre cible en fonction de la sensibilité si vous utilisez l'algorithme SMB.
-* Enable either one or both of the [following options](Preferences-openaps-smb-settings) 
+* Activez l'une ou les deux [options suivantes](Preferences-openaps-smb-settings) 
    * "Sensibilité augmente la cible" et/ou 
    * "Résistance diminue la cible" 
 * Si AAPS détecte une résistance ou une sensibilité, la cible change en fonction de ce qui est défini dans le profil. 
