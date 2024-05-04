@@ -1,6 +1,6 @@
 # Preparing to start with AAPS
 
-Welcome. This documentation aims to guide users who are preparing to setup and start using the Android Artificial Pancreas System (**AAPS**).
+Bienvenue ! Cette documentation a pour objectif de guider les utilisateurs qui s'apprêtent à installer et à commencer à utiliser le Système de Pancréas Artificiel Android (**AAPS**).
 
 ## Finding your way around the documentation
 
@@ -13,7 +13,7 @@ Many experience-related details in the **AAPS** documentation make more sense wh
 (preparing-safety-first)=
 
 ## La sécurité avant tout
-“With great power comes great responsibility…”
+“Un grand pouvoir implique de grandes responsabilités... ”
 
 ### Technical safety
 **AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](Usage/Objectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
@@ -112,7 +112,7 @@ Please feel free to reach out to the AAPS community if there is anything you fee
 
 
 
-#### [Where to go for help](Where-To-Go-For-Help/Background-reading.md)?
+#### [Où aller pour obtenir de l'aide](Where-To-Go-For-Help/Background-reading.md)?
 
 Cette section a pour but de fournir aux nouveaux utilisateurs des liens vers des ressources afin d'obtenir de l'aide, y compris l'accès au soutien de la communauté composé à la fois d'utilisateurs nouveaux et expérimentés qui peuvent clarifier les questions, et résoudre les pièges habituels qui peuvent subvenir avec AAPS.
 
@@ -120,39 +120,39 @@ Cette section a pour but de fournir aux nouveaux utilisateurs des liens vers des
 
 This is a [section specificially for clinicians](Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
 
-## What are we going to build and install?
+## Que va-t-on compiler et installer?
 
 This diagram provides an overview of the key components (both hardware and software) of the **AAPS** system:
 
-![preparing_overview](./images/preparing_images/AAPS_preparing_overview_01.png)
+![préparation_vue_d_ensemble](./images/preparing_images/AAPS_preparing_overview_01.png)
 
 
 In addition to the three basic hardware components (phone, pump, glucose sensor), we also need: 1) The **AAPS** app 2) A reporting server and 3) A continuous glucose monitor (CGM) app
 
-### 1) An Android Phone Application: **AAPS**
+### 1) L'application Android pour téléphone : **AAPS**
 
 **AAPS** is an app that runs on android smartphones & devices. You are going to build the **AAPS** app (an apk file) yourself, using a step-by-step guide, by downloading the **AAPS** source code from Github, installing the necessary programs (Android Studio, GitHub desktop) on your computer and building your own copy of **AAPS** app. You will then transfer the **AAPS** app across to your smartphone (by email, USB cable _etc._) and install it.
 
-### 2) A reporting server: NightScout (Tidepool*)
+### 2) Un serveur de reporting : NightScout (Tidepool*)
 
 In order to fully take advantage of **AAPS**, you need to setup a Nightscout server. You can do this yourself (link to instructions) or alternatively, pay a small fee for a managed Nightscout service to be set up for you (link to T1 pal 10.be etc). Nightscout is used to collect data from **AAPS** over time and can generate detailed reports correlating CGM and insulin patterns. It is also possible for caregivers to use Nightscout to remotely communicate with the **AAPS** application, to oversee their child’s diabetic management. Such remote communication features include real-time monitoring of glucose and insulin levels, remote bolusing of insulin (by texting) and meal announcements. Attempting to analyse your diabetes performance by looking at CGM data separately from the pump data is like driving a car where the driver is blind and the passenger describes the scene.  Tidepool is also available as an alternative to Nightscout, for AAPS versions 3.2 and later.
 
-### 3) CGM sensor app
+### 3) Application pour le capteur MCG
 
 Depending on your glucose sensor/CGM, you will need a compatible app for receiving glucose readings and sending them to **AAPS**. The different options are shown below and more information is given in the [compatible CGMs section](./Configuration/BG-Source.md):
 
-![dexcom_options](./images/preparing_images/AAPS_connectivity_Dex_02.png) ![libre_options](./images/preparing_images/AAPSconnectivity_libre.png) ![eversense_options](./images/preparing_images/AAPS_connectivity_eversense.png)
+![options_dexcom](./images/preparing_images/AAPS_connectivity_Dex_02.png) ![options_libres](./images/preparing_images/AAPSconnectivity_libre.png) ![options_eversense](./images/preparing_images/AAPS_connectivity_eversense.png)
 
-### Maintenance of the **AAPS** system
+### Maintenance du système **AAPS**
 
 Both **Nightscout** and **AAPS** must be updated approximately once a year, as improved versions are released. In some cases, the update can be delayed, in others it is strongly recommended or considered essential for safety. Notification of these updates will be given on the Facebook groups and Discord servers. The release notes will make it clear what the scenario is. There are likely to be many people asking similar questions to you at update time, and you will have support for performing the updates.
 
 (preparing-how-long-will-it-take?)=
-## How long will it take to set everything up?
+## Combien de temps pour tout mettre en place ?
 
 As mentioned earlier, using **AAPS** is more of a “journey” that requires investment of your personal time. It is not a one-time setup. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 2 to 3 months overall. It is therefore suggested that you prioritise building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5). Here is an approximate timeframe:
 
-| Tasks                                                                                                               |   Approx time   |
+| Tâches                                                                                                              |  Temps estimé   |
 | ------------------------------------------------------------------------------------------------------------------- |:---------------:|
 | initial reading of the documentation:                                                                               |    1-2 days     |
 | installing/configuring PC to allow the build:                                                                       |    2-8 hours    |
@@ -178,11 +178,11 @@ Once you are fully operational on **AAPS**, you will need to fine tune your sett
 
 ## Requirements
 
-### Medical considerations
+### Considérations médicales
 
 In addition to the medical warnings in the [safety section](preparing-safety-frist) there are also different parameters, depending on which insulin you are using in the pump.
 
-#### Insulin choice
+#### Choix de l'insuline
 
 **AAPS** calculations are based on insulin concentrations of 100U/ml (same as pump’s standard). The following types of insulin profile presets are supported:
 
@@ -194,16 +194,16 @@ For Experimental/Advanced users only:
 - Free-Peak Oref: Allows you to define peak of the insulin activity
 
 
-### Technical
+### Pré-requis techniques
 
 This documentation aims to reduce the technical expertise required to an absolute minimum. You will need to use your computer to build the **AAPS** application in Android Studio (step-by-step instructions). You also need to set up a server over the internet in a public cloud, configure several android phone apps and develop expertise in diabetes management. This can be  achieved by moving step-by-step, being patient, and help from the **AAPS** community. If you are already able to navigate the internet, manage your own Gmail emails, and keep your computer up-to-date, then it is a feasible task to build the **AAPS**. Just take your time.
 
 ### Smartphones
 
-#### AAPS and Android Versions
+#### AAPS et versions Android
 The current version of **AAPS** (3.1.0.3) requires an Android smartphone with Google Android 9.0 or above. If you are considering buying a new phone, (as of July 2023), Android 13 is preferred. Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons, however for users unable to use a device with Android 9.0 or newer, earlier versions of  **AAPS** compatible for older Android versions remain available from our [old repository](https://github.com/miloskozak/AAPS) (check the release notes for legacy versions).
 
-#### Smartphone model choice
+#### Choix du modèle de smartphone
 The exact model you buy depends on the desired function(s). There are two archived spreadsheets of compatible [smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) and [smartphones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). The spreadsheets are no longer updated because there are so many possible models, therefore we now suggest searching the support groups (Facebook or Discord) for "phone", or the specific model you are thinking of getting. Create a new post to ask questions about it if you still need more information.
 
 To make a donation of smartphone or smartwatch models that still need testing, please email [donations@androidaps.org](mailto:donations@androidaps.org).
