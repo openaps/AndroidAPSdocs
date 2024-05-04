@@ -108,16 +108,16 @@ Le diabète de type 1 peut être très frustrant et isole les personnes. Avoir l
 
 ## Comment marche AAPS en comparaison aux Multiples Injections Quotidiennes (MDI) et à la boucle ouverte ?
 
-Multiple daily injections (MDI, (a) in **Figure 2** below) usually involve giving an injection of a long-lasting insulin (_e.g._ Tresiba) once a day, with injections of faster-acting insulin (_e.g._ Novorapid, Fiasp) at mealtimes, or for corrections. L'utilisation classique d'une pompe à insuline (boucle ouverte) (b) implique l'utilisation d'une pompe pour délivrer le basal à des taux pré-programmés d'insuline à action rapide, puis à effectuer un bolus via la pompe lors des repas ou pour des corrections. The basics of a looping system are that the looping app uses the sensor glucose data to instruct the pump to stop insulin delivery when it predicts you are heading for a low, and to give you extra insulin if your glucose levels are rising and predicted to go too high (c). Although this figure is oversimplified compared to real-life, it aims to demonstrate the key differences of the approaches. It is possible to achieve exceptionally good glucose control with any of these three approaches.
+Les injections quotidiennes multiples (MDI, (a) dans le **Schéma 2** ci-dessous) impliquent généralement de faire une injection d'insuline lente / à action longue (_par exemple_ Lantus, Tresiba) une fois par jour, avec des injections d'insuline à action rapide ou ultrarapide (_par exemple_ Novorapid ou Fiasp) à l'heure des repas, ou pour des corrections. L'utilisation classique d'une pompe à insuline (boucle ouverte) (b) implique l'utilisation d'une pompe pour délivrer le basal à des taux pré-programmés d'insuline à action rapide, puis à effectuer un bolus via la pompe lors des repas ou pour des corrections. Le principe de base d'un système de boucle est que l'application utilise les données de glycémie pour envoyer à la pompe l'instruction d'arrêter l'injection d'insuline lorsqu'elle prévoit que vous allez bientôt être en hypoglycémie, et pour vous donner plus d'insuline si votre glycémie augmente et que vous allez être en hyperglycémie (c). Bien que ce schéma soit simplifié par rapport à la réalité, il vise à démontrer les principales différences entre ces approches. Il est possible d'arriver à un contrôle extrêmement bon de la glycémie avec n'importe laquelle de trois approches.
 
 ![21-06-23 AAPS glucose MDI etc](./images/basic-overview-mdi-open-and-closed-loop.png)
 
 
-**Figure 2**. Basic overview of (a) MDI, (b) open-loop pumping and (c) hybrid closed loop pumping.
+**Figure 2**. Aperçu simplifié de (a) Injections multiples quotidiennes ou MDI, (b) boucle ouverte et (c) boucle fermée hybride.
 
 ## Comment marche AAPS en comparaison aux autres systèmes de boucle?
 
-As of June 25 2023, there are four major open source closed loop systems available: [OpenAPS](https://openaps.readthedocs.io/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) and [iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI), (formerly FreeAPS X). Les caractéristiques des différents systèmes sont affichées dans le tableau ci-dessous :
+En date du 25 juin 2023, il y a actuellement quatre grands systèmes de boucle fermée open source disponibles : [OpenAPS](https://openaps.readthedocs.io/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) and [iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI) (anciennement FreeAPS X). Les caractéristiques des différents systèmes sont affichées dans le tableau ci-dessous :
 
 Les caractéristiques des différents systèmes sont affichées dans le tableau ci-dessous :
 
@@ -153,7 +153,7 @@ Les caractéristiques des différents systèmes sont affichées dans le tableau 
 | MGC             | [PocTech](../Hardware/PocTech.md)                                         | ![disponible](./images/available.png)     | ![indisponible](./images/unavailable.png)     | ![indisponible](./images/unavailable.png)             | ![disponible](./images/available.png)          |
 | MGC             | [Nightscout comme source de glycémie](../Hardware/CgmNightscoutUpload.md) | ![disponible](./images/available.png)     | ![disponible](./images/available.png)         | ![disponible](./images/available.png)                 | ![disponible](./images/available.png)          |
 
-_Table notes:_
+_Notes de tableau :_
 1. A **rig** is a small computer which you carry around with you, without a monitor. One supported device type is Intel Edison + Explorer Board and the other Raspberry Pi + Explorer HAT or Adafruit RFM69HCW Bonnet. The first APS were based on this setup, as mobile phones were not capable of running the required algorithms. Use of these systems has declined, as the setup on mobile phones has become easier, and phones have a display included. Intel has also stopped selling the Intel Edison. The excellent OpenAPS algorithms **oref0** and **oref1** are now incorporated in AAPS and iAPS.
 2. Omnipod Dash is the successor of Omnipod Eros. It supports bluetooth communication and does not need a rig gateway to communicate between the Omnipod and mobile phone. If you have a choice, we recommend use of the Dash instead of Eros.
 
