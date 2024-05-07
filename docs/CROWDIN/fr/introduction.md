@@ -232,81 +232,81 @@ e) Vous serez en mesure de fournir **aussi bien des informations sur votre glyc�
 
 f) Si votre équipe continue de s'opposer fermement, donnez à votre docteur une copie imprimée des articles de référence cités plus haut, et donnez-lui le lien vers la page de **AAPS** à destination des docteurs : [Pour les cliniciens - Une introduction générale et un guide de **AAPS**](Resources/clinician-guide-to-AndroidAPS.md)
 
-#### Support for DIY looping by other clinicians
+#### Support pour la boucle DIY par d'autres docteurs
 
-The paper published in the [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_)[ (co led by Kings’ and Guy’s and St Thomas’ NHS Foundation Trust, and co lead by Dr Sufyan Hussain, a consultant diabetologist and honorary senior lecturer from King’s in London) provides:
+L'article publié dans le [Lancet Diabetes Endocrinology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)(_1_)[ (co-dirigé par Kings’ et Guy’s et St Thomas’ NHS Foundation Trust, et co-dirigé par le Dr Sufyan Hussain, un diabétologue consultant et maître de conférences honoraire de King’s à Londres) fournit :
 
-a) **Assurance** for professionals that DIY artificial pancreas systems/ open source as a “safe and effective treatment” option for type 1 diabetes and provides guidance on recommendations, discussions, supports, documentation;
+a) La **certitude** pour les professionnels de santé que les systèmes de pancréas artificiel DIY / open source sont une possibilité de traitement "sûre et efficace" pour le diabète de type 1. Il fournit aussi des orientations sur les recommandations, les discussions, les supports, la documentation;
 
-b) **Recognition** that open-source automated insulin delivery (“AID”) systems can increase time in range (TIR) while reducing variability in blood glucose concentrations and the amount of hypo and hyperglycaemic episodes in various age groups, genders and communities;
+b) La **reconnaissance** que les systèmes de distribution d'insuline automatisés en open source (AID) peuvent augmenter le temps passé dans la cible (TIR) tout en diminuant la variation des glycémies et le nombre d'épisodes hypoglycémiques et hyperglycémiques, pour divers groupes d'âge, sexe et origine;
 
-c) **Recommendation** that healthcare workers should **support** type 1 patients or their caregivers who choose to manage their diabetes with an open source AID system;
+c) La **recommandation** selon laquelle les professionnels de la santé devraient **soutenir** les patients de type 1 ou leurs aidants qui choisissent de gérer leur diabète avec un système de boucle open source;
 
-d) Recommendation that healthcare workers should attempt to learn about all treatment options that might benefit patients including available open-source AID systems.  If health care professionals do not have resources to educate themselves, or have legal or regulatory concerns, they should consider **cooperating, or teaming up with other healthcare professionals** who do;
+d) La recommandation selon laquelle les professionnels de santé devraient essayer de se documenter sur toutes les possibilités de traitement qui pourraient bénéficier aux patients, y compris les systèmes de boucle open source disponibles.  Si les professionnels de santé ne trouvent pas les ressources pour se documenter, ou ont des interrogations légales ou réglementaires, ils devraient envisager de **coopérer ou de s'associer avec d'autres professionnels de santé** qui peuvent les aider;
 
-e) Emphasis that all users of CGMs should have real-time and open-access to **their own health data** at all times
+e) Insiste sur le fait que tous les utilisateurs de MGC devraient avoir un accès en temps réel à **leurs propres données de santé** à tout instant
 
-f) Emphasis that these open source systems have not undergone the same regulatory evaluations as commercially available medical technologies, and there is no commercial technical support. However, **extensive community support is available**; and
+f) Souligne que ces systèmes open source n'ont pas subi les mêmes évaluations réglementaires que les technologies médicales disponibles commercialement, et qu'il n'y a pas de support technique commercial. Cependant, **un soutien à tous niveaux est disponible** via la communauté d'utilisateurs; et
 
-g) A recommendation that **regulation and legal frameworks** should be updated to ensure clarity on permitting ethical and effective treatment of such open source systems.
+g) La recommandation selon laquelle les **cadres réglementaires et juridiques** devraient être mis à jour pour garantir la clarté sur l'autorisation du traitement éthique et efficace de ces systèmes open source.
 
-Another paper in [Medical Law International, 2021](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)(_4_) also highlights the UK General Medical Council’s ‘consent guidance’ places a strong emphasis on doctor and patients making decisions together. The doctor should explain the potential benefits, risks, burdens and side-effects on DIY APS and may recommend a particular option without pressuring the patient.
+Un autre article dans [Medical Law International, 2021](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)(_4_) insiste également sur le fait que le « guide sur le consentement » du Conseil Général de Médecine du Royaume-Uni accorde une grande importance au fait que le médecin et le patient prennent les décisions d'un commun accord. Les professionnels de santé devraient expliquer les avantages, risques, inconvénients et effets secondaires potentiels du système APS open-source et devraient pouvoir recommander une option particulière sans pour autant faire pression sur le patient pour qu'il l'adopte.
 
-Ultimately it is up to the patient to weigh up these factors, along with any non-clinical issues relevant to them and decide which treatment option, if any, to accept.
+En fin de compte, il revient au patient de considérer ces facteurs, ainsi que tout problème non clinique pertinent pour lui, et de décider quelle option de traitement, le cas échéant, accepter.
 
-If a doctor discovers in a clinic that their patient is looping with a DIY system, they are not exempted from their obligations to monitor the patient, simply because they did not prescribe the particular piece of technology the patient is using; clinicians must continue to monitor patients.
+Lorsqu'un médecin se rend compte que son patient boucle avec un système DIY, ça ne l'exonère pas de son obligation de suivre le patient, simplement parce qu'il n'a pas prescrit cet élément technologie particulière que le patient utilise; les professionels de santé doivent continuer de suivre leurs patients.
 
-Doctors (at least in the UK) are not prohibited from prescribing unlicensed medicines and can use their clinical discretion. They should therefore use their clinical judgement to decide if a DIY APS is suitable for a specific patient, and discuss what they consider to be the pros and cons with the patient.
+Les médecins (du moins au Royaume-Uni) n'ont pas l'interdiction de prescrire des médicaments non reconnus et peuvent utiliser leur discernement médical. Ils devraient donc faire usage de leur jugement médical pour décider si un système APS DIY convient à un patient spécifique, et discuter avec le patient de ce qu'ils y voient comme avantages et inconvénients.
 
-#### The articles referenced above, and other useful links and position statements are listed below:
+#### Les articles référencés ci-dessus, ainsi que d'autres liens utiles et déclarations de position sont listés ci-dessous :
 
-1. Open-source automated insulin delivery: international consensus statement and practical guidance for health-care professionals [_Lancet Diabetes Endocrinol_, (2022) _10_, 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)
+1. Administration automatisée d'insuline open-source : déclaration de consensus international et directives pratiques pour les professionnels de la santé [_Lancet Diabetes Endocrinol_, (2022) _10_, 58–74](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/)
 2. [In Silico Trials of an Open-Source Android-Based Artificial Pancreas: A New Paradigm to Test Safety and Efficacy of Do-It-Yourself Systems, 2020](https://www.liebertpub.com/doi/epub/10.1089/dia.2019.0375)
-3. A DIY ‘bionic pancreas’ is changing diabetes care — what's next? [_Nature_ (2023), _620_, 940-941](https://doi.org/10.1038/d41586-023-02648-9)
-4. Prescribing unapproved medical devices? The case of DIY artificial pancreas systems [_Medical law international_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
-5. [Berlin Institute of Health position statement, 2022](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
-6. Do-It-Yourself Automated Insulin Delivery: A Health-care Practitioner User’s Guide (Diabetes Canada position and guide) [_Canadian Journal of Diabetes_, (2023)_47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
-7.  Netherlands (EN/NL) - for clinicians - [how to help people on open source automated insulin delivery systems](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
-8. First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALLRandomized Pilot Study [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
-9. Pre-school and school-aged children benefit from the switch from a sensor-augmented pump to an AndroidAPS hybrid closed loop: A retrospective analysis [_Pediatr. Diabetes_ 2021, _22_, 594-604. 2021](https://onlinelibrary.wiley.com/doi/epdf/10.1111/pedi.13190)
-10. Outcomes of the OPEN project, an EU-funded project into the Outcomes of Patient’s Evidence with Novel, Do-it-Yourself Artificial Pancreas Technology (https://www.open-diabetes.eu/publications)
+3. Un ‘pancréas bionique’ révolutionne les soins du diabète — quelle est la prochaine étape ? [_Nature_ (2023), _620_, 940-941](https://doi.org/10.1038/d41586-023-02648-9)
+4. Prescrire des dispositifs médicaux non approuvés ? Le cas des systèmes de pancréas artificiels DIY [_Medical law international_, (2021), _21_, 42-68](http://pure-oai.bham.ac.uk/ws/files/120241375/0968533221997510.pdf)
+5. [Déclaration de position de l'Institut de santé de Berlin, 2022](https://www.bihealth.org/en/notices/do-it-yourself-solutions-for-people-with-diabetes-are-safe-and-recommended)
+6. Administration d'insuline automatisée open-source : Guide d'utilisation pour le professionnel de santé (position et guide de Diabetes Canada) [_Canadian Journal of Diabetes_, (2023)_47_, E8, 389-397](https://www.canadianjournalofdiabetes.com/article/S1499-2671(23)00138-7/fulltext)
+7.  Pays-Bas (EN/NL) - pour les professionnels de santé- [comment aider les personnes avec les systèmes automatisés d'administration d'insuline en open source](https://www.diabetotech.com/blog/how-to-help-people-on-open-source-automated-insulin-delivery-systems)
+8. Première utilisation du système d'admnistration automatisé de l'insuline open-source AndroidAPS dans un scénario de boucle fermée totale : étude pilote randomisée Pancreas4ALL [_Diabetes Technol. Ther._, 25, _5_, 2023](https://www.liebertpub.com/doi/pdf/10.1089/dia.2022.0562?casa_token=D13eFx5vCwwAAAAA:MYvO8hChbViXVJFgov1T11RXBPx2N_wOMThLHwl3TVUxbCuANegPrIFRC5R5VXx_S71FoQYW-qg)
+9. Les enfants d'âge préscolaire et scolaire bénéficient du passage d'une pompe associée à un capteur de glycémie à une boucle fermée hybride AndroidAPS : Une analyse rétrospective [_Pediatr. Diabetes_ 2021, _22_, 594-604. 2021](https://onlinelibrary.wiley.com/doi/epdf/10.1111/pedi.13190)
+10. Publications du projet OPEN, un projet financé par l'UE étudiant la "preuve par le patient" avec une technologie de pancréas artificiel novatrice et open-source (https://www.open-diabetes.eu/publications)
 
 
 
-## Why can’t I just download AAPS and use it straight away?
+## Pourquoi je ne peux pas simplement télécharger AAPS et l’utiliser immédiatement ?
 
-The **AAPS** app is not provided in Google Play - you have to build it from source code by yourself for legal reasons. **AAPS** is unlicensed, meaning that it does not have approval by any regulatory body authority in any country. **AAPS** is deemed to be carrying out a medical experiment on yourself, and is carried out at the user’s own risk.
+L'application n'est pas fournie dans Google Play - vous devez la compiler vous même à partir du code source pour des raisons juridiques. **AAPS** n'est pas autorisé, ce qui signifie qu'il n'a pas reçu d'approbation par une autorité réglementaire quelque soit le pays. Utiliser **AAPS** revient à mener une expérience médicale sur vous-même, et se fait à vos risques et périls.
 
-Setting up the system requires patience, determination and the gradual development of technical knowledge. All the information and support can be found in these documents, elsewhere online, or from others who have already done it. Over 10,000 people have successfully built and are currently using **AAPS** worldwide.
+La mise en place du système nécessite de la patience, de la détermination et l'apprentissage progressif des connaissances techniques. Toutes les informations et le support peuvent être trouvés dans ces documents, ailleurs en ligne, ou auprès d'autres personnes qui l'ont déjà mis en place. On estime que plus de 10 000 personnes à travers le monde entier ont réussi à compiler et utilisent actuellement **AAPS**.
 
-The developers of **AAPS** take safety incredibly seriously, and want others to have a good experience of using **AAPS**. That is why it is essential that every user (or carer, if the user is a child):
+Les développeurs de **AAPS** prennent très au sérieux la sûreté, et font tout pour que la communauté des utilisateurs ait la meilleure expérience possible de **AAPS**. C'est pourquoi il est essentiel que chaque utilisateur (ou chaque parent si l'utilisateur est un enfant) :
 
-- builds the AAPS system themself and works through the **objectives** so that they have reasonably good personalised settings and understand the basics of how **AAPS** works by the time they “close the loop”;
+- compile le système AAPS lui-même et passe successivement les **objectifs** afin que les paramètres à personnaliser soient raisonnablement bons, et comprenne les bases de la façon dont **AAPS** fonctionne avant de « fermer la boucle »;
 
-- backs up their system by exporting and saving important files (like keystore and settings .json file) somewhere safe, so you can setup again quickly if needed;
+- sauvegarde leur système en exportant et en enregistrant des fichiers importants (comme les fichiers keystore et paramètres json) dans un lieu sécurisé, afin de pouvoir configurer rapidement le système si nécessaire;
 
-- updates to newer master versions as and when they become available; and
+- mette à jour les nouvelles versions master d'AAPS dès qu'elles sont disponibles; et
 
-- gèrent et surveillent le système pour s’assurer qu’il fonctionne correctement.
+- gère et surveille le système pour s’assurer qu’il fonctionne correctement.
 
 ## Comment le système AAPS est-il interconnecté ?
 
 **La figure 3 (ci-dessous)** montre un exemple du système **AAPS** pour un utilisateur qui n'a pas besoin que des suiveurs puissent interagir avec le système. D'autres applications et plates-formes open-source, non illustrés ici, peuvent également être intégrés.
 
-![21-06-23 AAPS connectivity no followers](./images/AAPS-connectivity-no-followers.png)
+![21-06-23 Connectivité AAPS sans suiveurs](./images/AAPS-connectivity-no-followers.png)
 
 
 **La figure 4 (ci-dessous)** montre tout le potentiel du système **AAPS** pour un utilisateur qui a besoin d'un suivi et un contrôle à distance par un tiers pour ajuster le système (ex. un enfant avec un DT1). D'autres applications et plates-formes open-source, non illustrés ici, peuvent également être intégrés.
 
-![21-06-23 AAPS overview with followers](./images/AAPS-overview-with-followers.png)
+![21-06-23 AAPS aperçu avec des followers](./images/AAPS-overview-with-followers.png)
 
 ## Comment AAPS est-il développé et continuellement amélioré ?
 
-Most **AAPS** users use the fully tested **master** version of AAPS, which has been tested for bugs and problems, before being released to the community. Behind the scenes, the developers try out new improvements, and test these out in “developer” (**dev**) versions of **AAPS** with a user community who are happy to do bug updates at short notice. If the improvements work well, they are then released as a new “master” version of **AAPS**. Any new master release is announced on the Facebook group, so that the mainstream **AAPS** users can read about and update to the new master version.
+La plupart des utilisateurs d'**AAPS** utilisent la version d'AAPS entièrement testée **master**, testée pour les bugs et autres problèmes, avant d'être livrée à la communauté. En coulisse, les développeurs essaient de nouvelles améliorations, et les testent dans des versions d'**AAPS** appelées « développeur » (**dev**) avec une communauté d'utilisateurs qui sont heureux de faire des mises à jour des corrections à court terme. Si les améliorations fonctionnent bien, elles sont ensuite publiées en tant que nouvelle version « maître » d'**AAPS**. Toute nouvelle version master est annoncée sur le groupe Facebook "AAPS users", afin que les utilisateurs d'**AAPS** puissent en savoir plus et mettre à jour leur système avec la nouvelle version master.
 
-Some experienced and confident **AAPS** users conduct experiments with emerging technologies and with dev versions of the **AAPS** app, which can be interesting for the less adventurous users to read about, without having to do it themselves! People tend to share these experiments on the Facebook group too.
+Certains utilisateurs d'**AAPS** expérimentés et sûr d'eux font des tests avec les technologies émergentes et avec les versions de développement de l'application **AAPS**. Il peut être intéressant pour les utilisateurs moins aventureux de lire sur ces sujets, sans avoir à le faire eux-mêmes ! Les gens ont tendance à partager ces expériences sur le groupe Facebook.
 
-You can read more about some of these experiments and discussion on emerging tech here:
+Vous pouvez en savoir plus sur certaines de ces expériences et discussions sur les technologies émergentes ici :
 
 Tim Street [https://www.diabettech.com/](https://www.diabettech.com/)
 
@@ -314,69 +314,69 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 
 ## A qui AAPS peut-il être utile ?
 
-| Type d'utilisateur                          |
-| ------------------------------------------- |
-| ✔️ type 1 diabetic                          |
-| ✔️ caregiver or parent of a type 1 diabetic |
-| ✔️ blind users type 1 diabetic              |
-| ✔️ *clincians and healthcare professionals  |
+| Type d'utilisateur                              |
+| ----------------------------------------------- |
+| ✔️ diabétique de type 1                         |
+| ✔️ soignant ou parent d'un diabétique de type 1 |
+| ✔️ utilisateurs aveugles diabétiques de type 1  |
+| ✔️ *médecins et professionnels de la santé      |
 
-The above table assumes that the user has access to both continuous gluocse monitor and insulin pump.
+La table ci-dessus suppose que l'utilisateur a accès à la fois à un capteur de glycémie et à une pompe à insuline.
 
-*All data from **AAPS** can be made available to healthcare professionals via data sharing platforms, including Nightscout that provides logging and real time monitoring of CGM data, insulin delivery, carbohydrate entries, predictions and settings. Nightscout records include daily and weekly reports which can aid healthcare professionals' discussions with type 1 patients with more accurate data on glycemic control and any behavioural considerations.
+* Toutes les données d'**AAPS** peuvent être mises à la disposition des professionnels de santé par le biais de plates-formes de partage de données. Par exemple NightScout, qui permet la surveillance en temps réel et le stockage dans le durée des données du capteur de glycémie, de l'administration d'insuline, des entrées de glucides, des prévisions et des paramètres. Les dossiers Nightscout comprennent des rapports quotidiens et hebdomadaires qui peuvent aider les professionnels de la santé à discuter avec les patients diabétiques de type 1 pour améliorer le contrôle glycémiques et les comportements à adopter.
 
-### Accessibility for users AAPS who are partially or completely blind
+### Accessibilité pour les utilisateurs AAPS aveugles ou malvoyants
 
-#### Day to day AAPS use:
-AAPS can be used by blind people. On Android devices, the operating system has a program called TalkBack. This allows screen orientation via voice output as part of the operating system. By using TalkBack you can operate both your smartphone and AAPS without needing to be able to see.
+#### Utilisation quotidienne de AAPS :
+AAPS peut également être utilisé par les personnes aveugles ou malvoyantes. Sur les appareils Android, le système d'exploitation propose une application appelée TalkBack. Cela permet de contrôler l'écran par la voix, directement via le système d'exploitation. En utilisant TalkBack, vous pouvez utiliser à la fois votre smartphone et AAPS sans avoir besoin de voir.
 
-#### Building the AAPS app:
-As a user you will build the AAPS app in Android Studio. Many people use Microsoft Windows for this purpose, where there is the Screenreader analogous to TalkBack. Since Android Studio is a Java application, the “Java Access Bridge” component must be enabled in the Control Panel. Otherwise, the screen reader of the PC will not speak in Android Studio.
+#### Compilation de l'application AAPS :
+En tant qu'utilisateur, vous compilerez l'application AAPS dans Android Studio. Beaucoup utilisent Microsoft Windows pour cela, qui propose un lecteur d'écran, "Narrateur ", semblable à TalkBack. Comme Android Studio est une application Java, le composant "Java Access Bridge" doit être activé dans le Panneau de configuration. Dans le cas contraire, le lecteur d'écran du PC ne pourra pas fonctionner dans Android Studio.
 
-How you do this depends on your operating system, two methods are outlined below:
+Comment faire ? Cela dépend de votre système d'exploitation, deux méthodes sont décrites ci-dessous :
 
-1) In the Windows Start menu, enter “Control Panel” in the search field, open with Enter. It opens: “All Control Panel Items”.
+1) Dans le menu Démarrer de Windows, tapez "Panneau de configuration" dans le champ de recherche, validez avec Entrée. Cela ouvre : "Tous les éléments du panneau de configuration”.
 
-Open the "Ease of Access Centre".
+Ouvrez les « Options d'ergonomie ».
 
-Then open “Use computer without a display” with Enter.
+Puis ouvrez "Utiliser l'ordinateur sans écran" en appuyant sur "Entrée".
 
-Under hear text read aloud select "turn on narrator" and "turn on audio display", and click "apply"
+Sous "Entendre le texte lu à haut voix", sélectionnez "Activer le narrateur" et "Activer la description audio", et cliquez sur "Appliquer"
 
-or:
+ou :
 
-2) Press Windows key and enter “Control Panel” in the search field, open with Enter. It opens: “All Control Panel Items”.
+2) Dans le menu Démarrer de Windows, tapez "Panneau de configuration" dans le champ de recherche, validez avec Entrée. Cela ouvre : "Tous les éléments du panneau de configuration”.
 
-Press the letter C to get to “Center for Ease of Use”, open with Enter.
+Commencez à taper "non-voyants" dans la barre de recherche, cliquez sur "Optimiser pour les non-voyants".
 
-Then open “Use computer without a screen” with Enter.
+Vous arrivez dans la section "Utiliser l'ordinateur sans écran".
 
-There, at the bottom, you will find the checkbox “Enable Java Access Bridge”, select it.
+En bas de cette page, vous trouverez la case à cocher "Activer Java Access Bridge", cochez-la.
 
-Done, just close the window! The screen reader should work now.
+Et voilà, vous pouvez fermer la fenêtre ! Le lecteur d'écran devrait fonctionner maintenant.
 
 
 
-## What benefits can I get from AAPS?
+## En quoi AAPS peut-il m'être utile ?
 
-With investment of your time, **AAPS** can potentially lead to:
+Si vous y investissez du temps, **AAPS** peut potentiellement conduire à :
 
-- alleviating the stress and burden of managing type 1 diabetes;
+- soulager le stress et la charge mentale de la gestion du diabète de type 1;
 
-- reducing the multitude of mundane decisions that arise from type 1 diabetes;
+- réduire la multitude de décisions banales de la gestion au quotidien du diabète de type 1;
 
-- the provision of personalised and dynamic insulin dosing based on real-time data which can cut down the need for hypo treatments and reduce hyperglycemia episodes;
+- fournir un débit adapté et personnalisé d'insuline basé sur des données en temps réel qui peuvent réduire le besoin de traitements d'hypoglycémie et réduire les épisodes d'hyperglycémie;
 
-- an increased knowledge of insulin management and confidence to better fine tune your settings;
+- avoir une meilleure connaissance de la gestion de l'insuline et de la confiance en soi pour mieux affiner vos paramètres;
 
-- the ability to create automatic settings (**automations**) that are tailored to fit in with your lifestyle;
+- la possibilité de créer des paramètres automatiques (**automatisations**) adaptés à votre style de vie;
 
-- improved sleep quality and overall reduction in the frequency of nighttime interventions;
+- améliorer la qualité de votre sommeil et de la réduction globale de la fréquence des interventions nocturnes;
 
-- remote monitoring and administration of insulin delivery for caregivers of type 1 diabetics; and
+- surveiller et administrer à distance la distribution d'insuline pour les accompagnants des diabétiques de type 1; et
 
-- streamlining of all your portable diabetic equipment (continuous glucose monitor receiver and insulin controlling devices) by using an Android phone controlled by **AAPS**.
+- le remplacement de tous vos équipements mobiles pour la gestion du diabète (récepteur du lecteur de glucose en continu du récepteur et PDM de pompe) par un seul téléphone Android contrôlé par **AAPS**.
 
-Ultimately, **AAPS** can empower individuals to better manage their diabetes, resulting in stable blood sugars and improved long term health outcomes.
+Au final, **AAPS** peut permettre aux individus de reprendre le contrôle et mieux gérer leur diabète, ce qui entraîne des taux de glycémie stables et de meilleurs résultats à long terme en matière de santé.
 
-Interested in how to get started with setting up AAPS? Take a look at the [preparing](preparing.md) section.
+Vous voulez en savoir plus sur comment démarrer l'installation d'AAPS ? Jetez un œil à la section [Démarrage](preparing.md).
