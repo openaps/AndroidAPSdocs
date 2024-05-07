@@ -205,32 +205,32 @@ Ne prenez pas d'inhibiteurs de SGLT-2 (gliflozines) lorsque vous utilisez **AAPS
 (introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)=
 ## Comment puis-je aborder AAPS avec mon équipe médicale ?
 
-Users are encouraged to speak with their clinicians about their intention to use **AAPS**. Please do not be afraid to have an honest conversation with your diabetes team if you intend to use **AAPS** (or any other DIY loop, for that matter). Transparency and trust between patient and doctor is paramount.
+Les utilisateurs sont encouragés à parler avec leur équipe médicale de leur intention d'utiliser **AAPS**. N'hésitez pas à avoir une conversation franche avec votre équipe médicale si vous avez l'intention d'utiliser **AAPS** (ou tout autre boucle DIY, d'ailleurs). La transparence et la confiance entre le patient et le médecin sont primordiales.
 
-### Suggested approach:
-Start a conversation with your clinician to determine their familiarity and attitude towards diabetic technology such as CGMs,  pumps, hybrid loops and commercial looping. Your clinician/endocrinologist should be aware of the basic technology and be willing to discuss with you recent advancements with commercial loop products available within their regions.
+### Approche suggérée :
+Commencez par discuter avec votre docteur afin d'en savoir plus sur ses connaissances et son attitude vis-à-vis de la technologie utile aux diabétiques telle que les MGC, les pompes, les boucles hybrides et les boucles commerciales. Votre docteur/endocrinologue devrait être au fait des moyens techniques de base et être prêt à discuter avec vous des récentes avancées apportées par les produits de boucle commerciaux disponibles dans votre pays.
 
-#### Local precedent
+#### Antécédents locaux
 
-Obtain your clinicians/endocrinologists’ views on DIY loop _vs_ commercial looping, and gauge their knowledge in this area. Are they familiar with **AAPS** and can they share with you any helpful experience of working with patients with DIY looping?
+Cherchez à connaître l'opinion de votre docteur/endocrinologue sur les boucles DIY _vs_ une boucle commerciale, et évaluez ses connaissances dans ce domaine. Connaît-il déjà **AAPS** et peut-il vous donner des conseils du fait d'avoir suivi des patients utilisant une boucle DIY ?
 
-Ask if your team has any patients under their care who already use DIY looping. Due to patient confidentiality, doctors cannot pass other patient’s details to you without obtaining the individual’s consent. However, if you want to, you **can** ask them to pass **your** contact details to an existing DIY looping patient if there is one the clinician feels you might "click” with, suggesting that you would be happy for the patient to contact you to discuss DIY looping. Clinicians are not obliged to do this, but some are happy to, since they realise the importance of peer-to-peer support in type 1 diabetes management. You may also find it useful to meet local friendly DIY loopers. This is of course up to you, and not entirely necessary.
+Demandez si l'équipe médicale suit des patients qui utilisent déjà une boucle DIY. En raison du secret médical, les médecins ne peuvent pas transmettre les informations d'autres patients sans obtenir le consentement de la personne. Cependant, si vous le souhaitez, vous **pouvez** leur demander de transmettre **vos** coordonnées à un patient utilisant déjà la boucle DIY si le docteur estime que vous pourriez "accrocher" avec lui, en lui indiquant que vous seriez heureux que le patient vous contacte pour discuter de la boucle DIY. Les docteurs n'ont aucune obligation de le faire, mais certains le feront avec plaisir, car ils ont conscience de l'importance du soutien entre pairs dans la gestion du diabète de type 1. Vous pourriez également trouver utile de rencontrer des boucleurs DIY à proximité de chez vous. Cela dépend bien sûr de vous, et n'est pas indispensable.
 
-#### National and International Precedent
+#### Antécédents nationaux et internationaux
 
-If you feel unsupported by your team to loop with **AAPS**, the following discussion points may help:
+Si vous vous sentez peu soutenu par votre équipe pour boucler avec **AAPS**, les points de discussion suivants peuvent vous aider :
 
-a) The **AAPS** system has been designed BY patients and their caregivers. It has been designed ultimately for safety, but also drawing on in-depth patient experience. There are currently around **10,000** AAPS users worldwide. There is therefore likely to be other patients using DIY looping in your clinic's patient population (whether they know about it or not).
+a) Le système **AAPS** a été conçu PAR des patients et leurs aidants. Il a été conçu avant tout pour la sûreté, mais aussi en s'inspirant de l'expérience "dans la vie réelle" des patients. Il y a actuellement environ **10 000** utilisateurs d'AAPS dans le monde entier. Il est donc probable qu'il y ait d'autres personnes utilisant une boucle DIY parmi les patients que suit votre docteur (qu'il soit au courant ou non).
 
-b) Recent peer-reviewed published guidance in the internationally leading medical journal [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_ has confirmed that DIY loops are **safe** and **effective at improving diabetic control**, including time in range. There are regular articles in leading journals like [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_ which highlight the progress of the DIY looping commmunity.
+b) Les recommandations récentes publiées et revues par des pairs dans le journal médical de renommée internationale [The Lancet](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8720075/pdf/nihms-1765784.pdf)_(1)_ ont confirmé que les boucles DIY sont **sûres** et **efficaces pour améliorer le contrôle du diabète**, y compris le temps passé dans la cible. Il y a régulièrement des articles dans des revues de premier plan comme [Nature](https://doi.org/10.1038/d41586-023-02648-9)_(3)_ qui mettent en avant les progrès de la communauté des boucles DIY.
 
-c) Starting with **AAPS** involves a _gradual_ migration from “open” loop pumping, through low-glucose suspend, through to hybrid “closed” looping, by completing a number of objectives. There is therefore a structured programme, requiring the user to demonstrate a level of competence at each stage and fine-tuning their basic settings (basal, ISF and ICR) before they can close the loop.
+c) La mise en place d'**AAPS** se fait par étapes _progressives_ : partant d'une pompe en boucle "ouverte", en passant par l'arrêt avant hypo, jusqu'à la boucle "fermée" hybride. Cette évolution se fait en atteignant successivement un certain nombre d'objectifs. Il existe donc un programme structuré, exigeant de l'utilisateur qu'il démontre un niveau de compétence à chaque étape et qu'il ajuste ses paramètres de base (basal, SI et G/I) avant de pouvoir fermer la boucle.
 
-d) Technical support is available to you from the DIY community through Github, Discord and Facebook closed groups.
+d) Vous trouverez toujours le support technique dont vous avez besoin auprès de la communauté DIY via les groupes privés Github, Discord et Facebook.
 
-e) You will be able to provide **both CGM and insulin looping/pumping information** as combined reports at clinic meetings (through Nightscout or Tidepool), either printed out or on-screen (if you bring a laptop/tablet). The streamlining of both CGM and insulin data will allow more effective use of your clinician’s time to review your reports and aid their discussions in assessing your progress.
+e) Vous serez en mesure de fournir **aussi bien des informations sur votre glycémie que sur votre boucle/administration d'insuline par la pompe** sous forme de rapports synthétiques lors de vos RDV médicaux (grâce à Nightscout ou Tidepool), soit imprimés soit sous format numérique (si vous apportez un ordinateur portable/tablette). La mise en parallèle des données de glycémie et d'insuline permettra une utilisation plus efficace du temps de votre docteur lors de l'examen vos rapports et des discussions pour évaluer vos progrès.
 
-f) If there is still strong objection from your team, hand your clinician printouts of the reference articles linked here in the text, and give them the link to the **AAPS** clinicians section: [For Clinicians – A General Introduction and Guide to **AAPS**](Resources/clinician-guide-to-AndroidAPS.md)
+f) Si votre équipe continue de s'opposer fermement, donnez à votre docteur une copie imprimée des articles de référence cités plus haut, et donnez-lui le lien vers la page de **AAPS** à destination des docteurs : [Pour les cliniciens - Une introduction générale et un guide de **AAPS**](Resources/clinician-guide-to-AndroidAPS.md)
 
 #### Support for DIY looping by other clinicians
 
