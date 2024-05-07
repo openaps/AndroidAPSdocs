@@ -63,7 +63,7 @@ Changer la langue <./changelanguage.md>
 ```{toctree}
 :caption: 2) Démarrage
 
-Introduction à AAPS <./introduction.md>
+Introduction aux APS et à AAPS <./introduction.md>
 Se préparer à AAPS <preparing.md>
 Pompes compatibles <./Getting-Started/Pump-Choices.md>
 MGCs compatibles <./Configuration/BG-Source.md>
