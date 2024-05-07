@@ -177,7 +177,7 @@ Je-li tato jiná aplikace nainstalovaná na více telefonech, deaktivujte upload
 
 ### Nefunkční SMS příkazy na telefonech Samsung
 
-Po aktualizaci telefonu Galaxy S10 bylo hlášeno, že SMS příkazy přestaly fungovat. Lze to vyřešit vypnutím možnosti "odesílat zprávy jako konverzace".
+Po aktualizaci telefonu Galaxy S10 bylo hlášeno, že SMS příkazy přestaly fungovat. Lze to vyřešit vypnutím možnosti „odesílat zprávy jako konverzace“.
 
 ![Disable SMS as chat message](../images/SMSdisableChat.png)
 ### Android Messages App
