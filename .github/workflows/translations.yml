@@ -8,9 +8,6 @@ on:
     - cron: '7 0 * * *' # every day at 00:07 UTC
   workflow_dispatch:
 
-env:
-  CROWDIN_PROJECT_ID: '310610'
-
 jobs:
   synchronize-with-crowdin:
     runs-on: ubuntu-latest
