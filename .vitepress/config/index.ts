@@ -6,8 +6,6 @@ import { de } from "./de";
 export default defineConfig({
   title: "AndroidAPS",
 
-  // TODO
-  srcDir: "docs/CROWDIN/",
   ignoreDeadLinks: true,
 
   lastUpdated: true,
@@ -66,15 +64,17 @@ export default defineConfig({
 
   locales: {
     root: {
-      label: "English",
       lang: "en",
+      label: "English",
       link: "/en/",
+      srcDir: "docs/CROWDIN/en",
       ...en,
     },
     de: {
-      label: "Deutsch",
       lang: "de",
+      label: "Deutsch",
       link: "/de/",
+      srcDir: "docs/CROWDIN/de",
       ...de,
     },
     // fr: {
