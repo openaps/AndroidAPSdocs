@@ -48,7 +48,7 @@ Der nachfolgend beschriebene Workaround ermöglicht die Weiternutzung der Sony S
 
 - Gib im Terminalfenster das Kommando „adb install -r -g aplicationname.apk“ (Wenn Du die APK-Datei wie oben vorgeschlagen benannt hast, lautet das korrekte Kommando „adb install -r -g SW3fix.apk“).
 
-  ![Terminal command](../images/SonySW3_Terminal1.png)
+  ![Terminalbefehl](../images/SonySW3_Terminal1.png)
 
 - Warte 4 - 5 Minuten bis die Installation abgeschlossen ist.
 
