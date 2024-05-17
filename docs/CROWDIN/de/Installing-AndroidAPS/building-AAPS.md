@@ -10,7 +10,7 @@ Siehe [FAQ Seite](../Getting-Started/FAQ.md) für Details.
 
 ## Computer- und Software-Spezifikationen für das "Bauen" von AAPS
 
-- Please use the **[Android Studio version called "Hedgehog"(2023.1.1) or "Iguana"(2023.2.1)](https://developer.android.com/studio/)** to build the apk. Older versions of Android Studio need to be updated first!
+- Bitte nutze die **[Android Studio Version "Hedgehog"(2023.1.1) oder "Iguana"(2023.2.1)](https://developer.android.com/studio/)**, um die APK zu erstellen. Ältere Versionen des Android Studios müssen zuerst aktualisiert werden!
 - [Windows 32-Bit-Systeme](troubleshooting_androidstudio-unable-to-start-daemon-process) werden von Android Studio nicht unterstützt. Bitte beachte, dass sowohl eine 64-Bit-CPU als auch ein 64-Bit-Betriebssystem zwingend erforderlich sind. Wenn dein System diese Bedingungen nicht erfüllt, musst du die entsprechende Hardware, Software oder das ganze System ersetzen.
 
 <table class="tg">
@@ -48,20 +48,20 @@ Siehe [FAQ Seite](../Getting-Started/FAQ.md) für Details.
 </tbody>
 </table>
 
-\*\*Es wird dringend empfohlen eine SSD (Solid State Disk) anstelle einer HDD (Hard Disk Drive) zu verwenden, da damit weniger Zeit benötigt wird, um die AAPS apk Datei zu erstellen. \* Es ist aber immer noch möglich eine Festplatte (HDD) verwenden, um die **AAPS** apk Datei zu erstellen. Wenn du dies tust, kann es lange dauern, bis der Bau der App abgeschlossen ist, aber sobald er begonnen hat, kann man ihn unbeaufsichtigt lassen.
+\*\*Es wird dringend empfohlen eine SSD (Solid State Disk) anstelle einer HDD (Hard Disk Drive) zu verwenden, da damit weniger Zeit benötigt wird, um die AAPS apk Datei zu erstellen. \* Es ist aber immer noch möglich eine Festplatte (HDD) zu verwenden, um die **AAPS** apk Datei zu erstellen. Wenn du dies tust, kann es lange dauern, bis der Bau der App abgeschlossen ist, aber sobald er begonnen hat, kann man ihn unbeaufsichtigt lassen.
 
 ## Hilfe und Unterstützung während des Erstellungsprozesses
 
 Wenn du Schwierigkeiten beim Bau der **AAPS** App hast, gibt es einen speziellen [**Fehlerbehebung Android Studio**](../Installing-AndroidAPS/troubleshooting_androidstudio) Bereich, den du zuerst besuchen solltest.
 
-Wenn du denkst, dass etwas in der Anleitung zum Erstellen der App falsch ist, fehlt oder verwirrend erscheint, oder du hast anschließend immer noch Probleme, bitte kontaktiere andere **AAPS** Benutzer auf [Facebook](https://www. acebook.com/groups/AndroidAPSUsers) oder [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../make-a-PR.md).
+Wenn du denkst, dass etwas in der Anleitung zum Erstellen der App falsch ist, fehlt oder verwirrend erscheint, oder du hast anschließend immer noch Probleme, bitte kontaktiere andere **AAPS** Benutzer auf [Facebook](https://www. acebook.com/groups/AndroidAPSUsers) oder [Discord](https://discord.gg/4fQUWHZ4Mw). Wenn Du selber etwas ändern möchtest (Screenshots aktualisieren _etc_), sende bitte einen [Pull Request (PR)](../make-a-PR.md).
 
 ## Schritt-für-Schritt Anleitung zum Erstellen der AndroidAPS.wear apk
 
-:::{admonition} WARNING
+:::{admonition} WARNUNG
 :class: warning
-If you have built AndroidAPS before, you don't need to take all the following steps again.
-Please jump directly to the [update guide](../Installing-AndroidAPS/Update-to-new-version)!
+Wenn Du AAPS in der Vergangenheit bereits einmal erstellt hast, musst Du nicht alle der Schritte noch einmal durchlaufen.
+Bitte springe direkt zum [Update-Leitfaden](../Installing-AndroidAPS/Update-to-new-version)!
 :::
 
 Die allgemeinen Schritte zum Erstellen der **AAPS** apk Datei sind wie folgt:
@@ -155,7 +155,7 @@ Wähle nun "Beenden":
 
 Android Studio wird jetzt gestartet.
 
-If asked if you want to import settings, select "Do not import settings". We don't want to import settings from previous installations:
+Wenn Du gefragt wirst, ob Du Einstellungen importieren möchtest, wähle "Do not import settings" aus. Wir möchten keine Einstellungen aus früheren Installationen importieren:
 
 ![Do not import settings](../images/studioSetup/01_ImportSettings.png)
 
