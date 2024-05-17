@@ -122,7 +122,7 @@ Vielleicht möchtest Du mit der Weite des Zielbereichs experimentieren, ihn vere
 Du kannst den grünen Bereich des Diagramms, der Deinen Zielbereich darstellt, anpassen (erweitern oder verengen), indem Du verschiedene Werte in [Einstellungen](../Configuration/Preferences.md) > Übersicht > Zielbereich für die Grafikanzeige.
 
 ![Stop sign](../images/sign_stop.png)
-:::{admonition} If you have been using a virtual pump, change to a real insulin pump now!
+:::{admonition} Wenn Du mit einer virtuellen Pumpe bis hierhin gekommen bist, musst Du nun auf Deine echte Insulinpumpe umstellen!
 :class: note
 
 Bist Du im Open Loop und nutzt eine virtuelle Pumpe, dann gehe jetzt nicht weiter. Klicke am Ende dieses Ziels nur dann auf "bestätigen", wenn Du tatsächlich eine "echte" physische Pumpe nutzt.
@@ -135,7 +135,7 @@ Bist Du im Open Loop und nutzt eine virtuelle Pumpe, dann gehe jetzt nicht weite
 ## Ziel 6: Closed Loop mit Abschaltung bei niedrigen Glukose-Werten
 
 ![Warning sign](../images/sign_warning.png)
-:::{admonition}  Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend only!
+:::{admonition}  Im Ziel 6 wird die Basalrate bei zu erwartenden niedrigen Glukosewerten abgeschaltet werden. Der 'Closed Loop' wird im Ziel 6 keinen Korrekturbolus bei hohen Werten abgeben!
 :class: Note
 Du musst hohe Glukosewerte weiterhin selbst korrigieren (manuell mit Korrektur über die Pumpe oder per Pen)!
 :::
