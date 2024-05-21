@@ -205,7 +205,7 @@ Press **Next** to start prime
 
 Once the prime is complete, press **Next** to continue.
 
-##### Patch anhängen
+##### Patch setzen
 
 ![Attach patch](../images/medtrum/activation/AttachPatch.png)
 
@@ -213,7 +213,7 @@ Clean the skin, remove stickers and attach the patch to your body. Remove safety
 
 Press **Next** to activate the patch.
 
-##### Pod aktivieren
+##### Patch aktivieren
 
 ![Activate patch](../images/medtrum/activation/ActivatePatch.png)
 
