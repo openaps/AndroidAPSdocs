@@ -183,7 +183,7 @@ Follow the prompts to fill and activate a new patch. Please note - it is importa
 
 At this step, double check your serial number and make sure the pumpbase is not connected to the patch yet.
 
-Drücke **Nächste** um fortzufahren.
+Drücke **Weiter**, um fortzufahren.
 
 ##### Fill the patch
 
