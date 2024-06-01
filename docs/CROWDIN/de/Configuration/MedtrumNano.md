@@ -183,7 +183,7 @@ Follow the prompts to fill and activate a new patch. Please note - it is importa
 
 At this step, double check your serial number and make sure the pumpbase is not connected to the patch yet.
 
-Drücke **Nächste** um fortzufahren.
+Drücke **Weiter**, um fortzufahren.
 
 ##### Fill the patch
 
@@ -205,7 +205,7 @@ Press **Next** to start prime
 
 Once the prime is complete, press **Next** to continue.
 
-##### Patch anhängen
+##### Patch setzen
 
 ![Attach patch](../images/medtrum/activation/AttachPatch.png)
 
@@ -213,7 +213,7 @@ Clean the skin, remove stickers and attach the patch to your body. Remove safety
 
 Press **Next** to activate the patch.
 
-##### Pod aktivieren
+##### Patch aktivieren
 
 ![Activate patch](../images/medtrum/activation/ActivatePatch.png)
 
