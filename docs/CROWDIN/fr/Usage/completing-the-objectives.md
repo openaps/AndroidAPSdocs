@@ -34,7 +34,7 @@ If not you have to reconfigure until the basic technical setup works for **AAPS*
 
 Note - _You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognise it._
 
-## Objective 2: Learn how to control AAPS
+## Objectif 2 : Apprendre à contrôler AAPS
 
 - Perform several actions in **AAPS** as described in this **objective**.
 - Cliquez sur le texte orange "Pas encore terminé" pour accéder à la liste des tâches.
