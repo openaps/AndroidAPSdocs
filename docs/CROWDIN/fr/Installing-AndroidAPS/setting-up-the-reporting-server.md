@@ -1,4 +1,4 @@
-# Setting up the Reporting Server
+# Mise en place du serveur de reporting
 
 Il existe actuellement deux serveurs de reporting compatibles avec l'utilisation d'**AAPS** :
 
@@ -23,29 +23,29 @@ Les explications sur comment configurer Nightscout avec les avantages et les inc
 
 ### Option 2 - Payer pour un service Nightscout hébergé
 
-There are also options from different service providers who host Nightscout for you, with a monthly fee. The costs are manageable, and the advantage of a hosted option is that you do not need to be IT-literate, or have any operating infrastructure.
+Il existe également les propositions de différents fournisseurs de services qui hébergent Nightscout pour vous, moyennant des frais mensuels. Le coût est abordable, et l'avantage d'une option hébergée est que vous n'avez pas besoin d'être compétent en informatique, ou d'avoir une infrastructure opérationnelle.
 
-Existing Nightscout users can reconsider where and how their Nightscout server is hosted from time to time, and change to a different option if it becomes more suitable.
+Les personnes qui utilisent déjà Nightscout peuvent reconsidérer de temps en temps où et comment leur serveur Nightscout est hébergé, et changer pour une autre option si elle devient plus appropriée.
 
-Some Nightscout hosted services are listed [here](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
+Certains des fournisseurs qui hébergent Nightscout pour vous sont répertoriés [ici](https://nightscout.github.io/nightscout/new_user/#vendors-comparison-table).
 
 ## Tidepool
 
-Tidepool has only been available in **AAPS** since version 3.2 which was released in late 2023.
+Tidepool n'est disponible dans **AAPS** que depuis la version 3.2, publiée fin 2023.
 
-:::{admonition} Tidepool with **AAPS** is only for reporting
+:::{admonition} Tidepool avec **AAPS** sert uniquement au reporting
 :class: danger\
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool it is not suitable for sharing real-time information with caregivers.\
-On the other hand, Tidepool can be a great solution for sharing reports with a patient's endocrinologist if Nightscout is not an accepted solution.\
+Comme il y a un délai de trois heures entre la réception des données et leur apparition dans les rapports lorsque vous utilisez **AAPS**, Tidepool n'est pas adapté pour partager des informations en temps réel avec les aidants.\
+Cependant, Tidepool peut être une excellente solution pour partager des rapports avec l'endocrinologue d'un patient s'il refuse d'utiliser Nightscout.\
 :::
 
-Tidepool is an [open source](https://github.com/tidepool-org) project. It offers to run an account free of charge on the Tidepool servers.
+Tidepool est un projet [open source](https://github.com/tidepool-org). Vous pouvez ouvrir un compte gratuitement sur les serveurs Tidepool.
 
-You can create a Tidepool account [here](https://app.tidepool.org/signup).
+Vous pouvez créer un compte Tidepool [ici](https://app.tidepool.org/signup).
 
-:::{admonition} **AAPS** has a the uploader for Tidepool integrated
+:::{admonition} **AAPS** intègre la mise à jour des données dans Tidepool
 :class: note
-You do **not** need to use the uploader app to Tidepool: **AAPS** will upload blood glucose, treatments and basal for you. You only need a personal account with Tidepool. Do not upload your data with the separate Tidepool uploader tool as it will lead to duplicate values.\
+Vous n'avez pas besoin d'utiliser l'application de chargement des données pour Tidepool: **AAPS** téléchargera pour vous la glycémie, les traitements et les débits de base. Vous avez seulement besoin d'un compte personnel Tidepool. Ne téléchargez pas vos données en parallèle avec l'outil de téléchargement Tidepool car cela entraînerait des doublons dans les données.\
 :::
 
-Once you have set up your reporting server, you can now either set up a [dedicated Google account for AAPS use](Dedicated-Google-account-for-AAPS.md), or go straight to [building the AAPS app](building-AAPS.md).
+Une fois que vous avez configuré votre serveur de reporting, vous pouvez maintenant soit configurer un [compte Google dédié à l'utilisation de AAPS](Dedicated-Google-account-for-AAPS.md), soit passer directement à [la compilation de l'application AAPS](building-AAPS.md).
