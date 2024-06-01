@@ -215,10 +215,10 @@ Pour faire un don d'un modèle de smartphone ou de smartwatch qui n'a pas encore
 Les utilisateurs sont encouragés à faire les mises à jour de version Android sur leur téléphone, y compris avec les mises à jour de sécurité. Cependant, si démarrez avec **AAPS** ou si vous n'êtes pas à l'aise techniquement, vous voudrez peut-être attendre pour faire la mise à jour de votre téléphone que d'autres l'aient fait et aient confirmé le bon fonctionnement des applications, sur nos différents forums.
 
 :::{admonition} Repousser les mises à jour des téléphones Samsung
-:class: alerte Samsung est malheureusement connu pour forcer les mises à jour sur leurs téléphones, ce qui cause des problèmes de connectivité bluetooth. Pour désactiver ces mises à jour forcées, vous devez passer le téléphone en "mode développeur" en : accédant aux paramètres, puis "à propos", puis en tapant sur "Numéro de version" jusqu'à ce qu'il confirme que vous avez déverrouillé le mode développeur. Retournez au menu principal des paramètres, ici ou dans "Système", vous trouverez un nouvel élément de menu "Options pour les développeurs". Ouvrez ce menu et faites défiler jusqu'à trouver l'option de mise à jour automatique du système et désactivez-la
+:class: warning Samsung est malheureusement connu pour forcer les mises à jour sur leurs téléphones, ce qui cause des problèmes de connectivité bluetooth. Pour désactiver ces mises à jour forcées, vous devez passer le téléphone en "mode développeur" en : accédant aux paramètres, puis "à propos", puis en tapant sur "Numéro de version" jusqu'à ce qu'il confirme que vous avez déverrouillé le mode développeur. Retournez au menu principal des paramètres, ici ou dans "Système", vous trouverez un nouvel élément de menu "Options pour les développeurs". Ouvrez ce menu et faites défiler jusqu'à trouver l'option de mise à jour automatique du système et désactivez-la
 :::
 
 :::{admonition} Problème potentiel avec Google Play Protect
-:class: alerte On nous rapporte régulièrement que Google Play Protect ferme arbitrairement **AAPS** chaque matin. Si ça vous arrive, allez dans les options de Google Play et désactivez “Google Play Protect”. Tous les modèles de téléphone et toutes les versions d'Android ne sont pas concernés.
+:class: warning On nous rapporte régulièrement que Google Play Protect ferme arbitrairement **AAPS** chaque matin. Si ça vous arrive, allez dans les options de Google Play et désactivez “Google Play Protect”. Tous les modèles de téléphone et toutes les versions d'Android ne sont pas concernés.
 :::
 
