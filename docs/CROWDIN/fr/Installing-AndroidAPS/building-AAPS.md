@@ -60,7 +60,7 @@ Si vous pensez que quelque chose est incorrect, manquant ou confus dans les inst
 
 :::{admonition} ATTENTION
 :class: warning
-Si vous avez déjà compilé AndroidAPS auparavant, vous n'avez pas besoin de refaire toutes les étapes suivantes.
+If you have built AAPS before, you don't need to take all the following steps again.
 Vous pouvez rendre directement au [guide de mise à jour](../Installing-AndroidAPS/Update-to-new-version)!
 :::
 
@@ -350,7 +350,7 @@ Si vous souhaitez créer l'APK pour votre montre, sélectionnez alors AAPS.wear 
 :::{admonition} INFORMATION !
 :class: information
 Vous n'aurez besoin de créer le fichier de clés qu'une seule fois.
-Si vous avez déjà compilé AAPS auparavant, NE créez PAS un nouveau fichier de clés mais sélectionnez celui déjà existant !
+If you have build AAPS before, do NOT create a new keystore but select your existing one!
 :::
 
 **_Note:_** Le fichier de clés contient les informations nécessaires pour signer l'application. Il est crypté et les informations sont sécurisées avec un mot de passe.
@@ -380,7 +380,7 @@ Il vous faut maintenant un mot de passe pour la clé. Pour simplifier, vous pouv
 
 :::{admonition} ATTENTION !
 :class: avertissement
-Notez ces mots de passe ! Vous en aurez besoin lorsque vous compilerez la prochaine mise à jour d'AAPS !
+Notez ces mots de passe ! You will need them when you build the next AAPS update!
 :::
 
 La validité (6) par défaut est de 25 ans, laissez-la telle quelle.
