@@ -4,7 +4,7 @@ Informationen zur Behebung von Problemen findest Du auf vielen Seiten im Wiki. A
 
 Weitere nützliche Informationen findest Du auch in den `FAQ <../Getting-Started/FAQ.md>` _ (Frequently asked questions - häufig gestellte Fragen).
 
-## AAPS app
+## AAPS-App
 
 ### Erstellen & Update
 

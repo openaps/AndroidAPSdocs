@@ -1,11 +1,11 @@
 ## Entwickler-Version (dev branch)
 
-<font color="#FF0000"><strong>Attention:</strong></font>
-Dev branch is for the further development of AAPS only. Er darf nur auf einem separaten Smartphone zu Testzwecken, <font color="#FF0000"><strong>nicht für das tatsächliche Loopen</strong></font> verwendet werden.
+<font color="#FF0000"><strong>Achtung:</strong></font>
+Der 'Dev Branch' dient ausschließlich der Weiterentwicklung von AAPS. Er darf nur auf einem separaten Smartphone zu Testzwecken, <font color="#FF0000"><strong>nicht für das tatsächliche Loopen</strong></font> verwendet werden.
 
-The most stable version of AAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master). Es wird dringend empfohlen, nur den Master branch für das tatsächliche Loopen zu verwenden.
+Die aktuelle, getestete und stabile AAPS-Version ist im [Master Branch](https://github.com/nightscout/AndroidAPS/tree/master). Es wird dringend empfohlen, nur den Master branch für das tatsächliche Loopen zu verwenden.
 
-The dev version of AAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!). Aus diesem Grunde sind unfertige Features deaktiviert. Um dieses Feature zu enablen, aktiviere den **Engineering Mode** indem Du einen leeren File mit dem Namen `engineering_mode` im Verzeichnis /AAPS/extra auf dem Smartphone anlegst. Das Aktivieren dieser Features kann dazu führen, dass der Loop überhaupt nicht mehr funktioniert.
+Achtung: Die Entwicklungsversion (Dev Branch) von AAPS ist für Entwickler sowie Tester bestimmt, die mit Stacktraces, Log-Dateien und dem Debugger umgehen können, um Fehlerberichte erstellen zu können, die Entwicklern beim Beheben der Fehler helfen (kurzum: Personen, die wissen, was sie tun und eigentverantwortlich arbeiten können). Aus diesem Grunde sind unfertige Features deaktiviert. Um dieses Feature zu enablen, aktiviere den **Engineering Mode** indem Du einen leeren File mit dem Namen `engineering_mode` im Verzeichnis /AAPS/extra auf dem Smartphone anlegst. Das Aktivieren dieser Features kann dazu führen, dass der Loop überhaupt nicht mehr funktioniert.
 
 Im Dev branch sieht man, welche Funktionen gerade getestet werden. Damit können Fehler ausgebügelt und Feedback darüber gegeben werden, wie die neuen Funktionen in der Praxis funktionieren. Meist wird die Entwickler-Version auf einem alten Telefon mit einer separaten Pumpe getestet bis es stabil läuft. Jede Benutzung des dev branch erfolgt auf eigene Gefahr! Wenn Du neue Funktionen ausprobierst mache Dir immer bewusst, dass Du Funktionen verwendest, die sich noch in Entwicklung befinden und nicht final freigegeben sind. Tue dies auf eigene Gefahr und mit der gebotenen Sorgfalt, um Deine eigene Sicherheit zu gewährleisten.
 

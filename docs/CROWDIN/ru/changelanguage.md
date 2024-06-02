@@ -1,10 +1,7 @@
 # Изменение языка
 
 ```{note}
-Выбор языка был перемещен в нижнюю панель левого меню. Нажмите на нижнюю панель, чтобы открыть меню выбора языка.
+The language selection have been moved to the bottom drawer of the left menu. Please click on the bottom bar to open language selection menu.
 ```
 
-```{image} images/documentation_language_menu.png
-:alt: Открытие меню языка
-:width: 350
-```
+![Open language menu](images/documentation_language_menu.png){w=350px align=center}

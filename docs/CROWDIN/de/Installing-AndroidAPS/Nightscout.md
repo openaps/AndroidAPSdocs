@@ -6,37 +6,37 @@
 
 Neben der Erstellung von Berichten, kann Nightscout auch genutzt werden, um AndroidAPS zu steuern. So kannst Du z.B. temporäre Ziele setzen oder Kohlenhydrate eingeben. Diese Informationen werden von AAPS übernommen, das dann entsprechend reagiert. Daher macht es Sinn, über die Absicherung Deiner Nightscout-Seite nachzudenken.
 
-Exercise maximum caution if using Nightscout as your AAPS data source.
+Handle mit größter Vorsicht, wenn Du mit Nightscout als Datenquelle für Dein AAPS verwendest.
 
 ### Nightscout Einstellungen
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security): make sure you only share your URL with a `readable` token, never with an `admin` token.
+Du kannst den öffentlichen Zugang zu Deinen Nightscout-Daten verweigern, indem Du [authentication roles](https://nightscout.github.io/nightscout/security) (Authentifizierungsrollen) verwendest: stelle sicher, dass Du Deinen URL mit einem `readable` (nur lesen) Token zur Verfügung stellst und niemals mit einem `admin` (Administrator) Token.
 
-Nightscout `API_SECRET` is your site main password: don't share it publicly.
+Das Nightscout `API_SECRET` ist das Hauptpasswort für Deinen Nightscout-Server, mache es keinesfalls öffentlich zugänglich.
 
 ### AAPS-Einstellungen
 
-You can setup AAPS to accept Nightscout commands (profile changes, treatments, ...), or fully disable it.
+Du kannst AAPS so einstellen, dass Nightscout-Befehle akzeptiert werden (Profiländerungen, Behandlungsparameter, ...) oder dies vollständig ausschalten.
 
-* Access the NSClient or NSClientV3 plugin settings with either 1) Main view -> Config Builder -> Synchronization -> NSClient Cog icon 2) NSCLIENT tab -> Three dots menu -> Plugin preferences
-* Enable all data upload to Nightscout (3) as this is now the standard method unless your BG data source is Nightscout.  
-  If your AAPS BG data source is Nightscout **do not** enable Upload BG data to NS (3).
-* Do not enable Receive/backfill data (4) unless Nightscout is your BG data source.
+* Zugriff auf die Einstellungen (settings) des NSClient bzw. des NSClientV3-Plugins: 1) Startseite -> Config Builder -> Synchronization -> NSClient Zahnrad-Symbol 2) NSCLIENT Registerkarte -> Dreipunkte-Menü -> Plugin preferences
+* Aktiviere das Hochladen aller Daten in Nightscout (3), da dies jetzt die Standardmethode ist, es sei denn, Deine BZ-Datenquelle ist Nightscout.  
+  Wenn Nightscout Deine BZ-Datenquelle ist, dann stelle den Upload der BZ-Daten zu NS **nicht** ein(3).
+* Stelle nicht "Receive/backfill data" (4) ein, es sei denn, Nightscout ist Deine BT-Datenquelle.
 
-![Nightscout upload only](../images/NSsafety.png)
+![Nightscout nur Daten hochladen](../images/NSsafety.png)
 
-#### Do not sync from Nightscout
+#### Do not sync from Nightscout (Nicht von Nightscout synchronisieren)
 
-Disabling these options makes sure no Nightscout change will be used by AAPS.
+Durch das Deaktivieren dieser Optionen wird sichergestellt, dass AAPS keine Änderungen benutzt, die von Nightscout stammen.
 
-![Nightscout upload only](../images/NSsafety2.png)
+![Nightscout nur Daten hochladen](../images/NSsafety2.png)
 
-#### Accept changes from Nightscout
+#### Accept changes from Nightscout (Änderungen von Nightscout übernehmen)
 
-Enabling these options allow you to remotely change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS.  
-Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
+Das Aktivieren dieser Option bewirkt, dass Du mit Hilfe von Nightscout remote AAPS-Einstellungen wie z. B. Profilwechsel und -anpassungen, temporäre Ziele setzen und die Eingabe von durch AAPS zu berücksichtigenden Kohelnhydraten vornehmen kannst.  
+Insulineingaben werden nur zu Kalkulationszwecken (wie auch bei "Bolus nur erfassen") berücksichtigt.
 
-![Nightscout upload only](../images/NSsafety3.png)
+![Nightscout nur Daten hochladen](../images/NSsafety3.png)
 
 ### Weitere Sicherheitseinstellungen
 
@@ -46,9 +46,9 @@ Halte Dein Smartphone aktuell wie es in den [Sicherheitshinweisen](../Getting-St
 
 ## Manuelles Nightscout-Setup
 
-Wir gehen davon aus, dass du bereits eine Nightscout Seite hast. Falls nicht, gehe zum [Nightscout Wiki](http://nightscout.github.io/nightscout/new_user/). Dort findest du detaillierte Informationen zur Einrichtung. Die unten stehenden Hinweise beziehen sich auf die Einstellungen, die du zusätzlich in deiner Nightscout Seite vornehmen musst. Your Nightscout site needs to be at least version 15 for AAPS 3.2, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
+Wir gehen davon aus, dass du bereits eine Nightscout Seite hast. Falls nicht, gehe zum [Nightscout Wiki](http://nightscout.github.io/nightscout/new_user/). Dort findest du detaillierte Informationen zur Einrichtung. Die unten stehenden Hinweise beziehen sich auf die Einstellungen, die du zusätzlich in deiner Nightscout Seite vornehmen musst. AAPS Version 3.2 setzt Nightscout in der Version 15 voraus. Stelle daher sicher, dass Du die [neueste Version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) verwendest, da Du sonst in der AAPS App eine Fehlermeldung erhältst.
 
-* [Edit your variables](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
+* [Deine Variablen bearbeiten](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
 * Variablen hinzufügen oder wie folgt ändern:
   
@@ -60,12 +60,12 @@ Wir gehen davon aus, dass du bereits eine Nightscout Seite hast. Falls nicht, ge
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
-* Save the modifications. Your Nightscout site should now allow you to display the pills. You can force default display adding them in `SHOW_PLUGINS`.
+* Speicher die Änderungen. Deine Nightscout-Seite sollte nun die Anzeige der "Pillen" zulassen. Du kannst die Anzeige erzwingen, indem Du sie in `SHOW_PLUGINS` hinzufügst.
   
   * `SHOW_PLUGINS` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   
   ![Nightscout Pills](../images/nightscout1.png)
 
-## Nightscout as a paid SaaS (Software as a Service)
+## Nightscout von einem Bezahlservice (Software as a Service - SaaS)
 
-Use the vendor web interface to set the variables. Contact the vendor support service if necessary.
+Verwende des Webschnittstelle des jeweiligen Anbieters, um die Variablen zu setzen. Wende Dich bei Bedarf an den Support des Anbieters.

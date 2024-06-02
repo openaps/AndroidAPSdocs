@@ -1,8 +1,6 @@
 # Seguimiento remoto
 
-```{image} ../images/KidsMonitoring.png
-:alt: Monitoring children
-```
+![Monitoring children](../images/KidsMonitoring.png)
 
 AAPS ofrece varias opciones para la supervisión remota de los niños y también permite enviar comandos remotos. Por supuesto, también puede usar la supervisión remota para seguir los datos de su pareja o amigo.
 

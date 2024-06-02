@@ -2,7 +2,7 @@
 
 ## Spende deine Daten an die Wissenschaft
 
-Du kannst die Community unterstützen, indem Du Deine Daten für Forschungsprojekte zur Verfügung stellst. Dies hilft Wissenschaftlern, die Dinge voranzutreiben, neue wissenschaftliche Ideen zu entwickeln und die Offenheit gegenüber Open Source Closed Loop Systemen zu fördern. AAPS is ready to synchronize your data with [Open Humans](https://www.openhumans.org), a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data.
+Du kannst die Community unterstützen, indem Du Deine Daten für Forschungsprojekte zur Verfügung stellst. Dies hilft Wissenschaftlern, die Dinge voranzutreiben, neue wissenschaftliche Ideen zu entwickeln und die Offenheit gegenüber Open Source Closed Loop Systemen zu fördern. AAPS kann Deine Daten mit [Open Humans](https://www.openhumans.org), synchronisieren. Open Humans ist eine Plattform, auf die Du Deine persönlichen Daten (z.B. Gesundheitsdaten und Aktivitäten) hochladen, sie teilen und speichern kannst.
 
 Du behältst die volle Kontrolle darüber, was mit Deinen Daten geschieht und welche Projekte Du unterstützen möchtest, indem Du ihnen den Zugriff auf Deine Daten ermöglichst. Abhängig vom Projekt, dem Du beitrittst, werden Daten ausgewertet und vom Projekt auf unterschiedliche Art und Weise und in unterschiedlichem Umfang genutzt.
 
@@ -29,19 +29,15 @@ Vertrauliche oder private Informationen wie z. B. Deine Nightscout-URL oder das 
 3. Öffne dessen Einstellungen durch einen Klick auf das Zahnradsymbol. Du kannst das Hochladen auf die Zeiten beschränken, in denen Du Dich im WLAN befindest und/oder zu denen das Smartphone geladen wird.
 4. Öffne das Open-Humans-Plugin (entweder über den OH Tab oder Hamburger-Menü) und klicke auf 'LOGIN'.
 
-```{image} ../images/OHUploader1.png
-:alt: Open Humans Konfigurations-Generator
-```
+![Open Humans Konfigurations-Generator](../images/OHUploader1.png)
 
 5. Lies die angezeigten Informationen über den Open Humans Uploader und die Nutzungsbedingungen sorgfältig.
 6. Bestätige, indem Du das Kästchen markierst und auf 'LOGIN' klickst.
 7. Die Open Humans Webseite wird geöffnet. Melde Dich mit Deinen Zugangsdaten an.
-8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
+8. Entscheide, ob Du Deine AAPS Uploader-Mitgliedschaft in Deinem öffentlichen Open Humans Profil ausblenden möchtest.
 9. Klicke auf die Schaltfläche 'Authorize project'.
 
-```{image} ../images/OHUploader2.png
-:alt: Open Humans Nutzungsbedingungen + Login
-```
+![Open Humans Nutzungsbedingungen + Login](../images/OHUploader2.png)
 
 10. Danach kehrst Du zu AAPS zurück. Dort wird der erfolgreiche Login bestätigt.
 11. Das Smartphone muss eingeschaltet und das Open Humans Plugin geöffnet bleiben, um die Einrichtung abschließen zu können.
@@ -49,15 +45,11 @@ Vertrauliche oder private Informationen wie z. B. Deine Nightscout-URL oder das 
 13. Klicke auf 'LOGOUT', wenn Du das Hochladen von Daten zu Open Humans stoppen möchtest.
 14. Der laufende Upload wird in den Android-Benachrichtigungen angezeigt.
 
-```{image} ../images/OHUploader3.png
-:alt: Open Humans Einrichtung beenden
-```
+![Open Humans Einrichtung beenden](../images/OHUploader3.png)
 
 15. Deine Daten kannst Du auf der [Open Humans Website](https://www.openhumans.org) verwalten.
 
-```{image} ../images/OHWeb.png
-:alt: Open Humans Datenverwaltung
-```
+![Open Humans Datenverwaltung](../images/OHWeb.png)
 
 ## Möglichkeiten zum Teilen Deiner Daten
 
@@ -69,11 +61,11 @@ Im September 2020 hat das 'OPEN' Projekt einen [Fragebogen](https://survey.open-
 
 ### [OpenAPS Data Commons](https://www.openhumans.org/activity/openaps-data-commons/)
 
-Die OpenAPS Data Commons wurden erstellt, um einen einfachen Weg zu schaffen, Daten aus der DIYAPS-Community mit Forschern zu teilen. Die Daten werden sowohl mit traditionellen Forschern, die traditionelle Forschungsstudien erstellen, als auch mit Gruppen oder Einzelpersonen aus der Community, die Daten im Rahmen ihrer eigenen Forschungsprojekte überprüfen wollen, gemeinsam genutzt. The OpenAPS Data Commons uses the 'Open Humans' platform to enable people to easily upload and share their data from DIYAPS including AAPS, Loop, and OpenAPS.
+Die OpenAPS Data Commons wurden erstellt, um einen einfachen Weg zu schaffen, Daten aus der DIYAPS-Community mit Forschern zu teilen. Die Daten werden sowohl mit traditionellen Forschern, die traditionelle Forschungsstudien erstellen, als auch mit Gruppen oder Einzelpersonen aus der Community, die Daten im Rahmen ihrer eigenen Forschungsprojekte überprüfen wollen, gemeinsam genutzt. OpenAPS Data Commons verwendet die 'Open Humans' -Plattform, um es den Menschen zu ermöglichen, ihre Daten von DIYAPS einschließlich AAPS, Loop und OpenAPS einfach hochzuladen und gemeinsam zu nutzen.
 
 Du kannst Deine Daten über einen der folgenden drei Wege zu Open Humans hochladen:
 
-1. use the AAPS uploader option to get your data into Open Humans
+1. Nutze den oben beschriebenen Open Humans Uploader in AAPS.
 2. Verwende Nightscout Data Transfer, um die Daten zu übermitteln.
 3. Lade Daten manuell zu Open Humans hoch.
 
@@ -87,7 +79,7 @@ Schaue Dir auch die [Open Humans Nutzungsbedingungen](https://www.openhumans.org
 
 ## Datenschutz
 
-Open Humans schützt Deine Privatsphäre, indem Dir für jedes Projekt eine nummerische ID zugewiesen wird. Dadurch kann Dich das Projekt wiedererkennen aber nicht identifizieren. The Application ID uploaded by AAPS is similar and only helps administrate the data. Weitere Informationen findest Du hier:
+Open Humans schützt Deine Privatsphäre, indem Dir für jedes Projekt eine nummerische ID zugewiesen wird. Dadurch kann Dich das Projekt wiedererkennen aber nicht identifizieren. Die von AAPS hochgeladene Anwendungs-ID funktioniert ähnlich und hilft nur bei der Datenverwaltung. Weitere Informationen findest Du hier:
 
 - [Open Humans Data Use Policy](https://www.openhumans.org/data-use/)
 - [Open Humans GDPR](https://www.openhumans.org/gdpr/)

@@ -9,23 +9,19 @@
 - Kurulum yerini not ettiğinizden emin olun. Bir sonraki adımda ihtiyacınız olacak.
 
 ```{admonition} make git.exe available via Windows PATH
-:class: not
+:class: note
 
-Android Studio'nun Git.exe'yi bulmak için bu yere ihtiyaç duyacağından Git.exe'nin yolunu bulacağınızdan emin olun. Daha sonra, Android stüdyo ayarlarında Git.exe doğru yolunu otomatik olarak ayarlar.
+Make sure that you can call git.exe without the prefing path as Android Studio needs this to find git.exe. It will then automatically sets the path to git.exe correct in the Android Studio settings.
 
 ```
 
-```{image} ../images/Update_GitPath.png
-:alt: Git kurulum yolu
-```
+![Git installation path](../images/Update_GitPath.png)
 
 ### 2. Android Studio'da git yolunu ayarla
 
 - Dosyayı Aç > Ayarlar
 
-  ```{image} ../images/Update_GitSettings1.png
-  :alt: Android Studio - ayarları aç
-  ```
+  ![Android Studio - open settings](../images/Update_GitSettings1.png)
 
 - Alt menüyü açmak için Sürüm Kontrolü (1.) yanındaki küçük üçgene tıklayın.
 
@@ -35,17 +31,13 @@ Android Studio'nun Git.exe'yi bulmak için bu yere ihtiyaç duyacağından Git.e
 
 - "Test" düğmesine tıklayarak Android Studio'nun git.exe yolunu otomatik olarak bulup bulamayacağını kontrol edin (4.)
 
-  ```{image} ../images/AndroidStudio361_09.png
-  :alt: Android Studio ayarları
-  ```
+  ![Android Studio settings](../images/AndroidStudio361_09.png)
 
 - Otomatik ayar başarılı olursa git versiyonu görüntülenecektir.
 
 - İletişim kutusunda (1.) "OK" ve ayarlar penceresinde (2.) "OK" düğmesini tıklayın.
 
-  ```{image} ../images/AndroidStudio361_10.png
-  :alt: Otomatik git kurulumu başarılı
-  ```
+  ![Automatic git installation succeeded](../images/AndroidStudio361_10.png)
 
 - Git.exe dosyasının bulunamaması durumunda iletişim kutusundaki (1.) "OK" ve ardından üç noktalı (2.) düğmeyi tıklayın.
 
@@ -55,9 +47,7 @@ Android Studio'nun Git.exe'yi bulmak için bu yere ihtiyaç duyacağından Git.e
 
 - "OK" butonuna (5.) tıklayarak ayarlar penceresini kapatın.
 
-  ```{image} ../images/AndroidStudio361_11.png
-  :alt: Otomatik git kurulumu başarısız
-  ```
+  ![Automatic git installation failed](../images/AndroidStudio361_11.png)
 
 ### 3. Yeniden başlat
 
@@ -70,15 +60,11 @@ Android Studio'nun Git.exe'yi bulmak için bu yere ihtiyaç duyacağından Git.e
 
 - `git --version` girin (tırnak işaretleri olmadan ve iki - \[eksi işareti\]! arasında boşluk bırakmadan!) ve Return tuşuna basın
 
-  ```{image} ../images/AndroidStudio_gitversion1.png
-  :alt: git - -version
-  ```
+  ![git - -version](../images/AndroidStudio_gitversion1.png)
 
 - Git düzgün bir şekilde kurulur ve bağlanırsa, kurulu sürüm hakkında aşağıdaki gibi görünen bir bilgi alacaksınız:
 
-  ```{image} ../images/AndroidStudio_gitversion2.png
-  :alt: git-version durumu
-  ```
+  ![result git-version](../images/AndroidStudio_gitversion2.png)
 
 ## Mac
 

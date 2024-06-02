@@ -3,7 +3,7 @@
 # Logdateien erhalten
 
 * Verbinde das Smartphone mit dem Computer im Dateiübertragungsmodus
-* Locate the log files in the AAPS data directory
+* Suche die Logdateien im Verzeichnis der AAPS Daten
     
     * (2.8.2) Den Ordner findest Du in einem Verzeichnis, das mit ***Internal storage(1) / Android / data / info.nightscout.androidaps / files*** oder ähnlich bezeichnet ist.
     * (3.0.0) (2.8.2) Den Ordner findest Du in einem Verzeichnis, das mit ***Internal storage(1) / AAPS / logs*** oder ähnlich bezeichnet ist.

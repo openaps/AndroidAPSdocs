@@ -69,7 +69,7 @@ Lokale Profile können auch zu Nightscout hochgeladen werden. Die Einstellungen 
 
 #### Profil im Nighscout Profil-Editor ändern
 
-You can synchronize changes to the profile in the Nighscout profile editor to local profiles. Die Einstellungen sind in den [NSClient Einstellungen](Preferences-nsclient)zu finden.
+Du kannst Änderungen am Profil im Nighscout Profil-Editor mit Deinen lokalen Profilen synchronisieren. Die Einstellungen sind in den [NSClient Einstellungen](Preferences-nsclient)zu finden.
 
 Es ist erforderlich, alle aktiven Datensätze der gesamten Nightscout Datenbank für die Profile zu klonen und nicht nur ein Profil mit dem blauen Pfeil! Die neuen Datensätze tragen dann das aktuelle Datum und können über die Registerkarte "lokales Profil" aktiviert werden.
 

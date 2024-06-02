@@ -1,4 +1,4 @@
-# Necessary checks after update coming from AAPS 2.6
+# Notwendige Überprüfungen nach einem Update von AAPS 2.7
 
 - Der Programmcode wurde bei der Umstellung auf AAPS 2.7 deutlich verändert.
 - Daher ist es wichtig, dass Du einige Änderungen vornimmst bzw. die Einstellungen nach der Aktualisierung überprüfst.
@@ -12,9 +12,7 @@
 - Scrolle nach unten zu "BZ-Quelle".
 - Ändere bei Bedarf die BZ-Quelle.
 
-```{image} ../images/ConfBuild_BG.png
-:alt: BZ-Quelle
-```
+![BZ-Quelle](../images/ConfBuild_BG.png)
 
 ## Prüfung abschließen
 
@@ -31,9 +29,7 @@
 - Klicke auf "Master-Passwort".
 - Gib ein Passwort ein, bestätige es und klicke auf OK.
 
-```{image} ../images/MasterPW.png
-:alt: Master-Password festlegen
-```
+![Master-Passwort festlegen](../images/MasterPW.png)
 
 ## Exportiere die Einstellungen
 
@@ -59,8 +55,6 @@
 - Klicke auf "Pumpen-Passwort (nur v1)".
 - Gib das Passwort der Pumpe ein ([Standard-Passwort](DanaRS-Insulin-Pump-default-password) unterscheidet sich je nach Firmware Version) und klicke OK.
 
-```{image} ../images/DanaRSPW.png
-:alt: Dana RS Passwort setzen
-```
+![Set Dana RS password](../images/DanaRSPW.png)
 
 Wie Du das Passwort Deiner Pumpe ändern kannst, ist auf der [DanaRS Seite](DanaRS-Insulin-Pump-change-password-on-pump) beschrieben.

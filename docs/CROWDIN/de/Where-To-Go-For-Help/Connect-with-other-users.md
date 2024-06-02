@@ -46,9 +46,9 @@ Tritt der [AndroidAPS Facebook Gruppe (englisch)](https://www.facebook.com/group
 * [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Niederlänischsprachige Nutzer von OpenAPS, Loop und AndroidAPS
 * [CGM in the cloud Niederlande](https://www.facebook.com/groups/1764754560436596)
 
-### Poland
+### Polen
 
-* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polish AAPS community and diabates support group)
+* [AndroidAPS Polska](https://www.facebook.com/groups/aapspl): Polnische AAPS Community und Diabetes-Support Gruppe)
 
 ### Schweden
 

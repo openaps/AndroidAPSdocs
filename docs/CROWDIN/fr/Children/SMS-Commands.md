@@ -10,9 +10,7 @@
 
 ## Paramétrer les commandes SMS
 
-```{image} ../images/SMSCommandsSetup.png
-:alt: Paramétrage des commandes SMS
-```
+![SMS Commands Setup](../images/SMSCommandsSetup.png)
 
 - Most of the adjustments of temp targets, following AAPS etc. can be done on [AAPSClient app](../Children/Children.md) on an Android phone with an internet connection.
 - Les bolus ne peuvent pas être donnés à partir de Nightscout, mais vous pouvez utiliser des commandes SMS.
@@ -37,9 +35,7 @@
 
   - Entrez le(s) numéro(s) supplémentaire(s) séparé(s) par un point-virgule, pas d'espace.
 
-    ```{image} ../images/SMSCommandsSetupSpace2.png
-    :alt: Commandes SMS Configurer plusieurs numéros
-    ```
+    ![SMS Commands Setup multiple numbers](../images/SMSCommandsSetupSpace2.png)
 
 ### Délai entre les commandes bolus
 
@@ -100,9 +96,7 @@
 
 Les commandes doivent être envoyées en anglais, la réponse sera dans votre langue locale si la chaîne de réponse a déjà été [traduite](translations-translate-strings-for-AAPS-app).
 
-```{image} ../images/SMSCommands.png
-:alt: Example de commandes SMS
-```
+![SMS Commands Example](../images/SMSCommands.png)
 
 ### Boucle
 
@@ -185,9 +179,7 @@ Si l'autre application est installée sur plusieurs téléphones assurez-vous de
 
 Il y a eu un signalement sur les commandes SMS s'arrêtant après une mise à jour sur le téléphone Galaxy S10. Peut être résolu en désactivant 'envoyer en tant que message chat'.
 
-```{image} ../images/SMSdisableChat.png
-:alt: Désactiver SMS en tant que message chat
-```
+![Disable SMS as chat message](../images/SMSdisableChat.png)
 ### Application de messages Android
 
 Si vous rencontrez des problèmes pour envoyer ou recevoir des commandes par SMS avec l'application Messages Android, désactivez le cryptage de bout en bout à la fois sur les téléphones des soignants et des enfants.
