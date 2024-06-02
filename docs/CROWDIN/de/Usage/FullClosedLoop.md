@@ -2,23 +2,23 @@
 
 ## Full vs. Hybrid Closed Loop (FCL, HCL)
 
-### Definitions
+### Definitionen
 
-In **hybrid closed loop** you gave at least one bolus prior to meals. This pushed your loop often into a temporary shut-off (temporary zero basal) and generally only into a co-management role while that given bolus was strongly active.
+Im **Hybrid Closed Loop** hast Du mindestens einen Bolus vor den Mahlzeiten abgegeben. Das hat Deinen Loop oft in eine temporäre Abschaltung (temporäres Null-Basal) und während der stärksten Wirkung des Bolus allgemein in eine Co-Management-Rolle gezwungen.
 
-Also, prior to each meal, you made inputs about the carb, fat, and protein intake, and also gave indications (generally in settings, plus every day related to each meal) related to estimated carb absorption times.
+Zusätzlich hast Du vor den jeweiligen Mahlzeiten Angaben zu den zu essenden Kohlenhydrat-, Fett- und Eiweiß-Mengen gemacht. Darüberhinaus hast Du eine Indikation (meist über die Einstellungen und situationsbezogen auch zu den Mahlzeiten) über die zu angenommene Zeit für die Verstoffwechselung der geschätzen Kohlenhydrate (carb absorbtion time) gemacht.
 
-AAPS also allows **full closed looping without the user giving any boli**, and without making carb inputs, in a mode called UAM = un-announced meals.
+AAPS ermöglicht auch ein **Full Closed Looping ohne manuelle Bolusgaben** und im sogenannten UAM-Modus (unangekündigte Mahlzeiten) auch ohne Kohlenhydrat-Eingaben.
 
-- Note that **UAM** can also be switched on in hybrid closed looping, in which case it just means that the algorithm tolerates wrong carb inputs better.
+- **UAM** kann auch im Hybrid-Closed-Looping eingeschaltet werden. In diesem Fall kann der Algorithmus besser mit falschen Kohlenhydrat-Eingaben umgehen.
 
-- It is discussed controversially whether e.g. for particularly high carb meals, or for people with certain eating habits or sensitivity swings, a mode with small pre-bolusses might be preferable or even needed. This would basically be a hybrid closed loop without carb info, and therefore a variant of HCL really. We stick to FCL as really **without user boli**, and once you tuned your FCL, you might even remove all „useless“ buttons on the bottom of your AAPS main screen.
+- Es wird kontrovers diskutiert, ob z.B. für besonders kohlenhydratreiche Mahlzeiten oder für Personen mit bestimmten Essgewohnheiten oder Sensibilitätsschwankungen ein Modus mit kleinen Vor-Bolus-Dosen empfohlen oder sogar erforderlich sein könnte. Das wäre im Grunde genommen ein Hybrid-Closed-Loop ohne Kohlenhydrat-Informationen und daher eine Variante des HCL. Wir halten uns an das FCL wirklich **ohne manuellen Bolus** und, sobald Du Deinen FCL optimiert hast, kannst Du sogar alle „unnötigen“ Schaltflächen am unteren Rand der AAPS-Übersicht löschen.
 
-### What to expect?
+### Was erwartet mich?
 
-In 2022/23 a first medical study was conducted and published that showed patients can achieve comparatively good results with AAPS in a simple FCL mode:
+Im Jahr 2022/23 wurde eine erste medizinische Studie durchgeführt und veröffentlicht, die zeigte, dass Patienten mit AAPS im einfachen FCL-Modus vergleichsweise gute Ergebnisse erzielen können:
 
-> 16 adolescents with T1D (HbA1c range 43-75), and duration of diabetes of 9-15 years underwent three distinct 3-day periods of camp living, while using a modified and locked version of AndroidAPS 3.1.03. **Results:** The glycemia was controlled by the system 95% time of the study and the proportion of time below 3.9 mmol/L did not exceed 1% over the whole study period (0.72%). The HCL scenario reached significantly higher percentage of time below 3 mmol/L (HCL 1.05% vs. MA 0.0% vs. FCL 0.0%; P = 0.05) compared to other scenarios. **No difference was observed among the scenarios in the percentage of time between 3.9 and 10 mmol/L** (HCL 83.3% vs. MA 79.85% vs. **FCL 81.03%**, P = 0.58) corresponding to mean glycemia (HCL 6.65 mmol/L vs. MA 7.34 mmol/L vs. FCL 7.05 mmol/L, P = 0.28). No difference was observed in the mean daily dose of insulin or in the daily carbohydrate intake. No serious adverse event occurred during the study period. **Conclusions:** Our pilot study showed that **FCL might be a realistic mode of treatment** for people with T1D.
+> 16 Jugendliche mit Typ 1 Diabetes (HbA1c-Bereich 43-75) und einer Diabetesdauer von 9-15 Jahren absolvierten drei verschiedene 3-tägige Camp-Aufenthalte, bei denen sie eine modifizierte und gesperrte Version von AndroidAPS 3.1.0.3 nutzten. **Ergebnisse:** Die Glykämie wurde während 95% der Studienzeit vom System kontrolliert und der Anteil der Zeit unter 3,9 mmol/l hat über den gesamten Studienzeitraum hinweg 1% nicht überschritten (0,72%). Das HCL-Szenario erreichte einen signifikant höheren Prozentsatz an Zeiten unter 3 mmol/l (HCL 1,05 % vs. MA 0,0 % vs. FCL 0,0 %; P = 0,05) im Vergleich zu anderen Szenarien. **Es wurde kein Unterschied zwischen den Szenarien im Prozentsatz der Zeit zwischen 3,9 und 10 mmol/l beobachtet** (HCL 83,3 % vs. MA 79,85 % vs. **FCL 81,03 %**, P = 0,58) entsprechend dem mittleren Blutzucker (HCL 6,65 mmol/l vs. MA 7,34 mmol/l vs. FCL 7,05 mmol/L, P = 0,28). Es wurde kein Unterschied in der durchschnittlichen täglichen Insulindosis oder in der täglichen Kohlenhydrat-Aufnahme beobachtet. Während des Studienzeitraums trat kein schwerwiegendes unerwünschtes Ereignis auf. **Schlussfolgerungen:** Unsere Pilotstudie zeigte, dass **FCL ein realistischer Behandlungsmodus** für Menschen mit Diabetes Typ 1 sein könnte.
 
 Quelle:
 
@@ -26,18 +26,18 @@ Quelle:
 
 2) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ClinicalTrials.gov National Library of Medicine, Clinical Trial [Feasibility and Safety Study of the Automated Insulin Delivery Closed Loop System Pancreas4ALL (ASAP)](https://www.clinicaltrials.gov/study/NCT04835350?term=Feasibility%20and%20Safety%20Study%20of%20the%20Automated%20Insulin%20Delivery%20Closed%20Loop%20System%20Pancreas4ALL%20(ASAP)&rank=1)
 
-For you to enjoy the promised reduced daily burden, you will have to:
+Damit Du die versprochene reduzierte tägliche Belastung genießen kannst, musst Du folgendes tun:
 
-- check whether you have all pre-requisites for FCL
-- set up a couple of Automations
-- go through a learning and tuning stage in which you adjust the settings, notably those in your Automations. The suggestions that follow guide you in this process.
+- Überprüfe, ob Du alle Voraussetzungen für FCL erfüllst
+- Richte ein paar Automatisierungen ein
+- Durchlaufe eine Lern- und Abstimmungsphase, in der Du die Einstellungen anpasst, insbesondere die in Deinen Automatisierungen. Die folgenden Vorschläge, leiten Dich durch den Prozess.
 
-### General considerations why (not to) move from hybrid to full closed loop
+### Generelle Überlegungen, warum (nicht) von Hybrid zu Full Closed Loop gewechselt werden sollte
 
-The full closed loop system may **not** be **for everyone**:
+Ein Full Closed Loop System ist **nicht** **für jeden** geeignet:
 
-- While some full closed loopers using Automations achieve TIR (70-180) around 90%  and HbA1c under 6%, you might prefer tighter control. Notably, **minimizing values over 140 mg/dl at diets with rapid carbs** probably requires pre-bolussing.
-- Are you up for an informed and mindful approach towards a highly personalized calibration of your system? The **personalized tuning** can be **challenging**. This is definitely not for you if you were overwhelmed already with setting basal rate and ISFs. But balance it against what you could gain every day without counting any carbs. You might also value the gained deeper knowledge from analyzing and tuning your loop’s reponse to your meals.
+- Während einige Full Closed Looper mit Automatisierungen einen TIR (70-180) von etwa 90% und einen HbA1c unter 6% erreichen, willst Du vielleicht eine noch engere Kontrolle erreichen. Zugegebenermaßen erfordert **die Minimierung von Werten über 140 mg/dl bei Nahrungsmitteln mit schnellen Kohlenhydraten** vermutlich einen Vorab-Bolus.
+- Bist Du bereit für einen achtsamen und gut durchdachten Ansatz hin zu einer hochgradig auf Dich zugeschnittenen Kalibrierung Deines Systems? Die **personalisierte Anpassung** kann **herausfordernd** sein. Wenn Du bereits mit der Feinabstimmung Deiner Basalrate und der Korrekturfaktoren überfordert warst, ist dies definitiv nichts für Dich. Aber wäge es gegen das ab, was Du täglich gewinnen kannst, wenn Du keine Kohlenhydrate mehr zählen musst. You might also value the gained deeper knowledge from analyzing and tuning your loop’s reponse to your meals.
 - While meal management gets very easy, **activity** management might get a bit more difficult, especially considering most of us probably like to limit sports snacks, in an attempt to control body weight.
 - Unfortunately, there are additional difficulties to establish a full closed loop for **kids** (see next section, pre-requisites)
 
