@@ -39,7 +39,7 @@ G)	Spike (iOs)
 
 ●	Dexcom Follow is very good for teachers/grandparents and people who know very little about diabetes and sugar levels. It has customisable alerts (BG level, what sound to play etc). Alarms can be completely switched off if needed, which is very useful if you have a sensor which is still settling down and creating multiple fake lows.  
 
-##### setting up Dexcom Follow: how-to-guide
+##### Setting up Dexcom Follow: how-to-guide
 
 If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app. You should also be able to send invitations to Dexcom Follow from xDrip+ (settings - Cloud upload - Dexcom share server upload, see instructions here: 
 
@@ -108,9 +108,25 @@ Cons (as reported by users)
 
 #### D) xDrip+ (Android)
 
-Followers can be alarmed by using the xDrip+ in follower mode.  [xDrip+](../Configuration/xdrip.md). (mainly BG values and 
-**alarms**)
+You can use xDrip+ as a follower.
 
+##### With Nightscout
+
+Set xDrip+ as a Nightscout Follower. You will receive BG and treatments, not basal.
+
+![image](./images/remote_control_and_following/xDrip+_Nightscout_Follower.png)
+
+##### Without Nightscout - xDrip+ BG data source
+
+If your AAPS data source is xDrip+ (or if xDrip+ can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
+
+![image](./images/remote_control_and_following/xDrip+_Master_Sync.png)
+
+##### Without Nightscout - xDrip+ BG companion app
+
+If your AAPS data source is not xDrip+ but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
+
+![image](./images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
 #### E) xDrip4iOS/Shuggah (iOS)
 
@@ -260,7 +276,7 @@ This CGM hardware monitor benefits from random tone generation audio alerts (whi
 ●	The Big BG face is useful for nightstand users who wear glasses or contact lenses.
 
 
-#### C) PC(Teamviwer)
+#### C) PC (TeamViewer)
 Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting.  
 
 
