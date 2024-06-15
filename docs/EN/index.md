@@ -81,6 +81,8 @@ Building AAPS <./Installing-AndroidAPS/building-AAPS.md>
 Transferring and Installing AAPS <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
 Setup Wizard<./Installing-AndroidAPS/setup-wizard.md>
 Change AAPS configuration<./Installing-AndroidAPS/change-configuration.md>
+- Config Builder<./Configuration/Config-Builder.md>
+- Preferences<./Configuration/Preferences.md>
 Completing the objectives <./Usage/completing-the-objectives.md>
 ```
 
