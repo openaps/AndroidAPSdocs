@@ -6,12 +6,9 @@
 * You have learned about the essential features of **AAPS** 
 * You have a basic understanding of what your system is doing, and therefore why you can trust it.
 
-
-:::{admonition} Note
-:class: note
-
+```{note}
 Regularly export your **AAPS** settings after completing each **objective**!
-:::
+```
 
 We strongly recommend that you  [export your settings](../Usage/ExportImportSettings.md) after completing each **objective**. This exporting process creates a **settings** (.json) file which you should keep backed-up in one or more safe places (_e.g._ Google Drive, hard disk, email attachment _etc._). This ensures that you keep your progress through the **objectives**, and if you accidentally delete your progress, you can simply re-load it by importing a recent settings file. Having a backup **settings** file is also required if you want to change your **AAPS** smartphone for any reason (upgrading/lost/broken phone _etc._)
 
@@ -23,7 +20,7 @@ Overall the **objectives** take around 6 weeks to complete (see [how long will i
 
 As well as progressing through the **objectives**, if you want, you can also remove your progress and [go back to an earlier objective](Objectives-go-back-in-objectives). 
 
-## Objective 1: Setting up visualization and monitoring, analysing basals and ratios
+## Objective 1: Setting up visualization and monitoring, analyzing basals and ratios
 
 - **AAPS** checks if your basic technical setup is working.
 
@@ -73,10 +70,12 @@ For each question, there may be more than one answer that is correct! If an inco
 
 When **AAPS** is installed for the first time, you will have to complete the whole of **Objective 3** before moving on to **Objective 4**. Each objective is required to be completed in sequential order. New features will gradually be unlocked as progress is made through the objectives. 
 
-:::{admonition}  __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
+```{admonition}  __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: Note
 From time to time, new features are added to **AAPS** which may require a new question to be added to the Objectives, particularly Objective 3. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other Objectives remain completed.
-:::
+```
+
+
 
 ## Objective 4: Starting on an open loop
 
@@ -97,9 +96,9 @@ Estimated time to complete this objective: **7 days**. This is a mandatory wait 
 
   ![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
 
-:::{admonition} You don't need to action each and every system recommendation!
-:class: Note
-:::
+```{note}
+You don't need to action each and every system recommendation!
+```
 
 (Objectives-objective-5-Understanding-your-open-loop-including-its-temp-basal-recommendations)=
 
@@ -127,11 +126,11 @@ You may want to experiment with adjusting your targets being in a tighter range 
 You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualization.
 
 ![Stop sign](../images/sign_stop.png)
-:::{admonition} If you have been using a virtual pump, change to a real insulin pump now!
-:class: note
 
+```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
+:class: note
 If you are open looping with a virtual pump stop here. Only click verify at the end of this Objective once you have changed to using a "real" physical pump.
-:::
+```
 
 
 ![blank](../images/blank.png)
@@ -140,10 +139,11 @@ If you are open looping with a virtual pump stop here. Only click verify at the 
 ## Objective 6: Starting to close the loop with Low Glucose Suspend
 
 ![Warning sign](../images/sign_warning.png)
-:::{admonition}  Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend only!
+
+```{admonition}  Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend only!
 :class: Note
 You will still need to correct high BG values by yourself (manually with corrections by pump or pen)!
-:::
+```
 
 As part of **Objective 6** you will close the loop and activate its Low Glucose Suspend (LGS) mode while [max IOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) is set to zero. You have to remain in LGS mode for 5 days to complete this objective. You should use this time to check if your profile settings are accurate and don't trigger LGS events too often. 
 

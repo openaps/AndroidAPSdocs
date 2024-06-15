@@ -107,12 +107,11 @@ Temp-targets <./Usage/temptarget.md>
 Extended carbs <./Usage/Extended-Carbs.md>
 Automations <./Usage/Automation.md>
 Dynamic ISF <./Usage/DynamicISF.md>
-Meal Management
 Pumps and cannulas <./5-DailyLifewithAAPS/DailyLife-PUMPS.md>
-Sensors
-Phones
-Daylight saving changes
-Travelling with AAPS 
+Sensors <./Configuration/BG-Source.md>
+Phones </Hardware/Phoneconfig.md>
+Daylight saving changes <./Usage/Timezone-traveling.md#time-adjustment-daylight-savings-time-dst>
+Travelling with AAPS <./Getting-Started/FAQ.md#travelling>
 Crossing timezones with pumps <./Usage/Timezone-traveling.md>
 
 ```
@@ -120,9 +119,8 @@ Crossing timezones with pumps <./Usage/Timezone-traveling.md>
 ```{toctree}
 :caption: 6) Maintenance of AAPS
 
-Backing up your settings
 Export/Import Settings <./Usage/ExportImportSettings.md>
-Reviewing your data
+Reviewing your data <./Getting-Started/Screenshots.md#history-browser)
 Version Release Notes <./Installing-AndroidAPS/Releasenotes.md>
 Updating to a new version of AAPS <./Installing-AndroidAPS/Update-to-new-version.md>
 
@@ -135,9 +133,9 @@ Updating to a new version of AAPS <./Installing-AndroidAPS/Update-to-new-version
 Where can I get help with AAPS <./Where-To-Go-For-Help/Connect-with-other-users.md>
 General Troubleshooting <./Usage/troubleshooting.md>
 Troubleshooting AAPSClient <./Usage/Troubleshooting-NSClient.md>
-How to report bugs/request features
+How to report bugs/request features <./Installing-AndroidAPS/Update-to-new-version.md#troubleshooting>
 Accessing logfiles <./Usage/Accessing-logfiles.md>
-Help! My AAPS phone is broken/stolen/lost
+Help! My AAPS phone is broken/stolen/lost <./Usage/ExportImportSettings.md#restoring-from-your-backups-on-a-new-phone-or-fresh-installation-of-aaps>
 ```
 
 ```{toctree}
@@ -145,7 +143,6 @@ Help! My AAPS phone is broken/stolen/lost
 
 Glossary <./Getting-Started/Glossary.md>
 AAPS Screens <./Getting-Started/Screenshots.md>
-Your AAPS profile 
 Compatible pumps <./Getting-Started/Pump-Choices.md>
 Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
 Compatible CGMs <./Configuration/BG-Source.md>
@@ -203,7 +200,6 @@ Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
 :caption: 12) References
 
 General diabetes and looping resources <./Where-To-Go-For-Help/Background-reading.md>
-Scientific AAPS journal articles
 ```
 
 ```{toctree}

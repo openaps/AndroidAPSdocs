@@ -77,7 +77,7 @@ _Omnipod users:_ importing a preferences file will deactivate your current pod i
 **Troubleshooting:** if you are unable to get an active profile set from the AAPS home screen  select the three line (hamburger) menu in the top left > config builder > Pump > switch to Virtual Pump > then switch back to your pump type
 
 
-### Note for Dana RS users
+## Note for Dana RS users
 
 - As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan.
 - Please pair new phone and pump manually.
