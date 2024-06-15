@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # Dexcom G5
 
 ## If using G5 with xdrip+

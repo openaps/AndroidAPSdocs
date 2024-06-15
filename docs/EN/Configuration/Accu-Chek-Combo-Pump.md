@@ -1,3 +1,6 @@
+---
+orphan: true
+---
 # Accu Chek Combo Pump
 
 **This software is part of a DIY solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you, but allows you to improve your diabetes and your quality of life if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
@@ -36,7 +39,7 @@
 * Configure the pump using 360 config software. 
 * If you do not have the software, please contact your Accu-Chek hotline. They usually send registered users a CD with the "360° Pump Configuration Software" and a SmartPix USB-infrared connection device (the Realtyme device also works if you have that).
 * **Required settings** (marked green in screenshots):
-    
+  
    * Set/leave the menu configuration as "Standard", this will show only the supported menus/actions on the pump and hide those which are unsupported (extended/multiwave bolus, multiple basal rates), which cause the loop functionality to be restricted when used because it's not possible to run the loop in a safe manner when used.
    * Verify the _Quick Info Text_ is set to "QUICK INFO" (without the quotes, found under _Insulin Pump Options_).
    * Set TBR _Maximum Adjustment_ to 500%
@@ -45,7 +48,7 @@
    * Enable Bluetooth
    
 * **Recommended settings** (marked blue in screenshots)
-    
+  
    * Set low cartridge alarm to your liking
    * Configure a max bolus suited for your therapy to protect against bugs in the software
    * Similarly, configure maximum TBR duration as a safeguard. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
@@ -103,7 +106,7 @@ There are serveral possible reasons. Try the following steps:
     * The next three steps are timing-sensitive, so you might need to try different pauses/speed if pairing fails. Read the full sequence before trying it.
 9.  Now the Pump should show up the BT Name of phone to select for pairing. Here it is importand to wait at least 5s 
     before you hit the select button on Pump. Otherwise the Pumpe will not send the Paring request to the Phone proberly.
- 
+
     * If Combo Pump is set to 5s Screentime out, you may test it with 40s (original setting). From experiance the time 
       between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out 
       without successfully pair. Later you should set it back to 5s, to meet AAPS Combo settings and speed up connections.
