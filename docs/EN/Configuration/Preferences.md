@@ -467,6 +467,20 @@ You can select which data you want to [upload and download to or from Nightscout
 
 Options in advanced settings are self-explanatory.
 
+## Tidepool
+
+![NSClientV3](../images/Pref2024_Tidepool.png)
+
+- Use the credentials you defined when creating your Tidepool [reporting server](../Installing-AndroidAPS/setting-up-the-reporting-server.md#tidepool).
+- Test them with Test Tidepool Login.
+- Connections settings are identical to, and shared with NSClient.
+
+### Synchronization
+
+Synchronization choices will depend on the way you will want to use AAPS.
+
+You can select which data you want to [upload and download to or from Nightscout](../Installing-AndroidAPS/Nightscout.md#aaps-settings). 
+
 ## SMS Communicator
 
 - Options will only be displayed if SMS communicator is selected in [Config Builder](Config-Builder-sms-communicator).

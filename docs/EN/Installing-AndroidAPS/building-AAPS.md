@@ -128,17 +128,17 @@ Git is a program that allows you to track changes in code and to collaborate wit
 Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes. 
 :::
 
-The following screenshots have been taken from Android Studio Version **Hedgehog**. 
+The following screenshots have been taken from Android Studio Version **Koala**. 
 
 One of the most important things when installing Android Studio is **be patient!** During installation and setup, Android Studio is downloading a lot of stuff which will take time.
 
 Download the latest version of Android Studio from [**here**](https://developer.android.com/studio#downloads), locate it in your browser downloads folder, and install it on your computer:
 
-![Download Android Studio](../images/Building-the-App/01_InstallAS_Hedgehog.png)
+![Download Android Studio](../images/Building-the-App/01_InstallAS_Koala.png)
 
 When you first start Android Studio, you will be greeted as follows:
 
-![Welcome](../images/Building-the-App/02_Welcome_AS_Hedgehog.png)
+![Welcome](../images/Building-the-App/02_Welcome_AS.png)
 
 Select "Next":
 
