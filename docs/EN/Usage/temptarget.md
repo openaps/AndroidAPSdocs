@@ -10,9 +10,15 @@ Users should have realistic expectations on the results that can be achieved whe
 
 A **Temp-Target** can take approximately 30 minutes or longer in order to attain a desired **BG** target. It is impossible for **AAPS** to achieve a **BG** target with immediate effect and users should be mindful of this when selecting a **Temp-Target**. 
 
-The table below summarises the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**,  and **Temp-Target-Hypo**.
+The table below summarizes the features of **Temp-Target- Activity**, **Temp-Target- Eating soon**,  and **Temp-Target-Hypo**.
 
-![TT1_Screenshot 2024-01-26 231223](https://github.com/openaps/AndroidAPSdocs/assets/137224335/73eeadf1-c17e-4955-afd8-f49c281331e3)
+
+
+|                     Temp Target                      |                          BG Target                           | Other considerations when selecting a Temp Target            |
+| :--------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------- |
+|   **Activity**<br/>![](../images/TT-Activity.png)    | **AAPS will aim to </br>reach 8.0 mmol/l </br>(144 mg/dl) </br>for 40 minutes** | Depending on BG level, AAPS will decrease insulin usage in order <br/>to  reach the increased BG target. If BG target is not within range <br/>(i.e.   above the user profile's selected BG target), then AAPS may <br/>keep  the basal on.<br/><br/>In closed loop mode, SMB: <br/><br/>- may be deactivated (discussed further below); and/or<br/>- basal may be deactivated if AAPS is in negative IOB (IOB &lt;0). <br/><br/>User may wish to also consider:<br/><br/>- selecting this TT 1 to 2 hours before the planned exercise <br/>to  ensure reduces IOB (the correct timing for this TT will vary  <br/>  person to person); and<br/>- selecting a temporary Profile (decrease) for the duration of the  <br/>  planned activity to ensure reduced IOB;<br/>- ensuring TT is timed to be deactivated shortly before the <br/>exercise  as reduces IOB, as some users experience a rapid <br/>rise in BG  post exercise. |
+| **Eating soon**<br/>![](../images/TT-EatingSoon.png) | **AAPS will aim to </br>reach 5.0 mmol/l </br>(90 mg/dl) </br>for 30 minutes** | In closed loop mode, SMB: </br>- will remain activated; and/or </br>- basal may also be activated depending on the user's profile  <br/> settings. </br></br>Depending on BG level, AAPS will increase insulin usage within <br/>the user's AAPS setting parameters in order to achieve the <br/>desired BG target. |
+|       **Hypo**<br/>![](../images/TT-Hypo.png)        | **AAPS will aim to </br>reach 7.0 mmol/l </br>(126 mg/dl) </br>for 30 minutes** | In closed loop mode, SMB: </br>- may be deactivated (discussed further below); and/or </br>- basal rate may be activated if IOB is negative (IOB &lt;0). |
 
 
 ## Where can I select a Temp-Target?
@@ -100,7 +106,7 @@ To action this select in **Preferences** > and deactivate _'Enable SMB with high
 
 ![TT8_Screenshot 2024-01-26 230757](https://github.com/openaps/AndroidAPSdocs/assets/137224335/4471540e-fe2a-4ade-8f99-18ca0372da52)
 
-This will ensure **AAPS** will not give **SMBs**, even with COB > 0, _'SMB with Temp-Target'_ or _'SMB alway'_ enabled and OpenAPS SMB active.
+This will ensure **AAPS** will not give **SMBs**, even with COB > 0, _'SMB with Temp-Target'_ or _'SMB always'_ enabled and OpenAPS SMB active.
 
 ## Custom Temp-Target
 

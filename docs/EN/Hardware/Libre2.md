@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # Freestyle Libre 2
 
 The Freestyle Libre 2 sensor is now a real CGM even with the official app. Still, LibreLink cannot send data to AAPS. There are several solutions to use it with AAPS.
@@ -228,7 +232,7 @@ activation and make a new initial calibration.
 
 -   In AAPS go to Config Builder > BG Source and check 'xDrip+'
 
-![xDrip+ BG Source](../images/ConfBuild_BG_xDrip.png)
+![xDrip+ BG Source](../images/ConfBuild_BG.png)
 
 -   If AAPS does not receive BG values when phone is in airplane
     mode, use 'Identify receiver' as describe on [xDrip+ settings

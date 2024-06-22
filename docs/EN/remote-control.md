@@ -1,6 +1,6 @@
 # Remote control of AAPS
 There are four highly effective tools for remotely managing **AAPS**:
- 
+
 1) [SMS commands](sms-commands) (follower phone can be either Android or iOS), 
 2) [AAPSClient](aapsclient) (follower phone is Android)
 3) [Nightscout](nightscout) (Android, iOS or other computer/device).  
@@ -10,7 +10,7 @@ The first three are mostly appropriate for carers/parents, but smartwatches are 
 
 ![image](images/remote_control_and_following/AAPS_overview_remote_control_01.png)
 
-#### Considerations when setting up remote control of **AAPS** for a child
+## Considerations when setting up remote control of **AAPS** for a child
 
 1.	Think about how you will keep the child’s phone in range of their pump and CGM. This can be challenging with children who are too young to be responsible for a phone. Ensuring you select an AAPS phone with a good bluetooth connection range and finding a comfortable way for the child to carry the pump and phone - if they are old/big enough to have the phone on them -  (_e.g._ a [SPI Belt](https://spibelt.com/collections/kids-belts) may help.
 2.	Take your time to set-up and test commands with your child next to you, before starting remote treatment and monitoring. Many parents choose school holidays or weekends.
@@ -54,7 +54,7 @@ The **SMS Commands Table** below shows all the possible SMS commands. _Example v
 ### Authentication or not?
 
 You may notice from the table above that some SMS commands give an immediate response, and some SMS commands require **authenticating** with a security code from an additional app and a PIN (see below (link for more detail). A simple enquiry like “**bg**” (which requests an update on current glucose) is quick to type, doesn’t need authenticating, and returns the **AAPS** status information shown below: 
-  
+
 ![image](images/remote-control-06.png)
 
 Commands which need more security require a code to be entered, for example:
@@ -78,7 +78,7 @@ The overall process is as follows:
 ### Let's get started!
 
 1) **Download an authenticator**: On the caregiver phone, download (from the App store or Google play) and install one authenticator of your choice from the list below:
-  
+
 [**Authy**](https://authy.com/download/)
 
 [**Google Authenticator - Android / iOS**](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&pli=1)
@@ -90,15 +90,15 @@ The overall process is as follows:
 These Authenticator apps produce a time-limited, one-time 6-digit password, similar to mobile banking or shopping. You can use an alternative Authenticator app, as long as it supports RFC 6238 TOTP tokens. The Microsoft Authenticator does not work.
 
 2) **Check phone settings:** In the **AAPS** phone settings go to Apps > AndroidAPS > Permissions  > SMS  > Allow SMS
- 
+
 ![image](images/remote-control-08.png)
- 
+
 3) **Date and time synching:** In both the **AAPS** phone and the caregiver phone, check the date and time are synched. Exactly how you do this depends on your specific handsets, you may need to try out different settings.
 
 Example (for Samsung S23 handset): Settings – general management – date and time- automatic date and time 
 
 Some options may be greyed out, due to needing admin via a family account if the phone has been set up as a child account. This date and time setting is called “set automatically” on a caregiver/parent iPhone. If you are not sure if you have synched the handsets, don’t worry, you can set up the SMS commands and troubleshoot afterwards if it seems to be causing problems (ask for help if needed). 
- 
+
 4) **AAPS settings:** 
 
 i) Now that the phone settings have been checked, in the **AAPS** app itself, use the left hand hamburger menu to navigate to Config Builder: 
@@ -108,7 +108,7 @@ i) Now that the phone settings have been checked, in the **AAPS** app itself, us
 ii) Enable “SMS communicator” by checking the boxes, then click the “cog” to get to the SMS communicator preferences screen:
 
 ![image](images/remote-control-10.png)
- 
+
 _Note - as an alternative route to Config Builder, you can also use the new “SMS Communicator tab” at the top of the AAPS screen, then right click on the custom right hand hamburger menu for that page, to get to the SMS communicator preferences screen._ 
 
 iii) On the preferences screen enable “allow remote commands via SMS”: 
@@ -467,7 +467,7 @@ There are currently five main ways in which smartwatches are used in conjunction
 
 
 ![29-10-23, updated AAPSClient watch option table](./images/bbbe0e84-1a8c-4163-8a0b-dcf91144af14.png)
- 
+
 
 
 Please note this table was prepared in 2023, it is not exhaustive, and additional options are being added all the time. 
@@ -643,7 +643,7 @@ b)	cut and paste Wear.apk from Android Studio onto your Gdrive.
 
 
 You can use either Wear Installer 2 or Easy Fire tools to side-load AAPS onto the watch. Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained.  
- 
+
 ##### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
 
  ![image](./images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
@@ -790,7 +790,7 @@ Then "save as" and save the file to a convenient location on your computer:
 ![image](./images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
 
    
- 
+
 
 
 
@@ -819,7 +819,6 @@ There are additional options for FitBit watches which appear to be for monitorin
 These options are described in more detail in the ["following only"](following-only.md) section of the documentation. 
 
 In general, there are a wide range of affordable smartwatches which can provide glucose display only. If you are using Nightscout, then a good overview of all the options are described in the [Nightscout pages](https://nightscout.github.io/nightscout/wearable/#).
-
 
 
 

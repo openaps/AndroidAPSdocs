@@ -35,7 +35,7 @@ Requirements:
 - If you use google “2-step verification” (aka multifactor) authentication for one Gmail account, you might as well do it for both Gmail accounts.
 - If you plan to use Google “Passkeys”, make sure you register multiple devices. This is so you don’t lock yourself out. Only do it on devices that nobody else can access (_i.e._ not on a PC with a shared account that other people can unlock).
   :::
- 
+
 
 :::{admonition}  Video Walkthrough! 
 :class: Note
@@ -48,6 +48,7 @@ In this example: 
 - Your existing “_Everyday_” Google account is <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
 - Your new “_AAPS_” Gmail account will be: <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png)
 
+### 
 
 #### Go to <https://account.google.com> 
 

@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # EOPatch2 Instruction Manual
 
 The patch requires the use of rapid-acting U-100 type insulin, such as NovoRapid or Humalog. Use a rapid-acting insulin that is suitable for you according to your doctor’s prescription and inject the prescribed dosage.
@@ -89,7 +93,7 @@ When patching is complete, touch Start Safety Check. When the safety check is co
 
 ![Image11](../images/EOPatch/Bild11.png)
 ![Image12](../images/EOPatch/Bild12.png)
-  
+
 
 ### Inserting the needle
 The needle is inserted by holding around the patch and turning the needle action lever more than 100° in the upward direction of the lever. There is a buzzer sound when the needle is inserted correctly. Turn the needle action lever further clockwise to release the lever. Click NEXT.

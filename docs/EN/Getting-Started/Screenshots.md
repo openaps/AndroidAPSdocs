@@ -405,6 +405,14 @@ When you want to make a meal bolus this is where you will normally make it from.
 #### History Browser
 * Allows you to ride back in AAPS history.
 
+1. One day back
+2. Select the date in the calendar
+3. One day forward
+4. Today
+5. Display size (hours)
+
+![Histroy browser](../images/BrowseHistory.png)
+
 #### TDD
 * Total daily dose = bolus + basal per day
 * Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 

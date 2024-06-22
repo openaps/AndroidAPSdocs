@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # DanaRS and Dana-i Pump
 
 _These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards or the newer Dana-i. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead._
@@ -62,11 +66,11 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * In options menu select "USER OPTION"
 
   ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
-   
+  
 * Use arrow button to scroll down to "11. password"
 
   ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
-   
+  
 * Press OK to enter old password.
 
 * Enter **old password** (Default password see [above](DanaRS-Insulin-Pump-default-password)) and press OK
@@ -77,12 +81,12 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
 
   ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
-   
+  
 * Confirm with OK button.
 * Press OK to save setting.
 
   ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
-   
+  
 * Move down to "14. EXIT" and press OK to exit.
 
   ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)

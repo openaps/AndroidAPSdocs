@@ -163,12 +163,14 @@ Select the pump you are using.
    * [Password for Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
 
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
-* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
-* [Omnipod Eros](OmnipodEros.md)
-* [Omnipod DASH](OmnipodDASH.md)
+* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (Ruffy)
+* [Accu Chek Combo](Accu-Chek-Combo-Pump.md)
+* [Omnipod (Eros)](OmnipodEros.md)
+* [(Omnipod) Dash](OmnipodDASH.md)
 * [Medtronic](MedtronicPump.md)
 * [Diaconn G8](DiaconnG8.md)
-- MDI (receive AAPS suggestions for your multiple daily injections therapy)
+- EOPatch2
+- Medtrum
 - Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
 ## Sensitivity Detection
@@ -228,55 +230,40 @@ See [Objectives](../Usage/Objectives.md) page for more information.
 If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout.  Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](Screenshots-carb-correction).
 
 ## General
-### Overview
-Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details).  Settings can be accessed by clicking the cog wheel.
 
-#### Keep screen on
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+This section of the Config Builder allows you to enable and configure some plugins you might find useful. Settings can be accessed by clicking the cog wheel when available. Follow the links for more information.
 
-#### Buttons
+### [Overview](Preferences-overview)
+
+Displays the current state of your loop and buttons for most common actions.  
+
+#### [Keep screen on](./Preferences.md#keep-screen-on)
+Option 'Keep screen on' will force Android to keep the screen on at all times.
+
+#### [Buttons](./Preferences.md#buttons)
 Define which Buttons are shown on the home screen.
-* Treatments
-* Calculator
-* Insulin
-* Carbs
-* CGM (opens xDrip+)
-* Calibration
+#### [QuickWizard settings](./Preferences.md#quick-wizard)
+Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. 
 
-Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
+#### [Default Temp-Targets](./Preferences.md#default-temp-targets)
+Choose default temp-targets (duration and target). 
 
-#### QuickWizard settings
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
-
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
-
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
-
-#### Default Temp-Targets
-Choose default temp-targets (duration and target). Preset values are:
-
-* eating soon: target 72 mg/dl / 4.0 mmol/l, duration 45 min
-* activity: target 140 mg/dl / 7.8 mmol/l, duration 90 min
-* hypo: target 125 mg/dl / 6.9 mmol/l, duration 45 min
-
-#### Fill/Prime standard insulin amounts
+#### [Fill/Prime standard insulin amounts](./Preferences.md#fill-prime-standard-insulin-amounts)
 Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
 
-#### Range of visualization
-Choose the high and low marks for the BG-graph on AAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+#### [Range of visualization](./Preferences.md#range-for-visualization)
+Choose the high and low marks for the BG-graph on AAPS overview and smart watch.
 
-#### Shorten tab titles
-Choose wether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+#### [Shorten tab titles](./Preferences.md#shorten-tab-titles)
+Choose whether the tab titles in AAPS are long or short.
 
-#### Show notes field in treatment dialogs
+#### [Show notes field in treatment dialogs](./Preferences.md#show-notes-field-in-treatments-dialogs)
 Choose if you want to have a notes field when entering treatments or not.
 
-#### Status lights
-Choose if you want to have [status lights](Preferences-status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+#### [Status lights](./Preferences.md#status-lights)
+Choose if you want to have [status lights](Preferences-status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level.
 
-#### Advanced settings
-**Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units. 
-
+#### [Advanced settings](./Preferences.md#advanced-settings-overview)
 **Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 (Config-Builder-actions)=
@@ -295,26 +282,6 @@ Allows remote caregivers to control some AAPS features via SMS, see [SMS Command
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
 Note: Entries cannot be used in the AAPS calculator. (View only)
-
-(Config-Builder-wear)=
-### Wear
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
-
-If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
-
-![Wear settings](../images/ConfBuild_Wear.png)
-
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
-* Resend all data.
-Might be helpful if watch was not connected for some time and you want to push the information to the watch.
-* Open settings on your watch directly from your phone.
-
-### xDrip Statusline (watch)
-Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
-
-### NSClient
-* Setup sync of your AAPS data with Nightscout.
-* Settings in [preferences](Preferences-nsclient) can be opened by clicking the cog wheel.
 
 ### Maintenance
 Email and number of logs to be send. Normally no change necessary.

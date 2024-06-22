@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # Medtronic Pumps
 
 The driver does not work with any newer models, including all models ending in G (530G, 600-series [630G, 640G, 670G], 700-series [770G, 780G], etc.).
@@ -163,4 +167,4 @@ On the back of the pump you will find a line detailing your model number along w
 - NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
 - CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
 - WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")
- 
+

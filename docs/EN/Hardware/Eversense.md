@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # For users of Eversense
 
 The easiest way to use Eversense with AAPS is to install the EU or US modified [Eversense app](https://cr4ck3d3v3r53n53.club/) (and uninstall the original one first).

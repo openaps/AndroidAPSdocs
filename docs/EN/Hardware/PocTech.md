@@ -1,3 +1,7 @@
+---
+orphan: true
+---
+
 # For users of PocTech CT-100
 
 - Install PocTech App
