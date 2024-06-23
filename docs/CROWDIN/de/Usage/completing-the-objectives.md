@@ -119,7 +119,7 @@ Der Zielwert ist der wichtigste Wert. Alle Berechnungen basieren darauf. Er ist 
 
 Vielleicht möchtest Du mit der Weite des Zielbereichs experimentieren, ihn verengen (z. B. 1 mmol/l bzw. 20 mg/dl oder weniger) und beobachten, wie sich das Systemverhalten daraufhin ändert.
 
-Du kannst den grünen Bereich des Diagramms, der Deinen Zielbereich darstellt, anpassen (erweitern oder verengen), indem Du verschiedene Werte in [Einstellungen](../Configuration/Preferences.md) > Übersicht > Zielbereich für die Grafikanzeige.
+You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Overview > Range for Visualisation.
 
 ![Stop sign](../images/sign_stop.png)
 :::{admonition} Wenn Du mit einer virtuellen Pumpe bis hierhin gekommen bist, musst Du nun auf Deine echte Insulinpumpe umstellen!

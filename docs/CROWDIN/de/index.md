@@ -73,7 +73,7 @@ Kompatible Smartphones   <./Hardware/Phoneconfig.md>
 ```{toctree}
 :caption: 3) AAPS einrichten
 
-Einen Server für Berichte einrichtenr <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
+Einen Server für Berichte einrichten <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
 AAPS erstellen <./Installing-AndroidAPS/building-AAPS.md>
 AAPS auf Dein Smartphone übertragen und installieren <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
 AAPS Einrichtungsassistent <./Installing-AndroidAPS/setup-wizard.md>
@@ -107,7 +107,7 @@ Insulinpumpen und Kanülen <./5-DailyLifewithAAPS/DailyLife-PUMPS.md>
 Sensoren
 Smartphones
 Zeitumstellungen
-Mit AAPS reisenn
+Mit AAPS reisen
 Zeitzonenwechsel mit Insulinpumpen <./Usage/Timezone-traveling.md>
 
 ```
@@ -138,17 +138,17 @@ Hilfe! Mein AAPS-Smartphone ist defekt/gestolen oder wurde verloren
 ```{toctree}
 :caption: 8) Nützliche AAPS-Links
 
-Gloassar <./Getting-Started/Glossary.md>
+Glossar <./Getting-Started/Glossary.md>
 AAPS Bildschirme <./Getting-Started/Screenshots.md>
 Dein AAPS-Profil 
 Kompatible Insulinpumpen <./Getting-Started/Pump-Choices.md>
-Accu-Chek Combo Tipps zur Nutzung for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
+Accu-Chek Combo Tipps für den grundlegenden Umgang <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
 Kompatible Sensoren (CGMs) <./Configuration/BG-Source.md>
 Kompatible Smartphones <./Hardware/Phoneconfig.md>
 Wear AAPS auf einer Smartwatch nutzen <./Configuration/Watchfaces.md>
 AAPS Watchfaces anpassen <./Usage/Custom_Watchface_Reference.md>
 xDrip+ Einstellungen <./Configuration/xdrip.md>
-Autotune <./Usage/autotune.md>
+Autotune <./Usage/autotune.md&gt
 
 ```
 
@@ -169,7 +169,7 @@ Verbessern der Dokumentation <./make-a-PR.md>
 
 Übersetzen der App und der Dokumentation <./translations.md>
 
-Übersetzungstatus <./Administration/stateTranslations.md>
+Übersetzungsstatus <./Administration/stateTranslations.md>
 
 Dokumentenhistorie & changes <./Getting-Started/WikiUpdate.md>
 
