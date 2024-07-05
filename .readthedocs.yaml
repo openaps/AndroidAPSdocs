@@ -15,3 +15,6 @@ python:
 sphinx:
   builder: html
   fail_on_warning: false
+
+# Export formats 
+formats: all
