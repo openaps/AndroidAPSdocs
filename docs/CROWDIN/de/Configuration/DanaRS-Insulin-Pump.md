@@ -2,9 +2,9 @@
 
 *Diese Anleitung beschreibt die Einrichtung der App und Deiner Pumpe, wenn du eine Dana RS (ab 2017) oder die neuere Dana-i verwendest. Gehe zu [DanaR Insulinpumpe](./DanaR-Insulin-Pump) wenn du die Original DanaR benutzt.*
 
-**New Dana RS firmware v3 can be used from AAPS version 2.7 onwards.**
+**Eine Dana RS Insulinpumpe mit der Firmware v3 wird ab AAPS Version 2.7 unterstützt.**
 
-**New Dana-i can be used from AAPS version 3.0 onwards.**
+**Um eine Dana-i Insulinpumpe mit AAPS nutzen zu können, wird AAPS ab Version 3.0 (oder höher) benötigt.**
 
 * Bei der DanaRS und Dana-i wird das Basalprofil "BASAL A" von AAPS verwendet. Eventuell in der Pumpe vorhandene Einträge in diesem Profil werden überschrieben.
 
@@ -12,7 +12,7 @@
 
 ## Pumpe verbinden
 
-* On AAPS homescreen click hamburger menu on the top left corner and go to Config Builder.
+* Klicke auf dem AAPS Startbildschirm oben links auf das Hamburger Menü und wähle den Konfigurations-Generator aus.
 * Wähle 'Dana-i/RS' im Abschnitt Pumpe.
 * Über das Zahnrad erreichst Du die Pumpeneinstellungen direkt oder Du wählst den Weg über den Startbildschirm.
     
@@ -34,7 +34,7 @@
 * Der Kopplungsprozess unterscheidet sich abhängig vom Pumpentyp und Firmware:
     
     * Für DanaRS v1 wähle das Pumpenpasswort in den Einstellungen und gibt Dein Passwort ein.
-    * For DanaRS v3 you have to type 2 sequences of numbers and letters displayed on pump to AAPS pairing dialog.
+    * Bei einer DanaRS v3 musst Du zwei Zahlen- und Buschstabenfolgen, die auf dem Pumpendisplay angezeigt werden, in den AAPS-Kopplungsdialog, eingeben.
     * Für Dana-i wird der Standard-Android-Kopplungsdialog angezeigt und Du musst eine 6-stellige Nummer, die im Pumpendisplay angezeigt wird, eingeben.
 
 * Klicke auf "Bolus-Geschwindigkeit" um die gewünschte Abgabegeschwindigkeit (12 s/1 IE, 30 s/1 IE oder 60 s/1 IE) einzustellen.
@@ -48,11 +48,11 @@
 ### Standard-Passwort
 
 * Für die DanaRS mit Firmware v1 und v2 ist das Standard-Passwort 1234.
-* For DanaRS with firmware v3 or Dana-i the default password is derived from the manufacturing date and calculates as MMDD where MM is the month and DD is the day, the pump was produced (i.e. '0124' representing month 01 and day 24).
+* Das Standard-Password einer DanaRS (mit Firmware v3) oder eine Dana-i leitet sich vom Produktionsdatum der Pumpe ab. Das Password muss im Format MMTT eingegeben werden, wobei MM der Produktionsmonat ist und TT der Produktionstag (Beispiel: '0124' steht für das Produktionsdatum 24. Januar).
     
-    * From MAIN MENU select REVIEW then open SHIPPING INFORMATION from the sub menu
-    * Number 3 is manifacturing date. 
-    * Bei DanaRS v3 und Dana-i wird dieses Passwort nur verwendet, um die Tasten der Pumpe zu sperren. It's not used for communication and it's not necessary to enter it in AAPS.
+    * Wähle PRÜFEN aus dem Hauptmenü aus und drücke dann OK. Wähle nun GERÄTE INFO aus und bestätige mit OK.
+    * Nummer 3 ist das Produktionsdatum. 
+    * Bei DanaRS v3 und Dana-i wird dieses Passwort nur verwendet, um die Tasten der Pumpe zu sperren. Es wird nicht zur Kommunikation verwendet wird und muss auch nicht in AAPS eingegeben werden.
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
 
@@ -85,11 +85,11 @@
 
 * Bestätige mit der OK-Taste.
 
-* Press OK to save setting.
+* Bestätige erneut mit OK, um die Änderungen zu speichern.
     
     ![DanaRS Neues Kennwort speichern](../images/DanaRSPW_06_PWnewSave.png)
 
-* Scrolle nach unten zu "14. EXIT" and press OK to exit.
+* Scrolle nach unten zu "14. EXIT" und drücke die OK-Taste.
     
     ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
 
@@ -119,13 +119,13 @@ Falls Du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 
 * Verbinde die Dana RS **manuell** mit dem neuen Smartphone.
 * Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. Daher müssen das neue Smartphone und die Pumpe manuell verbunden werden.
-* Install AAPS on the new phone.
+* Installiere AAPS auf dem neuen Smartphone.
 * [Importiere die Einstellungen](ExportImportSettings-import-settings) auf Deinem neuen Smartphone
 
 ### DanaRS v3, Dana-i
 
 * Starte den Kopplungsprozess wie [oben](DanaRS-Insulin-Pump-pairing-pump) beschrieben.
-* Sometimes it may be necessary to clear pairing information in AAPS by long-click BT icon on Dana-i/RS tab.
+* In Einzelfällen muss die Koppelung im alten Smartphone zunächst gelöscht werden. Um die Koppelung in AAPS zu löschen, drückst Du in der Dana-i/RS-Registerkarte lange auf das Bluetooth-Symbol.
 
 ## Mit der Dana RS Pumpe über Zeitzonen hinweg reisen
 

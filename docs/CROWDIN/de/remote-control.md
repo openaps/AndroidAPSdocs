@@ -1,80 +1,80 @@
-# Remote control of AAPS
-There are four highly effective tools for remotely managing **AAPS**:
+# AAPS remote steuern
+Es gibt vier sehr wirkungsvolle Wege, **AAPS** remote zu steuern:
 
-1) [SMS commands](sms-commands) (follower phone can be either Android or iOS), 2) [AAPSClient](aapsclient) (follower phone is Android) 3) [Nightscout](nightscout) (Android, iOS or other computer/device).  
+1) [SMS-Befehle](sms-commands) (das Follower-Smartphone kann entweder Android oder iOS nutzen), 2) [AAPSClient](aapsclient) (das Follower-Smartphone nutzt Android) 3) [Nightscout](nightscout) (Android, iOS oder ein anderes Gerät/Computer).  
 4) [Smartwatches](smartwatches) (Android)
 
-The first three are mostly appropriate for carers/parents, but smartwatches are very useful for carers/parents **and** for adults with diabetes themselves.
+Die ersten drei sind meist für Pflegende/Eltern geeignet, und Smartwatches sind **zusätzlich** für Erwachsene mit Diabetes sehr hilfreich.
 
-![image](images/remote_control_and_following/AAPS_overview_remote_control_01.png)
+![grafik](images/remote_control_and_following/AAPS_overview_remote_control_01.png)
 
-#### Considerations when setting up remote control of **AAPS** for a child
+#### Dinge, die bei der Einrichtung eines **AAPS** für Kinder, das remote gesteuert werden soll, bedacht werden müssen
 
-1.  Think about how you will keep the child’s phone in range of their pump and CGM. This can be challenging with children who are too young to be responsible for a phone. Ensuring you select an AAPS phone with a good bluetooth connection range and finding a comfortable way for the child to carry the pump and phone - if they are old/big enough to have the phone on them -  (_e.g._ a [SPI Belt](https://spibelt.com/collections/kids-belts) may help.
-2.  Take your time to set-up and test commands with your child next to you, before starting remote treatment and monitoring. Many parents choose school holidays or weekends.
-3.  Make sure other caregivers/teachers are aware of your child's treatment plan and work out how adding in remote control is going to work with/enhance the existing plan.
-4.  Many parents find it helpful to have a separate line of communication with childcare providers, for example a cheap small teacher “follow” phone.
-5.  Examples for school care plans for children of different ages can be found in the [“files section”](https://www.facebook.com/groups/AndroidAPSUsers/files/) of the **AAPS** Facebook page.
-6.  What is your emergency plan for when remote control does not work (_i.e._ network problems or lost bluetooth connection)?  Always consider what will happen with **AAPS** if you suddenly can’t send a new command. **AAPS** overwrites the pump basal, ISF and ICR with the current profile values. Only use temporary profile switches (_i.e._ with a set time duration) if switching to a stronger insulin profile, in case your remote connection is disrupted. Then the pump will revert to the original profile when the time expires.
+1.  Überlege, wie das Kinder-Smartphone permanent in der Nähe der Insulinpumpe und des Glukose-Sensors bleibt. Besonders bei sehr kleinen/jungen Kindern, die noch nicht eigenverantwortlich genug sind, kann das mitunter schwierig sein. Es hilft, wenn ein Smartphone mit einer guten Bluetooth-Reichweite benutzt wird und das Kind - wenn es alt genug für ein eigenes Smartphone ist - Pumpe und Smartphones komfortabel bei sich tragen kann. Das Tragen eines Bauchgurts (_z.B._ [SPI Belt](https://spibelt.com/collections/kids-belts)) kann in solchen Fällen eine Lösung sein.
+2.  Nimm' Dir Zeit bei der Einrichtung und teste die Befehle in aller Ruhe mit Deinem Kind in der Nähe, bevor Du mit dem Remote-Monitoring und den Remote-Behandlungen beginnst. Viele Eltern nutzen Wochenenden oder Schulferien dazu.
+3.  Stelle sicher, dass Lehrer und Erzieher über den Behandlungsplan Deines Kindes Bescheid wissen und überlege Dir wie die Fernsteuerung mit dem bestehenden Therapieplan zusammenpasst bzw. ihn erweitert.
+4.  Viele Eltern finden es hilfreich, einen separaten Kommunikationsweg (z.B. über ein kleines günstiges Lehrer-Follower-Smartphone) mit der KiTa oder Schule zu haben.
+5.  Beispiele für schulische Therapiepläne für Kinder unterschiedlicher Altersstufen sind unter ["Dateien“](https://www.facebook.com/groups/AndroidAPSUsers/files/) auf der **AAPS** Facebook-Seite hinterlegt.
+6.  Wie sieht der Notfallplan aus, wenn die Fernsteuerung nicht funktionieren sollte (_d.h._ Netzwerkprobleme auftreten oder die Bluetooth-Verbindung verloren geht)?  Denke immer daran, was mit **AAPS** passieren wird, wenn Du plötzlich keine neuen Befehle senden kannst. **AAPS** überschreibt die Basalrate, den ISF und das ICR mit den aktuellen Profilwerten. Falls Deine Remote-Verbindung unterbrochen wird, ist es ist besser temporäre Profilwechsel (_d.h._ mit einer beschränkten Dauer) genutzt zu haben, als auf ein dauerhaftes stärkeres Insulinprofil geschwechselt zu sein. Wenn Die eingegebene Zeitspanne abgelaufen ist, wird die Pumpe auf das Original-Profil zurückfallen.
 
 (sms-commands)=
-## 1) SMS Commands
+## 1) SMS-Befehle
 
-You can control **AAPS** remotely via text (SMS) message through a feature known as **SMS Commands**. SMS commands can be sent to **AAPS**  by _any_ type of phone (iPhone/Android).
+**AAPS** kann über die Funktion der **SMS-Befehle** 'remote' gesteuert werden. SMS-Befehle können durch _jedes_ Smartphone (iPhone/Android) an **AAPS** gesendet werden.
 
-**SMS commands are really useful:**
-1. For routine remote control
+**SMS-Befehle sind wirklich hilfreich:**
+1. Für die tägliche Remote-Steuerung
 
-2. If you want to remotely bolus insulin
+2. Wenn Du einen Bolus remote abgeben möchtest
 
-3. In a region of poor internet reception, where text messages are able to get through, but data/internet phone reception is limited. This is very useful when going to remote areas (e.g. camping, skiing).
+3. In einer Gegend mit schwachem Internet-Empfang, in der Textnachrichten durchkommen, aber der übrige Empfang eingeschränkt ist. Dies hilft besonders in entlegenen Gebieten (z.B. beim Camping oder dem Skifahren.
 
-4. If your other methods of remote control (Nightscout/AAPSClient) are temporarily not working
+4. Wenn die anderen Methoden der Remote-Steuerung (Nightscout/AAPSClient) vorübergehend nicht funktionieren
 
-### SMS command safety
-If you enable **SMS Communicator** in **AAPS**, consider that the phone which is set up to give remote commands could be stolen, and/or used by someone else. Always lock your phone handset with at least a PIN. A strong password and/ or biometric lock are highly recommended, and ensure this is different from your APK Master password (the password which is required to change **AAPS** settings) . A second phone number must be enabled for SMS commands to work, even if you only have one primary caregiver/follower. You can then use the second number to temporarily disable SMS communicator (with the command **“SMS stop”**) if your main caregiver/parent phone is compromised. Versions of **AAPS** 2.7 and newer also use an [Authenticator app](authentication-or-not)).
+### Sicherheit der SMS-Befehle
+Wenn Du **SMS-Befehle** in **AAPS**freischaltest, behalte im Kopf, dass das Smartphone, dass SMS-Befehle versenden soll auch gestohlen werden kann und/oder von jemand anderem verwendet werden kann. Sichere Dein Smartphone mindestens mit einer PIN. Ein starkes Passwort und/oder eine biometrische Sicherung werden dringend empfohlen. Wichtig ist, dass das Smartphone-Passwort sich vom APK Master-Passwort (das Passwort, das benötigt wird, um die **AAPS** Einstellungen zu ändern) unterscheidet. Eine zweite Rufnummer muss für SMS-Befehle aktiviert sein, auch wenn es nur einen Follower/Betreuenden gibt. Wenn das Smartphone des hauptsächlich Betreuenden/Elternteils kompromitiert wurde, kann die zweite Rufnummer (mit dem Befehl **SMS STOP**) dazu genutzt werden, die SMS-Kommunikation vorübergehend zu deaktivieren. Ab **AAPS**-Version 2.7 und neuer wird auch eine [Authenticator App](authentication-or-not) genutzt.
 
-### Different types of SMS commands
-The **SMS Commands Table** below shows all the possible SMS commands. _Example values_ are given, to aid understanding. The commands have the same range of possible values (targets, percent profile etc.) which are allowable in the AAPS app itself. The commands below have been listed by how commonly used they are likely to be, the first two tables should have most of the SMS commands you need with full looping.
+### Unterschiedliche SMS-Befehle
+Die **Tabelle der SMS-Befehle** unten zeigt alle möglichen SMS-Befehle. Um die Nutzung noch verständlicher zu machen, sind auch _Beispiele_ enthalten. Die Gültigkeitsbereiche der Befehle (Zielwerte, Prozentsätze der Profile etc.) sind mit denen der AAPS-App identisch. Die Befehle sind nach Nutzungshäufigkeit sortiert aufgelistet, wobei die ersten beiden Tabellen das Gros der fürs Loopen benötigten SMS-Befehle enthalten.
 
-### SMS commands tables
+### Tabelle der SMS-Befehle
 
 ![SMS_command_table_1](images/remote-control-02.png)
 
-![SMS_command_table_2](images/remote-control-03.png)
+![](images/remote-control-03.png)
 
 ![SMS_command_table_3](images/remote_control_and_following/SMS_command_table_3_Loop_03.png)
 
 ![SMS_command_table_4](images/remote-control-05.png)
 
 (authentication-or-not)=
-### Authentication or not?
+### Authentifizieren oder nicht?
 
-You may notice from the table above that some SMS commands give an immediate response, and some SMS commands require **authenticating** with a security code from an additional app and a PIN (see below (link for more detail). A simple enquiry like “**bg**” (which requests an update on current glucose) is quick to type, doesn’t need authenticating, and returns the **AAPS** status information shown below:
+Du wirst in der oberen Tabelle bemerkt haben, dass einige SMS-Befehle eine sofortige Antwort haben und andere eine **Authentifizierung** mit einem Sicherheitscode aus einer weiteren App und einer PIN brauchen. (Details dazu findest Du hinter dem Link unten). Eine einfache Abfrage wie “**BG**”, die den aktuellen Glukosewert abfragt, ist schnell eingetippt und braucht nicht authentifiziert zu werden. Sie gibt die unten gezeigte **AAPS**-Statusinformation zurück:
 
-![image](images/remote-control-06.png)
+![grafik](images/remote-control-06.png)
 
-Commands which need more security require a code to be entered, for example:
+Befehle, die kritischer sind und daher zusätzlich abgesichert werden, benötigen einen weiteren einzugebenden Code, wie zum Beispiel:
 
-![SMS authenticated for markdown-smaller](images/remote-control-07.png)
+![](images/remote-control-07.png)
 
-### How to set up SMS commands
+### Wie man SMS-Befehle einrichtet
 
-The overall process is as follows:
+Der Gesamtprozess sieht wie folgt aus:
 
-**1)    Download an authenticator (caregiver phone)**
+**1) Lade eine Authentifikator-App herunter (Eltern- oder Betreuenden-Smartphone)**
 
-**2)    Check phone settings (AAPS phone)**
+**2)    Überprüfe die Smartphone-Einstellungen (AAPS Smartphone)**
 
-**3)    Date and time synching (caregiver and AAPS phone)**
+**3) Datum und Uhrzeit synchronisieren (Eltern- und AAPS-Smartphone)**
 
-**4)    AAPS settings (APPS phone)**
+**4) AAPS-Einstellungen (AAPS-Smartphone)**
 
-**5)    Testing SMS commands works (caregiver and AAPS phone)**
+**5) Testen, ob SMS-Befehlen funktionieren (Eltern- und AAPS-Smartphone)**
 
-### Let's get started!
+### Los gehts!
 
-1) **Download an authenticator**: On the caregiver phone, download (from the App store or Google play) and install one authenticator of your choice from the list below:
+1) **Lade eine Authentifikator-App** herunter: Lade (aus dem App Store oder Google Play) auf das Eltern-Smartphone eine Authentifikator App Deiner Wahl aus der Liste herunter und installiere diese:
 
 [**Authy**](https://authy.com/download/)
 
@@ -84,677 +84,715 @@ The overall process is as follows:
 
 [**FreeOTP Authenticator**](https://freeotp.github.io/)
 
-These Authenticator apps produce a time-limited, one-time 6-digit password, similar to mobile banking or shopping. You can use an alternative Authenticator app, as long as it supports RFC 6238 TOTP tokens. The Microsoft Authenticator does not work.
+Diese Authenticator-Apps erzeugen einen zeitlich begrenzten, 6-stelligen Code als Einmalkennwort, ähnlich dem des mobilen Bankings oder Online-Shoppings. Du kannst jede Authentifizierungs-App, die RFC 6238 TOTP-Token unterstützt, verwenden. Der Microsoft Authenticator funktioniert nicht.
 
-2) **Check phone settings:** In the **AAPS** phone settings go to Apps > AndroidAPS > Permissions  > SMS  > Allow SMS
+2) **Überprüfe die Smartphone-Einstellungen:** Öffne auf dem **AAPS**-Smartphone Einstellungen > Apps > AAPS > Berechtigungen > SMS  > Zulassen
 
-![image](images/remote-control-08.png)
+![grafik](images/remote-control-08.png)
 
-3) **Date and time synching:** In both the **AAPS** phone and the caregiver phone, check the date and time are synched. Exactly how you do this depends on your specific handsets, you may need to try out different settings.
+3) **Datum und Uhrzeit synchronisieren:** Überprüfe sowohl auf dem **AAPS**-, als auch auf dem Eltern-Smartphone, dass das Datum und die Uhrzeit synchron sind. Wie Du das genau machen kannst, hängt vom jeweiligen Smartphone ab. Du musst möglicherweise verschiedene Einstellungen ausprobieren.
 
-Example (for Samsung S23 handset): Settings – general management – date and time- automatic date and time
+Beispiel (Samsung S23): Einstellungen - Allgemeine Verwaltung - Datum und Uhrzeit - Datum und Uhrzeit automatisch stellen
 
-Some options may be greyed out, due to needing admin via a family account if the phone has been set up as a child account. This date and time setting is called “set automatically” on a caregiver/parent iPhone. If you are not sure if you have synched the handsets, don’t worry, you can set up the SMS commands and troubleshoot afterwards if it seems to be causing problems (ask for help if needed).
+Einige Optionen können ausgegraut sein, wenn das Smartphone als Kinder-Smartphone aufgesetzt ist, und daher einen Administrator des Familienkontos benötigt. Diese Datums- und Zeiteinstellung wird auf einem (Eltern-) iPhone „automatisch“ gesetzt. Wenn Du Dir nicht sicher bist, ob beide Smartphones synchronisiert sind, ist das nicht schlimm. Wenn es deswegen zu Problemen kommen sollte, kannst Du das auch nach dem Einrichten der SMS-Befehle lösen (Bitte um Hilfe, wenn Du sie benötigen solltest). Sie sich nicht sicher sind, ob Sie die Telefone synchronisiert haben, machen Sie sich keine Sorgen, Sie können die SMS-Befehle einrichten und danach beheben, falls es zu Problemen zu führen scheint (fragen Sie bei Bedarf um Hilfe).
 
-4) **AAPS settings:**
+4) **AAPS-Einstellungen:**
 
-i) Now that the phone settings have been checked, in the **AAPS** app itself, use the left hand hamburger menu to navigate to Config Builder:
+i) Jetzt, wo Deine Smartphone-Einstellungen geprüft sind, gehe in der **AAPS**-App auf das linke Hamburger Menü und tippe auf KONFIGURATION:
 
-![image](images/remote-control-09.png)
+![grafik](images/remote-control-09.png)
 
-ii) Enable “SMS communicator” by checking the boxes, then click the “cog” to get to the SMS communicator preferences screen:
+ii) Aktiviere den "SMS-Kommunikator“ durch Markieren des Kästchens, und tippe dann auf das "Zahnrad", um zu den SMS-Kommunikator-Einstellungen zu gelangen:
 
-![image](images/remote-control-10.png)
+![grafik](images/remote-control-10.png)
 
-_Note - as an alternative route to Config Builder, you can also use the new “SMS Communicator tab” at the top of the AAPS screen, then right click on the custom right hand hamburger menu for that page, to get to the SMS communicator preferences screen._
+_Hinweis - Ein anderer Weg zu den SMS-Kommunikator-Einstellungen führt über das 3-Punkte-Menü oben rechts._
 
-iii) On the preferences screen enable “allow remote commands via SMS”:
+iii) Aktivieren in den Einstellungen die Option "Erlaube Fernsteuerung per SMS":
 
-![image](images/remote-control-11.png)
+![grafik](images/remote-control-11.png)
 
-iv) Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
+iv) Gebe die Rufnummer des/der Eltern-Smartphone(s) ein. Stelle die Landesvorwahl wie im Beispiel unten gezeigt und entferne die erste „0“ der Vorwahl (internationales Format):
 
-UK phone number: +447976304596
+UK Telefonnummer: +447976304596
 
-US phone number: +11234567890
+US-Telefonnummer: +11234567890
 
-FR phone number:  +33612344567
+DE Telefonnummer: +491721234567
 
 _etc._
 
-Note that the “+” in front of the number may or may not be required based on your location. To determine this, send a sample text which will show the received format in the SMS Communicator tab.
+Bitte beachte, dass je nach Deinem Standort ein vorangestelltes "+" erforderlich sein kann. Um das herauszufinden kannst Du eine Testnachricht senden und auf dem SMS-Kommunikator-Tab nachschauen, welches Format die Telefonnummer hat.
 
-If you have more than one phone number to add, separate them by semicolons, with NO space between numbers (this is critical!). Select “OK”:
+Möchtest Du mehr als eine Rufnummer hinterlegen, müssen diese durch ein Semikolon und OHNE Leerzeichen (das ist wichtig!) getrennt werden. Wähle "OK":
 
 
-![image](images/remote-control-12.png)
+![grafik](images/remote-control-12.png)
 
-v) Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
+v) Wähle eine PIN aus, die Du (und alle Betreuenden) beim Senden eines SMS-Befehls am Ende des Authentifizierungscodes anhängst.
 
-PIN requirements are:
+Anforderungen an die PIN sind:
 
-•3 to 6 digits
+•3 bis 6 Ziffern
 
-•not the same digits (_i.e._ 1111 or 1224)
+•unterschiedliche Ziffern (_d.h._ 1111 oder 1224)
 
-•not sequential numbers (_i.e._ 1234)
+•keine aufsteigenden Reihen (_d.h._ 1234)
 
-![image](images/remote-control-13.png)
+![grafik](images/remote-control-13.png)
 
-vi) On the preferences screen select “Authenticator setup”
+vi) Wähle "Konfiguration der Authenticator App" in den SMS-Kommunikator-Einstellungen aus
 
-●   Follow the step-by-step instructions on the screen.
+● Folge den Anweisungen auf dem Bildschirm.
 
-●   Open your installed authenticator app on the _caregiver’s phone_ set up a new connection and
+● Öffne die auf dem _Eltern-/Betreuenden-Smartphone_ installierte Authenticator App und füge ein neues Konto bzw. eine neue Verbindung hinzu
 
-●   Use the caregiver phone to scan the QR code provided by **AAPS**, when prompted.
+●   Scanne den von **AAPS** angezeigten QR-Code mit dem Eltern-/Betreuenden-Smartphone, wenn Du dazu aufgefordert wirst.
 
-●   Test the one-time passcode from the authenticator app on the caregiver phone followed by your PIN:
+●   Teste das Einmal-Passcode (Deine PIN am Ende ergänzen) der Authenticator App auf dem Eltern-/Betreuenden-Smartphone:
 
 Beispiel:
 
-The token from the authenticator app is 457051
+Der von der Authenticator angezeigte Einmal-Passcode ist 457051
 
-Your mandatory PIN is 2401
+Deine zwingend erforderliche PIN ist 2401
 
-Code to check: 4570512401
+Der zu testende Code ist damit: 4570512401
 
-If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. The process is now complete, there is no “OK” button you need to press after entering the code:
-
-
-![image](images/remote-control-14.png)
-
-You should now be set up with SMS commands.
-
-### First steps using SMS commands
-
-1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the AAPS phone. You should get a response similar to that shown here:
-
-![image](images/remote-control-15.png)
-
-2)  Now try an SMS command that requires the authenticator. To do this, send a text from the caregiver’s phone with the required command to the**AAPS** phone (_e.g._ “target hypo”). The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by an additional secret **PIN** known only to caregivers/followers (a string of ten digits in total, assuming your PIN is only 4 digits).
-
-This example is shown below, with the SMS command “target hypo” to set a hypo temp target:
-
-●   In this example, your PIN is 1289
-
-●   Code from your authenticator app is 274127
-
-●   When prompted, text 2741271289
-
-Commands must be sent in English. The response should be in your local language. When you try sending an SMS command for the first time, try it in the presence of the AAPS phone, to see how it works:
-
-![image](images/remote-control-16.png)
-
-The caregiver’s phone will receive a SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully. There are several possible reasons the command may not be successful:
-
-●   SMS commands setup isn’t complete/correct
-
-●   You sent a command which had an incorrect format (like “disconnect pump 45” instead of “pump disconnect 45”)
-
-●   You used an incorrect, or expired authenticator code (it is usually good to wait a few seconds for a fresh code, if the current one is about to expire)
-
-●   The code+PIN was OK, but there was a delay in the SMS leaving/arriving, which led AAPS to calculate that the authenticator code had expired
-
-●   The AAPS phone is out of range/contact with the pump
-
-●   The system is already busy delivering a bolus
-
-If your command is successful, you will receive a reply to confirm this. If there is a problem you will receive an error message.
-
-Common errors are shown in the examples below:
-
-![image](images/remote-control-17.png)
-
-### Additional safety notes on SMS commands
-
-The default minimum time delay between bolus commands is 15 minutes. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
-
-If you want to remove the ability of a caregiver phone to send SMS commands, use the emergency button “RESET AUTHENTICATORS” in AAPS (see preferences screenshot above, link) or send the SMS command “SMS stop”. By resetting authenticators you make ALL the caregivers' phones invalid. You will need to set them up again.
-
-### Delivering mealtime boluses through SMS commands
-
-Remote bolusing of insulin can _only_ be done via **SMS Commands**, it cannot be actioned through NightScout or AAPSClient. Carbs however, can be announced through any of the three methods. It is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
-
-1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to using the “syringe” icon in **AAPS**. 2)  Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to using the “carbs” tab in **AAPS**.
-
-To avoid hypos, it is a good idea to start conservatively, by bolusing **less insulin** than would be needed according to your carb ratio, because you are not taking into account the current glucose level or glucose trend.
-
-**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can use a combination of Nightscout or AAPSClient with SMS commands. Carbs can be announced through Nightscout without any authentication (see instructions sub section below) , and are therefore quicker than SMS commands.
-
-### SMS commands troubleshooting and FAQ
-
-#### Q: What _can’t_ we do with SMS commands?
-
-1)  **You cannot set a _temporary_ profile switch** (so for example, setting “profile exercise“ for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profiles switches can instead be set through Nightscout or AAPSClient.
-
-2)  **You cannot cancel automations** or **set user-defined targets** but there are approximate solutions: As an example, imagine the normal profile target is 5.5. You have set an automation in AAPS, to always set a high target of 7.0 between 2.30pm and 3.30pm because of a sports class in school, and a condition of the automation is that “no temp target exists”. This week, you have been told at short notice that the sports class is cancelled, and is being replaced by a pizza-eating session, but your kid is already at school with the AAPS phone. If the high temporary target of 7.0 is started by the automation and you cancel it (on the AAPS phone, or remotely) the conditions for the automation are still met and **AAPS** will simply set the high target again, a minute later.
-
-**If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min under the Actions Tab or by pressing on the target tab. This would prevent the automation from setting the high target of 7.0.
-
-**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use **AAPSClient** or Nightscout to do this.
-
-#### Q: What happens if I change my mind about a command I have just sent?
-
-**AAPS** will only deliver on the most recent command. So, if you type “bolus 1.5”, and then, without authenticating, you send a new command “bolus 1”, it will ignore the earlier 1.5 command. **AAPS** will always send the caregiver's phone a response to confirm what the SMS command is before you are prompted to enter the authentication code, as well as a response following the action.
-
-#### Q: Why didn't I get a response to an SMS command?
-
-It could be for one of these reasons:
-
-1)  The message has not got through to the phone (network issues). 2)  **AAPS** is still in the process of processing the request (_e.g._ a bolus, which can take some time to deliver depending on your bolus rate). 3)  The AAPS phone does not have good bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the AAPS phone).
-
-#### Q: How can I stop a command once it has been authenticated?
-
-You can't. However, you can cancel a bolus sent by SMS on the **AAPS** phone itself, by simply cancelling it on the bolusing popup, if you are quick. Many SMS commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate unintended effects if a mistake is made.
-
-For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
-
-#### Q. Why am I getting multiple SMS texts of the same message?
-
-If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. Das könnte zum Beispiel xDrip+ sein. If so, please ensure that xDrip+ (or any other app) does not upload treatments to NightScout.
-
-#### Q. I’ve just set up SMS commands and I am now getting far too many text messages. Can I reduce the frequency, or make them stop?
-
-Using SMS commands may generate a lot of automated messages from the AAPS phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your AAPS phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include Whatsapp, Lime, Telegram, and Facebook Messenger.
-
-#### Q. Why are SMS commands not working on my Samsung phone?
-
-There was a report of SMS commands stopping after an update on a Samsung Galaxy S10 phone. This was solved by disabling ‘send as chat message’.
+Wenn der Eingabe richtig ist, ändert sich der rote Text „FALSCHE PIN“ automatisch in ein grünes „OK“. Der Prozess ist damit abgeschlossen, es gibt keine "OK"-Taste, der nach der Eingabe des Codes gedrückt werden muss:
 
 
-![image](images/remote-control-18.png)
+![grafik](images/remote-control-14.png)
 
-#### Q. How can I fix issues with the Android Messages App?
+Es ist nun alles für die Nutzung der SMS-Befehle eingerichtet.
 
-If you are having issues sending or receiving SMS commands with the Android Messages app, disable end-to-end encryption on both caregiver and dependent’s phones:
+### Erste Schritte bei der Nutzung der SMS-Befehle
 
-●   Open the specific SMS conversation in Messages
+1) Um zu überprüfen, ob alles richtig eingerichtet ist, teste die Verbindung, indem Du „bg“ als SMS-Nachricht vom Eltern-Smartphone an das AAPS-Smartphone schickst. Die Rückmeldung sollte in etwa so aussehen:
 
-●   Select the options ellipsis in the top right corner
+![grafik](images/remote-control-15.png)
 
-●   select “Details”
+2) Probiere nun einen SMS-Befehl aus, der den Authentifikator erfordert. Sende dazu eine SMS vom Eltern-Smartphone an das **AAPS**-Smartphone (_z. B._ „target hypo“). Du wirst auf dem Eltern-Smartphonen nun dazu aufgefordert den **6-stelligen Authenticator Code** aus der Authenticator App ergänzt um die geheime **PIN**, die nur den Eltern/Followern bekannt sein darf, einzugeben (10 Stellen insgesamt, davon 6 Stellen Passcode und 4 Stellen PIN, bei einer vierstelligen PIN).
 
-●   Activate “Only send SMS and MMS messages”
+Das Beispiel unten zeigt den SMS-Befehl "target hypo", um ein temporäres Ziel HYPO zu setzen:
+
+● In diesem Beispiel ist Deine PIN 1289
+
+Der von der Authenticator angezeigte Einmal-Passcode ist 274127
+
+●   Sende 2741271289, wenn Du dazu aufgefordert wirst
+
+Die Befehle müssen in Englisch gesendet werden. Die Antwort sollte in Deiner Landessprache erfolgen. Wenn Du das allererste Mal einen SMS-Befehl schicken möchtest, schaue, dass das AAPS-Smartphone neben Dir liegt, sodass Du auf beiden Geräten nachverfolgen kannst was passiert:
+
+![grafik](images/remote-control-16.png)
+
+Das Eltern-/Betreuenden-Smartphone wird eine SMS von **AAPS** erhalten, die bestätigt, dass der SMS-Befehl erfolgreich remote ausgeführt wurde. Es gibt verschiedene Gründe, warum der Befehl möglicherweise nicht erfolgreich war:
+
+● Die Einrichtung der SMS-Befehle ist nicht vollständig/korrekt
+
+● Der Befehl wurde im falschen Format geschickt (z. B. „disconnect pump 45" anstelle von "pump disconnect 45")
+
+●   Du hast eine falschen oder abgelaufenen Authenticator Code genutzt (es hat sich bewährt einige Sekunden auf einen neuen Code zu warten, wenn der andere nur noch kurz gültig sein sollte)
+
+●   Der Code + PIN waren richtig, aber die SMS-Kommunikation ist verzögert, sodass AAPS angenommen hat, dass der Code abgelaufen ist
+
+● Das AAPS-Smartphone hat keine Verbindung zur Pumpe
+
+● Es läuft zeitgleich eine Bolusabgabe
+
+Wenn Dein SMS-Befehl erfolgreich ausgeführt ist, wird Dir das durch eine Antwort-SMS bestätigt. Du wirst eine Fehlermeldung erhalten, wenn ein Problem aufgetreten sein sollte.
+
+Die Beispiele zeigen häufiger auftretende Fehler:
+
+![grafik](images/remote-control-17.png)
+
+### Zusätzliche Sicherheitshinweise zu SMS-Befehlen
+
+Der voreingestellte Mindestabstand zwischen zwei Bolus-Befehlen beträgt 15 Minuten. Aus Sicherheitsgründen musst Du mindestens zwei berechtigte Rufnummern hinterlegt haben, um diesen Wert verändern zu können. Wenn Du versuchst innerhalb von 15 Minuten einen weiteren Bolus remote abzugeben, erhältst Du die Fehlermeldung "Bolusabgabe aus der Ferne nicht möglich. Versuch es später erneut.”
+
+Wenn Du einem Betreuenden-Smartphone die Berechtigung zum Senden von SMS-Befehlen entziehen möchtest, sende den SMS-Befehl "SMS stop" oder tippe auf "AUTHENTIFIKATOREN ZURÜCKSETZEN" (s. Screenshot der SMS-Kommunikator-Einstellungen oben, LINK). Durch das Zurücksetzen der Authentifikatoren werden ALLE Eltern-/Betreuenden-Smartphones ungültig. Diese müssen anschließend neu eingerichtet werden.
+
+### Mahlzeitenbolus über SMS-Befehle abgegeben
+
+Ein Remote-Bolus kann _ausschließlich_ durch **SMS-Befehle** abgegeben werden. Er kann nicht über Nightscout oder den AAPSClient ausgelöst werden. Kohlenhydrate jedoch, können auf allen drei Wegen angekündigt werden. Bolus-Befehle und Kohlenhydrate können nicht in einer gemeinsamen SMS gesendet werden. Diese Befehle müssen wie folgt gesendet werden:
+
+1)  Den Bolus über einen SMS-Befehl (_z. B. _“bolus 2” für einen Bolus von 2 IE) auszulösen verhält sich genauso, als ob das "Spritze"-Symbol in **AAPS** genutzt werden würde. 2) Sende die Kohlenhydrate (_z. B._ “carbs 20” wird 20g Kohlenhydrate ankündigen). Das verhält sich genauso, als ob das "Kohlenhydrate"-Symbol in **AAPS** genutzt werden würde.
+
+Um Hypos zu vermeiden, solltest Du zu Beginn **weniger Insulin** bolen, als es Dein Mahlzeitenfaktor vorgeben würde. Das wird gemacht, da in der Regel weder der aktuelle Glukosewert noch der aktuelle Glukosetrend berücksichtigt sind.
+
+**Die Reihenfolge, in der Du die SMS sendest, ist wichtig**. Wenn Du eine große Kohlenhydratmenge (egal auf welchem Weg) ankündigst und SMB aktiviert sind, wird **AAPS** sofort darauf mit einem (Teil)-Bolus reagieren. Wenn Du _nach_ der Ankündigung der Kohlenhydrate, dann versuchst einen Bolus abzugeben, wirst Du eine frustrierende Verzögerung erfahren und eine "Bolusabgabe läuft"-Meldung erhalten. Du wirst dann überprüfen müssen, wie viel Insulin bereits als SMB abgegeben wurde. Oder wenn Dir gar nicht auffällt, dass SMBs abgegeben wurden und Dein eigener Bolus ebenfalls durchgelaufen ist und damit insgesamt zu viel Insulin für die Mahlzeit gebolt wurde. Deshalb schicke, beim remote bolen einer Mahlzeit, den Bolus immer _vor_ der Kohlenhydratankündigung. Wenn Du magst, kannst Du Nightscout, AAPSClient und SMS-Befehle miteinander kombinieren. Kohlenhydrate können ohne Authentifizierung über Nightscout angekündigt werden (siehe Anleitung weiter unten) und sind daher schneller als SMS-Befehle.
+
+### Problembehandlung von SMS-Befehlen und FAQ
+
+#### F: Was kann mit SMS-Befehlen _nicht_ gemacht werden?
+
+1) Ein **zeitlich begrenzter Profilwechsel_ (z. B. ein "Trainings-Profil" für 60 Minuten setzen) ist _nicht über SMS-Befehle möglich**. Ein dauerhafter Profilwechsel auf ein "Trainings-Profil" ist allerdings möglich. Temporäre Profilwechsel können stattdessen über Nightscout oder den AAPSClient erfolgen.
+
+2)  **Automatisierungen** abgebrochen werden oder **benutzerdefinierte Ziele** können nicht gesetzt werden. Es gibt aber vergleichbare Lösungen: Stell' Dir beispielsweise vor, dass in Deinen normalen Profil das Glukoseziel 5.5 bzw. 100 sei. Du hast in AAPS eine Automatisierung erstellt, die in der Nacht zwischen 2:30h und 3:30h wegen des Sportunterrichts ein hohes Ziel von 7.0 bzw. 126 setzt, wenn "temporäres Ziel nicht vorhanden" als Bedingung zutrifft. Dein Kind ist mit dem AAPS-Smartphone bereits in der Schule und in dieser Woche wird der Sportunterricht kurzfristig abgesagt und durch eine Pizza-Party ersetzt. Wenn das hohe temporäre Ziel von 7.0 bzw 126 durch die Automatisierung gesetzt wurde und Du dieses Ziel (am AAPS-Smartphone oder remote) abbrichst, ist die Bedingung weiterhin erfüllt und **AAPS** wird einfach in der nächsten Minute das hohe temporäre Ziel erneut setzen.
+
+**Wenn Du Zugriff auf das AAPS Smartphone hättest**, könntest Du die Automatisierung deaktivieren/anpassenoder wenn Du das nicht machen möchtest, kannst Du einfach für 60 Minuten ein neues temporäres Ziel von 5.6 (bzw. 100 mg/dl) im Reiter AKTIONEN oder durch langes Drücken auf den Ziele-Button. Dadurch wird die Automatisierung daran gehindert, ein hohes Ziel von 7.0 (bzw. 126 mg/dl) zu setzen.
+
+**Wenn Du keinen Zugriff auf das AAPS-Telefon hast**, kannst Du mit SMS-Befehlen eine ähnliche Lösung erreichen: Mit dem Befehl "target meal" kannst Du beispielsweise ein Ziel von 5.0 für 45 Minuten setzen (andere voreingestellte Ziele sind Aktivität 8.0 ( bzw. 144 mg/dl) oder Hypo, siehe Tabelle). Mit SMS-Befehlen kannst Du allerdings keinen _selbstdefinierten_ Zielwert angeben (z. B. von 5.6 für 60 Minuten), dazu brauchst Du den **AAPSClient** oder Nightscout.
+
+#### F: Was passiert, wenn ich es mir nach dem Senden eines Befehls anders überlege?
+
+**AAPS** führt nur den letzten (aktuellen) Befehl aus. Wenn Du also "bolus 1.5" eingibst und dann ohne Authentifizierung einen neuen Befehl „bolus 1“ hinterherschickst, wird der vorherige Befehl (bolus 1.5) ignoriert. **AAPS** sendet dem Eltern-/Betreuenden-Smartphone zunächst immer eine Antwort zur Bestätigung des auszuführenden Befehls, bevor Du dazu aufgefordert wirst, den Authentifizierungscode einzugeben. Danach wird eine Antwort zur ausgeführten Aktion geschickt.
+
+#### F: Warum habe ich keine Antwort auf einen SMS-Befehl erhalten?
+
+Es könnte aus einem dieser Gründe sein:
+
+1) Die Nachricht hat es nicht bis zum AAPS-Smartphone geschafft (Netzwerk-Probleme). 2)  **AAPS** verarbeitet noch eine Anfrage (_z. B._ einen Bolus, der je nach Insulinmenge einige Zeit zur Abgabe benötigt). 3) Das AAPS-Smartphone hat beim Empfang des Befehls eine schwache Bluetooth-Verbindung zur Pumpe und das Kommando konnte nicht ausgeführt werden (dies löst normalerweise einen Alarm auf dem AAPS-Smartphone aus).
+
+#### F: Wie kann ich einen Befehl stoppen, nachdem er bereits authentifiziert wurde?
+
+Er kann nicht gestoppt werden. Du kannst allerdings eine Bolusgabe, die per SMS geschickt wurde direkt auf dem **AAPS**-Smartphone abbrechen, indem Du im Bolus-Popup auf "Abbrechen" tippst. Dazu musst Du aber schnell sein. Viele Befehle (abgesehen von Bolus- und Kohlenhydrat-Ankündigungen) können entweder leicht rückgängig gemacht werden oder deren ungewollte Auswirkungen können abgemildert werden.
+
+Bei Fehlern beim Bolen und Kohlenydrat-Ankündigungen, kannst Du trotzdem handeln. Wenn Du beispielsweise 20 g Kohlenhydrate angekündigt hast, aber Dein Kind isst nur 10 g und Du (oder ein verfügbarer Betreuer) kann die "Behandlung" nicht direkt auf dem **AAPS**-Smartphone löschen, kannst Du ein hohes temporäres Ziel oder ein reduziertes Profil setzen, um **AAPS** weniger aggressiv arbeiten zu lassen.
+
+#### F. Warum erhalte ich auf meinen SMS-Befehl mehrere Antwort-Nachrichten?
+
+Wenn Du Antworten mehrfach erhältst (_z. B._ auf einen Profilwechsel), hast Du möglicherweise versehentlich einen Zirkelbezug mit anderen Apps erzeugt. Das könnte zum Beispiel xDrip+ sein. Falls dies der Fall ist, stelle sicher, dass xDrip+ (oder eine andere App) keine Behandlungsdaten zu Nightscout hochlädt.
+
+#### F. Ich habe gerade die SMS-Befehle eingerichtet und bekomme jetzt viel zu viele SMS-Nachrichten. Kann ich die Häufigkeit reduzieren oder stoppen?
+
+Die Nutzung der SMS-Befehle kann viele automatisierte Nachrichten vom AAPS-Smartphone auf das Smartphone der Eltern/Betreuenden auslösen. Du wirst auch Nachrichten für aktive **AAPS**-Automatisierungen (z. B. “Basal-Profil in der Pumpe aktualisiert”) erhalten. Eine SMS-Flat für den Handyvertrag des AAPS-Smartphones und des Eltern-/Betreuenden-Smartphones wird sehr empfohlen, wenn viele SMS verschickt werden. Es kann auch hilfreich sein, SMS-Benachrichtigungen, Alarme und Vibrationen auf allen Smartphones zu deaktivieren. SMS-Befehle können nur mit den entsprechenden bestätigenden SMS genutzt werden. Falls Du direkt mit Deinem Kind (wenn es alt genug ist) kommunizieren möchtest, solltest Du etwas anderes als SMS dazu nutzen. **AAPS**-Elterrn/Betreuende nutzen daher häufig andere Kommunikations-Apps wie WhatsApp, Lime, Telegram und den Facebook-Messenger.
+
+#### F. Warum funktionieren SMS-Befehle auf meinem Samsung-Smartphone nicht?
+
+Es gab Hinweise, dass nach einem Update des Samsung Galaxy S10 die SMS-Befehle nicht mehr funktioniert haben. Dies konnte durch Abschalten der Option 'als Chat Message senden' behoben werden.
+
+
+![grafik](images/remote-control-18.png)
+
+#### F. Wie kann ich Probleme mit Android Nachrichten App beheben?
+
+Wenn Du Probleme beim Senden oder Empfangen der SMS mit der Android Nachrichten App haben solltest, deaktiviere die Ende-zu-Ende-Verschlüsselung sowohl auf dem Smartphone des Kindes, als auch auf dem 'Follower'-Smartphone:
+
+●   Öffne den entsprechenden SMS-Nachrichtenverlauf
+
+●   Klicke auf die drei Punkte in der oberen rechten Ecke
+
+Wähle DETAILS aus
+
+Aktiviere NUR ALS SMS/MMS SENDEN
 
 (aapsclient)=
 ## 2) AAPSClient
 
-_Note that **NSClient** has been replaced by **AAPSClient** for AAPS version 3.2 and higher, check the version release notes for more information._
+_Ab AAPS Version 3.2 (oder höher) ersetzt der **AAPSClient** den **NSClient**. Details findest Du in den Release Notes._
 
-For versions of **AAPS** which are older than AAPS 3.2, if you have a caregiver/parent Android phone you can directly download and install the [**AAPSClient**](https://github.com/nightscout/AndroidAPS/releases/) apk. **AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver tabs that will remotely action commands in **AAPS**:
+Wenn Du ein Eltern-/Betreuenden-Smartphone haben solltest und eine ältere **AAPS**-Version (vor 3.2) benötigst, kannst Du die [**AAPSClient**](https://github.com/nightscout/AndroidAPS/releases/)-App direkt herunterladen und installieren. Der **AAPSClient** sieht **AAPS** sehr ähnlich, und stellt den Eltern/Betreuenden einen Reiter zur Verfügung, auf dem Aktionen remote in **AAPS** ausgeführt werden können:
 
-![image](images/remote-control-19.png)
+![NSCLIENT_ 2024-05-17 134512](https://github.com/openaps/AndroidAPSdocs/assets/137224335/6c66a27c-21d7-4c43-ac66-001669c0634f)
 
-There are 2 versions of the apk that can be [downloaded from here](https://github.com/nightscout/AndroidAPS/releases/),  **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below.
 
-**AAPSClient** can be installed on a single phone or multiple follower phones (_i.e._ parent 1’s follower phone and parent 2’s follower phone) in order for both caregivers to be granted access and remote control a patient's **AAPS** phone.
+Es gibt zwei Versionen der apk, die [heruntergeladen werden können](https://github.com/nightscout/AndroidAPS/releases/):  **AAPSClient** & **AAPSClient2**, die einen kleinen aber feinen Unterschied, der unten erklärt wird, haben.
 
-Should a caregiver require a second copy of **AAPSClient** to remote control a additional patient with a nightscout account, they should install **AAPSClient2** in addition to **AAPSClient**. **AAPSClient 2** allows a single caregiver to install the **AAPSClient** apk twice on the same follower phone in order to be given simultaneous access and remote control to two different patients.
+**AAPSClient** can be installed on a single phone or multiple follower phones (i.e. parent 1’s follower phone and parent 2’s follower phone) in order for both caregivers to be granted access and remote control a patient's **AAPS** phone.
 
-To download **AAPSClient**, navigate to [here](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
+Should a caregiver require a second copy of **AAPSClient** to remote control an additional patient with a Nightscout account, they should install **AAPSClient2** in addition to **AAPSClient**. Durch den **AAPSClient 2** ist es möglich, dass eine betreuende Person die **AAPSClient** apk zweimal auf dem Follower-Smartphone installieren kann und so den Daten von zwei Patienten gleichzeitig folgen kann.
 
-![image](images/remote_control_and_following/AAPSClient_download_02.png)
+Um den **AAPSClient** herunterzuladen, navigiere [hierhin](https://github.com/nightscout/AndroidAPS/releases/) und klicke auf das Element **“app-AAPSClient-release_x.x.x.x”** (die im Screenshot unten gezeigte Version kann eventuell älter sein):
 
-Then go to  _downloads_ on your computer. On Windows, -downloads_ will show the right hand ribbon:
+![grafik](images/remote_control_and_following/AAPSClient_download_02.png)
 
-![image](images/remote_control_and_following/AAPSClient_download_folder_03.png)
+Gehe dann in Deinen _Downloads_-Ordner auf Deinem Computer. Unter Windows zeigt -downloads- das rechte Menüband an:
 
-Once downloaded, click _show in folder_ to locate the file.
+![grafik](images/remote_control_and_following/AAPSClient_download_folder_03.png)
 
-The **AAPSClient** apk can now be either:
+Nach dem Herunterladen klicke auf _im Ordner anzeigen_, um die Datei dort zu finden.
 
-Transferred by a USB cable onto the follower phone; or Dragged into Google drive folder, and then added onto the follower phone by clicking on the "app-AAPSClient-release" file.
+Die **AAPSClient** apk kann nun entweder:
 
-### Features of AAPSClient include:
+Mit einem USB-Kabel auf das Follower-Smartphone übertragen werden, oder in einen Google-Drive Ordner gezogen werden und dann auf das Follower-Smartphone durch klicken auf app-"AAPSClient-release-"-Datei gebracht werden.
+
+### Synchronization- AAPSClient and AAPS set up (for Version 3.2.0.0 above)
+
+Once __AAPSClient__ apk is installed on the follower phone, the user must ensure their ‘Preferences’ in Config Builder are correctly set up and aligned with __AAPS__ for Nightscout 15 (see Release Notes [here](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Update-to-new-version.html)). The example below provides Synchronization guidance for NSClient and NSClientV3 using Nightscout15 but there are other options available with __AAPS__ (e.g xDrip+).
+
+Within the ‘Synchronization’ located under ‘Config Builder’, the user can opt for either Synchronization options for both __AAPS__ and follower phone being:
+
+- Option 1: NSClient (also known as ‘v1’) - which synchronises the user’s data with Nightscout; or
+
+- Option 2: NSClientV3 (also referred to as ‘v3’).- which synchronises the user’s data with Nightscout using v3 API.
+
+![AAPS1_Screenshot 2024-05-17 133502](https://github.com/openaps/AndroidAPSdocs/assets/137224335/4bdfed7e-3b2f-4fe8-b6db-6fcf0e5c7d98)
+
+The user must ensure that __both__ the AAPS and AAPS Client phones are synched together by actioning either option for v1 or v3 being:
+
+Option 1: v1 for both phones:
+
+- Enter your Nightscout URL
+
+- Enter your API secret
+
+Option 2: v3 for both phones:
+
+- Enter your Nightscout URL under NSClientV3 tab
+
+- Enter your NS access token under ‘Config Build’ tab. Please follow the notes [here](https://nightscout.github.io/nightscout/security/#create-a-token)
+
+If selecting Websockets (which is optional) ensure this is activated or deactivated for both __AAPS’__ and __AAPSClient’s__ phone. Activating Websockets in __AAPS__ and not within __AAPSClient__ (and vice versa) will only cause __AAPS__ to malfunction. By enabling websockets will allow for faster synchronization with Nightscout but may lead to more phone battery consumption.
+
+
+
+![WB2_Screenshot 2024-05-17 140548](https://github.com/openaps/AndroidAPSdocs/assets/137224335/8d9a7dc5-b3ea-4bf3-9286-313f329b1966)
+
+
+Users should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connected’ under the ‘NSClient' tab for each phone, and that ‘Profile Switches’ or ‘Temp Target' can be correctly activated in __AAPS__ once selected in __AAPSClient__.
+
+Users should also ensure that carbs are logged in both ‘Treatments’ within both __AAPSClient__ and __AAPS__ otherwise this could indicate a malfunction within the user’s set up.
+
+### AAPSClient-Funktionen sind unter anderem:
 
 ![Sara's AAPSClient table](images/remote-control-23.png)
 
-**AAPSClient** allows the caregiver to make many of the adjustments that are allowed directly in **AAPS** (excluding insulin boluses) remotely, via the mobile or internet network. The main benefits of **AAPSClient** are the speed and ease with which caregivers/parents can use it to remotely control **APPS**. AAPSClient _can_ be much faster than entering SMS Commands, if delivering a command which would require authentication. Commands entered on **AAPSClient** are uploaded onto Nightscout.
+Mit dem **AAPSClient** kann das Elternteil/Betreuende einen Großteil der Anpassungen direkt in **AAPS** (Ausnahme: Bolusabgabe) über das Mobilfunknetz oder Internet remote vornehmen. Die wichtigsten Vorteile des **AAPSClient** sind die Geschwindigkeit und Einfachheit mit der Eltern/Betreuende **AAPS** remote steuern können. __AAPSClient__ _can_ be much faster than entering SMS Commands, if delivering a command which would require authentication. Befehle, die im **AAPSClient** eingegeben werden, werden nach Nightscout hochgeladen.
 
-Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc) see [release notes for Version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) for further details.
+Eine Remote-Steuerung über die **AAPSClient**-App wird nur dann empfohlen, wenn Deine Synchronisation gut funktioniert (_d. h._ Du hast keine unerwünschten Datenänderungen wie z. B. eigenständige Änderungen von TT, TBR usw.) siehe [Versionshinweise für Version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) für weitere Details.
 
-### AAPSClient with smartwatch options
+### AAPSClient mit Smartwatch-Optionen
 
-A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **AAPSClient** is installed on the parents phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. This will show current BG, loop status and allow carb entry, temp targets and profile changes. It will NOT allow bolusing from the WearOS app. You can read more about Smartwatches [here](smartwatches).
+Eine Smartwatch kann sehr nützlich sein, um bei Kindern **AAPS** zu managen. Es sind einige verschiedene Konfigurationen möglich. Auf einer kompatiblen Smartwatch kann die [AAPSClient WearOS App](https://github.com/nightscout/AndroidAPS/releases/) installiert werden, die mit der AAPSClient-App auf dem Eltern-Smartphone verbunden wird. Damit können der aktuelle Glukosewert und der Loop-Status angezeigt werden. Zusätzlich können dann KH-Einträge vorgenommen werden und auch temporäre Ziele und Profiländerungen aktiviert werden. Die Abgabe eines Bolus ist NICHT über die WearOS App möglich. [Hier](smartwatches) kannst Du mehr über Smartwatches erfahren.
 
 (nightscout)=
 ## 3) Nightscout
 
-As well as Nightscout being a server in “the Cloud”, there is also a dedicated **Nightscout** app which can be downloaded directly from the App Store on your iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](AAPSClient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](link) app from the Playstore.
+Genauso wie es Nightscout als einen Server "in der Cloud" gibt, gibt es auch eine dedizierte **Nightscout**-App, die über den App Store direkt auf Dein iPhone heruntergeladen werden kann. Wenn Du ein Android-Follower-Smartphone hast es gibt keine spezielle Nightscout-App. Du nutzt in diesem Fall am Besten den [**AAPSClient**](AAPSClient). Wenn Du nur folgen möchtest und keine Behandlungen eingeben musst, kannst Du auch die [Nightwatch](link)-App aus dem Play Store herunterladen und installieren.
 
-Once you have installed the **Nightscout** app on your iPhone, open the app and follow the set-up prompts, entering your Nightscout address (see below, left). The form of this may vary depending on how your Nightscout is hosted. (_e.g._ http://youraddresshere.herokuapp.com). Then enter your Nightscout API secret (see below, right). If not prompted for your API password, then you need to enter this by clicking on the padlock at the top of the app:
+Sobald Du die **Nightscout**-App auf Deinem iPhone installiert hast, öffne die App, folge den Anweisungen für die Einrichtung und gib Deine Nightscout-Adresse (siehe links unten) ein. Je nach Anbieter bei dem Deine Nightscout-Seite läuft, kann es etwas anders aussehen. (_z. B._ http://deineadresse.herokuapp.com). Gib dann Dein Nightscout API secret (Passwort) ein (siehe rechts unten). Wenn Du nicht nach Deinem API-Passwort gefragt wirst, klickst Du oben in der App auf das Schloss-Symbol und gibst es dann ein:
 
-![image](images/remote-control-24.png)
+![grafik](images/remote-control-24.png)
 
-More info on setup is available directly from [Nightscout](https://nightscout.github.io/nightscout/discover/)
+Weitere Informationen zur Einrichtung findest Du direkt bei [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
-When you first log in, you will have a very simple display (below, left). Customise the display options, by selecting the “hamburger” in the top right and scrolling down:
+Wenn Du Dich das allererste Mal einloggst, siehst Du eine sehr einfache Ansicht (links unten). Passe die Anzeige an, indem Du das "Hamburger"-Menü oben rechts auswählst und nach unten scrollst:
 
-![image](images/remote-control-25.png)
+![grafik](images/remote-control-25.png)
 
-Scroll down through to “Settings”. You may wish to change the “scale” to “linear” as the default for the BG display is logarithmic, and under “render basal” select “default” so that the pump basal shows up. Continue to scroll down until you get to “show plugins”. You need to make sure “careportal” is checked, and can also select various other metrics (most useful are: IOB, care portal, pump, cannula age, insulin age, basal profile and OpenAPS).
+Scrolle bis zu den „Einstellungen“ herunter. Die Darstellung der Glukosewerte erfolgt standardmäßig "logaritmisch". Das kannst Du unter "Skalierung" auf "Linear" ändern. Um das Basal der Pumpe einzublenden, ändere unter dem Abschnitt "Basalraten-Darstellung" den Wert auf "Standard“. Scrolle weiter herunter bis zum Abschnitt "Zeige Plugins". Wichtig ist, dass dort “Behandlungs-Portal” ausgewählt ist. In diesem Abschnitt kannst Du einige andere Metriken zusätzlich auswählen, von denen Aktives Insulin, Behandlungs-Portal, Pumpe, Kanülenalter, Insulin-Alter, Basalraten-Profil, und OpenAPS am nützlichsten sind.
 
-![image](images/remote-control-26.png)
+![grafik](images/remote-control-26.png)
 
-![image](images/remote-control-27.png)
+![grafik](images/remote-control-27.png)
 
-Importantly, you now need to click “save” at the bottom for these changes to take effect.
+Wichtig ist, dass Du nach Deinen Änderungen unten auf "Speichern“ klickst, damit diese Änderungen wirksam werden.
 
-After pressing “save” the app will return to your main Nightscout screen which will look a little like this:
+Nach dem Drücken von „Speichern“ wird die App zum Hauptbildschirm der Nightscout-App zurückkehren. Es sollte ungefähr so aussehen:
 
-![image](images/remote-control-28.png)
+![grafik](images/remote-control-28.png)
 
-Looking in more detail at the top left menu of the Nightscout app:
+Schauen wir uns das obere linke Menü der Nightscout-App etwas genauer an:
 
 ![nightscout top bar](images/remote-control-29.png)
 
-There is a huge amount of information on the status of the **AAPS** system in the grey tabs (and even more information is revealed if you tap the tab) on this screen:
+Es gibt auf diesem Bildschirm eine Vielzahl an Statusinformationen des **AAPS**-Systems in den grauen Tabs (und noch mehr Informationen werden angezeigt, wenn Du auf die Tabs tippst):
 
-![image](images/remote-control-30.png)
+![grafik](images/remote-control-30.png)
 
-![image](images/remote-control-31.png)
+![grafik](images/remote-control-31.png)
 
-### Sending treatments through the Nightscout app to AAPS
+### Behandlungen über die Nightscout-App an AAPS senden
 
-To set-up sending treatments from the **Nightscout** app to **AAPS**, on the main AAPS phone, go into the **AAPSClient** tab in the **AAPS** app. Open the right-hand dot menu, and open AAPSClientpreferences – synchronisation and select the relevant options in this menu. Set it to receive the different commands (temporary targets, etc) and also to synchronise profiles. If things don’t seem to be synchronised, go back to the AAPSClient tab and select “full synchronisation” and wait a few minutes.
+Um das Senden von Behandlungsdaten aus der **Nightscout**-App an das **AAPS** des Haupt-Smartphones (Master) zu ermöglichen, gehe auf dem **AAPS**-Hauptbildschirm in den Reiter **AAPSClient**. Öffne oben rechts das 3-Punkte-Menü und öffnen dort AAPSClient-Einstellungen – Synchronisierung und wähle die entsprechende Option aus. Aktiviere die Option, damit die verschiedenen Befehle (Temporäre Ziele etc.) empfangen werden können und auch um Profile zwischen Geräten synchronisieren zu können. Wenn es den Anschein haben sollte, dass die Synchronisierung nicht erfolgt, gehe auf den AAPSClient-Reiter und wähle im 3-Punkte-Menü "Vollständige Synchronisation" und warte einige Minuten ab.
 
-Nightscout on your iPhone has all the same functions as Nightscout on your PC. It allows you to send many commands to **AAPS**, but it does not allow you to send insulin boluses.
+Nightscout auf Deinem iPhone hat den vollen Funktionsumfang, wie es auch Nightscout auf Deinem PC hat. Es erlaubt Dir, viele Befehle an **AAPS**zu schicken, aber es erlaubt Dir nicht, einen Bolus abzugeben.
 
-### Cancelling negative insulin to avoid repeat hypos
+### Negatives Insulin löschen, um wiederholte Hypos zu vermeiden
 
-Although you cannot actually bolus insulin, you can however “announce” insulin through Nightscout as a “correction bolus”, although it is not delivered. Because AAPS now takes that fake insulin bolus into account, announcing insulin actually works to make AAPS _less aggressive_, and can be useful for cancelling negative insulin and preventing lows in the event that your profile has been too strong (for example due to prior exercise). You will want to check this for yourself in the presence of the **AAPS** phone, in case your **Nightscout** setup differs.
+Auch wenn Du keinen eigentlichen Bolus abgeben kannst, kannst Du eine Insulingabe durch Nightscout als Korrekturbolus "ankündigen". Weil AAPS ab diesem Zeitpunkt diesen Fake-Bolus berücksichtigt, führt die faktisch dazu, dass AAPS _weniger aggressiv_ reagiert. Das kann, wenn Dein Profil (z. B. wg. sportlicher Aktivität) zu stark war, helfen, um negatives Insulin auszugleichen und so niedrige Werte zu verhindern. Falls Dein **Nighscout**-Setup davon abweichen sollte, solltest Du das mit dem **AAPS**-Smartphone in Deiner Nähe genau prüfen.
 
 ![24-10-23, cancel negative insulin NS](./images/0af1dbe4-8aca-466b-816f-8e63758208ca.png)
 
 
-Some of the most useful **Nightscout** commands are described in the table below.
+Einige der hilfreichsten **Nightscout**-Befehle sind in der unten stehenden Tabelle beschrieben.
 
-#### Nightscout command table
+#### Nightscout Befehls-Tabelle
 
-![image](images/remote-control-33.png)
+![grafik](images/remote-control-33.png)
 
-Read more about **Nightscout** options [here](https://nightscout.github.io/)
+Mehr zu den **Nightscout**-Optionen kannst Du [hier](https://nightscout.github.io/) nachlesen
 
-### Tips for getting the most out of the Nightscout app
+### Tipps, um das Beste aus der Nightscout-App herauszuholen
 
-1). If you get “stuck” on a page and want to be able to see the main screen again, just click “refresh” (bottom middle) and this will take you back to the **Nightscout** homepage with the BG graph.
+1). Wenn Du auf einer Seite "hängenbleibst" und zum Hauptbildschirm zurückkehren möchtest, klicke einfach auf „Aktualisieren“ (unten in der Mitte). Das bringt Dich zurück auf den **Nightscout**-Startbildschirm mit der Anzeige der Glukosewerte.
 
-To see the current profile which is running on the phone, press the various icons on the screen above the graph. More info (current carb ratio, sensitivity and timezone etc.) can be seen by pressing “basal” and “OpenAPS” gives info about the profile and current target etc. Both the phone battery% and the pump battery % can also be monitored. BWP gives information on what the algorithm thinks will happen in the future, given the IOB and COB.
+Wenn Du das aktuell auf dem Smartphone laufende Profil sehen möchtest, drücke auf die verschiedenen Symbole oberhalb des Diagramms. Zusatzinformationen (Mahlzeitenfaktoren, Insulin-Empfindlichkeit und Zeitzone etc.) erhältst Du, indem Du auf "Basal“ drückst und hinter "OpenAPS“ sind Informationen zum Profil und das aktuelle Ziel etc. anzeigbar. Der Ladezustand sowohl des Smartphone-Akkus, als auch der Pumpen-Batterie können ebenfalls angezeigt werden. BWP zeigt die Vorhersage des Algorithmus zur voraussichtlichen Entwicklung des aktiven Insulins (IOB) und der aktiven Kohlenhydrate (COB).
 
-#### Other icons in the menu: what does the pencil (edit) mean?
+#### Andere Menü-Symbole: Was bedeutet der Stift (bearbeiten)?
 
-You can (technically) use the edit pencil to move or delete bolus or correction treatments from the last 48h.
+Du kannst Bleistift (technisch) verwenden, um Bolus- oder Korrekturbehandlungen der letzten 48 Stunden zu verschieben oder zu löschen.
 
-More about this [here](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
+Mehr Details dazu findest Du [hier](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
 
-Although this could potentially be useful for deleting announced (but not bolused for) carbs, in practice it doesn’t currently work well with **AAPS** and we recommend making changes like this via the **AAPS** app directly.
+Obwohl dies potenziell nützlich sein könnte, um angekündigte (aber nicht gebolte) Kohlenhydrate zu löschen, funktioniert es in der Praxis derzeit nicht gut mit **AAPS** und wir empfehlen diese Änderungen direkt über die **AAPS**-App vorzunehmen.
 
 (smartwatches)=
 ## 4) Smartwatches
 
-Smartwatches are becoming increasingly used with **AAPS** _both_ for adults with diabetes and carers/parents of children with diabetes.
+Smartwatches werden mehr und mehr mit **AAPS**,_sowohl_ für Erwachsene mit Diabetes, als Betreuende/Eltern von Kindern mit Diabetes, eingesetzt.
 
-### General advantages of using smartwatches with **AAPS**
+### Generelle Vorteile Smartwatches mit **AAPS** zu nutzen
 
 
-Smartwatches - depending on the model - can be used in many different ways with **AAPS**. They can be used to fully or partly control **AAPS**, or simply to remotely check glucose levels, insulin-on-board, and other parameters.
+Smartwatches können - je nach Modell - auf unterschiedliche Weise mit **AAPS** genutzt werden. Sie können **AAPS**ganz oder teilweise steuern oder einfach verwendet werden, um Glukosewerte, aktives Insulin und andere Parameter remote zu überprüfen.
 
-Integrating a smartwatch with **AAPS** can be useful in many situations, including driving a car or (motor) bike and during exercise. Some people feel that looking at a watch (in a meeting, party, dinner table etc.) is more discreet than looking on a phone. From a security perspective, a smartwatch can also be beneficial while on the move, enabling user to have their **AAPS** phone stored out of sight (like inside a bag), but with the aid of the smartwatch for remote control use.
+Die Integration einer Smartwatch mit **AAPS** kann in vielen Situationen nützlich sein. Z.B. beim Auto- oder Motorradfahren oder bei sportlichen Aktivitäten. Für manche Menschen ist ein kurzer Blick (z. B. in Besprechungen, auf einer Party oder beim Abendessen) auf die Smartwatch deutlich diskreter als der Blick auf das Smartphone. Von einem Sicherheitsaspekt ist eine Smartwatch, wenn man unterwegs ist, besonders hilfreich. Das **AAPS**-Smartphone kann (z. b. in der Tasche) verstaut bleiben und AAPS kann über die Smartwatch gesteuert werden.
 
-### Specific advantages for parents/carers using **AAPS**
+### Besondere Vorteile für **AAPS**-nutzende Eltern/Betreuende
 
-For a child - if their **AAPS**  phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS**  phone. This can be useful, for example, if the **AAPS** phone is hidden away in a pump belt.
+Ist das **AAPS**-Smartphone in der Nähe des Kindes, kann der Betreuende die Smartwatch zur Kontrolle nutzen und Anpassungen über die Smartwatch vornehmen, ohne dass das **AAPS**-Smartphone berührt werden muss. Das kann besonders komfortabel sein, wenn das **AAPS**-Smartphone in einem Pumpengürtel versteckt getragen wird.
 
-A smartwatch can be used either _in addition_ to, or as an _alternative_ to the PHONE-based options for [remote control](remote-control.md) or [following only](following-only.md).
+Eine Smartwatch kann entweder _zusätzlich_ oder als _Alternative_ zu den Smartphone-basierten Optionen verwendet werden, um [remote zu steuern](remote-control.md) oder auch nur zu [folgen](following-only.md).
 
-Additionally, unlike parent/carer follower phones (which rely on the mobile network or wifi connection), bluetooth connected smartwatches can be useful in remote locations, like a cave, in a boat, or half-way up a mountain. If both devices (**AAPS** phone and smartwatch) are on the same wifi network, they can also use wifi.
+Ein weiterer Vorteil liegt darin, dass die Verbindung mit der Smartwatch per Bluetooth erfolgt (anders ein Follower-Smartphone der Eltern/Betreuenden, dass eine Internetverbindung über Mobilfunk oder WLAN benötigt) und so auch in Situationen ohne Internetverbindung (an abgelegenen Orten, auf einem Boot oder auf halber Höhe eines Berges) auf AAPS zugegriffen werden kann. Wenn sich sowohl das **AAPS**-Smartphone, als auch die Smartwatch im gleichen WLAN befinden, kann auch die WLAN-Verbindung genutzt werden.
 
-### Different types of Smartwatch-AAPS interactions
+### Verschiedene Arten die Smartwatch mit AAPS zu nutzen
 
-Many of the possible smartwatch options available to **AAPS** users are detailed at [Nightscout on your watch](https://nightscout.github.io/nightscout/wearable/#), so you are strongly advised to read those pages first to get a good idea of all the possibilities.
+Viele der Möglichkeiten, die für **AAPS**-Nutzende bestehen, sind in [Nightscout on your watch](https://nightscout.github.io/nightscout/wearable/#) beschrieben. Dir wird also dringend empfohlen diese Informationen zuerst zu lesen und so einen guten ersten Überblick zu bekommen.
 
-There are currently five main ways in which smartwatches are used in conjunction with **AAPS**. These are shown in the table below: 
+Derzeit gibt es fünf Möglichkeiten, Smartwatches mit **AAPS** zu verwenden. Diese werden in der folgenden Tabelle beschrieben: 
 
 
 ![29-10-23, updated AAPSClient watch option table](./images/bbbe0e84-1a8c-4163-8a0b-dcf91144af14.png)
 
 
 
-Please note this table was prepared in 2023, it is not exhaustive, and additional options are being added all the time.
+Diese Tabelle wurde in 2023 erstellt und ist nicht vollständig. Es entstehen permanent neue Funktionalitäten und Möglichkeiten.
 
-### Before you buy a smartwatch…
+### Bevor Du Dir eine Smartwatch kaufst …
 
-The exact model of smartwatch you buy depends on the desired function(s). There are currently two historical spreadsheets recording compatible [smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) and [smartphones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) but these will no longer continue to be updated since it is easier to ask via the Discord and Facebook groups, due to the huge range of options.
+Welches genau Modell Du kaufen solltest, hängt von den gewünschten Funktionalitäten ab. Derzeit gibt es (noch) zwei Arbeitsblätter, die kompatible [Smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) und [Smartphones and Watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) zeigen. Wegen der großen Anzahl an Smartwatches und Smartphones werden diese allerdings nicht mehr aktualisiert. Es ist einfacher kurz über Discord und Facebook-Gruppen die entsprechende Information zu bekommen.
 
-Popular watch brands include Samsung Galaxy, Garmin, Fossil, Mi band and Fitbit. The different options summarised in the Table above are explained in more detail below, to help you decide which smartwatch is right for your situation.
+Zu den beliebten Smartwatch-Marken gehören Samsung Galaxy, Garmin, Fossil, Mi Band und Fitbit. Die verschiedenen Einsatzmöglichkeiten, die in der obigen Tabelle zusammengefasst sind, werden im Folgenden näher erläutert. Das soll Dir helfen, die Smartwatch auszuwählen, die am besten zu Deinen Bedürfnissen passt.
 
-If you are integrating a smartwatch with **AAPS** on a phone with the intention to remotely interact with **AAPS**, you also need to consider if the two devices are compatible with each other, particularly if you have an older, or an unusual phone.
+Wenn Du eine Smartwatch mit dem Ziel das **AAPS**-Smartphone remote steuern zu wollen anschaffst, solltest Du insbesondere darauf achten, dass beide Geräte kompatibel zueinander sind (besonders dann, wenn Du ein älteres oder ungewöhnliches Smartphone hast).
 
-In general, if you only want to follow glucose numbers and not interact with **AAPS**, there are a wider range of affordable and simpler watches you can use.
+Wenn Du nur die Glukosewerte sehen möchtest, und darüber hinaus nicht mit **AAPS** interagieren möchtest, steht Dir eine größere Auswahl an einfachen, erschwinglichen Smartwatches zur Verfügung.
 
-The best way to choose a smartwatch is to search for "watch" posts on either Discord or Facebook **AAPS** groups. Have a read of others experiences, and post any specific questions, if your query isn't answered by older posts.
+Der beste Weg, eine Smartwatch auszusuchen, ist in den entsprechenden **AAPS** Discord- oder Facebook-Gruppen nach Beiträgen mit dem Stichwort "watch" zu suchen. Lies und profitiere von den Erfahrungen anderer. Wenn Deine Frage nicht durch bestehende Beiträge beantwortet wird, stelle spezifische Fragen.
 
-#### For Smartwatch Options 1 - 3: What _is_ Wear OS?
+#### Für Smartwatch Optionen 1-3: Was _ist_ Wear OS?
 
-The first three smartwatch options require the smartwatch to have **Wear OS** installed.
+Die ersten drei Smartwatch-Optionen setzen **Wear OS** als Betriebssystem voraus.
 
-**Wear OS** is the operating system which runs on some modern Android smartwatches. In [2018](https://en.wikipedia.org/wiki/Wear_OS), Google rebranded _Android Wear 1.x to Wear OS_ from version 2.x. So, if a device is labelled “_Android Wear_” rather than **Wear OS** it may indicate an older version. If the description of the smartwatch indicates only _compatibility_ with Android and iOS - it does not mean it is running Wear OS. It may be some other sort of Vendor specific operating system which is not compatible with **AAPS**. To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch will need to be running **Wear OS**, and ideally be Android 10 or newer. As a guide, as of October 2023, the latest release of **Wear OS** is version 4.0 (based on Android 13).
+**Wear OS** ist das Betriebssystem, das auf einigen modernen Android Smartwatches läuft. In [2018](https://en.wikipedia.org/wiki/Wear_OS) hat Google _Android Wear 1.x in Wear OS_ ab Version 2.x umbenannt. Wenn also ein Gerät mit “_Android Wear_” anstatt mit **Wear OS** gekennzeichnet ist, kann das auf eine ältere Version hinweisen. Wenn die Smartwatch nur als _kompatibel_ mit Android und iOS beschrieben wird, bedeutet das nicht, dass sie Wear OS verwendet. Möglicherweise handelt es sich dann dabei um ein anderes Betriebssystem, das nicht mit **AAPS** kompatibel ist. Eine Smartwatch sollte **WearOS** und idealerweise Android 10 (oder neuer) nutzen, um die verschiedenen Versionen von **AAPS** oder dem **AAPSClient** voll nutzen zu können. Im Oktober 2023 war die aktuelle **WearOS**-Version WearOS 4.0 (mit Android 13 als Basis).
 
-If you install **AAPS** wear.apk on a **Wear OS** watch, there are a range of different custom **AAPS** watchfaces which  can be  selected. Alternatively, you can use a standard smartphone watchface, with your **AAPS** information included in small tiles known as “complications” on the face. A complication is any feature that is displayed on a watch face in addition to the time. Features like complications require Wear OS version 2.0 or newer to work.
+Wenn Du die **AAPS** wear.apk auf Deiner **Wear OS**-Smartwatch installierst, kannst Du aus einer Vielzahl verschiedener **AAPS**-Ziffernblätter auswählen. Alternativ kannst Du auch das Standard-Ziffernblatt Deiner Smartwatch mit **AAPS** Informationen erweitern (sog. "complications"). Complications (im Deutschen: Komplikationen) bezeichnen Zusatzfunktionen einer Smartwatch, die diese neben dem reinen Anzeigen der Zeit zur Verfügung stellt. Komplikationen sind ab Wear OS Version 2.0 oder höher verfügbar.
 
 
-#### What could my smartwatch look like with remote control of AAPS?
+#### Wie könnte meine Smartwatch zur Remote-Steuerung von AAPS aussehen?
 
-After installing **AAPS** onto your watch, you will automatically be able to select your preferred watchface from these **AAPS**-dedicated watchfaces. On most watches, you simply long-press on the homescreen until the screen shrinks and swipe right to select an alernative screen:
+Nach der Installation von **AAPS** auf Deiner Smartwatch kannst Du automatisch Dein Lieblings-Zifferblatt aus den **AAPS**-Watchfaces auswählen. Bei den meisten Smartwatches wählst Du ein anderes Zifferblatt aus, indem Du so lange auf den Startbildschirm drückst, bis sich der Bildschirm verkleinert und Du dann nach rechts wischst:
 
-![image](./images/67fd75f3-721c-438d-be01-1a8e03532290.png)
+![grafik](./images/67fd75f3-721c-438d-be01-1a8e03532290.png)
 
-#### How would I operate a Wear OS watch from day-to-day?
+#### Wie würde ich eine Wear OS Smartwatch im Alltag nutzen?
 
-Further details about the watchfaces, and day-to-day use, including how to make (and share) your own customised watchface, can be found in the section [Operation of Wear AAPS on a Smartwatch](../Configuration/Watchfaces.md).
+Weitere Details zu den Ziffernblättern und deren Nutzung im Alltag, einschließlich Anleitungen zum Erstellen (und Teilen) Deines eigenen individualisierten Ziffernblatts, findest Du im Abschnitt [Wear AAPS auf einer Smartwatch nutzen](../Configuration/Watchfaces.md).
 
-### Option 1) Standalone Watch running **AAPS**
+### Option 1) Standalone Smartwatch mit **AAPS**
 
-It sounds like an attractive option, right? However, at present, only a few enthusiasts are experimenting with **AAPS**  on a stand-alone watch. There are a limited number of smartwatches with a reasonable interface which also which work well with standalone use of **AAPS** and your CGM app. Popular models include the LEMFO LEM 14, 15 and 16. You will need to load the watch with the **AAPS** "full" apk (the apk which is usually installed on a smartphone) rather than the **AAPS** "wear" apk.
+Klingt attraktiv, oder? Wie dem auch sei, momentan experimentieren nur wenige Enthusiasten mit **AAPS**  auf einer Standalone Smartwatch. Es gibt nur wenige Smartwatches mit einer vernünftigen Bedienoberfläche, die auch gut mit **AAPS** und Deiner CGM App funktionieren. Beliebte Modelle sind u. a. die LEMFO LEM 14, 15 und 16. Du musst die vollständige **AAPS** APK (die Apk, die normalerweise auf einem Smartphone installiert wird) anstelle der **AAPS** "wear" apk auf die Smartwatch laden.
 
-While there is no clear specification which helps you to know if a watch will work well for standalone **AAPS** use, the following parameters will help:
+Auch wenn es derzeit keinen eindeutigen Spezifikationen gibt, die erkennen lassen, ob eine Smartwatch als Standalone **AAPS** nutzbar ist, gibt es einige Parameter, die gute Indikatoren sind:
 
-1)  Android 10 or newer. 2)  Being able to take the watchface off “square” mode to make text larger and easier to read. 3)  Very good battery life. 4)  Good bluetooth range.
+1) Android 10 oder höher. 2)  Die Möglichkeit zu haben das Zifferblatt aus dem "Square-Modus" zu holen, um Text zum einfacheren Lesen zu vergrößern. 3) Sehr gute Akkulaufzeit. 4) Gute Bluetooth-Reichweite.
 
-Most of the frustrations of standalone **AAPS** watches come from interacting with a tiny screen, and the fact that the current AAPS full app interface has not been designed for a watch. You may prefer to use a stylus to edit **AAPS**  settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
+Die meisten Frustrationen mit Standalone **AAPS**-Smartwatches entstehen aus der Interaktion mit einem winzigen Bildschirm, und der Tatsache, dass die aktuelle AAPS-Voll-App-Benutzeroberfläche nicht für eine Smartwatch konzipiert wurde. Durch das sehr eingeschränkte Display und kann ein Stift beim Editieren der **AAPS**-Einstellungen helfen. Einige der AAPS-Tasten sind möglicherweise auf dem Zifferblatt nicht sichtbar.
 
-Additional challenges are that it is hard to get sufficient battery life, and watches with sufficient battery are often bulky and thick. Users report fighting with the OS and power-saving settings, difficulty in starting sensors on the watch, poor bluetooth range (for maintaining connection with both the sensor and pump) and questionable water resistance. Examples are shown in the photos below (photo credit: Janvier Doyon).
+Ein weiteres Problem ist es eine Smartwatch mit langer Akkulaufzeit, die in der Regel klobig und dick sind, zu finden. Typische Probleme mit denen gekämpft werden sind Betriebssystem- und Energiespar-Einstellungen, das Starten von Sensoren über die Smartwatch, geringe Bluethooth-Reichweite (um die Verbindung mit Pumpe und Sensor zu halten) und fraglicher Wasserfestigkeit. Beispiele findest Du in den unten stehenden Fotos (Fotoquelle: Janvier Doyon).
 
-![image](./images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
+![grafik](./images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
-![image](./images/5d2feecc-3f10-4767-b143-1a72da2b9bd4.png)
+![grafik](./images/5d2feecc-3f10-4767-b143-1a72da2b9bd4.png)
 
-If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS**  Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
+Wenn Du eine Standalone Smartwatch aufsetzen möchtest und Zusatzinformationen benötigst, lies' die Beiträge und Kommentare in der **AAPS** -Facebookgruppe (Suchwörter: “standalone” und “Lemfo”) oder auf Discord.
 
-### Option 2) **AAPS** on watch, for remote control of **AAPS** on a phone
+### Option 2) **AAPS** auf der Smartwatch steuert **AAPS** auf dem Smartphone
 
-Similarly to using a follower phone with either AAPSClient, Nightscout or SMS commands (link to sections) a smartwatch can be used to remotely control **AAPS** and provide full profile data. A key difference to using a follower phone is that the smartwatch to **AAPS** phone link is via bluetooth and does not require an authenticator code. As a side-note, users have reported that if both smartwatch and **AAPS** phone linked by bluetooth are also a wifi network, the watch may also interact with the **AAPS** phone over the wifi, giving a longer range of communication. This includes remote delivery of a bolus where the caregiver with the **AAPS** watch and T1D child (with **AAPS** phone) are in different locations and which can useful in circumstances where the T1D child is in school.
+Ähnlich wie mit einem Follower-Smartphone auf dem der AAPSClient, Nightscout oder SMS-Befehle laufen (Link zu Abschnitten) kann eine Smartwatch genutzt werden, um **AAPS** remote zu steuern und vollständige Profildaten bereitzustellen. Ein entscheidender Unterschied liegt darin, dass die Smartwatch sich mit dem **AAPS**-Smartphone über Bluetooth verbindet und keinen Authentifizierungscode benötigt. Nebenbei bemerkt: Nutzende haben berichtet, dass, wenn sowohl Smartwatch als auch das **AAPS**-Smartphone über Bluetooth verbunden sind, dies auch ein WLAN ist, und so beide Geräte über das WLAN interagieren, sodass das die Empfangsreichweite vergrößert. Hier reden wir von einer Remote-Bolusabgabe in einer Situation in der die betreuende Person mit der **AAPS**-Smartwatch und das Kind (mit dem **AAPS**-Smartphone) an verschiedenen Orten sind. Das hilft z.B., wenn das Kind in der Schule ist.
 
-A remote control smartwatch is therefore often useful in any situation where:
+Eine Smartwatch zur Remote-Steuerung ist verschiedensten Situationen komfortabel:
 
-a)  **AAPSClient**/Nightscout/**SMS** commands cannot work; or
+a)  **AAPSClient**/Nightscout/**SMS**-Befehle funktionieren nicht oder
 
-b)  The user wishes to avoid the need for authenticator code (as required for the follower phone with inputting data, selecting TT or entering carbs).
+b) der Nutzende möchte die Eingabe eines Authentifizierungscode vermeiden (wie es bei der Dateneingabe, dem Setzen eines temporären Ziels oder der Kohlenhydrateingabe über das Follower-Smartphone notwendig ist).
 
-A smartwatch needs to have **Android wear** software (ideally 10 or higher) to be able to control **AAPS**. Please check the technical specifications of the watch, and check the [spreadsheet of compatible watches](link). Search, or ask in the **AAPS**  Facebook/Discord groups if unsure.
+Um **AAPS** steuern zu können, muss auf der Smartwatch **Android Wear** Software (idealerweise 10 oder höher) laufen. Bitte schau Dir dazu die technischen Details der Smartwatch an und schlage auch in der [Übersicht kompatibler Smartwatches](link) nach. Wenn Du Dir nicht sicher sein solltest, frage einfach in den **AAPS**  Facobook/Discord Gruppen nach.
 
-Specific How-to guides for setting up **AAPS** on the popular [Samsung Galaxy Watch 4 (40mm) is given below. The [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) watch is also a popular choice. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](https://androidaps.readthedocs.io/en/latest/make-a-PR.html) to share your findings with the wider **AAPS** community.
+Eine detaillierte Schritt-für-Schritt Anleitung für die **AAPS**-Einrichtung auf der Samsung Galaxy Watch 4 (40mm) findest Du weiter unten. Die [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)-Smartwatch ist ebenfalls gerne gewählt. Füge gerne andere Smartwatches und Deine damit gemachten Kompatibilitäts-Erfahrungen in der Dokumentation und [verbessere die Dokumentation](https://androidaps.readthedocs.io/en/latest/make-a-PR.html), damit die gesamte **AAPS**-Community davon profitieren kann.
 
-#### The AAPS Wear apk
+#### Die AAPS Wear APK
 
-The Wear OS App of **AAPS**  (“Wear OS apk”) required for the smartwatch has been separated from the "full" **AAPS** build for the Android phone. Therefore you have to generate a second installation file, or apk, to install **AAPS** wear onto the watch (which is done by side-loading it from the phone). It is strongly recommended that the **AAPS** Wear apk file is built immediately after first building the full **AAPS** apk for the phone. Not only is this very quick to do if you are [building **AAPS** for the first time](link to building **AAPS** for the first time), but it will avoid any potential compatibility issues when you try to set up the watch-phone communication. The **AAPS** Wear apk on the watch is unlikely to be compatible with the **AAPS** phone apk if they have been built in different versions of Android Studio, or if months have past since the initial **AAPS** build.
+Die Version, die für die Smartwatch benötigt wird (Wear OS apk), wurde aus dem "vollen" **AAPS**-Build für das Android Smartphone herausgelöst. Deswegen musst Du eine zweite Installationsdatei (sog. 'APK') erzeugen, um **AAPS** wear durch "Sideloading" von Deinem Smartphone auf Deine Smartwatch installieren zu können. Es wird dringend empfohlen, die **AAPS** Wear OS apk Datei unmittelbar nach dem ersten Erstellen der vollständigen **AAPS** apk für das Smartphone zu generieren. Nicht nur, weil es schnell gemacht ist, wenn Du ohnehin gerade [**AAPS** zum ersten Mal erstellst] (link to building **AAPS** for the first time), sondern auch weil damit mögliche Kompatibilitätsprobleme bei der Einrichtung der Smartwatch-Smartphone Kommunikation vermieden werden können. Es ist sehr unwahrscheinlich, dass die **AAPS** Wear apk auf der Smartwatch kompatibel mit der **AAPS** Smartphone apk ist, wenn diese mit unterschiedlichen Versionen von Android Studio erstellt/gebaut wurden, oder wenn Monate seit dem ursprünglichen **AAPS** Build vergangen sind.
 
-If you are already using **AAPS** on a phone and you did not build both the phone and watch (wear) **AAPS** apks at the same time, to ensure success it is therefore best to do a fresh build of both apk files at the same time. If you have already installed Android studio, then you may wish to uninstall and then reinstall Android studio as outlined below, and build the AAPS phone and watch apks at the same time, using the same **keystore file**.
+Wenn Du **AAPS** bereits auf Deinem Smartphone nutzt und bei der Erstellung in der Vergangenheit nicht beide Installationsversionen (Smartphone und -Smartwatch (wear) **AAPS** APKs)) generiert hast, ist es am Besten, beide Dateien neu zu erzeugen. Wenn Du Android Studio bereits installiert hast, ist es gegebenenfalls sinnvoll, es - wie unten beschrieben - zu deinstallieren und neu zu installieren und dann beide AAPS Versionen (Smartphone und Smartwatch) unmittelbar hintereinander mit der gleichen **keystore**-Datei zu erstellen
 
-#### How to uninstall Android Studio
+#### Wie man Android Studio deinstalliert
 
-Make sure your keystore file is safely stored elsewhere on your computer, outside of the Android Studio folders.
+Stelle sicher, dass Deine Keystore-Datei sicher (außerhalb der Android Studio Ordner) gespeichert ist.
 
-There are several steps required to completely remove Android Studio from a computer. This is a [good guide](https://www.geeksforgeeks.org/how-to-completely-uninstall-android-studio-on-windows/) if you are using a Windows machine. In the final step of these instructions, you also need to manually remove the folder “StudioProjects”.
+Es sind mehrere Schritte nötig, um Android Studio komplett von einem Computer zu löschen. Dies ist eine [gute Anleitung](https://www.geeksforgeeks.org/how-to-completely-uninstall-android-studio-on-windows/), wenn Du einen Windows-Rechner nutzt. Als letzten Schritt in dieser Anleitung, wirst Du händisch den "StudioProjects"-Ordner löschen.
 
-Now reinstall the latest version of Android Studio.
+Installiere jetzt die neueste Android Studio Version.
 
-#### Building the **AAPS** Wear apk
-As a summary, the build process for the Wear apk is very similar to that for the "full" phone apk, the difference is that in Android Studio you need to select “**AndroidAPS.wear**”  in the drop-down menu, and as build variant choose “**fullRelease**”. This will generate the **AAPS** Wear apk file.  If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping.
+#### Erstellen der **AAPS** Wear APK
+Kurz gesagt: Der Erstellprozess der Wear APK ist dem der "vollen" Smartphone APK sehr ähnlich. Der Unterschied liegt darin, dass im Android Studio “**AndroidAPS.wear**“ im Dropdown-Menü und als Build-Variante “**fullRelease**” ausgewählt werden muss. Damit wird die **AAPS** Wear apk Datei erstellt.  Wenn Du möchtest, kannst Du aus dem Drop-Down-Menü das **“pumpcontrolRelease”** auswählen und erstellen. Mit dieser Version kannst Du die Pumpe (ohne die Loop-Funktion) remote steuern.
 
-The following guide assumes you have reinstalled the latest version of Android studio (scenario below has used Giraffe 2022.3.1)).
+Der folgende Leitfaden geht davon aus, dass Du die neueste Version von Android Studio (re-)installiert hast (hier wurde Giraffe 2022.3.1 genutzt).
 
-![image](./images/e8e3b7f3-f82e-425a-968c-cc196434a5f8.png)
+![grafik](./images/e8e3b7f3-f82e-425a-968c-cc196434a5f8.png)
 
-To get back here:
+Um hierher zurückzukommen:
 
-![image](./images/37f4589c-6097-49d4-b0b9-087664914198.png)
+![grafik](./images/37f4589c-6097-49d4-b0b9-087664914198.png)
 
-continue to follow the instructions.
+Folge den weiteren Anweisungen.
 
-Follow the prompts through the different screens until you are given an option with a dropdown menu offering to build the AAPS full apk. At this point, select  “Wear” from the dropdown instead of “AndroidAPS.apk” because you are building the apk for the smartwatch.
+Folge den Eingabeaufforderungen durch die verschiedenen Bildschirme, bis zur Option mit einem Dropdown-Menü, die Dir das Erstellen der "AAPS full apk" anbietet. An dieser Stelle wähle "Wear" anstelle von "AndroidAPS.apk" aus dem Auswahlmenü aus, da Du die apk für Deine Smartwatch erstellen möchtest.
 
 
-Next Step go to "Build" in the ribbon
+Als Nächstes gehe im Menüband auf "Build"
 
-![image](./images/b2cccc84-85b6-4ee1-800b-7c6dcb9dd857.png)
+![grafik](./images/b2cccc84-85b6-4ee1-800b-7c6dcb9dd857.png)
 
 
-Go to Build > Generate Signed Bundle / APK
+Gehe zu Build > Generate Signed Bundle / APK(s)
 
 
-![image](./images/f488fe36-8cb9-4d81-9d94-5f742a1aaaee.png)
+![grafik](./images/f488fe36-8cb9-4d81-9d94-5f742a1aaaee.png)
 
-Select > APK:
+Wähle > APK:
 
-![image](./images/Installation_Screenshot_39b.PNG)
+![grafik](./images/Installation_Screenshot_39b.PNG)
 
 
-Select in Module: AndroidAPSwear
+Wähle unter Module: AndroidAPS.wear
 
-![image](./images/cceaa832-70e6-4ad5-95ec-a82e2a6add1e.png)
+![grafik](./images/cceaa832-70e6-4ad5-95ec-a82e2a6add1e.png)
 
-Enter keystore file at the default location. Your keystore path will depend where you have stored your Keystore. For this scenario the keystore path was located: C:\Program Files\Android\Android Studio\jbr\bin
+Gebe Deine Keystore-Datei an der Standardstelle ein. Der Pfad zu Deiner Keystore-Datei hängt davon ab, wo Du diese gespeicherst hast. In diesem Szenario ist der Pfad zur Datei: C:\Programme\Android\Android Studio\jbr\bin
 
 
-The next screen should show this:
+Der nächste Bildschirm sollte folgendermaßen aussehen:
 
-![image](./images/87ce7943-256e-449e-8439-8f9fd5bef05e.png)
+![grafik](./images/87ce7943-256e-449e-8439-8f9fd5bef05e.png)
 
 
-And select “fullRelease”.
+Und wähle "fullRelease" aus.
 
-Be patient - the **AAPS** Wear apk should be built in around 10-20 minutes, depending on the speed of your internet connection.
+Sei geduldig - das Erzeugen der **AAPS** Wear apk wird (je nach Internetgeschwindigkeit) 10-20 Minuten dauern.
 
 ### Problembehandlung
 
-In the process of building the 3.2 full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. This then causes errors with [uncommitted changes](troubleshooting_androidstudio-uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. The quickest way to resolve this is to navigate to the folder where the full AAPS app has been built, your folder is probably something like:
+Beim Erstellen der 3.2 **AAPS** App Vollversion (und eigentlich bei jeder signierten App), erzeugt Android Studio eine .json-Datei im gleichen Ordner. Das kann zum Fehler [uncommitted changes](troubleshooting_androidstudio-uncommitted-changes) führen, wenn die nächste signierte App (wie zum Beispiel die **AAPS** wear App) erstellt werden soll. Am schnellsten kann das behoben werden, in dem Du den Ordner, in dem die Vollversion der AAPS App erzeugt wurde, aufrufst. Der Ordner sollte ungefähr so aussehen:
 
-C:\Users\Your Name\StudioProjects\AndroidAPS\app\aapsclient\release.
+C:\Benutzer\Dein Name\StudioProjects\AndroidAPS\app\aapsclient\release.
 
-Either delete, or move the unneeded .json file out of the folder. Then try to build the **AAPS** wear app again. If that doesn't work, the more detailed [troubleshooting guide](troubleshooting_androidstudio-troubleshooting-android-studio) will help you to identify the specific file causing the issue, which could also be your keystore file.
+Lösche die .json Datei oder verschiebe sie in einen anderen Ordner. Versuche nun die **AAPS** wear App erneut zu erzeugen (build). Wenn das nicht helfen sollte, findest Du im Abschnitt[Fehlerbehebung für Android Studio](troubleshooting_androidstudio-troubleshooting-android-studio) Hilfestellung, um die Datei zu identifizieren, die das Problem ausgelöst hat. Auch die Keystore-Datei kann das Problem sein.
 
 
-#### How to set up a Samsung Galaxy 4 smartwatch with **AAPS**
+#### Wie man eine Samsung Galaxy 4 Smartwatch mit **AAPS** einrichtet
 
-This section assumes you are totally new to Smartwatches, and gives you basic orientation of a popular watch, the **Galaxy Watch 4**, followed by a step-by-step guide to setup **AAPS** on the watch.
+Dieser Abschnitt ist für Neulinge im Umgang mit Smartwatches und gibt zunächst einen ersten Überblick über die beliebte **Galaxy Watch 4** und danach eine Schritt-für-Schritt Anleitung, um **AAPS** auf der Smartwatch einzurichten.
 
-_This guide assumes the Samsung Galaxy watch you are setting up is running Wear OS version 3 or lower._ If you are setting up a watch running Wear OS 4/OneUI 5 or later, you will need to use a new ADB pairing process, this is explained in the Samsung software on your phone and will be updated here in due course. Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
+_Diese Anleitung geht von einer Samsung Galaxy Watch mit Wear OS Version 3 oder niedriger aus._ Solltest Du eine Smartwatch mit Wear OS 4/OneUI 5 oder neuer einrichten wollen, wirst Du den neuen ADB pairing Process nutzen müssen, der in der Samsung Software Deines Smartphones erklärt wird (und hier demnächst beschrieben wird). Hier sind die Anleitungen zur Einrichtung der [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) und der [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
 
-##### Basic smartwatch familiarity
+##### Mit der Smartwatch vertraut machen
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable" “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+Nach den im Video gezeigten Grundeinstellungen Deiner Smartwatch, gehe in den Play Store Deines Smartphones und lade "Galaxy Wearable", “Samsung” und entweder “Easy Fire Tools” oder "Wear Installer 2" herunter.
 
-There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
+Es gibt eine Reihe von YouTube-Videos von Drittanbietern, die Dir helfen werden, Dich mit Deiner neuen Smartwatch vertraut zu machen, zum Beispiel:
 
 https://www.youtube.com/watch?v=tSVkqWNmO2c
 
-The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. Depending on your version, this may prompt you to install a further 3rd app “galaxy watch 4 plugin” from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
+Die App „Galaxy Wearable“ enthält auch ein Benutzerhandbuch. Öffne die Galaxy Wearable App auf Deinem Smartphone, suche unter dem Punkt "Neues Gerät hinzufügen" nach Deiner Smartwatch und versuche diese mir dem Smartphone zu koppeln. In Abhängigkeit von der Version, kann es sein, dass Du dazu aufgefordert wirst eine weitere Drittanbieter App "Galaxy Watch 4 Plugin" aus dem Play Store zu installieren. Der Download ein wenig. Installiere diese auf Deinem Smartphone und versuche danach die beiden Geräte in der Galaxy Wearable App zu koppeln. Gehe durch die verschiedenen Menüs und wähle Deine persönlichen Voreinstellungen aus.
 
-##### Setting up a Samsung account
+##### Samsung-Konto einrichten
 
-You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 363 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
+Stelle sicher, dass in dem eMail-Konto, das Du zur Einrichtung des Samsung-Kontos verwendest, ein Geburtsdatum älter als 13 Jahre hinterlegt ist, da die notwendigen Samsung Berechtigungen sonst nur schwer genehmigt werden können. Du kannst ein Gmail Konto eines Kindes (unter 13 Jahren) nicht problemlos in das eines Erwachsenen ändern. Ein möglicher Weg, das zu umgehen ist, das Geburtsdatum auf ein Alter von 12 Jahren und 363 Tagen zu ändern. Am folgenden Tag wird das Konto in ein Erwachsenen-Konto umgewandelt, und Du kannst mit der Einrichtung des Samsung-Kontos weiter machen.
 
-##### Transferring the **AAPS** Wear app onto your **AAPS** phone
+##### Übertragen der **AAPS** Wear App auf Deine **AAPS** Smartphone
 
-Loading the Wear.apk from Android Studio to your phone can be done either by:
+Die wear.apk kann über mehrere Wege aus dem Android Studio auf Dein Smartphone übertragen werden:
 
-a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
+a) Mit einem USB-Kabel, um die **AAPS** wear apk Datei auf das Smartphone zu bringen und sie dann über "Sideloading" auf die Smartwatch zu laden. Übertrage die Wear.apk auf das Smartphone über USB in den "Downloads"-Ordner oder
 
-b)  cut and paste Wear.apk from Android Studio onto your Gdrive.
+b) Schneide die Wear.apk aus Android Studio aus und füge sie in Dein Google Drive Laufwerk ein.
 
 
-You can use either Wear Installer 2 or Easy Fire tools to side-load AAPS onto the watch. Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained.
+Um AAPS per "sideloading" auf die Smartwatch zu bringen, kannst Du entweder Wear Installer 2 oder Easy Fire Tools nutzen. Wir empfehlen den Wear Installer 2 zu nutzen, da die Anleitung und der Prozess im Video klar und verständlich erklärt wird.
 
-##### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
+##### Wear Installer 2 zum "Sideloading" von AAPS Wear vom Smartphone auf die Smartwatch nutzen
 
- ![image](./images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
+ ![grafik](./images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
 
-Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
+Wear Installer 2, das von [Malcolm Bryant](https://www.youtube.com/@Freepoc) entwickelt wurde, kann aus dem Play Store auf Dein Smartphone heruntergeladen und zum Sideloading der AAPS Wear App auf die Smartwatch genutzt werden. Die App hat auch ein praktisches „Wie mache ich ein Sideloading“ [Video](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV).
 
-This provides all the necessary detail (best to open the video on a separate device so you can watch it whilst setting up the phone).
+Es zeigt alle notwendigen Einzelschritte. Am besten schaust Du das Video auf einem separaten Gerät an, sodass Du es während der Smartphone-Einrichtung ansehen kannst.
 
-As mentioned in the video, once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
+Um die Akkulaufzeit zu verlängern, schalte - wie auch Video gezeigt - auf der Smartwatch das ADB Debugging aus.
 
-Alternatively, you can:
+Alternativ kannst Du:
 
-:::{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
+:::{admonition} Easy Fire Tools zum Sideloading von **AAPS** Wear auf die Smartwatch nutzen
 :class: dropdown
 
-1)   Download _Easy Fire Tools_ from playstore onto phone
+1) Lade _Easy Fire Tools_ aus dem Play Store auf Dein Smartphone herunter
 
-![image](./images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
+![grafik](./images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
 
-2)  Make yourself a developer in the watch (once set up and connected to phone):
+2) Bringe die Smartwatch (sobald die Einrichtung abgeschlossen ist und sie mit dem Smartphone verbunden ist) in den Entwicklermodus:
 
-Go to settings >about watch (bottom option) >- software info > software version.
+Gehe in die Einstellungen >Info zur Uhr (unterste Option) > Software-Informationben > Softwareversion.
 
-Rapidly tap on “ software version” until a notification appears that the watch is now in "developer mode". Return to the top of settings menu, scroll to the bottom and see “developer options” below “about watch”.
+Tippe schnell so lange auf "Softwareversion", bis eine Benachrichtigung erscheint, die besagt, dass die Smartwatch nun im "Entwicklermodus" ist. Kehre zum oberen Teil des Einstellungsmenüs zurück, scrolle nach unten zum Punkt „Entwickleroptionen“ unter „Info zur Uhr“.
 
-In “developer options”, turn on “ADB debugging” and “wireless debugging”. The latter option then reveals the IP address of the watch, the final two digits of which changes each time the watch is paired with a new phone. It will be something like: **167.177.0.20.** 5555 (ignore the last 4 digits). Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS.
+In den „Entwickleroptionen“ aktiviere das „ADB Debugging“ und „Über Bluetooth debuggen“. Die letzte Option zeigt dann die IP-Adresse der Smartwatch. Die letzten beiden Ziffern ändern sich jedesmal mit dem Koppelungsvorgang zu einem neuen Smartphone. Es wird in etwa so aussehen: **167.177.0.20.** 5555 (ignoriere die letzten 4 Ziffern). Beachte, dass sich die letzten beiden Ziffern (hier, „20“) dieser Adresse mit jedem neuen AAPS Smartphone ändern.
 
 ![24-10-23, watch ADB debug pic](./images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
 
-STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). Then click the plug socket icon on the top right.
+Schritt 3) Gebe die IP-Adresse _z. B. _ **167.177.0.20** in Easy Fire Tools auf Deinem Smartphone ein (gehe dazu auf das linke Hamburger-Menü, Settings und gib die IP-Adresse ein). Klicke dann auf das plug socket Icon oben rechts.
 
-![image](./images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
-
-
-![image](./images/00b2fb8b-5996-4b71-894e-516d63469e1b.png)
+![grafik](./images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
 
 
-STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  Wear.apk onto the smartwatch using Easy Fire tools
-
-Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the smartwatch:
-
-![image](./images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
+![grafik](./images/00b2fb8b-5996-4b71-894e-516d63469e1b.png)
 
 
- Next step > accept the authorisation request on the smartwatch
+Schritt 4) Folge den [Sideloading-Anweisungen](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) (d.h. dem Transfer der Wear.apk mit Hilfe der Easy Fire Tools auf die Smartwatch.
+
+Klicke in der App auf die Seite "plug-in" socket, um die Wear OS.apk auf die Smartwatch zu laden:
+
+![grafik](./images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
 
 
-![image](./images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
+ Nächster Schritt > akzeptiere die Autorisierungsanfrage auf der Smartwatch
+
+
+![grafik](./images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
 
 :::
 
 
-##### Setting up the connection between the watch and the phone from **AAPS**
+##### Die Verbindung zwischen der Smartwatch und Smartphone aus **AAPS** heraus einrichten
 
-The final step is to configure **AAPS** on the phone to interact with **AAPS** Wear” on the watch. To do this, enable the Wear plugin in Config Builder:
+Der letzte Schritt ist es, **AAPS** auf dem Smartphone so einzurichten, dass es mit "**AAPS** Wear“ auf der Smartwatch interagiert. Aktiviere dazu das Wear-Plugin in der KONFIGURATION:
 
-●   Go to the **AAPS** app on the phone
+●   Gehe zur **AAPS** App auf dem Smartphone
 
-●   Select > Config Builder in the left-hand Hamburger tab
+● Wähle > Konfiguration im linken Hamburger Reiter
 
-●   Tick for Wear selection under General
+● Markiere unter dem Punkt Allgemein, Wear für die Auswahl der Wear-Optionen
 
-![image](./images/ae6d75a1-1829-4d2e-b0dc-153e31e4a466.png)
+![grafik](./images/ae6d75a1-1829-4d2e-b0dc-153e31e4a466.png)
 
 
-To change to a different **AAPS**  watchface, press on the home screen of the watch and it will come to “customise”. Then swipe right until you get to all the **AAPS**  faces.
+Um zu einem anderen **AAPS**-Zifferblatt zu wechseln, drücke lange auf den Startbildschirm der Smartwatch und es wird die Option Anpassen“ erscheinen. Wische dann nach rechts, bis Du die **AAPS**-Zifferblätter erreicht hast.
 
-If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, it will look like this:
+Wenn das Sideloading der **AAPS** Wear.apk auf die Smartwatch erfolgreich war, sieht es ungefähr so aus:
 
 
 ![24-10-23, successful galaxy watch photo](./images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
 
-#### Troubleshooting the **AAPS** watch- **AAPS** phone communication
-1.  If EasyFire tools does not connect or if you are receiving ‘authorisation failed’ > check IP address has been correctly entered.
-2.  Check that the smartwatch is connected to the internet (and not just connected to the phone via Bluetooth).
-3.  Check that the **AAPS** Phone and smartwatch are paired or linked in Samsung app.
-4.  It may also help to do a hard restart of Phone and smartwatch (meaning turning phone on and off)
-5.  Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** apk version onto the watch. If your AAPS wear.apk version is listed as any of the following: a) “wear-AAPSClient-release’; b) ‘wear-full-release.aab’; or c) the word ‘debug’ appears in the title, you have not selected the correct Wear OS apk version during the build.
-6.  Check that your router is not isolating the devices from one another.
+#### Verbindungsprobleme zwischen **AAPS** Smartwatch und **AAPS** Smartphone beheben
+1.  Wenn Easy Fire Tools sich nicht verbindet oder Du die Meldung "authorisation failed" erhälst > Überprüfe, ob die IP-Adresse korrekt eingegeben wurde.
+2.  Überprüfe, ob die Smartwatch mit dem Internet (und nicht nur über Bluetooth mit dem Smartphone) verbunden ist.
+3.  Überprüfe, ob das **AAPS** Smartphone und die Smartwatch in der Samsung App miteinander gekoppelt bzw. verbunden sind.
+4.  Es kann auch helfen, einen harten Neustart von Smartphone und Smartwatch durchzuführen (d.h. Samartphone aus- und wieder einschalten)
+5.  Angenommen Du hast die Wear.apk auf Dein Smartphone herunterladen können, bekommst allerdings keine Glukosewerte angezeigt, _überprüfe_, ob Du die richtige **AAPS** apk Version per Sideloading auf die Smartwatch übertragen hast. Wenn Deine AAPS Wear.apk Version in der folgenden Liste enthalten ist a) 'wear-AAPSClient-release’; b) ‘wear-full-release.aab’; oder c) das Wort ‘debug’ ist im Namen enthalten, hast Du die falsche Wear OS apk Version während der Erstellung (build) ausgewählt.
+6.  Überprüfe, dass Dein Router die Geräte nicht voneinander isoliert (IP Isolation).
 
-More troubleshooting tips can be found [here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
+Weitere Tipps zur Fehlerbehebung findest Du [hier](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
 
-### Controlling AAPS from the Wear Watch
+### AAPS von der Wear-Smartwatch aus steuern
 
-Once you have setup **AAPS** on your watch, extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../Configuration/Watchfaces.md).
+Sobald DU **AAPS** auf Deiner Smartwatch fertig eingerichtet hast, finden Du ausführliche Informationen zu den Smartwatch-Zifferblättern und den jeweiligen Funktionen in [Wear AAPS auf einer Smartwatch nutzen](../Configuration/Watchfaces.md).
 
-As a brief overview, the following functions can be triggered from the smartwatch:
+Als kurze Übersicht: Die folgenden Funktionen können von der Smartwatch aus gestartet werden:
 
-●   set a temporary target
+●   temporäres Ziel setzen
 
-●   use the bolus calculator (calculation variables can be defined in settings on the phone)
+Bolusrechner verwenden (welche Variablen bei der Berechnung berücksichtigt werden, lässt sich in den  Einstellungen auf dem Smartphone festlegen)
 
-●   administer eCarbs
+●   eCarbs (verzögerte Kohlenhydrate) eintragen
 
-●   administer a bolus (insulin + carbs)
+●   Bolus (Insulin + Kohlenhydrate) abgeben
 
-●   watch settings
+●   Smartwatch-Einstellungen
 
-●   status
+●   Status
 
-●   check pump status
+●   Pumpenstatus überprüfen
 
-●   check loop status
+●   Loop-Status überprüfen
 
-●   check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+●   Profil prüfen und ändern, CPP (Circadian Percentage Profile = Zeitverschiebung + Prozentsatz)
 
-●   show TDD (Total daily dose = bolus + basal per day)
+●   TDD (Total Daily Dose = Bolus + Basal pro Tag) anzeigen
 
-●   Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to a Wifi network)
+● Remote-Bolus, wenn Kind und betreuende Person an verschiedenen Orten sind (dies ist möglich, wenn die **AAPS**-Smartwatch und das **AAPS**-Smartphone  mit einem WLAN verbunden sind)
 
-#### Communication from caregivers to the watch using other apps (like Whatsapp)
+#### Kommunikation eines Betreuenden zur Smartwatch über andere Apps (wie WhatsApp)
 
-It is possible to add additional apps to the watch, like Whatsapp, for messaging (for example) between caregivers and kids. It is important only to have ONE Google account associated with the phone, or the watch will not bring this data across. You need to be 13 or older to have a Samsung account, and this needs to be set up in the same email address which is used on the Android phone.
+Es können zusätzliche Apps - wie z. B. WhatsApp zum Senden von Nachrichten - zwischen Eltern und Kindern auf der Smartwatch installiert werden. Es ist wichtig, dass dem Smartphone nur EIN Google-Konto zugeordnet ist, da die Smartwatch sonst die Daten nicht rüberbringen kann. Du musst 13 oder älter sein, um ein Samsung-Konto zu haben. Das Geburtsdatum muss in der eMail-Adresse hinterlegt sein, die auf dem Android-Smartphone verwendet wird.
 
-A video explaining getting Whatsapp setup for messaging on the Galaxy 4 watch (you can’t get full functionality of Whatsapp) is shown [here](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
+Ein Video, das das WhatsApp Setup für das Senden von Nachrichten auf der Galaxy 4 Smartwatch zeigt, findest Du [here](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/). Über WhatApp kannst Du nicht den vollen Funktionsumfang nutzen.
 
-Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and the watch makes it possible for Whatsapp messages to announce with a slight vibration, and also for the Whatsapp message to display over the existing watchface.
+Durch Anpassungen sowohl in der **Galaxy Wearable** App auf dem **AAPS** Smartphone als auch auf der Smartwatch, können WhatsApp-Nachrichten mit einem leichten Vibrieren signalisiert und auf dem bestehenden Zifferblatt gezeigt werden.
 
-#### Troubleshooting Sony smartwatch setup
+#### Fehlerbehebung für Sony Smartwach 3
 
-Although it was discontinued a few years ago, if you are using a Sony Smartwatch SW 3 please see here for a troubleshooting guide: [Troubleshooting Sony Smartwatch SW 3](https://androidaps.readthedocs.io/en/latest/Usage/SonySW3.html)
-
-
-
-### Option 3) AAPSClient on a watch for remote control of **AAPS** on a phone
-
-The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [Github](https://github.com/nightscout/AndroidAPS/releases/).
-
-To download the software, click on the required app (in this screenshot, either **wear-aapsclient-release_3.2.0.1** or **wear-aapsclient2-release_3.2.0.1** would work, there are two versions in case you need a copy for a second caregiver watch):
-
-![image](./images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
+Obwohl es die Sony Smartwatch SW 3 seit einigen Jahren nicht mehr zu kaufen gibt, wird diese noch genutzt. Eine Anleitung zur Fehlerbehebung findest Du im Abschnitt: [Fehlerbehebung für Sony Smartwatch SW 3](https://androidaps.readthedocs.io/en/latest/Usage/SonySW3.html)
 
 
-Then "save as" and save the file to a convenient location on your computer:
+
+### Option 3) **AAPS** auf dem Smartphone wird über AAPS auf der Smartwatch gesteuert
+
+Die notwendige Smartwatch-Software (**AAPSClient** Wear APK) kann direkt von [Github](https://github.com/nightscout/AndroidAPS/releases/) heruntergeladen werden.
+
+Um die Software herunterzuladen, klicke auf die benötigte App (in diesem Screenshot, würden sowohl **wear-aapsclient-release_3.2.0.1** und auch **wear-aapsclient2-release_3.2.0.1** funktionieren; es gibt zwei Versionen, falls eine zweite Kopie für eine zweite Betreuenden-Smartwatch benötigt wird):
+
+![grafik](./images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
 
 
-![image](./images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
+Dann "Speichern unter" und speichere die Datei an einem Ort Deiner Wahl auf Deinem Computer:
 
 
+![grafik](./images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
 
 
 
 
-The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](remote-control.md#transferring-the-wear-app-onto-your-aaps-phone)
-
-### Option 4) Limited Nightscout (and other options) on a watch - Fitbit watches
 
 
+Die **AAPSClient** Wear APK wird genauso auf die Smartwatch gebracht (übertragen und sideloading), wie es im Abschnitt [Übertragen der Wear-App auf Dein AAPS Smartphone](remote-control.md#transferring-the-wear-app-onto-your-aaps-phone) für die die **AAPS** Wear App beschrieben ist.
 
-![image](./images/98620770-2fb3-47af-a13e-28af7db69096.png)
+### Option 4) Reduziertes Nightscout (und andere Optionen) auf einer Smartwatch - Fitbit Smartwatches
 
 
 
-**"Sentinel"** is a clockface developed by [Ryan Chen](http://ryanwchen.com/sentinel.html) for his family and shared for free for the Fitbit smart watches: Sense1/2, Versa 2/3/4. it is not compatible with the FitBit Luxe since this is only a fitness tracker. Sentinel can be downloaded from the [FitBit mobile app](https://gallery.fitbit.com/details/5f75448f-413d-4ece-a53d-b969c6afea7c).
+![grafik](./images/98620770-2fb3-47af-a13e-28af7db69096.png)
 
-It allows the monitoring of 1, 2, or 3 individual's blood glucose numbers using either Dexcom Share, Nightscout, or a combination of the two as data sources.
 
-You can also use xDrip+ or SpikeApp if used with local web server mode. Users can set custom alarms and submit events using Nightscout's careportal functionality directly from the watch to help track insulin-on-board (IOB), carbs-on-board (COB), enter meal information (carb count and bolus amount), and BG check values.
 
-All will appear on the Nightscout timeline-graph, and as updated values in the IOB and COB fields. Community support can be found at the dedicated [Facebook group, Sentinel.](https://www.facebook.com/groups/3185325128159614)
+**"Sentinel"** ist ein Zifferblatt für die Fitbit-Smartwatch, das von [Ryan Chen](http://ryanwchen.com/sentinel.html) für seine Familie entwickelt wurde und kostenlos geteilt wird: Sense1/2, Versa 2/3/4. Das Zifferblatt ist nicht mit der Fitbit Luxe (als ein reiner Fitness-Tracker) kompatibel. Sentinel kann aus der [Fitbit-Mobile App](https://gallery.fitbit.com/details/5f75448f-413d-4ece-a53d-b969c6afea7c) heruntergeladen werden.
 
-There are additional options for FitBit watches which appear to be for monitoring only. This includes [Glance](https://glancewatchface.com/). These additional options are described in the [Nightscout webpages.](https://nightscout.github.io/nightscout/wearable/#fitbit)
+Damit wird es möglich Glukosewerten von bis zu drei Personen über Dexcom Share, Nightscout oder einer Kombination aus den beiden Datenquellen, zu folgen.
 
-### Option 5) **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
+Wenn xDrip+ oder die SpikeApp im lokalen Webserver Modus laufen, können auch diese genutzt werden. Man kann individuelle Alarme einrichten und Ereignisse über die Nightscout-Careportal-Funktionalität direkt von der Smartwatch eintragen und so leichter die Glukosewerte, das aktive Insulin (IOB) und die wirksamen Kohlenhydrate (COB) im Auge behalten und auch Mahlzeit-Informationen (Kohlenhydrate und Bolus) eingeben.
 
-These options are described in more detail in the ["following only"](following-only.md) section of the documentation.
+Diese Informationen und Ereignisse erscheinen (inkl. der aktualisierten Werte für IOB und COB) in der Nightscout-Übersicht. Unterstützung aus der Community findest Du in der [Facebook-Gruppe, Sentinel](https://www.facebook.com/groups/3185325128159614).
 
-In general, there are a wide range of affordable smartwatches which can provide glucose display only. If you are using Nightscout, then a good overview of all the options are described in the [Nightscout pages](https://nightscout.github.io/nightscout/wearable/#).
+Für Fitbit-Uhren gibt es noch andere Möglichkeiten, die sich allerdings auf die reine Anzeige beschränken. Dazu gehört auch [Glance](https://glancewatchface.com/). Diese zusätzlichen Optionen sind in den [Nightscout Webseiten](https://nightscout.github.io/nightscout/wearable/#fitbit) beschrieben.
+
+### Option 5) **AAPS Überwachung** (vollständige Profilinformationen oder nur Glukosewerte), wenn **AAPS** auf einem Smartphone läuft.
+
+Diese Optionen werden im Dokumentenabschnitt ["AAPS folgen"](following-only.md) näher beschrieben.
+
+Es gibt eine große Auswahl an erschwinglichen Smartwatches, die Glukosewerte anzeigen können. Nutzt Du Nightscout, findest Du einen guten Überblick über die verschiedenen Möglichkeiten auf den [Nightscout-Seiten](https://nightscout.github.io/nightscout/wearable/#).
 
 
 

@@ -1,28 +1,20 @@
 # Tercihler
 
-- Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak **tercihleri açın**.
+- **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
-  ```{image} ../images/Pref2020_Open2.png
-  :alt: Tercihleri açın
-  ```
+  ![Open preferences](../images/Pref2020_Open2.png)
 
 - Bu sekmeyi açıp Eklenti tercihleri'ne tıklayarak belirli bir sekmenin (ör. pompa sekmesi) tercihlerine doğrudan atlayabilirsiniz.
 
-  ```{image} ../images/Pref2020_OpenPlugin2.png
-  :alt: Tercihler Eklentisini açın
-  ```
+  ![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
 
 - **Alt menüler**, alt menü başlığının altındaki üçgene tıklanarak açılabilir.
 
-  ```{image} ../images/Pref2020_Submenu2.png
-  :alt: Alt menüyü aç
-  ```
+  ![Open submenu](../images/Pref2020_Submenu2.png)
 
 - Tercihler ekranının üst kısmındaki **filtre** ile belirli tercihlere hızlı bir şekilde erişebilirsiniz. Sadece aradığınız metnin bir kısmını yazmaya başlayın.
 
-  ```{image} ../images/Pref2021_Filter.png
-  :alt: Tercihler filtresi
-  ```
+  ![Preferences filter](../images/Pref2021_Filter.png)
 
 ```{contents}
 :backlinks: entry
@@ -32,9 +24,7 @@
 (Preferences-general)=
 ## Genel
 
-```{image} ../images/Pref2020_General.png
-:alt: Tercihler > Genel
-```
+![Preferences > General](../images/Pref2020_General.png)
 
 **Ünite**
 
@@ -58,9 +48,7 @@
 
 (Preferences-master-password)=
 
-```{image} ../images/Pref2020_General2.png
-:alt: Preferences > General - Protection
-```
+![Preferences > General - Protection](../images/Pref2020_General2.png)
 
 #### Ana parola
 
@@ -74,9 +62,7 @@
 
 - Parolayı girin, onaylayın ve Tamam'a tıklayın.
 
-  ```{image} ../images/MasterPW.png
-  :alt: Ana parola tanımlama
-  ```
+  ![Ana parola tanımlama](../images/MasterPW.png)
 
 #### Ayarların Güvenliği "Settings protection"
 
@@ -86,9 +72,7 @@
 
 - Özel bir parola kullanıyorsanız, parolayı [yukarıda](Preferences-master-password) açıklandığı gibi ayarlamak için "Parola ayarları" satırına tıklayın.
 
-  ```{image} ../images/Pref2020_Protection.png
-  :alt: Güvenlik
-  ```
+  ![Güvenlik](../images/Pref2020_Protection.png)
 
 #### Uygulama Güvenliği
 
@@ -101,18 +85,14 @@
 
 - Aşağıdaki örnekte biyometrik koruma istemini görüyorsunuz. Biyometrik kimlik doğrulama çalışmazsa, beyaz kısmın üzerindeki boşluğa tıklayın ve ana parolayı girin.
 
-  ```{image} ../images/Pref2020_PW.png
-  :alt: Biyometrik koruma
-  ```
+  ![Prompt biometric protection](../images/Pref2020_PW.png)
 
 (Preferences-skin)=
 #### Görünüm
 
 - Dört çeşit görünüm arasından seçim yapabilirsiniz:
 
-  ```{image} ../images/Pref2021_SkinWExample.png
-  :alt: Select skin
-  ```
+  ![Select skin](../images/Pref2021_SkinWExample.png)
 
 - 'Düşük çözünürlüklü görünüm', düşük çözünürlüklü ekranda daha fazla kullanılabilir alana sahip olmak için daha kısa etiket ve yaş/seviye satırı kaldırılmış olarak gelir.
 
@@ -129,18 +109,14 @@
 
 - **Geniş Ekran** diğer dış görünümlere kıyasla tüm grafiklerin daha büyük boyutuna sahiptir
 
-  ```{image} ../images/Screenshots_Skins.png
-  :alt: Ekran yönüne göre görünüm
-  ```
+  ![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
 
 (Preferences-overview)=
 ## Genel Bakış
 
 - Genel bakış bölümünde ana ekran için tercihleri tanımlayabilirsiniz.
 
-  ```{image} ../images/Pref2020_OverviewII.png
-  :alt: Tercihler > Genel Bakış
-  ```
+  ![Preferences > Overview](../images/Pref2020_OverviewII.png)
 
 ### Ekranı açık tut
 
@@ -152,19 +128,13 @@
 
 - Ana ekranınızın altında hangi butonların görüneceğini tanımlayın.
 
-  ```{image} ../images/Pref2020_OV_Buttons.png
-  :alt: Preferences > Buttons
-  ```
+  ![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
 
 - Karbonhidrat ve insülin diyalogundaki üç artış butonu ile kolay giriş için miktar tanımlayabilirsiniz.
 
-  ```{image} ../images/Pref2020_OV_Buttons2.png
-  :alt: Preferences > Buttons > Insulin
-  ```
+  ![Preferences > Buttons > Insulin](../images/Pref2020_OV_Buttons2.png)
 
-  ```{image} ../images/Pref2020_OV_Buttons3.png
-  :alt: Preferences > Buttons > Carbs
-  ```
+  ![Preferences > Buttons > Carbs](../images/Pref2020_OV_Buttons3.png)
 
 (Preferences-quick-wizard)=
 ### Hızlı Asistan
@@ -173,17 +143,13 @@
 
 - Oluştururken, butonun ana ekranınızda günün hangi saatlerinde görüneceğini belirleyebilirsiniz. - her periyot için bir buton görünür.
 
-  ```{image} ../images/Pref2020_OV_QuickWizard.png
-  :alt: Preferences > Quick Wizard Button Setup
-  ```
+  ![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
 
 - Hızlı sihirbaz düğmesini tıklarsanız AAPS, mevcut ayarlarınıza göre girdiğiniz karbonhidrat için bir bolus hesaplar ve önerir (ayarlanmışsa kan şekeri değerini veya aktif insülini de dikkate alarak).
 
 - İnsülin verilmeden önce önerinin onaylanması gerekir.
 
-  ```{image} ../images/Pref2020_OV_QuickWizard2.png
-  :alt: Tercihler > Hızlı Asistan Butonu
-  ```
+  ![Preferences > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
 
 (Preferences-default-temp-targets)=
 ### Varsayılan Geçici hedefler
@@ -192,15 +158,11 @@
 
 - Varsayılan GH ayarı ile aktivite, yakında öğün vb. butonlar için hedefinizi kolayca değiştirebilirsiniz.
 
-  ```{image} ../images/Pref2020_OV_DefaultTT.png
-  :alt: Tercihler > Varsayılan geçici hedefler
-  ```
+  ![Preferences > Default temp targets](../images/Pref2020_OV_DefaultTT.png)
 
 - Hedefinizi, ana ekranın sağ üst köşesindeki hedefinize uzun basarak veya alttaki turuncu “Karbonhidrat” düğmesindeki kısayolları kullanarak değiştirebilirsiniz.
 
-  ```{image} ../images/Pref2020_OV_DefaultTT2.png
-  :alt: Preferences > Use default temp targets
-  ```
+  ![Preferences > Use default temp targets](../images/Pref2020_OV_DefaultTT2.png)
 
 ###
 
@@ -214,9 +176,7 @@
 
 - Ana ekrandaki grafiğin hangi bölümünün hedef aralığınız olacağını ve yeşil arka planla doldurulacağını tanımlayın.
 
-  ```{image} ../images/Pref2020_OV_Range2.png
-  :alt: Tercihler > Görselleştirme aralığı
-  ```
+  ![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
 
 ### Kısa sekme başlıkları
 
@@ -224,17 +184,13 @@
 
 - Örneğin 'OpenAPS AMA' sekmesi 'OAPS' olur, 'GÖREVLER' 'GRV' olur vb.
 
-  ```{image} ../images/Pref2020_OV_Tabs.png
-  :alt: Tercihler > Sekmeler
-  ```
+  ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
 
 ### Tedavi diyaloglarında not alanını göster
 
 - Tedavilerinize kısa metin notları ekleme seçeneği sunar (bolus sihirbazı, karbonhidrat, insülin...)
 
-  ```{image} ../images/Pref2020_OV_Notes.png
-  :alt: Tercihler > Tedavi diyaloglarındaki notlar
-  ```
+  ![Preferences > Notes in treatment dialogs](../images/Pref2020_OV_Notes.png)
 
 (Preferences-status-lights)=
 ### Durum ışıkları
@@ -255,16 +211,12 @@
 
 - AAPS 2.7'den önceki sürümlerde durum ışıkları için ayarların Nightscout üzerinden yapılması gerekiyordu.
 
-  ```{image} ../images/Pref2020_OV_StatusLights2.png
-  :alt: Tercihler > Durum Işıkları
-  ```
+  ![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
 
 (Preferences-advanced-settings-overview)=
 ### Gelişmiş ayarlar
 
-```{image} ../images/Pref2021_OV_Adv.png
-:alt: Preferences > Advanced Settings
-```
+![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
 
 (Preferences-superbolus)=
 #### Süperbolus
@@ -380,9 +332,7 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 - Hedef değiştirilirse, giriş ekranınızda hedef yeşil bir arka planla görüntülenecektir.
 
-  ```{image} ../images/Home2020_DynamicTargetAdjustment.png
-  :alt: Hedef otoduyarlılık tarafından değiştirilmiş
-  ```
+  ![Target modified by autosens](../images/Home2020_DynamicTargetAdjustment.png)
 
 (Preferences-carb-required-notification)=
 #### Karbonhidrat gerekli bildirimi
@@ -399,9 +349,7 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 - İstenirse karbonhidrat ihtiyacı bildirimleri Nightscout'a iletilebilir, bu durumda bir anons gösterilir ve yayınlanır.
 
-  ```{image} ../images/Pref2020_CarbsRequired.png
-  :alt: Giriş ekranında karb gerekli gösterimi
-  ```
+  ![Display carbs required on home screen](../images/Pref2020_CarbsRequired.png)
 
 #### Gelişmiş ayarlar (OpenAPS SMB)
 
@@ -410,9 +358,7 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 ## Emilim ayarları
 
-```{image} ../images/Pref2020_Absorption.png
-:alt: Emilim ayarları
-```
+![Emilim ayarları](../images/Pref2020_Absorption.png)
 
 ### min_5m_carbimpact
 
@@ -432,9 +378,7 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 - Ana ekrandaki AKRB grafiği, en üste turuncu bir daire koyarak min_5m_impact'in ne zaman kullanıldığını gösterir.
 
-  ```{image} ../images/Pref2020_min_5m_carbimpact.png
-  :alt: AKRB grafiği
-  ```
+  ![COB graph](../images/Pref2020_min_5m_carbimpact.png)
 
 ### Maksimum besin emilim süresi
 
@@ -460,9 +404,7 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 (Preferences-nsclient)=
 ## NSClient
 
-```{image} ../images/Pref2020_NSClient.png
-:alt: NSClient
-```
+![NSClient](../images/Pref2020_NSClient.png)
 
 Original communication protocol, can be used with older Nightscout versions.
 
@@ -474,9 +416,7 @@ Original communication protocol, can be used with older Nightscout versions.
 
 ## NSClientV3
 
-```{image} ../images/Pref2024_NSClientV3.png
-:alt: NSClientV3
-```
+![NSClientV3](../images/Pref2024_NSClientV3.png)
 
 [New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
@@ -499,9 +439,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Alarm türleri
 
-```{image} ../images/Pref2024_NSClient_Alarms.png
-:alt: Alarm options
-```
+![Alarm türleri](../images/Pref2024_NSClient_Alarms.png)
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. AAPS will alarm when a Nightscout alarms trigger.
   - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -512,9 +450,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Bağlantı Ayarları
 
-```{image} ../images/ConfBuild_ConnectionSettings.png
-:alt: NSClient bağlantı ayarları
-```
+![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
 
 - Connection settings define when Nightscout connection will be enabled.
 - Nightscout yüklemesini yalnızca Wi-Fi ile veya hatta belirli Wi-Fi SSID'leri ile sınırlayın.
@@ -525,9 +461,7 @@ You can select which data you want to [upload and download to or from Nightscout
 (Preferences-advanced-settings-nsclient)=
 ### Gelişmiş Ayarlar (NSClient)
 
-```{image} ../images/Pref2024_NSClientAdv.png
-:alt: NS Client gelişmiş ayarlar
-```
+![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
 
 Options in advanced settings are self-explanatory.
 
@@ -548,25 +482,19 @@ Hangi konum hizmetinin kullanılacağını seçin:
 
 ## Yerel uyarılar
 
-```{image} ../images/Pref2020_LocalAlerts.png
-:alt: Yerel uyarılar
-```
+![Yerel uyarılar](../images/Pref2020_LocalAlerts.png)
 
 - Ayarlar açıklayıcı olmalıdır.
 
 ## Veri seçenekleri
 
-```{image} ../images/Pref2020_DataChoice.png
-:alt: Veri seçenekleri
-```
+![Veri seçenekleri](../images/Pref2020_DataChoice.png)
 
 - Geliştiricilere kilitlenme raporları göndererek AAPS'nin daha da geliştirilmesine yardımcı olabilirsiniz.
 
 ## Bakım ayarları
 
-```{image} ../images/Pref2020_Maintenance.png
-:alt: Bakım ayarları
-```
+![Bakım ayarları](../images/Pref2020_Maintenance.png)
 
 - Günlüklerin standart alıcısı <logs@androidaps.org>'dur.
 - *Dışa aktarılan ayarları şifrele*'yi seçerseniz, bunlar [ana parolanız](Preferences-master-password) ile şifrelenir. Bu durumda, ayarlar her dışa aktarıldığında veya içe aktarıldığında ana parola girilmelidir.

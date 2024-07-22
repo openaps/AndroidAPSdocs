@@ -10,9 +10,7 @@
 
 ## Настройка SMS-команд
 
-```{image} ../images/SMSCommandsSetup.png
-:alt: Настройка SMS команд
-```
+![SMS Commands Setup](../images/SMSCommandsSetup.png)
 
 - Большинство корректировок временных целей, вслед за ААПС и т. д. может быть сделано при помощи приложения [AAPSClient](../Children/Children.md) на телефоне Android с интернет-соединением.
 - Болюсы не могут подаваться через Nightscout, но можно использовать SMS-команды.
@@ -37,9 +35,7 @@
 
   - Введите дополнительные номера, разделенные точкой с запятой, без пробела.
 
-    ```{image} ../images/SMSCommandsSetupSpace2.png
-    :alt: Команды SMS с нескольких номеров
-    ```
+    ![SMS Commands Setup multiple numbers](../images/SMSCommandsSetupSpace2.png)
 
 ### Минуты между командами на болюс
 
@@ -100,9 +96,7 @@
 
 Команды должны отправляться на английском языке, ответ будет получен на русском языке, если строка ответа уже [переведена](translations-translate-strings-for-AAPS-app) <../translations. html#translate-strings-pl-androidaps-app> ` _.
 
-```{image} ../images/SMSCommands.png
-:alt: Пример команд SMS
-```
+![SMS Commands Example](../images/SMSCommands.png)
 
 ### Замкнутый цикл
 
@@ -185,9 +179,7 @@
 
 Была жалоба на остановку работы SMS команд после обновления на телефоне Galaxy S10. Решается путем отключения опции "отправлять SMS как сообщения чата".
 
-```{image} ../images/SMSdisableChat.png
-:alt: Отключить SMS как сообщение чата
-```
+![Disable SMS as chat message](../images/SMSdisableChat.png)
 ### Приложение Messages для Android
 
 Если у вас возникают проблемы с отправкой или получением SMS-команд в приложении Android Messages, отключите сквозное шифрование как на телефоне опекуне, так и на детском телефоне.

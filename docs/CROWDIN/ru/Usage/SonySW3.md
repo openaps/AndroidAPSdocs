@@ -46,16 +46,12 @@ Sony Smartwach 3-одни из самых популярных часов для
 
 ## 5. Отправьте приложение на часы
 
-- * В терминале введите команду «adb install -r -g имяприложения.apk» (в нашем случае «adb install -r -g SW3fix.apk»).
+- In terminal enter this command „adb install -r -g aplicationname.apk“ (so in our case „adb install -r -g SW3fix.apk“).
 
-  ```{image} ../images/SonySW3_Terminal1.png
-  :alt: команда терминала
-  ```
+  ![Terminal command](../images/SonySW3_Terminal1.png)
 
 - Дождитесь завершения установки примерно 4–5 минут.
 
-  ```{image} ../images/SonySW3_Terminal2.png
-  :alt: успешная установка в терминале
-  ```
+  ![Terminal successful installation](../images/SonySW3_Terminal2.png)
 
 - После завершения перезагрузите часы, и вы увидите синхронизацию приложений.

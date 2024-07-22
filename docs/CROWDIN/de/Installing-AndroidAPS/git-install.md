@@ -5,27 +5,23 @@
 ### 1. Git herunterladen
 
 - **Du musst immer online sein, da Android Studio verschiedene Updates herunterlädt!**
-- Any git version should work. Zum Beispiel [https://git-scm.com/download/win](https://git-scm.com/download/win).
+- Jede git Version sollte funktionieren. Zum Beispiel [https://git-scm.com/download/win](https://git-scm.com/download/win).
 - Notiere Dir den Installationspfad. Du brauchst diesen im nächsten Schritt.
 
 ```{admonition} make git.exe available via Windows PATH
-:class: Notiz
+:class: note
 
 Achte darauf, dass die Datei git.exe später ohne den Installationspfad mit angeben zu müssen, aufrufbar ist. Android Studio benötigt dies, um git.exe zu finden. In diesem Fall wird der Pfad in den Android Studio-Einstellungen automatisch richtig gesetzt.
 
 ```
 
-```{image} ../images/Update_GitPath.png
-:alt: Git Installationspfad
-```
+![Git Installationspfad](../images/Update_GitPath.png)
 
 ### 2. Pfad zu git in Android Studio festlegen
 
 - Öffne File > Settings
 
-  ```{image} ../images/Update_GitSettings1.png
-  :alt: Android Studio - Einstellungen öffnen
-  ```
+  ![Android Studio - Einstellungen öffnen](../images/Update_GitSettings1.png)
 
 - Klicke auf das kleine Dreieck neben Version Control (1.), um das Untermenü zu öffnen.
 
@@ -35,17 +31,13 @@ Achte darauf, dass die Datei git.exe später ohne den Installationspfad mit ange
 
 - Prüfe durch klicken des Buttons "Test" (4.), ob Android Studio den Pfad zu git.exe automatisch ermitteln kann.
 
-  ```{image} ../images/AndroidStudio361_09.png
-  :alt: Android Studio settings
-  ```
+  ![Einstellungen für Android Studio](../images/AndroidStudio361_09.png)
 
 - Wenn die automatische Einstellung möglich ist, wird die Git-Version angezeigt.
 
 - Klicke im Dialogfenster auf "OK" (1.) und dann im Einstellungsfenster nochmals auf "OK" (2.).
 
-  ```{image} ../images/AndroidStudio361_10.png
-  :alt: Automatische git Installation erfolgreich
-  ```
+  ![Automatische Git-Installation erfolgreich](../images/AndroidStudio361_10.png)
 
 - Falls git.exe nicht gefunden werden kann, schließe das Dialogfenster mit "OK" (1.) und klicke dann auf den Button mit den drei Punkten (2.).
 
@@ -55,9 +47,7 @@ Achte darauf, dass die Datei git.exe später ohne den Installationspfad mit ange
 
 - Schließe das Einstellungs-Fenster durch Klick auf "OK" (5.).
 
-  ```{image} ../images/AndroidStudio361_11.png
-  :alt: Automatische Git-Installation fehlgeschlagen
-  ```
+  ![Automatische Git-Installation fehlgeschlagen](../images/AndroidStudio361_11.png)
 
 ### 3. Starte den Rechner neu
 
@@ -70,19 +60,15 @@ Achte darauf, dass die Datei git.exe später ohne den Installationspfad mit ange
 
 - Gib `git --version` (ohne Anführungszeiten und ohne das Leerzeichen zwischen den zwei - \[Minuszeichen\]!) und drücke Return
 
-  ```{image} ../images/AndroidStudio_gitversion1.png
-  :alt: git - -version
-  ```
+  ![git - -version](../images/AndroidStudio_gitversion1.png)
 
 - Wenn git installiert und richtig verbunden ist, erhältst Du eine Information über die installierte Version, die wie folgt aussieht:
 
-  ```{image} ../images/AndroidStudio_gitversion2.png
-  :alt: Ergebnis git-version
-  ```
+  ![result git-version](../images/AndroidStudio_gitversion2.png)
 
 ## Mac
 
-- Any git version should work. Zum Beispiel [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+- Jede git Version sollte funktionieren. Zum Beispiel [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
 - Verwende homebrew um git zu installieren: `` `$ brew install git` ``.
-- For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-- If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
+- Details zur Installation von git findest Du in der [offiziellen git Dokumentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+- Wenn Du git über homebrew installierst, musst Du keine Einstellungen ändern. Im Fall der Fälle findest Du diese unter Android Studio - Preferences.

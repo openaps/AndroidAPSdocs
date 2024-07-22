@@ -2,31 +2,31 @@
 
 # Glättung der Blut-Glukose-Daten
 
-If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors in your CGM data it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
+Wenn die **Glukosewerte** Sprünge haben oder verrauscht sind, kann es dazu kommen, dass **AAPS** das Insulin falsch dosiert. Das kann zu Unter- und Überzuckerungen führen. Wenn Du Fehler in den CGM-Daten erkennst ist es wichtig, bis das Problem behoben ist, den Loop auszuschalten. Abhängig vom verwendeten Sensor können die Probleme in der CGM-Konfiguration in **AAPS** (wie unten beschrieben) liegen oder auf ein Problem mit der Sensorsetzstelle (so dass er eventuell ersetzt werden muss) hindeuten.
 
-Some CGM systems have internal algorithms to detect the noise level in the readings, and **AAPS** can use this information to avoid giving SMBs if the BG data is too unreliable. Für die CGMs, die diese Informationen nicht übermitteln, werden die Funktionen 'Aktiviere SMB immer' und 'Aktiviere SMB nach Mahlzeiten' aus Sicherheitsgründen deaktiviert.
+Einige CGM-Systeme haben interne Algorithmen, um die Qualität der Messwerte zu erkennen. **AAPS** kann diese Informationen nutzen und (bei unzuverlässigen Werten) SMBs aussetzen. Für die CGMs, die diese Informationen nicht übermitteln, werden die Funktionen 'Aktiviere SMB immer' und 'Aktiviere SMB nach Mahlzeiten' aus Sicherheitsgründen deaktiviert.
 
-Additionally, as of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. There are three options available in the [Config Builder](../Configuration/Config-Builder.md).
+Zusätzlich gibt es ab der **AAPS** Version 3.2 die Möglichkeit, die Daten innerhalb von **AAPS** zu glätten (anstatt innerhalb der CGM-App). Es gibt drei Optionen in der [KONFIGURATION](../Configuration/Config-Builder.md).
 
-![Smoothing](../images/ConfBuild_Smoothing.png)
+![Glättung](../images/ConfBuild_Smoothing.png)
 
-## Exponential smoothing
+## Exponentielle Glättung
 
-This is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value.
+Diese Methode ist die aggressivste und gleichzeitig empfohlene Methode, um das Rauschen zu beheben. Sie schreibt den aktuellen (letzten) Glukosewert erneut.
 
-## Average smoothing
+## Durchschnittliche Glättung
 
-This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.
+Diese Option funktioniert ähnlich wie die Rückwärtsglättung, wie sie auf einigen CGM-Plattformen zuletzt eingesetzt wurde. Es berücksichtigt und reagiert die jüngsten Glukosewerte stärker und ist daher für verrauschte Werte anfälliger.
 
-## No Smoothing
+## Ohne Glättung
 
-Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
+Verwende diese Option nur dann, wenn Deine CGM-Daten bereits (in einer Collector-App) geglättet werden, bevor sie an **AAPS** übertragen werden.
 
-## Suggestions to use smoothing
+## Vorschläge zur Verwendung des Glättens
 
-|                           | Exponential |  Average |     None    |
-| ------------------------- | :---------: | :------: | :---------: |
-| G5 and G6                 |             | If noisy | Recommended |
-| G7                        | Recommended |          |             |
-| Libre 1 or Juggluco       | Recommended |          |             |
-| Libre 2 and 3 from xDrip+ |             |          | Recommended |
+|                          | Exponentiell |   Durchschnitt  |   Keine   |
+| ------------------------ | :----------: | :-------------: | :-------: |
+| G5 und G6                |              | Wenn verrauscht | Empfohlen |
+| G7                       |   Empfohlen  |                 |           |
+| Libre 1 oder Juggluco    |   Empfohlen  |                 |           |
+| Libre 2 und 3 von xDrip+ |              |                 | Empfohlen |

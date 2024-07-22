@@ -1,23 +1,23 @@
-# How to translate strings for the AAPS app or the documentation
+# Wie man Textabschnitte für die AAPS-App oder die Dokumentation übersetzt
 
 * Für die Zeichenketten, die in der App verwendet werden, gehe zu <https://crowdin.com/project/androidaps> und melden Dich mit Deinem GitHub Konto an
 * Für die Dokumentation besuche bitte <https://crowdin.com/project/androidapsdocs> und melde Dich mit Deinem GitHub Account an
 
-* Sende Deinen Beitrittswunsch an das Docs-Team. Klicke dazu auf die Fahne der gewünschten Sprache und dann auf der nächsten Seite rechts oben auf den Button "Join". Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
+* Sende Deinen Beitrittswunsch an das Docs-Team. Klicke dazu auf die Fahne der gewünschten Sprache und dann auf der nächsten Seite rechts oben auf den Button "Join". Gib die gewünschte(n) Sprach(n) an, ein paar Infos zu Dir und Deiner AAPS Erfahrung und auch, ob Du als Übersetzer oder Lektor (nur Personen mit Übersetzungs- und längerer AAPS-Erfahrung) unterstützen möchtest.
 
 ```{admonition} Zeit für die Freigabe :class: note
 
 Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stellen wir keine SLAs zur Verfügung, aber im Allgemeinen erfolgt die Genehmigung in < 1 Tag. Falls nicht, kontaktiere bitte das Doc Team über Facebook oder Discord.
 
-    <br />* When we approve you, click the flag
-       ![When we approve you, click the flag](./images/translation_flags.png)
+    <br />* Wenn wir Dich aufnehmen, klicke auf die Flagge
+       ![Wenn wir Dich aufnehmen, klicke auf die Flagge](./images/translation_flags. ng)
     
-    ## Translation of the app
+    ## Übersetzung der App
     
     (translations-translate-strings-for-AAPS-app)=
-    ### Translate strings for AAPS app
+    ### Zeichenketten für die AndroidAPS-App übersetzen
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. Es zeigt Dir direkt die Zeichenketten, die übersetzt werden müssen.
+    * Wenn Du keine von Dir speziell ausgewählten Zeichenketten übersetzen willst, wähle einfach die Schaltfläche "Alle übersetzen" um zu starten. Es zeigt Dir direkt die Zeichenketten, die übersetzt werden müssen.
     
        ![Click translate all](./images/translations-click-translate-all.png)
     
@@ -25,23 +25,23 @@ Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stell
     
        ![Click strings.xml](./images/translations-click-strings.png)
     
-    * Translate sentences on left side by adding new translated text or use & edit suggestion 
+    * Übersetze Sätze auf der linken Seite durch die Eingabe einer eigenen neuen Übersetzung oder durch Auswahl eines Übersetzungsvorschlags von Crowdin basierend auf bereits durchgeführten Übersetzungen der Vergangenheit oder dem Übersetzungsalgorithmus von Crowdin
     
        ![Translation app](./images/translations-translate.png)
     
     
-    ### Proofread strings for AAPS app
+    ### Proofread Strings (Zeichenketten) der AndroidAPS App
     
-    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
+    * Proofreaders starten das Proofreading, indem Sie auf dem Startschirm des Projekts in Crowdin "Proofread" anstatt "Translation" aufrufen.
     
        ![Proofreading mode app](./images/translations-proofreading-mode.png) 
     
     
-      and approve translated texts 
+      und genehmige übersetzte Texte 
     
        ![approve text](./images/translations-proofreading.png)
     
-    When a proofreader approves a translation it will be added to the next version of AAPS.
+    Wenn ein Korrekturleser eine Übersetzung genehmigt, wird diese zur nächsten AndroidAPS-Version hinzugefügt.
     
     (translations-translation-of-the-documentation)=
     ## Übersetzung der Dokumentation
@@ -85,7 +85,7 @@ Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stell
     
     
 
-Wenn Du einen Text mit einem Link übersetzt, bitte sei vorsichtig **nicht** den Link zu entfernen, der durch ein Paar `<0><>` Tags repräsentiert wird oder mit einer anderen Zahl, falls mehrere Links in einem Absatz enthalten sind.
+Wenn Du einen Text mit einem Link übersetzt, achte darauf den Link **nicht** zu entfernen, der durch ein Paar `<0></0>` Tags dargestellt wird oder mit einer anderen Zahl, falls mehrere Links in einem Absatz enthalten sind.
 
 Es ist die Aufgabe des Proofreaders, einen besonderen Blick darauf zu haben!
 

@@ -1,10 +1,7 @@
 # Αλλάξτε γλώσσα
 
 ```{note}
-Η επιλογή γλώσσας έχει μετακινηθεί στο κάτω συρτάρι του αριστερού μενού. Παρακαλώ επιλέξτε την κάτω μπάρα ώστε να ανοίξει το μενού επιλογής γλώσσας.
+The language selection have been moved to the bottom drawer of the left menu. Please click on the bottom bar to open language selection menu.
 ```
 
-```{image} images/documentation_language_menu.png
-:alt:Ανοίξτε το μενού επιλογής γλώσσας
-:width: 350
-```
+![Open language menu](images/documentation_language_menu.png){w=350px align=center}

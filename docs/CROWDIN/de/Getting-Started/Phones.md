@@ -2,7 +2,7 @@
 
 # Liste der getesteten Smartphones
 
-Currently, we have a very hard-working behind-the-scenes Maintainer, who is in charge of ensuring the integrity of the Hardware List of all Android Phones/Smartwatches Capable of Looping with the Omnipod Dash; the newest pump driver addition to our ever-expanding network of Bluetooth enabled insulin pumps for use within the AAPS/OpenAPS ecosystem!
+Es gibt hinter den Kulissen einen sehr hart arbeitenden Menschen, der dafür verantwortlich ist, eine aktuelle Liste aller Smartphones/Smartwatches zu pflegen, die mit dem Omnipod Dash, als einer der neuesten Zugänge zum sich ständig erweiternden Kreis der bluetoothfähigen Insulinpumpen, die mit dem AAPS/OpenAPS Ökosystem loopbar sind.
 
 Unser Betreuer hat viel Zeit und Mühe damit verbracht, dass es für Jeden leicht ist, Daten in die Tabelle einzugeben; über ein Google-Formular mit vorgefüllten Überschriften zur einfachen Anwendung! Dadurch wird sichergestellt, dass die vorhandenen Daten der Tabellen nicht versehentlich überschrieben oder gelöscht werden können. Diese Version basiert auf dem Erfolg des ersten Sheets, das nicht mehr gepflegt wurde und nutzt hierzu wiederum Google Sheets.
 
@@ -22,4 +22,4 @@ Im Falle von Fragen oder Problemen mit der Tabelle kontaktiere uns bitte direkt 
 
 # Handy Hintergrundbild
 
-![Handy Hintergrundbild](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AAPS, you can download your background image here: ![Hintergrundbild in hoher Auflösung.](../images/bg_phone.jpg)
+![Handy Hintergrundbild](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> Wenn Du Dein Smartphone mit AAPS verschönern willst, kannst Du das Hintergrundbild hier herunterladen: ![Hintergrundbild in hoher Auflösung.](../images/bg_phone.jpg)

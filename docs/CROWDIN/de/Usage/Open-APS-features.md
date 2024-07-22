@@ -20,7 +20,7 @@
 
 SMB steht für “super micro bolus” und ist die neueste OpenAPS-Funktion (aus 2018) im Rahmen des Oref1-Algorithmus. Im Gegensatz zu AMA arbeitet SMB nicht so stark mit temporären Basalraten, sondern hauptsächlich mit **kleinen Supermicroboli**. In Situationen, in denen AMA 1.0 IE Insulin über eine temporäre Basalrate zugeben würde, gibt SMB im **5-Minutentakt** mehrere Supermicroboli in kleinen Schritten ab, z.B. 0.4 IE, 0.3 IE, 0.2 IE und 0.1 IE. Gleichzeitig wird die laufende Basalrate aus Sicherheitsgründen für eine bestimmte Dauer auf 0 IE/h gesetzt, damit keine Überdosierung erfolgt (**“zero-temping”**). So kann das System den BZ schneller abfangen als mit der temporären Basalratenerhöhung bei AMA.
 
-Thanks to SMB, it may be sufficient for meals containing only "slow" carbs to inform the system of the planned amount of carbohydrate and leave the rest to AAPS. However, this may lead to higher postprandial (post-meal) peaks because pre-bolusing isn’t possible. Or you can give, if necessary with pre-bolusing, a **start bolus**, which **only partly** covers the carbohydrates (e.g. 2/3 of the estimated amount) and let SMB provide the rest.
+Für Mahlzeiten mit ausschließlich langsamen Kohlenhydraten kann es - Dank der SMB - ausreichen, dem System die voraussichtliche KH-Menge anzukündigen und den Rest AAPS zu überlassen. Dies führt aber womöglich zu höheren postprandialen Spitzen, weil kein Spritz-Ess-Abstand (SEA) eingehalten werden kann. Oder du gibst, ggf. mit SEA, einen **Anfangsbolus**, der **nur zum Teil** die Kohlenhydrate abdeckt (z.B. 2/3 der geschätzten Menge) und lässt den Rest vom SMB auffüllen.
 
 Die SMB-Funktion arbeitet mit einigen Sicherheitsmechanismen:
 
@@ -30,7 +30,7 @@ Die SMB-Funktion arbeitet mit einigen Sicherheitsmechanismen:
     * die Hälfte der aktuell benötigten Insulinmenge oder
     * der verbleibende Anteil deines maxIOB-Wertes in den Einstellungen.
 
-2. Wahrscheinlich wirst du häufig niedrige temporäre Basalraten (sog. ‘low temps’) oder temporäre Basalraten mit 0 IE/h (sog. ‘zero-temps’) feststellen. This is by design for safety reasons and has no negative effects if the profile is set correctly. Die IOB-Kurve ist aussagekräftiger als der Verlauf der temporären Basalraten.
+2. Wahrscheinlich wirst du häufig niedrige temporäre Basalraten (sog. ‘low temps’) oder temporäre Basalraten mit 0 IE/h (sog. ‘zero-temps’) feststellen. Dies ist aus Sicherheitsgründen so gewollt und hat bei einem korrekt eingestellten Profil auch keine negativen Auswirkungen. Die IOB-Kurve ist aussagekräftiger als der Verlauf der temporären Basalraten.
 
 3. Zusätzliche Berechnungen zur Vorhersage des Glukoseverlaufs, z.B. durch UAM (un-announced meals). UAM kann auch ohne manuelle Kohlenhydrat-Eingaben des Nutzers automatisch erkennen, dass die Glukosewerte auf Grund von Mahlzeiten, Adrenalin oder anderen Einflüssen signifikant steigen und versuchen, dies mit SMB abzufangen. Dies funktioniert aber zur Sicherheit auch andersherum und kann bei unvorhergesehen schnellem Glukoseabfall den SMB früher stoppen. Deshalb sollte UAM bei SMB auch immer aktiv sein.
 
@@ -48,9 +48,9 @@ Beispiel:
 
 Im Basalprofil ist im Laufe des Tages die Basalrate 1.00 U/h die höchste. Dann empfiehlt sich ein max-basal Wert von mindestens 3 U/h.
 
-AAPS limits the value as a 'hard limit' according to the patients age you have selected under settings.
+AAPS begrenzt als “hard limit” den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast.
 
-AAPS limits the value as follows:
+AAPS beschränkt den Wert wie folgt:
 
 * Kind: 2
 * Jugendlicher: 5
@@ -64,14 +64,14 @@ AAPS limits the value as follows:
 
 ### Maximales Basal-IOB, das OpenAPS abgeben darf (OpenAPS “max-iob”)
 
-This value determines the maxIOB that AAPS will remain under while running in closed loop mode. Liegt das aktuelle IOB (z.B nach einem Mahlzeit-Bolus) über dem festgelegten Wert, dann wird die Insulinabgabe durch den Loop unterbunden, bis die IOB-Grenze wieder unterschritten ist.
+maxIOB legt den Wert fest, den AAPS im "closed loop" nicht überschreiten soll. Liegt das aktuelle IOB (z.B nach einem Mahlzeit-Bolus) über dem festgelegten Wert, dann wird die Insulinabgabe durch den Loop unterbunden, bis die IOB-Grenze wieder unterschritten ist.
 
 Wenn du OpenAPS SMB verwendest, wird max-IOB anders berechnet, als in OpenAPS AMA. In AMA war maxIOB nur ein Sicherheitsparameter für Basal IOB, während er in SMB-Mode auch Bolus IOB beinhaltet. Ein guter Startwert ist
 
     maxIOB = mittlerer Mahlzeitenbolus + 3x höchste tägliche Basalrate
     
 
-Sei jedoch vorsichtig und passe deine Einstellungen in kleinen Schritten an. It is different for everyone and can also depend on the average total daily dose (TDD). Zur Sicherheit gibt es ein Limit, das auf dem Patientenalter basiert. Das “hard limit” für maxIOB ist höher als in [AMA](Open-APS-features-max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
+Sei jedoch vorsichtig und passe deine Einstellungen in kleinen Schritten an. Das ist sehr individuell und hängt stark vom durchschnittlichen Gesamtinsulinbedarf ab (total daily dose = TDD). Zur Sicherheit gibt es ein Limit, das auf dem Patientenalter basiert. Das “hard limit” für maxIOB ist höher als in [AMA](Open-APS-features-max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 * Kind: 3
 * Jugendlicher: 7
@@ -91,87 +91,87 @@ Hier kannst Du auswählen, ob die [Empfindlichkeitserkennung](../Configuration/S
 
 ### Aktiviere SMB
 
-Enable this to use SMB functionality. If disabled, no SMBs will be given.
+Aktiviere diese Option, um die SMB-Funktionalität zu nutzen. Wenn diese Option deaktiviert ist, werden keine SMB abgegeben.
 
-### Enable SMB with high temp targets
+### Aktiviere SMB bei temporären Zielen oberhalb des regulären Ziels
 
-If this setting is enabled, SMB will be allowed, but not necessarily enabled, when there is a high temporary target active (defined as anything above 100mg/dl regardless of profile target). This option is intended to be used to disable SMBs when the setting is disabled. For example, if this option is disabled, SMBs can be disabled by setting a temp target above 100mg/dl. This option will also disable SMB regardless of what other condition is trying to enable SMB.
+Wenn diese Einstellung aktiviert ist, sind SMB unabhängig vom Profil bei einem aktiven hohen temporären Ziel (Zielwert über 100 mg/dl) grundsätzlich möglich. Ergänzender Hinweis: Andere Bedingungen können aber dazu führen, dass diese SMB nicht abgegeben werden. Bei ausgeschalteter Option werden SMBs nicht abgegeben. Wenn zum Beispiel diese Option deaktiviert ist, werden SMBs durch das Setzen eines Ziels über 100 mg/dl ausgeschaltet. Diese Option deaktiviert SMBs grundsätzlich (auch wenn andere Bedingungen versuchen SMBs zu aktivieren).
 
-If this setting is enabled, SMB will only be enabled with a high temp target if Enable SMB with temp targets is also enabled.
+Wenn diese Option aktiviert ist, werden SMB bei einem hohen temporären Ziel nur dann aktiv sein, wenn gleichzeitig auch die Option "Aktiviere SMB bei aktiven temporären Zielen" eingeschaltet ist.
 
 (Open-APS-features-enable-smb-always)=
 
-### Enable SMB always
+### SMB immer aktivieren
 
-If this setting is enabled, SMB is enabled always (independent of COB, temp targets or boluses). If this setting is enabled, the rest of the enable settings below will have no effect. However, if “Enable SMB with high temp targets” is disabled and a high temp target is set SMBs will be disabled. For safety reasons, this option is only available for BG sources with a good filtering system for noisy data. Currently it is only an available option with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. If a BG value has too large of a deviation, the G5/G6 doesn’t send it and waits for the next value in 5 minutes.
+Wenn diese Option aktiviert ist, sind SMS immer aktiviert (unabhängig von COB, temporären Zielen und Bolus). Wenn diese Einstellung aktiviert ist, sind die übrigen Bedingungen ohne Einfluss und werden nicht berücksichtigt. Wenn jedoch „Aktiviere SMB bei hohem temporären Ziel“ ausgeschalter ist und ein hohes temporäres Ziel aktiv ist, werden SMBs nicht abgegeben. Diese Option ist nur für Sensorsysteme, die gut gefilterte (nicht rauschende /springende) Glukosewerte liefert, verfügbar. Im Moment funktioniert das nur mit einem Dexcom G5 oder G6 und bei Verwendung der ['Build Your Own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (BYODA) oder des 'native mode' in xDrip+. Falls ein gemessener Wert zu weit vom vorherigen Wert abweicht, gibt der G5/G6 einfach gar keinen Wert aus und wartet die nächste Messung in 5 Minuten ab.
 
-For other CGM/FGM like Freestyle Libre, ‘SMB always’ is deactivated until xDrip+ has a better noise smoothing plugin. You can find more [here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Für andere CGM/FGM wie das Freestyle Libre ist die SMB-always-Option deaktiviert, bis xDrip+ ein Glättungs-Plugin beinhaltet, das verrauschte Werte filtert. Weitere Informationen dazu findest du [hier](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
-### Enable SMB with COB
+### Aktiviere SMB während aktiver Kohlenhydrate.
 
-If this setting is enabled, SMB is enabled when the COB is greater than 0.
+Wenn diese Einstellung aktiviert ist, werden SMB aktiviert, wenn der COB größer als 0 (z.B. nach Mahlzeiten) ist.
 
-### Enable SMB with temp targets
+### Aktiviere SMB bei aktiven temporären Zielen
 
-If this setting is enabled, SMB is enabled when there is any temp target set (eating soon, activity, hypo, custom). If this setting is enabled but "Enable SMB with high temp targets" is disabled, SMB will be enabled when a low temp target is set (below 100mg/dl) but disabled when a high temp target is set.
+Wenn diese Option eingeschaltet ist, werden SMBs bei einem beliebigen gesetzten temporären Ziel (Bald essen, Aktivität, Hypo oder Individuell) abgegeben. Sollte diese Option eingeschaltet sein und "Aktiviere SMB bei hohem temporären Ziel" ist zur gleichen Zeit ausgeschaltet, werden SMBs nur bei einem gesetzten niedrigen Ziel (unter 100 mg/dl) abgegeben, nicht aber bei einem hohen Ziel.
 
 ### Aktiviere SMB nach Mahlzeiten
 
-If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB has reached 0. For safety reasons, this option is only available for BG sources with a nice filtering system for noisy data. Currently it is only an available option with a Dexcom G5 or G6 if using the ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. If a BG value has too large of a deviation, the G5/G6 doesn’t send it and waits for the next value in 5 minutes.
+Bei eingeschalter Option, sind SMBs für einen Zeitraum von 6h ab dem Zeitpunkt für den KH angekündigt sind aktiv, auch wenn COB mittlerweile 0 ist (keine aktiven KH mehr vorhanden sind). Diese Option ist nur für Sensorsysteme, die gut gefilterte (nicht rauschende /springende) Glukosewerte liefert, verfügbar. Im Moment funktioniert das nur mit einem Dexcom G5 oder G6 und bei Verwendung der ['Build Your Own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (BYODA) oder des 'native mode' in xDrip+. Falls ein gemessener Wert zu weit vom vorherigen Wert abweicht, gibt der G5/G6 einfach gar keinen Wert aus und wartet die nächste Messung in 5 Minuten ab.
 
-For other CGM/FGM like Freestyle Libre, 'Enable SMB after carbs' is deactivated until xDrip+ has a better noise smoothing plugin. You can find [more information here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Für andere CGM/FGM wie das Freestyle Libre ist die SMB-always-Option deaktiviert, bis xDrip+ ein Glättungs-Plugin beinhaltet, das verrauschte Werte besser glättet. Weitere Informationen dazu findest du [hier](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
-### How frequently SMBs will be given in min
+### Wie häufig SMBs abgegeben werden (in Min.)
 
-This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. Note that the loop runs every time a glucose value comes in (generally 5 minutes). Subtract 2 minute to give loop additional time to complete. E.g if you want SMB to be given every loop run, set this to 3 minutes.
+Diese Funktion beschränkt die Häufigkeit der SMBs. Dieser Wert bestimmt die Zeit, die zwischen der Abgabe der einzelnen SMBs mindestens vergehen muss. Sobald ein neuer Glukosewert empfangen wird (in der Regel alle 5 Minuten), läuft der Loop und führt die entsprechenden Berechnungen durch. Ziehe davon 2 Minuten ab, um dem Loop genug Zeit zu geben die Berechnungen abzuschließen. Wenn Du beispielsweise möchtest, dass mit jedem Loop-Lauf ein SMB abgegeben wird, dann setze diesen Wert auf 3 Minuten.
 
-Default value: 3 min.
+Standardwert: 3 Min.
 
 (Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
 
 ### SMB-Basal-Limit in Minuten
 
-This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
+Dies ist eine wichtige Sicherheitseinstellung. Dieser Wert legt fest, wie viel SMB in einer bestimmten Zeit auf der Basis der Menge an Basalinsulin abgegeben werden kann, wenn es von COBs abgedeckt wird.
 
-Making this value larger allows the SMB to be more aggressive. You should start with the default value of 30 minutes. After some experience, increase the value in 15 minutes increments and observe the effects over multiple meals.
+Eine Erhöhung des Wertes macht den SMB aggressiver. Zu Beginn solltest Du mit einem Standardwert von 30 Minuten starten. Wenn Du mehr Erfahrung gesammelt hast, erhöhe den Wert in 15 Minuten-Schritten und schaue Dir die Effekte über mehrere Mahlzeiten hinweg genau an.
 
-It is recommended not to set the value higher than 90 minutes, as this would lead to a point where the algorithm might not be able to accommodate a decreasing BG with 0 U/h basal ('zero-temp'). You should also set alarms, especially if you are still testing new settings, which will warn you well before a hypo.
+Ein Wert über 90 Minuten führt dazu, dass der Algorithmus mit einer temporären 0 IE/h-Basalrate (“zero-temp”) einen fallenden Glukosewert möglicherweise nicht mehr sicher abfangen kann. Daher wird davon abgeraten, einen Wert über 90 Minuten hinaus, zu setzen. Gerade in der Testphase neuer Einstellungen, solltest Du Alarme nutzen, um Dich vor einer Hypo frühzeitig zu warnen.
 
-Default value: 30 min.
+Standardwert: 30 Min.
 
 ### Aktiviere UAM
 
-With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful if you forget to tell AAPS about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increasements caused by carbs, adrenaline, etc., and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decrease, it can stop SMBs earlier.
+Wenn du diese Option aktivierst, dann kann der SMB unangekündigte Mahlzeiten erkennen. Das hilft, wenn Du vergessen haben solltest KH einzugeben, Dich bei der KH-Menge verschätzt hast oder eine fett- und eiweißlastige Mahlzeit länger wirkt. UAM erkennt auch ohne manuelle Kohlenhydrat-Eingaben des Nutzenden automatisch, dass die Glukosewerte aufgrund von Mahlzeiten, Adrenalin oder anderen Einflüssen signifikant steigen und wird versuchen, dies mit SMB abzufangen. Dies funktioniert aber auch andersherum: wenn der Glukosewert schnell sinkt, wird der SMB früher gestoppt.
 
-**Therefore, UAM should always be activated when using SMB.**
+**Deshalb sollte UAM bei SMB auch immer aktiv sein.**
 
-### Sensitivity raises target
+### Empfindlichkeit erhöht den Zielwert
 
-If this option is enabled, the sensitivity detection (autosens) can raise the target when sensitivity is detected (below 100%). In this case your target will be raised by the percentage of the detected sensitivity.
+Wenn diese Option aktiviert ist, kann die Empfindlichkeitserkennung (Autosens) das Ziel erhöhen, wenn eine höhere (Insulin-)Empfindlichkeit erkannt wird (unter 100%). In diesem Fall wird Dein Ziel um den Prozentsatz der erkannten Empfindlichkeit erhöht.
 
-### Resistance lowers target
+### Resistenz senkt den Zielwert
 
-If this option is enabled, the sensitivity detection (autosens) can lower the target when resistance is detected (above 100%). In this case your target will be lowered by the percentage of the detected resistance.
+Wenn diese Option aktiviert ist, kann die Empfindlichkeitserkennung (Autosens) das Ziel absenken, wenn eine Insulinresistenz erkannt wird (über 100%). In diesem Fall wird Dein Ziel um den Prozentsatz der erkannten Resistenz reduziert.
 
 ### Hohe temporäre Ziele erhöhen die Sensitivität
 
-If you have this option enabled, the insulin sensitivity will be increased while having a temporary target above 100 mg/dl or 5.6 mmol/l. This means, the ISF will rise while IC and basal will decrease. This will effectively make AAPS less aggressive when you set a high temp target.
+Wenn Du diese Option aktivierst, wird die Insulinempfindlichkeit bei einem gesetzten temporären Ziel oberhalb von 100 mg/dl (oder 5,6 mmol/l) erhöht. Das bedeutet, der Insulinsensibilitäts-Faktor (ISF) wird erhöht während der Kohlenhydrate-Faktor (IC) und die Basalrate gesenkt werden. Am Ende macht eine gesetztes temporäres hohes Ziel, AAPS weniger aggressiv.
 
 ### Niedrige temporäre Ziele senken die Sensitivität
 
-If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise. This will effectively make AAPS more aggressive when you set a low temp target.
+Wenn du diese Option aktivierst, dann wird die Insulinempfindlichkeit verringert, wenn du ein temporäres Ziel unter 100 mg/dl bzw. 5,6 mmol/l setzt. Das bedeutet, der Insulinsensibilitäts-Faktor (ISF) wird gesenkt während der Kohlenhydrate-Faktor (IC) und die Basalrate erhöht werden. Wenn ein niedriges temporäres Ziel aktiv ist, macht diese Option AAPS aggressiver.
 
 ### Erweiterte Einstellungen
 
-**Always use short average delta instead of simple data** If you enable this feature, AAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AAPS to be steadier with noisy data sources like xDrip+ and Libre.
+**Verwende immer das kurze durchschnittliche Delta statt des einfachen Deltas** Wenn Du dies aktivierst, dann verwendet AAPS für die Berechnungen statt des aktuellen Glukosewertes den durchschnittlichen Glukosewert der letzten 15 Minuten (= kurzes durchschnittliches Delta), was normalerweise dem Durchschnittswert der letzten drei Werte entspricht. Dies hilft AAPS dabei, mit Werten aus verrauschten Quellen wie xDrip+ und dem Libre stabiler zu arbeiten.
 
-**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that AAPS will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump and/or profile. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then AAPS can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**Sicherheitsmultiplikator des Basalhöchstwertes** Dies ist eine wichtige Sicherheitseinstellung. Der voreingestellte Wert (der nur in Ausnahmefällen geändert werden muss) ist 3. Das bedeutet, dass AAPS daran gehindert wird, eine temporäre Basalrate zu setzen, die das dreifache der in der Pumpe und/oder Profil gesetzten höchsten stündlichen Basalrate übersteigt. Beispiel: Wenn die höchste stündliche Basalrate 1,0 IE/h ist und der Sicherheitsmultiplikator des Basalhöchstwertes auf 3 gesetzt ist, dann kann AAPS die temporäre Basalrate höchstens auf einen Wert von 3,0 IE setzen (= 3 x 1,0 IE/h).
 
-Default value: 3 (shouldn’t be changed unless you really need to and know what you are doing)
+Standardwert: 3 (sollte nur in Ausnahmefällen geändert werden und wenn Du weißt, was das bedeutet)
 
-**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that AAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump and/or profile.
+**Sicherheitsmultiplikator der aktuellen Basalrate** Dies ist eine weitere wichtige Sicherheitseinstellung. Der voreingestellte Wert (der nur in Ausnahmefällen geändert werden muss) ist 4. Das bedeutet, dass AAPS daran gehindert wird, eine temporäre Basalrate zu setzen, die das vierfache der in der Pumpe und/oder Profil aktuell laufenden Basalrate übersteigt.
 
-Default value: 4 (shouldn’t be changed unless you really need to and know what you are doing)
+Standardwert: 4 (sollte nur in Ausnahmefällen geändert werden und wenn du weisst, was das bedeutet)
 
 * * *
 
@@ -179,19 +179,19 @@ Default value: 4 (shouldn’t be changed unless you really need to and know what
 
 ## Erweiterter Mahlzeit-Assistent (AMA)
 
-AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
+AMA steht für “advanced meal assist” und ist eine OpenAPS-Funktion aus 2017 (Oref0). Nachdem du dir einen Bolus gegeben hast, darf AMA schneller eine höhere temporäre Basalrate wählen, vorausgesetzt du gibst die Kohlenhydrate verlässlich ein.
 
-You can find more information in the [OpenAPS documentation](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+Siehe auch: [OpenAPS-Dokumentation (englisch)](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 (Open-APS-features-max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal)=
 
 ### Max IE/h, die als temporäre Basalrate gesetzt werden können (OpenAPS “max-basal”)
 
-This safety setting helps AAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. It is advised to set this to something sensible. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
+Diese Sicherheitseinstellung hindert AAPS daran, jemals eine gefährlich hohe Basalrate zu setzen und begrenzt die temporäre Basalrate auf x IE/h. Es wird empfohlen, hier etwas vernünftiges einzugeben. Eine gute Empfehlung ist, den höchsten stündlichen Basalratenwert in deinem Profil zu verwenden und diesen mit 4 oder mindestens mit 3 zu multiplizieren. Beispiel: wenn der höchste stündliche Basalratenwert in deinem Profil 1.0 IE/h ist, kannst du diesen mit 4 multiplizieren, wodurch du einen Wert von 4 IE/h erhältst, so dass du "4" als Sicherheitseinstellung setzen kannst.
 
-You cannot chose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
+Du kannst aber keinen beliebigen Wert wählen: AAPS begrenzt als “hard limit” den Wert danach, welches Patientenalter du unter Einstellungen gewählt hast. Das "hard limit" für maxIOB ist bei AMA niederiger als bei SMB. Bei Kindern ist der zulässige Wert am niedrigsten, bei insulinresistenten Erwachsenen am höchsten.
 
-The hardcoded parameters in AAPS are:
+In AAPS sind die folgenden harten Grenzen hinterlegt:
 
 * Kind: 2
 * Jugendlicher: 5
@@ -203,9 +203,9 @@ The hardcoded parameters in AAPS are:
 
 ### Maximales Basal-IOB, das OpenAPS abgeben darf \[IE\] (OpenAPS “max-iob”)
 
-This parameter limits the maximum of basal IOB where AAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
+Dieser Parameter begrenzt das maximale Basal-IOB, bis zu dem AAPS noch funktioniert. Wenn dieses IOB höher ist, dann wird kein weiteres Basalinsulin mehr abgegeben, bis das Basal-IOB wieder unter dem Grenzwert liegt.
 
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). Zur Sicherheit gibt es ein Limit, das auf dem Patientenalter basiert. The 'hard limit' for maxIOB is lower in AMA than in SMB.
+Der Standardwert ist 2, aber du solltest diesen Parameter in kleinen Schritten erhöhen um zu sehen, wie stark sich das bei dir auswirkt und welcher Wert am besten passt. Das ist sehr individuell und hängt stark vom durchschnittlichen Gesamtinsulinbedarf ab (total daily dose = TDD). Zur Sicherheit gibt es ein Limit, das auf dem Patientenalter basiert. Das "hard limit" für maxIOB ist bei AMA niederiger als bei SMB.
 
 * Kind: 3
 * Jugendlicher: 5
@@ -217,33 +217,33 @@ The default value is 2, but you should be rise this parameter slowly to see how 
 
 ### Verwende AMA Autosense
 
-Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosens or not.
+Hier kannst du auswählen, ob die [Empfindlichkeitserkennung](../Configuration/Sensitivity-detection-and-COB.md) Autosens verwendet werden soll oder nicht.
 
 ### Autosense passt auch temporäre Ziele an
 
-If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. This lets AAPS work more 'aggressive' or not. The actual target might be reached faster with this.
+Wenn Du diese Option aktivierst, dann kann Autosense auch Ziele anpassen (neben Basalrate und ISF). Dadurch kann AAPS "aggressiver" oder weniger aggressiv arbeiten. Der aktuell eingestellte Zielwert wird dadurch möglicherweise schneller erreicht.
 
 ### Erweiterte Einstellungen
 
-**Always use short average delta instead of simple data** If you enable this feature, AAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AAPS to work more steady with noisy data sources like xDrip+ and Libre.
+**Verwende immer das kurze durchschnittliche Delta statt des einfachen Deltas** Wenn Du dies aktivierst, dann verwendet AAPS für die Berechnungen statt des aktuellen Glukosewertes den durchschnittlichen Glukosewert der letzten 15 Minuten (= kurzes durchschnittliches Delta), was normalerweise dem Durchschnittswert der letzten drei Werte entspricht. Dies hilft AAPS dabei, mit Werten aus verrauschten Quellen wie xDrip+ und dem Libre stabiler zu arbeiten.
 
-**Max daily safety multiplier** This is an important safety limit. The default setting (which is unlikely to need adjusting) is 3. This means that AAPS will never be allowed to set a temporary basal rate that is more than 3x the highest hourly basal rate programmed in a user’s pump. Example: if your highest basal rate is 1.0 U/h and max daily safety multiplier is 3, then AAPS can set a maximum temporary basal rate of 3.0 U/h (= 3 x 1.0 U/h).
+**Sicherheitsmultiplikator des Basalhöchstwertes** Dies ist eine wichtige Sicherheitseinstellung. Der voreingestellte Wert (der nur in Ausnahmefällen geändert werden muss) ist 3. Das bedeutet, dass AAPS daran gehindert wird, eine temporäre Basalrate zu setzen, die das dreifache der in der Pumpe gesetzten höchsten stündlichen Basalrate übersteigt. Beispiel: Wenn die höchste stündliche Basalrate 1,0 IE/h ist und der Sicherheitsmultiplikator des Basalhöchstwertes auf 3 gesetzt ist, dann kann AAPS die temporäre Basalrate höchstens auf einen Wert von 3,0 IE setzen (= 3 x 1,0 IE/h).
 
-Default value: 3 (shouldn’t be changed unless you really need to and know, what you are doing)
+Standardwert: 3 (sollte nur in Ausnahmefällen geändert werden und wenn Du genau weißt was die Auswirkungen sind)
 
-**Current Basal safety multiplier** This is another important safety limit. The default setting (which is also unlikely to need adjusting) is 4. This means that AAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump.
+**Sicherheitsmultiplikator der aktuellen Basalrate** Dies ist eine weitere wichtige Sicherheitseinstellung. Der voreingestellte Wert (der nur in Ausnahmefällen geändert werden muss) ist 4. Das bedeutet, dass AAPS daran gehindert wird, eine temporäre Basalrate zu setzen, die das vierfache der in der Pumpe aktuell laufenden Basalrate übersteigt.
 
-Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing)
+Standardwert: 4 (sollte nur in Ausnahmefällen geändert werden und wenn du weisst, was das bedeutet)
 
-**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+**Bolus snooze dia divisor** Die Funktion “Bolus snooze” wird dann aktiviert, wenn du einen Essensbolus gegeben hast. AAPS reagiert nach den Mahlzeiten für die Dauer des DIA geteilt durch den "bolus-snooze" Parameter nicht mit einer niedrigen temporären Basalrate. Der Standardwert ist 2. Dies bedeutet: Bei einem DIA von 5 Stunden wird der “Bolus snooze” über 5 : 2 = 2,5 Stunden geradlinig auslaufen.
 
-Default value: 2
+Standardwert: 2
 
 * * *
 
 (Open-APS-features-overview-of-hard-coded-limits)=
 
-## Overview of hard-coded limits
+## Übersicht der fest programmierten Limits
 
 <table border="1">
   

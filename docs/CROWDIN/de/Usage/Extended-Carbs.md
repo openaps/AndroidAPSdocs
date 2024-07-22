@@ -5,7 +5,7 @@
 
 Im Rahmen einer normalen Pumpen-Therapie sind verzögerte Boli ein guter Weg, um mit fettigen oder sonstigen langsam absorbierenden Mahlzeiten zurecht zu kommen, die die Glukosewerte im Blut länger erhöhen als das Insulin wirkt. Im Zusammenhang mit dem Loopen sind jedoch verzögerte Boli wenig sinnvoll (und werfen technische Schwierigkeiten auf), da sie im Grunde eine feste hohe temporäre Basalrate darstellen, was der normalen Funktionsweise des Loops - der die Basalraten dynamisch anpasst - widerspricht. Für Details siehe [Extended Bolus](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) weiter unten.
 
-Es gibt aber trotzdem das Bedürfnis, mit solchen Mahlzeiten umzugehen. Which is why AAPS as of version 2.0 supports so called extended carbs or eCarbs.
+Es gibt aber trotzdem das Bedürfnis, mit solchen Mahlzeiten umzugehen. Deshalb unterstützt AAPS seit Version 2.0 sogenannte erweiterte/verlängerte Kohlenhydrate oder eCarbs.
 
 eCarbs sind Kohlenhydrate, die sich über mehrere Stunden verteilen. Bei einer Standardmahlzeit, die mehr Kohlenhydrate enthält als Fett/Eiweiß, ist die Eingabe der Kohlenhydrate vor dem Verzehr (ggf. unter Reduzierung des Mahlzeiten-Bolus) normalerweise ausreichend, um eine zu frühe Insulinabgabe zu verhindern.  Aber bei langsamer absorbierenden Mahlzeiten, bei denen eine auf einmal eingegebene Kohlenhydratmenge dazu führen würde, dass der SMB zu viel IOB aufbaut, können eCarbs verwendet werden, um besser zu simulieren, wie die Kohlenhydrate (und alle anderen blutzuckersteigernden Faktoren) wirklich absorbiert werden und sich auf den Blutzuckerspiegel auswirken. Mit diesen Informationen kann der Loop den SMB zur Bewältigung dieser Kohlenhydrate besser einsetzen, was als eine Art dynamischer verzögerter Bolus zu sehen ist (dies sollte auch ohne SMB funktionieren, ist dann aber wahrscheinlich nicht so effektiv).
 
@@ -15,21 +15,15 @@ eCarbs sind Kohlenhydrate, die sich über mehrere Stunden verteilen. Bei einer S
 
 Um eCarbs einzugeben, wird im "Kohlenhydrate" Dialog auf der Übersichtseite die Dauer, die Kohlenhydrate und optional der Zeitversatz eingegeben (*Die unten aufgeführten Zahlen sind nur Beispiele, du muss deinen eigenen Werte ausprobieren, um bei deinen Anwendungsfällen zu einer zufriedenstellenden Glukoseantwort zu kommen*):
 
-```{image} ../images/eCarbs_Dialog.png
-:alt: Eingabe Kohlenhydrate
-```
+![Kohlenhydrate eingeben](../images/eCarbs_Dialog.png)
 
 Die eCarbs auf dem Homescreen, beachte die Kohlenhydrate in Klammern im COB-Feld, was die für die Zukunft verbliebenen Kohlenhydrate zeigt:
 
-```{image} ../images/eCarbs_Graph.png
-:alt: eCarbs im Diagramm
-```
+![eCarbs im Diagramm](../images/eCarbs_Graph.png)
 
 Kohlenhydrat-Einträge, die in der Zukunft liegen, sind auf dem Behandlungen-Reiter dunkelorange:
 
-```{image} ../images/eCarbs_Treatment.png
-:alt: eCarbs in der Zukunft im Reiter Behandlungen
-```
+![eCarbs in der Zukunft im Reiter Behandlungen](../images/eCarbs_Treatment.png)
 
 ______________________________________________________________________
 
@@ -61,9 +55,7 @@ Daher gibt es ab Version 2.6 für Nutzer der Dana- und Insight-Pumpe eine Option
 - Die Einheiten des verzögerten Bolus, die verbleibende und die Gesamtzeit werden auf der Startseite angezeigt.
 - Wenn die Insight mit [TBR emulation](Accu-Chek-Insight-Pump-settings-in-aaps) genutzt wird, steht der verzögerte Bolus *nicht zur Verfügung*.
 
-```{image} ../images/ExtendedBolus2_6.png
-:alt: Verzögerter Bolus in AAPS 2.6
-```
+![Verzögerter Bolus in AAPS 2.6](../images/ExtendedBolus2_6.png)
 
 (Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Warum ein verzögerter Bolus beim Loopen nicht funktioniert
