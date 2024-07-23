@@ -1,39 +1,13 @@
-import { defineConfig } from "vitepress";
+import { type DefaultTheme, defineConfig } from "vitepress";
 
 export const en = defineConfig({
   lang: "fr",
   description: "Opensource automated insulin delivery system (closed loop)",
 
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: "Getting started", link: "/fr/introduction" },
-      { text: "FAQ", link: "/" },
-      {
-        text: "Resources",
-        items: [
-          {
-            text: "X (formerly Twitter)",
-            link: "/",
-          },
-          {
-            text: "Discord Chat",
-            link: "/",
-          },
-          {
-            text: "Releases ",
-            link: "/",
-          },
-        ],
-      },
-    ],
+    nav: nav(),
 
-    sidebar: [
-      {
-        text: "Home",
-        link: "/fr/welcome",
-      },
-    ],
+    sidebar: sidebar(),
 
     editLink: {
       pattern:
@@ -47,3 +21,11 @@ export const en = defineConfig({
     },
   },
 });
+
+function nav(): DefaultTheme.NavItem[] {
+  return [];
+}
+
+function sidebar(): DefaultTheme.SidebarItem[] {
+  return [];
+}

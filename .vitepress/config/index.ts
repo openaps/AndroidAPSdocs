@@ -62,19 +62,39 @@ export default defineConfig({
     },
   },
 
+  srcDir: "docs/CROWDIN/",
+  srcExclude: [
+    "ar/**/*",
+    "es/**/*",
+    "cs/**/*",
+    "de/**/*",
+    "el/**/*",
+    "he/**/*",
+    "lt/**/*",
+    "pb/**/*",
+    "ro/**/*",
+    "fr/**/*",
+    "it/**/*",
+    "ko/**/*",
+    "nl/**/*",
+    "pl/**/*",
+    "pt/**/*",
+    "ru/**/*",
+    "sk/**/*",
+    "sv/**/*",
+    "tr/**/*",
+    "zh/**/*",
+  ],
+
   locales: {
     root: {
       lang: "en",
       label: "English",
-      link: "/en/",
-      srcDir: "docs/CROWDIN/en",
       ...en,
     },
     de: {
       lang: "de",
       label: "Deutsch",
-      link: "/de/",
-      srcDir: "docs/CROWDIN/de",
       ...de,
     },
     // fr: {
@@ -85,11 +105,11 @@ export default defineConfig({
     // },
   },
 
-  vite: {
-    server: {
-      watch: {
-        ignored: ["**/node_modules/**", "**/.git/**", "**/images/**"],
-      },
-    },
-  },
+  // vite: {
+  //   server: {
+  //     watch: {
+  //       ignored: ["**/node_modules/**", "**/.git/**", "**/images/**"],
+  //     },
+  //   },
+  // },
 });
