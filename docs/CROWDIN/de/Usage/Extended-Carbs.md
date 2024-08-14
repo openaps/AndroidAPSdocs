@@ -15,11 +15,11 @@ eCarbs sind Kohlenhydrate, die sich über mehrere Stunden verteilen. Bei einer S
 
 Um eCarbs einzugeben, wird im "Kohlenhydrate" Dialog auf der Übersichtseite die Dauer, die Kohlenhydrate und optional der Zeitversatz eingegeben (*Die unten aufgeführten Zahlen sind nur Beispiele, du muss deinen eigenen Werte ausprobieren, um bei deinen Anwendungsfällen zu einer zufriedenstellenden Glukoseantwort zu kommen*):
 
-![Kohlenhydrate eingeben](../images/eCarbs_Dialog.png)
+![Enter carbs](../images/eCarbs_Dialog.png)
 
 Die eCarbs auf dem Homescreen, beachte die Kohlenhydrate in Klammern im COB-Feld, was die für die Zukunft verbliebenen Kohlenhydrate zeigt:
 
-![eCarbs im Diagramm](../images/eCarbs_Graph.png)
+![eCarbs in graph](../images/eCarbs_Graph.png)
 
 Kohlenhydrat-Einträge, die in der Zukunft liegen, sind auf dem Behandlungen-Reiter dunkelorange:
 

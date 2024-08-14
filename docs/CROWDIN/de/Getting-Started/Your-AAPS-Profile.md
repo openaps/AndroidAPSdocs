@@ -12,7 +12,7 @@ Da Deine Pumpe nur ein Insulinart abgibt, ist die Insulinwirkdauer in AAPS auch 
 
 Glukoseziele werden passend zu Deinen persönlichen Bedürfnissen gesetzt. Wenn Du beispielsweise Angst vor nächtlichen Hypos hast, kannst Du Dein Glukoseziel von 21.00 - 07.00 Uhr auf 117 mg/dl setzen (6,5 mmol/l) setzen. Wenn Du erreichen möchtest, dass Du vor dem Frühstücksbolus am Morgen bereits genügend aktives Insulin (IOB) im Körper hast, könntest Du für die Zeit von 07.00 - 08.00 Uhr ein niedrigeres Ziel von 81 mg/dl (4,5 mmol/dl) setzen. Ein Glukoseziel, insbesondere dann, wenn es nur kurz (weniger als 4 Stunden) gültig ist, muss nicht der _tatsächliche Wert_ sein, den Du erreichen möchtest, sondern kann ein guter Weg sein AAPS - während der Glukosewert im Zielbereich gehalten wird - aggressiver oder weniger aggressiv zu machen. Die **Abbildung unten** zeigt, wie die Insulinwirkdauer (DIA) und Glukoseziele in einem AAPS-Profil gespeichert werden können.
 
-![24-07-23, profile basics - DIA and target](../images/f3904cc3-3d9e-497e-a3b6-3a49650053e6.png)
+![24-07-23, profile basics - DIA and target](./images/f3904cc3-3d9e-497e-a3b6-3a49650053e6.png)
 
 Für die restlichen drei Parameter Basalrate (BR), Insulinempfindlichkeitsfaktoren (ISF) und Insulin-Kohlenhydrat-Verhätnisse bzw. Mahlzeitenfaktoren (IC oder ICR), variieren die absoluten Werte und Trends Deines Insulinbedarfs in Abhängigkeit von Deiner Biologie, Geschlecht, Alter, Fitnessgrad usw., aber auch von vorübergehenden Einflüssen wie Krankheit und sportlicher Aktivitität mitunter erheblich. Für tiefere Einblicke in das Thema wird das englischsprachige Buch [“Brights Spots and Landmines”](https://brightspotsandlandmines.org/Bright_Spots_and_Landmines_by_Adam_Brown.pdf) von Adam Brown empfohlen.
 
@@ -48,7 +48,7 @@ Ungefährer ISF (mmol/l) = 94/40 = 2,4
 
 Die **Abbildung unten** zeigt beispielhaft, wie die Basalraten und ISF-Werte in einem AAPS-Profil gespeichert werden können.
 
-![24-07-23, profile basics - basal and ISF](../images/55c8ed24-e24e-4caa-9c17-294fa93cb84a.png)
+![24-07-23, profile basics - basal and ISF](./images/55c8ed24-e24e-4caa-9c17-294fa93cb84a.png)
 
 #### **Insulin-Kohlenhydrat-Verhältnis (insulin to carb ratio - ICR)**
 
@@ -64,7 +64,7 @@ Wenn Du einen schwächeren ICR-Wert hast, z. B. 1:20, würdest Du nur 0,5 IE Ins
 
 Wie in der **Abbildung unten** gezeigt, wird nur der berechnete Wert in das AAPS-Profil eingetragen. Ein Insulin-Kohlenhydrat-Verhältnis von 1:3,5 wird als "3.5" eingegeben. (Hinweis: Bitte verwende den Punkt als Dezimaltrennzeichen, d.h. "3.5" und nicht "3,5").
 
-![24-07-23, profile basics - ICR](../images/7741eefb-cae5-45c5-a9e5-8eae5ead3f48.png)
+![24-07-23, profile basics - ICR](./images/7741eefb-cae5-45c5-a9e5-8eae5ead3f48.png)
 
 #### **Warum sollte ich versuchen, meine Profileinstellungen richtig zu haben? Kann sich der Loop nicht darum kümmern?**
 

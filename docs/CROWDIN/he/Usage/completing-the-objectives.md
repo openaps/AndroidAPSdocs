@@ -119,7 +119,7 @@
 
 ייתכן שתרצו להתנסות בכיוונונים של ערכי המטרה להקטנת טווח המטרה (20 mg/dl ואף פחות) ולצפות בהתנהגות המערכת כתוצאה מכך.
 
-You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Overview > Range for Visualisation.
+אפשר להתאים אישית (להרחיב או להצר) את השטח הירוק של הגרף, המייצג את טווח המטרה שלכם, על ידי הזנת ערכים שונים ב[העדפות](../Configuration/Preferences.md) > טווח להצגה.
 
 ![Stop sign](../images/sign_stop.png)
 :::{admonition} If you have been using a virtual pump, change to a real insulin pump now!

@@ -1,17 +1,17 @@
-# Compilation d'AAPS
+# Building AAPS
 
 ## Construire vous-même au lieu de télécharger
 
-**L'application AAPS (le fichier apk) n'est pas disponible en téléchargement, en raison de la réglementation concernant les dispositifs médicaux. Il est légal de compiler l'application pour votre usage personnel, mais vous ne devez en aucun cas en donner une copie à quelqu'un d'autre !**
+**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
 
-Voir la [page FAQ](../Getting-Started/FAQ.md) pour plus de détails.
+See [FAQ page](../Getting-Started/FAQ.md) for details.
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 
-## Prérequis matériels et logiciels pour la compilation de AAPS
+## Computer and software specifications for building AAPS
 
-- Veuillez utiliser la **[version Android Studio nommée "Hedgehog"(2023.1.1) ou "Iguana"(2023.2.1)](https://developer.android.com/studio/)** pour construire l'apk. Les versions plus anciennes d'Android Studio doivent d'abord être mises à jour !
-- Les systèmes [Windows 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) ne sont pas pris en charge par Android Studio. Veuillez garder à l'esprit qu'à la fois **le processeur (CPU 64 bits) et le système d'exploitation 64 bits sont des conditions obligatoires**. Si votre système NE satisfait PAS à cette condition, vous devez changer le matériel ou le système d'exploitation qui pose problème, ou tout le système.
+- Please use the **[Android Studio version called "Hedgehog"(2023.1.1) or "Iguana"(2023.2.1)](https://developer.android.com/studio/)** to build the apk. Older versions of Android Studio need to be updated first!
+- [Windows 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
 
 <table class="tg">
 <thead>
@@ -39,7 +39,7 @@ Voir la [page FAQ](../Getting-Started/FAQ.md) pour plus de détails.
   </tr>
   <tr>
     <td class="tg-baqh"><p align="center">Résolution</td>
-    <td class="tg-baqh" colspan="3"><p align="center">Minimum 1280 x 800 <br></td>
+    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
   </tr>
   <tr>
     <td class="tg-baqh"><p align="center">Internet</td>
@@ -48,380 +48,379 @@ Voir la [page FAQ](../Getting-Started/FAQ.md) pour plus de détails.
 </tbody>
 </table>
 
-**Il est fortement recommandé (non obligatoire) d'utiliser un disque dur SSD au lieu d'un HDD car cela prendra moins de temps lorsque vous compilerez le fichier apk de AAPS.**  Vous pouvez malgré tout utiliser un disque HDD lorsque vous compilez le fichier apk de **AAPS**. Si vous le faites, le processus de compilation peut prendre beaucoup de temps avant de se terminer, mais une fois lancé, vous pouvez le laisser tourner sans surveillance.
+**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
 
-## Aide et support pour le processus de compilation
+## Help and support during the building process
 
-Si vous rencontrez des difficultés dans le processus de compilation de l'application **AAPS**, il existe une page dédiée au [**dépannage d'Android Studio**](../Installing-AndroidAPS/troubleshooting_androidstudio), veuillez la consulter en premier lieu.
+If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../Installing-AndroidAPS/troubleshooting_androidstudio) section, please consult that first.
 
-Si vous pensez que quelque chose est incorrect, manquant ou confus dans les instructions de compilations, ou si vous avez encore des difficultés, n'hésitez pas à contacter d'autres utilisateurs **AAPS** sur [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) ou [Discord](https://discord.gg/4fQUWHZ4Mw). Si vous voulez changer quelque chose vous-même (mettre à jour les captures d'écran _etc_), veuillez soumettre un [pull request (PR)](../make-a-PR.md).
+If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../make-a-PR.md).
 
-## Guide pas à pas pour compiler l'application AAPS
+## Step-by-step guide to building the AAPS app
 
-:::{admonition} ATTENTION
+:::{admonition} WARNING
 :class: warning
-If you have built AAPS before, you don't need to take all the following steps again.
-Vous pouvez rendre directement au [guide de mise à jour](../Installing-AndroidAPS/Update-to-new-version)!
+If you have built AndroidAPS before, you don't need to take all the following steps again.
+Please jump directly to the [update guide](../Installing-AndroidAPS/Update-to-new-version)!
 :::
 
-Les grandes étapes pour construire le fichier apk **AAPS** sont les suivantes :
+The overall steps for building the **AAPS** apk file are as follows:
 
-4.1 [Installer Git](Install-Git)
+4.1 [Install Git](Install-Git)
 
-4.2 [Installer Android Studio](Building-APK-install-android-studio)
+4.2 [Install Android Studio](Building-APK-install-android-studio)
 
-4.3 [Télécharger le code source AAPS](Building-APK-download-AAPS-code)
+4.3 [Download AAPS code](Building-APK-download-AAPS-code)
 
-4.4. [Définir le chemin Git dans les préférences d'Android Studio](Building-APK-set-git-path-in-preferences)
+4.4. [Set Git path in Android Studio preferences](Building-APK-set-git-path-in-preferences)
 
-4.5. [Compiler l'APK AAPS signé](Building-APK-generate-signed-apk)
+4.5. [Build AAPS "signed" apk](Building-APK-generate-signed-apk)
 
-Dans ce guide, vous trouverez des captures d'écran de la compilation du fichier apk de **AAPS** à titre d'_exemple_. Étant donné que  **Android Studio** - le logiciel que nous utilisons pour compiler l'apk **AAPS** - est régulièrement mis à jour, ces captures d'écran peuvent ne pas être identiques à votre installation, mais vous devriez toujours arriver à les suivre.
+In this guide you will find _example_ screenshots of building of **AAPS** apk file. Because  **Android Studio** - the software which we use to build the **AAPS** apk - is regularly updated, these screenshots may not be identical to your installation, but they should still be possible to follow.
 
-Puisque **Android Studio** fonctionne sous Windows, Mac OS X et Linux, il peut également y avoir de légères différences dans les étapes en fonction de la plate-forme.
-Veuillez noter qu'**Android Studio** n'est pas disponible en français, toutes les instructions relatives au logiciel seront données en anglais et français.
+Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might be also be minor differences in the steps for the different  platforms.
 
 (Install-Git)=
 
-### Installer Git (si ce n'est déjà fait)
+### Install Git (if you don't have it)
 
-:::{admonition} A quoi sert Git ?
+:::{admonition} Why Git?
 
-Git est un "_Système de Contrôle de Version_".
-C'est un logiciel qui permet de suivre les changements dans le code source et de collaborer avec d'autres personnes. Vous utiliserez Git pour faire une copie du code source **AAPS** depuis le site web Github sur votre ordinateur local. Ensuite, vous utiliserez Git sur votre ordinateur pour compiler l'application **AAPS** (apk).
+Git is known as a “_Versioning Control System_” (VCS).\
+Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the Github website to your local computer. Then, you will use Git on your computer to build the **AAPS** application (apk).
 :::
 
-#### Étapes pour l'installation de Git
+#### Steps for Installing Git
 
-1. Vérifiez que vous n'avez pas déjà installé **Git**. Pour cela, tapez "git" dans la barre de recherche de Windows : si vous voyez **"Git bash"** ou **Git-autre chose**, c'est qu'il est déjà installé. Dans ce cas, vous pouvez passer directement à [l'installation d'Android Studio](Building-APK-install-android-studio) :
+1. Check that you don’t already have **Git** installed. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](Building-APK-install-android-studio):
 
-![Git installé](../images/Building-the-App/001_check_git_installed.png)
+![Git\_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. Si Git n'est pas installé, téléchargez et installez la dernière version pour votre système à partir de [**ce lien**](https://git-scm.com/downloads). N'importe quelle version récente de Git devrait fonctionner, sélectionnez la version correspondant à votre système d'exploitation : Mac, Windows ou Linux.
+2. If you don’t have Git installed, download and install the latest version for your system from [**here**](https://git-scm.com/downloads). Any recent Git version should work, select the correct version according to your system, either Mac, Windows and Linux.
 
-**Note pour les utilisateurs de Mac :** la page Web de Git vous proposera également d'installer un programme supplémentaire appelé "homebrew" pour faciliter l'installation. Si vous installez Git via homebrew, vous n'avez pas besoin de modifier la configuration.
+**Note for Mac users:** the Git webpage will also guide you to install an additional program called "homebrew" to aid the installation. If you install Git via homebrew, there is no need to change any preferences.
 
 (Make_a_note_of_Git_path)=
 
-- Pendant l'installation, lorsque vous êtes invité à "sélectionner l'emplacement de destination", notez _où_ Git va s'installer (le "**chemin d'installation**"), vous en aurez besoin plus tard. Ca devrait ressembler à "C:\Program Files\Git\cmd\git.exe"
+- During the installation, when you are asked to "select destination location" make a note of _where_ Git is being installed (the "**installation path**") you will need to check it in the next step. It will be something similar to "C:\Program Files\Git\cmd\git.exe"
 
-- Au fur et à mesure que vous avancez sur les différentes étapes de l'installation de Git, validez simplement en gardant les options par défaut.
+- As you proceed through several steps of the Git installation, just accept all the default options.
 
-- Après l'installation, si vous avez oublié de noter l'endroit où Git a été installé, vous pouvez le trouver comme suit : tapez "git" dans la barre de recherche du PC, cliquez avec le bouton droit sur "Git bash", sélectionnez "Ouvrir l'emplacement du fichier", survolez l'icône "Git bash" avec votre souris, ce qui vous indiquera alors où il est installé.
+- After the install, if you forgot to make a note of the where Git was installed, you can find it as follows: type "git" into the PC search bar, right click on "Git bash", select "open file location" hover over the "Git bash" icon with your mouse, which will then reveal where it is installed.
 
-- Redémarrez votre ordinateur avant de continuer.
+- Reboot your computer before the next step.
 
 (Building-APK-install-android-studio)=
 
 ### Installer Android Studio
 
-- \*\*Vous devez rester connecté à internet pour les prochaines étapes, étant donné qu'Android Studio va télécharger différentes mises à jour \*\*
+- **You have to be online all of the time during the following steps, as Android Studio downloads several updates**
 
-:::{admonition} A quoi sert Android Studio ?
+:::{admonition} What is Android Studio?
 :class: dropdown
-Android Studio est un logiciel qui s'exécute sur votre ordinateur. Il vous permet de télécharger le code source depuis internet (en utilisant Git) et de compiler des applications pour smartphone (et montre connectée). Si vous avez déjà une version d'**AAPS**, utilisée pour boucler, en cours d'exécution sur un smartphone, vous ne pouvez pas la "casser" en compilant une nouvelle application ou une mise à jour sur votre PC avec Android Studio, ce sont des processus totalement séparés.
+Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes.
 :::
 
-Les captures d'écran suivantes ont été prises à partir de la version **Hedgehog** d'Android Studio.
+The following screenshots have been taken from Android Studio Version **Hedgehog**.
 
-Une des choses les plus importantes lors de l'installation d'Android Studio : **Soyez patient(e)** ! Lors du processus d'installation et de configuration, Android Studio télécharge beaucoup de choses, ce qui prendra du temps.
+One of the most important things when installing Android Studio is **be patient!** During installation and setup, Android Studio is downloading a lot of stuff which will take time.
 
-Téléchargez la dernière version d'Android Studio à partir de [**ce lien**](https://developer.android.com/studio#downloads), trouvez-la dans le dossier de téléchargement de votre navigateur et installez-la sur votre ordinateur :
+Download the latest version of Android Studio from [**here**](https://developer.android.com/studio#downloads), locate it in your browser downloads folder, and install it on your computer:
 
 ![Download Android Studio](../images/Building-the-App/01_InstallAS_Hedgehog.png)
 
-Lorsque vous lancez Android Studio pour la première fois, vous serez accueilli(e) comme ceci :
+When you first start Android Studio, you will be greeted as follows:
 
 ![Welcome](../images/Building-the-App/02_Welcome_AS_Hedgehog.png)
 
-Cliquez "Next/Suivant" :
+Select "Next":
 
 ![ChooseASComponents](../images/Building-the-App/03_choose_AS_components.png)
 
-Laissez les cases cochées et cliquez "Next/Suivant" :
+Leave the boxes checked, and select "Next":
 
 ![ChooseASlocation](../images/Building-the-App/04_AS_Install_location.png)
 
-Validez l'installation à l'emplacement suggéré par défaut, et cliquez "Next/Suivant":
+Allow the installation at the default location suggested, and select "Next":
 
 ![SmartMenulocation](../images/Building-the-App/04_AS_StartMenu.png)
 
-Lorsqu'on vous demande de choisir le dossier du menu Démarrer, cliquez simplement "Install/Installer". Patientez maintenant quelques minutes pendant l'installation d'Android Studio. Vous devriez ensuite voir que l'installation est terminée, sélectionnez "Next/Suivant" :
+When asked to choose the Smart Menu Folder, simply select "Install". You will now need to wait a few minutes while Android Studio is being installed. You should then see that the Installation is Complete, select "Next":
 
 ![installationcomplete](../images/Building-the-App/06_Installation_Complete.png)
 
-Cliquez maintenant "Finish/Terminer" :
+Now select "Finish":
 
 ![closeASsetup](../images/Building-the-App/07_CloseAS_Setup.png)
 
-Android Studio va maintenant se lancer.
+Android Studio will now start.
 
-Si on vous demande si vous voulez importer les paramètres, sélectionnez "Do not import settings/Ne pas importer les paramètres". Nous ne voulons pas importer de paramètres d'une installation précédente :
+If asked if you want to import settings, select "Do not import settings". We don't want to import settings from previous installations:
 
 ![Do not import settings](../images/studioSetup/01_ImportSettings.png)
 
-Décidez si vous voulez partager des données avec Google ou non (si vous n'êtes pas sûr, cliquez simplement "Don't send/Ne pas envoyer").
+Decide whether you want to share data with Google or not (if unsure, just select "Don't send").
 
 ![Share data with Google](../images/Building-the-App/08_Googlesharedata.png)
 
-Vous allez maintenant recevoir un message concernant un kit de développement logiciel (SDK) manquant (ne vous inquiétez pas, cela sera bientôt résolu), cliquez "Suivant" :
+You will now get a message about a missing software development kit (SDK) (don't worry, this will be solved soon), select "Next":
 
 ![missingSDK](../images/Building-the-App/09_MissingSDK.png)
 
-Le logiciel devrait sélectionner automatiquement le SDK requis et choisir un emplacement.
+The software should autoselect the required (SDK) and choose a location.
 
-:::{admonition} A quoi sert un SDK Android ?
+:::{admonition} What is an Android SDK?
 
-Pour exécuter **AAPS** sur le téléphone, l'application doit s'intégrer à Android lui-même. Android fournit des « kits de développement logiciel » (SDK) qui permettent aux applications comme **AAPS** d'interagir avec un système d'exploitation Android.
+In order to run **AAPS** on the phone the application needs to integrate with Android itself. Android provides “_software development kits_” (SDK) which allow apps like **AAPS** to interface with an Android operating system.
 :::
 
-Le package de la plateforme SDK n'a **pas** de rapport avec la version d'Android installée sur votre téléphone, mais avec la compilation d'**AAPS**. La version 3.2 de **AAPS** (et suivantes) utilise l'API version 34, qui est celle automatiquement sélectionnée dans la version **Hedgehog** de **Android Studio**. Par conséquent, il vous suffit de cliquer sur "Next/Suivant":
+The SDK platform package does **not** relate to the version of Android running on your phone, but to the build of **AAPS**. **AAPS** version 3.2 (and newer) builds on top of API level 34, which is automatically selected in the **Hedgehog** version of **Android Studio**. Therefore, simply click "Next":
 
 ![SDKcomponents\_setup](../images/Building-the-App/10_SDKComponents_setup.png)
 
-Lorsqu'on vous demande de vérifier les paramètres (Verify settings), cliquez simplement sur "Next/Suivant":
+When asked to verify settings, just select "Next":
 
 ![verify\_settings](../images/Building-the-App/11_Verify_settings.png)
 
-Lorsque vous êtes invité.e à accepter le Contrat de Licence (License Agreement), sélectionnez "Accept/Accepter" puis cliquez sur "Finish/Terminer" :
+When asked about the Licence Agreement, select "Accept" and then click "Finish":
 
 ![licence\_agreement](../images/Building-the-App/12_Licence_agreement.png)
 
-> **_Remarque :_** Selon votre configuration, les licences à accepter peuvent différer de ce qui est affiché dans la capture d'écran.
+> **_Note:_**  Depending on your set-up, the licenses to be accepted might vary from what is shown in the screenshot.
 
-Patientez pendant qu'Android Studio télécharge les composants supplémentaires, cela peut prendre quelques minutes :
+Wait while Android Studio downloads additional components, this may take a few minutes:
 
 ![downloading\_components](../images/Building-the-App/13_downloading_components.png)
 
-Une fois que tout est téléchargé, le bouton "Finish/Terminer" devient bleu et vous pouvez cliquer dessus :
+Once everything is downloaded, the "Finish" button turns blue, and you can click it:
 
 ![finished\_download\_components](../images/Building-the-App/14_finished_downloading_components.png)
 
-Vous êtes maintenant accueilli.e avec l'écran "Welcome to Android Studio/Bienvenue dans Android Studio".
+You are now greeted with the "Welcome to Android Studio" screen.
 
 ![Welcome\_AS](../images/Building-the-App/15_Welcome_AS.png)
 
 (Building-APK-download-AAPS-code)=
 
-### Télécharger le code source AAPS
+### Download the AAPS code
 
-:::{admonition} Pourquoi cela peut-il prendre beaucoup de temps pour télécharger le code source d'AAPS?
+:::{admonition} Why can it take a long time to download the AAPS code?
 
-La première fois qu'**AAPS** est téléchargé, Android Studio se connectera par le réseau au site web de Github pour télécharger le code source de **AAPS**. Cela devrait prendre environ une minute.
+The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute.
 
-Android Studio utilisera ensuite **Gradle** (un outil de développement dans Android Studio) pour identifier les autres composants nécessaires à l'installation de ces éléments sur votre ordinateur.
+Android Studio will then use **Gradle** (a development tool in  Android studio) to identify other components needed to install these items on your computer.
 
 :::
 
-Sur l'écran d'accueil d'Android Studio, vérifiez que "**Projects/Projets**" (1) est en surbrillance sur la gauche. Ensuite, cliquez sur "**Get from VCS/Obtenir depuis VCS**" (2) sur la droite :
+On the Android Studio Welcome screen, check that "**Projects**" (1) is highlighted on the left. Then click "**Get from VCS**" (2) on the right:
 
 ![Get\_from\_VCS](../images/Building-the-App/16_Get_from_VCS.png)
 
-- Nous allons maintenant indiquer à Android Studio où aller chercher le code :
+- We will now tell Android Studio where to get the code from:
 
-- "Repository URL/URL du dépôt" devrait être sélectionné (par défaut) à gauche (1).
+- "Repository URL" should be selected (by default) on the left (1).
 
-- "Git" devrait être sélectionné (par défaut) comme système de contrôle de version (2).
+- "Git" should be selected (by default) as version control (2).
 
-Copiez maintenant cette URL :
+Now copy this URL:
 
 ```
 https://github.com/nightscout/AndroidAPS.git
 ```
 
-et collez-la dans la zone de texte de l'URL (3).
+and paste it into the URL textbox (3).
 
-- Vérifiez que le répertoire (par défaut) où enregistrer le code cloné est sensé (4).
+- Check the (default) directory for saving the cloned code is sensible (4).
 
 :::{admonition} INFORMATION
 :class: information
-Conservez le chemin de ce répertoire. C'est là que votre code source est stocké !
+Make a note of the directory. It is where your sourcecode is stored!
 :::
 
-- Cliquez sur le bouton "Clone" (5).
+- Now click the button "Clone" (5).
 
 ![Select\_URL](../images/Building-the-App/17_select_URL.png)
 
-Vous allez alors voir un écran vous indiquant que le dépôt est en train d'être cloné (cloning repository) :
+You will now see a screen telling you that the repository is being cloned:
 
 ![cloning\_repository](../images/Building-the-App/18_cloning_repository.png)
 
-A un moment, on vous demandera si vous voulez faire confiance au projet (Trust and Open Project). Cliquez sur "Trust project/Faire confiance au projet" :
+At some point, you may be asked whether you want to trust the project. Click on "Trust project":
 
 ![Trust project](../images/Building-the-App/18a_trust_project.png)
 
-Pour les utilisateurs de Windows : Si votre pare-feu demande la permission, autorisez l'accès :
+Only for Windows users: If your firewall asks for permission, grant access:
 
 ![Firewall permission java](../images/AndroidStudio361_18.png)
 
-Une fois le dépôt cloné avec succès, Android Studio ouvrira le projet en question.
+After the repository is cloned successfully, Android Studio will open the cloned project.
 
-Cliquez sur l'engrenage en haut à droite et sélectionnez "**Switch to Classic UI.../Passer à l'interface classique...**" pour revenir à la vue utilisée dans cette documentation.
+Click on the cog top right and select "**Switch to Classic UI...**" to return to the view used in this documentation.
 
-Si vous ne voyez pas cet engrenage, ne vous inquiétez pas. Vous utilisez déjà l'interface classique !
+If you do not see that cog, don't worry. You already use the classic UI!
 
 ![Switch to Classic UI](../images/Building-the-App/OldUI.png)
 
-Redémarrez Android Studio pour que les modifications prennent effet.
+Restart Android Studio to make the changes effective.
 
 ![Confirm restart of Android Studio](../images/Building-the-App/18b_ConfirmRestartUI.png)
 
-Vous pourriez recevoir un ou les deux avertissements suivants à propos de processus en cours d'exécution. Vous pouvez les interrompre sans problème !
+You might get one or both of the following warnings about running processes. It's save to abort them!
 
 ![Confirm abort background processes](../images/Building-the-App/18c_AbortBackgroundTasks.png) ![Confirm process AndroidAPS import](../images/Building-the-App/18d_AbortProcessImport.png)
 
-Lorsque Android Studio se relance, attendez patiemment (cela peut prendre quelques minutes), et surtout, **ne mettez pas** à jour le projet comme proposé dans la notification.
+When Android Studio opened again, wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
 
 ![AS\_download\_dependencies](../images/Building-the-App/19_downloading_dependencies.png)
 
-:::{admonition} NE METTEZ JAMAIS À JOUR GRADLE !
+:::{admonition} NEVER UPDATE GRADLE!
 
-Android Studio peut vous recommander de mettre à jour le système "gradle". **Ne jamais mettre à jour gradle !** Cela pourrait causer des problèmes.
+Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
 :::
 
-_Optionnel_ - Si vous souhaitez faire disparaître la notification **"project update recommended/mise à jour du projet recommandée"**, cliquez sur le texte bleu "More/Plus" (1). Dans la boîte de dialogue sélectionnez "Don't ask for this project/Ne plus me demander pour ce projet" (2).
+_Optional_ - If you want to clear the pop-up for **"project update recommended"**, click on the blue text "More" (1). In the dialog box the select "Don't ask for this project" (2).
 
 ![AS\_close\_gradle\_popup](../images/Building-the-App/20_close_popup.png)
 
-Pour les utilisateurs de Windows :
-Si vous n'avez pas encore redémarré votre ordinateur depuis l'installation ou la mise à jour de Git, quittez maintenant Android Studio. Ensuite, redémarrez votre ordinateur et rouvrez Android Studio.
+For Windows users only:
+If you have not restarted your computer since installing or updating Git, close Android Studio now. Then restart your computer, and re-open Android Studio.
 
 (Building-APK-set-git-path-in-preferences)=
 
 ### Définir le chemin d’accès git dans Android Studio
 
-Maintenant, nous allons dire à Android Studio où trouver Git, tel que vous l'avez installé [juste avant](Install-Git).
+Now we will tell Android studio where to find Git, which you installed [earlier](Install-Git).
 
-- Pour les utilisateurs de Windows : assurez-vous que vous avez redémarré votre ordinateur après avoir [installé Git](Install-Git).
-- Ouvrez **Android Studio** (vous pouvez le retrouver en faisant une recherche dans le menu Démarrer).
-- Dans le coin supérieur gauche de **Android Studio**, ouvrez les préférences via le menu _File > Settings_ (Windows) ou _Android Studio > Préférences_ (Mac). La fenêtre suivante s'ouvre, cliquez pour développer le menu déroulant appelé "Version Control/Contrôle de Version" (1) :
+- Windows users only: Make sure you have restarted your computer after [installing Git](Install-Git).
+- Open **Android Studio** (you can find it by searching in the Start menu).
+- In the top left corner of **Android Studio**, navigate to _File-Settings_ (Windows) or _Android Studio > Preferences_ (Mac). This opens the following window, click to expand the dropdown called "version control" (1):
 
 ![version\_control](../images/Building-the-App/21_AS_version_control.png)
 
-- Cliquez sur "**Git**" (2).
-- Dans le milieu bas de la page, assurez-vous que la _méthode de mise à jour_ est sur _Fusionner_ : Update Method = Merge (3).
-- Vérifiez si Android Studio peut trouver le chemin d'accès à **git.exe**\* automatiquement en cliquant sur le bouton "Test" (4) :
+- Now select "**Git**" (2).
+- In the lower middle of the page, make sure update method "Merge" (3) is selected.
+- Check if **Android Studio** can automatically locate the correct path to **git.exe** automatically by clicking the button "Test" (4):
 
 ![Gitpath](../images/Building-the-App/22_Git_path.png)
 
-- Si la détection automatique réussit, la version de **Git** s'affiche sous chemin d'accès.
+- If the automatic setting is successful, your current version of **Git** will be displayed next to the path.
 
   ![Git\_version\_displayed](../images/Building-the-App/23_Git__path_success.png)
 
-- Si jamais **git.exe** n'est pas trouvé automatiquement, ou que le clic sur "Test" déclenche une erreur (1), vous pouvez soit entrer manuellement le chemin que vous avez enregistré [plus tôt](Make_a_note_of_Git_path), soit cliquer sur l'icône de dossier (2) et naviguer jusqu'au répertoire où vous avez installé **git.exe** :
+- If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error (1), you can either manually enter the path which you saved [earlier](Make_a_note_of_Git_path), or click on the folder icon (2) and manually navigating to the directory where **git.exe** is stored:
 
   ![Git not found](../images/studioSetup/13_GitVersionError.png)
 
-- Utilisez la [fonction de recherche](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) dans l'explorateur Windows pour retrouver "git.exe" si vous n'êtes pas sûr de l'endroit où il a été installé. La procédure pour cela est expliquée de manière plus détaillée [ci-dessus](Make_a_note_of_Git_path).
+- Use the [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where git has been installed. How to do this is explained [above](Make_a_note_of_Git_path) in more detail.
 
-- Si vous avez défini le chemin vous-même, vérifiez que c'est correct avec le bouton "Test" comme décrit ci-dessus.
+- If you have manually selected it, check your selected Git path with the "Test" button as described above.
 
-Quand la version Git s'affiche en dessous du chemin (voir capture d'écran ci-dessus), vous avez terminé cette étape et vous pouvez fermer la fenêtre des "Settings/Paramètres" d'Android Studio en cliquant sur "**OK**" (5) :
+When the Git version is displayed next to the path (see screenshot above) you have completed this stage successfully and you can close the Android Studio "Settings" window by clicking the "**OK**" button (5):
 
 ![Git\_path\_OK](../images/Building-the-App/23a_Git_path_OK.png)
 
 (Building-APK-generate-signed-apk)=
 
-### Compilez l'APK AAPS signé
+### Build the AAPS "signed" APK
 
-:::{admonition} Pourquoi l'application AAPS doit-elle être "signée" ?
+:::{admonition} Why does the AAPS app need to be "signed"?
 
-Android exige que chaque application soit _signée_, pour garantir qu'elle ne peut être mise à jour ultérieurement que par la source de confiance qui a publié l'application d'origine. Pour plus d'informations à ce sujet, suivez [ce lien](https://developer.android.com/studio/publish/app-signing.html#generate-key). Dans notre cas, cela signifie simplement que nous générons un fichier de clés ou "keystore" et nous l'utilisons lorsque nous compilons l'application **AAPS**.
+Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
 :::
 
-- Ouvrez le menu "Build/Compiler" (1) puis "Generate Signed Bundle / APK - Générer un paquet / une APK signés" (2)
+- In the menu bar, click "Build" (1), select "Generate Signed Bundle/APK (2)
 
 ![Build apk](../images/Building-the-App/25_build_apk.png)
 
-- Sélectionnez "APK" au lieu de "Android App Bundle" et cliquez sur "Next" :
+- Select "APK" instead of "Android App Bundle" and click "Next":
 
 ![APK instead of bundle](../images/Building-the-App/26_generate_APK.png)
 
-- Sur l'écran suivant, vérifiez que le "Module" sélectionné est bien "AAPS.app" (1).
+- In the next screen, make sure that "Module" is set to "AAPS.app" (1).
 
 (Building-APK-wearapk)=
-:::{admonition} INFORMATION !
+:::{admonition} INFORMATION!
 :class: information
-Si vous souhaitez créer l'APK pour votre montre, sélectionnez alors AAPS.wear !
+If you want to create the apk for your watch, you need to select AAPS.wear!
 :::
 
-- Cliquez sur "Create new.../Créer nouveau..." (2) pour commencer la création de votre fichier de clés.
+- Click "Create new..." (2) to start creating your key store.
 
-:::{admonition} INFORMATION !
+:::{admonition} INFORMATION!
 :class: information
-Vous n'aurez besoin de créer le fichier de clés qu'une seule fois.
-If you have build AAPS before, do NOT create a new keystore but select your existing one!
+You will only need to create the keystore once.
+If you have build AndroidAPS before, do NOT create a new keystore but select your existing one!
 :::
 
-**_Note:_** Le fichier de clés contient les informations nécessaires pour signer l'application. Il est crypté et les informations sont sécurisées avec un mot de passe.
+**_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
 
 ![Create\_key\_store](../images/Building-the-App/27_new_keystore.png)
 
-- Cliquez sur l'icône "dossier" (1) pour sélectionner l'endroit sur votre ordinateur où vous allez conserver votre fichier de clés :
+- Click the "folder" symbol (1) to select a path on your computer for your key store:
 
 ![Create key store](../images/Building-the-App/28_new_keystore_path.png)
 
-- Cliquez sur le menu déroulant (1) pour sélectionner l'endroit où vous souhaitez enregistrer votre fichier de clés. Dans cet exemple, il est enregistré dans "Mes documents" (2). Ne sauvegardez pas le fichier de clés dans le même dossier que vos fichiers Android Studio (StudioProject). Utilisez un nom de fichier simple pour votre fichier de clés (2) et confirmez avec "OK" (3) :
+- Click on the drop-down menu (1), to select where you want to save your keystore file. In this example, it is being saved in "My Documents" (2). Do not save the keystore in same folder as your Android Studio files (StudioProject). Type in a simple name for your key store (3) and confirm it with "OK" (4):
 
 ![Create key store](../images/Building-the-App/29_choose_keystore_file.png)
 
-Cela vous ramènera à l'écran précédent. L'emplacement choisi pour enregistrer le fichier de clés est affiché.
+This will take you back to the previous screen. Your chosen location for saving the key store file is shown.
 
-:::{admonition} ATTENTION !
-:class: avertissement
-Assurez-vous de conserver quelque part l'endroit où votre fichier de clés est stocké. Vous en aurez besoin lorsque vous compilerez la prochaine mise à jour d'AAPS !
+:::{admonition} WARNING!
+:class: warning
+Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AndroidAPS update!
 :::
 
-Maintenant choisissez un mot de passe simple (et conservez-le bien), saisissez-le dans le champ "Password/Mot de passe" (1) et confirmez-le (2).  Les mots de passe du fichier de clés et de la clé n'ont pas besoin d'être très complexes. Si jamais vous perdez votre mot de passe, consultez la page Dépannage : [Fichier de clés perdu](troubleshooting_androidstudio-lost-keystore).
+Now choose a simple password (make a note of it), enter it in the password box (1), and confirm it (2).  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [troubleshooting for lost key store](troubleshooting_androidstudio-lost-keystore).
 
-L'alias par défaut (3) de votre clé est "key0", laissez-le tel quel.
+The default alias (3) for your key is "key0", leave this unchanged.
 
-Il vous faut maintenant un mot de passe pour la clé. Pour simplifier, vous pouvez si vous le souhaitez, utiliser le même mot de passe que pour le fichier de clés au-dessus. Entrez le mot de passe (4) et confirmez-le (5).
+You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm (5) it.
 
-:::{admonition} ATTENTION !
-:class: avertissement
-Notez ces mots de passe ! You will need them when you build the next AAPS update!
+:::{admonition} WARNING!
+:class: warning
+Note down these passwords! You will need them when you build the next AndroidAPS update!
 :::
 
-La validité (6) par défaut est de 25 ans, laissez-la telle quelle.
+The validity (6) is 25 years by default, leave it as it is.
 
-Entrez vos nom et prénom (7). Laissez les autres champs vides.
+Enter your first and last name (7). No other information needs to be added.
 
-Cliquez sur "OK" (8) pour continuer :
+Click "OK" (8) to continue:
 
 ![Select key store path](../images/Building-the-App/30_new_keystore.png)
 
-Sur la page "Generate signed bundle or APK / Générer un paquet ou un APK signé", le chemin de votre fichier de clés est désormais affiché. Ré-entrez le mot de passe du fichier de clés (1) et le mot de passe de la clé (2). Cochez la case pour se souvenir des mots de passe "Remember passwords" (3), pour ne pas avoir à les ressaisir la prochaine fois que vous construisez l'APK (c'est-à-dire lorsque vous mettrez à jour vers une nouvelle version d'AAPS). Cliquez sur "Next/Suivant" (4):
+On the "Generate signed bundle or APK" page, the path to your keystore will now be displayed. Now re-enter the Key Store password (1) and Key password (2), and tick the box to remember passwords is checked (3), so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Click "Next" (4):
 
 ![Remember passwords](../images/Building-the-App/31_generate_APK.png)
 
-Sur l'écran suivant, sélectionnez la variante de build Build Variant "fullRelease" (1) et cliquez sur "Create/Créer" (2).
+On the next screen, select build variant "fullRelease" (1) and click "Create" (2).
 
 ![Select build variant](../images/Building-the-App/32_full_release.png)
 
-Android Studio va maintenant compiler l'APK **AAPS**. Vous verrez "Gradle Build running/Compilation Gradle en cours" en bas à droite. Le processus prend du temps, en fonction de votre ordinateur et de votre connexion internet, **soyez patient(e) !** Si vous voulez suivre la progression de la construction, cliquez sur l'icône de petit marteau "Build" en bas d'Android Studio :
+Android Studio will now build the **AAPS** apk. It will show "Gradle Build running" at the bottom right. The process takes some time, depending on your computer and internet connection, **be patient!** If you want to watch the progress of the build, click on the small hammer "build" at the bottom of Android Studio:
 
 ![Gradle Running](../images/Building-the-App/33_Studio_building1.png)
 
-Vous pouvez maintenant voir la compilation en cours :
+Now you can watch the building progress:
 
 ![Android\_Studio\_building](../images/Building-the-App/34_Studio_building2.png)
 
-Le message "BUILD SUCCESSFUL / COMPILATION RÉUSSIE" s'affiche quand la génération est terminée. Vous verrez peut-être une notification sur laquelle vous pouvez cliquer "locate/localiser". Si vous la ratez, cliquez sur la notification "locate or analyse the APK/trouver ou analyser l'APK" (surlignée en jaune) en bas de l'écran pour faire apparaître les notifications :
+Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". If you miss this, click on the notification "locate or analyse the APK" (yellow highlight) at the very bottom of the screen to bring up the Notifications:
 
 ![Build finished](../images/Building-the-App/35_Studio__built_success.png)
 
-_Si la compilation a échoué, reportez-vous au [sous-chapitre Dépannage](../Installing-AndroidAPS/troubleshooting_androidstudio)._
+_If the build was not successful, refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio)._
 
-Dans la fenêtre des notifications, cliquez sur le lien bleu "locate/trouver" :
+In the Notifications box, click on the blue link "locate":
 
 ![Locate build](../images/Building-the-App/35_Studio__built_locate.png)
-Votre gestionnaire de fichiers/explorateur va s'ouvrir. Naviguez vers le répertoire "full" (1) > "release" (2).
+Your file manager/explorer will open. Naviguez vers le répertoire "full" (1) > "release" (2).
 
 ![File location apk](../images/Building-the-App/36_locate_apk.png)
 
-Ouvrez le dossier "release". Le fichier "app-full-release.apk" (1) est l'APK **AAPS** que vous venez de compiler, vous transférerez ce fichier sur votre smartphone dans la prochaine page de la documentation :
+Open the folder "release". The file "app-full-release.apk" (1) is the **AAPS** apk that you have just built, you will be transferring this file to your smartphone in the next section of the docs:
 
 ![apk\_file](../images/Building-the-App/37_full_release_apk.png)
 
-Félicitations ! Maintenant que vous avez compilé le fichier APK **AAPS**, vous pouvez passer à l'étape suivante de [Transfert et Installation d'**AAPS**](Transferring-and-installing-AAPS.md).
+Félicitations ! Now you have built the **AAPS** apk file, you can move to the next stage of [Transferring and Installing **AAPS**](Transferring-and-installing-AAPS.md).

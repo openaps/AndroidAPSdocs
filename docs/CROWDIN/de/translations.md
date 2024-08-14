@@ -1,4 +1,4 @@
-# Wie man Textabschnitte für die AAPS-App oder die Dokumentation übersetzt
+# Wie man Zeichenketten für die AndroidAPS-App oder die Dokumentation übersetzt
 
 * Für die Zeichenketten, die in der App verwendet werden, gehe zu <https://crowdin.com/project/androidaps> und melden Dich mit Deinem GitHub Konto an
 * Für die Dokumentation besuche bitte <https://crowdin.com/project/androidapsdocs> und melde Dich mit Deinem GitHub Account an
@@ -85,7 +85,7 @@ Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stell
     
     
 
-Wenn Du einen Text mit einem Link übersetzt, achte darauf den Link **nicht** zu entfernen, der durch ein Paar `<0></0>` Tags dargestellt wird oder mit einer anderen Zahl, falls mehrere Links in einem Absatz enthalten sind.
+Wenn Du einen Text mit einem Link übersetzt, bitte sei vorsichtig **nicht** den Link zu entfernen, der durch ein Paar `<0><>` Tags repräsentiert wird oder mit einer anderen Zahl, falls mehrere Links in einem Absatz enthalten sind.
 
 Es ist die Aufgabe des Proofreaders, einen besonderen Blick darauf zu haben!
 

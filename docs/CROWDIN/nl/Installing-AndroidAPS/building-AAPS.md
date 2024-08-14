@@ -60,7 +60,7 @@ If you think something in the building instructions is wrong, missing or confusi
 
 :::{admonition} WARNING
 :class: warning
-If you have built AAPS before, you don't need to take all the following steps again.
+If you have built AndroidAPS before, you don't need to take all the following steps again.
 Please jump directly to the [update guide](../Installing-AndroidAPS/Update-to-new-version)!
 :::
 
@@ -349,7 +349,7 @@ If you want to create the apk for your watch, you need to select AAPS.wear!
 :::{admonition} INFORMATION!
 :class: information
 You will only need to create the keystore once.
-If you have build AAPS before, do NOT create a new keystore but select your existing one!
+If you have build AndroidAPS before, do NOT create a new keystore but select your existing one!
 :::
 
 **_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
@@ -379,7 +379,7 @@ You now need a password for your key. To keep it simple, if you want, you can us
 
 :::{admonition} WARNING!
 :class: warning
-Note down these passwords! You will need them when you build the next AAPS update!
+Note down these passwords! You will need them when you build the next AndroidAPS update!
 :::
 
 The validity (6) is 25 years by default, leave it as it is.
