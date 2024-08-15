@@ -1,6 +1,6 @@
-# Completing the Objectives
+# Plnění cílů
 
-**AAPS** has a series of **objectives** that you need to complete to progress from basic open looping to hybrid closed looping and full **AAPS** functionality. Completing the **objectives** ensures:
+**AAPS** has a series of **objectives** that you need to complete to progress from basic open looping to hybrid closed looping and full **AAPS** functionality. Dokončování **Cílů** vám tedy umožní:
 
 - You have configured everything correctly in your **AAPS** setup
 - You have learned about the essential features of **AAPS**
