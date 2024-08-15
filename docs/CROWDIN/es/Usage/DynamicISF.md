@@ -12,7 +12,7 @@ La ecuación implementada es: ISF = 1800 / (TDD * Ln ((glucosa / divisor de insu
 
 La implementación utiliza la ecuación para calcular el ISF actual y en las predicciones de oref1 para IOB, ZT y UAM. No se utiliza para el COB.
 
-### DDT
+### TTD
 Esto utiliza una combinación del promedio de TDD de 7 días, el TDD del día anterior y un promedio ponderado de las últimas ocho horas de uso de insulina proyectado durante 24 horas. La dosis diaria total utilizada en la ecuación anterior se pondera un tercio para cada uno de los valores mencionados anteriormente.
 
 ### Divisor de insulina
