@@ -52,7 +52,7 @@
 Вы не забыли отменить разрешение на установку приложений из Google Drive?
 ```
 
-## Продолжайте[настройку цикла AAPS](configuring-the-AAPS-loop.md).
+## Please go on with [configuring the AAPS loop](../Installing-AndroidAPS/setup-wizard.md).
 
 ## Вариант 2. Использовать кабель USB для передачи файлов
 
