@@ -119,7 +119,7 @@
 
 Можно поэкспериментировать и задать более близкие значения (например, чтобы их разность не превышала 1 ммоль) и наблюдать, как в результате изменится поведение системы.
 
-Вы можете скорректировать (расширить или сузить) зеленую область графика, представляющую ваш целевой диапазон, введя значения в [Настройки](../Configuration/Preferences.md) > Диапазон для визуализации.
+You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Overview > Range for Visualisation.
 
 ![Stop sign](../images/sign_stop.png)
 :::{admonition} If you have been using a virtual pump, change to a real insulin pump now!
