@@ -71,14 +71,16 @@ Téléphones compatibles <./Hardware/Phoneconfig.md>
 ```
 
 ```{toctree}
-:caption: 3) Installation d'AAPS
+:caption: 3) Setting up AAPS
 
-Serveur de reporting <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
-Compilation d'AAPS <./Installing-AndroidAPS/building-AAPS.md>
-Transfert et Installation d'AAPS <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
-Assistant de configuration <./Installing-AndroidAPS/setup-wizard.md>
-Modifier la configuration AAPS <./Installing-AndroidAPS/change-configuration.md>
-Compléter les objectifs <./Usage/completing-the-objectives.md>
+Setting up the reporting server <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
+Building AAPS <./Installing-AndroidAPS/building-AAPS.md>
+Transferring and Installing AAPS <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
+Setup Wizard<./Installing-AndroidAPS/setup-wizard.md>
+Change AAPS configuration <./Installing-AndroidAPS/change-configuration.md>
+- Config Builder <./Configuration/Config-Builder.md>
+- Preferences <./Configuration/Preferences.md>
+Completing the objectives <./Usage/completing-the-objectives.md>
 ```
 
 ```{toctree}
