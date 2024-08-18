@@ -200,7 +200,7 @@ You need to find out why you get duplicate BGs:
 
 * **Azul claro** línea: cero-temp (predicción de la glucosa si se establecería una tasa basal temporal al 0%)
    
-   La línea de predicción muestra cómo cambiaría la línea de trayectoria de la IOB si la bomba detuviera toda la administración de insulina (0% TBR).
+   Prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
    
    *This line appears only when the [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
