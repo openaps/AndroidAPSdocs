@@ -200,7 +200,7 @@ Du musst herausfinden, warum du doppelte BG-Daten erhältst:
 
 * **Hellblaue** Linie: zero-temp (BZ-Vorhersage bei Annahme, dass eine temporäre Basalrate mit 0% gesetzt wäre)
    
-   Die Prognoselinie zeigt, wie sich die IOB-Kurve ändern würde, wenn die Pumpe die Insulinabgabe komplett stoppen würde (0% TBR).
+   Prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
    
    *Diese Linie erscheint nur, wenn der [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)-Algorithmus verwendet wird.*
 
