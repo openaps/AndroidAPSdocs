@@ -2,57 +2,42 @@
 
 ## Appairage Bluetooth de la pompe à insuline
 
-- Cliquez sur le menu hamburger dans le coin supérieur gauche.
+- Click on the hamburger menu in the top left corner.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_01.jpg
-  > :alt: Menu hamburger
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_01.jpg)
 
 - Cliquez sur Configuration.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_02.jpg
-  > :alt: Générateur de configuration
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_02.jpg)
 
 - Après avoir sélectionné la pompe Diaconn G8, cliquez sur l'icône Paramètres (roue crantée).
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_03.jpg
-  > :alt: Paramètres
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_03.jpg)
 
 - Choisissez la pompe sélectionnée.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_04.jpg
-  > :alt: Sélection de la pompe
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 - Sélectionnez le numéro de modèle de votre pompe à insuline une fois qu'elle apparaît dans la liste.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_05.jpg
-  > :alt: Appariage de la pompe
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_05.jpg)
 
 - Il y a deux options pour vérifier votre numéro de modèle :
 
-  > 1. Les 5 derniers chiffres du numéro SN au dos de la pompe.
-  > 2. Cliquez sur le bouton O > Information > BLE > Derniers 5 chiffres.
-  > 
-  > > `{image} ../images/DiaconnG8/DiaconnG8_06.jpg
-    :alt: vérifier le n° de modèle`
+1. Les 5 derniers chiffres du numéro SN au dos de la pompe.
+2. Cliquez sur le bouton O > Information > BLE > Derniers 5 chiffres.
+
+![image](../images/DiaconnG8/DiaconnG8_06.jpg)
 
 - Une fois que vous avez sélectionné votre pompe, une fenêtre apparaît pour demander un code PIN. Entrez le code PIN affiché sur votre pompe pour terminer la connexion.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_07.jpg
-  > :alt: Code PIN
-  > ```
+ ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
 
 ## Contrôle de l'état de la pompe et synchronisation des journaux
 
 - Une fois que votre pompe est connectée, cliquez sur le symbole Bluetooth pour vérifier l'état et synchroniser les journaux.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_08.jpg
-  > :alt: État du Bluetooth
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ## Dépannage Bluetooth
 
@@ -62,35 +47,25 @@
 
 - Cliquez sur le menu 3 points en haut à droite.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_09.jpg
-  > :alt: Menu préferences
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_09.jpg)
 
 - Cliquez sur Quitter.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_10.jpg
-  > :alt: Quitter
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_10.jpg)
 
 ### Méthode 2) Si la première méthode ne fonctionne pas, déconnectez Bluetooth puis reconnectez-vous.
 
 - Appuyez et maintenez le bouton Bluetooth en haut pendant environ 3 secondes.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_11.jpg
-  > :alt: Bouton Bluetooth
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_11.jpg)
 
 - Cliquez sur le bouton Réglage de la pompe Diaconn G8 appairée.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_12.jpg
-  > :alt: Bouton paramètres
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_12.jpg)
 
 - Désappairage.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_13.jpg
-  > :alt: Désappairage
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_13.jpg)
 
 - Répétez le processus d'appairage Bluetooth pour la pompe (voir ci-dessus).
 
