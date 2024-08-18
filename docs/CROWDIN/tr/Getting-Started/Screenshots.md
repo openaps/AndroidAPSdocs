@@ -200,7 +200,7 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
 * **Açık mavi** çizgi: sıfır geçici (geçici bazal oranı %0 olarak ayarlandıysa, tahmini KŞ)
    
-   Tahmin çizgisi, pompa tüm insülin iletimini (%0 GBO) durdurursa Aktif İnsülin çizgisinin nasıl değişeceğini gösterir.
+   Prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
    
    *Bu satır yalnızca [ SMB ](preferences-veyvanced-meal-sist-ama-or-super-micro-bolus-smb) algoritması kullanıldığında görünür.*
 
