@@ -344,6 +344,12 @@ Users should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connec
 
 Users should also ensure that carbs are logged in both ‘Treatments’ within both __AAPSClient__ and __AAPS__ otherwise this could indicate a malfunction within the user’s set up.
 
+### Troubleshooting 'NS access token' configuration issues
+
+The precise 'NS access token' configuration may differ depending upon whether your Nightscout provider is a paid for hosted site or not.
+
+If you are struggling with **AAPS** v3 to accept the 'NS access token' and using a paid for hosted Nightscout site, you may wish to first liaise with your Nightscout provider on how to resolve the 'NS access token' difficulties. Otherwise, please reach out to the **AAPS** group but please double check that you have correctly followed the notes before doing so [here](https://nightscout.github.io/nightscout/security/#create-a-token).
+
 ### AAPSClient-Funktionen sind unter anderem:
 
 ![Sara's AAPSClient table](images/remote-control-23.png)

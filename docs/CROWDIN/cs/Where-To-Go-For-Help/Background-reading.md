@@ -10,7 +10,7 @@ Než si začnete připravovat svou vlastní soustavu smyčky, budete si k tomu m
 
 [Loop dokumetace- https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
-[Fine-Tuning your settings - https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://seemycgm.com/2017/10/29/fine-tuning-settings/)
+[Fine-Tuning your settings - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
 [Tim Omer – Hypodiabetic Blog - https://www.hypodiabetic.co.uk/](https://www.hypodiabetic.co.uk/)
 
