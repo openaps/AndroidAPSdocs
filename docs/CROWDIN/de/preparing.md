@@ -96,6 +96,7 @@ Ein "keystore" ist eine mit einem Passwort verschlüsselte Datei, die ausschlie�
 
 2.  Notiere das Passwort für Deine Keystore-Datei.
 
+
 Damit kannst Du die Keystore-Datei für jedes Update auf eine neue **AAPS**-Version nutzen. Im Durchschnitt werden zwei AAPS-Updates pro Jahr nötig.
 
 Zusätzlich bietet **AAPS** die Möglichkeit, [alle Konfigurationseinstellungen zu exportieren](Usage/ExportImportSettings.md). Damit kannst Du das System z.B. bei einem Smartphone-Wechsel oder bei einer Neuinstallation/Update der App sicher wieder herstellen und es mit einer nur kurzen Unterbrechung weiter nutzen. 
@@ -201,7 +202,7 @@ Diese Dokumentation möchte die notwendige technische Expertise auf ein absolute
 ### Smartphones
 
 #### AAPS und Android-Versionen
-Die aktuelle **AAPS**-Version (3.1.0.3) setzt ein Android Smartphone mit Google Android 9.0 oder höher voraus. Wenn Du aktuell darüber nachdenkst Dir ein neues Smartphone zuzulegen, wäre Android 13 (Stand: Juli 2023) zu bevorzugen. Aus Sicherheitsgründen wird Dir dringend empfohlen Deine **AAPS**-Version immer auf dem letzten Stand zu halten bzw. zu bringen. Wenn Dein Smartphone kein Android 9.0 oder höher haben sollte, steht Dir eine ältere **AAPS**-Version im [alten Repository](https://github.com/miloskozak/AAPS) zur Verfügung. (Schaue für diese Vorversionen in die Release Notes).
+The current version of **AAPS** (3.2) requires an Android smartphone with Google **Android 9.0 or above**. If you are considering buying a new phone, (as of July 2024), Android 13 is preferred. Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons, however for users unable to use a device with Android 9.0 or newer, earlier versions of  **AAPS** compatible for older Android versions like [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) and [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2), remain available from previous releases (check the release notes for legacy versions).
 
 #### Smartphone-Modell wählen
 Welches genau Modell Du kaufen solltest, hängt von den gewünschten Funktionen ab. Es gibt zwei (mittlerweile archivierte) Arbeitsblätter mit kompatiblen [Smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) und [Smartphones und Smartwatches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). Diese Übersichten werden nicht mehr aktualisiert, da es mittlerweile zu viele Modelle auf dem Markt gibt. Wir empfehlen Dir daher, die entsprechenden Supportgruppen (Facebook oder Discord) mit dem Schlagwort "phone" oder dem jeweiligen Modell, das Du kaufen möchtest, zu durchsuchen. Wenn Du dann darüber hinaus Informationen benötigen solltest, erstelle einen neuen Beitrag mit Deinen Fragen.
@@ -209,7 +210,7 @@ Welches genau Modell Du kaufen solltest, hängt von den gewünschten Funktionen 
 Falls Du Smartphones oder Smartwatch-Modelle für Tests spenden möchtest, sende eine E-Mail an [donations@androidaps.org](mailto:donations@androidaps.org).
 
 - [Liste von getesteten Smartphones](../Getting-Started/Phones.md)
-- [Jelly Pro Einstellungen](../Usage/jelly.md)
+- [Jelly Settings](../Usage/jelly.md)
 - [Huawei Einstellungen](../Usage/huawei.md)
 
 Das Smartphone sollte regelmäßig Sicherheitsupdates erhalten und stets auf der aktuellen Android-Version gehalten werden. Wenn Du mit AAPS noch nicht sehr vertraut bist oder kein technischer Experte bist, solltest Du mit dem jeweiligen Update warten, bis Andere das Update erfolgreich gemacht haben und in den verschiedenen Foren bestätigt haben, dass es problemlos durchgeführt werden kann.
