@@ -200,7 +200,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 * עקום **כחול בהיר**: בזאלי אפס זמני (סוכר חזוי אם יוגדר קצב בזאלי זמני של 0%)
    
-   עקום החיזוי מראה כיצד ישתנה עקום האינסולין הפעיל אם המשאבה תפסיק כל מתן אינסולין (בזאלי זמני 0%).
+   Prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
    
    *שורה זו מופיעה רק כאלגוריתם [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) נבחר ופועל (אחרי תחילת משימה 9).*
 

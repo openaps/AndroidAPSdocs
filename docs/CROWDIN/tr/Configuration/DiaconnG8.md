@@ -2,57 +2,42 @@
 
 ## İnsülin Pompası Bluetooth Eşleştirme
 
-- Sol üst köşedeki hamburger menüsüne tıklayın.
+- Click on the hamburger menu in the top left corner.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_01.jpg
-  > :alt: Hamburger menü
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_01.jpg)
 
 - Konfigürasyon ayarlarına tıklayın.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_02.jpg
-  > :alt: Konfigürasyon ayarları
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_02.jpg)
 
 - Diaconn G8 Pompayı seçtikten sonra Ayarlar simgesine (dişli çark) tıklayın.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_03.jpg
-  > :alt: Ayarlar
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_03.jpg)
 
 - Pompa seçimi'ne tıklayın.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_04.jpg
-  > :alt: Pompa seçimi
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 - Listede model numarası görünen insülin pompanızın seçin.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_05.jpg
-  > :alt: Pompa eşleştirme
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_05.jpg)
 
 - Model numaranızı kontrol etmek için iki seçenek vardır:
 
-  > 1. Pompanın arkasındaki SN numarasının son 5 hanesi.
-  > 2. Pompa üzerinden O düğmesi > Bilgi > BLE > Son 5 basamak.
-  > 
-  > > `{image} ../images/DiaconnG8/DiaconnG8_06.jpg
-    :alt: model no kontrolü.`
+1. Pompanın arkasındaki SN numarasının son 5 hanesi.
+2. Pompa üzerinden O düğmesi > Bilgi > BLE > Son 5 basamak.
+
+![image](../images/DiaconnG8/DiaconnG8_06.jpg)
 
 - Pompanızı seçtiğinizde, pin kodunu soran bir pencere açılır. Bağlantıyı tamamlamak için pompanızda görüntülenen pin numarasını girin.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_07.jpg
-  > :alt: PIN kodu
-  > ```
+ ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
 
 ## Pompa durum kontrolü ve günlük senkronizasyonu
 
 - Pompanız bağlandıktan sonra, durumu kontrol etmek ve günlükleri senkronize etmek için Bluetooth sembolüne tıklayın.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_08.jpg
-  > :alt: Bluetooth durumu
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ## Bluetooth Sorun Giderme
 
@@ -62,35 +47,25 @@
 
 - Sağ üstteki 3 nokta butonuna tıklayın.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_09.jpg
-  > :alt: Tercihler menüsü
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_09.jpg)
 
 - Çıkış'a tıklayın.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_10.jpg
-  > :alt: Çıkış
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_10.jpg)
 
 ### Yöntem 2) İlk yöntem işe yaramazsa, Bluetooth bağlantısını kesin ve ardından yeniden bağlanın.
 
 - Üstteki Bluetooth düğmesini yaklaşık 3 saniye basılı tutun.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_11.jpg
-  > :alt: Bluetooth butonu
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_11.jpg)
 
 - Eşleştirilmiş Diaconn G8 İnsülin pompasındaki ayar butonuna tıklayın.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_12.jpg
-  > :alt: Ayar butonu
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_12.jpg)
 
 - Eşleştirmeyi kaldır.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_13.jpg
-  > :alt: Eşleştirmeyi kaldır
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_13.jpg)
 
 - Pompa için Bluetooth eşleştirme işlemini tekrarlayın (yukarıya bakın).
 

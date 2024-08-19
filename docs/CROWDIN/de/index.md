@@ -71,14 +71,16 @@ Kompatible Smartphones   <./Hardware/Phoneconfig.md>
 ```
 
 ```{toctree}
-:caption: 3) AAPS einrichten
+:caption: 3) Setting up AAPS
 
-Einen Server für Berichte einrichten <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
-AAPS erstellen <./Installing-AndroidAPS/building-AAPS.md>
-AAPS auf Dein Smartphone übertragen und installieren <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
-AAPS Einrichtungsassistent <./Installing-AndroidAPS/setup-wizard.md>
-Deine AAPS-Konfiguration anpasse <./Installing-AndroidAPS/change-configuration.md>
-Abschließen der Ziele (Objectives) <./Usage/completing-the-objectives.md>
+Setting up the reporting server <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
+Building AAPS <./Installing-AndroidAPS/building-AAPS.md>
+Transferring and Installing AAPS <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
+Setup Wizard<./Installing-AndroidAPS/setup-wizard.md>
+Change AAPS configuration <./Installing-AndroidAPS/change-configuration.md>
+- Config Builder <./Configuration/Config-Builder.md>
+- Preferences <./Configuration/Preferences.md>
+Completing the objectives <./Usage/completing-the-objectives.md>
 ```
 
 ```{toctree}

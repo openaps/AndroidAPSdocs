@@ -200,7 +200,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 * **Ανοιχτή μπλε γραμμή**: μηδενικός προσωρινός ρυθμός (προβλεπόμενη γλυκόζη αίματος αν θα οριζόταν προσωρινός βασικός ρυθμός στο 0%)
    
-   Η γραμμή πρόβλεψης δείχνει πώς θα άλλαζε η πορεία της Ενεργής Ινσουλίνης αν η αντλία σταματούσε όλη την παροχή ινσουλίνης (0% προσωρινός βασικός ρυθμός).
+   Prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
    
    *Αυτή η γραμμή εμφανίζεται μόνο όταν χρησιμοποιείται ο αλγόριθμος [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb).*
 

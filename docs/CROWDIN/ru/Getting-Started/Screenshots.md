@@ -200,7 +200,7 @@
 
 * **Голубая** линия: нулевой временный базал (предсказанная ГК, если будет установлена временная базальная скорость в 0%)
    
-   В строке прогноза показано, как изменится линия траектории активного инсулина IOB, если помпа прекратит подачу инсулина (0% TBR).
+   Prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
    
    *Эта линия появляется только когда используется алгоритм [СМБ](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb).*
 

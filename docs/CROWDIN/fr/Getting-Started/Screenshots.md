@@ -200,7 +200,7 @@ Vous devez savoir pourquoi vous avez des Gly dupliquées :
 
 * Ligne **bleu clair** ligne : zéro-temp (glycémie prévisionnelle si un débit de base temporaire à 0% était défini)
    
-   Cette ligne de prédiction montre comment la trajectoire de l'IA changerai si la pompe arrêtait toute injection d'insuline (DBT 0%).
+   Prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
    
    *Cette ligne n'apparaît que lorsque l'algorithme [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) est utilisé.*
 
