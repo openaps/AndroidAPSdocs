@@ -12,9 +12,9 @@
 
 **Autosens** calculation of sensitivity to insulin as a result of exercise, hormones etc. [DIABETTECH - Autosens](https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
 
-**Azure** cloud computing platform to host Nightscout web app [Azure](https://azure.microsoft.com/) → see also **Nightscout **
+**Azure** cloud computing platform to host Nightscout web app [Azure](https://azure.microsoft.com/) → see also **Nightscout**
 
-**BAT **status light low battery on homescreen [Preferences](../Configuration/Preferences.md#overview), [Screenshots](../Getting-Started/Screenshots.md) → see also **CAN / RES / SEN**
+**BAT** status light low battery on home screen [Preferences](../Configuration/Preferences.md#overview), [Screenshots](../Getting-Started/Screenshots.md) → see also **CAN / RES / SEN**
 
 **BG** blood glucose
 
@@ -50,7 +50,7 @@
 
 **FGM** Flash Glucose Monitor (Freestyle Libre) [Wiki - BG source](../Configuration/BG-Source.md) → see also **CGM**
 
-**git** git in our context here is the tool to mainly download the AndrdoidAPS sources from Github for the build process. It's version-control system for tracking changes in computer files and coordinating work on those files especially for teams. -> necessary for APK updates [Wiki- update APK](../Installing-AndroidAPS/Update-to-new-version.md)
+**git** git in our context here is the tool to mainly download the AndroidAPS sources from GitHub for the build process. It's version-control system for tracking changes in computer files and coordinating work on those files especially for teams. -> necessary for APK updates [Wiki- update APK](../Installing-AndroidAPS/Update-to-new-version.md)
 
 **GitHub** web-based hosting service for version control using Git -> storage of source code [GitHub AndroidAPS](https://github.com/nightscout/AndroidAPS)
 
@@ -112,7 +112,7 @@
 
 **Sensor noise** unstable CGM readings leading to "jumping" values [Wiki - sensor noise](../Usage/Smoothing-Blood-Glucose-Data.md)
 
-**SMB** Super Micro Bolus advanced feature for faster BG adjustmentUAM [Wiki - SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb)
+**SMB** Super Micro Bolus advanced feature for faster BG adjustment [Wiki - SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) → see also **UAM**
 
 **Super bolus** shift of basal to bolus insulin for faster BG adjustment [John Walsh - The Super Bolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus)
 

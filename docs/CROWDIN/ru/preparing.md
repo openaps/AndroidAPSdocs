@@ -96,6 +96,7 @@ An **index** and explanation of the documentation structure can be found [here](
 
 2.  Запишите пароль для файла хранилища ключей.
 
+
 Это гарантирует, что каждый раз при создании новой версии **AAPS** можно использовать один и тот же файл ключей. В среднем каждый год будет требоваться 2 обновления AAPS.
 
 Кроме того, **AAPS** дает возможность [экспортировать все настройки конфигурации](Usage/ExportImportSettings.md). Это гарантирует, что вы можете безопасно восстановить вашу систему при смене телефонов, обновлении/переустановке приложения с минимальными затратами времени. 
@@ -201,7 +202,7 @@ Depending on your glucose sensor/CGM, you will need a compatible app for receivi
 ### Смартфоны
 
 #### AAPS и версии Android
-Актуальная версия **AAPS**(3.2.0.2) требует телефона на Android с Google Android 9.0 или выше. Если вы рассматриваете покупку нового телефона (по состоянию на июль 2023), предпочтительнее Android 13. Пользователям настоятельно рекомендуется обновлять свою сборку **AAPS** по соображениям безопасности, однако для тех, кому недоступно устройство на Android 9.0 или новее, имеются более ранние версии **AAPS**. Они остаются доступными в нашем [старом репозитории](https://github.com/miloskozak/AAPS) (см. примечания к выпуску устаревших версий).
+The current version of **AAPS** (3.2) requires an Android smartphone with Google **Android 9.0 or above**. If you are considering buying a new phone, (as of July 2024), Android 13 is preferred. Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons, however for users unable to use a device with Android 9.0 or newer, earlier versions of  **AAPS** compatible for older Android versions like [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) and [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2), remain available from previous releases (check the release notes for legacy versions).
 
 #### Выбор модели смартфона
 Модель, которую вы покупаете, зависит от желаемых функций. There are two archived spreadsheets of compatible [smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) and [smartphones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). The spreadsheets are no longer updated because there are so many possible models, therefore we now suggest searching the support groups (Facebook or Discord) for "phone", or the specific model you are thinking of getting. Create a new post to ask questions about it if you still need more information.
@@ -209,7 +210,7 @@ Depending on your glucose sensor/CGM, you will need a compatible app for receivi
 Пожертвовать смартфон для тестирования можно, отправив письмо по адресу [donations@androidaps.org](mailto:donations@androidaps.org).
 
 - [Список проверенных телефонов](../Getting-Started/Phones.md)
-- [Настройки Jelly Pro](../Usage/jelly.md)
+- [Jelly Settings](../Usage/jelly.md)
 - [Настройки Huawei](../Usage/huawei.md)
 
 Users are encouraged to keep their phone Android version up-to-date, including with security parameters. However, if you are new with **AAPS** or are not a technical expert you might want to delay updating your phone until others have done so and confirmed it is safe to do so, on our various forums.

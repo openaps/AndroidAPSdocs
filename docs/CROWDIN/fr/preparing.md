@@ -96,6 +96,7 @@ Le fichier « keystore » ou « magasin de clés » (fichier .jks) est un fichie
 
 2.  Vous assurer de conserver le mot de passe de votre fichier de clés.
 
+
 De cette façon, vous pourrez utiliser ce même fichier de clés à chaque fois qu'une nouvelle version de **AAPS** sera créée. En moyenne, vous aurez à faire 2 mises à jour d'**AAPS** chaque année.
 
 Par ailleurs, **AAPS** vous donne la possibilité d'[exporter tous vos paramètres de configuration](Usage/ExportImportSettings.md). Cela vous permet de récupérer votre système en toute sécurité tout en changeant de téléphone, de mettre à jour/réinstaller l'application avec un minimum d'interruption. 
@@ -201,7 +202,7 @@ Cette documentation a pour but de réduire autant que faire se peut l'expertise 
 ### Smartphones
 
 #### AAPS et versions Android
-La version actuelle d'**AAPS** (3.1.0.3) nécessite un smartphone Android avec Google Android 9.0 ou supérieur. Si vous pensez à acheter un nouveau téléphone (à compter de juillet 2023), préférez la version Android 13. Les utilisateurs sont fortement encouragés à mettre à jour **AAPS** à chaque nouvelle version pour des raisons de sécurité. Cependant pour les utilisateurs qui ne disposent pas d'un appareil avec Android 9 ou supérieur, des versions d'**AAPS** compatibles avec des versions plus anciennes d'Android, restent disponible sur l'[ancien dépôt.](https://github.com/miloskozak/AAPS) (vérifiez les notes de version de ces anciennes versions).
+The current version of **AAPS** (3.2) requires an Android smartphone with Google **Android 9.0 or above**. If you are considering buying a new phone, (as of July 2024), Android 13 is preferred. Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons, however for users unable to use a device with Android 9.0 or newer, earlier versions of  **AAPS** compatible for older Android versions like [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) and [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2), remain available from previous releases (check the release notes for legacy versions).
 
 #### Choix du modèle de smartphone
 Vous choisirez un modèle précis en fonction de la/des fonction(s) que vous recherchez. Nous avons deux tableaux archivés listant les [smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) compatibles et les [smartphones et montres](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) compatibles. Ces tableaux ne sont plus mis à jour au vu du grand nombre de modèles possibles. Nous suggérons donc maintenant de faire une recherche dans les groupes de support (Facebook ou Discord) avec "phone", ou le modèle précis que vous envisagez d'acheter. Créez un nouveau post avec vos questions à ce sujet si vous avez encore besoin de davantage d'informations.
@@ -209,7 +210,7 @@ Vous choisirez un modèle précis en fonction de la/des fonction(s) que vous rec
 Pour faire un don d'un modèle de smartphone ou de smartwatch qui n'a pas encore été testé, veuillez envoyer un e-mail à [donations@androidaps.org](mailto:donations@androidaps.org).
 
 - [Liste des téléphones testés](../Getting-Started/Phones.md)
-- [Paramètres Jelly Pro](../Usage/jelly.md)
+- [Jelly Settings](../Usage/jelly.md)
 - [Paramètres Huawei](../Usage/huawei.md)
 
 Les utilisateurs sont encouragés à faire les mises à jour de version Android sur leur téléphone, y compris avec les mises à jour de sécurité. Cependant, si démarrez avec **AAPS** ou si vous n'êtes pas à l'aise techniquement, vous voudrez peut-être attendre pour faire la mise à jour de votre téléphone que d'autres l'aient fait et aient confirmé le bon fonctionnement des applications, sur nos différents forums.
