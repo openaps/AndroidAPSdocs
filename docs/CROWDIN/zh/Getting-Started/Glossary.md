@@ -2,7 +2,7 @@
 
 **AAPS** = AndroidAPS 是 Android 應用程式的名稱。
 
-**AAPSClient**（或 **NSClient**）= 一個遠端控制功能，可供照護者透過追蹤者手機來追蹤用戶的 **AAPS**，藉由連接到用戶的 **Nightscout** 網站來實現。更多資訊 → Wiki - 'NS Client'。在 **AAPS** 內的學習目標程式提供逐步指導。更多資訊 → Wiki - 'objectives'。 進一步資訊 → Wiki - 「NS Client」。 在 **AAPS** 中的目標學習程式提供逐步指導。 進一步資訊 → Wiki - 「objectives」。
+**AAPSClient**（或 **NSClient**）= 一個遠端控制功能，可供照護者透過手機來追蹤用戶的 **AAPS**，藉由連接到用戶的 **Nightscout** 網站來實現。更多資訊 → Wiki - 'NS Client'。在 **AAPS</0> 內的學習目標程式提供逐步指導。更多資訊 → Wiki - 'objectives'。 進一步資訊 → Wiki - 「NS Client」。 在 **AAPS** 中的目標學習程式提供逐步指導。 進一步資訊 → Wiki - 「objectives」。</p> 
 
 **APS** = 人工胰臟系統。
 
