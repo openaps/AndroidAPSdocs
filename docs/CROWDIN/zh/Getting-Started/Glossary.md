@@ -1,137 +1,137 @@
-# Glossary
+# 詞彙表
 
-**AAPS** AndroidAPS is the name of the Android app
+**AAPS** = AndroidAPS 是 Android 應用程式的名稱。
 
-**APS** Artificial Pancreas System
+**AAPSClient**（或 **NSClient**）= 一個遠端控制功能，可供照護者透過追蹤者手機來追蹤用戶的 **AAPS**，藉由連接到用戶的 **Nightscout** 網站來實現。更多資訊 → Wiki - 'NS Client'。在 **AAPS** 內的學習目標程式提供逐步指導。更多資訊 → Wiki - 'objectives'。 進一步資訊 → Wiki - 「NS Client」。 在 **AAPS** 中的目標學習程式提供逐步指導。 進一步資訊 → Wiki - 「objectives」。
 
-**AMA** Advanced Meal Assist - advanced algorithm to handle carbs [Wiki - AMA](../Usage/Open-APS-features.md#advanced-meal-assist-ama) → see also **SMB**
+**APS** = 人工胰臟系統。
 
-**Android Auto** Android Auto is a system developed by Google LLC to use functions of an Android smartphone with the infotainment system in motor vehicles. Through Android Auto AndroidAPS can send messages to your compatible and configured infotainment system. [Wiki - android auto](../Usage/Android-auto.md), [Google Android Auto](https://www.android.com/intl/en_en/auto/)
+**AMA** = 進階餐食輔助。這是一個演算法，使 **AAPS** 能在餐後更加積極地增加用戶的基礎胰島素輸注。更多資訊 → Wiki - 'AMA'。 一種演算法，允許 **AAPS** 在餐後注射胰島素後更積極地增加用戶的基礎胰島素。 進一步資訊 → Wiki - 「AMA」。
 
-**APK** Android application Package - software installation file [Wiki - Building APK](../Installing-AndroidAPS/building-AAPS.md)
+**Android Auto** = 一個系統，用於在車輛顯示螢幕中託管 Android 智慧手機的某些功能，包括 **AAPS**。更多資訊 → Wiki - 'android auto'。 進一步資訊 → Wiki - 「android auto」。
 
-**Autosens** calculation of sensitivity to insulin as a result of exercise, hormones etc. [DIABETTECH - Autosens](https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
+**APK** = Android 應用程式包。是一個軟體安裝文件。更多資訊 → Wiki - 'Building APK'。 一個軟體安裝檔案。 進一步資訊 → Wiki - 「Building APK」。
 
-**Azure** cloud computing platform to host Nightscout web app [Azure](https://azure.microsoft.com/) → see also **Nightscout**
+**Autosens** = 在24小時和8小時的時間範圍內計算胰島素敏感性的變化。更多資訊 → DIABETTECH - **Autosens**。 進一步資訊 → DIABETTECH - **Autosens**。
 
-**BAT** status light low battery on home screen [Preferences](../Configuration/Preferences.md#overview), [Screenshots](../Getting-Started/Screenshots.md) → see also **CAN / RES / SEN**
+**Azure** = 雲端計算平台，用於託管 **Nightscout** 網頁應用程式。Azure → 另見 **Nightscout**。
 
-**BG** blood glucose
+**BAT** = 在 **AAPS** 主螢幕上的狀態指示燈，表示電池電量低。**偏好設定**, 截圖 → 另見 **CAN** / **RES** / **SEN**。
 
-**BGI** blood glucose impact - the degree to which BG 'should' be rising or falling based on insulin activity alone
+**BG** = 血糖。
 
-**BG source** where your blood glucose values come from. They come from a CGM or FGM system which you wear through some kind of integration software like BYODA, xDrip+ etc. [Wiki - BG source](../Configuration/Config-Builder.md#bg-source) → see also **CGM / FGM**
+**BGI** = 血糖影響。指根據胰島素活動，血糖“應該”上升或下降的程度。 根據胰島素活動，**血糖** 理應上升或下降的程度。
 
-**Blucon** bluetooth transmitter to use Freestyle Libre as CGM - check compatibility! [Blucon](https://cgm.ambrosiasys.com/) → see also **MiaoMiao, Bubble**
+**BG source** = 用戶的血糖數值來源，從 **CGM** 或 **FGM** 通過系統整合軟體（如 **BYODA**、**xDrip+** 等）獲取。更多資訊 → Wiki - 'BG source' 進一步資訊 → Wiki - 「BG source」。
 
-**Bubble** bluetooth transmitter to use Freestyle Libre as CGM [Bubble](https://www.bubblesmartreader.com/) → see also **Blucon, MiaoMiao**
+**Bridge** = 一種將 **FGM** 轉換為 **CGM** 的附加設備。
 
-**Bridge (Libre)** The first versions of the Freestyle Libre are only able to communicate via NFC which means that the patient had to hold his mobile very near to the sensor. [LimiTTER](https://github.com/JoernL/LimiTTer) (archived) closed this gap, the first commercial bridge BlueReader was widely copied. Please check compatibility before buying a bridge device like Blucon / MiaoMiao / Bubble / Atom...
+**BR** = 基礎速率。 在特定時間段內維持 **血糖 ** 穩定所需的胰島素量。 → 另見 **IC** / **ISF**.
 
-**BR** Basal Rate. The amount of insulin in a given time block to maintain BG at a stable level.→ see also **IC / ISF**
+**BYODA** = 自製 Dexcom 應用程式。一種用戶自行生成 Dexcom 應用程式以讀取 Dexcom G6 感測器資料的方法。
 
-**BYODA** Build Your Own Dexcom App - a special way to generate your own Dexcom App for reading out the sensor data [Dexcom G6](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)
+**CAGE** = 導管使用時間。 **CAGE** = 導管使用年限。顯示在 **AAPS** 主螢幕和 Nightscout 上，提供用戶在動作標籤 / 選單中輸入的資訊 → 另見 **Nightscout**。
 
-**CAGE** Cannula AGE - displayed on the homescreen of AndroidAPS and in Nightscout if information was entered in the actions tab / menu → see also **Nightscout**
+**CAN** = 在 **AAPS** 主螢幕上的狀態指示燈，表示導管更換逾期。**偏好設定** → 另見 **BAT** / **RES** / **SEN**。
 
-**CAN** status light overdue cannula change on homescreen [Preferences](../Configuration/Preferences.md#overview), [Screenshots](../Getting-Started/Screenshots.md) → see also **BAT / RES / SEN**
+**CGM** = 連續血糖監測儀 → 另見 **FGM**。
 
-**CGM** Continuous Glucose Monitor → see also **FGM**
+**Closed Loop** = 一種閉環系統，根據 **AAPS** 的演算法和用戶的 **Profile** 設定，自動調整用戶的基礎胰島素輸送，無需用戶批准。更多資訊 → Wiki - 'closed loop'。 進一步資訊 → Wiki - 「closed loop」。
 
-**Closed Loop** closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm [Wiki closed loop](../Configuration/Config-Builder.md#closed-loop) → see also **Open loop**
+**COB** = 活性碳水化合物。這是目前用戶消化過程中的碳水化合物量 → 另見 IOB。 這是目前可供用戶消化的碳水化合物量 → 另見 IOB。
 
-**COB** Carbs On Board - Carbs on board is the amount of carbohydrates currently available for digestion. → see also **IOB**
+**CSF** = 碳水化合物敏感性因子，即用戶的血糖因吸收 1 克碳水化合物而上升的程度。 即用戶的 **血糖** 因吸收 1 克碳水化合物而上升的程度。
 
-**DIA** Duration of Insulin Action [Wiki insulin types](../Configuration/Config-Builder.md#insulin), [DIABETTECH - DIA](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+**DIA** = 胰島素作用時間。更多資訊 → Wiki - 'insulin types' 和另見 → DIABETTECH - 'DIA'。 進一步資訊 → Wiki - 「insulin types」及另見 → DIABETTECH - 「DIA」。
 
-**DST** Daylight Savings Time [Wiki DST](../Usage/Timezone-traveling.md#time-adjustment-daylight-savings-time-dst)
+**DST** = 日光節約時間 Wiki DST。
 
-**eCarbs** extended Carbs - carbs split up over serveral hours (i.e. lot of fat/protein) extended boluses you might know from regular pump therapy do not make much sense when looping [Wiki - eCarbs](../Usage/Extended-Carbs.md#extended-carbs-ecarbs), [eCarbs use case](https://adriansloop.blogspot.com/2018/04/page-margin-0.html) → see also **SMB**
+**eCarbs** = 延長碳水化合物。將碳水化合物分散在數小時內以適應/蛋白質，並允許 **AAPS** 提供延長的胰島素注射。更多資訊 → Wiki - 'eCarbs', 'eCarbs use'。 碳水化合物分散在數小時內以適應蛋白質，並允許 **AAPS** 提供延長的胰島素注射。 進一步資訊 → Wiki - 「eCarbs」、「eCarbs use」。
 
-**FGM** Flash Glucose Monitor (Freestyle Libre) [Wiki - BG source](../Configuration/BG-Source.md) → see also **CGM**
+**FGM** = 由 Freestyle Libre 製造的即時血糖監測儀。更多資訊 → Wiki - 'BG source' 和另見 'CGM'。 進一步資訊 → Wiki - 「BG source」，另見「CGM」。
 
-**git** git in our context here is the tool to mainly download the AndroidAPS sources from GitHub for the build process. It's version-control system for tracking changes in computer files and coordinating work on those files especially for teams. -> necessary for APK updates [Wiki- update APK](../Installing-AndroidAPS/Update-to-new-version.md)
+**git** = 一種工具，用於儲存和下載 **AAPS** 的源代碼。
 
-**GitHub** web-based hosting service for version control using Git -> storage of source code [GitHub AndroidAPS](https://github.com/nightscout/AndroidAPS)
+**GitHub** = 一個基於網頁的託管服務和平臺，用於 **AAPS** 的軟體版本控制系統，以追蹤檔案的變更並協調團隊工作。它也是 **APK** 更新的必要工具。更多資訊 → Wiki - 'update APK'。 這對於更新 **APK** 也是必要的。 進一步資訊 → Wiki - 「update APK」。
 
-**Glimp** app to collect values from Freestyle Libre [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia)
+**Glimp** = 一個應用程式，用於收集 Freestyle Libre 的數值。
 
-**Heroku** cloud computing platform to host Nightscout web app [Heroku](https://www.heroku.com) → see also **Nightscout **
+**IC (or I )** = 胰島素與碳水化合物比率。（即一單位胰島素能覆蓋多少碳水化合物）。 （即一單位胰島素能覆蓋多少碳水化合物？）。
 
-**IC (or I:C)** Insulin to Carb ratio (How many carbs are covered by one unit of insulin?)
+**IOB** = 活性胰島素。 在用戶體內仍然活躍的胰島素。
 
-**IOB** Insulin On Board - insulin active in your body
+**ISF** = 胰島素敏感性因子。用戶每單位胰島素預計會使血糖降低的程度。 由於注射一單位胰島素，預計血糖會下降的幅度。
 
-**ISF** Insulin Sensitivity Factor - the expected decrease in BG as a result of one unit of insulin
+**LGS** = 低血糖暫停功能。**AAPS** 會減少基礎胰島素輸注，如果血糖下降並且血糖上升，那麼僅當 **IOB** 為負值（來自之前的 **LGS**）時，才會增加基礎胰島素，否則基礎速率將保持與用戶選定的 **Profile** 相同。用戶可能會在處理低血糖後，暫時無法增加基礎胰島素，導致血糖反彈。→ 另見目標 6。 `**AAPS**` 會在 `**血糖**` 下降時減少基礎胰島素輸注，若 `**血糖**` 上升，則只有在 `**IOB**` 為負值（來自之前的 `**LGS**`）時才會增加基礎胰島素，否則基礎速率將保持與用戶選擇的 `**Profile**` 相同。 用戶在處理低血糖後可能會暫時經歷血糖飆升，但無法在反彈期間增加基礎胰島素。 → 另見目標 6。
 
-**LGS** Low Glucose Suspend - AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound. → see also [objective 6](../Usage/completing-the-objectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+**LineageOS** = 用於智慧手機等設備的自由和開源作業系統。（當使用 Accu-Chek Combo 時，請參見 Wiki - Combo pump）。 （當使用 Accu-Chek Combo 時，請參見 Wiki - Combo pump）。
 
-**LineageOS** free and open-source operating system for smartphones etc. (When using Accu-Chek Combo see [Wiki - Combo pump](../Configuration/Accu-Chek-Combo-Pump.md#accu-chek-combo-pump))
+**Log files** = **AAPS** 記錄用戶操作的日誌文件（有助於故障排除和調試）。更多資訊 → Wiki - 'log files'。 進一步資訊 → Wiki - 「log files」。
 
-**Log files** record of all AAPS actions (useful for troubleshooting and debugging) [Wiki - log files](../Usage/Accessing-logfiles.md#accessing-logfiles)
+**maxIOB** = 最大活性胰島素。這是一個安全功能，可防止 **AAPS** 提供超過用戶設定的胰島素量。更多資訊 → Wiki - 'SMB'。 這是一項安全功能，可防止 `**AAPS**` 提供超過用戶設定的胰島素量。 進一步資訊 → Wiki - 「SMB」。
 
-**maxIOB** safety feature - maximum total IOB AAPS can't go over [Wiki - SMB](../Installing-AndroidAPS/Releasenotes.md#settings-to-adjust-when-switching-from-ama-to-smb)
+**min_5m_carbimpact** = 一種安全功能，用於計算當無法根據用戶血液反應確定碳水化合物吸收時，預設的碳水化合物衰減。這是一個安全功能。更多資訊 → Wiki - 'config builder'。 這是一項安全功能。 進一步資訊 → Wiki - 「config builder」。
 
-**MiaoMiao** bluetooth transmitter to use Freestyle Libre as CGM [MiaoMiao](https://www.miaomiao.cool/) → see also **Blucon, Bubble**
+**Nightscout** = 一個開源項目，用於存取和報告 **CGM** 資料。是用戶的 **AAPS** 資料的中央資料中心，並可以生成報告以查看用戶的歷史 **Nightscout** 資料（預計 HbA1c、範圍內時間）或通過百分比圖表等搜尋數據模式。 這是用戶 `**AAPS**` 資料的中央資料中心，並可以生成報告以查看用戶的歷史 `**Nightscout**` 資料（預計 HbA1c、範圍內的時間）或通過百分比圖表等搜尋資料模式。
 
-**min_5m_carbimpact** safety feature - default carb decay at times when carb absorption can't be dynamically worked out based on your bloods reactions [Wiki - config builder](../Configuration/Config-Builder.md#absorption-settings)
+**Nightscout** → 另見 **Nightscout Reporter**。這對於跟蹤其孩子糖尿病管理的家長尤其有用。 這對於追蹤孩子糖尿病管理的家長特別有用。
 
-**Nightscout** open source project to access and report CGM data. It's the central data hub for all your diabetes data. AndroidAPS is storing there the data. It's available e.g. for parents follwing their childs diabetes management or reporting of the historically data to get the actual state of the diabetes control (expected HbA1c, time in range) or search for patterns in the data via percentil chart etc.. [Nightscout](https://nightscout.github.io/) → see also **Nightscout Reporter**
+**Nightscout Reporter Tool** = 一個工具，用於從 Nightscout 網頁應用程式數據生成 PDF 報告。請參見 'Nightscout Reporter', 'NS Reporter' @ Facebook。 請參見「Nightscout Reporter」、「NS Reporter」@ Facebook。
 
-**Nightscout Reporter** Tool from fellow looper to generate PDFs reports from Nightscout web app data e.g. for meetings with your diabetes team. [Nightscout Reporter](https://nightscout-reporter.zreptil.de), [NS Reporter @ Facebook](https://www.facebook.com/nightrep/) → see also **Nightscout**
+**NSClient**（或 **‘AAPSClient’**）= 請參見 **AAPSClient**。
 
-**NS Client** part of AAPS to connect to your Nightscout site [Wiki - NS Client](../Usage/Troubleshooting-NSClient.md#troubleshooting-nsclient)
+**OpenAPS** = 開放式人工胰臟系統。
 
-**Objectives** learning program within AAPS guiding you step by step from open to closed loop [Wiki - objectives](../Usage/completing-the-objectives.md)
+**AAPS** 運行在小型電腦（例如 Raspberry Pi）上，並使用了一些 OpenAPS 功能。OpenAPS 文檔。
 
-**OpenAPS** Open Artificial Pancreas System, APS run on small computers (i.e. Raspberry Pi), AAPS uses some of the OpenAPS features [OpenAPS docs](https://openaps.readthedocs.io)
+**Open Loop system** = **AAPS** 的一項功能，將建議調整，必須由用戶在 **AAPS** 上手動執行。更多資訊 → Wiki - 'config builder'。 進一步資訊 → Wiki - 「config builder」。
 
-**Open Loop** system will suggest recommended adjustments which have to be performed manually on the pump [Wiki - config builder](../Configuration/Config-Builder.md#loop) → see also **Closed Loop**
+**Oref0 / Oref1** = 敏感性檢測和 "參考設計實現版本 0/1"。它是 OpenAPS 的核心算法。Wiki - 敏感性檢測。 這是 OpenAPS 背後的關鍵演算法。Wiki - 敏感性檢測。
 
-**Oref0 / Oref1** sensitivity detection "reference design implementation version 0/1" - the key algorithm behind OpenAPS [Wiki - sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md#sensitivity-detection)
+`**Peak time**` = 胰島素發揮最大效果的時間。 進一步資訊 → Wiki - 「config builder」。
 
-**Peak time** time of maximum effect of insulin given [Wiki - config builder](../Configuration/Config-Builder.md#insulin)
+`**PH**` = 胰島素泵歷史記錄。 **PH** = 胰島素幫浦歷史記錄。這可以在 **AAPS** 的治療中訪問，位於 **AAPS** 主螢幕右側的三點選單中。截圖。
 
-**PH** Pump History - you access in the treatments which are located on the 3 dot menu on the right side of AndroidAPS main screen [Screenshots](../Getting-Started/Screenshots.md#treatment)
+**Predictions** = 基於不同計算方法對血糖的未來預測。更多資訊 → Wiki - 'prediction lines'。 進一步資訊 → Wiki - 「prediction lines」。
 
-**Predictions** predictions for BG in the future based on different calculations [Wiki - prediction lines](../Getting-Started/Screenshots.md#prediction-lines)
+**Profile** = 使用者的基本治療設定（基礎率、**DIA**、**IC**、**ISF**、**BG** 目標） **Profile** = 用戶的基本治療設定（基礎速率、**DIA**、**IC**、**ISF**、血糖目標）。AAPSv3 僅支援在 **AAPS** 中建立的本地個人資料，但 **Nightscout** 的個人資料可以同步到 **AAPS**。更多資訊 → Wiki - 'profile'。 進一步資訊 → Wiki- 「profile」。
 
-**Profile** basic treatment settings (basal rate, DIA, IC, ISF, BG target) AndroidAPS v3 only supports local profiles but Nightscout profiles can be copied (synchronized) to AndroidAPS [Wiki - profile](../Configuration/Config-Builder.md#profile)
+**Profile switch** = （臨時）將用戶的 **Profile** 切換到 **AAPS** 中儲存的另一個 **Profile**。
 
-**Profile switch** (temporary) change of profile used or percentual increase/decrease [Wiki - profile switch](../Usage/Profiles.md)
+**Profile Percentage** = 一個（臨時）百分比增加或減少應用於用戶的 **Profile**，適用於選定的時間段。
 
-**RES** status light overdue reservoir change on homescreen [Preferences](../Configuration/Preferences.md#overview), [Screenshots](../Getting-Started/Screenshots.md) → see also **BAT / CAN / SEN**
+**RES** = 在 **AAPS** 主螢幕上的狀態指示燈，表示胰島素庫更換逾期。**偏好設定**, 截圖 → 另見 **BAT** / **CAN** / **SEN**。
 
-**RileyLink** open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication [RileyLink](https://getrileylink.org/)
+**RileyLink** = 一種開源硬件設備，用於將藍牙低能耗（BLE）橋接到 916MHz（用於舊的美敦力幫浦）或 433MHz（用於 Omnipod Eros 幫浦）無線通信。RileyLink。
 
-**SAGE** sensor age - displayed on the homescreen of AndroidAPS and in Nightscout if information was entered in the actions tab / menu→ see also **Nightscout**
+**SAGE** = 感測器年齡。這顯示在 **AAPS** 的主螢幕上，如果在操作標籤 / 選單中輸入資訊，則也顯示在 **Nightscout** 上。→ 另見 **Nightscout**。 這會顯示在 **AAPS** 的主畫面以及 **Nightscout** 中，如果在 Actions 標籤/選單中輸入了資訊 → 另見 **Nightscout**。
 
-**SEN** status light sensor change on homescreen [Preferences](../Configuration/Preferences.md#overview), [Screenshots](../Getting-Started/Screenshots.md) → see also **BAT / CAN / RES**
+**SEN** = 主螢幕上的狀態指示燈，表示感測器更換。**偏好設定**, 截圖 → 另見 **BAT** / **CAN** / **RES**。
 
-**Sensivity detection** calculation of sensitivity to insulin as a result of exercise, hormones etc. [DIABETTECH - Autosens](https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
+**Sensivity detection** = 根據運動、荷爾蒙等因素計算胰島素敏感性。另見 → DIABETTECH - 'Autosens'。 另見 → DIABETTECH - 「Autosens」。
 
-**Sensor noise** unstable CGM readings leading to "jumping" values [Wiki - sensor noise](../Usage/Smoothing-Blood-Glucose-Data.md)
+**Sensor noise** = 用於描述不穩定的 **CGM** 讀數，導致血糖值“跳動”的術語。更多資訊 → Wiki - 'sensor noise'。 進一步資訊 → Wiki - 「sensor noise」。
 
-**SMB** Super Micro Bolus advanced feature for faster BG adjustment [Wiki - SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) → see also **UAM**
+**SMB** = 超微量注射。 **SMB** = 超微量胰島素注射。**AAPS** 的一項功能，用於更快地注射胰島素，以調整血糖。更多資訊 → Wiki - '**SMB**' 和另見 **UAM**。 進一步資訊 → Wiki - '**SMB**' 另見 **UAM**.
 
-**Super bolus** shift of basal to bolus insulin for faster BG adjustment [John Walsh - The Super Bolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus)
+**Super bolus** = 將基礎胰島素轉為注射胰島素，以更快地調整血糖。
 
-**TBB** total base basal (sum of basal rate within 24 hours) → see also **TBR / TDD**
+**TBB** = 總基礎胰島素（24小時內的基礎速率總和）→ 另見 **TBR** / **TDD**。
 
-**TBR** temporary basal rate→ see also **TBB / TDD**
+**TBR** = 臨時基礎速率→ 另見 **TBB** / **TDD**。
 
-**TDD** total daily dose (bolus + basal per day) → see also **TBB / TBR**
+**TDD** = 每日總劑量（每日的注射+基礎胰島素）→ 另見 **TBB** / **TBR**。
 
-**TT** temporary target temporary increase/decrease of BG target (range) e.g. for eating or sport activities [Wiki - temp targets](../Usage/temptarget.md#temp-targets)
+**TT** = 臨時目標。用戶血糖目標（範圍）的臨時增加/減少，例如用於進食或運動活動。更多資訊 → Wiki - 'temp targets'。 進一步資訊 → Wiki - 「temp targets」。
 
-**UAM** unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with [Wiki - UAM](../Usage/Open-APS-features.md#enable-uam) [Wiki - SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) → see also **SMB**
+**UAM** = 未報告的餐食。檢測由於餐食、腎上腺素或其他影響導致的血糖水平顯著增加，並嘗試調整此狀況。更多資訊 → Wiki - 'UAM' 和另見 **SMB**。 檢測因餐飲、腎上腺素或其他因素引起的 **血糖** 水平顯著上升並嘗試進行調整。 進一步資訊 → Wiki - 'UAM' 另見 **SMB**。
 
-**Virtual pump** option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping → see also **Open Loop**
+**Virtual pump** = **AAPS** 的一項功能，允許用戶嘗試 **AAPS** 的功能，或供使用沒有 **AAPS** 驅動程式的幫浦型號進行閉環使用的糖尿病患者使用。→ 另見 **Open Loop**。
 
-**Wallpaper** AndroidAPS background image [see phones page](../Getting-Started/Phones.md#phone-background)
+**Wallpaper** = **AAPS** 的背景圖像。參見手機頁面。
 
-**xDrip** / **xDrip+** open source software to read CGM systems [xDrip+](https://jamorham.github.io/#xdrip-plus), [xDrip](https://stephenblackwasalreadytaken.github.io/xDrip/) (archived)
+**xDrip+** = 用於讀取 **CGM** 系統的開源軟體。xDrip+。
 
-**Zero-temp** temporary basal rate with 0% (no basal insulin delivery)
+**Zero-temp** = 臨時基礎速率設為 0%（無基礎胰島素輸送）。
 
-→ see also [the OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html)
+→ 另見 [the OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html)

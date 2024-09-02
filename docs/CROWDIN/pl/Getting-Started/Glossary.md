@@ -1,137 +1,137 @@
 # Słowniczek pojęć
 
-**AAPS** AndroidAPS is the name of the Android app
+**AAPS** = AndroidAPS is the name of the Android app.
 
-**APS** Artificial Pancreas System
+**AAPSClient** (or **NSClient**) = a remote control feature that can be used by caregivers via a follower phone to follow a user’s **AAPS** by connecting to the user’s **Nightscout's** site. Further info → Wiki - 'NS Client'. Objectives learning program within **AAPS** provides step by step guidance. Further info → Wiki - 'objectives'.
 
-**AMA** Advanced Meal Assist - advanced algorithm to handle carbs [Wiki - AMA](../Usage/Open-APS-features.md#advanced-meal-assist-ama) → see also **SMB**
+**APS** = Artificial Pancreas System.
 
-**Android Auto** Android Auto is a system developed by Google LLC to use functions of an Android smartphone with the infotainment system in motor vehicles. Through Android Auto AndroidAPS can send messages to your compatible and configured infotainment system. [Wiki - android auto](../Usage/Android-auto.md), [Google Android Auto](https://www.android.com/intl/en_en/auto/)
+**AMA** = Advanced Meal Assist. An algorithm which allows **AAPS** to increase the user’s basal more aggressively after a meal bolus. Further info → Wiki - 'AMA'.
 
-**APK** Android application Package - software installation file [Wiki - Building APK](../Installing-AndroidAPS/building-AAPS.md)
+**Android Auto** = a system used to host certain functions of an Android smartphone’s features, including **AAPS**, within a car's display. Further info → Wiki - 'android auto'.
 
-**Autosens** calculation of sensitivity to insulin as a result of exercise, hormones etc. [DIABETTECH - Autosens](https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
+**APK** = Android application Package. A software installation file. Further info → Wiki - 'Building APK'.
 
-**Azure** cloud computing platform to host Nightscout web app [Azure](https://azure.microsoft.com/) → see also **Nightscout**
+**Autosens** = calculation of sensitivity to insulin between a period of a 24 and 8 hour window etc. Further info → DIABETTECH - **Autosens**.
 
-**BAT** status light low battery on home screen [Preferences](../Configuration/Preferences.md#overview), [Screenshots](../Getting-Started/Screenshots.md) → see also **CAN / RES / SEN**
+**Azure** = cloud computing platform to host **Nightscout** web app Azure → see also **Nightscout**.
 
-**BG** blood glucose
+**BAT** = status light low battery on **AAPS’** home screen **Preferences**, Screenshots → see also **CAN** / **RES** / **SEN**.
 
-**BGI** blood glucose impact - the degree to which BG 'should' be rising or falling based on insulin activity alone
+**BG** = blood glucose.
 
-**BG source** where your blood glucose values come from. They come from a CGM or FGM system which you wear through some kind of integration software like BYODA, xDrip+ etc. [Wiki - BG source](../Configuration/Config-Builder.md#bg-source) → see also **CGM / FGM**
+**BGI** = blood glucose impact. The degree to which **BG** 'should' rise or fall based on insulin activity alone.
 
-**Blucon** bluetooth transmitter to use Freestyle Libre as CGM - check compatibility! [Blucon](https://cgm.ambrosiasys.com/) → see also **MiaoMiao, Bubble**
+**BG source** = the source of the user’s **BG** values derived from either **CGM** or **FGM** through a system integration software like **BYODA**, **xDrip+** etc. Further info → Wiki - 'BG source'
 
-**Bubble** bluetooth transmitter to use Freestyle Libre as CGM [Bubble](https://www.bubblesmartreader.com/) → see also **Blucon, MiaoMiao**
+**Bridge** = an additional device transforming **FGM** to **CGM**.
 
-**Bridge (Libre)** The first versions of the Freestyle Libre are only able to communicate via NFC which means that the patient had to hold his mobile very near to the sensor. [LimiTTER](https://github.com/JoernL/LimiTTer) (archived) closed this gap, the first commercial bridge BlueReader was widely copied. Please check compatibility before buying a bridge device like Blucon / MiaoMiao / Bubble / Atom...
+**BR** = Basal Rate. The amount of insulin in a given time block to maintain **BG** at a stable level. → see also **IC** / **ISF**.
 
-**BR** Basal Rate. The amount of insulin in a given time block to maintain BG at a stable level.→ see also **IC / ISF**
+**BYODA** = Build Your Own Dexcom App. A way to generate the user’s own Dexcom App for reading out the sensor data Dexcom G6.
 
-**BYODA** Build Your Own Dexcom App - a special way to generate your own Dexcom App for reading out the sensor data [Dexcom G6](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)
+**CAGE** = Cannula AGE. Displayed on **AAPS’** homescreen and Nightscout providing the user’s information entered in the Actions tab / menu → see also **Nightscout**.
 
-**CAGE** Cannula AGE - displayed on the homescreen of AndroidAPS and in Nightscout if information was entered in the actions tab / menu → see also **Nightscout**
+**CAN** = status light overdue cannula change on the **AAPS’** homescreen **Preferences'** → see also **BAT** / **RES** / **SEN**.
 
-**CAN** status light overdue cannula change on homescreen [Preferences](../Configuration/Preferences.md#overview), [Screenshots](../Getting-Started/Screenshots.md) → see also **BAT / RES / SEN**
+**CGM** = Continuous Glucose Monitor → see also **FGM**.
 
-**CGM** Continuous Glucose Monitor → see also **FGM**
+**Closed Loop** = a closed loop system which makes automatic adjustments to the user’s basal delivery based on an **AAPS’s** algorithm and the user’s **Profile** settings without requiring the user’s-approval. Further info → Wiki - 'closed loop'.
 
-**Closed Loop** closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm [Wiki closed loop](../Configuration/Config-Builder.md#closed-loop) → see also **Open loop**
+**COB** = Carbs On Board. This is the amount of carbohydrates currently available for the user's digestion → see also IOB.
 
-**COB** Carbs On Board - Carbs on board is the amount of carbohydrates currently available for digestion. → see also **IOB**
+**CSF** =Carbs Sensitivity Factor. i.e. how much does the user’s **BG** increase for 1g of carbs absorbed.
 
-**DIA** Duration of Insulin Action [Wiki insulin types](../Configuration/Config-Builder.md#insulin), [DIABETTECH - DIA](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+**DIA** = Duration of Insulin Action. Further info → Wiki - 'insulin types' and see also → DIABETTECH - 'DIA'.
 
-**DST** Daylight Savings Time [Wiki DST](../Usage/Timezone-traveling.md#time-adjustment-daylight-savings-time-dst)
+**DST** = Daylight Savings Time Wiki DST.
 
-**eCarbs** extended Carbs - carbs split up over serveral hours (i.e. lot of fat/protein) extended boluses you might know from regular pump therapy do not make much sense when looping [Wiki - eCarbs](../Usage/Extended-Carbs.md#extended-carbs-ecarbs), [eCarbs use case](https://adriansloop.blogspot.com/2018/04/page-margin-0.html) → see also **SMB**
+**eCarbs** = extended Carbs. Carbs split up over several hours to accommodate/protein and permits **AAPS** to deliver extended boluses. Further info → Wiki - 'eCarbs', 'eCarbs use'.
 
-**FGM** Flash Glucose Monitor (Freestyle Libre) [Wiki - BG source](../Configuration/BG-Source.md) → see also **CGM**
+**FGM** = Flash Glucose Monitor manufactured by Freestyle Libre. Further info → Wiki - 'BG source' and see also 'CGM'.
 
-**git** git in our context here is the tool to mainly download the AndroidAPS sources from GitHub for the build process. It's version-control system for tracking changes in computer files and coordinating work on those files especially for teams. -> necessary for APK updates [Wiki- update APK](../Installing-AndroidAPS/Update-to-new-version.md)
+**git** = a tool used store and download the **AAPS’** source code.
 
-**GitHub** web-based hosting service for version control using Git -> storage of source code [GitHub AndroidAPS](https://github.com/nightscout/AndroidAPS)
+**GitHub** = a web-based hosting service and build process for the **AAPS’** software version-control system for tracking changes in computer files and coordinating work on those files especially for teams. It is also necessary for **APK** updates. Further info → Wiki - 'update APK'.
 
-**Glimp** app to collect values from Freestyle Libre [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia)
+**Glimp** = an app to collect values from Freestyle Libre Glimp.
 
-**Heroku** cloud computing platform to host Nightscout web app [Heroku](https://www.heroku.com) → see also **Nightscout **
+**IC (or I:C)** = Insulin to Carb ratio. (i.e. how many carbs are covered by one unit of insulin?).
 
-**IC (or I:C)** Insulin to Carb ratio (How many carbs are covered by one unit of insulin?)
+**IOB** = Insulin On Board. Insulin active in the user’s body.
 
-**IOB** Insulin On Board - insulin active in your body
+**ISF** = Insulin Sensitivity Factor. The expected decrease in BG as a result of one unit of insulin.
 
-**ISF** Insulin Sensitivity Factor - the expected decrease in BG as a result of one unit of insulin
+**LGS** = Low Glucose Suspend. **AAPS** will reduce basal if **BG** is dropping and if **BG** is rising, then it will only increase basal if **IOB** is negative (from a previous **LGS**), otherwise basal rates will remain the same as the user’s selected **Profile**. The user may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound. → see also objective 6.
 
-**LGS** Low Glucose Suspend - AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound. → see also [objective 6](../Usage/completing-the-objectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+**LineageOS** = free and open-source operating system for smartphones etc. (When using Accu-Chek Combo see Wiki - Combo pump).
 
-**LineageOS** free and open-source operating system for smartphones etc. (When using Accu-Chek Combo see [Wiki - Combo pump](../Configuration/Accu-Chek-Combo-Pump.md#accu-chek-combo-pump))
+**Log files** = **AAPS’** records of the user's actions (useful for troubleshooting and debugging). Further info → Wiki - 'log files'.
 
-**Log files** record of all AAPS actions (useful for troubleshooting and debugging) [Wiki - log files](../Usage/Accessing-logfiles.md#accessing-logfiles)
+**maxIOB** = maximum total IOB. This is a safety feature and prevents **AAPS** delivering insulin over the user’s settings. Further info → Wiki - 'SMB'.
 
-**maxIOB** safety feature - maximum total IOB AAPS can't go over [Wiki - SMB](../Installing-AndroidAPS/Releasenotes.md#settings-to-adjust-when-switching-from-ama-to-smb)
+**min_5m_carbimpact** = safety feature that is a calculation of default carb decay when carb absorption cannot be determined based on the user’s blood’s reactions. This is a safety feature. Further info → Wiki - 'config builder'.
 
-**MiaoMiao** bluetooth transmitter to use Freestyle Libre as CGM [MiaoMiao](https://www.miaomiao.cool/) → see also **Blucon, Bubble**
+**Nightscout** = open source project to access and report **CGM** data. The central data hub for the user’ **AAPS** data and can generate reports to view the user’s historical **NIghtscout** data expected HbA1c, time in range) or search for patterns in the data via percentile chart etc.
 
-**min_5m_carbimpact** safety feature - default carb decay at times when carb absorption can't be dynamically worked out based on your bloods reactions [Wiki - config builder](../Configuration/Config-Builder.md#absorption-settings)
+**Nightscout** → see also **Nightscout Reporter**. This is particularly useful for parents following their child's diabetes management.
 
-**Nightscout** open source project to access and report CGM data. It's the central data hub for all your diabetes data. AndroidAPS is storing there the data. It's available e.g. for parents follwing their childs diabetes management or reporting of the historically data to get the actual state of the diabetes control (expected HbA1c, time in range) or search for patterns in the data via percentil chart etc.. [Nightscout](https://nightscout.github.io/) → see also **Nightscout Reporter**
+**Nightscout Reporter Tool** = a tool which generates PDFs reports from Nightscout web app data. See 'Nightscout Reporter', 'NS Reporter' @ Facebook.
 
-**Nightscout Reporter** Tool from fellow looper to generate PDFs reports from Nightscout web app data e.g. for meetings with your diabetes team. [Nightscout Reporter](https://nightscout-reporter.zreptil.de), [NS Reporter @ Facebook](https://www.facebook.com/nightrep/) → see also **Nightscout**
+**NSClient** ( or **‘AAPSClient’)** = see **AAPSClient**.
 
-**NS Client** part of AAPS to connect to your Nightscout site [Wiki - NS Client](../Usage/Troubleshooting-NSClient.md#troubleshooting-nsclient)
+**OpenAPS** = Open Artificial Pancreas System.
 
-**Objectives** learning program within AAPS guiding you step by step from open to closed loop [Wiki - objectives](../Usage/completing-the-objectives.md)
+**AAPS** operating on small computers (i.e. Raspberry Pi).and uses some of the OpenAPS features OpenAPS docs.
 
-**OpenAPS** Open Artificial Pancreas System, APS run on small computers (i.e. Raspberry Pi), AAPS uses some of the OpenAPS features [OpenAPS docs](https://openaps.readthedocs.io)
+**Open Loop system** = an **AAPS** feature that will recommend adjustments and which must be performed manually by the user on **AAPS**. Further info → Wiki - 'config builder'.
 
-**Open Loop** system will suggest recommended adjustments which have to be performed manually on the pump [Wiki - config builder](../Configuration/Config-Builder.md#loop) → see also **Closed Loop**
+**Oref0 / Oref1** = sensitivity detection and "reference design implementation version 0/1". It is the key algorithm behind OpenAPS Wiki - sensitivity detection.
 
-**Oref0 / Oref1** sensitivity detection "reference design implementation version 0/1" - the key algorithm behind OpenAPS [Wiki - sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md#sensitivity-detection)
+**Peak time** = time of maximum effect of insulin given. Further info → Wiki - 'config builder'.
 
-**Peak time** time of maximum effect of insulin given [Wiki - config builder](../Configuration/Config-Builder.md#insulin)
+**PH** = Pump History. This can be accessed in **AAPS’** treatments which are located on the 3 dot menu on the right side of **AAPS** main screen Screenshots.
 
-**PH** Pump History - you access in the treatments which are located on the 3 dot menu on the right side of AndroidAPS main screen [Screenshots](../Getting-Started/Screenshots.md#treatment)
+**Predictions** = predictions for **BG** in the future based on different calculations. Further info → Wiki - 'prediction lines'.
 
-**Predictions** predictions for BG in the future based on different calculations [Wiki - prediction lines](../Getting-Started/Screenshots.md#prediction-lines)
+**Profile** = the user’s basic treatment settings (basal rate, **DIA**, **IC**, **ISF**, **BG** target). AAPSv3 only supports local profiles created within **AAPS** but **Nightscout** **Profiles** can be copied (synchronised) to **AAPS**. Further info → Wiki - 'profile'.
 
-**Profile** basic treatment settings (basal rate, DIA, IC, ISF, BG target) AndroidAPS v3 only supports local profiles but Nightscout profiles can be copied (synchronized) to AndroidAPS [Wiki - profile](../Configuration/Config-Builder.md#profile)
+**Profile switch** = (temporary) switch of the user’ **Profile** to a different **Profile** saved within **AAPS**.
 
-**Profile switch** (temporary) change of profile used or percentual increase/decrease [Wiki - profile switch](../Usage/Profiles.md)
+**Profile Percentage** = a (temporary_ percentage increase or decrease applied to a user’s **Profile** for a selected time period.
 
-**RES** status light overdue reservoir change on homescreen [Preferences](../Configuration/Preferences.md#overview), [Screenshots](../Getting-Started/Screenshots.md) → see also **BAT / CAN / SEN**
+**RES** = status light overdue reservoir change on the **AAPS’** homescreen Preferences, Screenshots → see also **BAT** / **CAN** / **SEN**.
 
-**RileyLink** open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication [RileyLink](https://getrileylink.org/)
+**RileyLink** = open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication RileyLink.
 
-**SAGE** sensor age - displayed on the homescreen of AndroidAPS and in Nightscout if information was entered in the actions tab / menu→ see also **Nightscout**
+**SAGE** = sensor age. This is displayed on the homescreen of **AAPS** and in **Nightscout** if information was entered in the Actions tab / menu → see also **Nightscout**.
 
-**SEN** status light sensor change on homescreen [Preferences](../Configuration/Preferences.md#overview), [Screenshots](../Getting-Started/Screenshots.md) → see also **BAT / CAN / RES**
+**SEN** = status light sensor change on home screen Preferences, Screenshots → see also **BAT** / **CAN** / **RES**.
 
-**Sensivity detection** calculation of sensitivity to insulin as a result of exercise, hormones etc. [DIABETTECH - Autosens](https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
+**Sensivity detection** = calculation of sensitivity to insulin as a result of exercise, hormones etc. see also → DIABETTECH - 'Autosens'.
 
-**Sensor noise** unstable CGM readings leading to "jumping" values [Wiki - sensor noise](../Usage/Smoothing-Blood-Glucose-Data.md)
+**Sensor noise** = a term used to describe the unstable **CGM’s** readings leading to "jumping" **BG** values. Further info → Wiki - 'sensor noise'.
 
-**SMB** Super Micro Bolus advanced feature for faster BG adjustment [Wiki - SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) → see also **UAM**
+**SMB** = Super Micro Bolus. An **AAPS** feature for faster insulin delivery in order to adjust **BG**. Further info → Wiki - '**SMB**' and see also **UAM**.
 
-**Super bolus** shift of basal to bolus insulin for faster BG adjustment [John Walsh - The Super Bolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus)
+**Super bolus** = shift of basal to bolus insulin for faster **BG** adjustment.
 
-**TBB** total base basal (sum of basal rate within 24 hours) → see also **TBR / TDD**
+**TBB** = total base basal (sum of basal rate within 24 hours) → see also **TBR** / **TDD**.
 
-**TBR** temporary basal rate→ see also **TBB / TDD**
+**TBR** = temporary basal rate→ see also **TBB** / **TDD**.
 
-**TDD** total daily dose (bolus + basal per day) → see also **TBB / TBR**
+**TDD** = total daily dose (bolus + basal per day) → see also **TBB** / **TBR**.
 
-**TT** temporary target temporary increase/decrease of BG target (range) e.g. for eating or sport activities [Wiki - temp targets](../Usage/temptarget.md#temp-targets)
+**TT** = temporary target temporary increase/decrease of the user’s **BG** target (range) e.g. for eating or sport activities. Further info → Wiki - 'temp targets'.
 
-**UAM** unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with [Wiki - UAM](../Usage/Open-APS-features.md#enable-uam) [Wiki - SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) → see also **SMB**
+**UAM** = unannounced meals. Detection of significant increase in **BG** levels due to meals, adrenaline or other influences and attempt to adjust this. Further info → Wiki - 'UAM' and see also **SMB**.
 
-**Virtual pump** option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping → see also **Open Loop**
+**Virtual pump** = an **AAPS** feature which allows the user to try **AAPS’** functions or for PWD using a pump model with no **AAPS** driver for looping → see also **Open Loop**.
 
-**Wallpaper** AndroidAPS background image [see phones page](../Getting-Started/Phones.md#phone-background)
+**Wallpaper** = **AAPS** background image see phones page.
 
-**xDrip** / **xDrip+** open source software to read CGM systems [xDrip+](https://jamorham.github.io/#xdrip-plus), [xDrip](https://stephenblackwasalreadytaken.github.io/xDrip/) (archived)
+**xDrip+** = open source software to read **CGM** systems xDrip+.
 
-**Zero-temp** temporary basal rate with 0% (no basal insulin delivery)
+**Zero-temp** = temporary basal rate with 0% (no basal insulin delivery).
 
 → see also [the OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html)
