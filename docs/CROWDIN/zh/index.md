@@ -1,4 +1,4 @@
-# 欢迎使用 AAPS 说明文档
+# Welcome to the AAPS documentation
 
 ![image](./images/basic-outline-of-AAPS.png)
 
