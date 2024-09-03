@@ -8,11 +8,11 @@
 
 **AMA** = 進階餐食輔助。這是一個演算法，使 **AAPS** 能在餐後更加積極地增加用戶的基礎胰島素輸注。更多資訊 → Wiki - 'AMA'。 一種演算法，允許 **AAPS** 在餐後注射胰島素後更積極地增加用戶的基礎胰島素。 進一步資訊 → Wiki - 「AMA」。
 
-**Android Auto** = 一個系統，用於在車輛顯示螢幕中託管 Android 智慧手機的某些功能，包括 **AAPS**。更多資訊 → Wiki - 'android auto'。 進一步資訊 → Wiki - 「android auto」。
+**Android Auto** = 一個系統，用於在車輛顯示螢幕中託管 Android 智慧手機的某些功能，包括 **AAPS**。 進一步資訊 → Wiki - 「android auto」。
 
 **APK** = Android 應用程式包。是一個軟體安裝文件。更多資訊 → Wiki - 'Building APK'。 一個軟體安裝檔案。 進一步資訊 → Wiki - 「Building APK」。
 
-**Autosens** = 在24小時和8小時的時間範圍內計算胰島素敏感性的變化。更多資訊 → DIABETTECH - **Autosens**。 進一步資訊 → DIABETTECH - **Autosens**。
+**Autosens** = 在24小時和8小時的時間範圍內計算胰島素敏感性的變化。 進一步資訊 → DIABETTECH - **Autosens**。
 
 **Azure** = 雲端計算平台，用於託管 **Nightscout** 網頁應用程式。Azure → 另見 **Nightscout**。
 
@@ -38,7 +38,7 @@
 
 **Closed Loop** = 一種閉環系統，根據 **AAPS** 的演算法和用戶的 **Profile** 設定，自動調整用戶的基礎胰島素輸送，無需用戶批准。更多資訊 → Wiki - 'closed loop'。 進一步資訊 → Wiki - 「closed loop」。
 
-**COB** = 活性碳水化合物。這是目前用戶消化過程中的碳水化合物量 → 另見 IOB。 這是目前可供用戶消化的碳水化合物量 → 另見 IOB。
+**COB** = 活性碳水化合物。 這是目前可供用戶消化的碳水化合物量 → 另見 IOB。
 
 **CSF** = 碳水化合物敏感性因子，即用戶的血糖因吸收 1 克碳水化合物而上升的程度。 即用戶的 **血糖** 因吸收 1 克碳水化合物而上升的程度。
 
@@ -130,7 +130,7 @@
 
 **Wallpaper** = **AAPS** 的背景圖像。參見手機頁面。
 
-**xDrip+** = 用於讀取 **CGM** 系統的開源軟體。xDrip+。
+**xDrip+** = 用於讀取 **CGM** 系統的開放原始碼軟體。xDrip+。
 
 **Zero-temp** = 臨時基礎速率設為 0%（無基礎胰島素輸送）。
 
