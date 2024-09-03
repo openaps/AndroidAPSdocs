@@ -108,8 +108,8 @@ Commands must be sent in English, the response will be in your local language if
 
   - Response depends on actual status
 
-    - 闭环被禁用
-    - 闭环被启用
+    - Loop is disabled
+    - Loop is enabled
     - Suspended (10 min)
 
 - LOOP SUSPEND 20 \* Response: Loop suspended for 20 minutes
@@ -125,7 +125,7 @@ Commands must be sent in English, the response will be in your local language if
 - BG \* Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 - CAL 5.6 \* Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN \* Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
 
-### 基础率
+### Basal
 
 - BASAL STOP/CANCEL \* Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
 - BASAL 0.3 \* Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
@@ -133,7 +133,7 @@ Commands must be sent in English, the response will be in your local language if
 - BASAL 30% \* Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
 - BASAL 30% 50 \* Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
 
-### 大剂量
+### Bolus
 
 Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
 
@@ -153,7 +153,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 
 (SMS-Commands-other)=
 
-### 其他
+### Other
 
 - TREATMENTS REFRESH \* Response: Refresh treatments from NS
 - NSClient RESTART \* Response: NSCLIENT RESTART SENT
