@@ -102,7 +102,7 @@
 
 **RES** = 在 **AAPS** 主螢幕上的狀態指示燈，表示胰島素庫更換逾期。**偏好設定**, 截圖 → 另見 **BAT** / **CAN** / <0>SEN</0>。
 
-**RileyLink** = 一種開放原始碼硬件設備，用於將藍牙低能耗（BLE）橋接到 916MHz（用於舊的美敦力幫浦）或 433MHz（用於 Omnipod Eros 幫浦）無線通信。RileyLink。
+**RileyLink** = 一種開放原始碼硬體設備，用於將藍牙低功耗（BLE）橋接到 916MHz（用於舊的美敦力幫浦）或 433MHz（用於 Omnipod Eros 幫浦）無線通信。RileyLink。
 
 **SAGE** = 傳感器時間。 這會顯示在 **AAPS** 的主畫面以及 **Nightscout** 中，如果在 Actions 標籤/選單中輸入了資訊 → 另見 **Nightscout**。
 
