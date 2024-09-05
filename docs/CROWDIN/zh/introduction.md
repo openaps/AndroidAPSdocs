@@ -57,7 +57,7 @@ The OpenAPS algorithm used by **AAPS** controls blood sugar levels in the absenc
 ### **Specific advantages include:**
 
 #### 1) Safety built-in
-To read about the safety features of the algorithms, known as oref0 and oref1, [click here](https://openaps.org/reference-design/). The user is in control of their own safety constraints.
+如需了解被称为 oref0 和 oref1 的算法的安全特性，[请点击此处](https://openaps.org/reference-design/)。 用户可控制自己的安全限制。
 
 #### 1) **Hardware flexibility**
 
@@ -139,7 +139,7 @@ The features of the different systems are shown in the table below:
 | PUMP        | [Medtrum TouchCare 300U](../Configuration/MedtrumNano.md)     | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
 | PUMP        | [Roche Combo](../Configuration/Accu-Chek-Combo-Pump.md)       | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
 | PUMP        | [Roche Insight](../Configuration/Accu-Chek-Insight-Pump.md)   | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)    | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| PUMP        | [Older Medtronic](../Configuration/MedtronicPump.md)          | ![available](./images/available.png)     | ![available](./images/available.png)        | ![available](./images/available.png)                  | ![available](./images/available.png)           |
+| PUMP        | [老版美敦力（Medtronic）](../Configuration/MedtronicPump.md)         | ![available](./images/available.png)     | ![available](./images/available.png)        | ![available](./images/available.png)                  | ![available](./images/available.png)           |
 | CGM         | [Dexcom G7](../Hardware/DexcomG7.md)                          | ![available](./images/available.png)     | ![available](./images/available.png)        | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
 | CGM         | [Dexcom One](../Hardware/DexcomG6.md)                         | ![available](./images/available.png)     | ![available](./images/available.png)        | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
 | CGM         | [Dexcom G6](../Hardware/DexcomG6.md)                          | ![available](./images/available.png)     | ![available](./images/available.png)        | ![available](./images/available.png)                  | ![available](./images/available.png)           |
