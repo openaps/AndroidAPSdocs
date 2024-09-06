@@ -10,7 +10,7 @@ Voir la [page FAQ](../Getting-Started/FAQ.md) pour plus de détails.
 
 ## Prérequis matériels et logiciels pour la compilation de AAPS
 
-- Veuillez utiliser la **[version Android Studio nommée "Hedgehog"(2023.1.1) ou "Iguana"(2023.2.1)](https://developer.android.com/studio/)** pour construire l'apk. Les versions plus anciennes d'Android Studio doivent d'abord être mises à jour !
+- Please use the **[Android Studio version called at least Hedgehog (2023.1.1) or one more recent like Iguana, Jellyfish, and Koala](https://developer.android.com/studio/)** to build the apk. Les versions plus anciennes d'Android Studio doivent d'abord être mises à jour !
 - Les systèmes [Windows 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) ne sont pas pris en charge par Android Studio. Veuillez garder à l'esprit qu'à la fois **le processeur (CPU 64 bits) et le système d'exploitation 64 bits sont des conditions obligatoires**. Si votre système NE satisfait PAS à cette condition, vous devez changer le matériel ou le système d'exploitation qui pose problème, ou tout le système.
 
 <table class="tg">
@@ -88,7 +88,7 @@ Veuillez noter qu'**Android Studio** n'est pas disponible en français, toutes l
 :::{admonition} A quoi sert Git ?
 
 Git est un "_Système de Contrôle de Version_".
-C'est un logiciel qui permet de suivre les changements dans le code source et de collaborer avec d'autres personnes. Vous utiliserez Git pour faire une copie du code source **AAPS** depuis le site web Github sur votre ordinateur local. Ensuite, vous utiliserez Git sur votre ordinateur pour compiler l'application **AAPS** (apk).
+C'est un logiciel qui permet de suivre les changements dans le code source et de collaborer avec d'autres personnes. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Ensuite, vous utiliserez Git sur votre ordinateur pour compiler l'application **AAPS** (apk).
 :::
 
 #### Étapes pour l'installation de Git
@@ -122,7 +122,7 @@ C'est un logiciel qui permet de suivre les changements dans le code source et de
 Android Studio est un logiciel qui s'exécute sur votre ordinateur. Il vous permet de télécharger le code source depuis internet (en utilisant Git) et de compiler des applications pour smartphone (et montre connectée). Si vous avez déjà une version d'**AAPS**, utilisée pour boucler, en cours d'exécution sur un smartphone, vous ne pouvez pas la "casser" en compilant une nouvelle application ou une mise à jour sur votre PC avec Android Studio, ce sont des processus totalement séparés.
 :::
 
-Les captures d'écran suivantes ont été prises à partir de la version **Hedgehog** d'Android Studio.
+The following screenshots have been taken from Android Studio Version **Hedgehog**, they should be identical with more recent versions.
 
 Une des choses les plus importantes lors de l'installation d'Android Studio : **Soyez patient(e)** ! Lors du processus d'installation et de configuration, Android Studio télécharge beaucoup de choses, ce qui prendra du temps.
 

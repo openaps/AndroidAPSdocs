@@ -2,15 +2,15 @@
 
 **AAPS** = AndroidAPS 是 Android 應用程式的名稱。
 
-**AAPSClient**（或 **NSClient**）= 一個遠端控制功能，可供照護者透過手機來追蹤用戶的 **AAPS**，藉由連接到用戶的 **Nightscout** 網站來實現。更多資訊 → Wiki - 'NS Client'。在 **AAPS</0> 內的學習目標程式提供逐步指導。更多資訊 → Wiki - 'objectives'。 進一步資訊 → Wiki - 「NS Client」。 在 **AAPS** 中的目標學習程式提供逐步指導。 進一步資訊 → Wiki - 「objectives」。</p> 
+**AAPSClient**（或 **NSClient**）= 一個遠端控制功能，可供照護者透過手機來追蹤用戶的 **AAPS**，藉由連接到用戶的 **Nightscout** 網站來實現。 進一步資訊 → Wiki - 「NS Client」。 在 **AAPS** 中的目標學習程式提供逐步指導。 進一步資訊 → Wiki - 「objectives」。
 
 **APS** = 人工胰臟系統。
 
-**AMA** = 進階餐食輔助。這是一個演算法，使 **AAPS** 能在餐後更加積極地增加用戶的基礎胰島素輸注。更多資訊 → Wiki - 'AMA'。 一種演算法，允許 **AAPS** 在餐後注射胰島素後更積極地增加用戶的基礎胰島素。 進一步資訊 → Wiki - 「AMA」。
+**AMA** = 進階餐食輔助。 一種演算法，允許 **AAPS** 在餐後注射胰島素後更積極地增加用戶的基礎胰島素。 進一步資訊 → Wiki - 「AMA」。
 
 **Android Auto** = 一個系統，用於在車輛顯示螢幕中託管 Android 智慧手機的某些功能，包括 **AAPS**。 進一步資訊 → Wiki - 「android auto」。
 
-**APK** = Android 應用程式包。是一個軟體安裝文件。更多資訊 → Wiki - 'Building APK'。 一個軟體安裝檔案。 進一步資訊 → Wiki - 「Building APK」。
+**APK** = Android 應用程式包。是一個軟體安裝文件。 一個軟體安裝檔案。 進一步資訊 → Wiki - 「Building APK」。
 
 **Autosens** = 在24小時和8小時的時間範圍內計算胰島素敏感性的變化。 進一步資訊 → DIABETTECH - **Autosens**。
 
@@ -20,9 +20,9 @@
 
 **BG** = 血糖。
 
-**BGI** = 血糖影響。指根據胰島素活動，血糖“應該”上升或下降的程度。 根據胰島素活動，**血糖** 理應上升或下降的程度。
+**BGI** = 血糖影響。 根據胰島素活動，**血糖** 理應上升或下降的程度。
 
-**BG source** = 用戶的血糖數值來源，從 **CGM** 或 **FGM** 通過系統整合軟體（如 **BYODA**、**xDrip+** 等）獲取。更多資訊 → Wiki - 'BG source' 進一步資訊 → Wiki - 「BG source」。
+**BG source** = 用戶的血糖數值來源，從 **CGM** 或 **FGM** 通過系統整合軟體（如 **BYODA**、**xDrip+** 等）獲取。 進一步資訊 → Wiki - 「BG source」。
 
 **Bridge** = 一種將 **FGM** 轉換為 **CGM** 的附加設備。
 
@@ -30,23 +30,23 @@
 
 **BYODA** = 自製 Dexcom 應用程式。一種用戶自行生成 Dexcom 應用程式以讀取 Dexcom G6 感測器資料的方法。
 
-**CAGE** = 導管使用時間。 **CAGE** = 導管使用年限。顯示在 **AAPS** 主螢幕和 Nightscout 上，提供用戶在動作標籤 / 選單中輸入的資訊 → 另見 **Nightscout**。
+**CAGE** = 導管使用時間。 **CAGE** = 導管使用年限。顯示在 **AAPS** 主螢幕和 Nightscout 上，提供用戶在動作標籤 / 選單中輸入的資訊 → 另見 **Nightscout</0>。</p> 
 
 **CAN** = 在 **AAPS** 主螢幕上的狀態指示燈，表示導管更換逾期。**偏好設定** → 另見 **BAT** / **RES** / **SEN**。
 
 **CGM** = 連續血糖監測儀 → 另見 **FGM**。
 
-**Closed Loop** = 一種閉環系統，根據 **AAPS** 的演算法和用戶的 **Profile** 設定，自動調整用戶的基礎胰島素輸送，無需用戶批准。更多資訊 → Wiki - 'closed loop'。 進一步資訊 → Wiki - 「closed loop」。
+**Closed Loop** = 一種閉環系統，根據 **AAPS** 的演算法和用戶的 **Profile** 設定，自動調整用戶的基礎胰島素輸送，無需用戶批准。 進一步資訊 → Wiki - 「closed loop」。
 
 **COB** = 活性碳水化合物。 這是目前可供用戶消化的碳水化合物量 → 另見 IOB。
 
-**CSF** = 碳水化合物敏感性因子，即用戶的血糖因吸收 1 克碳水化合物而上升的程度。 即用戶的 **血糖** 因吸收 1 克碳水化合物而上升的程度。
+**CSF** = 碳水化合物敏感性因子。 即用戶的 **血糖** 因吸收 1 克碳水化合物而上升的程度。
 
-**DIA** = 胰島素作用時間。更多資訊 → Wiki - 'insulin types' 和另見 → DIABETTECH - 'DIA'。 進一步資訊 → Wiki - 「insulin types」及另見 → DIABETTECH - 「DIA」。
+**DIA** = 胰島素作用時間。 進一步資訊 → Wiki - 「insulin types」及另見 → DIABETTECH - 「DIA」。
 
 **DST** = 日光節約時間 Wiki DST。
 
-**eCarbs** = 延長碳水化合物。將碳水化合物分散在數小時內以適應/蛋白質，並允許 **AAPS** 提供延長的胰島素注射。更多資訊 → Wiki - 'eCarbs', 'eCarbs use'。 碳水化合物分散在數小時內以適應蛋白質，並允許 **AAPS** 提供延長的胰島素注射。 進一步資訊 → Wiki - 「eCarbs」、「eCarbs use」。
+**eCarbs** = 延長碳水化合物。 碳水化合物分散在數小時內以適應蛋白質，並允許 **AAPS** 提供延長的胰島素注射。 進一步資訊 → Wiki - 「eCarbs」、「eCarbs use」。
 
 **FGM** = 由 Freestyle Libre 製造的即時血糖監測儀。 進一步資訊 → Wiki - 「BG source」，另見「CGM」。
 
@@ -60,7 +60,7 @@
 
 **IOB** = 活性胰島素。 在用戶體內仍然活躍的胰島素。
 
-**ISF** = 胰島素敏感性因子。用戶每單位胰島素預計會使血糖降低的程度。 注射一單位胰島素，預計血糖會下降的幅度。
+**ISF** = 胰島素敏感性因子。 注射一單位胰島素，預計血糖會下降的幅度。
 
 **LGS** = 低血糖暫停功能。 `**AAPS**` 會在 `**血糖**` 下降時減少基礎胰島素，若 `**血糖**` 上升，則只有在 `**IOB**` 為負值（來自之前的 `**LGS**`）時才會增加基礎胰島素，否則基礎速率將保持與用戶選擇的 `**Profile**` 相同。 用戶在處理低血糖後可能會暫時經歷血糖飆升，但無法在反彈期間增加基礎胰島素。 → 另見objective 6。
 
@@ -100,11 +100,11 @@
 
 **Profile Percentage** = 一個（臨時）百分比增加或減少應用於用戶的 **Profile**，適用於選定的時間段。
 
-**RES** = 在 **AAPS** 主螢幕上的狀態指示燈，表示胰島素庫更換逾期。**偏好設定**, 截圖 → 另見 **BAT** / **CAN** / **SEN</0>。</p> 
+**RES** = 在 **AAPS** 主螢幕上的狀態指示燈，表示胰島素庫更換逾期。**偏好設定**, 截圖 → 另見 **BAT** / **CAN** / <0>SEN</0>。
 
-**RileyLink** = 一種開放原始碼硬件設備，用於將藍牙低能耗（BLE）橋接到 916MHz（用於舊的美敦力幫浦）或 433MHz（用於 Omnipod Eros 幫浦）無線通信。RileyLink。
+**RileyLink** = 一種開放原始碼硬體設備，用於將藍牙低功耗（BLE）橋接到 916MHz（用於舊的美敦力幫浦）或 433MHz（用於 Omnipod Eros 幫浦）無線通信。RileyLink。
 
-**SAGE** = 感測器年齡。 這會顯示在 **AAPS** 的主畫面以及 **Nightscout** 中，如果在 Actions 標籤/選單中輸入了資訊 → 另見 **Nightscout**。
+**SAGE** = 傳感器時間。 這會顯示在 **AAPS** 的主畫面以及 **Nightscout** 中，如果在 Actions 標籤/選單中輸入了資訊 → 另見 **Nightscout**。
 
 **SEN** = 主螢幕上的狀態指示燈，表示感測器更換。**偏好設定**, 截圖 → 另見 **BAT** / **CAN** / <0>RES</0>。
 
@@ -112,26 +112,26 @@
 
 **Sensor noise** = 用於描述不穩定的 **CGM** 量測結果，導致血糖值“跳動”的術語。 進一步資訊 → Wiki - 「sensor noise」。
 
-**SMB** = 超微量注射。 **AAPS** 的一項功能，用於更快地注射胰島素，以調整血糖。 進一步資訊 → Wiki - '**SMB**' 另見 **UAM**.
+**SMB** = 超微量注射(Super Micro Bolus)。 **AAPS** 的一項功能，用於更快地注射胰島素，以調整血糖。 進一步資訊 → Wiki - '**SMB**' 另見 **UAM**.
 
 **Super bolus** = 將基礎胰島素轉為注射胰島素，以更快地調整血糖。
 
-**TBB** = 總基礎胰島素（24小時內的基礎速率總和）→ 另見 **TBR** / **TDD**。
+**TBB** = 總基礎胰島素(total base basal)（24小時內的基礎速率總和）→ 另見 **TBR** / **TDD**。
 
-**TBR** = 臨時基礎速率→ 另見 **TBB** / **TDD**。
+**TBR** = 臨時基礎速率(temporary basal rate)→ 另見 **TBB** / **TDD**。
 
-**TDD** = 每日總劑量（每日的注射+基礎胰島素）→ 另見 **TBB** / **TBR**。
+**TDD** = 每日總劑量 (total daily dose)（每日的注射+基礎胰島素）→ 另見 **TBB** / **TBR**。
 
-**TT** = 臨時目標。用戶血糖目標（範圍）的臨時增加/減少，例如用於用餐或運動活動。 進一步資訊 → Wiki - 「temp targets」。
+**TT** = 臨時目標(temporary target)。用戶血糖目標（範圍）的臨時增加/減少，例如用於用餐或運動活動。 進一步資訊 → Wiki - 「temp targets」。
 
-**UAM** = 未事先報備的用餐。 檢測因餐飲、腎上腺素或其他因素引起的 **血糖** 水平顯著上升並嘗試進行調整。 進一步資訊 → Wiki - 'UAM' 另見 **SMB**。
+**UAM** = 未事先報備的用餐(unannounced meals)。 檢測因餐飲、腎上腺素或其他因素引起的 **血糖** 水平顯著上升並嘗試進行調整。 進一步資訊 → Wiki - 'UAM' 另見 **SMB**。
 
-**虛擬幫浦** = **AAPS** 的一項功能，允許用戶嘗試 **AAPS** 的功能，或供使用沒有 **AAPS** 驅動程式的幫浦型號進行閉環使用的糖尿病患者使用。→ 另見 **Open Loop**。
+**虛擬幫浦(Virtual pump)** = **AAPS** 的一項功能，允許用戶嘗試 **AAPS** 的功能，或供使用沒有 **AAPS** 驅動程式的幫浦型號進行閉環使用的糖尿病患者使用。→ 另見 **Open Loop**。
 
 **Wallpaper** = **AAPS** 的背景圖像。參見手機頁面。
 
 **xDrip+** = 用於讀取 **CGM** 系統的開放原始碼軟體。xDrip+。
 
-**Zero-temp** = 臨時基礎速率設為 0%（無基礎胰島素輸送）。
+**Zero-temp** = 臨時基礎速率(temporary basal rate) 設為 0%（無基礎胰島素輸送）。
 
 → 另見 [the OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html)

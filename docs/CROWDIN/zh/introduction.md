@@ -1,73 +1,73 @@
-# Introduction to APS and AAPS
+# APS 和 AAPS 的介紹
 
-## What is an “Artificial Pancreas System”?
+## 什麼是“人工胰臟系統”?
 
-A human pancreas does a lot of things besides regulating blood sugar. However, the term **“Artificial Pancreas System” (APS)** usually refers to a system which works to automatically keep blood sugar levels within healthy limits.
+人類的胰臟除了調節血糖外，還有許多其他功能。 然而，&lt;strong x-id="1"&gt;“人工胰臟系統” (APS)&lt;/strong&gt; 通常指的是一個能自動將血糖維持在健康範圍內的系統。
 
-The most basic way to do this is by detecting **glucose levels**, using these values to do **calculations**, and then delivering the (predicted) right amount of **insulin** to the body. It repeats the calculation, every few minutes, 24/7. It uses **alarms** and **alerts** to inform the user if intervention or attention is needed. This system is typically made up of a **glucose sensor**, an **insulin pump** and an **app** on a phone.
+最基本的方式是透過檢測&lt;strong x-id="1"&gt;血糖值&lt;/strong&gt;，使用這些數據進行&lt;strong x-id="1"&gt;計算&lt;/strong&gt;，然後將預測的適當量的&lt;strong x-id="1"&gt;胰島素&lt;/strong&gt;注入體內。 這個系統每隔幾分鐘會重複進行一次計算，全天候24/7運作。 它使用&lt;strong x-id="1"&gt;警報&lt;/strong&gt;和&lt;strong x-id="1"&gt;通知&lt;/strong&gt;來告知使用者是否需要介入或注意。 這個系統通常由一個&lt;strong x-id="1"&gt;血糖感測器&lt;/strong&gt;、一個&lt;strong x-id="1"&gt;胰島素幫浦&lt;/strong&gt;以及手機上的一個&lt;strong x-id="1"&gt;應用程式&lt;/strong&gt;組成。
 
-You can read more about the different artificial pancreas systems currently in use and in development in this 2022 review article:
+你可以在這篇2022年的回顧文章中閱讀更多關於目前使用及開發中的各種人工胰臟系統：
 
-![Frontiers](./images/FRONTIERS_Logo_Grey_RGB.png) [Future Directions in Closed-Loop Technology](https://www.frontiersin.org/articles/10.3389/fendo.2022.919942/full#:~:text=Fully%20closed%2Dloop%20systems%2C%20unlike,user%20input%20for%20mealtime%20boluses).
+![Frontiers](./images/FRONTIERS_Logo_Grey_RGB.png) &lt;a href="https://www.frontiersin.org/articles/10.3389/fendo.2022.919942/full#:~:text=Fully%20closed%2Dloop%20systems%2C%20unlike,user%20input%20for%20mealtime%20boluses"&gt;閉環技術的未來方向&lt;/a&gt;。
 
-In the near future, some so-called "dual-hormone" systems will also have the ability to infuse glucagon alongside insulin, with the aim of preventing severe hypos and allowing even tighter blood glucose control.
+在不久的將來，一些所謂的“雙激素”系統還將能夠同時注射胰高血糖素與胰島素，目的是預防嚴重的低血糖，並實現更嚴密的血糖控制。
 
-An artificial pancreas can be thought of as an [“autopilot for your diabetes”](https://www.artificialpancreasbook.com/). What does that mean?
+人工胰臟可以被認為是&lt;a href="https://www.artificialpancreasbook.com/"&gt;“糖尿病的自動駕駛”&lt;/a&gt;。 那是什麼意思？
 
-In an aircraft, an autopilot does not do the complete job of the human pilot, the pilot cannot sleep through the entire flight. The autopilot aids the work of the pilot. It relieves them of the burden of permanently monitoring the aircraft, allowing the pilot to concentrate on wider monitoring from time to time. The autopilot receives signals from various sensors, a computer evaluates them together with the pilot’s specifications and then makes the necessary adjustments, alerting the pilot to any concerns. The pilot no longer has to worry about constantly making decisions.
+在飛機上，自動駕駛並不完全取代人類飛行員的工作，飛行員無法在整個飛行過程中睡覺。 自動駕駛輔助飛行員的工作。 它減輕了飛行員需要持續監控飛機的負擔，讓飛行員可以不時地進行更廣泛的監控。 自動駕駛從各種感測器接收訊號，計算機會與飛行員的指示一起評估這些訊號，然後進行必要的調整，並向飛行員發出任何問題的警告。 飛行員不再需要不斷做出決策。
 
 ![image](./images/autopilot.png)
 
-## What does hybrid closed loop mean?
+## 什麼是混合閉環系統？
 
-The best solution for type 1 diabetes would be a “functional cure” (probably an implant of pancreatic cells which are protected from the immune system). While we are waiting for that, a “full closed loop” artificial pancreas is probably the next best thing. This is a tech system that doesn’t need any user input (like bolusing insulin for meals, or announcing exercise), with good regulation of blood glucose levels. At the moment, there are no widely available systems which are “full” closed loop, they all need some user input. The currently available systems are called “hybrid” closed loop, because they use a combination of automated technology and user input.
+對於1型糖尿病患者來說，最好的解決方案可能是“功能性治療”（可能是植入免疫系統無法攻擊的胰臟細胞）。 在我們等待這個解決方案的同時，一個“完全閉環”的人工胰臟系統可能是目前最接近的理想方案。 這是一種不需要任何使用者輸入（例如為進餐注射胰島素或通知運動）的技術系統，並能夠很好地調節血糖水平。 目前，尚無“完全”閉環系統廣泛上市，所有的系統都需要一些使用者輸入。 目前可用的系統稱為“混合”閉環系統，因為它們結合了自動技術與使用者輸入。
 
-## How and why did looping start?
+## 為什麼循環控制系統會開始發展？
 
-The development of commercial technology for people with type 1 diabetes (T1D) is very slow. In 2013 the T1D community founded the #WeAreNotWaiting movement. They developed systems themselves using existing approved technology (insulin pumps and sensors) to improve blood glucose control, safety, and quality of life. These are known as DIY (do-it-yourself) systems, because they are not formally approved by health bodies (FDA, NHS etc). There are four main DIY systems available: [OpenAPS](https://openaps.org/what-is-openaps/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) and [iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI).
+為1型糖尿病患者開發商業技術的進度非常緩慢。 在2013年，1型糖尿病社群發起了#WeAreNotWaiting運動。 他們使用現有的認證技術（胰島素幫浦和感測器）自行開發系統，以改善血糖控制、安全性和生活品質。 這些系統被稱為DIY（自製）系統，因為它們並未經過正式的健康機構（如FDA、NHS等）的認證。 目前有四個主要的DIY系統：&lt;a href="https://openaps.org/what-is-openaps/"&gt;OpenAPS&lt;/a&gt;、&lt;strong x-id="1"&gt;AAPS&lt;/strong&gt;、&lt;a href="https://loopkit.github.io/loopdocs/#what-is-loop"&gt;Loop&lt;/a&gt; 和 &lt;a href="https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI"&gt;iAPS&lt;/a&gt;。
 
-A great way to understand the fundamentals of DIY looping is to read Dana Lewis’s book “Automated Insulin Delivery”. You can access it [here](https://www.artificialpancreasbook.com/) for free (or buy a hardcopy of the book). If you want to understand more about [OpenAPS](https://openaps.org/what-is-openaps/), which **AAPS** has developed from, the [OpenAPS website](https://openaps.org/what-is-openaps/) is a great resource.
+理解DIY循環控制系統基本原理的絕佳方式是閱讀Dana Lewis的書《自動化胰島素輸送》。 你可以&lt;a href="https://www.artificialpancreasbook.com/"&gt;在這裡&lt;/a&gt;免費獲取該書的電子版（或購買該書的實體書）。 如果你想更深入地了解&lt;a href="https://openaps.org/what-is-openaps/"&gt;OpenAPS&lt;/a&gt;，即&lt;strong x-id="1"&gt;AAPS&lt;/strong&gt;的開發基礎，&lt;a href="https://openaps.org/what-is-openaps/"&gt;OpenAPS 網站&lt;/a&gt; 是一個很好的資源。
 
-Several commercial hybrid closed loop systems have been launched, the most recent of which are [CamAPS FX](https://camdiab.com/) (UK and EU) and [Omnipod 5](https://www.omnipod.com/en-gb/what-is-omnipod/omnipod-5) (USA and EU). These are very different to DIY systems, mainly because they both include a “learning algorithm” which adjusts how much insulin is delivered according to your insulin needs from previous days. Many people in the DIY community have already tried out these commercial systems and compared them with their DIY system. You can find out more about how the different systems compare by asking on the dedicated Facebook groups for these systems, on the [AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/) or on [Discord](https://discord.com/invite/4fQUWHZ4Mw).
+目前已經有幾個商業混合閉環系統問世，其中最新的是&lt;a href="https://camdiab.com/"&gt;CamAPS FX&lt;/a&gt;（英國和歐盟）和&lt;a href="https://www.omnipod.com/en-gb/what-is-omnipod/omnipod-5"&gt;Omnipod 5&lt;/a&gt;（美國和歐盟）。 這些系統與DIY系統非常不同，主要是因為它們都包含一個“學習算法”，該算法根據你過去幾天的胰島素需求調整胰島素的輸送量。 許多DIY社群的成員已經嘗試過這些商業系統，並將它們與自己的DIY系統進行了比較。 You can find out more about how the different systems compare by asking on the dedicated Facebook groups for these systems, on the [AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/) or on [Discord](https://discord.com/invite/4fQUWHZ4Mw).
 
-## What is Android APS (AAPS)?
+## 什麼是Android APS (AAPS)?
 
 ![image](./images/basic-outline-of-AAPS.png)
 
-**Figure 1**. Basic outline of the Android APS (Artificial Pancreas System), AAPS.
+&lt;strong x-id="1"&gt;圖1&lt;/strong&gt;。 Android APS (人工胰臟系統，AAPS) 的基本概述。
 
-Android APS (**AAPS**) is a hybrid closed loop system, or Artificial Pancreas System  (APS). It makes its insulin dosing calculations using established [OpenAPS](https://openaps.org/) algorithms (a set of rules) developed by the #WeAreNotWaiting type 1 diabetes community.
+Android APS (&lt;strong x-id="1"&gt;AAPS&lt;/strong&gt;) 是一個混合閉環系統，或人工胰臟系統 (APS)。 它使用已建立的&lt;a href="https://openaps.org/"&gt;OpenAPS&lt;/a&gt;演算法（一組規則）來進行胰島素劑量計算，這些演算法是由#WeAreNotWaiting 1型糖尿病社群所開發。
 
-Since OpenAPS is only compatible with certain older insulin pumps, **AAPS** (which can be used with a wider range of insulin pumps) was developed in 2016 by Milos Kozak, for a family member with type 1 diabetes. Since those early days, **AAPS** has been continually developed and refined by a team of volunteer computer developers and other enthusiasts who have a connection to the type 1 diabetes world. Today, **AAPS** is used by approximately 10,000 people. It is a highly customisable and versatile system, and because it is open-source, it is also readily compatible with many other open-source diabetes softwares and platforms. The fundamental components of the current **AAPS** system are outlined in **Figure 1** above.
+由於OpenAPS僅與某些較舊的胰島素幫浦兼容，&lt;strong x-id="1"&gt;AAPS&lt;/strong&gt;（可以與更多種類的胰島素幫浦一起使用）於2016年由Milos Kozak為家中1型糖尿病患者開發。 自那時起，&lt;strong x-id="1"&gt;AAPS&lt;/strong&gt;由一群志願的計算機開發者及其他與1型糖尿病有關聯的愛好者持續開發和改進。 Today, **AAPS** is used by approximately 10,000 people. 它是一個高度可自訂且多功能的系統，並且由於它是開源的，因此也可以很容易地與許多其他開源的糖尿病軟體和平台兼容。 當前 &lt;strong x-id="1"&gt;AAPS&lt;/strong&gt; 系統的基本組成部分在上面的 &lt;strong x-id="1"&gt;圖 1&lt;/strong&gt; 中有所說明。
 
 
 
-## What are the basic components of AAPS?
+## AAPS 的基本組成部分是什麼？
 
-The “brain” of AAPS is an **app** which you build yourself. There are detailed step-by-step instructions for this. You then install the **AAPS  app** on a [compatible](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit?pli=1#gid=2097219952) **Android smartphone** (**1**). A number of users prefer their loop on a separate phone to their main phone. So, you don’t necessarily have to be using an Android phone for everything else in your life, just for running your AAPS loop.
+&lt;strong x-id="1"&gt;AAPS&lt;/strong&gt; 的“核心”是一個您自己構建的 &lt;strong x-id="1"&gt;應用程式&lt;/strong&gt;。 這裡有詳細的步驟說明。 然後，您將 &lt;strong x-id="1"&gt;AAPS 應用程式&lt;/strong&gt; 安裝在一部 &lt;a href="https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit?pli=1#gid=2097219952"&gt;兼容的&lt;/a&gt; &lt;strong x-id="1"&gt;Android 智慧型手機&lt;/strong&gt; 上（&lt;strong x-id="1"&gt;1&lt;/strong&gt;）。 一些用戶更喜歡將環路運行在與主手機分開的手機上。 因此，您不必在日常生活中使用 Android 手機，只需用於運行您的 AAPS 環路即可。
 
-The **Android smartphone** will also need to have another app installed on it as well as **AAPS**. This is either a modified Dexcom app called build-your-own dexcom app [**BYODA**](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) or [**Xdrip+**](https://xdrip.readthedocs.io/en/latest/install/usethedoc/). This additional app receives glucose data from a sensor (**2**) by bluetooth, and then sends the data internally on the phone to the **AAPS app**.
+**安卓智能手機**也需要安裝另一個應用程式，以及 **AAPS**。 這是一個修改過的 Dexcom 應用程式，稱為自建 Dexcom 應用程式[**BYODA**](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) 或 [**Xdrip+**](https://xdrip.readthedocs.io/en/latest/install/usethedoc/)。 這個附加應用程序通過藍牙從傳感器(**2**) 接收葡萄糖資料，然後將資料內部發送到手機上的 **AAPS 應用程序**。
 
-The **AAPS app** uses a decision making process (**algorithm**) from OpenAPS. Beginners  start out using the basic **oref0** algorithm, but it is possible to switch to using the newer **oref1** algorithm as you progress with AAPS. Which algorithm you use (oref0 or oref1), depends on which suits your specific situation best.  In both cases, the algorithm takes into account multiple factors, and performs rapid calculations every time a new reading comes in from the sensor. The algorithm then sends instructions to the insulin pump (**3**) on how much insulin to deliver by bluetooth. All the information can be sent by mobile data or wifi to the internet (**4**). This data can also be shared with followers if desired, and/or collected for analysis.
+**AAPS 應用程式**使用來自 OpenAPS 的決策過程（**演算法**）。 初學者開始使用基本的 **oref0** 演算法，但隨著您在AAPS上的目標進度，可以切換到使用較新的 **oref1** 演算法。 你使用哪個演算法（oref0或oref1），取決於哪個最適合您的特定情況。  在兩種情況下，演算法考慮多個因素，每次從感測器傳入新讀數時進行快速計算。 演算法然後通過藍牙將指令發送到胰島素幫浦（**3**），指示其提供多少胰島素。 所有訊息可以通過手機數據或wifi發送到互聯網（**4**） 如果需要，這些資料也可以與追隨者分享，並且/或收集用於分析。
 
-## What are the advantages of the AAPS system?
+## AAPS系統的優勢是什麼？
 
-The OpenAPS algorithm used by **AAPS** controls blood sugar levels in the absence of user input, according to the users’ defined parameters (important ones being basal rates, insulin sensitivity factors, insulin-to-carb ratios, duration of insulin activity etc.), reacting every 5 minutes to the new sensor data. Some of the reported advantages of using AAPS are extensive fine-tunable options, automations and increased transparency of the system for the patient/caregiver. This can result in better control over your (or your dependant’s) diabetes, which in turn may give improved quality of life and increased peace of mind.
+**AAPS** 使用的 OpenAPS 算法在用戶未輸入的情况下控制血糖水平，根據定義的参數（重要的包括基礎速率、胰島素敏感因子、胰島素至碳水化合物比率、胰島素活性持續時間等），每 5分鐘對新的傳感器資料做出反應。 據報導，使用 AAPS 的一些優點包括廣泛的可調選項、自動化和增加患者/照護者對系統的透明度。 這可幫助更好地控制您(或您的扶養者) 的糖尿病，從而可能提高生活品質並增加內心的平靜。
 
-### **Specific advantages include:**
+### **特定優勢包括：**
 
-#### 1) Safety built-in
-To read about the safety features of the algorithms, known as oref0 and oref1, [click here](https://openaps.org/reference-design/). The user is in control of their own safety constraints.
+#### 1) 內建安全
+要了解名為oref0和oref1的演算法的安全功能，[請按這裡](https://openaps.org/reference-design/)。 用戶掌控自己的安全限制。
 
-#### 1) **Hardware flexibility**
+#### 1) **硬體彈性**
 
-**AAPS** works with a wide range of insulin pumps and sensors. So for example, if you develop an allergy to Dexcom sensor patch glue, you could switch to using a Libre sensor instead. That offers flexibility as life changes. You don't have to rebuild or reinstall the **AAPS** app, just tick a different box in the app to change your hardware. AAPS is independent of particular pump drivers and also contains a "virtual pump" so users can safely experiment before using it on themselves.
+**AAPS** 與各種胰島素幫浦和傳感器配合使用。 舉例來說，如果你對 Dexcom 感應器貼片膠過敏，你可以考慮改用 Libre 傳感器。 隨著生活變化，提供靈活性。 您不必重新構建或重新安裝**AAPS**應用程式，在應用程式中勾選另一個選項以更改您的硬體即可。 AAPS 獨立於特定的幫驅動程式，還包含一個"虛擬幫浦"，因此用戶可以在使用之前進行安全實驗。
 
-#### 2) **Highly customisable, with wide parameters**
+#### 2) **高度可定製化，具有廣泛的參數**
 
-Users can easily add or remove modules or functionality, and **AAPS** can be used in both open and closed loop mode. Here are some examples of the possibilities with the **AAPS** system:
+用戶可以輕鬆添加或移除模塊或功能，並且 **AAPS** 可以在開放和封閉環路模式下使用。 這裡有一些使用 **AAPS** 系統的可能性示例：
 
- a) The ability to set a lower glucose target 30 min before eating; you can set the target as low as 72 mg/dL (4.0 mmol/L).
+ a) 在進食前的30分鐘設定較低的葡萄糖目標；您可以將目標設定為低至72 mg/dL（4.0 mmol/L）。
 
  b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule  to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in an 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). The automation will last according to the scheduled time you set. Such an automation could be set to only be active on certain days of the week, at certain times of day, and even at certain locations.
 

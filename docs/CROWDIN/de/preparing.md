@@ -85,7 +85,7 @@ Um Dir durch den Erstellungsprozess zu helfen, gibt es eigene spezifische Abschn
 
 - “[Wie installiere ich AAPS](Installing-AndroidAPS/Building-APK.md)? (Abschnitt D) mit einem Unterabschnitt zur [Fehlerbehandlung](Usage/troubleshooting.md).
 
-Wie lange es dauert den Closed Loop zu erreichen ist individuell verschieden, ein grober Zeitablauf bis zum vollen Loopen mit AAPS findest Du ([hier](how-long-will-it-take)).
+How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](how-long-will-it-take-to-set-everything-up))
 
 
 #### Exportdatei des Keystore & der Konfigurationseinstellungen
