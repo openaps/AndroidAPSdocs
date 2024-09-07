@@ -91,7 +91,7 @@ AAPS 的“核心”是一個你自己構建的**應用程式**。 這裡有詳�
 #### 6) **詳細應用程式介面**
 透過 **AAPS**，您可以輕鬆追蹤幫浦胰島素水平、套管使用時間、傳感器時間、幫浦電池時間、體內胰島素量_等等_。 許多操作可以直接在 **AAPS** 應用中完成（如幫浦注射、幫浦斷開等），無需在幫浦本身上操作，這樣幫浦可以一直放在您的口袋或腰帶上。
 
-#### 7) **取得方式的便利性與負擔能力**
+#### 7) **Accessibility and affordability**
 **AAPS** gives people who currently can’t afford to self-fund, or don’t have funding/insurance, access to a world-class hybrid closed looping system which is conceptually years ahead, in terms of development, of the commercial systems. You currently need to have a Nightscout account to set up **AAPS**, although the Nightscout account is not required for day-to-day running of the **AAPS** loop. Many people continue to use Nightscout for collecting their data, and for remote control. Although **AAPS** itself is free, setting up Nightscout through one of the various platforms may incur a fee (€0 - €12), depending on what level of support you want (see comparison table) and whether you want to keep using Nightscout after setup or not. **AAPS** works with a wide range of affordable (starting from approx €150) Android phones. Different versions are available for specific locations and languages, and AAPS can also be used by people who are [blind](Safety-first-aaps-can-also-be-used-by-blind-people).
 
 #### 8) **Support**
