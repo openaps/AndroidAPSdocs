@@ -8,31 +8,31 @@ Android APS (**AAPS**) 是一款為胰島素依賴型糖尿病患者設計的開
 
 ## AAPS 文件概述（“文件”）
 
-第二部分）“入門”，[介紹](introduction.md) 解釋了人工胰臟系統 (APS) 的一般概念。 它概述了循環技術的背景，為什麼 **AAPS** 被開發，並將 **AAPS** 與其他系統進行比較，還討論了安全性問題。 它提供了如何與你的臨床團隊討論 **AAPS** 的建議，解釋了為什麼你需要自行構建 **AAPS** 應用程式而不是直接下載，並概述了 **AAPS** 系統的典型連接性。 它還討論了可訪問性，以及誰有可能從 **AAPS** 中受益。
+第二章節）“入門”，[介紹](introduction.md) 解釋了人工胰臟系統 (APS) 的一般概念。 它概述了循環技術的背景，為什麼 **AAPS** 被開發，並將 **AAPS** 與其他系統進行比較，還討論了安全性問題。 它提供了如何與你的臨床團隊討論 **AAPS** 的建議，解釋了為什麼你需要自行構建 **AAPS** 應用程式而不是直接下載，並概述了 **AAPS** 系統的典型連接性。 它還討論了可訪問性，以及誰有可能從 **AAPS** 中受益。
 
 [為 AAPS 做準備](preparing.md) 提供了有關安全考慮的更多詳細信息，以及與 **AAPS** 兼容的手機、CGM（持續血糖監測儀）和胰島素幫浦。 它概述了你將經歷的過程，並提供了大約的時間表，讓你能夠全面使用 **AAPS**。 本節將讓你在技術上為快速有效地組裝你的 **AAPS** 設備做好準備。 子部分 [CGM 配置](Configuration/BG-Source.md) 解釋了如何優化 CGM 設置以及最佳的平滑選項。
 
-現在你已對過程有了堅實的理解，可以開始組裝你的 **AAPS** 循環系統。 它還涵蓋了使用設置嚮導設置 **AAPS** 應用程式，將其與 CGM 應用程式連結，無論是實際還是虛擬的胰島素幫浦，以及將 **AAPS** 與報告伺服器連結。 第三部分 **設置 AAPS** 包含分步指南。 它涵蓋了選擇和 [設置你的報告伺服器](setting-up-the-reporting-server.md)（Nightscout 或 Tidepool），以便你可以檢視和分享你的數據，準備電腦以構建 AAPS 應用程式，構建 AAPS 應用程式並將其轉移到手機上。 接下來會逐步引導你安全且精心校準的過程，確保你（或你的孩子）熟悉並能自信地操作所有不同層次的功能和選單配置，然後再進入下一階段，通常稱為下一個“目標”，直到你擁有足夠的經驗以開始使用應用程式中更高級的選項。 這些目標被特別設計為逐步解鎖更多 **AAPS** 的可能性，並從開放循環轉為閉環。
+現在你已對過程有了堅實的理解，可以開始組裝你的 **AAPS** 循環系統。 本章節 **3) 設置 AAPS** 包含逐步指導來進行此操作。 它涵蓋了選擇和 [設置你的報告伺服器](setting-up-the-reporting-server.md)（Nightscout 或 Tidepool），以便你可以檢視和分享你的資料，準備電腦來構建 AAPS 應用程式，構建 AAPS 應用程式並便其傳輸到你的手機。 它還涵蓋了使用設置嚮導來設定 **AAPS** 應用程式，將其與你的 CGM 應用程式連結，並與實體或虛擬胰島素幫浦連結，以及將 **AAPS** 連結到你的報告伺服器。 接下來，你將通過一個安全且經過精心校準的分步過程，逐漸熟悉並全面使用 **AAPS** 的功能。該過程旨在確保你/你的孩子對各種層級和選單配置充分了解並感到舒適，然後再進入下一階段，通常稱為下一個"目標"，直到你擁有足夠的經驗以開始使用應用程式中更高級的選項。 這些目標被特別設計為逐步解鎖更多 **AAPS** 的可能性，並從開環轉為閉環。
 
-遠端控制功能的可能性範圍很廣，無論是遠端發送指令，還是僅僅是追蹤 **AAPS** 的數據。 這對於希望為未成年人使用 **AAPS** 的照護者來說非常實用，也適用於糖尿病患者，他們希望更方便地監測血糖（和其他指標），而不僅僅是在手機上（例如手錶、汽車等），或者希望他人也能監控數據。 第四部分）[遠端 AAPS 功能](remote-control.md) 突顯了 **AAPS** 的一個真正強項。 此部分還提供了使用 Android Auto 在汽車中查看血糖水平的指導。
+第四章節）[遠端 AAPS 功能](remote-control.md) 突顯了 **AAPS** 的一個真正強項。 這對於希望遠端發送命令給予，或者只是追踪來自 **AAPS** 的資料來說非常實用。 這對於希望為未成年人使用 **AAPS** 的照護者，以及患有糖尿病的成人同樣實用。成人可以更方便地監控血糖（以及其他指標），不僅限於手機上（例如手錶、車內等），也可以讓重要他人一同監控資料。 本節還提供了使用 Android Auto 的指導，讓你能夠在車內查看血糖水平。
 
-第五部分）**AAPS 的日常生活** 涵蓋了 **AAPS** 的關鍵功能，幫助你使用（並自定義）**AAPS**。 包括理解各個屏幕、碳水化合物計算、靈敏度、配置切換、臨時目標、延展碳水化合物（或 eCarbs）、自動化和 DynamicISF。 此外，還涵蓋了如何處理不同類型的餐食、更換套管和感測器、手機更新、日光節約時間更改、[與 AAPS 一起旅行](Usage/Timezone-traveling.md) 和運動等常見問題與解答。 Common questions and answers are located within the troubleshooting section.
-
-
-第六部分）**AAPS 的維護** 涵蓋了如何匯出和備份你的設置（這非常重要，以防你的手機遺失或損壞），提供了最新版本的說明，並詳細說明了如何更新 **AAPS**。 你可以預期每年會有一個新版本和 2-3 次強制更新。 你需要進行這些更新，與所有軟體一樣，更新後會修復一些小問題，並對 **AAPS** 進行改進。 有一個專門的“更新”疑難排解部分，解答常見問題。
-
-第七部分）[獲取幫助](Where-To-Go-For-Help/Connect-with-other-users.html) 應該可以幫助你找到獲取 **AAPS** 一般幫助的最佳途徑。 這非常重要，讓你能夠快速與其他用戶取得聯繫，澄清問題並解決常見的困難。 很多人已成功使用 **AAPS**，但每個人都有自己無法單獨解決的問題。 由於用戶眾多，問題的回應時間通常非常快，通常僅需幾個小時。 Don’t worry about asking for help, there is no such thing as a dumb question! We encourage users of any/all levels of experience to ask as many questions as they feel is necessary to help get them up and running safely. 本節還包含 **AAPS** 和 **AAPSClient**（跟隨應用程式）的一般故障排除指南，並說明了如何將你的 **AAPS** 數據（日誌文件）發送給開發者進行調查，如果你認為 **AAPS** 出現技術問題需要處理。
-
-第八部分）有用的 **AAPS** 鏈接，供快速參考。 這包括 [詞彙表](Getting-Started/Glossary.md)，它列出了 **AAPS** 中使用的縮寫詞（或簡稱）。 這是查找 ISF 或 TT 等術語的地方。 此部分還包含實用的螢幕截圖和其他數據的鏈接。
-
-Section 9) covers **Advanced AAPS options** such as how to progress from using **AAPS** for hybrid-closed looping (bolusing for meals _etc._) to full closed looping (no bolusing), and details development and engineering modes. Most users get on just fine with the main or "Master" **AAPS** version without looking into these options, this section is for users who already have good control and are looking to further improve their setup.
-
-第十部分）[如何支援 AAPS](make-a-PR.md) 提供了關於如何支援此項目的資訊。 你可以捐贈金錢、設備或專業知識。 你可以建議/自行更改文檔，幫助 [翻譯文檔](translations.md)，並通過 Open Humans 項目提供你的數據。
-
-Section 11 contains archived or additional documentation, including a subsection for [clinicians](Resources/clinician-guide-to-AAPS.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. More diabetes and looping references and resources are contained in Section 12.
+第五章節）**AAPS 的日常生活** 涵蓋了 **AAPS** 的關鍵功能，幫助你使用（並自定義）**AAPS**。 包括理解各個畫面、碳水化合物計算、靈敏度、配置切換、臨時目標、延展碳水化合物（或 eCarbs）、自動化和 動態ISF。 此外，還涵蓋了如何處理不同類型的餐食、更換套管和傳感器、手機更新、日光節約時間更改、[與 AAPS 一起旅行](Usage/Timezone-traveling.md) 和運動等常見問題與解答。 常見問題和答案位於疑難排除部分。
 
 
- 大多數用戶使用主要或“主”版本的 **AAPS** 就能應付自如，無需涉足這些選項，此部分針對那些已經很好地控制病情並希望進一步改善設置的用戶。 第九部分涵蓋了 **AAPS** 的高級選項，例如如何從使用 **AAPS** 進行混合閉環（為餐食進行注射等）過渡到完全閉環（無需注射），並詳細介紹了開發和工程模式。
+第六章節）**AAPS 的維護** 涵蓋了如何匯出和備份你的設置（這非常重要，以防你的手機遺失或損壞），提供了最新版本的說明，並詳細說明了如何更新 **AAPS**。 你可以預期每年會有一個新版本和 2-3 次強制更新。 你需要進行這些更新，與所有軟體一樣，更新後會修復一些小問題，並對 **AAPS** 進行改進。 有一個專門的“更新”疑難排解部分，解答常見問題。
+
+第七章節）[獲取幫助](Where-To-Go-For-Help/Connect-with-other-users.html) 應該可以幫助你找到獲取 **AAPS** 一般幫助的最佳途徑。 這非常重要，讓你能夠快速與其他用戶取得聯繫，澄清問題並解決常見的困難。 很多人已成功使用 **AAPS**，但每個人都有自己無法獨立解決的問題。 由於用戶眾多，問題的回應時間通常非常快，通常僅需幾個小時。 不要擔心尋求幫助，更不用擔心愚蠢的問題！ 我們鼓勵任何新手/老手用戶提出他們認為有必要的所有問題，以幫助他們安全啟動並運行。 本節還包含 **AAPS** 和 **AAPSClient**（跟隨應用程式）的一般故障排除指南，並說明了如何將你的 **AAPS** 資料（日誌文件）發送給開發者進行調查，如果你認為 **AAPS** 出現技術問題需要處理。
+
+第八章節）有用的 **AAPS** 連接，供快速參考。 這包括 [詞彙表](Getting-Started/Glossary.md)，它列出了 **AAPS** 中使用的縮寫詞（或簡稱）。 這是查找 ISF 或 TT 等術語的地方。 此部分還包含實用的螢幕截圖和其他資料的連接。
+
+第九章節）涵蓋了高級AAPS選項，例如如何從使用AAPS進展到混合閉環（為餐飲等進行注射）到完全閉環（不進行手動注射），並詳細介紹了開發和工程模式。 大多數使用者只需使用主要或"Master" **AAPS**版本即可正常操作，無須查看這些選項；本節給那些已經控制良好並希望進一步改善其設置的使用者。
+
+第十部分）[如何支援 AAPS](make-a-PR.md) 提供了關於如何支援此項目的資訊。 你可以捐贈金錢、設備或專業知識。 你可以建議/自行更改文檔，幫助 [翻譯文檔](translations.md)，並通過 Open Humans 項目提供你的資料。
+
+第十一章節包含存檔或額外的文件，包括針對 [臨床醫生](Resources/clinician-guide-to-AAPS.md) 的子部分，這些臨床醫生對開源人工胰臟技術如 **AAPS** 表現出興趣，或是希望與臨床醫生分享此類資訊的患者，這個主題也在介紹部分有所提及。 更多關於糖尿病和循環的參考資料包含在第12章節中。
+
+
+ ### 有興趣開始使用 **AAPS** 嗎？ 在 [介紹](introduction.md) 中閱讀更多關於 **AAPS** 的資訊。
 
 :::{admonition} SAFETY NOTICE
 :class: danger The safety of **AAPS** relies on the safety features of your hardware (phone, pump, CGM). Only use a fully functioning FDA/CE approved insulin pump and CGM. Do not use broken, modified or self-built insulin pumps or CGM receivers. Only use original consumable supplies (inserters, cannulas and insulin reservoirs) approved by the manufacturer for use with your pump and CGM. Using untested or modified supplies can cause inaccuracy and insulin dosing errors, resulting in significant risk to the user.
