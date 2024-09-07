@@ -2,17 +2,17 @@
 
 ## 什麼是“人工胰臟系統”?
 
-人類的胰臟除了調節血糖外，還有許多其他功能。 然而，&lt;strong x-id="1"&gt;“人工胰臟系統” (APS)&lt;/strong&gt; 通常指的是一個能自動將血糖維持在健康範圍內的系統。
+人類的胰臟除了調節血糖外，還有許多其他功能。 然而，**” 人工胰臟系統” (APS)** 通常指的是一個能自動將血糖維持在健康範圍內的系統。
 
-最基本的方式是透過檢測&lt;strong x-id="1"&gt;血糖值&lt;/strong&gt;，使用這些數據進行&lt;strong x-id="1"&gt;計算&lt;/strong&gt;，然後將預測的適當量的&lt;strong x-id="1"&gt;胰島素&lt;/strong&gt;注入體內。 這個系統每隔幾分鐘會重複進行一次計算，全天候24/7運作。 它使用&lt;strong x-id="1"&gt;警報&lt;/strong&gt;和&lt;strong x-id="1"&gt;通知&lt;/strong&gt;來告知使用者是否需要介入或注意。 這個系統通常由一個&lt;strong x-id="1"&gt;血糖感測器&lt;/strong&gt;、一個&lt;strong x-id="1"&gt;胰島素幫浦&lt;/strong&gt;以及手機上的一個&lt;strong x-id="1"&gt;應用程式&lt;/strong&gt;組成。
+最基本的方式是透過檢測**血糖值**，使用這些數據進行**計算**，然後將預測的適當量的**胰島素**注入體內。 這個系統每隔幾分鐘會重複進行一次計算，全天候24/7運作。 它使用**警報**和**通知**來告知使用者是否需要介入或注意。 這個系統通常由一個**血糖傳感器**、一個**胰島素幫浦**以及手機上的一個**應用程式**組成。
 
 你可以在這篇2022年的回顧文章中閱讀更多關於目前使用及開發中的各種人工胰臟系統：
 
-![Frontiers](./images/FRONTIERS_Logo_Grey_RGB.png) &lt;a href="https://www.frontiersin.org/articles/10.3389/fendo.2022.919942/full#:~:text=Fully%20closed%2Dloop%20systems%2C%20unlike,user%20input%20for%20mealtime%20boluses"&gt;閉環技術的未來方向&lt;/a&gt;。
+![Frontiers](./images/FRONTIERS_Logo_Grey_RGB.png) [閉環技術的未來方向](https://www.frontiersin.org/articles/10.3389/fendo.2022.919942/full#:~:text=Fully%20closed%2Dloop%20systems%2C%20unlike,user%20input%20for%20mealtime%20boluses)
 
 在不久的將來，一些所謂的“雙激素”系統還將能夠同時注射胰高血糖素與胰島素，目的是預防嚴重的低血糖，並實現更嚴密的血糖控制。
 
-人工胰臟可以被認為是&lt;a href="https://www.artificialpancreasbook.com/"&gt;“糖尿病的自動駕駛”&lt;/a&gt;。 那是什麼意思？
+人工胰臟被認為是[“糖尿病的自動駕駛”](https://www.artificialpancreasbook.com/)。 那是什麼意思？
 
 在飛機上，自動駕駛並不完全取代人類飛行員的工作，飛行員無法在整個飛行過程中睡覺。 自動駕駛輔助飛行員的工作。 它減輕了飛行員需要持續監控飛機的負擔，讓飛行員可以不時地進行更廣泛的監控。 自動駕駛從各種感測器接收訊號，計算機會與飛行員的指示一起評估這些訊號，然後進行必要的調整，並向飛行員發出任何問題的警告。 飛行員不再需要不斷做出決策。
 
@@ -24,27 +24,27 @@
 
 ## 為什麼循環控制系統會開始發展？
 
-為1型糖尿病患者開發商業技術的進度非常緩慢。 在2013年，1型糖尿病社群發起了#WeAreNotWaiting運動。 他們使用現有的認證技術（胰島素幫浦和感測器）自行開發系統，以改善血糖控制、安全性和生活品質。 這些系統被稱為DIY（自製）系統，因為它們並未經過正式的健康機構（如FDA、NHS等）的認證。 目前有四個主要的DIY系統：&lt;a href="https://openaps.org/what-is-openaps/"&gt;OpenAPS&lt;/a&gt;、&lt;strong x-id="1"&gt;AAPS&lt;/strong&gt;、&lt;a href="https://loopkit.github.io/loopdocs/#what-is-loop"&gt;Loop&lt;/a&gt; 和 &lt;a href="https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI"&gt;iAPS&lt;/a&gt;。
+為1型糖尿病患者開發商業技術的進度非常緩慢。 在2013年，1型糖尿病社群發起了#WeAreNotWaiting運動。 他們使用現有的認證技術（胰島素幫浦和感測器）自行開發系統，以改善血糖控制、安全性和生活品質。 這些系統被稱為DIY（自製）系統，因為它們並未經過正式的健康機構（如FDA、NHS等）的認證。 目前有四個主要的DIY系統可用：[OpenAPS](https://openaps.org/what-is-openaps/)、**AAPS**、[Loop](https://loopkit.github.io/loopdocs/#what-is-loop)和[iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI)。
 
-理解DIY循環控制系統基本原理的絕佳方式是閱讀Dana Lewis的書《自動化胰島素輸送》。 你可以&lt;a href="https://www.artificialpancreasbook.com/"&gt;在這裡&lt;/a&gt;免費獲取該書的電子版（或購買該書的實體書）。 如果你想更深入地了解&lt;a href="https://openaps.org/what-is-openaps/"&gt;OpenAPS&lt;/a&gt;，即&lt;strong x-id="1"&gt;AAPS&lt;/strong&gt;的開發基礎，&lt;a href="https://openaps.org/what-is-openaps/"&gt;OpenAPS 網站&lt;/a&gt; 是一個很好的資源。
+理解DIY循環控制系統基本原理的絕佳方式是閱讀Dana Lewis的書《自動化胰島素輸送》。 你可以在[這裡](https://www.artificialpancreasbook.com/)免費獲取該書的電子版（或購買該書的實體書）。 如果你想了解更多關於[OpenAPS](https://openaps.org/what-is-openaps/)，**AAPS**就是從該系統發展而來的，[OpenAPS](https://openaps.org/what-is-openaps/)網站是一個很好的資訊來源。
 
-目前已經有幾個商業混合閉環系統問世，其中最新的是&lt;a href="https://camdiab.com/"&gt;CamAPS FX&lt;/a&gt;（英國和歐盟）和&lt;a href="https://www.omnipod.com/en-gb/what-is-omnipod/omnipod-5"&gt;Omnipod 5&lt;/a&gt;（美國和歐盟）。 這些系統與DIY系統非常不同，主要是因為它們都包含一個“學習算法”，該算法根據你過去幾天的胰島素需求調整胰島素的輸送量。 許多DIY社群的成員已經嘗試過這些商業系統，並將它們與自己的DIY系統進行了比較。 You can find out more about how the different systems compare by asking on the dedicated Facebook groups for these systems, on the [AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/) or on [Discord](https://discord.com/invite/4fQUWHZ4Mw).
+目前已經有幾個商業混合閉環系統問世，其中最新的是 [CamAPS FX](https://camdiab.com/)（英國和歐盟）和 [Omnipod 5](https://www.omnipod.com/en-gb/what-is-omnipod/omnipod-5)（美國和歐盟）. 這些系統與DIY系統非常不同，主要是因為它們都包含一個“學習算法”，該算法根據你過去幾天的胰島素需求調整胰島素的輸送量。 許多DIY社群的成員已經嘗試過這些商業系統，並將它們與自己的DIY系統進行了比較。 You can find out more about how the different systems compare by asking on the dedicated Facebook groups for these systems, on the [AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/) or on [Discord](https://discord.com/invite/4fQUWHZ4Mw).
 
 ## 什麼是Android APS (AAPS)?
 
 ![image](./images/basic-outline-of-AAPS.png)
 
-&lt;strong x-id="1"&gt;圖1&lt;/strong&gt;。 Android APS (人工胰臟系統，AAPS) 的基本概述。
+**圖1**。 Android APS (人工胰臟系統，AAPS) 的基本概述。
 
-Android APS (&lt;strong x-id="1"&gt;AAPS&lt;/strong&gt;) 是一個混合閉環系統，或人工胰臟系統 (APS)。 它使用已建立的&lt;a href="https://openaps.org/"&gt;OpenAPS&lt;/a&gt;演算法（一組規則）來進行胰島素劑量計算，這些演算法是由#WeAreNotWaiting 1型糖尿病社群所開發。
+Android APS（**AAPS**）是一個混合閉環系統，或稱人工胰臟系統（APS）。 它使用 [OpenAPS](https://openaps.org/) 社群所開發的演算法（即一套規則）來進行胰島素劑量計算，這些演算法是由#WeAreNotWaiting的1型糖尿病社群所開發。
 
-由於OpenAPS僅與某些較舊的胰島素幫浦兼容，&lt;strong x-id="1"&gt;AAPS&lt;/strong&gt;（可以與更多種類的胰島素幫浦一起使用）於2016年由Milos Kozak為家中1型糖尿病患者開發。 自那時起，&lt;strong x-id="1"&gt;AAPS&lt;/strong&gt;由一群志願的計算機開發者及其他與1型糖尿病有關聯的愛好者持續開發和改進。 Today, **AAPS** is used by approximately 10,000 people. 它是一個高度可自訂且多功能的系統，並且由於它是開源的，因此也可以很容易地與許多其他開源的糖尿病軟體和平台兼容。 當前 &lt;strong x-id="1"&gt;AAPS&lt;/strong&gt; 系統的基本組成部分在上面的 &lt;strong x-id="1"&gt;圖 1&lt;/strong&gt; 中有所說明。
+由於OpenAPS只相容於某些較舊的胰島素幫浦，**AAPS**（可以搭配更多類型的胰島素幫浦使用）於2016年由Milos Kozak為其家族中的一位1型糖尿病患者開發。 自那時以來，**AAPS**一直由一群志願電腦開發者和對1型糖尿病有關聯的愛好者持續發展和改進。 Today, **AAPS** is used by approximately 10,000 people. 它是一個高度可自訂且多功能的系統，並且由於它是開源的，因此也可以很容易地與許多其他開源的糖尿病軟體和平台兼容。 當前**AAPS**系統的基本組成部分如上圖**圖1**所示。
 
 
 
 ## AAPS 的基本組成部分是什麼？
 
-&lt;strong x-id="1"&gt;AAPS&lt;/strong&gt; 的“核心”是一個您自己構建的 &lt;strong x-id="1"&gt;應用程式&lt;/strong&gt;。 這裡有詳細的步驟說明。 然後，您將 &lt;strong x-id="1"&gt;AAPS 應用程式&lt;/strong&gt; 安裝在一部 &lt;a href="https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit?pli=1#gid=2097219952"&gt;兼容的&lt;/a&gt; &lt;strong x-id="1"&gt;Android 智慧型手機&lt;/strong&gt; 上（&lt;strong x-id="1"&gt;1&lt;/strong&gt;）。 一些用戶更喜歡將環路運行在與主手機分開的手機上。 因此，您不必在日常生活中使用 Android 手機，只需用於運行您的 AAPS 環路即可。
+AAPS 的“核心”是一個你自己構建的**應用程式**。 這裡有詳細的步驟說明。 然後你可以將** AAPS** 應用程式安裝在[相容](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit?pli=1#gid=2097219952)的** Android 智慧型手機** (**1**) 上。 一些用戶更喜歡將環路運行在與主手機分開的手機上。 因此，您不必在日常生活中使用 Android 手機，只需用於運行您的 AAPS 環路即可。
 
 **安卓智能手機**也需要安裝另一個應用程式，以及 **AAPS**。 這是一個修改過的 Dexcom 應用程式，稱為自建 Dexcom 應用程式[**BYODA**](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) 或 [**Xdrip+**](https://xdrip.readthedocs.io/en/latest/install/usethedoc/)。 這個附加應用程序通過藍牙從傳感器(**2**) 接收葡萄糖資料，然後將資料內部發送到手機上的 **AAPS 應用程序**。
 
@@ -69,18 +69,18 @@ Android APS (&lt;strong x-id="1"&gt;AAPS&lt;/strong&gt;) 是一個混合閉環�
 
  a) 在進食前的30分鐘設定較低的葡萄糖目標；您可以將目標設定為低至72 mg/dL（4.0 mmol/L）。
 
- b) If you are insulin-resistant resulting in high blood sugars, **AAPS** allows you to set an **automation** rule  to activate when BG rises above 8 mmol/L (144 mg/dL), switching to (for example) a 120% profile (resulting in an 20% increase in basal and strengthening of other factors too, compared to your normal **profile** setting). The automation will last according to the scheduled time you set. Such an automation could be set to only be active on certain days of the week, at certain times of day, and even at certain locations.
+ b) 如果您對胰島素有抗藥性，導致血糖偏高，**AAPS** 允許您設置一個 **自動化** 規則，當血糖升高至 8 mmol/L (144 mg/dL) 時啟動，切換到（例如）120% 的配置文件（與您正常 **個人設置** 相比，相當於基礎增加20%，並加強其他因素）。 自動化將根據您設定的時間持續生效。 此類自動化還可以設定為僅在特定星期幾、特定時間或甚至在特定位置啟動。
 
- c) If your child is on a trampoline with no advance notice, **AAPS** allows insulin  suspension for a set time period, directly via the phone.
+ c) 如果您的孩子突然在蹦床上玩耍，**AAPS** 允許您直接通過手機暫停胰島素輸送，並設定特定的時間段。
 
- d) After reconnecting a tubed pump which has been disconnected for  swimming, **AAPS** will calculate the basal insulin you have missed while disconnected and deliver it carefully, according to your current BG. Any insulin not required can be overridden by just “cancelling” the missed basal.
+ d) 當您重新連接因游泳而斷開的幫浦時，**AAPS** 會根據當前血糖計算您在斷開連線期間遺漏的基礎胰島素，並小心地補充。 不需要的胰島素可以通過“取消”遺漏的基礎率來忽略。
 
- e) **AAPS** has the facility for you to set different profiles for different situations and easily switch between them. For example, features which make the algorithm quicker to bring down elevated BG (like supermicro boluses (“**SMB**”), unannounced meals, (“**UAM**”) can be set to only work during the daytime, if you are worried about night-time hypos.
+ e) **AAPS** 提供設置不同情境下的不同設定檔的功能，並且能夠輕鬆切換。 例如，可以將更快速降低高血糖的功能（如超微量注射（**SMB**）、未預先宣布的餐前注射（**UAM**））設置為僅在白天啟用，以避免夜間低血糖的風險。
 
-These are all examples, the full range of features gives huge flexibility for daily life including sport, illness, hormone cycles _etc_. Ultimately, it is for the user to decide how to use this flexibility, and there is no one-size-fits-all automation for this.
+這些都是一些範例，完整的功能範圍提供了極大的靈活性來應對日常生活中的各種狀況，包括運動、疾病、荷爾蒙周期、_其它_等。 最後，這些彈性功能該怎麼用，全看使用者自己決定，因為沒有一套通用的自動化規則適合每個人。
 
-#### 3) **Remote monitoring**
-There are multiple possible monitoring channels (Sugarmate, Dexcom Follow, Xdrip+, Android Auto _etc._) which are useful for parents/carers and adults in certain scenarios (sleeping/driving) who need customisable alerts. In some apps (Xdrip+) you can also turn alarms off totally, which is great if you have a new sensor “soaking” or settling down that you don’t want to loop with yet.
+#### 3) **遠端監控**
+有多種可能的監控渠道（如 Sugarmate、Dexcom Follow、Xdrip+、Android Auto 、_其它_等），這對於父母/照護者以及需要自定義警報的成人（如睡覺/駕駛時）特別有用。 In some apps (Xdrip+) you can also turn alarms off totally, which is great if you have a new sensor “soaking” or settling down that you don’t want to loop with yet.
 
 #### 4) **Remote control**
 A significant advantage of **AAPS** over commercial systems is that it is possible for followers, using authenticated text (SMS) commands or via an app ([Nightscout](https://nightscout.github.io/) or AAPSClient) to send a wide range of commands back to the **AAPS** system. This is used extensively by parents of kids with type 1 diabetes who use AAPS. It is very useful: for example, in the playground, if you want to pre-bolus for a snack from your own phone, and your child is busy playing. It is possible to monitor the system (_e.g._ Fitbit), send basic commands (_e.g._ Samsung Galaxy watch 4), or even run the entire AAPS system from a high-spec smartwatch (**5**) (_e.g._ LEMFO LEM14). In this last scenario, you don’t need to use a phone to run AAPS. As battery life on watches improves and technology becomes more stable, this last option is likely to become increasingly attractive.
