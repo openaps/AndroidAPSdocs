@@ -22,7 +22,7 @@
 ```
 
 (Preferences-general)=
-## General
+## 一般問題
 
 ![Preferences > General](../images/Pref2020_General.png)
 
@@ -137,7 +137,7 @@
   ![Preferences > Buttons > Carbs](../images/Pref2020_OV_Buttons3.png)
 
 (Preferences-quick-wizard)=
-### Quick Wizard
+### 快速向導
 
 - If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
 
@@ -195,19 +195,19 @@
 (Preferences-status-lights)=
 ### Status lights
 
-- Status lights give a visual warning for
+- 狀態指示燈為以下情況提供視覺警告：
 
-  - Sensor age
+  - 傳感器使用時間
   - Sensor battery level for certain smart readers (see [screenshots page](Screenshots-sensor-level-battery) for details).
-  - Insulin age (days reservoir is used)
-  - Reservoir level (units)
-  - Cannula age
+  - 胰島素的使用時間（儲液罐使用的天數）
+  - 儲液罐的剩餘容量（單位）
+  - 輸注針頭的使用時間
   - Pump battery age
   - Pump battery level (%)
 
-- If threshold warning is exceeded, values will be shown in yellow.
+- 如果超過閾值警告，數值將顯示為黃色。
 
-- If threshold critical is exceeded, values will be shown in red.
+- 如果超過臨界值警告，數值將顯示為紅色。
 
 - In versions prior to AAPS 2.7 settings for status lights had to be made in Nightscout settings.
 
@@ -347,7 +347,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 - A threshold can be defined - minimum amount of carbs needed to trigger a notification.
 
-- Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+- 如果需要，碳水化合物需求通知可以推送到 Nightscout，屆時會顯示並廣播公告。
 
   ![Display carbs required on home screen](../images/Pref2020_CarbsRequired.png)
 
