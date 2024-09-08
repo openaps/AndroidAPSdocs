@@ -1,4 +1,4 @@
-# Remote monitoring
+# 遠端監控
 
 ![Monitoring children](../images/KidsMonitoring.png)
 
