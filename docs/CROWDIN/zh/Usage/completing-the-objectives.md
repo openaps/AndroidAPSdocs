@@ -21,7 +21,7 @@ Overall the **objectives** take around 6 weeks to complete (see [how long will i
 
 As well as progressing through the **objectives**, if you want, you can also remove your progress and [go back to an earlier objective](Objectives-go-back-in-objectives).
 
-## Objective 1: Setting up visualization and monitoring, analysing basals and ratios
+## 目標 1：設置可視化與監控，分析基礎率與比率
 
 - **AAPS** checks if your basic technical setup is working.
 
@@ -34,7 +34,7 @@ If not you have to reconfigure until the basic technical setup works for **AAPS*
 
 Note - _You may need to wait for the next sensor glucose reading to arrive before **AAPS** will recognise it._
 
-## Objective 2: Learn how to control AAPS
+## 目標 2：學習如何控制 AAPS
 
 - Perform several actions in **AAPS** as described in this **objective**.
 - Click on the orange text "Not completed yet" to access the to-dos.
@@ -52,7 +52,7 @@ Note - _You may need to wait for the next sensor glucose reading to arrive befor
 
 (Objectives-objective-3-prove-your-knowledge)=
 
-## Objective 3: Prove your knowledge
+## 目標 3：證明你的知識
 
 - Pass a multiple-choice exam testing your **AAPS** knowledge.
 
@@ -73,7 +73,7 @@ When **AAPS** is installed for the first time, you will have to complete the who
 From time to time, new features are added to **AAPS** which may require a new question to be added to the Objectives, particularly Objective 3. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other Objectives remain completed.
 :::
 
-## Objective 4: Starting on an open loop
+## 目標 4：開始使用開環
 
 The purpose of this objective is to recognise how often **AAPS** will evaluate the basal rate's impact on glucose levels, and recommend temporary basal rate adjustments. As part of this objective, you will activate open looping for the first time, and will perform 20 proposed temporary basal rate changes manually on your pump. Furthermore, you will observe temporary and default temporary targets' impact (_e.g._ for activity or hypo treatments). If you are not familiar with setting a temporay basal rate change in **AAPS** yet, please refer to the [ACTIONS tab](Screenshots#Screenshots-action-tab).
 
@@ -98,7 +98,7 @@ Estimated time to complete this objective: **7 days**. This is a mandatory wait 
 
 (Objectives-objective-5-Understanding-your-open-loop-including-its-temp-basal-recommendations)=
 
-## Objective 5: Understanding your open loop, including its temp basal recommendations
+## 目標 5：理解你的開環，包括其臨時基礎率建議
 
 As part of **Objective 5** you will start to understand how temporary basal recommendations are derived. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in AAPS OVERVIEW](Screenshots-prediction-lines)/Nightscout and looking at detailed calculations shown on your OPENAPS tab.
 
@@ -132,7 +132,7 @@ If you are open looping with a virtual pump stop here. Only click verify at the 
 
 (Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)=
 
-## Objective 6: Starting to close the loop with Low Glucose Suspend
+## 目標 6：使用低血糖中止功能開始閉環
 
 ![Warning sign](../images/sign_warning.png)
 :::{admonition}  Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend only!
@@ -183,7 +183,7 @@ This recommendation should be seen as a starting point. If you set it to the 3x 
 
 (Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)=
 
-## Objective 8: Adjust basals and ratios if needed, and then enable autosens
+## 目標 8：如有需要，調整基礎率與比率，然後啟用自動感應
 
 As part of this objective you will revist your profile's performance and will use autosens functionality as an indicator for wrong settings.
 
@@ -204,7 +204,7 @@ In this objective you will tackle and use "Super Micro Bolus (SMB)" as one core 
 
 (Objectives-objective-10-automation)=
 
-## Objective 10: Automation
+## 目標 10：自動化
 
 You have to start **Objective 10** to be able to use Automations.
 
