@@ -1049,7 +1049,7 @@ This list is sorted from background to foreground this is very important when yo
 | time             | Text View           | HH:MM or HH:MM:SS                                                                                      |                         |
 | hour             | Text View           | HH                                                                                                     |                         |
 | minute           | Text View           | MM                                                                                                     |                         |
-| second           | Text View           | SS                                                                                                     |                         |
+| 第二               | Text View           | SS                                                                                                     |                         |
 | timePeriod       | Text View           | AM or PM                                                                                               |                         |
 | day_name         | Text View           | name of the day (cf. dayNameFormat)                                                                    | day_name                |
 | day              | Text View           | DD date                                                                                                | day                     |
