@@ -1,6 +1,6 @@
-# 歡迎來到 AAPS 文件
+# 歡迎來到 AAPS 文件指南
 
-![image](./images/basic-outline-of-AAPS.png)
+![圖像](./images/basic-outline-of-AAPS.png)
 
 Android APS (**AAPS**) 是一款為胰島素依賴型糖尿病患者設計的開源應用程式。 這是一個人工胰臟系統 (APS)，可以在 Android 智慧型手機上運行。 **AAPS**使用開源的 openAPS 軟體演算法，旨在模擬真實胰臟的功能：透過自動調控胰島素劑量來保持血糖水平在健康範圍內。 要使用**AAPS**，你需要**三種**兼容設備：一台Android手機、一個經 FDA/CE 認證的胰島素幫浦，以及一個連續血糖監測儀（CGM）。
 
