@@ -22,7 +22,7 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 (Config-Builder-profile)=
 
-## Profile
+## 設定檔
 
 * Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
 * As of AAPS 3.0, only the local profile is available.
@@ -165,7 +165,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 
 (Config-Builder-pump)=
 
-## Pump
+## 幫浦
 
 Select the pump you are using.
 
@@ -258,7 +258,7 @@ See [Objectives](../Usage/Objectives.md) page for more information.
 
 If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](Screenshots-carb-correction).
 
-## General
+## 一般問題
 
 ### Overview
 
