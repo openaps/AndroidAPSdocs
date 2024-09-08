@@ -287,7 +287,7 @@ Problems can arise with overlapping definitions in Automations. Example: The pro
 
 Also it is very easy and quick to adjust any conditions or actions at any time, within seconds, just on your AAPS smartphone; for instance if you head into a very special eating event. (But don’t forget to set it back to normal on/for the next day).
 
-## Troubleshooting
+## 疑難排解
 
 ### How to get back into Hybrid Closed Loop
 
