@@ -12,7 +12,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 * [Troubleshooting AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 
 ### Settings
-* [Profile](Profiles-troubleshooting-profile-errors)
+* [設定檔](Profiles-troubleshooting-profile-errors)
 
   ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
 
@@ -84,7 +84,7 @@ Here are examples how to find them on specific android phones.
 
 ## CGM
 
-* [General](GeneralCGMRecommendation-troubleshooting)
+* [一般問題](GeneralCGMRecommendation-troubleshooting)
 * [Dexcom G6](DexcomG6-troubleshooting-g6)
 * [Libre 3](Libre3-experiences-and-troubleshooting)
 * [Libre 2](Libre2-experiences-and-troubleshooting)
