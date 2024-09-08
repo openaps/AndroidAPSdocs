@@ -167,7 +167,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 - HELP BOLUS \* Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
 (SMS-Commands-troubleshooting)=
-## Troubleshooting
+## 疑難排解
 
 ### Multiple SMS
 
