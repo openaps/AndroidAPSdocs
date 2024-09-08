@@ -251,7 +251,7 @@ The **Automation** will:
 
 ![Alt text](../images/automation_2024-02-12_21-05-56.png-500x.png)
 
-## Troubleshooting
+## 疑難排解
 
 * Problem: __My automations are not being triggered by AAPS?__
 
