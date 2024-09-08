@@ -65,7 +65,7 @@ Android APS (**AAPS**) 是一款為胰島素依賴型糖尿病患者設計的開
 
 AAPS介紹 <./introduction.md>
 準備AAPS <preparing.md>
-相容泵浦  <./Getting-Started/Pump-Choices.md>
+相容幫浦浦  <./Getting-Started/Pump-Choices.md>
 相容CGM <./Configuration/BG-Source.md>
 相容手機  <./Hardware/Phoneconfig.md>
 ```
@@ -110,7 +110,7 @@ COB 計算 <./Usage/COB-calculation.md>
 手機
 夏令時間變更
 與AAPS旅行
-跨時區與泵旅行 <./Usage/Timezone-traveling.md>
+跨時區與幫浦旅行 <./Usage/Timezone-traveling.md>
 
 ```
 
