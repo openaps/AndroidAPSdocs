@@ -4,40 +4,40 @@
 
 - Click on the hamburger menu in the top left corner.
 
-![圖像](../images/DiaconnG8/DiaconnG8_01.jpg)
+![image](../images/DiaconnG8/DiaconnG8_01.jpg)
 
 - Click on Config Builder.
 
-![圖像](../images/DiaconnG8/DiaconnG8_02.jpg)
+![image](../images/DiaconnG8/DiaconnG8_02.jpg)
 
 - After selecting the Diaconn G8 Pump click on the Settings icon (cog wheel).
 
-![圖像](../images/DiaconnG8/DiaconnG8_03.jpg)
+![image](../images/DiaconnG8/DiaconnG8_03.jpg)
 
 - Choose Selected pump.
 
-![圖像](../images/DiaconnG8/DiaconnG8_04.jpg)
+![image](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 - Select your insulin pump’s model number once it appears in the list.
 
-![圖像](../images/DiaconnG8/DiaconnG8_05.jpg)
+![image](../images/DiaconnG8/DiaconnG8_05.jpg)
 
 - There are two options to check your model number:
 
 1. The last 5 digits of the SN number on the back of the pump.
 2. Click on O button > Information > BLE > Last 5 digits.
 
-![圖像](../images/DiaconnG8/DiaconnG8_06.jpg)
+![image](../images/DiaconnG8/DiaconnG8_06.jpg)
 
 - Once you select your pump, a window appears asking for a pin code. Enter the pin number displayed on your pump to complete the connection.
 
- ![圖像](../images/DiaconnG8/DiaconnG8_07.jpg)
+ ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
 
 ## Pump status check and log synchronization
 
 - Once your pump is connected, click on the Bluetooth symbol to check the status and to synchronize logs.
 
-![圖像](../images/DiaconnG8/DiaconnG8_08.jpg)
+![image](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ## Bluetooth Troubleshooting
 
@@ -47,25 +47,25 @@
 
 - Click on the 3 dots button on the top right.
 
-![圖像](../images/DiaconnG8/DiaconnG8_09.jpg)
+![image](../images/DiaconnG8/DiaconnG8_09.jpg)
 
 - Click on Exit.
 
-![圖像](../images/DiaconnG8/DiaconnG8_10.jpg)
+![image](../images/DiaconnG8/DiaconnG8_10.jpg)
 
 ### Method 2) If the first method doesn’t work, disconnect Bluetooth and then reconnect.
 
 - Press and hold the Bluetooth button at the top for about 3 seconds.
 
-![圖像](../images/DiaconnG8/DiaconnG8_11.jpg)
+![image](../images/DiaconnG8/DiaconnG8_11.jpg)
 
 - Click on the Setting button on the paired Diaconn G8 Insulin pump.
 
-![圖像](../images/DiaconnG8/DiaconnG8_12.jpg)
+![image](../images/DiaconnG8/DiaconnG8_12.jpg)
 
 - Unpair.
 
-![圖像](../images/DiaconnG8/DiaconnG8_13.jpg)
+![image](../images/DiaconnG8/DiaconnG8_13.jpg)
 
 - Repeat the Bluetooth pairing process for the pump (see above).
 
