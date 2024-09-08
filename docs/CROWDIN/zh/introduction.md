@@ -8,7 +8,7 @@
 
 你可以在這篇2022年的回顧文章中閱讀更多關於目前使用及開發中的各種人工胰臟系統：
 
-![Frontiers](./images/FRONTIERS_Logo_Grey_RGB.png) [閉環技術的未來方向](https://www.frontiersin.org/articles/10.3389/fendo.2022.919942/full#:~:text=Fully%20closed%2Dloop%20systems%2C%20unlike,user%20input%20for%20mealtime%20boluses)
+![前言](./images/FRONTIERS_Logo_Grey_RGB.png) [閉環技術的未來方向](https://www.frontiersin.org/articles/10.3389/fendo.2022.919942/full#:~:text=Fully%20closed%2Dloop%20systems%2C%20unlike,user%20input%20for%20mealtime%20boluses)
 
 在不久的將來，一些所謂的“雙激素”系統還將能夠同時注射胰高血糖素與胰島素，目的是預防嚴重的低血糖，並實現更嚴密的血糖控制。
 
@@ -110,7 +110,7 @@ AAPS 的“核心”是一個你自己構建的**應用程式**。 這裡有詳�
 
 每日多次注射（MDI，見下方**圖2** (a)）通常包括每天注射一次長效胰島素（例如Tresiba），並在用餐時間或進行矯正時注射快速作用的胰島素（例如Novorapid、Fiasp）。 開環幫浦（b）使用幫浦以預編程的速率輸送快速作用胰島素作為基礎率，然後在用餐或進行矯正時通過幫浦進行注射。 閉環系統的基本原理是，應用程式使用傳感器的血糖資料來指導幫浦在預測低血糖時停止胰島素輸送，並在血糖上升且預測過高時提供額外的胰島素（c）。 雖然這個圖表與現實生活相比有所簡化，但它旨在展示這些方法的關鍵區別。 使用這三種方法中的任何一種都可以實現出色的血糖控制。
 
-![21-06-23 AAPS glucose MDI etc](./images/basic-overview-mdi-open-and-closed-loop.png)
+![21-06-23 AAPS 血糖 MDI 等等](./images/basic-overview-mdi-open-and-closed-loop.png)
 
 
 **圖2**。 簡單概述了（a）MDI，（b）開環幫浦和（c）混合閉環幫浦。
@@ -123,35 +123,35 @@ AAPS 的“核心”是一個你自己構建的**應用程式**。 這裡有詳�
 
 
 
-| 設備類型 | 名稱                                                            | [AAPS](https://wiki.aaps.app)            | [循環](https://loopkit.github.io/loopdocs/) | [Open APS](https://openaps.readthedocs.io/en/latest/) | [iAPS](https://iaps.readthedocs.io/en/latest/) |
-| ---- | ------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------- | ----------------------------------------------------- | ---------------------------------------------- |
-| 手機   | Android                                                       | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)  | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| 手機   | iPhone                                                        | ![unavailable](./images/unavailable.png) | ![available](./images/available.png)      | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| 設備   | 微型電腦 (1)                                                      | ![unavailable](./images/unavailable.png) | ![unavailable](./images/unavailable.png)  | ![available](./images/available.png)                  | ![unavailable](./images/unavailable.png)       |
-| 幫浦   | [Dana I](../Configuration/DanaRS-Insulin-Pump.md)             | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)  | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| 幫浦   | [Dana RS](../Configuration/DanaRS-Insulin-Pump.md)            | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)  | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| 幫浦   | [Dana R](../Configuration/DanaR-Insulin-Pump.md)              | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)  | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| 幫浦   | [Omnipod (Dash)](../Configuration/OmnipodDASH.md) (2)         | ![available](./images/available.png)     | ![available](./images/available.png)      | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| 幫浦   | [Omnipod (Eros)](../Configuration/OmnipodEros.md)             | ![available](./images/available.png)     | ![available](./images/available.png)      | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| 幫浦   | [Diaconn G8](../Configuration/DiaconnG8.md)                   | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)  | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| 幫浦   | [EOPatch 2](../Configuration/EOPatch2.md)                     | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)  | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| 幫浦   | [Medtrum TouchCare Nano](../Configuration/MedtrumNano.md)     | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)  | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| 幫浦   | [Medtrum TouchCare 300U](../Configuration/MedtrumNano.md)     | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)  | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| 幫浦   | [Roche Combo](../Configuration/Accu-Chek-Combo-Pump.md)       | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)  | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| 幫浦   | [Roche Insight](../Configuration/Accu-Chek-Insight-Pump.md)   | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)  | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| 幫浦   | [舊款美敦力](../Configuration/MedtronicPump.md)                    | ![available](./images/available.png)     | ![available](./images/available.png)      | ![available](./images/available.png)                  | ![available](./images/available.png)           |
-| CGM  | [Dexcom G7](../Hardware/DexcomG7.md)                          | ![available](./images/available.png)     | ![available](./images/available.png)      | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| CGM  | [Dexcom One](../Hardware/DexcomG6.md)                         | ![available](./images/available.png)     | ![available](./images/available.png)      | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| CGM  | [Dexcom G6](../Hardware/DexcomG6.md)                          | ![available](./images/available.png)     | ![available](./images/available.png)      | ![available](./images/available.png)                  | ![available](./images/available.png)           |
-| CGM  | [Dexcom G5](../Hardware/DexcomG5.md)                          | ![available](./images/available.png)     | ![available](./images/available.png)      | ![available](./images/available.png)                  | ![available](./images/available.png)           |
-| CGM  | [Dexcom G4](../Hardware/DexcomG4.md)                          | ![available](./images/available.png)     | ![available](./images/available.png)      | ![available](./images/available.png)                  | ![available](./images/available.png)           |
-| CGM  | [Libre 3](../Hardware/Libre3.md)                              | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)  | ![unavailable](./images/unavailable.png)              | ![unavailable](./images/unavailable.png)       |
-| CGM  | [Libre 2](../Hardware/Libre2.md)                              | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)  | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| CGM  | [Libre 1](../Hardware/Libre1.md)                              | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)  | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| CGM  | [Eversense](../Hardware/Eversense.md)                         | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)  | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| CGM  | [MM640g/MM630g](../Hardware/MM640g.md)                        | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)  | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| CGM  | [PocTech](../Hardware/PocTech.md)                             | ![available](./images/available.png)     | ![unavailable](./images/unavailable.png)  | ![unavailable](./images/unavailable.png)              | ![available](./images/available.png)           |
-| CGM  | [Nightscout as BG Source](../Hardware/CgmNightscoutUpload.md) | ![available](./images/available.png)     | ![available](./images/available.png)      | ![available](./images/available.png)                  | ![available](./images/available.png)           |
+| 設備類型 | 名稱                                                            | [AAPS](https://wiki.aaps.app)    | [循環](https://loopkit.github.io/loopdocs/) | [Open APS](https://openaps.readthedocs.io/en/latest/) | [iAPS](https://iaps.readthedocs.io/en/latest/) |
+| ---- | ------------------------------------------------------------- | -------------------------------- | ----------------------------------------- | ----------------------------------------------------- | ---------------------------------------------- |
+| 手機   | Android                                                       | ![可用](./images/available.png)    | ![不可用](./images/unavailable.png)          | ![不可用](./images/unavailable.png)                      | ![不可用](./images/unavailable.png)               |
+| 手機   | iPhone                                                        | ![不可用](./images/unavailable.png) | ![可用](./images/available.png)             | ![不可用](./images/unavailable.png)                      | ![可用](./images/available.png)                  |
+| 設備   | 微型電腦 (1)                                                      | ![不可用](./images/unavailable.png) | ![不可用](./images/unavailable.png)          | ![可用](./images/available.png)                         | ![不可用](./images/unavailable.png)               |
+| 幫浦   | [Dana I](../Configuration/DanaRS-Insulin-Pump.md)             | ![可用](./images/available.png)    | ![不可用](./images/unavailable.png)          | ![不可用](./images/unavailable.png)                      | ![不可用](./images/unavailable.png)               |
+| 幫浦   | [Dana RS](../Configuration/DanaRS-Insulin-Pump.md)            | ![可用](./images/available.png)    | ![不可用](./images/unavailable.png)          | ![不可用](./images/unavailable.png)                      | ![不可用](./images/unavailable.png)               |
+| 幫浦   | [Dana R](../Configuration/DanaR-Insulin-Pump.md)              | ![可用](./images/available.png)    | ![不可用](./images/unavailable.png)          | ![不可用](./images/unavailable.png)                      | ![不可用](./images/unavailable.png)               |
+| 幫浦   | [Omnipod (Dash)](../Configuration/OmnipodDASH.md) (2)         | ![可用](./images/available.png)    | ![可用](./images/available.png)             | ![不可用](./images/unavailable.png)                      | ![可用](./images/available.png)                  |
+| 幫浦   | [Omnipod (Eros)](../Configuration/OmnipodEros.md)             | ![可用](./images/available.png)    | ![可用](./images/available.png)             | ![不可用](./images/unavailable.png)                      | ![可用](./images/available.png)                  |
+| 幫浦   | [Diaconn G8](../Configuration/DiaconnG8.md)                   | ![可用](./images/available.png)    | ![不可用](./images/unavailable.png)          | ![不可用](./images/unavailable.png)                      | ![不可用](./images/unavailable.png)               |
+| 幫浦   | [EOPatch 2](../Configuration/EOPatch2.md)                     | ![可用](./images/available.png)    | ![不可用](./images/unavailable.png)          | ![不可用](./images/unavailable.png)                      | ![不可用](./images/unavailable.png)               |
+| 幫浦   | [Medtrum TouchCare Nano](../Configuration/MedtrumNano.md)     | ![可用](./images/available.png)    | ![不可用](./images/unavailable.png)          | ![不可用](./images/unavailable.png)                      | ![不可用](./images/unavailable.png)               |
+| 幫浦   | [Medtrum TouchCare 300U](../Configuration/MedtrumNano.md)     | ![可用](./images/available.png)    | ![不可用](./images/unavailable.png)          | ![不可用](./images/unavailable.png)                      | ![不可用](./images/unavailable.png)               |
+| 幫浦   | [Roche Combo](../Configuration/Accu-Chek-Combo-Pump.md)       | ![可用](./images/available.png)    | ![不可用](./images/unavailable.png)          | ![不可用](./images/unavailable.png)                      | ![不可用](./images/unavailable.png)               |
+| 幫浦   | [Roche Insight](../Configuration/Accu-Chek-Insight-Pump.md)   | ![可用](./images/available.png)    | ![不可用](./images/unavailable.png)          | ![不可用](./images/unavailable.png)                      | ![不可用](./images/unavailable.png)               |
+| 幫浦   | [舊款美敦力](../Configuration/MedtronicPump.md)                    | ![可用](./images/available.png)    | ![可用](./images/available.png)             | ![可用](./images/available.png)                         | ![可用](./images/available.png)                  |
+| CGM  | [Dexcom G7](../Hardware/DexcomG7.md)                          | ![可用](./images/available.png)    | ![可用](./images/available.png)             | ![不可用](./images/unavailable.png)                      | ![可用](./images/available.png)                  |
+| CGM  | [Dexcom One](../Hardware/DexcomG6.md)                         | ![可用](./images/available.png)    | ![可用](./images/available.png)             | ![不可用](./images/unavailable.png)                      | ![可用](./images/available.png)                  |
+| CGM  | [Dexcom G6](../Hardware/DexcomG6.md)                          | ![可用](./images/available.png)    | ![可用](./images/available.png)             | ![可用](./images/available.png)                         | ![可用](./images/available.png)                  |
+| CGM  | [Dexcom G5](../Hardware/DexcomG5.md)                          | ![可用](./images/available.png)    | ![可用](./images/available.png)             | ![可用](./images/available.png)                         | ![可用](./images/available.png)                  |
+| CGM  | [Dexcom G4](../Hardware/DexcomG4.md)                          | ![可用](./images/available.png)    | ![可用](./images/available.png)             | ![可用](./images/available.png)                         | ![可用](./images/available.png)                  |
+| CGM  | [Libre 3](../Hardware/Libre3.md)                              | ![可用](./images/available.png)    | ![不可用](./images/unavailable.png)          | ![不可用](./images/unavailable.png)                      | ![不可用](./images/unavailable.png)               |
+| CGM  | [Libre 2](../Hardware/Libre2.md)                              | ![可用](./images/available.png)    | ![不可用](./images/unavailable.png)          | ![不可用](./images/unavailable.png)                      | ![可用](./images/available.png)                  |
+| CGM  | [Libre 1](../Hardware/Libre1.md)                              | ![可用](./images/available.png)    | ![不可用](./images/unavailable.png)          | ![不可用](./images/unavailable.png)                      | ![可用](./images/available.png)                  |
+| CGM  | [Eversense](../Hardware/Eversense.md)                         | ![可用](./images/available.png)    | ![不可用](./images/unavailable.png)          | ![不可用](./images/unavailable.png)                      | ![可用](./images/available.png)                  |
+| CGM  | [MM640g/MM630g](../Hardware/MM640g.md)                        | ![可用](./images/available.png)    | ![不可用](./images/unavailable.png)          | ![不可用](./images/unavailable.png)                      | ![可用](./images/available.png)                  |
+| CGM  | [PocTech](../Hardware/PocTech.md)                             | ![可用](./images/available.png)    | ![不可用](./images/unavailable.png)          | ![不可用](./images/unavailable.png)                      | ![可用](./images/available.png)                  |
+| CGM  | [Nightscout as BG Source](../Hardware/CgmNightscoutUpload.md) | ![可用](./images/available.png)    | ![可用](./images/available.png)             | ![可用](./images/available.png)                         | ![可用](./images/available.png)                  |
 
 _表格說明：_
 1. 一個 **設備** 是一個隨身攜帶的小型電腦，沒有顯示螢幕。 支持的設備類型包括Intel Edison + Explorer Board，另一種是Raspberry Pi + Explorer HAT或Adafruit RFM69HCW Bonnet。 最早的APS系統基於這樣的設置，因為當時的手機無法運行所需的演算法。 隨著手機設置變得更簡單，並且手機內建顯示螢幕，這些系統的使用已經減少。 Intel也已經停止銷售Intel Edison。 優秀的OpenAPS演算法**oref0**和 **oref1**現在已經被整合到AAPS和iAPS中。
@@ -320,11 +320,11 @@ Ultimately it is up to the patient to weigh up these factors, along with any non
 
 **圖3（下方）**顯示了一個不需要其他跟隨者與系統互動的 **AAPS** 用戶的系統範例。 還可以集成其他未顯示的開源軟體和平台。  
 
-![21-06-23 AAPS connectivity no followers](./images/AAPS-connectivity-no-followers.png)
+![21-06-23 AAPS 連接性無跟隨者](./images/AAPS-connectivity-no-followers.png)
 
 **圖4（下方）**顯示了具有完整潛力的**AAPS** 系統，適用於具有跟隨者並需要遠程監控和調整系統的用戶（如1型糖尿病患兒）。 還可以集成其他未顯示的開源軟體和平台。  
 
-![21-06-23 AAPS overview with followers](./images/AAPS-overview-with-followers.png)
+![21-06-23 AAPS 跟隨者系統概覽](./images/AAPS-overview-with-followers.png)
 
 
 
@@ -374,50 +374,50 @@ AAPS 可以由盲人使用。 在Android設備上，操作系統有一個名為T
 
 如何操作取決於你的操作系統，以下提供了兩種方法： 
 
-1）在Windows開始選單中，輸入“控制面板”進行搜索，按Enter鍵打開。 It opens: “All Control Panel Items”.
+1）在Windows開始選單中，輸入“控制面板”進行搜索，按Enter鍵打開。 打開：“所有控制面板項目”。
 
-Open the "Ease of Access Centre".
+打開“輕鬆存取中心”。
 
-Then open “Use computer without a display” with Enter.
+然後按Enter鍵打開“在無顯示器的情況下使用電腦”。
 
-Under hear text read aloud select "turn on narrator" and "turn on audio display", and click "apply"
+在“聽取文字讀取”選項下，選擇“啟用敘述員”和“啟用音頻顯示”，然後點擊“應用”。
 
-or:
+或：
 
-2) Press Windows key and enter “Control Panel” in the search field, open with Enter. It opens: “All Control Panel Items”.
+2）按下Windows鍵並在搜索欄中輸入“控制面板”，然後按Enter鍵打開。 打開：“所有控制面板項目”。
 
-Press the letter C to get to “Center for Ease of Use”, open with Enter.
+按下字母C以進入“輕鬆存取中心”，然後按Enter鍵打開。
 
-Then open “Use computer without a screen” with Enter.
+接著按Enter鍵打開“在無螢幕的情況下使用電腦”。
 
-There, at the bottom, you will find the checkbox “Enable Java Access Bridge”, select it.
+在底部，你會找到“啟用Java Access Bridge”選項框，選擇它。
 
-Done, just close the window! The screen reader should work now.
-
-
+完成後，關閉窗口即可！ 屏幕閱讀器現在應該可以工作了。
 
 
 
-## What benefits can I get from AAPS?
 
-With investment of your time, **AAPS** can potentially lead to:
 
-- alleviating the stress and burden of managing type 1 diabetes;
+## 我能從AAPS獲得哪些好處？
 
-- reducing the multitude of mundane decisions that arise from type 1 diabetes;
+投入你的時間，**AAPS**潛在可以帶來以下好處：
 
-- the provision of personalised and dynamic insulin dosing based on real-time data which can cut down the need for hypo treatments and reduce hyperglycemia episodes;
+- 緩解管理1型糖尿病的壓力和負擔；
 
-- an increased knowledge of insulin management and confidence to better fine tune your settings;
+- 減少來自1型糖尿病的大量瑣碎決策；
+
+- 基於實時數據提供個性化和動態的胰島素劑量，減少低血糖治療的需要並降低高血糖發作；
+
+- 增加對胰島素管理的了解以及更好地微調設置的信心；
 
 - 能夠創建與你的生活方式相符的自動設置（**自動化**）；
 
-- improved sleep quality and overall reduction in the frequency of nighttime interventions;
+- 改善睡眠質量並整體減少夜間干預的頻率；
 
-- remote monitoring and administration of insulin delivery for caregivers of type 1 diabetics; and
+- 為1型糖尿病患者的看護者提供遠程監控和胰島素輸送管理；以及
 
 - 通過使用由**AAPS** 控制的Android手機來簡化所有可攜帶的糖尿病設備（如連續血糖監測儀接收器和胰島素控制設備）。
 
 最終，**AAPS** 能夠幫助個人更好地管理糖尿病，從而達到穩定的血糖水平並改善長期健康結果。
 
-Interested in how to get started with setting up AAPS? 請查看 [事前準備](preparing.md)章節。
+有興趣了解如何開始設置AAPS嗎？ 請查看 [事前準備](preparing.md)章節。
