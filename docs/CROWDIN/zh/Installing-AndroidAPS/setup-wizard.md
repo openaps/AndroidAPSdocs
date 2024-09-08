@@ -322,7 +322,7 @@ Press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
-### Profile
+### 設定檔
 
 Now we are entering a very important part of the Setup Wizard.
 
@@ -432,7 +432,7 @@ Press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_143935.png)
 
-### APS algorithm
+### APS 演算法
 
 Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name the SMB feature of the algorithm is disabled until you are familar with AAPS and already worked through the first objectives. OpenAPS SMB is newer and in general better compared to the OpenAPS AMA anyway.
 
