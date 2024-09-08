@@ -423,7 +423,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - Careportal tab / menu removed - more details [here](../Usage/CPbefore26.md)
 
-- New [Local Profile plugin](Config-Builder-local-profile)
+- 新的[本地設定檔外掛](Config-Builder-local-profile)
 
   - Local profile can hold more than 1 profile
   - Profiles can be cloned and edited
@@ -433,7 +433,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - SimpleProfile is removed
 
-- [Extended bolus](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
+- [延長注射](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)功能 - 閉環將被禁用
 
 - MDT plugin: Fixed bug with duplicated entries
 
@@ -443,7 +443,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - Different UI and internal improvements
 
-- [Wear complications](../Configuration/Watchfaces.md)
+- [Wear OS 複雜功能](../Configuration/Watchfaces.md)
 
 - New [SMS commands](../Children/SMS-Commands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
 
