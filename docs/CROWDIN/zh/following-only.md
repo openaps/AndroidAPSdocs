@@ -4,7 +4,7 @@ In addition to the range of possibilities available for remotely controlling _an
 
 A good overview of the extensive options available for following **AAPS** is at [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#) webpage; if you expand the menu on the left-hand side:
 
-![image](./images/dfa981c1-5a15-4498-88d2-0fd1462d8242.png)
+![圖像](./images/dfa981c1-5a15-4498-88d2-0fd1462d8242.png)
 
 The most common strategies used in combination with **AAPS** are explained in more detail below.
 
@@ -31,7 +31,7 @@ G)  Spike (iOs)
 
 ### A) Dexcom Follow (Android and iOS)
 
-![image](./images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
+![圖像](./images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
 
 ●   Dexcom Follow is compatible with a wide range of handsets (both Android and iPhone). Dexcom Follow can be used even if you are not using the official Dexcom app to receive sensor data.
 
@@ -60,7 +60,7 @@ For Dexcom Follow, the sensor data is then exported from the AAPS phone either d
 
 ### B) Nightguard (iOS)
 
-![image](./images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
+![圖像](./images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
 
 Pros (as reported by users):
 
@@ -86,7 +86,7 @@ Cons (as reported by users)
 
 ### C) Nightwatch (Android)
 
-![image](./images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
+![圖像](./images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
 
 
 ●   Nightwatch markets itself as a Nightscout client and monitors the user’s Nightscout glucose levels on either Android phone or tablet.
@@ -109,19 +109,19 @@ You can use xDrip+ as a follower.
 
 Set xDrip+ as a Nightscout Follower. You will receive BG and treatments, not basal.
 
-![image](./images/remote_control_and_following/xDrip+_Nightscout_Follower.png)
+![圖像](./images/remote_control_and_following/xDrip+_Nightscout_Follower.png)
 
 #### Without Nightscout - xDrip+ BG data source
 
 If your AAPS data source is xDrip+ (or if xDrip+ can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
 
-![image](./images/remote_control_and_following/xDrip+_Master_Sync.png)
+![圖像](./images/remote_control_and_following/xDrip+_Master_Sync.png)
 
 #### Without Nightscout - xDrip+ BG companion app
 
 If your AAPS data source is not xDrip+ but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
 
-![image](./images/remote_control_and_following/xDrip+_Companion_Sync.png)
+![圖像](./images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
 ### E) xDrip4iOS/Shuggah (iOS)
 
@@ -154,9 +154,9 @@ An easier solution is therefore to download the **Shuggah** app.
 
 App:
 
-![image](./images/03fc0c6a-067a-40ea-8be3-c66d4ce8b5d9.png)
+![圖像](./images/03fc0c6a-067a-40ea-8be3-c66d4ce8b5d9.png)
 
-![image](./images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
+![圖像](./images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
 
 "What is Shuggah?" A group of Ukrainian developers copied the project code for xDrip4iOS (which is shared publicly on GitHub) and released it on the App Store under a business account (the app is free, and their intentions are good). The app had to be slightly modified to add a privacy statement and disclaimer to get past the review, but the rest of the app should be the same as xDrip4iOS. The Shuggah release is not managed by the xDrip4iOS developers so it cannot be guaranteed that it will function in the same way as xDrip4iOS, that it will be updated at the same time, or that Apple won't remove it from the App Store at some point.
 
@@ -164,9 +164,9 @@ The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/a
 
 ### F) Sugarmate (iOS)
 
-![image](./images/340cd555-a9e0-4a20-a131-36c078f5b8ea.png)
+![圖像](./images/340cd555-a9e0-4a20-a131-36c078f5b8ea.png)
 
-![image](./images/21b83c41-85c6-4619-a702-a65450768855.png)
+![圖像](./images/21b83c41-85c6-4619-a702-a65450768855.png)
 
 
 [Sugarmate](https://sugarmate.io/) is available to download onto iPhones from the App store. Sugarmate is compatible with: ●   Apple iPhone (Requires software version 13.0 or later) ●   Apple iPad (Requires software version 13.0 or later) ●   Google Android (Save web app to your homescreen)
@@ -176,7 +176,7 @@ It has been reported by users of Sugarmate that it can be used with Apple CarPla
 
 ### G)  [Spike](https://spike-app.com/) (iOS)
 
-![image](./images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
+![圖像](./images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
 
 Spike can be used as a primary receiver or as a follower app, providing BG, alarms and IOB and more. The website and app are no longer developed. Details [here](https://spike-app.com/#features2). Support can be found on [Facebook](https://www.facebook.com/groups/1973791946274873) and [Gitter](https://gitter.im/SpikeiOS/Lobby).
 
@@ -194,16 +194,16 @@ Here we summarize some of the follow-only watch options popular with **AAPS** us
 
 [Artem](https://github.com/bigdigital) has created an xDrip+ integration app WatchDrip+ for various smartwatch models, mostly for Xiaomi (_e.g._ Mi band) and Amazfit brands:
 
-![image](./images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
+![圖像](./images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
 
 
 You can read more about them, including how to set-up at his website [here](https://bigdigital.home.blog/). The advantage of these watches is that they are small and relatively affordable (the Xiaomi Mi Band 5 has a RRP of £39.99 GBP). They are a popular option especially for kids and those with smaller wrists to wear.
 
 ### b) Pebble watch
 
-![image](./images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
+![圖像](./images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
 
-![image](./images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
+![圖像](./images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
 Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 - 2016, and may still be available second-hand. Fitbit took over Pebble’s assets. Pebble users can use the Urchin watchface to view Nightscout data. Displayed data options include IOB, currently active temp basal rate and predictions. If open looping you can use IFTTT to create an applet that says if a Notification has been received from **AAPS**  then send either an SMS or pushover notification.
@@ -211,7 +211,7 @@ Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))
 ### c) [Bluejay GTS watch](https://bluejay.website/shop/product/bluejay-gts-26)
 
 
-![image](./images/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74.png)
+![圖像](./images/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74.png)
 
 
 This is a unique piece of technology which can receive glucose data **directly** from the Dexcom G6 transmitter. It is not widely known that a Dexcom G6 transmitter actually broadcasts the current glucose data on _two_ separate channels, a phone channel and a pump channel. The Bluejay GTS watch runs a modified version of Xdrip+ software, and can be set to receive glucose data on either channel, so if **AAPS **  is using the phone channel, then the Bluejay GTS watch can use the pump channel.
@@ -240,7 +240,7 @@ C)  PC (Teamviewer)
 ### A) M5 stack
 
 
-![image](./images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
+![圖像](./images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
 
 
 
@@ -251,9 +251,9 @@ The M5Stack is a small box which can be programmed for many applications, Martin
 
 SugarPixel is a device for secondary glucose display alert system for continuous glucose monitoring that connects with Dexcom app or Nightscout app on the user’s smartphone. The device displays real time blood sugar readings. This CGM hardware monitor benefits from random tone generation audio alerts (which are incredibly loud), vibration alerts for hearing impaired, customisable display options and native multi-user following.
 
-![image](./images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
+![圖像](./images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
 
-![image](./images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
+![圖像](./images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
 ●   SugarPixel has multiple display options in mg/dL and mmol/L to suit the user’s needs with colour-coded glucose values. ●   The standard face displays BG, Trend Arrow, and Delta. Delta is the change + or - from the last reading. ●   SugarPixel can be customised for use in low brightness with the BG and Time face to see the user’s BG reading and current time on the user’s nightstand. ●   SugarPixel’s xolour face utilises the entire display to show a single colour representing the BG value. This enables the user to see BG readings at a distance through the window while outside playing in the backyard, patio, or pool. ●   The Big BG face is useful for nightstand users who wear glasses or contact lenses.
 
