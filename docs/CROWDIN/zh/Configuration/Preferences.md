@@ -62,7 +62,7 @@
 
 - Enter password, confirm password and click ok.
 
-  ![Set master password](../images/MasterPW.png)
+  ![設置主密碼](../images/MasterPW.png)
 
 #### Settings protection
 
