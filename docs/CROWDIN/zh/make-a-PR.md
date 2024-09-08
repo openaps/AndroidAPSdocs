@@ -4,7 +4,7 @@
 
 有關如何格式化文本（標題、加粗...）以及設置連結的提示，請參閱此頁面的["代碼語法"](make-a-PR-code-syntax)部分。
 
-## General
+## 一般問題
 
 如有任何問題、反饋或新想法，您可以通過[Discord](https://discord.gg/4fQUWHZ4Mw)聯繫文件團隊。
 
