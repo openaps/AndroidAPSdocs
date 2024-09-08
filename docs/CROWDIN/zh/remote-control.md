@@ -101,7 +101,7 @@ i) 現在已經檢查了手機設定，在 **AAPS** 應用程式中，使用左�
 
 ![圖像](images/remote-control-09.png)
 
-ii) 勾選選項啟用「SMS 通訊」，然後點擊「齒輪」圖標進入 SMS 通訊的偏好設置頁面：
+ii) 勾選選項啟用「SMS 通訊」，然後點擊「齒輪」圖示進入 SMS 通訊的偏好設置頁面：
 
 ![圖像](images/remote-control-10.png)
 
@@ -215,7 +215,7 @@ Example:
 
 遠端注射胰島素 _只能_ 通過 **SMS 指令** 完成，無法通過 NightScout 或 AAPSClient 執行。 然而，碳水化合物可以通過這三種方法中的任何一種報告。 無法在一條 SMS 訊息中同時發送碳水化合物和胰島素指令。 這些指令必須分開發送，具體如下：
 
-1) 發送胰島素注射指令（_例如_ 「bolus 2」將命令注射 2 單位的胰島素），通過 SMS 指令相當於在 **AAPS** 中使用「注射」圖標。 2) 發送碳水化合物指令（_例如_「carbs 20」將報告 20 克的碳水化合物）。 這相當於在 **AAPS** 中使用「碳水化合物」標籤。
+1) 發送胰島素注射指令（_例如_ 「bolus 2」將命令注射 2 單位的胰島素），通過 SMS 指令相當於在 **AAPS** 中使用「注射」圖示。 2) 發送碳水化合物指令（_例如_「carbs 20」將報告 20 克的碳水化合物）。 這相當於在 **AAPS** 中使用「碳水化合物」標籤。
 
 為了避免低血糖，最好保守起見，注射 **少於** 按照您的碳水比率所需的胰島素，因為您沒有考慮當前的血糖水平或血糖趨勢。
 
@@ -364,9 +364,9 @@ _請注意，**NSClient** 已被 **AAPSClient** 取代，適用於 AAPS 3.2 及�
 (nightscout)=
 ## 3) Nightscout
 
-Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout** 應用程式，可以直接從 iPhone 的 App Store 下載。 如果您有 Android 跟隨者手機，並沒有專用的 Nightscout 應用程式，建議使用 [**AAPSClient**](AAPSClient)，或者如果您只想要跟蹤而不發送治療資料，您可以從 Play 商店下載並安裝 [Nightwatch](link) 應用程式。
+Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout** 應用程式，可以直接從 iPhone 的 App Store 下載。 如果您有 Android 跟隨者手機，並沒有專用的 Nightscout 應用程式，建議使用 [**AAPSClient**](AAPSClient)，或者如果您只想要追蹤而不發送治療資料，您可以從 Play 商店下載並安裝 [Nightwatch](link) 應用程式。
 
-一旦您在 iPhone 上安裝了 **Nightscout** 應用程式，打開應用並按照設置提示進行操作，輸入您的 Nightscout 地址（見下方左側）。 此地址的格式可能取決於您的 Nightscout 是如何託管的。 (_例如_ http://youraddresshere.herokuapp.com)。 然後輸入您的 Nightscout API 密碼（見下方右側）。 如果未提示您輸入 API 密碼，請點擊應用程式頂部的鎖形圖標輸入密碼：
+一旦您在 iPhone 上安裝了 **Nightscout** 應用程式，打開應用並按照設置提示進行操作，輸入您的 Nightscout 地址（見下方左側）。 此地址的格式可能取決於您的 Nightscout 是如何託管的。 (_例如_ http://youraddresshere.herokuapp.com)。 然後輸入您的 Nightscout API 密碼（見下方右側）。 如果未提示您輸入 API 密碼，請點擊應用程式頂部的鎖形圖示輸入密碼：
 
 ![圖像](images/remote-control-24.png)
 
@@ -423,9 +423,9 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 1). 如果您被困在某個頁面上，並希望再次查看主畫面，只需點擊“重新整理”（底部中間），這將帶您返回 **Nightscout** 主頁，顯示 血糖 圖表。
 
-要查看手機上當前運行的個人設定，請按圖表上方的各個圖標。 按下“基礎率”可以查看更多資訊（當前的碳水化合物比率、敏感性和時區等），“OpenAPS”顯示有關個人設定和當前目標的資訊。 您還可以監控手機電池百分比和幫浦電池百分比。 BWP 提供關於算法在考慮 IOB 和 COB 情況下預測未來結果的資訊。
+要查看手機上當前運行的個人設定，請按圖表上方的各個圖示。 按下“基礎率”可以查看更多資訊（當前的碳水化合物比率、敏感性和時區等），“OpenAPS”顯示有關個人設定和當前目標的資訊。 您還可以監控手機電池百分比和幫浦電池百分比。 BWP 提供關於算法在考慮 IOB 和 COB 情況下預測未來結果的資訊。
 
-#### 選單中的其他圖標：鉛筆（編輯）圖標是什麼意思？
+#### 選單中的其他圖示：鉛筆（編輯）圖示是什麼意思？
 
 您可以（技術上）使用編輯鉛筆來移動或刪除過去 48 小時內的注射或修正治療。
 
@@ -449,7 +449,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 對於孩子來說，如果他們的 **AAPS** 手機在附近，照護者可以使用智慧型手錶進行監控或修改，而無需使用 **AAPS** 手機。 例如，當 **AAPS** 手機藏在幫浦腰帶中時，這會很有用。
 
-智慧型手錶可以作為手機遠端控制選項的_補充_，或者作為[遠端控制](remote-control.md)或[僅跟蹤](following-only.md)的_替代_選擇。
+智慧型手錶可以作為手機遠端控制選項的_補充_，或者作為[遠端控制](remote-control.md)或[僅追蹤](following-only.md)的_替代_選擇。
 
 此外，不同於父母/照護者的跟隨者手機（依賴於移動網絡或 Wi-Fi 連接），藍牙連接的智慧型手錶在偏遠地區（如洞穴、船上或半山腰）也能發揮作用。 如果兩個設備（**AAPS** 手機和智慧型手錶）都連接到相同的 Wi-Fi 網絡，它們也可以使用 Wi-Fi。
 
@@ -474,7 +474,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 如果您打算將智慧型手錶與**AAPS** 手機結合使用並遠端操作**AAPS**，您還需要考慮這兩個設備是否兼容，尤其是如果您的手機較舊或比較特殊。
 
-一般來說，如果您只想要跟蹤血糖數據而不與**AAPS** 進行互動，有更多價格實惠且簡單的手錶可供選擇。
+一般來說，如果您只想要追蹤血糖數據而不與**AAPS** 進行互動，有更多價格實惠且簡單的手錶可供選擇。
 
 選擇智慧型手錶的最佳方式是搜尋 Discord 或 Facebook**AAPS** 群組中的“手錶”相關帖子。 閱讀其他人的經驗分享，如果舊帖子中未解答您的問題，請發布具體問題。
 
@@ -489,7 +489,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 #### 我的智慧型手錶在遠端控制 AAPS 時可能是什麼樣子？
 
-在手錶上安裝 **AAPS** 後，您將自動可以從這些專用的 **AAPS** 錶盤中選擇您偏好的錶盤。 在大多數手錶上，您只需長按主畫面，直到畫面縮小，然後向右滑動選擇另一個屏幕：
+在手錶上安裝 **AAPS** 後，您將自動可以從這些專用的 **AAPS** 錶盤中選擇您偏好的錶盤。 在大多數手錶上，您只需長按主畫面，直到畫面縮小，然後向右滑動選擇另一個螢幕：
 
 ![圖像](./images/67fd75f3-721c-438d-be01-1a8e03532290.png)
 
@@ -590,7 +590,7 @@ b) 使用者希望避免輸入驗證碼（跟隨者手機需要在輸入資料�
 
 請耐心等待 - 構建 **AAPS** Wear apk 大約需要 10-20 分鐘，具體取決於您的網路連接速度。
 
-### Troubleshooting
+### 疑難排解
 
 在構建 3.2 版完整 **AAPS** 應用程式（實際上是任何已簽名的應用程式）過程中，Android Studio 會在同一個資料夾中生成一個 .json 檔案。 這會在您嘗試構建下一個已簽名的應用程式（如 **AAPS** wear 應用程式）時，導致[未提交的變更](troubleshooting_androidstudio-uncommitted-changes)錯誤。 解決此問題的最快方法是導航到構建完整 AAPS 應用程式的資料夾，您的資料夾可能類似於：
 
@@ -659,7 +659,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 ![24-10-23，手錶 ADB 調試圖片](./images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
 
-步驟 3) 將 IP 地址 _例如_ **167.177.0.20** 輸入手機上的 Easy Fire tools（進入左側的漢堡選單，設置並輸入 IP 地址）。 然後點擊右上角的插頭圖標。
+步驟 3) 將 IP 地址 _例如_ **167.177.0.20** 輸入手機上的 Easy Fire tools（進入左側的漢堡選單，設置並輸入 IP 地址）。 然後點擊右上角的插頭圖示。
 
 ![圖像](./images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
 
@@ -669,7 +669,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 步驟 4) 按照[此處](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true)的說明，使用 Easy Fire tools 側載（即傳輸） Wear.apk 到智慧型手錶上
 
-在應用程式中點擊側面的“插頭”圖標，以便將 Wear OS.apk 上傳到智慧型手錶上：
+在應用程式中點擊側面的“插頭”圖示，以便將 Wear OS.apk 上傳到智慧型手錶上：
 
 ![圖像](./images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
 
@@ -787,7 +787,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 它允許使用 Dexcom Share、Nightscout 或兩者結合作為數據來源，來監控一個、兩個或三個人的血糖數值。
 
-如果與本地網頁伺服器模式一起使用，您還可以使用 xDrip+ 或 SpikeApp。 用戶可以設置自定義警報，並通過 Nightscout 的 careportal 功能提交事件，直接從手錶跟蹤胰島素剩餘量（IOB）、碳水化合物剩餘量（COB），輸入餐食資訊（碳水化合物計數和注射量），以及血糖檢查數值。
+如果與本地網頁伺服器模式一起使用，您還可以使用 xDrip+ 或 SpikeApp。 用戶可以設置自定義警報，並通過 Nightscout 的 careportal 功能提交事件，直接從手錶追蹤胰島素剩餘量（IOB）、碳水化合物剩餘量（COB），輸入餐食資訊（碳水化合物計數和注射量），以及血糖檢查數值。
 
 所有這些都將顯示在 Nightscout 的時間軸圖表中，並作為更新值顯示在 IOB 和 COB 欄位中。 社群支援可以在專門的[Facebook 群組 Sentinel](https://www.facebook.com/groups/3185325128159614)中找到。
 
@@ -795,7 +795,7 @@ FitBit 手錶還有一些僅限於監控的選項。 這包括[Glance](https://g
 
 ### 選項 5) 監控 **AAPS**（完整個人設定資料，或僅限血糖數據）當 **AAPS** 在手機上運行時。
 
-這些選項在文檔的[“僅限跟蹤”](following-only.md)部分中有更詳細的描述。
+這些選項在文檔的[“僅限追蹤”](following-only.md)部分中有更詳細的描述。
 
 通常，市場上有許多價格實惠的智慧型手錶可以提供僅限血糖數據顯示的功能。 如果您正在使用 Nightscout，那麼所有選項的概述可以在[Nightscout 頁面](https://nightscout.github.io/nightscout/wearable/#)中找到。
 
