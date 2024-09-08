@@ -370,7 +370,7 @@ AAPS 可以由盲人使用。 在Android設備上，操作系統有一個名為T
 
 #### 構建AAPS應用程式：
 
-作為用戶，你將在Android Studio中構建AAPS應用程式。 許多人使用Microsoft Windows來完成此工作，該系統上有與TalkBack類似的Screenreader。 由於Android Studio是Java應用程式，因此必須在控制面板中啟用“Java Access Bridge”組件。 否則，PC的屏幕閱讀器將無法在Android Studio中發聲。
+作為用戶，你將在Android Studio中構建AAPS應用程式。 許多人使用Microsoft Windows來完成此工作，該系統上有與TalkBack類似的Screenreader。 由於Android Studio是Java應用程式，因此必須在控制面板中啟用“Java Access Bridge”組件。 否則，PC的螢幕閱讀器將無法在Android Studio中發聲。
 
 如何操作取決於你的操作系統，以下提供了兩種方法： 
 
@@ -392,7 +392,7 @@ AAPS 可以由盲人使用。 在Android設備上，操作系統有一個名為T
 
 在底部，你會找到“啟用Java Access Bridge”選項框，選擇它。
 
-完成後，關閉窗口即可！ 屏幕閱讀器現在應該可以工作了。
+完成後，關閉窗口即可！ 螢幕閱讀器現在應該可以工作了。
 
 
 
