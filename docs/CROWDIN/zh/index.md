@@ -1,33 +1,33 @@
-# Welcome to the AAPS documentation
+# 歡迎來到 AAPS 文件指南
 
-![image](./images/basic-outline-of-AAPS.png)
+![圖像](./images/basic-outline-of-AAPS.png)
 
-Android APS (**AAPS**) is an open source app for people living with insulin-dependent diabetes. It is an artificial pancreas system (APS) which runs on Android smartphones. **AAPS** uses an openAPS software algorithm and aims to do what a real pancreas does: keep blood sugar levels within healthy limits by using automated insulin dosing. To use **AAPS** you need **three** compatible devices: an Android phone, a FDA/CE approved insulin pump, and a continuous glucose meter (CGM).
+Android APS (<0>AAPS</0>) 是一款開源應用程式，為依賴胰島素的糖尿病患者所設計。 它是一種運行於 Android 智能手機上的人工胰臟系統（APS）。 **AAPS**使用開源的 openAPS 軟體演算法，旨在模擬真實胰臟的功能：透過自動調控胰島素劑量來保持血糖水平在健康範圍內。 要使用**AAPS**，你需要**三種**兼容設備：一台Android手機、一個經 FDA/CE 認證的胰島素幫浦，以及一個連續血糖監測儀（CGM）。
 
-This documentation explains how to setup and use **AAPS**. You can navigate through the **AAPS** documentation either through the menu on the left (and the handy "**Search docs**" function), or by using the [index](Index-of-the-AAPS-Documentation.md) at the bottom of this page.
+本文件將詳細說明如何設置和使用**AAPS**。 你可以通過左側的選單（以及方便的“**搜尋文件**”功能）或使用頁面底部的[索引](Index-of-the-AAPS-Documentation.md)瀏覽**AAPS**文件。
 
 ## AAPS 文件總覽("簡稱本文件")
 
-第二章節）“入門”，[介紹](introduction.md) 解釋了人工胰臟系統 (APS) 的一般概念。 It outlines the background of looping in general, why **AAPS** was developed, compares **AAPS** to other systems, and addresses safety. It gives suggestions about how to talk to your clinical team about **AAPS**, explains why you need to build the **AAPS** app yourself rather than just downloading it, and gives an overview of the typical connectivity of an **AAPS** system. It also addresses accessibility, and who is likely to benefit from **AAPS**.
+第二章節）“入門”，[介紹](introduction.md) 解釋了人工胰臟系統 (APS) 的一般概念。 本文件概述了循環系統的背景，為何開發**AAPS** ，並比較了**AAPS** 與其他系統，同時也討論了安全性問題。 它提供了如何與你的醫療團隊討論 **AAPS**的建議，解釋了為什麼你需要自行構建**AAPS** 應用程式，而不是直接下載，並概述了典型的**AAPS** 系統連接性。 它還討論了無障礙設計，並指出誰最有可能從**AAPS** 中受益。
 
-[Preparing for AAPS](preparing.md) gives more detail about safety considerations, and the phones, CGMs (Continuous Glucose Monitors) and insulin pumps which are compatible with **AAPS**. It gives an overview of the process you will go through, and provides an approximate timeline for gaining full functionality of **AAPS**. This section gets you technically prepared to assemble your **AAPS** setup as quickly and efficiently as possible. The subsection [CGM Configuration](Configuration/BG-Source.md) explains how to optimse CGM setup and what smoothing options are best.
+[準備](preparing.md)提供了更多有關安全考量的詳細資訊，以及與<0>AAPS</0> 相容的手機、CGM（連續血糖監測儀）和胰島素幫浦的相關訊息。 它概述了你將經歷的過程，並提供了獲得完整**AAPS** 功能的大致時間表。 本節將幫助你以最快且最有效率的方式準備技術上設置你的**AAPS** 。 [CGM 配置](Configuration/BG-Source.md)子章節解釋了如何優化CGM設置及最佳的平滑選項。
 
-Now that you have a solid understanding of the process, you can start assembling your **AAPS** loop. 本章節 **三) 設置 AAPS** 包含逐步指導來進行此操作。 它涵蓋了選擇和 [設置你的報告伺服器](setting-up-the-reporting-server.md)（Nightscout 或 Tidepool），以便你可以檢視和分享你的資料，準備電腦來構建 AAPS 應用程式，構建 AAPS 應用程式並便其傳輸到你的手機。 它還涵蓋了使用設置嚮導來設定 **AAPS** 應用程式，將其與你的 CGM 應用程式連結，並與實體或虛擬胰島素幫浦連結，以及將 **AAPS** 連結到你的報告伺服器。 接下來，你將通過一個安全且經過精心校準的分步過程，逐漸熟悉並全面使用 **AAPS** 的功能。該過程旨在確保你/你的孩子對各種層級和選單配置充分了解並感到舒適，然後再進入下一階段，通常稱為下一個"目標"，直到你擁有足夠的經驗以開始使用應用程式中更高級的選項。 這些目標被特別設計為逐步解鎖更多 **AAPS** 的可能性，並從開環轉為閉環。
+現在你已經對過程有了深入的了解，可以開始構建你的**AAPS** 循環系統了。 本章節 **三) 設置 AAPS** 包含逐步指導來進行此操作。 它涵蓋了選擇和 [設置你的報告伺服器](setting-up-the-reporting-server.md)（Nightscout 或 Tidepool），以便你可以檢視和分享你的資料，準備電腦來構建 AAPS 應用程式，構建 AAPS 應用程式並便其傳輸到你的手機。 它還涵蓋了使用設置嚮導來設定 **AAPS** 應用程式，將其與你的 CGM 應用程式連結，並與實體或虛擬胰島素幫浦連結，以及將 **AAPS** 連結到你的報告伺服器。 接下來，你將通過一個安全且經過精心校準的分步過程，逐漸熟悉並全面使用 **AAPS** 的功能。該過程旨在確保你/你的孩子對各種層級和選單配置充分了解並感到舒適，然後再進入下一階段，通常稱為下一個"目標"，直到你擁有足夠的經驗以開始使用應用程式中更高級的選項。 這些目標被特別設計為逐步解鎖更多 **AAPS** 的可能性，並從開環轉為閉環。
 
 第四章節）[遠端 AAPS 功能](remote-control.md) 突顯了 **AAPS** 的一個真正強項。 這對於希望遠端發送命令給予，或者只是追踪來自 **AAPS** 的資料來說非常實用。 這對於希望為未成年人使用 **AAPS** 的照護者，以及患有糖尿病的成人同樣實用。成人可以更方便地監控血糖（以及其他指標），不僅限於手機上（例如手錶、車內等），也可以讓重要他人一同監控資料。 本節還提供了使用 Android Auto 的指導，讓你能夠在車內查看血糖水平。
 
-第五章節）**AAPS 的日常生活** 涵蓋了 **AAPS** 的關鍵功能，幫助你使用（並自定義）**AAPS**。 包括理解各個畫面、碳水化合物計算、靈敏度、配置切換、臨時目標、延展碳水化合物（或 eCarbs）、自動化和 動態ISF。 此外，還涵蓋了如何處理不同類型的餐食、更換套管和傳感器、手機更新、日光節約時間更改、[與 AAPS 一起旅行](Usage/Timezone-traveling.md) 和運動等常見問題與解答。 常見問題和答案位於疑難排除部分。
+第五章節）**AAPS 的日常生活** 涵蓋了 **AAPS** 的關鍵功能，幫助你使用（並自定義）**AAPS**。 包括理解各個畫面、碳水化合物計算、靈敏度、配置切換、臨時目標、延展碳水化合物（或 eCarbs）、自動化和 動態ISF。 此外，還涵蓋了如何處理不同類型的餐食、更換套管和傳感器、手機更新、夏令時間更改、[與 AAPS 一起旅行](Usage/Timezone-traveling.md) 和運動等常見問題與解答。 常見問題和答案位於疑難排除部分。
 
 
-第六章節）**AAPS 的維護** 涵蓋了如何匯出和備份你的設置（這非常重要，以防你的手機遺失或損壞），提供了最新版本的說明，並詳細說明了如何更新 **AAPS**。 You can expect that there will be one new version and 2-3 required updates per year. You are required to do these updates as with all software, as any minor bugs are ironed out, and improvements to **AAPS** are made. There is a dedicated "updating" troubleshooting section with the common queries.
+第六章節）**AAPS 的維護** 涵蓋了如何匯出和備份你的設置（這非常重要，以防你的手機遺失或損壞），提供了最新版本的說明，並詳細說明了如何更新 **AAPS**。 你可以預期每年會有一個新版本及2-3次必要的更新。 你需要像其他軟體一樣進行這些更新，以解決小錯誤並改進**AAPS** 。 有一個專門的“更新”故障排除部分，解決常見的疑問。
 
-第七章節）[獲取幫助](Where-To-Go-For-Help/Connect-with-other-users.html) 應該可以幫助你找到獲取 **AAPS** 一般幫助的最佳途徑。 This is very important so that you can get in touch with others as quickly as possible, clarify questions and solve the usual pitfalls. 很多人已成功使用 **AAPS**，但每個人都有自己無法獨立解決的問題。 Due to the large number of users, the response times to questions are usually very quick, typically only a few hours. 不要擔心尋求幫助，更不用擔心愚蠢的問題！ 我們鼓勵任何新手/老手用戶提出他們認為有必要的所有問題，以幫助他們安全啟動並運行。 本節還包含 **AAPS** 和 **AAPSClient**（跟隨應用程式）的一般故障排除指南，並說明了如何將你的 **AAPS** 資料（日誌文件）發送給開發者進行調查，如果你認為 **AAPS** 出現技術問題需要處理。
+第七章節）[獲取幫助](Where-To-Go-For-Help/Connect-with-other-users.html) 應該可以幫助你找到獲取 **AAPS** 一般幫助的最佳途徑。 這非常重要，這樣你可以盡快與他人聯繫，澄清問題並解決常見的陷阱。 很多人已成功使用 **AAPS**，但每個人都有自己無法獨立解決的問題。 由於用戶眾多，對問題的回應時間通常非常迅速，通常只需幾個小時。 不要擔心尋求幫助，更不用擔心愚蠢的問題！ 我們鼓勵任何新手/老手用戶提出他們認為有必要的所有問題，以幫助他們安全啟動並運行。 本節還包含 **AAPS** 和 **AAPSClient**（跟隨應用程式）的一般故障排除指南，並說明了如何將你的 **AAPS** 資料（日誌文件）發送給開發者進行調查，如果你認為 **AAPS** 出現技術問題需要處理。
 
-第八章節）有用的 **AAPS** 連接，供快速參考。 This includes the  [Glossary](Getting-Started/Glossary.md), a list of the acronyms (or short-term names) used throughout **AAPS**. This is where to go to find out what the terms ISF or TT, stand for, for example. 此部分還包含實用的螢幕截圖和其他資料的連接。
+第八章節）有用的 **AAPS** 連接，供快速參考。 這包括[詞彙表](Getting-Started/Glossary.md)，它列出了**AAPS** 中使用的首字母縮寫或短名稱。 這是查找術語如ISF或TT等含義的地方。 此部分還包含實用的螢幕截圖和其他資料的連接。
 
 第九章節）涵蓋了高級AAPS選項，例如如何從使用AAPS進展到混合閉環（為餐飲等進行注射）到完全閉環（不進行手動注射），並詳細介紹了開發和工程模式。 大多數使用者只需使用主要或"Master" **AAPS**版本即可正常操作，無須查看這些選項；本節給那些已經控制良好並希望進一步改善其設置的使用者。
 
-第十章節）[如何支援 AAPS](make-a-PR.md) 提供了關於如何支援此項目的資訊。 You can donate money, equipment or expertise. 你可以建議/自行更改文檔，幫助 [翻譯文檔](translations.md)，並通過 Open Humans 項目提供你的資料。
+第十章節）[如何支援 AAPS](make-a-PR.md) 提供了關於如何支援此項目的資訊。 你可以捐贈金錢、設備或專業知識。 你可以建議/自行更改文檔，幫助 [翻譯文檔](translations.md)，並通過 Open Humans 項目提供你的資料。
 
 第十一章節包含存檔或額外的文件，包括針對 [臨床醫生](Resources/clinician-guide-to-AAPS.md) 的子部分，這些臨床醫生對開源人工胰臟技術如 **AAPS** 表現出興趣，或是希望與臨床醫生分享此類資訊的患者，這個主題也在介紹部分有所提及。 更多關於糖尿病和循環的參考資料包含在第12章節中。
 
@@ -65,9 +65,9 @@ Now that you have a solid understanding of the process, you can start assembling
 
 AAPS介紹 <./introduction.md>
 準備AAPS <preparing.md>
-相容泵浦 <./Getting-Started/Pump-Choices.md>
+相容泵浦  <./Getting-Started/Pump-Choices.md>
 相容CGM <./Configuration/BG-Source.md>
-相容手機 <./Hardware/Phoneconfig.md>
+相容手機  <./Hardware/Phoneconfig.md>
 ```
 
 ```{toctree}
