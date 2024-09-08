@@ -138,7 +138,7 @@
 - [新的 Freestyle Libre 2 教程](../Hardware/Libre2.md)
 - [帶百分比的設定檔切換 - 示例](../Usage/Profiles.md)
 - [SMS 命令更新](../Children/SMS-Commands.md)
-- [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
+- [疑難排解 Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 - [疑難排解 - 連結集合](../Usage/troubleshooting.md)
 - 更新 - 供有經驗用戶的快速指導
 - 文檔 - 更新[編輯](make-a-PR-code-syntax)和[翻譯](translations#translation-of-the-documentation)
