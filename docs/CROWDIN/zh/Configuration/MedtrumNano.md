@@ -331,7 +331,7 @@ The alarm button will appear on the overview screen when there is an active alar
 
 Press the **Reset Alarms** button to reset the alarms and resume normal operation.
 
-## Troubleshooting
+## 疑難排解
 
 ### Connection issues
 
