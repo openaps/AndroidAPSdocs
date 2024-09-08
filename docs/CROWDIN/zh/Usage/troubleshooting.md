@@ -1,4 +1,4 @@
-# Troubleshooting
+# 疑難排解
 
 You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem.
 
@@ -8,7 +8,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 
 ### Building & updating
 
-* [Lost keystore](troubleshooting_androidstudio-lost-keystore)
+* [遺失的密鑰庫](troubleshooting_androidstudio-lost-keystore)
 * [Troubleshooting AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 
 ### Settings
@@ -18,7 +18,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 
 * [Pump - data from different pump](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
 
-  ![Failure message: Data from different pump](../images/BasalNotAlignedToHours2.png)
+  ![錯誤消息：來自不同幫浦的資料](../images/BasalNotAlignedToHours2.png)
 
 * [Nightscout Client](../Usage/Troubleshooting-NSClient.html)
 
