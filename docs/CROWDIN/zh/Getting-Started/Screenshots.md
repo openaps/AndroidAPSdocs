@@ -63,19 +63,19 @@
 
 ![循環狀態](../images/Home2020_LoopStatus.png)
 
-* 新圖標顯示循環狀態：
+* 新圖示顯示循環狀態：
    
    * 綠色圓圈 = 循環運行中
    * 綠色圓圈帶虛線 = [低血糖暫停（LGS）](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
    * 紅色圓圈 = 循環已停用（永久不起作用）
-   * 黃色圓圈 = 循環暫停（暫時暫停但將給予基礎胰島素）- 圖標下方顯示剩餘時間
-   * 灰色圓圈 = 幫浦已斷開（暫時無胰島素劑量）- 圖標下方顯示剩餘時間
-   * 橙色圓圈 = 超級注射進行中 - 圖標下方顯示剩餘時間
+   * 黃色圓圈 = 循環暫停（暫時暫停但將給予基礎胰島素）- 圖示下方顯示剩餘時間
+   * 灰色圓圈 = 幫浦已斷開（暫時無胰島素劑量）- 圖示下方顯示剩餘時間
+   * 橙色圓圈 = 超級注射進行中 - 圖示下方顯示剩餘時間
    * 藍色圓圈帶虛線 = 開放循環
 
-* 短按或長按圖標以打開循環對話框來切換循環模式（關閉、低血糖暫停、開放或禁用），暫停/重新啟動循環或斷開/重新連接幫浦。
+* 短按或長按圖示以打開循環對話框來切換循環模式（關閉、低血糖暫停、開放或禁用），暫停/重新啟動循環或斷開/重新連接幫浦。
    
-   * 如果短按循環圖標，選擇後需要進行驗證。
+   * 如果短按循環圖示，選擇後需要進行驗證。
    
    ![循環狀態選單](../images/Home2020_Loop_Dialog.png)
 
@@ -83,7 +83,7 @@
 
 #### 血糖警告標誌
 
-Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+從 Android 3.0 開始，您可能會在主螢幕上的血糖數字下方看到警告信號。
 
 *注意*：AAPS 計算會考慮到長達 30 小時的數據。 因此，即使您解決了問題，黃三角標誌可能會在最後一次不規則間隔發生後大約 30 小時內消失。
 
@@ -99,7 +99,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 紅色警告標誌表示您需要立即採取行動：您正在接收重複的血糖數據，這會阻止循環正常工作。 因此，您的循環將被禁用，直到問題解決為止。
 
-![Red BG warning](../images/bg_warn_red.png)
+![紅色血糖警告](../images/bg_warn_red.png)
 
 您需要找出為什麼會收到重複的血糖數據：
 
@@ -112,7 +112,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 * 黃色警告信號表示您的血糖數據到達的時間間隔不規則或某些血糖數據丟失。
    
-   ![Yellow BG warning](../images/bg_warn_yellow.png)
+   ![黃色血糖警告](../images/bg_warn_yellow.png)
 
 * 通常您不需要採取任何行動。 閉環會繼續運作！
 
@@ -127,17 +127,17 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ![D 區](../images/Home2020_TBR.png)
 
-* 針筒圖標：體內的胰島素（IOB）- 體內尚有作用的胰島素數量
+* 針筒圖示：體內的胰島素（IOB）- 體內尚有作用的胰島素數量
    
    * 如果僅運行標準基礎率，且沒有先前注射的胰島素剩餘，則 IOB 為零。 
    * 如果最近有減少的基礎率，IOB 可能為負值。
-   * 按圖標可查看注射胰島素與基礎胰島素的分配情況。
+   * 按圖示可查看注射胰島素與基礎胰島素的分配情況。
 
-* 穀物圖標：[體內碳水化合物（COB）](../Usage/COB-calculation.md) - 您之前食用但尚未吸收的碳水化合物-> 如果需要碳水化合物，圖標會閃爍。
+* 穀物圖示：[體內碳水化合物（COB）](../Usage/COB-calculation.md) - 您之前食用但尚未吸收的碳水化合物-> 如果需要碳水化合物，圖示會閃爍。
 
-* 紫線：基礎率 - 圖標隨基礎率的暫時變化而改變（在 100% 時保持不變）。 
-   * 按圖標可查看基礎基礎率和任何暫時基礎率的詳細資訊（包括剩餘時間）。
-* 上下箭頭：指示當前[自動敏感性](Open-APS-features-autosens)狀態（啟用或停用）以及圖標下方顯示的數值。
+* 紫線：基礎率 - 圖示隨基礎率的暫時變化而改變（在 100% 時保持不變）。 
+   * 按圖示可查看基礎基礎率和任何暫時基礎率的詳細資訊（包括剩餘時間）。
+* 上下箭頭：指示當前[自動敏感性](Open-APS-features-autosens)狀態（啟用或停用）以及圖示下方顯示的數值。
 
 #### 需要碳水化合物
 
@@ -550,5 +550,5 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 ![NSClient](../images/Screenshots_NSClient.png)
 
 * 顯示與 Nightscout 網站的連接狀態。
-* 設定可在[偏好設定](Preferences-nsclient)中進行。 您可以通過點擊螢幕右上角的齒輪圖標打開相應的部分。
+* 設定可在[偏好設定](Preferences-nsclient)中進行。 您可以通過點擊螢幕右上角的齒輪圖示打開相應的部分。
 * 有關故障排除的詳細資訊，請參閱此[頁面](../Usage/Troubleshooting-NSClient.md)。
