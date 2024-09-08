@@ -707,7 +707,7 @@ Battery level reporting is a setting that can be enabled to return the current b
 
 (OmnipodEros-troubleshooting)=
 
-## Troubleshooting
+## 疑難排解
 
 ### Pod Failures
 
