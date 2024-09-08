@@ -1,6 +1,6 @@
 # Careportal (discontinued)
 
-Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records. But careportal did not issue any commands to the pump! So, if a bolus was added using this screen it simply made a note of this on your Nightscout record, the pump wasn’t instructed to deliver a bolus. This led to a lot of misunderstandings.
+護理入口複製了您在 Nightscout 螢幕上的“+”符號下找到的功能，該符號允許您向記錄中添加筆記。 But careportal did not issue any commands to the pump! So, if a bolus was added using this screen it simply made a note of this on your Nightscout record, the pump wasn’t instructed to deliver a bolus. This led to a lot of misunderstandings.
 
 The code originally used to add offline support for careportal did not harmonize with the development of AAPS and was really blocking further coding. **Therefore, decision was made to remove careportal in AAPS version 2.6.**
 
@@ -40,7 +40,7 @@ This page will show where you can find the functions previously available in car
 - CGM sensor insert can now be found in the actions tab / menu.
 - All other functions from this section have been removed. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](CPbefore26-carbs-bolus) on this page).
 
-## Pump
+## 幫浦
 
 ![Careportal Pump](../images/Careportal_25_26_4_IIb.png)
 
