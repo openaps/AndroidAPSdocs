@@ -10,7 +10,7 @@ Siehe [FAQ Seite](../Getting-Started/FAQ.md) für Details.
 
 ## Computer- und Software-Spezifikationen für das "Bauen" von AAPS
 
-- Bitte nutze die **[Android Studio Version "Hedgehog"(2023.1.1) oder "Iguana"(2023.2.1)](https://developer.android.com/studio/)**, um die APK zu erstellen. Ältere Versionen des Android Studios müssen zuerst aktualisiert werden!
+- Please use the **[Android Studio version called at least Hedgehog (2023.1.1) or one more recent like Iguana, Jellyfish, and Koala](https://developer.android.com/studio/)** to build the apk. Ältere Versionen des Android Studios müssen zuerst aktualisiert werden!
 - [Windows 32-Bit-Systeme](troubleshooting_androidstudio-unable-to-start-daemon-process) werden von Android Studio nicht unterstützt. Bitte beachte, dass sowohl eine 64-Bit-CPU als auch ein 64-Bit-Betriebssystem zwingend erforderlich sind. Wenn dein System diese Bedingungen nicht erfüllt, musst du die entsprechende Hardware, Software oder das ganze System ersetzen.
 
 <table class="tg">
@@ -87,7 +87,7 @@ Da **Android Studio** auf Windows, Mac OS X und Linux Plattformen läuft, kann e
 :::{admonition} Warum Git?
 
 Git ist ein „_Versioning Control System_“ (VCS).
-Git ist ein Programm, das es dir erlaubt Änderungen im Code zu verfolgen und mit anderen zusammenzuarbeiten. Du wirst Git verwenden, um eine Kopie des **AAPS** Quellcodes von der Github Webseite auf deinem lokalen Computer zu erstellen. Anschließend wirst Du Git auf Deinem Computer verwenden, um die **AAPS** Anwendung (apk) zu erstellen.
+Git ist ein Programm, das es dir erlaubt Änderungen im Code zu verfolgen und mit anderen zusammenzuarbeiten. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Anschließend wirst Du Git auf Deinem Computer verwenden, um die **AAPS** Anwendung (apk) zu erstellen.
 :::
 
 #### Schritte zur Installation von Git
@@ -121,7 +121,7 @@ Git ist ein Programm, das es dir erlaubt Änderungen im Code zu verfolgen und mi
 Android Studio ist ein Programm, dass auf Deinem Computer läuft. Es erlaubt Dir Quellcode, mit Hilfe von Git, aus dem Internet herunterzuladen und dann daraus Smartphone- (und Smartwatch)-Apps zu erstellen. Die aktuell auf Deinem Smartphone laufende Loop-Version von **AAPS** kannst Du durch das Erstellen einer neuen oder aktualisierten Version auf Deinem PC mit Android Studio nicht beschädigen oder gar zerstören. Es sind zwei voneinander völlig unabhängige Prozesse.
 :::
 
-Die folgenden Screenshots wurden aus der Android Studio Version **Hedgehog** erstellt.
+The following screenshots have been taken from Android Studio Version **Hedgehog**, they should be identical with more recent versions.
 
 Einer der wichtigsten Punkte bei der Installation von Android Studio ist: **Geduldig sein!** Während der Installation und Einrichtung lädt Android Studio sehr viele Daten nach und das braucht seine Zeit.
 
