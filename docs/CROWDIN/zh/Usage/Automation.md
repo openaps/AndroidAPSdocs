@@ -1,4 +1,4 @@
-# Automation
+# 自動化
 
 ## What is an Automation?
 
@@ -86,7 +86,7 @@ There are safety limits set for **Automations**:
 Please be careful when selecting a negative value in Automation
 :::
 
-Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. For example:
+Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. 例如：
 
 ![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
 
@@ -132,7 +132,7 @@ Several conditions can be linked with
 
 * Use passive location: **AAPS** only takes locations when other apps are requesting it.
 * Use network location: Location of your Wifi.
-* Use GPS location (Attention! This can cause excessive battery drain!)
+* 使用 GPS 定位（注意！ This can cause excessive battery drain!)
 
 ## Action
 
