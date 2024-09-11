@@ -289,7 +289,7 @@
 
 * 其他按鈕必須在[偏好設定]Preferences-buttons)中設置。
 
-#### Insulin
+#### 胰島素
 
 ![注射按鈕](../images/Home2020_ButtonInsulin.png)
 
@@ -297,7 +297,7 @@
 * 勾選框可自動啟動您的[即將進食的暫時目標](Preferences-default-temp-targets)。
 * 如果您不想通過幫浦進行注射，但記錄注射量（即通過注射器注射的胰島素），請勾選相應的框。
 
-#### Carbs
+#### 碳水化合物
 
 ![碳水化合物按鈕](../images/Home2020_ButtonCarbs.png)
 
@@ -308,7 +308,7 @@
 * 您可以使用按鈕快速增加碳水化合物量。
 * 筆記將根據您的[NS 客戶端](Preferences-nsclient)設置上傳到 Nightscout。
 
-#### Calculator
+#### 計算器
 
 * 請參見[注射計算器](Screenshots-bolus-wizard)部分
 
@@ -532,7 +532,7 @@
 以下治療的歷史記錄：
 
 * 注射和碳水化合物 -> 可以選擇[移除條目](Screenshots-carb-correction)來修正歷史記錄
-* [Extended bolus](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+* [延長注射](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * 暫時基礎率
 * [暫時目標](../Usage/temptarget.md)
 * [設定檔切換](../Usage/Profiles.md)
