@@ -564,7 +564,7 @@ b) 使用者希望避免輸入驗證碼（跟隨者手機需要在輸入資料�
 ![圖像](./images/b2cccc84-85b6-4ee1-800b-7c6dcb9dd857.png)
 
 
-前往構建 > 生成已簽名的包/ APK
+前往構建 > 生成已簽章的包/ APK
 
 
 ![圖像](./images/f488fe36-8cb9-4d81-9d94-5f742a1aaaee.png)
@@ -592,7 +592,7 @@ b) 使用者希望避免輸入驗證碼（跟隨者手機需要在輸入資料�
 
 ### 疑難排解
 
-在構建 3.2 版完整 **AAPS** 應用程式（實際上是任何已簽名的應用程式）過程中，Android Studio 會在同一個資料夾中生成一個 .json 檔案。 這會在您嘗試構建下一個已簽名的應用程式（如 **AAPS** wear 應用程式）時，導致[未提交的變更](troubleshooting_androidstudio-uncommitted-changes)錯誤。 解決此問題的最快方法是導航到構建完整 AAPS 應用程式的資料夾，您的資料夾可能類似於：
+在構建 3.2 版完整 **AAPS** 應用程式（實際上是任何已簽章的應用程式）過程中，Android Studio 會在同一個資料夾中生成一個 .json 檔案。 這會在您嘗試構建下一個已簽章的應用程式（如 **AAPS** wear 應用程式）時，導致[未提交的變更](troubleshooting_androidstudio-uncommitted-changes)錯誤。 解決此問題的最快方法是導航到構建完整 AAPS 應用程式的資料夾，您的資料夾可能類似於：
 
 C:\Users\Your Name\StudioProjects\AndroidAPS\app\aapsclient\release。
 
@@ -613,7 +613,7 @@ _本指南假設您正在設置運行 Wear OS 3 或更低版本的 Samsung Galax
 
 https://www.youtube.com/watch?v=tSVkqWNmO2c
 
-“Galaxy Wearable”應用程式內也有一個使用手冊部分。 在手機上打開 Galaxy Wearable，搜尋手錶，嘗試將手錶與手機配對。 根據您的版本，這可能會提示您從 Play 商店安裝第三個應用程式“Galaxy Watch 4 插件”（下載需要一些時間）。 在手機上安裝此應用程式，然後再次在 Galaxy Wearable 應用程式中嘗試將手錶與手機配對。 通過一系列選單並勾選各種偏好設定。
+“Galaxy Wearable”應用程式內也有一個使用手冊部分。 在手機上打開 Galaxy Wearable，搜尋手錶，嘗試將手錶與手機配對。 根據您的版本，這可能會提示您從 Play 商店安裝第三個應用程式“Galaxy Watch 4 外掛”（下載需要一些時間）。 在手機上安裝此應用程式，然後再次在 Galaxy Wearable 應用程式中嘗試將手錶與手機配對。 通過一系列選單並勾選各種偏好設定。
 
 ##### 設置 Samsung 帳號
 
@@ -720,7 +720,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 ● 設置臨時目標
 
-● 使用注射計算器（計算變量可以在手機設置中定義）
+● 使用注射計算機（計算變量可以在手機設置中定義）
 
 ● 管理 eCarbs
 
