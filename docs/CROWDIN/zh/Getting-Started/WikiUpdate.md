@@ -159,7 +159,7 @@
 ## 2019年9月
 
 - [Automate](../Usage/Automation.md)
-- [注射計算器](Screenshots-wrong-cob-detection) - 碳水化合物吸收緩慢
+- [注射計算機](Screenshots-wrong-cob-detection) - 碳水化合物吸收緩慢
 - [Nightscout 安全性](Nightscout-security-considerations)
 - [設定檔時間位移](Profiles-time-shift)（更多細節）
 - [遠端監控](../Children/Children.md)
