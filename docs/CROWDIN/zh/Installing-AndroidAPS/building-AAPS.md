@@ -423,4 +423,4 @@ _如果構建未成功，請參閱[故障排除部分](../Installing-AndroidAPS/
 
 ![apk檔案](../images/Building-the-App/37_full_release_apk.png)
 
-Congratulations! 現在您已經構建了 **AAPS** apk 檔案，您可以進入下一階段[傳輸和安裝 **AAPS**](Transferring-and-installing-AAPS.md)。
+恭喜！ 現在您已經構建了 **AAPS** apk 檔案，您可以進入下一階段[傳輸和安裝 **AAPS**](Transferring-and-installing-AAPS.md)。
