@@ -144,4 +144,4 @@ Gmail將顯示帳號名稱。 它將要求您接受Gmail的條款與條件，並
 
 ![](../images/Building-the-App/building_0014.png)
 
-Congratulations! 現在，您已經創建了一個專用於AAPS的Google帳號。 下一步是[構建AAPS應用程式](building-AAPS.md)。
+恭喜！ 現在，您已經創建了一個專用於AAPS的Google帳號。 下一步是[構建AAPS應用程式](building-AAPS.md)。
