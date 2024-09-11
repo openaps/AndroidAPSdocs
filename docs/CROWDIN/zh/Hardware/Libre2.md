@@ -146,7 +146,7 @@ The blood sugar values are received on the smartphone by the xDrip+ App.
 
 - → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Answer "Not Today" (4).
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ 啟動 Libre 傳輸器與感測器 3](../images/xDrip_Libre_Transmitter03.png)
 
 This will not physically start any Libre2 sensor or interact with them in any case. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip+ every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
 
@@ -201,7 +201,7 @@ Once successful please select "Sensor Stop" and "Delete calibration only" in xDr
 
 ![xDrip+ missing data when changing Libre 2 sensor](../images/Libre2_GapNewSensor.png)
 
-#### Calibration
+#### 校準
 
 You can calibrate the Libre2 **with an offset of -40 mg/dl to +20 mg/dL \[-2,2 mmol/l to +1,1 mmol/l\]** (intercept). The slope isn't changeable. Please check by fingerpricking after setting a new sensor, keeping in mind it might not be accurate in the first 12 hours after insertion. Since there can be large differences to the blood measurements, verify every 24 hours and calibrate if necessary. If the sensor is completely off after a few days, it should then be replaced.
 
