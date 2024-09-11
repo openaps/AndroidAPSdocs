@@ -77,5 +77,5 @@ _Omnipod users:_ importing a preferences file will deactivate your current pod i
 
 ### Note for Dana RS users
 
-- As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan.
+- 由於幫浦連線設定也會匯入，新手機上的 AAPS 已經「認識」幫浦，因此不會啟動藍牙掃描。
 - Please pair new phone and pump manually.
