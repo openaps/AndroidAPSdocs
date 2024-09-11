@@ -36,7 +36,7 @@ The blood glucose values are received by the xDrip+ app on the smartphone.
 - In xDrip+ select "Libre2 (patched app)" as data source.
 - If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings → Extra Logging Settings → Extra tags for logging. This will log additional error messages for troubleshooting.
 
-![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
+![xDrip+ LibreLink 日誌記錄](../images/Libre2_Tags.png)
 
 - Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
 
