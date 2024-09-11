@@ -98,7 +98,7 @@ Commands must be sent in English, the response will be in your local language if
 
 ![SMS Commands Example](../images/SMSCommands.png)
 
-### Loop
+### 循環
 
 - LOOP STOP/DISABLE \* Response: Loop has been disabled
 
