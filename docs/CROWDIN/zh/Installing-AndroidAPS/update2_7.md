@@ -25,9 +25,9 @@
 
 - 這是必須的，因為自 2.7 版本起，[匯出設定](../Usage/ExportImportSettings.md)時會加密。
 - 打開「偏好設定」（主螢幕右上角的三點選單）
-- Click triangle below "General"
-- Click "Master-Password"
-- Enter password, confirm password and click ok.
+- 點擊「一般」下方的三角形
+- 點擊「主密碼」
+- 輸入密碼，確認密碼並點擊「確定」。
 
 ![設置主密碼](../images/MasterPW.png)
 
