@@ -73,7 +73,7 @@
 - G7 支援 @MilosKozak @rICTx-T1D @khskekec
 - NSClient v3 外掛 @MilosKozak
 - Tidepool 支援 @MilosKozak
-- 平滑插件 @MilosKozak, @justmara, 指數平滑 @nichi (Tsunami), 平均平滑 @jbr7rr
+- 平滑外掛 @MilosKozak, @justmara, 指數平滑 @nichi (Tsunami), 平均平滑 @jbr7rr
 - DynamicISF 外掛 @Chris Wilson, @tim2000s
 - Garmin 手錶錶面及心率支援 @buessow
 - 新標誌 @thiagomsoares
@@ -286,7 +286,7 @@ v3 是新的協議。 更加安全和高效
 
 - **最低 Android 版本現在為 8.0。** 對於較舊的 Android 版本，您仍然可以使用舊倉庫中的 2.6.1.4 版本。
 - [目標已更改。](Objectives-objective-3-prove-your-knowledge) **請在更新前完成未完成的目標。**
-- 儲存庫位置仍在 <https://github.com/nightscout/AndroidAPS> 。 如果您不熟悉 git，最簡單的更新方式是刪除 AAPS 目錄並進行 [新克隆](../Installing-AndroidAPS/Building-APK.md)。
+- 儲存庫位置仍在 <https://github.com/nightscout/AndroidAPS> 。 如果您不熟悉 git，最簡單的更新方式是刪除 AAPS 目錄並進行 [新複製](../Installing-AndroidAPS/Building-APK.md)。
 - 請使用 [Android Studio 4.1.1](https://developer.android.com/studio/) 或更新版本來構建 apk。
 
 ### 主要新功能
@@ -482,7 +482,7 @@ v3 是新的協議。 更加安全和高效
 
 (Releasenotes-important-notes-2-5-0)=
 
-### Important notes
+### 重要提示
 
 - 請使用 [Android Studio 3.5.1](https://developer.android.com/studio/) 或更新版本來 [構建 apk](../Installing-AndroidAPS/Building-APK.md) 或 [更新](../Installing-AndroidAPS/Update-to-new-version.html)。
 - 如果您使用 xDrip，必須設置[識別接收器](xdrip-identify-receiver)。
@@ -590,7 +590,7 @@ v3 是新的協議。 更加安全和高效
 
 - min_5m_carbimpact 的預設值從 AMA 的 3 改為 8。 如果您是從 AMA 升級到 SMB，則需要手動更改此設置。
 
-- 構建 AAPS 2.0 apk 時注意事項：目前版本的 Android Gradle 插件不支援按需配置！ 如果您的構建因「按需配置」的錯誤而失敗，您可以進行以下操作：
+- 構建 AAPS 2.0 apk 時注意事項：目前版本的 Android Gradle 外掛不支援按需配置！ 如果您的構建因「按需配置」的錯誤而失敗，您可以進行以下操作：
 
   - 通過點擊「文件」>「設置」（在 Mac 上是「Android Studio」>「偏好設定」）打開偏好設定窗口。
   - 在左側窗格中，點擊「構建、執行、部署」>「編譯器」。
@@ -603,7 +603,7 @@ v3 是新的協議。 更加安全和高效
 - 頂部功能區可用於暫停/停用循環、查看/調整個人設定，並開始/停止臨時目標（TT）。 TT 使用偏好設置中設置的預設值。 新的 Hypo TT 選項是一個高溫 TT，用於防止循環過度積極地糾正急救碳水化合物。
 - 治療按鈕：舊的治療按鈕仍可用，但預設情況下被隱藏。 按鈕的可見性現在可以配置。 新的胰島素按鈕、新的碳水化合物按鈕（包括 [eCarbs/延長碳水化合物](../Usage/Extended-Carbs.md)）
 - [彩色預測線](../Getting-Started/Screenshots-prediction-lines)
-- 選項可在胰島素/碳水化合物/計算器/注射+填充對話框中顯示筆記字段，這些字段會上傳到 NS
+- 選項可在胰島素/碳水化合物/計算機/注射+填充對話框中顯示筆記字段，這些字段會上傳到 NS
 - 更新的注射/填充對話框允許進行注射，並創建護理入口條目以記錄站點更換和藥筒更換
 
 ### 手錶
