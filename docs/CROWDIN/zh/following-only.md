@@ -169,7 +169,7 @@ xDrip4iOS Facebook 群組支援 xDrip4iOS、Shuggah 以及相應的 Apple Watch 
 ![圖像](./images/21b83c41-85c6-4619-a702-a65450768855.png)
 
 
-[Sugarmate](https://sugarmate.io/)可從 App Store 下載到 iPhone 上。 Sugarmate 相容於：●   Apple iPhone（需要 13.0 或更高版本的軟體）●   Apple iPad（需要 13.0 或更高版本的軟體）●   Google Android（將網頁應用程式保存到主螢幕）
+[Sugarmate](https://sugarmate.io/)可從 App Store 下載到 iPhone 上。 Sugarmate 相容於：●   Apple iPhone（需要 13.0 或更高版本的軟體）●   Apple iPad（需要 13.0 或更高版本的軟體）●   Google Android（將網頁應用程式儲存到主螢幕）
 
 據 Sugarmate 用戶報告，它可以在美國與 Apple CarPlay 一起使用，當駕駛時顯示血糖讀數。 目前尚未確定這在美國以外的國家是否可行。 如果你知道更多有關此功能的資訊，請透過提交 pull-request（鏈接）將詳細資料添加到文件中，這過程快速且簡單。
 
