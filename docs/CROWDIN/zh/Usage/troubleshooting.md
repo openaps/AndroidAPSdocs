@@ -11,7 +11,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 * [遺失的密鑰庫](troubleshooting_androidstudio-lost-keystore)
 * [Troubleshooting AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 
-### Settings
+### 設定
 * [設定檔](Profiles-troubleshooting-profile-errors)
 
   ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
@@ -22,7 +22,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 
 * [Nightscout Client](../Usage/Troubleshooting-NSClient.html)
 
-### Usage
+### 使用說明
 * [Wrong carb values](COB-calculation-detection-of-wrong-cob-values)
 
    ![Error: Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
