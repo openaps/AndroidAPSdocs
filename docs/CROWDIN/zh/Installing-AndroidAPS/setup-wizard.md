@@ -119,9 +119,9 @@ Android將藍牙通信的使用與位置服務的使用權限相關聯。 您可
 
 ![image](../images/setup-wizard/Screenshot_20231202_130031.png)
 
-### Master password
+### 主密碼
 
-由於 **AAPS** 的配置包含一些敏感數據（_例如_ 訪問您的Nightscout伺服器的API_KEY），因此它通過您可以在此處設置的密碼進行加密。
+由於 **AAPS** 的配置包含一些敏感資料（_例如_ 訪問您的Nightscout伺服器的API_KEY），因此它通過您可以在此處設置的密碼進行加密。
 
 第二句話非常重要，請務必**不要遺失您的主密碼**。 請記下它，_例如_ 儲存到Google雲端硬碟上。 Google雲端硬碟是一個不錯的地方，因為它由Google為您進行備份。 您的智慧手機或電腦可能會崩潰，並且您可能沒有實際副本。 如果您忘記了主密碼，日後可能很難恢復您的配置檔案和在 **目標** 中的進展。
 
@@ -261,7 +261,7 @@ Nightscout用戶應選擇 **NSClient v3**，除非您想通過Nightscout進行�
 
 ![image](../images/setup-wizard/Screenshot_20231202_141351.png)
 
-### Patient name
+### 患者名稱
 
 在這裡，您可以在 **AAPS** 中設置您的名字。
 
@@ -273,7 +273,7 @@ Nightscout用戶應選擇 **NSClient v3**，除非您想通過Nightscout進行�
 
 ![image](../images/setup-wizard/Screenshot_20231202_141445.png)
 
-### Patient type
+### 病人類型
 
 在這裡，您可以選擇您的“患者類型”，這很重要，因為 **AAPS** 軟體根據患者的年齡設有不同的限制。 這對安全至關重要。
 
@@ -455,7 +455,7 @@ OpenAPS AMA 是最基本的演算法，不支持使用小劑量注射來修正�
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 
-### APS mode
+### APS模式
 
 讓“開放循環”保持選中狀態。
 
@@ -463,7 +463,7 @@ OpenAPS AMA 是最基本的演算法，不支持使用小劑量注射來修正�
 
 ![image](../images/setup-wizard/Screenshot_20231202_144049.png)
 
-### Sensitivity detection
+### 敏感度檢測
 
 讓“敏感度Oref1”保持為敏感度外掛的標準選項。
 
