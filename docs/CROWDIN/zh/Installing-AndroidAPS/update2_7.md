@@ -53,7 +53,7 @@
 - 打開「偏好設定」（螢幕右上角的三點選單）
 - 向下滾動並點擊「Dana RS」旁的小三角形。
 - 點擊「幫浦密碼（僅限 v1）」
-- 輸入幫浦密碼（[默認密碼](DanaRS-Insulin-Pump-default-password)取決於韌體版本），然後點擊確定。
+- 輸入幫浦密碼（[預設密碼](DanaRS-Insulin-Pump-default-password)取決於韌體版本），然後點擊確定。
 
 ![設置 Dana RS 密碼](../images/DanaRSPW.png)
 
