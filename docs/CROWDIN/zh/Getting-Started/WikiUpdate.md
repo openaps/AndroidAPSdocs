@@ -149,7 +149,7 @@
 - [Accu-Chek Insight - 日誌選項](Accu-Chek-Insight-Pump-settings-in-aaps)
 - [COB 計算在單獨頁面上](../Usage/COB-calculation.md)
 - [COB - 錯誤 COB 值檢測](COB-calculation-detection-of-wrong-cob-values)
-- [Dexcom G6 specific troubleshooting](DexcomG6-dexcom-g6-specific-troubleshooting)
+- [Dexcom G6 特定疑難排解](DexcomG6-dexcom-g6-specific-troubleshooting)
 - [2.5 版的目標更新](../Usage/Objectives.md)
 - [偏好設定更新](../Configuration/Preferences.md)
 - [SGLT-2 抑制劑 - 閉環時請勿使用](module-no-use-of-sglt-2-inhibitors)
