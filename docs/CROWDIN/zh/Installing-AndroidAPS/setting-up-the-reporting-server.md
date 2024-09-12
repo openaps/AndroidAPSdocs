@@ -41,7 +41,7 @@ Tidepool自 **AAPS** 3.2版本（2023年末釋出）以來才可用。
 
 Tidepool是一個[開源](https://github.com/tidepool-org)專案。 它提供在Tidepool伺服器上免費運行帳號的選項。
 
-您可以在[這裡](https://app.tidepool.org/signup)創建Tidepool帳號。
+您可以在[這裡](https://app.tidepool.org/signup)建立Tidepool帳號。
 
 :::{admonition} **AAPS** 已經集成了Tidepool上傳器
 :class: note
