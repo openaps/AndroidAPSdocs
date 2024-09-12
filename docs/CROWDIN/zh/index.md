@@ -84,7 +84,7 @@ AAPS介紹 <./introduction.md>
 ```
 
 ```{toctree}
-:caption: 4) 遠程 AAPS 功能
+:caption: 4) 遠端 AAPS 功能
 
 遠端控制 <remote-control.md>
 僅查看 <following-only.md>
