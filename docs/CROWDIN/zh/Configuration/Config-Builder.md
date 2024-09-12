@@ -1,16 +1,16 @@
-# 配置建構器
+# 建構設定檔
 
-根據你的設定，你可以透過螢幕頂部的標籤或選單開啟配置建構器。
+根據你的設定，你可以透過螢幕頂部的標籤或選單開「啟建構設定檔」。
 
-![開啟配置建構器](../images/ConfBuild_Open_AAPS30.png)
+![開啟建構設定檔](../images/ConfBuild_Open_AAPS30.png)
 
-配置建構器（Conf）是你用來啟用或停用模組功能的標籤。 左側的框（A）允許你選擇要使用哪一個，右側的框（C）允許你將這些顯示為 AAPS 中的標籤（E）。 如果右側的框未啟用，你可以透過螢幕左上方的選單（D）進入該功能。
+建構設定檔（Conf）是你用來啟用或停用模組功能的標籤。 左側的框（A）允許你選擇要使用哪一個，右側的框（C）允許你將這些顯示為 AAPS 中的標籤（E）。 如果右側的框未啟用，你可以透過螢幕左上方的選單（D）進入該功能。
 
 如果模組內有額外的設定可用，你可以點擊齒輪（B），這會將你帶到偏好設定中的特定設置。
 
 **首次配置：**從 AAPS 2.0 開始，設定嚮導會引導你完成 AAPS 的配置過程。 按下螢幕右上角的三點選單（F），並選擇「設定嚮導」來使用它。
 
-![配置建構器框和齒輪](../images/ConfBuild_ConfigBuilder_AAPS30.png)
+![建構設定檔框和齒輪](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
 (Config-Builder-tab-or-hamburger-menu)=
 
@@ -52,7 +52,7 @@
 你可以輕鬆從設定檔切換中建立新的本地設定檔。 在此情況下，時間偏移和百分比將應用於新本地設定檔。
 
 1. 點擊右上角的三點選單。
-2. 選擇「治療」。
+2. 選擇「治療措施」。
 3. 按下星號圖示以進入設定檔切換頁面。
 4. 選擇所需的設定檔切換並按「複製」。
 5. 你可以在本地設定檔（LP）標籤中或通過選單編輯新的本地設定檔。
@@ -151,7 +151,7 @@
 
 選擇你正在使用的血糖來源——詳情請參閱[血糖來源](BG-Source.md)頁面。
 
-![配置建構器：血糖來源選擇](../images/ConfBuild_BG.png)
+![建構設定檔：血糖來源選擇](../images/ConfBuild_BG.png)
 
 * [構建你自己的 Dexcom 應用程式（BYODA）](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0)。
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
@@ -169,7 +169,7 @@
 
 選擇你正在使用的幫浦。
 
-![配置建構器幫浦選擇](../images/ConfBuild_Pump_AAPS30.png)
+![建構設定檔幫浦選擇](../images/ConfBuild_Pump_AAPS30.png)
 
 * [Dana R](DanaR-Insulin-Pump.md)
 * Dana R Korean（適用於國內 DanaR 幫浦）
@@ -208,13 +208,13 @@
 選擇用於治療調整的 APS 演算法。 你可以在 OpenAPS (OAPS) 標籤中查看選定演算法的活動詳情。
 
 * OpenAPS AMA（進階餐前輔助，2017 年的演算法狀態）簡單來說，它的好處是在你自己進行餐前注射後，如果你可靠地輸入碳水化合物，系統可以更快地進行高溫基礎率調整。
-* [OpenAPS SMB](../Usage/Open-APS-features.md)（超微量注射，針對進階使用者的最新演算法） 注意：你需要在[目標 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)，才能使用 OpenAPS SMB，並且必須在配置建構器 > 敏感性檢測 > 敏感性 Oref1 設定中將 min_5m_carbimpact 設置為 8。
+* [OpenAPS SMB](../Usage/Open-APS-features.md)（超微量注射，針對進階使用者的最新演算法） 注意：你需要在[目標 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)，才能使用 OpenAPS SMB，並且必須在建構設定檔 > 敏感性檢測 > 敏感性 Oref1 設定中將 min_5m_carbimpact 設置為 8。
 
 ## 循環
 
 * 在開放循環、閉合循環和低血糖暫停 (LGS) 之間切換。
 
-![配置建構器 - 循環模式](../images/ConfigBuilder_LoopLGS.png)
+![建構設定檔 - 循環模式](../images/ConfigBuilder_LoopLGS.png)
 
 (Config-Builder-open-loop)=
 
@@ -374,6 +374,6 @@ AAPS 有一個學習計畫（目標），你必須逐步完成它。 這將引�
 
 電子郵件和要發送的日誌數量。 通常無需變更。
 
-### 配置建構器
+### 建構設定檔
 
 使用配置生成器標籤取代選單圖示。
