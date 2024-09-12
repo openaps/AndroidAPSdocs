@@ -18,7 +18,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 
 * [Pump - data from different pump](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
 
-  ![錯誤消息：來自不同幫浦的資料](../images/BasalNotAlignedToHours2.png)
+  ![錯誤訊息：來自不同幫浦的資料](../images/BasalNotAlignedToHours2.png)
 
 * [Nightscout Client](../Usage/Troubleshooting-NSClient.html)
 
