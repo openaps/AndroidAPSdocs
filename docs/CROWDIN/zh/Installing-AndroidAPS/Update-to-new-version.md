@@ -37,23 +37,23 @@
     
     ![Android Studio - 選擇項目](../images/update/01_ProjectSelection.png)
 
-* 在 Android Studio 的菜單欄中，選擇 Git -> Fetch
+* 在 Android Studio 的選單欄中，選擇 Git -> Fetch
     
-    ![Android Studio 菜單 - Git - Fetch](../images/update/02_GitFetch.png)
+    ![Android Studio 選單 - Git - Fetch](../images/update/02_GitFetch.png)
 
-* 您將在右下角看到 Fetch 成功的消息。
+* 您將在右下角看到 Fetch 成功的訊息。
     
-    ![Android Studio 菜單 - Git - Fetch 成功](../images/update/03_GitFetchSuccessful.png)
+    ![Android Studio 選單 - Git - Fetch 成功](../images/update/03_GitFetchSuccessful.png)
 
-* 在菜單欄中，現在選擇 Git -> Pull
+* 在選單欄中，現在選擇 Git -> Pull
     
-    ![Android Studio 菜單 - Git - Pull](../images/update/04_GitPull.png)
+    ![Android Studio 選單 - Git - Pull](../images/update/04_GitPull.png)
 
 * 保持所有選項不變（origin/master），然後選擇 Pull
     
     ![Android Studio - Git - Pull 對話框](../images/update/05_GitPullOptions.png)
 
-* 等待下載過程進行，您會在底部欄看到進度資訊。 完成後，您將看到成功消息。 注意：更新的文件可能有所不同！ 這並不代表指示
+* 等待下載過程進行，您會在底部欄看到進度資訊。 完成後，您將看到成功訊息。 注意：更新的文件可能有所不同！ 這並不代表指示
     
     ![Android Studio - Pull 成功](../images/update/06_GitPullSuccess.png)
 
@@ -71,7 +71,7 @@
 
 您需要將 apk 傳送到手機以便您安裝它。
 
-請參閱 [傳送 APK 至智能手機](Building-APK-transfer-apk-to-smartphone) 的說明
+請參閱 [傳送 APK 至智慧手機](Building-APK-transfer-apk-to-smartphone) 的說明
 
 ## 5. 安裝 APK
 
