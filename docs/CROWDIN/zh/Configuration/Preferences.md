@@ -137,7 +137,7 @@
   ![偏好設定 > 按鈕 > 碳水化合物](../images/Pref2020_OV_Buttons3.png)
 
 (Preferences-quick-wizard)=
-### 快速向導
+### 快速響導
 
 - 如果你經常吃零食或餐前注射，你可以使用快速嚮導按鈕輕鬆輸入碳水化合物的數量並設置計算基礎。
 
@@ -445,7 +445,7 @@
   - 要使警報發出聲音，您需要在[Nightscout 變數](https://nightscout.github.io/nightscout/setup_variables/#alarms)中設置緊急高、高、低和緊急低的警報值。
   - 這些警報僅在您與 Nightscout 有連線時工作，且主要針對家長/照護者。
   - 如果您的 CGM 資料來自手機（如 xDrip+ 或 BYODA），請使用這些警報，而非 Nightscout 警報。
-- 從 Nightscout 公告中創建通知[公告](https://nightscout.github.io/nightscout/discover/#announcement)，將在 AAPS 通知欄中回顯 Nightscout 公告。
+- 從 Nightscout 公告中建立通知[公告](https://nightscout.github.io/nightscout/discover/#announcement)，將在 AAPS 通知欄中回顯 Nightscout 公告。
 - 當在一定時間內未從 Nightscout 收到資料時，您可以更改過時資料和緊急過時資料警報的閾值。
 
 ### 連線設定
