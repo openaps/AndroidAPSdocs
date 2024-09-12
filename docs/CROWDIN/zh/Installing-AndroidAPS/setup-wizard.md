@@ -410,7 +410,7 @@ Nightscout用戶應選擇 **NSClient v3**，除非您想通過Nightscout進行�
 
 ![image](../images/setup-wizard/Screenshot_20231202_143833.png)
 
-### Insulin pump
+### 胰島素幫浦
 
 現在您要選擇您的胰島素幫浦。
 
