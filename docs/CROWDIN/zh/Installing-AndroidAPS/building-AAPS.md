@@ -341,15 +341,15 @@ Android要求每個應用程式都必須_簽章_，以確保以後只能由釋�
 (Building-APK-wearapk)=
 :::{admonition} 信息！
 :class: information
-如果您想為您的手錶創建apk，請選擇AAPS.wear！
+如果您想為您的手錶建立apk，請選擇AAPS.wear！
 :::
 
-- 點擊“創建新...” (2) 開始創建您的密鑰庫。
+- 點擊“建立新...” (2) 開始建立您的密鑰庫。
 
 :::{admonition} 信息！
 :class: information
-您只需要創建一次密鑰庫。
-如果您之前已構建過AAPS，請勿創建新密鑰庫，而是選擇現有的！
+您只需要建立一次密鑰庫。
+如果您之前已構建過AAPS，請勿建立新密鑰庫，而是選擇現有的！
 :::
 
 **_注意：_** 密鑰庫是一個用於存儲應用程式簽章信息的檔案。 它是加密的，並且信息通過密碼進行保護。
@@ -394,7 +394,7 @@ Android要求每個應用程式都必須_簽章_，以確保以後只能由釋�
 
 ![Remember passwords](../images/Building-the-App/31_generate_APK.png)
 
-在下一個螢幕中，選擇構建變體“fullRelease”（1），然後點擊“創建”（2）。
+在下一個螢幕中，選擇構建變體“fullRelease”（1），然後點擊“建立”（2）。
 
 ![Select build variant](../images/Building-the-App/32_full_release.png)
 
