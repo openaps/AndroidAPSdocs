@@ -1,10 +1,10 @@
-# 為 AAPS 創建專用的 Google 帳戶（可選）
+# 為 AAPS 建立專用的 Google 帳戶（可選）
 
 一些 **AAPS** 用戶喜歡將他們的主電子郵件帳戶用於 **AAPS**。 或者，一些 **AAPS** 用戶（或他們的照護者）會設置專用的 **AAPS** 電子郵件帳戶 - 這是可選的，我們在下方介紹如何設置。
 
 如果您不想設置專用的 **AAPS** Gmail 帳戶，您可以直接跳到下一部分，[建立 AAPS](building-AAPS.md)。
 
-:::{admonition} 為 AAPS 創建專用 Google 帳戶的優勢
+:::{admonition} 為 AAPS 建立專用 Google 帳戶的優勢
 
 - 專用的 Google 雲端硬碟空間意味著您不會因 **匯出偏好設定** 而冒著填滿個人 Google 雲端硬碟限制的風險。
 - 每個版本的 **AAPS**（以及支援的應用程式如 xdrip+、BYODA 等）將儲存在一個單一位置，並且與您的電腦硬體無關。 如果您的電腦或手機被偷/遺失/損壞，您仍然可以存取。
@@ -144,4 +144,4 @@ Gmail將顯示帳號名稱。 它將要求您接受Gmail的條款與條件，並
 
 ![](../images/Building-the-App/building_0014.png)
 
-恭喜！ 現在，您已經創建了一個專用於AAPS的Google帳號。 下一步是[構建AAPS應用程式](building-AAPS.md)。
+恭喜！ 現在，您已經建立了一個專用於AAPS的Google帳號。 下一步是[構建AAPS應用程式](building-AAPS.md)。
