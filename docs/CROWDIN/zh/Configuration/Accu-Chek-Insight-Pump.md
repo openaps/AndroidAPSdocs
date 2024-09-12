@@ -17,9 +17,9 @@
 
 ## 設定
 
-* Insight 幫浦一次只能連接一個裝置。 如果您之前使用過 Insight 遙控器（血糖儀），必須從幫浦的配對裝置列表中移除該血糖儀：選單 > 設定 > 通訊 > 移除裝置
+* Insight 幫浦一次只能連接一個裝置。 如果您之前使用過 Insight 遙控器（血糖機），必須從幫浦的配對裝置列表中移除該血糖機：選單 > 設定 > 通訊 > 移除裝置
     
-    ![移除血糖儀 Insight 的螢幕截圖](../images/Insight_RemoveMeter.png)
+    ![移除血糖機 Insight 的螢幕截圖](../images/Insight_RemoveMeter.png)
 
 * 在 AAPS 應用程式的[配置建立器](../Configuration/Config-Builder)中，選擇幫浦區域的 Accu-Chek Insight。
     
@@ -140,7 +140,7 @@ Insight 幫浦有一個小型內部電池，可在更換可拆卸電池時維持
 
 一次只使用一個延長注射，因為同時多次延長注射可能會導致錯誤。
 
-### 超時
+### 逾時
 
 有時 Insight 幫浦在連線設置期間可能不會回應。 在這種情況下，AAPS 將顯示以下訊息：“交握時逾時 - 重置藍牙”。
 
