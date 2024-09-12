@@ -119,7 +119,7 @@ https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
 #### 無 Nightscout - xDrip+ 作為血糖輔助應用程式
 
-如果你的 AAPS 資料源不是 xDrip+，但可以顯示來自輔助應用程式資料源的血糖資料，你可以從主手機分享資料給 xDrip+ 追隨者，顯示血糖、治療和基礎速率資訊。
+如果你的 AAPS 資料源不是 xDrip+，但可以顯示來自輔助應用程式資料源的血糖資料，你可以從主手機分享資料給 xDrip+ 追蹤者，顯示血糖、治療和基礎速率資訊。
 
 ![圖像](./images/remote_control_and_following/xDrip+_Companion_Sync.png)
 
