@@ -79,9 +79,9 @@
 
 [**Google 驗證器 - Android / iOS**](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&pli=1)
 
-[**LastPass Authenticator**](https://www.lastpass.com/solutions/authentication)
+[**LastPass 身份驗證器**](https://www.lastpass.com/solutions/authentication)
 
-[**FreeOTP Authenticator**](https://freeotp.github.io/)
+[**FreeOTP 身份驗證器**](https://freeotp.github.io/)
 
 這些驗證器應用程式會生成一個時間限制的、一次性 6 位數密碼，類似於行動銀行或購物。 您也可以使用其他支援 RFC 6238 TOTP 權杖的驗證器應用程式。 Microsoft 驗證器無法使用。
 
@@ -251,7 +251,7 @@ Example:
 
 #### 問。 為什麼我收到同一條訊息的多封 SMS 簡訊？
 
-如果您重複收到相同的訊息（例如個人設定切換），您可能無意間與其他應用程式建立了循環狀態。 This could be xDrip+, for example. 如果是這樣，請確保 xDrip+（或任何其他應用程式）沒有將治療資料上傳到 NightScout。
+如果您重複收到相同的訊息（例如個人設定切換），您可能無意間與其他應用程式建立了循環狀態。 這可能是 xDrip+，例如。 如果是這樣，請確保 xDrip+（或任何其他應用程式）沒有將治療資料上傳到 NightScout。
 
 #### 問。 我剛設置了 SMS 指令，現在收到太多的簡訊。 我可以減少頻率或停止這些簡訊嗎？
 
@@ -359,7 +359,7 @@ _請注意，**NSClient** 已被 **AAPSClient** 取代，適用於 AAPS 3.2 及�
 
 ### AAPSClient 與智慧型手錶的選項
 
-智慧型手錶可以是一個非常有用的工具，幫助管理兒童的 **AAPS**。 有幾種不同的配置方式可供選擇。 如果**AAPSClient** 安裝在父母的手機上，則可以下載並安裝[**AAPSClient WearOS** 應用程式](https://github.com/nightscout/AndroidAPS/releases/)在與父母手機連接的兼容智慧型手錶上。 This will show current BG, loop status and allow carb entry, temp targets and profile changes. It will NOT allow bolusing from the WearOS app. 您可以在[這裡](smartwatches)閱讀更多關於智慧型手錶的資訊。
+智慧型手錶可以是一個非常有用的工具，幫助管理兒童的 **AAPS**。 有幾種不同的配置方式可供選擇。 如果**AAPSClient** 安裝在父母的手機上，則可以下載並安裝[**AAPSClient WearOS** 應用程式](https://github.com/nightscout/AndroidAPS/releases/)在與父母手機連接的兼容智慧型手錶上。 這將顯示當前的血糖值、循環狀態，並允許輸入碳水化合物、設定暫時目標和更換個人設置。 無法從 WearOS 應用程式進行注射。 您可以在[這裡](smartwatches)閱讀更多關於智慧型手錶的資訊。
 
 (nightscout)=
 ## 3) Nightscout
