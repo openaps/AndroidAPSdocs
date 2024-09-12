@@ -55,7 +55,7 @@
 
 - 需要 NS 15 版本
 - 在使用 NS v3 外掛時，透過 NS UI 輸入的治療（+ 按鈕）和使用 v1 API 的其他應用程式不會發送到 AAPS。 這將在未來的 NS 版本中修復。 在 NS 完全內部切換到 v3 之前，請始終在 AAPS 和 AAPSClient 中使用相同的客戶端（v1 或 v3）。 對於 AAPS 和 AAPSClient 本身也是如此。
-- v3 外掛中的 Websockets 與 v1 外掛的工作方式相似。 禁用 websockets 後，AAPS 會定期下載 NS 的資料，這應該會降低電量消耗，因為 NS 不會長時間保持連接。 但另一方面，這意味著資料交換會有延遲。 在使用 AAPS 的 v3 與 v1 API 之前，請先閱讀 [這裡](Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)開發團隊的重要意見！
+- v3 外掛中的 Websockets 與 v1 外掛的工作方式相似。 停用 websockets 後，AAPS 會定期下載 NS 的資料，這應該會降低電量消耗，因為 NS 不會長時間保持連接。 但另一方面，這意味著資料交換會有延遲。 在使用 AAPS 的 v3 與 v1 API 之前，請先閱讀 [這裡](Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)開發團隊的重要意見！
 - 如果您使用 xdrip 作為 CGM 資料來源，則需要在更新後重新選擇它，因為內部已進行了更改。
 - Tidepool 可作為 NS 的替代品，以通過第一個目標。
 - 如果您選擇發送到 xDrip+，則必須配置 xDrip 同步外掛。 為了從 AAPS 接收 BG 資料，必須將 “xDrip+ Sync Follower” 選為資料來源。
@@ -86,7 +86,7 @@
 - xDrip 通訊移至獨立模塊 @MilosKozak
 - 內部變更：更新的庫版本，rx3 遷移，新模塊結構 @MilosKozak
 - Diaconn 驅動修復 @miyeongkim
-- 更多數據庫維護選項 @MilosKozak
+- 更多資料庫維護選項 @MilosKozak
 - AAPSClient 提供主要手機是否已接入電源的信息 @MilosKozak
 - BolusWizard 的更改。 如果 CGM 不可用，則忽略百分比（即使用 100%）
 - 遷移到 kts 構建系統 @MilosKozak
@@ -94,33 +94,33 @@
 - 測試清理 @ryanhaining @MilosKozak
 - 新增 110,000 行代碼，修改 240,000 行代碼，修改 6,884 個文件
 
-(使用 v3 與 v1 API 進行 Nightscout 和 AAPS 數據交換的重要說明)=
-### 使用 v3 與 v1 API 進行 Nightscout 和 AAPS 數據交換的重要說明
+(使用 v3 與 v1 API 進行 Nightscout 和 AAPS 資料交換的重要說明)=
+### 使用 v3 與 v1 API 進行 Nightscout 和 AAPS 資料交換的重要說明
 
-v1 是用於在 NS 網站和 NS 伺服器之間交換數據的舊協議。 它有許多限制
-- v1 僅發送 2 天的數據
-- 每次重新連接時，v1 都會發送所有 2 天的數據
+v1 是用於在 NS 網站和 NS 伺服器之間交換資料的舊協議。 它有許多限制
+- v1 僅發送 2 天的資料
+- 每次重新連接時，v1 都會發送所有 2 天的資料
 - 使用 websockets 是必須的 = 持久連接，更多的電量消耗
-- 在頻繁斷開連接時，NS 連接會暫停 15 分鐘，以防止高數據使用量
+- 在頻繁中斷連線時，NS 連接會暫停 15 分鐘，以防止高資料使用量
 
 v3 是新的協議。 更加安全和高效
 - 使用令牌可以更好地定義訪問權限
 - 協議在 AAPS 和 NS 兩端都更高效
-- 它可以從 NS 讀取長達 3 個月的數據
+- 它可以從 NS 讀取長達 3 個月的資料
 - 您可以選擇是否在每個設備上使用 websockets（使用意味著更快的更新，不使用意味著更低的電量消耗，但更新速度較慢，即數分鐘）
-- NSClient 在斷開連接時不會暫停
+- NSClient 在中斷連線時不會暫停
 
 限制
 - NS 15 必須與 AAPS 3.2 一起使用
 - v3 不會看到由 v1 協議完成的更新（可能會在未來的 NS 版本中解決）
 - 反過來，因為追蹤變更的方法效率低下，v1 能看到由 v3 完成的變更
-- 請記住，NS 目前仍在內部使用 v1，因此如果您使用 v3，則無法透過 NS 網頁 UI 輸入數據。 如果您想遠端輸入數據，必須使用 AAPSClient 的 SMS 功能
+- 請記住，NS 目前仍在內部使用 v1，因此如果您使用 v3，則無法透過 NS 網頁 UI 輸入資料。 如果您想遠端輸入資料，必須使用 AAPSClient 的 SMS 功能
 
 推薦設置
 - 基於以上所有原因，您應選擇一種方法並在所有設備上使用它（記住，撰寫本文時，所有其他上傳器都在使用 v1）。 如果您決定使用 v3，請在 AAPS 和所有 AAPSClients 中選擇 v3
 - v3 更具效率，因此是首選
 - 使用或不使用 v3 中的 websockets 取決於您的偏好
-- 強烈建議讓 AAPS 收集所有數據，然後將其作為單一上傳器上傳到 NS。 所有其他設備/應用程式應僅從 NS 讀取數據。 這樣可以防止衝突和同步錯誤。 這對於使用 Dexcom Share 連接器等將 BG 數據上傳到 NS 也適用。
+- 強烈建議讓 AAPS 收集所有資料，然後將其作為單一上傳器上傳到 NS。 所有其他設備/應用程式應僅從 NS 讀取資料。 這樣可以防止衝突和同步錯誤。 這對於使用 Dexcom Share 連接器等將 BG 資料上傳到 NS 也適用。
 
 ## 版本 3.1.0
 
@@ -146,7 +146,7 @@ v3 是新的協議。 更加安全和高效
 - a11y 改進 @Andries-Smit
 - 新保護選項 PIN @Andries-Smit
 - 允許從選單調整圖表比例 @MilosKozak
-- 更多統計數據可用 @MilosKozak
+- 更多統計資料可用 @MilosKozak
 - MDI 外掛已被 VirtualPump 取代
 - 新的自動化操作：StopProcessing（遵循規則）
 
@@ -158,7 +158,7 @@ v3 是新的協議。 更加安全和高效
 ### 重要提示
 
 - **最低 Android 版本現在為 9.0。**
-- **數據未遷移到新資料庫。** 請勿抱怨，這是非常大的變更，因此無法遷移。 因此，更新後 IOB、COB、治療等資料將被清除。 您必須創建新的 [個人設置切換](../Usage/Profiles.md)，並從零開始 IOB 和 COB。 請謹慎規劃更新！！！ 最好在無活動胰島素和碳水化合物的情況下進行更新。
+- **資料未遷移到新資料庫。** 請勿抱怨，這是非常大的變更，因此無法遷移。 因此，更新後 IOB、COB、治療等資料將被清除。 您必須建立新的 [個人設置切換](../Usage/Profiles.md)，並從零開始 IOB 和 COB。 請謹慎規劃更新！！！ 最好在無活動胰島素和碳水化合物的情況下進行更新。
 - 請使用相同版本的 AAPS 和 NSClient
 
 **請確保在更新到 3.0 後根據描述檢查並調整設置** [此處](../Installing-AndroidAPS/update3_0.md)。
@@ -169,7 +169,7 @@ v3 是新的協議。 更加安全和高效
 
 - 在 Nightscout 中停用 Dexcom 橋
 - 如果您使用 G5/G6 並使用 xDrip 作為收集器，您必須將 xDrip 更新至 2022 年 1 月 14 日之後的夜間版本
-- 如果您使用 G5/G6，建議切換到 BYODA 作為收集器，以利用回溯平滑功能（您仍然可以將 xDrip 用於其他目的，xDrip 可以從 BYODA 接收數據）
+- 如果您使用 G5/G6，建議切換到 BYODA 作為收集器，以利用回溯平滑功能（您仍然可以將 xDrip 用於其他目的，xDrip 可以從 BYODA 接收資料）
 
 ### 變更
 
@@ -194,11 +194,11 @@ v3 是新的協議。 更加安全和高效
   - 不允許從 NS 刪除記錄（僅能通過 NSClient 使其無效）
   - 不允許從 NS 修改記錄
   - 無需工程模式即可使用同步設置（適用於父母）
-  - 可以重新同步數據
+  - 可以重新同步資料
 
 - 個人設置切換行為變更。 現在區分個人設置切換 *（使用者想要的變更）* 和個人設置變更 *（當幫浦執行變更時）* @MilosKozak @Tebbe
 
-- 您可以在創建個人設置切換時啟動臨時目標 @MilosKozak
+- 您可以在建立個人設置切換時啟動臨時目標 @MilosKozak
 
 - NS 個人設置已消失，僅可使用本地個人設置。 本地個人設置可以 [同步到 NS](update3_0-nightscout-profile-cannot-be-pushed)。 @MilosKozak。
 
@@ -224,7 +224,7 @@ v3 是新的協議。 更加安全和高效
 
 - 已移除目標 9 @MilosKozak
 
-- 修復了與不穩定 CGM 數據相關的錯誤 @MilosKozak
+- 修復了與不穩定 CGM 資料相關的錯誤 @MilosKozak
 
 - DanaR 和 DanaRS 通訊改進 @MilosKozak
 
@@ -259,7 +259,7 @@ v3 是新的協議。 更加安全和高效
 ### 重要提示
 
 - 已為所有 2.8.1 使用者強制開啟選項 **NS_UPLOAD_ONLY**。
-- 如果您使用 NSClient 輸入 TT、碳水化合物或個人設置切換，您必須在 AAPS 中將其關閉，但 **僅在您的同步運作良好時**（例如，您沒有看到不需要的數據變更，如 TT、TBR 的自我修改等）。
+- 如果您使用 NSClient 輸入 TT、碳水化合物或個人設置切換，您必須在 AAPS 中將其關閉，但 **僅在您的同步運作良好時**（例如，您沒有看到不需要的資料變更，如 TT、TBR 的自我修改等）。
 - 注意：如果您有其他應用程式處理治療（例如 xDrip 廣播/上傳/同步...），請勿這樣做。
 - 只能在啟用工程模式時關閉 NS_UPLOAD_ONLY。
 
@@ -355,7 +355,7 @@ v3 是新的協議。 更加安全和高效
 
 ### 主要新功能
 
-- Insight：禁用針對韌體版本 3 的注射震動 - 第二次嘗試
+- Insight：停用針對韌體版本 3 的注射震動 - 第二次嘗試
 - 除此之外，與 2.6.1.3 相同。 更新是可選的。
 
 ## 版本 2.6.1.3
@@ -366,7 +366,7 @@ v3 是新的協議。 更加安全和高效
 
 ### 主要新功能
 
-- Insight：禁用針對韌體版本 3 的注射震動
+- Insight：停用針對韌體版本 3 的注射震動
 - 除此之外，與 2.6.1.2 相同。 更新是可選的。
 
 ## 版本 2.6.1.2
@@ -433,7 +433,7 @@ v3 是新的協議。 更加安全和高效
 
 - 移除了 SimpleProfile
 
-- [延長注射](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)功能 - 閉環將被禁用
+- [延長注射](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)功能 - 閉環將被停用
 
 - MDT 外掛：修復了重複條目錯誤
 
@@ -526,7 +526,7 @@ v3 是新的協議。 更加安全和高效
 - 檢查 GIT 並在 Gradle 升級時發出警告
 - 更多自動測試
 - 修復 AlarmSound 服務中的潛在崩潰問題（感謝 @lee-b！）
-- 修復 BG 數據廣播（現在獨立於 SMS 權限運行！）
+- 修復 BG 資料廣播（現在獨立於 SMS 權限運行！）
 - 新增版本檢查器
 
 ## 版本 2.2.2
@@ -565,7 +565,7 @@ v3 是新的協議。 更加安全和高效
 - 修復 UI 阻塞（Johannes Mockenhaupt）
 - 支援更新的 G5 應用（Tebbe Ubben 和 Milos Kozak）
 - G6、Poctech、Tomato、Eversense BG 資料來源支援（Tebbe Ubben 和 Milos Kozak）
-- 修復偏好設置中禁用 SMB 的問題（Johannes Mockenhaupt）
+- 修復偏好設置中停用 SMB 的問題（Johannes Mockenhaupt）
 
 ### 其他事項
 
@@ -604,7 +604,7 @@ v3 是新的協議。 更加安全和高效
 - 治療按鈕：舊的治療按鈕仍可用，但預設情況下被隱藏。 按鈕的可見性現在可以配置。 新的胰島素按鈕、新的碳水化合物按鈕（包括 [eCarbs/延長碳水化合物](../Usage/Extended-Carbs.md)）
 - [彩色預測線](../Getting-Started/Screenshots-prediction-lines)
 - 選項可在胰島素/碳水化合物/計算機/注射+填充對話框中顯示筆記字段，這些字段會上傳到 NS
-- 更新的注射/填充對話框允許進行注射，並創建護理入口條目以記錄站點更換和藥筒更換
+- 更新的注射/填充對話框允許進行注射，並建立護理入口條目以記錄站點更換和藥筒更換
 
 ### 手錶
 
