@@ -343,25 +343,25 @@ Wear OS 手錶是非常受電力限制的裝置。 手錶機殼的尺寸限制�
 
 您可以在此下載由其他用戶建立的自訂錶盤 Zip 檔：
 
-Grid Layout (sort by ascending alphabetical order)
+網格佈局（按字母順序排列）
 
-|                                                                                                                                                                 |                                                                                                                                                                     |                                                                                                                                                                   |                                                                                                                                                                |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Watchface AAPS_V2](../ExchangeSiteCustomWatchfaces/AAPS_V2-CustomWatchface.png)   
-**AAPS_V2**](../ExchangeSiteCustomWatchfaces/AAPS_V2.zip)                 | [![AAPS](../ExchangeSiteCustomWatchfaces/AAPS-CustomWatchface.png)   
+|                                                                                                                                                                 |                                                                                                                                                                     |                                                                                                                                                                   |                                                                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![AAPS_V2 錶盤](../ExchangeSiteCustomWatchfaces/AAPS_V2-CustomWatchface.png)   
+**AAPS_V2**](../ExchangeSiteCustomWatchfaces/AAPS_V2.zip)                        | [![AAPS](../ExchangeSiteCustomWatchfaces/AAPS-CustomWatchface.png)   
 **AAPS**](../ExchangeSiteCustomWatchfaces/AAPS.zip)                                           | [![Cockpit](../ExchangeSiteCustomWatchfaces/Cockpit-CustomWatchface.png)   
 **Cockpit**](../ExchangeSiteCustomWatchfaces/Cockpit.zip)                             | [![SteamPunk](../ExchangeSiteCustomWatchfaces/SteamPunk-CustomWatchface.png)   
-**SteamPunk**](../ExchangeSiteCustomWatchfaces/SteamPunk.zip)                  |
+**SteamPunk**](../ExchangeSiteCustomWatchfaces/SteamPunk.zip)           |
 | [![AIMICO](../ExchangeSiteCustomWatchfaces/AIMICO-V1_1-CustomWatchface.png)   
 **AIMICO**](../ExchangeSiteCustomWatchfaces/AIMICO-V1_1.zip)                     | [![Analog G-Watch](../ExchangeSiteCustomWatchfaces/Analog_G-Watch-CustomWatchface.png)   
 **類比 G-Watch**](../ExchangeSiteCustomWatchfaces/Analog_G-Watch.zip)       | [![Digital G-Watch](../ExchangeSiteCustomWatchfaces/Digital_G-Watch-CustomWatchface.png)   
 **數位 G-Watch**](../ExchangeSiteCustomWatchfaces/Digital_G-Watch.zip)  | [![SimpleDigital](../ExchangeSiteCustomWatchfaces/SimpleDigital_v1.3-CustomWatchface.png)   
-**簡易數位**](../ExchangeSiteCustomWatchfaces/SteamPunk.zip)          |
+**簡易數位**](../ExchangeSiteCustomWatchfaces/SteamPunk.zip)   |
 | [![Gears](../ExchangeSiteCustomWatchfaces/Gears-CustomWatchface.jpg)   
 **齒輪**](../ExchangeSiteCustomWatchfaces/Gears.zip)                                      | [![Gota](../ExchangeSiteCustomWatchfaces/Gota-CustomWatchface.png)   
 **Gota**](../ExchangeSiteCustomWatchfaces/Gota_v2.4.zip)                                      | [![LuckyLoopKoeln](../ExchangeSiteCustomWatchfaces/LuckyLoopKoeln-CustomWatchface.png)   
-**LuckyLoopKoeln**](../ExchangeSiteCustomWatchfaces/LuckyLoopKoeln.zip) | [![Robby watchface](../ExchangeSiteCustomWatchfaces/Robby_watchface-CustomWatchface.png)   
+**LuckyLoopKoeln**](../ExchangeSiteCustomWatchfaces/LuckyLoopKoeln.zip) | [![Robby 錶盤](../ExchangeSiteCustomWatchfaces/Robby_watchface-CustomWatchface.png)   
 **Robby 錶盤**](../ExchangeSiteCustomWatchfaces/Robby_watchface.zip) |
 | [![DigitalBigGraph](../ExchangeSiteCustomWatchfaces/DigitalBigGraph-CustomWatchface.png)   
 **數位大圖**](../ExchangeSiteCustomWatchfaces/DigitalBigGraph_v1.5.zip) | [![PinkFloydTheWall](../ExchangeSiteCustomWatchfaces/PinkFloydTheWall-CustomWatchface.png)   
-**平克佛洛伊德：隔離牆**](../ExchangeSiteCustomWatchfaces/PinkFloydTheWall.zip) |                                                                                                                                                                   |                                                                                                                                                                |
+**平克佛洛伊德：隔離牆**](../ExchangeSiteCustomWatchfaces/PinkFloydTheWall.zip) |                                                                                                                                                                   |                                                                                                                                                         |
