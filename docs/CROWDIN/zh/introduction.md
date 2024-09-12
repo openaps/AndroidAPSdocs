@@ -48,7 +48,7 @@ AAPS 的“核心”是一個你自己構建的**應用程式**。 這裡有詳�
 
 **安卓智慧手機**也需要安裝另一個應用程式，以及 **AAPS**。 這是一個修改過的 Dexcom 應用程式，稱為自建 Dexcom 應用程式[**BYODA**](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) 或 [**Xdrip+**](https://xdrip.readthedocs.io/en/latest/install/usethedoc/)。 這個附加應用程序通過藍牙從傳感器(**2**) 接收葡萄糖資料，然後將資料內部發送到手機上的 **AAPS 應用程序**。
 
-**AAPS 應用程式**使用來自 OpenAPS 的決策過程（**演算法**）。 初學者開始使用基本的 **oref0** 演算法，但隨著您在AAPS上的目標進度，可以切換到使用較新的 **oref1** 演算法。 你使用哪個演算法（oref0或oref1），取決於哪個最適合您的特定情況。  在兩種情況下，演算法考慮多個因素，每次從感測器傳入新讀數時進行快速計算。 演算法然後通過藍牙將指令發送到胰島素幫浦（**3**），指示其提供多少胰島素。 所有訊息可以通過手機資料或wifi發送到互聯網（**4**） 如果需要，這些資料也可以與追隨者分享，並且/或收集用於分析。
+**AAPS 應用程式**使用來自 OpenAPS 的決策過程（**演算法**）。 初學者開始使用基本的 **oref0** 演算法，但隨著您在AAPS上的目標進度，可以切換到使用較新的 **oref1** 演算法。 你使用哪個演算法（oref0或oref1），取決於哪個最適合您的特定情況。  在兩種情況下，演算法考慮多個因素，每次從感測器傳入新讀數時進行快速計算。 演算法然後通過藍牙將指令發送到胰島素幫浦（**3**），指示其提供多少胰島素。 所有訊息可以通過手機資料或wifi發送到互聯網（**4**） 如果需要，這些資料也可以與追蹤者分享，並且/或收集用於分析。
 
 ## AAPS系統的優勢是什麼？
 
@@ -202,9 +202,9 @@ _表格說明：_
 
 #### 關於設備、耗材和其他藥物的醫療安全
 
-使用經過測試、功能完善的FDA或CE認證的胰島素幫浦和CGM來建立人工胰臟閉環系統。 Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. 如果你發現或被提供損壞、改裝或自製的胰島素幫浦或CGM接收器，請不要將其用於建立AAPS系統。 
+使用經過測試、功能完善的FDA或CE認證的胰島素幫浦和CGM來建立人工胰臟閉環系統。 對這些組件進行硬體或軟體修改可能會導致胰島素劑量異常，對使用者造成重大風險。 如果你發現或被提供損壞、改裝或自製的胰島素幫浦或CGM接收器，請不要將其用於建立AAPS系統。 
 
-請使用幫浦和CGM製造商批准的原裝耗材，如插入器、導管和胰島素容器。 Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. 胰島素劑量錯誤非常危險——請不要拿自己的生命開玩笑，隨便修改耗材。
+請使用幫浦和CGM製造商批准的原裝耗材，如插入器、導管和胰島素容器。 使用未經測試或修改的耗材可能會導致 CGM 不準確和胰島素劑量錯誤。 胰島素劑量錯誤非常危險——請不要拿自己的生命開玩笑，隨便修改耗材。
 
 在使用 **AAPS**時，請不要服用SGLT-2抑制劑（格列酮類藥物），因為它們會無法預測地降低血糖水平。 將這種效果與降低基礎率以增加血糖的系統結合使用是危險的，詳細信息可參閱主安全部分[這裡](preparing-safety-first)。
 
