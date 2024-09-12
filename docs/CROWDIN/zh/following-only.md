@@ -33,7 +33,7 @@ G)  Spike（iOS）
 
 ![圖像](./images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
 
-●  Dexcom Follow 適用於多種手持設備（包括 Android 和 iPhone）。 即使你未使用官方的 Dexcom 應用程式接收傳感器數據，也可以使用 Dexcom Follow。
+●  Dexcom Follow 適用於多種手持設備（包括 Android 和 iPhone）。 即使你未使用官方的 Dexcom 應用程式接收傳感器資料，也可以使用 Dexcom Follow。
 
 ●  許多照護者熟悉 Dexcom Follow，因為它簡單明瞭的界面相較於其他複雜的應用更受青睞。
 
@@ -41,7 +41,7 @@ G)  Spike（iOS）
 
 #### 設置 Dexcom Follow：操作指南
 
-如果你使用的是非官方的 Dexcom 應用程式 BYODA 來接收傳感器數據，你可能可以從 BYODA 應用程式內向追蹤者發送邀請。 你應該也可以從 xDrip+ 中發送 Dexcom Follow 的邀請（設置 - 雲上傳 - Dexcom 分享伺服器上傳，請參見這裡的指示：
+如果你使用的是非官方的 Dexcom 應用程式 BYODA 來接收傳感器資料，你可能可以從 BYODA 應用程式內向追蹤者發送邀請。 你應該也可以從 xDrip+ 中發送 Dexcom Follow 的邀請（設置 - 雲上傳 - Dexcom 分享伺服器上傳，請參見這裡的指示：
 
 https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
@@ -51,7 +51,7 @@ https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
 步驟如下：
 
-1)  在_任何_智慧型手機（Android/iPhone）上安裝官方的“Dexcom”應用程式，如果方便的話，也可以安裝在追蹤者的手機上。 2)  使用你的 Dexcom 用戶名和密碼登錄，這與你用於 Dexcom Clarity 的登錄信息相同，如果你已經是 Dexcom/Clarity 的客戶。 如果你沒有 Dexcom 登錄，這時可以選擇創建新帳號。   
+1)  在_任何_智慧型手機（Android/iPhone）上安裝官方的“Dexcom”應用程式，如果方便的話，也可以安裝在追蹤者的手機上。 2)  使用你的 Dexcom 用戶名和密碼登錄，這與你用於 Dexcom Clarity 的登錄信息相同，如果你已經是 Dexcom/Clarity 的客戶。 如果你沒有 Dexcom 登錄，這時可以選擇建立新帳號。   
 3) 滑動瀏覽介紹選單。 4)  對於傳感器代碼，選擇“無代碼”。 5)  在發射器序號下，選擇“手動輸入”，並輸入任何有效的發射器代碼（如果你知道一個過期的發射器代碼，請使用它，這樣就不會干擾當前發射器的運行，它們遵循特定的數字和字母組合格式：“NLNNNL”，並且只使用特定的組合，因此使用你已知有效的代碼會更容易）。 6)  一旦應用程式嘗試查找發射器和傳感器，你將能夠邀請追蹤者：選擇應用程式左上角的小三個點，然後新增追蹤者。 如果你的其中一個追蹤者更換了手機，需要重新發送邀請，也可以在此處刪除他們並重新發送新的邀請郵件，供他們在新設備上使用。 7)  在追蹤者的手機上，通過 App Store（iPhone）或 Play 商店（Android）下載並安裝 Dexcom Follow。 設置 Dexcom Follow 應用程式，系統會提示你打開電子郵件以找到成為跟追蹤的邀請。    
 )  現在你可以刪除官方的 Dexcom G6 應用程式。
 
@@ -68,11 +68,11 @@ https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
 ●  滑動按鈕或搖動手機以延後不同間隔的警報，範圍從5分鐘到24小時。
 
-●  自訂警報（高、低警報，當無數據15-45分鐘時的警報）。
+●  自訂警報（高、低警報，當無資料15-45分鐘時的警報）。
 
 ●  快速上升/下降超過2-5次連續讀數（你可以選擇）。 還可以選擇兩個單獨讀數之間的差值。
 
-●  智慧延後功能，不會在數據朝正確方向變動時發出警報。
+●  智慧延後功能，不會在資料朝正確方向變動時發出警報。
 
 ●  還有一個“照護”標籤，允許你設定一個臨時目標持續一段時間、刪除臨時目標或輸入碳水化合物數量。
 
@@ -107,7 +107,7 @@ https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
 #### 與 Nightscout 一起使用
 
-將 xDrip+ 設置為 Nightscout 的追蹤者。 你將接收血糖和治療訊息，但不會接收基礎速率數據。
+將 xDrip+ 設置為 Nightscout 的追蹤者。 你將接收血糖和治療訊息，但不會接收基礎速率資料。
 
 ![圖像](./images/remote_control_and_following/xDrip+_Nightscout_Follower.png)
 
@@ -182,17 +182,17 @@ Spike 可用作主要接收器或追蹤者應用程式，提供血糖、警報�
 
 要安裝 Spike，請參見 [這裡](https://spike-app.com/#installation)
 
-## 2) 用於 **監控 AAPS** 的智慧手錶（完整的個人資料數據或僅顯示血糖）當 **AAPS** 在手機上運行時。
+## 2) 用於 **監控 AAPS** 的智慧手錶（完整的個人資料資料或僅顯示血糖）當 **AAPS** 在手機上運行時。
 
 允許與 **AAPS** 進行互動的智慧型手錶選項已在文件的 ["遠端控制"](remote-control.md) 部分中描述。
 
-還有各種經濟實惠的智慧型手錶可供顯示數據使用。 如果你使用 Nightscout，那麼這裡有關所有選項的一個不錯的概述 [這裡](https://nightscout.github.io/nightscout/wearable/#)
+還有各種經濟實惠的智慧型手錶可供顯示資料使用。 如果你使用 Nightscout，那麼這裡有關所有選項的一個不錯的概述 [這裡](https://nightscout.github.io/nightscout/wearable/#)
 
 在這裡我們總結了一些 **AAPS** 用戶流行的僅追蹤手錶選項：
 
 ### a)  **小米和 Amazfit 手錶**
 
-[Artem](https://github.com/bigdigital) 為各種智慧手錶型號創建了一個 xDrip+ 集成應用程式 WatchDrip+，主要針對小米（如 Mi band）和 Amazfit 品牌：
+[Artem](https://github.com/bigdigital) 為各種智慧手錶型號建立了一個 xDrip+ 集成應用程式 WatchDrip+，主要針對小米（如 Mi band）和 Amazfit 品牌：
 
 ![圖像](./images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
 
@@ -206,7 +206,7 @@ Spike 可用作主要接收器或追蹤者應用程式，提供血糖、警報�
 ![圖像](./images/935d28bb-a909-4ca8-850d-6a765bd4fcde.png)
 
 
-Pebble 手錶（[現已停產](https://en.wikipedia.org/wiki/Pebble_(watch))）於 2013 年至 2016 年間在市場上銷售，仍可二手購買。 Fitbit 接管了 Pebble 的資產。 Pebble 用戶可以使用 Urchin 表盤查看 Nightscout 數據。 顯示的數據選項包括 IOB、當前的臨時基礎速率和預測值。 如果使用開放循環，你可以使用 IFTTT 創建一個應用程式，如果收到來自**AAPS**的通知，則發送 SMS 或 pushover 通知。
+Pebble 手錶（[現已停產](https://en.wikipedia.org/wiki/Pebble_(watch))）於 2013 年至 2016 年間在市場上銷售，仍可二手購買。 Fitbit 接管了 Pebble 的資產。 Pebble 用戶可以使用 Urchin 表盤查看 Nightscout 資料。 顯示的資料選項包括 IOB、當前的臨時基礎速率和預測值。 如果使用開放循環，你可以使用 IFTTT 建立一個應用程式，如果收到來自**AAPS**的通知，則發送 SMS 或 pushover 通知。
 
 ### c) [Bluejay GTS 手錶](https://bluejay.website/shop/product/bluejay-gts-26)
 
@@ -214,7 +214,7 @@ Pebble 手錶（[現已停產](https://en.wikipedia.org/wiki/Pebble_(watch))）�
 ![圖像](./images/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74.png)
 
 
-這是一款獨特的技術產品，可以 **直接**從 Dexcom G6 發射器接收血糖數據。 很多人不知道 Dexcom G6 發射器實際上會在兩個獨立的通道上廣播當前的血糖數據，一個是手機通道，另一個是幫浦通道。 Bluejay GTS 手錶運行的是經過修改的 Xdrip+ 軟體，並且可以設置為在任一通道上接收血糖數據，因此如果 **AAPS** 使用手機通道，那麼 Bluejay GTS 手錶可以使用幫浦通道。
+這是一款獨特的技術產品，可以 **直接**從 Dexcom G6 發射器接收血糖資料。 很多人不知道 Dexcom G6 發射器實際上會在兩個獨立的通道上廣播當前的血糖資料，一個是手機通道，另一個是幫浦通道。 Bluejay GTS 手錶運行的是經過修改的 Xdrip+ 軟體，並且可以設置為在任一通道上接收血糖資料，因此如果 **AAPS** 使用手機通道，那麼 Bluejay GTS 手錶可以使用幫浦通道。
 
 Bluejay GTS 手錶體積小、防水且價格相對實惠（目前售價為 115 英鎊），可從英國國際運送。 其主要優點是它目前是唯一完全獨立於手機和循環系統的手錶。 例如，如果你在海灘或水上樂園時斷開幫浦和 **AAPS**手機的連接，並且超出了 AAPS 手機的範圍，你仍然可以從 Dexcom G6 直接獲取 Bluejay 手錶的讀數。
 
@@ -249,13 +249,13 @@ M5Stack 是一個小盒子，可以編程為多種應用程式，Martin 的項�
 
 ### B) Sugarpixel
 
-SugarPixel 是一個連接 Dexcom 應用程式或 Nightscout 應用程式的次級血糖顯示警報系統，用於持續血糖監測。 該設備顯示實時的血糖讀數。 這款 CGM 硬體顯示器具備隨機音調生成的音頻警報（聲音非常大）、針對聽力受損者的振動警報、自定義顯示選項以及原生多用戶追蹤功能。
+SugarPixel 是一個連接 Dexcom 應用程式或 Nightscout 應用程式的次級血糖顯示警報系統，用於持續血糖監測。 該設備顯示實時的血糖讀數。 這款 CGM 硬體顯示器具備隨機音調生成的音檔警報（聲音非常大）、針對聽力受損者的振動警報、自定義顯示選項以及原生多用戶追蹤功能。
 
 ![圖像](./images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
 
 ![圖像](./images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
-●   SugarPixel 具有多種顯示選項，支持 mg/dL 和 mmol/L，以滿足用戶的需求，並且帶有顏色標識的血糖值。 ●   標準顯示面板顯示血糖讀數、趨勢箭頭和 Delta 值。 Delta 是與上一次讀數的變化值（正或負）。 ●   SugarPixel 可以自定義為低亮度模式，顯示血糖和時間面板，方便用戶在床邊桌上查看當前血糖讀數和時間。 ●   SugarPixel 的彩色面板利用整個顯示屏來展示單一顏色，代表當前的血糖值。 這使得用戶可以在戶外的後院、露台或游泳池旁，通過窗戶從遠處看到血糖讀數。 ●   大血糖面板非常適合床邊使用，特別是佩戴眼鏡或隱形眼鏡的用戶。
+●   SugarPixel 具有多種顯示選項，支援 mg/dL 和 mmol/L，以滿足用戶的需求，並且帶有顏色標識的血糖值。 ●   標準顯示面板顯示血糖讀數、趨勢箭頭和 Delta 值。 Delta 是與上一次讀數的變化值（正或負）。 ●   SugarPixel 可以自定義為低亮度模式，顯示血糖和時間面板，方便用戶在床邊桌上查看當前血糖讀數和時間。 ●   SugarPixel 的彩色面板利用整個顯示屏來展示單一顏色，代表當前的血糖值。 這使得用戶可以在戶外的後院、露台或游泳池旁，通過窗戶從遠處看到血糖讀數。 ●   大血糖面板非常適合床邊使用，特別是佩戴眼鏡或隱形眼鏡的用戶。
 
 
 ### C) 電腦（TeamViewer）
