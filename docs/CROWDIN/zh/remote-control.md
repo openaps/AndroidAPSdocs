@@ -26,7 +26,7 @@
 
 2. 如果您想遠端注射胰島素
 
-3. 在網路訊號不佳的地區，文字訊息能夠傳送，而數據/網路訊號有限。 這在前往偏遠地區（例如露營、滑雪）時非常有用。
+3. 在網路訊號不佳的地區，文字訊息能夠傳送，而資料/網路訊號有限。 這在前往偏遠地區（例如露營、滑雪）時非常有用。
 
 4. 如果您的其他遠端控制方法（Nightscout/AAPSClient）暫時無法使用
 
@@ -97,7 +97,7 @@
 
 4) **AAPS 設定：**
 
-i) 現在已經檢查了手機設定，在 **AAPS** 應用程式中，使用左側的漢堡菜單導航到配置生成器：
+i) 現在已經檢查了手機設定，在 **AAPS** 應用程式中，使用左側的漢堡選單導航到配置生成器：
 
 ![圖像](images/remote-control-09.png)
 
@@ -468,13 +468,13 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 ### 在購買智慧型手錶之前……
 
-您購買的智慧型手錶具體型號取決於您所需的功能。 目前有兩份歷史性電子表格記錄了兼容的[智能手機](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952)和[智能手機和手錶](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)，但由於選項繁多，建議透過 Discord 和 Facebook 群組進行詢問，這些表格將不再更新。
+您購買的智慧型手錶具體型號取決於您所需的功能。 目前有兩份歷史性電子表格記錄了兼容的[智慧手機](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952)和[智慧手機和手錶](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)，但由於選項繁多，建議透過 Discord 和 Facebook 群組進行詢問，這些表格將不再更新。
 
 受歡迎的手錶品牌包括三星 Galaxy、Garmin、Fossil、米動手環和 Fitbit。 上表中概述的不同選項將在下方詳細解釋，幫助您決定哪款智慧型手錶適合您的需求。
 
 如果您打算將智慧型手錶與**AAPS** 手機結合使用並遠端操作**AAPS**，您還需要考慮這兩個設備是否兼容，尤其是如果您的手機較舊或比較特殊。
 
-一般來說，如果您只想要追蹤血糖數據而不與**AAPS** 進行互動，有更多價格實惠且簡單的手錶可供選擇。
+一般來說，如果您只想要追蹤血糖資料而不與**AAPS** 進行互動，有更多價格實惠且簡單的手錶可供選擇。
 
 選擇智慧型手錶的最佳方式是搜尋 Discord 或 Facebook**AAPS** 群組中的“手錶”相關帖子。 閱讀其他人的經驗分享，如果舊帖子中未解答您的問題，請發布具體問題。
 
@@ -617,7 +617,7 @@ https://www.youtube.com/watch?v=tSVkqWNmO2c
 
 ##### 設置 Samsung 帳號
 
-您需要確保用來設置 Samsung 帳號的電子郵件帳戶的出生日期顯示用戶年齡 13 歲以上，否則 Samsung 的許可權批准將非常困難。 如果您已為 13 歲以下的孩子創建了 Gmail 帳號並使用該電子郵件地址，您無法簡單地將其更改為成人帳戶。 解決此問題的一種方法是將當前的出生日期修改為使當前年齡為 12 歲零 363 天。 第二天，該帳戶將被轉換為成人帳戶，然後您可以繼續設置 Samsung 帳戶。
+您需要確保用來設置 Samsung 帳號的電子郵件帳戶的出生日期顯示用戶年齡 13 歲以上，否則 Samsung 的許可權批准將非常困難。 如果您已為 13 歲以下的孩子建立了 Gmail 帳號並使用該電子郵件地址，您無法簡單地將其更改為成人帳戶。 解決此問題的一種方法是將當前的出生日期修改為使當前年齡為 12 歲零 363 天。 第二天，該帳戶將被轉換為成人帳戶，然後您可以繼續設置 Samsung 帳戶。
 
 ##### 將 **AAPS** Wear 應用程式傳輸到 **AAPS** 手機
 
@@ -707,7 +707,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 2.  檢查智慧型手錶是否已連接到網際網路（而不僅僅是通過藍牙與手機連接）。
 3.  檢查 **AAPS** 手機和智慧型手錶是否已在 Samsung 應用程式中配對或連接。
 4.  也可能需要對手機和智慧型手錶進行硬重啟（即關閉並重新啟動手機）。
-5.  假設您已經成功下載 Wear.apk 到手機，但未收到任何血糖數據，_請檢查_ 您是否已將正確的 **AAPS** apk 版本側載到手錶上。 如果您的 AAPS wear.apk 版本列為以下任何一個：a) “wear-AAPSClient-release”；b) “wear-full-release.aab”；或c) 標題中出現“debug”一詞，那麼您在構建過程中選擇了錯誤的 Wear OS apk 版本。
+5.  假設您已經成功下載 Wear.apk 到手機，但未收到任何血糖資料，_請檢查_ 您是否已將正確的 **AAPS** apk 版本側載到手錶上。 如果您的 AAPS wear.apk 版本列為以下任何一個：a) “wear-AAPSClient-release”；b) “wear-full-release.aab”；或c) 標題中出現“debug”一詞，那麼您在構建過程中選擇了錯誤的 Wear OS apk 版本。
 6.  檢查路由器是否未將設備相互隔離。
 
 更多疑難排解提示請參閱[這裡](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
@@ -720,7 +720,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 ● 設置臨時目標
 
-● 使用注射計算機（計算變量可以在手機設置中定義）
+● 使用注射計算機（計算變數可以在手機設置中定義）
 
 ● 管理 eCarbs
 
@@ -742,7 +742,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 #### 照護者使用其他應用程式（如 Whatsapp）與手錶通信
 
-可以在手錶上添加其他應用程式，例如 Whatsapp，用於照護者和孩子之間的訊息交流（例如）。 重要的是，手機上只應關聯一個 Google 帳戶，否則手錶無法同步這些數據。 您需要年滿 13 歲才能擁有 Samsung 帳戶，並且此帳戶需要使用與 Android 手機相同的電子郵件地址設置。
+可以在手錶上添加其他應用程式，例如 Whatsapp，用於照護者和孩子之間的訊息交流（例如）。 重要的是，手機上只應關聯一個 Google 帳戶，否則手錶無法同步這些資料。 您需要年滿 13 歲才能擁有 Samsung 帳戶，並且此帳戶需要使用與 Android 手機相同的電子郵件地址設置。
 
 這裡有一段視頻，解釋了如何在 Galaxy 4 手錶上設置 Whatsapp 訊息功能（您無法獲得 Whatsapp 的全部功能），請參見[這裡](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
 
@@ -785,7 +785,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 **"Sentinel"** 是一款由[Ryan Chen](http://ryanwchen.com/sentinel.html) 為其家人開發並免費提供給 FitBit 智慧型手錶的錶盤：Sense1/2, Versa 2/3/4。 它與 FitBit Luxe 不兼容，因為它只是健身追蹤器。 Sentinel 可以從[FitBit 移動應用程式](https://gallery.fitbit.com/details/5f75448f-413d-4ece-a53d-b969c6afea7c)下載。
 
-它允許使用 Dexcom Share、Nightscout 或兩者結合作為數據來源，來監控一個、兩個或三個人的血糖數值。
+它允許使用 Dexcom Share、Nightscout 或兩者結合作為資料來源，來監控一個、兩個或三個人的血糖數值。
 
 如果與本地網頁伺服器模式一起使用，您還可以使用 xDrip+ 或 SpikeApp。 用戶可以設置自定義警報，並通過 Nightscout 的 careportal 功能提交事件，直接從手錶追蹤胰島素剩餘量（IOB）、碳水化合物剩餘量（COB），輸入餐食資訊（碳水化合物計數和注射量），以及血糖檢查數值。
 
@@ -793,11 +793,11 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 FitBit 手錶還有一些僅限於監控的選項。 這包括[Glance](https://glancewatchface.com/)。 這些額外選項在[Nightscout 網頁](https://nightscout.github.io/nightscout/wearable/#fitbit)中有描述。
 
-### 選項 5) 監控 **AAPS**（完整個人設定資料，或僅限血糖數據）當 **AAPS** 在手機上運行時。
+### 選項 5) 監控 **AAPS**（完整個人設定資料，或僅限血糖資料）當 **AAPS** 在手機上運行時。
 
 這些選項在文檔的[“僅限追蹤”](following-only.md)部分中有更詳細的描述。
 
-通常，市場上有許多價格實惠的智慧型手錶可以提供僅限血糖數據顯示的功能。 如果您正在使用 Nightscout，那麼所有選項的概述可以在[Nightscout 頁面](https://nightscout.github.io/nightscout/wearable/#)中找到。
+通常，市場上有許多價格實惠的智慧型手錶可以提供僅限血糖資料顯示的功能。 如果您正在使用 Nightscout，那麼所有選項的概述可以在[Nightscout 頁面](https://nightscout.github.io/nightscout/wearable/#)中找到。
 
 
 
