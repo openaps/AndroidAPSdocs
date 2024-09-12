@@ -3,9 +3,9 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## 遺失的密鑰庫
-如果您在更新 AAPS 時使用相同的密鑰庫，則無需在您的智能手機上卸載之前的版本。 這就是為什麼建議將密鑰庫存放在安全地方的原因。
+如果您在更新 AAPS 時使用相同的密鑰庫，則無需在您的智慧手機上卸載之前的版本。 這就是為什麼建議將密鑰庫存放在安全地方的原因。
 
-如果您嘗試安裝使用不同密鑰庫簽章的 apk，則會收到一條錯誤消息，提示安裝失敗！
+如果您嘗試安裝使用不同密鑰庫簽章的 apk，則會收到一條錯誤訊息，提示安裝失敗！
 
 如果您無法再找到舊密鑰庫或其密碼，請按照以下步驟進行：
 
@@ -18,11 +18,11 @@
 
    如果您無法在手機上找到它們，請將它們從外部存儲複製到手機上。
 
-8. 檢查您的電池優化選項並再次禁用它們。
+8. 檢查您的電池優化選項並再次停用它們。
 9. 繼續循環。
 
 ## Gradle 同步失敗
-Gradle 同步可能由於各種原因失敗。 當您收到消息提示 gradle 同步失敗時，打開 Android Studio 底部的“Build”選項卡 (1)，查看顯示的錯誤消息 (2)。
+Gradle 同步可能由於各種原因失敗。 當您收到訊息提示 gradle 同步失敗時，打開 Android Studio 底部的“Build”選項卡 (1)，查看顯示的錯誤訊息 (2)。
 
   ![Gradle 失敗](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
@@ -36,7 +36,7 @@ Gradle 同步可能由於各種原因失敗。 當您收到消息提示 gradle �
 (troubleshooting_androidstudio-uncommitted-changes)=
 ### 未提交的更改
 
-如果您收到失敗消息，如
+如果您收到失敗訊息，如
 
 ![Gradle 未提交的更改](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
@@ -50,9 +50,9 @@ Gradle 同步可能由於各種原因失敗。 當您收到消息提示 gradle �
 
     注意：git 和 version 之間有一個空格和兩個破折號！
 
-  * 您應該收到一條消息，告訴您安裝了什麼版本的 git，正如上面的截圖所示。 在這種情況下，請轉到[步驟 2](troubleshooting_androidstudio-step-2-check-for-uncommitted-changes)。
+  * 您應該收到一條訊息，告訴您安裝了什麼版本的 git，正如上面的截圖所示。 在這種情況下，請轉到[步驟 2](troubleshooting_androidstudio-step-2-check-for-uncommitted-changes)。
 
-  * 如果您收到消息提示
+  * 如果您收到訊息提示
     ```
     Git：找不到命令
     ```
@@ -68,7 +68,7 @@ Gradle 同步可能由於各種原因失敗。 當您收到消息提示 gradle �
 
     請記下它所在的目錄。
 
-  * 轉到 Windows 中的環境變量，選擇變量“PATH”，然後點擊編輯。 添加您找到的 git 安裝目錄。
+  * 轉到 Windows 中的環境變數，選擇變數“PATH”，然後點擊編輯。 添加您找到的 git 安裝目錄。
 
   * 儲存並關閉。
 
@@ -91,7 +91,7 @@ Gradle 同步可能由於各種原因失敗。 當您收到消息提示 gradle �
 
     * 使用計算機上的常規文件瀏覽器將該文件移動或剪切並粘貼到安全的位置。
 
-    * 返回 Android Studio，並點擊提交標籤中的刷新按鈕 (4)，以確保該文件不再存儲在 AAPS 目錄中。
+    * 返回 Android Studio，並點擊提交標籤中的重新整理按鈕 (4)，以確保該文件不再存儲在 AAPS 目錄中。
 
       如果提交標籤中沒有其他更改，請轉到[步驟 3](troubleshooting_androidstudio-step-3-gradle-resync)。
 
@@ -104,19 +104,19 @@ Gradle 同步可能由於各種原因失敗。 當您收到消息提示 gradle �
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
-### 不兼容的 Android Gradle 插件版本
+### 不兼容的 Android Gradle 外掛版本
 
-  如果您遇到以下錯誤消息
+  如果您遇到以下錯誤訊息
 
-  ![不兼容的 Android Gradle 插件版本](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+  ![不兼容的 Android Gradle 外掛版本](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 
-  您使用的是過期版本的 Android Studio。 在菜單中，轉到幫助 > 檢查更新，並安裝找到的所有 Android Studio 及其插件的更新。
+  您使用的是過期版本的 Android Studio。 在選單中，轉到幫助 > 檢查更新，並安裝找到的所有 Android Studio 及其外掛的更新。
 
-### Android Gradle 插件需要 Java 17 才能運行
+### Android Gradle 外掛需要 Java 17 才能運行
 
-  您可能會遇到此錯誤消息：
+  您可能會遇到此錯誤訊息：
 
-  ![Android Gradle 插件需要 Java 17 才能運行](../images/studioTroubleshooting/11_GradleJDK.png)
+  ![Android Gradle 外掛需要 Java 17 才能運行](../images/studioTroubleshooting/11_GradleJDK.png)
 
   點擊“Gradle 設置”(1) 以打開 gradle 設置。
 
@@ -138,7 +138,7 @@ Gradle 同步可能由於各種原因失敗。 當您收到消息提示 gradle �
 
 ### 無法解析/無緩存版本
 
-  您可能會收到此錯誤消息：
+  您可能會收到此錯誤訊息：
 
     ![無法解析... 無緩存版本](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
@@ -153,7 +153,7 @@ Gradle 同步可能由於各種原因失敗。 當您收到消息提示 gradle �
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### 無法啟動守護程序進程
 
-  如果您看到如下所示的錯誤消息，您可能使用的是 Windows 10 32 位系統。 Android Studio 3.5.1 及以上版本不支援此系統，遺憾的是，AAPS 開發人員無法解決此問題。
+  如果您看到如下所示的錯誤訊息，您可能使用的是 Windows 10 32 位系統。 Android Studio 3.5.1 及以上版本不支援此系統，遺憾的是，AAPS 開發人員無法解決此問題。
 
   如果您正在使用 Windows 10，必須使用 64 位操作系統。
 
@@ -163,10 +163,10 @@ Gradle 同步可能由於各種原因失敗。 當您收到消息提示 gradle �
 
 ### Gradle 重新同步
 
-  如果您仍然看到 Gradle 同步失敗的消息，請選擇鏈接 "再試一次"。 ![Gradle 同步失敗模式](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  如果您仍然看到 Gradle 同步失敗的訊息，請選擇鏈接 "再試一次"。 ![Gradle 同步失敗模式](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
-  如果不再看到任何消息，您仍可以手動觸發此操作：
+  如果不再看到任何訊息，您仍可以手動觸發此操作：
 
   * 在 Android Studio 的右側邊框打開 Gradle 標籤 (1)。
 
@@ -185,7 +185,7 @@ Gradle 同步可能由於各種原因失敗。 當您收到消息提示 gradle �
 這是一個錯誤警告。 檢查您選擇作為 "目標文件夾" 的目錄（步驟 [生成簽章 APK](Building-APK-generate-signed-apk)），您將在那裡找到生成的 apk！
 
 
-## 應用程序是用編譯器/Kotlin 警告創建的
+## 應用程序是用編譯器/Kotlin 警告建立的
 
 如果您的構建成功完成，但出現編譯器或 Kotlin 警告（由黃色或藍色感嘆號標識），那麼您可以忽略這些警告。
 
@@ -196,11 +196,11 @@ Gradle 同步可能由於各種原因失敗。 當您收到消息提示 gradle �
 
 ## 密鑰生成時出現錯誤
 
-在 Windows 上為生成簽章 APK 創建新密鑰庫時，可能會出現以下錯誤消息
+在 Windows 上為生成簽章 APK 建立新密鑰庫時，可能會出現以下錯誤訊息
 
 ![密鑰生成時出現錯誤](../images/AndroidStudio35SigningKeys.png)
 
-這似乎是 Android Studio 3.5.1 及其在 Windows 中捆綁的 Java 環境中的一個錯誤。 密鑰已正確創建，但建議錯誤顯示為錯誤。 當前可以忽略此問題。
+這似乎是 Android Studio 3.5.1 及其在 Windows 中捆綁的 Java 環境中的一個錯誤。 密鑰已正確建立，但建議錯誤顯示為錯誤。 當前可以忽略此問題。
 
 
 ## AAPS 未接收 CGM 資料
@@ -242,7 +242,7 @@ Gradle 同步可能由於各種原因失敗。 當您收到消息提示 gradle �
 
 4. 當您成功構建 APK 後，請刪除手機上的現有應用程序，將新 APK 傳輸到手機並安裝。
 5. [再次匯入設置](../Usage/ExportImportSettings)以恢復您的目標和設置。
-6. 您應該檢查您的電池優化選項並再次禁用它們。
+6. 您應該檢查您的電池優化選項並再次停用它們。
 
 ## 最壞的情況
 
