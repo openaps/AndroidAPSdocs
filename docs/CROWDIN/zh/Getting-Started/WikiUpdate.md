@@ -107,7 +107,7 @@
 - [自動化警告](Automation-good-practice-caveats)
 - [Autosens](Open-APS-features-autosens) - 簡要說明
 - [護理入口替代方案](../Usage/CPbefore26.md)
-- [延長注射](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)功能 - 閉環將被禁用
+- [延長注射](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)功能 - 閉環將被停用
 - 新的[本地設定檔外掛](Config-Builder-local-profile)
 - [範例設置](../Getting-Started/Sample-Setup.md) - 更新 Dexcom G6
 - [2.6.0 版](Releasenotes-version-2-6-0) - 主要新功能
@@ -128,12 +128,12 @@
 
 ## 2019年11月
 
-- [自動化 - 在禁用閉環時停用](Automation-important-note)
+- [自動化 - 在停用閉環時停用](Automation-important-note)
 - [Dexcom G6 傳感器更換更新](xdrip-replace-transmitter)
 - [延長注射 - 為何它們在閉環上下文中無法運作](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 - [常見問題解答 - 運動](FAQ-sports)
 - [主螢幕 - 圖表上的線條](Screenshots-section-f-main-graph)
-- [Insight - 在 NS 客戶端中禁用絕對值](Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Insight - 在 NS 客戶端中停用絕對值](Accu-Chek-Insight-Pump-settings-in-aaps)
 - [Medtronic 幫浦 - 可能的重複條目](../Configuration/MedtronicPump.md)
 - [新的 Freestyle Libre 2 教程](../Hardware/Libre2.md)
 - [帶百分比的設定檔切換 - 示例](../Usage/Profiles.md)
