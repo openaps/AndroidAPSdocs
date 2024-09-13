@@ -62,7 +62,7 @@
 
   ![git --version](../images/AndroidStudio_gitversion1.png)
 
-- 如果 Git 已正確安裝並連接，您將收到一條類似以下的已安裝版本信息：
+- 如果 Git 已正確安裝並連線，您將收到一條類似以下的已安裝版本信息：
 
   ![git 版本結果](../images/AndroidStudio_gitversion2.png)
 
