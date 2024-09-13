@@ -32,8 +32,8 @@ Tidepool 是一個第三方工具，用於收集血糖、胰島素和碳水化�
 
 -點擊「測試 Tidepool 登錄」
 
--如果您收到「成功登錄 Tidepool」的訊息，則表示您已成功連接。 如果沒有，請確認您的憑據正確，並且您已驗證了 Tidepool 的電子郵件地址。
+-如果您收到「成功登錄 Tidepool」的訊息，則表示您已成功連線。 如果沒有，請確認您的憑據正確，並且您已驗證了 Tidepool 的電子郵件地址。
 
--點擊「連接設定」，根據您的個人偏好進行設置
+-點擊「連線設定」，根據您的個人偏好進行設置
 
 有關如何使用上傳到 Tidepool 的資料的更多幫助，請訪問：[https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
