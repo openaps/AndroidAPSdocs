@@ -133,7 +133,7 @@ xDripSwift 是從最初的 xDrip 應用程式移植到 iOS 並發展成"xDrip fo
 :class: dropdown
 
 
-[xDrip4iOS Facebook 群組](https://www.facebook.com/groups/853994615056838/announcements)是 xDrip4iOS 和 Shuggah 的主要社群支援。 **xDrip4iOS**可以連接到許多不同的 CGM 系統和發射器，並顯示血糖值、圖表和統計資料，還提供警報。 它還可以上傳到 Nightscout 或充當的[Nightscout追蹤者應用程式](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/)。 然而，實際上要 _獲得_ **xDrip4iOS** 應用程式相當困難。
+[xDrip4iOS Facebook 群組](https://www.facebook.com/groups/853994615056838/announcements)是 xDrip4iOS 和 Shuggah 的主要社群支援。 **xDrip4iOS**可以連線到許多不同的 CGM 系統和發射器，並顯示血糖值、圖表和統計資料，還提供警報。 它還可以上傳到 Nightscout 或充當的[Nightscout追蹤者應用程式](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/)。 然而，實際上要 _獲得_ **xDrip4iOS** 應用程式相當困難。
 
 “如何在我的 iPhone 上獲得 **xDrip4iOS** 應用程式？” 有兩個選項：
 
@@ -216,7 +216,7 @@ Pebble 手錶（[現已停產](https://en.wikipedia.org/wiki/Pebble_(watch))）�
 
 這是一款獨特的技術產品，可以 **直接**從 Dexcom G6 發射器接收血糖資料。 很多人不知道 Dexcom G6 發射器實際上會在兩個獨立的通道上廣播當前的血糖資料，一個是手機通道，另一個是幫浦通道。 Bluejay GTS 手錶運行的是經過修改的 Xdrip+ 軟體，並且可以設置為在任一通道上接收血糖資料，因此如果 **AAPS** 使用手機通道，那麼 Bluejay GTS 手錶可以使用幫浦通道。
 
-Bluejay GTS 手錶體積小、防水且價格相對實惠（目前售價為 115 英鎊），可從英國國際運送。 其主要優點是它目前是唯一完全獨立於手機和循環系統的手錶。 例如，如果你在海灘或水上樂園時斷開幫浦和 **AAPS**手機的連接，並且超出了 AAPS 手機的範圍，你仍然可以從 Dexcom G6 直接獲取 Bluejay 手錶的讀數。
+Bluejay GTS 手錶體積小、防水且價格相對實惠（目前售價為 115 英鎊），可從英國國際運送。 其主要優點是它目前是唯一完全獨立於手機和循環系統的手錶。 例如，如果你在海灘或水上樂園時中斷幫浦和 **AAPS**手機的連線，並且超出了 AAPS 手機的範圍，你仍然可以從 Dexcom G6 直接獲取 Bluejay 手錶的讀數。
 
 報告的缺點是它並不總是每 5 分鐘獲取一次讀數，並且電池不可更換。 Bluejay GTS 手錶運行的是經過修改的 Xdrip+ 軟體，目前不支援其他 Dexcom 版本（如 G7）或 Libre 傳感器。
 
@@ -249,7 +249,7 @@ M5Stack 是一個小盒子，可以編程為多種應用程式，Martin 的項�
 
 ### B) Sugarpixel
 
-SugarPixel 是一個連接 Dexcom 應用程式或 Nightscout 應用程式的次級血糖顯示警報系統，用於持續血糖監測。 該設備顯示實時的血糖讀數。 這款 CGM 硬體顯示器具備隨機音調生成的音檔警報（聲音非常大）、針對聽力受損者的振動警報、自定義顯示選項以及原生多用戶追蹤功能。
+SugarPixel 是一個連線 Dexcom 應用程式或 Nightscout 應用程式的次級血糖顯示警報系統，用於持續血糖監測。 該設備顯示實時的血糖讀數。 這款 CGM 硬體顯示器具備隨機音調生成的音檔警報（聲音非常大）、針對聽力受損者的振動警報、自定義顯示選項以及原生多用戶追蹤功能。
 
 ![圖像](./images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
 
