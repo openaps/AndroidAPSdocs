@@ -18,9 +18,9 @@
 
 - 如果您正在使用最近的（Firefly）傳輸器，預防性重新啟動將**被忽略**。
 - 如果您使用的是修改過的傳輸器，則**不需要**使用預防性重新啟動。
--   如果您使用的是舊的更換過電池的傳輸器，最安全的做法是**禁用**[預防性重新啟動](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html)。 但是，在這種情況下，您將不得不在非[原生模式](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)下使用 G6（這不建議使用，因為它會停用工廠校準並且不會過濾吵雜的讀數），否則傳感器將在 10 天後停止運作。
--   Dexcom G6 傳輸器可以同時連接到 Dexcom 接收器（或替代的 t:slim 幫浦）和手機上的一個應用程式。
--   使用 xDrip+ 作為接收器時，請先卸載 Dexcom 應用程式。 **您無法同時將 xDrip+ 和 Dexcom 應用程式連接到傳輸器！**
+-   如果您使用的是舊的更換過電池的傳輸器，最安全的做法是**停用**[預防性重新啟動](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html)。 但是，在這種情況下，您將不得不在非[原生模式](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)下使用 G6（這不建議使用，因為它會停用工廠校準並且不會過濾吵雜的讀數），否則傳感器將在 10 天後停止運作。
+-   Dexcom G6 傳輸器可以同時連線到 Dexcom 接收器（或替代的 t:slim 幫浦）和手機上的一個應用程式。
+-   使用 xDrip+ 作為接收器時，請先卸載 Dexcom 應用程式。 **您無法同時將 xDrip+ 和 Dexcom 應用程式連線到傳輸器！**
 -   如果您需要 Clarity 並希望從 xDrip+ 警報中獲益，請使用[BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) 並本地廣播到 xDrip+。 您還可以將 xDrip+ 用作官方 Dexcom 應用程式的配套應用程式，但您可能會遇到血糖讀數延遲。
 -   如果尚未設置，請下載[xDrip+](https://github.com/NightscoutFoundation/xDrip)並按照[xDrip+ 設定頁面](../Configuration/xdrip.md)上的指示進行操作。
 -   在[ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
