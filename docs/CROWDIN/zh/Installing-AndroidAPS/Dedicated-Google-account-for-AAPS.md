@@ -45,10 +45,10 @@
 
 在此示例中：
 
-- 您現有的“_日常_”Google帳號為donald.muck42@gmail.com ；![](../images/Building-the-App/building_0002.png)
-- 您的新“_AAPS_”Gmail帳號將是：donald.muck42.aaps@gmail.com；![](../images/Building-the-App/building_0003.png)
+- 您現有的“_日常_”Google帳號為<donald.muck42@gmail.com> ；![](../images/Building-the-App/building_0002.png)
+- 您的新“_AAPS_”Gmail帳號將是：<donald.muck42.aaps@gmail.com>；![](../images/Building-the-App/building_0003.png)
 
-#### 前往https://account.google.com
+#### 前往<https://account.google.com>
 
 如果您已經登錄Google，這將把您導向您的“日常” **我的帳戶** 頁面。
 (1) 點擊頁面右上角的個人資料圖片（在此示例中，一個簡單的![](../images/Building-the-App/building_0002.png)
@@ -101,7 +101,7 @@ Gmail將顯示帳號名稱。 它將要求您接受Gmail的條款與條件，並
 2. 右鍵點擊您在任務欄上的瀏覽器圖示
 3. 從選單中選擇“新視窗”... 然後調整該視窗，使其只佔據螢幕的下半部分。
 
-在每個瀏覽器視窗中打開https://gmail.com。 確保您的個人帳號位於頂部，而新專用的 **AAPS** 帳號位於底部，並且通過右上角的個人資料圖片可以輕鬆識別。 （如果需要，您可以隨時通過點擊個人資料圖片切換帳號並選擇正確的帳號）。
+在每個瀏覽器視窗中打開<https://gmail.com>。 確保您的個人帳號位於頂部，而新專用的 **AAPS** 帳號位於底部，並且通過右上角的個人資料圖片可以輕鬆識別。 （如果需要，您可以隨時通過點擊個人資料圖片切換帳號並選擇正確的帳號）。
 
 ![](../images/Building-the-App/building_0009.png)
 
