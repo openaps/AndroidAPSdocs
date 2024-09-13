@@ -82,16 +82,16 @@ Combo、Insight 和舊型美敦力幫浦都是穩定且可用於閉環系統的�
 
 然而，DanaR/RS 和 Dana-i 相對於 Combo 作為首選幫浦的優勢在於：
 
-- Dana 幫浦可以與幾乎任何運行 Android 5.1 或更高版本的手機連接，而無需刷入 Lineage。 如果您的手機壞了，通常可以輕鬆找到與 Dana 幫浦兼容的手機作為快速替代品......這對於 Combo 來說並不容易。 （隨著 Android 8.1 越來越普及，這種情況可能會改變）
+- Dana 幫浦可以與幾乎任何運行 Android 5.1 或更高版本的手機連線，而無需刷入 Lineage。 如果您的手機壞了，通常可以輕鬆找到與 Dana 幫浦兼容的手機作為快速替代品......這對於 Combo 來說並不容易。 （隨著 Android 8.1 越來越普及，這種情況可能會改變）
 - Dana-i/RS 的初始配對比較簡單。 但通常這只需要做一次，所以它僅在您想使用不同幫浦測試新功能時才有影響。
-- 目前，Combo 使用螢幕解析進行工作。 總的來說，這效果不錯，但速度較慢。 對於閉環系統來說，這並不太重要，因為所有操作都在背景中進行。 然而，您需要更多的時間來保持連接，這就意味著更多的時間內藍牙連接可能會中斷，這在您走開並同時進行注射和做飯時可能會發生。
+- 目前，Combo 使用螢幕解析進行工作。 總的來說，這效果不錯，但速度較慢。 對於閉環系統來說，這並不太重要，因為所有操作都在背景中進行。 然而，您需要更多的時間來保持連線，這就意味著更多的時間內藍牙連線可能會中斷，這在您走開並同時進行注射和做飯時可能會發生。
 - Combo 在暫時性基礎率（TBR）結束時會震動，DanaR 在 SMB 時會震動（或發出嗶聲）。 在夜間，您可能會更頻繁地使用 TBR 而不是 SMB。  Dana-i/RS 可以配置為既不發出嗶聲也不震動。
-- 幾秒鐘內讀取 Dana-i/RS 的歷史紀錄及碳水化合物數據，使您可以在離線狀態下輕鬆切換手機，並在獲得一些 CGM 數據後立即繼續閉環操作。
+- 幾秒鐘內讀取 Dana-i/RS 的歷史紀錄及碳水化合物資料，使您可以在離線狀態下輕鬆切換手機，並在獲得一些 CGM 資料後立即繼續閉環操作。
 - 所有與 AAPS 兼容的幫浦在交付時都是防水的。 只有 Dana 幫浦因其密封的電池艙和儲液槽填充系統在保固範圍內也具備防水性能。
 
 ### 血糖來源
 
-這只是與 AAPS 兼容的所有 CGM/FGM 的簡短概述。 有關更多詳情，請參見[這裡](../Configuration/BG-Source.md)。 簡單提示：如果您能在 xDrip+ 應用程式或 Nightscout 網站上顯示您的血糖數據，則可以在 AAPS 中選擇 xDrip+（或使用網路連接的 Nightscout）作為 BG 來源。
+這只是與 AAPS 兼容的所有 CGM/FGM 的簡短概述。 有關更多詳情，請參見[這裡](../Configuration/BG-Source.md)。 簡單提示：如果您能在 xDrip+ 應用程式或 Nightscout 網站上顯示您的血糖資料，則可以在 AAPS 中選擇 xDrip+（或使用網路連線的 Nightscout）作為 BG 來源。
 
 - [Dexcom G7](../Hardware/DexcomG7.md)：可與 xDrip+ 或修補版應用程式配合使用
 - [Dexcom G6](../Hardware/DexcomG6.md)：建議使用版本 3.0 的 BOYDA（詳見[版本說明](Releasenotes-important-hints-3-0-0)）。 xDrip+ 至少需要 2022.01.14 版本或更高版本
@@ -106,7 +106,7 @@ Combo、Insight 和舊型美敦力幫浦都是穩定且可用於閉環系統的�
 
 ### Nightscout
 
-Nightscout 是一個開源網頁應用程式，可以記錄並顯示您的 CGM 數據和 AAPS 數據，並生成報告。 您可以在[Nightscout 項目網站](http://nightscout.github.io/)上找到更多資訊。 您可以建立自己的[Nightscout 網站](https://nightscout.github.io/nightscout/new_user/)，使用[zehn.be](https://ns.10be.de/en/index.html)上的半自動 Nightscout 設置，或在自己的伺服器上託管（這適合 IT 專家）。
+Nightscout 是一個開源網頁應用程式，可以記錄並顯示您的 CGM 資料和 AAPS 資料，並生成報告。 您可以在[Nightscout 項目網站](http://nightscout.github.io/)上找到更多資訊。 您可以建立自己的[Nightscout 網站](https://nightscout.github.io/nightscout/new_user/)，使用[zehn.be](https://ns.10be.de/en/index.html)上的半自動 Nightscout 設置，或在自己的伺服器上託管（這適合 IT 專家）。
 
 Nightscout 與其他模組獨立運作。 要完成目標 1，您將需要它。
 
@@ -130,7 +130,7 @@ Nightscout 與其他模組獨立運作。 要完成目標 1，您將需要它。
 
 ### xDrip+
 
-即使您不需要將 xDrip+ 應用程式作為 BG 來源，您仍然可以使用它來設置警報或顯示血糖數據。 您可以設置任意多的警報，指定警報應該啟動的時間，是否可以覆蓋靜音模式等。 有關一些 xDrip+ 資訊，請參見[這裡](../Configuration/xdrip.md)。 請注意，這款應用程式的文檔並非總是最新的，因為其進展相當快速。
+即使您不需要將 xDrip+ 應用程式作為 BG 來源，您仍然可以使用它來設置警報或顯示血糖資料。 您可以設置任意多的警報，指定警報應該啟動的時間，是否可以覆蓋靜音模式等。 有關一些 xDrip+ 資訊，請參見[這裡](../Configuration/xdrip.md)。 請注意，這款應用程式的文檔並非總是最新的，因為其進展相當快速。
 
 ## 等待模組期間該做什麼
 
