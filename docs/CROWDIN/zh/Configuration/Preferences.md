@@ -112,7 +112,7 @@
   ![外觀取決於手機螢幕方向](../images/Screenshots_Skins.png)
 
 (Preferences-overview)=
-## 總覽
+## 首頁總覽
 
 - 在首頁總覽部分中，您可以定義主畫面的偏好設定。
 
@@ -126,7 +126,7 @@
 (Preferences-buttons)=
 ### 按鈕
 
-- 定義哪些按鈕在主螢幕底部可見。
+- 定義哪些按鈕在主螢幕底部可顯示。
 
   ![偏好設定 > 按鈕](../images/Pref2020_OV_Buttons.png)
 
@@ -137,7 +137,7 @@
   ![偏好設定 > 按鈕 > 碳水化合物](../images/Pref2020_OV_Buttons3.png)
 
 (Preferences-quick-wizard)=
-### 快速響導
+### 快速嚮導
 
 - 如果你經常吃零食或餐前注射，你可以使用快速嚮導按鈕輕鬆輸入碳水化合物的數量並設置計算基礎。
 
@@ -156,7 +156,7 @@
 
 - [臨時目標（TT）](../Usage/temptarget.md)讓你在特定時間段內更改血糖目標。
 
-- 通過設置預設的TT，你可以輕鬆更改活動、即將進食等目標。
+- 通過設置預設的TT，你可以輕鬆更改活動、即將用餐等目標。
 
   ![偏好設定 > 預設臨時目標](../images/Pref2020_OV_DefaultTT.png)
 
@@ -168,7 +168,7 @@
 
 ### 填充/啟動標準胰島素量
 
-- 如果你想通過AAPS填充管線或初始充填導管，你可以在[操作標籤](Screenshots-action-tab)中進行。
+- 如果你想通過AAPS填充管線或初始充填導管，你可以在[手動操作標籤](Screenshots-action-tab)中進行。
 - 可以在此對話框中定義預設值。
 
 (Preferences-range-for-visualization)=
@@ -251,10 +251,10 @@
 (Preferences-aps-mode)=
 ### APS模式
 
-- 在開環循環和閉環循環以及低血糖暫停（LGS）之間切換
-- **開環循環**意味著根據您的資料給出臨時基礎率（TBR）建議，並作為通知顯示。 經手動確認後，注射命令將傳輸到幫浦。 只有在使用虛擬幫浦時，才需要手動輸入。
-- **閉環循環**意味著TBR建議會自動發送到您的幫浦，無需您的確認或輸入。
-- **低血糖暫停**類似於閉環循環，但會將maxIOB設置覆蓋為零。 這意味著如果血糖下降，它可以減少基礎率，但如果血糖上升，則僅在基礎IOB為負數時（如來自之前的低血糖暫停）才會增加基礎率。
+- 在開環和閉環以及低血糖暫停（LGS）之間切換
+- **開環**意味著根據您的資料給出臨時基礎率（TBR）建議，並作為通知顯示。 經手動確認後，注射命令將傳輸到幫浦。 只有在使用虛擬幫浦時，才需要手動輸入。
+- **閉環**意味著TBR建議會自動發送到您的幫浦，無需您的確認或輸入。
+- **低血糖暫停**類似於閉環，但會將maxIOB設置覆蓋為零。 這意味著如果血糖下降，它可以減少基礎率，但如果血糖上升，則僅在基礎IOB為負數時（如來自之前的低血糖暫停）才會增加基礎率。
 
 (Preferences-minimal-request-change)=
 ### 最小請求變更 \[%\]
@@ -364,7 +364,7 @@
 
 - 演算法使用血糖影響（BGI）來判斷碳水化合物何時被吸收。
 
-- 此數值僅在 CGM 資料出現間隙或體能活動「消耗」了所有血糖上升量時使用，否則這些血糖上升量會導致 AAPS 減少 COB。
+- 這個數值只會在兩種情況下使用：一是 CGM 沒有讀到血糖數據時，二是運動消耗了所有本來會讓血糖上升的能量，這樣 AAPS 就不會減少 COB。
 
 - 當無法動態計算碳水化合物吸收時，演算法會插入預設的碳水化合物衰減值。 基本上，這是一個安全保護機制。
 
@@ -391,7 +391,7 @@
 
 ## 幫浦設定
 
-此處的選項會根據您在[配置生成器](Config-Builder-pump)中選擇的幫浦驅動程式而有所不同。  根據幫浦相關的指示來配對並設定您的幫浦：
+此處的選項會根據您在[建構設定檔](Config-Builder-pump)中選擇的幫浦驅動程式而有所不同。  根據幫浦相關的指示來配對並設定您的幫浦：
 
 - [DanaR 胰島素幫浦](../Configuration/DanaR-Insulin-Pump.md)
 - [DanaRS 胰島素幫浦](../Configuration/DanaRS-Insulin-Pump.md)
@@ -399,14 +399,14 @@
 - [Accu Chek Insight 幫浦](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Medtronic 幫浦](../Configuration/MedtronicPump.md)
 
-如果使用 AAPS 進行開環模式，請確保您已在配置生成器中選擇虛擬幫浦。
+如果使用 AAPS 進行開環模式，請確保您已在建構設定檔中選擇虛擬幫浦。
 
 (Preferences-nsclient)=
 ## NSClient
 
 ![NSClient](../images/Pref2020_NSClient.png)
 
-原始通信協議，可用於舊版 Nightscout。
+原始通訊協議，可用於舊版 Nightscout。
 
 - 設置您的*Nightscout URL*（即 <https://yoursitename.yourplaform.dom>）。
   - **確保網址末尾沒有 /api/v1/。**
@@ -465,9 +465,9 @@
 
 進階設定中的選項不言自明。
 
-## SMS 通訊器
+## SMS(簡訊) 通訊器
 
-- 僅當在[配置生成器](Config-Builder-sms-communicator)中選擇 SMS 通訊器時才會顯示選項。
+- 僅當在[建構設定檔](Config-Builder-sms-communicator)中選擇 SMS 通訊器時才會顯示選項。
 - 此設定允許通過傳簡訊指令來遠端控制應用程式，如暫停循環或進行注射。
 - 更多資訊在[SMS 指令](../Children/SMS-Commands.md)中描述。
 - 透過使用身份驗證應用程式和憑證末端的額外 PIN 獲得額外的安全保障。
@@ -484,7 +484,7 @@
 
 ![本地警報](../images/Pref2020_LocalAlerts.png)
 
-- 設定應該是自明的。
+- 設定應該是簡單明瞭的。
 
 ## 資料選項
 
