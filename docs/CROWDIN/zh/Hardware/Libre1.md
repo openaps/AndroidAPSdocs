@@ -8,7 +8,7 @@
 市場上有幾款橋接器可供選擇：
 
 -   [MiaoMiao 讀取器](https://www.miaomiao.cool/)（版本 1、2 或 3），也可在 AliExpress 上購買。
--   [Blucon Nightrider](https://www.ambrosiasys.com/our-products/blucon/)（請注意，最新的韌體版本可能與所有應用程式不相容，供應商應用程式不會向 AAPS 廣播數據）。
+-   [Blucon Nightrider](https://www.ambrosiasys.com/our-products/blucon/)（請注意，最新的韌體版本可能與所有應用程式不相容，供應商應用程式不會向 AAPS 廣播資料）。
 -   [Bubble（或 Bubble Mini）](https://www.bubblesmartreader.com/)，來自歐洲供應商（[Bubblan](https://www.bubblan.org/)，[BubbleShop](https://bubbleshop.eu/)），或適用於俄羅斯用戶[點擊此處](https://vk.com/saharmonitor/)。 也可在 AliExpress 上購買。
 -   適用於俄羅斯用戶的 Atom。
 
@@ -16,7 +16,7 @@
 
 -   Sony Smartwatch 3（SWR50）<https://github.com/pimpimmi/LibreAlarm/wiki/>
 
-目前來看，使用 Libre 1 作為血糖來源時，無法在 SMB 算法中啟用「始終啟用 SMB」和「在進食後啟用 SMB」。 Libre 1 的血糖值不夠平滑，無法安全使用。 有關更多詳細資訊，請參閱[平滑血糖數據](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)。
+目前來看，使用 Libre 1 作為血糖來源時，無法在 SMB 算法中啟用「始終啟用 SMB」和「在進食後啟用 SMB」。 Libre 1 的血糖值不夠平滑，無法安全使用。 有關更多詳細資訊，請參閱[平滑血糖資料](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)。
 
 ## 1. 使用 xDrip+
 
