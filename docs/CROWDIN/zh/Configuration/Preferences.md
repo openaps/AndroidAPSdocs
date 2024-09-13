@@ -280,7 +280,7 @@
 
 - 作為安全限制存在，防止AAPS給予危險高的基礎率。
 - 該值以每小時單位（U/h）測量。
-- It is advised to set this to something sensible. 一個好的建議是取您的**最高基礎率**，並**將其乘以4**。
+- 建議將此設為合理的數值。 一個好的建議是取您的**最高基礎率**，並**將其乘以4**。
 - 例如，如果您的最高基礎率為0.5 U/h，您可以將其乘以4得到2 U/h的值。
 - 另見[詳細功能描述](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal)。
 
@@ -304,7 +304,7 @@
 
 **注意：作為一項安全功能，最大基礎胰島素持續劑量（Max Basal IOB）被嚴格限制為 7U。**
 
-#### Autosens
+#### 自動敏感度調整 (Autosens)
 
 - [Autosens](Open-APS-features-autosens) 會根據血糖偏差（正/負/中性）進行調整。
 - 它會根據這些偏差計算出您對胰島素的敏感度或抗性，並根據偏差調整基礎速率和胰島素敏感指數（ISF）。
@@ -505,5 +505,5 @@
 
 - 在偏好設定中，您可以定義何時上傳資料
 
-  - 僅在連接到 WiFi 時
+  - 僅在連線到 WiFi 時
   - 僅在充電時
