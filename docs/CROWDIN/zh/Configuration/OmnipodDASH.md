@@ -56,11 +56,11 @@
 
 如有疑問，您還可以選擇“虛擬幫浦”，並在設置 AAPS 後選擇“DASH”（參見選項 2）。
 
-### 選項 2：配置建立器
+### 選項 2：建構設定檔
 
-在現有安裝中，您可以從配置建立器中選擇**DASH**幫浦：
+在現有安裝中，您可以從建構設定檔中選擇**DASH**幫浦：
 
-在左上角的**漢堡選單**中，選擇**配置建立器（1）**\ ➜\ **幫浦**\ ➜\ **Dash**\ ➜\ 選擇**Dash**的**設置齒輪（3）**旁的**選項按鈕（2）**。
+在左上角的**漢堡選單**中，選擇**建構設定檔（1）**\ ➜\ **幫浦**\ ➜\ **Dash**\ ➜\ 選擇**Dash**的**設置齒輪（3）**旁的**選項按鈕（2）**。
 
 選擇**設置齒輪（3）**旁的**複選框（4）**，將允許 DASH 選單作為 AAPS 介面中的一個標籤顯示，標題為**DASH**。 勾選此框將有助於您在使用 AAPS 時訪問 DASH 命令。
 
@@ -86,29 +86,29 @@
 
 ### 註冊 Pod
 
-1. 導航至**DASH**標籤，點擊**POD MGMT（1）**按鈕，然後點擊**註冊 Pod（2）**。
+1. 導航至**DASH**標籤，點擊**POD 管理（1）**按鈕，然後點擊**註冊 Pod（2）**。
 
 ![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
-2. 顯示**填充 Pod**畫面。 將至少 80 單位的胰島素注入新的 Pod，並聽取兩聲嗶聲，表明 Pod 準備就緒並可進行加壓。 計算 3 天所需的胰島素總量時，請考慮到加壓 Pod 會使用約 3-10 單位。
+2. 顯示**填充 Pod**畫面。 將至少 80 單位的胰島素注入新的 Pod，等聽到兩聲嗶聲，表示 Pod 準備就緒並可續繼將胰島素輸入完。 計算 3 天所需的胰島素總量時，請考慮 Pod 本身的加壓會占用約 3-10 單位。
 
 ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
 
-確保新 Pod 和運行 AAPS 的手機在彼此附近，然後點擊**下一步**按鈕。
+確保新 Pod 和要運行 AAPS 的手機兩者在附近，然後點擊**下一步**按鈕。
 
 **注意**：如果出現以下錯誤訊息，不要驚慌，這是可能發生的。 點擊 **重試** 按鈕。 在大多數情況下，註冊將繼續成功進行。
 
 ![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
-3. 在 **初始化 Pod** 畫面上，Pod 將開始加壓（您會聽到點擊聲，接著是連續的滴答聲，表明 Pod 正在自我加壓）。  加壓成功後會顯示綠色勾號，並且 **下一步** 按鈕將變為可用狀態。 點擊 **下一步** 按鈕，完成 Pod 加壓初始化並顯示 **附加 Pod** 畫面。
+3. 在 **初始化 Pod** 畫面上，Pod 將開始加壓（您會聽到點擊聲，接著是連續的滴答聲，表明 Pod 正在自我加壓）。  加壓成功後會顯示綠色勾號，並且 **下一步** 按鈕將變為可用狀態。 點擊 **下一步** 按鈕，完成 Pod 加壓初始化並顯示 **連線 Pod** 畫面。
 
 ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
-4. 接下來，準備新 Pod 的注射部位。 移除 Pod 的塑膠針蓋。 如果您看到 Pod 有突出的部分，請取消流程並從新的 Pod 開始。 如果一切正常，撕下粘貼物的白色襯紙，並將 Pod 貼在您選定的身體部位。 完成後，點擊 **下一步** 按鈕。
+4. 接下來，準備新 Pod 的注射部位。 移除 Pod 的塑膠針蓋。 如果您看到 Pod 有突出的部分，請取消流程並從新的 Pod 開始。 如果一切正常，撕下黏貼物的白色襯紙，並將 Pod 貼在您選定的身體部位。 完成後，點擊 **下一步** 按鈕。
 
 ![Activate_Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
 
-5. 現在會出現 **附加 Pod** 對話框。 **只有在您準備好插入針管時才點擊 OK 按鈕**。
+5. 現在會出現 **連線 Pod** 對話框。 **只有在您準備好插入針管時才點擊 OK 按鈕**。
 
 ![Activate_Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
 
@@ -122,13 +122,13 @@
 
 ![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
 
-9. 顯示 **Pod 已註冊** 畫面。 點擊綠色 **完成** 按鈕。 恭喜！ 您已經開始了一個新的活動 Pod 會話。
+9. 顯示 **Pod 已註冊** 畫面。 點擊綠色 **完成** 按鈕。 恭喜！ 你已經開始了新的 Pod 使用階段。
 
 ![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
 
-10. 現在 **Pod 管理** 選單畫面應顯示 **註冊 Pod (1)** 按鈕為 *停用*，並顯示 **停用 Pod (2)** 按鈕為 *啟用*。 這是因為目前有一個 Pod 處於活動狀態，必須先停用目前活動的 Pod 才能註冊另一個 Pod。
+10. 現在 **Pod 管理** 選單畫面應顯示 **註冊 Pod (1)** 按鈕為 *停用*，並顯示 **停用 Pod (2)** 按鈕為 *啟用*。 這是因為目前有一個 Pod 處於啟用狀態，必須先停用目前啟用的 Pod 才能註冊另一個 Pod。
 
-    點擊手機上的返回按鈕，返回到 **DASH** 標籤畫面，該畫面現在會顯示您的活動 Pod 會話的 Pod 資訊，包括當前基礎率、Pod 儲液量、輸送的胰島素、Pod 錯誤和警報。
+    點擊手機上的返回按鈕，返回到 **DASH** 標籤畫面，該畫面現在會顯示您的啟用 Pod 的資訊，包括當前基礎率、Pod 儲液量、輸送的胰島素、Pod 錯誤和警報。
 
     有關顯示資訊的更多詳細資料，請參見本文檔的[**DASH 標籤**](OmnipodDASH-dash-tab)部分。
 
@@ -153,7 +153,7 @@
 
 ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg) ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
 
-3. 停用成功後會顯示綠色勾號。 點擊 **下一步** 按鈕以顯示 Pod 停用畫面。 由於活動會話已停用，您現在可以移除您的 Pod。
+3. 停用成功後會顯示綠色勾號。 點擊 **下一步** 按鈕以顯示 Pod 停用畫面。 你現在可以移除 Pod，因為該使用階段已停用。
 
 ![Deactivate_Pod_5](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_5.jpg)
 
@@ -161,7 +161,7 @@
 
 ![Deactivate_Pod_6](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_6.jpg)
 
-5. 現在您已進入 **Pod 管理** 選單；按下手機上的返回按鈕返回 **DASH** 標籤。 確認 **Pod 狀態：** 欄位顯示 **無活動 Pod** 訊息。
+5. 現在您已進入 **Pod 管理** 選單；按下手機上的返回按鈕返回 **DASH** 標籤。 確認 **Pod 狀態：** 欄位顯示 **無可用的 Pod** 訊息。
 
 ![Deactivate_Pod_7](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_8.jpg)
 
@@ -189,22 +189,22 @@
 
 *注意 - 僅當觸發 Pod 過期或低儲液量警報時，**靜音警報** 按鈕才會在 **DASH** 標籤上顯示。 如果未顯示靜音警報按鈕且您聽到 Pod 的嗶聲，請嘗試“重新整理 Pod 狀態”。*
 
-下面的流程將向您展示如何在活動 Pod 達到過期警告時間限制之前承認並消除 Pod 嗶聲。 此警告時間限制定義在 **距關閉時間的時數** Dash 警報設置中。 Pod 的最大使用壽命為 80 小時（3 天 8 小時），但 Insulet 建議不要超過 72 小時（3 天）限制。
+以下流程將向你展示當 Pod 的使用時間接近72小時（3天）到期的警告時，如何確認並關閉 Pod 的嗶聲。 此警告時間限制定義在 **距關閉時間的時數** Dash 警報設置中。 Pod 的最大使用壽命為 80 小時（3 天 8 小時），但 Insulet 建議不要超過 72 小時（3 天）限制。
 
-1. 當達到定義的 **距關閉時間的時數** 警告時間限制時，Pod 會發出警告嗶聲，通知您即將過期並需要更換 Pod。 您可以在 **DASH** 標籤上進行驗證，**Pod 過期：** 欄位將顯示 Pod 的確切過期時間（註冊後 72 小時），且文字會在此時間過後變為 **紅色**。 在 **活動 Pod 警報 (2)** 欄位下，狀態訊息會顯示 **Pod 即將過期**。 這也會觸發顯示 **靜音警報 (3)** 按鈕。
+1. 當達到定義的 **距關閉時間的時數** 警告時間限制時，Pod 會發出警告嗶聲，通知您即將過期並需要更換 Pod。 您可以在 **DASH** 標籤上進行驗證，**Pod 過期：** 欄位將顯示 Pod 的確切過期時間（註冊後 72 小時），且文字會在此時間過後變為 **紅色**。 在 **啟用 Pod 警報 (2)** 欄位下，狀態訊息會顯示 **Pod 即將過期**。 這也會觸發顯示 **靜音警報 (3)** 按鈕。
 
 ![ACK_alerts_1](../images/DASH_images/ACK_Alerts/ACK_ALERTS_1.png)
 
-2. 進入 **DASH** 標籤並按下 **靜音警報 (2)** 按鈕。 AAPS 會向 Pod 發送指令以停用 Pod 過期警告嗶聲，並將 **Pod 狀態 (1)** 欄位更新為 **承認警報**。
+2. 進入 **DASH** 標籤並按下 **靜音警報 (2)** 按鈕。 AAPS 會向 Pod 發送指令以停用 Pod 過期警告嗶聲，並將 **Pod 狀態 (1)** 欄位更新為 **確認警報**。
 
 ![ACK_alerts_2](../images/DASH_images/ACK_Alerts/ACK_ALERTS_2.png)
 
-3. 成功停用警報後，活動 Pod 將發出**兩聲嗶聲**，並且確認對話框將顯示訊息**註冊警報已靜音**。 點擊 **OK** 按鈕以確認並關閉對話框。
+3. **成功停用**警報後，啟用 Pod 將發出**兩聲嗶聲**，並且確認對話框將顯示訊息**註冊警報已靜音**。 點擊 **OK** 按鈕以確認並關閉對話框。
 
 
 ![ACK_alerts_3](../images/DASH_images/ACK_Alerts/ACK_ALERTS_3.png)
 
-4. 進入 **DASH** 標籤。 在 **活動 Pod 警報** 欄位下，警告訊息將不再顯示，且活動 Pod 將不再發出 Pod 過期警告嗶聲。
+4. 進入 **DASH** 標籤。 在 **啟用 Pod 警報** 欄位下，警告訊息將不再顯示，且活動 Pod 將不再發出 Pod 過期警告嗶聲。
 
 (OmnipodDASH-view-pod-history)=
 
