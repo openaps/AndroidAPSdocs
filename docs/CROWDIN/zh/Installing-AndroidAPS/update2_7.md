@@ -44,8 +44,8 @@
 ## 自動敏感度調整（提示 - 無需操作）
 
 - 自動敏感度調整已更改為動態切換模型，這模擬了參考設計。
-- 自動敏感度現在會在 24 小時和 8 小時窗口之間切換來計算敏感度。 It will pick which ever one is more sensitive.
-- If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
+- 自動敏感度現在會在 24 小時和 8 小時窗口之間切換來計算敏感度。 它會選擇較敏感的那個時間窗口。
+- 如果用戶曾經使用過 oref1，他們可能會注意到系統對變化的反應可能不如預期動態，這是由於 24 小時或 8 小時敏感度的不同。
 
 ## 為 Dana RS 設置幫浦密碼（如果使用 Dana RS）
 
