@@ -206,7 +206,7 @@ SDK平台套件與您手機上運行的Android版本無關，而是與 **AAPS** 
 
 :::{admonition} 為什麼下載AAPS程式碼需要很長時間？
 
-首次下載 **AAPS** 時，Android Studio將通過網際網路連接到GitHub網站以下載 **AAPS** 的原始程式碼。 這應該大約需要1分鐘。
+首次下載 **AAPS** 時，Android Studio將通過網際網路連線到GitHub網站以下載 **AAPS** 的原始程式碼。 這應該大約需要1分鐘。
 
 Android Studio隨後會使用 **Gradle**（Android Studio中的開發工具）來識別安裝這些項目所需的其他組件，並將其安裝到您的電腦上。
 
