@@ -305,28 +305,28 @@
 
 此功能的主要用途是當您的 POD 通信設備超出手機藍牙範圍且**RileyLink 狀態**報告**RileyLink 無法連線**。 主**Omnipod（POD）**頁籤上的**重新整理**按鈕將手動嘗試重新建立與 Omnipod 設定中當前配置的 RileyLink 的藍牙通信。
 
-如果主**Omnipod（POD）**頁籤上的**重新整理**按鈕未能恢復與 POD 通信設備的連線，請按照下列附加步驟進行手動重新連接。
+如果主**Omnipod（POD）**頁籤上的**重新整理**按鈕未能恢復與 POD 通信設備的連線，請按照下列附加步驟進行手動重新連線。
 
 #### 手動重新建立 POD 通信設備的藍牙通信
 
-1. 當**RileyLink 狀態：（1）**報告**RileyLink 無法連線**時，從**Omnipod（POD）**頁籤中按下** POD 管理（2）**按鈕以進入** POD 管理**選單。 在** POD 管理**選單中，您將看到正在積極搜索 RileyLink 連接的通知，按下**RileyLink 狀態（3）**按鈕以訪問**RileyLink 設定**頁面。
+1. 當**RileyLink 狀態：（1）**報告**RileyLink 無法連線**時，從**Omnipod（POD）**頁籤中按下** POD 管理（2）**按鈕以進入** POD 管理**選單。 在** POD 管理**選單中，您將看到正在積極搜索 RileyLink 連線的通知，按下**RileyLink 狀態（3）**按鈕以訪問**RileyLink 設定**頁面。
 
    > ![RileyLink_Bluetooth_Reset_1](../images/omnipod/RileyLink_Bluetooth_Reset_1.png) ![RileyLink_Bluetooth_Reset_2](../images/omnipod/RileyLink_Bluetooth_Reset_2.png)
 
-2. 在**RileyLink 設定（1）**頁面下的**RileyLink（2）**部分中，您可以在**連線狀態和錯誤：（3）**欄位確認藍牙連線狀態和錯誤。 *藍牙錯誤*和*RileyLink 無法連線*狀態應顯示在這裡。 按右下角的**重新整理（4）**按鈕啟動手動藍牙重新連接。
+2. 在**RileyLink 設定（1）**頁面下的**RileyLink（2）**部分中，您可以在**連線狀態和錯誤：（3）**欄位確認藍牙連線狀態和錯誤。 *藍牙錯誤*和*RileyLink 無法連線*狀態應顯示在這裡。 按右下角的**重新整理（4）**按鈕啟動手動藍牙重新連線。
 
    > ![RileyLink_Bluetooth_Reset_3](../images/omnipod/RileyLink_Bluetooth_Reset_3.png)
    > 
    > 如果在處理藍牙重新整理指令時 POD 通信設備無法響應或超出手機範圍，則將顯示一條警告訊息，提供兩個選項。
 
    - **靜音（1）**將靜音當前警報。
-   - **確定（2）**將確認此警告，並允許用戶再次嘗試重新建立藍牙連接。
+   - **確定（2）**將確認此警告，並允許用戶再次嘗試重新建立藍牙連線。
 
    > ![RileyLink_Bluetooth_Reset_4](../images/omnipod/RileyLink_Bluetooth_Reset_4.png)
 
-3. 如果**藍牙連接**無法重新建立，請嘗試手動關閉然後重新開啟手機上的**藍牙功能**。
+3. 如果**藍牙連線**無法重新建立，請嘗試手動關閉然後重新開啟手機上的**藍牙功能**。
 
-4. 成功重新建立 RileyLink 藍牙連接後，**連線狀態：（1）**欄位應顯示**RileyLink 就緒**。 恭喜，您現在已將配置的 POD 通信設備重新連接到 AAPS！
+4. 成功重新建立 RileyLink 藍牙連線後，**連線狀態：（1）**欄位應顯示**RileyLink 就緒**。 恭喜，您現在已將配置的 POD 通信設備重新連線到 AAPS！
 
    > ![RileyLink_Bluetooth_Reset_5](../images/omnipod/RileyLink_Bluetooth_Reset_5.png)
 
@@ -344,16 +344,16 @@
 
 > - **地址：**在 Omnipod 設定中定義的所選 POD 通信設備的 MAC 位址。
 > - **名稱：**在手機藍牙設定中定義的所選 POD 通信設備的藍牙識別名稱。
-> - **電池電量：**顯示已連接的 POD 通信設備的當前電池電量。
-> - **已連接設備：**當前與 POD 通信設備通信的 Omnipod  POD 型號。
+> - **電池電量：**顯示已連線的 POD 通信設備的當前電池電量。
+> - **已連線設備：**當前與 POD 通信設備通信的 Omnipod  POD 型號。
 > - **連線狀態：** POD 通信設備與運行 AAPS 的手機之間藍牙連線的當前狀態。
 > - **連線錯誤：**如果 POD 通信設備的藍牙連線存在錯誤，詳細訊息將顯示在此處。
-> - **韌體版本：**當前連接的 POD 通信設備上安裝的韌體版本。
+> - **韌體版本：**當前連線的 POD 通信設備上安裝的韌體版本。
 
 ##### 設備（4）欄位 - 與啟用 POD
 
 > - **Device Type:** 與 POD 通信設備通信的設備類型 (Omnipod pod 幫浦)
-> - **Device Model:** 與 POD 通信設備連接的啟動設備型號 (Omnipod pod 當前型號為 Eros)
+> - **Device Model:** 與 POD 通信設備連線的啟動設備型號 (Omnipod pod 當前型號為 Eros)
 > - **Pump Serial Number:** 當前註冊 POD 的序列號
 > - **Pump Frequency:**  POD 通信設備調整的無線電通信頻率，以啟用其與 POD 之間的通信。
 > - **Last Used frequency:**  POD 最後一次與通信設備通信時使用的無線電頻率。
@@ -362,7 +362,7 @@
 
 #### RileyLink 和啟動 Pod 歷史
 
-此頁面按時間倒序提供 RileyLink 或當前連接的 POD 每個狀態或動作的訊息。 整個歷史記錄僅適用於當前啟動的 POD ， POD 更換後，此歷史記錄將被清除，並且僅顯示新註冊的 POD 的事件。
+此頁面按時間倒序提供 RileyLink 或當前連線的 POD 每個狀態或動作的訊息。 整個歷史記錄僅適用於當前啟動的 POD ， POD 更換後，此歷史記錄將被清除，並且僅顯示新註冊的 POD 的事件。
 
 1. 進入 **Omnipod (POD)** 標籤頁，按下 **POD MGMT (1)** 按鈕以訪問 **Pod Management** 選單，然後按下 **Pod History (2)** 按鈕以查看 **Settings** 和 **History** 頁面。 點擊 **HISTORY (3)** 文字以顯示 RileyLink 和當前啟動 POD 會話的全部歷史記錄。
 
@@ -537,7 +537,7 @@
 
   > ![reset_rileylink_config](../images/omnipod/ICONS/omnipod_overview_pod_management_reset_rileylink_config.png)
   > 
-  > 按下此按鈕將重置當前連接的幫浦通訊裝置配置。
+  > 按下此按鈕將重置當前連線的幫浦通訊裝置配置。
   > 
   > > - 當通訊開始時，特定資料將發送至 RileyLink 並設置為 > - 記憶體暫存器已設置 > - 通訊協議已設置 > - 已設置調頻無線電頻率 
   > > - 請參見該表格末尾的 [附加說明](OmnipodEros-reset-rileylink-config-notes)
@@ -607,7 +607,7 @@ Omnipod 驅動程式設置可通過左上角的**漢堡選單**中的**設置生
 - **關閉前的時數：** 定義 Pod 關閉前的幾小時，這將觸發到期提醒警報。
 - **\*低庫存警告啟用：**啟用或停用當幫浦剩餘單位的低庫存閾值被觸發時的警告，閾值定義於單位數欄位。
 - **單位數：** 定義觸發 Pod 儲液量低警報的單位數量。
-- **自動確認幫浦警告：**啟用後，將仍然發出通知，但在發出警告後的首次幫浦通訊連接後，警告將被自動確認並解除。
+- **自動確認幫浦警告：**啟用後，將仍然發出通知，但在發出警告後的首次幫浦通訊連線後，警告將被自動確認並解除。
 
 ### 通知
 
@@ -778,7 +778,7 @@ RileyLink上用來與Omnipod通訊的天線是一個433 MHz的螺旋天線。 �
 
 下方的圖片展示了在幫浦註冊和停用時如何將RileyLink放置於最佳位置。 幫浦可能會在其他位置啟動，但最好的成功率是使用下圖中的位置。
 
-*注意：若在最佳位置下仍無法通訊，這可能是由於RileyLink的低電量，導致天線傳輸距離縮短。 為避免此問題，請確保RileyLink已充飽電或在此過程中直接連接至充電線。*
+*注意：若在最佳位置下仍無法通訊，這可能是由於RileyLink的低電量，導致天線傳輸距離縮短。 為避免此問題，請確保RileyLink已充飽電或在此過程中直接連線至充電線。*
 
 ![Omnipod_pod_and_RileyLink_Position](../images/omnipod/Omnipod_pod_and_RileyLink_Position.png)
 
