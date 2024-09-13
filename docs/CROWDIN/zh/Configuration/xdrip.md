@@ -69,8 +69,8 @@
 
 ## Dexcom G6
 
-- Dexcom G6 傳輸器可以同時連接到 Dexcom 接收器（或替代的 t:slim 幫浦）和手機上的一個應用程式。
-- 當使用 xDrip+ 作為接收器時，請先卸載 Dexcom 應用程式。 **您無法同時將 xDrip+ 和 Dexcom 應用程式連接到傳輸器！**
+- Dexcom G6 傳輸器可以同時連線到 Dexcom 接收器（或替代的 t:slim 幫浦）和手機上的一個應用程式。
+- 當使用 xDrip+ 作為接收器時，請先卸載 Dexcom 應用程式。 **您無法同時將 xDrip+ 和 Dexcom 應用程式連線到傳輸器！**
 - 如果您需要 Clarity 並想利用 xDrip+ 的功能，請使用[自行建立的 Dexcom 應用程式](DexcomG6-if-using-g6-with-build-your-own-dexcom-app)與 xDrip+ 進行本地廣播，或者使用 xDrip+ 作為接收來自官方 Dexcom 應用程式通知的配套應用程式。
 
 ### G6 傳輸器序列號決定的 xDrip+ 版本
@@ -102,7 +102,7 @@ Dexcom 感測器的自動延長（`預防性重啟`）不建議使用，因為�
 
 (xdrip-connect-g6-transmitter-for-the-first-time)=
 
-### 首次連接 G6 傳輸器
+### 首次連線 G6 傳輸器
 
 **如需第二個及後續傳輸器，請參閱[延長傳輸器壽命](xdrip-extend-transmitter-life)部分。**
 
@@ -139,7 +139,7 @@ Dexcom 感測器的自動延長（`預防性重啟`）不建議使用，因為�
 ![xDrip+ 系統狀態](../images/xDrip_Dexcom_StopSensor.png)
 
 - 移除傳輸器（如果更換感測器，則同時移除感測器）。 若要在不移除感測器的情況下移除傳輸器，請參閱[這裡](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)，或觀看此影片<https://youtu.be/AAhBVsc6NZo>。
-- 將舊的傳輸器放遠以防止重新連接。 微波爐是一個完美的法拉第屏蔽裝置 - 但為了完全確保安全，請拔掉電源線以確保沒有人會打開微波爐。
+- 將舊的傳輸器放遠以防止重新連線。 微波爐是一個完美的法拉第屏蔽裝置 - 但為了完全確保安全，請拔掉電源線以確保沒有人會打開微波爐。
 - 請按照[這些指示](https://navid200.github.io/xDrip/docs/Starting-G6.html)進行操作。
 - 在 xDrip+ 顯示第一次讀數之前，不要重新開啟原始 Dexcom 接收器（如果已使用）。
 
@@ -162,7 +162,7 @@ Dexcom 感測器的自動延長（`預防性重啟`）不建議使用，因為�
 
 ### Dexcom G5/G6 和 xDrip+ 的故障排除
 
-#### 傳輸器連接問題
+#### 傳輸器連線問題
 
 按照[這些指示](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html)進行操作。
 
@@ -201,7 +201,7 @@ Dexcom 感測器的自動延長（`預防性重啟`）不建議使用，因為�
 - 如 MiaoMiao 和 Bubble 等橋接器的電池電量可以顯示在 AAPS 中（Blucon 不支援）。
 - 詳細資訊請參閱[螢幕截圖頁面](Screenshots-sensor-level-battery)。
 
-### 連接 Libre 傳輸器並啟動感測器
+### 連線 Libre 傳輸器並啟動感測器
 
 - 如果您的感測器需要（例如 Libre 2 EU 和 Libre 1 US），請安裝[最新的外部處理演算法](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)。
 
@@ -213,11 +213,11 @@ Dexcom 感測器的自動延長（`預防性重啟`）不建議使用，因為�
     
     ![xDrip+ 啟動 Libre 傳輸器與感測器 1](../images/xDrip_Libre_Transmitter01.png)
 
-- 掃描藍牙並連接橋接器。
+- 掃描藍牙並連線橋接器。
     
     → 漢堡選單 (1) → 掃描藍牙 (2) → 掃描 (3)
     
-    - 如果 xDrip+ 找不到橋接器，請確保它未連接到供應商應用程式。將其插入充電並重置。
+    - 如果 xDrip+ 找不到橋接器，請確保它未連線到供應商應用程式。將其插入充電並重置。
     
     ![xDrip+ 啟動 Libre 傳輸器與感測器 2](../images/xDrip_Libre_Transmitter02.png)
 
