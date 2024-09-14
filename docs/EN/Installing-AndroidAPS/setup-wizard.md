@@ -205,7 +205,7 @@ Nightscout users should choose **NSClient v3**, unless you want to monitor or se
 
 For Tidepool it is even simpler, as you only need your personal login information.
 
-After making your selection, please press the "NEXT" button:
+After making your selection, please press the cogwheel button next to the item you selected :
 
 ![image](../images/setup-wizard/Screenshot_20231202_140916.png)
 
@@ -264,7 +264,7 @@ Enable "Create announcements from errors" and "Create announcements from carbs r
 
 Leave "Slow down uploads" disabled. You would only use it in unusual circumstances if for example a lot of information is to be transfered to the Nightscout server, and the Nightscout server is being slow in processing this data.
 
-Go back to the screen before and select "NEXT" to go to the next screen:
+Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141351.png)
 
@@ -325,11 +325,11 @@ After making your selection, press "NEXT" to go to the next screen:
 ![image](../images/setup-wizard/Screenshot_20231202_141925.png)
 
 
-If you are using Dexcom G6 with BYODA, click on the "cog/gearwheel" to access the settings for BYODA.
+If you are using Dexcom G6 with BYODA, click on the cogwheel button to access the settings for BYODA.
 
 Enable the "Upload BG data to NS" and "Log sensor change to NS".
 
-Press "NEXT" to go to the next screen:
+Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
@@ -474,7 +474,7 @@ The reason SMB is disabled in the beginning is because the SMB feature enables f
 OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
 :::
 
-Press "NEXT" to go to the next screen:
+Press the cogwheel to see the details:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144014.png)
 
@@ -483,7 +483,7 @@ Only read the text and change nothing here.
 
 Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
 
-Press "NEXT" to go to the next screen:
+Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 
