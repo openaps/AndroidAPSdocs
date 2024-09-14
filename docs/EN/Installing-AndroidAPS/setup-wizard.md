@@ -164,7 +164,7 @@ Click the "NEXT" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_135807.png)
 
-### Units (mg/dl <-> mmol/dL)
+### Units (mg/dL <-> mmol/L)
 
 Please select if your glucose values are in mg/dl or mmol/L and then please click the "NEXT" button:
 
