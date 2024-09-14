@@ -55,7 +55,7 @@ Reads the data from the Eversense app notifications (works with the standard Eve
 
 xDrip+ can read notifications from the vendor app, like ESEL does. No backfilling available.
 
-- Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- הורידו והתקינו את [xDrip](https://github.com/NightscoutFoundation/xDrip).
 - As data source in xDrip+ “Companion App” must be selected.
 - Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 - Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page [xDrip+ settings](../Configuration/xdrip.md).

@@ -1,3 +1,3 @@
-# test page for image translation with Crowdin
+# 圖片翻譯測試頁面 Crowdin
 
-![simple test case](../images/ThisIsASimpleTestCase4ImageTranslation.png)
+![簡單的測試案例](../images/ThisIsASimpleTestCase4ImageTranslation.png)
