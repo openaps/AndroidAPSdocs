@@ -164,7 +164,7 @@ As mentioned earlier, using **AAPS** is more of a “journey” that requires in
 | configuring AAPS->NightScout (reporting only):                                                          |     1 hour      |
 | optional (for Parents) - configuring NightScout <-> **AAPS** & NSFollowers:                             |     1 hour      |
 | Cíl 1: Nastavit vizualizaci a monitoring, analyzovat bazály a poměry                                    |     1 hour      |
-| Objective 2: Learn how to control AAPS                                                                  |     2 hour      |
+| Cíl 2: Naučte se ovládat AAPS                                                                           |     2 hour      |
 | Cíl 3: Prokázat své znalosti                                                                            |  Up to 14 days  |
 | Cíl 4: Začít s otevřenou smyčkou                                                                        |     7 days      |
 | Cíl 5: Porozumění otevřené smyčce, včetně doporučení pro dočasné bazály                                 |     7 days      |
@@ -205,7 +205,7 @@ This documentation aims to reduce the technical expertise required to an absolut
 The current version of **AAPS** (3.2) requires an Android smartphone with Google **Android 9.0 or above**. If you are considering buying a new phone, (as of July 2024), Android 13 is preferred. Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons, however for users unable to use a device with Android 9.0 or newer, earlier versions of  **AAPS** compatible for older Android versions like [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) and [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2), remain available from previous releases (check the release notes for legacy versions).
 
 #### Smartphone model choice
-The exact model you buy depends on the desired function(s). There are two archived spreadsheets of compatible [smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) and [smartphones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). The spreadsheets are no longer updated because there are so many possible models, therefore we now suggest searching the support groups (Facebook or Discord) for "phone", or the specific model you are thinking of getting. Create a new post to ask questions about it if you still need more information.
+The exact model you buy depends on the desired function(s). Existují dvě archivované tabulky kompatibilních [smartphonů](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) a [smartphonů a hodinek](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). The spreadsheets are no longer updated because there are so many possible models, therefore we now suggest searching the support groups (Facebook or Discord) for "phone", or the specific model you are thinking of getting. Create a new post to ask questions about it if you still need more information.
 
 To make a donation of smartphone or smartwatch models that still need testing, please email [donations@androidaps.org](mailto:donations@androidaps.org).
 
