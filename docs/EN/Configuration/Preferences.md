@@ -270,7 +270,7 @@
 Depending on your settings in [config builder](../Configuration/Config-Builder.md) you can choose between two algorithms:
 
 - [Advanced meal assist (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm for advanced users
+- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### OpenAPS AMA settings
 
@@ -499,8 +499,7 @@ Select which location service shall be used:
 
 ![Maintenance settings](../images/Pref2020_Maintenance.png)
 
-- Standard recipient of logs is <mailto:logs@androidaps.org>.
-- If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). In this case master password has to be entered each time settings are exported or imported.
+- Standard recipient of logs is <mailto:logs@aaps.app>.
 
 ## Open Humans
 
