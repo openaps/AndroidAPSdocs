@@ -2,7 +2,7 @@
 
 - **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
-  ![Open preferences](../images/Pref2020_Open2.png)
+  ![Otevřít nastavení](../images/Pref2020_Open2.png)
 
 - You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
 
@@ -14,7 +14,7 @@
 
 - With the **filter** on top of the preferences screen you can quickly access certain preferences. Stačí začít psát část textu, který hledáte.
 
-  ![Preferences filter](../images/Pref2021_Filter.png)
+  ![Filtr předvoleb](../images/Pref2021_Filter.png)
 
 ```{contents}
 :backlinks: entry
@@ -92,7 +92,7 @@
 
 - You can choose from four types of skins:
 
-  ![Select skin](../images/Pref2021_SkinWExample.png)
+  ![Vybrat vzhled](../images/Pref2021_SkinWExample.png)
 
 - 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
 
@@ -132,9 +132,9 @@
 
 - With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
 
-  ![Preferences > Buttons > Insulin](../images/Pref2020_OV_Buttons2.png)
+  ![Nastavení > Tlačítka > Inzulín](../images/Pref2020_OV_Buttons2.png)
 
-  ![Preferences > Buttons > Carbs](../images/Pref2020_OV_Buttons3.png)
+  ![Nastavení > Tlačítka > Sacharidy](../images/Pref2020_OV_Buttons3.png)
 
 (Preferences-quick-wizard)=
 ### Průvodce rychlým bolusem
@@ -143,7 +143,7 @@
 
 - In setup you define during which time period the button will be visible on your home screen - just one button per period.
 
-  ![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
+  ![Nastavení > Tlačítko rychlého průvodce](../images/Pref2020_OV_QuickWizard.png)
 
 - If you click the quick wizard button AAPS will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
 
@@ -162,7 +162,7 @@
 
 - Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
 
-  ![Preferences > Use default temp targets](../images/Pref2020_OV_DefaultTT2.png)
+  ![Předvolby > Použít výchozí dočasné cíle](../images/Pref2020_OV_DefaultTT2.png)
 
 ###
 
@@ -176,7 +176,7 @@
 
 - Define which part of the graph on the home screen shall be you target range and be filled with green background.
 
-  ![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
+  ![Předvolby > Rozsah vizualizace](../images/Pref2020_OV_Range2.png)
 
 ### Krátké názvy modulů
 
@@ -184,7 +184,7 @@
 
 - For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
 
-  ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
+  ![Předvolby > Záložky](../images/Pref2020_OV_Tabs.png)
 
 ### Zobrazovat kolonku poznámky v dialozích ošetření
 
@@ -268,7 +268,7 @@
 
 Depending on your settings in [config builder](../Configuration/Config-Builder.md) you can choose between two algorithms:
 
-- [Advanced meal assist (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Vylepšený asistent pro jídlo (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - stav algoritmu v roce 2017
 - [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm for advanced users
 
 ### Nastavení OpenAPS AMA
@@ -282,7 +282,7 @@ Depending on your settings in [config builder](../Configuration/Config-Builder.m
 - The value is measured in units per hour (U/h).
 - It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**.
 - For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
-- See also [detailed feature description](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- Viz také [podrobný popis funkce](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 #### Maximum basal IOB OpenAPS can deliver \[U\]
 
@@ -313,7 +313,7 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 #### Pokročilé nastavení (OpenAPS AMA)
 
 - Normally you do not have to change the settings in this dialogue!
-- If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
+- Pokud je chcete přesto změnit, ujistěte se, že jste si přečetli podrobnosti v [dokumentaci OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) a rozmíte tomu, co děláte.
 
 (Preferences-openaps-smb-settings)=
 ### Nastavení OpenAPS SMB
@@ -345,7 +345,7 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 
 - Additionally the required carbs will be displayed in the COB section on your home screen.
 
-- A threshold can be defined - minimum amount of carbs needed to trigger a notification.
+- Je možné nastavit prahovou hodnotu - minimální počet sacharidů potřebný ke spuštění oznámení.
 
 - V případě potřeby může být notifikace vyžadovaných sacharidů odeslána do Nightscoutu. Notifikace se pak zobrazí v Nightscoutu a bude vysílána.
 
@@ -354,7 +354,7 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 #### Pokročilé nastavení (OpenAPS AMA)
 
 - Normally you do not have to change the settings in this dialogue!
-- If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
+- Pokud je chcete přesto změnit, ujistěte se, že jste si přečetli podrobnosti v [dokumentaci OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) a rozmíte tomu, co děláte.
 
 ## Nastavení absorpce sacharidů
 
@@ -366,13 +366,13 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 
 - The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB.
 
-- At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. V podstatě jde o bezpečnostní pojistku.
+- V situacích, kdy absorpci sacharidů nelze počítat dynamicky na základě reakcí vaší glykémie, je použita výchozí hodnota absorpce. V podstatě jde o bezpečnostní pojistku.
 
 - To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc.
 
 - Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Velká změna = více sacharidů atp.
 
-- The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+- The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. Více informací naleznete v [dokumentaci OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
 - Standard value for AMA is 5, for SMB it's 8.
 
@@ -386,7 +386,7 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 
 ### Pokročilé nastavení - autosens ratio
 
-- Define min. and max. [autosens](Open-APS-features-autosens) ratio.
+- Definujte min. a max. poměr [autosens](Open-APS-features-autosens).
 - Normally standard values (max. 1.2 and min. 0.7) should not be changed.
 
 ## Nastavení pumpy
@@ -399,7 +399,7 @@ The options here will vary depending on which pump driver you have selected in [
 - [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Medtronic Pump](../Configuration/MedtronicPump.md)
 
-If using AAPS to open loop then make sure you have selected Virtual Pump in config builder.
+Pokud používáte AAPS pro otevřenou smyčku, ujistěte se, že jste v konfiguraci zvolili virtuální pumpu.
 
 (Preferences-nsclient)=
 ## NSClient
@@ -463,7 +463,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
 
-Options in advanced settings are self-explanatory.
+Možnosti v pokročilém nastavení jsou samovysvětlující.
 
 ## SMS komunikátor
 
@@ -496,7 +496,7 @@ Vyberte, jaká služba určování polohy se použije:
 
 ![Nastavení údržby](../images/Pref2020_Maintenance.png)
 
-- Standard recipient of logs is <logs@androidaps.org>.
+- Standardně logy přijímáme na adrese <logs@androidaps.org>.
 - If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). V tomto případě je nutné při každém exportu nebo importu nastavení zadat hlavní heslo.
 
 ## Open Humans
