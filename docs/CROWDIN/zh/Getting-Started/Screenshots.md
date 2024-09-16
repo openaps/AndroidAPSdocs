@@ -8,9 +8,9 @@
 
 ### A 區 - 分頁
 
-* 在各個 AAPS 模組之間導航。
+* 在各個 AAPS 模組頁籤之間導覽。
 * 或者，你可以通過向左或向右滑動來更換螢幕。
-* 顯示的分頁可以在[設定建構器](Config-Builder-tab-or-hamburger-menu)中選擇。
+* 顯示的分頁可以在[組態建置工具](Config-Builder-tab-or-hamburger-menu)中選擇。
 
 (Screenshots-section-b-profile-target)=
 
@@ -21,7 +21,7 @@
 ![設定檔切換剩餘時間](../images/Home2020_ProfileSwitch.png)
 
 * 目前的設定檔顯示在左側欄位。
-* 短按設定檔欄位查看設定檔詳細資訊
+* 點一下設定檔欄位查看設定檔詳細資訊
 * 長按設定檔欄位可[在不同設定檔之間切換](Profiles-profile-switch)。
 * 如果設定檔切換進行中，括號中將顯示剩餘時間（以分鐘為單位）。
 
@@ -30,7 +30,7 @@
 ![臨時目標剩餘時間](../images/Home2020_TT.png)
 
 * 目前的目標血糖值顯示在右側欄位。
-* 短按目標欄位可設置[臨時目標](../Usage/temptarget.md)。
+* 點一下目標欄位可設置[臨時目標](../Usage/temptarget.md)。
 * 如果設置了臨時目標，欄位將變為黃色，括號中顯示剩餘時間（以分鐘為單位）。
 
 (Screenshots-visualization-of-dynamic-target-adjustment)=
@@ -73,9 +73,9 @@
    * 橙色圓圈 = 超級注射進行中 - 圖示下方顯示剩餘時間
    * 藍色圓圈帶虛線 = 開放循環
 
-* 短按或長按圖示以打開循環對話框來切換循環模式（關閉、低血糖暫停、開放或停用），暫停/重新啟動循環或中斷/重新連接幫浦。
+* 點一下或長按圖示以打開循環對話框來切換循環模式（關閉、低血糖暫停、開放或停用），暫停/重新啟動循環或中斷/重新連線幫浦。
    
-   * 如果短按循環圖示，選擇後需要進行驗證。
+   * 如果點一下循環圖示，選擇後需要進行驗證。
    
    ![循環狀態選單](../images/Home2020_Loop_Dialog.png)
 
@@ -133,10 +133,10 @@
    * 如果最近有減少的基礎率，IOB 可能為負值。
    * 按圖示可查看注射胰島素與基礎胰島素的分配情況。
 
-* 穀物圖示：[體內碳水化合物（COB）](../Usage/COB-calculation.md) - 您之前食用但尚未吸收的碳水化合物-> 如果需要碳水化合物，圖示會閃爍。
+* 穀物圖示：[活性碳水化合物化合物（COB）](../Usage/COB-calculation.md) - 您之前食用但尚未吸收的碳水化合物-> 如果需要碳水化合物，圖示會閃爍。
 
 * 紫線：基礎率 - 圖示隨基礎率的暫時變化而改變（在 100% 時保持不變）。 
-   * 按圖示可查看基礎基礎率和任何暫時基礎率的詳細資訊（包括剩餘時間）。
+   * 按圖示可查看基礎基礎率和任何臨時基礎率的詳細資訊（包括剩餘時間）。
 * 上下箭頭：指示當前[自動敏感性](Open-APS-features-autosens)狀態（啟用或停用）以及圖示下方顯示的數值。
 
 #### 需要碳水化合物
@@ -192,21 +192,21 @@
 
 * **橙色**線：[COB](../Usage/COB-calculation.md)（顏色通常用來表示 COB 和碳水化合物）
    
-   預測線顯示根據當前幫浦設置以及假設碳水化合物吸收偏差保持不變的情況下，您的 BG 將如何變化。 此線僅在有已知的 COB 時出現。
+   預測線顯示根據當前幫浦設置以及假設碳水化合物吸收偏差保持不變的情況下，您的血糖將如何變化。 此線僅在有已知的 COB 時出現。
 
 * **深藍色**線：IOB（顏色通常用來表示 IOB 和胰島素）
    
    預測線顯示僅在胰島素的影響下會發生什麼。 例如，如果您輸入了一些胰島素，但未食用任何碳水化合物。
 
-* **淺藍色**線：零基礎率（如果設置了 0% 的暫時基礎率，預測 BG 會怎麼變化）
+* **淺藍色**線：零基礎率（如果設置了 0% 的臨時基礎率，預測血糖會怎麼變化）
    
-   預測線顯示如果幫浦停止所有胰島素輸送（0% TBR），BG 軌跡線將如何變化。
+   預測線顯示如果幫浦停止所有胰島素輸送（0% TBR），血糖 軌跡線將如何變化。
    
    *此線僅在使用[SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)演算法時出現。*
 
-* **深黃色**線：[UAM](Sensitivity-detection-and-COB-sensitivity-oref1)（未報告的進食）
+* **深黃色**線：[UAM](Sensitivity-detection-and-COB-sensitivity-oref1)（未報告的用餐）
    
-   未報告的進食表示檢測到由於進食、腎上腺素或其他影響導致的血糖顯著上升。 預測線類似於橙色 COB 線，但它假設偏差將以恆定速度逐漸減少（通過延長當前的減少速度）。
+   未報告的用餐表示檢測到由於用餐、腎上腺素或其他影響導致的血糖顯著上升。 預測線類似於橙色 COB 線，但它假設偏差將以恆定速度逐漸減少（通過延長當前的減少速度）。
    
    *此線僅在使用[SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)演算法時出現。*
 
@@ -228,7 +228,7 @@
 #### 活動
 
 * 一條**細黃色**線顯示胰島素的活動。 
-* 它基於胰島素在系統中的預期 BG 降低，如果沒有其他因素（如碳水化合物）存在。
+* 它基於胰島素在系統中的預期血糖降低，如果沒有其他因素（如碳水化合物）存在。
 
 ### G 區 - 其他圖表
 
@@ -243,14 +243,14 @@
 
 * 活動中的胰島素，包括注射**和基礎率**。
 
-#### 體內胰島素
+#### 活性胰島素
 
 * 顯示您體內的胰島素（= 體內的活動胰島素）。 它包括注射胰島素和暫時的基礎率（**但不包括您設定檔中的基礎率**）。
 * 如果在 DIA 時間內沒有[SMB](Open-APS-features-super-micro-bolus-smb)、沒有注射或暫時的基礎率，這將為零。
 * 如果沒有剩餘注射且長時間設置為零/低基礎率，IOB 可能為負值。
 * 衰減取決於您的[DIA 和胰島素設定檔設置](Config-Builder-local-profile)。 
 
-#### 體內碳水化合物
+#### 活性碳水化合物化合物
 
 * 顯示您體內的碳水化合物（= 活動中的，尚未衰減的碳水化合物）。 
 * 衰減取決於演算法檢測到的偏差。 
@@ -259,9 +259,9 @@
 #### 偏差
 
 * **灰色**條顯示由於碳水化合物引起的偏差。 
-* **綠色**條顯示 BG 高於演算法預期。 綠色條用於在[自動敏感性](Open-APS-features-autosens)中增加抗性。
-* **紅色**條顯示 BG 低於演算法預期。 紅色條用於在[自動敏感性](Open-APS-features-autosens)中增加敏感性。
-* **黃色**條顯示由於未報告的進食引起的偏差。
+* **綠色**條顯示血糖高於演算法預期。 綠色條用於在[自動敏感性](Open-APS-features-autosens)中增加抗性。
+* **紅色**條顯示血糖低於演算法預期。 紅色條用於在[自動敏感性](Open-APS-features-autosens)中增加敏感性。
+* **黃色**條顯示由於未報告的用餐引起的偏差。
 * **黑色**條顯示未考慮敏感性的輕微偏差。
 
 #### 敏感性
@@ -294,7 +294,7 @@
 ![注射按鈕](../images/Home2020_ButtonInsulin.png)
 
 * 可以在不使用[注射計算機](Screenshots-bolus-wizard)的情況下注射特定數量的胰島素。
-* 勾選框可自動啟動您的[即將進食的暫時目標](Preferences-default-temp-targets)。
+* 勾選框可自動啟動您的[即將用餐的臨時目標](Preferences-default-temp-targets)。
 * 如果您不想通過幫浦進行注射，但記錄注射量（即通過注射器注射的胰島素），請勾選相應的框。
 
 #### 碳水化合物
@@ -302,7 +302,7 @@
 ![碳水化合物按鈕](../images/Home2020_ButtonCarbs.png)
 
 * 記錄碳水化合物而不進行注射。
-* 可以直接通過勾選框設置某些[預設的暫時目標](Preferences-default-temp-targets)。
+* 可以直接通過勾選框設置某些[預設的臨時目標](Preferences-default-temp-targets)。
 * 時間偏移：您將在何時/何時食用碳水化合物（以分鐘計）。
 * 持續時間：用於[“延長碳水化合物”](../Usage/Extended-Carbs.md)
 * 您可以使用按鈕快速增加碳水化合物量。
@@ -310,7 +310,7 @@
 
 #### 計算機
 
-* 請參見[注射計算機](Screenshots-bolus-wizard)部分
+* 請參閱[注射計算機](Screenshots-bolus-wizard)部分
 
 #### 校準
 
@@ -323,51 +323,51 @@
 * 按返回鍵返回 AAPS。
 * 必須在[偏好設定](Preferences-buttons)中啟用。
 
-#### 快速響導
+#### 快速嚮導
 
 * 輕鬆輸入碳水化合物數量並設置計算基礎。
 * 詳細資訊可在[偏好設定](Preferences-quick-wizard)中設置。
 
 (Screenshots-bolus-wizard)=
 
-## 注射響導
+## 注射嚮導
 
-![注射響導](../images/Home2020_BolusWizard_v2.png)
+![注射嚮導](../images/Home2020_BolusWizard_v2.png)
 
 當您需要進行餐前注射時，通常會從這裡開始操作。
 
 ### I 區
 
-* BG 欄位通常會自動填充最新的 CGM 讀數。 如果您沒有工作中的 CGM，則該欄位將保持空白。 
+* 血糖 欄位通常會自動填充最新的 CGM 讀數。 如果您沒有工作中的 CGM，則該欄位將保持空白。 
 * 在碳水化合物欄位中，您可以添加您想要進行注射的碳水化合物數量或等效值。 
 * 如果您出於某些原因希望修改最終劑量，則可以使用修正欄位。
 * 碳水化合物時間欄位是為了提前注射，因此您可以告訴系統，碳水化合物需要等待一段時間才會生效。 如果您是為過去的碳水化合物進行注射，您可以在此欄位中輸入負數。
 
 (Screenshots-eating-reminder)=
 
-#### 進食提醒
+#### 用餐提醒
 
-* 對於未來的碳水化合物，您可以選中提醒框（當輸入將來的時間時，此框將預設選中），這樣您可以在未來的某個時間得到進食碳水化合物的提醒。
+* 對於未來的碳水化合物，您可以選中提醒框（當輸入將來的時間時，此框將預設選中），這樣您可以在未來的某個時間得到餐點碳水化合物的提醒。
    
-   ![帶有進食提醒的注射響導](../images/Home2021_BolusWizard_EatingReminder.png)
+   ![帶有用餐提醒的注射嚮導](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### J 區
 
-* 超級注射是將接下來兩小時的基礎胰島素添加到即時注射中，並發出 0% 暫時基礎率（TBR），以收回額外的胰島素。 此選項僅在[響導中啟用超級注射](Preferences-superbolus)時顯示，可在[偏好設定總覽](Preferences-overview)中設置。
+* 超級注射是將接下來兩小時的基礎胰島素添加到即時注射中，並發出 0% 臨時基礎率（TBR），以收回額外的胰島素。 此選項僅在[嚮導中啟用超級注射](Preferences-superbolus)時顯示，可在[偏好設定總覽](Preferences-overview)中設置。
 * 其目的是更快地注射胰島素，希望減少血糖尖峰。
 * 詳情請訪問[diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/)。
 
 ### K 區
 
 * 顯示計算出的注射劑量。 
-* 如果體內胰島素（IOB）的量已超過計算出的注射劑量，那麼它只會顯示仍然需要的碳水化合物數量。
+* 如果活性胰島素（IOB）的量已超過計算出的注射劑量，那麼它只會顯示仍然需要的碳水化合物數量。
 * 筆記將根據您的[NS 客戶端](Preferences-nsclient)設置上傳到 Nightscout。
 
 ### L 區
 
-* 注射響導的詳細計算方式。
+* 注射嚮導的詳細計算方式。
 * 您可以取消選中任何不想包括的項目，但通常不會這麼做。
-* 出於安全原因，如果您希望注射響導基於現有的暫時目標進行計算，則**必須手動勾選 TT 框**。
+* 出於安全原因，如果您希望注射嚮導基於現有的臨時目標進行計算，則**必須手動勾選 TT 框**。
 
 #### COB 和 IOB 的組合及其含義
 
@@ -382,9 +382,9 @@
 
 ![碳水化合物吸收緩慢](../images/Calculator_SlowCarbAbsorption.png)
 
-* 如果您在使用注射響導後看到上述警告，則表示 AAPS 檢測到計算的 COB 值可能有誤。
+* 如果您在使用注射嚮導後看到上述警告，則表示 AAPS 檢測到計算的 COB 值可能有誤。
 * 因此，如果您在上一餐有 COB 後再次注射，請注意可能會過量注射！ 
-* 詳情請參見[COB 計算頁面](COB-calculation-detection-of-wrong-cob-values)上的提示。
+* 詳情請參閱[COB 計算頁面](COB-calculation-detection-of-wrong-cob-values)上的提示。
 
 (Screenshots-action-tab)=
 
@@ -395,8 +395,8 @@
 ### 操作 - M 區
 
 * 按鈕[設定檔切換](Profiles-profile-switch)，作為按下主畫面上的[當前設定檔](Screenshots-section-b-profile-target)的替代方式。
-* 按鈕[暫時目標](temptarget-temp-targets)，作為按下主畫面上的[當前目標](Screenshots-section-b-profile-target)的替代方式。
-* 啟動或取消暫時基礎率的按鈕。 請注意，當設置了暫時基礎率時，按鈕將從“TEMPBASAL”變為“CANCEL x%”。
+* 按鈕[臨時目標](temptarget-temp-targets)，作為按下主畫面上的[當前目標](Screenshots-section-b-profile-target)的替代方式。
+* 啟動或取消臨時基礎率的按鈕。 請注意，當設置了臨時基礎率時，按鈕將從“TEMPBASAL”變為“CANCEL x%”。
 * 即使在[閉環環境中延長注射](Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment)確實不起作用，但有些人仍要求提供使用延長注射的選項。
    
    * 此選項僅適用於 Dana RS 和 Insight 幫浦。 
@@ -472,7 +472,7 @@
 ![幫浦狀態](../images/Screenshot_PumpStatus.png)
 
 * 顯示幫浦狀態的不同資訊。 顯示的資訊取決於您的幫浦型號。
-* 詳細資訊請參見[幫浦頁面](../Hardware/pumps.md)。
+* 詳細資訊請參閱[幫浦頁面](../Hardware/pumps.md)。
 
 ## 護理入口
 
@@ -482,7 +482,7 @@
 
 ![在 t 標籤中審查碳水化合物計算](../images/Screenshots_TreatCalc.png)
 
-* 如果您使用了[注射響導](Screenshots-bolus-wizard)來計算胰島素劑量，您可以稍後在 ts 標籤中審查此計算。
+* 如果您使用了[注射嚮導](Screenshots-bolus-wizard)來計算胰島素劑量，您可以稍後在 ts 標籤中審查此計算。
 * 只需按下綠色的 Calc 鏈接。 （根據幫浦的不同，胰島素和碳水化合物也可能在 ts 中顯示為單行。）
 
 (Screenshots-carb-correction)=
@@ -533,8 +533,8 @@
 
 * 注射和碳水化合物 -> 可以選擇[移除條目](Screenshots-carb-correction)來修正歷史記錄
 * [延長注射](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-* 暫時基礎率
-* [暫時目標](../Usage/temptarget.md)
+* 臨時基礎率
+* [臨時目標](../Usage/temptarget.md)
 * [設定檔切換](../Usage/Profiles.md)
 * [護理入口](CPbefore26-careportal-discontinued) - 通過操作標籤輸入的筆記和對話框中的筆記
 
@@ -549,6 +549,6 @@
 
 ![NSClient](../images/Screenshots_NSClient.png)
 
-* 顯示與 Nightscout 網站的連接狀態。
+* 顯示與 Nightscout 網站的連線狀態。
 * 設定可在[偏好設定](Preferences-nsclient)中進行。 您可以通過點擊螢幕右上角的齒輪圖示打開相應的部分。
 * 有關故障排除的詳細資訊，請參閱此[頁面](../Usage/Troubleshooting-NSClient.md)。
