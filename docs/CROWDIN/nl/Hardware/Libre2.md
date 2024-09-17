@@ -36,7 +36,7 @@ Remark: The transmitter can be used in parallel to the LibreLink app without int
 
 ## 3. Use Diabox
 
-- [Download]([https://t.me/s/DiaboxApp](https://diabox.en.uptodown.com/android/download](https://www.bubblan.org/setup/) and install Diabox. In Settings, Integration, enable Share data with other apps.
+- [Download](https://www.bubblan.org/setup/) and install Diabox. In Settings, Integration, enable Share data with other apps.
 
 ![Diabox](../images/Diabox.png)
 
