@@ -10,7 +10,7 @@
 
 ## Технические характеристики компьютера и программного обеспечения для построения AAPS
 
-- Пользуйтесь **[версией Android Studio под названием "Hedgehog"(2023.1.1) или "Iguana"(2023.2.1)](https://developer.android.com/studio/)** для сборки apk. Старые версии Android Studio требуется сначала обновить!
+- Please use the **[Android Studio version called at least Hedgehog (2023.1.1) or one more recent like Iguana, Jellyfish, and Koala](https://developer.android.com/studio/)** to build the apk. Старые версии Android Studio требуется сначала обновить!
 - [32-разрядные системы Windows](troubleshooting_androidstudio-unable-to-start-daemon-process) не поддерживаются в Android Studio. Имейте в виду, что и 64-разрядная процессор, и 64-разрядная ОС являются обязательным условием. Если ваша система не соответствует этому условию, следует изменить аппаратное или программное обеспечение или всю систему.
 
 <table class="tg">
@@ -87,7 +87,7 @@ If you have built AAPS before, you don't need to take all the following steps ag
 :::{admonition} Почему Git?
 
 Git известен как “_Versioning Control System_” (VCS) (система контроля версий)
-Git — это программа, позволяющая отслеживать изменения в коде и сотрудничать с разработчиками. Вам понадобится Git для переноса копии исходного кода **AAPS** с веб-сайта Github на свой локальный компьютер. Затем вы будете использовать Git на своем компьютере для сборки приложения **AAPS** (apk).
+Git — это программа, позволяющая отслеживать изменения в коде и сотрудничать с разработчиками. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Затем вы будете использовать Git на своем компьютере для сборки приложения **AAPS** (apk).
 :::
 
 #### Шаги по установке Git
@@ -121,7 +121,7 @@ Git — это программа, позволяющая отслеживать
 Android Studio — это программа, которая запускается на вашем компьютере. Она позволяет загружать исходный код из Интернета (используя Git) и создавать приложения для смартфона (и смарт-часов). "Сломать" текущую версию **AAPS** которая работает у вас на смартфоне, создав новое или обновленное приложение на ПК с помощью Android Studio невозможно, это совершенно разные процессы.
 :::
 
-Следующие снимки экрана были сделаны на версии **Hedgehog** (ёжик) Android Studio.
+The following screenshots have been taken from Android Studio Version **Hedgehog**, they should be identical with more recent versions.
 
 Самая важная заповедь при установке Android Studio: Будьте терпеливы! Во время установки и настройки Android Studio загружает много элементов, которые отнимают время.
 
