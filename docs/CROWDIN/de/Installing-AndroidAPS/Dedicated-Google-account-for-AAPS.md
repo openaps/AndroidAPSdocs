@@ -45,10 +45,10 @@ Im Video werden drei Schritte beschrieben:
 
 In diesem Beispiel: 
 
-- Dein bestehendes „_Standard_“-Google-Konto ist donald.muck42@gmail.com ; ![](../images/Building-the-App/building_0002.png)
-- Dein neues “_AAPS_”-Gmail-Konto wird donald.muck42.aaps@gmail.com; ![](../images/Building-the-App/building_0003.png) sein
+- Dein bestehendes „_Standard_“-Google-Konto ist <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
+- Dein neues “_AAPS_”-Gmail-Konto wird <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png) sein
 
-#### Gehe zu https://account.google.com 
+#### Gehe zu <https://account.google.com> 
 
 Wenn Du bereits bei Google angemeldet bist, wirst Du direkt auf Deine „Standard“-**Mein Konto**-Seite weitergeleitet.
 (1) Klicke oben rechts auf der Seite auf Dein Profilbild (in diesem Fall ein simples ![](../images/Building-the-App/building_0002.png)
@@ -101,7 +101,7 @@ Dieser Teil kann etwas verwirrend sein, da Du hier zwischen den beiden Konten hi
 2. Klicke mit der rechten Maustaste auf das Browser-Logo in Deiner Taskleiste 
 3. Wähle aus dem Menü “Neues Fenster” aus... und passe es so an, dass es nur die untere Hälfte des Bildschirms einnimmt.
 
-Öffne in beiden Browserfenstern https://gmail.com . Stelle sicher, dass Dein persönliches Konto oben und das neue spezielle **AAPS**-Konto unten ist und durch das Profilbild in der rechten oberen Ecke leicht identifiziert werden kann. (falls erforderlich, kannst Du durch das Klicken auf das Profilbild und die Auswahl des richtigen Kontos zwischen Konten wechseln).
+Öffne in beiden Browserfenstern <https://gmail.com> . Stelle sicher, dass Dein persönliches Konto oben und das neue spezielle **AAPS**-Konto unten ist und durch das Profilbild in der rechten oberen Ecke leicht identifiziert werden kann. (falls erforderlich, kannst Du durch das Klicken auf das Profilbild und die Auswahl des richtigen Kontos zwischen Konten wechseln).
 
 ![](../images/Building-the-App/building_0009.png)
 
