@@ -2,7 +2,7 @@
 
 如果尚未設定，請下載[xDrip+](https://jamorham.github.io/#xdrip-plus)。
 
-停用電池優化，並允許 xDrip+ 應用程式在背景中運行。
+停用電池優化，並允許 xDrip+ 應用程式在背景中運作。
 
 除非您需要最近的功能或正在使用正在整合的傳感器（如 G7），否則可以安全地下載[最新 APK（穩定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)，否則您應該使用最新的[Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases)。
 

@@ -13,7 +13,7 @@ Sony Smartwatch 3 是最常與 AAPS 搭配使用的手錶之一。 不幸的是�
 - 你必須確保兩件事：
 
   - 這是最新版本嗎？
-  - 它是否與 Android 6.0+ 相容？（因為它是 Wear Android 版本，7.0+ 及以上版本無法運行）
+  - 它是否與 Android 6.0+ 相容？（因為它是 Wear Android 版本，7.0+ 及以上版本無法運作）
 
 - 遲早，Google 絕對會終止對 Android 6.0 的支援。 當這發生時，最新版本將不再適用於 Android 6.0+，因此將迎來終結。
 
@@ -35,8 +35,8 @@ Sony Smartwatch 3 是最常與 AAPS 搭配使用的手錶之一。 不幸的是�
 - 將手錶插入電腦。
 - 將最新下載的 Google 服務 APK 重命名為一個簡短的名字（例如 SW3fix.apk）。
 - 將此 APK 放入 adb 工具的目錄中（例如：解壓縮的 SDK Platform Tools 目錄）。
-- 使用 Windows 開始選單中的「cmd」命令打開 Windows 終端機。
-- 在終端機中，進入包含 adb 工具和 Google 服務 APK 的目錄（輸入命令「cd \[你的路徑\]」，例如「cd C:UsersSWR50loopersdktools」）。
+- 使用 Windows 開始選單中的「cmd」指令打開 Windows 終端機。
+- 在終端機中，進入包含 adb 工具和 Google 服務 APK 的目錄（輸入指令「cd \[你的路徑\]」，例如「cd C:UsersSWR50loopersdktools」）。
 - 然後輸入 “adb devices”。
 - 稍後，你應該會看到手錶上的偵錯權限提示：接受它。
 - 在終端機中，當再次輸入 "adb devices" 時，應該會看到類似 "14452D11F536B52 device" 的訊息。
@@ -46,9 +46,9 @@ Sony Smartwatch 3 是最常與 AAPS 搭配使用的手錶之一。 不幸的是�
 
 ## 5. 將應用程式傳送到手錶
 
-- 在終端機中輸入這個命令「adb install -r -g 應用名稱.apk」（所以在我們的例子中是「adb install -r -g SW3fix.apk」）。
+- 在終端機中輸入這個指令「adb install -r -g 應用名稱.apk」（所以在我們的例子中是「adb install -r -g SW3fix.apk」）。
 
-  ![終端機命令](../images/SonySW3_Terminal1.png)
+  ![終端機指令](../images/SonySW3_Terminal1.png)
 
 - 等待約4–5分鐘以完成安裝。
 

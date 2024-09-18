@@ -1,19 +1,19 @@
 # 如何為 AAPS 應用程式或文件翻譯字串
 
 * 要翻譯應用程式中使用的字串，請前往 <https://crowdin.com/project/androidaps>，並使用您的 GitHub 帳號登入
-* 要翻譯文件，請訪問 <https://crowdin.com/project/androidapsdocs>，並使用您的 GitHub 帳號登入
+* 要翻譯文件，請查看 <https://crowdin.com/project/androidapsdocs>，並使用您的 GitHub 帳號登入
 
 * 向文件團隊發送加入請求。 為此，點擊所需語言的國旗，然後在下一頁的右上角點擊“加入”按鈕。 請指定語言，提供一些關於您的資訊以及您的 AAPS 經驗，並說明您想成為翻譯者還是校對者（僅限具有翻譯技能且為進階 AAPS 用戶的人成為校對者）。
 
 ```{admonition} 審批時間:class: note
 
-審批是一個手動步驟。 作為非營利組織，我們不提供 SLA，但一般情況下審批會在 1 天內完成。 如果沒有，請通過 Facebook 或 Discord 聯繫文件團隊。
+審批是一個手動步驟。 作為非營利組織，我們不提供 SLA，但一般情況下審批會在 1 天內完成。 如果沒有，請透過 Facebook 或 Discord 聯繫文件團隊。
 
     <br />* 當我們批准您時，點擊國旗   ![當我們批准您時，點擊國旗](./images/translation_flags.png)## 應用程式的翻譯(translations-translate-strings-for-AAPS-app)=### 為 AAPS 應用程式翻譯字串* 如果您對翻譯的字串沒有偏好，只需選擇“翻譯所有”按鈕開始。 它會顯示需要翻譯的字串。
     
-       ![點擊翻譯所有](./images/translations-click-translate-all.png)* 如果您想翻譯單個文件，請通過搜索對話框或樹狀結構查找文件，並點擊文件名開始翻譯該文件中的字串。
+       ![點擊翻譯所有](./images/translations-click-translate-all.png)* 如果您想翻譯單個文件，請透過搜索對話框或樹狀結構查找文件，並點擊文件名開始翻譯該文件中的字串。
     
-       ![點擊 strings.xml](./images/translations-click-strings.png)* 通過在左側添加新翻譯文本或使用和編輯建議來翻譯句子   ![翻譯應用程式](./images/translations-translate.png)### 校對 AAPS 應用程式的字串* 校對者在語言主頁面中選擇“校對”以開始校對。
+       ![點擊 strings.xml](./images/translations-click-strings.png)* 透過在左側添加新翻譯文本或使用和編輯建議來翻譯句子   ![翻譯應用程式](./images/translations-translate.png)### 校對 AAPS 應用程式的字串* 校對者在語言主頁面中選擇“校對”以開始校對。
     
        ![校對模式應用程式](./images/translations-proofreading-mode.png)  並批准翻譯的文本    ![批准文本](./images/translations-proofreading.png)當校對者批准翻譯後，它將被添加到下一版本的 AAPS 中。
     
@@ -38,7 +38,7 @@
         1. 這些是翻譯建議。 特別是，您可以看到 Crowdin 如何評價這一翻譯是否符合要求，或者這是否只是過去的內容經過文本重新排列而沒有內容更改。
         1. 按下“儲存”按鈕以儲存翻譯建議。 然後它會提交給校對者進行最終檢查。
     
-    ![翻譯文件](./images/translation_WikiTranslate.png)* 翻譯的頁面不會在文件中發布，直到    1. 翻譯已被校對    1. Crowdin 和 Github 之間的同步運行已完成（每小時一次），這會為 Github 建立 PR。
+    ![翻譯文件](./images/translation_WikiTranslate.png)* 翻譯的頁面不會在文件中發布，直到    1. 翻譯已被校對    1. Crowdin 和 Github 之間的同步運作已完成（每小時一次），這會為 Github 建立 PR。
     
         1. 該 PR 在 Github 中獲得批准。
     

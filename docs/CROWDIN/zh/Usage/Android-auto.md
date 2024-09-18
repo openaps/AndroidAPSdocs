@@ -2,7 +2,7 @@
 
 **AAPS** 能夠將您的當前狀態以訊息形式直接發送到車內的 Android Auto。
 
-:::{admonition} 版本和最後更改信息 :class: dropdown 最後編輯日期：2023/07/05
+:::{admonition} 版本和最後更改訊息 :class: dropdown 最後編輯日期：2023/07/05
 
 文檔使用的版本：
 
@@ -40,15 +40,15 @@
 
 ## 允許 Android Auto 使用「未知來源」。
 
-由於**AAPS**不是官方的 Android Auto 應用，因此需要在 Android Auto 中啟用「未知來源」的通知。 這是通過使用開發者模式來完成的，我們將在此為您展示。
+由於**AAPS**不是官方的 Android Auto 應用，因此需要在 Android Auto 中啟用「未知來源」的通知。 這是透過使用開發者模式來完成的，我們將在此為您展示。
 
-前往您的車輛並將手機連接到車載音響系統。
+前往您的車輛並將手機連線到車載音響系統。
 
 您現在應該會看到類似於此螢幕的畫面。
 
 ![啟用開發者模式](../images/android_auto_05.png)
 
-點擊**設置**圖標以開始配置。
+點擊**設置**圖示以開始配置。
 
 向下滾動到頁面底部並選擇**在手機上查看更多**。
 
@@ -60,7 +60,7 @@
 
 ![啟用開發者模式](../images/android_auto_07.png)
 
-您會看到列出的 Android Auto 版本。 連續點擊 Android Auto 版本 10 次。 通過此隱藏的組合操作，您現在已啟用了開發者模式。
+您會看到列出的 Android Auto 版本。 連續點擊 Android Auto 版本 10 次。 透過此隱藏的組合操作，您現在已啟用了開發者模式。
 
 ![啟用開發者模式](../images/android_auto_08.png)
 
@@ -76,9 +76,9 @@
 
 ## 在車上顯示通知
 
-在車內的 Android Auto 中，點擊右下角的**數字圖標**。
+在車內的 Android Auto 中，點擊右下角的**數字圖示**。
 
-![數字圖標 - 車內 Android Auto](../images/android_auto_11.png)
+![數字圖示 - 車內 Android Auto](../images/android_auto_11.png)
 
 您的 CGM 資料將顯示如下：
 

@@ -17,11 +17,11 @@
 
 ### 電池壽命最佳化
 
-Jelly 2 配有強大的最佳化功能，**必須**停用這些功能以便 AAPS（以及其他 DIY 應用程式如 BYODA、xDrip+、OOP2、Juggluco 等）正常運行。
+Jelly 2 配有強大的最佳化功能，**必須**停用這些功能以便 AAPS（以及其他 DIY 應用程式如 BYODA、xDrip+、OOP2、Juggluco 等）正常運作。
 
 ![](../images/Jelly_Settings1.png)
 
-您可以啟用智慧輔助功能，但**必須停用這些功能以便 DIY 應用程式正常運行**。
+您可以啟用智慧輔助功能，但**必須停用這些功能以便 DIY 應用程式正常運作**。
 
 ![](../images/Jelly_Settings2.png)
 

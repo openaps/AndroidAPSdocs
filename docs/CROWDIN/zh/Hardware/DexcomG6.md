@@ -10,7 +10,7 @@
 
 - 如果您正在重新啟動傳感器，請確保您已準備好進行校準並密切注意變化。
 
-- 使用工廠校正進行 G6 的預先浸泡可能會導致結果的變化。 如果您進行預先浸泡，為獲得最佳結果，您可能需要校正感測器。
+- 提前植入 G6 傳感器並使用出廠校準，可能會導致結果產生變異。 如果您進行預先浸泡，為獲得最佳結果，您可能需要校正傳感器。
 
 請閱讀 Tim Street 發表的[文章](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/)以了解更多，該文章發佈於[www.diabettech.com](https://www.diabettech.com)。
 
@@ -35,7 +35,7 @@
 ![BYODA 廣播選項](../images/BYODA.png)
 
 -   此應用程式允許您將 Dexcom G6 與任何 Android 智慧型手機一起使用。
--   如果您之前使用過原版或修改過的 Dexcom 應用程式，請卸載它們（**不要停止**當前運行的傳感器）。
+-   如果您之前使用過原版或修改過的 Dexcom 應用程式，請卸載它們（**不要停止**當前運作的傳感器）。
 -   安裝下載的 apk
 -   在修改版應用程式中輸入傳感器代碼和傳輸器序列號。
 -   在手機設定中，前往應用程式 > Dexcom G6 > 權限 > 其他權限並按下「存取 Dexcom 應用程式」。
@@ -50,7 +50,7 @@
 ### xDrip+ 設定
 
 -   選擇「640G/Eversense」作為資料來源。
--   必須在 xDrip+ 中執行「啟動傳感器」命令，才能接收數值。 這不會影響您的當前傳感器，它仍由自製 Dexcom 應用程式控制。
+-   必須在 xDrip+ 中執行「啟動傳感器」指令，才能接收數值。 這不會影響您的當前傳感器，它仍由自製 Dexcom 應用程式控制。
 
 
 (DexcomG6-troubleshooting-g6)=
@@ -64,6 +64,6 @@
 
 可以在[這裡](./GeneralCGMRecommendation.md#troubleshooting)找到一般 CGM 的疑難排解。
 
-### 新的傳輸器與正在運行的傳感器
+### 新的傳輸器與正在運作的傳感器
 
 如果您在傳感器會話期間更換了傳輸器，您可以嘗試取下傳輸器而不損壞傳感器底座。 您可以在[這裡](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)找到相關影片。 如果您選擇[這種解決方案](https://youtu.be/tx-kTsrkNUM)，您必須小心避免使用膠帶時[損壞傳感器接觸點](https://navid200.github.io/xDrip/docs/Petroleum-jelly-in-Dexcom-G6-Sensor.html)。

@@ -51,7 +51,7 @@ AAPS Wear OS APK 的標準版本中提供了多種手錶外觀。 當你在手�
 
 ![AAPSv2 手錶外觀圖例](../images/Watchface_Legend.png)
 
-A - 從最後一次循環運行以來的時間
+A - 從最後一次循環運作以來的時間
 
 B - CGM 資料讀數
 
@@ -104,7 +104,7 @@ I - 碳水化合物（碳水化合物在體內的數量 | 未來的碳水化合�
 * **顯示手機電池**（預設`開`）：手機電池百分比。 低於 30% 時顯示為紅色。
 * **顯示 Rig 電池**（預設`關`）：Rig 電池是手機電池、幫浦電池和傳感器電池的綜合結果（通常顯示最低的值）。
 * **顯示基礎速率**（預設`開`）：是否顯示當前的基礎速率（以 U/h 顯示，或如果是臨時基礎速率則以 % 顯示）
-* **顯示循環狀態**（預設`開`）：顯示自上次循環運行以來的分鐘數（如果超過 15 分鐘，數值周圍的箭頭變為紅色）。
+* **顯示循環狀態**（預設`開`）：顯示自上次循環運作以來的分鐘數（如果超過 15 分鐘，數值周圍的箭頭變為紅色）。
 * **顯示 血糖**（預設`開`）：是否顯示最近的血糖值
 * **顯示方向箭頭**（預設`開`）：是否顯示血糖趨勢箭頭
 * **顯示經過時間**（預設`開`）：顯示自上次讀取以來的分鐘數。
@@ -115,7 +115,7 @@ I - 碳水化合物（碳水化合物在體內的數量 | 未來的碳水化合�
 
 ### 用戶界面設置
 
-* **輸入設計**：使用此參數，你可以選擇「+」和「-」按鈕的位置訊息，當你為 AAPS 輸入命令（TT、胰島素、碳水化合物...）時使用。
+* **輸入設計**：使用此參數，你可以選擇「+」和「-」按鈕的位置訊息，當你為 AAPS 輸入指令（TT、胰島素、碳水化合物...）時使用。
 
 ![輸入設計選項](../images/Watchface_InputDesign.png)
 
@@ -134,7 +134,7 @@ I - 碳水化合物（碳水化合物在體內的數量 | 未來的碳水化合�
 * **輕環狀歷史**（預設`開`）：以更深的灰色顯示較不顯眼的環狀歷史
 * **動畫效果**（預設`開`）：如果啟用，且手錶支援並非處於省電低解析度模式時，手錶外觀的圓形會有動畫效果。
 
-### 命令設置
+### 指令設置
 
 * **主選單嚮導**（預設`開`）：允許在主選單中使用嚮導介面從手錶輸入碳水化合物並設置注射量
 * **主選單注射前充填**（預設`關`）：允許從手錶進行注射前充填/填充操作
@@ -161,7 +161,7 @@ AAPS Wear OS 應用程式自 build `2.6` 開始支援複雜功能，並允許支
 
 AAPS Wear OS 應用程式僅提供根據預定義格式的原始資料。 第三方手錶外觀決定如何及在哪裡呈現複雜功能，包括其佈局、邊框、顏色和字體。 在眾多 Wear OS 複雜功能類型中，AAPS 使用以下類型：
 
-* `短文本` - 包含兩行文本，每行 7 個字元，有時稱為值和標籤。 通常呈現在一個圓圈或小 POD 中 - 一行在另一行下方或並排顯示。 這是一個空間非常有限的複雜功能。 AAPS 試圖移除不必要的字符以適應：通過四捨五入數值、去除值中的前導和尾隨零等方式。
+* `短文本` - 包含兩行文本，每行 7 個字元，有時稱為值和標籤。 通常呈現在一個圓圈或小 POD 中 - 一行在另一行下方或並排顯示。 這是一個空間非常有限的複雜功能。 AAPS 試圖移除不必要的字符以適應：透過四捨五入數值、去除值中的前導和尾隨零等方式。
 * `長文本` - 包含兩行文本，每行大約 20 個字元。 通常呈現在一個矩形或長 POD 中 - 一行在另一行下方顯示。 用於顯示更多詳情和文本狀態。
 * `範圍值` - 用於顯示預定範圍內的值，例如百分比。 它包含圖示和標籤，通常以圓形進度表盤呈現。
 * `大圖像` - 自訂背景圖像，可用作手錶外觀的背景（如果手錶外觀支援）。
@@ -201,15 +201,15 @@ AAPS 提供以下複雜功能：
   * *eCarb*：eCarb 配置對話框
   * *狀態*：狀態子選單
   * *無*：停用 AAPS 複雜功能的點擊操作
-* **複雜功能中的 Unicode**（預設`開`）：當`開`時，複雜功能將使用 Unicode 字符來顯示符號，如`Δ`（變化量）、`⁞`（垂直點分隔符）或`⎍`（基礎速率符號）。 它們的渲染取決於字體，這可能非常特定於手錶外觀。 如果自訂手錶外觀使用的字體不支援這些符號，則可以將此選項設置為`關`，以避免圖形故障。
+* **複雜功能中的 Unicode**（預設`開`）：當`開`時，複雜功能將使用 Unicode 字符來顯示圖示，如`Δ`（變化量）、`⁞`（垂直點分隔符）或`⎍`（基礎速率圖示）。 它們的渲染取決於字體，這可能非常特定於手錶外觀。 如果自訂手錶外觀使用的字體不支援這些圖示，則可以將此選項設置為`關`，以避免圖形故障。
 
 ## Wear OS Tiles(資訊方塊)
 
-Wear OS Tiles 提供用戶快速訪問資訊和操作的便捷方式。 這些 Tiles 僅在運行 Wear OS 版本 2.0 及更高版本的 Android 智慧型手錶上可用。
+Wear OS Tiles 提供用戶快速查看資訊和操作的便捷方式。 這些 Tiles 僅在運作 Wear OS 版本 2.0 及更高版本的 Android 智慧型手錶上可用。
 
-Tiles 允許你快速訪問 AAPS 應用程式中的操作，而無需通過手錶外觀選單。 Tiles 是可選的，並且可以由用戶自行添加和配置。
+Tiles 允許你快速查看 AAPS 應用程式中的操作，而無需透過手錶外觀選單。 Tiles 是可選的，並且可以由用戶自行添加和配置。
 
-Tiles 與任何手錶外觀「並存」使用。 這些Tiles會在所有錶面的旁邊。 啟用後，通過從手錶外觀向左滑動即可訪問 Tiles。
+Tiles 與任何手錶外觀「並存」使用。 這些Tiles會在所有錶面的旁邊。 啟用後，透過從手錶外觀向左滑動即可查看 Tiles。
 
 請注意：這些Tiles並不顯示 AAPS 手機應用程式的實際狀態，它們僅會發出請求，該請求必須在手錶上確認後才會生效。
 
@@ -224,29 +224,29 @@ Tiles 與任何手錶外觀「並存」使用。 這些Tiles會在所有錶面�
 1. 在手錶上，從手錶外觀開始； - 向左滑動直到到達「+ 添加 Tiles」 - 選擇其中一個 Tiles。
 2. 在手機上打開手錶原廠的應用程式。 - 對於三星手錶，打開「Galaxy Wearable」，其他品牌則打開「Wear OS」 
   * 點擊「Tiles」部分，然後點擊「+ 添加」按鈕
-  * 找到你想添加的 AAPS Tile 並選擇它。 ![Wear 手機添加 Tile](../images/wear_companion_app_add_tile.png) 你可以通過拖放來更改 Tiles 的順序
+  * 找到你想添加的 AAPS Tile 並選擇它。 ![Wear phone add tile](../images/wear_companion_app_add_tile.png) The order of the tiles can be changed by dragging and dropping
 
-你可以通過長按 Tile 並點擊「編輯」或「齒輪圖示」按鈕來自訂 Tiles 的內容。
+你可以透過長按 Tile 並點擊「編輯」或「齒輪圖示」按鈕來自訂 Tiles 的內容。
 
 ### APS（操作）Tile
 
-操作 Tile 可以包含 1 到 4 個用戶自訂的操作按鈕。 要進行配置，長按 Tile，這將顯示配置選項。 類似的操作也可以通過標準的手錶選單進行。
+操作 Tile 可以包含 1 到 4 個用戶自訂的操作按鈕。 要進行配置，長按 Tile，這將顯示配置選項。 類似的操作也可以透過標準的手錶選單進行。
 
 操作 Tile 支援的操作可以向 AAPS 手機應用程式發出請求：
 
 * **計算**；根據碳水化合物輸入和可選的百分比[1]進行注射計算
-* **胰島素**；通過輸入胰島素單位請求注射
+* **胰島素**；透過輸入胰島素單位請求注射
 * **治療**；請求注射並添加碳水化合物
 * **碳水化合物**；添加（延長的）碳水化合物
 * **臨時目標**；設置自訂臨時目標和持續時間
 
 ![Wear 操作 Tile，示例計算機](../images/wear_actions.png)
 
-[1] 通過 Wear OS 選單，將「計算機百分比」選項設置為「開」，以便在注射計算機中顯示百分比輸入。 預設百分比基於手機設置中的「首頁總覽」部分[「注射嚮導結果的百分比」](Config-Builder.html#advanced-settings)。當用戶未提供百分比時，將使用手機中的預設值。 通過手機應用程式的「偏好設定」-「嚮導設置」配置注射計算機的其他參數。
+[1] 透過 Wear OS 選單，將「計算機百分比」選項設置為「開」，以便在注射計算機中顯示百分比輸入。 預設百分比基於手機設置中的「首頁總覽」部分[「注射嚮導結果的百分比」](Config-Builder.html#advanced-settings)。當用戶未提供百分比時，將使用手機中的預設值。 透過手機應用程式的「偏好設定」-「嚮導設置」配置注射計算機的其他參數。
 
 ### AAPS（臨時目標）Tile
 
-臨時目標 Tile 可以根據 AAPS 手機預設請求臨時目標。 通過進入手機應用程式的「偏好設定」-「首頁總覽」部分，[「預設臨時目標」](Config-Builder.html#default-temp-targets)，設置每個預設的持續時間和目標來進行配置。 通過 Tile 設置配置在 Tile 上可見的操作。 長按 Tile 以顯示配置選項並選擇 1 到 4 個選項：
+臨時目標 Tile 可以根據 AAPS 手機預設請求臨時目標。 透過進入手機應用程式的「偏好設定」-「首頁總覽」部分，[「預設臨時目標」](Config-Builder.html#default-temp-targets)，設置每個預設的持續時間和目標來進行配置。 透過 Tile 設置配置在 Tile 上可見的操作。 長按 Tile 以顯示配置選項並選擇 1 到 4 個選項：
 
 * **運動**；適用於運動
 * **低血糖**；在低血糖治療期間提高目標
@@ -270,13 +270,13 @@ Tiles 與任何手錶外觀「並存」使用。 這些Tiles會在所有錶面�
 
 自 AAPS 版本3開始，我們可以在永遠開啟模式下使用“簡化 UI”。 此 UI 只包含血糖值、方向和時間。 此 UI 已經過電力優化，更新頻率較低，顯示較少的資訊，並減少點亮的像素數，以節省 OLED 螢幕上的電量。
 
-簡化 UI 模式適用於以下錶盤：AAPS、AAPS V2、Home Big、Digital Style、Steampunk 和 Cockpit。 簡化 UI 是可選的，並通過錶盤設定進行配置。 （長按錶盤並點擊“編輯”或齒輪圖示）選擇配置“簡化 UI”並將其設為“永遠開啟”或“永遠開啟且充電中”。
+簡化 UI 模式適用於以下錶盤：AAPS、AAPS V2、Home Big、Digital Style、Steampunk 和 Cockpit。 簡化 UI 是可選的，並透過錶盤設定進行配置。 （長按錶盤並點擊“編輯”或齒輪圖示）選擇配置“簡化 UI”並將其設為“永遠開啟”或“永遠開啟且充電中”。
 
 ### 夜間模式
 
 在充電期間，若能在夜間保持螢幕“永遠開啟”並顯示您的血糖值會非常有用。 然而，標準錶盤過於明亮，資訊太多，而且在困倦的狀態下很難閱讀細節。 因此，我們在配置中新增了一個選項，讓錶盤在充電期間可以簡化 UI。
 
-簡化 UI 模式適用於以下錶盤：AAPS、AAPS V2、Home Big、Digital Style、Steampunk 和 Cockpit。 簡化 UI 是可選的，並通過錶盤設定進行配置。 （長按錶盤並點擊“編輯”或齒輪圖示）選擇配置“簡化 UI”並將其設為“充電期間”或“永遠開啟且充電中”
+簡化 UI 模式適用於以下錶盤：AAPS、AAPS V2、Home Big、Digital Style、Steampunk 和 Cockpit。 簡化 UI 是可選的，並透過錶盤設定進行配置。 （長按錶盤並點擊“編輯”或齒輪圖示）選擇配置“簡化 UI”並將其設為“充電期間”或“永遠開啟且充電中”
 
 Android 開發者選項允許您的手錶在充電期間保持喚醒狀態。 若要啟用開發者選項，請參閱[官方文件](https://developer.android.com/training/wearables/get-started/debugging)。 在開發者選項中，將“充電時保持喚醒”設置為“開啟”。
 
@@ -331,37 +331,16 @@ Wear OS 手錶是非常耗電且又受限的裝置。 手錶機殼的尺寸限�
 
 ## Garmin
 
-有幾個 Garmin 的錶盤可與 xDrip 或 Nightscout 集成在[Garmin ConnectIQ 商店](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30)中。 AAPS Glucose Watch 可直接與 AAPS 集成。 它顯示循環狀態資料（活性胰島素、臨時基礎率），除了顯示血糖讀數外，還會將心率讀數發送到 AAPS。 它尚未在 ConnectIQ 商店中提供，因為所需的 AAPS 外掛僅在 AAPS 3.2 版本後可用。如需試用，請聯繫 robert.b 在[Discord](https://discord.com/invite/4fQUWHZ4Mw)。
+There are a couple of watch faces for Garmin that integrate with xDrip or Nightscout on the [Garmin ConnectIQ store](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30).
 
-![螢幕截圖](../images/Garmin_WF.png) ![螢幕截圖](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with AAPS. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to AAPS. It is available in the ConnectIQ store, the necessary AAPS plugin is only available from AAPS 3.2.
+
+![Screenshot](../images/Garmin_WF.png) ![Screenshot](../images/Garmin_WF-annotated.png)
 
 ## 額外的 AAPS 自訂錶盤也可以使用
+
+[Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
 
 如果您想建立自己的錶盤，請參閱[此處的指南](../Usage/Custom_Watchface_Reference.md)。
 
 建立自訂錶盤後，您可以與其他人分享自己的**AAPS**自訂錶盤，將 zip 檔上傳至“ExchangeSiteCustomWatchfaces”資料夾，並透過 Pull Request 上傳到 Github。 在合併 Pull Request 時，文件團隊會提取 CustomWatchface.png 檔案，並在檔名前加上 Zip 檔案名稱作為前綴。
-
-您可以在此下載由其他用戶建立的自訂錶盤 Zip 檔：
-
-網格佈局（按字母順序排列）
-
-|                                                                                                                                                                 |                                                                                                                                                                     |                                                                                                                                                                   |                                                                                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![AAPS_V2 錶盤](../ExchangeSiteCustomWatchfaces/AAPS_V2-CustomWatchface.png)   
-**AAPS_V2**](../ExchangeSiteCustomWatchfaces/AAPS_V2.zip)                        | [![AAPS](../ExchangeSiteCustomWatchfaces/AAPS-CustomWatchface.png)   
-**AAPS**](../ExchangeSiteCustomWatchfaces/AAPS.zip)                                           | [![Cockpit](../ExchangeSiteCustomWatchfaces/Cockpit-CustomWatchface.png)   
-**Cockpit**](../ExchangeSiteCustomWatchfaces/Cockpit.zip)                             | [![SteamPunk](../ExchangeSiteCustomWatchfaces/SteamPunk-CustomWatchface.png)   
-**SteamPunk**](../ExchangeSiteCustomWatchfaces/SteamPunk.zip)           |
-| [![AIMICO](../ExchangeSiteCustomWatchfaces/AIMICO-V1_1-CustomWatchface.png)   
-**AIMICO**](../ExchangeSiteCustomWatchfaces/AIMICO-V1_1.zip)                     | [![Analog G-Watch](../ExchangeSiteCustomWatchfaces/Analog_G-Watch-CustomWatchface.png)   
-**類比 G-Watch**](../ExchangeSiteCustomWatchfaces/Analog_G-Watch.zip)       | [![Digital G-Watch](../ExchangeSiteCustomWatchfaces/Digital_G-Watch-CustomWatchface.png)   
-**數位 G-Watch**](../ExchangeSiteCustomWatchfaces/Digital_G-Watch.zip)  | [![SimpleDigital](../ExchangeSiteCustomWatchfaces/SimpleDigital_v1.3-CustomWatchface.png)   
-**簡易數位**](../ExchangeSiteCustomWatchfaces/SteamPunk.zip)   |
-| [![Gears](../ExchangeSiteCustomWatchfaces/Gears-CustomWatchface.jpg)   
-**齒輪**](../ExchangeSiteCustomWatchfaces/Gears.zip)                                      | [![Gota](../ExchangeSiteCustomWatchfaces/Gota-CustomWatchface.png)   
-**Gota**](../ExchangeSiteCustomWatchfaces/Gota_v2.4.zip)                                      | [![LuckyLoopKoeln](../ExchangeSiteCustomWatchfaces/LuckyLoopKoeln-CustomWatchface.png)   
-**LuckyLoopKoeln**](../ExchangeSiteCustomWatchfaces/LuckyLoopKoeln.zip) | [![Robby 錶盤](../ExchangeSiteCustomWatchfaces/Robby_watchface-CustomWatchface.png)   
-**Robby 錶盤**](../ExchangeSiteCustomWatchfaces/Robby_watchface.zip) |
-| [![DigitalBigGraph](../ExchangeSiteCustomWatchfaces/DigitalBigGraph-CustomWatchface.png)   
-**數位大圖**](../ExchangeSiteCustomWatchfaces/DigitalBigGraph_v1.5.zip) | [![PinkFloydTheWall](../ExchangeSiteCustomWatchfaces/PinkFloydTheWall-CustomWatchface.png)   
-**平克佛洛伊德：隔離牆**](../ExchangeSiteCustomWatchfaces/PinkFloydTheWall.zip) |                                                                                                                                                                   |                                                                                                                                                         |

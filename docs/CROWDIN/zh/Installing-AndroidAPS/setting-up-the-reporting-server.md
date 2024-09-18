@@ -11,9 +11,9 @@
 
 ## Nightscout
 
-Nightscout是一個強大的平台，多年來已經整合進了 **AAPS**。 它使用戶和照護者能夠近乎實時地追蹤病患的糖尿病資料（如果所有相關組件之間有足夠的網際網路連線，資料接收和提供之間只會有幾分鐘的延遲）。 它還允許照護者向 **AAPS** 發送遠端命令。
+Nightscout是一個強大的平台，多年來已經整合進了 **AAPS**。 它使用戶和照護者能夠近乎實時地追蹤病患的糖尿病資料（如果所有相關組件之間有足夠的網際網路連線，資料接收和提供之間只會有幾分鐘的延遲）。 它還允許照護者向 **AAPS** 發送遠端指令。
 
-Nightscout是一個開源軟體。 任何人都可以使用免費或付費服務建立和運行一個Nightscout伺服器。
+Nightscout是一個開源軟體。 任何人都可以使用免費或付費服務建立和運作一個Nightscout伺服器。
 
 ### 選項1 - 自行設置您的Nightscout伺服器
 
@@ -39,7 +39,7 @@ Tidepool自 **AAPS** 3.2版本（2023年末釋出）以來才可用。
 另一方面，如果Nightscout不是可接受的解決方案，Tidepool可以是一個與病患內分泌科醫師共享報告的好方案。\
 :::
 
-Tidepool是一個[開源](https://github.com/tidepool-org)專案。 它提供在Tidepool伺服器上免費運行帳號的選項。
+Tidepool是一個[開源](https://github.com/tidepool-org)專案。 它提供在Tidepool伺服器上免費運作帳號的選項。
 
 您可以在[這裡](https://app.tidepool.org/signup)建立Tidepool帳號。
 

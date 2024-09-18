@@ -7,7 +7,7 @@ AAPS 不僅僅是一個（自建的）應用程式，它只是您的閉環系統
 ```{note}
 **重要的安全提醒**
 
-本文件中討論的 AAPS 安全功能基礎是建立在您用來構建系統的硬體安全功能上。 使用經過測試且完全運行的 FDA 或 CE 認證的胰島素幫浦和 CGM 來進行自動胰島素劑量控制是至關重要的。 對這些組件進行硬體或軟體修改可能會導致胰島素劑量異常，對使用者造成重大風險。 如果您發現或被提供了損壞、修改或自製的胰島素幫浦或 CGM 接收器，*請勿使用*它們來建立 AAPS 系統。
+本文件中討論的 AAPS 安全功能基礎是建立在您用來構建系統的硬體安全功能上。 使用經過測試且完全運作的 FDA 或 CE 認證的胰島素幫浦和 CGM 來進行自動胰島素劑量控制是至關重要的。 對這些組件進行硬體或軟體修改可能會導致胰島素劑量異常，對使用者造成重大風險。 如果您發現或被提供了損壞、修改或自製的胰島素幫浦或 CGM 接收器，*請勿使用*它們來建立 AAPS 系統。
 
 此外，僅使用製造商批准的原裝耗材，例如插入器、套管和胰島素容器，也同樣重要。 使用未經測試或修改的耗材可能會導致 CGM 不準確和胰島素劑量錯誤。 胰島素在劑量錯誤時極具危險 - 請勿透過修改耗材來冒生命危險。
 
@@ -35,7 +35,7 @@ SGLT-2 抑制劑，又稱格列佛新類，會抑制腎臟對葡萄糖的再吸�
 (module-phone)=
 ### 手機
 
-目前的 AAPS 版本需要一台運行 Android 9.0 或以上版本的智慧型手機。 因此，如果您正在考慮購買新手機，建議至少選擇 Android 9，但最優選擇是 Android 10 或 12。 對於舊版 Android，可以使用舊版 AAPS，詳見：[版本說明](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version)
+目前的 AAPS 版本需要一台運作 Android 9.0 或以上版本的智慧型手機。 因此，如果您正在考慮購買新手機，建議至少選擇 Android 9，但最優選擇是 Android 10 或 12。 對於舊版 Android，可以使用舊版 AAPS，詳見：[版本說明](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version)
 
 用戶正在建立一個[已測試的手機和手錶清單](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
@@ -55,20 +55,20 @@ AAPS **目前**適用於以下幫浦：
 - [Dana-i](../Configuration/DanaRS-Insulin-Pump.md)
 - [Diaconn G8 ](../Configuration/DiaconnG8.md)
 - [EOPatch2](../Configuration/EOPatch2.md)
-- [Omnipod Eros](../Configuration/OmnipodEros.md) （需要[額外的通信設備](module-additional-communication-device)）
+- [Omnipod Eros](../Configuration/OmnipodEros.md) （需要[額外的通訊設備](module-additional-communication-device)）
 - [Omnipod DASH](../Configuration/OmnipodDASH.md)
 - [Medtrum Nano](../Configuration/MedtrumNano.md)
 - [Medtrum 300U](../Configuration/MedtrumNano.md)
-- 某些舊型[美敦力](../Configuration/MedtronicPump.md)幫浦（需要[額外的通信設備](module-additional-communication-device)）
+- 某些舊型[美敦力](../Configuration/MedtronicPump.md)幫浦（需要[額外的通訊設備](module-additional-communication-device)）
 
-如果未提到額外的通信設備，那麼胰島素幫浦與 AAPS 之間的通信是基於 Android 的內建藍牙堆疊，不需要額外的通信設備來轉換通信協議。
+如果未提到額外的通訊設備，那麼胰島素幫浦與 AAPS 之間的通訊是基於 Android 的內建藍牙堆疊，不需要額外的通訊設備來轉換通訊協議。
 
 **其他幫浦** 有潛力與 AAPS 一同使用，列在[未來可能的幫浦](../Getting-Started/Future-possible-Pump-Drivers.md)頁面中。
 
 (module-additional-communication-device)=
-#### 額外的通信設備
+#### 額外的通訊設備
 
-對於舊型美敦力幫浦，除了手機外，還需要額外的通信設備來將幫浦的無線電信號「轉換」為藍牙信號。 請確保根據您的幫浦選擇正確的版本。
+對於舊型美敦力幫浦，除了手機外，還需要額外的通訊設備來將幫浦的無線電信號「轉換」為藍牙信號。 請確保根據您的幫浦選擇正確的版本。
 
 - ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink 官網](https://getrileylink.org/product/orangelink)
 - ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
@@ -82,16 +82,16 @@ Combo、Insight 和舊型美敦力幫浦都是穩定且可用於閉環系統的�
 
 然而，DanaR/RS 和 Dana-i 相對於 Combo 作為首選幫浦的優勢在於：
 
-- Dana 幫浦可以與幾乎任何運行 Android 5.1 或更高版本的手機連線，而無需刷入 Lineage。 如果您的手機壞了，通常可以輕鬆找到與 Dana 幫浦兼容的手機作為快速替代品......這對於 Combo 來說並不容易。 （隨著 Android 8.1 越來越普及，這種情況可能會改變）
+- Dana 幫浦可以與幾乎任何運作 Android 5.1 或更高版本的手機連線，而無需刷入 Lineage。 如果您的手機壞了，通常可以輕鬆找到與 Dana 幫浦相容的手機作為快速替代品......這對於 Combo 來說並不容易。 （隨著 Android 8.1 越來越普及，這種情況可能會改變）
 - Dana-i/RS 的初始配對比較簡單。 但通常這只需要做一次，所以它僅在您想使用不同幫浦測試新功能時才有影響。
 - 目前，Combo 使用螢幕解析進行工作。 總的來說，這效果不錯，但速度較慢。 對於閉環系統來說，這並不太重要，因為所有操作都在背景中進行。 然而，您需要更多的時間來保持連線，這就意味著更多的時間內藍牙連線可能會中斷，這在您走開並同時進行注射和做飯時可能會發生。
 - Combo 在暫時性基礎率（TBR）結束時會震動，DanaR 在 SMB 時會震動（或發出嗶聲）。 在夜間，您可能會更頻繁地使用 TBR 而不是 SMB。  Dana-i/RS 可以配置為既不發出嗶聲也不震動。
 - 幾秒鐘內讀取 Dana-i/RS 的歷史紀錄及碳水化合物資料，使您可以在離線狀態下輕鬆切換手機，並在獲得一些 CGM 資料後立即繼續閉環操作。
-- 所有與 AAPS 兼容的幫浦在交付時都是防水的。 只有 Dana 幫浦因其密封的電池艙和儲液槽填充系統在保固範圍內也具備防水性能。
+- 所有與 AAPS 相容的幫浦在交付時都是防水的。 只有 Dana 幫浦因其密封的電池艙和儲液槽填充系統在保固範圍內也具備防水性能。
 
 ### 血糖來源
 
-這只是與 AAPS 兼容的所有 CGM/FGM 的簡短概述。 有關更多詳情，請參見[這裡](../Configuration/BG-Source.md)。 簡單提示：如果您能在 xDrip+ 應用程式或 Nightscout 網站上顯示您的血糖資料，則可以在 AAPS 中選擇 xDrip+（或使用網路連線的 Nightscout）作為 BG 來源。
+這只是與 AAPS 相容的所有 CGM/FGM 的簡短概述。 有關更多詳情，請參閱[這裡](../Configuration/BG-Source.md)。 簡單提示：如果您能在 xDrip+ 應用程式或 Nightscout 網站上顯示您的血糖資料，則可以在 AAPS 中選擇 xDrip+（或使用網路連線的 Nightscout）作為血糖來源。
 
 - [Dexcom G7](../Hardware/DexcomG7.md)：可與 xDrip+ 或修補版應用程式配合使用
 - [Dexcom G6](../Hardware/DexcomG6.md)：建議使用版本 3.0 的 BOYDA（詳見[版本說明](Releasenotes-important-hints-3-0-0)）。 xDrip+ 至少需要 2022.01.14 版本或更高版本
@@ -110,7 +110,7 @@ Nightscout 是一個開源網頁應用程式，可以記錄並顯示您的 CGM �
 
 Nightscout 與其他模組獨立運作。 要完成目標 1，您將需要它。
 
-有關如何配置 Nightscout 以與 AAPS 一起使用的更多信息，請參見[這裡](../Installing-AndroidAPS/Nightscout.md)。
+有關如何配置 Nightscout 以與 AAPS 一起使用的更多訊息，請參閱[這裡](../Installing-AndroidAPS/Nightscout.md)。
 
 ### AAPS-.apk 檔案
 
@@ -120,7 +120,7 @@ Nightscout 與其他模組獨立運作。 要完成目標 1，您將需要它。
 
 ### 智慧型手錶
 
-您可以選擇任何 Android Wear 1.x 及以上版本的智慧手錶。 大多數使用閉環系統的人佩戴 Sony Smartwatch 3（SWR50），因為它是唯一一款在手機不在範圍內時仍能從 Dexcom G6/G5 獲取讀數的手錶。 某些其他手錶也可以通過修補來作為獨立接收器使用（更多詳情請參見[這份文檔](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5)）。
+您可以選擇任何 Android Wear 1.x 及以上版本的智慧型手錶。 大多數使用閉環系統的人佩戴 Sony Smartwatch 3（SWR50），因為它是唯一一款在手機不在範圍內時仍能從 Dexcom G6/G5 獲取讀數的手錶。 某些其他手錶也可以透過修補來作為獨立接收器使用（更多詳情請參閱[這份文檔](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5)）。
 
 用戶正在建立一個[已測試的手機和手錶清單](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)。 有不同的 AAPS 使用手錶錶盤，您可以在[這裡](../Configuration/Watchfaces.md)找到。
 
@@ -130,7 +130,7 @@ Nightscout 與其他模組獨立運作。 要完成目標 1，您將需要它。
 
 ### xDrip+
 
-即使您不需要將 xDrip+ 應用程式作為 BG 來源，您仍然可以使用它來設置警報或顯示血糖資料。 您可以設置任意多的警報，指定警報應該啟動的時間，是否可以覆蓋靜音模式等。 有關一些 xDrip+ 資訊，請參見[這裡](../Configuration/xdrip.md)。 請注意，這款應用程式的文檔並非總是最新的，因為其進展相當快速。
+即使您不需要將 xDrip+ 應用程式作為血糖來源，您仍然可以使用它來設置警報或顯示血糖資料。 您可以設置任意多的警報，指定警報應該啟動的時間，是否可以覆蓋靜音模式等。 有關一些 xDrip+ 資訊，請參閱[這裡](../Configuration/xdrip.md)。 請注意，這款應用程式的文檔並非總是最新的，因為其進展相當快速。
 
 ## 等待模組期間該做什麼
 

@@ -1,6 +1,6 @@
 # 構建AAPS
 
-## 自行構建，而不是下載
+## 自行建置，而不是下載
 
 **由於醫療設備的相關規範，AAPS應用程式（apk檔案）無法下載。 您可以合法地構建應用程式供自己使用，但不得將副本提供給他人！**
 
@@ -54,7 +54,7 @@
 
 如果您在構建 **AAPS** 應用程式的過程中遇到困難，請先參閱專門的[**故障排除Android Studio**](../Installing-AndroidAPS/troubleshooting_androidstudio) 部分。
 
-如果您認為構建指導中有任何錯誤、遺漏或困惑之處，或您仍然感到困難，請通過[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)聯繫其他 **AAPS** 用戶。 如果您想自行更改一些內容（例如更新螢幕截圖_等），請提交[拉取請求（PR）](../make-a-PR.md)。
+如果您認為構建指導中有任何錯誤、遺漏或困惑之處，或您仍然感到困難，請透過[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)聯繫其他 **AAPS** 用戶。 如果您想自行更改一些內容（例如更新螢幕截圖_等），請提交[拉取請求（PR）](../make-a-PR.md)。
 
 ## 構建AAPS應用程式的逐步指南
 
@@ -78,7 +78,7 @@
 
 在本指南中，您將看到構建 **AAPS** apk檔案的_示例_螢幕截圖。 由於 **Android Studio**——我們用來構建 **AAPS** apk 的軟體——會定期更新，這些截圖可能與您的安裝不完全相同，但它們仍應該可以參照進行。
 
-由於 **Android Studio** 可在Windows、Mac OS X和Linux平台上運行，這些平台之間的步驟可能也會有些許差異。
+由於 **Android Studio** 可在Windows、Mac OS X和Linux平台上運作，這些平台之間的步驟可能也會有些許差異。
 
 (安裝Git)=
 
@@ -92,13 +92,13 @@ Git是一個允許您追蹤程式碼變更並與他人協作的程式。 您將�
 
 #### 安裝Git的步驟
 
-1. 檢查您是否已安裝 **Git**。 您可以通過在Windows的搜索欄中輸入“git”來檢查——如果看到 **“Git bash”** 或其他形式的Git，則已安裝，您可以直接進入[安裝Android Studio](Building-APK-install-android-studio)：
+1. 檢查您是否已安裝 **Git**。 您可以透過在Windows的搜索欄中輸入“git”來檢查——如果看到 **“Git bash”** 或其他形式的Git，則已安裝，您可以直接進入[安裝Android Studio](Building-APK-install-android-studio)：
 
 ![Git\_installed](../images/Building-the-App/001_check_git_installed.png)
 
 2. 如果尚未安裝Git，請從[**這裡**](https://git-scm.com/downloads)下載並安裝適用於您的系統的最新版本。 任何最新的Git版本都應該可以使用，請根據您的系統選擇正確的版本，無論是Mac、Windows還是Linux。
 
-**給Mac用戶的提示：** Git網頁還將指導您安裝名為“homebrew”的附加程式，以輔助安裝。 如果您通過homebrew安裝Git，則無需更改任何偏好設定。
+**給Mac用戶的提示：** Git網頁還將指導您安裝名為“homebrew”的附加程式，以輔助安裝。 如果您透過homebrew安裝Git，則無需更改任何偏好設定。
 
 (Make_a_note_of_Git_path)=
 
@@ -106,7 +106,7 @@ Git是一個允許您追蹤程式碼變更並與他人協作的程式。 您將�
 
 - 在進行Git安裝的幾個步驟時，只需接受所有的預設選項。
 
-- 安裝完成後，如果您忘記記錄Git的安裝位置，可以通過以下方式找到它：在PC的搜索欄中輸入“git”，右鍵點擊“Git bash”，選擇“打開檔案位置”，將滑鼠懸停在“Git bash”圖示上，這將顯示安裝位置。
+- 安裝完成後，如果您忘記記錄Git的安裝位置，可以透過以下方式找到它：在PC的搜索欄中輸入“git”，右鍵點擊“Git bash”，選擇“打開檔案位置”，將滑鼠懸停在“Git bash”圖示上，這將顯示安裝位置。
 
 - 在進行下一步之前，重新啟動您的電腦。
 
@@ -114,11 +114,11 @@ Git是一個允許您追蹤程式碼變更並與他人協作的程式。 您將�
 
 ### 安裝Android Studio
 
-- **在以下步驟中，您必須始終保持在線狀態，因為Android Studio會下載多個更新。**
+- **在以下步驟中，您必須始終保持線上狀態，因為Android Studio會下載多個更新。**
 
 :::{admonition} 什麼是Android Studio？
 :class: dropdown
-Android Studio是一個在您的電腦上運行的程式。 它允許您使用Git從互聯網下載原始程式碼，並構建智慧手機（和智慧手錶）應用程式。 您無法通過在電腦上使用Android Studio構建新版本或更新版本的應用程式來“破壞”當前在智慧手機上運行的 **AAPS** 循環版本，這些是完全獨立的過程。
+Android Studio是一個在您的電腦上運作的程式。 它允許您使用Git從互聯網下載原始程式碼，並構建智慧型手機（和智慧型手錶）應用程式。 您無法透過在電腦上使用Android Studio構建新版本或更新版本的應用程式來“破壞”當前在智慧型手機上運作的 **AAPS** 循環版本，這些是完全獨立的過程。
 :::
 
 以下螢幕截圖取自 **Hedgehog** 版本的Android Studio，它們應與更新版本相同。
@@ -171,10 +171,10 @@ Android Studio將立即啟動。
 
 :::{admonition} 什麼是Android SDK？
 
-為了在手機上運行 **AAPS**，應用程式需要與Android本身整合。 Android提供了“_軟體開發工具包_”（SDK），允許像 **AAPS** 這樣的應用程式與Android操作系統進行交互。
+為了在手機上運作 **AAPS**，應用程式需要與Android本身整合。 Android提供了“_軟體開發工具包_”（SDK），允許像 **AAPS** 這樣的應用程式與Android操作系統進行交互。
 :::
 
-SDK平台套件與您手機上運行的Android版本無關，而是與 **AAPS** 的構建有關。 **AAPS** 3.2及更新版本基於API等級34進行構建，這會在 **Hedgehog** 版本的 **Android Studio** 中自動選擇。 因此，只需點擊“下一步”：
+SDK平台套件與您手機上運作的Android版本無關，而是與 **AAPS** 的構建有關。 **AAPS** 3.2及更新版本基於API等級34進行構建，這會在 **Hedgehog** 版本的 **Android Studio** 中自動選擇。 因此，只需點擊“下一步”：
 
 ![SDKcomponents\_setup](../images/Building-the-App/10_SDKComponents_setup.png)
 
@@ -206,7 +206,7 @@ SDK平台套件與您手機上運行的Android版本無關，而是與 **AAPS** 
 
 :::{admonition} 為什麼下載AAPS程式碼需要很長時間？
 
-首次下載 **AAPS** 時，Android Studio將通過網際網路連線到GitHub網站以下載 **AAPS** 的原始程式碼。 這應該大約需要1分鐘。
+首次下載 **AAPS** 時，Android Studio將透過網際網路連線到GitHub網站以下載 **AAPS** 的原始程式碼。 這應該大約需要1分鐘。
 
 Android Studio隨後會使用 **Gradle**（Android Studio中的開發工具）來識別安裝這些項目所需的其他組件，並將其安裝到您的電腦上。
 
@@ -232,7 +232,7 @@ https://github.com/nightscout/AndroidAPS.git
 
 - 檢查（預設的）儲存複製程式碼的目錄是否合理（4）。
 
-:::{admonition} 信息
+:::{admonition} 訊息
 :class: information
 記下目錄。 這是您儲存原始程式碼的地方！
 :::
@@ -265,7 +265,7 @@ https://github.com/nightscout/AndroidAPS.git
 
 ![確認重新啟動Android Studio](../images/Building-the-App/18b_ConfirmRestartUI.png)
 
-您可能會看到以下警告之一或兩者關於運行中的進程。 可以安全地中止它們！
+您可能會看到以下警告之一或兩者關於運作中的進程。 可以安全地中止它們！
 
 ![確認中止背景進程](../images/Building-the-App/18c_AbortBackgroundTasks.png) ![確認中止進程](../images/Building-the-App/18d_AbortProcessImport.png)
 
@@ -325,7 +325,7 @@ _可選_ - 如果您想清除“建議更新專案”的彈出訊息，點擊藍
 
 :::{admonition} 為什麼AAPS應用程式需要“簽章”？
 
-Android要求每個應用程式都必須_簽章_，以確保以後只能由釋出原始應用的受信任來源更新。 有關此主題的更多信息，請參閱[此連結](https://developer.android.com/studio/publish/app-signing.html#generate-key)。 對於我們的目的，這只意味著我們生成一個簽章或“密鑰庫”檔案，並在構建 **AAPS** 應用程式時使用它。
+Android要求每個應用程式都必須_簽章_，以確保以後只能由釋出原始應用的受信任來源更新。 有關此主題的更多訊息，請參閱[此連結](https://developer.android.com/studio/publish/app-signing.html#generate-key)。 對於我們的目的，這只意味著我們生成一個簽章或“密鑰庫”檔案，並在構建 **AAPS** 應用程式時使用它。
 :::
 
 - 在選單欄中，點擊“構建”（1），選擇“生成簽章包/APK”（2）：
@@ -339,20 +339,20 @@ Android要求每個應用程式都必須_簽章_，以確保以後只能由釋�
 - 在下一個螢幕上，確保“模組”設置為“AAPS.app”（1）。
 
 (Building-APK-wearapk)=
-:::{admonition} 信息！
+:::{admonition} 訊息！
 :class: information
 如果您想為您的手錶建立apk，請選擇AAPS.wear！
 :::
 
 - 點擊“建立新...” (2) 開始建立您的密鑰庫。
 
-:::{admonition} 信息！
+:::{admonition} 訊息！
 :class: information
 您只需要建立一次密鑰庫。
 如果您之前已構建過AAPS，請勿建立新密鑰庫，而是選擇現有的！
 :::
 
-**_注意：_** 密鑰庫是一個用於存儲應用程式簽章信息的檔案。 它是加密的，並且信息通過密碼進行保護。
+**_注意：_** 密鑰庫是一個用於存儲應用程式簽章訊息的檔案。 它是加密的，並且訊息透過密碼進行保護。
 
 ![Create\_key\_store](../images/Building-the-App/27_new_keystore.png)
 
@@ -384,7 +384,7 @@ Android要求每個應用程式都必須_簽章_，以確保以後只能由釋�
 
 有效期（6）預設為25年，保持不變。
 
-輸入您的名字和姓氏（7）。 不需要添加其他信息。
+輸入您的名字和姓氏（7）。 不需要添加其他訊息。
 
 點擊“確定”（8）繼續：
 
@@ -419,7 +419,7 @@ _如果構建未成功，請參閱[故障排除部分](../Installing-AndroidAPS/
 
 ![檔案位置apk](../images/Building-the-App/36_locate_apk.png)
 
-打開“release”資料夾。 檔案“app-full-release.apk”（1）是您剛剛構建的 **AAPS** apk，在文檔的下一部分，您將把此檔案傳輸到您的智慧手機：
+打開“release”資料夾。 檔案“app-full-release.apk”（1）是您剛剛構建的 **AAPS** apk，在文檔的下一部分，您將把此檔案傳輸到您的智慧型手機：
 
 ![apk檔案](../images/Building-the-App/37_full_release_apk.png)
 

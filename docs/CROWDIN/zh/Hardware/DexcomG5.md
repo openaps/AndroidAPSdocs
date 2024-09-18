@@ -27,4 +27,4 @@
 
 - 在[ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 Dexcom App（修改版）。
 
--   如果您希望通過本地廣播使用 xDrip 警報：在 xDrip 選單 > 設定 > 硬體資料來源 > 640G /EverSense。
+-   如果您希望透過本地廣播使用 xDrip 警報：在 xDrip 選單 > 設定 > 硬體資料來源 > 640G /EverSense。

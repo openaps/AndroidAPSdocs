@@ -18,13 +18,13 @@
 
 （附註：如果您是視覺型學習者，這裡有一個顯示PR工作流程的YouTube視頻[這裡](https://youtu.be/4b6tsL0_kzg)。）
 
-我們的範例是對AndroidAPS文檔進行編輯。 這可以在任何Windows PC、Mac等設備上完成。 （任何有互聯網訪問的電腦）。
+我們的範例是對AndroidAPS文檔進行編輯。 這可以在任何Windows PC、Mac等設備上完成。 （任何有互聯網查看的電腦）。
 
-1. 訪問https://github.com/openaps/AndroidAPSdocs，然後點擊右上角的Fork來製作您自己的庫副本。
+1. 查看https://github.com/openaps/AndroidAPSdocs，然後點擊右上角的Fork來製作您自己的庫副本。
 
 ![Fork庫](./images/PR0.png)
 
-2. 訪問任何頁面，導航到您想編輯的頁面。 點擊頁面左下方黑色方框中的綠色字“v: latest”或類似的字樣。 在出現的彈出窗口中，點擊“edit”來在GitHub中進行編輯。 
+2. 查看任何頁面，導航到您想編輯的頁面。 點擊頁面左下方黑色方框中的綠色字“v: latest”或類似的字樣。 在出現的彈出窗口中，點擊“edit”來在GitHub中進行編輯。 
 
 ![編輯文檔](./images/PR1.png)
 

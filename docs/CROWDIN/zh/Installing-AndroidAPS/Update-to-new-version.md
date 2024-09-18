@@ -1,15 +1,15 @@
 # 更新至新版本或分支
 
-## 自行構建，而不是下載
+## 自行建置，而不是下載
 
-**AAPS** 無法下載，因為這涉及醫療設備的法規。 自行構建應用程式以供個人使用是合法的，但您不得將副本提供給他人！ 詳細資訊請參閱 [FAQ 頁面](../Getting-Started/FAQ.md)。
+**AAPS** 無法下載，因為這涉及醫療設備的法規。 自行建置應用程式以供個人使用是合法的，但您不得將副本提供給他人！ 詳細資訊請參閱 [FAQ 頁面](../Getting-Started/FAQ.md)。
 
 ## 重要提示
 
 * 請在有新版本發布後儘快更新到最新版本的 **AAPS**。
-* 當有新版本發布時，您將在 **AAPS** 應用中收到關於新版本的信息橫幅。
+* 當有新版本發布時，您將在 **AAPS** 應用中收到關於新版本的訊息橫幅。
 * 新版本也會在發布時於 Facebook 上公佈。
-* 發布後，請詳細閱讀[發行說明](../Installing-AndroidAPS/Releasenotes.md)，並在進行更新前，通過 Facebook 或 Discord 社群澄清任何疑問。
+* 發布後，請詳細閱讀[發行說明](../Installing-AndroidAPS/Releasenotes.md)，並在進行更新前，透過 Facebook 或 Discord 社群澄清任何疑問。
 * 您需要使用**[Hedgehog (2023.1.1) 或 Iguana (2023.2.1)](https://developer.android.com/studio/)** 版本的 Android Studio。 如果您的版本較舊，請先更新 Android Studio！ 
 
 ## 更新到新版本 AAPS 的概述
@@ -57,7 +57,7 @@
     
     ![Android Studio - Pull 成功](../images/update/06_GitPullSuccess.png)
 
-* Gradle Sync 將運行幾秒鐘以下載一些依賴項。 等待它完成。
+* Gradle Sync 將運作幾秒鐘以下載一些依賴項。 等待它完成。
     
     ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
@@ -71,7 +71,7 @@
 
 您需要將 apk 傳送到手機以便您安裝它。
 
-請參閱 [傳送 APK 至智慧手機](Building-APK-transfer-apk-to-smartphone) 的說明
+請參閱 [傳送 APK 至智慧型手機](Building-APK-transfer-apk-to-smartphone) 的說明
 
 ## 5. 安裝 APK
 
@@ -93,4 +93,4 @@
 
 然後查看專門頁面[疑難排解 Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio)，看看您的問題是否已經記錄在案！
 
-如果您需要進一步幫助，請聯繫其他**AAPS**使用者，通過[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)。
+如果您需要進一步幫助，請聯繫其他**AAPS**使用者，透過[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)。
