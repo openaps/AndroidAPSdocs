@@ -24,7 +24,7 @@ Bevor du dein rig erstellst, musst du sehr viel lesen, um die ganze Funktionswei
 
 [What conclusions can we draw when investigating Insulin Sensitivity using the Autosense function within #OpenAPS? https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/](https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
 
-<https://seemycgm.com/2017/10/29/fine-tuning-settings/>
+[https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
 ## Hintergrundwissen und Artikel über DIY Closed Looping
 
