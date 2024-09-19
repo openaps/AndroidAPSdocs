@@ -19,10 +19,10 @@ Select the EOPatch2 Preferences menu by clicking the three dots in the upper rig
 
 The EOPatch2 Preferences menu offers a menu to set 3 types of notifications.
 
-### Low reservoir Alerts
+### Nízký stav zásobníku
 A warning appears when the amount of insulin remaining in the reservoir reaches the set value or less while using the patch. It can be set from 10 to 50U in 5U increments.
 
-### Patch expiration Reminder
+### Připomenutí expirace pumpy
 This is a reminder to notify you of the time remaining before the current patch expires. It can be set from 1 to 24 hours in 1 hour increments. The initial setting value is 4 hours.
 
 ### Patch buzzer Reminder
@@ -41,7 +41,7 @@ Select EOPATCH2 at the top of the home screen and click the ACTIVATE PATCH butto
 ### Connecting the patch
 Insert the syringe needle into the insulin inlet on the patch and then slowly push the piston to inject the insulin. When insulin is filled with more than 80U, the patch makes a booting sound (1 buzzer) and boots. After confirming the buzzer sound, click the START PAIRING button on the screen.
 
-[Warning]
+[Varování]
 
 - Do not turn the needle action lever until instructed. It can cause serious problems during injection or safety checks otherwise.
 - The amount of insulin that can be injected into the patch is 80~200U. If you inject less than 80U into the patch initially, the patch will not work.
@@ -49,10 +49,10 @@ Insert the syringe needle into the insulin inlet on the patch and then slowly pu
 
 ![Image5](../images/EOPatch/Bild5.png)
 
-### patch pairing
+### párování pumpy
 The Patch pairing screen will be displayed, and pairing will be attempted automatically. If communication is successful, the Bluetooth pairing request notification appears. Click OK and when the Bluetooth pairing request notification appears a second time with the authentication code, select OK again.
 
-[Warning]
+[Varování]
 
 - For pairing, the patch and the smartphone must be located within 30 cm of each other.
 - After the patch booting is completed, the patch will beep every 3 minutes until the pairing is complete.
@@ -69,7 +69,7 @@ After removing the adhesive tape of the patch, check if the needle is sticking o
 ### Patch attachment
 Insulin should be injected in a spot with subcutaneous fat but few nerves or blood vessels, so it is recommended to use the abdomen, arm, or thigh for the patch attachment site. Choose a patch attachment site and apply the patch after disinfecting the location.
 
-[Warning]
+[Varování]
 
 - Make sure to straighten the side of the patch tape attached to the body evenly, so that the patch adheres completely to the skin.
 - If the patch does not stick completely, air may enter between the patch and the skin, which can weaken the adhesive strength and waterproof effect of the patch.
@@ -79,17 +79,17 @@ Insulin should be injected in a spot with subcutaneous fat but few nerves or blo
 ### Safety Check
 When patching is complete, touch Start Safety Check. When the safety check is completed, the patch will beep once.
 
-[Warning]
+[Varování]
 
 - For safe use, do not turn the needle action lever until the safety check has been completed.
 
 ![Image11](../images/EOPatch/Bild11.png) ![Image12](../images/EOPatch/Bild12.png)
 
 
-### Inserting the needle
+### Vkládání jehly
 The needle is inserted by holding around the patch and turning the needle action lever more than 100° in the upward direction of the lever. There is a buzzer sound when the needle is inserted correctly. Turn the needle action lever further clockwise to release the lever. Click NEXT.
 
-[Caution]
+[Pozor]
 
 - If you go to the next step without the buzzer sounding, a needle insertion error warning will appear.
 
@@ -125,11 +125,11 @@ Alarms are issued for emergency situations of the highest priority and require i
 
 The different types of alarms are explained below.
 
-| Alarms                     | Explanation                                                                                                                                                                                                         |
+| Alarmy                     | Explanation                                                                                                                                                                                                         |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir            | Occurs when the patch’s reservoir runs out of insulin.                                                                                                                                                              |
+| Prázdný zásobník           | Occurs when the patch’s reservoir runs out of insulin.                                                                                                                                                              |
 | Patch expired              | Occurs when the patch usage time has expired, and no further insulin injections are possible.                                                                                                                       |
-| Occlusion                  | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
+| Okluze                     | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
 | Power on self-test failure | Occurs when the patch finds an unexpected error during the post-boot self-test process.                                                                                                                             |
 | Inappropriate temperature  | Occurs when the patch is outside the normal operating temperature range during patch application and use. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition. |
 | Chyba vložení jehly        | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
