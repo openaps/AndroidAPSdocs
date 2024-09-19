@@ -76,7 +76,7 @@ Autotune plugin is an implementation of OpenAPS autotune algorythm within AAPS.
 
 
 
-## Autotune settings
+## Nastavení Autotune
 
 (autotune-plugin-settings)=
 
