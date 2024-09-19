@@ -2,7 +2,7 @@
 
 These instructions are for configuring the Medtrum insulin pump.
 
-This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Pouze Vy jste zodpovědní za to, jak ze systémem zacházíte.
+This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Jste jediní, kdo nese odpovědnost za to, co s tím uděláte.
 
 ## Pump capabilities with AAPS
 * All loop functionality supported (SMB, TBR etc)
