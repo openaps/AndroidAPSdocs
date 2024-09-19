@@ -275,7 +275,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 ![ack_alert_logo](../images/DASH_images/ack_alert_logo.png) : When pressed this will disable the pod alerts beeps and notifications (expiry, low reservoir..).
 
-   * Button is displayed only when pod time is past expiration warning time.
+   * Tlačítko je zobrazeno pouze v případě, že na PODu vypršel čas pro uzpozornění.
    * Upon successful dismissal, this icon will no longer appear.
 
 ![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png) : Resumes the currently suspended insulin delivery in the active pod.
