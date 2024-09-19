@@ -78,4 +78,4 @@ _Omnipod users:_ importing a preferences file will deactivate your current pod i
 ### Note for Dana RS users
 
 - Vzhledem k tomu, že nastavení týkající se připojení pumpy jsou také importována, AAPS na vašem novém telefonu již pumpu „zná“, a proto nezahájí skenování bluetooth.
-- Please pair new phone and pump manually.
+- Nový telefon a pumpu prosím spárujte ručně.
