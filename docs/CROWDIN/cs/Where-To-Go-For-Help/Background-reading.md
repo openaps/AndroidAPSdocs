@@ -6,11 +6,11 @@ Než si začnete připravovat svou vlastní soustavu smyčky, budete si k tomu m
 
 [OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documention - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[OpenAPS dokumentace - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
 [Loop dokumetace- https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
-[Fine-Tuning your settings - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
+[Vylaďování vašich nastavení - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
 [Tim Omer – Hypodiabetic Blog - https://www.hypodiabetic.co.uk/](https://www.hypodiabetic.co.uk/)
 
@@ -20,11 +20,11 @@ Než si začnete připravovat svou vlastní soustavu smyčky, budete si k tomu m
 
 [OpenAPS Reference Design - https://openaps.org/reference-design/](https://openaps.org/reference-design/)
 
-[Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters - https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+[Proč se často pleteme v délce trvání působnosti inzulínu (DIA) a proč na tom záleží - https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
 [What conclusions can we draw when investigating Insulin Sensitivity using the Autosens function within #OpenAPS? https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/](https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
 
-<https://seemycgm.com/2017/10/29/fine-tuning-settings/>
+[https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
 ## Základní informace a články o DIY ("udělej si sám") uzavřené smyčce
 
@@ -38,4 +38,4 @@ Než si začnete připravovat svou vlastní soustavu smyčky, budete si k tomu m
 
 [Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI](https://www.youtube.com/watch?v=RjhkRmL1wOI)
 
-[Live interview with Dana Lewis, creator of Do-It-Yourself Pancreas System - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)
+[Živý rozhovor s Danou Lewis, autorkou systému "Udělej si sám slinivku" - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)

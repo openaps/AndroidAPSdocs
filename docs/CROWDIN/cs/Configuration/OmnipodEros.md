@@ -2,14 +2,14 @@
 
 These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**). The Omnipod driver is available as part of AAPS (AAPS) as of version 2.8.
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Pouze Vy jste zodpovědní za to, jak ze systémem zacházíte.**
+**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Jste jediní, kdo nese odpovědnost za to, co s tím uděláte.**
 
 ```{contents}
 :backlinks: entry
 :depth: 2
 ```
 
-## Hardware and Software Requirements
+## Hardwarové a softwarové požadavky
 
 - **Pod Communication Device**
 
@@ -37,37 +37,37 @@ These instructions will assume that you are starting a new pod session; if this 
 
 ## Než začnete
 
-**SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, charged RileyLink, and phone devices are must-haves).
+**BEZPEČNOST PŘEDEVŠÍM** - nepokoušejte se používat zařízení v prostředí, ve kterém nedokážete snadno opravit případné chyby (dodatečné pody, inzulín, musíte mít k dispozici možnost nabití RileyLink a telefonu).
 
-**Your Omnipod PDM will no longer work after the AAPS Omnipod driver activates your pod**. Previously you used your Omnipod PDM to send commands to your Omnipod Eros pod. An Omnipod Eros pod only allows a single device to send communication to it. Zařízení, které úspěšně aktivuje POD, je jediné, které může od tohoto okamžiku komunikovat s pumpou. This means that once you activate an Omnipod Eros pod with your RileyLink through the AAPS Omnipod driver, **you will no longer be able to use your PDM with your pod**. The AAPS Omnipod driver with the RileyLink is now your acting PDM. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies with AAPS is not working correctly.*
+**Your Omnipod PDM will no longer work after the AAPS Omnipod driver activates your pod**. Dříve jste používali Omnipod PDM k odesílání příkazů do pumpy Omnipod Eros. Ale Omnipod Eros umožňuje připojení pouze jediného zařízení, se kterým komunikuje. Zařízení, které úspěšně aktivuje POD, je jediné, které může od tohoto okamžiku komunikovat s pumpou. This means that once you activate an Omnipod Eros pod with your RileyLink through the AAPS Omnipod driver, **you will no longer be able to use your PDM with your pod**. AAPS s ovladačem pro pumpu Omnipod a RileyLink představuje váš nový PDM. *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies with AAPS is not working correctly.*
 
-**You can configure multiple RileyLinks, but only one selected RileyLink at a time can communicate with a pod.** The AAPS Omnipod driver supports the ability to add multiple RileyLinks in the RileyLink configuration, however, only one RileyLink at a time can be selected to be used for sending and receiving communication.
+**Můžete nakonfigurovat několik zařízení RileyLink, ale v každém okamžiku může být připojen k pumpě pouze jedno.** AAPS ovladač pro Omnipod umožňuje mít uložených více zařízení RileyLink současně, nicméně pouze jeden RileyLink může být použit pro aktuální komunikaci.
 
-**Your pod will not shut off when the RileyLink is out of range.** When your RileyLink is out of range or the signal is blocked from communicating with the active pod, your pod will continue to deliver basal insulin. Upon activating a pod, the basal profile defined in AAPS will be programmed into the new pod. Should you lose contact with the pod, it will revert to this basal profile. You will not be able to issue new commands until the RileyLink comes back in range and re-establishes the connection.
+**Your pod will not shut off when the RileyLink is out of range.** When your RileyLink is out of range or the signal is blocked from communicating with the active pod, your pod will continue to deliver basal insulin. Po spojení AAPS s pumpou se bazální profil nadefinovaný v AAPS přenese do nové pumpy. Pokud dojde ke ztrátě spojení s pumpou, vrátí se nastavení bazálu k tomuto původnímu profilu. Nebudete moci zadávat nové pokyny pumpě, dokud RileyLink nebude v dosahu a znovu nenaváže spojení.
 
-**30 min Basal Rate Profiles are NOT supported in AAPS.** If you are new to AAPS and are setting up your basal rate profile for the first time please be aware that basal rates starting on a half hour are not supported and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of say 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work.  You will need to update this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00.  Even though the 30 min basal rate profile increments are supported by the Omnipod hardware itself, AAPS is not able to take them into account with its algorithms currently.
+**30 min Basal Rate Profiles are NOT supported in AAPS.** If you are new to AAPS and are setting up your basal rate profile for the first time please be aware that basal rates starting on a half hour are not supported and you will need to adjust your basal rate profile to start on the hour. Například, pokud potřebujete nastavit bazální dávku 1,1 jednotky, která začíná v 9:30 a má trvání dvě hodiny a končí v 11:30, tak to není možné.  Budete muset nastavit bazální hodnotu buďto na časový interval 9:00–11:00, nebo na 10:00–12:00.  Even though the 30 min basal rate profile increments are supported by the Omnipod hardware itself, AAPS is not able to take them into account with its algorithms currently.
 
-## Enabling the Omnipod Driver in AAPS
+## Povolení Omnipod ovladače v AAPS
 
-You can enable the Omnipod driver in AAPS in **two ways**:
+V AAPS můžete nastavit ovládání Omnipod pumpy **dvěma způsoby**:
 
-### Option 1: The Setup Wizard
+### Možnost 1: Průvodce nastavením
 
-After installing a new version of AAPS, the **Setup Wizard** will start automatically.  This will also occur during in place upgrades.  If you already have exported your settings from a previous installation you can exit the Setup Wizard and import your old settings.  For new installations proceed below.
+After installing a new version of AAPS, the **Setup Wizard** will start automatically.  K tomu dojde i při instalaci aktualizace.  Pokud jste již exportovali svá nastavení z předchozí instalace, můžete ukončit Průvodce nastavením a naimportovat svá stará nastavení.  Při nové instalaci postupujte dle kroků níže.
 
 Via the **AAPS Setup Wizard (2)** located at the top right-hand corner **three-dot menu (1)** and proceeding through the wizard menus until you arrive at the **Pump** screen. Then select the **Omnipod radio button (3)** .
 
 > ![Enable_Omnipod_Driver_1](../images/omnipod/Enable_Omnipod_Driver_1.png)  ![Enable_Omnipod_Driver_2](../images/omnipod/Enable_Omnipod_Driver_2.png)
 
-On the same screen, below the pump selection, the **Omnipod Driver Settings** are displayed, under the **RileyLink Configuration** add your RileyLink device by pressing the **Not Set** text.
+Na stejné obrazovce pod výběrem pumpy **Nastavení ovladače Omnipod** přidejte svůj RileyLink do **Konfigurace RileyLinku** kliknutím na text **Nenastaveno**.
 
-On the **RileyLink Selection** screen press the **Scan** button and select your RileyLink by scanning for all available Bluetooth devices and selecting your RileyLink from the list. When properly selected you are returned to the pump driver selection screen displaying the Omnipod driver settings showing your selected RileyLink with the MAC address listed.
+On the **RileyLink Selection** screen press the **Scan** button and select your RileyLink by scanning for all available Bluetooth devices and selecting your RileyLink from the list. Pokud jste vybrali správně, vrátí vás AAPS na obrazovku nastavení pumpy a zobrazí váš RileyLink s MAC adresou.
 
-Press the **Next** button to proceed with the rest of the **Setup Wizard.**  It can take up to one minute for the selected RileyLink to initialize and the **Next** button to become active.
+Stiskněte tlačítko **Další**, abyste pokračovali dál **Průvodcem nastavení.** Může trvat až minutu, než tento krok proběhne, probíhá inicializace RilyLinku a tlačítko **Další** bude po tuto dobu neaktivní.
 
-Detailed steps on how to setup your pod communication device are listed below in the [RileyLink Setup Section](OmnipodEros-rileylink-setup).
+Základní postupy pro nastavení zařízení pro komunikaci s pumpou jsou uvedeny níže v [sekci nastavení RileyLinku](OmnipodEros-rileylink-setup).
 
-**OR**
+**NEBO**
 
 ### Option 2: The Config Builder
 
@@ -95,7 +95,7 @@ Please **swipe left** to the **Omnipod (POD)** tab where you will be able to man
 
 (OmnipodEros-rileylink-setup)=
 
-### RileyLink Setup
+### Nastavení RileyLinku
 
 If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the [Activating a Pod Section](OmnipodEros-activating-a-pod) below.
 
@@ -464,15 +464,15 @@ Below is an explanation of the layout and meaning of the icons and status fields
   > 
   > When pressed this will update the time on the pod with the current time on your phone.
 
-- **SUSPEND:**
+- **POZASTAVIT:**
 
-  > ![suspend](../images/omnipod/ICONS/omnipod_overview_suspend.png)
+  > ![vypnutí](../images/omnipod/ICONS/omnipod_overview_suspend.png)
   > 
   > Suspends the active pod
 
 - **RESUME DELIVERY:**
 
-  > ![resume](../images/omnipod/ICONS/omnipod_overview_resume.png)
+  > ![uvolnit](../images/omnipod/ICONS/omnipod_overview_resume.png)
   > 
   > > Resumes the currently suspended, active pod
 
@@ -494,13 +494,13 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
   > 
   > Deactivates the currently active pod.
   > 
-  > A partially paired pod ignores this command.
+  > Částečně spárovaný POD tento příkaz ignoruje.
   > 
-  > Use this command to deactivate a screaming pod (error 49).
+  > Pužijte tento příkaz k deaktivaci pípajícího PODu (chyba 49).
   > 
-  > If the button is disabled (greyed out) use the Discard Pod button.
+  > Je-li toto tlačítko deaktivováno (zašedlé), použijte tlačítko Zahodit POD.
 
-- **Play test beep**
+- **Přehrát testovací pípnutí**
 
   > ![play_test_beep](../images/omnipod/ICONS/omnipod_overview_pod_management_play_test_beep.png)
   > 
@@ -518,13 +518,13 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
   > > - A **pod is stuck** during the pairing process between steps
   > > - A **pod simply does not pair at all.**
 
-- **Pod history**
+- **Historie Podu**
 
   > ![pod_history](../images/omnipod/ICONS/omnipod_overview_pod_management_pod_history.png)
   > 
   > Displays the active pod activity history
 
-- **RileyLink stats:**
+- **Statistika RileyLink:**
 
   > ![rileylink_stats](../images/omnipod/ICONS/omnipod_overview_pod_management_rileylink_stats.png)
   > 
@@ -533,7 +533,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
   > > - **Settings** - displays RileyLink and active pod settings information
   > > - **History** - displays RileyLink and Pod communication history
 
-- **Reset RileyLink Config**
+- **Resetovat konfiguraci RileyLinku**
 
   > ![reset_rileylink_config](../images/omnipod/ICONS/omnipod_overview_pod_management_reset_rileylink_config.png)
   > 
@@ -542,7 +542,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
   > > - When communication is started, specific data is sent to and set in the RileyLink > - Memory Registers are set > - Communication Protocols are set > - Tuned Radio Frequency is set 
   > > - See [additional notes](OmnipodEros-reset-rileylink-config-notes) at the end of this table
 
-- **Read pulse log:**
+- **Číst protokol pulsů:**
 
   > ![pulse_log](../images/omnipod/ICONS/omnipod_overview_pod_management_pulse_log.png)
   > 
@@ -722,7 +722,7 @@ This failure is related to an incorrect pod state for a command or an error duri
 It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**➜**Local Alerts**➜**Pump unreachable threshold \[min\]** and setting this to **120**.
 
 (OmnipodEros-import-settings-from-previous-aaps)=
-### Import Settings from previous AAPS
+### Import nastavení z předchozí AAPS
 
 Please note that importing settings has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
 
@@ -736,15 +736,15 @@ Please note that importing settings has the possibility to import an outdated Po
 
 please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
 
-#### No active Pod
+#### Žádný aktivní Pod
 
 No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically silenced.
 
-#### Pod suspended
+#### Pod pozastavený
 
 Informational alert that Pod has been suspended.
 
-#### Setting basal profile failed. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..
+#### Nastavení bazálního profilu selhalo. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..
 
 Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
 

@@ -134,7 +134,7 @@ Please note that the original patched app **does not have any connection to the 
 
 However there is a variant of the patched app supporting LibreView with enabled internet access. Please be aware that your data is transferred to the cloud then. But your endo team reporting is fully supported then. With that variant it is also possible to move the alarms of a running sensor to a different device which not has started the sensor. Please google in diabetes related German forums how this could be done.
 
-### Step 3: Install and configure xDrip+ app
+### Step 3: Nainstalujte a nastavte aplikaci xDrip+
 
 The blood sugar values are received on the smartphone by the xDrip+ App.
 

@@ -1,11 +1,11 @@
 # Necessary checks after update to AAPS 3.0
 
-* **Minimum Android version is 9.0 now.**
+* **Minimální verze Androidu je nyní 9.0.**
 * **Data is not migrated to new database.**
 
   Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new [profile switch](../Usage/Profiles) and start with zero IOB and COB.
 
-  Plan the update carefully!!! Best in situation without active insulin and carbs
+  Aktualizaci pečlivě naplánujte!!! Nejlépe v okamžiku, kdy nebude žádný aktivní inzulín a sacharidy
 
 * Please see the [Release Notes](../Installing-AndroidAPS/Releasenotes) for details on new and changed features.
 
@@ -29,14 +29,14 @@
 * To copy your current nightscout profile into a local profile, go to the treatments page (now to be opened in the right-hand menu).
 * Search for a profile switch with 100% and press clone.
 * A new local profile is added, valid from the current date.
-* To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date.
+* Pro aktualizaci profilu ze strany NS použijte "Zkopíruj" (záznam!!, ne profil) a uložte změny. Pole "Profil platný od:" nastavte na aktuální datum.
 
 (update3_0-reset-master-password)=
 
 ## Reset master password
 * You can now reset your master password in case you have forgotten it.
 * You need to add a file named `PasswordReset` to the `/AAPS/extra` directory on your phones fileystem.
-* Restart AAPS.
+* Restartujte AAPS.
 * The new password will be the serial number of your active pump.
 * For Dash: The serial number is always 4241.
 * For EROS it is also listed on the POD tab as "Sequence Number"

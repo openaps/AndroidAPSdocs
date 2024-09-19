@@ -2,7 +2,7 @@
 
 These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**. The Omnipod driver is available as part of AAPS (AAPS) as of version 3.0.
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Pouze Vy jste zodpovědní za to, jak ze systémem zacházíte.**
+**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Jste jediní, kdo nese odpovědnost za to, co s tím uděláte.**
 
 ## Omnipod DASH specifications
 
@@ -275,7 +275,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 ![ack_alert_logo](../images/DASH_images/ack_alert_logo.png) : When pressed this will disable the pod alerts beeps and notifications (expiry, low reservoir..).
 
-   * Button is displayed only when pod time is past expiration warning time.
+   * Tlačítko je zobrazeno pouze v případě, že na PODu vypršel čas pro uzpozornění.
    * Upon successful dismissal, this icon will no longer appear.
 
 ![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png) : Resumes the currently suspended insulin delivery in the active pod.

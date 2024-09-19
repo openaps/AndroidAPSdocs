@@ -224,7 +224,7 @@ Tiles 與任何手錶外觀「並存」使用。 這些Tiles會在所有錶面�
 1. 在手錶上，從手錶外觀開始； - 向左滑動直到到達「+ 添加 Tiles」 - 選擇其中一個 Tiles。
 2. 在手機上打開手錶原廠的應用程式。 - 對於三星手錶，打開「Galaxy Wearable」，其他品牌則打開「Wear OS」 
   * 點擊「Tiles」部分，然後點擊「+ 添加」按鈕
-  * 找到你想添加的 AAPS Tile 並選擇它。 ![Wear phone add tile](../images/wear_companion_app_add_tile.png) The order of the tiles can be changed by dragging and dropping
+  * 找到你想添加的 AAPS Tile 並選擇它。 ![Wear phone add tile](../images/wear_companion_app_add_tile.png)你可以透過拖放來更改 Tiles 的順序
 
 你可以透過長按 Tile 並點擊「編輯」或「齒輪圖示」按鈕來自訂 Tiles 的內容。
 
@@ -331,15 +331,15 @@ Wear OS 手錶是非常耗電且又受限的裝置。 手錶機殼的尺寸限�
 
 ## Garmin
 
-There are a couple of watch faces for Garmin that integrate with xDrip or Nightscout on the [Garmin ConnectIQ store](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30).
+在[Garmin ConnectIQ 商店](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30)上，有幾款與 xDrip 或 Nightscout 整合的 Garmin 手錶面。
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with AAPS. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to AAPS. It is available in the ConnectIQ store, the necessary AAPS plugin is only available from AAPS 3.2.
+AAPS Glucose Watch 可直接與 AAPS 整合。 它顯示循環狀態資料（活性胰島素、臨時基礎率），除了顯示血糖讀數外，還會將心率讀數發送到 AAPS。 它可在 ConnectIQ 商店中取得，所需的 AAPS 外掛從 AAPS 3.2 版本起提供。
 
-![Screenshot](../images/Garmin_WF.png) ![Screenshot](../images/Garmin_WF-annotated.png)
+![螢幕截圖](../images/Garmin_WF.png) ![螢幕截圖](../images/Garmin_WF-annotated.png)
 
 ## 額外的 AAPS 自訂錶盤也可以使用
 
-[Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
+您可以在此下載由其他用戶建立的自訂錶盤 Zip 檔：
 
 如果您想建立自己的錶盤，請參閱[此處的指南](../Usage/Custom_Watchface_Reference.md)。
 

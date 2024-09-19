@@ -4,11 +4,11 @@ V závislosti na vašich nastaveních můžete Konfiguraci otevřít prostředni
 
 ![Otevřít průvodce konfigurací](../images/ConfBuild_Open_AAPS30.png)
 
-Konfigurace (Conf) je záložka, kde si zapínáte nebo vypínáte jednotlivé moduly. The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AAPS. I když není pravý box zaškrtnutý, dostanete se k funkci přes hamburger menu (D) v levém horním rohu obrazovky.
+Konfigurace (Conf) je záložka, kde si zapínáte nebo vypínáte jednotlivé moduly. Zaškrtávací políčka na levé straně (A) slouží k výběru používaných modulů, zatímco políčka na pravé straně (C) umožňují jejich zobrazení ve formě záložek (E) v AAPS. I když není pravý box zaškrtnutý, dostanete se k funkci přes hamburger menu (D) v levém horním rohu obrazovky.
 
 Pokud má modul další dodatečná nastavení, dostanete se k nim kliknutím na ozubené kolo (B).
 
-**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AAPS. Stiskněte 3 tečky v pravé horní části obrazovky (F) a vyberte „Průvodce nastavením“.
+**Prvotní nastavení**: od AAPS v 2.0 Vám s úvodním nastavením aplikace pomůže Průvodce nastavením. Stiskněte 3 tečky v pravé horní části obrazovky (F) a vyberte „Průvodce nastavením“.
 
 ![Tlačítko konfigurace a ozubené kolo](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
@@ -69,7 +69,7 @@ Místní profily lze také nahrát do Nightscoutu. Nastavení najdete v [nastave
 
 #### Změna profilu v Nightscout editoru profilu
 
-You can synchronize changes to the profile in the Nighscout profile editor to local profiles. Nastavení najdete v [nastavení NSClientu](Preferences-nsclient).
+Změny provedené v editoru profilu v Nightscoutu můžete synchronizovat s lokálními profily. Nastavení najdete v [nastavení NSClientu](Preferences-nsclient).
 
 Je nezbytné naklonovat všechny aktuální aktivní záznamy v databázi Nightscout, a ne pouze profil s modrou šipkou! Nové databázové záznamy pak obsahují aktuální datum a lze je aktivovat pomocí záložky "místní profil".
 
@@ -101,7 +101,7 @@ Podrobnosti jsou vysvětleny na stránce nápovědy [pomocník s profilem](../Co
 
 * Hodnota DIA není u každého člověka stejná. Proto si ji musíte vyzkoušet sami na sobě. 
 * Vždy to však musí být alespoň 5 hodin.
-* Pro velké množství lidí nemá ultra-rychlý inzulin jako Fiasp po 3–4 hodinách prakticky žádné znatelné účinky, i když fakticky zbývá cca 0,0xx jednotky. Nicméně i toto zbytkové množství může mít vliv například při sportu. Therefore, AAPS uses minimum 5h as DIA.
+* Pro velké množství lidí nemá ultra-rychlý inzulin jako Fiasp po 3–4 hodinách prakticky žádné znatelné účinky, i když fakticky zbývá cca 0,0xx jednotky. Nicméně i toto zbytkové množství může mít vliv například při sportu. Z toho důvodu AAPS používá minimální hodnotu DIA 5 hodin.
 * Další informace o tom si můžete přečíst v části Inzulinový profil na [ této ](Screenshots-insulin-profile) stránce.
 
 ### Rozdíly v typu inzulínu
@@ -222,7 +222,7 @@ Vyberte požadovaný algoritmus APS pro úpravy léčby. Detaily vybraného algo
 
 * AAPS průběžně hodnotí všechny dostupné údaje (IOB, COB, glykémie…) a předkládá návrhy, jak v případě potřeby upravit vaši léčbu. 
 * Návrhy nebudou provedeny automaticky (tak jako v uzavřené smyčce), ale mohou být zadány ručně přímo do pumpy nebo tlačítkem z aplikace – pokud používáte podporovanou pumpu (DanaR/RS nebo Accu-check Combo). 
-* This option is for getting to know how AAPS works or if you are using an unsupported pump.
+* Tato možnost slouží k tomu, abyste poznali, jak vlastně AndroidAPS funguje, nebo pro případ, že používáte nepodporovanou pumpu.
 
 (Config-Builder-closed-loop)=
 
@@ -248,7 +248,7 @@ Vyberte požadovaný algoritmus APS pro úpravy léčby. Detaily vybraného algo
 
 ## Cíle (výukový program)
 
-AAPS has a leraning program (objectives) that you have to fulfill step by step. Ty by vás měly bezpečně provést nastavením uzavřené smyčky. Postupným splněním cílů je zajištěno, že přesně porozumíte tomu, jak systém pracuje. Jedině tak můžete svému systému plně důvěřovat.
+Součástí AndroidAPS je výukový program (cíle), které musíte splnit krok za krokem. Ty by vás měly bezpečně provést nastavením uzavřené smyčky. Postupným splněním cílů je zajištěno, že přesně porozumíte tomu, jak systém pracuje. Jedině tak můžete svému systému plně důvěřovat.
 
 Měli byste pravidelně [exportovat svá nastavení](../Usage/ExportImportSettings.md) (včetně pokroku v plnění cílů). V případě, že v budoucnosti budete muset svůj smartphone nahradit (nové zařízení, poškození displeje atd.), můžete tato nastavení jednoduše importovat.
 
@@ -303,11 +303,11 @@ Nastavte výchozí hodnoty tří tlačítek v dialogovém okně plnění/doplňo
 
 #### Rozsah pro zobrazení
 
-Choose the high and low marks for the BG-graph on AAPS overview and smart watch. Jde pouze o zobrazení, nikoliv nastavení cílové hodnoty glykémie. Příklad: 70–180 mg/dl nebo 3,9–10 mmol/l
+Nastavte hranice nízké a vysoké glykémie, které budou použité u grafů glykémie v AAPS a hodinkách. Jde pouze o zobrazení, nikoliv nastavení cílové hodnoty glykémie. Příklad: 70–180 mg/dl nebo 3,9–10 mmol/l
 
 #### Krátké názvy modulů
 
-Choose wether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+Vyberte si, zda chcete zobrazit dlouhé názvy záložek v AAPS (např. AKCE, PROFIL, AUTOMATIZACE) nebo krátké (např. AKCE, MRPF, AUTO).
 
 #### Zobrazovat kolonku poznámky v dialozích ošetření
 
@@ -338,13 +338,13 @@ Uživatelem vytvořené úlohy automatizace ('if-then-else'). Prosím, [přečt�
 
 ### SMS komunikátor
 
-Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.md) for more setup information.
+Umožňuje vzdáleným pečovatelům ovládání některých funkcí AAPS prostřednictvím SMS, viz. [SMS příkazy](../Children/SMS-Commands.md) pro další informace o nastavení.
 
 ### Jídlo
 
 Zobrazuje jídla přidaná do databáze Nightscoutu. Více informací viz [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods).
 
-Note: Entries cannot be used in the AAPS calculator. (Pouze je zobrazit)
+Poznámka: Tyto záznamy nelze použít v Kalkulačce v AAPS. (Pouze je zobrazit)
 
 (Config-Builder-wear)=
 
@@ -367,7 +367,7 @@ Zobrazit na displeji hodinek (ciferník xDrip+) stav smyčky (pokud nepoužívá
 
 ### NSClient
 
-* Setup sync of your AAPS data with Nightscout.
+* Nastavení synchronizace dat mezi AAPS a Nightscoutem.
 * Nastavení v [konfiguraci](Preferences-nsclient) lze otevřít kliknutím na ozubené kolo.
 
 ### Údržba
