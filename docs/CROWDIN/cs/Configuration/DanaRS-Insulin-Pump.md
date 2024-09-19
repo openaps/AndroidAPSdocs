@@ -41,7 +41,7 @@
 
 * Nastavte bazální dávkování na 0,01 U/h pomocí lékařského menu (viz uživatelská příručka pumpy).
 * Nastavte krok bolusu na 0.05 U/h pomocí lékařského menu (viz uživatelská příručka pumpy).
-* Na pumpě povolte rozšířené bolusy
+* Povolte rozšířené bolusy na pumpě
 
 (DanaRS-Insulin-Pump-default-password)=
 
@@ -129,4 +129,4 @@ Pokud měníte telefon za nový, je nezbytné, abyste provedli následující kr
 
 ## Cestování mezi časovými pásmy s pumpou Dana RS
 
-Více informací o cestování přes více časových pásem najdete v části [Cestování s pumpou mezi časovými pásmy](Timezone-traveling-danarv2-danars).
+Pro informace o cestování přes časová pásma viz kapitolu [Cestování časovými pásmy s čerpadly](Timezone-traveling-danarv2-danars).
