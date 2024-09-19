@@ -1,32 +1,32 @@
-## Introduction to your AAPS profile
+## Úvod do Vašeho profilu AAPS
 
-### **What is an AAPS profile?**
+### **Co je to profil AAPS?**
 
-Your AAPS profile is a set of five key parameters which define how AAPS should deliver insulin in response to your sensor glucose levels. AAPS has several _additional_ modifiable parameters (like SMB settings), but using these well relies on your underlying AAPS profile being correct. The AAPS profile incorporates: duration of insulin action (DIA), glucose targets, basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR). Screenshots from AAPS of an _example_ profile are shown in below. Please note, this profile shows a large number of timepoints. When you start out with AAPS, your profile is likely to be much simpler. Profiles vary significantly from person-to-person, for examples of AAPS profiles for small children, teenagers and adults please see the later section, optimising your [profile](link).
+Váš profil AAPS je sada pěti klíčových parametrů, které definují, jak má AAPS dodávat inzulín v reakci na data o úrovni glykémie ze senzoru. AAPS has several _additional_ modifiable parameters (like SMB settings), but using these well relies on your underlying AAPS profile being correct. Profil AAPS zahrnuje: trvání účinku inzulínu (DIA), cílová glykémie, bazální dávky (BR), citlivost na inzulín (ISF) a inzulíno-sacharidový poměr (IC nebo ICR). Screenshots from AAPS of an _example_ profile are shown in below. Vezměte prosím na vědomí, že tento profil zobrazuje velký počet časových pásem. Až začnete s AAPS, Váš profil bude pravděpodobně mnohem jednodušší. Profiles vary significantly from person-to-person, for examples of AAPS profiles for small children, teenagers and adults please see the later section, optimising your [profile](link).
 
-#### **Duration of insulin action (DIA)**
+#### **Doba působnosti inzulínu (DIA)**
 
-The duration of insulin action is set to a single value in AAPS, because your pump will continually infuse the same type of insulin. The remaining four parameters can be set to different values, changing hourly if required, over a 24 hour period.
+Doba působnosti inzulínu se v AAPS nastavuje jednou hodnotou, protože vaše pumpa bude neustále dávkovat inzulín stejného typu. Ostatní 4 parametry mohou být nastavené na odlišné hodnoty, které se mohou v případě potřeby měnit hodinu po hodině.
 
-#### **Glucose targets**
+#### **Cílové hodnoty glykémie**
 
-Glucose targets are set according to your personal preferences. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117/mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am. A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the _actual value_ you expect or want your glucose level to get to, rather, it is a good way to tell AAPS to be more or less aggressive, while still keeping your glucose levels in range. The **figure below** shows an example of how the DIA and glucose targets could be set in an AAPS profile.
+Cíle glykémie jsou nastaveny podle vašich osobních preferencí. Pokud máte například obavy z nočních hypoglykémií, můžete nastavit vyšší cílovou hodnotu 6.5 mmol/L od 21:00 - 7:00. Pokud se chcete ujistit, že máte máte ráno v těle dostatek inzulínu (Insulin On Board; IOB) než budete podávat bolus k snídani, můžete nastavit nižší hodnotu cílové glykémie 4,5 mmol/L v době od 7:00 - 8:00. A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the _actual value_ you expect or want your glucose level to get to, rather, it is a good way to tell AAPS to be more or less aggressive, while still keeping your glucose levels in range. The **figure below** shows an example of how the DIA and glucose targets could be set in an AAPS profile.
 
 ![24-07-23, profile basics - DIA and target](../images/f3904cc3-3d9e-497e-a3b6-3a49650053e6.png)
 
-For the final three parameters, basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in your insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Brights Spots and Landmines”](https://brightspotsandlandmines.org/Bright_Spots_and_Landmines_by_Adam_Brown.pdf) by Adam Brown is an excellent book to read.
+Hodnoty a trendy posledních 3 parametrů, bazální dávky (BR), citlivost na inzulín (ISF) a inzulíno-sacharidový poměr (IC nebo ICR) se u jednotlivých osob významně liší podle biologie, pohlaví, věku, zdatnosti apod., stejně jako podle krátkodobých vlivů jako onemocnění nebo nedávné cvičení. For more guidance on this, the book [“Brights Spots and Landmines”](https://brightspotsandlandmines.org/Bright_Spots_and_Landmines_by_Adam_Brown.pdf) by Adam Brown is an excellent book to read.
 
 #### **Basal rates**
 
-Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise.
+Vaše bazální dávky inzulínu (jednotky za hodinu) poskytují na pozadí inzulín, který udržuje vaši glykémii při absenci jídla nebo cvičení stabilní.
 
-Accurate basal rates enable you to wake up in range, and to skip meals - or eat - earlier or later in the day, without going high or low. The insulin pump delivers small amounts of rapid acting insulin every few minutes, to keep the liver from releasing too much glucose, and to move glucose into body cells. Basal insulin usually makes up between 40 - 50% of your total daily dose (TDD), depending on your diet, and typically follows a circadian rhythm, with one peak and one valley in insulin requirements over 24 hours. For more information, chapter 23 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
+Vyladěné bazály vám umožní probudit se v rozsahu, přeskakovat jídla nebo jíst dříve či později, aniž by šla glykémie nahoru nebo dolů. Inzulínová pumpa posílá malé dávky rychle působícího inzulínu každých pár minut, aby bránil játrům v uvolňování nadbytečného množství glukózy a aby se glukóza dostala do tělesných buněk. Bazální inzulín obvykle tvoří 40 - 50% celkové denní dávky (TDD), v závislosti na vaší stravě, a obvykle se řídí cirkadiánním rytmem, denně s jedním vrcholem a jedním propadem v požadavcích na inzulín. For more information, chapter 23 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner is very useful.
 
 Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimise your ISF and ICR.
 
-#### **Insulin sensitivity factor (ISF)**
+#### **Citlivost na inzulín (ISF)**
 
-The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin.
+Faktor citlivosti na inzulín (někdy nazývaný korekční faktor) říká o kolik se sníží hladina krevního cukru po podání 1 jednotky inzulínu.
 
 **In mg/dL units:**
 If you have an ISF of 40, each unit of insulin will reduce your blood glucose by approx. 40 mg/dL (for example, your blood glucose will fall from 140 mg/dL to 100 mg/dL).
@@ -34,44 +34,44 @@ If you have an ISF of 40, each unit of insulin will reduce your blood glucose by
 **In mmol/L units:**
 If you have an ISF of 1.5, each unit of insulin will reduce your blood glucose by approx. 1.5 mmol/L (for example from 8 mmol/L to 6.5 mmol/L).
 
-From these examples you can see that the _smaller_ the ISF value, the less sensitive you are to insulin. So if you reduce your ISF from 40 to 35 (mg/dl) or 1.5 to 1.3 (mmol/L) this is often called strengthening your ISF. Conversely, increasing the ISF value from 40 to 45 (mg/dl) or 1.5 to 1.8 mmol/L) is weakening your ISF.
+From these examples you can see that the _smaller_ the ISF value, the less sensitive you are to insulin. Takže pokud snížíte citlivost ze 40 na 35 (mg/dl) nebo z 1,5 na 1,3 (mmol/L) se často nazývá posílením citlivosti. Naopak, zvýšení hodnoty citlivosti ze 40 na 45 (mg/dL) nebo z 1,5 na 1,8 mmol/L) citlivost oslabuje.
 
-If your ISF is too strong (small value) it will result in hypos, and if it is too weak (large value), it will result in hyperglycemia.
+Pokud je vaše citlivost nastavená příliš silná (názká hodnota), povede to k hypoglykémiím, a pokud je nastavená příliš slabá (vysoká hodnota), vyústí v hyperglykémii.
 
-A basic starting point for determining your daytime ISF is to base it on your total daily dose (TDD) using the 1,700 (94) rule. More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
+Výchozím bodem pro stanovení vaší citlivosti v průběhu dne je výpočet založený na celkové denní dávce (TDD) pomocí pravidla 1700 (94). More detail is given in Chapter 7 of [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner.
 
-1700 (if measuring in mg/dl) or 94 (mmol/L)/ TDD = approx ISF.
+1700 (měřeno v mg/dl) nebo 94 (mmol/L)/TDD = přibližná ISF.
 
-Example: TDD = 40 U
-Approx ISF (mg/dl) = 1700/40 = 43
-Approx ISF (mmol/L) = 94/40 = 2.4
+Například: TDD = 40
+Cca. ISF (mg/dL) = 1700/40 = 43
+Cca. ISF (mmol/L) = 94/40 = 2,4
 
 See the **figure below** for an example of how the basal rates and ISF values could be set in an AAPS profile.
 
 ![24-07-23, profile basics - basal and ISF](../images/55c8ed24-e24e-4caa-9c17-294fa93cb84a.png)
 
-#### **Insulin to Carb ratio (ICR)**
+#### **Inzulíno-sacharidový poměr (ICR)**
 
-The ICR is a measure of how many grams of carbohydrate are covered by one unit of insulin.
+ICR je měřítkem toho, kolik gramůsacharidů je pokryto jednou jednotkou inzulínu.
 
-Some people also use I:C as an abbreviation instead of ICR, or talk about carb ratio (CR).
+Někteří lidé také používají I:C jako zkratku místo ICR nebo mluví o sacharidovém poměru (CR).
 
-It is common to have different ICR at different times of day due to hormone levels and physical activity. Many people find they have their lowest ICR around breakfast time. So, for example, your ICR could be 1:8 for breakfast, 1:10 for lunch and 1:10 for dinner, but these patterns are not universal, and some people are more insulin resistant at dinner time, and require a stronger/smaller ICR then.
+Je obvyklé, že se z důvodu úrovní hormonů a fyzické aktivitě v průběhu dne hodnoty ICR liší. Mnoho lidí má nejnižší hodnoty ICR okolo snídaně. Takže například vaše ICR může být 1:8 na snídani, 1:10 na oběd a 1:10 v době večeře. Tyto modely ale nejsou univerzální a někteří lidé jsou v době večeře vůči inzulínu odolnější a vyžadují silnější / menší ICR.
 
-For example, a 1-to-10 (1:10) insulin-to-carb ratio means that you take 1U of insulin for every 10 grams of carbs eaten. A meal of 25g carbs would need 2.5U of insulin.
+Například inzulíno sacharidový poměr 1:10 znamená, že na každých 10 gramů zkonzumovaných sacharidů si vezmete 1 U inzulinu. Jídlo s obsahem 25g sacharidů potřebuje 2,5 jednotky inzulínu.
 
-If your ICR is weaker, perhaps 1:20, you would only need 0.5U of insulin to cover 10 g of carbs. A meal of 25g of carbs would need 25/20 = 1.25U of insulin.
+Pokud je vaše ICR slabší, například 1:20, potřebujete pouze 0,5U inzulinu, abyste pokryli 10 g sacharidů. Jídlo s obsahem 25g sacharidů potřebuje 25/20 = 1,25 jednotky inzulínu.
 
 As shown in the **figure below**, when entering these values into an AAPS profile, we just enter the final part of the ratio, so an insulin-to-carb ratio of 1:3.5 is entered simply as “3.5”.
 
 ![24-07-23, profile basics - ICR](../images/7741eefb-cae5-45c5-a9e5-8eae5ead3f48.png)
 
-#### **Why should I try to get my profile settings right? Can’t the loop just take care of it?**
+#### **Proč bych se měl pokusit nastavit svůj profil správně? Nemůže se o to postarat pouze smyčka?**
 
-A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimise poor glycemic control that results from having incorrect profile values. It can do this, for example, by withholding insulin delivery if you are hypo. However, you can achieve much better glycemic control if your profile settings are already as close as possible to what your body needs. This is one of the reasons that AAPS uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
+A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimise poor glycemic control that results from having incorrect profile values. Může například pozastavit dodávku inzulínu pokud máte hypoglykémii. Nicméně dosáhnete mnohem lepší kontroly glykémie, pokud nastavení vašeho profilu se co nejvíce blíží potřebám vašeho těla. To je jeden z důvodů, proč AAPS používá postupné cíle pro přechod od otevřené smyčky k hybridní uzavřené smyčce. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations.
 
-If you are starting with AAPS after using a different open or closed-loop pumping system, you will already have a reasonable idea of what values to use for basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR).
+Pokud přecházíte na AAPS z jiného systému otevřené nebo uzavřené smyčky, tak už máte poměrně jasnou představu o tom, jaké hodnoty bazálu (BR), citlivosti na inzulín (ISF) a inzulíno-sacharidového poměru (ICR) máte použít.
 
-If you are moving from injections (MDI) to AAPS, then it is a good idea to read up on how to make the transfer from MDI to pump first, and plan and make the move carefully in consultation with your diabetes team. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
+Pokud na AAPS přecházíte z léčby inzulinovými pery (MDI), pak je vhodné si nejdřív přečíst jak provést přechod z MDI na inzulínovou pumpu a pečlivě přechod naplánovat po konzultaci s vaším lékařem. ["Pumping insulin"](https://amzn.eu/d/iaCsFa2) by John Walsh & Ruth Roberts and [“Think like a Pancreas”](https://amzn.eu/d/iVU0RGe) by Gary Scheiner are very useful.
 
 In the [optimising your profile](operating - optimising - your profile link) we present example profiles, discuss how to set and optimise the parameters which form your AAPS profile(s), and provide guidance on additional resources such as **Autotune** which aim to automate optimisation of your profile.
