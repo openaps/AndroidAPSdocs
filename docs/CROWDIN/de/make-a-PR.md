@@ -8,7 +8,7 @@ Hinweise zum Formatieren von Texten (Überschriften, fett...) und zum Setzen von
 
 Bei Fragen, Feedback oder neuen Ideen für die Dokumentation erreichst Du das Dokumentations-Team über [Discord](https://discord.gg/4fQUWHZ4Mw).
 
-Irgendwann wird vorgeschlagen, dass Du einen Pull-Request (PR) erstellst, der dafür sorgt, dass Deine Verbesserungen der Dokumention auch auf den AAPS Webseiten, die in GitHub gespeichrt sind, sichtbar werden. Es ist eigentlich nicht allzu schwer und eine gute Möglichkeit, Deinen Beitrag zu leisten. Du kannst gebau diese Dokumentation lesen, weil Leute wie Du solchen PRs erstellt haben. Mach dir keine Sorgen einen Fehler zu machen oder irgendwie die falschen Dokumente zu bearbeiten. Deine Änderungen werden immer durch eine zweite Person Korrektur gelesen, bevor sie in die "finale" AAPS-Dokumentation integriert werden. Auch wenn Du Fehler bei der PR-Erstellung machen solltest, kannst Du die Originalversion nicht versehentlich kaputt machen. Die allgemeine Vorgehensweise ist:
+Irgendwann wird vorgeschlagen, dass Du einen Pull-Request (PR) erstellst, der dafür sorgt, dass Deine Verbesserungen der Dokumention auch auf den AAPS Webseiten, die in GitHub gespeichert sind, sichtbar werden. Es ist eigentlich nicht allzu schwer und eine gute Möglichkeit, Deinen Beitrag zu leisten. Du kannst genau diese Dokumentation lesen, weil Leute wie Du solchen PRs erstellt haben. Mach dir keine Sorgen einen Fehler zu machen oder irgendwie die falschen Dokumente zu bearbeiten. Deine Änderungen werden immer durch eine zweite Person Korrektur gelesen, bevor sie in die "finale" AAPS-Dokumentation integriert werden. Auch wenn Du Fehler bei der PR-Erstellung machen solltest, kannst Du die Originalversion nicht versehentlich kaputt machen. Die allgemeine Vorgehensweise ist:
 
 - Mache Änderungen und Verbesserungen am Code oder der Dokumentation, indem du das bestehende Dokument veränderst.
 - Vergewissere dich, dass die Änderungen gut aussehen.
@@ -18,7 +18,7 @@ Irgendwann wird vorgeschlagen, dass Du einen Pull-Request (PR) erstellst, der da
 
 (Randbemerkung: Wenn Du ein visueller Lerner bist, gibt es [hier](https://youtu.be/4b6tsL0_kzg) ein YouTube Video, das den PR-Prozess darstellt.)
 
-In unserem Beispiel nehmen wir nun eine Änderung an der AndroidAPS-Dokumentation vor. Es kann auf jedem Windows-PC, Mac, etc. erfolgen. (jedem Computer mit Internet-Zugang).
+In unserem Beispiel nehmen wir nun eine Änderung an der AndroidAPS-Dokumentation vor. Es kann auf jedem Windows-PC, Mac, etc. erfolgen. (Jedem Computer mit Internet-Zugang.)
 
 1. Gehe zu https://github.com/openaps/AndroidAPSdocs und klicke auf "Fork" oben rechts, um deine eigene Kopie des Repositories (=Quell-Code) zu machen.
 
@@ -28,7 +28,7 @@ In unserem Beispiel nehmen wir nun eine Änderung an der AndroidAPS-Dokumentatio
 
 ![edit doc](./images/PR1.png)
 
-Oder du klickst auf den “Edit in Github”-Link in der oberen rechten Ecke und klickst dann auf das Bleistift-Symbol, das in der oberen Leiste der Seite erscheint, um diese zu editieren. Du musst in deinem Github-Konto angemeldet sein, um dies zu tun (falls Du noch keines hast, kannst Du es problemlos einrichten).
+Oder du klickst auf den “Edit in GitHub”-Link in der oberen rechten Ecke und klickst dann auf das Bleistift-Symbol, das in der oberen Leiste der Seite erscheint, um diese zu editieren. Du musst in deinem GitHub-Konto angemeldet sein, um dies zu tun (falls Du noch keines hast, kannst Du es problemlos einrichten).
 
 ![RTD io](./images/PR2.png)
 
@@ -50,7 +50,7 @@ Wir verwenden Markdown für die Dokumentation. Die Datei hat das Suffix ".md". D
 
 ![create pull request](./images/PR6.png)
 
-7. Das war der letzte Schritt zur Erstellung eines pull requests, PR. GitHub ordnet dem PR eine Nummer, die du nach dem Titel findest, zu und einen Hashtag. Rufe diese Seite wieder auf, um Feedback zu erhalten (oder du erhältst automatisch E-Mail Benachrichtigungen über Aktivitäten bei deinem PR, wenn du Github entsprechend konfiguriert hast). Die Änderung wird nun in einer Liste von PR's enthalten, die das Team überprüfen wird; es wird gegebenenfalls Rückmeldungen dazu geben, bevor die Änderung in die Hauptdokumentation für AAPS einfließt! Wenn du den Fortschritt des PR überprüfen willst, kannst du auf das Logo mit der Glocke in der oberen rechten Ecke deines GitHub-Kontos klicken, wo du dann alle deine PRs siehst.
+7. Das war der letzte Schritt zur Erstellung eines Pull-Requests, PR. GitHub ordnet dem PR eine Nummer, die du nach dem Titel findest, zu und einen Hashtag. Rufe diese Seite wieder auf, um Feedback zu erhalten (oder du erhältst automatisch E-Mail Benachrichtigungen über Aktivitäten bei deinem PR, wenn du GitHub entsprechend konfiguriert hast). Die Änderung wird nun in einer Liste von PR's enthalten, die das Team überprüfen wird; es wird gegebenenfalls Rückmeldungen dazu geben, bevor die Änderung in die Hauptdokumentation für AAPS einfließt! Wenn du den Fortschritt des PR überprüfen willst, kannst du auf das Logo mit der Glocke in der oberen rechten Ecke deines GitHub-Kontos klicken, wo du dann alle deine PRs siehst.
 
 ![PR tracking](./images/PR7.png)
 
