@@ -109,7 +109,7 @@ Please feel free to reach out to the AAPS community if there is anything you fee
 
 ##### [ask on the AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/)
 
-##### [ask on the AAPS Discord channel](https://discord.com/channels/629952586895851530/629954570394533889)
+##### [ask on the AAPS Discord channel](https://discord.gg/4fQUWHZ4Mw)
 
 
 
