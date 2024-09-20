@@ -65,7 +65,7 @@
 
 - Install the authenticator app of your choice on your follower phone and scan the QR code shown in AAPS.
 
-- Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. Example:
+- Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. לדוגמה:
 
   - Your mandatory PIN is 2020
   - TOTP token from the authenticator app is 457051
@@ -83,7 +83,7 @@
 
 - The AAPS phone will respond to confirm success of command or status requested.
 
-- Confirm command by sending the code where necessary. Example:
+- Confirm command by sending the code where necessary. לדוגמה:
 
   - Your mandatory PIN is 2020
   - TOTP token from the authenticator app is 457051
