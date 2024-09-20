@@ -20,7 +20,7 @@ V některém okamžiku bude navrženo, abyste vytvořili žádost o začlenění
 
 Například: chystáme se upravit AndroidAPSdocs. To lze udělat na jakémkoli Windows PC, Mac atd. (libovolném počítači s připojením k internetu).
 
-1. Jděte na https://github.com/openaps/AndroidAPSdocs a kliněte na Fork v horním rohu, abyste si vytvořili vlastní kopii repozitáře.
+1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
 
 ![Klonování repozitoře](./images/PR0.png)
 
