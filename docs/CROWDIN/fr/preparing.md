@@ -85,7 +85,7 @@ Pour vous aider dans le processus de compilation, il y a des pages dédiées dan
 
 - [Comment installer AAPS](Installing-AndroidAPS/Building-APK.md)? (Chapitre D) ainsi que le sous-chapitre [Dépannage](Usage/troubleshooting.md).
 
-How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](how-long-will-it-take-to-set-everything-up))
+How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#how-long-will-it-take-to-set-everything-up))
 
 
 #### Fichier de clés & exportation des paramètres de configuration
@@ -107,7 +107,7 @@ N''hésitez pas à contacter la communauté AAPS s'il y a des points sur lesquel
 
 ##### [demandez de l'aide sur le groupe AAPS Facebook](https://www.facebook.com/groups/AndroidAPSUsers/)
 
-##### [demandez de l'aide sur le serveur Discord pour AAPS](https://discord.com/channels/629952586895851530/629954570394533889)
+##### [demandez de l'aide sur le serveur Discord pour AAPS](https://discord.gg/4fQUWHZ4Mw)
 
 
 
