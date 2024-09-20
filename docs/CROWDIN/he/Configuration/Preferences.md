@@ -280,7 +280,7 @@ Depending on your settings in [config builder](../Configuration/Config-Builder.m
 
 - Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate.
 - The value is measured in units per hour (U/h).
-- It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**.
+- מומלץ להגדיר ערך סביר. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**.
 - For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
 - See also [detailed feature description](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
