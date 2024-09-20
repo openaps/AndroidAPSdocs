@@ -56,7 +56,7 @@ Pozn. _Možná bude nutné počkat na další odečet glykémie, než _**AAPS**_
 
 - Správně zodpovězte otázky s výběrem více možných odpovědí a prokažte tak znalost **AAPS**.
 
-Někteří uživatelé považují **Cíl 3** za nejobtížnější pro dokončení. Pročtěte si prosím dokumentaci **AAPS** související s otázkami. Pokud jste se po důkladném studiu dokumentace **AAPS** skutečně zasekli, projděte si historii záznamů ve Facebookové skupině pro "Cíl 3" (je pravděpodobné, že vaše otázka byla už dříve položena a zodpovězena). Pokud si stále nevíte rady, zadejte dotaz buď ve skupině na Facebooku nebo na Discordu. Tyto skupiny mohou poskytnout přátelské tipy nebo vás přesměrovat na příslušnou část dokumentace **AAPS**.
+Někteří uživatelé považují **Cíl 3** za nejobtížnější pro dokončení. Pročtěte si prosím dokumentaci **AAPS** související s otázkami. If you are genuinely stuck after researching the **AAPS** documents, please search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group for "Objective 3" (because it is likely that your question has been asked- and answered - before). If you are still stuck, ask in a post on either the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group. Tyto skupiny mohou poskytnout přátelské tipy nebo vás přesměrovat na příslušnou část dokumentace **AAPS**.
 
 Chcete-li pokračovat s **Cílem 3**, klikněte na oranžový text “**Nedokončeno**” pro přístup k dané otázce. Každou otázku si pečlivě přečtěte a vyberte správnou odpověď (odpovědi).
 
@@ -228,13 +228,13 @@ Abyste mohli používat automatizace, musíte začít pracovat na **Cíli 10**.
 
 4. Experimentujte s nastavením užitečnějších automatizací.
 
-- V dokumentaci najdete pár příkladů a také můžete hledat "automatizaci" ve snímcích obrazovky ve Facebookové skupině. Vzhledem k tomu, že většina lidí snídá stejné jídlo každé ráno ve stejnou dobu před školou/prací, docela běžným použitím může být nastavení pravidla "cíl-před-snídaní", pro nastavení mírně nižšího dočasného cíle 30 minut před snídaní. V takovém případě bude vaše podmínka zahrnovat "opakující se čas", který se skládá z konkrétních dní v týdnu (Pondělí, Úterý, Středa, Čtvrtek, Pátek) a konkrétní čas (6:30). Akce bude obsahovat "Spustit dočasný cíl" s cílovou hodnotou a trváním po dobu 30 minut.
+- The documentation page gives a few examples, and you can search for "automation" screenshots on the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group. Vzhledem k tomu, že většina lidí snídá stejné jídlo každé ráno ve stejnou dobu před školou/prací, docela běžným použitím může být nastavení pravidla "cíl-před-snídaní", pro nastavení mírně nižšího dočasného cíle 30 minut před snídaní. V takovém případě bude vaše podmínka zahrnovat "opakující se čas", který se skládá z konkrétních dní v týdnu (Pondělí, Úterý, Středa, Čtvrtek, Pátek) a konkrétní čas (6:30). Akce bude obsahovat "Spustit dočasný cíl" s cílovou hodnotou a trváním po dobu 30 minut.
 
 ## Cíl 11: Povolit další funkce pro každodenní používání, jako je například Dynamic sensitivity plugin (Dynamická ISF).
 
 - Zajistěte, aby správně fungovaly SMB
 - Přečtěte si dokumentaci týkající se dynamické ISF [zde](../Usage/DynamicISF.md)
-- Vyhledejte ve skupinách na Facebooku a Discordu diskuse, týkající se dynamické ISF a přečtěte si o zkušenostech a doporučeních ostatních uživatelů.
+- Search the Facbook and [Discord](https://discord.gg/4fQUWHZ4Mw) groups for discussions around Dynamic ISF and read about other users experiences and recommendations.
 - Povolte **DynamicISF plugin** a nastavte vhodnou kalibraci podle fyziologických parametrů uživatele. Z bezpečnostních důvodů je vhodné začít hodnotou Korekčního faktoru nižší než 100%.
 
 (Objectives-go-back-in-objectives)=
