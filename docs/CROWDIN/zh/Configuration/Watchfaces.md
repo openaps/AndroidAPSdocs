@@ -1,346 +1,346 @@
-# Operation of AAPS via your Wear OS smartwatch
+# 透過 Wear OS 智慧型手錶操作 AAPS
 
 (Watchfaces-aaps-watchfaces)=
 
-## AAPS Watchfaces
+## AAPS 手錶外觀
 
-There are several watchfaces to choose from that are included in the base build of the AAPS Wear APK. These watchfaces include average delta, IOB, currently active temp basal rate and basal profiles and a CGM readings graph.
+AAPS Wear APK 的基礎版本中包含多種手錶外觀供選擇。 這些手錶外觀包括平均變化量、IOB、當前的臨時基礎速率和基礎設定檔，以及 CGM 資料圖。
 
-Ensure notifications from AAPS are not blocked on the watch. Confirmation of an action (e.g. bolus, tempt target) comes via a notification which you will need to swipe and tick.
+確保手錶上未封鎖來自 AAPS 的通知。 確認操作（例如注射、臨時目標）會透過通知進行，你需要滑動並勾選。
 
-Some available actions on the watchfaces are:
+手錶外觀上一些可用的操作：
 
-* Double tap on the BG to get to the AAPS menu
-* Double tap on the BG graph to change the graph's time scale
+* 雙擊血糖以進入 AAPS 選單
+* 雙擊血糖圖表可更改圖表的時間尺度
 
-## Changing to an AAPS Watchface on your WearOS watch
+## 在 WearOS 手錶上切換到 AAPS 手錶外觀
 
-There are a number of watchfaces available in the standard build of the AAPS Wear OS APK build. Once you have installed the AAPS Wear APK on your watch, they will be available. Here are the steps for selecting one:
+AAPS Wear OS APK 的標準版本中提供了多種手錶外觀。 當你在手錶上安裝 AAPS Wear APK 後，它們將可供使用。 以下是選擇其中一個手錶外觀的步驟：
 
-1. On your watch (assuming WearOS), long press on your current watchface to bring up the watchface selector screen and scroll all the way to the right until you see the "Add Watch Face" button and select it
+1. 在手錶上（假設使用 WearOS），長按當前手錶外觀以打開手錶外觀選擇畫面，然後向右捲動直到看到「新增手錶外觀」按鈕並選擇它
 
 ![Screenshot_20231123_124657_sysui](https://github.com/openaps/AndroidAPSdocs/assets/10778155/efd4268f-0536-4a31-9ba1-f98108f32483)
 
-2. Scroll to the bottom of the list until you see the "Downloaded" section and find "AAPS (Custom)" and click the middle of the image to add it to your shortlist of current watchfaces. Don't worry about the current appearance of the "AAPS (Custom)" watchface, we will select your preferred skin in the next step.
+2. 向下捲動到列表底部，直到看到「已下載」部分，找到「AAPS（自訂）」並點擊圖像中央將其新增至你當前的手錶外觀清單。 不用擔心當前「AAPS（自訂）」手錶外觀的外觀，我們將在下一步選擇你喜歡的外觀。
 
 ![Screenshot_20231123_124619_sysui](https://github.com/openaps/AndroidAPSdocs/assets/10778155/036dc7c4-6672-46c8-b604-8810a16a2eb3)
 
-3. Now open AAPS on your phone and go to the Wear plugin (enable it in Config Builder (under Synchronization) if you don't see it in your current plugins along the top).
+3. 現在打開你手機上的 AAPS，進入 Wear 外掛（如果你在頂部的外掛列表中未看到它，請在組態建置工具中啟用它（位於同步選項下）。
 
 ![Screenshot_20231123_090941_AAPS](https://github.com/openaps/AndroidAPSdocs/assets/10778155/5df23fa3-791b-4c9a-999a-251391a82835)
 
-4. Click on the "Load Watchface" button and select the watchface that you like
+4. 點擊「載入手錶外觀」按鈕，並選擇你喜歡的手錶外觀。
 
 ![Screenshot_20231123_130410_AAPS](https://github.com/openaps/AndroidAPSdocs/assets/10778155/adde2eca-1df7-4382-b9ab-346819c35d9d)
 
-5. Check your watch, the "AAPS (Custom)" watchface should now be displaying the skin that you have selected. Give it a few seconds to refresh. You may now customize the complications, etc. by long pressing the watchface and then pressing the "Customize" button on the watchface image.
+5. 查看你的手錶，現在應該顯示你選擇的「AAPS（自訂）」手錶外觀。 等待幾秒鐘讓它重新整理。 現在你可以透過長按手錶外觀並點擊「自訂」按鈕來自訂複雜功能等內容。 長按錶盤，然後按下錶盤圖片上的「自訂」按鈕。
 
-## Watchfaces available
+## 可用的手錶外觀
 
-![Available watchfaces](../images/Watchface_Types.png)
+![可用的手錶外觀](../images/Watchface_Types.png)
 
 (Watchfaces-new-watchface-as-of-AAPS-2-8)=
 
-### New watchface as of AAPS 2.8
+### AAPS 2.8 版本新增的手錶外觀
 
-![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
+![數位風格手錶外觀](../images/Watchface_DigitalStyle.png)
 
-* Color, lines and circle are configurable in setting menu on cog-sign of watchface chooser menu.
+* 顏色、線條和圓形可在手錶外觀選擇器選單的齒輪圖示設定選單中配置。
 
-## AAPSv2 watchface - Legend
+## AAPSv2 手錶外觀 - 圖例
 
-![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
+![AAPSv2 手錶外觀圖例](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A - 從最後一次循環運作以來的時間
 
-B - CGM reading
+B - CGM 資料讀數
 
-C - minutes since last CGM reading
+C - 自最後一次 CGM 資料讀取以來的分鐘數
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - 與上次 CGM 讀數相比的變化（以 mmol 或 mg/dl 為單位）
 
-E - average change CGM reading last 15 minutes
+E - 過去 15 分鐘的 CGM 讀數平均變化
 
-F - phone battery
+F - 手機電池
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - 基礎率（標準率顯示為U/h，臨時基礎率（TBR）顯示為百分比）
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+G - 基礎速率（以 U/h 顯示標準速率，以 % 顯示臨時基礎速率）
 
-I - carbs (carbs on board | e-carbs in the future)
+H - BGI（血糖影響） -> 基於胰島素活性，血糖「應該」上升或下降的程度。
 
-J - insulin on board (from bolus | from basal)
+I - 碳水化合物（碳水化合物在體內的數量 | 未來的碳水化合物）
 
-## Accessing main menu of AAPS
+## J - 活性胰島素（來自注射 | 來自基礎速率）
 
-To access main menu of AAPS you can use on of following options:
+進入 AAPS 主選單
 
-* double tap on your BG value
-* select AAPS icon in watch applications menu
-* tap on AAPS complication (if configured for menu)
+* 雙擊你的血糖值
+* 在手錶應用程式選單中選擇 AAPS 圖示
+* 點擊 AAPS 複雜功能（如果已配置選單）
 
-## Settings (in wear watch)
+## 設置（在 Wear 手錶上）
 
-To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
+要進入手錶外觀設置，進入 AAPS 主選單，上滑並選擇「設置」。
 
-Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
+實心星星表示啟用狀態（**開**），空心星星圖示表示該設置已停用（**關**）：
 
-![Settings on/off](../images/Watchface_Settings_On_Off.png)
+![設置開/關](../images/Watchface_Settings_On_Off.png)
 
-### AAPS companion parameters
+### AAPS 配套參數
 
-* **Vibrate on Bolus** (default `On`):
-* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
+* **注射時震動**（預設`開`）：
+* **動作單位**（預設`mg/dl`）：如果**開**，動作單位為`mg/dl`，如果**關**，單位為`mmol/l`。 設定 TT 時使用。
 
 (Watchfaces-watchface-settings)=
 
-### Watchface settings
+### 手錶外觀設置
 
-* **Show Date** (default `Off`): note, date is not available on all watchfaces
-* **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
-* **Show COB** (default `On`): Display or not COB value
-* **Show Delta** (default `On`): Display or not the BG variation of the last 5 minutes
-* **Show AvgDelta** (default `On`): Display or not the average BG variation of the last 15 minutes
-* **Show Phone Battery** (default `On`): Phone battery in %. Red if below 30% .
-* **Show Rig Battery** (default `Off`): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
-* **Show Basal Rate** (default `On`): Display or not current basal rate (in U/h or in % if TBR)
-* **Show Loop Status** (default `On`): show how many minutes since last loop run (arrows around value turn red if above 15').
-* **Show BG** (default `On`): Display or not last BG value
-* **Show Direction Arrow** (default `On`): Display or not BG trend arrow
-* **Show Ago** (default `On`): show how many minutes since last reading.
-* **Dark** (default `On`): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
-* **Highlight Basals** (default `Off`): Improve the visibility of basal rate and temp basals
-* **Matching divider** (default `Off`): For AAPS, AAPSv2 and AAPS(Large) watchfaces, show contrast background for divider (**Off**) or match divider with the background color (**On**)
-* **Chart Timeframe** (default `3 hours`): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
+* **顯示日期**（預設`關`）：注意，並非所有手錶外觀都支援日期顯示
+* **顯示 IOB**（預設`開`）：是否顯示 IOB 值（詳細值設置在 AAPS wear 參數中）
+* **顯示 COB**（預設`開`）：是否顯示 COB 值
+* **顯示 Delta**（預設`開`）：是否顯示過去 5 分鐘的血糖變化
+* **顯示平均 Delta**（預設`開`）：是否顯示過去 15 分鐘的血糖平均變化
+* **顯示手機電池**（預設`開`）：手機電池百分比。 低於 30% 時顯示為紅色。
+* **顯示 Rig 電池**（預設`關`）：Rig 電池是手機電池、幫浦電池和傳感器電池的綜合結果（通常顯示最低的值）。
+* **顯示基礎速率**（預設`開`）：是否顯示當前的基礎速率（以 U/h 顯示，或如果是臨時基礎速率則以 % 顯示）
+* **顯示循環狀態**（預設`開`）：顯示自上次循環運作以來的分鐘數（如果超過 15 分鐘，數值周圍的箭頭變為紅色）。
+* **顯示 血糖**（預設`開`）：是否顯示最近的血糖值
+* **顯示方向箭頭**（預設`開`）：是否顯示血糖趨勢箭頭
+* **顯示經過時間**（預設`開`）：顯示自上次讀取以來的分鐘數。
+* **深色背景**（預設`開`）：你可以將黑色背景切換為白色背景（除了 Cockpit 和 Steampunk 手錶外觀）
+* **高亮基礎速率**（預設`關`）：提高基礎速率和臨時基礎速率的可見性
+* **匹配分隔線**（預設`關`）：對於 AAPS、AAPSv2 和 AAPS（大）手錶外觀，顯示分隔線的對比背景（**關**）或匹配分隔線與背景顏色（**開**）。
+* **圖表時間範圍**（預設`3 小時`）：你可以在子選單中選擇圖表的最大時間範圍，從 1 小時到 5 小時。
 
-### User Interface setting
+### 用戶界面設置
 
-* **Input Design**: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
+* **輸入設計**：使用此參數，你可以選擇「+」和「-」按鈕的位置訊息，當你為 AAPS 輸入指令（TT、胰島素、碳水化合物...）時使用。
 
-![Input design options](../images/Watchface_InputDesign.png)
+![輸入設計選項](../images/Watchface_InputDesign.png)
 
-### Specific watchface parameters
+### 特定手錶外觀參數
 
-#### Steampunk watchface
+#### Steampunk 手錶外觀
 
-* **Delta Granularity** (default `Medium`)
+* **Delta 精度**（預設`中等`）
 
 ![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
 #### Circle WF
 
-* **Big Numbers** (default `Off`): Increase text size to improve visibility
-* **Ring History** (default `Off`): View graphically BG history with gray rings inside the hour's green ring
-* **Light Ring History** (default `On`): Ring history more discreet with a darker gray
-* **Animations** (default `On`): When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
+* **大字體**（預設`關`）：增加字體大小以提高可見性
+* **環狀歷史**（預設`關`）：以灰色環在小時的綠色環內圖形顯示血糖歷史記錄
+* **輕環狀歷史**（預設`開`）：以更深的灰色顯示較不顯眼的環狀歷史
+* **動畫效果**（預設`開`）：如果啟用，且手錶支援並非處於省電低解析度模式時，手錶外觀的圓形會有動畫效果。
 
-### Commands settings
+### 指令設置
 
-* **Wizard in Menu** (default `On`): Allow wizard interface in main menu to input Carbs and set Bolus from watch
-* **Prime in Menu** (default `Off`): Allow Prime / Fill action from watch
-* **Single Target** (default `On`):
+* **主選單嚮導**（預設`開`）：允許在主選單中使用嚮導介面從手錶輸入碳水化合物並設置注射量
+* **主選單注射前充填**（預設`關`）：允許從手錶進行注射前充填/填充操作
+* **單一目標**（預設`開`）：
   
-  * `On`: you set a single value for TT
-  * `Off`: you set Low target and high target for TT
+  * `開`：你設置一個單一的 TT 值
+  * `關`：你設置低目標和高目標的 TT 值
 
-* **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
+* **嚮導百分比**（預設`關`）：允許從嚮導進行注射校正（在確認通知前以百分比輸入值）
 
 (Watchfaces-complications)=
 
-## Complications
+## 複雜功能
 
-*Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
+*複雜功能* 是傳統製錶術中的術語，描述的是手錶主錶盤的附加功能 - 例如另一個小窗或副表盤（顯示日期、星期、月相等）。 Wear OS 2.0 將此隱喻引入，允許自訂資料提供者（例如天氣、通知、健身計數器等）新增到支援複雜功能的任何手錶外觀中。
 
-AAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
+AAPS Wear OS 應用程式自 build `2.6` 開始支援複雜功能，並允許支援複雜功能的第三方手錶外觀配置顯示與 AAPS 相關的資料（如血糖值與趨勢、IOB、COB 等）。
 
-Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
+複雜功能也可作為 AAPS 功能的 **快捷方式**。 點擊它們可以打開與 AAPS 相關的選單和對話框（具體取決於複雜功能類型和配置）。
 
-![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
+![複雜功能_在_手錶外觀上](../images/Watchface_Complications_On_Watchfaces.png)
 
-### Complication Types
+### 複雜功能類型
 
-AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
+AAPS Wear OS 應用程式僅提供根據預定義格式的原始資料。 第三方手錶外觀決定如何及在哪裡呈現複雜功能，包括其佈局、邊框、顏色和字體。 在眾多 Wear OS 複雜功能類型中，AAPS 使用以下類型：
 
-* `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Usually rendered inside a circle or small pill - one below another, or side by side. It is a very space-limited complication. AAPS tries to remove unnecessary characters to fit-in: by rounding values, removing leading and trailing zeroes from values, etc.
-* `LONG TEXT` - Contains two lines of text, about 20 characters each. Usually rendered inside a rectangle or long pill - one below another. It is used for more details and textual status.
-* `RANGED VALUE` - Used for values from predefined range, like a percentage. It contains icon, label and is usually rendered as circle progress dial.
-* `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
+* `短文本` - 包含兩行文本，每行 7 個字元，有時稱為值和標籤。 通常呈現在一個圓圈或小 POD 中 - 一行在另一行下方或並排顯示。 這是一個空間非常有限的複雜功能。 AAPS 試圖移除不必要的字符以適應：透過四捨五入數值、去除值中的前導和尾隨零等方式。
+* `長文本` - 包含兩行文本，每行大約 20 個字元。 通常呈現在一個矩形或長 POD 中 - 一行在另一行下方顯示。 用於顯示更多詳情和文本狀態。
+* `範圍值` - 用於顯示預定範圍內的值，例如百分比。 它包含圖示和標籤，通常以圓形進度表盤呈現。
+* `大圖像` - 自訂背景圖像，可用作手錶外觀的背景（如果手錶外觀支援）。
 
-### Complication Setup
+### 複雜功能設置
 
-To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
+要將複雜功能添加到手錶外觀，請長按並點擊下方的齒輪圖示進行配置。 根據具體手錶外觀的配置方式 - 可以點擊佔位符或進入複雜功能設置選單。 AAPS 複雜功能被歸類在 AAPS 選單條目下。
 
-When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
+在配置手錶外觀上的複雜功能時，Wear OS 會顯示並篩選適合放置在選定複雜功能位置的列表。 如果列表中找不到特定的複雜功能，可能是由於該類型不適用於該位置。
 
-### Complications provided by AAPS
+### AAPS 提供的複雜功能
 
-AAPS provides following complications:
+AAPS 提供以下複雜功能：
 
-![AAPS_Complications_List](../images/Watchface_Complications_List.png)
+![AAPS_複雜功能列表](../images/Watchface_Complications_List.png)
 
-* **BR, CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Basal Rate* on the first line and *Carbs on Board* and *Insulin on Board* on the second line.
-* **Blood Glucose** (`SHORT TEXT`, opens *Menu*): Displays *Blood Glucose* value and *trend* arrow on the first line and *measurement age* and *BG delta* on the second line.
-* **CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Carbs on Board* on the first line and *Insulin on Board* on the second line.
-* **CoB Detailed** (`SHORT TEXT`, opens *Wizard*): Displays current active *Carbs on Board* on the first line and planned (future, eCarbs) Carbs on the second line.
-* **CoB Icon** (`SHORT TEXT`, opens *Wizard*): Displays *Carbs on Board* value with a static icon.
-* **Full Status** (`LONG TEXT`, opens *Menu*): Shows most of the data at once: *Blood Glucose* value and *trend* arrow, *BG delta* and *measurement age* on the first line. On the second line *Carbs on Board*, *Insulin on Board* and *Basal Rate*.
-* **Full Status (flipped)** (`LONG TEXT`, opens *Menu*): Same data as for standard *Full Status*, but lines are flipped. Can be used in watchfaces which ignores one of two lines in `LONG TEXT`
-* **IoB Detailed** (`SHORT TEXT`, opens *Bolus*): Displays total *Insulin on Board* on the first line and split of *IoB* for *Bolus* and *Basal* part on the second line.
-* **IoB Icon** (`SHORT TEXT`, opens *Bolus*): Displays *Insulin on Board* value with a static icon.
-* **Uploader/Phone Battery** (`RANGED VALUE`, opens *Status*): Displays battery percentage of AAPS phone (uploader), as reported by AAPS. Displayed as percentage gauge with a battery icon that reflects reported value. It may be not updated in real-time, but when other important AAPS data changes (usually: every ~5 minutes with new *Blood Glucose* measurement).
+* **基礎速率、COB 和 IOB**（`短文本`，打開*選單*）：顯示第一行的*基礎速率*，第二行顯示*活性碳水化合物化合物*和*活性胰島素*。
+* **血糖**（`短文本`，打開*選單*）：顯示第一行的*血糖*值和*趨勢箭頭*，第二行顯示*測量時間*和*血糖變化量*。
+* **COB 和 IOB**（`短文本`，打開*選單*）：顯示第一行的*活性碳水化合物化合物*，第二行顯示*活性胰島素*。
+* **COB 詳細訊息**（`短文本`，打開*嚮導*）：顯示第一行的當前活動*活性碳水化合物化合物*，第二行顯示計劃中的（未來的，eCarbs）碳水化合物。
+* **COB 圖示**（`短文本`，打開*嚮導*）：顯示帶有靜態圖示的*活性碳水化合物化合物*值。
+* **完整狀態**（`長文本`，打開*選單*）：顯示所有資料：第一行顯示*血糖*值和*趨勢箭頭*、*血糖變化量*及*測量時間*。 第二行顯示*活性碳水化合物化合物*、*活性胰島素*和*基礎速率*。
+* **完整狀態（反轉）**（`長文本`，打開*選單*）：與標準的*完整狀態*顯示相同資料，但行順序相反。 可用於忽略`長文本`中一行的手錶外觀。
+* **IOB 詳細訊息**（`短文本`，打開*注射*）：顯示第一行的總*活性胰島素*，第二行顯示*注射*和*基礎速率*部分的 IOB。
+* **IOB 圖示**（`短文本`，打開*注射*）：顯示帶有靜態圖示的*活性胰島素*值。
+* **上傳裝置/手機電池**（`範圍值`，打開*狀態*）：顯示 AAPS 手機（上傳裝置）報告的電池百分比。 顯示為百分比儀表盤，並顯示反映報告值的電池圖示。 它可能不會即時更新，但會在其他重要的 AAPS 資料更改時更新（通常是每次~5 分鐘新的*血糖*測量時）。
 
-Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.
+此外，還有三種`大圖像`類型的複雜功能：**深色壁紙**、**灰色壁紙**和**淺色壁紙**，顯示靜態 AAPS 壁紙。
 
-### Complication related settings
+### 與複雜功能相關的設置
 
-* **Complication Tap Action** (default `Default`): Decides which dialog is opened when user taps complication: 
-  * *Default*: action specific to complication type *(see list above)*
-  * *Menu*: AAPS main menu
-  * *Wizard*: bolus wizard - bolus calculator
-  * *Bolus*: direct bolus value entry
-  * *eCarb*: eCarb configuration dialog
-  * *Status*: status sub-menu
-  * *None*: Disables tap action on AAPS complications
-* **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on the font, and that can be very watchface-specific. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
+* **複雜功能點擊操作** （預設`預設`）：決定當用戶點擊複雜功能時打開的對話框： 
+  * *預設*：與複雜功能類型相關的動作*（見上方列表）*
+  * *選單*：AAPS 主選單
+  * *嚮導*：注射嚮導 - 注射計算機
+  * *注射*：直接輸入注射值
+  * *eCarb*：eCarb 配置對話框
+  * *狀態*：狀態子選單
+  * *無*：停用 AAPS 複雜功能的點擊操作
+* **複雜功能中的 Unicode**（預設`開`）：當`開`時，複雜功能將使用 Unicode 字符來顯示圖示，如`Δ`（變化量）、`⁞`（垂直點分隔符）或`⎍`（基礎速率圖示）。 它們的渲染取決於字體，這可能非常特定於手錶外觀。 如果自訂手錶外觀使用的字體不支援這些圖示，則可以將此選項設置為`關`，以避免圖形故障。
 
-## Wear OS Tiles
+## Wear OS Tiles(資訊方塊)
 
-Wear OS Tiles provide easy access to users' information and actions to get things done. The tiles are only available on Android smartwatches running on Wear Os version 2.0 and higher.
+Wear OS Tiles 提供用戶快速查看資訊和操作的便捷方式。 這些 Tiles 僅在運作 Wear OS 版本 2.0 及更高版本的 Android 智慧型手錶上可用。
 
-Tiles allow you to quickly access actions on the AAPS application without going through the watch face menu. The tiles are optional and can be added and configured by the user.
+Tiles 允許你快速查看 AAPS 應用程式中的操作，而無需透過手錶外觀選單。 Tiles 是可選的，並且可以由用戶自行添加和配置。
 
-The tiles are used "next to" any watch face. To access a tile, when enabled, swipe right to left on your watch face to show them.
+Tiles 與任何手錶外觀「並存」使用。 這些Tiles會在所有錶面的旁邊。 啟用後，透過從手錶外觀向左滑動即可查看 Tiles。
 
-Please note; that the tiles do not hold the actual state of the AAPS phone app and will only make a request, which has to be confirmed on the watch before it is applied.
+請注意：這些Tiles並不顯示 AAPS 手機應用程式的實際狀態，它們僅會發出請求，該請求必須在手錶上確認後才會生效。
 
-## How to add Tiles
+## 如何添加 Tiles
 
-Before using the tiles, you have to switch on "Control from Watch" in the "Wear OS" settings of Android APS.
+在使用 Tiles 之前，你必須在 Android APS 的「Wear OS」設置中打開「從手錶控制」。
 
-![Wear phone preferences enabled](../images/wear_phone_preferences.jpg)
+![Wear 手機偏好設置已啟用](../images/wear_phone_preferences.jpg)
 
-Depending on your Wear OS version, brand and smartphone there are two ways of enabling the tiles:
+根據你的 Wear OS 版本、品牌和智慧型手機，有兩種啟用 Tiles 的方式：
 
-1. On your watch, from your watch face; - Swipe right to left till you reach the "+ Add tiles" - Select one of the tiles.
-2. On your phone open the companion app for your watch. - For Samsung open "Galaxy Wearable", or for other brands "Wear OS" 
-  * In the click on the section "Tiles", followed by "+ Add" button
-  * Find the AAPS tile you like to add by selecting it. ![Wear phone add tile](../images/wear_companion_app_add_tile.png) The order of the tiles can be changed by dragging and dropping
+1. 在手錶上，從手錶外觀開始； - 向左滑動直到到達「+ 添加 Tiles」 - 選擇其中一個 Tiles。
+2. 在手機上打開手錶原廠的應用程式。 - 對於三星手錶，打開「Galaxy Wearable」，其他品牌則打開「Wear OS」 
+  * 點擊「Tiles」部分，然後點擊「+ 添加」按鈕
+  * 找到你想添加的 AAPS Tile 並選擇它。 ![Wear phone add tile](../images/wear_companion_app_add_tile.png)你可以透過拖放來更改 Tiles 的順序
 
-The content of the tiles can be customized by long-pressing a tile and clicking the "Edit" or "gear icon" button.
+你可以透過長按 Tile 並點擊「編輯」或「齒輪圖示」按鈕來自訂 Tiles 的內容。
 
-### APS(Actions) Tile
+### APS（操作）Tile
 
-The action tile can hold 1 to 4 user-defined action buttons. To configure, long-press the tile, which will show the configuration options. Similar actions are also available through the standard watch menu.
+操作 Tile 可以包含 1 到 4 個用戶自訂的操作按鈕。 要進行配置，長按 Tile，這將顯示配置選項。 類似的操作也可以透過標準的手錶選單進行。
 
-Actions supported in the Action tile can request the AAPS phone app for:
+操作 Tile 支援的操作可以向 AAPS 手機應用程式發出請求：
 
-* **Calc**; do a bolus calculation, based on carb input and optional a percentage [1]
-* **Insulin**; request insulin delivery by entering the unit of insulin
-* **Treatment**; request both insulin delivery and add carbs
-* **Carbs**; add (extended) carbs
-* **TempT**; set a custom temporary target and duration
+* **計算**；根據碳水化合物輸入和可選的百分比[1]進行注射計算
+* **胰島素**；透過輸入胰島素單位請求注射
+* **治療**；請求注射並添加碳水化合物
+* **碳水化合物**；添加（延長的）碳水化合物
+* **臨時目標**；設置自訂臨時目標和持續時間
 
-![Wear action tile, sample calculator](../images/wear_actions.png)
+![Wear 操作 Tile，示例計算機](../images/wear_actions.png)
 
-[1] Via, the Wear OS menu, set the "Calculator Percentage" option to "ON" to show the percentage input in the bolus calculator. The default percentage is based on the phone settings in the"Overview" section ["Deliver this part of the bolus wizard result %"](Config-Builder.html#advanced-settings) When the user does not provide a percentage, the default value from the phone is used. Configure the other parameters for the bolus calculator in the phone app via "Preferences" "Wizard Settings".
+[1] 透過 Wear OS 選單，將「計算機百分比」選項設置為「開」，以便在注射計算機中顯示百分比輸入。 預設百分比基於手機設置中的「首頁總覽」部分[「注射嚮導結果的百分比」](Config-Builder.html#advanced-settings)。當用戶未提供百分比時，將使用手機中的預設值。 透過手機應用程式的「偏好設定」-「嚮導設置」配置注射計算機的其他參數。
 
-### AAPS(Temp Target) Tile
+### AAPS（臨時目標）Tile
 
-The Temp Target Tile can request a temporary target based on AAPS phone presets. Configure preset time and targets through the phone app setting by going to "Preferences", "Overview", ["Default Temp-Targets"](Config-Builder.html#default-temp-targets) and set the duration and targets for each preset. Configure the visible actions on the tile through the tile settings. Long press the tile to show the configuration options and select 1 to 4 options:
+臨時目標 Tile 可以根據 AAPS 手機預設請求臨時目標。 透過進入手機應用程式的「偏好設定」-「首頁總覽」部分，[「預設臨時目標」](Config-Builder.html#default-temp-targets)，設置每個預設的持續時間和目標來進行配置。 透過 Tile 設置配置在 Tile 上可見的操作。 長按 Tile 以顯示配置選項並選擇 1 到 4 個選項：
 
-* **Activity**; for sport
-* **Hypo**; to raise the target during hypo treatment
-* **Eating soon**; to lower the target to raise the insulin on board
-* **Manual**; set a custom temporary target and duration
-* **Cancel**; to stop the current temporary target
+* **運動**；適用於運動
+* **低血糖**；在低血糖治療期間提高目標
+* **即將進餐**；降低目標以增加活性胰島素
+* **手動**；設置自訂臨時目標和持續時間
+* **取消**；停止當前的臨時目標
 
-![Wear actions tile edit](../images/wear_tile_tempt_edit.png)
+![可穿戴裝置動作圖磚編輯](../images/wear_tile_tempt_edit.png)
 
-### AAPS(QuickWizard)Tile
+### AAPS(快速嚮導)Tile
 
-The QuickWizard tile can hold 1 to 4 quick wizard action buttons, defined with the phone app[2]. See [QuickWizard](Config-Builder.html#quickwizard-settings). You can set standard meals (carbs and calculation method for the bolus) to be displayed on the tile depending on the time of the day. Ideal for the most common meals/snacks you eat during the day. You can specify if the quick wizard buttons will show on the phone, watch, or both. Please note that the phone can show only one quick wizard button at a time. The quick wizard setup also can specify a custom percentage of the insulin for the bolus. The custom percentage enables you to vary, for example, snack at 120%, slow absorbing breakfast 80% and hypo treatment sugar snack at 0%
+快速嚮導圖磚可以容納1到4個快速嚮導動作按鈕，這些按鈕由手機應用程式[2]定義。 請參閱[快速嚮導](Config-Builder.html#quickwizard-settings)。 您可以設定標準餐點（碳水化合物及注射計算方式）依據一天中的時間顯示在圖磚上。 非常適合用於一天中最常食用的餐點/點心。 您可以指定快速嚮導按鈕是否會顯示在手機、手錶或兩者。 請注意，手機一次只能顯示一個快速嚮導按鈕。 快速嚮導設置還可以指定注射的自訂胰島素百分比。 自訂百分比可讓您變化，例如點心 120%、緩慢吸收的早餐 80% 和低血糖處理用糖點心 0%
 
-![Wear actions tile and phone configuration](../images/quickwizard_watch_phone.png)
+![可穿戴裝置動作圖磚與手機配置](../images/quickwizard_watch_phone.png)
 
-[2] Wear OS limits tiles update frequency to only once every 30 seconds. When you notice that the changes on your phone are not reflected on the tile, consider; waiting 30 seconds, using the "Resend all data" button from the Wear OS section of AAPS, or removing the tile and adding it again. To change the order of the QuickWizard buttons dragging an item up or down.
+[2] Wear OS 將圖磚更新頻率限制為每30秒一次。 當您發現手機上的變更未反映在圖磚上時，請考慮：等待30秒，使用 AAPS 的 Wear OS 區段中的“重新發送所有資料”按鈕，或刪除並重新添加圖磚。 要更改快速嚮導按鈕的順序，將項目向上或向下拖動。
 
-## Always on
+## 永遠開啟
 
-Long battery life for Android Wear OS smartwatches is a challenge. Some smartwatches get as much as 30 hours before recharging. The display should be switched off for optimal power saving when not in use. Most watches support the “Always on” display.
+對於 Android Wear OS 智慧型手錶來說，長時間的電池續航力是一個挑戰。 有些智慧型手錶最多可以持續使用30小時再充電。 螢幕在不使用時應關閉以達到最佳節電效果。 大多數手錶支援“永遠開啟”螢幕顯示。
 
-Since AAPS version 3, we can use a “Simplify UI” during always-on-mode. This UI only contains the blood glucose, direction, and time. This UI is power-optimized with less frequent updates, showing less information and lightening fewer pixels to save power on OLED displays.
+自 AAPS 版本3開始，我們可以在永遠開啟模式下使用“簡化 UI”。 此 UI 只包含血糖值、方向和時間。 此 UI 已經過電力優化，更新頻率較低，顯示較少的資訊，並減少點亮的像素數，以節省 OLED 螢幕上的電量。
 
-The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “Always on” or “Always on and charging”.
+簡化 UI 模式適用於以下錶盤：AAPS、AAPS V2、Home Big、Digital Style、Steampunk 和 Cockpit。 簡化 UI 是可選的，並透過錶盤設定進行配置。 （長按錶盤並點擊“編輯”或齒輪圖示）選擇配置“簡化 UI”並將其設為“永遠開啟”或“永遠開啟且充電中”。
 
-### Night-time mode
+### 夜間模式
 
-While charging, it would be helpful if the display could stay “always-on” and show your blood glucose during the night. However, the standard watch-faces are too bright and have too much information, and the details are hard to read with sleepy eyes. Therefore, we added an option for the watch-face to simplify the UI only during charging when set in the configuration.
+在充電期間，若能在夜間保持螢幕“永遠開啟”並顯示您的血糖值會非常有用。 然而，標準錶盤過於明亮，資訊太多，而且在困倦的狀態下很難閱讀細節。 因此，我們在配置中新增了一個選項，讓錶盤在充電期間可以簡化 UI。
 
-The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “During charging” or “Always on and charging”
+簡化 UI 模式適用於以下錶盤：AAPS、AAPS V2、Home Big、Digital Style、Steampunk 和 Cockpit。 簡化 UI 是可選的，並透過錶盤設定進行配置。 （長按錶盤並點擊“編輯”或齒輪圖示）選擇配置“簡化 UI”並將其設為“充電期間”或“永遠開啟且充電中”
 
-The Android developer options enable your watch to stay awake during charging. To make the developer options available, see the [official documentation](https://developer.android.com/training/wearables/get-started/debugging). Set the “Stay awake when charging” to “on” in the developer options”.
+Android 開發者選項允許您的手錶在充電期間保持喚醒狀態。 若要啟用開發者選項，請參閱[官方文件](https://developer.android.com/training/wearables/get-started/debugging)。 在開發者選項中，將“充電時保持喚醒”設置為“開啟”。
 
-Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
+注意：並非所有螢幕都能很好地處理永遠開啟功能。 這可能會導致螢幕燒灼，特別是在較舊的 OLED 螢幕上。 手錶通常會調暗螢幕以防止燒灼；請查閱您的使用手冊、製造商或網路上的建議。
 
-![Watchface Nightstand](../images/Watchface_nightstand.jpg)
+![錶盤夜間模式](../images/Watchface_nightstand.jpg)
 
-![Simplified UI](../images/Watchface_simplified_ui.png)
+![簡化 UI](../images/Watchface_simplified_ui.png)
 
-## Snooze Alert shortcut
+## 延後警報捷徑
 
-It is possible to create a shortcut to snooze the alerts/alarm of AAPS. Muting the sound via your watch is convenient and faster without reaching for your phone. Note; you still have to check your alarm message on your phone and handle it accordingly, but you can check that later. When your watch has two buttons, you can assign a key to the `AAPS Snooze Alert` program.
+可以建立一個捷徑來暫停 AAPS 的警報/鬧鐘。 透過手錶靜音更方便且比拿手機快。 注意：您仍然需要檢查手機上的警報訊息並相應處理，但可以稍後再檢查。 如果您的手錶有兩個按鈕，您可以將其中一個按鍵分配給`AAPS 延後警報`程式。
 
-To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > Customize Buttons > Double press > AAPS Snooze Alert`
+要在 Samsung Watch 4 上綁定按鈕，請前往`設定 > 高級功能 > 自訂按鈕 > 雙擊 > AAPS 延後警報`
 
-### Snooze xDrip
+### 暫停 xDrip
 
-When you use xDrip and have xDrip installed on the watch, the 'AAPS Snooze Alert' shortcut will also Snooze any xDrip alarm.
+當您使用 xDrip 並將其安裝在手錶上時，'AAPS 延後警報' 捷徑也會暫停任何 xDrip 警報。
 
-## Performance and battery life tips
+## 效能與電池壽命提示
 
-Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+Wear OS 手錶是非常耗電且又受限的裝置。 手錶機殼的尺寸限制了內置電池的容量。 即使硬體和軟體方面都有了最新的進展，Wear OS 手錶仍然需要每天充電。
 
-If an experienced battery span is shorter than a day (from dusk to dawn), here are some tips to troubleshoot the issues.
+如果電池續航時間短於一天（從黃昏到黎明），以下是一些排除問題的建議：
 
-Main battery-demanding areas are:
+主要耗電區域包括：
 
-* Active display with a backlight on (for LED) or in full intensity mode (for OLED)
-* Rendering on screen
-* Radio communication over Bluetooth
+* 螢幕顯示（對 LED 為背光，對 OLED 為全亮模式）
+* 螢幕顯示
+* 透過藍牙的無線通訊
 
-Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in *display time* area:
+由於我們不能在通訊效能上妥協（我們需要最新的資料）並且希望顯示最新的資料，因此大多數的優化可以在*顯示時間*區域中進行：
 
-* Stock watchfaces are usually better optimized than custom one, downloaded from the store.
-* It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
-* Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
-* Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](Watchfaces-watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
-* Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
-* Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
-* Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
-* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
-* **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+* 預設錶盤通常比從商店下載的自訂錶盤優化得更好。
+* 最好使用在非活動/調暗模式下顯示較少資料的錶盤。
+* 在使用其他小工具時要注意，像是第三方天氣小工具或其他從外部來源利用資料的小工具。
+* 先從較簡單的錶盤開始。 一次添加一個小工具並觀察它們對電池壽命的影響。
+* 嘗試為 AAPS 錶盤使用**深色**主題，並使用[**匹配的分隔線**](Watchfaces-watchface-settings)。 在 OLED 裝置上，這將限制點亮的像素數量並減少燒灼風險。
+* 檢查 AAPS 預設錶盤與其他帶有 AAPS 小工具的錶盤在您的手錶上哪個效能更好。
+* 在幾天內觀察不同的活動模式。 大多數手錶會因為抬腕查看、移動及其他使用相關的觸發事件而啟動螢幕顯示。
+* 檢查影響效能的全局系統設定：通知、背光/活動顯示逾時、GPS 啟動時。
+* 查看[已測試手機和手錶列表](Phones-list-of-tested-phones)，並與[社群連結](../Where-To-Go-For-Help/Connect-with-other-users.md)，了解其他用戶的經驗和報告的電池壽命。
+* **我們無法保證錶盤或小工具上顯示的資料是最新的**。 最終，Wear OS 決定何時更新錶盤或小工具。 即使 AAPS 應用程式請求更新，系統也可能為了節省電池而延後或忽略更新。 當手錶電量不足時有疑慮時，請務必使用手機上的 AAPS 應用程式進行雙重檢查。
 
-(Watchfaces-troubleshooting-the-wear-app)=
+(錶盤-故障排除-Wear-app)=
 
-## Troubleshooting the wear app:
+## 故障排除 Wear 應用程式：
 
-* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
-* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
-* If Complications does not update data - check first if AAPS watchfaces work at all.
+* 有時候重新同步應用程式到手錶上是有幫助的，因為它本身的同步速度可能有點慢：Android Wear > 齒輪圖示 > 手錶名稱 > 重新同步應用程式。
+* 在開發者選項中啟用 ADB 偵錯（手錶上），透過 USB 連線手錶，並在 Android Studio 中啟動 Wear 應用程式。
+* 如果小工具不更新資料，首先檢查 AAPS 錶盤是否正常運作。
 
 ## Garmin
 
-There are a couple of watch faces for Garmin that integrate with xDrip or Nightscout on the [Garmin ConnectIQ store](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30).
+在[Garmin ConnectIQ 商店](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30)上，有幾款與 xDrip 或 Nightscout 整合的 Garmin 手錶面。
 
-[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with AAPS. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to AAPS. It is available in the ConnectIQ store, the necessary AAPS plugin is only available from AAPS 3.2.
+AAPS Glucose Watch 可直接與 AAPS 整合。 它顯示循環狀態資料（活性胰島素、臨時基礎率），除了顯示血糖讀數外，還會將心率讀數發送到 AAPS。 它可在 ConnectIQ 商店中取得，所需的 AAPS 外掛從 AAPS 3.2 版本起提供。
 
-![Screenshot](../images/Garmin_WF.png) ![Screenshot](../images/Garmin_WF-annotated.png)
+![螢幕截圖](../images/Garmin_WF.png) ![螢幕截圖](../images/Garmin_WF-annotated.png)
 
-## Additional AAPS custom watchfaces are also available
+## 額外的 AAPS 自訂錶盤也可以使用
 
-[Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
+您可以在此下載由其他用戶建立的自訂錶盤 Zip 檔：
 
-If you want to build your own watchface, follow the [guide here](../Usage/Custom_Watchface_Reference.md).
+如果您想建立自己的錶盤，請參閱[此處的指南](../Usage/Custom_Watchface_Reference.md)。
 
-Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into Github. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
+建立自訂錶盤後，您可以與其他人分享自己的**AAPS**自訂錶盤，將 zip 檔上傳至“ExchangeSiteCustomWatchfaces”資料夾，並透過 Pull Request 上傳到 Github。 在合併 Pull Request 時，文件團隊會提取 CustomWatchface.png 檔案，並在檔名前加上 Zip 檔案名稱作為前綴。
