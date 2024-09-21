@@ -2,13 +2,13 @@
 
 ## AAPS operates entirely on volunteer efforts and has no paid staff.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+Vývojáři jsou rodiče, pečovatelé, blízcí a lidé s cukrovkou, kteří společně pracují na vývoji a vylepšení řešení. Vývojáři investují zdarma svůj volný čas a je tak nespravedlivé očekávat, že budou sami čelit dodatečným nákladům, když tvoří tak úžasné řešení, které je open source a zdarma pro všechny.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*Pro otestování nových zařízení vývojáři potřebují testovací telefon a testovací pumpu - zařízení nelze testovat na člověku, dokud není stabilní. Novější modely se musí testovat, jakmile budou k dispozici. Jsou také zapotřebí finanční dary pro uhrazení cestovních a přepravních nákladů těchto dodávek mezi zeměmi vývojářů. Někdy je také pěkné přispět na pokrytí cestovních nákladů pro vývojáře - aby mohli opustit svoje tmavé pokoje, aby mohli uspořádat vzájemná setkání na konferencích a srazech - a aby mohli dát od všeho jejich tvůrčím a analytickým mozkům odpočinout.*
 
-## I can write code! How do I participate?
+## Můžu napsat kód! Jak mohu přispět?
 
-Jéje! Look at the issues, ask in the discord channel, there is always a lot to do! Najděte nejprve malý úkol a proveďte první pull request! :)
+Jéje! Podívejte se na seznam problémů, zeptejte se na discord fóru, tam je vždy mnoho věcí na práci! Najděte nejprve malý úkol a proveďte první pull request! :)
 
 ## Znám systém a můžu psát dokumentaci!
 

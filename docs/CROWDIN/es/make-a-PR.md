@@ -20,7 +20,7 @@ At some point it will be suggested that you make a pull request (PR), which is h
 
 Por nuestro ejemplo, vamos a hacer una edición a AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
 
-1. Vaya a https://github.com/openaps/AndroidAPSdocs y presiones en Fork en la parte superior derecha para hacer su propia copia del repositorio.
+1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
 
 ![Repositorio Fork](./images/PR0.png)
 

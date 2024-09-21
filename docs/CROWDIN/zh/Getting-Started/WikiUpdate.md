@@ -16,7 +16,7 @@
 ## 2021年12月
 
 - [APK 構建](../Installing-AndroidAPS/Building-APK.md) - 更新 Android Studio Arctic Fox | 2020.3.1 @tanja
-- [Dana-i](../Configuration/DanaRS-Insulin-Pump.md) 信息已添加 @MilosKozak
+- [Dana-i](../Configuration/DanaRS-Insulin-Pump.md) 訊息已添加 @MilosKozak
 
 ## 2021年11月
 
@@ -39,7 +39,7 @@
 
 ## 2021年4月
 
-- Omnipod 和 Medtronic 幫浦的[通信裝置](module-additional-communication-device)列表
+- Omnipod 和 Medtronic 幫浦的[通訊裝置](module-additional-communication-device)列表
 - AAPS 預測功能在[Nightscout](Nightscout-manual-nightscout-setup)中
 
 ## 2021年3月
@@ -70,7 +70,7 @@
 - Accu-Chek Insight - 選項上傳絕對值[上傳絕對值](Accu-Chek-Insight-Pump-settings-in-aaps)
 - 日誌 - 更多有關[文件夾位置](../Usage/Accessing-logfiles.md)的細節
 - Omnipod Eros - 狀態更新
-- [SMS 命令 - 時間同步](../Children/SMS-Commands.md)
+- [SMS 指令 - 時間同步](../Children/SMS-Commands.md)
 
 ## 2020年9月
 
@@ -92,7 +92,7 @@
 
 ## 2020年4月
 
-- [回溯胰島素注射](CPbefore26-carbs-bolus)（例如通過注射器注射）
+- [回溯胰島素注射](CPbefore26-carbs-bolus)（例如透過注射器注射）
 - [下個主版本將不再支援 Android 6](../Module/module-phone)
 
 ## 2020年3月
@@ -137,7 +137,7 @@
 - [Medtronic 幫浦 - 可能的重複條目](../Configuration/MedtronicPump.md)
 - [新的 Freestyle Libre 2 教程](../Hardware/Libre2.md)
 - [帶百分比的設定檔切換 - 示例](../Usage/Profiles.md)
-- [SMS 命令更新](../Children/SMS-Commands.md)
+- [SMS 指令更新](../Children/SMS-Commands.md)
 - [疑難排解 Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 - [疑難排解 - 連結集合](../Usage/troubleshooting.md)
 - 更新 - 供有經驗用戶的快速指導
@@ -153,7 +153,7 @@
 - [2.5 版的目標更新](../Usage/Objectives.md)
 - [偏好設定更新](../Configuration/Preferences.md)
 - [SGLT-2 抑制劑 - 閉環時請勿使用](module-no-use-of-sglt-2-inhibitors)
-- [SMS 命令疑難排解](SMS-Commands-troubleshooting)
+- [SMS 指令疑難排解](SMS-Commands-troubleshooting)
 - [xDrip - 更新 G6 傳感器更換](xdrip-replace-transmitter)
 
 ## 2019年9月

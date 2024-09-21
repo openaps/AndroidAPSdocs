@@ -1,6 +1,6 @@
 # DanaRS 和 Dana-i 幫浦
 
-*這些說明適用於配置 2017 年之後的 DanaRS 或更新的 Dana-i 幫浦。 如果你擁有原始的 DanaR，請訪問[DanaR 胰島素幫浦](./DanaR-Insulin-Pump)。*
+*這些說明適用於配置 2017 年之後的 DanaRS 或更新的 Dana-i 幫浦。 如果你擁有原始的 DanaR，請查看[DanaR 胰島素幫浦](./DanaR-Insulin-Pump)。*
 
 **Dana RS v3 韌體從 AAPS 版本 2.7 開始支援使用。**
 
@@ -12,11 +12,11 @@
 
 ## 幫浦配對
 
-* 在 AAPS 主畫面上點擊左上角的選單，進入配置生成器。
+* 在 AAPS 主畫面上點擊左上角的選單，進入組態建置工具。
 * 在幫浦部分選擇「Dana-i/RS」。
 * 點擊齒輪圖示可以直接進入幫浦設置或返回主畫面。
     
-    ![AAPS 配置生成器 Dana-i/RS](../images/DanaRS_i_ConfigB.png)
+    ![AAPS 組態建置工具 Dana-i/RS](../images/DanaRS_i_ConfigB.png)
 
 * 進入「DANA-i/RS」標籤。
 
@@ -73,7 +73,7 @@
 
 * 按下「OK」進入舊密碼。
 
-* 輸入**舊密碼**（預設密碼請參見[上方](DanaRS-Insulin-Pump-default-password)），然後按下「OK」。
+* 輸入**舊密碼**（預設密碼請參閱[上方](DanaRS-Insulin-Pump-default-password)），然後按下「OK」。
     
     ![DanaRS 輸入舊密碼](../images/DanaRSPW_04_11PWenter.png)
 

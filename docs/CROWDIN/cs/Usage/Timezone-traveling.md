@@ -8,9 +8,9 @@ Se změnou časového pásma v telefonu není žádný problém, protože tyto p
 
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
+These pumps need a special care because AAPS is using history from the pump but the records in pump don't have timezone stamp. **To znamená, že pokud prostě změníte časové pásmo na telefonu, historické záznamy se z pumpy načtou v jiném pásmu a zdvojí se.**
 
-To avoid this there are two possibilities:
+Abychom se tomu vyhnuli, existují dvě možnosti:
 
 ### Možnost 1: Ponechat původní čas a posunout profil
 
@@ -32,7 +32,7 @@ To avoid this there are two possibilities:
 
 * Na telefonu v nastavení vypněte 'Automatická změna data a času' (ruční změna časového pásma)
 
-When get out of plane:
+Když vysednete z letadla:
 
 * vypněte pumpu
 * změňte časové pásmo na telefonu
@@ -46,13 +46,13 @@ When get out of plane:
 
 ## Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Ovladač automaticky upravuje čas v pumpě podle času v telefonu.
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change.
+Insight také zpracovává záznamy v historii o změnách času. Takže správný čas lze určit v AAPS navzdory změně času.
 
-It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
+Může ale způsobit nepřesnosti v celkových denních dávkách. Neměl by to však být problém.
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+Uživatel pumpy Insight se tedy nemusí obávat změn časového pásma a změn času. K tomuto pravidlu existuje jedna výjimka: pumpa Insight má malou vnitřní baterii k napájení času atd. zatímco měníte "skutečnou" baterii. Pokud výměna baterie trvá příliš dlouho, tato interní baterie se může vybít, hodiny se resetují a vy budete vyzváni, abyste po vložení nové baterie opětovně nastavili čas. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
 
 ## Accu-Chek Combo
 
@@ -66,7 +66,7 @@ The old, Ruffy-based driver does not adjust the time automatically. The user has
 
 ## Medtrum
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Ovladač automaticky upravuje čas v pumpě podle času v telefonu.
 
 Timezone changes keep the history in tact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and IOB. If you change time manually double check the IOB.
 
@@ -74,9 +74,9 @@ When the timezone or time changes running TBR's are stopped.
 
 # Úpravy letního času
 
-Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
+V závislosti na pumpě a CGM, může skok v čase způsobit problémy. S pumpou Combo apod. se historie načítá znovu a to by vedlo ke zdvojení položek. Úpravy proto prosím provádějte tehdy, když jste vzhůru, ne během noci.
 
-If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
+Jestliže k bolusu používáte kalkulačku, prosím nepoužívejte COB a IOB, pokud nemáte jistotu, že jsou naprosto správné - raději je několik hodin po změně času nepoužívejte vůbec.
 
 (Timezone-traveling-accu-chek-combo)=
 
@@ -96,20 +96,20 @@ AAPS will issue an alarm if the time between pump and phone differs too much. In
 2. Find a time zone that has the same time as your current location but doesn't use DST.
    
    * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo.
+   * Pro střední Evropu (CET) by to bylo "Brazzaville" (Kongo). Změňte časové pásmo telefonu na Kongo.
 
 3. In AAPS refresh your pump.
 
-4. Check the Treatments tab... If you see any duplicate treatments:
+4. Zkontrolujte kartu Ošetření... If you see any duplicate treatments:
    
    * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * Klepněte na "odstranit" u všech budoucích ošetření a také u těch, která jsou duplicitní. Toto by mělo ošetření zneplatnit, nikoli je odstranit, takže již nebudou využívaná k výpočtu IOB.
 
 5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
 ### Actions to take after the clock change
 
-A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
+Toto přepnutí je vhodné dělat v době, kdy máte nízký IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
 
 1. Change the Android timezone back to your current location and re-enable automatic timezone.
 2. AAPS will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
@@ -117,7 +117,7 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 4. Then go to the Treatments screen, and look for any events in the future. There shouldn’t be many.
    
    * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * Klepněte na "odstranit" u všech budoucích ošetření a také u těch, která jsou duplicitní. Toto by mělo ošetření zneplatnit, nikoli je odstranit, takže již nebudou využívaná k výpočtu IOB.
 
 5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
@@ -125,14 +125,14 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 
 ## Accu-Chek Insight
 
-* Change to DST is done automatically. No action required.
+* Změna letního času se provádí automaticky. Není vyžadována žádná akce.
 
 ## Medtrum
 
-* Change to DST is done automatically. No action required.
+* Změna letního času se provádí automaticky. Není vyžadována žádná akce.
 
 ## Other pumps
 
 * This feature is available since AAPS version 2.2.
-* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
-* You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
+* V zájme prevence potíží bude smyčka na 3 hodiny PO přepnutí letního času deaktivována. A to z bezpečnostních důvodů (příliš vysoký IOB kvůli duplicitnímu bolusu před změnou letního času).
+* You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. Zobrazení této zprávy není doprovázeno žádným zvukovým signálem ani vibracemi.

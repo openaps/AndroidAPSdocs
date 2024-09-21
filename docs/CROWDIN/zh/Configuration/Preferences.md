@@ -8,11 +8,11 @@
 
   ![打開外掛偏好設定](../images/Pref2020_OpenPlugin2.png)
 
-- **子選單**可通過點擊子選單標題下方的三角形來展開。
+- **子選單**可透過點擊子選單標題下方的三角形來展開。
 
   ![打開子選單](../images/Pref2020_Submenu2.png)
 
-- 在偏好設定畫面頂部使用**篩選**功能，您可以快速訪問特定偏好設定。 只需開始輸入您要查找的文本的一部分。
+- 在偏好設定畫面頂部使用**篩選**功能，您可以快速查看特定偏好設定。 只需開始輸入您要查找的文本的一部分。
 
   ![偏好設定篩選器](../images/Pref2021_Filter.png)
 
@@ -77,11 +77,11 @@
 #### 應用程式保護
 
 - 如果應用程式受到保護，您必須輸入密碼或使用手機的生物辨識驗證才能打開 AAPS。
-- 若輸入錯誤密碼，應用程式將立即關閉，但如果先前已成功打開，則仍會在背景中運行。
+- 若輸入錯誤密碼，應用程式將立即關閉，但如果先前已成功打開，則仍會在背景中運作。
 
 #### 注射保護
 
-- 如果 AAPS 是由小孩使用，並且您[通過 SMS 進行注射](../Children/SMS-Commands.md)，注射保護功能可能會有用。
+- 如果 AAPS 是由小孩使用，並且您[透過 SMS 進行注射](../Children/SMS-Commands.md)，注射保護功能可能會有用。
 
 - 在下圖示例中，您會看到生物辨識保護提示。 如果生物辨識驗證無法運作，請點擊白色提示上方的空白處並輸入主密碼。
 
@@ -156,7 +156,7 @@
 
 - [臨時目標（TT）](../Usage/temptarget.md)讓你在特定時間段內更改血糖目標。
 
-- 通過設置預設的TT，你可以輕鬆更改活動、即將用餐等目標。
+- 透過設置預設的TT，你可以輕鬆更改活動、即將用餐等目標。
 
   ![偏好設定 > 預設臨時目標](../images/Pref2020_OV_DefaultTT.png)
 
@@ -168,7 +168,7 @@
 
 ### 填充/啟動標準胰島素量
 
-- 如果你想通過AAPS填充管線或初始充填導管，你可以在[手動操作標籤](Screenshots-action-tab)中進行。
+- 如果你想透過AAPS填充管線或初始充填導管，你可以在[手動操作標籤](Screenshots-action-tab)中進行。
 - 可以在此對話框中定義預設值。
 
 (Preferences-range-for-visualization)=
@@ -198,7 +198,7 @@
 - 狀態指示燈為以下情況提供視覺警告：
 
   - 傳感器使用時間
-  - 某些智慧讀取器的感應器電池電量（詳情請參見[螢幕截圖頁面](Screenshots-sensor-level-battery)）。
+  - 某些智慧讀取器的感應器電池電量（詳情請參閱[螢幕截圖頁面](Screenshots-sensor-level-battery)）。
   - 胰島素的使用時間（儲液罐使用的天數）
   - 儲液罐的剩餘容量（單位）
   - 輸注針頭的使用時間
@@ -252,7 +252,7 @@
 ### APS模式
 
 - 在開環和閉環以及低血糖暫停（LGS）之間切換
-- **開環**意味著根據您的資料給出臨時基礎率（TBR）建議，並作為通知顯示。 經手動確認後，注射命令將傳輸到幫浦。 只有在使用虛擬幫浦時，才需要手動輸入。
+- **開環**意味著根據您的資料給出臨時基礎率（TBR）建議，並作為通知顯示。 經手動確認後，注射指令將傳輸到幫浦。 只有在使用虛擬幫浦時，才需要手動輸入。
 - **閉環**意味著TBR建議會自動發送到您的幫浦，無需您的確認或輸入。
 - **低血糖暫停**類似於閉環，但會將maxIOB設置覆蓋為零。 這意味著如果血糖下降，它可以減少基礎率，但如果血糖上升，則僅在基礎IOB為負數時（如來自之前的低血糖暫停）才會增加基礎率。
 
@@ -266,7 +266,7 @@
 (Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)=
 ## 進階餐前注射助手（AMA）或超微量注射（SMB）
 
-根據您的設置在[配置建構器](../Configuration/Config-Builder.md)中，您可以在兩種算法之間進行選擇：
+根據您的設置在[組態建置工具](../Configuration/Config-Builder.md)中，您可以在兩種算法之間進行選擇：
 
 - [進階餐前注射助手（OpenAPS AMA）](Open-APS-features-advanced-meal-assist-ama) - 2017年的算法狀態
 - [超微量注射（OpenAPS SMB）](Open-APS-features-super-micro-bolus-smb) - 最先進用戶的最新算法
@@ -274,7 +274,7 @@
 ### OpenAPS AMA設置
 
 - 如果您可靠地輸入碳水化合物，則系統允許在注射餐後更快速地高溫調整。
-- 有關設置和自動感應的更多細節，請參見[OpenAPS 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)。
+- 有關設置和自動感應的更多細節，請參閱[OpenAPS 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)。
 
 #### 臨時基礎率（Temp Basal）最大可設置的U/h
 
@@ -297,7 +297,7 @@
 - 抓住機會完美您的基礎配置和胰島素敏感性因子（ISF）。
 - 了解AAPS如何限制您的基礎胰島素以防止低血糖。
 
-當您感到舒適時，您可以通過提高最大基礎IOB值允許系統開始給予您額外的基礎胰島素。 建議的指導原則是取您個人設定中的**最高基礎速率**，並**將其乘以 3**。 例如，若您設定中的最高基礎速率為 0.5 U/h，您可以將此數值乘以 3，得到 1.5 U/h。
+當您感到舒適時，您可以透過提高最大基礎IOB值允許系統開始給予您額外的基礎胰島素。 建議的指導原則是取您個人設定中的**最高基礎速率**，並**將其乘以 3**。 例如，若您設定中的最高基礎速率為 0.5 U/h，您可以將此數值乘以 3，得到 1.5 U/h。
 
 - 您可以從保守的數值開始，然後隨著時間慢慢增加。
 - 這些僅是指導原則；每個人的身體狀況不同。 您可能會發現所需的劑量比這裡推薦的多或少，但一定要從保守的劑量開始，並慢慢調整。
@@ -391,7 +391,7 @@
 
 ## 幫浦設定
 
-此處的選項會根據您在[建構設定檔](Config-Builder-pump)中選擇的幫浦驅動程式而有所不同。  根據幫浦相關的指示來配對並設定您的幫浦：
+此處的選項會根據您在[組態建置工具](Config-Builder-pump)中選擇的幫浦驅動程式而有所不同。  根據幫浦相關的指示來配對並設定您的幫浦：
 
 - [DanaR 胰島素幫浦](../Configuration/DanaR-Insulin-Pump.md)
 - [DanaRS 胰島素幫浦](../Configuration/DanaRS-Insulin-Pump.md)
@@ -399,7 +399,7 @@
 - [Accu Chek Insight 幫浦](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Medtronic 幫浦](../Configuration/MedtronicPump.md)
 
-如果使用 AAPS 進行開環模式，請確保您已在建構設定檔中選擇虛擬幫浦。
+如果使用 AAPS 進行開環模式，請確保您已在組態建置工具中選擇虛擬幫浦。
 
 (Preferences-nsclient)=
 ## NSClient
@@ -426,7 +426,7 @@
 
 - 設置您的*Nightscout URL*（即 <https://yoursitename.yourplaform.dom>）。
   - **確保網址末尾沒有 /api/v1/。**
-- 在 Nightscout 中，建立一個*[管理者憑證](https://nightscout.github.io/nightscout/security/#create-a-token)*（需要 [Nightscout 15](https://nightscout.github.io/update/update/) 才能使用 V3 API），並將其輸入**NS 訪問憑證**（不是您的 API 密鑰！）。
+- 在 Nightscout 中，建立一個*[管理者憑證](https://nightscout.github.io/nightscout/security/#create-a-token)*（需要 [Nightscout 15](https://nightscout.github.io/update/update/) 才能使用 V3 API），並將其輸入**NS 查看憑證**（不是您的 API 密鑰！）。
 - 這使資料能夠在 Nightscout 網站和 AAPS 之間讀取和寫入。
 - 如果您在目標 1 中遇到困難，請再次檢查是否有拼寫錯誤。
 - 保持啟用與 websockets 的連線（推薦）。
@@ -441,7 +441,7 @@
 
 ![警報選項](../images/Pref2024_NSClient_Alarms.png)
 
-- 警報選項允許您選擇通過應用程式使用哪些 Nightscout 警報。 當 Nightscout 警報觸發時，AAPS 會發出警報。
+- 警報選項允許您選擇透過應用程式使用哪些 Nightscout 警報。 當 Nightscout 警報觸發時，AAPS 會發出警報。
   - 要使警報發出聲音，您需要在[Nightscout 變數](https://nightscout.github.io/nightscout/setup_variables/#alarms)中設置緊急高、高、低和緊急低的警報值。
   - 這些警報僅在您與 Nightscout 有連線時工作，且主要針對家長/照護者。
   - 如果您的 CGM 資料來自手機（如 xDrip+ 或 BYODA），請使用這些警報，而非 Nightscout 警報。
@@ -467,8 +467,8 @@
 
 ## SMS(簡訊) 通訊器
 
-- 僅當在[建構設定檔](Config-Builder-sms-communicator)中選擇 SMS 通訊器時才會顯示選項。
-- 此設定允許通過傳簡訊指令來遠端控制應用程式，如暫停循環或進行注射。
+- 僅當在[組態建置工具](Config-Builder-sms-communicator)中選擇 SMS 通訊器時才會顯示選項。
+- 此設定允許透過傳簡訊指令來遠端控制應用程式，如暫停循環或進行注射。
 - 更多資訊在[SMS 指令](../Children/SMS-Commands.md)中描述。
 - 透過使用身份驗證應用程式和憑證末端的額外 PIN 獲得額外的安全保障。
 
@@ -490,7 +490,7 @@
 
 ![資料選項](../images/Pref2020_DataChoice.png)
 
-- 您可以通過將崩潰報告發送給開發人員來幫助進一步開發 AAPS。
+- 您可以透過將崩潰報告發送給開發人員來幫助進一步開發 AAPS。
 
 ## 維護設置
 

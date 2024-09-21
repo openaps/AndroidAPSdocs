@@ -7,4 +7,4 @@
 ```
 
 -   使用您的 Nightscout 網站資訊設定 NSClient。
--   在[ConfigBuilder 的血糖來源](/Configuration/Config-Builder.md#bg-source)中選擇 NSClient BG。
+-   在[ConfigBuilder 的血糖來源](/Configuration/Config-Builder.md#bg-source)中選擇 NSClient 血糖。

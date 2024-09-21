@@ -19,9 +19,9 @@ Dexcom G7 在 2022 年春季獲得 CE 證書，並於 2022 年 10 月底開始�
 
 ### 安裝新的修補版 G7 應用程式並啟動傳感器
 
-修補版 Dexcom G7 應用程式 (DiAKEM) 可訪問 Dexcom G7 資料。 這不是 BYODA 應用程式，因為該應用程式目前無法接收 G7 資料。
+修補版 Dexcom G7 應用程式 (DiAKEM) 可查看 Dexcom G7 資料。 這不是 BYODA 應用程式，因為該應用程式目前無法接收 G7 資料。
 
-如果您之前使用了原始的 Dexcom 應用程式，請卸載它（正在運行的傳感器會話可以繼續 - 卸載應用程式前請記下傳感器代碼！）
+如果您之前使用了原始的 Dexcom 應用程式，請卸載它（正在運作的傳感器會話可以繼續 - 卸載應用程式前請記下傳感器代碼！）
 
 從 [這裡](https://github.com/authorgambel/g7/releases)下載並安裝修補版.apk。
 
@@ -40,7 +40,7 @@ AAPS 中的配置步驟
 
 ## 2. xDrip+（直接連線到 G7）
 
-- 請參考這裡的說明：[Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- 請參閱這裡的說明：[Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
 - 在 [ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source) 中選擇 xDrip+。
 
 - 根據 xDrip+ 設定頁面上的解釋來調整 xDrip+ 設定 [xDrip+ 設定](../Configuration/xdrip.md)

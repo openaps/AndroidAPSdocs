@@ -12,8 +12,8 @@
 
 Poznámka: AAPS vždy zapíše data do **prvního bazálního profilu v pumpě**.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](module-phone) page which Android version is required to run AAPS.)
-* The AAPS app installed on your phone
+* Telefon se systémem Android (v podstatě každá Android verze bude fungovat s Insight, ale zkontrolujte stránku [Module](module-phone), která Android verze je požadována pro AAPS.)
+* Aplikace AAPS nainstalovaná na vašem telefonu
 
 ## Nastavení
 
@@ -21,7 +21,7 @@ Poznámka: AAPS vždy zapíše data do **prvního bazálního profilu v pumpě**
     
     ![Snímek obrazovky odebrání glukometru z pumpy Insight](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../Configuration/Config-Builder) of the AAPS app select Accu-Chek Insight in the pump section
+* V nabídce [Konfigurace](../Configuration/Config-Builder) aplikace AAPS vyberte v sekci Pumpa volbu Accu-Chek Insight.
     
     ![Snímek obrazovky nastavení pumpy Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
@@ -40,11 +40,11 @@ Poznámka: AAPS vždy zapíše data do **prvního bazálního profilu v pumpě**
     
     ![Snímek obrazovky párování Insight 3](../images/Insight_Pairing3.png)
 
-* Úspěch! Pat yourself on the back for successfully pairing your pump with AAPS.
+* Úspěch! Poplácejte se po zádech, úspěšně jste spárovali pumpu s AAPS.
     
     ![Snímek obrazovky párování Insight 4](../images/Insight_Pairing4.png)
 
-* To check all is well, go back to Config builder in AAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
+* Pro kontrolu, že je všechno správně, se vraťte do nabídky Konfigurace a klepnutím na ozubené kolečko na řádku pumpy Insight otevřete její nastavení. Klepnutím na Insight párování si zobrazíte další informace o pumpě:
     
     ![Snímek obrazovky informací o spárování Insight](../images/Insight_PairingInformation.png)
 
@@ -54,23 +54,23 @@ Poznámka: Spojení mezi pumpou a telefonem není permanentní. Spojení bude na
 
 ## Nastavení v AAPS
 
-**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](Preferences-advanced-settings-nsclient)).
+**Pozn. Pokud chcete s pumpou Insight používat Autotune, je opět možné (pouze s AAPS verze větší než 2.7.0) mít nastaveno 'Vždy používat absolutní hodnoty bazálu', i když je zapnuto 'Synchronizace povolena'.**. (v AAPS přejděte do [Nastavení > NSClient > Pokročilá nastavení](Preferences-advanced-settings-nsclient)).
 
-![Screenshot of Insight Settings](../images/Insight_settings.png)
+![Snímek obrazovky nastavení Insight](../images/Insight_settings.png)
 
-In the Insight settings in AAPS you can enable the following options:
+V nastavení pumpy Insight v AAPS můžete povolit následující možnosti:
 
 * „Zaznamenat výměnu zásobníku“: při spuštění programu „naplnit kanylu“ dojde automaticky k zaznamenání výměny inzulínu.
 
-* "Log tube changes": This adds a note to the AAPS database when you run the "tube filling" program on the pump.
+* „Zaznamenat výměnu kanyly“: Tato volba přidá do databáze AAPS záznam při spuštění programu „naplnit kanylu“ na pumpě.
 
-* "Log site change": This adds a note to the AAPS database when you run the "cannula filling" program on the pump. ** Poznámka: Výměna kanyly také resetuje Autosens. **
+* „Zaznamenat změnu místa“: Tato volba přidá do databáze AAPS záznam při spuštění programu „naplnit kanylu“ na pumpě. ** Poznámka: Výměna kanyly také resetuje Autosens. **
 
 * „Zaznamenat výměnu baterie“: Automaticky provede záznam výměny baterie, pokud vložíte do pumpy novou baterii.
 
-* "Log operating mode changes": This inserts a note in the AAPS database whenever you start, stop or pause the pump.
+* „Zaznamenat změnu režimu provozu“: Automaticky provede záznam v databázi AAPS, kdykoliv spustíte, vypnete nebo pozastavíte pumpu.
 
-* "Log alerts": This records a note in the AAPS database whenever the pump issues an alert (except reminders, bolus and TBR cancellation - those are not recorded).
+* „Zaznamenat výstrahy“: Automaticky provede záznam v databázi AAPS, kdykoliv pumpa zahlásí alarm (s výjimkou upomínek, bolusů a konce dočasných bazálů (TBR) – ty zaznamenány nejsou).
 
 * „Povolit emulaci dočasných bazálů“: pumpa Insight umožňuje hodnotu maximálního dočasného bazálu (TBR) do výše 250 %. Pumpa má nastaveno omezení dočasného bazálu na 250 %. Pokud je požadavek na dočasný bazál vyšší než 250 %, bude provedena jeho emulace zadáním rozloženého bolusu.
     
@@ -80,7 +80,7 @@ In the Insight settings in AAPS you can enable the following options:
 
 * "Zakázat vibrace při automatickém zasílání bolusu": Zakáže vibrace pumpy Insight při automatickém vydání bolusu (SMB nebo dočasný bazál s emulací TBR). Toto nastavení je dostupné pouze s nejnovější verzí firmwaru Insight (3.x).
 
-* "Recovery duration": This defines how long AAPS will wait before trying again after a failed connection attempt. Můžete vybrat 0 až 20 sekund. Pokud máte problémy s připojením, vyberte delší dobu čekání.   
+* „Doba čekání na obnovení spojení“: Definuje, jak dlouho bude AAPS čekat před opětovným pokusem po neúspěšném pokusu o připojení. Můžete vybrat 0 až 20 sekund. Pokud máte problémy s připojením, vyberte delší dobu čekání.   
       
     Příklad pro min. dobu trvání zotavení = 5 a max. dobu zotavení = 20   
       
@@ -93,11 +93,11 @@ In the Insight settings in AAPS you can enable the following options:
     znovu -> žádné spojení -> čekej **20** sec.   
     ...
 
-* "Disconnect delay": This defines how long (in seconds) AAPS will wait to disconnect from the pump after an operation is finished. Výchozí hodnota je 5 sekund.
+* „Limit pro odpojení“: Definuje, jak dlouho (v sekundách) bude AAPS čekat s odpojením od pumpy po dokončení úlohy. Výchozí hodnota je 5 sekund.
 
-For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
+Po dobu, kdy byla pumpa zastavena, AAPS zobrazí záznam s dočasnou bazální hodnotou 0 %.
 
-In AAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
+AAPS na záložce Accu-Chek Insight zobrazuje aktuální stav pumpy a dvě tlačítka:
 
 * „Obnovit“: Opětovné načtení stavu pumpy
 * „Povolit oznamování konce dočasného bazálu“: Standardně pumpa Insight po dokončení TBR spouští zvukový signál. Toto tlačítko vám umožňuje povolit nebo zakázat tento alarm, aniž byste museli použít software pro konfiguraci pumpy.
@@ -106,31 +106,31 @@ In AAPS, the Accu-Chek Insight tab shows the current status of the pump and has 
 
 ## Nastavení v pumpě
 
-Configure alarms in the pump as follows:
+Nastavení alarmů v pumpě:
 
 * Menu > Nastavení > Nastavení zařízení > Nastavení režimu > Tichý > Signál > Zvuk
 * Menu > Nastavení > Nastavení zařízení > Nastavení režimu > Tichý > Hlasitost > 0 (odeberte všechny sloupečky)
 * Menu > Režimy > Režim signalizace > Tichý
 
-This will silence all alarms from the pump, allowing AAPS to decide if an alarm is relevant to you. If AAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
+To ztlumí všechny alarmy na pumpě a ponechá na AAPS rozhodnutí, jestli je alarm pro vás důležitý. Pokud AAPS alarm nepotvrdí, jeho hlasitost se zvýší (nejprve pípnutí, potom vibrace).
 
 (Accu-Chek-Insight-Pump-vibration)=
 
 ### Vibrace
 
-Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AAPS issues an SMB or TBR emulation delivers an extended bolus).
+V závislosti na verzi firmwaru vaší pumpy bude Insight krátce vibrovat pokaždé, když je vydán bolus (například když AAPS vydá SMB nebo TBR dodá prodloužený bolus).
 
 * Firmware 1.x: Žádné vibrace z výroby
 * Firmware 2.x: Vibrace nelze vypnout.
-* Firmware 3.x: AAPS delivers bolus silently. (minimum [version 2.6.1.4](Releasenotes-version-2-6-1-4))
+* Firmware 3.x: AAPS vydává bolus potichu. (minimální [verze 2.6.1.4](Releasenotes-version-2-6-1-4))
 
-Firmware version can be found in the menu.
+Verzi firmwaru lze nalézt v menu.
 
 ## Výměna baterie
 
-Battery life for Insight when looping range from 10 to 14 days, max. 20 days. The user reporting this is using Energizer lithium batteries.
+Výdrž baterie u pumpy Insight se při využívání smyčky pohybuje od 10 do 14 dnů, max. 20 dnů. Uživatelé s nejdelší výdrží používají lithiové baterie Energizer.
 
-The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+Pumpa Insight má malou interní baterii udržující základní funkce, jako jsou vnitřní hodiny, zatímco vyměňujete hlavní baterii. Pokud výměna baterie trvá příliš dlouho, tato interní baterie se může vybít, hodiny se resetují a vy budete vyzváni, abyste po vložení nové baterie opětovně nastavili čas. Pokud se to stane, všechny záznamy v AAPS před výměnou baterie nebudou zahrnuty do kalkulací, protože nelze určit jejich správný čas.
 
 (Accu-Chek-Insight-Pump-insight-specific-errors)=
 
@@ -138,16 +138,16 @@ The Insight pump has a small internal battery to keep essential functions like t
 
 ### Prodloužený bolus
 
-Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
+Používejte pouze jeden rozložený bolus v daném čase, protože používání více rozložených bolusů současně může způsobit chyby.
 
 ### Časový limit
 
-Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
+Někdy se může stát, že pumpa Insight neodpoví během navazování spojení. V takovém případě AAPS zobrazí následující zprávu „Timeout during handshake - reset bluetooth“.
 
 ![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
-In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
+V tom případě vypněte bluetooth v pumpě i telefonu na 10 sekund a potom jej opět zapněte.
 
 ## Změna časových pásem s pumpou Insight
 
-For information on traveling across time zones see section [Timezone traveling with pumps](Timezone-traveling-insight).
+Více informací o cestování přes více časových pásem najdete v části [Cestování s pumpou mezi časovými pásmy](Timezone-traveling-insight).

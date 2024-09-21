@@ -94,7 +94,7 @@
 ## 幫浦
 
 * [DanaRS](DanaRS-Insulin-Pump-dana-rs-specific-errors)
-* [Accu-Chek Combo 概覽](Accu-Chek-Combo-Tips-for-Basic-usage)
+* [Accu-Chek Combo 總覽](Accu-Chek-Combo-Tips-for-Basic-usage)
 * [Accu-Chek Combo + Ruffy](Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
 * [Accu-Chek Insight](Accu-Chek-Insight-Pump-insight-specific-errors)
 * [Medtronic + RileyLink](MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
@@ -104,7 +104,7 @@
 * [Jelly](../Usage/jelly.md)
 * [華為藍牙 & 電池優化](../Usage/huawei.md)
 
-## 智慧手錶
+## 智慧型手錶
 
 * [疑難排解 Wear 應用程式](Watchfaces-troubleshooting-the-wear-app)
 * [Sony Smartwatch 3](../Usage/SonySW3.md)

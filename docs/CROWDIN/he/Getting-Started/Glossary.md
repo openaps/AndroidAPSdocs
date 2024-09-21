@@ -40,7 +40,7 @@
 
 **COB** = Carbs On Board. This is the amount of carbohydrates currently available for the user's digestion → see also IOB.
 
-**CSF** =Carbs Sensitivity Factor. i.e. how much does the user’s **BG** increase for 1g of carbs absorbed.
+**CSF** = יחס רגישות לפחמימות. i.e. how much does the user’s **BG** increase for 1g of carbs absorbed.
 
 **DIA** = Duration of Insulin Action. Further info → Wiki - 'insulin types' and see also → DIABETTECH - 'DIA'.
 
@@ -130,8 +130,8 @@
 
 **Wallpaper** = **AAPS** background image see phones page.
 
-**xDrip+** = open source software to read **CGM** systems xDrip+.
+**xDrip+** = תוכנה בקוד פתוח שנועדה לקריאת נתונים מחי**ישני סוכר**.
 
-**Zero-temp** = temporary basal rate with 0% (no basal insulin delivery).
+**Zero-temp** = מינון בזאלי זמני של 0% (הפסקה זמנית של מתן האינסולין הבזאלי).
 
 → see also [the OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html)

@@ -1,27 +1,27 @@
-# How to translate strings for the AAPS app or the documentation
+# Jak překládat texty pro AAPS aplikaci nebo dokumentaci
 
-* For the the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
-* For the documentation please visit <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
+* Pro texty používané v aplikaci přejděte na <https://crowdin.com/project/androidaps> a přihlaste se pomocí vašeho GitHub účtu
+* Pro dokumentaci přejděte na <https://crowdin.com/project/androidapsdocs> a přihlaste se pomocí vašeho GitHub účtu
 
-* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
+* Odešlete žádost o připojení k Wiki týmu. Klikněte na vlajku požadovaného jazyka a poté na tlačítko "Join" vpravo nahoře na následující stránce. Specifikujte prosím jazyk, uveďte nějaké informace o sobě a svých zkušenostech s AAPS a zda chcete být překladatel nebo korektor (pouze osoby se zkušeností s překlady + pokročilí uživatelé AndroidAPS).
 
-```{admonition} Time for Approval :class: note
+{admonition} Čas na schválení :class: poznámka
 
-The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
+Schválení je nutné provést ručně. Jako nezisková organizace neposkytujeme SLA, ale obecně bude schválení provedeno za méně než jeden den. Pokud ne, kontaktujte prosím dokumentační tým prostřednictvím Facebooku nebo Discordu.
 
-    <br />* When we approve you, click the flag
+    <br />* Až vás schválíme, klikněte na vlajku
        ![When we approve you, click the flag](./images/translation_flags.png)
     
-    ## Translation of the app
+    ## Překlad aplikace
     
     (translations-translate-strings-for-AAPS-app)=
-    ### Translate strings for AAPS app
+    ### Překlad řetězců pro AAPS aplikace
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
+    * Pokud nedáváte přednost žádnému typu textů k překladu, začněte kliknutím na "Translate All" Zobrazí vám řetězce, které potřebují přeložit.
     
        ![Click translate all](./images/translations-click-translate-all.png)
     
-    * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+    * Pokud chcete přeložit konkrétní soubor, najděte ho prosím prostřednictvím dialogu vyhledávání nebo stromové struktury a klikněte na název souboru, abyste mohli začít pracovat na překladu textů v souboru.
     
        ![Click strings.xml](./images/translations-click-strings.png)
     
@@ -93,12 +93,12 @@ It's the proofreaders job to have a special look on this!
 
 ### Proofreading
 
-* Proofreaders have to switch to Proofreading mode
+* Korektoři se musí přepnout do režimu Proofreading
     
     ![Proofreading mode docs](./images/translation_WikiProofreadingmode.png)
     
-    and approve translated texts
+    a schválit přeložené texty
     
-    ![approve text](./images/translations-proofreading.png)
+    ![schválit text](./images/translations-proofreading.png)
 
 * When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during hollidays. To speed up the process you can inform docs team about new translations.

@@ -47,7 +47,7 @@
 
 ![ESEL 廣播](../images/ESELpatch.png)
 
-如果您首次安裝 Eversense 並運行 ESEL，可能需要長達 15 分鐘才能在 xDrip 中顯示第一個數值！
+如果您首次安裝 Eversense 並運作 ESEL，可能需要長達 15 分鐘才能在 xDrip 中顯示第一個數值！
 
 4. 在[ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source)中將「MM640g」設為血糖來源。
 
@@ -62,7 +62,7 @@ xDrip+ 可以像 ESEL 一樣從供應商應用程式的通知中讀取資料。 
 - 在 AAPS 中啟用[指數平滑](../Usage/Smoothing-Blood-Glucose-Data.md#smoothing-blood-glucose-data)。
 
 ```{warning}
-BG 值的讀取頻率並不總是 5 分鐘，並且可能會出現重複數值。
+血糖 值的讀取頻率並不總是 5 分鐘，並且可能會出現重複數值。
 ```
 
 ****

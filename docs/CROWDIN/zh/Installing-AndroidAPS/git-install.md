@@ -4,7 +4,7 @@
 
 ### 1. 下載 Git
 
-- **在 Android Studio 下載多個更新期間，您必須保持在線狀態！**
+- **在 Android Studio 下載多個更新期間，您必須保持線上狀態！**
 - 任何版本的 Git 應該都可以正常運作。 例如：[https://git-scm.com/download/win](https://git-scm.com/download/win)
 - 請記下安裝路徑。 您將在下一步中需要它。
 
@@ -29,7 +29,7 @@
 
 - 確保選擇了更新方法「合併」（3）。
 
-- 通過點擊「測試」（4）按鈕檢查 Android Studio 是否可以自動定位到 git.exe 的路徑。
+- 透過點擊「測試」（4）按鈕檢查 Android Studio 是否可以自動定位到 git.exe 的路徑。
 
   ![Android Studio 設定](../images/AndroidStudio361_09.png)
 
@@ -62,7 +62,7 @@
 
   ![git --version](../images/AndroidStudio_gitversion1.png)
 
-- 如果 Git 已正確安裝並連線，您將收到一條類似以下的已安裝版本信息：
+- 如果 Git 已正確安裝並連線，您將收到一條類似以下的已安裝版本訊息：
 
   ![git 版本結果](../images/AndroidStudio_gitversion2.png)
 
@@ -70,5 +70,5 @@
 
 - 任何版本的 Git 應該都可以正常運作。 例如：[https://git-scm.com/download/mac](https://git-scm.com/download/mac)
 - 使用 Homebrew 安裝 Git：`` `$ brew install git` ``。
-- 有關安裝 Git 的詳細信息，請參見[Git 官方文件](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)。
-- 如果通過 Homebrew 安裝 Git，則無需更改任何偏好設定。 以防萬一：它們可以在這裡找到：Android Studio - 偏好設定。
+- 有關安裝 Git 的詳細訊息，請參閱[Git 官方文件](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)。
+- 如果透過 Homebrew 安裝 Git，則無需更改任何偏好設定。 以防萬一：它們可以在這裡找到：Android Studio - 偏好設定。

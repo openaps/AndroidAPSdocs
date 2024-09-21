@@ -6,7 +6,7 @@
 
 ![圖像](../images/DiaconnG8/DiaconnG8_01.jpg)
 
-- 點擊設定建構器。
+- 點擊設定組態建置工具。
 
 ![圖像](../images/DiaconnG8/DiaconnG8_02.jpg)
 

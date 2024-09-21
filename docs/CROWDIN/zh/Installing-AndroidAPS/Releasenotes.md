@@ -57,8 +57,8 @@
 - 在使用 NS v3 外掛時，透過 NS UI 輸入的治療（+ 按鈕）和使用 v1 API 的其他應用程式不會發送到 AAPS。 這將在未來的 NS 版本中修復。 在 NS 完全內部切換到 v3 之前，請始終在 AAPS 和 AAPSClient 中使用相同的客戶端（v1 或 v3）。 對於 AAPS 和 AAPSClient 本身也是如此。
 - v3 外掛中的 Websockets 與 v1 外掛的工作方式相似。 停用 websockets 後，AAPS 會定期下載 NS 的資料，這應該會降低電量消耗，因為 NS 不會長時間保持連線。 但另一方面，這意味著資料交換會有延遲。 在使用 AAPS 的 v3 與 v1 API 之前，請先閱讀 [這裡](Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)開發團隊的重要意見！
 - 如果您使用 xdrip 作為 CGM 資料來源，則需要在更新後重新選擇它，因為內部已進行了更改。
-- Tidepool 可作為 NS 的替代品，以通過第一個目標。
-- 如果您選擇發送到 xDrip+，則必須配置 xDrip 同步外掛。 為了從 AAPS 接收 BG 資料，必須將 “xDrip+ Sync Follower” 選為資料來源。
+- Tidepool 可作為 NS 的替代品，以透過第一個目標。
+- 如果您選擇發送到 xDrip+，則必須配置 xDrip 同步外掛。 為了從 AAPS 接收血糖資料，必須將 “xDrip+ Sync Follower” 選為資料來源。
 - 如果您希望切換到 ComboV2 驅動，必須卸載 Ruffy 並重新與 AAPS 配對幫浦。
 - 要使用 DynISF 外掛，您必須開始目標 11（所有先前目標必須處於完成狀態才能開始第 11 個目標）。
 
@@ -81,13 +81,13 @@
 - 修復了 3.1 版本的許多問題
 - 允許在更多地方添加筆記 @Sergey Zorchenko
 - UI 修復 @MilosKozak @osodebailar @Andries-Smit @yodax @Philoul @dv1 @paravoid
-- 新的 SMS 命令 LOOP LGS/CLOSED @pzadroga
+- 新的 SMS 指令 LOOP LGS/CLOSED @pzadroga
 - WearOS 翻譯 @Andries-Smit
 - xDrip 通訊移至獨立模塊 @MilosKozak
 - 內部變更：更新的庫版本，rx3 遷移，新模塊結構 @MilosKozak
 - Diaconn 驅動修復 @miyeongkim
 - 更多資料庫維護選項 @MilosKozak
-- AAPSClient 提供主要手機是否已接入電源的信息 @MilosKozak
+- AAPSClient 提供主要手機是否已接入電源的訊息 @MilosKozak
 - BolusWizard 的更改。 如果 CGM 不可用，則忽略百分比（即使用 100%）
 - 遷移到 kts 構建系統 @MilosKozak
 - 改進的 CI 集成 @MilosKozak @buessow
@@ -104,7 +104,7 @@ v1 是用於在 NS 網站和 NS 伺服器之間交換資料的舊協議。 它�
 - 在頻繁中斷連線時，NS 連線會暫停 15 分鐘，以防止高資料使用量
 
 v3 是新的協議。 更加安全和高效
-- 使用令牌可以更好地定義訪問權限
+- 使用令牌可以更好地定義查看權限
 - 協議在 AAPS 和 NS 兩端都更高效
 - 它可以從 NS 讀取長達 3 個月的資料
 - 您可以選擇是否在每個設備上使用 websockets（使用意味著更快的更新，不使用意味著更低的電量消耗，但更新速度較慢，即數分鐘）
@@ -120,7 +120,7 @@ v3 是新的協議。 更加安全和高效
 - 基於以上所有原因，您應選擇一種方法並在所有設備上使用它（記住，撰寫本文時，所有其他上傳器都在使用 v1）。 如果您決定使用 v3，請在 AAPS 和所有 AAPSClients 中選擇 v3
 - v3 更具效率，因此是首選
 - 使用或不使用 v3 中的 websockets 取決於您的偏好
-- 強烈建議讓 AAPS 收集所有資料，然後將其作為單一上傳器上傳到 NS。 所有其他設備/應用程式應僅從 NS 讀取資料。 這樣可以防止衝突和同步錯誤。 這對於使用 Dexcom Share 連線器等將 BG 資料上傳到 NS 也適用。
+- 強烈建議讓 AAPS 收集所有資料，然後將其作為單一上傳器上傳到 NS。 所有其他設備/應用程式應僅從 NS 讀取資料。 這樣可以防止衝突和同步錯誤。 這對於使用 Dexcom Share 連線器等將血糖資料上傳到 NS 也適用。
 
 ## 版本 3.1.0
 
@@ -158,7 +158,7 @@ v3 是新的協議。 更加安全和高效
 ### 重要提示
 
 - **最低 Android 版本現在為 9.0。**
-- **資料未遷移到新資料庫。** 請勿抱怨，這是非常大的變更，因此無法遷移。 因此，更新後 IOB、COB、治療等資料將被清除。 您必須建立新的 [個人設置切換](../Usage/Profiles.md)，並從零開始 IOB 和 COB。 請謹慎規劃更新！！！ 最好在無活動胰島素和碳水化合物的情況下進行更新。
+- **資料未遷移到新資料庫。** 請勿抱怨，這是非常大的變更，因此無法遷移。 因此，更新後 IOB、COB、治療等資料將被清除。 您必須建立新的 [設定檔切換](../Usage/Profiles.md)，並從零開始 IOB 和 COB。 請謹慎規劃更新！！！ 最好在無活動胰島素和碳水化合物的情況下進行更新。
 - 請使用相同版本的 AAPS 和 NSClient
 
 **請確保在更新到 3.0 後根據描述檢查並調整設置** [此處](../Installing-AndroidAPS/update3_0.md)。
@@ -191,16 +191,16 @@ v3 是新的協議。 更加安全和高效
 
 - NSClient 重寫以獲得更好的同步和更詳細的自訂功能 @MilosKozak
 
-  - 不允許從 NS 刪除記錄（僅能通過 NSClient 使其無效）
+  - 不允許從 NS 刪除記錄（僅能透過 NSClient 使其無效）
   - 不允許從 NS 修改記錄
   - 無需工程模式即可使用同步設置（適用於父母）
   - 可以重新同步資料
 
-- 個人設置切換行為變更。 現在區分個人設置切換 *（使用者想要的變更）* 和個人設置變更 *（當幫浦執行變更時）* @MilosKozak @Tebbe
+- 設定檔切換行為變更。 現在區分設定檔切換 *（使用者想要的變更）* 和設定檔變更 *（當幫浦執行變更時）* @MilosKozak @Tebbe
 
-- 您可以在建立個人設置切換時啟動臨時目標 @MilosKozak
+- 您可以在建立設定檔切換時啟動臨時目標 @MilosKozak
 
-- NS 個人設置已消失，僅可使用本地個人設置。 本地個人設置可以 [同步到 NS](update3_0-nightscout-profile-cannot-be-pushed)。 @MilosKozak。
+- NS 設定檔已消失，僅可使用本地設定檔。 本地設定檔可以 [同步到 NS](update3_0-nightscout-profile-cannot-be-pushed)。 @MilosKozak。
 
 - 忘記了 [重置主密碼程序](update3_0-reset-master-password) @MilosKozak
 
@@ -259,7 +259,7 @@ v3 是新的協議。 更加安全和高效
 ### 重要提示
 
 - 已為所有 2.8.1 使用者強制開啟選項 **NS_UPLOAD_ONLY**。
-- 如果您使用 NSClient 輸入 TT、碳水化合物或個人設置切換，您必須在 AAPS 中將其關閉，但 **僅在您的同步運作良好時**（例如，您沒有看到不需要的資料變更，如 TT、TBR 的自我修改等）。
+- 如果您使用 NSClient 輸入 TT、碳水化合物或設定檔切換，您必須在 AAPS 中將其關閉，但 **僅在您的同步運作良好時**（例如，您沒有看到不需要的資料變更，如 TT、TBR 的自我修改等）。
 - 注意：如果您有其他應用程式處理治療（例如 xDrip 廣播/上傳/同步...），請勿這樣做。
 - 只能在啟用工程模式時關閉 NS_UPLOAD_ONLY。
 
@@ -292,7 +292,7 @@ v3 是新的協議。 更加安全和高效
 ### 主要新功能
 
 - [Omnipod Eros 支援](../Configuration/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda，特別感謝 @ps2 @itsmojo 以及所有參與 Omnipod Loop 驅動程序的人，還有 @jlucasvt 來自 GetRileyLink.org
-- [注射建議器](Preferences-bolus-advisor) 和 [進食提醒](Screenshots-eating-reminder) @MilosKozak
+- [注射建議器](Preferences-bolus-advisor) 和 [用餐提醒](Screenshots-eating-reminder) @MilosKozak
 - [新手錶錶面](Watchfaces-new-watchface-as-of-AAPS-2-8) @rICTx-T1D
 - Dana RS 連線改進 @MilosKozak
 - 移除了 Dexcom 原生應用中 SMB 的「未變更 CGM 值」行為
@@ -323,7 +323,7 @@ v3 是新的協議。 更加安全和高效
 - [新佈局，佈局選擇](../Getting-Started/Screenshots.md) @MilosKozak
 - 新 [狀態燈佈局](Preferences-status-lights) @MilosKozak
 - [多圖表支援](Screenshots-section-f-main-graph) @MilosKozak
-- [個人設置助手](../Configuration/profilehelper.md) @MilosKozak
+- [設定檔助手](../Configuration/profilehelper.md) @MilosKozak
 - 可視化 [動態目標調整](Screenshots-visualization-of-dynamic-target-adjustment) @Tornado-Tim
 - 新 [偏好設定佈局](../Configuration/Preferences.md) @MilosKozak
 - SMB 算法更新 @Tornado-Tim
@@ -332,7 +332,7 @@ v3 是新的協議。 更加安全和高效
 - 移除了 Careportal（移至操作） @MilosKozak
 - [新的加密備份格式](../Usage/ExportImportSettings.md) @dlvoy
 - [新 SMS TOTP 認證](../Children/SMS-Commands.md) @dlvoy
-- [新 SMS 幫浦連線、斷線命令](SMS-Commands-commands) @Lexsus
+- [新 SMS 幫浦連線、斷線指令](SMS-Commands-commands) @Lexsus
 - 更好地支援 Dana 幫浦上的小基礎率 @Mackwe
 - 小型 Insight 修復 @TebbeUbben @MilosKozak
 - [「預設語言」選項](Preferences-general) @MilosKozak
@@ -388,7 +388,7 @@ v3 是新的協議。 更加安全和高效
 
 ### 主要新功能
 
-- 解決了使用 Combo 幫浦時 SMS CARBS 命令的問題
+- 解決了使用 Combo 幫浦時 SMS CARBS 指令的問題
 - 除此之外，與 2.6.1 相同。 如果您未受到此錯誤的影響，則不需要升級。
 
 ## 版本 2.6.1
@@ -400,11 +400,11 @@ v3 是新的協議。 更加安全和高效
 ### 主要新功能
 
 - 允許在 NSClient 設置中僅輸入 `https://`
-- 修復 [BGI](../Getting-Started/Glossary.md) 在手錶上的顯示錯誤
+- 修復 [血糖影響](../Getting-Started/Glossary.md) 在手錶上的顯示錯誤
 - 修復小型 UI 錯誤
 - 修復 Insight 崩潰
 - 修復 Combo 幫浦的未來碳水化合物問題
-- 修復 [本地個人設置 -> NS 同步](Config-Builder-upload-local-profiles-to-nightscout)
+- 修復 [本地設定檔 -> NS 同步](Config-Builder-upload-local-profiles-to-nightscout)
 - Insight 警報改進
 - 改進了從幫浦歷史中檢測注射的功能
 - 修復 NSClient 連線設置（Wi-Fi、充電）
@@ -425,10 +425,10 @@ v3 是新的協議。 更加安全和高效
 
 - 新的[本地設定檔外掛](Config-Builder-local-profile)
 
-  - 本地個人設置可以包含多個配置
-  - 個人設置可以被複製和編輯
-  - 能夠將個人設置上傳到 NS
-  - 舊的個人設置切換可以複製到新的本地個人設置中（應用時間移動和百分比）
+  - 本地設定檔可以包含多個配置
+  - 設定檔可以被複製和編輯
+  - 能夠將設定檔上傳到 NS
+  - 舊的設定檔切換可以複製到新的本地設定檔中（應用時間移動和百分比）
   - 目標的垂直號碼選擇器
 
 - 移除了 SimpleProfile
@@ -437,7 +437,7 @@ v3 是新的協議。 更加安全和高效
 
 - MDT 外掛：修復了重複條目錯誤
 
-- 單位不再在個人設置中指定，而是全域設置
+- 單位不再在設定檔中指定，而是全域設置
 
 - 將新設置添加到啟動嚮導中
 
@@ -445,7 +445,7 @@ v3 是新的協議。 更加安全和高效
 
 - [Wear OS 複雜功能](../Configuration/Watchfaces.md)
 
-- 新的 [SMS 命令](../Children/SMS-Commands.md) BOLUS-MEAL、SMS、CARBS、TARGET、HELP
+- 新的 [SMS 指令](../Children/SMS-Commands.md) BOLUS-MEAL、SMS、CARBS、TARGET、HELP
 
 - 修復語言支援
 
@@ -453,7 +453,7 @@ v3 是新的協議。 更加安全和高效
 
 - 自動化：[允許排序](Automation-sort-automation-rules)
 
-- 自動化：修復了在停用循環時自動化仍在運行的錯誤
+- 自動化：修復了在停用循環時自動化仍在運作的錯誤
 
 - Combo 新狀態行
 
@@ -526,7 +526,7 @@ v3 是新的協議。 更加安全和高效
 - 檢查 GIT 並在 Gradle 升級時發出警告
 - 更多自動測試
 - 修復 AlarmSound 服務中的潛在崩潰問題（感謝 @lee-b！）
-- 修復 BG 資料廣播（現在獨立於 SMS 權限運行！）
+- 修復血糖資料廣播（現在獨立於 SMS 權限運作！）
 - 新增版本檢查器
 
 ## 版本 2.2.2
@@ -564,7 +564,7 @@ v3 是新的協議。 更加安全和高效
 - 修復來自 NS 的個人設定名稱處理問題（Johannes Mockenhaupt）
 - 修復 UI 阻塞（Johannes Mockenhaupt）
 - 支援更新的 G5 應用（Tebbe Ubben 和 Milos Kozak）
-- G6、Poctech、Tomato、Eversense BG 資料來源支援（Tebbe Ubben 和 Milos Kozak）
+- G6、Poctech、Tomato、Eversense血糖資料來源支援（Tebbe Ubben 和 Milos Kozak）
 - 修復偏好設置中停用 SMB 的問題（Johannes Mockenhaupt）
 
 ### 其他事項
@@ -577,7 +577,7 @@ v3 是新的協議。 更加安全和高效
 
 ### 主要新功能
 
-- oref1/SMB 支援（[oref1 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)）務必閱讀文件，以了解對 SMB 的預期，了解其行為方式、可以實現的功能以及如何使用，以便平穩運行。
+- oref1/SMB 支援（[oref1 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)）務必閱讀文件，以了解對 SMB 的預期，了解其行為方式、可以實現的功能以及如何使用，以便平穩運作。
 - [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 幫浦支援
 - 設定嚮導：引導您完成 AAPS 的設定過程
 
@@ -592,7 +592,7 @@ v3 是新的協議。 更加安全和高效
 
 - 構建 AAPS 2.0 apk 時注意事項：目前版本的 Android Gradle 外掛不支援按需配置！ 如果您的構建因「按需配置」的錯誤而失敗，您可以進行以下操作：
 
-  - 通過點擊「文件」>「設置」（在 Mac 上是「Android Studio」>「偏好設定」）打開偏好設定窗口。
+  - 透過點擊「文件」>「設置」（在 Mac 上是「Android Studio」>「偏好設定」）打開偏好設定窗口。
   - 在左側窗格中，點擊「構建、執行、部署」>「編譯器」。
   - 取消選中「按需配置」復選框。
   - 點擊「應用」或「確定」。
@@ -610,22 +610,22 @@ v3 是新的協議。 更加安全和高效
 
 - 單獨的構建變體已被移除，現在包含在常規完整構建中。 要從手錶使用注射控制，請在手機上啟用此設置
 - 嚮導現在只詢問碳水化合物（以及手錶設置中啟用的百分比）。 可以在手機設置中配置計算中包含的參數
-- 確認和信息對話框現在也適用於 Wear 2.0
+- 確認和訊息對話框現在也適用於 Wear 2.0
 - 新增 eCarbs 選單項目
 
 ### 新外掛
 
-- PocTech 應用作為 BG 資料來源
-- Dexcom 補丁應用作為 BG 資料來源
+- PocTech 應用作為血糖資料來源
+- Dexcom 補丁應用作為血糖資料來源
 - oref1 敏感性外掛
 
 ### 其他事項
 
-- 應用現在使用抽屜顯示所有外掛；在配置生成器中選擇為可見的外掛將顯示為頂部的標籤（收藏夾）
-- 配置生成器和目標標籤的全面檢查，新增描述
+- 應用現在使用抽屜顯示所有外掛；在組態建置工具中選擇為可見的外掛將顯示為頂部的標籤（收藏夾）
+- 組態建置工具和目標標籤的全面檢查，新增描述
 - 新應用圖示
 - 大量改進和錯誤修復
-- 當幫浦長時間無法使用時（例如幫浦電池耗盡）以及 BG 讀取遺失時，本地獨立於 Nightscout 的警報（請參見設定中的 *本地警報*）
+- 當幫浦長時間無法使用時（例如幫浦電池耗盡）以及血糖讀取遺失時，本地獨立於 Nightscout 的警報（請參閱設定中的 *本地警報*）
 - 選項允許保持螢幕開啟
 - 選項允許將通知顯示為 Android 通知
-- 支援使用 Dexcom 補丁應用或 xDrip G5 原生模式作為 BG 資料來源進行高級過濾（允許始終啟用 SMB 並在飯後 6 小時內啟用）。
+- 支援使用 Dexcom 補丁應用或 xDrip G5 原生模式作為血糖資料來源進行高級過濾（允許始終啟用 SMB 並在飯後 6 小時內啟用）。

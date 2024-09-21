@@ -3,7 +3,7 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## 遺失的密鑰庫
-如果您在更新 AAPS 時使用相同的密鑰庫，則無需在您的智慧手機上卸載之前的版本。 這就是為什麼建議將密鑰庫存放在安全地方的原因。
+如果您在更新 AAPS 時使用相同的密鑰庫，則無需在您的智慧型手機上卸載之前的版本。 這就是為什麼建議將密鑰庫存放在安全地方的原因。
 
 如果您嘗試安裝使用不同密鑰庫簽章的 apk，則會收到一條錯誤訊息，提示安裝失敗！
 
@@ -29,7 +29,7 @@ Gradle 同步可能由於各種原因失敗。 當您收到訊息提示 gradle �
 這些是常見的 gradle 同步失敗：
 * [未提交的更改](troubleshooting_androidstudio-uncommitted-changes)
 * [無法使用 ... 的緩存版本](troubleshooting_androidstudio-could-not-resolve-no-cached-version)
-* [Android Gradle 需要 Java 11 才能運行](troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)
+* [Android Gradle 需要 Java 11 才能運作](troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)
 
 *重要提示*: 按照您的特定問題的說明操作後，您需要再次觸發 [gradle 同步](troubleshooting_androidstudio-gradle-resync)。
 
@@ -54,7 +54,7 @@ Gradle 同步可能由於各種原因失敗。 當您收到訊息提示 gradle �
 
   * 如果您收到訊息提示
     ```
-    Git：找不到命令
+    Git：找不到指令
     ```
     您的 Git 安裝不正確。
 
@@ -104,23 +104,23 @@ Gradle 同步可能由於各種原因失敗。 當您收到訊息提示 gradle �
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
-### 不兼容的 Android Gradle 外掛版本
+### 不相容的 Android Gradle 外掛版本
 
   如果您遇到以下錯誤訊息
 
-  ![不兼容的 Android Gradle 外掛版本](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
+  ![不相容的 Android Gradle 外掛版本](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
 
   您使用的是過期版本的 Android Studio。 在選單中，轉到幫助 > 檢查更新，並安裝找到的所有 Android Studio 及其外掛的更新。
 
-### Android Gradle 外掛需要 Java 17 才能運行
+### Android Gradle 外掛需要 Java 17 才能運作
 
   您可能會遇到此錯誤訊息：
 
-  ![Android Gradle 外掛需要 Java 17 才能運行](../images/studioTroubleshooting/11_GradleJDK.png)
+  ![Android Gradle 外掛需要 Java 17 才能運作](../images/studioTroubleshooting/11_GradleJDK.png)
 
   點擊“Gradle 設置”(1) 以打開 gradle 設置。
 
-  如果沒有“Gradle 設置”的鏈接，請手動打開 Gradle 設置，通過選擇右側邊框的 Gradle 標籤 (1)，選擇工具圖示 (2)，然後選擇“Gradle 設置”項目 (3)。
+  如果沒有“Gradle 設置”的鏈接，請手動打開 Gradle 設置，透過選擇右側邊框的 Gradle 標籤 (1)，選擇工具圖示 (2)，然後選擇“Gradle 設置”項目 (3)。
 
   ![Gradle 設置](../images/studioTroubleshooting/09_GradleSettings.png)
 

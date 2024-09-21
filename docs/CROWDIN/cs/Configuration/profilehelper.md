@@ -7,22 +7,22 @@ Pomocník s profilem nabízí dvě funkce:
 
 ## Profil pro děti (do 18 let)
 
-**Important note:**
+**Důležité poznámky**
 
-**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+**Pomocník s profilem je určen k tomu, aby vám pomohl s počátečním nastavením profilu vašeho dítěte. I když je založen na datech dvou různých nemocnic, vždy jeho výsledky konzultujte s vaším lékařem, než je použijete jako hotový profil!**
 
 Pomocník s profilem nabízí datové sady dětských pacientů do 18 let ze dvou různých nemocnic, aby vám pomohly najít úvodní nastavení profilu.
 
-![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
+![Pomocník profilu pro děti 1](../images/ProfileHelperKids1.png)
 
 1. Vyberte "Pomocník s profilem" z třítečkového menu v pravém horním rohu obrazovky.
-2. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
+2. Upravte Výchozí profil (připravený z nemocničních dat) zadáním věku a buďto CDD celkem **nebo** hmotnosti.
 3. Přepněte stránku kliknutím na šedivé podlouhlé tlačítko s nápisem 2, které je na pravé straně obrazovky.
 4. Dlouze stiskněte "Aktuální profil" a vyberte "Výchozí profil DVP".
 
-![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
+![Pomocník profilu pro děti 2](../images/ProfileHelperKids2.png)
 
-5. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
+5. Upravte Výchozí profil DVP (vytvořen z rozdílných nemocničních dat) zadáním věku dítěte, procentního podílu bazálu a buďto CDD celkem **nebo** hmotnosti.
 6. Klikněte na tlačítko "POROVNAT PROFILY" nahoře na obrazovce.
 7. Zobrazí se porovnání dvou upravených profilů.
 
@@ -52,7 +52,7 @@ You can use profile helper also to compare to different profiles or profile swit
 
 If you use [local profiles](Config-Builder-local-profile) you can clone a profile / profile switch directly from profile helper.
 
-![Profile Helper Clone profile / profile switch](../images/ProfileHelperClone.png)
+![Pomocník profilu Klonování profilu / přepnutí profilu](../images/ProfileHelperClone.png)
 
 1. Vyberte požadovaný profil / přepnutí profilu dle popisu výše.
 2. Pokud používáte "Výchozí profil" nebo "Výchozí profil DVP" (připravený z nemocničních dat dětských pacientů), ujistěte se, že jste zadali správně věk, procenta bazálu a CDD / váhu.

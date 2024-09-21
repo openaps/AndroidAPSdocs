@@ -37,23 +37,23 @@ AAPS warns you if you are about to bolus with COB from a previous meal and the a
 
 Obvykle AAPS detekuje absorpci sacharidů prostřednictvím odchylek glykémií. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called 'fallback'). Protože tato metoda počítá pouze minimální absorbci sacharidů, aniž by zvážila odchylky glykémií, může to vést k chybným hodnotám COB.
 
-![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
+![Pokyn pro chybnou hodnotu COB](../images/Calculator_SlowCarbAbsorption.png)
 
 In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  To znamená, že možná máte méně zbývajících sacharidů, než vypočteno.
 
 ### Jak se vypořádat s tímto varováním?
 
-- Consider to cancel the treatment - press Cancel instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving COB unticked.
-- In case you are sure you need a correction bolus, enter it manually.
-- In any case be careful not to overdose!
+- Zvážit zrušení bolusu - stiskněte tlačítko Zrušit namísto OK.
+- Vypočítejte znovu nachystané jídlo bez zatrhnutého COB.
+- V případě, že jste si jisti, že potřebujete podat korekční bolus, zadejte jej ručně.
+- Ale buďte opatrní, aby nedošlo k předávkování!
 
 ### Proč algoritmus nedetekuje COB správně?
 
-- Maybe you overestimated carbs when entering them.
-- Activity / exercise after your previous meal
-- I:C needs adjustment
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA)
+- Možná jste přecenil sacharidy při jejich vkládání.
+- Aktivita / cvičení po předchozím jídle
+- Inzulínovosacharidový poměr vyžaduje úpravu
+- Hodnota pro min_5m_carbimpact je chybná (doporučeno je 8 s SMB, 3 s AMA)
 
 ## Ruční korekce zadaných sacharidů
 

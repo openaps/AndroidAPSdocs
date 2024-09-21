@@ -81,16 +81,16 @@ A ‘time shift’ within a user’s **Profile** feature will move the user’s 
 - **users changing time zones during travelling**; or
 - **users who are type 1 children**: and have a set bedtime routine and insulin resistance catered for within their **Profile**. If for whatever reason, there is a predicted later bedtime for the child, the caregiver can apply a ‘time shift’ to the child’s **Profile** to allow **AAPS** to react to insulin resistance at a desired time period as set by the user.
 
-It is always a question of which hour’s **Profile’s** settings should replace the settings of the current time. This time must be shifted by x hours. So please be mindful of the directions as described in the following example:
+It is always a question of which hour’s **Profile’s** settings should replace the settings of the current time. Čas je nutné posunout o x hodin. So please be mindful of the directions as described in the following example:
 
-- Current time: 12:00
-- **Positive** time shift 
+- Aktuální čas: 12:00
+- **Posun času dopředu** 
     - 2:00 **+10 h** -> 12:00
-    - Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
-- **Negative** time shift 
+    - Nastavení platná od 2:00 budou použita namísto těch, která normálně platí ve 12:00, protože posouváme profil dopředu.
+- **Dozadu** 
     - 22:00 **-10 h** -> 12:00
-    - Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
+    - Nastavení platná od 22:00 budou použita namísto těch, která normálně platí ve 12:00, protože posouváme profil dozadu.
 
-![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
+![Směry posunu profilu v čase](../images/ProfileSwitch_PlusMinus2.png)
 
 This mechanism of taking snapshots of the **Profile** allows a much more precise calculation of the past and the possibility to track **Profile** changes.

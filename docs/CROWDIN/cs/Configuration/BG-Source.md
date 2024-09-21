@@ -1,8 +1,8 @@
-# CGMS/FGMS Configuration
+# Konfigurace CGMS/FGMS
 
 * [Obecné](../Hardware/GeneralCGMRecommendation.md)
-* [Data Smoothing](../Usage/Smoothing-Blood-Glucose-Data.md)
-* [xDrip+Settings](./xdrip.md)
+* [Vyhlazování dat](../Usage/Smoothing-Blood-Glucose-Data.md)
+* [Nastavení xDrip+](./xdrip.md)
 * [Dexcom G7](../Hardware/DexcomG7.md)
 * [Dexcom G6](../Hardware/DexcomG6.md)
 * [Dexcom G5](../Hardware/DexcomG5.md)
@@ -11,5 +11,5 @@
 * [Libre 1](../Hardware/Libre1.md)
 * [Eversense](../Hardware/Eversense.md)
 * [MM640g/MM630g](../Hardware/MM640g.md)
-* [PocTech](../Hardware/PocTech.md)
-* [Nightscout as BG Source](../Hardware/CgmNightscoutUpload.md)
+* [Poctech](../Hardware/PocTech.md)
+* [Nightscout jako zdroj glykémie](../Hardware/CgmNightscoutUpload.md)

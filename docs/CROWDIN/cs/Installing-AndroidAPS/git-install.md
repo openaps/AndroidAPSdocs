@@ -4,71 +4,71 @@
 
 ### 1. Stažení git
 
-- **You have to be online all of the time as Android Studio downloads several updates!**
-- Any git version should work. For example [https://git-scm.com/download/win](https://git-scm.com/download/win).
-- Make sure to note down the installation path. Budete ji potřebovat v dalším kroku.
+- **Musíte zůstat online po celou dobu, co bude Android Studio stahovat nějaké aktualizace!**
+- Měly by fungovat všechny verze gitu. Například [https://git-scm.com/download/win](https://git-scm.com/download/win).
+- Poznačte si cestu instalace. Budete ji potřebovat v dalším kroku.
 
 ```{admonition} make git.exe available via Windows PATH
-:class: note
+:class: poznámka
 
-Make sure that you can call git.exe without the prefing path as Android Studio needs this to find git.exe. It will then automatically sets the path to git.exe correct in the Android Studio settings.
+Ujistěte se, že můžete spustit git.exe bez přednastavené cesty, protože Android Studio to vyžaduje k nalezení git.exe. Poté automaticky nastaví správnou cestu ke git.exe v nastavení Android Studia.
 
 ```
 
-![Git installation path](../images/Update_GitPath.png)
+![Instalační cesta gitu](../images/Update_GitPath.png)
 
 ### 2. Nastavení git v Android Studiu
 
-- Open File > Settings
+- Klikněte na File > Settings
 
-  ![Android Studio - open settings](../images/Update_GitSettings1.png)
+  ![Android Studio - otevřete nastavení](../images/Update_GitSettings1.png)
 
-- Click the small triangle next to Version Control (1.) to open the sub-menu.
+- Klikněte na malý trojúhelníček před Version Control (1.), rozbalí se související menu.
 
-- Click Git (2.).
+- Klikněte na Git (2.).
 
-- Make sure update method "Merge" (3.) is selected.
+- Ověřte, že v kolonce Update Method je zvolena volba Merge (3.).
 
-- Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
+- Kliknutím na tlačítko "Test" (4.) spustíte automatické ověření, že Android Studio má přístup k git.exe
 
-  ![Android Studio settings](../images/AndroidStudio361_09.png)
+  ![Nastavení aplikace Android Studio](../images/AndroidStudio361_09.png)
 
-- If automatic setting is successful git version will be displayed.
+- Pokud byl automatický test úspěšný zobrazí se okno s informací o verzi Git.
 
-- Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
+- Klikněte na "OK" v dialogovém okně (1.) a pak na "OK" v okně s nastavením (2.).
 
-  ![Automatic git installation succeeded](../images/AndroidStudio361_10.png)
+  ![Automatická instalace git byla úspěšná](../images/AndroidStudio361_10.png)
 
-- In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
+- Pokud soubor git.exe nebyl automatickým testem nalezen, klikněte na "OK" v dialogovém okně (1.) a pak na tlačítko se třemi tečkami (2.).
 
-- Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where it can be found. You are looking for git.exe located in binfolder.
+- Použijte funkci [vyhledávání](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) v programu Průzkumník souborů pro nalezení souboru "git.exe" pokud si nejste jisti, kde lze soubor najít. Hledejte soubor git.exe ve složce bin.
 
-- Select path to git.exe and make sure you selected the one in **\\bin\\** folder (3.) and click "OK" (4.).
+- Vyberte cestu k souboru git.exe a ujistěte se, že vybraný soubor je ve složce **\bin\** (3.) a klikněte na tlačítko “OK” (4.).
 
-- Close settings window by clicking "OK" button (5.).
+- Zavřete okno nastavení kliknutím na tlačítko "OK" (5.).
 
-  ![Automatic git installation failed](../images/AndroidStudio361_11.png)
+  ![Automatická instalace git selhala](../images/AndroidStudio361_11.png)
 
 ### 3. Restart
 
-- Reboot your PC to update System Environment.
+- Restartujte počítač, aktualizuje se prostředí jeho systému.
 
 (git-install-check-git-settings-in-android-studio)=
 ### 4. Kontrola nastavení git v Android Studiu
 
-- Open Terminal window in Android Studio
+- Otevřete terminálové okno v Android Studiu
 
-- Enter `git --version` (without quotation marks and no spaces between the two - \[minus sign\]!) and press Return
+- Napište `git - -version` (bez uvozovek a bez mezery mezi oběma - \[znaménky minus\]!) a stiskněte Enter
 
-  ![git - -version](../images/AndroidStudio_gitversion1.png)
+  ![git --version](../images/AndroidStudio_gitversion1.png)
 
-- If git is installed and connected properly you will receive an information about the installed version that looks as follows:
+- Pokud je git nainstalován a je správně nastaveno propojení, vypíše se informace o nainstalované verzi, bude vypadat obdobně:
 
   ![result git-version](../images/AndroidStudio_gitversion2.png)
 
 ## Mac
 
-- Any git version should work. For example [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
-- Use homebrew to install git: `` `$ brew install git` ``.
-- For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-- If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
+- Měly by fungovat všechny verze gitu. Například [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+- Použijte homebrew k instalaci gitu: `` `$ brew install git` ``.
+- Detaily o instalaci gitu naleznete v [oficiální dokumentaci gitu](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+- Pokud instalujete git přes homebrew, není třeba měnit žádné předvolby. Pokud by bylo třeba: Najdete je zde: Android Studio - Preferences.

@@ -12,7 +12,7 @@
 
 注意：AAPS 將資料寫入**幫浦的第一個基礎率設定檔**。
 
-* 一台 Android 手機（基本上每個 Android 版本都適用於 Insight，但請檢查[模組](module-phone)頁面了解運行 AAPS 所需的 Android 版本）。
+* 一台 Android 手機（基本上每個 Android 版本都適用於 Insight，但請檢查[模組](module-phone)頁面了解運作 AAPS 所需的 Android 版本）。
 * 您的手機上安裝了 AAPS 應用程式
 
 ## 設定
@@ -21,9 +21,9 @@
     
     ![移除血糖機 Insight 的螢幕截圖](../images/Insight_RemoveMeter.png)
 
-* 在 AAPS 應用程式的[配置建立器](../Configuration/Config-Builder)中，選擇幫浦區域的 Accu-Chek Insight。
+* 在 AAPS 應用程式的[組態建置工具](../Configuration/Config-Builder)中，選擇幫浦區域的 Accu-Chek Insight。
     
-    ![配置建立器 Insight 的螢幕截圖](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
+    ![組態建置工具 Insight 的螢幕截圖](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
 * 點擊齒輪圖示以打開 Insight 設定。
 
@@ -44,7 +44,7 @@
     
     ![Insight 配對 4 的螢幕截圖](../images/Insight_Pairing4.png)
 
-* 要檢查是否一切正常，返回 AAPS 中的配置建立器並點擊 Insight 幫浦旁的齒輪圖示進入 Insight 設定，然後點擊 Insight 配對，您將看到一些關於幫浦的資訊：
+* 要檢查是否一切正常，返回 AAPS 中的組態建置工具並點擊 Insight 幫浦旁的齒輪圖示進入 Insight 設定，然後點擊 Insight 配對，您將看到一些關於幫浦的資訊：
     
     ![Insight 配對資訊的螢幕截圖](../images/Insight_PairingInformation.png)
 
@@ -60,11 +60,11 @@
 
 在 AAPS 的 Insight 設定中，您可以啟用以下選項：
 
-* "記錄儲液筒更換"：這將在幫浦運行“填充導管”程式時自動記錄胰島素筒的更換。
+* "記錄儲液筒更換"：這將在幫浦運作“填充導管”程式時自動記錄胰島素筒的更換。
 
-* "記錄導管更換"：當您在幫浦上運行“填充導管”程式時，這會在 AAPS 資料庫中添加一個註記。
+* "記錄導管更換"：當您在幫浦上運作“填充導管”程式時，這會在 AAPS 資料庫中添加一個註記。
 
-* "記錄注射點更換"：這會在幫浦上運行“填充導管”程式時，在 AAPS 資料庫中添加一個註記。 **注意：更換注射點也會重置自動靈敏度調整（Autosens）。**
+* "記錄注射點更換"：這會在幫浦上運作“填充導管”程式時，在 AAPS 資料庫中添加一個註記。 **注意：更換注射點也會重置自動靈敏度調整（Autosens）。**
 
 * "記錄電池更換"：當您在幫浦中放入新電池時，這會記錄電池更換。
 
@@ -130,7 +130,7 @@
 
 Insight 在循環使用期間的電池壽命範圍為 10 到 14 天，最大 20 天。 報告此電池壽命的用戶使用的是 Energizer 鋰電池。
 
-Insight 幫浦有一個小型內部電池，可在更換可拆卸電池時維持時鐘等重要功能的運行。 如果更換電池的時間過長，內部電池可能會耗盡電力，時鐘將重置，並且在插入新電池後您需要重新設置時間和日期。 如果發生這種情況，更換電池前在 AAPS 中的所有記錄將不再包括在計算中，因為無法正確識別正確的時間。
+Insight 幫浦有一個小型內部電池，可在更換可拆卸電池時維持時鐘等重要功能的運作。 如果更換電池的時間過長，內部電池可能會耗盡電力，時鐘將重置，並且在插入新電池後您需要重新設置時間和日期。 如果發生這種情況，更換電池前在 AAPS 中的所有記錄將不再包括在計算中，因為無法正確識別正確的時間。
 
 (Accu-Chek-Insight-Pump-insight-specific-errors)=
 

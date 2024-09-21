@@ -1,16 +1,16 @@
-# 建構設定檔
+# 組態建置工具
 
-根據你的設定，你可以透過螢幕頂部的標籤或選單開「啟建構設定檔」。
+根據你的設定，你可以透過螢幕頂部的標籤或選單開「啟組態建置工具」。
 
-![開啟建構設定檔](../images/ConfBuild_Open_AAPS30.png)
+![開啟組態建置工具](../images/ConfBuild_Open_AAPS30.png)
 
-建構設定檔（Conf）是你用來啟用或停用模組功能的標籤。 左側的框（A）允許你選擇要使用哪一個，右側的框（C）允許你將這些顯示為 AAPS 中的標籤（E）。 如果右側的框未啟用，你可以透過螢幕左上方的選單（D）進入該功能。
+組態建置工具（Conf）是你用來啟用或停用模組功能的標籤。 左側的框（A）允許你選擇要使用哪一個，右側的框（C）允許你將這些顯示為 AAPS 中的標籤（E）。 如果右側的框未啟用，你可以透過螢幕左上方的選單（D）進入該功能。
 
 如果模組內有額外的設定可用，你可以點擊齒輪（B），這會將你帶到偏好設定中的特定設置。
 
 **首次配置：**從 AAPS 2.0 開始，設定嚮導會引導你完成 AAPS 的配置過程。 按下螢幕右上角的三點選單（F），並選擇「設定嚮導」來使用它。
 
-![建構設定檔框和齒輪](../images/ConfBuild_ConfigBuilder_AAPS30.png)
+![組態建置工具框和齒輪](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
 (Config-Builder-tab-or-hamburger-menu)=
 
@@ -31,11 +31,11 @@
 
 (Config-Builder-local-profile)=
 
-### 本地個人設置(Local profile)
+### 本地設定檔(Local profile)
 
-本地個人設置使用手動輸入到手機中的基礎率設定檔。 一旦選擇它，AAPS 中將會顯示一個新標籤，必要時你可以更改從幫浦讀取的設定檔資料。 下次切換設定檔時，這些資料將寫入幫浦中的設定檔 1。 建議使用這個個人設置，因為它不依賴於網際網路連線。
+本地設定檔使用手動輸入到手機中的基礎率設定檔。 一旦選擇它，AAPS 中將會顯示一個新標籤，必要時你可以更改從幫浦讀取的設定檔資料。 下次切換設定檔時，這些資料將寫入幫浦中的設定檔 1。 建議使用這個設定檔，因為它不依賴於網際網路連線。
 
-你的本地個人設置是[匯出設定](../Usage/ExportImportSettings.md)的一部分。 因此，確保有一個安全的備份。
+你的本地設定檔是[匯出設定](../Usage/ExportImportSettings.md)的一部分。 因此，確保有一個安全的備份。
 
 ![本地設定檔設置](../images/LocalProfile_Settings.png)
 
@@ -45,19 +45,19 @@
 * 紅色 X：刪除
 * 藍色箭頭：複製
 
-如果你對個人設置進行任何更改，請確保你正在編輯正確的設定。 在個人設置標籤中，不一定會顯示當前正在使用的個人設置——例如，如果你使用主畫面的個人設置標籤進行切換，該個人設置可能與個人設置標籤中顯示的不同，因為兩者之間沒有連線。
+如果你對設定檔進行任何更改，請確保你正在編輯正確的設定。 在設定檔標籤中，不一定會顯示當前正在使用的設定檔——例如，如果你使用主畫面的設定檔標籤進行切換，該設定檔可能與設定檔標籤中顯示的不同，因為兩者之間沒有連線。
 
-#### 複製個人設置切換
+#### 複製設定檔切換
 
-你可以輕鬆從個人設置切換中建立新的本地個人設置。 在此情況下，時間偏移和百分比將應用於新本地個人設置。
+你可以輕鬆從設定檔切換中建立新的本地設定檔。 在此情況下，時間偏移和百分比將應用於新本地設定檔。
 
 1. 點擊右上角的三點選單。
-2. 選擇「治療措施」。
+2. 選擇「治療」。
 3. 按下星號圖示以進入設定檔切換頁面。
 4. 選擇所需的設定檔切換並按「複製」。
-5. 你可以在本地設定檔（LP）標籤中或通過選單編輯新的本地設定檔。
+5. 你可以在本地設定檔（LP）標籤中或透過選單編輯新的本地設定檔。
 
-![複製個人設置切換](../images/LocalProfile_ClonePS_AAPS30.png)
+![複製設定檔切換](../images/LocalProfile_ClonePS_AAPS30.png)
 
 (Config-Builder-upload-local-profiles-to-nightscout)=
 
@@ -71,7 +71,7 @@
 
 你可以將 Nightscout 設定檔編輯器中的更改同步至本地設定檔。 可以在[NSClient 偏好設定](Preferences-nsclient)中找到這些設定。
 
-有必要複製整個當前活動的 Nightscout 資料庫記錄，而不僅僅是藍色箭頭的設定檔！ 新的資料庫記錄將攜帶當前日期，並可以通過「本地設定檔」標籤啟用。
+有必要複製整個當前活動的 Nightscout 資料庫記錄，而不僅僅是藍色箭頭的設定檔！ 新的資料庫記錄將攜帶當前日期，並可以透過「本地設定檔」標籤啟用。
 
 ![複製資料庫記錄](../images/Nightscout_Profile_Editor.PNG)
 
@@ -109,7 +109,7 @@
 * 對於 'Rapid-Acting'、'Ultra-Rapid' 和 'Lyumjev'，DIA 是唯一可以自行調整的變數，峰值時間是固定的。 
 * Free-Peak 允許你同時調整 DIA 和峰值時間，這僅應由了解這些設置效果的高級使用者使用。 
 * [胰島素曲線圖](Screenshots-insulin-profile)幫助你了解不同的曲線。
-* 你可以通過啟用勾選框將其顯示為標籤，否則它將在選單中。
+* 你可以透過啟用勾選框將其顯示為標籤，否則它將在選單中。
 
 #### Rapid-Acting Oref
 
@@ -151,7 +151,7 @@
 
 選擇你正在使用的血糖來源——詳情請參閱[血糖來源](BG-Source.md)頁面。
 
-![建構設定檔：血糖來源選擇](../images/ConfBuild_BG.png)
+![組態建置工具：血糖來源選擇](../images/ConfBuild_BG.png)
 
 * [構建你自己的 Dexcom 應用程式（BYODA）](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0)。
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
@@ -169,7 +169,7 @@
 
 選擇你正在使用的幫浦。
 
-![建構設定檔幫浦選擇](../images/ConfBuild_Pump_AAPS30.png)
+![組態建置工具幫浦選擇](../images/ConfBuild_Pump_AAPS30.png)
 
 * [Dana R](DanaR-Insulin-Pump.md)
 * Dana R Korean（適用於國內 DanaR 幫浦）
@@ -208,13 +208,13 @@
 選擇用於治療調整的 APS 演算法。 你可以在 OpenAPS (OAPS) 標籤中查看選定演算法的活動詳情。
 
 * OpenAPS AMA（進階餐前輔助，2017 年的演算法狀態）簡單來說，它的好處是在你自己進行餐前注射後，如果你可靠地輸入碳水化合物，系統可以更快地提高臨時基礎率。
-* [OpenAPS SMB](../Usage/Open-APS-features.md)（超微量注射，針對進階使用者的最新演算法） 注意：你需要在[目標 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)，才能使用 OpenAPS SMB，並且必須在建構設定檔 > 敏感性檢測 > 敏感性 Oref1 設定中將 min_5m_carbimpact 設置為 8。
+* [OpenAPS SMB](../Usage/Open-APS-features.md)（超微量注射，針對進階使用者的最新演算法） 注意：你需要在[目標 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)，才能使用 OpenAPS SMB，並且必須在組態建置工具 > 敏感性檢測 > 敏感性 Oref1 設定中將 min_5m_carbimpact 設置為 8。
 
 ## 循環
 
 * 在開放循環、閉合循環和低血糖暫停 (LGS) 之間切換。
 
-![建構設定檔 - 循環模式](../images/ConfigBuilder_LoopLGS.png)
+![組態建置工具 - 循環模式](../images/ConfigBuilder_LoopLGS.png)
 
 (Config-Builder-open-loop)=
 
@@ -254,15 +254,15 @@ AAPS 有一個學習計畫（目標），你必須逐步完成它。 這將引�
 
 更多資訊請參閱[目標](../Usage/Objectives.md)頁面。
 
-## 治療措施
+## 治療
 
-如果你查看「治療措施」（Treat）標籤，你可以看到已上傳到 Nightscout 的治療記錄。 如果你希望編輯或刪除一個條目（例如你吃的碳水化合物比預期少），請選擇「刪除」，然後通過[主畫面的碳水按鈕](Screenshots-carb-correction)輸入新數值（如果有需要，請更改時間）。
+如果你查看「治療」（Treat）標籤，你可以看到已上傳到 Nightscout 的治療記錄。 如果你希望編輯或刪除一個條目（例如你吃的碳水化合物比預期少），請選擇「刪除」，然後透過[主畫面的碳水按鈕](Screenshots-carb-correction)輸入新數值（如果有需要，請更改時間）。
 
 ## 一般問題
 
 ### 首頁總覽
 
-顯示當前循環狀態和最常見操作的按鈕（詳情請參閱[主畫面](../Getting-Started/Screenshots.md)部分）。 你可以通過點擊齒輪圖示訪問設置。
+顯示當前循環狀態和最常見操作的按鈕（詳情請參閱[主畫面](../Getting-Started/Screenshots.md)部分）。 你可以透過點擊齒輪圖示查看設置。
 
 #### 保持螢幕常亮
 
@@ -272,7 +272,7 @@ AAPS 有一個學習計畫（目標），你必須逐步完成它。 這將引�
 
 定義顯示在主畫面上的按鈕。
 
-* 治療措施
+* 治療
 * 計算機
 * 胰島素
 * 碳水化合物
@@ -327,7 +327,7 @@ AAPS 有一個學習計畫（目標），你必須逐步完成它。 這將引�
 
 ### 操作
 
-* 一些按鈕可快速訪問常見功能。
+* 一些按鈕可快速查看常見功能。
 * 詳情請參閱[AAPS 截圖](Screenshots-action-tab)。
 
 ### 自動化
@@ -374,6 +374,6 @@ AAPS 有一個學習計畫（目標），你必須逐步完成它。 這將引�
 
 電子郵件和要發送的日誌數量。 通常無需變更。
 
-### 建構設定檔
+### 組態建置工具
 
-使用建構設定檔標籤取代選單圖示。
+使用組態建置工具標籤取代選單圖示。

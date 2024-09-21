@@ -4,51 +4,51 @@
 
 ## Bezpečnostní pokyny
 
-Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
+Kromě sledování může být Nightscout použit také k ovládání AAPS. Tj. můžete nastavit dočasné cíle nebo přidat budoucí sacharidy. Tyto informace budou sbírány AAPS a bude to fungovat odpovídajícím způsobem. Proto stojí za to přemýšlet o zabezpečení Nightscout webové stránky.
 
-Exercise maximum caution if using Nightscout as your AAPS data source.
+Buďte maximálně opatrní, pokud používáte Nightscout jako zdroj dat v AAPS.
 
 ### Nastavení Nightscoutu
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security): make sure you only share your URL with a `readable` token, never with an `admin` token.
+Veřejný přístup k webu Nightscout můžete odepřít použitím [autentizačních rolí](https://nightscout.github.io/nightscout/security): ujistěte se, že sdílíte svou URL pouze pomocí `tokenu pro čtení`, nikdy s `admin` tokenem.
 
-Nightscout `API_SECRET` is your site main password: don't share it publicly.
+Nightscout `API_SECRET` je hlavní heslo vašeho webu: nesdílejte jej veřejně.
 
-### AAPS settings
+### Nastavení AAPS
 
-You can setup AAPS to accept Nightscout commands (profile changes, treatments, ...), or fully disable it.
+AAPS můžete nastavit tak, aby přijímal Nightscout příkazy (změny profilu, ošetření, ...), nebo je zcela zakázat.
 
-* Access the NSClient or NSClientV3 plugin settings with either 1) Main view -> Config Builder -> Synchronization -> NSClient Cog icon 2) NSCLIENT tab -> Three dots menu -> Plugin preferences
-* Enable all data upload to Nightscout (3) as this is now the standard method unless your BG data source is Nightscout.  
-  If your AAPS BG data source is Nightscout **do not** enable Upload BG data to NS (3).
-* Do not enable Receive/backfill data (4) unless Nightscout is your BG data source.
+* Přistupujte k nastavením pluginů NSClient nebo NSClientV3 pomocí 1) Hlavní zobrazení -> Konfigurace -> Synchronizace -> Ikona ozubeného kola u NSClient 2) Záložka NSCLIENT -> Třítečkové menu -> Předvolby pluginu
+* Povolte nahrání všech dat do Nightscoutu (3), protože to je nyní standardní postup, pokud není zdrojem vašich údajů o glykémii Nightscout.  
+  Pokud je v AAPS zdrojem vašich údajů o glykémii Nightscout, **nepovolujte** nahrávání údajů o glykémii do NS (3).
+* Nepovolujte přijímání/vyplňování dat (4) pokud Nightscout není vaším zdrojem dat glykémie.
 
-![Nightscout upload only](../images/NSsafety.png)
+![Nightscout pouze nahrávání](../images/NSsafety.png)
 
-#### Do not sync from Nightscout
+#### Nesynchronizujte z Nightscoutu
 
-Disabling these options makes sure no Nightscout change will be used by AAPS.
+Zakázáním těchto možností se zajistí, že žádná změna v Nightscoutu nebude použita AAPS.
 
-![Nightscout upload only](../images/NSsafety2.png)
+![Nightscout pouze nahrávání](../images/NSsafety2.png)
 
-#### Accept changes from Nightscout
+#### Přijmout změny z Nightscoutu
 
-Enabling these options allow you to remotely change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS.  
-Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
+Povolení těchto možností vám umožní vzdáleně měnit nastavení AAPS přes Nightscout, např. změny a přepínání profilů, dočasné cíle a přidávání sacharidů, které budou brány v úvahu AAPS.  
+Mějte ale na paměti, že zadané dávky inzulínu budou použity pouze pro výpočty podle pravidla "Neaplikovat inzulín, pouze zaznamenat".
 
-![Nightscout upload only](../images/NSsafety3.png)
+![Nightscout pouze nahrávání](../images/NSsafety3.png)
 
 ### Další nastavení zabezpečení
 
-Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
+Udržujte svůj telefon aktualizovaný, jak je popsáno v části [bezpečnost na prvním místě](../Getting-Started/Safety-first.md).
 
 (Nightscout-manual-nightscout-setup)=
 
 ## Ruční nastavení Nightscoutu
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 15 for AAPS 3.2, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
+Předpokládá se, že Nightscout stránky už máte, pokud ne, tak navštivte stránku [Nightscout](http://nightscout.github.io/nightscout/new_user/) pro návod k založení. Následující pokyny jsou nastavení, která potřebujete provést v Nightscoutu pro správnou funkčnost AndroidAPS. Aby fungovalo správně propojení s AAPS od verze 3.2, váš Nightscout server musí být alespoň ve verzi 15. Ověřte si, že provozujete [poslední verzi](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) Nightscoutu, jinak bude AAPS reagovat chybovou zprávou.
 
-* [Edit your variables](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
+* [Upravte své proměnné](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
 * Přidejte nebo upravte proměnné takto:
   
@@ -60,12 +60,12 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
-* Save the modifications. Your Nightscout site should now allow you to display the pills. You can force default display adding them in `SHOW_PLUGINS`.
+* Uložte změny. Váš Nightscout web by nyní měl umožňovat zobrazení pilulek. Můžete vynutit výchozí zobrazení přidáním do `SHOW_PLUGINS`.
   
   * `SHOW_PLUGINS` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   
   ![Nightscout Pills](../images/nightscout1.png)
 
-## Nightscout as a paid SaaS (Software as a Service)
+## Nightscout jako placená služba typu SaaS (Software as a Service)
 
-Use the vendor web interface to set the variables. Contact the vendor support service if necessary.
+Použijte webové rozhraní dodavatele k nastavení proměnných. V případě potřeby kontaktujte službu podpory dodavatele.

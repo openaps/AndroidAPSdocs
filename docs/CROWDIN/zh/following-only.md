@@ -41,21 +41,21 @@ G)  Spike（iOS）
 
 #### 設置 Dexcom Follow：操作指南
 
-如果你使用的是非官方的 Dexcom 應用程式 BYODA 來接收傳感器資料，你可能可以從 BYODA 應用程式內向追蹤者發送邀請。 你應該也可以從 xDrip+ 中發送 Dexcom Follow 的邀請（設置 - 雲上傳 - Dexcom 分享伺服器上傳，請參見這裡的指示：
+如果你使用的是非官方的 Dexcom 應用程式 BYODA 來接收傳感器資料，你可能可以從 BYODA 應用程式內向追蹤者發送邀請。 你應該也可以從 xDrip+ 中發送 Dexcom Follow 的邀請（設置 - 雲上傳 - Dexcom 分享伺服器上傳，請參閱這裡的指示：
 
 https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
-你無法再通過這些第三方應用程式向 Dexcom 追蹤者發送邀請郵件。 在 xDrip+ 中，邀請請求只會顯示訊息“未發送邀請”。
+你無法再透過這些第三方應用程式向 Dexcom 追蹤者發送邀請郵件。 在 xDrip+ 中，邀請請求只會顯示訊息“未發送邀請”。
 
 你必須安裝官方的 Dexcom 應用程式，發送邀請，然後卸載官方應用程式。
 
 步驟如下：
 
-1)  在_任何_智慧型手機（Android/iPhone）上安裝官方的“Dexcom”應用程式，如果方便的話，也可以安裝在追蹤者的手機上。 2)  使用你的 Dexcom 用戶名和密碼登錄，這與你用於 Dexcom Clarity 的登錄信息相同，如果你已經是 Dexcom/Clarity 的客戶。 如果你沒有 Dexcom 登錄，這時可以選擇建立新帳號。   
-3) 滑動瀏覽介紹選單。 4)  對於傳感器代碼，選擇“無代碼”。 5)  在發射器序號下，選擇“手動輸入”，並輸入任何有效的發射器代碼（如果你知道一個過期的發射器代碼，請使用它，這樣就不會干擾當前發射器的運行，它們遵循特定的數字和字母組合格式：“NLNNNL”，並且只使用特定的組合，因此使用你已知有效的代碼會更容易）。 6)  一旦應用程式嘗試查找發射器和傳感器，你將能夠邀請追蹤者：選擇應用程式左上角的小三個點，然後新增追蹤者。 如果你的其中一個追蹤者更換了手機，需要重新發送邀請，也可以在此處刪除他們並重新發送新的邀請郵件，供他們在新設備上使用。 7)  在追蹤者的手機上，通過 App Store（iPhone）或 Play 商店（Android）下載並安裝 Dexcom Follow。 設置 Dexcom Follow 應用程式，系統會提示你打開電子郵件以找到成為跟追蹤的邀請。    
+1)  在_任何_智慧型手機（Android/iPhone）上安裝官方的“Dexcom”應用程式，如果方便的話，也可以安裝在追蹤者的手機上。 2)  使用你的 Dexcom 用戶名和密碼登錄，這與你用於 Dexcom Clarity 的登錄訊息相同，如果你已經是 Dexcom/Clarity 的客戶。 如果你沒有 Dexcom 登錄，這時可以選擇建立新帳號。   
+3) 滑動瀏覽介紹選單。 4)  對於傳感器代碼，選擇“無代碼”。 5)  在發射器序號下，選擇“手動輸入”，並輸入任何有效的發射器代碼（如果你知道一個過期的發射器代碼，請使用它，這樣就不會干擾當前發射器的運作，它們遵循特定的數字和字母組合格式：“NLNNNL”，並且只使用特定的組合，因此使用你已知有效的代碼會更容易）。 6)  一旦應用程式嘗試查找發射器和傳感器，你將能夠邀請追蹤者：選擇應用程式左上角的小三個點，然後新增追蹤者。 如果你的其中一個追蹤者更換了手機，需要重新發送邀請，也可以在此處刪除他們並重新發送新的邀請郵件，供他們在新設備上使用。 7)  在追蹤者的手機上，透過 App Store（iPhone）或 Play 商店（Android）下載並安裝 Dexcom Follow。 設置 Dexcom Follow 應用程式，系統會提示你打開電子郵件以找到成為跟追蹤的邀請。    
 )  現在你可以刪除官方的 Dexcom G6 應用程式。
 
-對於 Dexcom Follow，傳感器資料會根據你使用的應用程式，從 AAPS 手機直接通過 BYODA 或 xDrip+ 匯出。
+對於 Dexcom Follow，傳感器資料會根據你使用的應用程式，從 AAPS 手機直接透過 BYODA 或 xDrip+ 匯出。
 
 
 ### B) Nightguard（iOS）
@@ -93,7 +93,7 @@ https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
 ●   該應用程式可從[Google play](https://play.google.com/store/apps/details?id=se.cornixit.nightwatch)下載，並以實時方式顯示血糖資料。
 
-●   用戶可以通過自訂的高低噪音警報進行提醒。
+●   用戶可以透過自訂的高低噪音警報進行提醒。
 
 ●   血糖資料可以用 mmol/L 或 mg/dL 顯示。
 
@@ -142,7 +142,7 @@ xDripSwift 是從最初的 xDrip 應用程式移植到 iOS 並發展成"xDrip fo
 
 https://xdrip4ios.readthedocs.io/en/latest/install/build/
 
-如果你願意，你還可以成為“發佈者”，並通過 Personal Testflight 分享 xDrip4iOS 給最多 100 個其他人，幫助他們：https://xdrip4ios.readthedocs.io/.../personal_testflight/
+如果你願意，你還可以成為“發佈者”，並透過 Personal Testflight 分享 xDrip4iOS 給最多 100 個其他人，幫助他們：https://xdrip4ios.readthedocs.io/.../personal_testflight/
 
 2. 你可以加入 [xDrip4iOS Facebook 群組](https://www.facebook.com/groups/853994615056838/announcements)，並關注帖子……等待有人在群組中提供邀請加入他們的 Personal Testflight 版本。 **你不應該主動要求獲得應用程式邀請**（請閱讀群組規則）。
 
@@ -158,7 +158,7 @@ https://xdrip4ios.readthedocs.io/en/latest/install/build/
 
 ![圖像](./images/fae3ec63-2c2c-4152-ab42-97f9744a8f36.png)
 
-“什麼是 Shuggah？” 一群烏克蘭開發者複製了 GitHub 上公開分享的 xDrip4iOS 項目代碼，並在 Apple Store 上以商業帳戶發佈該應用程式（該應用程式是免費的，他們的初衷是好的）。 該應用程式必須稍作修改以添加隱私聲明和免責聲明才能通過審核，但其餘部分應與 xDrip4iOS 相同。 Shuggah 發佈版不是由 xDrip4iOS 開發者管理的，因此不能保證它的功能與 xDrip4iOS 相同，也不能保證它會與 xDrip4iOS 同時更新，或者 Apple 不會在某個時間點將其從 App Store 中移除。
+“什麼是 Shuggah？” 一群烏克蘭開發者複製了 GitHub 上公開分享的 xDrip4iOS 項目代碼，並在 Apple Store 上以商業帳戶發佈該應用程式（該應用程式是免費的，他們的初衷是好的）。 該應用程式必須稍作修改以添加隱私聲明和免責聲明才能透過審核，但其餘部分應與 xDrip4iOS 相同。 Shuggah 發佈版不是由 xDrip4iOS 開發者管理的，因此不能保證它的功能與 xDrip4iOS 相同，也不能保證它會與 xDrip4iOS 同時更新，或者 Apple 不會在某個時間點將其從 App Store 中移除。
 
 xDrip4iOS Facebook 群組支援 xDrip4iOS、Shuggah 以及相應的 Apple Watch 應用程式。
 
@@ -178,11 +178,11 @@ xDrip4iOS Facebook 群組支援 xDrip4iOS、Shuggah 以及相應的 Apple Watch 
 
 ![圖像](./images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
 
-Spike 可用作主要接收器或追蹤者應用程式，提供血糖、警報、IOB 等功能。 該網站和應用程式已不再開發。 詳細資訊請參見 [這裡](https://spike-app.com/#features2)。 支援可以在 [Facebook](https://www.facebook.com/groups/1973791946274873) 和 [Gitter](https://gitter.im/SpikeiOS/Lobby) 上找到。
+Spike 可用作主要接收器或追蹤者應用程式，提供血糖、警報、IOB 等功能。 該網站和應用程式已不再開發。 詳細資訊請參閱 [這裡](https://spike-app.com/#features2)。 支援可以在 [Facebook](https://www.facebook.com/groups/1973791946274873) 和 [Gitter](https://gitter.im/SpikeiOS/Lobby) 上找到。
 
-要安裝 Spike，請參見 [這裡](https://spike-app.com/#installation)
+要安裝 Spike，請參閱 [這裡](https://spike-app.com/#installation)
 
-## 2) 用於 **監控 AAPS** 的智慧手錶（完整的個人資料資料或僅顯示血糖）當 **AAPS** 在手機上運行時。
+## 2) 用於 **監控 AAPS** 的智慧型手錶（完整的個人資料資料或僅顯示血糖）當 **AAPS** 在手機上運作時。
 
 允許與 **AAPS** 進行互動的智慧型手錶選項已在文件的 ["遠端控制"](remote-control.md) 部分中描述。
 
@@ -192,7 +192,7 @@ Spike 可用作主要接收器或追蹤者應用程式，提供血糖、警報�
 
 ### a)  **小米和 Amazfit 手錶**
 
-[Artem](https://github.com/bigdigital) 為各種智慧手錶型號建立了一個 xDrip+ 集成應用程式 WatchDrip+，主要針對小米（如 Mi band）和 Amazfit 品牌：
+[Artem](https://github.com/bigdigital) 為各種智慧型手錶型號建立了一個 xDrip+ 集成應用程式 WatchDrip+，主要針對小米（如 Mi band）和 Amazfit 品牌：
 
 ![圖像](./images/4dba454b-f808-4e9e-bfc6-aba698e006f8.png)
 
@@ -214,11 +214,11 @@ Pebble 手錶（[現已停產](https://en.wikipedia.org/wiki/Pebble_(watch))）�
 ![圖像](./images/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74.png)
 
 
-這是一款獨特的技術產品，可以 **直接**從 Dexcom G6 發射器接收血糖資料。 很多人不知道 Dexcom G6 發射器實際上會在兩個獨立的通道上廣播當前的血糖資料，一個是手機通道，另一個是幫浦通道。 Bluejay GTS 手錶運行的是經過修改的 Xdrip+ 軟體，並且可以設置為在任一通道上接收血糖資料，因此如果 **AAPS** 使用手機通道，那麼 Bluejay GTS 手錶可以使用幫浦通道。
+這是一款獨特的技術產品，可以 **直接**從 Dexcom G6 發射器接收血糖資料。 很多人不知道 Dexcom G6 發射器實際上會在兩個獨立的通道上廣播當前的血糖資料，一個是手機通道，另一個是幫浦通道。 Bluejay GTS 手錶運作的是經過修改的 Xdrip+ 軟體，並且可以設置為在任一通道上接收血糖資料，因此如果 **AAPS** 使用手機通道，那麼 Bluejay GTS 手錶可以使用幫浦通道。
 
 Bluejay GTS 手錶體積小、防水且價格相對實惠（目前售價為 115 英鎊），可從英國國際運送。 其主要優點是它目前是唯一完全獨立於手機和循環系統的手錶。 例如，如果你在海灘或水上樂園時中斷幫浦和 **AAPS**手機的連線，並且超出了 AAPS 手機的範圍，你仍然可以從 Dexcom G6 直接獲取 Bluejay 手錶的讀數。
 
-報告的缺點是它並不總是每 5 分鐘獲取一次讀數，並且電池不可更換。 Bluejay GTS 手錶運行的是經過修改的 Xdrip+ 軟體，目前不支援其他 Dexcom 版本（如 G7）或 Libre 傳感器。
+報告的缺點是它並不總是每 5 分鐘獲取一次讀數，並且電池不可更換。 Bluejay GTS 手錶運作的是經過修改的 Xdrip+ 軟體，目前不支援其他 Dexcom 版本（如 G7）或 Libre 傳感器。
 
 ### d) Apple 手錶
 
@@ -245,7 +245,7 @@ C)  PC（Teamviewer）
 
 
 
-M5Stack 是一個小盒子，可以編程為多種應用程式，Martin 的項目 [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) 顯示傳感器血糖值和趨勢、IOB 和 COB。 它是一個塑膠盒，配備了彩色顯示屏、micro SD 卡槽、3 個按鈕、揚聲器和內置電池。 它是一個很棒的血糖監測器，並且如果你擁有 Nightscout 帳戶，設置相對容易。 用戶通常將其運行在他們的家庭 wifi 上，但有些用戶報告說，他們通過手機 wifi 熱點在騎摩托車時使用它作為顯示器。
+M5Stack 是一個小盒子，可以編程為多種應用程式，Martin 的項目 [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) 顯示傳感器血糖值和趨勢、IOB 和 COB。 它是一個塑膠盒，配備了彩色顯示屏、micro SD 卡槽、3 個按鈕、揚聲器和內置電池。 它是一個很棒的血糖監測器，並且如果你擁有 Nightscout 帳戶，設置相對容易。 用戶通常將其運作在他們的家庭 wifi 上，但有些用戶報告說，他們透過手機 wifi 熱點在騎摩托車時使用它作為顯示器。
 
 ### B) Sugarpixel
 
@@ -255,7 +255,7 @@ SugarPixel 是一個連線 Dexcom 應用程式或 Nightscout 應用程式的次�
 
 ![圖像](./images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
-●   SugarPixel 具有多種顯示選項，支援 mg/dL 和 mmol/L，以滿足用戶的需求，並且帶有顏色標識的血糖值。 ●   標準顯示面板顯示血糖讀數、趨勢箭頭和 Delta 值。 Delta 是與上一次讀數的變化值（正或負）。 ●   SugarPixel 可以自定義為低亮度模式，顯示血糖和時間面板，方便用戶在床邊桌上查看當前血糖讀數和時間。 ●   SugarPixel 的彩色面板利用整個顯示屏來展示單一顏色，代表當前的血糖值。 這使得用戶可以在戶外的後院、露台或游泳池旁，通過窗戶從遠處看到血糖讀數。 ●   大血糖面板非常適合床邊使用，特別是佩戴眼鏡或隱形眼鏡的用戶。
+●   SugarPixel 具有多種顯示選項，支援 mg/dL 和 mmol/L，以滿足用戶的需求，並且帶有顏色標識的血糖值。 ●   標準顯示面板顯示血糖讀數、趨勢箭頭和 Delta 值。 Delta 是與上一次讀數的變化值（正或負）。 ●   SugarPixel 可以自定義為低亮度模式，顯示血糖和時間面板，方便用戶在床邊桌上查看當前血糖讀數和時間。 ●   SugarPixel 的彩色面板利用整個顯示屏來展示單一顏色，代表當前的血糖值。 這使得用戶可以在戶外的後院、露台或游泳池旁，透過窗戶從遠處看到血糖讀數。 ●   大血糖面板非常適合床邊使用，特別是佩戴眼鏡或隱形眼鏡的用戶。
 
 
 ### C) 電腦（TeamViewer）
