@@ -20,7 +20,7 @@
 
 我們的範例是對AndroidAPS文檔進行編輯。 這可以在任何Windows PC、Mac等設備上完成。 （任何有互聯網查看的電腦）。
 
-1. 查看https://github.com/openaps/AndroidAPSdocs，然後點擊右上角的Fork來製作您自己的庫副本。
+1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
 
 ![Fork庫](./images/PR0.png)
 

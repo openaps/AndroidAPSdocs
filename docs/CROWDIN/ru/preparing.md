@@ -85,7 +85,7 @@ An **index** and explanation of the documentation structure can be found [here](
 
 - [Как установить AAPS](Installing-AndroidAPS/Building-APK.md)? (Раздел D) который включает секцию [Устранение неполадок](Usage/troubleshooting.md).
 
-How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](how-long-will-it-take-to-set-everything-up))
+How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#how-long-will-it-take-to-set-everything-up))
 
 
 #### Хранилище ключей &  файл экспорта настроек конфигурации
@@ -107,7 +107,7 @@ How long it takes to get to closed looping depends on the individual, but an app
 
 ##### [ask on the AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/)
 
-##### [ask on the AAPS Discord channel](https://discord.com/channels/629952586895851530/629954570394533889)
+##### [ask on the AAPS Discord channel](https://discord.gg/4fQUWHZ4Mw)
 
 
 

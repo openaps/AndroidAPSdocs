@@ -85,7 +85,7 @@ N.B. 如果您使用不同的 HbA1c 單位（mmol/mol 而非 %），請點擊[�
 
 - “[如何安裝 AAPS](Installing-AndroidAPS/Building-APK.md)？” （D 部分），包括[故障排除](Usage/troubleshooting.md)子部分。
 
-進入閉環的時間取決於個人，但可以在此處找到進入完整閉環的大致時間表（[這裡](how-long-will-it-take-to-set-everything-up)）。
+How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#how-long-will-it-take-to-set-everything-up))
 
 
 #### Keystore 和配置設置匯出文件
@@ -107,7 +107,7 @@ N.B. 如果您使用不同的 HbA1c 單位（mmol/mol 而非 %），請點擊[�
 
 ##### [在 AAPS Facebook 社群上詢問](https://www.facebook.com/groups/AndroidAPSUsers/)
 
-##### [在 AAPS Discord 頻道上詢問](https://discord.com/channels/629952586895851530/629954570394533889)
+##### [在 AAPS Discord 頻道上詢問](https://discord.gg/4fQUWHZ4Mw)
 
 
 
