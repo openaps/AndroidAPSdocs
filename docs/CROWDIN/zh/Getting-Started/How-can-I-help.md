@@ -1,35 +1,35 @@
-# How to help with AAPS
+# 如何協助 AAPS
 
-## AAPS operates entirely on volunteer efforts and has no paid staff.
+## AAPS 完全依靠志願者的努力運作，沒有任何付費員工。
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+開發者們是家長、照護者、親友以及糖尿病患者，他們共同努力開發和改進一個能滿足普遍需求的解決方案。 開發者們無償地捐出他們的閒暇時間，但期望他們還要自己承擔額外成本來開發這麼出色的開源和免費的項目，有點不太公平。
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*為了完全測試新設備，開發者需要備用手機和備用幫浦，因為直到系統穩定之前，它無法在人類身上使用。 隨著新型號的推出，也需要進行測試。 部分捐款還用於物流費用，例如將這些供應品跨國寄送給開發者。 有時也希望能為開發者們提供支援，讓他們能夠走出黑暗的房間，參加會議和活動，讓他們的創造力和分析能力互相激盪。*
 
-## I can write code! How do I participate?
+## 我會寫程式！ 我該如何參與？
 
-Yay! Look at the issues, ask in the discord channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+太棒了！ 查看問題列表，並在 Discord 頻道中詢問，總有許多事情可以做！ 先選擇一個小任務並進行您的首次 pull request！ :)
 
-## I know the system and can write documentation!
+## 我了解系統，並且會撰寫文件！
 
-Great, this is a highly appreciated thing and a good way to pay it forward!
+太好了，這是非常受到歡迎的事，也是報答社群的好方式！
 
-* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../make-a-PR.md). Other languages are only translated from english and can't be edited for consistency reasons.
+* 關於 Wiki 的 Discord 頻道可以在這裡找到：[AndroidAPS](https://discord.gg/4fQUWHZ4Mw)。 
+* 如何對英文 Wiki 進行提交的指南可以在這裡找到：[如何提交 PR](../make-a-PR.md)。 其他語言僅從英文翻譯，出於一致性原因，無法進行編輯。
 
-## I do speak multiple languages and want to translate the app or the documentation
+## 我會多種語言，想翻譯應用程式或文件
 
-If you are translating something for the first time, please start with translating the strings for the app, as this is easier and you will get results faster.
+如果您是第一次進行翻譯，請從翻譯應用程式的字串開始，這會比較簡單，您會更快看到結果。
 
-You are welcome to start as a translator for the documentation in parallel or later.
+您也可以同時或稍後開始翻譯文件。
 
-You can check the state of translations for the languages app and documentation [here](../Administration/stateTranslations.md).
+您可以在此[檢查應用程式和文件翻譯的狀態](../Administration/stateTranslations.md)。
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
-* If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
+* 如果您想將**應用程式**翻譯成其他語言（感謝您的幫助），請使用 [Crowdin](https://crowdin.com/project/androidaps)。
+* 如果您想將**文件**翻譯成其他語言（感謝您的幫助），請使用 [Crowdin](https://crowdin.com/project/androidapsdocs)。 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+只需註冊 CROWDIN，選擇您的語言，等待管理員授權，然後開始翻譯！
 
-## Are there other ways to help?
+## 還有其他方式可以幫助嗎？
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.
+所需的技能包括圖形設計、使用者體驗設計、翻譯、Wiki 編輯，或是透過在 Discord 和 Facebook 上回答簡單問題來幫助他人，從而讓開發者們有時間和空間專注於更困難的事情。
