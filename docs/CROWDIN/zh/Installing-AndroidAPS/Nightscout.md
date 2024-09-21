@@ -2,70 +2,70 @@
 
 (Nightscout-security-considerations)=
 
-## Security considerations
+## 安全性考量
 
-Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
+除了報告功能外，Nightscout 還可以用來控制 AAPS。 例如，您可以設定臨時目標或添加未來的碳水化合物。 這些資訊會被 AAPS 獲取，並相應地執行操作。 因此，值得考慮如何保護您的 Nightscout 網站安全。
 
-Exercise maximum caution if using Nightscout as your AAPS data source.
+如果使用 Nightscout 作為您的 AAPS 資料來源，請極為謹慎。
 
-### Nightscout settings
+### Nightscout 設置
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security): make sure you only share your URL with a `readable` token, never with an `admin` token.
+您可以使用 [身份驗證角色](https://nightscout.github.io/nightscout/security) 來拒絕公眾查看您的 Nightscout 網站：請確保僅與具有`readable` 權限的使用者共享 URL，絕不要與擁有`admin` 權限的使用者共享。
 
-Nightscout `API_SECRET` is your site main password: don't share it publicly.
+Nightscout 的 `API_SECRET` 是您網站的主要密碼：切勿公開分享它。
 
-### AAPS settings
+### AAPS 設置
 
-You can setup AAPS to accept Nightscout commands (profile changes, treatments, ...), or fully disable it.
+您可以設置 AAPS 接收 Nightscout 指令（例如配置更改、治療等），或完全停用此功能。
 
-* Access the NSClient or NSClientV3 plugin settings with either 1) Main view -> Config Builder -> Synchronization -> NSClient Cog icon 2) NSCLIENT tab -> Three dots menu -> Plugin preferences
-* Enable all data upload to Nightscout (3) as this is now the standard method unless your BG data source is Nightscout.  
-  If your AAPS BG data source is Nightscout **do not** enable Upload BG data to NS (3).
-* Do not enable Receive/backfill data (4) unless Nightscout is your BG data source.
+* 查看 NSClient 或 NSClientV3 外掛設定，透過以下路徑 1) 主視圖 -> 組態建置工具 -> 同步 -> NSClient 齒輪圖示 2) NSCLIENT 標籤 -> 三點選單 -> 外掛偏好設定
+* 啟用所有資料上傳到 Nightscout（3），這是標準方法，除非您的血糖資料來源是 Nightscout。  
+  如果您的 AAPS 血糖資料來源是 Nightscout，則**不要**啟用上傳血糖資料到 Nightscout (3)。
+* 除非 Nightscout 是您的血糖資料來源，否則請不要啟用接收/回填資料 (4)。
 
-![Nightscout upload only](../images/NSsafety.png)
+![僅限 Nightscout 上傳](../images/NSsafety.png)
 
-#### Do not sync from Nightscout
+#### 不要從 Nightscout 同步
 
-Disabling these options makes sure no Nightscout change will be used by AAPS.
+停用這些選項可確保 AAPS 不會使用來自 Nightscout 的任何更改。
 
-![Nightscout upload only](../images/NSsafety2.png)
+![僅限 Nightscout 上傳](../images/NSsafety2.png)
 
-#### Accept changes from Nightscout
+#### 接受來自 Nightscout 的變更
 
-Enabling these options allow you to remotely change AAPS settings through Nightscout, like profiles modifications and switch, temporary targets and adding carbs that will be taken into account by AAPS.  
-Note that insulin treatments will only be used for calculations like "Do not bolus, record only".
+啟用這些選項允許您透過 Nightscout 遠端更改 AAPS 設定，例如設定檔修改和切換、臨時目標以及添加碳水化合物，這些將被 AAPS 考慮在內。  
+請注意，胰島素治療僅用於計算，例如“僅記錄，不進行注射”。
 
-![Nightscout upload only](../images/NSsafety3.png)
+![僅限 Nightscout 上傳](../images/NSsafety3.png)
 
-### Further security settings
+### 進一步的安全設置
 
-Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
+保持您的手機最新，如[安全第一](../Getting-Started/Safety-first.md)所述。
 
 (Nightscout-manual-nightscout-setup)=
 
-## Manual Nightscout setup
+## 手動 Nightscout 設置
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 15 for AAPS 3.2, so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.
+假設您已經有一個 Nightscout 網站，如果還沒有，請查看 [Nightscout](http://nightscout.github.io/nightscout/new_user/) 頁面以獲取完整的設置說明，下列指示則是您需要添加到 Nightscout 網站的設置。 您的 Nightscout 網站需要至少是 15 版才能支援 AAPS 3.2，因此請確認您正在運作[最新版本](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version)，否則您將在 AAPS 應用程序中收到錯誤訊息。
 
-* [Edit your variables](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
+* [編輯您的變數](https://nightscout.github.io/nightscout/setup_variables/#nightscout-configuration)
 
-* Add or edit the variables as follows:
+* 添加或編輯變數如下：
   
   * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   * `DEVICESTATUS_ADVANCED` = `true`
   * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
+  * 可以設置各種警報來[監控幫浦](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring)，特別建議設置電池百分比的警報： 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
-* Save the modifications. Your Nightscout site should now allow you to display the pills. You can force default display adding them in `SHOW_PLUGINS`.
+* 儲存這些修改。 您的 Nightscout 網站現在應允許顯示這些 pills。 您可以在`SHOW_PLUGINS`中強制顯示這些 pills。
   
   * `SHOW_PLUGINS` = `careportal boluscalc food bwp cage sage iage iob cob basal dbsize pushover pump openaps`
   
-  ![Nightscout Pills](../images/nightscout1.png)
+  ![Nightscout pills](../images/nightscout1.png)
 
-## Nightscout as a paid SaaS (Software as a Service)
+## Nightscout 作為付費 SaaS（軟體即服務）
 
-Use the vendor web interface to set the variables. Contact the vendor support service if necessary.
+使用供應商的網站界面設置變數。 如有需要，請聯繫供應商的支援服務。
