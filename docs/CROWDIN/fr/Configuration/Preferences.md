@@ -270,13 +270,14 @@ contenus::
 Selon vos paramètres dans le [Générateur de configuration](../Configuration/Config-Builder.md) vous pouvez choisir entre deux algorithmes :
 
 - [Assistance Améliorée Repas (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - état de l'algorithme en 2017
-- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - algorithme le plus récent pour les utilisateurs avancés
+- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### Paramètres OpenAPS AMA
 
 - Permet au système de reagir plus rapidement après un bolus de repas SI vous entrez les Glucides de manière fiable.
 - Plus de détail sur les paramètres et l'Autosens peuvent être trouvés dans la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
+(Preferences-max-u-h-a-temp-basal-can-be-set-to)=
 #### Débit max en U/h pour une Temp Basal
 
 - Existe comme une limite de sécurité pour empêcher AAPS d'etre capable d'administrer un dosage de Basal dangereusement élevé.
@@ -323,7 +324,7 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 
 - Vous devez avoir commencé l'[Objectif 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) pour utiliser les SMB.
 
-- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to).
 
 - Details on the different enable options are described in [OpenAPS feature section](Open-APS-features-enable-smb).
 
@@ -497,8 +498,7 @@ Sélectionnez le service de localisation à utiliser :
 
 ![Paramètres de maintenance](../images/Pref2020_Maintenance.png)
 
-- Le destinataire standard des journaux est <logs@androidaps.org>.
-- If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). Dans ce cas, le mot de passe principal doit être entré à chaque fois que les paramètres sont exportés ou importés.
+- Standard recipient of logs is <logs@aaps.app>.
 
 ## Open Humans
 
