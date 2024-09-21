@@ -20,7 +20,7 @@ At some point it will be suggested that you make a pull request (PR), which is h
 
 Örneğimizde AndroidAPSdocs'ta bir düzenleme yapacağız. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
 
-1. https://github.com/openaps/AndroidAPSdocs adresine gidin ve havuzun kendi kopyasını oluşturmak için sağ üstteki Fork'a basın.
+1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
 
 ![çatal deposu](./images/PR0.png)
 
