@@ -1,54 +1,54 @@
 # Dexcom G7
 
 
-## Fundamental in advance
+## 基本準備
 
-In spring 2022, the Dexcom G7 received its CE certificate and was sold at the end of October '22.
+Dexcom G7 在 2022 年春季獲得 CE 證書，並於 2022 年 10 月底開始銷售。
 
-Noteworthy is the fact that the G7 system, compared to the G6, does not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+值得注意的是，與 G6 相比，G7 系統不會平滑資料，無論是在應用程式中還是在讀取器中。 更多詳細資訊請參閱 [這裡](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app)。
 
-![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
+![G7 英文](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
-:::{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
-:class: warning **Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 values.  
+:::{admonition} [平滑方法](../Usage/Smoothing-Blood-Glucose-Data)
+:class: warning **指數平滑** **必須** 啟用才能有意義地使用 G7 的數值。  
 :::
 
-## 1.  Patched Dexcom G7 App (DiAKEM)
+## 1.  修補版 Dexcom G7 應用程式 (DiAKEM)
 
-**Note: AAPS 3.2.0.0 or higher is required!**
+**注意：需要 AAPS 3.2.0.0 或更高版本！**
 
-### Install a new patched (!) G7 app and start the sensor
+### 安裝新的修補版 G7 應用程式並啟動傳感器
 
-A patched Dexcom G7 app (DiAKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+修補版 Dexcom G7 應用程式 (DiAKEM) 可查看 Dexcom G7 資料。 這不是 BYODA 應用程式，因為該應用程式目前無法接收 G7 資料。
 
-Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
+如果您之前使用了原始的 Dexcom 應用程式，請卸載它（正在運作的傳感器會話可以繼續 - 卸載應用程式前請記下傳感器代碼！）
 
-Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
+從 [這裡](https://github.com/authorgambel/g7/releases)下載並安裝修補版.apk。
 
-Enter sensor code in the patched app.
+在修補版應用程式中輸入傳感器代碼。
 
-Follow the general recommendations for CGM hygiene and sensor placement found [here](../Hardware/GeneralCGMRecommendation.md).
+請遵循 [這裡](../Hardware/GeneralCGMRecommendation.md) 提供的 CGM 衛生和傳感器安裝的一般建議。
 
-After the warm-up phase, the values are displayed as usual in the G7 app.
+預熱階段結束後，資料將如常顯示在 G7 應用程式中。
 
-### Configuration in AAPS
+### 在 AAPS 中進行配置
 
-For the configuration in AAPS
-- Select 'BYODA' in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source) - even if it is not the BYODA app!
+AAPS 中的配置步驟
+- 在 [ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source) 中選擇 'BYODA' - 即便這不是 BYODA 應用程式！
 
-- If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
+- 如果 AAPS 無法接收任何資料，請切換到其他血糖來源，然後再切回 'BYODA' 以調用查詢以批准 AAPS 和 BYODA 之間的資料交換。
 
-## 2. xDrip+ (direct connection to G7)
+## 2. xDrip+（直接連線到 G7）
 
-- Follow the instructions here: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- Select  xDrip+ in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+- 請參閱這裡的說明：[Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- 在 [ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source) 中選擇 xDrip+。
 
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md)
+- 根據 xDrip+ 設定頁面上的解釋來調整 xDrip+ 設定 [xDrip+ 設定](../Configuration/xdrip.md)
 
-## 3. xDrip+ (companion mode)
+## 3. xDrip+（伴侶模式）
 
--   Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
--   Select  xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+-   下載並安裝 xDrip+：[xDrip](https://github.com/NightscoutFoundation/xDrip)
+- 在 xDrip+ 中必須選擇「伴侶應用程式」作為資料來源，並在進階設定 > 藍牙設定 > 啟用「伴侶藍牙」。
+-   在 [ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source) 中選擇 xDrip+。
 
--   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md) 
+-   根據 xDrip+ 設定頁面上的解釋來調整 xDrip+ 設定 [xDrip+ 設定](../Configuration/xdrip.md) 
