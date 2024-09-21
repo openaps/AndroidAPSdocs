@@ -1,60 +1,60 @@
-# COB calculation
+# COB 計算
 
-## How does AAPS calculate the COB value?
+## AAPS 如何計算 COB 值？
 
-When carbs are entered as part of a meal or correction, AAPS adds them to the current carbs on board (COB). AAPS then absorbs (removes) carbs based on observed deviations to BG values. The rate of absorption depends on the carb sensitivity factor. This is not a profile value but is calculated as ISF/IC and is how many mg/dl 1g of carbs will raise your BG.
+當輸入碳水化合物作為餐食或修正的一部分時，AAPS 會將其加入到當前的碳水化合物儲存（COB）中。 接著 AAPS 根據觀察到的血糖值偏差來吸收（移除）碳水化合物。 吸收的速率取決於碳水化合物敏感性因子（CSF）。 這不是配置檔的數值，而是根據 ISF/IC 計算出來，表示 1 克碳水化合物會讓你的血糖上升多少 mg/dl。
 
-The formula is: `absorbed_carbs = deviation * ic / isf` It means:
-* increasing ic will increase carbs absorbed every 5 minutes thus shorten total time of absorption
-* increasing isf will decrease carbs absorbed every 5 minutes thus prolong total time of absorption
-* changing profile % increase/decrease both values thus has no impact on carbs absorption time
+公式為：`absorbed_carbs = deviation * ic / isf` 這代表：
+* 增加 IC 將增加每 5 分鐘吸收的碳水化合物量，從而縮短吸收的總時間
+* 增加 ISF 將減少每 5 分鐘吸收的碳水化合物量，從而延長吸收的總時間
+* 更改配置檔的百分比會同時影響這兩個值，但不會影響碳水化合物的吸收時間
 
-For example, if your profile ISF is 100 and your IC is 5, your CSF would be 20. For every 20 mg/dl your BG goes up, 1g of carbs are absorbed by AAPS. Positive IOB also effects this calculation. So, if AAPS expected your BG to go down by 20 mg/dl because of IOB and it instead stayed flat, it would also absorb 1g of carbs.
+例如，如果你的配置檔 ISF 為 100，IC 為 5，那麼你的 CSF 為 20。 每當你的血糖上升 20 mg/dl，AAPS 將吸收 1 克的碳水化合物。 正的 IOB 也會影響此計算。 因此，如果 AAPS 預期因為 IOB 你的血糖應該下降 20 mg/dl，但實際上保持不變，它也會吸收 1 克碳水化合物。
 
-Carbs will also be absorbed via the methods described below based on what sensitivity algorithm is used.
+碳水化合物的吸收也會根據以下描述的方法和所使用的敏感度演算法來進行。
 
 ### Oref1
 
-Unabsorbed carbs are cut off after specified time
+未吸收的碳水化合物在指定時間後將被切斷
 
 ![Oref1](../images/cob_oref0_orange_II.png)
 
 ### AAPS, WeightedAverage
 
-absorption is calculated to have `COB == 0` after specified time
+吸收的計算結果是 COB 在指定時間後等於 0
 
-![AAPS, WheitedAverage](../images/cob_aaps2_orange_II.png)
+![AAPS, WeightedAverage](../images/cob_aaps2_orange_II.png)
 
-If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from BG deviations, an orange dot appears on COB graph.
+如果使用最小碳水化合物吸收量（min_5m_carbimpact）而不是從血糖偏差計算的數值，COB 圖表上將出現一個橙色點。
 
 (COB-calculation-detection-of-wrong-cob-values)=
 
-## Detection of wrong COB values
+## 偵測錯誤的 COB 值
 
-AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. In this case it will give you an additional hint on the confirmation screen after usage of bolus wizard.
+當你準備注射胰島素並且 AAPS 演算法認為當前的 COB 計算可能有誤時，AAPS 會提醒你先前餐食的 COB 還在。 在這種情況下，它會在使用胰島素注射精靈後，在確認畫面上給出額外提示。
 
-### How does AAPS detect wrong COB values?
+### AAPS 如何偵測錯誤的 COB 值？
 
-Normally AAPS detects carb absorption through BG deviations. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called 'fallback'). As this method calculates only the minimal carb absorption without considering BG deviations, it might lead to incorrect COB values.
+通常，AAPS 透過血糖偏差來偵測碳水化合物的吸收。 如果你輸入了碳水化合物，但 AAPS 無法透過血糖偏差觀察到它們的吸收，它將使用 [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) 方法來計算吸收（即所謂的「後備」方法）。 由於此方法僅計算最小碳水化合物吸收量，而不考慮血糖偏差，這可能會導致錯誤的 COB 值。
 
-![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
+![錯誤 COB 值的提示](../images/Calculator_SlowCarbAbsorption.png)
 
-In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  This means that maybe you are having less carbs on board than calculated by the algorithm.
+在上述截圖中，有 41% 的時間，碳水化合物的吸收是根據 min_5m_carbimpact 方法數學計算的，而不是來自偏差檢測的數值。  這意味著你可能擁有的碳水化合物比演算法計算的還要少。
 
-### How to deal with this warning?
+### 如何處理這個警告？
 
-- Consider to cancel the treatment - press Cancel instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving COB unticked.
-- In case you are sure you need a correction bolus, enter it manually.
-- In any case be careful not to overdose!
+- 考慮取消治療——按「取消」而不是「確定」。
+- 使用胰島素注射精靈再次計算你即將用餐的餐食，但不勾選 COB。
+- 如果你確定需要進行修正注射，請手動輸入。
+- 無論如何，務必小心不要注射過量！
 
-### Why does the algorithm not detect COB correctly?
+### 為什麼演算法無法正確偵測 COB？
 
-- Maybe you overestimated carbs when entering them.
-- Activity / exercise after your previous meal
-- I:C needs adjustment
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA)
+- 也許你在輸入碳水化合物時高估了數量。
+- 先前餐食後的活動/運動
+- I:C 需要調整
+- min_5m_carbimpact 的數值錯誤（建議 SMB 使用 8，AMA 使用 3）
 
-## Manual correction of carbs entered
+## 手動修正輸入的碳水化合物
 
-If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described [here](Screenshots-carb-correction).
+如果你高估或低估了碳水化合物，你可以透過「治療」標籤和「操作」標籤/選單來進行修正，如[此處](Screenshots-carb-correction)所述。
