@@ -117,13 +117,13 @@ AndroidAPS מגביל את הערך באופן הבא:
 
 ### הפעלת SMB אחרי פחמימות
 
-If enabled, SMB is enabled for 6h after carbohydrates are announced, even if COB has reached 0. For safety reasons, this option is only available for BG sources with a nice filtering system for noisy data. Currently it is only an available option with a Dexcom G5 or G6 if using the ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. אם בערך הסוכר יש סטייה גדולה מדי, חיישן ה-G7/G6 לא שולח אותו ללופ ומחכה לערך הבא בעוד 5 דקות.
+אם מופעל, SMB יישאר פעיל במשך 6 שעות לאחר שהוכרזו פחמימות, אפילו אם הפחמימות הפעילות ירדו ל-0. מטעמי בטיחות, אפשרות זו מיועדת רק למקורות נתוני סוכר עם סינון איכותי לנתונים רועשים. נכון לעכשיו זוהי אפשרות זמינה רק עם Dexcom G5 או G7, אם אתם משתמשים ב[Byoda](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) או "מצב נטיבי" ב-xDrip+. אם בערך הסוכר יש סטייה גדולה מדי, חיישן ה-G7/G6 לא שולח אותו ללופ ומחכה לערך הבא בעוד 5 דקות.
 
 עבור חיישנים אחרים כמו Freestyle Libre, ''השימוש ב-SMB מושבת עד של-xDrip+ יהיה תהליך החלקת רעשים טוב יותר. לקריאה נוספת [כאן](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### תדירות מתן SMB (דקות)
 
-This feature limits the frequency of SMBs. This value determines the minimum time between SMBs. Note that the loop runs every time a glucose value comes in (generally 5 minutes). Subtract 2 minute to give loop additional time to complete. E.g if you want SMB to be given every loop run, set this to 3 minutes.
+אפשרות זו מגבילה את תדירות ה-SMB. ערך זה קובע את הזמן המינימלי בין SMB. שימו לב שהחישוב של הלולאה קורה בכל פעם שמתקבל ערך סוכר (בדרך כלל כל 5 דקות). יש להחסיר 2 דקות כדי לתת ללולאה זמן נוסף להשלמה. לדוגמה, אם תרצו ש-SMB יוזרק בכל הפעלת לולאה, הגדירו זאת ל-3 דקות.
 
 ערך ברירת המחדל: 3 דקות.
 
