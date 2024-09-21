@@ -1,61 +1,61 @@
-# Profile helper
+# 設定檔助手
 
-Profile helper offers two functions:
+設定檔助手提供兩個功能：
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. 為孩子們找到合適的設定檔
+2. 比較兩個設定檔或設定檔切換，以便複製新的設定檔
 
-## Profile for kids (up to 18 years)
+## 兒童設定檔（適用於18歲以下）
 
-**Important note:**
+**重要說明：**
 
-**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+**設定檔助手旨在幫助您為孩子找到初始設定檔。 儘管該助手基於兩家不同醫院的資料集，但在使用新設定檔前，請務必與您的醫療團隊討論。**
 
-Profile helper offers data sets from two different hospitals for children to find initial profile for your kid up to 18 years.
+設定檔助手提供來自兩家不同醫院的資料集，幫助您為 18 歲以下的孩子找到初始設定檔。
 
-![Profile Helper Kids 1](../images/ProfileHelperKids1.png)
+![設定檔助手兒童 1](../images/ProfileHelperKids1.png)
 
-1. Select 'Profile helper' from three-dot-menu on the top right side of the screen.
-2. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
-3. Change screen by clicking on the grey bar labeled 2 on the right.
-4. Long-press 'Current profile' and select DPV Default profile.
+1. 從螢幕右上角的三點選單中選擇「設定檔助手」。
+2. 根據輸入的孩子年齡及總胰島素劑量（TDD）**或**體重，調整預設設定檔（基於醫院資料集）。
+3. 點擊右側標有 2 的灰色條更換畫面。
+4. 長按「當前設定檔」，然後選擇「DPV 預設設定檔」。
 
-![Profile Helper Kids 2](../images/ProfileHelperKids2.png)
+![設定檔助手兒童 2](../images/ProfileHelperKids2.png)
 
-5. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
-6. Press button 'COMPARE PROFILES' on top of screen.
-7. Comparison of the two adjusted profiles will be displayed.
+5. 根據輸入的孩子年齡、基礎速率百分比及總胰島素劑量（TDD）**或**體重，調整「DPV 預設設定檔」（基於另一家醫院資料集）。
+6. 按下螢幕頂部的「比較設定檔」按鈕。
+7. 會顯示兩個調整後的設定檔的比較結果。
 
-Once you are fine with the profile adjustments you can [clone the profile](profilehelper-clone-profile) as described below.
+當您對設定檔調整感到滿意時，可以按照以下描述[複製設定檔](profilehelper-clone-profile)。
 
-## Compare two profiles
+## 比較兩個設定檔
 
-You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../Usage/Profiles.md) before).
+您還可以使用設定檔助手來比較兩個不同的設定檔或設定檔切換（之前在[設定檔切換](../Usage/Profiles.md)中使用的一個設定檔的百分比）。
 
-![Profile Helper 1](../images/ProfileHelper1.png)
+![設定檔助手 1](../images/ProfileHelper1.png)
 
-1. Select 'Profile helper' from three-dot-menu on the top right side of the screen.
-2. Long-press 'Default profile' and select 'Available profile' for a list of your existing profiles or 'Profile switch' for a list of latest profile switches used.
-3. Long-Press the name of the profile / profile switch ('Aktuell_LP' in screenshot above) and select a profile / profile switch from the list.
-4. Change screen by clicking on the grey bar labeled 2 on the right.
+1. 從螢幕右上角的三點選單中選擇「設定檔助手」。
+2. 長按「預設設定檔」，然後從列表中選擇「可用設定檔」或「設定檔切換」。
+3. 長按設定檔/設定檔切換名稱（上圖中為「Aktuell_LP」），並從列表中選擇一個設定檔/設定檔切換。
+4. 點擊右側標有 2 的灰色條更換畫面。
 
-![Profile Helper 2](../images/ProfileHelper2.png)
+![設定檔助手 2](../images/ProfileHelper2.png)
 
-5. As a standard 'Current profile' is offered as comparison candidate.
-6. If you want a different profile / profile switch long-press 'Current profile' and select either 'Available profile' or 'Profile switch'.
-7. Long-press the name of the profile / profile switch ('Aktuell_LP' in screenshot above) and select a profile / profile switch from the list.
-8. Press button 'COMPARE PROFILES' on top of screen.
-9. Comparison of the two adjusted profiles will be displayed.
+5. 預設情況下，「當前設定檔」將作為比較候選項目。
+6. 如果您想要選擇不同的設定檔/設定檔切換，請長按「當前設定檔」，然後選擇「可用設定檔」或「設定檔切換」。
+7. 長按設定檔/設定檔切換名稱（上圖中為「Aktuell_LP」），並從列表中選擇一個設定檔/設定檔切換。
+8. 按下螢幕頂部的「比較設定檔」按鈕。
+9. 會顯示兩個調整後的設定檔的比較結果。
 
 (profilehelper-clone-profile)=
-## Clone profile
+## 複製設定檔
 
-If you use [local profiles](Config-Builder-local-profile) you can clone a profile / profile switch directly from profile helper.
+如果您使用[本地設定檔](Config-Builder-local-profile)，則可以直接從設定檔助手複製設定檔/設定檔切換。
 
-![Profile Helper Clone profile / profile switch](../images/ProfileHelperClone.png)
+![設定檔助手 複製設定檔/設定檔切換](../images/ProfileHelperClone.png)
 
-1. Select the desired profile / profile switch as described above.
-2. If you are using 'Default profile' or 'DPV Default profile' (based on data sets from hospitals for children) make sure you enter correct settings for age, percentage of basal and TDD / weight.
-3. Press button 'CLONE' on bottom of screen.
-4. Confirm with 'OK'.
-5. Activate new profile in local profile tab.
+1. 按照上述說明選擇所需的設定檔/設定檔切換。
+2. 如果您正在使用「預設設定檔」或「DPV 預設設定檔」（基於兒童醫院的資料集），請確保您輸入了正確的年齡、基礎速率百分比及總胰島素劑量/體重設定。
+3. 按下螢幕底部的「複製」按鈕。
+4. 按「確定」確認。
+5. 在本地設定檔頁籤中啟用新設定檔。
