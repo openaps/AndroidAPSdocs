@@ -20,7 +20,7 @@ Irgendwann wird vorgeschlagen, dass Du einen Pull-Request (PR) erstellst, der da
 
 In unserem Beispiel nehmen wir nun eine Änderung an der AndroidAPS-Dokumentation vor. Es kann auf jedem Windows-PC, Mac, etc. erfolgen. (jedem Computer mit Internet-Zugang).
 
-1. Gehe zu https://github.com/openaps/AndroidAPSdocs und klicke auf "Fork" oben rechts, um deine eigene Kopie des Repositories (=Quell-Code) zu machen.
+1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
 
 ![Fork repo](./images/PR0.png)
 

@@ -56,7 +56,7 @@ Es kann sein, dass Du auf das Auslesen des nächsten Glukosewertes warten musst,
 
 - Belege Dein **AAPS**-Wissen, in dem Du einen Multiple-Choice-Test bestehst.
 
-Der Abschluss dieses **Ziel 3** wird von manchem Menschen als eine der schwierigsten Aufgaben empfunden. Bitte lies die zu den gestellten Fragen gehörenden Abschnitte in der **AAPS**-Dokumentation. Wenn Du nach dem Lesen der **AAPS**-Dokumente wirklich noch feststeckst, suche mit dem Stichwort "Objective 3" in der Facebook-Gruppe. Es ist sehr wahrscheinlich, dass Deine Frage bereits gestellt und beantwortet wurde). Wenn Du dann noch immer nicht weitergekommen bist, erstelle einen Beitrag mit Deiner Frage entweder in der Facebook- oder Discord-Gruppe. Diese Gruppen können Dir kleine Hinweise geben oder Dir die relevanten Stellen der **AAPS**-Dokumente nennen.
+Der Abschluss dieses **Ziel 3** wird von manchem Menschen als eine der schwierigsten Aufgaben empfunden. Bitte lies die zu den gestellten Fragen gehörenden Abschnitte in der **AAPS**-Dokumentation. If you are genuinely stuck after researching the **AAPS** documents, please search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group for "Objective 3" (because it is likely that your question has been asked- and answered - before). If you are still stuck, ask in a post on either the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group. Diese Gruppen können Dir kleine Hinweise geben oder Dir die relevanten Stellen der **AAPS**-Dokumente nennen.
 
 Um mit **Ziel 3** zu starten und die zu lösenden Fragen sehen zu können, klicke auf den orangenen Text "**Noch nicht abgeschlossen**". Bitte lies jede einzelne Frage und wähle dann Deine Antwort(en) aus.
 
@@ -227,13 +227,13 @@ Du musst **Ziel 10** starten, um Automatisierungen nutzen zu können.
 
 4. Experimentiere ein wenig, in dem Du eine etwas sinnvollere Automatisierung erstellst.
 
-- Die Dokumentationsseite gibt ein paar Beispiele, und Du kannst Screenshots von Automatisierungen durch eine Suche mit dem Stichwort "automation" in der Facebook-Gruppe finden. Da die meisten Menschen jeden Morgen vor der Schule/Arbeit zur gleichen Zeit dasselbe zum Frühstück essen, kann ein ziemlich häufiger Anwendungsfall sein, ein "Vor-Frühstücks-Ziel" festzulegen, um 30 Minuten vor dem Frühstück ein leicht niedrigeres temporäres Ziel zu setzen. In einem solchen Fall besteht Deine Bedingung wahrscheinlich aus der Auswahl bestimmter Wochentage (Montag, Dienstag, Mittwoch, Donnerstag, Freitag) und einer bestimmten Uhrzeit (06:30 Uhr). Die Aktion wird aus "Temporäres Ziel (TT) starten" mit einem bestimmten Zielwert und einer Dauer von 30 Minuten bestehen.
+- The documentation page gives a few examples, and you can search for "automation" screenshots on the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group. Da die meisten Menschen jeden Morgen vor der Schule/Arbeit zur gleichen Zeit dasselbe zum Frühstück essen, kann ein ziemlich häufiger Anwendungsfall sein, ein "Vor-Frühstücks-Ziel" festzulegen, um 30 Minuten vor dem Frühstück ein leicht niedrigeres temporäres Ziel zu setzen. In einem solchen Fall besteht Deine Bedingung wahrscheinlich aus der Auswahl bestimmter Wochentage (Montag, Dienstag, Mittwoch, Donnerstag, Freitag) und einer bestimmten Uhrzeit (06:30 Uhr). Die Aktion wird aus "Temporäres Ziel (TT) starten" mit einem bestimmten Zielwert und einer Dauer von 30 Minuten bestehen.
 
 ## Ziel 11: Aktiviere zusätzliche Funktionen für den alltäglichen Gebrauch, wie z. B. das Dynamic Sensitivity Plugin (DynISF).
 
 - Stelle sicher, dass SMBs wie gedacht funktionieren.
 - Lies [hier](../Usage/DynamicISF.md) die Dokumentation zu Dynamic ISF.
-- Suche in den Facebook- und Discord-Gruppen nach Beiträgen zu "Dynamic ISF" und lies über die Erfahrungen und Empfehlungen der Anderen.
+- Search the Facbook and [Discord](https://discord.gg/4fQUWHZ4Mw) groups for discussions around Dynamic ISF and read about other users experiences and recommendations.
 - Aktiviere das **DynamicISF-Plugin** und passe es auf den individuellen Bedarf Deines Körpers an. Aus Sicherheitsgründen ist es ratsam, mit einem Wert unter 100% zu beginnen.
 
 (Objectives-go-back-in-objectives)=

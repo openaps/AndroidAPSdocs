@@ -85,7 +85,7 @@ To aid the build process there are dedicated sections:
 
 - “[How to install AAPS](Installing-AndroidAPS/Building-APK.md)? (Section D) which includes [Troubleshooting](Usage/troubleshooting.md) Subsection.
 
-How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](how-long-will-it-take-to-set-everything-up))
+How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#how-long-will-it-take-to-set-everything-up))
 
 
 #### Keystore & configuration settings export file
@@ -107,7 +107,7 @@ No dudes en ponerte en contacto con la comunidad de AAPS si hay algo de lo que t
 
 ##### [ask on the AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/)
 
-##### [ask on the AAPS Discord channel](https://discord.com/channels/629952586895851530/629954570394533889)
+##### [ask on the AAPS Discord channel](https://discord.gg/4fQUWHZ4Mw)
 
 
 

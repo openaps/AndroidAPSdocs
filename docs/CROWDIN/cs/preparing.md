@@ -85,7 +85,7 @@ Pro podporu procesu sestavení aplikace jsou vyčleněny tyto oddíly dokumentac
 
 - „[Jak nainstalovat AAPS](Installing-AndroidAPS/Building-APK.md)? (sekce D), která zahrnuje pododdíl [Řešení problémů](Usage/troubleshooting.md).
 
-Za jak dlouho se dostanete do režimu uzavřené smyčky závisí na vás, ale přibližný časový horizont ke spuštění plné smyčky s AAPS je k nalezení [zde](how-long-will-it-take-to-set-everything-up).
+How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#how-long-will-it-take-to-set-everything-up))
 
 
 #### Úložiště klíčů a konfigurace exportu nastavených hodnot
@@ -107,7 +107,7 @@ Prosím, neváhejte se obrátit na komunitu AAPS, pokud si s něčím nejste jis
 
 ##### [Zeptejte se na facebookové skupině AAPS](https://www.facebook.com/groups/AndroidAPSUsers/)
 
-##### [Zeptejte se Discord kanálu AAPS](https://discord.com/channels/629952586895851530/629954570394533889)
+##### [Zeptejte se Discord kanálu AAPS](https://discord.gg/4fQUWHZ4Mw)
 
 
 
