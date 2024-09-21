@@ -1,4 +1,4 @@
-# 適用於 PocTech CT-100 用戶
+# For users of PocTech CT-100
 
-- 安裝 PocTech 應用程式
-- 在 [ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source) 中選擇 PocTech 應用程式。
+- Install PocTech App
+- Select PocTech App in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
