@@ -32,7 +32,7 @@ Libre2 OOP 所生成的讀數與原始讀取器或透過 NFC 掃描的 LibreLink
 - 請按照 [這些指示](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) 設定 xDrip+，但請確保下載 [此最新版 OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)，因為文件中的版本已過時。
 - 按照[xDrip+ 設定頁面](../Configuration/xdrip.md)上的設置說明進行操作。
 
--   在[ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
+-   在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
 
 ## 3. 使用 Diabox
 
@@ -40,7 +40,7 @@ Libre2 OOP 所生成的讀數與原始讀取器或透過 NFC 掃描的 LibreLink
 
 ![Diabox](../images/Diabox.png)
 
-- 在[ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
+- 在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
 
 ## 4. 使用 Juggluco
 
@@ -50,7 +50,7 @@ Libre2 OOP 所生成的讀數與原始讀取器或透過 NFC 掃描的 LibreLink
 
 ![Juggluco 廣播至 AAPS](../images/Juggluco_AAPS.png)
 
-- 在[ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
+- 在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
 
 :::{admonition} 與 xDrip+ 搭配使用 :class: note 您可以將 Juggluco 設定為使用 Patched Libre Broadcast 廣播至 xDrip+（您應停用 xDrip+ 廣播），以進行校正（請參閱此處）並避免將 1 分鐘讀數傳送至 AAPS。  
 ![Juggluco 廣播至 xDrip+](../images/Juggluco_xDrip.png)  
