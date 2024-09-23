@@ -230,13 +230,13 @@ Dexcom 傳感器的自動延長（`預防性重啟`）不建議使用，因為�
 
 ![xDrip+ 啟動 Libre 傳輸器與傳感器 3](../images/xDrip_Libre_Transmitter03.png)
 
-## Libre 2 補丁(patched) 應用程式
+## Libre 2 修補版(patched) 應用程式
 
-- 將資料來源設置為 Libre 補丁應用程式。
+- 將資料來源設置為 Libre 修補版應用程式。
     
-    → 漢堡選單 (1) → 設定 (2) → 在硬體資料來源中選擇 Libre（補丁應用程式）(3)
+    → 漢堡選單 (1) → 設定 (2) → 在硬體資料來源中選擇 Libre（修補版應用程式）(3)
     
-    ![xDrip+ Libre 補丁應用程式 1](../images/xDrip_Libre_Patched01.png)
+    ![xDrip+ Libre 修補版應用程式 1](../images/xDrip_Libre_Patched01.png)
 
 - 您可以在不常見設定->額外日誌記錄設定->額外標籤記錄中新增`BgReading:d,xdrip libre_receiver:v`。 這將記錄額外的錯誤訊息以進行故障排除。
 
