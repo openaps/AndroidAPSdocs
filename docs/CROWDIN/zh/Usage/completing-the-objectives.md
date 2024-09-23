@@ -56,7 +56,7 @@
 
 - 透過一個測試您 **AAPS** 知識的多選題考試。
 
-某些使用者發現 **目標 3** 是最難完成的目標。 請務必結合問題閱讀 **AAPS** 文件。 If you are genuinely stuck after researching the **AAPS** documents, please search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group for "Objective 3" (because it is likely that your question has been asked- and answered - before). If you are still stuck, ask in a post on either the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group. 這些群組可以提供友善的提示，或引導你閱讀 **AAPS** 文件的相關部分。
+某些使用者發現 **目標 3** 是最難完成的目標。 請務必結合問題閱讀 **AAPS** 文件。 如果你在研究**AAPS**文件後仍然感到困惑，請在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 群組中搜索 "Objective 3"（因為你的問題可能之前已被詢問並回答過）。 如果你仍然無法解決，請在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 或 [Discord](https://discord.gg/4fQUWHZ4Mw) 群組中發文詢問。 這些群組可以提供友善的提示，或引導你閱讀 **AAPS** 文件的相關部分。
 
 要進行 **Objective 3**，點擊橘色文字“**尚未完成**”來查看相關問題。 請仔細閱讀每個問題並選擇你的答案。
 
@@ -227,13 +227,13 @@
 
 4. 嘗試設定更有用的自動化。
 
-- The documentation page gives a few examples, and you can search for "automation" screenshots on the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group. 由於大多數人每天早上上學/上班前會在同一時間吃相同的早餐，因此一個相當常見的使用情境是設定 "早餐前目標"，在早餐前 30 分鐘設定稍低的臨時目標。 在這種情況下，你的條件可能會包括 "定期時間"，選擇一週中的特定日子（星期一、星期二、星期三、星期四、星期五）和特定時間（上午 06:30）。 動作將包括 "開始臨時目標" 設定一個目標值和持續時間 30 分鐘。
+- 文檔頁面給出了一些例子，你可以在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 群組中搜索 "自動化" 截圖。 由於大多數人每天早上上學/上班前會在同一時間吃相同的早餐，因此一個相當常見的使用情境是設定 "早餐前目標"，在早餐前 30 分鐘設定稍低的臨時目標。 在這種情況下，你的條件可能會包括 "定期時間"，選擇一週中的特定日子（星期一、星期二、星期三、星期四、星期五）和特定時間（上午 06:30）。 動作將包括 "開始臨時目標" 設定一個目標值和持續時間 30 分鐘。
 
 ## 目標 11：啟用白天使用的其他功能，例如動態敏感度外掛 (DynISF)。
 
 - 確保 SMB 正常運作
 - 閱讀有關動態 ISF 的文件[這裡](../Usage/DynamicISF.md)
-- Search the Facbook and [Discord](https://discord.gg/4fQUWHZ4Mw) groups for discussions around Dynamic ISF and read about other users experiences and recommendations.
+- 在 Facebook 和 [Discord](https://discord.gg/4fQUWHZ4Mw) 群組中搜索與動態 ISF 相關的討論，並閱讀其他使用者的經驗和建議。
 - 啟用 **DynamicISF 外掛**，並確定適合你身體需求的校正值。 出於安全考量，建議初始值設置為低於 100%。
 
 (目標-回到先前的目標進度)=
