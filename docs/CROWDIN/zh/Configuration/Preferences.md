@@ -269,13 +269,14 @@
 根據您的設置在[組態建置工具](../Configuration/Config-Builder.md)中，您可以在兩種算法之間進行選擇：
 
 - [進階餐前注射助手（OpenAPS AMA）](Open-APS-features-advanced-meal-assist-ama) - 2017年的算法狀態
-- [超微量注射（OpenAPS SMB）](Open-APS-features-super-micro-bolus-smb) - 最先進用戶的最新算法
+- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### OpenAPS AMA設置
 
 - 如果您可靠地輸入碳水化合物，則系統允許在注射餐後更快速地高溫調整。
 - 有關設置和自動感應的更多細節，請參閱[OpenAPS 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)。
 
+(Preferences-max-u-h-a-temp-basal-can-be-set-to)=
 #### 臨時基礎率（Temp Basal）最大可設置的U/h
 
 - 作為安全限制存在，防止AAPS給予危險高的基礎率。
@@ -322,7 +323,7 @@
 
 - 您必須開始使用[目標 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)來使用 SMB。
 
-- 前三個設定在[上方](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal)進行了解釋。
+- 前三個設定在[上方](Preferences-max-u-h-a-temp-basal-can-be-set-to)進行了解釋。
 
 - 不同啟用選項的詳細資訊在[OpenAPS 功能部分](Open-APS-features-enable-smb)中描述。
 
@@ -496,8 +497,7 @@
 
 ![維護設置](../images/Pref2020_Maintenance.png)
 
-- 日誌的標準收件人是 <logs@androidaps.org>。
-- 如果您選擇*加密匯出的設置*，這些設置將使用您的[主密碼](Preferences-master-password)加密。 在這種情況下，每次匯出或匯入設置時都需要輸入主密碼。
+- 日誌的標準收件人是 <logs@aaps.app>。
 
 ## Open Humans
 
