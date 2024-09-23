@@ -1,19 +1,19 @@
-# Dexcom G7 and ONE+
+# Dexcom G7 和 ONE+
 
 
 ## 基本準備
 
-Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. 更多詳細資訊請參閱 [這裡](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app)。
+值得注意的是，與 G6 相比，G7 和 ONE+ 系統在應用程式和讀取器中都不會平滑值。 更多詳細資訊請參閱 [這裡](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app)。
 
 ![G7 英文](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
-:::{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
-:class: warning **Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
+:::{admonition} [平滑方法](../Usage/Smoothing-Blood-Glucose-Data)
+:class: warning **指數平滑法** **必須** 開啟，才能有效使用 G7 / ONE+ 的數值。  
 :::
 
 ## 1.  修補版 Dexcom G7 應用程式 (DiAKEM)
 
-**注意：需要 AAPS 3.2.0.0 或更高版本！ Not available for ONE+.**
+**注意：需要 AAPS 3.2.0.0 或更高版本！ 不適用於 ONE+。**
 
 ### 安裝新的修補版 G7 應用程式並啟動傳感器
 
@@ -36,7 +36,7 @@ AAPS 中的配置步驟
 
 - 如果 AAPS 無法接收任何資料，請切換到其他血糖來源，然後再切回 'BYODA' 以調用查詢以批准 AAPS 和 BYODA 之間的資料交換。
 
-## 2. xDrip+ (direct connection to G7 or ONE+)
+## 2. xDrip+（直接連接至 G7 或 ONE+）
 
 - 請參閱這裡的說明：[Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
 - 在 [ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source) 中選擇 xDrip+。
