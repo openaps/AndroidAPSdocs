@@ -57,7 +57,7 @@ xDrip+ 可以像 ESEL 一樣從供應商應用程式的通知中讀取資料。 
 
 - 下載並安裝 xDrip+：[xDrip](https://github.com/NightscoutFoundation/xDrip)
 - 在 xDrip+ 中必須選擇「配套應用程式」作為資料來源。
-- 在[ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
+- 在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
 - 根據 xDrip+ 設定頁面的說明[調整 xDrip+ 設定](../Configuration/xdrip.md)。
 - 在 AAPS 中啟用[指數平滑](../Usage/Smoothing-Blood-Glucose-Data.md#smoothing-blood-glucose-data)。
 
