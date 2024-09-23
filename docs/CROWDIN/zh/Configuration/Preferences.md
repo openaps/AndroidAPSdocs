@@ -269,14 +269,14 @@
 根據您的設置在[組態建置工具](../Configuration/Config-Builder.md)中，您可以在兩種算法之間進行選擇：
 
 - [進階餐前注射助手（OpenAPS AMA）](Open-APS-features-advanced-meal-assist-ama) - 2017年的算法狀態
-- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [超微量注射（OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - 最推薦給初學者的最新算法
 
 ### OpenAPS AMA設置
 
 - 如果您可靠地輸入碳水化合物，則系統允許在注射餐後更快速地高溫調整。
 - 有關設置和自動感應的更多細節，請參閱[OpenAPS 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)。
 
-(Preferences-max-u-h-a-temp-basal-can-be-set-to)=
+(偏好設定-max-u-h-a-temp-basal-可以設置為)=
 #### 臨時基礎率（Temp Basal）最大可設置的U/h
 
 - 作為安全限制存在，防止AAPS給予危險高的基礎率。
