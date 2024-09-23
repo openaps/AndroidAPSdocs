@@ -495,7 +495,7 @@
 
 1. 在主畫面檢查並記住實際的 COB 和 IOB。
 2. 根據幫浦的不同，在治療標籤中碳水化合物可能與胰島素一起顯示在同一行，或作為單獨的條目（如 Dana RS）。
-3. 移除碳水化合物數量錯誤的條目。
+3. 移除碳水化合物數量錯誤的項目。 (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
 4. 再次檢查主畫面上的 COB 以確保成功移除了碳水化合物。
 5. 如果治療標籤中包含碳水化合物和胰島素的條目是單行的，請對 IOB 執行相同操作。
    
