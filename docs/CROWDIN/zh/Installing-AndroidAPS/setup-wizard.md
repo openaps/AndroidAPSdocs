@@ -160,7 +160,7 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 您可
 
 ![image](../images/setup-wizard/Screenshot_20231202_135807.png)
 
-### 單位 (mg/dl <-> mmol/dL)
+### 單位（mg/dL <-> mmol/L）
 
 請選擇您的血糖值是以 mg/dl 還是 mmol/L 為單位，然後點擊“下一步”按鈕：
 
@@ -199,7 +199,7 @@ Nightscout用戶應選擇 **NSClient v3**，除非您想透過Nightscout進行�
 
 對於Tidepool來說，這更簡單，因為您只需要您的個人登錄訊息。
 
-完成選擇後，請點擊“下一步”按鈕：
+選擇後，請按下你選擇項目旁邊的齒輪按鈕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_140916.png)
 
@@ -257,7 +257,7 @@ Nightscout用戶應選擇 **NSClient v3**，除非您想透過Nightscout進行�
 
 保持“減慢上傳”為停用狀態。 您只會在特殊情況下使用它，例如當需要將大量資料傳輸到Nightscout伺服器時，而Nightscout伺服器處理資料速度較慢。
 
-返回上一個螢幕並選擇“下一步”進入下一個螢幕：
+返回兩次，回到外掛列表，然後選擇 "下一步" 以進入下一個螢幕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_141351.png)
 
@@ -314,11 +314,11 @@ Nightscout用戶應選擇 **NSClient v3**，除非您想透過Nightscout進行�
 
 ![image](../images/setup-wizard/Screenshot_20231202_141925.png)
 
-如果您使用Dexcom G6與BYODA，請點擊“齒輪圖示”來進入BYODA的設置。
+如果你正在使用 Dexcom G6 與 BYODA，點擊齒輪按鈕來訪問 BYODA 的設定。
 
 啟用“上傳血糖資料到NS”和“記錄感測器變更到NS”。
 
-按“下一步”進入下一個螢幕：
+返回並按 "下一步" 以進入下一個螢幕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
@@ -443,7 +443,7 @@ Nightscout用戶應選擇 **NSClient v3**，除非您想透過Nightscout進行�
 OpenAPS AMA 是最基本的演算法，不支援使用小劑量注射來修正高血糖值。 在某些情況下，使用此演算法可能更好，但這不是推薦的選擇。
 :::
 
-按“下一步”進入下一個螢幕：
+按齒輪查看詳細資訊：
 
 ![image](../images/setup-wizard/Screenshot_20231202_144014.png)
 
@@ -451,7 +451,7 @@ OpenAPS AMA 是最基本的演算法，不支援使用小劑量注射來修正�
 
 由於**目標**的限制，您目前無法使用“閉環”或“SMB功能”。
 
-按“下一步”進入下一個螢幕：
+返回並按 "下一步" 以進入下一個螢幕：
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 
