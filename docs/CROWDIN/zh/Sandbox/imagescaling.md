@@ -1,34 +1,34 @@
-# 圖像縮放的測試文件
+# a test file for image scaling
 
-我們在不同設備上縮放時遇到了一些問題，並希望檢查如何解決這個問題
+We got some problems with scaling on different devices and wanted to check how we can solve in
 
-1. Markdown 和
-2. Crowdin 測試。
+1. Markdown and
+2. Crowdin too.
 
-這張圖片的原始寬度為 400px。
+This image width is in original 400px.
 
-## 標準 markdown
+## standard markdown
 
-![測試圖片](../images/setup-wizard/Screenshot_20231202_141912.png)
+![testimage](../images/setup-wizard/Screenshot_20231202_141912.png)
 
-## 400px 圖像標籤 myst_parser 透過額外的寬度屬性
+## 400px image tag myst_parser passthrough with extra width attribute
 
-這裡有文字。
+Here comes text.
 
 ```{image} ../images/setup-wizard/Screenshot_20231202_141912.png
 :width: 400px
 
 ```
 
-這裡有更多文字。
+Here comes some more text.
 
-## 500px 圖像標籤 myst_parser 透過額外的寬度屬性
+## 500px image tag myst_parser passthrough with extra width attribute
 
-這裡有文字。
+Here comes text.
 
 ```{image} ../images/setup-wizard/Screenshot_20231202_141912.png
 :width: 500px
 
 ```
 
-這裡有更多文字。
+Here comes some more text.
