@@ -1,554 +1,554 @@
-# AAPS 螢幕畫面
+# AAPS screens
 
-## 主畫面
+## The Homescreen
 
-![主畫面 V2.7](../images/Home2020_Homescreen.png)
+![Homescreen V2.7](../images/Home2020_Homescreen.png)
 
-這是你打開 AAPS 時會遇到的第一個畫面，它包含了日常所需的大部分資訊。
+This is the first screen you will come across when you open AAPS and it contains most of the information that you will need day to day.
 
-### A 區 - 分頁
+### Section A - Tabs
 
-* 在各個 AAPS 模組頁籤之間導覽。
-* 或者，你可以透過向左或向右滑動來更換螢幕。
-* 顯示的分頁可以在[組態建置工具](Config-Builder-tab-or-hamburger-menu)中選擇。
+* Navigate between the various AAPS modules.
+* Alternatively you can change screens by swiping left or right.
+* Displayed tabs can be selected in [config builder](Config-Builder-tab-or-hamburger-menu).
 
 (Screenshots-section-b-profile-target)=
 
-### B 區 - 設定檔 & 目標
+### Section B - Profile & target
 
-#### 目前的設定檔
+#### Current Profile
 
-![設定檔切換剩餘時間](../images/Home2020_ProfileSwitch.png)
+![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
-* 目前的設定檔顯示在左側欄位。
-* 點一下設定檔欄位查看設定檔詳細資訊
-* 長按設定檔欄位可[在不同設定檔之間切換](Profiles-profile-switch)。
-* 如果設定檔切換進行中，括號中將顯示剩餘時間（以分鐘為單位）。
+* Current profile is displayed in the left bar.
+* Short press profile bar to view profile details
+* Long press profile bar to [switch between different profiles](Profiles-profile-switch).
+* If profile switch was made with duration remaining time in minutes is shown in brackets.
 
-#### 目標
+#### Target
 
-![臨時目標剩餘時間](../images/Home2020_TT.png)
+![Temp target remaining duration](../images/Home2020_TT.png)
 
-* 目前的目標血糖值顯示在右側欄位。
-* 點一下目標欄位可設置[臨時目標](../Usage/temptarget.md)。
-* 如果設置了臨時目標，欄位將變為黃色，括號中顯示剩餘時間（以分鐘為單位）。
+* Current target blood glucose level is displayed in the right bar.
+* Short press target bar to set a [temporary target](../Usage/temptarget.md).
+* If temp target is set bar turns yellow and remaining time in minutes is shown in brackets.
 
 (Screenshots-visualization-of-dynamic-target-adjustment)=
 
-#### 動態目標調整的可視化
+#### Visualization of Dynamic target adjustment
 
-![動態目標調整的可視化](../images/Home2020_DynamicTargetAdjustment.png)
+![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
-* 如果您使用 SMB 演算法，AAPS 可以根據敏感度動態調整您的目標。
-* 啟用以下選項中的一個或兩個[選項](Preferences-openaps-smb-settings) 
-   * "敏感度提高目標" 和/或 
-   * "阻力降低目標" 
-* 如果 AAPS 檢測到阻力或敏感度，目標將從設定檔中的設定值改變。 
-* 當目標血糖值變更時，背景會變成綠色。
+* AAPS can dynamically adjust your target based on sensitivity if you are using SMB algorithm.
+* Enable either one or both of the [following options](Preferences-openaps-smb-settings) 
+   * "sensitivity raises target" and/or 
+   * "resistance lowers target" 
+* If AAPS detects resistance or sensitivity the target will change from what is set from profile. 
+* When it alters the target glucose background will change to green.
 
-### C 區 - 血糖 & 循環狀態
+### Section C - BG & loop status
 
-#### 當前血糖值
+#### Current blood glucose
 
-* 最新的 CGM 血糖讀數顯示在左側。
-* 血糖值的顏色反映了與定義的[範圍](Preferences-range-for-visualization)的關係。 
-   * 綠色 = 在範圍內
-   * 紅色 = 低於範圍
-   * 黃色 = 高於範圍
-* 中間的灰色區塊顯示自上次讀數以來的分鐘數以及過去 15 和 40 分鐘內的變化。
+* Latest blood glucose reading from your CGM is shown on the left side.
+* Color of the BG value reflects the status to the defined [range](Preferences-range-for-visualization). 
+   * green = in range
+   * red = below range
+   * yellow = above range
+* The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
 
 (Screenshots-loop-status)=
 
-#### 循環狀態
+#### Loop status
 
-![循環狀態](../images/Home2020_LoopStatus.png)
+![Loop status](../images/Home2020_LoopStatus.png)
 
-* 新圖示顯示循環狀態：
+* A new icon shows loop status:
    
-   * 綠色圓圈 = 循環運作中
-   * 綠色圓圈帶虛線 = [低血糖暫停（LGS）](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
-   * 紅色圓圈 = 循環已停用（永久不起作用）
-   * 黃色圓圈 = 循環暫停（暫時暫停但將給予基礎胰島素）- 圖示下方顯示剩餘時間
-   * 灰色圓圈 = 幫浦已中斷（暫時無胰島素劑量）- 圖示下方顯示剩餘時間
-   * 橙色圓圈 = 超級注射進行中 - 圖示下方顯示剩餘時間
-   * 藍色圓圈帶虛線 = 開放循環
+   * green circle = loop running
+   * green circle with dotted line = [low glucose suspend (LGS)](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * red circled = loop disabled (not working permanently)
+   * yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
+   * grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
+   * Orange circle = super bolus running - remaining time is shown below icon
+   * blue circle with dotted line = open loop
 
-* 點一下或長按圖示以打開循環對話框來切換循環模式（關閉、低血糖暫停、開放或停用），暫停/重新啟動循環或中斷/重新連線幫浦。
+* Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
    
-   * 如果點一下循環圖示，選擇後需要進行驗證。
+   * If short press on Loop icon, a validation is required after selection in Loop Dialog
    
-   ![循環狀態選單](../images/Home2020_Loop_Dialog.png)
+   ![Loop status menu](../images/Home2020_Loop_Dialog.png)
 
 (Screenshots-bg-warning-sign)=
 
-#### 血糖警告標誌
+#### BG warning sign
 
-從 Android 3.0 開始，您可能會在主螢幕上的血糖數字下方看到警告信號。
+Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
 
-*注意*：AAPS 計算會考慮到長達 30 小時的資料。 因此，即使您解決了問題，黃三角標誌可能會在最後一次不規則間隔發生後大約 30 小時內消失。
+*Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
 
-要立即刪除它，您需要從 Dexcom/xDrip+ 標籤中手動刪除幾個項目。
+To remove it immediately you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
 
-然而，當有很多重複項目時，可能更容易
+However, when there are a lot of duplicates, it might be easier to
 
-* [備份您的設定](../Usage/ExportImportSettings.md)，
-* 在維護選單中重置您的資料庫，然後
-* [再次匯入您的設定](../Usage/ExportImportSettings.md)
+* [backup your settings](../Usage/ExportImportSettings.md),
+* reset your database in the maintenance menu and
+* [import your settings](../Usage/ExportImportSettings.md) again
 
-##### 紅色警告標誌：重複的血糖資料
+##### Red warning sign: Duplicate BG data
 
-紅色警告標誌表示您需要立即採取行動：您正在接收重複的血糖資料，這會阻止循環正常工作。 因此，您的循環將被停用，直到問題解決為止。
+The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
 
-![紅色血糖警告](../images/bg_warn_red.png)
+![Red BG warning](../images/bg_warn_red.png)
 
-您需要找出為什麼會收到重複的血糖資料：
+You need to find out why you get duplicate BGs:
 
-* 您的 NS 網站上是否啟用了 Dexcom 橋接功能？ 透過進入 heroku（或任何其他託管提供商），編輯 "enable" 變數，並刪除其中的 "bridge" 部分來停用橋接功能。 （有關 heroku 的[詳細資訊可以在此找到](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings)。）
-* 是否有多個來源將您的血糖資料上傳到 NS？ 如果您使用 BYODA 應用程式，請在 AAPS 中啟用上傳功能，但不要在 xDrip+ 中啟用它，如果您使用的是該應用程式。
-* 是否有追蹤者接收了您的血糖資料，但又將其重新上傳到您的 NS 網站？
-* 最後的手段：在 AAPS 中，進入您的 NS 客戶端設定，選擇同步設定並停用“接受來自 NS 的 CGM 資料”選項。
+* Is Dexcom bridge enabled on your NS site? Disable the bridge by going to heroku (or any other hosting provider), edit the "enable" variable and remove the "bridge" part there. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Do multiple sources upload your BG to NS? If you use the BYODA app, enable the upload in AAPS but do not enable it in xDrip+, if you use that.
+* Do you have any followers that might receive your BG but do also upload it again to your NS site?
+* Last resort: In AAPS, go to your NS Client settings, select the sync settings and disable the "Accept CGM data from NS" option.
 
-##### 黃色警告標誌
+##### Yellow warning sign
 
-* 黃色警告信號表示您的血糖資料到達的時間間隔不規則或某些血糖資料丟失。
+* The yellow warning signal is indicating that your BG arrived in irregular time intervals or some BGs are missing.
    
-   ![黃色血糖警告](../images/bg_warn_yellow.png)
+   ![Yellow BG warning](../images/bg_warn_yellow.png)
 
-* 通常您不需要採取任何行動。 閉環會繼續運作！
+* Usually you do not have to take any action. The closed loop will continue to work!
 
-* 由於傳感器更換會中斷血糖資料的連續傳輸，更換傳感器後的黃色警告標誌是正常現象，無需擔心。
-* 對於 Libre 使用者的特別注意事項：
+* As a sensor change is interupting the constant flow of BG data a yellow warning sign after sensor change is normal and nothing to worry about.
+* Special note for libre users:
    
-   * 每個 Libre 感應器每隔幾小時都會慢個一兩分鐘，這意味著您永遠無法獲得完美的定期血糖間隔。
-   * 跳動的讀數也會中斷連續資料傳輸。
-   * 因此，對於 Libre 使用者來說，黃色警告標誌將“始終存在”。
+   * Every single libre slips a minute or two every few hours, meaning you never get a perfect flow of regular BG intervals.
+   * Also jumpy readings interrupt the continous flow.
+   * Therefore the yellow warning sign will be 'always on' for libre users.
 
-### D 區 - 胰島素、碳水化合物、基礎率與自動敏感性
+### Section D - IOB, COB, BR and AS
 
-![D 區](../images/Home2020_TBR.png)
+![Section D](../images/Home2020_TBR.png)
 
-* 針筒圖示：活性胰島素（IOB）- 體內尚有作用的胰島素數量
+* Syringe: insulin on board (IOB) - amount of active insulin inside your body
    
-   * 如果僅運作標準基礎率，且沒有先前注射的胰島素剩餘，則 IOB 為零。 
-   * 如果最近有減少的基礎率，IOB 可能為負值。
-   * 按圖示可查看注射胰島素與基礎胰島素的分配情況。
+   * The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
+   * IOB may be negative if there have recently been periods of reduced basal.
+   * Press the icon to see the split of bolus and basal insulin
 
-* 穀物圖示：[活性碳水化合物化合物（COB）](../Usage/COB-calculation.md) - 您之前食用但尚未吸收的碳水化合物-> 如果需要碳水化合物，圖示會閃爍。
+* Grain: [carbs on board (COB)](../Usage/COB-calculation.md) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
 
-* 紫線：基礎率 - 圖示隨基礎率的暫時變化而改變（在 100% 時保持不變）。 
-   * 按圖示可查看基礎基礎率和任何臨時基礎率的詳細資訊（包括剩餘時間）。
-* 上下箭頭：指示當前[自動敏感性](Open-APS-features-autosens)狀態（啟用或停用）以及圖示下方顯示的數值。
+* Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%) 
+   * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
+* Arrows up & down: indicating actual [autosens](Open-APS-features-autosens) status (enabled or disabled) and value is shown below icon
 
-#### 需要碳水化合物
+#### Carbs required
 
-![需要碳水化合物](../images/Home2020_CarbsRequired.png)
+![Carbs required](../images/Home2020_CarbsRequired.png)
 
-* 當參考設計檢測到需要碳水化合物時，會給出建議。
-* 這是當 oref 演算法認為我無法透過設置為 0（零）來拯救你時，您將需要碳水化合物來解決問題。
-* 碳水化合物通知比注射計算機的通知更為精確。 您可能會看到碳水化合物建議，而注射計算機不顯示缺少的碳水化合物。
-* 如果需要，碳水化合物需求通知可以推送到 Nightscout，屆時會顯示並廣播公告。
+* Carbs suggestions are given when the reference design detects that it requires carbs.
+* This is when the oref algorithm thinks I can't rescue you by 0 (zero) temping and you will need carbs to fix.
+* The carb notifications are much more sophisticated than the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
+* Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
-### E 區 - 狀態指示燈
+### Section E - Status lights
 
-![E 區](../images/Home2020_StatusLights.png)
+![Section E](../images/Home2020_StatusLights.png)
 
-* 狀態指示燈為以下情況提供視覺警告： 
-   * 輸注針頭的使用時間
-   * 胰島素的使用時間（儲液罐使用的天數）
-   * 儲液罐的剩餘容量（單位）
-   * 傳感器使用時間
-   * 電池使用時間及電量（百分比）
-* 如果超過閾值警告，數值將顯示為黃色。
-* 如果超過臨界值警告，數值將顯示為紅色。
-* 可在[偏好設定](Preferences-status-lights)中進行設置。
+* Status lights give a visual warning for 
+   * Cannula age
+   * Insulin age (days reservoir is used)
+   * Reservoir level (units)
+   * Sensor age
+   * Battery age and level (%)
+* If threshold warning is exceeded, values will be shown in yellow.
+* If threshold critical is exceeded, values will be shown in red.
+* Settings can be made in [preferences](Preferences-status-lights).
 
 (Screenshots-section-f-main-graph)=
 
-### F 區 - 主圖表
+### Section F - Main graph
 
-![F 區](../images/Home2020_MainGraph.png)
+![Section F](../images/Home2020_MainGraph.png)
 
-* 圖表顯示您的血糖（BG），資料來自您的連續血糖監測儀（CGM）。 
-* 在操作標籤中輸入的筆記（如手指校準和碳水化合物輸入）以及設定檔切換也會顯示在此處。 
-* 長按圖表可更改時間範圍。 您可以選擇 6、12、18 或 24 小時。
-* 綠色區域反映您的目標範圍。 可以在[偏好設定](Preferences-range-for-visualization)中配置。
-* 如果在[偏好設定](Preferences-openaps-smb-settings)中啟用了 SMB，藍色三角形會顯示[SMB](Open-APS-features-super-micro-bolus-smb)。
-* 可選資訊：
+* Graph shows your blood glucose (BG) as read from your glucose monitor (CGM). 
+* Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
+* Long press on the graph to change the time scale. You can choose 6, 12, 18 or 24 hours.
+* The green area reflects your target range. It can be configured in [preferences](Preferences-range-for-visualization).
+* Blue triangles show [SMB](Open-APS-features-super-micro-bolus-smb) - if enabled in [preferences](Preferences-openaps-smb-settings).
+* Optional information:
    
-   * 預測
-   * 基礎率
-   * 活動 - 胰島素活動曲線
+   * Predictions
+   * Basals
+   * Activity - insulin activity curve
 
-#### 啟用可選資訊
+#### Activate optional information
 
-* 單擊主圖表右側的三角形，選擇要顯示在主圖表中的資訊。
-* 對於主圖表，只有位於 "\---\---- 圖表 1 \---\----" 以上的三個選項可用。
+* Click the triangle on the right side of the main graph to select which information will be displayed in the main graph.
+* For the main graph just the three options above the line "\---\---- Graph 1 \---\----" are available.
    
-   ![主圖表設置](../images/Home2020_MainGraphSetting.png)
+   ![Main graph setting](../images/Home2020_MainGraphSetting.png)
 
 (Screenshots-prediction-lines)=
 
-#### 預測線
+#### Prediction lines
 
-* **橙色**線：[COB](../Usage/COB-calculation.md)（顏色通常用來表示 COB 和碳水化合物）
+* **Orange** line: [COB](../Usage/COB-calculation.md) (colour is used generally to represent COB and carbs)
    
-   預測線顯示根據當前幫浦設置以及假設碳水化合物吸收偏差保持不變的情況下，您的血糖將如何變化。 此線僅在有已知的 COB 時出現。
+   Prediction line shows where your BG (not where COB itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
 
-* **深藍色**線：IOB（顏色通常用來表示 IOB 和胰島素）
+* **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
    
-   預測線顯示僅在胰島素的影響下會發生什麼。 例如，如果您輸入了一些胰島素，但未食用任何碳水化合物。
+   Prediction line shows what would happen under the influence of insulin only. For example if you dialled in some insulin and then didn’t eat any carbs.
 
-* **淺藍色**線：零基礎率（如果設置了 0% 的臨時基礎率，預測血糖會怎麼變化）
+* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
    
-   預測線顯示如果幫浦停止所有胰島素輸送（0% TBR），血糖 軌跡線將如何變化。
+   Prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
    
-   *此線僅在使用[SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)演算法時出現。*
+   *This line appears only when the [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
-* **深黃色**線：[UAM](Sensitivity-detection-and-COB-sensitivity-oref1)（未報告的用餐）
+* **Dark yellow** line: [UAM](Sensitivity-detection-and-COB-sensitivity-oref1) (un-announced meals)
    
-   未報告的用餐表示檢測到由於用餐、腎上腺素或其他影響導致的血糖顯著上升。 預測線類似於橙色 COB 線，但它假設偏差將以恆定速度逐漸減少（透過延長當前的減少速度）。
+   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
    
-   *此線僅在使用[SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)演算法時出現。*
+   *This line appears only when the [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
-* **深橙色**線：aCOB（加速碳水化合物吸收）
+* **Dark orange** line: aCOB (accelerated carbohydrate absorption)
    
-   類似於 COB，但假設碳水化合物吸收率為每 5 分鐘 10 mg/dL（-0.555 mmol/l/5 分鐘）。 已棄用，實用性有限。
+   Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/l/5m) carb absorption rate. Deprecated and of limited usefulness.
    
-   *此線僅在使用舊版[AMA](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)演算法時出現。*
+   *This line appears only when the older [AMA](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
-通常您的實際血糖曲線最終會位於這些線之間，或接近最符合您情況的假設。
+Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
 
-#### 基礎率
+#### Basals
 
-* 一條**實心藍色**線顯示您的幫浦基礎胰島素輸送，並反映實際的輸送時間。
-* 一條**虛線藍色**線顯示如果沒有暫時的基礎率調整（TBR），基礎率會是什麼。
-* 在標準基礎率給定的時間內，曲線下方的區域顯示為深藍色。
-* 當基礎率暫時調整（增加或減少）時，曲線下方的區域顯示為淺藍色。
+* A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
+* The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
+* In times standard basal rate is given the area under the curve is shown in dark blue.
+* When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
 
-#### 活動
+#### Activity
 
-* 一條**細黃色**線顯示胰島素的活動。 
-* 它基於胰島素在系統中的預期血糖降低，如果沒有其他因素（如碳水化合物）存在。
+* The **thin yellow** line shows the activity of Insulin. 
+* It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
 
-### G 區 - 其他圖表
+### Section G - additional graphs
 
-* 您可以在主圖表下啟用最多四個其他圖表。
-* 要打開其他圖表的設置，請單擊[主圖表](Screenshots-section-f-main-graph)右側的三角形並向下滾動。
+* You can activate up to four additional graphs below the main graph.
+* To open settings for additional graphs click the triangle on the right side of the [main graph](Screenshots-section-f-main-graph) and scroll down.
 
-![其他圖表設置](../images/Home2020_AdditionalGraphSetting.png)
+![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
 
-* 要添加其他圖表，請選中其名稱左側的框（即 \---\---- 圖表 1 \---\----）。
+* To add an additional graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
 
-#### 絕對胰島素
+#### Absolute insulin
 
-* 活動中的胰島素，包括注射**和基礎率**。
+* Active insulin including boluses **and basal**.
 
-#### 活性胰島素
+#### Insulin on board
 
-* 顯示您體內的胰島素（= 體內的活動胰島素）。 它包括注射胰島素和暫時的基礎率（**但不包括您設定檔中的基礎率**）。
-* 如果在 DIA 時間內沒有[SMB](Open-APS-features-super-micro-bolus-smb)、沒有注射或暫時的基礎率，這將為零。
-* 如果沒有剩餘注射且長時間設置為零/低基礎率，IOB 可能為負值。
-* 衰減取決於您的[DIA 和胰島素設定檔設置](Config-Builder-local-profile)。 
+* Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
+* If there were no [SMBs](Open-APS-features-super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+* IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
+* Decaying depends on your [DIA and insulin profile settings](Config-Builder-local-profile). 
 
-#### 活性碳水化合物化合物
+#### Carbs On Board
 
-* 顯示您體內的碳水化合物（= 活動中的，尚未衰減的碳水化合物）。 
-* 衰減取決於演算法檢測到的偏差。 
-* 如果它檢測到碳水化合物吸收率高於預期，將注射胰島素，這將增加 IOB（多或少，取決於您的安全設置）。 
+* Shows the carbs you have on board (= active, not yet decayed carbs in your body). 
+* Decaying depends on the deviations the algorithm detects. 
+* If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
 
-#### 偏差
+#### Deviations
 
-* **灰色**條顯示由於碳水化合物引起的偏差。 
-* **綠色**條顯示血糖高於演算法預期。 綠色條用於在[自動敏感性](Open-APS-features-autosens)中增加抗性。
-* **紅色**條顯示血糖低於演算法預期。 紅色條用於在[自動敏感性](Open-APS-features-autosens)中增加敏感性。
-* **黃色**條顯示由於未報告的用餐引起的偏差。
-* **黑色**條顯示未考慮敏感性的輕微偏差。
+* **GREY** bars show a deviation due to carbs. 
+* **GREEN** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](Open-APS-features-autosens).
+* **RED** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](Open-APS-features-autosens).
+* **YELLOW** bars show a deviation due to UAM.
+* **BLACK** bars show small deviations not taken into account for sensitivity
 
-#### 敏感性
+#### Sensitivity
 
-* 顯示[自動敏感性](Open-APS-features-autosens)檢測到的敏感性。 
-* 敏感性是運動、荷爾蒙等導致的對胰島素的敏感性計算結果。
+* Shows the sensitivity that [Autosens](Open-APS-features-autosens) has detected. 
+* Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
 
-#### 活動
+#### Activity
 
-* 顯示由您的胰島素設定檔計算出的胰島素活動（它不是 IOB 的導數）。 
-* 胰島素越接近峰值時間，值越高。
-* 當 IOB 減少時，它將是負值。 
+* Shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). 
+* The value is higher for insulin closer to peak time.
+* It would mean to be negative when IOB is decreasing. 
 
-#### 偏差斜率
+#### Deviation slope
 
-* 演算法中使用的內部值。
+* Internal value used in algorithm.
 
-### H 區 - 按鈕
+### Section H - Buttons
 
-![主畫面按鈕](../images/Home2020_Buttons.png)
+![Homescreen buttons](../images/Home2020_Buttons.png)
 
-* 注射、碳水化合物和計算機的按鈕幾乎“始終顯示”。
+* Buttons for insulin, carbs and Calculator are almost'always on'.
    
-   * 如果與幫浦的連線丟失，注射按鈕將不可見。
+   * If connection to pump is lost, the insulin button will not be visible.
 
-* 其他按鈕必須在[偏好設定]Preferences-buttons)中設置。
+* Other Buttons have to be setup in [preferences]Preferences-buttons).
 
-#### 胰島素
+#### Insulin
 
-![注射按鈕](../images/Home2020_ButtonInsulin.png)
+![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-* 可以在不使用[注射計算機](Screenshots-bolus-wizard)的情況下注射特定數量的胰島素。
-* 勾選框可自動啟動您的[即將用餐的臨時目標](Preferences-default-temp-targets)。
-* 如果您不想透過幫浦進行注射，但記錄注射量（即透過注射器注射的胰島素），請勾選相應的框。
+* To give a certain amount of insulin without using [bolus calculator](Screenshots-bolus-wizard).
+* By checking the box you can automatically start your [eating soon temp target](Preferences-default-temp-targets).
+* If you do not want to bolus through pump but record insulin amount (i.e. insulin given by syringe) check the corresponding box.
 
-#### 碳水化合物
+#### Carbs
 
-![碳水化合物按鈕](../images/Home2020_ButtonCarbs.png)
+![Carbs button](../images/Home2020_ButtonCarbs.png)
 
-* 記錄碳水化合物而不進行注射。
-* 可以直接透過勾選框設置某些[預設的臨時目標](Preferences-default-temp-targets)。
-* 時間偏移：您將在何時/何時食用碳水化合物（以分鐘計）。
-* 持續時間：用於[“延長碳水化合物”](../Usage/Extended-Carbs.md)
-* 您可以使用按鈕快速增加碳水化合物量。
-* 筆記將根據您的[NS 客戶端](Preferences-nsclient)設置上傳到 Nightscout。
+* To record carbs without bolusing.
+* Certain [pre-set temporary targets](Preferences-default-temp-targets) can be set directly by checking the box.
+* Time offset: When will you / have you been eaten carbs (in minutes).
+* Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.md)
+* You can use the buttons to quickly increase carb amount.
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](Preferences-nsclient).
 
-#### 計算機
+#### Calculator
 
-* 請參閱[注射計算機](Screenshots-bolus-wizard)部分
+* See Bolus Wizard [section below](Screenshots-bolus-wizard)
 
-#### 校準
+#### Calibrations
 
-* 發送校準至 xDrip+ 或打開 Dexcom 校準對話框。
-* 必須在[偏好設定](Preferences-buttons)中啟用。
+* Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
+* Must be activated in [preferences](Preferences-buttons).
 
 #### CGM
 
-* 開啟 xDrip+。
-* 按返回鍵返回 AAPS。
-* 必須在[偏好設定](Preferences-buttons)中啟用。
+* Opens xDrip+.
+* Back button returns to AAPS.
+* Must be activated in [preferences](Preferences-buttons).
 
-#### 快速嚮導
+#### Quick Wizard
 
-* 輕鬆輸入碳水化合物數量並設置計算基礎。
-* 詳細資訊可在[偏好設定](Preferences-quick-wizard)中設置。
+* Easily enter amount of carbs and set calculation basics.
+* Details are setup in [preferences](Preferences-quick-wizard).
 
 (Screenshots-bolus-wizard)=
 
-## 注射嚮導
+## Bolus Wizard
 
-![注射嚮導](../images/Home2020_BolusWizard_v2.png)
+![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
 
-當您需要進行餐前注射時，通常會從這裡開始操作。
+When you want to make a meal bolus this is where you will normally make it from.
 
-### I 區
+### Section I
 
-* 血糖 欄位通常會自動填充最新的 CGM 讀數。 如果您沒有工作中的 CGM，則該欄位將保持空白。 
-* 在碳水化合物欄位中，您可以添加您想要進行注射的碳水化合物數量或等效值。 
-* 如果您出於某些原因希望修改最終劑量，則可以使用修正欄位。
-* 碳水化合物時間欄位是為了提前注射，因此您可以告訴系統，碳水化合物需要等待一段時間才會生效。 如果您是為過去的碳水化合物進行注射，您可以在此欄位中輸入負數。
+* BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. 
+* In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. 
+* The CORR field is if you want to modify the end dosage for some reason.
+* The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
 
 (Screenshots-eating-reminder)=
 
-#### 用餐提醒
+#### Eating reminder
 
-* 對於未來的碳水化合物，您可以選中提醒框（當輸入將來的時間時，此框將預設選中），這樣您可以在未來的某個時間得到餐點碳水化合物的提醒。
+* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AAPS
    
-   ![帶有用餐提醒的注射嚮導](../images/Home2021_BolusWizard_EatingReminder.png)
+   ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
 
-### J 區
+### Section J
 
-* 超級注射是將接下來兩小時的基礎胰島素添加到即時注射中，並發出 0% 臨時基礎率（TBR），以收回額外的胰島素。 此選項僅在[嚮導中啟用超級注射](Preferences-superbolus)時顯示，可在[偏好設定總覽](Preferences-overview)中設置。
-* 其目的是更快地注射胰島素，希望減少血糖尖峰。
-* 詳情請查看[diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/)。
+* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable [superbolus](Preferences-superbolus) in wizard" is set in the [preferences overview](Preferences-overview).
+* The idea is to deliver the insulin sooner and hopefully reduce spikes.
+* For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
-### K 區
+### Section K
 
-* 顯示計算出的注射劑量。 
-* 如果活性胰島素（IOB）的量已超過計算出的注射劑量，那麼它只會顯示仍然需要的碳水化合物數量。
-* 筆記將根據您的[NS 客戶端](Preferences-nsclient)設置上傳到 Nightscout。
+* Shows the calculated bolus. 
+* If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](Preferences-nsclient).
 
-### L 區
+### Section L
 
-* 注射嚮導的詳細計算方式。
-* 您可以取消選中任何不想包括的項目，但通常不會這麼做。
-* 出於安全原因，如果您希望注射嚮導基於現有的臨時目標進行計算，則**必須手動勾選 TT 框**。
+* Details of wizard's bolus calculation.
+* You can deselect any that you do not want to include but you normally wouldn't want to.
+* For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
 
-#### COB 和 IOB 的組合及其含義
+#### Combinations of COB and IOB and what they mean
 
-* 出於安全原因，當 COB 框被勾選時，IOB 框無法取消選中，因為這樣做可能會導致過多的胰島素，因為 AAPS 未計算已經注射的劑量。
-* 如果您勾選 COB 和 IOB，未被胰島素覆蓋的未吸收碳水化合物 + 所有透過 TBR 或 SMB 注射的胰島素都將被計入。
-* 如果您僅勾選 IOB 而未勾選 COB，AAPS 將計算已經注射的胰島素，但不會將其與仍需吸收的碳水化合物對比。 這會導致“缺少碳水化合物”的提示。
-* 如果您在餐後短時間內為**額外的食物**（例如甜點）注射胰島素，取消勾選所有框可能會有所幫助。 這樣只會添加新的碳水化合物，因為主餐可能尚未被吸收，因此餐後的 IOB 無法與 COB 完全匹配。
+* For safety reasons IOB boxed cannot be unticked when COB box is ticked as you might run the risk of too much insulin as AAPS is not accounting for what’s already given.
+* If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
+* If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
+* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
 
 (Screenshots-wrong-cob-detection)=
 
-#### 錯誤的 COB 檢測
+#### Wrong COB detection
 
-![碳水化合物吸收緩慢](../images/Calculator_SlowCarbAbsorption.png)
+![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
 
-* 如果您在使用注射嚮導後看到上述警告，則表示 AAPS 檢測到計算的 COB 值可能有誤。
-* 因此，如果您在上一餐有 COB 後再次注射，請注意可能會過量注射！ 
-* 詳情請參閱[COB 計算頁面](COB-calculation-detection-of-wrong-cob-values)上的提示。
+* If you see the warning above after using bolus wizard, AAPS has detected that the calculated COB value maybe wrong.
+* So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
+* For details see the hints on [COB calculation page](COB-calculation-detection-of-wrong-cob-values).
 
 (Screenshots-action-tab)=
 
-## 操作標籤
+## Action tab
 
-![操作標籤](../images/Home2021_Action.png)
+![Actions tab](../images/Home2021_Action.png)
 
-### 操作 - M 區
+### Actions - section M
 
-* 按鈕[設定檔切換](Profiles-profile-switch)，作為按下主畫面上的[當前設定檔](Screenshots-section-b-profile-target)的替代方式。
-* 按鈕[臨時目標](temptarget-temp-targets)，作為按下主畫面上的[當前目標](Screenshots-section-b-profile-target)的替代方式。
-* 啟動或取消臨時基礎率的按鈕。 請注意，當設置了臨時基礎率時，按鈕將從“TEMPBASAL”變為“CANCEL x%”。
-* 即使在[閉環環境中延長注射](Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment)確實不起作用，但有些人仍要求提供使用延長注射的選項。
+* Button [profile switch](Profiles-profile-switch) as an alternative to pressing the [current profile](Screenshots-section-b-profile-target) on homescreen.
+* Button [temporary target](temptarget-temp-targets) as an alternative to pressing the [current target](Screenshots-section-b-profile-target) on homescreen.
+* Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
+* Even though [extended boluses](Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
    
-   * 此選項僅適用於 Dana RS 和 Insight 幫浦。 
-   * 閉環將自動停止並切換為開環模式，以運作延長注射。
-   * 在使用此選項之前，請務必閱讀[詳細資訊](../Usage/Extended-Carbs.md)。
+   * This option is only available for Dana RS and Insight pumps. 
+   * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
+   * Make sure to read the [details](../Usage/Extended-Carbs.md) before using this option.
 
 (Screenshots-careportal-section-n)=
 
-### 護理入口 - N 區
+### Careportal - section N
 
-* 顯示以下資訊
+* Displays information on
    
-   * 傳感器使用時間及電量（百分比）
-   * 胰島素使用時間及數量（單位）
-   * 導管使用時間
-   * 幫浦電池使用時間及電量（百分比）
+   * sensor age & level (battery percentage)
+   * insulin age & level (units)
+   * cannula age
+   * pump battery age & level (percentage
 
-* 如果使用[低解析度外觀](Preferences-skin)，顯示的資訊將會減少。
+* Less information will be shown if [low resolution skin](Preferences-skin) is used.
 
 (Screenshots-sensor-level-battery)=
 
-#### 傳感器電量（電池）
+#### Sensor level (battery)
 
-* 需要 xDrip+ 2020 年 12 月 10 日或更新版本的夜間構建。 適用於具有額外發射器（如 MiaoMiao 2）的 CGM。
-* （技術上，傳感器必須將電池電量資訊發送至 xDrip+。） （技術上，傳感器必須將電量資訊傳送至 xDrip+。）
-* 可以在[偏好設定](Preferences-status-lights)中設置臨界值。
-* 如果傳感器電量與手機電池電量相同，則說明您的 xDrip+ 版本可能過舊，需進行更新。
+* Needs xDrip+ nightly build Dec. 10, 2020 or newer.
+* Works for CGM with additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level information to xDrip+.)
+* Thresholds can be set in [preferences](Preferences-status-lights).
+* If sensor level is the same as phone battery level you xDrip+ version is probably too old and needs an update.
    
-   ![傳感器電量等於手機電池電量](../images/Home2021_ActionSensorBat.png)
+   ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
 
-### 護理入口 - O 區
+### Careportal - section O
 
-* 血糖檢查、導管填充、傳感器插入和幫浦電池更換是[N 區](Screenshots-careportal-section-n)顯示資料的基礎。
-* 填充/注入允許您記錄幫浦部位和胰島素筒的更換。
-* O 區反映了 Nightscout 的護理入口功能。 因此，運動、公告和問題是特別的筆記形式。
+* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](Screenshots-careportal-section-n).
+* Prime/Fill allows you to record pump site and insulin cartridge change.
+* Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
 
-### 工具 - P 區
+### Tools - section P
 
-#### 歷史瀏覽器
+#### History Browser
 
-* 允許您查看 AAPS 的歷史記錄。
+* Allows you to ride back in AAPS history.
 
 #### TDD
 
-* 每日總劑量 = 每日的注射量 + 基礎率
-* 一些醫生（尤其是新使用幫浦者）使用 50:50 的基礎-注射比例。 
-* 因此該比例計算為 TDD / 2 * TBB（每日總基礎率 = 24 小時內基礎率的總和）。 
-* 其他人則更喜歡 TDD 的 32% 至 37% 範圍作為 TBB。 
-* 如同大多數此類經驗法則，這種方法的實際有效性有限。 注意：每個人的糖尿病狀況都不同！
+* Total daily dose = bolus + basal per day
+* Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 
+* Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 
+* Others prefer range of 32% to 37% of TDD for TBB. 
+* Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
-![歷史瀏覽器 + 每日總劑量](../images/Home2021_Action_HB_TDD.png)
+![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
 
 (Screenshots-insulin-profile))=
 
-## 胰島素設定檔
+## Insulin Profile
 
-![胰島素設定檔](../images/Screenshot_insulin_profile.png)
+![Insulin Profile](../images/Screenshot_insulin_profile.png)
 
-* 此功能顯示了您在[設定生成器](Config-Builder-insulin)中選擇的胰島素的活性設定檔。 
-* 紫色線顯示注射後胰島素隨時間衰減的情況，藍色線顯示其活性。
-* 需要注意的重要一點是，衰減有一個長尾。 
-* 如果您習慣於手動操作幫浦，您可能習慣於認為胰島素會在大約 3.5 小時內衰減完畢。 
-* 然而，當您使用閉環系統時，這種長尾很重要，因為計算更為精確，這些微量的胰島素在 AAPS 演算法中的遞歸計算會積累起來。
+* This shows the activity profile of the insulin you have chosen in [config builder](Config-Builder-insulin). 
+* The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
+* The important thing to note is that the decay has a long tail. 
+* If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
+* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AAPS algorithm.
 
-有關不同類型的胰島素、它們的活性設定檔以及為什麼這些很重要的更多詳細討論，您可以閱讀這篇文章[理解基於指數活性曲線的新 IOB 曲線](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-您還可以在這裡閱讀一篇出色的部落格文章：[我們經常在使用的胰島素作用時間（DIA）上出錯的原因以及為什麼這很重要...](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-更多資訊請查看：[指數胰島素曲線 + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
-## 幫浦狀態
+## Pump Status
 
-![幫浦狀態](../images/Screenshot_PumpStatus.png)
+![Pump Status](../images/Screenshot_PumpStatus.png)
 
-* 顯示幫浦狀態的不同資訊。 顯示的資訊取決於您的幫浦型號。
-* 詳細資訊請參閱[幫浦頁面](../Hardware/pumps.md)。
+* Different information on pump status. Displayed information depends on your pump model.
+* See [pumps page](../Hardware/pumps.md) for details.
 
-## 護理入口
+## Care Portal
 
-護理入口複製了您在 Nightscout 螢幕上的“+”圖示下找到的功能，該圖示允許您向記錄中添加筆記。
+Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
 
-### 審查碳水化合物計算
+### Review carb calculation
 
-![在 t 標籤中審查碳水化合物計算](../images/Screenshots_TreatCalc.png)
+![Review carb calculation on t tab](../images/Screenshots_TreatCalc.png)
 
-* 如果您使用了[注射嚮導](Screenshots-bolus-wizard)來計算胰島素劑量，您可以稍後在 ts 標籤中審查此計算。
-* 只需按下綠色的 Calc 鏈接。 （根據幫浦的不同，胰島素和碳水化合物也可能在 ts 中顯示為單行。）
+* If you have used the [Bolus Wizard](Screenshots-bolus-wizard) to calculate insulin dosage you can review this calculation later on ts tab.
+* Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in ts.)
 
 (Screenshots-carb-correction)=
 
-### 碳水化合物修正
+### Carb correction
 
-![在 1 行或 2 行中進行治療](../images/Treatment_1or2_lines.png)
+![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
 
-可以使用治療標籤來修正錯誤的碳水化合物輸入（即您高估或低估了碳水化合物）。
+Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
 
-1. 在主畫面檢查並記住實際的 COB 和 IOB。
-2. 根據幫浦的不同，在治療標籤中碳水化合物可能與胰島素一起顯示在同一行，或作為單獨的條目（如 Dana RS）。
-3. 移除碳水化合物數量錯誤的項目。 (最新版本在治療螢幕上有垃圾桶圖示。 按一下垃圾桶圖示，選擇要刪除的行，然後再次按垃圾桶圖示以完成刪除。)
-4. 再次檢查主畫面上的 COB 以確保成功移除了碳水化合物。
-5. 如果治療標籤中包含碳水化合物和胰島素的條目是單行的，請對 IOB 執行相同操作。
+1. Check and remember actual COB and IOB on homescreen.
+2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
+3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
+4. Make sure carbs are removed successfully by checking COB on homescreen again.
+5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
    
-   -> 如果碳水化合物未按預期移除，並且您按此處解釋（6.）添加了額外的碳水化合物，COB 會過高，這可能會導致胰島素輸送過量。
+   -> If carbs are not removed as intended and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
 
-6. 透過主畫面的碳水化合物按鈕輸入正確的碳水化合物數量，並確保設置正確的事件時間。
+6. Enter correct carb amount through carbs button on homescreen and make sure to set the correct event time.
 
-7. 如果治療標籤中包含碳水化合物和胰島素的條目是單行的，您還必須添加胰島素的數量。 確保設置正確的事件時間，並在確認新條目後檢查主畫面上的 IOB。
+7. If there is just one line in treatment tab including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on homescreen after confirming the new entry.
 
-## 閉環、AMA / SMB
+## Loop, AMA / SMB
 
-* 這些標籤顯示了演算法的計算詳細資訊以及 AAPS 執行操作的原因。
-* 每次系統從 CGM 獲取新讀數時都會進行計算。
-* 有關更多詳細資訊，請參閱[設定生成器頁面的 APS 部分](Config-Builder-aps)。
+* These tabs show details about the algorithm's calculations and why AAPS acts the way it does.
+* Calculations are each time the system gets a fresh reading from the CGM.
+* For more details see [APS section on config builder page](Config-Builder-aps).
 
-## 設定檔
+## Profile
 
-![設定檔](../images/Screenshots_Profile.png)
+![Profile](../images/Screenshots_Profile.png)
 
-* 設定檔包含有關您個人糖尿病設定的資訊：
+* Profile contains information on your individual diabetes settings:
    
-   * DIA（胰島素作用持續時間）
-   * IC 或 I:C：胰島素與碳水化合物的比率
-   * ISF：胰島素敏感性因數
-   * 基礎率
-   * 目標：您希望 AAPS 尋求的血糖水平
+   * DIA (Duration of Insulin Action)
+   * IC or I:C: Insulin to Carb ratio
+   * ISF: Insulin Sensitivity Factor
+   * Basal rate
+   * Target: Blood glucose level that you want AAPS to be aiming for
 
-* 自 3.0 版起，只能使用[本地設定檔](Config-Builder-local-profile)。 本地設定檔可以在您的智慧型手機上進行編輯，並同步到您的 Nightscout 網站。
+* As of version 3.0 only [local profile](Config-Builder-local-profile) is possible. The local profile can be edited on your smartphone and synced to your Nightscout site.
 
 (Screenshots-treatment)=
 
-## 治療
+## Treatment
 
-以下治療的歷史記錄：
+History of the following treatments:
 
-* 注射和碳水化合物 -> 可以選擇[移除條目](Screenshots-carb-correction)來修正歷史記錄
-* [延長注射](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-* 臨時基礎率
-* [臨時目標](../Usage/temptarget.md)
-* [設定檔切換](../Usage/Profiles.md)
-* [護理入口](CPbefore26-careportal-discontinued) - 透過操作標籤輸入的筆記和對話框中的筆記
+* Bolus & carbs -> option to [remove entries](Screenshots-carb-correction) to correct history
+* [Extended bolus](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+* Temporary basal rate
+* [Temporary target](../Usage/temptarget.md)
+* [Profile switch](../Usage/Profiles.md)
+* [Careportal](CPbefore26-careportal-discontinued) - notes entered through action tab and notes in dialogues
 
-## 血糖來源 - xDrip+、BYODA...
+## BG Source - xDrip+, BYODA...
 
-![血糖來源標籤 - 這裡是 xDrip](../images/Screenshots_BGSource.png)
+![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
 
-* 根據您的血糖來源設定，此標籤名稱不同。
-* 顯示 CGM 讀數的歷史記錄，並提供在讀數出錯時刪除讀數的選項（例如壓力性低血糖）。
+* Depending on your BG source settings this tab is named differently.
+* Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
 
 ## NSClient
 
 ![NSClient](../images/Screenshots_NSClient.png)
 
-* 顯示與 Nightscout 網站的連線狀態。
-* 設定可在[偏好設定](Preferences-nsclient)中進行。 您可以透過點擊螢幕右上角的齒輪圖示打開相應的部分。
-* 有關故障排除的詳細資訊，請參閱此[頁面](../Usage/Troubleshooting-NSClient.md)。
+* Displays status of the connection with your Nightscout site.
+* Settings are made in [preferences](Preferences-nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
+* For troubleshooting see this [page](../Usage/Troubleshooting-NSClient.md).
