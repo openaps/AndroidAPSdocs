@@ -160,7 +160,7 @@ Kliněte na tlačítko "DALŠÍ":
 
 ![image](../images/setup-wizard/Screenshot_20231202_135807.png)
 
-### Jednotky (mg/dl <-> mmol/dL)
+### Units (mg/dL <-> mmol/L)
 
 Vyberte prosím, jestli vaše hodnoty glykémie jsou v mg/dl nebo mmol/L a klikněte na tlačítko "DALŠÍ":
 
@@ -199,7 +199,7 @@ Uživatelé Nightscoutu by měli vybrat \*\*NSClient v3", pokud nepotřebují sl
 
 Pro reportovací server Tidepool je nastavení ještě jednodušší, protože je třeba pouze zadání vašch přihlašovacích údajů.
 
-Po výběru klikněte na tlačítko "DALŠÍ":
+After making your selection, please press the cogwheel button next to the item you selected :
 
 ![image](../images/setup-wizard/Screenshot_20231202_140916.png)
 
@@ -257,7 +257,7 @@ Povolte "Vytvořit oznámení z chyb" a "Vytvořit oznámení z návrhu sacharid
 
 Položku "Zpomalit odesílání" ponechte vypnutou. Použijete ji pouze v neobvyklých případech, jako například pokud potřebujete přenést velké množství informací a Nightscout server zpracovává tato data pomalu.
 
-Vraťte se na předchozí obrazovku a klikněte na tlačítko "DALŠÍ":
+Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141351.png)
 
@@ -314,11 +314,11 @@ Po nastavení vašeho výběru klikněte na tlačítko "DALŠÍ" a přejděte k 
 
 ![image](../images/setup-wizard/Screenshot_20231202_141925.png)
 
-Pokud používáte Dexcom G6 a BYODA, k nastavení se dostanete kliknutím na ikonu "ozubeného kolečka".
+If you are using Dexcom G6 with BYODA, click on the cogwheel button to access the settings for BYODA.
 
 Povolte "Nahrát data glykémie do NS" a "Zaznamenat výměnu senzoru do NS".
 
-Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
+Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
@@ -443,7 +443,7 @@ Důvodem k vypnutí funkce SMB na začátku je ten, že SMB umožňuje rychlejš
 OpenAPS AMA je nejzákladnější algoritmus, který neumožňuje mikrobolusy pro korekci vysokých hodnot glykémie. Mohou nastat okolnosti, kdy je lepší používat tento algoritmus, ale nedoporučujeme to.
 :::
 
-Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
+Press the cogwheel to see the details:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144014.png)
 
@@ -451,7 +451,7 @@ Zde si pouze přečtěte text a nic zde neměňte.
 
 Kvůli omezením, která jsou vyžadována **Cíli**, v současné době nemůžete použít ani "uzavřenou smyčku" ani „SMB funkce".
 
-Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
+Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 
