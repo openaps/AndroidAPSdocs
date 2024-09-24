@@ -32,7 +32,7 @@ Dokumentace předvoleb je k dispozici [zde](../Configuration/Preferences.md).
 
 ## Nastavení pluginu
 
-Dialog **Nastavení pluginů** je možné otevřít prostřednictvím tříbodového menu vpravo nahoře na **domovské obrazovce** AAPS. To vám dává možnost změnit konfiguraci všech povolených pluginů na jednom místě.
+Dialog **Nastavení pluginů** je možné otevřít prostřednictvím tříbodového menu vpravo nahoře na **domovské obrazovce** AAPS. It provides the possibilty to change the configuration of the plugin currently on screen.
 
 Je to vhodný způsob, pokud víte, že chcete změnit např. kofiguraci BYODA. V tomto případě byste měli v horním menu **AAPS** vybrat záložku "BYODA" a jakmile jste na stránce BYODA, otevřete v pravém horním rohu tříbodové menu a potom položku "Nastavení pluginu". Dostanete se přímo do dialogu nastavení pouze pro plugin BYODA.
 
