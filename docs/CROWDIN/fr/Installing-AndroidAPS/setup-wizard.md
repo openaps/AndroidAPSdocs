@@ -160,7 +160,7 @@ Cliquez sur le bouton "SUIVANT" :
 
 ![image](../images/setup-wizard/Screenshot_20231202_135807.png)
 
-### Unités (mg/dL <-> mmol/L)
+### Units (mg/dL <-> mmol/L)
 
 Veuillez sélectionner si vos glycémies sont en mg/dL ou mmol/L, puis cliquez sur le bouton "SUIVANT" :
 
@@ -199,7 +199,7 @@ Les utilisateurs de Nightscout devraient choisir **NSClient v3**, sauf si vous s
 
 Pour Tidepool, c'est encore plus simple, car vous n'avez besoin que de vos informations de connexion personnelles.
 
-Après avoir fait votre choix, veuillez cliquer sur le bouton "SUIVANT" :
+After making your selection, please press the cogwheel button next to the item you selected :
 
 ![image](../images/setup-wizard/Screenshot_20231202_140916.png)
 
@@ -257,7 +257,7 @@ Activer "Créer des messages d'erreur" et "Créer des annonces à partir des ale
 
 Laissez la fonction "Ralentir les téléversements" désactivée. Cette option n'est utile que dans un contexte particulier, si par exemple vous avez beaucoup de données à envoyer au serveur Nightscout, et que ce serveur est lent à traiter les données.
 
-Retournez à l'écran précédent et sélectionnez "SUIVANT" pour passer à la suite :
+Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141351.png)
 
@@ -314,11 +314,11 @@ Après avoir fait votre sélection, appuyez sur "SUIVANT" pour passer à l'écra
 
 ![image](../images/setup-wizard/Screenshot_20231202_141925.png)
 
-Si vous utilisez Dexcom G6 avec BYODA, cliquez sur l'"engrenage" pour accéder aux paramètres de BYODA.
+If you are using Dexcom G6 with BYODA, click on the cogwheel button to access the settings for BYODA.
 
 Cochez "Remonter les glycémies vers NS" et "Enregistrement du changement de capteur sur NS".
 
-Appuyez sur "SUIVANT" pour passer à l'écran suivant :
+Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
@@ -443,7 +443,7 @@ La raison pour laquelle le SMB est désactivé au début est que la fonction SMB
 OpenAPS AMA est l'algorithme le plus basique et ne prend pas en charge les microbolus pour corriger les valeurs élevées. Il y a peut-être des cas où il est préférable d'utiliser cet algorithme mais ce n'est pas la recommandation.
 :::
 
-Appuyez sur "SUIVANT" pour passer à l'écran suivant :
+Press the cogwheel to see the details:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144014.png)
 
@@ -451,7 +451,7 @@ Parcourez seulement les options et ne changez rien ici.
 
 En raison des limitations imposées par les **Objectifs**, vous ne pouvez de toute façon pas utiliser les fonctionnalités "boucle fermée" ou "SMB" pour le moment.
 
-Appuyez sur "SUIVANT" pour passer à l'écran suivant :
+Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 
