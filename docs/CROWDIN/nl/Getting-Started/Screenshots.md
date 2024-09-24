@@ -495,7 +495,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 1. Bekijk en onthoud de werkelijke COB en IOB op Overzichtscherm.
 2. Afhankelijk van de pomp op het behandelingen-tabblad kunnen koolhydraten samen met insuline op één regel staan, of als een aparte regel (dit laatste is zo bij de DanaRS).
-3. Verwijder de regel met de foutieve koolhydraten-invoer.
+3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
 4. Controleer op het Overzicht scherm of de koolhydraten inderdaad zijn verwijderd, het aantal COB zou moeten zijn aangepast.
 5. Doe hetzelfde voor de IOB als er slechts één regel is op het Behandelingen-tabblad voor koolhydraten en insuline.
    
