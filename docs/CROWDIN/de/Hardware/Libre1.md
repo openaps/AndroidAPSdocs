@@ -24,7 +24,7 @@ Wenn Du den Libre 1 als BZ-Quelle nutzt, können aus Sicherheitsgründen die Fun
 -   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
 -    You also need [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) for Libre 1 US (and Libre 2 EU).
--   Wähle xDrip+ in der [KONFIGURATION, BZ-Quelle](../Configuration/Config-Builder.md#bg-source) aus.
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 ## 2. Using Glimp
 
@@ -46,4 +46,4 @@ Wenn Du den Libre 1 als BZ-Quelle nutzt, können aus Sicherheitsgründen die Fun
 
 ![Diabox](../images/Diabox.png)
 
-- Wähle xDrip+ in der [KONFIGURATION, BZ-Quelle](../Configuration/Config-Builder.md#bg-source) aus.
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
