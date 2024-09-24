@@ -85,7 +85,7 @@ N.B. 如果您使用不同的 HbA1c 單位（mmol/mol 而非 %），請點擊[�
 
 - “[如何安裝 AAPS](Installing-AndroidAPS/Building-APK.md)？” （D 部分），包括[故障排除](Usage/troubleshooting.md)子部分。
 
-How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#how-long-will-it-take-to-set-everything-up))
+達到閉環控制的時間因人而異，但使用 AAPS 達到完全閉環控制的大致時間表可以參考[>此處](#how-long-will-it-take-to-set-everything-up)。
 
 
 #### Keystore 和配置設置匯出文件

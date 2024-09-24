@@ -1,29 +1,30 @@
-# Dexcom G6
+# Dexcom G6 和 ONE
 
 ## 基本事項
 
 -   遵循一般 CGM 衛生和傳感器設定建議，[點擊此處](../Hardware/GeneralCGMRecommendation.md)了解更多。
 
-## 使用 G6 進行循環的通用提示
+## 使用 G6 和 ONE 的循環一般提示
 
 - 最近的傳輸器稱為 Firefly。 傳感器無法在不移除傳輸器的情況下重新啟動，傳輸器本身也無法重置，並且它們也不會生成原始資料。
 
 - 如果您正在重新啟動傳感器，請確保您已準備好進行校準並密切注意變化。
 
-- 提前植入 G6 傳感器並使用出廠校準，可能會導致結果產生變異。 如果您進行預先浸泡，為獲得最佳結果，您可能需要校正傳感器。
+- G6/ONE 預浸泡使用工廠校準可能會導致結果變異。 如果您進行預先浸泡，為獲得最佳結果，您可能需要校正傳感器。
 
 請閱讀 Tim Street 發表的[文章](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/)以了解更多，該文章發佈於[www.diabettech.com](https://www.diabettech.com)。
 
-## 如果使用 G6 配合 xDrip+
+## 如果使用 G6 或 ONE 與 xDrip+
 
 - 如果您正在使用最近的（Firefly）傳輸器，預防性重新啟動將**被忽略**。
 - 如果您使用的是修改過的傳輸器，則**不需要**使用預防性重新啟動。
 -   如果您使用的是舊的更換過電池的傳輸器，最安全的做法是**停用**[預防性重新啟動](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html)。 但是，在這種情況下，您將不得不在非[原生模式](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)下使用 G6（這不建議使用，因為它會停用工廠校準並且不會過濾吵雜的讀數），否則傳感器將在 10 天後停止運作。
--   Dexcom G6 傳輸器可以同時連線到 Dexcom 接收器（或替代的 t:slim 幫浦）和手機上的一個應用程式。
+-   Dexcom G6 和 ONE 傳送器可以同時連接到 Dexcom 接收器（或替代的 t:slim 幫浦）以及你手機上的一個應用程式。
 -   使用 xDrip+ 作為接收器時，請先卸載 Dexcom 應用程式。 **您無法同時將 xDrip+ 和 Dexcom 應用程式連線到傳輸器！**
--   如果您需要 Clarity 並希望從 xDrip+ 警報中獲益，請使用[BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) 並本地廣播到 xDrip+。 您還可以將 xDrip+ 用作官方 Dexcom 應用程式的配套應用程式，但您可能會遇到血糖讀數延遲。
+-   如果你需要 Clarity 並希望使用 xDrip+ 的警報，請使用 [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app)（僅限 G6）並用本地廣播到 xDrip+。
+-   您還可以將 xDrip+ 用作官方 Dexcom 應用程式的配套程式，但您可能會遇到血糖讀取延遲。
 -   如果尚未設置，請下載[xDrip+](https://github.com/NightscoutFoundation/xDrip)並按照[xDrip+ 設定頁面](../Configuration/xdrip.md)上的指示進行操作。
--   在[ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
+-   在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
 
 - 根據[xDrip+ 設定頁面](../Configuration/xdrip.md)調整設定。
 
@@ -54,9 +55,9 @@
 
 
 (DexcomG6-troubleshooting-g6)=
-## G6 疑難排解
+## G6 和 ONE 故障排除
 
-### Dexcom G6 特定疑難排解
+### Dexcom G6/ONE 特定故障排除
 
 -   向下滾動至[**疑難排解**](https://navid200.github.io/xDrip/docs/Dexcom_page.html)。
 

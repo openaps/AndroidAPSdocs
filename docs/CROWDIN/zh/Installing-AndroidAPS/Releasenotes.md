@@ -486,7 +486,7 @@ v3 是新的協議。 更加安全和高效
 
 - 請使用 [Android Studio 3.5.1](https://developer.android.com/studio/) 或更新版本來 [構建 apk](../Installing-AndroidAPS/Building-APK.md) 或 [更新](../Installing-AndroidAPS/Update-to-new-version.html)。
 - 如果您使用 xDrip，必須設置[識別接收器](xdrip-identify-receiver)。
-- 如果您使用帶有補丁的 Dexcom G6 應用，您將需要 [2.4 資料夾](https://github.com/dexcomapp/dexcomapp/tree/master/2.4)中的版本。
+- 如果您使用帶有修補版的 Dexcom G6 應用，您將需要 [2.4 資料夾](https://github.com/dexcomapp/dexcomapp/tree/master/2.4)中的版本。
 - Glimp 支援版本 4.15.57 及更新版本。
 
 (Releasenotes-is-this-update-for-me-currently-is-not-supported)=
@@ -495,7 +495,7 @@ v3 是新的協議。 更加安全和高效
 - Android 5 及更低版本
 - Poctech
 - 600SeriesUploader
-- 從 2.3 目錄中補丁的 Dexcom
+- 從 2.3 目錄中修補版的 Dexcom
 
 ### 主要新功能
 
@@ -506,7 +506,7 @@ v3 是新的協議。 更加安全和高效
 - 允許從注射建議器計算中 [只注射部分](Preferences-advanced-settings-overview)劑量
 - 呈現胰島素活動
 - 根據 Autosens 結果調整 IOB 預測
-- 新的補丁 Dexcom apks 支援（[2.4 資料夾](https://github.com/dexcomapp/dexcomapp/tree/master/2.4)）
+- 新的修補版 Dexcom apks 支援（[2.4 資料夾](https://github.com/dexcomapp/dexcomapp/tree/master/2.4)）
 - 簽章驗證器
 - 允許 OpenAPS 使用者繞過目標
 - 新的 [目標](../Usage/Objectives.md) - 測驗、應用處理 （如果您在早期版本中至少開始了「開放循環」目標，測驗是可選的。）
@@ -616,7 +616,7 @@ v3 是新的協議。 更加安全和高效
 ### 新外掛
 
 - PocTech 應用作為血糖資料來源
-- Dexcom 補丁應用作為血糖資料來源
+- Dexcom 修補版應用作為血糖資料來源
 - oref1 敏感性外掛
 
 ### 其他事項
@@ -628,4 +628,4 @@ v3 是新的協議。 更加安全和高效
 - 當幫浦長時間無法使用時（例如幫浦電池耗盡）以及血糖讀取遺失時，本地獨立於 Nightscout 的警報（請參閱設定中的 *本地警報*）
 - 選項允許保持螢幕開啟
 - 選項允許將通知顯示為 Android 通知
-- 支援使用 Dexcom 補丁應用或 xDrip G5 原生模式作為血糖資料來源進行高級過濾（允許始終啟用 SMB 並在飯後 6 小時內啟用）。
+- 支援使用 Dexcom 修補版應用或 xDrip G5 原生模式作為血糖資料來源進行高級過濾（允許始終啟用 SMB 並在飯後 6 小時內啟用）。

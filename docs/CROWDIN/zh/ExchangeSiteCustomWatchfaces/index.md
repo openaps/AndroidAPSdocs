@@ -1,8 +1,8 @@
 # 自訂錶盤交換站
 
-Here you can download Zip-Files with custom watchfaces users have prepared and want to share with you.
+在這裡，你可以下載用戶自行製作並與你分享的自訂錶面壓縮檔案（Zip 檔）。
 
-The Zip-Files can be uploaded in the folder "**[_static/ExchangeSiteCustomWatchfaces](https://github.com/openaps/AndroidAPSdocs/tree/master/docs/_static/ExchangeSiteCustomWatchfaces)**" via a Pull Request into GitHub as usual.
+Zip 檔案可以透過 Pull Request 一如往常地上傳到 GitHub 中的資料夾「**[_static/ExchangeSiteCustomWatchfaces](https://github.com/openaps/AndroidAPSdocs/tree/master/docs/_static/ExchangeSiteCustomWatchfaces)**」。
 
 在合併 Pull Request 的過程中，文件團隊將提取 CustomWatchface.png 檔案，並在其前加上 Zip 檔案的檔名作為前綴。
 
