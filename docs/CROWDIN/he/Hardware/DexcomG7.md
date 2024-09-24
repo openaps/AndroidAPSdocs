@@ -1,44 +1,42 @@
-# Dexcom G7
+# Dexcom G7 and ONE+
 
 
 ## תחילה הערות
 
-באביב 2022 התקבל ל- Dexcom G7 אישור ה-CE שלו ויצא לשוק בסוף אוקטובר '22.
-
-חשוב לציין כי מערכת ה-G7, בניגוד ל-G6, אינה מחליקה את הערכים, לא באפליקציה ולא בקורא. [לפרטים נוספים על כך](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. [לפרטים נוספים על כך](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
-:::{admonition} [שיטת החלקה](../Usage/Smoothing-Blood-Glucose-Data)
-:class: warning **החלקה מעריכית** **חייבת** להיות מופעלת לשימוש תקין בערכי ה-G7.  
+:::{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
+:class: warning **Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
 :::
 
 ## 1.  יישום Dexcom G7 ששונתה (Patched) (DiAKEM)
 
-**הערה: דרושה גרסת AAPS 3.2.0.0 או מאוחרת יותר!**
+**הערה: דרושה גרסת AAPS 3.2.0.0 או מאוחרת יותר! Not available for ONE+.**
 
 ### התקינו אפליקציית G7 ששונתה (!) והפעילו את החיישן
 
-יישום Dexcom G7 (DiAKEM) מעניק גישה לנתוני ה-Dexcom G7. זוהי אינה אפליקציית BYODA מכיוון שאפליקציה זו אינה יכולה לקבל נתוני G7 כרגע.
+A patched Dexcom G7 app (DiAKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
-הסירו את אפליקציית Dexcom המקורית אם השתמשתם בה לפני כן (ניתן להמשיך בסשן של חיישן שכבר הופעל - שימו לב לקוד החיישן לפני מחיקת האפליקציה!)
+Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
 
-הורידו והתקינו את הקובץ patched.apk [מכאן](https://github.com/authorgambel/g7/releases).
+Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
 
-הזינו קוד חיישן באפליקציה.
+Enter sensor code in the patched app.
 
-עקבו אחר ההמלצות הכלליות להיגיינה ומיקום החיישן [כאן](../Hardware/GeneralCGMRecommendation.md).
+Follow the general recommendations for CGM hygiene and sensor placement found [here](../Hardware/GeneralCGMRecommendation.md).
 
-לאחר שלב החימום, הערכים מוצגים כרגיל באפליקציית G7.
+After the warm-up phase, the values are displayed as usual in the G7 app.
 
 ### תצורה ב-AAPS
 
-לתצורה ב-AAPS
+For the configuration in AAPS
 - בחרו 'BYODA' [בבונה התצורה, מקור ערכי הסוכר](../Configuration/Config-Builder.md#bg-source) - אפילו אם זה לא היישום BYODA!
 
 - אם ב-AAPS לא מתקבלים ערכים, החליפו למקור ערכי סוכר אחרים ואז חזרו ל'BYODA' כדי לגרום ל-AAPS לחפש נתונים מ-BYODA.
 
-## 2. xDrip+ (חיבור ישיר ל-G7) (מומלץ)
+## 2. xDrip+ (direct connection to G7 or ONE+)
 
 - עקבו אחר ההוראות כאן: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
 - בחרו את xDrip+ ב[בונה התצורה, מקור נתוני סוכר](../Configuration/Config-Builder.md#bg-source).
