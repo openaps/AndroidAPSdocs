@@ -32,15 +32,15 @@ Bemerkung: Der Transmitter kann parallel zur LibreLink-App verwendet werden.
 - [Diese Anleitung](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) beschreibt, wie Du xDrip+ konfigurierst. Wichtig ist, dass Du die [neueste OOP2-Version](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) herunterlädst und nutzt, da die in der Dokumentation referenzierte Version veraltete ist.
 - Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
 
--   Wähle xDrip+ in der [KONFIGURATION, BZ-Quelle](../Configuration/Config-Builder.md#bg-source) aus.
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 ## 3. Diabox nutzen
 
-- Install [Diabox](https://t.me/s/DiaboxApp). In Settings, Integration, enable Share data with other apps.
+- Install [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). In Settings, Integration, enable Share data with other apps.
 
 ![Diabox](../images/Diabox.png)
 
-- Wähle xDrip+ in der [KONFIGURATION, BZ-Quelle](../Configuration/Config-Builder.md#bg-source) aus.
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 ## 4. Juggluco nutzen
 
@@ -50,7 +50,7 @@ Bemerkung: Der Transmitter kann parallel zur LibreLink-App verwendet werden.
 
 ![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
-- Wähle xDrip+ in der [KONFIGURATION, BZ-Quelle](../Configuration/Config-Builder.md#bg-source) aus.
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 :::{admonition} Use with xDrip+ :class: note You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
 ![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  
