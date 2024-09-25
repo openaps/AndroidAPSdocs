@@ -495,7 +495,7 @@ Záložka ošetření může být použita k opravě chybných záznamů sachari
 
 1. Zkontrolujte a zapamatujte si aktuální COB a IOB na domovské obrazovce.
 2. V závislosti na pumpě se mohou sacharidy v záložce ošetření zobrazovat společně s inzulínem v jednom řádku nebo jako samostatný záznam (např. s Danou RS).
-3. Odstraňte záznam s chybným množstvím sacharidů.
+3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
 4. Ujistěte se, že sacharidy byly úspěšně odstraněny kontrolou COB na domovské obrazovce.
 5. Kontrolu proveďte také pro IOB, pokud v záložce ošetření jeden řádek obsahuje sacharidy i inzulín.
    

@@ -269,13 +269,14 @@
 Stavové indikátory zobrazují vizuální varování pro
 
 - [Vylepšený asistent pro jídlo (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - stav algoritmu v roce 2017
-- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - nejnovější algoritmus pro pokročilé uživatele
+- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### Nastavení OpenAPS AMA
 
 - Jsou-li sacharidy zadány správně, reaguje systém po bolusu na jídlo rychleji, a to díky aplikování vysoké dočasné bazální dávky.
 - Více podrobností o nastavení a Autosens můžete najít v .
 
+(Preferences-max-u-h-a-temp-basal-can-be-set-to)=
 #### Max. U/h, které lze nastavit pro dočas. bazál
 
 - Maximální hodnota dodatečného bazálního inzulínu (v jednotkách), o který může smyčka navýšit Váš normální bazál.
@@ -322,7 +323,7 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 
 - Použití SMB je možné až po spuštění [9. cíle](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb).
 
-- První tři nastavení jsou vysvětleny [výše](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to).
 
 - Podrobnosti o různých možnostech nastavení jsou popsány v části [Funkce OpenAPS](Open-APS-features-enable-smb).
 
@@ -496,8 +497,7 @@ Vyberte, jaká služba určování polohy se použije:
 
 ![Nastavení údržby](../images/Pref2020_Maintenance.png)
 
-- Standardně logy přijímáme na adrese <logs@androidaps.org>.
-- Pokud vyberete *Zašifrovat exportovaná nastavení*, budou zašifrována vaším [hlavním heslem](Preferences-master-password). V tomto případě je nutné při každém exportu nebo importu nastavení zadat hlavní heslo.
+- Standard recipient of logs is <logs@aaps.app>.
 
 ## Open Humans
 

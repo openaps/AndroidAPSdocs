@@ -269,13 +269,14 @@
 Abhängig von Deinen Einstellungen im [Konfigurations-Generator](../Configuration/Config-Builder.md) kannst Du zwischen zwei Algorithmen wählen:
 
 - [Advanced meal assist (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - Entwicklungsstand des Algorithmus von 2017
-- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - Neuester Algorithmus für erfahrene Nutzende
+- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### OpenAPS AMA-Einstellungen
 
 - Erlaubt AAPS nach einem Essen schneller mit einer Erhöhung der Basalrate zu reagieren - WENN Du die Kohlenhydrate zuverlässig eingibst.
 - Mehr Details zu den Einstellungen und Autosens findest Du in den [OpenAPS Docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
+(Preferences-max-u-h-a-temp-basal-can-be-set-to)=
 #### Maximale IE/h, die als TBR gesetzt werden können
 
 - Diese Einstellung existiert als Sicherheitsgrenze, um zu verhindern, dass AAPS jemals eine gefährlich hohe Basalrate setzt.
@@ -322,7 +323,7 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 
 - Du musst [Ziel 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) gestartet haben, um SMB nutzen zu können.
 
-- Die ersten drei Einstellungen sind [oben beschrieben](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to).
 
 - Details zu den verschiedenen Optionen sind auf der Seite [OpenAPS-Funktionen](Open-APS-features-enable-smb) beschrieben.
 
@@ -496,8 +497,7 @@ Wähle aus, welcher Standortservice verwendet werden soll:
 
 ![Wartungseinstellungen](../images/Pref2020_Maintenance.png)
 
-- Standardempfänger von Protokollen ist <logs@androidaps.org>.
-- Wenn Du *Exportierte Daten verschlüsseln* auswählst, werden diese mit Deinem [Master Password](Preferences-master-password) verschlüsselt. In diesem Fall muss das Master-Passwort jedes Mal eingegeben werden, wenn die Einstellungen ex- oder importiert werden.
+- Standard recipient of logs is <logs@aaps.app>.
 
 ## Open Humans
 
