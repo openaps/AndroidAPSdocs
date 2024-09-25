@@ -1,68 +1,68 @@
-# For users of Eversense
+# 針對 Eversense 使用者
 
-There are three different methods to access the readings from Eversense:
+有三種不同的方法來存取 Eversense 的讀數：
 
-- ESEL companion mode
-- ESEL patched mode
-- xDrip+ companion app
+- ESEL 配套模式
+- ESEL 修改版模式
+- xDrip+ 配套應用程式
 
 ## ESEL
 
-Get and install the [ESEL app](https://github.com/BernhardRo/Esel/tree/master/apk), following these [instructions](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel).
+按照這些[指示](https://github.com/BernhardRo/Esel?tab=readme-ov-file#esel)，取得並安裝[ESEL 應用程式](https://github.com/BernhardRo/Esel/tree/master/apk)。
 
-- Enable "Send to AAPS and xDrip"
-- **Disable** "Send to Nightscout"
-- As the BG data from Eversense can be noisy, it is recommended to enable "Smooth Data" in ESEL.
+- 啟用「發送至 AAPS 和 xDrip」
+- **停用**「發送至 Nightscout」
+- 由於 Eversense 的血糖資料可能會產生噪音，建議在 ESEL 中啟用「平滑資料」功能。
 
-![ESEL Broadcast](../images/ESEL.png)
+![ESEL 廣播](../images/ESEL.png)
 
-### Companion Mode
+### 配套模式
 
-Reads the data from the Eversense app notifications (works with the standard Eversense App, available since ESEL version 3.0.1).
+從 Eversense 應用程式通知中讀取資料（自 ESEL 版本 3.0.1 起可與標準 Eversense 應用程式一起使用）。
 
-1. Use the official Eversense App from the Google Play Store
-   - Optional, but required for backfilling: Login to your Eversense account
-   - In Sync, enable Auto synchronization
-2. Configuration of ESEL:
-   - Disable the setting "Get data from patched Eversense App"
-   - For backfilling: Enable "Fill missing data from eversensedms.com"
-   - Provide as Email address and password your Eversense login data
-3. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+1. 使用來自 Google Play 商店的官方 Eversense 應用程式
+   - 選擇性操作，但若需回填則必須：登錄您的 Eversense 帳號
+   - 在同步中，啟用自動同步功能
+2. ESEL 設定：
+   - 停用「從修改版 Eversense 應用程式獲取資料」設置
+   - 若需回填：啟用「從 eversensedms.com 填補遺漏資料」
+   - 輸入您的 Eversense 登錄資料作為電子郵件地址和密碼
+3. 在[ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source)中將「MM640g」設為血糖來源。
 
-### Patched Eversense App
+### 修改版 Eversense 應用程式
 
- Requires a patched version of the Eversense App (works completely offline, including backfilling).
+ 需要修改版的 Eversense 應用程式（完全離線運作，包括回填）。
 
-1. Uninstall the Eversense App (Warning: your local historical data (older than 1 week) will be lost!)
+1. 卸載 Eversense 應用程式（警告：您將丟失超過 1 週的本地歷史資料！）
 
-2. Install the [patched Eversense app](https://cr4ck3d3v3r53n53.club) and use it as described by the vendor
+2. 安裝[修改版 Eversense 應用程式](https://cr4ck3d3v3r53n53.club)並按照供應商的描述進行使用。
 
-   - Start the Eversense App, login, connect to your transmitter and use it just like the normal app.
+   - 啟動 Eversense 應用程式，登錄，連線到您的傳輸器，並像使用正常應用程式一樣使用它。
 
-3. Configuration of ESEL:
+3. ESEL 設定：
 
-   - Enable the setting "Get data from patched Eversense App"
+   - 啟用「從修改版 Eversense 應用程式獲取資料」設置
 
 
 
-![ESEL Broadcast](../images/ESELpatch.png)
+![ESEL 廣播](../images/ESELpatch.png)
 
-​       If you run ESEL with a fresh installation of Eversense for the first time, it can take up to 15min until your first values appear in xDrip!
+如果您首次安裝 Eversense 並運作 ESEL，可能需要長達 15 分鐘才能在 xDrip 中顯示第一個數值！
 
-4. Set "MM640g" as BG source in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+4. 在[ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source)中將「MM640g」設為血糖來源。
 
 ## xDrip+
 
-xDrip+ can read notifications from the vendor app, like ESEL does. No backfilling available.
+xDrip+ 可以像 ESEL 一樣從供應商應用程式的通知中讀取資料。 無法使用回填功能。
 
-- Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip+ “Companion App” must be selected.
-- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page [xDrip+ settings](../Configuration/xdrip.md).
-- Enable [Exponential Smoothing](../Usage/Smoothing-Blood-Glucose-Data.md#smoothing-blood-glucose-data) in AAPS.
+- 下載並安裝 xDrip+：[xDrip](https://github.com/NightscoutFoundation/xDrip)
+- 在 xDrip+ 中必須選擇「配套應用程式」作為資料來源。
+- 在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
+- 根據 xDrip+ 設定頁面的說明[調整 xDrip+ 設定](../Configuration/xdrip.md)。
+- 在 AAPS 中啟用[指數平滑](../Usage/Smoothing-Blood-Glucose-Data.md#smoothing-blood-glucose-data)。
 
 ```{warning}
-BG values reading frequency is not always 5 minutes and duplicates can occur.
+血糖 值的讀取頻率並不總是 5 分鐘，並且可能會出現重複數值。
 ```
 
 ****
