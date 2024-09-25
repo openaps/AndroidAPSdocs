@@ -36,7 +36,7 @@ Libre2 OOP 所生成的讀數與原始讀取器或透過 NFC 掃描的 LibreLink
 
 ## 3. 使用 Diabox
 
-- Install [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). 在設定中，進入「整合」，啟用「與其他應用程式共享資料」。
+- 安裝 [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf)。 在設定中，進入「整合」，啟用「與其他應用程式共享資料」。
 
 ![Diabox](../images/Diabox.png)
 
