@@ -1,25 +1,25 @@
 (Phones-list-of-tested-phones)=
 
-# 經過測試與 Omnipod Dash 胰島素幫浦 POD 相容的手機列表
+# List of tested Phones compatible with Omnipod Dash Insulin Pump Pods
 
-目前，我們有一位非常努力的幕後維護者，負責確保所有可與 Omnipod Dash 循環使用的 Android 手機/智慧型手錶硬體清單的完整性。這是我們不斷擴展的藍牙胰島素幫浦網絡中最新的幫浦驅動程式，適用於 AAPS/OpenAPS 生態系統！
+Currently, we have a very hard-working behind-the-scenes Maintainer, who is in charge of ensuring the integrity of the Hardware List of all Android Phones/Smartwatches Capable of Looping with the Omnipod Dash; the newest pump driver addition to our ever-expanding network of Bluetooth enabled insulin pumps for use within the AAPS/OpenAPS ecosystem!
 
-我們的維護者花費了大量時間和精力，確保每個人都可以輕鬆地將資料輸入到 Google 表單中，這些表單預先填充了相關資訊標題，方便使用！ 這確保了現有的資料不會意外被覆蓋或刪除。 同樣的成功經驗可以透過再次使用 Google 試算表來構建。
+Our Maintainer has spent a lot of time and effort to make sure that its easy for everyone to enter data into the Spreadsheet; via a Google Form with pre-populated information headers for ease of use! This ensures that the existing data on the sheets cannot be accidentally overwritten or deleted. The same experience can be built upon the success of the first again using Google Sheets.
 
-感謝 Google 試算表的便利性，早期使用者之間的密切溝通，以及他們在早期測試/反饋階段所集結的集體知識和經驗，使得 Dash 幫浦 POD 驅動程式的資料得以高效彙總。 早期使用者們對每個 Dash 藍牙驅動程式新版本進行逐步反饋的時間、資訊和精力的貢獻變得顯而易見，因為現在我們擁有一個全面的硬體對比清單，列出了與 Omnipod Dash 相容的許多 Android 手機和智慧型手錶，並對其進行了相容性測試和排名。 此外，該表還包括了一些不相容的配置，讓新用戶知道應該避免哪些硬體，這些硬體通常在連線速度或強度方面存在問題。
+Thanks to the ease of Google Spreadsheets, close communication amongst early adopters and the ability of pooling their collective knowledge and lessons learned throughout early testing/feedback phases of the Dash pump pod drivers was compiled quite efficiently. The results of the time, information and energy provided by the numerous Early Adopters in providing step-by-step feedback on each new version of the Dash Bluetooth drivers becomes apparent once you open the up what is now a comprehensive Compare/Contrast list of all hardware suited for Looping with the Omnipod Dash, with many Android Phones and Smartwatches tested and ranked for compatibility. In addition, the more incompatible setups are also included in this Spreadshee so that new users will know which hardware to avoid due to issues with connection speed or strength.
 
-當未來需要建立另一個硬體相容性清單時，我們鼓勵有興趣成為維護者的人與我們聯繫！
+When the time comes for another Hardware Compatibility List to be created in the future; we encourage anyone that feels they might enjoy becoming a Maintainer to please contact us!
 
-經過測試的手機列表可以透過以下鏈接查看：[與 Omnipod 胰島素幫浦相容的手機列表](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
+The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
 
-您可以使用 CRTL-F 在 Google 試算表中搜索文字。 該試算表為唯讀保護狀態。 要記錄您測試的手機，請填寫[表單](https://forms.gle/g7GbSkMCTfFrWKjSA)。
+With CRTL-F you can search in the text of the Google sheet. The sheet is write protected. To record your test of a phone please fill in the [form](https://forms.gle/g7GbSkMCTfFrWKjSA).
 
-在您提交表單資料後，維護者將審核資料並批准發佈！
+After you fill in the form data the maintainer will check the data and approve it for publishing!
 
-如對試算表有任何問題，請直接與我們聯繫或透過 openaps/AndroidAPSDocs 項目 GitHub 提交問題。
+Any problems with the spreadsheet please contact us directly or via a GitHub issue for the openaps/AndroidAPSDocs project.
 
 (Phones-phone-background)=
 
-# 手機背景
+# Phone Background
 
-![手機背景](../images/bg_phone_thump.jpg) </br> 設計者：Thiago :)</br>如果您想用更多 AAPS 裝飾您的手機，可以在這裡下載背景圖片： ![高解析度背景。](../images/bg_phone.jpg)
+![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
