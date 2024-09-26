@@ -7,18 +7,18 @@
 Verify the bridge and the app you want to use are compatible with your sensor.  
 ```
 
-Several bridges are available on the market:
+市場上有幾款橋接器可供選擇：
 
 -   [MiaoMiao 讀取器](https://www.miaomiao.cool/)（版本 1、2 或 3），也可在 AliExpress 上購買。
 -   [Blucon Nightrider](https://www.ambrosiasys.com/our-products/blucon/)（請注意，最新的韌體版本可能與所有應用程式不相容，供應商應用程式不會向 AAPS 廣播資料）。
 -   [Bubble（或 Bubble Mini）](https://www.bubblesmartreader.com/)，來自歐洲供應商（[Bubblan](https://www.bubblan.org/)，[BubbleShop](https://bubbleshop.eu/)），或適用於俄羅斯用戶[點擊此處](https://vk.com/saharmonitor/)。 也可在 AliExpress 上購買。
 -   適用於俄羅斯用戶的 Atom。
 
-Historically it is possible to use a specific watch, the Sony Smartwatch 3 (SWR50) which has an NFC chip that can be enabled and used as an NFC collector. However the custom NFC to Bluetooth bridges listed above offer a less complex solution and would be used by the majority of those wanting to use their Libre 1 (non-US) as a CGM.
+過去曾有使用特定手錶的案例，例如 Sony Smartwatch 3 (SWR50)，該手錶內建可啟用的 NFC 晶片，能夠用來作為 NFC 收集器。 不過，上面提到的客製化 NFC 轉藍牙橋接器提供了一個更簡單的解決方案，大部分想要使用 Libre 1（非美國版）當作 CGM 的人，都會選擇這種方式。
 
 -   Sony Smartwatch 3（SWR50）<https://github.com/pimpimmi/LibreAlarm/wiki/>
 
-As it currently stands, if using Libre 1 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within the SMB algorithm. The BG values of Libre 1 are not smooth enough to use it safely. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+目前來看，使用 Libre 1 作為血糖來源時，無法在 SMB 算法中啟用「始終啟用 SMB」和「在用餐後啟用 SMB」。 Libre 1 的血糖值不夠平滑，無法安全使用。 有關更多詳細資訊，請參閱[平滑血糖資料](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)。
 
 ## 1. 使用 xDrip+
 
