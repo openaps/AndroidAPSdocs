@@ -1,39 +1,39 @@
 # Tidepool
 
-Tidepool 是一個第三方工具，用於收集血糖、胰島素和碳水化合物資料，並可以用來分析和與您的臨床團隊分享這些資料。 自 AAPS 3.2 版本起，它可以作為 Nightscout 的替代方案來滿足目標 1 的一部分要求。 它也可以與 Nightscout 結合使用，作為一個替代的報告平台，與臨床環境緊密整合。 這對於使用 AAPS 的兒童來說可能是一個理想選擇，他們希望擁有 Nightscout 的遠端監控和控制功能，但希望使用他們的臨床團隊更熟悉的報告平台。
+Tidepool is a third party tool that collects data regarding BG, insulin and carbs and can be used to analyze and share this data with your clinical team. As of AAPS version 3.2 it can be used as an alternative to Nightscout for satisfying part of Objective 1. It can also be used in combination with Nightscout as an alternative reporting platform that integrates well with clinical settings. This may be the desired option for children using AAPS who want to have the remote monitoring and control capabilities of Nightscout, but want a reporting platform that their clinical team are more comfortable with.
 
-重要的是要了解 Tidepool 只是用於報告。 它不是一個實時的追蹤應用程式。 如果您需要除了主 AAPS 手機之外的追蹤者，則必須同時設置 Nightscout。
+It is important to understand the tidepool is for reporting only. It is NOT a real-time follow app. If you need to have followers apart from the main AAPS phone you must setup Nightscout as well.
 
-注意：Tidepool 組織也正在努力將 iOS Loop 產品推向市場並獲得 FDA 批准。 這與他們的資料報告平台或 AAPS 無關。
+Note: the Tidepool organization is also working on bringing the iOS Loop product to market with FDA approval. This effort has nothing to do with their data reporting platform or AAPS.
 
-## 步驟 1 - 設置 Tidepool 帳戶
+## Step 1 - Setup a tidepool account
 
--導航到 tidepool.org
+-Navigate to tidepool.org
 
--選擇「個人註冊」或「註冊」
+-Select “Personal Sign Up” or “Sign Up”
 
--建立並記錄電子郵件和密碼
+-Create and document an email and password
 
--選擇「個人帳戶」並點擊「繼續」
+-Select “Personal Account” and click “Continue”
 
--完成患者資料部分並接受使用條款
+-Complete the patient information section and accept the terms of use
 
--透過您電子郵件中的指示來驗證您的電子郵件地址
+-Verify your email address via the instructions received to your email
 
-## 步驟 2 - 在 AAPS 中輸入憑據
+## Step 2 - Enter credentials into AAPS
 
--選擇左上角的「漢堡」選單，然後選擇「組態建置工具」（如果「組態建置工具」不在那裡，它將位於頂部的一個標籤頁中）
+-Select the three-line “hamburger” menu in the top left and the select “Config Builder” (if “Config Builder is not located there it will instead be one of the tabs along the top)
 
--向下滾動至「同步」部分，並選中「Tidepool」左側的勾選框
+-Scroll down to the “Synchronization” section and select the check mark to the left of “Tidepool”
 
--點擊「Tidepool」右側的齒輪圖示
+-Click the gear icon to the right of “Tidepool”
 
--輸入您在步驟 1 中建立的用戶名和密碼
+-Enter the username and password you created in Step 1 above
 
--點擊「測試 Tidepool 登錄」
+-Click “Test Tidepool Login”
 
--如果您收到「成功登錄 Tidepool」的訊息，則表示您已成功連線。 如果沒有，請確認您的憑據正確，並且您已驗證了 Tidepool 的電子郵件地址。
+-If you get the “Successfully logged into Tidepool” message you have successfully connected. If not, confirm your credentials are correct and that you have verified your email address with Tidepool.
 
--點擊「連線設定」，根據您的個人偏好進行設置
+-Click on “Connection settings” and set based on your personal preferences
 
-有關如何使用上傳到 Tidepool 的資料的更多幫助，請查看：[https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
+For more assistance on how to use your data once it is uploaded to Tidepool please visit: [https://www.tidepool.org/viewing-your-data](https://www.tidepool.org/viewing-your-data)
