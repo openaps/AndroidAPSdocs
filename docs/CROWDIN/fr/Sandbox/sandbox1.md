@@ -1,14 +1,14 @@
 # fichier sandbox interne 1 pour tester nos sprints
 
-:::{admonition} pas besoin de traduire ceci
+```{admonition} no need to translate this
 :class: note
 
-Pas besoin de traduire cela.
-:::
+No need to translate this.
+```
 
-:::{danger}
-Ici un danger est présent sur la route.
-:::
+```{danger}
+Here is danger on the road.
+```
 
 Test for Setup
 
