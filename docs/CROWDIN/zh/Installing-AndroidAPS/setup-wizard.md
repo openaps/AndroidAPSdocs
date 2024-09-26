@@ -6,18 +6,20 @@
 
 在使用 **設定嚮導** 期間和直接之後，您可能不會注意到 **AAPS** 中有任何顯著的可見變化。 要啟用您的 **AAPS** 循環，您必須遵循 **目標** 來逐步啟用各個功能。 您將在設定嚮導的結尾開始**目標1**。 您是 **AAPS** 的主人，而不是它控制您。
 
-:::{admonition} 預覽目標
+```{admonition} Preview Objectives
+:class: note
+If you are keen to know the structure of the objectives, please read [Completing the objectives](../Usage/completing-the-objectives.md) but then come back here to run the Setup Wizard first.
 
-:::
+```
 
-根據以往經驗，我們了解到，初學者經常會給自己施加壓力，盡快設置 **AAPS**，這會導致挫敗感，因為這是一個巨大的學習曲線。
+From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
 
-所以，請慢慢來配置您的循環，運作良好的 **AAPS** 循環帶來的好處是巨大的。
+So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
 
-:::{admonition} 尋求幫助
+```{admonition} Ask for Help
 :class: note
 如果文檔中有錯誤或您有更好的解釋建議，您可以按照[與其他用戶聯繫](../Where-To-Go-For-Help/Connect-with-other-users.md)中的說明，向社群尋求幫助。
-:::
+```
 
 ## AAPS設定嚮導逐步指南
 
@@ -192,10 +194,12 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 您可
 
 在此示例中，我們選擇Nightscout作為報告伺服器，並將進行配置。
 
-:::{admonition} 請確保選擇適合您需求的 **NSClient** 版本！
+```{admonition} Make sure to choose the correct **NSClient** version for your needs! 
+:class: Note
+Click [here](link) for the release notes of **AAPS** 3.2.0.2 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**. 
 
-Nightscout用戶應選擇 **NSClient v3**，除非您想透過Nightscout進行監控或發送遠端治療（_例如_ 父母或照護者使用 **AAPS** 為孩子治療），此時請選擇第一個選項“**NSClient**”直到另行通知。
-:::
+Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout, in which case, choose the first option "**NSClient**" until further notice. 
+```
 
 對於Tidepool來說，這更簡單，因為您只需要您的個人登錄訊息。
 
@@ -291,10 +295,10 @@ Nightscout用戶應選擇 **NSClient v3**，除非您想透過Nightscout進行�
 
 胰島素名稱應該很好理解。
 
-:::{admonition} 除非您了解其用法，否則不要使用“Free-Peak Oref”
+```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
 :class: danger
-針對高階用戶或醫學研究，可以使用“Free-Peak Oref”來定義自訂的胰島素作用模式。 除非您是專家，否則請不要使用它，通常每種品牌的胰島素的預設值都能很好地運作。
-:::
+For advanced users or medical studies there is the possibility to define with "Free-Peak Oref" a customised profile of how insulin acts. Please don't use it unless you are an expert, usually the pre-defined values work well for each branded insulin.
+```
 
 按“下一步”進入下一個螢幕：
 
@@ -328,12 +332,14 @@ Nightscout用戶應選擇 **NSClient v3**，除非您想透過Nightscout進行�
 
 請在嘗試輸入以下畫面的配置檔案詳細資訊之前閱讀配置檔案的文檔。
 
-:::{admonition} 必須有一個可用的配置檔案 - 沒有例外！
+```{admonition} Working profile required - no exceptions here !
+:class: danger
+An accurate profile is necessary to control the safe action of **AAPS**
 
-您必須與醫生討論並確定您的配置檔案，並透過成功的基礎率、ISF 和 IC 測試證明其有效！
+It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
 
-如果機器人有錯誤的輸入，它會一貫失敗。 **AAPS** 只能根據其接收到的訊息工作。 如果您的配置檔案過於強效，您有低血糖的風險，而如果過於弱效，則有高血糖的風險。
-:::
+If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
+```
 
 按“下一步”進入下一個螢幕。 輸入一個“配置檔案名稱”：
 
@@ -341,12 +347,14 @@ Nightscout用戶應選擇 **NSClient v3**，除非您想透過Nightscout進行�
 
 長期來看，如果有需要，您可以擁有多個配置檔案。 這裡我們只建立一個。
 
-:::{admonition} 配置檔案僅用於教學 - 不適合實際使用
+```{admonition} Profile only for tutorial - not for your usage
+:class: information
+The example profile here is only to show you how to enter data.
 
-這不是一個準確的配置檔案，也不是經過良好優化的配置，因為每個人的需求差異很大。
+It is not intended to be an accurate profile or something very well optimised, because each person's needs are so different.
 
-不要用它來實際循環！
-:::
+Don't use it for actually looping!
+```
 
 輸入您的胰島素作用時間（DIA），單位為小時。 然後按“IC”：
 
@@ -380,10 +388,10 @@ Nightscout用戶應選擇 **NSClient v3**，除非您想透過Nightscout進行�
 
 儲存後將出現一個新按鈕“啟用配置檔案”。
 
-:::{admonition} 定義了多個但只能啟用一個配置檔案
+```{admonition} Several defined but only one active profile
 :class: information
 您可以定義多個配置檔案，但任何時刻只能啟用一個配置檔案。
-:::
+```
 
 按下“啟用配置檔案”：
 
@@ -391,10 +399,10 @@ Nightscout用戶應選擇 **NSClient v3**，除非您想透過Nightscout進行�
 
 配置檔案切換對話框出現。 在這種情況下，讓它保持預設。
 
-:::{admonition} 定義了多個但只能啟用一個配置檔案
+```{admonition} Several defined but only one active profile
 :class: information
 您稍後將學習如何使用此通用對話框來處理疾病或運動等情況，在這些情況下，您需要更改適合情況的配置檔案。
-:::
+```
 
 按下“確定”：
 
@@ -438,10 +446,10 @@ Nightscout用戶應選擇 **NSClient v3**，除非您想透過Nightscout進行�
 
 在初期，您的配置檔案通常不如經驗豐富後好，所以這個功能在初期被停用。 由於在開始時，您的配置檔案通常不如經驗豐富後那麼好，因此該功能在初期被停用。
 
-:::{admonition} 除非您知道自己在做什麼，否則請僅使用較舊的演算法 **OpenAPS AMA**
+```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: information
-OpenAPS AMA 是最基本的演算法，不支援使用小劑量注射來修正高血糖值。 在某些情況下，使用此演算法可能更好，但這不是推薦的選擇。
-:::
+OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
+```
 
 按齒輪查看詳細資訊：
 

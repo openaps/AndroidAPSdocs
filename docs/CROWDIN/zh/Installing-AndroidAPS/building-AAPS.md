@@ -58,11 +58,11 @@
 
 ## 構建AAPS應用程式的逐步指南
 
-:::{admonition} 警告
+```{admonition} WARNING
 :class: warning
-如果您之前已經構建過AAPS，則不需要再次執行所有以下步驟。
-請直接跳到[更新指南](../Installing-AndroidAPS/Update-to-new-version)！
-:::
+If you have built AAPS before, you don't need to take all the following steps again.
+Please jump directly to the [update guide](../Installing-AndroidAPS/Update-to-new-version)!
+```
 
 構建 **AAPS** apk檔案的整體步驟如下：
 
@@ -84,11 +84,12 @@
 
 ### 安裝Git（如果您還沒有安裝）
 
-:::{admonition} 為什麼要使用Git？
+```{admonition} Why Git? 
+:class: dropdown
 
-Git被稱為“_版本控制系統_”（VCS）。\
-Git是一個允許您追蹤程式碼變更並與他人協作的程式。 您將使用Git從GitHub網站將 **AAPS** 的原始程式碼複製到您的本地電腦。 然後，您將在電腦上使用Git來構建 **AAPS** 應用程式（apk）。
-:::
+Git is known as a “_Versioning Control System_” (VCS).\
+Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Git on your computer to build the **AAPS** application (apk). 
+```
 
 #### 安裝Git的步驟
 
@@ -116,10 +117,10 @@ Git是一個允許您追蹤程式碼變更並與他人協作的程式。 您將�
 
 - **在以下步驟中，您必須始終保持線上狀態，因為Android Studio會下載多個更新。**
 
-:::{admonition} 什麼是Android Studio？
+```{admonition} What is Android Studio?
 :class: dropdown
-Android Studio是一個在您的電腦上運作的程式。 它允許您使用Git從互聯網下載原始程式碼，並構建智慧型手機（和智慧型手錶）應用程式。 您無法透過在電腦上使用Android Studio構建新版本或更新版本的應用程式來“破壞”當前在智慧型手機上運作的 **AAPS** 循環版本，這些是完全獨立的過程。
-:::
+Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes. 
+```
 
 以下螢幕截圖取自 **Hedgehog** 版本的Android Studio，它們應與更新版本相同。
 
@@ -169,10 +170,11 @@ Android Studio將立即啟動。
 
 軟體應自動選擇所需的SDK並選擇一個位置。
 
-:::{admonition} 什麼是Android SDK？
+```{admonition} What is an Android SDK?
+:class: dropdown
 
-為了在手機上運作 **AAPS**，應用程式需要與Android本身整合。 Android提供了“_軟體開發工具包_”（SDK），允許像 **AAPS** 這樣的應用程式與Android操作系統進行交互。
-:::
+In order to run **AAPS** on the phone the application needs to integrate with Android itself. Android provides “_software development kits_” (SDK) which allow apps like **AAPS** to interface with an Android operating system.
+```
 
 SDK平台套件與您手機上運作的Android版本無關，而是與 **AAPS** 的構建有關。 **AAPS** 3.2及更新版本基於API等級34進行構建，這會在 **Hedgehog** 版本的 **Android Studio** 中自動選擇。 因此，只需點擊“下一步”：
 
@@ -204,13 +206,14 @@ SDK平台套件與您手機上運作的Android版本無關，而是與 **AAPS** 
 
 ### 下載AAPS程式碼
 
-:::{admonition} 為什麼下載AAPS程式碼需要很長時間？
+```{admonition} Why can it take a long time to download the AAPS code?
+:class: dropdown
 
-首次下載 **AAPS** 時，Android Studio將透過網際網路連線到GitHub網站以下載 **AAPS** 的原始程式碼。 這應該大約需要1分鐘。
+The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute. 
 
-Android Studio隨後會使用 **Gradle**（Android Studio中的開發工具）來識別安裝這些項目所需的其他組件，並將其安裝到您的電腦上。
+Android Studio will then use **Gradle** (a development tool in  Android studio) to identify other components needed to install these items on your computer. 
 
-:::
+```
 
 在Android Studio歡迎頁面上，檢查左側是否突出顯示了“**專案**”（1）。 然後點擊右側的“**從VCS獲取**”（2）：
 
@@ -232,10 +235,10 @@ https://github.com/nightscout/AndroidAPS.git
 
 - 檢查（預設的）儲存複製程式碼的目錄是否合理（4）。
 
-:::{admonition} 訊息
+```{admonition} INFORMATION
 :class: information
-記下目錄。 這是您儲存原始程式碼的地方！
-:::
+Make a note of the directory. It is where your sourcecode is stored!
+```
 
 - 現在點擊“複製”按鈕（5）。
 
@@ -273,10 +276,11 @@ https://github.com/nightscout/AndroidAPS.git
 
 ![AS下載依賴項](../images/Building-the-App/19_downloading_dependencies.png)
 
-:::{admonition} 切勿更新GRADLE！
+```{admonition} NEVER UPDATE GRADLE!
+:class: warning
 
-Android Studio可能會建議更新gradle系統。 **永遠不要更新gradle！** 這會導致困難。
-:::
+Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
+```
 
 _可選_ - 如果您想清除“建議更新專案”的彈出訊息，點擊藍色文本“更多”（1）。 在對話框中選擇“不要再次詢問此專案”（2）。
 
@@ -323,10 +327,11 @@ _可選_ - 如果您想清除“建議更新專案”的彈出訊息，點擊藍
 
 ### 構建AAPS“簽章”APK
 
-:::{admonition} 為什麼AAPS應用程式需要“簽章”？
+```{admonition} Why does the AAPS app need to be "signed"?
+:class: dropdown
 
-Android要求每個應用程式都必須_簽章_，以確保以後只能由釋出原始應用的受信任來源更新。 有關此主題的更多訊息，請參閱[此連結](https://developer.android.com/studio/publish/app-signing.html#generate-key)。 對於我們的目的，這只意味著我們生成一個簽章或“密鑰庫”檔案，並在構建 **AAPS** 應用程式時使用它。
-:::
+Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
+```
 
 - 在選單欄中，點擊“構建”（1），選擇“生成簽章包/APK”（2）：
 
@@ -339,18 +344,19 @@ Android要求每個應用程式都必須_簽章_，以確保以後只能由釋�
 - 在下一個螢幕上，確保“模組”設置為“AAPS.app”（1）。
 
 (Building-APK-wearapk)=
-:::{admonition} 訊息！
+
+```{admonition} INFORMATION!
 :class: information
 如果您想為您的手錶建立apk，請選擇AAPS.wear！
-:::
+```
 
 - 點擊“建立新...” (2) 開始建立您的密鑰庫。
 
-:::{admonition} 訊息！
+```{admonition} INFORMATION!
 :class: information
-您只需要建立一次密鑰庫。
-如果您之前已構建過AAPS，請勿建立新密鑰庫，而是選擇現有的！
-:::
+You will only need to create the keystore once.
+If you have build AAPS before, do NOT create a new keystore but select your existing one!
+```
 
 **_注意：_** 密鑰庫是一個用於存儲應用程式簽章訊息的檔案。 它是加密的，並且訊息透過密碼進行保護。
 
@@ -366,10 +372,10 @@ Android要求每個應用程式都必須_簽章_，以確保以後只能由釋�
 
 這將帶您返回上一個螢幕。 您選擇的密鑰庫檔案的儲存位置將顯示出來。
 
-:::{admonition} 警告！
+```{admonition} WARNING!
 :class: warning
-務必記下密鑰庫的儲存位置。 當您構建下一個AndroidAPS更新時，您將需要它！
-:::
+Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AndroidAPS update!
+```
 
 現在選擇一個簡單的密碼（記下它），在密碼框中輸入（1），並確認它（2）。  密鑰庫和密鑰的密碼不必過於複雜。 如果將來遺失密碼，請參閱[密鑰庫遺失的故障排除](troubleshooting_androidstudio-lost-keystore)。
 
@@ -377,10 +383,10 @@ Android要求每個應用程式都必須_簽章_，以確保以後只能由釋�
 
 您現在需要為您的密鑰設置密碼。 為了簡單起見，您可以使用與上面密鑰庫相同的密碼。 輸入密碼（4）並確認（5）。
 
-:::{admonition} 警告！
+```{admonition} WARNING!
 :class: warning
-記下這些密碼！ 當您構建下一個AAPS更新時，您將需要它們！
-:::
+Note down these passwords! You will need them when you build the next AAPS update!
+```
 
 有效期（6）預設為25年，保持不變。
 

@@ -7,9 +7,10 @@ Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not 
 
 ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
-:::{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
-:class: warning **Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
-:::
+```{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
+:class: warning
+**Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
+```
 
 ## 1.  Patched Dexcom G7 App (DiAKEM)
 

@@ -21,11 +21,12 @@
 [目標](Usage/Objectives.md)設計旨在為用戶提供最好的**AAPS**入門體驗，考慮到了**AAPS**開發者觀察到的新用戶典型錯誤和趨勢。 初學者因為經驗不足或過於急切開始使用**AAPS**而犯錯，或忽略了關鍵點。 這些[目標](Usage/Objectives.md)旨在盡量減少這些問題。
 
 ### 醫療安全
-:::{admonition} 避免對您的眼睛和神經造成永久且痛苦的損害
-:class: danger請注意，血糖控制的快速改善和 HbA1c 的降低可能會導致危險。
-:::
+```{admonition} Avoid permanent and painful damage to your eyes and nerves
+:class: danger
+Caution is advised concerning rapid improvements in blood glucose control and lowering of HbA1c 
+```
 
-一個重要的安全考慮是，對於長期血糖升高的人來說，**HbA1c 的快速降低和血糖控制的改善可能會導致永久性損害**。 許多糖尿病患者並不知道這一點，而且並非所有臨床醫生都會提醒患者這個問題。
+一個重要的安全考量是，對於長期血糖升高的人來說，**HbA1c 的快速降低和血糖控制的改善可能會導致永久性損害**。 許多糖尿病患者並不知道這一點，而且並非所有臨床醫生都會提醒患者這個問題。
 
 這種損害可能包括**視力喪失和永久性神經病變（疼痛）**。 透過逐步降低平均血糖水平，可以避免這些損害的發生。 如果您目前的 HbA1c 升高並打算使用**AAPS**（或任何其他閉環系統），_請_在開始之前與您的醫療團隊討論這一潛在風險，並與他們協商逐步降低安全血糖目標的時間表。 您可以在**AAPS**中設置較高的血糖目標（目前，您可以選擇的最高目標是 10.6 mmol/L，您也可以維持一個相對較弱的設定），隨著時間的推移逐漸降低目標。
 
@@ -45,18 +46,19 @@ N.B. 如果您使用不同的 HbA1c 單位（mmol/mol 而非 %），請點擊[�
 
 ### 禁止使用 SGLT-2 抑制劑
 
-:::{admonition} 禁止使用 SGLT-2 抑制劑
-:class: dangerSGLT-2 抑制劑，也稱為 gliflozins，透過抑制腎臟中葡萄糖的再吸收來發揮作用。 gliflozins 會無法預測地降低血糖水平，因此在使用類似 AAPS 的閉環系統時，絕對不能服用這類藥物！ 這會導致酮酸中毒和/或低血糖的重大風險！ 該藥物與降低基礎率以提高血糖水平的系統結合使用尤其危險。
+```{admonition} NO SGLT-2 inhibitors
+:class: danger
+SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous. 
 
-簡單來說：
-- **範例 1：低血糖風險**
-> 在午餐期間，您使用**AAPS**基於攝取45克葡萄糖來注射胰島素。 問題是，由於**AAPS**未知道抑制劑使身體排除了一些碳水化合物，導致攝取的胰島素過多，最終引發低血糖。
+In a nutshell:
+- **Example 1: risk of Hypo**
+>During lunch, you use **AAPS** to bolus based on consuming 45g of glucose. 問題是，由於<strong x-id="1">AAPS</strong>未知道抑制劑使身體排除了一些碳水化合物，導致攝取的胰島素過多，最終引發低血糖。
 
-- **範例 2：酮酸中毒風險**
-> 抑制劑會在背景中排除部分碳水化合物，導致血糖下降。 **AAPS**會自動指示幫浦降低胰島素攝入量，包括基礎率。 隨著時間的推移，這可能導致血糖保持在目標值以下，直到身體沒有足夠的背景胰島素來吸收碳水化合物，最終引發酮酸中毒。 通常，1 型糖尿病患者會因為幫浦故障而發展成酮酸中毒，這會觸發手機警報，並透過血糖值升高來顯示出來。 然而，使用 Gliflozins 的危險在於，**AAPS** 不會發出警報，因為幫浦仍然正常運作，且血糖可能保持在目標範圍內。
+- **Example 2: risk of Ketoacidosis**
+>The inhibitors eliminate some of the carbs in the background causing a reduction in your BG. **AAPS** will automatically instruct the pump to decrease insulin intake  including basal. 隨著時間的推移，這可能導致血糖保持在目標值以下，直到身體沒有足夠的背景胰島素來吸收碳水化合物，最終引發酮酸中毒。 通常，1 型糖尿病患者會因為幫浦故障而發展成酮酸中毒，這會觸發手機警報，並透過血糖值升高來顯示出來。 然而，使用 Gliflozins 的危險在於，<strong x-id="1">AAPS</strong> 不會發出警報，因為幫浦仍然正常運作，且血糖可能保持在目標範圍內。  
 
 常見的 SGLT-2 抑制劑品牌名稱包括：Invokana、Farxiga、Jardiance、Glyxambi、Synjardy、Steglatro 和 Xigduo XR 等。
-:::
+```
 
 
 ### 使用 AAPS 循環的關鍵原則
@@ -215,11 +217,13 @@ N.B. 如果您使用不同的 HbA1c 單位（mmol/mol 而非 %），請點擊[�
 
 我們鼓勵用戶保持手機 Android 版本的最新狀態，包括安全參數。 然而，如果您是 **AAPS** 的新手，或者不是技術專家，您可能希望等到其他人確認更新是安全的後再進行更新，這可以透過我們的各大論壇確認。
 
-:::{admonition} 延遲 Samsung 手機的更新
-:class: warningSamsung 有一個不幸的記錄，強制更新其手機，這些更新會導致藍牙連線問題。 要停用這些強制更新，您需要將手機切換到“開發者模式”，具體步驟如下：進入設置並點擊“關於”，然後點擊軟體資訊，連續點擊版本號直到確認您已解鎖開發者模式。 返回設置主選單，您應該會看到一個新的“開發者選項”選單項。 打開開發者選項，向下滾動，找到自動系統更新，將其關閉。
-:::
+```{admonition} delaying Samsung phones updates
+:class: warning
+Samsung has an unfortunate track record of forcing updates of their phones which cause bluetooth connectivity issues. 要停用這些強制更新，您需要將手機切換到“開發者模式”，具體步驟如下：進入設置並點擊“關於”，然後點擊軟體資訊，連續點擊版本號直到確認您已解鎖開發者模式。 返回設置主選單，您應該會看到一個新的“開發者選項”選單項。 Open developer options and scroll to find auto system update and turn it off
+```
 
-:::{admonition} Google Play Protect 潛在問題
-:class: warning有多次報告指出，**AAPS** 每天早上都會被 Google Play Protect 隨機關閉。 如果發生此問題，您需要進入 Google Play 的選項，停用 “Google Play Protect”。 並非所有手機型號或所有 Android 版本都會受到影響。
-:::
+```{admonition} Google Play Protect potential Issue
+:class: warning
+There have been several reports of **AAPS** being shut down arbitrarily by Google Play Protect every morning. 如果發生此問題，您需要進入 Google Play 的選項，停用 “Google Play Protect”。 並非所有手機型號或所有 Android 版本都會受到影響。
+```
 

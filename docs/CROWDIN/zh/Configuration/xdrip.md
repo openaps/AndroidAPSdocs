@@ -24,8 +24,9 @@
 
 點擊`額外選項`(8)
 
-:::{admonition} 安全警告 :class: 警告 您必須停用 xDrip+ 中的“上傳治療方案”，否則治療方案可能會在 AAPS 中重複，導致錯誤的碳水和活性胰島素值。  
-:::
+    {admonition} Safety warning
+    :class: warning
+    You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.
 
 停用`上傳治療方案`(9)，並確保您**不要**使用`回填資料` (11)。
 
@@ -223,8 +224,9 @@ Dexcom 傳感器的自動延長（`預防性重啟`）不建議使用，因為�
 
 - 在 xDrip+ 中啟動傳感器。
     
-    :::{admonition} 安全警告 :class: warning 在一小時的暖機期結束前不要使用傳感器資料：數值可能會非常高，可能導致 AAPS 中錯誤的決策。  
-    :::
+        {admonition} Safety warning
+        :class: warning
+        Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.
     
     → 漢堡選單 (1) → 啟動傳感器 (2) → 啟動傳感器 (3) → 設置您使用讀取器或供應商應用程式啟動傳感器的精確時間。如果您不是今天啟動的，請選擇“不是今天” (4)。
 

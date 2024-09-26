@@ -17,7 +17,7 @@
   ![Preferences filter](../images/Pref2021_Filter.png)
 
 ```{contents}
-:backlinks: запись
+:backlinks: entry
 :depth: 2
 ```
 
@@ -421,9 +421,11 @@
 
 [Новый протокол, начиная с AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) - безопаснее и эффективнее.
 
-:::{admonition} V3 загрузчики данных
-:class: предупреждение При использовании NSClientV3, все загрузчики должны иметь API V3. Поскольку большинство из них пока несовместимы, это означает, что **следует разрешить AAPS загружать все данные** (BG, процедуры, ...) в Nightscout и отключить все остальные загрузчики, если они не совместимы с версией 3.  
-:::
+```{admonition} V3 data uploaders
+:class: warning
+
+When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+```
 
 - Создайте свой сайт *Nightscout URL* (напр. <https://yoursitename.yourplaform.dom>).
   - **Убедитесь, что URL-адрес БЕЗ /api/v1/ в конце.**
@@ -434,9 +436,9 @@
 
 ### Синхронизация
 
-Выбор синхронизации будет зависеть от способа использования AAPS.
+Synchronization choices will depend on the way you will want to use AAPS.
 
-Выберите, какие данные [загружать в и выгружать из Nightscout ](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
+You can select which data you want to [upload and download to or from Nightscout](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
 
 ### Опции оповещения
 
@@ -464,7 +466,7 @@
 
 ![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
 
-Большинство опций в расширенных настройках самоочевидны.
+Options in advanced settings are self-explanatory.
 
 ## СМС-коммуникатор
 
@@ -475,7 +477,7 @@
 
 ## Автоматизация
 
-Выберите, какая должна использоваться служба определения локации:
+Select which location service shall be used:
 
 - Использовать пассивное расположение: AAPS принимает положения только в том случае, если другие приложения запрашивали его
 - Использовать расположение сети: расположение вашего Wifi

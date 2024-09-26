@@ -2,8 +2,10 @@
 
 要將您的 Libre 用作 CGM，每 5 分鐘獲取一次新的血糖值，而無需掃描傳感器，您需要購買一個 NFC 到藍牙橋接器（基於已過時的[LimiTTer](https://github.com/JoernL/LimiTTer) 項目的商用設備）。
 
-:::{admonition} Libre 2、Libre 1 US 和 Libre Pro :class: warning 確認您要使用的橋接器和應用程式與您的傳感器相容。  
-:::
+```{admonition} Libre 2, Libre 1 US and Libre Pro
+:class: warning
+Verify the bridge and the app you want to use are compatible with your sensor.  
+```
 
 市場上有幾款橋接器可供選擇：
 
@@ -12,7 +14,7 @@
 -   [Bubble（或 Bubble Mini）](https://www.bubblesmartreader.com/)，來自歐洲供應商（[Bubblan](https://www.bubblan.org/)，[BubbleShop](https://bubbleshop.eu/)），或適用於俄羅斯用戶[點擊此處](https://vk.com/saharmonitor/)。 也可在 AliExpress 上購買。
 -   適用於俄羅斯用戶的 Atom。
 
-歷史上，使用特定手錶 Sony Smartwatch 3（SWR50），其中具有 NFC 晶片，可啟用並用作 NFC 收集器是可能的。 然而，上述列出的定制 NFC 到藍牙橋提供了一個不那麼複雜的解決方案，並且將被大多數希望將其 Libre 1（非 US）用作 CGM 的人使用。
+過去曾有使用特定手錶的案例，例如 Sony Smartwatch 3 (SWR50)，該手錶內建可啟用的 NFC 晶片，能夠用來作為 NFC 收集器。 不過，上面提到的客製化 NFC 轉藍牙橋接器提供了一個更簡單的解決方案，大部分想要使用 Libre 1（非美國版）當作 CGM 的人，都會選擇這種方式。
 
 -   Sony Smartwatch 3（SWR50）<https://github.com/pimpimmi/LibreAlarm/wiki/>
 

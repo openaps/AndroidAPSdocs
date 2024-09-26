@@ -6,10 +6,11 @@
 - Naučili jste se základní funkcionality **AAPS**
 - Chápete principy fungování systému a díky tomu mu můžete důvěřovat.
 
-:::{admonition} Poznámka
+```{admonition} Note
+:class: note
 
-Pravidelně exportujte nastavení **AAPS** po dokončení každého **cíle**!
-:::
+Regularly export your **AAPS** settings after completing each **objective**!
+```
 
 Důrazně doporučujeme, abyste [exportovali své nastavení](../Usage/ExportImportSettings.md) po dokončení každého **Cíle**. Tento proces exportu vytváří soubor dat **nastavení** (.json), které by jste měli udržovat zálohované na jednom nebo více bezpečných místech (např. Google Drive, pevný disk, e-mailové přílohy atd.). Tím si zajistíte, že udržíte svůj pokrok při plnění **cílů**, a pokud omylem smažete (resetujete) dokončení některého cíle, můžete jej jednoduše znovu načíst importováním souboru s aktuálním nastavením. Stejně tak potřebujete zálohu **nastavení** v situaci, kdy musíte změnit z jakéhokoli důvodu váš chytrý telefon s nainstalovaným **AAPS** (výměna, ztráta, zničení telefonu atd.)
 
@@ -68,10 +69,10 @@ Pro každou otázku může existovat více než jedna správná odpověď! Pokud
 
 Když je **AAPS** nainstalován poprvé, budete muset dokončit celý **Cíl 3** před tím, než se pustíte do **Cíle 4**. Všechny cíle musí být dokončeny postupně v daném pořadí. Nové funkce budou postupně odemykány tak, jak budete dosahovat pokroku při plnění cílů.
 
-:::{admonition}  **Co se stane v případě, když budou do dokončeného Cíle přidány nové otázky a provedu aktualizaci na novější verzi **AAPS**?**
-:class: Poznámka:
-Čas od času jsou do **AAPS** přidány nové funkce, které mohou vyžadovat přidání nové otázky do Cílů, zejména do Cíle 3. V takovém případě bude každá nová otázka, přidaná do **Cíle 3**, označena jako „neúplná“, protože **AAPS** bude vyžadovat její zodpovězení. Ale nemějte obavy, vzhledem k tomu že každý **Cíl** je nezávislý, **neztratíte stávající funkce AAPS**, pokud ostatní Cíle zůstanou dokončeny.
-:::
+```{admonition} __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
+:class: Note
+From time to time, new features are added to **AAPS** which may require a new question to be added to the Objectives, particularly Objective 3. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other Objectives remain completed.
+```
 
 ## Cíl 4: Začít s otevřenou smyčkou
 
@@ -92,9 +93,9 @@ Odhadovaný čas k dokončení tohoto Cíle: **7 dní**. To je povinná čekací
 
   ![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
 
-:::{admonition} Není potřeba provádět opravdu každý krok doporučený systémem!
+```{admonition} You don't need to action each and every system recommendation!
 :class: Poznámka
-:::
+```
 
 (Cíl 5: Porozumění otevřené smyčce, včetně doporučení pro dočasné bazály)=
 
@@ -122,11 +123,12 @@ Můžete zkusit experimentovat a nastavit své cíle tak, aby nebyl rozsah tak �
 Můžete přizpůsobit (rozšířit nebo zúžit) zelenou oblast grafu, která reprezentuje váš cílový rozsah, nastavením jiných hodnot v [Nastavení](../Configuration/Preferences.md) > Přehled > Rozsah pro zobrazení.
 
 ![Stop sign](../images/sign_stop.png)
-:::{admonition} Pokud jste dosud používali virtuální pumpu, vyměňte ji teď za reálnou inzulínovou pumpu!
-:class: poznámka
 
-Pokud používáte otevřenou smyčku s virtuální pumpou, zde se zastavte. Potvrďte dokončení tohoto Cíle až poté, co jste vyměnili pumpu za "reálnou" inzulinovou pumpu.
-:::
+```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
+:class: note
+
+If you are open looping with a virtual pump stop here. Only click verify at the end of this Objective once you have changed to using a "real" physical pump.
+```
 
 ![blank](../images/blank.png)
 
@@ -135,10 +137,11 @@ Pokud používáte otevřenou smyčku s virtuální pumpou, zde se zastavte. Pot
 ## Cíl 6: Začátek uzavřené smyčky - s pozastavením pumpy při nízké glykémii
 
 ![Warning sign](../images/sign_warning.png)
-:::{admonition}  Uzavřená smyčka nebude korigovat vysoké hodnoty glykémie v Cíli 6, protože je omezená pouze na pozastavení při nízké glykémii!
+
+```{admonition} Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend only!
 :class: Poznámka
 Budete muset korigovat vysoké hodnoty glykémií samostatně (ručním posíláním inzulinu z pumpy nebo nebo perem)!
-:::
+```
 
 V rámci **Cíle 6** budete schopni přepnout smyčku na uzavřenou a aktivovat její režim reakce na hypoglykémii (LGS), jakmile je [max IOB](Open-APS-features-maximum-total-iob-openaps-cant-go-overopenaps-max-iob) nastaven na nulu. Pro dokončení Cíle musíte zůstat v tomto režimu 5 dní. Tento čas byste měli použít ke kontrole, zda jsou nastavení profilu přesná a nespouštějí režim "Ochrana před nízkou glykémií" příliš často.
 

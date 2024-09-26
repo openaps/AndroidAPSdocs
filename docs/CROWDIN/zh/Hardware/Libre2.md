@@ -26,8 +26,10 @@ Libre2 OOP 所生成的讀數與原始讀取器或透過 NFC 掃描的 LibreLink
 
 ## 2. 使用 xDrip+ 直接連線
 
-:::{admonition} 僅限 Libre 2 EU :class: warning xDrip+ 不支援與 Libre 2 US 和 AUS 直接連線。  
-:::
+```{admonition} Libre 2 EU only
+:class: warning
+xDrip+ doesn't support direct connection to Libre 2 US and AUS.  
+```
 
 - 請按照 [這些指示](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) 設定 xDrip+，但請確保下載 [此最新版 OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)，因為文件中的版本已過時。
 - 按照[xDrip+ 設定頁面](../Configuration/xdrip.md)上的設置說明進行操作。
@@ -52,15 +54,19 @@ Libre2 OOP 所生成的讀數與原始讀取器或透過 NFC 掃描的 LibreLink
 
 - 在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
 
-:::{admonition} 與 xDrip+ 搭配使用 :class: note 您可以將 Juggluco 設定為使用 Patched Libre Broadcast 廣播至 xDrip+（您應停用 xDrip+ 廣播），以進行校正（請參閱此處）並避免將 1 分鐘讀數傳送至 AAPS。  
-![Juggluco 廣播至 xDrip+](../images/Juggluco_xDrip.png)  
-接著，您需要將 xDrip+ 資料來源設定為 Libre 2 Patched App，以從 Juggluco 接收資料。  
-:::
+```{admonition} Use with xDrip+
+:class: note
+You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
+![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  
+You will then need to set xDrip+ data source to Libre 2 Patched App to receive data from Juggluco.  
+```
 
 ## 5. 使用修補版 LibreLink 應用程式與 xDrip+ 搭配使用
 
-:::{admonition} 僅限 Libre 2 EU :class: warning 修補版應用程式是舊版本（2019/4/22），可能與近期的 Android 版本不相容。  
-:::
+```{admonition} Libre 2 EU only
+:class: warning
+The patched app is an old version (22/4/2019) and might not be compatible with recent Android releases.  
+```
 
 ### 步驟 1：建立修補版應用程式
 

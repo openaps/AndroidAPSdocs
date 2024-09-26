@@ -730,40 +730,47 @@ Jak je zmíněno ve videu, po dokončení na hodinkách vypněte ADB ladění, a
 
 Nebo můžete postupovat takto:
 
-:::{admonition}Použijte k nahrání **AAPS** wear na hodinky aplikaci Easy Fire tools
-:class: rozevírací menu
 
-1) Stáhněte si z PlayStore na telefon _Easy Fire Tools_ 
+
+```{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
+:class: dropdown
+
+1)   Download _Easy Fire Tools_ from playstore onto phone 
 
 ![image](./images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
 
-2) Nastavte se v hodinkách jako vývojář (jakmile skončíte s nastavením a připojíte se k telefonu): 
+2)  Make yourself a developer in the watch (once set up and connected to phone): 
 
-Přejděte do nastavení > o hodinkách (dolní možnost) > Informace o software > Verze software. 
+Go to settings >about watch (bottom option) >- software info > software version. 
 
 Rychle klepejte na "Verze software" dokud se neobjeví oznámení, že hodinky jsou přepnuté ve "vývojářském módu". Vraťte se zpět do menu Nastavení, posuňte se na konec a podívejte se na "Vývojářské možnosti" dole v části "O hodinkách". 
 
-Ve "Vývojářských možnostech" zapněte "ADB ladění" a "Bezdrátové ladění". Poslení možnost vám zobrazí IP adresu hodinek, z níž se poslední dvě číslice mění pokaždé, když se hodinky spárují s novým telefonem. Bude to něco jako: **167.177.0.20**:5555 (poslední 4 číslice ignorujte). Všimněte si, že poslední 2 číslice (v tomto případě "20") této adresy se změní pokaždé, když se přepnete na nový telefon s AAPS.  
+Ve "Vývojářských možnostech" zapněte "ADB ladění" a "Bezdrátové ladění". Poslení možnost vám zobrazí IP adresu hodinek, z níž se poslední dvě číslice mění pokaždé, když se hodinky spárují s novým telefonem. It will be something like: **167.177.0.20.** 5555 (ignore the last 4 digits). Všimněte si, že poslední 2 číslice (v tomto případě "20") této adresy se změní pokaždé, když se přepnete na nový telefon s AAPS.  
 
-![24-10-23, zobrazení ADB debug na hodinkách](./images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
+![24-10-23, watch ADB debug pic](./images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
 
-3) Zadejte IP adresu _např._ **167.177.0.20** do aplikace Easy Fire Tools v telefonu (otevřete levé hamburger menu, nastavení a zadejte IP adresu). Potom klikněte na ikonu zásuvky vpravo nahoře.  
+STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). Potom klikněte na ikonu zásuvky vpravo nahoře.  
 
 ![image](./images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
 
+
 ![image](./images/00b2fb8b-5996-4b71-894e-516d63469e1b.png)
 
-4) Proveďte side-load (tj. nahrání) Wear.apk na hodinky pomocí Easy Fire Tools podle [těchto](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) instrukcí
 
-Klepněte na boční tlačítko "plug-in" v aplikaci, abyste mohli nahrát Wear OS.apk na hodinky: 
+STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  Wear.apk onto the smartwatch using Easy Fire tools
+
+Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the smartwatch: 
 
 ![image](./images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
 
-Další krok > přijměte žádost o autorizaci na hodinkách
+
+ Next step > accept the authorisation request on the smartwatch
+
 
 ![image](./images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
 
-:::  
+```
+
 
 
 

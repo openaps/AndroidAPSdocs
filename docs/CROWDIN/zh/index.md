@@ -34,22 +34,23 @@ Android APS (**AAPS**) 是一款為胰島素依賴型糖尿病患者設計的開
 
  ### 有興趣開始使用 **AAPS** 嗎？ 在 [介紹](introduction.md) 中閱讀更多關於 **AAPS** 的資訊。
 
-:::{admonition} 安全通知
-:class: 危險 **AAPS** 的安全取決於您的硬體設備（手機，幫浦，CGM）的安全功能。 請只使用經過 FDA/CE 認證的全功能胰島素幫浦和 CGM。 不使用故障、改裝或自行組裝的胰島素幫浦或 CGM 接收器。 僅使用由製造商批准並與幫浦和 CGM 搭配使用的原裝耗材（如注射器、套管和胰島素儲存罐）。 使用未經測試或修改的耗材可能會導致資料不準確和胰島素注射錯誤，從而對使用者造成重大風險。
+```{admonition} SAFETY NOTICE
+:class: danger
+The safety of **AAPS** relies on the safety features of your hardware (phone, pump, CGM). 請只使用經過 FDA/CE 認證的全功能胰島素幫浦和 CGM。 不使用故障、改裝或自行組裝的胰島素幫浦或 CGM 接收器。 僅使用由製造商批准並與幫浦和 CGM 搭配使用的原裝耗材（如注射器、套管和胰島素儲存罐）。 使用未經測試或修改的耗材可能會導致資料不準確和胰島素注射錯誤，從而對使用者造成重大風險。 
 
-如果您正在服用SGLT-2抑制劑（格列非嗎啶），請勿使用**AAPS**，因為它們會降低血糖水平。 由於胰島素的輸送減少，您增加了糖尿病酮酸中毒（DKA）的風險，由於血糖水平降低而導致低血糖。
-:::
+Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower blood sugar levels. 由於胰島素供應減少，會增加罹患糖尿病酮酸中毒（DKA）的風險，而血糖下降則會提高低血糖的風險。 
+```
 
-:::{admonition} 免責聲明
-:class: 提示
+```{admonition} Disclaimer
+:class: note
 
-- 這裡描述的所有資訊和代碼僅供資訊和教育目的。 請自行承擔使用 [Nightscout](https://nightscout.github.io/) 和 **AAPS** 的風險，請勿使用此訊息或代碼做出醫療決定。 Nightscout目前不符合HIPAA的隱私規定。
-- 使用來自github.com的程式碼不提供任何形式的保固或支援。 請檢視此儲存庫的許可證( LICENSE) 以暸解詳細資訊。
-- 所有產品和公司名稱、商標、服務標誌、註冊商標和註冊服務標誌均屬其各自所有者。 它們的使用僅供資訊用途，沒有任何關聯或背書。
+- All information and code described here is for informational and educational purposes only. Use [Nightscout](https://nightscout.github.io/) and **AAPS** at your own risk, and do not use the information or code to make medical decisions. Nightscout目前不符合HIPAA的隱私規定。 
+- Use of code from github.com is without warranty or formal support of any kind. 請檢視此儲存庫的許可證( LICENSE) 以暸解詳細資訊。
+- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. 它們的使用僅供資訊用途，沒有任何關聯或背書。
 
-**AAPS** 與以下機構無關，並且未獲得認可： [SOOIL](http://www.sooil.com/eng/)，[Dexcom](https://www.dexcom.com/)，[Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/)，[Insulet](https://www.insulet.com/) 或[Medtronic](https://www.medtronic.com/)。
+**AAPS** has no association with, and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
 
-:::
+```
 
 (AAPS-Documentation-Index)=
 

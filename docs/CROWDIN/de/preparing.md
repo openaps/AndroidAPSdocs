@@ -21,42 +21,44 @@ Viele Details in der **AAPS**-Dokumentation sind aus Erfahrungen entstanden und 
 Die [Ziele (Objectives)](Usage/Objectives.md) sollen den bestmöglichen Einstieg in **AAPS** ermöglichen, und dabei die typischen Fehler und Nutzungsmuster, die **AAPS**-Entwickler bei Neulingen beobachtet haben, adressieren. Weil Einsteiger unerfahren sind und zu schnell mit **AAPS** loslegen wollen oder wichtige Punkte übersehen haben, können Fehler passieren. Die [Ziele](Usage/Objectives.md) wollen genau diese Probleme minimieren.
 
 ### Medizinische Sicherheit
-:::{admonition} Vermeide permanente und schmerzhafte Augen- und Nervenschäden
-:class: danger Bei schnellen Verbesserungen der Blutzuckerkontrolle und einer schnellen Verringerung des HbA1c ist Vorsicht geboten
-:::
+```{admonition} Avoid permanent and painful damage to your eyes and nerves
+:class: danger
+Caution is advised concerning rapid improvements in blood glucose control and lowering of HbA1c 
+```
 
-Ein wichtiger Sicherheitsaspekt ist, dass eine **schnelle Reduzierung des HbA1c und eine verbesserte Blutzuckerkontrolle bei Personen mit einem über einen längeren Zeitraum erhöhten Glukosespiegel dauerhaften Schaden** verursachen können. Viele Menschen mit Diabetes sind sich dessen nicht bewusst, und nicht alle Klinikärzte machen ihre Patienten auf dieses Problem aufmerksam.
+An important safety consideration is that a **rapid reduction in HbA1c and improved blood glucose control in those who have had elevated glucose levels for some time can cause permanent damage**. Many people with diabetes are unaware of this, and not all clinicans make their patients aware of this issue.
 
-Dieser Schaden kann **Sehverlust und dauerhafte Neuropathie (Schmerz)** beinhalten. Es ist möglich, diesen Schaden zu vermeiden, indem der durchschnittliche Glukosespiegel langsamer reduziert wird. Wenn Du derzeit einen erhöhten HbA1c hast und zu **AAPS** (oder einem anderen Closed-Loop-System) wechselst, besprich dieses potentielle Risiko _bitte_ mit Deinem Klinik-Team, bevor Du startest, und lege gemeinsam einen Zeitraum fest, in dem Du den Glukosespiegel sicher schrittweise senkst. Es ist einfach in **AAPS** zunächst am Anfang einen höheren Glukosezielwert zu setzen (der aktuell höchst mögliche Wert ist 10,6 mmol/l bzw. 191 mg/dl, alternativ kannst Du - sofern nötig - ein entsprechend schwaches Profile hinterlegen) und dann über die Monate hinweg den Zielwert reduzieren.
+This damage can include **sight loss, and permanent neuropathy (pain)**. It is possible to avoid this damage occuring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 10.6 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
 
 #### Wie schnell kann ich meinen HbA1c reduzieren, ohne dauerhaften Schaden zu riskieren?
 
-Eine retrospektive [Studie](https://pubmed.ncbi.nlm.nih.gov/1464975/) von 76 Patienten berichtet davon, dass das Risiko einer fortschreitenden Retinopathie um das 1,6 bis 2,4-fache und 3,8-fache steigt, wenn der HbA1c innerhalb eines Zeitraums von 6 Monaten um 1%, 2% bzw. 3% gesunken ist. Sie schlugen vor, dass die **"Verringerung des HbA1c-Wertes während eines Zeitraums von 6 Monaten auf weniger als 2% beschränkt werden sollte, um das Fortschreiten der Retinopathie zu verhindern. ..Ein zu schneller Rückgang beim Beginn der glykämischen Kontrolle kann zu einer schwerwiegenden oder vorübergehenden Verschärfung des Fortschreitens der Retinopathie führen.“**
+One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the Hba1C dropped 1%, 2% or 3% respectively over a 6 month period. They suggested that the **"decrease in HbA1c value during any 6-month period should be limited to less than 2% in order to prevent the progression of retinopathy....Too rapid a decrease at the initiation of glycemic control could cause severe or transient exacerbation of the progression of retinopathy."**
 
-Nachbemerkung: Solltest Du anderen Maßeinheiten (mmol/l statt mg/dl) verwenden, findest Du [hier](https://www.diabetes.co.uk/hba1c-units-converter.html) einen HbA1c-Umrechner.
+N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for a HbA1c calculator tool.
 
-In einer weiteren retrospektiven [Bewertung](https://academic.oup.com/brain/article/138/1/43/337923) von 954 Patienten haben Forschende Folgendes festgestellt:
+In another retrospective [evaluation](https://academic.oup.com/brain/article/138/1/43/337923) of 954 patients, researchers noted that:
 
-**"Mit einer Verringerung des HbA1c um 2–3 Prozentpunkte innerhalb von 3 Monaten gab es ein absolutes 20%-iges Risiko eine behandlungsbedürftigen Neuropathie bei Diabetes zu entwickeln. Mit einer Reduktion des HbA1c um >4% über 3 Monate überstieg das Risiko eine behandlungsbedürftigen Neuropathie bei Diabetes zu entwicklen 80 %."**
+**"With a decrease in HbA1c of 2–3% points over 3 months there was a 20% absolute risk of developing treatment-induced neuropathy in diabetes, with a decrease in HbA1c of >4% points over 3 months the absolute risk of developing treatment-induced neuropathy in diabetes exceeded 80%."**
 
-Ein [Kommentar](https://academic.oup.com/brain/article/138/1/2/340563) zu dieser Arbeit bestätigte, dass das Ziel zur Vermeidung von Komplikationen **sein sollte, den A1c über 3 Monate hinweg um <2 % zu reduzieren.** Weitere Rezensionen zum Thema [findest Du hier](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) und [hier](https://www.mdpi.com/1999-4923/15/7/1791).
+A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this work agreed that to avoid complications **the goal should be to reduce A1c by <2% over 3 months.** You can read other reviews on the topic [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) and [here](https://www.mdpi.com/1999-4923/15/7/1791).
 
-Es wird allgemein anerkannt, dass _neu_ diagnostizierte Typ-1 Diabetiker (die bei der Diagnose und vor der dem Beginn der Insulintherapie häufig sehr hohe HbA1c haben) in der Lage zu sein scheinen, ihren HbA1c, ohne das die Risiken im gleichen Maß steigen, schnell zu senken, da ihre Blutzuckerwerte vorher für einen so langen Zeitraum nicht erhöht waren. Dennoch ist es überlegenswert, dies mit Deinem Diabetes-Team zu besprechen.
+It is generally recognised that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
 
 ### Keine SGLT-2-Hemmern
 
-:::{admonition} KEINE SGLT-2 Hemmer
-:class: danger SGLT-2 Inhibitoren, auch Gliflozine genannt, hemmen die Rückresorption von Glukose in der Niere. Gliflozine senken den Blutzuckerspiel unkalkulierbar, und DÜRFEN NICHT genommen werden, wenn ein Closed Loop System wie AAPS genutzt wird! Damit würde ein enormes Risiko für eine Ketoazidose und/oder eine Hypoglykämie bestehen! Besonders gefährlich ist die Kombination dieses Medikaments mit einem System, das die Basalrate senkt, um die Glukosewerte zu erhöhen.
+```{admonition} NO SGLT-2 inhibitors
+:class: danger
+SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous. 
 
-In Kurzform:
-- **Beispiel 1: Hypo-Risiko**
-> Während des Mittagessens bolst Du mit **AAPS**, um 45g Kohlenhydrate zu essen. Das Problem ist, dass AAPS nicht weiß, dass die SGLT-2-Hemmer bewirken, dass der Körper einige der Kohlenhydrate nicht aufnimmt, was dazu führt, dass Dein Körper zu viel Insulin im Vergleich zu den tatsächlich aufgenommenen Kohlenhydraten hat. Das führt zu einer Hypoglykämie.
+In a nutshell:
+- **Example 1: risk of Hypo**
+>During lunch, you use **AAPS** to bolus based on consuming 45g of glucose. Das Problem ist, dass AAPS nicht weiß, dass die SGLT-2-Hemmer bewirken, dass der Körper einige der Kohlenhydrate nicht aufnimmt, was dazu führt, dass Dein Körper zu viel Insulin im Vergleich zu den tatsächlich aufgenommenen Kohlenhydraten hat. Das führt zu einer Hypoglykämie.
 
-- **Beispiel 2: Ketoazidose-Risiko**
-> Die SGLT-2-Hemmer schwemmen einige der Kohlenhydrate aus und senken so die Blutglukose. **AAPS** wird darauf mit einer Verringerung (inklusive des Basals) der Insulinzufuhr der Pumpe reagieren. Im Laufe der Zeit kann dies dazu führen, dass dein BG unter dem Zielwert bleibt, bis zu dem Zeitpunkt, dass der Körper nicht genügend Insulin zur Aufnahme von Kohlenhydraten verfügbar hat. Die Folge ist eine Ketoazidose. Normalerweise entwickelt sich eine Ketoazidose bei einem Typ-1 Patienten wegen eines Pumpendefekts, was durch einen hohen Glukosewert Warnungen auf dem Smartphone auslösen würde. Die Gefahr bei Gliflozinen besteht jedoch darin, dass es keine AAPS-Warnungen geben würde, da die Pumpe voll funktionsfähig bleibt und die Glukosewerte möglicherweise im Zielbereich bleiben.
+- **Example 2: risk of Ketoacidosis**
+>The inhibitors eliminate some of the carbs in the background causing a reduction in your BG. **AAPS** will automatically instruct the pump to decrease insulin intake  including basal. Im Laufe der Zeit kann dies dazu führen, dass dein BG unter dem Zielwert bleibt, bis zu dem Zeitpunkt, dass der Körper nicht genügend Insulin zur Aufnahme von Kohlenhydraten verfügbar hat. Die Folge ist eine Ketoazidose. Normalerweise entwickelt sich eine Ketoazidose bei einem Typ-1 Patienten wegen eines Pumpendefekts, was durch einen hohen Glukosewert Warnungen auf dem Smartphone auslösen würde. Die Gefahr bei Gliflozinen besteht jedoch darin, dass es keine AAPS-Warnungen geben würde, da die Pumpe voll funktionsfähig bleibt und die Glukosewerte möglicherweise im Zielbereich bleiben.  
 
 Bekannte Handelsnamen von SGLT-2 Hemmern sind: Invokana, Forxiga, Jardiance, Steglatro und Zynquista und andere.
-:::
+```
 
 
 ### Grundprinzipien des Loopens mit AAPS
@@ -157,13 +159,13 @@ Wie schon erwähnt, ist die **AAPS**-Nutzung eher eine „Reise“, die es notwe
 | --------------------------------------------------------------------------------------------------- |:----------------------:|
 | Erstmaliges Lesen der Dokumentation:                                                                |        1-2 Tage        |
 | Installation/Konfiguration des PCs zum Erstellen der App:                                           |      2-8 Stunden       |
-| Einen Nightscout-Server erstellen:                                                                  |        1 Stunde        |
-| Installieren einer CGM-App (xDrip+ oder BYODA oder …)                                               |        1 Stunde        |
-| Erstmalige Konfiguration CGM->xDrip+->AAPS:                                                         |        1 Stunde        |
-| Erstmalige Konfiguration AAPS->Insulinpumpe:                                                        |        1 Stunde        |
-| Konfiguration von AAPS->Nightccout (nur Berichte):                                                  |        1 Stunde        |
-| Optional (für Eltern) - Nightscout konfigurieren <-> **AAPS** & NSFollower:                         |        1 Stunde        |
-| Ziel 1: Einrichten der Darstellung und Überwachung sowie analysieren der Basalraten und Faktoren    |        1 Stunde        |
+| Einen Nightscout-Server erstellen:                                                                  |         1 hour         |
+| Installieren einer CGM-App (xDrip+ oder BYODA oder …)                                               |         1 hour         |
+| Erstmalige Konfiguration CGM->xDrip+->AAPS:                                                         |         1 hour         |
+| Erstmalige Konfiguration AAPS->Insulinpumpe:                                                        |         1 hour         |
+| Konfiguration von AAPS->Nightccout (nur Berichte):                                                  |         1 hour         |
+| Optional (für Eltern) - Nightscout konfigurieren <-> **AAPS** & NSFollower:                         |         1 hour         |
+| Ziel 1: Einrichten der Darstellung und Überwachung sowie analysieren der Basalraten und Faktoren    |         1 hour         |
 | Ziel 2: Lerne, wie AAPS bedient wird                                                                |        2 Stunde        |
 | Ziel 3: Belege Dein Wissen                                                                          |    bis zu 14 Tagen     |
 | Ziel 4: Starte den Open Loop                                                                        | wurden 7 Tage erreicht |
@@ -215,11 +217,14 @@ Falls Du Smartphones oder Smartwatch-Modelle für Tests spenden möchtest, sende
 
 Das Smartphone sollte regelmäßig Sicherheitsupdates erhalten und stets auf der aktuellen Android-Version gehalten werden. Wenn Du mit AAPS noch nicht sehr vertraut bist oder kein technischer Experte bist, solltest Du mit dem jeweiligen Update warten, bis Andere das Update erfolgreich gemacht haben und in den verschiedenen Foren bestätigt haben, dass es problemlos durchgeführt werden kann.
 
-:::{admonition} Samsung Smartphone Updates verschieben
-:class: warning Samsung hält leider einen Rekord darin Updates, die zu Bluethooth-Verbindungsproblemen führen, zu erzwingen. Um diese Zwangsupdates zu deaktivieren, musst Du das Smartphone in den "Entwicklermodus" schalten: Gehe zu Einstellungen - Telefoninfo - Softwareinformationenen und tippe so lange auf "Buildnummer", bis die Meldung über den aktivierten Entwicklermodus erscheint. Gehe zurück in die Einstellungen und Du solltest ganz unten einen neuen Eintrag "Entwickleroptionen" finden. Öffne die Entwickleroptionen und scrolle bis zum Punkt "System automat. aktualisieren" und deaktiviere die Option.
-:::
+```{admonition} delaying Samsung phones updates
+:class: warning
+Samsung has an unfortunate track record of forcing updates of their phones which cause bluetooth connectivity issues. Um diese Zwangsupdates zu deaktivieren, musst Du das Smartphone in den "Entwicklermodus" schalten:
+ Gehe zu Einstellungen - Telefoninfo - Softwareinformationenen und tippe so lange auf "Buildnummer", bis die Meldung über den aktivierten Entwicklermodus erscheint. Gehe zurück in die Einstellungen und Du solltest ganz unten einen neuen Eintrag "Entwickleroptionen" finden. Open developer options and scroll to find auto system update and turn it off
+```
 
-:::{admonition} Mögliche Probleme mit Google Play Protect
-:class: Warnung Es gab mehrere Hinweise, dass **AAPS** in der Nacht durch Google Play Protect willkürlich beendet wurde. Falls das passieren sollte, kannst Du in den Einstellungen > Sicherheit und Datenschutz > App-Sicherheit, "Google Play Protect" ausschalten. Nicht alle Smartphone-Modelle oder Android-Versionen sind davon betroffen.
-:::
+```{admonition} Google Play Protect potential Issue
+:class: warning
+There have been several reports of **AAPS** being shut down arbitrarily by Google Play Protect every morning. Falls das passieren sollte, kannst Du in den Einstellungen > Sicherheit und Datenschutz > App-Sicherheit, "Google Play Protect" ausschalten. Nicht alle Smartphone-Modelle oder Android-Versionen sind davon betroffen.
+```
 

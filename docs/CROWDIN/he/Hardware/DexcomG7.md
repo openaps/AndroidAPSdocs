@@ -7,13 +7,14 @@ Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not 
 
 ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
-:::{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
-:class: warning **Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
-:::
+```{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
+:class: warning
+**Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
+```
 
 ## 1.  יישום Dexcom G7 ששונתה (Patched) (DiAKEM)
 
-**הערה: דרושה גרסת AAPS 3.2.0.0 או מאוחרת יותר! Not available for ONE+.**
+**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
 
 ### התקינו אפליקציית G7 ששונתה (!) והפעילו את החיישן
 

@@ -4,15 +4,16 @@
 
 Если вы не намерены создавать выделенную учетную запись Gmail для **AAPS**, просто перейдите к следующему разделу, [построения AAPS](building-AAPS.md).
 
-:::{admonition} Преимущества специальной учетной записи Google для AAPS
+```{admonition} Advantages of a dedicated Google account for AAPS
+:class: dropdown
 
-- Выделенное место на Google диске снимает риск превышения лимита персонального дискового пространства **экспортированными настройками**.
-- Каждая версия **AAPS** (и поддерживающие приложения, такие как xdrip+, BYODA и т. д.) будет храниться в одном месте, которое не зависит от вашего оборудования. Если ПК или телефон украден/утерял/поврежден, вы все равно будете иметь доступ.
-- Благодаря гармонизации настроек пользователям проще осуществлять взаимную поддержку при сходной структуре папок.
-- В зависимости от настроек (см. ниже), можно иметь отдельную индивидуальность для общения внутри сообщества, которая защитит вашу конфиденциальность
-- Дети с T1D могут сохранить свою "повседневную" почтовую учетную запись для несовершеннолетних при пользовании **AAPS** и связанных с ним функций, требующих учетной записи для взрослых.
-- Gmail позволяет регистрировать до 4 учетных записей под одним и тем же номером телефона.
-  :::
+- Dedicated Google drive space means you will not risk filling up your personal Google drive limit with **Export Preferences**.
+- Each version of **AAPS** (and supporting apps like xdrip+, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
+- By harmonizing the setup, it will make online support simpler across users with similar folder structure.
+- Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
+- Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
+- Gmail allows you to register up to 4 accounts under the same phone number.
+```
 
 ## Как создать специальную учетную запись Google для AAPS
 
@@ -25,21 +26,22 @@
 - Компьютер с Windows (Windows 10 или новее) и телефон Android (Android 9 или новее), на котором будет размещено приложение **AAPS**. Оба компонента должны иметь все последние обновления безопасности, доступ в интернет и права администратора, так как некоторые шаги требуют загрузки и установки программ.
 - Телефон Android с уже настроенным личным "ежедневным" адресом электронной почты, например учетной записью Gmail.
 
-:::{admonition} что следует продумать при создании новой учетной записи
+```{admonition} Things to consider when setting up your new account
 :class: dropdown
+- You could use a name different to your own, which has relevance to the account (like t1dsuperstar) for privacy reasons. You can then use it in **AAPS** public forums while keeping your own identity private. Since Google requires a recovery email and phone number, it is still traceable.
+- The new **AAPS** account will use the same phone number for verification as your “_everyday_” one. It will use the “everyday” email address for verification;
+- We will setup email forwarding such that any email sent to the new dedicated AAPS account will be forwarded to the primary one (so there is no need to check two different mailboxes);
+- Use separate passwords for your _everyday_ Gmail account and the AAPS-dedicated Gmail account
+- If you use google “2-step verification” (aka multifactor) authentication for one Gmail account, you might as well do it for both Gmail accounts.
+- If you plan to use Google “Passkeys”, make sure you register multiple devices. This is so you don’t lock yourself out. Only do it on devices that nobody else can access (_i.e._ not on a PC with a shared account that other people can unlock).
+```
 
-- По соображениям конфиденциальности, в специальной учетной записи вы имеете возможность указать не свое настоящее имя, а псевдоним (например, t1dsuperstar). Вы можете использовать его на публичных форумах **AAPS**, не раскрывая свое настоящее имя. Поскольку Google требует указать запасную электронную почту и номер телефона для восстановления учетной записи, он все равно отслеживается.
-- Новая учетная запись **AAPS** будет использовать для верификации тот же номер телефона, что и ваш повседневный. Для верификации будет использоваться ваш повседневный адрес электронной почты;
-- Мы настроим переадресацию электронной почты, чтобы все письма, отправленные на новую специальную учетную запись AAPS, пересылались на основной (так что не будет необходимости проверять два различных почтовых ящика);
-- Используйте отдельные пароли для повседневной учетной записи Gmail и учетной записи Gmail, выделенной под AAPS
-- Если вы используете «двухфакторную верификацию» для одной учетной записи Gmail, это же можно сделать для обоих аккаунтов Gmail.
-- Если вы планируете использовать Google «Passkeys», зарегистрируйте несколько устройств. Это чтобы не блокировать себя. Делайте это только на устройствах, к которым никто кроме вас не может получить доступ (_напр. _ не на ПК с общей учетной записью, которую могут разблокировать другие люди).
-  :::
 
-:::{admonition}  Видео Инструкция!
+
+```{admonition} Video Walkthrough! 
 :class: Примечание
-Нажмите [здесь](https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link) для просмотра видео о том, как настроить выделенную учетную запись Google.
-:::
+Нажмите [здесь](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) для просмотра видео о том, как настроить выделенную учетную запись Google.
+```
 
 В этом видео показаны шаги:
 

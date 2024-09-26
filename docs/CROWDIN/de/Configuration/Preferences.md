@@ -421,9 +421,11 @@ Ursprüngliches Kommunikations-Protokoll, dass mit älteren Nightscout-Versionen
 
 Ein [mit AAPS 3.2 neu eingeführtes Kommunikations-Protokoll](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps). Sicherer und effizienter als das ursprüngliche Protokoll.
 
-:::{admonition} V3 Daten-Uploader
-:class: Warnung Nutzt Du den NSClientV3, dann müssen alle Uploader die API V3 verwenden. Da die meisten noch nicht kompatibel sind, heißt das, dass **Du AAPS erlauben musst alle Daten an Nightscout hochzuladen** (Glukosewerte, Behandlungen, ...). Deaktiviere alle anderen Uploader, solange sie nicht V3 konform sind.  
-:::
+```{admonition} V3 data uploaders
+:class: warning
+
+When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+```
 
 - Lege Deine *Nightscout URL* (z.B. [https://deineseite.deinprovider.com](https://yoursitename.yourplaform.dom)) fest.
   - **Stelle sicher, dass die URL NICHT mit /api/v1/ endet.**
@@ -434,9 +436,9 @@ Ein [mit AAPS 3.2 neu eingeführtes Kommunikations-Protokoll](../Installing-Andr
 
 ### Synchronisierung
 
-Die Art der Synchronisierung hängt davon ab, wie Du AAPS nutzen möchtest.
+Synchronization choices will depend on the way you will want to use AAPS.
 
-Du kannst festlegen welche Informationen [von und zu Nightscout hoch- bzw. heruntergeladen werden sollen](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
+You can select which data you want to [upload and download to or from Nightscout](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
 
 ### Alarm-Optionen
 
@@ -451,7 +453,7 @@ Du kannst festlegen welche Informationen [von und zu Nightscout hoch- bzw. herun
 
 ### Verbindungseinstellungen
 
-![NSClient Verbindungseinstellungen](../images/ConfBuild_ConnectionSettings.png)
+![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
 
 - Verbindungseinstellungen legen fest auf welchem Weg (z.B. WLAN oder Mobilfunknetz) eine Nightscout-Verbindung aufgebaut werden darf.
 - Beschränken den Nightscout-Upload auf WLAN-Verbindungen oder sogar auf bestimmte WLAN-SSIDs.
@@ -462,9 +464,9 @@ Du kannst festlegen welche Informationen [von und zu Nightscout hoch- bzw. herun
 (Preferences-advanced-settings-nsclient)=
 ### Erweiterte Einstellungen (Nightscout-Client)
 
-![NS-Client - erweiterte Einstellungen](../images/Pref2024_NSClientAdv.png)
+![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
 
-Die Optionen in den erweiterten Einstellungen sind selbsterklärend.
+Options in advanced settings are self-explanatory.
 
 ## SMS Kommunikator
 
@@ -475,7 +477,7 @@ Die Optionen in den erweiterten Einstellungen sind selbsterklärend.
 
 ## Automatisierung
 
-Wähle aus, welcher Standortservice verwendet werden soll:
+Select which location service shall be used:
 
 - Passiver Standort: AAPS nutzt nur die Standort, die von andere Apps angefordert werden.
 - Netzwerkstandort: Standort Ihres Wi-Fi

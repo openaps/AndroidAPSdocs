@@ -421,9 +421,11 @@
 
 [AAPS 3.2 引入的新協議](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps)。更安全且更高效。
 
-:::{admonition} V3 資料上傳者
-:class: warning 使用 NSClientV3 時，所有上傳者必須使用 API V3。 由於大多數尚不支援 V3，這意味著**您必須讓 AAPS 上傳所有資料**（血糖、治療等）至 Nightscout，並停用其他不支援 V3 的上傳者。  
-:::
+```{admonition} V3 data uploaders
+:class: warning
+
+When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+```
 
 - 設置您的*Nightscout URL*（即 <https://yoursitename.yourplaform.dom>）。
   - **確保網址末尾沒有 /api/v1/。**
@@ -464,7 +466,7 @@
 
 ![NS Client 進階設定](../images/Pref2024_NSClientAdv.png)
 
-進階設定中的選項不言自明。
+進階設定中的選項都非常直觀易懂。
 
 ## SMS(簡訊) 通訊器
 

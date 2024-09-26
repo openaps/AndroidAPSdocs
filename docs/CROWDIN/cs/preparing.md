@@ -21,42 +21,44 @@ Mnoho detailů v **AAPS** dokumentaci dává větší smysl, když **AAPS** skut
 Tyto [cíle](Usage/Objectives.md) byly navrženy tak, aby co nejlépe představili **AAPS** a vzali do úvahy tpické chyby a trendy, které vývojáři **AAPS** vysledovali u nových uživatelů. Chyby můžou nastat protože nováčci jsou nezkušení a příliš dychtivý ke spuštění **AAPS**, nebo přehlédli důležité body. [Cíle](Usage/Objectives.md) jsou zaměřené na minimalizaci těchto problémů.
 
 ### Zdravotní bezpečnost
-::::{admonition}Zabraňte trvalému a bolestivému poškození očí a nervů
-:class:nebezpečí Doporučuje se opatrnost pokud jde o rychlá vylepšení v kontrole krevního cukru a snižování HbA1c
-:::
+```{admonition} Avoid permanent and painful damage to your eyes and nerves
+:class: danger
+Caution is advised concerning rapid improvements in blood glucose control and lowering of HbA1c 
+```
 
-Důležitým aspektem je, že **rychlé snížení HbA1c a zlepšená kontrola krevního cukru u těch, kteří měli nějakou dobu zvýšené glykémie, může vést k trvalému poškození**. Mnozí lidé s diabetem si toho nejsou vědomi a ne všichni lékaři o této problematice informují své pacienty.
+An important safety consideration is that a **rapid reduction in HbA1c and improved blood glucose control in those who have had elevated glucose levels for some time can cause permanent damage**. Many people with diabetes are unaware of this, and not all clinicans make their patients aware of this issue.
 
-Tato poškození mohou zahrnovat **ztrátu zraku a trvalou neuropatii (bolesti)**. Tomuto poškození je možné zabránit pomalejším snižováním úrovně glykémie. Pokud v současné době máte zvýšenou hodnotu HbA1c a začínáte se systémem **AAPS** (nebo jiným systémem uzavřené smyčky), _prosím_ prodiskutujte toto možné riziko s Vaším lékařem před zahájením, a dohodněte se na časovém horizontu s postupným bezpečným snižováním cílů glykémie. Vyšší cíle glykémie můžete je možné zpoičátku v **AAPS** nastavit (momentálně je nejvyšší nastavitelný cíl 10,6 mmol/L, ale můžete také využít nastavení slabého profilu) a poté je v průběhu měsíců snižovat.
+This damage can include **sight loss, and permanent neuropathy (pain)**. It is possible to avoid this damage occuring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 10.6 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
 
 #### Jak rychle můžu snížit můj HbA1c bez rizika trvalých následků?
 
-Podle výsledků jedné retrospektivní [studie](https://pubmed.ncbi.nlm.nih.gov/1464975/) u 76 pacientů se riziko postupného vývoje retinopatie zvýšilo 1,6krát, 2,4krát a 3,8krát, pokud Hba1C poklesla o 1%, 2% nebo 3 % během šestiměsíčního období. Autoři studie navrhli, že **"snížení hodnoty HbA1c během jakéhokoli šestiměsíčního období by mělo být omezeno na méně než 2%, aby se zabránilo postupu retinopatie... Příliš rychlý úvodní pokles glykémie by mohl způsobit silné nebo dočasné zhoršení postupu retinopatie."**
+One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the Hba1C dropped 1%, 2% or 3% respectively over a 6 month period. They suggested that the **"decrease in HbA1c value during any 6-month period should be limited to less than 2% in order to prevent the progression of retinopathy....Too rapid a decrease at the initiation of glycemic control could cause severe or transient exacerbation of the progression of retinopathy."**
 
-Poznámka: Pokud používáte jiné jednotky HbA1c (mmol/mol namísto %), použijte HbA1c kalkulátor [zde](https://www.diabetes.co.uk/hba1c-units-converter.html).
+N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for a HbA1c calculator tool.
 
-V jiném retrospektivním [vyhodnocení](https://academic.oup.com/brain/article/138/1/43/337923) 954 pacientů výzkumníci poznamenali:
+In another retrospective [evaluation](https://academic.oup.com/brain/article/138/1/43/337923) of 954 patients, researchers noted that:
 
-**"S poklesem HbA1c o 2–3 % bodů za 3 měsíce existovalo 20% riziko vzniku neuropatie vyvolané léčbou cukrovky, s poklesem HbA1c o >4% bodů za 3 měsíce překročilo absolutní riziko vzniku neuropatie vyvolané léčbou cukrovky 80 %.“**
+**"With a decrease in HbA1c of 2–3% points over 3 months there was a 20% absolute risk of developing treatment-induced neuropathy in diabetes, with a decrease in HbA1c of >4% points over 3 months the absolute risk of developing treatment-induced neuropathy in diabetes exceeded 80%."**
 
-[Komentář](https://academic.oup.com/brain/article/138/1/2/340563) k této studii souhlasil s tím, že aby se předešlo komplikacím, **cílem by mělo být snížení A1c o <2 % za 3 měsíce.** Další recenze na téma [si můžete přečíst zde](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) a [zde](https://www.mdpi.com/1999-4923/15/7/1791).
+A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this work agreed that to avoid complications **the goal should be to reduce A1c by <2% over 3 months.** You can read other reviews on the topic [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) and [here](https://www.mdpi.com/1999-4923/15/7/1791).
 
-Obecně se uznává, že _nově_ diagnostikovaní pacienti s cukrovkou I. typu (kteří mají před zahájením inzulínové léčby často velmi vysokou hladinu HbA1c) se zdají být schopni rychle snížit své HbA1c bezprostředně po diagnóze, aniž by se s těmito riziky setkávaly ve stejném rozsahu, protože neměli zvýšenou hladinuglukózy v krvi po tak dlouhou dobu. Nicméně stále je to otázka, kterou byste měli prodiskutovat se svým lékařem.
+It is generally recognised that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
 
 ### Žádné SGLT-2 inhibitory
 
-:::{admonition} Žádné SGLT-2 inhibitory
-:class: nebezpečí SGLT-2 inhibitory, také nazývané glifloziny, potlačují reabsorbci krevního cukru v ledvinách. Vzhledem k tomu, že Glifoziny nevyčíslitelně snižují hladinu cukru v krvi, při používání uzavřené smyčky jako je AndroidAPS je užívat NESMÍTE! Znamenalo by to značné riziko ketoacidózy nebo hypoglykémie! Kombinace těchto léků se systémem, který snižuje bazální dávky s cílem zvýšit glykémii je obszvlášť nebezpečné.
+```{admonition} NO SGLT-2 inhibitors
+:class: danger
+SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous. 
 
-V kostce:
-- **Příklad 1: Riziko Hypoglykémie**
-> Během oběda použijete **AAPS** k bolusu založenému na konzumaci 45g glukózy. Problémem je, že AAPS není známo, že inhibitory způsobují odstranění některých sacharidů tělem, což vede k tomu, že v těle je příliš mnoho inzulínu vzhledem k absorbovaným sacharidům a výsledkem je hypoglykémie.
+In a nutshell:
+- **Example 1: risk of Hypo**
+>During lunch, you use **AAPS** to bolus based on consuming 45g of glucose. Problémem je, že AAPS není známo, že inhibitory způsobují odstranění některých sacharidů tělem, což vede k tomu, že v těle je příliš mnoho inzulínu vzhledem k absorbovaným sacharidům a výsledkem je hypoglykémie.
 
-- **Příklad 2: Riziko Ketoacidózy**
-> Inhibitory na pozadí eliminují část sacharidů, což způsobí snížení glykémie. **AAPS** automaticky vydá pumpě pokyn snížit dávky inzulínu včetně bazálu. V průběhu času to může způsobit, že vaše glykémie zůstane pod cílovou hodnotou až do chvíle, kdy tělo nemá dostatek inzulínu k tomu, aby absorbovalo všechny sacharidy, a to má za následek ketoacidózu. Obvykle se Ketoacidóza u T1D pacientů rozvine z důvodu výpadku inzulínové pumpy což spustí alarm na jejich telefonu a zároveň to bude patrné díky vysoké hodnotě glykémie. Nebezpečí Glifozinů ale spočívá v tom, že AAPS nespustí žádné upozornění, protože pumpa je stále funkční a hladina cukru v krvi zústává v cílovém rozsahu.
+- **Example 2: risk of Ketoacidosis**
+>The inhibitors eliminate some of the carbs in the background causing a reduction in your BG. **AAPS** will automatically instruct the pump to decrease insulin intake  including basal. V průběhu času to může způsobit, že vaše glykémie zůstane pod cílovou hodnotou až do chvíle, kdy tělo nemá dostatek inzulínu k tomu, aby absorbovalo všechny sacharidy, a to má za následek ketoacidózu. Obvykle se Ketoacidóza u T1D pacientů rozvine z důvodu výpadku inzulínové pumpy což spustí alarm na jejich telefonu a zároveň to bude patrné díky vysoké hodnotě glykémie. Nebezpečí Glifozinů ale spočívá v tom, že AAPS nespustí žádné upozornění, protože pumpa je stále funkční a hladina cukru v krvi zústává v cílovém rozsahu.  
 
 Běžné obchodní názvy SGLT-2 inhibitorů zahrnují: Invokana, Farxida, Jardiance, Glyxambi, Synjardy, Steglatro, Xigduo XR a další.
-:::
+```
 
 
 ### Klíčové principy smyčky s AAPS
@@ -157,13 +159,13 @@ Jak bylo zmíněno dříve, používání **AAPS** je víceméně "cesta", kter�
 | ------------------------------------------------------------------------------------------------------- |:--------------:|
 | úvodní přečtení dokumentace:                                                                            |    1-2 dny     |
 | instalace a konfigurace PC k sestavení aplikace:                                                        |   2-8 hodin    |
-| sestavení Nightscout serveru:                                                                           |    1 hodina    |
-| Instalace CGM aplikace (xDrip, BYODA, …)                                                                |    1 hodina    |
-| úvodní konfigurace CGM->xDrip->AAPS:                                                                    |    1 hodina    |
-| úvodní konfigurace AAPS->inzulínová pumpa:                                                              |    1 hodina    |
-| konfigurace AAPS>NightScout (pouze výkazy):                                                             |    1 hodina    |
-| volitelně (pro rodiče) - konfigurace NightScout <-> **AAPS** & AAPS klienti:                            |    1 hodina    |
-| Cíl 1: Nastavit vizualizaci a monitoring, analyzovat bazály a poměry                                    |    1 hodina    |
+| sestavení Nightscout serveru:                                                                           |     1 hour     |
+| Instalace CGM aplikace (xDrip, BYODA, …)                                                                |     1 hour     |
+| úvodní konfigurace CGM->xDrip->AAPS:                                                                    |     1 hour     |
+| úvodní konfigurace AAPS->inzulínová pumpa:                                                              |     1 hour     |
+| konfigurace AAPS>NightScout (pouze výkazy):                                                             |     1 hour     |
+| volitelně (pro rodiče) - konfigurace NightScout <-> **AAPS** & AAPS klienti:                            |     1 hour     |
+| Cíl 1: Nastavit vizualizaci a monitoring, analyzovat bazály a poměry                                    |     1 hour     |
 | Cíl 2: Naučte se ovládat AAPS                                                                           |    2 hodiny    |
 | Cíl 3: Prokázat své znalosti                                                                            |   až 14 dní    |
 | Cíl 4: Začít s otevřenou smyčkou                                                                        |     7 dnů      |
@@ -215,9 +217,13 @@ Pokud chcete poskytnout chytrý telefon nebo hodinky k provedení testování, n
 
 Uživatelům doporučujeme udržovat jejich Android telefon aktualizovaný, včetně bezpečnostních nastavení. Ovšem pokud jste noví uživatel **AAPS** nebo nejste technicky zdatný, možná budete chtít pozdržet aktualizaci svého telefonu do doby, než to udělají ostatní a potvrdí na fórech, že je to bezpečné.
 
-:::{admonition} Odložení aktualizací na telefonech Samsung :class: upozornění Samsung má nešťastný zvyk vynucovat aktualizace jejich zařízení, což někdy způsobuje problémy s bluetooth připojením. Chcete-li tyto nucené aktualizace zakázat, je třeba přepnout telefon do "vývojářského režimu": přejděte do nastavení, informací o softwaru, poté klepněte na číslo sestavení, které potvrzuje, že máte odemčený vývojářský režim. Přejděte zpět do hlavního menu a měli byste vidět novou položku možností pro vývojáře. Otevřete možnosti vývojáře, najděte automatickou aktualizaci systému a položku vypněte.
+```{admonition} delaying Samsung phones updates
+:class: warning
+Samsung has an unfortunate track record of forcing updates of their phones which cause bluetooth connectivity issues. Chcete-li tyto nucené aktualizace zakázat, je třeba přepnout telefon do "vývojářského režimu": přejděte do nastavení, informací o softwaru, poté klepněte na číslo sestavení, které potvrzuje, že máte odemčený vývojářský režim. Přejděte zpět do hlavního menu a měli byste vidět novou položku možností pro vývojáře. Open developer options and scroll to find auto system update and turn it off
+```
 
-:::{admonition} Potenciální problémy s Google Play Protect
-:class: upozornění Byly reportovány události pravidelných ranních restartů aplikace **AAPS** službou Google Play Protect. Pokud se tak stane, otevřete možnosti Google Play a zakažte "Google Play Protect". Ne všechny modely telefonů nebo verze Androidu jsou tímto problémem ovlivněny.
-:::
+```{admonition} Google Play Protect potential Issue
+:class: warning
+There have been several reports of **AAPS** being shut down arbitrarily by Google Play Protect every morning. Pokud se tak stane, otevřete možnosti Google Play a zakažte "Google Play Protect". Ne všechny modely telefonů nebo verze Androidu jsou tímto problémem ovlivněny.
+```
 

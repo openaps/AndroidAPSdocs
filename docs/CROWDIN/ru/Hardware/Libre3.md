@@ -15,7 +15,7 @@ Libre 3 Freestyle (FSL3) требует уникальной настройки 
 ## Метод 1: 1-минутные замеры
 Версия 3.2.0.1 AndroidAPS не поддерживает 1-минутные значения. Ускорение и сглаживание не работает с 1-минутными значениями.
 
-![Трансляция Juggluco в AAPS](../images/Juggluco_AAPS.png)
+![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
 
 ## Метод 2: 5-минутные замеры

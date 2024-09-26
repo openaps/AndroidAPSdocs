@@ -33,19 +33,19 @@ Některé hostované služby Nightscoutu jsou uvedeny [here](https://nightscout.
 
 Tidepool je k dispozici pouze od **AAPS** verze 3.2, která byla vydána koncem roku 2023.
 
-:::{admonition} Tidepool s **AAPS** slouží pouze pro vykazování
-:class: nebezpečí\
-Vzhledem k zpoždění tří hodin mezi příjmem a hlášením dat při použití **AAPS**, Tidepool není vhodný pro sdílení informací v reálném čase s pečovateli.\
-Na druhé straně může být Tidepool skvělým řešením pro sdílení zpráv s pacientovým endokrinologem, pokud Nightscout není přijatelné řešení.\
-:::
+```{admonition} Tidepool with **AAPS** is only for reporting
+:class: danger  
+As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool it is not suitable for sharing real-time information with caregivers.  
+On the other hand, Tidepool can be a great solution for sharing reports with a patient's endocrinologist if Nightscout is not an accepted solution.  
+```
 
 Tidepool je [open source](https://github.com/tidepool-org) projekt. Nabízí bezplatné provozování účtu na serverech Tidepool.
 
 Můžete si vytvořit Tidepool účet [zde](https://app.tidepool.org/signup).
 
-:::{admonition} V **AAPS** je integrován uploader pro Tidepool
-:class: poznámka
-**Nemusíte** používat aplikaci pro nahrávání do Tidepoolu: **AAPS** bude nahrávat glykémii, léčbu a bazál za vás. Potřebujete pouze osobní Tidepool účet. Nenahrávejte svá data pomocí nástroje Tidepool uploader, protože to povede k duplicitním hodnotám.\
-:::
+```{admonition} **AAPS** has a the uploader for Tidepool integrated
+:class: note
+You do **not** need to use the uploader app to Tidepool: **AAPS** will upload blood glucose, treatments and basal for you. You only need a personal account with Tidepool. Do not upload your data with the separate Tidepool uploader tool as it will lead to duplicate values.  
+```
 
 Po nastavení svého reportovacího serveru můžete nyní buď nastavit [Vyhrazený účet Google pro použití v AAPS](Dedicated-Google-account-for-AAPS.md) nebo přejděte přímo k [Sestavení aplikace AAPS](building-AAPS.md).

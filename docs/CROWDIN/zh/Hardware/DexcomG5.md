@@ -9,8 +9,10 @@
 
 ## 如果使用 G5 配合修改過的 Dexcom 應用程式
 
-:::{admonition} 傳統應用程式 :class: warning 這些應用程式與最新的 Android 版本不相容。  
-:::
+```{admonition} Legacy apps
+:class: warning
+These apps are not compatible with recent Android versions.  
+```
 
 -   從<https://github.com/dexcomapp/dexcomapp>下載 apk，並選擇符合您需求的版本（mg/dl 或 mmol/l 版本，G5）。
 

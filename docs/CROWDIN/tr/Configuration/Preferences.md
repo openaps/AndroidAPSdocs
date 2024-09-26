@@ -421,9 +421,11 @@ Original communication protocol, can be used with older Nightscout versions.
 
 [New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
-:::{admonition} V3 data uploaders
-:class: warning When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.  
-:::
+```{admonition} V3 data uploaders
+:class: warning
+
+When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+```
 
 - Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
   - **URL'nin sonunda /api/v1/ OLMADAN olduğundan emin olun.**
@@ -475,7 +477,7 @@ Options in advanced settings are self-explanatory.
 
 ## Otomasyon
 
-Hangi konum hizmetinin kullanılacağını seçin:
+Select which location service shall be used:
 
 - Pasif konum kullan: AAPS, yalnızca diğer uygulamalar talep ederse konum alır
 - Ağ konumunu kullan: Wi-Fi'nizin konumu

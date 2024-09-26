@@ -31,7 +31,9 @@
 
 ## 2. Обновление локальной копии
 
-:::{admonition} ПРЕДУПРЕЖДЕНИЕ ::class: предупреждение Если вы обновляетесь с версий до 2.8.x, следуйте инструкциям по созданию [ Нового клона](../Installing-AndroidAPS/building-AAPS), так как данное руководство вам не подойдет! :::
+    {admonition} WARNING
+    :class: warning
+    If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../Installing-AndroidAPS/building-AAPS), as this guide will not work for you!
 
 * Откройте существующий проект AAPS при помощи Android Studio. Может потребоваться выбрать проект. (дважды) нажмите на проект AAPS.
     

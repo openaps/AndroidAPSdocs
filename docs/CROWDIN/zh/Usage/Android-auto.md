@@ -2,12 +2,12 @@
 
 **AAPS** 能夠將您的當前狀態以訊息形式直接發送到車內的 Android Auto。
 
-:::{admonition} 版本和最後更改訊息 :class: dropdown 最後編輯日期：2023/07/05
+```{admonition} 版本和最後更改訊息 :class: dropdown 最後編輯日期：2023/07/05
 
 文檔使用的版本：
 
 * AAPS 3.2.0-dev-i
-* Android Auto：9.3.631434-release :::
+* Android Auto：9.3.631434-release ```
 
 ## 需求
 

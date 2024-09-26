@@ -6,10 +6,11 @@
 - 您已了解 **AAPS** 的基本功能
 - 您對系統的操作有基本的理解，因此能夠信任它。
 
-:::{admonition} 注意
+```{admonition} Note
+:class: note
 
-在完成每個 **目標** 後，請定期匯出您的 **AAPS** 設定！
-:::
+Regularly export your **AAPS** settings after completing each **objective**!
+```
 
 我們強烈建議您在完成每個 **目標** 後[匯出設定](../Usage/ExportImportSettings.md)。 此匯出過程會建立一個 **設定** (.json) 檔案，您應該將它備份到一個或多個安全的地方（例如 Google Drive、硬碟、電子郵件附件等）。 這確保了您保留了目標進度，如果您不慎刪除了進度，只需匯入最近的設定檔即可重新載入。 如果您想更換 **AAPS** 的智慧型手機（例如升級、遺失或手機損壞等），備份設定檔也是必需的。
 
@@ -68,10 +69,10 @@
 
 當 **AAPS** 第一次安裝時，你必須完成整個 **Objective 3** 才能進入 **Objective 4**。 每個目標必須按順序完成。 隨著目標的進展，新的功能將逐漸解鎖。
 
-:::{admonition} **當我更新到新版 AAPS 時，如果有新的問題加入某個目標，會發生什麼？**
-:class: 注意
-有時候 **AAPS** 會新增一些新功能，這可能會導致新問題被加入目標中，尤其是 **Objective 3**。 因此，任何加入 **Objective 3** 的新問題將被標記為“未完成”，因為 **AAPS** 會要求你執行該操作。 別擔心，因為每個目標都是獨立的，只要其他目標完成，你將**不會失去 AAPS 的現有功能**。
-:::
+```{admonition} __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
+:class: Note
+From time to time, new features are added to **AAPS** which may require a new question to be added to the Objectives, particularly Objective 3. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other Objectives remain completed.
+```
 
 ## 目標 4：開始使用開環
 
@@ -92,9 +93,9 @@
 
   ![開環模式的最小請求變更](../images/OpenLoop_MinimalRequestChange2.png)
 
-:::{admonition} 你不需要執行每一個系統建議！
+```{admonition} You don't need to action each and every system recommendation!
 :class: 注意
-:::
+```
 
 (目標-Objective-5-理解你的開環模式及其臨時基礎率建議)=
 
@@ -121,12 +122,13 @@
 
 你可以透過輸入不同的數值來調整圖表中的綠色區域（代表你的目標範圍），位置在 [偏好設定](../Configuration/Preferences.md) > Overview > 顯示範圍。
 
-![停止標誌](../images/sign_stop.png)
-:::{admonition} 如果你使用的是虛擬幫浦，現在改為實體胰島素幫浦！
-:class: 注意
+![Stop sign](../images/sign_stop.png)
 
-如果你正在使用虛擬幫浦進行開環模式，請在這裡停止。 只有在改用“實體”幫浦後才可點擊驗證以完成此目標。
-:::
+```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
+:class: note
+
+If you are open looping with a virtual pump stop here. Only click verify at the end of this Objective once you have changed to using a "real" physical pump.
+```
 
 ![空白](../images/blank.png)
 
@@ -134,11 +136,12 @@
 
 ## 目標 6：使用低血糖暫停功能開始閉環
 
-![警告標誌](../images/sign_warning.png)
-:::{admonition} 目標 6 的閉環模式僅限於低血糖暫停，不會修正高血糖值！
+![Warning sign](../images/sign_warning.png)
+
+```{admonition} Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend only!
 :class: 注意
 你仍然需要自行修正高血糖值（手動透過幫浦或注射筆進行修正）！
-:::
+```
 
 在 **Objective 6** 中，你將啟動閉環並啟用低血糖暫停 (LGS) 模式，並將 [max IOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) 設置為零。 你必須在 LGS 模式下停留 5 天才能完成此目標。 你應該利用這段時間檢查你的設定是否準確，並避免頻繁觸發 LGS 事件。
 

@@ -142,13 +142,13 @@ Schaue von Zeit zu Zeit auf den SMB-Tab, um zu sehen, ob Deine SMBs groß genug 
 
 Wenn nicht, werden Deine Tuning-Bemühungen mitunter vergebens sein!
 
-:::{admonition} Das Boosten des ISF (Korrekturfaktor) kann gefährlich werden
+```{admonition} Boosting ISF can become dangerous
 :class: danger
 
-Beobachte/analysiere die SMB-Größen, die sich kurz nach dem Mahlzeitenbeginn sich aus Deinen Einstellungen ergeben sorgfältig. Verändere in kleinen Schritten und nicht mehr als 1 oder 2 Parameter auf einmal.
+Carefully observe/analyze the SMB sizes that, briefly after meal start, result from your settings. Verändere in kleinen Schritten und nicht mehr als 1 oder 2 Parameter auf einmal.
 
 Die Einstellungen müssen gut genug für Deine (!) unterschiedlichen Mahlzeiten funktionieren.
-:::
+```
 
 ## Mahlzeitserkennung / Deine Automationen zum Boosten
 

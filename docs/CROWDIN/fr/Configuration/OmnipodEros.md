@@ -5,9 +5,8 @@ Ces instructions sont pour configurer la pompe de génération Omnipod Eros (**P
 **Ce logiciel est une partie d'un système de pancréas artificiel "Do it yourself" (faire soi-même), et ce n’est pas un produit fini destiné à la mise sur le marché. VOUS devez obligatoirement lire, apprendre et comprendre ce système, y compris la façon de l’utiliser. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
 
 ```{contents}
-contenus::
-   :backlinks: entrée
-   :depth: 2
+:backlinks: entry
+:depth: 2
 ```
 
 ## Configuration matérielle et logicielle requise

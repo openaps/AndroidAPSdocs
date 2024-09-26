@@ -421,9 +421,11 @@ Původní komunikační protokol, lze použít se staršími verzemi Nightscoutu
 
 [Nový protokol byl zaveden s AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) je bezpečnější a efektivnější.
 
-:::{admonition} V3 data uploaders
-:class: warning Pokud používáte NSClientV3, všechna zařízení musí používat API V3. Protože většina z nich ještě není kompatibilní, znamená to, že **musíte nechat AAPS nahrát všechna data** (glykémie, ošetření, . .) do Nightscoutu a zakázat nahrávání všem ostatním zařízením, pokud nejsou v kompatibilní s V3.  
-:::
+```{admonition} V3 data uploaders
+:class: warning
+
+When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+```
 
 - Nastavte svou *Nightscout URL* (tj. <https://yoursitename.yourplaform.dom>).
   - **Ujistěte se, že adresa URL na konci NEOBSAHUJE /api/v1/.**
@@ -434,9 +436,9 @@ Původní komunikační protokol, lze použít se staršími verzemi Nightscoutu
 
 ### Synchronizace
 
-Možnosti synchronizace budou záviset na tom, jak chcete používat AAPS.
+Synchronization choices will depend on the way you will want to use AAPS.
 
-Můžete vybrat, která data chcete [nahrávat a stahovat do nebo z Nightscoutu](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
+You can select which data you want to [upload and download to or from Nightscout](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
 
 ### Nastavení alarmů
 
@@ -451,7 +453,7 @@ Můžete vybrat, která data chcete [nahrávat a stahovat do nebo z Nightscoutu]
 
 ### Nastavení připojení
 
-![Nastavení připojení NSClient](../images/ConfBuild_ConnectionSettings.png)
+![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
 
 - Nastavení připojení definují, kdy bude povoleno připojení k Nightscoutu.
 - Volby alarmu umožňují vybrat, jaké výchozí alarmy Nightscoutu se mají v aplikaci používat.
@@ -462,9 +464,9 @@ Můžete vybrat, která data chcete [nahrávat a stahovat do nebo z Nightscoutu]
 (Preferences-advanced-settings-nsclient)=
 ### Rozšířená nastavení (NSClient)
 
-![Rozšířené nastavení NSClient](../images/Pref2024_NSClientAdv.png)
+![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
 
-Možnosti v pokročilém nastavení jsou samovysvětlující.
+Options in advanced settings are self-explanatory.
 
 ## SMS komunikátor
 
@@ -475,7 +477,7 @@ Možnosti v pokročilém nastavení jsou samovysvětlující.
 
 ## Automatizace
 
-Vyberte, jaká služba určování polohy se použije:
+Select which location service shall be used:
 
 - Používat pasivní polohu: AAPS zjistí polohu pouze v případě, že ji budou požadovat ostatní aplikace
 - Používat zjištění polohy podle sítě: Poloha podle vaší Wi-Fi sítě

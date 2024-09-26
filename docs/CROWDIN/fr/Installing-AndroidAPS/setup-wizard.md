@@ -6,18 +6,20 @@ Cependant, il n'est pas obligatoire de tout configurer complètement lors de la 
 
 Pendant, et juste après avoir l'exécution de l'**Assistant de configuration**, vous ne verrez pas forcément de changements notables se produire dans **AAPS**. Pour mettre en place votre boucle **AAPS**, vous devez suivre les **Objectifs** pour débloquer chaque fonctionnalité l'une après l'autre. Vous commencerez l'**Objectif 1** à la fin de l'Assistant de Configuration. C'est vous le maître d'**AAPS**, pas l'inverse.
 
-:::{admonition} Aperçu des objectifs
+```{admonition} Preview Objectives
+:class: note
+If you are keen to know the structure of the objectives, please read [Completing the objectives](../Usage/completing-the-objectives.md) but then come back here to run the Setup Wizard first.
 
-:::
+```
 
-D'expérience, nous savons que les personnes qui se lancent se mettent souvent la pression pour configurer **AAPS** le plus rapidement possible, ce qui peut entraîner de la frustration car il y a beaucoup de choses à apprendre.
+From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
 
-Alors, prenez votre temps pour configurer votre boucle, les avantages d'une boucle **AAPS** bien configurée sont énormes.
+So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
 
-:::{admonition} Demandez de l’aide
+```{admonition} Ask for Help
 :class: note
 Si vous trouvez une erreur dans la documentation ou si vous avez une suggestion pour mieux expliquer quelque chose, vous pouvez demander de l'aide à la communauté comme expliqué dans [Où trouver de l'aide](../Where-To-Go-For-Help/Connect-with-other-users.md).
-:::
+```
 
 ## Guide pas à pas de l'assistant de configuration AAPS
 
@@ -192,10 +194,12 @@ Sur cette page, quand vous activez un élément (plugin) avec la case à cocher 
 
 Dans cet exemple, nous sélectionnons Nightscout comme serveur de reporting, et nous allons le configurer.
 
-:::{admonition}  Choisissez la bonne version **NSClient** en fonction de vos besoins !
+```{admonition} Make sure to choose the correct **NSClient** version for your needs! 
+:class: Note
+Click [here](link) for the release notes of **AAPS** 3.2.0.2 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**. 
 
-Les utilisateurs de Nightscout devraient choisir **NSClient v3**, sauf si vous souhaitez surveiller ou envoyer des traitements à distance (_par ex._ en tant que parent ou aidant utilisant **AAPS** pour un enfant) via Nightscout, auquel cas, choisissez la première option "**NSClient**" jusqu'à nouvel ordre.
-:::
+Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout, in which case, choose the first option "**NSClient**" until further notice. 
+```
 
 Pour Tidepool, c'est encore plus simple, car vous n'avez besoin que de vos informations de connexion personnelles.
 
@@ -291,10 +295,10 @@ Sélectionnez le type d'insuline utilisée dans la pompe.
 
 Les noms d'insuline affichés doivent vous parler.
 
-:::{admonition} N'utilisez pas le "Profil d'insuline ajustable Oref" à moins de savoir ce que vous faites
+```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
 :class: danger
-Pour les utilisateurs avancés ou les études médicales, il est possible de définir avec le "Profil d'insuline ajustable Oref" un profil personnalisé sur la façon dont l'insuline agit. Veuillez ne pas l'utiliser à moins d'être un expert, généralement les valeurs prédéfinies fonctionnent bien pour chaque marque d'insuline.
-:::
+For advanced users or medical studies there is the possibility to define with "Free-Peak Oref" a customised profile of how insulin acts. Please don't use it unless you are an expert, usually the pre-defined values work well for each branded insulin.
+```
 
 Appuyez sur "SUIVANT" pour passer à l'écran suivant :
 
@@ -328,12 +332,14 @@ Nous arrivons maintenant à une partie très importante de l'Assistant de config
 
 Veuillez lire la documentation sur les profils avant d'essayer de saisir les données de votre profil à l'écran suivant.
 
-:::{admonition} Profil fonctionnel nécessaire - aucune exception ici !
+```{admonition} Working profile required - no exceptions here !
+:class: danger
+An accurate profile is necessary to control the safe action of **AAPS**
 
-Il est nécessaire que vous ayez déterminé et discuté de votre profil avec votre médecin, et que vous soyez sûr.e qu'il fonctionne grâce à des tests concluants de débit de basal, de SI et de G/I !
+It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
 
-Si on donne à un robot des paramètres incorrects, il échouera - systématiquement. **AAPS** ne fonctionne qu'avec les informations qui lui sont fournies. Si votre profil est trop fort, vous risquez l'hypoglycémie, et s'il est trop faible, vous risquez l'hyperglycémie.
-:::
+If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
+```
 
 Appuyez sur "SUIVANT" pour passer à l'écran suivant. Saisissez un "Nom de profil" :
 
@@ -341,12 +347,14 @@ Appuyez sur "SUIVANT" pour passer à l'écran suivant. Saisissez un "Nom de prof
 
 Par la suite, vous pourrez avoir plusieurs profils si nécessaire. Nous n'en créons qu'un ici.
 
-:::{admonition} Profil uniquement pour le tutoriel - ne l'utilisez pas
+```{admonition} Profile only for tutorial - not for your usage
+:class: information
+The example profile here is only to show you how to enter data.
 
-Les données montrées ici ne sont pas celles d'un profil précis ni très optimisées, car les besoins de chaque personne sont complètement différents.
+It is not intended to be an accurate profile or something very well optimised, because each person's needs are so different.
 
-Ne les utilisez pas réellement pour votre boucle !
-:::
+Don't use it for actually looping!
+```
 
 Entrez votre Durée d'action de l'insuline (DAI) en heures. Ensuite, appuyez sur "G/I":
 
@@ -380,10 +388,10 @@ Enregistrez le profil en cliquant sur "ENREGISTRER" :
 
 Après avoir enregistré, un nouveau bouton "Activer le Profil" apparaît.
 
-:::{admonition} Plusieurs profils enregistrés mais un seul actif
+```{admonition} Several defined but only one active profile
 :class: information
 Vous pouvez sauvegarder plusieurs profils, mais il n'y aura jamais qu'un seul profil actif à tout moment.
-:::
+```
 
 Appuyez sur "Activer le Profil" :
 
@@ -391,10 +399,10 @@ Appuyez sur "Activer le Profil" :
 
 La boîte de dialogue de changement de profil apparaît. Pour cette fois, laissez les valeurs prédéfinies.
 
-:::{admonition} Plusieurs profils enregistrés mais un seul actif
+```{admonition} Several defined but only one active profile
 :class: information
 Vous apprendrez plus tard comment utiliser cette boite de dialogue pour gérer des situations telles que la maladie ou le sport, quand vous devez modifier votre profil en fonction des circonstances.
-:::
+```
 
 Appuyez sur "OK" :
 
@@ -438,10 +446,10 @@ Choisissez l'algorithme SMB OpenAPS comme algorithme APS. Malgré son nom, la fo
 
 La raison pour laquelle le SMB est désactivé au début est que la fonction SMB permet une réaction plus rapide à l'augmentation de la glycémie, en remplaçant une augmentation de la basale par un Super Micro Bolus. Généralement, quand on commence, le profil n'est pas encore suffisamment précis, c'est pourquoi cette fonctionnalité est désactivée au début.
 
-:::{admonition} Utilisez l'ancien algorithme **OpenAPS AMA** seulement si vous savez ce que vous faites
+```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: information
-OpenAPS AMA est l'algorithme le plus basique et ne prend pas en charge les microbolus pour corriger les valeurs élevées. Il y a peut-être des cas où il est préférable d'utiliser cet algorithme mais ce n'est pas la recommandation.
-:::
+OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
+```
 
 Press the cogwheel to see the details:
 

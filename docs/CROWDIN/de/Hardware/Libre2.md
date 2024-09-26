@@ -26,8 +26,10 @@ Bemerkung: Der Transmitter kann parallel zur LibreLink-App verwendet werden.
 
 ## 2. Nutzen der Direktverbindung zu xDrip+
 
-:::{admonition} Nur für Libre 2 (EU) :class: warning xDrip+ unterstützt keine Direktverbindungen zu Libre 2 US und AUS Versionen.  
-:::
+```{admonition} Libre 2 EU only
+:class: warning
+xDrip+ doesn't support direct connection to Libre 2 US and AUS.  
+```
 
 - [Diese Anleitung](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) beschreibt, wie Du xDrip+ konfigurierst. Wichtig ist, dass Du die [neueste OOP2-Version](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) herunterlädst und nutzt, da die in der Dokumentation referenzierte Version veraltete ist.
 - Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
@@ -52,15 +54,19 @@ Bemerkung: Der Transmitter kann parallel zur LibreLink-App verwendet werden.
 
 - Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-:::{admonition} Use with xDrip+ :class: note You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
+```{admonition} Use with xDrip+
+:class: note
+You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
 ![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  
 You will then need to set xDrip+ data source to Libre 2 Patched App to receive data from Juggluco.  
-:::
+```
 
 ## 5. Use the patched LibreLink app with xDrip+
 
-:::{admonition} Libre 2 EU only :class: warning The patched app is an old version (22/4/2019) and might not be compatible with recent Android releases.  
-:::
+```{admonition} Libre 2 EU only
+:class: warning
+The patched app is an old version (22/4/2019) and might not be compatible with recent Android releases.  
+```
 
 ### Step 1: Build the patched app
 

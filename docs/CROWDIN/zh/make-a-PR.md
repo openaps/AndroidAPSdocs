@@ -88,40 +88,46 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 
 ### 文本格式
 
-- 加粗：`**文本**`
-- 斜體：`*文本*`
+- **bold**: `**text**`
+- *italic*: `*text*`
+- ***bold italic***: `***text***`
 
-### 有序列表
+### Ordered list
 
-:::
+    1. first
+    1. second
+    1. 第三
+    
 
 1. 第一
 2. 第二
-3. 第三:::
+3. 第三
 
-4. 第一
+### Unordered list
 
-5. 第二
-6. 第三
-
-### 無序列表
-
-:::
+    - one element
+    - another element
+    - and another element
+    
 
 - 一個元素
-- 另一個元素
-- 還有一個元素:::
-
-- 一個元素
-
 - 另一個元素
 - 還有一個元素
 
-### 多層級列表
+### Multi level list
 
 您可以在列表中插入嵌套列表，方法是將下一層級比上一層級多縮進4個空格。
 
-:::
+    1. first
+    1. second
+    1. third
+      1. one element
+      1. another element
+      1. and another element
+    1. four
+    1. five
+    1. 六
+    
 
 1. 第一
 2. 第二
@@ -131,18 +137,7 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
     3. 還有一個元素
 4. 第四
 5. 第五
-6. 六:::
-
-7. 第一
-
-8. 第二
-9. 第三 
-    1. 一個元素
-    2. 另一個元素
-    3. 還有一個元素
-10. 第四
-11. 第五
-12. 六
+6. 六
 
 ### 圖像
 
@@ -207,33 +202,48 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 
 #### 註釋
 
-:::::::{admonition} 註釋:class: note
+    ```{admonition} Note headline
+    :class: note
+    This is a note.
+    ```
+    
 
-這是一個註釋。 :::::::
+```{admonition} Note headline :class: note This is a note.
 
-:::{admonition} 註釋:class: note
+    <br />#### Warnings
+    
+    ````
+    ```{admonition} Warning
+    :class: warning
+    This is a warning.
+    
 
-這是一個註釋。 :::
+    ```{admonition} Warning headline 
+    :class: warning
+    This is a warning.
+    ```
+    
+    #### Collapsing Notes
+    
+    
 
-#### 警告
+    {admonition} further detailed readings for interested readers
+    :class: dropdown
+    
+    This admonition has been collapsed,
+    meaning you can add longer form content here,
+    without it taking up too much space on the page.
+    
 
-:::::::{admonition} 警告:class: warning
+````
 
-這是一個警告。 :::::::
+```{admonition} further detailed readings for interested readers :class: dropdown This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page.
 
-:::{admonition} 警告:class: warning
+```
 
-這是一個警告。 :::
+## Tables
 
-#### 折疊註釋
-
-:::::::{admonition} 感興趣讀者的進一步詳細閱讀:class: dropdown
-
-這個註釋已被折疊，這意味著您可以在此處添加較長的內容，而不會佔用頁面太多空間。 :::::::
-
-:::{admonition} 感興趣讀者的進一步詳細閱讀:class: dropdown
-
-這個註釋已被折疊，這意味著您可以在此處添加較長的內容，而不會佔用頁面太多空間。 :::
+Avoid using tables with long texts as the contents is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
 
 ## 風格指南
 
@@ -263,7 +273,7 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 
 #### 隱私/許可證問題：
 
-特別是如果您錄製視頻或截圖，請確保不泄露您的私人訊息（API密鑰、密碼）。 確保YouTube內容未公開列出，並且需要連結才能從文檔中查看。 避免引起侵犯版權材料（BYODA等）的注意。
+特別是如果您錄製視頻或截圖，請確保不泄露您的私人訊息（API密鑰、密碼）。 Make sure YouTube content is not openly listed, and needs a link from the documentation to view. 避免引起侵犯版權材料（BYODA等）的注意。
 
 #### 保持句子簡短，直奔主題
 
@@ -329,16 +339,16 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 
 #### 避免名詞化
 
-名詞化是指不是實物的某些過程、技術或情感的名稱。 名詞化是由動詞衍生的。
+名詞化是指不是實物的某些過程、技術或情感的名稱。 Nominalizations are formed from verbs.
 
 例如：
 
-| 動詞 | 名詞化  |
-| -- | ---- |
-| 完成 | 完成過程 |
-| 介紹 | 介紹過程 |
-| 提供 | 提供過程 |
-| 失敗 | 失敗過程 |
+| 動詞 | Nominalization |
+| -- | -------------- |
+| 完成 | 完成過程           |
+| 介紹 | 介紹過程           |
+| 提供 | 提供過程           |
+| 失敗 | 失敗過程           |
 
 它們經常**取代**它們來自的動詞，但可能聽起來好像什麼都沒有實際發生。 太多的名詞化會使寫作變得非常沉悶和乏味。
 
@@ -366,7 +376,7 @@ Markdown並非100％固定標準，我們盡量保持與標準相近，以
 
 - 而且**您**可以在一個句子中重複使用相同的**詞**，如果**您**找不到更好的**詞**。
 
-#### 透過目的來優化寫作風格
+#### Optimizing writing style by purpose
 
 為了保持文檔的清晰和簡潔，我們在文檔的不同部分使用不同的寫作風格。
 

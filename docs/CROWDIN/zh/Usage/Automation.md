@@ -63,11 +63,11 @@
 
 ![替代文字](../images/automation_2024-02-12_20-55-05.png)
 
-:::{admonition} 重要注意事項
+```{admonition} Important note
 :class: note
 
-即使關閉閉環，**自動化**仍會保持啟動狀態！
-:::
+Automations are still active when the Loop is disabled!
+```
 
 
 ## 安全限制
@@ -80,11 +80,11 @@
 
 ## 正確使用負值
 
-:::{admonition} 警告
+```{admonition} Warning
 :class: warning
 
-請謹慎選擇自動化中的負值
-:::
+Please be careful when selecting a negative value in Automation
+```
 
 在**自動化**中的「條件」選擇‘小於’這類負值時，請務必謹慎。 例如：
 

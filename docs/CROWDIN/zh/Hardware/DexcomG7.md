@@ -7,9 +7,10 @@
 
 ![G7 英文](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
-:::{admonition} [平滑方法](../Usage/Smoothing-Blood-Glucose-Data)
-:class: warning **指數平滑法** **必須** 開啟，才能有效使用 G7 / ONE+ 的數值。  
-:::
+```{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
+:class: warning
+**Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
+```
 
 ## 1.  修補版 Dexcom G7 應用程式 (DiAKEM)
 
@@ -19,15 +20,15 @@
 
 修補版 Dexcom G7 應用程式 (DiAKEM) 可查看 Dexcom G7 資料。 這不是 BYODA 應用程式，因為該應用程式目前無法接收 G7 資料。
 
-如果之前有使用過原Dexcom應用程式，請將其解除安裝（如果感測器正在運作，可以繼續使用感測器，請在移除應用程式前記下感測器代碼！）
+如果之前有使用過原Dexcom應用程式，請將其解除安裝（如果傳感器正在運作，可以繼續使用傳感器，請在移除應用程式前記下傳感器代碼！）
 
 從 [這裡](https://github.com/authorgambel/g7/releases)下載並安裝修補版.apk。
 
 在修補版應用程式中輸入傳感器代碼。
 
-請遵循一般CGM衛生與感測器放置的建議，詳情請見[>此處](../Hardware/GeneralCGMRecommendation.md)。
+請遵循一般 CGM 衛生規範和感測器安裝位置的建議，詳情請參閱[此處](../Hardware/GeneralCGMRecommendation.md)。
 
-預熱階段結束後，資料將如常顯示在 G7 應用程式中。
+預熱階段結束後，資料會照常顯示在 G7 應用程式中。
 
 ### 在 AAPS 中進行配置
 

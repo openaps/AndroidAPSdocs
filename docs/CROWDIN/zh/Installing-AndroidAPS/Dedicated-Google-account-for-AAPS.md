@@ -4,15 +4,16 @@
 
 如果您不想設置專用的 **AAPS** Gmail 帳戶，您可以直接跳到下一部分，[建立 AAPS](building-AAPS.md)。
 
-:::{admonition} 為 AAPS 建立專用 Google 帳戶的優勢
+```{admonition} Advantages of a dedicated Google account for AAPS
+:class: dropdown
 
-- 專用的 Google 雲端硬碟空間意味著您不會因 **匯出偏好設定** 而冒著填滿個人 Google 雲端硬碟限制的風險。
-- 每個版本的 **AAPS**（以及支援的應用程式如 xdrip+、BYODA 等）將儲存在一個單一位置，並且與您的電腦硬體無關。 如果您的電腦或手機被偷/遺失/損壞，您仍然可以存取。
-- 透過統一設置，將使擁有類似資料夾結構的用戶之間的線上支援更加簡單。
-- 根據設置（見下方），您將擁有一個獨立的身份作為別名，以在社群中進行溝通，這可以保護您的隱私。
-- 患有T1D的兒童可以保留他們自己的“日常”電子郵件帳號作為未成年人，同時使用 **AAPS** 及其相關功能，這些功能需要成人帳號。
-- Gmail允許您在同一個電話號碼下註冊最多4個帳號。
-  :::
+- Dedicated Google drive space means you will not risk filling up your personal Google drive limit with **Export Preferences**.
+- Each version of **AAPS** (and supporting apps like xdrip+, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
+- By harmonizing the setup, it will make online support simpler across users with similar folder structure.
+- Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
+- Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
+- Gmail allows you to register up to 4 accounts under the same phone number.
+```
 
 ## 如何為AAPS設置專用的Google帳號
 
@@ -25,21 +26,22 @@
 - 您擁有一台Windows電腦（Windows 10或更新版本）和一部Android手機（Android 9或更新版本），這些設備將運作 **AAPS** 應用程式。 這些設備都已安裝最新的安全更新，具備網際網路連線和管理員權限，因為某些步驟需要下載和安裝程式。
 - Android手機已經設置了您的個人“日常”電子郵件地址，例如Gmail帳號。
 
-:::{admonition} 設置新帳號時需考慮的事項
+```{admonition} Things to consider when setting up your new account
 :class: dropdown
+- You could use a name different to your own, which has relevance to the account (like t1dsuperstar) for privacy reasons. You can then use it in **AAPS** public forums while keeping your own identity private. Since Google requires a recovery email and phone number, it is still traceable.
+- The new **AAPS** account will use the same phone number for verification as your “_everyday_” one. It will use the “everyday” email address for verification;
+- We will setup email forwarding such that any email sent to the new dedicated AAPS account will be forwarded to the primary one (so there is no need to check two different mailboxes);
+- Use separate passwords for your _everyday_ Gmail account and the AAPS-dedicated Gmail account
+- If you use google “2-step verification” (aka multifactor) authentication for one Gmail account, you might as well do it for both Gmail accounts.
+- If you plan to use Google “Passkeys”, make sure you register multiple devices. This is so you don’t lock yourself out. Only do it on devices that nobody else can access (_i.e._ not on a PC with a shared account that other people can unlock).
+```
 
-- 為了隱私原因，您可以使用與您自己不同的名字，這個名字與帳號相關（例如t1dsuperstar）。 然後您可以在 **AAPS** 公共論壇中使用該名稱，同時保持您的個人身份隱藏。 由於Google要求恢復電子郵件和電話號碼，它仍然是可追踪的。
-- 新的 **AAPS** 帳號將使用與您的“_日常_”帳號相同的電話號碼進行驗證。 它將使用“日常”電子郵件地址進行驗證；
-- 我們將設置電子郵件轉發，這樣發送到新專用AAPS帳號的任何郵件將轉發到主要帳號（因此無需檢查兩個不同的信箱）；
-- 為您的 _日常_ Gmail帳號和專用於AAPS的Gmail帳號使用不同的密碼
-- 如果您為一個Gmail帳號使用Google“兩步驗證”（即多因素驗證），那麼您最好為兩個Gmail帳號都啟用。
-- 如果您計劃使用Google“通行密鑰”，請確保您註冊了多個設備。 這樣您就不會被鎖在外面。 只應在其他人無法存取的設備上進行此操作（_例如_，不要在其他人可以解鎖的共享帳號的電腦上進行）。
-  :::
 
-:::{admonition}  影片指南！
+
+```{admonition} Video Walkthrough! 
 :class: Note
-點擊[這裡](https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link)觀看如何設置專用Google帳號的影片指南。
-:::
+點擊[這裡](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>)觀看如何設置專用Google帳號的影片指南。
+```
 
 影片中概述的步驟如下：
 

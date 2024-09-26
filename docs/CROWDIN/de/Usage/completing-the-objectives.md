@@ -6,10 +6,11 @@
 - Du die grundlegenden **AAPS**-Funktionalitäten kennengelernt hast
 - Du ein grundlegendes Verständnis dafür hast, was Dein System tut und damit warum Du ihm vertrauen kannst.
 
-:::{admonition} Notiz
+```{admonition} Note
+:class: note
 
-Exportiere Deine **AAPS** Einstellungen nach jedem Abschluss eines **Ziels**!
-:::
+Regularly export your **AAPS** settings after completing each **objective**!
+```
 
 Unsere ausdrückliche Empfehlung ist, nach jedem Abschluss eines **Ziel**s Deine [Einstellungen zu exportieren}(../Usage/ExportImportSettings.md). Beim Exportieren wird ein Datei mit den Einstellungen (.json) erstellt, die Du an einem oder mehreren sicheren Ort als Backup speichern solltest (_z.B._ Google Drive, Festplatte, Email-Anhang _etc._). Das hilft, den Fortschritt beim Durchlaufen der **Ziele** abzusichern, sodass Du z. B. beim versehentlichen Löschen Deines Fortschritts, diesen über einen Import der gespeicherten Datei wieder herstellen kannst. Ein Backup Deiner **Einstellungen** ist auch notwendig, wenn Du Dein **AAPS** Smartphone, aus welchem Grund auch immer, wechseln möchtest (Upgrade/Verlust/Defekt _etc._)
 
@@ -68,10 +69,10 @@ Bei jeder Frage kann es mehr als eine richtige Antwort geben! Wenn eine Frage fa
 
 Wenn **AAPS** das erste Mal installiert wird, muss das **Ziel 3** vollständig abgeschlossen worden sein, bevor Du mit dem **Ziel 4** beginnen kannst. Jedes Ziel muss in sequenzieller Reihenfolge abgeschlossen werden. Neue Funktionalitäten werden nach und nach freigeschaltet, so wie Du in den Zielen weiter vorankommst.
 
-:::{admonition}  **Was passiert, wenn es beim späteren Aktualisieren auf eine neuere AAPS-Version, in der Zwischenzeit zusätzliche Frage(n) in einem Ziel gibt?**
+```{admonition} __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: Note
-Von Zeit zu Zeit wird **AAPS** mit neuen Funktionen ergänzt. Damit können dann auch neue Fragen zu den Zielen (insbesondere Ziel 3), notwendig und ergänzt werden. Alle zu **Ziel 3** neu hinzugefügten und von **AAPS** geforderten Fragen werden als "noch nicht abgeschlossen" angezeigt. Da die **Ziele** an sich unabhängig voneinander sind, **behältst Du**, sofern diese erledigt bleiben, alle **bereits vorhandenen AAPS-Funktionalitäten**.
-:::
+From time to time, new features are added to **AAPS** which may require a new question to be added to the Objectives, particularly Objective 3. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other Objectives remain completed.
+```
 
 ## Ziel 4: Starte den Open Loop
 
@@ -92,9 +93,9 @@ Geschätzte Zeit, um dieses Ziel abzuschließen: **7 Tage**. Das ist eine Pflich
 
   ![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
 
-:::{admonition} Du musst nicht alle fünf Minuten auf jeden einzelnen Vorschlag reagieren!
+```{admonition} You don't need to action each and every system recommendation!
 :class: Note
-:::
+```
 
 (Objectives-objective-5-Understanding-your-open-loop-including-its-temp-basal-recommendations)=
 
@@ -122,11 +123,12 @@ Vielleicht möchtest Du mit der Weite des Zielbereichs experimentieren, ihn vere
 You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Overview > Range for Visualisation.
 
 ![Stop sign](../images/sign_stop.png)
-:::{admonition} Wenn Du mit einer virtuellen Pumpe bis hierhin gekommen bist, musst Du nun auf Deine echte Insulinpumpe umstellen!
+
+```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-Bist Du im Open Loop und nutzt eine virtuelle Pumpe, dann gehe jetzt nicht weiter. Klicke am Ende dieses Ziels nur dann auf "bestätigen", wenn Du tatsächlich eine "echte" physische Pumpe nutzt.
-:::
+If you are open looping with a virtual pump stop here. Only click verify at the end of this Objective once you have changed to using a "real" physical pump.
+```
 
 ![blank](../images/blank.png)
 
@@ -135,10 +137,11 @@ Bist Du im Open Loop und nutzt eine virtuelle Pumpe, dann gehe jetzt nicht weite
 ## Ziel 6: Closed Loop mit Abschaltung bei niedrigen Glukose-Werten
 
 ![Warning sign](../images/sign_warning.png)
-:::{admonition}  Im Ziel 6 wird die Basalrate bei zu erwartenden niedrigen Glukosewerten abgeschaltet werden. Der 'Closed Loop' wird im Ziel 6 keinen Korrekturbolus bei hohen Werten abgeben!
+
+```{admonition} Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend only!
 :class: Note
 Du musst hohe Glukosewerte weiterhin selbst korrigieren (manuell mit Korrektur über die Pumpe oder per Pen)!
-:::
+```
 
 Im Laufe des **Ziel 6** wirst Du den Lopp schließen (closed loop) und die Abschaltung bei niedrigen Glukosewerten (Low Glucose Suspend - LGS) einschalten. Das [max IOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) wird dabei den Wert Null haben. Du kannst das Ziel abschließen, wenn Du 5 Tage im LGS-Modus gewesen bist. Du solltest diese Zeit nutzen, um Deine Profileinstellungen so auf Herz und Nieren zu prüfen, dass nur wenige LGS-Situationen (niedrige Werte) eintreten.
 

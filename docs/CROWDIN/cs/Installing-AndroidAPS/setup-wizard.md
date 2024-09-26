@@ -6,18 +6,20 @@ Nicméně není nutné mít vše zcela nakonfigurováno při prvním spuštění
 
 Během a bezprostředně po použití **Průvodce nastavením** nemusíte pozorovat žádné významné pozorovatelné změny v **AAPS**. Abyste povolili smyčku v **AAPS**, budete muset projít **Cíle** k povolení jedné funkce po druhé. Po dokončení Průvodce nastavením začnete s plněním **Cíle 1**. Jsi pánem **AAPS**, nikoli naopak.
 
-:::{admonition} Náhled cílů
+```{admonition} Preview Objectives
+:class: note
+If you are keen to know the structure of the objectives, please read [Completing the objectives](../Usage/completing-the-objectives.md) but then come back here to run the Setup Wizard first.
 
-:::
+```
 
-Z předchozích zkušeností víme, že noví uživatelé **AAPS** dostanou sami sebe pod tlak snahou nastavit vše co nejrychleji, což vede k frustraci, neboť tak vznikne příliš strmá křivka učení.
+From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
 
-Tak si prosím dejte s konfigurací smyčky na čas, protože výhody dobře běžící smyčky pod **AAPS** jsou obrovské.
+So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
 
-:::{admonition} Požádejte o pomoc
+```{admonition} Ask for Help
 :class: note
 Pokud narazíte na chybu v dokumentaci nebo máte lepší nápad, jak něco vysvětlit, můžete vždy požádat komunitu o pomoc, jak je popsáno v sekci [Propojení s dalšími uživateli](../Where-To-Go-For-Help/Connect-with-other-users.md).
-:::
+```
 
 ## Průvodce nastavením AAPS krok za krokem
 
@@ -192,10 +194,12 @@ Pokud zde vyberete položku zaškrtnutím na levé straně, vpravo můžete zaš
 
 V tomto příkladu vybereme reportovací server Nightscout a zkonfigurujeme ho.
 
-:::{admonition}  Ujistěte se, že vyberete verzi **NSClient**, která odpovídá vašim potřebám!
+```{admonition} Make sure to choose the correct **NSClient** version for your needs! 
+:class: Note
+Click [here](link) for the release notes of **AAPS** 3.2.0.2 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**. 
 
-Uživatelé Nightscoutu by měli vybrat \*\*NSClient v3", pokud nepotřebují sledovat nebo vzdáleně posílat ošetření prostřednictvím Nightscout (_např._ jako rodič nebo ošetřovatel, který používá **AAPS** pro dítě). V takovém případě vyberte první možnost **NSclient**, dokud nebude uvedeno jinak.
-:::
+Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout, in which case, choose the first option "**NSClient**" until further notice. 
+```
 
 Pro reportovací server Tidepool je nastavení ještě jednodušší, protože je třeba pouze zadání vašch přihlašovacích údajů.
 
@@ -291,10 +295,10 @@ Vyberte typ inzulínu, který používáte v pumpě.
 
 Názvy inzulínů by měly být samovysvětlující.
 
-:::{admonition} Nepoužívejte "Free-Peak Oref" pokud přesně nevíte, co děláte.
+```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
 :class: danger
-Pro zkušené uživatele nebo medicínské studie je možné definovat "Free-Peak Oref" s upraveným profilem efektu inzulínu. Prosím nepoužívejte to, pokud nejste expert. Předdefinované typy inzulínů zpravidla fungují velmi dobře.
-:::
+For advanced users or medical studies there is the possibility to define with "Free-Peak Oref" a customised profile of how insulin acts. Please don't use it unless you are an expert, usually the pre-defined values work well for each branded insulin.
+```
 
 Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
 
@@ -328,12 +332,14 @@ Teď se dostáváme k velmi důležité části Průvodce nastavením.
 
 Přečtěte si, prosím, část dokumentace o profilech dříve, než se pokusíte na další obrazovce zadat vaše údaje.
 
-:::{admonition} Je vyžadován funkční profil - bez výjimek!
+```{admonition} Working profile required - no exceptions here !
+:class: danger
+An accurate profile is necessary to control the safe action of **AAPS**
 
-Je nezbytné, abyste stanovili a prodiskutovali nastavení vašeho profilu s vaším ošetřujícím lékařem a aby byl profil prověřen úspěšným otestováním bazálů, ISF a I:C!
+It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
 
-Pokud robot dostane chybné vstupní informace, selže - důsledně. **AAPS** může pracovat pouze s informacemi, které dostává. Pokud bude váš profil příliš silný, riskujete hypoglykémii, a pokud bude příliš slabý, riskujete hyperglykémii.
-:::
+If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
+```
 
 Klikněte na tlačítko "DALŠÍ" a přejdete k další obrazovce. Zadejte "Název profilu":
 
@@ -341,12 +347,14 @@ Klikněte na tlačítko "DALŠÍ" a přejdete k další obrazovce. Zadejte "Náz
 
 Postupem času se může stát, že budete potřebovat několik různých profilů. V tuto chvíli vytvoříme pouze jeden.
 
-:::{admonition} Profil pouze pro výukové účely - ne pro vaše použití
+```{admonition} Profile only for tutorial - not for your usage
+:class: information
+The example profile here is only to show you how to enter data.
 
-Profil, který budeme nastavovat, není zamýšlen jako přesný nebo velmi optimalizovaný profil, protože potřeby každého pacienta jsou individuální.
+It is not intended to be an accurate profile or something very well optimised, because each person's needs are so different.
 
-Nepoužívejte ho jako vlastní smyčku!
-:::
+Don't use it for actually looping!
+```
 
 Zadejte vaši "Dobu působnosti inzulínu (DIA) v hodinách. Potom klikněte na "IC":
 
@@ -380,10 +388,10 @@ Uložte profil kliknutím na tlačítko "ULOŽIT":
 
 Po uložení profilu se objeví nové tlačítko "AKTIVOVAT PROFIL".
 
-:::{admonition} Nekolik definovaných, ale pouze jeden aktivní profil
+```{admonition} Several defined but only one active profile
 :class: information
 Můžete mít několik vytvořených profilů, ale v jeden okamžik může být aktivovaný a běžící pouze jeden z nich.
-:::
+```
 
 Klikněte na "AKTIVOVAT PROFIL":
 
@@ -391,10 +399,10 @@ Klikněte na "AKTIVOVAT PROFIL":
 
 Otevře se dialog přepnutí profilu. V tomto případě ponechte předvolené nastavení.
 
-:::{admonition} Nekolik definovaných, ale pouze jeden aktivní profil
+```{admonition} Several defined but only one active profile
 :class: information
 Časem se naučíte jak tento obecný dialog využívat k řešení situací jako jsou nemoc nebo sport, kdy budete potřebovat spustit profil s vhodným nastavením pro danou situaci.
-:::
+```
 
 Klikněte na tlačítko "OK":
 
@@ -438,10 +446,10 @@ Vyberte OpenAPS SMB jako váš APS algoritmus. Bez ohledu na název bude SMB fun
 
 Důvodem k vypnutí funkce SMB na začátku je ten, že SMB umožňuje rychlejší reakci na stav cukru v krvi díky využití mikrobolusů namísto zvýšení úrovně bazálu. Jelikož váš profil není na začátku tak dobrý, jako bude po nějakém čase užívání, je tato funkce prozatím vypnuta.
 
-:::{admonition} Starší algoritmus **OpenAPS AMA** používajte pouze v případě, že přesně víte, co děláte
+```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: information
-OpenAPS AMA je nejzákladnější algoritmus, který neumožňuje mikrobolusy pro korekci vysokých hodnot glykémie. Mohou nastat okolnosti, kdy je lepší používat tento algoritmus, ale nedoporučujeme to.
-:::
+OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
+```
 
 Press the cogwheel to see the details:
 
