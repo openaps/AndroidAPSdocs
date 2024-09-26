@@ -4,7 +4,8 @@ Some **AAPS** users prefer to use their main email account for **AAPS** as well.
 
 If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go straight to the next section, [building AAPS](building-AAPS.md).
 
-:::{admonition} Advantages of a dedicated Google account for AAPS
+```{admonition} Advantages of a dedicated Google account for AAPS
+:class: dropdown
 
 - Dedicated Google drive space means you will not risk filling up your personal Google drive limit with **Export Preferences**.
 - Each version of **AAPS** (and supporting apps like xdrip+, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
@@ -12,7 +13,7 @@ If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go
 - Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
 - Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
 - Gmail allows you to register up to 4 accounts under the same phone number.
-  :::
+```
 
 ## How to set up a dedicated Google account for AAPS
 
@@ -25,21 +26,22 @@ Requirements:
 - You have a Windows’ PC (Windows 10 or newer) and a Android phone (Android 9 or newer) which will host the **AAPS** app. These both have all the latest security updates, internet access and admin privileges, since some steps require downloading and installing programs.
 - The Android phone is already set-up with your personal ”everyday”  email address, such as a Gmail account.
 
-:::{admonition} Things to consider when setting up your new account
+```{admonition} Things to consider when setting up your new account
 :class: dropdown
-
 - You could use a name different to your own, which has relevance to the account (like t1dsuperstar) for privacy reasons. You can then use it in **AAPS** public forums while keeping your own identity private. Since Google requires a recovery email and phone number, it is still traceable.
 - The new **AAPS** account will use the same phone number for verification as your “_everyday_” one. It will use the “everyday” email address for verification;
 - We will setup email forwarding such that any email sent to the new dedicated AAPS account will be forwarded to the primary one (so there is no need to check two different mailboxes);
 - Use separate passwords for your _everyday_ Gmail account and the AAPS-dedicated Gmail account
 - If you use google “2-step verification” (aka multifactor) authentication for one Gmail account, you might as well do it for both Gmail accounts.
 - If you plan to use Google “Passkeys”, make sure you register multiple devices. This is so you don’t lock yourself out. Only do it on devices that nobody else can access (_i.e._ not on a PC with a shared account that other people can unlock).
-  :::
+```
 
-:::{admonition}  Video Walkthrough!
+
+
+```{admonition} Video Walkthrough! 
 :class: Note
-Click [here](https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link) for a video walkthrough of how to set up a dedicated Google account.
-:::
+Click [here](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) for a video walkthrough of how to set up a dedicated Google account.
+```
 
 These are the steps outlined in the video:
 
