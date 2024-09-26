@@ -26,23 +26,23 @@
 Caution is advised concerning rapid improvements in blood glucose control and lowering of HbA1c 
 ```
 
-An important safety consideration is that a **rapid reduction in HbA1c and improved blood glucose control in those who have had elevated glucose levels for some time can cause permanent damage**. Many people with diabetes are unaware of this, and not all clinicans make their patients aware of this issue.
+一個重要的安全考量是，對於長期血糖升高的人來說，**HbA1c 的快速降低和血糖控制的改善可能會導致永久性損害**。 許多糖尿病患者並不知道這一點，而且並非所有臨床醫生都會提醒患者這個問題。
 
-This damage can include **sight loss, and permanent neuropathy (pain)**. It is possible to avoid this damage occuring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 10.6 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
+這種損害可能包括**視力喪失和永久性神經病變（疼痛）**。 透過逐步降低平均血糖水平，可以避免這些損害的發生。 如果您目前的 HbA1c 升高並打算使用**AAPS**（或任何其他閉環系統），_請_在開始之前與您的醫療團隊討論這一潛在風險，並與他們協商逐步降低安全血糖目標的時間表。 您可以在**AAPS**中設置較高的血糖目標（目前，您可以選擇的最高目標是 10.6 mmol/L，您也可以維持一個相對較弱的設定），隨著時間的推移逐漸降低目標。
 
 #### 我可以多快降低 HbA1c 而不會冒永久性損害的風險？
 
-One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the Hba1C dropped 1%, 2% or 3% respectively over a 6 month period. They suggested that the **"decrease in HbA1c value during any 6-month period should be limited to less than 2% in order to prevent the progression of retinopathy....Too rapid a decrease at the initiation of glycemic control could cause severe or transient exacerbation of the progression of retinopathy."**
+一項針對 76 名患者的回顧性[研究](https://pubmed.ncbi.nlm.nih.gov/1464975/)報告稱，如果 HbA1c 在 6 個月內下降 1%、2% 或 3%，視網膜病變進展的風險分別增加 1.6 倍、2.4 倍和 3.8 倍。 他們建議**"在任何 6 個月內 HbA1c 的降低幅度應限制在 2% 以內，以防止視網膜病變的進展...在開始血糖控制時，降低過快可能會導致視網膜病變進展的嚴重或暫時性惡化。" **
 
-N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for a HbA1c calculator tool.
+N.B. 如果您使用不同的 HbA1c 單位（mmol/mol 而非 %），請點擊[此處](https://www.diabetes.co.uk/hba1c-units-converter.html)使用 HbA1c 計算工具。
 
-In another retrospective [evaluation](https://academic.oup.com/brain/article/138/1/43/337923) of 954 patients, researchers noted that:
+在另一項針對 954 名患者的回顧性[評估](https://academic.oup.com/brain/article/138/1/43/337923)中，研究人員指出：
 
-**"With a decrease in HbA1c of 2–3% points over 3 months there was a 20% absolute risk of developing treatment-induced neuropathy in diabetes, with a decrease in HbA1c of >4% points over 3 months the absolute risk of developing treatment-induced neuropathy in diabetes exceeded 80%."**
+**"HbA1c 在 3 個月內降低 2–3% 時，治療誘發糖尿病神經病變的絕對風險為 20%；而 HbA1c 在 3 個月內降低超過 4% 時，絕對風險超過 80%。"**
 
-A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this work agreed that to avoid complications **the goal should be to reduce A1c by <2% over 3 months.** You can read other reviews on the topic [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) and [here](https://www.mdpi.com/1999-4923/15/7/1791).
+針對這項研究的一篇[評論](https://academic.oup.com/brain/article/138/1/2/340563)同意為了避免併發症，**目標應是在 3 個月內將 HbA1c 降低不超過 2%**。您可以在[這裡](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf)和[這裡](https://www.mdpi.com/1999-4923/15/7/1791)閱讀其他相關評論。
 
-It is generally recognised that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
+通常認為，_新診斷的_ 1 型糖尿病患者（通常在診斷時 HbA1c 非常高，在開始胰島素治療之前）可以立即迅速降低 HbA1c，而不會遇到這些風險，因為他們的血糖水平未長期升高。 然而，這仍然是一個需要與您的臨床醫生討論的考慮因素。
 
 ### 禁止使用 SGLT-2 抑制劑
 
