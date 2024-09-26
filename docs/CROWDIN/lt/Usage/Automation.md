@@ -63,11 +63,11 @@ When setting up an automation, you can first test it by activating the ‘notifi
 
 ![Alt text](../images/automation_2024-02-12_20-55-05.png)
 
-:::{admonition} Important note
+```{admonition} Important note
 :class: note
 
 Automations are still active when the Loop is disabled!
-:::
+```
 
 
 ## Safety limits
@@ -80,11 +80,11 @@ There are safety limits set for **Automations**:
 
 ## Correct use of negative values
 
-:::{admonition} Warning
+```{admonition} Warning
 :class: warning
 
 Please be careful when selecting a negative value in Automation
-:::
+```
 
 Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. For example:
 
