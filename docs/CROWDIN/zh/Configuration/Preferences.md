@@ -436,9 +436,9 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 
 ### 同步選項
 
-Synchronization choices will depend on the way you will want to use AAPS.
+同步選項將取決於您希望如何使用 AAPS。
 
-You can select which data you want to [upload and download to or from Nightscout](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
+您可以選擇[上傳和下載至 Nightscout 的資料](../Installing-AndroidAPS/Nightscout.md#aaps-settings)。
 
 ### 警報選項
 
@@ -453,7 +453,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### 連線設定
 
-![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
+![NSClient 連線設定](../images/ConfBuild_ConnectionSettings.png)
 
 - 連線設定定義了何時啟用與 Nightscout 的連線。
 - 將 Nightscout 上傳限制為僅在 Wi-Fi 下進行，甚至僅限於特定的 Wi-Fi SSID。
@@ -464,9 +464,9 @@ You can select which data you want to [upload and download to or from Nightscout
 (Preferences-advanced-settings-nsclient)=
 ### 進階設定（NSClient）
 
-![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
+![NS Client 進階設定](../images/Pref2024_NSClientAdv.png)
 
-Options in advanced settings are self-explanatory.
+進階設定中的選項都非常直觀易懂。
 
 ## SMS(簡訊) 通訊器
 
@@ -477,7 +477,7 @@ Options in advanced settings are self-explanatory.
 
 ## 自動化
 
-Select which location service shall be used:
+選擇要使用的定位服務：
 
 - 使用被動定位：AAPS 僅在其他應用請求時獲取位置。
 - 使用網路定位：您的 Wi-Fi 位置。
