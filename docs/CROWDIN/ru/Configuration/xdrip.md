@@ -24,7 +24,9 @@
 
 Если Нажать на `Дополнительные опции`)
 
-:::Предупреждение безопасности: Следует деактивировать "Загружать лечение/назначения" с xDrip, иначе в AAPS эти величины удвоятся, что приведет к неверному количеству активных углеводов COB и активного инсулина IOB:::
+    {admonition} Safety warning
+    :class: warning
+    You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.
 
 Отключите `Загрузку терапии`(9) и убедитесь, что вы ** НЕ будете** пользоваться `Обратным заполнением данных` (11).
 
@@ -222,8 +224,9 @@
 
 - Запустите сенсор в xDrip+.
     
-    {admonition} Предостережение безопасности :class: предупреждение Не используйте данные сенсора до окончания часового прогрева: значения могут быть чрезвычайно высокими и вызвать неверные решения AAPS.  
-    :::
+        {admonition} Safety warning
+        :class: warning
+        Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.
     
     → Сэндвич-меню (1) → Запустить сенсор (2) → Запустить сенсор (3) → Введите точное время запуска ридером или оригинальным приложением. Если запускали не сегодня, выберите "Не сегодня" (4).
 
