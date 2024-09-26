@@ -9,8 +9,10 @@
 
 ## G5 mit der gepatchten Dexcom App
 
-:::{admonition} Legacy apps :class: warning These apps are not compatible with recent Android versions.  
-:::
+```{admonition} Legacy apps
+:class: warning
+These apps are not compatible with recent Android versions.  
+```
 
 -   Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5).
 
