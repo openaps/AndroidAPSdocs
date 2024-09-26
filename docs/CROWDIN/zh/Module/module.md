@@ -1,141 +1,141 @@
-# Component Overview
+# 組件總覽
 
-AAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the [component setup](index-component-setup), too.
+AAPS 不僅僅是一個（自建的）應用程式，它只是您的閉環系統中的幾個模組之一。 在決定使用哪些組件之前，最好先查看[組件設定](index-component-setup)。
 
-![Components overview](../images/modules.png)
+![組件總覽](../images/modules.png)
 
 ```{note}
-**IMPORTANT SAFETY NOTICE**
+**重要的安全提醒**
 
-The foundation of AAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AAPS system.
+本文件中討論的 AAPS 安全功能基礎是建立在您用來構建系統的硬體安全功能上。 使用經過測試且完全運作的 FDA 或 CE 認證的胰島素幫浦和 CGM 來進行自動胰島素劑量控制是至關重要的。 對這些組件進行硬體或軟體修改可能會導致胰島素劑量異常，對使用者造成重大風險。 如果您發現或被提供了損壞、修改或自製的胰島素幫浦或 CGM 接收器，*請勿使用*它們來建立 AAPS 系統。
 
-Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+此外，僅使用製造商批准的原裝耗材，例如插入器、套管和胰島素容器，也同樣重要。 使用未經測試或修改的耗材可能會導致 CGM 不準確和胰島素劑量錯誤。 胰島素在劑量錯誤時極具危險 - 請勿透過修改耗材來冒生命危險。
 
-Last not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels.  The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
+最後，您不能使用 SGLT-2 抑制劑（格列佛新類），因為它們會無法預測地降低血糖水平。  這種藥物與一個降低基礎速率以增加血糖的系統結合使用時尤其危險，因為由於格列佛新的影響，血糖可能不會上升，可能導致缺乏胰島素的危險情況發生。
 ```
 
-## Necessary Modules
+## 必要模組
 
-### Good individual dosage algorithm for your diabetes therapy
+### 適合您的糖尿病治療的個性化劑量演算法
 
-Even though this is not something to create or buy, this is the 'module' which is probably underestimated the most but essential. When you let an algorithm help manage your diabetes, it needs to know the right settings to not make severe mistakes. Even if you are still missing other modules, you can already verify and adapt your 'profile' in collaboration with your diabetes team. Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
+雖然這不是可以製作或購買的東西，但這是最容易被低估但卻至關重要的「模組」。 當您讓一個演算法幫助管理您的糖尿病時，它需要正確的設定才能避免嚴重錯誤。 即使您仍然缺少其他模組，您也可以與您的糖尿病醫療團隊一起驗證和調整您的「設定檔」。 大多數使用閉環系統的人會使用日夜節律的 BR、ISF 和 CR，這些數值會根據一天中激素影響調整胰島素敏感性。
 
-The profile includes
+設定檔包括
 
-- BR (Basal rates)
-- ISF (insulin sensitivity factor) is your blood glucose unit per one unit insulin
-- CR (carb ratio) is grams carbohydrate per one unit insulin
-- DIA (duration of insulin acting).
+- BR（基礎速率）
+- ISF（胰島素敏感因子）是每單位胰島素降低的血糖單位數
+- CR（碳水化合物比例）是每單位胰島素對應的碳水化合物克數
+- DIA（胰島素作用時間）。
 
 (module-no-use-of-sglt-2-inhibitors)=
-### No use of SGLT-2 inhibitors
+### 禁止使用 SGLT-2 抑制劑
 
-SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. As they incalculably lower blood sugar levels, you MUST NOT take them while using a closed loop system like AAPS! There would be a huge risk of a ketoacidosis or a hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
+SGLT-2 抑制劑，又稱格列佛新類，會抑制腎臟對葡萄糖的再吸收。 由於它們會無法預測地降低血糖水平，您**不能**在使用 AAPS 這樣的閉環系統時服用這些藥物！ 這樣會有極大的酮酸中毒或低血糖風險！ 這種藥物與一個降低基礎速率以增加血糖的系統結合使用時尤其危險，因為由於格列佛新的影響，血糖可能不會上升，可能導致缺乏胰島素的危險情況發生。
 
 (module-phone)=
-### Phone
+### 手機
 
-The current version of AAPS requires an Android smartphone with Google Android 9.0 or above. So if you are thinking about a new phone, Android 9 is recommended at a minimum but optimally choose Android 10 or 12. For older Android versions, older AAPS versions are available see: [Release notes](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version)
+目前的 AAPS 版本需要一台運作 Android 9.0 或以上版本的智慧型手機。 因此，如果您正在考慮購買新手機，建議至少選擇 Android 9，但最優選擇是 Android 10 或 12。 對於舊版 Android，可以使用舊版 AAPS，詳見：[版本說明](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version)
 
-Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
+用戶正在建立一個[已測試的手機和手錶清單](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform).
+如果要記錄不在電子表格中的手機或手錶，請填寫這個[表單](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)。
 
-Any problems with the spreadsheet please send an email to [hardware@androidaps.org](mailto:hardware@androidaps.org), any donations of phone/watch models that still need testing please send an email to [donations@androidaps.org](mailto:hardware@androidaps.org).
+如果對電子表格有任何問題，請發送電子郵件至[hardware@androidaps.org](mailto:hardware@androidaps.org)，如果有手機/手錶型號捐贈，請發送電子郵件至[donations@androidaps.org](mailto:hardware@androidaps.org)。
 
-### Insulin pump
+### 胰島素幫浦
 
-AAPS **currently** works with
+AAPS **目前**適用於以下幫浦：
 
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)  (Old driver that uses the additional Ruffy app)
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md) (New driver, available starting with AndroidAPS v.3.2)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)  （舊驅動程式，需使用額外的 Ruffy 應用程式）
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md) （新驅動程式，自 AndroidAPS v.3.2 開始提供）
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
 - [DanaR](../Configuration/DanaR-Insulin-Pump.md)
 - [DanaRS](../Configuration/DanaRS-Insulin-Pump.md)
 - [Dana-i](../Configuration/DanaRS-Insulin-Pump.md)
 - [Diaconn G8 ](../Configuration/DiaconnG8.md)
 - [EOPatch2](../Configuration/EOPatch2.md)
-- [Omnipod Eros](../Configuration/OmnipodEros.md)  ([additional communication device](module-additional-communication-device) needed)
+- [Omnipod Eros](../Configuration/OmnipodEros.md) （需要[額外的通訊設備](module-additional-communication-device)）
 - [Omnipod DASH](../Configuration/OmnipodDASH.md)
 - [Medtrum Nano](../Configuration/MedtrumNano.md)
 - [Medtrum 300U](../Configuration/MedtrumNano.md)
-- Certain older [Medtronic](../Configuration/MedtronicPump.md) ([additional communication device](module-additional-communication-device) needed)
+- 某些舊型[美敦力](../Configuration/MedtronicPump.md)幫浦（需要[額外的通訊設備](module-additional-communication-device)）
 
-If no additional communication device  is mentioned the communication betweeen insulin pump and AAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
+如果未提到額外的通訊設備，那麼胰島素幫浦與 AAPS 之間的通訊是基於 Android 的內建藍牙堆疊，不需要額外的通訊設備來轉換通訊協議。
 
-**Other pumps** that may have the potential to work with AAPS are listed on the [Future (possible) Pumps](../Getting-Started/Future-possible-Pump-Drivers.md) page.
+**其他幫浦** 有潛力與 AAPS 一同使用，列在[未來可能的幫浦](../Getting-Started/Future-possible-Pump-Drivers.md)頁面中。
 
 (module-additional-communication-device)=
-#### Additional communication device
+#### 額外的通訊設備
 
-For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
+對於舊型美敦力幫浦，除了手機外，還需要額外的通訊設備來將幫浦的無線電信號「轉換」為藍牙信號。 請確保根據您的幫浦選擇正確的版本。
 
-- ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink Website](https://getrileylink.org/product/orangelink)
+- ![OrangeLink](../images/omnipod/OrangeLink.png)  [OrangeLink 官網](https://getrileylink.org/product/orangelink)
 - ![RileyLink](../images/omnipod/RileyLink.png) [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
-- ![EmaLink](../images/omnipod/EmaLink.png)  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
-- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
-- ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
+- ![EmaLink](../images/omnipod/EmaLink.png)  [Emalink 官網](https://github.com/sks01/EmaLink) - [聯絡資訊](mailto:getemalink@gmail.com)
+- ![DiaLink](../images/omnipod/DiaLink.png)  DiaLink - [聯絡資訊](mailto:Boshetyn@ukr.net)
+- ![LoopLink](../images/omnipod/LoopLink.png)  [LoopLink 官網](https://www.getlooplink.org/) - [聯絡資訊](https://jameswedding.substack.com/) - 尚未測試
 
-**So what's the best pump for looping with AAPS?**
+**那麼，哪款幫浦最適合與 AAPS 進行閉環系統？**
 
-The Combo, the Insight and the older Medtronics are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
+Combo、Insight 和舊型美敦力幫浦都是穩定且可用於閉環系統的幫浦。 Combo 的優勢是可以選擇更多類型的輸注組，因為它使用標準的 luer 鎖。 而且它使用的是標準電池，您可以在任何加油站、24 小時便利店買到，如果真的需要，也可以從飯店房間的遙控器裡「借用」一顆 ;-)
 
-The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice however are:
+然而，DanaR/RS 和 Dana-i 相對於 Combo 作為首選幫浦的優勢在於：
 
-- The Dana pumps connect to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
-- Initial pairing is simpler with the Dana-i/RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
-- So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
-- The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB.  The Dana-i/RS is configurable that it does neither beep or vibrate.
-- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
-- All pumps AAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
+- Dana 幫浦可以與幾乎任何運作 Android 5.1 或更高版本的手機連線，而無需刷入 Lineage。 如果您的手機壞了，通常可以輕鬆找到與 Dana 幫浦相容的手機作為快速替代品......這對於 Combo 來說並不容易。 （隨著 Android 8.1 越來越普及，這種情況可能會改變）
+- Dana-i/RS 的初始配對比較簡單。 但通常這只需要做一次，所以它僅在您想使用不同幫浦測試新功能時才有影響。
+- 目前，Combo 使用螢幕解析進行工作。 總的來說，這效果不錯，但速度較慢。 對於閉環系統來說，這並不太重要，因為所有操作都在背景中進行。 然而，您需要更多的時間來保持連線，這就意味著更多的時間內藍牙連線可能會中斷，這在您走開並同時進行注射和做飯時可能會發生。
+- Combo 在暫時性基礎率（TBR）結束時會震動，DanaR 在 SMB 時會震動（或發出嗶聲）。 在夜間，您可能會更頻繁地使用 TBR 而不是 SMB。  Dana-i/RS 可以配置為既不發出嗶聲也不震動。
+- 幾秒鐘內讀取 Dana-i/RS 的歷史紀錄及碳水化合物資料，使您可以在離線狀態下輕鬆切換手機，並在獲得一些 CGM 資料後立即繼續閉環操作。
+- 所有與 AAPS 相容的幫浦在交付時都是防水的。 只有 Dana 幫浦因其密封的電池艙和儲液槽填充系統在保固範圍內也具備防水性能。
 
-### BG Source
+### 血糖來源
 
-This is just a short overview of all compatible CGMs/FGM with AAPS. For further details, look [here](../Configuration/BG-Source.md). Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
+這只是與 AAPS 相容的所有 CGM/FGM 的簡短概述。 有關更多詳情，請參閱[這裡](../Configuration/BG-Source.md)。 簡單提示：如果您能在 xDrip+ 應用程式或 Nightscout 網站上顯示您的血糖資料，則可以在 AAPS 中選擇 xDrip+（或使用網路連線的 Nightscout）作為血糖來源。
 
-- [Dexcom G7](../Hardware/DexcomG7.md): Works with xDrip+ or patched app
-- [Dexcom G6](../Hardware/DexcomG6.md): BOYDA is recommended as of version 3.0 (see [release notes](Releasenotes-important-hints-3-0-0) for details). xDrip+ must be at least version 2022.01.14 or newer
-- [Dexcom G5](../Hardware/DexcomG5.md): It works with xDrip+ app or patched Dexcom app
-- [Dexcom G4](../Hardware/DexcomG4.md): These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
-- [Libre 3](../Hardware/Libre3.md): It works with xDrip+ (no transmitter needed)
-- [Libre 2](../Hardware/Libre2.md): It works with xDrip+ (no transmitter needed)
-- [Libre 1](../Hardware/Libre1.md): You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
-- [Eversense](../Hardware/Eversense.md): It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
-- [Enlite (MM640G/MM630G)](../Hardware/MM640g.md): quite complicated with a lot of extra stuff
+- [Dexcom G7](../Hardware/DexcomG7.md)：可與 xDrip+ 或修補版應用程式配合使用
+- [Dexcom G6](../Hardware/DexcomG6.md)：建議使用版本 3.0 的 BOYDA（詳見[版本說明](Releasenotes-important-hints-3-0-0)）。 xDrip+ 至少需要 2022.01.14 版本或更高版本
+- [Dexcom G5](../Hardware/DexcomG5.md)：它可以與 xDrip+ 應用程式或修補版 Dexcom 應用程式配合使用
+- [Dexcom G4](../Hardware/DexcomG4.md)：這些傳感器已經很舊了，但您可以找到如何將它們與 xDrip+ 應用程式一起使用的說明
+- [Libre 3](../Hardware/Libre3.md)：它可以與 xDrip+ 一起使用（不需要發射器）
+- [Libre 2](../Hardware/Libre2.md)：它可以與 xDrip+ 一起使用（不需要發射器）
+- [Libre 1](../Hardware/Libre1.md)：您需要一個發射器，例如 Bluecon 或 MiaoMiao（自己製作或購買）以及 xDrip+ 應用程式
+- [Eversense](../Hardware/Eversense.md)：目前僅能與 ESEL 應用程式和修補版 Eversense 應用程式結合使用（不適用於 Dana RS 和 LineageOS，但 DanaRS 和 Android 或 Combo 和 Lineage OS 配合使用效果良好）
+- [Enlite（MM640G/MM630G）](../Hardware/MM640g.md)：相當複雜，需要很多額外的設備
 - [PocTech](../Hardware/PocTech.md)
 
 ### Nightscout
 
-Nightscout is a open source web application that can log and display your CGM data and AAPS data and creates reports. You can find more information on the [website of the Nightscout project](http://nightscout.github.io/). You can create your own [Nightscout website](https://nightscout.github.io/nightscout/new_user/), use the semi-automated Nightscout setup on [zehn.be](https://ns.10be.de/en/index.html) or host it on your own server (this is for IT experts).
+Nightscout 是一個開源網頁應用程式，可以記錄並顯示您的 CGM 資料和 AAPS 資料，並生成報告。 您可以在[Nightscout 項目網站](http://nightscout.github.io/)上找到更多資訊。 您可以建立自己的[Nightscout 網站](https://nightscout.github.io/nightscout/new_user/)，使用[zehn.be](https://ns.10be.de/en/index.html)上的半自動 Nightscout 設置，或在自己的伺服器上託管（這適合 IT 專家）。
 
-Nightscout is independent of the other modules. You will need it to fulfill Objective 1.
+Nightscout 與其他模組獨立運作。 要完成目標 1，您將需要它。
 
-Additional information on how to configure Nightscout for use with AAPS can be found [here](../Installing-AndroidAPS/Nightscout.md).
+有關如何配置 Nightscout 以與 AAPS 一起使用的更多訊息，請參閱[這裡](../Installing-AndroidAPS/Nightscout.md)。
 
-### AAPS-.apk file
+### AAPS-.apk 檔案
 
-The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  [here](../Installing-AndroidAPS/Building-APK.md).
+系統的基本組件。 在安裝應用程式之前，您需要先生成 apk 檔案（這是 Android 應用程式的檔案擴展名）。 說明位於[這裡](../Installing-AndroidAPS/Building-APK.md)。
 
-## Optional Modules
+## 可選模組
 
-### Smartwatch
+### 智慧型手錶
 
-You can choose any smartwatch with Android Wear 1.x and above. Most loopers wear a Sony Smartwatch 3 (SWR50) as it is the only watch that can get readings from Dexcom G6/G5 when phone is out of range. Some other watches can be patched to work as a standalone receiver as well (see [this documentation](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5) for more details).
+您可以選擇任何 Android Wear 1.x 及以上版本的智慧型手錶。 大多數使用閉環系統的人佩戴 Sony Smartwatch 3（SWR50），因為它是唯一一款在手機不在範圍內時仍能從 Dexcom G6/G5 獲取讀數的手錶。 某些其他手錶也可以透過修補來作為獨立接收器使用（更多詳情請參閱[這份文檔](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5)）。
 
-Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). There are different watchfaces for use with AAPS, which you can find [here](../Configuration/Watchfaces.md).
+用戶正在建立一個[已測試的手機和手錶清單](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)。 有不同的 AAPS 使用手錶錶盤，您可以在[這裡](../Configuration/Watchfaces.md)找到。
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform).
+如果要記錄不在電子表格中的手機或手錶，請填寫這個[表單](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)。
 
-Any problems with the spreadsheet please send an email to [hardware@androidaps.org](mailto:hardware@androidaps.org), any donations of phone/watch models that still need testing please send an email to [donations@androidaps.org](mailto:hardware@androidaps.org).
+如果對電子表格有任何問題，請發送電子郵件至[hardware@androidaps.org](mailto:hardware@androidaps.org)，如果有手機/手錶型號捐贈，請發送電子郵件至[donations@androidaps.org](mailto:hardware@androidaps.org)。
 
 ### xDrip+
 
-Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found [here](../Configuration/xdrip.md). Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
+即使您不需要將 xDrip+ 應用程式作為血糖來源，您仍然可以使用它來設置警報或顯示血糖資料。 您可以設置任意多的警報，指定警報應該啟動的時間，是否可以覆蓋靜音模式等。 有關一些 xDrip+ 資訊，請參閱[這裡](../Configuration/xdrip.md)。 請注意，這款應用程式的文檔並非總是最新的，因為其進展相當快速。
 
-## What to do while waiting for modules
+## 等待模組期間該做什麼
 
-It sometimes takes a while to get all modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is NECESSARY to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with AAPS. Using this mode, AAPS gives treatment advices you can manually execute.
+有時，獲取所有閉環模組需要一些時間。 但不用擔心，還有很多事情可以在等待期間進行。 檢查並（在適當的情況下）調整基礎速率（BR）、胰島素碳水比例（IC）、胰島素敏感因子（ISF）等是**必要**的。 此外，開環模式可能是測試系統並熟悉 AAPS 的好方法。 使用這種模式，AAPS 會提供治療建議，您可以手動執行。
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../Where-To-Go-For-Help/Background-reading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+您可以繼續閱讀這裡的文檔，與其他閉環系統用戶線上或離線交流，或[閱讀](../Where-To-Go-For-Help/Background-reading.md)文檔或其他用戶撰寫的內容（即使需要小心，不是所有內容都正確或適合您複製）。
 
-**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/Objectives.md) before each new Objective and setup up your [hardware](index-component-setup).
+**完成了嗎？** 如果您已經將所有 AAPS 組件組裝好（恭喜！）或至少有足夠的組件來開始使用開環模式，那麼在每個新目標之前，您應該先閱讀[目標描述](../Usage/Objectives.md)，然後設置您的[硬體](index-component-setup)。
