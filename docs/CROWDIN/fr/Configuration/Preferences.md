@@ -17,9 +17,8 @@
   ![Preferences filter](../images/Pref2021_Filter.png)
 
 ```{contents}
-contenus::
-   :backlinks: entrée
-   :depth: 2
+:backlinks: entry
+:depth: 2
 ```
 
 (Preferences-general)=
@@ -422,9 +421,11 @@ Original communication protocol, can be used with older Nightscout versions.
 
 [New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
-:::{admonition} V3 data uploaders
-:class: warning When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.  
-:::
+```{admonition} V3 data uploaders
+:class: warning
+
+When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+```
 
 - Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
   - **Vérifiez bien que l'URL est SANS /api/v1/ à la fin.**
@@ -476,7 +477,7 @@ Options in advanced settings are self-explanatory.
 
 ## Automatisation
 
-Sélectionnez le service de localisation à utiliser :
+Select which location service shall be used:
 
 - Utiliser la localisation passive : AAPS ne prend la localisation que si d'autres applications la demandent
 - Utiliser la localisation par le réseau : Localisation de votre Wifi
