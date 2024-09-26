@@ -14,25 +14,25 @@
 
 ## 1.  修補版 Dexcom G7 應用程式 (DiAKEM)
 
-**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
+**注意：需要 AAPS 3.2.0.0 或更高版本！ 不適用於 ONE+。**
 
 ### 安裝新的修補版 G7 應用程式並啟動傳感器
 
-A patched Dexcom G7 app (DiAKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+修補版 Dexcom G7 應用程式 (DiAKEM) 可查看 Dexcom G7 資料。 這不是 BYODA 應用程式，因為該應用程式目前無法接收 G7 資料。
 
-Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
+如果之前有使用過原Dexcom應用程式，請將其解除安裝（如果傳感器正在運作，可以繼續使用傳感器，請在移除應用程式前記下傳感器代碼！）
 
-Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
+從 [這裡](https://github.com/authorgambel/g7/releases)下載並安裝修補版.apk。
 
-Enter sensor code in the patched app.
+在修補版應用程式中輸入傳感器代碼。
 
-Follow the general recommendations for CGM hygiene and sensor placement found [here](../Hardware/GeneralCGMRecommendation.md).
+請遵循一般 CGM 衛生規範和感測器安裝位置的建議，詳情請參閱[此處](../Hardware/GeneralCGMRecommendation.md)。
 
-After the warm-up phase, the values are displayed as usual in the G7 app.
+預熱階段結束後，資料會照常顯示在 G7 應用程式中。
 
 ### 在 AAPS 中進行配置
 
-For the configuration in AAPS
+AAPS 中的配置步驟
 - 在 [ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source) 中選擇 'BYODA' - 即便這不是 BYODA 應用程式！
 
 - 如果 AAPS 無法接收任何資料，請切換到其他血糖來源，然後再切回 'BYODA' 以調用查詢以批准 AAPS 和 BYODA 之間的資料交換。
