@@ -50,7 +50,7 @@ xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 - 按照[此處](https://www.juggluco.nl/Juggluco/index.html)的指示操作。
 - 在設定中，啟用 xDrip+ 廣播（這不會將資料傳送至 xDrip+，而是傳送至 AAPS）。
 
-![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
+![Juggluco 廣播至 AAPS](../images/Juggluco_AAPS.png)
 
 - 在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
 
