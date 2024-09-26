@@ -2,8 +2,10 @@
 
 To use your Libre as a CGM that is getting new BG values every 5 minutes without having to scan the sensor, you need to buy an NFC to Bluetooth bridge (commercially available devices, based on the obsolete [LimiTTer](https://github.com/JoernL/LimiTTer) project).
 
-:::{admonition} Libre 2, Libre 1 US and Libre Pro :class: warning Verify the bridge and the app you want to use are compatible with your sensor.  
-:::
+```{admonition} Libre 2, Libre 1 US and Libre Pro
+:class: warning
+Verify the bridge and the app you want to use are compatible with your sensor.  
+```
 
 Several bridges are available on the market:
 
@@ -16,7 +18,7 @@ Historically it is possible to use a specific watch, the Sony Smartwatch 3 (SWR5
 
 -   Sony Smartwatch 3 (SWR50) <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
-נכון להיום, אם משתמשים ב-Libre 1 כמקור נתונים, לא ניתן להפעיל את האפשרויות ‘הפעל SMB תמיד’ ו-‘הפעל SMB אחרי פחמימות‘ בהגדרות אלגוריתם ה-SMB. מדידות הסוכר של Libre 1 אינן חלקות מספיק לשימוש בטוח עם SMB. ראו [שיפור נתוני סוכר](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) לקבלת פרטים נוספים.
+As it currently stands, if using Libre 1 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within the SMB algorithm. The BG values of Libre 1 are not smooth enough to use it safely. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 
 ## 1. Using xDrip+
 
