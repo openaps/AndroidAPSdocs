@@ -58,11 +58,11 @@ Pokud si myslíte, že je v instrukcích k procesu sestavení chyba, něco chyb�
 
 ## Návod k sestavení aplikace AAPS krok za krokem
 
-:::{admonition} UPOZORNĚNÍ
-:class: varování
-Pokud jste AAPS sestavovali už dříve, nemusíte znovu podniknout všechny následující kroky.
-Prosím, přeskočte přímo do [průvodce aktualizací](../Installing-AndroidAPS/Update-to-new-version)!
-:::
+```{admonition} WARNING
+:class: warning
+If you have built AAPS before, you don't need to take all the following steps again.
+Please jump directly to the [update guide](../Installing-AndroidAPS/Update-to-new-version)!
+```
 
 Základní kroky k sestavení apk souboru **AAPS** jsou následující:
 
@@ -84,11 +84,12 @@ Jelikož **Android Studio** běží na platformě Windows, Mac OS X i Linux, moh
 
 ### Instalace gitu (pokud ho ještě nemáte)
 
-:::{admonition} Proč Git?
+```{admonition} Why Git? 
+:class: dropdown
 
-Git je známý jako „_Versioning Control System_“ (VCS).
-Git je program, který umožňuje sledovat změny kódu a spolupracovat s ostatními. Pomocí Gitu vytvoříte ve vašem počítači kopii zdrojového kódu **AAPS** z webu Githubu. Pak použijete Git na vašem počítači k vytvoření aplikace **AAPS** (apk).
-:::
+Git is known as a “_Versioning Control System_” (VCS).\
+Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Git on your computer to build the **AAPS** application (apk). 
+```
 
 #### Postup instalace Gitu
 
@@ -116,10 +117,10 @@ Git je program, který umožňuje sledovat změny kódu a spolupracovat s ostatn
 
 - **Musíte zůstat online při provádění dalších kroků, protože Android Studio bude stahovat několik aktualizací**
 
-:::{admonition} Co je Android Studio?
-:class: rozbalovací seznam
-Android Studio je program, který běží na vašem počítači. Umožňuje vám stáhnout zdrojový kód z internetu (pomocí Gitu) a vytvářet aplikace pro chytré telefony (a hodinky). Vytvořením nové nebo aktualizované aplikace **AAPS** v Android Studiu na vašem PC nemůže dojít k "rozbití" vaší verze **AAPS**, na které aktuálně provozujete smyčku.
-:::
+```{admonition} What is Android Studio?
+:class: dropdown
+Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes. 
+```
 
 Následující snímky obrazovky byly vytvořeny z Android Studia ve verzi **Hedgehog** a měly by být shodné s novějšími verzemi.
 
@@ -169,10 +170,11 @@ Nyní obdržíte zprávu o chybějící sadě pro vývoj softwaru (Software Deve
 
 Software by měl automaticky vybrat potřebné (SDK) a vybrat umístění.
 
-:::{admonition} Co je to Android SDK?
+```{admonition} What is an Android SDK?
+:class: dropdown
 
-Aby bylo možné spustit **AAPS** na telefonu, aplikace se musí integrovat se samotným Androidem. Android poskytuje “_software development kity_” (SDK), které umožňují aplikacím jako **AAPS** spolupracovat s operačním systémem Android.
-:::
+In order to run **AAPS** on the phone the application needs to integrate with Android itself. Android provides “_software development kits_” (SDK) which allow apps like **AAPS** to interface with an Android operating system.
+```
 
 Balíček platforem SDK **neodpovídá** verzi, která běží na vašem telefonu, ale k sestavení **AAPS**. **AAPS** verze 3.2 (a novější) je postavené na API úrovně 34, která je v **Hedgehog** verzi **Android Studio** vybrána automaticky. Proto jednoduše klikněte na "Další":
 
@@ -204,13 +206,14 @@ Nyní uvidíte uvítací obrazovku "Welcome to Android Studio".
 
 ### Stažení zdrojového kódu AAPS
 
-:::{admonition} Proč může stažení kódu AAPS trvat dlouho?
+```{admonition} Why can it take a long time to download the AAPS code?
+:class: dropdown
 
-Při prvním stahování **AAPS** se Android Studio připojí přes internet na web Githubu, aby stáhl zdrojový kód **AAPS**. To by mělo trvat asi 1 minutu.
+The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute. 
 
-Android Studio pak použije **Gradle** (vývojový nástroj v Android studio) k identifikaci dalších komponent, které je třeba na váš počítači nainstalovat.
+Android Studio will then use **Gradle** (a development tool in  Android studio) to identify other components needed to install these items on your computer. 
 
-:::
+```
 
 Na úvodní obrazovce Android Studia zkontrolujte, že **Projects**" (1) jsou zvýrazněny na levé straně. Poté klikněte na "**Get from VCS**" (2) vpravo:
 
@@ -232,10 +235,10 @@ a vložte ji do textového pole URL (3).
 
 - Zkontrolujte, zda je vhodný (výchozí) adresář pro uložení klonovaného kódu (4).
 
-:::{admonition} INFORMACE
+```{admonition} INFORMATION
 :class: information
-Poznamenejte si umístění adresáře. Tam se bude nacházet váš zdrojový kód!
-:::
+Make a note of the directory. It is where your sourcecode is stored!
+```
 
 - Nyní spusťte klonování kódu kliknutím na tlačítko "Clone" (5).
 
@@ -273,10 +276,11 @@ Až Android Studio znovu nastartuje, trpělivě čekejte (může to trvat někol
 
 ![AS\_download\_dependencies](../images/Building-the-App/19_downloading_dependencies.png)
 
-:::{admonition} NIKDY NEAKTUALIZUJTE GRADLE!
+```{admonition} NEVER UPDATE GRADLE!
+:class: warning
 
-Android Studio vám může nabídnout aktualizaci systému gradle. **Nikdy neaktualizujte gradle!** To by mohlo vést ke komplikacím.
-:::
+Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
+```
 
 _Volitelně_ - pokud chcete odstranit vyskakování okna **"project update recommended"**, klikněte na modrý text "More" (1). V dialogovém okně pak vyberte "Don't ask for this project" (2).
 
@@ -323,10 +327,11 @@ Když je vedle cesty zobrazena verze Gitu (viz snímek obrazovky výše), úspě
 
 ### Sestavení "podepsaného" APK aplikace AAPS
 
-:::{admonition} Proč musí být aplikace AAPS "podepsaná"?
+```{admonition} Why does the AAPS app need to be "signed"?
+:class: dropdown
 
-Android vyžaduje, aby každá aplikace byla _podepsána_, aby se zajistilo, že ji později bude možné aktualizovat pouze ze stejného důvěryhodného zdroje, který vydal původní aplikaci. Další informace o tomto tématu najdete na [tomto odkazu](https://developer.android.com/studio/publish/app-signing.html#generate-key). Pro naše účely to znamená pouze to, že vygenerujeme podepisovací nebo "keystore" soubor a použijeme ho k sestavení aplikace **AAPS**.
-:::
+Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
+```
 
 - V panelu nabídek klikněte na "Build" (1) a vyberte "Generate Signed Bundle/APK (2)
 
@@ -339,18 +344,19 @@ Android vyžaduje, aby každá aplikace byla _podepsána_, aby se zajistilo, že
 - Na další obrazovce zkontrolujte, že "Module" je nastavený na "AAPS.app" (1).
 
 (Building-APK-wearapk)=
-:::{admonition} INFORMACE!
+
+```{admonition} INFORMATION!
 :class: information
 Pokud chcete vytvářet aplikaci pro vaše hodinky, musíte vybrat AAPS.wear!
-:::
+```
 
 - Kliknutím na "Create new..." (2) začnete vytvářet váš "keystore" soubor (úložiště klíčů).
 
-:::{admonition} INFORMACE!
+```{admonition} INFORMATION!
 :class: information
-Keystore soubor budete vytvářet pouze jednou.
-Pokud už jste aplikaci AAPS sestavovali dříve, NEVYTVÁŘEJTE nový keystore, ale vyberte již existující soubor!
-:::
+You will only need to create the keystore once.
+If you have build AAPS before, do NOT create a new keystore but select your existing one!
+```
 
 **_Poznámka:_** Keystore je soubor, ve kterém jsou uložené informace pro podepisování aplikací. Tento soubor je zašifrovaný a chráněný heslem.
 
@@ -366,10 +372,10 @@ Pokud už jste aplikaci AAPS sestavovali dříve, NEVYTVÁŘEJTE nový keystore,
 
 Tím se vrátíte na předchozí obrazovku. Na té bude zobrazena cesta k uložení vašeho keystore souboru.
 
-:::{admonition} VAROVÁNÍ!
+```{admonition} WARNING!
 :class: warning
-Ujistěte se, že máte poznamenanou cestu k vašemu keystore souboru. Budete ji potřebovat, až budete sestavovat další verzi AAPS!
-:::
+Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AndroidAPS update!
+```
 
 Nyní si vyberte (a poznamenejte) jednoduché heslo, zadejte ho do políčka Password (1) a potvrďte ho v políčku Confirm (2).  Heslo ke keystore souboru a uloženým klíčům nemusí být složité. Pokud v budoucnosti heslo zapomenete, podívejte se na [řešení problému se ztraceným keystore souborem](troubleshooting_androidstudio-lost-keystore).
 
@@ -377,10 +383,10 @@ Výchozí alias (3) pro váš klíč je "key0", ponechte to beze změny.
 
 Teď potřebujete heslo k vašemu klíči. Pro zjednodušení, pokud chcete, můžete použít stejné heslo jako k vašemu keystore souboru. Zadejte heslo (4) a potvrďte ho (5).
 
-:::{admonition} VAROVÁNÍ!
+```{admonition} WARNING!
 :class: warning
-Všechna hesla si někam poznamenejte! Budete je potřebovat pri sestavování aktualizované verze AAPS!
-:::
+Note down these passwords! You will need them when you build the next AAPS update!
+```
 
 Platnost (6) je ve výchozím stavu 25 let. Ponechte to tak, jak je.
 
