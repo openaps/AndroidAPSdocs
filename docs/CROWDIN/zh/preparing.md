@@ -159,13 +159,13 @@ In a nutshell:
 | ---------------------------------------------------- |:---------:|
 | 初步閱讀文件：                                              |   1-2 天   |
 | 安裝/配置電腦以允許構建：                                        |  2-8 小時   |
-| 建立 Nightscout 伺服器：                                   |  1 hour   |
-| 安裝 CGM 應用程式 (xdrip 或 BYODA 或其他)                      |  1 hour   |
-| 初始化配置 CGM->xdrip->AAPS：                              |  1 hour   |
-| 初始化配置 AAPS->胰島素幫浦：                                   |  1 hour   |
-| 初始化配置 AAPS->NightScout（僅報告）：                         |  1 hour   |
-| 選擇性（對於家長）- 配置 NightScout <-> **AAPS** 與 NSFollowers： |  1 hour   |
-| 目標 1：設置可視化與監控，分析基礎率與比率                               |  1 hour   |
+| 建立 Nightscout 伺服器：                                   |   1 小時    |
+| 安裝 CGM 應用程式 (xdrip 或 BYODA 或其他)                      |   1 小時    |
+| 初始化配置 CGM->xdrip->AAPS：                              |   1 小時    |
+| 初始化配置 AAPS->胰島素幫浦：                                   |   1 小時    |
+| 初始化配置 AAPS->NightScout（僅報告）：                         |   1 小時    |
+| 選擇性（對於家長）- 配置 NightScout <-> **AAPS** 與 NSFollowers： |   1 小時    |
+| 目標 1：設置可視化與監控，分析基礎率與比率                               |   1 小時    |
 | 目標 2：學習如何控制 AAPS                                     |   2 小時    |
 | 目標 3：證明你的知識                                          |  最多 14 天  |
 | 目標 4：開始使用開環                                          |    7 天    |
