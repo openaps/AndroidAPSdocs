@@ -2,20 +2,16 @@
 
 Durum saatte bir güncellenir ve yalnızca Crowdin'deki durumu yansıtır.
 
-:::{ipucu}
+```{tip}
+Redaksiyon yüzdesinin çeviri yüzdesinden daha düşük olmasına dikkat edin. Ancak çevirilerin üzerinde gösterilmektedir.
+İşin ne kadar yapıldığını görmek için yalnızca çevirilerin yüzde düzeyine bakmak daha iyi olacaktır.
+```
 
-Redaksiyon yüzdesinin çeviri yüzdesinden daha düşük olmasına dikkat edin. Ancak çevirilerin üzerinde gösterilmektedir. İşin ne kadar yapıldığını görmek için yalnızca çevirilerin yüzde düzeyine bakmak daha iyi olacaktır.
-
-:::
-
-:::{admonition} Nihai yayın için gerekli süre
-:class: note
-
+```{admonition} needed time for final publication
 Crowdin çevirisinden sonra, çevirileri çekme isteği (PR) olarak Github'a aktarmak için her gün Github'a bir senkronizasyon planlanır.
 
 PR'nin kabulü, mümkün olan en hızlı şekilde manuel olarak yapılacaktır.
-
-:::
+```
 
 ## uygulamanın çeviri durumu
 
