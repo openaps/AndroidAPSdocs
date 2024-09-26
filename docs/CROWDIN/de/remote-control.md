@@ -643,44 +643,45 @@ Um die Akkulaufzeit zu verlängern, schalte - wie auch Video gezeigt - auf der S
 
 Alternativ kannst Du:
 
-:::{admonition} Easy Fire Tools zum Sideloading von **AAPS** Wear auf die Smartwatch nutzen
+```{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
 :class: dropdown
 
-1) Lade _Easy Fire Tools_ aus dem Play Store auf Dein Smartphone herunter
+1)   Download _Easy Fire Tools_ from playstore onto phone 
 
-![grafik](./images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
+![image](./images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
 
-2) Bringe die Smartwatch (sobald die Einrichtung abgeschlossen ist und sie mit dem Smartphone verbunden ist) in den Entwicklermodus:
+2)  Make yourself a developer in the watch (once set up and connected to phone): 
 
-Gehe in die Einstellungen >Info zur Uhr (unterste Option) > Software-Informationben > Softwareversion.
+Go to settings >about watch (bottom option) >- software info > software version. 
 
-Tippe schnell so lange auf "Softwareversion", bis eine Benachrichtigung erscheint, die besagt, dass die Smartwatch nun im "Entwicklermodus" ist. Kehre zum oberen Teil des Einstellungsmenüs zurück, scrolle nach unten zum Punkt „Entwickleroptionen“ unter „Info zur Uhr“.
+Tippe schnell so lange auf "Softwareversion", bis eine Benachrichtigung erscheint, die besagt, dass die Smartwatch nun im "Entwicklermodus" ist. Kehre zum oberen Teil des Einstellungsmenüs zurück, scrolle nach unten
+ zum Punkt „Entwickleroptionen“ unter „Info zur Uhr“. 
 
-In den „Entwickleroptionen“ aktiviere das „ADB Debugging“ und „Über Bluetooth debuggen“. Die letzte Option zeigt dann die IP-Adresse der Smartwatch. Die letzten beiden Ziffern ändern sich jedesmal mit dem Koppelungsvorgang zu einem neuen Smartphone. Es wird in etwa so aussehen: **167.177.0.20.** 5555 (ignoriere die letzten 4 Ziffern). Beachte, dass sich die letzten beiden Ziffern (hier, „20“) dieser Adresse mit jedem neuen AAPS Smartphone ändern.
+In den „Entwickleroptionen“ aktiviere das „ADB Debugging“ und „Über Bluetooth debuggen“. Die letzte Option zeigt dann die IP-Adresse der Smartwatch. Die letzten beiden Ziffern ändern sich jedesmal mit dem Koppelungsvorgang zu einem neuen Smartphone. It will be something like: **167.177.0.20.** 5555 (ignore the last 4 digits). Beachte, dass sich die letzten beiden Ziffern (hier, „20“) dieser Adresse mit jedem neuen AAPS Smartphone ändern.  
 
 ![24-10-23, watch ADB debug pic](./images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
 
-Schritt 3) Gebe die IP-Adresse _z. B. _ **167.177.0.20** in Easy Fire Tools auf Deinem Smartphone ein (gehe dazu auf das linke Hamburger-Menü, Settings und gib die IP-Adresse ein). Klicke dann auf das plug socket Icon oben rechts.
+STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). Klicke dann auf das plug socket Icon oben rechts.  
 
-![grafik](./images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
-
-
-![grafik](./images/00b2fb8b-5996-4b71-894e-516d63469e1b.png)
+![image](./images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
 
 
-Schritt 4) Folge den [Sideloading-Anweisungen](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) (d.h. dem Transfer der Wear.apk mit Hilfe der Easy Fire Tools auf die Smartwatch.
-
-Klicke in der App auf die Seite "plug-in" socket, um die Wear OS.apk auf die Smartwatch zu laden:
-
-![grafik](./images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
+![image](./images/00b2fb8b-5996-4b71-894e-516d63469e1b.png)
 
 
- Nächster Schritt > akzeptiere die Autorisierungsanfrage auf der Smartwatch
+STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  Wear.apk onto the smartwatch using Easy Fire tools
+
+Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the smartwatch: 
+
+![image](./images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
 
 
-![grafik](./images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
+ Next step > accept the authorisation request on the smartwatch
 
-:::
+
+![image](./images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
+
+```
 
 
 ##### Die Verbindung zwischen der Smartwatch und Smartphone aus **AAPS** heraus einrichten
