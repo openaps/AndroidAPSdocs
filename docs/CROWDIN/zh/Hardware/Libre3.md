@@ -15,7 +15,7 @@ Freestyle Libre 3 (FSL3) 需要特殊設定才能將血糖值接收至 AAPS。 �
 ## 方法 1：1 分鐘讀數
 AndroidAPS 版本 3.2.0.1 不支援 1 分鐘讀數。 加速和平滑處理無法與 1 分鐘讀數搭配使用。
 
-![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
+![Juggluco 廣播至 AAPS](../images/Juggluco_AAPS.png)
 
 
 ## 方法 2：5 分鐘讀數
