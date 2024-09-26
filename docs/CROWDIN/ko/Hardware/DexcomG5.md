@@ -9,8 +9,10 @@
 
 ## Dexcom G5를 Dexcom 앱(패치버전)과 사용하는 경우
 
-:::{admonition} Legacy apps :class: warning These apps are not compatible with recent Android versions.  
-:::
+```{admonition} Legacy apps
+:class: warning
+These apps are not compatible with recent Android versions.  
+```
 
 -   Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5).
 
