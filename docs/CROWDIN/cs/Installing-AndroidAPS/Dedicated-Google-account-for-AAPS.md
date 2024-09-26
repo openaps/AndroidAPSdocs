@@ -4,15 +4,16 @@ Někteří uživatelé **AAPS** raději používají svůj hlavní e-mailový ú
 
 Pokud nemáte zájem nastavit pro **AAPS** vyhrazený Gmail účet, můžete přejít přímo k dalšímu oddílu dokumentace, [Sestavení AAPS](building-AAPS.md).
 
-:::{admonition} Výhody Google účtu určeného pouze pro AAPS
+```{admonition} Advantages of a dedicated Google account for AAPS
+:class: dropdown
 
-- Díky vyhrazenému prostoru na Google drive nebudete riskovat, že si zaplníte prostor na vašem osobním Google drive **Exporty konfigurace**.
-- Každá veze **AAPS** (a podpůrných aplikací jako xdrip+, BYODA a další) bude uložena na jednom místě nezávisle na vašem počítačovém harwaru. Pokud přijdete o váš počítač nebo telefon kvůli krádeži, ztrátě nebo poruše, budete mít k souborům stále přístup.
-- Harmonizací nastavení usnadníte online podporu mezi uživateli díky obdobné struktuře složek.
-- V závislosti na nastavení (viz níže) budete mít samostatnou identitu jako alias ke komunikaci v rámci komunity, která může chránit vaše soukromí.
-- Děti s cukrovkou I. typu si tak mohou zachovat svůj "každodenní" e-mailový účet jako nezletilí, zatímco mohou používat **AAPS** a související funkce, které vyžadují účet pro dospělé.
-- Gmail vám umožňuje registrovat až 4 účty pod stejným telefonním číslem.
-  :::
+- Dedicated Google drive space means you will not risk filling up your personal Google drive limit with **Export Preferences**.
+- Each version of **AAPS** (and supporting apps like xdrip+, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
+- By harmonizing the setup, it will make online support simpler across users with similar folder structure.
+- Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
+- Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
+- Gmail allows you to register up to 4 accounts under the same phone number.
+```
 
 ## Jak nastavit Google účet určený pouze pro AAPS
 
@@ -25,21 +26,22 @@ Požadavky:
 - Máte Windows PC (Windows 10 nebo novější) a Android telefon (Android 9 nebo novější), na kterém se bude provozovat aplikace **AAPS**. Obě tato zařízení mají nainstalované všechny nejnovější bezpečnostní aktualizace, přístup k Internetu a administrátorská oprávnění, protože některé kroky vyžadují stažení a instalaci programů.
 - Android telefonu je už nastaven s vaší osobní každodenní e-mailovou adresou, například Gmailovým účtem.
 
-:::{admonition} Věci ke zvážení před nastavením nového účtu
-:class: rozevírací seznam
+```{admonition} Things to consider when setting up your new account
+:class: dropdown
+- You could use a name different to your own, which has relevance to the account (like t1dsuperstar) for privacy reasons. You can then use it in **AAPS** public forums while keeping your own identity private. Since Google requires a recovery email and phone number, it is still traceable.
+- The new **AAPS** account will use the same phone number for verification as your “_everyday_” one. It will use the “everyday” email address for verification;
+- We will setup email forwarding such that any email sent to the new dedicated AAPS account will be forwarded to the primary one (so there is no need to check two different mailboxes);
+- Use separate passwords for your _everyday_ Gmail account and the AAPS-dedicated Gmail account
+- If you use google “2-step verification” (aka multifactor) authentication for one Gmail account, you might as well do it for both Gmail accounts.
+- If you plan to use Google “Passkeys”, make sure you register multiple devices. This is so you don’t lock yourself out. Only do it on devices that nobody else can access (_i.e._ not on a PC with a shared account that other people can unlock).
+```
 
-- Místo vašeho vlastního jména můžete použít přezdívku, která má pro účet význam (jako t1dsuperstar) z důvodu ochrany soukromí. Pak ji můžete používat na veřejných **AAPS** fórech a zároveň si uchovat soukromí ohledně vaší vlastní identity. Ale vzhledem k tomu, že Google vyžaduje obnovovací e-mail a telefonní číslo, je i tento účet stále vysledovatelný.
-- Nový **AAPS** účet bude využívat pro ověření stejné telefonní číslo jako váš "každodenní" účet. K ověření se bude používat vaše "každodenní" adresa;
-- Nastavíme přesměrování e-mailů tak, aby každý e-mail odeslaný na nový účet vyhrazený pro AAPS byl přeposlán na primární e-mail (takže nebude nutné sledovat dvě různé e-mailové schránky);
-- Použijte samostatná hesla pro váš každodenní Gmail účet a účet Gmail určený pro AAPS.
-- Pokud používáte Google "2-step verification" (aka Multifaktor) ověření pro jeden Gmail účet, můžete to i pro druhý.
-- Pokud máte v úmyslu používat Google “Passkeys”, ujistěte se, že jste zaregistrovali více zařízení. To je potřeba proto, abyste se sami "nezamknuli". Proveďte to pouze na zařízeních, ke kterým nemá přístup nikdo jiný (zn. nejde o PC se síleným účtem, ke kterému přistupuje víc osob).
-  :::
 
-:::{admonition} Videoprůvodce!
+
+```{admonition} Video Walkthrough! 
 :class: Poznámka
 Kliknutím [zde] (<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>) spustíte videoprůvodce nastavením vyhrazeného Google účtu.
-:::
+```
 
 Toto jsou kroky nastíněné ve videu:
 
