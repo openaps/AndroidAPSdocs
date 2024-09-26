@@ -2,20 +2,16 @@
 
 Der Status wird einmal pro Stunde aktualisiert und spiegelt nur den Zustand in Crowdin wider.
 
-:::{tip}
+```{tip}
+Bitte vorsichtig sein. Der Prozentsatz des Korrekturlesens muss niedriger sein als der Prozentsatz der Übersetzungen, aber es wurde beschlossen den Status über den eigentlichen Übersetzungen zu zeigen.
+Es ist besser daher besser, sich nur den Prozentsatz der Übersetzungen anzusehen, um zu sehen, ob noch etwas zu erledigen ist.
+```
 
-Bitte vorsichtig sein. Der Prozentsatz des Korrekturlesens muss niedriger sein als der Prozentsatz der Übersetzungen, aber es wurde beschlossen den Status über den eigentlichen Übersetzungen zu zeigen. Es ist besser daher besser, sich nur den Prozentsatz der Übersetzungen anzusehen, um zu sehen, ob noch etwas zu erledigen ist.
-
-:::
-
-:::{admonition} Dauer bis zur endgültigen Veröffentlichung
-:class: note
-
+```{admonition} needed time for final publication
 Nach der Crowdin-Übersetzung wird täglich eine Synchronisierung mit Github durchgeführt, um so die Übersetzungen als Pull-Request (PR) an Github zu übertragen.
 
 Die Akzeptanz der PR ist eine manuelle Aufgabe, die so schnell als möglich erledigt wird.
-
-:::
+```
 
 ## Status App Übersetzung
 
