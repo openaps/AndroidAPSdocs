@@ -63,11 +63,11 @@ Beim Einrichten einer Automatisierung kannst Du sie zuerst dadurch testen, dass 
 
 ![Alt text](../images/automation_2024-02-12_20-55-05.png)
 
-:::{admonition} Wichtiger Hinweis
+```{admonition} Important note
 :class: note
 
-Automatisierungen sind auch dann aktiv, wenn Du den Loop ausgeschaltet hast!
-:::
+Automations are still active when the Loop is disabled!
+```
 
 
 ## Sicherheitsbeschränkungen
@@ -80,11 +80,11 @@ Es gibt Sicherheitsbeschränkungen für **Automatisierungen**:
 
 ## Negative Werte richtig nutzen
 
-:::{admonition} Warnung
+```{admonition} Warning
 :class: warning
 
-Sei besonders vorsichtig, wenn Du negative Werte in einer Automatisierung nutzt
-:::
+Please be careful when selecting a negative value in Automation
+```
 
 Besonderer Vorsicht bedarf es, wenn in einer **Automatisierung** ein 'negativer Wert' innerhalb einer "kleiner als"-Bedingung genutzt werden soll. For example:
 
