@@ -34,22 +34,23 @@ Im Abschnitt 11 finden sich archivierte und auch zusätzliche Dokumentation, sow
 
  ### Du willst mit **AAPS** loslegen? In [Einführung in APS und AAPS](introduction.md) erfährst Du mehr über **AAPS**.
 
-:::{admonition} SICHERHEITSHINWEIS
-:class: danger Die **AAPS**-Sicherheit wird von der Sicherheit Deiner Hardware (Smartphone, Insulinpumpe, Sensor) bestimmt. Nutze ausschließlich eine voll funktionsfähige FDA/CE-zugelassene Insulinpumpe und CGM (Sensor). Verwende keine defekte, veränderte oder selbstgebaute Insulinpumpe oder CGM-Empfänger. Verwende nur Originalzubehör (Setzhilfen, Katheter und Insulinreservoire), die vom Hersteller für Deine Pumpe und Dein CGM zugelassen sind. Die Verwendung von nicht getesteten oder modifizierten Verbrauchsmaterial kann zu Ungenauigkeiten und Insulindosierungsfehlern führen und stellt damit ein erhebliches Risiko für den Anwendenden dar.
+```{admonition} SAFETY NOTICE
+:class: danger
+The safety of **AAPS** relies on the safety features of your hardware (phone, pump, CGM). Only use a fully functioning FDA/CE approved insulin pump and CGM. Do not use broken, modified or self-built insulin pumps or CGM receivers. Only use original consumable supplies (inserters, cannulas and insulin reservoirs) approved by the manufacturer for use with your pump and CGM. Using untested or modified supplies can cause inaccuracy and insulin dosing errors, resulting in significant risk to the user. 
 
-Solltest Du SGLT-2 Inhibitoren (Gliflozine) nehmen, kannst Du **AAPS** aufgrund der Glukosespiegel senkenden Wirkung der Glifozine <0>AAPS</0> nicht nutzen. Durch den abgesenkten Glukosespiegel, riskierst Du eine diabetische Ketoazidose (DKA), da weniger Insulin abgegeben wird und Hypoglykämien auftreten können.
-:::
+Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower blood sugar levels. You increase the risk diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
+```
 
-:::{admonition} Haftungsausschluss
+```{admonition} Disclaimer
 :class: note
 
-- Alle hier beschriebenen Informationen und Quellcodes dienen ausschließlich Informations- und Bildungszwecken. Du verwendest [Nightscout](https://nightscout.github.io/) und **AAPS** auf eigenes Risiko. Nutze es nicht zu Behandlungsentscheidungen. Nightscout erfüllt keinerlei Anforderungen des Datenschutzes im Gesundheitswesen.
-- Bei Nutzung des Quellcodes von github.com bestehen keinerlei Gewährleistungs- und Garantieansprüche. Im Übrigen wird auf die Lizenz verwiesen, die im Repository abgerufen werden kann.
-- Sämtliche Produkt- und Herstellernamen, Handelsmarken, Dienstleistungsmarken, Warenzeichen und eingetragene Dienstleistungsmarken sind Eigentum ihrer jeweiligen Inhaber und werden nur zu Informationszwecken genutzt und nicht für Werbung oder Marketing. Ihre Verwendung dient nur zur Information und bedeutet weder, dass AAPS zu ihnen gehört, noch dass sie unterstützt werden.
+- All information and code described here is for informational and educational purposes only. Use [Nightscout](https://nightscout.github.io/) and **AAPS** at your own risk, and do not use the information or code to make medical decisions. Nightscout erfüllt keinerlei Anforderungen des Datenschutzes im Gesundheitswesen. 
+- Use of code from github.com is without warranty or formal support of any kind. Im Übrigen wird auf die Lizenz verwiesen, die im Repository abgerufen werden kann.
+- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Ihre Verwendung dient nur zur Information und bedeutet weder, dass AAPS zu ihnen gehört, noch dass sie unterstützt werden.
 
-**AAPS** hat weder eine Verbindung zu, noch wird es von [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) oder [Medtronic](https://www.medtronic.com/) unterstützt.
+**AAPS** has no association with, and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
 
-:::
+```
 
 (AAPS-Documentation-Index)=
 
