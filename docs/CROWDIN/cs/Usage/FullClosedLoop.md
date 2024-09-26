@@ -142,13 +142,13 @@ Check the SMB tab from time to time to see whether your SMBs are allowed to be l
 
 If not, your tuning efforts will sometimes come to nothing!
 
-:::{admonition} Boosting ISF can become dangerous
+```{admonition} Boosting ISF can become dangerous
 :class: danger
 
 Carefully observe/analyze the SMB sizes that, briefly after meal start, result from your settings. Tune in steps, and do not vary more than 1 or 2 parameters at a time.
 
 Setting must work good-enough for your (!) variety of meals.
-:::
+```
 
 ## Meal detection/your Automations for boosting
 
