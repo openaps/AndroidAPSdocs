@@ -6,10 +6,11 @@
 - למדתם על התכונות החיוניות לשימוש ב-**AAPS**
 - יש לכם הבנה בסיסית של מה המערכת שלכם עושה, ולכן למה אתם יכולים לסמוך עליה.
 
-:::{admonition} הערה
+```{admonition} Note
+:class: note
 
-ייצאו באופן קבוע את הגדרות **AAPS** לאחר השלמת כל **מטרה**!
-:::
+Regularly export your **AAPS** settings after completing each **objective**!
+```
 
 אנו ממליצים בחום [לייצא את ההגדרות שלכם](../Usage/ExportImportSettings.md) לאחר השלמת כל **משימה**. תהליך הייצוא יוצר קובץ **הגדרות** (מסוג.json) שעליכם ללגבות במקום בטוח אחד או יותר (_למשל_ Google Drive, קובץ מצורף לדוא"ל, דיסק קשיח וכו'). גיבוי מבטיח שתשמרו על ההתקדמותכם ב**משימות** ואם תמחק בטעות את ההתקדמות שלכם, תוכלו פשוט לטעון אותה מחדש על ידי ייבוא קובץ ההגדרות האחרון. יש גם צורך בגיבוי קובץ **הגדרות** אם ברצונכם להחליף את מכשיר הטלפון עליו מותקן **AAPS** מכל סיבה שהיא (שדרוג/אבדה/נזק וכו')
 
@@ -68,10 +69,10 @@
 
 כאשר AAPS מותקן בפעם הראשונה, תצטרכו להשלים את **משימה 3** בכללותה כדי לעבור הלאה ל**משימה 4**. ניתן לסיים משימה רק אם כל המשימות הקודמות לה מושלמות. תכונות חדשות יפתחו בהדרגה ככל שתתקדם דרך היעדים.
 
-:::{admonition}  **מה קורה אם שאלות חדשות מתווספות למשימה כאשר אני מעדכן לגרסה חדשה יותר של AAPS?**
+```{admonition} __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: Note
-מעת לעת, תכונות חדשות מתווספות ל-**AAPS**, העשויות לדרוש הוספת שאלה חדשה למשימות, במיוחד משימה 3. לכן, כל שאלה חדשה שתתווסף למשימה 3 תסומן כ"לא הושלמה" ויהיה עליכם לענות עליה. מכיוון שכל משימה היא עצמאית, לא תאבדו את הפונקציונליות הקיימת של AAPS בתנאי שהמשימות האחרות מושלמות.
-:::
+From time to time, new features are added to **AAPS** which may require a new question to be added to the Objectives, particularly Objective 3. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other Objectives remain completed.
+```
 
 ## משימה 4: התחלת לופ פתוח
 
@@ -92,9 +93,9 @@
 
   ![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
 
-:::{admonition} אתם לא צריכים לאשר כל המלצת מהמערכת!
+```{admonition} You don't need to action each and every system recommendation!
 :class: Note
-:::
+```
 
 (Objectives-objective-5-Understanding-your-open-loop-including-its-temp-basal-recommendations)=
 
@@ -122,11 +123,12 @@
 אפשר להתאים אישית (להרחיב או להצר) את השטח הירוק של הגרף, המייצג את טווח המטרה שלכם, על ידי הזנת ערכים שונים ב[העדפות](../Configuration/Preferences.md) > סקירה כללית > טווח להצגה.
 
 ![Stop sign](../images/sign_stop.png)
-:::{admonition} אם השתמשת במשאב וירטואלי, שנו עכשיו את סוג המשאבה למשאבה אמיתית!
+
+```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-אם אתם משתמשים בלולאה פתוחה עם משאבה וירטואלית עצרו כאן. לחצו על אימות בסוף משימה זו רק לאחר שעברתם להשתמש במשאבה "אמיתית".
-:::
+If you are open looping with a virtual pump stop here. Only click verify at the end of this Objective once you have changed to using a "real" physical pump.
+```
 
 ![blank](../images/blank.png)
 
@@ -135,10 +137,11 @@
 ## משימה 6: מתחילים לסגור לולאה עם השהיה עקב ערך סוכר נמוך
 
 ![Warning sign](../images/sign_warning.png)
-:::{admonition} לולאה סגורה לא תתקן ערכי סוכר גבוהים במשימה 6, כיוון שהיא מוגבלת רק להשעיה במצב של סוכר נמוך!
+
+```{admonition} Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend only!
 :class: Note
 עדיין תצטרכו לתקן ערכי סוכר גבוהים בעצמכם (ידנית עם תיקונים באמצעות משאבה או עט)!
-:::
+```
 
 כחלק מ**משימה 6** אתם תסגרו את הלולאה ותפעילו מצב השעיה עקב גלוקוז נמוך (LGS) בו [אינסולין פעיל מקסימלי](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) מוגדר אפס (אוטומטית בעת התחלת המשימה). עליכם להישאר במצב LGS למשך 5 ימים כדי להשלים את משימה זו. כדאי לנצל את הזמן הזה כדי לבדוק אם הגדרות הפרופיל שלכם מדויקות ואינן מפעילות אירועי היפו לעתים קרובות מדי.
 
