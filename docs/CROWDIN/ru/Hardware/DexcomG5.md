@@ -9,8 +9,10 @@
 
 ## При пользовании G5 с помощью модифицированного приложения Dexcom
 
-:::{admonition} устаревшие приложения :class: предупреждения Эти приложения несовместимы с новыми версиями Android.  
-:::
+```{admonition} Legacy apps
+:class: warning
+These apps are not compatible with recent Android versions.  
+```
 
 -   Скачайте apk с <https://github.com/dexcomapp/dexcomapp>, и выберите версию по потребностям (mg/dl или mmol/l, G5).
 
