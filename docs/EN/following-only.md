@@ -130,21 +130,20 @@ If your AAPS data source is not xDrip+ but you can display BG data from the Comp
 
 ### E) xDrip4iOS/Shuggah (iOS)
 
+![image](./images/remote_control_and_following/xdrip4ios.jpg)
+
 xDripSwift was created from porting the original xDrip app to iOS and evolved to "xDrip for iOS" written **xDrip4iOS** . 
 
 A version of **xDrip4iOS** is available in the Apple Store under the name of **Shuggah**.
 
-:::{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
+```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
-
-
 The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) is the main community support for xDrip4iOS and Shuggah. **xDrip4iOS** can connect to many different CGM systems and transmitters and display blood glucose values, charts and statistics as well as provide alarms. It can also upload to Nightscout or act as a [follower app for Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). However, it is difficult to actually _get_ the **xDrip4iOS** app for your phone. 
 
 "How can I get **xDrip4iOS** on my iPhone?"
 There are two options:
 
 1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by following the instructions below:
-   
 
 https://xdrip4ios.readthedocs.io/en/latest/install/build/
 
@@ -154,8 +153,7 @@ https://xdrip4ios.readthedocs.io/.../personal_testflight/
 2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and monitor the posts… wait for somebody to offer an invitation to their Personal Testflight releases in the group. **You should not ask for an invitation to the app** (read the group rules). 
 
 An easier solution is therefore to download the **Shuggah** app. 
-
-:::
+```
 
 #### [Shuggah](https://apps.apple.com/sa/app/shuggah/id1586789452) 
 

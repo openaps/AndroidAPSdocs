@@ -662,7 +662,7 @@ As mentioned in the video, once complete, switch ADB debugging off on the watch,
 
 Alternatively, you can:
 
-:::{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
+```{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
 :class: dropdown
 
 1)	 Download _Easy Fire Tools_ from playstore onto phone 
@@ -700,7 +700,7 @@ Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the 
 
 ![image](./images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
 
-:::
+```
 
 
 ##### Setting up the connection between the watch and the phone from **AAPS** 
