@@ -4,6 +4,6 @@
 
 - Download and Install the apk from <https://play.google.com/store/apps/details?id=com.ottai.seas>.
 
-- 啟動傳感器
+- Start sensor
 
 - Select Ottai in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
