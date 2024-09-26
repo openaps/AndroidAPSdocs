@@ -32,10 +32,10 @@ Fyzická výměna zásobníku/nádržky se neprovádí prostřednictvím **AAPS*
 
 Pokud jste si jisti, že jste po určitou dobu nedostali žádný inzulín, i když **AAPS** zaznamenává, že ano, a přesně víte, kdy problém začal (např. odstraníte kanylu a uvidíte, že kanyla byla zkroucená během procesu vložení), můžete záznamy v **AAPS** opravit. Musíte si být vědomi, že inzulín mohl být ve skutečnosti podán, ale z nějakého důvodu se může jeho působení projevit pomalu.
 
-:::{admonition} Varování - Riziko hypoglykémie
+```{admonition} Caution - Risk of Hypoglycemia
 :class: nebezpečí
 Záznam o podání inzulínu smažte z **AAPS** pouze s **EXTRÉMNÍ** opatrností a pro případ, že by inzulín byl skutečně podán, pečlivě sledujte hladinu cukru v krvi v příštích 24 hodinách.
-:::
+```
 
 Pro odstranění bolusů a SMB, o nichž víte, že nebyly doručeny, otevřete záložku Ošetření a opatrně odstraňte zaznamenané informace o bolusech z výpisu sacharidů a bolusu od okamžiku, kdy k incidentu došlo. Tím se opraví hodnota "aktivního inzulínu" (IOB), která je klíčová pro kalkulace v **AAPS**. Pokud se nyní vrátítě na domovskou obrazovku, uvidíte, že se hodnota IOB snížila. Mějte na paměti, že nemůžete odstranit záznamy o bazálních dávkách inzulínu, se kterým **AAPS** počítá jako s doručeným, takže stále bude brán **AAPS** v úvahu.
 
