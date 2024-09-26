@@ -643,43 +643,45 @@ b) вырежьте и вставьте файл Wear.apk из Android Studio н
 
 В качестве альтернативы можно:
 
-:::{admonition} (предостережение) Пользуйтесь Easy Fire tools для параллельной загрузки **AAPS**wear на смарт-часы :class: выпадающее
+```{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
+:class: dropdown
 
-1) Загрузите _Easy Fire Tools_ с playstore на телефон
+1)   Download _Easy Fire Tools_ from playstore onto phone 
 
-![изображение](./images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
+![image](./images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
 
-2) Сделайте себя разработчиком часов (после настройки и подключения к телефону):
+2)  Make yourself a developer in the watch (once set up and connected to phone): 
 
-Перейдите в настройки >о часах (нижняя опция) >- информация о программном обеспечении > версия ПО.
+Go to settings >about watch (bottom option) >- software info > software version. 
 
-Быстро нажимайте на «номер сборки» (7 раз), пока не появится уведомление о том, что часы находятся в «режиме разработчика». Вернитесь в верхнюю часть меню настроек, прокрутите вниз и посмотрите «настройки разработчика» ниже «о часах».
+Быстро нажимайте на «номер сборки» (7 раз), пока не появится уведомление о том, что часы находятся в «режиме разработчика». Вернитесь в верхнюю часть меню настроек, прокрутите вниз
+ и посмотрите «настройки разработчика» ниже «о часах». 
 
-В «опциях разработчика» включите «Отладку ADB и «беспроводную отладку». Эта последняя опция показывает IP адрес часов, последние две цифры которого меняются каждый раз, когда часы сопрягаются с новым телефоном. Будет что-то вроде **167.177.0.20.** 5555 (игнорируйте последние 4 цифры). Обратите внимание, что последние две цифры (здесь «20») этого адреса будут меняться каждый раз, когда вы меняете телефон для AAPS.
+В «опциях разработчика» включите «Отладку ADB и «беспроводную отладку». Эта последняя опция показывает IP адрес часов, последние две цифры которого меняются каждый раз, когда часы сопрягаются с новым телефоном. It will be something like: **167.177.0.20.** 5555 (ignore the last 4 digits). Обратите внимание, что последние две цифры (здесь «20») этого адреса будут меняться каждый раз, когда вы меняете телефон для AAPS.  
 
-![24-10-23, отладка ADB на часах](./images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
+![24-10-23, watch ADB debug pic](./images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
 
-ЩАГ 3) Введите IP адрес _например_ **167.177.0. 0** в Easy Fire tools на телефоне (перейдите в левое выпадающее меню, настройки и введите IP адрес). Затем нажмите на значок розетки в правом верхнем углу.
+STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). Затем нажмите на значок розетки в правом верхнем углу.  
 
-![изображение](./images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
-
-
-![изображение](./images/00b2fb8b-5996-4b71-894e-516d63469e1b.png)
-
-
-ШАГ 4) Следуйте инструкциям [здесь](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) для параллельной загрузки (т.е. передачи) Wear.apk на смарт-часы с помощью инструментов Easy Fire
-
-Нажмите на сокет "plug-in" в приложении, чтобы загрузить Wear OS.apk на смартфон:
-
-![изображение](./images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
+![image](./images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
 
 
- Следующий шаг > принять запрос на авторизацию на часах
+![image](./images/00b2fb8b-5996-4b71-894e-516d63469e1b.png)
 
 
-![изображение](./images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
+STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  Wear.apk onto the smartwatch using Easy Fire tools
 
-:::
+Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the smartwatch: 
+
+![image](./images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
+
+
+ Next step > accept the authorisation request on the smartwatch
+
+
+![image](./images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
+
+```
 
 
 ##### Настройка связи между часами и телефоном **AAPS**
