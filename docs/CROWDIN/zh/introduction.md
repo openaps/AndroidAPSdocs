@@ -95,7 +95,7 @@ AAPS 的“核心”是一個你自己構建的**應用程式**。 這裡有詳�
 **AAPS**為那些目前無法自費或沒有經費/保險的人提供了一個世界級的混合閉環系統，其開發概念比市售系統領先了數年。 目前你需要擁有Nightscout帳號才能設置**AAPS**，但Nightscout帳號並不是每天運作 **AAPS**循環所必須的。 許多人繼續使用Nightscout來收集資料並進行遠端控制。 雖然**AAPS**本身是免費的，但透過不同的平台設置Nightscout可能會產生費用（新台幣$0 -$425），這取決於你需要的支援程度以及你是否要在設置後繼續使用Nightscout（請參閱比較表）。 **AAPS**支援多種價格實惠（大約從新台幣$5,000元起）的Android手機。 不同版本適用於特定地區和語言，AAPS還可以供[視障人士](Safety-first-aaps-can-also-be-used-by-blind-people)使用。
 
 #### 9) **支援**
-沒有任何自動胰島素輸送系統是完美的。 市售和開源系統在通訊和臨時硬體故障方面存在許多共同的問題。 There is support available from community of AAPS users on Facebook, Discord and GitHub who designed, developed and are currently using **AAPS**, all over the world. 市售APS系統還有Facebook支援群組，並可以從診所或商業公司獲得幫助——值得與這些系統的用戶或前用戶交流，了解常見問題、教育計劃的品質以及提供的持續支援。
+沒有任何自動胰島素輸送系統是完美的。 市售和開源系統在通訊和臨時硬體故障方面存在許多共同的問題。 AAPS 的用戶社群遍佈全球，他們在 Facebook、Discord 和 GitHub 上提供支援，這些用戶不僅設計和開發了 **AAPS**，同時也正在使用它。 市售APS系統還有Facebook支援群組，並可以從診所或商業公司獲得幫助——值得與這些系統的用戶或前用戶交流，了解常見問題、教育計劃的品質以及提供的持續支援。
 
 #### 10) **可預測性、透明性與安全性**
 **AAPS** 完全透明、邏輯清晰且可預測，這可能會使您更容易知道何時設置出錯，並相應地進行調整。 你可以完全看到系統在做什麼、為什麼這樣做，以及設置其運作限制，這使得控制權（和責任）掌握在你手中。 這可以讓用戶感到更有信心，並能擁有更好的睡眠質量。
@@ -238,7 +238,7 @@ b) 最近發表於國際領先醫學期刊[The Lancet](https://www.ncbi.nlm.nih.
 
 c) 使用 **AAPS** 需 _一步步_ 的使用，從“開環”幫浦開始，經過低血糖暫停功能，再進入混合“閉環”模式，這一過程需要完成一些目標。 因此有一個結構化的計劃，要求用戶在每個階段展示一定的能力，並微調他們的基礎設置（基礎率、ISF和ICR），然後才能關閉閉環。 
 
-d) Technical support is available to you from the DIY community through GitHub, Discord and Facebook closed groups. 
+d) 您可以透過 GitHub、Discord 和 Facebook 私密群組中的 DIY 社群獲得技術支援。 
 
 e) 在診所會議中，你將能提供**CGM和胰島素閉環/幫浦資訊**的綜合報告（透過Nightscout或Tidepool），無論是列印出來還是顯示在螢幕上（如果你攜帶筆記型電腦或平板電腦）。 CGM和胰島素資料的整合將更有效地利用臨床醫生的時間來審查你的報告，並有助於他們在評估你的進展時進行討論。
 
