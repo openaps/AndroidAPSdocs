@@ -1,26 +1,26 @@
-# DanaR 幫浦
+# DanaR Pump
 
-*這些說明適用於配置該應用程式與 DanaR 幫浦。 如果你擁有 2017 年推出的 DanaRS，請查看[DanaRS 胰島素幫浦](./DanaRS-Insulin-Pump)。*
+*These instructions are for configuring the app and your pump if you have a DanaR. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump) if you have the DanaRS launched in 2017 instead.*
 
-* 在幫浦中進入主選單 > 設置 > 用戶選項
-* 開啟「8. 延時注射」 延長注射
+* In the pump go to Main Menu > Setting > User Option
+* Turn on "8. Extended Bolus"
 
-![DanaR 幫浦](../images/danar1.png)
+![DanaR pump](../images/danar1.png)
 
-* 進入主選單 > 設置 > 探索
-* 在手機設置中進入藍牙，掃描附近的設備，選擇你的 DanaR 序列號，並輸入你的密碼（配對密碼為 0000）。 如果 DanaR 未出現在掃描中，請重新啟動手機並將 DanaR 電池取出，重新安裝，然後再次開始這兩個步驟。
+* Go to Main Menu > Setting > Discovery
+* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). If DanaR is not showing in scan then restart phone and take DanaR battery out, replace and start these two steps again.
 
-* 在 AAPS 中進入組態建置工具並選擇你擁有的 DanaR 型號（DanaR、DanaR 韓國版、DanaRv2）。
+* In AAPS go to Config Builder and select the type of DanaR you have (DanaR, DanaR Korean, DanaRv2)
 
-* 點擊右上角的三個點選擇選單。 選擇偏好設定。
-* 選擇 DanaR 藍牙設備，然後點擊你的 DanaR 序列號。
-* 選擇幫浦密碼，並輸入你的密碼。 （預設密碼為 1234）
-* 如果你希望 AAPS 允許基礎速率超過 200%，啟用使用超過 200% 的延時注射。 注意，這意味著在使用延時注射進行用餐時，你無法使用高 TBR 循環。
-* 在 DanaR 幫浦設定中的偏好設定裡，你可以更改預設的注射速度（12 秒每 1u、30 秒每 1u 或 60 秒每 1u）。
-* 將幫浦的基礎速率步進設置為 0.01 U/h
-* 將幫浦的注射步進設置為 0.1 U/h
-* 啟用幫浦上的延時注射功能
+* Select Menu by tapping the 3 dots in the top right. Select Preferences.
+* Select DanaR Bluetooth device, and click your DanaR serial number.
+* Select Pump password, and input your password. (Default password is 1234)
+* If you want AAPS to allow basal rate above 200%, enable Use extended boluses for >200%. Note this means you cannot loop with high TBRs whilst using extended boluses for food.
+* In Preferences under DanaR pump settings you can change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* Set basal step on pump to 0.01 U/h
+* Set bolus step on pump to 0.1 U/h
+* Enable extended boluses on pump
 
-## Dana R 幫浦的時區旅行
+## Timezone traveling with Dana R pump
 
-關於跨時區旅行的更多資訊，請參閱[幫浦跨時區旅行](Timezone-traveling-danarv2-danars)部分。
+For information on traveling across time zones see section [Timezone traveling with pumps](Timezone-traveling-danarv2-danars).
