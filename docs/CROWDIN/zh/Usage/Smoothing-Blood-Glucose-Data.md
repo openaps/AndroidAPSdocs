@@ -1,32 +1,32 @@
 (Smoothing-Blood-Glucose-Data)=
 
-# 平滑血糖資料
+# Smoothing blood glucose data
 
-如果 **血糖** 資料跳動或干擾，**AAPS** 可能會錯誤劑量胰島素，導致高血糖或低血糖。 如果您發現您的連續血糖監測（CGM）資料出錯，應在問題解決前暫停循環。 根據您的 CGM，不同問題可能來自 **AAPS** 中的 CGM 設定（如下文所述），或者是 CGM 感測器的問題（可能需要更換感測器）。
+If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting in highs or lows. If you observe errors in your CGM data it is important to disable the loop until the problem is resolved. Depending on your CGM, such issues may be due to the CGM configuration in **AAPS** (as explained further below); or a CGM sensor site issue (which may require replacing the CGM sensor).
 
-某些 CGM 系統內建算法來檢測讀取值中的干擾，**AAPS** 可以利用此資訊避免在血糖資料過於不可靠時給予 SMB 劑量。 然而，部分 CGM 不會傳送此資料，對於這些血糖來源，「始終啟用 SMB」和「碳水化合物後啟用 SMB」會為了安全起見被停用。
+Some CGM systems have internal algorithms to detect the noise level in the readings, and **AAPS** can use this information to avoid giving SMBs if the BG data is too unreliable. However, some CGMs do not transmit this data and for these BG sources 'Enable SMB always' and 'Enable SMB after carbs' are disabled for safety reasons.
 
-此外，從 **AAPS** 3.2 版本開始，**AAPS** 提供選項在 **AAPS** 內平滑資料，而非在 CGM 應用程式內處理。 在 [設定構建器](../Configuration/Config-Builder.md) 中有三個選項可用。
+Additionally, as of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. There are three options available in the [Config Builder](../Configuration/Config-Builder.md).
 
-![平滑處理](../images/ConfBuild_Smoothing.png)
+![Smoothing](../images/ConfBuild_Smoothing.png)
 
-## 指數平滑
+## Exponential smoothing
 
-這是建議的起始選項，因為它最積極解決干擾問題，並重寫最近的數值。
+This is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value.
 
-## 平均平滑
+## Average smoothing
 
-此選項與先前在某些 CGM 平台上實作的反向平滑相似。 它對血糖值的近期變化反應更敏感，因此更容易對干擾的 CGM 資料反應不正確。
+This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.
 
-## 無平滑處理
+## No Smoothing
 
-僅當您的 CGM 資料已在收集器應用程式中妥善平滑處理後傳送至 **AAPS** 時，才使用此選項。
+Use this option only if your CGM data is being properly smoothed by your collector app before being transmitted to **AAPS**.
 
-## 平滑處理建議
+## Suggestions to use smoothing
 
-|                       | 指數平滑 |  平均平滑 | 無平滑處理 |
-| --------------------- | :--: | :---: | :---: |
-| G5 和 G6               |      | 如果有干擾 |  建議使用 |
-| G7                    | 建議使用 |       |       |
-| Libre 1 或 Juggluco    | 建議使用 |       |       |
-| Libre 2 和 3 使用 xDrip+ |      |       |  建議使用 |
+|                           | Exponential |  Average |     None    |
+| ------------------------- | :---------: | :------: | :---------: |
+| G5 and G6                 |             | If noisy | Recommended |
+| G7                        | Recommended |          |             |
+| Libre 1 or Juggluco       | Recommended |          |             |
+| Libre 2 and 3 from xDrip+ |             |          | Recommended |
