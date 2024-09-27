@@ -145,7 +145,7 @@ AAPS 還允許在不輸入任何胰島素和碳水化合物的情況下進行**�
 ```{admonition} Boosting ISF can become dangerous
 :class: danger
 
-Carefully observe/analyze the SMB sizes that, briefly after meal start, result from your settings. 逐步調整，並且一次不要更改超過 1 或 2 個參數。
+仔細觀察/分析在餐點開始不久後，因您的設定而產生的 SMB 大小。 逐步調整，並且一次不要更改超過 1 或 2 個參數。
 
 設定必須對於你不同的飲食種類足夠有效。
 ```
