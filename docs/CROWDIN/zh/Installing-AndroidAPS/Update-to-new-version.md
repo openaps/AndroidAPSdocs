@@ -31,9 +31,9 @@
 
 ## 2. 更新本地副本
 
-    {admonition} WARNING
+    {admonition} 警告
     :class: warning
-    If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../Installing-AndroidAPS/building-AAPS), as this guide will not work for you!
+    如果您是從早於 2.8.x 的版本更新，請遵循指示進行 [新複製](../Installing-AndroidAPS/building-AAPS)，因為此指南不適用於您！
 
 * 使用 Android Studio 開啟您現有的 AAPS 項目。 您可能需要選擇您的項目。 (雙擊) 點擊 AAPS 項目。
     
