@@ -33,7 +33,7 @@ Regularly export your **AAPS** settings after completing each **objective**!
 - 按照 [Nightscout](../Installing-AndroidAPS/Nightscout.md) 頁面中的指示，確保 **Nightscout** 能接收並顯示此資料。
 - 請注意，**NSClient** 中的 URL 必須 **_不包含_ "/api/v1/"** 結尾 - 參見 [NSClient 偏好設定中的設定](Preferences-nsclient)。
 
-請注意 - _您可能需要等待下一次感測器的血糖讀數到來，**AAPS** 才能識別它。_
+請注意 - _您可能需要等待下一次感測器的血糖讀取值到來，**AAPS** 才能識別它。_
 
 ## 目標 2：學習如何控制 AAPS
 
