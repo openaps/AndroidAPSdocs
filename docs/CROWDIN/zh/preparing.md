@@ -1,230 +1,229 @@
-# Preparing to start with AAPS
+# 準備開始使用 AAPS
 
-Welcome. This documentation aims to guide users who are preparing to setup and start using the Android Artificial Pancreas System (**AAPS**).
+歡迎。 本文件旨在指導用戶準備設置並開始使用 Android 人工胰臟系統 (**AAPS**)。
 
-## Finding your way around the documentation
+## 如何在文件中找到所需訊息
 
-An **index** and explanation of the documentation structure can be found [here](index.md), you can also reach it by clicking on the **AAPS** symbol at the top left of the documentation. There you will find an overview of the purpose of the different documentation sections. You can also use the headings to the left of this page to navigate through the documentation. Finally, there is a handy search function, directly below the **AAPS** symbol.
+可以在[這裡](index.md)找到文件結構的**索引**和說明，您也可以點擊文件左上角的**AAPS**圖示進行查看。 在那裡，您會找到不同文件部分的概述和目的。 您也可以使用此頁面左側的標題來瀏覽文件。 最後，文件**AAPS**圖示下方有一個方便的搜索功能。
 
-We aim to make it easy to determine both the capabilities and limitations of **AAPS**. It can be disappointing to discover after investing time in reading the documentation that you might not have a compatible insulin pump or CGM, or that **AAPS** offers different functionality than hoped for.
+我們旨在讓用戶輕鬆了解**AAPS**的功能和限制。 花時間閱讀文件後發現您的胰島素幫浦或 CGM 不相容，或者**AAPS**無法提供您期望的功能，這可能會令人失望。
 
-Many experience-related details in the **AAPS** documentation make more sense when you are actually using **AAPS** in real-time. Just as it is difficult to learn a sport only by reading the rules, it takes a combination of learning the foundations of the rules for safely operating **AAPS** and then learning how best to apply those rules as you start to use **AAPS**.
+文件中與**AAPS**使用體驗相關的許多細節在您實際使用**AAPS**時會更有意義。 就像只閱讀規則很難學習一項運動一樣，安全操作**AAPS**的基礎規則學習與開始使用**AAPS**後的應用相結合，才能有效掌握。
 
 (preparing-safety-first)=
 
-## Safety First
-“With great power comes great responsibility…”
+## 安全第一
+“能力越大，責任越大……”
 
-### Technical safety
-**AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](Usage/Objectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
+### 技術安全
+**AAPS**具有一套廣泛的安全功能。 這些功能會透過逐步完成一系列[目標](Usage/Objectives.md)，包括測試特定參數並回答選擇題，逐步解除限制。 當成功完成目標後，**AAPS**的功能會逐步解鎖。 此過程允許用戶在從開環模式到閉環模式的過程中安全過渡，同時學習**AAPS**的不同功能。
 
-The [Objectives](Usage/Objectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The [Objectives](Usage/Objectives.md) aim to minimise these issues.
+[目標](Usage/Objectives.md)設計旨在為用戶提供最好的**AAPS**入門體驗，考慮到了**AAPS**開發者觀察到的新用戶典型錯誤和趨勢。 初學者因為經驗不足或過於急切開始使用**AAPS**而犯錯，或忽略了關鍵點。 這些[目標](Usage/Objectives.md)旨在盡量減少這些問題。
 
-### Medical safety
+### 醫療安全
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
 :class: danger
-Caution is advised concerning rapid improvements in blood glucose control and lowering of HbA1c 
+對於血糖控制迅速改善與 HbA1c 降低，建議要謹慎。 
 ```
 
-An important safety consideration is that a **rapid reduction in HbA1c and improved blood glucose control in those who have had elevated glucose levels for some time can cause permanent damage**. Many people with diabetes are unaware of this, and not all clinicans make their patients aware of this issue.
+一個重要的安全考量是，對於長期血糖升高的人來說，**HbA1c 的快速降低和血糖控制的改善可能會導致永久性損害**。 許多糖尿病患者並不知道這一點，而且並非所有臨床醫生都會提醒患者這個問題。
 
-This damage can include **sight loss, and permanent neuropathy (pain)**. It is possible to avoid this damage occuring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 10.6 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
+這種損害可能包括**視力喪失和永久性神經病變（疼痛）**。 透過逐步降低平均血糖水平，可以避免這些損害的發生。 如果您目前的 HbA1c 升高並打算使用**AAPS**（或任何其他閉環系統），_請_在開始之前與您的醫療團隊討論這一潛在風險，並與他們協商逐步降低安全血糖目標的時間表。 您可以在**AAPS**中設置較高的血糖目標（目前，您可以選擇的最高目標是 10.6 mmol/L，您也可以維持一個相對較弱的設定），隨著時間的推移逐漸降低目標。
 
-#### How quickly can I reduce my HbA1c without risking permanent damage?
+#### 我可以多快降低 HbA1c 而不會冒永久性損害的風險？
 
-One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the Hba1C dropped 1%, 2% or 3% respectively over a 6 month period. They suggested that the **"decrease in HbA1c value during any 6-month period should be limited to less than 2% in order to prevent the progression of retinopathy....Too rapid a decrease at the initiation of glycemic control could cause severe or transient exacerbation of the progression of retinopathy."**
+一項針對 76 名患者的回顧性[研究](https://pubmed.ncbi.nlm.nih.gov/1464975/)報告稱，如果 HbA1c 在 6 個月內下降 1%、2% 或 3%，視網膜病變進展的風險分別增加 1.6 倍、2.4 倍和 3.8 倍。 他們建議**"在任何 6 個月內 HbA1c 的降低幅度應限制在 2% 以內，以防止視網膜病變的進展...在開始血糖控制時，降低過快可能會導致視網膜病變進展的嚴重或暫時性惡化。" **
 
-N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for a HbA1c calculator tool.
+N.B. 如果您使用不同的 HbA1c 單位（mmol/mol 而非 %），請點擊[此處](https://www.diabetes.co.uk/hba1c-units-converter.html)使用 HbA1c 計算工具。
 
-In another retrospective [evaluation](https://academic.oup.com/brain/article/138/1/43/337923) of 954 patients, researchers noted that:
+在另一項針對 954 名患者的回顧性[評估](https://academic.oup.com/brain/article/138/1/43/337923)中，研究人員指出：
 
-**"With a decrease in HbA1c of 2–3% points over 3 months there was a 20% absolute risk of developing treatment-induced neuropathy in diabetes, with a decrease in HbA1c of >4% points over 3 months the absolute risk of developing treatment-induced neuropathy in diabetes exceeded 80%."**
+**"HbA1c 在 3 個月內降低 2–3% 時，治療誘發糖尿病神經病變的絕對風險為 20%；而 HbA1c 在 3 個月內降低超過 4% 時，絕對風險超過 80%。"**
 
-A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this work agreed that to avoid complications **the goal should be to reduce A1c by <2% over 3 months.** You can read other reviews on the topic [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) and [here](https://www.mdpi.com/1999-4923/15/7/1791).
+針對這項研究的一篇[評論](https://academic.oup.com/brain/article/138/1/2/340563)同意為了避免併發症，**目標應是在 3 個月內將 HbA1c 降低不超過 2%**。您可以在[這裡](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf)和[這裡](https://www.mdpi.com/1999-4923/15/7/1791)閱讀其他相關評論。
 
-It is generally recognised that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
+通常認為，_新診斷的_ 1 型糖尿病患者（通常在診斷時 HbA1c 非常高，在開始胰島素治療之前）可以立即迅速降低 HbA1c，而不會遇到這些風險，因為他們的血糖水平未長期升高。 然而，這仍然是一個需要與您的臨床醫生討論的考慮因素。
 
-### No SGLT-2 inhibitors
+### 禁止使用 SGLT-2 抑制劑
 
 ```{admonition} NO SGLT-2 inhibitors
 :class: danger
-SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous. 
+SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收。 Gliflozins 會無法預測地降低血糖水平，因此在使用類似 AAPS 的閉環系統時，絕對不能服用這類藥物！ 這會導致酮酸中毒和/或低血糖的重大風險！ 該藥物與降低基礎率以提高血糖水平的系統結合使用尤其危險。 
 
-In a nutshell:
-- **Example 1: risk of Hypo**
->During lunch, you use **AAPS** to bolus based on consuming 45g of glucose. The problem is that unbeknownst to AAPS, the inhibitors cause the body to eliminate some of the carbs resulting in your body having too much insulin compared to the absorbed Carbs, resulting in hypoglycemia.
+簡而言之：
+- **範例 1: 低血糖風險**
+>在午餐期間，您使用 **AAPS** 根據攝取 45g 葡萄糖進行注射。 問題是，由於<strong x-id="1">AAPS</strong>未知道抑制劑使身體排除了一些碳水化合物，導致攝取的胰島素過多，最終引發低血糖。
 
-- **Example 2: risk of Ketoacidosis**
->The inhibitors eliminate some of the carbs in the background causing a reduction in your BG. **AAPS** will automatically instruct the pump to decrease insulin intake  including basal. Over time this can result  in your  BG remaining below target value to the point where the body does not have enough background insulin to absorb any carbs resulting in Ketoacidosis. Ordinarily, Ketoacidosis  develops in T1D patients because their pump fails which would trigger alerts on their phone and be noticeable due to a high BG value. However, the danger with Gliflozins  is that there would be no AAPS alerts as  the pump remains operational and the BG potentially remains within target.  
+- **範例 2: 酮症酸中毒風險**
+>抑制劑消除了一些背景中的碳水化合物，導致您的血糖降低。 **AAPS** 將自動指示幫浦減少胰島素攝取，包括基礎。 隨著時間的推移，這可能導致血糖保持在目標值以下，直到身體沒有足夠的背景胰島素來吸收碳水化合物，最終引發酮酸中毒。 通常，1 型糖尿病患者會因為幫浦故障而發展成酮酸中毒，這會觸發手機警報，並透過血糖值升高來顯示出來。 然而，使用 Gliflozins 的危險在於，<strong x-id="1">AAPS</strong> 不會發出警報，因為幫浦仍然正常運作，且血糖可能保持在目標範圍內。  
 
-Common brand names of SGLT-2 inhibitors include: Invokana, Farxiga, Jardiance, Glyxambi, Synjardy, Steglatro, and Xigduo XR, others.
+常見的 SGLT-2 抑制劑品牌名稱包括：Invokana、Farxiga、Jardiance、Glyxambi、Synjardy、Steglatro 和 Xigduo XR 等。
 ```
 
 
-### Key principles of looping with AAPS
+### 使用 AAPS 循環的關鍵原則
 
-The key principles and concepts of looping must be understood before using **AAPS**. This is achieved by investing your personal time into reading the **AAPS** documentation, and completing the Objectives which aim to provide you with a solid platform for safe and effective use of **AAPS**. The volume of **AAPS** documentation may seem overwhelming at first but be patient and trust the process - with the proper approach, you'll get there!
+在使用**AAPS**之前，必須了解循環的關鍵原則和概念。 這需要您投入個人時間來閱讀**AAPS**文件，並完成目標，這些目標旨在為安全和有效使用**AAPS**提供堅實的基礎。 **AAPS**文件的內容量可能一開始會讓人感到不知所措，但請保持耐心並相信過程 - 使用正確的方法，您會逐漸掌握的！
 
-The speed of progression will depend upon the individual, but be aware that completion of all the objectives typically takes 6 - 9 weeks. Many people start to build, install and setup **AAPS** well in advance of starting to use it. To aid with this, the system has a "virtual pump" which can be used during completion of the early objectives, so that you can become familiar with **AAPS** without actually using it to deliver insulin. A detailed breakdown of the timeline is given below, be aware that by objective 8 of **AAPS** you are closed looping, the later objectives add in additional features like **SMS commands** and **automations** which are useful to some users, but not essential to the core function of **AAPS**.
+進度的速度取決於個人，但完成所有目標通常需要 6 - 9 週的時間。 許多人會在開始使用**AAPS**之前就開始構建、安裝和設置。 為了幫助這一過程，系統提供了“虛擬幫浦”，可以在完成早期目標時使用，這樣您可以熟悉**AAPS**，而不需要實際使用它來輸送胰島素。 以下提供了詳細的時間表，請注意，當您完成**AAPS**的目標 8 時，您已進入閉環模式，後期目標包括一些附加功能，例如**SMS 指令**和**自動化**，這對某些用戶很有用，但對**AAPS**的核心功能不是必需的。
 
-Success with **AAPS** requires a proactive approach, a willingness to reflect on the BG data and flexibility to make the necessary adjustments to **AAPS** in order to improve your outcomes. Just as it is nearly impossible to learn to play a sport by reading about the rules alone, the same can be said of **AAPS**.
+成功使用**AAPS**需要積極的態度，願意反思血糖資料，並靈活調整**AAPS**以改善您的結果。 就像僅透過閱讀規則來學習運動幾乎是不可能的，同樣的道理也適用於**AAPS**。
 
-#### Plan for delays and minor issues in getting everything set up and running
+#### 為設定和運作所有功能可能出現的延誤和小問題做好準備
 
-In the preliminary stages of getting started with **AAPS**, you may experience difficulties getting all the components of the loop communicating effectively with each other (and potential followers), and when fine-tuning your settings. Some glitches cannot be resolved until **AAPS** is used in everyday life, but plenty of help is available on the Facebook group and Discord. Please plan accordingly and choose "good" times, like a quiet morning of a weekend (i.e. not late at night or when you are tired, or before a big meeting or travel) to troubleshoot and resolve issues.
+在**AAPS**的初步階段，您可能會遇到將循環的所有組件（以及潛在的追蹤者）有效通訊以及微調設置的困難。 有些問題只有在日常生活中使用**AAPS**時才能解決，但在 Facebook 群組和 Discord 上有大量幫助可供使用。 請相應地進行計劃，並選擇“適當的”時間，例如週末的安靜早晨（即不要在深夜或感到疲倦時，也不要在重要會議或旅行之前）進行故障排除和解決問題。
 
-#### Technology compatibility
+#### 技術相容性
 
-**AAPS** is only compatible with certain types of insulin pumps, CGMs and phones, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read the [CGM](Configuration/BG-Source.md), [pump](Getting-Started/Pump-Choices.md) and [phone](Hardware/Phoneconfig.md) sections.
+**AAPS**僅與某些類型的胰島素幫浦、CGM 和手機相容，有些技術在某些國家/地區可能無法使用。 為避免任何失望或沮喪，請閱讀[CGM](Configuration/BG-Source.md)、[幫浦](Getting-Started/Pump-Choices.md)和[手機](Hardware/Phoneconfig.md)部分。
 
-#### App build time and progressing to full looping
+#### 應用程序構建時間和進入完整閉環的進度
 
-The time to build the **AAPS** app  depends on your level of expertise and technical ability. Typically for inexperienced users, it can take up to half a day or a full day (with help from the community) in order to build **AAPS**. The process will significantly speed up for newer **AAPS** versions, as you become more experienced.
+構建**AAPS**應用程序的時間取決於您的專業知識和技術能力。 通常對於沒有經驗的用戶，構建**AAPS**可能需要半天到一天的時間（有社區的幫助）。 隨著您變得更加有經驗，更新版**AAPS**的構建過程會顯著加快。
 
-To aid the build process there are dedicated sections:
+為了幫助構建過程，有專門的部分：
 
-- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](Getting-Started/FAQ.md) K);
+- 列出**AAPS**中可能出現的常見錯誤的問答清單，請參閱[常見問題（K 部分）](Getting-Started/FAQ.md)；
 
-- “[How to install AAPS](Installing-AndroidAPS/Building-APK.md)? (Section D) which includes [Troubleshooting](Usage/troubleshooting.md) Subsection.
+- “[如何安裝 AAPS](Installing-AndroidAPS/Building-APK.md)？” （D 部分），包括[故障排除](Usage/troubleshooting.md)子部分。
 
-How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#how-long-will-it-take-to-set-everything-up))
-
-
-#### Keystore & configuration settings export file
-
-A “keystore” (.jks file) is a password encrypted file unique to your own copy of **AAPS**. Your Android phone uses it to ensure that nobody else can upgrade your own copy without the keystore. In short, as part of the **AAPS** build, you should:
-
-1.  Save the your keystore file (.jks file used to sign your app) in a safe place;
-
-2.  Keep a note of your password for your keystore file.
+達到閉環控制的時間因人而異，但使用 AAPS 達到完全閉環控制的大致時間表可以參考[>此處](#how-long-will-it-take-to-set-everything-up)。
 
 
-This will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. On average, there will be 2 **AAPS** updates required each year.
+#### Keystore 和配置設置匯出文件
 
-In addition, **AAPS** provides the ability to [export all your configuration settings](Usage/ExportImportSettings.md). This ensures that you can safely recover your system while changing phones, upgrading/reinstalling the application with minimum disruption. 
+“Keystore”（.jks 文件）是一個加密的文件，特定於您自己的**AAPS**副本。 您的 Android 手機使用它來確保沒有人可以在沒有 keystore 的情況下升級您的副本。 簡單來說，作為**AAPS**構建的一部分，您應該：
 
-#### Troubleshooting
+1.  將您的 keystore 文件（用於簽署應用程序的 .jks 文件）儲存在安全的地方；
 
-Please feel free to reach out to the AAPS community if there is anything you feel unsure about - there is no such thing as a silly question! All users with various levels of experience are encouraged to ask questions. Response times to questions are usually quick due to the number of **AAPS** users.
-
-##### [ask on the AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/)
-
-##### [ask on the AAPS Discord channel](https://discord.gg/4fQUWHZ4Mw)
+2.  記下您的 keystore 文件密碼。
 
 
+這將確保每次建立**AAPS**的更新版本時，您都可以使用相同的 keystore 文件。 平均而言，每年需要更新**AAPS**兩次。
+
+此外，**AAPS**還提供了[匯出所有配置設置](Usage/ExportImportSettings.md)的功能。 這確保您可以在更換手機、升級/重新安裝應用程序時安全恢復系統，並將干擾降至最低。 
+
+#### 疑難排解
+
+如果您對任何問題感到不確定，請隨時聯繫**AAPS**社區——沒有什麼問題是愚蠢的！ 鼓勵具有不同經驗水平的所有用戶提出問題。 由於**AAPS**用戶眾多，問題的回應時間通常很快。
+
+##### [在 AAPS Facebook 社群上詢問](https://www.facebook.com/groups/AndroidAPSUsers/)
+
+##### [在 AAPS Discord 頻道上詢問](https://discord.gg/4fQUWHZ4Mw)
 
 
 
-#### [Where to go for help](Where-To-Go-For-Help/Background-reading.md)?
-
-This section is aimed to provide new users with links on resources in order to get help including accessing community support made up of both new and experienced users who can clarify questions, and resolve the usual pitfalls that come with AAPS.
-
-#### [Section For Clinicians](Resources/clinician-guide-to-AndroidAPS.md)
-
-This is a [section specificially for clinicians](Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
-
-## What are we going to build and install?
-
-This diagram provides an overview of the key components (both hardware and software) of the **AAPS** system:
-
-![preparing_overview](./images/preparing_images/AAPS_preparing_overview_01.png)
 
 
-In addition to the three basic hardware components (phone, pump, glucose sensor), we also need: 1) The **AAPS** app 2) A reporting server and 3) A continuous glucose monitor (CGM) app
+#### [去哪裡尋求幫助](Where-To-Go-For-Help/Background-reading.md)？
 
-### 1) An Android Phone Application: **AAPS**
+本節旨在為新用戶提供資源連結，以便獲得幫助，包括由新手和有經驗的用戶組成的社區支援，這些用戶可以幫助解答問題並解決使用 AAPS 時常見的問題。
 
-**AAPS** is an app that runs on android smartphones & devices. You are going to build the **AAPS** app (an apk file) yourself, using a step-by-step guide, by downloading the **AAPS** source code from GitHub, installing the necessary programs (Android Studio, GitHub desktop) on your computer and building your own copy of **AAPS** app. You will then transfer the **AAPS** app across to your smartphone (by email, USB cable _etc._) and install it.
+#### [臨床醫師專區](Resources/clinician-guide-to-AndroidAPS.md)
 
-### 2) A reporting server: NightScout (Tidepool*)
+這是一個[專為臨床醫師設立的專區](Resources/clinician-guide-to-AndroidAPS.md)，希望了解更多關於 AAPS 及開源人工胰臟技術。 在簡介中還提供了[如何與您的臨床團隊討論 AAPS](introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team)的指南。
 
-In order to fully take advantage of **AAPS**, you need to setup a Nightscout server. You can do this yourself (link to instructions) or alternatively, pay a small fee for a managed Nightscout service to be set up for you (link to T1 pal 10.be etc). Nightscout is used to collect data from **AAPS** over time and can generate detailed reports correlating CGM and insulin patterns. It is also possible for caregivers to use Nightscout to remotely communicate with the **AAPS** application, to oversee their child’s diabetic management. Such remote communication features include real-time monitoring of glucose and insulin levels, remote bolusing of insulin (by texting) and meal announcements. Attempting to analyse your diabetes performance by looking at CGM data separately from the pump data is like driving a car where the driver is blind and the passenger describes the scene.  Tidepool is also available as an alternative to Nightscout, for AAPS versions 3.2 and later.
+## 我們要構建和安裝什麼？
 
-### 3) CGM sensor app
+此圖表提供了**AAPS**系統的主要組件（硬體和軟體）的概述：
 
-Depending on your glucose sensor/CGM, you will need a compatible app for receiving glucose readings and sending them to **AAPS**. The different options are shown below and more information is given in the [compatible CGMs section](./Configuration/BG-Source.md):
+![準備總覽](./images/preparing_images/AAPS_preparing_overview_01.png)
+
+
+除了三個基本硬體組件（手機、胰島素幫浦、血糖傳感器）之外，我們還需要：1) **AAPS**應用程式 2) 報告伺服器3) 持續血糖監測儀（CGM）應用程式
+
+### 1) Android 手機應用程式：**AAPS**
+
+**AAPS**是一個運作在 Android 智慧型手機和裝置上的應用程式。 You are going to build the **AAPS** app (an apk file) yourself, using a step-by-step guide, by downloading the **AAPS** source code from GitHub, installing the necessary programs (Android Studio, GitHub desktop) on your computer and building your own copy of **AAPS** app. 然後，您將透過電子郵件、USB 線等方式將**AAPS**應用程式傳輸到您的智慧型手機並安裝。
+
+### 2) 報告伺服器：NightScout（或 Tidepool）
+
+為了充分利用**AAPS**，您需要設置 Nightscout 伺服器。 您可以自己設置（連線至指導），或者支付小額費用讓人幫您設置受管的 Nightscout 服務（鏈接至 T1 Pal 10.be 等）。 Nightscout 用於收集**AAPS**隨時間推移的資料，並能夠生成詳細的報告，以關聯 CGM 和胰島素模式。 照護者還可以使用 Nightscout 遠端與**AAPS**應用程式通訊，以監控其孩子的糖尿病管理。 這些遠端通訊功能包括即時監控血糖和胰島素水平、遠端注射胰島素（透過發送訊息）以及餐點通知。 試圖將 CGM 資料與幫浦資料分開進行分析，就像駕駛時司機是盲人，乘客在旁描述場景一樣。  從 AAPS 3.2 版開始，也可以使用 Tidepool 作為 Nightscout 的替代方案。
+
+### 3) CGM 傳感器應用程式
+
+根據您的血糖傳感器/CGM，您將需要一個相容的應用程式來接收血糖資料並將其發送到**AAPS**。 以下展示了不同的選項，更多訊息請參閱[相容的 CGM 部分](./Configuration/BG-Source.md)：
 
 ![dexcom_options](./images/preparing_images/AAPS_connectivity_Dex_02.png) ![libre_options](./images/preparing_images/AAPSconnectivity_libre.png) ![eversense_options](./images/preparing_images/AAPS_connectivity_eversense.png)
 
-### Maintenance of the **AAPS** system
+### AAPS 系統的維護
 
-Both **Nightscout** and **AAPS** must be updated approximately once a year, as improved versions are released. In some cases, the update can be delayed, in others it is strongly recommended or considered essential for safety. Notification of these updates will be given on the Facebook groups and Discord servers. The release notes will make it clear what the scenario is. There are likely to be many people asking similar questions to you at update time, and you will have support for performing the updates.
+**Nightscout**和**AAPS**必須大約每年更新一次，隨著改進版本的發佈。 在某些情況下，更新可以延後，但在其他情況下，更新被強烈建議或視為安全的重要措施。 這些更新的通知將在 Facebook 群組和 Discord 伺服器上發佈。 發佈說明將明確說明具體情況。 在更新時，可能會有許多人與您提出類似問題，您將獲得支援來進行更新。
 
 (preparing-how-long-will-it-take?)=
-## How long will it take to set everything up?
+## 設置所有內容需要多長時間？
 
-As mentioned earlier, using **AAPS** is more of a “journey” that requires investment of your personal time. It is not a one-time setup. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 2 to 3 months overall. It is therefore suggested that you prioritise building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5). Here is an approximate timeframe:
+如前所述，使用**AAPS**更像是一段旅程，需要您投入個人時間。 這不是一次性的設置。 目前估計，從構建**AAPS**、安裝和配置**AAPS**和**CGM**軟體，到從開放循環進入混合閉環循環的過程，大約需要 2 到 3 個月。 因此，建議您盡快優先構建**AAPS**應用程式並完成早期目標，即使您仍在使用其他胰島素輸送系統（在完成目標 5 之前，您可以使用虛擬幫浦）。 以下是大致的時間表：
 
-| Tasks                                                                                 |   Approx time   |
-| ------------------------------------------------------------------------------------- |:---------------:|
-| initial reading of the documentation:                                                 |    1-2 days     |
-| installing/configuring PC to allow the build:                                         |    2-8 hours    |
-| building a Nightscout server:                                                         |     1 hour      |
-| installing CGM app (xdrip or BYODA or …)                                              |     1 hour      |
-| configuring CGM->xdrip->APPS initially:                                               |     1 hour      |
-| configuring AAPS->pump initially:                                                     |     1 hour      |
-| configuring AAPS->NightScout (reporting only):                                        |     1 hour      |
-| optional (for Parents) - configuring NightScout <-> **AAPS** & NSFollowers:           |     1 hour      |
-| Objective 1: Setting up visualization and monitoring, analysing basals and ratios     |     1 hour      |
-| Objective 2: Learn how to control AAPS                                                |     2 hour      |
-| Objective 3: Prove your knowledge                                                     |  Up to 14 days  |
-| Objective 4: Starting on an open loop                                                 |     7 days      |
-| Objective 5: Understanding your open loop, including its temp basal recommendations   |     7 days      |
-| Objective 6: Starting to close the loop with Low Glucose Suspend                      | Up to 5-14 days |
-| Objective 7: Tuning the closed loop, raising maxIOB and gradually lowering BG targets |  Up to 7 days   |
-| Objective 8: Adjust basals and ratios if needed, and then enable autosens             | Up to 7-14 days |
-| Objective 9: Enabling additional oref1 features, such as super micro bolus (SMB)      |  Up to 14 days  |
-| Objective 10: Automation                                                              |      1 day      |
-
-
-Once you are fully operational on **AAPS**, you will need to fine tune your setting parameters in order to improve your overall diabetic management.
-
-## Requirements
-
-### Medical considerations
-
-In addition to the medical warnings in the [safety section](preparing-safety-frist) there are also different parameters, depending on which insulin you are using in the pump.
-
-#### Insulin choice
-
-**AAPS** calculations are based on insulin concentrations of 100U/ml (same as pump’s standard). The following types of insulin profile presets are supported:
-
-- Rapid-Acting Oref: Humalog/NovoRapid/NovoLog
-- Ultra-Rapid ORef:  Fiasp
-- Lyumjev:
-
-For Experimental/Advanced users only:
-- Free-Peak Oref: Allows you to define peak of the insulin activity
+| 任務                                                   |   大致時間    |
+| ---------------------------------------------------- |:---------:|
+| 初步閱讀文件：                                              |   1-2 天   |
+| 安裝/配置電腦以允許構建：                                        |  2-8 小時   |
+| 建立 Nightscout 伺服器：                                   |   1 小時    |
+| 安裝 CGM 應用程式 (xdrip 或 BYODA 或其他)                      |   1 小時    |
+| 初始化配置 CGM->xdrip->AAPS：                              |   1 小時    |
+| 初始化配置 AAPS->胰島素幫浦：                                   |   1 小時    |
+| 初始化配置 AAPS->NightScout（僅報告）：                         |   1 小時    |
+| 選擇性（對於家長）- 配置 NightScout <-> **AAPS** 與 NSFollowers： |   1 小時    |
+| 目標 1：設置可視化與監控，分析基礎率與比率                               |   1 小時    |
+| 目標 2：學習如何控制 AAPS                                     |   2 小時    |
+| 目標 3：證明你的知識                                          |  最多 14 天  |
+| 目標 4：開始使用開環                                          |    7 天    |
+| 目標 5：理解你的開環，包括其臨時基礎率建議                               |    7 天    |
+| 目標 6：使用低血糖暫停功能開始閉環                                   | 最多 5-14 天 |
+| 目標 7：調整閉環，增加最大 IOB 並逐漸降低血糖目標                         |  最多 7 天   |
+| 目標 8：如有需要，調整基礎率與比率，然後啟用自動感應                          | 最多 7-14 天 |
+| 目標 9：啟用額外的 oref1 功能，例如超級微量注射 (SMB)                   |  最多 14 天  |
+| 目標 10：自動化                                            |    1 天    |
 
 
-### Technical
+一旦你完全掌握 **AAPS**，你將需要微調你的設置參數，以改善整體糖尿病管理。
 
-This documentation aims to reduce the technical expertise required to an absolute minimum. You will need to use your computer to build the **AAPS** application in Android Studio (step-by-step instructions). You also need to set up a server over the internet in a public cloud, configure several android phone apps and develop expertise in diabetes management. This can be  achieved by moving step-by-step, being patient, and help from the **AAPS** community. If you are already able to navigate the internet, manage your own Gmail emails, and keep your computer up-to-date, then it is a feasible task to build the **AAPS**. Just take your time.
+## 需求
 
-### Smartphones
+### 醫療考量
 
-#### AAPS and Android Versions
-The current version of **AAPS** (3.2) requires an Android smartphone with Google **Android 9.0 or above**. If you are considering buying a new phone, (as of July 2024), Android 13 is preferred. Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons, however for users unable to use a device with Android 9.0 or newer, earlier versions of  **AAPS** compatible for older Android versions like [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) and [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2), remain available from previous releases (check the release notes for legacy versions).
+除了 [安全部分](preparing-safety-frist) 中的醫療警告外，根據你在幫浦中使用的胰島素類型，還有不同的參數需要考量。
 
-#### Smartphone model choice
-The exact model you buy depends on the desired function(s). There are two archived spreadsheets of compatible [smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) and [smartphones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). The spreadsheets are no longer updated because there are so many possible models, therefore we now suggest searching the support groups (Facebook or Discord) for "phone", or the specific model you are thinking of getting. Create a new post to ask questions about it if you still need more information.
+#### 胰島素選擇
 
-To make a donation of smartphone or smartwatch models that still need testing, please email [donations@androidaps.org](mailto:donations@androidaps.org).
+**AAPS** 的計算是基於 100U/ml 的胰島素濃度（與幫浦的標準一致）。 目前支援的胰島素輪廓預設如下：
 
-- [List of tested phones](../Getting-Started/Phones.md)
-- [Jelly Settings](../Usage/jelly.md)
-- [Huawei Settings](../Usage/huawei.md)
+- 速效型 Oref：Humalog/NovoRapid/NovoLog
+- 超速效型 ORef：Fiasp
+- Lyumjev：
 
-Users are encouraged to keep their phone Android version up-to-date, including with security parameters. However, if you are new with **AAPS** or are not a technical expert you might want to delay updating your phone until others have done so and confirmed it is safe to do so, on our various forums.
+僅供實驗/進階用戶：
+- 自由峰值 Oref：允許你自行定義胰島素活性的峰值
+
+
+### 技術性
+
+本文件旨在將技術專業知識的需求降到最低。 你將需要使用電腦在 Android Studio 中構建 **AAPS** 應用程式（逐步指導）。 你還需要在公共雲端上設定一個伺服器，配置幾個 Android 手機應用程式，並發展糖尿病管理的專業知識。 這可以透過逐步行動、保持耐心並從 **AAPS** 社群中獲得幫助來實現。 如果你已經能夠瀏覽互聯網、管理自己的 Gmail 郵件並保持電腦更新，那麼構建 **AAPS** 是一項可行的任務。 只需花點時間。
+
+### 智慧型手機
+
+#### AAPS 與 Android 版本
+當前版本的 **AAPS**（3.2）需要使用 Google **Android 9.0 或更高版本** 的 Android 智慧型手機。 如果你打算購買一部新手機，截至 2024 年 7 月，建議選擇 Android 13。 用戶強烈建議出於安全原因保持 **AAPS** 的最新版本，不過對於無法使用 Android 9.0 或更新設備的用戶，較早版本的 **AAPS** 仍然可用於舊版 Android，例如 [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) 和 [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2)，可以從過去的版本中找到（查看舊版本的發行說明）。
+
+#### 智慧型手機型號選擇
+您選購的具體型號取決於所需的功能。 這裡有兩個關於相容的[智慧型手機](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952)和[智慧型手機與智慧型手錶](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)的歷史電子表格。 由於可能的型號眾多，這些電子表格已不再更新，因此我們建議在支援群組（Facebook 或 Discord）中搜尋“手機”或您考慮購買的具體型號。 如果仍需更多資訊，請發佈新帖來詢問。
+
+如欲捐贈仍需測試的智慧型手機或智慧型手錶型號，請發送電子郵件至[donations@androidaps.org](mailto:donations@androidaps.org)。
+
+- [已測試的手機清單](../Getting-Started/Phones.md)
+- [Jelly 設置](../Usage/jelly.md)
+- [華為設定](../Usage/huawei.md)
+
+我們鼓勵用戶保持手機 Android 版本的最新狀態，包括安全參數。 然而，如果您是 **AAPS** 的新手，或者不是技術專家，您可能希望等到其他人確認更新是安全的後再進行更新，這可以透過我們的各大論壇確認。
 
 ```{admonition} delaying Samsung phones updates
 :class: warning
-Samsung has an unfortunate track record of forcing updates of their phones which cause bluetooth connectivity issues. To disable these forced updates you need to switch the phone to "developper mode" by:
- go to settings and about then software information, then tap build number u til it confirms you have unlocked developer mode. Got back to main settings menu and you should see a new developer options menu item. Open developer options and scroll to find auto system update and turn it off
+三星有迫使更新其手機的糟糕紀錄，這會導致藍牙連線問題。 要停用這些強制更新，您需要將手機切換到“開發者模式”，具體步驟如下：進入設置並點擊“關於”，然後點擊軟體資訊，連續點擊版本號直到確認您已解鎖開發者模式。 返回設置主選單，您應該會看到一個新的“開發者選項”選單項。 打開開發者選項並向下滾動以找到自動系統更新並關閉它
 ```
 
 ```{admonition} Google Play Protect potential Issue
 :class: warning
-There have been several reports of **AAPS** being shut down arbitrarily by Google Play Protect every morning. If this happens you will have to go to the google play options and disable “Google Play Protect”. Not all  phone models or all Android versions are affected..
+每個早晨都有幾份報告指出 **AAPS** 被 Google Play Protect 任意關閉。 如果發生此問題，您需要進入 Google Play 的選項，停用 “Google Play Protect”。 並非所有手機型號或所有 Android 版本都會受到影響。
 ```
 
