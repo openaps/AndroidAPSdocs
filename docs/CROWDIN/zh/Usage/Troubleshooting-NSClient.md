@@ -34,7 +34,7 @@ Android 可能會讓你的手機進入睡眠模式。 檢查你的手機電源�
 
 Azure 連線問題的解決方法是在應用程式設定中將 HTTP 協議設為2.0，並將 Websockets 設為開啟。
 
-* Nightscout 沒有血糖讀數
+* Nightscout 沒有血糖讀取值
 
 如果 AAPS 正常連線到 Nightscout 但血糖顯示為 N/A。 前往 NSCLIENT 標籤，按右上角的三點選單，點擊 NSClient 偏好設定 -> 同步，打開「接收/回填 CGM 資料」。
 
