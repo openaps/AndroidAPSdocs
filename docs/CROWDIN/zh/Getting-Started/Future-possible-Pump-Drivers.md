@@ -1,138 +1,138 @@
-# Future (possible) Pump Drivers
+# 未來（可能）的幫浦驅動程式
 
-This is list of some Pumps floating around there, and status of support for them in any of Looping systems and then status in AAPS. On end there is some info, what is required for a pump to be "Loop capable".
+這是一份目前市面上一些幫浦的清單，包含它們在任何閉環系統中的支援狀態，以及在 AAPS 中的狀態。 最後有一些關於幫浦成為“可閉環”的需求資訊。
 
-## Pumps that are Loopable
-
-* * *
-
-### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
-
-**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
-
-**Hardware requirement for AAPS:** None. It's BT enabled.
-
-**Comments:** Dose version of pump had very heavy encryption added, so there is big probababilty that this pump won't be supported by AAPS in near future (or ever). We had developer working with Ypsomed and helping with medical trials, so maybe his version of driver will be alowed to be released, but this is just small possibility of that. You can find more information on our discord in channel "ypsopump-talk".
+## 可進行閉環的幫浦
 
 * * *
 
-### Kaleido ([Homepage](https://www.hellokaleido.com/))
+### Ypsomed 幫浦 ([官網](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**閉環狀態：** 1 - 1.5 版（2018 年第二季）不是閉環候選幫浦。 儘管它們具備藍牙 (BT) 通訊功能，但通訊非常有限且為單向：幫浦 -> 應用程式。2022 年 6 月（在德國），公司推出了新版本，暱稱為 DOSE（1.6 版），允許透過他們的應用程式設置注射劑量和臨時基礎率 (TBR)。公司計劃實施自己的閉環方案已被取消，轉而與 CamAPS 合作（支援已經實施），並使用他們的閉環解決方案。 更多資訊請參閱此[頁面](https://www.mylife-diabetescare.com/en/loop-program.html)
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**AAPS 硬體需求：**無。 它支援藍牙。
 
-* * *
-
-### Equil (pump from Aidex/GlucoRx/MicroTechMD) ([Homepage](https://www.glucorx.ie/glucorx-equil/))
-
-**Loop status:** Is a Loop candidate.
-
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
-
-**Comment:** Some people started looking into supporting pump in AAPS, but this is still in beginning phases. You can find more information on our discord in channel "equil".
+**評論：**DOSE 版幫浦具有非常強的加密，因此很可能 AAPS 在短期內（或永遠）不會支援此幫浦。 我們有一位開發者與 Ypsomed 合作，協助醫療試驗，因此他的驅動程式可能會被允許發布，但這只是小概率事件。 更多資訊請參閱我們在 Discord 的 “ypsopump-talk” 頻道。
 
 * * *
 
-### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
+### Kaleido ([官網](https://www.hellokaleido.com/))
 
-**Loop status:** Is a Loop candidate.
+**閉環狀態：** 目前尚未被任何閉環系統支援。 該幫浦是一個閉環候選者，但由於當時的協議未知，我認為這幫浦不會很快得到支援。
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
-
-**Comments:** There are some developers looking into decoding the protocol, but so far this is only in preliminary phases.
+**AAPS 硬體需求：**可能沒有。 它支援藍牙。
 
 * * *
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+### Equil（Aidex/GlucoRx/MicroTechMD 的幫浦）([官網](https://www.glucorx.ie/glucorx-equil/))
 
-**Loop status:** Not yet loopable.
+**閉環狀態：**是一個閉環候選者。
 
-While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
+**AAPS 硬體需求：**無。 看起來它支援藍牙。
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
-
-* * *
-
-### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
-
-**Loop status:** All 3 pumps will be Loop candidates.
-
-They plan to release t:Mobi first (previously called t:sport) at end of 2022 or in 2023. Afterwards they will release t:slim X3 (2023 maybe) and after that t:Mobi Tubeless. t:mobi's will be controlable only over phone app, while X3 will look similar as X2, with some new nifty features (remote update of firmware, remote control over phone app, etc).
-
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**評論：**一些人已經開始嘗試在 AAPS 中支援此幫浦，但這仍處於初步階段。 更多資訊請參閱我們在 Discord 的 “equil” 頻道。
 
 * * *
 
-### Medtronic Bluetooth
+### Accu-Chek Solo ([官網](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
+**閉環狀態：**是一個閉環候選者。
 
-### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
+**AAPS 硬體需求：**無。 看起來它支援藍牙。
 
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
-
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
-
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+**評論：**有一些開發者正在研究解碼協議，但目前僅處於初步階段。
 
 * * *
 
-## Pumps no longer sold (companies no longer operating)
+### Tandem: t:slim X2 ([官網](https://www.tandemdiabetes.com/))
 
-### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
+**閉環狀態：** 尚不可閉環。
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+雖然該公司過去決定不允許外部設備控制其幫浦，但最近幾年形勢似乎發生了變化。 公司決定升級他們的 t:slim X2 幫浦，使其能夠透過 t:connect 應用程式進行遠端控制，這意味著我們可能有機會在未來透過 AAPS 控制幫浦。 計劃中的新幫浦韌體預計很快發布（今年或明年，在無管幫浦 t:sport 推出之前）。 目前還沒有具體的細節，尚不清楚 t:connect 能夠進行哪些操作（注射肯定可以，其他未知）。
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**AAPS 硬體需求：**無。 看起來它支援藍牙。
 
-**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+* * *
 
-## Pumps that aren't Loopable
+### Tandem: t:Mobi、t:slim X3 和 t:Mobi 無管 ([官網](https://www.tandemdiabetes.com/about-us/pipeline))
+
+**閉環狀態：** 這三款幫浦都將是閉環候選者。
+
+他們計劃首先在 2022 年底或 2023 年推出 t:Mobi（以前稱為 t:sport）。 然後會在 2023 年推出 t:slim X3，之後推出 t:Mobi 無管。 t:Mobi 只能透過手機應用程式進行控制，而 X3 看起來會與 X2 相似，但會有一些新功能（如遠端更新韌體、透過手機應用程式進行遠端控制等）。
+
+**AAPS 硬體需求：**無。 看起來它支援藍牙。
+
+* * *
+
+### Medtronic 藍牙
+
+**評論：**這是一款即將推出的幫浦，計劃在未來幾年內推出，並計劃在 Tidepool Loop 軟體中支援 ([請參閱此文章](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration))。
+
+### Willcare 胰島素幫浦 ([官網](http://shinmyungmedi.com/en/))
+
+**閉環狀態：** 目前尚未是閉環候選者，但他們的員工已與我們聯繫，表示有興趣將幫浦擴展為可閉環（目前我認為它只缺少設定/取得設定檔的指令）。
+
+**AAPS 硬體需求：**無。 看起來它支援藍牙。
+
+**評論：**由於公司對與 AAPS 整合感興趣，他們可能會自行實施該功能。
+
+* * *
+
+## 已停止銷售的幫浦（公司不再運營）
+
+### Cellnovo 幫浦 ([參見 businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
+
+**閉環狀態：** 目前尚未被任何閉環系統支援。 該幫浦是一個閉環候選者，但由於當時的協議未知，我認為這幫浦不會很快得到支援。
+
+**AAPS 硬體需求：**可能沒有。 它支援藍牙。
+
+**產品說明：** 看起來公司決定退出幫浦業務。 您可以在這篇[文章](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)中查看更多資訊。
+
+## 不可閉環的幫浦
 
 ### Animas Vibe
 
-**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump business (J&J).
+**閉環狀態：** 無法閉環。 無遠端控制功能。 **說明：** 此幫浦已停止銷售。 公司已退出幫浦業務（強生公司）。
 
 * * *
 
 ### Animas Ping
 
-**Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
+**閉環狀態：** 無法閉環。 具有注射功能，但沒有 TBR 功能。 **說明：**Vibe 推出後，該幫浦停止銷售。
 
-## Requirements for pumps being loopable
+## 幫浦成為可閉環的需求
 
-**Prerequisite**
+**先決條件**
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
-- Protocol is hacked/documented/etc.
+- 幫浦必須支援某種遠端控制。 （藍牙、無線電頻率等）
+- 協議已被破解/記錄等。
 
-**Minimal requirement**
+**最低要求**
 
-- Set Temporary Basal Rate
-- Get Status
-- Cancel Temporary Basal Rate
+- 設置臨時基礎率
+- 取得狀態
+- 取消臨時基礎率
 
-**For oref1(SMB) or Bolusing:**
+**對於 oref1(SMB) 或注射：**
 
-- Set Bolus
+- 設置注射
 
-**Good to have**
+**可選功能**
 
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- 取消注射
+- 取得基礎設定檔（幾乎是必要的）
+- 設置基礎設定檔（可有可無）
+- 讀取歷史記錄 
 
-**Other (not required but good to have)**
+**其他（不是必需但有很好）**
 
-- Set Extended Bolus
-- Cancel Extended Bolus
-- Read History
-- Read TDD
+- 設置延長注射
+- 取消延長注射
+- 讀取歷史記錄
+- 讀取每日總劑量 (TDD)
 
 * * *
 
-### Other pumps support
+### 其他幫浦支援
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+如果您有其他幫浦想查看狀態，請在 Discord 上聯繫我們。
