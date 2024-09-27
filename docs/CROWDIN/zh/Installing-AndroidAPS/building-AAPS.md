@@ -1,432 +1,432 @@
-# 構建AAPS
+# Building AAPS
 
-## 自行建置，而不是下載
+## Build yourself instead of download
 
-**由於醫療設備的相關規範，AAPS應用程式（apk檔案）無法下載。 您可以合法地構建應用程式供自己使用，但不得將副本提供給他人！**
+**The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
 
-詳情請參閱[FAQ頁面](../Getting-Started/FAQ.md)。
+See [FAQ page](../Getting-Started/FAQ.md) for details.
 
-(構建APK推薦的電腦規格)=
+(Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 
-## 構建AAPS所需的電腦和軟體規格
+## Computer and software specifications for building AAPS
 
-- 請使用至少名為Hedgehog (2023.1.1) 的 **[Android Studio版本，或更近期的版本如Iguana、Jellyfish和Koala](https://developer.android.com/studio/)** 來構建apk。 舊版本的Android Studio需要先更新！
-- [Windows 32位系統](troubleshooting_androidstudio-unable-to-start-daemon-process) 不受Android Studio支援。 請記住，**64位CPU和64位作業系統是必備條件。** 如果您的系統不符合此條件，您需要更換受影響的硬體或軟體，或更換整個系統。
+- Please use the **[Android Studio version called at least Hedgehog (2023.1.1) or one more recent like Iguana, Jellyfish, and Koala](https://developer.android.com/studio/)** to build the apk. Older versions of Android Studio need to be updated first!
+- [Windows 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.
 
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-baqh">作業系統（僅限64位）</th>
-    <th class="tg-baqh">Windows 8或更高版本</th>
-    <th class="tg-baqh">Mac OS 10.14或更高版本</th>
-    <th class="tg-baqh">任何支援Gnome、KDE或Unity DE的Linux;&nbsp;&nbsp;GNU C Library 2.31或更新版本</th>
+    <th class="tg-baqh">OS (Only 64 bit)</th>
+    <th class="tg-baqh">Windows 8 or higher</th>
+    <th class="tg-baqh">Mac OS 10.14 or higher</th>
+    <th class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-baqh"><p align="center">CPU（僅限64位）</td>
-    <td class="tg-baqh">x86_64 CPU架構；第二代Intel Core或更新版本，或支援<a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a>的AMD CPU</td>
-    <td class="tg-baqh">ARM架構晶片，或支援<a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a>的第二代Intel Core或更新版本</td>
-    <td class="tg-baqh">x86_64 CPU架構；第二代Intel Core或更新版本，或支援AMD虛擬化（AMD-V）和SSSE3的AMD處理器</td>
+    <td class="tg-baqh"><p align="center">CPU (Only 64 bit)</td>
+    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">記憶體</td>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB或更多</td>
+    <td class="tg-baqh"><p align="center">RAM</td>
+    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">硬碟</td>
-    <td class="tg-baqh" colspan="3"><p align="center">至少30GB的可用空間。 建議使用SSD。</td>
+    <td class="tg-baqh"><p align="center">Disk</td>
+    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">解析度</td>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 最低要求<br></td>
+    <td class="tg-baqh"><p align="center">Resolution</td>
+    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">網際網路</td>
-    <td class="tg-baqh" colspan="3"><p align="center">寬頻</td>
+    <td class="tg-baqh"><p align="center">Internet</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
   </tr>
 </tbody>
 </table>
 
-**強烈建議（非必須）使用SSD（固態硬碟）而非HDD（硬碟），因為這將減少構建AAPS apk檔案時所需的時間。** 您仍然可以在構建 **AAPS** apk檔案時使用HDD。 如果這樣做，構建過程可能需要很長時間才能完成，但一旦開始，您可以讓它無需監控地執行。
+**It is strongly recommended (not mandatory) to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the AAPS apk file.**  You can still use a HDD when you are building the **AAPS** apk file. If you do, the building process may take a long time to complete, but once it has started, you can leave it running unattended.
 
-## 構建過程中的幫助與支援
+## Help and support during the building process
 
-如果您在構建 **AAPS** 應用程式的過程中遇到困難，請先參閱專門的[**故障排除Android Studio**](../Installing-AndroidAPS/troubleshooting_androidstudio) 部分。
+If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../Installing-AndroidAPS/troubleshooting_androidstudio) section, please consult that first.
 
-如果您認為構建指導中有任何錯誤、遺漏或困惑之處，或您仍然感到困難，請透過[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)聯繫其他 **AAPS** 用戶。 如果您想自行更改一些內容（例如更新螢幕截圖_等），請提交[拉取請求（PR）](../make-a-PR.md)。
+If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../make-a-PR.md).
 
-## 構建AAPS應用程式的逐步指南
+## Step-by-step guide to building the AAPS app
 
 ```{admonition} WARNING
 :class: warning
-如果您之前建置過 AAPS，則不需要再次執行以下所有步驟。
-請直接跳至 [更新指南](../Installing-AndroidAPS/Update-to-new-version)!
+If you have built AAPS before, you don't need to take all the following steps again.
+Please jump directly to the [update guide](../Installing-AndroidAPS/Update-to-new-version)!
 ```
 
-構建 **AAPS** apk檔案的整體步驟如下：
+The overall steps for building the **AAPS** apk file are as follows:
 
-4.1 [安裝Git](Install-Git)
+4.1 [Install Git](Install-Git)
 
-4.2 [安裝Android Studio](Building-APK-install-android-studio)
+4.2 [Install Android Studio](Building-APK-install-android-studio)
 
-4.3 [下載AAPS程式碼](Building-APK-download-AAPS-code)
+4.3 [Download AAPS code](Building-APK-download-AAPS-code)
 
-4.4. [在Android Studio偏好設定中設置Git路徑](Building-APK-set-git-path-in-preferences)
+4.4. [Set Git path in Android Studio preferences](Building-APK-set-git-path-in-preferences)
 
-4.5. [構建AAPS“簽章”apk](Building-APK-generate-signed-apk)
+4.5. [Build AAPS "signed" apk](Building-APK-generate-signed-apk)
 
-在本指南中，您將看到構建 **AAPS** apk檔案的_示例_螢幕截圖。 由於 **Android Studio**——我們用來構建 **AAPS** apk 的軟體——會定期更新，這些截圖可能與您的安裝不完全相同，但它們仍應該可以參照進行。
+In this guide you will find _example_ screenshots of building of **AAPS** apk file. Because  **Android Studio** - the software which we use to build the **AAPS** apk - is regularly updated, these screenshots may not be identical to your installation, but they should still be possible to follow.
 
-由於 **Android Studio** 可在Windows、Mac OS X和Linux平台上運作，這些平台之間的步驟可能也會有些許差異。
+Since **Android Studio** runs on Windows, Mac OS X and Linux platforms, there might be also be minor differences in the steps for the different  platforms.
 
-(安裝Git)=
+(Install-Git)=
 
-### 安裝Git（如果您還沒有安裝）
+### Install Git (if you don't have it)
 
 ```{admonition} Why Git? 
 :class: dropdown
 
-Git 被稱為「_版本控制系統_」（VCS）。
-Git 是一個允許您追蹤代碼變更和與他人合作的程式。您將使用 Git 從 GitHub 網站將 **AAPS** 原始碼的副本複製到您本地計算機。然後，您將在您的計算機上使用 Git 來建置 **AAPS** 應用程式 (apk)。
+Git is known as a “_Versioning Control System_” (VCS).\
+Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Git on your computer to build the **AAPS** application (apk). 
 ```
 
-#### 安裝Git的步驟
+#### Steps for Installing Git
 
-1. 檢查您是否已安裝 **Git**。 您可以透過在Windows的搜索欄中輸入“git”來檢查——如果看到 **“Git bash”** 或其他形式的Git，則已安裝，您可以直接進入[安裝Android Studio](Building-APK-install-android-studio)：
+1. Check that you don’t already have **Git** installed. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](Building-APK-install-android-studio):
 
 ![Git\_installed](../images/Building-the-App/001_check_git_installed.png)
 
-2. 如果尚未安裝Git，請從[**這裡**](https://git-scm.com/downloads)下載並安裝適用於您的系統的最新版本。 任何最新的Git版本都應該可以使用，請根據您的系統選擇正確的版本，無論是Mac、Windows還是Linux。
+2. If you don’t have Git installed, download and install the latest version for your system from [**here**](https://git-scm.com/downloads). Any recent Git version should work, select the correct version according to your system, either Mac, Windows and Linux.
 
-**給Mac用戶的提示：** Git網頁還將指導您安裝名為“homebrew”的附加程式，以輔助安裝。 如果您透過homebrew安裝Git，則無需更改任何偏好設定。
+**Note for Mac users:** the Git webpage will also guide you to install an additional program called "homebrew" to aid the installation. If you install Git via homebrew, there is no need to change any preferences.
 
 (Make_a_note_of_Git_path)=
 
-- 在安裝過程中，當要求您“選擇安裝位置”時，請記下Git的安裝位置（即“**安裝路徑**”），您需要在下一步中檢查它。 安裝路徑可能類似於“C:\Program Files\Git\cmd\git.exe”
+- During the installation, when you are asked to "select destination location" make a note of _where_ Git is being installed (the "**installation path**") you will need to check it in the next step. It will be something similar to "C:\Program Files\Git\cmd\git.exe"
 
-- 在進行Git安裝的幾個步驟時，只需接受所有的預設選項。
+- As you proceed through several steps of the Git installation, just accept all the default options.
 
-- 安裝完成後，如果您忘記記錄Git的安裝位置，可以透過以下方式找到它：在PC的搜索欄中輸入“git”，右鍵點擊“Git bash”，選擇“打開檔案位置”，將滑鼠懸停在“Git bash”圖示上，這將顯示安裝位置。
+- After the install, if you forgot to make a note of the where Git was installed, you can find it as follows: type "git" into the PC search bar, right click on "Git bash", select "open file location" hover over the "Git bash" icon with your mouse, which will then reveal where it is installed.
 
-- 在進行下一步之前，重新啟動您的電腦。
+- Reboot your computer before the next step.
 
 (Building-APK-install-android-studio)=
 
-### 安裝Android Studio
+### Install Android Studio
 
-- **在以下步驟中，您必須始終保持線上狀態，因為Android Studio會下載多個更新。**
+- **You have to be online all of the time during the following steps, as Android Studio downloads several updates**
 
 ```{admonition} What is Android Studio?
 :class: dropdown
-Android Studio 是一個在您的計算機上運行的程式。它允許您從互聯網下載原始碼（使用 Git）並建立智慧型手機（和智慧手錶）應用程式。通過在您的 PC 上建置新的或更新的應用程式，您不會「破壞」可能在智慧型手機上運行的當前循環版本的 **AAPS**，這些是完全獨立的過程。
+Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes. 
 ```
 
-以下螢幕截圖取自 **Hedgehog** 版本的Android Studio，它們應與更新版本相同。
+The following screenshots have been taken from Android Studio Version **Hedgehog**, they should be identical with more recent versions.
 
-安裝Android Studio時最重要的一點是 **耐心！** 安裝和設置期間，Android Studio會下載大量內容，這需要時間。
+One of the most important things when installing Android Studio is **be patient!** During installation and setup, Android Studio is downloading a lot of stuff which will take time.
 
-從[**這裡**](https://developer.android.com/studio#downloads)下載Android Studio的最新版本，找到它在您的瀏覽器下載文件夾中的位置，並安裝在您的電腦上：
+Download the latest version of Android Studio from [**here**](https://developer.android.com/studio#downloads), locate it in your browser downloads folder, and install it on your computer:
 
 ![Download Android Studio](../images/Building-the-App/01_InstallAS_Hedgehog.png)
 
-當您首次啟動Android Studio時，您將看到以下畫面：
+When you first start Android Studio, you will be greeted as follows:
 
 ![Welcome](../images/Building-the-App/02_Welcome_AS_Hedgehog.png)
 
-選擇“下一步”：
+Select "Next":
 
 ![ChooseASComponents](../images/Building-the-App/03_choose_AS_components.png)
 
-保持選框勾選，然後選擇“下一步”：
+Leave the boxes checked, and select "Next":
 
 ![ChooseASlocation](../images/Building-the-App/04_AS_Install_location.png)
 
-允許安裝在建議的預設位置，然後選擇“下一步”：
+Allow the installation at the default location suggested, and select "Next":
 
 ![SmartMenulocation](../images/Building-the-App/04_AS_StartMenu.png)
 
-當要求選擇Smart選單文件夾時，只需選擇“安裝”。 現在您需要等待幾分鐘，讓Android Studio完成安裝。 然後您應該看到安裝已完成，選擇“下一步”：
+When asked to choose the Smart Menu Folder, simply select "Install". You will now need to wait a few minutes while Android Studio is being installed. You should then see that the Installation is Complete, select "Next":
 
 ![installationcomplete](../images/Building-the-App/06_Installation_Complete.png)
 
-現在選擇“完成”：
+Now select "Finish":
 
 ![closeASsetup](../images/Building-the-App/07_CloseAS_Setup.png)
 
-Android Studio將立即啟動。
+Android Studio will now start.
 
-當被詢問是否要匯入設定時，選擇“不匯入設定”。 我們不需要匯入以前的安裝設定：
+If asked if you want to import settings, select "Do not import settings". We don't want to import settings from previous installations:
 
 ![Do not import settings](../images/studioSetup/01_ImportSettings.png)
 
-決定是否要與Google共享資料（如果不確定，請選擇“不發送”）。
+Decide whether you want to share data with Google or not (if unsure, just select "Don't send").
 
 ![Share data with Google](../images/Building-the-App/08_Googlesharedata.png)
 
-您將看到有關缺少軟體開發工具包（SDK）的訊息（不用擔心，這很快會解決），選擇“下一步”：
+You will now get a message about a missing software development kit (SDK) (don't worry, this will be solved soon), select "Next":
 
 ![missingSDK](../images/Building-the-App/09_MissingSDK.png)
 
-軟體應自動選擇所需的SDK並選擇一個位置。
+The software should autoselect the required (SDK) and choose a location.
 
 ```{admonition} What is an Android SDK?
 :class: dropdown
 
-為了在手機上運行 **AAPS**，該應用程式需要與 Android 本身整合。Android 提供「_軟體開發工具包_」（SDK），使像 **AAPS** 這樣的應用程式能夠與 Android 操作系統接口。
+In order to run **AAPS** on the phone the application needs to integrate with Android itself. Android provides “_software development kits_” (SDK) which allow apps like **AAPS** to interface with an Android operating system.
 ```
 
-SDK平台套件與您手機上運作的Android版本無關，而是與 **AAPS** 的構建有關。 **AAPS** 3.2及更新版本基於API等級34進行構建，這會在 **Hedgehog** 版本的 **Android Studio** 中自動選擇。 因此，只需點擊“下一步”：
+The SDK platform package does **not** relate to the version of Android running on your phone, but to the build of **AAPS**. **AAPS** version 3.2 (and newer) builds on top of API level 34, which is automatically selected in the **Hedgehog** version of **Android Studio**. Therefore, simply click "Next":
 
 ![SDKcomponents\_setup](../images/Building-the-App/10_SDKComponents_setup.png)
 
-當要求您驗證設定時，直接選擇“下一步”：
+When asked to verify settings, just select "Next":
 
 ![verify\_settings](../images/Building-the-App/11_Verify_settings.png)
 
-當被詢問有關許可協議時，選擇“接受”，然後點擊“完成”：
+When asked about the Licence Agreement, select "Accept" and then click "Finish":
 
 ![licence\_agreement](../images/Building-the-App/12_Licence_agreement.png)
 
-> **_注意：_** 根據您的設置，可能需要接受的許可協議與螢幕截圖中顯示的有所不同。
+> **_Note:_**  Depending on your set-up, the licenses to be accepted might vary from what is shown in the screenshot.
 
-等待Android Studio下載其他組件，這可能需要幾分鐘：
+Wait while Android Studio downloads additional components, this may take a few minutes:
 
 ![downloading\_components](../images/Building-the-App/13_downloading_components.png)
 
-一旦所有內容下載完成，“完成”按鈕將變為藍色，然後您可以點擊它：
+Once everything is downloaded, the "Finish" button turns blue, and you can click it:
 
 ![finished\_download\_components](../images/Building-the-App/14_finished_downloading_components.png)
 
-現在您將看到“歡迎使用Android Studio”畫面。
+You are now greeted with the "Welcome to Android Studio" screen.
 
 ![Welcome\_AS](../images/Building-the-App/15_Welcome_AS.png)
 
 (Building-APK-download-AAPS-code)=
 
-### 下載AAPS程式碼
+### Download the AAPS code
 
 ```{admonition} Why can it take a long time to download the AAPS code?
 :class: dropdown
 
-第一次下載 **AAPS** 時，Android Studio 將通過互聯網連接到 GitHub 網站以下載 **AAPS** 的原始碼。這應該需要約 1 分鐘。 
+The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute. 
 
-然後，Android Studio 將使用 **Gradle**（Android Studio 中的開發工具）來識別安裝這些項目所需的其他組件。 
+Android Studio will then use **Gradle** (a development tool in  Android studio) to identify other components needed to install these items on your computer. 
 
 ```
 
-在Android Studio歡迎頁面上，檢查左側是否突出顯示了“**專案**”（1）。 然後點擊右側的“**從VCS獲取**”（2）：
+On the Android Studio Welcome screen, check that "**Projects**" (1) is highlighted on the left. Then click "**Get from VCS**" (2) on the right:
 
 ![Get\_from\_VCS](../images/Building-the-App/16_Get_from_VCS.png)
 
-- 我們現在將告訴Android Studio從哪裡獲取程式碼：
+- We will now tell Android Studio where to get the code from:
 
-- “倉庫URL”應該在左側（1）預設選擇。
+- "Repository URL" should be selected (by default) on the left (1).
 
-- “Git”應作為版本控制預設選擇（2）。
+- "Git" should be selected (by default) as version control (2).
 
-現在複製這個URL：
+Now copy this URL:
 
 ```
 https://github.com/nightscout/AndroidAPS.git
 ```
 
-然後將其粘貼到URL文本框中（3）。
+and paste it into the URL textbox (3).
 
-- 檢查（預設的）儲存複製程式碼的目錄是否合理（4）。
+- Check the (default) directory for saving the cloned code is sensible (4).
 
 ```{admonition} INFORMATION
 :class: information
-請注意目錄。它是存儲原始碼的位置！
+Make a note of the directory. It is where your sourcecode is stored!
 ```
 
-- 現在點擊“複製”按鈕（5）。
+- Now click the button "Clone" (5).
 
 ![Select\_URL](../images/Building-the-App/17_select_URL.png)
 
-您現在將看到一個螢幕，告訴您倉庫正在被複製：
+You will now see a screen telling you that the repository is being cloned:
 
 ![cloning\_repository](../images/Building-the-App/18_cloning_repository.png)
 
-某些時候，系統可能會詢問您是否信任該專案。 點擊“信任專案”：
+At some point, you may be asked whether you want to trust the project. Click on "Trust project":
 
 ![Trust project](../images/Building-the-App/18a_trust_project.png)
 
-僅限Windows用戶：如果您的防火牆要求許可，請授予存取權限：
+Only for Windows users: If your firewall asks for permission, grant access:
 
 ![Firewall permission java](../images/AndroidStudio361_18.png)
 
-倉庫成功複製後，Android Studio將打開複製的專案。
+After the repository is cloned successfully, Android Studio will open the cloned project.
 
-點擊右上角的齒輪圖示，選擇“**切換到經典UI...**”以返回到本文件中使用的視圖。
+Click on the cog top right and select "**Switch to Classic UI...**" to return to the view used in this documentation.
 
-如果您看不到齒輪圖示，不用擔心。 您已經在使用經典UI！
+If you do not see that cog, don't worry. You already use the classic UI!
 
-![切換到經典UI](../images/Building-the-App/OldUI.png)
+![Switch to Classic UI](../images/Building-the-App/OldUI.png)
 
-重新啟動Android Studio以使更改生效。
+Restart Android Studio to make the changes effective.
 
-![確認重新啟動Android Studio](../images/Building-the-App/18b_ConfirmRestartUI.png)
+![Confirm restart of Android Studio](../images/Building-the-App/18b_ConfirmRestartUI.png)
 
-您可能會看到以下警告之一或兩者關於運作中的進程。 可以安全地中止它們！
+You might get one or both of the following warnings about running processes. It's save to abort them!
 
-![確認中止背景進程](../images/Building-the-App/18c_AbortBackgroundTasks.png) ![確認中止進程](../images/Building-the-App/18d_AbortProcessImport.png)
+![Confirm abort background processes](../images/Building-the-App/18c_AbortBackgroundTasks.png) ![Confirm process AndroidAPS import](../images/Building-the-App/18d_AbortProcessImport.png)
 
-當Android Studio再次打開時，耐心等待（可能需要幾分鐘），特別是**不要**按照彈出提示更新專案。
+When Android Studio opened again, wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
 
-![AS下載依賴項](../images/Building-the-App/19_downloading_dependencies.png)
+![AS\_download\_dependencies](../images/Building-the-App/19_downloading_dependencies.png)
 
 ```{admonition} NEVER UPDATE GRADLE!
 :class: warning
 
-Android Studio 可能會建議更新 gradle 系統。**絕對不要更新 gradle!** 這將導致困難。
+Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
 ```
 
-_可選_ - 如果您想清除“建議更新專案”的彈出訊息，點擊藍色文本“更多”（1）。 在對話框中選擇“不要再次詢問此專案”（2）。
+_Optional_ - If you want to clear the pop-up for **"project update recommended"**, click on the blue text "More" (1). In the dialog box the select "Don't ask for this project" (2).
 
-![AS關閉gradle彈出訊息](../images/Building-the-App/20_close_popup.png)
+![AS\_close\_gradle\_popup](../images/Building-the-App/20_close_popup.png)
 
-僅適用於Windows用戶：
-如果您自安裝或更新Git後尚未重新啟動電腦，請立即關閉Android Studio。 然後重新啟動您的電腦，並重新打開Android Studio。
+For Windows users only:
+If you have not restarted your computer since installing or updating Git, close Android Studio now. Then restart your computer, and re-open Android Studio.
 
 (Building-APK-set-git-path-in-preferences)=
 
-### 在Android Studio偏好設定中設置git路徑
+### Set git path in Android Studio preferences
 
-現在我們將告訴Android Studio在哪裡找到您之前[安裝的](Install-Git) Git。
+Now we will tell Android studio where to find Git, which you installed [earlier](Install-Git).
 
-- 僅限Windows用戶：請確保在[安裝Git](Install-Git)後重新啟動電腦。
-- 打開 **Android Studio**（您可以在開始選單中找到它）。
-- 在 **Android Studio** 的左上角，導航到 _File-Settings_（Windows）或 _Android Studio > Preferences_（Mac）。 這將打開以下視窗，點擊以展開名為“版本控制”的下拉選單（1）：
+- Windows users only: Make sure you have restarted your computer after [installing Git](Install-Git).
+- Open **Android Studio** (you can find it by searching in the Start menu).
+- In the top left corner of **Android Studio**, navigate to _File-Settings_ (Windows) or _Android Studio > Preferences_ (Mac). This opens the following window, click to expand the dropdown called "version control" (1):
 
 ![version\_control](../images/Building-the-App/21_AS_version_control.png)
 
-- 現在選擇“**Git**”（2）。
-- 在頁面中間下方，確保選擇更新方式為“合併”（3）。
-- 點擊“測試”按鈕（4），檢查 **Android Studio** 是否可以自動找到 **git.exe** 的正確路徑：
+- Now select "**Git**" (2).
+- In the lower middle of the page, make sure update method "Merge" (3) is selected.
+- Check if **Android Studio** can automatically locate the correct path to **git.exe** automatically by clicking the button "Test" (4):
 
 ![Gitpath](../images/Building-the-App/22_Git_path.png)
 
-- 如果自動設置成功，您當前版本的 **Git** 將顯示在路徑旁邊。
+- If the automatic setting is successful, your current version of **Git** will be displayed next to the path.
 
   ![Git\_version\_displayed](../images/Building-the-App/23_Git__path_success.png)
 
-- 如果未能自動找到 **git.exe**，或者點擊“測試”按鈕顯示錯誤（1），您可以手動輸入您之前[記錄的](Make_a_note_of_Git_path)路徑，或者點擊資料夾圖示（2），手動導航到儲存 **git.exe** 的目錄：
+- If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error (1), you can either manually enter the path which you saved [earlier](Make_a_note_of_Git_path), or click on the folder icon (2) and manually navigating to the directory where **git.exe** is stored:
 
   ![Git not found](../images/studioSetup/13_GitVersionError.png)
 
-- 如果您不確定Git安裝在哪裡，可以使用Windows Explorer中的[搜索功能](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html)查找“git.exe”。 如何執行此操作已在[上面](Make_a_note_of_Git_path)詳細說明。
+- Use the [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where git has been installed. How to do this is explained [above](Make_a_note_of_Git_path) in more detail.
 
-- 如果您已手動選擇路徑，請按照上述說明使用“測試”按鈕檢查所選的Git路徑。
+- If you have manually selected it, check your selected Git path with the "Test" button as described above.
 
-當Git版本顯示在路徑旁邊時（如上圖所示），您已成功完成此階段，並可以點擊“**OK**”按鈕（5）關閉Android Studio“設定”視窗：
+When the Git version is displayed next to the path (see screenshot above) you have completed this stage successfully and you can close the Android Studio "Settings" window by clicking the "**OK**" button (5):
 
 ![Git\_path\_OK](../images/Building-the-App/23a_Git_path_OK.png)
 
 (Building-APK-generate-signed-apk)=
 
-### 構建AAPS“簽章”APK
+### Build the AAPS "signed" APK
 
 ```{admonition} Why does the AAPS app need to be "signed"?
 :class: dropdown
 
-Android 要求每個應用程式必須被 _簽署_，以確保日後只能從最信任的來源更新原始應用程式。關於這一主題的更多資訊，請跟隨 [這個連結](https://developer.android.com/studio/publish/app-signing.html#generate-key)。對我們來說，這意味著我們生成一個簽名或「密鑰庫」文件並在建立 **AAPS** 應用程式時使用它。
+Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
 ```
 
-- 在選單欄中，點擊“構建”（1），選擇“生成簽章包/APK”（2）：
+- In the menu bar, click "Build" (1), select "Generate Signed Bundle/APK (2)
 
 ![Build apk](../images/Building-the-App/25_build_apk.png)
 
-- 選擇“APK”而不是“Android App Bundle”，然後點擊“下一步”：
+- Select "APK" instead of "Android App Bundle" and click "Next":
 
 ![APK instead of bundle](../images/Building-the-App/26_generate_APK.png)
 
-- 在下一個螢幕上，確保“模組”設置為“AAPS.app”（1）。
+- In the next screen, make sure that "Module" is set to "AAPS.app" (1).
 
 (Building-APK-wearapk)=
 
 ```{admonition} INFORMATION!
 :class: information
-如果您想為您的手錶建立apk，請選擇AAPS.wear！
+If you want to create the apk for your watch, you need to select AAPS.wear!
 ```
 
-- 點擊“建立新...” (2) 開始建立您的密鑰庫。
+- Click "Create new..." (2) to start creating your key store.
 
 ```{admonition} INFORMATION!
 :class: information
-您只需要創建密鑰庫一次。
-如果您之前已經建置過 AAPS，請不要建立新的密鑰庫，而是選擇您現有的那一個！
+You will only need to create the keystore once.
+If you have build AAPS before, do NOT create a new keystore but select your existing one!
 ```
 
-**_注意：_** 密鑰庫是一個用於存儲應用程式簽章訊息的檔案。 它是加密的，並且訊息透過密碼進行保護。
+**_Note:_** The key store is a file in which the information for signing the app is stored. It is encrypted, and the information is secured with passwords.
 
 ![Create\_key\_store](../images/Building-the-App/27_new_keystore.png)
 
-- 點擊“資料夾”圖示（1）選擇密鑰庫在您電腦上的儲存路徑：
+- Click the "folder" symbol (1) to select a path on your computer for your key store:
 
 ![Create key store](../images/Building-the-App/28_new_keystore_path.png)
 
-- 點擊下拉選單（1），選擇您希望儲存密鑰庫檔案的位置。 在此示例中，它儲存在“我的文件”中（2）。 不要將密鑰庫儲存在與Android Studio檔案相同的文件夾中（StudioProject）。 為您的密鑰庫輸入一個簡單的名稱（3），並點擊“確定”（4）進行確認：
+- Click on the drop-down menu (1), to select where you want to save your keystore file. In this example, it is being saved in "My Documents" (2). Do not save the keystore in same folder as your Android Studio files (StudioProject). Type in a simple name for your key store (3) and confirm it with "OK" (4):
 
 ![Create key store](../images/Building-the-App/29_choose_keystore_file.png)
 
-這將帶您返回上一個螢幕。 您選擇的密鑰庫檔案的儲存位置將顯示出來。
+This will take you back to the previous screen. Your chosen location for saving the key store file is shown.
 
 ```{admonition} WARNING!
 :class: warning
-確保記下您的密鑰庫存儲的位置。在您建置下一個 AndroidAPS 更新時，您將需要它！
+Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AndroidAPS update!
 ```
 
-現在選擇一個簡單的密碼（記下它），在密碼框中輸入（1），並確認它（2）。  密鑰庫和密鑰的密碼不必過於複雜。 如果將來遺失密碼，請參閱[密鑰庫遺失的故障排除](troubleshooting_androidstudio-lost-keystore)。
+Now choose a simple password (make a note of it), enter it in the password box (1), and confirm it (2).  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [troubleshooting for lost key store](troubleshooting_androidstudio-lost-keystore).
 
-密鑰的預設別名（3）為“key0”，保持不變。
+The default alias (3) for your key is "key0", leave this unchanged.
 
-您現在需要為您的密鑰設置密碼。 為了簡單起見，您可以使用與上面密鑰庫相同的密碼。 輸入密碼（4）並確認（5）。
+You now need a password for your key. To keep it simple, if you want, you can use the same password you used for your keystore, above. Enter a password (4) and confirm (5) it.
 
 ```{admonition} WARNING!
 :class: warning
-請記下這些密碼！在您建立下一個 AAPS 更新時，會需要它們！
+Note down these passwords! You will need them when you build the next AAPS update!
 ```
 
-有效期（6）預設為25年，保持不變。
+The validity (6) is 25 years by default, leave it as it is.
 
-輸入您的名字和姓氏（7）。 不需要添加其他訊息。
+Enter your first and last name (7). No other information needs to be added.
 
-點擊“確定”（8）繼續：
+Click "OK" (8) to continue:
 
 ![Select key store path](../images/Building-the-App/30_new_keystore.png)
 
-在“生成簽章包或APK”頁面上，將顯示您的密鑰庫路徑。 現在重新輸入密鑰庫密碼（1）和密鑰密碼（2），並勾選記住密碼的框（3），這樣下次構建apk時（即更新到新的AAPS版本時）就不必再次輸入它們。 點擊“下一步”（4）：
+On the "Generate signed bundle or APK" page, the path to your keystore will now be displayed. Now re-enter the Key Store password (1) and Key password (2), and tick the box to remember passwords is checked (3), so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Click "Next" (4):
 
 ![Remember passwords](../images/Building-the-App/31_generate_APK.png)
 
-在下一個螢幕中，選擇構建變體“fullRelease”（1），然後點擊“建立”（2）。
+On the next screen, select build variant "fullRelease" (1) and click "Create" (2).
 
 ![Select build variant](../images/Building-the-App/32_full_release.png)
 
-Android Studio現在將開始構建 **AAPS** 的apk。 它將在右下角顯示“Gradle Build running”。 該過程會根據您的電腦和網際網路連線速度花費一些時間，請**耐心等待！** 如果您想查看構建進度，請點擊Android Studio底部的小錘子圖示“構建”：
+Android Studio will now build the **AAPS** apk. It will show "Gradle Build running" at the bottom right. The process takes some time, depending on your computer and internet connection, **be patient!** If you want to watch the progress of the build, click on the small hammer "build" at the bottom of Android Studio:
 
 ![Gradle Running](../images/Building-the-App/33_Studio_building1.png)
 
-現在您可以查看構建進度：
+Now you can watch the building progress:
 
 ![Android\_Studio\_building](../images/Building-the-App/34_Studio_building2.png)
 
-Android Studio在構建完成後將顯示“BUILD SUCCESSFUL”的訊息。 您可能會看到一個彈出通知，您可以點擊選擇“查找”。 如果您錯過了此步驟，請點擊螢幕最底部的“定位或分析APK”（黃色突出顯示）的通知來打開通知欄：
+Android Studio will display the information "BUILD SUCCESSFUL" after build is finished. You may see a popup notification which you can click to select "locate". If you miss this, click on the notification "locate or analyse the APK" (yellow highlight) at the very bottom of the screen to bring up the Notifications:
 
-![構建完成](../images/Building-the-App/35_Studio__built_success.png)
+![Build finished](../images/Building-the-App/35_Studio__built_success.png)
 
-_如果構建未成功，請參閱[故障排除部分](../Installing-AndroidAPS/troubleshooting_androidstudio)。_
+_If the build was not successful, refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio)._
 
-在通知欄中，點擊藍色連結“定位”：
+In the Notifications box, click on the blue link "locate":
 
-![定位構建](../images/Building-the-App/35_Studio__built_locate.png)
-您的檔案管理器/檔案總管將會打開。 導航到目錄“full”（1）> “release”（2）。
+![Locate build](../images/Building-the-App/35_Studio__built_locate.png)
+Your file manager/explorer will open. Navigate to the directory "full" (1) > "release" (2).
 
-![檔案位置apk](../images/Building-the-App/36_locate_apk.png)
+![File location apk](../images/Building-the-App/36_locate_apk.png)
 
-打開“release”資料夾。 檔案“app-full-release.apk”（1）是您剛剛構建的 **AAPS** apk，在文檔的下一部分，您將把此檔案傳輸到您的智慧型手機：
+Open the folder "release". The file "app-full-release.apk" (1) is the **AAPS** apk that you have just built, you will be transferring this file to your smartphone in the next section of the docs:
 
-![apk檔案](../images/Building-the-App/37_full_release_apk.png)
+![apk\_file](../images/Building-the-App/37_full_release_apk.png)
 
-恭喜！ 現在您已經構建了 **AAPS** apk 檔案，您可以進入下一階段[傳輸和安裝 **AAPS**](Transferring-and-installing-AAPS.md)。
+Congratulations! Now you have built the **AAPS** apk file, you can move to the next stage of [Transferring and Installing **AAPS**](Transferring-and-installing-AAPS.md).
