@@ -1,51 +1,51 @@
 # Freestyle Libre 1
 
-要將您的 Libre 用作 CGM，每 5 分鐘獲取一次新的血糖值，而無需掃描傳感器，您需要購買一個 NFC 到藍牙橋接器（基於已過時的[LimiTTer](https://github.com/JoernL/LimiTTer) 項目的商用設備）。
+To use your Libre as a CGM that is getting new BG values every 5 minutes without having to scan the sensor, you need to buy an NFC to Bluetooth bridge (commercially available devices, based on the obsolete [LimiTTer](https://github.com/JoernL/LimiTTer) project).
 
 ```{admonition} Libre 2, Libre 1 US and Libre Pro
 :class: warning
 Verify the bridge and the app you want to use are compatible with your sensor.  
 ```
 
-市場上有幾款橋接器可供選擇：
+Several bridges are available on the market:
 
--   [MiaoMiao 讀取器](https://www.miaomiao.cool/)（版本 1、2 或 3），也可在 AliExpress 上購買。
--   [Blucon Nightrider](https://www.ambrosiasys.com/our-products/blucon/)（請注意，最新的韌體版本可能與所有應用程式不相容，供應商應用程式不會向 AAPS 廣播資料）。
--   [Bubble（或 Bubble Mini）](https://www.bubblesmartreader.com/)，來自歐洲供應商（[Bubblan](https://www.bubblan.org/)，[BubbleShop](https://bubbleshop.eu/)），或適用於俄羅斯用戶[點擊此處](https://vk.com/saharmonitor/)。 也可在 AliExpress 上購買。
--   適用於俄羅斯用戶的 Atom。
+-   [MiaoMiao Reader](https://www.miaomiao.cool/) (version 1, 2 or 3) also available on AliExpress.
+-   [Blucon Nightrider](https://www.ambrosiasys.com/our-products/blucon/) (mind recent firmware versions might not be compatible with all apps, the vendor app does not broadcast data to AAPS)
+-   [Bubble (or Bubble Mini)](https://www.bubblesmartreader.com/) from European vendors ([Bubblan](https://www.bubblan.org/), [BubbleShop](https://bubbleshop.eu/)) or for Russian users [here](https://vk.com/saharmonitor/). Also available on AliExpress.
+-   Atom for Russian users.
 
-過去曾有使用特定手錶的案例，例如 Sony Smartwatch 3 (SWR50)，該手錶內建可啟用的 NFC 晶片，能夠用來作為 NFC 收集器。 不過，上面提到的客製化 NFC 轉藍牙橋接器提供了一個更簡單的解決方案，大部分想要使用 Libre 1（非美國版）當作 CGM 的人，都會選擇這種方式。
+Historically it is possible to use a specific watch, the Sony Smartwatch 3 (SWR50) which has an NFC chip that can be enabled and used as an NFC collector. However the custom NFC to Bluetooth bridges listed above offer a less complex solution and would be used by the majority of those wanting to use their Libre 1 (non-US) as a CGM.
 
--   Sony Smartwatch 3（SWR50）<https://github.com/pimpimmi/LibreAlarm/wiki/>
+-   Sony Smartwatch 3 (SWR50) <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
-目前來看，使用 Libre 1 作為血糖來源時，無法在 SMB 算法中啟用「始終啟用 SMB」和「在用餐後啟用 SMB」。 Libre 1 的血糖值不夠平滑，無法安全使用。 有關更多詳細資訊，請參閱[平滑血糖資料](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)。
+As it currently stands, if using Libre 1 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within the SMB algorithm. The BG values of Libre 1 are not smooth enough to use it safely. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 
-## 1. 使用 xDrip+
+## 1. Using xDrip+
 
--   xDrip+ 支援 MiaoMiao、Bubble、Blucon、Atom 和 LibreAlarm。
--   除非您需要最新功能，否則可以安全下載[最新 APK（穩定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)，在這種情況下，您應該使用最新的[Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases)。
--   按照[xDrip+ 設定頁面](../Configuration/xdrip.md)上的設置說明進行操作。
--    您還需要適用於 Libre 1 US（和 Libre 2 EU）的[OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)。
--   在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
+-   xDrip+ supports Miaomiao, Bubble, Blucon, Atom and LibreAlarm.
+-   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
+-   Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
+-    You also need [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) for Libre 1 US (and Libre 2 EU).
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-## 2. 使用 Glimp
+## 2. Using Glimp
 
--   Glimp 支援 Miaomiao、Blucon 和 Bubble 用於 Libre 1 和 Libre 2 EU。
--   您需要 Glimp 版本 4.15.57 或更新版本。 舊版本不支援。
--   安裝 [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia)。
--   在 [ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source) 中選擇 Glimp。
+-   Glimp supports Miaomiao, Blucon and Bubble for Libre 1 and Libre 2 EU.
+-   You will need Glimp version 4.15.57 or newer. Older versions are not supported.
+-   Install [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia).
+-   Select Glimp in in [ConfigBuilder, BG Source.](../Configuration/Config-Builder.md#bg-source)
 
-## 3. 使用 Tomato
+## 3. Using Tomato
 
-- Tomato 是 Miaomiao 的官方應用程式。
-- 安裝 [Tomato](http://tomato.cool/#download_page) 並按照廠商的[說明](http://tomato.cool/how-to-broadcast-data-to-android-aps/tips/)操作。
-- 在 [ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source) 中選擇 Tomato。
+- Tomato is the vendor app for Miaomiao.
+- Install [Tomato](http://tomato.cool/#download_page) and follow the vendor [instructions](http://tomato.cool/how-to-broadcast-data-to-android-aps/tips/).
+- Select Tomato in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-## 4. 使用 Diabox
+## 4. Using Diabox
 
-- Diabox 是 Bubble 的官方應用程式。
-- 安裝 [Diabox](https://t.me/s/DiaboxApp)。 在設定中，進入「整合」，啟用「與其他應用程式共享資料」。
+- Diabox is the vendor app for Bubble.
+- Install [Diabox](https://t.me/s/DiaboxApp). In Settings, Integration, enable Share data with other apps.
 
 ![Diabox](../images/Diabox.png)
 
-- 在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
