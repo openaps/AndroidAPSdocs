@@ -133,21 +133,21 @@ xDripSwift 是從最初的 xDrip 應用程式移植到 iOS 並發展成"xDrip fo
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
-The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) is the main community support for xDrip4iOS and Shuggah. **xDrip4iOS** can connect to many different CGM systems and transmitters and display blood glucose values, charts and statistics as well as provide alarms. It can also upload to Nightscout or act as a [follower app for Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). However, it is difficult to actually _get_ the **xDrip4iOS** app for your phone. 
+ [xDrip4iOS Facebook 群組](https://www.facebook.com/groups/853994615056838/announcements) 是 xDrip4iOS 和 Shuggah 的主要社群支援。 **xDrip4iOS** 可以連接許多不同的 CGM 系統和傳輸器，並顯示血糖值、圖表和統計資訊，還可以提供警報。 它還可以上傳到 Nightscout，或作為 [Nightscout 的追蹤應用程式](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/)。 然而，實際上要在您的手機上獲取 **xDrip4iOS** 應用程式是很困難的。 
 
-"How can I get **xDrip4iOS** on my iPhone?"
-There are two options:
+"我怎麼能在我的 iPhone 上獲得 **xDrip4iOS**？"
+有兩個選擇：
 
-1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by following the instructions below:
+1. 如果您擁有 Mac 和 Apple 開發者帳號（每年 99 歐元/美元），您可以按照以下說明構建自己的 xDrip4iOS：
 
 https://xdrip4ios.readthedocs.io/en/latest/install/build/
 
-If you want, you can then become a "releaser" and share a Personal Testflight xDrip4iOS with up to 100 other people to help them:
+如果您願意，您可以成為一個 "發佈者"，並與多達 100 其他人分享一個個人測試飛行 xDrip4iOS，來幫助他們：
 https://xdrip4ios.readthedocs.io/.../personal_testflight/
 
-2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and monitor the posts… wait for somebody to offer an invitation to their Personal Testflight releases in the group. **You should not ask for an invitation to the app** (read the group rules). 
+2. 您加入 [xDrip4iOS Facebook 群組](https://www.facebook.com/groups/853994615056838/announcements) 並監控帖子……等著有人在群組中提供邀請進入他們的個人測試飛行發佈。 **您不應該要求應用程式的邀請**（請閱讀團體規則）。 
 
-An easier solution is therefore to download the **Shuggah** app. 
+因此，更簡單的解決方案是下載 **Shuggah** 應用程式。 
 ```
 
 #### [Shuggah](https://apps.apple.com/sa/app/shuggah/id1586789452)
