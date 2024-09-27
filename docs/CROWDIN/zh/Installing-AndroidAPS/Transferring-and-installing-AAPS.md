@@ -1,65 +1,65 @@
-# 將 **AAPS** 傳輸並安裝到您的智慧型手機上
+# Transferring and Installing AAPS on your smartphone
 
-在上一節中，[構建 **AAPS**](../building-AAPS.md)，您已經在電腦上構建了 **AAPS** 應用程式（即 .apk 檔案）。
+In the previous section, [building **AAPS**](../building-AAPS.md), you built the **AAPS** app (which is an .apk file) on a computer.
 
-接下來的步驟是將 **AAPS** APK 檔案（以及其他您可能需要的應用程式，例如 BYODA、Xdrip+ 或其他 CGM 接收應用程式）傳輸到您的 Android 智慧型手機，然後**安裝**這些應用程式。
+The next steps are to **transfer** the **AAPS** APK file (as well as other apps you may need, like BYODA, Xdrip+ or another CGM reciever app) to your Android smartphone, and then **install** the app(s).
 
-在智慧型手機上安裝 **AAPS** 後，您將能夠進入[**配置 AAPS 循環**](configuring-the-AAPS-loop.md)。
+Following installation of **AAPS** on the smartphone, you will then be able to move onto [**configuring the AAPS loop**](configuring-the-AAPS-loop.md).
 
-有多種方式可以將 **AAPS** APK 檔案從電腦傳輸到智慧型手機。 在這裡，我們介紹兩種不同的傳輸方式：
+There are several ways to transfer the **AAPS** APK file from your computer to the smartphone. Here we explain two different ways:
 
-- 選項 1 - 使用 Google 雲端硬碟 (Gdrive)
-- 選項 2 - 使用 USB 傳輸線
+- Option 1 -  Use your Google drive (Gdrive)
+- Option 2 -  Use a USB cable
 
-請注意，透過電子郵件進行傳輸可能會導致問題，因此不建議使用此方式。
+Please note that transfer by email might cause difficulties, and is discouraged.
 
-## 選項 1。 使用 Google 雲端硬碟來傳輸檔案
+## Option 1. Use Google drive to transfer files
 
-在瀏覽器中打開 [Google.com](https://www.google.com/) 並登錄到您的 Google 帳戶。
+Open [Google.com](https://www.google.com/) in your web browser and login to your Google Account.
 
-在右上方的 Google 選單中選擇雲端硬碟應用程式。
+On the right upper side select the Drive app in the Google menu.
 
-![啟動雲端硬碟應用程式](../images/GoogleDriveInWebbrowser.png)
+![Start Drive App](../images/GoogleDriveInWebbrowser.png)
 
-在 Google 雲端硬碟應用程式中，右鍵單擊檔案和資料夾下方的空白區域，然後選擇“上傳檔案”。
+Right click in the free area below the files and folders in the Google Drive app and select "Upload File".
 
-![使用 Google 雲端硬碟應用程式上傳 apk 檔案](../images/GoogleDriveUploadFile.png)
+![Upload apk file with Google Drive App](../images/GoogleDriveUploadFile.png)
 
-APK 檔案應該已經上傳到 Google 雲端硬碟。
+The apk file should now be uploaded on Google Drive.
 
-### 使用 Google 雲端硬碟應用程式來執行 APK 檔案進行安裝
+### use the Google Drive app to excute the apk file for installation
 
-切換到您的手機並啟動 Google 雲端硬碟應用程式。 它是預裝的應用程式，您可以在其他 Google 應用程式所在的位置找到它，或透過搜尋應用程式名稱來找到它。
+Switch to your mobile and start the Google Drive app. It is a preinstalled app and can be found where the other Google apps are located or with search for the name of the app.
 
-![啟動 Google 雲端硬碟應用程式](../images/GoogleDriveMobileAPPLaunch.png)
+![start the Google Drive app](../images/GoogleDriveMobileAPPLaunch.png)
 
-在手機上的 Google 雲端硬碟應用程式中雙擊檔案名以啟動 APK 安裝。
+Launch the apk installation by double click on the filename in the Google Drive App on the mobile.
 
-![啟動 APK 安裝](../images/GoogleDriveMobileUploadedAPK.png)
+![launch the apk installation](../images/GoogleDriveMobileUploadedAPK.png)
 
-如果您收到安全提示，表示目前不允許從 Google 雲端硬碟安裝應用程式，請臨時允許該操作，並在完成後取消此選項，因為長期啟用會帶來安全風險。
+In case you get a security notice that you are not allowed to install apps from Google Driver at the moment please allow it for that short moment and disallow it afterwards as it is a security risk when you let it enable all the time.
 
-![Google 雲端硬碟安全提示](../images/GoogleDriveMobileMissingSecuritySetting.png)
+![Security Notice Google Drive](../images/GoogleDriveMobileMissingSecuritySetting.png)
 
-![Google 雲端硬碟安全設置](../images/GoogleDriveMobileSettingSecuritySetting.png)
+![Security Notice Google Drive](../images/GoogleDriveMobileSettingSecuritySetting.png)
 
-安裝完成後，您已完成這個步驟。
+After the installation finished your are done with this step.
 
-您應該能看到 **AAPS** 圖示，並能打開應用程式。
+you should see the **AAPS** icon and be able to open the app.
 
 ```{warning}
-**重要安全提示**
-您是否記得取消從 Google 雲端硬碟安裝應用程式的允許權限？
+**IMPORTANT SAFETY NOTICE**
+Did you remeber to disallow the installation from Google Drive?
 ```
 
-## 請繼續進行[配置 AAPS 循環](../Installing-AndroidAPS/setup-wizard.md)。
+## Please go on with [configuring the AAPS loop](../Installing-AndroidAPS/setup-wizard.md).
 
-## 選項 2。 使用 USB 傳輸線來傳輸檔案
+## Option 2. Use a USB cable to transfer files
 
-第二種方法是使用 [USB 傳輸線](https://support.google.com/android/answer/9064445?hl=en) 將 **AAPS** APK 檔案傳輸到您的手機上。
+The second way to transfer the AAPS apk file is with a  [USB cable](https://support.google.com/android/answer/9064445?hl=en).
 
-將檔案從電腦上的位置傳輸到手機的“下載”資料夾。
+Transfer the file from its location on your computer to the "downloads" folder on the phone.
 
-在手機上，您需要允許安裝來自未知來源的應用程式。 有關如何進行此操作的說明，您可以在網上找到（例如，請參閱[這裡](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) 或 [這裡](https://www.androidcentral.com/unknown-sources)）。
+On your phone, you will have to allow installation from unknown sources. Explanations of how to do this can be found on the internet (_e.g._ [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
-將檔案拖入後，在手機上打開“下載”資料夾，按下 **AAPS** APK 檔案並選擇“安裝”。 然後，您可以進入下一步，[設定嚮導](../Installing-AndroidAPS/setup-wizard.md)，幫助您設置 **AAPS** 應用程式及循環。
+Once you have transferred the file by dragging it across, to install it, open the "downloads" folder on the phone, press the AAPS apk and select "install". You can then proceed to the next step, [Setup Wizard](../Installing-AndroidAPS/setup-wizard.md), which will help you setup the **AAPS** app and loop on your smartphone.
