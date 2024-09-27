@@ -1,245 +1,245 @@
-# xDrip+ settings
+# xDrip+ 設定
 
-If not already set up, then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
+如果尚未設定，請下載[xDrip+](https://jamorham.github.io/#xdrip-plus)。
 
-Disable battery optimization and allow background activity for the xDrip+ app.
+停用電池優化，並允許 xDrip+ 應用程式在背景中運作。
 
-You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features or are using sensors that are being actively integrated (like G7), in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
+除非您需要最近的功能或正在使用正在整合的傳感器（如 G7），否則可以安全地下載[最新 APK（穩定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)，否則您應該使用最新的[Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases)。
 
-## Basic settings for all CGM & FGM systems
+## 所有 CGM & FGM 系統的基本設定
 
-### Disable Nightscout upload
+### 停用 Nightscout 上傳
 
-Starting with AAPS 3.2, you shouldn't let any other app upload data (blood glucose and treatments) to Nightscout.
+從 AAPS 3.2 開始，您不應讓其他應用程式上傳資料（血糖和治療方案）到 Nightscout。
 
-→ Hamburger Menu (1) → Settings (2) → Cloud Upload (3) -> Nightscout Sync (REST-API)(4) → Switch **OFF** `Enabled` (5)
+→ 漢堡選單 (1) → 設定 (2) → 雲端上傳 (3) -> Nightscout 同步（REST-API）(4) → 將`啟用`開關設為**關閉** (5)
 
-![xDrip+ Basic Settings 1](../images/xDrip_Basic1.png)
+![xDrip+ 基本設定 1](../images/xDrip_Basic1.png)
 
-#### Disable automatic calibration and treatments
+#### 停用自動校正和治療方案
 
-If you use an older version of AAPS (before 3.2), make sure to deactivate `Automatic Calibration` (7) If the checkbox for `Automatic Calibration` is checked, activate `Download treatments` (6) once, then remove the checkbox for `Automatic Calibration` and deactivate `Download treatments` again.
+如果您使用的是舊版本的 AAPS（3.2 之前），請確保停用`自動校正` (7) 如果`自動校正`的複選框已勾選，請一次啟用`下載治療方案` (6)，然後再次取消勾選`自動校正`並停用`下載治療方案`。
 
-![xDrip+ Basic Settings 2](../images/xDrip_Basic2.png)
+![xDrip+ 基本設定 2](../images/xDrip_Basic2.png)
 
-Tap `Extra Options`(8)
+點擊`額外選項`(8)
 
-    {admonition} Safety warning
+    {admonition} 安全警告
     :class: warning
-    You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.
+    您必須在 xDrip+ 中停用「上傳治療」，否則在 AAPS 中可能會導致治療數量翻倍，導致錯誤的 COB 和 IOB。
 
-Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill data` (11).
+停用`上傳治療方案`(9)，並確保您**不要**使用`回填資料` (11)。
 
-Option `Alert on failures` should also be deactivated (10). Otherwise you will get an alarm every 5 minutes in case Wi-Fi/mobile network issues or if the server is not available.
+應該也停用選項`失敗警報`(10)。 否則，若 Wi-Fi/行動網路有問題或伺服器不可用，您將每 5 分鐘收到一次警報。
 
-![xDrip+ Basic Settings 3](../images/xDrip_Basic3.png)
+![xDrip+ 基本設定 3](../images/xDrip_Basic3.png)
 
-### **Inter-app Settings** (Broadcast)
+### **應用間設定**（廣播）
 
-If you are going to use AAPS and the data should be forwarded to i.e. AAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
+如果您將使用 AAPS 並將資料轉發給 AAPS，則必須在 xDrip+ 的應用間設定中啟用廣播。
 
-→ Hamburger Menu (1) → Settings (2) → Inter-app settings (3) → Broadcast locally **ON** (4)
+→ 漢堡選單 (1) → 設定 (2) → 應用間設定 (3) → 本地廣播**開啟** (4)
 
-In order for the values to be identical in AAPS with respect to xDrip+, you should activate `Send the displayed glucose value` (5).
+為了使 AAPS 中的數值與 xDrip+ 的數值相同，您應該啟用`發送顯示的血糖值`(5)。
 
-Enable Compatible Broadcast (6).
+啟用相容廣播 (6)。
 
-![xDrip+ Basic Settings 4](../images/xDrip_Basic4.png)
+![xDrip+ 基本設定 4](../images/xDrip_Basic4.png)
 
-If you have also activated `Accept treatments` in xDrip+ and `Enable broadcasts to xDrip+` in AAPS xDrip+ plugin, then xDrip+ will receive insulin, carbs and basal rate information from AAPS.
+如果您還在 xDrip+ 中啟用了`接受治療方案`，並在 AAPS xDrip+ 外掛中啟用了`啟用廣播到 xDrip+`，那麼 xDrip+ 將接收來自 AAPS 的胰島素、碳水化合物和基礎率資訊。
 
-If you enable `Accept Calibrations`, xDrip+ will use the calibrations from AAPS. Be careful when you use this feature with Dexcom sensors: read [this](https://navid200.github.io/xDrip/docs/Calibrate-G6.html) first.
+如果您啟用了`接受校正`，xDrip+ 將使用來自 AAPS 的校正值。 當您將此功能與 Dexcom 傳感器一起使用時請小心：請先閱讀[這篇文章](https://navid200.github.io/xDrip/docs/Calibrate-G6.html)。
 
-Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time AAPS sends a basal/profile change.
+請記得停用匯入音效，以避免每次 AAPS 發送基礎率/設定檔變更時 xDrip+ 播放鈴聲。
 
-![xDrip+ Basic Settings 5](../images/xDrip_Basic5.png)
+![xDrip+ 基本設定 5](../images/xDrip_Basic5.png)
 
 (xdrip-identify-receiver)=
 
-#### Identify receiver
+#### 識別接收端
 
-- If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to → Hamburger Menu (1) Settings (2) → Inter-app settings (3) → Identify receiver (7) and enter `info.nightscout.androidaps` for AAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
-- Pay attention: Auto-correction sometimes tend to change i to capital letter. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip+.
+- 如果發現本地廣播有問題（AAPS 未收到來自 xDrip+ 的血糖值），請前往 → 漢堡選單 (1) 設定 (2) → 應用間設定 (3) → 識別接收端 (7)，並為 AAPS 建立輸入`info.nightscout.androidaps`（如果您使用的是 PumpControl 版本，請輸入`info.nightscout.aapspumpcontrol`）。
+- 請注意：自動校正有時會將小寫字母 i 改為大寫字母。 輸入`info.nightscout.androidaps`（或 PumpControl 版本的`info.nightscout.aapspumpcontrol`）時**只能使用小寫字母**。 大寫 I 將會阻止應用程式接收來自 xDrip+ 的血糖值。
     
-    ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+    ![xDrip+ 基本應用間設定識別接收端](../images/xDrip_InterApp_NS.png)
 
-## Use AAPS to calibrate in xDrip+
+## 使用 AAPS 在 xDrip+ 中進行校正
 
-- If you want to be able to use AAPS to calibrate then in xDrip+ go to Settings → Interapp Compatibility → Accept Calibrations and select ON. 
-- You may also want to review the options in Settings → Less Common Settings → Advanced Calibration Settings.
+- 如果您希望能夠使用 AAPS 進行校正，請在 xDrip+ 中前往設定 → 應用間相容性 → 接受校正並選擇開啟。 
+- 您可能還想檢查設定 → 不常見的設定 → 高階校正設定中的選項。
 
 ## Dexcom G6
 
-- The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
-- When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
-- If you need Clarity and want to profit from xDrip+ features, use the [Build Your Own Dexcom App](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+, or use xDrip+ as a Companion app receiving notifications from the official Dexcom app.
+- Dexcom G6 傳輸器可以同時連線到 Dexcom 接收器（或替代的 t:slim 幫浦）和手機上的一個應用程式。
+- 當使用 xDrip+ 作為接收器時，請先卸載 Dexcom 應用程式。 **您無法同時將 xDrip+ 和 Dexcom 應用程式連線到傳輸器！**
+- 如果您需要 Clarity 並想利用 xDrip+ 的功能，請使用[自行建立的 Dexcom 應用程式](DexcomG6-if-using-g6-with-build-your-own-dexcom-app)與 xDrip+ 進行本地廣播，或者使用 xDrip+ 作為接收來自官方 Dexcom 應用程式通知的配套應用程式。
 
-### xDrip+ version depending on G6 transmitter serial no.
+### G6 傳輸器序列號決定的 xDrip+ 版本
 
-- All G6 transmitters manufactured after fall/end 2018 are called "Firefly". They do not allow sensor restart without [removing the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), they do not send raw data. It is recommended to use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
-- Old rebatteried transmitters and modified trasmitters allow sensor life extension and restarts, they also send raw data. You can use the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk).
+- 2018 年秋季/年底後製造的所有 G6 傳輸器稱為“Firefly”。 它們不允許在不[移除傳輸器](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)的情況下重新啟動傳感器，也不發送原始資料。 建議使用最新的[Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases)。
+- 使用經過重新電池處理和修改的傳輸器允許延長傳感器壽命並進行重啟，它們也發送原始資料。 您可以使用[最新 APK（穩定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)。
 
-### Dexcom specific settings
+### Dexcom 特定設定
 
-- Follow [these instructions](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html) to setup xDrip+.
+- 按照[這些指示](https://navid200.github.io/xDrip/docs/G6-Recommended-Settings.html)設定 xDrip+。
 
-### Preemptive restarts not recommended
+### 不建議進行預防性重啟
 
-**Only rebatteried or modified Dexcom transmitters. [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) do not work with standard transmitters and will stop the sensor completely: you need to [remove the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html) to restart the sensor.**
+**僅限於重新電池處理或修改過的 Dexcom 傳輸器。 [預防性重啟](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html)不適用於標準傳輸器，並將完全停止傳感器：您需要[移除傳輸器](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)來重新啟動傳感器。**
 
-The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
+Dexcom 傳感器的自動延長（`預防性重啟`）不建議使用，因為這可能會導致第9天後血糖值容易出現“波動”。
 
-![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
+![預防性重啟後的 xDrip+ 跳躍](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-To use it safely, there are a few points to be aware of:
+要安全使用此功能，請注意以下幾點：
 
-- If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
-- If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
-- If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
-- Pre-soaking of the G6 with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
-- If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
+- 如果您在 xDrip+ 或 Spike 中使用帶有校正碼的原始資料，最安全的做法是不允許傳感器進行預防性重啟。
+- 如果必須進行預防性重啟，請確保在您能觀察變化並在必要時進行校正的時間進行。 
+- 如果您正在重啟傳感器，請在沒有工廠校正的情況下進行，以在第11天和第12天獲得最安全的結果，或者確保您準備好進行校正並密切關注變化。
+- 提前植入 G6 傳感器並使用出廠校準，可能會導致結果產生變異。 如果您進行預先浸泡，為獲得最佳結果，您可能需要校正傳感器。
+- 如果你沒有密切注意可能發生的變化，可能會比較好切換回非出廠校準模式，並像使用 G5 一樣操作系統。
 
-To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+要了解更多詳細資訊和這些建議的原因，請閱讀 Tim Street 在[www.diabettech.com](https://www.diabettech.com)上發表的[完整文章](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/)。
 
 (xdrip-connect-g6-transmitter-for-the-first-time)=
 
-### Connect G6 transmitter for the first time
+### 首次連線 G6 傳輸器
 
-**For second and following transmitters see [Extend transmitter life](xdrip-extend-transmitter-life) below.**
+**如需第二個及後續傳輸器，請參閱[延長傳輸器壽命](xdrip-extend-transmitter-life)部分。**
 
-Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
+請按照[這些指示](https://navid200.github.io/xDrip/docs/Starting-G6.html)進行操作。
 
 (xdrip-transmitter-battery-status)=
 
-### Transmitter battery status
+### 傳輸器電池狀態
 
-- Battery status can be controlled in system status  
-    → Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen.
+- 可以在系統狀態中檢查電池狀態  
+    → 漢堡選單 (1) → 系統狀態 (2) → 如果您處於傳統狀態頁面 (3) 向右滑動螢幕 (4) 到達 → G5/G6/G7 狀態頁面。
 
-![xDrip+ System status](../images/xDrip_Dexcom_Battery.png)
+![xDrip+ 系統狀態](../images/xDrip_Dexcom_Battery.png)
 
-- See [here](https://navid200.github.io/xDrip/docs/Battery-condition.html) for more information.
+- 有關更多資訊，請參閱[這裡](https://navid200.github.io/xDrip/docs/Battery-condition.html)。
 
 (xdrip-extend-transmitter-life)=
 
-### Extend transmitter life
+### 延長傳輸器壽命
 
-- [Lifetime](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html) cannot be extended for Firefly transmitters: only rebatteried or modified transmitters.
-- Follow [these instructions](https://navid200.github.io/xDrip/docs/Hard-Reset.html) for non-Firefly transmitters.
+- [Firefly 傳輸器](https://navid200.github.io/xDrip/docs/Transmitter-lifetime.html)的壽命無法延長：僅限於重新電池處理或修改過的傳輸器。
+- 請按照[這些指示](https://navid200.github.io/xDrip/docs/Hard-Reset.html)為非 Firefly 傳輸器進行操作。
 
 (xdrip-replace-transmitter)=
 
-### Replace transmitter
+### 更換傳輸器
 
-- Turn original Dexcom receiver off (if used).
-- [Stop sensor](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html) (only if replacing sensor).
+- 關閉原始 Dexcom 接收器（如果已使用）。
+- [停止傳感器](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html)（僅在更換傳感器時）。
 
-- Forget device in xDrip+ system status AND in smartphone’s BT settings (Will be shown as Dexcom?? whereas ?? are the last two digits of the transmitter serial no.)  
-    → Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen → Forget Device (5).
+- 在 xDrip+ 系統狀態和手機的藍牙設定中忘記裝置（將顯示為 Dexcom?? 而 ?? 是傳輸器序列號的最後兩位數字）  
+    → 漢堡選單 (1) → 系統狀態 (2) → 如果您處於經典狀態頁面 (3) 向右滑動螢幕 (4) 到達 → G5/G6/G7 狀態頁面 → 忘記裝置 (5)。
 
-![xDrip+ System status](../images/xDrip_Dexcom_StopSensor.png)
+![xDrip+ 系統狀態](../images/xDrip_Dexcom_StopSensor.png)
 
-- Remove transmitter (and sensor if replacing sensor). To remove transmitter without removing sensor see [this](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), or this video <https://youtu.be/AAhBVsc6NZo>.
-- Put the old transmitter far away to prevent reconnection. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% sure no one is turning the microwave on.
-- Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
-- Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
+- 移除傳輸器（如果更換傳感器，則同時移除傳感器）。 若要在不移除傳感器的情況下移除傳輸器，請參閱[這裡](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)，或觀看此影片<https://youtu.be/AAhBVsc6NZo>。
+- 將舊的傳輸器放遠以防止重新連線。 微波是一個完美的法拉第屏蔽裝置 - 但為了完全確保安全，請拔掉電源線以確保沒有人會打開微波。
+- 請按照[這些指示](https://navid200.github.io/xDrip/docs/Starting-G6.html)進行操作。
+- 在 xDrip+ 顯示第一次讀取值之前，不要重新開啟原始 Dexcom 接收器（如果已使用）。
 
-### New Sensor
+### 新傳感器
 
-- Turn original Dexcom receiver off (if used).
-- Stop sensor following [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html).
+- 關閉原始 Dexcom 接收器（如果已使用）。
+- 按照[這些指示](https://navid200.github.io/xDrip/docs/Dexcom/StartG6Sensor.html)停止傳感器。
 
-- Insert and then start a new sensor following [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
+- 植入並按照[這些指示](https://navid200.github.io/xDrip/docs/Starting-G6.html)啟動新傳感器。
 
 (xdrip-retrieve-sensor-code)=
 
-### Retrieve sensor code
+### 檢索傳感器碼
 
-→ Hamburger Menu (1) → System Status (2) → If you are on the Classic Status Page (3) swipe the screen (4) to reach → G5/G6/G7 Status screen → Calibration Code.
+→ 漢堡選單 (1) → 系統狀態 (2) → 如果您處於經典狀態頁面 (3) 向右滑動螢幕 (4) 到達 → G5/G6/G7 狀態頁面 → 校正碼。
 
-![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip_Dexcom_SensorCode2.png)
+![xDrip+ 檢索 Dexcom 傳感器碼2](../images/xDrip_Dexcom_SensorCode2.png)
 
 (xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
 
-### Troubleshooting Dexcom G5/G6 and xDrip+
+### Dexcom G5/G6 和 xDrip+ 的故障排除
 
-#### Problem connecting transmitter
+#### 傳輸器連線問題
 
-Follow [these instructions](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html).
+按照[這些指示](https://navid200.github.io/xDrip/docs/Connectivity-troubleshoot.html)進行操作。
 
-#### Problem when starting new sensor
+#### 啟動新傳感器時的問題
 
-Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html).
+請按照[這些指示](https://navid200.github.io/xDrip/docs/Dexcom/SensorFailedStart.html)進行操作。
 
 ## Libre 1
 
-- Setup your NFC to Bluetooth bridge in xDrip+
+- 在 xDrip+ 中設置您的 NFC 至藍牙橋接器
     
-    → Hamburger Menu (1) → Settings (2) → Less common settings (3) → Bluetooth Settings (4)
+    → 漢堡選單 (1) → 設定 (2) → 不常見設定 (3) → 藍牙設定 (4)
 
-- In Bluetooth Settings set the checkboxes exactly as in the screenshots below (5)
+- 在藍牙設定中，請將勾選框設置為下方截圖所示的設定 (5)
     
-    - Disable watchdogs as they will reset the phone Bluetooth and interrupt your pump connection.
+    - 停用監控程式，因為它們會重置手機藍牙並中斷幫浦連線。
     
-    ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
+    ![xDrip+ Libre 藍牙設定 1](../images/xDrip_Libre_BTSettings1.png)
 
-- You can try to enable the following settings (7)
+- 您可以嘗試啟用以下設定 (7)
     
-    - Use scanning
-    - Trust Auto-Connect
-    - Use Background Scans
+    - 使用掃描功能
+    - 信任自動連線
+    - 使用背景掃描
 
-- If you easily lose connection to the bridge or have difficulties recovering connection, **DISABLE THEM** (8).
+- 如果您經常失去與橋接器的連線或難以恢復連線，**請停用它們** (8)。
     
-    ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
+    ![xDrip+ Libre 藍牙設定 2](../images/xDrip_Libre_BTSettings2.png)
 
-- Leave all other options disabled unless you know why you want to enable them.
+- 除非您知道為什麼要啟用，否則請保持其他選項為停用狀態。
     
-    ![xDrip+ Libre Bluetooth Settings 3](../images/xDrip_Libre_BTSettings3.png)
+    ![xDrip+ Libre 藍牙設定 3](../images/xDrip_Libre_BTSettings3.png)
 
-### Libre smart reader battery level
+### Libre 智慧讀取器電池電量
 
-- Battery level of bridges such as MiaoMiao and Bubble can be displayed in AAPS (not Blucon).
-- Details can be found on [screenshots page](Screenshots-sensor-level-battery).
+- 如 MiaoMiao 和 Bubble 等橋接器的電池電量可以顯示在 AAPS 中（Blucon 不支援）。
+- 詳細資訊請參閱[螢幕截圖頁面](Screenshots-sensor-level-battery)。
 
-### Connect Libre Transmitter & start sensor
+### 連線 Libre 傳輸器並啟動傳感器
 
-- If your sensor requires it (Libre 2 EU and Libre 1 US) install the [latest out of process algorithm](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view).
+- 如果您的傳感器需要（例如 Libre 2 EU 和 Libre 1 US），請安裝[最新的外部處理演算法](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)。
 
-- Your sensor must be already started using the vendor app or the reader (xDrip+ cannot start or stop Libre sensors).
+- 您的傳感器必須已經使用供應商應用程式或讀取器啟動（xDrip+ 無法啟動或停止 Libre 傳感器）。
 
-- Set the data source to Libre Bluetooth.
+- 將資料來源設置為 Libre 藍牙。
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre Bluetooth in Hardware Data source (3)
+    → 漢堡選單 (1) → 設定 (2) → 在硬體資料來源中選擇 Libre 藍牙 (3)
     
-    ![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+    ![xDrip+ 啟動 Libre 傳輸器與感測器 1](../images/xDrip_Libre_Transmitter01.png)
 
-- Scan Bluetooth and connect the bridge.
+- 掃描藍牙並連線橋接器。
     
-    → Hamburger Menu (1) → Scan Bluetooth (2) → Scan (3)
+    → 漢堡選單 (1) → 掃描藍牙 (2) → 掃描 (3)
     
-    - If xDrip+ can't find the bridge, make sure it's not connected to the vendor app. Put it in charge and reset it.
+    - 如果 xDrip+ 找不到橋接器，請確保它未連線到供應商應用程式。將其插入充電並重置。
     
-    ![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+    ![xDrip+ 啟動 Libre 傳輸器與傳感器 2](../images/xDrip_Libre_Transmitter02.png)
 
-- Start the sensor in xDrip+.
+- 在 xDrip+ 中啟動傳感器。
     
-        {admonition} Safety warning
+        {admonition} 安全警告
         :class: warning
-        Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.
+        在一小時的暖機時間結束之前請勿使用感測器數據：該數值可能會異常高，並導致 AAPS 中的錯誤決策。
     
-    → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
+    → 漢堡選單 (1) → 啟動傳感器 (2) → 啟動傳感器 (3) → 設置您使用讀取器或供應商應用程式啟動傳感器的精確時間。如果您不是今天啟動的，請選擇“不是今天” (4)。
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ 啟動 Libre 傳輸器與傳感器 3](../images/xDrip_Libre_Transmitter03.png)
 
-## Libre 2 patched app
+## Libre 2 修補版(patched) 應用程式
 
-- Set the data source to Libre patched app.
+- 將資料來源設置為 Libre 修補版應用程式。
     
-    → Hamburger Menu (1) → Settings (2) → Select Libre (patched App) in Hardware Data source (3)
+    → 漢堡選單 (1) → 設定 (2) → 在硬體資料來源中選擇 Libre（修補版應用程式）(3)
     
-    ![xDrip+ Libre Patched app 1](../images/xDrip_Libre_Patched01.png)
+    ![xDrip+ Libre 修補版應用程式 1](../images/xDrip_Libre_Patched01.png)
 
-- You can add `BgReading:d,xdrip libre_receiver:v` under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for trouble shooting.
+- 您可以在不常見設定->額外日誌記錄設定->額外標籤記錄中新增`BgReading:d,xdrip libre_receiver:v`。 這將記錄額外的錯誤訊息以進行故障排除。
 
-![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
+![xDrip+ LibreLink 日誌記錄](../images/Libre2_Tags.png)
