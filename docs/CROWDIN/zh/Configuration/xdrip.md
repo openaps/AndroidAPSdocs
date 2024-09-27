@@ -142,7 +142,7 @@ Dexcom 傳感器的自動延長（`預防性重啟`）不建議使用，因為�
 - 移除傳輸器（如果更換傳感器，則同時移除傳感器）。 若要在不移除傳感器的情況下移除傳輸器，請參閱[這裡](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)，或觀看此影片<https://youtu.be/AAhBVsc6NZo>。
 - 將舊的傳輸器放遠以防止重新連線。 微波是一個完美的法拉第屏蔽裝置 - 但為了完全確保安全，請拔掉電源線以確保沒有人會打開微波。
 - 請按照[這些指示](https://navid200.github.io/xDrip/docs/Starting-G6.html)進行操作。
-- 在 xDrip+ 顯示第一次讀數之前，不要重新開啟原始 Dexcom 接收器（如果已使用）。
+- 在 xDrip+ 顯示第一次讀取值之前，不要重新開啟原始 Dexcom 接收器（如果已使用）。
 
 ### 新傳感器
 
