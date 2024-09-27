@@ -1,32 +1,32 @@
 # Dexcom G5
 
-## If using G5 with xdrip+
+## 如果使用 G5 配合 xDrip+
 
--   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you want specific newly developed features.
--   Setup xDrip+ with G5 following [these instructions](https://navid200.github.io/xDrip/docs/G5-Recommended-Settings.html).
--   Setup xDrip+ reading the [xDrip+ settings page](../Configuration/xdrip.md) .
--   Select xDrip+ in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+-   除非您需要特定新開發的功能，否則可以安全下載[最新 APK（穩定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)。
+-   根據[這些指示](https://navid200.github.io/xDrip/docs/G5-Recommended-Settings.html)設定 xDrip+ 配合 G5。
+-   閱讀[xDrip+ 設定頁面](../Configuration/xdrip.md)來設定 xDrip+。
+-   在[ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
 
-## If using G5 with patched Dexcom app
+## 如果使用 G5 配合修改過的 Dexcom 應用程式
 
 ```{admonition} Legacy apps
 :class: warning
 These apps are not compatible with recent Android versions.  
 ```
 
--   Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5).
+-   從<https://github.com/dexcomapp/dexcomapp>下載 apk，並選擇符合您需求的版本（mg/dl 或 mmol/l 版本，G5）。
 
-    -   Folder 2.4 was for users of AAPS 2.5 and above.
-    -   Open <https://play.google.com/store/search?q=dexcom%20g5> on your computer. Region will be visible in URL.
+    -   資料夾 2.4 針對 AAPS 2.5 及以上版本的使用者。
+    -   在電腦上打開<https://play.google.com/store/search?q=dexcom%20g5>。 區域將在 URL 中可見。
 
-    ![Region in Dexcom G5 URL](../images/DexcomG5regionURL.PNG)
+    ![Dexcom G5 URL 中的區域](../images/DexcomG5regionURL.PNG)
 
--   Force stop and uninstall the original Dexcom app, if not already done.
+-   強制停止並卸載原始 Dexcom 應用程式（如果尚未完成）。
 
--   Install downloaded apk
+-   安裝下載的 apk
 
--   Start sensor
+-   啟動傳感器
 
-- Select Dexcom App (patched) in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+- 在[ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 Dexcom App（修改版）。
 
--   If you want to use xDrip alarms via local broadcast: in xDrip hamburger menu > settings > hardware data source > 640G /EverSense.
+-   如果您希望透過本地廣播使用 xDrip 警報：在 xDrip 選單 > 設定 > 硬體資料來源 > 640G /EverSense。
