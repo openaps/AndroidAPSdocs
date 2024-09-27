@@ -48,7 +48,7 @@ N.B. 如果您使用不同的 HbA1c 單位（mmol/mol 而非 %），請點擊[�
 
 ```{admonition} NO SGLT-2 inhibitors
 :class: danger
-SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins 會無法預測地降低血糖水平，因此在使用類似 AAPS 的閉環系統時，絕對不能服用這類藥物！ There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous. 
+SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins 會無法預測地降低血糖水平，因此在使用類似 AAPS 的閉環系統時，絕對不能服用這類藥物！ 這會導致酮酸中毒和/或低血糖的重大風險！ The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous. 
 
 In a nutshell:
 - **Example 1: risk of Hypo**
