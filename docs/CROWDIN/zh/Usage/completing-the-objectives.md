@@ -9,7 +9,7 @@
 ```{admonition} Note
 :class: note
 
-Regularly export your **AAPS** settings after completing each **objective**!
+在完成每個 **目標** 後，定期匯出您的 **AAPS** 設置！
 ```
 
 我們強烈建議您在完成每個 **目標** 後[匯出設定](../Usage/ExportImportSettings.md)。 此匯出過程會建立一個 **設定** (.json) 檔案，您應該將它備份到一個或多個安全的地方（例如 Google Drive、硬碟、電子郵件附件等）。 這確保了您保留了目標進度，如果您不慎刪除了進度，只需匯入最近的設定檔即可重新載入。 如果您想更換 **AAPS** 的智慧型手機（例如升級、遺失或手機損壞等），備份設定檔也是必需的。
@@ -71,7 +71,7 @@ Regularly export your **AAPS** settings after completing each **objective**!
 
 ```{admonition} __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: Note
-From time to time, new features are added to **AAPS** which may require a new question to be added to the Objectives, particularly Objective 3. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other Objectives remain completed.
+不時會為 **AAPS** 添加新功能，可能需要在目標中新增問題，特別是目標 3。因此，任何新增到 **目標 3** 的問題將被標記為「未完成」，因為 **AAPS** 需要您執行此操作。不要擔心，因為每個 **目標** 是獨立的，您不會失去 **AAPS** 的現有功能，前提是其他目標仍然完成。
 ```
 
 ## 目標 4：開始使用開環
@@ -122,12 +122,12 @@ From time to time, new features are added to **AAPS** which may require a new qu
 
 你可以透過輸入不同的數值來調整圖表中的綠色區域（代表你的目標範圍），位置在 [偏好設定](../Configuration/Preferences.md) > Overview > 顯示範圍。
 
-![Stop sign](../images/sign_stop.png)
+![停止標誌](../images/sign_stop.png)
 
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-If you are open looping with a virtual pump stop here. Only click verify at the end of this Objective once you have changed to using a "real" physical pump.
+如果您正在使用虛擬幫浦開啟循環，請在此停下來。只有在您已經換到使用「真正的」實體幫浦後，才在這個目標結束時點擊驗證。
 ```
 
 ![空白](../images/blank.png)
@@ -136,7 +136,7 @@ If you are open looping with a virtual pump stop here. Only click verify at the 
 
 ## 目標 6：使用低血糖暫停功能開始閉環
 
-![Warning sign](../images/sign_warning.png)
+![警告標誌](../images/sign_warning.png)
 
 ```{admonition} Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend only!
 :class: 注意
