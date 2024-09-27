@@ -59,11 +59,11 @@ AAPS 的“核心”是一個你自己構建的**應用程式**。 這裡有詳�
 #### 1) 內建安全
 要了解名為oref0和oref1的演算法的安全功能，[請按這裡](https://openaps.org/reference-design/)。 用戶掌控自己的安全限制。
 
-#### 2) **Hardware flexibility**
+#### 2) **硬體彈性**
 
 **AAPS** 與各種胰島素幫浦和傳感器配合使用。 舉例來說，如果你對 Dexcom 感應器貼片膠過敏，你可以考慮改用 Libre 傳感器。 隨著生活變化，提供靈活性。 您不必重新構建或重新安裝**AAPS**應用程式，在應用程式中勾選另一個選項以更改您的硬體即可。 AAPS 獨立於特定的幫驅動程式，還包含一個"虛擬幫浦"，因此用戶可以在使用之前進行安全實驗。
 
-#### 3) **Highly customisable, with wide parameters**
+#### 3) **高度可自訂，擁有廣泛的參數**
 
 用戶可以輕鬆添加或移除模塊或功能，並且 **AAPS** 可以在開放和封閉環路模式下使用。 這裡有一些使用 **AAPS** 系統的可能性示例：
 
@@ -79,31 +79,31 @@ AAPS 的“核心”是一個你自己構建的**應用程式**。 這裡有詳�
 
 這些都是一些範例，完整的功能範圍提供了極大的靈活性來應對日常生活中的各種狀況，包括運動、疾病、荷爾蒙周期、_其它_等。 最後，這些彈性功能該怎麼用，全看使用者自己決定，因為沒有一套通用的自動化規則適合每個人。
 
-#### 4) **Remote monitoring**
+#### 4) **遠端監控**
 有多種可能的監控渠道（如 Sugarmate、Dexcom Follow、Xdrip+、Android Auto 、_其它_等），這對於父母/照護者以及需要自定義警報的成人（如睡覺/駕駛時）特別有用。 在某些應用（如 Xdrip+）中，您還可以完全關閉警報，這在您不想讓新傳感器進行循環時（如傳感器尚未完全穩定）很有用。
 
-#### 5) **Remote control**
+#### 5) **遠端控制**
 **AAPS** 相對於商業系統的一個重大優勢是，關注者可以透過認證的簡訊（SMS）指令或應用程式（如 [Nightscout](https://nightscout.github.io/) 或 AAPSClient）向 **AAPS** 系統發送多種指令。 第1型糖尿病兒童的父母們廣泛使用AAPS。 例如，在遊樂場時，您可以透過自己的手機為孩子的點心提前注射，而孩子則繼續玩耍。 系統可透過不同裝置（_如_ Fitbit）進行監控，發送基本指令（_如_ Samsung Galaxy watch 4），甚至可以使用高階智慧型手錶(**5**（_如_ LEMFO LEM14）運作整個 AAPS 系統。 在這種情況下，您不需要使用手機運作AAPS。 隨著手錶的電池壽命提高和技術變得更加穩定，這最後一個選項可能會變得越來越具吸引力。
 
-#### 6) **No commercial constraints, due to open application interfaces**
-除了使用開源方法外，允許隨時查看**AAPS**的程式碼，提供開放編程界面的一般原則也讓其他開發人員有機會貢獻新想法。 **AAPS** 與 Nightscout 緊密整合。 這加快了發展，讓用戶可以添加功能，使得與糖尿病的生活更加方便。 Good examples for such integrations are [Nightscout](https://nightscout.github.io/), [Nightscout Reporter](https://nightscout-reporter.zreptil.de/), [Xdrip+](https://xdrip.readthedocs.io/en/latest/install/usethedoc/), [M5 stack](https://github.com/mlukasek/M5_NightscoutMon/wiki?fbclid=IwAR1pupoCy-2GuXLS7tIO8HRkOC_536YqSxTK7eF0UrKkM1PuucFYRyPFvd0) etc. 開源開發者與商業系統開發者之間的對話持續進行。 許多 DIY 創新逐漸被商業系統採用，儘管開發速度較慢，這在一定程度上是因為不同公司的系統（如幫浦、應用程式、傳感器等）之間的介面需要謹慎協商和授權。 這也可能減緩創新，這些創新對患者（或一小部分特定需求的患者）很方便，因為這些創新無法帶來顯著的利潤。
+#### 6) **由於開放的應用程式介面，無商業限制**
+除了使用開源方法外，允許隨時查看**AAPS**的程式碼，提供開放編程界面的一般原則也讓其他開發人員有機會貢獻新想法。 **AAPS** 與 Nightscout 緊密整合。 這加快了發展，讓用戶可以添加功能，使得與糖尿病的生活更加方便。 這類整合的良好範例包括 [Nightscout](https://nightscout.github.io/)、[Nightscout Reporter](https://nightscout-reporter.zreptil.de/)、[Xdrip+](https://xdrip.readthedocs.io/en/latest/install/usethedoc/)、[M5 stack](https://github.com/mlukasek/M5_NightscoutMon/wiki?fbclid=IwAR1pupoCy-2GuXLS7tIO8HRkOC_536YqSxTK7eF0UrKkM1PuucFYRyPFvd0) 等。 開源開發者與商業系統開發者之間的對話持續進行。 許多 DIY 創新逐漸被商業系統採用，儘管開發速度較慢，這在一定程度上是因為不同公司的系統（如幫浦、應用程式、傳感器等）之間的介面需要謹慎協商和授權。 這也可能減緩創新，這些創新對患者（或一小部分特定需求的患者）很方便，因為這些創新無法帶來顯著的利潤。
 
-#### 7) **Detailed app interface**
+#### 7) **詳細的應用程式介面**
 透過 **AAPS**，您可以輕鬆追蹤幫浦胰島素水平、套管使用時間、傳感器時間、幫浦電池時間、活性胰島素量_等等_。 許多操作可以直接在 **AAPS** 應用中完成（如幫浦注射、幫浦中斷等），無需在幫浦本身上操作，這樣幫浦可以一直放在您的口袋或腰帶上。
 
-#### 8) **Accessibility and affordability**
+#### 8) **可及性和經濟可行性**
 **AAPS**為那些目前無法自費或沒有經費/保險的人提供了一個世界級的混合閉環系統，其開發概念比市售系統領先了數年。 目前你需要擁有Nightscout帳號才能設置**AAPS**，但Nightscout帳號並不是每天運作 **AAPS**循環所必須的。 許多人繼續使用Nightscout來收集資料並進行遠端控制。 雖然**AAPS**本身是免費的，但透過不同的平台設置Nightscout可能會產生費用（新台幣$0 -$425），這取決於你需要的支援程度以及你是否要在設置後繼續使用Nightscout（請參閱比較表）。 **AAPS**支援多種價格實惠（大約從新台幣$5,000元起）的Android手機。 不同版本適用於特定地區和語言，AAPS還可以供[視障人士](Safety-first-aaps-can-also-be-used-by-blind-people)使用。
 
-#### 9) **Support**
+#### 9) **支援**
 沒有任何自動胰島素輸送系統是完美的。 市售和開源系統在通訊和臨時硬體故障方面存在許多共同的問題。 AAPS用戶社群在Facebook、Discord和Github上提供支援，這些人遍佈世界各地，設計並開發了**AAPS**並且也同時在使用它。 市售APS系統還有Facebook支援群組，並可以從診所或商業公司獲得幫助——值得與這些系統的用戶或前用戶交流，了解常見問題、教育計劃的品質以及提供的持續支援。
 
-#### 10) **Predictability, transparency and safety**
+#### 10) **可預測性、透明性與安全性**
 **AAPS** 完全透明、邏輯清晰且可預測，這可能會使您更容易知道何時設置出錯，並相應地進行調整。 你可以完全看到系統在做什麼、為什麼這樣做，以及設置其運作限制，這使得控制權（和責任）掌握在你手中。 這可以讓用戶感到更有信心，並能擁有更好的睡眠質量。
 
 #### 11) **透過開發（dev）模式查看進階功能，包括完全閉環**
 這份**AAPS** 文件主要集中於**“master”**分支的主流版本。 然而，研究和開發始終在進行中。 更有經驗的用戶可能希望探索**開發**分支中的實驗性功能。 這包括Dexcom G7的整合，以及根據短期敏感度變化（DYNISF）自動調整胰島素輸送的功能。 開發創新主要集中於完全閉環的策略（不必為用餐注射_其它_等胰島素），並一般地努力使1型糖尿病患者的生活變得更方便。
 
-#### 12) **Ability to contribute yourself to further improvements**
+#### 12) **能夠自行參與進一步的改善**
 第1型糖尿病可能會讓人感到非常沮喪和孤立。 掌控自己的糖尿病技術，並且在取得進展後幫助他人，這可以帶來極大的成就感。 你可以自我學習，發現障礙，尋求解決方案，甚至為新的開發和文件貢獻力量。 社群中有與你有相同目標的人可以與你交換想法並合作。 這就是 #WeAreNotWaiting 的核心精神。
 
 ## AAPS 與 MDI 和開環系統相比如何？
