@@ -134,7 +134,7 @@ En plus des trois composants matériels de base (téléphone, pompe, capteur de 
 
 ### 1) L'application Android pour téléphone : **AAPS**
 
-**AAPS** est une application qui s'exécute sur les smartphones et appareils Android. Vous allez compiler l'application **AAPS** (un fichier apk) vous-même, en suivant un guide détaillé. Vous aurez besoin de télécharger le code source de **AAPS** depuis Github, d'installer les programmes nécessaires (Android Studio, GitHub desktop) sur votre ordinateur et de compiler votre propre version de l'application **AAPS**. Vous transférerez ensuite l'application **AAPS** sur votre smartphone (par e-mail, câble USB _etc._) et vous l'installerez.
+**AAPS** est une application qui s'exécute sur les smartphones et appareils Android. You are going to build the **AAPS** app (an apk file) yourself, using a step-by-step guide, by downloading the **AAPS** source code from GitHub, installing the necessary programs (Android Studio, GitHub desktop) on your computer and building your own copy of **AAPS** app. Vous transférerez ensuite l'application **AAPS** sur votre smartphone (par e-mail, câble USB _etc._) et vous l'installerez.
 
 ### 2) Un serveur de reporting : NightScout (Tidepool*)
 
