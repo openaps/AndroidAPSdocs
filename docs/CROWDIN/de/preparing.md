@@ -134,7 +134,7 @@ Neben den drei grundlegenden Hardwarekomponenten (Smartphone, Insulinpumpe und G
 
 ### Eine Android Smartphone-App: **AAPS**
 
-**AAPS** ist eine App, die auf Android-Smartphones & -Geräten läuft. Du wirst die **AAPS**-App (eine apk Datei ) selber nach einer Schritt-für-Schritt-Anleitung bauen. Du wirst den **AAPS**-Quellcode von Github herunterladen, die notwendigen Programme (Android Studio, GitHub Desktop) auf Deinem Computer installieren und Deine eigene Kopie der **AAPS**-App erstellen. Du wirst die **AAPS**-App auf Dein Smartphone (per E-Mail, USB-Kabel _etc._) übertragen und installieren.
+**AAPS** ist eine App, die auf Android-Smartphones & -Geräten läuft. You are going to build the **AAPS** app (an apk file) yourself, using a step-by-step guide, by downloading the **AAPS** source code from GitHub, installing the necessary programs (Android Studio, GitHub desktop) on your computer and building your own copy of **AAPS** app. Du wirst die **AAPS**-App auf Dein Smartphone (per E-Mail, USB-Kabel _etc._) übertragen und installieren.
 
 ### 2) Ein Server für Berichte: Nightscout (Tidepool*)
 
