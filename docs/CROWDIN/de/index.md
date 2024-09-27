@@ -29,7 +29,7 @@ Abschnitt 9) behandelt **Erweiterte AAPS-Optionen** wie beispielsweise mit **AAP
 
 Im Abschnitt 10) [Wie ich AAPS weiterbringen kann](make-a-PR.md) erklären wir wie Du das Projekt unterstützen und weiter voranbringen kannst. Du kannst Geld oder Geräte spenden oder Dein Fachwissen einbringen. Du kannst Änderungen an der Dokumentation vorschlagen oder selber machen, Du kannst bei der [Übersetzung der Dokumentation](translations.md) unterstützen und Du kannst Deine Daten über das Open Humans Projekt zur Verfügung stellen.
 
-Im Abschnitt 11 finden sich archivierte und auch zusätzliche Dokumentation, sowie einen Unterabschnitt für [Klinikpersonal](Resources/clinician-guide-to-AAPS.md), das sich für die Open-Source-Technologie der künstlichen Bauchspeicheldrüse wie **AAPS** interessiert und für Patient*innen, die diese Informationen mit ihren Ärzt*innen und Diabetesberater*innen teilen möchten. Weitere Referenzen und Ressourcen rund um das Thema Diabetes und Looping findest Du im Abschnitt 12.
+Section 11) contains archived or additional documentation, including a subsection for [clinicians](Resources/clinician-guide-to-AAPS.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. More diabetes and looping references and resources are contained in Section 12).
 
 
  ### Du willst mit **AAPS** loslegen? In [Einführung in APS und AAPS](introduction.md) erfährst Du mehr über **AAPS**.
