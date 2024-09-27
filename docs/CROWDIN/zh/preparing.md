@@ -134,7 +134,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 ### 1) Android 手機應用程式：**AAPS**
 
-**AAPS**是一個運作在 Android 智慧型手機和裝置上的應用程式。 You are going to build the **AAPS** app (an apk file) yourself, using a step-by-step guide, by downloading the **AAPS** source code from GitHub, installing the necessary programs (Android Studio, GitHub desktop) on your computer and building your own copy of **AAPS** app. 然後，您將透過電子郵件、USB 線等方式將**AAPS**應用程式傳輸到您的智慧型手機並安裝。
+**AAPS**是一個運作在 Android 智慧型手機和裝置上的應用程式。 您將依照逐步指南，從 GitHub 下載 **AAPS** 的原始碼，並在您的電腦上安裝必要的程式（如 Android Studio、GitHub Desktop），自行建置屬於自己的 **AAPS** 應用程式（apk 檔）。 然後，您將透過電子郵件、USB 線等方式將**AAPS**應用程式傳輸到您的智慧型手機並安裝。
 
 ### 2) 報告伺服器：NightScout（或 Tidepool）
 
