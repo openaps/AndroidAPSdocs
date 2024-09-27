@@ -1,53 +1,53 @@
-# Dexcom G7 和 ONE+
+# Dexcom G7 and ONE+
 
 
-## 基本準備
+## Fundamental in advance
 
-值得注意的是，與 G6 相比，G7 和 ONE+ 系統在應用程式和讀取器中都不會平滑值。 更多詳細資訊請參閱 [這裡](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app)。
+Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
-![G7 英文](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
+![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
 ```{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
 :class: warning
 **Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
 ```
 
-## 1.  修補版 Dexcom G7 應用程式 (DiAKEM)
+## 1.  Patched Dexcom G7 App (DiAKEM)
 
-**注意：需要 AAPS 3.2.0.0 或更高版本！ 不適用於 ONE+。**
+**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
 
-### 安裝新的修補版 G7 應用程式並啟動傳感器
+### Install a new patched (!) G7 app and start the sensor
 
-修補版 Dexcom G7 應用程式 (DiAKEM) 可查看 Dexcom G7 資料。 這不是 BYODA 應用程式，因為該應用程式目前無法接收 G7 資料。
+A patched Dexcom G7 app (DiAKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
-如果之前有使用過原Dexcom應用程式，請將其解除安裝（如果傳感器正在運作，可以繼續使用傳感器，請在移除應用程式前記下傳感器代碼！）
+Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
 
-從 [這裡](https://github.com/authorgambel/g7/releases)下載並安裝修補版.apk。
+Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
 
-在修補版應用程式中輸入傳感器代碼。
+Enter sensor code in the patched app.
 
-請遵循一般 CGM 衛生規範和感測器安裝位置的建議，詳情請參閱[此處](../Hardware/GeneralCGMRecommendation.md)。
+Follow the general recommendations for CGM hygiene and sensor placement found [here](../Hardware/GeneralCGMRecommendation.md).
 
-預熱階段結束後，資料會照常顯示在 G7 應用程式中。
+After the warm-up phase, the values are displayed as usual in the G7 app.
 
-### 在 AAPS 中進行配置
+### Configuration in AAPS
 
-AAPS 中的配置步驟
-- 在 [ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source) 中選擇 'BYODA' - 即便這不是 BYODA 應用程式！
+For the configuration in AAPS
+- Select 'BYODA' in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source) - even if it is not the BYODA app!
 
-- 如果 AAPS 無法接收任何資料，請切換到其他血糖來源，然後再切回 'BYODA' 以調用查詢以批准 AAPS 和 BYODA 之間的資料交換。
+- If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
 
-## 2. xDrip+（直接連接至 G7 或 ONE+）
+## 2. xDrip+ (direct connection to G7 or ONE+)
 
-- 請參閱這裡的說明：[Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- 在 [ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source) 中選擇 xDrip+。
+- Follow the instructions here: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- Select  xDrip+ in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-- 根據 xDrip+ 設定頁面上的解釋來調整 xDrip+ 設定 [xDrip+ 設定](../Configuration/xdrip.md)
+- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md)
 
-## 3. xDrip+（伴侶模式）
+## 3. xDrip+ (companion mode)
 
--   下載並安裝 xDrip+：[xDrip](https://github.com/NightscoutFoundation/xDrip)
-- 在 xDrip+ 中必須選擇「伴侶應用程式」作為資料來源，並在進階設定 > 藍牙設定 > 啟用「伴侶藍牙」。
--   在 [ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source) 中選擇 xDrip+。
+-   Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
+- As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
+-   Select  xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
--   根據 xDrip+ 設定頁面上的解釋來調整 xDrip+ 設定 [xDrip+ 設定](../Configuration/xdrip.md) 
+-   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md) 
