@@ -29,7 +29,7 @@ Le chapitre 9) parle des **Options avancées d'AAPS** telles que comment passer 
 
 Dans le chapitre 10) [Comment soutenir AAPS](make-a-PR.md), nous fournissons des informations pour que vous puissiez soutenir ce projet. Vous pouvez faire un don d'argent, d'équipement ou de connaissances. Vous pouvez suggérer/apporter des modifications à la documentation vous-même, aider avec [la traduction de la documentation](translations.md) ou partager vos données via le projet Open Humans.
 
-Le chapitre 11 contient de la documentation additionnelle ou archivée, dont une page pour les [professionnels de santé](Resources/clinician-guide-to-AAPS.md) qui s'intéressent à la technologie du pancréas artificiel open source comme **AAPS**, ou pour les patients qui veulent partager ces informations avec leur équipe médicale. Ce sujet est également abordé dans l'introduction. D'autres références et ressources sur le diabète et la boucle sont listées dans le chapitre 12.
+Section 11) contains archived or additional documentation, including a subsection for [clinicians](Resources/clinician-guide-to-AAPS.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. More diabetes and looping references and resources are contained in Section 12).
 
 
  ### Prêt à commencer avec **AAPS**? Apprenez-en plus sur **AAPS** dans l'[Introduction](introduction.md).
