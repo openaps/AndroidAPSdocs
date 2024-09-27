@@ -120,7 +120,7 @@ Nightscout 與其他模組獨立運作。 要完成目標 1，您將需要它。
 
 ### 智慧型手錶
 
-您可以選擇任何 Android Wear 1.x 及以上版本的智慧型手錶。 大多數使用閉環系統的人佩戴 Sony Smartwatch 3（SWR50），因為它是唯一一款在手機不在範圍內時仍能從 Dexcom G6/G5 獲取讀數的手錶。 某些其他手錶也可以透過修補來作為獨立接收器使用（更多詳情請參閱[這份文檔](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5)）。
+您可以選擇任何 Android Wear 1.x 及以上版本的智慧型手錶。 大多數使用閉環系統的人佩戴 Sony Smartwatch 3（SWR50），因為它是唯一一款在手機不在範圍內時仍能從 Dexcom G6/G5 獲取讀取值的手錶。 某些其他手錶也可以透過修補來作為獨立接收器使用（更多詳情請參閱[這份文檔](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5)）。
 
 用戶正在建立一個[已測試的手機和手錶清單](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)。 有不同的 AAPS 使用手錶錶盤，您可以在[這裡](../Configuration/Watchfaces.md)找到。
 

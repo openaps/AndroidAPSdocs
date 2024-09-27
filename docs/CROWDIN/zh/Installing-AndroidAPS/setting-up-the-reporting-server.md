@@ -35,8 +35,8 @@ Tidepool自 **AAPS** 3.2版本（2023年末釋出）以來才可用。
 
 ```{admonition} Tidepool with **AAPS** is only for reporting
 :class: danger  
-As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool it is not suitable for sharing real-time information with caregivers.  
-On the other hand, Tidepool can be a great solution for sharing reports with a patient's endocrinologist if Nightscout is not an accepted solution.  
+由於使用 **AAPS** 時資料進來和資料報告之間有三小時的延遲，Tidepool 不適合用來與照護者分享即時資訊。
+另一方面，如果 Nightscout 不是被接受的解決方案，Tidepool 可以是與病人的內分泌科醫生共享報告的絕佳方案。
 ```
 
 Tidepool是一個[開源](https://github.com/tidepool-org)專案。 它提供在Tidepool伺服器上免費運作帳號的選項。
@@ -45,7 +45,7 @@ Tidepool是一個[開源](https://github.com/tidepool-org)專案。 它提供在
 
 ```{admonition} **AAPS** has a the uploader for Tidepool integrated
 :class: note
-You do **not** need to use the uploader app to Tidepool: **AAPS** will upload blood glucose, treatments and basal for you. You only need a personal account with Tidepool. Do not upload your data with the separate Tidepool uploader tool as it will lead to duplicate values.  
+您**不需要**使用上傳應用程式到 Tidepool：**AAPS** 會為您上傳血糖、治療和基礎胰島素。您只需擁有一個 Tidepool 的個人帳號即可。請勿使用單獨的 Tidepool 上傳工具來上傳您的資料，因為這會導致重複的數值。
 ```
 
 一旦您設置了報告伺服器，您現在可以設置[專用的AAPS Google帳號](Dedicated-Google-account-for-AAPS.md)，或者直接進入[構建AAPS應用程式](building-AAPS.md)。

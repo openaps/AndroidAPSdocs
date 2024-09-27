@@ -53,13 +53,13 @@ AAPS Wear OS APK 的標準版本中提供了多種手錶外觀。 當你在手�
 
 A - 從最後一次循環運作以來的時間
 
-B - CGM 資料讀數
+B - CGM 資料讀取值
 
 C - 自最後一次 CGM 資料讀取以來的分鐘數
 
-D - 與上次 CGM 讀數相比的變化（以 mmol 或 mg/dl 為單位）
+D - 與上次 CGM 讀取值相比的變化（以 mmol 或 mg/dl 為單位）
 
-E - 過去 15 分鐘的 CGM 讀數平均變化
+E - 過去 15 分鐘的 CGM 讀取值平均變化
 
 F - 手機電池
 
@@ -333,7 +333,7 @@ Wear OS 手錶是非常耗電且又受限的裝置。 手錶機殼的尺寸限�
 
 在[Garmin ConnectIQ 商店](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30)上，有幾款與 xDrip 或 Nightscout 整合的 Garmin 手錶面。
 
-AAPS Glucose Watch 可直接與 AAPS 整合。 它顯示循環狀態資料（活性胰島素、臨時基礎率），除了顯示血糖讀數外，還會將心率讀數發送到 AAPS。 它可在 ConnectIQ 商店中取得，所需的 AAPS 外掛從 AAPS 3.2 版本起提供。
+AAPS Glucose Watch 可直接與 AAPS 整合。 它顯示循環狀態資料（活性胰島素、臨時基礎率），除了顯示血糖讀取值外，還會將心率讀取值發送到 AAPS。 它可在 ConnectIQ 商店中取得，所需的 AAPS 外掛從 AAPS 3.2 版本起提供。
 
 ![螢幕截圖](../images/Garmin_WF.png) ![螢幕截圖](../images/Garmin_WF-annotated.png)
 

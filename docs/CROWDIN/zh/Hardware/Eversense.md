@@ -1,6 +1,6 @@
 # 針對 Eversense 使用者
 
-有三種不同的方法來存取 Eversense 的讀數：
+有三種不同的方法來存取 Eversense 的讀取值：
 
 - ESEL 配套模式
 - ESEL 修改版模式

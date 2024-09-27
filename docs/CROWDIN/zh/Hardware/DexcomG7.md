@@ -9,7 +9,7 @@
 
 ```{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
 :class: warning
-**Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
+**指數平滑** **必須** 啟用，以便有效使用 G7 / ONE+ 值。  
 ```
 
 ## 1.  修補版 Dexcom G7 應用程式 (DiAKEM)

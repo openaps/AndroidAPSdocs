@@ -24,9 +24,9 @@
 
 點擊`額外選項`(8)
 
-    {admonition} Safety warning
+    {admonition} 安全警告
     :class: warning
-    You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.
+    您必須在 xDrip+ 中停用「上傳治療」，否則在 AAPS 中可能會導致治療數量翻倍，導致錯誤的 COB 和 IOB。
 
 停用`上傳治療方案`(9)，並確保您**不要**使用`回填資料` (11)。
 
@@ -142,7 +142,7 @@ Dexcom 傳感器的自動延長（`預防性重啟`）不建議使用，因為�
 - 移除傳輸器（如果更換傳感器，則同時移除傳感器）。 若要在不移除傳感器的情況下移除傳輸器，請參閱[這裡](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)，或觀看此影片<https://youtu.be/AAhBVsc6NZo>。
 - 將舊的傳輸器放遠以防止重新連線。 微波是一個完美的法拉第屏蔽裝置 - 但為了完全確保安全，請拔掉電源線以確保沒有人會打開微波。
 - 請按照[這些指示](https://navid200.github.io/xDrip/docs/Starting-G6.html)進行操作。
-- 在 xDrip+ 顯示第一次讀數之前，不要重新開啟原始 Dexcom 接收器（如果已使用）。
+- 在 xDrip+ 顯示第一次讀取值之前，不要重新開啟原始 Dexcom 接收器（如果已使用）。
 
 ### 新傳感器
 
@@ -224,9 +224,9 @@ Dexcom 傳感器的自動延長（`預防性重啟`）不建議使用，因為�
 
 - 在 xDrip+ 中啟動傳感器。
     
-        {admonition} Safety warning
+        {admonition} 安全警告
         :class: warning
-        Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.
+        在一小時的暖機時間結束之前請勿使用感測器數據：該數值可能會異常高，並導致 AAPS 中的錯誤決策。
     
     → 漢堡選單 (1) → 啟動傳感器 (2) → 啟動傳感器 (3) → 設置您使用讀取器或供應商應用程式啟動傳感器的精確時間。如果您不是今天啟動的，請選擇“不是今天” (4)。
 

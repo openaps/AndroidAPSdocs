@@ -18,7 +18,7 @@
 
 - 如果您正在使用最近的（Firefly）傳輸器，預防性重新啟動將**被忽略**。
 - 如果您使用的是修改過的傳輸器，則**不需要**使用預防性重新啟動。
--   如果您使用的是舊的更換過電池的傳輸器，最安全的做法是**停用**[預防性重新啟動](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html)。 但是，在這種情況下，您將不得不在非[原生模式](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)下使用 G6（這不建議使用，因為它會停用工廠校準並且不會過濾吵雜的讀數），否則傳感器將在 10 天後停止運作。
+-   如果您使用的是舊的更換過電池的傳輸器，最安全的做法是**停用**[預防性重新啟動](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html)。 但是，在這種情況下，您將不得不在非[原生模式](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)下使用 G6（這不建議使用，因為它會停用工廠校準並且不會過濾吵雜的讀取值），否則傳感器將在 10 天後停止運作。
 -   Dexcom G6 和 ONE 傳送器可以同時連接到 Dexcom 接收器（或替代的 t:slim 幫浦）以及你手機上的一個應用程式。
 -   使用 xDrip+ 作為接收器時，請先卸載 Dexcom 應用程式。 **您無法同時將 xDrip+ 和 Dexcom 應用程式連線到傳輸器！**
 -   如果你需要 Clarity 並希望使用 xDrip+ 的警報，請使用 [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app)（僅限 G6）並用本地廣播到 xDrip+。

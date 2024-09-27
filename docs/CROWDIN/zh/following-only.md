@@ -70,7 +70,7 @@ https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
 ●  自訂警報（高、低警報，當無資料15-45分鐘時的警報）。
 
-●  快速上升/下降超過2-5次連續讀數（你可以選擇）。 還可以選擇兩個單獨讀數之間的差值。
+●  快速上升/下降超過2-5次連續讀取值（你可以選擇）。 還可以選擇兩個單獨讀取值之間的差值。
 
 ●  智慧延後功能，不會在資料朝正確方向變動時發出警報。
 
@@ -133,21 +133,21 @@ xDripSwift 是從最初的 xDrip 應用程式移植到 iOS 並發展成"xDrip fo
 
 ```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
-The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) is the main community support for xDrip4iOS and Shuggah. **xDrip4iOS** can connect to many different CGM systems and transmitters and display blood glucose values, charts and statistics as well as provide alarms. It can also upload to Nightscout or act as a [follower app for Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). However, it is difficult to actually _get_ the **xDrip4iOS** app for your phone. 
+ [xDrip4iOS Facebook 群組](https://www.facebook.com/groups/853994615056838/announcements) 是 xDrip4iOS 和 Shuggah 的主要社群支援。 **xDrip4iOS** 可以連接許多不同的 CGM 系統和傳輸器，並顯示血糖值、圖表和統計資訊，還可以提供警報。 它還可以上傳到 Nightscout，或作為 [Nightscout 的追蹤應用程式](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/)。 然而，實際上要在您的手機上獲取 **xDrip4iOS** 應用程式是很困難的。 
 
-"How can I get **xDrip4iOS** on my iPhone?"
-There are two options:
+"我怎麼能在我的 iPhone 上獲得 **xDrip4iOS**？"
+有兩個選擇：
 
-1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by following the instructions below:
+1. 如果您擁有 Mac 和 Apple 開發者帳號（每年 99 歐元/美元），您可以按照以下說明構建自己的 xDrip4iOS：
 
 https://xdrip4ios.readthedocs.io/en/latest/install/build/
 
-If you want, you can then become a "releaser" and share a Personal Testflight xDrip4iOS with up to 100 other people to help them:
+如果您願意，您可以成為一個 "發佈者"，並與多達 100 其他人分享一個個人測試飛行 xDrip4iOS，來幫助他們：
 https://xdrip4ios.readthedocs.io/.../personal_testflight/
 
-2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and monitor the posts… wait for somebody to offer an invitation to their Personal Testflight releases in the group. **You should not ask for an invitation to the app** (read the group rules). 
+2. 您加入 [xDrip4iOS Facebook 群組](https://www.facebook.com/groups/853994615056838/announcements) 並監控帖子……等著有人在群組中提供邀請進入他們的個人測試飛行發佈。 **您不應該要求應用程式的邀請**（請閱讀團體規則）。 
 
-An easier solution is therefore to download the **Shuggah** app. 
+因此，更簡單的解決方案是下載 **Shuggah** 應用程式。 
 ```
 
 #### [Shuggah](https://apps.apple.com/sa/app/shuggah/id1586789452)
@@ -171,7 +171,7 @@ xDrip4iOS Facebook 群組支援 xDrip4iOS、Shuggah 以及相應的 Apple Watch 
 
 [Sugarmate](https://sugarmate.io/)可從 App Store 下載到 iPhone 上。 Sugarmate 相容於：●   Apple iPhone（需要 13.0 或更高版本的軟體）●   Apple iPad（需要 13.0 或更高版本的軟體）●   Google Android（將網頁應用程式儲存到主螢幕）
 
-據 Sugarmate 用戶報告，它可以在美國與 Apple CarPlay 一起使用，當駕駛時顯示血糖讀數。 目前尚未確定這在美國以外的國家是否可行。 如果你知道更多有關此功能的資訊，請透過提交 pull-request（鏈接）將詳細資料添加到文件中，這過程快速且簡單。
+據 Sugarmate 用戶報告，它可以在美國與 Apple CarPlay 一起使用，當駕駛時顯示血糖讀取值。 目前尚未確定這在美國以外的國家是否可行。 如果你知道更多有關此功能的資訊，請透過提交 pull-request（鏈接）將詳細資料添加到文件中，這過程快速且簡單。
 
 
 ### G)  [Spike](https://spike-app.com/) (iOS)
@@ -216,9 +216,9 @@ Pebble 手錶（[現已停產](https://en.wikipedia.org/wiki/Pebble_(watch))）�
 
 這是一款獨特的技術產品，可以 **直接**從 Dexcom G6 發射器接收血糖資料。 很多人不知道 Dexcom G6 發射器實際上會在兩個獨立的通道上廣播當前的血糖資料，一個是手機通道，另一個是幫浦通道。 Bluejay GTS 手錶運作的是經過修改的 Xdrip+ 軟體，並且可以設置為在任一通道上接收血糖資料，因此如果 **AAPS** 使用手機通道，那麼 Bluejay GTS 手錶可以使用幫浦通道。
 
-Bluejay GTS 手錶體積小、防水且價格相對實惠（目前售價為 115 英鎊），可從英國國際運送。 其主要優點是它目前是唯一完全獨立於手機和循環系統的手錶。 例如，如果你在海灘或水上樂園時中斷幫浦和 **AAPS**手機的連線，並且超出了 AAPS 手機的範圍，你仍然可以從 Dexcom G6 直接獲取 Bluejay 手錶的讀數。
+Bluejay GTS 手錶體積小、防水且價格相對實惠（目前售價為 115 英鎊），可從英國國際運送。 其主要優點是它目前是唯一完全獨立於手機和循環系統的手錶。 例如，如果你在海灘或水上樂園時中斷幫浦和 **AAPS**手機的連線，並且超出了 AAPS 手機的範圍，你仍然可以從 Dexcom G6 直接獲取 Bluejay 手錶的讀取值。
 
-報告的缺點是它並不總是每 5 分鐘獲取一次讀數，並且電池不可更換。 Bluejay GTS 手錶運作的是經過修改的 Xdrip+ 軟體，目前不支援其他 Dexcom 版本（如 G7）或 Libre 傳感器。
+報告的缺點是它並不總是每 5 分鐘獲取一次讀取值，並且電池不可更換。 Bluejay GTS 手錶運作的是經過修改的 Xdrip+ 軟體，目前不支援其他 Dexcom 版本（如 G7）或 Libre 傳感器。
 
 ### d) Apple 手錶
 
@@ -249,13 +249,13 @@ M5Stack 是一個小盒子，可以編程為多種應用程式，Martin 的項�
 
 ### B) Sugarpixel
 
-SugarPixel 是一個連線 Dexcom 應用程式或 Nightscout 應用程式的次級血糖顯示警報系統，用於持續血糖監測。 該設備顯示實時的血糖讀數。 這款 CGM 硬體顯示器具備隨機音調生成的音檔警報（聲音非常大）、針對聽力受損者的振動警報、自定義顯示選項以及原生多用戶追蹤功能。
+SugarPixel 是一個連線 Dexcom 應用程式或 Nightscout 應用程式的次級血糖顯示警報系統，用於持續血糖監測。 該設備顯示實時的血糖讀取值。 這款 CGM 硬體顯示器具備隨機音調生成的音檔警報（聲音非常大）、針對聽力受損者的振動警報、自定義顯示選項以及原生多用戶追蹤功能。
 
 ![圖像](./images/39137beb-17cc-4c87-98b7-cf1831d484cb.png)
 
 ![圖像](./images/87883ebb-9683-4aa8-8014-49c2ca902c93.png)
 
-●   SugarPixel 具有多種顯示選項，支援 mg/dL 和 mmol/L，以滿足用戶的需求，並且帶有顏色標識的血糖值。 ●   標準顯示面板顯示血糖讀數、趨勢箭頭和 Delta 值。 Delta 是與上一次讀數的變化值（正或負）。 ●   SugarPixel 可以自定義為低亮度模式，顯示血糖和時間面板，方便用戶在床邊桌上查看當前血糖讀數和時間。 ●   SugarPixel 的彩色面板利用整個顯示屏來展示單一顏色，代表當前的血糖值。 這使得用戶可以在戶外的後院、露台或游泳池旁，透過窗戶從遠處看到血糖讀數。 ●   大血糖面板非常適合床邊使用，特別是佩戴眼鏡或隱形眼鏡的用戶。
+●   SugarPixel 具有多種顯示選項，支援 mg/dL 和 mmol/L，以滿足用戶的需求，並且帶有顏色標識的血糖值。 ●   標準顯示面板顯示血糖讀取值、趨勢箭頭和 Delta 值。 Delta 是與上一次讀取值的變化值（正或負）。 ●   SugarPixel 可以自定義為低亮度模式，顯示血糖和時間面板，方便用戶在床邊桌上查看當前血糖讀取值和時間。 ●   SugarPixel 的彩色面板利用整個顯示屏來展示單一顏色，代表當前的血糖值。 這使得用戶可以在戶外的後院、露台或游泳池旁，透過窗戶從遠處看到血糖讀取值。 ●   大血糖面板非常適合床邊使用，特別是佩戴眼鏡或隱形眼鏡的用戶。
 
 
 ### C) 電腦（TeamViewer）

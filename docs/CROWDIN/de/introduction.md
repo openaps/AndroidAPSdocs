@@ -59,11 +59,11 @@ Der von **AAPS** verwendete OpenAPS-Algorithmus steuert den Blutzzuckerspiegel a
 #### 1) Eingebaute Sicherheit
 Um Dich über die Sicherheitsfunktionen der Algorithmen, bekannt als oref0 und oref1, zu informieren, [klicke hier](https://openaps.org/reference-design/). Der Benutzer hat die Kontrolle über seine eigenen Sicherheitsanforderungen.
 
-#### 1) **Flexibilität bei der Hardware**
+#### 2) **Hardware flexibility**
 
 **AAPS** funktioniert mit einer Vielzahl an Insulinpumpen und Sensoren. Solltest Du z.B. eine Allergie auf ein Dexcom-Pflasterkleber entwickeln, kannst Du ohne größere Probleme auf einen Libre-Sensor umsteigen. Das System kann so Deinem Leben und geänderten Bedingungen angepasst werden. Mit anderer Hardware musst Du die **AAPS**-App weder neu bauen noch erneut installieren. Setze einfach ein neues Häkchen in der App. AAPS ist unabhängig von bestimmten Pumpentreibern und enthält auch eine "virtuelle Pumpe", so dass die Benutzer gefahrlos experimentieren können, bevor sie es an sich selbst anwenden.
 
-#### 2) **Hochgradig anpassbar, mit umfangreichen Parametern**
+#### 3) **Highly customisable, with wide parameters**
 
 Benutzer können einfach Module oder Funktionen hinzufügen oder entfernen und **AAPS** kann sowohl im Modus Open Loop, als auch im Modus Closed Loop verwendet werden. Hier einige Beispiele für die Möglichkeiten mit dem **AAPS** System:
 
@@ -79,31 +79,31 @@ Benutzer können einfach Module oder Funktionen hinzufügen oder entfernen und *
 
 Dies alles sind Beispiele, das volle Leistungsspektrum bietet große Flexibilität für den Alltag einschließlich Sport, Krankheit, Hormonzyklen _etc_. Es gibt keine Standardlösung für eine solche Automation, sodass es am Ende immer eine individuelle Nutzer*innen-Entscheidung bleibt, wie diese Flexibilität genutzt wird.
 
-#### 3) **Fernüberwachung**
+#### 4) **Remote monitoring**
 Es gibt mehrere mögliche Überwachungskanäle (Sugarmate, Dexcom Follow, Xdrip+, Android Auto _etc._), die in bestimmten Szenarien (Schlafen/Fahren) für Eltern und Erwachsene nützlich sind, die individuell einstellbare Warnungen benötigen. In einigen Apps (xDrip+) können Alarme auch vollständig ausschaltet werden. Das ist besonders dann nützlich, wenn ein Sensor frisch gesetzt wurde ("soacking") und/oder die Sensorwerte noch nicht vollständig stabil sind und Du mit diesem Sensor erst später loopen möchtest.
 
-#### 4) **Fernbedienung**
+#### 5) **Remote control**
 Ein bedeutender Vorteil von **AAPS** gegenüber kommerziellen Systemen ist, dass es für Follower möglich ist, über authentifizierte Texte (SMS) Befehle oder über eine App ([Nachtscout](https://nightscout.github.io/) oder AAPSClient), um eine große Anzahl von Befehlen an das **AAPS** System zurückzuschicken. Das ist eine der durch Eltern von Typ-1 Kindern am häufigsten genutzten Funktionalität in AAPS. Es ist sehr nützlich: zum Beispiel auf dem Spielplatz. Wenn Du einen Snack von Deinem eigenen Telefon aus für einen Vorab-Bolus machen willst, und Dein Kind ins Spielen vertieft ist. Es ist möglich das System zu überwachen (_z.B._ Fitbit), grundlegende Befehle zu senden (_z._ Samsung Galaxy Watch 4), oder steuere das gesamte AAPS System von einer hochspezialisierten Smartwatch (**5**) (_z.B._ LEMFO LEM14) aus. In diesem letzten Szenario ersetzt die Full-Android-Smartwatch das Smartphone. Mit zunehmender Batteriekapazität und zuverlässigerer Technik der Smartwatches wird diese Option auch immer attraktiver.
 
-#### 5) **Keine kommerziellen Einschränkungen aufgrund der offenen Anwendungsschnittstellen**
-Über die Verwendung eines Open-Source-Ansatzes hinaus kann der Quellcode von **AAPS** jederzeit eingesehen werden, was das allgemeine Prinzip der Bereitstellung offener Programmierschnittstellen ist. Dies gibt anderen Entwicklern die Möglichkeit, ebenfalls neue Ideen einzubringen. **AAPS** ist eng in Nightscout integriert. Dies beschleunigt die Entwicklung und ermöglicht es den Anwendern, Funktionen hinzuzufügen, um das Leben mit Diabetes noch einfacher zu machen. Gute Beispiele für solche Integrationen sind [NightScout](https://nightscout.github.io/), [Nightscout Reporter](https://nightscout-reporter.zreptil.de/), [Xdrip+](https://xdrip.readthedocs.io/en/latest/install/usethedoc/), [M5 Stack](https://github.com/mlukasek/M5_NightscoutMon/wiki?fbclid=IwAR1pupoCy-2GuXLS7tIO8HRkOC_536YqSxTK7eF0UrKkM1PuucFYRyPFvd0) usw. Es besteht ein ständiger Dialog zwischen Open-Source-Entwicklern und den Entwicklern kommerzieller Systeme. Viele der DIY-Innovationen werden schrittweise von kommerziellen Systemen übernommen, wo die Entwicklungen verständlicherweise langsamer sind. Auch weil Schnittstellen zwischen Systemen verschiedener Unternehmen (Pumpen, Apps, Sensoren _usw._) sorgfältig ausgehandelt und lizenziert werden müssen. Dies kann auch Innovationen verlangsamen die für den einzelnen Patienten bequem sind (oder für eine kleine Untergruppe von Patienten mit sehr spezifischen Anforderungen), die aber keinen großen finanziellen Gewinn bringen.
+#### 6) **No commercial constraints, due to open application interfaces**
+Über die Verwendung eines Open-Source-Ansatzes hinaus kann der Quellcode von **AAPS** jederzeit eingesehen werden, was das allgemeine Prinzip der Bereitstellung offener Programmierschnittstellen ist. Dies gibt anderen Entwicklern die Möglichkeit, ebenfalls neue Ideen einzubringen. **AAPS** ist eng in Nightscout integriert. Dies beschleunigt die Entwicklung und ermöglicht es den Anwendern, Funktionen hinzuzufügen, um das Leben mit Diabetes noch einfacher zu machen. Good examples for such integrations are [Nightscout](https://nightscout.github.io/), [Nightscout Reporter](https://nightscout-reporter.zreptil.de/), [Xdrip+](https://xdrip.readthedocs.io/en/latest/install/usethedoc/), [M5 stack](https://github.com/mlukasek/M5_NightscoutMon/wiki?fbclid=IwAR1pupoCy-2GuXLS7tIO8HRkOC_536YqSxTK7eF0UrKkM1PuucFYRyPFvd0) etc. Es besteht ein ständiger Dialog zwischen Open-Source-Entwicklern und den Entwicklern kommerzieller Systeme. Viele der DIY-Innovationen werden schrittweise von kommerziellen Systemen übernommen, wo die Entwicklungen verständlicherweise langsamer sind. Auch weil Schnittstellen zwischen Systemen verschiedener Unternehmen (Pumpen, Apps, Sensoren _usw._) sorgfältig ausgehandelt und lizenziert werden müssen. Dies kann auch Innovationen verlangsamen die für den einzelnen Patienten bequem sind (oder für eine kleine Untergruppe von Patienten mit sehr spezifischen Anforderungen), die aber keinen großen finanziellen Gewinn bringen.
 
-#### 6) **Detaillierte App-Oberfläche**
+#### 7) **Detailed app interface**
 Mit **AAPS** ist es einfach Dinge wie Insulinstände in der Pumpe, Alter des Katheters, Sensoralter, Pumpenbatterie, Insulin-On-Bord _usw._. Viele Aktionen können durch die **AAPS** App durchgeführt werden (Füllen der Pumpe, Abschalten der Pumpe _etc._), anstatt an der Pumpe selbst, was bedeutet, dass die Pumpe in der Tasche oder am Gürtel bleiben kann.
 
-#### 7) **Zugänglichkeit und Bezahlbarkeit**
+#### 8) **Accessibility and affordability**
 **AAPS** bietet Menschen, die es sich derzeit nicht leisten können, sich selbst zu finanzieren, oder die keine Finanzierung/Versicherung haben, Zugang zu einem Hybrid-Closed-Loop-System von Weltklasse, das den kommerziellen Systemen konzeptionell um Jahre voraus ist, was die Entwicklung angeht. Sie benötigen derzeit ein Nightscout-Konto, um **AAPS** einzurichten, obwohl das Nightscout-Konto für den täglichen Betrieb des **AAPS**-Ablaufs nicht erforderlich ist. Viele Menschen verwenden weiterhin Nightscout zur Erfassung ihrer Daten und zur Fernbedienung. Obwohl **AAPS** selbst kostenlos ist, kann das Einrichten von Nightscout über eine der verschiedenen Plattformen eine Gebühr (€ 0 - €12) nach sich ziehen, je nachdem, welche Unterstützung Sie benötigen (siehe Vergleichstabelle) und ob Sie Nightscout nach dem Setup weiter verwenden wollen oder nicht. **AAPS** arbeitet mit einer großen Auswahl an erschwinglichen Android-Telefonen (ab ca. €150) zusammen. Verschiedene Versionen sind für bestimmte Standorte und Sprachen verfügbar und AAPS kann auch von Personen verwendet werden, die [blind](Safety-first-aaps-can-also-be-used-by-blind-people) sind.
 
-#### 8) **Support**
+#### 9) **Support**
 Kein automatisiertes Insulinsystem ist perfekt. Kommerzielle und Open-Source-Systeme sind sich in möglichen Fehler (Übertragungsprobleme und temporäre Hardware-Fehler) ähnlich. Es gibt Unterstützung seitens der Community der AAPS-Nutzer auf Facebook, Discord und Github. Hier sind Leute von überall auf der Welt, die an Design und Entwicklung beteiligt waren und solche, die **AAPS** derzeit verwenden. Es gibt auch Facebook-Supportgruppen und Hilfe von Kliniken/Handelsunternehmen für die kommerziellen APS-Systeme - es lohnt sich, mit den Anendern zu sprechen. oder frühere Anwender dieser Systeme, um Feedback zu häufigen Fehlern, zur Qualität des Schulungsangebots und zum Niveau der kontinuierlichen Unterstützung zu erhalten.
 
-#### 9) **Vorhersehbarkeit, Transparenz und Sicherheit**
+#### 10) **Predictability, transparency and safety**
 **AAPS** ist völlig transparent, logisch und berechenbar was es einfacher machen kann zu wissen, wann eine Einstellung falsch ist, und sie entsprechend anzupassen. Du kannst zu jeder Zeit genau sehen, was das System tut, warum es das tut und die Kontrolle wieder in Deine Hand nehmen, indem Du entsprechende Grenzen setzt. Dies schafft Vertrauen und Dir einen erholsameren Schlaf.
 
-#### 10) **Zugriff auf erweiterte Funktionen durch Entwicklungsmodi (dev) einschließlich vollständigem Closed Loop**
+#### 11) **Access to advanced features through development (dev) modes including full closed loop**
 Diese **AAPS** Dokumentation konzentriert sich auf die Hauptentwicklung im **“master”**-Branch [in Git] von **AAPS**. Forschung und Entwicklung laufen jedoch ständig. Erfahrene Benutzer können die experimentellen Funktionen im **"development"**-Branch erkunden. Dazu gehört die Integration von Dexcom G7 und die automatische Anpassung der Insulinlieferung an kurzfristige Sensibilitätsänderungen (DYNISF). Die Neuentwicklungen konzentrieren sich auf Strategien zum vollständigen Closed Loop (ohne Bolus für Mahlzeiten _usw._) und versuchen ganz allgemein, das Leben mit Typ-1-Diabetes so angenehm wie möglich zu machen.
 
-#### 11) **Möglichkeit, sich an weiteren Verbesserungen** zu beteiligen
+#### 12) **Ability to contribute yourself to further improvements**
 Diabetes Typ 1 kann sehr frustrierend sein und dazu führen, dass Du Dich alleingelassen fühlst. Seine Diabetes-Technolgie selber unter Kontrolle zu haben und etwas an die Community zurückzugeben ("pay it forward") indem Du andere bei deren Reise unterstützst, kann ein gutes und befriedigendes Gefühl geben. Du kannst Dich selbst weiterbilden, Hindernisse erkennen und auch Deine Beiträge zur Weiterentwicklung und/oder zur Dokumentation leisten. In der Community gibt es andere, die das gleiche Ziel haben und mit denen Du Ideen austauschen und zusammenarbeiten kannst. Dies ist die Grundidee und der Geist von #WeAreNotWaiting.
 
 ## Wie unterscheidet sich AAPS von ICT (MDI) und Open Loop?
@@ -118,9 +118,6 @@ Die intensivierte konventionelle Insulintherapie (ICT, (a) in **Bild 2** unten -
 ## Wie unterscheidet sich AAPS von anderen Loop-Systemen?
 
 Seit dem 25. Juni 2023 sind vier große Open Source Closed Loop-Systeme verfügbar: [OpenAPS](https://openaps.readthedocs.io/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) und [iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI), (ehemals FreeAPS X). Die Funktionen der verschiedenen Systeme werden in der folgenden Tabelle angezeigt:
-
-Die Funktionen der verschiedenen Systeme werden in der folgenden Tabelle angezeigt:
-
 
 
 | Gerätetyp  | Name                                                           | [AAPS](https://wiki.aaps.app)                | [Loop](https://loopkit.github.io/loopdocs/)  | [OpenAPS](https://openaps.readthedocs.io/en/latest/) | [iAPS](https://iaps.readthedocs.io/en/latest/) |

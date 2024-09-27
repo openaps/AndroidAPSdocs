@@ -8,13 +8,13 @@
 
 ```{admonition} Preview Objectives
 :class: note
-If you are keen to know the structure of the objectives, please read [Completing the objectives](../Usage/completing-the-objectives.md) but then come back here to run the Setup Wizard first.
+如果您想了解目標的結構，請閱讀 [完成目標](../Usage/completing-the-objectives.md)，但請在這裡返回以首先運行設置嚮導。
 
 ```
 
-From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
+根據以往經驗，我們了解到，初學者經常會給自己施加壓力，盡快設置 **AAPS**，這會導致挫敗感，因為這是一個巨大的學習曲線。
 
-So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
+所以，請慢慢來配置您的循環，運作良好的 **AAPS** 循環帶來的好處是巨大的。
 
 ```{admonition} Ask for Help
 :class: note
@@ -53,7 +53,7 @@ So, please take your time in configuring your loop, the benefits of a well-runni
 
 智慧型手機的電池消耗仍然是需要考慮的因素，因為電池性能仍然相當有限。 因此，智慧型手機上的Android操作系統在允許應用程式運作和消耗CPU時間（因此消耗電池電量）方面有嚴格的限制。
 
-然而，**AAPS** 需要定期運作，_例如_ 每隔幾分鐘接收一次血糖讀數，然後應用演算法根據您的設定決定如何處理血糖水平。 因此，Android必須允許它這樣做。
+然而，**AAPS** 需要定期運作，_例如_ 每隔幾分鐘接收一次血糖讀取值，然後應用演算法根據您的設定決定如何處理血糖水平。 因此，Android必須允許它這樣做。
 
 您可以透過確認設置來完成這一操作。
 
@@ -196,9 +196,9 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 您可
 
 ```{admonition} Make sure to choose the correct **NSClient** version for your needs! 
 :class: Note
-Click [here](link) for the release notes of **AAPS** 3.2.0.2 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**. 
+請點擊 [這裡](link) 查看 **AAPS** 3.2.0.2 的版本說明，這裡解釋了頂部選項 **NSClient**（這是 “v1”，雖然它沒有明確標示）和第二個選項 **NSClient v3** 之間的差異。
 
-Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout, in which case, choose the first option "**NSClient**" until further notice. 
+Nightscout 使用者應選擇 **NSClient v3**，除非您想通過 Nightscout 監控或發送遠端治療（例如作為使用 **AAPS** 的父母或照護者來為孩子）那時請選擇第一個選項 "**NSClient**" 直到另行通知。
 ```
 
 對於Tidepool來說，這更簡單，因為您只需要您的個人登錄訊息。
@@ -297,7 +297,7 @@ Nightscout users should choose **NSClient v3**, unless you want to monitor or se
 
 ```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
 :class: danger
-For advanced users or medical studies there is the possibility to define with "Free-Peak Oref" a customised profile of how insulin acts. Please don't use it unless you are an expert, usually the pre-defined values work well for each branded insulin.
+對於進階使用者或醫療研究，您可以通過 "Free-Peak Oref" 定義自訂的胰島素作用型態的配置檔。請不要使用，除非您是專家，因為通常預設值對每種品牌的胰島素都能很好地運作。
 ```
 
 按“下一步”進入下一個螢幕：
@@ -334,11 +334,11 @@ For advanced users or medical studies there is the possibility to define with "F
 
 ```{admonition} Working profile required - no exceptions here !
 :class: danger
-An accurate profile is necessary to control the safe action of **AAPS**
+準確的配置檔是控制 **AAPS** 安全運行所必需的。
 
-It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
+您必須已經確定並與您的醫生討論您的配置檔，並且經過成功的基礎率、ISF 和 IC 測試驗證其可行性！
 
-If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
+如果一個機器人的輸入不正確，它將會失敗 - 一直都是如此。**AAPS** 只能依賴於它所獲取的資訊。如果您的配置檔過強，您將冒著低血糖的風險；如果過弱，您則冒著高血糖的風險。
 ```
 
 按“下一步”進入下一個螢幕。 輸入一個“配置檔案名稱”：
@@ -349,11 +349,11 @@ If a robot has an incorrect input it will fail - consistently. **AAPS** can only
 
 ```{admonition} Profile only for tutorial - not for your usage
 :class: information
-The example profile here is only to show you how to enter data.
+此處的範例配置檔僅用於顯示如何輸入資料。
 
-It is not intended to be an accurate profile or something very well optimised, because each person's needs are so different.
+它並不打算成為一個準確的配置檔或非常優化的東西，因為每個人的需求都如此不同。
 
-Don't use it for actually looping!
+不要用它來實際循環！
 ```
 
 輸入您的胰島素作用時間（DIA），單位為小時。 然後按“IC”：
@@ -448,7 +448,7 @@ Don't use it for actually looping!
 
 ```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: information
-OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
+OpenAPS AMA 是最基本的演算法，不支援微量注射來修正高值。可能有情況需要使用此演算法，但這並不是推薦的做法。
 ```
 
 按齒輪查看詳細資訊：

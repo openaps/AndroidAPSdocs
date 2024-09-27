@@ -768,7 +768,7 @@ Pod 基礎率設定失敗的資訊性警報，您需要按下 Omnipod 標籤上�
 
 ### 最佳的Omnipod與RileyLink定位
 
-RileyLink上用來與Omnipod通訊的天線是一個433 MHz的螺旋天線。 由於其結構特性，它像一個三維的甜甜圈一樣輻射全向信號，z軸代表垂直的天線。 這意味著在特定的操作中，特別是啟動和停用幫浦時，RileyLink應放置於最佳位置。
+RileyLink上用來與Omnipod通訊的天線是一個433 MHz的螺旋天線。 由於其結構特性，它會發射全向信號，形狀類似三維甜甜圈，而 z 軸則代表垂直站立的天線方向。 這意味著在特定的操作中，特別是啟動和停用幫浦時，RileyLink應放置於最佳位置。
 
 ![Toroid_w_CS](../images/omnipod/Toroid_w_CS.png)
 

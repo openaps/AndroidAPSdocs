@@ -59,11 +59,11 @@ OpenAPS algoritmus, který **AAPS** využívá, kontroluje bez nutnosti zásahů
 #### 1) Zabudovaná bezpečnost
 Informace o bezpečnostních vlastnostech algoritmů, známých jako oref0 a oref1, najdete [zde](https://openaps.org/reference-design/). Uživatel má kontrolu nad vlastními bezpečnostními omezeními.
 
-#### 1) **Hardwarová flexibilita**
+#### 2) **Hardware flexibility**
 
 **AAPS** umí pracovat se širokým výběrem inzulinových pump a senzorů. Například pokud se u vás rozvine alergie na lepidlo náplastí senzorů Dexcom, můžete místo nich začít používat senzory Libre. To vám umožňuje flexibilitu při životních změnách. Není nutné znovu sestavovat ani přeinstalovávat aplikaci **AAPS**, při přechodu na jiný hardware stačí zaškrtnout jiné políčko v aplikaci. Aplikace není závislá na ovladačích pro konkrétní pumpu a také obsahuje možnost použít „virtuální pumpu“, takže s ní uživatelé mohou bezpečně experimentovat, než ji skutečně začnou používat.
 
-#### 2) **Vysoce přizpůsobitelný s řadou volitelných parametrů**
+#### 3) **Highly customisable, with wide parameters**
 
 Uživatelé mohou snadno přidat nebo odebrat moduly nebo funkce. **AAPS** může být použit v režimu otevřené i uzavřené smyčky. Zde jsou některé příklady možností systému **AAPS**:
 
@@ -79,31 +79,31 @@ Uživatelé mohou snadno přidat nebo odebrat moduly nebo funkce. **AAPS** můž
 
 To vše jsou příklady, celá škála funkcí poskytuje velkou flexibilitu pro každodenní život, včetně sportu, nemoci, hormonálních cyklů _atd._. Konečně, je to jen na uživateli aby se rozhodl, jak chce tuto volnost využít a proto neexistuje jediná automatizace pro všechny.
 
-#### 3) **Vzdálený dohled**
+#### 4) **Remote monitoring**
 Existuje řada možných motitorovacích kanálů (Sugarmate, Dexcom Follow, Xdrip+, Android Auto _atd._) které mohou být velmi užitečné pro rodiče / pečovatele a pro dospělé v určitých situacích (spánek / řízení), kdy je potřeba přizpůsobit možnosti výstrah. V některých aplikacích (Xdrip+) můžete alarmy zcela vypnout, což je skvělá varianta v případě, že se vám nový senzor "zahřívá" nebo usazuje a vy ho ještě nechcete mít zapojený do smyčky.
 
-#### 4) **Vzdálené řízení**
+#### 5) **Remote control**
 Významnou výhodou **AAPS** oproti komerčně dostupným systémům je to, že umožňuje followerům - použitím ověřených textových příkazů (SMS) nebo pomocí aplikace ([Nightscout](https://nightscout.github.io/) nebo AAPSClient) - posílat širokou škálu příkazů do **AAPS** systému. To ve velké míře využívají rodiče dětí s diabetem I. typu. Může to být velmi užitečné: například na hřišti, když chcete poslat pre-bolus ke svačině z vašeho vlastního telefonu, zatímco si dítě hraje. Je možné sledovat stav systému (_např._ náramky Fitbit), posílat základní příkazy (_např._ Samsung Galaxy watch 4), nebo dokonce provozovat celý AAPS systém pomocí specializovaných chytrých hodinek (**5**) (_e.g._ LEMFO LEM14). V tomto posledním případě ani k provozu AAPS nepotřebujete telefon. Jak se postupně zlepšuje životnost baterií v hodinkách, bude tato varianta pravděpodobně čím dál víc atraktivní.
 
-#### 5) **Žádná komerční omezení kvůli otevřenému rozhraní aplikace**
-Kromě použití přístupu open-source, který umožňuje zdrojový kód **AAPS** kdykoli zobrazit, základní princip v poskytování otevřeného progamovacího prostředí je dát příležitost ostatním vývojářům přispět novými nápady a možnostmi. **AAPS** je úzce integrován s Nightscoutem. To urychluje vývoj a umožňuje uživatelům přidávat nové funkce, aby se život s diabetem stal ještě pohodlnější. Dobrými příklady takových integrací jsou [NightScout](https://nightscout.github.io/), [Nightscout Reporter](https://nightscout-reporter.zreptil.de/), [Xdrip+](https://xdrip.readthedocs.io/en/latest/install/usethedoc/), [M5 stack](https://github.com/mlukasek/M5_NightscoutMon/wiki?fbclid=IwAR1pupoCy-2GuXLS7tIO8HRkOC_536YqSxTK7eF0UrKkM1PuucFYRyPFvd0) a další. Probíhá dialog mezi vývojáři s otevřeným zdrojovým kódem a těmi, kteří vyvíjejí komerčně dostupné systémy. Mnohé DIY inovace jsou postupně přebírány komerčními systémy, kde je vývoj pochopitelně pomalejší, částečně proto, že rozhraní mezi systémy různých společností (pumpy, aplikace, senzory _atd._) musí být pečlivě sjednána a licencována. To může také zpomalit inovace, které přináší výhody pro pacienta (nebo pro malou subpopulaci pacientů se specifickými potřebami), ale nevytvářejí žádný významný zisk.
+#### 6) **No commercial constraints, due to open application interfaces**
+Kromě použití přístupu open-source, který umožňuje zdrojový kód **AAPS** kdykoli zobrazit, základní princip v poskytování otevřeného progamovacího prostředí je dát příležitost ostatním vývojářům přispět novými nápady a možnostmi. **AAPS** je úzce integrován s Nightscoutem. To urychluje vývoj a umožňuje uživatelům přidávat nové funkce, aby se život s diabetem stal ještě pohodlnější. Good examples for such integrations are [Nightscout](https://nightscout.github.io/), [Nightscout Reporter](https://nightscout-reporter.zreptil.de/), [Xdrip+](https://xdrip.readthedocs.io/en/latest/install/usethedoc/), [M5 stack](https://github.com/mlukasek/M5_NightscoutMon/wiki?fbclid=IwAR1pupoCy-2GuXLS7tIO8HRkOC_536YqSxTK7eF0UrKkM1PuucFYRyPFvd0) etc. Probíhá dialog mezi vývojáři s otevřeným zdrojovým kódem a těmi, kteří vyvíjejí komerčně dostupné systémy. Mnohé DIY inovace jsou postupně přebírány komerčními systémy, kde je vývoj pochopitelně pomalejší, částečně proto, že rozhraní mezi systémy různých společností (pumpy, aplikace, senzory _atd._) musí být pečlivě sjednána a licencována. To může také zpomalit inovace, které přináší výhody pro pacienta (nebo pro malou subpopulaci pacientů se specifickými potřebami), ale nevytvářejí žádný významný zisk.
 
-#### 6) **Podrobné rozhraní aplikace**
+#### 7) **Detailed app interface**
 S **AAPS** je snadné sledovat věci jako: množství inzulínu v pumpě, stáří kanyly a senzoru, stáří baterie v pumpě, množství inzulínu na palubě _atd._. Mnoho akcí lze provést prostřednictvím aplikace **AAPS** (primování pumpy po plnění, odpojení pumpy _atd._), místo toho aby bylo nutné akce provádět přímo na pumpě. To znamená, že pumpa může zůstat v kapse (nebo v opasku) pacienta.
 
-#### 7) **Dostupnost a cena**
+#### 8) **Accessibility and affordability**
 **AAPS** umožňuje přístup k systému hybridní uzavřené smyčky světové úrovně lidem, kteří by si ho nemohli dovolit financovat sami nebo prostřednictvím zdravotního pojištění. Tento systém je přitom v oblasti vývoje koncepčně několik let napřed oproti komerčním systémům. Aktuálně potřebujete Nightscout účet, abyste mohli nastavit **AAPS**, ačkoliv účet Nightscout není vyžadován pro každodenní provoz smyčky **AAPS**. Mnoho lidí i nadále používá Nightscout ke sběru dat a ke vzdálené kontrole. Ačkoli je **AAPS** sám o sobě zdarma, založení Nightscoutu v některé z dostupných platforem může být zpoplatněné (0€ - 12€) v závislosti na vyžadované úrovni podpory (viz. srovnávací tabulka) a také zda-li a jak chcete Nightscout po nastavení dále využívat. **AAPS** může fungovat v širokém rozsahu cenově dostupných (přibližně od 3.700 kč) Android telefonů. Různé verze jsou k dispozici pro konkrétní státy a jazyky, a AAPS může být také používán lidmi s [vadami zraku](Safety-first-aaps-can-also-be-used-by-blind-people).
 
-#### 8) **Podpora**
+#### 9) **Support**
 Žádný systém automatického dávkování inzulínu není dokonalý. Komerční i open-source systémy mají společných mnoho běžných problémů jak při komunikaci, tak dočasných poruchách hardwaru. Na Facebooku, Discordu a Githubu existuje mezinárodní komunita uživatelů AAPS, kteří **AAPS** navrhují, vyvíjejí a zároveň aktivně používají. Také na Facebooku jsou dostupné podpůrné skupiny a pomoc od klinických/komerčních společností pro komerční APS systémy - stojí za to diskutovat s uživateli nebo bývalými uživateli těchto systémů a získat tak jejich zpětnou vazbu o běžných problémech, kvalitě výukových materiálů a úrovni poskytované podpory.
 
-#### 9) **Předvídatelnost, transparentnost a bezpečnost**
+#### 10) **Predictability, transparency and safety**
 **AAPS** je zcela transparentní, logický a předvídatelný algoritmus, což může usnadnit rozpoznání špatného nastavení a odpovídajícím způsobem jej upravit. Přesně vidíte, co systém dělá a proč to dělá. Natavením provozních limitů bude kontrola (a odpovědnost) ve vašich rukou. To může uživateli poskytnout důvěru a klidný spánek.
 
-#### 10) **Přístup k pokročilým funkcím prostřednictvím vývojových (dev) režimů včetně zcela uzavřené smyčky**
+#### 11) **Access to advanced features through development (dev) modes including full closed loop**
 Tato dokumentace **AAPS** se zaměřuje na hlavní - nejstandardnější - **„master“** větev **AAPS**. Výzkum a vývoj však stále pokračuje. Zkušenější uživatelé mohou zkoušet objevovat experimentální funkce v **vývojové větvi**. To zahrnuje integraci senzoru Dexcom G7 a automatickou úpravu dodávky inzulinu podle krátkodobých změn citlivosti (DYNISF). Inovace v oblasti rozvoje se zaměřují na strategie pro úplnou uzavřenou smyčku (zcela bez bolusování k jídlu _apod._) a obecně se snaží o co nejpohodlnější život s diabetem 1. typu.
 
-#### 11) **Možnost přispět k dalšímu zlepšování**
+#### 12) **Ability to contribute yourself to further improvements**
 Diabetes typu 1 může být velmi frustrující a můžete mít pocit, že jste na to sami. Získání kontroly nad vlastní technikou pro zvládání diabetu s možností "splacení" formou pomoci ostatním, jak se postupně zlepšujete, může být velmi obohacující. Můžete se sami vzdělávat a rozvíjet, objevovat a vyhledávat překážky a dokonce přispívat k novému vývoji a dokumentaci. Cestou potkáte další lidi se stejným cílem, se kterými můžete sdílet nápady a pracovat na nich společně. Tohle je podstata #WeAreNotWaiting.
 
 ## Jaké je AAPS ve srovnání s MDI a otevřenou smyčkou?
@@ -118,9 +118,6 @@ Vícenásobné denní dávky neboli intenzifikovaný inzulinový režim (Multipl
 ## Jaké je AAPS ve srovnání s ostatními systémy smyčky?
 
 K 25. červnu 2023 jsou k dispozici čtyři hlavní open source systémy uzavřené systémy smyčky: [OpenAPS](https://openaps.readthedocs.io/), **AAPS**, [Loop](https://loopkit.github.io/loopdocs/#what-is-loop) a [iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI), (dříve FreeAPS X). Vlastnosti jednotlivých systémů jsou uvedeny v následující tabulce:
-
-Vlastnosti jednotlivých systémů jsou uvedeny v následující tabulce:
-
 
 
 | Typy zařízení | Název                                                                | [AAPS](https://wiki.aaps.app)            | [Smyčka](https://loopkit.github.io/loopdocs/) | [Open APS](https://openaps.readthedocs.io/en/latest/) | [iAPS](https://iaps.readthedocs.io/en/latest/) |

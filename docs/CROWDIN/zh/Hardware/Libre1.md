@@ -4,7 +4,7 @@
 
 ```{admonition} Libre 2, Libre 1 US and Libre Pro
 :class: warning
-Verify the bridge and the app you want to use are compatible with your sensor.  
+驗證橋接和您想要使用的應用程式是否與您的感測器相容。  
 ```
 
 市場上有幾款橋接器可供選擇：

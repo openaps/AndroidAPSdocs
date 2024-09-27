@@ -107,7 +107,7 @@
 
 - 使用**原始外觀**與**大顯示**時，您需要向下捲動才能看到螢幕底部的按鈕
 
-- **大顯示**的所有圖表大小均較其他外觀增大
+- **顯示(大)**的所有圖表大小均較其他外觀增大
 
   ![外觀取決於手機螢幕方向](../images/Screenshots_Skins.png)
 
@@ -424,7 +424,7 @@
 ```{admonition} V3 data uploaders
 :class: warning
 
-When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+當使用 NSClientV3 時，所有上傳器必須使用 API V3。 由於大多數尚不相容，這意味著 **您必須讓 AAPS 上傳所有資料**（BG、治療等）到 Nightscout，並停用所有不符 V3 的其他上傳器。
 ```
 
 - 設置您的*Nightscout URL*（即 <https://yoursitename.yourplaform.dom>）。
@@ -461,7 +461,7 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 - 多個 SSID 可以用分號分隔。
 - 若要刪除所有 SSID，請在該欄位中輸入空格。
 
-(Preferences-advanced-settings-nsclient)=
+(偏好設定-進階-設定-nsclient)=
 ### 進階設定（NSClient）
 
 ![NS Client 進階設定](../images/Pref2024_NSClientAdv.png)
