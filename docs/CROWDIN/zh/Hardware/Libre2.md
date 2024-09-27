@@ -1,228 +1,228 @@
 # Freestyle Libre 2
 
-即使使用官方應用程式，Freestyle Libre 2 傳感器現在也是一款真正的連續血糖監測儀（CGM）。 然而，LibreLink 仍無法將資料傳送至 AAPS。 有幾種解決方案可以將其與 AAPS 搭配使用。
+The Freestyle Libre 2 sensor is now a real CGM even with the official app. Still, LibreLink cannot send data to AAPS. There are several solutions to use it with AAPS.
 
-## 1. 使用藍牙橋接器和 OOP
+## 1. Use a Bluetooth bridge and OOP
 
-可以使用藍牙傳輸器與 Libre 2（EU）及一款 [進程外算法](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) 應用程式。 您可以像使用 [Libre 1](../Libre1) 一樣每 5 分鐘接收一次血糖讀取值。
+Bluetooth transmitters can be used with the Libre 2 (EU) and an [out of process algorithm](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) app. You can receive blood sugar readings every 5 minutes like with the [Libre 1](../Libre1).
 
-檢查您要使用的橋接器和應用程式是否與您的傳感器及 xDrip+ 相容（舊版 Blucon 及近期的版本不支援，Miaomiao 1 需要韌體 39，Miaomiao 2 則需要韌體 7）。
+Check the bridge and app you want to use are compatible with your sensor and xDrip+ (older Blucon and recent ones won't work, Miaomiao 1 needs firmware 39 and Miaomiao 2 firmware 7).
 
-Libre2 OOP 所生成的讀取值與原始讀取器或透過 NFC 掃描的 LibreLink 應用程式的讀取值相同。 AAPS 與 Libre 2 的讀取值會經過 10 至 25 分鐘的平滑處理，以避免某些讀取值的跳動。 請參閱以下內容[讀取值平滑化及原始讀取值](#value-smoothing-raw-values)。 OOP 每 5 分鐘生成一次讀取值，並取最近 5 分鐘的平均值。 因此，這些血糖讀取值可能不如其他方法平滑，但它們與原始讀取器的讀取值一致，並且更快速地反映“真實”血糖讀取值。 如果您嘗試使用 OOP 進行循環，請在 xDrip+ 中啟用所有平滑設定。
+The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre 2 do a 10 to 25 minutes smoothing to avoid certain jumps. See below [Value smoothing & raw values](#value-smoothing-raw-values). OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
 
-有幾個使用藍牙傳輸器的理由：
+There are some good reasons to use a Bluetooth transmitter:
 
--   您可以選擇多種 OOP2 校正策略（1）：使用「無校正」獲得讀取器讀取值，或者像 Libre 1 一樣使用「基於原始資料進行校正」，或者最終使用「基於葡萄糖進行校正」來校正讀取器的讀取值。  
-  請確保停用 OOP1（2）。
+-   You can choose various OOP2 calibration strategies (1): have the reader values using "no calibration", or calibrate the sensor like a Libre 1 using "calibrate based on raw" or ultimately calibrate the the readers like values with "calibrate based on glucose".  
+  Make sure to leave OOP1 disabled (2).
 
-    → 漢堡選單 → 設定 → 不常見的設定 → 其他雜項選項 選項
+    → Hamburger Menu → Settings → Less common settings → Other misc. options
 
-![OOP2 校正](../images/Libre2_OOP2Calibration.png)
+![OOP2 Calibration](../images/Libre2_OOP2Calibration.png)
 
--   Libre 2 傳感器可像 Libre 1 一樣使用 14.5 天。
--   支援 8 小時的回填資料。
+-   The Libre 2 sensor can be used 14.5 days as the Libre 1
+-   8 hours backfilling is fully supported
 
-備註：傳輸器可以與 LibreLink 應用程式並行使用而不會相互干擾。
+Remark: The transmitter can be used in parallel to the LibreLink app without interfering with it.
 
-## 2. 使用 xDrip+ 直接連線
+## 2. Use xDrip+ direct connection
 
 ```{admonition} Libre 2 EU only
 :class: warning
-xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。  
+xDrip+ doesn't support direct connection to Libre 2 US and AUS.  
 ```
 
-- 請按照 [這些指示](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) 設定 xDrip+，但請確保下載 [此最新版 OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)，因為文件中的版本已過時。
-- 按照[xDrip+ 設定頁面](../Configuration/xdrip.md)上的設置說明進行操作。
+- Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [this latest OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) as the one in the document is obsolete.
+- Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
 
--   在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-## 3. 使用 Diabox
+## 3. Use Diabox
 
-- 安裝 [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf)。 在設定中，進入「整合」，啟用「與其他應用程式共享資料」。
+- Install [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). In Settings, Integration, enable Share data with other apps.
 
 ![Diabox](../images/Diabox.png)
 
-- 在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-## 4. 使用 Juggluco
+## 4. Use Juggluco
 
-- 從[此處](https://www.juggluco.nl/Juggluco/download.html)下載並安裝 Juggluco 應用程式。
-- 按照[此處](https://www.juggluco.nl/Juggluco/index.html)的指示操作。
-- 在設定中，啟用 xDrip+ 廣播（這不會將資料傳送至 xDrip+，而是傳送至 AAPS）。
+- Download and install the Juggluco app from [here](https://www.juggluco.nl/Juggluco/download.html).
+- Follow the instructions [here](https://www.juggluco.nl/Juggluco/index.html)
+- In Settings, enable xDrip+ broadcast (which doesn't send data to xDrip+ but to AAPS).
 
-![Juggluco 廣播至 AAPS](../images/Juggluco_AAPS.png)
+![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
-- 在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 ```{admonition} Use with xDrip+
 :class: note
-您可以將 Juggluco 設置為廣播到 xDrip+，使用修補過的 Libre 廣播（您應該停用 xDrip+ 廣播），以進行校準（請見此處）並避免每分鐘讀數被發送到 AAPS。  
-![Juggluco 廣播到 xDrip+](../images/Juggluco_xDrip.png)  
-然後，您需要將 xDrip+ 數據來源設置為 Libre 2 修補應用程式，以從 Juggluco 接收數據。  
+You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
+![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  
+You will then need to set xDrip+ data source to Libre 2 Patched App to receive data from Juggluco.  
 ```
 
-## 5. 使用修補版 LibreLink 應用程式與 xDrip+ 搭配使用
+## 5. Use the patched LibreLink app with xDrip+
 
 ```{admonition} Libre 2 EU only
 :class: warning
-修補過的應用程式是舊版本（22/4/2019），可能與最近的 Android 發行版不相容。  
+The patched app is an old version (22/4/2019) and might not be compatible with recent Android releases.  
 ```
 
-### 步驟 1：建立修補版應用程式
+### Step 1: Build the patched app
 
-由於法律原因，「修補」必須自行完成。 使用搜索引擎查找相應的鏈接。 有兩個 變種：建議使用的原始修補版應用程式會阻止任何網路流量以避免追蹤。 另一個版本支援 LibreView。
+For legal reasons, "patching" has to be done by yourself. Use search engines to find the corresponding links. There are two variants: The recommended original patched app blocks any internet traffic to avoid tracking. The other variant supports LibreView.
 
-修補版應用程式必須安裝替代原始應用程式。 下一個啟用的傳感器將透過藍牙將當前的血糖值傳送到在您智慧型手機上運作的 xDrip+ 應用程式。
+The patched app has to be installed instead of the original app. The next sensor started with it will transmit the current BG values to the xDrip+ app running on your smartphone via Bluetooth.
 
-重要提示：為避免潛在問題，建議先在支援 NFC 的智慧型手機上安裝並卸載原始應用程式。 NFC 必須啟用。 這不會消耗額外的電量。 然後安裝修補版應用程式。
+Important: To avoid possible problems it may help to first install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. This costs no extra power. Then install the patched app.
 
-修補版應用程式可以透過前景授權通知來識別。 前景授權服務提高了連線穩定性，相較於不使用此服務的原始應用程式。
+The patched app can be identified by the foreground authorization notification. The foreground authorization service improves the connection stability compared to the original app which does not use this service.
 
-![LibreLink 前景服務](../images/Libre2_ForegroundServiceNotification.png)
+![LibreLink Foreground Service](../images/Libre2_ForegroundServiceNotification.png)
 
-其他標誌可能包括三點選單中的 Linux 企鵝圖示 -&gt; 資訊，或者修補版應用程式的字體（2）與原始應用程式（1）不同。 這些標準是可選的，具體取決於您選擇的應用程式來源。
+Other indications could be the Linux penguin logo in the three dot menu -> Info or the font of the patched app (2) different from the original app (1). These criteria are optional depending on the app source you choose.
 
-![LibreLink 字體檢查](../images/LibreLinkPatchedCheck.png)
+![LibreLink Font Check](../images/LibreLinkPatchedCheck.png)
 
-確保啟用了 NFC，並為修補版應用程式啟用記憶體和位置權限，啟用自動時間和時區，並在修補版應用程式中至少設定一個鬧鐘。
+Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and time zone and set at least one alarm in the patched app.
 
-### 步驟 2：使用修補版應用程式啟動傳感器
+### Step 2: Start the sensor with the patched app
 
-現在只需掃描傳感器即可使用修補版應用程式啟動 Libre2 傳感器。 請確保已設定好所有設定。
+Now start the Libre2 sensor with the patched app by simply scanning the sensor. Ensure to have set all settings done.
 
-成功啟動傳感器的必要設定：
+Mandatory settings for successful sensor start:
 
--   NFC 啟用 / 藍牙啟用
--   記憶體和位置權限已啟用
--   位置服務已啟用
--   自動時間和時區設定
--   在修補版應用程式中至少設定一個鬧鐘
+-   NFC enabled / BT enabled
+-   memory and location permission enabled
+-   location service enabled
+-   automatic time and time zone setting
+-   set at least one alarm in the patched app
 
-請注意，位置服務是一個核心設定。 這並不是應用程式的位置權限，該權限也必須啟用！
+Please note that the location service is a central setting. This is not the app location permission which has to be set also!
 
-![LibreLink 權限：記憶體與位置](../images/Libre2_AppPermissionsAndLocation.png)
+![LibreLink permissions memory & location](../images/Libre2_AppPermissionsAndLocation.png)
 
-![自動時間和時區 + 鬧鐘設定](../images/Libre2_DateTimeAlarms.png)
+![automatic time and time zone + alarm settings](../images/Libre2_DateTimeAlarms.png)
 
-一旦使用修補版應用程式啟動傳感器，您將無法將其連線到其他應用程式或手機。 如果您卸載修補版應用程式，您將失去鬧鐘和連續的血糖讀取值。
+Once the sensor started with the patched app, you won't be able to connect it to another app/phone. If you uninstall the patched app, you will lose alarms and continuous BG readings.
 
-首次連線傳感器的設置至關重要。 LibreLink 應用程式每 30 秒嘗試與傳感器建立無線連線。 如果缺少一個或多個必要設定，則需要進行調整。 您沒有時間限制來完成此操作。 傳感器會不斷嘗試建立連線。 即使這可能需要幾個小時。 耐心等待，並嘗試不同的設定，切勿急於更換傳感器。
+The first connection setup to the sensor is critical. The LibreLink app tries to establish a wireless connection to the sensor every 30 seconds. If one or more mandatory settings are missing they have to be adjusted. You have no time limit to do that. The sensor is constantly trying to setup the connection. Even if is last some hours. Be patient and try different settings before even thinking of changing the sensor.
 
-只要在 LibreLink 啟動畫面左上角看到紅色感嘆號「!」， 表示尚未連線，或某些設定阻礙了 LibreLink 發出鬧鐘訊號。 請檢查是否啟用了音效，並確保停用所有可能阻擋應用程式通知的設定。 當感嘆號消失後，應該就會建立連線，並將血糖值傳送到智慧型手機。 這應該在最多 5 分鐘內完成。
+As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLink start screen there is no connection or some other setting blocks LibreLink to signal alarms. Please check if the sound is enabled and all sorts of blocking app notifications are disabled. When the exclamation mark is gone, the connection should be established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
 
-![LibreLink 未連線](../images/Libre2_ExclamationMark.png)
+![LibreLink no connection](../images/Libre2_ExclamationMark.png)
 
-如果感嘆號仍然存在或您收到錯誤訊息，可能有幾個原因：
+If the exclamation mark remains or you get an error message, this can have several reasons:
 
--   Android 位置服務未授權 - 請在系統設定中啟用它
--   未設定自動時間和時區 - 請根據設定進行更改
--   啟用鬧鐘 - 必須在 LibreLink 中啟用三個鬧鐘中的至少一個
--   藍牙已關閉 - 請開啟藍牙
--   音效被阻止
--   應用程式通知被阻止
--   閒置螢幕通知被阻止
+-   Android location service is not granted - please enable it in system settings
+-   automatic time and time zone not set - please change settings accordingly
+-   activate alarms - at least one of the three alarms must be activated in LibreLink
+-   Bluetooth is switched off - please switch on
+-   sound is blocked
+-   app notifications are blocked
+-   idle screen notifications are blocked
 
-重啟手機可能會有所幫助，您可能需要多次重啟。 一旦建立連線，紅色感嘆號就會消失，這是最重要的一步。 根據系統設定，可能感嘆號仍然存在，但您仍能接收到讀取值。 無論哪種情況，都是正常的。 傳感器和手機現在已連線，每分鐘會傳送一次血糖讀取值。
+Restarting the phone can help, you may have to do it several times. As soon as the connection is established, the red exclamation mark disappears and the most important step is taken. It may happen that depending on system settings the exclamation mark remains but you still get readings. In both cases you are fine. Sensor and phone are now connected, every minute a blood sugar value is transmitted.
 
-![LibreLink 連線已建立](../images/Libre2_Connected.png)
+![LibreLink connection established](../images/Libre2_Connected.png)
 
-在極少數情況下，清空藍牙快取和/或透過系統選單重置所有網路連線可能會有所幫助。 這會移除所有已連線的藍牙設備，這可能有助於建立正確的藍牙連線。 此過程是安全的，因為修補版 LibreLink 應用程式會記住已啟動的傳感器。 不需要執行其他操作。 只需等待修補版應用程式連線到傳感器。
+In rare case it could help to empty the bluetooth cache and/or reset all network connections via the system menu. This removes all connected bluetooth devices which may help to setup a proper bluetooth connection. That procedure is safe as the started sensor is remembered by the patched LibreLink app. Nothing additional has to be done here. Simply wait for the patched app to connect to the sensor.
 
-成功連線後，如果有必要，可以更改智慧型手機的設定。 這並不推薦，但您可能希望節省電量。 位置服務可以關閉，音量可以設為零，或可以再次關閉鬧鐘。 無論如何，血糖資料仍會被傳送。
+After a successful connection the smartphone settings can be changed if necessary. This is not recommended but you may want to save power. Location service can be switched off, volume can be set to zero or alarms can be switched off again. The blood sugar levels are transferred anyway.
 
-然而，在啟動下一個傳感器時，所有設定必須再次設定！
+When starting the next sensor, however, all settings must be set again!
 
-備註：修補版應用程式需要在傳感器預熱後的那一小時內設定所有必要的設定，才能啟用連線。 在 14 天的操作時間內，這些設定不再需要。 在大多數情況下，當您無法啟動傳感器時，通常是因為位置服務已關閉。 對於 Android，這是藍牙正常運作所需的必要條件！ 請參閱 Google 的 Android 文件。
+Remark: The patched app needs the mandatory settings set in that hour after warmup to enable a connection. For the 14 days operation time they are not needed. In most cases when you have problems with starting a sensor the location service was switched off. For Android it is needed for proper bluetooth operation(!) to connect. Please refer to Google's Android documentation.
 
-在這 14 天內，您可以同時使用一個或多個支援 NFC 的智慧型手機（不是讀取器設備！）運作原始 LibreLink 應用程式進行 NFC 掃描。 開始時並無時間限制。 例如，您可以在第 5 天使用並行的手機。 並行手機可以將血糖資料上傳到 Abbott 雲端（LibreView）。 LibreView 可以為您的糖尿病醫療團隊生成報告。
+During the 14 days you can use in parallel one or more NFC capable smartphones (not the reader device!) running the original LibreLink app for scanning via NFC. There is no time limitation to start that. You could use a parallel phone for example on day 5 or so. The parallel phones(s) could upload the blood sugar values into the Abbott Cloud (LibreView). LibreView can generate reports for your diabetes team.
 
-請注意，原始修補版應用程式**沒有任何與網路的連線**，以避免追蹤。
+Please note that the original patched app **does not have any connection to the internet** to avoid tracking.
 
-然而，有一個版本的修補版應用程式支援 LibreView，並啟用了網路存取。 請注意，此時您的資料會被傳送到雲端。 但您的內分泌醫療團隊的報告將完全支援。 使用該版本，還可以將正在運作的傳感器的鬧鐘轉移到未啟動該傳感器的另一台設備。 請在與糖尿病相關的德國論壇中搜索此操作方式。
+However there is a variant of the patched app supporting LibreView with enabled internet access. Please be aware that your data is transferred to the cloud then. But your endo team reporting is fully supported then. With that variant it is also possible to move the alarms of a running sensor to a different device which not has started the sensor. Please google in diabetes related German forums how this could be done.
 
-### 步驟 3：安裝並配置 xDrip+ 應用程式
+### Step 3: Install and configure xDrip+ app
 
-血糖讀取值會透過 xDrip+ 應用程式接收到智慧型手機上。
+The blood sugar values are received on the smartphone by the xDrip+ App.
 
--   除非您需要最新功能，否則可以安全下載[最新 APK（穩定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)，在這種情況下，您應該使用最新的[Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases)。
--   使用 [修補版應用程式資料來源](../Configuration/xdrip.md#lbre-2-patched-app)設定 xDrip+。
--   按照[xDrip+ 設定頁面](../Configuration/xdrip.md)上的設置說明進行操作。
+-   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
+-   Set xDrip+ with the [patched app data source](../Configuration/xdrip.md#lbre-2-patched-app).
+-   Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
 
-### 步驟 4：啟動傳感器
+### Step 4: Start sensor
 
-- → 漢堡選單 (1) → 啟動傳感器 (2) → 啟動傳感器 (3) → 回答「暫不」(4)。
+- → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Answer "Not Today" (4).
 
-![xDrip+ 啟動 Libre 傳輸器與傳感器 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
 
-這不會實際啟動任何 Libre2 傳感器，也不會與其進行任何互動。 這只是為了讓 xDrip+ 知道有一個新的傳感器正在傳送血糖資料。 如果可用，請輸入兩個指血測量值進行初始校正。 現在，血糖值應每 5 分鐘顯示在 xDrip+ 中。 錯過的讀取值，例如因為您離手機太遠，不會被回填。
+This will not physically start any Libre2 sensor or interact with them in any case. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip+ every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
 
-更換傳感器後，xDrip+ 會自動檢測到新傳感器並刪除所有校正資料。 啟動後，您可以檢查您的血糖值並進行新的初始校正。
+After a sensor change xDrip+ will automatically detect the new sensor and will delete all calibration data. You may check you blood glucose after activation and make a new initial calibration.
 
-### 步驟 5：配置 AAPS（僅適用於循環）
+### Step 5: Configure AAPS (for looping only)
 
--   在 AAPS 中，前往 Config Builder >血糖來源，並勾選 'xDrip+'。
+-   In AAPS go to Config Builder > BG Source and check 'xDrip+'
 
-![xDrip+血糖來源](../images/ConfBuild_BG_xDrip.png)
+![xDrip+ BG Source](../images/ConfBuild_BG_xDrip.png)
 
--   如果 AAPS 在手機處於飛行模式時無法接收血糖值，請參閱[xDrip+ 設定頁面](xdrip-identify-receiver)，使用「識別接收器」。
+-   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](xdrip-identify-receiver).
 
-目前，將 Libre 2 作為血糖來源時，無法在 SMB 演算法中啟用「始終啟用 SMB」和「碳水後啟用 SMB」功能。 Libre 2 的血糖值不夠平滑，無法安全使用。 詳情請參閱[平滑血糖資料](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)。
+Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within SMB algorithm. The BG values of Libre 2 are not smooth enough to use it safely. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 
 (Libre2-experiences-and-troubleshooting)=
-### 經驗與疑難排解
+### Experiences and Troubleshooting
 
-#### 連線性
+#### Connectivity
 
-大多數手機的連線性良好，除非是華為手機。 如果手機在與傳感器相對的口袋中或在戶外時，連線可能會中斷。 請將手機佩戴在傳感器所在的一側。 在室內，藍牙訊號透過反射傳播時應該不會有問題。 如果您遇到連線問題，請嘗試其他手機。 將傳感器的內部藍牙天線朝下設置也可能有所幫助。 在安裝傳感器時，應將應用器上的縫隙朝下。
+The connectivity is good with most phones, with the exception of Huawei mobile phones. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. Wear your phone on the sensor side of your body. In rooms, where Bluetooth spreads over reflections, no problems should occur. If you have connectivity problems please test another phone. It may also help to set the sensor with the internal BT antenna pointing down. The slit on the applicator must be pointing down when setting the sensor.
 
-#### 讀取值平滑化與原始值
+#### Value smoothing & raw values
 
-技術上來說，目前的血糖值每分鐘會傳送到 xDrip+。 加權平均濾波器預設會計算最近 25 分鐘內的平滑資料。 您可以在 NFC 掃描功能選單中更改此時間段。
+Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes by default. You can change the period in the NFC Scan features menu.
 
-→ 漢堡選單 → 設定 → NFC 掃描功能 → 使用 xxx 方法時平滑 Libre 3 資料
+→ Hamburger menu → Settings → NFC Scan features → Smooth libre 3 data when using xxx method
 
-![xDrip+ 進階設定：Libre 2 與原始值](../images/xDrip_Libre3_Smooth.png)
+![xDrip+ advanced settings Libre 2 & raw values](../images/xDrip_Libre3_Smooth.png)
 
-這對循環是必要的。 曲線看起來很平滑，循環結果也非常好。 用來設定鬧鐘的原始值波動稍大一些，但與讀取器顯示的值相符。 此外，您可以在 xDrip+ 圖表中顯示原始值，從而及時應對快速變化。 請開啟「不常見的設定」\>「Libre 2 的進階設定」\>「顯示原始值」和「顯示傳感器資訊」。 然後，原始值會額外顯示為小白點，並在系統選單中提供更多傳感器資訊。
+This is mandatory for looping. The curves look smooth and the loop results are great. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip+ graph in order to be able to react in time to rapid changes. Please switch on Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor info is available in the system menu.
 
-當血糖快速變化時，原始值非常有幫助。 即使這些點的波動較大，但與平滑線相比，您能更好地察覺趨勢，從而做出正確的治療決策。
+The raw values are very helpful when the blood sugar is moving fast. Even if the dots are jumpier you would detect the tendency much better as using the smoothed line to make proper therapy decisions.
 
-→ 漢堡選單 → 設定 → 不常見的設定 → Libre 2 的進階設定
+→ Hamburger menu → Settings → Less common settings → Advanced settings for Libre 2
 
-![xDrip+ 進階設定：Libre 2 與原始值](../images/Libre2_RawValues.png)
+![xDrip+ advanced settings Libre 2 & raw values](../images/Libre2_RawValues.png)
 
-#### 傳感器運作時間
+#### Sensor runtime
 
-傳感器運作時間固定為 14 天。 Libre1 的額外 12 小時不再存在。 啟用 Libre2 的進階設定後，xDrip+ 會顯示更多傳感器資訊，例如啟動時間。 在修補版 LibreLink 應用程式中也可以看到剩餘傳感器時間。 無論是在主畫面上以剩餘天數顯示，還是在三點選單中查看傳感器啟動時間 → 幫助 → 事件日誌中的「發現新傳感器」。
+The sensor runtime is fixed to 14 days. The 12 extra hours of Libre1 no longer exist. xDrip+ shows additional sensor information after enabling Advanced Settings for Libre2 → "show Sensors Infos" in the system menu like the starting time. The remaining sensor time can also be seen in the patched LibreLink app. Either in the main screen as remaining days display or as the sensor start time in the three-point menu → Help → Event log under "New sensor found".
 
-![Libre 2 啟動時間](../images/Libre2_Starttime.png)
+![Libre 2 start time](../images/Libre2_Starttime.png)
 
-#### 新傳感器
+#### New sensor
 
-傳感器更換是在運作中進行的：在啟動前不久設置新傳感器。 一旦 xDrip+ 不再接收到舊傳感器的資料，請使用修補版應用程式啟動新傳感器。 一小時後，新讀取值應自動出現在 xDrip+ 中。
+A sensor exchange takes place on-the-fly: Set new sensor shortly before activation. As soon as xDrip+ receives no more data from the old sensor, start the new sensor with the patched app. After one hour new values should appear automatically in xDrip+.
 
-如果沒有，請檢查手機設定，並按首次啟動的步驟進行操作。 您沒有時間限制。 嘗試找到正確的設定組合。 在嘗試不同的組合前，無需急於立即更換傳感器。 這些傳感器非常穩定，並會持續嘗試建立連線。 請耐心操作。 大多數情況下，您可能意外更改了一個設定，導致問題出現。
+If not, please check the phone settings and proceed as with the first start. You have no time limit. Try to find the correct settings. No need to immediately replace the sensor before you tried different combinations. The sensors are robust and try permanently to establish a connection. Please take your time. In most cases you accidentally changed one setting which causes now problems.
 
-一旦成功，請在 xDrip+ 中選擇「停止傳感器」和「僅刪除校正」選項。 這表示對 xDrip+ 而言，新傳感器正在釋放血糖值，舊的校正已不再有效，因此必須刪除。 此處不會對 Libre2 傳感器進行任何實際操作！ 您無需在 xDrip+ 中啟動傳感器。
+Once successful please select "Sensor Stop" and "Delete calibration only" in xDrip. This indicates for xDrip+ that a new sensor is releasing blood sugar levels and the old calibrations are no longer valid and therefore have to be deleted. No real interaction is done with the Libre2 sensor here! You do not need to start the sensor in xDrip+.
 
-![更換 Libre 2 傳感器時，xDrip+ 缺少資料](../images/Libre2_GapNewSensor.png)
+![xDrip+ missing data when changing Libre 2 sensor](../images/Libre2_GapNewSensor.png)
 
-#### 校正
+#### Calibration
 
-您可以將 Libre2 校正為**偏差 -40 mg/dL 至 +20 mg/dL \[-2,2 mmol/l 至 +1,1 mmol/l\]**（截距）。 斜率無法更改。 請在設置新傳感器後進行指血測試，並注意插入後的前 12 小時可能不太準確。 由於血糖測試可能存在較大誤差，請每 24 小時驗證一次並在必要時校正。 如果幾天後傳感器的讀取值完全不準確，應考慮更換傳感器。
+You can calibrate the Libre2 **with an offset of -40 mg/dl to +20 mg/dL \[-2,2 mmol/l to +1,1 mmol/l\]** (intercept). The slope isn't changeable. Please check by fingerpricking after setting a new sensor, keeping in mind it might not be accurate in the first 12 hours after insertion. Since there can be large differences to the blood measurements, verify every 24 hours and calibrate if necessary. If the sensor is completely off after a few days, it should then be replaced.
 
-### 合理性檢查
+### Plausibility checks
 
-Libre2 傳感器內部包含合理性檢查，用於檢測不正確的傳感器數值。 一旦傳感器在手臂上移動或稍微抬起，數值可能開始波動。 為了安全起見，Libre2 傳感器會自動關閉。 不幸的是，當使用應用程式掃描時，會進行額外的檢查。 應用程式甚至可能停用正常的傳感器。 目前內部檢查過於嚴格。 避免使用其他手機掃描傳感器，以降低意外停用傳感器的風險。
+The Libre2 sensors contain plausibility checks to detect bad sensor values. As soon as the sensor moves on the arm or is lifted slightly, the values may start to fluctuate. The Libre2 sensor will then shut down for safety reasons. Unfortunately, when scanning with the App, additional checks are made. The app can deactivate the sensor even though the sensor is OK. Currently the internal test is too strict. Avoid scanning the sensor with another phone to reduce the risk of unexpected sensor shutdown.
 
-# Libre 2 傳感器校正最佳實踐
+# Best practices for calibrating a Libre 2 sensor
 
-為了獲得最佳的 Libre 2 傳感器校正效果，您應遵循一些「規則」。 這些規則適用於處理 Libre 2 資料的軟體組合（例如修補版 Libre 應用程式、OOP2 等）。
+To get the best results when calibrating a libre 2 sensor there are some “rules” you should follow. They apply independently of the software combination (e.g. patched libre-app, oop2, …) that is used to handle the libre 2 values.
 
-1.  最重要的規則是在血糖平穩至少 15 分鐘時才校正傳感器。 最近三次讀取值的變化不應超過 10 mg/dL（在 15 分鐘內，而非每次讀取值間）。 由於 Libre 2 並不是測量您的血糖值，而是測量您的組織液葡萄糖值，因此在血糖上升或下降時會有一些延遲。 這種延遲可能導致在不利情況下出現過大的校正偏差，即使血糖值的上升/下降幅度並不大。 因此，盡可能避免在血糖上升或下降時進行校正。 → 如果您必須在血糖未平穩時添加校正（例如在啟動新傳感器時），建議儘早移除該校正，並在血糖平穩時添加新的校正。
-2.  其實，當您遵循規則 1 時，這一點會自動被考慮，但為了保險起見：在進行比較測量時，您的血糖值也應平穩至少 15 分鐘。 避免在血糖上升或下降時進行比較測量。 重要提示：您仍然可以隨時進行血糖測量，但不要在血糖上升或下降時將結果用於校正！
-3.  由於在平穩狀態下校正傳感器是個很好的起點，建議僅在您的目標範圍內校正傳感器，例如 70 mg/dL 至 160 mg/dL。 Libre 2 傳感器並未優化用於處理像 50 mg/dL 到 350 mg/dL 這樣的大範圍讀取值（至少在非線性情況下），因此盡量僅在您所需的範圍內進行校正。 → 接受您的校正範圍外的值無法完美匹配血糖水平的事實。
-4.  不要過於頻繁地校正。 過於頻繁地校正傳感器通常會導致更差的結果。 當傳感器在平穩狀態下提供良好結果時，請不要再添加新的校正，因為這並不會帶來任何實際效果。 重新檢查狀態每 3-5 天一次就足夠了（當然，仍然是在平穩狀態下）。
-5.  避免在不需要時進行校正。 這聽起來可能很奇怪，但當血糖與組織液葡萄糖的差異只有±10 mg/dL 時，不建議添加新的校正（例如：血糖值 95，Libre 傳感器顯示 100 -> 不要添加 95，血糖值 95，Libre 傳感器顯示 115 -> 添加 95 進行校正）。
+1.  The most important rule is to only calibrate the sensor when you have a flat bg level for at least 15 minutes. The delta between the last three readings should not exceed 10 mg/dl (over 15min not between each reading). As the libre 2 does not measure your blood glucose level but your flesh glucose level there is some time lag especially when bg level is rising or falling. This time lag can lead to way too large calibration offsets in unfavourable situations even if the bg level rise / fall is not that much. So whenever possible avoid to calibrate on rising or falling edges. -> If you have to add a calibration when you do not have a flat bg level (e.g. when starting a new sensor) it is recommended to remove that calibration(s) as soon as possible and add a new one when in flat bg levels.
+2.  Actually this one is automatically taken into account when following rule 1 but to be sure: When doing comparison measurements your bg level should also be flat for about 15min. Do not compare when rising or falling. Important: You still shall do blood glucose measurements whenever you desire, just don’t use the results for calibration when rising or falling!
+3.  As calibrating the sensor in flat levels is a very good starting point it is also strongly recommended to calibrate the sensor only within your desired target range like 70 mg/dl to 160 mg/dl. The libre 2 is not optimized to work over a huge range like 50 mg/dl to 350 mg/dl (at least not in a linear manner), so try to only calibrate when within your desired range. -> Simply accept that values outside your calibration range will not perfectly match blood glucose levels.
+4.  Do not calibrate too often. Calibrating the sensor very often mostly leads to worse results. When the sensor delivers good results in flat conditions just don’t add any new calibration as it does not have any -useful- effect. It should be sufficient to recheck the status every 3-5 days (of course also in flat conditions).
+5.  Avoid calibration when not required. This might sound silly but it is not recommended to add a new calibration if the blood glucose to flesh glucose level difference is only ±10 mg/dl (e.g. blood glucose level: 95, Libre sensor 100 -> do NOT add the 95, blood glucose level: 95, Libre sensor 115 -> add the 95 to be taken into account for the calibration)
 
-一些一般性說明：啟動新傳感器後以及傳感器即將到期時，進行比較測量比每 3-5 天一次的建議更頻繁地進行更有意義。 對於新傳感器和舊傳感器來說，原始值更有可能發生變化，因此需要重新校正。 有時候，傳感器可能無法提供有效的數值。 最有可能的情況是傳感器的讀取值遠低於實際血糖水平（例如，傳感器讀取值：50 mg/dL，血糖值：130 mg/dL），即使經過校正後也是如此。 如果是這種情況，則無法校正該傳感器以報告有效結果。 例如： 當使用修補版 Libre 應用程式時，您可以添加最大 +20 mg/dL 的偏移值。 如果您遇到傳感器提供的值過低，不要猶豫，更換傳感器，因為它不會變得更好。 即使這可能是傳感器故障，但如果經常遇到讀取值過低的情況，請嘗試更換傳感器的位置。 即使在官方推薦的區域（上臂），某些位置可能也無法提供有效資料。 這是一種嘗試錯誤的過程，找到適合您的區域。
+Some general notes: After activating a new sensor and at the sensor’s end of life it does make sense to do comparison measurements more often than 3-5 days as stated in rule nr. 4. For new and old sensors it is more likely that the raw values change and a re-calibration is required. From time to time it happens that a sensor does not provide valid values. Most likely the sensor value is way to low compared to the actual blood glucose level (e.g. sensor: 50 mg/dl, bg: 130 mg/dl) even after calibrating. If this is the case the sensor cannot be calibrated to report useful results. E.g. when using the patched libre app one can add an offset of maximal +20 mg/dl. When it happens to you that the sensor does provides way too low values, don’t hesitate to replace it as it will not get better. Even if it might be a defective sensor, when seeing sensors that do provide way too low values very often, try to use different areas to place your sensor. Even in the official area (upper arm) there might be some locations where the sensors just do not provide valid values. This is some kind of trial end error to find areas that work for you.
