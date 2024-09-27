@@ -66,7 +66,7 @@
 ```{admonition} Important note
 :class: note
 
-Automations are still active when the Loop is disabled!
+當循環被禁用時，自動化仍然是活躍的！
 ```
 
 
@@ -83,7 +83,7 @@ Automations are still active when the Loop is disabled!
 ```{admonition} Warning
 :class: warning
 
-Please be careful when selecting a negative value in Automation
+在自動化中選擇負值時請小心
 ```
 
 在**自動化**中的「條件」選擇‘小於’這類負值時，請務必謹慎。 例如：
