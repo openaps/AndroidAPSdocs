@@ -23,7 +23,7 @@
 ### 醫療安全
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
 :class: danger
-Caution is advised concerning rapid improvements in blood glucose control and lowering of HbA1c 
+對於血糖控制迅速改善與 HbA1c 降低，建議要謹慎。 
 ```
 
 一個重要的安全考量是，對於長期血糖升高的人來說，**HbA1c 的快速降低和血糖控制的改善可能會導致永久性損害**。 許多糖尿病患者並不知道這一點，而且並非所有臨床醫生都會提醒患者這個問題。
@@ -48,14 +48,14 @@ N.B. 如果您使用不同的 HbA1c 單位（mmol/mol 而非 %），請點擊[�
 
 ```{admonition} NO SGLT-2 inhibitors
 :class: danger
-SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins 會無法預測地降低血糖水平，因此在使用類似 AAPS 的閉環系統時，絕對不能服用這類藥物！ 這會導致酮酸中毒和/或低血糖的重大風險！ The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous. 
+SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收。 Gliflozins 會無法預測地降低血糖水平，因此在使用類似 AAPS 的閉環系統時，絕對不能服用這類藥物！ 這會導致酮酸中毒和/或低血糖的重大風險！ 該藥物與降低基礎率以提高血糖水平的系統結合使用尤其危險。 
 
-In a nutshell:
-- **Example 1: risk of Hypo**
->During lunch, you use **AAPS** to bolus based on consuming 45g of glucose. 問題是，由於<strong x-id="1">AAPS</strong>未知道抑制劑使身體排除了一些碳水化合物，導致攝取的胰島素過多，最終引發低血糖。
+簡而言之：
+- **範例 1: 低血糖風險**
+>在午餐期間，您使用 **AAPS** 根據攝取 45g 葡萄糖進行注射。 問題是，由於<strong x-id="1">AAPS</strong>未知道抑制劑使身體排除了一些碳水化合物，導致攝取的胰島素過多，最終引發低血糖。
 
-- **Example 2: risk of Ketoacidosis**
->The inhibitors eliminate some of the carbs in the background causing a reduction in your BG. **AAPS** will automatically instruct the pump to decrease insulin intake  including basal. 隨著時間的推移，這可能導致血糖保持在目標值以下，直到身體沒有足夠的背景胰島素來吸收碳水化合物，最終引發酮酸中毒。 通常，1 型糖尿病患者會因為幫浦故障而發展成酮酸中毒，這會觸發手機警報，並透過血糖值升高來顯示出來。 然而，使用 Gliflozins 的危險在於，<strong x-id="1">AAPS</strong> 不會發出警報，因為幫浦仍然正常運作，且血糖可能保持在目標範圍內。  
+- **範例 2: 酮症酸中毒風險**
+>抑制劑消除了一些背景中的碳水化合物，導致您的血糖降低。 **AAPS** 將自動指示幫浦減少胰島素攝取，包括基礎。 隨著時間的推移，這可能導致血糖保持在目標值以下，直到身體沒有足夠的背景胰島素來吸收碳水化合物，最終引發酮酸中毒。 通常，1 型糖尿病患者會因為幫浦故障而發展成酮酸中毒，這會觸發手機警報，並透過血糖值升高來顯示出來。 然而，使用 Gliflozins 的危險在於，<strong x-id="1">AAPS</strong> 不會發出警報，因為幫浦仍然正常運作，且血糖可能保持在目標範圍內。  
 
 常見的 SGLT-2 抑制劑品牌名稱包括：Invokana、Farxiga、Jardiance、Glyxambi、Synjardy、Steglatro 和 Xigduo XR 等。
 ```
@@ -219,11 +219,11 @@ In a nutshell:
 
 ```{admonition} delaying Samsung phones updates
 :class: warning
-Samsung has an unfortunate track record of forcing updates of their phones which cause bluetooth connectivity issues. 要停用這些強制更新，您需要將手機切換到“開發者模式”，具體步驟如下：進入設置並點擊“關於”，然後點擊軟體資訊，連續點擊版本號直到確認您已解鎖開發者模式。 返回設置主選單，您應該會看到一個新的“開發者選項”選單項。 Open developer options and scroll to find auto system update and turn it off
+三星有迫使更新其手機的糟糕紀錄，這會導致藍牙連線問題。 要停用這些強制更新，您需要將手機切換到“開發者模式”，具體步驟如下：進入設置並點擊“關於”，然後點擊軟體資訊，連續點擊版本號直到確認您已解鎖開發者模式。 返回設置主選單，您應該會看到一個新的“開發者選項”選單項。 打開開發者選項並向下滾動以找到自動系統更新並關閉它
 ```
 
 ```{admonition} Google Play Protect potential Issue
 :class: warning
-There have been several reports of **AAPS** being shut down arbitrarily by Google Play Protect every morning. 如果發生此問題，您需要進入 Google Play 的選項，停用 “Google Play Protect”。 並非所有手機型號或所有 Android 版本都會受到影響。
+每個早晨都有幾份報告指出 **AAPS** 被 Google Play Protect 任意關閉。 如果發生此問題，您需要進入 Google Play 的選項，停用 “Google Play Protect”。 並非所有手機型號或所有 Android 版本都會受到影響。
 ```
 
