@@ -11,7 +11,7 @@
 
 ```{admonition} Legacy apps
 :class: warning
-These apps are not compatible with recent Android versions.  
+這些應用程式與最近的 Android 版本不相容。  
 ```
 
 -   從<https://github.com/dexcomapp/dexcomapp>下載 apk，並選擇符合您需求的版本（mg/dl 或 mmol/l 版本，G5）。
