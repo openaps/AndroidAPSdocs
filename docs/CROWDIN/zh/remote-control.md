@@ -645,21 +645,21 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 ```{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
 :class: dropdown
 
-1)   Download _Easy Fire Tools_ from playstore onto phone 
+1)   從商店下載 _Easy Fire Tools_ 到手機 
 
 ![image](./images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
 
-2)  Make yourself a developer in the watch (once set up and connected to phone): 
+2)  在手錶上設定自己為開發者（連接至手機後）： 
 
-Go to settings >about watch (bottom option) >- software info > software version. 
+前往設定 >關於手錶（底部選項） >- 軟體資訊 > 軟體版本。 
 
 快速點擊“軟體版本”，直到出現通知，告知手錶現在處於“開發者模式”。 返回設置選單頂部，向下滾動，並在“關於手錶”下方看到“開發者選項”。 
 
-在“開發者選項”中，打開“ADB 調試”和“無線調試”。 後者將顯示手錶的 IP 地址，其最後兩位數字每次與新手機配對時都會改變。 It will be something like: **167.177.0.20.** 5555 (ignore the last 4 digits). 請注意，每次將 AAPS 切換到新手機時，這個地址的最後兩位數字（這裡為“20”）將發生變化。  
+在“開發者選項”中，打開“ADB 調試”和“無線調試”。 後者將顯示手錶的 IP 地址，其最後兩位數字每次與新手機配對時都會改變。 它會像是：**167.177.0.20.** 5555（忽略最後4位數）。 請注意，每次將 AAPS 切換到新手機時，這個地址的最後兩位數字（這裡為“20”）將發生變化。  
 
-![24-10-23, watch ADB debug pic](./images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
+![24-10-23, 手錶 ADB 除錯圖](./images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
 
-STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). 然後點擊右上角的插頭圖示。  
+步驟 3)     在手機的 Easy Fire tools 中輸入 IP 地址 _例如_ **167.177.0.20**（進入左側選單，設定並輸入 IP 地址）。 然後點擊右上角的插頭圖示。  
 
 ![image](./images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
 
@@ -667,14 +667,14 @@ STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the
 ![image](./images/00b2fb8b-5996-4b71-894e-516d63469e1b.png)
 
 
-STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  Wear.apk onto the smartwatch using Easy Fire tools
+步驟 4) 按照 [這裡](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) 的說明進行側載（即傳輸） Wear.apk 到智慧手錶，使用 Easy Fire tools
 
-Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the smartwatch: 
+點擊應用程式中的側邊「外掛」插座，以便將 Wear OS.apk 上傳至智慧手錶： 
 
 ![image](./images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
 
 
- Next step > accept the authorisation request on the smartwatch
+ 下一步 > 在智慧手錶上接受授權請求
 
 
 ![image](./images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
