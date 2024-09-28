@@ -134,7 +134,7 @@ Kromě tří základních hardwarových komponentů (telefon, pumpa, glukózový
 
 ### 1) Aplikace pro Android telefon: **AAPS**
 
-**AAPS** je aplikace, která běží na Android smartphonech a dalších zařízeních. Sami pomocí podrobného návodu vytvoříte **AAPS** aplikaci (apk soubor). Stáhnete zdrojový kód **AAPS** z GitHubu, nainstalujete potřebné programy do vašeho počítače (Android Studio, GitHub desktop) a sestavíte si vlastní kopii **AAPS** aplikace. Přesunete **AAPS** aplikaci na váš chytrý telefon (pomocí e-mailu, USB kabelu apod.) a nainstalujete ji.
+**AAPS** je aplikace, která běží na Android smartphonech a dalších zařízeních. You are going to build the **AAPS** app (an apk file) yourself, using a step-by-step guide, by downloading the **AAPS** source code from GitHub, installing the necessary programs (Android Studio, GitHub desktop) on your computer and building your own copy of **AAPS** app. Přesunete **AAPS** aplikaci na váš chytrý telefon (pomocí e-mailu, USB kabelu apod.) a nainstalujete ji.
 
 ### 2) Reportovací server: NightScout (nebo Tidepool*)
 
