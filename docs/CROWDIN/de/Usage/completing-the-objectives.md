@@ -12,7 +12,7 @@
 Regularly export your **AAPS** settings after completing each **objective**!
 ```
 
-Unsere ausdrückliche Empfehlung ist, nach jedem Abschluss eines **Ziel**s Deine [Einstellungen zu exportieren}(../Usage/ExportImportSettings.md). Beim Exportieren wird ein Datei mit den Einstellungen (.json) erstellt, die Du an einem oder mehreren sicheren Ort als Backup speichern solltest (_z.B._ Google Drive, Festplatte, Email-Anhang _etc._). Das hilft, den Fortschritt beim Durchlaufen der **Ziele** abzusichern, sodass Du z. B. beim versehentlichen Löschen Deines Fortschritts, diesen über einen Import der gespeicherten Datei wieder herstellen kannst. Ein Backup Deiner **Einstellungen** ist auch notwendig, wenn Du Dein **AAPS** Smartphone, aus welchem Grund auch immer, wechseln möchtest (Upgrade/Verlust/Defekt _etc._)
+Unsere ausdrückliche Empfehlung ist, nach jedem Abschluss eines **Ziel**s Deine [Einstellungen zu exportieren}(../Usage/ExportImportSettings.md). Beim Exportieren wird ein Datei mit den Einstellungen (.json) erstellt, die Du an einem oder mehreren sicheren Ort als Backup speichern solltest (_z.B._ Google Drive, Festplatte, Email-Anhang _etc._). Das hilft, den Fortschritt beim Durchlaufen der **Ziele** abzusichern, sodass Du z. B. beim versehentlichen Löschen Deines Fortschritts, diesen über einen Import der gespeicherten Datei wieder herstellen kannst. Ein Backup Deiner **Einstellungen** ist auch notwendig, wenn Du Dein **AAPS**-Smartphone, aus welchem Grund auch immer, wechseln möchtest (Upgrade/Verlust/Defekt _etc._)
 
 Die **Einstellungen**-Datei speichert nicht nur Deinen Fortschritt durch die Ziele, sondern auch Deine eigenen angepassten **AAPS** Einstellungen wie _zum Beispiel_ **max bolus**.
 
