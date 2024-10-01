@@ -161,9 +161,9 @@ Wie schon erwähnt, ist die **AAPS**-Nutzung eher eine „Reise“, die es notwe
 | Installation/Konfiguration des PCs zum Erstellen der App:                                           |      2-8 Stunden       |
 | Einen Nightscout-Server erstellen:                                                                  |         1 hour         |
 | Installieren einer CGM-App (xDrip+ oder BYODA oder …)                                               |         1 hour         |
-| Erstmalige Konfiguration CGM->xDrip+->AAPS:                                                         |         1 hour         |
-| Erstmalige Konfiguration AAPS->Insulinpumpe:                                                        |         1 hour         |
-| Konfiguration von AAPS->Nightccout (nur Berichte):                                                  |         1 hour         |
+| Erstmalige Konfiguration CGM → xDrip+ → AAPS:                                                       |         1 hour         |
+| Erstmalige Konfiguration AAPS → Insulinpumpe:                                                       |         1 hour         |
+| Konfiguration von AAPS → Nightscout (nur Berichte):                                                 |         1 hour         |
 | Optional (für Eltern) - Nightscout konfigurieren <-> **AAPS** & NSFollower:                         |         1 hour         |
 | Ziel 1: Einrichten der Darstellung und Überwachung sowie analysieren der Basalraten und Faktoren    |         1 hour         |
 | Ziel 2: Lerne, wie AAPS bedient wird                                                                |        2 Stunde        |
