@@ -168,7 +168,7 @@ Du erhältst jetzt eine Nachricht über ein fehlendes Software-Entwicklungskit (
 
 ![missingSDK](../images/Building-the-App/09_MissingSDK.png)
 
-Die Software sollte die gewünschte (SDK) automatisch auswählen und einen Ort auswählen.
+The software should autoselect the required (SDK) and choose a location.
 
 ```{admonition} What is an Android SDK?
 :class: dropdown
@@ -186,7 +186,7 @@ Wenn die Einstellungen überprüft werden sollen, wähle einfach "Weiter":
 
 Wenn nach der Lizenzvereinbarung gefragt wird, wähle "Akzeptieren" und klicke dann auf "Beenden":
 
-![licence_agreement](../images/Building-the-App/12_License Agreent.png)
+![licence\_agreement](../images/Building-the-App/12_Licence_agreement.png)
 
 > **_Hinweis:_** Abhängig von deinem Setup können die zu akzeptierenden Lizenzen von dem abweichen, was im Screenshot angezeigt wird.
 
