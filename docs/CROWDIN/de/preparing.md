@@ -6,7 +6,7 @@ Willkommen. Diese Dokumentation möchte Benutzer*innen, die sich darauf vorberei
 
 Ein **Index** und eine Erklärung der Dokumentenstruktur findest Du [hier](index.md). Alternativ klickst Du auf das Symbol **AAPS** oben links in der Dokumentation. Dort findest Du eine Zusammenfassung der jeweiligen Zielsetzung der einzelnen Abschnitte in der Dokumentation. Du kannst auch mit Hilfe der Überschriften auf der linken Seite durch die Navigation navigieren. Zusätzlich gibt es eine praktische Suchfunktion direkt unterhalb des **AAPS**-Symbols.
 
-Unser Ziel ist es, sowohl die **AAPS**-Möglichkeiten als auch dessen Beschränkungen leicht verständlich zu beschreiben. Es kann enttäuschend sein, wenn Du, nachdem Du bereits einiges an Zeit in das Lesen der Dokumentation investiert hast, feststellst, dass Deine Insulinpumpe oder Dein Sensor nicht mit **AAPS** kompatibel ist oder <0>AAPS</0> andere Funktionalitäten bietet, als die Du Dir erhofft hast.
+Unser Ziel ist es, sowohl die **AAPS**-Möglichkeiten als auch dessen Beschränkungen leicht verständlich zu beschreiben. Es kann enttäuschend sein, wenn Du, nachdem Du bereits einiges an Zeit in das Lesen der Dokumentation investiert hast, feststellst, dass Deine Insulinpumpe oder Dein Sensor nicht mit **AAPS** kompatibel ist oder <0>AAPS</0> andere Funktionalitäten bietet, als Du Dir erhofft hast.
 
 Viele Details in der **AAPS**-Dokumentation sind aus Erfahrungen entstanden und sind erst dann besonders nachvollziehbar, wenn **AAPS** tatsächlich genutzt wird. Genauso wie es fast unmöglich ist, eine Sportart nur durch das Lesen der Regeln zu lernen, ist es für den sicheren Umgang mit **AAPS** wichtig, die Grundlagen des Systems zu verstehen und das Wissen konkret auf Dein (neu) laufendes **AAPS** anzuwenden.
 
@@ -65,7 +65,7 @@ Bekannte Handelsnamen von SGLT-2 Hemmern sind: Invokana, Forxiga, Jardiance, Ste
 
 Die Grundprinzipien und Konzepte des Loopens müssen vom Nutzenden verstanden werden, bevor **AAPS** verwendet wird. Dies wird erreicht, indem Du Zeit in das Lesen der **AAPS**-Dokumentation investierst und die Ziele (Objectives), die Dir eine gute Ausgangslage für den sicheren und effektiven Umgang mit **AAPS** ermöglichen sollen, abschließt. Der Umfang der **AAPS**-Dokumentation mag am Anfang erschlagend wirken, aber bleib' geduldig und vertraue dem Prozess - mit dem richtigen Vorgehen wirst Du es erreichen!
 
-Wie schnell man vorankommt, hängt stark vom Einzelnen ab. Sei Dir aber bewusst, dass das Erreichen aller Ziele (Objectives) typischerweise ca. 6-9 Wochen benötigt. Viele Leute beginnen, **AAPS** zu erstellen/bauen, zu installieren und einzurichten, bevor sie es tatsächlich benutzen. Um das zu unterstützen, hat das System eine "virtuelle Pumpe", die beim Abschluss der ersten Ziele genutzt werden kann und sich mit **AAPS** vertraut zu machen, ohne es tatsächlich zur Insulinabgabe zu nutzen. Eine detaillierte Aufschlüsselung der Zeitabläufe wird unten gezeigt. Ab dem Ziel 8 wird in **AAPS** der Loop geschlossen (Closed-Loop). Die nachfolgenden Ziele erweitern diesen um zusätzliche Funktionen wie **SMS-Befehle** und **Automatisierungen**, die für einige Nutzende hilfreich sind, aber nicht zwingend für die Kernfunktion von **AAPS** notwendig sind.
+Wie schnell man vorankommt, hängt stark vom Einzelnen ab. Sei Dir aber bewusst, dass das Erreichen aller Ziele (Objectives) typischerweise ca. 6-9 Wochen benötigt. Viele Leute beginnen, **AAPS** zu erstellen/bauen, zu installieren und einzurichten, bevor sie es tatsächlich benutzen. Um das zu unterstützen, hat das System eine "virtuelle Pumpe", die beim Abschluss der ersten Ziele genutzt werden kann, um sich mit **AAPS** vertraut zu machen, ohne es tatsächlich zur Insulinabgabe zu nutzen. Eine detaillierte Aufschlüsselung der Zeitabläufe wird unten gezeigt. Ab dem Ziel 8 wird in **AAPS** der Loop geschlossen (Closed-Loop). Die nachfolgenden Ziele erweitern diesen um zusätzliche Funktionen wie **SMS-Befehle** und **Automatisierungen**, die für einige Nutzende hilfreich sind, aber nicht zwingend für die Kernfunktion von **AAPS** notwendig sind.
 
 Dein Erfolg mit **AAPS** hängt von Deiner Proaktivität, Deinem Willen Glukosewerte zu hinterfragen und Deiner Flexibilität die notwendigen **AAPS**-Anpassungen für bessere Ergebnisse zu machen, ab. Genauso wie es nahezu unmöglich ist, eine Sportart allein über das Regelwerk zu erlernen, ist es auch mit **AAPS**.
 
@@ -105,7 +105,7 @@ Zusätzlich bietet **AAPS** die Möglichkeit, [alle Konfigurationseinstellungen 
 
 #### Problembehandlung
 
-Wenn Du Dir bei irgendetwas unsicher bist, gehe bitte auf die AAPS Community zu - es gibt keinen dummen Fragen! Alle Nutzenden, egal mit welcher Erfahrung, sollen sich bestärkt fühlen, Fragen zu stellen. Da es viele **AAPS**-Nutzende gibt, werden Fragen in der Regel schnell beantwortet.
+Wenn Du Dir bei irgendetwas unsicher bist, gehe bitte auf die AAPS-Community zu - es gibt keine dummen Fragen! Alle Nutzenden, egal mit welcher Erfahrung, sollen sich bestärkt fühlen, Fragen zu stellen. Da es viele **AAPS**-Nutzende gibt, werden Fragen in der Regel schnell beantwortet.
 
 ##### [Frage in der AAPS Facebook-Gruppe](https://www.facebook.com/groups/AndroidAPSUsers/)
 
@@ -138,7 +138,7 @@ Neben den drei grundlegenden Hardwarekomponenten (Smartphone, Insulinpumpe und G
 
 ### 2) Ein Server für Berichte: Nightscout (Tidepool*)
 
-Um alle **AAPS**-Vorteile nutzen zu können, musst Du einen Nightscout-Server einrichten. Du kannst das selbst machen (LINK auf die Anleitung) oder alternativ einen kommerziellen Anbieter (LINK auf T1 pal, 10be.de etc.) gegen eine kleine Gebühr mit dem Aufsetzen und Betreiben des Nightscout-Services (managed service) für Dich zu beauftragen. Nightscout wird genutzt, um über die Zeit hinweg Daten von **AAPS** zu sammeln und kann daraus detaillierte Berichte erstellen, die Zusammenhänge von CGM- und Insulinmustern zeigt. Eltern und Betreuende können Nightscout auch dazu nutzen, um remote mit der **AAPS**-Anwendung zu kommunizieren und das Diabetes-Management des Kindes im Auge zu behalten. Die Funktionen zur Remote-Kommunikation beinhaltet Echtzeit-Informationen der Glukosewerte und dem Insulinspiegel, Remote-Bolus (über SMS) und Ankündigung von Mahlzeiten. Eine getrennte Betrachtung von CGM-Daten und Pumpen-Daten ist beim Versuch die Diabetes-Performanz zu analysieren, so als ob dem blinden Autofahrer der Beifahrende die Umgebung beschreibt.  Alternativ zu Nightscout kann seit der AAPS version 3.2 (oder neuer) auch Tidepool genutzt werden.
+Um alle **AAPS**-Vorteile nutzen zu können, musst Du einen Nightscout-Server einrichten. Du kannst das selbst machen (LINK auf die Anleitung) oder alternativ einen kommerziellen Anbieter (LINK auf T1 pal, 10be.de etc.) gegen eine kleine Gebühr mit dem Aufsetzen und Betreiben des Nightscout-Services (managed service) für Dich beauftragen. Nightscout wird genutzt, um über die Zeit hinweg Daten von **AAPS** zu sammeln und kann daraus detaillierte Berichte erstellen, die Zusammenhänge von CGM- und Insulinmustern zeigt. Eltern und Betreuende können Nightscout auch dazu nutzen, um remote mit der **AAPS**-Anwendung zu kommunizieren und das Diabetes-Management des Kindes im Auge zu behalten. Die Funktionen zur Remote-Kommunikation beinhaltet Echtzeit-Informationen der Glukosewerte und dem Insulinspiegel, Remote-Bolus (über SMS) und Ankündigung von Mahlzeiten. Eine getrennte Betrachtung von CGM-Daten und Pumpen-Daten ist beim Versuch die Diabetes-Performanz zu analysieren, so als ob dem blinden Autofahrer der Beifahrende die Umgebung beschreibt.  Alternativ zu Nightscout kann seit der AAPS version 3.2 (oder neuer) auch Tidepool genutzt werden.
 
 ### 3) Eine App zum Auslesen Deines Sensors (CGM)
 
@@ -153,7 +153,7 @@ Mit dem Erscheinen von verbesserten Versionen müssen **Nightscout** und **AAPS*
 (preparing-how-long-will-it-take?)=
 ## Wie lange wird es dauern, alles einzurichten?
 
-Wie schon erwähnt, ist die **AAPS**-Nutzung eher eine „Reise“, die es notwendig macht, dass Du Deine Zeit in sie investierst. Es ist kein einmaliger Aufwand. Aktuelle Schätzungen für das Erstellen, die Installation und Konfiguration von **AAPS** und **CGM**-Software, sowie den Übergang von Open Loop zu Hybrid Closed Loop mit **AAPS**, gehen von ca. 2 bis 3 Monaten aus. Daher wird empfohlen sich als Erstes auf das Erstellen (Build) der **AAPS**-App zu konzentrieren und so schnell wie möglich die ersten Aufgaben bzw. Ziele (Objectives) anzugehen. das gilt auch, wenn Du aktuell noch anderes "Insulinabgabesystem" haben solltest, da Du bis zum Ziel 5 eine "virtuelle Pumpe" nutzen kannst. Ein ungefährer Zeitrahmen ist:
+Wie schon erwähnt, ist die **AAPS**-Nutzung eher eine „Reise“, die es notwendig macht, dass Du Deine Zeit in sie investierst. Es ist kein einmaliger Aufwand. Aktuelle Schätzungen für das Erstellen, die Installation und Konfiguration von **AAPS** und **CGM**-Software, sowie den Übergang von Open Loop zu Hybrid Closed Loop mit **AAPS**, gehen von ca. 2 bis 3 Monaten aus. Daher wird empfohlen sich als Erstes auf das Erstellen (Build) der **AAPS**-App zu konzentrieren und so schnell wie möglich die ersten Aufgaben bzw. Ziele (Objectives) anzugehen. Das gilt auch, wenn Du aktuell noch ein anderes "Insulinabgabesystem" haben solltest, da Du bis zum Ziel 5 eine "virtuelle Pumpe" nutzen kannst. Ein ungefährer Zeitrahmen ist:
 
 | Aufgaben                                                                                            |    Ungefähre Dauer     |
 | --------------------------------------------------------------------------------------------------- |:----------------------:|
@@ -194,12 +194,12 @@ Zusätzlich zu den medizinischen Warnungen in den [Sicherheitshinweisen](prepari
 - Lyumjev:
 
 Nur für experimentierende/fortgeschrittene Nutzende:
-- Free-Peak Oref: Ermöglich das Wirkmaximum frei festzulegen
+- Free-Peak Oref: Ermöglicht das Wirkmaximum frei festzulegen
 
 
 ### Technisches
 
-Diese Dokumentation möchte die notwendige technische Expertise auf ein absolutes Minimum beschränken. Du wirst Deinen Computer dazu nutzen, um die **AAPS**-Anwendung in Android Studio (Schritt-für-Schritt-Anleitung) zu erstellen. Du wirst auch einen über das Internet erreichbaren Server in einer öffentlichen Cloud erstellen, verschiedene Android Smartphone-Apps konfigurieren und Deine Expertise im Diabetes-Management ausbauen. Das kannst Du erreichen, indem Du in kleinen Schritten vorwärst gehst, geduldig bleibst und die Hilfe der **AAPS** Community nutzt. Wenn Du bereits im Internet surfen kannst, Deine eigenen Emails managst und Deinen Computer auf dem aktuellen Stand halten kannst, sollte die Aufgabe **AAPS** zu erstellen machbar sein. Nimm Dir einfach Zeit.
+Diese Dokumentation möchte die notwendige technische Expertise auf ein absolutes Minimum beschränken. Du wirst Deinen Computer dazu nutzen, um die **AAPS**-Anwendung in Android Studio (Schritt-für-Schritt-Anleitung) zu erstellen. Du wirst auch einen über das Internet erreichbaren Server in einer öffentlichen Cloud erstellen, verschiedene Android Smartphone-Apps konfigurieren und Deine Expertise im Diabetes-Management ausbauen. Das kannst Du erreichen, indem Du in kleinen Schritten vorwärts gehst, geduldig bleibst und die Hilfe der **AAPS**-Community nutzt. Wenn Du bereits im Internet surfen kannst, Deine eigenen E-Mails managst und Deinen Computer auf dem aktuellen Stand halten kannst, sollte die Aufgabe **AAPS** zu erstellen machbar sein. Nimm Dir einfach Zeit.
 
 ### Smartphones
 
@@ -207,7 +207,7 @@ Diese Dokumentation möchte die notwendige technische Expertise auf ein absolute
 The current version of **AAPS** (3.2) requires an Android smartphone with Google **Android 9.0 or above**. If you are considering buying a new phone, (as of July 2024), Android 13 is preferred. Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons, however for users unable to use a device with Android 9.0 or newer, earlier versions of  **AAPS** compatible for older Android versions like [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) and [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2), remain available from previous releases (check the release notes for legacy versions).
 
 #### Smartphone-Modell wählen
-Welches genau Modell Du kaufen solltest, hängt von den gewünschten Funktionen ab. Es gibt zwei (mittlerweile archivierte) Arbeitsblätter mit kompatiblen [Smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) und [Smartphones und Smartwatches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). Diese Übersichten werden nicht mehr aktualisiert, da es mittlerweile zu viele Modelle auf dem Markt gibt. Wir empfehlen Dir daher, die entsprechenden Supportgruppen (Facebook oder Discord) mit dem Schlagwort "phone" oder dem jeweiligen Modell, das Du kaufen möchtest, zu durchsuchen. Wenn Du dann darüber hinaus Informationen benötigen solltest, erstelle einen neuen Beitrag mit Deinen Fragen.
+Welches genaue Modell Du kaufen solltest, hängt von den gewünschten Funktionen ab. Es gibt zwei (mittlerweile archivierte) Arbeitsblätter mit kompatiblen [Smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) und [Smartphones und Smartwatches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). Diese Übersichten werden nicht mehr aktualisiert, da es mittlerweile zu viele Modelle auf dem Markt gibt. Wir empfehlen Dir daher, die entsprechenden Supportgruppen (Facebook oder Discord) mit dem Schlagwort "phone" oder dem jeweiligen Modell, das Du kaufen möchtest, zu durchsuchen. Wenn Du dann darüber hinaus Informationen benötigen solltest, erstelle einen neuen Beitrag mit Deinen Fragen.
 
 Falls Du Smartphones oder Smartwatch-Modelle für Tests spenden möchtest, sende eine E-Mail an [donations@androidaps.org](mailto:donations@androidaps.org).
 
@@ -215,7 +215,7 @@ Falls Du Smartphones oder Smartwatch-Modelle für Tests spenden möchtest, sende
 - [Jelly Settings](../Usage/jelly.md)
 - [Huawei Einstellungen](../Usage/huawei.md)
 
-Das Smartphone sollte regelmäßig Sicherheitsupdates erhalten und stets auf der aktuellen Android-Version gehalten werden. Wenn Du mit AAPS noch nicht sehr vertraut bist oder kein technischer Experte bist, solltest Du mit dem jeweiligen Update warten, bis Andere das Update erfolgreich gemacht haben und in den verschiedenen Foren bestätigt haben, dass es problemlos durchgeführt werden kann.
+Das Smartphone sollte regelmäßig Sicherheitsupdates erhalten und stets auf der aktuellen Android-Version gehalten werden. Wenn Du mit AAPS noch nicht sehr vertraut bist oder kein technischer Experte bist, solltest Du mit dem jeweiligen Update warten, bis andere das Update erfolgreich gemacht haben und in den verschiedenen Foren bestätigt haben, dass es problemlos durchgeführt werden kann.
 
 ```{admonition} delaying Samsung phones updates
 :class: warning
