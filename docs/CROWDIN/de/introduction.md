@@ -313,9 +313,9 @@ David Burren [https://bionicwookie.com/](https://bionicwookie.com/)
 
 | Nutzergruppe                                        |
 | --------------------------------------------------- |
-| ✔️ Typ 1 Diabetiker                                 |
-| ✔️ Betreuer oder Elternteil eines Typ 1 Diabetikers |
-| ✔️ Blinde Typ 1 Diabetiker                          |
+| ✔️ Typ-1-Diabetiker                                 |
+| ✔️ Betreuer oder Elternteil eines Typ-1-Diabetikers |
+| ✔️ Blinde Typ-1-Diabetiker                          |
 | ✔️ *Kliniken und Fachleute im Gesundheitswesen      |
 
 Die obige Tabelle setzt voraus, dass die Nutzenden sowohl Zugang zu einem CGM-System und auch zu einer Insulinpumpe haben.
