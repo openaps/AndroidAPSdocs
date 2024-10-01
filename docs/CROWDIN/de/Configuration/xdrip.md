@@ -28,7 +28,7 @@ Tippe auf `Zusätzliche Optionen` (8)
     :class: warning
     You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.
 
-Deaktiviere `Behandlungen hochladen`(9) und nutze **auf keinen Fall** die Funktion `Back-fill Daten` (11).
+Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill data` (11).
 
 Die Option `Alarm bei Fehlern` sollte ebenfalls deaktiviert sein (10). Bei WLAN bzw. Mobilfunk-Problemen oder wenn der Server nicht erreichbar ist, erhältst Du sonst alle 5 Minuten einen Alarm.
 
