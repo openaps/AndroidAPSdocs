@@ -1,39 +1,39 @@
-# 更改您的AAPS配置
+# Making changes to your AAPS configuration
 
-完成 **設定嚮導** 後，如果您只想更改部分配置，則無需重新運作整個嚮導。
+After you have completed the **Setup Wizard** you don't need to run the entire Wizard again if you want to only change parts of the configuration.
 
-有三種路徑可以更改不同的配置設置，您選擇哪一條路徑僅僅取決於方便，每條路徑都會通向相同的配置設置。
+There are three routes to change the different configuration settings, which route you take is simply a matter of convenience, each route leads to the same configuration settings.
 
-如下所示：
+These are as follows:
 
-1. 配置構建器，
-2. 點擊右上角的三點選單並選擇“偏好設定”或
-3. 點擊右上角的三點選單並選擇“外掛偏好設定”。
+1. Config builder,
+2. Three dot menu on the right and select "preferences" or
+3. Three dot menu on the right and select "plugin preferences".
 
-在這裡我們解釋哪個選項對每種情況最方便：
+Here we explain which option is most convenient for each situation:
 
-## 配置構建器
+## Config builder
 
-**配置構建器** 用於啟用外掛和使它們在頂層選單中**可見**。 如果它們已啟用，它們仍將運作，您可以決定是否希望它們在頂層選單中顯示。
+The **config builder** is used if you want to **enable plugins** and their **visibility** in the top level menu. If they are enabled, they will still run, you can decide if you want to be able to see them in the top menu or not.
 
-未啟用的外掛（_例如_ 已停用的外掛）無法顯示。 例如，當您剛開始使用 **AAPS** 並處於**目標1**時，您無法使用 **自動化**，因此無法啟用 **自動化** 外掛並將其顯示在頂部選單中。
+Plugins which you have not enabled (_i.e._ disabled) plugins can not be made visible. For example, when you first start with **AAPS** on **objective 1**, you cannot yet use **automations**, so the **automations** plugin cannot be enabled and made visible in the top menu.
 
-**配置構建器** 是在使用 **設定嚮導** 後進一步修改配置的最簡單方法。
+**Config builder** is the easiest way to further modify your configuration after you have used the **Setup Wizard**.
 
-有關配置構建器的文檔可在[這裡](../Configuration/Config-Builder.md)查閱。
+The documentation relating to the config builder is available [here](../Configuration/Config-Builder.md).
 
-## 偏好設定
+## Preferences
 
-您可以透過 **AAPS** 主頁面右上角的三點選單進入偏好設定對話框。 它可以讓您一次性更改**所有已啟用的外掛**的配置。
+The preferences dialogue can be reached via the top right three dot menu on the **home screen** of AAPS. It gives you the possibilty to change the configuration of **all enabled plugins at once**.
 
-如果您不確定在哪裡尋找配置選項，這是一個不錯的選擇，但如果您知道自己只想更改一個特定外掛的配置，這可能有點繁瑣。
+This is a good route if you are not really sure where to look for an configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
 
-有關偏好設定的文檔可在[這裡](../Configuration/Preferences.md)查閱。
+The documentation of the preferences is available [here](../Configuration/Preferences.md).
 
-## 外掛偏好設定
+## Plugin preferences
 
-您可以透過 **AAPS** 主頁面右上角的三點選單進入 **外掛偏好設定** 對話框。 它提供了更改當前螢幕上外掛配置的可能性。
+The **plugin preferences** dialogue can be reached via the top right three dot menu on the home screen of AAPS. It provides the possibilty to change the configuration of the plugin currently on screen.
 
-如果您知道自己只想更改 _例如_ BYODA 的配置，這是一個不錯的選擇。 然後，您可以選擇 **AAPS** 頂部選單中的“BYODA”標籤，進入BYODA頁面後，點擊右上角的三點選單，然後選擇“外掛偏好設定”條目。 您將直接進入BYODA外掛的偏好設定對話框。
+This is a good route if you know that _e.g._ you _just_ want to change the configuration for BYODA. Then, you would select the tab "BYODA" on the top menu of **AAPS**, and then once you are on the BYODA page, in the top right, select the three dot menu and then the "plugin preferences" entry. You are taken directly to the preferences dialogue specifically for the BYODA plugin.
 
-這是一個到一般偏好設定對話框的“捷徑”，有關偏好設定的文檔可在[這裡](../Configuration/Preferences.md)查閱。
+This is a "short cut" to the general preferences dialogue, the documentation of the preferences is available [here](../Configuration/Preferences.md).
