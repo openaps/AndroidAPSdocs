@@ -1,132 +1,132 @@
-# DanaRS and Dana-i Pump
+# DanaRS 和 Dana-i 幫浦
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards or the newer Dana-i. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
+*這些說明適用於配置 2017 年之後的 DanaRS 或更新的 Dana-i 幫浦。 如果你擁有原始的 DanaR，請查看[DanaR 胰島素幫浦](./DanaR-Insulin-Pump)。*
 
-**New Dana RS firmware v3 can be used from AAPS version 2.7 onwards.**
+**Dana RS v3 韌體從 AAPS 版本 2.7 開始支援使用。**
 
-**New Dana-i can be used from AAPS version 3.0 onwards.**
+**Dana-i 從 AAPS 版本 3.0 開始支援使用。**
 
-* In DanaRS/i pump "BASAL A" is used by the app. Existing data gets overwritten.
+* DanaRS/i 幫浦的「BASAL A」被應用程式使用，現有的資料會被覆蓋。
 
 (DanaRS-Insulin-Pump-pairing-pump)=
 
-## Pairing pump
+## 幫浦配對
 
-* On AAPS homescreen click hamburger menu on the top left corner and go to Config Builder.
-* In pump section select 'Dana-i/RS'.
-* Click on gear wheel to get directly to the pump settings or return to homescreen.
+* 在 AAPS 主畫面上點擊左上角的選單，進入組態建置工具。
+* 在幫浦部分選擇「Dana-i/RS」。
+* 點擊齒輪圖示可以直接進入幫浦設置或返回主畫面。
     
-    ![AAPS config builder Dana-i/RS](../images/DanaRS_i_ConfigB.png)
+    ![AAPS 組態建置工具 Dana-i/RS](../images/DanaRS_i_ConfigB.png)
 
-* Go to 'DANA-i/RS' tab.
+* 進入「DANA-i/RS」標籤。
 
-* Select preferences menu by tapping the 3 dots in the top right. 
-* Select 'Dana-i/RS Preferences'.
-* Click on "Selected pump".
-* In the pairing window click on the entry for your pump.
+* 點擊右上角的三個點選擇選單。 
+* 選擇「Dana-i/RS 偏好設定」。
+* 點擊「選定的幫浦」。
+* 在配對視窗中點擊你的幫浦條目。
     
-    ![AAPS pair Dana-i/RS](../images/DanaRS_i_Pairing.png)
+    ![AAPS 配對 Dana-i/RS](../images/DanaRS_i_Pairing.png)
 
-* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+* **你必須在幫浦上確認配對！** 這跟其他藍牙配對的方式一樣（例如手機與汽車音響）。
     
-    ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+    ![Dana RS 配對確認](../images/DanaRS_Pairing.png)
 
-* Follow the pairing process based on the type and firmware of your pump:
+* 根據你的幫浦類型和韌體版本來執行配對過程：
     
-    * For DanaRS v1 select pump password in preferences and set your password.
-    * For DanaRS v3 you have to type 2 sequences of numbers and letters displayed on pump to AAPS pairing dialog.
-    * For Dana-i standard Android pairing dialog appear and you have to enter 6-digit number displayed on pump.
+    * DanaRS v1 中，在偏好設定裡選擇幫浦密碼並設置你的密碼。
+    * DanaRS v3 中，你需要在 AAPS 配對對話框中輸入幫浦上顯示的兩段數字和字母序列。
+    * Dana-i 中，會出現標準的 Android 配對對話框，你需要輸入幫浦上顯示的 6 位數字。
 
-* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* 選擇注射速度來更改預設的注射速度（12 秒每 1u、30 秒每 1u 或 60 秒每 1u）。
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide).
-* Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
-* Enable extended boluses on pump
+* 使用醫生選單將幫浦上的基礎速率步進設置為 0.01 U/h（參見幫浦使用指南）。
+* 使用醫生選單將幫浦上的注射步進設置為 0.05 U/h（參見幫浦使用指南）。
+* 啟用幫浦上的延時注射功能
 
 (DanaRS-Insulin-Pump-default-password)=
 
-### Default password
+### 預設密碼
 
-* For DanaRS with firmware v1 and v2 the default password is 1234.
-* For DanaRS with firmware v3 or Dana-i the default password is derived from the manufacturing date and calculates as MMDD where MM is the month and DD is the day, the pump was produced (i.e. '0124' representing month 01 and day 24).
+* 對於韌體版本 v1 和 v2 的 DanaRS，預設密碼為 1234。
+* 對於韌體版本 v3 或 Dana-i，預設密碼來自製造日期，計算方式為 MMDD，其中 MM 是月份，DD 是製造日期（例如「0124」代表 1 月 24 日）。
     
-    * From MAIN MENU select REVIEW then open SHIPPING INFORMATION from the sub menu
-    * Number 3 is manifacturing date. 
-    * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AAPS.
+    * 從主選單選擇「回顧」，然後從子選單打開「運送資訊」。
+    * 第三個項目是製造日期。 
+    * 對於 v3/i，該密碼僅用於鎖定幫浦選單。 這不會用於通訊，因此不需要在 AAPS 中輸入該密碼。
 
 (DanaRS-Insulin-Pump-change-password-on-pump)=
 
-## Change password on pump
+## 更改幫浦密碼
 
-* Press OK button on pump
-* In main menu select "OPTION" (move right by pressing arrow button several times)
+* 按下幫浦上的「OK」按鈕
+* 在主選單中選擇「選項」（按下箭頭按鈕多次向右移動）
     
-    ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
+    ![DanaRS 主選單](../images/DanaRSPW_01_MainMenu.png)
 
-* In options menu select "USER OPTION"
+* 在選項選單中選擇「用戶選項」
     
-    ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
+    ![DanaRS 選項選單](../images/DanaRSPW_02_OptionMenu.png)
 
-* Use arrow button to scroll down to "11. password"
+* 使用箭頭按鈕向下捲動至「11. 密碼」 密碼
     
-    ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
+    ![DanaRS 11. 密碼](../images/DanaRSPW_03_11PW.png)
 
-* Press OK to enter old password.
+* 按下「OK」進入舊密碼。
 
-* Enter **old password** (Default password see [above](DanaRS-Insulin-Pump-default-password)) and press OK
+* 輸入**舊密碼**（預設密碼請參閱[上方](DanaRS-Insulin-Pump-default-password)），然後按下「OK」。
     
-    ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
+    ![DanaRS 輸入舊密碼](../images/DanaRSPW_04_11PWenter.png)
 
-* If wrong password is entered here there will be no message indicating failure!
+* 如果此處輸入了錯誤的密碼，將不會顯示失敗訊息！
 
-* Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
+* 設置**新密碼**（使用 + 和 - 按鈕更改數字 / 使用箭頭按鈕向右移動）。
     
-    ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
+    ![DanaRS 新密碼](../images/DanaRSPW_05_PWnew.png)
 
-* Confirm with OK button.
+* 按下「OK」按鈕確認。
 
-* Press OK to save setting.
+* 按下 OK 以儲存設定。
     
-    ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
+    ![DanaRS 儲存新密碼](../images/DanaRSPW_06_PWnewSave.png)
 
-* Move down to "14. EXIT" and press OK to exit.
+* 向下移動至「14. 退出」，然後按下 OK 以退出。
     
-    ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
+    ![DanaRS 退出](../images/DanaRSPW_07_Exit.png)
 
 (DanaRS-Insulin-Pump-dana-rs-specific-errors)=
 
-## Dana RS specific errors
+## Dana RS 特定錯誤
 
-### Error during insulin delivery
+### 胰島素注射過程中的錯誤
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+如果在注射胰島素過程中 AAPS 與 Dana RS 之間的連線中斷（例如，你在 Dana RS 幫浦注射胰島素時走開手機），你將看到以下訊息並聽到警報聲。
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![胰島素注射警報](../images/DanaRS_Error_bolus.png)
 
-* In most cases this is just a communication issue and the correct amount of insulin is delivered.
-* Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
-* Delete error entry in [treatments tab](Screenshots-carb-correction) if you wish.
-* Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
+* 大多數情況下，這只是通訊問題，正確劑量的胰島素已經注射完畢。
+* 檢查幫浦歷史記錄（在幫浦或透過 Dana 標籤 > 幫浦歷史 > 注射記錄），確認正確的注射劑量。
+* 如有需要，你可以刪除[治療標籤](Screenshots-carb-correction)中的錯誤條目。
+* 實際注射量會在下次連線時讀取並記錄。 要強制此操作，請按下 Dana 標籤上的藍牙圖示，或等待下一次連線。
 
-## Special note when switching phone
+## 更換手機時的特別注意事項
 
-When switching to a new phone the following steps are necessary:
+更換新手機時，需要進行以下步驟：
 
-* [Export settings](ExportImportSettings-export-settings) on your old phone
-* Transfer settings from old to new phone
+* 在舊手機上[匯出設定](ExportImportSettings-export-settings)
+* 將設定從舊手機傳輸至新手機
 
 ### DanaRS v1
 
-* **Manually pair** Dana RS with the new phone
-* As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
-* Install AAPS on the new phone.
-* [Import settings](ExportImportSettings-import-settings) on your new phone
+* **手動配對** Dana RS 與新手機
+* 由於幫浦連線設定也會匯入，新手機上的 AAPS 已經「認識」幫浦，因此不會啟動藍牙掃描。 因此必須手動將新手機與幫浦配對。
+* 在新手機上安裝 AAPS。
+* 在新手機上[匯入設定](ExportImportSettings-import-settings)
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure like decribed [above](DanaRS-Insulin-Pump-pairing-pump).
-* Sometimes it may be necessary to clear pairing information in AAPS by long-click BT icon on Dana-i/RS tab.
+* 按照[上述說明](DanaRS-Insulin-Pump-pairing-pump)開始配對過程。
+* 有時可能需要透過長按 Dana-i/RS 標籤上的藍牙圖示來清除 AAPS 中的配對資訊。
 
-## Timezone traveling with Dana RS pump
+## Dana RS 幫浦跨時區旅行
 
-For information on traveling across time zones see section [Timezone traveling with pumps](Timezone-traveling-danarv2-danars).
+關於跨時區旅行的更多資訊，請參閱[幫浦跨時區旅行](Timezone-traveling-danarv2-danars)部分。
