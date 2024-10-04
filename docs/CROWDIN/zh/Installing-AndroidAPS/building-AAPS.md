@@ -10,7 +10,7 @@
 
 ## 構建AAPS所需的電腦和軟體規格
 
-- Please use the **[Android Studio version called at least Hedgehog or one more recent like Iguana, Jellyfish, and Koala](https://developer.android.com/studio/)** to build the apk. <u>**Do not use the Ladybug version.**</u> Older versions of Android Studio need to be updated first!
+- 請使用\*\*[最低 Hedgehog 或更新版本的 Android Studio，例如 Iguana、Jellyfish 和 Koala](https://developer.android.com/studio/)\*\* 來建置 apk。 <u>不要使用 Ladybug 版本。</u>請先更新舊版本的 Android Studio
 - [Windows 32位系統](troubleshooting_androidstudio-unable-to-start-daemon-process) 不受Android Studio支援。 請記住，**64位CPU和64位作業系統是必備條件。** 如果您的系統不符合此條件，您需要更換受影響的硬體或軟體，或更換整個系統。
 
 <table class="tg">
@@ -126,7 +126,7 @@ Android Studio 是一個在您的計算機上運行的程式。它允許您從�
 
 安裝Android Studio時最重要的一點是 **耐心！** 安裝和設置期間，Android Studio會下載大量內容，這需要時間。
 
-**Download a supported version of Android Studio (Hedgehog, Iguana, Jellyfish or Koala - not Ladybug)** from [**here**](https://developer.android.com/studio/archive), locate it in your browser downloads folder, and install it on your computer:
+從[**這裡**](https://developer.android.com/studio/archive)**下載支援的 Android Studio 版本（Hedgehog、Iguana、Jellyfish 或 Koala，不要使用 Ladybug）**，在瀏覽器的下載資料夾中找到並安裝到您的電腦上：
 
 ![Download Android Studio](../images/Building-the-App/01_InstallAS_Hedgehog.png)
 
