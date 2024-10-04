@@ -11,7 +11,7 @@ See [FAQ page](../Getting-Started/FAQ.md) for details.
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 ## Computer and software specifications for building AAPS
 
-* Please use the **[Android Studio version called at least Hedgehog (2023.1.1) or one more recent like Iguana, Jellyfish, and Koala](https://developer.android.com/studio/)** to build the apk. Older versions of Android Studio need to be updated first! 
+* Please use the **[Android Studio version called at least Hedgehog or one more recent like Iguana, Jellyfish, and Koala](https://developer.android.com/studio/)** to build the apk. <u>**Do not use the Ladybug version.**</u> Older versions of Android Studio need to be updated first! 
 * [Windows 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.  
 
 <table class="tg">
@@ -132,7 +132,7 @@ The following screenshots have been taken from Android Studio Version **Hedgehog
 
 One of the most important things when installing Android Studio is **be patient!** During installation and setup, Android Studio is downloading a lot of stuff which will take time.
 
-Download the latest version of Android Studio from [**here**](https://developer.android.com/studio#downloads), locate it in your browser downloads folder, and install it on your computer:
+**Download a supported version of Android Studio (Hedgehog, Iguana, Jellyfish or Koala - not Ladybug)** from [**here**](https://developer.android.com/studio/archive), locate it in your browser downloads folder, and install it on your computer:
 
 ![Download Android Studio](../images/Building-the-App/01_InstallAS_Hedgehog.png)
 
