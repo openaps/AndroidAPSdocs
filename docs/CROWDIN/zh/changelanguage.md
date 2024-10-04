@@ -1,7 +1,7 @@
-# 更改語言
+# Change language
 
 ```{note}
-語言選擇已移至左側選單的底部抽屜。 請點擊底部欄位，打開語言選擇選單。
+The language selection have been moved to the bottom drawer of the left menu. Please click on the bottom bar to open language selection menu.
 ```
 
-![打開語言選單](images/documentation_language_menu.png){w=350px align=center}
+![Open language menu](images/documentation_language_menu.png){w=350px align=center}
