@@ -1,89 +1,89 @@
 # Android Auto
 
-**AAPS** 能夠將您的當前狀態以訊息形式直接發送到車內的 Android Auto。
+**AAPS** is capable of sending you information about your current status as a message, directly into Android Auto in your car.
 
-```{admonition} 版本和最後更改訊息 :class: dropdown 最後編輯日期：2023/07/05
+```{admonition} version and last change information :class: dropdown date of last edit: 07/05/2023
 
-文檔使用的版本：
+versions used for documentation:
 
 * AAPS 3.2.0-dev-i
-* Android Auto：9.3.631434-release ```
+* Android Auto: 9.3.631434-release ```
 
-## 需求
+## Requirements
 
-**AAPS** 使用了 Android Auto 的一個功能，允許來自手機應用的訊息傳輸到車載音響顯示。
+**AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of Auto Audio in the car.
 
-這意味著：
+That means that:
 
-* 您必須配置**AAPS**以使用系統通知來進行警報和通知，並且
-* 由於**AAPS** 是非官方應用，需允許 Android Auto 使用「未知來源」。
+* You must configure **AAPS** to use system notifications for alerts and notifications and
+* As **AAPS** is an unofficial App, allow the use of "unknown sources" with Android Auto.
 
-![AAPS CGM 資料在 Android Auto 上的顯示](../images/android_auto_01.png)
+![AAPS CGM data on Android Auto](../images/android_auto_01.png)
 
-(Android-auto-AAPS-settings-for-android-auto)
+(Android-auto-AAPS-settings-for-android-auto)=
 
-## 在**AAPS**中使用系統通知進行警報和通知
+## Use system notifications in AAPS for alerts and notifications
 
-打開**AAPS**主畫面右上角的三點選單並選擇**偏好設定**
+Open 3-dot-menu on top right of **AAPS** home screen and select **Preferences**
 
-![使用系統通知來進行警報和通知](../images/android_auto_02.png)
+![Use system notifications for alerts and notifications](../images/android_auto_02.png)
 
-在**本地警報**中啟用**使用系統通知來進行警報和通知**
+In **Local Alerts** activate **Use system notifications for alerts and notifications**
 
-![使用系統通知來進行警報和通知](../images/android_auto_03.png)
+![Use system notifications for alerts and notifications](../images/android_auto_03.png)
 
-現在請確認在前往您的車輛之前，您能夠在手機上接收到來自**AAPS**的通知！
+Please check now that you get notifications from **AAPS** on the phone before you walk to your car!
 
-![使用系統通知來進行警報和通知](../images/android_auto_04.png)
+![Use system notifications for alerts and notifications](../images/android_auto_04.png)
 
-(Android-auto-AAPS-settings-in-android-auto-app-on-your-phone)
+(Android-auto-AAPS-settings-in-android-auto-app-on-your-phone)=
 
-## 允許 Android Auto 使用「未知來源」。
+## Allow the use of "unknown sources" with Android Auto.
 
-由於**AAPS**不是官方的 Android Auto 應用，因此需要在 Android Auto 中啟用「未知來源」的通知。 這是透過使用開發者模式來完成的，我們將在此為您展示。
+As **AAPS** is not an official Android Auto app, notifications have to be activated for "unknown sources" in Android Auto. This is done through the use of the developer mode which we will show you here.
 
-前往您的車輛並將手機連線到車載音響系統。
+Go to your car and connect your mobile with the cars audio system.
 
-您現在應該會看到類似於此螢幕的畫面。
+You should now see a screen similar to this screen.
 
-![啟用開發者模式](../images/android_auto_05.png)
+![Enable developer mode](../images/android_auto_05.png)
 
-點擊**設置**圖示以開始配置。
+Press on the **setting** icon to start the configuration.
 
-向下滾動到頁面底部並選擇**在手機上查看更多**。
+Scroll down to the end of the page and select **see more in the phone**.
 
-![啟用開發者模式](../images/android_auto_06.png)
+![Enable developer mode](../images/android_auto_06.png)
 
-現在我們將在手機上啟用開發者模式。
+Now on the mobile we will activate the developer mode.
 
-第一個畫面看起來是這樣的。 向下滾動到頁面底部。
+The first screen looks like this. Scroll down to the end of the page.
 
-![啟用開發者模式](../images/android_auto_07.png)
+![Enable developer mode](../images/android_auto_07.png)
 
-您會看到列出的 Android Auto 版本。 連續點擊 Android Auto 版本 10 次。 透過此隱藏的組合操作，您現在已啟用了開發者模式。
+There you see the version of Android Auto listed. Tap 10 times (in word ten) on the version of Android Auto. With this hidden combination you have now enabled developer mode.
 
-![啟用開發者模式](../images/android_auto_08.png)
+![Enable developer mode](../images/android_auto_08.png)
 
-在彈出的對話框「允許開發設置？」中確認您希望啟用開發者模式。
+Confirm that you want to enable the developer mode in the modal dialog "Allow development settings?".
 
-![啟用開發者模式](../images/android_auto_09.png)
+![Enable developer mode](../images/android_auto_09.png)
 
-在**開發者設置**中啟用「未知來源」。
+In the **developer settings** enable the "Unknown sources".
 
-![啟用開發者模式](../images/android_auto_10.png)
+![Enable developer mode](../images/android_auto_10.png)
 
-如果您願意，現在可以退出開發者模式。 點擊右上角的三點選單來執行此操作。
+Now you can quit developer mode if you want. Tap three dots menu on the top right to do so.
 
-## 在車上顯示通知
+## Show notifications in car
 
-在車內的 Android Auto 中，點擊右下角的**數字圖示**。
+Tap the **number icon** on the lower right side in Android Auto in your car.
 
-![數字圖示 - 車內 Android Auto](../images/android_auto_11.png)
+![number icon - Android Auto in car](../images/android_auto_11.png)
 
-您的 CGM 資料將顯示如下：
+Your CGM data will be shown as follows:
 
-![AAPS CGM 資料在 Android Auto 上的顯示](../images/android_auto_01.png)
+![AAPS CGM data on Android Auto](../images/android_auto_01.png)
 
-## 故障排除：
+## Troubleshooting:
 
-* 如果您看不到通知，請檢查是否已在 Android 中[允許 AAPS 顯示通知](Android-auto-AAPS-settings-for-android-auto)，以及 Android Auto 是否[擁有通知的存取權限](Android-auto-AAPS-settings-in-android-auto-app-on-your-phone)。
+* If you don't see the notification, check if you [allowed AAPS to show notifications](Android-auto-AAPS-settings-for-android-auto) in Android and if [Android Auto has access rights to notifications](Android-auto-AAPS-settings-in-android-auto-app-on-your-phone).
