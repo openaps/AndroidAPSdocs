@@ -1,6 +1,6 @@
-# COB calculation
+# COB 計算
 
-## How does AAPS calculate the COB value?
+## AAPS 如何計算 COB 值？
 
 When carbs are entered by the user as part of a meal entry or carb correction, **AAPS** will add this calculation to the current carbs on board (**COB**). **AAPS** then calculates the user’s carbs’ absorption based on observed deviations to the user’s **BG** values. The rate of absorption depends on the carb’s sensitivity factor (**’CSF**”). This is not a feature within the user’s **Profile**  but is calculated by **AAPS** according to **ISF/I:C** set up, and is determined by how many mg/dl 1g of carbs will raise the user’s **BG**.
 
@@ -33,24 +33,24 @@ Unabsorbed carbs are cut off after specified time:
 
 Absorption is calculated to have COB = 0 after specified time:
 
-![AAPS, WheitedAverage](../images/cob_aaps2_orange_II.png)
+![AAPS, WeightedAverage](../images/cob_aaps2_orange_II.png)
 
 If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from **BG** deviations, an orange dot appears on the **COB** graph.
 
 
-## Detection of wrong COB values
+## 偵測錯誤的 COB 值
 
 **AAPS**  will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
 
-### How does AAPS detect wrong COB values?
+### AAPS 如何偵測錯誤的 COB 值？
 
 Ordinarily __AAPS__ detects carb absorption through **BG** deviations. Incase the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
 
-![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
+![錯誤 COB 值的提示](../images/Calculator_SlowCarbAbsorption.png)
 
 In the screenshot above, 41% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
 
-### How to deal with this warning?
+### 如何處理這個警告？
 
 - Consider cancelling the treatment - press ‘Cancel’ instead of OK.
 - Calculate your upcoming meal again with bolus wizard leaving **COB** unticked.
@@ -58,7 +58,7 @@ In the screenshot above, 41% of time the carb absorption was calculated by the m
 - Be careful not to overdose or insulin stacking!
 
 
-### Why does the algorithm not detect COB correctly?
+### 為什麼演算法無法正確偵測 COB？
 
 This could be because:
 - Potentially the user overestimated carbs when entering them.
@@ -67,7 +67,7 @@ This could be because:
 - Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA).
 
 
-## Manual correction of carbs entered
+## 手動修正輸入的碳水化合物
 
 If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](Screenshots-carb-correction).
 
