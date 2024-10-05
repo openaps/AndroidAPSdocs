@@ -269,13 +269,14 @@
 Abhängig von Deinen Einstellungen im [Konfigurations-Generator](../Configuration/Config-Builder.md) kannst Du zwischen zwei Algorithmen wählen:
 
 - [Advanced meal assist (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - Entwicklungsstand des Algorithmus von 2017
-- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - Neuester Algorithmus für erfahrene Nutzende
+- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### OpenAPS AMA-Einstellungen
 
 - Erlaubt AAPS nach einem Essen schneller mit einer Erhöhung der Basalrate zu reagieren - WENN Du die Kohlenhydrate zuverlässig eingibst.
 - Mehr Details zu den Einstellungen und Autosens findest Du in den [OpenAPS Docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
+(Preferences-max-u-h-a-temp-basal-can-be-set-to)=
 #### Maximale IE/h, die als TBR gesetzt werden können
 
 - Diese Einstellung existiert als Sicherheitsgrenze, um zu verhindern, dass AAPS jemals eine gefährlich hohe Basalrate setzt.
@@ -322,7 +323,7 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 
 - Du musst [Ziel 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) gestartet haben, um SMB nutzen zu können.
 
-- Die ersten drei Einstellungen sind [oben beschrieben](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to).
 
 - Details zu den verschiedenen Optionen sind auf der Seite [OpenAPS-Funktionen](Open-APS-features-enable-smb) beschrieben.
 
@@ -420,9 +421,11 @@ Ursprüngliches Kommunikations-Protokoll, dass mit älteren Nightscout-Versionen
 
 Ein [mit AAPS 3.2 neu eingeführtes Kommunikations-Protokoll](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps). Sicherer und effizienter als das ursprüngliche Protokoll.
 
-:::{admonition} V3 Daten-Uploader
-:class: Warnung Nutzt Du den NSClientV3, dann müssen alle Uploader die API V3 verwenden. Da die meisten noch nicht kompatibel sind, heißt das, dass **Du AAPS erlauben musst alle Daten an Nightscout hochzuladen** (Glukosewerte, Behandlungen, ...). Deaktiviere alle anderen Uploader, solange sie nicht V3 konform sind.  
-:::
+```{admonition} V3 data uploaders
+:class: warning
+
+When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+```
 
 - Lege Deine *Nightscout URL* (z.B. [https://deineseite.deinprovider.com](https://yoursitename.yourplaform.dom)) fest.
   - **Stelle sicher, dass die URL NICHT mit /api/v1/ endet.**
@@ -433,9 +436,9 @@ Ein [mit AAPS 3.2 neu eingeführtes Kommunikations-Protokoll](../Installing-Andr
 
 ### Synchronisierung
 
-Die Art der Synchronisierung hängt davon ab, wie Du AAPS nutzen möchtest.
+Synchronization choices will depend on the way you will want to use AAPS.
 
-Du kannst festlegen welche Informationen [von und zu Nightscout hoch- bzw. heruntergeladen werden sollen](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
+You can select which data you want to [upload and download to or from Nightscout](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
 
 ### Alarm-Optionen
 
@@ -450,7 +453,7 @@ Du kannst festlegen welche Informationen [von und zu Nightscout hoch- bzw. herun
 
 ### Verbindungseinstellungen
 
-![NSClient Verbindungseinstellungen](../images/ConfBuild_ConnectionSettings.png)
+![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
 
 - Verbindungseinstellungen legen fest auf welchem Weg (z.B. WLAN oder Mobilfunknetz) eine Nightscout-Verbindung aufgebaut werden darf.
 - Beschränken den Nightscout-Upload auf WLAN-Verbindungen oder sogar auf bestimmte WLAN-SSIDs.
@@ -461,9 +464,9 @@ Du kannst festlegen welche Informationen [von und zu Nightscout hoch- bzw. herun
 (Preferences-advanced-settings-nsclient)=
 ### Erweiterte Einstellungen (Nightscout-Client)
 
-![NS-Client - erweiterte Einstellungen](../images/Pref2024_NSClientAdv.png)
+![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
 
-Die Optionen in den erweiterten Einstellungen sind selbsterklärend.
+Options in advanced settings are self-explanatory.
 
 ## SMS Kommunikator
 
@@ -474,7 +477,7 @@ Die Optionen in den erweiterten Einstellungen sind selbsterklärend.
 
 ## Automatisierung
 
-Wähle aus, welcher Standortservice verwendet werden soll:
+Select which location service shall be used:
 
 - Passiver Standort: AAPS nutzt nur die Standort, die von andere Apps angefordert werden.
 - Netzwerkstandort: Standort Ihres Wi-Fi
@@ -496,8 +499,7 @@ Wähle aus, welcher Standortservice verwendet werden soll:
 
 ![Wartungseinstellungen](../images/Pref2020_Maintenance.png)
 
-- Standardempfänger von Protokollen ist <logs@androidaps.org>.
-- Wenn Du *Exportierte Daten verschlüsseln* auswählst, werden diese mit Deinem [Master Password](Preferences-master-password) verschlüsselt. In diesem Fall muss das Master-Passwort jedes Mal eingegeben werden, wenn die Einstellungen ex- oder importiert werden.
+- Standard recipient of logs is <logs@aaps.app>.
 
 ## Open Humans
 

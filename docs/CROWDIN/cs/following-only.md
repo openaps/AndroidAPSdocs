@@ -1,22 +1,22 @@
-# Following AAPS (no interaction with the AAPS system)
+# Sledování AAPS (bez interakce s AAPS systémem)
 
-In addition to the range of possibilities available for remotely controlling _and_ following **AAPS** which are described at [remote control](docs/EN/remote-control.md), there are several additional apps and devices which the community has developed, to simply follow numbers (glucose levels and other information), without interacting with AAPS.
+Kromě řady možností dostupných pro dálkové ovládání _a_ sledování **AAPS**, které jsou popsány v sekci [dálkové ovládání](docs/EN/remote-control.md), existuje několik dalších aplikací a zařízení, které komunita vyvinula k pouhému sledování čísel (úrovně glykémie a další informace), bez interakce s AAPS.
 
-A good overview of the extensive options available for following **AAPS** is at [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#) webpage; if you expand the menu on the left-hand side:
+Dobrý přehled rozsáhlých možností, které jsou k dispozici pro sledování **AAPS**, najdete na stránce [Nightscout follower](https://nightscout.github.io/nightscout/downloaders/#); pokud rozkliknete nabídku na levé straně:
 
 ![image](./images/dfa981c1-5a15-4498-88d2-0fd1462d8242.png)
 
-The most common strategies used in combination with **AAPS** are explained in more detail below.
+Nejběžnější strategie používané ve spojení s **AAPS** jsou podrobněji vysvětleny níže.
 
-## 1) Smartphone apps
+## 1) Aplikace chytrých telefonů
 
-These are some of the main “follower” apps used by **AAPS** users. All of these apps are “free”:
+Toto jsou některé z hlavních "sledujících" aplikací používaných **AAPS** uživateli. Všechny tyto aplikace jsou "bezplatné":
 
 A)  Dexcom Follow (Android/iOs)
 
 B)  Nightguard (iOs)
 
-C)  Nightwatch (Android)
+C) Nightwatch (Android)
 
 D)  xDrip+ (Android)
 
@@ -29,29 +29,29 @@ G)  Spike (iOs)
 
 
 
-### A) Dexcom Follow (Android and iOS)
+### A) Dexcom Follow (Android/iOs)
 
 ![image](./images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
 
-●   Dexcom Follow is compatible with a wide range of handsets (both Android and iPhone). Dexcom Follow can be used even if you are not using the official Dexcom app to receive sensor data.
+●   Dexcom Follow je kompatibilní s širokou škálou telefonů (jak Android, tak iPhone). Dexcom Follow lze použít i v případě, že nepoužíváte oficiální aplikaci Dexcom pro příjem dat senzoru.
 
-●   Many caregivers are familiar with Dexcom Follow, preferring its clear interface over something more complicated.
+● Mnoho pečovatelů obeznámených s Dexcom Follow dává přednost jeho jasnému rozhraní před složitějšími řešeními.
 
-●   Dexcom Follow is very good for teachers/grandparents and people who know very little about diabetes and sugar levels. It has customisable alerts (BG level, what sound to play etc). Alarms can be completely switched off if needed, which is very useful if you have a sensor which is still settling down and creating multiple fake lows.
+●   Dexcom Sledujte je velmi dobrý pro učitele / prarodiče a lidi, kteří o diabetu a hladině cukru vědí velmi málo. Má přizpůsobitelné výstrahy (úroveň glykémie, jaký zvuk přehrává atd.). Alarmy mohou být v případě potřeby zcela vypnuty, což je velmi užitečné, pokud máte senzor, který se stále usazuje a vytváří několikanásobné falešné dolů.
 
-#### Setting up Dexcom Follow: how-to-guide
+#### Nastavení Dexcom Follow: průvodce
 
-If you use the unofficial Dexcom app BYODA for receiving sensor data, you may be able to send invites to followers from within the BYODA app. You should also be able to send invitations to Dexcom Follow from xDrip+ (settings - Cloud upload - Dexcom share server upload, see instructions here:
+Pokud používáte neoficiální aplikaci Dexcom BYODA pro příjem dat ze senzoru, pravděpodobně z ní můžete odeslat pozvánky následovníkům. Měli byste také být schopni odeslat pozvánky na Dexcom Follow z xDrip+ (nastavení - Cloud upload - Dexcom share server upload), viz návod zde:
 
 https://xdrip.readthedocs.io/en/latest/use/cloud/?h=#dexcom-share-server-upload
 
-You cannot send invite emails to Dexcom followers anymore from these third-party apps. In xDrip+ the invite request will just result in the message “invite not sent”.
+Z těchto aplikací třetích stran již nemůžete posílat pozvánky Dexcom uživatelům. V xDrip+ bude výsledkem žádosti o pozvání pouze zpráva „pozvánka nebyla odeslána“.
 
-You must install the official Dexcom app, send the invite, and then uninstall the official app.
+Musíte nainstalovat oficiální aplikaci Dexcom, odeslat pozvánku a poté ji můžete opět odinstalovat.
 
-The steps to do this are as follows:
+K tomu je třeba provést tyto kroky:
 
-1)  Install the official “Dexcom” app on _any_ smartphone (Android/iPhone), this can be the Follower phone, if it is more convenient. 2)  Log in with your Dexcom username and password, this is the same login details you would use for Dexcom Clarity, if you are already a current Dexcom/Clarity customer. If you don’t have a Dexcom login, there is the option to create a new login at this point.   
+1) Nainstalujte oficiální aplikaci "Dexcom" na _libovolný_ smartphone (Android/iPhone). Pokud je to pohodlnější, může to být telefon sledujícího. 2) Přihlaste se pomocí vašeho Dexcom uživatelského jména a hesla, toto jsou stejné přihlašovací údaje, které byste mohli použít pro Dexcom Clarity, pokud jste již aktuálním zákazníkem Dexcom/Clarity. If you don’t have a Dexcom login, there is the option to create a new login at this point.   
 3)  Swipe through the introduction menus. 4)  Add “no code” for the sensor code. 5)  Under Transmitter SN select “enter manually” and enter any valid transmitter code (use one of your expired transmitter codes, if you know one, so it doesn’t interfere with the running of your current transmitter, they follow a specific format of certain numbers and letters: “NLNNNL” and only use certain combinations, so it’s easiest to use one you already know is valid). 6)  Once the app is trying to find the transmitter and sensor, you will be able to invite followers: select the small three dots in the top left of the app, and add new follower. You can also use this if one of your followers has changed their handset and needs a fresh invite, here you can delete them from the follower list and resend a new invite email for them to use on their new handset. 7)  On the Follower phone, install Dexcom Follow by downloading it from the App Store (iPhone) or Play (Android). Set up the Dexcom Follow app, and you will be prompted to open your email to find the invite to be a Follower.    
 8)  You can now delete the official Dexcom G6 app.
 
@@ -125,30 +125,30 @@ If your AAPS data source is not xDrip+ but you can display BG data from the Comp
 
 ### E) xDrip4iOS/Shuggah (iOS)
 
+![image](./images/remote_control_and_following/xdrip4ios.jpg)
+
 xDripSwift was created from porting the original xDrip app to iOS and evolved to "xDrip for iOS" written **xDrip4iOS** .
 
 A version of **xDrip4iOS** is available in the Apple Store under the name of **Shuggah**.
 
-:::{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
+```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
+The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) is the main community support for xDrip4iOS and Shuggah. **xDrip4iOS** can connect to many different CGM systems and transmitters and display blood glucose values, charts and statistics as well as provide alarms. It can also upload to Nightscout or act as a [follower app for Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). However, it is difficult to actually _get_ the **xDrip4iOS** app for your phone. 
 
-
-The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) is the main community support for xDrip4iOS and Shuggah. **xDrip4iOS** can connect to many different CGM systems and transmitters and display blood glucose values, charts and statistics as well as provide alarms. It can also upload to Nightscout or act as a [follower app for Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). However, it is difficult to actually _get_ the **xDrip4iOS** app for your phone.
-
-"How can I get **xDrip4iOS** on my iPhone?" There are two options:
+"How can I get **xDrip4iOS** on my iPhone?"
+There are two options:
 
 1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by following the instructions below:
 
-
 https://xdrip4ios.readthedocs.io/en/latest/install/build/
 
-If you want, you can then become a "releaser" and share a Personal Testflight xDrip4iOS with up to 100 other people to help them: https://xdrip4ios.readthedocs.io/.../personal_testflight/
+If you want, you can then become a "releaser" and share a Personal Testflight xDrip4iOS with up to 100 other people to help them:
+https://xdrip4ios.readthedocs.io/.../personal_testflight/
 
-2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and monitor the posts… wait for somebody to offer an invitation to their Personal Testflight releases in the group. **You should not ask for an invitation to the app** (read the group rules).
+2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and monitor the posts… wait for somebody to offer an invitation to their Personal Testflight releases in the group. **You should not ask for an invitation to the app** (read the group rules). 
 
-An easier solution is therefore to download the **Shuggah** app.
-
-:::
+An easier solution is therefore to download the **Shuggah** app. 
+```
 
 #### [Shuggah](https://apps.apple.com/sa/app/shuggah/id1586789452)
 
@@ -259,7 +259,7 @@ SugarPixel is a device for secondary glucose display alert system for continuous
 
 
 ### C) PC (TeamViewer)
-Some users find a full remote access tool like [TeamViewer](https://www.teamviewer.com/) to be helpful for advanced remote troubleshooting.
+Někteří uživatelé používají pro plnohodnotný vzdálený přístup aplikace jako je [TeamViewer](https://www.teamviewer.com/), který je užitečný i pro pokročilé řešení problémů na dálku.
 
 
  

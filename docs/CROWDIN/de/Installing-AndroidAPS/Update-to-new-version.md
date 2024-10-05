@@ -31,7 +31,9 @@ Falls Du Dir nicht mehr sicher bist, wie dies genau funktioniert, findest Du die
 
 ## 2. Führe ein Update deiner lokalen Version durch
 
-:::{admonition} WARNUNG :class: warning Wenn Du von einer Version älter als 2.8.x kommend aktualisieren möchtest, befolge bitte die Hilfestellungen, um einen [Neuen Clone](../Installing-AndroidAPS/building-AAPS) zu erstellen, da diese Anleitung sonst nicht funktionieren wird! :::
+    {admonition} WARNING
+    :class: warning
+    If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../Installing-AndroidAPS/building-AAPS), as this guide will not work for you!
 
 * Öffne Dein bestehendes AAPS-Projekt mit Android Studio. Möglicherweise musst Du Dein Projekt wählen. Klicke (doppelt) auf das AAPS-Projekt.
     

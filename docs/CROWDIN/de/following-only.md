@@ -125,30 +125,30 @@ If your AAPS data source is not xDrip+ but you can display BG data from the Comp
 
 ### E) xDrip4iOS/Shuggah (iOS)
 
+![grafik](./images/remote_control_and_following/xdrip4ios.jpg)
+
 xDripSwift stammt von der ursprünglichen xDrip-App ab, wurde auf iOS portiert und entwickelte sich dann weiter zu "xDrip for iOS" (**xDrip4iOS** ).
 
 Eine Version von **xDrip4iOS** ist im Apple Store unter dem Namen **Shuggah** verfügbar.
 
-:::{admonition} Zusatzinformationen dazu, wie man die originale **xDrip4iOS** App
-finden kann :class: dropdown
+```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
+:class: dropdown
+The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) is the main community support for xDrip4iOS and Shuggah. **xDrip4iOS** can connect to many different CGM systems and transmitters and display blood glucose values, charts and statistics as well as provide alarms. It can also upload to Nightscout or act as a [follower app for Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). However, it is difficult to actually _get_ the **xDrip4iOS** app for your phone. 
 
+"How can I get **xDrip4iOS** on my iPhone?"
+There are two options:
 
-Die [xDrip4iOS Facebook-Gruppe](https://www.facebook.com/groups/853994615056838/announcements) ist die Haupt-Community, die xDrip4iOS und Shuggah supportet. **xDrip4iOS** kann sich mit vielen verschiedenen CGM-Systemen und -Transmittern verbinden und Glukosewerte, Diagramme und Statistiken anzeigen und Alarme auslösen. Es kann damit zu Nightscout hochgeladen werden und es kann als [Follower-App für Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/) eingesetzt werden. Die Schwierigkeit besteht allerdings darin, die **xDrip4iOS** App für Dein Smartphone _zu bekommen_.
-
-"Wie bekomme ich **xDrip4iOS** für mein iPhone?" Es gibt zwei Wege:
-
-1. Wenn Du einen Mac und ein Entwicklerkonto (99 EUR/USD pro Jahr) hast, kannst Du Dein eigenes xDrip4iOS erstellen, indem Du die Anleitung unten befolgst:
-
+1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by following the instructions below:
 
 https://xdrip4ios.readthedocs.io/en/latest/install/build/
 
-Wenn Du möchtest, kannst Du dann ein "Releaser" werden und Deinen eigenen Testflight xDrip4iOS mit bis zu 100 anderen Personen teilen, und diesen Personen damit helfen: https://xdrip4ios.readthedocs.io/.../personal_testflight/
+If you want, you can then become a "releaser" and share a Personal Testflight xDrip4iOS with up to 100 other people to help them:
+https://xdrip4ios.readthedocs.io/.../personal_testflight/
 
-2. Trete der [xDrip4iOS Facebook-Gruppe](https://www.facebook.com/groups/853994615056838/announcements) bei und verfolge die Beiträge... warte darauf, dass jemand in der Gruppe eine Einladung zu seinem persönlichen Testflight-Release anbietet. **Du solltest nicht um eine Einladung zur App bitten** (lies die Gruppenregeln).
+2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and monitor the posts… wait for somebody to offer an invitation to their Personal Testflight releases in the group. **You should not ask for an invitation to the app** (read the group rules). 
 
-Einfacher ist es deswegen, die **Shuggah** App herunterzuladen.
-
-:::
+An easier solution is therefore to download the **Shuggah** app. 
+```
 
 #### [Shuggah](https://apps.apple.com/sa/app/shuggah/id1586789452)
 

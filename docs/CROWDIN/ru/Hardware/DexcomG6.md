@@ -1,31 +1,32 @@
-# Dexcom G6
+# Dexcom G6 and ONE
 
 ## Сначала основное
 
 -   Следуйте общим рекомендациям по гигиене и установке сенсоров мониторинга CGM, изложенным [здесь](../Hardware/GeneralCGMRecommendation.md).
 
-## Общие рекомендации по использованию G6 с системами ИПЖ
+## General hints for looping with G6 and ONE
 
 - Новые передатчики называются Firefly (светлячок). Сенсоры не могут быть перезапущены без снятия передатчика, данные которого не могут быть сброшены, сенсоры также не генерируют необработанные данные.
 
 - Если вы перезапускаете сенсоры, будьте готовы калибровать и следить за вариацией.
 
-- "Предварительное погружение" (установка сенсора намного раньше его старта в приложении) G6 с заводской калибровкой приведет к отклонениям в данных. Если вы все же делаете "предварительное погружение", то для получения лучших результатов вам, вероятно, придется калибровать сенсор.
+- Pre-soaking of the G6/ONE with factory calibration is likely to give variation in results. Если вы все же делаете "предварительное погружение", то для получения лучших результатов вам, вероятно, придется калибровать сенсор.
 
 Подробнее в [статье](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) опубликованной Tim Street на сайте [www.diabettech.com](https://www.diabettech.com).
 
-## При использовании G6 с xdrip+
+## If using G6 or ONE with xDrip+
 
 - Если у вас трансмиттер Firefly, то упреждающие перезапуски **игнорируются**.
 - При использовании перезаряженного рансмиттера упреждающий перезапуск **не требуется**.
 -   Если вы используете старый трансмиттер с замененными батареями, самое безопасное - **отключить** [упреждающий перезапуск](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html). Хотя, в этом случае придется использовать G6 не в-[нативном режиме](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) (что нежелательно, так как отключает заводскую калибровку и не фильтрует зашумленные данные), в ином случае сенсор остановится через 10 дней.
--   Трансмиттер Dexcom G6 может одновременно подключаться к ресиверу Dexcom (или к помпе T:slim) и одному приложению на вашем телефоне.
+-   The Dexcom G6 and ONE transmitters can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
 -   При использовании xDrip+ в качестве считывателя сначала удалите приложение Dexcom. **Невозможно одновременно подключить к трансмиттеру приложения xDrip+ и Dexcom!**
--   Если вам нужен функционал оригинального приложения Clarity и оповещения от xDrip +, пользуйтесь [модифицированным приложением Dexcom ](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) с локальной передачей данных в xDrip +. Можно также использовать xDrip+ наряду с официальным приложением Dexcom, но при этом могут возникнуть задержки в считывании ГК.
--   Если это еще не сделано, скачайте [xDrip+](https://github.com/NightscoutFoundation/xDrip) и следуйте инструкциям на странице настроек [xDrip+](../Configuration/xdrip.md).
--   В [Конфигураторе, Источник ГК](../Configuration/Config-Builder.md#bg-source) выберите xDrip+.
+-   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip+.
+-   You can also use xDrip+ as a companion app of the official Dexcom app, but you might experience delays in BG readings.
+-   If not already set up, download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../Configuration/xdrip.md).
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-- Настройте параметры xDrip+ в соответствии со [ страницей настроек xDrip+](../Configuration/xdrip.md)
+- Adjust settings in xDrip+ according to [xDrip+ settings page](../Configuration/xdrip.md)
 
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## При использовании G6 с созданием собственного Dexcom приложения
@@ -54,9 +55,9 @@
 
 
 (DexcomG6-troubleshooting-g6)=
-## Устранение неполадок с G6
+## Troubleshooting G6 and ONE
 
-### Устранение неполадок, связанных с dexcom G6
+### Dexcom G6/ONE specific troubleshooting
 
 -   Прокрутите до **Устранения неполадок** [сюда](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 

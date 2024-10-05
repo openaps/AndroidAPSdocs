@@ -1,31 +1,32 @@
-# Dexcom G6
+# Dexcom G6 and ONE
 
 ## Grundsätzliches vorab
 
 -   Beachte die allgemeinen Empfehlungen zur CGM Hygiene und zum Setzen des Sensors, die Du [hier](../Hardware/GeneralCGMRecommendation.md) findest.
 
-## Allgemeine Hinweise zum Closed Loop mit dem Dexcom G6
+## General hints for looping with G6 and ONE
 
 - Die aktuellen Transmitter heißen 'Firefly'. Sensoren können nur durch das Entfernen des Transmitters neu gestartet werden. Der Transmitter selber kann nicht zurückgesetzt werden und er erzeugt auch keine eigenen Rohdaten.
 
 - Wenn Du einen Sensor neu startest, bereite Dich auf eine Kalibrierung vor und habe ein Auge auf mögliche Abweichungen.
 
-- Das sogenannte "Pre-soaking" (Sensor früher ohne Transmitter setzen, damit er sich an die Gewebsflüssigkeit "gewöhnt") mit Werkskalibrierung führt wahrscheinlich zu Abweichungen in den Glukosewerten. Falls Du mit "pre-soaking" arbeitest, wirst Du wahrscheinlich besser Ergebnisse erzielen, wenn Du den Sensor kalibrierst.
+- Pre-soaking of the G6/ONE with factory calibration is likely to give variation in results. Falls Du mit "pre-soaking" arbeitest, wirst Du wahrscheinlich besser Ergebnisse erzielen, wenn Du den Sensor kalibrierst.
 
 Mehr dazu findest Du in dem, von Tim Street auf der Seite [www.diabettech.com](https://www.diabettech.com) veröffentlichten, [Artikel](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/).
 
-## Dexcom G6 mit xDrip+
+## If using G6 or ONE with xDrip+
 
 - Nutzt Du einen aktuellen (Firefly)-Transmitter, wird "preemptive restarts" **ignoriert**.
 - Nutzt Du einen modifizierten Transmitter, werden 'preemptive restarts' **nicht benötigt**.
 -   Nutzt Du einen 'rebatteried' Transmitter, ist es am sichersten [preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) zu **deaktivieren**. In diesem Setup ist es jedoch notwendig den G6 im 'non-[native mode](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)' zu nutzen, da er sonst nach 10 Tagen endet. Der non-native mode ist allerdings grundsätzlich nicht zu empfehlen, da er die werkseitige Kalibrierung deaktiviert und verrauschte Werte nicht herausfiltert.
--   Der Dexcom G6-Transmitter kann gleichzeitig mit einem Dexcom-Empfänger (oder alternativ mit der t:slim-Pumpe) und einer App auf dem Handy verbunden werden.
+-   The Dexcom G6 and ONE transmitters can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
 -   Wenn Du xDrip+ zum Empfang der CGM-Daten verwendest, deinstalliere zuerst die Dexcom App. **Du kannst xDrip+ und die Dexcom App nicht gleichzeitig mit dem Transmitter verbinden!**
--   Falls Du Clarity benötigst und gleichzeitig die xDrip+ Alarme nutzen willst, verwende [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) mit dem lokalen Broadcast zu xDrip+. Du kannst xDrip+ als "Companion App" (Begleiter-App) zur offziellen Dexcom-App nutzen, solltest Dir aber bewusst sein, dass die Glukosewerte eventuell verzögert übermittelt werden.
--   Wenn es nicht bereits installiert ist, dann lade [xDrip+ ](https://github.com/NightscoutFoundation/xDrip) herunter und folge den Anweisungen in den [xDrip+ Einstellungen](../Configuration/xdrip.md).
--   Wähle xDrip+ in der [KONFIGURATION, BZ-Quelle](../Configuration/Config-Builder.md#bg-source) aus.
+-   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip+.
+-   You can also use xDrip+ as a companion app of the official Dexcom app, but you might experience delays in BG readings.
+-   If not already set up, download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../Configuration/xdrip.md).
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-- Passe die Einstellungen xDrip+ entsprechend den Erläuterungen auf der Seite[xDrip+ Einstellungen](../Configuration/xdrip.md) an
+- Adjust settings in xDrip+ according to [xDrip+ settings page](../Configuration/xdrip.md)
 
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## G6 mit Build Your Own Dexcom App
@@ -54,9 +55,9 @@ Mehr dazu findest Du in dem, von Tim Street auf der Seite [www.diabettech.com](h
 
 
 (DexcomG6-troubleshooting-g6)=
-## Problembehandlung G6
+## Troubleshooting G6 and ONE
 
-### Dexcom G6-spezifische Problembehandlung
+### Dexcom G6/ONE specific troubleshooting
 
 -   Scrolle herunter bis zur **Problembehandlung** [hier](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 

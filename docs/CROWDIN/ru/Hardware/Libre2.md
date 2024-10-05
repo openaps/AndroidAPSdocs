@@ -26,21 +26,23 @@
 
 ## 2. Использовать прямое подключение xDrip+
 
-:::{admonition}{предостережение} только для Libre 2 ЕС :класс: предупреждение xDrip+ не поддерживает прямое подключение к Libre 2 США и Австралии.  
-:::
+```{admonition} Libre 2 EU only
+:class: warning
+xDrip+ doesn't support direct connection to Libre 2 US and AUS.  
+```
 
 - Следуйте [этим инструкциям](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) для настройки xDrip+, но обязательно загрузите [эту новую версию OOP 2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view), поскольку та, что приведена в документе, устарела.
 - Следуйте инструкциям по установке на странице настроек [xDrip+](../Configuration/xdrip.md).
 
--   В [Конфигураторе, Источник ГК](../Configuration/Config-Builder.md#bg-source) выберите xDrip+.
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 ## 3. Использовать Diabox
 
-- Установите [Diabox](https://t.me/s/DiaboxApp). В Настройках, Интеграция, включите "Делиться данными с другими приложениями".
+- Install [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). В Настройках, Интеграция, включите "Делиться данными с другими приложениями".
 
 ![Diabox](../images/Diabox.png)
 
-- В [Конфигураторе, Источник ГК](../Configuration/Config-Builder.md#bg-source) выберите xDrip+.
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 ## 4. Использовать Juggluco
 
@@ -48,19 +50,23 @@
 - Следуйте инструкциям [здесь](https://www.juggluco.nl/Juggluco/index.html)
 - В Настройках включите трансляцию в xDrip+ (посылает данные не в xDrip+, а в AAPS).
 
-![Трансляция Juggluco в AAPS](../images/Juggluco_AAPS.png)
+![Juggluco broadcast to AAPS](../images/Juggluco_AAPS.png)
 
-- В [Конфигураторе, Источник ГК](../Configuration/Config-Builder.md#bg-source) выберите xDrip+.
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-:::{admonition}{предостерижение} Использовать с xDrip+ :class: :класс: примечание Вы можете настроить Juggluco на трансляцию в xDrip + при помощи модифицированного приложения Libre (следует отключить трансляцию xDrip +), чтобы выполнить калибровку (смотрите здесь) и избежать ежеминутной отправки данных в AAPS.  
+```{admonition} Use with xDrip+
+:class: note
+You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
 ![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  
-Затем в модифицированном приложении Libre 2 следует установить источником данных xDrip+, чтобы получать данные из Juggluco.  
-:::
+You will then need to set xDrip+ data source to Libre 2 Patched App to receive data from Juggluco.  
+```
 
 ## 5. Использовать модифицированное приложение LibreLink с xDrip+
 
-:::{admonition} предостережение только Libre 2 для EU :class: предупреждение Модифицированное приложение имеет старую версию (22/4/2019) и может быть несовместимо с последними версиями Android.  
-:::
+```{admonition} Libre 2 EU only
+:class: warning
+The patched app is an old version (22/4/2019) and might not be compatible with recent Android releases.  
+```
 
 ### Шаг 1: Создаем модифицированное приложение
 

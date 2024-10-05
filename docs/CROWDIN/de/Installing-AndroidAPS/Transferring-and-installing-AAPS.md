@@ -56,10 +56,10 @@ Did you remeber to disallow the installation from Google Drive?
 
 ## Option 2. USB-Kabel zum Übertragen von Dateien verwenden
 
-Der zweite Weg, um die AAPS-APK-Datei zu übertragen, ein [USB-Kabel](https://support.google.com/android/answer/9064445?hl=de) zu nutzen.
+Der zweite Weg, um die AAPS-APK-Datei zu übertragen, ist ein [USB-Kabel](https://support.google.com/android/answer/9064445?hl=de) zu nutzen.
 
 Übertrage die Datei von Deinem Computer in den "Downloads"-Ordner auf dem Smartphone.
 
 Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. Wie das geht kannst Du im Internet nachlesen (_z.B._ [hier](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) oder [hier](https://www.androidcentral.com/unknown-sources)).
 
-Sobald Du die Datei per Drag & Drop übertragen hast, kannst Du sie installieren. Öffne dazu den "Downloads"-Ordner auf dem Smartphone und tippe auf die AAPS-apk. Wählen dann "installieren" aus. Du kannst dann mit dem nächsten Schritt fortfahren, [Einrichtungsassistent](../Installing-AndroidAPS/setup-wizard.md), bei dem Du **AAPS**-App und den Loop auf Deinem Smartphone einrichtest.
+Sobald Du die Datei per Drag & Drop übertragen hast, kannst Du sie installieren. Öffne dazu den "Downloads"-Ordner auf dem Smartphone und tippe auf die AAPS-apk. Wählen dann "installieren" aus. Du kannst dann mit dem nächsten Schritt fortfahren, siehe [Einrichtungsassistent](../Installing-AndroidAPS/setup-wizard.md), bei dem Du die **AAPS**-App und den Loop auf Deinem Smartphone einrichtest.

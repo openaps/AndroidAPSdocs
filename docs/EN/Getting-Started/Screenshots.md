@@ -455,7 +455,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 1. Check and remember actual COB and IOB on homescreen.
 2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry with the faulty carb amount.
+3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen.  Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
 4. Make sure carbs are removed successfully by checking COB on homescreen again.
 5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
 

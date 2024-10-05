@@ -1,27 +1,28 @@
-# Dexcom G6
+# Dexcom G6 and ONE
 
 ## Πρώτα τα βασικά
 
 -   Follow general CGM hygiene and setting sensor recommendation [here](../Hardware/GeneralCGMRecommendation.md).
 
-## Γενικές συμβουλές για το κύκλωμα με το G6
+## General hints for looping with G6 and ONE
 
 - Recent transmitters are called Firefly. Sensors cannot be restarted without removing the transmitter, which itself cannot be reset, they also do not generate raw data.
 
 - If you are restarting sensors, ensure you are ready to calibrate and keep an eye on variation.
 
-- Pre-soaking of the G6 with factory calibration is likely to give variation in results. Αν κάνετε προ-εμβάπτιση, τότε για να έχετε τα καλύτερα αποτελέσματα, πιθανόν να χρειαστεί να βαθμονομήσετε τον αισθητήρα.
+- Pre-soaking of the G6/ONE with factory calibration is likely to give variation in results. Αν κάνετε προ-εμβάπτιση, τότε για να έχετε τα καλύτερα αποτελέσματα, πιθανόν να χρειαστεί να βαθμονομήσετε τον αισθητήρα.
 
 Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
 
-## If using G6 with xDrip+
+## If using G6 or ONE with xDrip+
 
 - If you are using a recent (Firefly) transmitter, preemptive restarts are **ignored**.
 - If you are using a modded transmitter you do **not need** to use preemptive restarts.
 -   If you are using an old rebatteried transmitter, the safest thing to do is **disable** [preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html). Though, in this case you will have to use the G6 in non-[native mode](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) (which is unadvisable as it disables factory calibration and doesn't filter noisy readings), or else the sensor will stop after 10 days.
--   The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
+-   The Dexcom G6 and ONE transmitters can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
 -   When using xDrip+ as receiver uninstall the Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
--   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+. You can also use xDrip+ as a companion app of the official Dexcom app, but you might experience delays in BG readings.
+-   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip+.
+-   You can also use xDrip+ as a companion app of the official Dexcom app, but you might experience delays in BG readings.
 -   If not already set up, download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../Configuration/xdrip.md).
 -   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
@@ -54,9 +55,9 @@ Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-lo
 
 
 (DexcomG6-troubleshooting-g6)=
-## Αντιμετώπιση προβλημάτων G6
+## Troubleshooting G6 and ONE
 
-### Dexcom G6 αντιμετώπιση συγκεκριμένων προβλημάτων
+### Dexcom G6/ONE specific troubleshooting
 
 -   Scroll down to **Troubleshooting** [here](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
 

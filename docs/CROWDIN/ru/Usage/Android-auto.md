@@ -2,12 +2,12 @@
 
 ** AAPS ** может отправлять информацию о ваших текущих данных в виде сообщения непосредственно в Android Auto в автомобиле.
 
-:::{admonition} версия информация о изменениях :class: выпадающий дата редактирования: 07/05/2023
+```{admonition} version and last change information :class: dropdown date of last edit: 07/05/2023
 
 версии, используемые для документации:
 
 * AAPS 3.2.0-dev-i
-* Android Auto: 9.3.631434-release :::
+* Android Auto: 9.3.631434-release ```
 
 ## Что потребуется:
 

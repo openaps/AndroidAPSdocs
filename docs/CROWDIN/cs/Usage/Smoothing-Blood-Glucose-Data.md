@@ -10,11 +10,11 @@ Additionally, as of **AAPS** version 3.2, **AAPS** offers the option to smooth t
 
 ![Smoothing](../images/ConfBuild_Smoothing.png)
 
-## Exponential smoothing
+## Exponenciální vyhlazování
 
 This is the recommended option to start with, as it is most aggressive in resolving noise and rewrites the most recent value.
 
-## Average smoothing
+## Průměrovací vyhlazování
 
 This option works similar to back smoothing that was previously implemented on certain CGM platforms. It is more reactive to recent changes in BG value and therefore more prone to responding incorrectly to noisy CGM data.
 
@@ -24,7 +24,7 @@ Use this option only if your CGM data is being properly smoothed by your collect
 
 ## Suggestions to use smoothing
 
-|                           | Exponential |  Average |     None    |
+|                           | Exponential |  Průměr  |    Žádný    |
 | ------------------------- | :---------: | :------: | :---------: |
 | G5 and G6                 |             | If noisy | Recommended |
 | G7                        | Recommended |          |             |

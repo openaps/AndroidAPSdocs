@@ -20,7 +20,7 @@ In 2022/23 a first medical study was conducted and published that showed patient
 
 > 16 adolescents with T1D (HbA1c range 43-75), and duration of diabetes of 9-15 years underwent three distinct 3-day periods of camp living, while using a modified and locked version of AAPS 3.1.0.3 **Results:** The glycemia was controlled by the system 95% time of the study and the proportion of time below 3.9 mmol/L did not exceed 1% over the whole study period (0.72%). The HCL scenario reached significantly higher percentage of time below 3 mmol/L (HCL 1.05% vs. MA 0.0% vs. FCL 0.0%; P = 0.05) compared to other scenarios. **No difference was observed among the scenarios in the percentage of time between 3.9 and 10 mmol/L** (HCL 83.3% vs. MA 79.85% vs. **FCL 81.03%**, P = 0.58) corresponding to mean glycemia (HCL 6.65 mmol/L vs. MA 7.34 mmol/L vs. FCL 7.05 mmol/L, P = 0.28). No difference was observed in the mean daily dose of insulin or in the daily carbohydrate intake. No serious adverse event occurred during the study period. **Conclusions:** Our pilot study showed that **FCL might be a realistic mode of treatment** for people with T1D.
 
-Source:
+Zdroj:
 
 1) ![NationalLibraryOfMedicine](../images/Logo_of_U.S._National_Library_of_Medicine.png) ![PubMed](../images/US-NLM-PubMed-Logo.png) National Library of Medicine, PubMed [First Use of Open-Source Automated Insulin Delivery AndroidAPS in Full Closed-Loop Scenario: Pancreas4ALL Randomized Pilot Study](https://pubmed.ncbi.nlm.nih.gov/36826996/);
 
@@ -58,7 +58,7 @@ If the user does not bolus for meals, clearly a very fast insulin is needed so, 
 
 A modelling study (details see LINK FullLoop V2/March2023; there section 2.2) can show in quantitative terms that *faster insulins*
 
-Source:
+Zdroj:
 
 1) ![IEEEControlSystemsMagazine](../images/IEEE_Control_Systems_Society_Logo_RGB.jpg) ![ResearchGate](../images/researchgate-logo-white.svg) IEEE Control Systems Magazine, ResearchGate [The Artificial Pancreas and Meal Control: An Overview of Postprandial Glucose Regulation in Type 1 Diabetes](https://www.researchgate.net/publication/322866519_The_Artificial_Pancreas_and_Meal_Control_An_Overview_of_Postprandial_Glucose_Regulation_in_Type_1_Diabetes);
 
@@ -142,13 +142,13 @@ Check the SMB tab from time to time to see whether your SMBs are allowed to be l
 
 If not, your tuning efforts will sometimes come to nothing!
 
-:::{admonition} Boosting ISF can become dangerous
+```{admonition} Boosting ISF can become dangerous
 :class: danger
 
 Carefully observe/analyze the SMB sizes that, briefly after meal start, result from your settings. Tune in steps, and do not vary more than 1 or 2 parameters at a time.
 
 Setting must work good-enough for your (!) variety of meals.
-:::
+```
 
 ## Meal detection/your Automations for boosting
 

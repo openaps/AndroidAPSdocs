@@ -151,7 +151,7 @@ vi) On the preferences screen select “Authenticator setup”
 
 ●   Test the one-time passcode from the authenticator app on the caregiver phone followed by your PIN:
 
-Example:
+לדוגמה:
 
 The token from the authenticator app is 457051
 
@@ -643,24 +643,25 @@ As mentioned in the video, once complete, switch ADB debugging off on the watch,
 
 Alternatively, you can:
 
-:::{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
+```{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
 :class: dropdown
 
-1)   Download _Easy Fire Tools_ from playstore onto phone
+1)   Download _Easy Fire Tools_ from playstore onto phone 
 
 ![image](./images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
 
-2)  Make yourself a developer in the watch (once set up and connected to phone):
+2)  Make yourself a developer in the watch (once set up and connected to phone): 
 
-Go to settings >about watch (bottom option) >- software info > software version.
+Go to settings >about watch (bottom option) >- software info > software version. 
 
-Rapidly tap on “ software version” until a notification appears that the watch is now in "developer mode". Return to the top of settings menu, scroll to the bottom and see “developer options” below “about watch”.
+Rapidly tap on “ software version” until a notification appears that the watch is now in "developer mode". Return to the top of settings menu, scroll to the bottom
+ and see “developer options” below “about watch”. 
 
-In “developer options”, turn on “ADB debugging” and “wireless debugging”. The latter option then reveals the IP address of the watch, the final two digits of which changes each time the watch is paired with a new phone. It will be something like: **167.177.0.20.** 5555 (ignore the last 4 digits). Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS.
+In “developer options”, turn on “ADB debugging” and “wireless debugging”. The latter option then reveals the IP address of the watch, the final two digits of which changes each time the watch is paired with a new phone. It will be something like: **167.177.0.20.** 5555 (ignore the last 4 digits). Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS.  
 
 ![24-10-23, watch ADB debug pic](./images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
 
-STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). Then click the plug socket icon on the top right.
+STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). Then click the plug socket icon on the top right.  
 
 ![image](./images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
 
@@ -670,7 +671,7 @@ STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the
 
 STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  Wear.apk onto the smartwatch using Easy Fire tools
 
-Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the smartwatch:
+Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the smartwatch: 
 
 ![image](./images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
 
@@ -680,7 +681,7 @@ Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the 
 
 ![image](./images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
 
-:::
+```
 
 
 ##### Setting up the connection between the watch and the phone from **AAPS**

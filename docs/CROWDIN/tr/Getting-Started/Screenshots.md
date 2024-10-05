@@ -495,7 +495,7 @@ Tedavi sekmesi, hatalı karbonhidrat girişlerini düzeltmek için kullanılabil
 
 1. Ana ekranda güncel AKRB ve AİNS'i kontrol edin ve unutmayın.
 2. Tedavi sekmesinde pompaya bağlı olarak karbonhidratlar insülinle birlikte tek satırda veya ayrı bir giriş olarak (örn. Dana RS ile) gösterilebilir.
-3. Hatalı karbonhidrat girişini kaldırın.
+3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
 4. Ana ekranda AKRB'ı tekrar kontrol ederek karbonhidratların başarıyla kaldırıldığından emin olun.
 5. Tedavi sekmesinde karbonhidrat ve insülin için yalnızca bir satır varsa, AİNS için de aynısını yapın.
    

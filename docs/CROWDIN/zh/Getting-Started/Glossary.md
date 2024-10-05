@@ -2,13 +2,13 @@
 
 **AAPS** = AndroidAPS 是 Android 應用程式的名稱。
 
-**AAPSClient**（或 **NSClient**）= 一個遠端控制功能，可供照護者透過手機來追蹤用戶的 **AAPS**，藉由連接到用戶的 **Nightscout** 網站來實現。 進一步資訊 → Wiki - 「NS Client」。 在 **AAPS** 中的目標學習程式提供逐步指導。 進一步資訊 → Wiki - 「objectives」。
+**AAPSClient**（或 **NSClient**）= 一個遠端控制功能，可供照護者透過手機來追蹤用戶的 **AAPS**，藉由連線到用戶的 **Nightscout** 網站來實現。 進一步資訊 → Wiki - 「NS Client」。 在 **AAPS** 中的目標學習程式提供逐步指導。 進一步資訊 → Wiki - 「objectives」。
 
 **APS** = 人工胰臟系統。
 
 **AMA** = 進階餐食輔助。 一種演算法，允許 **AAPS** 在餐後注射胰島素後更積極地增加用戶的基礎胰島素。 進一步資訊 → Wiki - 「AMA」。
 
-**Android Auto** = 一個系統，用於在車輛顯示螢幕中託管 Android 智慧手機的某些功能，包括 **AAPS**。 進一步資訊 → Wiki - 「android auto」。
+**Android Auto** = 一個系統，用於在車輛顯示螢幕中託管 Android 智慧型手機的某些功能，包括 **AAPS**。 進一步資訊 → Wiki - 「android auto」。
 
 **APK** = Android 應用程式包。是一個軟體安裝文件。 一個軟體安裝檔案。 進一步資訊 → Wiki - 「Building APK」。
 
@@ -22,7 +22,7 @@
 
 **BGI** = 血糖影響。 根據胰島素活動，**血糖** 理應上升或下降的程度。
 
-**BG source** = 用戶的血糖數值來源，從 **CGM** 或 **FGM** 通過系統整合軟體（如 **BYODA**、**xDrip+** 等）獲取。 進一步資訊 → Wiki - 「BG source」。
+**BG source** = 用戶的血糖數值來源，從 **CGM** 或 **FGM** 透過系統整合軟體（如 **BYODA**、**xDrip+** 等）獲取。 進一步資訊 → Wiki - 「BG source」。
 
 **Bridge** = 一種將 **FGM** 轉換為 **CGM** 的附加設備。
 
@@ -44,7 +44,7 @@
 
 **DIA** = 胰島素作用時間。 進一步資訊 → Wiki - 「insulin types」及另見 → DIABETTECH - 「DIA」。
 
-**DST** = 日光節約時間 Wiki DST。
+**DST** = 夏令時間 Wiki DST。
 
 **eCarbs** = 延長碳水化合物。 碳水化合物分散在數小時內以適應蛋白質，並允許 **AAPS** 提供延長的胰島素注射。 進一步資訊 → Wiki - 「eCarbs」、「eCarbs use」。
 
@@ -58,13 +58,13 @@
 
 **IC (or I:C)** = 胰島素與碳水化合物比率。 （即一單位胰島素能對應多少碳水化合物？）。
 
-**IOB** = 活性胰島素。 在用戶體內仍然活躍的胰島素。
+**IOB** = 活性胰島素。 在用戶體內仍然啟動的胰島素。
 
 **ISF** = 胰島素敏感性因子。 注射一單位胰島素，預計血糖會下降的幅度。
 
 **LGS** = 低血糖暫停功能。 `**AAPS**` 會在 `**血糖**` 下降時減少基礎胰島素，若 `**血糖**` 上升，則只有在 `**IOB**` 為負值（來自之前的 `**LGS**`）時才會增加基礎胰島素，否則基礎速率將保持與用戶選擇的 `**Profile**` 相同。 用戶在處理低血糖後可能會暫時經歷血糖飆升，但無法在反彈期間增加基礎胰島素。 → 另見objective 6。
 
-**LineageOS** = 用於智慧手機等設備的開放原始碼作業系統。 （當使用 Accu-Chek Combo 時，請參見 Wiki - Combo pump）。
+**LineageOS** = 用於智慧型手機等設備的開放原始碼作業系統。 （當使用 Accu-Chek Combo 時，請參閱 Wiki - Combo pump）。
 
 **Log files** = **AAPS** 記錄用戶操作的日誌文件（有助於故障排除和調試）。 進一步資訊 → Wiki - 「log files」。
 
@@ -72,17 +72,17 @@
 
 **min_5m_carbimpact** = 一種安全功能，用於計算當無法根據用戶血液反應確定碳水化合物吸收時，預設的碳水化合物衰減。 這是一項安全措施。 進一步資訊 → Wiki - 「config builder」。
 
-**Nightscout** = 一個開放原始碼的項目，用於存取和報告 **CGM** 資料。 這是用戶 `**AAPS**` 資料的中央資料中心，並可以生成報告以查看用戶的歷史 `**Nightscout**` 資料（預計 HbA1c、範圍內的時間）或通過百分比圖表等搜尋資料模式。
+**Nightscout** = 一個開放原始碼的項目，用於存取和報告 **CGM** 資料。 這是用戶 `**AAPS**` 資料的中央資料中心，並可以生成報告以查看用戶的歷史 `**Nightscout**` 資料（預計 HbA1c、範圍內的時間）或透過百分比圖表等搜尋資料模式。
 
 **Nightscout** → 另見 **Nightscout Reporter**。 這對於追蹤孩子糖尿病管理的家長特別有用。
 
-**Nightscout Reporter Tool** = 一個工具，用於從 Nightscout 網頁應用程式資料生成 PDF 報告。 請參見「Nightscout Reporter」、「NS Reporter」@ Facebook。
+**Nightscout Reporter Tool** = 一個工具，用於從 Nightscout 網頁應用程式資料生成 PDF 報告。 請參閱「Nightscout Reporter」、「NS Reporter」@ Facebook。
 
-**NSClient**（或 **‘AAPSClient’**）= 請參見 **AAPSClient**。
+**NSClient**（或 **‘AAPSClient’**）= 請參閱 **AAPSClient**。
 
 **OpenAPS** = 開放式人工胰臟系統。
 
-**AAPS** 運行在小型電腦（例如 Raspberry Pi）上，並使用了一些 OpenAPS 功能。OpenAPS 文檔。
+**AAPS** 運作在小型電腦（例如 Raspberry Pi）上，並使用了一些 OpenAPS 功能。OpenAPS 文檔。
 
 **Open Loop system** = **AAPS** 的一項功能，將建議調整，必須由用戶在 **AAPS** 上手動執行。 進一步資訊 → Wiki - 「config builder」。
 
@@ -90,11 +90,11 @@
 
 `**Peak time**` = 胰島素發揮最大效果的時間。 進一步資訊 → Wiki - 「config builder」。
 
-`**PH**` = 胰島素幫浦歷史記錄。 **PH** = 胰島素幫浦歷史記錄。這可以在 **AAPS** 的治療措施選單中查看，位於 **AAPS</0> 主螢幕右側的三點選單中。截圖。</p> 
+`**PH**` = 胰島素幫浦歷史記錄。 **PH** = 胰島素幫浦歷史記錄。這可以在 **AAPS** 的治療選單中查看，位於 **AAPS</0> 主螢幕右側的三點選單中。截圖。</p> 
 
 **Predictions** = 基於不同計算方法對血糖的趨勢預測。 進一步資訊 → Wiki - 「prediction lines」。
 
-**Profile** = 使用者的基本治療設定（基礎率、**DIA**、**IC**、**ISF**、**BG** 目標） AAPSv3 僅支援在 **AAPS** 中建立的本地個人設置，但 **Nightscout** 的個人設置可以同步到 **AAPS**。 進一步資訊 → Wiki- 「profile」。
+**Profile** = 使用者的基本治療設定（基礎率、**DIA**、**IC**、**ISF**、**BG** 目標） AAPSv3 僅支援在 **AAPS** 中建立的本地設定檔，但 **Nightscout** 的設定檔可以同步到 **AAPS**。 進一步資訊 → Wiki- 「profile」。
 
 **Profile switch** = （臨時）將用戶的 **Profile** 切換到 **AAPS** 中儲存的另一個 **Profile**。
 
@@ -102,7 +102,7 @@
 
 **RES** = 在 **AAPS** 主螢幕上的狀態指示燈，表示胰島素庫更換逾期。**偏好設定**, 截圖 → 另見 **BAT** / **CAN** / <0>SEN</0>。
 
-**RileyLink** = 一種開放原始碼硬體設備，用於將藍牙低功耗（BLE）橋接到 916MHz（用於舊的美敦力幫浦）或 433MHz（用於 Omnipod Eros 幫浦）無線通信。RileyLink。
+**RileyLink** = 一種開放原始碼硬體設備，用於將藍牙低功耗（BLE）橋接到 916MHz（用於舊的美敦力幫浦）或 433MHz（用於 Omnipod Eros 幫浦）無線通訊。RileyLink。
 
 **SAGE** = 傳感器時間。 這會顯示在 **AAPS** 的主畫面以及 **Nightscout** 中，如果在 Actions 標籤/選單中輸入了資訊 → 另見 **Nightscout**。
 

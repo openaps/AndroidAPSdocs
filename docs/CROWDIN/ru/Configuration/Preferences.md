@@ -17,7 +17,7 @@
   ![Preferences filter](../images/Pref2021_Filter.png)
 
 ```{contents}
-:backlinks: запись
+:backlinks: entry
 :depth: 2
 ```
 
@@ -269,13 +269,14 @@
 В зависимости от настроек в [конфигураторе](../Configuration/Config-Builder.md) можно выбрать между двумя алгоритмами:
 
 - [Улучшенный ассистент приема пищи (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - состояние алгоритма на 2017 год
-- [Супер микроболюс (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - самый последний алгоритм для опытных пользователей
+- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### Настройки OpenAPS AMA
 
 - Позволяет системе быстрее установить высокое временное целевое значение после болюса на еду, ЕСЛИ вы правильно ввели углеводы.
 - Более подробную информацию о настройках и Autosens можно найти в документации [OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
+(Preferences-max-u-h-a-temp-basal-can-be-set-to)=
 #### Максимальное значение ед./ч для скорости временного базала
 
 - Эта настройка существует как ограничение безопасности, чтобы не позволить алгоритму ААПС когда-либо задать слишком большую величину скорости базала.
@@ -322,7 +323,7 @@
 
 - Для микроболюсов SMB необходимо запустить [ цель 9 ](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb).
 
-- Первые три настройки объяснены [выше](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to).
 
 - Подробности различных опций настройки описаны в разделе [возможности OpenAPS ](Open-APS-features-enable-smb).
 
@@ -420,9 +421,11 @@
 
 [Новый протокол, начиная с AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) - безопаснее и эффективнее.
 
-:::{admonition} V3 загрузчики данных
-:class: предупреждение При использовании NSClientV3, все загрузчики должны иметь API V3. Поскольку большинство из них пока несовместимы, это означает, что **следует разрешить AAPS загружать все данные** (BG, процедуры, ...) в Nightscout и отключить все остальные загрузчики, если они не совместимы с версией 3.  
-:::
+```{admonition} V3 data uploaders
+:class: warning
+
+When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+```
 
 - Создайте свой сайт *Nightscout URL* (напр. <https://yoursitename.yourplaform.dom>).
   - **Убедитесь, что URL-адрес БЕЗ /api/v1/ в конце.**
@@ -433,9 +436,9 @@
 
 ### Синхронизация
 
-Выбор синхронизации будет зависеть от способа использования AAPS.
+Synchronization choices will depend on the way you will want to use AAPS.
 
-Выберите, какие данные [загружать в и выгружать из Nightscout ](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
+You can select which data you want to [upload and download to or from Nightscout](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
 
 ### Опции оповещения
 
@@ -463,7 +466,7 @@
 
 ![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
 
-Большинство опций в расширенных настройках самоочевидны.
+Options in advanced settings are self-explanatory.
 
 ## СМС-коммуникатор
 
@@ -474,7 +477,7 @@
 
 ## Автоматизация
 
-Выберите, какая должна использоваться служба определения локации:
+Select which location service shall be used:
 
 - Использовать пассивное расположение: AAPS принимает положения только в том случае, если другие приложения запрашивали его
 - Использовать расположение сети: расположение вашего Wifi
@@ -496,8 +499,7 @@
 
 ![Параметры обслуживания](../images/Pref2020_Maintenance.png)
 
-- Отправляйте логи журналов на <logs@androidaps.org>.
-- Если вы выберите *Шифрование экспортированных настроек* они будут зашифрованы вашим мастер-паролем [](Preferences-master-password). В этом случае пароль должен вводиться каждый раз, когда настройки экспортируются или импортируются.
+- Standard recipient of logs is <logs@aaps.app>.
 
 ## Проект Open Humans
 

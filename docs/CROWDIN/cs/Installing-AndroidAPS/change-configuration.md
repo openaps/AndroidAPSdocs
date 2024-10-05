@@ -1,39 +1,39 @@
-# Making changes to your AAPS configuration
+# Provádění změn v konfiguraci AAPS
 
-After you have completed the **Setup Wizard** you don't need to run the entire Wizard again if you want to only change parts of the configuration.
+Až dokončíte **Průvodce nastavením**, nemusíte ho znovu spouštět celý, pokud chcete nějakou část konfigurace změnit.
 
-There are three routes to change the different configuration settings, which route you take is simply a matter of convenience, each route leads to the same configuration settings.
+Existují 3 způsoby, jak změnit konfigurační nastavení. Který z nich si vyberete je jednoduše otázkou pohodlí, každý povede ke stejnému výsledku.
 
-These are as follows:
+Máte tyto možnosti:
 
-1. Config builder,
-2. Three dot menu on the right and select "preferences" or
-3. Three dot menu on the right and select "plugin preferences".
+1. Konfigurátor,
+2. V tříbodové menu na pravé straně zvolte "Nastavení" nebo
+3. V tříbodové menu na pravé straně zvolte "Nastavení pluginu" nebo.
 
-Here we explain which option is most convenient for each situation:
+Zde vysvětlujeme, která možnost je nejvhodnější pro jakou situaci:
 
-## Config builder
+## Konfigurátor
 
-The **config builder** is used if you want to **enable plugins** and their **visibility** in the top level menu. If they are enabled, they will still run, you can decide if you want to be able to see them in the top menu or not.
+**Konfigurátor** se používá v případě, kdy chcete **povolit pluginy** a jejich **viditelnost** v horním menu. Pokud je povolíte, budou fungovat neustále. A můžete zde rozhodnout, jestli budou viditelné v horním menu.
 
-Plugins which you have not enabled (_i.e._ disabled) plugins can not be made visible. For example, when you first start with **AAPS** on **objective 1**, you cannot yet use **automations**, so the **automations** plugin cannot be enabled and made visible in the top menu.
+Pluginy, které nejsou povoleny, respektive jsou zakázány, nemohou být v menu zobrazené. Na příklad, když poprvé spustíte **AAPS** na **1. cíli**, nemůžete ještě používat **automatizaci**, takže plugin **Automatizace** nelze spustit ani zobrazit v horním menu.
 
-**Config builder** is the easiest way to further modify your configuration after you have used the **Setup Wizard**.
+**Konfigurátor** je nejjednodušší způsob k podrobnější úpravě konfigurace poté, co dokončíte **Průvodce nastavením**.
 
-The documentation relating to the config builder is available [here](../Configuration/Config-Builder.md).
+Dokumentace ke konfigurátoru je dostuná [zde](../Configuration/Config-Builder.md).
 
 ## Nastavení
 
-The preferences dialogue can be reached via the top right three dot menu on the **home screen** of AAPS. It gives you the possibilty to change the configuration of **all enabled plugins at once**.
+Dialog předvoleb je možné otevřít prostřednictvím tříbodového menu vpravo nahoře na **domovské obrazovce** AAPS. To vám dává možnost změnit konfiguraci **všech povolených pluginů na jednom místě**.
 
-This is a good route if you are not really sure where to look for an configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
+Je to nejlepší způsob, pokud si nejste opravdu jisti, kde hledat správné nastavení, ale může to být trochu únavné v případě, že chcete změnit konfiguraci jednoho konkrétního pluginu.
 
-The documentation of the preferences is available [here](../Configuration/Preferences.md).
+Dokumentace předvoleb je k dispozici [zde](../Configuration/Preferences.md).
 
-## Plugin preferences
+## Nastavení pluginu
 
-The **plugin preferences** dialogue can be reached via the top right three dot menu on the home screen of AAPS. It provides the possibilty to change the configuration of all enabled plugins at once.
+Dialog **Nastavení pluginů** je možné otevřít prostřednictvím tříbodového menu vpravo nahoře na **domovské obrazovce** AAPS. It provides the possibilty to change the configuration of the plugin currently on screen.
 
-This is a good route if you know that _e.g._ you _just_ want to change the configuration for BYODA. Then, you would select the tab "BYODA" on the top menu of **AAPS**, and then once you are on the BYODA page, in the top right, select the three dot menu and then the "plugin preferences" entry. You are taken directly to the preferences dialogue specifically for the BYODA plugin.
+Je to vhodný způsob, pokud víte, že chcete změnit např. kofiguraci BYODA. V tomto případě byste měli v horním menu **AAPS** vybrat záložku "BYODA" a jakmile jste na stránce BYODA, otevřete v pravém horním rohu tříbodové menu a potom položku "Nastavení pluginu". Dostanete se přímo do dialogu nastavení pouze pro plugin BYODA.
 
-This is a "short cut" to the general preferences dialogue, the documentation of the preferences is available [here](../Configuration/Preferences.md).
+Je to zkratka k obecnému dialogu předvoleb. Dokumentace je k dispozici [zde](../Configuration/Preferences.md).

@@ -3,9 +3,9 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## Ztráta úložiště klíčů
-If you use the same keystore when updating AAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
+If you use the same keystore when updating AAPS you do not have to uninstall the previous version on your smartphone. To je důvod, proč je doporučeno uchovávat úložiště klíčů na bezpečném místě.
 
-If you try to install the apk, signed with a different keystore than before, you will get an error message that the installation failed!
+V případě, že nemůžete najít své staré úložiště klíčů, postupujte při aktualizaci takto:
 
 In case you cannot find your old keystore or its password anymore, proceed as follows:
 
@@ -19,14 +19,14 @@ In case you cannot find your old keystore or its password anymore, proceed as fo
    If you can't find them on your phone copy them from the external storage to your phone.
 
 8. Check your battery optimization options and disable them again.
-9. Keep on looping.
+9. Smyčku pak můžete dále používat.
 
-## Gradle Sync failed
+## Error "on demand" Configuration
 Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
 
   ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
-These are the usual gradle sync failures:
+Při vytváření nového úložiště klíčů pro vytvoření podepsané APK se ve Windows může objevit následující chybová zpráva
 * [Neprovedené změny](troubleshooting_androidstudio-uncommitted-changes)
 * [No cached version of ... available](troubleshooting_androidstudio-could-not-resolve-no-cached-version)
 * [Android Gradle requires Java 11 to run](troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)
@@ -36,7 +36,7 @@ These are the usual gradle sync failures:
 (troubleshooting_androidstudio-uncommitted-changes)=
 ### Neprovedené změny
 
-If you receive a failure message like
+Pokud se zobrazí podobná chybová zpráva,
 
 ![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
@@ -76,7 +76,7 @@ If you receive a failure message like
 
 #### Step 2: Check for uncommitted changes.
 
-  * In Android Studio, oben the "Commit" Tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * V Android Studio zvolte VCS -> GIT -> Reset HEAD![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
   * You can see either a "Default changeset" (2) or "Unversioned files" (3):
 
     * For "Default changeset", you probably updated gradle or changed some of the file contents by mistake.
@@ -114,13 +114,13 @@ Follow the instructions at [Gradle Resync](troubleshooting_androidstudio-step-3-
 
 ### Android Gradle plugin requires Java 17 to run
 
-  You might experience this error message:
+  Někdy můžete při vytváření APK dostat chybovou zprávu, která říká
 
   ![Android Gradle plugin requires Java 17 to run](../images/studioTroubleshooting/11_GradleJDK.png)
 
   Click on "Gradle Settings" (1) to go to open the gradle settings.
 
-  If you don't have the link to the "Gradle Settings", open the Gradle settings manually by selecting the Gradle Tab on the right border (1), select the tools icon (2) and there the item 'Gradle Settings' (3).
+  Na internetu existuje spousta manuálů, jak zjistit, zda máte 32bitový nebo 64bitový OS – například [tento](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
 
   ![Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
@@ -136,13 +136,13 @@ Follow the instructions at [Gradle Resync](troubleshooting_androidstudio-step-3-
 
 (troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
 
-### Could not resolve/No cached version
+### Možnost 3 – Zkuste stáhnout aktualizace
 
   You might get this error message:
 
     ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
-  * On the right side, open the Gradle tab (1).
+  * Zkopírujte ‘git checkout --’ do schránky (bez uvozovek)
 
     Make sure the button shown at (2) is *NOT* selected.
 
@@ -153,7 +153,7 @@ Follow the instructions at [Gradle Resync](troubleshooting_androidstudio-step-3-
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### Unable to start daemon process
 
-  If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
+  Pokud vidíte zmíněnou chybovou zprávu, pravděpodobně používáte 32bitový systém Windows 10. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
 
   If you are using Windows 10 you must use a 64-bit operating system.
 
@@ -176,7 +176,7 @@ Follow the instructions at [Gradle Resync](troubleshooting_androidstudio-step-3-
 
   * Click on "Reload Gradle Project" (3)
 
-## Generate Signed APK generated successfully with 0 build variants
+## Varování kompilátoru Kotlin
 
 When you generate the signed apk, you might get the notification that generation was successfully but are told that 0 build variants where generated:
 
@@ -185,7 +185,7 @@ When you generate the signed apk, you might get the notification that generation
 This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](Building-APK-generate-signed-apk)) and you will find the generated apk there!
 
 
-## App was created with compiler/kotlin warnings
+## Klíč byl vytvořen s chybami
 
 If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
 
@@ -194,13 +194,13 @@ If your build completed successfully but you get compiler or kotlin warnings (in
 Your app was build successfully and can be transferred to phone!
 
 
-## Key was created with errors
+## Klíč byl vytvořen s chybami
 
-When creating a new keystore for building the signed APK, on Windows the following error message might appear
+Při vytváření nového úložiště klíčů pro vytvoření podepsané APK se ve Windows může objevit následující chybová zpráva
 
-![Key was created with errors](../images/AndroidStudio35SigningKeys.png)
+![Klíč byl vytvořen s chybami](../images/AndroidStudio35SigningKeys.png)
 
-This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
+Zdá se, že se jedná o chybu Android Studia 3.5.1 a jeho prostředí Java ve Windows. Klíč je správně vytvořen, ale doporučení je nesprávně zobrazeno jako chyba. To lze nyní ignorovat.
 
 
 ## No CGM data is received by AAPS
@@ -210,45 +210,45 @@ This seems to be a bug with Android Studio 3.5.1 and its shipped Java environmen
 * In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](xdrip-identify-receiver).
 
 
-## App not installed
+## Aplikace není nainstalována
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+![poznámka o nainstalované aplikaci v telefonu](../images/Update_AppNotInstalled.png)
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps:
+* Ujistěte se, že jste do telefonu přenesli soubor „app-full-release.apk“.
+* Pokud se na telefonu zobrazí "Aplikace není nainstalována", postupujte následovně:
 
-1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
+1. Ručně smažte tři složky pro sestavení (obvykle "build", složku pro sestavení v "app" a složku sestavení ve "wear") a znovu vygenerujte podepsanou apk.
 2. Odinstalujte aplikaci AAPS ze svého telefonu
-3. Enable airplane mode & turn off bluetooth.
+3. Změňte cílovou složku APK (jiné umístění).
 4. Nainstalujte novou verzi (“app-full-release.apk”)
 5. [Importujte nastavení](../Usage/ExportImportSettings)
 6. Znovu zapněte bluetooth a vypněte režim letadlo
 
-## App installed but old version
+## Nejsou dostupná data z CGM
 
 If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](Update-to-new-version-update-your-local-copy)
 
-## None of the above worked
+## Neprovedené změny
 
-If non of the above tips helped you might consider building the app from scratch:
+Jestliže žádný z uvedených tipů nepomáhá, zvažte sestavení aplikace úplně od začátku:
 
-1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
+1. Ručně smažte tři složky pro sestavení (obvykle "build", složku pro sestavení v "app" a složku sestavení ve "wear") a znovu vygenerujte podepsanou apk.
 
 2. Zálohujte si úložiště klíčů a heslo k němu. In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
 
     Nebo můžete vytvořit a použít nové úložiště klíčů.
 
-3. Build app from scratch as described [here](Building-APK-download-AAPS-code).
+3. Vytvořte aplikaci úplně od začátku, jak je popsáno [zde](Building-APK-download-AAPS-code).
 
 4. Jestliže jste úspěšně sestavili APK, odstraňte stávající aplikaci z telefonu a přeneste do něj a nainstalujte nový soubor apk.
 5. [Import settings](../Usage/ExportImportSettings) again to restore your objectives and settings.
-6. You should check your battery optimization options and disable them again.
+6. Znovu zapněte bluetooth a vypněte režim letadlo
 
-## Worst case scenario
+## Aplikace není nainstalována
 
-In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
+V případě, že ani sestavení aplikace úplně od začátku nevyřeší váš problém, zkuste úplně odinstalovat Android Studio. Někteří uživatelé uvedli, že to jejich problém vyřešilo.
 
-**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
+**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). manuály pro kompletní odinstalaci můžete najít na internetu, například
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 

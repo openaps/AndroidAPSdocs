@@ -1,21 +1,21 @@
 (Open-APS-features-DynamicISF)=
-## DynamicISF (DynISF)
-DynamicISF was added in AAPS version 3.2 and requires you to start Objective 11 to use. Select DynamicISF in the config builder > APS to activate. It is recommended only for advanced users that have a good handle on AAPS controls and monitoring.
+## רגישות דינאמית (DynISF)
+DynamicISF נוסף בגרסה 3.2 של AAPS ודורש להתחיל את משימה 11 כדי להתחיל שימוש. להפעלה בחרו בבונה התצורה > רגישות דינאמית. מומלץ רק למשתמשים מתקדמים שיש להם שליטה טובה ב-AAPS.
 
-Please note that to use Dynamic ISF effectively, the AndroidAPS database needs a minimum of five days of data.
+יש לשים לב כי על מנת להשתמש ב-ISF דינאמי ביעילות, נדרש מסד נתונים של AndroidAPS בגודל מינימלי של חמישה ימים.
 
-DynamicISF adapts the insulin sensitivity factor dynamically based on total daily dose of insulin (TDD) and current and predicted blood glucose values.
+הרגישות הדינאמית (DynISF) מתאימה את יחס הרגישות לאינסולין באופן דינאמי בהתבסס על המינון היומי הכולל של האינסולין (TDD) ועל ערכי הסוכר הנוכחיים והחזויים.
 
-Dynamic ISF uses Chris Wilson’s model to determine ISF instead of a static profile settings.
+הרגישות הדינאמית משתמשת במודל של כריס וילסון לקביעת יחס הרגישות לאינסולין (ISF) במקום הגדרות פרופיל סטטיות.‬
 
-The equation implemented is: ISF = 1800 / (TDD * Ln (( glucose / insulin divisor) +1 ))
+‫המשוואה המיושמת היא: ISF = 1800 / (TDD * Ln ((glucose / insulin divisor) + 1))‬
 
-The implementation uses the equation to calculate current ISF and in the oref1 predictions for IOB, ZT and UAM. It is not used for COB.
+היישום משתמש במשוואה כדי לחשב את גורם הרגישות לאינסולין הנוכחי (ISF) ובתחזיות oref1 עבור אינסולין פעיל (IOB), זמן האפס (ZT) ומודל הארוחות שלא הוכרזו (UAM). החישוב של הרגישות הדינאמית אינו מחשב פחמימות פעילות.
 
 ### TDD - סה"כ מינון אינסולין יומי
 This uses a combination of the 7 day average TDD, the previous day’s TDD and a weighted average of the last eight hours of insulin use extrapolated out for 24 hours. The total daily dose used in the above equation is weighted one third to each of the above values.
 
-### Insulin Divisor
+### מחלק אינסולין (Insulin Divisor)
 The insulin divisor depends on the peak of the insulin used and is inversely proportional to the peak time. For Lyumjev this value is 75, for Fiasp, 65 and regular rapid insulin, 55.
 
 ### Dynamic ISF Adjustment Factor
@@ -31,6 +31,6 @@ Future ISF is used in the dosing decisions that oref1 makes. Future ISF uses the
 
 Otherwise, minimum predicted BG is used.
 
-### Enable TDD based sensitivity ratio for basal and glucose target modification
+### אפשר יחס רגישות המבוסס על המינון היומי הכולל לשינוי מינון בזאלי וערכי מטרה
 
-This setting replaces Autosens, and uses the last 24h TDD/7D TDD as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. This calculated value is also used to adjust target, if the options to adjust target with sensitivity are enabled. Unlike Autosens, this option does not adjust ISF values. 
+הגדרה זו מחליפה את Autosens, ומשתמשת בסך מינון האינסולין של 24 השעות האחרונות או של השבוע האחרון כדי לכוונן את יחס הרגישות ואת המינון הבזאלי, בדומה לדרך בה Autosens עושה זאת. ערך זה שנחשב נמצא בשימוש גם כדי להתאים את ערך המטרה, אם האפשרויות להתאמת ערך המטרה עם הרגישות מופעלות. בניגוד ל- Autosens, אפשרות זו לא מתאימה ערכי ISF. 

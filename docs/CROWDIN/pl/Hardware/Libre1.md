@@ -2,8 +2,10 @@
 
 To use your Libre as a CGM that is getting new BG values every 5 minutes without having to scan the sensor, you need to buy an NFC to Bluetooth bridge (commercially available devices, based on the obsolete [LimiTTer](https://github.com/JoernL/LimiTTer) project).
 
-:::{admonition} Libre 2, Libre 1 US and Libre Pro :class: warning Verify the bridge and the app you want to use are compatible with your sensor.  
-:::
+```{admonition} Libre 2, Libre 1 US and Libre Pro
+:class: warning
+Verify the bridge and the app you want to use are compatible with your sensor.  
+```
 
 Several bridges are available on the market:
 

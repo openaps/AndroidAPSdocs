@@ -2,11 +2,11 @@
 
 Informace o odstraňování problémů můžete najít na mnoha stránkách wiki. Tato stránka obsahuje řadu odkazů, které vám mohou pomoci při hledání informací k řešení vašeho problému.
 
-Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.html).
+Další užitečné informace mohou být k dispozici také v sekci " FAQ \<../Getting-Started/FAQ.md> \` \_.
 
 ## AAPS app
 
-### Building & updating
+### Vytváření a aktualizace
 
 * [Ztráta úložiště klíčů](troubleshooting_androidstudio-lost-keystore)
 * [Troubleshooting AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
@@ -22,7 +22,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 
 * [Nightscout Client](../Usage/Troubleshooting-NSClient.html)
 
-### Používání
+### Použití
 * [Wrong carb values](COB-calculation-detection-of-wrong-cob-values)
 
    ![Error: Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
@@ -75,7 +75,7 @@ Here are examples how to find them on specific android phones.
 
 * Select "battery".
 
-  ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
+  ![Baterie](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
 * Set it to "Not optimized"
 

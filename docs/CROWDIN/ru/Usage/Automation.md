@@ -63,11 +63,11 @@
 
 ![Альтернативный текст (alt text)](../images/automation_2024-02-12_20-55-05.png)
 
-:::{admonition} Важное примечание
-:class: примечание
+```{admonition} Important note
+:class: note
 
-Автоматизации активны даже когда цикл отключен!
-:::
+Automations are still active when the Loop is disabled!
+```
 
 
 ## Ограничения безопасности
@@ -80,11 +80,11 @@
 
 ## Правильное использование отрицательных значений
 
-:::{admonition} Предупреждение
-:class: предупреждение
+```{admonition} Warning
+:class: warning
 
-Будьте осторожны при выборе отрицательных значений в Автоматизации
-:::
+Please be careful when selecting a negative value in Automation
+```
 
 Необходимо соблюдать осторожность при выборе «отрицательного значения» в «Условиях», как например «менее чем» в **Automations**. Например:
 

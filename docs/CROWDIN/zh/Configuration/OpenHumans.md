@@ -1,85 +1,85 @@
-# Open Humans Uploader
+# Open Humans 上傳器
 
-## Donate your data for science
+## 捐獻您的資料以促進科學研究
 
-You can help the community by donating your data to research projects! This helps scientists to pay it forward, develop new scientific ideas and broaden the open mind of open source closed loop systems. AAPS is ready to synchronize your data with [Open Humans](https://www.openhumans.org), a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data.
+您可以透過捐贈您的資料來協助研究項目，幫助社群！ 這有助於科學家回饋社會，發展新的科學想法，並拓寬開放源代碼封閉環系統的開放思維。 AAPS 已準備好與 [Open Humans](https://www.openhumans.org) 平台同步資料，該平台允許您上傳、連線和存儲您的個人資料，例如基因、活動和健康資料。
 
-You retain full control about what happens to your data and what projects you want to support by giving them access to your data. Depending on the project you have joined, data is evaluated and used by them in different ways and extent.
+您完全掌控您的資料，並可選擇您希望支援的研究項目，決定授予他們查看資料的權限。 根據您加入的項目，資料將以不同的方式和範圍被他們評估和使用。
 
-The following data will be uploaded to your Open Humans account:
+以下資料將被上傳至您的 Open Humans 帳號：
 
-- Glucose values
-- Careportal events (except notes)
-- Extended boluses
-- Profile switches
-- Total daily doses
-- Temporary basals
-- Temp targets
-- Preferences
-- Application version
-- Device model
-- Screen dimensions
+- 葡萄糖數值
+- 照護入口事件（不包括筆記）
+- 延長注射
+- 基礎速率切換
+- 每日總劑量
+- 臨時基礎速率
+- 臨時目標
+- 偏好設定
+- 應用程式版本
+- 裝置型號
+- 螢幕尺寸
 
-Secret or private information such as your Nightscout URL or API secret will not be uploaded.
+像是您的 Nightscout URL 或 API 秘鑰等秘密或私人資訊不會被上傳。
 
-## Setup
+## 設定
 
-1. Create your account on [Open Humans](https://www.openhumans.org) if not already done. You can reuse your existing Google or Facebook accounts if you wish to.
-2. Enable the “Open Humans” plugin in [Config Builder](../Configuration/Config-Builder.md).
-3. Open its setting using the cog wheel button. You can restrict upload to times when phone uses Wi-Fi and/or is charged.
-4. Open the Open Humans Plugin (either trough OH tab or hamburger menu) and click 'LOGIN'.
+1. 如果尚未建立帳號，請至 [Open Humans](https://www.openhumans.org) 建立帳號。 若您願意，您也可以使用現有的 Google 或 Facebook 帳號。
+2. 在[組態建置工具](../Configuration/Config-Builder.md)中啟用「Open Humans」外掛。
+3. 透過齒輪按鈕開啟設定。 您可以限制只有在手機使用 Wi-Fi 和/或正在充電時進行上傳。
+4. 打開 Open Humans 外掛（可透過 OH 頁籤或漢堡選單），然後點擊「登入」。
 
-![Open Humans Config Builder](../images/OHUploader1.png)
+![Open Humans 組態建置工具](../images/OHUploader1.png)
 
-5. Read the given information about the Open Humans Uploader and terms of use carefully.
-6. Confirm by checking the box and click 'LOGIN'.
-7. Open Humans website will be opened. Login with your credentials.
-8. Decide whether you want to hide your AAPS Uploader membership in your public Open Humans profile.
-9. Click button 'Authorize project'.
+5. 仔細閱讀有關 Open Humans 上傳器的資訊和使用條款。
+6. 勾選確認框並點擊「登入」。
+7. Open Humans 網站將會開啟。 使用您的憑證登入。
+8. 決定是否要隱藏您在 Open Humans 公開個人檔案中的 AAPS 上傳器會員身份。
+9. 點擊「授權項目」按鈕。
 
-![Open Humans Terms of Use + Login](../images/OHUploader2.png)
+![Open Humans 使用條款 + 登入](../images/OHUploader2.png)
 
-10. Returning to AAPS you will see a prompt that login succeeded.
-11. Keep Open Humans Uploader plugin and phone turned on for setup to complete.
-12. After clicking close you will see your member ID. Queue sizes > 0 shows that there is still data to be uploaded.
-13. Click 'LOGOUT' if you want to stop uploading data to Open Humans.
-14. Android notification will inform you about running upload.
+10. 回到 AAPS 時，您會看到登入成功的提示。
+11. 保持 Open Humans 上傳器外掛及手機開啟，直至設定完成。
+12. 點擊關閉後，您會看到您的會員 ID。 隊列大小 > 0 表示仍有資料等待上傳。
+13. 若要停止將資料上傳至 Open Humans，請點擊「登出」。
+14. Android 會透過通知告知您上傳正在進行。
 
-![Open Humans finish setup](../images/OHUploader3.png)
+![Open Humans 完成設定](../images/OHUploader3.png)
 
-15. You can manage your data by logging in to the [Open Humans website](https://www.openhumans.org).
+15. 您可以透過登入[Open Humans 網站](https://www.openhumans.org)來管理您的資料。
 
-![Open Humans manage data](../images/OHWeb.png)
+![Open Humans 管理資料](../images/OHWeb.png)
 
-## Sharing Opportunities
+## 共享機會
 
-### [The 'OPEN' project](https://www.open-diabetes.eu/)
+### [「OPEN」項目](https://www.open-diabetes.eu/)
 
-The 'OPEN' project brings together an international and intersectoral consortium of patient innovators, clinicians, social scientists, computer scientists and patient advocacy organizations in order to investigate various aspects of Do-it-Yourself Artificial Pancreas Systems (DIY APS) that are used by an increasing number of people with diabetes. For more details see their [website](https://www.open-diabetes.eu/).
+「OPEN」項目匯集了來自國際間各領域的患者創新者、臨床醫生、社會科學家、計算機科學家和患者倡導組織，以研究越來越多糖尿病患者使用的 DIY 人工胰臟系統（DIY APS）的各個方面。 更多詳情請參閱他們的[網站](https://www.open-diabetes.eu/)。
 
-September 2020 the 'OPEN' project launched a [survey](https://survey.open-diabetes.eu/) including the option to donate data you uploaded to Open Humans. A [tutorial](https://open-diabetes.eu/en/open-survey/survey-tutorials/) how to donate your data to the 'OPEN' project is available on their site and within the survey itself.
+2020 年 9 月，「OPEN」項目啟動了一項[調查](https://survey.open-diabetes.eu/)，包括捐贈您上傳至 Open Humans 的資料選項。 一個[教程](https://open-diabetes.eu/en/open-survey/survey-tutorials/)，介紹如何將您的資料捐贈給「OPEN」項目，該教程可在其網站及調查中找到。
 
-### [OpenAPS Data Commons](https://www.openhumans.org/activity/openaps-data-commons/)
+### [OpenAPS 資料公用](https://www.openhumans.org/activity/openaps-data-commons/)
 
-The OpenAPS Data Commons was created to enable a simple way to share data sets from the DIYAPS community for research. The data is shared both with traditional researchers who will create traditional research studies, and with groups or individuals from the community who want to review data as part of their own research projects. The OpenAPS Data Commons uses the 'Open Humans' platform to enable people to easily upload and share their data from DIYAPS including AAPS, Loop, and OpenAPS.
+OpenAPS 資料公用旨在為 DIYAPS 社群提供簡單的方法來共享資料集以供研究。 這些資料既可供傳統研究人員進行傳統研究，也可供社群中的團體或個人進行自己的研究項目。 OpenAPS 資料公用使用「Open Humans」平台，使人們能夠輕鬆上傳並共享來自 DIYAPS 的資料，包括 AAPS、Loop 和 OpenAPS。
 
-You can get your data into Open Humans via one of three ways:
+您可以透過三種方式之一將您的資料匯入 Open Humans：
 
-1. use the AAPS uploader option to get your data into Open Humans
-2. use the Nightscout Data Transfer to get your data into Open Humans
-3. manually upload data files into Open Humans.
+1. 使用 AAPS 上傳器選項將您的資料匯入 Open Humans
+2. 使用 Nightscout 資料傳輸將您的資料匯入 Open Humans
+3. 手動將資料檔案上傳至 Open Humans。
 
-Once you've created an account and gotten your data flowing into Open Humans, make sure to also join the OpenAPS Data Commons in order to donate your data for research if you choose.
+一旦您建立帳號並讓您的資料進入 Open Humans，請務必加入 OpenAPS 資料公用，以便捐贈您的資料供研究使用（如果您選擇）。
 
-## Terms of Use
+## 使用條款
 
-This is an open source tool that will copy your data to [Open Humans](https://www.openhumans.org). We retain no rights to share your data with third parties without your explicit authorization. The data the project and app receive are identified via a random user ID and will only be securely transmitted to an Open Humans account with your authorization of that process. You can stop uploading and delete your upload data at any time via [www.openhumans.org](https://www.openhumans.org). Beware that some projects that receive data may not support this.
+這是一個開源工具，將會把您的資料複製至[Open Humans](https://www.openhumans.org)。 我們不保留任何權利與第三方分享您的資料，除非您明確授權。 項目和應用程式接收到的資料是透過隨機用戶 ID 識別的，並且只有在您授權該過程後，資料才會安全地傳輸到 Open Humans 帳號。 您可以隨時停止上傳並刪除上傳的資料，透過[www.openhumans.org](https://www.openhumans.org)操作。 請注意，一些接收資料的項目可能不支援此操作。
 
-Also see [Open Humans Terms of Use](https://www.openhumans.org/terms/).
+另請參閱[Open Humans 使用條款](https://www.openhumans.org/terms/)。
 
-## Data Privacy
+## 資料隱私
 
-Open Humans takes care of protecting your privacy by assigning a numerical ID to you for each project. This allows projects to recognize but no identify you. The Application ID uploaded by AAPS is similar and only helps administrate the data. More information can be found here:
+Open Humans 透過為您分配一個數字 ID 來保護您的隱私，該 ID 用於每個項目。 這使項目可以識別您但無法確認您的身份。 AAPS 上傳的應用程式 ID 與此類似，僅用於資料管理。 更多資訊請參閱：
 
-- [Open Humans Data Use Policy](https://www.openhumans.org/data-use/)
+- [Open Humans 資料使用政策](https://www.openhumans.org/data-use/)
 - [Open Humans GDPR](https://www.openhumans.org/gdpr/)

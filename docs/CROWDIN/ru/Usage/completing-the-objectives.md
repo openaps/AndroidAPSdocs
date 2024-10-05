@@ -6,10 +6,11 @@
 - Вы изучили основной функционал **AAPS**
 - У вас есть базовое понимание того, что делает ваша система, и, следовательно, почему вы можете ей доверять.
 
-:::{admonition} Примечание
+```{admonition} Note
+:class: note
 
-Регулярно делайте экспорт настроек **AAPS** после выполнения каждой **цели**!
-:::
+Regularly export your **AAPS** settings after completing each **objective**!
+```
 
 Настоятельно рекомендуем [экспортировать настройки](../Usage/ExportImportSettings.md) после завершения каждой **цели**. В процессе экспорта создается файл **настроек** (.json), резервную копию которого следует сохранить в одном или нескольких безопасных местах (_например, Google Drive, жёсткий диск, вложение к электронной почте _и т. д._). Это гарантирует сохранение прогресса в достижении **целей**, возможность легко восстановить его в случае случайного удаления, при помощи импорта последнего файла настроек. Наличие резервной копии файла **настроек** также пригодится, если вы хотите сменить смартфон **AAPS** по какой-либо причине (обновление/потеря/сломанный телефон _и т. д._)
 
@@ -56,7 +57,7 @@
 
 - Пройдите тест с выбором варианта ответа для проверки на знание AndroidAPS.
 
-Некоторые пользователи считают **Цель 3** самой трудной. Прочитайте документацию **AAPS** вместе с вопросами. Если вы надолго застряли на цели после изучения документации **AAPS**, можете выполнить поиск в группе Facebook по запросу «Цель 3» (вполне вероятно, что ваш вопрос уже задавался и на него уже был дан ответ). Если вы все ещё застряли, спросите в группе Facebook или Discord. Эти группы могут дать подсказки или перенаправить вас на соответствующую часть документации AAPS.
+Некоторые пользователи считают **Цель 3** самой трудной. Прочитайте документацию **AAPS** вместе с вопросами. If you are genuinely stuck after researching the **AAPS** documents, please search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group for "Objective 3" (because it is likely that your question has been asked- and answered - before). If you are still stuck, ask in a post on either the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group. Эти группы могут дать подсказки или перенаправить вас на соответствующую часть документации AAPS.
 
 Чтобы приступить к реализации цели 3, нажмите на оранжевый текст «Не завершено», чтобы получить доступ к соответствующему вопросу. Прочтите внимательно все вопросы и выберите ответ(ы).
 
@@ -68,10 +69,10 @@
 
 Когда **AAPS** устанавливается в первый раз, необходимо полностью пройти **цель 3** для того, чтобы перейти к **цели 4**. Каждая цель должна быть выполнена в последовательном порядке. Постепенно, по мере преодоления целей, будут открываться новые возможности приложения.
 
-:::{admonition}  **Что произойдет, если к Цели добавятся новые вопросы при обновлении до более новой версии APPS?**
+```{admonition} __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: Note
-Время от времени в **AAPS** добавляется новая функциональность, что может потребовать добавления нового вопроса к Целям обучения, особенно к Цели 3. В результате любой новый вопрос, добавленный к **Цели 3**, будет помечен как «незавершённый», поскольку **AAPS** потребует от вас выполнить это действие. Не волнуйтесь, поскольку каждая **Цель** независима, вы **не потеряете существующую функциональность AAPS**, при условии, что другие Цели останутся выполненными.
-:::
+From time to time, new features are added to **AAPS** which may require a new question to be added to the Objectives, particularly Objective 3. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other Objectives remain completed.
+```
 
 ## Цель 4: Начните с открытого цикла
 
@@ -92,9 +93,9 @@
 
   ![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
 
-:::{admonition} Нет необходимости применять каждую рекомендацию системы!
+```{admonition} You don't need to action each and every system recommendation!
 :class: Примечание
-:::
+```
 
 (Objectives-objective-5-Understanding-your-open-loop-including-its-temp-basal-recommendations)=
 
@@ -122,11 +123,12 @@
 You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Overview > Range for Visualisation.
 
 ![Stop sign](../images/sign_stop.png)
-:::{admonition} If you have been using a virtual pump, change to a real insulin pump now!
+
+```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
 If you are open looping with a virtual pump stop here. Only click verify at the end of this Objective once you have changed to using a "real" physical pump.
-:::
+```
 
 ![blank](../images/blank.png)
 
@@ -135,10 +137,11 @@ If you are open looping with a virtual pump stop here. Only click verify at the 
 ## Цель 6: Начинаем замыкать цикл с Low Glucose Suspend (прекращением подачи инсулина на низких сахарах)
 
 ![Warning sign](../images/sign_warning.png)
-:::{admonition}  Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend only!
+
+```{admonition} Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend only!
 :class: Примечание
 Вам придётся корректировать высокие значения ГК самостоятельно (вручную с помощью помпы или ручки)!
-:::
+```
 
 As part of **Objective 6** you will close the loop and activate its Low Glucose Suspend (LGS) mode while [max IOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) is set to zero. You have to remain in LGS mode for 5 days to complete this objective. You should use this time to check if your profile settings are accurate and don't trigger LGS events too often.
 
@@ -227,13 +230,13 @@ You have to start **Objective 10** to be able to use Automations.
 
 4. Experiment with setting up a more useful automation.
 
-- The documentation page gives a few examples, and you can search for "automation" screenshots on the Facebook group. Since most people eat the same thing for breakfast at the same time every morning before school/work, a fairly common use-case can be to set a "before-breakfast-target" to set a slightly lower temporary target 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consists of  "Start temp target" with a target value and a 30 minutes duration.
+- The documentation page gives a few examples, and you can search for "automation" screenshots on the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group. Since most people eat the same thing for breakfast at the same time every morning before school/work, a fairly common use-case can be to set a "before-breakfast-target" to set a slightly lower temporary target 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consists of  "Start temp target" with a target value and a 30 minutes duration.
 
 ## Objective 11: Enabling additional features for daytime use, such as Dynamic Senstivity plugin (DynISF).
 
 - Ensure that SMB is functioning properly
 - Read the documentation concerning Dynamic ISF [here](../Usage/DynamicISF.md)
-- Search the Facbook and Discord groups for discussions around Dynamic ISF and read about other users experiences and recommendations.
+- Search the Facbook and [Discord](https://discord.gg/4fQUWHZ4Mw) groups for discussions around Dynamic ISF and read about other users experiences and recommendations.
 - Enable the **DynamicISF plugin** and identify the appropriate calibration for your body's uniqueness. It is advisable to begin with a value lower than 100% for safety reasons.
 
 (Objectives-go-back-in-objectives)=

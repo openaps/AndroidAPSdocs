@@ -1,14 +1,14 @@
 # sprint testi için dahili sanal alan dosyası 1
 
-:::{admonition} bunu tercüme etmeye gerek yok
-:class: note
+```{admonition} no need to translate this
+:class: Not
 
 Bunu tercüme etmenize gerek yok.
-:::
+```
 
-:::{danger}
+```{danger}
 Here is danger on the road.
-:::
+```
 
 Test for Setup
 

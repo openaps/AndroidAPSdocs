@@ -1,6 +1,6 @@
 (Phones-list-of-tested-phones)=
 
-# List of tested Phones compatible with Omnipod Dash Insulin Pump Pods
+# Seznam otestovaných mobilů
 
 Currently, we have a very hard-working behind-the-scenes Maintainer, who is in charge of ensuring the integrity of the Hardware List of all Android Phones/Smartwatches Capable of Looping with the Omnipod Dash; the newest pump driver addition to our ever-expanding network of Bluetooth enabled insulin pumps for use within the AAPS/OpenAPS ecosystem!
 

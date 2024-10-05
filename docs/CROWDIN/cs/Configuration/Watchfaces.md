@@ -2,7 +2,7 @@
 
 (Watchfaces-aaps-watchfaces)=
 
-## AAPS Watchfaces
+## Ciferníky AAPS
 
 There are several watchfaces to choose from that are included in the base build of the AAPS Wear APK. These watchfaces include average delta, IOB, currently active temp basal rate and basal profiles and a CGM readings graph.
 
@@ -35,173 +35,173 @@ There are a number of watchfaces available in the standard build of the AAPS Wea
 
 5. Check your watch, the "AAPS (Custom)" watchface should now be displaying the skin that you have selected. Give it a few seconds to refresh. You may now customize the complications, etc. by long pressing the watchface and then pressing the "Customize" button on the watchface image.
 
-## Watchfaces available
+## Dostupné ciferníky
 
-![Available watchfaces](../images/Watchface_Types.png)
+![Dostupné ciferníky](../images/Watchface_Types.png)
 
 (Watchfaces-new-watchface-as-of-AAPS-2-8)=
 
 ### New watchface as of AAPS 2.8
 
-![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
+![Ciferník Digital Style](../images/Watchface_DigitalStyle.png)
 
-* Color, lines and circle are configurable in setting menu on cog-sign of watchface chooser menu.
+* Barvy, čáry a kruhy lze konfigurovat v nabídce nastavení pod ozubeným kolečkem v nabídce pro výběr ciferníku.
 
-## AAPSv2 watchface - Legend
+## Ciferník AAPSv2 – Popis
 
 ![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A - čas od posledního spuštění smyčky
 
-B - CGM reading
+B - hodnota glykémie
 
-C - minutes since last CGM reading
+C - minuty od posledního čtení hodnoty glykémie
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - porovnání změny od posledního čtení (v mmol nebo mg/dl)
 
-E - average change CGM reading last 15 minutes
+E - průměrná změna hodnoty glykémie za posledních 15 minut
 
-F - phone battery
+F - stav baterie telefonu
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - hodnota bazální dávky (zobrazená v U/h, pokud je zvolena standardní hodnota, nebo v %, pokud je aktivní dočasný bazál)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+G - ukazatel BGI (blood glucose interaction), neboli jak moc „by měla“ glykémie růst nebo klesat pouze na základě aktivity inzulínu.
 
-I - carbs (carbs on board | e-carbs in the future)
+I - sacharidy (zbývající sacharidy I rozložené sacharidy v budoucnosti)
 
-J - insulin on board (from bolus | from basal)
+J - zbývající inzulín (z bolusu I bazálu)
 
-## Accessing main menu of AAPS
+## Vstup do hlavní nabídky AAPS
 
-To access main menu of AAPS you can use on of following options:
+Chcete-li získat přístup k hlavní nabídce AAPS, máte následující možnosti:
 
-* double tap on your BG value
-* select AAPS icon in watch applications menu
-* tap on AAPS complication (if configured for menu)
+* poklepejte na hodnotu glykémie
+* vyberte ikonu AAPS v nabídce aplikací na hodinách
+* klepněte na komplikaci AAPS (je-li nastavena tak, aby umožňovala vstup do nabídky)
 
-## Settings (in wear watch)
+## Nastavení (na hodinkách)
 
-To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
+Chcete-li získat přístup k nastavení ciferníku, vstupte do hlavní nabídky AAPS na hodinkách, potáhněte prstem nahoru a vyberte možnost „Nastavení“.
 
-Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
+Symbol plné hvězdy znamená, že možnost je povolená (**Zap**), symbol hvězdy bez výplně znamená, že možnost je zakázaná (**Vyp**):
 
-![Settings on/off](../images/Watchface_Settings_On_Off.png)
+![Nastavení zap/vyp](../images/Watchface_Settings_On_Off.png)
 
-### AAPS companion parameters
+### Doplňkové parametry AAPS
 
-* **Vibrate on Bolus** (default `On`):
-* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
+* **Vibrovat při bolusu** (výchozí hodnota `Zap`):
+* **Jednotky pro Akce** (výchozí hodnota `mg/dl`): jestliže je tato možnost **Zap**, jednotka pro akce je `mg/dl`, je-li možnost **Vyp**, jednotka je `mmol/l`. Používá se při nastavování dočasných cílů z hodinek.
 
 (Watchfaces-watchface-settings)=
 
-### Watchface settings
+### Nastavení ciferníku
 
-* **Show Date** (default `Off`): note, date is not available on all watchfaces
-* **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
-* **Show COB** (default `On`): Display or not COB value
-* **Show Delta** (default `On`): Display or not the BG variation of the last 5 minutes
-* **Show AvgDelta** (default `On`): Display or not the average BG variation of the last 15 minutes
-* **Show Phone Battery** (default `On`): Phone battery in %. Red if below 30% .
-* **Show Rig Battery** (default `Off`): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
-* **Show Basal Rate** (default `On`): Display or not current basal rate (in U/h or in % if TBR)
-* **Show Loop Status** (default `On`): show how many minutes since last loop run (arrows around value turn red if above 15').
-* **Show BG** (default `On`): Display or not last BG value
-* **Show Direction Arrow** (default `On`): Display or not BG trend arrow
-* **Show Ago** (default `On`): show how many minutes since last reading.
-* **Dark** (default `On`): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
-* **Highlight Basals** (default `Off`): Improve the visibility of basal rate and temp basals
-* **Matching divider** (default `Off`): For AAPS, AAPSv2 and AAPS(Large) watchfaces, show contrast background for divider (**Off**) or match divider with the background color (**On**)
-* **Chart Timeframe** (default `3 hours`): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
+* **Zobrazovat datum** (výchozí hodnota `Vyp`): poznámka: datum není k dispozici na všech cifernících
+* **Zobrazovat IOB** (výchozí hodnota `Zap`): Možnost zobrazit hodnotu IOB (podrobnější nastavení viz sekce Wear v nastavení AAPS na telefonu)
+* **Zobrazovat COB** (výchozí hodnota `Zap`): Možnost zobrazit hodnotu COB
+* **Zobrazovat Deltu** (výchozí hodnota `Zap`): Možnost zobrazit rozdíl glykémií za posledních 5 minut
+* **Zobrazovat prům. Deltu** (výchozí hodnota `Zap`): Možnost zobrazit průměrný rozdíl glykémií za posledních 15 minut
+* **Zobrazovat baterii telefonu** (výchozí hodnota `Zap`): Nabití baterie telefonu v %. Při poklesu pod 30 % se zobrazuje červeně.
+* **Zobrazovat baterii Rigu** (výchozí hodnota `Vyp`): Baterie Rigu je souhrnný údaj vyjadřující stav baterie telefonu, pumpy a senzoru (obecně tu nejnižší z těchto 3 hodnot)
+* **Zobrazovat bazály** (výchozí hodnota `Zap`): Možnost zobrazit aktuální bazální dávku (v U/h nebo v %, je-li aktivní TBR)
+* **Zobrazovat stav smyčky** (výchozí hodnota `Zap`): Zobrazuje, kolik minut uběhlo od posledního spuštění smyčky (šipky kolem hodnoty se změní na červené, pokud uběhlo více než 15 min).
+* **Zobrazovat glykémii** (výchozí hodnota `Zap`): Možnost zobrazit hodnotu glykémie
+* **Zobrazovat trendovou šipku** (výchozí hodnota `Zap`): Možnost zobrazit šipku trendu glykémie
+* **Zobrazovat stáří glykémie** (výchozí hodnota `Zap`): Zobrazuje, kolik minut oběhlo od posledního odečtu glykémie.
+* **Tmavé pozadí** (výchozí hodnota `Zap`): Můžete přepnout z tmavého pozadí na bílé (kromě ciferníků Cockpit a Steampunk)
+* **Zvýraznit bazály** (výchozí hodnota `Vyp`): Zlepšuje viditelnost bazálů a dočasných bazálních dávek
+* **Skrýt oddělovač** (výchozí hodnota `Vyp`): Pro ciferníky AAPS, AAPSv2 a AAPS(Large), zobrazuje oddělovač s kontrastním pozadím (**Vyp**), nebo se stejnou barvou, jakou má pozadí (**Zap**)
+* **Rozlišení grafu** (výchozí hodnota `3 hodiny`): V podnabídce můžete vybrat max. časové rozlišení grafu v rozmezí 1–5 hodin.
 
-### User Interface setting
+### Nastavení uživatelského rozhraní
 
-* **Input Design**: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
+* **Metoda zadávání**: Pomocí tohoto parametru můžete zvolit pozici tlačítek "+" a "-" při zadávání hodnot pro AAPS (dočasný cíl, inzulin, sacharidy...)
 
-![Input design options](../images/Watchface_InputDesign.png)
+![Možnosti metod zadávání](../images/Watchface_InputDesign.png)
 
-### Specific watchface parameters
+### Parametry konkrétních ciferníků
 
 #### Ciferník Steampunk
 
-* **Delta Granularity** (default `Medium`)
+* **Podrobnost Delty** (výchozí hodnota `Střední`)
 
 ![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
 #### Ciferník Circle
 
-* **Big Numbers** (default `Off`): Increase text size to improve visibility
-* **Ring History** (default `Off`): View graphically BG history with gray rings inside the hour's green ring
-* **Light Ring History** (default `On`): Ring history more discreet with a darker gray
-* **Animations** (default `On`): When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
+* **Velká čísla** (výchozí hodnota `Vyp`): Zvětšená velikost textu kvůli lepší čitelnosti
+* **Kruh historie** (výchozí hodnota `Vyp`): Grafické zobrazení historie glykémie pomocí šedých kruhů uvnitř zeleného hodinového kruhu
+* **Světlý kruh historie** (výchozí hodnota `Zap`): Decentnější kruh historie s tmavší šedou
+* **Animace** (výchozí hodnota `Zap`): Je-li tato možnost povolena, bude kruhový ciferník animovaný, jestliže je tato funkcemi hodinkami podporována a hodinky nejsou v úsporném režimu s nízkým rozlišením
 
-### Commands settings
+### Nastavení příkazů
 
-* **Wizard in Menu** (default `On`): Allow wizard interface in main menu to input Carbs and set Bolus from watch
-* **Prime in Menu** (default `Off`): Allow Prime / Fill action from watch
-* **Single Target** (default `On`):
+* **Kalkulačka v nabídce** (výchozí hodnota `Zap`): Možnost povolit rozhraní bolusové kalkulačky v hlavní nabídce pro zadávání sacharidů a posílání bolusů z hodinek
+* **Plnění v nabídce** (výchozí hodnota `Vyp`): Možnost provádět Plnění/Doplňování z hodinek
+* **Jedna cíl. hodnota** (výchozí hodnota `Zap`):
   
-  * `On`: you set a single value for TT
-  * `Off`: you set Low target and high target for TT
+  * `Zap`: pro dočasný cíl lze nastavit jedinou hodnotu
+  * `Vyp`: pro dočasný cíl lze nastavit nízkou a vysokou hodnotu
 
-* **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
+* **Procento z kalkulace** (výchozí hodnota `Vyp`): Umožňuje upravit velikost bolusu vypočteného kalkulačkou (hodnota v procentech zadaná před potvrzením oznámení)
 
 (Watchfaces-complications)=
 
-## Complications
+## Komplikace
 
-*Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
+*Komplikace* je termín pocházející z tradičního hodinářství. Obvykle se jím označuje jakákoli funkce přidaná navíc k hlavnímu ciferníku – například datumové okénko nebo další malý ciferník (datum, den v týdnu, fáze měsíce apod.). Systém Wear OS 2.0 používá tento pojem analogicky. Uživatelé si mohou do ciferníků, které použití komplikací umožňují, přidávat vlastní data, např. informace o počasí, oznámení, fitness trackery a další.
 
 AAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
 
-Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
+Komplikace slouží rovněž jako **zkratky** k různým funkcím AAPS. Klepnutím na komplikace můžete otevřít příslušné nabídky a dialogová okna AAPS (v závislosti na typu komplikace a nastavení).
 
-![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
+![Komplikace_Pro_Ciferníky](../images/Watchface_Complications_On_Watchfaces.png)
 
-### Complication Types
+### Typy komplikací
 
-AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
+Aplikace AAPS pro Wear OS poskytuje v závislosti na nastavených formátech pouze nezpracovaná (raw) data. Aplikace třetích stran se musí samy rozhodnout, jak vykreslit komplikace včetně jejich rozvržení, okrajů, barvy a písma. Z mnoha typů Wear OS komplikací, které jsou k dispozici, AAPS využívá:
 
-* `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Usually rendered inside a circle or small pill - one below another, or side by side. It is a very space-limited complication. AAPS tries to remove unnecessary characters to fit-in: by rounding values, removing leading and trailing zeroes from values, etc.
-* `LONG TEXT` - Contains two lines of text, about 20 characters each. Usually rendered inside a rectangle or long pill - one below another. It is used for more details and textual status.
-* `RANGED VALUE` - Used for values from predefined range, like a percentage. It contains icon, label and is usually rendered as circle progress dial.
-* `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
+* `SHORT TEXT` - Obsahuje dva řádky textu, každý o délce 7 znaků, někdy se označuje jako hodnota a popisek. Obvykle se vykreslí uvnitř kroužku nebo malého ováleného pole – pod sebou nebo vedle sebe. Je to prostorově velmi omezená komplikace. AAPS se snaží odstranit zbytečné znaky tak, aby se do zobrazení vešly: zaokrouhlením hodnot, odstraněním úvodních a koncových nul z hodnot atd.
+* ` DLOUHÝ TEXT `-Obsahuje dva řádky textu, každý o 20 znacích. Obvykle se vykreslují uvnitř obdélníku nebo dlouhého oválného pole pod sebou. Používá se pro další podrobnosti a text.
+* ` HODNOTA ROZSAHU `-Používá se pro hodnoty z předem definovaného rozsahu, například procento. Obsahuje ikonu, popisek a je obvykle vykreslen jako kruhový ukazatel průběhu.
+* ` VELKÝ OBRÁZEK `-Vlastní obrázek na pozadí, který lze použít (je-li podporován watchfacem) jako pozadí.
 
-### Complication Setup
+### Nastavení komplikací
 
-To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
+Chcete-li přidat komplikaci, dlouze přidržte ikonu ozubeného kola níže. Záleží, jak se konkrétní ciferník konfiguruje – buď klepněte na zástupné symboly nebo vstupte do nabídky nastavení ciferníku pro komplikace. Komplikace AAPS jsou seskupeny pod položkou nabídky AAPS.
 
-When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
+Při konfiguraci komplikací na ciferníku Wear OS zobrazí a filtruje seznam komplikací, které lze zobrazit ve vybraném místě pro komplikace na ciferníku. Nelze-li na seznamu nalézt konkrétní komplikace, je to pravděpodobně kvůli jejich typu, který nelze pro dané místo použít.
 
-### Complications provided by AAPS
+### Komplikace AAPS
 
 AAPS provides following complications:
 
-![AAPS_Complications_List](../images/Watchface_Complications_List.png)
+![Seznam_AAPS_Komplikací](../images/Watchface_Complications_List.png)
 
-* **BR, CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Basal Rate* on the first line and *Carbs on Board* and *Insulin on Board* on the second line.
-* **Blood Glucose** (`SHORT TEXT`, opens *Menu*): Displays *Blood Glucose* value and *trend* arrow on the first line and *measurement age* and *BG delta* on the second line.
-* **CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Carbs on Board* on the first line and *Insulin on Board* on the second line.
-* **CoB Detailed** (`SHORT TEXT`, opens *Wizard*): Displays current active *Carbs on Board* on the first line and planned (future, eCarbs) Carbs on the second line.
-* **CoB Icon** (`SHORT TEXT`, opens *Wizard*): Displays *Carbs on Board* value with a static icon.
-* **Full Status** (`LONG TEXT`, opens *Menu*): Shows most of the data at once: *Blood Glucose* value and *trend* arrow, *BG delta* and *measurement age* on the first line. On the second line *Carbs on Board*, *Insulin on Board* and *Basal Rate*.
-* **Full Status (flipped)** (`LONG TEXT`, opens *Menu*): Same data as for standard *Full Status*, but lines are flipped. Can be used in watchfaces which ignores one of two lines in `LONG TEXT`
-* **IoB Detailed** (`SHORT TEXT`, opens *Bolus*): Displays total *Insulin on Board* on the first line and split of *IoB* for *Bolus* and *Basal* part on the second line.
-* **IoB Icon** (`SHORT TEXT`, opens *Bolus*): Displays *Insulin on Board* value with a static icon.
-* **Uploader/Phone Battery** (`RANGED VALUE`, opens *Status*): Displays battery percentage of AAPS phone (uploader), as reported by AAPS. Displayed as percentage gauge with a battery icon that reflects reported value. It may be not updated in real-time, but when other important AAPS data changes (usually: every ~5 minutes with new *Blood Glucose* measurement).
+* **BR, CoB & IoB** (`KRÁTKÝ TEXT`, otevře *Menu*): zobrazuje *hodnotu bazálu* na prvním řádku a *aktuální množství sacharidů* a *aktivní množství inzulínu* na druhém řádku.
+* **Glykémie** (`KRÁTKÝ TEXT`, otevře *Menu*): znázorňuje *glykémii* , *trendovou* šipku na prvním řádku a *čas odečtu* a *hodnotu změny glykémie* na druhém řádku.
+* **CoB & IoB** (`KRÁTKÝ TEXT`, otevře *Menu*): zobrazuje *aktivní sacharidy* na prvním řádku *aktivní inzulín* na druhém řádku.
+* **Detailní CoB** (`KRÁTKÝ TEXT`, otevře *Wizard*): zobrazuje aktuálně aktivní sacharidy *aktivní sacharidy* na prvním řádku a plánované (budoucí, eCarbs) sacharidy na druhém řádku.
+* **Ikona CoB** (`KRÁTKÝ TEXT`, otevře *Wizard*): Zobrazuje *aktivní sacharidy* pomocí statické ikony.
+* **Úplný stav** (`DLOUHÝ TEXT`, otevře *Menu*): Zobrazí většinu údajů dohromady: *glykémii* a *trendovou* šipku, *hodnotu změny glykémie* a *čas odečtu* na prvním řádku. Na druhém řádku * aktivní sacharidy *, * aktivní inzulín * a * hodnotu bazálu *.
+* **Úplný stav (převrácené)** (`DLOUHÝ TEXT`, otevře *Menu*): Stejné hodnoty jako standardní *Úplný stav*, ale řádky jsou převrácené. Může být použit pro ciferníky, které ignorují jeden ze dvou řádků v `DLOUHÝ TEXT`
+* **Detailní IoB** (`KRÁTKÝ TEXT`, otevře *Bolus*): Zobrazuje celkové množství *aktivního inzulínu* na prvním řádku a celkové *IoB* z *bolusu* a *bazálu* na druhém řádku.
+* **Ikona IoB** (`KRÁTKÝ TEXT`, otevře *Bolus*): Zobrazuje *aktivní inzulín* jako statickou ikonu.
+* **Baterie Uploaderu/Telefonu** (`HODNOTA ROZSAHU`, otevře *Status*): Znázorňuje nabití baterie v procentech na AAPS telefonu (uploader), jak je uvedeno v AAPS. Zobrazí se jako jako procentuální ukazatel s ikonou baterie znázorňující hodnotu. Toto není zobrazováno v reálném čase, ale když se změní jiné důležité hodnoty AAPS (obvykle: každých ~5 minut s novým odečtem </em>glykémie</0> ).
 
-Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.
+Navíc existují tři druhy komplikací </code>VELKÝ OBRÁZEK</0> **Tmavá tapeta**, **Šedá tapeta** a**Světlá tapeta**, zobrazující statickou tapetu AAPS.
 
-### Complication related settings
+### Nastavení související s komplikacemi
 
-* **Complication Tap Action** (default `Default`): Decides which dialog is opened when user taps complication: 
-  * *Default*: action specific to complication type *(see list above)*
-  * *Menu*: AAPS main menu
-  * *Wizard*: bolus wizard - bolus calculator
-  * *Bolus*: direct bolus value entry
-  * *eCarb*: eCarb configuration dialog
-  * *Status*: status sub-menu
-  * *None*: Disables tap action on AAPS complications
-* **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on the font, and that can be very watchface-specific. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
+* **Akce po klepnutí na komplikaci** (výchozí `Výchozí`): Rozhodne, které dialogové okno se otevře, když uživatel poklepe na komplikaci: 
+  * *Výchozí*: specifické akce pro typ kompilace *(viz seznam výše)*
+  * *Menu*: Hlavní nabídka AAPS
+  * *Wizard*: bolusový průvodce – bolusová kalkulačka
+  * *Bolus*: přímé zadávání bolusu
+  * *eCarb*: dialogové okno konfigurace eCarb
+  * *Status*: dílčí nabídka stavu
+  * *None*: Zakáže akci klepnutím na komplikace AAPS
+* **Unicode v komplikacích** (výchozí hodnota `On`): Pokud je`On`, komplikace bude používat Unicode znaky pro symboly jako `Δ` Delta, `⁞` vertikální oddělovač teček nebo `⎍` symbol hodnoty bazálu. Vykreslování závisí na typu písma, které může být u každého ciferníku jiné. Tato volba umožňuje symboly Unicode `Vypnout` v případě potřeby – pokud písmo používané vlastním ciferníkem tyto symboly nepodporuje – aby se zabránilo chybám v zobrazení grafiky.
 
 ## Wear OS Tiles
 
@@ -296,72 +296,51 @@ To link the button on the Samsung Watch 4 go to `Settings > Advanced Features > 
 
 When you use xDrip and have xDrip installed on the watch, the 'AAPS Snooze Alert' shortcut will also Snooze any xDrip alarm.
 
-## Performance and battery life tips
+## Tipy pro lepší chod a delší výdrž baterie
 
-Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+Wear OS hodinky jsou zařízení s velmi omezenou výdrží baterie. Velikost hodinek omezuje kapacitu vestavěné baterie. Navzdory nedávnému vylepšení na straně hardwaru i softwaru hodinky Wear OS stále vyžadují denní nabíjení.
 
-If an experienced battery span is shorter than a day (from dusk to dawn), here are some tips to troubleshoot the issues.
+Pokud je výdrž baterie hodinek kratší než jeden den (od rána do večera), existuje pár tipů, jak se s tím vypořádat.
 
-Main battery-demanding areas are:
+Baterii nejvíce vybíjejí:
 
-* Active display with a backlight on (for LED) or in full intensity mode (for OLED)
-* Rendering on screen
-* Radio communication over Bluetooth
+* Aktivní displej se zapnutým podsvícením (LED), nebo max. intenzita (OLED)
+* Vykreslování na obrazovce
+* Bezdrátová komunikace přes Bluetooth
 
-Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in *display time* area:
+Protože nemůžeme ohrozit komunikaci (potřebujeme aktuální data) a chceme, aby se zobrazovaly nejnovější údaje, většinu optimalizací lze provést v oblasti * doba zobrazení *:
 
-* Stock watchfaces are usually better optimized than custom one, downloaded from the store.
-* It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
-* Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
-* Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](Watchfaces-watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
-* Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
-* Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
-* Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
-* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
-* **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+* Originální ciferník je obvykle lépe optimalizován než vlastní, stažený z obchodu.
+* Je lepší použít ciferníky, které omezují množství přenesených dat v režimu neaktivní/ztlumený režim.
+* Uvědomte si, že při používaní dalších komplikací, jako jsou widgety počasí třetích stran nebo jiné, využíváte data z externích zdrojů.
+* Začněte s jednoduššími ciferníky. Přidejte pouze jednu komplikaci a sledujte, jaký má vliv na výdrž baterie.
+* Zkuste pro ciferník AAPS použít motiv **Tmavý** a také [**Odpovídající oddělovač**](Watchfaces-watchface-settings). Na zařízeních s OLED to omezí počet zapnutých pixelů a omezí vypalování.
+* Zkuste, co lépe funguje na vašich hodinkách: Originální ciferník AAPS nebo jiný s AAPS komplikací.
+* Sledujte několik dní, s různými profily aktivit. Většina hodinek aktivuje obrazovku při pohledu na ně, pohybu a dalších spouštěčích souvisejících s užíváním.
+* Zkontrolujte globální nastavení systému, které ovlivňuje výkon: oznámení, časový limit podsvícení/aktivní zobrazení, je-li aktivována služba GPS apod.
+* Zkontrolujte [seznam doporučených hodinek a telefonů](Phones-list-of-tested-phones) a [zeptejte se ve skupině ](../Where-To-Go-For-Help/Connect-with-other-users.md) na další zkušenosti spojené s úsporou baterie.
+* **Nemůžeme garantovat, že data zobrazena na ciferníku nebo komplikaci jsou aktuální**. Konečné rozhodnutí o tom, kdy aktualizovat ciferník nebo komplikaci, je na operačním systému. I když se aplikace AAPS aktualizují, systém se může rozhodnout odložit nebo ignorovat aktualizace v zájmu úspory baterie. V případě pochybností nebo vybité baterie – vždy zkontrolujte hlavní AAPS v telefonu.
 
 (Watchfaces-troubleshooting-the-wear-app)=
 
-## Troubleshooting the wear app:
+## Řešení problémů s wear aplikací:
 
-* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
-* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
-* If Complications does not update data - check first if AAPS watchfaces work at all.
+* Někdy pomůže znovu sesynchronizovat aplikace do hodinek, i když to ručně může být poněkud zdlouhavé: Android wear > Ikona ozubeného kola > Název hodinek > Synchronizovat aplikace.
+* Povolte ADB ladění ve vývojářských možnostech (na hodinkách), připojte hodinky k počítači přes USB a spusťte Wear aplikaci, až budete mít na počítači otevřené Android Studio.
+* Pokud se komplikace neaktualizují – nejdříve zkontrolujte, zda vůbec AAPS ciferník funguje.
 
 ## Garmin
 
-Therer are a couple of watch faces for Garmin that integrate with xDrip or Nightscout on the [Garmin ConnectIQ store](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30). AAPS Glucose Watch integrates directly with AAPS. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to AAPS. It's not available in the ConnectIQ store yet, since the necessary AAPS plugin is only available from AAPS 3.2. Please contact robert.b on [discord](https://discord.com/invite/4fQUWHZ4Mw) if you want to try it.
+There are a couple of watch faces for Garmin that integrate with xDrip or Nightscout on the [Garmin ConnectIQ store](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30).
 
-![Screenshot](../images/Garmin_WF.png) ![Screenshot](../images/Garmin_WF-annotated.png)
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with AAPS. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to AAPS. It is available in the ConnectIQ store, the necessary AAPS plugin is only available from AAPS 3.2.
+
+![Snímek](../images/Garmin_WF.png) ![Snímek](../images/Garmin_WF-annotated.png)
 
 ## Additional AAPS custom watchfaces are also available
+
+[Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
 
 If you want to build your own watchface, follow the [guide here](../Usage/Custom_Watchface_Reference.md).
 
 Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into Github. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
-
-Here you can download Zip-Files with custom watchfaces made by other users:
-
-Grid Layout (sort by ascending alphabetical order)
-
-|                                                                                                                                                                            |                                                                                                                                                                           |                                                                                                                                                                       |                                                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Watchface AAPS_V2](../ExchangeSiteCustomWatchfaces/AAPS_V2-CustomWatchface.png)   
-**AAPS_V2**](../ExchangeSiteCustomWatchfaces/AAPS_V2.zip)                            | [![AAPS](../ExchangeSiteCustomWatchfaces/AAPS-CustomWatchface.png)   
-**AAPS**](../ExchangeSiteCustomWatchfaces/AAPS.zip)                                                 | [![Cockpit](../ExchangeSiteCustomWatchfaces/Cockpit-CustomWatchface.png)   
-**Cockpit**](../ExchangeSiteCustomWatchfaces/Cockpit.zip)                                 | [![SteamPunk](../ExchangeSiteCustomWatchfaces/SteamPunk-CustomWatchface.png)   
-**SteamPunk**](../ExchangeSiteCustomWatchfaces/SteamPunk.zip)                         |
-| [![AIMICO](../ExchangeSiteCustomWatchfaces/AIMICO-V1_1-CustomWatchface.png)   
-**AIMICO**](../ExchangeSiteCustomWatchfaces/AIMICO-V1_1.zip)                                | [![Analog G-Watch](../ExchangeSiteCustomWatchfaces/Analog_G-Watch-CustomWatchface.png)   
-**Analog G-Watch**](../ExchangeSiteCustomWatchfaces/Analog_G-Watch.zip)         | [![Digital G-Watch](../ExchangeSiteCustomWatchfaces/Digital_G-Watch-CustomWatchface.png)   
-**Digital G-Watch**](../ExchangeSiteCustomWatchfaces/Digital_G-Watch.zip) | [![SimpleDigital](../ExchangeSiteCustomWatchfaces/SimpleDigital_v1.3-CustomWatchface.png)   
-**SimpleDigital**](../ExchangeSiteCustomWatchfaces/SteamPunk.zip)        |
-| [![Gears](../ExchangeSiteCustomWatchfaces/Gears-CustomWatchface.jpg)   
-**Gears**](../ExchangeSiteCustomWatchfaces/Gears.zip)                                              | [![Gota](../ExchangeSiteCustomWatchfaces/Gota-CustomWatchface.png)   
-**Gota**](../ExchangeSiteCustomWatchfaces/Gota_v2.4.zip)                                            | [![LuckyLoopKoeln](../ExchangeSiteCustomWatchfaces/LuckyLoopKoeln-CustomWatchface.png)   
-**LuckyLoopKoeln**](../ExchangeSiteCustomWatchfaces/LuckyLoopKoeln.zip)     | [![Robby watchface](../ExchangeSiteCustomWatchfaces/Robby_watchface-CustomWatchface.png)   
-**Robby watchface**](../ExchangeSiteCustomWatchfaces/Robby_watchface.zip) |
-| [![DigitalBigGraph](../ExchangeSiteCustomWatchfaces/DigitalBigGraph-CustomWatchface.png)   
-**DigitalBigGraph**](../ExchangeSiteCustomWatchfaces/DigitalBigGraph_v1.5.zip) | [![PinkFloydTheWall](../ExchangeSiteCustomWatchfaces/PinkFloydTheWall-CustomWatchface.png)   
-**PinkFloydTheWall**](../ExchangeSiteCustomWatchfaces/PinkFloydTheWall.zip) |                                                                                                                                                                       |                                                                                                                                                                       |

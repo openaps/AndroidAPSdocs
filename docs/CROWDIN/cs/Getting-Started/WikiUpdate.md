@@ -111,7 +111,7 @@
 - New [Local Profile plugin](Config-Builder-local-profile)
 - [Sample Setup](../Getting-Started/Sample-Setup.md) - update Dexcom G6
 - [Version 2.6.0](Releasenotes-version-2-6-0) - major new features
-- [Wear complications](../Configuration/Watchfaces.md)
+- [Komplikace pro Wear](../Configuration/Watchfaces.md)
 
 ## January 2020
 
@@ -152,22 +152,22 @@
 - [Dexcom G6 konkrétní řešení problémů](DexcomG6-dexcom-g6-specific-troubleshooting)
 - [Objectives update version 2.5](../Usage/Objectives.md)
 - [Preferences update](../Configuration/Preferences.md)
-- [SGLT-2 inhibitors - do not use when looping](module-no-use-of-sglt-2-inhibitors)
+- [Inhibitory SGLT-2 - nepoužívat při smyčce](module-no-use-of-sglt-2-inhibitors)
 - [SMS Commands Troubleshooting](SMS-Commands-troubleshooting)
-- [xDrip - update G6 transmitter replacement](xdrip-replace-transmitter)
+- [xDrip - aktualizace výměna G6 vysílače](xdrip-replace-transmitter)
 
 ## září 2019
 
 - [Automate](../Usage/Automation.md)
 - [Bolus calculator](Screenshots-wrong-cob-detection) - slow carb absorption
-- [Nightscout security](Nightscout-security-considerations)
+- [Zabezpečení Nightscoutu](Nightscout-security-considerations)
 - [Profile timeshift](Profiles-time-shift) (more details)
 - [Vzdálené monitorování](../Children/Children.md)
-- [What is a closed loop system?](../Getting-Started/ClosedLoop.md)
+- [Co je systém uzavřené smyčky?](../Getting-Started/ClosedLoop.md)
 
 ## srpen 2019
 
 - Dexcom G6 patched app region
 - [Dexcom G6 new transmitter](xdrip-connect-g6-transmitter-for-the-first-time) ("firefly" / 8G...)
 - [What do I need?](index-what-do-i-need) - new structure & additional information
-- New structure
+- Nová struktura

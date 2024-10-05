@@ -24,7 +24,7 @@ Avant de construire votre plateforme, vous devez faire beaucoup de lecture pour 
 
 [Quelles conclusions pouvons-nous tirer de l'étude de la sensibilité de l'insuline en utilisant la fonction Autosens de #OpenAPS ? https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/](https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
 
-<https://seemycgm.com/2017/10/29/fine-tuning-settings/>
+[https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
 ## Articles de fond concernant la boucle fermée DIY
 

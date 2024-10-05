@@ -2,20 +2,16 @@
 
 מצב התרגום מעודכן פעם בשעה ומשקף את מצב התרגום ב-Crowdin.
 
-:::{tip}
+```{tip}
+Be careful the percentage of proofreading must be lower then the percentage of translations but they decided to show it on top of the translations.
+It's better to look only at the percentage level of translations to see if work is to be done.
+```
 
-Be careful the percentage of proofreading must be lower then the percentage of translations but they decided to show it on top of the translations. It's better to look only at the percentage level of translations to see if work is to be done.
-
-:::
-
-:::{admonition} needed time for final publication
-:class: note
-
+```{admonition} needed time for final publication
 After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
 
 The acceptance of the PR is a manual task which will be done es fast as possible.
-
-:::
+```
 
 ## סטטוס תרגום האפליקציה
 

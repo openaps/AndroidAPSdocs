@@ -20,7 +20,7 @@ At some point it will be suggested that you make a pull request (PR), which is h
 
 Pour notre exemple, nous allons faire une modification à AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
 
-1. Accédez à https://github.com/openaps/AndroidAPSdocs et appuyez sur Fork en haut à droite pour faire votre propre copie du référentiel.
+1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
 
 ![Fork repo](./images/PR0.png)
 
@@ -88,40 +88,46 @@ We try to avoid further levels of headlines.
 
 ### Formatage du texte
 
-- gras : `**text**`
-- italique : `*text*`
+- **bold**: `**text**`
+- *italic*: `*text*`
+- ***bold italic***: `***text***`
 
-### Liste triée
+### Ordered list
 
-:::
+    1. first
+    1. second
+    1. troisième
+    
 
 1. premier
 2. deuxième
-3. troisième :::
+3. troisième
 
-4. premier
+### Unordered list
 
-5. deuxième
-6. troisième
-
-### Liste non-triée
-
-:::
+    - one element
+    - another element
+    - and another element
+    
 
 - un élément
-- un autre élément
-- et un autre élément :::
-
-- un élément
-
 - un autre élément
 - et un autre élément
 
-### liste à plusieurs niveaux
+### Multi level list
 
 Vous pouvez insérer des "sous-listes" dans les listes en ajoutant 4 espaces de plus à droite que le niveau précédent.
 
-:::
+    1. first
+    1. second
+    1. third
+      1. one element
+      1. another element
+      1. and another element
+    1. four
+    1. five
+    1. six
+    
 
 1. premier
 2. deuxième
@@ -131,18 +137,7 @@ Vous pouvez insérer des "sous-listes" dans les listes en ajoutant 4 espaces de 
     3. et un autre élément
 4. quatre
 5. cinq
-6. six :::
-
-7. premier
-
-8. deuxième
-9. troisième 
-    1. un élément
-    2. un autre élément
-    3. et un autre élément
-10. quatre
-11. cinq
-12. six
+6. six
 
 ### Images
 
@@ -207,33 +202,48 @@ Furthermore you can add collapsing notes for detailed information which would us
 
 #### Notes
 
-:::: :::{admonition} Note :class: note
+    ```{admonition} Note headline
+    :class: note
+    This is a note.
+    ```
+    
 
-This is a note. ::: ::::
+```{admonition} Note headline :class: note This is a note.
 
-:::{admonition} Note :class: note
+    <br />#### Warnings
+    
+    ````
+    ```{admonition} Warning
+    :class: warning
+    This is a warning.
+    
 
-This is a note. :::
+    ```{admonition} Warning headline 
+    :class: warning
+    This is a warning.
+    ```
+    
+    #### Collapsing Notes
+    
+    
 
-#### Warnings
+    {admonition} further detailed readings for interested readers
+    :class: dropdown
+    
+    This admonition has been collapsed,
+    meaning you can add longer form content here,
+    without it taking up too much space on the page.
+    
 
-:::: :::{admonition} Warning :class: warning
+````
 
-This is a warning. ::: ::::
+```{admonition} further detailed readings for interested readers :class: dropdown This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page.
 
-:::{admonition} Warning :class: warning
+```
 
-This is a warning. :::
+## Tables
 
-#### Collapsing Notes
-
-:::: :::{admonition} further detailed readings for interested readers :class: dropdown
-
-This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page. ::: ::::
-
-:::{admonition} further detailed readings for interested readers :class: dropdown
-
-This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page. :::
+Avoid using tables with long texts as the contents is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
 
 ## Style Guide
 
@@ -263,7 +273,7 @@ Find an A-Z of alternative words to make your writing easier to understand here:
 
 #### Privacy/licensing concerns:
 
-Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure Youtube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
+Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure YouTube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
 
 #### Keep sentences short, get to the point
 
@@ -329,11 +339,11 @@ There are times when it might be appropriate to use a passive.
 
 #### Avoid nominalisations
 
-A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalisations are formed from verbs.
+A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
 
 For example:
 
-| Verb      | Nominalisation |
+| Verb      | Nominalization |
 | --------- | -------------- |
 | complete  | completion     |
 | introduce | introduction   |
@@ -366,7 +376,7 @@ In the bulleted list above, each point is a complete sentence so they each start
 
 - And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
 
-#### Optimising writing style by purpose
+#### Optimizing writing style by purpose
 
 To keep the documentation clear and short, we write different sections of the documentation in different styles.
 

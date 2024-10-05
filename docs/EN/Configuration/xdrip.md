@@ -25,10 +25,10 @@ If the checkbox for `Automatic Calibration` is checked, activate `Download treat
 
 Tap `Extra Options`(8)
 
-:::{admonition} Safety warning
+```{admonition} Safety warning
 :class: warning
-You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.  
-:::
+You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB. 
+```
 
 Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill data` (11). 
 
@@ -233,10 +233,10 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 
 - Start the sensor in xDrip+.
 
-  :::{admonition} Safety warning
+  ```{admonition} Safety warning
   :class: warning
   Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.  
-  :::
+  ```
 
   → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
 

@@ -10,7 +10,7 @@
 
 ## Технические характеристики компьютера и программного обеспечения для построения AAPS
 
-- Пользуйтесь **[версией Android Studio под названием "Hedgehog"(2023.1.1) или "Iguana"(2023.2.1)](https://developer.android.com/studio/)** для сборки apk. Старые версии Android Studio требуется сначала обновить!
+- Please use the **[Android Studio version called at least Hedgehog or one more recent like Iguana, Jellyfish, and Koala](https://developer.android.com/studio/)** to build the apk. <u>**Do not use the Ladybug version.**</u> Older versions of Android Studio need to be updated first!
 - [32-разрядные системы Windows](troubleshooting_androidstudio-unable-to-start-daemon-process) не поддерживаются в Android Studio. Имейте в виду, что и 64-разрядная процессор, и 64-разрядная ОС являются обязательным условием. Если ваша система не соответствует этому условию, следует изменить аппаратное или программное обеспечение или всю систему.
 
 <table class="tg">
@@ -58,11 +58,11 @@
 
 ## Пошаговое руководство по созданию приложения AAPS
 
-:::{admonition} ВНИМАНИЕ
+```{admonition} WARNING
 :class: warning
 If you have built AAPS before, you don't need to take all the following steps again.
-Перейдите прямо к [руководству по обновлению](../Installing-AndroidAPS/Update-to-new-version)!
-:::
+Please jump directly to the [update guide](../Installing-AndroidAPS/Update-to-new-version)!
+```
 
 В общем виде шаги по созданию файла **AAPS** apk следующие:
 
@@ -84,11 +84,12 @@ If you have built AAPS before, you don't need to take all the following steps ag
 
 ### Установите git (если у вас его нет)
 
-:::{admonition} Почему Git?
+```{admonition} Why Git? 
+:class: dropdown
 
-Git известен как “_Versioning Control System_” (VCS) (система контроля версий)
-Git — это программа, позволяющая отслеживать изменения в коде и сотрудничать с разработчиками. Вам понадобится Git для переноса копии исходного кода **AAPS** с веб-сайта Github на свой локальный компьютер. Затем вы будете использовать Git на своем компьютере для сборки приложения **AAPS** (apk).
-:::
+Git is known as a “_Versioning Control System_” (VCS).\
+Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Git on your computer to build the **AAPS** application (apk). 
+```
 
 #### Шаги по установке Git
 
@@ -116,16 +117,16 @@ Git — это программа, позволяющая отслеживать
 
 - \*\* Следует постоянно находиться в Сети во время выполнения следующих шагов, так как Android Studio загружает несколько обновлений\*\*
 
-:::{admonition} Что такое Android Studio?
-:class: выпадающий
-Android Studio — это программа, которая запускается на вашем компьютере. Она позволяет загружать исходный код из Интернета (используя Git) и создавать приложения для смартфона (и смарт-часов). "Сломать" текущую версию **AAPS** которая работает у вас на смартфоне, создав новое или обновленное приложение на ПК с помощью Android Studio невозможно, это совершенно разные процессы.
-:::
+```{admonition} What is Android Studio?
+:class: dropdown
+Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes. 
+```
 
-Следующие снимки экрана были сделаны на версии **Hedgehog** (ёжик) Android Studio.
+The following screenshots have been taken from Android Studio Version **Hedgehog**, they should be identical with more recent versions.
 
 Самая важная заповедь при установке Android Studio: Будьте терпеливы! Во время установки и настройки Android Studio загружает много элементов, которые отнимают время.
 
-Скачайте новую версию Android Studio [**отсюда**](https://developer.android.com/studio#downloads), найдите её в папке загрузок браузера и установите на свой компьютер:
+**Download a supported version of Android Studio (Hedgehog, Iguana, Jellyfish or Koala - not Ladybug)** from [**here**](https://developer.android.com/studio/archive), locate it in your browser downloads folder, and install it on your computer:
 
 ![Загрузка Android Studio](../images/Building-the-App/01_InstallAS_Hedgehog.png)
 
@@ -169,10 +170,11 @@ Android Studio — это программа, которая запускает�
 
 Программное обеспечение должно автоматически выбрать недостающие данные (SDK) и директорию установки.
 
-:::{admonition} Что такое Android SDK?
+```{admonition} What is an Android SDK?
+:class: dropdown
 
-Чтобы запустить **AAPS** на телефоне, приложение должно интегрироваться с системой Android. Android предоставляет “_software development kits_” (пакеты разработки ПО) (SDK), которые позволяют **AAPS** взаимодействовать с операционной системой Android.
-:::
+In order to run **AAPS** on the phone the application needs to integrate with Android itself. Android provides “_software development kits_” (SDK) which allow apps like **AAPS** to interface with an Android operating system.
+```
 
 Пакет SDK относится **не** к версии Android на телефоне, а к самой сборке **AAPS**. **AAPS** версии 3.2 (и новее) строится поверх API 34, которая автоматически выбирается в версии **Hedgehog** **Android Studio**. Поэтому просто нажмите "Далее":
 
@@ -204,13 +206,14 @@ Android Studio — это программа, которая запускает�
 
 ### Загрузите код AAPS
 
-:::{admonition} Почему загрузка кода AAPS занимает много времени?
+```{admonition} Why can it take a long time to download the AAPS code?
+:class: dropdown
 
-Когда **AAPS** загружается первый раз, Android Studio подключается к веб-сайту Github, чтобы скачать исходный код для **AAPS**. Это займет около 1 минуты.
+The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute. 
 
-Android Studio затем будет использовать **Gradle** (инструмент разработки в Android studio) для определения других компонентов для установки.
+Android Studio will then use **Gradle** (a development tool in  Android studio) to identify other components needed to install these items on your computer. 
 
-:::
+```
 
 На экране приветствия Android Studio убедитесь, что "**Проекты**" (1) подсвечены слева. Затем нажмите "**Получить из VCS**" (2) справа:
 
@@ -234,10 +237,10 @@ Context | Edit Context
 
 - Есть смысл проверить место сохранения клонированного кода (директорию по умолчанию) (4).
 
-:::{admonition} ИНФОРМАЦИЯ
-:class: информация
-Запишите директорию. Здесь хранится исходный код!
-:::
+```{admonition} INFORMATION
+:class: information
+Make a note of the directory. It is where your sourcecode is stored!
+```
 
 - Теперь нажмите кнопку "Клонировать" (5).
 
@@ -275,10 +278,11 @@ Context | Edit Context
 
 ![загрузка взаимозависимостей компонентов\_AS](../images/Building-the-App/19_downloading_dependencies.png)
 
-:::{admonition} НИКОГДА НЕ ОБНОВЛЯЙТЕ GRADLE!
+```{admonition} NEVER UPDATE GRADLE!
+:class: warning
 
-Android Studio может рекомендовать обновить систему gradle. **Никогда не обновляйте gradle!** Это может привести к трудностям.
-:::
+Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
+```
 
 _На ваше усмотрение_ - Если хотите очистить всплывающее окно **"рекомендуется обновить проект"**, нажмите на синий текст "Больше" (1). В диалоговом окне выберите "Don't rask for this project" (2).
 
@@ -325,10 +329,11 @@ _На ваше усмотрение_ - Если хотите очистить в
 
 ### Построение подписанного приложения AAPS apk
 
-:::{admonition} Зачем "подписывать" приложение AAPS?
+```{admonition} Why does the AAPS app need to be "signed"?
+:class: dropdown
 
-Android требует, чтобы каждое приложение было _подписано_, чтобы гарантировать, что позже оно может быть обновлено только из того же надежного источника, который выпустил исходное приложение. Подробнее об этом по [этой ссылке](https://developer.android.com/studio/publish/app-signing.html#generate-key). Для наших целей это просто означает, что мы генерируем файл подписи или "хранилища ключей" и используем его при создании приложения **AAPS**.
-:::
+Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
+```
 
 - В строке меню нажмите кнопку "Создать" (1) и выберите "Генерировать подписанный пакет/APK (2)
 
@@ -340,19 +345,20 @@ Android требует, чтобы каждое приложение было _�
 
 - На следующем экране убедитесь, что "Module" установлен в "AAPS.app" (1).
 
-(Сборка-APK-wearapk)=
-:::{admonition} ИНФОРМАЦИЯ!
+(Building-APK-wearapk)=
+
+```{admonition} INFORMATION!
 :class: информация
 Если вы хотите создать apk для часов, следует выбрать AAPS.wear!
-:::
+```
 
 - Нажмите "Создать новый..." (2) для создания хранилища ключей.
 
-:::{admonition} ИНФОРМАЦИЯ!
-:class: информация
-Файл хранилища ключей требуется создать только один раз.
+```{admonition} INFORMATION!
+:class: information
+You will only need to create the keystore once.
 If you have build AAPS before, do NOT create a new keystore but select your existing one!
-:::
+```
 
 **_Примечание:_** Хранилище ключей - это файл, в котором хранится информация о подписи приложения. Он зашифрован и информация защищена паролями.
 
@@ -368,10 +374,10 @@ If you have build AAPS before, do NOT create a new keystore but select your exis
 
 Вернёмся на предыдущий экран. Здесь показано выбранное вами расположение для сохранения файла хранилища ключей.
 
-:::{admonition} ВНИМАНИЕ!
-:class: предупреждение
-Обратите внимание на то, где хранится ваш файл с ключами. Они понадобятся при создании следующего обновления AndroidAPS!
-:::
+```{admonition} WARNING!
+:class: warning
+Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AndroidAPS update!
+```
 
 Теперь выберите простой пароль (запишите его), введите в поле пароля (1), и подтвердите (2).  Примечание: Пароли для хранилища ключей и ключей не должны быть сложными. Если вы потеряете пароль, смотрите [решение проблем при потере ключей](troubleshooting_androidstudio-lost-keystore).
 
@@ -379,10 +385,10 @@ If you have build AAPS before, do NOT create a new keystore but select your exis
 
 Теперь вам нужен пароль для ключа. Для простоты можете использовать тот же пароль, что и для хранилища ключей выше. Введите пароль (4) и подтвердите (5).
 
-:::{admonition} ВНИМАНИЕ!
-:class: предупреждает
-Запишитете эти пароли! You will need them when you build the next AAPS update!
-:::
+```{admonition} WARNING!
+:class: warning
+Note down these passwords! You will need them when you build the next AAPS update!
+```
 
 Срок действия (6) 25 лет по умолчанию, оставьте его как есть.
 

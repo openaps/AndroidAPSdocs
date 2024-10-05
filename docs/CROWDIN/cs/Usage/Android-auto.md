@@ -2,14 +2,14 @@
 
 **AAPS** is capable of sending you information about your current status as a message, directly into Android Auto in your car.
 
-:::{admonition} version and last change information :class: dropdown date of last edit: 07/05/2023
+```{admonition} version and last change information :class: dropdown date of last edit: 07/05/2023
 
 versions used for documentation:
 
 * AAPS 3.2.0-dev-i
-* Android Auto: 9.3.631434-release :::
+* Android Auto: 9.3.631434-release ```
 
-## Requirements
+## Požadavky
 
 **AAPS** uses a feature of Android Auto which allows messages from apps on the mobile to be routed to the display of Auto Audio in the car.
 
@@ -26,15 +26,15 @@ That means that:
 
 Open 3-dot-menu on top right of **AAPS** home screen and select **Preferences**
 
-![Use system notifications for alerts and notifications](../images/android_auto_02.png)
+![Používat systémové notifikace pro výstrahy a oznámení](../images/android_auto_02.png)
 
 In **Local Alerts** activate **Use system notifications for alerts and notifications**
 
-![Use system notifications for alerts and notifications](../images/android_auto_03.png)
+![Používat systémové notifikace pro výstrahy a oznámení](../images/android_auto_03.png)
 
 Please check now that you get notifications from **AAPS** on the phone before you walk to your car!
 
-![Use system notifications for alerts and notifications](../images/android_auto_04.png)
+![Používat systémové notifikace pro výstrahy a oznámení](../images/android_auto_04.png)
 
 (Android-auto-AAPS-settings-in-android-auto-app-on-your-phone)=
 
@@ -72,7 +72,7 @@ In the **developer settings** enable the "Unknown sources".
 
 ![Enable developer mode](../images/android_auto_10.png)
 
-Now you can quit developer mode if you want. Tap three dots menu on the top right to do so.
+Now you can quit developer mode if you want. Chcete-li jej opustit, klepněte na tři tečky vpravo nahoře.
 
 ## Show notifications in car
 
@@ -84,6 +84,6 @@ Your CGM data will be shown as follows:
 
 ![AAPS CGM data on Android Auto](../images/android_auto_01.png)
 
-## Troubleshooting:
+## Poradce při potížích:
 
 * If you don't see the notification, check if you [allowed AAPS to show notifications](Android-auto-AAPS-settings-for-android-auto) in Android and if [Android Auto has access rights to notifications](Android-auto-AAPS-settings-in-android-auto-app-on-your-phone).

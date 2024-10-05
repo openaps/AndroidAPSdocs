@@ -1,44 +1,43 @@
-# Dexcom G7
+# Dexcom G7 and ONE+
 
 
 ## Grundlegendes im Voraus
 
-Seit Ende Oktober 2022 ist der Dexcom G7, nachdem er die CE-Zertifizierung im Frühjahr 2022 erhalten hatte, verfügbar.
-
-Der G7 glättet weder in der (Dexcom) App noch im Lesegerät die Glukosewerte. Dies ist anders als es beim G6 war. Mehr Details dazu findest Du [hier](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. Mehr Details dazu findest Du [hier](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
-:::{admonition} [Glättung](../Usage/Smoothing-Blood-Glucose-Data)
-:class: warning **Exponentielle Glättung** **MUSS** aktiviert werden, um die G7-Werte sinnvoll nutzen zu können.  
-:::
+```{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
+:class: warning
+**Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
+```
 
 ## 1.  Gepatchte Dexcom G7 App (DiAKEM)
 
-**Hinweis: AAPS 3.2.0.0 oder höher ist erforderlich!**
+**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
 
 ### Installiere eine neue gepatchte (!) G7-App und starte den Sensor
 
-Eine gepatchte Dexcom G7 App (DiAKEM) ermöglicht den Zugriff auf die Dexcom G7 Daten. Dies ist nicht die BYODA-App. BYODA kann derzeit keine Daten direkt vom G7 empfangen.
+A patched Dexcom G7 app (DiAKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
-Wenn Du bisher die originale Dexcom-App genutzt hast, musst Du diese im ersten Schritt nun deinstallieren. Wenn Du den Sensor-Kopplungscode noch kennst, kannst Du eine laufende Sensorsitzung weiterführen. Bitte merke ihn Dir daher, bevor Du die originale G7-App deinstallierst.
+Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
 
-Lade die gepatchte APK [hier](https://github.com/authorgambel/g7/releases) herunter und installiere sie.
+Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
 
-Gebe den Sensor Code (Kopplungscode) in der gepatchten App ein.
+Enter sensor code in the patched app.
 
-Beachte die allgemeinen Empfehlungen zur CGM-Hygiene und den empfohlenen Sensor-Tragestellen [hier](../Hardware/GeneralCGMRecommendation.md).
+Follow the general recommendations for CGM hygiene and sensor placement found [here](../Hardware/GeneralCGMRecommendation.md).
 
-Nach der Aufwärmphase werden die Glukosewerte wie üblich in der G7-App angezeigt.
+After the warm-up phase, the values are displayed as usual in the G7 app.
 
 ### Konfiguration in AAPS
 
-Zur Konfiguration von AAPS
+For the configuration in AAPS
 - Wähle 'BYODA' in der [Konfiguration als BZ-Quelle](../Configuration/Config-Builder.md#bg-source) (auch wenn es nicht die gepatchte G7-App ist!)
 
 - Sollte AAPS keine Werte empfangen, wechsel auf eine andere BZ-Quelle und dann wieder zurück auf 'BYODA'. Damit löst Du Berechtigungsabfrage zum Datenaustausch zwischen AAPS und BYODA aus.
 
-## 2. xDrip+ (direkte Verbindung zum G7)
+## 2. xDrip+ (direct connection to G7 or ONE+)
 
 - Folge den Anweisungen: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
 - Wähle xDrip+ in der [KONFIGURATION, BZ-Quelle](../Configuration/Config-Builder.md#bg-source) aus

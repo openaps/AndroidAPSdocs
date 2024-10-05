@@ -1,23 +1,22 @@
-# Dexcom G7
+# Dexcom G7 and ONE+
 
 
-## Fundamental in advance
+## תחילה הערות
 
-In spring 2022, the Dexcom G7 received its CE certificate and was sold at the end of October '22.
-
-Noteworthy is the fact that the G7 system, compared to the G6, does not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. [לפרטים נוספים על כך](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
-:::{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
-:class: warning **Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 values.  
-:::
+```{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
+:class: warning
+**Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
+```
 
-## 1.  Patched Dexcom G7 App (DiAKEM)
+## 1.  יישום Dexcom G7 ששונתה (Patched) (DiAKEM)
 
-**Note: AAPS 3.2.0.0 or higher is required!**
+**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
 
-### Install a new patched (!) G7 app and start the sensor
+### התקינו אפליקציית G7 ששונתה (!) והפעילו את החיישן
 
 A patched Dexcom G7 app (DiAKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
@@ -31,24 +30,24 @@ Follow the general recommendations for CGM hygiene and sensor placement found [h
 
 After the warm-up phase, the values are displayed as usual in the G7 app.
 
-### Configuration in AAPS
+### תצורה ב-AAPS
 
 For the configuration in AAPS
-- Select 'BYODA' in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source) - even if it is not the BYODA app!
+- בחרו 'BYODA' [בבונה התצורה, מקור ערכי הסוכר](../Configuration/Config-Builder.md#bg-source) - אפילו אם זה לא היישום BYODA!
 
-- If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
+- אם ב-AAPS לא מתקבלים ערכים, החליפו למקור ערכי סוכר אחרים ואז חזרו ל'BYODA' כדי לגרום ל-AAPS לחפש נתונים מ-BYODA.
 
-## 2. xDrip+ (direct connection to G7)
+## 2. xDrip+ (direct connection to G7 or ONE+)
 
-- Follow the instructions here: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- Select  xDrip+ in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+- עקבו אחר ההוראות כאן: [Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
+- בחרו את xDrip+ ב[בונה התצורה, מקור נתוני סוכר](../Configuration/Config-Builder.md#bg-source).
 
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md)
+- התאימו את ההגדרות של xDrip+ לפי ההסברים בדף [ההגדרות של xDrip+](../Configuration/xdrip.md).
 
-## 3. xDrip+ (companion mode)
+## 3. xDrip+ (מצב מלווה)
 
--   Download and install xDrip+: [xDrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in xDrip+ "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
--   Select  xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+-   הורידו והתקינו את [xDrip](https://github.com/NightscoutFoundation/xDrip).
+- בחרו "Companion App" כמקור נתונים בxDrip+ ויש לבחור בהגדרות פחות נפוצות> הגדרות בלוטות' > יש לאפשר "Companion Bluetooth".
+-   בחרו את xDrip+ ב[בונה התצורה, מקור נתוני סוכר](../Configuration/Config-Builder.md#bg-source).
 
--   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md) 
+-   התאימו את ההגדרות של xDrip+ לפי ההסברים בדף [ההגדרות של xDrip+](../Configuration/xdrip.md). 

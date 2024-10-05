@@ -331,37 +331,16 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ## Garmin
 
-Therer are a couple of watch faces for Garmin that integrate with xDrip or Nightscout on the [Garmin ConnectIQ store](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30). AAPS Glucose Watch integrates directly with AAPS. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to AAPS. It's not available in the ConnectIQ store yet, since the necessary AAPS plugin is only available from AAPS 3.2. Please contact robert.b on [discord](https://discord.com/invite/4fQUWHZ4Mw) if you want to try it.
+There are a couple of watch faces for Garmin that integrate with xDrip or Nightscout on the [Garmin ConnectIQ store](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30).
+
+[AAPS Glucose Watch](https://apps.garmin.com/apps/3d163641-8b13-456e-84c3-470ecd781fb1) integrates directly with AAPS. It shows loop status data (insulin on board, temporary basal) in addition to glucose readings and sends heart rate readings to AAPS. It is available in the ConnectIQ store, the necessary AAPS plugin is only available from AAPS 3.2.
 
 ![Screenshot](../images/Garmin_WF.png) ![Screenshot](../images/Garmin_WF-annotated.png)
 
 ## Additional AAPS custom watchfaces are also available
 
+[Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
+
 If you want to build your own watchface, follow the [guide here](../Usage/Custom_Watchface_Reference.md).
 
 Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder "ExchangeSiteCustomWatchfaces" via a Pull Request into Github. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.
-
-Here you can download Zip-Files with custom watchfaces made by other users:
-
-Grid Layout (sort by ascending alphabetical order)
-
-|                                                                                                                                                                            |                                                                                                                                                                           |                                                                                                                                                                       |                                                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [![Watchface AAPS_V2](../ExchangeSiteCustomWatchfaces/AAPS_V2-CustomWatchface.png)   
-**AAPS_V2**](../ExchangeSiteCustomWatchfaces/AAPS_V2.zip)                            | [![AAPS](../ExchangeSiteCustomWatchfaces/AAPS-CustomWatchface.png)   
-**AAPS**](../ExchangeSiteCustomWatchfaces/AAPS.zip)                                                 | [![Cockpit](../ExchangeSiteCustomWatchfaces/Cockpit-CustomWatchface.png)   
-**Cockpit**](../ExchangeSiteCustomWatchfaces/Cockpit.zip)                                 | [![SteamPunk](../ExchangeSiteCustomWatchfaces/SteamPunk-CustomWatchface.png)   
-**SteamPunk**](../ExchangeSiteCustomWatchfaces/SteamPunk.zip)                         |
-| [![AIMICO](../ExchangeSiteCustomWatchfaces/AIMICO-V1_1-CustomWatchface.png)   
-**AIMICO**](../ExchangeSiteCustomWatchfaces/AIMICO-V1_1.zip)                                | [![Analog G-Watch](../ExchangeSiteCustomWatchfaces/Analog_G-Watch-CustomWatchface.png)   
-**Analog G-Watch**](../ExchangeSiteCustomWatchfaces/Analog_G-Watch.zip)         | [![Digital G-Watch](../ExchangeSiteCustomWatchfaces/Digital_G-Watch-CustomWatchface.png)   
-**Digital G-Watch**](../ExchangeSiteCustomWatchfaces/Digital_G-Watch.zip) | [![SimpleDigital](../ExchangeSiteCustomWatchfaces/SimpleDigital_v1.3-CustomWatchface.png)   
-**SimpleDigital**](../ExchangeSiteCustomWatchfaces/SteamPunk.zip)        |
-| [![Gears](../ExchangeSiteCustomWatchfaces/Gears-CustomWatchface.jpg)   
-**Gears**](../ExchangeSiteCustomWatchfaces/Gears.zip)                                              | [![Gota](../ExchangeSiteCustomWatchfaces/Gota-CustomWatchface.png)   
-**Gota**](../ExchangeSiteCustomWatchfaces/Gota_v2.4.zip)                                            | [![LuckyLoopKoeln](../ExchangeSiteCustomWatchfaces/LuckyLoopKoeln-CustomWatchface.png)   
-**LuckyLoopKoeln**](../ExchangeSiteCustomWatchfaces/LuckyLoopKoeln.zip)     | [![Robby watchface](../ExchangeSiteCustomWatchfaces/Robby_watchface-CustomWatchface.png)   
-**Robby watchface**](../ExchangeSiteCustomWatchfaces/Robby_watchface.zip) |
-| [![DigitalBigGraph](../ExchangeSiteCustomWatchfaces/DigitalBigGraph-CustomWatchface.png)   
-**DigitalBigGraph**](../ExchangeSiteCustomWatchfaces/DigitalBigGraph_v1.5.zip) | [![PinkFloydTheWall](../ExchangeSiteCustomWatchfaces/PinkFloydTheWall-CustomWatchface.png)   
-**PinkFloydTheWall**](../ExchangeSiteCustomWatchfaces/PinkFloydTheWall.zip) |                                                                                                                                                                       |                                                                                                                                                                       |

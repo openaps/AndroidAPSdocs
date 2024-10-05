@@ -1,26 +1,26 @@
-# Pumpa DanaR
+# DanaR Pumpa
 
-*Tyto pokyny pro nastavení aplikace a Vaší pumpy platí, pokud máte pumpu DanaR. Navštivte stránku [Pumpa DanaRS](./DanaRS-Insulin-Pump), pokud máte pumpu DanaRS z roku 2017 a novější.*
+*Tyto pokyny jsou určeny pro konfiguraci aplikace a vaší pumpy, pokud máte DanaR. Navštivte [DanaRS inzulínovou pumpu](./DanaRS-Insulin-Pump), pokud máte DanaRS uvedenou na trh v roce 2017.*
 
-* Jděte na pumpě do HLAVNÍ NABÍDKY > NASTAVENÍ > UŽIV. FUNKCE
-* Přejděte na "8. PRODL. BOLUS:"
+* Na pumpě přejděte do Hlavního menu > Nastavení > Uživatelská volba
+* Povolte "8. Rozšířený bolus"
 
 ![Pumpa DanaR](../images/danar1.png)
 
-* Jděte do HLAVNÍ NABÍDKY > NASTAVENÍ > VYHLEDÁVÁNÍ
-* Na telefonu v nastavení Bluetooth dejte "vyhledat zařízení", vyberte sériové číslo vaší DanaR a vyplňte heslo (heslo pro párování je 0000). Pokud se DanaR neobjevila v seznamu nalezených zařízení, restartujte telefon a vyndejte z DanaR baterii, vyměňte ji a tyto dva kroky opakujte znovu.
+* Přejděte do Hlavního menu > Nastavení > Objevování
+* V nastavení telefonu přejděte na Bluetooth, vyhledejte blízká zařízení, vyberte sériové číslo vašeho DanaR a zadejte své heslo (Párovací heslo je 0000). Pokud DanaR není zobrazen v prohledávání, restartujte telefon a vyjměte baterii DanaR, vložte ji zpět a začněte tyto dva kroky znovu.
 
-* In AAPS go to Config Builder and select the type of DanaR you have (DanaR, DanaR Korean, DanaRv2)
+* V AAPS přejděte do Tvorba konfigurace a vyberte typ DanaR, který máte (DanaR, DanaR Korean, DanaRv2)
 
-* Vyvolejte Menu ťuknutím na tři tečky v pravém horním rohu. Zvolte Nastavení.
-* Vyberte DanaR Bluetooth zařízení a ťukněte na sériové číslo Vaší DanaR.
-* Zvolte Heslo k pumpě a vložte Vaše heslo. (Výchozí heslo je 1234)
-* If you want AAPS to allow basal rate above 200%, enable Use extended boluses for >200%. Mějte na paměti, že nemůžete používat smyčku s tímto nastavením, pokud chcete používat rozšířený bolus pro jídlo.
-* V Nastavení pro pumpu DanaR můžete změnit výchozí rychlost podávání bolusu (12sec na 1U, 30sec na 1U nebo 60sec na 1U).
-* Nastavte bazální krok na pumpě na 0.01 U/h
-* Nastavte bolusový krok na pumpě 0.1 U/h
-* Na pumpě povolte rozšířené bolusy
+* Vyberte Menu poklepáním na 3 tečky v pravém horním rohu. Vyberte Preferencí.
+* Vyberte zařízení Bluetooth DanaR a klikněte na vaše sériové číslo DanaR.
+* Vyberte Heslo pumpy a zadejte své heslo. (Výchozí heslo je 1234)
+* Pokud chcete, aby AAPS povolilo bazální rychlost nad 200 %, povolte Použít rozšířené bolusy pro >200%. Poznámka: to znamená, že nemůžete smyčkovat s vysokými TBR při použití rozšířených bolusů pro jídlo.
+* V Preferencích pod nastavením pumpy DanaR můžete změnit výchozí rychlost bolusu (12s na 1u, 30s na 1u nebo 60s na 1u).
+* Nastavte bazální krok na pumpě na 0,01 U/h
+* Nastavte bolusový krok na pumpě na 0,1 U/h
+* Povolte rozšířené bolusy na pumpě
 
-## Cestování mezi časovými pásmy s pumpou Dana R
+## Cestování časovými pásmy s čerpadlem Dana R
 
-Více informací o cestování přes více časových pásem najdete v části [Cestování s pumpou mezi časovými pásmy](Timezone-traveling-danarv2-danars).
+Pro informace o cestování přes časová pásma viz kapitolu [Cestování časovými pásmy s čerpadly](Timezone-traveling-danarv2-danars).
