@@ -1,5 +1,5 @@
-# Phones
+# 手機
 
-- [List of tested phones](../Getting-Started/Phones.md)
-- [Jelly Pro Settings](../Usage/jelly.md)
-- [Huawei Settings](../Usage/huawei.md)
+- [已測試的手機清單](../Getting-Started/Phones.md)
+- [Jelly Pro 設定](../Usage/jelly.md)
+- [華為設定](../Usage/huawei.md)
