@@ -1,42 +1,43 @@
-# 遠端控制 AAPS
-有四種非常有效的工具可以遠端管理 **AAPS**：
+# Remote control of AAPS
+There are four highly effective tools for remotely managing **AAPS**:
 
-1) [SMS 指令](sms-commands)（追蹤者的手機可以是 Android 或 iOS），2) [AAPSClient](aapsclient)（追蹤者的手機是 Android）3) [Nightscout](nightscout)（Android、iOS 或其他電腦/設備），4) [智慧型手錶](smartwatches)（Android）
+1) [SMS commands](sms-commands) (follower phone can be either Android or iOS), 2) [AAPSClient](aapsclient) (follower phone is Android) 3) [Nightscout](nightscout) (Android, iOS or other computer/device).  
+4) [Smartwatches](smartwatches) (Android)
 
-前三個工具主要適合照顧者/父母使用，但智慧型手錶對於照顧者/父母以及糖尿病患者自己都非常有用。
+The first three are mostly appropriate for carers/parents, but smartwatches are very useful for carers/parents **and** for adults with diabetes themselves.
 
-![圖像](images/remote_control_and_following/AAPS_overview_remote_control_01.png)
+![image](images/remote_control_and_following/AAPS_overview_remote_control_01.png)
 
-#### 為兒童設置 AAPS 遠端控制的考量
+#### Considerations when setting up remote control of **AAPS** for a child
 
-1.  請考慮如何讓孩子的手機保持在幫浦和 CGM 的有效範圍內。 對於年齡較小，還無法對手機負責的兒童來說，這可能是一個挑戰。 確保您選擇的 AAPS 手機具有良好的藍牙連線範圍，並找到讓孩子舒適攜帶幫浦和手機的方法——如果他們年齡/體型夠大，可以隨身攜帶手機——例如，[SPI Belt](https://spibelt.com/collections/kids-belts) 可能會有所幫助。
-2.  在開始遠端治療和監控之前，請花時間與孩子一起設置並測試指令。 許多父母選擇在學校假期或週末進行這些測試。
-3.  確保其他照顧者/老師了解您孩子的治療計畫，並確定遠端控制如何與現有計畫協作或增強其效果。
-4.  許多父母發現，與兒童看護人員保持單獨的聯繫方式是有幫助的，例如準備一個便宜的小型教師“追蹤”手機。
-5.  不同年齡兒童學校護理計畫的示例可以在 **AAPS** Facebook 頁面的["文件區"](https://www.facebook.com/groups/AndroidAPSUsers/files/)找到。
-6.  當遠端控制無法工作時，您的應急計劃是什麼（_例如_網絡問題或藍牙連線丟失）？  始終考慮當您突然無法發送新指令時，**AAPS** 會發生什麼情況。 **AAPS** 會使用當前設定覆蓋幫浦的基礎率、ISF 和 ICR。 如果切換到更強的胰島素設定，請只使用臨時設定切換（_例如_設置特定的持續時間），以防止遠端連線中斷。 當時間到期時，幫浦將恢復到原始設定。
+1.  Think about how you will keep the child’s phone in range of their pump and CGM. This can be challenging with children who are too young to be responsible for a phone. Ensuring you select an AAPS phone with a good bluetooth connection range and finding a comfortable way for the child to carry the pump and phone - if they are old/big enough to have the phone on them -  (_e.g._ a [SPI Belt](https://spibelt.com/collections/kids-belts) may help.
+2.  Take your time to set-up and test commands with your child next to you, before starting remote treatment and monitoring. Many parents choose school holidays or weekends.
+3.  Make sure other caregivers/teachers are aware of your child's treatment plan and work out how adding in remote control is going to work with/enhance the existing plan.
+4.  Many parents find it helpful to have a separate line of communication with childcare providers, for example a cheap small teacher “follow” phone.
+5.  Examples for school care plans for children of different ages can be found in the [“files section”](https://www.facebook.com/groups/AndroidAPSUsers/files/) of the **AAPS** Facebook page.
+6.  What is your emergency plan for when remote control does not work (_i.e._ network problems or lost bluetooth connection)?  Always consider what will happen with **AAPS** if you suddenly can’t send a new command. **AAPS** overwrites the pump basal, ISF and ICR with the current profile values. Only use temporary profile switches (_i.e._ with a set time duration) if switching to a stronger insulin profile, in case your remote connection is disrupted. Then the pump will revert to the original profile when the time expires.
 
 (sms-commands)=
-## 1) SMS 指令
+## 1) SMS Commands
 
-您可以透過一項稱為 **SMS 指令** 的功能，使用文字訊息（SMS）遠端控制 **AAPS**。 _任何_ 類型的手機（iPhone/Android）都可以傳送 SMS 指令到 **AAPS**。
+You can control **AAPS** remotely via text (SMS) message through a feature known as **SMS Commands**. SMS commands can be sent to **AAPS**  by _any_ type of phone (iPhone/Android).
 
-**SMS 指令非常有用於：**
-1. 日常遠端控制
+**SMS commands are really useful:**
+1. For routine remote control
 
-2. 如果您想遠端注射胰島素
+2. If you want to remotely bolus insulin
 
-3. 在網路訊號不佳的地區，文字訊息能夠傳送，而資料/網路訊號有限。 這在前往偏遠地區（例如露營、滑雪）時非常有用。
+3. In a region of poor internet reception, where text messages are able to get through, but data/internet phone reception is limited. This is very useful when going to remote areas (e.g. camping, skiing).
 
-4. 如果您的其他遠端控制方法（Nightscout/AAPSClient）暫時無法使用
+4. If your other methods of remote control (Nightscout/AAPSClient) are temporarily not working
 
-### SMS 指令的安全性
-如果您啟用 **SMS 通訊** 功能，請考慮設定為傳送遠端指令的手機可能會被竊取，或者被他人使用。 請務必用至少 PIN 碼鎖定您的手機。 強密碼和/或生物辨識鎖定是非常推薦的，並且確保這個密碼與 APK 主密碼（修改 **AAPS** 設定所需的密碼）不同。 必須啟用第二個手機號碼才能使 SMS 指令生效，即使您只有一位主要的照護者/追蹤者。 如果主要照護者/父母的手機遭到侵入，您可以使用第二個號碼暫時停用 SMS 通訊（使用指令**“SMS stop”**）。 2.7 版及更新版本的 **AAPS** 還使用 [驗證器應用程式](authentication-or-not)。
+### SMS command safety
+If you enable **SMS Communicator** in **AAPS**, consider that the phone which is set up to give remote commands could be stolen, and/or used by someone else. Always lock your phone handset with at least a PIN. A strong password and/ or biometric lock are highly recommended, and ensure this is different from your APK Master password (the password which is required to change **AAPS** settings) . A second phone number must be enabled for SMS commands to work, even if you only have one primary caregiver/follower. You can then use the second number to temporarily disable SMS communicator (with the command **“SMS stop”**) if your main caregiver/parent phone is compromised. Versions of **AAPS** 2.7 and newer also use an [Authenticator app](authentication-or-not)).
 
-### 不同類型的 SMS 指令
-下表列出了所有可能的 **SMS 指令**。 給出了一些_範例值_來幫助理解。 這些指令的值範圍與 AAPS 應用程式中允許的值相同（目標、百分比設定等）。 下表根據可能的使用頻率列出了指令，前兩個表格應該包含了您在完整循環中需要的大部分 SMS 指令。
+### Different types of SMS commands
+The **SMS Commands Table** below shows all the possible SMS commands. _Example values_ are given, to aid understanding. The commands have the same range of possible values (targets, percent profile etc.) which are allowable in the AAPS app itself. The commands below have been listed by how commonly used they are likely to be, the first two tables should have most of the SMS commands you need with full looping.
 
-### SMS 指令表
+### SMS commands tables
 
 ![SMS_command_table_1](images/remote-control-02.png)
 
@@ -47,619 +48,620 @@
 ![SMS_command_table_4](images/remote-control-05.png)
 
 (authentication-or-not)=
-### 是否需要驗證？
+### Authentication or not?
 
-您可能注意到，上述表格中的某些 SMS 指令會立即回應，而某些 SMS 指令則需要透過額外應用程式的安全碼和 PIN 進行 **驗證**（請參閱以下鏈接以獲取更多詳細資訊）。 簡單查詢如「**bg**」（請求當前血糖更新）打字快速，不需要驗證，並且返回以下所示的 **AAPS** 狀態資訊：
+You may notice from the table above that some SMS commands give an immediate response, and some SMS commands require **authenticating** with a security code from an additional app and a PIN (see below (link for more detail). A simple enquiry like “**bg**” (which requests an update on current glucose) is quick to type, doesn’t need authenticating, and returns the **AAPS** status information shown below:
 
-![圖像](images/remote-control-06.png)
+![image](images/remote-control-06.png)
 
-某些需要更高安全性的指令需要輸入安全碼，例如：
+Commands which need more security require a code to be entered, for example:
 
-![SMS 經驗證的小型指令](images/remote-control-07.png)
+![SMS authenticated for markdown-smaller](images/remote-control-07.png)
 
-### 如何設定 SMS 指令
+### How to set up SMS commands
 
-整個流程如下：
+The overall process is as follows:
 
-**1)    下載驗證器（照護者的手機）**
+**1)    Download an authenticator (caregiver phone)**
 
-**2)    檢查手機設置（AAPS 手機）**
+**2)    Check phone settings (AAPS phone)**
 
-**3)    日期和時間同步（照護者和 AAPS 手機）**
+**3)    Date and time synching (caregiver and AAPS phone)**
 
-**4)    AAPS 設定（AAPS 手機）**
+**4)    AAPS settings (APPS phone)**
 
-**5)    測試 SMS 指令是否正常工作（照護者和 AAPS 手機）**
+**5)    Testing SMS commands works (caregiver and AAPS phone)**
 
-### 讓我們開始吧！
+### Let's get started!
 
-1) **下載驗證器：** 在照護者的手機上，從 App Store 或 Google Play 下載並安裝以下驗證器之一：
+1) **Download an authenticator**: On the caregiver phone, download (from the App store or Google play) and install one authenticator of your choice from the list below:
 
 [**Authy**](https://authy.com/download/)
 
-[**Google 驗證器 - Android / iOS**](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&pli=1)
+[**Google Authenticator - Android / iOS**](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&pli=1)
 
-[**LastPass 身份驗證器**](https://www.lastpass.com/solutions/authentication)
+[**LastPass Authenticator**](https://www.lastpass.com/solutions/authentication)
 
-[**FreeOTP 身份驗證器**](https://freeotp.github.io/)
+[**FreeOTP Authenticator**](https://freeotp.github.io/)
 
-這些驗證器應用程式會生成一個時間限制的、一次性 6 位數密碼，類似於行動銀行或購物。 您也可以使用其他支援 RFC 6238 TOTP 權杖的驗證器應用程式。 Microsoft 驗證器無法使用。
+These Authenticator apps produce a time-limited, one-time 6-digit password, similar to mobile banking or shopping. You can use an alternative Authenticator app, as long as it supports RFC 6238 TOTP tokens. The Microsoft Authenticator does not work.
 
-2) **檢查手機設定：** 在 **AAPS** 手機設定中，前往應用程式 > AndroidAPS > 權限 > SMS > 允許 SMS
+2) **Check phone settings:** In the **AAPS** phone settings go to Apps > AndroidAPS > Permissions  > SMS  > Allow SMS
 
-![圖像](images/remote-control-08.png)
+![image](images/remote-control-08.png)
 
-3) **日期和時間同步：** 檢查 **AAPS** 手機和照護者手機的日期和時間是否同步。 具體操作取決於您的手機型號，您可能需要嘗試不同的設定。
+3) **Date and time synching:** In both the **AAPS** phone and the caregiver phone, check the date and time are synched. Exactly how you do this depends on your specific handsets, you may need to try out different settings.
 
-範例（以 Samsung S23 手機為例）：設置 > 通用管理 > 日期和時間 > 自動日期和時間
+Example (for Samsung S23 handset): Settings – general management – date and time- automatic date and time
 
-某些選項可能會被灰階化，這是因為手機設置為兒童帳戶，並需要透過家庭帳戶管理員啟用。 在照護者/父母的 iPhone 上，這個日期和時間設置稱為「自動設置」。 如果您不確定手機是否同步，別擔心，您可以先設置 SMS 指令，然後如果發現問題再進行故障排除（如果需要，可以請求幫助）。
+Some options may be greyed out, due to needing admin via a family account if the phone has been set up as a child account. This date and time setting is called “set automatically” on a caregiver/parent iPhone. If you are not sure if you have synched the handsets, don’t worry, you can set up the SMS commands and troubleshoot afterwards if it seems to be causing problems (ask for help if needed).
 
-4) **AAPS 設定：**
+4) **AAPS settings:**
 
-i) 現在已經檢查了手機設定，在 **AAPS** 應用程式中，使用左側的漢堡選單導航到組態建置工具：
+i) Now that the phone settings have been checked, in the **AAPS** app itself, use the left hand hamburger menu to navigate to Config Builder:
 
-![圖像](images/remote-control-09.png)
+![image](images/remote-control-09.png)
 
-ii) 勾選選項啟用「SMS 通訊」，然後點擊「齒輪」圖示進入 SMS 通訊的偏好設置頁面：
+ii) Enable “SMS communicator” by checking the boxes, then click the “cog” to get to the SMS communicator preferences screen:
 
-![圖像](images/remote-control-10.png)
+![image](images/remote-control-10.png)
 
-_注意 - 作為進入組態建置工具的替代路徑，您還可以使用 AAPS 螢幕頂部的「SMS 通訊」標籤，然後右擊該頁面的自定義右側漢堡選單，進入 SMS 通訊偏好設定頁面。_
+_Note - as an alternative route to Config Builder, you can also use the new “SMS Communicator tab” at the top of the AAPS screen, then right click on the custom right hand hamburger menu for that page, to get to the SMS communicator preferences screen._
 
-iii) 在偏好設定頁面上，啟用「允許透過 SMS 遠端指令」：
+iii) On the preferences screen enable “allow remote commands via SMS”:
 
-![圖像](images/remote-control-11.png)
+![image](images/remote-control-11.png)
 
-iv) 輸入照護者的電話號碼。 包含國際區號，並且排除電話號碼的第一個「0」，如以下範例所示：
+iv) Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
 
-英國電話號碼：+447976304596
+UK phone number: +447976304596
 
-美國電話號碼：+11234567890
+US phone number: +11234567890
 
-法國電話號碼：+33612344567
+FR phone number:  +33612344567
 
-_等。_
+_etc._
 
-請注意，依據您所在的位置，電話號碼前的「+」號可能需要或不需要。 為了確定這一點，您可以傳送範例簡訊，以顯示在 SMS 通訊標籤中的接收格式。
+Note that the “+” in front of the number may or may not be required based on your location. To determine this, send a sample text which will show the received format in the SMS Communicator tab.
 
-如果需要輸入多個電話號碼，請使用分號分隔，且號碼之間**不能有空格**（這一點至關重要！）。 選擇「確定」：
+If you have more than one phone number to add, separate them by semicolons, with NO space between numbers (this is critical!). Select “OK”:
 
 
-![圖像](images/remote-control-12.png)
+![image](images/remote-control-12.png)
 
-v) 選擇一個 PIN 碼，您（及任何其他照護者）將會在傳送 SMS 指令時，於驗證碼結尾使用此 PIN 碼。
+v) Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
 
-PIN 碼要求如下：
+PIN requirements are:
 
-• 3 到 6 位數字
+•3 to 6 digits
 
-• 不能全部為相同的數字（例如：1111 或 1224）
+•not the same digits (_i.e._ 1111 or 1224)
 
-• 不能是連續數字（例如：1234）
+•not sequential numbers (_i.e._ 1234)
 
-![圖像](images/remote-control-13.png)
+![image](images/remote-control-13.png)
 
-vi) 在偏好設定頁面中，選擇「驗證器設置」
+vi) On the preferences screen select “Authenticator setup”
 
-● 按照螢幕上的逐步說明操作。
+●   Follow the step-by-step instructions on the screen.
 
-● 在照護者的手機上打開已安裝的驗證器應用程式，設定一個新的連線，並
+●   Open your installed authenticator app on the _caregiver’s phone_ set up a new connection and
 
-● 當提示時，使用照護者的手機掃描 **AAPS** 提供的 QR 碼。
+●   Use the caregiver phone to scan the QR code provided by **AAPS**, when prompted.
 
-● 測試從照護者手機的驗證器應用程式生成的一次性密碼，並在後面加上您的 PIN 碼：
+●   Test the one-time passcode from the authenticator app on the caregiver phone followed by your PIN:
 
-範例：
+Example:
 
-驗證器應用程式生成的驗證碼為 457051
+The token from the authenticator app is 457051
 
-您的必須 PIN 碼為 2401
+Your mandatory PIN is 2401
 
-驗證碼：4570512401
+Code to check: 4570512401
 
-如果輸入正確，紅色字體「WRONG PIN」將自動變為綠色「OK」。 此過程已完成，輸入驗證碼後無需按「OK」按鈕：
+If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. The process is now complete, there is no “OK” button you need to press after entering the code:
 
 
-![圖像](images/remote-control-14.png)
+![image](images/remote-control-14.png)
 
-您現在已成功設定 SMS 指令。
+You should now be set up with SMS commands.
 
-### SMS 指令的初步操作
+### First steps using SMS commands
 
-1)  為了確認您已經正確設定，從照護者的手機傳送一則包含「bg」的簡訊到 AAPS 手機進行連線測試。 您應該會收到如下的回應：
+1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the AAPS phone. You should get a response similar to that shown here:
 
-![圖像](images/remote-control-15.png)
+![image](images/remote-control-15.png)
 
-2)  現在嘗試傳送一個需要驗證器的 SMS 指令。 要這麼做，從照護者的手機傳送所需指令到 **AAPS** 手機 （_例如_「target hypo」）。 照護者的手機將收到一則簡訊，提示您輸入來自驗證器應用程式的 **六位數驗證碼**，隨後是只有照護者/追蹤者知道的額外秘密 **PIN 碼**（假設 PIN 碼為 4 位數，共計 10 位數字）。
+2)  Now try an SMS command that requires the authenticator. To do this, send a text from the caregiver’s phone with the required command to the**AAPS** phone (_e.g._ “target hypo”). The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by an additional secret **PIN** known only to caregivers/followers (a string of ten digits in total, assuming your PIN is only 4 digits).
 
-下方範例展示了傳送「target hypo」指令以設定低血糖臨時目標的過程：
+This example is shown below, with the SMS command “target hypo” to set a hypo temp target:
 
-●   在此範例中，您的 PIN 碼為 1289
+●   In this example, your PIN is 1289
 
-●   您的驗證器應用程式生成的驗證碼為 274127
+●   Code from your authenticator app is 274127
 
-●   當提示時，傳送簡訊 2741271289
+●   When prompted, text 2741271289
 
-指令必須以英文傳送。 回應則會顯示為您的本地語言。 當您首次嘗試傳送 SMS 指令時，最好在 AAPS 手機附近，以觀察運作情況：
+Commands must be sent in English. The response should be in your local language. When you try sending an SMS command for the first time, try it in the presence of the AAPS phone, to see how it works:
 
-![圖像](images/remote-control-16.png)
+![image](images/remote-control-16.png)
 
-照護者的手機將收到來自 **AAPS** 的簡訊，確認遠端 SMS 指令是否成功執行。 指令可能無法成功的幾個原因如下：
+The caregiver’s phone will receive a SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully. There are several possible reasons the command may not be successful:
 
-●   SMS 指令設置不完整或不正確
+●   SMS commands setup isn’t complete/correct
 
-●   您傳送了格式不正確的指令（例如：「disconnect pump 45」應為「pump disconnect 45」）
+●   You sent a command which had an incorrect format (like “disconnect pump 45” instead of “pump disconnect 45”)
 
-●   您使用了不正確或過期的驗證碼（當前驗證碼即將過期時，等待幾秒產生新的驗證碼通常是個好主意）
+●   You used an incorrect, or expired authenticator code (it is usually good to wait a few seconds for a fresh code, if the current one is about to expire)
 
-●   驗證碼和 PIN 碼正確，但 SMS 傳送或接收的延遲，導致 AAPS 判定驗證碼已過期
+●   The code+PIN was OK, but there was a delay in the SMS leaving/arriving, which led AAPS to calculate that the authenticator code had expired
 
-●   AAPS 手機超出與幫浦的連線範圍/聯繫
+●   The AAPS phone is out of range/contact with the pump
 
-●   系統正忙於執行注射操作
+●   The system is already busy delivering a bolus
 
-如果您的指令成功，您將收到一則確認回覆。 如果出現問題，您將收到錯誤訊息。
+If your command is successful, you will receive a reply to confirm this. If there is a problem you will receive an error message.
 
-常見錯誤的範例如下所示：
+Common errors are shown in the examples below:
 
-![圖像](images/remote-control-17.png)
+![image](images/remote-control-17.png)
 
-### SMS 指令的額外安全注意事項
+### Additional safety notes on SMS commands
 
-預設的兩次注射指令之間的最短延遲時間為 15 分鐘。 為了安全起見，您必須添加至少兩個授權電話號碼才能將此延遲時間縮短。 如果您嘗試在前一次注射後 15 分鐘內再次遠端注射，您將收到「無法遠端注射。請稍後再試」的回覆。 嘗試稍後再試
+The default minimum time delay between bolus commands is 15 minutes. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
 
-如果您想移除照護者手機發送 SMS 指令的能力，請使用 AAPS 中的緊急按鈕「重置驗證器」（參見上方偏好設定截圖的連結）或發送 SMS 指令「SMS stop」。 重置驗證器將使所有照護者的手機無效。 您需要重新設定它們。
+If you want to remove the ability of a caregiver phone to send SMS commands, use the emergency button “RESET AUTHENTICATORS” in AAPS (see preferences screenshot above, link) or send the SMS command “SMS stop”. By resetting authenticators you make ALL the caregivers' phones invalid. You will need to set them up again.
 
-### 透過 SMS 指令進行餐時注射
+### Delivering mealtime boluses through SMS commands
 
-遠端注射胰島素 _只能_ 透過 **SMS 指令** 完成，無法透過 NightScout 或 AAPSClient 執行。 然而，碳水化合物可以透過這三種方法中的任何一種報告。 無法在一條 SMS 訊息中同時發送碳水化合物和胰島素指令。 這些指令必須分開發送，具體如下：
+Remote bolusing of insulin can _only_ be done via **SMS Commands**, it cannot be actioned through NightScout or AAPSClient. Carbs however, can be announced through any of the three methods. It is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
 
-1) 發送胰島素注射指令（_例如_ 「bolus 2」將指令注射 2 單位的胰島素），透過 SMS 指令相當於在 **AAPS** 中使用「注射」圖示。 2) 發送碳水化合物指令（_例如_「carbs 20」將報告 20 克的碳水化合物）。 這相當於在 **AAPS** 中使用「碳水化合物」標籤。
+1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to using the “syringe” icon in **AAPS**. 2)  Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to using the “carbs” tab in **AAPS**.
 
-為了避免低血糖，最好保守起見，注射 **少於** 按照您的碳水比率所需的胰島素，因為您沒有考慮當前的血糖水平或血糖趨勢。
+To avoid hypos, it is a good idea to start conservatively, by bolusing **less insulin** than would be needed according to your carb ratio, because you are not taking into account the current glucose level or glucose trend.
 
-**發送這些指令的順序很重要**。 如果您透過任何方式報告大量碳水化合物，並啟用了 SMB（超小注射），**AAPS** 可能會立即透過部分胰島素注射作出回應。 因此，如果您在報告碳水化合物後嘗試發送胰島素注射指令，您可能會遇到延遲並顯示「注射進行中」的訊息，您需要檢查已經執行的 SMB 注射。 或者，如果您沒有意識到正在進行 SMB 注射，並且您後續的注射也成功，則可能會為這頓飯過多注射胰島素。 因此，如果遠端控制餐時注射，請務必在報告碳水化合物 _之前_ 發送胰島素注射指令。 如果您願意，您可以結合使用 Nightscout 或 AAPSClient 與 SMS 指令。 碳水化合物可以透過 Nightscout 報告，且不需要驗證（請參閱下方的說明部分），因此速度比 SMS 指令更快。
+**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can use a combination of Nightscout or AAPSClient with SMS commands. Carbs can be announced through Nightscout without any authentication (see instructions sub section below) , and are therefore quicker than SMS commands.
 
-### SMS 指令的疑難排解與常見問題解答
+### SMS commands troubleshooting and FAQ
 
-#### Q: SMS 指令有哪些限制？
+#### Q: What _can’t_ we do with SMS commands?
 
-1) **您無法設置_臨時_的個人檔案切換**（例如，設置「運動檔案」60 分鐘），但您可以永久切換至「運動檔案」。 臨時檔案切換可以透過 Nightscout 或 AAPSClient 進行設置。
+1)  **You cannot set a _temporary_ profile switch** (so for example, setting “profile exercise“ for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profiles switches can instead be set through Nightscout or AAPSClient.
 
-2) **您無法取消自動化或設置自定義目標**，但可以使用替代方案：假設您的常規檔案目標為 5.5。 您在 AAPS 中設置了自動化，每天下午 2:30 至 3:30 間將目標設為 7.0，以便學校的運動課程使用，並且自動化條件是「不存在臨時目標」。 本週，您臨時得知運動課被取消，取而代之的是披薩聚會，但您的孩子已經帶著 AAPS 手機在學校。 如果自動化設置了 7.0 的高臨時目標並且您取消了它（在 AAPS 手機上或遠端），自動化條件仍然成立，**AAPS** 將在一分鐘後再次設置高目標。
+2)  **You cannot cancel automations** or **set user-defined targets** but there are approximate solutions: As an example, imagine the normal profile target is 5.5. You have set an automation in AAPS, to always set a high target of 7.0 between 2.30pm and 3.30pm because of a sports class in school, and a condition of the automation is that “no temp target exists”. This week, you have been told at short notice that the sports class is cancelled, and is being replaced by a pizza-eating session, but your kid is already at school with the AAPS phone. If the high temporary target of 7.0 is started by the automation and you cancel it (on the AAPS phone, or remotely) the conditions for the automation are still met and **AAPS** will simply set the high target again, a minute later.
 
-**如果您可以查看 AAPS 手機**，您可以取消或修改自動化，或者，如果您不想這樣做，您可以在動作標籤中設置一個新的 5.6 的臨時目標 60 分鐘，或按下目標標籤來設置。 這樣可以防止自動化設置 7.0 的高目標。
+**If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min under the Actions Tab or by pressing on the target tab. This would prevent the automation from setting the high target of 7.0.
 
-**如果您無法查看 AAPS 手機**，可以使用 SMS 指令作為大致解決方案：例如，使用指令「target meal」設置 45 分鐘的 5.0 目標（其他預設目標為 8.0 用於運動或低血糖，見表）。 然而，使用 SMS 指令無法指定 _特定_ 的目標值（例如 60 分鐘的 5.6），這需要使用 **AAPSClient** 或 Nightscout。
+**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use **AAPSClient** or Nightscout to do this.
 
-#### Q: 如果我改變了剛發送的指令怎麼辦？
+#### Q: What happens if I change my mind about a command I have just sent?
 
-**AAPS** 只會執行最近發送的指令。 因此，如果您輸入「bolus 1.5」，然後未經驗證就發送了新指令「bolus 1」，它將忽略先前的 1.5 指令。 **AAPS** 會始終向照護者手機發送回覆，確認 SMS 指令內容，然後提示您輸入驗證碼，並在執行後發送回覆。
+**AAPS** will only deliver on the most recent command. So, if you type “bolus 1.5”, and then, without authenticating, you send a new command “bolus 1”, it will ignore the earlier 1.5 command. **AAPS** will always send the caregiver's phone a response to confirm what the SMS command is before you are prompted to enter the authentication code, as well as a response following the action.
 
-#### Q: 為什麼我沒有收到 SMS 指令的回覆？
+#### Q: Why didn't I get a response to an SMS command?
 
-可能是以下原因之一：
+It could be for one of these reasons:
 
-1) 訊息未到達手機（網絡問題）。 2) **AAPS** 還在處理請求（_例如_ 注射，根據注射速率，可能需要一些時間來執行）。 3) 當收到指令時，AAPS 手機與幫浦之間的藍牙連線不良，導致指令失敗（這通常會在 AAPS 手機上觸發警報）。
+1)  The message has not got through to the phone (network issues). 2)  **AAPS** is still in the process of processing the request (_e.g._ a bolus, which can take some time to deliver depending on your bolus rate). 3)  The AAPS phone does not have good bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the AAPS phone).
 
-#### Q: 一旦指令經過驗證，我可以停止嗎？
+#### Q: How can I stop a command once it has been authenticated?
 
-不可以。 但是，您可以透過在 **AAPS** 手機的注射彈出窗口中快速取消來停止 SMS 發送的注射。 除了注射和碳水化合物報告外，許多 SMS 指令可以輕鬆撤銷，或透過某些操作來減輕錯誤的影響。
+You can't. However, you can cancel a bolus sent by SMS on the **AAPS** phone itself, by simply cancelling it on the bolusing popup, if you are quick. Many SMS commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate unintended effects if a mistake is made.
 
-例如，對於注射和碳水化合物報告中的錯誤，您仍然可以採取行動。 例如，如果您宣佈了 20g 的碳水化合物，但您的孩子只吃了 10g，而您（或在場的照護者）無法直接在 **AAPS** 手機中刪除這個治療，您可以設置一個較高的臨時目標，或設置一個較低的個人設定，讓 **AAPS** 減少其侵略性。
+For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
 
-#### 問。 為什麼我收到同一條訊息的多封 SMS 簡訊？
+#### Q. Why am I getting multiple SMS texts of the same message?
 
-如果您重複收到相同的訊息（例如個人設定切換），您可能無意間與其他應用程式建立了循環狀態。 例如可能是 xDrip+。 如果是這樣，請確保 xDrip+（或任何其他應用程式）沒有將治療資料上傳到 NightScout。
+If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. This could be xDrip+, for example. If so, please ensure that xDrip+ (or any other app) does not upload treatments to NightScout.
 
-#### 問。 我剛設置了 SMS 指令，現在收到太多的簡訊。 我可以減少頻率或停止這些簡訊嗎？
+#### Q. I’ve just set up SMS commands and I am now getting far too many text messages. Can I reduce the frequency, or make them stop?
 
-使用 SMS 指令可能會讓 AAPS 手機自動發送許多訊息到照護者的手機。 例如，如果您在 **AAPS** 中設置了自動化，您也會收到“幫浦中的基礎率設定已更新”這類訊息。 如果預計要發送大量簡訊，您最好在 AAPS 手機計畫中（以及每位照護者手機中）使用不限量的簡訊配額，並停用所有手機上的簡訊通知、警報或振動功能。 使用 SMS 指令時，無法避免接收到這些更新。 因此，您可能需要另一種與孩子直接溝通的方式（如果他們年齡夠大），而不是使用 SMS。 常見的 **AAPS** 照護者會使用的替代通訊應用程式包括 Whatsapp、Lime、Telegram 和 Facebook Messenger。
+Using SMS commands may generate a lot of automated messages from the AAPS phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your AAPS phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include Whatsapp, Lime, Telegram, and Facebook Messenger.
 
-#### 問。 為什麼我的 Samsung 手機上的 SMS 指令無法運作？
+#### Q. Why are SMS commands not working on my Samsung phone?
 
-曾經有報告指出，Samsung Galaxy S10 手機在更新後，SMS 指令停止運作。 這個問題可以透過停用“以聊天訊息發送”來解決。
+There was a report of SMS commands stopping after an update on a Samsung Galaxy S10 phone. This was solved by disabling ‘send as chat message’.
 
 
-![圖像](images/remote-control-18.png)
+![image](images/remote-control-18.png)
 
-#### 問。 如何解決 Android 訊息應用程式的問題？
+#### Q. How can I fix issues with the Android Messages App?
 
-如果您在使用 Android 訊息應用程式發送或接收 SMS 指令時遇到問題，請停用照護者和被照護者手機上的端到端加密功能：
+If you are having issues sending or receiving SMS commands with the Android Messages app, disable end-to-end encryption on both caregiver and dependent’s phones:
 
-●   開啟訊息應用程式中的特定 SMS 對話
+●   Open the specific SMS conversation in Messages
 
-●   選擇右上角的選項省略號
+●   Select the options ellipsis in the top right corner
 
-●   選擇“詳細資料”
+●   select “Details”
 
-●   啟用“只發送 SMS 和 MMS 訊息”
+●   Activate “Only send SMS and MMS messages”
 
 (aapsclient)=
 ## 2) AAPSClient
 
-_請注意，**NSClient** 已被 **AAPSClient** 取代，適用於 AAPS 3.2 及更高版本，請查閱版本發佈說明以了解更多資訊。_
+_Note that **NSClient** has been replaced by **AAPSClient** for AAPS version 3.2 and higher, check the version release notes for more information._
 
-對於 AAPS 3.2 以下版本，如果您有照護者/父母的 Android 手機，您可以直接下載並安裝 [**AAPSClient**](https://github.com/nightscout/AndroidAPS/releases/) apk。 **AAPSClient** 的外觀與 **AAPS** 本身非常相似，提供了照護者可以遠端執行 **AAPS** 指令的標籤頁：
+For versions of **AAPS** which are older than AAPS 3.2, if you have a caregiver/parent Android phone you can directly download and install the [**AAPSClient**](https://github.com/nightscout/AndroidAPS/releases/) apk. **AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver tabs that will remotely action commands in **AAPS**:
 
 ![NSCLIENT_ 2024-05-17 134512](https://github.com/openaps/AndroidAPSdocs/assets/137224335/6c66a27c-21d7-4c43-ac66-001669c0634f)
 
 
-這裡有兩個可以[下載](https://github.com/nightscout/AndroidAPS/releases/)的 apk 版本，分別是 **AAPSClient** 和 **AAPSClient2**，它們有著細微但重要的差異，詳見下方說明。
+There are 2 versions of the apk that can be [downloaded from here](https://github.com/nightscout/AndroidAPS/releases/),  **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below.
 
-**AAPSClient** 可以安裝在一部或多部追蹤者手機上（例如父母一的追蹤者手機和父母二的追蹤者手機），以便兩位照護者都能夠獲得權限並遠端控制患者的 **AAPS** 手機。
+**AAPSClient** can be installed on a single phone or multiple follower phones (i.e. parent 1’s follower phone and parent 2’s follower phone) in order for both caregivers to be granted access and remote control a patient's **AAPS** phone.
 
-如果某位照護者需要第二個副本來遠端控制另一位患者，且該患者有 Nightscout 帳號，他們應該安裝 **AAPSClient2** 以外加 **AAPSClient**。 **AAPSClient2** 允許單一照護者在同一台追蹤者手機上安裝 **AAPSClient** apk 兩次，以便同時遠端控制兩位不同的患者。
+Should a caregiver require a second copy of **AAPSClient** to remote control an additional patient with a Nightscout account, they should install **AAPSClient2** in addition to **AAPSClient**. **AAPSClient 2** allows a single caregiver to install the **AAPSClient** apk twice on the same follower phone in order to be given simultaneous access and remote control to two different patients.
 
-要下載 **AAPSClient**，請前往 [此處](https://github.com/nightscout/AndroidAPS/releases/)，然後點擊資產**“app-AAPSClient-release_x.x.x.x”**（它可能比下面的截圖顯示版本更新）：
+To download **AAPSClient**, navigate to [here](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
 
-![圖像](images/remote_control_and_following/AAPSClient_download_02.png)
+![image](images/remote_control_and_following/AAPSClient_download_02.png)
 
-然後前往電腦上的 _下載_ 資料夾。 在 Windows 上，-下載- 將顯示右邊的選單欄：
+Then go to  _downloads_ on your computer. On Windows, -downloads_ will show the right hand ribbon:
 
-![圖像](images/remote_control_and_following/AAPSClient_download_folder_03.png)
+![image](images/remote_control_and_following/AAPSClient_download_folder_03.png)
 
-下載完成後，點擊 _顯示於資料夾中_ 來定位該檔案。
+Once downloaded, click _show in folder_ to locate the file.
 
-現在，**AAPSClient** apk 可以透過以下方式進行安裝：
+The **AAPSClient** apk can now be either:
 
-透過 USB 傳輸線傳輸到追蹤者手機；或拖放至 Google 雲端硬碟資料夾，然後透過點擊“app-AAPSClient-release”檔案將其安裝到追蹤者手機。
+Transferred by a USB cable onto the follower phone; or Dragged into Google drive folder, and then added onto the follower phone by clicking on the "app-AAPSClient-release" file.
 
-### 同步設置 - AAPSClient 和 AAPS 配置（適用於 3.2.0.0 版本以上）
+### Synchronization- AAPSClient and AAPS set up (for Version 3.2.0.0 above)
 
-一旦在追蹤者手機上安裝了 __AAPSClient__ apk，用戶必須確保在 Config Builder 中的“偏好設定”已正確設置並與 __AAPS__ 的 Nightscout 15 對齊（請參閱發佈說明 [此處](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Update-to-new-version.html)）。 以下範例提供了使用 Nightscout 15 的 NSClient 和 NSClientV3 的同步指南，但 __AAPS__ 也有其他選項（例如 xDrip+）。
+Once __AAPSClient__ apk is installed on the follower phone, the user must ensure their ‘Preferences’ in Config Builder are correctly set up and aligned with __AAPS__ for Nightscout 15 (see Release Notes [here](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Update-to-new-version.html)). The example below provides Synchronization guidance for NSClient and NSClientV3 using Nightscout15 but there are other options available with __AAPS__ (e.g xDrip+).
 
-在“Config Builder”的“同步設置”中，用戶可以選擇 __AAPS__ 和追蹤者手機的同步選項：
+Within the ‘Synchronization’ located under ‘Config Builder’, the user can opt for either Synchronization options for both __AAPS__ and follower phone being:
 
-- 選項 1：NSClient（也稱為“v1”）- 同步用戶的資料與 Nightscout；或
+- Option 1: NSClient (also known as ‘v1’) - which synchronises the user’s data with Nightscout; or
 
-- 選項 2：NSClientV3（也稱為“v3”）- 透過 v3 API 同步用戶的資料與 Nightscout。
+- Option 2: NSClientV3 (also referred to as ‘v3’).- which synchronises the user’s data with Nightscout using v3 API.
 
-![AAPS1_截圖 2024-05-17 133502](https://github.com/openaps/AndroidAPSdocs/assets/137224335/4bdfed7e-3b2f-4fe8-b6db-6fcf0e5c7d98)
+![AAPS1_Screenshot 2024-05-17 133502](https://github.com/openaps/AndroidAPSdocs/assets/137224335/4bdfed7e-3b2f-4fe8-b6db-6fcf0e5c7d98)
 
-用戶必須確保 __AAPS__ 和 AAPS Client 手機都透過執行 v1 或 v3 的選項同步：
+The user must ensure that __both__ the AAPS and AAPS Client phones are synched together by actioning either option for v1 or v3 being:
 
-選項 1：兩部手機均使用 v1：
+Option 1: v1 for both phones:
 
-- 輸入您的 Nightscout 網址
+- Enter your Nightscout URL
 
-- 輸入您的 API 密碼
+- Enter your API secret
 
-選項 2：兩部手機均使用 v3：
+Option 2: v3 for both phones:
 
-- 在 NSClientV3 標籤下輸入您的 Nightscout 網址
+- Enter your Nightscout URL under NSClientV3 tab
 
-- 在“Config Build”標籤下輸入您的 NS 查看權杖。 請遵循[此處](https://nightscout.github.io/nightscout/security/#create-a-token)的說明
+- Enter your NS access token under ‘Config Build’ tab. Please follow the notes [here](https://nightscout.github.io/nightscout/security/#create-a-token)
 
-如果選擇 Websockets（可選），請確保 __AAPS__ 和 __AAPSClient__ 的手機上均已啟用或停用此功能。 啟用 Websockets 於 __AAPS__ 而未於 __AAPSClient__ 啟用（反之亦然），將會導致 __AAPS__ 無法正常運作。 啟用 Websockets 將加快與 Nightscout 的同步速度，但可能會導致手機耗電量增加。
-
-
-
-![WB2_截圖 2024-05-17 140548](https://github.com/openaps/AndroidAPSdocs/assets/137224335/8d9a7dc5-b3ea-4bf3-9286-313f329b1966)
+If selecting Websockets (which is optional) ensure this is activated or deactivated for both __AAPS’__ and __AAPSClient’s__ phone. Activating Websockets in __AAPS__ and not within __AAPSClient__ (and vice versa) will only cause __AAPS__ to malfunction. By enabling websockets will allow for faster synchronization with Nightscout but may lead to more phone battery consumption.
 
 
-用戶應確保 __AAPSClient__ 和 __AAPS__ 均在“NSClient”標籤下顯示“已連線”，並且當在 __AAPSClient__ 中選擇後，“個人設定切換”或“臨時目標”可以在 __AAPS__ 中正確啟動。
 
-用戶還應確保在 __AAPSClient__ 和 __AAPS__ 中的“治療”中記錄碳水化合物，否則這可能表明用戶的設置存在問題。
+![WB2_Screenshot 2024-05-17 140548](https://github.com/openaps/AndroidAPSdocs/assets/137224335/8d9a7dc5-b3ea-4bf3-9286-313f329b1966)
 
-### 疑難排解“NS 查看權杖”配置問題
 
-具體的“NS 查看權杖”配置可能會根據您的 Nightscout 提供商是否為付費託管網站而有所不同。
+Users should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connected’ under the ‘NSClient' tab for each phone, and that ‘Profile Switches’ or ‘Temp Target' can be correctly activated in __AAPS__ once selected in __AAPSClient__.
 
-如果您在使用付費託管的 Nightscout 網站時，發現 **AAPS** v3 無法接受“NS 查看權杖”，建議您首先與 Nightscout 提供商聯繫，以解決“NS 查看權杖”問題。 否則，請聯繫 **AAPS** 小組，但在此之前，請務必仔細檢查是否正確遵循了說明 [此處](https://nightscout.github.io/nightscout/security/#create-a-token)。
+Users should also ensure that carbs are logged in both ‘Treatments’ within both __AAPSClient__ and __AAPS__ otherwise this could indicate a malfunction within the user’s set up.
 
-### AAPSClient 的功能包括：
+### Troubleshooting 'NS access token' configuration issues
 
-![Sara 的 AAPSClient 表格](images/remote-control-23.png)
+The precise 'NS access token' configuration may differ depending upon whether your Nightscout provider is a paid for hosted site or not.
 
-**AAPSClient** 允許照護者透過移動網絡或互聯網，遠端進行許多 **AAPS** 中允許的調整（不包括胰島素注射）。 **AAPSClient** 的主要優點是照護者/父母能夠以快速、便捷的方式遠端控制 **AAPS**。 __AAPSClient__ _可能_ 比輸入 SMS 指令快得多，尤其是當執行需要身份驗證的指令時。 透過 **AAPSClient** 輸入的指令將上傳到 Nightscout。
+If you are struggling with **AAPS** v3 to accept the 'NS access token' and using a paid for hosted Nightscout site, you may wish to first liaise with your Nightscout provider on how to resolve the 'NS access token' difficulties. Otherwise, please reach out to the **AAPS** group but please double check that you have correctly followed the notes before doing so [here](https://nightscout.github.io/nightscout/security/#create-a-token).
 
-只有當您的同步運作良好時，才建議使用 **AAPSClient** 進行遠端控制（_即_ 不會出現不必要的資料更改，如自動修改臨時目標、臨時基礎率等），詳見[版本 2.8.1.1 發佈說明](Releasenotes-important-hints-2-8-1-1)了解更多細節。
+### Features of AAPSClient include:
 
-### AAPSClient 與智慧型手錶的選項
+![Sara's AAPSClient table](images/remote-control-23.png)
 
-智慧型手錶可以是一個非常有用的工具，幫助管理兒童的 **AAPS**。 有幾種不同的配置方式可供選擇。 如果**AAPSClient** 安裝在父母的手機上，則可以下載並安裝[**AAPSClient WearOS** 應用程式](https://github.com/nightscout/AndroidAPS/releases/)在與父母手機連線的相容智慧型手錶上。 這將顯示當前的血糖值、循環狀態，並允許輸入碳水化合物、設定臨時目標和更換設定檔。 無法從 WearOS 應用程式進行注射。 您可以在[這裡](smartwatches)閱讀更多關於智慧型手錶的資訊。
+**AAPSClient** allows the caregiver to make many of the adjustments that are allowed directly in **AAPS** (excluding insulin boluses) remotely, via the mobile or internet network. The main benefits of **AAPSClient** are the speed and ease with which caregivers/parents can use it to remotely control **APPS**. __AAPSClient__ _can_ be much faster than entering SMS Commands, if delivering a command which would require authentication. Commands entered on **AAPSClient** are uploaded onto Nightscout.
+
+Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc) see [release notes for Version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) for further details.
+
+### AAPSClient with smartwatch options
+
+A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **AAPSClient** is installed on the parents phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. This will show current BG, loop status and allow carb entry, temp targets and profile changes. It will NOT allow bolusing from the WearOS app. You can read more about Smartwatches [here](smartwatches).
 
 (nightscout)=
 ## 3) Nightscout
 
-Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout** 應用程式，可以直接從 iPhone 的 App Store 下載。 如果您有 Android 追蹤者手機，並沒有專用的 Nightscout 應用程式，建議使用 [**AAPSClient**](AAPSClient)，或者如果您只想要追蹤而不發送治療資料，您可以從 Play 商店下載並安裝 [Nightwatch](link) 應用程式。
+As well as Nightscout being a server in “the Cloud”, there is also a dedicated **Nightscout** app which can be downloaded directly from the App Store on your iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](AAPSClient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](link) app from the Playstore.
 
-一旦您在 iPhone 上安裝了 **Nightscout** 應用程式，打開應用並按照設置提示進行操作，輸入您的 Nightscout 地址（見下方左側）。 此地址的格式可能取決於您的 Nightscout 是如何託管的。 (_例如_ http://youraddresshere.herokuapp.com)。 然後輸入您的 Nightscout API 密碼（見下方右側）。 如果未提示您輸入 API 密碼，請點擊應用程式頂部的鎖形圖示輸入密碼：
+Once you have installed the **Nightscout** app on your iPhone, open the app and follow the set-up prompts, entering your Nightscout address (see below, left). The form of this may vary depending on how your Nightscout is hosted. (_e.g._ http://youraddresshere.herokuapp.com). Then enter your Nightscout API secret (see below, right). If not prompted for your API password, then you need to enter this by clicking on the padlock at the top of the app:
 
-![圖像](images/remote-control-24.png)
+![image](images/remote-control-24.png)
 
-更多設置資訊可直接從 [Nightscout](https://nightscout.github.io/nightscout/discover/) 獲得
+More info on setup is available directly from [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
-當您首次登入時，將會顯示一個非常簡單的介面（見下方左側）。 透過點擊右上角的“漢堡”選單並向下滾動來自定義顯示選項：
+When you first log in, you will have a very simple display (below, left). Customise the display options, by selecting the “hamburger” in the top right and scrolling down:
 
-![圖像](images/remote-control-25.png)
+![image](images/remote-control-25.png)
 
-向下滾動到“設置”。 您可能會想將 血糖 顯示的“比例”設置為“線性”，因為預設值是對數比例，並在“渲染基礎率”下選擇“預設”以顯示幫浦的基礎率。 繼續向下滾動直到找到“顯示外掛”。 您需要確保已勾選“照護入口”，還可以選擇其他有用的指標（最常用的包括：IOB、照護入口、幫浦、套管齡、胰島素齡、基礎率設定和 OpenAPS）。
+Scroll down through to “Settings”. You may wish to change the “scale” to “linear” as the default for the BG display is logarithmic, and under “render basal” select “default” so that the pump basal shows up. Continue to scroll down until you get to “show plugins”. You need to make sure “careportal” is checked, and can also select various other metrics (most useful are: IOB, care portal, pump, cannula age, insulin age, basal profile and OpenAPS).
 
-![圖像](images/remote-control-26.png)
+![image](images/remote-control-26.png)
 
-![圖像](images/remote-control-27.png)
+![image](images/remote-control-27.png)
 
-重要的是，您現在需要點擊底部的“儲存”，以使這些更改生效。
+Importantly, you now need to click “save” at the bottom for these changes to take effect.
 
-按下“儲存”後，應用程式將返回您的 Nightscout 主畫面，顯示如下：
+After pressing “save” the app will return to your main Nightscout screen which will look a little like this:
 
-![圖像](images/remote-control-28.png)
+![image](images/remote-control-28.png)
 
-更詳細地查看 Nightscout 應用程式左上角的選單：
+Looking in more detail at the top left menu of the Nightscout app:
 
-![Nightscout 頂部欄](images/remote-control-29.png)
+![nightscout top bar](images/remote-control-29.png)
 
-此畫面上的灰色標籤包含大量關於 **AAPS** 系統狀態的資訊（點擊標籤可顯示更多資訊）：
+There is a huge amount of information on the status of the **AAPS** system in the grey tabs (and even more information is revealed if you tap the tab) on this screen:
 
-![圖像](images/remote-control-30.png)
+![image](images/remote-control-30.png)
 
-![圖像](images/remote-control-31.png)
+![image](images/remote-control-31.png)
 
-### 透過 Nightscout 應用程式向 AAPS 發送治療資料
+### Sending treatments through the Nightscout app to AAPS
 
-要設置從 **Nightscout** 應用程式向 **AAPS** 發送治療資料，請在主要 AAPS 手機中進入 **AAPSClient** 標籤。 打開右側的省略號選單，然後打開 AAPSClient 偏好設定 - 同步，並在此選單中選擇相關選項。 將其設置為接收不同的指令（例如臨時目標等）並同步個人設定。 如果似乎沒有同步，請返回 AAPSClient 標籤並選擇“完全同步”，等待幾分鐘。
+To set-up sending treatments from the **Nightscout** app to **AAPS**, on the main AAPS phone, go into the **AAPSClient** tab in the **AAPS** app. Open the right-hand dot menu, and open AAPSClientpreferences – synchronisation and select the relevant options in this menu. Set it to receive the different commands (temporary targets, etc) and also to synchronise profiles. If things don’t seem to be synchronised, go back to the AAPSClient tab and select “full synchronisation” and wait a few minutes.
 
-您在 iPhone 上的 Nightscout 應用程式擁有與您在電腦上使用的 Nightscout 相同的功能。 它允許您向 **AAPS** 發送許多指令，但不允許您發送胰島素注射指令。
+Nightscout on your iPhone has all the same functions as Nightscout on your PC. It allows you to send many commands to **AAPS**, but it does not allow you to send insulin boluses.
 
-### 取消負胰島素以避免重複低血糖
+### Cancelling negative insulin to avoid repeat hypos
 
-儘管您無法實際注射胰島素，但您可以透過 Nightscout 宣佈胰島素作為“修正注射”，儘管它實際上並未注射。 由於 AAPS 會考慮到這個假設的胰島素注射，因此宣佈胰島素實際上可以使 AAPS _不那麼激進_，這在取消負胰島素和防止低血糖時非常有用，特別是當您的個人設定過於強烈（例如，由於之前的運動）。 您可能會希望親自查看這些設置，並在 **AAPS** 手機附近進行檢查，以防您的 **Nightscout** 設置有所不同。
+Although you cannot actually bolus insulin, you can however “announce” insulin through Nightscout as a “correction bolus”, although it is not delivered. Because AAPS now takes that fake insulin bolus into account, announcing insulin actually works to make AAPS _less aggressive_, and can be useful for cancelling negative insulin and preventing lows in the event that your profile has been too strong (for example due to prior exercise). You will want to check this for yourself in the presence of the **AAPS** phone, in case your **Nightscout** setup differs.
 
-![24-10-23，取消負胰島素 NS](./images/0af1dbe4-8aca-466b-816f-8e63758208ca.png)
+![24-10-23, cancel negative insulin NS](./images/0af1dbe4-8aca-466b-816f-8e63758208ca.png)
 
 
-一些最有用的 **Nightscout** 指令在下表中描述。
+Some of the most useful **Nightscout** commands are described in the table below.
 
-#### Nightscout 指令表
+#### Nightscout command table
 
-![圖像](images/remote-control-33.png)
+![image](images/remote-control-33.png)
 
-閱讀更多關於 **Nightscout** 的選項[此處](https://nightscout.github.io/)
+Read more about **Nightscout** options [here](https://nightscout.github.io/)
 
-### 獲取 Nightscout 應用程式最佳使用效果的小提示
+### Tips for getting the most out of the Nightscout app
 
-1). 如果您被困在某個頁面上，並希望再次查看主畫面，只需點擊“重新整理”（底部中間），這將帶您返回 **Nightscout** 主頁，顯示 血糖 圖表。
+1). If you get “stuck” on a page and want to be able to see the main screen again, just click “refresh” (bottom middle) and this will take you back to the **Nightscout** homepage with the BG graph.
 
-要查看手機上當前運作的個人設定，請按圖表上方的各個圖示。 按下“基礎率”可以查看更多資訊（當前的碳水化合物比率、敏感性和時區等），“OpenAPS”顯示有關個人設定和當前目標的資訊。 您還可以監控手機電池百分比和幫浦電池百分比。 BWP 提供關於算法在考慮 IOB 和 COB 情況下預測未來結果的資訊。
+To see the current profile which is running on the phone, press the various icons on the screen above the graph. More info (current carb ratio, sensitivity and timezone etc.) can be seen by pressing “basal” and “OpenAPS” gives info about the profile and current target etc. Both the phone battery% and the pump battery % can also be monitored. BWP gives information on what the algorithm thinks will happen in the future, given the IOB and COB.
 
-#### 選單中的其他圖示：鉛筆（編輯）圖示是什麼意思？
+#### Other icons in the menu: what does the pencil (edit) mean?
 
-您可以（技術上）使用編輯鉛筆來移動或刪除過去 48 小時內的注射或修正治療。
+You can (technically) use the edit pencil to move or delete bolus or correction treatments from the last 48h.
 
-更多相關資訊請參閱 [這裡](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
+More about this [here](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
 
-雖然這可能對刪除已宣佈（但未實際注射）的碳水化合物有幫助，但在實際操作中，這在 **AAPS** 中並不運作良好，因此我們建議直接透過 **AAPS** 應用程式進行此類更改。
+Although this could potentially be useful for deleting announced (but not bolused for) carbs, in practice it doesn’t currently work well with **AAPS** and we recommend making changes like this via the **AAPS** app directly.
 
 (smartwatches)=
-## 4) 智慧型手錶
+## 4) Smartwatches
 
-智慧型手錶越來越多地與 **AAPS** 結合使用，_無論是_ 對於患有糖尿病的成年人還是兒童的照護者/父母。
+Smartwatches are becoming increasingly used with **AAPS** _both_ for adults with diabetes and carers/parents of children with diabetes.
 
-### 使用智慧型手錶搭配 **AAPS** 的一般優勢
+### General advantages of using smartwatches with **AAPS**
 
 
-根據不同的型號，智慧型手錶可以以多種不同的方式與 **AAPS** 結合使用。 它們可以用來完全或部分控制 **AAPS**，或者只是遠端查看血糖值、胰島素剩餘量（IOB）及其他參數。
+Smartwatches - depending on the model - can be used in many different ways with **AAPS**. They can be used to fully or partly control **AAPS**, or simply to remotely check glucose levels, insulin-on-board, and other parameters.
 
-在很多情況下，將智慧型手錶與 **AAPS** 整合非常有用，包括開車或騎車時，以及進行運動時。 有些人覺得在會議、聚會、餐桌等場合查看手錶比查看手機更加低調。 從安全的角度來看，當移動時，智慧型手錶還能提供幫助，使用戶可以將 **AAPS** 手機存放在看不見的地方（例如包內），但仍可以透過智慧型手錶進行遠端控制。
+Integrating a smartwatch with **AAPS** can be useful in many situations, including driving a car or (motor) bike and during exercise. Some people feel that looking at a watch (in a meeting, party, dinner table etc.) is more discreet than looking on a phone. From a security perspective, a smartwatch can also be beneficial while on the move, enabling user to have their **AAPS** phone stored out of sight (like inside a bag), but with the aid of the smartwatch for remote control use.
 
-### 父母/照護者使用 **AAPS** 的具體優勢
+### Specific advantages for parents/carers using **AAPS**
 
-對於孩子來說，如果他們的 **AAPS** 手機在附近，照護者可以使用智慧型手錶進行監控或修改，而無需使用 **AAPS** 手機。 例如，當 **AAPS** 手機藏在幫浦腰帶中時，這會很有用。
+For a child - if their **AAPS**  phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS**  phone. This can be useful, for example, if the **AAPS** phone is hidden away in a pump belt.
 
-智慧型手錶可以作為手機遠端控制選項的_補充_，或者作為[遠端控制](remote-control.md)或[僅追蹤](following-only.md)的_替代_選擇。
+A smartwatch can be used either _in addition_ to, or as an _alternative_ to the PHONE-based options for [remote control](remote-control.md) or [following only](following-only.md).
 
-此外，不同於父母/照護者的追蹤者手機（依賴於移動網絡或 Wi-Fi 連線），藍牙連線的智慧型手錶在偏遠地區（如洞穴、船上或半山腰）也能發揮作用。 如果兩個設備（**AAPS** 手機和智慧型手錶）都連線到相同的 Wi-Fi 網絡，它們也可以使用 Wi-Fi。
+Additionally, unlike parent/carer follower phones (which rely on the mobile network or wifi connection), bluetooth connected smartwatches can be useful in remote locations, like a cave, in a boat, or half-way up a mountain. If both devices (**AAPS** phone and smartwatch) are on the same wifi network, they can also use wifi.
 
-### 不同類型的智慧型手錶與 AAPS 的互動方式
+### Different types of Smartwatch-AAPS interactions
 
-許多 **AAPS** 用戶可使用的智慧型手錶選項詳見 [Nightscout 與智慧型手錶](https://nightscout.github.io/nightscout/wearable/#)，強烈建議您先閱讀這些頁面，以便更好地了解所有可能性。
+Many of the possible smartwatch options available to **AAPS** users are detailed at [Nightscout on your watch](https://nightscout.github.io/nightscout/wearable/#), so you are strongly advised to read those pages first to get a good idea of all the possibilities.
 
-目前有五種主要方式可將智慧型手錶與 **AAPS** 結合使用。 這些方式在下表中顯示： 
+There are currently five main ways in which smartwatches are used in conjunction with **AAPS**. These are shown in the table below: 
 
 
-![2023年10月29日，更新了 AAPSClient 手錶選項表](./images/bbbe0e84-1a8c-4163-8a0b-dcf91144af14.png)
+![29-10-23, updated AAPSClient watch option table](./images/bbbe0e84-1a8c-4163-8a0b-dcf91144af14.png)
 
 
 
-請注意，此表格編製於 2023 年，並非詳盡無遺，且不斷有新選項添加進來。
+Please note this table was prepared in 2023, it is not exhaustive, and additional options are being added all the time.
 
-### 在購買智慧型手錶之前……
+### Before you buy a smartwatch…
 
-您購買的智慧型手錶具體型號取決於您所需的功能。 目前有兩份歷史性電子表格記錄了相容的[智慧型手機](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952)和[智慧型手機和手錶](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)，但由於選項繁多，建議透過 Discord 和 Facebook 群組進行詢問，這些表格將不再更新。
+The exact model of smartwatch you buy depends on the desired function(s). There are currently two historical spreadsheets recording compatible [smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) and [smartphones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) but these will no longer continue to be updated since it is easier to ask via the Discord and Facebook groups, due to the huge range of options.
 
-受歡迎的手錶品牌包括三星 Galaxy、Garmin、Fossil、米動手環和 Fitbit。 上表中概述的不同選項將在下方詳細解釋，幫助您決定哪款智慧型手錶適合您的需求。
+Popular watch brands include Samsung Galaxy, Garmin, Fossil, Mi band and Fitbit. The different options summarised in the Table above are explained in more detail below, to help you decide which smartwatch is right for your situation.
 
-如果您打算將智慧型手錶與**AAPS** 手機結合使用並遠端操作**AAPS**，您還需要考慮這兩個設備是否相容，尤其是如果您的手機較舊或比較特殊。
+If you are integrating a smartwatch with **AAPS** on a phone with the intention to remotely interact with **AAPS**, you also need to consider if the two devices are compatible with each other, particularly if you have an older, or an unusual phone.
 
-一般來說，如果您只想要追蹤血糖資料而不與**AAPS** 進行互動，有更多價格實惠且簡單的手錶可供選擇。
+In general, if you only want to follow glucose numbers and not interact with **AAPS**, there are a wider range of affordable and simpler watches you can use.
 
-選擇智慧型手錶的最佳方式是搜尋 Discord 或 Facebook**AAPS** 群組中的“手錶”相關帖子。 閱讀其他人的經驗分享，如果舊帖子中未解答您的問題，請發布具體問題。
+The best way to choose a smartwatch is to search for "watch" posts on either Discord or Facebook **AAPS** groups. Have a read of others experiences, and post any specific questions, if your query isn't answered by older posts.
 
-#### 智慧型手錶選項 1 - 3：什麼是 _Wear OS_？
+#### For Smartwatch Options 1 - 3: What _is_ Wear OS?
 
-前三個智慧型手錶選項要求智慧型手錶安裝 **Wear OS**。
+The first three smartwatch options require the smartwatch to have **Wear OS** installed.
 
-**Wear OS** 是運作在部分現代 Android 智慧型手錶上的作業系統。 在 [2018年](https://en.wikipedia.org/wiki/Wear_OS)，Google 將 _Android Wear 1.x_ 更名為 **Wear OS**，版本為 2.x。 因此，如果某款設備標示為“_Android Wear_”而不是 **Wear OS**，這可能表示該設備運作的是較舊版本。 如果智慧型手錶的描述僅指示與 Android 和 iOS 相容，則並不意味著它運作的是 **Wear OS**。 它可能運作的是其他供應商專用的作業系統，這些系統不與 **AAPS** 相容。 要支援安裝和使用任何版本的 **AAPS** 或 **AAPSClient**，智慧型手錶必須運作 **Wear OS**，且最好是 Android 10 或更新版本。 作為指引，截至 2023 年 10 月，**Wear OS** 的最新版本是基於 Android 13 的 4.0 版本。
+**Wear OS** is the operating system which runs on some modern Android smartwatches. In [2018](https://en.wikipedia.org/wiki/Wear_OS), Google rebranded _Android Wear 1.x to Wear OS_ from version 2.x. So, if a device is labelled “_Android Wear_” rather than **Wear OS** it may indicate an older version. If the description of the smartwatch indicates only _compatibility_ with Android and iOS - it does not mean it is running Wear OS. It may be some other sort of Vendor specific operating system which is not compatible with **AAPS**. To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch will need to be running **Wear OS**, and ideally be Android 10 or newer. As a guide, as of October 2023, the latest release of **Wear OS** is version 4.0 (based on Android 13).
 
-如果您在 **Wear OS** 手錶上安裝了 **AAPS** wear.apk，您可以選擇一系列不同的自訂 **AAPS** 手錶錶盤。 或者，您可以使用標準的智慧型手機錶盤，並在錶盤上包含稱為“小工具”的小方塊，顯示您的 **AAPS** 資訊。 小工具是在錶盤上顯示的任何額外於時間的功能。 像這樣的小工具需要 Wear OS 2.0 或更新版本才能正常運作。
+If you install **AAPS** wear.apk on a **Wear OS** watch, there are a range of different custom **AAPS** watchfaces which  can be  selected. Alternatively, you can use a standard smartphone watchface, with your **AAPS** information included in small tiles known as “complications” on the face. A complication is any feature that is displayed on a watch face in addition to the time. Features like complications require Wear OS version 2.0 or newer to work.
 
 
-#### 我的智慧型手錶在遠端控制 AAPS 時可能是什麼樣子？
+#### What could my smartwatch look like with remote control of AAPS?
 
-在手錶上安裝 **AAPS** 後，您將自動可以從這些專用的 **AAPS** 錶盤中選擇您偏好的錶盤。 在大多數手錶上，您只需長按主畫面，直到畫面縮小，然後向右滑動選擇另一個螢幕：
+After installing **AAPS** onto your watch, you will automatically be able to select your preferred watchface from these **AAPS**-dedicated watchfaces. On most watches, you simply long-press on the homescreen until the screen shrinks and swipe right to select an alernative screen:
 
-![圖像](./images/67fd75f3-721c-438d-be01-1a8e03532290.png)
+![image](./images/67fd75f3-721c-438d-be01-1a8e03532290.png)
 
-#### 如何在日常操作中使用 Wear OS 手錶？
+#### How would I operate a Wear OS watch from day-to-day?
 
-關於錶盤的更多細節，以及日常使用，包括如何製作（並分享）您自定義的錶盤，請參閱[Wear AAPS 在智慧型手錶上的操作](../Configuration/Watchfaces.md)部分。
+Further details about the watchfaces, and day-to-day use, including how to make (and share) your own customised watchface, can be found in the section [Operation of Wear AAPS on a Smartwatch](../Configuration/Watchfaces.md).
 
-### 選項 1) 運作 **AAPS** 的獨立手錶
+### Option 1) Standalone Watch running **AAPS**
 
-這聽起來像是一個很有吸引力的選項，對嗎？ 然而，目前只有少數愛好者正在嘗試在獨立手錶上運作 **AAPS**。 能夠與 **AAPS** 和您的 CGM 應用程式一起良好運作的獨立手錶界面目前數量有限。 受歡迎的型號包括 LEMFO LEM 14、15 和 16。 您需要在手錶上載入 **AAPS** 的“完整” apk（通常安裝在智慧型手機上的 apk），而不是 **AAPS** 的“wear” apk。
+It sounds like an attractive option, right? However, at present, only a few enthusiasts are experimenting with **AAPS**  on a stand-alone watch. There are a limited number of smartwatches with a reasonable interface which also which work well with standalone use of **AAPS** and your CGM app. Popular models include the LEMFO LEM 14, 15 and 16. You will need to load the watch with the **AAPS** "full" apk (the apk which is usually installed on a smartphone) rather than the **AAPS** "wear" apk.
 
-雖然目前沒有明確的規範告訴您哪款手錶適合獨立使用 **AAPS**，但以下參數會有所幫助：
+While there is no clear specification which helps you to know if a watch will work well for standalone **AAPS** use, the following parameters will help:
 
-1)  Android 10 或更新版本。 2)  能夠將錶盤從“方形”模式移除，以使文本更大、更易讀。 3)  非常好的電池續航能力。 4)  良好的藍牙範圍。
+1)  Android 10 or newer. 2)  Being able to take the watchface off “square” mode to make text larger and easier to read. 3)  Very good battery life. 4)  Good bluetooth range.
 
-大多數在獨立手錶上運作 **AAPS** 的挫折來自於與小螢幕的互動，並且目前 **AAPS** 完整應用程式的界面並非為手錶設計。 由於螢幕大小受限，您可能會更願意使用觸控筆來編輯 **AAPS** 設定，並且某些 **AAPS** 按鈕可能無法在手錶螢幕上顯示。
+Most of the frustrations of standalone **AAPS** watches come from interacting with a tiny screen, and the fact that the current AAPS full app interface has not been designed for a watch. You may prefer to use a stylus to edit **AAPS**  settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
 
-額外的挑戰包括很難獲得足夠的電池續航能力，並且擁有足夠電池容量的手錶通常體積龐大且厚重。 用戶報告了操作系統和節能設置的問題、在手錶上啟動傳感器的困難、藍牙範圍差（無法與傳感器和幫浦保持穩定連線），以及不確定的防水性能。 下圖中展示了一些例子（圖片來源：Janvier Doyon）。
+Additional challenges are that it is hard to get sufficient battery life, and watches with sufficient battery are often bulky and thick. Users report fighting with the OS and power-saving settings, difficulty in starting sensors on the watch, poor bluetooth range (for maintaining connection with both the sensor and pump) and questionable water resistance. Examples are shown in the photos below (photo credit: Janvier Doyon).
 
-![圖像](./images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
+![image](./images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
-![圖像](./images/5d2feecc-3f10-4767-b143-1a72da2b9bd4.png)
+![image](./images/5d2feecc-3f10-4767-b143-1a72da2b9bd4.png)
 
-如果您有興趣設置獨立手錶，請閱讀 **AAPS** Facebook 群組中的帖子和評論（好的搜尋詞是“standalone”和“Lemfo”）以及 Discord 獲取更多資訊。
+If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS**  Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
 
-### 選項 2) 在手錶上運作 **AAPS**，以遠端控制手機上的 **AAPS**
+### Option 2) **AAPS** on watch, for remote control of **AAPS** on a phone
 
-類似於使用追蹤者手機搭配 AAPSClient、Nightscout 或 SMS 指令（鏈接到相應部分），智慧型手錶可以用來遠端控制 **AAPS**，並提供完整的個人設定資料。 與使用追蹤者手機的主要區別是，智慧型手錶與 **AAPS** 手機的連線是透過藍牙進行的，並且不需要驗證碼。 順帶一提，使用者報告說，如果智慧型手錶和 **AAPS** 手機透過藍牙連線，並且同時連線到 Wi-Fi 網絡，那麼手錶還可以透過 Wi-Fi 與 **AAPS** 手機互動，提供更長距離的通訊範圍。 這包括在不同位置遠端注射胰島素，例如照護者透過 **AAPS** 手錶為 T1D 孩子（持有 **AAPS** 手機）進行注射，這在孩子上學時特別有用。
+Similarly to using a follower phone with either AAPSClient, Nightscout or SMS commands (link to sections) a smartwatch can be used to remotely control **AAPS** and provide full profile data. A key difference to using a follower phone is that the smartwatch to **AAPS** phone link is via bluetooth and does not require an authenticator code. As a side-note, users have reported that if both smartwatch and **AAPS** phone linked by bluetooth are also a wifi network, the watch may also interact with the **AAPS** phone over the wifi, giving a longer range of communication. This includes remote delivery of a bolus where the caregiver with the **AAPS** watch and T1D child (with **AAPS** phone) are in different locations and which can useful in circumstances where the T1D child is in school.
 
-因此，遠端控制智慧型手錶在以下情況中特別有用：
+A remote control smartwatch is therefore often useful in any situation where:
 
-a) 當 **AAPSClient**/Nightscout/**SMS** 指令無法使用時；或
+a)  **AAPSClient**/Nightscout/**SMS** commands cannot work; or
 
-b) 使用者希望避免輸入驗證碼（追蹤者手機需要在輸入資料、選擇 TT 或輸入碳水化合物時使用驗證碼）。
+b)  The user wishes to avoid the need for authenticator code (as required for the follower phone with inputting data, selecting TT or entering carbs).
 
-智慧型手錶需要運作 **Android wear** 軟體（最好是 10 或更新版本）才能控制 **AAPS**。 請檢查手錶的技術規格，並查看[相容手錶的表格](link)。 如果不確定，請在 **AAPS** 的 Facebook/Discord 群組中搜尋或詢問。
+A smartwatch needs to have **Android wear** software (ideally 10 or higher) to be able to control **AAPS**. Please check the technical specifications of the watch, and check the [spreadsheet of compatible watches](link). Search, or ask in the **AAPS**  Facebook/Discord groups if unsure.
 
-以下是設置流行型號 Samsung Galaxy Watch 4（40 毫米）的具體操作指南。 Garmin 手錶也是一個受歡迎的選擇，請參閱[這裡](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)。 如果您有設置其他智慧型手錶的經驗，並且認為這對其他用戶有幫助，請[編輯文件](https://androidaps.readthedocs.io/en/latest/make-a-PR.html)，將您的發現分享給更廣泛的 **AAPS** 社群。
+Specific How-to guides for setting up **AAPS** on the popular [Samsung Galaxy Watch 4 (40mm) is given below. The [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) watch is also a popular choice. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](https://androidaps.readthedocs.io/en/latest/make-a-PR.html) to share your findings with the wider **AAPS** community.
 
-#### AAPS Wear apk
+#### The AAPS Wear apk
 
-適用於智慧型手錶的 **AAPS** Wear OS 應用程式（“Wear OS apk”）已從 Android 手機的“完整” **AAPS** 版本中分離出來。 因此，您需要生成第二個安裝檔案或 apk，將 **AAPS** wear 安裝到手錶上（這是透過從手機側載到手錶上完成的）。 強烈建議在第一次構建手機的完整 **AAPS** apk 後立即生成 **AAPS** Wear apk 檔案。 這不僅在您[首次構建 **AAPS**] 時非常快捷，而且還可以避免在設置手錶與手機的通訊時出現潛在的相容性問題。 如果手錶上的 **AAPS** Wear apk 與手機上的 **AAPS** apk 是在不同版本的 Android Studio 中構建的，或如果距離最初的 **AAPS** 構建已經過了幾個月，則可能不相容。
+The Wear OS App of **AAPS**  (“Wear OS apk”) required for the smartwatch has been separated from the "full" **AAPS** build for the Android phone. Therefore you have to generate a second installation file, or apk, to install **AAPS** wear onto the watch (which is done by side-loading it from the phone). It is strongly recommended that the **AAPS** Wear apk file is built immediately after first building the full **AAPS** apk for the phone. Not only is this very quick to do if you are [building **AAPS** for the first time](link to building **AAPS** for the first time), but it will avoid any potential compatibility issues when you try to set up the watch-phone communication. The **AAPS** Wear apk on the watch is unlikely to be compatible with the **AAPS** phone apk if they have been built in different versions of Android Studio, or if months have past since the initial **AAPS** build.
 
-如果您已經在手機上使用 **AAPS**，但當時沒有同時構建手機和手錶的 **AAPS** apk，為了確保成功，最好同時重新構建這兩個 apk 檔案。 如果您已經安裝了 Android Studio，則可能需要卸載並重新安裝 Android Studio，並按照以下步驟同時構建 **AAPS** 手機和手錶 apk，使用相同的**密鑰庫檔案**。
+If you are already using **AAPS** on a phone and you did not build both the phone and watch (wear) **AAPS** apks at the same time, to ensure success it is therefore best to do a fresh build of both apk files at the same time. If you have already installed Android studio, then you may wish to uninstall and then reinstall Android studio as outlined below, and build the AAPS phone and watch apks at the same time, using the same **keystore file**.
 
-#### 如何卸載 Android Studio
+#### How to uninstall Android Studio
 
-確保您的密鑰庫檔案已安全存儲在電腦上的其他位置，遠離 Android Studio 資料夾。
+Make sure your keystore file is safely stored elsewhere on your computer, outside of the Android Studio folders.
 
-完全卸載 Android Studio 需要執行幾個步驟。 如果您使用的是 Windows 機器，這裡有一個[不錯的指南](https://www.geeksforgeeks.org/how-to-completely-uninstall-android-studio-on-windows/)。 在這些指示的最後一步，您還需要手動刪除“StudioProjects”資料夾。
+There are several steps required to completely remove Android Studio from a computer. This is a [good guide](https://www.geeksforgeeks.org/how-to-completely-uninstall-android-studio-on-windows/) if you are using a Windows machine. In the final step of these instructions, you also need to manually remove the folder “StudioProjects”.
 
-現在重新安裝最新版本的 Android Studio。
+Now reinstall the latest version of Android Studio.
 
-#### 構建 **AAPS** Wear apk
-簡單來說，Wear apk 的構建過程與手機 apk 的“完整”構建過程非常相似，不同之處在於您需要在 Android Studio 中的下拉選單中選擇“**AndroidAPS.wear**”，並選擇構建變體“**fullRelease**”。 這將生成 **AAPS** Wear apk 檔案。  如果您願意，您也可以從下拉選單中選擇構建 **“pumpcontrolRelease”**，這將只允許您遠端控制幫浦，但不包括循環功能。
+#### Building the **AAPS** Wear apk
+As a summary, the build process for the Wear apk is very similar to that for the "full" phone apk, the difference is that in Android Studio you need to select “**AndroidAPS.wear**”  in the drop-down menu, and as build variant choose “**fullRelease**”. This will generate the **AAPS** Wear apk file.  If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping.
 
-以下指南假設您已重新安裝最新版本的 Android Studio（此場景使用的是 Giraffe 2022.3.1）。
+The following guide assumes you have reinstalled the latest version of Android studio (scenario below has used Giraffe 2022.3.1)).
 
-![圖像](./images/e8e3b7f3-f82e-425a-968c-cc196434a5f8.png)
+![image](./images/e8e3b7f3-f82e-425a-968c-cc196434a5f8.png)
 
-要回到這裡：
+To get back here:
 
-![圖像](./images/37f4589c-6097-49d4-b0b9-087664914198.png)
+![image](./images/37f4589c-6097-49d4-b0b9-087664914198.png)
 
-繼續按照說明進行操作。
+continue to follow the instructions.
 
-按照不同畫面的提示，直到出現一個下拉選單，提供構建 AAPS 完整 apk 的選項。 在此時，從下拉選單中選擇“Wear”而不是“AndroidAPS.apk”，因為您正在為智慧型手錶構建 apk。
+Follow the prompts through the different screens until you are given an option with a dropdown menu offering to build the AAPS full apk. At this point, select  “Wear” from the dropdown instead of “AndroidAPS.apk” because you are building the apk for the smartwatch.
 
 
-下一步，前往功能區中的“構建”選項
+Next Step go to "Build" in the ribbon
 
-![圖像](./images/b2cccc84-85b6-4ee1-800b-7c6dcb9dd857.png)
+![image](./images/b2cccc84-85b6-4ee1-800b-7c6dcb9dd857.png)
 
 
-前往構建 > 生成已簽章的包/ APK
+Go to Build > Generate Signed Bundle / APK
 
 
-![圖像](./images/f488fe36-8cb9-4d81-9d94-5f742a1aaaee.png)
+![image](./images/f488fe36-8cb9-4d81-9d94-5f742a1aaaee.png)
 
-選擇 > APK：
+Select > APK:
 
-![圖像](./images/Installation_Screenshot_39b.PNG)
+![image](./images/Installation_Screenshot_39b.PNG)
 
 
-在模塊中選擇：AndroidAPSwear
+Select in Module: AndroidAPSwear
 
-![圖像](./images/cceaa832-70e6-4ad5-95ec-a82e2a6add1e.png)
+![image](./images/cceaa832-70e6-4ad5-95ec-a82e2a6add1e.png)
 
-輸入預設位置的密鑰庫檔案。 您的密鑰庫路徑取決於您將密鑰庫存放的位置。 在此場景中，密鑰庫路徑位於：C:\Program Files\Android\Android Studio\jbr\bin
+Enter keystore file at the default location. Your keystore path will depend where you have stored your Keystore. For this scenario the keystore path was located: C:\Program Files\Android\Android Studio\jbr\bin
 
 
-下一個畫面應顯示如下：
+The next screen should show this:
 
-![圖像](./images/87ce7943-256e-449e-8439-8f9fd5bef05e.png)
+![image](./images/87ce7943-256e-449e-8439-8f9fd5bef05e.png)
 
 
-然後選擇“fullRelease”。
+And select “fullRelease”.
 
-請耐心等待 - 構建 **AAPS** Wear apk 大約需要 10-20 分鐘，具體取決於您的網路連線速度。
+Be patient - the **AAPS** Wear apk should be built in around 10-20 minutes, depending on the speed of your internet connection.
 
-### 疑難排解
+### Troubleshooting
 
-在構建 3.2 版完整 **AAPS** 應用程式（實際上是任何已簽章的應用程式）過程中，Android Studio 會在同一個資料夾中生成一個 .json 檔案。 這會在您嘗試構建下一個已簽章的應用程式（如 **AAPS** wear 應用程式）時，導致[未提交的變更](troubleshooting_androidstudio-uncommitted-changes)錯誤。 解決此問題的最快方法是導航到構建完整 AAPS 應用程式的資料夾，您的資料夾可能類似於：
+In the process of building the 3.2 full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. This then causes errors with [uncommitted changes](troubleshooting_androidstudio-uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. The quickest way to resolve this is to navigate to the folder where the full AAPS app has been built, your folder is probably something like:
 
-C:\Users\Your Name\StudioProjects\AndroidAPS\app\aapsclient\release。
+C:\Users\Your Name\StudioProjects\AndroidAPS\app\aapsclient\release.
 
-將不需要的 .json 檔案刪除或移出該資料夾。 然後再次嘗試構建 **AAPS** wear 應用程式。 如果這不起作用，請參閱[更詳細的疑難排解指南](troubleshooting_androidstudio-troubleshooting-android-studio)，以幫助您識別導致問題的具體檔案，也可能是您的密鑰庫檔案。
+Either delete, or move the unneeded .json file out of the folder. Then try to build the **AAPS** wear app again. If that doesn't work, the more detailed [troubleshooting guide](troubleshooting_androidstudio-troubleshooting-android-studio) will help you to identify the specific file causing the issue, which could also be your keystore file.
 
 
-#### 如何設置 Samsung Galaxy 4 智慧型手錶與 **AAPS** 搭配使用
+#### How to set up a Samsung Galaxy 4 smartwatch with **AAPS**
 
-本節假設您對智慧型手錶完全陌生，將向您介紹一款流行手錶（**Galaxy Watch 4**）的基本操作，隨後是逐步設置 **AAPS** 在手錶上運作的指南。
+This section assumes you are totally new to Smartwatches, and gives you basic orientation of a popular watch, the **Galaxy Watch 4**, followed by a step-by-step guide to setup **AAPS** on the watch.
 
-_本指南假設您正在設置運作 Wear OS 3 或更低版本的 Samsung Galaxy 手錶。_ 如果您正在設置運作 Wear OS 4/OneUI 5 或更高版本的手錶，您將需要使用新的 ADB 配對過程，這在 Samsung 手機軟體中有解釋，並將在適當時更新到這裡。 這裡有關於 [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) 和 [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0) 的基本設置指南
+_This guide assumes the Samsung Galaxy watch you are setting up is running Wear OS version 3 or lower._ If you are setting up a watch running Wear OS 4/OneUI 5 or later, you will need to use a new ADB pairing process, this is explained in the Samsung software on your phone and will be updated here in due course. Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
 
-##### 智慧型手錶的基本熟悉指南
+##### Basic smartwatch familiarity
 
-根據上方影片進行手錶的基本設置後，前往手機上的 Play 商店並下載以下應用程式：“Galaxy Wearable”、“Samsung”和“Easy Fire tools”或“Wear Installer 2”。
+After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable" “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
 
-有許多第三方 YouTube 視頻可幫助您熟悉新手錶，例如：
+There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
 
 https://www.youtube.com/watch?v=tSVkqWNmO2c
 
-“Galaxy Wearable”應用程式內也有一個使用手冊部分。 在手機上打開 Galaxy Wearable，搜尋手錶，嘗試將手錶與手機配對。 根據您的版本，這可能會提示您從 Play 商店安裝第三個應用程式“Galaxy Watch 4 外掛”（下載需要一些時間）。 在手機上安裝此應用程式，然後再次在 Galaxy Wearable 應用程式中嘗試將手錶與手機配對。 透過一系列選單並勾選各種偏好設定。
+The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. Depending on your version, this may prompt you to install a further 3rd app “galaxy watch 4 plugin” from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
 
-##### 設置 Samsung 帳號
+##### Setting up a Samsung account
 
-您需要確保用來設置 Samsung 帳號的電子郵件帳戶的出生日期顯示用戶年齡 13 歲以上，否則 Samsung 的許可權批准將非常困難。 如果您已為 13 歲以下的孩子建立了 Gmail 帳號並使用該電子郵件地址，您無法簡單地將其更改為成人帳戶。 解決此問題的一種方法是將當前的出生日期修改為使當前年齡為 12 歲零 363 天。 第二天，該帳戶將被轉換為成人帳戶，然後您可以繼續設置 Samsung 帳戶。
+You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 363 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
 
-##### 將 **AAPS** Wear 應用程式傳輸到 **AAPS** 手機
+##### Transferring the **AAPS** Wear app onto your **AAPS** phone
 
-從 Android Studio 將 Wear.apk 載入到您的手機，可以透過以下方式進行：
+Loading the Wear.apk from Android Studio to your phone can be done either by:
 
-a) 使用 USB 傳輸線將 **AAPS** wear apk 檔案放入手機，然後將其“側載”到手錶上。 透過 USB 將 Wear.apk 傳輸到手機的下載資料夾；或
+a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
 
-b) 從 Android Studio 將 Wear.apk 剪切並粘貼到您的 Gdrive 中。
+b)  cut and paste Wear.apk from Android Studio onto your Gdrive.
 
 
-您可以使用 Wear Installer 2 或 Easy Fire tools 將 AAPS 側載到手錶上。 這裡我們推薦使用 Wear Installer 2，因為視頻中的說明和過程非常清晰且解釋得很好。
+You can use either Wear Installer 2 or Easy Fire tools to side-load AAPS onto the watch. Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained.
 
-##### 使用 Wear Installer 2 將 **AAPS** Wear 從手機側載到手錶上
+##### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
 
- ![圖像](./images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
+ ![image](./images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
 
-Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發，您可以從 Google Play 將其下載到手機上，並用來將 AAPS wear 應用程式側載到手錶上。 該應用程式包含一個便捷的“如何側載”[視頻](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)。
+Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
 
-該視頻提供了所有必要的細節（最好在單獨的設備上打開視頻，以便在設置手機時觀看）。
+This provides all the necessary detail (best to open the video on a separate device so you can watch it whilst setting up the phone).
 
-如視頻中所述，完成後，請關閉手錶上的 ADB 調試，以避免消耗智慧型手錶的電池。
+As mentioned in the video, once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
 
-或者，您可以：
+Alternatively, you can:
 
 ```{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
 :class: dropdown
 
-1)   從商店下載 _Easy Fire Tools_ 到手機 
+1)   Download _Easy Fire Tools_ from playstore onto phone 
 
 ![image](./images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
 
-2)  在手錶上設定自己為開發者（連接至手機後）： 
+2)  Make yourself a developer in the watch (once set up and connected to phone): 
 
-前往設定 >關於手錶（底部選項） >- 軟體資訊 > 軟體版本。 
+Go to settings >about watch (bottom option) >- software info > software version. 
 
-快速點擊“軟體版本”，直到出現通知，告知手錶現在處於“開發者模式”。 返回設置選單頂部，向下滾動，並在“關於手錶”下方看到“開發者選項”。 
+Rapidly tap on “ software version” until a notification appears that the watch is now in "developer mode". Return to the top of settings menu, scroll to the bottom
+ and see “developer options” below “about watch”. 
 
-在“開發者選項”中，打開“ADB 調試”和“無線調試”。 後者將顯示手錶的 IP 地址，其最後兩位數字每次與新手機配對時都會改變。 它會像是：**167.177.0.20.** 5555（忽略最後4位數）。 請注意，每次將 AAPS 切換到新手機時，這個地址的最後兩位數字（這裡為“20”）將發生變化。  
+In “developer options”, turn on “ADB debugging” and “wireless debugging”. The latter option then reveals the IP address of the watch, the final two digits of which changes each time the watch is paired with a new phone. It will be something like: **167.177.0.20.** 5555 (ignore the last 4 digits). Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS.  
 
-![24-10-23, 手錶 ADB 除錯圖](./images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
+![24-10-23, watch ADB debug pic](./images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
 
-步驟 3)     在手機的 Easy Fire tools 中輸入 IP 地址 _例如_ **167.177.0.20**（進入左側選單，設定並輸入 IP 地址）。 然後點擊右上角的插頭圖示。  
+STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). Then click the plug socket icon on the top right.  
 
 ![image](./images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
 
@@ -667,14 +669,14 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 ![image](./images/00b2fb8b-5996-4b71-894e-516d63469e1b.png)
 
 
-步驟 4) 按照 [這裡](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) 的說明進行側載（即傳輸） Wear.apk 到智慧手錶，使用 Easy Fire tools
+STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  Wear.apk onto the smartwatch using Easy Fire tools
 
-點擊應用程式中的側邊「外掛」插座，以便將 Wear OS.apk 上傳至智慧手錶： 
+Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the smartwatch: 
 
 ![image](./images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
 
 
- 下一步 > 在智慧手錶上接受授權請求
+ Next step > accept the authorisation request on the smartwatch
 
 
 ![image](./images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
@@ -682,122 +684,122 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 ```
 
 
-##### 設置 **AAPS** 手機與手錶的連線
+##### Setting up the connection between the watch and the phone from **AAPS**
 
-最後一步是配置手機上的 **AAPS** 與智慧型手錶上的 **AAPS** Wear 互動。 為此，在 Config Builder 中啟用 Wear 外掛：
+The final step is to configure **AAPS** on the phone to interact with **AAPS** Wear” on the watch. To do this, enable the Wear plugin in Config Builder:
 
-● 打開手機上的 **AAPS** 應用程式
+●   Go to the **AAPS** app on the phone
 
-● 選擇 > 左側漢堡選單中的 Config Builder
+●   Select > Config Builder in the left-hand Hamburger tab
 
-● 在常規部分勾選 Wear 選項
+●   Tick for Wear selection under General
 
-![圖像](./images/ae6d75a1-1829-4d2e-b0dc-153e31e4a466.png)
-
-
-要更改 **AAPS** 手錶錶盤，請按下手錶的主畫面，它將進入“自訂”模式。 然後向右滑動，直到看到所有 **AAPS** 錶盤。
-
-如果 **AAPS** Wear.apk 已成功側載到智慧型手錶上，它將顯示如下：
+![image](./images/ae6d75a1-1829-4d2e-b0dc-153e31e4a466.png)
 
 
-![24-10-23，成功的 Galaxy 手錶照片](./images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
+To change to a different **AAPS**  watchface, press on the home screen of the watch and it will come to “customise”. Then swipe right until you get to all the **AAPS**  faces.
 
-#### 排查 **AAPS** 手錶與 **AAPS** 手機通訊的故障
-1.  如果 EasyFire tools 無法連線，或者您收到“授權失敗”訊息 > 請檢查 IP 地址是否正確輸入。
-2.  檢查智慧型手錶是否已連線到網際網路（而不僅僅是透過藍牙與手機連線）。
-3.  檢查 **AAPS** 手機和智慧型手錶是否已在 Samsung 應用程式中配對或連線。
-4.  也可能需要對手機和智慧型手錶進行硬重啟（即關閉並重新啟動手機）。
-5.  假設您已經成功下載 Wear.apk 到手機，但未收到任何血糖資料，_請檢查_ 您是否已將正確的 **AAPS** apk 版本側載到手錶上。 如果您的 AAPS wear.apk 版本列為以下任何一個：a) “wear-AAPSClient-release”；b) “wear-full-release.aab”；或c) 標題中出現“debug”一詞，那麼您在構建過程中選擇了錯誤的 Wear OS apk 版本。
-6.  檢查路由器是否未將設備相互隔離。
-
-更多疑難排解提示請參閱[這裡](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
-
-### 從 Wear 手錶控制 AAPS
-
-一旦您在手錶上設置了 **AAPS**，關於智慧型手錶錶盤及其功能的詳細資訊，請參閱[Wear AAPS 在智慧型手錶上的操作](../Configuration/Watchfaces.md)。
-
-簡要概述，以下功能可以從智慧型手錶觸發：
-
-● 設置臨時目標
-
-● 使用注射計算機（計算變數可以在手機設置中定義）
-
-● 管理 eCarbs
-
-● 管理一次注射（胰島素 + 碳水化合物）
-
-● 手錶設置
-
-● 狀態
-
-● 檢查幫浦狀態
-
-● 檢查循環狀態
-
-● 檢查和更改個人設定檔，CPP（晝夜節律百分比個人設定檔 = 時間偏移 + 百分比）
-
-● 顯示 TDD（每日總劑量 = 每日注射 + 基礎）
-
-● 當照護者和 1 型糖尿病（T1D）孩子處於不同位置時進行遠端注射（這適用於 **AAPS** 手錶和 **AAPS** 手機，只要兩台設備均連線到 Wi-Fi 網絡）
-
-#### 照護者使用其他應用程式（如 Whatsapp）與手錶通訊
-
-可以在手錶上添加其他應用程式，例如 Whatsapp，用於照護者和孩子之間的訊息交流（例如）。 重要的是，手機上只應關聯一個 Google 帳戶，否則手錶無法同步這些資料。 您需要年滿 13 歲才能擁有 Samsung 帳戶，並且此帳戶需要使用與 Android 手機相同的電子郵件地址設置。
-
-這裡有一段視頻，解釋了如何在 Galaxy 4 手錶上設置 Whatsapp 訊息功能（您無法獲得 Whatsapp 的全部功能），請參閱[這裡](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
-
-在 **Galaxy wearable** 應用程式中的手機和手錶上進行調整後，可以使 Whatsapp 訊息透過輕微振動通知，並且 Whatsapp 訊息會顯示在現有錶盤上方。
-
-#### Sony 智慧型手錶設置疑難排解
-
-雖然 Sony 智慧型手錶 SW 3 已於幾年前停產，但如果您正在使用此型號，請參閱[Sony 智慧型手錶 SW 3 疑難排解指南](https://androidaps.readthedocs.io/en/latest/Usage/SonySW3.html)。
+If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, it will look like this:
 
 
+![24-10-23, successful galaxy watch photo](./images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
 
-### 選項 3) 在手錶上運作 AAPSClient 以遠端控制手機上的 **AAPS**
+#### Troubleshooting the **AAPS** watch- **AAPS** phone communication
+1.  If EasyFire tools does not connect or if you are receiving ‘authorisation failed’ > check IP address has been correctly entered.
+2.  Check that the smartwatch is connected to the internet (and not just connected to the phone via Bluetooth).
+3.  Check that the **AAPS** Phone and smartwatch are paired or linked in Samsung app.
+4.  It may also help to do a hard restart of Phone and smartwatch (meaning turning phone on and off)
+5.  Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** apk version onto the watch. If your AAPS wear.apk version is listed as any of the following: a) “wear-AAPSClient-release’; b) ‘wear-full-release.aab’; or c) the word ‘debug’ appears in the title, you have not selected the correct Wear OS apk version during the build.
+6.  Check that your router is not isolating the devices from one another.
 
-手錶軟體 **AAPSClient** Wear apk 可以直接從[Github](https://github.com/nightscout/AndroidAPS/releases/)下載。
+More troubleshooting tips can be found [here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
 
-要下載軟體，請點擊所需的應用程式（在此截圖中，**wear-aapsclient-release_3.2.0.1** 或 **wear-aapsclient2-release_3.2.0.1** 均可使用，這兩個版本中有一個是為了提供給第二位照護者的手錶）。
+### Controlling AAPS from the Wear Watch
 
-![圖像](./images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
+Once you have setup **AAPS** on your watch, extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../Configuration/Watchfaces.md).
+
+As a brief overview, the following functions can be triggered from the smartwatch:
+
+●   set a temporary target
+
+●   use the bolus calculator (calculation variables can be defined in settings on the phone)
+
+●   administer eCarbs
+
+●   administer a bolus (insulin + carbs)
+
+●   watch settings
+
+●   status
+
+●   check pump status
+
+●   check loop status
+
+●   check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+
+●   show TDD (Total daily dose = bolus + basal per day)
+
+●   Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to a Wifi network)
+
+#### Communication from caregivers to the watch using other apps (like Whatsapp)
+
+It is possible to add additional apps to the watch, like Whatsapp, for messaging (for example) between caregivers and kids. It is important only to have ONE Google account associated with the phone, or the watch will not bring this data across. You need to be 13 or older to have a Samsung account, and this needs to be set up in the same email address which is used on the Android phone.
+
+A video explaining getting Whatsapp setup for messaging on the Galaxy 4 watch (you can’t get full functionality of Whatsapp) is shown [here](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
+
+Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and the watch makes it possible for Whatsapp messages to announce with a slight vibration, and also for the Whatsapp message to display over the existing watchface.
+
+#### Troubleshooting Sony smartwatch setup
+
+Although it was discontinued a few years ago, if you are using a Sony Smartwatch SW 3 please see here for a troubleshooting guide: [Troubleshooting Sony Smartwatch SW 3](https://androidaps.readthedocs.io/en/latest/Usage/SonySW3.html)
 
 
-然後點擊“另存為”，並將文件儲存到電腦上的方便位置：
+
+### Option 3) AAPSClient on a watch for remote control of **AAPS** on a phone
+
+The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [Github](https://github.com/nightscout/AndroidAPS/releases/).
+
+To download the software, click on the required app (in this screenshot, either **wear-aapsclient-release_3.2.0.1** or **wear-aapsclient2-release_3.2.0.1** would work, there are two versions in case you need a copy for a second caregiver watch):
+
+![image](./images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
 
 
-![圖像](./images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
+Then "save as" and save the file to a convenient location on your computer:
 
 
+![image](./images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
 
 
 
 
-可以按照[將 Wear 應用程式傳輸到您的 AAPS 手機](remote-control.md#transferring-the-wear-app-onto-your-aaps-phone)中的詳細步驟，將 **AAPSClient** wear apk 傳輸到手機並側載到手錶上。
-
-### 選項 4) FitBit 手錶的有限 Nightscout（和其他選項）
 
 
+The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](remote-control.md#transferring-the-wear-app-onto-your-aaps-phone)
 
-![圖像](./images/98620770-2fb3-47af-a13e-28af7db69096.png)
+### Option 4) Limited Nightscout (and other options) on a watch - Fitbit watches
 
 
 
-**"Sentinel"** 是一款由[Ryan Chen](http://ryanwchen.com/sentinel.html) 為其家人開發並免費提供給 FitBit 智慧型手錶的錶盤：Sense1/2, Versa 2/3/4。 它與 FitBit Luxe 不相容，因為它只是健身追蹤器。 Sentinel 可以從[FitBit 移動應用程式](https://gallery.fitbit.com/details/5f75448f-413d-4ece-a53d-b969c6afea7c)下載。
+![image](./images/98620770-2fb3-47af-a13e-28af7db69096.png)
 
-它允許使用 Dexcom Share、Nightscout 或兩者結合作為資料來源，來監控一個、兩個或三個人的血糖數值。
 
-如果與本地網頁伺服器模式一起使用，您還可以使用 xDrip+ 或 SpikeApp。 用戶可以設置自定義警報，並透過 Nightscout 的 careportal 功能提交事件，直接從手錶追蹤胰島素剩餘量（IOB）、碳水化合物剩餘量（COB），輸入餐食資訊（碳水化合物計數和注射量），以及血糖檢查數值。
 
-所有這些都將顯示在 Nightscout 的時間軸圖表中，並作為更新值顯示在 IOB 和 COB 欄位中。 社群支援可以在專門的[Facebook 群組 Sentinel](https://www.facebook.com/groups/3185325128159614)中找到。
+**"Sentinel"** is a clockface developed by [Ryan Chen](http://ryanwchen.com/sentinel.html) for his family and shared for free for the Fitbit smart watches: Sense1/2, Versa 2/3/4. it is not compatible with the FitBit Luxe since this is only a fitness tracker. Sentinel can be downloaded from the [FitBit mobile app](https://gallery.fitbit.com/details/5f75448f-413d-4ece-a53d-b969c6afea7c).
 
-FitBit 手錶還有一些僅限於監控的選項。 這包括[Glance](https://glancewatchface.com/)。 這些額外選項在[Nightscout 網頁](https://nightscout.github.io/nightscout/wearable/#fitbit)中有描述。
+It allows the monitoring of 1, 2, or 3 individual's blood glucose numbers using either Dexcom Share, Nightscout, or a combination of the two as data sources.
 
-### 選項 5) 監控 **AAPS**（完整個人設定資料，或僅限血糖資料）當 **AAPS** 在手機上運作時。
+You can also use xDrip+ or SpikeApp if used with local web server mode. Users can set custom alarms and submit events using Nightscout's careportal functionality directly from the watch to help track insulin-on-board (IOB), carbs-on-board (COB), enter meal information (carb count and bolus amount), and BG check values.
 
-這些選項在文檔的[“僅限追蹤”](following-only.md)部分中有更詳細的描述。
+All will appear on the Nightscout timeline-graph, and as updated values in the IOB and COB fields. Community support can be found at the dedicated [Facebook group, Sentinel.](https://www.facebook.com/groups/3185325128159614)
 
-通常，市場上有許多價格實惠的智慧型手錶可以提供僅限血糖資料顯示的功能。 如果您正在使用 Nightscout，那麼所有選項的概述可以在[Nightscout 頁面](https://nightscout.github.io/nightscout/wearable/#)中找到。
+There are additional options for FitBit watches which appear to be for monitoring only. This includes [Glance](https://glancewatchface.com/). These additional options are described in the [Nightscout webpages.](https://nightscout.github.io/nightscout/wearable/#fitbit)
+
+### Option 5) **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
+
+These options are described in more detail in the ["following only"](following-only.md) section of the documentation.
+
+In general, there are a wide range of affordable smartwatches which can provide glucose display only. If you are using Nightscout, then a good overview of all the options are described in the [Nightscout pages](https://nightscout.github.io/nightscout/wearable/#).
 
 
 
