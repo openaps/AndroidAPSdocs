@@ -10,7 +10,7 @@ Podrobnosti viz [Oddíl FAQ](../Getting-Started/FAQ.md).
 
 ## Specifikace hardware a softwaru pro vytvoření AAPS
 
-- K sestavení aplikace prosím používejte **[Android Studio ve verzi Hegehog (2023.1.1) nebo některou aktuálnější jako Iguana, Jellyfish nebo Koala] (https://developer.android.com/studio/)**. Starší verze Android Studio musí být nejprve aktualizovány!
+- Please use the **[Android Studio version called at least Hedgehog or one more recent like Iguana, Jellyfish, and Koala](https://developer.android.com/studio/)** to build the apk. <u>**Do not use the Ladybug version.**</u> Older versions of Android Studio need to be updated first!
 - Na [32-bitových systémech Windows](troubleshooting_androidstudio-unable-to-start-daemon-process) není program Android Studio podporován. Mějte prosím na paměti, že 64bitový CPU a 64bitový OS jsou nutné podmínky. Pokud je váš systém nesplňuje, musíte vyměnit příslušný hardware nebo software nebo celý systém.
 
 <table class="tg">
@@ -126,7 +126,7 @@ Následující snímky obrazovky byly vytvořeny z Android Studia ve verzi **Hed
 
 Jedna z nejdůležitějších věcí při instalaci aplikace Android Studio: Buďte trpěliví! Během instalace a nastavení aplikace Android Studio se stahuje spousta věcí, což zabere dost času.
 
-Stáhněte si nejnovější verzi Android Studia [**zde**](https://developer.android.com/studio#downloads), umístěte ji ve složce stahování prohlížeče a nainstalujte ji do počítače:
+**Download a supported version of Android Studio (Hedgehog, Iguana, Jellyfish or Koala - not Ladybug)** from [**here**](https://developer.android.com/studio/archive), locate it in your browser downloads folder, and install it on your computer:
 
 ![Stažení Android Studia](../images/Building-the-App/01_InstallAS_Hedgehog.png)
 
