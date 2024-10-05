@@ -1,32 +1,32 @@
-# Useful resources to read before you start
+# 開始之前值得閱讀的資源
 
-Before you build your rig, you're going to have to do a lot of reading in order to understand how everything works and to get the best out of it. We've put together a list of places you can go to get you started and hopefully answer a lot of your questions.
+在你開始構建系統之前，必須閱讀大量的資料，以便了解一切如何運作，並能最大限度地發揮其效果。 我們整理了一些網站，幫助你開始並回答許多問題。
 
-## Further reading
+## 進一步閱讀
 
-[OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
+[OpenAPS.org #我們不再等待 - https://openaps.org/](https://openaps.org/)
 
-[OpenAPS documention - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
+[OpenAPS 文檔 - https://openaps.readthedocs.io/en/latest/](https://openaps.readthedocs.io/en/latest/)
 
-[Loop Docs - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
+[Loop 文檔 - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
-[Fine-Tuning your settings - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
+[微調您的設定 - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
-[Tim Omer – Hypodiabetic Blog - https://www.hypodiabetic.co.uk/](https://www.hypodiabetic.co.uk/)
+[Tim Omer – Hypodiabetic 部落格 - https://www.hypodiabetic.co.uk/](https://www.hypodiabetic.co.uk/)
 
 [DIYPS - https://diyps.org/](https://diyps.org/)
 
-[Diabetes and Technology - Where Diabetes meets Tech - https://www.diabettech.com/](https://www.diabettech.com/)
+[糖尿病與科技 - 糖尿病與科技的交匯點 - https://www.diabettech.com/](https://www.diabettech.com/)
 
-[OpenAPS Reference Design - https://openaps.org/reference-design/](https://openaps.org/reference-design/)
+[OpenAPS 參考設計 - https://openaps.org/reference-design/](https://openaps.org/reference-design/)
 
-[Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters - https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+[我們為何經常錯誤設置胰島素作用時間 (DIA)，為何這很重要 - https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-[What conclusions can we draw when investigating Insulin Sensitivity using the Autosens function within #OpenAPS? https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/](https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
+[在 #OpenAPS 中使用 Autosens 功能調查胰島素敏感性時，我們能得出哪些結論？ https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/](https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
 
 [https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
-## Background reading and articles about DIY closed looping
+## 關於 DIY 閉環系統的背景閱讀和文章
 
 <https://hackaday.com/2016/12/19/closing-the-loop-on-an-artificial-pancreas/>
 
@@ -34,8 +34,8 @@ Before you build your rig, you're going to have to do a lot of reading in order 
 
 <https://btvnovinite.bg/video/bulgaria/dnes-e-svetovnijat-den-za-borba-s-diabeta.html>
 
-## Stuff on YouTube
+## YouTube 上的資源
 
-[Tim Omer: Empowered Citizen "Health Hackers" - We Are Not Waiting! - https://www.youtube.com/watch?v=RjhkRmL1wOI](https://www.youtube.com/watch?v=RjhkRmL1wOI)
+[Tim Omer: 被賦能的公民「健康黑客」- 我們不再等待！ - https://www.youtube.com/watch?v=RjhkRmL1wOI](https://www.youtube.com/watch?v=RjhkRmL1wOI)
 
-[Live interview with Dana Lewis, creator of Do-It-Yourself Pancreas System - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)
+[與 Do-It-Yourself 胰腺系統創作者 Dana Lewis 的現場訪談 - https://www.youtube.com/watch?v=uvjrPrH0Hrw](https://www.youtube.com/watch?v=uvjrPrH0Hrw)
