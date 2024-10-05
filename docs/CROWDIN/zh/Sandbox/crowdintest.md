@@ -1,9 +1,9 @@
-# 小型 Crowdin 測試
+# Small Crowdin Test
 
-這是一個用於測試 Crowdin 翻譯的小集合。
+This is a small set for testing the translation with Crowdin.
 
-我們想看看對句子的更改如何影響整個頁面的現有翻譯。
+We want to see how changes to a sentence affect the existing translation of the entire page.
 
-通常，只需要重新翻譯一句話，而不是全部內容。
+Normally, only one sentence should need to be retranslated and not everything.
 
-我們現在可以看到它。
+We can see it now.
