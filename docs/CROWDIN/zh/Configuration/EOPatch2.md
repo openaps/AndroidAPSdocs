@@ -1,156 +1,156 @@
-# EOPatch2 Instruction Manual
+# EOPatch2 使用手冊
 
-The patch requires the use of rapid-acting U-100 type insulin, such as NovoRapid or Humalog. Use a rapid-acting insulin that is suitable for you according to your doctor’s prescription and inject the prescribed dosage.
+此貼片需使用速效 U-100 類型胰島素，例如 NovoRapid 或 Humalog。 依照醫生的處方，使用適合您的速效胰島素，並注射處方劑量。
 
-The smallest injectable dose of insulin when using the patch is 0.05 U. The Profile BAS should therefore be set at a minimum value of 0.05 U/hr or more and an interval of 0.05 U/hr, as otherwise there may be an error between the estimated total infusion amount in the Profile and the actual infusion amount in the patch. Likewise, the bolus must also be set and infused with a minimum infusion volume of 0.05 U.
+使用此貼片時，最小可注射劑量為 0.05 U。因此，基礎速率（Profile BAS）應設置為至少 0.05 U/hr 或更多，並以 0.05 U/hr 的間隔調整，否則基礎速率與實際輸注量之間可能會出現誤差。 同樣地，注射劑量也必須設定並以最小輸注量 0.05 U 輸注。
 
-## Pump Setup
-1. On the AAPS home screen, click the hamburger menu in the upper left corner and go to Config Builder.
-1. Select 'EOPatch2' in the Pump section.
-1. Press the Back key to return to the home screen.
-
-
-![Image1](../images/EOPatch/Bild1.png) ![Image2](../images/EOPatch/Bild2.png)
-
-## Settings
-Select EOPATCH2 at the top of the home screen to go to the EOPATCH2 tab.
-
-Select the EOPatch2 Preferences menu by clicking the three dots in the upper right corner.
-
-The EOPatch2 Preferences menu offers a menu to set 3 types of notifications.
-
-### Low reservoir Alerts
-A warning appears when the amount of insulin remaining in the reservoir reaches the set value or less while using the patch. It can be set from 10 to 50U in 5U increments.
-
-### Patch expiration Reminder
-This is a reminder to notify you of the time remaining before the current patch expires. It can be set from 1 to 24 hours in 1 hour increments. The initial setting value is 4 hours.
-
-### Patch buzzer Reminder
-This is a reminder function for injections other than basal injection. If you are using an (extended) bolus injection or a temporary basal injection, the patch will make a buzzer sound when the injection starts and when the injection is complete. The initial setting value is Off.
-
-![Image3](../images/EOPatch/Bild3.png)
-
-## Connecting the Patch
-
-### Move to patch connection screen
-
-Select EOPATCH2 at the top of the home screen and click the ACTIVATE PATCH button at the bottom left.
-
-![Image4](../images/EOPatch/Bild4.png)
-
-### Connecting the patch
-Insert the syringe needle into the insulin inlet on the patch and then slowly push the piston to inject the insulin. When insulin is filled with more than 80U, the patch makes a booting sound (1 buzzer) and boots. After confirming the buzzer sound, click the START PAIRING button on the screen.
-
-[Warning]
-
-- Do not turn the needle action lever until instructed. It can cause serious problems during injection or safety checks otherwise.
-- The amount of insulin that can be injected into the patch is 80~200U. If you inject less than 80U into the patch initially, the patch will not work.
-- Take the insulin to be put into the patch from the refrigerator and leave it at room temperature for 15 to 30 minutes beforehand. The temperature of the insulin to be injected must be at least 10°C.
-
-![Image5](../images/EOPatch/Bild5.png)
-
-### patch pairing
-The Patch pairing screen will be displayed, and pairing will be attempted automatically. If communication is successful, the Bluetooth pairing request notification appears. Click OK and when the Bluetooth pairing request notification appears a second time with the authentication code, select OK again.
-
-[Warning]
-
-- For pairing, the patch and the smartphone must be located within 30 cm of each other.
-- After the patch booting is completed, the patch will beep every 3 minutes until the pairing is complete.
-- After booting the patch, the patch application must be completed via the app within 60 minutes. If the application cannot be completed within 60 minutes, the patch should be discarded.
-
-![Image6](../images/EOPatch/Bild6.png) ![Image7](../images/EOPatch/Bild7.png) ![Image8](../images/EOPatch/Bild8.png)
+## 幫浦設定
+1. 在 AAPS 主畫面上，點擊左上角的漢堡選單，進入組態建置工具。
+1. 在幫浦部分選擇「EOPatch2」。
+1. 按返回鍵回到主畫面。
 
 
-### patch preparation
-After removing the adhesive tape of the patch, check if the needle is sticking out. If there are no problems with the patch, click NEXT.
+![圖片1](../images/EOPatch/Bild1.png) ![圖片2](../images/EOPatch/Bild2.png)
 
-![Image9](../images/EOPatch/Bild9.png)
+## 設定
+在主畫面頂部選擇「EOPATCH2」，以進入「EOPATCH2」頁籤。
 
-### Patch attachment
-Insulin should be injected in a spot with subcutaneous fat but few nerves or blood vessels, so it is recommended to use the abdomen, arm, or thigh for the patch attachment site. Choose a patch attachment site and apply the patch after disinfecting the location.
+點擊右上角三個點，選擇「EOPatch2 偏好設定」選單。
 
-[Warning]
+「EOPatch2 偏好設定」選單提供三種通知的設定選項。
 
-- Make sure to straighten the side of the patch tape attached to the body evenly, so that the patch adheres completely to the skin.
-- If the patch does not stick completely, air may enter between the patch and the skin, which can weaken the adhesive strength and waterproof effect of the patch.
+### 低儲存量警報
+當使用貼片時，儲存量低於設定值時，會出現警告。 可設定範圍為 10 至 50U，並以 5U 的增量調整。
 
-![Image10](../images/EOPatch/Bild10.png)
+### 貼片到期提醒
+此提醒功能會通知您當前貼片到期前的剩餘時間。 可設定範圍為 1 至 24 小時，並以 1 小時的增量調整。 預設值為 4 小時。
 
-### Safety Check
-When patching is complete, touch Start Safety Check. When the safety check is completed, the patch will beep once.
+### 貼片嗶聲提醒
+此為除基礎注射外的注射提醒功能。 如果您使用（延長）注射或臨時基礎注射，貼片在注射開始及完成時會發出嗶聲聲。 預設值為關閉。
 
-[Warning]
+![圖片3](../images/EOPatch/Bild3.png)
 
-- For safe use, do not turn the needle action lever until the safety check has been completed.
+## 連線貼片
 
-![Image11](../images/EOPatch/Bild11.png) ![Image12](../images/EOPatch/Bild12.png)
+### 進入貼片連線畫面。
+
+在主畫面頂部選擇「EOPATCH2」，然後點擊左下角的「啟用貼片」按鈕。
+
+![圖片4](../images/EOPatch/Bild4.png)
+
+### 連線貼片
+將針筒插入貼片的胰島素入口，然後慢慢推動活塞注射胰島素。 當注射的胰島素超過 80U 時，貼片會發出啟動聲（1 次嗶聲），並啟動。 確認嗶聲聲後，點擊畫面上的「開始配對」按鈕。
+
+[警告]
+
+- 在指示之前，不要轉動針頭操作桿。 否則可能會在注射或安全檢查期間導致嚴重問題。
+- 貼片可注射的胰島素量為 80～200U。 如果初次注射胰島素量少於 80U，貼片將無法運作。
+- 將要注射進貼片的胰島素從冰箱中取出，並在室溫下靜置 15 至 30 分鐘。 注射的胰島素溫度必須至少為 10°C。
+
+![圖片5](../images/EOPatch/Bild5.png)
+
+### 貼片配對
+貼片配對畫面將顯示，並會自動嘗試配對。 如果通訊成功，藍牙配對請求通知將出現。 點擊「確定」，當第二次出現配對請求通知及驗證碼時，再次選擇「確定」。
+
+[警告]
+
+- 為了進行配對，貼片和智慧型手機之間必須保持在 30 公分內。
+- 貼片啟動完成後，貼片每 3 分鐘會發出一次嗶聲聲，直到配對完成為止。
+- 貼片啟動後，必須在 60 分鐘內完成貼片的應用程序。 如果在 60 分鐘內無法完成應用，則應丟棄貼片。
+
+![圖片6](../images/EOPatch/Bild6.png) ![圖片7](../images/EOPatch/Bild7.png) ![圖片8](../images/EOPatch/Bild8.png)
 
 
-### Inserting the needle
-The needle is inserted by holding around the patch and turning the needle action lever more than 100° in the upward direction of the lever. There is a buzzer sound when the needle is inserted correctly. Turn the needle action lever further clockwise to release the lever. Click NEXT.
+### 貼片準備
+移除貼片的膠帶後，檢查針頭是否突出。 如果貼片無問題，點擊「下一步」。
 
-[Caution]
+![圖片9](../images/EOPatch/Bild9.png)
 
-- If you go to the next step without the buzzer sounding, a needle insertion error warning will appear.
+### 貼片貼附
+胰島素應注射在具有皮下脂肪但神經或血管較少的部位，因此建議將貼片貼附在腹部、手臂或大腿。 選擇貼片貼附位置，並對該位置進行消毒後貼上貼片。
 
-## Discarding the patch
-Patches must be replaced in the case of low insulin levels, usage expiration, and defects. The recommended usage period for each patch is 84 hours after booting the patch.
+[警告]
 
-### Discarding the patch
-Select EOPATCH2 at the top of the home screen and click the DISCARD/CHANGE PATCH button at the bottom. On the next screen, click the DISCARD PATCH button. A dialog box appears to confirm once more and if you select the DISCARD PATCH button, the disposal is completed.
+- 請確保貼片膠帶側面平整，使貼片完全貼合於皮膚。
+- 如果貼片沒有完全貼合，貼片和皮膚之間可能會進入空氣，這可能會削弱貼片的黏合強度和防水效果。
 
-![Image13](../images/EOPatch/Bild13.png) ![Image14](../images/EOPatch/Bild14.png) ![Image15](../images/EOPatch/Bild15.png) ![Image16](../images/EOPatch/Bild16.png)
+![圖片10](../images/EOPatch/Bild10.png)
 
-## Suspending and Resuming Insulin Delivery
-Suspending insulin delivery also cancels both extended bolus and temporary basal. When resuming insulin delivery, the canceled extended bolus and temporary basal will not be resumed. And when insulin delivery is suspended, the patch will give a sound every 15 minutes.
+### 安全檢查
+貼附完成後，點擊「開始安全檢查」。 安全檢查完成後，貼片會發出一次嗶聲聲。
 
-### Suspending insulin delivery
-Select EOPATCH2 at the top of the home screen and click the SUSPEND button at the bottom right. When you select CONFIRM in the confirmation box, a time selection box appears. If you select the CONFIRM button after selecting the time, the insulin delivery will be suspended for the set amount of time.
+[警告]
 
-![Image17](../images/EOPatch/Bild17.png) ![Image18](../images/EOPatch/Bild18.png) ![Image19](../images/EOPatch/Bild19.png)
+- 為了安全使用，在安全檢查完成之前，請勿轉動針頭操作桿。
+
+![圖片11](../images/EOPatch/Bild11.png) ![圖片12](../images/EOPatch/Bild12.png)
 
 
-### Resuming insulin delivery
-Select EOPATCH2 at the top of the home screen and click the RESUME button at the bottom right. Insulin delivery will resume by selecting CONFIRM in the confirmation dialog box.
+### 插入針頭
+抓住貼片周圍，將針頭操作桿向上方超過 100° 轉動以插入針頭。 針頭正確插入時會發出嗶聲聲。 繼續順時針轉動針頭操作桿以鬆開操作桿。 點擊「下一步」。
 
-![Image20](../images/EOPatch/Bild20.png) ![Image21](../images/EOPatch/Bild21.png)
+[注意]
 
-## Alarms/Warnings
+- 如果在沒有嗶聲聲的情況下進入下一步，將會出現針頭插入錯誤警告。
 
-### Alarm
+## 丟棄貼片
+如果胰島素不足、使用期限到期或出現故障，需更換貼片。 每個貼片的建議使用期限為啟動後 84 小時內。
 
-Alarms are issued for emergency situations of the highest priority and require immediate action. The alarm signal does not disappear or time out until it is acknowledged. An alarm occurs when there is a problem with the patch being used, so there may be cases where the patch in use needs to be discarded and replaced with a new patch. The warning is displayed as a dialog box and switching to another screen is not possible until processing is completed.
+### 丟棄貼片
+在主畫面頂部選擇「EOPATCH2」，並點擊底部的「丟棄/更換貼片」按鈕。 在下一個畫面中，點擊「丟棄貼片」按鈕。 確認對話框會再次顯示，若選擇「丟棄貼片」按鈕，則完成丟棄操作。
 
-![Image22](../images/EOPatch/Bild22.png) ![Image23](../images/EOPatch/Bild23.png)
+![圖片13](../images/EOPatch/Bild13.png) ![圖片14](../images/EOPatch/Bild14.png) ![圖片15](../images/EOPatch/Bild15.png) ![圖片16](../images/EOPatch/Bild16.png)
 
-The different types of alarms are explained below.
+## 暫停與恢復胰島素輸送
+暫停胰島素輸送會取消延長注射與臨時基礎速率。 恢復胰島素輸送時，已取消的延長注射與臨時基礎速率不會自動恢復。 胰島素輸送暫停時，貼片每 15 分鐘會發出聲響。
 
-| Alarms                     | Explanation                                                                                                                                                                                                         |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir            | Occurs when the patch’s reservoir runs out of insulin.                                                                                                                                                              |
-| Patch expired              | Occurs when the patch usage time has expired, and no further insulin injections are possible.                                                                                                                       |
-| Occlusion                  | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
-| Power on self-test failure | Occurs when the patch finds an unexpected error during the post-boot self-test process.                                                                                                                             |
-| Inappropriate temperature  | Occurs when the patch is outside the normal operating temperature range during patch application and use. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition. |
-| Needle insertion Error     | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
-| Patch battery Error        | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                                                            |
-| Patch activation Error     | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                                             |
-| Patch Error                | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                                            |
+### 暫停胰島素輸送
+在主畫面頂部選擇「EOPATCH2」，並點擊右下角的「暫停」按鈕。 在確認框中選擇「確認」，則會出現時間選擇框。 選擇時間後再點擊「確認」按鈕，胰島素輸送會暫停設定的時間。
 
-### Warning
+![圖片17](../images/EOPatch/Bild17.png) ![圖片18](../images/EOPatch/Bild18.png) ![圖片19](../images/EOPatch/Bild19.png)
 
-A warning occurs in a medium or low-priority situation. When a warning occurs, it is displayed as a notification in the Overview screen.
 
-![Image24](../images/EOPatch/Bild24.png)
+### 恢復胰島素輸送
+在主畫面頂部選擇「EOPATCH2」，並點擊右下角的「恢復」按鈕。 在確認對話框中選擇「確認」後，胰島素輸送將恢復。
 
-The different types of warnings are explained below.
+![圖片20](../images/EOPatch/Bild20.png) ![圖片21](../images/EOPatch/Bild21.png)
 
-| Warnings                     | Explanation                                                                                                                           |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| End of insulin suspend       | Occurs when the time set by the user has elapsed after the insulin infusion suspension has been completed.                            |
-| Low reservoir                | Occurs when the remaining amount of insulin in the patch is below the set amount.                                                     |
-| Patch operating life expired | Occurs when the patch usage period is over.                                                                                           |
-| Patch will expire soon       | Occurs 1 hour before the patch must be discarded.                                                                                     |
-| Incomplete Patch activation  | Occurs when more than 3 minutes have elapsed due to an interruption during patch application in the stage after pairing is completed. |
-| Patch battery low            | Occurs when the patch's battery is low.                                                                                               |
+## 警報/警告
+
+### 警報
+
+警報是針對最優先的緊急情況發出，並需要立即處理。 警報訊號不會消失或逾時，直到被確認為止。 當使用中的貼片出現問題時會發出警報，因此可能需要丟棄當前的貼片並更換新貼片。 警告會以對話框顯示，在處理完成之前無法切換至其他畫面。
+
+![圖片22](../images/EOPatch/Bild22.png) ![圖片23](../images/EOPatch/Bild23.png)
+
+以下說明不同類型的警報。
+
+| 警報     | 說明                                                               |
+| ------ | ---------------------------------------------------------------- |
+| 儲存量已空  | 當貼片的儲存量用完時發生。                                                    |
+| 貼片到期   | 當貼片使用時間已過期且無法進行更多胰島素注射時發生。                                       |
+| 堵塞     | 當貼片的胰島素入口疑似堵塞時發生。                                                |
+| 開機自檢失敗 | 當貼片在開機後自檢過程中發現意外錯誤時發生。                                           |
+| 不適當的溫度 | 當貼片應用和使用過程中，貼片處於非正常工作溫度範圍內時發生。 要處理此警報，請將貼片移至適當的工作溫度（4.4 至 37°C）。 |
+| 針頭插入錯誤 | 當貼片應用過程中，針頭插入不正常時發生。 檢查貼片的針頭插入邊緣與針頭啟動按鈕是否在同一直線上。                 |
+| 貼片電池錯誤 | 當貼片內部電池即將耗盡並關機時發生。                                               |
+| 貼片啟動錯誤 | 當應用程序無法在貼片啟動後 60 分鐘內完成貼片操作時發生。                                   |
+| 貼片錯誤   | 當貼片在應用和使用過程中遇到意外錯誤時發生。                                           |
+
+### 警告
+
+警告發生於中等或低優先級情況。 當發生警告時，會在首頁總覽畫面中顯示為通知。
+
+![圖片24](../images/EOPatch/Bild24.png)
+
+以下說明不同類型的警告。
+
+| 警告       | 說明                                  |
+| -------- | ----------------------------------- |
+| 胰島素暫停結束  | 當使用者設定的暫停時間過後發生。                    |
+| 儲存量過低    | 當貼片內剩餘的胰島素量低於設定值時發生。                |
+| 貼片使用期限到期 | 當貼片使用期已過時發生。                        |
+| 貼片即將到期   | 在貼片必須丟棄前 1 小時發生。                    |
+| 貼片啟動不完整  | 當在配對完成後的階段，由於貼片應用過程中出現中斷超過 3 分鐘時發生。 |
+| 貼片電池電量低  | 當貼片的電池電量不足時發生。                      |
 
