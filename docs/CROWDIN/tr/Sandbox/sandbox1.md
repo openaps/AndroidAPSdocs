@@ -26,7 +26,7 @@ Buradan doğrudan bu dosyadaki ikinci etikete atlayabilirsiniz - ["Atla"](sandbo
 
 Ayrıca ilk etikete de atlayabilirsiniz - ["Atla"](sandbox1-this-is-a-test).
 
-Buradan ikinci sanal alan dosyasına atlayabilirsiniz - ["Atla"](./sandbox2.md).
+Here you can jump to the second sandbox file - ["Jump"](./MoveTest/sandbox2.md).
 
 Buradan doğrudan sandbox2.md dosyasındaki ilk etikete atlayabilirsiniz - ["Atla"](sandbox2-this-is-a-test).
 
