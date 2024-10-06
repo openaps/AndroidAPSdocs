@@ -26,7 +26,7 @@ You can dirctly jump from here to the second label in this file - ["Jump"](sandb
 
 And you can jump to the first label too - ["Jump"](sandbox1-this-is-a-test).
 
-Here you can jump to the second sandbox file - ["Jump"](./sandbox2.md).
+Here you can jump to the second sandbox file - ["Jump"](./MoveTest/sandbox2.md).
 
 You can dirctly jump from here to the first label in the sandbox2.md file - ["Jump"](sandbox2-this-is-a-test).
 

@@ -196,7 +196,7 @@ V tomto příkladu vybereme reportovací server Nightscout a zkonfigurujeme ho.
 
 ```{admonition} Make sure to choose the correct **NSClient** version for your needs! 
 :class: Note
-Click [here](link) for the release notes of **AAPS** 3.2.0.2 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**. 
+Click [here](./Releasenotes.md) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**. 
 
 Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout, in which case, choose the first option "**NSClient**" until further notice. 
 ```
