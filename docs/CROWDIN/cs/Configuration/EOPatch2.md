@@ -1,11 +1,11 @@
 # Návod k EOPatch2
 
-Náplast vyžaduje použití inzulínu s rychlým účinkem, typu U-100, jako je NovoRapid nebo Humalog. Použijte inzulín s rychlým účinkem, který je pro vás vhodný podle předpisu lékaře, a injikujte předepsané množství.
+Patch vyžaduje použití inzulínu s rychlým účinkem, typu U-100, jako je NovoRapid nebo Humalog. Použijte inzulín s rychlým účinkem, který je pro vás vhodný podle předpisu lékaře, a používejte předepsané množství.
 
-Nejmenší injekční dávka inzulínu při použití náplasti je 0,05 U. Profil BAS by měl být nastaven na minimální hodnotu 0,05 U/h nebo více a interval 0,05 U/h, jinak může dojít k chybě mezi odhadovaným celkovým množstvím infuze v profilu a skutečným množstvím infuze v náplasti. Stejně tak musí být bolus nastaven a infundován s minimálním objemem infuze 0,05 U.
+Nejmenší injekční dávka inzulínu při použití patche je 0,05 U. Profil BAS by měl být nastaven na minimální hodnotu 0,05 U/h nebo více a interval 0,05 U/h, jinak může dojít k chybě mezi odhadovaným celkovým množstvím inzulínu v profilu a skutečným množstvím inzulínu v náplasti. Stejně tak musí být bolus nastaven a dávkován s minimálním objemem 0,05 U.
 
 ## Nastavení pumpy
-1. Na úvodní obrazovce AAPS klikněte na hamburgerové menu v levém horním rohu a přejděte do Config Builder.
+1. Na úvodní obrazovce AAPS klikněte na hamburgerové menu v levém horním rohu a přejděte do Konfigurace.
 1. Vyberte 'EOPatch2' v sekci Pumpa.
 1. Stiskněte klávesu Zpět pro návrat na úvodní obrazovku.
 
@@ -19,10 +19,10 @@ Vyberte nabídku Preferencí EOPatch2 kliknutím na tři tečky v pravém horní
 
 Nabídka Preferencí EOPatch2 nabízí nabídku pro nastavení 3 typů upozornění.
 
-### Upozornění na nízkou rezervu
-Objeví se varování, když množství inzulínu zbývajícího v rezervoáru dosáhne nastavené hodnoty nebo méně při použití náplasti. Může být nastaveno od 10 do 50U v krocích po 5U.
+### Nízký stav zásobníku
+Objeví se varování, když množství inzulínu zbývajícího v rezervoáru dosáhne nastavené hodnoty nebo méně při použití patche. Může být nastaveno od 10 do 50U v krocích po 5U.
 
-### Připomínka na vypršení platnosti náplasti
+### Připomínka na vypršení platnosti patche
 Toto je připomínka upozornit vás na čas zbývající do vypršení současné náplasti. Může být nastaveno od 1 do 24 hodin v 1 hodinových krocích. Počáteční nastavení je 4 hodiny.
 
 ### Připomínka buzzera pro náplasti
@@ -43,7 +43,7 @@ Vložte jehlu stříkačky do inzulínového vstupu na náplasti a poté pomalu 
 
 [Varování]
 
-- Nekroutte páku jehly, dokud nebudete pokynuli. Může to způsobit vážné problémy během injekce nebo kontrol bezpečnosti jinak.
+- Neotáčejte páku pro zasunutí jehly, dokud nebudete požádáni. Může to způsobit vážné problémy během injekce nebo kontrol bezpečnosti jinak.
 - Množství inzulínu, které lze injikovat do náplasti, je 80 až 200U. Pokud injikujete méně než 80U do náplasti na začátku, náplast nebude fungovat.
 - Vyndejte inzulín určený k vložení do náplasti z lednice a nechte ho 15 až 30 minut předem na pokojové teplotě. Teplota inzulínu, který má být injikován, musí být alespoň 10 °C.
 
@@ -125,17 +125,17 @@ Alarmy jsou vydávány pro naléhavé situace nejvyšší priority a vyžadují 
 
 Různé typy alarmů jsou uvedeny níže.
 
-| Alarmy                                  | Vysvětlení                                                                                                                                                                                                           |
-| --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Prázdná nádrž                           | Nastává, když se nádrž náplasti vyprázdní z inzulínu.                                                                                                                                                                |
-| Náplast vypršela                        | Nastává, když vypršela doba používání náplasti a není možné provést další injekce inzulínu.                                                                                                                          |
-| Ucpání                                  | Nastává, když se zdá, že je vstup inzulínu do náplasti ucpaný.                                                                                                                                                       |
-| Selhání automatického testu při zapnutí | Nastává, když záplata najde neočekávanou chybu během procesu automatického testování po spuštění.                                                                                                                    |
-| Nevhodná teplota                        | Nastává, když je záplata mimo normální rozsah provozní teploty během aplikace a používání záplaty. Abychom se vypořádali s tímto alarmem, přesuňte záplatu do vhodného provozního teplotního rozsahu (4,4 až 37 °C). |
-| Chyba při vložení jehly                 | Nastává, když vložení jehly není během procesu aplikace záplaty normální. Zkontrolujte, že hrana pro vložení jehly na záplatě a tlačítko pro aktivaci jehly jsou v přímce.                                           |
-| Chyba baterie záplaty                   | Nastává těsně před vybitím vnitřní baterie záplaty, což způsobí její vypnutí.                                                                                                                                        |
-| Chyba aktivace záplaty                  | Nastává, když aplikace nedokáže dokončit proces záplaty během 60 minut po jejím spuštění.                                                                                                                            |
-| Chyba záplaty                           | Nastává, když záplata narazí na neočekávanou chybu při aplikaci a používání záplaty.                                                                                                                                 |
+| Alarmy                                  | Vysvětlení                                                                                                                                                                                                      |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Prázdná nádrž                           | Nastává, když se nádrž náplasti vyprázdní z inzulínu.                                                                                                                                                           |
+| Náplast vypršela                        | Nastává, když vypršela doba používání náplasti a není možné provést další injekce inzulínu.                                                                                                                     |
+| Ucpání                                  | Nastává, když se zdá, že je vstup inzulínu do náplasti ucpaný.                                                                                                                                                  |
+| Selhání automatického testu při zapnutí | Nastává, když patch najde neočekávanou chybu během procesu automatického testování po spuštění.                                                                                                                 |
+| Nevhodná teplota                        | Nastává, když je patch mimo normální rozsah provozní teploty během aplikace a používání patche. Abychom se vypořádali s tímto alarmem, přesuňte patch do vhodného provozního teplotního rozsahu (4,4 až 37 °C). |
+| Chyba při vložení jehly                 | Nastává, když vložení jehly není během procesu aplikace patche normální. Zkontrolujte, že hrana pro vložení jehly na patchi a tlačítko pro aktivaci jehly jsou v přímce.                                        |
+| Chyba baterie patche                    | Nastává těsně před vybitím vnitřní baterie patche, což způsobí její vypnutí.                                                                                                                                    |
+| Chyba aktivace patche                   | Nastává, když aplikace nedokáže dokončit proces patche během 60 minut po jejím spuštění.                                                                                                                        |
+| Chyba patche                            | Nastává, když patch narazí na neočekávanou chybu při aplikaci a používání patche.                                                                                                                               |
 
 ### Upozornění
 
@@ -145,12 +145,12 @@ Upozornění se objevuje ve středním nebo nízkém prioritním případě. Kdy
 
 Různé typy upozornění jsou vysvětleny níže.
 
-| Upozornění                 | Vysvětlení                                                                                                         |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Konec pozastavení inzulínu | Nastává, když uplynula doba nastavená uživatelem po dokončení pozastavení infuze inzulínu.                         |
-| Nízká nádrž                | Nastává, když zbývající množství inzulínu v záplatě je pod nastaveným množstvím.                                   |
-| Platnost záplaty vypršela  | Nastává, když uplynula doba používání záplaty.                                                                     |
-| Záplata brzy vyprší        | Nastává 1 hodinu před tím, než musí být záplata vyřazena.                                                          |
-| Neúplná aktivace záplaty   | Nastává, když uplynulo více než 3 minuty v důsledku přerušení během aplikace záplaty v fázi po dokončení párování. |
-| Nízká baterie záplaty      | Nastává, když je baterie záplaty slabá.                                                                            |
+| Upozornění                 | Vysvětlení                                                                                                        |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Konec pozastavení inzulínu | Nastává, když uplynula doba nastavená uživatelem po dokončení pozastavení infuze inzulínu.                        |
+| Nízká nádrž                | Nastává, když zbývající množství inzulínu v patchi je pod nastaveným množstvím.                                   |
+| Platnost patche vypršela   | Nastává, když uplynula doba používání patche.                                                                     |
+| Záplata brzy vyprší        | Nastává 1 hodinu před tím, než musí být patch vyřazena.                                                           |
+| Neúplná aktivace patche    | Nastává, když uplynulo více než 3 minuty v důsledku přerušení během aplikace patche v fázi po dokončení párování. |
+| Nízká baterie patche       | Nastává, když je baterie patche slabá.                                                                            |
 
