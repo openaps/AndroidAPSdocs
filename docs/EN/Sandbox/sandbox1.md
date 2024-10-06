@@ -52,6 +52,5 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 |![Stop sign](../images/sign_stop.png)|```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
-
 If you are open looping with a virtual pump stop here. Only click verify at the end of this Objective once you have changed to using a "real" physical pump.
 ```|
