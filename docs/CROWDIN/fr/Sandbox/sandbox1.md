@@ -26,7 +26,7 @@ Vous pouvez sauter directement d'ici à la deuxième étiquette dans ce fichier 
 
 Et vous pouvez aussi aller à la première étiquette - ["Sauter"](sandbox1-this-is-a-test).
 
-Ici vous pouvez aller au deuxième fichier sandbox - ["Sauter"](./sandbox2.md).
+Here you can jump to the second sandbox file - ["Jump"](./MoveTest/sandbox2.md).
 
 Vous pouvez sauter directement d'ici à la première étiquette dans le fichier sandbox2.md - ["Sauter"](sandbox2-this-is-a-test).
 
