@@ -1,36 +1,36 @@
 (Open-APS-features-DynamicISF)=
-## 動態胰島素敏感因子 (DynISF)
-動態胰島素敏感因子在 AAPS 3.2 版本中新增，並且需要您開始目標 11 才能使用。 在設定構建器中選擇「動態胰島素敏感因子」> APS 以啟動。 建議僅限於對 AAPS 控制和監控有良好掌握的進階用戶使用。
+## DynamicISF (DynISF)
+DynamicISF was added in AAPS version 3.2 and requires you to start Objective 11 to use. Select DynamicISF in the config builder > APS to activate. It is recommended only for advanced users that have a good handle on AAPS controls and monitoring.
 
-請注意，若要有效使用動態胰島素敏感因子，AndroidAPS 資料庫至少需要五天的資料。
+Please note that to use Dynamic ISF effectively, the AndroidAPS database needs a minimum of five days of data.
 
-動態胰島素敏感因子會根據每日胰島素總劑量（TDD）以及目前和預測的血糖值動態調整胰島素敏感因子。
+DynamicISF adapts the insulin sensitivity factor dynamically based on total daily dose of insulin (TDD) and current and predicted blood glucose values.
 
-動態胰島素敏感因子使用 Chris Wilson 的模型來決定胰島素敏感因子，而不是靜態的設定檔參數。
+Dynamic ISF uses Chris Wilson’s model to determine ISF instead of a static profile settings.
 
-實作的公式為：ISF = 1800 / (TDD * Ln ((血糖 / 胰島素除數) + 1))
+The equation implemented is: ISF = 1800 / (TDD * Ln (( glucose / insulin divisor) +1 ))
 
-此實作使用該公式計算目前的胰島素敏感因子，並運用於 oref1 的 IOB、ZT 和 UAM 預測中。 不適用於 COB。
+The implementation uses the equation to calculate current ISF and in the oref1 predictions for IOB, ZT and UAM. It is not used for COB.
 
 ### TDD
-此方法結合 7 天平均 TDD、前一天的 TDD 和過去 8 小時內的胰島素使用加權平均，並推算至 24 小時。 上述公式中使用的每日總劑量由以上三個值各佔三分之一的比例計算。
+This uses a combination of the 7 day average TDD, the previous day’s TDD and a weighted average of the last eight hours of insulin use extrapolated out for 24 hours. The total daily dose used in the above equation is weighted one third to each of the above values.
 
-### 胰島素除數
-胰島素除數取決於所使用胰島素的峰值，且與峰值時間成反比。 對於 Lyumjev，該值為 75；對於 Fiasp 為 65；對於普通速效胰島素則為 55。
+### Insulin Divisor
+The insulin divisor depends on the peak of the insulin used and is inversely proportional to the peak time. For Lyumjev this value is 75, for Fiasp, 65 and regular rapid insulin, 55.
 
-### 動態胰島素敏感因子調整係數
-調整係數允許使用者指定 1% 至 300% 之間的值。 此係數對 TDD 值做為乘數，當值超過 100% 時，胰島素敏感因子變小（即需要更多胰島素才能將血糖降低一點）；當值低於 100% 時，則胰島素敏感因子變大（即需要較少的胰島素來降低血糖）。
+### Dynamic ISF Adjustment Factor
+The adjustment factor allows the user to specify a value between 1% and 300%. This acts as a multiplier on the TDD value and results in the ISF values becoming smaller (ie more insulin required to move glucose levels a small amount) as the value is increased above 100% and larger (i.e. less insulin required to move glucose levels a small amount) as the value is decreased below 100%.
 
-### 未來胰島素敏感因子
+### Future ISF
 
-未來胰島素敏感因子會在 oref1 的劑量決策中使用。 未來胰島素敏感因子使用與上述相同的 TDD 值，並考慮調整係數。 接著依據不同情況使用不同的血糖值：
+Future ISF is used in the dosing decisions that oref1 makes. Future ISF uses the same TDD value as generated above, taking the adjustment factor into account. It then uses different glucose values dependent on the case:
 
-* 如果血糖平穩，變動範圍在 +/- 3 mg/dl 內，且預測血糖高於目標，則使用 50% 的最低預測血糖和 50% 的目前血糖的組合。
+* If levels are flat, within +/- 3 mg/dl, and predicted BG is above target, a combination of 50% minimum predicted BG and 50% current BG is used.
 
-* 如果最終血糖高於目標且血糖值正在上升，或者最終血糖高於目前血糖，則使用目前血糖。
+* If eventual BG is above target and glucose levels are increasing, or eventual BG is above current BG, current BG is used.
 
-否則，使用最低預測血糖。
+Otherwise, minimum predicted BG is used.
 
-### 啟用基於 TDD 的敏感性比率來調整基礎胰島素和血糖目標
+### Enable TDD based sensitivity ratio for basal and glucose target modification
 
-此設定取代 Autosens，並使用過去 24 小時 TDD / 7 天 TDD 作為增加或減少基礎胰島素的依據，方式與標準 Autosens 相同。 若選項中啟用根據敏感性調整目標，則此計算值也會用來調整目標值。 與 Autosens 不同，此選項不會調整胰島素敏感因子值。 
+This setting replaces Autosens, and uses the last 24h TDD/7D TDD as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. This calculated value is also used to adjust target, if the options to adjust target with sensitivity are enabled. Unlike Autosens, this option does not adjust ISF values. 
