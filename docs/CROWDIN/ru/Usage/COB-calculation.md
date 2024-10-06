@@ -2,59 +2,89 @@
 
 ## Как AAPS вычисляет значение COB?
 
-При вводе углеводов как части приема пищи или коррекции, AAPS добавляет их к текущим активным углеводам (COB). Затем AAPS поглощает (удаляет) углеводы на основе наблюдаемых отклонений от значений ГК. Степень поглощения зависит от чувствительности к углеводам. Это не величина профиля, но рассчитывается как ISF/IC и показывает на сколько мг/дл повысится ГК от приема 1г углеводов.
+When carbs are entered by the user as part of a meal entry or carb correction, **AAPS** will add this calculation to the current carbs on board (**COB**). **AAPS** then calculates the user’s carbs’ absorption based on observed deviations to the user’s **BG** values. The rate of absorption depends on the carb’s sensitivity factor (**’CSF**”). This is not a feature within the user’s **Profile**  but is calculated by **AAPS** according to **ISF/I:C** set up, and is determined by how many mg/dl 1g of carbs will raise the user’s **BG**.
 
-Применяемая формула: `поглощенные_углеводы = отклонение * ic / isf` Это означает:
-* увеличение углеводного коэффициента IC увеличивает количество углеводов, поглощаемых каждые 5 минут, тем самым сокращая общее время поглощения
-* увеличение фактора чувствительности к инсулину ISF снижает количество углеводов, поглощаемых каждые 5 минут, тем самым увеличивая общее время поглощения
-* изменение профиля на % увеличивает/уменьшает обе величины и, таким образом, не влияет на время поглощения углеводов
+## Carb Sensitivity Factor
 
-Например, если ISF вашего профиля 100, а ваш IC - 5, ваш CSF будет 20. За каждые 20 мг/дл (чуть больше 1 ммоль/л) на которые поднимется ГК, AAPS спишет 1г углеводов. Положительное значение активного инсулина IOB также влияет на расчет. Таким образом, если AAPS рассчитывал, что ГК снизится на 20 мг/дл из-за активного инсулина IOB, а она не опустилась, он все равно спишет 1г углеводов.
+The formula adopted by **AAPS** is:
 
-Углеводы также поглощаются методами, описанными ниже, на основе выбранного алгоритма чувствительности.
+- absorbed_carbs = deviation * ic / isf.
 
-### Oref1
+The effect on the user’s **Profile** will:
 
-Непоглощенные углеводы отбрасываются после указанного времени
+- _increase_ **IC**- by increasing the carbs absorbed every 5 minutes thus shorten total time of absorption;
 
-![Oref1](../images/cob_oref0_orange_II.png)
+- _increase_ **ISF** - by decreasing the carbs absorbed every 5 minutes thus prolong total time of absorption; and
 
-### AAPS, Средневзвешенное значение
+- _change_ **Profile Percentage** -  increase/decrease both values thus has no impact on carbs absorption time.
 
-усвоение рассчитывается как `COB == 0` после заданного времени
+For example, if the user’s  **Profile**  **ISF** is 100 and the **I:C** is 5, the user’s Carb Sensitivity Factor would be 20. For every 20 mg/dl the user’ **BG** goes up and 1g of carbs will be calculated as absorbed by **AAPS**. Positive **IOB** also affects the **COB** calculation. So, if **AAPS**  predicts the user’s **BG** to go down by 20 mg/dl because of **IOB** and it instead stayed flat, **AAPS**  would also calculate 1g of carbs as absorbed.
+
+Carbs will also be absorbed via the methods described below based on which sensitivity algorithm has been selected within the user's **AAPS**.
+
+## Carbs Sensitivity - Oref1
+
+Unabsorbed carbs are cut off after specified time:
+
+![Oref1](../images/cob_oref0_orange_II.png)![Screenshot 2024-10-05 161009](https://github.com/user-attachments/assets/e4eb93b2-bc93-462d-b4d6-854bb9264953)
+
+
+## Carbs Sensitivity - WeightedAverage
+
+Absorption is calculated to have COB = 0 after specified time:
 
 ![AAPS, WheitedAverage](../images/cob_aaps2_orange_II.png)
 
-Если вместо значения, вычисленного из отклонений ГК, используется минимальное поглощение углеводов (min_5m_arbarimpact), на графике активных углеводов COB появится оранжевая точка.
+If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from **BG** deviations, an orange dot appears on the **COB** graph.
 
-(COB-calculation-detection-of-wrong-cob-values)=
 
 ## Обнаружение неправильного значения COB
 
-AAPS предупреждает о том, что вы собираетесь подавать болюс при активных углеводах COB, оставшихся от предыдущего приема пищи, и алгоритм считает, что текущий расчет COB может быть неправильным. В этом случае он даст дополнительный подсказку на экране подтверждения калькулятора болюса.
+**AAPS**  will warn the user if they are about to bolus with **COB** from a previous meal if the algorithm detects current **COB** calculation as incorrect. In this case it will give the user an additional hint on the confirmation screen after usage of bolus wizard.
 
 ### Как AndroidAPS обнаруживает неправильные значения активных углеводов COB?
 
-Обычно AAPS обнаруживает усвоение углеводов через отклонения ГК. В случае, если вы ввели углеводы, но AAPS не может оценить их усвоение с помощью отклонений ГК, то для вычисления поглощения система будет использовать метод [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) (так называемый 'запасной вариант'). Поскольку этот метод вычисляет только минимальное поглощение углеводов без учета отклонений ГК, это может привести к неправильным значениям активных углеводов COB.
+Ordinarily __AAPS__ detects carb absorption through **BG** deviations. Incase the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called ‘fallback’). As this method calculates only the minimal carb absorption without considering **BG** deviations, it might lead to incorrect COB values.
 
 ![Hint on wrong COB value](../images/Calculator_SlowCarbAbsorption.png)
 
-На этом снимке экрана 41% времени поглощения углеводов был вычислен математически методом min_5m_carbimpact вместо значения, основанного на отклонениях ГК.  Это означает, что в организме может быть меньше активных углеводов, чем вычисляется алгоритмом.
+In the screenshot above, 41% of time the carb absorption was calculated by the min_5m_carbimpact instead of the value detected from deviations. This indicates that the user may have had less **COB** than calculated by the algorithm.
 
 ### Как относиться к этому предупреждению?
 
-- -Подумайте об отмене действия -нажмите кнопку Отмена, а не ОК.
-- -Снова рассчитайте свой предстоящий прием пищи с помощью калькулятора болюса, сняв галочку с активных углеводов COB.
-- -Если вы уверены, что нужен болюс на коррекцию, введите его вручную.
-- -В любом случае, будьте осторожны, чтобы не допустить передозировки!
+- Consider cancelling the treatment - press ‘Cancel’ instead of OK.
+- Calculate your upcoming meal again with bolus wizard leaving **COB** unticked.
+- If you need a correction bolus, enter it manually.
+- Be careful not to overdose or insulin stacking!
+
 
 ### Почему алгоритм неправильно распознает активные углеводы COB?
 
-- -Возможно, вы переоценили количество углеводов при их вводе.
-- Активность/нагрузка после предыдущего приема пищи
-- -Углеводный коэффициент I:C нуждается в корректировке
-- Значение для min_5m_carbimpact неверно (рекомендуется 8 для алгоритма SMB, 3 для OpenAPS AMA)
+This could be because:
+- Potentially the user overestimated carbs when entering them.
+- Activity / exercise after your previous meal.
+- I:C needs adjustment.
+- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA).
+
 
 ## Ручная коррекция введенных углеводов
 
-Если вы переоценили или недооценили количество углеводов, это можно исправить на вкладке назначений и вкладке Действия как описано [здесь](Screenshots-carb-correction).
+If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](Screenshots-carb-correction).
+
+
+## Carb correction - how to delete a Carb entry from Treatments
+
+
+The ‘Treatments’ tab can be used to correct a faulty carb entry by deleting the entry in Treatments. This may be because the user over or underestimated the carb entry:
+
+![COB_Screenshot 2024-10-05 170124](https://github.com/user-attachments/assets/e123d85d-907e-4545-bf1b-09fee4d42555)
+
+1. Check and remember actual **COB** and **IOB** on the **AAPS'** homescreen.
+2. Depending on the pump, the carbs in the Treatments tab might show together with insulin in one line or as a separate entry (i.e. with Dana RS).
+3. Remove the entry by firstly 'ticking' the waste bin on the top right corner (see above photo, step 1). Then 'tick' the faulty carb amount (see above photo, step 2). Then 'tick' the ‘waste bin’ on the top right corner (step 1 again).
+4. Make sure carbs are removed successfully by checking **COB** on **AAPS’** homescreen again.
+5. Do the same for **IOB** if there is just one line in the Treatment tab including carbs and insulin.
+6. If carbs are not removed as intended and additional carbs are added as explained in this section, the **COB** entry will be too high and this could lead to **AAPS** delivering too much insulin.
+7. Enter correct carbs amount through carbs button on **AAPS’** homescreen and set the correct event time.
+8. If there is just one line in Treatment tab including carbs and insulin the user should add also the amount of insulin. Make sure to set the correct event time and check **IOB** on homescreen after confirming the new entry.
+
