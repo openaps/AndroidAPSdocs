@@ -1,4 +1,4 @@
-# Dexcom G6 and ONE
+# Dexcom G6 a ONE
 
 ## Základní nastavení
 
