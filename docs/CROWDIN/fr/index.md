@@ -29,7 +29,7 @@ Le chapitre 9) parle des **Options avancées d'AAPS** telles que comment passer 
 
 Dans le chapitre 10) [Comment soutenir AAPS](make-a-PR.md), nous fournissons des informations pour que vous puissiez soutenir ce projet. Vous pouvez faire un don d'argent, d'équipement ou de connaissances. Vous pouvez suggérer/apporter des modifications à la documentation vous-même, aider avec [la traduction de la documentation](translations.md) ou partager vos données via le projet Open Humans.
 
-Le chapitre 11 contient de la documentation additionnelle ou archivée, dont une page pour les [professionnels de santé](Resources/clinician-guide-to-AAPS.md) qui s'intéressent à la technologie du pancréas artificiel open source comme **AAPS**, ou pour les patients qui veulent partager ces informations avec leur équipe médicale. Ce sujet est également abordé dans l'introduction. More diabetes and looping references and resources are contained in Section 12).
+Le chapitre 11 contient de la documentation additionnelle ou archivée, dont une page pour les [professionnels de santé](Resources/clinician-guide-to-AAPS.md) qui s'intéressent à la technologie du pancréas artificiel open source comme **AAPS**, ou pour les patients qui veulent partager ces informations avec leur équipe médicale. Ce sujet est également abordé dans l'introduction. D'autres références et ressources sur le diabète et la boucle sont listées dans le chapitre 12).
 
 
  ### Prêt à commencer avec **AAPS**? Apprenez-en plus sur **AAPS** dans l'[Introduction](introduction.md).
@@ -38,17 +38,17 @@ Le chapitre 11 contient de la documentation additionnelle ou archivée, dont une
 :class: AVIS DE SÉCURITÉ
 La sécurité de **AAPS** repose sur les fonctionnalités de sécurité de votre matériel (téléphone, pompe, MCG). Utilisez uniquement une pompe à insuline et un MGC approuvés par les autorités sanitaires, en bon état de fonctionnement. N'utilisez pas de pompes à insuline ni de capteurs MGC endommagés, modifiés ou fabriqués maison. Only use original consumable supplies (inserters, cannulas and insulin reservoirs) approved by the manufacturer for use with your pump and CGM. Using untested or modified supplies can cause inaccuracy and insulin dosing errors, resulting in significant risk to the user. 
 
-Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower blood sugar levels. You increase the risk diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
+N'utilisez pas **AAPS** si vous prenez des inhibiteurs de SGLT-2 (gliflozines), car ils font baisser la glycémie. Le risque d'acidocétose diabétique est accru à cause de la baisse de l'insuline administrée ; et celui d'hypoglycémie est accru à cause de la baisse de la glycémie. 
 ```
 
 ```{admonition} Disclaimer
 :class: note
 
-- All information and code described here is for informational and educational purposes only. Use [Nightscout](https://nightscout.github.io/) and **AAPS** at your own risk, and do not use the information or code to make medical decisions. Nightscout n'a actuellement entrepris aucune démarche pour se conformer à la loi sur la confidentialité des données médicales HIPAA aux États-Unis, ni dans aucun autre pays. 
-- Use of code from github.com is without warranty or formal support of any kind. Veuillez consulter la LICENCE de ce référentiel pour plus de détails.
-- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. La description de leur utilisation est à titre informatif et n'implique aucune affiliation avec ces sociétés ni aucune approbation de leur part.
+Toutes les informations et le code décrits ici le sont à des fins d'information et d'éducation uniquement. Vous utilisez [Nightscout](https://nightscout.github.io/) et AAPS à vos risques et périls. N'utilisez pas les données ni le code pour prendre des décisions médicales. Nightscout n'a actuellement entrepris aucune démarche pour se conformer à la loi sur la confidentialité des données médicales HIPAA aux États-Unis, ni dans aucun autre pays. 
+- L'utilisation du code de github.com est sans garantie ni support formel d'aucune sorte. Veuillez consulter la LICENCE du dépôt de code pour plus de détails.
+- Tous les noms de produits et de sociétés, marques commerciales, marques de service, marques déposées, sont la propriété de leurs détenteurs respectifs. La description de leur utilisation est à titre informatif et n'implique aucune affiliation avec ces sociétés ni aucune approbation de leur part.
 
-**AAPS** has no association with, and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
+**AAPS** n'est pas associé ni approuvé par: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) ou [Medtronic](https://www.medtronic.com/).
 
 ```
 
@@ -72,16 +72,16 @@ Téléphones compatibles <./Hardware/Phoneconfig.md>
 ```
 
 ```{toctree}
-:caption: 3) Setting up AAPS
+:caption: 3) Installation d'AAPS
 
-Setting up the reporting server <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
-Building AAPS <./Installing-AndroidAPS/building-AAPS.md>
-Transferring and Installing AAPS <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
-Setup Wizard<./Installing-AndroidAPS/setup-wizard.md>
-Change AAPS configuration <./Installing-AndroidAPS/change-configuration.md>
-- Config Builder <./Configuration/Config-Builder.md>
-- Preferences <./Configuration/Preferences.md>
-Completing the objectives <./Usage/completing-the-objectives.md>
+Serveur de reporting <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
+Compilation d'AAPS <./Installing-AndroidAPS/building-AAPS.md>
+Transfert et Installation d'AAPS <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
+Assistant de configuration <./Installing-AndroidAPS/setup-wizard.md>
+Modifier la configuration AAPS <./Installing-AndroidAPS/change-configuration.md>
+- Générateur de configuration <./Configuration/Config-Builder.md>
+- Préférences <./Configuration/Preferences.md>
+Compléter les objectifs <./Usage/completing-the-objectives.md>
 ```
 
 ```{toctree}

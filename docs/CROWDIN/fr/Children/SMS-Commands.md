@@ -5,16 +5,16 @@
 - AAPS vous permet de controler le téléphone d’un enfant à distance via un SMS. Si vous activez le Communicateur SMS, rappelez-vous toujours que le téléphone configuré pour donner des commandes distantes pourrait être volé. Donc, toujours le protéger au minimum par un code PIN. Un mot de passe robuste ou une identification biométrique sont recommandés.
 - Il est également recommandé d'autoriser un [deuxième numéro de téléphone](SMS-Commands-authorized-phone-numbers) pour les commandes SMS. Vous pouvez donc utiliser le deuxième numéro pour [désactiver temporairement](SMS-Commands-other) la communication SMS dans le cas où votre téléphone principal serait perdu ou volé.
 - AAPS vous informera également par SMS si vos commandes à distance, comme un bolus ou un changement de profil, ont été effectuées. Il est conseillé de le configurer de sorte que les SMS de confirmation soient envoyés à au moins deux numéros de téléphone différents au cas où l'un des téléphones destinataires serait volé.
-- **If you bolus through SMS Commands you must enter carbs through Nightscout (AAPSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
+- **Si vous effectuez un bolus à l'aide des commandes SMS, vous devez entrer les glucides dans Nightscout (AAPSClient, site Web...)!** Si vous ne le faites pas, l'IA sera correct avec des GA trop faibles, ce qui pourrait conduire à ne pas effectuer de bolus de correction car AAPS supposera que vous avez trop d'insuline active.
 - Depuis AndroidAPS version 2.7, une application d'authentification avec un mot de passe à usage unique basé sur l'heure doit être utilisée pour augmenter la sécurité lors de l'utilisation des commandes SMS.
 
 ## Paramétrer les commandes SMS
 
 ![SMS Commands Setup](../images/SMSCommandsSetup.png)
 
-- Most of the adjustments of temp targets, following AAPS etc. can be done on [AAPSClient app](../Children/Children.md) on an Android phone with an internet connection.
+- La plupart des ajustements des cibles temporaires, le suivi d'AAPS, etc. peuvent être faits avec l'application [AAPSClient](../Children/Children.md) sur un téléphone Android avec une connexion Internet.
 - Les bolus ne peuvent pas être donnés à partir de Nightscout, mais vous pouvez utiliser des commandes SMS.
-- If you use an iPhone as a follower and therefore cannot use AAPSClient app, there are additional SMS commands available.
+- Si vous utilisez un iPhone comme suiveur (follower) et ne pouvez donc pas utiliser AAPSClient il y a des commandes SMS supplémentaires disponibles.
 - Dans les paramètres de votre téléphone android allez dans Applications > AndroidAPS > Autorisations et activez SMS
 
 (SMS-Commands-authorized-phone-numbers)=
@@ -23,7 +23,7 @@
 
 - Dans AndroidAPS, allez dans **Préférences > Communicateur SMS** et entrez le(s) numéro(s) de téléphone que vous autoriserez pour les commandes SMS (séparés par des points-virgules, par ex. +33123456789;+33123456798).
 
-- Note that the "+" in front of the number may or may not be required based on your location. To determine this send a sample text which will show the received format in the SMS Communicator tab.
+- Notez que le "+" devant le numéro peut être nécessaire ou non en fonction de votre localisation. Pour déterminer cela, envoyez un exemple de texte qui montrera le format reçu dans l'onglet Communicator SMS.
 
 - Activez 'Autoriser les commandes distantes par SMS'.
 
