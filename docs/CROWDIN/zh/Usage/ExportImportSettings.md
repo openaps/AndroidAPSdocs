@@ -1,81 +1,81 @@
-# Creating and resorting back-ups
+# 建立和恢復備份
 
-It is important to keep back-ups of the items listed below. Best practice is to keep a back-up on a local hard drive as well as a cloud location (i.e. Google Drive, box, etc…). Below are the items that it is recommended to keep back-ups of.
+保持下列項目的備份非常重要。 最佳做法是將備份儲存在本地硬碟以及雲端位置（例如 Google Drive、box 等）。 以下是建議保留備份的項目。
 
-## 1 - keystore file from the computer you used to build the APK.
-The keystore is what allows you to install an updated APK on top of the existing application. Maintaining the keystore will greatly reduce the complexity of updating the APK in the future, especially if you need to build the app from a new computer. See the Updating AAPS (link) section for details on using the keystore when building a new APK.
+## 1 - 你用來建立 APK 的電腦上的金鑰庫檔案。
+金鑰庫允許你在現有應用程式上安裝更新的 APK。 保留金鑰庫將大大降低未來更新 APK 的複雜性，特別是在你需要從新電腦構建應用程式的情況下。 有關使用金鑰庫建立新 APK 的詳細資訊，請參閱 AAPS 更新（連結）部分。
 
-**When to back-up:** the keystore should be backed up after you first build the AAPS apk.
+**何時進行備份：**首次建立 AAPS apk 後應進行金鑰庫備份。
 
-**How to back-up:** locate your keystore path. If you don’t remember it you can find it in Android Studio by selecting Build > APK > Next. The path will be listed in “Key store path”. Using your file explorer, navigate to this path and make a copy of your keystore file (ending in file extension .jks). Save it to a safe cloud location should your computer become unavailable. Make sure to also record your key store password, key alias and key password.
+**如何進行備份：**找到你的金鑰庫路徑。 如果你不記得，可以在 Android Studio 中選擇「Build > APK > Next」找到它。 路徑將列在「金鑰庫路徑」中。 使用檔案總管導航到該路徑，並複製你的金鑰庫檔案（檔案副檔名為 .jks）。 將它儲存到一個安全的雲端位置，以防你的電腦無法使用。 確保也記錄下你的金鑰庫密碼、金鑰別名和金鑰密碼。
 
-## 2 - copies of the most recent APK
-If your main AAPS phone is lost or damaged, having a copy of the APK available will allow you to quickly resume using AAPS with a new phone (note: you also need your preferences backed up as noted below).
+## 2 - 最新的 APK 副本
+如果你的主要 AAPS 手機丟失或損壞，擁有 APK 的副本將使你能夠快速在新手機上重新使用 AAPS（注意：你還需要如下面所述的偏好設定備份）。
 
-**When to back-up:** you should maintain a back-up of the most recent APK that you installed on your main AAPS phone. You may want to also maintain one earlier version in case you need to roll-back to that for any reason.
+**何時進行備份：**你應該維持最新 APK 的備份，這是你在主要 AAPS 手機上安裝的。 你也可能希望保留一個早期版本的副本，以防出現需要回滾的情況。
 
-**How to back-up:** a copy will be maintained on the computer used to build the APK with Android Studio. Additionally, if you use a cloud platform to copy the APK to your phone, that will maintain a copy in the cloud as well. Make sure you know how to find both locations in the event you need them. Consider setting up dedicated folders on your computer and your cloud platform to store these back-ups.
+**如何進行備份：**Android Studio 用來構建 APK 的電腦將保留一個副本。 此外，如果你使用雲端平台將 APK 複製到手機，該平台也會在雲端保留副本。 確保你知道如何在需要時找到這兩個位置。 考慮在電腦和雲端平台上設置專用資料夾來儲存這些備份。
 
-## 3 - AAPS preferences
-Preferences are what tailors the stock AAPS application to how you have it setup. Preferences include details on your config builder settings, status of objectives, nightscout settings, automations and local profiles. With a copy of the APK (see above) and preferences you can be up and running on a new phone quickly.
+## 3 - AAPS 偏好設定
+偏好設定是根據你設定的方式來調整預設 AAPS 應用程式。 偏好設定包括有關配置構建器設定、目標狀態、Nightscout 設定、自動化和本地配置檔的詳細資料。 有了 APK（見上文）和偏好設定的副本，你可以快速在新手機上運作。
 
-**When to back-up:**
+**何時進行備份：**
 
-1 - as preferences store your progress towards completing the objectives, you should back-up your preferences each time you complete an objective so that you do not lose your progress. _Without a copy of your preferences you will have to complete all objectives again in the event you need to replace your phone._
+1 - 由於偏好設定會儲存你完成目標的進度，因此每次完成一個目標時都應備份偏好設定，以避免遺失進度。 _如果沒有偏好設定的副本，當你更換手機時，將必須重新完成所有目標。_
 
-2 - any time you plan to make significant changes to your configuration (change SMB settings, change insulin types, change pump, make changes to automations) you should back-up your preferences before and after making the changes. This way you have your most recent settings as well as a copy of what they were before the changes in case you need to revert back to them.
+2 - 每當你計劃對配置進行重大變更時（例如更改 SMB 設定、更改胰島素類型、更換幫浦、進行自動化變更），應在變更前後備份偏好設定。 這樣你就可以保留最新的設定副本以及變更前的設定副本，萬一需要回滾時可以使用。
 
-3 - _Omnipod dash users only_ - the preferences file contains connection details on your current pod and can be used to restore connection to that pod with a new phone. If you do not have a copy of your preferences exported after you started your current pod you will need to start a new pod in the event you need to replace your current phone.
+3 - _僅限 Omnipod Dash 用戶_ - 偏好設定檔案包含當前幫浦的連線詳細資訊，可用來在新手機上恢復幫浦連線。 如果你在開始使用當前幫浦後未匯出偏好設定的副本，當需要更換手機時，將需要重新啟動一個新的幫浦。
 
-**How to back-up:**
+**如何進行備份：**
 
-1 - If this your first time importing or exporting preferences you will need to set a master password. In AAPS, select the three dots in the top right corner > Preferences > General > Protection > Master password. Set a password and record this in a safe place. _You will be unable to access your preferences back-ups without this password._
+1 - 如果這是你首次匯入或匯出偏好設定，你需要設置一個主密碼。 在 AAPS 中，選擇右上角的三個點 > 偏好設定 > 一般 > 保護 > 主密碼。 設置密碼並將其記錄在安全的地方。 _沒有此密碼，你將無法存取偏好設定的備份。_
 
-2 - From the AAPS home screen, select the three line (hamburger) menu in the top left > Maintenance > Export settings > type in Master password set above > Ok
+2 - 從 AAPS 主畫面，選擇左上角的三條線（漢堡）選單 > 維護 > 匯出設定 > 輸入上述設置的主密碼 > 確定。
 
-![AAPS export settings 1](../images/AAPS_ExportSettings1.png) ![AAPS export settings 2](../images/AAPS_ExportSettings2.png)
+![AAPS 匯出設定 1](../images/AAPS_ExportSettings1.png) ![AAPS 匯出設定 2](../images/AAPS_ExportSettings2.png)
 
-3 - using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. The file name should be YYYY-MM-DD_Time_appname.json. Upload this file to the cloud platform of your choice. Then from the cloud platform, also download a copy to your local computer.
+3 - 使用手機上的檔案總管（通常稱為「檔案」或「我的檔案」），導航到內部儲存空間 > AAPS > 偏好設定。 在這裡你可以看到所有匯出的偏好設定檔案副本。 檔案名稱應為 YYYY-MM-DD_時間_appname.json。 將此檔案上傳到你選擇的雲端平台。 然後從雲端平台下載一份副本到你的本地電腦。
 
-# Restoring from your backups on a new phone or fresh installation of AAPS
-Use these instructions if you have a back-up of your APK and preferences that you want to load on to a new phone or if you needed to delete and reinstall the APK on your existing phone for any reason.
+# 從備份中恢復至新手機或重新安裝 AAPS
+如果你有 APK 和偏好設定的備份，想要將其載入到新手機上，或因任何原因需要刪除並重新安裝 APK，請遵循以下指示。
 
-_If you are updating AAPS using an APK built with the same keystore you should not need to follow this process. However, it is still advised to create a back-up before you apply the update._
+_如果你是使用相同金鑰庫構建的 APK 更新 AAPS，則不需要按照此過程進行。 不過，仍建議在更新前建立備份。_
 
-If you are updating AAPS after you lost or replaced your original keystore (i.e. using a new build computer without transferring the keystore), ensure that you back-up all settings per the above and then uninstall the existing version of AAPS on your phone.
+如果你在丟失或更換原金鑰庫後更新 AAPS（例如在未傳輸金鑰庫的情況下使用新電腦構建），請確保根據上述方法備份所有設定，然後在手機上卸載現有版本的 AAPS。
 
-If needed, setup your CGM/BG source receiver prior to the steps listed below (link: https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
+如果需要，請在下面步驟之前設定你的 CGM/血糖來源接收器（連結：[https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)）
 
-_Omnipod users:_ importing a preferences file will deactivate your current pod if those preferences were exported during a different active pod session.
+_Omnipod 用戶：_ 如果在不同的幫浦活動期間匯出偏好設定檔案，匯入該檔案將會停用當前幫浦。
 
-1 - Using the back-up copy of your APK from above, follow the instructions for a new installation[ (link: https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Transferring-and-installing-AAPS.html)](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Transferring-and-installing-AAPS.html)
+1 - 使用上述的 APK 備份，按照[新安裝指示](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Transferring-and-installing-AAPS.html)進行操作。
 
-2 - Launch AAPS and allow any requested permissions
+2 - 啟動 AAPS 並允許任何請求的權限。
 
-3 - Exit the Setup Wizard. We will be importing all of the necessary settings from the back-up copy of preferences
+3 - 退出設定精靈。 我們將從偏好設定的備份檔案中匯入所有必要的設定。
 
-4 - From the AAPS home screen select Request and allow on all permissions listed in red on the top
+4 - 從 AAPS 主畫面選擇請求並允許頂部紅色列出的所有權限。
 
-5 - From the AAPS home screen, select the three dots in the top right corner > Preferences > General > Protection > Master password. Set the Master password to the same password as you used with your back-ups.
+5 - 從 AAPS 主畫面，選擇右上角的三個點 > 偏好設定 > 一般 > 保護 > 主密碼。 將主密碼設置為與備份時使用的密碼相同。
 
-6 - From the AAPS home screen, select the three line (hamburger) menu in the top left > Maintenance > Export settings > type in Master password set above > Ok. This will create the preferences folder if it does not already exist on your phone.
+6 - 從 AAPS 主畫面，選擇左上角的三條線（漢堡）選單 > 維護 > 匯出設定 > 輸入上述設置的主密碼 > 確定。 這將在手機上建立偏好設定資料夾（如果尚未存在）。
 
-7 - Download the back-up of your preferences file from your cloud platform.
+7 - 從雲端平台下載偏好設定檔案備份。
 
-8 - Use your file explorer (commonly called “Files” or “My Files”) to move the file from your downloads to /internal storage/AAPS/preferences
+8 - 使用你的檔案總管（通常稱為「檔案」或「我的檔案」）將檔案從下載移動到 /內部儲存/AAPS/偏好設定 資料夾中。
 
-9 - From the AAPS home screen, select the three line (hamburger) menu in the top left > Maintenance > Import settings > select the preferences file you want to back-up from > Ok > type in Master password set above > Ok. Make sure you select the correct preferences file, all .json files from the preferences folder will be shown.
+9 - 從 AAPS 主畫面，選擇左上角的三條線（漢堡）選單 > 維護 > 匯入設定 > 選擇你想要備份的偏好設定檔案 > 確定 > 輸入上述設置的主密碼 > 確定。 確保選擇正確的偏好設定檔案，所有來自偏好設定資料夾的 .json 檔案將顯示。
 
-![AAPS import settings 1](../images/AAPS_ImportSettings1.png) ![AAPS import settings 2](../images/AAPS_ImportSettings2.png)
+![AAPS 匯入設定 1](../images/AAPS_ImportSettings1.png) ![AAPS 匯入設定 2](../images/AAPS_ImportSettings2.png)
 
-10 - AAPS will automatically restart and should then have all of your preferences imported.
+10 - AAPS 會自動重新啟動，並應該匯入所有偏好設定。
 
-11 - Omnipod dash users only - if your preferences were not backed up from the same pump you are currently using you will need to start a new pod to begin insulin delivery
+11 - 僅限 Omnipod Dash 用戶 - 如果你的偏好設定不是從你目前使用的幫浦備份的，你將需要啟動一個新的幫浦以開始胰島素輸送。
 
-**Troubleshooting:** if you are unable to get an active profile set from the AAPS home screen  select the three line (hamburger) menu in the top left > config builder > Pump > switch to Virtual Pump > then switch back to your pump type
+**疑難排解：** 如果你無法從 AAPS 主畫面設置一個啟動的配置檔，請選擇左上角的三條線（漢堡）選單 > 配置構建器 > 幫浦 > 切換到虛擬幫浦，然後再切換回你的幫浦類型。
 
 
-### Note for Dana RS users
+### Dana RS 使用者注意事項
 
-- As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan.
-- Please pair new phone and pump manually.
+- 由於幫浦連線設定也會匯入，新手機上的 AAPS 已經「認識」幫浦，因此不會啟動藍牙掃描。
+- 請手動配對新手機與幫浦。
