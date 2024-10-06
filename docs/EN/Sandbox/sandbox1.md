@@ -50,8 +50,15 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
+using a lot of acronyms cause I can : ISF, CR, BG, CGM
+
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 ![Stop sign](../images/sign_stop.png)
 If you are open looping with a virtual pump stop here. Only click verify at the end of this Objective once you have changed to using a "real" physical pump.
 ```
+
+*[ISF]: Insulin Sensitivity Factor
+*[CGM]: Continuous Glucose Monitor
+*[CR]: Carb Ratio
+*[BG]: Blood Glucose
