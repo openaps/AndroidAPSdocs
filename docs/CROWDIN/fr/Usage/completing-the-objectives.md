@@ -170,83 +170,83 @@ Cela signifie que lorsque vous êtes à l'Objectif 6, si la glycémie chute, **A
 
 ## Objectif 7 : Réglage de la Boucle Fermée, augmentation de l'IA (Insuline Active) maximale au dessus de 0 et abaissement progressif des cibles glycémiques
 
-Pour compléter l'**Objectif 7**, vous devez passer en boucle fermée et augmenter votre [max-IA](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob). Pendant l'**objectif 6**, le paramètre max-IA était automatiquement considéré comme étant à 0. Ce n'est plus le cas. **AAPS** va commencer à utiliser la valeur maxIA telle que définie pour corriger les valeurs de glycémie élevées.
+Pour compléter l'**Objectif 7**, vous devez passer en boucle fermée et augmenter votre [max-IA](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob). Pendant l'**objectif 6**, le paramètre max-IA était automatiquement considéré comme étant à 0. Ce n'est plus le cas. **AAPS** va commencer à utiliser la valeur max-IA telle que définie pour corriger les valeurs de glycémie élevées.
 
 Temps estimé pour terminer cet objectif : 1 jour.
 
 - Sélectionnez 'Boucle fermée' soit à partir des [Préférences](../Configuration/Préférences.md) ou en appuyant et en maintenant l'icône Boucle en haut à droite de l'écran ACCUEIL. Utilisez ce mode pendant 1 jour.
 
-- Augmentez votre 'IA max total qu'OpenAPS ne peut pas dépasser' (dans OpenAPS appelé 'max-IA') au-dessus de 0. The default recommendation is "average mealbolus + 3x max daily basal" (for the SMB algorithm) or "3x max daily basal" (for the AMA algorithm) but you should slowly work up to this maximum until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
+- Augmentez votre 'IA max total qu'OpenAPS ne peut pas dépasser' (dans OpenAPS appelé 'max-IA') au-dessus de 0. La recommandation par défaut est "moyenne bolus repas + 3 x max basal quotidienne" (pour l'algorithme SMB) ou "3 x max basal quotidienne" (pour l'algorithme AMA) mais vous devriez augmenter la valeur très progressivement jusqu'à ce maximum, jusqu'à trouver vos propres paramètres qui marchent pour vous (max basal quotidienne = le débit de base maximum sur l'ensemble des plages horaires de la journée).
 
-Cette recommandation doit être considérée comme un point de départ. If you set it to the 3x and you are seeing AAPS giving too much insulin as glucose levels rise, then lower the "Maximum total IOB OpenAPS can’t go over" value. Alternatively, if you are very resistant, raise it very cautiously.
+Cette recommandation doit être considérée comme un point de départ. Si vous le réglez sur 3x et que vous trouvez qu'AAPS donne trop d'insuline quand la glycémie monte, baissez la valeur "IA totale maximale pour OpenAPS". Au contraire, si vous êtes très résistant à l'insuline, augmentez-le très prudemment.
 
 ![max daily basal](../images/MaxDailyBasal2.png)
 
-- Once confident on how much IOB suits your looping patterns, reduce your targets to your desired level.
+- Une fois confiant sur la quantité d'IA qui convient à votre profil de boucle, réduisez alors votre cible jusqu'à votre objectif réel.
 
 (Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)=
 
 ## Objectif 8 : Ajustement des débits Basal et des ratios si nécessaire, puis activation de la fonction auto-sens
 
-As part of this objective you will revist your profile's performance and will use autosens functionality as an indicator for wrong settings.
+Dans le cadre de cet objectif, vous allez contrôler la justesse de votre profil et utiliser la fonctionnalité autosens pour détecter des paramètres incorrects.
 
 Temps estimé pour terminer cet objectif : **7 jours**.
 
-- You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
-- Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch OVERVIEW's graph white line showing your insulin sensitivity rising or falling due to exercise or hormones etc. and keep an eye on the OpenAPS report tab which shows **AAPS** adjusting the basals and/or targets accordingly.
+- Vous pouvez utiliser [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) une seule fois pour vérifier que vos taux de basale sont toujours correct ou faire un test de basale traditionnel.
+- Activez [autosens](../Usage/Open-APS-features.md) sur une période de 7 jours. Regardez la courbe blanche dans le graphique sur l'écran d'accueil qui montre comment la sensibilité à l'insuline augmente ou diminue selon l'exercice physique, le cycle hormonal etc. Gardez un oeil sur l'onglet OpenAPS qui indique comment **AAPS** ajuste les basales et/ou la cible en conséquence.
 
 (Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
 
 ## Objectif 9 : Activation de fonctionnalités supplémentaires pour l'utilisation en journée, telles que la fonction SMB
 
-In this objective you will tackle and use "Super Micro Bolus (SMB)" as one core functionality. After working through the mandatory readings you will have a good understanding of what SMBs are, how these work, reasonable starting point with SMBs and why basal is set to zero temporarily after SMBs are given (zero-temping). Estimated time to complete this objective: 28 days.
+Dans cet objectif, vous découvrez l'utilisation des "Super Micro Bolus (SMB)", une fonctionnalité très importante. Après avoir lu la documentation appropriée, vous aurez une bonne compréhension de ce que sont les SMB, de leur fonctionnement, et de pourquoi la basale est mise à zéro temporairement après l'envoi d'un SMB ("zero-temp"). Temps estimé pour terminer cet objectif : 28 jours.
 
-- The [SMB section in this documentation](Open-APS-features-super-micro-bolus-smb) and [oref1 coverage in the openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand SMB and the concept of zero-temping.
-- Once done, you [raise maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working well. maxIOB now includes all IOB, not just accumulated basal. This threshold pauses SMBs until IOB drops below this value (_e.g._ maxIOB is set to 7 U and a bolus of 8 U is given to cover a meal: SMBs will be paused and not given unless IOB drops below 7 U). A good start is setting maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) as reference)
-- Change "min_5m_carbimpact"-parameter (Preferences > Absorbtion settings > min_5m_carbimpact) to 8 as you move from an OpenAPS AMA algorithm to OpenAPS SMB. For AMAs the default value is 3. Read more about this setting [here](../Configuration/Preferences.html#min-5m-carbimpact)
+- Pour comprendre les SMB et le concept de zero-temp, lisez la [section SMB de cette documentation](Open-APS-features-super-micro-bolus-smb) et la [page oref1 dans la doc openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) (en anglais).
+- Une fois cela fait, vous [augmentez max-IA](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) pour mettre en route les SMB. max-IA inclut maintenant toutes les IA, pas seulement la basale excédentaire. Ce seuil désactive les SMB jusqu'à ce que l'IA descende sous cette valeur (_par ex._ si max-IA est fixé à 7U et un bolus de 8U est donné pour couvrir un repas : les SMB seront suspendus et ne seront pas donnés jusqu'à ce que l'IA descende en dessous de 7U). Un bon point de départ est de fixer maxIA = bolus moyen des repas + 3 x basale max quotidienne (basale max quotidienne = débit horaire max de basale sur n'importe quelle période de la journée - voir [objectif 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) à ce propos)
+- Changez le paramètre "min_5m_carbimpact" (Préférences > Paramètres d'absorption > min_5m_carbimpact) à 8 lorsque vous passez de l'algorithme OpenAPS AMA à OpenAPS SMB. Pour AMA, la valeur par défaut est 3. Pour en savoir plus sur ce paramètre, cliquez [ici](../Configuration/Preferences.html#min-5m-carbimpact)
 
 (Objectives-objective-10-automation)=
 
 ## Objectif 10: Automatisation
 
-You have to start **Objective 10** to be able to use Automations.
+Ce n'est qu'à partir de l'objectif 10 que vous pouvez utiliser les Automatisations.
 
-1. Read the documentation page  [Automation](../Usage/Automation.md) first.
-2. Set-up the most basic automation rule;
-   for example trigger an Android notification in few minutes:
+1. Commencez par lire la page de documentation sur les [Automatisations](../Usage/Automation.md).
+2. Mettez en place une règle d'automatisation toute simple ;
+   par exemple déclencher une notification Android dans quelques minutes :
 
-- Select the notification tab
-- From the top right 3 dots menu, select add rule
-- Give a task name "My first automation notification"
-- "edit"  "condition"
-  - click the "+" symbol to add the first trigger
-  - select "Time"  & "OK", it will create a default entry AT TODAY HOUR:MINUTE
-  - click the MINUTE portion to edit the time such that it triggers in a few minutes. Then click ok to close
-  - click "ok"  to close the Triggers screen
-- "ADD" an "Action"
-  - select "Notification", "OK"
-  - click "Notification" to edit the message(Msg), enter something like "Ny first automation"
-- wait until the time triggers the notification (note that depanding on your phone, it can be a few minutes late)
+- Sélectionnez l'onglet des automatisations
+- Dans le menu 3 points en haut à droite, sélectionnez Ajouter une règle
+- Entez un nom de tâche comme "Ma première notification automatique"
+- "Éditer" l'"État" (la condition de déclenchement)
+  - cliquez sur le symbole "+" pour ajouter le premier déclencheur
+  - sélectionnez "Heure" & "OK", cela créera une entrée par défaut à la date et heure actuelles
+  - cliquez sur la partie MINUTE et modifiez l'heure de telle sorte qu'elle se déclenche dans quelques minutes. Puis cliquez sur OK pour fermer
+  - cliquez sur OK pour fermer l'écran des déclencheurs
+- Cliquez sur "Ajout" d'une "Action"
+  - sélectionnez "Notification", "OK"
+  - cliquez sur "Notification" pour modifier le message, entrez quelque chose comme "Ma première automatisation"
+- attendez le temps que la notification se déclenche (notez qu'en fonction de votre téléphone, cela peut être quelques minutes plus tard)
 
-4. Experiment with setting up a more useful automation.
+4. Testez la mise en place d'une automatisation plus utile.
 
-- The documentation page gives a few examples, and you can search for "automation" screenshots on the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group. Since most people eat the same thing for breakfast at the same time every morning before school/work, a fairly common use-case can be to set a "before-breakfast-target" to set a slightly lower temporary target 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consists of  "Start temp target" with a target value and a 30 minutes duration.
+- La page de documentation donne quelques exemples, et vous pouvez rechercher des captures d'écran d'"automatisations" sur le groupe [Facebook](https://www.facebook.com/groups/AndroidAPSUsers). La plupart des gens mangent la même chose pour le petit déjeuner à la même heure les matins d'école/travail. Un cas d'utilisation assez courant est de définir une "cible-avant-petitdéj" pour baisser légèrement la cible 30 mn avant de déjeuner. Dans ce cas, votre déclencheur utilisera probablement "Période répétitive" qui permet de sélectionner des jours spécifiques de la semaine (Lundi, Mardi, Mercredi, Jeudi, Vendredi) et une heure précise (06h30). Pour l'action, il s'agit de "Démarrer la cible temporaire" avec une valeur cible et une durée de 30 minutes.
 
-## Objective 11: Enabling additional features for daytime use, such as Dynamic Senstivity plugin (DynISF).
+## Objectif 11 : Activation de fonctionnalités supplémentaires pour l'utilisation en journée, comme le plugin de Sensibilité Dynamique (DynISF).
 
-- Ensure that SMB is functioning properly
-- Read the documentation concerning Dynamic ISF [here](../Usage/DynamicISF.md)
-- Search the Facbook and [Discord](https://discord.gg/4fQUWHZ4Mw) groups for discussions around Dynamic ISF and read about other users experiences and recommendations.
-- Enable the **DynamicISF plugin** and identify the appropriate calibration for your body's uniqueness. It is advisable to begin with a value lower than 100% for safety reasons.
+- Assurez-vous que les SMB fonctionnent correctement
+- Lisez la documentation concernant la SI Dynamique [ici](../Usage/DynamicISF.md)
+- Recherchez dans les groupes Facebook et [Discord](https://discord.gg/4fQUWHZ4Mw) les discussions à propos de la SI dynamique et lisez les expériences et recommandations d'autres utilisateurs.
+- Activez le **plugin SI Dynamique** et travaillez à la recherche de paramètres adaptés à votre propre corps. Il est conseillé de commencer avec une valeur inférieure à 100% pour des raisons de sécurité.
 
 (Objectives-go-back-in-objectives)=
 
 ## Retour arrière dans les Objectifs
 
-If you want to go back in **objectives** progress for whatever reason you can do so by clicking at "clear finished".
+Si vous voulez revenir en arrière sur les objectifs terminés pour quelque raison que ce soit, vous pouvez le faire en cliquant sur "Réinitialiser l'état terminé".
 
 ![Go back in objectives](../images/Objective_ClearFinished.png)
 
 ## Objectifs dans Android APS avant la version 3.0
 
-One objective was removed when **AAPS** version 3.0 was released.  Users of Android APS version 2.8.2.1 who are on older Android software (_i.e._ earlier than version 9) will be using an older set of Objectives which can be found [here](../Usage/Objectives_old.md).
+Un objectif a été supprimé lors de la sortie d'**AAPS** 3.0.  Les utilisateurs d'AAPS version 2.8.2.1 qui sont sur une version d'Android plus ancienne (_par ex._ antérieur à la version 9) utiliseront une série d'objectifs plus ancienne qui est documentée [ici](../Usage/Objectives_old.md).
