@@ -1,43 +1,43 @@
-# Custom Watchface Reference Document
+# 自訂錶面參考文件
 
-This page is for designers of new Watchfaces. It will list all the keywords and features available when you want to create or animate a new watchface.
+此頁面是為設計新錶面的設計師提供的。 此處將列出所有關鍵字和功能，幫助您建立或動畫化新的錶面。
 
-## Custom Watchface Format
+## 自訂錶面格式
 
-Custom Watchface is an open format designed for AAPS and associated to the new "AAPS (Custom)" watchface available on Watch.
+自訂錶面是一種為 AAPS 設計的開放格式，與錶上可用的「AAPS（自訂）」錶面相關聯。
 
-The Watchface file is a simple zip file, but to be recognized as a Watchface file, the zip file must contain the following files:
+錶面檔案是一個簡單的 zip 檔案，但要被識別為錶面檔案，該 zip 檔案必須包含以下檔案：
 
-- One image file named CustomWatchface (can be bitmap files `CustomWatchface.jpg`, `CustomWatchface.png` or a vector `CustomWatchface.svg`). This file is the little icon used to select the watchface when you click on "Load Watchface" button, and also the image visible within AAPS Wear plugin.
-- One file named `CustomWatchface.json` (see [JSON structure](cwf-reference-json-structure) below). This second file is the core file that will include all information required to design the watchface. This json file must be valid (it's probably the most tricky point when you edit manually this file within a text editor, because an missing or additional comma is enough to break the json format). This JSON file must also include a `"metadata"` bloc with a `"name"` key with not empty value. This will be the name of your custom watchface (see [Metadata settings](cwf-reference-metadata-settings) below)
-- the size of this zip should be as small as possible (less than about 500kb). If this file is too big, it will just be blocked and not transmitted to the watch.
+- 一個名為 CustomWatchface 的圖片檔案（可以是點陣圖檔案 `CustomWatchface.jpg`、`CustomWatchface.png` 或向量檔案 `CustomWatchface.svg`）。 此檔案是用於在您點選「載入錶面」按鈕時選擇錶面的圖示，也是在 AAPS Wear 外掛中可見的圖像。
+- 一個名為 `CustomWatchface.json` 的檔案（請參閱下方的[JSON 結構](cwf-reference-json-structure)）。 這個第二個檔案是核心檔案，將包含設計錶面所需的所有資訊。 此 json 檔案必須是有效的（手動編輯此檔案時可能是最具挑戰性的部分，因為遺漏或額外的逗號就足以破壞 json 格式）。 此 JSON 檔案還必須包含一個 `"metadata"` 區塊，內含 `"name"` 鍵，且其值不能為空。 這將是您的自訂錶面的名稱（請參閱下方的[中繼資料設定](cwf-reference-metadata-settings)）。
+- 此 zip 檔案的大小應盡可能小（不超過約 500KB）。 如果檔案太大，將會被阻擋，無法傳送到手錶。
 
-The zip file can also contain some additional resource files:
+該 zip 檔案還可以包含一些額外的資源檔案：
 
-- Hardcoded file names for images that will be used used in standard views included in the watchface (like `Background`, `CoverChart`... see [List of hardcoded resource files](cwf-reference-list-of-hardcoded-resource-files) below). All these files can be either `jpg`, `png` or `svg` format. but for most of them, you will have to use `png` or `svg` that manage transparency (jpg are smaller in size compared to png, but with no transparency). Note that the best quality associated to the smallest size will generally be with svg files (vector format).
-- Addtional resource files with free names. These additional files can be either image files, or font files (`ttf` and `otf` format are accepted for fonts). Note that for these additional files, the `filename` (without extension) will be used as the keyValue, within JSON file, to specify where or when these files should be used.
-  - image files are often used as background of text views or for dynamic animation (like battery level from 0% to 100%)
-  - font files allow you to use dedicated fonts within your watchface
+- 用於錶面標準視圖的圖片檔案的硬編碼檔名（如 `Background`、`CoverChart` 等，請參閱下方的[硬編碼資源檔案列表](cwf-reference-list-of-hardcoded-resource-files)）。 這些檔案可以是 `jpg`、`png` 或 `svg` 格式。 但對於大多數情況，您需要使用支援透明度的 `png` 或 `svg`（相較於 png，jpg 檔案較小但不支援透明度）。 請注意，與最小的檔案大小相結合的最佳品質通常是 svg 檔案（向量格式）。
+- 具有自由命名的額外資源檔案。 這些額外檔案可以是圖片檔案，也可以是字體檔案（支援的字體格式為 `ttf` 和 `otf`）。 請注意，對於這些額外檔案，`檔名`（不含副檔名）將在 JSON 檔案中用作 keyValue，以指定這些檔案應該在哪裡或何時使用。
+  - 圖片檔案通常用作文字視圖的背景或用於動態動畫（如從 0% 到 100% 的電池電量）。
+  - 字體檔案允許您在錶面中使用專用字體。
 
 (cwf-reference-json-structure)=
 
-## JSON Structure
+## JSON 結構
 
-JSON files can be edited in Notepad (or notepad++) text editor (prefer notepad++ that recognize JSON and use color formating)
+JSON 檔案可以在 Notepad（或 Notepad++）文字編輯器中編輯（建議使用 Notepad++，它可識別 JSON 並使用彩色格式顯示）。
 
-- it contains string keys `"string_key":` and key values that can be strings like `"key value"`, integer, boolean like `true`or `false` or block of data.
-- each value is seperated by a comma `,`
-- A block of data starts by `{`  and ends by `}`
-- the json file is a whole block so it starts by  `{`  and ends by `}`, and inside this file all embeded blocks are associated to a `"key"` that should be unique within the block
-- To improve readibility of json file, it's generally indented (each new key is on a new line, each new block is shifted on the right by 4 spaces characters)
+- 它包含字串鍵 `"string_key":` 和鍵值，這些鍵值可以是字串（如 `"key value"`）、整數、布林值（如 `true` 或 `false`）或資料區塊。
+- 每個值由逗號 `,` 分隔。
+- 資料區塊由 `{` 開始，並以 `}` 結束。
+- 整個 json 檔案是一個完整的區塊，因此它從 `{` 開始，並以 `}` 結束，並且檔案內所有嵌入的區塊都與一個 `"key"` 相關聯，該鍵應該在該區塊內是唯一的。
+- 為了提高 json 檔案的可讀性，通常會縮排（每個新鍵位於新行，每個新區塊向右縮進 4 個空格字元）。
 
 (cwf-reference-metadata-settings)=
 
-### Metadata Settings
+### 中繼資料設定
 
-This block is the first block included into the json file and is mandatory. It contains all the informations associated to this watchface, like the name, the author, the date of creation or update, the author version or the plugin version.
+此區塊是 json 檔案中包含的第一個區塊，且是必需的。 它包含與此錶面相關的所有資訊，如名稱、作者、建立或更新日期、作者版本或外掛版本。
 
-See below an example of metadata block:
+請參閱下方的中繼資料區塊範例：
 
 ```json
 "metadata": {
@@ -50,17 +50,17 @@ See below an example of metadata block:
 },
 ```
 
-Note that `/` used for the date is a special character, so to be recognize correctly within json file, you have to put before an "escape" character `\`
+請注意，日期中使用的 `/` 是特殊字元，因此在 json 檔案中正確識別時，必須在它前面加上「跳脫」字元 `\`。
 
-You can see in some json file an additional key `"filename"`, this key will be automatically created or updated when the custom watchface will be loaded within AAPS (it will be used to show to the user the zip filename within exports folder), so you can remove this key within metadata block.
+您可以在某些 json 檔案中看到一個額外的鍵 `"filename"`，當自訂錶面載入 AAPS 時，這個鍵將自動建立或更新（它將用來向使用者顯示匯出資料夾中的 zip 檔案名），因此您可以在中繼資料區塊中刪除此鍵。
 
 (cwf-reference-general-parameter-settings)=
 
-### General parameter settings
+### 一般參數設定
 
-After the first block with metadata, you will set some general parameters (see [List of general parameters](cwf-reference-list-of-general-parameters) below), this allow you to set Graph colors (Carbs, Bolus, BG values...), and also default colors for value in range, hyper or hypo (default colors of BG value and arrows)
+在具有中繼資料的第一個區塊之後，您將設置一些一般參數（請參閱下方的[一般參數列表](cwf-reference-list-of-general-parameters)），這允許您設置圖表顏色（碳水化合物、注射、血糖值...），還有範圍內的值、過高或過低的預設顏色（血糖值和箭頭的預設顏色）。
 
-See below an example of general parameters
+請參閱下方的一般參數範例：
 
 ```json
 "highColor": "#FFFF00",
@@ -76,11 +76,11 @@ See below an example of general parameters
 ```
 (cwf-reference-imageview-settings)=
 
-### ImageView settings
+### ImageView 設定
 
-Custom image can be tuned using correct filename associated to each ImageView included into custom watchface Layout, then the json block is only here to define the position, the size, if the view is visible or not, and optionally tune the color:
+自訂圖片可以使用與自訂錶面佈局中每個 ImageView 相關的正確檔名進行調整，然後 json 區塊僅用來定義位置、大小、視圖是否可見，並選擇性地調整顏色：
 
-See below an example of an Image block for second_hand, (in this case there are no image included into zip file so default second hand image will be used, but tuned with a custom color.
+請參閱下方的秒針圖像區塊範例（在這種情況下，zip 檔案中沒有包含圖像，因此將使用預設的秒針圖像，但會調整為自訂顏色）。
 
 ```json
 "second_hand": {
@@ -92,7 +92,7 @@ See below an example of an Image block for second_hand, (in this case there are 
     "color": "#BC906A"
 }
 ```
-To have second_hand colored with default BG color (lowRange, midRange or highRange), you just have to modify the latest ligne with the keyValue `bgColor`
+要將秒針著色為預設的血糖顏色（範圍低、中或高），只需修改最後一行的鍵值 `bgColor`。
 
 ```json
     "color": "bgColor"
@@ -100,9 +100,9 @@ To have second_hand colored with default BG color (lowRange, midRange or highRan
 
 (cwf-reference-textview-settings)=
 
-### TextView settings
+### TextView 設定
 
-TexView have more available parameters compare to ImageView: you can tune rotation (integer value in degrees), textsize (integer value in pixel), gravity (to define if text value will be centered (default value), or aligned left or right), set the font, fontStyle and fontColor, and also background color of the TextView
+TexView 比 ImageView 有更多可用參數：您可以調整旋轉（度數的整數值）、字體大小（以像素為單位的整數值）、重力（用來定義文字值是置中（預設值）、靠左對齊還是靠右對齊）、設置字體、字體樣式和字體顏色，還有 TextView 的背景顏色。
 
 ```json
 "basalRate": {
@@ -119,7 +119,7 @@ TexView have more available parameters compare to ImageView: you can tune rotati
     "fontColor": "#BDBDBD"
 },
 ```
-Note that if you don't want to manage one view within your watchface, then put the `"visibility"` key to `"gone"` but also set size and position outside visible area like that:
+請注意，如果您不想在錶面中管理某個視圖，則將 `"visibility"` 鍵設為 `"gone"`，但也要將大小和位置設置在可見區域之外，如下所示：
 
 ```json
 "second": {
@@ -136,23 +136,23 @@ Note that if you don't want to manage one view within your watchface, then put t
     "fontColor": "#BDBDBD"
 },
 ```
-If size and position are within visible area, you can get some "flash" of the hidden value during the refresh of the watchface.
+如果大小和位置在可見區域內，您可能會在錶面重新整理期間看到隱藏值的「閃爍」。
 
-If you want to customize background image of a text view, then you can use the key `"background":` and put the filename of image included into zip file as keyValue, you can also just change the background color using `"color:"` key.
+如果您想自訂文字視圖的背景圖像，則可以使用鍵 `"background":`，並將包含在 zip 檔案中的圖像檔案作為鍵值，您也可以只使用鍵 `"color:"` 來更改背景顏色。
 
 ```json
 "background": "fileName"
 ```
 
-You also have 4 specific textViews (named freetext1 to freetext4) that have a specific parameter `"textvalue":` that can be used to set for example a label
+您還有 4 個特定的 TextView（名為 freetext1 到 freetext4），它們有一個特定的參數 `"textvalue":`，可用來設置標籤之類的東西。
 
 (cwf-reference-chartview-settings)=
 
-### ChartView settings
+### ChartView 設定
 
-Chart view is a very specific view that can share some parameters with ImageView or with TextView...
+圖表視圖是一個非常特定的視圖，可以與 ImageView 或 TextView 共享一些參數……
 
-Standard settings for this view is very simple:
+此視圖的標準設定非常簡單：
 
 ```json
 "chart": {
@@ -163,200 +163,200 @@ Standard settings for this view is very simple:
     "visibility": "visible"
 },
 ```
-The 2 additional parameters you can include for Chart view is a background color (default is transparent), using `"color"` key or a background image using `"background"` key.
+此視圖的 2 個額外參數是背景顏色（預設為透明），使用鍵 `"color"`，或使用鍵 `"background"` 來設定背景圖像。
 
 (cwf-reference-how-to-build-watchface)=
 
-## How to build/design your first Watchface
+## 如何構建/設計您的第一個錶面
 
-### Tools required
+### 所需工具
 
-- Text editor: my advice is to use NotePad++ (or equivalent) that is a simple text editor, but added value is you can see formated text with color code, so it's easier to detect errors. any simple text editor do the jod. it will be used to tune json informations
-- Image editor (bitmap and/or vector)
-  - If you use Bitmap
-    - Image editor should be able to manage transparency (required for all image above background), and png format (if you used bitmap image)
-    - Background image can  be in jpg format (smaller that png)
-    - Image editor should allow you to measure in pixel graphical objects (can be a simple square) (top, left, width, heigth)
-    - Image editor should be able to show you colors with RRVVBB code in hexadecimal
-    - Image editor should be able to resize image to 400px x 400px (very important to work with this resolution)
-  - If you use Vector
-    - Vector image should be exported in svg format
+- 文字編輯器：我建議使用 NotePad++（或同類工具），這是一個簡單的文字編輯器，但它的附加值在於您可以看到彩色代碼的格式化文本，因此更容易檢測錯誤。 任何簡單的文字編輯器都可以完成此工作。 它將用來調整 json 資訊。
+- 圖像編輯器（點陣圖和/或向量圖）
+  - 如果您使用點陣圖
+    - 圖像編輯器應能處理透明度（背景以上的所有圖像都需要透明度），並支援 png 格式（如果您使用點陣圖）。
+    - 背景圖像可以是 jpg 格式（比 png 小）。
+    - 圖像編輯器應允許您以像素為單位測量圖形對象（可以是簡單的方塊）（上、左、寬、高）。
+    - 圖像編輯器應能以十六進制顯示 RRVVBB 顏色代碼。
+    - 圖像編輯器應能將圖像調整為 400px x 400px（使用此解析度工作非常重要）。
+  - 如果您使用向量圖
+    - 向量圖像應以 svg 格式匯出。
 
-### Get template to not start from scratch
+### 獲取範本以免從零開始
 
-When you want to design your first watchface, the best is to start by the default watchface (this will ensure you to have latest version with all available views correctly sorted)
+當您想設計第一個錶面時，最好的方法是從預設錶面開始（這將確保您擁有所有正確排序的可用視圖的最新版本）。
 
-- You can get zip file by clicking on "Export Template" button within Wear plugin and get zip file within AAPS/exports folder
-- Note that you will need to have a watch connected to AAPS to see Custom Watchface buttons (but watch is also required to check, test and tune your custom watchface)
+- 您可以透過在 Wear 外掛中點選「匯出範本」按鈕來獲取 zip 檔案，並在 AAPS/exports 資料夾中找到 zip 檔案。
+- 請注意，您需要將手錶連線到 AAPS 以查看自訂錶面按鈕（但手錶也需要用來檢查、測試和調整您的自訂錶面）。
 
-Default watchface is very simple and zip file will contains only the 2 files:
+預設錶面非常簡單，zip 檔案將只包含兩個檔案：
 
-- CustomWatchface.png (image of default watchface for WF selection)
+- CustomWatchface.png（用於選擇預設錶面的圖像）
 - CustomWatchface.json
 
-### Organize your files within your computer
+### 在電腦上組織您的檔案
 
-The easiest way to work is to have phone connected to the computer, and work with to specific folders:
+最簡單的工作方式是將手機連線到電腦，並使用兩個特定資料夾工作：
 
-- one explorer opened on a specific folder that will have all files (json, bitmap images, vector images, fonts), and the CustomWatchface.zip file within it
-- another explorer (or navigation tree tuned) opened to have Phone/AAPS/exports folder available
+- 一個檔案總管打開到特定資料夾，該資料夾將包含所有檔案（json、點陣圖圖像、向量圖像、字體），以及 CustomWatchface.zip 檔案。
+- 另一個檔案總管（或調整好的導航樹）打開到 Phone/AAPS/exports 資料夾。
 
-That way working is very easy: each time you tune json file with a text editor, image with image editor (bitmap or vector) you have to just:
+這樣工作非常簡單：每次使用文字編輯器調整 json 檔案，使用圖像編輯器（點陣圖或向量圖）編輯圖像後，您只需：
 
-1. save your modifications in each app
-2. drag and drop all files within CustomWatchface.zip file
-3. drag and drop CustomWatchface.zip into AAPS/exports folder of the phone
-4. send CustomWatchface to the watch to check the results
+1. 在每個應用程式中儲存您的修改。
+2. 將所有檔案拖放到 CustomWatchface.zip 檔案中。
+3. 將 CustomWatchface.zip 拖放到手機的 AAPS/exports 資料夾中。
+4. 將 CustomWatchface 發送到手錶以檢查結果。
 
-### Initialize Watchface customization
+### 初始化錶面自訂。
 
-First step you will have to define a watchface Name (necessary to select it easily for testing), and start to tune metadata keys at the begining of json file
+第一步，您必須定義錶面的名稱（這對於測試時容易選擇是必要的），並開始調整 json 檔案開頭的中繼資料鍵。
 
-Then you will have to define which information you want to show so which view should be visible or hidden.
+接著，您需要定義要顯示哪些資訊，因此需要設定哪些視圖應該顯示或隱藏。
 
-- will you manage second or not?
-- do you want to design an analog watch or a digital watch (or both...)
+- 您是否需要管理秒針？
+- 您想設計一個類比錶面還是數位錶面（或兩者兼具...）
 
-Now you can start to modify json file with the `"visibility":` key of each view set to `"visible"` or `"gone"` (if you want to keep or not the view)
+現在，您可以開始修改 json 檔案，將每個視圖的 `"visibility"` 鍵設置為 `"visible"` 或 `"gone"`（如果您想保留或不保留該視圖）。
 
-You can also start to tune approximativaly top, left margin and width heigth values to start organizing the watchface (these values will be tuned later using image editor)
+您還可以開始大致調整上、左邊距和寬度、高度值，以便開始組織錶面（這些值稍後會使用圖像編輯器進行微調）。
 
-Note: everything is design within a **400px x 400px rectangle**. So everything will be position in absolute coordinates within this size.
+注意：所有設計都在 **400px x 400px 的矩形** 內進行。 因此，所有內容都會在此大小範圍內以絕對座標定位。
 
-When you design your first watchface, you have to know that everything is organized by layer from the Back to the Top, so each view (ImageView or TextView) can hide something that is behind...
-
-
-
-![CustomWatchface layers](../images/CustomWatchface_1.jpg)
+當您設計第一個錶面時，必須知道所有視圖（ImageView 或 TextView）從後到前分層排列，因此每個視圖可以隱藏在其後方的元素。
 
 
 
-Then within json file all views are sorted from the Back to the Top (this will help you to remember what is behind what...)
+![自訂錶面圖層](../images/CustomWatchface_1.jpg)
 
-If you design or tune your first custom watchface, start by simple things: change visibility of some views, include a dedicated background image without changing json file...
 
-### Manage colors
 
-Within json file, you will have several keys to specify colors: `"color"`, `"fontColor"`for views, but also `"highColor"`, `"midColor"`, `"lowColor"`, ... (see [List of General Parameters](cwf-reference-list-of-general-parameters))
+然後在 json 檔案中，所有視圖按從後到前的順序排列（這將幫助您記住哪些元素在後方）。
 
-Colors are specified with a text field that starts by `#` followed by RRGGBB (Red, Green, Blue) values in hexadecimal format:
+如果您設計或調整第一個自訂錶面，請從簡單的事情開始：更改一些視圖的可見性，包含一個專用背景圖像，無需更改 json 檔案。
 
-- `"#FFFFFF"` is white, and `"#000000"` is black, `"#FF0000"` is red...
+### 管理顏色
 
-You can also include 2 additional values for alpha layer and specify a transparency level (AARRGGBB):
+在 json 檔案中，您將有幾個鍵來指定顏色：`"color"`、`"fontColor"` 對於視圖來說，但也有 `"highColor"`、`"midColor"`、`"lowColor"` 等（請參閱下方的[一般參數列表](cwf-reference-list-of-general-parameters)）。
 
-- `"#00000000"`is completly transparent, and `"#FF000000"` is completly opaque ( so  `"#FF000000"` is equivalent to  `"#000000"`)
+顏色透過文本欄位指定，該欄位以 `#` 開頭，後接 RRGGBB（紅、綠、藍）值的十六進制格式：
 
-You can also use the specific keyvalue `"bgColor"` to automatically use `"highColor"`, `"midColor"`, `"lowColor"` specified in general parameters according to BG Value:
+- `"#FFFFFF"` 是白色，`"#000000"` 是黑色，`"#FF0000"` 是紅色。
 
-- `"fontColor": "bgColor",` will automatically set the font color of the view according to BG Value
-- Note that `sgv` (for BG Value) and `direction` (for trend arrow) views automatically apply BG colors set into general parameters (for these 2 views, if you want to have different colors, you will have to use advanced [dynData](cwf-reference-dyndata-feature) feature with one step color...)
+您還可以包含兩個附加值來指定透明度層級（AARRGGBB）：
 
-For more information concerning ImageViews and `"color":` key, see dedicated chapter [Tune image color](cwf-reference-tune-image-color) below.
+- `"#00000000"` 是完全透明，`"#FF000000"` 是完全不透明（因此 `"#FF000000"` 相當於 `"#000000"`）。
 
-### Include Hardcoded images
+您也可以使用特定的鍵值 `"bgColor"`，根據血糖值自動使用 `"highColor"`、`"midColor"`、`"lowColor"`，這些值已在一般參數中指定：
 
-the easiest way to start tuning your watchface is to include within zip file some images with a specific names (see [List of Hardcoded resource files](cwf-reference-list-of-hardcoded-resource-files))
+- `"fontColor": "bgColor",` 將自動根據血糖值設置視圖的字體顏色。
+- 請注意，`sgv`（血糖 值）和 `direction`（趨勢箭頭）視圖會自動應用血糖色彩（這兩個視圖，如果您想要不同顏色，您將需要使用進階的[dynData](cwf-reference-dyndata-feature) 功能並使用單步顏色）。
 
-- Image should be in `.jpg`, `.png` or `.svg` format. but be carefull, jpg doesn't manage transparency, so should be only used for background layer. For all intermediate layers (cover_chart, cover_plate, hands) use eather `.png`or `.svg` image
+有關 ImageViews 和 `"color":` 鍵的更多資訊，請參閱下方的專用章節 [調整圖像顏色](cwf-reference-tune-image-color)。
 
-- If you have a vector image editor (like for example Illustrator), prefer this format that will produce small text files with `.svg` extension the best quality.
-- You should take care to use exact filename (including High/lower case)
+### 包含硬編碼圖像
 
-Now if you want a dedicated backgoung image, you only have to include within the zip file a file named `Background.jpg` (without changing anything else. send zip file into the watch and check result!.
+開始調整您的錶面的最簡單方法是將一些特定名稱的圖像包含在 zip 檔案中（請參閱[硬編碼資源檔案列表](cwf-reference-list-of-hardcoded-resource-files)）。
 
-If you want to customize hour_hand, minute_hand or second_hand for an analog watch, simply include `HourHand.png` (or `HourHand.svg`), `MinuteHand.png` and `SecondHand.png`.
+- 圖像應為 `.jpg`、`.png` 或 `.svg` 格式。 但要注意，jpg 不支援透明度，因此應僅用於背景圖層。 對於所有中間圖層（cover_chart、cover_plate、指針等）請使用 `.png` 或 `.svg` 圖像。
 
-- these images will automatically rotate around the center of the image, so the images should be set to 00:00:00 (and for a "full frame" analog watch, use a size of 400 x 400 px positioned at top 0 left 0)
+- 如果您有向量圖像編輯器（例如 Illustrator），請優先使用此格式，它會產生帶有 `.svg` 副檔名的小型文本檔案，效果最佳。
+- 您必須注意檔名的精確拼寫（包括大小寫）。
 
-You can also noticed within [List of Hardcoded resource files](cwf-reference-list-of-hardcoded-resource-files) that for each image view, you have two additional hardcoded filenames `High` and `Low` (for example you can include other images named `BackgroundHigh.jpg` and `BackgroundLow.jpg` within zip file). then image will automatically change according to you BG level (within Range, Hyper or Hypo). See AIMICO watchface as example.
+現在如果您想要專用的背景圖像，您只需在 zip 檔案中包含一個名為 `Background.jpg` 的檔案（無需更改其他內容）。 將 zip 檔案發送到手錶並檢查結果！
+
+如果您想為類比錶自訂時針、分針或秒針，只需包含 `HourHand.png`（或 `HourHand.svg`）、`MinuteHand.png` 和 `SecondHand.png`。
+
+- 這些圖像將自動繞圖像中心旋轉，因此這些圖像應設置為 00:00:00（對於「全畫幅」類比錶面，請使用 400 x 400 px 的大小，並定位於 top 0 left 0）。
+
+您還可以在[硬編碼資源檔案列表](cwf-reference-list-of-hardcoded-resource-files)中注意到，對於每個圖像視圖，您有兩個額外的硬編碼檔名 `High` 和 `Low`（例如，您可以在 zip 檔案中包含其他名為 `BackgroundHigh.jpg` 和 `BackgroundLow.jpg` 的圖像）。 然後圖像將根據您的血糖水平自動更改（在範圍內、高血糖或低血糖）。 請參閱 AIMICO 錶面作為範例。
 
 (cwf-reference-tune-image-color)=
 
-### Tune image color
+### 調整圖像顏色
 
-`"color"` key can  be used to tune default image color:
+`"color"` 鍵可用於調整預設的圖像顏色：
 
-- applied on background view, it will set the background color (default black)
-- applied on cover_plate (simple dial) or hands, it will change the default image (white) by the color specified (including `"bgColor"`)
+- 應用於背景視圖時，它將設置背景顏色（預設為黑色）。
+- 應用於 cover_plate（簡單錶盤）或指針時，它將根據指定的顏色（包括 `"bgColor"`）更改預設圖像（白色）。
 
-When you apply `"color"` key on a bitmap image (`.jpg` or `.png`), color will apply an interresting effect on color saturation. So you will still recognize your bitmap.
+當您將 `"color"` 鍵應用於點陣圖圖像（`.jpg` 或 `.png`）時，顏色將對色彩飽和度產生有趣的效果。 因此，您仍然可以識別您的點陣圖圖像。
 
-Finally on `.svg` image file, `"color"`key will have no effect, consider color of vector files as hardcoded within the image. If you want to change colors, you will have to include several `svg` files, and use advanced [dynData](cwf-reference-dyndata-feature) feature to change it
+最後，對於 `.svg` 圖像檔案，`"color"` 鍵將不起作用，向量圖像的顏色被視為硬編碼在圖像內。 如果您想更改顏色，您將需要包含多個 `svg` 檔案，並使用進階的[dynData](cwf-reference-dyndata-feature) 功能來更改它。
 
-### Use additional fonts for TextViews
+### 為 TextViews 使用額外字體
 
-Several defaults font are already available within wear apk (see font keys included into [key values](cwf-reference-key-values) chapter). But if you want to use additional fonts not available as default, you can include addtional fonts within zip file:
+wear apk 中已經有多個預設字體（請參閱 [鍵值](cwf-reference-key-values) 章節中的字體鍵）。 但如果您想使用未預設的額外字體，可以在 zip 檔案中包含額外的字體：
 
-- the 2 accepted font format are `.ttf` and `.otf` files
-- if you include a custom font within zip file, for example with a file named `myCustomFont.ttf`, then you will have to use the filename to use it within json file for a TextView:
+- 支援的字體格式為 `.ttf` 和 `.otf`。
+- 如果您在 zip 檔案中包含自訂字體，例如名為 `myCustomFont.ttf` 的檔案，則您需要使用檔名在 json 檔案中將其用於 TextView：
 
 ```
 "font": "myCustomFont",
 ```
 
-Keep in mind that some fonts can be included into big files (and you are limited to a maximum size for zip file). So if you only use very few characters (numbers, `.`, `,`), you can use free tools to remove unused characters (for example [here](https://products.aspose.app/font/generator/ttf-to-ttf)) and then reduce font size.
+請記住，一些字體檔案可能很大（而您對 zip 檔案的大小有最大限制）。 因此，如果您只使用非常少的字元（數字、`.`、`,`），您可以使用免費工具移除未使用的字元（例如[這裡](https://products.aspose.app/font/generator/ttf-to-ttf)）來減小字體大小。
 
 (cwf-reference-advanced-features)=
 
-## Advanced features
+## 進階功能
 
 (cwf-reference-preference-feature)=
 
-### Preferences Feature
+### 偏好設定功能
 
-CustomWatchface can automatically tune some watch preferences to have the correct visualization of the watchface (if authorization is given within Wear preferencesby the user).
+CustomWatchface 可以自動調整一些手錶的偏好設定，以確保正確顯示錶面（如果使用者在 Wear 偏好設定中授權）。
 
-But this feature should be used with care. Preferences are common with all other watchfaces. So several rules to respect with this feature:
+但是此功能應謹慎使用。 偏好設定是與其他錶面共用的。 因此，有幾個使用此功能時應遵守的規則：
 
-- never set preferences concerning hidden views
-- try to maximize the visible views
-- feel free to oversize the width of certain views:
-  - TBR can be shown as percentage (small width, but also as absolue values much wider)
-  - delta or avg delta with detailed information can be wide
-  - same for iob2: this view can have total iob, but if detailed iob is selected, then text size can be very long
+- 不要設定隱藏檢視相關的偏好設定
+- 盡量最大化可見的檢視
+- 可以自由調整某些檢視的寬度：
+  - TBR 可以顯示為百分比（寬度較小，但也可以顯示為絕對值，寬度更大）
+  - delta 或平均 delta 的詳細資訊可以顯示更寬
+  - 同樣地，iob2 的檢視可以顯示總 iob，但如果選擇顯示詳細 iob，文字大小可能會變得很長
 
-If you still need some very specific settings to have a correct display (in example below, if there is not enough space for detailed iob, you can "force" this parameter to `false` of your watch, you can include within metadata block some settings constraint like that
+如果仍然需要某些非常特殊的設定來正確顯示（如下範例所示，如果沒有足夠的空間顯示詳細 iob，您可以將手錶上的此參數強制設為 `false`，並可在元資料區塊中包含這類設定約束
 
 ```json
 "metadata": {
-    "name": "Default Watchface",
+    "name": "預設錶面",
     "author": "myName",
     "created_at": "07\/10\/2023",
     "author_version": "1.0",
     "cwf_version": "1.0",
-    "comment": "Default watchface, you can click on EXPORT WATCHFACE button to generate a template",
+    "comment": "預設錶面，您可以點擊匯出錶面按鈕生成範本",
     "key_show_detailed_iob": false
 },
 ```
 
-If user authorize custom watchface to modify watch parameter (setting within wear plugin) then Show detailed iob will be set to "disable", and locked to disable (no modification of this parameter possible, until authorization is disabled within wear plugin parameter, or another watchface is selected)
+如果使用者授權自訂錶面修改手錶參數（設定於 Wear 外掛內），那麼顯示詳細 iob 會設為 "停用"，並鎖定為停用（直到在 Wear 外掛參數內取消授權或選擇其他錶面，否則無法修改此參數）。
 
-- Note that when a user select a watchface, he can see the number of "required parameter" during watchface selection
+- 請注意，當使用者選擇錶面時，他可以在選擇過程中看到「必要參數」的數量。
 
-In example below Gota watchface has one required parameter. If authorization is not given it will be shown in white color, but authorization is given, then this parameter will be set and locked on the watch (in this case the number is in orange color)
+如下範例所示，Gota 錶面有一個必要參數。 如果未授權，它會以白色顯示；如果授權，則此參數會設置並鎖定於手錶上（此時數字為橙色）。
 
-![Required parameters](../images/CustomWatchface_2.jpg)
+![必要參數](../images/CustomWatchface_2.jpg)
 
 
 
 (cwf-reference-twinview-feature)=
 
-### TwinView Feature
+### 雙視圖功能
 
-Twin views provide an easy way to adjust the view position based on the visible views. This does not have the power of a layout entirely made up of LinearLayout, but can handle many common cases.
+雙視圖提供了一種基於可見檢視調整檢視位置的簡便方式。 這不如完全使用 LinearLayout 排版來得強大，但可以處理許多常見情況。
 
-In example below you can see AAPS (Cockpit) watchface with all views visible within settings, and the same watchface with "Show rig battery" disabled and "Show avg delta" disabled
+如下範例所示，您可以看到 AAPS（駕駛艙）錶面中的所有檢視都在設定內可見，而相同錶面在「隱藏顯示鑽機電池」及「隱藏顯示平均 delta」時的效果。
 
-![Twin Views](../images/CustomWatchface_3.jpg)
+![雙視圖](../images/CustomWatchface_3.jpg)
 
-You can see that when one of the twin views is hidden, the other is shifted to be centered
+您可以看到當其中一個雙視圖被隱藏時，另一個會自動居中移動。
 
-in this example, you can see that within `"uploader_battery"` block, we have `"twinView":` key is added to define `"rig_battery"` view, and in `"rig_battery"` block  `"twinView":` key define `"uploader_battery"` as twin. Then then additional key `"leftOffsetTwinHidden":` define the number of pixel to shift the view when twin is hidden.
+在此範例中，您可以看到在 `"uploader_battery"` 區塊中，添加了 `"twinView":` 鍵來定義 `"rig_battery"` 檢視，而在 `"rig_battery"` 區塊中， `"twinView":` 鍵定義了 `"uploader_battery"` 為雙檢視。 隨後，額外的鍵 `"leftOffsetTwinHidden":` 定義了雙視圖被隱藏時的位移像素數量。
 
-To calculate this number, you can see that the difference between the leftMargin of each of the twin views is 50 pixels, so the offset to stay centered is half in one direction or the other.
+要計算這個數字，您可以看到兩個雙視圖的左邊界差為 50 像素，因此位移量為一個方向的一半。
 
-If the twin views are positioned vertically, in this case you must use the key `"topOffsetTwinHidden":`
+如果雙視圖是垂直排列的，則需要使用鍵 `"topOffsetTwinHidden":`。
 
 ```json
 "uploader_battery": {
@@ -392,33 +392,33 @@ If the twin views are positioned vertically, in this case you must use the key `
 ```
 (cwf-reference-dyndata-feature)=
 
-### DynData Feature
+### DynData 功能
 
-DynData is the most powerfull feature if you want to include some animation within you watchface, according to some internal values (like BG value, BG level, delta, % of battery... see list of available data [here](cwf-reference-dyndata-key-values))
+DynData 是您想要根據一些內部資料（如血糖值、血糖 等級、delta、電池百分比等，詳見可用資料 [此處](cwf-reference-dyndata-key-values)）在錶面中加入動畫時，最強大的功能。
 
-To illustrate this feature, I will take the example of AAPS (SteamPunk) watchface:
+為了說明此功能，我將以 AAPS（蒸汽龐克）錶面為例：
 
 ![CustomWatchface_4](../images/CustomWatchface_4.png)
 
-In this watchface, we will have to manage the [rotation of BG value](cwf-reference-background-management) (from 30 degrees to 330 degrees) on the right, the [dynamic range of avg_delta](cwf-reference-avg-delta-management) (scale up to 5mgdl, 10mgdl or 20mgdl according to value), the [rotation of pointer](cwf-reference-dynamic-rotation-management) that should be synchronized to the scale, and also the different layer of the views...
+在此錶面中，我們需要管理 [BG 值旋轉](cwf-reference-background-management)（從 30 度到 330 度），[avg_delta 的動態範圍](cwf-reference-avg-delta-management)（根據值縮放至 5mgdl、10mgdl 或 20mgdl），[指針的旋轉](cwf-reference-dynamic-rotation-management)應與縮放同步，還有檢視的不同圖層...
 
-To be able to manage this Watchface, see below all the images included into the zip file:
+要管理此錶面，請參閱以下包含於 zip 檔案中的所有圖片：
 
-Note: to be able to see the transparency, all these images are on a yellow background and surrounded by a red square
+注意：為了顯示透明區域，所有這些圖片都有黃色背景並被紅色方框包圍。
 
-![Steampunk images](../images/CustomWatchface_5.jpg)
+![蒸汽龐克圖片](../images/CustomWatchface_5.jpg)
 
-- On the first row, Background.jpg and CoverPlate.png will be automatically mapped with associated view (default views filename), and steampunk_pointer.png will be managed by dynData
-- On the second row you see the 3 scales of dynamic range for avg_delta that will also be managed by dynData
-- On the third row, chartBackground.jpg will be linked manually within chart view, HourHand.png and finally MinuteHand.png files will be automatically mapped with associated views
+- 在第一排中，Background.jpg 和 CoverPlate.png 會自動映射至相關的檢視（預設檢視檔案名），而 steampunk_pointer.png 將由 dynData 管理。
+- 在第二排中，您可以看到動態範圍的 3 個 avg_delta 尺度，這些也將由 dynData 管理。
+- 在第三排中，chartBackground.jpg 會手動連結到圖表檢視，HourHand.png 和 MinuteHand.png 檔案將自動映射到相關的檢視。
 
 (cwf-reference-background-management)=
 
-#### **Background management**
+#### **背景管理**
 
-First, concerning BG value image, no choice here, it can only be in the background layer (otherwize it will be in front of the chart view and chart will not be visible!). So we will have to map BG value to the background, and then rotate background image according to BG value.
+首先，關於血糖值（BG）圖像，這裡無法選擇，它只能位於背景層（否則它將出現在圖表前面，圖表將無法顯示！）。 因此，我們必須將血糖值對應到背景，然後根據血糖值旋轉背景圖像。
 
-Within `"background"` block, we will include 2 dedicated keys to make this rotation:
+在`"background"`區塊內，我們將包括兩個專用的鍵來進行這個旋轉：
 
 ```json
 "background": {
@@ -431,11 +431,11 @@ Within `"background"` block, we will include 2 dedicated keys to make this rotat
     "visibility": "visible"
 },
 ```
-`"dynData":` key will define which block should be used to define the animation (value, range, convertion...) here this block was named "rotateSgv" (choose an explicit name when you use this feature),
+`"dynData":`鍵將定義應該使用哪個區塊來定義動畫（值、範圍、轉換等），在這裡這個區塊被命名為 "rotateSgv"（使用此功能時選擇一個明確的名稱）。
 
-`"rotationOffset": true,` will define that the expected animation according to value should be a rotation. (others available keys are `"leftOffset"` and `"topOffset"` if you want to create a slider)
+`"rotationOffset": true,` 將定義根據值期望的動畫應該是旋轉。 （其他可用的鍵還有`"leftOffset"`和`"topOffset"`，如果您想建立滑塊的話）
 
-Now we will go at the end of the file, after the last view:
+現在，我們將在文件的末尾，在最後一個視圖之後進行操作：
 
 ```json
 "second_hand": {
@@ -452,21 +452,21 @@ Now we will go at the end of the file, after the last view:
         "maxData": 330
     },
 ```
-You can see that after the latest view (`"second_hand"`), we added a new `"dynData": { ... }` block that  will contains all the animations:
+您可以看到在最新的視圖（`"second_hand"`）之後，我們新增了一個新的`"dynData": { ... }`區塊，這將包含所有的動畫：
 
-The block defined within `"background"`view was named `"rotateSgv"`, it's the first block you will find into `"dynData"`!
+在`"background"`視圖內定義的區塊被命名為`"rotateSgv"`，這是您在`"dynData"`內找到的第一個區塊！
 
-This block is simple: you have a first key named `"valueKey":` that will be used to define which value should be used. in this case `"sgv"` is a "keyValue" that defines BG value (note that in most cases the keyValue has the same name that the view that shows this information).
+這個區塊很簡單：您有一個名為`"valueKey":`的第一個鍵，將用來定義應該使用哪個值。 在這種情況下，`"sgv"`是定義血糖值的 "keyValue"（請注意，在大多數情況下，keyValue與顯示此資訊的視圖名稱相同）。
 
-Concerning BG value, default min data is set to 39mgdl and max  data is set to 400mgdl (see [DynData reference key values](cwf-reference-dyndata-key-values) below all available keyValues and associated min/max data values).
+關於血糖值，預設的最小資料設為39 mg/dL，最大資料設為400 mg/dL（請參閱[DynData 參考鍵值](cwf-reference-dyndata-key-values)，下方列出了所有可用的keyValue及其相關的最小/最大資料值）。
 
-Within `"rotateSgv"` block the two additional keys (`"minData":` and `"maxData":`) will be used to tune min and max data to 30 and 330. With these min and max values, we will be able to directly use data value (without any convertion) to rotate background in degrees. In this situation all BG values above 330mgdl will be limited to 330, upper limit of the image.
+在`"rotateSgv"`區塊內，將使用兩個附加的鍵（`"minData":` 和 `"maxData":`）來調整最小和最大資料至30和330。 有了這些最小和最大值，我們將能夠直接使用資料值（無需任何轉換）來以角度旋轉背景。 在這種情況下，所有超過330 mg/dL的血糖值將被限制在圖像的上限330。
 
-#### **Chart management**
+#### **圖表管理**
 
-Default background of chart is transparent, so to hide BG scale included into background image, we will need to include a dedicated background image (this image will include the overall shadows of Steampunk watchface). The link to charBackground.jpg file is done with `"background":` key
+圖表的預設背景是透明的，因此為了隱藏包含於背景圖像中的血糖刻度，我們需要加入專用的背景圖像（此圖像將包含蒸汽龐克錶面整體的陰影效果）。 連結到charBackground.jpg文件是透過`"background":`鍵完成的
 
-Of course, the sizing and positioning of the view must be done to the pixel!
+當然，視圖的尺寸和定位必須精確到像素！
 
 ```json
 "chart": {
@@ -480,15 +480,15 @@ Of course, the sizing and positioning of the view must be done to the pixel!
 ```
 (cwf-reference-avg-delta-management)=
 
-#### **Avg delta management**
+#### **平均變化管理**
 
-To be able to manage dynamic range of avg delta, we will use the four freetext views. freetext1 will be used to manage the image scale, and freetext2 to freetext4 will be used to manage pointer rotation according to scale.
+為了能夠管理平均變化的動態範圍，我們將使用四個自由文字視圖。 freetext1將用來管理圖像刻度，freetext2至freetext4將根據刻度管理指針的旋轉。
 
 **freetext1**
 
-As explain before, freetext views are in front of chart and in front of background, that's why we included transparent area to see these images (right side and bottom side of the image)
+如前所述，自由文字視圖位於圖表和背景的前面，因此我們加入了透明區域以顯示這些圖像（圖像的右側和底部）。
 
-Note that the removed bottom part of these images has been used as background of chart to have a perfect integration.
+請注意，這些圖像底部被移除的部分已用作圖表的背景，實現完美的整合。
 
 ```json
 "freetext1": {
@@ -501,7 +501,7 @@ Note that the removed bottom part of these images has been used as background of
     "dynData": "avgDeltaBackground"
 },
 ```
-For this view we include the link to another `"dynData"`block named `avgDeltaBackground`. This block will manage avgDelta scale according to avgDelta value.
+在這個視圖中，我們將連結到另一個名為`"avgDeltaBackground"`的`"dynData"`區塊。 此區塊將根據平均變化值來管理avgDelta刻度。
 
 ```json
 "avgDeltaBackground": {
@@ -519,181 +519,181 @@ For this view we include the link to another `"dynData"`block named `avgDeltaBac
     "image8": "steampunk_gauge_mgdl_20"
 },
 ```
-- `"valueKey":` will make the link with `"avg_delta"` value
-- min and max Data will also limit the range to the maximum value available within this watchface (from -20mgdl to 20mgdl). For mmol users, keep in mind that all internal values are always in mgdl within AAPS.
+- `"valueKey":`將與`"avg_delta"`值進行連結
+- 最小和最大資料也會將範圍限制在此錶面內可用的最大值（從-20 mg/dL到20 mg/dL）。 對於mmol使用者，請記住，所有的內部值在AAPS中始終以mg/dL表示。
 
-Then we will see here how to manage dynamic background image according to value.
+接下來我們將看到如何根據值來管理動態背景圖像。
 
-`"invalidImage":` is the key to manage image to show when we have an invalid data (or missing data). Here we make the link to additional resource image including into zip file with 5 mgdl scale
+`"invalidImage":`是管理當資料無效（或資料遺失）時顯示圖像的鍵。 這裡我們將連結到包含在zip文件中的5 mg/dL刻度的額外資源圖像
 
-Then we will use a serie of images, starting from `"image1":` to `"image8":`. The number of provided images will define the number of steps between `minData` and `maxData`.
+接下來我們將使用一系列圖像，從`"image1":`開始到`"image8":`。 提供的圖像數量將定義最小資料和最大資料之間的步驟數。
 
-- `image1` will define image to show when avg_delta is equal or close to `minData` and the image with the highest number (here `image8`) will be used to define the image that should be shown when avg_delta is equal or close to `maxData`
-- between -20mgdl and 20mgdl, the overall range is 40mgdl, devided by 8 (number of images provided), we will have 8 steps of 5mgdl
-- Now we can map background images according to avg_delta value, starting from the lowest values: between -20 and -15, and also between -15 and -10 we will use  `steampunk_gauge_mgdl_20` for the scale, then between -10 and -5 `steampunk_gauge_mgdl_10`, and so on until +15 and +20 where we will again use `steampunk_gauge_mgdl_20` background image
+- `image1`將定義當avg_delta等於或接近`minData`時顯示的圖像，而編號最高的圖像（此處為`image8`）將用於定義當avg_delta等於或接近`maxData`時應顯示的圖像。
+- 在-20 mg/dL和20 mg/dL之間，總範圍是40 mg/dL，分為8個步驟（提供的圖像數量），每步5 mg/dL。
+- 現在我們可以根據avg_delta值來映射背景圖像，從最低值開始：在-20和-15之間以及-15和-10之間，我們將使用`steampunk_gauge_mgdl_20`來顯示刻度，然後在-10和-5之間使用`steampunk_gauge_mgdl_10`，依此類推，直到+15和+20，我們再次使用`steampunk_gauge_mgdl_20`背景圖像。
 
 (cwf-reference-dynamic-rotation-management)=
 
-**freetext2 to freetext4**
+**freetext2 到 freetext4**
 
-For these views will will combine dynamic images and rotation feature explained before:
+對於這些視圖，我們將結合之前解釋過的動態圖片和旋轉功能：
 
 ```json
 "freetext2": {
-    "width": 276,
-    "height": 276,
-    "topmargin": 64,
-    "leftmargin": 64,
-    "rotation": 0,
-    "visibility": "visible",
-    "dynData": "avgDelta5",
-    "rotationOffset": true
+    "寬度": 276,
+    "高度": 276,
+    "上邊距": 64,
+    "左邊距": 64,
+    "旋轉": 0,
+    "可見性": "可見",
+    "動態資料": "avgDelta5",
+    "旋轉偏移": true
 },
 "freetext3": {
-    "width": 276,
-    "height": 276,
-    "topmargin": 64,
-    "leftmargin": 64,
-    "rotation": 0,
-    "visibility": "visible",
-    "dynData": "avgDelta10",
-    "rotationOffset": true
+    "寬度": 276,
+    "高度": 276,
+    "上邊距": 64,
+    "左邊距": 64,
+    "旋轉": 0,
+    "可見性": "可見",
+    "動態資料": "avgDelta10",
+    "旋轉偏移": true
 },
 "freetext4": {
-    "width": 276,
-    "height": 276,
-    "topmargin": 64,
-    "leftmargin": 64,
-    "rotation": 0,
-    "visibility": "visible",
-    "dynData": "avgDelta20",
-    "rotationOffset": true
+    "寬度": 276,
+    "高度": 276,
+    "上邊距": 64,
+    "左邊距": 64,
+    "旋轉": 0,
+    "可見性": "可見",
+    "動態資料": "avgDelta20",
+    "旋轉偏移": true
 },
 ```
-Here each view is dedicated to a specific scale (so is linked to a dedicated dynData block), you can alos notice that `"rotationOffset":` key is enabled for these 3 views.Now take a look on the first dynData block:
+每個視圖都專用於特定的刻度（因此與專用的動態資料區塊相連），你還可以注意到這三個視圖中啟用了 `"旋轉偏移"` 鍵。現在來看看第一個動態資料區塊：
 
 ```json
 "avgDelta5": {
-    "valueKey": "avg_delta",
-    "minData": -20,
-    "maxData": 20,
-    "rotationOffset": {
-        "minValue": -120,
-        "maxValue": 120
+    "數值鍵": "avg_delta",
+    "最小資料": -20,
+    "最大資料": 20,
+    "旋轉偏移": {
+        "最小值": -120,
+        "最大值": 120
     },
-    "invalidImage": "null",
-    "image1": "null",
-    "image2": "null",
-    "image3": "null",
-    "image4": "steampunk_pointer",
-    "image5": "steampunk_pointer",
-    "image6": "null",
-    "image7": "null",
-    "image8": "null"
+    "無效圖片": "null",
+    "圖片1": "null",
+    "圖片2": "null",
+    "圖片3": "null",
+    "圖片4": "steampunk_pointer",
+    "圖片5": "steampunk_pointer",
+    "圖片6": "null",
+    "圖片7": "null",
+    "圖片8": "null"
 },
 ```
-Here, even if dynamic range will be used only between -5 and +5 avg_delta datas, it's important to keep the overall range of -20, +20mgdl to ensure that the pointer will be synchronize with the background during scale switches. That's why we keep the same overall range than for `avgDeltaBackground`  and the same number ot steps (8 images).
+即使動態範圍只在 -5 到 +5 avg_delta 資料之間使用，保持 -20 到 +20mgdl 的整體範圍仍然很重要，這樣才能確保指針在刻度切換期間與背景同步。 這就是為什麼我們保持與 `avgDeltaBackground` 相同的整體範圍和相同的步驟數（8 張圖片）。
 
-You can note that either `"invalidImage"` or several `"imagexx"` are with `"null"` key value (it could be any string not existing as a filename within zip file). When a filename is not found, then view background image will be transparent. So the setting ensure that pointer will only be visible for step 4 and step 5 (avg delta between -5mgdl and +5 mgdl), and will not be visible outside this range.
+你可以注意到 `"無效圖片"` 或幾個 `"圖片xx"` 的鍵值為 `"null"`（這可以是 ZIP 文件中不存在的任何字串）。 當找不到文件名時，視圖的背景圖片將變為透明。 因此，設定確保指針僅在步驟 4 和步驟 5（avg delta 在 -5mgdl 和 +5 mgdl 之間）可見，並且不會在此範圍之外顯示。
 
-Now we can see a new block `"rotationOffset":` that will have inside two keys `"minValue":` and `"maxValue":`. These values are used to make the convertion between internal datas (in mgdl), and the angle rotation we want to have.
+現在我們可以看到一個新的區塊 `"旋轉偏移"`，其中包含兩個鍵 `"最小值"` 和 `"最大值"`。 這些值用於將內部資料（以 mgdl 為單位）轉換為我們希望的旋轉角度。
 
-- Steampunk watchface is designed to have maximum from -30 degrees to 30 degrees rotation for the pointer. So according to the scale (here from -5mgdl to 5mgdl), we will want to have 30 degrees for these values. Because `minData` and `maxData`are 4 times greater, then the corresponding minValues and maxValues are 4 * 30 degrees so -120 and +120 degrees. But for all rotation above or below +-30 degrees the pointer will be hidden (no image visible), and the pointer will only be visible for values between -5 and +5mgdl... So it's exactly what is expected here.
+- 蒸汽朋克錶盤的設計使指針的最大旋轉角度從 -30 度到 30 度。 因此，根據刻度（此處從 -5mgdl 到 5mgdl），我們希望這些值具有 30 度的旋轉。 由於 `最小資料` 和 `最大資料` 大 4 倍，則相應的最小值和最大值是 4 * 30 度，因此為 -120 度和 +120 度。 但對於所有超過或低於 ±30 度的旋轉，指針將被隱藏（無圖片可見），並且指針僅在 -5 到 +5mgdl 之間顯示... 所以這正是這裡的預期結果。
 
-The other dynData blocks are defined the same way to tune `"avgDelt10"`and `"avgDelta20"`
+其他動態資料區塊定義的方式相同，用於調整 `"avgDelt10"` 和 `"avgDelta20"`
 
-#### loop view
+#### 循環視圖
 
-in Steampunk watchface loop green and red arrows (for status) are disabled, this is also managed with a dedicated dynData block associated to loop view.
+在蒸汽朋克錶盤的循環中，綠色和紅色箭頭（用於狀態）被停用，這也透過與循環視圖相關聯的專用動態資料區塊進行管理。
 
 ```json
-    "loopArrows": {
-        "invalidImage": "greyArrows",
-        "image1": "greenArrows",
-        "image2": "redArrows"
+    "循環箭頭": {
+        "無效圖片": "greyArrows",
+        "圖片1": "greenArrows",
+        "圖片2": "redArrows"
     }
 ```
-Because this block is only called by loop View, and default data managed by this view is loop information, then `"valueKey":` key is optional.
+由於此區塊僅由循環視圖調用，並且此視圖管理的預設資料是循環資訊，因此 `"數值鍵"` 鍵是可選的。
 
-Default `minData` and `maxData` for loop are defined to 0min and 28min, so with two images, all data values below 14 min will be shown with background `image1` and all data values above 14 min will be shown with `image2`. 14 min is exactly the threshold to switch from green arrow to red arrow.
+循環的預設 `最小資料` 和 `最大資料` 定義為 0 分鐘和 28 分鐘，因此使用兩張圖片，所有小於 14 分鐘的資料值將顯示背景 `圖片1`，所有大於 14 分鐘的資料值將顯示 `圖片2`。 14 分鐘正是從綠箭頭切換到紅箭頭的臨界值。
 
-In this example, `greyArrows`, `greenArrows` and `redArrows` files are not included into zip file, so these arrows are just removed (invisible), but you can use this block "as is" if you want to tune status arrows with custom background images.
+在此範例中，`greyArrows`、`greenArrows` 和 `redArrows` 文件未包含在 ZIP 文件中，因此這些箭頭只是被移除（不可見），但如果你想用自訂的背景圖片調整狀態箭頭，可以「按原樣」使用此區塊。
 
-#### rig_battery and uploader_battery views
+#### rig_battery 和 uploader_battery 視圖
 
-To finish the overview of dynData feature, we will take a look on battery management. The idea here is to customize text color according to battery level (from 0 to 100%)
+為了完成對動態資料功能的總覽，我們來看看電池管理。 這裡的想法是根據電池電量（從 0% 到 100%）自訂文字顏色。
 
 ```json
 "uploader_battery": {
-    "width": 60,
-    "height": 28,
-    "topmargin": 100,
-    "leftmargin": 170,
-    "rotation": 0,
-    "visibility": "visible",
-    "textsize": 20,
-    "gravity": "center",
-    "font": "default",
-    "fontStyle": "bold",
-    "fontColor": "#00000000",
-    "dynData": "batteryIcons",
-    "twinView": "rig_battery",
-    "topOffsetTwinHidden": -13
+    "寬度": 60,
+    "高度": 28,
+    "上邊距": 100,
+    "左邊距": 170,
+    "旋轉": 0,
+    "可見性": "可見",
+    "文字大小": 20,
+    "對齊方式": "置中",
+    "字體": "預設",
+    "字體樣式": "粗體",
+    "字體顏色": "#00000000",
+    "動態資料": "batteryIcons",
+    "雙視圖": "rig_battery",
+    "隱藏時的雙視圖偏移": -13
 },
 "rig_battery": {
-    "width": 60,
-    "height": 28,
-    "topmargin": 74,
-    "leftmargin": 170,
-    "rotation": 0,
-    "visibility": "visible",
-    "textsize": 20,
-    "gravity": "center",
-    "font": "default",
-    "fontStyle": "bold",
-    "fontColor": "#00000000",
-    "dynData": "batteryIcons",
-    "twinView": "uploader_battery",
-    "topOffsetTwinHidden": 13
+    "寬度": 60,
+    "高度": 28,
+    "上邊距": 74,
+    "左邊距": 170,
+    "旋轉": 0,
+    "可見性": "可見",
+    "文字大小": 20,
+    "對齊方式": "置中",
+    "字體": "預設",
+    "字體樣式": "粗體",
+    "字體顏色": "#00000000",
+    "動態資料": "batteryIcons",
+    "雙視圖": "uploader_battery",
+    "隱藏時的雙視圖偏移": 13
 },
 ```
-You can see here that these both views share the same `dynData` block named `batteryIcons`. It's possible because by default attached data is the one of the view (to without specifying a  `"valueKey":` key within  `batteryIcons` block, it will be applied with `uploader_battery` data or `rig_battery` data according to the view).
+你可以在這裡看到，這兩個視圖共用一個名為 `batteryIcons` 的動態資料區塊。 這是可能的，因為預設情況下，附加的資料是視圖的資料（因此不需要在 `batteryIcons` 區塊中指定 `"數值鍵"` 鍵，它會根據視圖應用於 `uploader_battery` 資料或 `rig_battery` 資料）。
 
-Note these two views also use TwinView feature explain [here](cwf-reference-twinview-feature).
+注意，這兩個視圖也使用了 [這裡](cwf-reference-twinview-feature)解釋的雙視圖功能。
 
-Now lets take a look on dynData block:
+現在來看看動態資料區塊：
 
 ```json
 "batteryIcons": {
-    "invalidFontColor": "#00000000",
-    "fontColor1": "#A00000",
-    "fontColor2": "#000000",
-    "fontColor3": "#000000",
-    "fontColor4": "#000000",
-    "fontColor5": "#000000"        
+    "無效字體顏色": "#00000000",
+    "字體顏色1": "#A00000",
+    "字體顏色2": "#000000",
+    "字體顏色3": "#000000",
+    "字體顏色4": "#000000",
+    "字體顏色5": "#000000"
 },
 ```
-Here we use exactly the same logic that for dynamic background image, but with dedicated keys (`"invalidFontColor"` and  `"fontColor1"` to `"fontColor5"` to specify 5 steps of 20% each one).
+這裡我們使用與動態背景圖片完全相同的邏輯，但使用專用的鍵（`"無效字體顏色"` 和 `"字體顏色1"` 到 `"字體顏色5"` 指定每個 20% 步驟）。
 
-- `"fontColor1"` (dark red) will be used for all values below 20%, and white will be used for all values above this threshold.
-- If you want to lower the threshold to "below 10%", you just have to add 5 additional keys from `"fontColor6"` to `"fontColor10"` , but you can also adjust each color if you want progressive variation from green to yellow, orange and red...
+- `"字體顏色1"`（深紅色）將用於所有低於 20% 的值，而白色將用於所有高於該臨界值的值。
+- 如果你想將臨界值降低到「低於 10%」，只需添加 5 個額外的鍵，從 `"字體顏色6"` 到 `"字體顏色10"`，但你也可以調整每種顏色，如果你想要從綠色到黃色、橙色和紅色的漸變……
 
 (cwf-reference-dynpref-feature)=
 
-### DynPref Feature
+### 動態偏好功能
 
-Before reading this chapter, you have to understand how [dynData](cwf-reference-dyndata-feature) works, because DynPref is an advanced usage of DynData: You will now be able to adjust each DynData block according to preferences set by the user:
+在閱讀本章之前，必須了解 [動態資料](cwf-reference-dyndata-feature) 的工作原理，因為動態偏好是動態資料的進階用法：現在您可以根據使用者設定的偏好來調整每個動態資料區塊：
 
-To illustrate DynPref feature, we will use two example:
+為了說明動態偏好功能，我們將使用兩個範例：
 
-- Steampunk watchface (simple use to include into the same watchface mgdl and mmol version, watchface will automatically switch according to unit selected into aaps).
-- AAPS V2 watchface will combine different preferences to be able to manage text color and background according to dark and match divider preferences.
+- 蒸汽朋克錶盤（簡單用法，包括在同一錶盤中 mgdl 和 mmol 版本，錶盤將根據 AAPS 中選擇的單位自動切換）。
+- AAPS V2 錶盤將結合不同的偏好來管理文字顏色和背景，根據黑暗和匹配分隔符的偏好。
 
-#### Simple usage of dynPref within Steampunk watchface
+#### Steampunk 錶面中的 dynPref 簡單使用
 
-Within Steampunk, we have to set of images according to units: `background` image that will have BG scale and will turn according to BG value. and `freeText1` that contains dynamic scale according to avgDelta value.To be able to have one watchface that will automatically show correct units, we should select image according to unit selected.
+在 Steampunk 中，我們必須根據單位設置圖像：`背景` 圖像將具有血糖尺度，並根據血糖值旋轉。 以及 `freeText1`，其中包含根據 avgDelta 值的動態尺度。為了能夠擁有一個自動顯示正確單位的錶面，我們應根據所選單位選擇圖像。
 
-To do that we will replace `dynData` key by a `dynPref`key within view block:
+為了做到這一點，我們將在視圖區塊內將 `dynData` 鍵替換為 `dynPref` 鍵：
 
 ```json
  "background": {
@@ -706,9 +706,9 @@ To do that we will replace `dynData` key by a `dynPref`key within view block:
     "visibility": "visible"
 },
 ```
-Usage of `dynPref`keys will be very close to `dynData`keys explained in previous chapter
+使用 `dynPref` 鍵的方式與前一章解釋的 `dynData` 鍵非常接近
 
-Now we will take a look at the end of the json file, after `dynData` block:
+現在我們來看看 json 文件末尾的部分，位於 `dynData` 區塊之後：
 
 ```json
 "dynData": {
@@ -735,22 +735,22 @@ Now we will take a look at the end of the json file, after `dynData` block:
     ...
 }
 ```
-You can see that the dynpref key defined within `background` view block (`"dynPref": "rotateSgv"`) exists into the `dynPref` json block included at the end of json file:
+你可以看到在 `background` 視圖區塊中定義的 dynpref 鍵 (`"dynPref": "rotateSgv"`) 存在於 json 文件末尾的 `dynPref` 區塊中：
 
-This block should contains a `"prefKey"`key that will define which preference should be used. In this example the key `"key_units"` is linked to units selected within AAPS on phone, and value is `"true"`if selected unit is mgdl, `"false"`if selected unit is mmol.
+此區塊應包含一個 `"prefKey"` 鍵，該鍵將定義應使用哪個偏好設定。 在此範例中，鍵 `"key_units"` 與電話中的 AAPS 所選的單位相關聯，如果所選單位是 mg/dL 則值為 `"true"`，如果是 mmol 則為 `"false"`。
 
-Then you will find two json blocks that will use "dynData" format, and that will be used according to selected preference
+然後你會發現兩個使用 "dynData" 格式的 json 區塊，這些區塊將根據所選的偏好設定使用。
 
-Note that the "HardCoded" file name for Background image is now replaced by a dynamic image that will be the same wathever the BG value (`Background_mgdl.png`file if key_units is "true", `Background_mmol.png` if key_units is false), and we also include an `"invalidImage" key to allways have a background image even if no data has been received from the phone.
+請注意，背景圖像的 "HardCoded" 檔名現在已被動態圖像取代，無論血糖值如何，它將是相同的背景圖像（如果 key_units 為 "true"，則為 `Background_mgdl.png` 檔案，如果 key_units 為 false，則為 `Background_mmol.png`），並且我們還包括一個 `"invalidImage"` 鍵，即使沒有從電話接收到資料也能始終顯示背景圖像。
 
-#### Combine different preferences within dynPref with AAPS V2
+#### 在 dynPref 中結合不同的偏好設定，使用 AAPS V2
 
-Most of the time, when you set a preference, it's not to get "dynamic behaviour", but only the results according to what you select, but within dynPref, it's considered as a dynamic feature...
+大多數時候，當你設置一個偏好設定時，它只是根據你的選擇顯示結果，但在 dynPref 中，它被認為是一種動態功能...
 
-- when in `dynData`you specify one full block of parameters (with images, fontColor, Color, ...), with `dynPref`, you will be able to combine each parameter according to one specific preference.
-- Here we will see how match devider preference will be associated to dark preference to show when it's enabled (true) white text on black background on dark watchface (dark parameter true) or black text on white background on light watchface (dark false)...
+- 當在 `dynData` 中指定一整個參數區塊（包含圖像、字體顏色、顏色等）時，使用 `dynPref`，你將能根據特定偏好設定組合每個參數。
+- 在這裡，我們將看到如何將分隔線偏好設定與暗色偏好設定匹配，以便在啟用時（true）顯示黑色背景上的白色文字（在暗色錶面上，暗色參數為 true），或在淺色錶面上顯示白色背景上的黑色文字（暗色為 false）...
 
-First lets see the beginning of json file:
+首先，讓我們看看 json 文件的開頭部分：
 
 ```json
 "dynPrefColor": "prefColorDark",
@@ -765,9 +765,9 @@ First lets see the beginning of json file:
     "dynPref": "dark"
 },
 ```
-`"dynPrefColor": "prefColorDark"` will specify the dynPref block of all default colors outside views. These colors will be tuned according to dark parameter within `"prefColorDark"`:
+`"dynPrefColor": "prefColorDark"` 將指定所有視圖外預設顏色的 dynPref 區塊。 這些顏色將根據 `"prefColorDark"` 中的暗色參數進行調整：
 
-And at the end, within the `dynPref` block, you will have a specific dynPref block for default colors:
+最後，在 `dynPref` 區塊內，將會有一個專門為預設顏色設置的 dynPref 區塊：
 
 ```json
 "prefColorDark": {
@@ -794,9 +794,9 @@ And at the end, within the `dynPref` block, you will have a specific dynPref blo
     }
 }
 ```
-The difference between this dynPref block and the other standard dynPref blocks used for views is that here you don't have a dynData block for each value of `"key_dark"` parameter, but only the list of main colors (`highColor`, `midColor` , ...)
+此 dynPref 區塊與用於視圖的其他標準 dynPref 區塊之間的區別在於，這裡沒有為 `"key_dark"` 參數的每個值設置 dynData 區塊，而只是列出主要顏色（`highColor`、`midColor` 等）。
 
-Lets now take a look on items included into the "divider banner" (in example below `"basalRate"` view linked to `"matchDivider"` dynPref view:
+現在讓我們來看看 "divider banner" 中包含的項目（如下例所示的 `"basalRate"` 視圖鏈接到 `"matchDivider"` dynPref 視圖）：
 
 ```json
 "basalRate": {
@@ -810,7 +810,7 @@ Lets now take a look on items included into the "divider banner" (in example bel
     "dynPref": "matchDivider"
 },
 ```
-Then within dynPref block, you can see that Match divider parameter (`key_match_divider` key), include the 2 blocks "true" and "false", but these two blocs are only used to define that view will use either "dark" dynBlock (so exactly the same background and text color than the otherviews outside the banner), or "white" dynBLock that will set opposite colors for background and text...
+然後在 dynPref 區塊中，你可以看到分隔線參數 (`key_match_divider`) 鍵包含了 "true" 和 "false" 兩個區塊，但這兩個區塊僅用來定義該視圖將使用 "dark" dynBlock（因此與分隔線外的其他視圖具有相同的背景和文字顏色），或使用 "white" dynBLock，該區塊將為背景和文字設置相反的顏色...
 
 ```json
 "matchDivider": {
@@ -834,13 +834,13 @@ Then within dynPref block, you can see that Match divider parameter (`key_match_
     }
 },
 ```
-Note that here you are within a "dynData" block, then to define a color or a fontColor, you will use a dynData (not specified here), and a single step (`"color1"` and `'fontColor1'` are used)
+請注意，這裡你位於 "dynData" 區塊中，然後要定義顏色或字體顏色，將使用 dynData（此處未指定），並使用單步驟 (`"color1"` 和 `'fontColor1'` ）。
 
-- for all parameter other than `image` default "invalid value (if not set specifically by `"invalidColor"` key or `"invalidFontColor"` keys) will be `"color1"` and `"fontColor1"`.
+- 對於除 `image` 以外的所有參數，預設的 "無效值"（如果未由 `"invalidColor"` 鍵或 `"invalidFontColor"` 鍵專門設置）將是 `"color1"` 和 `"fontColor1"`。
 
 
 
-Then we will see a third example with iob views (`iob1` and `iob2`), where we will use smaller text for detailled iob and bigger text for total iob:
+接著我們將看到 iob 視圖的第三個範例（`iob1` 和 `iob2`），其中我們將使用較小的文字來顯示詳細的 iob，並使用較大的文字來顯示總 iob：
 
 ```json
 "iob1": {
@@ -867,7 +867,7 @@ Then we will see a third example with iob views (`iob1` and `iob2`), where we wi
     "dynPref": "prefIob2"
 },
 ```
-You will see within default view settings the text size (19 on `iob1` and 24 on `iob2`) and the two different `dynPref` block that should tune textsize (according to detailed iob parameter), and colors (according to dark parameter)
+你會在預設視圖設定中看到文字大小（`iob1` 為 19，`iob2` 為 24），以及應調整文字大小（根據詳細 iob 參數）和顏色（根據暗色參數）的兩個不同 `dynPref` 區塊
 
 ```json
 "prefIob1": {
@@ -891,11 +891,11 @@ You will see within default view settings the text size (19 on `iob1` and 24 on
     }
 },
 ```
-You can see here that according to detailed iob parameter (`"key_show_detailed_iob"` key), when it's "true" then textsize is defined to a fix value bigger than default (24 instead of 19): this is done using textsize "step" feature, within only one value so one step... (note that for all parameter others than images,if invalidTextSize is not set, then textsize1 will be used for invalid data)
+你可以看到根據詳細 iob 參數（`"key_show_detailed_iob"` 鍵），當它為 "true" 時，文字大小會被定義為比預設值更大的固定值（24 代替預設的 19）：這是使用文字大小 "step" 功能完成的，並且只使用一個值，因此為單步驟...（請注意，對於除圖像外的所有參數，如果未設置 invalidTextSize，則將使用 textsize1 作為無效資料的文字大小）
 
-Then "dark" dynPref block will be used to set colorand fontColor
+然後 "dark" dynPref 區塊將用來設置顏色和字體顏色
 
-In this example the dynData block that will be used for iob1 view will be if detailed IOB is enabled and dark enabled:
+在此範例中，如果啟用了詳細 IOB 且啟用了暗色，將為 iob1 視圖使用的 dynData 區塊為：
 
 ```
 {
@@ -905,9 +905,9 @@ In this example the dynData block that will be used for iob1 view will be if det
 },
 ```
 
-So the text will be inwhite on black background and the size 24 will replace default size of 19 set into the view
+因此，文字將顯示為黑色背景上的白色，並且大小 24 將取代視圖中設置的預設大小 19
 
-The dynData block that will be used for the same view iob1 if detailed IOB is disabled and dark disabled will be:
+如果停用了詳細 IOB 且停用了暗色，則將為相同的 iob1 視圖使用的 dynData 區塊為：
 
 ```
 {
@@ -916,314 +916,314 @@ The dynData block that will be used for the same view iob1 if detailed IOB is di
 },
 ```
 
-Now the text will be in black on white background with a size of 19
+現在文字將顯示為白色背景上的黑色，並且大小為 19
 
-#### Tips and tricks for dynPref
+#### dynPref 使用技巧與訣竅
 
-- You can combine as many pref than you want, but be carefull, the number of blocks to describe can increase very fast (it's exponential): if you chain 3 parameters and you want to define all situations, you will have 8 blocks to describe, if each parameter has only 2 values...
-- Be carefull to not build "infinite loop" (for example if dynpref1 block should be completed by dynpref2 block that should be completed by dynpref1 block...). In this case the dynpref blocks will be considered as invalid...
-- Do not forget to include the numéric index after the key (when you use for example `"textsize"`key within a view, you will have to use `"textsize1"`within the dynPref  value block, because it's a "dynData" format, so linked to value with a single step in this case)
-- Only one key `"valueKey"` should be set for one view, so if the final `dynData` block is built from several `dynPref`blocks, do not include several `"valueKey"`  (and associated `"minData"`, `"maxData"`, ...)
+- 你可以結合任意數量的偏好設定，但要小心，描述的區塊數量可能會急速增加（呈指數增長）：如果你串聯 3 個參數並且想要定義所有情況，你將需要描述 8 個區塊，如果每個參數只有 2 個值...
+- 小心不要建立 "無限循環"（例如，如果 dynpref1 區塊應由 dynpref2 區塊補全，而 dynpref2 區塊又應由 dynpref1 區塊補全...）。 在這種情況下，dynpref 區塊將被視為無效...
+- 不要忘記在鍵後面包括數字索引（例如當你在視圖中使用 `"textsize"` 鍵時，你將不得不在 dynPref 值區塊中使用 `"textsize1"`，因為這是 "dynData" 格式，因此在這種情況下鏈接到單步驟的值）
+- 每個視圖應該只設置一個 `"valueKey"`，因此如果最終的 `dynData` 區塊由多個 `dynPref` 區塊組成，請不要包含多個 `"valueKey"`（及其相關的 `"minData"`、`"maxData"` 等）
 
 (cwf-reference-key-and-keyvalue-reference)=
 
-## Key and KeyValue reference
+## 鍵與鍵值參考
 
 (cwf-reference-list-of-metadata-keys)=
 
-### List of Metadata keys
+### 中繼資料鍵清單
 
 (cwf-reference-list-of-standard-metadata-keys)=
 
-#### List of Standard information metadata keys
+#### 標準資訊中繼資料鍵清單
 
-| Key            | Comment                                                                                                         |
-| -------------- | --------------------------------------------------------------------------------------------------------------- |
-| name           | Name of custom watchface                                                                                        |
-| author         | Name or pseudo of the author(s)                                                                                 |
-| created_at     | Creation (or update) date, be carefull `/` is a special character, so if you use it for the date put `\`before |
-| cwf_version    | Watchface plugin compatible with the design of your watchface                                                   |
-| author_version | The author can specify here the version of his watchface                                                        |
-| comment        | Free text that can be used to give some information or limitation of current watchface                          |
+| 鍵           | 註解                                              |
+| ----------- | ----------------------------------------------- |
+| 名稱          | 自訂錶面的名稱                                         |
+| 作者          | 作者的名字或別名                                        |
+| 建立於         | 建立（或更新）日期，請注意 `/` 是特殊字元，因此如果您將其用於日期，請在前面加上 `\` |
+| cwf_version | 錶面外掛與您的錶面設計相容                                   |
+| 作者版本        | 作者可以在此指定其錶面的版本                                  |
+| 註解          | 可以用來提供當前錶面的一些資訊或限制的自由文本                         |
 
 (cwf-reference-preference-keys)=
 
-#### Preference keys
+#### 偏好設定鍵
 
-| Key                         | Comment and                                                                                                                                                                                                                                                  |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| key_show_detailed_iob     | true will lock detailed IOB data on view `iob2`, then `iob1` (if visible and not replaced by an icon) will show iob total.<br />false will lock total iob on `iob2`view. can be used if the width of `iob2`is too small to show correctly detailed iob |
-| key_show_detailed_delta   | false (only if design is not compatible with the width of detailed delta for `delta`and `avg_delta` views)                                                                                                                                                   |
-| key_show_bgi              | true if your design requires `bgi` information                                                                                                                                                                                                               |
-| key_show_iob              | true if your design requires `iob1` or `iob2`views                                                                                                                                                                                                           |
-| key_show_cob              | true if your design requires `cob1` or `cob2`views                                                                                                                                                                                                           |
-| key_show_delta            | true if your design requires `delta` information                                                                                                                                                                                                             |
-| key_show_avg_delta        | true if your design requires `avg_delta` information                                                                                                                                                                                                         |
-| key_show_uploader_battery | true if your design requires `uploader_battery` (phone battery) information                                                                                                                                                                                  |
-| key_show_rig_battery      | true if your design requires `rig_battery` information                                                                                                                                                                                                       |
-| key_show_temp_basal       | true if your design requires `basalRate` information                                                                                                                                                                                                         |
-| key_show_direction        | true if your design requires `direction` information (BG variation arrows)                                                                                                                                                                                   |
-| key_show_ago              | true if your design requires `timestamp` information (minutes ago for last received BG)                                                                                                                                                                      |
-| key_show_bg               | true if your design requires `sgv` information (BG value)                                                                                                                                                                                                    |
-| key_show_loop_status      | true if your design requires `loop` information (loop status and ago)                                                                                                                                                                                        |
-| key_show_week_number      | true if your design requires `week_number` information (loop status and ago)                                                                                                                                                                                 |
-| key_show_date             | true if your design requires `Date`, `Month` or `Day of the week` information                                                                                                                                                                                |
+| 鍵                           | 註解                                                                                                                                                        |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| key_show_detailed_iob     | 如果為 true，將會在 `iob2` 視圖中鎖定詳細的 IOB 資料，然後 `iob1`（如果可見且未被圖示取代）將顯示 iob 總量。<br />如果為 false，則在 `iob2` 視圖中鎖定 iob 總量。 如果 `iob2` 的寬度太小，無法正確顯示詳細的 iob 資料，則可以使用 |
+| key_show_detailed_delta   | false（僅當設計與 `delta` 和 `avg_delta` 視圖的詳細 delta 寬度不相容時）                                                                                                     |
+| key_show_bgi              | 如果您的設計需要 `bgi` 資訊，則為 true                                                                                                                                 |
+| key_show_iob              | 如果您的設計需要 `iob1` 或 `iob2` 視圖，則為 true                                                                                                                       |
+| key_show_cob              | 如果您的設計需要 `cob1` 或 `cob2` 視圖，則為 true                                                                                                                       |
+| key_show_delta            | 如果您的設計需要 `delta` 資訊，則為 true                                                                                                                               |
+| key_show_avg_delta        | 如果您的設計需要 `avg_delta` 資訊，則為 true                                                                                                                           |
+| key_show_uploader_battery | 如果您的設計需要 `uploader_battery`（電話電池）資訊，則為 true                                                                                                               |
+| key_show_rig_battery      | 如果您的設計需要 `rig_battery` 資訊，則為 true                                                                                                                         |
+| key_show_temp_basal       | 如果您的設計需要 `basalRate` 資訊，則為 true                                                                                                                           |
+| key_show_direction        | 如果您的設計需要 `direction` 資訊（血糖 變化箭頭），則為 true                                                                                                                  |
+| key_show_ago              | 如果您的設計需要 `timestamp` 資訊（上次接收到血糖資料的分鐘數），則為 true                                                                                                            |
+| key_show_bg               | 如果您的設計需要 `sgv` 資訊（血糖 值），則為 true                                                                                                                           |
+| key_show_loop_status      | 如果您的設計需要 `loop` 資訊（循環狀態和時間），則為 true                                                                                                                       |
+| key_show_week_number      | 如果您的設計需要 `week_number` 資訊（循環狀態和時間），則為 true                                                                                                                |
+| key_show_date             | 如果您的設計需要 `日期`、`月份` 或 `星期幾` 資訊，則為 true                                                                                                                     |
 
-#### Internal keys
+#### 內部鍵
 
-| Key               | Comment and                                                                                                                                                                                   |
-| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| filename          | This key will be created (or updated) automatically when the watchface is loaded and will contains local zip filename within exports folder                                                   |
-| cwf_authorization | this key will be created (when the watchface is loaded) and updated each time authorization preference is changed in Wear settings, and it will be used to synchronize authorization to watch |
+| 鍵                 | 註解                                                 |
+| ----------------- | -------------------------------------------------- |
+| 檔案名稱              | 當錶面載入時，該鍵將自動建立（或更新），並將包含匯出資料夾中的本地 zip 檔案名稱         |
+| cwf_authorization | 當錶面載入時該鍵將被建立，並且每次在 Wear 設定中更改授權偏好設定時都會更新，並用於同步手錶授權 |
 
 (cwf-reference-list-of-general-parameters)=
 
-### List of General parameters
+### 常規參數清單
 
-| Key                  | Comment                                                                                                                                                                                                                                                   |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| highColor            | `"#FFFF00"`(default Yellow): Color of BG value, trend arrows and bg value in graph if bg is above upper limit (Hyper)                                                                                                                                     |
-| midColor             | `"#00FF00"`(default Green): Color of BG value, trend arrows and bg value in graph if bg is within range                                                                                                                                                   |
-| lowColor             | `"#FF0000"`(default Red): Color of BG value, trend arrows and bg value in graph if bg is below lower limit (Hypo)                                                                                                                                         |
-| lowBatColor          | `"#E53935"`(default Dark Red): Color of `uploader_battery` when value is low (below 20% tbc)                                                                                                                                                              |
-| carbColor            | `"#FB8C00"`(default Orange): Color of Carbs points within graph                                                                                                                                                                                           |
-| basalBackgroundColor | `"#0000FF"`(default Dark blue): Color of TBR curve within graph                                                                                                                                                                                           |
-| basalCenterColor     | `"#64B5F6"`(default Light blue): Color of Bolus or SMB points within graph                                                                                                                                                                                |
-| gridColor            | `"#FFFFFF"`(default White): Color of lines and text scale within graph                                                                                                                                                                                    |
-| pointSize            | 2 (default): size of points in graph (1 for small point, 2 for big points)                                                                                                                                                                                |
-| enableSecond         | false (default): specify if watchface will manage seconds or not within `time`, `second` or `second_hand` views. it's important to be consistent between view visibility and this overall setting that will allow update every second of time information |
-| dayNameFormat        | "E" (default): from "E" to "EEEE" specify dayname format (number, short name, full name) tbc                                                                                                                                                              |
-| monthFormat          | "MMM" (default): from "M" to "MMMM" specify month format (number, short name, full name)                                                                                                                                                                  |
+| 鍵                    | 註解                                                                                |
+| -------------------- | --------------------------------------------------------------------------------- |
+| highColor            | `"#FFFF00"`（預設黃色）：當血糖高於上限（高血糖）時，血糖 值、趨勢箭頭和圖表中的血糖值顏色                               |
+| midColor             | `"#00FF00"`（預設綠色）：當血糖處於範圍內時，血糖 值、趨勢箭頭和圖表中的血糖值顏色                                   |
+| lowColor             | `"#FF0000"`（預設紅色）：當血糖低於下限（低血糖）時，血糖 值、趨勢箭頭和圖表中的血糖值顏色                               |
+| lowBatColor          | `"#E53935"`（預設深紅色）：當 `uploader_battery` 值較低（低於 20%）時的顏色                           |
+| carbColor            | `"#FB8C00"`（預設橙色）：圖表中的碳水化合物點的顏色                                                   |
+| basalBackgroundColor | `"#0000FF"`（預設深藍色）：圖表中的 TBR 曲線顏色                                                  |
+| basalCenterColor     | `"#64B5F6"`（預設淺藍色）：圖表中的注射或 SMB 點的顏色                                               |
+| gridColor            | `"#FFFFFF"`（預設白色）：圖表中的線條和文字刻度的顏色                                                  |
+| pointSize            | 2（預設值）：圖表中點的大小（1 為小點，2 為大點）                                                       |
+| enableSecond         | false（預設值）：指定錶面是否在 `時間`、`秒` 或 `秒針` 視圖中顯示秒數。 在視圖的可見性和這個總體設定之間保持一致非常重要，這將允許每秒更新時間資訊 |
+| dayNameFormat        | "E"（預設值）：從 "E" 到 "EEEE" 指定日期格式（數字、簡稱、全名）                                          |
+| monthFormat          | "MMM"（預設值）：從 "M" 到 "MMMM" 指定月份格式（數字、簡稱、全名）                                        |
 
 (cwf-reference-list-of-hardcoded-resource-files)=
 
-### List of HardCoded resource files
+### 硬編碼資源檔案清單
 
-For most images, High and Low suffix allow tuning of image according to BG level (in Range, Hyper or Hypo)
+對於大多數圖像，高和低後綴允許根據血糖水平（在範圍內、高血糖或低血糖）調整圖像
 
-| Filenames                                                       | Comment                                                                                                                                                                  |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| CustomWatchface                                                 | Image shown for watchface selection and within Wear plugin                                                                                                               |
-| Background,<br />BackgroundHigh,<br />BackgroundLow | none (default black): Background image. background is allways visible and default color is black if no image provided. Color can be modified to fit watchface design     |
-| CoverChart,<br />CoverChartHigh,<br />CoverChartLow | none (default): Image in front of Chart (transparency should be available to see Chart behind) Can be used to limit boundaries of graph                                  |
-| CoverPlate,<br />CoverPlateHigh,<br />CoverPlateLow | simple dial (default): image in front of all text values. transparency mandatory to see all values that are behind                                                       |
-| HourHand,<br />HourHandHigh,<br />HourHandLow       | hour_hand (default): image of hour hand. a default image is provided and can be colored to fit analog design. Note axis for rotation will be the center of the image     |
-| MinuteHand,<br />MinuteHandHigh,<br />MinuteHandLow | minute_hand (default): image of minute hand. a default image is provided and can be colored to fit analog design. Note axis for rotation will be the center of the image |
-| SecondHand,<br />SecondHandHigh,<br />SecondHandLow | second_hand (default): image of second hand. a default image is provided and can be colored to fit analog design. Note axis for rotation will be the center of the image |
-| ArrowNone                                                       | ?? (default): image shown when no valid arrow is available.                                                                                                              |
-| ArrowDoubleUp                                                   | ↑↑ (default): image of double arrow up                                                                                                                                   |
-| ArrowSingleUp                                                   | ↑ (default): image of single arrow up                                                                                                                                    |
-| Arrow45Up                                                       | ↗ (default): image of fortyfive arrow up                                                                                                                                 |
-| ArrowFlat                                                       | → (default): image of flat arrow                                                                                                                                         |
-| Arrow45Down                                                     | ↘ (default): image of fortyfive arrow down                                                                                                                               |
-| ArrowSingleDown                                                 | ↓ (default): image of single arrow down                                                                                                                                  |
-| ArrowDoubleDown                                                 | ↓↓ (default): image of double arrow down                                                                                                                                 |
+| 檔案名稱                                                            | 註解                                                             |
+| --------------------------------------------------------------- | -------------------------------------------------------------- |
+| CustomWatchface                                                 | 顯示在錶面選擇和 Wear 外掛中的圖像                                           |
+| Background,<br />BackgroundHigh,<br />BackgroundLow | none（預設黑色）：背景圖像。 背景始終可見，預設顏色為黑色，如果沒有提供圖像。 可以修改顏色以符合錶面設計        |
+| CoverChart,<br />CoverChartHigh,<br />CoverChartLow | none（預設值）：圖表前面的圖像（應具有透明度，以便看到後面的圖表）可用於限制圖表的邊界                  |
+| CoverPlate,<br />CoverPlateHigh,<br />CoverPlateLow | 簡單的錶盤（預設值）：所有文字值前面的圖像。 必須透明，才能看到後面的所有值                         |
+| HourHand,<br />HourHandHigh,<br />HourHandLow       | hour_hand（預設值）：時針圖像。 提供了一個預設圖像，可以著色以符合類比設計。 請注意，旋轉的軸心將是圖像的中心   |
+| MinuteHand,<br />MinuteHandHigh,<br />MinuteHandLow | minute_hand（預設值）：分針圖像。 提供了一個預設圖像，可以著色以符合類比設計。 請注意，旋轉的軸心將是圖像的中心 |
+| SecondHand,<br />SecondHandHigh,<br />SecondHandLow | second_hand（預設值）：秒針圖像。 提供了一個預設圖像，可以著色以符合類比設計。 請注意，旋轉的軸心將是圖像的中心 |
+| ArrowNone                                                       | ?? （預設值）：當沒有可用的有效箭頭時顯示的圖像。                                     |
+| ArrowDoubleUp                                                   | ↑↑（預設值）：向上雙箭頭圖像                                                |
+| ArrowSingleUp                                                   | ↑（預設值）：單箭頭向上圖像                                                 |
+| Arrow45Up                                                       | ↗（預設值）：四十五度向上箭頭圖像                                              |
+| ArrowFlat                                                       | →（預設值）：水平箭頭圖像                                                  |
+| Arrow45Down                                                     | ↘（預設值）：四十五度向下箭頭圖像                                              |
+| ArrowSingleDown                                                 | ↓（預設值）：單箭頭向下圖像                                                 |
+| ArrowDoubleDown                                                 | ↓↓（預設值）：向下雙箭頭圖像                                                |
 
-For each above filenames, extension can be either `.jpg`, `.png` or `.svg`. But be carefull, `.jpg`doesn't manage transparency (so most of the files should be with .png or .svg to not hide view that are behind...)
+對於上述的每個檔名，副檔名可以是 `.jpg`、`.png` 或 `.svg`。 但要注意，`.jpg` 不支援透明度（所以大多數檔案應使用 .png 或 .svg，以免遮擋後面的視圖...）
 
 (cwf-reference-list-of-view-keys)=
 
-### List of View keys
+### 視圖鍵清單
 
-This list is sorted from background to foreground this is very important when you organize your watchface to know this order because some image or text can be hidden by other images
+此清單從背景到前景排序，這在您組織錶面時非常重要，因為某些圖像或文字可能會被其他圖像遮住
 
-| Key              | Type of view        | Data attached                                                                                          | DynData Key             |
-| ---------------- | ------------------- | ------------------------------------------------------------------------------------------------------ | ----------------------- |
-| background       | Image View          |                                                                                                        |                         |
-| chart            | Specific Chart View | Graphical curves                                                                                       |                         |
-| cover_chart      | Image View          |                                                                                                        |                         |
-| freetext1        | Text View           |                                                                                                        |                         |
-| freetext2        | Text View           |                                                                                                        |                         |
-| freetext3        | Text View           |                                                                                                        |                         |
-| freetext4        | Text View           |                                                                                                        |                         |
-| iob1             | Text View           | IOB label or IOB Total                                                                                 |                         |
-| iob2             | Text View           | IOB Total or IOB Detailed                                                                              |                         |
-| cob1             | Text View           | Carb label                                                                                             |                         |
-| cob2             | Text View           | COB Value                                                                                              |                         |
-| delta            | Text View           | Short delta (5 min)                                                                                    | delta                   |
-| avg_delta        | Text View           | Avg Delta (15 min)                                                                                     | avg_delta               |
-| uploader_battery | Text View           | phone battery level (%)                                                                                | uploader_battery        |
-| rig_battery      | Text View           | rig battery level (%)                                                                                  | rig_battery             |
-| basalRate        | Text View           | % or absolute value                                                                                    |                         |
-| bgi              | Text View           | mgdl/(5 min) or mmol/(5 min)                                                                           |                         |
-| time             | Text View           | HH:MM or HH:MM:SS                                                                                      |                         |
-| hour             | Text View           | HH                                                                                                     |                         |
-| minute           | Text View           | MM                                                                                                     |                         |
-| second           | Text View           | SS                                                                                                     |                         |
-| timePeriod       | Text View           | AM or PM                                                                                               |                         |
-| day_name         | Text View           | name of the day (cf. dayNameFormat)                                                                    | day_name                |
-| day              | Text View           | DD date                                                                                                | day                     |
-| week_number      | Text View           | (WW) week number                                                                                       | week_number             |
-| month            | Text View           | month name (cf. monthFormat)                                                                           |                         |
-| loop             | Text View           | min ago since last run and status (color arrows in background), color arrows can be tuned with DynData | loop                    |
-| direction        | Image View          | TrendArrows                                                                                            | direction               |
-| timestamp        | Text View           | integer (min ago)                                                                                      | timestamp               |
-| sgv              | Text View           | sgv value (mgdl or mmol)                                                                               | sgv<br />sgvLevel |
-| cover_plate      | Image View          |                                                                                                        |                         |
-| hour_hand        | Image View          |                                                                                                        |                         |
-| minute_hand      | Image View          |                                                                                                        |                         |
-| second_hand      | Image View          |                                                                                                        |                         |
+| 鍵                | 視圖類型   | 相關資料                                        | DynData 鍵               |
+| ---------------- | ------ | ------------------------------------------- | ----------------------- |
+| 背景               | 圖像視圖   |                                             |                         |
+| 圖表               | 專用圖表視圖 | 圖形曲線                                        |                         |
+| cover_chart      | 圖像視圖   |                                             |                         |
+| freetext1        | 文字視圖   |                                             |                         |
+| freetext2        | 文字視圖   |                                             |                         |
+| freetext3        | 文字視圖   |                                             |                         |
+| freetext4        | 文字視圖   |                                             |                         |
+| iob1             | 文字視圖   | IOB 標籤或 IOB 總量                              |                         |
+| iob2             | 文字視圖   | IOB 總量或 IOB 詳細資訊                            |                         |
+| cob1             | 文字視圖   | 碳水化合物標籤                                     |                         |
+| cob2             | 文字視圖   | COB 值                                       |                         |
+| delta            | 文字視圖   | 短期 delta（5 分鐘）                              | delta                   |
+| avg_delta        | 文字視圖   | 平均 Delta（15 分鐘）                             | avg_delta               |
+| uploader_battery | 文字視圖   | 電話電池電量（百分比）                                 | uploader_battery        |
+| rig_battery      | 文字視圖   | rig 電池電量（百分比）                               | rig_battery             |
+| basalRate        | 文字視圖   | 百分比或絕對值                                     |                         |
+| bgi              | 文字視圖   | mg/dL/(5 分鐘) 或 mmol/(5 分鐘)                  |                         |
+| 時間               | 文字視圖   | HH:MM 或 HH:MM:SS                            |                         |
+| 小時               | 文字視圖   | HH                                          |                         |
+| 分鐘               | 文字視圖   | MM                                          |                         |
+| 第二               | 文字視圖   | 秒                                           |                         |
+| 時間段              | 文字視圖   | 上午或下午                                       |                         |
+| 星期名稱             | 文字視圖   | 星期幾名稱（參考 dayNameFormat）                     | 星期名稱                    |
+| 日期               | 文字視圖   | DD 日期                                       | 日期                      |
+| 週數               | 文字視圖   | （WW）週數                                      | 週數                      |
+| 月份               | 文字視圖   | 月份名稱（參考 monthFormat）                        |                         |
+| 循環               | 文字視圖   | 自上次執行後的分鐘數和狀態（背景中的彩色箭頭），可以使用 DynData 調整彩色箭頭 | 循環                      |
+| 趨勢方向             | 圖像視圖   | 趨勢箭頭                                        | 趨勢方向                    |
+| 時間戳              | 文字視圖   | 整數（自上次接收資料後的分鐘數）                            | 時間戳                     |
+| sgv              | 文字視圖   | sgv 值（mg/dL 或 mmol）                         | sgv<br />sgvLevel |
+| cover_plate      | 圖像視圖   |                                             |                         |
+| 時針               | 圖像視圖   |                                             |                         |
+| 分針               | 圖像視圖   |                                             |                         |
+| 秒針               | 圖像視圖   |                                             |                         |
 
 (cwf-reference-list-of-json-keys)=
 
-### List of Json keys
+### Json 鍵清單
 
 (cwf-reference-common-keys)=
 
-#### Common keys
+#### 通用鍵
 
- that can be used on all view types (Text View, image View, graph view)
+ 可用於所有視圖類型（文字視圖、圖像視圖、圖表視圖）
 
-| Key                  | type    | comment / value                                                                                                                                                                        |
-| -------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| width                | int     | width of view in pixel                                                                                                                                                                 |
-| height               | int     | heigth of view in pixel                                                                                                                                                                |
-| topmargin            | int     | top margin in pixel                                                                                                                                                                    |
-| leftmargin           | int     | left margin in pixel                                                                                                                                                                   |
-| rotation             | int     | rotation angle in degrees                                                                                                                                                              |
-| visibility           | string  | see key value table                                                                                                                                                                    |
-| dynData              | string  | key block name that will specify dynamic data to link and associated animation (colors, image, shift, rotation)<br />`"dynData": "customName",` (see below )                     |
-| leftOffset           | boolean | include this key with key value true to enable horizontal shift (positive or negative value) due to dynData value                                                                      |
-| topOffset            | boolean | include this key with key value true to enable vertical shift (positive or negative value) due to dynData value                                                                        |
-| rotationOffset       | boolean | include this key with key value true to enable rotation (positive or negative value) due to dynData value                                                                              |
-| twinView             | string  | key of the other view (generally the other view also include the twinView parameter with the key of this view in it)                                                                   |
-| topOffsetTwinHidden  | int     | number of pixel to shift view position vertically if twin view is hidden (positive or negative value)<br />topOffsetTwinHidden = (topOffset twinView - topOffset thisView)/2     |
-| leftOffsetTwinHidden | int     | number of pixel to shift view position horizontally if twin view is hidden (positive or negative value)<br />leftOffsetTwinHidden= (leftOffset twinView - leftOffset thisView)/2 |
-| dynPref              | string  | key block name that will specify dynamic pref to link and associated animation (colors, image, shift, rotation)<br />`"dynPref": "customName",` (see below )                     |
+| 鍵          | 類型  | 註解 / 值                                                                            |
+| ---------- | --- | --------------------------------------------------------------------------------- |
+| 寬度         | 整數  | 視圖寬度（像素）                                                                          |
+| 高度         | 整數  | 視圖高度（像素）                                                                          |
+| 頂端邊距       | 整數  | 頂端邊距（像素）                                                                          |
+| 左側邊距       | 整數  | 左側邊距（像素）                                                                          |
+| 旋轉         | 整數  | 旋轉角度（度數）                                                                          |
+| 可見性        | 字串  | 請參閱鍵值表                                                                            |
+| dynData    | 字串  | 鍵區塊名稱，將指定要連結的動態資料和相關動畫（顏色、圖像、位移、旋轉）<br />`"dynData": "customName",` （見下文）   |
+| 左側位移       | 布林值 | 如果希望啟用由 dynData 值引起的水平位移（正值或負值），請包含此鍵並將鍵值設為 true                                  |
+| 頂端位移       | 布林值 | 如果希望啟用由 dynData 值引起的垂直位移（正值或負值），請包含此鍵並將鍵值設為 true                                  |
+| 旋轉位移       | 布林值 | 如果希望啟用由 dynData 值引起的旋轉（正值或負值），請包含此鍵並將鍵值設為 true                                    |
+| 雙視圖        | 字串  | 另一個視圖的鍵（通常另一個視圖也會包含雙視圖參數，並包含此視圖的鍵）                                                |
+| 隱藏雙視圖時頂端位移 | 整數  | 如果雙視圖被隱藏，則將視圖位置垂直移動的像素數（正值或負值）<br />隱藏雙視圖時的頂端位移 =（雙視圖的頂端位移 - 此視圖的頂端位移）/2    |
+| 隱藏雙視圖時左側位移 | 整數  | 如果雙視圖被隱藏，則將視圖位置水平移動的像素數（正值或負值）<br />隱藏雙視圖時的左側位移 =（雙視圖的左側位移 - 此視圖的左側位移）/2    |
+| dynPref    | 字串  | 鍵區塊名稱，將指定要連結的動態偏好設定和相關動畫（顏色、圖像、位移、旋轉）<br />`"dynPref": "customName",` （見下文） |
 
 (cwf-reference-textview-keys)=
 
-#### TextView keys
+#### 文字視圖鍵
 
-| Key        | type    | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ---------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| textsize   | int     | size of font in pixel (keep in mind that font can include top and bottom margin so the real text size will generally be smaller than the number of pixel set). Note that size should be smaller than view heigth to not be truncated                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| gravity    | string  | see key value table                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| font       | string  | see key value table for available fonts.<br />Can also be font filename (without extension) for fonts included into zip file                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| fontStyle  | string  | see key value table                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| fontColor  | string  | Manage color of the font<br />`"#RRVVBB"`: color code in RVB format, hexdecimal values #FF0000 is red<br />`"#AARRVVBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| allCaps    | boolean | true if you want text in uppercase (mainly day name or month name)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| background | string  | `resource_filename` you can include a resource image as background of the text view (resource file will be resized to fit heigth and width of text view, but keeping image ratio). text value will be in front of background image.<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, infront of background image                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| color      | string  | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRVVBB"`: color code in RVB format, hexdecimal values #FF0000 is red<br />`"#AARRVVBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embeded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on imagae<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, infront of background image |
-| textvalue  | string  | Key specific to the 4 free text views included into the layout (from freetext1 to freetext4), this allow you to set the text that should be included (can be a label, or just `:` if you want to add a separator between hour view and minute view...)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| 鍵    | 類型  | 註解                                                                                                                                                                                                                                                                                                                                                                                               |
+| ---- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 文字大小 | 整數  | 字體大小（像素）（請記住字體可能包含頂部和底部邊距，因此實際文字大小通常小於設定的像素數）。 注意，大小應小於視圖高度，以免被截斷                                                                                                                                                                                                                                                                                                                                |
+| 對齊   | 字串  | 請參閱鍵值表                                                                                                                                                                                                                                                                                                                                                                                           |
+| 字體   | 字串  | 請參閱鍵值表以查看可用字體。<br />也可以是 zip 檔案中包含的字體檔名（無副檔名）                                                                                                                                                                                                                                                                                                                                              |
+| 字體樣式 | 字串  | 請參閱鍵值表                                                                                                                                                                                                                                                                                                                                                                                           |
+| 字體顏色 | 字串  | 管理字體顏色<br />`"#RRVVBB"`：RVB 格式的顏色代碼，十六進制值 #FF0000 為紅色<br />`"#AARRVVBB"`：AA 包含 Alpha 資訊（透明度），00 為透明，FF 為不透明<br />`"bgColor"`：鍵值 bgColor 是根據血糖值使用 highColor、midColor 或 lowColor 的簡便方法                                                                                                                                                                                           |
+| 全大寫  | 布林值 | 如果希望文字為大寫（主要用於星期名稱或月份名稱），請設為 true                                                                                                                                                                                                                                                                                                                                                                |
+| 背景   | 字串  | `resource_filename` 您可以包含資源圖像作為文字視圖的背景（資源檔案將被調整大小以適應文字視圖的高度和寬度，但保持圖像比例）。 文字將顯示在背景圖像前面。<br />- 請注意，此鍵也可用於 `chart` 視圖中為圖表設置自訂背景，在背景圖像前面顯示                                                                                                                                                                                                                                                    |
+| 顏色   | 字串  | 管理視圖背景顏色或調整圖像顏色（僅限點陣圖）<br />`"#RRVVBB"`：RVB 格式的顏色代碼，十六進制值 #FF0000 為紅色<br />`"#AARRVVBB"`：AA 包含 Alpha 資訊（透明度），00 為透明，FF 為不透明<br />`"bgColor"`：鍵值 bgColor 是根據血糖值使用 highColor、midColor 或 lowColor 的簡便方法<br />- 對於預設嵌入的圖像（指針、錶盤），將直接應用顏色，對於點陣圖圖像（jpg 或 png），這將在圖像上應用飽和度漸變濾鏡<br />- 對於 svg，此參數將無效（無法修改 svg 文件的顏色）<br />- 請注意，此鍵也可用於 `chart` 視圖中為圖表設置自訂背景，在背景圖像前顯示 |
+| 文字值  | 字串  | 專用於佈局中包含的 4 個自由文字視圖（從 freetext1 到 freetext4）的鍵，這允許您設置應包含的文字（可以是標籤，或只是 `:`，如果您想在小時視圖和分鐘視圖之間添加分隔符...）                                                                                                                                                                                                                                                                                              |
 
 (cwf-reference-imageview-keys)=
 
-#### ImageView keys
+#### 圖像視圖鍵
 
-| Key   | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ----- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| color | string | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRVVBB"`: color code in RVB format, hexdecimal values #FF0000 is red<br />`"#AARRVVBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embeded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on imagae<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, infront of background image |
+| 鍵  | 類型 | 註解                                                                                                                                                                                                                                                                                                                                                                                               |
+| -- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 顏色 | 字串 | 管理視圖背景顏色或調整圖像顏色（僅限點陣圖）<br />`"#RRVVBB"`：RVB 格式的顏色代碼，十六進制值 #FF0000 為紅色<br />`"#AARRVVBB"`：AA 包含 Alpha 資訊（透明度），00 為透明，FF 為不透明<br />`"bgColor"`：鍵值 bgColor 是根據血糖值使用 highColor、midColor 或 lowColor 的簡便方法<br />- 對於預設嵌入的圖像（指針、錶盤），將直接應用顏色，對於點陣圖圖像（jpg 或 png），這將在圖像上應用飽和度漸變濾鏡<br />- 對於 svg，此參數將無效（無法修改 svg 文件的顏色）<br />- 請注意，此鍵也可用於 `chart` 視圖中為圖表設置自訂背景，在背景圖像前顯示 |
 
 (cwf-reference-chartview-keys)=
 
-#### ChartView keys
+#### 圖表視圖鍵
 
-| Key        | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| ---------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| color      | string | Manage the color of view Background or tune color of image (if bitmap only)<br />`"#RRVVBB"`: color code in RVB format, hexdecimal values #FF0000 is red<br />`"#AARRVVBB"`: AA include Alpha information (transparency), 00 is transparent, FF is opaque<br />`"bgColor"`: keyValue bgColor is an easy way to use highColor, midColor or lowColor according to BG value<br />- For default embeded image (hand, dial) color will be applied directly, for bitmap image (jpg or png) this will apply a saturation gradient filter on imagae<br />- For svg this parameter will have no effect (color of svg files cannot be modified)<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, infront of background image |
-| background | string | `resource_filename` you can include a resource image as background of the text view (resource file will be resized to fit heigth and width of text view, but keeping image ratio). text value will be in front of background image.<br />- Note that this key can also be used for `chart` view to set a custom background to the chart, infront of background image                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 鍵  | 類型 | 註解                                                                                                                                                                                                                                                                                                                                                                                               |
+| -- | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 顏色 | 字串 | 管理視圖背景顏色或調整圖像顏色（僅限點陣圖）<br />`"#RRVVBB"`：RVB 格式的顏色代碼，十六進制值 #FF0000 為紅色<br />`"#AARRVVBB"`：AA 包含 Alpha 資訊（透明度），00 為透明，FF 為不透明<br />`"bgColor"`：鍵值 bgColor 是根據血糖值使用 highColor、midColor 或 lowColor 的簡便方法<br />- 對於預設嵌入的圖像（指針、錶盤），將直接應用顏色，對於點陣圖圖像（jpg 或 png），這將在圖像上應用飽和度漸變濾鏡<br />- 對於 svg，此參數將無效（無法修改 svg 文件的顏色）<br />- 請注意，此鍵也可用於 `chart` 視圖中為圖表設置自訂背景，在背景圖像前顯示 |
+| 背景 | 字串 | `resource_filename` 您可以包含資源圖像作為文字視圖的背景（資源檔案將被調整大小以適應文字視圖的高度和寬度，但保持圖像比例）。 文字將顯示在背景圖像前面。<br />- 請注意，此鍵也可用於 `chart` 視圖中為圖表設置自訂背景，在背景圖像前面顯示                                                                                                                                                                                                                                                    |
 
 (cwf-reference-key-values)=
 
-### Key values
+### 鍵值
 
-| Key value                  | key        | comment                                                                           |
-| -------------------------- | ---------- | --------------------------------------------------------------------------------- |
-| gone                       | visibility | view hidden                                                                       |
-| visible                    | visibility | view visible in watchface (but visibility can be enable or disable in parameters) |
-| center                     | gravity    | text is vertical and horizontal centered into the view                            |
-| left                       | gravity    | text is vertical centered but left aligned into the view                          |
-| right                      | gravity    | text is vertical centered but right aligned into the view                         |
-| sans_serif                 | font       |                                                                                   |
-| default                    | font       |                                                                                   |
-| default_bold               | font       |                                                                                   |
-| monospace                  | font       |                                                                                   |
-| serif                      | font       |                                                                                   |
-| roboto_condensed_bold    | font       |                                                                                   |
-| roboto_condensed_light   | font       |                                                                                   |
-| roboto_condensed_regular | font       |                                                                                   |
-| roboto_slab_light        | font       |                                                                                   |
-| normal                     | fontStyle  |                                                                                   |
-| bold                       | fontStyle  |                                                                                   |
-| bold_italic                | fontStyle  |                                                                                   |
-| italic                     | fontStyle  |                                                                                   |
+| 鍵值             | 鍵    | 註解                       |
+| -------------- | ---- | ------------------------ |
+| 隱藏             | 可見性  | 視圖隱藏                     |
+| 可見             | 可見性  | 視圖在錶面上可見（但可在參數中啟用或停用可見性） |
+| 置中             | 對齊   | 文字在視圖中垂直和水平置中            |
+| 靠左             | 對齊   | 文字在視圖中垂直置中但靠左對齊          |
+| 靠右             | 對齊   | 文字在視圖中垂直置中但靠右對齊          |
+| 無襯線            | 字體   |                          |
+| 預設             | 字體   |                          |
+| 預設粗體           | 字體   |                          |
+| 等寬字體           | 字體   |                          |
+| 襯線字體           | 字體   |                          |
+| Roboto 緊湊粗體    | 字體   |                          |
+| Roboto 緊湊輕體    | 字體   |                          |
+| Roboto 緊湊常規    | 字體   |                          |
+| Roboto Slab 輕體 | 字體   |                          |
+| 正常             | 字體樣式 |                          |
+| 粗體             | 字體樣式 |                          |
+| 粗斜體            | 字體樣式 |                          |
+| 斜體             | 字體樣式 |                          |
 
 (cwf-reference-dyndata-keys)=
 
-### DynData keys
+### DynData 鍵
 
-| Key                      | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| ------------------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| dynData                  | block  | define the block of all dynamic data blocks that will be used for the views. generally after the last view.<br />All the keys defined within this block will be used as key Value within view block:<br />`"dynData": { dynData blocks }`<br />and each block is defined by a custom name and several keys inside:<br />`"customName": { one dynData block }`                                                                                    |
-| valueKey                 | string | name of dynamic data to use (generally same that associated view key).<br />If not existing, the default will be the values used for the view that uses this block. <br />for example you can define one block to customize battery level percentage without specifying valueKey, and then use the same block to customize uploader_battery and rig_battery                                                                                                |
-| minData                  | int    | specify the minimum value to take into account for AAPS data : for example if value is sgv (unit mgdl internaly), if minData is set to 50, all bg values below 50mgdl will be set to 50.<br />- Note that minData and maxData will be used to calculate dynamic values (in pixel or in degrees).                                                                                                                                                                   |
-| maxData                  | int    | specify the maximum value to take into account for AAPS data : for example if value is sgv (unit mgdl internaly), if maxData is set to 330, all bg values above 330mgdl will be set to 330.                                                                                                                                                                                                                                                                              |
-| leftOffset               | block  | Specify the horizontal shift of the view according to min and max values in pixels.<br />- It includes minValue key, maxValueKey and invalidValue key (optional)<br />- If data is below or equal minData, then the view will be shifted to minValue pixels, and if data is above or equal to maxData, then the view will be shifted to maxValue pixels<br />Note that to apply this shift leftOffset should be set to true within the view            |
-| topOffset                | block  | Specify the vertical shift of the view according to min and max values in pixels.<br />- It includes minValue key, maxValueKey and invalidValue key (optional)<br />- If data is below or equal minData, then the view will be shifted to minValue pixels, and if data is above or equal to maxData, then the view will be shifted to maxValue pixels<br />Note that to apply this shift topOffset should be set to true within the view               |
-| rotationOffset           | block  | Specify the rotation angle in degrees of the view according to min and max values in pixels.<br />- It includes minValue key, maxValueKey and invalidValue key (optional)<br />- If data is below or equal minData, then the view will rotate by minValue degrees, and if data is above or equal to maxData, then the view will rotate by maxValue degrees<br />Note that to apply this rotation, rotationOffset should be set to true within the view |
-| minValue                 | int    | result value to apply to the view (key only applicable within a leftOffset, topOffset or rotationOffset block)                                                                                                                                                                                                                                                                                                                                                           |
-| maxValue                 | int    | result value to apply to the view (key only applicable within a leftOffset, topOffset or rotationOffset block)                                                                                                                                                                                                                                                                                                                                                           |
-| invalidValue             | int    | result value to apply to the view if data is invalid (key only applicable within a leftOffset, topOffset or rotationOffset block)                                                                                                                                                                                                                                                                                                                                        |
-| invalidImage             | string | `resource_filename` to use for the ImageView or background TextView if the data is invalid                                                                                                                                                                                                                                                                                                                                                                               |
-| image*1_to_n*          | string | `resource_filename` image to use for each step between minData (or close to minData) with image1 and maxData (or close to maxData) with image*n*<br />If for example your put 5 images (from image1 to image5), the range between minData and maxData will be divided in 5 steps and according to data value, the corresponding image will be shown                                                                                                                |
-| invalidFontColor         | string | Manage fontColor steps if the data is invalid<br />`"#RRVVBB"` or `"#AARRVVBB"`: Color to use if an invalid data is received (can be transparent if AA=00)                                                                                                                                                                                                                                                                                                         |
-| fontColor*1_to_n*      | string | Manage fontColor steps<br />`"#RRVVBB"` or `"#AARRVVBB"`: color to use for each step between minData (or close to minData) with fontColor1 and maxData (or close to maxData) with fontColor*n*                                                                                                                                                                                                                                                                     |
-| invalidColor             | string | Manage background color or image color steps if the data is invalid<br />`"#RRVVBB"` or `"#AARRVVBB"`: Color to use if an invalid data is received (can be transparent if AA=00)                                                                                                                                                                                                                                                                                   |
-| color*1_to_n*          | string | Manage background color or image Color steps<br />`"#RRVVBB"` or `"#AARRVVBB"`: color to use for each step between minData (or close to minData) with color1 and maxData (or close to maxData) with color*n*                                                                                                                                                                                                                                                       |
-| invalidTextSize          | int    | Manage text size steps if the data is invalid                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| textsize*1_to_n*       | int    | Manage text size to use for each step between minData (or close to minData) with textsize1 and maxData (or close to maxData) with textsize*n*                                                                                                                                                                                                                                                                                                                            |
-| invalidLeftOffset        | int    | Manage leftOffset steps if the data is invalid                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| leftOffset*1_to_n*     | int    | Manage leftOffset to use for each step between minData (or close to minData) with leftOffset1 and maxData (or close to maxData) with leftOffset*n*<br />Note, can be used with dynPref to shift a view when another is hidden...                                                                                                                                                                                                                                   |
-| invalidTopOffset         | int    | Manage topOffset steps if the data is invalid                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| topOffset*1_to_n*      | int    | Manage topOffset to use for each step between minData (or close to minData) with topOffset1 and maxData (or close to maxData) with topOffset*n*<br />Note, can be used with dynPref to shift a view when another is hidden...                                                                                                                                                                                                                                      |
-| invalidRotationOffset    | int    | Manage rotationOffset steps if the data is invalid                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| rotationOffset*1_to_n* | int    | Manage rotationOffset to use for each step between minData (or close to minData) with rotationOffset1 and maxData (or close to maxData) with rotationOffset*n*                                                                                                                                                                                                                                                                                                           |
+| 鍵                        | 類型 | 註解                                                                                                                                                                                                                                   |
+| ------------------------ | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| dynData                  | 區塊 | 定義所有動態資料區塊的區塊，將用於視圖。 通常位於最後一個視圖之後。<br />在此區塊中定義的所有鍵將用作視圖區塊中的鍵值：<br />`"dynData": { dynData 區塊 }`<br />每個區塊由自訂名稱和若干內部鍵定義：<br />`"customName": { 一個 dynData 區塊 }`                                              |
+| valueKey                 | 字串 | 要使用的動態資料名稱（通常與相關的視圖鍵相同）。<br />如果不存在，則預設值將是使用此區塊的視圖所使用的值。 <br />例如，您可以定義一個區塊來自訂電池電量百分比而不指定 valueKey，然後使用相同的區塊來自訂上傳器電池和 rig 電池。                                                                                            |
+| minData                  | 整數 | 指定 AAPS 資料的最小值：例如，如果值是 sgv（內部單位為 mg/dL），如果 minData 設置為 50，則所有低於 50 mg/dL 的血糖值將設置為 50。<br />- 請注意，minData 和 maxData 將用於計算動態值（以像素或度數表示）。                                                                                         |
+| maxData                  | 整數 | 指定 AAPS 資料的最大值：例如，如果值是 sgv（內部單位為 mg/dL），如果 maxData 設置為 330，則所有高於 330 mg/dL 的血糖值將設置為 330。                                                                                                                                             |
+| 左側位移                     | 區塊 | 根據最小值和最大值（以像素表示）指定視圖的水平位移。<br />- 它包括 minValue 鍵、maxValueKey 和 invalidValue 鍵（可選）。<br />- 如果資料小於或等於 minData，則視圖將移動到 minValue 像素，如果資料大於或等於 maxData，則視圖將移動到 maxValue 像素。<br />請注意，要應用此位移，應在視圖中將 leftOffset 設置為 true。 |
+| 頂端位移                     | 區塊 | 根據最小值和最大值（以像素表示）指定視圖的垂直位移。<br />- 它包括 minValue 鍵、maxValueKey 和 invalidValue 鍵（可選）。<br />- 如果資料小於或等於 minData，則視圖將移動到 minValue 像素，如果資料大於或等於 maxData，則視圖將移動到 maxValue 像素。<br />請注意，要應用此位移，應在視圖中將 topOffset 設置為 true。  |
+| 旋轉位移                     | 區塊 | 根據最小值和最大值（以度數表示）指定視圖的旋轉角度。<br />- 它包括 minValue 鍵、maxValueKey 和 invalidValue 鍵（可選）。<br />- 如果資料小於或等於 minData，則視圖將旋轉 minValue 度，如果資料大於或等於 maxData，則視圖將旋轉 maxValue 度。<br />請注意，要應用此旋轉，應在視圖中將 rotationOffset 設置為 true。 |
+| minValue                 | 整數 | 要應用於視圖的結果值（此鍵僅適用於 leftOffset、topOffset 或 rotationOffset 區塊內）                                                                                                                                                                         |
+| maxValue                 | 整數 | 要應用於視圖的結果值（此鍵僅適用於 leftOffset、topOffset 或 rotationOffset 區塊內）                                                                                                                                                                         |
+| invalidValue             | 整數 | 如果資料無效，則要應用於視圖的結果值（此鍵僅適用於 leftOffset、topOffset 或 rotationOffset 區塊內）                                                                                                                                                                 |
+| invalidImage             | 字串 | 如果資料無效，則用於 ImageView 或背景 TextView 的 `resource_filename`                                                                                                                                                                              |
+| image*1_to_n*          | 字串 | 用於每個步驟的 `resource_filename` 圖像，從 minData（或接近 minData）開始為 image1，maxData（或接近 maxData）為 image*n*<br />例如，如果您放置 5 個圖像（從 image1 到 image5），則 minData 和 maxData 之間的範圍將分為 5 個步驟，並根據資料值顯示相應的圖像。                                        |
+| invalidFontColor         | 字串 | 如果資料無效，管理字體顏色的步驟<br />`"#RRVVBB"` 或 `"#AARRVVBB"`：如果接收到無效資料，則使用的顏色（如果 AA=00，則可以透明）                                                                                                                                             |
+| fontColor*1_to_n*      | 字串 | 管理字體顏色的步驟<br />`"#RRVVBB"` 或 `"#AARRVVBB"`：用於每個步驟的顏色，從 minData（或接近 minData）開始為 fontColor1，maxData（或接近 maxData）為 fontColor*n*                                                                                                   |
+| invalidColor             | 字串 | 如果資料無效，管理背景顏色或圖像顏色的步驟<br />`"#RRVVBB"` 或 `"#AARRVVBB"`：如果接收到無效資料，則使用的顏色（如果 AA=00，則可以透明）                                                                                                                                        |
+| color*1_to_n*          | 字串 | 管理背景顏色或圖像顏色的步驟<br />`"#RRVVBB"` 或 `"#AARRVVBB"`：用於每個步驟的顏色，從 minData（或接近 minData）開始為 color1，maxData（或接近 maxData）為 color*n*                                                                                                      |
+| invalidTextSize          | 整數 | 如果資料無效，管理文字大小的步驟                                                                                                                                                                                                                     |
+| textsize*1_to_n*       | 整數 | 管理每個步驟要使用的文字大小，從 minData（或接近 minData）開始為 textsize1，maxData（或接近 maxData）為 textsize*n*                                                                                                                                                 |
+| invalidLeftOffset        | 整數 | 如果資料無效，管理 leftOffset 的步驟                                                                                                                                                                                                             |
+| leftOffset*1_to_n*     | 整數 | 管理每個步驟要使用的 leftOffset，從 minData（或接近 minData）開始為 leftOffset1，maxData（或接近 maxData）為 leftOffset*n*<br />請注意，可以與 dynPref 一起使用，當另一個視圖被隱藏時移動視圖...                                                                                    |
+| invalidTopOffset         | 整數 | 如果資料無效，管理 topOffset 的步驟                                                                                                                                                                                                              |
+| topOffset*1_to_n*      | 整數 | 管理每個步驟要使用的 topOffset，從 minData（或接近 minData）開始為 topOffset1，maxData（或接近 maxData）為 topOffset*n*<br />請注意，可以與 dynPref 一起使用，當另一個視圖被隱藏時移動視圖...                                                                                       |
+| invalidRotationOffset    | 整數 | 如果資料無效，管理 rotationOffset 的步驟                                                                                                                                                                                                         |
+| rotationOffset*1_to_n* | 整數 | 管理每個步驟要使用的 rotationOffset，從 minData（或接近 minData）開始為 rotationOffset1，maxData（或接近 maxData）為 rotationOffset*n*                                                                                                                          |
 
 (cwf-reference-dyndata-key-values)=
 
-### DynData key values
+### DynData 鍵值
 
-| Key value        | key      | comment                                                                                                                                                                                                                                                           |
-| ---------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| sgv              | valueKey | default minData = 39 mgdl<br />default maxData = 400 mgdl<br />- Note that real maxData is linked to your sensor and units are always in mgdl for internal values                                                                                     |
-| sgvLevel         | valueKey | default minData = -1 (Hypo)<br />default maxData = 1 (Hyper)<br />if BG is within Range = 0                                                                                                                                                           |
-| direction        | valueKey | default minData = 1 (double Down)<br />default maxValue = 7 (double Up)<br />flat arrow data = 4<br />Error or missing data = 0 (??)                                                                                                            |
-| delta            | valueKey | default minData = -25 mgdl<br />default maxData = 25 mgdl<br />- Note that real min and maxData can be above, and units are always mgdl for internal values                                                                                           |
-| avg_delta        | valueKey | default minData = -25 mgdl<br />default maxData = 25 mgdl<br />- Note that real min and maxData can be above, and units are always mgdl for internal values                                                                                           |
-| uploader_battery | valueKey | default minData = 0 %<br />default maxData = 100%                                                                                                                                                                                                           |
-| rig_battery      | valueKey | default minData = 0 %<br />default maxData = 100%                                                                                                                                                                                                           |
-| timestamp        | valueKey | default minData = 0 min<br />default maxData = 60 min                                                                                                                                                                                                       |
-| loop             | valueKey | default minData = 0 min<br />default maxData = 28 min<br />- Note that status arrows are in green below 14 min and in red above 14 min so if you put 2 images, you can replace status background with your custom images with default min and maxData |
-| day              | valueKey | default minData = 1<br />default maxData = 31                                                                                                                                                                                                               |
-| day_name         | valueKey | default minData = 1<br />default maxData = 7                                                                                                                                                                                                                |
-| month            | valueKey | default minData = 1<br />default maxData = 12                                                                                                                                                                                                               |
-| week_number      | valueKey | default minData = 1<br />default maxData = 53                                                                                                                                                                                                               |
+| 鍵值               | 鍵        | 註解                                                                                                                                                   |
+| ---------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| sgv              | valueKey | 預設 minData = 39 mg/dL<br />預設 maxData = 400 mg/dL<br />- 請注意，實際的 maxData 與您的感測器相關，內部值的單位始終為 mg/dL                                        |
+| sgvLevel         | valueKey | 預設 minData = -1（低血糖）<br />預設 maxData = 1（高血糖）<br />如果血糖在範圍內 = 0                                                                          |
+| 趨勢方向             | valueKey | 預設 minData = 1（雙箭頭向下）<br />預設 maxValue = 7（雙箭頭向上）<br />水平箭頭資料 = 4<br />錯誤或遺失資料 = 0（??）                                             |
+| delta            | valueKey | 預設 minData = -25 mg/dL<br />預設 maxData = 25 mg/dL<br />- 請注意，實際的 minData 和 maxData 可能會超出上述範圍，內部值的單位始終為 mg/dL                             |
+| avg_delta        | valueKey | 預設 minData = -25 mg/dL<br />預設 maxData = 25 mg/dL<br />- 請注意，實際的 minData 和 maxData 可能會超出上述範圍，內部值的單位始終為 mg/dL                             |
+| uploader_battery | valueKey | 預設 minData = 0%<br />預設 maxData = 100%                                                                                                         |
+| rig_battery      | valueKey | 預設 minData = 0%<br />預設 maxData = 100%                                                                                                         |
+| 時間戳              | valueKey | 預設 minData = 0 分鐘<br />預設 maxData = 60 分鐘                                                                                                      |
+| 循環               | valueKey | 預設 minData = 0 分鐘<br />預設 maxData = 28 分鐘<br />- 請注意，狀態箭頭在 14 分鐘以下顯示為綠色，14 分鐘以上顯示為紅色，因此如果您放置兩個圖像，可以使用預設的 minData 和 maxData 來替換狀態背景為自訂圖像。 |
+| 日期               | valueKey | 預設 minData = 1<br />預設 maxData = 31                                                                                                            |
+| 星期名稱             | valueKey | 預設 minData = 1<br />預設 maxData = 7                                                                                                             |
+| 月份               | valueKey | 預設 minData = 1<br />預設 maxData = 12                                                                                                            |
+| 週數               | valueKey | 預設 minData = 1<br />預設 maxData = 53                                                                                                            |
 
 (cwf-reference-dynpref-keys)=
 
-### DynPref keys
+### DynPref 鍵
 
-| Key          | type   | comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dynPref      | block  | define the block of all dynamic preference blocks that will be used for the views. Generally after the last view or after the dynData block.<br />All the keys defined within this block will be used as key Value within view block:<br />`"dynPref": { dynPref blocks }`<br />and each block is defined by a custom name and several keys inside:<br />`"customName": { one dynPref block }`                                                                                                                |
-| dynPref      | string | *Within a view Block*<br />name of dynamic dynPref block to use (generally same that associated view key or associated preference).                                                                                                                                                                                                                                                                                                                                                                                             |
-| dynPref      | string | *Within a partial dynData Block included into a dynPref Block*<br />name of dynamic dynPref block to use to complete the dynData block. This allow you to tune a dynData block according to several preferences                                                                                                                                                                                                                                                                                                                 |
-| dynPrefColor | string | this key is specific to the main block with all main colors (highColor, midColor, lowColor, graph colors...). you will use it if you want to tune main colors according to preferences                                                                                                                                                                                                                                                                                                                                                |
-| prefKey      | string | specify the preference key Value that will be used to get user preferences (see [PrefKey values](cwf-reference-prefkey-values) below). This key should be used within a `dynPref` block.<br />Then according to preference key, the `dynPref`block should contains as many keys than prefKey has values.<br />Note that most of the time preferences are "Boolean" so you should find within the dynPref block these two dynData blocks: <br />`"true": { dynData Block },`<br />`"false": { dynData Block }` |
-| true         | block  | most preferences will set a boolean `"true"` or `"false"`. You will specify the dynData block to use if preference selected by user is true.<br />Note that if the block also contains a `"dynPref":`key, the dynData block wil be merged with other block. This allow you to tune for example color according to one preference, and textsize according to another preference                                                                                                                                                  |
-| false        | block  | most preferences will set a boolean `"true"` or `"false"`. You will specify the dynData block to use if preference selected by user is false.<br />Note that if the block also contains a `"dynPref":`key, the dynData block wil be merged with other block. This allow you to tune for example color according to one preference, and textsize according to another preference                                                                                                                                                 |
+| 鍵            | 類型 | 註解                                                                                                                                                                                                                                                                                          |
+| ------------ | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dynPref      | 區塊 | 定義所有動態偏好設定區塊的區塊，將用於視圖。 通常位於最後一個視圖或 dynData 區塊之後。<br />在此區塊中定義的所有鍵將用作視圖區塊中的鍵值：<br />`"dynPref": { dynPref 區塊 }`<br />每個區塊由自訂名稱和若干內部鍵定義：<br />`"customName": { 一個 dynPref 區塊 }`                                                                                       |
+| dynPref      | 字串 | *在視圖區塊中*<br />要使用的動態 dynPref 區塊名稱（通常與相關的視圖鍵或相關的偏好設定相同）。                                                                                                                                                                                                                               |
+| dynPref      | 字串 | *在 dynPref 區塊中包含的部分 dynData 區塊內*<br />要使用的動態 dynPref 區塊名稱，用於補全 dynData 區塊。 這使您可以根據多個偏好設定調整 dynData 區塊。                                                                                                                                                                                |
+| dynPrefColor | 字串 | 此鍵專用於包含所有主顏色的主區塊（highColor、midColor、lowColor、圖表顏色...）。 如果您希望根據偏好設定調整主顏色，將使用此鍵。                                                                                                                                                                                                              |
+| prefKey      | 字串 | 指定將用來獲取使用者偏好設定的偏好鍵值（請參閱下文的 [PrefKey 值](cwf-reference-prefkey-values)）。 此鍵應用於 `dynPref` 區塊內。<br />然後根據偏好鍵，`dynPref` 區塊應包含與 prefKey 值數量相同的鍵。<br />請注意，大多數偏好設定是 "布林值"，因此您應在 dynPref 區塊中找到這兩個 dynData 區塊：<br />`"true": { dynData 區塊 },`<br />`"false": { dynData 區塊 }` |
+| true         | 區塊 | 大多數偏好設定將設置布林值 `"true"` 或 `"false"`。 如果使用者選擇的偏好設定為 true，則指定要使用的 dynData 區塊。<br />請注意，如果該區塊還包含 `"dynPref":` 鍵，則 dynData 區塊將與其他區塊合併。 這允許您根據一個偏好設定調整顏色，並根據另一個偏好設定調整文字大小                                                                                                                   |
+| false        | 區塊 | 大多數偏好設定將設置布林值 `"true"` 或 `"false"`。 如果使用者選擇的偏好設定為 false，則指定要使用的 dynData 區塊。<br />請注意，如果該區塊還包含 `"dynPref":` 鍵，則 dynData 區塊將與其他區塊合併。 這允許您根據一個偏好設定調整顏色，並根據另一個偏好設定調整文字大小                                                                                                                  |
 
 (cwf-reference-prefkey-values)=
 
-### PrefKey values
+### 偏好設定鍵值
 
-All keys included into [Preference keys](cwf-reference-preference-keys) chapter above can be used to tune view parameters
+上述的 [偏好設定鍵](cwf-reference-preference-keys) 章節中包含的所有鍵都可以用來調整視圖參數
 
-You can also you these additional key below included into AAPS (Custom) specific parameters:
+您也可以使用以下 AAPS（自訂）特定參數中包含的附加鍵：
 
-| Key                 | type    | comment                                                                                                                                                                                                                                                                                                                                                             |
-| ------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| key_units           | boolean | *true*: if units selected on AAPS is mgdl<br />*false*: if units selected on AAPS is mmol                                                                                                                                                                                                                                                                     |
-| key_dark            | boolean | *true*: to use a dark background<br />false: to use a light background<br />Note: this parameter is often use into previous AAPS watchfaces (AAPS, AAPS V2...)                                                                                                                                                                                          |
-| key_match_divider | boolean | *true*: divider included into AAPS, AAPS v2 watchfaces will not be visible<br />*false*: divider included into AAPS, AAPS v2 watchfaces will be visible<br />Note: this setting is often combine with dark preference (using `dynPref` key into `dynData`block) to set text color (and background) on the same or opposite color than dark parameter... |
+| 鍵                   | 類型  | 註解                                                                                                                                                                            |
+| ------------------- | --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| key_units           | 布林值 | *true*：如果 AAPS 上選擇的單位為 mg/dL<br />*false*：如果 AAPS 上選擇的單位為 mmol                                                                                                          |
+| key_dark            | 布林值 | *true*：使用深色背景<br />false：使用淺色背景<br />注意：此參數通常用於先前的 AAPS 錶面（AAPS、AAPS V2...）                                                                                       |
+| key_match_divider | 布林值 | *true*：在 AAPS、AAPS v2 錶面中包含的分隔線將不可見<br />*false*：在 AAPS、AAPS v2 錶面中包含的分隔線將可見<br />注意：此設置通常與深色偏好設定結合（在 `dynData` 區塊中使用 `dynPref` 鍵）來設置文字顏色（和背景），使其與深色參數相同或相反的顏色... |
