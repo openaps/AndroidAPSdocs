@@ -1,36 +1,36 @@
-# 如何配置華為手機
+# How-to configure a Huawei phone
 
-有一些選項，部分是 Android 特定的，部分是華為特定的：
+There are different options, some Android specific, some Huawei specific:
 
-* 將 AAPS 和 xdrip+ 添加到忽略電池優化的應用程式列表中：
+* Add AAPS and xdrip+ to apps list which ignore battery optimisations:
   
-  * 設定 / 應用 / 設定 / 特殊授權 / 忽略電池優化 / 選擇「所有應用程式」/ 將應用程式設為允許
+  * Settings / App / Settings / Special autorisations / Ignore battery optimisation / Select "All applications" / Set app to allowed
     
-    ![華為 - 忽略電池優化](../images/Huawei_BatteryOptimization.png)
+    ![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
 
-* 設置電池選項：
+* Set battery option settings:
   
-  * 設定 / 應用 / 選擇 AndroidAPS/xdrip+ / 在電池選項下 / 應用啟動
+  * Settings / App / Select AndroidAPS/xdrip+ / Under Battery / App launch
     
-    * 確保移除「自動管理」
-    * 允許：
+    * Make sure to remove "automatic management"
+    * Allow:
       
-      * 自動啟動
-      * 次要啟動（可以由其他應用程式啟動）
-      * 後台運作
+      * Automatic launch
+      * Secondary launch (can be launched from other apps)
+      * Background run
         
-        ![華為 - 電池選項](../images/Huawei_BatteryOptions.png)
+        ![Huawei - battery options](../images/Huawei_BatteryOptions.png)
 
-* 鎖定應用程式
+* Lock App
   
-  * 進入應用程式最近使用列表並選擇鎖定圖示
+  * Go into App recent list and select the lock icon
     
-    ![華為 - 鎖定應用程式](../images/Huawei_LockApp.png)
+    ![Huawei - lock app](../images/Huawei_LockApp.png)
 
-對於 xdrip+，您還可以啟用持久通知（在 xdrip+ 應用程式內）：
+For xdrip+, you can also enable persistent notifications (within xdrip+ app):
 
-* 設定 / 不常用設定 / 其他雜項選項 / 在前台運作收集器
+* Setttings / less common settings / other misc options / Run Collector in foreground
   
-  ![xdrip+ 設定 - 在前台運作收集器](../images/xdrip_collector_foreground.png)
+  ![xdrip+ settings - collector in foreground](../images/xdrip_collector_foreground.png)
 
-根據 Android 版本，這些設定位於其他位置。 這些解釋適用於 Android 8.1。
+Depending on Android version, these settings are somewhere else. These explanations are for Android 8.1.
