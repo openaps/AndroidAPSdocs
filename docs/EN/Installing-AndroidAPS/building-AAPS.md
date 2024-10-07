@@ -134,36 +134,36 @@ Import note: Android Studio changed its UI during the last releases. This guide 
 
 One of the most important things when installing Android Studio is **be patient!** During installation and setup, Android Studio is downloading a lot of stuff which will take time.
 
-**Download a supported version of Android Studio (Hedgehog, Iguana, Jellyfish or Koala - not Ladybug)** from [**here**](https://developer.android.com/studio/archive) and accept the download agreements.
+Any version of Android Studio from version Hedgehog is suitable. With version Ladybug, you might need to do one extra step, but it's doable! Download the current version of Android Studio from [Android Studio Download](https://developer.android.com/studio), or an older version from the [**Archives**]](https://developer.android.com/studio/archive) and accept the download agreements.
 
-![Download Android Studio](../images/Building-the-App/010_DownloadLadybug.png)
+![DownloadAndroidStudio](../images/Building-the-App/010_DownloadLadybug.png)
 
 Once the download is finished, start the downloaded application to install it on your computer. 
-You might need to accept/confirm some warnings about downloading apps from Windows!
+You might need to accept/confirm some warnings about downloaded apps from Windows!
 
-Install Android Studio by clicking "Next", as shown in the following screenshots. You do *NOT* need to change any settings!
+Install Android Studio by clicking "Next", as shown in the following screenshots. You do **not** need to change any settings!
 
-![Welcome to Android Studio Setup](../images/Building-the-App/011_InstallLadybug.png)
+![Welcome_to_Android_Studio_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-![Choose components](../images/Building-the-App/012_InstallLadybug.png)
+![Choose_components](../images/Building-the-App/012_InstallLadybug.png)
 
-![Configuration Settings](../images/Building-the-App/013_InstallLadybug.png)
+![Configuration_Settings](../images/Building-the-App/013_InstallLadybug.png)
 
 Now click on "Install":
 
-![Choose start Menu Folder](../images/Building-the-App/014_InstallLadybug.png)
+![Choose_start_Menu_Folder](../images/Building-the-App/014_InstallLadybug.png)
 
 Once it's completed, press "Next" 
 
-![Installation Complete](../images/Building-the-App/015_InstallLadybug.png)
+![Installation_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
 In the last step, click on "Finished" to start Android Studio for the first time.
 
-![Completing Android Studio Setup](../images/Building-the-App/016_InstallLadybug.png)
+![Completing_Android_Studio_Setup](../images/Building-the-App/016_InstallLadybug.png)
 
 You will be asked if you want to help improve Android Studio. Choose the option to your liking, it won't make any difference for the following steps.
 
-![Help improve Android Studio](../images/Building-the-App/020_ImproveAS.png)
+![Help_improve_Android_Studio](../images/Building-the-App/020_ImproveAS.png)
 
 The welcome screen greets you to the installation of Android Studio. Press "Next".
 
@@ -171,27 +171,27 @@ The welcome screen greets you to the installation of Android Studio. Press "Next
 
 Select "Standard" as installation type.
 
-![Install Type](../images/Building-the-App/023_DefaultInstallation.png)
+![Install_Type](../images/Building-the-App/023_DefaultInstallation.png)
 
 Verify the settings by clicking "Next" again.
 
-![Verify Settigns](../images/Building-the-App/024_DefaultInstallation.png)
+![Verify_Settigns](../images/Building-the-App/024_DefaultInstallation.png)
 
 Now you need to accept the license agreements. You have two sections (1 + 3) on the left side which you have to select one after the other and each select "Accept" (2 + 4) on the right side.
 
 Then the "Finish" (5) button can be clicked.
 
-![License Agreement](../images/Building-the-App/025_LicenseAgreement.png)
+![License_Agreement](../images/Building-the-App/025_LicenseAgreement.png)
 
 Some Android packages will now be downloaded and installed. Be patient and wait. 
 
 When it's finished, you will find the following screen where you can select "Finish" again.
 
-![Downloading Components](../images/Building-the-App/026_DownloadFinished.png)
+![Downloading_Components](../images/Building-the-App/026_DownloadFinished.png)
 
 You will now see the Welcome screen of Android Studio. 
 
-![Welcome to Android Studio](../images/Building-the-App/031_WelcomeAndroidStudio.png)
+![Welcome_to_Android_Studio](../images/Building-the-App/031_WelcomeAndroidStudio.png)
 
 
 (Building-APK-download-AAPS-code)=
