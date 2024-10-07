@@ -107,6 +107,25 @@ Follow the instructions at [Gradle Resync](troubleshooting_androidstudio-step-3-
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
+### Incompatible Gradle JVM ###
+
+![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
+  If you experience the following error message, you need to download a correct JVM version before you can try again:
+* Open the gradle view and its settings on the right side of Android Studio:
+ 
+![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
+
+* Open the **Gradle JDK** options, then select **Download JDK...**
+
+![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+
+* At **Version** (1), you need to select **17**. Then select the **JetBrains Runtime** from the **Vendor** (2) options. Do not change the **Location** (3).
+
+![Select JDK 17](../images/studioTroubleshooting/162_DownloadJDK.png)
+
+* Close the **Settings** dialog with **OK**.
+* You now need to restart the Gradle Sync. Follow the instructions at [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync).
+
 ### Incompatible version of Android Gradle plugin
 
   If you experience the following error message
