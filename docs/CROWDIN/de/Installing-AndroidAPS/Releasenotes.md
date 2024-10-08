@@ -1,5 +1,5 @@
 (Releasenotes-release-notes)=
-# Release notes
+# Release Notes
 
 Eine Schritt-für-Schritt-Anleitung des Updates findest Du [hier](../Installing-AndroidAPS/Update-to-new-version.md). Auf dieser Seite gibt es auch einen Abschnitt mit möglichen Schwierigkeiten und Lösungsansätzen.
 
