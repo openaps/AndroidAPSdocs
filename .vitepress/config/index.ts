@@ -90,11 +90,13 @@ export default defineConfig({
     root: {
       lang: "en",
       label: "English",
+      link: "/en",
       ...en,
     },
     de: {
       lang: "de",
       label: "Deutsch",
+      link: "/de",
       ...de,
     },
     // fr: {
@@ -105,11 +107,9 @@ export default defineConfig({
     // },
   },
 
-  // vite: {
-  //   server: {
-  //     watch: {
-  //       ignored: ["**/node_modules/**", "**/.git/**", "**/images/**"],
-  //     },
-  //   },
-  // },
+  vite: {
+    resolve: {
+      preserveSymlinks: true,
+    },
+  },
 });
