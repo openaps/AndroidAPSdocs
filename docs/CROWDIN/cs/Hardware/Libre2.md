@@ -26,8 +26,10 @@ Remark: The transmitter can be used in parallel to the LibreLink app without int
 
 ## 2. Use xDrip+ direct connection
 
-:::{admonition} Libre 2 EU only :class: warning xDrip+ doesn't support direct connection to Libre 2 US and AUS.  
-:::
+```{admonition} Libre 2 EU only
+:class: warning
+xDrip+ doesn't support direct connection to Libre 2 US and AUS.  
+```
 
 - Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [this latest OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) as the one in the document is obsolete.
 - Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
@@ -36,7 +38,7 @@ Remark: The transmitter can be used in parallel to the LibreLink app without int
 
 ## 3. Use Diabox
 
-- Install [Diabox](https://t.me/s/DiaboxApp). In Settings, Integration, enable Share data with other apps.
+- Install [Diabox](https://www.bubblesmartreader.com/_files/ugd/6afd37_f183eabd4fbd44fcac4b1926a79b094f.pdf). In Settings, Integration, enable Share data with other apps.
 
 ![Diabox](../images/Diabox.png)
 
@@ -52,15 +54,19 @@ Remark: The transmitter can be used in parallel to the LibreLink app without int
 
 - Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-:::{admonition} Use with xDrip+ :class: note You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
+```{admonition} Use with xDrip+
+:class: note
+You can set Juggluco to broadcast to xDrip+ with Patched Libre Broadcast (you should disable xDrip+ broadcast), in order to calibrate (see here) and avoid 1 minute readings to be sent to AAPS.  
 ![Juggluco broadcast to xDrip+](../images/Juggluco_xDrip.png)  
 You will then need to set xDrip+ data source to Libre 2 Patched App to receive data from Juggluco.  
-:::
+```
 
 ## 5. Use the patched LibreLink app with xDrip+
 
-:::{admonition} Libre 2 EU only :class: warning The patched app is an old version (22/4/2019) and might not be compatible with recent Android releases.  
-:::
+```{admonition} Libre 2 EU only
+:class: warning
+The patched app is an old version (22/4/2019) and might not be compatible with recent Android releases.  
+```
 
 ### Step 1: Build the patched app
 
@@ -134,7 +140,7 @@ Please note that the original patched app **does not have any connection to the 
 
 However there is a variant of the patched app supporting LibreView with enabled internet access. Please be aware that your data is transferred to the cloud then. But your endo team reporting is fully supported then. With that variant it is also possible to move the alarms of a running sensor to a different device which not has started the sensor. Please google in diabetes related German forums how this could be done.
 
-### Step 3: Install and configure xDrip+ app
+### Step 3: Nainstalujte a nastavte aplikaci xDrip+
 
 The blood sugar values are received on the smartphone by the xDrip+ App.
 

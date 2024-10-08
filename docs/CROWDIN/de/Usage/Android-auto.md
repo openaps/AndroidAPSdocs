@@ -2,12 +2,12 @@
 
 **AAPS** kann aktuelle Statusinformationen als Benachrichtigung direkt an Android Auto im Auto senden.
 
-:::{admonition} Versionsstand und letzte Änderungen :class: dropdown Stand: 07.05.2023
+```{admonition} version and last change information :class: dropdown date of last edit: 07/05/2023
 
 Für die Dokumentation verwendete Versionen:
 
 * AAPS 3.2.0-dev-i
-* Android Auto: 9.3.631434-release :::
+* Android Auto: 9.3.631434-release ```
 
 ## Voraussetzungen
 

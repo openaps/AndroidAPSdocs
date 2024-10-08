@@ -1,16 +1,16 @@
 # internal sandbox file 1 for testing our sprint
 
-:::{admonition} keine Übersetzung erforderlich
+```{admonition} no need to translate this
 :class: note
 
-Dies muss nicht übersetzt werden.
-:::
+No need to translate this.
+```
 
-:::{danger}
+```{danger}
 Here is danger on the road.
-:::
+```
 
-Test
+Test for Setup
 
 "Die Nummer 43 ist im Hitchhiker's Guide to the Galaxy von Douglas Adams, die "Antwort auf die ultimative Frage des Lebens, Das Universum und alles", berechnet von einem riesigen Supercomputer namens Deep Thought über einen Zeitraum von 7,5 Millionen Jahre." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
 
@@ -26,7 +26,7 @@ Du kannst direkt von hier zum zweiten Label in der sandbox1.md-Datei springen - 
 
 And you can jump to the first label too - ["Spring"](sandbox1-this-is-a-test).
 
-Here you can jump to the second sandbox file - ["Spring"](./sandbox2.md).
+Here you can jump to the second sandbox file - ["Jump"](./MoveTest/sandbox2.md).
 
 You can dirctly jump from here to the first label in the sandbox2.md file - ["Spring"](sandbox2-this-is-a-test).
 

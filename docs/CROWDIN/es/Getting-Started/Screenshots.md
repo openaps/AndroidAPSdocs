@@ -200,7 +200,7 @@ You need to find out why you get duplicate BGs:
 
 * **Azul claro** línea: cero-temp (predicción de la glucosa si se establecería una tasa basal temporal al 0%)
    
-   La línea de predicción muestra cómo cambiaría la línea de trayectoria de la IOB si la bomba detuviera toda la administración de insulina (0% TBR).
+   Prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
    
    *This line appears only when the [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
@@ -495,7 +495,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 1. Comprueba y recuerda los COB y la IOB actuales de la pantalla de inicio.
 2. Dependiendo de la bomba, en la pestaña de tratamientos, los carbohidratos pueden mostrarse junto con la insulina en una línea o como una entrada separada (p. ej. con Dana RS).
-3. Elimina la entrada con la cantidad de carbohidratos errónea.
+3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
 4. Asegúrate de que los carbohidratos se han eliminado correctamente comprobando los COB activos, accediendo de nuevo a la pantalla de inicio.
 5. Haz lo mismo con la IOB si sólo hay una línea en la pestaña de tratamientos que incluye los carbohidratos e insulina.
    

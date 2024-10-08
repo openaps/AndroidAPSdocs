@@ -10,7 +10,7 @@ Voir la [page FAQ](../Getting-Started/FAQ.md) pour plus de détails.
 
 ## Prérequis matériels et logiciels pour la compilation de AAPS
 
-- Veuillez utiliser la **[version Android Studio nommée "Hedgehog"(2023.1.1) ou "Iguana"(2023.2.1)](https://developer.android.com/studio/)** pour construire l'apk. Les versions plus anciennes d'Android Studio doivent d'abord être mises à jour !
+- Please use the **[Android Studio version called at least Hedgehog or one more recent like Iguana, Jellyfish, and Koala](https://developer.android.com/studio/)** to build the apk. <u>**Do not use the Ladybug version.**</u> Older versions of Android Studio need to be updated first!
 - Les systèmes [Windows 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) ne sont pas pris en charge par Android Studio. Veuillez garder à l'esprit qu'à la fois **le processeur (CPU 64 bits) et le système d'exploitation 64 bits sont des conditions obligatoires**. Si votre système NE satisfait PAS à cette condition, vous devez changer le matériel ou le système d'exploitation qui pose problème, ou tout le système.
 
 <table class="tg">
@@ -58,11 +58,11 @@ Si vous pensez que quelque chose est incorrect, manquant ou confus dans les inst
 
 ## Guide pas à pas pour compiler l'application AAPS
 
-:::{admonition} ATTENTION
+```{admonition} WARNING
 :class: warning
 If you have built AAPS before, you don't need to take all the following steps again.
-Vous pouvez rendre directement au [guide de mise à jour](../Installing-AndroidAPS/Update-to-new-version)!
-:::
+Please jump directly to the [update guide](../Installing-AndroidAPS/Update-to-new-version)!
+```
 
 Les grandes étapes pour construire le fichier apk **AAPS** sont les suivantes :
 
@@ -85,11 +85,12 @@ Veuillez noter qu'**Android Studio** n'est pas disponible en français, toutes l
 
 ### Installer Git (si ce n'est déjà fait)
 
-:::{admonition} A quoi sert Git ?
+```{admonition} Why Git? 
+:class: dropdown
 
-Git est un "_Système de Contrôle de Version_".
-C'est un logiciel qui permet de suivre les changements dans le code source et de collaborer avec d'autres personnes. Vous utiliserez Git pour faire une copie du code source **AAPS** depuis le site web Github sur votre ordinateur local. Ensuite, vous utiliserez Git sur votre ordinateur pour compiler l'application **AAPS** (apk).
-:::
+Git is known as a “_Versioning Control System_” (VCS).\
+Git is a program that allows you to track changes in code and to collaborate with others. You will use Git to make a copy of the **AAPS** source code from the GitHub website to your local computer. Then, you will use Git on your computer to build the **AAPS** application (apk). 
+```
 
 #### Étapes pour l'installation de Git
 
@@ -117,16 +118,16 @@ C'est un logiciel qui permet de suivre les changements dans le code source et de
 
 - \*\*Vous devez rester connecté à internet pour les prochaines étapes, étant donné qu'Android Studio va télécharger différentes mises à jour \*\*
 
-:::{admonition} A quoi sert Android Studio ?
+```{admonition} What is Android Studio?
 :class: dropdown
-Android Studio est un logiciel qui s'exécute sur votre ordinateur. Il vous permet de télécharger le code source depuis internet (en utilisant Git) et de compiler des applications pour smartphone (et montre connectée). Si vous avez déjà une version d'**AAPS**, utilisée pour boucler, en cours d'exécution sur un smartphone, vous ne pouvez pas la "casser" en compilant une nouvelle application ou une mise à jour sur votre PC avec Android Studio, ce sont des processus totalement séparés.
-:::
+Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes. 
+```
 
-Les captures d'écran suivantes ont été prises à partir de la version **Hedgehog** d'Android Studio.
+The following screenshots have been taken from Android Studio Version **Hedgehog**, they should be identical with more recent versions.
 
 Une des choses les plus importantes lors de l'installation d'Android Studio : **Soyez patient(e)** ! Lors du processus d'installation et de configuration, Android Studio télécharge beaucoup de choses, ce qui prendra du temps.
 
-Téléchargez la dernière version d'Android Studio à partir de [**ce lien**](https://developer.android.com/studio#downloads), trouvez-la dans le dossier de téléchargement de votre navigateur et installez-la sur votre ordinateur :
+**Download a supported version of Android Studio (Hedgehog, Iguana, Jellyfish or Koala - not Ladybug)** from [**here**](https://developer.android.com/studio/archive), locate it in your browser downloads folder, and install it on your computer:
 
 ![Download Android Studio](../images/Building-the-App/01_InstallAS_Hedgehog.png)
 
@@ -170,10 +171,11 @@ Vous allez maintenant recevoir un message concernant un kit de développement lo
 
 Le logiciel devrait sélectionner automatiquement le SDK requis et choisir un emplacement.
 
-:::{admonition} A quoi sert un SDK Android ?
+```{admonition} What is an Android SDK?
+:class: dropdown
 
-Pour exécuter **AAPS** sur le téléphone, l'application doit s'intégrer à Android lui-même. Android fournit des « kits de développement logiciel » (SDK) qui permettent aux applications comme **AAPS** d'interagir avec un système d'exploitation Android.
-:::
+In order to run **AAPS** on the phone the application needs to integrate with Android itself. Android provides “_software development kits_” (SDK) which allow apps like **AAPS** to interface with an Android operating system.
+```
 
 Le package de la plateforme SDK n'a **pas** de rapport avec la version d'Android installée sur votre téléphone, mais avec la compilation d'**AAPS**. La version 3.2 de **AAPS** (et suivantes) utilise l'API version 34, qui est celle automatiquement sélectionnée dans la version **Hedgehog** de **Android Studio**. Par conséquent, il vous suffit de cliquer sur "Next/Suivant":
 
@@ -205,13 +207,14 @@ Vous êtes maintenant accueilli.e avec l'écran "Welcome to Android Studio/Bienv
 
 ### Télécharger le code source AAPS
 
-:::{admonition} Pourquoi cela peut-il prendre beaucoup de temps pour télécharger le code source d'AAPS?
+```{admonition} Why can it take a long time to download the AAPS code?
+:class: dropdown
 
-La première fois qu'**AAPS** est téléchargé, Android Studio se connectera par le réseau au site web de Github pour télécharger le code source de **AAPS**. Cela devrait prendre environ une minute.
+The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute. 
 
-Android Studio utilisera ensuite **Gradle** (un outil de développement dans Android Studio) pour identifier les autres composants nécessaires à l'installation de ces éléments sur votre ordinateur.
+Android Studio will then use **Gradle** (a development tool in  Android studio) to identify other components needed to install these items on your computer. 
 
-:::
+```
 
 Sur l'écran d'accueil d'Android Studio, vérifiez que "**Projects/Projets**" (1) est en surbrillance sur la gauche. Ensuite, cliquez sur "**Get from VCS/Obtenir depuis VCS**" (2) sur la droite :
 
@@ -233,10 +236,10 @@ et collez-la dans la zone de texte de l'URL (3).
 
 - Vérifiez que le répertoire (par défaut) où enregistrer le code cloné est sensé (4).
 
-:::{admonition} INFORMATION
+```{admonition} INFORMATION
 :class: information
-Conservez le chemin de ce répertoire. C'est là que votre code source est stocké !
-:::
+Make a note of the directory. It is where your sourcecode is stored!
+```
 
 - Cliquez sur le bouton "Clone" (5).
 
@@ -274,10 +277,11 @@ Lorsque Android Studio se relance, attendez patiemment (cela peut prendre quelqu
 
 ![AS\_download\_dependencies](../images/Building-the-App/19_downloading_dependencies.png)
 
-:::{admonition} NE METTEZ JAMAIS À JOUR GRADLE !
+```{admonition} NEVER UPDATE GRADLE!
+:class: warning
 
-Android Studio peut vous recommander de mettre à jour le système "gradle". **Ne jamais mettre à jour gradle !** Cela pourrait causer des problèmes.
-:::
+Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
+```
 
 _Optionnel_ - Si vous souhaitez faire disparaître la notification **"project update recommended/mise à jour du projet recommandée"**, cliquez sur le texte bleu "More/Plus" (1). Dans la boîte de dialogue sélectionnez "Don't ask for this project/Ne plus me demander pour ce projet" (2).
 
@@ -324,10 +328,11 @@ Quand la version Git s'affiche en dessous du chemin (voir capture d'écran ci-de
 
 ### Compilez l'APK AAPS signé
 
-:::{admonition} Pourquoi l'application AAPS doit-elle être "signée" ?
+```{admonition} Why does the AAPS app need to be "signed"?
+:class: dropdown
 
-Android exige que chaque application soit _signée_, pour garantir qu'elle ne peut être mise à jour ultérieurement que par la source de confiance qui a publié l'application d'origine. Pour plus d'informations à ce sujet, suivez [ce lien](https://developer.android.com/studio/publish/app-signing.html#generate-key). Dans notre cas, cela signifie simplement que nous générons un fichier de clés ou "keystore" et nous l'utilisons lorsque nous compilons l'application **AAPS**.
-:::
+Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
+```
 
 - Ouvrez le menu "Build/Compiler" (1) puis "Generate Signed Bundle / APK - Générer un paquet / une APK signés" (2)
 
@@ -340,18 +345,19 @@ Android exige que chaque application soit _signée_, pour garantir qu'elle ne pe
 - Sur l'écran suivant, vérifiez que le "Module" sélectionné est bien "AAPS.app" (1).
 
 (Building-APK-wearapk)=
-:::{admonition} INFORMATION !
+
+```{admonition} INFORMATION!
 :class: information
 Si vous souhaitez créer l'APK pour votre montre, sélectionnez alors AAPS.wear !
-:::
+```
 
 - Cliquez sur "Create new.../Créer nouveau..." (2) pour commencer la création de votre fichier de clés.
 
-:::{admonition} INFORMATION !
+```{admonition} INFORMATION!
 :class: information
-Vous n'aurez besoin de créer le fichier de clés qu'une seule fois.
+You will only need to create the keystore once.
 If you have build AAPS before, do NOT create a new keystore but select your existing one!
-:::
+```
 
 **_Note:_** Le fichier de clés contient les informations nécessaires pour signer l'application. Il est crypté et les informations sont sécurisées avec un mot de passe.
 
@@ -367,10 +373,10 @@ If you have build AAPS before, do NOT create a new keystore but select your exis
 
 Cela vous ramènera à l'écran précédent. L'emplacement choisi pour enregistrer le fichier de clés est affiché.
 
-:::{admonition} ATTENTION !
-:class: avertissement
-Assurez-vous de conserver quelque part l'endroit où votre fichier de clés est stocké. Vous en aurez besoin lorsque vous compilerez la prochaine mise à jour d'AAPS !
-:::
+```{admonition} WARNING!
+:class: warning
+Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AndroidAPS update!
+```
 
 Maintenant choisissez un mot de passe simple (et conservez-le bien), saisissez-le dans le champ "Password/Mot de passe" (1) et confirmez-le (2).  Les mots de passe du fichier de clés et de la clé n'ont pas besoin d'être très complexes. Si jamais vous perdez votre mot de passe, consultez la page Dépannage : [Fichier de clés perdu](troubleshooting_androidstudio-lost-keystore).
 
@@ -378,10 +384,10 @@ L'alias par défaut (3) de votre clé est "key0", laissez-le tel quel.
 
 Il vous faut maintenant un mot de passe pour la clé. Pour simplifier, vous pouvez si vous le souhaitez, utiliser le même mot de passe que pour le fichier de clés au-dessus. Entrez le mot de passe (4) et confirmez-le (5).
 
-:::{admonition} ATTENTION !
-:class: avertissement
-Notez ces mots de passe ! You will need them when you build the next AAPS update!
-:::
+```{admonition} WARNING!
+:class: warning
+Note down these passwords! You will need them when you build the next AAPS update!
+```
 
 La validité (6) par défaut est de 25 ans, laissez-la telle quelle.
 

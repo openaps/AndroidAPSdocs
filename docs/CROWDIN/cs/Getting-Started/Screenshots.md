@@ -135,7 +135,7 @@ You need to find out why you get duplicate BGs:
 
 * Grain: [carbs on board (COB)](../Usage/COB-calculation.md) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
 
-* Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%) 
+* Fialový řádek: bazál – změny ikon odrážející dočasné změny bazálu (rovná linka při 100 %) 
    * Stisknutím ikony zobrazíte základní bazální dávku a podrobnosti o jakémkoli dočasném bazálu (včetně zbývající doby trvání)
 * Šipky nahoru a dolů: indikace aktuálního stavu [autosens](Open-APS-features-autosens) (povoleno nebo zakázáno) a hodnota je zobrazena pod ikonou
 
@@ -157,56 +157,56 @@ You need to find out why you get duplicate BGs:
    * Stáří inzulínu (doba použití aktuálního zásobníku)
    * Stav zásobníku (jednotky)
    * Stáří senzoru
-   * Battery age and level (%)
-* If threshold warning is exceeded, values will be shown in yellow.
-* If threshold critical is exceeded, values will be shown in red.
-* Settings can be made in [preferences](Preferences-status-lights).
+   * Stáří a úroveň (%) baterie
+* Pokud dojde k dosažení prahové hodnoty, zobrazí se hodnoty žlutě.
+* Pokud dojde k dosažení kritické prahové hodnoty, hodnoty se zobrazí červeně.
+* Nastavení indikátorů lze změnit v [Nastavení](Preferences-status-lights).
 
 (Screenshots-section-f-main-graph)=
 
 ### Sekce F – Hlavní graf
 
-![Section F](../images/Home2020_MainGraph.png)
+![Sekce F](../images/Home2020_MainGraph.png)
 
-* Graph shows your blood glucose (BG) as read from your glucose monitor (CGM). 
-* Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
-* Long press on the graph to change the time scale. You can choose 6, 12, 18 or 24 hours.
-* The green area reflects your target range. It can be configured in [preferences](Preferences-range-for-visualization).
-* Blue triangles show [SMB](Open-APS-features-super-micro-bolus-smb) - if enabled in [preferences](Preferences-openaps-smb-settings).
-* Optional information:
+* Graf zobrazuje vaši glykémii (BG), jak je načtena z vašeho senzoru (CGM). 
+* Zde jsou zobrazeny poznámky zadané na záložce Akce, jako jsou kalibrace pomocí měření glykémie z prstu, záznamy sacharidů a přepnutí profilu. 
+* Dlouhým přidržením prstu na grafu změníte časové měřítko. Můžete si vybrat 6, 12, 18 nebo 24 hodin.
+* Zelená plocha zobrazuje váš cílový rozsah. Lze ji upravit v [Nastavení](Preferences-range-for-visualization).
+* Modré trojúhelníky znázorňují jednotlivé [SMB](Open-APS-features-super-micro-bolus-smb) – jsou-li povoleny v [Nastavení](Preferences-openaps-smb-settings).
+* Volitelné informace:
    
    * Predikce
-   * Basals
-   * Activity - insulin activity curve
+   * Bazály
+   * Aktivita – Křivka aktivity inzulínu
 
-#### Activate optional information
+#### Aktivovat volitelné informace
 
-* Click the triangle on the right side of the main graph to select which information will be displayed in the main graph.
-* For the main graph just the three options above the line "\---\---- Graph 1 \---\----" are available.
+* Kliknutím na trojúhelník na pravé straně hlavního grafu vyberete, které informace se zobrazí v hlavním grafu.
+* For the main graph just the three options above the line "\---\-\--- Graph 1 \---\-\---" are available.
    
-   ![Main graph setting](../images/Home2020_MainGraphSetting.png)
+   ![Nastavení hlavního grafu](../images/Home2020_MainGraphSetting.png)
 
 (Screenshots-prediction-lines)=
 
-#### Prediction lines
+#### Linky predikce
 
-* **Orange** line: [COB](../Usage/COB-calculation.md) (colour is used generally to represent COB and carbs)
+* **Oranžová** linka: [COB](../Usage/COB-calculation.md) (barva se obecně používá k vizualizaci COB a sacharidů)
    
-   Prediction line shows where your BG (not where COB itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
+   Linka predikce ukazuje, jak se bude vaše glykémie (ne pouze samotné COB!) vyvíjet na základě aktuálního nastavení pumpy a za předpokladu, že odchylky způsobené absorpcí sacharidů zůstanou konstantní. Tato linka se zobrazí pouze v případě, že je známý COB.
 
-* **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
+* **Tmavě modrá** linka: IOB (barva se obecně používá k vizualizaci IOB a inzulínu)
    
-   Prediction line shows what would happen under the influence of insulin only. For example if you dialled in some insulin and then didn’t eat any carbs.
+   Linka předpovědi ukazuje, co by se stalo pouze pod vlivem inzulínu. Například, pokud jste aplikovali nějaký inzulín a pak nejedli žádné sacharidy.
 
-* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* **Světle modrá** linka: nulový dočasný bazál (předpověď glykémie, pokud by byl dočasný bazál nastaven na 0 %)
    
-   Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+   Prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
    
    *This line appears only when the [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
-* **Dark yellow** line: [UAM](Sensitivity-detection-and-COB-sensitivity-oref1) (un-announced meals)
+* **Tmavě žlutá** linka: [UAM](Sensitivity-detection-and-COB-sensitivity-oref1) (neohlášená jídla)
    
-   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+   Neohlášená jídla znamenají, že je zjištěn výrazný nárůst glykemie v důsledku jídla, adrenalinu nebo jiných vlivů. Linka předpovědi je podobná ORANŽOVÉ COB lince, ale předpokládá, že se odchylky budou snižovat konstantní rychlostí (rozšířením současné rychlosti snížení).
    
    *This line appears only when the [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
@@ -216,43 +216,43 @@ You need to find out why you get duplicate BGs:
    
    *This line appears only when the older [AMA](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+Obvykle vaše skutečná křivka glykémie končí uprostřed těchto linek nebo blízko k té, jejíž předpoklady se nejvíce podobají vaší situaci.
 
-#### Basals
+#### Bazály
 
-* A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
-* The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
-* In times standard basal rate is given the area under the curve is shown in dark blue.
-* When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
+* **Nepřerušovaná modrá** linka ukazuje bazál z pumpy, který se aktuálně vydává.
+* **Tečkovaná modrá** linka ukazuje, jaký bazál by se vydával, pokud by nedocházelo k žádné úpravě dočasného bazálu (TBR).
+* V době, kdy je vydáván standardní bazál, je plocha pod linkou zbarvena tmavě modře.
+* Když je bazální dávka dočasně upravena (zvýšena nebo snížena), plocha pod křivkou je znázorněna světle modře.
 
-#### Activity
+#### Aktivita
 
-* The **thin yellow** line shows the activity of Insulin. 
-* It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+* **Tenká žlutá** linka ukazuje aktivitu Inzulínu. 
+* Je založena na očekávaném poklesu glykémie odpovídajícímu množství inzulínu, pokud nebyly přítomny žádné jiné faktory (jako např. sacharidy).
 
 ### Sekce G – Další grafy
 
-* You can activate up to four additional graphs below the main graph.
-* To open settings for additional graphs click the triangle on the right side of the [main graph](Screenshots-section-f-main-graph) and scroll down.
+* Můžete aktivovat až čtyři další grafy pod hlavním grafem.
+* Chcete-li otevřít nastavení pro další grafy, klepněte na trojúhelník na pravé straně [hlavního grafu](Screenshots-section-f-main-graph) a rolujte dolů.
 
-![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+![Nastavení dalšího grafu](../images/Home2020_AdditionalGraphSetting.png)
 
-* To add an additional graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
+* To add an additional graph check the box on the left side of its name (i.e. \---\-\--- Graph 1 \---\-\---).
 
-#### Absolute insulin
+#### Absolutní inzulin
 
-* Active insulin including boluses **and basal**.
+* Aktivní inzulin včetně bolusů **a bazálu**.
 
-#### Insulin on board
+#### Aktivní inzulín
 
-* Shows the insulin you have on board (= active insulin in your body). Zahrnuje inzulín z bolusu a dočasného bazálu (**ale nezahrnuje bazální dávky nastavené ve vašem profilu**).
+* Zobrazuje vydaný inzulín, který je aktivní (= aktivní inzulín v těle). Zahrnuje inzulín z bolusu a dočasného bazálu (**ale nezahrnuje bazální dávky nastavené ve vašem profilu**).
 * Pokud by neexistovaly žádné [SMB](Open-APS-features-super-micro-bolus-smb), žádné bolusy ani žádné TBR během doby DIA, tato hodnota by byla nula.
 * IOB může být záporný, pokud již není aktivní žádný bolus a po delší dobu byl nastaven nulový/nízký dočasný bazál.
 * Odbourávání závisí na vaší hodnotě [DIA a nastavení inzulinového profilu](Config-Builder-local-profile). 
 
 #### Zbývající sacharidy
 
-* Shows the carbs you have on board (= active, not yet decayed carbs in your body). 
+* Zobrazuje zkonzumované sacharidy (= aktivní, dosud nevstřebané sacharidy v těle). 
 * Vstřebávání závisí na odchylkách, které detekuje algoritmus. 
 * Pokud se zjistí vyšší absorpce, než se očekávalo, může dojít k vydání inzulinu. To bude mít za následek zvýšení IOB (zda více či méně závisí na vašich bezpečnostních nastaveních). 
 
@@ -261,27 +261,27 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * **ŠEDÉ** sloupce zobrazují odchylku způsobenou sacharidy. 
 * **ZELENÉ** sloupce ukazují, že je glykémie vyšší, než algoritmus očekával. Green bars are used to increase resistance in [Autosens](Open-APS-features-autosens).
 * **ČERVENÉ** sloupce ukazují, že je glykémie nižší, než algoritmus očekával. Red bars are used to increase sensitivity in [Autosens](Open-APS-features-autosens).
-* **YELLOW** bars show a deviation due to UAM.
-* **BLACK** bars show small deviations not taken into account for sensitivity
+* **ŽLUTÉ** sloupce ukazují odchylky způsobené UAM.
+* **ČERNÉ** sloupce ukazují drobné odchylky, které nejsou pro citlivost zohledňovány
 
 #### Citlivost
 
 * Shows the sensitivity that [Autosens](Open-APS-features-autosens) has detected. 
-* Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
+* Citlivost je výpočet citlivosti na inzulín v důsledku pohybu, hormonů atd.
 
-#### Activity
+#### Aktivita
 
 * Shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). 
-* The value is higher for insulin closer to peak time.
-* It would mean to be negative when IOB is decreasing. 
+* Hodnota je vyšší pro inzulín blíže době špičky.
+* Derivace by znamenala, že aktivita bude záporná, pokud IOB klesá. 
 
-#### Deviation slope
+#### Odchylka sklonu
 
 * Internal value used in algorithm.
 
 ### Section H - Buttons
 
-![Homescreen buttons](../images/Home2020_Buttons.png)
+![Tlačítka domovské obrazovky](../images/Home2020_Buttons.png)
 
 * Buttons for insulin, carbs and Calculator are almost'always on'.
    
@@ -291,7 +291,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Inzulín
 
-![Insulin button](../images/Home2020_ButtonInsulin.png)
+![Tlačítko inzulín](../images/Home2020_ButtonInsulin.png)
 
 * To give a certain amount of insulin without using [bolus calculator](Screenshots-bolus-wizard).
 * By checking the box you can automatically start your [eating soon temp target](Preferences-default-temp-targets).
@@ -299,22 +299,22 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Sacharidy
 
-![Carbs button](../images/Home2020_ButtonCarbs.png)
+![Tlačítko sacharidy](../images/Home2020_ButtonCarbs.png)
 
-* To record carbs without bolusing.
+* Zadání sacharidů bez podání bolusu.
 * Certain [pre-set temporary targets](Preferences-default-temp-targets) can be set directly by checking the box.
 * Time offset: When will you / have you been eaten carbs (in minutes).
 * Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.md)
-* You can use the buttons to quickly increase carb amount.
+* Můžete použít tlačítka pro rychlému zvýšení hodnoty sacharidů.
 * Notes will be uploaded to Nightscout - depending on your settings for [NS client](Preferences-nsclient).
 
 #### Kalkulačka
 
 * See Bolus Wizard [section below](Screenshots-bolus-wizard)
 
-#### Calibrations
+#### Kalibrace
 
-* Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
+* Odeslání kalibrace do xDrip+ nebo otevře dialogové okno pro kalibraci Dexcom.
 * Must be activated in [preferences](Preferences-buttons).
 
 #### CGM
@@ -332,16 +332,16 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ## Bolus Wizard
 
-![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
+![Bolusová kalkulačka](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus this is where you will normally make it from.
+Když se chystáte odesílat bolus k jídlu, dobře se k tomu hodí funkce kalkulátor.
 
 ### Section I
 
-* BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. 
-* In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. 
+* BG field is normally already populated with the latest reading from your CGM. Pokud právě nemáte senzor v provozu, pak bude pole prázdné. 
+* Do políčka "Sacharidy" vkládáte odhadované množství sacharidů (nebo ekvivalentní hodnotu), ke kterým chcete poslat bolus. 
 * The CORR field is if you want to modify the end dosage for some reason.
-* The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+* The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. Můžete zde zadat i záporné číslo, pokud později dopichujete bolus k dříve zkonzumovaným sacharidům.
 
 (Screenshots-eating-reminder)=
 
@@ -349,48 +349,48 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AAPS
    
-   ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
+   ![Poradce s bolusem s připomenutím jídla](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Section J
 
-* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable [superbolus](Preferences-superbolus) in wizard" is set in the [preferences overview](Preferences-overview).
-* The idea is to deliver the insulin sooner and hopefully reduce spikes.
+* SUPERBOLUS je funkce, kdy je k dávce okamžitého bolusu přičtený bazální inzulín za následující dvě hodiny a zároveň je pumpě nastavená dočasná bazální dávka 0% na dvě hodiny, aby se tak vybalancoval zpět extra podaný inzulín. The option only shows when "Enable [superbolus](Preferences-superbolus) in wizard" is set in the [preferences overview](Preferences-overview).
+* Cílem je dodat inzulín dřív, aby se snížil kopec, který na grafu glykémie obvykle následuje.
 * For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
 ### Section K
 
-* Shows the calculated bolus. 
-* If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+* Zobrazuje vypočtený bolus. 
+* Pokud množství již aktivního inzulínu v krvi převyšuje vypočtený bolus, pak se jen zobrazí doporučené množství sacharidů k jeho pokrytí.
 * Notes will be uploaded to Nightscout - depending on your settings for [NS client](Preferences-nsclient).
 
 ### Section L
 
 * Details of wizard's bolus calculation.
-* You can deselect any that you do not want to include but you normally wouldn't want to.
+* Můžete odznačit všechny, které se vám nehodí, ale normálně by k tomu neměl být důvod.
 * For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
 
-#### Combinations of COB and IOB and what they mean
+#### Kombinace COB a IOB a jejich význam
 
 * For safety reasons IOB boxed cannot be unticked when COB box is ticked as you might run the risk of too much insulin as AAPS is not accounting for what’s already given.
-* If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
-* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
+* Pokud vyberete COB a IOB, budou při výpočtu zohledněny nestrávané sacharidy, které již nejsou pokryty inzulinem + veškerý inzulin, který byl dodán jako DBD nebo SMB.
+* Pokud vyberete IOB bez COB, AAPS bude zohledňovat již vydaný inzulin, ale nezapočítá žádné zkonzumované sacharidy, které dosud nejsou stráveny. To vede k oznámení o 'chybějících sacharidech'.
+* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. Tak lze přidat pouze nově zkonzumované sacharidy, jelikož hlavní jídlo dosud nemusí být stráveno, takže IOB krátce po bolusu k jídlu nebude přesně odpovídat množství COB.
 
 (Screenshots-wrong-cob-detection)=
 
-#### Wrong COB detection
+#### Chybná detekce COB
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+![Pomalá absorpce sacharidů](../images/Calculator_SlowCarbAbsorption.png)
 
 * If you see the warning above after using bolus wizard, AAPS has detected that the calculated COB value maybe wrong.
-* So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
-* For details see the hints on [COB calculation page](COB-calculation-detection-of-wrong-cob-values).
+* Takže chcete-li si dát bolus znovu po předchozím jídle s COB, měli byste si dát pozor na možné předávkování inzulinem! 
+* Podrobnosti viz pokyny na [stránce výpočtu COB](COB-calculation-detection-of-wrong-cob-values).
 
 (Screenshots-action-tab)=
 
 ## Action tab
 
-![Actions tab](../images/Home2021_Action.png)
+![Záložka Akce](../images/Home2021_Action.png)
 
 ### Actions - section M
 
@@ -411,7 +411,7 @@ When you want to make a meal bolus this is where you will normally make it from.
    
    * sensor age & level (battery percentage)
    * insulin age & level (units)
-   * cannula age
+   * stáří kanyly
    * pump battery age & level (percentage
 
 * Less information will be shown if [low resolution skin](Preferences-skin) is used.
@@ -425,7 +425,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 * Thresholds can be set in [preferences](Preferences-status-lights).
 * If sensor level is the same as phone battery level you xDrip+ version is probably too old and needs an update.
    
-   ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
+   ![Úrovně senzoru se rovnají úrovni baterie telefonu](../images/Home2021_ActionSensorBat.png)
 
 ### Careportal - section O
 
@@ -442,12 +442,12 @@ When you want to make a meal bolus this is where you will normally make it from.
 #### CDD
 
 * Total daily dose = bolus + basal per day
-* Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 
-* Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 
-* Others prefer range of 32% to 37% of TDD for TBB. 
-* Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+* Někteří lékaři doporučují – hlavně pro nové uživatele pumpy – poměr bazál-bolus 50:50. 
+* Poměr se proto vypočítá jako TDD / 2 * TBB (celková denní dávka = součet hodnot bazálních dávek za 24 hodin). 
+* Jiní dávají přednost hodnotám, kdy TBB tvoří 32 % až 37 % z TDD. 
+* Stejně jako podobná pravidla má i toto v reálném životě omezenou platnost. Poznámka: Váš diabetes může být jiný!
 
-![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
+![Prohlížeč historie + TDD](../images/Home2021_Action_HB_TDD.png)
 
 (Screenshots-insulin-profile))=
 
@@ -456,14 +456,14 @@ When you want to make a meal bolus this is where you will normally make it from.
 ![Inzulínový profil](../images/Screenshot_insulin_profile.png)
 
 * This shows the activity profile of the insulin you have chosen in [config builder](Config-Builder-insulin). 
-* The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
+* FIALOVÁ linka ukazuje, jaké množství inzulínu průběžně v čase zůstává od aplikace k úplnému rozložení, a MODRÁ linka ukazuje, nakolik je v čase aktivní.
 * The important thing to note is that the decay has a long tail. 
-* If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
+* Pokud jste byli zvyklí na ruční podávání inzulínu, pravděpodobně jste předpokládali, že inzulín se bude postupně spotřebovávat asi 3,5 hodiny. 
 * However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AAPS algorithm.
 
-For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+Pro podrobnější informace o různých typech inzulínu, o jejich profilech aktivity a proč je to vše důležité, si můžete přečíst článek [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+A také si o tom můžete přečíst výborný článek blogu zde: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
 And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
@@ -489,13 +489,13 @@ Careportal replicated the functions you will find on your Nightscout screen unde
 
 ### Korekce sacharidy
 
-![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+![Ošetření na 1 nebo 2 řádky](../images/Treatment_1or2_lines.png)
 
-Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+Záložka ošetření může být použita k opravě chybných záznamů sacharidů (např. jste sacharidy přecenili nebo podcenili).
 
 1. Zkontrolujte a zapamatujte si aktuální COB a IOB na domovské obrazovce.
 2. V závislosti na pumpě se mohou sacharidy v záložce ošetření zobrazovat společně s inzulínem v jednom řádku nebo jako samostatný záznam (např. s Danou RS).
-3. Odstraňte záznam s chybným množstvím sacharidů.
+3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
 4. Ujistěte se, že sacharidy byly úspěšně odstraněny kontrolou COB na domovské obrazovce.
 5. Kontrolu proveďte také pro IOB, pokud v záložce ošetření jeden řádek obsahuje sacharidy i inzulín.
    
@@ -520,7 +520,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
    * DIA (Duration of Insulin Action)
    * IC or I:C: Insulin to Carb ratio
    * ISF: Insulin Sensitivity Factor
-   * Basal rate
+   * Bazální dávka
    * Target: Blood glucose level that you want AAPS to be aiming for
 
 * As of version 3.0 only [local profile](Config-Builder-local-profile) is possible. The local profile can be edited on your smartphone and synced to your Nightscout site.
@@ -534,13 +534,13 @@ History of the following treatments:
 * Bolus & carbs -> option to [remove entries](Screenshots-carb-correction) to correct history
 * [Prodloužený bolus](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Temporary basal rate
-* [Temporary target](../Usage/temptarget.md)
+* [Dočasný cíl](../Usage/temptarget.md)
 * [Přepínání profilu](../Usage/Profiles.md)
 * [Careportal](CPbefore26-careportal-discontinued) - notes entered through action tab and notes in dialogues
 
 ## BG Source - xDrip+, BYODA...
 
-![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
+![Zdroj glykémie- zde xDrip](../images/Screenshots_BGSource.png)
 
 * Depending on your BG source settings this tab is named differently.
 * Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).

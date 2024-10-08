@@ -1,7 +1,7 @@
 # Změnit jazyk
 
 ```{note}
-The language selection have been moved to the bottom drawer of the left menu. Please click on the bottom bar to open language selection menu.
+Výběr jazyka byl přesunut do spodního výsuvného menu v levé nabídce. Klepněte prosím na spodní pruh a otevřete nabídku výběru jazyka.
 ```
 
 ![Open language menu](images/documentation_language_menu.png){w=350px align=center}

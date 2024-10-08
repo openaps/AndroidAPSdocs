@@ -29,27 +29,28 @@ Section 9) covers **Advanced AAPS options** such as how to progress from using *
 
 In section 10) [How to support AAPS](make-a-PR.md) we provide  information so that you can support this project. You can donate money, equipment or expertise. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](translations.md) and provide your data through the Open Humans project.
 
-Section 11 contains archived or additional documentation, including a subsection for [clinicians](Resources/clinician-guide-to-AAPS.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. More diabetes and looping references and resources are contained in Section 12.
+Section 11) contains archived or additional documentation, including a subsection for [clinicians](Resources/clinician-guide-to-AAPS.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. More diabetes and looping references and resources are contained in Section 12).
 
 
  ### Interested in getting started with **AAPS**? Read more about **AAPS** in the [Introduction](introduction.md).
 
-:::{admonition} SAFETY NOTICE
-:class: danger The safety of **AAPS** relies on the safety features of your hardware (phone, pump, CGM). Only use a fully functioning FDA/CE approved insulin pump and CGM. Do not use broken, modified or self-built insulin pumps or CGM receivers. Only use original consumable supplies (inserters, cannulas and insulin reservoirs) approved by the manufacturer for use with your pump and CGM. Using untested or modified supplies can cause inaccuracy and insulin dosing errors, resulting in significant risk to the user.
+```{admonition} SAFETY NOTICE
+:class: danger
+The safety of **AAPS** relies on the safety features of your hardware (phone, pump, CGM). Only use a fully functioning FDA/CE approved insulin pump and CGM. Do not use broken, modified or self-built insulin pumps or CGM receivers. Only use original consumable supplies (inserters, cannulas and insulin reservoirs) approved by the manufacturer for use with your pump and CGM. Using untested or modified supplies can cause inaccuracy and insulin dosing errors, resulting in significant risk to the user. 
 
-Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower blood sugar levels. You increase the risk diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels.
-:::
+Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower blood sugar levels. You increase the risk diabetic ketoacidosis (DKA) due to reduced insulin delivery and hypoglycemia due to lowered blood sugar levels. 
+```
 
-:::{admonition} Disclaimer
+```{admonition} Disclaimer
 :class: note
 
-- All information and code described here is for informational and educational purposes only. Use [Nightscout](https://nightscout.github.io/) and **AAPS** at your own risk, and do not use the information or code to make medical decisions. Nightscout은 현재 HIPAA 개인 정보 보호 준수 규약을 따르지 않습니다.
+- All information and code described here is for informational and educational purposes only. Use [Nightscout](https://nightscout.github.io/) and **AAPS** at your own risk, and do not use the information or code to make medical decisions. Nightscout은 현재 HIPAA 개인 정보 보호 준수 규약을 따르지 않습니다. 
 - Use of code from github.com is without warranty or formal support of any kind. 자세한 것은 이 곳의 라이센스에 대한 자세한 내용을 참고하세요.
 - All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. 그것들을 사용한 것은 정보를 제공하기 위한 목적이며, 그들과의 제휴 또는 보증을 의미하지는 않습니다.
 
 **AAPS** has no association with, and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
 
-:::
+```
 
 (AAPS-Documentation-Index)=
 
@@ -77,7 +78,9 @@ Setting up the reporting server <./Installing-AndroidAPS/setting-up-the-reportin
 Building AAPS <./Installing-AndroidAPS/building-AAPS.md>
 Transferring and Installing AAPS <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
 Setup Wizard<./Installing-AndroidAPS/setup-wizard.md>
-Change AAPS configuration<./Installing-AndroidAPS/change-configuration.md>
+Change AAPS configuration <./Installing-AndroidAPS/change-configuration.md>
+- Config Builder <./Configuration/Config-Builder.md>
+- Preferences <./Configuration/Preferences.md>
 Completing the objectives <./Usage/completing-the-objectives.md>
 ```
 

@@ -21,7 +21,7 @@ To view documentation, visit https://androidaps.readthedocs.io
 | [Herbrew](https://androidaps.readthedocs.io/he/latest/)    | [![Documentation Status](https://readthedocs.org/projects/androidaps-he/badge/?version=latest)](https://readthedocs.org/projects/androidaps-he/builds/) | [![Build Warnings - he](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Andries-Smit/4d086495590ccb904468b66aecc48bdb/raw/AndroidAPSdocs_build_warnings_he_master.json)](../../actions?query=workflow%3A%22Build+Warnings%22) | [![Link Checker - he](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Andries-Smit/fc7bdcb3bc52e1ae006b2435ac6001b4/raw/AndroidAPSdocs_broken_links_he_master.json)](../../actions?query=workflow%3A%22Link+Checker%22) |
 
 
-**Note:** Issues in the source language "English" should be fixed in [GitHub](https://github.com/openaps/AndroidAPSdocs). Issues in translation should be fixed via [CROWDIN](https://crowdin.com/project/androidapsdocs) platform.
+**Note:** Issues in the source language "English" should be fixed in [GitHub](https://github.com/openaps/AndroidAPSdocs). Issues in translation should be fixed via [Crowdin](https://crowdin.com/project/androidapsdocs) platform.
 
 ### Build and Warning
 

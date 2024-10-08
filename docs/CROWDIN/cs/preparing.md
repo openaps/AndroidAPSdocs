@@ -1,35 +1,36 @@
-# Preparing to start with AAPS
+# Příprava na začátek s AAPS
 
-Welcome. This documentation aims to guide users who are preparing to setup and start using the Android Artificial Pancreas System (**AAPS**).
+Vítejte. Tato dokumentace si klade za cíl vést uživatele, kteří se připravují na nastavení a začátek používání systému umělé slinivky Android APS (**AAPS**).
 
-## Finding your way around the documentation
+## Orientace v dokumentaci
 
-An **index** and explanation of the documentation structure can be found [here](index.md), you can also reach it by clicking on the **AAPS** symbol at the top left of the documentation. There you will find an overview of the purpose of the different documentation sections. You can also use the headings to the left of this page to navigate through the documentation. Finally, there is a handy search function, directly below the **AAPS** symbol.
+**Index** a vysvětlení struktury dokumentace můžete najít [zde](index.md) a můžete se k němu také dostat klepnutím na symbol **AAPS** v levém horním rohu. Zde naleznete přehled účelu jednotlivých sekcí dokumentace. Můžete také použít nadpisy nalevo od této stránky k navigaci dokumentací. Konečně je tu šikovná funkce vyhledávání, přímo pod **AAPS**.
 
-We aim to make it easy to determine both the capabilities and limitations of **AAPS**. It can be disappointing to discover after investing time in reading the documentation that you might not have a compatible insulin pump or CGM, or that **AAPS** offers different functionality than hoped for.
+Snažíme se umožnit jednoše pochobit možnosti a limity **AAPS**. Po investování času do čtení dokumentace může být zklamáním zjistit, že třeba nemáte kompatibilní inzulínovou pumpu nebo CGM, nebo že **AAPS** nabízí jinou funkcionalitu než jste očekávali.
 
-Many experience-related details in the **AAPS** documentation make more sense when you are actually using **AAPS** in real-time. Just as it is difficult to learn a sport only by reading the rules, it takes a combination of learning the foundations of the rules for safely operating **AAPS** and then learning how best to apply those rules as you start to use **AAPS**.
+Mnoho detailů v **AAPS** dokumentaci dává větší smysl, když **AAPS** skutečně používáte. Stejně tak, jako je obtížné se nauřit sport pouhým přečtením pravidel, je nutná kombinace naučení se základních pravidel pro bezpečné provozování **AAPS** a naučení se, jak je používat, jakmile **AAPS** spustíte.
 
 (preparing-safety-first)=
 
 ## Bezpečnost především
-“With great power comes great responsibility…”
+"S velkou mocí přichází velká odpovědnost..."
 
-### Technical safety
-**AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](Usage/Objectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
+### Technická bezpečnost
+**AAPS** má rozsáhlou sadu bezpečnostních prvků. Tato vynucená omezení jsou postupně uvolňována díky plnění série [cílů](Usage/Objectives.md), které zahrnují testování konkrétních parametrů a otázky s více možnými odpověďmi. Všechny funkce **AAPS** budou odemnknuty po úspěšném splnění cílů. Tento postup umožňuje uživateli bezpečný postup od otevřené k uzavřené smyčce, zatímco se učí o různých funkcích **AAPS**.
 
-The [Objectives](Usage/Objectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The [Objectives](Usage/Objectives.md) aim to minimise these issues.
+Tyto [cíle](Usage/Objectives.md) byly navrženy tak, aby co nejlépe představili **AAPS** a vzali do úvahy tpické chyby a trendy, které vývojáři **AAPS** vysledovali u nových uživatelů. Chyby můžou nastat protože nováčci jsou nezkušení a příliš dychtivý ke spuštění **AAPS**, nebo přehlédli důležité body. [Cíle](Usage/Objectives.md) jsou zaměřené na minimalizaci těchto problémů.
 
-### Medical safety
-:::{admonition} Avoid permanent and painful damage to your eyes and nerves
-:class: danger Caution is advised concerning rapid improvements in blood glucose control and lowering of HbA1c
-:::
+### Zdravotní bezpečnost
+```{admonition} Avoid permanent and painful damage to your eyes and nerves
+:class: danger
+Caution is advised concerning rapid improvements in blood glucose control and lowering of HbA1c 
+```
 
 An important safety consideration is that a **rapid reduction in HbA1c and improved blood glucose control in those who have had elevated glucose levels for some time can cause permanent damage**. Many people with diabetes are unaware of this, and not all clinicans make their patients aware of this issue.
 
 This damage can include **sight loss, and permanent neuropathy (pain)**. It is possible to avoid this damage occuring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 10.6 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
 
-#### How quickly can I reduce my HbA1c without risking permanent damage?
+#### Jak rychle můžu snížit můj HbA1c bez rizika trvalých následků?
 
 One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the Hba1C dropped 1%, 2% or 3% respectively over a 6 month period. They suggested that the **"decrease in HbA1c value during any 6-month period should be limited to less than 2% in order to prevent the progression of retinopathy....Too rapid a decrease at the initiation of glycemic control could cause severe or transient exacerbation of the progression of retinopathy."**
 
@@ -43,182 +44,186 @@ A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this wo
 
 It is generally recognised that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
 
-### No SGLT-2 inhibitors
+### Žádné SGLT-2 inhibitory
 
-:::{admonition} NO SGLT-2 inhibitors
-:class: danger SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous.
+```{admonition} NO SGLT-2 inhibitors
+:class: danger
+SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous. 
 
 In a nutshell:
 - **Example 1: risk of Hypo**
-> During lunch, you use **AAPS** to bolus based on consuming 45g of glucose. The problem is that unbeknownst to AAPS, the inhibitors cause the body to eliminate some of the carbs resulting in your body having too much insulin compared to the absorbed Carbs, resulting in hypoglycemia.
+>During lunch, you use **AAPS** to bolus based on consuming 45g of glucose. Problémem je, že AAPS není známo, že inhibitory způsobují odstranění některých sacharidů tělem, což vede k tomu, že v těle je příliš mnoho inzulínu vzhledem k absorbovaným sacharidům a výsledkem je hypoglykémie.
 
 - **Example 2: risk of Ketoacidosis**
-> The inhibitors eliminate some of the carbs in the background causing a reduction in your BG. **AAPS** will automatically instruct the pump to decrease insulin intake  including basal. Over time this can result  in your  BG remaining below target value to the point where the body does not have enough background insulin to absorb any carbs resulting in Ketoacidosis. Ordinarily, Ketoacidosis  develops in T1D patients because their pump fails which would trigger alerts on their phone and be noticeable due to a high BG value. However, the danger with Gliflozins  is that there would be no AAPS alerts as  the pump remains operational and the BG potentially remains within target.
+>The inhibitors eliminate some of the carbs in the background causing a reduction in your BG. **AAPS** will automatically instruct the pump to decrease insulin intake  including basal. V průběhu času to může způsobit, že vaše glykémie zůstane pod cílovou hodnotou až do chvíle, kdy tělo nemá dostatek inzulínu k tomu, aby absorbovalo všechny sacharidy, a to má za následek ketoacidózu. Obvykle se Ketoacidóza u T1D pacientů rozvine z důvodu výpadku inzulínové pumpy což spustí alarm na jejich telefonu a zároveň to bude patrné díky vysoké hodnotě glykémie. Nebezpečí Glifozinů ale spočívá v tom, že AAPS nespustí žádné upozornění, protože pumpa je stále funkční a hladina cukru v krvi zústává v cílovém rozsahu.  
 
-Common brand names of SGLT-2 inhibitors include: Invokana, Farxiga, Jardiance, Glyxambi, Synjardy, Steglatro, and Xigduo XR, others.
-:::
-
-
-### Key principles of looping with AAPS
-
-The key principles and concepts of looping must be understood before using **AAPS**. This is achieved by investing your personal time into reading the **AAPS** documentation, and completing the Objectives which aim to provide you with a solid platform for safe and effective use of **AAPS**. The volume of **AAPS** documentation may seem overwhelming at first but be patient and trust the process - with the proper approach, you'll get there!
-
-The speed of progression will depend upon the individual, but be aware that completion of all the objectives typically takes 6 - 9 weeks. Many people start to build, install and setup **AAPS** well in advance of starting to use it. To aid with this, the system has a "virtual pump" which can be used during completion of the early objectives, so that you can become familiar with **AAPS** without actually using it to deliver insulin. A detailed breakdown of the timeline is given below, be aware that by objective 8 of **AAPS** you are closed looping, the later objectives add in additional features like **SMS commands** and **automations** which are useful to some users, but not essential to the core function of **AAPS**.
-
-Success with **AAPS** requires a proactive approach, a willingness to reflect on the BG data and flexibility to make the necessary adjustments to **AAPS** in order to improve your outcomes. Just as it is nearly impossible to learn to play a sport by reading about the rules alone, the same can be said of **AAPS**.
-
-#### Plan for delays and minor issues in getting everything set up and running
-
-In the preliminary stages of getting started with **AAPS**, you may experience difficulties getting all the components of the loop communicating effectively with each other (and potential followers), and when fine-tuning your settings. Some glitches cannot be resolved until **AAPS** is used in everyday life, but plenty of help is available on the Facebook group and Discord. Please plan accordingly and choose "good" times, like a quiet morning of a weekend (i.e. not late at night or when you are tired, or before a big meeting or travel) to troubleshoot and resolve issues.
-
-#### Technology compatibility
-
-**AAPS** is only compatible with certain types of insulin pumps, CGMs and phones, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read the [CGM](Configuration/BG-Source.md), [pump](Getting-Started/Pump-Choices.md) and [phone](Hardware/Phoneconfig.md) sections.
-
-#### App build time and progressing to full looping
-
-The time to build the **AAPS** app  depends on your level of expertise and technical ability. Typically for inexperienced users, it can take up to half a day or a full day (with help from the community) in order to build **AAPS**. The process will significantly speed up for newer **AAPS** versions, as you become more experienced.
-
-To aid the build process there are dedicated sections:
-
-- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](Getting-Started/FAQ.md) K);
-
-- “[How to install AAPS](Installing-AndroidAPS/Building-APK.md)? (Section D) which includes [Troubleshooting](Usage/troubleshooting.md) Subsection.
-
-How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](how-long-will-it-take))
+Běžné obchodní názvy SGLT-2 inhibitorů zahrnují: Invokana, Farxida, Jardiance, Glyxambi, Synjardy, Steglatro, Xigduo XR a další.
+```
 
 
-#### Keystore & configuration settings export file
+### Klíčové principy smyčky s AAPS
 
-A “keystore” (.jks file) is a password encrypted file unique to your own copy of **AAPS**. Your Android phone uses it to ensure that nobody else can upgrade your own copy without the keystore. In short, as part of the **AAPS** build, you should:
+Hlavním zásadám a pojmům problematiky smyčky musí uživatel porozumnět před začátkem používání **AAPS**. Toho lze dosáhnout obětováním vašeho času k přečtení dokumentace **AAPS** a dokončením cílů, které jsou zaměřené na poskytnutí pevných základů pro bezpečné a efektivní používání **AAPS**. Objem **AAPS** dokumentace se může zprvu zdát nepřekonatelný, ale když budete trpělivý a budete věřit postupu, dostanete se do cíle!
 
-1.  Save the your keystore file (.jks file used to sign your app) in a safe place;
+Rychlost postupu bude záviset na jednotlivci, ale uvědomte si, že splnění všech cílů obvykle trvá 6-9 týdnů. Mnoho lidí sestavuje, instaluje a nastavuje **AAPS** dlouho před tím, než ho začne používat. K tomu má systém "virtuální pumpu", kterou můžete využít během plnění počátečních cílů, abyste se mohli seznámit s **AAPS**, aniž byste ho skutečně používali k dávkování inzulínu. Detailní časová osa je uvedena níže, ale počítejte s tím, že splněním cíle 8 **AAPS** začínáte používat uzavřenou smyčku. Další cíle přidávají doplňkové funkce jako **řízení pomocí SMS** a **automatizaci**, které někteří uživatelé využijí, ale nejsou zásadní pro fungování **AAPS**.
 
-2.  Keep a note of your password for your keystore file.
+Úspěch s **AAPS** vyžaduje proaktivní přístup, ochotu reagovat na data o krevním cukru a pružný přístup k provedení potřebných úprav nastavení **AAPS** za účelem zlepšení vašich výsledků. Je téměř nemožné naučit se nějaký sport pouze přečtením pravidel a to samé se nechá říct o **AAPS**.
 
-This will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. On average, there will be 2 **AAPS** updates required each year.
+#### Připravte se na zpoždění a drobné problémy při astavování a spouštění aplikace
 
-In addition, **AAPS** provides the ability to [export all your configuration settings](Usage/ExportImportSettings.md). This ensures that you can safely recover your system while changing phones, upgrading/reinstalling the application with minimum disruption. 
+V počátečních fázích zahájení provozu **AAPS** může docházet k potížím se zprovozněním všech komponent smyčky, správným zajištěním jejich vzájemné komunikace (a s potenciálními sledujícími) a při ladění nastavení. Některé problémy není možné vyřešit, dokud **AAPS** denně nevyužíváte, ale ve Facebookové skupině nebo na Discordu získáte veškerou potřebnou pomoc a podporu. Řešení zádrhelů a problémů si zkuste naplánovat na vhodnou dobu, jako například klidné víkendové ráno (takže raději ne pozdě v noci, když jste unavení, nebo před důležitou schůzkou či cestou).
+
+#### Technologická kompatibilita
+
+**AAPS** je kompatibilní pouze s určitými typy inzulínových pump, senzorů a telefonů a některé technologie nemusí být dostupné ve všech zemích. Abyste se vyhnuli zklamání nebo frustraci, přečtěte si prosím v dokumentaci oddíly [CGM](Configuration/BG-Source.md), [Inzulínové pumpy](Getting-Started/Pump-Choices.md) a [Telefony](Hardware/Phoneconfig.md).
+
+#### Čas potřebný k sestavení aplikace a postup k plné smyčce
+
+Čas potřebný na sestavení **AAPS** zavisí na vaší odborné úrovni a technických schopnostech. Nezkušenému uživateli může sestavení **AAPS** trvat (s pomocí komunity) půl dne až celý den. Jak budete v průběhu času získávat více zkušeností, postup sestavení nových verzí **AAPS** se výrazně urychlí.
+
+Pro podporu procesu sestavení aplikace jsou vyčleněny tyto oddíly dokumentace:
+
+- seznam orázek a odpovědí zaměřený na časté chyby v rámci FAQ (oddíl K);
+
+- „[Jak nainstalovat AAPS](Installing-AndroidAPS/Building-APK.md)? (sekce D), která zahrnuje pododdíl [Řešení problémů](Usage/troubleshooting.md).
+
+How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#how-long-will-it-take-to-set-everything-up))
+
+
+#### Úložiště klíčů a konfigurace exportu nastavených hodnot
+
+Úložiště klíčů (keystore) je heslem chráněný šifrovaný soubor jedinečný pro vaši kopii **AAPS**. Váš Android telefon soubor úložiště klíčů využívá k zajištění toho, že nikdo jiný nebude moct aktualizovat vaši kopii Aaps. Stručně řešeno, jako součást sestavení **AAPS** byste měli:
+
+1.  Uložit váš soubor úložiště klíčů (.jks soubor použitý k podepsání vaší aplikace) na bezpečné místo;
+
+2.  Zaznamenat si heslo k vašemu souboru úložiště klíčů.
+
+
+Tím zajistíte, že při každém dalším sestavení aktualizované verze **AAPS** budete moct použít stejný soubor úložiště klíčů. V průměru budou potřebné 2 aktualizace **AAPS** ročně.
+
+**AAPS** navíc umožňuje [exportovat všechny vaše nastavené hodnoty.](Usage/ExportImportSettings.md) To vám umožní bezpečně obnovit váš systém s minimálním výpadkem v případě změny telefonu, aktualizace/přeinstalování aplikace. 
 
 #### Řešení problémů
 
-Please feel free to reach out to the AAPS community if there is anything you feel unsure about - there is no such thing as a silly question! All users with various levels of experience are encouraged to ask questions. Response times to questions are usually quick due to the number of **AAPS** users.
+Prosím, neváhejte se obrátit na komunitu AAPS, pokud si s něčím nejste jistí - neexistují žádné pošetilé otázky! Všichni uživatelé, bez ohledu na úroveň jejich zkušeností, mohou klást otázky podle potřeby. Díky množství **AAPS** uživatelů dostanete obvykle odpovědi na vaše otázky poměrně rychle.
 
-##### [ask on the AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/)
+##### [Zeptejte se na facebookové skupině AAPS](https://www.facebook.com/groups/AndroidAPSUsers/)
 
-##### [ask on the AAPS Discord channel](https://discord.com/channels/629952586895851530/629954570394533889)
-
-
+##### [Zeptejte se Discord kanálu AAPS](https://discord.gg/4fQUWHZ4Mw)
 
 
 
-#### [Where to go for help](Where-To-Go-For-Help/Background-reading.md)?
 
-This section is aimed to provide new users with links on resources in order to get help including accessing community support made up of both new and experienced users who can clarify questions, and resolve the usual pitfalls that come with AAPS.
 
-#### [Section For Clinicians](Resources/clinician-guide-to-AndroidAPS.md)
+#### [Kde získat pomoc?](Where-To-Go-For-Help/Background-reading.md)
 
-This is a [section specificially for clinicians](Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.
+Cílem této sekce je poskytnout novým uživatelům odkazy na zdroje, aby získali pomoc včetně přístupu ke komunitní podpoře složené z nových i zkušených uživatelů, kteří mohou objasnit otázky, a vyřešit obvyklé nástrahy, které přicházejí s AAPS.
 
-## What are we going to build and install?
+#### [Oddíl pro lékaře](Resources/clinician-guide-to-AndroidAPS.md)
 
-This diagram provides an overview of the key components (both hardware and software) of the **AAPS** system:
+Tato [sekce je zaměřená na lékaře](Resources/clinician-guide-to-AndroidAPS.md), kteří se chtějí dozvědět více informací o AAPS a open source technologii umělé slinivky. Jsou zde také doporučení, jak postupovat při úvodním [rozhovoru s Vaším lékařským týmem](introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team).
+
+## Co budeme sestavovat a instalovat?
+
+Tento diagram poskytuje přehled klíčových komponent (jak hardwarových, tak softwarových) systému **AAPS**:
 
 ![preparing_overview](./images/preparing_images/AAPS_preparing_overview_01.png)
 
 
-In addition to the three basic hardware components (phone, pump, glucose sensor), we also need: 1) The **AAPS** app 2) A reporting server and 3) A continuous glucose monitor (CGM) app
+Kromě tří základních hardwarových komponentů (telefon, pumpa, glukózový senzor) potřebujeme také: 1) AAPS aplikaci 2) Reportovací server a 3) Aplikaci pro kontinuální sledování hladiny glukózy (CGM)
 
-### 1) An Android Phone Application: **AAPS**
+### 1) Aplikace pro Android telefon: **AAPS**
 
-**AAPS** is an app that runs on android smartphones & devices. You are going to build the **AAPS** app (an apk file) yourself, using a step-by-step guide, by downloading the **AAPS** source code from Github, installing the necessary programs (Android Studio, GitHub desktop) on your computer and building your own copy of **AAPS** app. You will then transfer the **AAPS** app across to your smartphone (by email, USB cable _etc._) and install it.
+**AAPS** je aplikace, která běží na Android smartphonech a dalších zařízeních. You are going to build the **AAPS** app (an apk file) yourself, using a step-by-step guide, by downloading the **AAPS** source code from GitHub, installing the necessary programs (Android Studio, GitHub desktop) on your computer and building your own copy of **AAPS** app. Přesunete **AAPS** aplikaci na váš chytrý telefon (pomocí e-mailu, USB kabelu apod.) a nainstalujete ji.
 
-### 2) A reporting server: NightScout (Tidepool*)
+### 2) Reportovací server: NightScout (nebo Tidepool*)
 
-In order to fully take advantage of **AAPS**, you need to setup a Nightscout server. You can do this yourself (link to instructions) or alternatively, pay a small fee for a managed Nightscout service to be set up for you (link to T1 pal 10.be etc). Nightscout is used to collect data from **AAPS** over time and can generate detailed reports correlating CGM and insulin patterns. It is also possible for caregivers to use Nightscout to remotely communicate with the **AAPS** application, to oversee their child’s diabetic management. Such remote communication features include real-time monitoring of glucose and insulin levels, remote bolusing of insulin (by texting) and meal announcements. Attempting to analyse your diabetes performance by looking at CGM data separately from the pump data is like driving a car where the driver is blind and the passenger describes the scene.  Tidepool is also available as an alternative to Nightscout, for AAPS versions 3.2 and later.
+Abyste dokázali plně využít **AAPS**, potřebujete nastavit Nightscout server. Můžete to udělat sami (odkaz na manuál) nebo alternativně zaplatit drobný poplatek za spravovanou Nighscout službu vytvořenou pro vás (odkaz na T1 pal 10.be atp.). Nightscout se používá pro průběžný sběr dat z **AAPS**, ze kterých může vytvářet podrobné zprávy související s CGM a inzulínovými schematy. Pečovatelé mohou používat Nightscout ke vzdálené komunikaci s **AAPS** aplikací, která jim umožní dohlížet nad nad managementem diabetu jejich dítěte. Možnosti vzdálené komunikace zahrnují monitoring úrovní glukózy a inzulínu v reálném čase, vzdálené posílání bolusů (pomocí textových zpráv) a zadávání jídel. Pokusit se analyzovat data o vaší sukrovce pomocí informací z CGM odděleně od dat z inzulínové pumpy je jako pokoušet se řídit auto se slepým řidičem, kterému pasažér popisuje situaci.  Pro AAPS verze 3.2 a novější je k dispozici také Tidepool jako alternativa k Nightscoutu.
 
-### 3) CGM sensor app
+### 3) Aplikace senzoru CGM
 
-Depending on your glucose sensor/CGM, you will need a compatible app for receiving glucose readings and sending them to **AAPS**. The different options are shown below and more information is given in the [compatible CGMs section](./Configuration/BG-Source.md):
+V závislosti na vašem glukózovém senzoru/CGM budete potřebovat kompatibilní aplikaci pro příjem měření glukózy a jejich odesílání do **AAPS**. Různé možnosti jsou zobrazeny níže a více informací je uvedeno v sekci [Kompatibilní CGM](./Configuration/BG-Source.md):
 
 ![dexcom_options](./images/preparing_images/AAPS_connectivity_Dex_02.png) ![libre_options](./images/preparing_images/AAPSconnectivity_libre.png) ![eversense_options](./images/preparing_images/AAPS_connectivity_eversense.png)
 
-### Maintenance of the **AAPS** system
+### Údržba **AAPS** systému
 
-Both **Nightscout** and **AAPS** must be updated approximately once a year, as improved versions are released. In some cases, the update can be delayed, in others it is strongly recommended or considered essential for safety. Notification of these updates will be given on the Facebook groups and Discord servers. The release notes will make it clear what the scenario is. There are likely to be many people asking similar questions to you at update time, and you will have support for performing the updates.
+**Nightscout** i **AAPS**musí být přibližně jednou ročně aktualizovány, když jsou vydány nové verze. V některých případech je možné aktualizaci odložit, zatímco v jiných se z bezpečnostních důvodů důrazně doporučuje aktualizaci provést bezodkladně. Upozornění na dostupnou aktualizaci jsou zveřejňována ve Facebook skupinách a na Discord serveru. Poznámky k vydání nové verze vždy objadní, o jaký scénář se jedná. V čase aktualizace bude pravděpodobně mnoho lidí klást obdobné otázky a budete mít podporu při provedení aktualizace.
 
 (preparing-how-long-will-it-take?)=
-## How long will it take to set everything up?
+## Jak dlouho bude trvat všechno nastavit?
 
-As mentioned earlier, using **AAPS** is more of a “journey” that requires investment of your personal time. It is not a one-time setup. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 2 to 3 months overall. It is therefore suggested that you prioritise building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5). Here is an approximate timeframe:
+Jak bylo zmíněno dříve, používání **AAPS** je víceméně "cesta", která od vás bude obětovat váš volný čas. Nejde se o jednorázové řešení. Současné odhady pro sestavení **AAPS**, instalaci a konfiguraci **AAPS** a **CGM** softwaru a postup od otevřené k hybridní smyčce jsou 2 až 3 měsíce. Proto se doporučeje, abyste dali prioritu sestavení **AAPS** aplikace a co nejdříve se pustili do práce na počátečních cílích, i když ještě používáte jiný systém podávání inzulínu (až do cíle 5 můžete využívat pouze virtuální pumpu). Zde je přibližný časový rámec:
 
-| Tasks                                                                                                   |   Approx time   |
-| ------------------------------------------------------------------------------------------------------- |:---------------:|
-| initial reading of the documentation:                                                                   |    1-2 days     |
-| installing/configuring PC to allow the build:                                                           |    2-8 hours    |
-| building a Nightscout server:                                                                           |     1 hour      |
-| installing CGM app (xdrip or BYODA or …)                                                                |     1 hour      |
-| configuring CGM->xdrip->APPS initially:                                                                 |     1 hour      |
-| configuring AAPS->pump initially:                                                                       |     1 hour      |
-| configuring AAPS->NightScout (reporting only):                                                          |     1 hour      |
-| optional (for Parents) - configuring NightScout <-> **AAPS** & NSFollowers:                             |     1 hour      |
-| Cíl 1: Nastavit vizualizaci a monitoring, analyzovat bazály a poměry                                    |     1 hour      |
-| Objective 2: Learn how to control AAPS                                                                  |     2 hour      |
-| Cíl 3: Prokázat své znalosti                                                                            |  Up to 14 days  |
-| Cíl 4: Začít s otevřenou smyčkou                                                                        |     7 days      |
-| Cíl 5: Porozumění otevřené smyčce, včetně doporučení pro dočasné bazály                                 |     7 days      |
-| Cíl 6: Začátek uzavřené smyčky - s pozastavením pumpy při nízké glykémii                                | Up to 5-14 days |
-| Objective 7: Tuning the closed loop, raising maxIOB and gradually lowering BG targets                   |  Up to 7 days   |
-| Cíl 8: Upravit bazály a poměry, když bude potřeba, a povolit automatickou detekci citlivosti na inzulín | Up to 7-14 days |
-| Objective 9: Enabling additional oref1 features, such as super micro bolus (SMB)                        |  Up to 14 days  |
-| Objective 10: Automation                                                                                |      1 day      |
-
-
-Once you are fully operational on **AAPS**, you will need to fine tune your setting parameters in order to improve your overall diabetic management.
-
-## Requirements
-
-### Medical considerations
-
-In addition to the medical warnings in the [safety section](preparing-safety-frist) there are also different parameters, depending on which insulin you are using in the pump.
-
-#### Insulin choice
-
-**AAPS** calculations are based on insulin concentrations of 100U/ml (same as pump’s standard). The following types of insulin profile presets are supported:
-
-- Rapid-Acting Oref: Humalog/NovoRapid/NovoLog
-- Ultra-Rapid ORef:  Fiasp
-- Lyumjev:
-
-For Experimental/Advanced users only:
-- Free-Peak Oref: Allows you to define peak of the insulin activity
+| Úlohy                                                                                                   | Odhadovaný čas |
+| ------------------------------------------------------------------------------------------------------- |:--------------:|
+| úvodní přečtení dokumentace:                                                                            |    1-2 dny     |
+| instalace a konfigurace PC k sestavení aplikace:                                                        |   2-8 hodin    |
+| sestavení Nightscout serveru:                                                                           |     1 hour     |
+| Instalace CGM aplikace (xDrip, BYODA, …)                                                                |     1 hour     |
+| úvodní konfigurace CGM->xDrip->AAPS:                                                                    |     1 hour     |
+| úvodní konfigurace AAPS->inzulínová pumpa:                                                              |     1 hour     |
+| konfigurace AAPS>NightScout (pouze výkazy):                                                             |     1 hour     |
+| volitelně (pro rodiče) - konfigurace NightScout <-> **AAPS** & AAPS klienti:                            |     1 hour     |
+| Cíl 1: Nastavit vizualizaci a monitoring, analyzovat bazály a poměry                                    |     1 hour     |
+| Cíl 2: Naučte se ovládat AAPS                                                                           |    2 hodiny    |
+| Cíl 3: Prokázat své znalosti                                                                            |   až 14 dní    |
+| Cíl 4: Začít s otevřenou smyčkou                                                                        |     7 dnů      |
+| Cíl 5: Porozumění otevřené smyčce, včetně doporučení pro dočasné bazály                                 |     7 dnů      |
+| Cíl 6: Začátek uzavřené smyčky - s pozastavením pumpy při nízké glykémii                                |   5 - 14 dní   |
+| Cíl 7: Vyladit uzavřenou smyčku, zvyšovat max IOB nad a postupně snižovat cílovou glykémii:             |    až 7 dnů    |
+| Cíl 8: Upravit bazály a poměry, když bude potřeba, a povolit automatickou detekci citlivosti na inzulín |   7 - 14 dní   |
+| Cíl 9: Povolit další funkce oref1, jako je SMB (super micro bolus)                                      |   až 14 dní    |
+| Cíl 10: Automatizace                                                                                    |     1 den      |
 
 
-### Technical
+Jakmile budete plně fungovat na **AAPS**, budete potřebovat ladit nastavení vašich parametrů abyste dosáhli zlepšení ve zvládání vašeho diabetu.
 
-This documentation aims to reduce the technical expertise required to an absolute minimum. You will need to use your computer to build the **AAPS** application in Android Studio (step-by-step instructions). You also need to set up a server over the internet in a public cloud, configure several android phone apps and develop expertise in diabetes management. This can be  achieved by moving step-by-step, being patient, and help from the **AAPS** community. If you are already able to navigate the internet, manage your own Gmail emails, and keep your computer up-to-date, then it is a feasible task to build the **AAPS**. Just take your time.
+## Požadavky
 
-### Smartphones
+### Lékařská hlediska
 
-#### AAPS and Android Versions
-The current version of **AAPS** (3.1.0.3) requires an Android smartphone with Google Android 9.0 or above. If you are considering buying a new phone, (as of July 2023), Android 13 is preferred. Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons, however for users unable to use a device with Android 9.0 or newer, earlier versions of  **AAPS** compatible for older Android versions remain available from our [old repository](https://github.com/miloskozak/AAPS) (check the release notes for legacy versions).
+Kromě lékařských varování popsaných v oddíle [Bezpečnost](preparing-safety-frist) existují také další parametry, které jsou závislé na typu inzulínu, který používáte v pumpě.
 
-#### Smartphone model choice
-The exact model you buy depends on the desired function(s). There are two archived spreadsheets of compatible [smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) and [smartphones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). The spreadsheets are no longer updated because there are so many possible models, therefore we now suggest searching the support groups (Facebook or Discord) for "phone", or the specific model you are thinking of getting. Create a new post to ask questions about it if you still need more information.
+#### Výběr inzulínu
 
-To make a donation of smartphone or smartwatch models that still need testing, please email [donations@androidaps.org](mailto:donations@androidaps.org).
+Výpočty **AAPS** jsou založené na koncenraci inzulínu 100U/ml (stejně jako norma pumpy). Podporovány jsou následující typy předvoleb inzulínového profilu:
+
+- Rychlý Oref: Humalog/NovoRapid/NovoLog
+- Ultra rychlý ORef: fiasp
+- Lyumjev
+
+Pouze pro experimentální použití / pokročilé uživatele:
+- Oref s volitelným vrcholem: Umožňuje definovat vrchol aktivity inzulínu
+
+
+### Technicky
+
+Cílem této dokumentace je snížení potřebné technické odbornosti na absolutní minimum. K sestavení aplikace **AAPS** budete potřebovat váš počítač s instalovaným Android Sudiem (podrobné pokyny). Musíte také přes internet nastavit server ve veřejném cloudu, nakonfigurovat několik Android aplikací a rozvíjet své odborné znalosti v oblasti zvládání cukrovky. Toho můžete dosáhnout postupnými kroky, trpělivostí a pomocí od **AAPS** komunity. Pokud jste schopni používat internet, spravovat vaše e-maily na Gmailu a udržovat váš počítač aktualizovaný, pak je pro vás vytvoření **AAPS** proveditelný úkol. Jen nepospíchejte.
+
+### Chytré telefony
+
+#### AAPS a Android verze
+The current version of **AAPS** (3.2) requires an Android smartphone with Google **Android 9.0 or above**. Pokud zvažujete nákup nového telefonu (od 2024), je doporučována verze Android 13. Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons, however for users unable to use a device with Android 9.0 or newer, earlier versions of  **AAPS** compatible for older Android versions like [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) and [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2), remain available from previous releases (check the release notes for legacy versions).
+
+#### Výběr modelu smartphone
+Přesný model, který kupujete, závisí na požadovaných funkcích. Existují dvě archivované tabulky kompatibilních [smartphonů](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) a [smartphonů a hodinek](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). Tabulky již nejsou aktualizovány, protože existuje příliš mnoho modelů, a proto nyní doporučujeme vyhledat ve skupinách podpory (Facebook nebo Discord) „telefon“ nebo konkrétní model, který si chcete pořídit. Pokud stále potřebujete další informace, zeptejte se v novém příspěvku.
+
+Pokud chcete poskytnout chytrý telefon nebo hodinky k provedení testování, napište prosím na [donations@androidaps.org](mailto:donations@androidaps.org).
 
 - [List of tested phones](../Getting-Started/Phones.md)
-- [Jelly Pro Settings](../Usage/jelly.md)
+- [Jelly Settings](../Usage/jelly.md)
 - [Huawei Settings](../Usage/huawei.md)
 
-Users are encouraged to keep their phone Android version up-to-date, including with security parameters. However, if you are new with **AAPS** or are not a technical expert you might want to delay updating your phone until others have done so and confirmed it is safe to do so, on our various forums.
+Uživatelům doporučujeme udržovat jejich Android telefon aktualizovaný, včetně bezpečnostních nastavení. Ovšem pokud jste noví uživatel **AAPS** nebo nejste technicky zdatný, možná budete chtít pozdržet aktualizaci svého telefonu do doby, než to udělají ostatní a potvrdí na fórech, že je to bezpečné.
 
-:::{admonition} delaying Samsung phones updates
-:class: warning Samsung has an unfortunate track record of forcing updates of their phones which cause bluetooth connectivity issues. To disable these forced updates you need to switch the phone to "developper mode" by: go to settings and about then software information, then tap build number u til it confirms you have unlocked developer mode. Got back to main settings menu and you should see a new developer options menu item. Open developer options and scroll to find auto system update and turn it off
-:::
+```{admonition} delaying Samsung phones updates
+:class: warning
+Samsung has an unfortunate track record of forcing updates of their phones which cause bluetooth connectivity issues. Chcete-li tyto nucené aktualizace zakázat, je třeba přepnout telefon do "vývojářského režimu": přejděte do nastavení, informací o softwaru, poté klepněte na číslo sestavení, které potvrzuje, že máte odemčený vývojářský režim. Přejděte zpět do hlavního menu a měli byste vidět novou položku možností pro vývojáře. Open developer options and scroll to find auto system update and turn it off
+```
 
-:::{admonition} Google Play Protect potential Issue
-:class: warning There have been several reports of **AAPS** being shut down arbitrarily by Google Play Protect every morning. If this happens you will have to go to the google play options and disable “Google Play Protect”. Not all  phone models or all Android versions are affected..
-:::
+```{admonition} Google Play Protect potential Issue
+:class: warning
+There have been several reports of **AAPS** being shut down arbitrarily by Google Play Protect every morning. Pokud se tak stane, otevřete možnosti Google Play a zakažte "Google Play Protect". Ne všechny modely telefonů nebo verze Androidu jsou tímto problémem ovlivněny.
+```
 

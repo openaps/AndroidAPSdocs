@@ -1,30 +1,26 @@
-# state of translation for app and the documentation
+# Stav překladu textů pro aplikaci a dokumentaci
 
-The state is once per hour updated and reflects only the state in Crowdin.
+Stav je aktualizován jednou za hodinu a odráží pouze stav na Crowdinu.
 
-:::{tip}
+```{tip}
+Buďte opatrní, procento zrevidovaného obsahu musí být nižší než procento překladů, ale rozhodli se jej zobrazit nad překlady.
+Je lepší se podívat pouze na procento překladů, abyste viděli, kolik práce ještě zbývá.
+```
 
-Be careful the percentage of proofreading must be lower then the percentage of translations but they decided to show it on top of the translations. It's better to look only at the percentage level of translations to see if work is to be done.
+```{admonition} needed time for final publication
+Po přeložení na Crowdinu každý den probíhá synchronizace s Githubem, aby se překlady přenesly do Githubu jako žádost o začlenění (PR).
 
-:::
+PR je třeba přijmout ručně a bude tak učiněno co nejrychleji.
+```
 
-:::{admonition} needed time for final publication
-:class: note
+## Stav překladu aplikace
 
-After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+Stav překladů **aplikace** pro jednotlivé jazyky (kód země, procento překladu, procento zrevidovaného obsahu).
 
-The acceptance of the PR is a manual task which will be done es fast as possible.
+![Stav překladu aplikace](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
 
-:::
+## Stav překladu dokumentace
 
-## state app translation
+Stav překladů **dokumentace** pro jednotlivé jazyky (kód země, procento překladu, procento zrevidovaného obsahu).
 
-State of the **app** translations per language (country code, percentage translation, percentage proofreading).
-
-![state app translation](https://badges.awesome-crowdin.com/translation-13588158-309752.png)
-
-## state documentation translation
-
-State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
-
-![state documentation translation](https://badges.awesome-crowdin.com/translation-13588158-310610.png)
+![Stav překladu dokumentace](https://badges.awesome-crowdin.com/translation-13588158-310610.png)

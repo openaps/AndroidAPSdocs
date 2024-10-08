@@ -50,15 +50,15 @@ The blood glucose values are received by the xDrip+ app on the smartphone.
 
 In xDrip+ start the sensor with "Start Sensor" and "not today". It is not necessary to hold the mobile phone onto the sensor. In fact "Start Sensor" will not physically start any Libre 3 sensor or interact with them in any case. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip+ every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
 
-Wait at least 15-20 minutes if there is still no data.
+In xDrip+ start the sensor with "Start Sensor" and "not today".
 
 After a sensor change xDrip+ will automatically detect the new sensor and will delete all calibration data. You may check you bloody BG after activation and make a new initial calibration.
 
-### Step 4: Configure AndroidAPS
+### Step 4: Configure AndroidAPS (for looping only)
 
 - Select xDrip+ in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
-- If AndroidAPS does not receive BG values when phone is in airplane mode, use "Identify receiver"
+- In xDrip+ select "Libre2 (patched App)" as data source
 - Turn of Smoothing (done in Xdrip+ already)
 
 As of now, when using Libre 3 as a BG source, the "Always enable SMB" and "Enable SMB by Carbs" options cannot be enabled in the SMB algorithm. The BG values from Libre 3 are not smooth enough to use safely.

@@ -269,13 +269,14 @@
 [Konfigürasyon ayarları](../Configuration/Config-Builder.md) içindeki ayarlarınıza bağlı olarak iki algoritma arasında seçim yapabilirsiniz:
 
 - [Gelişmiş yemek yardımı (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - algoritmanın 2017'deki durumu
-- [Süper Mikro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - ileri düzey kullanıcılar için en yeni algoritma
+- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### OpenAPS SMB ayarları
 
 - Karbonhidratları doğru bir şekilde girerseniz, yemek bolusunuzdan sonra sistem yüksek kan şekerine daha hızlı müdahele eder.
 - Ayarlar ve Otoduyarlılık hakkında daha fazla ayrıntıyı [OpenAPS dokümanlarında](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html) bulabilirsiniz.
 
+(Preferences-max-u-h-a-temp-basal-can-be-set-to)=
 #### Maks Ü/s geçici Bazal ayarlanabilir
 
 - APPS'in tehlikeli derecede yüksek bazal oranı vermesini önlemek için bir güvenlik sınırıdır.
@@ -322,7 +323,7 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 - SMB'yi kullanmak için [görev 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)'a başlamış olmalısınız.
 
-- İlk üç ayar [yukarıda](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal) açıklanmıştır.
+- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to).
 
 - Farklı etkinleştirme seçenekleriyle ilgili ayrıntılar, [OpenAPS özelliği bölümünde](Open-APS-features-enable-smb) açıklanmaktadır.
 
@@ -420,9 +421,11 @@ Original communication protocol, can be used with older Nightscout versions.
 
 [New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
-:::{admonition} V3 data uploaders
-:class: warning When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.  
-:::
+```{admonition} V3 data uploaders
+:class: warning
+
+When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+```
 
 - Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
   - **URL'nin sonunda /api/v1/ OLMADAN olduğundan emin olun.**
@@ -474,7 +477,7 @@ Options in advanced settings are self-explanatory.
 
 ## Otomasyon
 
-Hangi konum hizmetinin kullanılacağını seçin:
+Select which location service shall be used:
 
 - Pasif konum kullan: AAPS, yalnızca diğer uygulamalar talep ederse konum alır
 - Ağ konumunu kullan: Wi-Fi'nizin konumu
@@ -496,8 +499,7 @@ Hangi konum hizmetinin kullanılacağını seçin:
 
 ![Bakım ayarları](../images/Pref2020_Maintenance.png)
 
-- Günlüklerin standart alıcısı <logs@androidaps.org>'dur.
-- *Dışa aktarılan ayarları şifrele*'yi seçerseniz, bunlar [ana parolanız](Preferences-master-password) ile şifrelenir. Bu durumda, ayarlar her dışa aktarıldığında veya içe aktarıldığında ana parola girilmelidir.
+- Standard recipient of logs is <logs@aaps.app>.
 
 ## Open Humans
 

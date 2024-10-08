@@ -63,11 +63,11 @@ When setting up an automation, you can first test it by activating the ‘notifi
 
 ![Alt text](../images/automation_2024-02-12_20-55-05.png)
 
-:::{admonition} Important note
+```{admonition} Important note
 :class: note
 
 Automations are still active when the Loop is disabled!
-:::
+```
 
 
 ## Safety limits
@@ -80,13 +80,13 @@ There are safety limits set for **Automations**:
 
 ## Correct use of negative values
 
-:::{admonition} Warning
+```{admonition} Warning
 :class: warning
 
 Please be careful when selecting a negative value in Automation
-:::
+```
 
-Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. For example:
+Caution must be taken when selecting a ‘negative value’ within the ‘Condition’ like "less than" in **Automations**. Například:
 
 ![Alt text](../images/automation_2024-02-12_20-56-25.png-500x.png)
 
@@ -131,8 +131,8 @@ Several conditions can be linked with
 **Options:**
 
 * Use passive location: **AAPS** only takes locations when other apps are requesting it.
-* Use network location: Location of your Wifi.
-* Use GPS location (Attention! This can cause excessive battery drain!)
+* Používat zjištění polohy podle sítě: Poloha podle vaší sítě Wifi.
+* Používat GPS polohu (Pozor! This can cause excessive battery drain!)
 
 ## Akce
 
@@ -147,14 +147,14 @@ Several conditions can be linked with
 
 **Options:**
 
-none
+nic
 
 **Actions:** **Profile** percentage
 
 **Options:**
 
 * **Profile** must be between 70% and 130%
-* works only if the previous percentage is 100%
+* funguje pouze v případě, že předchozí procento profilu bylo 100 %
 
 Once the ‘Action’ is added,  the default values must be changed to the desired number by clicking and adjusting the default values.
 

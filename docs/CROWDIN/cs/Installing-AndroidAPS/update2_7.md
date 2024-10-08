@@ -1,16 +1,16 @@
 # Necessary checks after update coming from AAPS 2.6
 
-- The program code was changed significantly when switching to AAPS 2.7.
-- Therefore it is important that you make some changes or check settings after the update.
+- U verze AAPS 2.7 byl kód programu významně změněn.
+- Proto je důležité, abyste po aktualizaci provedli nějaké změny, nebo zkontrolovali nastavení.
 - Please see [release notes](Releasenotes-version-2-7-0) for details on new and extended features.
 
 ## Zkontrolujte zdroj glykémií
 
-- Check if BG source is correct after update.
-- Especially when using [xDrip+](../Configuration/xdrip.md) it might happen, that BG source is changed to Dexcom app (patched).
+- Zkontrolujte, zda je zdroj glykémií po aktualizaci správný.
+- Zejména při použití [xDrip+](../Configuration/xdrip.md) se může stát, že zdroj glykémie se změní na Dexcom aplikace (upravená).
 - Open [Config builder](Config-Builder-bg-source) (hamburger menu on top left side of home screen)
-- Scroll down to "BG source".
-- Select correct BG source if changes are necessary.
+- Sjeďte dolů na "Zdroj glykémie".
+- Je-li to nutné, nastavte správný zdroj glykémie.
 
 ![Zdroj glykémie (BG source)](../images/ConfBuild_BG.png)
 
@@ -24,35 +24,35 @@
 ## Nastavit hlavní heslo
 
 - Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7.
-- Open Preferences (three-dot-menu on top right of home screen)
-- Click triangle below "General"
-- Click "Master-Password"
-- Enter password, confirm password and click ok.
+- Klepnutím na tři tečky v pravém horním rohu hlavní obrazovky otevřete Nastavení
+- Klepněte na trojúhelník pod "Obecné"
+- Klepněte na položku "Hlavní heslo"
+- Zadejte heslo, potvrďte ho, a klepněte na tlačítko Ok.
 
 ![Nastavit hlavní heslo](../images/MasterPW.png)
 
 ## Exportovat nastavení
 
-- AAPS 2.7 uses a new encrypted backup format.
+- AAPS 2.7 používá nový šifrovaný formát zálohy.
 - You must [export your settings](../Usage/ExportImportSettings.md) after updating to version 2.7.
-- Settings files from previous versions can only be imported in AAPS 2.7. Export bude už v novém formátu.
-- Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
-- If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version.
-- All settings as well as finished objectives will remain as they were in the previous version.
+- Soubory se zálohou vytvořenou v předchozích verzích mohou být v AAPS 2.7 pouze naimportované. Export bude už v novém formátu.
+- Ujistěte se, že jste uložili exportovaná nastavení nejen na vašem telefonu, ale také alespoň na jednom bezpečném místě (pc, cloudové úložiště...).
+- Pokud sestavujete apk AAPS 2.7 za použití stejného podpisového klíče jako u předchozích verzí, můžete instalovat novou verzi bez odstranění předchozí verze.
+- Všechna nastavení i dokončené cíle zůstanou tak, jak byly v předchozí verzi.
 - In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the [troubleshooting section](troubleshooting_androidstudio-lost-keystore).
 
 ## Autosens (Tip - není nutná žádná akce)
 
-- Autosens is changed to a dynamic switching model which replicates the reference design.
-- Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. Vybere, která z nich je citlivější.
+- Autosens je změněn na dynamický přepínací model, který replikuje referenční design.
+- Autosens se nyní pro výpočet citlivosti přepíná mezi 24 a 8 hodinovým úsekem. Vybere, která z nich je citlivější.
 - Pokud uživatelé pocházejí z Oref1, pravděpodobně si všimnou toho, že systém může být méně dynamický na změny, v závislosti na citlivosti za 24 nebo 8 hodin.
 
 ## Nastavení hesla pumpy Dana RS (pokud používáte Dana RS)
 
-- Pump password for [Dana RS](../Configuration/DanaRS-Insulin-Pump.md) was not checked in previous versions.
-- Open Preferences (three-dot-menu on top right of screen)
-- Scroll down and click triangle next to "Dana RS".
-- Click "Pump password (v1 only)"
+- V předchozích verzích nebylo heslo pumpy [Dana RS](../Configuration/DanaRS-Insulin-Pump.md) kontrolováno.
+- Klepnutím na tři tečky v pravém horním rohu hlavní obrazovky otevřete Nastavení
+- Přejděte dolů a klikněte na trojúhelník vedle "Dana RS".
+- Klikněte na "Heslo pumpy (pouze v1)"
 - Enter pump password ([Default password](DanaRS-Insulin-Pump-default-password) is different depending on firmware version) and click OK.
 
 ![Set Dana RS password](../images/DanaRSPW.png)

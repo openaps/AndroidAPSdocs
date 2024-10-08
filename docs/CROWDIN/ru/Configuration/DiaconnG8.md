@@ -2,57 +2,42 @@
 
 ## Bluetooth-сопряжение
 
-- Нажмите на выпадающее меню в левом верхнем углу.
+- Click on the hamburger menu in the top left corner.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_01.jpg
-  > :alt: Выпадающее сэндвич-меню
-  > ```
+![изображение](../images/DiaconnG8/DiaconnG8_01.jpg)
 
 - Выберите Конфигуратор.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_02.jpg
-  > :alt:Конфигуратор
-  > ```
+![изображение](../images/DiaconnG8/DiaconnG8_02.jpg)
 
 - После выбора помпы Diaconn G8 щелкните на иконку настроек (шестеренка).
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_03.jpg
-  > :alt:Настройки
-  > ```
+![изображение](../images/DiaconnG8/DiaconnG8_03.jpg)
 
 - Выберите помпу.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_04.jpg
-  > :alt: Выбор помпы
-  > ```
+![изображение](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 - Выберите номер модели вашей инсулиновой помпы.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_05.jpg
-  > :alt: Сопряжение помпы
-  > ```
+![изображение](../images/DiaconnG8/DiaconnG8_05.jpg)
 
 - Есть два варианта проверки номера модели:
 
-  > 1. Последние 5 цифр номера SN на задней панели помпы.
-  > 2. Нажмите на кнопку O > Информация > BLE > Последние 5 цифр.
-  > 
-  > > `{image} ../images/DiaconnG8/DiaconnG8_06.jpg
-    :alt: проверить модель.`
+1. Последние 5 цифр номера SN на задней панели помпы.
+2. Нажмите на кнопку O > Информация > BLE > Последние 5 цифр.
+
+![изображение](../images/DiaconnG8/DiaconnG8_06.jpg)
 
 - Когда выберете помпу, появится окно с запросом PIN-кода. Введите PIN, отображаемый на вашей помпе для завершения сопряжения.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_07.jpg
-  > :alt: ПИН-код
-  > ```
+ ![изображение](../images/DiaconnG8/DiaconnG8_07.jpg)
 
 ## Проверка статуса помпы и синхронизация журнала
 
 - После подключения помпы нажмите на символ Bluetooth, чтобы проверить статус и синхронизировать журналы.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_08.jpg
-  > :alt:Статус Bluetooth
-  > ```
+![изображение](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ## Устранение неполадок Bluetooth-соединения
 
@@ -62,35 +47,25 @@
 
 - Нажмите на 3 точки в правом верхнем углу.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_09.jpg
-  > :alt: Меню настроек
-  > ```
+![изображение](../images/DiaconnG8/DiaconnG8_09.jpg)
 
 - Нажмите выход.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_10.jpg
-  > :alt: Выход
-  > ```
+![изображение](../images/DiaconnG8/DiaconnG8_10.jpg)
 
 ### Метод 2) Если первый метод не работает, отключите Bluetooth и подключите заново.
 
 - Нажмите и удерживайте кнопку Bluetooth в верхней части примерно 3 секунды.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_11.jpg
-  > :alt: Кнопка Bluetooth
-  > ```
+![изображение](../images/DiaconnG8/DiaconnG8_11.jpg)
 
 - Нажмите кнопку настроек на сопряженной помпе Diaconn G8.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_12.jpg
-  > :alt:Кнопка настроек
-  > ```
+![изображение](../images/DiaconnG8/DiaconnG8_12.jpg)
 
 - Разъединение.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_13.jpg
-  > :alt: Разъединение
-  > ```
+![изображение](../images/DiaconnG8/DiaconnG8_13.jpg)
 
 - Повторите процесс подключения к Bluetooth помпы (см. выше).
 

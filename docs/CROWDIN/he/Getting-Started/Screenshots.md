@@ -1,14 +1,14 @@
-# AAPS screens
+# ממשק AndroidAPS
 
 ## מסך הבית
 
 ![Homescreen V2.7](../images/Home2020_Homescreen.png)
 
-This is the first screen you will come across when you open AAPS and it contains most of the information that you will need day to day.
+זהו המסך הראשון שתתקלו בו בעת פתיחת AndroidAPS והוא מכיל את רוב המידע שתצטרכו ביום יום.
 
 ### חלק A - לשוניות
 
-* Navigate between the various AAPS modules.
+* ניווט בין מודולי AndroidAPS השונים.
 * לחלופין ניתן לעבור בין המסכים ע"י החלקה שמאלה וימינה.
 * הלשוניות שניתנות להצגה נבחרות ב[בונה התצורה](Config-Builder-tab-or-hamburger-menu).
 
@@ -200,7 +200,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 * עקום **כחול בהיר**: בזאלי אפס זמני (סוכר חזוי אם יוגדר קצב בזאלי זמני של 0%)
    
-   עקום החיזוי מראה כיצד ישתנה עקום האינסולין הפעיל אם המשאבה תפסיק כל מתן אינסולין (בזאלי זמני 0%).
+   עקום החיזוי מראה כיצד ישתנה עקום הסוכר בדם אם המשאבה תפסיק כל מתן אינסולין (בזאלי זמני 0%).
    
    *שורה זו מופיעה רק כאלגוריתם [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) נבחר ופועל (אחרי תחילת משימה 9).*
 
@@ -210,11 +210,11 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
    
    *שורה זו מופיעה רק כאלגוריתם [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) נבחר ופועל (אחרי תחילת משימה 9).*
 
-* **Dark orange** line: aCOB (accelerated carbohydrate absorption)
+* **עקום כתום כהה**: ספיגת פחמימות מואצת
    
-   Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/l/5m) carb absorption rate. Deprecated and of limited usefulness.
+   דומה לפחמימות פעילות אז מניח שספיגת הפחמימות קבועה ב-10 מ"ג\ד"ל\5דק'. מיושן ובעל תועלת מוגבלת.
    
-   *This line appears only when the older [AMA](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *עקום זה מופיע אך ורק כשמשתמשים באלגוריתם המיושן [AMA](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb).*
 
 בדרך כלל עקומת הסוכר האמיתית נמצאת באמצע בין העקומים הללו, או קרובה לזו שמניחה הנחות שהכי דומות למצבכם הנוכחי.
 
@@ -287,7 +287,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
    
    * אם החיבור למשאבה אובד, כפתור האינסולין מוסתר.
 
-* Other Buttons have to be setup in [preferences]Preferences-buttons).
+* "כפתורים אחרים צריכים להיות מוגדרים בהעדפות, כפתורים".
 
 #### אינסולין
 
@@ -347,7 +347,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 #### תזכורת אכילה
 
-* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AAPS
+* עבור פחמימות עתידיות ניתן לסמן את תיבת סימון התזכורת (היא נבחרת כברירת מחדל כאשר מוזנת ארוחה עתידית) כך שתוכלו לקבל תזכורת לאכול את הפחמימות שהזנתם ל-AndroidAPS בהתאם לזמן שהזנתם ב-"זמן פחמימות"
    
    ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
 
@@ -382,7 +382,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
 
-* If you see the warning above after using bolus wizard, AAPS has detected that the calculated COB value maybe wrong.
+* אם האזהרה למעלה מופיעה לאחר שימוש באשף הבולוס, AndroidAPS זיהה שייתכן שערך הפחמימות הפעילות המחושב שגוי.
 * לכן, אם תרצו להזריק בולוס לאחר ארוחה קודמת עם פחמימות פעילות, עליכם להיות מודעים למינון ביתר! 
 * לפרטים נוספים ראו [חישוב פחמימות פעילות](COB-calculation-detection-of-wrong-cob-values).
 
@@ -394,14 +394,14 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ### פעולות - חלק M
 
-* Button [profile switch](Profiles-profile-switch) as an alternative to pressing the [current profile](Screenshots-section-b-profile-target) on homescreen.
-* Button [temporary target](temptarget-temp-targets) as an alternative to pressing the [current target](Screenshots-section-b-profile-target) on homescreen.
+* לחצן [החלפת פרופיל](Profiles-profile-switch) כחלופה ללחיצה על ה[פרופיל הנוכחי](Screenshots-section-b-profile-target) במסך הבית.
+* לחצן [ערך מטרה זמני](temptarget-temp-targets) כחלופה ללחיצה על ה[ערך מטרה הנוכחי](Screenshots-section-b-profile-target) במסך הבית.
 * לחצן להפעלה או ביטול של מינון בזאלי זמני. שימו לב שהלחצן משתנה מ-"בזאלי זמני" ל-"ביטול %x" כאשר מוגדר מינון בזאלי זמני.
-* Even though [extended boluses](Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+* למרות ש[בולוסים ממושכים](Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment) לא באמת עובדים בסביבת לולאה סגורה, אנשים מסוימים ביקשו בכל מקרה אפשרות להשתמש בבולוס ממושך.
    
    * אפשרות זו קיימת רק במשאבות Dana RS ו-Accu chek Insight. 
    * לולאה סגורה תיעצר אוטומטית ותעבור למצב לולאה פתוחה למשך זמן פעילות הבולוס הממושך.
-   * Make sure to read the [details](../Usage/Extended-Carbs.md) before using this option.
+   * הקפידו לקרוא את [הפרטים](../Usage/Extended-Carbs.md) לפני השימוש באפשרות זו.
 
 (Screenshots-careportal-section-n)=
 
@@ -414,7 +414,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
    * גיל הצינורית
    * גיל ודרגת טעינת סוללת המשאבה
 
-* Less information will be shown if [low resolution skin](Preferences-skin) is used.
+* אם משתמשים בסקין [רזולוציה נמוכה](Preferences-skin), תוצג פחות אינפורמציה.
 
 (Screenshots-sensor-level-battery)=
 
@@ -422,14 +422,14 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 * דרוש xDrip nightly מדצמבר 10, 2020 או חדש יותר.
 * עובד עם חיישנים ומשדרים כדוגמת MiaoMiao 2. (טכנית, החיישן צריך לשלוח את המידע של רמת הסוללה לxDrip+.)
-* Thresholds can be set in [preferences](Preferences-status-lights).
+* ניתן להגדיר את ספי החיוויים ב[העדפות](Preferences-status-lights).
 * אם רמת החיישן זהה לרמת הסוללה של הטלפון, כנראה שגרסת ה-xDrip+ ישנה מדי וצריכה עדכון.
    
    ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
 
 ### פורטל הטיפולים - חלק O
 
-* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](Screenshots-careportal-section-n).
+* בדיקת רמת סוכר, תיחול\מילוי, הכנסת חיישן והחלפת סוללת משאבה הם הבסיס לנתונים המוצגים ב[חלק O](Screenshots-careportal-section-n).
 * תיחול\מילוי מאפשר לתעד את החלפת מיקום חיבור צינורית המשאבה ואת החלפת מכל האינסולין.
 * חלק O משקף את פורטל הטיפולים שבנייטסקאוט. לכן התעמלות, הכרזות ושאלות הן סוגים מיוחדים של הערות.
 
@@ -455,17 +455,17 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ![פרופיל האינסולין](../images/Screenshot_insulin_profile.png)
 
-* This shows the activity profile of the insulin you have chosen in [config builder](Config-Builder-insulin). 
+* כאן ניתן לראות את פרופיל הפעילות של האינסולין שבחרתם ב[בונה התצורה](Config-Builder-insulin). 
 * העקום הסגול מראה כמה אינסולין נשאר לאחר הזרקתו כשהוא דועך לאורך הזמן והעקום הכחול מראה כמה הוא פעיל.
 * חשוב לשים לב לכך שלדעיכה יש זנב ארוך. 
 * אם השתמשתם בעבר במשאבה, כנראה שהנחתם שדעיכת האינסולין לוקחת כ-3.5 שעות. 
-* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AAPS algorithm.
+* עם זאת, בשימוש בלופ, הזנב הארוך חשוב כיוון שהחישובים הרבה יותר מדויקים והכמויות הקטנות הללו בזנבות מסתכמות למספרים משמעותיים בחישובים הרקורסיבים של אלגוריתמים של AndroidAPS.
 
-For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+לדיון מפורט יותר על סוגי האינסולין השונים, פרופילי הפעילות שלהם ומדוע כל זה חשוב, אפשר לקרוא מאמר כאן על [הבנת עקומות החדשות של האינסולין הפעיל על סמך עקומות פעילות אקספוננציאליות](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+ניתן גם לקרוא מאמר מצוין בבלוג על זה כאן: [מדוע אנחנו טועים באופן קבוע במשך פעולת האינסולין (DIA) ולמה זה חשוב…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+ועוד כאן: [עקומות אינסולין אקספוננציאליות + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## סטטוס המשאבה
 
@@ -476,14 +476,14 @@ And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017
 
 ## פורטל הטיפולים
 
-Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
+פורטל הטיפולים שיכפל את הפונקציות שנמצאות במסך נייטסקאוט תחת הסמל "+" המאפשר להוסיף הערות לרשומותיכם.
 
 ### סקירה של חישוב הפחמימות
 
 ![Review carb calculation on t tab](../images/Screenshots_TreatCalc.png)
 
-* If you have used the [Bolus Wizard](Screenshots-bolus-wizard) to calculate insulin dosage you can review this calculation later on ts tab.
-* פשוט לחץ על קישור "חישוב" הירוק. (Depending on pump used insulin and carbs can also be shown in one single line in ts.)
+* אם השתמשתם ב[אשף הבולוס](Screenshots-bolus-wizard) כדי לחשב את מינון האינסולין, תוכלו לעיין בחישוב זה מאוחר יותר בלשונית הטיפולים.
+* פשוט לחץ על קישור "חישוב" הירוק. (בהתאם למשאבה שבשימוש, אינסולין ופחמימות ניתנים להצגה בשורה אחת בטיפולים.)
 
 (Screenshots-carb-correction)=
 
@@ -491,11 +491,11 @@ Careportal replicated the functions you will find on your Nightscout screen unde
 
 ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
 
-Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+ניתן להשתמש בלשונית הטיפולים כדי לתקן הזנת פחמימות שגויה (כלומר, הערכת יתר או חסר).
 
 1. בדקו וזכרו את האינסולין והפחמימות הפעילים בפועל במסך הבית.
 2. בהתאם למשאבה בלשונית הטיפולים פחמימות עשויות להיות מוצגות יחד עם אינסולין בשורה אחת או כערכים נפרדים (כלומר עם משאבת Dana RS).
-3. הסירו את הערך עם כמות הפחמימות השגויה.
+3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
 4. ודאו שהפחמימות הוסרו בהצלחה על ידי בדיקה מחדש של הפחמימות הפעילות במסך הבית.
 5. עשו את אותו הדבר עבור אינסולין פעיל אם יש רק שורה אחת בלשונית הטיפול כוללת פחמימות ואינסולין.
    
@@ -509,7 +509,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 * לשוניות אלה מציגות פרטים על חישובי האלגוריתם ומדוע AAPS פועל כפי שהוא פועל.
 * החישובים מחושבים בכל פעם שהמערכת מקבלת קריאה חדשה מהחיישן.
-* For more details see [APS section on config builder page](Config-Builder-aps).
+* לפרטים נוספים ראו [חלק APS בדף בונה התצורה](Config-Builder-aps).
 
 ## פרופיל
 
@@ -523,20 +523,20 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
    * מינון בזאלי
    * ערך מטרה: רמת הגלוקוז בדם שאליה AAPS שואף
 
-* As of version 3.0 only [local profile](Config-Builder-local-profile) is possible. ניתן לערוך את הפרופיל המקומי בסמארטפון ולסנכרנו עם אתר הנייטסקאוט שלכם.
+* החל מגרסה 3.0 קיים רק [פרופיל מקומי](Config-Builder-local-profile). ניתן לערוך את הפרופיל המקומי בסמארטפון ולסנכרנו עם אתר הנייטסקאוט שלכם.
 
 (Screenshots-treatment)=
 
 ## טיפול
 
-History of the following treatments:
+היסטוריה של הטיפולים הבאים:
 
-* Bolus & carbs -> option to [remove entries](Screenshots-carb-correction) to correct history
+* בולוס ופחמימות -> אפשרות [להסיר ערכים](Screenshots-carb-correction) כדי לתקן את ההיסטוריה
 * [בולוס ממושך](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * מינון בזאלי זמני
 * [ערך מטרה זמני](../Usage/temptarget.md)
 * [החלפת פרופיל](../Usage/Profiles.md)
-* [Careportal](CPbefore26-careportal-discontinued) - notes entered through action tab and notes in dialogues
+* [פורטל הטיפולים](CPbefore26-careportal-discontinued) - הערות המוזנות דרך לשונית הפעולות והערות בדיאלוגים
 
 ## מקורות נתוני סוכר - xDrip+, BYODA...
 
@@ -550,5 +550,5 @@ History of the following treatments:
 ![NSClient](../images/Screenshots_NSClient.png)
 
 * מציג את מצב החיבור עם אתר הנייטסקאוט שלכם.
-* Settings are made in [preferences](Preferences-nsclient). אפשר לפתוח את החלק המתאים על ידי לחיצה על גלגל השיניים בצד השמאלי העליון של המסך.
+* פרטים מוגדרים ב[העדפות](Preferences-nsclient). אפשר לפתוח את החלק המתאים על ידי לחיצה על גלגל השיניים בצד השמאלי העליון של המסך.
 * לפתרון בעיות עיינו ב[דף זה](../Usage/Troubleshooting-NSClient.md).

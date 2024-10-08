@@ -8,7 +8,7 @@
 
 Наиболее распространенные сценарии сочетания работы **AAPS** с наблюдением приведены ниже.
 
-### 1) Приложения на смартфоне
+## 1) Smartphone apps
 
 Наиболее популярные приложения для отслеживания работы **AAPS**. Все эти приложения бесплатны:
 
@@ -29,7 +29,7 @@ G)  Spike (iOs)
 
 
 
-#### A) Dexcom Follow (Android and iOS)
+### A) Dexcom Follow (Android and iOS)
 
 ![изображение](./images/ded350b0-6012-4104-b21c-5d5bfd91aa65.png)
 
@@ -39,7 +39,7 @@ G)  Spike (iOs)
 
 ● Dexcom Follow очень хорош для учителей/бабушек и дедушек и людей, которые мало знают о диабете и гликемии. Он имеет настраиваемые оповещения (уровень ГК, какой звук воспроизводить и т. д.). Оповещения могут быть полностью выключены, что очень полезно, если сенсор еще прирабатывается и передает много заниженных значений.
 
-##### настройка Dexcom Follow: инструкция
+#### Setting up Dexcom Follow: how-to-guide
 
 У вас есть возможность отправлять приглашения подписчикам из самостоятельно собранного приложения Dexcom BYODA. You should also be able to send invitations to Dexcom Follow from xDrip+ (settings - Cloud upload - Dexcom share server upload, see instructions here:
 
@@ -58,7 +58,7 @@ You must install the official Dexcom app, send the invite, and then uninstall th
 For Dexcom Follow, the sensor data is then exported from the AAPS phone either directly from BYODA, or from xDrip+, depending on which app you are using.
 
 
-#### B) Nightguard (iOS)
+### B) Nightguard (iOS)
 
 ![изображение](./images/f2c7d330-9889-4526-9a5c-bbb012d804ab.png)
 
@@ -84,7 +84,7 @@ For Dexcom Follow, the sensor data is then exported from the AAPS phone either d
 
 ● Никогда не показывает временную скорость базала, несмотря на то, что есть графа TB
 
-#### C) Nightwatch (Android)
+### C) Nightwatch (Android)
 
 ![изображение](./images/855c3a74-e612-4a6f-8b63-18d286ea0a3f.png)
 
@@ -101,37 +101,54 @@ For Dexcom Follow, the sensor data is then exported from the AAPS phone either d
 
 ● Имеет темный интерфейс, большие цифры и кнопки для ночного времени.
 
-#### D) xDrip+ (Android)
+### D) xDrip+ (Android)
 
-Фоллоуэры могут оповещаться с помощью xDrip+ в режиме подписчика.  [xDrip+](../Configuration/xdrip.md). (в основном значения ГК и **оповещения**)
+You can use xDrip+ as a follower.
 
+#### With Nightscout
 
-#### E) xDrip4iOS/Shuggah (iOS)
+Set xDrip+ as a Nightscout Follower. You will receive BG and treatments, not basal.
+
+![изображение](./images/remote_control_and_following/xDrip+_Nightscout_Follower.png)
+
+#### Without Nightscout - xDrip+ BG data source
+
+If your AAPS data source is xDrip+ (or if xDrip+ can also receive BG from another app like BYODA, Juggluco, ...) you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
+
+![изображение](./images/remote_control_and_following/xDrip+_Master_Sync.png)
+
+#### Without Nightscout - xDrip+ BG companion app
+
+If your AAPS data source is not xDrip+ but you can display BG data from the Companion App data source, you can use it from the master phone to share data with xDrip+ followers, displaying BG, treatments and basal rates.
+
+![изображение](./images/remote_control_and_following/xDrip+_Companion_Sync.png)
+
+### E) xDrip4iOS/Shuggah (iOS)
+
+![изображение](./images/remote_control_and_following/xdrip4ios.jpg)
 
 xDripSwift was created from porting the original xDrip app to iOS and evolved to "xDrip for iOS" written **xDrip4iOS** .
 
 A version of **xDrip4iOS** is available in the Apple Store under the name of **Shuggah**.
 
-:::{admonition} Информация о том, как получить оригинальное приложение **xDrip4iOS** 
+```{admonition} Further detail about how to attempt to obtain the original **xDrip4iOS** app
 :class: dropdown
+The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) is the main community support for xDrip4iOS and Shuggah. **xDrip4iOS** can connect to many different CGM systems and transmitters and display blood glucose values, charts and statistics as well as provide alarms. It can also upload to Nightscout or act as a [follower app for Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). However, it is difficult to actually _get_ the **xDrip4iOS** app for your phone. 
 
-
-The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) is the main community support for xDrip4iOS and Shuggah. **xDrip4iOS** может подключаться к различным системам CGM и трансмиттерам и отображать значения ГК, графики и статистику, а также подавать звуковые оповещения. Оно также может загружать данные в Nightscout или выполнять роль [фоллоуэра для Nightscout](https://xdrip4ios.readthedocs.io/en/latest/connect/follower/). Однако, _получить_ приложение **xDrip4iOS** довольно трудно.
-
-"Как получить **xDrip4iOS** на iPhone?" Есть два варианта:
+"How can I get **xDrip4iOS** on my iPhone?"
+There are two options:
 
 1. If you have a Mac and an Apple Developer account (99 EUR/USD per year) you can build your own xDrip4iOS by following the instructions below:
 
+https://xdrip4ios.readthedocs.io/en/latest/install/build/
 
-https://xdrip4ios.readthedocs.io/ru/latest/install/build/
+If you want, you can then become a "releaser" and share a Personal Testflight xDrip4iOS with up to 100 other people to help them:
+https://xdrip4ios.readthedocs.io/.../personal_testflight/
 
-If you want, you can then become a "releaser" and share a Personal Testflight xDrip4iOS with up to 100 other people to help them: https://xdrip4ios.readthedocs.io/.../personal_testflight/
+2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and monitor the posts… wait for somebody to offer an invitation to their Personal Testflight releases in the group. **You should not ask for an invitation to the app** (read the group rules). 
 
-2. You join the [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) and monitor the posts… wait for somebody to offer an invitation to their Personal Testflight releases in the group. **You should not ask for an invitation to the app** (read the group rules).
-
-Таким образом, легче загрузить приложение **Shuggah**.
-
-:::
+An easier solution is therefore to download the **Shuggah** app. 
+```
 
 #### [Shuggah](https://apps.apple.com/sa/app/shuggah/id1586789452)
 
@@ -145,7 +162,7 @@ If you want, you can then become a "releaser" and share a Personal Testflight xD
 
 The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/announcements) supports xDrip4iOS, Shuggah, and the matching Apple Watch apps.
 
-#### F) Sugarmate (iOS)
+### F) Sugarmate (iOS)
 
 ![изображение](./images/340cd555-a9e0-4a20-a131-36c078f5b8ea.png)
 
@@ -157,7 +174,7 @@ The [xDrip4iOS Facebook group](https://www.facebook.com/groups/853994615056838/a
 Пользователи Sugarmate сообщают что приложение совместимо с Apple CarPlay в США для отображения данных гликемии во время вождения. Пока еще не установлено, возможно ли это в странах за пределами США. Если вы знаете больше об этом, добавьте подробности в документацию, заполнив запрос на слияние который быстро и легко сделать.
 
 
-#### G)  [Spike](https://spike-app.com/) (iOS)
+### G)  [Spike](https://spike-app.com/) (iOS)
 
 ![изображение](./images/1129ba00-8159-4940-936e-76fd4ae45a2d.png)
 
@@ -165,7 +182,7 @@ Spike может использоваться и как первичный пр�
 
 Чтобы установить Spike, см. [здесь](https://spike-app.com/#installation)
 
-### 2) Смарт-часы для **мониторинга AAPS** (полные данные профиля или только гликемия), при том, когда **AAPS** работает на телефоне.
+## 2) Смарт-часы для **мониторинга AAPS** (полные данные профиля или только гликемия), при том, когда **AAPS** работает на телефоне.
 
 Опции смарт-часов, которые позволяют взаимодействовать с **AAPS**, описаны в разделе [дистанционное управление](remote-control.md) документации.
 
@@ -173,7 +190,7 @@ Spike может использоваться и как первичный пр�
 
 Here we summarize some of the follow-only watch options popular with **AAPS** users:
 
-#### а) Часы **Xiaomi и Amazfit**
+### a)  **Xiaomi and Amazfit watches**
 
 [Artem](https://github.com/bigdigital) has created an xDrip+ integration app WatchDrip+ for various smartwatch models, mostly for Xiaomi (_e.g._ Mi band) and Amazfit brands:
 
@@ -182,7 +199,7 @@ Here we summarize some of the follow-only watch options popular with **AAPS** us
 
 Подробности об этих моделях и их настройке [здесь](https://bigdigital.home.blog/). Преимущество этих часов заключается в том, что они небольшие и относительно доступные (Xiaomi Mi Band 5 продается за £39.99 GBP). Они особенно популярны как часы для детей и людей с небольшими запястьями.
 
-#### b) Часы Pebble
+### b) Часы Pebble
 
 ![изображение](./images/52032f3b-c871-4342-b8e7-659c285a39c8.png)
 
@@ -191,7 +208,7 @@ Here we summarize some of the follow-only watch options popular with **AAPS** us
 
 Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))) were on general sale from 2013 - 2016, and may still be available second-hand. Активы Pebble перешли к Fitbit. Пользователи Pebble могут пользоваться циферблатом Urchin для просмотра данных Nightscout. Отображаемые данные включают активный инсулин IOB, действующий временный базал и прогнозирование. В случае открытого цикла вы можете использовать алгоритм IFTTT для создания апплета, который сообщает об уведомлениях от **AAPS**, вслед за чем можно отправить либо SMS, либо push-уведомление.
 
-#### c) смарт-часы [Bluejay GTS](https://bluejay.website/shop/product/bluejay-gts-26)
+### c) смарт-часы [Bluejay GTS](https://bluejay.website/shop/product/bluejay-gts-26)
 
 
 ![изображение](./images/4d034157-b3d0-4dcb-98c8-fde0c2e7ad74.png)
@@ -203,14 +220,14 @@ Pebble watches ([now discontinued](https://en.wikipedia.org/wiki/Pebble_(watch))
 
 Недостатки, о которых сообщают пользователи, заключаются в том, что они не всегда снимают показания каждые 5 минут, а батарея не подлежит замене. В часах Bluejay GTS используется модифицированная версия программного обеспечения Xdrip+, и в настоящее время они не работают с другими версиями Dexcom (G7) или датчиками Libre.
 
-#### d) Часы Apple
+### d) Часы Apple
 
 Проверьте [Nightscout на часах](https://nightscout.github.io/nightscout/wearable/#):
 
 Options include Nightguard, sugarmate, Gluco-Tracker and Loop Follow.
 
 
-### 3) Устройства для слежения за AAPS
+## 3) Устройства для слежения за AAPS
 
 Devices include: A)  M5 stack/M5 stickC
 
@@ -220,7 +237,7 @@ C)  PC (Teamviewer)
 
 
 
-#### A) M5 stack
+### A) M5 stack
 
 
 ![изображение](./images/061edb52-56d2-45f4-b3da-82b2036d7bc6.png)
@@ -230,7 +247,7 @@ C)  PC (Teamviewer)
 
 The M5Stack is a small box which can be programmed for many applications, Martin's project [M5Stack NightscoutMon](https://github.com/mlukasek/M5_NightscoutMon/wiki) is displaying sensor glucose values and trends, IOB and COB. Он находится в пластиковой коробке, оснащен цветным дисплеем, слотом для карт Micro SD, 3 кнопками, динамиком и внутренним аккумулятором. Это отличный монитор уровня сахара в крови, и его относительно легко настроить, если у вас есть учетная запись Nightscout. Он обычно применяется в домашних сетях Wi-Fi, но некоторые сообщают, что используют его в качестве дисплея при езде на мотоцикле, запуская его через точку доступа Wi-Fi на телефоне.
 
-#### B) Sugarpixel
+### B) Sugarpixel
 
 SugarPixel — это устройство для системы вторичного оповещения об уровне глюкозы для приложений Dexcom или Nightscout на смартфоне пользователя. Устройство отображает показания уровня сахара в крови в режиме реального времени. Этот аппаратный монитор CGM оснащен звуковыми оповещениями, генерирующими случайные сигналы (которые невероятно громкие), вибрационными оповещениями для людей с нарушениями слуха, настраиваемыми параметрами отображения и встроенным многопользовательским сопровождением.
 
@@ -241,7 +258,7 @@ SugarPixel — это устройство для системы вторичн�
 ● SugarPixel имеет несколько вариантов отображения в мг/дл и ммоль/л в соответствии с потребностями пользователя с цветовой кодировкой значений гликемии. Стандартный циферблат отображает ГК, стрелку тренда и дельту изменений. Дельта - это изменение + или - от последнего показания. ● SugarPixel можно настроить дна работы при низкой яркости, они показывают гликемию и текущее время, что удобно в ночное время на тумбочке пользователя. ● Цветной экран SugarPixel использует весь дисплей для отображения одного цвета, обозначающего значение ГК. Это позволяет пользователю видеть значения ГК на расстоянии через окно, находясь в бассейне, во дворе или на веранде. Большой циферблат хорош для тех, кто носит очки или контактные линзы.
 
 
-#### C) ПК (Teamviwer)
+### C) PC (TeamViewer)
 Некоторые пользователи считают, что полнофункциональный инструмент удаленного доступа, такой как [TeamViewer](https://www.teamviewer.com/), может оказаться полезным для удаленного устранения неполадок.
 
 

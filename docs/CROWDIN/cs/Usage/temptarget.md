@@ -46,7 +46,7 @@ To cancel a **Temp-Target** running, select the “Cancel” button in **Tempora
 
 Or short-click on the ‘BG Target’ in the yellow/green box located in the top right corner of **AAPS**, and select ‘cancel’ as shown below:
 
-![Set temp target](../images/TempTarget_Set2.png)
+![Spustit dočasný cíl](../images/TempTarget_Set2.png)
 
 ## How do I select a “Default-Temp-Targets”
 
@@ -105,4 +105,4 @@ This will ensure **AAPS** will not give **SMBs**, even with COB > 0, *'SMB with 
 
 If the user requires an manual adjustment to the **Temp-Target** *long press* the ‘Eating Soon’, ‘Activity’ or ‘Hypo’ button and then edit the values to the desired **BG** ‘target’ or ‘duration’ field.
 
-![Set temp target through Action tab](../images/TempTarget_ActionTab.png)
+![Nastavit dočasný cíl přes kartu Akce](../images/TempTarget_ActionTab.png)

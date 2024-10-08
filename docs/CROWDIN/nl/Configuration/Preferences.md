@@ -269,13 +269,14 @@
 Depending on your settings in [config builder](../Configuration/Config-Builder.md) you can choose between two algorithms:
 
 - [Advanced meal assist (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm for advanced users
+- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### OpenAPS AMA instellingen
 
 - Allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably.
 - More details about the settings and Autosens can be found in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
+(Preferences-max-u-h-a-temp-basal-can-be-set-to)=
 #### Maximaal instelbaar basaal E/u
 
 - Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate.
@@ -322,7 +323,7 @@ Pas na een tijd mag je het systeem toestaan om extra basale insuline te geven do
 
 - You must have started [objective 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
-- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to).
 
 - Details on the different enable options are described in [OpenAPS feature section](Open-APS-features-enable-smb).
 
@@ -420,9 +421,11 @@ Original communication protocol, can be used with older Nightscout versions.
 
 [New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
-:::{admonition} V3 data uploaders
-:class: warning When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.  
-:::
+```{admonition} V3 data uploaders
+:class: warning
+
+When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+```
 
 - Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
   - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
@@ -474,7 +477,7 @@ Options in advanced settings are self-explanatory.
 
 ## Automatisering
 
-Selecteer welke locatieservice moet worden gebruikt:
+Select which location service shall be used:
 
 - Use passive location: AAPS only takes locations if other apps are requesting it
 - Use network location: Location of your Wi-Fi
@@ -496,8 +499,7 @@ Selecteer welke locatieservice moet worden gebruikt:
 
 ![Onderhoud instellingen](../images/Pref2020_Maintenance.png)
 
-- Standard recipient of logs is <logs@androidaps.org>.
-- If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). In dat geval moet het masterwachtwoord elke keer dat de instellingen worden geëxporteerd of geïmporteerd, worden ingevoerd.
+- Standard recipient of logs is <logs@aaps.app>.
 
 ## Open Humans
 

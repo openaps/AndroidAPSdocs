@@ -2,7 +2,7 @@
 
 ## Vyrobte si místo stažení
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! Další informace naleznete v části [Časté dotazy](../Getting-Started/FAQ.md).
+**AAPS** is not available to download, due to regulations concerning medical devices. Je legální vytvořit aplikaci pro své vlastní použití, ale nesmíte dát kopii ostatním! Další informace naleznete v části [Časté dotazy](../Getting-Started/FAQ.md).
 
 ## Důležité poznámky
 
@@ -29,9 +29,11 @@ See the [Export & import settings](ExportImportSettings-export-settings) page if
 
 (Update-to-new-version-update-your-local-copy)=
 
-## 2. Update your local copy
+## 2. Aktualizace lokální kopie
 
-:::{admonition} WARNING :class: warning If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../Installing-AndroidAPS/building-AAPS), as this guide will not work for you! :::
+    {admonition} WARNING
+    :class: warning
+    If you update from versions prior to 2.8.x, please follow the instructions to do a [New clone](../Installing-AndroidAPS/building-AAPS), as this guide will not work for you!
 
 * Open your existing AAPS project with Android Studio. You might need to select your project. (Double) click on the AAPS project.
     
@@ -75,15 +77,15 @@ See the instructions for [Transfer APK to smartphone](Building-APK-transfer-apk-
 
 ## 5. Install apk
 
-On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)). Note: If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates. For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk.
+V telefonu musíte povolit instalaci aplikací z neznámých zdrojů. Návody, jak to udělat, naleznete na internetu (např. [zde](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) nebo [zde](https://www.androidcentral.com/unknown-sources)). Note: If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates. For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk.
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
-## 6. Check AAPS version on phone
+## 6. Zkontrolujte verzi AAPS na telefonu
 
 After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
 
-![AAPS version installed](../images/Update_VersionCheck282.png)
+![Nainstalovaná verze AAPS](../images/Update_VersionCheck282.png)
 
 # Řešení problémů
 

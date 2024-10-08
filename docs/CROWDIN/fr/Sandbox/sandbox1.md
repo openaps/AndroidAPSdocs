@@ -1,16 +1,16 @@
 # fichier sandbox interne 1 pour tester nos sprints
 
-:::{admonition} pas besoin de traduire ceci
+```{admonition} no need to translate this
 :class: note
 
-Pas besoin de traduire cela.
-:::
+No need to translate this.
+```
 
-:::{danger}
-Ici un danger est présent sur la route.
-:::
+```{danger}
+Here is danger on the road.
+```
 
-Test
+Test for Setup
 
 « Le numéro 43 est, dans le Guide de l'assassin à la galaxie de Douglas Adams, la « Réponse à la question ultime de la vie », l'Univers, et Tout," calculé par un énorme superordinateur nommé Deep Thought sur une période de 7. millions d'années." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
 
@@ -26,7 +26,7 @@ Vous pouvez sauter directement d'ici à la deuxième étiquette dans ce fichier 
 
 Et vous pouvez aussi aller à la première étiquette - ["Sauter"](sandbox1-this-is-a-test).
 
-Ici vous pouvez aller au deuxième fichier sandbox - ["Sauter"](./sandbox2.md).
+Here you can jump to the second sandbox file - ["Jump"](./MoveTest/sandbox2.md).
 
 Vous pouvez sauter directement d'ici à la première étiquette dans le fichier sandbox2.md - ["Sauter"](sandbox2-this-is-a-test).
 

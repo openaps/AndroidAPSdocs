@@ -1,14 +1,14 @@
-# How to edit the docs
+# Jak upravovat dokumentaci
 
 **Tento popis je pouze pro editaci anglické dokumentace. Všechny nové informace musí být přidány nejdřív v angličtině. Pokud chcete přeložit wiki do jiných jazyků (děkujeme), použijte prosím [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](make-a-PR-code-syntax) section of this page.
+Tipy k formátování textu (titulek, tučné...) a nastavit odkazy si prohlédněte sekci ["syntaxe kódu"](make-a-PR-code-syntax) na této stránce.
 
 ## Obecné
 
-For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw).
+Máte-li jakékoliv dotazy, můžete kontaktovat dokumentační tým prostřednictvím [Discordu](https://discord.gg/4fQUWHZ4Mw).
 
-At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub. It's actually not too hard to do a PR and it is a great way to contribute. You are reading this documentation right now because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository. You can't mess up the originals through any accidents in the process. The general process is:
+V některém okamžiku bude navrženo, abyste vytvořili žádost o začlenění (pull request; PR), což je způsob, jakým jsou vaše změny v dokumentaci skutečně vloženy na webové stránky AAPS, které jsou uloženy v GitHubu. Ve skutečnosti není příliš těžké udělat PR a je to skvělý způsob, jak přispět. Tuto dokumentaci právě teď čtete z toho důvodu, že lidé jako vy udělali PR. Nebojte se, že uděláte chybu nebo nějak editujete špatné dokumenty. Vaše změny jsou přezkoumány než jsou zahrnuty do "formální" dokumentace AAPS. Žádnou náhodnou chybou v procesu tedy nemůžete poškodit originál. Obecný proces je:
 
 - Edituje a vylepšuje kód nebo dokumentaci editací stávajícího obsahu.
 - Zkontrolujte, že vaše úpravy vypadají dobře.
@@ -18,43 +18,43 @@ At some point it will be suggested that you make a pull request (PR), which is h
 
 (Poznámka: Pokud se učíte spíše vizuálně, existuje YouTube video [zde](https://youtu.be/4b6tsL0_kzg) ukazující, jak PR funguje.)
 
-Například: chystáme se upravit AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
+Například: chystáme se upravit AndroidAPSdocs. To lze udělat na jakémkoli Windows PC, Mac atd. (libovolném počítači s připojením k internetu).
 
-1. Jděte na https://github.com/openaps/AndroidAPSdocs a kliněte na Fork v horním rohu, abyste si vytvořili vlastní kopii repozitáře.
+1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
 
 ![Klonování repozitoře](./images/PR0.png)
 
-2. Go to any page and navigate to the page you want to edit. Klikněte na černou oblast dole na stránce se zeleným slovem "v: latest" nebo podobné. In the pop up window that appears, click the word "edit" for editing in GitHub. 
+2. Přejděte na jakoukoli stránku a přejděte na stránku, kterou chcete upravit. Klikněte na černou oblast dole na stránce se zeleným slovem "v: latest" nebo podobné. V dialogovém okně, které se zobrazí, klepněte na nabídku "edit" pro úpravu na GitHubu. 
 
 ![edit doc](./images/PR1.png)
 
-Or you can click on the "Edit in GitHub" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
+Nebo můžete kliknout na odkaz "Upravit v GitHubu" v pravém horním rohu a poté kliknout na ikonu tužky, která se objeví v horní liště obsahu stránky k úpravě. Budete muset být již přihlášeni do svého účtu na Githubu (pokud ho nemáte, je snadné si ho vytvořit).
 
 ![RTD io](./images/PR2.png)
 
-3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
+3. Libovolnou možností v kroku 2 vytvoříte nový branch ve svém repozitáři, kde budou uloženy vaše změny. Udělejte své úpravy do souboru.
 
 We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](make-a-PR-code-syntax).
 
-![Edit branch](./images/PR3.png)
+![režim náhledu](./images/PR3.png)
 
 4. Pracujete v záložce "<>Edit file". Vyberte záložku "Preview changes" pro nový náhled, abyste zjistili, že vše, co jste změnili, je to, co jste chtěli. Pokud vidíte, že je potřeba další zlepšení, vraťte se zpět na záložku editace a pokračujte. 
 
-![preview mode](./images/PR5.png)
+![potvrdit komentáře](./images/PR5.png)
 
 5. Když jste dokončili své úpravy, přesuňte se do dolní části stránky. V obdélníku dole napište komentář do textového pole "Add an optional extended description...". Výchozí název má jméno souboru. Zkuste přidat větu s vysvětlením **důvodu** změny. Pomůže to při kontrole, o jakou změnu se pokoušíte.
 
-![commit comments](./images/PR4.png)
+![vytvořit žádost o přijetí změn](./images/PR4.png)
 
 6. Klikněte na zelené tlačítko "Propose file changes" nebo "Commit changes". Na stránce se pak objeví tlačítko "Create Pull Request" a znovu na další stránce klepněte na tlačítko "Create Pull Request".
 
-![create pull request](./images/PR6.png)
+![Sledování PR](./images/PR6.png)
 
 7. Tím dokončíte žádost PR. GitHub přiděluje PR číslo, které se nachází za názvem a hashovou značkou. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! Pokud chcete zkontrolovat pokrok ve zpracování PR, můžete kliknout na symbol zvonku v horním pravém rohu svého účtu na GitHub a uvidíte všechny své PR.
 
-![PR tracking](./images/PR7.png)
+![Sledování PR](./images/PR7.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+PS: Your fork and branch will still be sitting on your own personal GitHub account. Po oznámení, že Váš PR byl sloučený, můžete odstranit branch, pokud do něj nechcete dělat další změny (V kroku 8 bude odkaz na odstranění branche, jakmile bude PR uzavřen nebo sloučen). Pro budoucí úpravy, pokud budete následovat tento postup, budou změny vždy začínat aktualizovanou verzí repozitáře AndroidAPSdocs. Pokud se rozhodnete použít jinou metodu pro vytvoření PR žádosti (např. editace začínající z vaší kopie repozitáře), budete muset zajistit, aby Váš repozitář byl aktuální, a to nejprve provedením "Compare" a sloučením všech aktualizací, které se udály od doby, kdy jste naposledy aktualizovali svůj repozitář. Protože lidé často zapomínají aktualizovat svůj repozitář, doporučujeme použít pro PR proces popsaný výše, dokud se neseznámíte s detaily fungování "Compare".
 
 (make-a-PR-code-syntax)=
 
@@ -88,61 +88,56 @@ We try to avoid further levels of headlines.
 
 ### Text format
 
-- bold: `**text**`
-- italic: `*text*`
+- **bold**: `**text**`
+- *italic*: `*text*`
+- ***bold italic***: `***text***`
 
-### ordered list
+### Ordered list
 
-:::
+    1. first
+    1. second
+    1. third
+    
 
-1. first
-2. second
-3. third :::
+1. Po přidání obrázků nebo provedení úprav můžete odeslat PR (Pull request) do hlavní větve AndroidAPSdocs.
+2. sekund
+3. third
 
-4. first
+### Unordered list
 
-5. second
-6. third
-
-### unordered list
-
-:::
-
-- one element
-- another element
-- and another element :::
+    - one element
+    - another element
+    - and another element
+    
 
 - one element
-
 - another element
 - and another element
 
-### multi level list
+### Multi level list
 
 You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
 
-:::
+    1. first
+    1. second
+    1. third
+      1. one element
+      1. another element
+      1. and another element
+    1. four
+    1. five
+    1. six
+    
 
-1. first
-2. second
+1. Po přidání obrázků nebo provedení úprav můžete odeslat PR (Pull request) do hlavní větve AndroidAPSdocs.
+2. sekund
 3. third 
     1. one element
     2. another element
     3. and another element
 4. four
 5. five
-6. six :::
-
-7. first
-
-8. second
-9. third 
-    1. one element
-    2. another element
-    3. and another element
-10. four
-11. five
-12. six
+6. six
 
 ### Images
 
@@ -179,7 +174,7 @@ External links are links to external web sites.
 
 Internal links to pages are links to the start of a md file which is hosted on our own server.
 
-- internal link to .md page: `[alt text](../folder/file.md)`
+- internal link to .md page: `[alt text](.../folder/file.md)`
 
 #### Internal links to named inline refernces
 
@@ -205,39 +200,54 @@ You can add notes and warning boxes to documentation.
 
 Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all. Please use these carefully as the documentation should be as easy to read as possible.
 
-#### Notes
+#### Poznámky
 
-:::: :::{admonition} Note :class: note
+    ```{admonition} Note headline
+    :class: note
+    This is a note.
+    ```
+    
 
-This is a note. ::: ::::
+```{admonition} Note headline :class: note This is a note.
 
-:::{admonition} Note :class: note
+    <br />#### Warnings
+    
+    ````
+    ```{admonition} Warning
+    :class: warning
+    This is a warning.
+    
 
-This is a note. :::
+    ```{admonition} Warning headline 
+    :class: warning
+    This is a warning.
+    ```
+    
+    #### Collapsing Notes
+    
+    
 
-#### Warnings
+    {admonition} further detailed readings for interested readers
+    :class: dropdown
+    
+    This admonition has been collapsed,
+    meaning you can add longer form content here,
+    without it taking up too much space on the page.
+    
 
-:::: :::{admonition} Warning :class: warning
+````
 
-This is a warning. ::: ::::
+```{admonition} further detailed readings for interested readers :class: dropdown This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page.
 
-:::{admonition} Warning :class: warning
+```
 
-This is a warning. :::
+## Tables
 
-#### Collapsing Notes
-
-:::: :::{admonition} further detailed readings for interested readers :class: dropdown
-
-This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page. ::: ::::
-
-:::{admonition} further detailed readings for interested readers :class: dropdown
-
-This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page. :::
+Avoid using tables with long texts as the contents is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
 
 ## Style Guide
 
-### Contents
+### Obsah
 
 1. English language writing tips
 
@@ -263,7 +273,7 @@ Find an A-Z of alternative words to make your writing easier to understand here:
 
 #### Privacy/licensing concerns:
 
-Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure Youtube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
+Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure YouTube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
 
 #### Keep sentences short, get to the point
 
@@ -329,13 +339,13 @@ There are times when it might be appropriate to use a passive.
 
 #### Avoid nominalisations
 
-A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalisations are formed from verbs.
+A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalizations are formed from verbs.
 
-For example:
+Například:
 
-| Verb      | Nominalisation |
+| Verb      | Nominalization |
 | --------- | -------------- |
-| complete  | completion     |
+| dokončeno | completion     |
 | introduce | introduction   |
 | provide   | provision      |
 | fail      | failure        |
@@ -366,7 +376,7 @@ In the bulleted list above, each point is a complete sentence so they each start
 
 - And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
 
-#### Optimising writing style by purpose
+#### Optimizing writing style by purpose
 
 To keep the documentation clear and short, we write different sections of the documentation in different styles.
 
@@ -400,7 +410,7 @@ A tutorial helps the pupil acquire basic competence. The user will **learn by do
 
 - Prerequisites (Level 2 heading)
 
-- Steps:
+- Kroky:
 
 - Step 1 — Doing the First Thing (Level 2 heading)
 
@@ -434,7 +444,7 @@ A how-to guide’s purpose is to help the already-competent user perform a parti
 
 - Optional Prerequisites (paragraph or Level 2 heading if more than 1)
 
-- Steps:
+- Kroky:
 
 - Step 1 — Doing the First Thing (Level 2 heading)
 

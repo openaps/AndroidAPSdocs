@@ -1,43 +1,58 @@
-# Remote control of AAPS
-There are four highly effective tools for remotely managing **AAPS**:
+# Vzdálené ovládání AAPS
+Existují čtyři vysoce účinné nástroje pro vzdálené řízení **AAPS**:
 
-1) [SMS commands](sms-commands) (follower phone can be either Android or iOS), 2) [AAPSClient](aapsclient) (follower phone is Android) 3) [Nightscout](nightscout) (Android, iOS or other computer/device).  
-4) [Smartwatches](smartwatches) (Android)
+1) [SMS příkazy](sms-commands) (sledovací telefon může být buď Android nebo iOS), 2) [AAPSClient](aapsclient) (sledovací telefon je Android) 3) [Nightscout](nightscout) (Android, iOS nebo jiný počítač/zařízení).  
+4)
 
-The first three are mostly appropriate for carers/parents, but smartwatches are very useful for carers/parents **and** for adults with diabetes themselves.
+Chytré hodinky (smartwatch)/4> (Android) </p> 
+
+První tři jsou většinou vhodné pro pečovatele/rodiče, ale chytré hodinky jsou velmi užitečné pro pečovatele/rodiče i pro dospělé s diabetem. 
 
 ![image](images/remote_control_and_following/AAPS_overview_remote_control_01.png)
 
-#### Considerations when setting up remote control of **AAPS** for a child
 
-1.  Think about how you will keep the child’s phone in range of their pump and CGM. This can be challenging with children who are too young to be responsible for a phone. Ensuring you select an AAPS phone with a good bluetooth connection range and finding a comfortable way for the child to carry the pump and phone - if they are old/big enough to have the phone on them -  (_e.g._ a [SPI Belt](https://spibelt.com/collections/kids-belts) may help.
-2.  Take your time to set-up and test commands with your child next to you, before starting remote treatment and monitoring. Many parents choose school holidays or weekends.
-3.  Make sure other caregivers/teachers are aware of your child's treatment plan and work out how adding in remote control is going to work with/enhance the existing plan.
-4.  Many parents find it helpful to have a separate line of communication with childcare providers, for example a cheap small teacher “follow” phone.
-5.  Examples for school care plans for children of different ages can be found in the [“files section”](https://www.facebook.com/groups/AndroidAPSUsers/files/) of the **AAPS** Facebook page.
-6.  What is your emergency plan for when remote control does not work (_i.e._ network problems or lost bluetooth connection)?  Always consider what will happen with **AAPS** if you suddenly can’t send a new command. **AAPS** overwrites the pump basal, ISF and ICR with the current profile values. Only use temporary profile switches (_i.e._ with a set time duration) if switching to a stronger insulin profile, in case your remote connection is disrupted. Then the pump will revert to the original profile when the time expires.
+
+#### Věci ke zvážení když nastavujete vzdálené řízení **AAPS** pro dítě
+
+1.  Rozmyslete si, jak budete telefon dítěte udržovat v dosahy jeho pumpy a CGM. To může být náročné u dětí, které jsou příliš malé na to, aby mohly být zodpovědné za telefon. Ujistěte se, že pro AAPS vyberete telefon s dobrým dosahem bluetooth a naleznete způsob, jak může dítě pumpu a telefon nosiit - pokud je dostatečně staré/velké na to, aby telefon nosilo (např. _běžecký opasek_ může pomoct).
+2.  Udělejte si čas na otestování příkazů ve chvíli, kdy máte dítě po boku, než začnete dálkový monitoring a léčbu používat. Mnoho rodičů si k tomu vybírá školní prázdniny nebo víkendy.
+3.  Ujistěte se, že ostatní pečovatelé/učitelé jsou si vědomi způsobu léčby vašeho dítěte a rozmyslete, jak přidání vzdálené kontroly bude fungovat dohromady nebo vylepší již existující způsoby léčby. 
+4.  Mnotí rodiče zjistili, že je užitečné mít samostatný komunikační kanál s ostatními pečovateli, například evný sledovací telefon pro učitele. 
+5.  Příklady odlišných plánů léčby pro děti různého věku můžete nalézt v oddíle ["soubory"](https://www.facebook.com/groups/AndroidAPSUsers/files/) ve Facebookové skupině **AAPS**. 
+6.  Jaký je váš nouzový plán pro případy, kdy vzdálená kontrola nefunguje (_např._ problémy se sítí nebo ztráta konektivity bluetooth)?  Vždy zvažujte, co se stane s **AAPS** ve chvíli, kdy nemůžete odeslat příkazy. **AAPS** přepíše v pumpě nastavení bazálů, ISF a ICR aktuálními hodnotami profilu. Vždy používejte pouze dočasné přepnutí profilu (tzn. s nastavenou dobou trvání) pokud přepínáte na silnější inzulínový profil, pro případ že by došlo k přeručení spojení. Tak se po vypršení nastaveného času vrátí nastavení pumpy k původnímu profilu.
 
 (sms-commands)=
-## 1) SMS Commands
 
-You can control **AAPS** remotely via text (SMS) message through a feature known as **SMS Commands**. SMS commands can be sent to **AAPS**  by _any_ type of phone (iPhone/Android).
 
-**SMS commands are really useful:**
-1. For routine remote control
+## 1) SMS příkazy
 
-2. If you want to remotely bolus insulin
+**AAPS** můžete vzdáleně ovládat pomocí textových zpráv (SMS) pomocí funkce známé jako **SMS příkazy**. SMS příkazy mohou být odesílány na **AAPS** z _jakéhokoli_ typu telefonu (iPhone/Android). 
 
-3. In a region of poor internet reception, where text messages are able to get through, but data/internet phone reception is limited. This is very useful when going to remote areas (e.g. camping, skiing).
+**SMS příkazy jsou opravdu užitečné:** 
 
-4. If your other methods of remote control (Nightscout/AAPSClient) are temporarily not working
+1. Pro běžné dálkové ovládání
 
-### SMS command safety
-If you enable **SMS Communicator** in **AAPS**, consider that the phone which is set up to give remote commands could be stolen, and/or used by someone else. Always lock your phone handset with at least a PIN. A strong password and/ or biometric lock are highly recommended, and ensure this is different from your APK Master password (the password which is required to change **AAPS** settings) . A second phone number must be enabled for SMS commands to work, even if you only have one primary caregiver/follower. You can then use the second number to temporarily disable SMS communicator (with the command **“SMS stop”**) if your main caregiver/parent phone is compromised. Versions of **AAPS** 2.7 and newer also use an [Authenticator app](authentication-or-not)).
+2. Ke vzdálenému podávání bolusového inzulínu
 
-### Different types of SMS commands
-The **SMS Commands Table** below shows all the possible SMS commands. _Example values_ are given, to aid understanding. The commands have the same range of possible values (targets, percent profile etc.) which are allowable in the AAPS app itself. The commands below have been listed by how commonly used they are likely to be, the first two tables should have most of the SMS commands you need with full looping.
+3. V místech, kde máte špatné připojení k internetu, textové zprávy projdou, zatímco data/internetová konektivita jsou omezené. To je velmi užitečné při cestách do odlehlých oblastí (např. kempování, lyžování).
 
-### SMS commands tables
+4. Pokud došlo dočasnému výpadku vašich dalších způsobů vzdáleného ovládání (Nightscout/AAPSClient)
+
+
+
+### Zabezpečení SMS příkazů
+
+Když v **AAPS** povolíte **SMS komunikátor**, vezměte do úvahy, že telefon, který má povoleno posílat příkazy, může být ukraden nebo použit jinou osobou. Vždy zamykejte svůj telefon alespoň pomocí PINu. Rozhodně doporučujeme biometrický zámek a/nebo silné heslo a ujistěte se, že nejde o stejné heslo jako vaše APK Master heslo (heslo které používáte pro změnu nastavení **AAPS**). Povolte SMS příkazy pro druhé telefonní číslo i v případě, že vzdáleně pracuje pouze jeden pečovatel/sledující. Potom můžete druhé telefonní číslo použít k dočasnému vypnutí SMS komunikátoru (příkazem **"SMS stop"**) pokud dojde ke kompromitaci primárního telefonu. **AAPS** od verze 2.7 také mohou používat [autentizační aplikaci](authentication-or-not). 
+
+
+
+### Různé typy SMS příkazů
+
+V následující **tabulce SMS příkazů** jsou všechny dostupné SMS příkazy. Jsou uvedené _Příklady hodnot_, které pomáhají problematice porozumnět. Příkazy mají stejný rozsah možných hodnot (cíle, procento profilu atd.) jako aplikace AAPS. Níže uvedené příkazy byly seřazené podle toho, jak pravděpodobně jsou používány. První dvě tabulky by měly obsahovat většinu SMS příkazů, které potřebujete s plnou smyčkou. 
+
+
+
+### Tabulky SMS příkazů
 
 ![SMS_command_table_1](images/remote-control-02.png)
 
@@ -48,33 +63,39 @@ The **SMS Commands Table** below shows all the possible SMS commands. _Example v
 ![SMS_command_table_4](images/remote-control-05.png)
 
 (authentication-or-not)=
-### Authentication or not?
 
-You may notice from the table above that some SMS commands give an immediate response, and some SMS commands require **authenticating** with a security code from an additional app and a PIN (see below (link for more detail). A simple enquiry like “**bg**” (which requests an update on current glucose) is quick to type, doesn’t need authenticating, and returns the **AAPS** status information shown below:
+
+### Autentizace ano nebo ne?
+
+Ve výše uvedené tabulce si můžete všimnout, že na některé SMS příkazy je reakce okamžitá, jiné vyžadují </strong>ověření/autentizaci</0> pomocí bezpečnostního kódu z další aplikace a zadání PIN (viz níže uvedený odkaz). Jednoduchý dotaz jako **bg** (zaslání aktuální hodnoty glikémie) je rychlý na napsání, nevyžaduje ověření, a vrátí **AAPS** tuto stavovou informaci: 
 
 ![image](images/remote-control-06.png)
 
-Commands which need more security require a code to be entered, for example:
+Přikazy, které vyžadují vyšší bezpečnost, vyžadují zadání bezpečnostního kódu, např.:
 
 ![SMS authenticated for markdown-smaller](images/remote-control-07.png)
 
-### How to set up SMS commands
 
-The overall process is as follows:
 
-**1)    Download an authenticator (caregiver phone)**
+### Jak nastavit SMS příkazy
 
-**2)    Check phone settings (AAPS phone)**
+Celkově proces probíhá takto: 
 
-**3)    Date and time synching (caregiver and AAPS phone)**
+**1) Stáhněte si authentikátor (telefon pečovatele)**
 
-**4)    AAPS settings (APPS phone)**
+**2) Zkontrolujte nastavení telefonu (telefon AAPS)**
 
-**5)    Testing SMS commands works (caregiver and AAPS phone)**
+**3) Synchronizace data a času (pečovatelův a AAPS telefon)**
 
-### Let's get started!
+**4) Nastavení AAPS (telefon APPS)**
 
-1) **Download an authenticator**: On the caregiver phone, download (from the App store or Google play) and install one authenticator of your choice from the list below:
+**5) Otestování SMS příkazů (pečovatelům a AAPS telefon)**
+
+
+
+### Pojďme na to!
+
+1) **Stáhněte si autentizátor**: Na telefonu pečovatele stáhněte (z App Store nebo Google play) a nainstalujte některý z tohoto seznamu autentizačních aplikací:
 
 [**Authy**](https://authy.com/download/)
 
@@ -84,483 +105,547 @@ The overall process is as follows:
 
 [**FreeOTP Authenticator**](https://freeotp.github.io/)
 
-These Authenticator apps produce a time-limited, one-time 6-digit password, similar to mobile banking or shopping. You can use an alternative Authenticator app, as long as it supports RFC 6238 TOTP tokens. The Microsoft Authenticator does not work.
+Tyto autentizační aplikace vytvářejí časově omezené, šestimístné heslo, podobně jako aplikace pro mobilní bankovnictví nebo nakupování. Můžete použít libovolnou autentizační aplikaci, která podporuje tokeny RFC 6238 TOTP. Microsoft Authenticator se s AAPS nefunguje.
 
-2) **Check phone settings:** In the **AAPS** phone settings go to Apps > AndroidAPS > Permissions  > SMS  > Allow SMS
+2) **Zkontrolujte nastavení telefonu:** V nastavení **AAPS** telefonu jděte do Aplikace > AndroidAPS > Oprávnění > SMS > Povolit SMS
 
 ![image](images/remote-control-08.png)
 
-3) **Date and time synching:** In both the **AAPS** phone and the caregiver phone, check the date and time are synched. Exactly how you do this depends on your specific handsets, you may need to try out different settings.
+3) **Synchronizace data a času:** V telefonu **AAPS** a telefonu pečovatele zkontrolujte, zda jsou datum a čas synchronizovány. Jak přesně toto nastavíte zavisí na zařízení, které používáte. Možná budete muset vyzkoušet různá nastavení.
 
-Example (for Samsung S23 handset): Settings – general management – date and time- automatic date and time
+Příklad (pro Samsung S23): Nastavení – obecná správa – datum a čas – automatické nastavení data a času 
 
-Some options may be greyed out, due to needing admin via a family account if the phone has been set up as a child account. This date and time setting is called “set automatically” on a caregiver/parent iPhone. If you are not sure if you have synched the handsets, don’t worry, you can set up the SMS commands and troubleshoot afterwards if it seems to be causing problems (ask for help if needed).
+Některé možnosti mohou být neaktivní z důvodu potřeby oprávnění správce přes rodinný účet, pokud byl telefon nastaven jako dětský. Toto nastavení data a času je na telefonu pečovatele/rodiče nazváno „nastavit automaticky“. Pokud si nejste jistí, žemáte zařízení synchronizovaná, nedělejte si starosti. Můžete nastavit SMS příkazy a následně vyřešit problémy (pokud je to nutné, požádejte o pomoc). 
 
-4) **AAPS settings:**
+4) **Nastavení AAPS:** 
 
-i) Now that the phone settings have been checked, in the **AAPS** app itself, use the left hand hamburger menu to navigate to Config Builder:
+i) Nyní, když je nastavení telefonů zkontrolované, v **AAPS** aplikaci použijte hamburger menu na levé straně a otevřete Konfiguraci: 
 
 ![image](images/remote-control-09.png)
 
-ii) Enable “SMS communicator” by checking the boxes, then click the “cog” to get to the SMS communicator preferences screen:
+ii) Povolte "SMS komunikátor" zaškrtnutím políčka, pak klikněte na "ozubené kolečko" a tím otevřete obrazovku nastavení SMS komunikátoru:
 
 ![image](images/remote-control-10.png)
 
-_Note - as an alternative route to Config Builder, you can also use the new “SMS Communicator tab” at the top of the AAPS screen, then right click on the custom right hand hamburger menu for that page, to get to the SMS communicator preferences screen._
+_Poznámka: Jako alternativu ke Konfiguraci můžete také použít novou kartu „SMS komunikátor“ v horní části obrazovky AAPS, poté klikněte na ahmburger menu v pravé části a tak otevřete obrazovku nastavení SMS komunikátoru._ 
 
-iii) On the preferences screen enable “allow remote commands via SMS”:
+iii) Na obrazovce nastavení povolte "Povolit vzdálené příkazy přes SMS": 
 
 ![image](images/remote-control-11.png)
 
-iv) Enter the caregiver phone number(s). Include the country code and exclude the first “0” of the phone number, as shown in these examples:
+iv) Zadejte telefonní číslo(a) pečovatele. Zadejte kód země a vynechte první "0" u telefonního čísla, jak je uvedeno v těchto příkladech:
 
-UK phone number: +447976304596
+Telefon Spojeného království: +447976304596
 
-US phone number: +11234567890
+Telefon USA: +11234567890
 
-FR phone number:  +33612344567
+Telefon Francie: +33612344567
 
-_etc._
+_atp._ 
 
-Note that the “+” in front of the number may or may not be required based on your location. To determine this, send a sample text which will show the received format in the SMS Communicator tab.
+Dejte pozor na to, že „+“ před číslem může nebo nemusí být požadováno na základě vaší polohy. Abyste to zjistili, pošlete vzorový text, který se zobrazí v přijatém formátu na kartě SMS komunikátoru. 
 
-If you have more than one phone number to add, separate them by semicolons, with NO space between numbers (this is critical!). Select “OK”:
-
+Chcete-li přidat více než jedno telefonní číslo, oddělte je středníky BEZ MEZER mezi čísly (to je kriticky důležité!). Stiskněte „OK“:  
 
 ![image](images/remote-control-12.png)
 
-v) Choose a PIN which you (and any other caregivers) are going to use at the end of the authenticator code when the SMS command is sent.
+v) Vyberte PIN kód, který vy (a všichni ostatní pečovatelé) budete používat na konci ověřovacího kódu při odeslání SMS příkazu. 
 
-PIN requirements are:
+Požadavky na PIN jsou:
 
-•3 to 6 digits
+•3 až 6 číslic
 
-•not the same digits (_i.e._ 1111 or 1224)
+• různé číslice (_, tj._ 1111 nebo 1224)
 
-•not sequential numbers (_i.e._ 1234)
+• bez následujících čísel (_, tj._ 1234) 
 
 ![image](images/remote-control-13.png)
 
-vi) On the preferences screen select “Authenticator setup”
+vi) Na obrazovce nastavení vyberte "Nastavení autentizátoru"
 
-●   Follow the step-by-step instructions on the screen.
+● Postupujte krok za krokem podle instrukcí na obrazovce.
 
-●   Open your installed authenticator app on the _caregiver’s phone_ set up a new connection and
+● Otevřete nainstalovanou ověřovací aplikaci na _pečovatelském telefonu_ a nechte přidat nové připojení.
 
-●   Use the caregiver phone to scan the QR code provided by **AAPS**, when prompted.
+● Použijte telefon pečovatele k naskenování QR kódu poskytnutého **AAPS**, když budete vyzváni.
 
-●   Test the one-time passcode from the authenticator app on the caregiver phone followed by your PIN:
+● Otestujte jednorázové heslo z autentizační aplikace na telefonu pečovatele, po němž následuje váš PIN.
 
 Příklad:
 
-The token from the authenticator app is 457051
+Jednorázové heslo z autentizační aplikace je 457051
 
-Your mandatory PIN is 2401
+Váš povinný PIN je 2401
 
-Code to check: 4570512401
+Ověřovací kód: 4570512401
 
-If the entry is correct, the red text “WRONG PIN” will change automatically to a green “OK”. The process is now complete, there is no “OK” button you need to press after entering the code:
-
+Pokud je zadán správný kód, červený text „WRONG PIN“ se automaticky změní na zelený „OK“. Proces je nyní dokončen, po zadání kódu nemáte žádné potvrzovací tlačítko „OK“:
 
 ![image](images/remote-control-14.png)
 
-You should now be set up with SMS commands.
+Nyní byste měli mít nastaveny SMS příkazy.
 
-### First steps using SMS commands
 
-1)  To check you have set everything up correctly, test the connection by typing “bg” as an SMS message from the caregiver phone to the AAPS phone. You should get a response similar to that shown here:
+
+### První kroky při užívání SMS příkazů
+
+1) Chcete-li zkontrolovat, že jste všechno nastavili správně, otestujte spojení zasláním „bg“ jako SMS zprávy z telefonu pečovatele do AAPS telefonu. Odpověď by se měla podobat té, která je zde zobrazena:
 
 ![image](images/remote-control-15.png)
 
-2)  Now try an SMS command that requires the authenticator. To do this, send a text from the caregiver’s phone with the required command to the**AAPS** phone (_e.g._ “target hypo”). The caregiver’s phone will receive a text back, prompting you to enter the **six-digit authenticator password** from the authenticator app, followed by an additional secret **PIN** known only to caregivers/followers (a string of ten digits in total, assuming your PIN is only 4 digits).
+2) Nyní vyzkoušejte SMS příkaz, který vyžaduje autentifikátor. Chcete-li to udělat, pošlete z telefonu pečovatele text s požadovaným příkazem na **AAPS** telefon (_např._ ‚target hypo‘). Telefon pečovatele obdrží text zpět, vyzve vás k zadání **šestimístného ověřovacího hesla** z autentizační aplikace, následované dalším tajným kódem **PIN** známým pouze pečovateli/sledujícímu (celkem deset číslic, za předpokladu, že váš PIN je pouze 4 místný).
 
-This example is shown below, with the SMS command “target hypo” to set a hypo temp target:
+Viz příklad níže, SMS příkaz „target hypo“ nastaví dočasný cíl:
 
-●   In this example, your PIN is 1289
+● V tomto příkladu je váš PIN 1289
 
-●   Code from your authenticator app is 274127
+Jednorázové heslo z autentizační aplikace je 274127
 
-●   When prompted, text 2741271289
+● Po výzvě odešlete 2741271289
 
-Commands must be sent in English. The response should be in your local language. When you try sending an SMS command for the first time, try it in the presence of the AAPS phone, to see how it works:
+Příkazy musí být zadány v angličtině. Odpověď by měla přijít ve vašem místním jazyce. Když budete zkoušet odeslat SMS příkaz poprvé, testujte to, když máte po ruce AAPS telefon, abyste viděli, jak všechno funguje: 
 
 ![image](images/remote-control-16.png)
 
-The caregiver’s phone will receive a SMS in reply from **AAPS** to confirm if the remote SMS command has been carried out successfully. There are several possible reasons the command may not be successful:
+Na telefon pečovatele přijde SMS odpověď od **AAPS** jako potvrzení, že byl vzdálený SMS příkaz úspěšně proveden. Existuje několik možných důvodů, pokud příkaz nebyl úspěšný:
 
-●   SMS commands setup isn’t complete/correct
+● Nastavení SMS příkazů není úplné/správné
 
-●   You sent a command which had an incorrect format (like “disconnect pump 45” instead of “pump disconnect 45”)
+●   Odeslali jste příkaz v nesprávném formátu (jako “disconnect pump 45” místo “pump disconnect 45”)
 
-●   You used an incorrect, or expired authenticator code (it is usually good to wait a few seconds for a fresh code, if the current one is about to expire)
+● Použili jste nesprávný nebo prošlý ověřovací kód (je obvykle dobré počkat několik sekund na nový kód, pokud má platnost aktuálního kódu zrovna vypršet)
 
-●   The code+PIN was OK, but there was a delay in the SMS leaving/arriving, which led AAPS to calculate that the authenticator code had expired
+● Kód + PIN byl v pořádku, ale došlo ke zpoždění v doručení SMS, podle čehož AAPS vypočetl, že ověřovací kód vypršel
 
-●   The AAPS phone is out of range/contact with the pump
+● Telefon AAPS je mimo dosah/kontakt s pumpou
 
-●   The system is already busy delivering a bolus
+● Systém je již zaneprázdněn podáváním  bolusu
 
-If your command is successful, you will receive a reply to confirm this. If there is a problem you will receive an error message.
+Pokud je váš příkaz úspěšný, obdržíte odpověď s potvrzením. Pokud se vyskytne problém, obdržíte chybovou zprávu.
 
-Common errors are shown in the examples below:
+Obecné chyby jsou uvedeny v následujících příkladech: 
 
 ![image](images/remote-control-17.png)
 
-### Additional safety notes on SMS commands
 
-The default minimum time delay between bolus commands is 15 minutes. For safety reasons, you have to add at least two authorised phone numbers to change this to a shorter time delay. If you try to remotely bolus again within 15 minutes of the previous bolus, you will receive the response “Remote bolus not available. Try again later”
 
-If you want to remove the ability of a caregiver phone to send SMS commands, use the emergency button “RESET AUTHENTICATORS” in AAPS (see preferences screenshot above, link) or send the SMS command “SMS stop”. By resetting authenticators you make ALL the caregivers' phones invalid. You will need to set them up again.
+### Dodatečné bezpečnostní poznámky k SMS příkazům
 
-### Delivering mealtime boluses through SMS commands
+Výchozí minimální prodleva mezi bolusovými příkazy je 15 minut. Z bezpečnostních důvodů musíte přidat alespoň dvě autorizovaná telefonní čísla ke zkrácení tohoto limitu. Pokud se pokusíte znovu o vzdálený bolus do 15 minut od předchozího bolusu, obdržíte odpověď: „Vzdálený bolus není k dispozici. Zkuste to později.”.
 
-Remote bolusing of insulin can _only_ be done via **SMS Commands**, it cannot be actioned through NightScout or AAPSClient. Carbs however, can be announced through any of the three methods. It is not possible to send both carbs and insulin commands in one single SMS message. These commands must be sent separately as follows:
+Pokud chcete telefonu pečovatele odebrat právo posílat SMS příkazy, použijte v AAPS nouzové tlačítko „RESET AUTHENTICATORS“ (viz snímek obrazovky nastavení výše, odkaz) nebo poslat SMS příkaz „SMS stop“. Resetováním autentizačních aplikací zneplatníte VŠECHNY telefony pečovatelů. Budete je muset nastavit znovu.
 
-1)  Send the insulin bolus (_e.g._“bolus 2” will command a bolus of 2 units) through SMS commands is equivalent to using the “syringe” icon in **AAPS**. 2)  Send the carbs (_e.g._ “carbs 20” will announce 20g of carbs). This is equivalent to using the “carbs” tab in **AAPS**.
 
-To avoid hypos, it is a good idea to start conservatively, by bolusing **less insulin** than would be needed according to your carb ratio, because you are not taking into account the current glucose level or glucose trend.
 
-**The order in which you send these commands is important**. If you announce a large amount of carbs by any route, and have SMBs enabled, **AAPS** may immediately respond by giving a partial bolus of insulin. So, if you then try to send an insulin bolus _after_ announcing the carbs, you may have a frustrating delay and a “bolus in progress” message, and you then need to check what has been given as an SMB. Or, if you do not realise an SMB is being delivered, and your own subsequent bolus is also successful, too much insulin may be delivered for the meal overall. Therefore, if bolusing for meals remotely, always send the insulin bolus _before_ the carb announcement. If you prefer, you can use a combination of Nightscout or AAPSClient with SMS commands. Carbs can be announced through Nightscout without any authentication (see instructions sub section below) , and are therefore quicker than SMS commands.
+### Posílání bolusů k jídlu prostřednictvím SMS příkazů
 
-### SMS commands troubleshooting and FAQ
+Vzdálené posílání bolusů inzulínu může být provedeno _pouze_ prostřednictvím **SMS příkazů**, nelze to provést pomocí Nightscout nebo AAPSClienta. Naopak sacharidy mohou být zadány kteroukoli z těchto 4 metod. Ale není možné odesílat sacharidy i inzulínové příkazy v jedné SMS zprávě. Tyto příkazy musí být zaslány odděleně:
 
-#### Q: What _can’t_ we do with SMS commands?
+1) Poslání bolusu (_např._"bolus 2" přikáže podat bolus 2 jednotek inzulínu) pomocí SMS příkazů je ekvivalenem použití ikony "injekční stříkačky" v **AAPS**. 2) Odeslání sacharidů (_např._ “carbs 20” oznámí 20 g sacharidů). To je ekvivalentem použití ikony "sacharidy" v **AAPS**.
 
-1)  **You cannot set a _temporary_ profile switch** (so for example, setting “profile exercise“ for 60 minutes), although you can permanently switch to “profile exercise”. Temporary profiles switches can instead be set through Nightscout or AAPSClient.
+Abyste se vyhnuli hypoglykémii, je lepší začít opatrně podáváním **menšího množství inzulínu** než je podle vašeho inzulíno sacharidového poměru potřeba, protože nezohledňujete současnou hladinu glukézy nebo trend. 
 
-2)  **You cannot cancel automations** or **set user-defined targets** but there are approximate solutions: As an example, imagine the normal profile target is 5.5. You have set an automation in AAPS, to always set a high target of 7.0 between 2.30pm and 3.30pm because of a sports class in school, and a condition of the automation is that “no temp target exists”. This week, you have been told at short notice that the sports class is cancelled, and is being replaced by a pizza-eating session, but your kid is already at school with the AAPS phone. If the high temporary target of 7.0 is started by the automation and you cancel it (on the AAPS phone, or remotely) the conditions for the automation are still met and **AAPS** will simply set the high target again, a minute later.
+**Pořadí, ve kterém odesíláte tyto příkazy, je důležité**. Pokud oznamujete velké množství sacharidů libovolnou cestou a máte povoleno SMB, **AAPS** může okamžitě reagovat podáním částečného bolusu inzulínu. Takže pokud se pak pokusíte odeslat bolus _po_ oznámení sacharidů, můžete dostat frustrující zprávu o povinné prodlevě mezi bolusy a pak musíte zkontrolovat, co bylo podáno jako SMB. Případně pokud si neuvědomíte, že jsou SMB doručovány a vámi poslaný následný bolus je úspěšný, na jídlo může být dodáno celkově příliš mnoho inzulínu. Z tohoto důvodu, pokud potřebujete posílat bolusy vzdáleně, je nutné vždy odeslat bolus _před_ oznámením sacharidů. Pokud vám to vyhovuje, můžete využívat kombinaci Nightscoutu nebo AAPSClienta s SMS příkazy. Sacharidy mohou být bez jakékoli autentizace oznámeny prostřednictvím Nighscoutu (viz instrukce níže v pododdíle) a tedy rychleji než prostřednictvím SMS příkazů.
 
-**If you did have access to the AAPS phone**, you could uncheck/modify the automation, or, if you don’t want to do that, you could simply set a new temp target of 5.6 for 60 min under the Actions Tab or by pressing on the target tab. This would prevent the automation from setting the high target of 7.0.
 
-**If you don’t have access to the AAPS phone** SMS commands can be used for an approximate fix: for example, by using the command “target meal” to set a target of 5.0 for 45 mins (other default targets are 8.0 for activity or hypo, see Table). However, with SMS commands you cannot specify a _specific_ value target value (of 5.6 for 60 minutes, for example), you would need to use **AAPSClient** or Nightscout to do this.
 
-#### Q: What happens if I change my mind about a command I have just sent?
+### Řešení problémů s SMS příkazy a FAQ
 
-**AAPS** will only deliver on the most recent command. So, if you type “bolus 1.5”, and then, without authenticating, you send a new command “bolus 1”, it will ignore the earlier 1.5 command. **AAPS** will always send the caregiver's phone a response to confirm what the SMS command is before you are prompted to enter the authentication code, as well as a response following the action.
 
-#### Q: Why didn't I get a response to an SMS command?
 
-It could be for one of these reasons:
+#### Q: Co _nemůžeme_ dělat s SMS příkazy?
 
-1)  The message has not got through to the phone (network issues). 2)  **AAPS** is still in the process of processing the request (_e.g._ a bolus, which can take some time to deliver depending on your bolus rate). 3)  The AAPS phone does not have good bluetooth connection to the pump when the command is received, and the command has failed (this usually creates an alarm on the AAPS phone).
+1)  **Nemůžeme _dočasně_ přepnout profil** (například nastavit „profil na cvičení“ po dobu 60 minut), ale můžete natrvalo přepnout na „profil na cvičení“. Dočasná změna profilu může být provedena prostřednictvím Nightscoutu nebo AAPSClienta.
 
-#### Q: How can I stop a command once it has been authenticated?
+2)  **Nemůžete zrušit automatizaci** nebo **nastavit uživatelem definované cíle**, ale existují jiná řešení: Například: Představte si, že normální cíl profilu je 5.5. V AAPS máte nastavenou automatizaci, která vždy mezi 2:30 a 3:30 odpoledne nastaví z důvodu tělocviku ve škole vyšší cíl na 7.0 mmol/L a podmínkou spuštění tohoto pravidla je, že "neexistuje dočasný cíl". Tento týden vám bylo na poslední chvíli oznámano, že tělocvik byl zrušen a místo něj se jde na pizzu. Vaše dítě už je ale ve škole s AAPS telefonem. Pokud automatizace spustí cíl 7.0 a vy ho zrušíte (na AAPS telefonu nebo vzdáleně), podmínky pro automatizační pravidlo jsou pořád platné a **AAPS** jednoduše nastaví vysoký cíl za minutu znovu.
 
-You can't. However, you can cancel a bolus sent by SMS on the **AAPS** phone itself, by simply cancelling it on the bolusing popup, if you are quick. Many SMS commands (apart from bolusing and carb announcements) can be easily reversed, or actions taken to mitigate unintended effects if a mistake is made.
+**Pokud máte přístup k AAPS telefonu**, můžete automatizaci vypnout nebo upravit, nebo, pokud nechcete automatizaci měnit, můžete jednoduše nastavit dočasný cíl na 5.6 na 60 min na záložce Akce nebo stisknutím tlačítka Cíl. To zabrání automatizaci v novém spuštění vysokého cíle 7.0.   
 
-For errors in bolusing and carb announcements, you can still take action. For example, if you have announced 20g carbs but your child only eats 10g and you (or an onhand caregiver) is unable to delete the treatment in the **AAPS** phone directly, you could set a high temporary target, or set a reduced profile, to encourage **AAPS** to be less aggressive.
+**Pokud nemáte přístup k AAPS telefonu**, SMS příkaz můžu být využit pro náhradní řešení: například odesláním příkazu "target meal" nastavíte cíl 5.0 na 45 minut (ostatní výchozí cíle jsou nastavené na 8.0, protože se používají na aktivitu nebo hypoglykémii). Nicméně SMS příkazem nemůžete zadat _konkrétní_ cílovou hodnotu (5.6 na 60 minut, například). Na to byste potřebovali **AAPSClient** nebo Nightscout.
 
-#### Q. Why am I getting multiple SMS texts of the same message?
 
-If you receive the same message repeatedly (_e.g._ a profile switch) you may have accidentally set up a looping condition with other apps. Například xDrip+. If so, please ensure that xDrip+ (or any other app) does not upload treatments to NightScout.
 
-#### Q. I’ve just set up SMS commands and I am now getting far too many text messages. Can I reduce the frequency, or make them stop?
+#### Q: Co se stane, když změním názor na příkaz, který jsem právě odeslal?
 
-Using SMS commands may generate a lot of automated messages from the AAPS phone to the caregiver’s phone. You will also receive messages, for example “basal profile in pump updated” if you have automations set up in **AAPS**. It can be useful to have unlimited SMS allowance on your AAPS phone plan (and for each caregiver phone used) if a lot of SMS will be sent, and to deactivate SMS notifications, alarms or vibrations on all phones. It is not possible to use SMS commands and not receive these updates. Because of this, you may want an alternative way to communicate directly with your child (if they are old enough), instead of SMS. Common alternative communication apps used by **AAPS** caregivers include Whatsapp, Lime, Telegram, and Facebook Messenger.
+**AAPS** doručí pouze poslení příkaz. Takže pokud napíšete "bolus 1,5" a potom, bez autentizace pošlete nový příkaz "bolus 1", Aaps bude ignorovat předchozí 1,5. **AAPS** vždy odešle telefonu pečovatele potvrzení, jaký SMS příkaz přišel, než vás vyzve k zadání ověřovacího kódu, stejně jako potvrzení po akci. 
 
-#### Q. Why are SMS commands not working on my Samsung phone?
 
-There was a report of SMS commands stopping after an update on a Samsung Galaxy S10 phone. This was solved by disabling ‘send as chat message’.
 
+#### Q: Proč jsem nedostal odpověď na SMS příkaz?
+
+Může jít o jeden z těchto důvodů: 
+
+1) Zpráva se nedostala do telefonu (problémy se sítí). 2)  **AAPS** stále zpracovává požadavek (_např._ bolus, který může nějakou dobu trvat, v závislosti na rychlosti bolusu). 3) AAPS telefon nemá dobré bluetooth spojení s pumpou, když je příkaz přijal, a příkaz tedy selhal (tato situace obvykle nastaví alarm na AAPS telefonu). 
+
+
+
+#### Q: Jak mohu zastavit příkaz, který už byl ověřený?
+
+Nemůžete. Nicméně můžete zrušit bolus odeslaný pomocí SMS na samotném **AAPS** telefonu, jednoduše jeho zrušením v popup okně pro podávání, pokud jste dostatečně rychlí. Mnoho příkazů (vyjma poslání bolusu a zadání sacharidů) může být snadno vráceno nebo mohou být provedeny kroky ke zmínění dopadů případné chyby. 
+
+V případě chybně poslaného bolusu nebo oznámení sacharidů můžete stále podniknout opatření. Na příklad, pokud jste oznámili 20g sacharidů ale dítě snědlo pouze 10g a vy (nebo pečovatel na místě) nemůžete smazat ošetření přímo v **AAPS** telefonu, můžete nastavit vysoký dočasný cíl nebo nastavit slabší profil a tím zajistit, že se **AAPS** bude chovat méně agresivně.
+
+
+
+#### Q: Proč dostávám více SMS se stejnou zprávou?
+
+Pokud obdržíte opakovaně stejnou zprávu (_např._ o přepnutí profilu), mohlo se stát, že jste omylem vytvořili smyčku s ostatními aplikacemi. Například xDrip+. Pokud je to tak, ujistěte se prosím, že xDrip+ (nebo jakákoliv jiná aplikace) nenahrává ošetření přímo do NightScout. 
+
+
+
+#### Q: Právě jsem nastavil SMS příkazy a nyní dostávám příliš mnoho textových zpráv. Mohu snížit jejich frekvenci nebo je zastavit?
+
+Použití SMS příkazů může generovat spoustu automatizovaných zpráv z AAPS telefonu do telefonu pečovatele. Budete také dostávat zprávy, na příklad "bazální profil aktualizován", pokud na to máte nastavenou v **AAPS** automatizaci. Může být užitečné mít nastavený neomezený počet odeslaných SMS na účtu vašeho AAPS telefonu (a na všech telefonech pečovatelů) pokud bude přicházet velké množství zpráv, případně deaktivovat oznámení o došlé SMS, alarmy a vibrace na telefonech. Není možné mít zapnuté SMS příkazy a zároveň nedostávat tyto stavové zprávy. Z toho důvodu můžete chtít nastavit alternativní způsob komunikace přímo s vaším dítětem (pokud je dostatečně staré), mimo SMS. Běžně používané aplikace pro komunikaci pečovatelů zahrnují Whatsapp, Lime a Facebook messenger. 
+
+
+
+#### Q: Proč SMS příkazy nefungují na telefonech Samsung?
+
+Po aktualizaci telefonu Galaxy S10 bylo hlášeno, že SMS příkazy přestaly fungovat. Lze to vyřešit vypnutím možnosti "odesílat zprávy jako konverzace".
 
 ![image](images/remote-control-18.png)
 
-#### Q. How can I fix issues with the Android Messages App?
 
-If you are having issues sending or receiving SMS commands with the Android Messages app, disable end-to-end encryption on both caregiver and dependent’s phones:
 
-●   Open the specific SMS conversation in Messages
+#### Q: Jak mohu vyřešit problémy s aplikací Android Messages?
 
-●   Select the options ellipsis in the top right corner
+Pokud máte problémy s posíláním nebo přijímáním SMS příkazů v aplikaci Android Message, zakažte end-to-end šifrování jak na telefonu péčovatele, tak na AAPS telefonu:
 
-●   select “Details”
+● Otevřete patřičnou SMS konverzaci ve zprávách
 
-●   Activate “Only send SMS and MMS messages”
+● Vyberte možnosti (elipsu) v pravém horním rohu
+
+● vyberte "Podrobnosti"
+
+● Aktivujte "Posílat pouze SMS a MMS zprávy"
 
 (aapsclient)=
+
+
 ## 2) AAPSClient
 
-_Note that **NSClient** has been replaced by **AAPSClient** for AAPS version 3.2 and higher, check the version release notes for more information._
+_Všimněte si, že **NSClient** byl nahrazen **AAPSClient** pro AAPS verze 3.2 a vyšší. Pro více informací zkontrolujte poznámky k verzi._ 
 
-For versions of **AAPS** which are older than AAPS 3.2, if you have a caregiver/parent Android phone you can directly download and install the [**AAPSClient**](https://github.com/nightscout/AndroidAPS/releases/) apk. **AAPSClient** looks very similar in appearance to **AAPS** itself, offering the caregiver tabs that will remotely action commands in **AAPS**:
+Pro verze **AAPS**, které jsou starší než AAPS 3.2, pokud máte Android telefon pečovatele/rodiče, můžete si aplikaci [**AAPSClient**](https://github.com/nightscout/AndroidAPS/releases/) přímo stáhnout a nainstalovat. **AAPSClient** vypadá velmi podobně jako samotná aplikace **AAPS** a poskytuje tak pečovateli nástroj na vzdálené ovládání **AAPS**.
 
 ![NSCLIENT_ 2024-05-17 134512](https://github.com/openaps/AndroidAPSdocs/assets/137224335/6c66a27c-21d7-4c43-ac66-001669c0634f)
 
+Existují 2 verze apk, které lze stáhnout [zde](https://github.com/nightscout/AndroidAPS/releases/), **AAPSClient** & **AAPSClient2**, mezi kterými je drobný, ale důležitý rozdíl, jak je vysvětleno níže. 
 
-There are 2 versions of the apk that can be [downloaded from here](https://github.com/nightscout/AndroidAPS/releases/),  **AAPSClient** & **AAPSClient2** which have a subtle but important difference as explained below.
+**AAPSClient** můžete nainstalovat do jednoho telefonu nebo do více telefonů sledujících osob (např. telefonu sledujícího rodiče 1 a telefonu sledujícího rodiče 2), aby měli oba pečovatelé přístup a vzdálené ovládání telefonu pacienta **AAPS**. 
 
-**AAPSClient** can be installed on a single phone or multiple follower phones (i.e. parent 1’s follower phone and parent 2’s follower phone) in order for both caregivers to be granted access and remote control a patient's **AAPS** phone.
+Pokud pečovatel potřebuje druhou kopii **AAPSClient** ke vzdálenému ovládání dalšího pacienta s Nightscout účtem, může kromě **AAPSClient** nainstalovat navíc **AAPSClient2**. **AAPSClient 2** umožňuje jedinému poskytovateli péče nainstalovat aplikaci **AAPSClient** dvakrát na stejný telefon pečovatele, aby měl současný přístup a ovládání k dvěma různým pacientům.
 
-Should a caregiver require a second copy of **AAPSClient** to remote control an additional patient with a Nightscout account, they should install **AAPSClient2** in addition to **AAPSClient**. **AAPSClient 2** allows a single caregiver to install the **AAPSClient** apk twice on the same follower phone in order to be given simultaneous access and remote control to two different patients.
-
-To download **AAPSClient**, navigate to [here](https://github.com/nightscout/AndroidAPS/releases/) and click on the asset **“app-AAPSClient-release_x.x.x.x”** (it may be a newer version to that shown in the screenshot below):
+Chcete-li stáhnout **AAPSClient**, přejděte na [tuto stránku](https://github.com/nightscout/AndroidAPS/releases/) a klepněte na soubor **“app-AAPSClient-release_x.x.x.x”** (může to být novější verze než ta zobrazená na snímku níže):
 
 ![image](images/remote_control_and_following/AAPSClient_download_02.png)
 
-Then go to  _downloads_ on your computer. On Windows, -downloads_ will show the right hand ribbon:
+Pak jděte na _stáhnout_ na vašem počítači. On Windows, -downloads_ will show the right hand ribbon:
 
 ![image](images/remote_control_and_following/AAPSClient_download_folder_03.png)
 
-Once downloaded, click _show in folder_ to locate the file.
+Po stažení klikněte na _zobrazit ve složce_, abyste nalezli soubor.
 
-The **AAPSClient** apk can now be either:
+**AAPSClient** apk může být buď:
 
-Transferred by a USB cable onto the follower phone; or Dragged into Google drive folder, and then added onto the follower phone by clicking on the "app-AAPSClient-release" file.
+Zkopírován do telefonu pečovatele pomocí USB kabelu nebo přetáhnut do adresáře Google drive, připojeného do telefonu pečovatele. Následně klikněte na soubor "app_AAPSClient-release. apk".
 
-### Synchronization- AAPSClient and AAPS set up (for Version 3.2.0.0 above)
 
-Once __AAPSClient__ apk is installed on the follower phone, the user must ensure their ‘Preferences’ in Config Builder are correctly set up and aligned with __AAPS__ for Nightscout 15 (see Release Notes [here](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Update-to-new-version.html)). The example below provides Synchronization guidance for NSClient and NSClientV3 using Nightscout15 but there are other options available with __AAPS__ (e.g xDrip+).
 
-Within the ‘Synchronization’ located under ‘Config Builder’, the user can opt for either Synchronization options for both __AAPS__ and follower phone being:
+### Nastavení synchronizace - AAPSClient a AAPS (pro verzi 3.2.0.0 a vyšší)
 
-- Option 1: NSClient (also known as ‘v1’) - which synchronises the user’s data with Nightscout; or
+Jakmile je nainstalován apk soubor __AAPSClient__ na telefonu pečovatele, uživatel musí zajistit, že jsou jejich „Předvolby“ v Config builderu správně nastaveny a sladěny s __AAPS__ pro Nightscout 15 (viz poznámky k verzi [zde](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Update-to-new-version.html)). Níže uvedený příklad poskytuje pokyny pro synchronizaci pro NSClient a NSClientV3 pomocí Nightscout15, ale jsou k dispozici i jiné možnosti s __AAPS__ (například xDrip+). 
 
-- Option 2: NSClientV3 (also referred to as ‘v3’).- which synchronises the user’s data with Nightscout using v3 API.
+V rámci „Synchronizace“ v „Config builderu“ může uživatel zvolit synchronizační možnosti pro __AAPS__ i sledující telefon:
+
+- Možnost 1: NSClient (také známý jako „v1“) – který synchronizuje uživatelovy údaje s Nightscout; nebo
+
+- Možnost 2: NSClientV3 (také nazývaný jako „v3“) – který synchronizuje uživatelovy údaje s Nightscout pomocí API v3.
 
 ![AAPS1_Screenshot 2024-05-17 133502](https://github.com/openaps/AndroidAPSdocs/assets/137224335/4bdfed7e-3b2f-4fe8-b6db-6fcf0e5c7d98)
 
-The user must ensure that __both__ the AAPS and AAPS Client phones are synched together by actioning either option for v1 or v3 being:
+Uživatel musí zajistit, aby __oba__ telefony AAPS i AAPS Client byly synchronizovány pomocí stejné volby a to buď v1 nebo v3:
 
-Option 1: v1 for both phones:
+Možnost 1: v1 pro oba telefony:
 
-- Enter your Nightscout URL
+- Vložte adresu vašeho Nightscoutu
 
-- Enter your API secret
+- Zadejte své API heslo
 
-Option 2: v3 for both phones:
+Možnost 2: v1 pro oba telefony:
 
-- Enter your Nightscout URL under NSClientV3 tab
+- Zadejte Nightscout URL na záložce NSClientV3
 
-- Enter your NS access token under ‘Config Build’ tab. Please follow the notes [here](https://nightscout.github.io/nightscout/security/#create-a-token)
+- Zadejte svůj přístupový token NS na záložce „Config Builder“. Následujte prosím poznámky [zde](https://nightscout.github.io/nightscout/security/#create-a-token)
 
-If selecting Websockets (which is optional) ensure this is activated or deactivated for both __AAPS’__ and __AAPSClient’s__ phone. Activating Websockets in __AAPS__ and not within __AAPSClient__ (and vice versa) will only cause __AAPS__ to malfunction. By enabling websockets will allow for faster synchronization with Nightscout but may lead to more phone battery consumption.
-
-
+Pokud zvolíte Websockety (což je volitelné), ujistěte se, že jsou aktivovány nebo deaktivovány pro oba telefony, jak __AAPS'__, tak __AAPSClienta__. Aktivace Websockets v __AAPS__ a ne v __AAPSClient__ (nebo naopak) způsobí, že __AAPS__ přestane fungovat. Povolením websockets umožníte rychlejší synchronizaci s Nightscoutem, ale může to vést k větší spotřebě baterie.
 
 ![WB2_Screenshot 2024-05-17 140548](https://github.com/openaps/AndroidAPSdocs/assets/137224335/8d9a7dc5-b3ea-4bf3-9286-313f329b1966)
 
+Uživatelé by měli zajistit, že jak __AAPSClient__, tak __AAPS__ zobrazují „připojeno“ na záložce „NSClient" a že lze přepnout 'Profil' nebo 'Dočasný cíl' správně aktivovat v __AAPS__ po jejich výběru v __AAPSClient__. 
 
-Users should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connected’ under the ‘NSClient' tab for each phone, and that ‘Profile Switches’ or ‘Temp Target' can be correctly activated in __AAPS__ once selected in __AAPSClient__.
+Uživatelé by měli také zajistit, že jsou sacharidy jsou zaznamenány v obou aplikacích na kartě „Ošetření“, jinak by to mohlo naznačovat chybu v uživatelském nastavení.
 
-Users should also ensure that carbs are logged in both ‘Treatments’ within both __AAPSClient__ and __AAPS__ otherwise this could indicate a malfunction within the user’s set up.
 
-### Features of AAPSClient include:
 
-![Sara's AAPSClient table](images/remote-control-23.png)
+### Troubleshooting 'NS access token' configuration issues
 
-**AAPSClient** allows the caregiver to make many of the adjustments that are allowed directly in **AAPS** (excluding insulin boluses) remotely, via the mobile or internet network. The main benefits of **AAPSClient** are the speed and ease with which caregivers/parents can use it to remotely control **APPS**. __AAPSClient__ _can_ be much faster than entering SMS Commands, if delivering a command which would require authentication. Commands entered on **AAPSClient** are uploaded onto Nightscout.
+The precise 'NS access token' configuration may differ depending upon whether your Nightscout provider is a paid for hosted site or not. 
 
-Remote control through **AAPSClient** is only recommended if your synchronization is working well (_i.e._ you don’t see unwanted data changes like self-modification of TT, TBR etc) see [release notes for Version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) for further details.
+If you are struggling with **AAPS** v3 to accept the 'NS access token' and using a paid for hosted Nightscout site, you may wish to first liaise with your Nightscout provider on how to resolve the 'NS access token' difficulties. Otherwise, please reach out to the **AAPS** group but please double check that you have correctly followed the notes before doing so [here](https://nightscout.github.io/nightscout/security/#create-a-token).
 
-### AAPSClient with smartwatch options
 
-A smartwatch can be a very useful tool for helping to manage **AAPS** with kids. A couple of different configurations are possible. If **AAPSClient** is installed on the parents phone, the [**AAPSClient WearOS** app](https://github.com/nightscout/AndroidAPS/releases/) can be downloaded and installed on a compatible smartwatch which is connected to the parent's phone. Na hodinkách pak bude zoubrazována aktuální glykémiie, stav smyčky, a bude možné zadávat sacharidy, dočasné cíle a změny profilu. Z aplikace WearOS ale nebude možné posílat bolusy. You can read more about Smartwatches [here](smartwatches).
+
+### Vlastnosti AAPSClienta zahrnují:
+
+![Sářina tabulka AAPSClient](images/remote-control-23.png)
+
+**AAPSClient** umožňuje pečovateli provádět vzdáleně všechna nastavení, která umožňuje **AAPS** (s výjimkou posílání bolusů), prostřednictvím mobilních dat nebo internetu. Hlavními výhodami **AAPSClient** jsou rychlost a jednoduchost, s jakou mohou pečovatelé/rodiče použít ke vzdálenému ovládání **APPS**. __AAPSClient__ _může_ být mnohem rychlejší než posílání SMS příkazů, které vyžadují ověření. Příkazy zadané v **AAPSClient** jsou nahrány do Nightscoutu.
+
+VZdálené ovládání pomocí aplikace **AAPSClient** je doporučeno pouze v případě, že vaše synchronizace funguje dobře (_tzn._ nevidíte nežádoucí změny dat, jako je samovolná modifikace TT, TBR atd.). Další detaily viz. [poznámky k vydání verze 2.8.1.1](Releasenotes-important-hints-2-8-1-1).
+
+
+
+### AAPSClient a možnosti chytrých hodinek
+
+Chytré hodinky mohou být velmi užitečným nástrojem pro správu **AAPS** vašeho dítěte. K dispozici je několik možností. Je-li na telefonu rodičů nainstalován **AAPSClient**, lze na kompatibilní chytré hodinky připojené k rodičovskému telefonu nainstalovat [**AAPSClient WearOS aplikaci**](https://github.com/nightscout/AndroidAPS/releases/). Na hodinkách pak bude zoubrazována aktuální glykémiie, stav smyčky, a bude možné zadávat sacharidy, dočasné cíle a změny profilu. Z aplikace WearOS ale nebude možné posílat bolusy. Více o chytrých hodinkách [můžete číst zde](smartwatches).
 
 (nightscout)=
+
+
 ## 3) Nightscout
 
-As well as Nightscout being a server in “the Cloud”, there is also a dedicated **Nightscout** app which can be downloaded directly from the App Store on your iPhone. If you have an Android follower phone, there is not a dedicated Nightscout app and it is better to use [**AAPSClient**](AAPSClient), or, if you only want to follow, and not send treatments you can download and install the [Nightwatch](link) app from the Playstore.
+Obdobně jako je Nightscout je serverem v cloudu, existuje také vyhrazená **Nightscout** aplikace, kterou lze stáhnout přímo z App Store na vašem iPhone. Pokud máte na sledování Android telefon, neexistuje vyhrazená aplikace Nightscout a je lepší používat [**AAPSClient**](AAPSClient) nebo pokud chcete pouze sledovat a neposílat léčbu, můžete si stáhnout a nainstalovat aplikaci [Nightwatch](link) z Playstore.
 
-Once you have installed the **Nightscout** app on your iPhone, open the app and follow the set-up prompts, entering your Nightscout address (see below, left). The form of this may vary depending on how your Nightscout is hosted. (_e.g._ http://youraddresshere.herokuapp.com). Then enter your Nightscout API secret (see below, right). If not prompted for your API password, then you need to enter this by clicking on the padlock at the top of the app:
+Jakmile máte na telefonu nainstalovanou **Nightscout** aplikaci na vašem iPhone, otevřete aplikaci, následujte instrukce a zadejte Nightscout adresu (viz níže vlevo). Přesná podoba se může lišit v závislosti na tom, jak je hostován Váš NightScout. (_např._ http://youraddresshere.herokuapp.com). Poté zadejte váš Nightscout API secret (viz níže vlevo). Pokud nejste požádáni o vložení API hesla, pak ho musíte zadat po kliknutí na zámek v horní části aplikace: 
 
 ![image](images/remote-control-24.png)
 
-More info on setup is available directly from [Nightscout](https://nightscout.github.io/nightscout/discover/)
+Více informací o nastavení je k dispozici přímo z [Nightscout](https://nightscout.github.io/nightscout/discover/)
 
-When you first log in, you will have a very simple display (below, left). Customise the display options, by selecting the “hamburger” in the top right and scrolling down:
+Při prvním přihlášení budete mít velmi jednoduchý zobrazení (dole, vlevo). Přizpůsobte možnosti zobrazení výběrem „hamburger menu“ v pravém horním rohu a posouváním dolů:
 
 ![image](images/remote-control-25.png)
 
-Scroll down through to “Settings”. You may wish to change the “scale” to “linear” as the default for the BG display is logarithmic, and under “render basal” select “default” so that the pump basal shows up. Continue to scroll down until you get to “show plugins”. You need to make sure “careportal” is checked, and can also select various other metrics (most useful are: IOB, care portal, pump, cannula age, insulin age, basal profile and OpenAPS).
+Posuňte se dolů na „Nastavení“. Možná si budete přát změnit "měřítko" na "lineární", protože výchozí zobrazení glykémie je logaritmické, a pod "vykreslovat bazál" vyberte "výchozí" tak, aby se podávané bazály zobrazily. Pokračovat v posouvání dolů, dokud se nedostanete k „zobrazit pluginy“. Musíte se ujistit, že je zaškrtnuta možnost "Portál péče" a můžete také vybrat k zobrazení další hodnoty (nejužitečnější jsou: IOB, portál péče, pumpa, stáří kanyly a inzulínu, bazální profil a OpenAPS). 
 
 ![image](images/remote-control-26.png)
 
 ![image](images/remote-control-27.png)
 
-Importantly, you now need to click “save” at the bottom for these changes to take effect.
+Důležité je nyní kliknout na „uložit“ v dolní části obrazovky, aby se tyto změny projevily.
 
-After pressing “save” the app will return to your main Nightscout screen which will look a little like this:
+Po stisknutí tlačítka "Uložit" se aplikace vrátí na hlavní obrazovku Nightscout, která bude vypadat takto:
 
 ![image](images/remote-control-28.png)
 
-Looking in more detail at the top left menu of the Nightscout app:
+Podívejte se podrobněji do levého horního menu aplikace Nightscout: 
 
-![nightscout top bar](images/remote-control-29.png)
+![Horní lišta Nightscout](images/remote-control-29.png)
 
-There is a huge amount of information on the status of the **AAPS** system in the grey tabs (and even more information is revealed if you tap the tab) on this screen:
+Na této obrazovce je na šedých kartách k dispozici velké množství informací o stavu **AAPS** systému (a ještě více informací se zobrazí při klepnutí na záložku):
 
 ![image](images/remote-control-30.png)
 
 ![image](images/remote-control-31.png)
 
-### Sending treatments through the Nightscout app to AAPS
-
-To set-up sending treatments from the **Nightscout** app to **AAPS**, on the main AAPS phone, go into the **AAPSClient** tab in the **AAPS** app. Open the right-hand dot menu, and open AAPSClientpreferences – synchronisation and select the relevant options in this menu. Set it to receive the different commands (temporary targets, etc) and also to synchronise profiles. If things don’t seem to be synchronised, go back to the AAPSClient tab and select “full synchronisation” and wait a few minutes.
-
-Nightscout on your iPhone has all the same functions as Nightscout on your PC. It allows you to send many commands to **AAPS**, but it does not allow you to send insulin boluses.
-
-### Cancelling negative insulin to avoid repeat hypos
-
-Although you cannot actually bolus insulin, you can however “announce” insulin through Nightscout as a “correction bolus”, although it is not delivered. Because AAPS now takes that fake insulin bolus into account, announcing insulin actually works to make AAPS _less aggressive_, and can be useful for cancelling negative insulin and preventing lows in the event that your profile has been too strong (for example due to prior exercise). You will want to check this for yourself in the presence of the **AAPS** phone, in case your **Nightscout** setup differs.
-
-![24-10-23, cancel negative insulin NS](./images/0af1dbe4-8aca-466b-816f-8e63758208ca.png)
 
 
-Some of the most useful **Nightscout** commands are described in the table below.
+### Odesílání ošetření prostřednictvím Nightscout aplikace do AAPS
 
-#### Nightscout command table
+K nastavení odesílání ošetření z **Nigthscout** aplikace do **AAPS**, přejděte na AAPS telefonu do aplikace **AAPS** a otevřete záložku **AAPSClient**. Otevřete tříbodové menu na pravé straně a vyberte položku AAPSClient Nastavení- synchronizace a vyberte v menu příslušné možnosti. Vyberte příjem jednotlivých příkazů (dočasných cílů atd.) a také synchronizaci profilů. Pokud se zdá, že se data nesynchronizují, přejděte zpět na záložku AAPSClient, zvolte „plnou synchronizaci“ a počkejte několik minut.
+
+Nightscout na Vašem iPhone má všechny funkce jako Nightscout na vašem PC. Umožňuje vám posílat množství příkazů do **AAPS** aplikace, ale neumožňuje posílat bolusy.
+
+
+
+### Zrušení negativního inzulínu, aby se zabránilo opakování hypoglykémií
+
+Ačkoli nemůžete přímo posílat inzulínový bolus, můžete prostřednictvím Nightscout "oznámit" inzulín jako "korekční bolus", i když není doručen. Protože AAPS nyní bere tento falešný bolus v úvahu, oznámení podaného inzulínu ve skutečnosti zajišťuje, že se AAPS chová _méně agresivně_. Díky tomu se hodí ke zručení efektu negativního inzulínu a tak předcházet nízkým glykémiím v případě, že je profil příliš silný (na příklad z důvodu předchozího svičení). Toto si budete chtít zkontrolovat za přítomnosti **AAPS** telefonu, pokud se liší vaše nastavení **Nightscoutu**. 
+
+![24-10-23, zrušení negativního inzulinu NS](./images/0af1dbe4-8aca-466b-816f-8e63758208ca.png)
+
+Některé z nejužitečnějších **Nightscout** příkazů je popsáno v níže uvedené tabulce. 
+
+
+
+#### Příkazová tabulka Nightscoutu
 
 ![image](images/remote-control-33.png)
 
-Read more about **Nightscout** options [here](https://nightscout.github.io/)
-
-### Tips for getting the most out of the Nightscout app
-
-1). If you get “stuck” on a page and want to be able to see the main screen again, just click “refresh” (bottom middle) and this will take you back to the **Nightscout** homepage with the BG graph.
-
-To see the current profile which is running on the phone, press the various icons on the screen above the graph. More info (current carb ratio, sensitivity and timezone etc.) can be seen by pressing “basal” and “OpenAPS” gives info about the profile and current target etc. Both the phone battery% and the pump battery % can also be monitored. BWP gives information on what the algorithm thinks will happen in the future, given the IOB and COB.
-
-#### Other icons in the menu: what does the pencil (edit) mean?
-
-You can (technically) use the edit pencil to move or delete bolus or correction treatments from the last 48h.
-
-More about this [here](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
-
-Although this could potentially be useful for deleting announced (but not bolused for) carbs, in practice it doesn’t currently work well with **AAPS** and we recommend making changes like this via the **AAPS** app directly.
-
-(smartwatches)=
-## 4) Smartwatches
-
-Smartwatches are becoming increasingly used with **AAPS** _both_ for adults with diabetes and carers/parents of children with diabetes.
-
-### General advantages of using smartwatches with **AAPS**
+Přečtěte si více o možnostech **Nightscoutu** [zde](https://nightscout.github.io/)
 
 
-Smartwatches - depending on the model - can be used in many different ways with **AAPS**. They can be used to fully or partly control **AAPS**, or simply to remotely check glucose levels, insulin-on-board, and other parameters.
 
-Integrating a smartwatch with **AAPS** can be useful in many situations, including driving a car or (motor) bike and during exercise. Some people feel that looking at a watch (in a meeting, party, dinner table etc.) is more discreet than looking on a phone. From a security perspective, a smartwatch can also be beneficial while on the move, enabling user to have their **AAPS** phone stored out of sight (like inside a bag), but with the aid of the smartwatch for remote control use.
+### Tipy, jak nejlépe využít aplikaci Nightscout
 
-### Specific advantages for parents/carers using **AAPS**
+1). Pokud se na stránce „zaseknete“ a chcete znovu zobrazit hlavní obrazovku, stačí kliknout na tlačítko „obnovit“ (dole uprostřed) a to vás dostane zpět na domovskou stránku **Nightscout** s grafem glykémie.
 
-For a child - if their **AAPS**  phone is nearby - a caregiver can use a smartwatch to monitor or make modifications without needing to use the **AAPS**  phone. This can be useful, for example, if the **AAPS** phone is hidden away in a pump belt.
+Chcete-li zobrazit aktuální profil, který běží na telefonu, můžete stisknout různé ikony na obrazovce nad grafem. Více informací (aktuální sacharidový poměr, citlivost, časové pásmo atd.) můžete vidět po stisknutí tlačítka "basal" a "OpenAPS" a zobrazíte informace o profilu, aktuálním cíli atd. Také lze sledovat stav baterie telefonu i inzulínové pumpy. BWP poskytuje informace o tom, co se podle algoritmu stane v budoucnu, vzhledem k hodnotám IOB a COB.
 
-A smartwatch can be used either _in addition_ to, or as an _alternative_ to the PHONE-based options for [remote control](remote-control.md) or [following only](following-only.md).
 
-Additionally, unlike parent/carer follower phones (which rely on the mobile network or wifi connection), bluetooth connected smartwatches can be useful in remote locations, like a cave, in a boat, or half-way up a mountain. If both devices (**AAPS** phone and smartwatch) are on the same wifi network, they can also use wifi.
 
-### Different types of Smartwatch-AAPS interactions
+#### Ostatní ikony v nabídce: co znamená tužka (editace)?
 
-Many of the possible smartwatch options available to **AAPS** users are detailed at [Nightscout on your watch](https://nightscout.github.io/nightscout/wearable/#), so you are strongly advised to read those pages first to get a good idea of all the possibilities.
+Můžete (technicky) použít editační tužku pro přesunutí nebo odstranění bolusu nebo korekce z posledních 48 hodin.
 
-There are currently five main ways in which smartwatches are used in conjunction with **AAPS**. These are shown in the table below: 
+Více o tom je [zde](https://nightscout.github.io/nightscout/discover/#edit-mode-edit)
 
+Ačkoli to může být použito ke smazání oznámených (ale ne bolusovaných) sacharidů, v praxi to nefunguje dobře ve spolupráci s **AAPS** a doporučujeme takové provádět přímo v **AAPS** aplikaci.
+
+(chytré hodinky)=
+
+
+## 4) Chytré hodinky
+
+Chytré hodinky se začínají stále více používat s **AAPS** aplikací, a to jak pro dospělé pacienty s cukrovkou, tak pro pečovatele/rodiče dětí s cukrovkou. 
+
+
+
+### Obecné výhody používání chytrých hodinek s **AAPS**
+
+Chytré hodinky, v závislosti na modelu, mohou být s **AAPS** využity mnoha různými způsoby. Mohou být využity k úplnému nebo částečnému ovládání **AAPS** nebo jednoduše ke vzdálené kontrole glykémií, aktivního inzulínu a dalších parametrů.
+
+Integrace chytrých hodinek s **AAPS** může být užitečná v mnoha situacích, včetně řízení auta, motocyklu, kola nebo během cvičení. Někteří lidé to vnímají tak, že podívat se na hodinky (v průběhu schůzky, večírku, večeře apod.) je diskrétnější než hledět na telefon. Z hlediska bezpečnosti, chytré hodinky mohou být přínosem na cestách, kdy uživateli umožňují mít jeho **AAPS** telefon uložen z dohledu (například v tašce), ale přitom pod vzdálenou kontrolou prostřednictvím hodinek. 
+
+
+
+### Specifické výhody pro rodiče/pečovatele používající **AAPS**
+
+Pro dítě - pokud je jejich **AAPS** telefon poblíž - může pečovatel využít chytré hodinky k dohledu a úpravám bez nutnosti použít přímo **AAPS** telefon. To může být užitečné, například pokud je **AAPS** telefon uložený v páse pumpy. 
+
+Chytré hodinky mohou být využity _k doplnění_ nebo jako _alternativa_ k řešením [vzdáleného ovládání](remote-control.md) nebo [sledování](following-only.md) založeným na telefonu. 
+
+Navíc na rozdíl od sledovacích telefonů rodiče/pečovatele (které závisí na mobilní síti nebo připojení přes wifi), chytré hodinky připojené přes bluetooth mohou být užitečné na vzdálených místech, jako je jeskyně, na lodi, nebo na horách. Pokud jsou obě zařízení (**AAPS** telefon a chytré hodinky) na stejné wifi síti, mohou ji také využívat. 
+
+
+
+### Různé druhy interakcí chytrých hodinek a AAPS
+
+Mnohé z možností chytrých hodinek dostupných uživatelům **AAPS** jsou detailně popsány v oddíle [Nightscout a vašich hodinkách](https://nightscout.github.io/nightscout/wearable/#), takže doporučujeme tuto část přečíst, abyste si udělali představu o všech možnostech.   
+
+Aktuálně existuje pět základních způosobů, jak využít chytré hodinky ve spojení s **AAPS**. Ty jsou uvedeny v následující tabulce: 
 
 ![29-10-23, updated AAPSClient watch option table](./images/bbbe0e84-1a8c-4163-8a0b-dcf91144af14.png)
 
+Vezměte prosím na vědomí, že tato tabulka byla vypracována v roce 2023, není vyčerpávající a stále přibývají další možnosti. 
 
 
-Please note this table was prepared in 2023, it is not exhaustive, and additional options are being added all the time.
 
-### Before you buy a smartwatch…
+### Než si koupíte smartwatch…
 
-The exact model of smartwatch you buy depends on the desired function(s). There are currently two historical spreadsheets recording compatible [smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) and [smartphones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) but these will no longer continue to be updated since it is easier to ask via the Discord and Facebook groups, due to the huge range of options.
+Přesný model chytrých hodinek, který kupujete, závisí na požadovaných funkcích. V současné době existují dvě historické tabulky, které zaznamenávají kompatibilní [chytré telefony](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) a [chytré telefony a hodinky](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435), ale tyto už nebudou nadále aktualizovány, protože kvůli obrovskému množství možností je snazší se zeptat prostřednictvím Discord a Facebookové skupiny. 
 
-Popular watch brands include Samsung Galaxy, Garmin, Fossil, Mi band and Fitbit. The different options summarised in the Table above are explained in more detail below, to help you decide which smartwatch is right for your situation.
+Mezi oblíbené značky patří Samsung Galaxy, Garmin, Fossil, Mi a Fitbit. Různé možnosti, které jsou shrnuty v tabulce výše, jsou níže vysvětleny podrobněji, abysme vám pomohli s rozhodnutím, které smartwatch jsou ve vaší situaci ty správné.
 
-If you are integrating a smartwatch with **AAPS** on a phone with the intention to remotely interact with **AAPS**, you also need to consider if the two devices are compatible with each other, particularly if you have an older, or an unusual phone.
+Pokud chcete integrovat chytré hodinky s **AAPS** na telefonu s úmyslem vzdáleně **AAPS** ovládat, musíte také vzít do úvahy jestli jsou spolu obě zařízení kompatibilní, zejména pokud máte starší nebo neobvyklý telefon. 
 
-In general, if you only want to follow glucose numbers and not interact with **AAPS**, there are a wider range of affordable and simpler watches you can use.
+Obecně platí, že pokud chcete pouze sledovat hodnoty glykémie a nepotřebujete **AAPS** z hodinek ovládat, existuje široká škála jednodušších dostupných hodinek, které můžete použít. 
 
-The best way to choose a smartwatch is to search for "watch" posts on either Discord or Facebook **AAPS** groups. Have a read of others experiences, and post any specific questions, if your query isn't answered by older posts.
-
-#### For Smartwatch Options 1 - 3: What _is_ Wear OS?
-
-The first three smartwatch options require the smartwatch to have **Wear OS** installed.
-
-**Wear OS** is the operating system which runs on some modern Android smartwatches. In [2018](https://en.wikipedia.org/wiki/Wear_OS), Google rebranded _Android Wear 1.x to Wear OS_ from version 2.x. So, if a device is labelled “_Android Wear_” rather than **Wear OS** it may indicate an older version. If the description of the smartwatch indicates only _compatibility_ with Android and iOS - it does not mean it is running Wear OS. It may be some other sort of Vendor specific operating system which is not compatible with **AAPS**. To support installation and use of any version of **AAPS** or **AAPSClient**, a smartwatch will need to be running **Wear OS**, and ideally be Android 10 or newer. As a guide, as of October 2023, the latest release of **Wear OS** is version 4.0 (based on Android 13).
-
-If you install **AAPS** wear.apk on a **Wear OS** watch, there are a range of different custom **AAPS** watchfaces which  can be  selected. Alternatively, you can use a standard smartphone watchface, with your **AAPS** information included in small tiles known as “complications” on the face. A complication is any feature that is displayed on a watch face in addition to the time. Features like complications require Wear OS version 2.0 or newer to work.
+Nejlepší způsob, jak vybrat chytré hodinky, je hledat v příspěvcích "hodinky" buď na Discordu nebo na Facebookových **AAPS** skupinách. Přečtěte si o zkušenostech ostatních a pokud to nezodpoví vaše dotazy, zanechte zde konkrétní otázku.  
 
 
-#### What could my smartwatch look like with remote control of AAPS?
 
-After installing **AAPS** onto your watch, you will automatically be able to select your preferred watchface from these **AAPS**-dedicated watchfaces. On most watches, you simply long-press on the homescreen until the screen shrinks and swipe right to select an alernative screen:
+#### Možnosti chytrých hodinek 1 - 3: Co _je_ Wear OS?
+
+První tři možnosti chytrých hodinek vyžadují, aby měly instalovaný **Wear OS**. 
+
+**Wear OS** je operační systém, který běží na některých moderních chytrýích hodinkách Android. V [2018](https://en.wikipedia.org/wiki/Wear_OS)Google přejmenoval _Android Wear 1.x na Wear OS_ od verze 2.x. Pokud je tedy zařízení označené jako _"Android Wear"_ namísto **Wear OS**, může se jednat o starší verzi hodinek. Pokud je v popisu chtrých hodinek informace pouze o _kompatibilitě_ s Android nebo iOS, neznamená to, že běží na WearOS. Může se jednat o jiný druh operačního systému konkrétního výrobce, který není kompatibilní s **AAPS**. Aby byla podporována instalace a používání jakékoliv verze **AAPS** nebo **AAPSClient**, chytré hodinky musí běžet na **Wear OS** a v ideálním případě na Android 10 nebo novější. Vodítkem při výběru může být, že v říjnu 2023 je poslední verze **Wear OS** 4.0 založená na Android 13).
+
+Pokud nainstalujete **AAPS** wear.apk na **Wear OS** hodinkách, budete moct vybrat z řady různých **AAPS** ciferníků. Alternativně můžete využít standardní ciferník, kde budou informace z **AAPS** zobrazeny na malých polích známých jako "complications". Complication je jakákoli funkce, která je na ciferníku zobrazena navíc k aktuálnímu času. Takovéto funkce vyžadují Wear OS verze 2.0 nebo vyšší.
+
+
+
+
+#### Jak by mohl vypadat můj chytrý telefon s dálkovým ovládáním AAPS systému?
+
+Po instalaci **AAPS** do vašich hodinek budete automaticky moct vybrat svůj oblíbený ciferník z těchto verzí pro **AAPS**. U většiny hodinek jednoduše dlouze stiskněte domovskou obrazovku, dokud se obrazovka nezmenší, a posuňte prstem doprava, abyste vybrali alternativní obrazovku:  
 
 ![image](./images/67fd75f3-721c-438d-be01-1a8e03532290.png)
 
-#### How would I operate a Wear OS watch from day-to-day?
 
-Further details about the watchfaces, and day-to-day use, including how to make (and share) your own customised watchface, can be found in the section [Operation of Wear AAPS on a Smartwatch](../Configuration/Watchfaces.md).
 
-### Option 1) Standalone Watch running **AAPS**
+#### Jak provozovat hodinky Wear OS v každodenním životě?
 
-It sounds like an attractive option, right? However, at present, only a few enthusiasts are experimenting with **AAPS**  on a stand-alone watch. There are a limited number of smartwatches with a reasonable interface which also which work well with standalone use of **AAPS** and your CGM app. Popular models include the LEMFO LEM 14, 15 and 16. You will need to load the watch with the **AAPS** "full" apk (the apk which is usually installed on a smartphone) rather than the **AAPS** "wear" apk.
+Další podrobnosti o cifernících a každodenním používání, včetně toho, jak vytvořit (a sdílet) vlastní přizpůsobený ciferník, najdete v sekci [Provozování Wear AAPS na chytrých hodinkách](../Configuration/Watchfaces.md).
 
-While there is no clear specification which helps you to know if a watch will work well for standalone **AAPS** use, the following parameters will help:
 
-1)  Android 10 or newer. 2)  Being able to take the watchface off “square” mode to make text larger and easier to read. 3)  Very good battery life. 4)  Good bluetooth range.
 
-Most of the frustrations of standalone **AAPS** watches come from interacting with a tiny screen, and the fact that the current AAPS full app interface has not been designed for a watch. You may prefer to use a stylus to edit **AAPS**  settings on the watch, due to the restricted screen size, and some AAPS buttons may not be visible on the watch screen.
+### Možnost 1) Samostatný provoz **AAPS**
 
-Additional challenges are that it is hard to get sufficient battery life, and watches with sufficient battery are often bulky and thick. Users report fighting with the OS and power-saving settings, difficulty in starting sensors on the watch, poor bluetooth range (for maintaining connection with both the sensor and pump) and questionable water resistance. Examples are shown in the photos below (photo credit: Janvier Doyon).
+Zní to jako atraktivní možnost, že? V současné době však pouze několik nadšenců experimentuje s **AAPS** na hodinkách samostatně. Existuje omezené množství typů chytrých hodinek s dostatečně velkým ciferníkem a zároveň správně fungujících s **AAPS** a CGM aplikací. Populární modely zahrnují LEMFO LEM 14, 15 a 16. Hodinky budete muset startovat s plnou verzí **AAPS** aplikace (full.apk, která se obvykle používá na telefonech) namísto **AAPS** "wear" apk. 
+
+Protože neexistuje specifikace, podle které by šlo určit, které hodinky jsou vhodné pro samostatný provoz **AAPS**, tyto parametry mohou pomoct:
+
+1) Android 10 nebo novější. 2) Je schopen použít ciferník v režimu „čtverec“, aby byl text větší a snadněji čitelný. 3) Velmi dobrá životnost baterie. 4) Dobrý dosah Bluetooth.
+
+Většina frustrace ze samostatného provozu **AAPS** na hodinkách pramení z práce s maličkou obrazovkou a z faktu, že plná AAPS aplikace nebyla navržena pro zobrazení na hodinkách. Práce s rozhraním **AAPS** na hodinkách může být kvůli omezené velikosti orazovky pohodlnější se stylusem. Z těchto důvodů ani nemusí být některá tlačítka <0>AAPS</0> na obrazovce viditelná. 
+
+Další výzvy spočívají v tom, že je těžké mít dostatečnou kapacitu baterie, a hodinky s dostatečnou baterií jsou často objemné a tlusté. Uživatelé také hlásí boj s nastavením OS a úsporných módů, problémy se startováním senzorů na hodinkách, omezený dosah bluetooth (pro zajištění spojení se senzorem a pumpou) a spornou vodotěsnost. Příklady jsou zobrazeny na fotografiích níže (fotograf: Janvier Doyon).
 
 ![image](./images/6d787373-bc0c-404d-89aa-54d3127c4a6f.png)
 
 ![image](./images/5d2feecc-3f10-4767-b143-1a72da2b9bd4.png)
 
-If you are interested in setting up a standalone watch, read the posts and comments on the **AAPS**  Facebook group (good search options are “standalone” and “Lemfo”) and Discord for more information.
+Pokud máte zájem o nastavení samostatných hodinek, přečtěte si příspěvky ve Facebookové **AAPS** skupině (je dobré vyhledat výrazy "standalone" a "Lemfo") a na Discordu.
 
-### Option 2) **AAPS** on watch, for remote control of **AAPS** on a phone
 
-Similarly to using a follower phone with either AAPSClient, Nightscout or SMS commands (link to sections) a smartwatch can be used to remotely control **AAPS** and provide full profile data. A key difference to using a follower phone is that the smartwatch to **AAPS** phone link is via bluetooth and does not require an authenticator code. As a side-note, users have reported that if both smartwatch and **AAPS** phone linked by bluetooth are also a wifi network, the watch may also interact with the **AAPS** phone over the wifi, giving a longer range of communication. This includes remote delivery of a bolus where the caregiver with the **AAPS** watch and T1D child (with **AAPS** phone) are in different locations and which can useful in circumstances where the T1D child is in school.
 
-A remote control smartwatch is therefore often useful in any situation where:
+### Možnost 2) **AAPS** na hodinkách, pro dálkové ovládání **AAPS** v telefonu
 
-a)  **AAPSClient**/Nightscout/**SMS** commands cannot work; or
+Podobně jako můžete používat sledovací telefon s AAPSClient, Nightscout nebo SMS příkazy (odkaz na oddíly), chytré hodinky je možné použít ke vzdálenému ovládání **AAPS** a poskytnutí kompletní dat profilu. Klíčovým rozdílem oproti používání sledovacího telefonu je, že chytré hodinky jsou s **AAPS** propojeny přes bluetooth a není vyžadován ověřovací kód. Za pozornost stojí hlášení uživatelů, že pokud jsou chytré hodinky i **AAPS** telefon propojené zároveň přes bluetooth i WiFi síť, hodinky s telefonem mohou komunikovat prostřednictvím této sítě, což jim dává větší dosah. To zahrnuje vzdálené podání bolusu, kde pečovatel s **AAPS** hodinkami a dítě s T1D (s **AAPS** telefonem) jsou na různých místech, což může být užitečné v situacích, kdy je dítě s T1D ve škole.
 
-b)  The user wishes to avoid the need for authenticator code (as required for the follower phone with inputting data, selecting TT or entering carbs).
+Dálkové ovládání pomocí chytrých hodinek je proto často užitečné v těchto situacích:
 
-A smartwatch needs to have **Android wear** software (ideally 10 or higher) to be able to control **AAPS**. Please check the technical specifications of the watch, and check the [spreadsheet of compatible watches](link). Search, or ask in the **AAPS**  Facebook/Discord groups if unsure.
+a)  **AAPSClient**/Nightscout/**SMS** příkazy nemohou fungovat; nebo
 
-Specific How-to guides for setting up **AAPS** on the popular [Samsung Galaxy Watch 4 (40mm) is given below. The [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) watch is also a popular choice. If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](https://androidaps.readthedocs.io/en/latest/make-a-PR.html) to share your findings with the wider **AAPS** community.
+b) uživatel se chce vyhnout potřebě autentizace (jak je požadováno pro sledovací telefon se zadáním dat, výběrem TT nebo zadáním sacharidů).
 
-#### The AAPS Wear apk
+Chytré hodinky musí mít systém **Android wear** (ideálně 10 nebo vyšší), aby mohl ovládat **AAPS**. Zkontrolujte prosím technické specifikace hodinek a projděte si [tabulku kompatibilních hodinek](link). Pokud si nejste jistí, vyhledejte si informace ve v **AAPS** skupinách na Facebook/Discord. 
 
-The Wear OS App of **AAPS**  (“Wear OS apk”) required for the smartwatch has been separated from the "full" **AAPS** build for the Android phone. Therefore you have to generate a second installation file, or apk, to install **AAPS** wear onto the watch (which is done by side-loading it from the phone). It is strongly recommended that the **AAPS** Wear apk file is built immediately after first building the full **AAPS** apk for the phone. Not only is this very quick to do if you are [building **AAPS** for the first time](link to building **AAPS** for the first time), but it will avoid any potential compatibility issues when you try to set up the watch-phone communication. The **AAPS** Wear apk on the watch is unlikely to be compatible with the **AAPS** phone apk if they have been built in different versions of Android Studio, or if months have past since the initial **AAPS** build.
+Konkrétní návody jak nastavit **AAPS** na Samsung Galaxy Watch 4 (40 mm) jsou uvedeny níže. Hodinky [Garmin](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0) jsou také oblíbenou volbou. Pokud máte zkušenost s nastavením jiného typu chytrých hodinek, který by byl podle vás užitečný pro ostatní, přidejte jej do na tyto stránky [editace dokumentace](https://androidaps.readthedocs.io/en/latest/make-a-PR.html), abyste mohli sdílet svá zjištění s širší komunitou **AAPS**. 
 
-If you are already using **AAPS** on a phone and you did not build both the phone and watch (wear) **AAPS** apks at the same time, to ensure success it is therefore best to do a fresh build of both apk files at the same time. If you have already installed Android studio, then you may wish to uninstall and then reinstall Android studio as outlined below, and build the AAPS phone and watch apks at the same time, using the same **keystore file**.
 
-#### How to uninstall Android Studio
 
-Make sure your keystore file is safely stored elsewhere on your computer, outside of the Android Studio folders.
+#### AAPS Wear apk
 
-There are several steps required to completely remove Android Studio from a computer. This is a [good guide](https://www.geeksforgeeks.org/how-to-completely-uninstall-android-studio-on-windows/) if you are using a Windows machine. In the final step of these instructions, you also need to manually remove the folder “StudioProjects”.
+Aplikace Wear OS **AAPS**  („Wear OS apk“), která je potřebná pro chytré hodinky, byla oddělena od "full" **AAPS** sestavení pro Android telefony. Proto musíte vygenerovat druhý instalační nebo apk soubor, abyste mohli instalovat **AAPS** na hodinky (což se prováděno načtením z telefonu (side-loading)). Důrazně se doporučuje vytvořit **AAPS** Wear apk soubor okamžitě po sestavení full apk verze pro telefon. Nejen že to je velmi rychlé, pokud sestavujete aplikaci **AAPS** poprvé (odkaz na stavbu **AAPS**), ale při pokusu o nastavení komunikace v hodinkách se vyhnete případným problémům s kompatibilitou. **AAPS** wear apk na hodinkách bude pravděpodobně nekompatibilní s **AAPS** full apk na telefonu, pokud byly sestaveny v různých verzích Android Studia nebo pokud uplynuly měsíce od úvodního sestavení aplikace. 
 
-Now reinstall the latest version of Android Studio.
+Pokud již používáte **AAPS** na telefonu a nevytvořili jste zároveň **AAPS** pro telefon i hodinky, pro zajištění úspěchu je nejlepší řešení sestavit obě aplikace znovu ve stejný čas. Pokud už máte nainstalované Android Studio, je možná vhodnější ho odinstalovat a nainstalovat poslední verzi, jak je nastíněno níže, a sestavit AAPS pro telefon i hodinky zároveň s použitím stejného **keystore souboru**. 
 
-#### Building the **AAPS** Wear apk
-As a summary, the build process for the Wear apk is very similar to that for the "full" phone apk, the difference is that in Android Studio you need to select “**AndroidAPS.wear**”  in the drop-down menu, and as build variant choose “**fullRelease**”. This will generate the **AAPS** Wear apk file.  If you prefer, you can build **“pumpcontrolRelease”** instead, from the drop-down menu, which will allow you to just remotely control the pump but without looping.
 
-The following guide assumes you have reinstalled the latest version of Android studio (scenario below has used Giraffe 2022.3.1)).
+
+#### Jak odinstalovat Android Studio
+
+Ujistěte se, že váš keystore soubor je bezpečně uložený ve vašem počítači mimo složky Android Studia. 
+
+K úplnému odstranění Android Studia z počítače je potřeba několik kroků. Toto je [vhodný návod](https://www.geeksforgeeks.org/how-to-completely-uninstall-android-studio-on-windows/) pro počítače se systémem Windows. V posledním kroku těchto instrukcí musíte také ručně odstranit složku „StudioProjects“.
+
+Nyní přeinstalujte nejnovější verzi Android Studio.
+
+
+
+#### Sestavení **AAPS** Wear apk
+
+Souhrnem, proces sestavení Wear apk je velmi podobný sestavení Full apk pro telefon, rozdíl je pouze v tom, že v Android studiu vyberete "**AndroidAPS.wear**" v drop-down menu a jako vyriantu sestavení vyberte "**fullrelease**". Takto vygenerujete **AAPS** wear apk soubor.  Pokud chcete, můžete místo toho vybrat **"pumpcontrolRelease"** z drop-down menu, což vám umožní vzdáleně ovládat pumpu, ale bez možnosti spuštění smyčky. 
+
+Následující průvodce předpokládá, že jste nainstalovali nejnovější verzi Android studia (scénář níže použil Giraffe 2022.3.1)).
 
 ![image](./images/e8e3b7f3-f82e-425a-968c-cc196434a5f8.png)
 
-To get back here:
+Pro návrat sem: 
 
 ![image](./images/37f4589c-6097-49d4-b0b9-087664914198.png)
 
-continue to follow the instructions.
+pokračujte podle pokynů.
 
-Follow the prompts through the different screens until you are given an option with a dropdown menu offering to build the AAPS full apk. At this point, select  “Wear” from the dropdown instead of “AndroidAPS.apk” because you are building the apk for the smartwatch.
+Postupujte pomocí průvodců přes různé obrazovky, dokud se nedostanete na obrazovku s rozbalovacím menu a nabídkou sestavit plnou aplikaci AAPS. V tomto okamžiku vyberte „Wear“ z drop-down seznamu místo „AndroidAPS.apk“, protože budujete apk pro chytré hodinky. 
 
-
-Next Step go to "Build" in the ribbon
+V dalším kroku přejděte na "Build" 
 
 ![image](./images/b2cccc84-85b6-4ee1-800b-7c6dcb9dd857.png)
 
-
-Go to Build > Generate Signed Bundle / APK
-
+Přejděte na Build> Generate Signed Bundle / APK
 
 ![image](./images/f488fe36-8cb9-4d81-9d94-5f742a1aaaee.png)
 
@@ -568,93 +653,103 @@ Select > APK:
 
 ![image](./images/Installation_Screenshot_39b.PNG)
 
-
-Select in Module: AndroidAPSwear
+V Modulu vyberte: AndroidAPSwear
 
 ![image](./images/cceaa832-70e6-4ad5-95ec-a82e2a6add1e.png)
 
-Enter keystore file at the default location. Your keystore path will depend where you have stored your Keystore. For this scenario the keystore path was located: C:\Program Files\Android\Android Studio\jbr\bin
+Vložte keystore soubor na výchozí umístění. Vyše cesta k souboru úložiště klíčů (keystore soubor) bude záviset na tom, kam jste soubor umístili. Pro účely tohoto scénáře je cesta k úložišti klíčů: C:\Program Soubor\Android\Android Studio\jbr\bin
 
-
-The next screen should show this:
+Další obrazovka by měla zobrazit:
 
 ![image](./images/87ce7943-256e-449e-8439-8f9fd5bef05e.png)
 
+A vyberte „fullRelease“.
 
-And select “fullRelease”.
+Buďte trpěliví - **AAPS** Wear apk by měl být sestaven přibližně za 10-20 minut v závislosti na rychlosti vašeho internetového připojení. 
 
-Be patient - the **AAPS** Wear apk should be built in around 10-20 minutes, depending on the speed of your internet connection.
+
 
 ### Řešení problémů
 
-In the process of building the 3.2 full **AAPS** app (and in fact any signed app), Android Studio generates a .json file in the same folder. This then causes errors with [uncommitted changes](troubleshooting_androidstudio-uncommitted-changes) when you try to build the next signed app, like the **AAPS** wear app. The quickest way to resolve this is to navigate to the folder where the full AAPS app has been built, your folder is probably something like:
+V procesu vytváření plné **AAPS** aplikace verze 3.2 (a vlastně jakékoli podepsané aplikace) Android Studio vygeneruje ve stejném adresáři soubor s příponou .json. To potom způsobuje chybu [uncommitted changes](troubleshooting_androidstudio-uncommitted-changes), když zkoušíte sestavit další podepsanou aplikaci, jako **AAPS** wear apk. Nejrychlejší způsob, jak to vyřešit, je přejít do složky, kde byla sestavena plná aplikace AAPS. Vaše složka je pravděpodobně na adrese: 
 
-C:\Users\Your Name\StudioProjects\AndroidAPS\app\aapsclient\release.
+C:\Users\Your Name\StudioProjects\AndroidAPS\app\aapsclient\release. 
 
-Either delete, or move the unneeded .json file out of the folder. Then try to build the **AAPS** wear app again. If that doesn't work, the more detailed [troubleshooting guide](troubleshooting_androidstudio-troubleshooting-android-studio) will help you to identify the specific file causing the issue, which could also be your keystore file.
+Buď odstraňte nebo přesuňte nepotřebný .json soubor z této složky. Potom zkuste znovu vytvořit **AAPS** wear aplikaci. Pokud to nefunguje, podrobnější [příručka pro řešení problémů](troubleshooting_androidstudio-troubleshooting-android-studio) vám pomůže identifikovat konkrétní soubor způsobující problém, což může být i vaše úložiště klíčů. 
 
 
-#### How to set up a Samsung Galaxy 4 smartwatch with **AAPS**
 
-This section assumes you are totally new to Smartwatches, and gives you basic orientation of a popular watch, the **Galaxy Watch 4**, followed by a step-by-step guide to setup **AAPS** on the watch.
 
-_This guide assumes the Samsung Galaxy watch you are setting up is running Wear OS version 3 or lower._ If you are setting up a watch running Wear OS 4/OneUI 5 or later, you will need to use a new ADB pairing process, this is explained in the Samsung software on your phone and will be updated here in due course. Here are basic setup guides for the [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) and [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0)
+#### Jak nastavit chytré hodinky Samsung Galaxy 4 s **AAPS**
 
-##### Basic smartwatch familiarity
+Tato sekce předpokládá, že v oblasti chytrých hodinek jste zcela noví a poskytuje vám základní orientaci mezi populárními hodinkami, **Galaxy Watch 4**, následovaný průvodcem krok za krokem k nastavení **AAPS** na hodinkách. 
 
-After basic setup of your watch according to the video above, go to the playstore on the phone and download the following apps: "Galaxy Wearable" “Samsung” and either “Easy Fire tools” or "Wear Installer 2".
+_Tento průvodce předpokládá, že nastavujete hodinky Samsung Galaye na Wear OS verze 3 nebo nižší._ Pokud nastavujete hodinky na Wear OS 4 / OneUI 5 nebo vyšší, budete potřebovat použít nový proces párování ADB, což je vysvětleno v Samsung software na vašem telefonu a zde to bude v pravý čas aktualizováno. Zde jsou základní návody pro nastavení [Galaxy Watch 5](https://www.youtube.com/watch?v=Y5upzOIxwTU) a [Galaxy Watch 6](https://www.youtube.com/watch?v=D6bq20KzPW0) 
 
-There are plenty of 3rd party YouTube videos which will help you with getting familiar with your new smartwatch, for example:
+
+
+##### Základní obeznámení s chytrými hodinkami
+
+Po základním nastavení hodinek podle výše uvedeného videa, přejděte do obchodu Playstore na telefonu a stáhněte si následující aplikace: "Galaxy Wearable", "Samsung" a buďto "Easy Fire tools" nebo "Wear Installer 2". 
+
+Existuje spousta YouTube videí třetích stran, které vám pomohou seznámit se s vašimi novými chytrými hodinkami, například:
 
 https://www.youtube.com/watch?v=tSVkqWNmO2c
 
-The app “Galaxy Wearable” also has an instruction manual section in it. Open galaxy wearable on the phone, search for the watch, attempt to pair the watch with the phone. Depending on your version, this may prompt you to install a further 3rd app “galaxy watch 4 plugin” from the playstore (takes a while to download). Install this on the phone, and then attempt to pair the watch and phone again in the wearable app. Go through a series of menus and tick various preferences.
-
-##### Setting up a Samsung account
-
-You need to make sure that the email account you use to set up the Samsung account has a date-of-birth such that the user is age 13+, as otherwise the Samsung permissions are really difficult to approve. If you have given your child under 13 a Gmail account and are using that email address, you cannot simply change it to an adult account. One way around this is to modify the current date-of-birth to make the current age 12 years and 363 days old. The following day, the account will be converted to an adult account, and you can progress with the setup of the Samsung account.
-
-##### Transferring the **AAPS** Wear app onto your **AAPS** phone
-
-Loading the Wear.apk from Android Studio to your phone can be done either by:
-
-a)  using a USB cable to put the **AAPS** wear apk file onto the phone, and then “side-load” it to the watch. Transfer Wear.apk to the phone via USB into the downloads folder; or
-
-b)  cut and paste Wear.apk from Android Studio onto your Gdrive.
+Aplikace „Galaxy Wearable“ má také integrovaný manuál. Otevřete aplikaci Galaxy wearable na telefonu, vyhledejte hodinky a pokuste se spárovat hodinky s telefonem. V závislosti na vaší verzi, můžete být požádáni o instalaci další aplikace třetí strany „galaxy watch 4 plugin“ z Playstore (stahování trvá chvilku). Nainstalujte aplikaci do telefonu a pak se pokuste znovu spárovat hodinky a telefon v aplikaci Galaxy wearable. Přejděte přes řadu nabídek a zaškrtněte potřebné předvolby. 
 
 
-You can use either Wear Installer 2 or Easy Fire tools to side-load AAPS onto the watch. Here we recommend Wear Installer 2, because the instructions and process in the video are so clear and well-explained.
 
-##### Using Wear Installer 2 to side-load **AAPS** Wear from the phone onto the watch
+##### Nastavení účtu Samsung
 
- ![image](./images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
+Musíte se ujistit, že e-mailový účet, který používáte pro nastavení účtu Samsung, má nastavené takové datum narození, že uživatel je ve věku 13+, jinak bude problém se schválením oprávnění Samsung. Pokud je účet založen na vaše dítě mladší 13 let a chcete použít tuto adresu, nebudete mít možnost to snadno změnit na účet dospělého. Jedním ze způsobů, jak to obejít, je upravit současné datum narození tak, aby se současný věk stal 12 let a 363 dní. Následující den bude účet převeden na účet pro dospělé a můžete pokračovat v nastavení účtu Samsung. 
 
-Wear Installer 2, developed by [Malcolm Bryant](https://www.youtube.com/@Freepoc) can be downloaded from Google Play onto your phone and can be used to side-load the AAPS wear app onto the watch. The app includes a handy ‘how to sideload’ [video.](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV)
 
-This provides all the necessary detail (best to open the video on a separate device so you can watch it whilst setting up the phone).
 
-As mentioned in the video, once complete, switch ADB debugging off on the watch, to avoid draining the smartwatch battery.
+##### Přenos aplikace **AAPS** Wear na váš **AAPS** telefon
 
-Alternatively, you can:
+Načtení Wear.apk z Android Studio do telefonu může být provedeno buď: 
 
-:::{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
+a) pomocí USB kabelu vložte  **AAPS** wear apk do telefonu a potom proveďte "side-load" do hodinek. Soubor wear apk přeneste do adresáře download;
+
+b) vyjměte a vložte wear.apk z Android Studia na Gdrive.
+
+Na "side-load" (instalaci do hodinek) můžete použít buď Wear Installer 2 nebo Easy Fire Tools. Doporučujeme Wear Installer 2, protože instrukce a celý proces jsou tak jasně a velmi dobře vysvětlené ve videu.  
+
+
+
+##### Použití Wear Installer 2 k nahrání **AAPS** Wear z telefonu do hodinek
+
+![image](./images/43577a66-f762-4c11-a3b3-4d6d704d26c7.png)
+
+Aplikaci Wear Installer 2, vyvynutou [Malcolmem Bryantem](https://www.youtube.com/@Freepoc), si můžete stáhnout z Google Play do vašeho telefonu a použít k nahrání (side-load) aplikace AAPS wear do vašich hodinek. Aplikace obsahuje praktický [videonávod](https://youtu.be/abgN4jQqHb0?si=5L7WUeYMSd_8IdPV) "how to sideload".
+
+Ten poskytuje všechny potřebné detaily (nejlepší je otevřít video na druhém zařízení, abyste ho mohli sledovat, zatímco budete nastavovat telefon). 
+
+Jak je zmíněno ve videu, po dokončení na hodinkách vypněte ADB ladění, aby se zabránilo vyčerpání baterie v hodinkách.
+
+Nebo můžete postupovat takto:
+
+
+
+```{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
 :class: dropdown
 
-1)   Download _Easy Fire Tools_ from playstore onto phone
+1)   Download _Easy Fire Tools_ from playstore onto phone 
 
 ![image](./images/81ceb8f3-dfa6-468b-b9d0-c31b885bc104.png)
 
-2)  Make yourself a developer in the watch (once set up and connected to phone):
+2)  Make yourself a developer in the watch (once set up and connected to phone): 
 
-Go to settings >about watch (bottom option) >- software info > software version.
+Go to settings >about watch (bottom option) >- software info > software version. 
 
-Rapidly tap on “ software version” until a notification appears that the watch is now in "developer mode". Return to the top of settings menu, scroll to the bottom and see “developer options” below “about watch”.
+Rychle klepejte na "Verze software" dokud se neobjeví oznámení, že hodinky jsou přepnuté ve "vývojářském módu". Vraťte se zpět do menu Nastavení, posuňte se na konec a podívejte se na "Vývojářské možnosti" dole v části "O hodinkách". 
 
-In “developer options”, turn on “ADB debugging” and “wireless debugging”. The latter option then reveals the IP address of the watch, the final two digits of which changes each time the watch is paired with a new phone. It will be something like: **167.177.0.20.** 5555 (ignore the last 4 digits). Note that the last two digits (here, “20”) of this address will change every time you change to a new phone handset for AAPS.
+Ve "Vývojářských možnostech" zapněte "ADB ladění" a "Bezdrátové ladění". Poslení možnost vám zobrazí IP adresu hodinek, z níž se poslední dvě číslice mění pokaždé, když se hodinky spárují s novým telefonem. It will be something like: **167.177.0.20.** 5555 (ignore the last 4 digits). Všimněte si, že poslední 2 číslice (v tomto případě "20") této adresy se změní pokaždé, když se přepnete na nový telefon s AAPS.  
 
 ![24-10-23, watch ADB debug pic](./images/643f4e8b-09f3-4a8d-8277-76b1839a5c3a.png)
 
-STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). Then click the plug socket icon on the top right.
+STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the phone (go into the left hamburger, settings and enter the IP address). Potom klikněte na ikonu zásuvky vpravo nahoře.  
 
 ![image](./images/b927041f-cc53-4cde-9f77-11cd517c9be0.png)
 
@@ -664,7 +759,7 @@ STEP 3)     Enter IP address _e.g._ **167.177.0.20** into Easy Fire tools on the
 
 STEP 4) Follow the instructions [here](https://wearablestouse.com/blog/2022/01/04/install-apps-apk-samsung-galaxy-watch-4/?utm_content=cmp-true) to side-load (i.e. transfer)  Wear.apk onto the smartwatch using Easy Fire tools
 
-Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the smartwatch:
+Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the smartwatch: 
 
 ![image](./images/d1bc4c9d-d5ef-4402-a9a2-a51ed242eff3.png)
 
@@ -674,125 +769,131 @@ Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the 
 
 ![image](./images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
 
-:::
+```
 
 
-##### Setting up the connection between the watch and the phone from **AAPS**
 
-The final step is to configure **AAPS** on the phone to interact with **AAPS** Wear” on the watch. To do this, enable the Wear plugin in Config Builder:
 
-●   Go to the **AAPS** app on the phone
 
-●   Select > Config Builder in the left-hand Hamburger tab
+##### Nastavení propojení mezi hodinkami a telefonem z **AAPS**
 
-●   Tick for Wear selection under General
+Posledním krokem je konfigurace **AAPS** na telefonu, který bude komunikovat s "**AAPS** Wear“ na hodinkách. Proveďte to povolením Wear pluginu v konfiguraci:
+
+● Přejděte do aplikace **AAPS** na telefonu
+
+● Vyberte > v levém hamburger menu záložku Konfigurace
+
+● Zaškrtněte Wear pod Obecné
 
 ![image](./images/ae6d75a1-1829-4d2e-b0dc-153e31e4a466.png)
 
+Chcete-li změnit vzhled **AAPS** aplikace, stiskněte domovskou obrazovku hodinek a zobrazí se "Přizpůsobení".  Přejetím vpravo si postupně zobrazíte všechny ciferníky **AAPS**. 
 
-To change to a different **AAPS**  watchface, press on the home screen of the watch and it will come to “customise”. Then swipe right until you get to all the **AAPS**  faces.
+Pokud byla aplikace **AAPS** úspěšně nahrána do hodinek, bude vypadat takto: 
 
-If the **AAPS** Wear.apk has been successfully side-loaded onto the smartwatch, it will look like this:
-
-
-![24-10-23, successful galaxy watch photo](./images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
-
-#### Troubleshooting the **AAPS** watch- **AAPS** phone communication
-1.  If EasyFire tools does not connect or if you are receiving ‘authorisation failed’ > check IP address has been correctly entered.
-2.  Check that the smartwatch is connected to the internet (and not just connected to the phone via Bluetooth).
-3.  Check that the **AAPS** Phone and smartwatch are paired or linked in Samsung app.
-4.  It may also help to do a hard restart of Phone and smartwatch (meaning turning phone on and off)
-5.  Assuming you have managed to download the Wear.apk onto your phone but you are not receiving any BG data, _check_ that you have side-loaded the correct **AAPS** apk version onto the watch. If your AAPS wear.apk version is listed as any of the following: a) “wear-AAPSClient-release’; b) ‘wear-full-release.aab’; or c) the word ‘debug’ appears in the title, you have not selected the correct Wear OS apk version during the build.
-6.  Check that your router is not isolating the devices from one another.
-
-More troubleshooting tips can be found [here](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
-
-### Controlling AAPS from the Wear Watch
-
-Once you have setup **AAPS** on your watch, extensive details about the smartwatch faces and their functions can be found in [Operation of Wear AAPS on a Smartwatch](../Configuration/Watchfaces.md).
-
-As a brief overview, the following functions can be triggered from the smartwatch:
-
-●   set a temporary target
-
-●   use the bolus calculator (calculation variables can be defined in settings on the phone)
-
-●   administer eCarbs
-
-●   administer a bolus (insulin + carbs)
-
-●   watch settings
-
-●   status
-
-●   check pump status
-
-●   check loop status
-
-●   check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
-
-●   show TDD (Total daily dose = bolus + basal per day)
-
-●   Remote bolus where the caregiver and T1D child are in different locations (this is possible for the **AAPS** watch and **AAPS** phone providing both devices are connected to a Wifi network)
-
-#### Communication from caregivers to the watch using other apps (like Whatsapp)
-
-It is possible to add additional apps to the watch, like Whatsapp, for messaging (for example) between caregivers and kids. It is important only to have ONE Google account associated with the phone, or the watch will not bring this data across. You need to be 13 or older to have a Samsung account, and this needs to be set up in the same email address which is used on the Android phone.
-
-A video explaining getting Whatsapp setup for messaging on the Galaxy 4 watch (you can’t get full functionality of Whatsapp) is shown [here](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
-
-Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and the watch makes it possible for Whatsapp messages to announce with a slight vibration, and also for the Whatsapp message to display over the existing watchface.
-
-#### Troubleshooting Sony smartwatch setup
-
-Although it was discontinued a few years ago, if you are using a Sony Smartwatch SW 3 please see here for a troubleshooting guide: [Troubleshooting Sony Smartwatch SW 3](https://androidaps.readthedocs.io/en/latest/Usage/SonySW3.html)
+![24-10-23, fotografie úspěšné instalace na hodinkách Galaxy](./images/628e46d8-c7dc-4741-9eba-ae83f396c04c.png)
 
 
 
-### Option 3) AAPSClient on a watch for remote control of **AAPS** on a phone
+#### Řešení problémů s komunikací mezi **AAPS** na hodinkách a **AAPS** v telefonu
 
-The software for the watch, **AAPSClient** Wear apk, can be downloaded directly from [Github](https://github.com/nightscout/AndroidAPS/releases/).
+1.  Pokud se aplikace Easy Fire Tools nepřipojuje nebo jste dostali zprávu "autorizace selhala" >, zkontrolujte jestli máte správně zadanou IP adresu.
+2.  Zkontrolujte, že jsou chytré hodinky připojené k internetu a ne pouze k telefonu prostřednictvím Bluetooth.
+3.  Zkontrolujte že **AAPS** telefon a hodinky jsou správně spárovány nebo propojeny v Samsung aplikaci.
+4.  Může také pomoci provést tvrdý restart telefonu a chytrých hodinek (tzn. zapnutí a vypnutí telefonu)
+5.  Za předpokladu, že jste zvládli stáhnout Wear.apk na telefon, ale nedostáváte žádná data o glykémii, _zkontrolujte_, že jste nahráli do hodinek správnou verzi **AAPS** apk. Pokud je vaše verze AAPS wear.apk uvedena jako: a) „wear-AAPSClient-release“; b) „wear-full-release. ab“; nebo c) slovo se v názvu zobrazí slovo „ladění“, nevybrali jste během sestavení správnou verzi Wear OS apk.
 
-To download the software, click on the required app (in this screenshot, either **wear-aapsclient-release_3.2.0.1** or **wear-aapsclient2-release_3.2.0.1** would work, there are two versions in case you need a copy for a second caregiver watch):
+6.  Zkontrolujte, že váš router od sebe neizoluje jednotlivá zařízení.
+
+Další tipy pro řešení problémů naleznete [zde](https://freepoc.org/wear-installer-help-page/#:~:text=If%20you%20are%20having%20problems,your%20phone%20and%20your%20watch.)
+
+
+
+### Ovládání AAPS z hodinek Wear
+
+Jakmile jste nastavili **AAPS** na vašich hodinkách, mnoho informací o cifernících hodinek a jejich funkcích lze nalézt v [Provozování aplikace Wear AAPS na chytrých hodinkách](../Configuration/Watchfaces.md).
+
+Na hodinkách je možné spustit následující funkce:
+
+●   nastavit dočasný cíl
+
+●   použít bolusovou kalkulačku (nastavení kalkulátoru můžete upravit v nastaveni v telefonu)
+
+●   zadávat eSacharidy
+
+●   podávat bolus (inzulín + sacharidy)
+
+●   měnit nastavení hodinek
+
+●   stav
+
+●   zkontrolovat stav pumpy
+
+●   kontrolovat stav smyčky
+
+●   kontrolovat a měnit profil, CPP (Circadian Percentage Profile = posun času + procentní změna)
+
+●   zobrazit TDD (celková denní dávka = bolus + bazál za den)
+
+●   Vzdálené podání dávky, kdy pečovatel a dítě s T1D jsou na různých místech (což je možné pro hodinky **AAPS** a telefon **AAPS**, pokud jsou obě zařízení připojená k Wifi síti)
+
+
+
+#### Komunikace mezi pečovateli a hodinkami pomocí jiných aplikací (jako Whatsapp)
+
+Do hodinek je možné přidat další aplikace, jako Whatsapp, např. pro zasílání zpráv mezi pečovateli a dětmi. Je důležité mít s telefonem propojený pouze JEDEN Google účet, jinak hodinky nebudou přenášet data. Abyste mohli mít účet Samsung, musí vám být alespoň 13 let, a účet musíte mít nastavený se stejnou e-mailovou adresou, jako je použita v Android telefonu.  
+
+Video popisující nastavení WhatsApp pro posílání zpráv na hodinkách Galaxy 4 (není možné dosáhnout plné funkčnosti Whatsapp) je [zde](https://gorilla-fitnesswatches.com/how-to-get-whatsapp-on-galaxy-watch-4/)
+
+Provedením úprav zároveň v aplikaci **Galaxy werable** na **AAPS** telefonu a hodinkách umožňuje oznámení nových Whatsapp zpráv pomocí lehké vibrace a také její zobrazení přes aktuálně spuštěný ciferník.
+
+
+
+#### Řešení problémů s chytrými hodinkami Sony
+
+Ačkoli došlo k ukončení výroby už před několika lety, pokud stále používáte Sony Smartwatch SW 3, podívejte se na průvodce řešením problémů: [Řešení problémů se Sony Smartwatch SW3](https://androidaps.readthedocs.io/en/latest/Usage/SonySW3.html)
+
+
+
+
+
+### Možnost 3) AAPSClient na hodinkách ke vzdálenému řízení **AAPS** na telefonu
+
+Software pro hodinky, **AAPSClient** Wear apk, je možné stáhnout přímo z [Github](https://github.com/nightscout/AndroidAPS/releases/).
+
+Pro stažení softwaru klikněte na požadovanou aplikaci (na tomto snímku obrazovky by fungoval buď **wear-aapsclient-release_3.2.0.** nebo **wear-aapsclient2-release_3.2.0.**; existují dvě verze v případě, že potřebujete druhou kopii pro hodinky druhého pečovatele):
 
 ![image](./images/2308c075-f41c-45bc-9c0f-3938beeaaafb.png)
 
-
-Then "save as" and save the file to a convenient location on your computer:
-
+"Uložte" nebo "Uložte jako" stažený soubor na vhodné místo na vašem počítači:
 
 ![image](./images/bcf63cbc-9028-41d5-8416-fa2a31fd6f7d.png)
 
+Soubor **AAPSClient** wear apk může být přenesen na váš telefon a potom nahrán na hodinky stejným způsobem jako aplikace **AAPS** Wear, jak je popsáno v [Přenos aplikace Wear na vás AAPS telefon](remote-control.md#transferring-the-wear-app-onto-your-aaps-phone)  
 
 
 
-
-
-The **AAPSClient** wear apk can be transferred to your phone and side-loaded onto the watch in the same way as the **AAPS** Wear app, as detailed in [Transferring the Wear app onto your AAPS phone](remote-control.md#transferring-the-wear-app-onto-your-aaps-phone)
-
-### Option 4) Limited Nightscout (and other options) on a watch - Fitbit watches
-
-
+### Možnost 4) Omezený Nightscout (a další možnosti) na hodinkách - Fitbit hodinky
 
 ![image](./images/98620770-2fb3-47af-a13e-28af7db69096.png)
 
+Ciferník **"Sentinel"** vyvinul [Ryan Chen](http://ryanwchen.com/sentinel.html) pro svou rodinu a zdarma ho poskytl pro uživatele chytfých hodinek Fitbit: Sense 1/2, Versa 2/3/4. Není kompatibilní s FitBit Luxe, protože se jedná pouze o fitness tracker. Sentinel je možné stáhnout z aplikace [FitBit mobile](https://gallery.fitbit.com/details/5f75448f-413d-4ece-a53d-b969c6afea7c). 
+
+Umožňuje to dohled nad stavem glykémie 1, 2 nebo 3 jedinců s využitím Dexcom Share, Nightscoutu nebo jejich kombinace jako zdrojů dat. 
+
+Také můžete použít xDrip+ nebo SpikeApp, pokud je používáte v režimu lokálního webového serveru. Uživatelé si mohou nastavit vlastní alarmy nebo odesílat události z hodinek přímo do Nightscout portálu, aby bylo možné lépe sledonat akotivní inzulín (IOB), aktivní sacharidy (COB), zadávat informace o jídlech (množství sacharidů a velikost bolusu) a hodnoty kontroly glykémie. 
+
+Všechno se zobrazí na grafu časové osy Nightscoutu a jako aktualizované hodnoty v polích IOB a COB. Podpora komunity je k dispozici v dedikované [Facebookové skupině, Sentinel.](https://www.facebook.com/groups/3185325128159614)
+
+Existují další možnosti sledování pomocí hodinek FitBit, které ale slouží pouze k monitorování. To zahrnuje [Glance](https://glancewatchface.com/). Tyto další možnosti jsou popsány na stránkách [Nightscout.](https://nightscout.github.io/nightscout/wearable/#fitbit)
 
 
-**"Sentinel"** is a clockface developed by [Ryan Chen](http://ryanwchen.com/sentinel.html) for his family and shared for free for the Fitbit smart watches: Sense1/2, Versa 2/3/4. it is not compatible with the FitBit Luxe since this is only a fitness tracker. Sentinel can be downloaded from the [FitBit mobile app](https://gallery.fitbit.com/details/5f75448f-413d-4ece-a53d-b969c6afea7c).
 
-It allows the monitoring of 1, 2, or 3 individual's blood glucose numbers using either Dexcom Share, Nightscout, or a combination of the two as data sources.
+### Možnost 5) **Monitorování AAPS** (kompletní profilová data nebo pouze glykémie), když **AAPS** běží na telefonu.
 
-You can also use xDrip+ or SpikeApp if used with local web server mode. Users can set custom alarms and submit events using Nightscout's careportal functionality directly from the watch to help track insulin-on-board (IOB), carbs-on-board (COB), enter meal information (carb count and bolus amount), and BG check values.
+Tyto možnosti jsou podrobněji popsány v sekci ["Pouze dohled"](following-only.md) v dokumentaci. 
 
-All will appear on the Nightscout timeline-graph, and as updated values in the IOB and COB fields. Community support can be found at the dedicated [Facebook group, Sentinel.](https://www.facebook.com/groups/3185325128159614)
-
-There are additional options for FitBit watches which appear to be for monitoring only. This includes [Glance](https://glancewatchface.com/). These additional options are described in the [Nightscout webpages.](https://nightscout.github.io/nightscout/wearable/#fitbit)
-
-### Option 5) **Monitoring of AAPS** (full profile data, or glucose-only) where **AAPS** is running on a phone.
-
-These options are described in more detail in the ["following only"](following-only.md) section of the documentation.
-
-In general, there are a wide range of affordable smartwatches which can provide glucose display only. If you are using Nightscout, then a good overview of all the options are described in the [Nightscout pages](https://nightscout.github.io/nightscout/wearable/#).
+Obecně platí, že existuje široká škála cenově dostupných chytrých hodinek, které mohou poskytovat pouze zobrazení glykémie. Pokud používáte Nightscout, dobrý přehled všech možností je popsán na [Nightscout stránkách](https://nightscout.github.io/nightscout/wearable/#).
 
 
 

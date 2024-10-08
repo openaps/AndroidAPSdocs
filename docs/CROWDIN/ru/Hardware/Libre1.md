@@ -2,21 +2,23 @@
 
 Чтобы использовать Libre в качестве мониторинга, который получает новые значения гликемии каждые 5 минут без необходимости сканирования сенсора, нужно сначала приобрести адаптер NFC - Bluetooth (коммерчески доступные устройства, основанные на устаревшем проекте [LimiTTer](https://github.com/JoernL/LimiTTer)).
 
-:::{admonition} (предостережение)Libre2, Libre 1 US и Libre Pro :class: предупреждение Убедитесь, что мост и приложение, которым вы собираетесь пользоваться, совместимы с вашим сенсором  
-:::
+```{admonition} Libre 2, Libre 1 US and Libre Pro
+:class: warning
+Verify the bridge and the app you want to use are compatible with your sensor.  
+```
 
-На рынке имеется несколько адаптеров:
+Several bridges are available on the market:
 
 -   [MiaoMiao Reader](https://www.miaomiao.cool/) (версия 1, 2 или 3) также доступны на AliExpress.
 -   [Blucon Nightrider](https://www.ambrosiasys.com/our-products/blucon/) (недавние версии прошивки могут быть несовместимы со всеми приложениями, приложение поставщика не транслирует данные в AAPS)
 -   [Bubble (или Bubble Mini)](https://www.bubblesmartreader.com/) от европейских поставщиков ([Bubblan](https://www.bubblan.org/), [BubbleShop](https://bubbleshop.eu/)) или для российских пользователей [здесь](https://vk.com/saharmonitor/). Также доступны на AliExpress.
 -   Atom для российских пользователей.
 
-Исторически, можно использовать часы, Sony Smartwatch 3 (SWR50), имеющие чип NFC, который можно включить как коллектор. Однако перечисленные выше адаптеры NFC Bluetooth гораздо удобнее, их предпочитает большинство пользователей, желающих иметь постоянный мониторинг с Libre 1 (не американской).
+Historically it is possible to use a specific watch, the Sony Smartwatch 3 (SWR50) which has an NFC chip that can be enabled and used as an NFC collector. However the custom NFC to Bluetooth bridges listed above offer a less complex solution and would be used by the majority of those wanting to use their Libre 1 (non-US) as a CGM.
 
 -   Sony Smartwatch 3 (SWR50)  <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
-В настоящее время, если Libre 1 используется в качестве источника ГК, невозможно активировать «Включать SMB всегда» и «Включить SMB после приема углеводов». Значения ГК Libre 1 недостаточно сглажены для безопасного пользования. Подробнее см [Сглаживание данных ГК](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+As it currently stands, if using Libre 1 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within the SMB algorithm. The BG values of Libre 1 are not smooth enough to use it safely. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 
 ## 1. Использование xDrip+
 
@@ -24,7 +26,7 @@
 -   Вы можете безопасно загрузить [ новую (стабильную) версию APK ](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk), если только вам не нужны новейшие функции. В этом случае следует загружать т. н. [Ночную сборку](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Следуйте инструкциям по установке на странице настроек [xDrip+](../Configuration/xdrip.md).
 -    Вам также нужен [OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) для Libre 1 США (и Libre 2 EU).
--   В [Конфигураторе, Источник ГК](../Configuration/Config-Builder.md#bg-source) выберите xDrip+.
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
 ## 2. Использование Glimp
 
@@ -46,4 +48,4 @@
 
 ![Diabox](../images/Diabox.png)
 
-- В [Конфигураторе, Источник ГК](../Configuration/Config-Builder.md#bg-source) выберите xDrip+.
+- Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).

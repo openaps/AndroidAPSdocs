@@ -355,6 +355,12 @@ Users should ensure that both __AAPSClient__ and __AAPS__ are showing  ‘connec
 
 Users should also ensure that carbs are logged in both ‘Treatments’ within both __AAPSClient__ and __AAPS__ otherwise this could indicate a malfunction within the user’s set up.
 
+### Troubleshooting 'NS access token' configuration issues
+
+The precise 'NS access token' configuration may differ depending upon whether your Nightscout provider is a paid for hosted site or not. 
+
+If you are struggling with **AAPS** v3 to accept the 'NS access token' and using a paid for hosted Nightscout site, you may wish to first liaise with your Nightscout provider on how to resolve the 'NS access token' difficulties. Otherwise, please reach out to the **AAPS** group but please double check that you have correctly followed the notes before doing so [here](https://nightscout.github.io/nightscout/security/#create-a-token).
+
 ### Features of AAPSClient include:
 
 ![Sara's AAPSClient table](images/remote-control-23.png)
@@ -656,7 +662,7 @@ As mentioned in the video, once complete, switch ADB debugging off on the watch,
 
 Alternatively, you can:
 
-:::{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
+```{admonition} Use Easy Fire tools to side-load the **AAPS** wear on the watch
 :class: dropdown
 
 1)	 Download _Easy Fire Tools_ from playstore onto phone 
@@ -694,7 +700,7 @@ Click side "plug-in" socket in the app, in order to upload Wear OS.apk onto the 
 
 ![image](./images/2c398a34-b865-4aa1-9c53-d83dfef052a7.png)
 
-:::
+```
 
 
 ##### Setting up the connection between the watch and the phone from **AAPS** 

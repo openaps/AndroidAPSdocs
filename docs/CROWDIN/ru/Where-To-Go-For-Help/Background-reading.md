@@ -10,7 +10,7 @@
 
 [Документация Loop - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
-[Тонкая настройка системы - https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://seemycgm.com/2017/10/29/fine-tuning-settings/)
+[Fine-Tuning your settings - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
 [Tim Omer – Hypodiabetic Blog, Блог Гиподиабетика - https://www.hypodiabetic.co.uk/](https://www.hypodiabetic.co.uk/)
 
@@ -24,7 +24,7 @@
 
 [Какие выводы можно сделать разбираясь с чувствительностью к инсулину при использовании функции Автосенс #OpenAPS? https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/](https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/)
 
-<https://seemycgm.com/2017/10/29/fine-tuning-settings/>
+[https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
 ## Фоновое чтение и статьи о замкнутом цикле DIY
 

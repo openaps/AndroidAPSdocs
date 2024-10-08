@@ -8,7 +8,7 @@ Hinweise zum Formatieren von Texten (Überschriften, fett...) und zum Setzen von
 
 Bei Fragen, Feedback oder neuen Ideen für die Dokumentation erreichst Du das Dokumentations-Team über [Discord](https://discord.gg/4fQUWHZ4Mw).
 
-Irgendwann wird vorgeschlagen, dass Du einen Pull-Request (PR) erstellst, der dafür sorgt, dass Deine Verbesserungen der Dokumention auch auf den AAPS Webseiten, die in GitHub gespeichrt sind, sichtbar werden. Es ist eigentlich nicht allzu schwer und eine gute Möglichkeit, Deinen Beitrag zu leisten. Du kannst gebau diese Dokumentation lesen, weil Leute wie Du solchen PRs erstellt haben. Mach dir keine Sorgen einen Fehler zu machen oder irgendwie die falschen Dokumente zu bearbeiten. Deine Änderungen werden immer durch eine zweite Person Korrektur gelesen, bevor sie in die "finale" AAPS-Dokumentation integriert werden. Auch wenn Du Fehler bei der PR-Erstellung machen solltest, kannst Du die Originalversion nicht versehentlich kaputt machen. Die allgemeine Vorgehensweise ist:
+Irgendwann wird vorgeschlagen, dass Du einen Pull-Request (PR) erstellst, der dafür sorgt, dass Deine Verbesserungen der Dokumention auch auf den AAPS Webseiten, die in GitHub gespeichert sind, sichtbar werden. Es ist eigentlich nicht allzu schwer und eine gute Möglichkeit, Deinen Beitrag zu leisten. Du kannst genau diese Dokumentation lesen, weil Leute wie Du solche PRs erstellt haben. Mach dir keine Sorgen einen Fehler zu machen oder irgendwie die falschen Dokumente zu bearbeiten. Deine Änderungen werden immer durch eine zweite Person Korrektur gelesen, bevor sie in die "finale" AAPS-Dokumentation integriert werden. Auch wenn Du Fehler bei der PR-Erstellung machen solltest, kannst Du die Originalversion nicht versehentlich kaputt machen. Die allgemeine Vorgehensweise ist:
 
 - Mache Änderungen und Verbesserungen am Code oder der Dokumentation, indem du das bestehende Dokument veränderst.
 - Vergewissere dich, dass die Änderungen gut aussehen.
@@ -20,7 +20,7 @@ Irgendwann wird vorgeschlagen, dass Du einen Pull-Request (PR) erstellst, der da
 
 In unserem Beispiel nehmen wir nun eine Änderung an der AndroidAPS-Dokumentation vor. Es kann auf jedem Windows-PC, Mac, etc. erfolgen. (jedem Computer mit Internet-Zugang).
 
-1. Gehe zu https://github.com/openaps/AndroidAPSdocs und klicke auf "Fork" oben rechts, um deine eigene Kopie des Repositories (=Quell-Code) zu machen.
+1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
 
 ![Fork repo](./images/PR0.png)
 
@@ -28,7 +28,7 @@ In unserem Beispiel nehmen wir nun eine Änderung an der AndroidAPS-Dokumentatio
 
 ![edit doc](./images/PR1.png)
 
-Oder du klickst auf den “Edit in Github”-Link in der oberen rechten Ecke und klickst dann auf das Bleistift-Symbol, das in der oberen Leiste der Seite erscheint, um diese zu editieren. Du musst in deinem Github-Konto angemeldet sein, um dies zu tun (falls Du noch keines hast, kannst Du es problemlos einrichten).
+Oder du klickst auf den “Edit in Github”-Link in der oberen rechten Ecke und klickst dann auf das Bleistift-Symbol, das in der oberen Leiste der Seite erscheint, um diese zu editieren. Du musst in Deinem GitHub-Konto angemeldet sein, um dies zu tun (falls Du noch keines hast, kannst Du es problemlos einrichten).
 
 ![RTD io](./images/PR2.png)
 
@@ -50,7 +50,7 @@ Wir verwenden Markdown für die Dokumentation. Die Datei hat das Suffix ".md". D
 
 ![create pull request](./images/PR6.png)
 
-7. Das war der letzte Schritt zur Erstellung eines pull requests, PR. GitHub ordnet dem PR eine Nummer, die du nach dem Titel findest, zu und einen Hashtag. Rufe diese Seite wieder auf, um Feedback zu erhalten (oder du erhältst automatisch E-Mail Benachrichtigungen über Aktivitäten bei deinem PR, wenn du Github entsprechend konfiguriert hast). Die Änderung wird nun in einer Liste von PR's enthalten, die das Team überprüfen wird; es wird gegebenenfalls Rückmeldungen dazu geben, bevor die Änderung in die Hauptdokumentation für AAPS einfließt! Wenn du den Fortschritt des PR überprüfen willst, kannst du auf das Logo mit der Glocke in der oberen rechten Ecke deines GitHub-Kontos klicken, wo du dann alle deine PRs siehst.
+7. Das war der letzte Schritt zur Erstellung eines pull requests, PR. GitHub ordnet dem PR eine Nummer, die du nach dem Titel findest, zu und einen Hashtag. Rufe diese Seite wieder auf, um Feedback zu erhalten (oder du erhältst automatisch E-Mail Benachrichtigungen über Aktivitäten bei deinem PR, wenn du Github entsprechend konfiguriert hast). Die Änderung wird nun in einer Liste von PRs enthalten sein, die das Team überprüfen wird. Es wird gegebenenfalls Rückmeldungen dazu geben, bevor die Änderung in die Hauptdokumentation für AAPS einfließt! Wenn du den Fortschritt des PR überprüfen willst, kannst du auf das Logo mit der Glocke in der oberen rechten Ecke deines GitHub-Kontos klicken, wo du dann alle deine PRs siehst.
 
 ![PR tracking](./images/PR7.png)
 
@@ -64,7 +64,7 @@ Wir verwenden Markdown für die Dokumentation. Die Dateien haben die Endung "*.m
 
 Markdown ist eine sehr einfache Textformatierungssprache, die Inhalte von der Formatierung trennt.
 
-Der Autor markiert z.B. eine Überschrift als Überschrift 1 und in der Markdown Verarbeitung wird daraus der entsprechende HTML Code erzeugt, der diese Textstelle wie gewünscht formatiert.
+Der Autor markiert z.B. eine Überschrift als Überschrift 1 und in der Markdown-Verarbeitung wird daraus der entsprechende HTML Code erzeugt, der diese Textstelle wie gewünscht formatiert.
 
 Die Idee dahinter ist, dass
 
@@ -88,40 +88,46 @@ Wir versuchen uns auf diese Überschriften zu beschränken.
 
 ### Textformatierung
 
-- fett: `**Text**`
-- kursiv: `*Text*`
+- **bold**: `**text**`
+- *italic*: `*text*`
+- ***bold italic***: `***text***`
 
-### Nummerierte Liste
+### Ordered list
 
-:::
+    1. first
+    1. second
+    1. dritte
+    
 
 1. erste
 2. zweite
-3. dritte :::
+3. dritte
 
-4. erste
+### Unordered list
 
-5. zweite
-6. dritte
-
-### ungeordnete Liste
-
-:::
+    - one element
+    - another element
+    - and another element
+    
 
 - ein Element
-- eine andere HTML-Element.
-- und ein weiteres Element:::
-
-- ein Element
-
 - eine andere HTML-Element.
 - und ein anderes Element
 
-### mehrstufige Liste
+### Multi level list
 
 Um Listen in Listen einfügen, rückst Du die nächste Ebene mit 4 zusätzlichen Leerzeichen zur vorangegangenen Ebene nach rechts ein.
 
-:::
+    1. first
+    1. second
+    1. third
+      1. one element
+      1. another element
+      1. and another element
+    1. four
+    1. five
+    1. sechs
+    
 
 1. erste
 2. zweite
@@ -131,18 +137,7 @@ Um Listen in Listen einfügen, rückst Du die nächste Ebene mit 4 zusätzlichen
     3. und ein anderes Element
 4. vier
 5. fünf
-6. sechs :::
-
-7. erste
-
-8. zweite
-9. dritte 
-    1. ein Element
-    2. eine andere HTML-Element.
-    3. und ein anderes Element
-10. vier
-11. fünf
-12. sechs
+6. sechs
 
 ### Bilder
 
@@ -207,33 +202,48 @@ Zusätzlich kannst Du ausklappbare Hinweise für Detail- und Zusatzinformationen
 
 #### Notiz
 
-:::: :::{admonition} Note :class: note
+    ```{admonition} Note headline
+    :class: note
+    This is a note.
+    ```
+    
 
-Das ist eine Notiz. ::: ::::
+```{admonition} Note headline :class: note This is a note.
 
-:::{admonition} Note :class: note
+    <br />#### Warnings
+    
+    ````
+    ```{admonition} Warning
+    :class: warning
+    This is a warning.
+    
 
-Das ist eine Notiz. :::
+    ```{admonition} Warning headline 
+    :class: warning
+    This is a warning.
+    ```
+    
+    #### Collapsing Notes
+    
+    
 
-#### Warnungen
+    {admonition} further detailed readings for interested readers
+    :class: dropdown
+    
+    This admonition has been collapsed,
+    meaning you can add longer form content here,
+    without it taking up too much space on the page.
+    
 
-:::: :::{admonition} Warning :class: warning
+````
 
-Dies ist eine Warnung. ::: ::::
+```{admonition} further detailed readings for interested readers :class: dropdown This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page.
 
-:::{admonition} Warning :class: warning
+```
 
-Dies ist eine Warnung. :::
+## Tables
 
-#### Ausklappinformationen
-
-:::: :::{admonition} Zusatzinformationen für die interessierte Leserschaft :class: dropdown
-
-Dieser Hinweis wurde einklappt, d.h. Du kannst einen längeren Textabschnitt hinzufügen ohne das dieser zu viel Platz auf der Seite einnimmt. ::: ::::
-
-:::{admonition} Zusatzinformationen für die interessierte Leserschaft :class: dropdown
-
-Dieser Hinweis wurde einklappt, d.h. Du kannst einen längeren Textabschnitt hinzufügen ohne das dieser zu viel Platz auf der Seite einnimmt. :::
+Avoid using tables with long texts as the contents is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
 
 ## Styleguide
 
@@ -263,7 +273,7 @@ Hier findest Du alternative Wörter von A-Z, die ein verständliches Schreiben l
 
 #### Datenschutz/Lizenz Angelegenheiten:
 
-Achte besonders darauf, dass Du bei Videoaufnahmen oder Screenshots keine persönlichen Informationen (Passwörter oder Deinen API-Schlüssel) preisgibst. YouTube-Inhalte sollte nur über einen Link aus der Dokumentation aufrufbar und nicht öffentlich gelistet sein. Vermeide es, die Aufmerksamkeit auf urheberrechtsverletzendes Material (BYODA etc) zu lenken.
+Achte besonders darauf, dass Du bei Videoaufnahmen oder Screenshots keine persönlichen Informationen (Passwörter oder Deinen API-Schlüssel) preisgibst. Make sure YouTube content is not openly listed, and needs a link from the documentation to view. Vermeide es, die Aufmerksamkeit auf urheberrechtsverletzendes Material (BYODA etc) zu lenken.
 
 #### Nutze kurze und präzise Sätze
 
@@ -329,11 +339,11 @@ Es gibt Situationen, in denen es richtig sein kann, das Passiv zu verwenden.
 
 #### Vermeide Substantivierungen
 
-Eine Substantivierung ist der Name von etwas, das kein physisches Objekt ist, wie ein Prozess, eine Technik oder eine Emotion ist. Substantivierungen werden aus Verben gebildet.
+Eine Substantivierung ist der Name von etwas, das kein physisches Objekt ist, wie ein Prozess, eine Technik oder eine Emotion ist. Nominalizations are formed from verbs.
 
 For example:
 
-| Verb          | Substantivierung  |
+| Verb          | Nominalization    |
 | ------------- | ----------------- |
 | abgeschlossen | Abgeschlossenheit |
 | einführen     | Einführung        |
@@ -366,7 +376,7 @@ In der obigen Aufzählung ist jeder Punkt ein vollständiger Satz, daher beginne
 
 - Und **Du** kannst dasselbe **Wort** zweimal in einem Satz verwenden, wenn **Du** kein besseres **Wort** findest.
 
-#### Bewusste Optimierung des Schreibstils
+#### Optimizing writing style by purpose
 
 Um die Dokumentation übersichtlich und kurz zu halten, schreiben wir verschiedene Abschnitte der Dokumentation in verschiedenen Stilen.
 

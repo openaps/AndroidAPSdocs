@@ -17,9 +17,8 @@
   ![Preferences filter](../images/Pref2021_Filter.png)
 
 ```{contents}
-contenus::
-   :backlinks: entrée
-   :depth: 2
+:backlinks: entry
+:depth: 2
 ```
 
 (Preferences-general)=
@@ -53,7 +52,7 @@ contenus::
 
 #### Mot de passe principal
 
-- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted from version 2.7. **La protection biométrique ne fonctionne pas sur les téléphones OnePlus. Ceci est un problème connu de OnePlus sur certains téléphones.**
+- Nécessaire pour pouvoir [exporter les paramètres](../Usage/ExportImportSettings.md) car ils sont chiffrés depuis la version 2.7. **La protection biométrique ne fonctionne pas sur les téléphones OnePlus. Ceci est un problème connu de OnePlus sur certains téléphones.**
 
 - Ouvrez les préférences (menu trois points en haut à droite de l'écran d'accueil)
 
@@ -71,7 +70,7 @@ contenus::
 
 - Le mot de passe personnalisé doit être utilisé si vous voulez juste utiliser le mot de passe principal pour sécuriser [les paramètres exportés](../Usage/ExportImportSettings.md).
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](Preferences-master-password).
+- Si vous utilisez un mot de passe personnalisé, cliquez sur la ligne "Mot de passe des paramètres" pour définir le mot de passe comme décrit [ci-dessus](Preferences-master-password).
 
   ![Protection](../images/Pref2020_Protection.png)
 
@@ -169,7 +168,7 @@ contenus::
 
 ### Insuline par défaut pour Amorcer/Remplir
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](Screenshots-action-tab).
+- Si vous voulez remplir la tubulure ou amorcer la canule avec AAPS, vous pouvez le faire via [l'onglet actions](Screenshots-action-tab).
 - Les valeurs prédéfinies peuvent être configurées dans cette boite de dialogue.
 
 (Preferences-range-for-visualization)=
@@ -199,7 +198,7 @@ contenus::
 - Les voyants d'état donnent une alerte visuelle pour
 
   - Age du capteur
-  - Sensor battery level for certain smart readers (see [screenshots page](Screenshots-sensor-level-battery) for details).
+  - Niveau de batterie du capteur pour certains MGC utilisant un transmetteur externe (voir la page des [Écrans](Screenshots-sensor-level-battery) pour plus de détails).
   - Âge de l'insuline (jours d'utilisation du réservoir)
   - Niveau du réservoir (unités)
   - Âge de la canule
@@ -237,14 +236,14 @@ contenus::
 ### Maximum Bolus autorisé \[U\]
 
 - Défini la quantité maximale d’insuline que AAPS est autorisé à administrer en une fois lors d'un bolus.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
+- Ce paramètre existe comme une limite de sécurité pour empêcher l'injection d’un bolus trop important dû à une saisie accidentelle ou une erreur de l’utilisateur.
 - Il est recommandé de définir cette valeur à un montant raisonnable qui correspond approximativement à la quantité maximale d’insuline de bolus que vous êtes susceptible d’avoir besoin pour un repas ou pour une dose de correction.
 - Cette restriction s’applique également aux résultats de l'assistant bolus.
 
 ### Maximum de Glucides autorisé \[g\]
 
 - Défini la quantité maximale de glucides que l'assistant bolus de AAPS est autorisée à utiliser.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
+- Ce paramètre existe comme une limite de sécurité pour empêcher l'injection d’un bolus trop important dû à une saisie accidentelle ou une erreur de l’utilisateur.
 - Il est recommandé de définir cette valeur à un montant raisonnable qui correspond approximativement à la quantité maximale de glucides que vous êtes susceptible d’avoir dans d'un repas.
 
 ## Boucle
@@ -255,7 +254,7 @@ contenus::
 - Basculer entre les boucles ouvertes et fermées ainsi que le mode arrêt glycémie basses (AGB)
 - **Boucle ouverte** signifie que les suggestions DBT sont faites en fonction de vos données et apparaissent comme une notification. Après confirmation manuelle, la commande d'injection de l'insuline sera transférée à la pompe. Ce n'est que si vous utilisez la pompe virtuelle que vous devez la saisir manuellement.
 - **La Boucle fermée** signifie que les suggestions DBT (Débit de Basal Temporaire) sont automatiquement envoyées à votre pompe sans confirmation ou entrée de votre part.
-- **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. This means that if blood glucose is dropping it can reduce the basal rate, but if blood glucose is rising then it will only increase the basal rate if the basal IOB is negative (e.g. from a previous Low Glucose Suspend).
+- Le mode **Arrêt Glycémie Basse** est similaire à la boucle fermée, mais limite le paramètre maxIOB à zéro. Cela signifie que si la glycémie diminue, le système peut réduire le débit basal pour vous, mais si la glycémie augmente, il n'augmentera le débit basal que si l'IA est négative (liée à un Arrêt Glycémie Basse précédent).
 
 (Preferences-minimal-request-change)=
 ### Changement minimum \[%\]
@@ -269,21 +268,22 @@ contenus::
 
 Selon vos paramètres dans le [Générateur de configuration](../Configuration/Config-Builder.md) vous pouvez choisir entre deux algorithmes :
 
-- [Advanced meal assist (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm for advanced users
+- [Assistance Améliorée Repas (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - état de l'algorithme en 2017
+- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### Paramètres OpenAPS AMA
 
 - Permet au système de reagir plus rapidement après un bolus de repas SI vous entrez les Glucides de manière fiable.
 - Plus de détail sur les paramètres et l'Autosens peuvent être trouvés dans la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
+(Preferences-max-u-h-a-temp-basal-can-be-set-to)=
 #### Débit max en U/h pour une Temp Basal
 
 - Existe comme une limite de sécurité pour empêcher AAPS d'etre capable d'administrer un dosage de Basal dangereusement élevé.
 - La valeur est definie en Unités d'insuline par heure (U/h).
 - Il est conseillé de definir cette valuer de facon raisonnable et sensée. Une bonne recommandation est de prendre le **débit de basal le plus élevé** de votre profil et de le **multiplier par 4**.
 - Par exemple, si le dosage basal le plus élevé de votre profil est de 0,5 U/h, vous pourriez le multiplier par 4 pour obtenir la valeur de 2 U/h.
-- See also [detailed feature description](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- Voir aussi la [description détaillée de cette fonctionnalité](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 #### L'IA basal maximum que OpenAPS peut délivrer \[U\]
 
@@ -307,7 +307,7 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 
 #### Autosens
 
-- [Autosens](Open-APS-features-autosens) looks at blood glucose deviations (positive/negative/neutral).
+- [Autosens](Open-APS-features-autosens) regarde les écarts de glycémie (positifs/negatifs/neutres).
 - Il essaiera de comprendre à quel point vous êtes sensible/résistant en fonction de ces écarts et ajustera le débit basal et la SI en fonction de ces écarts.
 - Si vous sélectionnez "Autosens ajuste aussi les cibles" l'algorithme modifiera également votre cible de glycémie.
 
@@ -319,11 +319,11 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 (Preferences-openaps-smb-settings)=
 ### Paramètres OpenAPS SMB
 
-- In contrast to AMA, [SMB](Open-APS-features-super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- Contrairement à AMA, [SMB](Open-APS-features-super-micro-bolus-smb) n'utilise pas les débits de base temporaires pour contrôler la glycémie, mais principalement les super micro-bolus.
 
-- You must have started [objective 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
+- Vous devez avoir commencé l'[Objectif 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) pour utiliser les SMB.
 
-- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to).
 
 - Details on the different enable options are described in [OpenAPS feature section](Open-APS-features-enable-smb).
 
@@ -421,9 +421,11 @@ Original communication protocol, can be used with older Nightscout versions.
 
 [New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
-:::{admonition} V3 data uploaders
-:class: warning When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.  
-:::
+```{admonition} V3 data uploaders
+:class: warning
+
+When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+```
 
 - Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
   - **Vérifiez bien que l'URL est SANS /api/v1/ à la fin.**
@@ -475,7 +477,7 @@ Options in advanced settings are self-explanatory.
 
 ## Automatisation
 
-Sélectionnez le service de localisation à utiliser :
+Select which location service shall be used:
 
 - Utiliser la localisation passive : AAPS ne prend la localisation que si d'autres applications la demandent
 - Utiliser la localisation par le réseau : Localisation de votre Wifi
@@ -497,8 +499,7 @@ Sélectionnez le service de localisation à utiliser :
 
 ![Paramètres de maintenance](../images/Pref2020_Maintenance.png)
 
-- Le destinataire standard des journaux est <logs@androidaps.org>.
-- If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). Dans ce cas, le mot de passe principal doit être entré à chaque fois que les paramètres sont exportés ou importés.
+- Standard recipient of logs is <logs@aaps.app>.
 
 ## Open Humans
 

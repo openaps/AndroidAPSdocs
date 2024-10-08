@@ -2,115 +2,90 @@
 
 ## Bluetooth párování inzulínové pumpy
 
-- Click on the hamburger menu in the top left corner.
+- Klikněte v levém horním rohu na hamburger menu.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_01.jpg
-  > :alt: Hamburger menu
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_01.jpg)
 
-- Click on Config Builder.
+- Klikněte na Konfigurace.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_02.jpg
-  > :alt: Config builder
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_02.jpg)
 
-- After selecting the Diaconn G8 Pump click on the Settings icon (cog wheel).
+- Po vybrání pumpy Diaconn G8 klikněte na ikonu nastavení (ozubené kolečko).
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_03.jpg
-  > :alt: Settings
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_03.jpg)
 
-- Choose Selected pump.
+- Zvolte vybranou pumpu.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_04.jpg
-  > :alt: Select pump
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_04.jpg)
 
-- Select your insulin pump’s model number once it appears in the list.
+- Jakmile se objeví v seznamu, vyberte modelové číslo vaší inzulínové pumpy.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_05.jpg
-  > :alt: Pump pairing
-  > ```
+![image](../images/DiaconnG8/DiaconnG8_05.jpg)
 
-- There are two options to check your model number:
+- Existují dvě možnosti, jak zkontrolovat modelové číslo:
 
-  > 1. The last 5 digits of the SN number on the back of the pump.
-  > 2. Click on O button > Information > BLE > Last 5 digits.
-  > 
-  > > `{image} ../images/DiaconnG8/DiaconnG8_06.jpg
-    :alt: check model no.`
+1. Posledních 5 číslic sériového čísla na zadní straně pumpy.
+2. Klikněte na tlačítko O > Information > BLE > posledních 5 číslic.
 
-- Once you select your pump, a window appears asking for a pin code. Enter the pin number displayed on your pump to complete the connection.
+![image](../images/DiaconnG8/DiaconnG8_06.jpg)
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_07.jpg
-  > :alt: PIN code
-  > ```
+- Jakmile vyberete vaši pumpu, objeví se okno pro zadání PIN kódu. K dokončení propojení zadejte PIN kód zobrazený na displeji vaší pumpy.
 
-## Pump status check and log synchronization
+ ![image](../images/DiaconnG8/DiaconnG8_07.jpg)
 
-- Once your pump is connected, click on the Bluetooth symbol to check the status and to synchronize logs.
+## Kontrola stavu pumpy a synchronizace záznamů
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_08.jpg
-  > :alt: Bluetooth status
-  > ```
+- Jakmile je váš čerpadlo připojeno, klepněte na symbol Bluetooth, abyste zkontrolovali stav a synchronizovali záznamy.
 
-## Bluetooth Troubleshooting
+![image](../images/DiaconnG8/DiaconnG8_08.jpg)
 
-**What to do in the case of an unstable Bluetooth connection with the pump.**
+## Řešení problémů s Bluetooth
 
-### Method 1 ) Check the pump again after AAPS application is completed.
+**Co dělat v případě nestabilního propojení s pumpou přes Bluetooth:**
 
-- Click on the 3 dots button on the top right.
+### Metoda 1) Zkontrolujte pumpu po ukončení aplikace AAPS
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_09.jpg
-  > :alt: Preferences menu
-  > ```
+- Klikněte na tříbodové menu v pravo nahoře.
 
-- Click on Exit.
+![image](../images/DiaconnG8/DiaconnG8_09.jpg)
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_10.jpg
-  > :alt: Exit
-  > ```
+- Klikněte na Konec.
 
-### Method 2) If the first method doesn’t work, disconnect Bluetooth and then reconnect.
+![image](../images/DiaconnG8/DiaconnG8_10.jpg)
 
-- Press and hold the Bluetooth button at the top for about 3 seconds.
+### Metoda 2) Pokud první způsob nefunguje, odpojte a znovu připojte Bluetooth
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_11.jpg
-  > :alt: Bluetooth button
-  > ```
+- Stiskněte a podržte Bluetooth ikonu v hodní části po dobu 3 sekund.
 
-- Click on the Setting button on the paired Diaconn G8 Insulin pump.
+![image](../images/DiaconnG8/DiaconnG8_11.jpg)
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_12.jpg
-  > :alt: Settings button
-  > ```
+- Klikněte na tlačítko nastavení na spárované pumpě Diaconn G8.
 
-- Unpair.
+![image](../images/DiaconnG8/DiaconnG8_12.jpg)
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_13.jpg
-  > :alt: Unpair
-  > ```
+- Zruště spárování.
 
-- Repeat the Bluetooth pairing process for the pump (see above).
+![image](../images/DiaconnG8/DiaconnG8_13.jpg)
 
-## Further Information
+- Opakujte postup párování pumpy pomocí Bluetooth (viz. výše).
 
-### Diaconn G8 Insulin pump option setting
+## Další informace
 
-- Config manager > pump > Diaconn G8 > Settings
-- DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
+### Nastavení Inzulinové pumpy Diaconn G8
 
-![Diaconn G8 pump options](../images/DiaconnG8/DiaconnG8_14.jpg)
+- Konfigurace > pumpa > Diaconn G8 > Nastavení
+- DIACONN G8 nahoře > tříbodové menu vpravo nahoře > Diaconn G8
 
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an “Insulin Change” event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs.
-- If the **Log tube change** option is activated, the relevant details are automatically uploaded to the careportal when a “Tube Change” event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a “Battery Change” event occurs, and the PUMP BATTERY CHANGE button in the ACTION tab is deactivated. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
+![Možnosti pumpy Diaconn G8](../images/DiaconnG8/DiaconnG8_14.jpg)
 
-![Diaconn G8 actions menu](../images/DiaconnG8/DiaconnG8_15.jpg)
+- Pokud je aktivována volba **Zaznamenat výměnu zásobníku**, příslušné podrobnosti jsou automaticky nahrány na pečovatelský portál, když nastane událost "Výměna Inzulínu".
+- Pokud je aktivována volba **Zaznamenat výměnu kanyly**, příslušné podrobnosti jsou automaticky nahrány na pečovatelský portál, když nastane událost "Změna umístění".
+- Pokud je aktivována volba **Zaznamenat výměnu hadičky**, příslušné podrobnosti jsou automaticky nahrány na pečovatelský portál, když nastane událost "Výměna hadičky".
+- Pokud je aktivována volba **Zaznamenat výměnu baterie**, příslušné podrobnosti jsou automaticky nahrány na pečovatelský portál, když nastane událost "Výměna baterie", a tlačítko PŘÍSTROJ NA VÝMĚNU BATERIE v záložce AKCE se deaktivuje. (Poznámka: Před výměnou baterie zastavte veškeré probíhající injekční funkce.)
 
-### Extended Bolus function
+![Menu akcí Diakonn G8](../images/DiaconnG8/DiaconnG8_15.jpg)
 
-- If you use extended bolus it will disable closed loop.
-- See [this page](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+### Funkce prodlouženého bolusu
+
+- Pokud použijete prodloužený bolus, deaktivuje se uzavřená smyčka.
+- Na [této stránce](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) najdete podrobné informace, proč prodloužený bolus nefunguje v prostředí uzavřené smyčky.

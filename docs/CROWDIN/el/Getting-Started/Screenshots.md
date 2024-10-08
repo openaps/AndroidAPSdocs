@@ -200,7 +200,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 * **Ανοιχτή μπλε γραμμή**: μηδενικός προσωρινός ρυθμός (προβλεπόμενη γλυκόζη αίματος αν θα οριζόταν προσωρινός βασικός ρυθμός στο 0%)
    
-   Η γραμμή πρόβλεψης δείχνει πώς θα άλλαζε η πορεία της Ενεργής Ινσουλίνης αν η αντλία σταματούσε όλη την παροχή ινσουλίνης (0% προσωρινός βασικός ρυθμός).
+   Prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
    
    *Αυτή η γραμμή εμφανίζεται μόνο όταν χρησιμοποιείται ο αλγόριθμος [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb).*
 
@@ -495,7 +495,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 1. Check and remember actual COB and IOB on homescreen.
 2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry with the faulty carb amount.
+3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
 4. Make sure carbs are removed successfully by checking COB on homescreen again.
 5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
    

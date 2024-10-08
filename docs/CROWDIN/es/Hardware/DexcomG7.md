@@ -1,21 +1,20 @@
-# Dexcom G7
+# Dexcom G7 and ONE+
 
 
 ## Fundamental por adelantado
 
-En la primavera de 2022, Dexcom G7 recibió el certificado CE y se vendió a finales de octubre del mismo año.
-
-Cabe destacar que el sistema Dexcom G7, en comparación con Dexcom G6, no suaviza los valores, ni en la app, ni en el lector. Más detalles al respecto [aquí](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
+Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not smooth the values, neither in the app, nor in the reader. Más detalles al respecto [aquí](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app).
 
 ![G7 english](../images/6fe30b84-227a-4bae-a9a5-527cee341dbf.png)
 
-:::{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
-:class: warning **Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 values.  
-:::
+```{admonition} [Smoothing method](../Usage/Smoothing-Blood-Glucose-Data)
+:class: warning
+**Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
+```
 
 ## 1.  Aplicación Dexcom G7 parcheada (DiAKEM)
 
-**Note: AAPS 3.2.0.0 or higher is required!**
+**Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
 
 ### Instale una nueva aplicación parcheada de G7 e inicia el sensor.
 
@@ -38,7 +37,7 @@ For the configuration in AAPS
 
 - If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
 
-## 2. xDrip+ (direct connection to G7)
+## 2. xDrip+ (direct connection to G7 or ONE+)
 
 - Sigue las instrucciones aquí: [xDrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
 - Select  xDrip+ in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).

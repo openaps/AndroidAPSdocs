@@ -24,8 +24,9 @@ If you use an older version of AAPS (before 3.2), make sure to deactivate `Autom
 
 Tap `Extra Options`(8)
 
-:::{admonition} Safety warning :class: warning You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.  
-:::
+    {admonition} Safety warning
+    :class: warning
+    You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.
 
 Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill data` (11).
 
@@ -43,7 +44,7 @@ In order for the values to be identical in AAPS with respect to xDrip+, you shou
 
 Enable Compatible Broadcast (6).
 
-![xDrip+ Basic Settings 4](../images/xDrip_Basic4.png)
+![xDrip+ Základní nastavení 4](../images/xDrip_Basic4.png)
 
 If you have also activated `Accept treatments` in xDrip+ and `Enable broadcasts to xDrip+` in AAPS xDrip+ plugin, then xDrip+ will receive insulin, carbs and basal rate information from AAPS.
 
@@ -51,7 +52,7 @@ If you enable `Accept Calibrations`, xDrip+ will use the calibrations from AAPS.
 
 Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time AAPS sends a basal/profile change.
 
-![xDrip+ Basic Settings 5](../images/xDrip_Basic5.png)
+![xDrip+ Základní nastavení 5](../images/xDrip_Basic5.png)
 
 (xdrip-identify-receiver)=
 
@@ -86,11 +87,11 @@ Remember to disable Import Sounds to avoid xDrip+ making a ringtone every time A
 
 **Only rebatteried or modified Dexcom transmitters. [Preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html) do not work with standard transmitters and will stop the sensor completely: you need to [remove the transmitter](https://navid200.github.io/xDrip/docs/Remove-transmitter.html) to restart the sensor.**
 
-The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
+Automatické prodloužení senzorů Dexcom (`preemptivní restart`) není doporučeno, protože to může způsobit „skoky“ v hodnotách glykémie 9. den po restartu.
 
-![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
+![xDrip+ Skok po preemptivním restartu](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-To use it safely, there are a few points to be aware of:
+Abyste ho mohli používat bezpečně, je třeba vědět o několika skutečnostech:
 
 - Pokud používáte nativní data s kalibračním algoritmem aplikace xDrip+ nebo Spike, nejbezpečnější postup je zakázat preemptivní restartování senzoru.
 - Pokud musíte preemptivní restarty používat, pak se ujistěte, že senzor zavádíte v takovou denní dobu, kdy můžete sledovat změny a v případě potřeby provést kalibraci. 
@@ -98,13 +99,13 @@ To use it safely, there are a few points to be aware of:
 - Nastřelení senzoru G6 předem v kombinaci s tovární kalibrací pravděpodobně povede k odchylkám ve výsledcích měření. Jestliže nastřelujete senzor s předstihem, pak jej pravděpodobně v zájmu co nejlepších výsledků bude nutné zkalibrovat.
 - Jestliže nechcete sledovat změny, ke kterým může docházet, možná bude lepší přepnout na režim bez továrních kalibrací a používat systém jako G5.
 
-To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+Chcete-li se dozvědět další informace o podrobnostech a důvodech pro tato doporučení, přečtěte si [kompletní článek](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/), který sepsal Tim Street, na adrese [www.diabettech.com](https://www.diabettech.com).
 
 (xdrip-connect-g6-transmitter-for-the-first-time)=
 
 ### První připojení vysílače G6
 
-**For second and following transmitters see [Extend transmitter life](xdrip-extend-transmitter-life) below.**
+**Pro druhé a další spuštění vysílače viz [Prodloužení životnosti vysílače](xdrip-extend-transmitter-life) níže.**
 
 Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 
@@ -138,7 +139,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.ht
 
 ![xDrip+ System status](../images/xDrip_Dexcom_StopSensor.png)
 
-- Remove transmitter (and sensor if replacing sensor). To remove transmitter without removing sensor see [this](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), or this video <https://youtu.be/AAhBVsc6NZo>.
+- Vyjměte vysílač (a také senzor – pokud ho měníte). To remove transmitter without removing sensor see [this](https://navid200.github.io/xDrip/docs/Remove-transmitter.html), or this video <https://youtu.be/AAhBVsc6NZo>.
 - Uložte starý vysílač dostatečně daleko, aby se předešlo jeho opětovnému připojení. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% sure no one is turning the microwave on.
 - Follow [these instructions](https://navid200.github.io/xDrip/docs/Starting-G6.html).
 - Před prvním načtením dat do xDrip+ nezapínejte originální Dexcom přijímač (pokud ho používáte).
@@ -194,7 +195,7 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 
 - Leave all other options disabled unless you know why you want to enable them.
     
-    ![xDrip+ Libre Bluetooth Settings 3](../images/xDrip_Libre_BTSettings3.png)
+    ![xDrip+ Libre nastavení bluetooth 3](../images/xDrip_Libre_BTSettings3.png)
 
 ### Úroveň baterie čtečky Libre
 
@@ -223,8 +224,9 @@ Follow [these instructions](https://navid200.github.io/xDrip/docs/Dexcom/SensorF
 
 - Start the sensor in xDrip+.
     
-    :::{admonition} Safety warning :class: warning Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.  
-    :::
+        {admonition} Safety warning
+        :class: warning
+        Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.
     
     → Hamburger Menu (1) → Start sensor (2) → Start sensor (3) → Set the exact time you started it with the reader or the vendor app. If you didn't start it today, answer "Not Today" (4).
 

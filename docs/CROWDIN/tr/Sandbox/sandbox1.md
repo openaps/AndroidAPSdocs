@@ -1,16 +1,16 @@
 # sprint testi için dahili sanal alan dosyası 1
 
-:::{admonition} bunu tercüme etmeye gerek yok
-:class: note
+```{admonition} no need to translate this
+:class: Not
 
 Bunu tercüme etmenize gerek yok.
-:::
+```
 
-:::{danger}
+```{danger}
 Here is danger on the road.
-:::
+```
 
-Test
+Test for Setup
 
 "The number 43 is, in The Hitchhiker's Guide to the Galaxy by Douglas Adams, the "Answer to the Ultimate Question of Life, the Universe, and Everything," calculated by an enormous supercomputer named Deep Thought over a period of 7.5 million years." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
 
@@ -26,7 +26,7 @@ Buradan doğrudan bu dosyadaki ikinci etikete atlayabilirsiniz - ["Atla"](sandbo
 
 Ayrıca ilk etikete de atlayabilirsiniz - ["Atla"](sandbox1-this-is-a-test).
 
-Buradan ikinci sanal alan dosyasına atlayabilirsiniz - ["Atla"](./sandbox2.md).
+Here you can jump to the second sandbox file - ["Jump"](./MoveTest/sandbox2.md).
 
 Buradan doğrudan sandbox2.md dosyasındaki ilk etikete atlayabilirsiniz - ["Atla"](sandbox2-this-is-a-test).
 

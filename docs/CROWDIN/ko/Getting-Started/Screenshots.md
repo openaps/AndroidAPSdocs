@@ -200,7 +200,7 @@ You need to find out why you get duplicate BGs:
 
 * **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
    
-   Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+   Prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
    
    *This line appears only when the [SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
@@ -495,7 +495,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 1. 홈 화면에서 실제 COB와 IOB를 확인하고 기억하십시오.
 2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry with the faulty carb amount.
+3. Remove the entry with the faulty carb amount. (Latest versions have trashcan icon in treatments screen. Press the trashcan icon, select the lines to remove, and then press the trashcan icon again to finalize.)
 4. 홈 화면에서 COB를 확인하여 탄수화물이 제대로 삭제되었는지 확인하십시오.
 5. 관리 탭에 탄수화물과 인슐린이 하나의 항목으로 표시될 경우 IOB에 대해서도 똑같이 진행하십시오.
    

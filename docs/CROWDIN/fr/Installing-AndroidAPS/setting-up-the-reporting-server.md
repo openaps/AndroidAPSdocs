@@ -33,19 +33,19 @@ Certains des fournisseurs qui hébergent Nightscout pour vous sont répertoriés
 
 Tidepool n'est disponible dans **AAPS** que depuis la version 3.2, publiée fin 2023.
 
-:::{admonition} Tidepool avec **AAPS** sert uniquement au reporting
-:class: danger\
-Comme il y a un délai de trois heures entre la réception des données et leur apparition dans les rapports lorsque vous utilisez **AAPS**, Tidepool n'est pas adapté pour partager des informations en temps réel avec les aidants.\
-Cependant, Tidepool peut être une excellente solution pour partager des rapports avec l'endocrinologue d'un patient s'il refuse d'utiliser Nightscout.\
-:::
+```{admonition} Tidepool with **AAPS** is only for reporting
+:class: danger  
+As there is a delay of three hours between data income and data reporting when using **AAPS**, Tidepool it is not suitable for sharing real-time information with caregivers.  
+On the other hand, Tidepool can be a great solution for sharing reports with a patient's endocrinologist if Nightscout is not an accepted solution.  
+```
 
 Tidepool est un projet [open source](https://github.com/tidepool-org). Vous pouvez ouvrir un compte gratuitement sur les serveurs Tidepool.
 
 Vous pouvez créer un compte Tidepool [ici](https://app.tidepool.org/signup).
 
-:::{admonition} **AAPS** intègre la mise à jour des données dans Tidepool
+```{admonition} **AAPS** has a the uploader for Tidepool integrated
 :class: note
-Vous n'avez pas besoin d'utiliser l'application de chargement des données pour Tidepool: **AAPS** téléchargera pour vous la glycémie, les traitements et les débits de base. Vous avez seulement besoin d'un compte personnel Tidepool. Ne téléchargez pas vos données en parallèle avec l'outil de téléchargement Tidepool car cela entraînerait des doublons dans les données.\
-:::
+You do **not** need to use the uploader app to Tidepool: **AAPS** will upload blood glucose, treatments and basal for you. You only need a personal account with Tidepool. Do not upload your data with the separate Tidepool uploader tool as it will lead to duplicate values.  
+```
 
 Une fois que vous avez configuré votre serveur de reporting, vous pouvez maintenant soit configurer un [compte Google dédié à l'utilisation de AAPS](Dedicated-Google-account-for-AAPS.md), soit passer directement à [la compilation de l'application AAPS](building-AAPS.md).

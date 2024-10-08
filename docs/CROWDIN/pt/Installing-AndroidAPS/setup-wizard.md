@@ -6,18 +6,20 @@ However, it's not mandatory to get everything completely configured in the first
 
 During, and directly after using the **Setup Wizard** you may not notice any significant observable changes in **AAPS**. To enable your **AAPS** loop, you have to follow the **Objectives** to enable feature after feature. You will start **Objective 1** at the end of the Setup Wizard. You are the master of **AAPS**, not the other way around.
 
-:::{admonition} Preview Objectives
+```{admonition} Preview Objectives
+:class: note
+If you are keen to know the structure of the objectives, please read [Completing the objectives](../Usage/completing-the-objectives.md) but then come back here to run the Setup Wizard first.
 
-:::
+```
 
 From previous experience, we are aware that new starters often put themselves under pressure to setup **AAPS** as fast as possible, which can lead to frustration as it is a big learning curve.
 
 So, please take your time in configuring your loop, the benefits of a well-running **AAPS** loop are huge.
 
-:::{admonition} Ask for Help
+```{admonition} Ask for Help
 :class: note
 If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../Where-To-Go-For-Help/Connect-with-other-users.md).
-:::
+```
 
 ## Step-wise guide to the AAPS Setup Wizard
 
@@ -160,7 +162,7 @@ Click the "NEXT" button:
 
 ![image](../images/setup-wizard/Screenshot_20231202_135807.png)
 
-### Units (mg/dl <-> mmol/dL)
+### Units (mg/dL <-> mmol/L)
 
 Please select if your glucose values are in mg/dl or mmol/L and then please click the "NEXT" button:
 
@@ -192,14 +194,16 @@ If you select an item here on the left tick box, on the right you can then ticki
 
 In this example we select Nightscout as reporting server, and will configure it.
 
-:::{admonition}  Make sure to choose the correct **NSClient** version for your needs!
+```{admonition} Make sure to choose the correct **NSClient** version for your needs! 
+:class: Note
+Click [here](./Releasenotes.md) for the release notes of **AAPS** 3.2.0.0 which explain the differences between the top option **NSClient** (this is "v1", although it is not explicitly labelled) and the second option, **NSClient v3**. 
 
-Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout, in which case, choose the first option "**NSClient**" until further notice.
-:::
+Nightscout users should choose **NSClient v3**, unless you want to monitor or send remote treatments (_e.g._ as a parent or caregiver using **AAPS** for a child) through Nightscout, in which case, choose the first option "**NSClient**" until further notice. 
+```
 
 For Tidepool it is even simpler, as you only need your personal login information.
 
-After making your selection, please press the "NEXT" button:
+After making your selection, please press the cogwheel button next to the item you selected :
 
 ![image](../images/setup-wizard/Screenshot_20231202_140916.png)
 
@@ -257,7 +261,7 @@ Enable "Create announcements from errors" and "Create announcements from carbs r
 
 Leave "Slow down uploads" disabled. You would only use it in unusual circumstances if for example a lot of information is to be transfered to the Nightscout server, and the Nightscout server is being slow in processing this data.
 
-Go back to the screen before and select "NEXT" to go to the next screen:
+Go back twice, to the list of plugins and select "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141351.png)
 
@@ -291,10 +295,10 @@ Select the type of insulin being used in the pump.
 
 The insulin names should be self-explanatory.
 
-:::{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
+```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
 :class: danger
 For advanced users or medical studies there is the possibility to define with "Free-Peak Oref" a customised profile of how insulin acts. Please don't use it unless you are an expert, usually the pre-defined values work well for each branded insulin.
-:::
+```
 
 Press "NEXT" to go to the next screen:
 
@@ -314,11 +318,11 @@ After making your selection, press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141925.png)
 
-If you are using Dexcom G6 with BYODA, click on the "cog/gearwheel" to access the settings for BYODA.
+If you are using Dexcom G6 with BYODA, click on the cogwheel button to access the settings for BYODA.
 
 Enable the "Upload BG data to NS" and "Log sensor change to NS".
 
-Press "NEXT" to go to the next screen:
+Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
@@ -328,12 +332,14 @@ Now we are entering a very important part of the Setup Wizard.
 
 Please read the documentation about profiles before you try to enter your profile details on the following screen.
 
-:::{admonition} Working profile required - no exceptions here !
+```{admonition} Working profile required - no exceptions here !
+:class: danger
+An accurate profile is necessary to control the safe action of **AAPS**
 
 It's required that you have determined and discussed your profile with your doctor, and that it has been proven to work by successful basal rate, ISF and IC testing!
 
-If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia.
-:::
+If a robot has an incorrect input it will fail - consistently. **AAPS** can only work with the information it is given. If your profile is too strong, you risk hypoglycemia, and if it is too weak, you risk hyperglycemia. 
+```
 
 Press "NEXT" to go to the next screen. Enter a "profile name":
 
@@ -341,12 +347,14 @@ Press "NEXT" to go to the next screen. Enter a "profile name":
 
 You can have several profiles in the long-term if needed. We only create one here.
 
-:::{admonition} Profile only for tutorial - not for your usage
+```{admonition} Profile only for tutorial - not for your usage
+:class: information
+The example profile here is only to show you how to enter data.
 
 It is not intended to be an accurate profile or something very well optimised, because each person's needs are so different.
 
 Don't use it for actually looping!
-:::
+```
 
 Enter your Duration of insulin Action (DIA) in hours. Then press "IC":
 
@@ -380,10 +388,10 @@ Save the profile by clicking on "SAVE":
 
 After saving a new buttom "Activate Profile" occurs.
 
-:::{admonition} Several defined but only one active profile
+```{admonition} Several defined but only one active profile
 :class: information
 You can have several profiles defined, but only one activated profile running at any given time.
-:::
+```
 
 Press "Activate Profile":
 
@@ -391,10 +399,10 @@ Press "Activate Profile":
 
 The profile switch dialogue appears. In this case let it stay as preset.
 
-:::{admonition} Several defined but only one active profile
+```{admonition} Several defined but only one active profile
 :class: information
 You will learn later how to use this general dialog to handle situations like illness or sport, where you need to change your profile suitable for the circumstances.
-:::
+```
 
 Press "OK":
 
@@ -438,12 +446,12 @@ Use the OpenAPS SMB algorithm as your APS algorithm. Despite the name the SMB fe
 
 The reason SMB is disabled in the beginning is because the SMB feature enables faster reaction on blood sugar increase through the Super Micro Bolus instead of increasing the basal rate percentage. As in the begining your profile is in general not as good as after some time of experience the feature is disabled in the begining.
 
-:::{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
+```{admonition} Only use the older algorithm **OpenAPS AMA** if you know what you are doing
 :class: information
 OpenAPS AMA is the most basic algorithm which does not support micro boluses to correct high values. There might be circumstances where it is better to use this algorithm but it is not the recommendation.
-:::
+```
 
-Press "NEXT" to go to the next screen:
+Press the cogwheel to see the details:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144014.png)
 
@@ -451,7 +459,7 @@ Only read the text and change nothing here.
 
 Due to the limitations which are imposed by the **Objectives** you can't use either "closed loop" or "SMB features" at the moment anyway.
 
-Press "NEXT" to go to the next screen:
+Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_144025.png)
 

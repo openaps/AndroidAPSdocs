@@ -2,57 +2,42 @@
 
 ## Bluetooth-Pairing
 
-- Klicke auf das Hamburger Menü in der oberen linken Ecke.
+- Click on the hamburger menu in the top left corner.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_01.jpg
-  > :alt: Hamburger Menü
-  > ```
+![grafik](../images/DiaconnG8/DiaconnG8_01.jpg)
 
 - Klicke auf Konfiguration.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_02.jpg
-  > :alt: Konfiguration
-  > ```
+![grafik](../images/DiaconnG8/DiaconnG8_02.jpg)
 
 - Nachdem Auswahl der Diaconn G8 Pumpe auf das Einstellungssymbol (Zahnrad) klicken.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_03.jpg
-  > :alt: Einstellungen
-  > ```
+![grafik](../images/DiaconnG8/DiaconnG8_03.jpg)
 
 - Wähle 'ausgewählte Pumpe'.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_04.jpg
-  > :alt: Pumpe auswählen
-  > ```
+![grafik](../images/DiaconnG8/DiaconnG8_04.jpg)
 
 - Wähle die Modellnummer Deiner Insulinpumpe aus, sobald sie in der Liste erscheint.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_05.jpg
-  > :alt: Pump pairing
-  > ```
+![grafik](../images/DiaconnG8/DiaconnG8_05.jpg)
 
 - Es gibt zwei Möglichkeiten, um Deine Modellnummer zu überprüfen:
 
-  > 1. Die letzten 5 Ziffern der Seriennummer auf der Rückseite der Pumpe.
-  > 2. Drücke den = Button > Information > BLE > letzte 5 Ziffern.
-  > 
-  > > `{image} ../images/DiaconnG8/DiaconnG8_06.jpg
-    :alt: "Modellnr.`
+1. Die letzten 5 Ziffern der Seriennummer auf der Rückseite der Pumpe.
+2. Drücke den = Button > Information > BLE > letzte 5 Ziffern.
+
+![grafik](../images/DiaconnG8/DiaconnG8_06.jpg)
 
 - Nach Auswahl der Pumpe erscheint ein Fenster, in dem der PIN Code abgefragt wird. Gib die PIN-Nummer ein, die auf Deiner Pumpe angezeigt wird, um die Verbindung abzuschließen.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_07.jpg
-  > :alt: PIN-Code
-  > ```
+ ![grafik](../images/DiaconnG8/DiaconnG8_07.jpg)
 
 ## Überprüfung des Pumpenstatus und Synchronisierung der Protokolle
 
 - Sobald Ihre Pumpe verbunden ist, klicke auf das Bluetooth-Symbol, um den Status zu überprüfen und die Protokolle zu synchronisieren.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_08.jpg
-  > :alt: Bluetooth-Status
-  > ```
+![grafik](../images/DiaconnG8/DiaconnG8_08.jpg)
 
 ## Bluetooth-Fehlerbehebung
 
@@ -62,35 +47,25 @@
 
 - Klicke auf die Schaltfläche mit den 3 Punkten oben rechts.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_09.jpg
-  > :alt: Menü Einstellungen
-  > ```
+![grafik](../images/DiaconnG8/DiaconnG8_09.jpg)
 
 - Klicke auf "Beenden".
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_10.jpg
-  > :alt: Beenden
-  > ```
+![grafik](../images/DiaconnG8/DiaconnG8_10.jpg)
 
 ### Methode 2) Wenn die erste Methode nicht funktioniert, trenne die Bluetooth-Verbindung und stelle sie dann wieder her.
 
 - Halte die Bluetooth-Taste an der Oberseite etwa 3 Sekunden lang gedrückt.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_11.jpg
-  > :alt: Bluetooth-Button
-  > ```
+![grafik](../images/DiaconnG8/DiaconnG8_11.jpg)
 
 - Klicke auf den Button 'Einstellungen' auf der gekoppelten Diaconn G8 Insulinpumpe.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_12.jpg
-  > :alt: Button Einstellung
-  > ```
+![grafik](../images/DiaconnG8/DiaconnG8_12.jpg)
 
 - Entkoppeln.
 
-  > ```{image} ../images/DiaconnG8/DiaconnG8_13.jpg
-  > :alt: Entkoppeln
-  > ```
+![grafik](../images/DiaconnG8/DiaconnG8_13.jpg)
 
 - Wiederhole den Bluetooth-Pairing-Prozess für die Pumpe (siehe oben).
 

@@ -4,15 +4,16 @@ Einige **AAPS**-Nutzende verwenden ihr Haupt-E-Mail-Konto [Standard-E-Mail-Konto
 
 Wenn Du kein dediziertes Gmail-Konto für **AAPS** einrichten möchtest, kannst Du direkt zum nächsten Abschnitt [AAPS erstellen](building-AAPS.md) gehen.
 
-:::{admonition} Vorteile eines dedizierten AAPS Google-Kontos
+```{admonition} Advantages of a dedicated Google account for AAPS
+:class: dropdown
 
-- Mit einem dedizierten Google Drive-Speicherplatz riskierst Du nicht Dein persönliches Google Drive-Limit mit dem **Export der Einstellungen** zu überschreiten.
-- Jede **AAPS**-Version (und die Hilfs-Apps wie xdDip+, BYODA, usw.) wird an einem, von Deiner Computer-Hardware unabhängigen, gemeinsamen Ort gespeichert. Wenn Dein Smartphone oder PC defekt ist, gestohlen wird oder verloren geht, hast Du weiterhin Zugriff.
-- Durch die Vereinheitlichung des Setups wird die Online-Unterstützung für Nutzende, die eine Verzeichnisstruktur verwenden, vereinfacht.
-- Je nach Setup (siehe unten) hast Du einen Alias für die Kommunikation innerhalb der Community und kannst damit Deine Privatsphäre schützen.
-- Kinder mit Diabetes Typ 1 können ihr eigenes "Alltags"-E-Mail-Konto [Standard-E-Mail-Konto] als Jugendliche behalten, während sie **AAPS** und die damit verbundene Funktionen, die ein Erwachsenenkonto erfordern, nutzen.
-- Gmail ermöglicht es bis zu 4 Konten unter derselben Telefonnummer zu registrieren.
-  :::
+- Dedicated Google drive space means you will not risk filling up your personal Google drive limit with **Export Preferences**.
+- Each version of **AAPS** (and supporting apps like xdrip+, BYODA, etc) will be stored in one single place which is independent of your computer hardware. If your PC or phone is stolen/lost/broken you will still have access.
+- By harmonizing the setup, it will make online support simpler across users with similar folder structure.
+- Depending on the setup (see below), you will have a separate identity as an alias to communicate within the community which can protect your privacy. 
+- Children with T1D can preserve their own “everyday” email account as minors while using **AAPS** and associated features which require an adult account.
+- Gmail allows you to register up to 4 accounts under the same phone number.
+```
 
 ## Wie Du ein dediziertes Google-Konto für AAPS einrichtest
 
@@ -25,30 +26,31 @@ Voraussetzungen:
 - Du hast einen Windows-PC (Windows 10 oder neuer) und ein Android-Smartphone (Android 9 oder neuer), auf dem die **AAPS**-App installiert wird. Beide Geräte haben die neuesten Sicherheitsupdates, Internetzugang und Administrator-Rechte, da einige Schritte das Herunterladen und die Installation von Programmen erfordern.
 - Das Android-Smartphone ist bereits mit Deiner persönlichen „Alltags“-E-Mail-Adresse [Standard-E-Mail-Adresse], wie z. B. einem Gmail-Konto, eingerichtet.
 
-:::{admonition} Dinge auf die Du beim Einrichten Deines neuen Kontos achten solltest
+```{admonition} Things to consider when setting up your new account
 :class: dropdown
+- You could use a name different to your own, which has relevance to the account (like t1dsuperstar) for privacy reasons. You can then use it in **AAPS** public forums while keeping your own identity private. Since Google requires a recovery email and phone number, it is still traceable.
+- The new **AAPS** account will use the same phone number for verification as your “_everyday_” one. It will use the “everyday” email address for verification;
+- We will setup email forwarding such that any email sent to the new dedicated AAPS account will be forwarded to the primary one (so there is no need to check two different mailboxes);
+- Use separate passwords for your _everyday_ Gmail account and the AAPS-dedicated Gmail account
+- If you use google “2-step verification” (aka multifactor) authentication for one Gmail account, you might as well do it for both Gmail accounts.
+- If you plan to use Google “Passkeys”, make sure you register multiple devices. This is so you don’t lock yourself out. Only do it on devices that nobody else can access (_i.e._ not on a PC with a shared account that other people can unlock).
+```
 
-- Aus Datenschutzgründen kannst Du einen anderen als den eigenen Namen verwenden, der aber dennoch einen Bezug (wie z.B. t1dsuperstar) herstellt. Damit kannst Du dann dieses Konto in den öffentlichen **AAPS**-Foren verwenden und gleichzeitig Deine Privatsphäre bewahren. Da Google eine Wiederherstellungs-E-Mail und Telefonnummer benötigt, ist es immer noch nachverfolgbar.
-- Das neue **AAPS**-Konto wird dieselbe Telefonnummer zur Verifizierung verwenden wie Dein „_Standard_“-Konto. Es wird die "Alltags"-E-Mail-Adresse [Standard-E-Mail-Adresse] zur Verifizierung verwenden;
-- Wir werden die E-Mail-Weiterleitung so einrichten, dass jede E-Mail, die an das neue dedizierte AAPS-Konto gesendet wird, an das primäre Konto weitergeleitet wird (es ist also nicht erforderlich, zwei verschiedene Postfächer zu prüfen);
-- Verwende für Dein _Standard_-Gmail-Konto und für das dedizierte AAPS Gmail-Konto unterschiedliche Passwörter
-- Wenn Du die Google "2-Schritt-Verifizierung" (sog. Zwei-Faktor-Authentifizierung) für ein Gmail-Konto verwendest, solltest Du dies für beide Gmail-Konten einrichten.
-- Wenn Du planst Google „Passkeys“ zu nutzen, stelle sicher, dass Du mehrere Geräte registrierst. Das verhindert, dass Du Dich selbst aussperrst. Nutze es nur auf Geräten, die Du alleine nutzt (_z. B. nicht auf einem PC mit einem gemeinsam genutzten Konto, das auch andere Personen entsperren können).
-  :::
 
-:::{admonition}  Video Walkthrough!
+
+```{admonition} Video Walkthrough! 
 :class: Note
-Klicke [hier](https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link), um einen Video Walkthrough zum Setup eines dedizierten Google-Kontos zu starten.
-:::
+Klicke [hier](<https://drive.google.com/file/d/1dMZTIolO-kd2eB0soP7boEVtHeCDEQBF/view?usp=drive_link>), um einen Video Walkthrough zum Setup eines dedizierten Google-Kontos zu starten.
+```
 
 Im Video werden drei Schritte beschrieben:
 
 In diesem Beispiel: 
 
-- Dein bestehendes „_Standard_“-Google-Konto ist donald.muck42@gmail.com ; ![](../images/Building-the-App/building_0002.png)
-- Dein neues “_AAPS_”-Gmail-Konto wird donald.muck42.aaps@gmail.com; ![](../images/Building-the-App/building_0003.png) sein
+- Dein bestehendes „_Standard_“-Google-Konto ist <donald.muck42@gmail.com> ; ![](../images/Building-the-App/building_0002.png)
+- Dein neues “_AAPS_”-Gmail-Konto wird <donald.muck42.aaps@gmail.com>; ![](../images/Building-the-App/building_0003.png) sein
 
-#### Gehe zu https://account.google.com 
+#### Gehe zu <https://account.google.com> 
 
 Wenn Du bereits bei Google angemeldet bist, wirst Du direkt auf Deine „Standard“-**Mein Konto**-Seite weitergeleitet.
 (1) Klicke oben rechts auf der Seite auf Dein Profilbild (in diesem Fall ein simples ![](../images/Building-the-App/building_0002.png)
@@ -101,7 +103,7 @@ Dieser Teil kann etwas verwirrend sein, da Du hier zwischen den beiden Konten hi
 2. Klicke mit der rechten Maustaste auf das Browser-Logo in Deiner Taskleiste 
 3. Wähle aus dem Menü “Neues Fenster” aus... und passe es so an, dass es nur die untere Hälfte des Bildschirms einnimmt.
 
-Öffne in beiden Browserfenstern https://gmail.com . Stelle sicher, dass Dein persönliches Konto oben und das neue spezielle **AAPS**-Konto unten ist und durch das Profilbild in der rechten oberen Ecke leicht identifiziert werden kann. (falls erforderlich, kannst Du durch das Klicken auf das Profilbild und die Auswahl des richtigen Kontos zwischen Konten wechseln).
+Öffne in beiden Browserfenstern <https://gmail.com> . Stelle sicher, dass Dein persönliches Konto oben und das neue spezielle **AAPS**-Konto unten ist und durch das Profilbild in der rechten oberen Ecke leicht identifiziert werden kann. (falls erforderlich, kannst Du durch das Klicken auf das Profilbild und die Auswahl des richtigen Kontos zwischen Konten wechseln).
 
 ![](../images/Building-the-App/building_0009.png)
 

@@ -21,42 +21,44 @@ An **index** and explanation of the documentation structure can be found [here](
 [Цели](Usage/Objectives.md) были разработаны для максимально полного знакомства с системой **AAPS**, с учетом типичных ошибок и общих тенденций, которые разработчики **AAPS** наблюдали у новых пользователей. Ошибки возникают из-за неопытности новичков и их желания начать работу с **AAPS** как можно быстрее, без изучения необходимых материалов. [Цели](Usage/Objectives.md) должны минимизировать эти ошибки.
 
 ### Медицинская безопасность
-:::{admonition}{предостережение} Избегайте необратимого нарушения зрительной и неврологической функции
-:class::класс: опасность Рекомендуется соблюдать осторожность при быстром улучшения контроля глюкозы в крови и снижения уровня HbA1c
-:::
+```{admonition} Avoid permanent and painful damage to your eyes and nerves
+:class: danger
+Caution is advised concerning rapid improvements in blood glucose control and lowering of HbA1c 
+```
 
-Важным фактором безопасности является то, что **быстрое снижение уровня HbA1c и улучшение контроля глюкозы у людей с привычным повышением ГК, могут привести к необратимым нарушениям**. Многие люди с диабетом не знают об этом, и не все медработники информируют своих пациентов об этой проблеме.
+An important safety consideration is that a **rapid reduction in HbA1c and improved blood glucose control in those who have had elevated glucose levels for some time can cause permanent damage**. Many people with diabetes are unaware of this, and not all clinicans make their patients aware of this issue.
 
-Нарушения могут включать **потерю зрения и необратимую нейропатию**. Этого можно избежать, снижая средний уровень глюкозы постепенно. Если в настоящее время у вас повышенный уровень HbA1c и вы переходите на **AAPS** (или любую другую замкнутую систему), _обсудите_ потенциальные риски с эндокринологом и согласуйте с ним график безопасного снижения целевых показателей гликемии. Вы можете изначально задать более высокие цели в **AAPS** (в настоящее время наиболее высокая цель 10 ммоль/л.) но можно также применять более слабый профиль, а затем постепенно, в течение месяцев, понижать цель.
+This damage can include **sight loss, and permanent neuropathy (pain)**. It is possible to avoid this damage occuring, by reducing average glucose levels more slowly. If you currently have an elevated HbA1c and are moving to **AAPS** (or any other closed loop system), _please_ discuss this potential risk with your clinical team before starting, and agree a timescale with gradually decreasing safe glucose targets with them. You can easily set higher glucose targets in **AAPS** initially (currently, the highest target you can select is 10.6 mmol/L but you can also maintain a purposefully weak profile if needed), and then reduce the target as the months pass.
 
 #### Как быстро можно понижать HbA1c без риска необратимых последствий?
 
-В одном ретроспективном [исследовании](https://pubmed.ncbi.nlm.nih.gov/1464975/) с участием 76 пациентов сообщалось, что риск прогрессирования ретинопатии увеличивался в 1,6 раза, 2,4 раза и 3,8 раза, если уровень Hba1C снижался на 1%, 2% или 3% соответственно в течение 6 месяцев. Было высказано предположение, что **" чтобы предотвратить развитие ретинопатии, снижение HbA1c в течение любого 6-месячного периода не должно превышать 2%,... Слишком быстрое снижение может вызвать тяжелое или преходящее ухудшение ретинопатии."**
+One retrospective [study](https://pubmed.ncbi.nlm.nih.gov/1464975/) of 76 patients reported that the risk of progression of retinopathy increased by 1.6 times, 2.4 times and 3.8 times if the Hba1C dropped 1%, 2% or 3% respectively over a 6 month period. They suggested that the **"decrease in HbA1c value during any 6-month period should be limited to less than 2% in order to prevent the progression of retinopathy....Too rapid a decrease at the initiation of glycemic control could cause severe or transient exacerbation of the progression of retinopathy."**
 
-Обратите внимание. Если вы привыкли к другим единицам HbA1c (ммоль/л вместо %), нажмите [здесь](https://www.diabetes.co.uk/hba1c-units-converter.html) для вызова калькулятора HbA1c.
+N.B. If you use different HbA1c units (mmol/mol rather than %), click [here](https://www.diabetes.co.uk/hba1c-units-converter.html) for a HbA1c calculator tool.
 
-В другом ретроспективном [обследовании](https://academic.oup.com/brain/article/138/1/43/337923) 954 пациентов исследователи отмечали:
+In another retrospective [evaluation](https://academic.oup.com/brain/article/138/1/43/337923) of 954 patients, researchers noted that:
 
-**При снижении HbA1c на 2–3% в течение 3 мес существовал 20% риск развития нейропатии, при снижении HbA1c на > 4% в течение 3 мес риск развития диабетической нейропатии превысил 80%»**
+**"With a decrease in HbA1c of 2–3% points over 3 months there was a 20% absolute risk of developing treatment-induced neuropathy in diabetes, with a decrease in HbA1c of >4% points over 3 months the absolute risk of developing treatment-induced neuropathy in diabetes exceeded 80%."**
 
-В [комментарии](https://academic.oup.com/brain/article/138/1/2/340563) к этой работе говорилось, что во избежание осложнений **целью должно стать снижения гликированного гемоглобина на <2% за 3 месяца**. Другие обзоры на эту тему можно найти [здесь](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) и [здесь](https://www.mdpi.com/1999-4923/15/7/1791).
+A [commentary](https://academic.oup.com/brain/article/138/1/2/340563) on this work agreed that to avoid complications **the goal should be to reduce A1c by <2% over 3 months.** You can read other reviews on the topic [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6587545/pdf/DOM-21-454.pdf) and [here](https://www.mdpi.com/1999-4923/15/7/1791).
 
-Общепризнанно, что _недавно_ диагностированные больные диабетом 1 типа (у которых очень часто высокий HbA1c при диагнозе, до начала инсулиновой терапии), как представляется, могут быстро снизить свой HbA1c сразу же после диагностики, не столкнувшись с рисками, потому что у них не было длительного превышения нормы гликемии. Тем не менее, этот вопрос следует обсудить с врачом.
+It is generally recognised that _newly_ diagnosed type 1 diabetics (who often have very high HbA1c at diagnosis, before starting insulin therapy) appear to be able to rapidly reduce their HbA1c immediately after diagnosis without encountering these risks to the same extent, because they have not had elevated blood glucose levels for such a sustained period. However, it is still a consideration which you should discuss with your clinician.
 
 ### Не использовать SGLT-2 ингибиторы
 
-{admonition}(предостережение) НЕ ПОЛЬЗУЙТЕСЬ ингибиторами SGLT-2  
-:class:опасность ингибиторы SGLT-2, также называемые глифлозинами, подавляют реабсорбцию глюкозы в почке. Глифлозины непредсказуемо снижают уровень сахара в крови, поэтому их НЕЛЬЗЯ принимать на фоне работы систем замкнутого цикла, таких как AAPS! Существует существенный риск возникновения кетоацидоза и/или гипогликемии! Сочетание этого препарата с системой, которая снижает скорость базала для увеличения ГК является особенно опасным.
+```{admonition} NO SGLT-2 inhibitors
+:class: danger
+SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. Gliflozins incalculably lower blood sugar levels, and so you MUST NOT take them while using a closed loop system like AAPS! There would be a significant risk of ketoacidosis and/or hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous. 
 
-В общем виде:
-- **Пример 1: риск Гипо**
-> Во время обеда применяется **AAPS** для болюса на основе 45г (в оригинале "глюкозы", наверное, имелись в виду углеводы - прим. перев.). Проблема заключается в том, что AAPS не оповещен о работе ингибиторов, которые поглощают некоторое количество углеводов, что в свою очередь приводит к повышенному уровню инсулина в организме по сравнению с потребностью, в результате вызывая гипогликемию.
+In a nutshell:
+- **Example 1: risk of Hypo**
+>During lunch, you use **AAPS** to bolus based on consuming 45g of glucose. Проблема заключается в том, что AAPS не оповещен о работе ингибиторов, которые поглощают некоторое количество углеводов, что в свою очередь приводит к повышенному уровню инсулина в организме по сравнению с потребностью, в результате вызывая гипогликемию.
 
-- **Пример 2: риск Кетоацидоза**
-> Ингибиторы поглощают часть углеводов в фоновом режиме, приводя к понижению уровня ГК. **AAPS** автоматически инструктирует помпу понизить подачу инсулина, включая базальный. Со временем это может привести к тому, что ГК будет оставаться ниже целевого значения до того момента, когда в организме не окажется  достаточно фонового инсулина, чтобы поглощать  углеводы, что, в свою очередь, приведет к Кетоацидозу. Обычно, Кетоацидоз может возникнуть у пациентов с диабетом 1 типа из-за поломки помпы, которая могла бы вызвать звуковое оповещение на телефоне из-за высокой ГК. Однако, при приеме глифлозинов опасность заключается в том, что не будет никаких оповещений ААПС, поскольку помпа продолжает работать и ГК потенциально остается в целевом диапазоне.
+- **Example 2: risk of Ketoacidosis**
+>The inhibitors eliminate some of the carbs in the background causing a reduction in your BG. **AAPS** will automatically instruct the pump to decrease insulin intake  including basal. Со временем это может привести к тому, что ГК будет оставаться ниже целевого значения до того момента, когда в организме не окажется  достаточно фонового инсулина, чтобы поглощать  углеводы, что, в свою очередь, приведет к Кетоацидозу. Обычно, Кетоацидоз может возникнуть у пациентов с диабетом 1 типа из-за поломки помпы, которая могла бы вызвать звуковое оповещение на телефоне из-за высокой ГК. Однако, при приеме глифлозинов опасность заключается в том, что не будет никаких оповещений ААПС, поскольку помпа продолжает работать и ГК потенциально остается в целевом диапазоне.  
 
 Распространенные названия ингибиторов SGLT-2 включают: Invokana, Farxiga, Jardiance, Glyxambi, Synjardy, Steglatro, и Xigduo XR и др.
-:::
+```
 
 
 ### Главные принципы работы системы ИПЖ на базе AAPS
@@ -85,7 +87,7 @@ An **index** and explanation of the documentation structure can be found [here](
 
 - [Как установить AAPS](Installing-AndroidAPS/Building-APK.md)? (Раздел D) который включает секцию [Устранение неполадок](Usage/troubleshooting.md).
 
-Время, потраченное на переход к работе в замкнутом цикле, зависит от индивидуальности, но примерную разбивку по времени перехода на AAPS можно найти ([здесь](how-long-will-it-take))
+How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#how-long-will-it-take-to-set-everything-up))
 
 
 #### Хранилище ключей &  файл экспорта настроек конфигурации
@@ -95,6 +97,7 @@ An **index** and explanation of the documentation structure can be found [here](
 1.  Сохранить файл хранилища ключей (файл с расширением .jks, используемый для подписания приложения) в надежном месте;
 
 2.  Запишите пароль для файла хранилища ключей.
+
 
 Это гарантирует, что каждый раз при создании новой версии **AAPS** можно использовать один и тот же файл ключей. В среднем каждый год будет требоваться 2 обновления AAPS.
 
@@ -106,7 +109,7 @@ An **index** and explanation of the documentation structure can be found [here](
 
 ##### [ask on the AAPS Facebook group](https://www.facebook.com/groups/AndroidAPSUsers/)
 
-##### [ask on the AAPS Discord channel](https://discord.com/channels/629952586895851530/629954570394533889)
+##### [ask on the AAPS Discord channel](https://discord.gg/4fQUWHZ4Mw)
 
 
 
@@ -131,7 +134,7 @@ In addition to the three basic hardware components (phone, pump, glucose sensor)
 
 ### 1) An Android Phone Application: **AAPS**
 
-**AAPS** is an app that runs on android smartphones & devices. Вы самостоятельно создадите приложение **AAPS** (файл. apk), используя пошаговое руководство, загрузив исходный код **AAPS** из Github и попутно установив необходимые программы (Android Studio, GitHub desktop), результатом чего станет собственная копия **AAPS**. После чего приложение **AAPS** будет перенесено на смартфон (по электронной почте, USB кабелю _и т. д._) и установлено.
+**AAPS** is an app that runs on android smartphones & devices. You are going to build the **AAPS** app (an apk file) yourself, using a step-by-step guide, by downloading the **AAPS** source code from GitHub, installing the necessary programs (Android Studio, GitHub desktop) on your computer and building your own copy of **AAPS** app. После чего приложение **AAPS** будет перенесено на смартфон (по электронной почте, USB кабелю _и т. д._) и установлено.
 
 ### 2) A reporting server: NightScout (Tidepool*)
 
@@ -156,13 +159,13 @@ Depending on your glucose sensor/CGM, you will need a compatible app for receivi
 | ---------------------------------------------------------------------------------------------------------------- |:---------------:|
 | ознакомительное чтение документации:                                                                             |     1-2 дня     |
 | настройка компьютера для начала сборки:                                                                          |    2-8 часов    |
-| создание сервера Nightscout:                                                                                     |      1 час      |
-| installing CGM app (xdrip or BYODA or …)                                                                         |      1 час      |
-| первоначальная настройка мониторинга->xdrip->AAPS:                                                               |      1 час      |
-| Первоначальная настройка AAPS->помпа:                                                                            |      1 час      |
-| Настройка AAPS->NightScout (только для отчетов):                                                                 |      1 час      |
-| необязательный (для родителей) - настройка NightScout <-> **AAPS** & фоллоуэр (ведомый) NS:                      |      1 час      |
-| Цель 1: Настройка визуализации и мониторинга, анализ базальной скорости и коэффициентов                          |      1 час      |
+| создание сервера Nightscout:                                                                                     |     1 hour      |
+| installing CGM app (xdrip or BYODA or …)                                                                         |     1 hour      |
+| первоначальная настройка мониторинга->xdrip->AAPS:                                                               |     1 hour      |
+| Первоначальная настройка AAPS->помпа:                                                                            |     1 hour      |
+| Настройка AAPS->NightScout (только для отчетов):                                                                 |     1 hour      |
+| необязательный (для родителей) - настройка NightScout <-> **AAPS** & фоллоуэр (ведомый) NS:                      |     1 hour      |
+| Цель 1: Настройка визуализации и мониторинга, анализ базальной скорости и коэффициентов                          |     1 hour      |
 | Цель 2: Научитесь контролировать AAPS                                                                            |     2 часа      |
 | Цель 3: Подтвердите ваши знания                                                                                  |   До 14 дней    |
 | Цель 4: Начните с открытого цикла                                                                                |     7 дней      |
@@ -201,7 +204,7 @@ Depending on your glucose sensor/CGM, you will need a compatible app for receivi
 ### Смартфоны
 
 #### AAPS и версии Android
-Актуальная версия **AAPS**(3.2.0.2) требует телефона на Android с Google Android 9.0 или выше. Если вы рассматриваете покупку нового телефона (по состоянию на июль 2023), предпочтительнее Android 13. Пользователям настоятельно рекомендуется обновлять свою сборку **AAPS** по соображениям безопасности, однако для тех, кому недоступно устройство на Android 9.0 или новее, имеются более ранние версии **AAPS**. Они остаются доступными в нашем [старом репозитории](https://github.com/miloskozak/AAPS) (см. примечания к выпуску устаревших версий).
+The current version of **AAPS** (3.2) requires an Android smartphone with Google **Android 9.0 or above**. If you are considering buying a new phone, (as of July 2024), Android 13 is preferred. Users are strongly encouraged to keep their build of **AAPS** up to date for safety reasons, however for users unable to use a device with Android 9.0 or newer, earlier versions of  **AAPS** compatible for older Android versions like [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) and [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2), remain available from previous releases (check the release notes for legacy versions).
 
 #### Выбор модели смартфона
 Модель, которую вы покупаете, зависит от желаемых функций. There are two archived spreadsheets of compatible [smartphones](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952) and [smartphones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). The spreadsheets are no longer updated because there are so many possible models, therefore we now suggest searching the support groups (Facebook or Discord) for "phone", or the specific model you are thinking of getting. Create a new post to ask questions about it if you still need more information.
@@ -209,16 +212,19 @@ Depending on your glucose sensor/CGM, you will need a compatible app for receivi
 Пожертвовать смартфон для тестирования можно, отправив письмо по адресу [donations@androidaps.org](mailto:donations@androidaps.org).
 
 - [Список проверенных телефонов](../Getting-Started/Phones.md)
-- [Настройки Jelly Pro](../Usage/jelly.md)
+- [Jelly Settings](../Usage/jelly.md)
 - [Настройки Huawei](../Usage/huawei.md)
 
 Users are encouraged to keep their phone Android version up-to-date, including with security parameters. However, if you are new with **AAPS** or are not a technical expert you might want to delay updating your phone until others have done so and confirmed it is safe to do so, on our various forums.
 
-:::{admonition} (предупреждение) отсрочка обновления телефонов Samsung
-:class: (класс) предупреждение У телефонов Samsung есть плохой опыт принудительного обновления, приводящий к проблемам с подключением Bluetooth. Для отключения принудительных обновлений необходимо перевести телефон в "режим разработчика": перейдите в настройки - о телефоне - сведения о ПО - нажимайте на номер сборки 7 раз, пока не разблокируете режим разработчика. Вернитесь в главное меню настроек, и вы увидите новый пункт меню настроек разработчика. Откройте опции разработчика и прокрутите окно, чтобы найти автоматическое обновление системы и выключить его
-:::
+```{admonition} delaying Samsung phones updates
+:class: warning
+Samsung has an unfortunate track record of forcing updates of their phones which cause bluetooth connectivity issues. Для отключения принудительных обновлений необходимо перевести телефон в "режим разработчика":
+ перейдите в настройки - о телефоне - сведения о ПО - нажимайте на номер сборки 7 раз, пока не разблокируете режим разработчика. Вернитесь в главное меню настроек, и вы увидите новый пункт меню настроек разработчика. Open developer options and scroll to find auto system update and turn it off
+```
 
-:::{admonition}(предупреждение) Потенциальная проблема защиты Google Play
-:class:(класс): предупреждение Имеется несколько сообщений о принудительном (каждое утро) выключении **AAPS** со стороны Google Play Protect. Если это произойдет, следует перейти в настройки Google Play и отключить “Google Play Protect”. Это касается не всех моделей и не всех версий Android..
-:::
+```{admonition} Google Play Protect potential Issue
+:class: warning
+There have been several reports of **AAPS** being shut down arbitrarily by Google Play Protect every morning. Если это произойдет, следует перейти в настройки Google Play и отключить “Google Play Protect”. Это касается не всех моделей и не всех версий Android..
+```
 
