@@ -11,37 +11,37 @@ See [FAQ page](../Getting-Started/FAQ.md) for details.
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 ## Computer and software specifications for building AAPS
 
-* Please use the **[Android Studio version called at least Hedgehog (2023.1.1) or one more recent like Iguana, Jellyfish, and Koala](https://developer.android.com/studio/)** to build the apk. Older versions of Android Studio need to be updated first! 
+* Please use the **[Android Studio version called at least Hedgehog (2023.1.1) or one more recent like Iguana, Jellyfish, Koala or Ladybug](https://developer.android.com/studio/)** to build the apk. Older versions of Android Studio need to be updated first! 
 * [Windows 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.  
 
 <table class="tg">
 <tbody>
   <tr>
-    <td class="tg-baqh">OS (Only 64 bit)</th>
-    <td class="tg-baqh">Windows 8 or higher</th>
-    <td class="tg-baqh">Mac OS 10.14 or higher</th>
-    <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</th>
+    <th class="tg-baqh">OS (Only 64 bit)</th>
+    <td class="tg-baqh">Windows 8 or higher</td>
+    <td class="tg-baqh">Mac OS 10.14 or higher</td>
+    <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">CPU (Only 64 bit)</td>
+    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
     <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
     <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
     <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">RAM</td>
+    <th class="tg-baqh"><p align="center">RAM</th>
     <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">Disk</td>
+    <th class="tg-baqh"><p align="center">Disk</th>
     <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">Resolution</td>
+    <th class="tg-baqh"><p align="center">Resolution</th>
     <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">Internet</td>
+    <th class="tg-baqh"><p align="center">Internet</th>
     <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
   </tr>
 </tbody>
@@ -126,15 +126,16 @@ Git is a program that allows you to track changes in code and to collaborate wit
 Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes. 
 ```
 
-```
-:class: note
-
-Import note: Android Studio changed its UI during the last releases. This guide will show you the steps with the *new UI* in "Ladybug". If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](TODO).
-```
-
 One of the most important things when installing Android Studio is **be patient!** During installation and setup, Android Studio is downloading a lot of stuff which will take time.
 
-Any version of Android Studio from version Hedgehog is suitable. With version Ladybug, you might need to do one extra step, but it's doable! Download the current version of Android Studio from [Android Studio Download](https://developer.android.com/studio), or an older version from the [**Archives**]](https://developer.android.com/studio/archive) and accept the download agreements.
+Any version of Android Studio like version Hedgehog or any newer is suitable. With version Ladybug, you might need to do one extra step, but it's doable! 
+
+```{admonition} Different UI
+:class: warning
+Import note: Android Studio changed its UI during the last releases. This guide will show you the steps with the *new UI* in "Ladybug". If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](NewUI).
+```
+
+Download the [current version of Android Studio](https://developer.android.com/studio) or an older version from the [**Archives**](https://developer.android.com/studio/archive) and accept the download agreements.
 
 ![DownloadAndroidStudio](../images/Building-the-App/010_DownloadLadybug.png)
 
@@ -246,13 +247,13 @@ Only for Windows users: If your firewall asks for permission, grant access:
 
 After the repository is cloned successfully, Android Studio will open the cloned project. 
 
+(NewUI)=
+```{admonition} New UI
+:class: information
+Android Studio changed its UI recently. New installations of Android Studio use the new UI by default!
 
-```{admonition}
-Android Studio changed its UI recently. 
-New installations of Android Studio use the new UI by default!
-
-Only if your Android Studio looks different, you might need to switch to the new UI.
-Click on the hamburger menu on the top left, then select "Setting" (or "Preferences on Apple computers).
+Only if your Android Studio looks different, you might need to switch to the new UI:
+Click on the hamburger menu on the top left, then select **Settings** (or **Preferences** on Apple computers).
 In **Appearance & Behaviour**, go to **New UI** and tick **Enable new UI**. Then restart Android Studio to start using it.
 
 If you don't find the option **New UI** don't worry: you are already using it!
@@ -271,7 +272,7 @@ Android Studio will start a "Gradle project sync" automatically, which will take
 Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
 ```
 
-Only on windows computers, you might get a notification about windows defender running: Click on **Automatically** and confirm, it will make the build run faster!
+Only on windows computers: You might get a notification about windows defender running: Click on **Automatically** and confirm, it will make the build run faster!
 
 ![Windows Defender](../images/Building-the-App/037_WindowsDefender.png) 
 
@@ -318,7 +319,8 @@ Android requires each app to be _signed_, to ensure that it can only be updated 
 For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
 ```
 
-> Make sure the gradle sync is finished successfully before proceeding!
+
+**Important: Make sure the gradle sync is finished successfully before proceeding!**
 
 
 Click the hamburger menu on the top left to open the menu bar.
