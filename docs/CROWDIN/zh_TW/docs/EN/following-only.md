@@ -259,7 +259,7 @@ SugarPixel 是一個連線 Dexcom 應用程式或 Nightscout 應用程式的次�
 
 
 ### C) 電腦（TeamViewer）
-一些用戶發現像[TeamViewer](https://www.teamviewer.com/)這樣的完整遠端桌面工具對於進行進階的遠端故障排除非常有幫助。
+一些用戶發現像[TeamViewer](https://www.teamviewer.com/)這樣的完整遠端桌面工具對於進行進階的遠端問題排除非常有幫助。
 
 
  
