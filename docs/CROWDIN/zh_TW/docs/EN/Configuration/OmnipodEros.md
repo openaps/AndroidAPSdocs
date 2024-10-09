@@ -442,7 +442,7 @@
   > 
   > 用於重新整理 Pod 狀態並消除顯示 (不確定) 訊息的狀態欄位。
   > 
-  > 查看下方的 [故障排除部分](OmnipodEros-troubleshooting)以獲取更多資訊。
+  > 查看下方的 [問題排除部分](OmnipodEros-troubleshooting)以獲取更多資訊。
 
 - **幫浦管理：**
 
