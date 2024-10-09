@@ -1,17 +1,17 @@
 (Releasenotes-release-notes)=
 # 版本更新說明
 
-請按照[更新手冊](../Installing-AndroidAPS/Update-to-new-version.md)中的說明進行操作。 您還可以在更新手冊頁面找到關於常見更新問題的故障排除部分。
+請按照[更新手冊](../Installing-AndroidAPS/Update-to-new-version.md)中的說明進行操作。 你還可以在更新手冊頁面找到關於常見更新問題的故障排除部分。
 
-當有新版本可用時，您將收到以下資訊：
+當有新版本可用時，你將收到以下資訊：
 
 ![更新資訊](../images/AAPS_LoopDisable90days.png)
 
-之後，您有 60 天的時間進行更新。 如果您在這 60 天內沒有更新，AAPS 將會降級到 LGS 模式（低血糖暫停，請參閱[詞彙表](../Getting-Started/Glossary.md)），如[目標 6](../Usage/Objectives.html)中所述。
+之後，你有 60 天的時間進行更新。 如果你在這 60 天內沒有更新，AAPS 將會降級到 LGS 模式（低血糖暫停，請參閱[詞彙表](../Getting-Started/Glossary.md)），如[目標 6](../Usage/Objectives.html)中所述。
 
-如果您在新版本發布後 90 天內未更新，AAPS 將切換到開放循環模式。
+如果你在新版本發布後 90 天內未更新，AAPS 將切換到開放循環模式。
 
-請理解，這一變更不是為了打擾您，而是出於安全原因。 AAPS 的新版本不僅提供了新功能，還包括重要的安全修復。 因此，必須儘快讓每個用戶更新到最新版本。 不幸的是，我們仍然收到來自非常舊版本的錯誤報告，所以這是為了提升每個用戶以及整個 DIY 社群的安全性。 感謝您的理解。
+請理解，這一變更不是為了打擾你，而是出於安全原因。 AAPS 的新版本不僅提供了新功能，還包括重要的安全修復。 因此，必須儘快讓每個用戶更新到最新版本。 不幸的是，我們仍然收到來自非常舊版本的錯誤報告，所以這是為了提升每個用戶以及整個 DIY 社群的安全性。 感謝你的理解。
 
 ```{admonition} First version of AAPS
 :class: note
@@ -24,7 +24,7 @@
 
 ## Android 版本與 AAPS 版本
 
-如果您的手機使用的是 Android 9 以下的版本，您將無法使用 AAPS v3 及以上版本，因為這些版本至少需要 Android 9。
+如果你的手機使用的是 Android 9 以下的版本，你將無法使用 AAPS v3 及以上版本，因為這些版本至少需要 Android 9。
 
 為了允許使用舊版 Android 的用戶繼續使用舊版 AAPS，我們發佈了一些僅更改版本驗證的版本。 這些版本不包含其他改進。
 
@@ -56,11 +56,11 @@
 - 需要 NS 15 版本
 - 在使用 NS v3 外掛時，透過 NS UI 輸入的治療（+ 按鈕）和使用 v1 API 的其他應用程式不會發送到 AAPS。 這將在未來的 NS 版本中修復。 在 NS 完全內部切換到 v3 之前，請始終在 AAPS 和 AAPSClient 中使用相同的客戶端（v1 或 v3）。 對於 AAPS 和 AAPSClient 本身也是如此。
 - v3 外掛中的 Websockets 與 v1 外掛的工作方式相似。 停用 websockets 後，AAPS 會定期下載 NS 的資料，這應該會降低電量消耗，因為 NS 不會長時間保持連線。 但另一方面，這意味著資料交換會有延遲。 在使用 AAPS 的 v3 與 v1 API 之前，請先閱讀 [這裡](Important-comments-on-using-v3-versus-v1-API-for-Nightscout-with-AAPS)開發團隊的重要意見！
-- 如果您使用 xdrip 作為 CGM 資料來源，則需要在更新後重新選擇它，因為內部已進行了更改。
+- 如果你使用 xdrip 作為 CGM 資料來源，則需要在更新後重新選擇他，因為內部已進行了更改。
 - Tidepool 可作為 NS 的替代品，以透過第一個目標。
-- 如果您選擇發送到 xDrip+，則必須配置 xDrip 同步外掛。 為了從 AAPS 接收血糖資料，必須將 “xDrip+ Sync Follower” 選為資料來源。
-- 如果您希望切換到 ComboV2 驅動，必須卸載 Ruffy 並重新與 AAPS 配對幫浦。
-- 要使用 DynISF 外掛，您必須開始目標 11（所有先前目標必須處於完成狀態才能開始第 11 個目標）。
+- 如果你選擇發送到 xDrip+，則必須配置 xDrip 同步外掛。 為了從 AAPS 接收血糖資料，必須將 “xDrip+ Sync Follower” 選為資料來源。
+- 如果你希望切換到 ComboV2 驅動，必須卸載 Ruffy 並重新與 AAPS 配對幫浦。
+- 要使用 DynISF 外掛，你必須開始目標 11（所有先前目標必須處於完成狀態才能開始第 11 個目標）。
 
 
 ### 變更
@@ -89,7 +89,7 @@
 - 更多資料庫維護選項 @MilosKozak
 - AAPSClient 提供主要手機是否已接入電源的訊息 @MilosKozak
 - BolusWizard 的更改。 如果 CGM 不可用，則忽略百分比（即使用 100%）
-- 遷移到 kts 構建系統 @MilosKozak
+- 遷移到 kts 建置系統 @MilosKozak
 - 改進的 CI 集成 @MilosKozak @buessow
 - 測試清理 @ryanhaining @MilosKozak
 - 新增 110,000 行代碼，修改 240,000 行代碼，修改 6,884 個文件
@@ -97,7 +97,7 @@
 (使用 v3 與 v1 API 進行 Nightscout 和 AAPS 資料交換的重要說明)=
 ### 使用 v3 與 v1 API 進行 Nightscout 和 AAPS 資料交換的重要說明
 
-v1 是用於在 NS 網站和 NS 伺服器之間交換資料的舊協議。 它有許多限制
+v1 是用於在 NS 網站和 NS 伺服器之間交換資料的舊協議。 他有許多限制
 - v1 僅發送 2 天的資料
 - 每次重新連線時，v1 都會發送所有 2 天的資料
 - 使用 websockets 是必須的 = 持續連線，更多的電量消耗
@@ -106,20 +106,20 @@ v1 是用於在 NS 網站和 NS 伺服器之間交換資料的舊協議。 它�
 v3 是新的協議。 更加安全和高效
 - 使用令牌可以更好地定義查看權限
 - 協議在 AAPS 和 NS 兩端都更高效
-- 它可以從 NS 讀取長達 3 個月的資料
-- 您可以選擇是否在每個設備上使用 websockets（使用意味著更快的更新，不使用意味著更低的電量消耗，但更新速度較慢，即數分鐘）
+- 他可以從 NS 讀取長達 3 個月的資料
+- 你可以選擇是否在每個設備上使用 websockets（使用意味著更快的更新，不使用意味著更低的電量消耗，但更新速度較慢，即數分鐘）
 - NSClient 在中斷連線時不會暫停
 
 限制
 - NS 15 必須與 AAPS 3.2 一起使用
 - v3 不會看到由 v1 協議完成的更新（可能會在未來的 NS 版本中解決）
 - 反過來，因為追蹤變更的方法效率低下，v1 能看到由 v3 完成的變更
-- 請記住，NS 目前仍在內部使用 v1，因此如果您使用 v3，則無法透過 NS 網頁 UI 輸入資料。 如果您想遠端輸入資料，必須使用 AAPSClient 的 SMS 功能
+- 請記住，NS 目前仍在內部使用 v1，因此如果你使用 v3，則無法透過 NS 網頁 UI 輸入資料。 如果你想遠端輸入資料，必須使用 AAPSClient 的 SMS 功能
 
 推薦設置
-- 基於以上所有原因，您應選擇一種方法並在所有設備上使用它（記住，撰寫本文時，所有其他上傳器都在使用 v1）。 如果您決定使用 v3，請在 AAPS 和所有 AAPSClients 中選擇 v3
+- 基於以上所有原因，你應選擇一種方法並在所有設備上使用他（記住，撰寫本文時，所有其他上傳器都在使用 v1）。 如果你決定使用 v3，請在 AAPS 和所有 AAPSClients 中選擇 v3
 - v3 更具效率，因此是首選
-- 使用或不使用 v3 中的 websockets 取決於您的偏好
+- 使用或不使用 v3 中的 websockets 取決於你的偏好
 - 強烈建議讓 AAPS 收集所有資料，然後將其作為單一上傳器上傳到 NS。 所有其他設備/應用程式應僅從 NS 讀取資料。 這樣可以防止衝突和同步錯誤。 這對於使用 Dexcom Share 連線器等將血糖資料上傳到 NS 也適用。
 
 ## 版本 3.1.0
@@ -158,7 +158,7 @@ v3 是新的協議。 更加安全和高效
 ### 重要提示
 
 - **最低 Android 版本現在為 9.0。**
-- **資料未遷移到新資料庫。** 請勿抱怨，這是非常大的變更，因此無法遷移。 因此，更新後 IOB、COB、治療等資料將被清除。 您必須建立新的 [設定檔切換](../Usage/Profiles.md)，並從零開始 IOB 和 COB。 請謹慎規劃更新！！！ 最好在無活動胰島素和碳水化合物的情況下進行更新。
+- **資料未遷移到新資料庫。** 請勿抱怨，這是非常大的變更，因此無法遷移。 因此，更新後 IOB、COB、治療等資料將被清除。 你必須建立新的 [設定檔切換](../Usage/Profiles.md)，並從零開始 IOB 和 COB。 請謹慎規劃更新！！！ 最好在無活動胰島素和碳水化合物的情況下進行更新。
 - 請使用相同版本的 AAPS 和 NSClient
 
 **請確保在更新到 3.0 後根據描述檢查並調整設置** [此處](../Installing-AndroidAPS/update3_0.md)。
@@ -168,8 +168,8 @@ v3 是新的協議。 更加安全和高效
 **更新前至少兩天：**
 
 - 在 Nightscout 中停用 Dexcom 橋
-- 如果您使用 G5/G6 並使用 xDrip 作為收集器，您必須將 xDrip 更新至 2022 年 1 月 14 日之後的夜間版本
-- 如果您使用 G5/G6，建議切換到 BYODA 作為收集器，以利用回溯平滑功能（您仍然可以將 xDrip 用於其他目的，xDrip 可以從 BYODA 接收資料）
+- 如果你使用 G5/G6 並使用 xDrip 作為收集器，你必須將 xDrip 更新至 2022 年 1 月 14 日之後的夜間版本
+- 如果你使用 G5/G6，建議切換到 BYODA 作為收集器，以利用回溯平滑功能（你仍然可以將 xDrip 用於其他目的，xDrip 可以從 BYODA 接收資料）
 
 ### 變更
 
@@ -198,7 +198,7 @@ v3 是新的協議。 更加安全和高效
 
 - 設定檔切換行為變更。 現在區分設定檔切換 *（使用者想要的變更）* 和設定檔變更 *（當幫浦執行變更時）* @MilosKozak @Tebbe
 
-- 您可以在建立設定檔切換時啟動臨時目標 @MilosKozak
+- 你可以在建立設定檔切換時啟動臨時目標 @MilosKozak
 
 - NS 設定檔已消失，僅可使用本地設定檔。 本地設定檔可以 [同步到 NS](update3_0-nightscout-profile-cannot-be-pushed)。 @MilosKozak。
 
@@ -259,8 +259,8 @@ v3 是新的協議。 更加安全和高效
 ### 重要提示
 
 - 已為所有 2.8.1 使用者強制開啟選項 **NS_UPLOAD_ONLY**。
-- 如果您使用 NSClient 輸入 TT、碳水化合物或設定檔切換，您必須在 AAPS 中將其關閉，但 **僅在您的同步運作良好時**（例如，您沒有看到不需要的資料變更，如 TT、TBR 的自我修改等）。
-- 注意：如果您有其他應用程式處理治療（例如 xDrip 廣播/上傳/同步...），請勿這樣做。
+- 如果你使用 NSClient 輸入 TT、碳水化合物或設定檔切換，你必須在 AAPS 中將其關閉，但 **僅在你的同步運作良好時**（例如，你沒有看到不需要的資料變更，如 TT、TBR 的自我修改等）。
+- 注意：如果你有其他應用程式處理治療（例如 xDrip 廣播/上傳/同步...），請勿這樣做。
 - 只能在啟用工程模式時關閉 NS_UPLOAD_ONLY。
 
 ### 重大變更
@@ -284,10 +284,10 @@ v3 是新的協議。 更加安全和高效
 
 ### 重要提示
 
-- **最低 Android 版本現在為 8.0。** 對於較舊的 Android 版本，您仍然可以使用舊倉庫中的 2.6.1.4 版本。
+- **最低 Android 版本現在為 8.0。** 對於較舊的 Android 版本，你仍然可以使用舊倉庫中的 2.6.1.4 版本。
 - [目標已更改。](Objectives-objective-3-prove-your-knowledge) **請在更新前完成未完成的目標。**
-- 儲存庫位置仍在 <https://github.com/nightscout/AndroidAPS> 。 如果您不熟悉 git，最簡單的更新方式是刪除 AAPS 目錄並進行 [新複製](../Installing-AndroidAPS/Building-APK.md)。
-- 請使用 [Android Studio 4.1.1](https://developer.android.com/studio/) 或更新版本來構建 apk。
+- 儲存庫位置仍在 <https://github.com/nightscout/AndroidAPS> 。 如果你不熟悉 git，最簡單的更新方式是刪除 AAPS 目錄並進行 [新複製](../Installing-AndroidAPS/Building-APK.md)。
+- 請使用 [Android Studio 4.1.1](https://developer.android.com/studio/) 或更新版本來建置 apk。
 
 ### 主要新功能
 
@@ -314,7 +314,7 @@ v3 是新的協議。 更加安全和高效
 
 **請確保在更新至 2.7 後檢查並調整設置，如 [此處](../Installing-AndroidAPS/update2_7.md) 所述。**
 
-您至少需要開始 [目標 11（在後續版本中為目標 10）](Objectives-objective-10-automation) 才能繼續使用 [自動化功能](../Usage/Automation.md)（所有之前的目標必須完成，否則無法開始目標 11）。 例如，如果您尚未完成 [目標 3](Objectives-objective-3-prove-your-knowledge) 的測驗，則必須完成測驗後才能開始 [目標 11](Objectives-objective-10-automation)。 這不會影響您已完成的其他目標。 您將保留所有已完成的目標！
+你至少需要開始 [目標 11（在後續版本中為目標 10）](Objectives-objective-10-automation) 才能繼續使用 [自動化功能](../Usage/Automation.md)（所有之前的目標必須完成，否則無法開始目標 11）。 例如，如果你尚未完成 [目標 3](Objectives-objective-3-prove-your-knowledge) 的測驗，則必須完成測驗後才能開始 [目標 11](Objectives-objective-10-automation)。 這不會影響你已完成的其他目標。 你將保留所有已完成的目標！
 
 ### 主要新功能
 
@@ -351,7 +351,7 @@ v3 是新的協議。 更加安全和高效
 
 發布日期：2020-05-04
 
-請使用 [Android Studio 3.6.1](https://developer.android.com/studio/) 或更新版本來構建 apk。
+請使用 [Android Studio 3.6.1](https://developer.android.com/studio/) 或更新版本來建置 apk。
 
 ### 主要新功能
 
@@ -362,7 +362,7 @@ v3 是新的協議。 更加安全和高效
 
 發布日期：2020-05-03
 
-請使用 [Android Studio 3.6.1](https://developer.android.com/studio/) 或更新版本來構建 apk。
+請使用 [Android Studio 3.6.1](https://developer.android.com/studio/) 或更新版本來建置 apk。
 
 ### 主要新功能
 
@@ -373,29 +373,29 @@ v3 是新的協議。 更加安全和高效
 
 發布日期：2020-04-19
 
-請使用 [Android Studio 3.6.1](https://developer.android.com/studio/) 或更新版本來構建 apk。
+請使用 [Android Studio 3.6.1](https://developer.android.com/studio/) 或更新版本來建置 apk。
 
 ### 主要新功能
 
 - 修復 Insight 服務崩潰
-- 除此之外，與 2.6.1.1 相同。 如果您未受到此錯誤的影響，則不需要升級。
+- 除此之外，與 2.6.1.1 相同。 如果你未受到此錯誤的影響，則不需要升級。
 
 ## 版本 2.6.1.1
 
 發布日期：2020-04-06
 
-請使用 [Android Studio 3.6.1](https://developer.android.com/studio/) 或更新版本來構建 apk。
+請使用 [Android Studio 3.6.1](https://developer.android.com/studio/) 或更新版本來建置 apk。
 
 ### 主要新功能
 
 - 解決了使用 Combo 幫浦時 SMS CARBS 指令的問題
-- 除此之外，與 2.6.1 相同。 如果您未受到此錯誤的影響，則不需要升級。
+- 除此之外，與 2.6.1 相同。 如果你未受到此錯誤的影響，則不需要升級。
 
 ## 版本 2.6.1
 
 發布日期：2020-03-21
 
-請使用 [Android Studio 3.6.1](https://developer.android.com/studio/) 或更新版本來構建 apk。
+請使用 [Android Studio 3.6.1](https://developer.android.com/studio/) 或更新版本來建置 apk。
 
 ### 主要新功能
 
@@ -415,7 +415,7 @@ v3 是新的協議。 更加安全和高效
 
 發布日期：2020-02-29
 
-請使用 [Android Studio 3.6.1](https://developer.android.com/studio/) 或更新版本來構建 apk。
+請使用 [Android Studio 3.6.1](https://developer.android.com/studio/) 或更新版本來建置 apk。
 
 ### 主要新功能
 
@@ -484,9 +484,9 @@ v3 是新的協議。 更加安全和高效
 
 ### 重要提示
 
-- 請使用 [Android Studio 3.5.1](https://developer.android.com/studio/) 或更新版本來 [構建 apk](../Installing-AndroidAPS/Building-APK.md) 或 [更新](../Installing-AndroidAPS/Update-to-new-version.html)。
-- 如果您使用 xDrip，必須設置[識別接收器](xdrip-identify-receiver)。
-- 如果您使用帶有修補版的 Dexcom G6 應用，您將需要 [2.4 資料夾](https://github.com/dexcomapp/dexcomapp/tree/master/2.4)中的版本。
+- 請使用 [Android Studio 3.5.1](https://developer.android.com/studio/) 或更新版本來 [建置 apk](../Installing-AndroidAPS/Building-APK.md) 或 [更新](../Installing-AndroidAPS/Update-to-new-version.html)。
+- 如果你使用 xDrip，必須設置[識別接收器](xdrip-identify-receiver)。
+- 如果你使用帶有修補版的 Dexcom G6 應用，你將需要 [2.4 資料夾](https://github.com/dexcomapp/dexcomapp/tree/master/2.4)中的版本。
 - Glimp 支援版本 4.15.57 及更新版本。
 
 (Releasenotes-is-this-update-for-me-currently-is-not-supported)=
@@ -509,7 +509,7 @@ v3 是新的協議。 更加安全和高效
 - 新的修補版 Dexcom apks 支援（[2.4 資料夾](https://github.com/dexcomapp/dexcomapp/tree/master/2.4)）
 - 簽章驗證器
 - 允許 OpenAPS 使用者繞過目標
-- 新的 [目標](../Usage/Objectives.md) - 測驗、應用處理 （如果您在早期版本中至少開始了「開放循環」目標，測驗是可選的。）
+- 新的 [目標](../Usage/Objectives.md) - 測驗、應用處理 （如果你在早期版本中至少開始了「開放循環」目標，測驗是可選的。）
 - 修復了 Dana\* 驅動中的錯誤，該錯誤會報告錯誤的時間差
 - 修復了 [SMS 通訊器](../Children/SMS-Commands.md)中的錯誤
 
@@ -519,7 +519,7 @@ v3 是新的協議。 更加安全和高效
 
 ### 主要新功能
 
-- Insight 的重要安全修復（如果您使用 Insight，這真的很重要！）
+- Insight 的重要安全修復（如果你使用 Insight，這真的很重要！）
 - 修復歷史瀏覽器
 - 修復 delta 計算
 - 語言更新
@@ -569,7 +569,7 @@ v3 是新的協議。 更加安全和高效
 
 ### 其他事項
 
-- 如果您使用非預設的 `smbmaxminutes` 值，則必須再次設置此值
+- 如果你使用非預設的 `smbmaxminutes` 值，則必須再次設置此值
 
 ## 版本 2.0
 
@@ -579,7 +579,7 @@ v3 是新的協議。 更加安全和高效
 
 - oref1/SMB 支援（[oref1 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)）務必閱讀文件，以了解對 SMB 的預期，了解其行為方式、可以實現的功能以及如何使用，以便平穩運作。
 - [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) 幫浦支援
-- 設定嚮導：引導您完成 AAPS 的設定過程
+- 設定嚮導：引導你完成 AAPS 的設定過程
 
 (Releasenotes-settings-to-adjust-when-switching-from-ama-to-smb)=
 ### 切換從 AMA 到 SMB 時需要調整的設置
@@ -588,12 +588,12 @@ v3 是新的協議。 更加安全和高效
 
 - maxIOB 現在包括所有的 IOB，而不僅僅是增加的基礎率。 也就是說，如果為一頓飯注射了 8 U 胰島素，而 maxIOB 是 7 U，那麼在 IOB 下降到 7 U 以下之前，不會再有 SMB 被執行。
 
-- min_5m_carbimpact 的預設值從 AMA 的 3 改為 8。 如果您是從 AMA 升級到 SMB，則需要手動更改此設置。
+- min_5m_carbimpact 的預設值從 AMA 的 3 改為 8。 如果你是從 AMA 升級到 SMB，則需要手動更改此設置。
 
-- 構建 AAPS 2.0 apk 時注意事項：目前版本的 Android Gradle 外掛不支援按需配置！ 如果您的構建因「按需配置」的錯誤而失敗，您可以進行以下操作：
+- 建置 AAPS 2.0 apk 時注意事項：目前版本的 Android Gradle 外掛不支援按需配置！ 如果你的建置因「按需配置」的錯誤而失敗，你可以進行以下操作：
 
   - 透過點擊「文件」>「設置」（在 Mac 上是「Android Studio」>「偏好設定」）打開偏好設定窗口。
-  - 在左側窗格中，點擊「構建、執行、部署」>「編譯器」。
+  - 在左側窗格中，點擊「建置、執行、部署」>「編譯器」。
   - 取消選中「按需配置」復選框。
   - 點擊「應用」或「確定」。
 
@@ -608,7 +608,7 @@ v3 是新的協議。 更加安全和高效
 
 ### 手錶
 
-- 單獨的構建變體已被移除，現在包含在常規完整構建中。 要從手錶使用注射控制，請在手機上啟用此設置
+- 單獨的建置變體已被移除，現在包含在常規完整建置中。 要從手錶使用注射控制，請在手機上啟用此設置
 - 嚮導現在只詢問碳水化合物（以及手錶設置中啟用的百分比）。 可以在手機設置中配置計算中包含的參數
 - 確認和訊息對話框現在也適用於 Wear 2.0
 - 新增 eCarbs 選單項目
