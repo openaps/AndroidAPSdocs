@@ -33,7 +33,7 @@
 
 這可能會發生在各種幫浦上。 除了將 AAPS 排除在任何電池優化之外，你還可以將系統的藍牙應用程式排除在電池優化之外。 這在某些情況下有幫助。 根據你使用的手機，你會以不同方式找到藍牙應用程式。
 
-這裡是一些如何在特定 Android 手機上找到它們的範例。
+這裡是一些如何在特定 Android 手機上找到他們的範例。
 
 
 #### Pixel 手機（原生 Android）
@@ -69,7 +69,7 @@
 
   ![顯示系統應用程式](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
 
-* 現在搜尋藍牙應用程式並選擇它來查看其設定。
+* 現在搜尋藍牙應用程式並選擇他來查看其設定。
 
   ![藍牙應用程式](../images/troubleshooting/samsung/Samsung03_BtApp.png)
 
