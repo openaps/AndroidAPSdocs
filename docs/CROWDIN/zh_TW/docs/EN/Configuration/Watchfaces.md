@@ -321,7 +321,7 @@ Jelikož nemůžeme kompromitovat komunikaci (potřebujeme aktuální data) a ch
 * Zkontrolujte [seznam testovaných telefonů a hodinek](Phones-list-of-tested-phones) a [zeptejte se komunity](../Where-To-Go-For-Help/Connect-with-other-users.md) na zkušenosti ostatních uživatelů a hlášenou životnost baterie.
 * **Nemůžeme zaručit, že data zobrazovaná na ciferníku nebo komplikaci jsou aktuální**. Nakonec je na Wear OS, aby rozhodlo, kdy aktualizovat ciferník nebo komplikaci. I když aplikace AAPS žádá o aktualizaci, systém může rozhodnout aktualizace odložit nebo ignorovat, aby šetřil baterii. Když máte pochybnosti a baterie na hodinkách je nízká - vždy znovu zkontrolujte hlavní aplikaci AAPS na telefonu.
 
-(錶盤-故障排除-Wear-app)=
+(Watchfaces-troubleshooting-the-wear-app)=
 
 ## Odstraňování problémů s aplikací Wear:
 
