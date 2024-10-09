@@ -19,7 +19,7 @@ AAPS 提供多種遠端監控兒童的選項，並允許傳送遠端指令。 �
 - 如果你使用的是原版 Dexcom 應用程式，你可以使用 Dexcom 追蹤應用程式（僅顯示血糖值）。
 - [xDrip+](../Configuration/xdrip.md) 在追蹤者模式中（主要顯示血糖值和 **警報**）。
 - 在 iOS 上使用 [Sugarmate](https://sugarmate.io/) 或 [Spike](https://spike-app.com/)（主要顯示血糖值和 **警報**）。
-- 一些使用者發現 [TeamViewer](https://www.teamviewer.com/) 這樣的全遠端存取工具對於進行高階遠端故障排除非常有幫助。
+- 一些使用者發現 [TeamViewer](https://www.teamviewer.com/) 這樣的全遠端存取工具對於進行高階遠端問題排除非常有幫助。
 
 ## 智慧型手錶選項
 
