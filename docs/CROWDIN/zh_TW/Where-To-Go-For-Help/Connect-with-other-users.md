@@ -14,7 +14,7 @@
 
 ## 務必加入 AndroidAPS 用戶群組 Facebook！
 
-加入主要的 [AndroidAPS Facebook 群組](https://www.facebook.com/groups/1900195340201874/)。 你可以在這裡提問有關算法的問題、關於 Android Studio 設置和構建 APK 的問題、以及有關應用使用的任何疑問，還有如何充分利用它的提示。 還有一個專門為 Combo 幫浦用戶設置的群組 [AAPSCombo](https://www.facebook.com/groups/127507891261169/)。
+加入主要的 [AndroidAPS Facebook 群組](https://www.facebook.com/groups/1900195340201874/)。 你可以在這裡提問有關算法的問題、關於 Android Studio 設置和建置 APK 的問題、以及有關應用使用的任何疑問，還有如何充分利用他的提示。 還有一個專門為 Combo 幫浦用戶設置的群組 [AAPSCombo](https://www.facebook.com/groups/127507891261169/)。
 
 ## 其他英文資源
 

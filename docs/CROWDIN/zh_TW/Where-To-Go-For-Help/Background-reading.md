@@ -1,6 +1,6 @@
 # 開始之前值得閱讀的資源
 
-在你開始構建系統之前，必須閱讀大量的資料，以便了解一切如何運作，並能最大限度地發揮其效果。 我們整理了一些網站，幫助你開始並回答許多問題。
+在你開始建置系統之前，必須閱讀大量的資料，以便了解一切如何運作，並能最大限度地發揮其效果。 我們整理了一些網站，幫助你開始並回答許多問題。
 
 ## 進一步閱讀
 
@@ -10,7 +10,7 @@
 
 [Loop 文檔 - https://loopkit.github.io/loopdocs/](https://loopkit.github.io/loopdocs/)
 
-[微調您的設定 - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
+[微調你的設定 - https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/](https://web.archive.org/web/20231130035337/https://seemycgm.com/2017/10/29/fine-tuning-settings/)
 
 [Tim Omer – Hypodiabetic 部落格 - https://www.hypodiabetic.co.uk/](https://www.hypodiabetic.co.uk/)
 

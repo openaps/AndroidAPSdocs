@@ -29,7 +29,8 @@ Gradle Synchronize çeşitli nedenlerle başarısız olabilir. Gradle senkroniza
 Bunlar olağan gradle senkronizasyon hatalarıdır:
 * [Uncommitted changes](troubleshooting_androidstudio-uncommitted-changes)
 * [No cached version of ... available](troubleshooting_androidstudio-could-not-resolve-no-cached-version)
-* [Android Gradle requires Java 11 to run](troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)
+* [Incompatible Gradle JVM](incompatible-gradle-jvm)
+* [Incompatible version of the Android Gradle plugin](incompatible-version-of-android-gradle-plugin)
 
 *Önemli*: Sorununuzla ilgili talimatları izledikten sonra, [gradle sync](troubleshooting_androidstudio-gradle-resync)'i yeniden tetiklemeniz gerekir.
 
@@ -100,10 +101,30 @@ Bunlar olağan gradle senkronizasyon hatalarıdır:
 
 #### Adım 3 - Resync Gradle (tekrar)
 
-[Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync)'deki talimatları izleyin.
+Follow the instructions at [Gradle Resync](gradle-resync).
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
+(incompatible-gradle-jvm)=
+### Incompatible Gradle JVM
+
+![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png) If you experience the following error message, you need to download a correct JVM version before you can try again:
+* Open the gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
+
+![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
+
+* Open the **Gradle JDK** options, then select **Download JDK...**
+
+![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+
+* At **Version** (1), you need to select **17**. Then select the **JetBrains Runtime** from the **Vendor** (2) options. Do not change the **Location** (3).
+
+![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
+
+* Close the **Settings** dialog with **OK**.
+* You now need to restart the Gradle Sync. Follow the instructions at [Gradle Resync](gradle-resync).
+
+(incompatible-version-of-android-gradle-plugin)=
 ### Incompatible version of Android Gradle plugin
 
   If you experience the following error message
@@ -112,30 +133,7 @@ Bunlar olağan gradle senkronizasyon hatalarıdır:
 
   You are using an outdated version of Android Studio. In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
 
-### Android Gradle plugin requires Java 17 to run
-
-  Bu hata mesajıyla karşılaşabilirsiniz:
-
-  ![Android Gradle plugin requires Java 17 to run](../images/studioTroubleshooting/11_GradleJDK.png)
-
-  Gradle ayarlarını açmak için "Gradle Settings" (1) üzerine tıklayın.
-
-  "Gradle Settings" bağlantınız yoksa, sağ kenardaki Gradle Sekmesini (1) seçerek Gradle ayarlarını manuel olarak açın, araçlar simgesini (2) ve orada 'Gradle Settings' öğesini seçin (3).
-
-  ![Gradle Ayarları](../images/studioTroubleshooting/09_GradleSettings.png)
-
-  When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "jbr-17" (2), which should be located within your Android Studion installation directory.
-
-  ![Gradle Ayarları](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
-
-  Ayarlar iletişim kutusunu kaydetmek ve kapatmak için "Tamam"a basın.
-
-  *Önemli*: "Gradle JDK" ayarını görmüyorsanız, Android Studio'yu güncellememiş olabilirsiniz. Make sure you are using Android Studio 2022.3 Giraffe) or newer.
-
-  Şimdi bir [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync) tetiklemeniz gerekiyor
-
 (troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
-
 ### Çözülemedi/Önbelleğe alınmış sürüm yok
 
   Bu hata mesajını alabilirsiniz:
@@ -148,19 +146,18 @@ Bunlar olağan gradle senkronizasyon hatalarıdır:
 
     ![Gradle Çevrimdışı Modu](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Şimdi bir [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync) tetiklemeniz gerekiyor
+  * Now you need to trigger a [Gradle Resync](gradle-resync)
 
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### Daemon işlemi başlatılamıyor
 
-  Böyle bir hata mesajı görürseniz, muhtemelen Windows 10 32 bit sistem kullanıyorsunuzdur. Bu, Android Studio 3.5.1 ve üstü tarafından desteklenmez ve ne yazık ki AAPS geliştiricisinin bu konuda yapabileceği hiçbir şey yoktur.
-
-  Windows 10 kullanıyorsanız 64 bit işletim sistemi kullanmanız gerekir.
+  Böyle bir hata mesajı görürseniz, muhtemelen Windows 10 32 bit sistem kullanıyorsunuzdur. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about!
 
   There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
 
   ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
 
+(gradle-resync)=
 ### Gradle Resync
 
   Hala Gradle senkronizasyonunun başarısız olduğu mesajını görüyorsanız, şimdi "Tekrar dene" Bağlantısını seçin.  ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)

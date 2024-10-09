@@ -8,7 +8,7 @@
 
 如果模組內有額外的設定可用，你可以點擊齒輪（B），這會將你帶到偏好設定中的特定設置。
 
-**首次配置：**從 AAPS 2.0 開始，設定嚮導會引導你完成 AAPS 的配置過程。 按下螢幕右上角的三點選單（F），並選擇「設定嚮導」來使用它。
+**首次配置：**從 AAPS 2.0 開始，設定嚮導會引導你完成 AAPS 的配置過程。 按下螢幕右上角的三點選單（F），並選擇「設定嚮導」來使用他。
 
 ![組態建置工具框和齒輪](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
@@ -33,7 +33,7 @@
 
 ### 本地設定檔(Local profile)
 
-本地設定檔使用手動輸入到手機中的基礎率設定檔。 一旦選擇它，AAPS 中將會顯示一個新標籤，必要時你可以更改從幫浦讀取的設定檔資料。 下次切換設定檔時，這些資料將寫入幫浦中的設定檔 1。 建議使用這個設定檔，因為它不依賴於網際網路連線。
+本地設定檔使用手動輸入到手機中的基礎率設定檔。 一旦選擇他，AAPS 中將會顯示一個新標籤，必要時你可以更改從幫浦讀取的設定檔資料。 下次切換設定檔時，這些資料將寫入幫浦中的設定檔 1。 建議使用這個設定檔，因為他不依賴於網際網路連線。
 
 你的本地設定檔是[匯出設定](../Usage/ExportImportSettings.md)的一部分。 因此，確保有一個安全的備份。
 
@@ -100,7 +100,7 @@
 ### DIA
 
 * DIA 對每個人來說並不相同。 這就是為什麼你需要自行測試。 
-* 但它必須至少是 5 小時。
+* 但他必須至少是 5 小時。
 * 對於許多使用超快速胰島素如 Fiasp 的人來說，實際上在 3-4 小時後已經沒有顯著效果了，即使此時理論上仍有 0.0xx 單位的胰島素存在。 例如，在運動期間，這些殘餘量可能仍然是顯著的。 因此，AAPS 使用最少 5 小時作為 DIA。
 * 你可以在[此頁面](Screenshots-insulin-profile)的胰島素設定檔部分中閱讀更多相關資訊。
 
@@ -109,7 +109,7 @@
 * 對於 'Rapid-Acting'、'Ultra-Rapid' 和 'Lyumjev'，DIA 是唯一可以自行調整的變數，峰值時間是固定的。 
 * Free-Peak 允許你同時調整 DIA 和峰值時間，這僅應由了解這些設置效果的高級使用者使用。 
 * [胰島素曲線圖](Screenshots-insulin-profile)幫助你了解不同的曲線。
-* 你可以透過啟用勾選框將其顯示為標籤，否則它將在選單中。
+* 你可以透過啟用勾選框將其顯示為標籤，否則他將在選單中。
 
 #### Rapid-Acting Oref
 
@@ -153,7 +153,7 @@
 
 ![組態建置工具：血糖來源選擇](../images/ConfBuild_BG.png)
 
-* [構建你自己的 Dexcom 應用程式（BYODA）](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0)。
+* [建置你自己的 Dexcom 應用程式（BYODA）](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0)。
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - 只支援版本 4.15.57 及更新的版本
@@ -176,7 +176,7 @@
 * Dana Rv2（升級了非官方韌體的 DanaR 幫浦）
 * [Dana-i/RS](DanaRS-Insulin-Pump.md)
     
-    * 對於 Dana 幫浦，必要時請使用**進階設定**來啟用藍牙監控。 如果無法連線幫浦，它會關閉藍牙一秒鐘。 這可能對於某些藍牙系統卡住的手機可能會有幫助。
+    * 對於 Dana 幫浦，必要時請使用**進階設定**來啟用藍牙監控。 如果無法連線幫浦，他會關閉藍牙一秒鐘。 這可能對於某些藍牙系統卡住的手機可能會有幫助。
     * 必須正確輸入 [Dana RS 幫浦的密碼](../Configuration/DanaRS-Insulin-Pump.md)。 在之前的版本中未檢查密碼。
 
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
@@ -199,7 +199,7 @@
 
 ### 吸收設定
 
-如果你使用 Oref1 與 SMB，必須將**min_5m_carbimpact** 改為 8。 該值僅在 CGM 讀取值中斷時使用，或在身體活動「消耗」掉了所有會使 AAPS 衰減 COB 的血糖上升時使用。 在無法根據你的血糖反應動態計算[碳水化合物吸收](../Usage/COB-calculation.md)的時候，它會對你的碳水化合物應用預設的衰減。 基本上，這是一個安全保護機制。
+如果你使用 Oref1 與 SMB，必須將**min_5m_carbimpact** 改為 8。 該值僅在 CGM 讀取值中斷時使用，或在身體活動「消耗」掉了所有會使 AAPS 衰減 COB 的血糖上升時使用。 在無法根據你的血糖反應動態計算[碳水化合物吸收](../Usage/COB-calculation.md)的時候，他會對你的碳水化合物應用預設的衰減。 基本上，這是一個安全保護機制。
 
 (Config-Builder-aps)=
 
@@ -207,7 +207,7 @@
 
 選擇用於治療調整的 APS 演算法。 你可以在 OpenAPS (OAPS) 標籤中查看選定演算法的活動詳情。
 
-* OpenAPS AMA（進階餐前輔助，2017 年的演算法狀態）簡單來說，它的好處是在你自己進行餐前注射後，如果你可靠地輸入碳水化合物，系統可以更快地提高臨時基礎率。
+* OpenAPS AMA（進階餐前輔助，2017 年的演算法狀態）簡單來說，他的好處是在你自己進行餐前注射後，如果你可靠地輸入碳水化合物，系統可以更快地提高臨時基礎率。
 * [OpenAPS SMB](../Usage/Open-APS-features.md)（超微量注射，針對進階使用者的最新演算法） 注意：你需要在[目標 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)，才能使用 OpenAPS SMB，並且必須在組態建置工具 > 敏感性檢測 > 敏感性 Oref1 設定中將 min_5m_carbimpact 設置為 8。
 
 ## 循環
@@ -236,7 +236,7 @@
 ### 低血糖暫停 (LGS)
 
 * maxIOB 設為 0
-* 這意味著如果血糖下降，它可以為你減少基礎率。
+* 這意味著如果血糖下降，他可以為你減少基礎率。
 * 但如果血糖上升，則不會自動進行修正。 你的基礎率將保持與所選設定檔相同。
 * 只有當來自先前的低血糖暫停的基礎 IOB 為負時，才會額外注射胰島素來降低血糖。
 
@@ -248,7 +248,7 @@
 
 ## 目標（學習計畫）
 
-AAPS 有一個學習計畫（目標），你必須逐步完成它。 這將引導你安全地設置閉合循環系統。 它保證你已正確設置所有內容，並了解系統的具體操作。 這是你可以信任系統的唯一方式。
+AAPS 有一個學習計畫（目標），你必須逐步完成他。 這將引導你安全地設置閉合循環系統。 他保證你已正確設置所有內容，並了解系統的具體操作。 這是你可以信任系統的唯一方式。
 
 你應該[定期匯出你的設置](../Usage/ExportImportSettings.md)（包括目標的進度）。 如果稍後需要更換手機（新購、螢幕損壞等），你可以簡單地匯入這些設置。
 
@@ -266,7 +266,7 @@ AAPS 有一個學習計畫（目標），你必須逐步完成它。 這將引�
 
 #### 保持螢幕常亮
 
-選項「保持螢幕常亮」將強制 Android 隨時保持螢幕亮起。 這對於演示等場合很有用。 但它會消耗大量電池電量。 因此，建議將智慧型手機連線到充電線。
+選項「保持螢幕常亮」將強制 Android 隨時保持螢幕亮起。 這對於演示等場合很有用。 但他會消耗大量電池電量。 因此，建議將智慧型手機連線到充電線。
 
 #### 按鈕
 

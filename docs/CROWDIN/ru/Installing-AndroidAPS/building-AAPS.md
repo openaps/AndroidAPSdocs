@@ -10,40 +10,38 @@
 
 ## Технические характеристики компьютера и программного обеспечения для построения AAPS
 
-- Please use the **[Android Studio version called at least Hedgehog or one more recent like Iguana, Jellyfish, and Koala](https://developer.android.com/studio/)** to build the apk. <u>**Do not use the Ladybug version.**</u> Older versions of Android Studio need to be updated first!
+- Please use the **[Android Studio version called at least Hedgehog (2023.1.1) or one more recent like Iguana, Jellyfish, Koala or Ladybug](https://developer.android.com/studio/)** to build the apk. Older versions of Android Studio need to be updated first!
 - [32-разрядные системы Windows](troubleshooting_androidstudio-unable-to-start-daemon-process) не поддерживаются в Android Studio. Имейте в виду, что и 64-разрядная процессор, и 64-разрядная ОС являются обязательным условием. Если ваша система не соответствует этому условию, следует изменить аппаратное или программное обеспечение или всю систему.
 
 <table class="tg">
-<thead>
-  <tr>
-    <th class="tg-baqh">Операционная система (только 64 бит)</th>
-    <th class="tg-baqh">Windows 8 или выше</th>
-    <th class="tg-baqh">Mac OS 10.14 или выше</th>
-    <th class="tg-baqh">Любой Linux поддерживающий Gnome, KDE, или Unity DE;&nbsp;&nbsp;GNU C Library 2.31 или более поздние версии</th>
-  </tr>
-</thead>
 <tbody>
   <tr>
-    <td class="tg-baqh"><p align="center">Процессор CPU (Только 64 бит)</td>
-    <td class="tg-baqh">x86_64 архитектура CPU; ядро Intel или новее, или процессор AMD с поддержкой <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">Чипы на базе ARM или Intel Core 2 поколения или новее с поддержкой <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">среды Hypervisor </span></a></td>
-    <td class="tg-baqh">архитектура процессора x86_64, процессор Intel Core 2 поколения или новее, или процессор AMD с поддержкой AMD-виртуализации (AMD-V) и SSSE3</td>
+    <th class="tg-baqh">OS (Only 64 bit)</th>
+    <td class="tg-baqh">Windows 8 or higher</td>
+    <td class="tg-baqh">Mac OS 10.14 or higher</td>
+    <td class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">Оперативная память</td>
-    <td class="tg-baqh" colspan="3"><p align="center">8ГБ или более</td>
+    <th class="tg-baqh"><p align="center">CPU (Only 64 bit)</th>
+    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">Диск</td>
-    <td class="tg-baqh" colspan="3"><p align="center">Не менее 30ГБ свободного места. Рекомендуется использовать SSD.</td>
+    <th class="tg-baqh"><p align="center">RAM</th>
+    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">Разрешение</td>
-    <td class="tg-baqh" colspan="3"><p align="center">минимум 1280 x 800 <br></td>
+    <th class="tg-baqh"><p align="center">Disk</th>
+    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">Интернет</td>
-    <td class="tg-baqh" colspan="3"><p align="center">Широкополосный</td>
+    <th class="tg-baqh"><p align="center">Resolution</th>
+    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+  </tr>
+  <tr>
+    <th class="tg-baqh"><p align="center">Internet</th>
+    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
   </tr>
 </tbody>
 </table>
@@ -54,7 +52,7 @@
 
 Если вы столкнулись с трудностями в процессе создания приложения **AAPS**, сначала обратитесь к разделу [**устранение проблем с Android Studio**](../Installing-AndroidAPS/troubleshooting_androidstudio).
 
-Если вы считаете, что что-то в инструкциях по сборке неправильно, отсутствует или сбивает с толку, свяжитесь с другими пользователями \*\* AAPS \*\* на [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) или [Discord](https://discord.gg/4fQUWHZ4Mw). Если вы хотите что-то изменить самостоятельно (обновить снимки экрана _etc_), отправьте [запрос на слияние (PR)](docs/EN/make-a-PR.md).
+If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). Если вы хотите что-то изменить самостоятельно (обновить снимки экрана _etc_), отправьте [запрос на слияние (PR)](docs/EN/make-a-PR.md).
 
 ## Пошаговое руководство по созданию приложения AAPS
 
@@ -97,7 +95,7 @@ Git is a program that allows you to track changes in code and to collaborate wit
 
 ![Git\_установлен](../images/Building-the-App/001_check_git_installed.png)
 
-2. Если у вас нет Git, загрузите и установите псвежую версию системы [**отсюда**](https://git-scm.com/downloads). Любая новая версия Git должна работать, выбирайте версию в соответствии с вашей системой - Mac, Windows или Linux.
+2. If you don’t have Git installed, download and install the latest version for your system from the "Download" section on [**here**](https://git-scm.com/downloads). Любая новая версия Git должна работать, выбирайте версию в соответствии с вашей системой - Mac, Windows или Linux.
 
 **Примечание для пользователей Mac:** веб-страница Git также предложит установить дополнительную программу под названием "homebrew", которая поможет в установке. Если вы устанавливаете Git через homebrew, то нет необходимости изменять настройки.
 
@@ -122,85 +120,73 @@ Git is a program that allows you to track changes in code and to collaborate wit
 Android Studio is a program which runs on your computer. It allows you to download source code from the internet (using Git) and build smartphone (and smartwatch) apps. You cannot "break" a current, looping version of **AAPS** which you might have running on a smartphone by building a new or updated app on your PC with Android Studio, these are totally separate processes. 
 ```
 
-The following screenshots have been taken from Android Studio Version **Hedgehog**, they should be identical with more recent versions.
-
 Самая важная заповедь при установке Android Studio: Будьте терпеливы! Во время установки и настройки Android Studio загружает много элементов, которые отнимают время.
 
-**Download a supported version of Android Studio (Hedgehog, Iguana, Jellyfish or Koala - not Ladybug)** from [**here**](https://developer.android.com/studio/archive), locate it in your browser downloads folder, and install it on your computer:
+Any version of Android Studio like version Hedgehog or any newer is suitable. With version Ladybug, you might need to do one extra step, but it's doable!
 
-![Загрузка Android Studio](../images/Building-the-App/01_InstallAS_Hedgehog.png)
-
-При первом запуске Android Studio, прогамма приветствует вас:
-
-![Добро пожаловать](../images/Building-the-App/02_Welcome_AS_Hedgehog.png)
-
-Выберите "Далее":
-
-![Выбор компонентов AS](../images/СборкаApp/03_choose_AS_components.png)
-
-Оставьте флажки отмеченными и выберите «Далее»:
-
-![Выберите расположение AS](../images/Building-the-App/04_AS_Install_location.png)
-
-Разрешите установку в директорию по умолчанию и выберите "Далее":
-
-![расположение смарт-меню AS](../images/Building-the-App/04_AS_Install_location.png)
-
-Когда появится запрос на выбор папки смарт-меню просто выберите "Install". Теперь нужно подождать несколько минут во время установки Android Studio. Затем вы увидите, что установка завершена, выберите "Далее":
-
-![установка завершена](../images/Building-the-App/06_Installation_Complete.png)
-
-Выберите "Готово":
-
-![завершите установку AS](../images/Building-the-App/07_CloseAS_Setup.png)
-
-Теперь запустите Android Studio.
-
-Если будет спрошено, хотите ли вы импортировать настройки, выберите «Не импортировать настройки». Мы не хотим импортировать настройки из предыдущих установок:
-
-![Не импортировать настройки](../images/studioSetup/01_ImportSettings.png)
-
-Решите, хотите ли вы обмениваться данными с Google (если не уверены, просто выберите "Не отсылать").
-
-![Делиться данными с Google](../images/Building-the-App/08_Googlesharedata.png)
-
-Теперь вы получите сообщение о недостающем пакете разработки ПО (SDK) (не волнуйтесь, скоро вопрос будет решен), выберите "Далее":
-
-![недостающий пакет SDK](../images/Building-the-App/09_MissingSDK.png)
-
-Программное обеспечение должно автоматически выбрать недостающие данные (SDK) и директорию установки.
-
-```{admonition} What is an Android SDK?
-:class: dropdown
-
-In order to run **AAPS** on the phone the application needs to integrate with Android itself. Android provides “_software development kits_” (SDK) which allow apps like **AAPS** to interface with an Android operating system.
+```{admonition} Different UI
+:class: warning
+Import note: Android Studio changed its UI during the last releases. This guide will show you the steps with the *new UI* in "Ladybug". If you still use the older UI, you might want to change Android Studio to the new UI first following [these instructions](NewUI).
 ```
 
-Пакет SDK относится **не** к версии Android на телефоне, а к самой сборке **AAPS**. **AAPS** версии 3.2 (и новее) строится поверх API 34, которая автоматически выбирается в версии **Hedgehog** **Android Studio**. Поэтому просто нажмите "Далее":
+Download the [current version of Android Studio](https://developer.android.com/studio) or an older version from the [**Archives**](https://developer.android.com/studio/archive) and accept the download agreements.
 
-![установка компонентов SDK](../images/Building-the-App/10_SDKComponents_setup.png)
+![DownloadAndroidStudio](../images/Building-the-App/010_DownloadLadybug.png)
 
-На запрос о проверке настроек, просто выберите "Далее":
+Once the download is finished, start the downloaded application to install it on your computer.
+You might need to accept/confirm some warnings about downloaded apps from Windows!
 
-![подтверждение настроек](../images/Building-the-App/11_Verify_settings.png)
+Install Android Studio by clicking "Next", as shown in the following screenshots. You do **not** need to change any settings!
 
-На запрос о Лицензионном Соглашении, выберите "Принять" и нажмите "Готово":
+![Welcome\_to\_Android\_Studio\_Setup](../images/Building-the-App/011_InstallLadybug.png)
 
-![лицензионное соглашение](../images/Building-the-App/12_Licence_agreement.png)
+![Choose\_components](../images/Building-the-App/012_InstallLadybug.png)
 
-> **_Примечание:_** В зависимости от вашей установки, принимаемые лицензии могут отличаться от того, что показано на снимке экрана.
+![Configuration\_Settings](../images/Building-the-App/013_InstallLadybug.png)
 
-Подождите, пока Android Studio загружает дополнительные компоненты, это может занять несколько минут:
+Now click on "Install":
 
-![загрузка компонентов](../images/Building-the-App/13_downloading_components.png)
+![Choose\_start\_Menu\_Folder](../images/Building-the-App/014_InstallLadybug.png)
 
-По завершении загрузки, кнопка "Готово" становится синей, и на нее можно нажать:
+Once it's completed, press "Next"
 
-![загрузка компонентов завершена](../images/Building-the-App/14_finished_downloading_components.png)
+![Installation\_Complete](../images/Building-the-App/015_InstallLadybug.png)
 
-Вас приветствует экран «Добро пожаловать в Android Studio».
+In the last step, click on "Finished" to start Android Studio for the first time.
 
-![Добро пожаловать\_AS](../images/Building-the-App/15_Welcome_AS.png)
+![Completing\_Android\_Studio\_Setup](../images/Building-the-App/016_InstallLadybug.png)
+
+You will be asked if you want to help improve Android Studio. Choose the option to your liking, it won't make any difference for the following steps.
+
+![Help\_improve\_Android\_Studio](../images/Building-the-App/020_ImproveAS.png)
+
+The welcome screen greets you to the installation of Android Studio. Press "Next".
+
+![Welcome](../images/Building-the-App/022_WelcomeAndroidStudioInstallation.png)
+
+Select "Standard" as installation type.
+
+![Install\_Type](../images/Building-the-App/023_DefaultInstallation.png)
+
+Verify the settings by clicking "Next" again.
+
+![Verify\_Settigns](../images/Building-the-App/024_DefaultInstallation.png)
+
+Now you need to accept the license agreements. You have two sections (1 + 3) on the left side which you have to select one after the other and each select "Accept" (2 + 4) on the right side.
+
+Then the "Finish" (5) button can be clicked.
+
+![License\_Agreement](../images/Building-the-App/025_LicenseAgreement.png)
+
+Some Android packages will now be downloaded and installed. Be patient and wait.
+
+When it's finished, you will find the following screen where you can select "Finish" again.
+
+![Downloading\_Components](../images/Building-the-App/026_DownloadFinished.png)
+
+You will now see the Welcome screen of Android Studio.
+
+![Welcome\_to\_Android\_Studio](../images/Building-the-App/031_WelcomeAndroidStudio.png)
 
 (Сборка-APK-загрузка-AAPS-кода)=
 
@@ -211,48 +197,47 @@ In order to run **AAPS** on the phone the application needs to integrate with An
 
 The first time **AAPS** is downloaded, Android Studio will connect over the internet to the Github website to download the source code for **AAPS**. This should take about 1 minute. 
 
-Android Studio will then use **Gradle** (a development tool in  Android studio) to identify other components needed to install these items on your computer. 
-
+Android Studio will then use **Gradle** (a development tool for Android apps) to identify other components needed to build these items on your computer. 
 ```
 
-На экране приветствия Android Studio убедитесь, что "**Проекты**" (1) подсвечены слева. Затем нажмите "**Получить из VCS**" (2) справа:
+На экране приветствия Android Studio убедитесь, что "**Проекты**" (1) подсвечены слева.
 
-![Получить из системы контроля версий\_VCS](../images/Building-the-App/16_Get_from_VCS.png)
+Затем нажмите "**Получить из VCS**" (2) справа:
 
-- Теперь мы скажем программе Android Studio, откуда получить код:
+![Get\_from\_VCS](../images/Building-the-App/032_GetVCS.png)
+
+Теперь мы скажем программе Android Studio, откуда получить код:
+
+![Get from Version Control](../images/Building-the-App/033_CloneGit.png)
 
 - Должен быть выбран "URL репозитория" (по умолчанию) слева (1).
 
 - В качестве системы управления версиями должен быть выбран "Git" (по умолчанию) (2).
 
-Теперь скопируйте URL-адрес:
+- Теперь скопируйте URL-адрес:
+  ```
+  https://github.com/nightscout/AndroidAPS.git
+   
+  Context | Edit Context
+  ```
+  и вставьте его в текстовое поле URL (3).
 
-```
-https://github.com/nightscout/AndroidAPS.git
- 
-Context | Edit Context
-```
+- Check the (default) directory for saving the cloned code exists on your computer and doesn't already exists (4). You can change it to some directoy, but please remember where you stored it!
 
-и вставьте его в текстовое поле URL (3).
-
-- Есть смысл проверить место сохранения клонированного кода (директорию по умолчанию) (4).
+- Теперь нажмите кнопку "Клонировать" (5).
 
 ```{admonition} INFORMATION
 :class: information
 Make a note of the directory. It is where your sourcecode is stored!
 ```
 
-- Теперь нажмите кнопку "Клонировать" (5).
-
-![Выберите\_URL](../images/Building-the-App/17_select_URL.png)
-
 Теперь вы увидите экран, сообщающий, что репозиторий клонируется:
 
-![репозиторий\_клонируется](../images/Building-the-App/18_cloning_repository.png)
+![cloning\_repository](../images/Building-the-App/034_CloningProgress.png)
 
-В какой-то момент вам будет задан вопрос, хотите ли вы доверять проекту. Нажмите на "Доверять проекту":
+At some point, Android Studio will close and start again. You may be asked whether you want to trust the project. Нажмите на "Доверять проекту":
 
-![Доверять проекту](../images/Building-the-App/18a_trust_project.png)
+![Trust project](../images/Building-the-App/035_TrustProject.png)
 
 Только для пользователей Windows: Если ваш брандмауэр запрашивает разрешение, предоставьте доступ:
 
@@ -260,23 +245,24 @@ Make a note of the directory. It is where your sourcecode is stored!
 
 После успешного клонирования репозитория, Android Studio откроет клонированный проект.
 
-Нажмите на шестерёнку вверху справа и выберите "**Переключиться на Классический интерфейс...**", чтобы вернуться к представлению, используемому в этой документации.
+(NewUI)=
 
-Если вы не видите этой шестеренки, не волнуйтесь. Вы уже используете классический интерфейс!
+```{admonition} New UI
+:class: information
+Android Studio changed its UI recently. New installations of Android Studio use the new UI by default!
 
-![Переключиться на классический интерфейс](../images/Building-the-App/OldUI.png)
+Only if your Android Studio looks different, you might need to switch to the new UI:
+Click on the hamburger menu on the top left, then select **Settings** (or **Preferences** on Apple computers).
+In **Appearance & Behaviour**, go to **New UI** and tick **Enable new UI**. Then restart Android Studio to start using it.
 
-Перезапустите Android Studio, чтобы изменения вступили в силу.
+If you don't find the option **New UI** don't worry: you are already using it!
+```
 
-![Подтверждение перезапуска Android Studio](../images/Building-the-App/18b_ConfirmRestartUI.png)
+When Android Studio opened, wait patiently (this may take a few minutes), and particularly, **do not** update the project as suggested in the pop-up.
 
-Вы можете получить одно или оба из следующих предупреждений о запущенных процессах. Их можно прекратить без опасений!
+Android Studio will start a "Gradle project sync" automatically, which will take a couple of minutes to finish. You can see it (still) running:
 
-![Подтверждение прервания фоновых процессов](../images/Building-the-App/18c_AbortBackgroundTasks.png) ![Подтверждение процесс импорта AndroidAPS](../images/Building-the-App/18d_AbortProcessImport.png)
-
-Когда Android Studio откроется снова, ждите (это может занять несколько минут) и **не** обновляйте проект в соответствии с предложением во всплывающем окне.
-
-![загрузка взаимозависимостей компонентов\_AS](../images/Building-the-App/19_downloading_dependencies.png)
+![AS\_download\_dependencies](../images/Building-the-App/036_GradleSyncing.png)
 
 ```{admonition} NEVER UPDATE GRADLE!
 :class: warning
@@ -284,46 +270,40 @@ Make a note of the directory. It is where your sourcecode is stored!
 Android Studio might recommend updating the gradle system. **Never update gradle!** This will lead to difficulties.
 ```
 
-_На ваше усмотрение_ - Если хотите очистить всплывающее окно **"рекомендуется обновить проект"**, нажмите на синий текст "Больше" (1). В диалоговом окне выберите "Don't rask for this project" (2).
+Only on windows computers: You might get a notification about windows defender running: Click on **Automatically** and confirm, it will make the build run faster!
 
-![AS\_закрытие\_окна\_gradle](../images/Building-the-App/20_close_popup.png)
+![Windows Defender](../images/Building-the-App/037_WindowsDefender.png)
 
-Только для пользователей Windows:
-Если вы не перезапустили компьютер после установки или обновления Git, закройте Android Studio сейчас. Затем перезагрузите компьютер и перезапустите Android Studio.
+You can leave the gradle sync running and follow the next steps already.
 
 (Сборка-APK-задать-путь-к-git-в-настройках) =
 
-### Задайте путь к git в параметрах Android Studio
+### Set Git path in Android Studio preferences
 
 Теперь мы скажем Android Studio, где найти Git, который был установлен [ранее](Install-Git).
 
-- Только для пользователей Windows: убедитесь, что вы перезагрузили компьютер после [установки Git](Install-Git).
-- Откройте **Android Studio** (ее можно найти через меню Пуск).
-- В левом верхнем углу **Android Studio** перейдите в _настройки_ (Windows) или _Android Studio > установки_ (Mac). Это откроет следующее окно, из выпадающего списка выберите "управление версиями" (1):
+- Только для пользователей Windows: убедитесь, что вы перезагрузили компьютер после [установки Git](Install-Git). If not, restart now and re-open Android Studio
 
-![управление версиями (VC)](../images/Строительство-App/21_AS_version_control.png)
+In the top left corner of **Android Studio**, open the hamburger menu and navigate to **File** > **Settings** (on Windows) or **Android Studio** > **Preferences** (on Mac).
+This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git**
 
-- Теперь выберите "**Git**" (2).
-- В нижней части середины страницы выберите метод обновления "Merge" (слияние) (3).
-- Проверьте, может ли Android Studio автоматически найти путь к файлу **git.exe**, нажав кнопку "Тест" (4):
+![Version\_control\_Git](../images/Building-the-App/038_SettingsGit.png)
 
-![путь\_к\_Git](../images/Building-the-App/22_Git_path.png)
+Check if **Android Studio** can automatically locate the correct **Path to Git executable** automatically by clicking the button "Test" (1):
 
-- Если автоматическая настройка прошла успешно, то рядом с путем к **Git** будет показана его версия.
+![Git Executable](../images/Building-the-App/039_GitTest.png)
 
-  ![Показана\_версия\_Git](../images/Building-the-App/23_Git__path_success.png)
+Если автоматическая настройка прошла успешно, то рядом с путем к **Git** будет показана его версия.
 
-- Если вы обнаружите, что \*\*git.exe \*\* не найден автоматически, или что нажатие кнопки "Проверить" приводит к ошибке (1), вы можете либо вручную ввести путь, который вы сохранили [ранее] (Make_a_note_of_Git_path), либо щелкнуть по значку папки (2) и вручную перейти к каталогу где хранится \*\*git.exe \*\*:
+![Git\_version\_displayed](../images/Building-the-App/039_GitTestSuccess.png)
 
-  ![Git не найден](../images/studioSetup/13_GitVersionError.png)
+If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error (1), you can either
 
-- Используйте [функцию поиска](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) в проводнике Windows, чтобы найти "git.exe", если не уверены, где был установлен git. Как это сделать, более подробно объясняется [выше](Make_a_note_of_Git_path).
+- manually enter the path which you saved [earlier](Make_a_note_of_Git_path), or
+- click on the folder icon (1) and manually navigating to the directory where **git.exe** was installed [earlier](Make_a_note_of_Git_path)
+- Verify your settings with the **Test** button!
 
-- Если вы выбрали его вручную, проверьте выбранный путь к Git кнопкой «Тест», как описано выше.
-
-Когда версия Git отображается рядом с его директорией (см. скриншот выше), вы успешно завершили этот этап и теперь можете закрыть окно "Настройки" Android Studio нажатием кнопки "**OK**" (5):
-
-![Путь\_к\_Git\_OK](../images/Building-the-App/23a_Git_path_OK.png)
+  ![Git not found](../images/Building-the-App/039_GitTestError.png)
 
 (Сборка-APK-генерировать-подписанный-apk)=
 
@@ -332,103 +312,102 @@ _На ваше усмотрение_ - Если хотите очистить в
 ```{admonition} Why does the AAPS app need to be "signed"?
 :class: dropdown
 
-Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
+Android requires each app to be _signed_, to ensure that it can only be updated later from the same trusted source that released the original app. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key). 
+
+For our purposes, this just means that we generate a signing or "keystore" file and use it when we build the **AAPS** app.
 ```
 
-- В строке меню нажмите кнопку "Создать" (1) и выберите "Генерировать подписанный пакет/APK (2)
+**Important: Make sure the gradle sync is finished successfully before proceeding!**
 
-![Создание apk](../images/Building-the-App/25_build_apk.png)
+Click the hamburger menu on the top left to open the menu bar.
+Select **Build** (1), then select **Generate Signed App Bundle / APK** (2)
 
-- Выберите "APK" вместо "Android App Bundle" и нажмите "Далее":
+![Build apk](../images/Building-the-App/040_GenerateSignedAPK.png)
 
-![APK вместо пакета](../images/Building-the-App/26_generate_APK.png)
+Выберите "APK" вместо "Android App Bundle" и нажмите "Далее":
 
-- На следующем экране убедитесь, что "Module" установлен в "AAPS.app" (1).
+![APK instead of bundle](../images/Building-the-App/041_APK.png)
+
+На следующем экране убедитесь, что "Module" установлен в "AAPS.app" (1).
 
 (Building-APK-wearapk)=
 
 ```{admonition} INFORMATION!
-:class: информация
-Если вы хотите создать apk для часов, следует выбрать AAPS.wear!
+:class: information
+If you want to create the apk for your watch, you now need to select AAPS.wear!
 ```
 
-- Нажмите "Создать новый..." (2) для создания хранилища ключей.
+![Create\_key\_store](../images/Building-the-App/042_CreateNewKey.png)
+
+Нажмите "Создать новый..." (2) для создания хранилища ключей.
 
 ```{admonition} INFORMATION!
 :class: information
 You will only need to create the keystore once.
-If you have build AAPS before, do NOT create a new keystore but select your existing one!
+If you have build AAPS before, do NOT create a new keystore but select your existing one and enter its passwords!
 ```
 
 **_Примечание:_** Хранилище ключей - это файл, в котором хранится информация о подписи приложения. Он зашифрован и информация защищена паролями.
 
-![Создание\_хранилища\_ключей](../images/Строительство-App/27_new_keystore.png)
+![Create key store](../images/Building-the-App/043_Keystore.png)
 
-- Нажмите на символ папки и выберите путь к хранилищу ключей:
+- Click the "folder" symbol (1) to select a path on your computer for your key store.
 
-![Создание\_хранилища\_ключей](../images/Building-the-App/28_new_keystore.png)
-
-- Нажмите на раскрывающееся меню (1), чтобы выбрать место файла хранилища ключей. В этом примере он сохраняется в "Моих документах" (2). Не размещайте хранилище ключей в ту же папку, что и файлы Android Studio (StudioProject). Введите имя файла хранилища ключей (3) и подтвердите, нажав "OK" (4):
-
-![Создание\_хранилища\_ключей](../images/Building-the-App/29_choose_keystore_file.png)
-
-Вернёмся на предыдущий экран. Здесь показано выбранное вами расположение для сохранения файла хранилища ключей.
+  Do **not** use the directory where you stored your sourcecode but some directory that you would also transfer to a new computer.
 
 ```{admonition} WARNING!
 :class: warning
 Make sure to note down for yourself where your keystore is stored. You will need it when you build the next AndroidAPS update!
 ```
 
-Теперь выберите простой пароль (запишите его), введите в поле пароля (1), и подтвердите (2).  Примечание: Пароли для хранилища ключей и ключей не должны быть сложными. Если вы потеряете пароль, смотрите [решение проблем при потере ключей](troubleshooting_androidstudio-lost-keystore).
+- Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
 
-По умолчанию псевдоним (3) для вашего ключа это "key0", оставьте его без изменений.
+  Примечание: Пароли для хранилища ключей и ключей не должны быть сложными. Если вы потеряете пароль, смотрите [решение проблем при потере ключей](troubleshooting_androidstudio-lost-keystore).
 
-Теперь вам нужен пароль для ключа. Для простоты можете использовать тот же пароль, что и для хранилища ключей выше. Введите пароль (4) и подтвердите (5).
+- По умолчанию псевдоним (3) для вашего ключа это "key0", оставьте его без изменений.
+
+- Теперь вам нужен пароль для ключа. Для простоты можете использовать тот же пароль, что и для хранилища ключей выше. Enter a password (4) and confirm it.
 
 ```{admonition} WARNING!
 :class: warning
 Note down these passwords! You will need them when you build the next AAPS update!
 ```
 
-Срок действия (6) 25 лет по умолчанию, оставьте его как есть.
+- The validity is 25 years by default, leave it as it is.
 
-Введите имя и фамилию (7). Другой информации не нужно.
+- Enter your first and last name (5). No other information needs to be added but you are free to do (6-7).
 
-Нажмите "OK" (8), чтобы продолжить:
+- Нажмите "OK" (8), чтобы продолжить:
 
-![Выберите путь к хранилищу ключей](../images/Building-the-App/30_new_keystore.png)
+On the **Generate signed App Bundle or APK** page, the path to your keystore will now be displayed. Now re-enter the Key Store password (1) and Key password (2), and tick the box (3) to remember passwords, so you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version). Нажмите "Далее" (4):
 
-На странице "Генерировать подписанный пакет или APK" теперь будет показан путь к вашему хранилищу. Теперь повторно введите пароль хранилища ключей (1) и пароль ключа (2) и установите флажок запоминать пароли (3), чтобы не пришлось вводить их снова при следующей сборке apk (или при обновлении до новой версии AAPS). Нажмите "Далее" (4):
+![Remember passwords](../images/Building-the-App/044_RememberPwd.png)
 
-![Запомните пароли](../images/Building-the-App/31_generate_APK.png)
+On the next screen, select build variant "fullRelease" (2) and click "Create" (3). You should remember the directory displayed at (1), as later you will find your built apk file there!
 
-На следующем экране выберите вариант сборки "fullRelease" (1) и нажмите "Create " (создать) (2).
+![Select build variant](../images/Building-the-App/045_BuildPath.png)
 
-![Выберите вариант сборки](../images/Building-the-App/32_full_release.png)
+Android Studio теперь создаст приложение **AAPS** apk. It will show "Gradle Build running" (2) at the bottom right. The process takes some time, depending on your computer and internet connection, so **be patient!** If you want to watch the progress of the build, click on the small hammer "build" (1) at the bottom of Android Studio:
 
-Android Studio теперь создаст приложение **AAPS** apk. В правом нижнем углу появится сообщение "Gradle Build running". Процесс занимает некоторое время, в зависимости от вашего компьютера и подключения к Интернету, \*\* наберитесь терпения!\*\* Если хотите следить за ходом сборки, нажмите на маленький молоточек "build" внизу Android Studio:
-
-![Выполняется Gradle](../images/Building-the-App/33_Studio_building1.png)
+![Gradle Running](../images/Building-the-App/046_BuildRunning.png)
 
 Теперь вы можете наблюдать за ходом построения приложения:
 
-![Android Studio выполняет сборку приложения](../images/Building-the-App/34_Studio_building2.png)
+![Android\_Studio\_building](../images/Building-the-App/047_BuildDetails.png)
 
-После завершения сборки Android Studio выведет сообщение "СБОРКА ЗАВЕРШЕНА УСПЕШНО.". Вы увидите всплывающее уведомление, на которое можете нажать, чтобы найти файл ("locate"). Если вы пропустили этот момент, нажмите на уведомление "найти или анализировать APK" (выделено желтым цветом) в самом низу экрана, чтобы открыть уведомления:
+После завершения сборки Android Studio выведет сообщение "СБОРКА ЗАВЕРШЕНА УСПЕШНО.". Вы увидите всплывающее уведомление, на которое можете нажать, чтобы найти файл ("locate"). If you miss this, click on the notification icon (1) and then on **locate** (2) at the very bottom of the screen to bring up the Notifications:
 
-![Сборка завершена](../images/Building-the-App/35_Studio__built_success.png)
+![Build finished](../images/Building-the-App/049_ReopenNotification.png)
 
-_Если сборка не удалась, обратитесь к разделу [Проблемы и их решения](../Installing-AndroidAPS/troubleshooting_androidstudio)._
+_If the build was not successful, refer to the [Android Studio Troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio)._
 
 В окне Уведомления нажмите на синюю ссылку "locate":
 
-![Найти сборку](../images/Building-the-App/35_Studio__built_locate.png)
-Откроется файловый менеджер. Перейдите в директорию "full" (1) > "release" (2).
+![Locate build](../images/Building-the-App/048_BuildFinished.png)
+Your file manager will open and show you the build apk file that you have just built.
 
-![Определение местонахождения файла apk](../images/Building-the-App/36_locate_apk.png)
+![File location apk](../images/Building-the-App/050_LocateAPK.png)
 
-Откройте папку "release". Файл "app-full-release.apk" (1) - это только что созданный apk-файл **APPS**, в следующем разделе документации описано как перенести этот файл на телефон:
+Поздравляем! Now you have built the **AAPS** apk file, you will be transferring this file to your smartphone in the next section of the docs.
 
-![файл приложения_apk(../images/Building-the-App/37_full_release_apk.png)
-
-Поздравляем! Теперь вы создали **AAPS** apk и можете перейти к следующему этапу [Перенос и Установка **AAPS**](Transferring-and-installing-AAPS.md).
+Move to the next stage of [Transferring and Installing **AAPS**](Transferring-and-installing-AAPS.md).

@@ -29,7 +29,8 @@ Der Gradle Sync kann aus verschiedenen Gründen fehlschlagen. Falls Du einen Hin
 Das sind die üblichen Gradle Sync Fehler:
 * [Uncommitted changes](troubleshooting_androidstudio-uncommitted-changes)
 * [No cached version of ... available](troubleshooting_androidstudio-could-not-resolve-no-cached-version)
-* [Android Gradle requires Java 11 to run](troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)
+* [Incompatible Gradle JVM](incompatible-gradle-jvm)
+* [Incompatible version of the Android Gradle plugin](incompatible-version-of-android-gradle-plugin)
 
 *Wichtig*: Nachdem Du die Anleitung zum Beheben deines Problems befolgt hast, ist es notwendig den [Gradle Sync](troubleshooting_androidstudio-gradle-resync) erneut anzustoßen.
 
@@ -100,10 +101,30 @@ Falls Du eine Fehlermeldung bekommst, die so aussieht
 
 #### Schritt 3: Resync Gradle (erneut)
 
-Folge der Anleitung bei [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync).
+Follow the instructions at [Gradle Resync](gradle-resync).
 
 (troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
+(incompatible-gradle-jvm)=
+### Incompatible Gradle JVM
+
+![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png) If you experience the following error message, you need to download a correct JVM version before you can try again:
+* Open the gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
+
+![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
+
+* Open the **Gradle JDK** options, then select **Download JDK...**
+
+![Select Download JDK](../images/studioTroubleshooting/162_DownloadJDK.png)
+
+* At **Version** (1), you need to select **17**. Then select the **JetBrains Runtime** from the **Vendor** (2) options. Do not change the **Location** (3).
+
+![Select JDK 17](../images/studioTroubleshooting/163_JDKSelection.png)
+
+* Close the **Settings** dialog with **OK**.
+* You now need to restart the Gradle Sync. Follow the instructions at [Gradle Resync](gradle-resync).
+
+(incompatible-version-of-android-gradle-plugin)=
 ### Inkompatibilität der Android Gradle Plugin Version
 
   Wenn Du die folgende Fehlermeldung erhältst,
@@ -112,30 +133,7 @@ Folge der Anleitung bei [Gradle Resync](troubleshooting_androidstudio-step-3-gra
 
   nutzt Du eine veraltete Version des Android Studios. Gehe im Menü zu Help > Check for updates und installiere die neueste Version des Android Studios und deren Plugins.
 
-### Das Android Gradle Plugin benötigt Java 17
-
-  Wahrscheinlich bekommst du diese Fehlermeldung:
-
-  ![Das Android Gradle Plugin benötigt Java 17](../images/studioTroubleshooting/11_GradleJDK.png)
-
-  Klicke auf "Gradle Settings" (1), um die Gradle Einstellungen zu öffnen.
-
-  Falls du den Link zu den "Gradle Settings" nicht hast, öffne die Gradle Settings manuell, indem du den Gradle Tab am rechten Rand von Android Studio auswählst (1). Wähle dann das Werkzeug Icon (2) und dort das Element "Gradle Settings" (3).
-
-  ![Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
-
-  Wenn Du die "Gradle settings" geöffnet hast, öffne die Optionen (1) unter "Gradle JDK" und wähle "jbr-17" (2) aus, das sich im Android Studio Installations-Ordner befinden sollte.
-
-  ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
-
-  Klicke "OK" um die Einstellungen zu speichern und schließen.
-
-  *Wichtig*: Falls Du die Einstellung "Gradle JDK" nicht siehst, hast Du Android Studio wahrscheinlich nicht upgedatet. Bitte nutze Android Studio 2022.3 Giraffe) oder neuer.
-
-  Jetzt ist es notwendig einen [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync) auszulösen
-
 (troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
-
 ### Could not resolve/No cached version
 
   Wahrscheinlich siehst Du diese Fehlermeldung:
@@ -148,19 +146,18 @@ Folge der Anleitung bei [Gradle Resync](troubleshooting_androidstudio-step-3-gra
 
     ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Jetzt ist es notwendig einen [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync) auszulösen
+  * Now you need to trigger a [Gradle Resync](gradle-resync)
 
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### Unable to start daemon process
 
-  Wenn Du eine Fehlermeldung wie die unten siehst, verwendest Du wahrscheinlich ein Windows 10 32-Bit-Betriebssystem. Dies wird von Android Studio Version 3.5.1 und höher nicht unterstützt und daran können die AAPS Entwickler leider nichts ändern.
-
-  Falls du Windows 10 verwendest, brauchst du ein 64-bit Betriebssystem.
+  Wenn Du eine Fehlermeldung wie die unten siehst, verwendest Du wahrscheinlich ein Windows 10 32-Bit-Betriebssystem. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about!
 
   Es gibt im Internet eine Reihe von Anleitungen (wie z.B. [diese](https://support.microsoft.com/en-us/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d)), die beschreiben, wie Du herausfindest, ob Du ein 32-Bit oder 64-Bit Betriebssystem hast.
 
   ![Screenshot konnte den Daemon-Prozess nicht starten](../images/AndroidStudioWin10_32bitError.png)
 
+(gradle-resync)=
 ### Gradle Resync
 
   Falls Du immer noch den Hinweis sehen kannst, dass der Gradle sync fehlgeschlagen ist, wähle den Link "Try again".  ![Gradle Sync fehlgeschlagen Modus](../images/studioTroubleshooting/01_GradleSyncFailed.png)

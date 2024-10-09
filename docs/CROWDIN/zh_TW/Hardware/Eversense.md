@@ -21,23 +21,23 @@
 從 Eversense 應用程式通知中讀取資料（自 ESEL 版本 3.0.1 起可與標準 Eversense 應用程式一起使用）。
 
 1. 使用來自 Google Play 商店的官方 Eversense 應用程式
-   - 選擇性操作，但若需回填則必須：登錄您的 Eversense 帳號
+   - 選擇性操作，但若需回填則必須：登錄你的 Eversense 帳號
    - 在同步中，啟用自動同步功能
 2. ESEL 設定：
    - 停用「從修改版 Eversense 應用程式獲取資料」設置
    - 若需回填：啟用「從 eversensedms.com 填補遺漏資料」
-   - 輸入您的 Eversense 登錄資料作為電子郵件地址和密碼
+   - 輸入你的 Eversense 登錄資料作為電子郵件地址和密碼
 3. 在[ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source)中將「MM640g」設為血糖來源。
 
 ### 修改版 Eversense 應用程式
 
  需要修改版的 Eversense 應用程式（完全離線運作，包括回填）。
 
-1. 卸載 Eversense 應用程式（警告：您將丟失超過 1 週的本地歷史資料！）
+1. 卸載 Eversense 應用程式（警告：你將丟失超過 1 週的本地歷史資料！）
 
 2. 安裝[修改版 Eversense 應用程式](https://cr4ck3d3v3r53n53.club)並按照供應商的描述進行使用。
 
-   - 啟動 Eversense 應用程式，登錄，連線到您的傳輸器，並像使用正常應用程式一樣使用它。
+   - 啟動 Eversense 應用程式，登錄，連線到你的傳輸器，並像使用正常應用程式一樣使用他。
 
 3. ESEL 設定：
 
@@ -47,7 +47,7 @@
 
 ![ESEL 廣播](../images/ESELpatch.png)
 
-如果您首次安裝 Eversense 並運作 ESEL，可能需要長達 15 分鐘才能在 xDrip 中顯示第一個數值！
+如果你首次安裝 Eversense 並運作 ESEL，可能需要長達 15 分鐘才能在 xDrip 中顯示第一個數值！
 
 4. 在[ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source)中將「MM640g」設為血糖來源。
 
