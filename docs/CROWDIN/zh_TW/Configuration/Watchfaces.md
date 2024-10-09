@@ -333,13 +333,13 @@ Jelikož nemůžeme kompromitovat komunikaci (potřebujeme aktuální data) a ch
 
 在[Garmin ConnectIQ 商店](https://apps.garmin.com/en-US/search?keyword=glucose&device=&deviceLimit=&appType=&sort=&start=0&count=30)上，有幾款與 xDrip 或 Nightscout 整合的 Garmin 手錶面。
 
-AAPS Glucose Watch 可直接與 AAPS 整合。 它顯示循環狀態資料（活性胰島素、臨時基礎率），除了顯示血糖讀取值外，還會將心率讀取值發送到 AAPS。 它可在 ConnectIQ 商店中取得，所需的 AAPS 外掛從 AAPS 3.2 版本起提供。
+AAPS Glucose Watch 可直接與 AAPS 整合。 他顯示循環狀態資料（活性胰島素、臨時基礎率），除了顯示血糖讀取值外，還會將心率讀取值發送到 AAPS。 他可在 ConnectIQ 商店中取得，所需的 AAPS 外掛從 AAPS 3.2 版本起提供。
 
 ![螢幕截圖](../images/Garmin_WF.png) ![螢幕截圖](../images/Garmin_WF-annotated.png)
 
 ## Další vlastní AAPS ciferníky jsou také k dispozici
 
-您可以在此下載由其他用戶建立的自訂錶盤 Zip 檔：
+你可以在此下載由其他用戶建立的自訂錶盤 Zip 檔：
 
 Pokud chcete vytvořit vlastní ciferník, řiďte se [tímto průvodcem](../Usage/Custom_Watchface_Reference.md).
 
