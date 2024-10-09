@@ -1,6 +1,6 @@
 # 幫浦選擇
 
-AAPS 支援多種胰島素幫浦。 以下列表顯示目前支援的裝置，並指出 AAPS 是使用您手機的原生藍牙功能與幫浦連線，還是需要一個 Rileylink 相容裝置（以括號標示）。
+AAPS 支援多種胰島素幫浦。 以下列表顯示目前支援的裝置，並指出 AAPS 是使用你手機的原生藍牙功能與幫浦連線，還是需要一個 Rileylink 相容裝置（以括號標示）。
 
 - [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)（藍牙；舊驅動程式，使用額外的 Ruffy 應用程式）
 - [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md)（藍牙；新驅動程式，從 AndroidAPS v.3.2 開始可用）
