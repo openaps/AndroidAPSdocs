@@ -1,7 +1,7 @@
 (Releasenotes-release-notes)=
 # 版本更新說明
 
-請按照[更新手冊](../Installing-AndroidAPS/Update-to-new-version.md)中的說明進行操作。 你還可以在更新手冊頁面找到關於常見更新問題的故障排除部分。
+請按照[更新手冊](../Installing-AndroidAPS/Update-to-new-version.md)中的說明進行操作。 你還可以在更新手冊頁面找到關於常見更新問題的問題排除部分。
 
 當有新版本可用時，你將收到以下資訊：
 
