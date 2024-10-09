@@ -1,7 +1,7 @@
 # 遠端控制 AAPS
 有四種非常有效的工具可以遠端管理 **AAPS**：
 
-1) [SMS 指令](sms-commands)（追蹤者的手機可以是 Android 或 iOS），2) [AAPSClient](aapsclient)（追蹤者的手機是 Android）3) [Nightscout](nightscout)（Android、iOS 或其他電腦/設備），4) [智慧型手錶](smartwatches)（Android）
+1) [SMS 指令](sms-commands)（追蹤者的手機可以是 Android 或 iOS） 2) [AAPSClient](aapsclient)（追蹤者的手機是 Android） 3) [Nightscout](nightscout)（Android、iOS 或其他電腦/設備） 4) [智慧型手錶](smartwatches)（Android）
 
 前三個工具主要適合照顧者/父母使用，但智慧型手錶對於照顧者/父母以及糖尿病患者自己都非常有用。
 
@@ -376,7 +376,7 @@ Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout**
 
 ![圖像](images/remote-control-25.png)
 
-向下滾動到“設置”。 你可能會想將 血糖 顯示的“比例”設置為“線性”，因為預設值是對數比例，並在“渲染基礎率”下選擇“預設”以顯示幫浦的基礎率。 繼續向下滾動直到找到“顯示外掛”。 你需要確保已勾選“照護入口”，還可以選擇其他有用的指標（最常用的包括：IOB、照護入口、幫浦、套管齡、胰島素齡、基礎率設定和 OpenAPS）。
+向下滾動到“設置”。 你可能會想將 血糖 顯示的“比例”設置為“線性”，因為預設值是對數比例，並在“渲染基礎率”下選擇“預設”以顯示幫浦的基礎率。 繼續向下滾動直到找到“顯示外掛”。 你需要確保已勾選“照護入口”，還可以選擇其他有用的指標（最常用的包括：IOB、照護入口、幫浦、套管時間、胰島素時間、基礎率設定和 OpenAPS）。
 
 ![圖像](images/remote-control-26.png)
 
