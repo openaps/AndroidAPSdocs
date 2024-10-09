@@ -1,10 +1,10 @@
 # Freestyle Libre 1
 
-要將您的 Libre 用作 CGM，每 5 分鐘獲取一次新的血糖值，而無需掃描傳感器，您需要購買一個 NFC 到藍牙橋接器（基於已過時的[LimiTTer](https://github.com/JoernL/LimiTTer) 項目的商用設備）。
+要將你的 Libre 用作 CGM，每 5 分鐘獲取一次新的血糖值，而無需掃描傳感器，你需要購買一個 NFC 到藍牙橋接器（基於已過時的[LimiTTer](https://github.com/JoernL/LimiTTer) 項目的商用設備）。
 
 ```{admonition} Libre 2, Libre 1 US and Libre Pro
 :class: warning
-驗證橋接和您想要使用的應用程式是否與您的感測器相容。  
+驗證橋接和你想要使用的應用程式是否與你的感測器相容。  
 ```
 
 市場上有幾款橋接器可供選擇：
@@ -23,15 +23,15 @@
 ## 1. 使用 xDrip+
 
 -   xDrip+ 支援 MiaoMiao、Bubble、Blucon、Atom 和 LibreAlarm。
--   除非您需要最新功能，否則可以安全下載[最新 APK（穩定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)，在這種情況下，您應該使用最新的[Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases)。
+-   除非你需要最新功能，否則可以安全下載[最新 APK（穩定版）](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)，在這種情況下，你應該使用最新的[Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases)。
 -   按照[xDrip+ 設定頁面](../Configuration/xdrip.md)上的設置說明進行操作。
--    您還需要適用於 Libre 1 US（和 Libre 2 EU）的[OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)。
+-    你還需要適用於 Libre 1 US（和 Libre 2 EU）的[OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)。
 -   在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
 
 ## 2. 使用 Glimp
 
 -   Glimp 支援 Miaomiao、Blucon 和 Bubble 用於 Libre 1 和 Libre 2 EU。
--   您需要 Glimp 版本 4.15.57 或更新版本。 舊版本不支援。
+-   你需要 Glimp 版本 4.15.57 或更新版本。 舊版本不支援。
 -   安裝 [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia)。
 -   在 [ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source) 中選擇 Glimp。
 
