@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-
   workflow_dispatch:
 
 jobs:
@@ -47,7 +46,7 @@ jobs:
         run: |
           cd ${{ env.DOC_PATH }}
           sphinx-build -T -E -n -v -w build_log.txt -q -b html -d _build/doctrees . _build/html
-      
+
       - name: Store build log
         uses: actions/upload-artifact@v2
         with:
