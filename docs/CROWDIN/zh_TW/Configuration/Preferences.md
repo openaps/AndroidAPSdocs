@@ -4,7 +4,7 @@
 
   ![打開偏好設定](../images/Pref2020_Open2.png)
 
-- 您可以直接跳至某個頁籤（例如幫浦頁籤）的偏好設定，方法是打開該頁籤並點擊外掛偏好設定。
+- 你可以直接跳至某個頁籤（例如幫浦頁籤）的偏好設定，方法是打開該頁籤並點擊外掛偏好設定。
 
   ![打開外掛偏好設定](../images/Pref2020_OpenPlugin2.png)
 
@@ -12,7 +12,7 @@
 
   ![打開子選單](../images/Pref2020_Submenu2.png)
 
-- 在偏好設定畫面頂部使用**篩選**功能，您可以快速查看特定偏好設定。 只需開始輸入您要查找的文本的一部分。
+- 在偏好設定畫面頂部使用**篩選**功能，你可以快速查看特定偏好設定。 只需開始輸入你要查找的文本的一部分。
 
   ![偏好設定篩選器](../images/Pref2021_Filter.png)
 
@@ -28,20 +28,20 @@
 
 **單位**
 
-- 根據您的偏好設定單位為 mmol/l 或 mg/dl。
+- 根據你的偏好設定單位為 mmol/l 或 mg/dl。
 
 **語言**
 
 - 新增選項可使用手機的預設語言（推薦）。
 
-- 如果您希望 AAPS 使用不同於手機的標準語言，可以選擇多種語言。
+- 如果你希望 AAPS 使用不同於手機的標準語言，可以選擇多種語言。
 
-- 如果您使用多種語言，有時可能會看到語言混合的情況。 這是由於 Android 系統的問題，無法覆蓋 Android 預設語言。
+- 如果你使用多種語言，有時可能會看到語言混合的情況。 這是由於 Android 系統的問題，無法覆蓋 Android 預設語言。
 
 
 **患者名稱**
 
-- 如果您需要區分多個設置（例如家中有兩個 T1D 小孩），可以使用此功能。
+- 如果你需要區分多個設置（例如家中有兩個 T1D 小孩），可以使用此功能。
 
 (Preferences-protection)=
 ### 保護
@@ -66,31 +66,31 @@
 
 #### 設定保護
 
-- 可使用密碼或手機的生物辨識驗證來保護您的設定（例如[小孩正在使用 AAPS](../Children/Children.md)）。
+- 可使用密碼或手機的生物辨識驗證來保護你的設定（例如[小孩正在使用 AAPS](../Children/Children.md)）。
 
-- 如果您只希望使用主密碼保護[匯出的設定](../Usage/ExportImportSettings.md)，可以設定自定密碼。
+- 如果你只希望使用主密碼保護[匯出的設定](../Usage/ExportImportSettings.md)，可以設定自定密碼。
 
-- 如果您使用自定密碼，請點擊「設定密碼」來設置密碼，如上文[所述](Preferences-master-password)。
+- 如果你使用自定密碼，請點擊「設定密碼」來設置密碼，如上文[所述](Preferences-master-password)。
 
   ![保護](../images/Pref2020_Protection.png)
 
 #### 應用程式保護
 
-- 如果應用程式受到保護，您必須輸入密碼或使用手機的生物辨識驗證才能打開 AAPS。
+- 如果應用程式受到保護，你必須輸入密碼或使用手機的生物辨識驗證才能打開 AAPS。
 - 若輸入錯誤密碼，應用程式將立即關閉，但如果先前已成功打開，則仍會在背景中運作。
 
 #### 注射保護
 
-- 如果 AAPS 是由小孩使用，並且您[透過 SMS 進行注射](../Children/SMS-Commands.md)，注射保護功能可能會有用。
+- 如果 AAPS 是由小孩使用，並且你[透過 SMS 進行注射](../Children/SMS-Commands.md)，注射保護功能可能會有用。
 
-- 在下圖示例中，您會看到生物辨識保護提示。 如果生物辨識驗證無法運作，請點擊白色提示上方的空白處並輸入主密碼。
+- 在下圖示例中，你會看到生物辨識保護提示。 如果生物辨識驗證無法運作，請點擊白色提示上方的空白處並輸入主密碼。
 
   ![提示生物辨識保護](../images/Pref2020_PW.png)
 
 (Preferences-skin)=
 #### 外觀
 
-- 您可以從四種類型的外觀中選擇：
+- 你可以從四種類型的外觀中選擇：
 
   ![選擇外觀](../images/Pref2021_SkinWExample.png)
 
@@ -105,7 +105,7 @@
 
 ##### 橫向顯示
 
-- 使用**原始外觀**與**大顯示**時，您需要向下捲動才能看到螢幕底部的按鈕
+- 使用**原始外觀**與**大顯示**時，你需要向下捲動才能看到螢幕底部的按鈕
 
 - **顯示(大)**的所有圖表大小均較其他外觀增大
 
@@ -114,7 +114,7 @@
 (Preferences-overview)=
 ## 首頁總覽
 
-- 在首頁總覽部分中，您可以定義主畫面的偏好設定。
+- 在首頁總覽部分中，你可以定義主畫面的偏好設定。
 
   ![偏好設定 > 首頁總覽](../images/Pref2020_OverviewII.png)
 
@@ -130,7 +130,7 @@
 
   ![偏好設定 > 按鈕](../images/Pref2020_OV_Buttons.png)
 
-- 使用遞增數字，您可以定義三個按鈕在碳水化合物和胰島素對話框中的數量，以便於輸入。
+- 使用遞增數字，你可以定義三個按鈕在碳水化合物和胰島素對話框中的數量，以便於輸入。
 
   ![偏好設定 > 按鈕 > 胰島素](../images/Pref2020_OV_Buttons2.png)
 
@@ -228,23 +228,23 @@
 
 ### 病人類型
 
-- 安全限制是根據您在此設置中選擇的年齡設定的。
-- 如果您開始觸及這些嚴格的限制（如最大注射量），那麼是時候提升一步了。
+- 安全限制是根據你在此設置中選擇的年齡設定的。
+- 如果你開始觸及這些嚴格的限制（如最大注射量），那麼是時候提升一步了。
 - 選擇高於實際年齡是不好的主意，因為這可能會導致輸入胰島素對話框中錯誤的值（例如跳過小數點），從而導致過量注射。
-- 如果您想知道這些硬編碼的安全限制的實際數字，請滾動到您在[這個頁面](../Usage/Open-APS-features.md)上使用的算法功能。
+- 如果你想知道這些硬編碼的安全限制的實際數字，請滾動到你在[這個頁面](../Usage/Open-APS-features.md)上使用的算法功能。
 
 ### 允許的最大注射量 \[U\]
 
 - 定義AAPS允許一次輸送的最大注射胰島素量。
 - 此設置作為安全限制，防止因意外輸入或用戶錯誤而導致大量注射。
-- 建議將此設置為合理的數量，大致對應於您可能在一餐或校正劑量中需要的最大注射胰島素量。
+- 建議將此設置為合理的數量，大致對應於你可能在一餐或校正劑量中需要的最大注射胰島素量。
 - 這個限制也適用於注射計算機的結果。
 
 ### 允許的最大碳水化合物量 \[g\]
 
 - 定義AAPS注射計算機允許的最大碳水化合物量。
 - 此設置作為安全限制，防止因意外輸入或用戶錯誤而導致大量注射。
-- 建議將此設置為合理的數量，大致對應於您可能在一餐中需要的最大碳水化合物量。
+- 建議將此設置為合理的數量，大致對應於你可能在一餐中需要的最大碳水化合物量。
 
 ## 循環
 
@@ -252,28 +252,28 @@
 ### APS模式
 
 - 在開環和閉環以及低血糖暫停（LGS）之間切換
-- **開環**意味著根據您的資料給出臨時基礎率（TBR）建議，並作為通知顯示。 經手動確認後，注射指令將傳輸到幫浦。 只有在使用虛擬幫浦時，才需要手動輸入。
-- **閉環**意味著TBR建議會自動發送到您的幫浦，無需您的確認或輸入。
-- **低血糖暫停**類似於閉環，但會將maxIOB設置覆蓋為零。 這意味著如果血糖下降，它可以減少基礎率，但如果血糖上升，則僅在基礎IOB為負數時（如來自之前的低血糖暫停）才會增加基礎率。
+- **開環**意味著根據你的資料給出臨時基礎率（TBR）建議，並作為通知顯示。 經手動確認後，注射指令將傳輸到幫浦。 只有在使用虛擬幫浦時，才需要手動輸入。
+- **閉環**意味著TBR建議會自動發送到你的幫浦，無需你的確認或輸入。
+- **低血糖暫停**類似於閉環，但會將maxIOB設置覆蓋為零。 這意味著如果血糖下降，他可以減少基礎率，但如果血糖上升，則僅在基礎IOB為負數時（如來自之前的低血糖暫停）才會增加基礎率。
 
 (Preferences-minimal-request-change)=
 ### 最小請求變更 \[%\]
 
 - 使用開放循環時，當 AAPS 建議調整基礎率時，你會收到通知。
-- 為減少通知數量，您可以使用更寬的血糖目標範圍或增加最小請求率的百分比。
+- 為減少通知數量，你可以使用更寬的血糖目標範圍或增加最小請求率的百分比。
 - 這定義了觸發通知所需的相對變更。
 
 (Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)=
 ## 進階餐前注射助手（AMA）或超微量注射（SMB）
 
-根據您的設置在[組態建置工具](../Configuration/Config-Builder.md)中，您可以在兩種算法之間進行選擇：
+根據你的設置在[組態建置工具](../Configuration/Config-Builder.md)中，你可以在兩種算法之間進行選擇：
 
 - [進階餐前注射助手（OpenAPS AMA）](Open-APS-features-advanced-meal-assist-ama) - 2017年的算法狀態
 - [超微量注射（OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - 最推薦給初學者的最新算法
 
 ### OpenAPS AMA設置
 
-- 如果您可靠地輸入碳水化合物，則系統允許在注射餐後更快速地高溫調整。
+- 如果你可靠地輸入碳水化合物，則系統允許在注射餐後更快速地高溫調整。
 - 有關設置和自動感應的更多細節，請參閱[OpenAPS 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)。
 
 (偏好設定-max-u-h-a-temp-basal-可以設置為)=
@@ -281,55 +281,55 @@
 
 - 作為安全限制存在，防止AAPS給予危險高的基礎率。
 - 該值以每小時單位（U/h）測量。
-- 建議將此設為合理的數值。 一個好的建議是取您的**最高基礎率**，並**將其乘以4**。
-- 例如，如果您的最高基礎率為0.5 U/h，您可以將其乘以4得到2 U/h的值。
+- 建議將此設為合理的數值。 一個好的建議是取你的**最高基礎率**，並**將其乘以4**。
+- 例如，如果你的最高基礎率為0.5 U/h，你可以將其乘以4得到2 U/h的值。
 - 另見[詳細功能描述](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal)。
 
 #### OpenAPS可以輸送的最大基礎IOB \[U\]
 
-- 允許在您的身體中累積的額外基礎胰島素（以單位計），超出您的正常基礎配置。
-- 一旦此值達到，AAPS將停止給予額外的基礎胰島素，直到您的基礎胰島素庫存（IOB）衰減回該範圍內。
+- 允許在你的身體中累積的額外基礎胰島素（以單位計），超出你的正常基礎配置。
+- 一旦此值達到，AAPS將停止給予額外的基礎胰島素，直到你的基礎胰島素庫存（IOB）衰減回該範圍內。
 - 此值**不考慮注射IOB**，僅考慮基礎。
-- 此值是根據您的正常基礎率獨立計算和監控的。 僅考慮超出正常率的額外基礎胰島素。
+- 此值是根據你的正常基礎率獨立計算和監控的。 僅考慮超出正常率的額外基礎胰島素。
 
-當您開始循環時，**建議將最大基礎IOB設為0**一段時間，同時您在適應系統。 這可以防止AAPS給予任何額外的基礎胰島素。 在此期間，AAPS仍然可以限制或關閉您的基礎胰島素以幫助防止低血糖。 這是一個重要的步驟：
+當你開始循環時，**建議將最大基礎IOB設為0**一段時間，同時你在適應系統。 這可以防止AAPS給予任何額外的基礎胰島素。 在此期間，AAPS仍然可以限制或關閉你的基礎胰島素以幫助防止低血糖。 這是一個重要的步驟：
 
 - 有一段時間可安全地習慣AAPS系統並監控其運作。
-- 抓住機會完美您的基礎配置和胰島素敏感性因子（ISF）。
-- 了解AAPS如何限制您的基礎胰島素以防止低血糖。
+- 抓住機會完美你的基礎配置和胰島素敏感性因子（ISF）。
+- 了解AAPS如何限制你的基礎胰島素以防止低血糖。
 
-當您感到舒適時，您可以透過提高最大基礎IOB值允許系統開始給予您額外的基礎胰島素。 建議的指導原則是取您個人設定中的**最高基礎速率**，並**將其乘以 3**。 例如，若您設定中的最高基礎速率為 0.5 U/h，您可以將此數值乘以 3，得到 1.5 U/h。
+當你感到舒適時，你可以透過提高最大基礎IOB值允許系統開始給予你額外的基礎胰島素。 建議的指導原則是取你個人設定中的**最高基礎速率**，並**將其乘以 3**。 例如，若你設定中的最高基礎速率為 0.5 U/h，你可以將此數值乘以 3，得到 1.5 U/h。
 
-- 您可以從保守的數值開始，然後隨著時間慢慢增加。
-- 這些僅是指導原則；每個人的身體狀況不同。 您可能會發現所需的劑量比這裡推薦的多或少，但一定要從保守的劑量開始，並慢慢調整。
+- 你可以從保守的數值開始，然後隨著時間慢慢增加。
+- 這些僅是指導原則；每個人的身體狀況不同。 你可能會發現所需的劑量比這裡推薦的多或少，但一定要從保守的劑量開始，並慢慢調整。
 
 **注意：作為一項安全功能，最大基礎胰島素持續劑量（Max Basal IOB）被嚴格限制為 7U。**
 
 #### 自動敏感度調整 (Autosens)
 
 - [Autosens](Open-APS-features-autosens) 會根據血糖偏差（正/負/中性）進行調整。
-- 它會根據這些偏差計算出您對胰島素的敏感度或抗性，並根據偏差調整基礎速率和胰島素敏感指數（ISF）。
-- 如果您選擇「Autosens 調整目標」，演算法也會修改您的血糖目標。
+- 他會根據這些偏差計算出你對胰島素的敏感度或抗性，並根據偏差調整基礎速率和胰島素敏感指數（ISF）。
+- 如果你選擇「Autosens 調整目標」，演算法也會修改你的血糖目標。
 
 #### 進階設定（OpenAPS AMA）
 
-- 通常您無需更改此對話框中的設定！
-- 如果您仍然想要更改，請務必閱讀[OpenAPS 文件](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#)，並了解您在做什麼。
+- 通常你無需更改此對話框中的設定！
+- 如果你仍然想要更改，請務必閱讀[OpenAPS 文件](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#)，並了解你在做什麼。
 
 (Preferences-openaps-smb-settings)=
 ### OpenAPS SMB 設定
 
 - 與 AMA 相比，[SMB](Open-APS-features-super-micro-bolus-smb) 不使用臨時基礎速率來控制血糖，而是主要使用小型超級微量注射。
 
-- 您必須開始使用[目標 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)來使用 SMB。
+- 你必須開始使用[目標 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)來使用 SMB。
 
 - 前三個設定在[上方](Preferences-max-u-h-a-temp-basal-can-be-set-to)進行了解釋。
 
 - 不同啟用選項的詳細資訊在[OpenAPS 功能部分](Open-APS-features-enable-smb)中描述。
 
-- *SMB 的發放頻率（以分鐘為單位）*受限於預設每 4 分鐘發放一次。 此數值防止系統過於頻繁發放 SMB（例如當設定臨時目標時）。 除非您確切知道後果，否則不應更改此設定。
+- *SMB 的發放頻率（以分鐘為單位）*受限於預設每 4 分鐘發放一次。 此數值防止系統過於頻繁發放 SMB（例如當設定臨時目標時）。 除非你確切知道後果，否則不應更改此設定。
 
-- 如果啟用了「敏感性提高目標」或「抗性降低目標」，[Autosens](Open-APS-features-autosens) 會根據您的血糖偏差修改血糖目標。
+- 如果啟用了「敏感性提高目標」或「抗性降低目標」，[Autosens](Open-APS-features-autosens) 會根據你的血糖偏差修改血糖目標。
 
 - 如果目標被修改，會在主畫面以綠色背景顯示。
 
@@ -342,7 +342,7 @@
 
 - 當參考設計檢測到需要碳水化合物時，會建議食用額外的碳水化合物。
 
-- 在此情況下，您會收到一個可以延後 5、15 或 30 分鐘的通知。
+- 在此情況下，你會收到一個可以延後 5、15 或 30 分鐘的通知。
 
 - 此外，主畫面的 COB 部分也會顯示所需的碳水化合物量。
 
@@ -354,8 +354,8 @@
 
 #### 進階設定（OpenAPS SMB）
 
-- 通常您無需更改此對話框中的設定！
-- 如果您仍然想要更改，請務必閱讀[OpenAPS 文件](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#)，並了解您在做什麼。
+- 通常你無需更改此對話框中的設定！
+- 如果你仍然想要更改，請務必閱讀[OpenAPS 文件](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#)，並了解你在做什麼。
 
 ## 吸收設定
 
@@ -369,7 +369,7 @@
 
 - 當無法動態計算碳水化合物吸收時，演算法會插入預設的碳水化合物衰減值。 基本上，這是一個安全保護機制。
 
-- 簡單來說：演算法「知道」在當前胰島素劑量等影響下，您的血糖應該如何變化。
+- 簡單來說：演算法「知道」在當前胰島素劑量等影響下，你的血糖應該如何變化。
 
 - 每當預期行為與實際行為有正向偏差時，部分碳水化合物會被吸收/衰減。 大的變化＝許多碳水化合物等。
 
@@ -383,7 +383,7 @@
 
 ### 最大餐點吸收時間
 
-- 如果您經常進食高脂肪或高蛋白質餐點，您需要增加餐點吸收時間。
+- 如果你經常進食高脂肪或高蛋白質餐點，你需要增加餐點吸收時間。
 
 ### 進階設定 - autosens 比例
 
@@ -392,7 +392,7 @@
 
 ## 幫浦設定
 
-此處的選項會根據您在[組態建置工具](Config-Builder-pump)中選擇的幫浦驅動程式而有所不同。  根據幫浦相關的指示來配對並設定您的幫浦：
+此處的選項會根據你在[組態建置工具](Config-Builder-pump)中選擇的幫浦驅動程式而有所不同。  根據幫浦相關的指示來配對並設定你的幫浦：
 
 - [DanaR 胰島素幫浦](../Configuration/DanaR-Insulin-Pump.md)
 - [DanaRS 胰島素幫浦](../Configuration/DanaRS-Insulin-Pump.md)
@@ -400,7 +400,7 @@
 - [Accu Chek Insight 幫浦](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Medtronic 幫浦](../Configuration/MedtronicPump.md)
 
-如果使用 AAPS 進行開環模式，請確保您已在組態建置工具中選擇虛擬幫浦。
+如果使用 AAPS 進行開環模式，請確保你已在組態建置工具中選擇虛擬幫浦。
 
 (Preferences-nsclient)=
 ## NSClient
@@ -409,11 +409,11 @@
 
 原始通訊協議，可用於舊版 Nightscout。
 
-- 設置您的*Nightscout URL*（即 <https://yoursitename.yourplaform.dom>）。
+- 設置你的*Nightscout URL*（即 <https://yoursitename.yourplaform.dom>）。
   - **確保網址末尾沒有 /api/v1/。**
 - *[API 密鑰](https://nightscout.github.io/nightscout/setup_variables/#api-secret-nightscout-password)*（Nightscout 變數中記錄的一個 12 字符的密碼）。
 - 這使資料能夠在 Nightscout 網站和 AAPS 之間讀取和寫入。
-- 如果您在目標 1 中遇到困難，請再次檢查是否有拼寫錯誤。
+- 如果你在目標 1 中遇到困難，請再次檢查是否有拼寫錯誤。
 
 ## NSClientV3
 
@@ -424,32 +424,32 @@
 ```{admonition} V3 data uploaders
 :class: warning
 
-當使用 NSClientV3 時，所有上傳器必須使用 API V3。 由於大多數尚不相容，這意味著 **您必須讓 AAPS 上傳所有資料**（BG、治療等）到 Nightscout，並停用所有不符 V3 的其他上傳器。
+當使用 NSClientV3 時，所有上傳器必須使用 API V3。 由於大多數尚不相容，這意味著 **你必須讓 AAPS 上傳所有資料**（BG、治療等）到 Nightscout，並停用所有不符 V3 的其他上傳器。
 ```
 
-- 設置您的*Nightscout URL*（即 <https://yoursitename.yourplaform.dom>）。
+- 設置你的*Nightscout URL*（即 <https://yoursitename.yourplaform.dom>）。
   - **確保網址末尾沒有 /api/v1/。**
-- 在 Nightscout 中，建立一個*[管理者憑證](https://nightscout.github.io/nightscout/security/#create-a-token)*（需要 [Nightscout 15](https://nightscout.github.io/update/update/) 才能使用 V3 API），並將其輸入**NS 查看憑證**（不是您的 API 密鑰！）。
+- 在 Nightscout 中，建立一個*[管理者憑證](https://nightscout.github.io/nightscout/security/#create-a-token)*（需要 [Nightscout 15](https://nightscout.github.io/update/update/) 才能使用 V3 API），並將其輸入**NS 查看憑證**（不是你的 API 密鑰！）。
 - 這使資料能夠在 Nightscout 網站和 AAPS 之間讀取和寫入。
-- 如果您在目標 1 中遇到困難，請再次檢查是否有拼寫錯誤。
+- 如果你在目標 1 中遇到困難，請再次檢查是否有拼寫錯誤。
 - 保持啟用與 websockets 的連線（推薦）。
 
 ### 同步選項
 
-同步選項將取決於您希望如何使用 AAPS。
+同步選項將取決於你希望如何使用 AAPS。
 
-您可以選擇[上傳和下載至 Nightscout 的資料](../Installing-AndroidAPS/Nightscout.md#aaps-settings)。
+你可以選擇[上傳和下載至 Nightscout 的資料](../Installing-AndroidAPS/Nightscout.md#aaps-settings)。
 
 ### 警報選項
 
 ![警報選項](../images/Pref2024_NSClient_Alarms.png)
 
-- 警報選項允許您選擇透過應用程式使用哪些 Nightscout 警報。 當 Nightscout 警報觸發時，AAPS 會發出警報。
-  - 要使警報發出聲音，您需要在[Nightscout 變數](https://nightscout.github.io/nightscout/setup_variables/#alarms)中設置緊急高、高、低和緊急低的警報值。
-  - 這些警報僅在您與 Nightscout 有連線時工作，且主要針對家長/照護者。
-  - 如果您的 CGM 資料來自手機（如 xDrip+ 或 BYODA），請使用這些警報，而非 Nightscout 警報。
+- 警報選項允許你選擇透過應用程式使用哪些 Nightscout 警報。 當 Nightscout 警報觸發時，AAPS 會發出警報。
+  - 要使警報發出聲音，你需要在[Nightscout 變數](https://nightscout.github.io/nightscout/setup_variables/#alarms)中設置緊急高、高、低和緊急低的警報值。
+  - 這些警報僅在你與 Nightscout 有連線時工作，且主要針對家長/照護者。
+  - 如果你的 CGM 資料來自手機（如 xDrip+ 或 BYODA），請使用這些警報，而非 Nightscout 警報。
 - 從 Nightscout 公告中建立通知[公告](https://nightscout.github.io/nightscout/discover/#announcement)，將在 AAPS 通知欄中回顯 Nightscout 公告。
-- 當在一定時間內未從 Nightscout 收到資料時，您可以更改過時資料和緊急過時資料警報的閾值。
+- 當在一定時間內未從 Nightscout 收到資料時，你可以更改過時資料和緊急過時資料警報的閾值。
 
 ### 連線設定
 
@@ -457,7 +457,7 @@
 
 - 連線設定定義了何時啟用與 Nightscout 的連線。
 - 將 Nightscout 上傳限制為僅在 Wi-Fi 下進行，甚至僅限於特定的 Wi-Fi SSID。
-- 如果您只希望使用特定的 Wi-Fi 網路，可以輸入其 Wi-Fi SSID。
+- 如果你只希望使用特定的 Wi-Fi 網路，可以輸入其 Wi-Fi SSID。
 - 多個 SSID 可以用分號分隔。
 - 若要刪除所有 SSID，請在該欄位中輸入空格。
 
@@ -480,7 +480,7 @@
 選擇要使用的定位服務：
 
 - 使用被動定位：AAPS 僅在其他應用請求時獲取位置。
-- 使用網路定位：您的 Wi-Fi 位置。
+- 使用網路定位：你的 Wi-Fi 位置。
 - 使用 GPS 定位（注意！ 可能會導致電池過度消耗！）
 
 ## 本地警報
@@ -493,7 +493,7 @@
 
 ![資料選項](../images/Pref2020_DataChoice.png)
 
-- 您可以透過將崩潰報告發送給開發人員來幫助進一步開發 AAPS。
+- 你可以透過將崩潰報告發送給開發人員來幫助進一步開發 AAPS。
 
 ## 維護設置
 
@@ -503,9 +503,9 @@
 
 ## Open Humans
 
-- 您可以透過捐贈您的資料來協助研究項目，幫助社群！ 詳細資訊請參閱[Open Humans 頁面](../Configuration/OpenHumans.md)。
+- 你可以透過捐贈你的資料來協助研究項目，幫助社群！ 詳細資訊請參閱[Open Humans 頁面](../Configuration/OpenHumans.md)。
 
-- 在偏好設定中，您可以定義何時上傳資料
+- 在偏好設定中，你可以定義何時上傳資料
 
   - 僅在連線到 WiFi 時
   - 僅在充電時
