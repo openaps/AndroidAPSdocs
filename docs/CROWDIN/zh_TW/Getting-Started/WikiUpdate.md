@@ -15,7 +15,7 @@
 
 ## 2021年12月
 
-- [APK 構建](../Installing-AndroidAPS/Building-APK.md) - 更新 Android Studio Arctic Fox | 2020.3.1 @tanja
+- [APK 建置](../Installing-AndroidAPS/Building-APK.md) - 更新 Android Studio Arctic Fox | 2020.3.1 @tanja
 - [Dana-i](../Configuration/DanaRS-Insulin-Pump.md) 訊息已添加 @MilosKozak
 
 ## 2021年11月
@@ -31,7 +31,7 @@
 
 ## 2021年9月
 
-- 推薦電腦配置以[構建 AAPS 應用](Building-APK-recommended-specification-of-computer-for-building-apk-file)
+- 推薦電腦配置以[建置 AAPS 應用](Building-APK-recommended-specification-of-computer-for-building-apk-file)
 
 ## 2021年6月
 
@@ -97,7 +97,7 @@
 
 ## 2020年3月
 
-- [使用 Android Studio 3.6.1 構建 APK](../Installing-AndroidAPS/Building-APK.md)
+- [使用 Android Studio 3.6.1 建置 APK](../Installing-AndroidAPS/Building-APK.md)
 - [DanaRS 韌體 v3](../Configuration/DanaRS-Insulin-Pump.md) **目前無法與 AAPS 配合使用！**
 - [延長注射並切換到開環](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 - [使用 Android Studio 3.6.1 更新 APK](../Installing-AndroidAPS/Update-to-new-version.md)
@@ -124,13 +124,13 @@
 - [Accu-Chek Insight 和 Autotune](Accu-Chek-Insight-Pump-settings-in-aaps) - 使用的替代方法
 - [Glimp](Config-Builder-bg-source) - 支援 4.15.57 版及更新版本
 - [錶盤](../Configuration/Watchfaces.md) - 大更新，更多細節
-- [錶盤複雜功能](Watchfaces-complications) - 使用您喜愛的錶盤顯示 AAPS 資料
+- [錶盤複雜功能](Watchfaces-complications) - 使用你喜愛的錶盤顯示 AAPS 資料
 
 ## 2019年11月
 
 - [自動化 - 在停用閉環時停用](Automation-important-note)
 - [Dexcom G6 傳感器更換更新](xdrip-replace-transmitter)
-- [延長注射 - 為何它們在閉環上下文中無法運作](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [延長注射 - 為何他們在閉環上下文中無法運作](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 - [常見問題解答 - 運動](FAQ-sports)
 - [主螢幕 - 圖表上的線條](Screenshots-section-f-main-graph)
 - [Insight - 在 NS 客戶端中停用絕對值](Accu-Chek-Insight-Pump-settings-in-aaps)
