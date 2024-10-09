@@ -1,6 +1,6 @@
 # Android Auto
 
-**AAPS** 能夠將您的當前狀態以訊息形式直接發送到車內的 Android Auto。
+**AAPS** 能夠將你的當前狀態以訊息形式直接發送到車內的 Android Auto。
 
 ```{admonition} 版本和最後更改訊息 :class: dropdown 最後編輯日期：2023/07/05
 
@@ -15,7 +15,7 @@
 
 這意味著：
 
-* 您必須配置**AAPS**以使用系統通知來進行警報和通知，並且
+* 你必須配置**AAPS**以使用系統通知來進行警報和通知，並且
 * 由於**AAPS** 是非官方應用，需允許 Android Auto 使用「未知來源」。
 
 ![AAPS CGM 資料在 Android Auto 上的顯示](../images/android_auto_01.png)
@@ -32,7 +32,7 @@
 
 ![使用系統通知來進行警報和通知](../images/android_auto_03.png)
 
-現在請確認在前往您的車輛之前，您能夠在手機上接收到來自**AAPS**的通知！
+現在請確認在前往你的車輛之前，你能夠在手機上接收到來自**AAPS**的通知！
 
 ![使用系統通知來進行警報和通知](../images/android_auto_04.png)
 
@@ -40,11 +40,11 @@
 
 ## 允許 Android Auto 使用「未知來源」。
 
-由於**AAPS**不是官方的 Android Auto 應用，因此需要在 Android Auto 中啟用「未知來源」的通知。 這是透過使用開發者模式來完成的，我們將在此為您展示。
+由於**AAPS**不是官方的 Android Auto 應用，因此需要在 Android Auto 中啟用「未知來源」的通知。 這是透過使用開發者模式來完成的，我們將在此為你展示。
 
-前往您的車輛並將手機連線到車載音響系統。
+前往你的車輛並將手機連線到車載音響系統。
 
-您現在應該會看到類似於此螢幕的畫面。
+你現在應該會看到類似於此螢幕的畫面。
 
 ![啟用開發者模式](../images/android_auto_05.png)
 
@@ -60,11 +60,11 @@
 
 ![啟用開發者模式](../images/android_auto_07.png)
 
-您會看到列出的 Android Auto 版本。 連續點擊 Android Auto 版本 10 次。 透過此隱藏的組合操作，您現在已啟用了開發者模式。
+你會看到列出的 Android Auto 版本。 連續點擊 Android Auto 版本 10 次。 透過此隱藏的組合操作，你現在已啟用了開發者模式。
 
 ![啟用開發者模式](../images/android_auto_08.png)
 
-在彈出的對話框「允許開發設置？」中確認您希望啟用開發者模式。
+在彈出的對話框「允許開發設置？」中確認你希望啟用開發者模式。
 
 ![啟用開發者模式](../images/android_auto_09.png)
 
@@ -72,7 +72,7 @@
 
 ![啟用開發者模式](../images/android_auto_10.png)
 
-如果您願意，現在可以退出開發者模式。 點擊右上角的三點選單來執行此操作。
+如果你願意，現在可以退出開發者模式。 點擊右上角的三點選單來執行此操作。
 
 ## 在車上顯示通知
 
@@ -80,10 +80,10 @@
 
 ![數字圖示 - 車內 Android Auto](../images/android_auto_11.png)
 
-您的 CGM 資料將顯示如下：
+你的 CGM 資料將顯示如下：
 
 ![AAPS CGM 資料在 Android Auto 上的顯示](../images/android_auto_01.png)
 
 ## 故障排除：
 
-* 如果您看不到通知，請檢查是否已在 Android 中[允許 AAPS 顯示通知](Android-auto-AAPS-settings-for-android-auto)，以及 Android Auto 是否[擁有通知的存取權限](Android-auto-AAPS-settings-in-android-auto-app-on-your-phone)。
+* 如果你看不到通知，請檢查是否已在 Android 中[允許 AAPS 顯示通知](Android-auto-AAPS-settings-for-android-auto)，以及 Android Auto 是否[擁有通知的存取權限](Android-auto-AAPS-settings-in-android-auto-app-on-your-phone)。
