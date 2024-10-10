@@ -66,7 +66,7 @@
 
 **LineageOS** = 用於智慧型手機等設備的開放原始碼作業系統。 （當使用 Accu-Chek Combo 時，請參閱 Wiki - Combo pump）。
 
-**Log files** = **AAPS** 記錄用戶操作的日誌文件（有助於故障排除和調試）。 進一步資訊 → Wiki - 「log files」。
+**Log files** = **AAPS** 記錄用戶操作的日誌文件（有助於問題排除和調試）。 進一步資訊 → Wiki - 「log files」。
 
 **maxIOB** = 最大活性胰島素。 這是一項安全措施，可防止 `**AAPS**` 提供超過用戶設定的胰島素量。 進一步資訊 → Wiki - 「SMB」。
 
