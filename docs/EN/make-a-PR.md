@@ -21,7 +21,7 @@ At some point it will be suggested that you make a pull request (PR), which is h
 
 For our example we are going to make an edit to AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
 
-1. Go to https://github.com/openaps/AndroidAPSdocs and hit Fork in the upper right to make your own copy of the repository.
+1. Go to [https://github.com/openaps/AndroidAPSdocs](https://github.com/openaps/AndroidAPSdocs) and hit Fork in the upper right to make your own copy of the repository.
 
 ![Fork repo](./images/PR0.png)
 
@@ -86,39 +86,40 @@ We try to avoid further levels of headlines.
 
 ### Text format
 
-* bold: `**text**`
-* italic: `*text*`
+* **bold**: `**text**`
+* *italic*: `*text*`
+* ***bold italic***: `***text***`
 
-### ordered list
+### Ordered list
 
-:::
+```
 1. first
 1. second
 1. third
-:::
+```
 
 1. first
 1. second
 1. third
 
-### unordered list
+### Unordered list
 
-:::
+```
 - one element
 - another element
 - and another element
-:::
+```
 
 - one element
 - another element
 - and another element
 
 
-### multi level list
+### Multi level list
 
 You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
 
-:::
+```
 1. first
 1. second
 1. third
@@ -128,7 +129,7 @@ You can insert lists in lists by indenting the next level with 4 more spaces to 
 1. four
 1. five
 1. six
-:::
+```
 
 1. first
 1. second
@@ -204,55 +205,58 @@ Please use these carefully as the documentation should be as easy to read as pos
 
 #### Notes
 
-::::
-:::{admonition} Note
+````
+```{admonition} Note headline
 :class: note
-
 This is a note.
-:::
-::::
-
-:::{admonition} Note
+```
+````
+```{admonition} Note headline
 :class: note
-
 This is a note.
-:::
+```
 
 #### Warnings
 
-::::
-:::{admonition} Warning
+````
+```{admonition} Warning
 :class: warning
-
 This is a warning.
-:::
-::::
-
-:::{admonition} Warning
+```
+````
+```{admonition} Warning headline 
 :class: warning
-
 This is a warning.
-:::
+```
 
 #### Collapsing Notes
 
-::::
-:::{admonition} further detailed readings for interested readers
+````
+```
+{admonition} further detailed readings for interested readers
 :class: dropdown
 
 This admonition has been collapsed,
 meaning you can add longer form content here,
 without it taking up too much space on the page.
-:::
-::::
+```
+````
 
-:::{admonition} further detailed readings for interested readers
+
+
+```{admonition} further detailed readings for interested readers
 :class: dropdown
-
 This admonition has been collapsed,
 meaning you can add longer form content here,
 without it taking up too much space on the page.
-:::
+
+
+```
+
+## Tables
+
+Avoid using tables with long texts as the contents is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+
 ## Style Guide
 
 ### Contents
@@ -281,24 +285,24 @@ Find an A-Z of alternative words to make your writing easier to understand here:
 
 #### Privacy/licensing concerns:
 
-Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure Youtube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
+Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure YouTube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
 
 #### Keep sentences short, get to the point
 
 - Clear writing should have an average sentence length of 15 to 20 words.
-    
+  
 - This does not mean making every sentence the same length. Be punchy. Vary your writing by mixing short sentences (like the last one) with longer ones (like this one).
-    
+  
 - Stick to one main idea in a sentence, plus perhaps one other related point.
-    
+  
 - You may still find yourself writing the odd long sentence, especially when trying to explain a complicated point. But most long sentences can be broken up in some way. 
-    
+  
 - Remove weak words: “you can”, “there is/are/were”, “in order to”. 
-    
+  
 - Place keywords near the beginning of titles, sentences and paragraphs.
-    
+  
 - Be visual! Wherever possible provide a brief diagram, screenshot or video.
-    
+  
 
 #### Don't be afraid to give instructions
 
@@ -313,14 +317,14 @@ Use: *“Think of it as a complete statement.”*
 Example of an **active verb**:
 
 - *“The pump (subject) delivers (verb) the insulin (object).”*
-    
+  
 
 “delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
 
 Example of a **passive verb**: 
 
 - *“The insulin (subject) is delivered (verb) by the pump (object)”*
-    
+  
 
 *“delivered”* a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”.   Also consider starting with the active verb.
 
@@ -331,37 +335,37 @@ Use: *“Connect your desired pump to the phone through the AAPS pump menu.”*
 Passive verbs can cause problems:
 
 - They can be confusing.
-    
+  
 - They often make writing more long-winded.
-    
+  
 - They make writing less lively.
-    
+  
 
 ##### Good uses of passives
 
 There are times when it might be appropriate to use a passive.
 
 - To make something less hostile - 'this bill has not been paid' (passive) is softer than 'you have not paid this bill' (active).
-    
+  
 - To avoid taking the blame - 'a mistake was made' (passive) rather than 'You made a mistake' (active).
-    
+  
 - When you don't know who or what the doer is - 'the England team has been picked'.
-    
+  
 - If it simply sounds better.
-    
+  
 
 #### Avoid nominalisations
 
-A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion.  Nominalisations are formed from verbs.
+A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion.  Nominalizations are formed from verbs.
 
 For example:
 
-| Verb | Nominalisation |
-| --- | --- |
-| complete | completion |
-| introduce | introduction |
-| provide | provision |
-| fail | failure |
+| Verb      | Nominalization |
+| --------- | -------------- |
+| complete  | completion     |
+| introduce | introduction   |
+| provide   | provision      |
+| fail      | failure        |
 
 They are often used **instead** of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
 
@@ -374,25 +378,24 @@ Use: *“A team has implemented the method.”*
 Lists are excellent for splitting information up. There are two main types of list:
 
 - A continuous sentence with several listed points picked out at the beginning, middle or end.
-    
-
+  
 - Separate bullet points with an introductory statement.
-    
+  
 
 In the bulleted list above, each point is a complete sentence so they each start with a capital letter and end with a full stop. Use bullet points rather than numbers or letters, as they draw your attention to each point without giving you extra information to take in.
 
 #### Mythbusting
 
 - You can start a sentence with **and, but, because, so or however**.
-    
+  
 - You can split infinitives. So you can say **“to boldly go”**.
-    
+  
 - You can end a sentence with a preposition. In fact, it is something **we should stand up for**.
-    
+  
 - And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
-    
+  
 
-#### Optimising writing style by purpose 
+#### Optimizing writing style by purpose 
 
 To keep the documentation clear and short, we write different sections of the documentation in different styles. 
 
@@ -410,37 +413,34 @@ A tutorial helps the pupil acquire basic competence. The user will **learn by do
     (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
     
 - Future Tense -> to show the final target
-    
+  
 - Imperative Tense -> to do the tasks  -> Concrete steps - avoid abstract concepts
-    
+  
 - Past Tense -> to show accomplished tasks  -> Quick and immediate visible results
-    
+  
 - Minimum Explanations -> strict necessary to complete the task - **what and why**
-    
+  
 - Ignore options/alternatives/…. No ambiguity
-    
+  
 - Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example:
     *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
     
 - **Tutorial** Title (Level 1 heading)
-    
-
+  
 - Introduction (no heading)
-    
+  
 - Prerequisites (Level 2 heading)
-    
+  
 - Steps:
-    
-
+  
 - Step 1 — Doing the First Thing (Level 2 heading)
-    
+  
 - Step 2 — Doing the Next Thing (Level 2 heading)
-    
+  
 - Step n — Doing the Last Thing (Level 2 heading)
-    
-
+  
 - Conclusion (Level 2 heading)
-    
+  
 
 ![Image](./images/styleguide04.png)
 
@@ -449,37 +449,34 @@ A tutorial helps the pupil acquire basic competence. The user will **learn by do
 A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
 
 - HOW-to
-    
+  
 - narrator directly talks to the reader: In this tutorial **you** will
-    
+  
 - Future Tense -> to show the final target
-    
+  
 - Conditional Imperative Tense -> to get X do y -> Concrete steps - avoid abstract concepts
-    
+  
 - Minimum Explanations -> strict necessary to complete the task -> **what and why**
-    
+  
 - Ignore options/alternatives/….
     No ambiguity, but you can link to the reference entry or explanation entry
     
 - **How-to**: Title (Level 1 heading)
-    
-
+  
 - Introduction paragraph
-    
+  
 - Optional Prerequisites (paragraph or Level 2 heading if more than 1)
-    
+  
 - Steps:
-    
-
+  
 - Step 1 — Doing the First Thing (Level 2 heading)
-    
+  
 - Step 2 — Doing the Next Thing (Level 2 heading)
-    
+  
 - Step n — Doing the Last Thing (Level 2 heading)
-    
-
+  
 - Conclusion paragraph
-    
+  
 
 ![Image](./images/styleguide06.png)
 
@@ -488,28 +485,27 @@ A how-to guide’s purpose is to help the already-competent user perform a parti
 An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
 
 - WHY
-    
+  
 - Start with **About**
-    
+  
 - Provide context, link ALL relevant references
-    
+  
 - Discuss options/alternatives
-    
+  
 - Don’t instruct or provide reference (link to them)
-    
+  
 - State the unknown/moving targets etc… 
-    
+  
 - **About** Title (Level 1 heading)
-    
-
+  
 - Introduction (no heading)
-    
+  
 - Optional Prerequisites (Level 2 heading)
-    
+  
 - Subtopic 1 (level 2 heading)
-    
+  
 - Conclusion (Level 2 heading)
-    
+  
 
 ![Image](./images/styleguide08.png)
 
@@ -526,11 +522,11 @@ The **editor (e.g. a fellow AAPS user, or the person who receives the pull reque
 #### General AAPS points
 
 - For glucose values, state both mg/dl and mmol/l in each occurrence (also consider this for screenshots, if possible). 
-    
+  
 - For consistency, use “AAPS” rather than “Android APS”.
-    
+  
 - Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from. 
-    
+  
 
 ### 3\. Useful References
 

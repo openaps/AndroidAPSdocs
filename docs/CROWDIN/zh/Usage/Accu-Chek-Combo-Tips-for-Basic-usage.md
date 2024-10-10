@@ -1,114 +1,114 @@
-# Accu-Chek Combo Tips for basic usage
+# Accu-Chek Combo 基本使用技巧
 
-**NOTE:** Starting with AAPS version 3.2, a [new Combo driver](../Configuration/Accu-Chek-Combo-Pump-v2.md) (referred to as "combov2" sometimes) has been added. The old driver is also referred to as the "Ruffy-based driver". Some parts of this document only apply to the old driver. These will be annotated accordingly.
+**注意：**從 AAPS 版本 3.2 開始，新增了[新 Combo 驅動](../Configuration/Accu-Chek-Combo-Pump-v2.md)（有時稱為 "combov2"）。 舊的驅動程式也稱為 "Ruffy 基於的驅動程式"。 本文檔的某些部分僅適用於舊的驅動程式。 這些將會依照情況進行註解。
 
-## How to ensure smooth operations
+## 如何確保系統運作順暢
 
-* Always **carry the smartphone with you**, leave it next to your bed at night. As your pump may lay behind or under you body while you sleep, a higher position (on a shelf or board) works best.
-* Always make sure that the pump battery is as full as possible. See the battery section for tipps regarding the battery.
+* 始終 **隨身攜帶手機**，晚上將其放在床邊。 由於您可能睡覺時幫浦位於或被身體擋住，將其放在較高的位置（如架子或桌面）效果最佳。
+* 始終確保幫浦的電池盡可能充滿。 請參閱電池部分的相關提示。
 
-* (Only applies to the old driver) It is best to **not touch the app ruffy** while the system is running. If the app is started again, the connection to the pump can break off. Once the pump is connected to ruffy, there is no need to re-connect. Even after a restart of the phone, the connection is automatically re-established. If possible, move the app to an unused screen or in a folder on your smartphone so you do not accidentally open it.
+* （僅適用於舊的驅動程式）最好**不要觸碰 ruffy 應用程式** 當系統正在運作時。 如果應用程式被重新啟動，幫浦的連線可能會中斷。 一旦幫浦連線到 ruffy，無需重新連線。 即使在手機重新啟動後，連線也會自動重新建立。 如果可能，將應用程式移動到未使用的螢幕或資料夾中，以免您不小心打開它。
 
-* (Only applies to the old driver) If you unintentionally open the app ruffy during looping, it's best to restart the smartphone right away.
-* Whenever possible, only operate the pump via the AAPS app. To facilitate this, activate the key lock on the pump under **PUMP SETTINGS / KEY LOCK / ON**. Only when changing the battery or the cartridge, it is necessary to use the pump's keys. 
+* （僅適用於舊的驅動程式）如果您在循環過程中不小心打開了 ruffy 應用程式，最好立即重新啟動手機。
+* 儘可能僅透過 AAPS 應用程式操作幫浦。為了便於這一點，請在幫浦上啟動 **幫浦設置 / 按鍵鎖定 / 開啟**。 只有在更換電池或藥匣時，才需要使用幫浦的按鍵。 
 
-![Keylock](../images/combo/combo-tips-keylock.png)
+![按鍵鎖定](../images/combo/combo-tips-keylock.png)
 
-## Pump not reachable. What to do?
+## 幫浦無法連線。 該怎麼辦？
 
-### Activate pump unreachable alarm
+### 啟動幫浦無法連線的警報
 
-* In AAPS, go to **Settings / Local Alarms** and activate **alarm when pump is unreachable** and set **pump not reachable limit [Min]** to **31** minutes.
-* This will give you enough time to not trigger the alarm when leaving the room while your phone is left on the desk, but informs you if the pump cannot be reached for a time that exceeds the duration of a temporary basal rate.
+* 在 AAPS 中，前往 **設定 / 本地警報**，啟動 **當幫浦無法連線時警報**，並將**幫浦無法連線時間上限 [分鐘]**設為**31** 分鐘。
+* 這會給您足夠的時間，當您離開房間時不會觸發警報，但會在幫浦無法連線的時間超過臨時基礎率持續時間時通知您。
 
-### Restore reachability of the pump
+### 恢復幫浦連線
 
-* When AAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, press **Refresh** on the **Combo Tab** in AAPS. Mostly then the communication works again.
-* If that does not help, reboot your smartphone. After the restart, AAPS will be reactivated and a new connection will be established with the pump. If you are using the old driver, ruffy will be reactivated as well.
+* 當 AAPS 報告 **幫浦無法連線** 時，首先解除按鍵鎖定並**按下幫浦上的任意鍵**（例如 "下" 鍵）。 當幫浦螢幕熄滅後，按下 AAPS 中的**重新整理**按鈕。 通常這樣操作後，通訊就能恢復正常。
+* 如果這樣不行，請重新啟動您的手機。 重新啟動後，AAPS 會重新註冊並與幫浦建立新連線。 如果您使用的是舊驅動程式，ruffy 也會被重新註冊。
 
-* The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) lists successfully tested smartphones.
+* 測試顯示，某些手機更容易觸發 "幫浦無法連線" 錯誤。 [AAPS 手機列表](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit)中列出了成功測試的手機型號。
 
-### Root causes and consequences of frequent communication errors
+### 頻繁通訊錯誤的根本原因及後果
 
-* On phones with **low memory** (or **aggressive power-saving** settings), AAPS is often shut down. You can tell by the fact that the Bolus and Calculator buttons on the Home screen are not shown when opening AAPS because the system is initializing. This can trigger "pump unreachable alarms" at startup. In the **Last Connection** field of the Combo tab, you can check when AAPS last communicated with the pump.
+* 在內存較低或**節能模式較激進**的手機上，AAPS 經常會被關閉。 您可以透過主畫面上的 "餐數" 和 "計算機" 按鈕是否顯示來判斷，當這些按鈕不顯示時，表示系統正在初始化。 這可能會在啟動時觸發 "幫浦無法連線" 警報。 您可以在 Combo 標籤的 **最後連線** 欄位中查看 AAPS 最後一次與幫浦連線的時間。
 
-![Pump unreachable](../images/combo/combo-tips-pump-unreachable.png)
+![幫浦無法連線](../images/combo/combo-tips-pump-unreachable.png)
 
-![No connection to pump (as shown in the old driver's tab)](../images/combo/combo-tips-no-connection-to-pump.png)
+![舊驅動程式標籤中顯示的幫浦無法連線](../images/combo/combo-tips-no-connection-to-pump.png)
 
-![No connection to pump (as shown in the new driver's tab)](../images/combo/combov2-tips-no-connection-to-pump.png)
+![新驅動程式標籤中顯示的幫浦無法連線](../images/combo/combov2-tips-no-connection-to-pump.png)
 
-* This error can drain the pump's battery faster because the basal profile is read from the pump when the app is restarted.
-* It also increases the likelihood of causing the error that causes the pump to reject all incoming connections until a button on the pump is pressed. 
+* 此錯誤會加速幫浦電池耗電，因為應用程式重新啟動時會從幫浦讀取基礎配置檔案。
+* 這也增加了幫浦拒絕所有來自外部的連線請求的錯誤機率，直到按下幫浦上的按鍵為止。 
 
-## Cancellation of temporary basal rate fails
+## 無法取消臨時基礎率
 
-* Occasionally, AAPS can not automatically cancel a **TBR CANCELED** alert. Then you have to either press **UPDATE** in the AAPS **Combo tab** or the alarm on the pump will need to be confirmed.
+* 有時 AAPS 無法自動取消**已取消的臨時基礎率**警報。 此時您需要按下 AAPS 中 Combo 標籤上的**更新**按鈕，或者需要在幫浦上確認警報。
 
-## Pump battery considerations
+## 幫浦電池考量
 
-### Changing the battery
+### 更換電池
 
-* After a **low battery** alarm, the battery should be changed as soon as possible to always have enough energy for a reliable Bluetooth communication with the smartphone, even if the phone is within a wider distance of the pump.
-* Even after a **low battery** alarm, the battery might be used for a significant amount of time. However, it is recommended to always have a fresh battery with you after a "low battery" alarm rang.
-* Before changing the battery, press on the **Loop** symbol on the main screen and select **Suspend loop for 1h**. 
-* Wait for the pump to communicate with the pump and the bluetooth logo on the pump has faded.
+* 在收到**低電量**警報後，應盡快更換電池，以確保即使手機與幫浦距離較遠時也能進行可靠的藍牙通訊。
+* 即使在收到**低電量**警報後，電池仍可持續使用一段時間。 然而，建議在收到 "低電量" 警報後，隨身攜帶一顆新電池。
+* 更換電池之前，按下主畫面上的**循環**圖示，並選擇**暫停循環 1 小時**。 
+* 等待幫浦與手機通訊，直到幫浦上的藍牙標誌消失。
 
-![Bluetooth enabled](../images/combo/combo-tips-compo.png)
+![藍牙啟用](../images/combo/combo-tips-compo.png)
 
-* Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
-* When using the old driver, if the clock on the pump did not survive the battery chenge, re-set the date and time on the pump to exactly the date/time on your phone running AAPS. (The new driver automatically updates the pump's date and time.)
-* Then put the pump back in run mode select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
-* AAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value.
+* 解除幫浦的按鍵鎖定，將幫浦設置為停止模式，確認是否取消了臨時基礎率，然後迅速更換電池。
+* 使用舊驅動程式時，如果幫浦時鐘在更換電池後無法保持，請將幫浦上的日期和時間重新設置為與運作 AAPS 的手機上的日期和時間一致。 （新驅動程式會自動更新幫浦的日期和時間。）
+* 然後將幫浦恢復為運作模式，按下主畫面上的**恢復循環**圖示，選擇**恢復**。
+* 當下一個血糖值到達時，AAPS 會重新設置所需的臨時基礎率。
 
-(Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
+(Accu-Chek-Combo-基本使用技巧-電池類型及短電池壽命的原因)=
 
-### Battery type and causes of short battery life
+### 電池類型及短電池壽命的原因
 
-* As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium, the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries. 
+* 由於頻繁的藍牙通訊消耗大量能量，僅使用**高品質電池**，如 Energizer Ultimate 鋰電池、"Power One" 來自大型 Accu-Chek 服務包中的電池，或者如果使用可充電電池，請使用 Eneloop 電池。 
 
 ![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
-Ranges for typical life time of the different battery types are as follows:
+不同電池類型的典型使用壽命範圍如下：
 
-* **Energizer Ultimate Lithium**: 4 to 7 weeks
-* **Power One Alkaline** (Varta) from the servcie pack: 2 to 4 weeks
-* **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
+* **Energizer Ultimate 鋰電池**：4 到 7 週
+* **Power One 鹼性電池**（Varta，來自服務包）：2 到 4 週
+* **Eneloop 可充電電池**（BK-3MCCE）：1 到 3 週
 
-If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
+如果您的電池壽命明顯短於上述範圍，請檢查以下可能的原因：
 
-* (Only applies to the old driver) Versions of the [ruffy App](https://github.com/MilosKozak/ruffy) after vMarch 2018 significantly improved pump battery lifetime. Make sure you are on the newest version if you have issues with a short battery lifetime.
-* There are some variants of the screw-on battery cap of the Combo pump, which partially short circuit the batteries and drain them quickly. The caps without this problem can be recognized by the golden metal contacts.
-* If the pump clock does not "survive" a short battery change, it is likely that the capacitor is broken which keeps the clock running during a brief power outage. In this case, a replacement of the pump by Roche might help, which is not a problem during the warranty period. 
-* The smart phone hardware and software (Android operating system and bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. If you have the opportunity, try another smartphone and compare battery lifetimes.
+* （僅適用於舊的驅動程式）2018 年 3 月之後的 [ruffy 應用程式](https://github.com/MilosKozak/ruffy)版本顯著改善了幫浦電池壽命。 如果您遇到電池壽命過短的問題，請確保您使用的是最新版本。
+* Combo 幫浦有一些螺旋蓋的變種，它們會部分短路電池並迅速耗盡電池電量。 沒有這個問題的蓋子可以透過金色金屬接點識別。
+* 如果幫浦時鐘在短暫的電池更換後無法恢復運作，可能是用於維持時鐘運作的電容損壞。 在這種情況下，Roche 公司在保修期內更換幫浦不是問題。 
+* 智慧型手機硬體和軟體（Android 作業系統和藍牙堆疊）也會影響幫浦的電池壽命，儘管具體因素尚不完全清楚。 如果有機會，請嘗試使用另一台智慧型手機並比較電池壽命。
 
-## Daylight saving time changes
+## 夏令時間變更
 
-**NOTE**: The new driver automatically sets date and time and handles daylight saving time changes on its own. The steps below all only apply to the old driver.
+**注意**：新驅動程式會自動設定日期和時間，並自動處理夏令時間變更。 以下步驟僅適用於舊的驅動程式。
 
-* Currently the combo driver does not support automatic adjustment of the pump's time.
-* During the night of a daylight saving time change, the time of the smartphone is updated, but the time of the pump remains unchanged. This leads to an alarm due to deviating times between the systems at 3 am.
-* If you do not want to be awakened at night, **deactivate the automatic daylight saving time changeover on the mobile phone** in the evening before the time changeover and adjust the times manually the next morning. A good way to deal with daylight saving time changes is to switch to a different time zone located on the same longitude you are located at but closer to the equator, where usually no daylight saving time is observed. Example: For Central Europe on Summer Time (CEST/GMT+2), you could switch to the time zone of Zimbabwe on your phone the night before the switch to winter time and then switch back to Central European Time CET/GMT+1 the next morning while changing the clock on your pump at the same time. The other way aroud, switch to the time zone of Nigeria while on Winter Time CET/GMT+1 and go back to Central European Summer Time (CEST/GMT+2) the morning after the switch to summer time and change the pump time accordingly. Look at https://www.timeanddate.com/time/map/ to find a suitable country.
+* 目前，Combo 驅動程式不支援幫浦時間的自動調整。
+* 在夏令時間變更之夜，智慧型手機的時間會更新，但幫浦的時間不會更改。 這會導致由於系統時間不同步而在凌晨 3 點發生警報。
+* 如果您不想在夜間被警報吵醒，請在夏令時間變更前的晚上**停用手機的自動夏令時間切換功能**，並於次日早上手動調整時間。 應對夏令時間變更的一個好方法是切換到位於您所在經度但更靠近赤道的時區，該時區通常不觀察夏令時間。 例如：對於使用夏令時間的中歐地區 (CEST/GMT+2)，您可以在冬令時間切換前一天晚上將手機切換到津巴布韋時區，然後在次日早上切換回中歐時間 CET/GMT+1，同時更改幫浦時間。 相反的情況下，當處於冬令時間 CET/GMT+1 時，切換手機到尼日利亞時區，然後在夏令時間切換後次日早上切換回中歐夏令時間 (CEST/GMT+2)，並相應調整幫浦時間。 請參閱 https://www.timeanddate.com/time/map/ 來查找合適的國家。
 
-## Extended bolus, multiwave bolus
+## 延長注射，波浪注射
 
-The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
+OpenAPS 演算法不支援平行延長注射或波浪注射。 但可以透過以下替代方案達到類似的治療效果：
 
-* Use **e-Carbs** when entering carbs or using the Calculator by entering the carbs of the full meal and the duration you expect the carbs to arrive as glucose in you blood. The system will then calculate small carbs equally distributed over the whole duration which will cause th algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. For a multiwave bolus approach, you can also combine a smaller immeadiate bolus with e-carbs. 
-* Before eating, on the **Actions tab** in AAPS set as a temporary **Eating Soon** goal with target glucose 80 for several hours. The duration should be based on the interval you would chosse for an extended bolus. This will keep your target lower than usual and therefore increase the amout of insulin delivered.
-* Then use the **CALCULATOR** to enter the full carbs of the meal, but do not directly apply the values suggested by the bolus calculator. If a multiwave-like bolus is to be delivered, correct the insulin dosage down. Depending on the meal, the algorithm now has to deliver additional SMBs or higher temporary basal rates to counteract the increase in blood sugar. Here, the safety limitation of the basal rate (Max IE / h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed.
+* 在輸入碳水化合物或使用計算機時，使用 **e-Carbs**，輸入整頓餐點的碳水化合物量及您預期碳水化合物轉換為血糖的時間。 系統將會計算整個時間段內均勻分佈的小份碳水化合物，這將使演算法提供相應的胰島素劑量，同時不斷檢查血糖水平的整體升降。 對於波浪注射的方式，您也可以結合較小的即時注射與 e-Carbs 一起使用。 
+* 在進餐前，於 AAPS 的 **動作標籤** 中設置一個臨時的 **即將用餐** 目標，將目標血糖設置為 80，持續幾個小時。 此時長應基於您為延長注射選擇的時間間隔。 這將使您的目標低於平時，因此會增加注射的胰島素量。
+* 然後使用 **計算機** 輸入整頓餐點的碳水化合物量，但不要直接採用注射計算機建議的數值。 如果要進行類似波浪注射的操作，則將胰島素劑量適當減少。 根據餐點的情況，演算法將需要額外的超微量注射 (SMBs) 或較高的臨時基礎率來應付血糖上升。 此處應非常謹慎地實驗基礎率的安全限制（最大 IU/小時，最大基礎 IOB），並在必要時臨時更改。
 
-* If you are tempted to just use the extended or multiwave bolus directly on the pump, AAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
+* 如果您傾向於直接在幫浦上使用延長或波浪注射，AAPS 將會處罰您，並在接下來的六個小時內停用閉環系統，以確保不會計算過量的胰島素劑量。
 
-![Disabled loop after multiwave bolus](../images/combo/combo-tips-multiwave-bolus.png)
+![波浪注射後的閉環系統停用](../images/combo/combo-tips-multiwave-bolus.png)
 
-## Alarms at bolus delivery
+## 注射時的警報
 
-* If AAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical numer of insulin units. If your really want to bolus the same inuslin twice in short succession, just wait two more minutes and then deliver the bolus again. If the fist bolus has been interruped or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
-* The alarm is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Here indistinguishable entries must be prevented.
+* 如果 AAPS 檢測到相同的注射在相同的分鐘內已成功完成，則將防止再次注射相同劑量的胰島素。 如果您真的想在短時間內重複注射相同的胰島素，只需再等待兩分鐘，然後再次進行注射。 如果第一次注射被中斷或由於其他原因未完成，從 AAPS 2.0 開始，您可以立即重新提交注射。
+* 此警報是一種安全機制，它在提交新注射之前會先讀取幫浦的注射歷史，以正確計算活性胰島素 (IOB)，即使注射是直接從幫浦完成的。 這裡必須防止無法區分的輸入記錄。
 
-![Double bolus](../images/combo/combo-tips-doppelbolus.png)
+![雙重注射](../images/combo/combo-tips-doppelbolus.png)
 
-* This mechanism is also responsible for a second cause of the error: If during the use of the bolus calculator another bolus is delivered via the pump and thereby the bolus history changes, the basis of the bolus calculation is wrong and the bolus is aborted. 
+* 這一機制還可能導致另一個錯誤原因：如果在使用注射計算機的過程中透過幫浦進行了另一個注射，從而改變了注射歷史，這將導致注射計算的基礎出錯，並且注射被中止。 
 
-![Canceled bolus](../images/combo/combo-tips-history-changed.png)
+![注射取消](../images/combo/combo-tips-history-changed.png)

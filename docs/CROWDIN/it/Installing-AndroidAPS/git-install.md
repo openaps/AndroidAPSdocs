@@ -8,17 +8,13 @@
 - Any git version should work. For example [https://git-scm.com/download/win](https://git-scm.com/download/win).
 - Make sure to note down the installation path. You will need it in the next step.
 
-```{image} ../images/Update_GitPath.png
-:alt: Git installation path
-```
+![Git installation path](../images/Update_GitPath.png)
 
 ### 2. Set git path in Android Studio
 
 - Let Studio know where is git.exe located: File - Settings
 
-  ```{image} ../images/Update_GitSettings1.png
-  :alt: Android Studio - open settings
-  ```
+  ![Android Studio - open settings](../images/Update_GitSettings1.png)
 
 - In the next window: Version Control - Git
 
@@ -26,9 +22,7 @@
 
 - Make sure update method "Merge" is selected.
 
-  ```{image} ../images/Update_GitSettings2a.png
-  :alt: Android Studio - GIT path
-  ```
+  ![Android Studio - GIT path](../images/Update_GitSettings2a.png)
 
 ### 3. Reboot
 
@@ -40,15 +34,11 @@
 
 - Enter "git --version" (without quotation marks!) and press Return
 
-  ```{image} ../images/AndroidStudio_gitversion1.png
-  :alt: git --version
-  ```
+  ![git --version](../images/AndroidStudio_gitversion1.png)
 
 - If git is installed and connected properly you will receive an information about the installed version that looks as follows:
 
-  ```{image} ../images/AndroidStudio_gitversion2.png
-  :alt: result git-version
-  ```
+  ![result git-version](../images/AndroidStudio_gitversion2.png)
 
 ## Mac
 

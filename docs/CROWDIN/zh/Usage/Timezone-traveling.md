@@ -1,138 +1,138 @@
-# Timezone traveling with pumps
+# 與幫浦跨時區旅行
 
-## DanaR, Korean DanaR
+## DanaR，韓國 DanaR
 
-There is no issue with changing timezone in phone because pump doesn't use history
+更改手機時區沒有問題，因為幫浦不使用歷史記錄。
 
 (Timezone-traveling-danarv2-danars)=
 
-## DanaRv2, DanaRS
+## DanaRv2，DanaRS
 
-These pumps need a special care because AAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
+這些幫浦需要特別注意，因為 AAPS 使用來自幫浦的歷史記錄，但幫浦記錄中沒有時區標籤。 **這意味著如果你簡單地更改手機的時區，記錄將會以不同的時區讀取，並且會重複。**
 
-To avoid this there are two possibilities:
+為避免這種情況，有兩種可能的解決方法：
 
-### Option 1: Keep home time and timeshift profile
+### 方案1：保持家庭時間並時間調整設定
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
-* Phone must keep your standard time as at home for the whole travel period.
-* Time-shift your profile according to time difference between home time and destination time.
+* 在手機設定中關閉「自動日期和時間」（手動更改時區）。
+* 手機在整個旅行期間必須保持為你的家庭標準時間。
+* 根據家庭時間與目的地時間的時差，時間調整你的設定。
    
-   * Long-press profile name (middle of top section on homescreen)
-   * Select 'Profile Switch'
-   * Set 'Time shift' according to your destination.
+   * 長按設定名稱（主畫面頂部中間部分）。
+   * 選擇「設定切換」。
+   * 根據你的目的地設置「時間調整」。
    
-   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
+   ![設定切換與時間調整](../images/ProfileSwitchTimeShift2.png)
    
-   * i.e. Vienna -> New York: profile switch +6 hours
-   * i.e. Vienna -> Sydney: profile switch -8 hours
-* Probably not an option if using [patched LibreLink app](Libre2-time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
+   * 例如：維也納 -> 紐約：設定切換 +6 小時
+   * 例如：維也納 -> 悉尼：設定切換 -8 小時
+* 如果使用[修改版的 LibreLink 應用程式](Libre2-time-zone-travelling)，自動時區必須設置以啟動新的 Libre 2 感測器，這可能無法使用。
 
-### Option 2: Delete pump history
+### 方案2：刪除幫浦歷史記錄
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change)
+* 在手機設定中關閉「自動日期和時間」（手動更改時區）。
 
-When get out of plane:
+當下飛機時：
 
-* turn off pump
-* change timezone on phone
-* turn off phone, turn on pump
-* clear history in pump
-* change time in pump
-* turn on phone
-* let phone connect to the pump and fine-tune time
+* 關閉幫浦。
+* 更改手機時區。
+* 關閉手機，打開幫浦。
+* 清除幫浦中的歷史記錄。
+* 更改幫浦中的時間。
+* 打開手機。
+* 讓手機連線到幫浦並微調時間。
 
 (Timezone-traveling-insight)=
 
 ## Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+驅動程式會自動將幫浦的時間調整為手機的時間。
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change.
+Insight 也會記錄更改時間的歷史條目，記錄時間從哪個（舊）時間更改為哪個（新）時間。 因此，儘管時間發生變更，仍可以在 AAPS 中確定正確的時間。
 
-It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
+這可能會導致 TDD 計算不準確。 但這不應該成為問題。
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+因此 Insight 使用者不需要擔心時區變更和時間更改。 此規則有一個例外：Insight 幫浦內部有一個小型電池來供電時間等。 當你更換「主」電池時保持時間運作。 如果更換電池的時間過長，這個內部電池會耗盡電力，時鐘將被重置，並在插入新電池後要求輸入時間和日期。 在這種情況下，更換電池之前的所有條目將在 AAPS 的計算中被跳過，因為無法正確識別正確的時間。
 
 ## Accu-Chek Combo
 
-The [new Combo driver](../Configuration/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the new driver programs into the pump. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
+[新的 Combo 驅動程式](../Configuration/Accu-Chek-Combo-Pump-v2.md)會自動將幫浦的時間調整為手機的時間。 Combo 無法儲存時區，只能儲存本地時間，這正是新的驅動程式將其編程至幫浦中的方式。 此外，它會將時區儲存在本地 AAPS 偏好設定中，以便將幫浦的本地時間轉換為具有時區偏移的完整時間戳記。 使用者不需要做任何操作；如果 Combo 的時間與手機的當前時間相差太大，幫浦的時間會自動調整。
 
-Note that this takes some time, however, since it can only be done in the remote-terminal mode, which is generally slow. This is a Combo limitation that cannot be overcome.
+請注意，這需要一些時間，因為只能在遠端終端模式下完成，而該模式通常較慢。 這是 Combo 無法克服的限制。
 
-The old, Ruffy-based driver does not adjust the time automatically. The user has to do that manually. See below for the steps necessary to do that safely in case the timezone / daylight savings is the reason for the change.
+舊的基於 Ruffy 的驅動程式無法自動調整時間。 使用者必須手動進行調整。 如果是因為時區或夏令時間變更，請參閱下方的安全操作步驟。
 
 (Timezone-traveling-time-adjustment-daylight-savings-time-dst)=
 
 ## Medtrum
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+驅動程式會自動將幫浦的時間調整為手機的時間。
 
-Timezone changes keep the history in tact, only TDD may be affected. Manually changing the time on the phone can cause problems with the history and IOB. If you change time manually double check the IOB.
+時區變更會保留歷史記錄，但可能會影響 TDD。 手動更改手機上的時間可能會導致歷史記錄和 IOB 出現問題。 如果手動更改時間，請仔細檢查 IOB。
 
-When the timezone or time changes running TBR's are stopped.
+當時區或時間更改時，正在運作的 TBR 會停止。
 
-# Time adjustment daylight savings time (DST)
+# 時間調整 夏令時間（DST）
 
-Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
+根據幫浦和 CGM 的設置，時間跳變可能會導致問題。 以 Combo 為例，幫浦的歷史記錄將重新讀取，並會導致重複條目。 因此，請在白天而非晚上進行時間調整。
 
-If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
+如果使用計算機注射，請不要使用 COB 和 IOB，除非您確定它們是完全正確的——在 DST 轉換後幾小時內最好不要使用它們。
 
-(Timezone-traveling-accu-chek-combo)=
+(跨時區旅行-accu-chek-combo)=
 
 ## Accu-Chek Combo
 
-**NOTE**: As mentioned above, this secton is only valid for the old, Ruffy-based driver. The new driver adjusts date and time and DST automatically.
+**注意**：如上所述，本節僅適用於舊的基於 Ruffy 的驅動程式。 新的驅動程式會自動調整日期和時間以及 DST。
 
-AAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
+如果幫浦與手機的時間相差太大，AAPS 會發出警報。 在 DST 時間調整的情況下，這通常會發生在夜間。 為了避免這種情況，並讓您可以安穩睡覺，請遵循以下步驟，以便您能夠在方便的時間強制更改時間：
 
-### Actions to take before the clock change
+### 更改時鐘前的操作
 
-1. Switch OFF any setting that automatically sets the timezone, so you can force the time change when you want to. How you can do this will depend on your smartphone and Android version.
+1. 關閉任何自動設置時區的設置，以便您可以在需要時強制更改時間。 如何操作將取決於您的智慧型手機和 Android 版本。
    
-   * Some have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the timezone (which you must turn OFF).
-   * Unfortunately some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
+   * 某些設備有兩個設置，一個是自動設置時間（理想情況下應保持開啟），另一個是自動設置時區（必須關閉）。
+   * 不幸的是，一些 Android 版本只有一個開關，可以自動設置時間和時區。 您現在必須關閉這個開關。
 
-2. Find a time zone that has the same time as your current location but doesn't use DST.
+2. 尋找一個與您當前位置有相同時間但不使用 DST 的時區。
    
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo.
+   * 可在此找到這些國家的列表 [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * 對於中歐時間（CET），這可能是「布拉柴維爾」（剛果）。 將您的手機時區更改為剛果。
 
-3. In AAPS refresh your pump.
+3. 在 AAPS 中重新整理您的幫浦。
 
-4. Check the Treatments tab... If you see any duplicate treatments:
+4. 檢查治療標籤... 如果看到任何重複的治療：
    
-   * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * 請勿按「刪除未來治療」
+   * 請按「移除」所有未來的治療和重複的治療。 這樣可以使治療無效，而不是將其移除，因此它們將不再被計入 IOB。
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+5. 如果 IOB/COB 的情況不清楚——為了安全起見，請停用循環至少一個 DIA 和最大碳水化合物時間，以較大的為準。
 
-### Actions to take after the clock change
+### 更改時鐘後的操作
 
-A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
+更改的最佳時間是當 IOB 低時。 例如，在用餐前一小時，例如早餐，（幫浦歷史記錄中的任何近期注射將是小的 SMB 校正）。 此時，您的 COB 和 IOB 應該都接近於零。
 
-1. Change the Android timezone back to your current location and re-enable automatic timezone.
-2. AAPS will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
-3. On the AAPS “Combo” screen, press Refresh.
-4. Then go to the Treatments screen, and look for any events in the future. There shouldn’t be many.
+1. 將 Android 時區更改回您的當前位置，並重新啟用自動時區。
+2. AAPS 很快就會提醒您 Combo 的時鐘與當前時間不匹配。 因此，請透過幫浦螢幕和按鈕手動更新幫浦的時鐘。
+3. 在 AAPS 的「Combo」畫面中，按「重新整理」。
+4. 然後轉到治療畫面，查看是否有任何未來事件。 應該不會有太多。
    
-   * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * 請勿按「刪除未來治療」
+   * 請按「移除」所有未來的治療和重複的治療。 這樣可以使治療無效，而不是將其移除，因此它們將不再被計入 IOB。
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+5. 如果 IOB/COB 的情況不清楚——為了安全起見，請停用循環至少一個 DIA 和最大碳水化合物時間，以較大的為準。
 
-6. Continue as normal.
+6. 正常繼續。
 
 ## Accu-Chek Insight
 
-* Change to DST is done automatically. No action required.
+* DST 變更會自動完成。 無需進行任何操作。
 
 ## Medtrum
 
-* Change to DST is done automatically. No action required.
+* DST 變更會自動完成。 無需進行任何操作。
 
-## Other pumps
+## 其他幫浦
 
-* This feature is available since AAPS version 2.2.
-* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
-* You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
+* 此功能自 AAPS 版本2.2起可用。
+* 為了避免問題，在 DST 切換後的3小時內將暫時停用循環。 這是出於安全原因（由於 DST 變更前的重複注射，IOB 過高）。
+* 您將在 DST 變更前在主畫面上收到一條通知，提示循環將暫時停用。 此訊息將不會發出嗶聲、振動或其他提示。

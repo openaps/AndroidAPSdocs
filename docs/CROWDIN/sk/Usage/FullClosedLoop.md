@@ -18,7 +18,7 @@ AAPS also allows **full closed looping without the user giving any boli**, and w
 
 In 2022/23 a first medical study was conducted and published that showed patients can achieve comparatively good results with AAPS in a simple FCL mode:
 
-> 16 adolescents with T1D (HbA1c range 43-75), and duration of diabetes of 9-15 years underwent three distinct 3-day periods of camp living, while using a modified and locked version of AndroidAPS 3.1.03. **Results:** The glycemia was controlled by the system 95% time of the study and the proportion of time below 3.9 mmol/L did not exceed 1% over the whole study period (0.72%). The HCL scenario reached significantly higher percentage of time below 3 mmol/L (HCL 1.05% vs. MA 0.0% vs. FCL 0.0%; P = 0.05) compared to other scenarios. **No difference was observed among the scenarios in the percentage of time between 3.9 and 10 mmol/L** (HCL 83.3% vs. MA 79.85% vs. **FCL 81.03%**, P = 0.58) corresponding to mean glycemia (HCL 6.65 mmol/L vs. MA 7.34 mmol/L vs. FCL 7.05 mmol/L, P = 0.28). No difference was observed in the mean daily dose of insulin or in the daily carbohydrate intake. No serious adverse event occurred during the study period. **Conclusions:** Our pilot study showed that **FCL might be a realistic mode of treatment** for people with T1D.
+> 16 adolescents with T1D (HbA1c range 43-75), and duration of diabetes of 9-15 years underwent three distinct 3-day periods of camp living, while using a modified and locked version of AAPS 3.1.0.3 **Results:** The glycemia was controlled by the system 95% time of the study and the proportion of time below 3.9 mmol/L did not exceed 1% over the whole study period (0.72%). The HCL scenario reached significantly higher percentage of time below 3 mmol/L (HCL 1.05% vs. MA 0.0% vs. FCL 0.0%; P = 0.05) compared to other scenarios. **No difference was observed among the scenarios in the percentage of time between 3.9 and 10 mmol/L** (HCL 83.3% vs. MA 79.85% vs. **FCL 81.03%**, P = 0.58) corresponding to mean glycemia (HCL 6.65 mmol/L vs. MA 7.34 mmol/L vs. FCL 7.05 mmol/L, P = 0.28). No difference was observed in the mean daily dose of insulin or in the daily carbohydrate intake. No serious adverse event occurred during the study period. **Conclusions:** Our pilot study showed that **FCL might be a realistic mode of treatment** for people with T1D.
 
 Source:
 
@@ -101,8 +101,6 @@ The most difficult meals are those with exclusively very high and high EBG compo
 
 Full closed looping requires a 24/7 technically stable system, especially regarding reliable **CGM** signals, but also **Bluetooth stability** with the **pump**, and avoiding (or at least early recognition of) occlusion. This could require attention to details like keeping all components well charged and in close proximity; making cannula (or pod) changes always early enough to lower the risk of occlusion; having always potentially needed parts with you. **Depending on your system, your experience with it, but also on your acceptance and general lifestyle, these aspects may or may not limit you.**
 
-Full closed looping requires a 24/7 technically stable system, especially regarding reliable CGM signals, but also Bluetooth stability with the pump, and avoiding (or at least early recognition of) occlusion. This could require attention to details like keeping all components well charged and in close proximity; making cannula (or pod) changes always early enough to lower the risk of occlusion; having always potentially needed parts with you. Depending on your system, your experience with it, but also on your acceptance and general lifestyle, these aspects may or may not limit you.
-
 #### Preparing for activity/sports
 
 To prepare for activity / sports /exercise,  the normal protocol with a pump or **hybrid** closed loop is to take actions that reduce insulin on board prior to exercise.
@@ -134,7 +132,7 @@ However, in full closed loop application, loopers themselves do no longer give a
 
 As you are operating with AAPS Master release, it is suggested you set in AAPS preferences the largest setting for maximum allowed SMB size the loop can give (maxUAMSMBBasalMinutes=120, i.e. 2 hours worth of basal at that daytime).
 
-> If your basal rate is very low, the resulting SMB limits might be too low to allow good-enough control of your post-prandial glucose rises. In that case the solution might be to avoid diets with strong spikes and later switch to a AAPS dev variant that offers a new parameter in SMB delivery settings: smb_max_range_extension. It expands the standard maximum of 2 h worth of basal by a factor of >1. (Additionally, the default 50% SMB delivery ratio might be levated in dev variants).
+> If your basal rate is very low, the resulting SMB limits might be too low to allow good-enough control of your post-prandial glucose rises. In that case the solution might be to avoid diets with strong spikes and later switch to a AAPS dev variant that offers a new parameter in SMB delivery settings: smb_max_range_extension. It expands the standard maximum of 2 h worth of basal by a factor of >1. (Additionally, the default 50% SMB delivery ratio might be elevated in dev variants).
 
 Going to the max. limits on SMB size in AAPS Master will not make the FCL mode inheritantly less safe. In contrary, you replace your big meal bolus by several smaller ones that you enable your loop to give you, and even with some minutes of delay. This virtually eliminates the hypo risk in the first 1-2 hours of any meal. In hour 3 and thereafter, there should not be much difference because in HCL and FCL the loop manages with the same algorithm.
 
@@ -144,13 +142,13 @@ Check the SMB tab from time to time to see whether your SMBs are allowed to be l
 
 If not, your tuning efforts will sometimes come to nothing!
 
-:::{admonition} Boosting ISF can become dangerous
+```{admonition} Boosting ISF can become dangerous
 :class: danger
 
 Carefully observe/analyze the SMB sizes that, briefly after meal start, result from your settings. Tune in steps, and do not vary more than 1 or 2 parameters at a time.
 
 Setting must work good-enough for your (!) variety of meals.
-:::
+```
 
 ## Meal detection/your Automations for boosting
 
@@ -170,7 +168,7 @@ Boxes to tick at the top: You always have the options:
 - In each Automation event template, you can tick the box for **User action** => Then the defined Actions will not automatically be executed when Conditions apply. Rather, your AAPS main screen will alert you whenever your FCL would automatically give a SMB. You have the opportunity then to say yes or no. This is **extremely useful in your tuning phase**.                                                                                                                        
   This feature can be very valueable also everyday. An example would be, if you see the “foot to floor” syndrome (suddenly rising glucose when getting up), but want to prevent a fully automatic “breakfast started” response.
 
-The following section shows in detail how you can bundle a whole series of conditions to describe situations in which the AndroidAPS loop should increase (or decrease) insulin delivery.                                                                                                                                      As ISF cannot directly be tuned, raising profile% over 100% will do the same for our purposes.
+The following section shows in detail how you can bundle a whole series of conditions to describe situations in which the AAPS loop should increase (or decrease) insulin delivery.                                                                                                                                      As ISF cannot directly be tuned, raising profile% over 100% will do the same for our purposes.
 
 ### Automated big SMBs at bg rise
 
@@ -211,7 +209,7 @@ With large meals there is **sometimes a second increase**. By then, usually also
 
 Soon after a few intial SMBs were given comes a **balanced phase** where moderate addition of insulin should cover the additional carbs absorbed. (Except in low carb meals, where the loop might see too weak of a bg rise, and go into zero-temping right away already now).
 
-The AndroidAPS main screen (where you always see cob=0 in UAM full loop) might in this phase ask for more carbs required. In UAM mode that simply means, you could make a very rough plausibility check: Is that amount of carbs likely in your body, un-absorbed from your meal just about an hour ago (about which you gave your loop no info)?
+The AAPS main screen (where you always see cob=0 in UAM full loop) might in this phase ask for more carbs required. In UAM mode that simply means, you could make a very rough plausibility check: Is that amount of carbs likely in your body, un-absorbed from your meal just about an hour ago (about which you gave your loop no info)?
 
 
 ### iob threshold
@@ -231,13 +229,13 @@ Automation #3
 It tells the loop that above your set **iob threshold** it's better not to use any more SMBs
 
 - The given example does that by setting TT=111 (which is kind of arbitrary; pick a number>100 that you easy recognize as your automated SMB shut-off)
-- In AndroidAPS Preferences/ SMB Settings generally do not allow SMB at elevated target).                                                                                                                   
+- In AAPS Preferences/ SMB Settings generally do not allow SMB at elevated target).                                                                                                                   
   The insulinReq will then have to be delivered with much more caution through the bottleneck of TBRs
 
-**Caution: Automation #3 only works when there is no active TT.** So, in case you worked with EatingSoonTT, it must be ended by that time, which usually should be 30-40 mnutes after meal start.
+**Caution: Automation #3 only works when there is no active TT.** So, in case you worked with EatingSoonTT, it must be ended by that time, which usually should be 30-40 minutes after meal start.
 
 One idea how to do this automatically would be an Automation that ends an eventually running EatingSoonTT under the condition that iob >65% * iobTH.
-> Ways to work with EatingSoonTT Some loopers set (by pressing the TT button, or automated via a lowered profile glucose target if eating time slots are fairly fixed) an EatingSoonTT roughly an hour or more before meal start, just to guarantee a low starting glucose and a bit of positive iob. But, assuming the FCL is anyways always en route towards target, this might not yield much and you might rather just define an Automation that sets an EatingSoonTT at recognition of meal start (glucose delta, or acceleration = delta > avg delta). A low TT is important in this stage because any SMB is calculated by your loop using (predicted glucose minus TT)/sens, so a small TT makes the resulting insulinReq. bigger.
+> Ways to work with EatingSoonTT Some loopers set (by pressing the TT button, or automated via a lowered profile glucose target if eating time slots are fairly fixed) an EatingSoonTT roughly an hour or more before meal start, just to guarantee a low starting glucose and a bit of positive iob. But, assuming the FCL is anyways always en route towards target, this might not yield much and you might rather just define an Automation that sets an EatingSoonTT at recognition of meal start (glucose delta, or acceleration = delta > avg delta). A low TT is important in this stage because any SMB is calculated by your loop using (predicted glucose minus TT)/sens, so a small TT makes the resulting insulinReq bigger.
 
 After the first boosted SMBs were given, your set iobTH and Automation #3 should strike a good balance of limiting the glucose peak, but also not leading to a hypo after the meal.
 
@@ -255,7 +253,7 @@ Automation #4
 
 Automation #5
 
-Automation #5, “post-meal High”, is also suitable in hybrid closed loop.
+Automation #4, “post-meal High”, is also suitable in hybrid closed loop.
 
 In addition, a termination-Automation #5, “Stop pmH”, is needed, so that the aggressiveness of the insulin administration is reduced, as soon as the glucose value is falling. (However, often the loop will limit more insulin anyways for hypo prevention because predicted glucose runs low already).
 
@@ -272,22 +270,22 @@ Generally, it makes no sense to keep optimising settings for one kind of meal. O
 In order to prevent hypo in post-meal hours 3 – 5, reduce the aggressiveness before too much iob comes together. Specific approaches:
 
 - Become milder and milder with the ISF already during the glucose rise, as in Automation examples #1 and #2 given.
-- Define the iob threshold, from which the loop is made significantly more cautious (Automation #3, above). Note this iob can be exceeded, by the last SMB before it went into effect; and then further by TBRs if the loop sees insulinReq. Carbs getting absorbed will provide a counter-movement towards lower iob.
+- Define the iob threshold, from which the loop is made significantly more cautious (Automation #3, above). Note this iob can be exceeded, by the last SMB before it went into effect; and then further by TBRs if the loop sees insulinReq Carbs getting absorbed will provide a counter-movement towards lower iob.
 - The iob threshold could be differentiated according to meals: By cloning the automations, you could easily differentiate for breakfast, lunch, and dinner time slots (or even for geo-locations, like company cafeteria, or at mother-in-law etc)  
   >You could differentiate within these time slots even further by setting different TTs for low carb vs. fast carb, etc., and thus be able to “code for” different meal classes that may occur at this time of day, and call them up with Automations specially tuned for them.(That is probably not not necessary, unless your diet habits do vary a lot.).
 
-Before a special meal challenge, you can raise your iob threshold, or make another change in any of your Automations within under 5 seconds, right from your AndroidAPS main screen (burger top left; or Automations tab, depending how you configured your AAPS.).
+Before a special meal challenge, you can raise your iob threshold, or make another change in any of your Automations within under 5 seconds, right from your AAPS main screen (burger top left; or Automations tab, depending how you configured your AAPS.).
 
 The hypo danger some hours after the meal is essentially a question of whether your meal composition was such, that the **insulin tails from fighting the bulk of carbs** will be **consumed by “extended carbs”** (excessive/delayed carb absorption/protein/fat/fibre).
 
 Over time you will learn patterns, tune your Automations – maybe even adjust your eating habits a bit, e.g. just enjoy the occasional late little(!) snack that may help maintain a good **balance of insulin activity and carb absorption** for the **entire** meal (digestion, absorption) time, and thus make life for your loop (and for yourself) easier.
 
-### Order of prorgrammed Automations
+### Order of programmed Automations
 
-Problems can arise with overlapping definitions in Automations. Example: The problem is that delta >8 is also delta >5, i.e. there may be two competing Automations. What does the loop do then? It always decides according to the sequence in which your Automations appear when looking into the burger menue / AndroidAPS main screen.  Example: The delta > +8 rule must come first (and launch the strongest boost if all conditions apply); then comes the check for delta >5 (and a milder response). If done the other way round, the delta>8 rule would never come into effect because the delta>5 already applies, case closed.
+Problems can arise with overlapping definitions in Automations. Example: The problem is that delta >8 is also delta >5, i.e. there may be two competing Automations. What does the loop do then? It always decides according to the sequence in which your Automations appear when looking into the burger menue / AdAPS main screen.  Example: The delta > +8 rule must come first (and launch the strongest boost if all conditions apply); then comes the check for delta >5 (and a milder response). If done the other way round, the delta>8 rule would never come into effect because the delta>5 already applies, case closed.
 > Tip for "house cleaning" in your Automations: Order changes are very easy to make. If you press on a list entry in AAPS/Automations, you can move the Automation in question to another position. So you can quickly (re-)arrange.
 
-Also it is very easy and quick to adjust any conditions or actions at any time, within seconds, just on your AndroidAPS smartphone; for instance if you head into a very special eating event. (But don’t forget to set it back to normal on/for the next day).
+Also it is very easy and quick to adjust any conditions or actions at any time, within seconds, just on your AAPS smartphone; for instance if you head into a very special eating event. (But don’t forget to set it back to normal on/for the next day).
 
 ## Troubleshooting
 
@@ -331,7 +329,7 @@ For instance, it is perfectly possible, without any extra steps after Automation
     - Check (real-time) in SMB tab whether %profile must  be set smaller
     - SMB delivery ratio probably can be set smaller. Note in this case, it works across the bord for all SMBs (all time slots),
 - Problems with insulin “tail” after meals
-    - You may need to take a snack (seeing hypo prediction) or glucose tablets (if already in hypo zone). But note that the carbs required the loop might tell you at some point are very likely exaggerated as the loop has absolutely zero info on your carb intake (while you may be able to guess how mnuch more, incl. from fats and proteins) is still waiting to be absorbed.
+    - You may need to take a snack (seeing hypo prediction) or glucose tablets (if already in hypo zone). But note that the carbs required the loop might tell you at some point are very likely exaggerated as the loop has absolutely zero info on your carb intake (while you may be able to guess how much more, incl. from fats and proteins) is still waiting to be absorbed.
     - A valueable information would be whether the problem originates mostly in the bg rise phase already. Then setting a lower iobTH might be an easy remedy.
     - If the need for additional carbs happens frequently, note down how many grams were needed (not counting what you eventually took too much and required extra insulin again).  Then use your profile IC value to estimate how much insulin less the SMBs should have delivered, and go with this info into your tuning (regarding the % profile in the Automations, or maybe also your set iobTH). This may relate to the SMBs given when glucose was high, or also extending regarding also the SMBs during the glucose rise.
     - It could well be that you simply have to accept higher glucose peaks for not going low. Or change diet to something with lower amounts of carbs, and higher amount of proteien and fats.

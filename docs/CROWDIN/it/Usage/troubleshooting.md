@@ -15,9 +15,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 
 - [Profile](../Usage/Profiles#troubleshooting-profile-errors)
 
-  ```{image} ../images/BasalNotAlignedToHours2.png
-  :alt: 'Error: Basal not aligned to hours'
-  ```
+  !['Error: Basal not aligned to hours'](../images/BasalNotAlignedToHours2.png)
 
 - [Nightscout Client](../Usage/Troubleshooting-NSClient.md)
 
@@ -25,9 +23,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 
 - [Wrong carb values](../Usage/COB-calculation#detection-of-wrong-cob-values)
 
-  ```{image} ../images/Calculator_SlowCarbAbsorbtion.png
-  :alt: 'Error: Slow carb absorbtion'
-  ```
+  !['Error: Slow carb absorbtion'](../images/Calculator_SlowCarbAbsorbtion.png)
 
 - [SMS commands](../Children/SMS-Commands#troubleshooting)
 

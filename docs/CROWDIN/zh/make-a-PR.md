@@ -1,508 +1,518 @@
-# How to edit the docs
+# 如何編輯文件
 
-**This description is just for editing the English documentation. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
+**此描述僅適用於編輯英文文檔。 所有新訊息必須首先以英文添加。 如果您想將文檔翻譯成其他語言（感謝您的貢獻），請使用[Crowdin](https://crowdin.com/project/androidapsdocs)。**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](make-a-PR-code-syntax) section of this page.
+有關如何格式化文本（標題、加粗...）以及設置連結的提示，請參閱此頁面的["代碼語法"](make-a-PR-code-syntax)部分。
 
-## General
+## 一般問題
 
-For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw).
+如有任何問題、反饋或新想法，您可以透過[Discord](https://discord.gg/4fQUWHZ4Mw)聯繫文件團隊。
 
-At some point it will be suggested that you make a pull request (PR), which is how your changes in the documentation are actually put onto the AAPS webpages, which are stored in GitHub. It's actually not too hard to do a PR and it is a great way to contribute. You are reading this documentation right now because people like you made PRs. Don't worry about making a mistake or somehow editing the wrong documents. Your changes are reviewed before they are merged into the "formal" AAPS documentation repository. You can't mess up the originals through any accidents in the process. The general process is:
+某個時間點將建議您發送一個Pull Request (PR)，這是您的文檔更改實際上被放到AAPS網頁上的方法，這些網頁儲存在GitHub中。 事實上，做一個PR並不太難，這是貢獻的一種很棒方式。 您現在正在閱讀這篇文檔，是因為像您這樣的人提交了PR。 別擔心犯錯誤或不小心編輯錯誤的文檔。 在將更改合併到“正式”AAPS文檔庫之前，您的更改會被審核。 您無法透過過程中的任何事故損壞原件。 一般過程如下：
 
-- Make edits and improvements to code or documentation by editing the existing content.
-- Double-check that your edits look good to you.
-- Make a few notes of what's changed so people may understand the edits.
-- Create a pull request, which asks the administrators to use your changes.
-- They will do a review and either (1)merge your changes, (2)comment back to you about your changes, or (3)start a new document with your changes.
+- 透過編輯現有內容來對代碼或文檔進行修改和改進。
+- 仔細檢查您的編輯是否符合您的預期。
+- 做一些筆記來說明所做的更改，以便人們理解這些編輯。
+- 建立一個Pull Request，請求管理員使用您的更改。
+- 他們將進行審核，並採取以下操作之一：（1）合併您的更改，（2）對您的更改進行反饋，或（3）根據您的更改建立一個新文檔。
 
-(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
+（附註：如果您是視覺型學習者，這裡有一個顯示PR工作流程的YouTube視頻[這裡](https://youtu.be/4b6tsL0_kzg)。）
 
-For our example we are going to make an edit to AndroidAPSdocs. This can be done on any Windows PC, Mac, etc. (any computer with Internet access).
+我們的範例是對AndroidAPS文檔進行編輯。 這可以在任何Windows PC、Mac等設備上完成。 （任何有互聯網查看的電腦）。
 
-1. Go to https://github.com/openaps/AndroidAPSdocs and hit Fork in the upper right to make your own copy of the repository.
+1. 前往 <https://github.com/openaps/AndroidAPSdocs>，然後在右上角點擊 Fork 來製作自己的儲存庫副本。
 
-![Fork repo](./images/PR0.png)
+![Fork庫](./images/PR0.png)
 
-2. Go to any page and navigate to the page you want to edit. Click on the black box at bottom left of page with the green word "v: latest" or similar. In the pop up window that appears, click the word "edit" for editing in GitHub. 
+2. 查看任何頁面，導航到您想編輯的頁面。 點擊頁面左下方黑色方框中的綠色字“v: latest”或類似的字樣。 在出現的彈出窗口中，點擊“edit”來在GitHub中進行編輯。 
 
-![edit doc](./images/PR1.png)
+![編輯文檔](./images/PR1.png)
 
-Or you can click on the "Edit in GitHub" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
+或者您可以點擊右上角的“Edit in GitHub”連結，然後點擊頂部欄中出現的鉛筆圖示以進行編輯。 您需要已經登錄到您的GitHub帳號才能執行此操作（如果您還沒有帳號，它們的設置非常簡單）。
 
 ![RTD io](./images/PR2.png)
 
-3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
+3. 這兩種選擇中的任何一個都將在您的庫中建立一個新分支，您的編輯將儲存在該分支中。 對文件進行編輯。
 
-We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](make-a-PR-code-syntax).
+我們使用Markdown語法來編寫文檔頁面。 文件的後綴為“.md”。目前我們使用myst_parser來處理我們的Markdown文件。 請注意使用正確的語法，具體說明請參閱[下文](make-a-PR-code-syntax)。
 
-![Edit branch](./images/PR3.png)
+![編輯分支](./images/PR3.png)
 
-4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typpos sic.). If you see a needed improvement, go back to the edit tab to make more improvements. 
+4. 您正在“<>編輯文件”標籤中工作。 選擇“預覽更改”標籤，檢查所有更改是否按預期呈現。 如果您看到需要改進的地方，請返回編輯標籤進行更多改進。 
 
-![preview mode](./images/PR5.png)
+![預覽模式](./images/PR5.png)
 
-5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
+5. 當您完成編輯後，滾動到頁面底部。 在底部的框中，在“添加可選擴展描述...”的文本字段中提供您的評論。 預設標題為文件名。 嘗試添加一句解釋**更改原因**的語句。 說明原因有助於審核者了解您嘗試透過PR進行的操作。
 
-![commit comments](./images/PR4.png)
+![提交評論](./images/PR4.png)
 
-6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request".
+6. 點擊綠色的“建議文件更改”或“提交更改”按鈕。 在出現的頁面中點擊“建立Pull Request”，然後在下一頁再次點擊“建立Pull Request”。
 
-![create pull request](./images/PR6.png)
+![建立Pull Request](./images/PR6.png)
 
-7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
+7. 這樣就完成了Pull Request的提交。 GitHub為PR分配了一個編號，位於標題後面和井號之後。 返回此頁面檢查反饋（或者，如果您已啟用GitHub通知，您將透過電子郵件收到關於PR活動的通知）。 現在，您的編輯將在一個PR列表中，團隊將審核並可能在合併到AAPS主要文檔之前提供反饋！ 如果您想查看PR的進展，您可以點擊GitHub帳號右上角的鐘形標誌，查看所有的PR。
 
-![PR tracking](./images/PR7.png)
+![PR追蹤](./images/PR7.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+附註：您的Fork和分支將仍保留在您個人的GitHub帳號上。 當您收到通知您的PR已合併後，如果您已經完成了它，您可以刪除您的分支（步驟8的通知區域將提供一個連結，用於在分支被關閉或合併後刪除它）。 對於未來的編輯，如果您按照此流程，編輯將始終從AndroidAPSdocs庫的最新版本開始。 如果您選擇使用其他方法來開始PR請求（例如，從您分叉的庫的主分支開始進行編輯），則需要透過“比較”來確保您的庫是最新的，並合併自上次更新以來發生的任何更新。 由於人們往往忘記更新他們的庫，我們建議您按照上述PR流程進行，直到您熟悉執行“比較”。
 
 (make-a-PR-code-syntax)=
 
-## Code syntax
+## 代碼語法
 
-We are using markdown for the documentation pages. The files have got the suffix ".md".
+我們使用Markdown來編寫文檔頁面。 文件的後綴為“.md”。
 
-Markdown is a very simple text formating language which separates text content from text formating.
+Markdown是一種非常簡單的文本格式語言，它將文本內容與文本格式分開。
 
-The writer only e.g. marks a headline as level 1 headline and the markdown processor generates the necessary HTML code during processing to render the heading in HTML.
+編寫者只需標記標題為一級標題，Markdown處理器會在處理期間生成必要的HTML代碼，以在HTML中呈現標題。
 
-The idea behind this is that
+其背後的理念是：
 
-- the writer should think about the text and not the formatting first,
-- the markdown text is open for exchange between different markdown tools instead of e.g. proprietary tools like Microsoft Windows and
-- you can generate several output formats from one markdown file.
+- 編寫者應該首先考慮文本，而不是格式，
+- Markdown文本可以在不同的Markdown工具之間進行交換，而不像Windows等專有工具，
+- 您可以從一個Markdown文件生成多種輸出格式。
 
-Markdown is not a 100% fixed standard and we try to stay as near as possible to the standard, to
+Markdown並非100％固定標準，我們盡量保持與標準相近，以
 
-- stay flexible to change markdown tools as needed or forced in the further innovation of markdown tools and markdown SaaS services and
-- enable us to use translation services to translate the English language in a target language like French or German. They can work on markdown but not complex formatting codes, because they can't separate content from layout, which might be fatal.
+- 保持靈活性，以便在Markdown工具和Markdown SaaS服務的進一步創新中根據需要或強制更換Markdown工具，並
+- 使我們能夠使用翻譯服務將英文翻譯成目標語言，如法語或德語。 它們可以在Markdown上工作，但無法處理複雜的格式代碼，因為它們無法將內容與佈局分開，這可能會導致致命問題。
 
-### Headlines
+### 標題
 
-- Headline 1: `# headline`
-- Headline 2: `## headline`
-- Headline 3: `### headline`
-- Headline 4: `#### headline`
+- 標題1：`# 標題`
+- 標題2：`## 標題`
+- 標題3：`### 標題`
+- 標題4：`#### 標題`
 
-We try to avoid further levels of headlines.
+我們嘗試避免更進一步的標題層級。
 
-### Text format
+### 文本格式
 
-- bold: `**text**`
-- italic: `*text*`
+- **粗體**: `**文字**`
+- *斜體*: `*文字*`
+- ***粗體斜體***: `***文字***`
 
-### ordered list
+### 有序列表
 
-:::
+    1. 第一
+    1. 第二
+    1. 第三
+    
 
-1. first
-2. second
-3. third :::
+1. 第一
+2. 第二
+3. 第三
 
-4. first
+### 無序列表
 
-5. second
-6. third
+    - 一個元素
+    - 另一個元素
+    - 還有另一個元素
+    
 
-### unordered list
+- 一個元素
+- 另一個元素
+- 還有一個元素
 
-:::
+### 多層級列表
 
-- one element
-- another element
-- and another element :::
+您可以在列表中插入嵌套列表，方法是將下一層級比上一層級多縮進4個空格。
 
-- one element
+    1. 第一
+    1. 第二
+    1. 第三
+      1. 一個元素
+      1. 另一個元素
+      1. 還有另一個元素
+    1. 四
+    1. 五
+    1. 六
+    
 
-- another element
-- and another element
+1. 第一
+2. 第二
+3. 第三 
+    1. 一個元素
+    2. 另一個元素
+    3. 還有一個元素
+4. 第四
+5. 第五
+6. 六
 
-### multi level list
+### 圖像
 
-You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
+要包含圖像，請使用此Markdown語法。
 
-:::
+- 圖像語法：`![替代文字](../images/file.png)`
 
-1. first
-2. second
-3. third 
-    1. one element
-    2. another element
-    3. and another element
-4. four
-5. five
-6. six :::
+圖像類型應為PNG或JPEG。
 
-7. first
+圖像名稱應遵循以下命名規則之一。 在示例中，我使用png作為後綴。 如果使用JPEG，請使用jpeg作為後綴。
 
-8. second
-9. third 
-    1. one element
-    2. another element
-    3. and another element
-10. four
-11. five
-12. six
+- `filename-image-xx.png` 其中xx是該文件中圖像的唯一雙位數字。
+- `filename-image-xx.png` 其中xx是文件作者的有意義名稱。
 
-### Images
+圖像位於英文語言的圖像文件夾中，並透過Crowdin自動傳播到其他語言。 您無需為此做任何事！
 
-To include images you use this markdown syntax.
+我們目前不翻譯圖像。
 
-- images: `![alt text](../images/file.png)`
+(make-a-PR-image-size)=請使用合理的圖像尺寸，使其在PC、平板電腦和手機上可讀。
 
-The type of image should be PNG or JPEG.
+- 來自網頁的截圖圖像寬度應達到**1050像素**。
+- 流程圖的寬度應達到**1050像素**。
+- 應用程序的截圖寬度應達到**500像素**。
 
-Images names should confirm to one of following naming rules. In the example I use png as suffix. In case you use JPEG please use jpeg as a suffix instead.
+### 連結
 
-- `filename-image-xx.png` where xx is a unique double digit number for the images in this file.
-- `filename-image-xx.png` where xx is a meaning full name for the author of the md file.
+#### 外部連結
 
-Images are located in the images folder for the english language and propagated to the other languages automatically by Crowdin. You have nothing to do for this!
+外部連結是指向外部網站的連結。
 
-We are not translating images at the moment.
+- 外部連結：`[替代文字](www.url.tld)`
 
-(make-a-PR-image-size)= Use a reasonable size for the images which must be readable on PC, tablet and mobiles.
+#### 指向.md文件開頭的內部連結
 
-- Screenshots from web pages images should be up to **1050 pixels wide**.
-- Diagrams of process flows should be up to **1050 pixels wide**.
-- Screenshots from the app should be up to **500 pixels wide**.
+指向頁面的內部連結是指向我們自己服務器上託管的.md文件開頭的連結。
 
-### Links
+- 內部連結到.md文件：`[替代文字](../folder/file.md)`
 
-#### External links
+#### 指向內聯引用名稱的內部連結
 
-External links are links to external web sites.
+指向內聯引用名稱的內部連結是指向我們自己服務器上託管的任何.md文件中的某個位置，並設置引用以連結到該位置。
 
-- external link: `[alt text](www.url.tld)`
-
-#### Internal links to the start of a md file
-
-Internal links to pages are links to the start of a md file which is hosted on our own server.
-
-- internal link to .md page: `[alt text](../folder/file.md)`
-
-#### Internal links to named inline refernces
-
-Internal links to named inline refernces are links to any point in a md file which is hosted on our own server and where a reference was set to link to.
-
-Add a named reference at the location in the target md file you want to jump to.
+在目標.md文件中要跳轉的位置添加命名引用。
 
 `(name-of-my-md-file-this-is-my-fancy-named-reference)=`
 
-The named reference must be unique in the whole AndroidAPSDocs md files and not only the own md file it resides in!
+命名引用必須在整個AndroidAPSDocs.md文件中唯一，而不僅僅是所在的.md文件！
 
-Therefore it is a good practice to start with the filename and then the reference name you select.
+因此，最好的做法是從文件名開始，然後選擇引用名稱。
 
-Use only lowercase letters and hyphenate words.
+僅使用小寫字母並將單詞用連字符連線。
 
-Then link this refernce in the text you are writing with the following kind of link.
+然後，使用以下類型的連結在您編寫的文本中連結此引用。
 
-- Internal links to named inline refernces: `[alt text](name-of-my-md-file-this-is-my-fancy-named-reference)`
+- 指向內聯引用名稱的內部連結：`[替代文字](name-of-my-md-file-this-is-my-fancy-named-reference)`
 
-### Notes, Warnings, Collapsing Notes
+### 註釋、警告、折疊註釋
 
-You can add notes and warning boxes to documentation.
+您可以在文檔中添加註釋和警告框。
 
-Furthermore you can add collapsing notes for detailed information which would users who are not interested in the details quench to read the text at all. Please use these carefully as the documentation should be as easy to read as possible.
+此外，您還可以添加折疊註釋，為不感興趣於詳細訊息的用戶隱藏文本，以便閱讀體驗更輕鬆。 請謹慎使用這些功能，因為文檔應儘可能易於閱讀。
 
-#### Notes
+#### 註釋
 
-:::: :::{admonition} Note :class: note
+    ```{admonition} 注意標題
+    :class: note
+    這是一個注意事項。
+    ```
+    
 
-This is a note. ::: ::::
+```{admonition} 注意標題 :class: note 這是一個注意事項。
 
-:::{admonition} Note :class: note
+    <br />#### 警告
+    
+    ````
+    ```{admonition} 警告
+    :class: warning
+    這是一個警告。
+    
 
-This is a note. :::
+    ```{admonition} 警告標題 
+    :class: warning
+    這是一個警告。
+    ```
+    
+    #### 可折疊的註解
+    
+    
 
-#### Warnings
+    {admonition} 供有興趣的讀者進一步詳細閱讀
+    :class: dropdown
+    
+    這個註解已被折疊，
+    這意味著您可以在這裡添加較長的內容，
+    而不會佔用頁面過多的空間。
+    
 
-:::: :::{admonition} Warning :class: warning
+````
 
-This is a warning. ::: ::::
+```{admonition} 供有興趣的讀者進一步詳細閱讀 :class: dropdown 這個註解已被折疊， 這意味著您可以在這裡添加較長的內容， 而不會佔用頁面過多的空間。
 
-:::{admonition} Warning :class: warning
+```
 
-This is a warning. :::
+## 表格
 
-#### Collapsing Notes
+避免使用長文本的表格，因為內容難以在 Markdown 中設置，通常無法適應手機螢幕的寬度，翻譯後可能會無法正確顯示。
 
-:::: :::{admonition} further detailed readings for interested readers :class: dropdown
+## 風格指南
 
-This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page. ::: ::::
+### 目錄
 
-:::{admonition} further detailed readings for interested readers :class: dropdown
+1. 英文寫作技巧
 
-This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page. :::
+2. AAPS特定寫作注意事項
 
-## Style Guide
+3. 有用的參考資料
 
-### Contents
+### ![圖像](./images/styleguide01.png) 1\. 英文寫作技巧
 
-1. English language writing tips
+#### 使用適合讀者的語言
 
-2. AAPS-specific writing notes
+盡可能使用簡單的英文。 這有助於非母語讀者，也有助於將AAPS文檔翻譯成其他語言。 以與用戶交談的方式進行寫作，想像您正坐在讀者的對面。 記住——大多數AAPS用戶沒有編程背景。 糖尿病本身也有很多行話和縮寫。 請記住，有些人可能是剛剛被診斷出來的，可能沒有您對糖尿病的經驗，或者他們接受了不同的糖尿病培訓。 如果您使用簡寫或縮寫，請在第一次使用時將其完整寫出，並在括號中給出縮寫，如“超微注射(SMB)”。 此外，請連結到詞彙表。 讀者可能不熟悉的技術術語也可以放在括號中。
 
-3. Useful references
+例如： *“閉環中餐後血糖高峰的原因是什麼？”*
 
-### ![Image](./images/styleguide01.png) 1\. English language writing tips
+請使用：*“在閉環中餐後（餐後）的血糖高峰原因是什麼？”*
 
-#### Use language that is appropriate for the reader
+##### 使用每個人都能理解的簡單詞語
 
-Use plain English wherever possible. This helps non-native readers and also aids translation of AAPS documents into other languages. Write in a conversational way with the user, imagine you are sitting across the desk from the person you are writing for. Remember - most AAPS users do not have programming backgrounds. Diabetes itself also has a lot of jargon and abbreviations. Bear in mind that some people may be recently diagnosed, may not be as experienced as you with diabetes, or may have been given different diabetes training. If you use shorthand or an abbreviation, write it out in full the first time you use it, giving the abbreviation directly after it in brackets, like “super micro bolus (SMB)”. Also, link to the glossary. Technical terms which might not be familiar to the reader can be also be added in brackets.
-
-Instead of: *“What causes high postprandial BG peaks in closed loop?"*
-
-Use: *“What causes a high BG peak **after lunch** (postprandial) in closed loop?"*
-
-##### Use plain words that everyone can understand
-
-Find an A-Z of alternative words to make your writing easier to understand here:
+這裡可以找到一個A-Z的替代詞匯表，以使您的寫作更易於理解：
 
 <https://www.plainenglish.co.uk/the-a-z-of-alternative-words.html>
 
-#### Privacy/licensing concerns:
+#### 隱私/許可證問題：
 
-Particularly if you record video or screenshots, make sure not to disclose your private details (API key, passwords). Make sure Youtube content is not openly listed, and needs a link from the documentation to view. Avoid drawing attention to infringed copyrighted materials (BYODA etc).
+特別是如果您錄製視頻或截圖，請確保不泄露您的私人訊息（API密鑰、密碼）。 確保 YouTube 內容不是公開列表，需要文檔中的鏈接才能查看。 避免引起侵犯版權材料（BYODA等）的注意。
 
-#### Keep sentences short, get to the point
+#### 保持句子簡短，直奔主題
 
-- Clear writing should have an average sentence length of 15 to 20 words.
+- 清晰的寫作應平均句長為15至20個單詞。
 
-- This does not mean making every sentence the same length. Be punchy. Vary your writing by mixing short sentences (like the last one) with longer ones (like this one).
+- 這並不意味著每個句子都要一樣長。 寫作應簡明有力。 透過將短句（如上面那一句）與較長的句子混合使用來改變您的寫作。
 
-- Stick to one main idea in a sentence, plus perhaps one other related point.
+- 保持每個句子只有一個主要想法，並最多添加一個相關點。
 
-- You may still find yourself writing the odd long sentence, especially when trying to explain a complicated point. But most long sentences can be broken up in some way.
+- 您可能會發現自己仍然會寫出一兩個長句，特別是在試圖解釋一個複雜的問題時。 但大多數長句可以以某種方式被分解。
 
-- Remove weak words: “you can”, “there is/are/were”, “in order to”.
+- 去除虛弱詞語：“您可以”，“有/是/是的”，“為了”。
 
-- Place keywords near the beginning of titles, sentences and paragraphs.
+- 將關鍵詞放在標題、句子和段落的開頭。
 
-- Be visual! Wherever possible provide a brief diagram, screenshot or video.
+- 要具象化！ 無論何時可能，請提供簡單的圖表、截圖或視頻。
 
-#### Don't be afraid to give instructions
+#### 不要害怕給予指示
 
-Commands are the fastest way to give instructions, but writers sometimes fear giving commands, writing “you should do this” instead of just “do this”. Perhaps people worry that commands sound too harsh. You can often solve this by putting the word 'please' in front. However, if something must be done, it is best not to say ‘please’ as it gives the reader the option to refuse.
+指令是最快的指示方式，但寫作者有時會害怕發出指令，寫成“你應該這樣做”而不是直接寫“做這件事”。 也許人們擔心指令聽起來太過嚴厲。 您可以透過在前面加上“請”字來解決這個問題。 然而，如果某件事情必須做，不要說“請”，因為這給了讀者拒絕的選擇。
 
-Instead of: *“You should just think of it as a complete statement."*
+例如：*“你應該把它當作一個完整的聲明。”*
 
-Use: *“Think of it as a complete statement.”*
+改為：*“把它當作一個完整的聲明。”*
 
-#### Mostly use active verbs, rather than passive verbs
+#### 多使用主動動詞，而不是被動動詞
 
-Example of an **active verb**:
+主動動詞的例子：
 
-- *“The pump (subject) delivers (verb) the insulin (object).”*
+- *“幫浦（主語）輸送（動詞）胰島素（賓語）。”*
 
-“delivers” is an active verb here. The sentence says what is doing the delivering before it says what is being delivered.
+“輸送”在這裡是主動動詞。 這個句子說的是誰在進行輸送，然後才說輸送的是什麼。
 
-Example of a **passive verb**:
+被動動詞的例子：
 
-- *“The insulin (subject) is delivered (verb) by the pump (object)”*
+- *“胰島素（主語）由幫浦（賓語）輸送（動詞）。”*
 
-*“delivered”* a passive verb here. The subject and object are switched around, compared to the active verb sentence. We have had to make the sentence longer by introducing “is” and “by the”. Also consider starting with the active verb.
+*“輸送”*在這裡是被動動詞。 與主動動詞句子相比，主語和賓語位置調換了。 我們不得不引入“由”和“被”使句子變得更長。 還要考慮以主動動詞開頭。
 
-Instead of: *“You can connect your pump with the phone through the AAPS pump menu, and there are a number of pumps available for you to connect with.”*
+例如：*“你可以透過AAPS幫浦選單將幫浦與手機連線，並且有多種幫浦可供連線。”*
 
-Use: *“Connect your desired pump to the phone through the AAPS pump menu.”*
+改為：*“透過AAPS幫浦選單將所需幫浦連線到手機。”*
 
-Passive verbs can cause problems:
+被動動詞會引發問題：
 
-- They can be confusing.
+- 它們容易讓人感到困惑。
 
-- They often make writing more long-winded.
+- 它們通常讓寫作顯得冗長。
 
-- They make writing less lively.
+- 它們使寫作不夠生動。
 
-##### Good uses of passives
+##### 被動語態的良好用法
 
-There are times when it might be appropriate to use a passive.
+有時使用被動語態是合適的。
 
-- To make something less hostile - 'this bill has not been paid' (passive) is softer than 'you have not paid this bill' (active).
+- 使語氣不那麼尖銳——“這張賬單未被支付”（被動語態）比“你沒支付這張賬單”（主動語態）來得溫和。
 
-- To avoid taking the blame - 'a mistake was made' (passive) rather than 'You made a mistake' (active).
+- 避免責任歸咎——“發生了錯誤”（被動語態）比“你犯了錯誤”（主動語態）來得不具指責性。
 
-- When you don't know who or what the doer is - 'the England team has been picked'.
+- 當您不知道執行者是誰或什麼時——“英格蘭隊已被選定”。
 
-- If it simply sounds better.
+- 如果聽起來更好。
 
-#### Avoid nominalisations
+#### 避免名詞化
 
-A nominalisation is the name of something that isn't a physical object, such as a process, technique or emotion. Nominalisations are formed from verbs.
+名詞化是指不是實物的某些過程、技術或情感的名稱。 名詞化是由動詞形成的。
 
-For example:
+例如：
 
-| Verb      | Nominalisation |
-| --------- | -------------- |
-| complete  | completion     |
-| introduce | introduction   |
-| provide   | provision      |
-| fail      | failure        |
+| 動詞 | 名詞化  |
+| -- | ---- |
+| 完成 | 完成過程 |
+| 介紹 | 介紹過程 |
+| 提供 | 提供過程 |
+| 失敗 | 失敗過程 |
 
-They are often used **instead** of the verbs they come from, but they can sound as if nothing is actually happening. Too many of them can make writing very dull and heavy-going.
+它們經常**取代**它們來自的動詞，但可能聽起來好像什麼都沒有實際發生。 太多的名詞化會使寫作變得非常沉悶和乏味。
 
-Instead of: *“The implementation of the method has been done by a team.”*
+例如：*“該方法的實施是由一個團隊完成的。”*
 
-Use: *“A team has implemented the method.”*
+改為：*“該團隊實施了該方法。”*
 
-#### Use lists where appropriate
+#### 適時使用列表
 
-Lists are excellent for splitting information up. There are two main types of list:
+列表非常適合將訊息分解開來。 列表有兩種類型：
 
-- A continuous sentence with several listed points picked out at the beginning, middle or end.
+- 連續句子，其中在開始、中間或結尾列出幾個重點。
 
-- Separate bullet points with an introductory statement.
+- 以引言形式分開的項目圖示列表。
 
-In the bulleted list above, each point is a complete sentence so they each start with a capital letter and end with a full stop. Use bullet points rather than numbers or letters, as they draw your attention to each point without giving you extra information to take in.
+在上面的項目圖示列表中，每個要點都是完整的句子，因此它們都以大寫字母開頭，並以句號結尾。 使用項目圖示而不是數字或字母，因為它們能引起人們對每個要點的注意，而不會提供過多的額外訊息。
 
-#### Mythbusting
+#### 破解神話
 
-- You can start a sentence with **and, but, because, so or however**.
+- 您可以以**和、但、因為、所以或然而**開始句子。
 
-- You can split infinitives. So you can say **“to boldly go”**.
+- 您可以分開不定式。 所以您可以說**“勇敢前行”**。
 
-- You can end a sentence with a preposition. In fact, it is something **we should stand up for**.
+- 您可以以介詞結尾句子。 事實上，這是我們**應該支援的**。
 
-- And **you** can use the same **word** twice in a sentence if **you** can't find a better **word**.
+- 而且**您**可以在一個句子中重複使用相同的**詞**，如果**您**找不到更好的**詞**。
 
-#### Optimising writing style by purpose
+#### 依據目的優化寫作風格
 
-To keep the documentation clear and short, we write different sections of the documentation in different styles.
+為了保持文檔的清晰和簡潔，我們在文檔的不同部分使用不同的寫作風格。
 
-An “explanation” style is used for the introduction, background and knowledge development sections.
+“解釋”風格用於介紹、背景和知識發展部分。
 
-A “How-to-guide” style (with minimal explanation) is used for building, configuring AAPS, and some of the troubleshooting sections.
+“操作指南”風格（最少的解釋）用於構建、配置AAPS和一些故障排除部分。
 
-A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
+教程幫助學習者獲得基本的能力。 用戶將**透過操作學習**。
 
-![Image](./images/styleguide02.png)
+![圖像](./images/styleguide02.png)
 
-##### ![Image](./images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
+##### ![圖像](./images/styleguide03.png) 教程（例如教孩子如何打蛋白）
 
-- narrator directly talks to the reader: In this tutorial **you** will (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
+- 敘述者直接與讀者交談：在這個教程中**您**將會學到（在某些罕見情況下，可以使用“我們”來表達“我們在這一起”）
 
-- Future Tense -> to show the final target
+- 未來時態 -> 顯示最終目標
 
-- Imperative Tense -> to do the tasks -> Concrete steps - avoid abstract concepts
+- 指令時態 -> 進行任務 -> 具體步驟 - 避免抽象概念
 
-- Past Tense -> to show accomplished tasks -> Quick and immediate visible results
+- 過去時態 -> 顯示已完成的任務 -> 快速且立即可見的結果
 
-- Minimum Explanations -> strict necessary to complete the task - **what and why**
+- 最少的解釋 -> 嚴格為完成任務所需 -> **做什麼和為什麼**
 
-- Ignore options/alternatives/…. No ambiguity
+- 忽略選項/替代方案/…. 無歧義
 
-- Step Transitions: finish a step with a sentence leading to the next step as a logical progression flow. Example: *You have now installed the Let’s Encrypt client, but before obtaining certificates, you need to make sure that all required ports are open. To do this, you will update your firewall settings in the next step.*
+- 步驟過渡：以一句引導至下一步的邏輯進程來完成一個步驟。 示例：*您現在已經安裝了Let’s Encrypt客戶端，但在獲取證書之前，您需要確保所有必需的端口都是開放的。 要做到這一點，您需要在下一步中更新防火牆設置。*
 
-- **Tutorial** Title (Level 1 heading)
+- **教程**標題（第1級標題）
 
-- Introduction (no heading)
+- 介紹（無標題）
 
-- Prerequisites (Level 2 heading)
+- 先決條件（第2級標題）
 
-- Steps:
+- 步驟：
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- 步驟1 —— 執行第一件事（第2級標題）
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- 步驟2 —— 執行下一件事（第2級標題）
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- 步驟n —— 執行最後一件事（第2級標題）
 
-- Conclusion (Level 2 heading)
+- 結論（第2級標題）
 
-![Image](./images/styleguide04.png)
+![圖像](./images/styleguide04.png)
 
-##### ![Image](./images/styleguide05.png) How-To Guides (e.g. a recipe)
+##### ![圖像](./images/styleguide05.png) 操作指南（例如食譜）
 
-A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
+操作指南的目的是幫助已經具備能力的用戶正確執行特定任務。
 
-- HOW-to
+- 如何操作
 
-- narrator directly talks to the reader: In this tutorial **you** will
+- 敘述者直接與讀者交談：在這個指南中**您**將會學到
 
-- Future Tense -> to show the final target
+- 未來時態 -> 顯示最終目標
 
-- Conditional Imperative Tense -> to get X do y -> Concrete steps - avoid abstract concepts
+- 條件指令時態 -> 要達到X做Y -> 具體步驟 - 避免抽象概念
 
-- Minimum Explanations -> strict necessary to complete the task -> **what and why**
+- 最少的解釋 -> 嚴格為完成任務所需 -> **做什麼和為什麼**
 
-- Ignore options/alternatives/…. No ambiguity, but you can link to the reference entry or explanation entry
+- 忽略選項/替代方案/…. 無歧義，但您可以連結到參考條目或解釋條目
 
-- **How-to**: Title (Level 1 heading)
+- **操作指南**：標題（第1級標題）
 
-- Introduction paragraph
+- 介紹段落
 
-- Optional Prerequisites (paragraph or Level 2 heading if more than 1)
+- 可選先決條件（如果超過1個，則用段落或第2級標題表示）
 
-- Steps:
+- 步驟：
 
-- Step 1 — Doing the First Thing (Level 2 heading)
+- 步驟1 —— 執行第一件事（第2級標題）
 
-- Step 2 — Doing the Next Thing (Level 2 heading)
+- 步驟2 —— 執行下一件事（第2級標題）
 
-- Step n — Doing the Last Thing (Level 2 heading)
+- 步驟n —— 執行最後一件事（第2級標題）
 
-- Conclusion paragraph
+- 結論段落
 
-![Image](./images/styleguide06.png)
+![圖像](./images/styleguide06.png)
 
-##### ![Image](./images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![圖像](./images/styleguide07.png) 解釋（例如：為什麼打蛋白會變硬的科學原理）
 
-An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
+解釋旨在澄清、加深並擴展讀者對某個主題的理解。
 
-- WHY
+- 為什麼
 
-- Start with **About**
+- 從**關於**開始
 
-- Provide context, link ALL relevant references
+- 提供背景，連結所有相關參考資料
 
-- Discuss options/alternatives
+- 討論選項/替代方案
 
-- Don’t instruct or provide reference (link to them)
+- 不要提供指示或具體參考資料（連結到它們）
 
-- State the unknown/moving targets etc…
+- 說明未知/變動中的目標等...
 
-- **About** Title (Level 1 heading)
+- **關於**標題（第1級標題）
 
-- Introduction (no heading)
+- 介紹（無標題）
 
-- Optional Prerequisites (Level 2 heading)
+- 可選的先決條件（第2級標題）
 
-- Subtopic 1 (level 2 heading)
+- 子主題1（第2級標題）
 
-- Conclusion (Level 2 heading)
+- 結論（第2級標題）
 
-![Image](./images/styleguide08.png)
+![圖像](./images/styleguide08.png)
 
-### 2\. AAPS-specific writing/updating notes
+### 2\. AAPS 特定的寫作/更新筆記
 
-#### Author & Editor
+#### 作者與編輯
 
-For writing/updating the AAPS documentation, consider the process as consisting of two stages. These can be carried out by the same person at different points, or more than one person.
+撰寫/更新 AAPS 文檔的過程可以視為兩個階段。 這些步驟可以由同一個人在不同的時間點完成，或者由多個人共同完成。
 
-An **author (e.g. you!)** writes/edits a section of the documentation in a concise conversational tone, then passes it to the editor.
+**作者（例如你！）**以簡潔且對話式的語氣撰寫/編輯文檔的一部分，然後交給編輯。
 
-The **editor (e.g. a fellow AAPS user, or the person who receives the pull request)** reviews adherence to the style guide, edits the section for clarity and accessibility, removing as many words as possible (especially for tutorial/how-to sections). Reading the text out loud may help.
+**編輯（例如一位 AAPS 使用者，或是接收到 pull request 的人）**審查是否遵守風格指南，並對該部分進行編輯以確保清晰和易讀性，儘量刪除冗餘的文字（特別是教程/操作指南部分）。 大聲朗讀文本可能會有所幫助。
 
-#### General AAPS points
+#### AAPS 常見要點
 
-- For glucose values, state both mg/dl and mmol/l in each occurrence (also consider this for screenshots, if possible).
+- 對於血糖值，請在每次出現時同時標明 mg/dl 和 mmol/l（如果可能，也考慮將其應用於截圖）。
 
-- For consistency, use “AAPS” rather than “Android APS”.
+- 為了保持一致性，使用 “AAPS” 而不是 “Android APS”。
 
-- Clearly state the version of Android Studio/AAPS you are writing for, or that the screenshots are taken from.
+- 明確說明您撰寫的版本是針對哪一版本的 Android Studio/AAPS，或截圖取自哪個版本。
 
-### 3\. Useful References
+### 3\. 有用的參考資料
 
 <https://dev.readthedocs.io/en/latest/style-guide.html>
 
-[Diátaxis (diataxis.fr)](https://diataxis.fr/)
+[Diátaxis（diataxis.fr）](https://diataxis.fr/)
 
-[Technical Writer Style Guide Examples | Technical Writer HQ](https://technicalwriterhq.com/writing/technical-writing/technical-writer-style-guide/)
+[技術寫作風格指南範例 | 技術寫作 HQ](https://technicalwriterhq.com/writing/technical-writing/technical-writer-style-guide/)
 
-[DigitalOcean's Technical Writing Guidelines | DigitalOcean](https://www.digitalocean.com/community/tutorials/digitalocean-s-technical-writing-guidelines)
+[DigitalOcean 的技術寫作指南 | DigitalOcean](https://www.digitalocean.com/community/tutorials/digitalocean-s-technical-writing-guidelines)
 
-[Top 10 tips for Microsoft style and voice - Microsoft Style Guide | Microsoft Learn](https://learn.microsoft.com/en-us/style-guide/top-10-tips-style-voice?source=recommendations)
+[Microsoft 風格與語氣的十大提示 - Microsoft 風格指南 | Microsoft Learn](https://learn.microsoft.com/en-us/style-guide/top-10-tips-style-voice?source=recommendations)
 
 <https://www.plainenglish.co.uk/how-to-write-in-plain-english.html>
 

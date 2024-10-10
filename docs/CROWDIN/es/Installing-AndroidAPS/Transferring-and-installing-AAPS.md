@@ -52,7 +52,7 @@ you should see the **AAPS** icon and be able to open the app.
 Did you remeber to disallow the installation from Google Drive?
 ```
 
-## Please go on with [configuring the AAPS loop](configuring-the-AAPS-loop.md).
+## Please go on with [configuring the AAPS loop](../Installing-AndroidAPS/setup-wizard.md).
 
 ## Option 2. Use a USB cable to transfer files
 

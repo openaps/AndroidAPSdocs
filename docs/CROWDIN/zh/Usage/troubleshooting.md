@@ -1,110 +1,110 @@
-# Troubleshooting
+# 疑難排解
 
-You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem.
+你可以在許多 wiki 頁面上找到疑難排解的資訊。 此頁面是幫助你找到解決問題資訊的鏈接集合。
 
-Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.html).
+額外的有用資訊可能也會在 [FAQ](../Getting-Started/FAQ.html) 中找到。
 
-## AAPS app
+## AAPS 應用程式
 
-### Building & updating
+### 建立 & 更新
 
-* [Lost keystore](troubleshooting_androidstudio-lost-keystore)
-* [Troubleshooting AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
+* [遺失的密鑰庫](troubleshooting_androidstudio-lost-keystore)
+* [疑難排解 AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 
-### Settings
-* [Profile](Profiles-troubleshooting-profile-errors)
+### 設定
+* [設定檔](Profiles-troubleshooting-profile-errors)
 
-  ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
+  ![錯誤：基礎率未對齊到整點](../images/Screen_DifferentPump.png)
 
-* [Pump - data from different pump](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
+* [幫浦 - 來自不同幫浦的資料](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
 
-  ![Failure message: Data from different pump](../images/BasalNotAlignedToHours2.png)
+  ![錯誤訊息：來自不同幫浦的資料](../images/BasalNotAlignedToHours2.png)
 
-* [Nightscout Client](../Usage/Troubleshooting-NSClient.html)
+* [Nightscout 用戶端](../Usage/Troubleshooting-NSClient.html)
 
-### Usage
-* [Wrong carb values](COB-calculation-detection-of-wrong-cob-values)
+### 使用說明
+* [碳水化合物值錯誤](COB-calculation-detection-of-wrong-cob-values)
 
-   ![Error: Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+   ![錯誤：碳水化合物吸收速度過慢](../images/Calculator_SlowCarbAbsorption.png)
 
-* [SMS commands](SMS-Commands-troubleshooting)
+* [SMS 指令](SMS-Commands-troubleshooting)
 
-### Frequent bluetooth connection problems
+### 頻繁的藍牙連線問題
 
-This can happen with various pumps. Apart from excluding AAPS from any battery optimization, you can also exclude the system bluetooth app from battery optimization. This can help in some cases. Depending on the phone you use, you will find the bluetooth app differently.
+這可能會發生在各種幫浦上。 除了將 AAPS 排除在任何電池優化之外，你還可以將系統的藍牙應用程式排除在電池優化之外。 這在某些情況下有幫助。 根據你使用的手機，你會以不同方式找到藍牙應用程式。
 
-Here are examples how to find them on specific android phones.
-
-
-#### Pixel phones (stock android)
-
-* Go to the android settings, select "Apps".
-
-  ![Android Settings¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
-
-* Select "See all apps"
-
-  ![See all apps](../images/troubleshooting/pixel/02_apps.png)
-
-* On the menu on the right, select "Show system" apps.
-
-  ![Show system apps](../images/troubleshooting/pixel/03_allapps.png)
-
-* Now search and select the app "Bluetooth".
-
-  ![Bluetooth app](../images/troubleshooting/pixel/03_bluetooth.png)
-
-* Click the "App battery usage" and select "Not optimized".
-
-  ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
+這裡是一些如何在特定 Android 手機上找到它們的範例。
 
 
-#### Samsung phones
+#### Pixel 手機（原生 Android）
 
-* Go to the android settings, select "Apps"
+* 進入 Android 設定，選擇「應用程式」。
 
-* On the icon that supposedly changes the sorting algorithm (1), select "Show system apps" (2).
+  ![Android 設定¦應用程式](../images/troubleshooting/pixel/01_androidsettings.png)
 
-  ![App Filter](../images/troubleshooting/samsung/Samsung01_Apps.png)
+* 選擇「查看所有應用程式」
 
-  ![Show system apps](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+  ![查看所有應用程式](../images/troubleshooting/pixel/02_apps.png)
 
-* Now search the bluetooth app and select it to see its settings.
+* 在右側的選單中，選擇「顯示系統應用程式」。
 
-  ![Bluetooth App](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+  ![顯示系統應用程式](../images/troubleshooting/pixel/03_allapps.png)
 
-* Select "battery".
+* 現在搜尋並選擇「藍牙」應用程式。
 
-  ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
+  ![藍牙應用程式](../images/troubleshooting/pixel/03_bluetooth.png)
 
-* Set it to "Not optimized"
+* 點擊「應用程式電池使用情況」並選擇「未優化」。
 
-  ![Not optimized](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
+  ![藍牙電池優化](../images/troubleshooting/pixel/04_btunrestricted.png)
+
+
+#### Samsung 手機
+
+* 進入 Android 設定，選擇「應用程式」
+
+* 在圖示上（1）選擇變更排序演算法，然後選擇「顯示系統應用程式」（2）。
+
+  ![應用程式篩選器](../images/troubleshooting/samsung/Samsung01_Apps.png)
+
+  ![顯示系統應用程式](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+
+* 現在搜尋藍牙應用程式並選擇它來查看其設定。
+
+  ![藍牙應用程式](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+
+* 選擇「電池」。
+
+  ![電池](../images/troubleshooting/samsung/Samsung04_Battery.png)
+
+* 將其設為「未優化」。
+
+  ![未優化](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
 
 ## CGM
 
-* [General](GeneralCGMRecommendation-troubleshooting)
+* [一般問題](GeneralCGMRecommendation-troubleshooting)
 * [Dexcom G6](DexcomG6-troubleshooting-g6)
 * [Libre 3](Libre3-experiences-and-troubleshooting)
 * [Libre 2](Libre2-experiences-and-troubleshooting)
-* [xDrip - no CGM data](xdrip-identify-receiver)
-* [xDrip - Dexcom troubleshooting](xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [xDrip - 無 CGM 資料](xdrip-identify-receiver)
+* [xDrip - Dexcom 疑難排解](xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
-## Pumps
+## 幫浦
 
 * [DanaRS](DanaRS-Insulin-Pump-dana-rs-specific-errors)
-* [Accu-Chek Combo general](Accu-Chek-Combo-Tips-for-Basic-usage)
+* [Accu-Chek Combo 總覽](Accu-Chek-Combo-Tips-for-Basic-usage)
 * [Accu-Chek Combo + Ruffy](Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
 * [Accu-Chek Insight](Accu-Chek-Insight-Pump-insight-specific-errors)
 * [Medtronic + RileyLink](MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 
-## Phones
+## 手機
 
 * [Jelly](../Usage/jelly.md)
-* [Huawei bluetooth & battery optimization](../Usage/huawei.md)
+* [華為藍牙 & 電池優化](../Usage/huawei.md)
 
-## Smartwatches
+## 智慧型手錶
 
-* [Troubleshooting Wear app](Watchfaces-troubleshooting-the-wear-app)
+* [疑難排解 Wear 應用程式](Watchfaces-troubleshooting-the-wear-app)
 * [Sony Smartwatch 3](../Usage/SonySW3.md)

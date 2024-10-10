@@ -57,7 +57,7 @@ jobs:
         run: wget -qO- https://raw.githubusercontent.com/ruzickap/action-my-broken-link-checker/v2.1.0/entrypoint.sh | bash 2>&1 | tee link_log.txt
       
       - name: Store link log
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: link_log_${{ matrix.language }}
           path: link_log.txt
@@ -74,7 +74,7 @@ jobs:
 
     steps:
       - name: Get link log
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: link_log_${{ matrix.language }}
 

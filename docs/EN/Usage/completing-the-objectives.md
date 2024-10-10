@@ -7,11 +7,11 @@
 * You have a basic understanding of what your system is doing, and therefore why you can trust it.
 
 
-:::{admonition} Note
+```{admonition} Note
 :class: note
 
 Regularly export your **AAPS** settings after completing each **objective**!
-:::
+```
 
 We strongly recommend that you  [export your settings](../Usage/ExportImportSettings.md) after completing each **objective**. This exporting process creates a **settings** (.json) file which you should keep backed-up in one or more safe places (_e.g._ Google Drive, hard disk, email attachment _etc._). This ensures that you keep your progress through the **objectives**, and if you accidentally delete your progress, you can simply re-load it by importing a recent settings file. Having a backup **settings** file is also required if you want to change your **AAPS** smartphone for any reason (upgrading/lost/broken phone _etc._)
 
@@ -42,9 +42,7 @@ Note - *You may need to wait for the next sensor glucose reading to arrive befor
 - Click on the orange text "Not completed yet" to access the to-dos.
 - Links will be provided to guide you, in case you are not familiar with a specific action yet.
 
-  ```{image} ../images/Objective2_V2_5.png
-  :alt: Screenshot objective 2
-  ```
+  ![Screenshot objective 2](../images/Objective2_V2_5.png)
 - Tasks to complete **Objective 2** are:
   - Set your profile to 90% for a duration of 10 min (_Hint_: Long press your profile name on the OVERVIEW screen) (_Note_: AAPS does not accept basal rates below 0.05U/hr. If your profile includes any rates 0.06U/hr or lower you will need to create a new profile with higher basal rates before completing this task. Switch back to your normal profile after completing this task.)      
   - Simulate "taking a shower" by disconnecting your pump in **AAPS** for a duration of 1h (_Hint_: press the loop icon on the OVERVIEW screen to open the Loop dialogue)
@@ -60,7 +58,7 @@ Note - *You may need to wait for the next sensor glucose reading to arrive befor
 
 - Pass a multiple-choice exam testing your **AAPS** knowledge.
 
-Some users find **Objective 3** to be the most difficult objective to complete. Please do read the **AAPS** documents in conjunction with the questions. If you are genuinely stuck after researching the **AAPS** documents, please search the Facebook group for "Objective 3" (because it is likely that your question has been asked- and answered - before). If you are still stuck, ask in a post on either the Facebook or Discord group. These groups can provide friendly hints, or redirect you to the relevant part of the **AAPS** documents.
+Some users find **Objective 3** to be the most difficult objective to complete. Please do read the **AAPS** documents in conjunction with the questions. If you are genuinely stuck after researching the **AAPS** documents, please search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group for "Objective 3" (because it is likely that your question has been asked- and answered - before). If you are still stuck, ask in a post on either the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group. These groups can provide friendly hints, or redirect you to the relevant part of the **AAPS** documents.
 
 To proceed with **Objective 3**, click on the orange text “**Not completed yet**” to access the relevant question. Please read each question carefully and select your answer(s).
 
@@ -72,10 +70,10 @@ For each question, there may be more than one answer that is correct! If an inco
 
 When **AAPS** is installed for the first time, you will have to complete the whole of **Objective 3** before moving on to **Objective 4**. Each objective is required to be completed in sequential order. New features will gradually be unlocked as progress is made through the objectives. 
 
-:::{admonition}  __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
+```{admonition}  __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: Note
 From time to time, new features are added to **AAPS** which may require a new question to be added to the Objectives, particularly Objective 3. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other Objectives remain completed.
-:::
+```
 
 ## Objective 4: Starting on an open loop
 
@@ -94,13 +92,11 @@ Estimated time to complete this objective: **7 days**. This is a mandatory wait 
 - You might even consider to raise your upper limit (or disable Open Loop) at night.
 - You can set a minimum percentage for recommended basal rate changes to change the number of triggered notifications.
 
-  ```{image} ../images/OpenLoop_MinimalRequestChange2.png
-  :alt: Open Loop minimal request change
-  ```
+  ![Open Loop minimal request change](../images/OpenLoop_MinimalRequestChange2.png)
 
-:::{admonition} You don't need to action each and every system recommendation!
+```{admonition} You don't need to action each and every system recommendation!
 :class: Note
-:::
+```
 
 (Objectives-objective-5-Understanding-your-open-loop-including-its-temp-basal-recommendations)=
 
@@ -125,32 +121,26 @@ Your target is a core value. All calculations are based on it. It is different f
 
 You may want to experiment with adjusting your targets being in a tighter range (say, 1 or less mmol/l [20 mg/dl or less] wide) and observe a resulting system behaviour.
 
-You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
+You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Overview > Range for Visualisation.
 
-```{image} ../images/sign_stop.png
-:alt: Stop sign
-```
-:::{admonition} If you have been using a virtual pump, change to a real insulin pump now!
+![Stop sign](../images/sign_stop.png)
+```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
 If you are open looping with a virtual pump stop here. Only click verify at the end of this Objective once you have changed to using a "real" physical pump.
-:::
-
-
-```{image} ../images/blank.png
-:alt: blank
 ```
+
+
+![blank](../images/blank.png)
 
 (Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)=
 ## Objective 6: Starting to close the loop with Low Glucose Suspend
 
-```{image} ../images/sign_warning.png
-:alt: Warning sign
-```
-:::{admonition}  Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend only!
+![Warning sign](../images/sign_warning.png)
+```{admonition}  Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend only!
 :class: Note
 You will still need to correct high BG values by yourself (manually with corrections by pump or pen)!
-:::
+```
 
 As part of **Objective 6** you will close the loop and activate its Low Glucose Suspend (LGS) mode while [max IOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) is set to zero. You have to remain in LGS mode for 5 days to complete this objective. You should use this time to check if your profile settings are accurate and don't trigger LGS events too often. 
 
@@ -168,9 +158,7 @@ This means that when you are on Objective 6, if sensor glucose levels are droppi
 
 - If your basal IOB is negative (see screenshot below) a temporary basal rate (TBR) > 100% can be triggered in objective 6.
 
-```{image} ../images/Objective6_negIOB.png
-:alt: Example negative IOB
-```
+![Example negative IOB](../images/Objective6_negIOB.png)
 
 - Set your target range slightly higher than you usually would aim at, just to be safe and to add a safety buffer.
 - Enable 'Low Glucose Suspend' mode by pressing and holding the Loop icon at the top right corner of the OVERVIEW screen and selecting the Loop - LGS mode icon.
@@ -190,9 +178,7 @@ Estimated time to complete this objective: 1 day.
 
 This recommendation should be seen as a starting point. If you set it to the 3x and you are seeing AAPS giving too much insulin as glucose levels rise, then lower the "Maximum total IOB OpenAPS can’t go over" value. Alternatively, if you are very resistant, raise it very cautiously.
 
-  ```{image} ../images/MaxDailyBasal2.png
-  :alt: max daily basal
-  ```
+  ![max daily basal](../images/MaxDailyBasal2.png)
 
 - Once confident on how much IOB suits your looping patterns, reduce your targets to your desired level.
 
@@ -235,13 +221,13 @@ for example trigger an Android notification in few minutes:
    - click "Notification" to edit the message(Msg), enter something like "Ny first automation"
  - wait until the time triggers the notification (note that depanding on your phone, it can be a few minutes late)
 4) Experiment with setting up a more useful automation.
-- The documentation page gives a few examples, and you can search for "automation" screenshots on the Facebook group. Since most people eat the same thing for breakfast at the same time every morning before school/work, a fairly common use-case can be to set a "before-breakfast-target" to set a slightly lower temporary target 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consists of  "Start temp target" with a target value and a 30 minutes duration. 
+- The documentation page gives a few examples, and you can search for "automation" screenshots on the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group. Since most people eat the same thing for breakfast at the same time every morning before school/work, a fairly common use-case can be to set a "before-breakfast-target" to set a slightly lower temporary target 30 minutes before having breakfast. In such case, your condition is likely to include "recurring time" which consists of selecting specific days of the week (Monday, Tuesday, Wednesday, Thursday, Friday) and a specific time (06:30 am). The action will consists of  "Start temp target" with a target value and a 30 minutes duration. 
 
 
 ## Objective 11: Enabling additional features for daytime use, such as Dynamic Senstivity plugin (DynISF).
 - Ensure that SMB is functioning properly
 - Read the documentation concerning Dynamic ISF [here](../Usage/DynamicISF.md)
-- Search the Facbook and Discord groups for discussions around Dynamic ISF and read about other users experiences and recommendations. 
+- Search the Facbook and [Discord](https://discord.gg/4fQUWHZ4Mw) groups for discussions around Dynamic ISF and read about other users experiences and recommendations. 
 - Enable the **DynamicISF plugin** and identify the appropriate calibration for your body's uniqueness. It is advisable to begin with a value lower than 100% for safety reasons.
 
 
@@ -250,9 +236,7 @@ for example trigger an Android notification in few minutes:
 
 If you want to go back in **objectives** progress for whatever reason you can do so by clicking at "clear finished".
 
-```{image} ../images/Objective_ClearFinished.png
-:alt: Go back in objectives
-```
+![Go back in objectives](../images/Objective_ClearFinished.png)
 
 ## Objectives in Android APS before version 3.0
 

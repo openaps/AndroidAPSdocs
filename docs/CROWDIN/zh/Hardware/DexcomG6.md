@@ -1,69 +1,70 @@
-# Dexcom G6
+# Dexcom G6 和 ONE
 
-## Basics first
+## 基本事項
 
--   Follow general CGM hygiene and setting sensor recommendation [here](../Hardware/GeneralCGMRecommendation.md).
+-   遵循一般 CGM 衛生和傳感器設定建議，[點擊此處](../Hardware/GeneralCGMRecommendation.md)了解更多。
 
-## General hints for looping with G6
+## 使用 G6 和 ONE 的循環一般提示
 
-- Recent transmitters are called Firefly. Sensors cannot be restarted without removing the transmitter, which itself cannot be reset, they also do not generate raw data.
+- 最近的傳輸器稱為 Firefly。 傳感器無法在不移除傳輸器的情況下重新啟動，傳輸器本身也無法重置，並且它們也不會生成原始資料。
 
-- If you are restarting sensors, ensure you are ready to calibrate and keep an eye on variation.
+- 如果您正在重新啟動傳感器，請確保您已準備好進行校準並密切注意變化。
 
-- Pre-soaking of the G6 with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
+- G6/ONE 預浸泡使用工廠校準可能會導致結果變異。 如果您進行預先浸泡，為獲得最佳結果，您可能需要校正傳感器。
 
-Read more in the [article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+請閱讀 Tim Street 發表的[文章](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/)以了解更多，該文章發佈於[www.diabettech.com](https://www.diabettech.com)。
 
-## If using G6 with xDrip+
+## 如果使用 G6 或 ONE 與 xDrip+
 
-- If you are using a recent (Firefly) transmitter, preemptive restarts are **ignored**.
-- If you are using a modded transmitter you do **not need** to use preemptive restarts.
--   If you are using an old rebatteried transmitter, the safest thing to do is **disable** [preemptive restarts](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html). Though, in this case you will have to use the G6 in non-[native mode](https://navid200.github.io/xDrip/docs/Native-Algorithm.html) (which is unadvisable as it disables factory calibration and doesn't filter noisy readings), or else the sensor will stop after 10 days.
--   The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
--   When using xDrip+ as receiver uninstall the Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
--   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+. You can also use xDrip+ as a companion app of the official Dexcom app, but you might experience delays in BG readings.
--   If not already set up, download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../Configuration/xdrip.md).
--   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+- 如果您正在使用最近的（Firefly）傳輸器，預防性重新啟動將**被忽略**。
+- 如果您使用的是修改過的傳輸器，則**不需要**使用預防性重新啟動。
+-   如果您使用的是舊的更換過電池的傳輸器，最安全的做法是**停用**[預防性重新啟動](https://navid200.github.io/xDrip/docs/Preemptive-Restart.html)。 但是，在這種情況下，您將不得不在非[原生模式](https://navid200.github.io/xDrip/docs/Native-Algorithm.html)下使用 G6（這不建議使用，因為它會停用工廠校準並且不會過濾吵雜的讀取值），否則傳感器將在 10 天後停止運作。
+-   Dexcom G6 和 ONE 傳送器可以同時連接到 Dexcom 接收器（或替代的 t:slim 幫浦）以及你手機上的一個應用程式。
+-   使用 xDrip+ 作為接收器時，請先卸載 Dexcom 應用程式。 **您無法同時將 xDrip+ 和 Dexcom 應用程式連線到傳輸器！**
+-   如果你需要 Clarity 並希望使用 xDrip+ 的警報，請使用 [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app)（僅限 G6）並用本地廣播到 xDrip+。
+-   您還可以將 xDrip+ 用作官方 Dexcom 應用程式的配套程式，但您可能會遇到血糖讀取延遲。
+-   如果尚未設置，請下載[xDrip+](https://github.com/NightscoutFoundation/xDrip)並按照[xDrip+ 設定頁面](../Configuration/xdrip.md)上的指示進行操作。
+-   在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
 
-- Adjust settings in xDrip+ according to [xDrip+ settings page](../Configuration/xdrip.md)
+- 根據[xDrip+ 設定頁面](../Configuration/xdrip.md)調整設定。
 
 (DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
-## If using G6 with Build Your Own Dexcom App
+## 如果使用 G6 配合自製 Dexcom 應用程式
 
--   [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750) (BYODA) supports local broadcast to AAPS and/or xDrip+ (not for G5/ONE/G7 sensors!)
+-   [自製 Dexcom 應用程式](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750)（BYODA）支援本地廣播到 AAPS 和/或 xDrip+（不適用於 G5/ONE/G7 傳感器！）
 
-![BYODA broadcast options](../images/BYODA.png)
+![BYODA 廣播選項](../images/BYODA.png)
 
--   This app lets you use your Dexcom G6 with any Android smartphone.
--   Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously (**do not stop** the currently running sensor)
--   Install the downloaded apk
--   Enter sensor code and transmitter serial no. in patched app.
--   In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
--   After short time BYODA should pick-up transmitter signal.
+-   此應用程式允許您將 Dexcom G6 與任何 Android 智慧型手機一起使用。
+-   如果您之前使用過原版或修改過的 Dexcom 應用程式，請卸載它們（**不要停止**當前運作的傳感器）。
+-   安裝下載的 apk
+-   在修改版應用程式中輸入傳感器代碼和傳輸器序列號。
+-   在手機設定中，前往應用程式 > Dexcom G6 > 權限 > 其他權限並按下「存取 Dexcom 應用程式」。
+-   短時間後，BYODA 應該會收到傳輸器訊號。
 
-### Settings for AAPS
+### AAPS 設定
 
--   Select 'Dexcom App (patched)' in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+-   在[ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇「Dexcom App（修改版）」。
 
--   If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+-   如果您未收到任何數值，請選擇其他資料來源，然後重新選擇「Dexcom App（修改版）」以觸發 AAPS 和 BYODA 廣播之間連線所需的權限請求。
 
-### Settings for xDrip+
+### xDrip+ 設定
 
--   Select '640G/Eversense' as data source.
--   Command 'start sensor' must be performed in xDrip+ in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
+-   選擇「640G/Eversense」作為資料來源。
+-   必須在 xDrip+ 中執行「啟動傳感器」指令，才能接收數值。 這不會影響您的當前傳感器，它仍由自製 Dexcom 應用程式控制。
 
 
 (DexcomG6-troubleshooting-g6)=
-## Troubleshooting G6
+## G6 和 ONE 故障排除
 
-### Dexcom G6 specific troubleshooting
+### Dexcom G6/ONE 特定故障排除
 
--   Scroll down to **Troubleshooting** [here](https://navid200.github.io/xDrip/docs/Dexcom_page.html).
+-   向下滾動至[**疑難排解**](https://navid200.github.io/xDrip/docs/Dexcom_page.html)。
 
-### General troubleshooting
+### 一般疑難排解
 
-General Troubleshooting for CGMs can be found [here](./GeneralCGMRecommendation.md#troubleshooting).
+可以在[這裡](./GeneralCGMRecommendation.md#troubleshooting)找到一般 CGM 的疑難排解。
 
-### New transmitter with running sensor
+### 新的傳輸器與正在運作的傳感器
 
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found [here](https://navid200.github.io/xDrip/docs/Remove-transmitter.html). If you opt for [this solution](https://youtu.be/tx-kTsrkNUM) instead, you must be careful to avoid [damaging sensor contacts](https://navid200.github.io/xDrip/docs/Petroleum-jelly-in-Dexcom-G6-Sensor.html) with the strip.
+如果您在傳感器會話期間更換了傳輸器，您可以嘗試取下傳輸器而不損壞傳感器底座。 您可以在[這裡](https://navid200.github.io/xDrip/docs/Remove-transmitter.html)找到相關影片。 如果您選擇[這種解決方案](https://youtu.be/tx-kTsrkNUM)，您必須小心避免使用膠帶時[損壞傳感器接觸點](https://navid200.github.io/xDrip/docs/Petroleum-jelly-in-Dexcom-G6-Sensor.html)。

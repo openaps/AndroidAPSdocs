@@ -2,27 +2,19 @@
 
 - **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
-  ```{image} ../images/Pref2020_Open2.png
-  :alt: Open preferences
-  ```
+  ![Open preferences](../images/Pref2020_Open2.png)
 
 - You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
 
-  ```{image} ../images/Pref2020_OpenPlugin2.png
-  :alt: Open plugin preferences
-  ```
+  ![Open plugin preferences](../images/Pref2020_OpenPlugin2.png)
 
 - **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
 
-  ```{image} ../images/Pref2020_Submenu2.png
-  :alt: Open submenu
-  ```
+  ![Open submenu](../images/Pref2020_Submenu2.png)
 
 - With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
 
-  ```{image} ../images/Pref2021_Filter.png
-  :alt: Preferences filter
-  ```
+  ![Preferences filter](../images/Pref2021_Filter.png)
 
 ```{contents}
 :backlinks: entry
@@ -32,9 +24,7 @@
 (Preferences-general)=
 ## General
 
-```{image} ../images/Pref2020_General.png
-:alt: Preferences > General
-```
+![Preferences > General](../images/Pref2020_General.png)
 
 **Units**
 
@@ -58,9 +48,7 @@
 
 (Preferences-master-password)=
 
-```{image} ../images/Pref2020_General2.png
-:alt: Preferences > General - Protection
-```
+![Preferences > General - Protection](../images/Pref2020_General2.png)
 
 #### Master password
 
@@ -75,9 +63,7 @@
 
 - Enter password, confirm password and click ok.
 
-  ```{image} ../images/MasterPW.png
-  :alt: Set master password
-  ```
+  ![Set master password](../images/MasterPW.png)
 
 #### Settings protection
 
@@ -87,9 +73,7 @@
 
 - If you are using a custom password click on line "Settings password" to set password as described [above](Preferences-master-password).
 
-  ```{image} ../images/Pref2020_Protection.png
-  :alt: Protection
-  ```
+  ![Protection](../images/Pref2020_Protection.png)
 
 #### Application protection
 
@@ -102,18 +86,14 @@
 
 - In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter master password.
 
-  ```{image} ../images/Pref2020_PW.png
-  :alt: Prompt biometric protection
-  ```
+  ![Prompt biometric protection](../images/Pref2020_PW.png)
 
 (Preferences-skin)=
 #### Skin
 
 - You can choose from four types of skins:
 
-  ```{image} ../images/Pref2021_SkinWExample.png
-  :alt: Select skin
-  ```
+  ![Select skin](../images/Pref2021_SkinWExample.png)
 
 - 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
 
@@ -130,18 +110,14 @@
 
 - **Large Display** has an increased size of all graphs compared to other skins
 
-  ```{image} ../images/Screenshots_Skins.png
-  :alt: Skins depending on phone's display orientation
-  ```
+  ![Skins depending on phone's display orientation](../images/Screenshots_Skins.png)
 
 (Preferences-overview)=
 ## Overview
 
 - In overview section you can define preferences for home screen.
 
-  ```{image} ../images/Pref2020_OverviewII.png
-  :alt: Preferences > Overview
-  ```
+  ![Preferences > Overview](../images/Pref2020_OverviewII.png)
 
 ### Keep screen on
 
@@ -153,19 +129,13 @@
 
 - Define which buttons are visible on the bottom of your home screen.
 
-  ```{image} ../images/Pref2020_OV_Buttons.png
-  :alt: Preferences > Buttons
-  ```
+  ![Preferences > Buttons](../images/Pref2020_OV_Buttons.png)
 
 - With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
 
-  ```{image} ../images/Pref2020_OV_Buttons2.png
-  :alt: Preferences > Buttons > Insulin
-  ```
+  ![Preferences > Buttons > Insulin](../images/Pref2020_OV_Buttons2.png)
 
-  ```{image} ../images/Pref2020_OV_Buttons3.png
-  :alt: Preferences > Buttons > Carbs
-  ```
+  ![Preferences > Buttons > Carbs](../images/Pref2020_OV_Buttons3.png)
 
 (Preferences-quick-wizard)=
 ### Quick Wizard
@@ -174,17 +144,13 @@
 
 - In setup you define during which time period the button will be visible on your home screen - just one button per period.
 
-  ```{image} ../images/Pref2020_OV_QuickWizard.png
-  :alt: Preferences > Quick Wizard Button Setup
-  ```
+  ![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
 
 - If you click the quick wizard button AAPS will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
 
 - The proposal has to be confirmed before insulin is delivered.
 
-  ```{image} ../images/Pref2020_OV_QuickWizard2.png
-  :alt: Preferences > Quick Wizard Button
-  ```
+  ![Preferences > Quick Wizard Button](../images/Pref2020_OV_QuickWizard2.png)
 
 (Preferences-default-temp-targets)=
 ### Default temp targets
@@ -193,15 +159,11 @@
 
 - With setting of default TT you can easily change your target for activity, eating soon etc.
 
-  ```{image} ../images/Pref2020_OV_DefaultTT.png
-  :alt: Preferences > Default temp targets
-  ```
+  ![Preferences > Default temp targets](../images/Pref2020_OV_DefaultTT.png)
 
 - Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
 
-  ```{image} ../images/Pref2020_OV_DefaultTT2.png
-  :alt: Preferences > Use default temp targets
-  ```
+  ![Preferences > Use default temp targets](../images/Pref2020_OV_DefaultTT2.png)
 
 ### 
 
@@ -215,9 +177,7 @@
 
 - Define which part of the graph on the home screen shall be you target range and be filled with green background.
 
-  ```{image} ../images/Pref2020_OV_Range2.png
-  :alt: Preferences > Range for visualization
-  ```
+  ![Preferences > Range for visualization](../images/Pref2020_OV_Range2.png)
 
 ### Shorten tab titles
 
@@ -225,17 +185,13 @@
 
 - For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
 
-  ```{image} ../images/Pref2020_OV_Tabs.png
-  :alt: Preferences > Tabs
-  ```
+  ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
 
 ### Show notes field in treatments dialogs
 
 - Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
 
-  ```{image} ../images/Pref2020_OV_Notes.png
-  :alt: Preferences > Notes in treatment dialogs
-  ```
+  ![Preferences > Notes in treatment dialogs](../images/Pref2020_OV_Notes.png)
 
 (Preferences-status-lights)=
 ### Status lights
@@ -256,16 +212,12 @@
 
 - In versions prior to AAPS 2.7 settings for status lights had to be made in Nightscout settings.
 
-  ```{image} ../images/Pref2020_OV_StatusLights2.png
-  :alt: Preferences > Status Lights
-  ```
+  ![Preferences > Status Lights](../images/Pref2020_OV_StatusLights2.png)
 
 (Preferences-advanced-settings-overview)=
 ### Advanced Settings (Overview)
 
-```{image} ../images/Pref2021_OV_Adv.png
-:alt: Preferences > Advanced Settings
-```
+![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
 
 (Preferences-superbolus)=
 #### Superbolus
@@ -318,13 +270,14 @@
 Depending on your settings in [config builder](../Configuration/Config-Builder.md) you can choose between two algorithms:
 
 - [Advanced meal assist (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm for advanced users
+- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### OpenAPS AMA settings
 
 - Allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably.
 - More details about the settings and Autosens can be found in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
+(Preferences-max-u-h-a-temp-basal-can-be-set-to)=
 #### Max U/h a Temp Basal can be set to
 
 - Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate.
@@ -371,7 +324,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 - You must have started [objective 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
-- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to).
 
 - Details on the different enable options are described in [OpenAPS feature section](Open-APS-features-enable-smb).
 
@@ -381,9 +334,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 - If target is modified it will be displayed with a green background on your home screen.
 
-  ```{image} ../images/Home2020_DynamicTargetAdjustment.png
-  :alt: Target modified by autosens
-  ```
+  ![Target modified by autosens](../images/Home2020_DynamicTargetAdjustment.png)
 
 (Preferences-carb-required-notification)=
 #### Carb required notification
@@ -400,9 +351,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 - Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
-  ```{image} ../images/Pref2020_CarbsRequired.png
-  :alt: Display carbs required on home screen
-  ```
+  ![Display carbs required on home screen](../images/Pref2020_CarbsRequired.png)
 
 #### Advanced settings (OpenAPS SMB)
 
@@ -411,9 +360,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 ## Absorption settings
 
-```{image} ../images/Pref2020_Absorption.png
-:alt: Absorption settings
-```
+![Absorption settings](../images/Pref2020_Absorption.png)
 
 ### min_5m_carbimpact
 
@@ -433,9 +380,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 - The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
 
-  ```{image} ../images/Pref2020_min_5m_carbimpact.png
-  :alt: COB graph
-  ```
+  ![COB graph](../images/Pref2020_min_5m_carbimpact.png)
 
 ### Maximum meal absorption time
 
@@ -461,9 +406,7 @@ If using AAPS to open loop then make sure you have selected Virtual Pump in conf
 (Preferences-nsclient)=
 ## NSClient
 
-```{image} ../images/Pref2020_NSClient.png
-:alt: NSClient
-```
+![NSClient](../images/Pref2020_NSClient.png)
 
 Original communication protocol, can be used with older Nightscout versions.
 
@@ -475,16 +418,15 @@ Original communication protocol, can be used with older Nightscout versions.
 
 ## NSClientV3
 
-```{image} ../images/Pref2024_NSClientV3.png
-:alt: NSClientV3
-```
+![NSClientV3](../images/Pref2024_NSClientV3.png)
 
 [New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
-:::{admonition} V3 data uploaders
+```{admonition} V3 data uploaders
 :class: warning
-When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.  
-:::
+
+When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+```
 
 - Set your *Nightscout URL* (i.e. <https://yoursitename.yourplaform.dom>).
   - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
@@ -501,9 +443,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Alarm options
 
-```{image} ../images/Pref2024_NSClient_Alarms.png
-:alt: Alarm options
-```
+![Alarm options](../images/Pref2024_NSClient_Alarms.png)
 
 - Alarm options allows you to select which Nightscout alarms to use through the app. AAPS will alarm when a Nightscout alarms trigger.
   - For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Nightscout variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
@@ -514,9 +454,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Connection settings
 
-```{image} ../images/ConfBuild_ConnectionSettings.png
-:alt: NSClient connection settings
-```
+![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
 
 - Connection settings define when Nightscout connection will be enabled.
 - Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
@@ -527,9 +465,7 @@ You can select which data you want to [upload and download to or from Nightscout
 (Preferences-advanced-settings-nsclient)=
 ### Advanced settings (NSClient)
 
-```{image} ../images/Pref2024_NSClientAdv.png
-:alt: NS Client advanced settings
-```
+![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
 
 Options in advanced settings are self-explanatory.
 
@@ -550,28 +486,21 @@ Select which location service shall be used:
 
 ## Local alerts
 
-```{image} ../images/Pref2020_LocalAlerts.png
-:alt: Local alerts
-```
+![Local alerts](../images/Pref2020_LocalAlerts.png)
 
 - Settings should be self-explanatory.
 
 ## Data choices
 
-```{image} ../images/Pref2020_DataChoice.png
-:alt: Data choices
-```
+![Data choices](../images/Pref2020_DataChoice.png)
 
 - You can help develop AAPS further by sending crash reports to the developers.
 
 ## Maintenance settings
 
-```{image} ../images/Pref2020_Maintenance.png
-:alt: Maintenance settings
-```
+![Maintenance settings](../images/Pref2020_Maintenance.png)
 
-- Standard recipient of logs is <mailto:logs@androidaps.org>.
-- If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). In this case master password has to be entered each time settings are exported or imported.
+- Standard recipient of logs is <mailto:logs@aaps.app>.
 
 ## Open Humans
 
