@@ -77,7 +77,7 @@ AAPS 用來控制你的幫浦並提供胰島素。 根據歐洲現行法規，�
 
 # AAPS 設置
 
-以下列表旨在幫助你優化設置。 最好從頂部開始，依次往下進行。 在更改另一個設置之前，請確保先調整好一個設置。 逐步進行調整，而不是一次性做出大幅更改。 你可以使用 [Autotune](https://autotuneweb.azurewebsites.net/) 來引導你的思路，但不要盲目遵循：他可能並不適合你或所有情況。 請注意，設置之間相互影響——在某些情況下，你可能擁有“錯誤”的設置卻能正常運作（例如，如果過高的基礎率恰好與過高的碳水化合物比率同時存在），但在其他情況下卻無法正常運作。 這意味著你需要考慮所有設置，並檢查他們在不同情況下是否協同工作。
+以下列表主要在幫助你優化設置。 最好從頂部開始，依次往下進行。 在更改另一個設置之前，請確保先調整好一個設置。 逐步進行調整，而不是一次性做出大幅更改。 你可以使用 [Autotune](https://autotuneweb.azurewebsites.net/) 來引導你的思路，但不要盲目遵循：他可能並不適合你或所有情況。 請注意，設置之間相互影響——在某些情況下，你可能擁有“錯誤”的設置卻能正常運作（例如，如果過高的基礎率恰好與過高的碳水化合物比率同時存在），但在其他情況下卻無法正常運作。 這意味著你需要考慮所有設置，並檢查他們在不同情況下是否協同工作。
 
 ## 胰島素活性持續時間（DIA）
 
@@ -372,7 +372,7 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 
 請
 
-- 檢查[Android Studio 故障排除](troubleshooting_androidstudio-troubleshooting-android-studio)以獲取典型錯誤，並
+- 檢查[Android Studio 問題排除](troubleshooting_androidstudio-troubleshooting-android-studio)以獲取典型錯誤，並
 - 查看有關[逐步指南](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po)的提示。
 
 ## 我在目標上卡住了，需要幫助。

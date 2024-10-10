@@ -34,7 +34,7 @@ AndroidAPS 版本 3.2.0.1 不支援 1 分鐘讀取值。 加速和平滑處理�
 
 - 如果尚未設定，請下載 [xDrip+](https://github.com/NightscoutFoundation/xDrip) 並按照[xDrip+ 設定頁面](../Configuration/xdrip.md)上的指示操作。
 - 在 xDrip+ 中選擇 "Libre2（修補版應用程式）" 作為資料來源。
-- 如果需要，請在「不常見的設定」→「額外日誌記錄設定」→「日誌記錄的額外標籤」下輸入 "BgReading:d,xdrip libre_receiver:v"。 這將記錄額外的錯誤訊息以便進行故障排除。
+- 如果需要，請在「不常見的設定」→「額外日誌記錄設定」→「日誌記錄的額外標籤」下輸入 "BgReading:d,xdrip libre_receiver:v"。 這將記錄額外的錯誤訊息以便進行問題排除。
 
 ![xDrip+ LibreLink 日誌記錄](../images/Libre2_Tags.png)
 
@@ -93,7 +93,7 @@ AndroidAPS 版本 3.2.0.1 不支援 1 分鐘讀取值。 加速和平滑處理�
 
 ## 經驗與疑難排解
 
-### Libre3 -> Juggluco 連線故障排除
+### Libre3 -> Juggluco 連線問題排除
 
 - 確保你使用的是 Juggluco 應用程式的最新版本。
 - 根據本指南檢查你的設定。

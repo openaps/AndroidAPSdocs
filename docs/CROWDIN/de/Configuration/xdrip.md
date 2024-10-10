@@ -24,11 +24,11 @@ Solltest Du eine ältere AAPS-Version (vor 3.2) nutzen, deaktiviere `Automatisch
 
 Tippe auf `Zusätzliche Optionen` (8)
 
-    {admonition} Safety warning
+    {admonition} Sicherheitshinweis
     :class: warning
-    You must deactivate "Upload treatments" from xDrip+, otherwise treatments can be doubled in AAPS leading to false COB and IOB.
+    Die Option "Behandlungen hochladen" muss in xDrip+ deaktiviert werden, da ansonsten in AAPS doppelte Einträge erzeugt werden, die wiederum zu falschen COB und IOB-Werten führen.
 
-Deactivate `Upload treatments`(9) and make sure you will **NOT** use `Back-fill data` (11).
+Deaktiviere `Behandlungen hochladen` (9) und nutze **auf keinen Fall** die Funktion `Back-fill Daten` (11).
 
 Die Option `Alarm bei Fehlern` sollte ebenfalls deaktiviert sein (10). Bei WLAN bzw. Mobilfunk-Problemen oder wenn der Server nicht erreichbar ist, erhältst Du sonst alle 5 Minuten einen Alarm.
 
@@ -224,9 +224,9 @@ Nutze [diese Anleitung](https://navid200.github.io/xDrip/docs/Dexcom/SensorFaile
 
 - Starte den Sensor in xDrip+.
     
-        {admonition} Safety warning
+        {admonition} Sicherheitshinweis
         :class: warning
-        Do not use sensor data before the one hour warm-up is over: the values can be extremely high and cause wrong decisions in AAPS.
+        Sensorwerte innerhalb der einstündigen Aufwärmphase sind nicht brauchbar: Die Werte können extrem zu hoch angezeigt werden und in AAPS zu falschen Entscheidungen führen.
     
     → Hamburger Menü (1) → Sensor starten (2) → Sensor starten (3) → Vermerke den genauen Zeitpunkt an dem der Sensor durch die Hersteller-App oder das Lesegerät gestartet wurde. Wurde der Sensor nicht heute gestartet, wähle "NICHT HEUTE" aus (4).
 

@@ -61,7 +61,7 @@
 
 ### [OpenAPS 資料公用](https://www.openhumans.org/activity/openaps-data-commons/)
 
-OpenAPS 資料公用旨在為 DIYAPS 社群提供簡單的方法來共享資料集以供研究。 這些資料既可供傳統研究人員進行傳統研究，也可供社群中的團體或個人進行自己的研究項目。 OpenAPS 資料公用使用「Open Humans」平台，使人們能夠輕鬆上傳並共享來自 DIYAPS 的資料，包括 AAPS、Loop 和 OpenAPS。
+OpenAPS 資料公用主要在為 DIYAPS 社群提供簡單的方法來共享資料集以供研究。 這些資料既可供傳統研究人員進行傳統研究，也可供社群中的團體或個人進行自己的研究項目。 OpenAPS 資料公用使用「Open Humans」平台，使人們能夠輕鬆上傳並共享來自 DIYAPS 的資料，包括 AAPS、Loop 和 OpenAPS。
 
 你可以透過三種方式之一將你的資料匯入 Open Humans：
 

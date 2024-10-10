@@ -20,7 +20,7 @@ Irgendwann wird vorgeschlagen, dass Du einen Pull-Request (PR) erstellst, der da
 
 In unserem Beispiel nehmen wir nun eine Änderung an der AndroidAPS-Dokumentation vor. Es kann auf jedem Windows-PC, Mac, etc. erfolgen. (jedem Computer mit Internet-Zugang).
 
-1. Go to <https://github.com/openaps/AndroidAPSdocs> and hit Fork in the upper right to make your own copy of the repository.
+1. Gehe zu <https://github.com/openaps/AndroidAPSdocs> und klicke auf "Fork" oben rechts, um Deine eigene Kopie des Repositories (dt. Quellcode) zu machen.
 
 ![Fork repo](./images/PR0.png)
 
@@ -88,14 +88,14 @@ Wir versuchen uns auf diese Überschriften zu beschränken.
 
 ### Textformatierung
 
-- **bold**: `**text**`
-- *italic*: `*text*`
-- ***bold italic***: `***text***`
+- **fett**: `**text**`
+- *kursiv*: `*text*`
+- ***fett kursiv***: `***text***`
 
-### Ordered list
+### Nummerierte Liste
 
-    1. first
-    1. second
+    1. erste
+    1. zweite
     1. dritte
     
 
@@ -103,29 +103,29 @@ Wir versuchen uns auf diese Überschriften zu beschränken.
 2. zweite
 3. dritte
 
-### Unordered list
+### Ungeordnete Liste
 
-    - one element
-    - another element
-    - and another element
+    - ein Element
+    - ein anderes Element
+    - und ein anderes Element
     
 
 - ein Element
 - eine andere HTML-Element.
 - und ein anderes Element
 
-### Multi level list
+### Liste mit mehreren Ebenen
 
 Um Listen in Listen einfügen, rückst Du die nächste Ebene mit 4 zusätzlichen Leerzeichen zur vorangegangenen Ebene nach rechts ein.
 
-    1. first
-    1. second
-    1. third
-      1. one element
-      1. another element
-      1. and another element
-    1. four
-    1. five
+    1. erste
+    1. zweite
+    1. dritte
+      1. ein Element
+      1. ein anderes Element
+      1. und ein anderes Element.
+    1. vier
+    1. fünf
     1. sechs
     
 
@@ -202,15 +202,15 @@ Zusätzlich kannst Du ausklappbare Hinweise für Detail- und Zusatzinformationen
 
 #### Notiz
 
-    ```{admonition} Note headline
+    ```{admonition} Notizüberschrift
     :class: note
-    This is a note.
+    Das ist eine Notiz.
     ```
     
 
-```{admonition} Note headline :class: note This is a note.
+```{admonition} Notizüberschrift :class: note Das ist eine Notiz.
 
-    <br />#### Warnings
+    <br /><br />#### Warnings
     
     ````
     ```{admonition} Warning
@@ -218,32 +218,32 @@ Zusätzlich kannst Du ausklappbare Hinweise für Detail- und Zusatzinformationen
     This is a warning.
     
 
-    ```{admonition} Warning headline 
+    ```{admonition} Warnungsüberschrift 
     :class: warning
-    This is a warning.
+    Dies ist eine Warnung.
     ```
     
-    #### Collapsing Notes
+    #### Aufklappbare Notizen
     
     
 
-    {admonition} further detailed readings for interested readers
+    W{admonition} Weiterführende Informationen für interessierte Lesende
     :class: dropdown
     
-    This admonition has been collapsed,
-    meaning you can add longer form content here,
-    without it taking up too much space on the page.
+    Dieser Abschnitt wurde eingeklappt,
+    d.h. Du kannst längere Formularinhalte hinzufügen, 
+    ohne dass sie in der Dokumentation einen zu großen Raum einnehmen.
     
 
 ````
 
-```{admonition} further detailed readings for interested readers :class: dropdown This admonition has been collapsed, meaning you can add longer form content here, without it taking up too much space on the page.
+```{admonition} Weiterführende Informationen für interessierte Lesende :class: dropdown Dieser Abschnitt wurde eingeklappt, d.h. Du kannst längere Formularinhalte hinzufügen, ohne dass sie in der Dokumentation einen zu großen Raum einnehmen.
 
 ```
 
-## Tables
+## Tabellen
 
-Avoid using tables with long texts as the contents is difficult to set in Markdown, they will usually not fit in a mobile phone screen width, and probably won't display the same after translation.
+Vermeide lange Textpassagen in Tabellen, da der Inhalt in Markdown schwer umzusetzen ist. In der Regel passen sie nicht in eine Bildschirmbreite des Smartphones und werden nach der Übersetzung wahrscheinlich anders dargestellt.
 
 ## Styleguide
 
@@ -273,7 +273,7 @@ Hier findest Du alternative Wörter von A-Z, die ein verständliches Schreiben l
 
 #### Datenschutz/Lizenz Angelegenheiten:
 
-Achte besonders darauf, dass Du bei Videoaufnahmen oder Screenshots keine persönlichen Informationen (Passwörter oder Deinen API-Schlüssel) preisgibst. Make sure YouTube content is not openly listed, and needs a link from the documentation to view. Vermeide es, die Aufmerksamkeit auf urheberrechtsverletzendes Material (BYODA etc) zu lenken.
+Achte besonders darauf, dass Du bei Videoaufnahmen oder Screenshots keine persönlichen Informationen (Passwörter oder Deinen API-Schlüssel) preisgibst. YouTube-Inhalte sollten nur über einen Link aus der Dokumentation aufrufbar und nicht öffentlich gelistet sein. Vermeide es, die Aufmerksamkeit auf urheberrechtsverletzendes Material (BYODA etc) zu lenken.
 
 #### Nutze kurze und präzise Sätze
 
@@ -339,11 +339,11 @@ Es gibt Situationen, in denen es richtig sein kann, das Passiv zu verwenden.
 
 #### Vermeide Substantivierungen
 
-Eine Substantivierung ist der Name von etwas, das kein physisches Objekt ist, wie ein Prozess, eine Technik oder eine Emotion ist. Nominalizations are formed from verbs.
+Eine Substantivierung ist der Name von etwas, das kein physisches Objekt ist, wie ein Prozess, eine Technik oder eine Emotion ist. Substantivierungen (Nominalisierungen) werden aus Verben gebildet.
 
-For example:
+Zum Beispiel:
 
-| Verb          | Nominalization    |
+| Verb          | Nominalisierung   |
 | ------------- | ----------------- |
 | abgeschlossen | Abgeschlossenheit |
 | einführen     | Einführung        |
@@ -376,7 +376,7 @@ In der obigen Aufzählung ist jeder Punkt ein vollständiger Satz, daher beginne
 
 - Und **Du** kannst dasselbe **Wort** zweimal in einem Satz verwenden, wenn **Du** kein besseres **Wort** findest.
 
-#### Optimizing writing style by purpose
+#### Bewusste Optimierung des Schreibstils
 
 Um die Dokumentation übersichtlich und kurz zu halten, schreiben wir verschiedene Abschnitte der Dokumentation in verschiedenen Stilen.
 

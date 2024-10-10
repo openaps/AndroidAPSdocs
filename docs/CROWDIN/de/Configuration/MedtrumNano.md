@@ -267,7 +267,7 @@ This shows the last time the pump was connected to AAPS.
 
 ##### Pumpenstatus:
 
-This shows the current state of the pump. For example:
+This shows the current state of the pump. Zum Beispiel:
     - ACTIVE : The pump is activated and running normally
     - STOPPED: The patch is not activated
 

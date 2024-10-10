@@ -2,7 +2,7 @@
 
 - **Öffne die Einstellungen** durch einen Klick auf das 3-Punkte-Menü rechts oben auf dem Startbildschirm.
 
-  ![Open preferences](../images/Pref2020_Open2.png)
+  ![Einstellungen öffnen](../images/Pref2020_Open2.png)
 
 - Du kannst direkt zu den Einstellungen für einen bestimmten Tab (z.B. Pumpen-Tab) springen, indem Du diesen Tab öffnest und auf Plugin-Einstellungen klickst.
 
@@ -10,11 +10,11 @@
 
 - **Untermenüs** können geöffnet werden, indem Du auf das Dreieck unter dem Untermenü-Titel klicken.
 
-  ![Open submenu](../images/Pref2020_Submenu2.png)
+  ![Untermenü öffnen](../images/Pref2020_Submenu2.png)
 
 - Mit der **Filter-Funktion** ganz oben auf dieser Seite kannst Du schnell die gesuchten Einstellungen finden. Beginne einfach mit der Eingabe eines Teils des Textes, nach dem du suchst.
 
-  ![Preferences filter](../images/Pref2021_Filter.png)
+  ![Filter in Einstellungen](../images/Pref2021_Filter.png)
 
 ```{contents}
 :backlinks: entry
@@ -48,7 +48,7 @@
 
 (Preferences-master-password)=
 
-![Preferences > General - Protection](../images/Pref2020_General2.png)
+![Einstellungen > Allgemein - Schutz](../images/Pref2020_General2.png)
 
 #### Master-Passwort
 
@@ -92,7 +92,7 @@
 
 - Du kannst zwischen vier Darstellungsarten wählen:
 
-  ![Select skin](../images/Pref2021_SkinWExample.png)
+  ![Darstellungsart wählen](../images/Pref2021_SkinWExample.png)
 
 - * Bei der 'Darstellung für niedrige Auflösungen' werden die Beschriftungen kürzer dargestellt und im Careportal einige Angaben entfernt, um auf Bildschirmen mit sehr niedriger Auflösung mehr Platz zu gewinnen.
 
@@ -132,9 +132,9 @@
 
 - Mit den Erhöhungszahlen kannst du die Schrittweiten definieren, die in den KH- und Insulin-Dialogen benutzt werden und so die dortigen Eingaben vereinfachen.
 
-  ![Preferences > Buttons > Insulin](../images/Pref2020_OV_Buttons2.png)
+  ![Einstellungen > Übersicht > Schaltflächen > Insulin](../images/Pref2020_OV_Buttons2.png)
 
-  ![Preferences > Buttons > Carbs](../images/Pref2020_OV_Buttons3.png)
+  ![Einstellungen > Schaltflächen > Kohlenhydrate](../images/Pref2020_OV_Buttons3.png)
 
 (Preferences-quick-wizard)=
 ### Quick Wizard
@@ -143,7 +143,7 @@
 
 - In der Konfiguration legst du fest, in welchem Zeitraum die Schaltfläche auf dem Homescreen zu sehen sein soll. Es ist nur eine Schaltfläche pro Zeitraum möglich.
 
-  ![Preferences > Quick Wizard Button Setup](../images/Pref2020_OV_QuickWizard.png)
+  ![Einstellungen > Quick Wizard Button](../images/Pref2020_OV_QuickWizard.png)
 
 - Wenn du auf den QuickWizard-Button klickst, berechnet AAPS für diese Kohlenhydrate einen Bolus basierend auf Deinen aktuellen Faktoren (unter Berücksichtigung des Blutzuckerwertes oder des Insulins an Bord, wenn eingerichtet) und schlägt diesen vor.
 
@@ -162,7 +162,7 @@
 
 - Drücke lange auf deinen Zielwert in der oberen rechten Ecke auf dem Home-Bildschirm oder verwende die Shortcuts im orange "Kohlenhydrate" (Carbs)-Button am unteren Rand.
 
-  ![Preferences > Use default temp targets](../images/Pref2020_OV_DefaultTT2.png)
+  ![Einstellungen > Vordefinierte temporäre Ziele](../images/Pref2020_OV_DefaultTT2.png)
 
 ###
 
@@ -184,7 +184,7 @@
 
 - Zum Beispiel wird die 'OpenAPS AMA' -Registerkarte zu 'OAPS', 'Objectives (Ziele)' wird zu 'ZIEL' usw.
 
-  ![Preferences > Tabs](../images/Pref2020_OV_Tabs.png)
+  ![Einstellungen > Tabs](../images/Pref2020_OV_Tabs.png)
 
 ### Möglichkeit zur Erfassung von Notizen in Behandlungsdialogen
 
@@ -216,7 +216,7 @@
 (Preferences-advanced-settings-overview)=
 ### Erweiterte Einstellungen (Übersicht)
 
-![Preferences > Advanced Settings](../images/Pref2021_OV_Adv.png)
+![Einstellungen > Erweiterte Einstellungen](../images/Pref2021_OV_Adv.png)
 
 (Preferences-superbolus)=
 #### Superbolus
@@ -269,7 +269,7 @@
 Abhängig von Deinen Einstellungen im [Konfigurations-Generator](../Configuration/Config-Builder.md) kannst Du zwischen zwei Algorithmen wählen:
 
 - [Advanced meal assist (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - Entwicklungsstand des Algorithmus von 2017
-- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - der neueste für Anfänger empfohlene Algorithmus
 
 ### OpenAPS AMA-Einstellungen
 
@@ -323,7 +323,7 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 
 - Du musst [Ziel 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) gestartet haben, um SMB nutzen zu können.
 
-- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to).
+- Die ersten drei Einstellungen werden [oben](Preferences-max-u-h-a-temp-basal-can-be-set-to) erklärt.
 
 - Details zu den verschiedenen Optionen sind auf der Seite [OpenAPS-Funktionen](Open-APS-features-enable-smb) beschrieben.
 
@@ -379,7 +379,7 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 
 - Im COB-Diagramm auf dem Startbildschirm werden Zeiten, in denen min_5m_impact verwendet wird, mit einem orangenen Punkt auf der Diagrammlinie markiert.
 
-  ![COB graph](../images/Pref2020_min_5m_carbimpact.png)
+  ![COB-Diagramm](../images/Pref2020_min_5m_carbimpact.png)
 
 ### Maximale Dauer des Essens-Resorption
 
@@ -424,7 +424,7 @@ Ein [mit AAPS 3.2 neu eingeführtes Kommunikations-Protokoll](../Installing-Andr
 ```{admonition} V3 data uploaders
 :class: warning
 
-When using NSClientV3, all uploaders must be using the API V3. Since most are not compatible yet, this means **you must let AAPS upload all data** (BG, treatments, ...) to Nightscout and disable all other uploaders if they're not V3 compliant.
+Bei der Verwendung von NSClientV3 müssen alle Uploader die API V3 verwenden. Da die meisten noch nicht kompatibel sind, heißt das, dass Du **AAPS erlauben musst alle Daten an Nightscout hochzuladen** (Glukosewerte, Behandlungen, ...). Deaktiviere alle anderen Uploader, solange sie nicht V3 konform sind.
 ```
 
 - Lege Deine *Nightscout URL* (z.B. [https://deineseite.deinprovider.com](https://yoursitename.yourplaform.dom)) fest.
@@ -436,9 +436,9 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 
 ### Synchronisierung
 
-Synchronization choices will depend on the way you will want to use AAPS.
+Die Art der Synchronisierung hängt davon ab, wie Du AAPS nutzen möchtest.
 
-You can select which data you want to [upload and download to or from Nightscout](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
+Du kannst festlegen welche Informationen [von und zu Nightscout hoch- bzw. heruntergeladen werden sollen](../Installing-AndroidAPS/Nightscout.md#aaps-settings).
 
 ### Alarm-Optionen
 
@@ -453,7 +453,7 @@ You can select which data you want to [upload and download to or from Nightscout
 
 ### Verbindungseinstellungen
 
-![NSClient connection settings](../images/ConfBuild_ConnectionSettings.png)
+![NSClient Verbindungseinstellungen](../images/ConfBuild_ConnectionSettings.png)
 
 - Verbindungseinstellungen legen fest auf welchem Weg (z.B. WLAN oder Mobilfunknetz) eine Nightscout-Verbindung aufgebaut werden darf.
 - Beschränken den Nightscout-Upload auf WLAN-Verbindungen oder sogar auf bestimmte WLAN-SSIDs.
@@ -464,9 +464,9 @@ You can select which data you want to [upload and download to or from Nightscout
 (Preferences-advanced-settings-nsclient)=
 ### Erweiterte Einstellungen (Nightscout-Client)
 
-![NS Client advanced settings](../images/Pref2024_NSClientAdv.png)
+![NS-Client - erweiterte Einstellungen](../images/Pref2024_NSClientAdv.png)
 
-Options in advanced settings are self-explanatory.
+Die Optionen in den erweiterten Einstellungen sind selbsterklärend.
 
 ## SMS Kommunikator
 
@@ -477,7 +477,7 @@ Options in advanced settings are self-explanatory.
 
 ## Automatisierung
 
-Select which location service shall be used:
+Wähle aus, welcher Standortservice verwendet werden soll:
 
 - Passiver Standort: AAPS nutzt nur die Standort, die von andere Apps angefordert werden.
 - Netzwerkstandort: Standort Ihres Wi-Fi
@@ -499,7 +499,7 @@ Select which location service shall be used:
 
 ![Wartungseinstellungen](../images/Pref2020_Maintenance.png)
 
-- Standard recipient of logs is <logs@aaps.app>.
+- Standardempfänger der Protokolldateien ist <logs@aaps.app>.
 
 ## Open Humans
 

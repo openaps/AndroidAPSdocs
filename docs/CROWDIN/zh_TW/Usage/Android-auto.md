@@ -84,6 +84,6 @@
 
 ![AAPS CGM 資料在 Android Auto 上的顯示](../images/android_auto_01.png)
 
-## 故障排除：
+## 問題排除：
 
 * 如果你看不到通知，請檢查是否已在 Android 中[允許 AAPS 顯示通知](Android-auto-AAPS-settings-for-android-auto)，以及 Android Auto 是否[擁有通知的存取權限](Android-auto-AAPS-settings-in-android-auto-app-on-your-phone)。

@@ -1,4 +1,4 @@
-# Dexcom G7 and ONE+
+# Dexcom G7 und ONE+
 
 
 ## Grundlegendes im Voraus

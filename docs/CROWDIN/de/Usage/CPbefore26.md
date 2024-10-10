@@ -10,7 +10,7 @@ Auf dieser Seite zeigen wir, wo die bisher über das Careportal verfügbaren Fun
 
 ## Aktivität & Feedback
 
-![Careportal activity & feedback](../images/Careportal_25_26_1_IIb.png)
+!["Careportal Aktivität & Feedback"](../images/Careportal_25_26_1_IIb.png)
 
 - Alter-Informationen wurden in Aktionen-Tab / Menü verschoben.
 - BZ Test wurde auf den Tab / in das Menü "Aktionen" verschoben.
@@ -42,7 +42,7 @@ Auf dieser Seite zeigen wir, wo die bisher über das Careportal verfügbaren Fun
 
 ## Pumpe
 
-![Careportal Pump](../images/Careportal_25_26_4_IIb.png)
+![Careportal Pumpe](../images/Careportal_25_26_4_IIb.png)
 
 - Katheter- und Reservoirwechsel können über die Schaltfläche "Katheterwechsel" im Tab / Menü "Aktionen" erfasst werden.
 - Der Profilwechsel wurde auf den Tab / in das Menü "Aktionen" verschoben.

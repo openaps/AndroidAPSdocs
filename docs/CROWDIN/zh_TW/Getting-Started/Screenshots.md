@@ -551,4 +551,4 @@
 
 * 顯示與 Nightscout 網站的連線狀態。
 * 設定可在[偏好設定](Preferences-nsclient)中進行。 你可以透過點擊螢幕右上角的齒輪圖示打開相應的部分。
-* 有關故障排除的詳細資訊，請參閱此[頁面](../Usage/Troubleshooting-NSClient.md)。
+* 有關問題排除的詳細資訊，請參閱此[頁面](../Usage/Troubleshooting-NSClient.md)。

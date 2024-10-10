@@ -55,9 +55,9 @@
 
 
 (DexcomG6-troubleshooting-g6)=
-## G6 和 ONE 故障排除
+## G6 和 ONE 問題排除
 
-### Dexcom G6/ONE 特定故障排除
+### Dexcom G6/ONE 特定問題排除
 
 -   向下滾動至[**疑難排解**](https://navid200.github.io/xDrip/docs/Dexcom_page.html)。
 

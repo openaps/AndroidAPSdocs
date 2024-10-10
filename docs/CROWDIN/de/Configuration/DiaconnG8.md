@@ -2,7 +2,7 @@
 
 ## Bluetooth-Pairing
 
-- Click on the hamburger menu in the top left corner.
+- Klicke auf das Hamburger Menü in der oberen linken Ecke.
 
 ![grafik](../images/DiaconnG8/DiaconnG8_01.jpg)
 
