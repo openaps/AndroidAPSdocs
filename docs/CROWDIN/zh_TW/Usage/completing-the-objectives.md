@@ -57,9 +57,9 @@
 
 - 透過一個測試你 **AAPS** 知識的多選題考試。
 
-某些使用者發現 **目標 3** 是最難完成的目標。 請務必結合問題閱讀 **AAPS** 文件。 如果你在研究**AAPS**文件後仍然感到困惑，請在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 群組中搜索 "Objective 3"（因為你的問題可能之前已被詢問並回答過）。 如果你仍然無法解決，請在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 或 [Discord](https://discord.gg/4fQUWHZ4Mw) 群組中發文詢問。 這些群組可以提供友善的提示，或引導你閱讀 **AAPS** 文件的相關部分。
+某些使用者發現 **目標 3** 是最難完成的目標。 請務必結合問題閱讀 **AAPS** 文件。 如果你在研究**AAPS**文件後仍然感到困惑，請在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 群組中搜索 "目標 3"（因為你的問題可能之前已被詢問並回答過）。 如果你仍然無法解決，請在 [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) 或 [Discord](https://discord.gg/4fQUWHZ4Mw) 群組中發文詢問。 這些群組可以提供友善的提示，或引導你閱讀 **AAPS** 文件的相關部分。
 
-要進行 **Objective 3**，點擊橘色文字“**尚未完成**”來查看相關問題。 請仔細閱讀每個問題並選擇你的答案。
+要進行 **目標 3**，點擊橘色文字“**尚未完成**”來查看相關問題。 請仔細閱讀每個問題並選擇你的答案。
 
 - 為了減少你在開環模式下需要做出的決策數量，設定一個較寬的目標範圍，例如 90 - 150 mg/dl 或 5.0 - 8.5 mmol/l。
 
@@ -67,7 +67,7 @@
 
 每個問題可能有多個正確答案！ 如果選擇了錯誤的答案，該問題將被鎖定一段時間（60 分鐘），你將無法立即重新作答。 當你再次嘗試回答時，請注意答案的順序可能已經改變，這是為了確保你仔細閱讀並真正理解每個答案的正確性（或錯誤性）。
 
-當 **AAPS** 第一次安裝時，你必須完成整個 **Objective 3** 才能進入 **Objective 4**。 每個目標必須按順序完成。 隨著目標的進展，新的功能將逐漸解鎖。
+當 **AAPS** 第一次安裝時，你必須完成整個 **目標 3** 才能進入 **目標 4**。 每個目標必須按順序完成。 隨著目標的進展，新的功能將逐漸解鎖。
 
 ```{admonition} __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: Note
@@ -76,11 +76,11 @@
 
 ## 目標 4：開始使用開環
 
-這個目標的目的是讓你了解 **AAPS** 如何評估基礎率對血糖水平的影響，並建議臨時調整基礎率。 在這個目標中，你將首次啟動開環，並手動在幫浦上執行 20 次建議的臨時基礎率調整。 此外，你將觀察臨時目標和預設臨時目標對於活動或低血糖治療的影響。 如果你還不熟悉如何在 **AAPS** 設置臨時基礎率變更，請參閱 [ACTIONS 頁籤](Screenshots#Screenshots-action-tab)。
+這個目標的目的是讓你了解 **AAPS** 如何評估基礎率對血糖水平的影響，並建議臨時調整基礎率。 在這個目標中，你將首次啟動開環，並手動在幫浦上執行 20 次建議的臨時基礎率調整。 此外，你將觀察臨時目標和預設臨時目標對於活動或低血糖治療的影響。 如果你還不熟悉如何在 **AAPS** 設置臨時基礎率變更，請參閱 [手動操作 頁籤](Screenshots#Screenshots-action-tab)。
 
 完成此目標的預估時間：**7 天**。 這是一個強制的等待時間。 即使你已經執行了所有基礎率變更，你仍無法進入下一個目標。
 
-- 從 "偏好設定" 選單或長按 OVERVIEW 螢幕左上角的 Loop 圖示來選擇開環模式。
+- 從 "偏好設定" 選單或長按「首頁總覽」螢幕右上角的 「循環」圖示來選擇開環模式。
 - 透過 [偏好設定](../Configuration/Preferences.md) 設定來進行設置（向下滾動到 "Loop/APS 模式" 並選擇 "開環模式"）。
 - 在 7 天內手動執行至少 20 次臨時基礎率建議；將他們輸入到你的（實體）幫浦中，並在 AAPS 中確認你已接受他們。 確保這些基礎率調整顯示在 AAPS 和 Nightscout 中。
 - 如有需要，啟用 [臨時目標](../Usage/temptarget.md)。 在處理低血糖後，使用低血糖臨時目標來防止系統在反彈時過度修正。
@@ -101,7 +101,7 @@
 
 ## 目標 5：理解你的開環，包括其臨時基礎率建議
 
-在 **Objective 5** 中，你將開始了解如何得出臨時基礎率的建議。 這包括 [基礎率邏輯的確定](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html)，透過觀察 [AAPS OVERVIEW 中的預測線](Screenshots-prediction-lines)/Nightscout 來分析影響，並檢視 OPENAPS 頁籤中的詳細計算。
+在 **目標 5** 中，你將開始了解如何得出臨時基礎率的建議。 這包括 [基礎率邏輯的確定](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html)，透過觀察 [AAPS OVERVIEW 中的預測線](Screenshots-prediction-lines)/Nightscout 來分析影響，並檢視 OPENAPS 頁籤中的詳細計算。
 
 完成此目標的預估時間：7 天。
 
@@ -143,7 +143,7 @@
 你仍然需要自行修正高血糖值（手動透過幫浦或注射筆進行修正）！
 ```
 
-在 **Objective 6** 中，你將啟動閉環並啟用低血糖暫停 (LGS) 模式，並將 [max IOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) 設置為零。 你必須在 LGS 模式下停留 5 天才能完成此目標。 你應該利用這段時間檢查你的設定是否準確，並避免頻繁觸發 LGS 事件。
+在 **目標 6** 中，你將啟動閉環並啟用低血糖暫停 (LGS) 模式，並將 [max IOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) 設置為零。 你必須在 LGS 模式下停留 5 天才能完成此目標。 你應該利用這段時間檢查你的設定是否準確，並避免頻繁觸發 LGS 事件。
 
 完成此目標的預估時間：5 天。
 
@@ -162,19 +162,19 @@
 ![負數 IOB 的範例](../images/Objective6_negIOB.png)
 
 - 將你的目標範圍設置得比平常略高，以增加安全緩衝。
-- 透過長按 OVERVIEW 螢幕右上角的 Loop 圖示，並選擇 Loop - LGS 模式圖示來啟用 '低血糖暫停' 模式。
-- 檢視啟動的臨時基礎率，觀察 OVERVIEW 螢幕上的藍綠色基礎文本或 OVERVIEW 圖表中的藍綠色基礎呈現。
+- 透過長按 「首頁總覽」螢幕右上角的 「循環」圖示，並選擇 循環- LGS 模式圖示來啟用 '低血糖暫停' 模式。
+- 檢視啟動的臨時基礎率，觀察 「首頁總覽」螢幕上的藍綠色基礎文本或 「首頁總覽」圖表中的藍綠色基礎呈現。
 - 在處理低血糖後，你可能會暫時經歷血糖反彈，但無法提高基礎率來應對反彈。
 
 (目標-Objective-7-調整閉環模式，將 maxIOB 提高至 0 以上並逐步降低血糖目標)=
 
 ## 目標 7：調整閉環模式，將 maxIOB 提高至 0 以上並逐步降低血糖目標
 
-完成 **Objective 7** 的條件是你必須關閉閉環並提高 [maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob)。 在 **Objective 6** 中 maxIOB 被自動設置為零。 現在這個設定將被恢復。 **AAPS** 將開始使用你設定的 maxIOB 值來修正高血糖值。
+完成 **目標 7** 的條件是你必須關閉閉環並提高 [maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob)。 在 **目標 6** 中 maxIOB 被自動設置為零。 現在這個設定將被恢復。 **AAPS** 將開始使用你設定的 maxIOB 值來修正高血糖值。
 
 完成此目標的預估時間：1 天。
 
-- 透過 [偏好設定](../Configuration/Preferences.md) 或長按 OVERVIEW 螢幕右上角的 Loop 圖示，並在 1 天內選擇 '閉環模式'。
+- 透過 [偏好設定](../Configuration/Preferences.md) 或長按 「首頁總覽」螢幕右上角的 「循環」圖示，並在 1 天內選擇 '閉環模式'。
 
 - 將 'OpenAPS 無法超過的最大總 IOB'（在 OpenAPS 中稱為 'max-iob'）提高至 0 以上。 預設建議為“平均餐後注射 + 每日最大基礎率的 3 倍”（適用於 SMB 演算法）或“每日最大基礎率的 3 倍”（適用於 AMA 演算法），但你應該逐步提高此值，直到你確定設定適合你（每日最大基礎率 = 一天內任何時間段的最大每小時值）。
 
@@ -209,7 +209,7 @@
 
 ## 目標 10：自動化
 
-你必須開始 **Objective 10** 才能使用自動化功能。
+你必須開始 **目標 10** 才能使用自動化功能。
 
 1. 首先閱讀文件頁面 [Automation](../Usage/Automation.md)。
 2. 設定最基本的自動化規則；

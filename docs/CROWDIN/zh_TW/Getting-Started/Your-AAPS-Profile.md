@@ -70,4 +70,4 @@ ICR 是衡量每單位胰島素覆蓋多少克碳水化合物的指標。
 
 如果你是從注射（MDI）轉向 AAPS，那麼最好先閱讀如何從 MDI 轉向幫浦，並與你的糖尿病團隊仔細計劃並進行轉換。 John Walsh 和 Ruth Roberts 的[《Pumping insulin》](https://amzn.eu/d/iaCsFa2) 以及 Gary Scheiner 的[《Think like a Pancreas》](https://amzn.eu/d/iVU0RGe) 非常有用。
 
-在[優化你的設定檔](operating - optimising - your profile link) 中，我們將展示範例設定檔，討論如何設定和優化構成你的 AAPS 設定檔的參數，並提供如 **Autotune** 等旨在自動優化你的設定檔的附加資源指南。
+在[優化你的設定檔](operating - optimising - your profile link) 中，我們將展示範例設定檔，討論如何設定和優化構成你的 AAPS 設定檔的參數，並提供如 **Autotune** 等主要在自動優化你的設定檔的附加資源指南。
