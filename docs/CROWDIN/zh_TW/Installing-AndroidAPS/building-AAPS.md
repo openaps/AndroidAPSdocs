@@ -265,7 +265,7 @@ Android Studio 將自動開始進行 "Gradle 專案同步"，這將需要幾分�
 ```{admonition} NEVER UPDATE GRADLE!
 :class: warning
 
-Android Studio 可能會建議更新 gradle 系統。**絕對不要更新 gradle!** 這將導致困難。
+Android Studio 可能會建議更新 gradle 系統。**請絕對不要更新 gradle!** 因為這將會導致一些問題發生。
 ```
 
 僅限於 Windows 電腦：您可能會收到關於 Windows 防火牆運行的通知：點擊 **自動** 並確認，這將使建置速度更快！
@@ -280,7 +280,7 @@ Android Studio 可能會建議更新 gradle 系統。**絕對不要更新 gradle
 
 現在我們將告訴Android Studio在哪裡找到你之前[安裝的](Install-Git) Git。
 
-- 僅限Windows用戶：請確保在[安裝Git](Install-Git)後重新啟動電腦。 如果沒有，現在重啟並重新打開 Android Studio
+- 僅限Windows用戶：請確保在[安裝Git](Install-Git)後重新啟動電腦。 如果尚未重開電腦，請現在重啟並重新打開 Android Studio
 
 在 **Android Studio** 的左上角，打開漢堡選單，然後導航至 **檔案** > **設定**（在 Windows 上）或 **Android Studio** > **偏好設定**（在 Mac 上）。
 這將打開以下視窗，點擊展開名為 **版本控制** 的下拉選單（1），並選擇 **Git**
