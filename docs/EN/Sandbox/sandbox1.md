@@ -57,6 +57,8 @@ Links with anchor :
 - [NSClient settings in Preferences](../Configuration/Preferences.md#nsclient).
 - [prediction lines in AAPS OVERVIEW](../Getting-Started/Screenshots.md#prediction-lines) to header
 - [prediction lines in AAPS OVERVIEW](../Getting-Started/Screenshots.md#screenshots-prediction-lines) to named anchor
+- [Screenshots](../Getting-Started/Screenshots.md)
+- [Screenshot Homescreen](../Getting-Started/Screenshots.md#the-homescreen)
 - [OpenAPS-features](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal)
 - [max IOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob)
 - [SMB section in this documentation](../Usage/Open-APS-features.md#super-micro-bolus-smb)
