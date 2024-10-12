@@ -45,7 +45,7 @@
 * 紅色 X：刪除
 * 藍色箭頭：複製
 
-如果你對設定檔進行任何更改，請確保你正在編輯正確的設定。 在設定檔標籤中，不一定會顯示當前正在使用的設定檔——例如，如果你使用主畫面的設定檔標籤進行切換，該設定檔可能與設定檔標籤中顯示的不同，因為兩者之間沒有連線。
+如果你對設定檔進行任何更改，請確保你正在編輯正確的設定。 在設定檔標籤中，不一定會顯示目前正在使用的設定檔——例如，如果你使用主畫面的設定檔標籤進行切換，該設定檔可能與設定檔標籤中顯示的不同，因為兩者之間沒有連線。
 
 #### 複製設定檔切換
 
@@ -71,7 +71,7 @@
 
 你可以將 Nightscout 設定檔編輯器中的更改同步至本地設定檔。 可以在[NSClient 偏好設定](Preferences-nsclient)中找到這些設定。
 
-有必要複製整個當前活動的 Nightscout 資料庫記錄，而不僅僅是藍色箭頭的設定檔！ 新的資料庫記錄將攜帶當前日期，並可以透過「本地設定檔」標籤啟用。
+有必要複製整個目前活動的 Nightscout 資料庫記錄，而不僅僅是藍色箭頭的設定檔！ 新的資料庫記錄將攜帶目前日期，並可以透過「本地設定檔」標籤啟用。
 
 ![複製資料庫記錄](../images/Nightscout_Profile_Editor.PNG)
 
@@ -189,11 +189,11 @@
 * MDI（接收 AAPS 對你多次每日注射治療的建議）
 * 虛擬幫浦（對於尚無驅動程式的幫浦開放循環——僅 AAPS 建議）
 
-## 敏感性檢測
+## 敏感性偵測
 
-選擇你正在使用的敏感性檢測類型。 如需不同設計的更多詳情，請[點此繼續閱讀](../Configuration/Sensitivity-detection-and-COB.md)。 此功能會即時分析歷史資料，並在你對胰島素的反應比平常更敏感（或相反，更具抗性）時進行調整。 更多關於敏感性演算法的詳細資訊請參閱[OpenAPS 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)。
+選擇你正在使用的敏感性偵測類型。 如需不同設計的更多詳情，請[點此繼續閱讀](../Configuration/Sensitivity-detection-and-COB.md)。 此功能會即時分析歷史資料，並在你對胰島素的反應比平常更敏感（或相反，更具抗性）時進行調整。 更多關於敏感性演算法的詳細資訊請參閱[OpenAPS 文件](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html)。
 
-你可以在主畫面上選擇 SEN 並觀看白線來查看你的敏感性狀況。 注意，你需要在[目標 8](Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)，才能讓敏感性檢測/[Autosens](Open-APS-features-autosens) 自動調整輸送的胰島素量。 在達到該目標之前，Autosens 的百分比/圖表中的線僅供參考。
+你可以在主畫面上選擇 SEN 並觀看白線來查看你的敏感性狀況。 注意，你需要在[目標 8](Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)，才能讓敏感性偵測/[Autosens](Open-APS-features-autosens) 自動調整輸送的胰島素量。 在達到該目標之前，Autosens 的百分比/圖表中的線僅供參考。
 
 (Config-Builder-absorption-settings)=
 
@@ -208,7 +208,7 @@
 選擇用於治療調整的 APS 演算法。 你可以在 OpenAPS (OAPS) 標籤中查看選定演算法的活動詳情。
 
 * OpenAPS AMA（進階餐前輔助，2017 年的演算法狀態）簡單來說，他的好處是在你自己進行餐前注射後，如果你可靠地輸入碳水化合物，系統可以更快地提高臨時基礎率。
-* [OpenAPS SMB](../Usage/Open-APS-features.md)（超微量注射，針對進階使用者的最新演算法） 注意：你需要在[目標 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)，才能使用 OpenAPS SMB，並且必須在組態建置工具 > 敏感性檢測 > 敏感性 Oref1 設定中將 min_5m_carbimpact 設置為 8。
+* [OpenAPS SMB](../Usage/Open-APS-features.md)（超微量注射，針對進階使用者的最新演算法） 注意：你需要在[目標 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)，才能使用 OpenAPS SMB，並且必須在組態建置工具 > 敏感性偵測 > 敏感性 Oref1 設定中將 min_5m_carbimpact 設置為 8。
 
 ## 循環
 
@@ -262,7 +262,7 @@ AAPS 有一個學習計畫（目標），你必須逐步完成他。 這將引�
 
 ### 首頁總覽
 
-顯示當前循環狀態和最常見操作的按鈕（詳情請參閱[主畫面](../Getting-Started/Screenshots.md)部分）。 你可以透過點擊齒輪圖示查看設置。
+顯示目前循環狀態和最常見操作的按鈕（詳情請參閱[主畫面](../Getting-Started/Screenshots.md)部分）。 你可以透過點擊齒輪圖示查看設置。
 
 #### 保持螢幕常亮
 
@@ -319,7 +319,7 @@ AAPS 有一個學習計畫（目標），你必須逐步完成他。 這將引�
 
 #### 進階設定
 
-**交付此部分注射嚮導結果：**使用 SMB 時，許多人不會進行 100% 的餐前注射，而只注射一部分（例如 75%），其餘部分由 SMB 和 UAM（無人值守餐點檢測）處理。 在此設置中，你可以選擇注射嚮導應計算的預設值。 如果此設置為 75%，而你需要注射 10 單位，注射嚮導將建議餐前注射 7.5 單位。
+**交付此部分注射嚮導結果：**使用 SMB 時，許多人不會進行 100% 的餐前注射，而只注射一部分（例如 75%），其餘部分由 SMB 和 UAM（無人值守餐點偵測）處理。 在此設置中，你可以選擇注射嚮導應計算的預設值。 如果此設置為 75%，而你需要注射 10 單位，注射嚮導將建議餐前注射 7.5 單位。
 
 **在嚮導中啟用超級注射功能**（與*超微量注射*不同！）：請謹慎使用，在瞭解其真正作用之前不要啟用。 基本上，接下來兩個小時的基礎率將加到注射中，並啟用兩小時的0基礎率。 **AAPS 的循環功能將停用——請小心使用！** 如果你使用 SMB，根據你在["限制 SMB 的基礎率最長分鐘數"](Open-APS-features-max-minutes-of-basal-to-limit-smb-to)中的設置，AAPS 循環功能將停用。如果你不使用 SMB，循環功能將停用兩個小時。關於超級注射的詳細資訊可在[此處](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus)找到。
 
