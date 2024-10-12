@@ -174,16 +174,16 @@ Here is an approximate timeframe:
 | Configuring CGM → xDrip+ → APPS initially                                            | 1 hour          |
 | Configuring AAPS → pump initially                                                    | 1 hour          |
 | Configuring AAPS → Nightscout/Tidepool (reporting only)                              | 1 hour          |
-| Optional (for Parents) : Configuring NightScout ↔ **AAPS** & NSFollowers             | 1 hour          |
-| Objective 1: Setting up visualization and monitoring, analyzing basals and ratios    | 1 hour          |
+| Optional : Configuring NightScout ↔ **AAPS** & NSFollowers                           | 1 hour          |
+| Objective 1: Setting up visualization and monitoring                                 | 1 hour          |
 | Objective 2: Learn how to control AAPS                                               | 2 hour          |
 | Objective 3: Prove your knowledge                                                    | Up to 14 days   |
 | Objective 4: Starting on an open loop                                                | Minimum of 7 days |
-| Objective 5: Understanding your open loop, including its temp basal recommendations  | 7 days          |
-| Objective 6: Starting to close the loop with Low Glucose Suspend                     | Minimum of 5, up to 14 days |
-| Objective 7: Tuning the closed loop, raising maxIOB and gradually lowering BG targets| Minimum of 1 day, up to 7 days |
-| Objective 8: Adjust basals and ratios if needed, and then enable autosens            | Minimum of 7 days, up to 14 days |
-| Objective 9: Enabling additional oref1 features, such as super micro bolus (SMB)     | Minimum of 28 days   |
+| Objective 5: Understanding your open loop                                            | 7 days          |
+| Objective 6: Starting to close the loop (Low Glucose Suspend)                        | Minimum of 5, up to 14 days |
+| Objective 7: Tuning the closed loop                                                  | Minimum of 1 day, up to 7 days |
+| Objective 8: Adjust basals and ratios, enable Autosens                               | Minimum of 7 days, up to 14 days |
+| Objective 9: Enabling Super Micro Bolus (SMB)                                        | Minimum of 28 days   |
 | Objective 10: Automation                                                             | Minimum of 28 days   |
 | Objective 11: Dynamic ISF                                                            | Minimum of 28 days   |
 
