@@ -51,3 +51,14 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua。 At vero eos et accusam et justo duo dolores et ea rebum。 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet。 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua。 At vero eos et accusam et justo duo dolores et ea rebum。 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet。
 
 測試縮寫 : <abbr title="Insulin Sensitivity Factor">ISF</abbr>, <abbr title="Insulin On Board">IOB</abbr>
+
+Links with anchor :
+- [how long will it take?](../preparing.md#how-long-will-it-take-to-set-everything-up)
+- [NSClient settings in Preferences](../Configuration/Preferences.md#nsclient).
+- [prediction lines in AAPS OVERVIEW](../Getting-Started/Screenshots.md#prediction-lines) to header level 4
+- [prediction lines in AAPS OVERVIEW](../Getting-Started/Screenshots.md#screenshots-prediction-lines) to named anchor
+- [Screenshots](../Getting-Started/Screenshots.md)
+- [Screenshot main graph](../Getting-Started/Screenshots.md#section-f---main-graph) to header level 3
+- [OpenAPS-features](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal)
+- [max IOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob)
+- [SMB section in this documentation](../Usage/Open-APS-features.md#super-micro-bolus-smb)
