@@ -204,7 +204,7 @@ V tomto cíli se budete řešit a používat "Super Micro Bolus (SMB)" jako jedn
 
 - Je nutné přečíst [SMB sekci této dokumentace](Open-APS-features-super-micro-bolus-smb) a [informace o oref1 v openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) abyste porozumněli SMB a konceptu nulového nastavení.
 - Po dokončení [zvýšíte maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) aby mikrobolusy fungovaly správně. MaxIOB nyní zahrnuje veškerý aktivní inzulín (IOB), nejen akumulované bazály. Tato prahová hodnota zastavuje podávání SMB dokud IOB neklesne pod tuto hodnotu (_např._ maxIOB je nastaveno na 7 U a bolus 8 U je podán k pokrytí jídla: mikrobolusy budou pozastaveny a nebudou podávány dokud IOB neklesne pod 7 U). Dobré počáteční nastavení hodnoty maxIOB = průměrný bolus k jídlu + 3x maximální denní bazál (maximální denní bazál = maximální hodnota hodinového bazálu v průběhu kteréhokoli časového segmentu během dne - viz [Cíl 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets).
-- Změňte parametr "min_5m_carbimpact" (Nastavení > Nastavení absorpce sacharidů > min_5m_carbimpact) na hodnotu 8 jakmile přepnete z algoritmu OpenAPS AMA na OpenAPS SMB. Pro AMA je výchozí hodnota 3. Více si o těchto nastaveních přečtěte [zde](../Configuration/Preferences.html#min-5m-carbimpact)
+- Změňte parametr "min_5m_carbimpact" (Nastavení > Nastavení absorpce sacharidů > min_5m_carbimpact) na hodnotu 8 jakmile přepnete z algoritmu OpenAPS AMA na OpenAPS SMB. Pro AMA je výchozí hodnota 3. Read more about this setting [here](../Configuration/Preferences.md#min_5m_carbimpact)
 
 (Objectives-objective-10-automation)=
 
