@@ -195,10 +195,10 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 您可
 在此示例中，我們選擇Nightscout作為報告伺服器，並將進行配置。
 
 ```{admonition} Make sure to choose the correct **NSClient** version for your needs! 
-:class: Note
-請點擊 [這裡](link) 查看 **AAPS** 3.2.0.2 的版本說明，這裡解釋了頂部選項 **NSClient**（這是 “v1”，雖然它沒有明確標示）和第二個選項 **NSClient v3** 之間的差異。
+class: 注意
+點擊 [這裡](./Releasenotes.md) 查看 **AAPS** 3.2.0.0 的版本說明，這些說明解釋了頂部選項 **NSClient** （這是「v1」，雖然沒有明確標示）與第二個選項 **NSClient v3** 之間的差異。
 
-Nightscout 使用者應選擇 **NSClient v3**，除非您想通過 Nightscout 監控或發送遠端治療（例如作為使用 **AAPS** 的父母或照護者來為孩子）那時請選擇第一個選項 "**NSClient**" 直到另行通知。
+Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout 監控或發送遠端治療（例如:父母或看護使用 **AAPS** 幫助孩子），在這種情況下，請選擇第一個選項「**NSClient**」，直到進一步通知為止。
 ```
 
 對於Tidepool來說，這更簡單，因為您只需要您的個人登錄訊息。

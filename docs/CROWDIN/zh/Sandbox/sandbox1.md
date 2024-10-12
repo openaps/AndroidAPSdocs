@@ -26,7 +26,7 @@
 
 您也可以跳轉到第一個標籤 - [「跳轉」](sandbox1-this-is-a-test)。
 
-這裡可以跳轉到第二個沙盒文件 - [「跳轉」](./sandbox2.md)。
+這裡可以跳轉到第二個沙盒文件 - [「跳轉」](./MoveTest/sandbox2.md)。
 
 您可以從這裡直接跳轉到 sandbox2.md 文件中的第一個標籤 - [「跳轉」](sandbox2-this-is-a-test)。
 

@@ -9,7 +9,7 @@
 ```{admonition} Note
 :class: note
 
-Regularly export your **AAPS** settings after completing each **objective**!
+Exportiere Deine **AAPS**-Einstellungen regelmäßig nach dem Abschluss eines jeden **Ziels** (Objective)!
 ```
 
 Unsere ausdrückliche Empfehlung ist, nach jedem Abschluss eines **Ziel**s Deine [Einstellungen zu exportieren}(../Usage/ExportImportSettings.md). Beim Exportieren wird ein Datei mit den Einstellungen (.json) erstellt, die Du an einem oder mehreren sicheren Ort als Backup speichern solltest (_z.B._ Google Drive, Festplatte, Email-Anhang _etc._). Das hilft, den Fortschritt beim Durchlaufen der **Ziele** abzusichern, sodass Du z. B. beim versehentlichen Löschen Deines Fortschritts, diesen über einen Import der gespeicherten Datei wieder herstellen kannst. Ein Backup Deiner **Einstellungen** ist auch notwendig, wenn Du Dein **AAPS**-Smartphone, aus welchem Grund auch immer, wechseln möchtest (Upgrade/Verlust/Defekt _etc._)
@@ -57,7 +57,7 @@ Es kann sein, dass Du auf das Auslesen des nächsten Glukosewertes warten musst,
 
 - Belege Dein **AAPS**-Wissen, in dem Du einen Multiple-Choice-Test bestehst.
 
-Der Abschluss dieses **Ziel 3** wird von manchem Menschen als eine der schwierigsten Aufgaben empfunden. Bitte lies die zu den gestellten Fragen gehörenden Abschnitte in der **AAPS**-Dokumentation. If you are genuinely stuck after researching the **AAPS** documents, please search the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group for "Objective 3" (because it is likely that your question has been asked- and answered - before). If you are still stuck, ask in a post on either the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw) group. Diese Gruppen können Dir kleine Hinweise geben oder Dir die relevanten Stellen der **AAPS**-Dokumente nennen.
+Der Abschluss dieses **Ziel 3** wird von manchem Menschen als eine der schwierigsten Aufgaben empfunden. Bitte lies die zu den gestellten Fragen gehörenden Abschnitte in der **AAPS**-Dokumentation. Wenn Du trotz genauen Lesens der **AAPS**-Dokumente feststeckst, suche bitte in der [Facebook](https://www.facebook. om/groups/AndroidAPSUsers)-Gruppe nach "Objective 3" (es ist sehr wahrscheinlich, dass Deine Frage dort bereits gestellt und beantwortet wurde). Wenn Du dennoch nicht weiterkommen solltest, frag in einem Post/Beitrag entweder in der [Facebook](https://www.facebook.com/groups/AndroidAPSUsers)-Gruppe oder im [Discord](https://discord.gg/4fQUWHZ4Mw)-Channel. Diese Gruppen können Dir kleine Hinweise geben oder Dir die relevanten Stellen der **AAPS**-Dokumente nennen.
 
 Um mit **Ziel 3** zu starten und die zu lösenden Fragen sehen zu können, klicke auf den orangenen Text "**Noch nicht abgeschlossen**". Bitte lies jede einzelne Frage und wähle dann Deine Antwort(en) aus.
 
@@ -71,7 +71,7 @@ Wenn **AAPS** das erste Mal installiert wird, muss das **Ziel 3** vollständig a
 
 ```{admonition} __What happens if new question(s) are added to an Objective when I update to a newer version of AAPS?__
 :class: Note
-From time to time, new features are added to **AAPS** which may require a new question to be added to the Objectives, particularly Objective 3. As a result, any new question added to **Objective 3** will be marked as “incomplete” because **AAPS** will require you to action this. Do not worry, as each **Objective** is independent, you will **not lose the existing functionality of AAPS**, providing the other Objectives remain completed.
+Über die Zeit wird **AAPS** mit neuen Funktionalitäten erweitert, so dass es notwendig werden kann zusätzliche Fragen - speziell im Ziel 3 - zu beantworten. In diesem Fall werden alle zu **Ziel 3** neu hinzugefügte Fragen als "noch nicht abgeschlossen" angezeigt, da **AAPS** möchtest, dass Du diese bearbeitest. Keine Angst, jedes **Ziel** ist unabhängig vom anderen und **Du wirst keine der bestehenden AAPS-Funktionalitäten verlieren**, sofern die übrigen Ziele weiterhin abgeschlossen sind.
 ```
 
 ## Ziel 4: Starte den Open Loop
@@ -120,14 +120,14 @@ Der Zielwert ist der wichtigste Wert. Alle Berechnungen basieren darauf. Er ist 
 
 Vielleicht möchtest Du mit der Weite des Zielbereichs experimentieren, ihn verengen (z. B. 1 mmol/l bzw. 20 mg/dl oder weniger) und beobachten, wie sich das Systemverhalten daraufhin ändert.
 
-You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Overview > Range for Visualisation.
+Du kannst den grünen Bereich des Diagramms, der Deinen Zielbereich darstellt, anpassen (erweitern oder verengen), indem Du verschiedene Werte in [Einstellungen](../Configuration/Preferences.md) > Übersicht > Zielbereich für die Grafikanzeige eingibst.
 
 ![Stop sign](../images/sign_stop.png)
 
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-If you are open looping with a virtual pump stop here. Only click verify at the end of this Objective once you have changed to using a "real" physical pump.
+Wenn Du eine virtuelle Pumpe für den "Open Loop" nutzt, stoppe hier und gehe nicht weiter. Bestätige nur dann am Ende dieses Ziels (Objectives), wenn Du von der virtuellen Pumpe auf eine "echte" physische Pumpe umgestellt hast.
 ```
 
 ![blank](../images/blank.png)
@@ -230,13 +230,13 @@ Du musst **Ziel 10** starten, um Automatisierungen nutzen zu können.
 
 4. Experimentiere ein wenig, in dem Du eine etwas sinnvollere Automatisierung erstellst.
 
-- The documentation page gives a few examples, and you can search for "automation" screenshots on the [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) group. Da die meisten Menschen jeden Morgen vor der Schule/Arbeit zur gleichen Zeit dasselbe zum Frühstück essen, kann ein ziemlich häufiger Anwendungsfall sein, ein "Vor-Frühstücks-Ziel" festzulegen, um 30 Minuten vor dem Frühstück ein leicht niedrigeres temporäres Ziel zu setzen. In einem solchen Fall besteht Deine Bedingung wahrscheinlich aus der Auswahl bestimmter Wochentage (Montag, Dienstag, Mittwoch, Donnerstag, Freitag) und einer bestimmten Uhrzeit (06:30 Uhr). Die Aktion wird aus "Temporäres Ziel (TT) starten" mit einem bestimmten Zielwert und einer Dauer von 30 Minuten bestehen.
+- Die Dokumentationsseite gibt einige Beispiele und Du kannst nach "Automatisierungs"-Screenshots in der [Facebook](https://www.facebook.com/groups/AndroidAPSUsers)-Gruppe suchen. Da die meisten Menschen jeden Morgen vor der Schule/Arbeit zur gleichen Zeit dasselbe zum Frühstück essen, kann ein ziemlich häufiger Anwendungsfall sein, ein "Vor-Frühstücks-Ziel" festzulegen, um 30 Minuten vor dem Frühstück ein leicht niedrigeres temporäres Ziel zu setzen. In einem solchen Fall besteht Deine Bedingung wahrscheinlich aus der Auswahl bestimmter Wochentage (Montag, Dienstag, Mittwoch, Donnerstag, Freitag) und einer bestimmten Uhrzeit (06:30 Uhr). Die Aktion wird aus "Temporäres Ziel (TT) starten" mit einem bestimmten Zielwert und einer Dauer von 30 Minuten bestehen.
 
 ## Ziel 11: Aktiviere zusätzliche Funktionen für den alltäglichen Gebrauch, wie z. B. das Dynamic Sensitivity Plugin (DynISF).
 
 - Stelle sicher, dass SMBs wie gedacht funktionieren.
 - Lies [hier](../Usage/DynamicISF.md) die Dokumentation zu Dynamic ISF.
-- Search the Facbook and [Discord](https://discord.gg/4fQUWHZ4Mw) groups for discussions around Dynamic ISF and read about other users experiences and recommendations.
+- Suche in den Facebook-Gruppen und dem [Discord](https://discord.gg/4fQUWHZ4Mw)-Channel nach Diskussionen rund um "Dynamic ISF" und profitiere von den Erfahrungen und Empfehlungen anderer Nutzer.
 - Aktiviere das **DynamicISF-Plugin** und passe es auf den individuellen Bedarf Deines Körpers an. Aus Sicherheitsgründen ist es ratsam, mit einem Wert unter 100% zu beginnen.
 
 (Objectives-go-back-in-objectives)=

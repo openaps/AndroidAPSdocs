@@ -50,15 +50,15 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-using a lot of acronyms cause I can : ISF, CR, BG, CGM
+testing abbr : <abbr title="Insulin Sensitivity Factor">ISF</abbr>, <abbr title="Insulin On Board">IOB</abbr>
 
-```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
-:class: note
-![Stop sign](../images/sign_stop.png)
-If you are open looping with a virtual pump stop here. Only click verify at the end of this Objective once you have changed to using a "real" physical pump.
-```
-
-*[ISF]: Insulin Sensitivity Factor
-*[CGM]: Continuous Glucose Monitor
-*[CR]: Carb Ratio
-*[BG]: Blood Glucose
+Links with anchor : 
+- [how long will it take?](../preparing.md#how-long-will-it-take-to-set-everything-up)
+- [NSClient settings in Preferences](../Configuration/Preferences.md#nsclient).
+- [prediction lines in AAPS OVERVIEW](../Getting-Started/Screenshots.md#prediction-lines) to header level 4
+- [prediction lines in AAPS OVERVIEW](../Getting-Started/Screenshots.md#screenshots-prediction-lines) to named anchor
+- [Screenshots](../Getting-Started/Screenshots.md)
+- [Screenshot main graph](../Getting-Started/Screenshots.md#section-f---main-graph) to header level 3
+- [OpenAPS-features](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal)
+- [max IOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob)
+- [SMB section in this documentation](../Usage/Open-APS-features.md#super-micro-bolus-smb)

@@ -2,29 +2,29 @@
 
 ## Jelly 2
 
-Do not confuse with Jelly Star.
+Das Jelly 2 ist nicht mit dem Jelly Star zu verwechseln.
 
-**Advantages**
+**Vorteile**
 
 * Es ist wirklich klein.
 * Android 11.
 * Selbst wenn Du Leutene erklärst, werden es manche Menschen nicht als normales Smartphone ansehen und vielleicht eher in Bereichen, in denen keine Smartphones erlaubt sind, akzeptieren.
 
-**Disadvantages**
+**Nachteile**
 
 * Nur für erfahrene Looper zu empfehlen (Manche Einstellungen sind nicht zu erkennen, man muss aus Erfahrungen mit einem großen Android-AAS-Phone wissen, wie und wo was steht. Manche AAPS Buttons kann man mit viel Gefühl nur schwer antippen, mit Wurstfingern gar nicht.)
 * Nur als Loop-Phone zu nutzen. In wessen Hosentasche ein normales Android passt, ist damit besser beraten. 
 
-### Battery life optimization
+### Optimierung der Akkulaufzeit
 
-The Jelly 2 comes with strong optimization features that **must** be disabled for AAPS (and other DIY apps like BYODA, xDrip+, OOP2, Juggluco, etc...).
+Das Jelly 2 hat sehr leistungsfähige Optimierungsfunktionen, die für AAPS (und andere DIY-Apps wie BYODA, xDrip+, OOP2, Juggluco usw.) **deaktiviert werden müssen** .
 
 ![](../images/Jelly_Settings1.png)
 
-You can leave Intelligent assistance enabled, but it **must be disabled for DIY apps**.
+Die Funktion "Intelligent Assistance" kann aktiviert bleiben, **muss aber für DIY-Apps deaktiviert werden**.
 
 ![](../images/Jelly_Settings2.png)
 
-You can enable NFC for Libre sensors.
+NFC kann für Nutzung mit Libre Sensoren aktiviert werden.
 
 ![](../images/Jelly_Settings3.png)
