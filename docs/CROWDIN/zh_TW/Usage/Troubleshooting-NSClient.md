@@ -1,16 +1,16 @@
 (Troubleshooting-NSClient-troubleshooting-nsclient)=
 
-# NSClient 疑難排解
+# NSClient 問題排除
 
 NSClient 依賴於與 Nightscout 的穩定連線。 不穩定的連線會導致同步錯誤和高資料使用量。
 
 如果沒有人在 Nightscout 上追蹤你，你可以選擇暫停 NSClient 以節省電池，或設置 NSClient 僅在連線 Wi-Fi 和/或充電時才連線。
 
-* 如何檢測不穩定的連線？
+* 如何偵測不穩定的連線？
 
 前往 AAPS 的 NSClient 標籤，並查看日誌。 預期行為是每隔約30秒接收一次 PING 並幾乎沒有重新連線訊息。 如果看到很多重新連線訊息，則表示有問題。
 
-自 AAPS 版本2.0起，當檢測到此類行為時，NSClient 將會暫停15分鐘，並在首頁總覽畫面顯示「NSClient 故障」。
+自 AAPS 版本2.0起，當偵測到此類行為時，NSClient 將會暫停15分鐘，並在首頁總覽畫面顯示「NSClient 故障」。
 
 * 重新啟動
 
