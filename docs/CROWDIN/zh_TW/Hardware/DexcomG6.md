@@ -36,7 +36,7 @@
 ![BYODA 廣播選項](../images/BYODA.png)
 
 -   此應用程式允許你將 Dexcom G6 與任何 Android 智慧型手機一起使用。
--   如果你之前使用過原版或修改過的 Dexcom 應用程式，請卸載他們（**不要停止**當前運作的傳感器）。
+-   如果你之前使用過原版或修改過的 Dexcom 應用程式，請卸載他們（**不要停止**目前運作的傳感器）。
 -   安裝下載的 apk
 -   在修改版應用程式中輸入傳感器代碼和傳輸器序列號。
 -   在手機設定中，前往應用程式 > Dexcom G6 > 權限 > 其他權限並按下「存取 Dexcom 應用程式」。
@@ -51,7 +51,7 @@
 ### xDrip+ 設定
 
 -   選擇「640G/Eversense」作為資料來源。
--   必須在 xDrip+ 中執行「啟動傳感器」指令，才能接收數值。 這不會影響你的當前傳感器，他仍由自製 Dexcom 應用程式控制。
+-   必須在 xDrip+ 中執行「啟動傳感器」指令，才能接收數值。 這不會影響你的目前傳感器，他仍由自製 Dexcom 應用程式控制。
 
 
 (DexcomG6-troubleshooting-g6)=
@@ -59,11 +59,11 @@
 
 ### Dexcom G6/ONE 特定問題排除
 
--   向下滾動至[**疑難排解**](https://navid200.github.io/xDrip/docs/Dexcom_page.html)。
+-   向下滾動至[**問題排除**](https://navid200.github.io/xDrip/docs/Dexcom_page.html)。
 
-### 一般疑難排解
+### 一般問題排除
 
-可以在[這裡](./GeneralCGMRecommendation.md#troubleshooting)找到一般 CGM 的疑難排解。
+可以在[這裡](./GeneralCGMRecommendation.md#troubleshooting)找到一般 CGM 的問題排除。
 
 ### 新的傳輸器與正在運作的傳感器
 
