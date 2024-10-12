@@ -406,7 +406,7 @@ v3 是新的協議。 更加安全和高效
 - 修復 Combo 幫浦的未來碳水化合物問題
 - 修復 [本地設定檔 -> NS 同步](Config-Builder-upload-local-profiles-to-nightscout)
 - Insight 警報改進
-- 改進了從幫浦歷史中檢測注射的功能
+- 改進了從幫浦歷史中偵測注射的功能
 - 修復 NSClient 連線設置（Wi-Fi、充電）
 - 修復向 xDrip 發送校準的問題
 
