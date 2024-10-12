@@ -51,7 +51,7 @@
 #### 目前血糖值
 
 * 最新的 CGM 血糖讀取值顯示在左側。
-* 血糖值的顏色反映了與定義的[範圍](Preferences-range-for-visualization)的關係。 
+* 血糖值的顏色反應了與定義的[範圍](Preferences-range-for-visualization)的關係。 
    * 綠色 = 在範圍內
    * 紅色 = 低於範圍
    * 黃色 = 高於範圍
@@ -171,7 +171,7 @@
 * 圖表顯示你的血糖（BG），資料來自你的連續血糖監測儀（CGM）。 
 * 在操作標籤中輸入的筆記（如手指校準和碳水化合物輸入）以及設定檔切換也會顯示在此處。 
 * 長按圖表可更改時間範圍。 你可以選擇 6、12、18 或 24 小時。
-* 綠色區域反映你的目標範圍。 可以在[偏好設定](Preferences-range-for-visualization)中配置。
+* 綠色區域反應你的目標範圍。 可以在[偏好設定](Preferences-range-for-visualization)中配置。
 * 如果在[偏好設定](Preferences-openaps-smb-settings)中啟用了 SMB，藍色三角形會顯示[SMB](Open-APS-features-super-micro-bolus-smb)。
 * 可選資訊：
    
@@ -204,9 +204,9 @@
    
    *此線僅在使用[SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)演算法時出現。*
 
-* **深黃色**線：[UAM](Sensitivity-detection-and-COB-sensitivity-oref1)（未報告的用餐）
+* **深黃色**線：[UAM](Sensitivity-detection-and-COB-sensitivity-oref1)（未輸入的餐點）
    
-   未報告的用餐表示偵測到由於用餐、腎上腺素或其他影響導致的血糖顯著上升。 預測線類似於橙色 COB 線，但他假設偏差將以恆定速度逐漸減少（透過延長目前的減少速度）。
+   未輸入的餐點(UAM)表示偵測到由於用餐、腎上腺素或其他影響導致的血糖顯著上升。 預測線類似於橙色 COB 線，但他假設偏差將以恆定速度逐漸減少（透過延長目前的減少速度）。
    
    *此線僅在使用[SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)演算法時出現。*
 
@@ -220,7 +220,7 @@
 
 #### 基礎率
 
-* 一條**實心藍色**線顯示你的幫浦基礎胰島素輸送，並反映實際的輸送時間。
+* 一條**實心藍色**線顯示你的幫浦基礎胰島素輸送，並反應實際的輸送時間。
 * 一條**虛線藍色**線顯示如果沒有暫時的基礎率調整（TBR），基礎率會是什麼。
 * 在標準基礎率給定的時間內，曲線下方的區域顯示為深藍色。
 * 當基礎率暫時調整（增加或減少）時，曲線下方的區域顯示為淺藍色。
@@ -261,7 +261,7 @@
 * **灰色**長條圖顯示由於碳水化合物引起的偏差。 
 * **綠色**長條圖顯示血糖高於演算法預期。 綠色長條圖用於在[自動敏感性](Open-APS-features-autosens)中增加抗性。
 * **紅色**長條圖顯示血糖低於演算法預期。 紅色長條圖用於在[自動敏感性](Open-APS-features-autosens)中增加敏感性。
-* **黃色**長條圖顯示由於未報告的用餐引起的偏差。
+* **黃色**長條圖顯示由於未輸入的餐點(UAM)引起的偏差。
 * **黑色**長條圖顯示未考慮敏感性的輕微偏差。
 
 #### 敏感性
