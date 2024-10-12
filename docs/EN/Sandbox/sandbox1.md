@@ -59,3 +59,10 @@ Links with anchor :
 - [OpenAPS-features](../Usage/Open-APS-features.md#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal)
 - [max IOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob)
 - [SMB section in this documentation](../Usage/Open-APS-features.md#super-micro-bolus-smb)
+
+```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
+:class: note
+
+| ![Stop sign](../images/sign_stop.png) | If you are open looping with a virtual pump **stop here**. Only click verify at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin. |
+
+```
