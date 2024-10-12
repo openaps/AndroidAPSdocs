@@ -53,16 +53,9 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 testing abbr : <abbr title="Insulin Sensitivity Factor">ISF</abbr>, <abbr title="Insulin On Board">IOB</abbr>
 
 Links with anchor : 
-- [how long will it take?](../preparing.md#How long will it take to set everything up?)
-- [NSClient settings in Preferences](../Configuration/Preferences.md#NSClient).
-- [prediction lines in AAPS OVERVIEW](../Getting-Started/Screenshots.md#Prediction lines)
-- [OpenAPS-features](../Usage/Open-APS-features.md#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal)
+- [how long will it take?](../preparing.md#how-long-will-it-take-to-set-everything-up)
+- [NSClient settings in Preferences](../Configuration/Preferences.md#nsclient).
+- [prediction lines in AAPS OVERVIEW](../Getting-Started/Screenshots.md#prediction-lines)
+- [OpenAPS-features](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal)
 - [max IOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob)
 - [SMB section in this documentation](../Usage/Open-APS-features.md#super-micro-bolus-smb)
-
-```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
-:class: note
-
-| ![Stop sign](../images/sign_stop.png) | If you are open looping with a virtual pump **stop here**. Only click verify at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin. |
-
-```
