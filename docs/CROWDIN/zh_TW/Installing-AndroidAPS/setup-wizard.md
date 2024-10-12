@@ -195,7 +195,7 @@ Android將藍牙通訊的使用與位置服務的使用權限相關聯。 你可
 在此示例中，我們選擇Nightscout作為報告伺服器，並將進行配置。
 
 ```{admonition} Make sure to choose the correct **NSClient** version for your needs! 
-:class 注意
+:class Note
 點擊 [這裡](./Releasenotes.md) 查看 **AAPS** 3.2.0.0 的版本說明，這些說明解釋了頂部選項 **NSClient** （這是「v1」，雖然沒有明確標示）與第二個選項 **NSClient v3** 之間的差異。
 
 Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout 監控或發送遠端治療（例如:父母或看護使用 **AAPS** 幫助孩子），在這種情況下，請選擇第一個選項「**NSClient**」，直到進一步通知為止。
@@ -471,7 +471,7 @@ OpenAPS AMA 是最基本的演算法，不支援微量注射來修正高值。�
 
 ![image](../images/setup-wizard/Screenshot_20231202_144049.png)
 
-### 敏感度檢測
+### 敏感度偵測
 
 讓“敏感度Oref1”保持為敏感度外掛的標準選項。
 
