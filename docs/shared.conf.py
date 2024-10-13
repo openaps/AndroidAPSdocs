@@ -141,6 +141,13 @@ html_theme = 'sphinx_rtd_theme'
 theme_github_user = 'openAPS'
 theme_github_repo = 'AndroidAPSdocs'
 
+html_context = {
+  'display_github': True,
+  'github_user': 'openaps',
+  'github_repo': 'AndroidAPSdocs',
+  'github_version': 'master/docs/',
+}
+
 """
 html_theme = 'default'
 html_theme_options = {
