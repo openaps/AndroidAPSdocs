@@ -5,7 +5,6 @@ build:
    os: ubuntu-22.04
    tools:
     python: "3.11"
-   image: "3.1"
 
 # Python
 python:
