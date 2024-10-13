@@ -26,7 +26,7 @@
 
 為1型糖尿病患者開發商業技術的進度非常緩慢。 在2013年，1型糖尿病社群發起了#WeAreNotWaiting運動。 他們使用現有的認證技術（胰島素幫浦和感測器）自行開發系統，以改善血糖控制、安全性和生活品質。 這些系統被稱為DIY（自製）系統，因為他們並未經過正式的健康機構（如FDA、NHS等）的認證。 目前有四個主要的DIY系統可用：[OpenAPS](https://openaps.org/what-is-openaps/)、**AAPS**、[Loop](https://loopkit.github.io/loopdocs/#what-is-loop)和[iAPS](https://github.com/Artificial-Pancreas/iAPS?fbclid=IwAR2fA9Y9YqYzpKSrtEsotfXl5b67UclDkKgyrv52tQLzYbOoBeNGRmjlJJI)。
 
-理解DIY循環控制系統基本原理的絕佳方式是閱讀Dana Lewis的書《自動化胰島素輸送》。 你可以在[這裡](https://www.artificialpancreasbook.com/)免費獲取該書的電子版（或購買該書的實體書）。 如果你想了解更多關於[OpenAPS](https://openaps.org/what-is-openaps/)，**AAPS**就是從該系統發展而來的，[OpenAPS](https://openaps.org/what-is-openaps/)網站是一個很好的資訊來源。
+暸解DIY循環控制系統基本原理的絕佳方式是閱讀Dana Lewis的書《自動化胰島素輸送》。 你可以在[這裡](https://www.artificialpancreasbook.com/)免費獲取該書的電子版（或購買該書的實體書）。 如果你想了解更多關於[OpenAPS](https://openaps.org/what-is-openaps/)，**AAPS**就是從該系統發展而來的，[OpenAPS](https://openaps.org/what-is-openaps/)網站是一個很好的資訊來源。
 
 目前已經有幾個商業混合閉環系統問世，其中最新的是 [CamAPS FX](https://camdiab.com/)（英國和歐盟）和 [Omnipod 5](https://www.omnipod.com/en-gb/what-is-omnipod/omnipod-5)（美國和歐盟）. 這些系統與DIY系統非常不同，主要是因為他們都包含一個“學習算法”，該算法根據你過去幾天的胰島素需求調整胰島素的輸送量。 許多DIY社群的成員已經嘗試過這些商業系統，並將他們與自己的DIY系統進行了比較。 你可以透過專門針對這些系統的Facebook群組進一步了解各系統之間的比較，參考 [AAPS Facebook群組](https://www.facebook.com/groups/AndroidAPSUsers/) 或在 [Discord](https://discord.com/invite/4fQUWHZ4Mw) 上詢問。
 
@@ -162,7 +162,7 @@ _表格說明：_
 
 ## AAPS是否使用人工智慧或任何學習演算法？
 
-目前**AAPS**的master版本（3.1.0.3）不包含任何機器學習演算法、多參數胰島素反應模型或人工智慧。 因此，該系統是開放且透明的，操作方式可以被非專家以及臨床醫生和患者理解。 這也意味著，如果你的日程變化劇烈（例如從一個緊張的工作週切換到一個輕鬆的假期），並且可能需要顯著不同的胰島素劑量，你可以立即切換**AAPS**來運作較弱/較強的自定義設定檔案。 ‘學習系統’會自動為你進行這種調整，但可能需要更長的時間來調整胰島素的輸送。
+目前**AAPS**的master版本（3.1.0.3）不包含任何機器學習演算法、多參數胰島素反應模型或人工智慧。 因此，該系統是開放且透明的，操作方式可以被非專家以及臨床醫生和患者暸解。 這也意味著，如果你的日程變化劇烈（例如從一個緊張的工作週切換到一個輕鬆的假期），並且可能需要顯著不同的胰島素劑量，你可以立即切換**AAPS**來運作較弱/較強的自定義設定檔案。 ‘學習系統’會自動為你進行這種調整，但可能需要更長的時間來調整胰島素的輸送。
 
 ## 哪個系統適合我或我的家人？
 
