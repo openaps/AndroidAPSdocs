@@ -69,7 +69,7 @@ OpenAPS 資料公用主要在為 DIYAPS 社群提供簡單的方法來共享資�
 2. 使用 Nightscout 資料傳輸將你的資料匯入 Open Humans
 3. 手動將資料檔案上傳至 Open Humans。
 
-一旦你建立帳號並讓你的資料進入 Open Humans，請務必加入 OpenAPS 資料公用，以便捐贈你的資料供研究使用（如果你選擇）。
+你建立帳號並讓你的資料進入 Open Humans，請務必加入 OpenAPS 資料公用，以便捐贈你的資料供研究使用（如果你選擇）。
 
 ## 使用條款
 
