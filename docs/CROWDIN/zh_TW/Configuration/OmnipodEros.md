@@ -39,7 +39,7 @@
 
 **安全第一** - 不要在無法從錯誤中恢復的環境中嘗試此過程（必備項包括額外的 pod、胰島素、已充電的 RileyLink 和手機設備）。
 
-**當 AAPS Omnipod 驅動程式啟用你的 pod 後，你的 Omnipod PDM 將無法再運作**。 以往你使用 Omnipod PDM 向 Omnipod Eros pod 發送指令。 Omnipod Eros pod 只允許單一裝置向其發送通訊。 從那時起，成功啟動 Pod 的裝置將是唯一能夠與其通訊的裝置。 這意味著一旦你透過 AAPS Omnipod 驅動程式和 RileyLink 啟用了 Omnipod Eros pod，**你將無法再使用你的 PDM 與 pod 通訊**。 AAPS Omnipod 驅動程式與 RileyLink 現在是你的替代 PDM。 *這並不意味著你應該丟掉你的 PDM，建議保留他作為備用並在 AAPS 運作不正常時使用。*
+**當 AAPS Omnipod 驅動程式啟用你的 pod 後，你的 Omnipod PDM 將無法再運作**。 以往你使用 Omnipod PDM 向 Omnipod Eros pod 發送指令。 Omnipod Eros pod 只允許單一裝置向其發送通訊。 從那時起，成功啟動 Pod 的裝置將是唯一能夠與其通訊的裝置。 這意味著你透過 AAPS Omnipod 驅動程式和 RileyLink 啟用了 Omnipod Eros pod，**你將無法再使用你的 PDM 與 pod 通訊**。 AAPS Omnipod 驅動程式與 RileyLink 現在是你的替代 PDM。 *這並不意味著你應該丟掉你的 PDM，建議保留他作為備用並在 AAPS 運作不正常時使用。*
 
 **你可以配置多個 RileyLink，但一次只能選擇一個 RileyLink 與 pod 通訊。** AAPS Omnipod 驅動程式支援在 RileyLink 配置中添加多個 RileyLink，但一次只能選擇一個 RileyLink 用來發送和接收通訊。
 
@@ -301,7 +301,7 @@
 
 ### 查看 RileyLink 設定和歷史記錄
 
-本節將向你展示如何查看你啟用 POD和 RileyLink 的設定及其通訊歷史記錄。 此功能一旦查看，將分為兩個部分：**設定**和**歷史**。
+本節將向你展示如何查看你啟用 POD和 RileyLink 的設定及其通訊歷史記錄。 當進入此功能後，將分為兩個部分：**設定**和**歷史**。
 
 此功能的主要用途是當你的 POD 通訊設備超出手機藍牙範圍且**RileyLink 狀態**報告**RileyLink 無法連線**。 主**Omnipod（POD）**頁籤上的**重新整理**按鈕將手動嘗試重新建立與 Omnipod 設定中目前配置的 RileyLink 的藍牙通訊。
 
@@ -738,7 +738,7 @@ Pod 會因多種問題偶爾發生故障，包括 Pod 本身的硬體問題。 �
 
 #### 沒有啟動幫浦
 
-未偵測到啟動的幫浦會話。 按下**稍後提醒**可以暫時忽略此警報，但只要未啟動新 Pod，他就會持續觸發。 一旦啟動，該警報將自動靜音。
+未偵測到啟動的幫浦會話。 按下**稍後提醒**可以暫時忽略此警報，但只要未啟動新 Pod，他就會持續觸發。 當此警報啟動後，會自動靜音。
 
 #### 幫浦已暫停
 
