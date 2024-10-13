@@ -182,7 +182,7 @@
 
 ![每日最大基礎率](../images/MaxDailyBasal2.png)
 
-- 一旦你對 IOB 與你的閉環模式的運作模式相符有信心後，將你的目標逐步降低至你理想的水準。
+- 當你對 IOB 與你的閉環模式的運作模式相符有信心後，將你的目標逐步降低至你理想的水準。
 
 (目標-Objective-8-如果需要，調整基礎率和比例，然後啟用 autosens)=
 
@@ -202,7 +202,7 @@
 在這個目標中，你將處理並使用“超微量注射 (SMB)”作為核心功能之一。 在完成必讀內容後，你將對 SMB 是什麼、如何運作、SMB 的合理起點以及為何在 SMB 後會暫時將基礎率設為零（即零基礎率）有深入的暸解。 完成此目標的預估時間：28 天。
 
 - [此文件中的 SMB 部分](Open-APS-features-super-micro-bolus-smb) 和 [openAPS 文件中的 oref1 涵蓋範圍](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) 是必讀內容，以了解 SMB 和零基礎率的概念。
-- 一旦完成，你可以[提高 maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) 以使 SMB 正常運作。 maxIOB 現在包括所有 IOB，不僅僅是累積的基礎率。 此門檻值會暫停 SMB，直到 IOB 低於此值為止（例如，maxIOB 設為 7 U，並給予 8 U 的注射來覆蓋一餐：SMB 將暫停，並且不會再次啟用，除非 IOB 低於 7 U）。 一個好的起點是將 maxIOB 設為平均餐後注射 + 每日最大基礎率的 3 倍（每日最大基礎率 = 一天內任何時段的每小時最大值，參見[目標 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) 作為參考）。
+- 完成後，你可以[提高 maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) 以使 SMB 正常運作。 maxIOB 現在包括所有 IOB，不僅僅是累積的基礎率。 此門檻值會暫停 SMB，直到 IOB 低於此值為止（例如，maxIOB 設為 7 U，並給予 8 U 的注射來覆蓋一餐：SMB 將暫停，並且不會再次啟用，除非 IOB 低於 7 U）。 一個好的起點是將 maxIOB 設為平均餐後注射 + 每日最大基礎率的 3 倍（每日最大基礎率 = 一天內任何時段的每小時最大值，參見[目標 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) 作為參考）。
 - 當你從 OpenAPS AMA 演算法切換到 OpenAPS SMB 時，將 "min_5m_carbimpact" 參數（偏好設定 > 吸收設定 > min_5m_carbimpact）更改為 8。 對於 AMA 演算法，預設值為 3。 在此處閱讀有關此設定的更多資訊 [此處](../Configuration/Preferences.md#min_5m_carbimpact)
 
 (目標-Objective-10-自動化設定)=
