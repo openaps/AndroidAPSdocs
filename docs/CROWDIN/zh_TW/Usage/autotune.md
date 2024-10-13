@@ -21,7 +21,7 @@ Autotune 外掛是 AAPS 中 OpenAPS Autotune 演算法的實作。
   - 注意：Autotune 只會調整你的 IC（單一數值）、ISF（單一數值）以及有日夜變化的基礎率。 單位、DIA 和目標將在輸出設定檔中保持不變。
 
 - 「執行 Autotune」將以選定的設定檔和調整天數啟動 Autotune 計算。
-  - 注意：Autotune 計算可能需要較長時間。 一旦啟動，你可以切換到其他視圖（主頁等），稍後再回到 Autotune 外掛查看結果。
+  - 注意：Autotune 計算可能需要較長時間。 當啟動後，你可以切換到其他視圖（主頁等），稍後再回到 Autotune 外掛查看結果。
 
 ![Autotune 運作開始。](../images/Autotune/Autotune_2b.png)
 
