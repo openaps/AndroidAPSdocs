@@ -243,7 +243,7 @@ vi) 在偏好設定頁面中，選擇「驗證器設置」
 
 1) 訊息未到達手機（網絡問題）。 2) **AAPS** 還在處理請求（_例如_ 注射，根據注射速率，可能需要一些時間來執行）。 3) 當收到指令時，AAPS 手機與幫浦之間的藍牙連線不良，導致指令失敗（這通常會在 AAPS 手機上觸發警報）。
 
-#### Q: 一旦指令經過驗證，我可以停止嗎？
+#### Q: 我該如何停止已經通過驗證的指令？
 
 不可以。 但是，你可以透過在 **AAPS** 手機的注射彈出窗口中快速取消來停止 SMS 發送的注射。 除了注射和碳水化合物報告外，許多 SMS 指令可以輕鬆撤銷，或透過某些操作來減輕錯誤的影響。
 
@@ -308,7 +308,7 @@ _請注意，**NSClient** 已被 **AAPSClient** 取代，適用於 AAPS 3.2 及�
 
 ### 同步設置 - AAPSClient 和 AAPS 配置（適用於 3.2.0.0 版本以上）
 
-一旦在追蹤者手機上安裝了 __AAPSClient__ apk，用戶必須確保在 Config Builder 中的“偏好設定”已正確設置並與 __AAPS__ 的 Nightscout 15 對齊（請參閱發佈說明 [此處](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Update-to-new-version.html)）。 以下範例提供了使用 Nightscout 15 的 NSClient 和 NSClientV3 的同步指南，但 __AAPS__ 也有其他選項（例如 xDrip+）。
+當追蹤者手機上安裝了 __AAPSClient__ apk，用戶必須確保在 "組態建置工具" 中的“偏好設定”已正確設置並與 __AAPS__ 的 Nightscout 15 對齊（請參閱發佈說明 [此處](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Update-to-new-version.html)）。 以下範例提供了使用 Nightscout 15 的 NSClient 和 NSClientV3 的同步指南，但 __AAPS__ 也有其他選項（例如 xDrip+）。
 
 在“Config Builder”的“同步設置”中，用戶可以選擇 __AAPS__ 和追蹤者手機的同步選項：
 
@@ -366,7 +366,7 @@ _請注意，**NSClient** 已被 **AAPSClient** 取代，適用於 AAPS 3.2 及�
 
 Nightscout 不僅是雲端中的伺服器，還有一個專用的 **Nightscout** 應用程式，可以直接從 iPhone 的 App Store 下載。 如果你有 Android 追蹤者手機，並沒有專用的 Nightscout 應用程式，建議使用 [**AAPSClient**](AAPSClient)，或者如果你只想要追蹤而不發送治療資料，你可以從 Play 商店下載並安裝 [Nightwatch](link) 應用程式。
 
-一旦你在 iPhone 上安裝了 **Nightscout** 應用程式，打開應用並按照設置提示進行操作，輸入你的 Nightscout 地址（見下方左側）。 此地址的格式可能取決於你的 Nightscout 是如何託管的。 (_例如_ http://youraddresshere.herokuapp.com)。 然後輸入你的 Nightscout API 密碼（見下方右側）。 如果未提示你輸入 API 密碼，請點擊應用程式頂部的鎖形圖示輸入密碼：
+當你在 iPhone 上安裝了 **Nightscout** 應用程式，打開應用並按照設置提示進行操作，輸入你的 Nightscout 地址（見下方左側）。 此地址的格式可能取決於你的 Nightscout 是如何託管的。 (_例如_ http://youraddresshere.herokuapp.com)。 然後輸入你的 Nightscout API 密碼（見下方右側）。 如果未提示你輸入 API 密碼，請點擊應用程式頂部的鎖形圖示輸入密碼：
 
 ![圖像](images/remote-control-24.png)
 
@@ -714,7 +714,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 ### 從 Wear 手錶控制 AAPS
 
-一旦你在手錶上設置了 **AAPS**，關於智慧型手錶錶盤及其功能的詳細資訊，請參閱[Wear AAPS 在智慧型手錶上的操作](../Configuration/Watchfaces.md)。
+當你在手錶上設置了 **AAPS**，關於智慧型手錶錶盤及其功能的詳細資訊，請參閱[Wear AAPS 在智慧型手錶上的操作](../Configuration/Watchfaces.md)。
 
 簡要概述，以下功能可以從智慧型手錶觸發：
 
