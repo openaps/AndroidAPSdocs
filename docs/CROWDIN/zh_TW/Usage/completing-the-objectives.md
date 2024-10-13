@@ -4,7 +4,7 @@
 
 - 你已正確配置你的 **AAPS** 設定
 - 你已了解 **AAPS** 的基本功能
-- 你對系統的操作有基本的理解，因此能夠信任他。
+- 你對系統的操作有基本的暸解，因此能夠信任他。
 
 ```{admonition} Note
 :class: note
@@ -65,7 +65,7 @@
 
 - 你可能想在晚上設置更寬的上限，或者甚至停用開環模式。
 
-每個問題可能有多個正確答案！ 如果選擇了錯誤的答案，該問題將被鎖定一段時間（60 分鐘），你將無法立即重新作答。 當你再次嘗試回答時，請注意答案的順序可能已經改變，這是為了確保你仔細閱讀並真正理解每個答案的正確性（或錯誤性）。
+每個問題可能有多個正確答案！ 如果選擇了錯誤的答案，該問題將被鎖定一段時間（60 分鐘），你將無法立即重新作答。 當你再次嘗試回答時，請注意答案的順序可能已經改變，這是為了確保你仔細閱讀並真正暸解每個答案的正確性（或錯誤性）。
 
 當 **AAPS** 第一次安裝時，你必須完成整個 **目標 3** 才能進入 **目標 4**。 每個目標必須按順序完成。 隨著目標的進展，新的功能將逐漸解鎖。
 
@@ -97,9 +97,9 @@
 :class: Note
 ```
 
-(目標-Objective-5-理解你的開環模式及其臨時基礎率建議)=
+(目標-Objective-5-暸解你的開環模式及其臨時基礎率建議)=
 
-## 目標 5：理解你的開環，包括其臨時基礎率建議
+## 目標 5：暸解你的開環，包括其臨時基礎率建議
 
 在 **目標 5** 中，你將開始了解如何得出臨時基礎率的建議。 這包括 [基礎率邏輯的確定](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html)，透過觀察 [AAPS OVERVIEW 中的預測線](Screenshots-prediction-lines)/Nightscout 來分析影響，並檢視 OPENAPS 頁籤中的詳細計算。
 
@@ -199,11 +199,11 @@
 
 ## 目標 9：啟用白天使用的其他 oref1 功能，例如超微量注射 (SMB)
 
-在這個目標中，你將處理並使用“超微量注射 (SMB)”作為核心功能之一。 在完成必讀內容後，你將對 SMB 是什麼、如何運作、SMB 的合理起點以及為何在 SMB 後會暫時將基礎率設為零（即零基礎率）有深入的理解。 完成此目標的預估時間：28 天。
+在這個目標中，你將處理並使用“超微量注射 (SMB)”作為核心功能之一。 在完成必讀內容後，你將對 SMB 是什麼、如何運作、SMB 的合理起點以及為何在 SMB 後會暫時將基礎率設為零（即零基礎率）有深入的暸解。 完成此目標的預估時間：28 天。
 
 - [此文件中的 SMB 部分](Open-APS-features-super-micro-bolus-smb) 和 [openAPS 文件中的 oref1 涵蓋範圍](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) 是必讀內容，以了解 SMB 和零基礎率的概念。
 - 一旦完成，你可以[提高 maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) 以使 SMB 正常運作。 maxIOB 現在包括所有 IOB，不僅僅是累積的基礎率。 此門檻值會暫停 SMB，直到 IOB 低於此值為止（例如，maxIOB 設為 7 U，並給予 8 U 的注射來覆蓋一餐：SMB 將暫停，並且不會再次啟用，除非 IOB 低於 7 U）。 一個好的起點是將 maxIOB 設為平均餐後注射 + 每日最大基礎率的 3 倍（每日最大基礎率 = 一天內任何時段的每小時最大值，參見[目標 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) 作為參考）。
-- 當你從 OpenAPS AMA 演算法切換到 OpenAPS SMB 時，將 "min_5m_carbimpact" 參數（偏好設定 > 吸收設定 > min_5m_carbimpact）更改為 8。 對於 AMA 演算法，預設值為 3。 Read more about this setting [here](../Configuration/Preferences.md#min_5m_carbimpact)
+- 當你從 OpenAPS AMA 演算法切換到 OpenAPS SMB 時，將 "min_5m_carbimpact" 參數（偏好設定 > 吸收設定 > min_5m_carbimpact）更改為 8。 對於 AMA 演算法，預設值為 3。 在此處閱讀有關此設定的更多資訊 [此處](../Configuration/Preferences.md#min_5m_carbimpact)
 
 (目標-Objective-10-自動化設定)=
 
