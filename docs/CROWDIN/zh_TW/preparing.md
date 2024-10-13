@@ -16,9 +16,9 @@
 “能力越大，責任越大……”
 
 ### 技術安全
-**AAPS**具有一套廣泛的安全功能。 These impose constraints which are gradually removed through staged completion of a series of [Objectives](Usage/completing-the-objectives.md) which involve testing specific parameters and answering multiple choice questions. 當成功完成目標後，**AAPS**的功能會逐步解鎖。 此過程允許用戶在從開環模式到閉環模式的過程中安全過渡，同時學習**AAPS**的不同功能。
+**AAPS**具有一套廣泛的安全功能。 這些功能會透過逐步完成一系列[目標](Usage/completing-the-objectives.md)，包括測試特定參數並回答選擇題，逐步解除限制。 當成功完成目標後，**AAPS**的功能會逐步解鎖。 此過程允許用戶在從開環模式到閉環模式的過程中安全過渡，同時學習**AAPS**的不同功能。
 
-The [Objectives](Usage/completing-the-objectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. 初學者因為經驗不足或過於急切開始使用**AAPS**而犯錯，或忽略了關鍵點。 The [Objectives](Usage/completing-the-objectives.md) aim to minimise these issues.
+[目標](Usage/completing-the-objectives.md)設計主要在為用戶提供最好的**AAPS**入門體驗，考慮到了**AAPS**開發者觀察到的新用戶典型錯誤和趨勢。 初學者因為經驗不足或過於急切開始使用**AAPS**而犯錯，或忽略了關鍵點。 這些[目標](Usage/completing-the-objectives.md)主要在盡量減少這些問題。
 
 ### 醫療安全
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
@@ -85,7 +85,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 - 列出**AAPS**中可能出現的常見錯誤的問答清單，請參閱[常見問題（K 部分）](Getting-Started/FAQ.md)；
 
-- “[How to install AAPS](Installing-AndroidAPS/building-AAPS.md)? （D 部分），包括[問題排除](Usage/troubleshooting.md)子部分。
+- “[如何安裝 AAPS](Installing-AndroidAPS/building-AAPS.md)？” （D 部分），包括[問題排除](Usage/troubleshooting.md)子部分。
 
 達到閉環控制的時間因人而異，但使用 AAPS 達到完全閉環控制的大致時間表可以參考[>此處](#how-long-will-it-take-to-set-everything-up)。
 
@@ -153,41 +153,41 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 (preparing-how-long-will-it-take?)=
 ## 設置所有內容需要多長時間？
 
-如前所述，使用**AAPS**更像是一段旅程，需要你投入個人時間。 這不是一次性的設置。 Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 4 to 6 months overall. It is therefore suggested that you prioritize building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5).
+如前所述，使用**AAPS**更像是一段旅程，需要你投入個人時間。 這不是一次性的設置。 關於建立建置**AAPS**、安裝和配置**AAPS**和**CGM**軟體，到從開放循環進入混合閉環循環的過程，大約需要 4 到 6 個月。 因此建議您優先建立 **AAPS** 應用程式並儘快完成早期目標，即使您仍然在使用其他胰島素輸送系統（您可以使用虛擬幫浦到達目標 5）。
 
-Some of the objectives require a given amount of days to pass to make sure you understand the new functionality. It is not possible to bypass this waiting time, these minimal timings have been set-up for your own safety.
+部分目標需要一定的天數以確保您暸解新功能。 無法跳過此等待時間，這些最小時間是為了您的安全而設定的。
 
 以下是大致的時間表：
 
-| 任務                                                            |               大致時間               |
-| ------------------------------------------------------------- |:--------------------------------:|
-| Initial reading of the documentation                          |              1-2 天               |
-| Installing/configuring PC to allow the build                  |              2-8 小時              |
-| Setting up a reporting server                                 |               1 小時               |
-| Installing a CGM app (xDrip+, BYODA, …)                       |               1 小時               |
-| Configuring CGM → xDrip+ → APPS initially                     |               1 小時               |
-| Configuring AAPS → pump initially                             |               1 小時               |
-| Configuring AAPS → Nightscout/Tidepool (reporting only)       |               1 小時               |
-| Optional : Configuring NightScout ↔ **AAPS** & NSFollowers    |               1 小時               |
-| Objective 1: Setting up visualization and monitoring          |               1 小時               |
-| 目標 2：學習如何控制 AAPS                                              |               2 小時               |
-| 目標 3：證明你的知識                                                   |             最多 14 天              |
-| 目標 4：開始使用開環                                                   |        Minimum of 7 days         |
-| Objective 5: Understanding your open loop                     |               7 天                |
-| Objective 6: Starting to close the loop (Low Glucose Suspend) |   Minimum of 5, up to 14 days    |
-| Objective 7: Tuning the closed loop                           |  Minimum of 1 day, up to 7 days  |
-| Objective 8: Adjust basals and ratios, enable Autosens        | Minimum of 7 days, up to 14 days |
-| Objective 9: Enabling Super Micro Bolus (SMB)                 |        Minimum of 28 days        |
-| 目標 10：自動化                                                     |        Minimum of 28 days        |
-| Objective 11: Dynamic ISF                                     |        Minimum of 28 days        |
+| 任務                                        |      大致時間      |
+| ----------------------------------------- |:--------------:|
+| 初步閱讀文件                                    |     1-2 天      |
+| 安裝/配置電腦以允許建立                              |     2-8 小時     |
+| 設置報告伺服器                                   |      1 小時      |
+| 安裝 CGM 應用程式 (xDrip+、BYODA 等)              |      1 小時      |
+| 初步配置 CGM → xDrip+ → APPS                  |      1 小時      |
+| 初步配置 AAPS → 幫浦                            |      1 小時      |
+| 初步配置 AAPS → Nightscout/Tidepool（僅限報告）     |      1 小時      |
+| 可選：配置 Nightscout ↔ **AAPS** 及 NSFollowers |      1 小時      |
+| 目標 1：設置可視化和監控                             |      1 小時      |
+| 目標 2：學習如何控制 AAPS                          |      2 小時      |
+| 目標 3：證明你的知識                               |    最多 14 天     |
+| 目標 4：開始使用開環                               |     最少 7 天     |
+| 目標 5：暸解您的開環                               |      7 天       |
+| 目標 6：開始閉環（LGS - 低血糖暫停）                    | 最少 5 天，最多 14 天 |
+| 目標 7：調整閉環                                 | 最少 1 天，最多 7 天  |
+| 目標 8：調整基礎率和比例，啟用 Autosens                 | 最少 7 天，最多 14 天 |
+| 目標 9：啟用超微量注射 (SMB)                        |    最少 28 天     |
+| 目標 10：自動化                                 |    最少 28 天     |
+| 目標 11：動態 ISF                              |    最少 28 天     |
 
-Once you are fully operational on **AAPS**, you will still need to regularly fine tune your settings in order to improve your overall diabetic management.
+當你開始使用**AAPS**，你仍然需要定期調整設定，以持續改善你的糖尿病管理。
 
 ## 需求
 
 ### 醫療考量
 
-In addition to the medical warnings in the [safety section](preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump.
+除了 [安全部分](preparing-safety-first) 中的醫療警告外，根據你在幫浦中使用的胰島素類型，還有不同的參數需要考量。
 
 #### 胰島素選擇
 
