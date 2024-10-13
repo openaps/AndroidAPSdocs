@@ -371,7 +371,7 @@
 
 #### COB 和 IOB 的組合及其含義
 
-* 出於安全原因，當 COB 框被勾選時，IOB 框無法取消選中，因為這樣做可能會導致過多的胰島素，因為 AAPS 未計算已經注射的劑量。
+* 出於安全原因，當 COB 框勾選時，IOB 框無法取消勾選，因為這樣做可能會導致過多的胰島素，因為 AAPS 未計算已經注射的劑量。
 * 如果你勾選 COB 和 IOB，未被胰島素覆蓋的未吸收碳水化合物 + 所有透過 TBR 或 SMB 注射的胰島素都將被計入。
 * 如果你僅勾選 IOB 而未勾選 COB，AAPS 將計算已經注射的胰島素，但不會將其與仍需吸收的碳水化合物對比。 這會導致“缺少碳水化合物”的提示。
 * 如果你在餐後注射胰島素後，為了**額外食物**（如額外的甜點）再進行注射，最好取消勾選所有選項。 這樣只會加入新增的碳水化合物，因為主餐不一定會立刻被吸收，因此餐後的 IOB 和 COB 不會馬上精確匹配。
@@ -461,7 +461,7 @@
 * 如果你習慣於手動操作幫浦，你可能習慣於認為胰島素會在大約 3.5 小時內衰減完畢。 
 * 然而，當你使用閉環系統時，這種長尾很重要，因為計算更為精準，這些微量的胰島素在 AAPS 演算法中的遞歸計算會積累起來。
 
-有關不同類型的胰島素、他們的活性設定檔以及為什麼這些很重要的更多詳細討論，你可以閱讀這篇文章[理解基於指數活性曲線的新 IOB 曲線](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+有關不同類型的胰島素、他們的活性設定檔以及為什麼這些很重要的更多詳細討論，你可以閱讀這篇文章[暸解基於指數活性曲線的新 IOB 曲線](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
 你還可以在這裡閱讀一篇出色的部落格文章：[我們經常在使用的胰島素作用時間（DIA）上出錯的原因以及為什麼這很重要...](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 

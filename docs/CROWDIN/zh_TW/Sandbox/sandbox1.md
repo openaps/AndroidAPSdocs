@@ -51,3 +51,14 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua。 At vero eos et accusam et justo duo dolores et ea rebum。 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet。 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua。 At vero eos et accusam et justo duo dolores et ea rebum。 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet。
 
 測試縮寫 : <abbr title="Insulin Sensitivity Factor">ISF</abbr>, <abbr title="Insulin On Board">IOB</abbr>
+
+帶有錨點的連結：
+- [這會花多久時間？](../preparing.md#how-long-will-it-take-to-set-everything-up)
+- [偏好設定中的 NSClient 設定](../Configuration/Preferences.md#nsclient)。
+- [AAPS 總覽中的預測線](../Getting-Started/Screenshots.md#prediction-lines)，標題層級 4
+- [AAPS 總覽中的預測線](../Getting-Started/Screenshots.md#screenshots-prediction-lines)，命名錨點
+- [螢幕截圖](../Getting-Started/Screenshots.md)
+- [主要圖表截圖](../Getting-Started/Screenshots.md#section-f---main-graph)，標題層級 3
+- [OpenAPS 功能](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal)
+- [最大 IOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob)
+- [本文件中的 SMB 章節](../Usage/Open-APS-features.md#super-micro-bolus-smb)

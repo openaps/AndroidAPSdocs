@@ -16,9 +16,9 @@ An **index** and explanation of the documentation structure can be found [here](
 “С большими возможностями приходит большая ответственность…"
 
 ### Техническая безопасность
-**AAPS** имеет широкий набор функций безопасности. Они накладывают ограничения, которые поэтапно устраняются прохождением [Целей](Usage/Objectives.md), включающих тестирование определенных параметров и ответы на вопросы с несколькими вариантами ответов. Важные функции системы **AAPS** становятся доступны после успешного завершения Целей. Этот процесс позволяет пользователю изучать возможности **AAPS**. и безопасно перемещаться с незамкнутого на замкнутый цикл системы.
+**AAPS** имеет широкий набор функций безопасности. These impose constraints which are gradually removed through staged completion of a series of [Objectives](Usage/completing-the-objectives.md) which involve testing specific parameters and answering multiple choice questions. Важные функции системы **AAPS** становятся доступны после успешного завершения Целей. Этот процесс позволяет пользователю изучать возможности **AAPS**. и безопасно перемещаться с незамкнутого на замкнутый цикл системы.
 
-[Цели](Usage/Objectives.md) были разработаны для максимально полного знакомства с системой **AAPS**, с учетом типичных ошибок и общих тенденций, которые разработчики **AAPS** наблюдали у новых пользователей. Ошибки возникают из-за неопытности новичков и их желания начать работу с **AAPS** как можно быстрее, без изучения необходимых материалов. [Цели](Usage/Objectives.md) должны минимизировать эти ошибки.
+The [Objectives](Usage/completing-the-objectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Ошибки возникают из-за неопытности новичков и их желания начать работу с **AAPS** как можно быстрее, без изучения необходимых материалов. The [Objectives](Usage/completing-the-objectives.md) aim to minimise these issues.
 
 ### Медицинская безопасность
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
@@ -85,7 +85,7 @@ In a nutshell:
 
 - Вопросы и ответы при часто возникающих ошибках (в [разделе ](Getting-Started/FAQ.md)K);
 
-- [Как установить AAPS](Installing-AndroidAPS/Building-APK.md)? (Раздел D) который включает секцию [Устранение неполадок](Usage/troubleshooting.md).
+- “[How to install AAPS](Installing-AndroidAPS/building-AAPS.md)? (Раздел D) который включает секцию [Устранение неполадок](Usage/troubleshooting.md).
 
 How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#how-long-will-it-take-to-set-everything-up))
 
@@ -153,37 +153,41 @@ Depending on your glucose sensor/CGM, you will need a compatible app for receivi
 (подготовка-сколько-времениl-займет?)=
 ## How long will it take to set everything up?
 
-Как уже упоминалось ранее, работа с **AAPS** похожа на «путешествие», требующее вложений в виде вашего личного времени. Это не одноразовая установка. Текущие оценки построения **AAPS**, установки и настройки программ **AAPS**, мониторинга **CGM** и перехода от незамкнутого цикла к гибридному замкнутому циклу на **AAPS** занимает в целом от 2 до 3 месяцев. It is therefore suggested that you prioritise building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5). Here is an approximate timeframe:
+Как уже упоминалось ранее, работа с **AAPS** похожа на «путешествие», требующее вложений в виде вашего личного времени. Это не одноразовая установка. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 4 to 6 months overall. It is therefore suggested that you prioritize building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5).
 
-| Задачи                                                                                                           | Примерное время |
-| ---------------------------------------------------------------------------------------------------------------- |:---------------:|
-| ознакомительное чтение документации:                                                                             |     1-2 дня     |
-| настройка компьютера для начала сборки:                                                                          |    2-8 часов    |
-| создание сервера Nightscout:                                                                                     |     1 hour      |
-| installing CGM app (xdrip or BYODA or …)                                                                         |     1 hour      |
-| первоначальная настройка мониторинга->xdrip->AAPS:                                                               |     1 hour      |
-| Первоначальная настройка AAPS->помпа:                                                                            |     1 hour      |
-| Настройка AAPS->NightScout (только для отчетов):                                                                 |     1 hour      |
-| необязательный (для родителей) - настройка NightScout <-> **AAPS** & фоллоуэр (ведомый) NS:                      |     1 hour      |
-| Цель 1: Настройка визуализации и мониторинга, анализ базальной скорости и коэффициентов                          |     1 hour      |
-| Цель 2: Научитесь контролировать AAPS                                                                            |     2 часа      |
-| Цель 3: Подтвердите ваши знания                                                                                  |   До 14 дней    |
-| Цель 4: Начните с открытого цикла                                                                                |     7 дней      |
-| Цель 5: Глубже понимаем работу системы в режиме незамкнутого цикла, включая ее рекомендации по временным базалам |     7 дней      |
-| Цель 6: Начинаем замыкать цикл с Low Glucose Suspend (прекращением подачи инсулина на низких сахарах)            |  До 5-14 дней   |
-| Цель 7: Настройка замкнутого цикла с постепенным поднятием макс величины IOB и понижением целевой ГК             |    До 7 дней    |
-| Цель 8: Настраиваем базал и коэффициенты с последующей активацией autosens                                       |  До 7-14 дней   |
-| Цель 9: Активация таких дополнительных функций oref1 как супер микро болюс (SMB)                                 |   До 14 дней    |
-| Цель 10: Автоматизация                                                                                           |     1 день      |
+Some of the objectives require a given amount of days to pass to make sure you understand the new functionality. It is not possible to bypass this waiting time, these minimal timings have been set-up for your own safety.
 
+Here is an approximate timeframe:
 
-Как только выначнете полностью работать на **AAPS**, для улучшения общей компенсации диабета, понадобится уточнить параметры настроек.
+| Задачи                                                        |         Примерное время          |
+| ------------------------------------------------------------- |:--------------------------------:|
+| Initial reading of the documentation                          |             1-2 дня              |
+| Installing/configuring PC to allow the build                  |            2-8 часов             |
+| Setting up a reporting server                                 |              1 hour              |
+| Installing a CGM app (xDrip+, BYODA, …)                       |              1 hour              |
+| Configuring CGM → xDrip+ → APPS initially                     |              1 hour              |
+| Configuring AAPS → pump initially                             |              1 hour              |
+| Configuring AAPS → Nightscout/Tidepool (reporting only)       |              1 hour              |
+| Optional : Configuring NightScout ↔ **AAPS** & NSFollowers    |              1 hour              |
+| Objective 1: Setting up visualization and monitoring          |              1 hour              |
+| Цель 2: Научитесь контролировать AAPS                         |              2 часа              |
+| Цель 3: Подтвердите ваши знания                               |            До 14 дней            |
+| Цель 4: Начните с открытого цикла                             |        Minimum of 7 days         |
+| Objective 5: Understanding your open loop                     |              7 дней              |
+| Objective 6: Starting to close the loop (Low Glucose Suspend) |   Minimum of 5, up to 14 days    |
+| Objective 7: Tuning the closed loop                           |  Minimum of 1 day, up to 7 days  |
+| Objective 8: Adjust basals and ratios, enable Autosens        | Minimum of 7 days, up to 14 days |
+| Objective 9: Enabling Super Micro Bolus (SMB)                 |        Minimum of 28 days        |
+| Цель 10: Автоматизация                                        |        Minimum of 28 days        |
+| Objective 11: Dynamic ISF                                     |        Minimum of 28 days        |
+
+Once you are fully operational on **AAPS**, you will still need to regularly fine tune your settings in order to improve your overall diabetic management.
 
 ## Что потребуется:
 
 ### Медицинские соображения
 
-Помимо медицинских предостережений в разделе [безопасность](preparing-safety-frist) имеются параметры, зависящие от типа инсулина в помпе.
+In addition to the medical warnings in the [safety section](preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump.
 
 #### Выбор инсулина
 
@@ -211,9 +215,9 @@ The current version of **AAPS** (3.2) requires an Android smartphone with Google
 
 Пожертвовать смартфон для тестирования можно, отправив письмо по адресу [donations@androidaps.org](mailto:donations@androidaps.org).
 
-- [Список проверенных телефонов](../Getting-Started/Phones.md)
-- [Jelly Settings](../Usage/jelly.md)
-- [Настройки Huawei](../Usage/huawei.md)
+- [Список проверенных телефонов](Getting-Started/Phones.md)
+- [Jelly Settings](Usage/jelly.md)
+- [Настройки Huawei](Usage/huawei.md)
 
 Users are encouraged to keep their phone Android version up-to-date, including with security parameters. However, if you are new with **AAPS** or are not a technical expert you might want to delay updating your phone until others have done so and confirmed it is safe to do so, on our various forums.
 

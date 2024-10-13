@@ -11,7 +11,7 @@
 
 ## 2022年1月
 
-- [Android Studio 疑難排解](../Installing-AndroidAPS/troubleshooting_androidstudio.md) - 更新 @tanja
+- [Android Studio 問題排除](../Installing-AndroidAPS/troubleshooting_androidstudio.md) - 更新 @tanja
 
 ## 2021年12月
 
@@ -22,7 +22,7 @@
 
 - 校準[Libre 2 傳感器](Libre2-best-practices-for-calibrating-a-libre-2-sensor)的最佳實踐
 - [ISF](FAQ-impact) 影響的重新定義
-- 更新[Android Studio 疑難排解](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
+- 更新[Android Studio 問題排除](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 - 移除已過時的[Dexcom](../Hardware/DexcomG6.md)應用
 
 ## 2021年10月
@@ -138,8 +138,8 @@
 - [新的 Freestyle Libre 2 教程](../Hardware/Libre2.md)
 - [帶百分比的設定檔切換 - 示例](../Usage/Profiles.md)
 - [SMS 指令更新](../Children/SMS-Commands.md)
-- [疑難排解 Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
-- [疑難排解 - 連結集合](../Usage/troubleshooting.md)
+- [問題排除 Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
+- [問題排除 - 連結集合](../Usage/troubleshooting.md)
 - 更新 - 供有經驗用戶的快速指導
 - 文檔 - 更新[編輯](make-a-PR-code-syntax)和[翻譯](translations#translation-of-the-documentation)
 
@@ -148,12 +148,12 @@
 - [AAPS 2.5 版](Releasenotes-version-2-5-0)更新（尤其在[更新頁面](Update-to-new-version.md)上）
 - [Accu-Chek Insight - 日誌選項](Accu-Chek-Insight-Pump-settings-in-aaps)
 - [COB 計算在單獨頁面上](../Usage/COB-calculation.md)
-- [COB - 錯誤 COB 值檢測](COB-calculation-detection-of-wrong-cob-values)
-- [Dexcom G6 特定疑難排解](DexcomG6-dexcom-g6-specific-troubleshooting)
+- [COB - 錯誤 COB 值偵測](COB-calculation-detection-of-wrong-cob-values)
+- [Dexcom G6 特定問題排除](DexcomG6-dexcom-g6-specific-troubleshooting)
 - [2.5 版的目標更新](../Usage/Objectives.md)
 - [偏好設定更新](../Configuration/Preferences.md)
 - [SGLT-2 抑制劑 - 閉環時請勿使用](module-no-use-of-sglt-2-inhibitors)
-- [SMS 指令疑難排解](SMS-Commands-troubleshooting)
+- [SMS 指令問題排除](SMS-Commands-troubleshooting)
 - [xDrip - 更新 G6 傳感器更換](xdrip-replace-transmitter)
 
 ## 2019年9月

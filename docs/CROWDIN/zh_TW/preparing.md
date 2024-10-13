@@ -16,9 +16,9 @@
 “能力越大，責任越大……”
 
 ### 技術安全
-**AAPS**具有一套廣泛的安全功能。 這些功能會透過逐步完成一系列[目標](Usage/Objectives.md)，包括測試特定參數並回答選擇題，逐步解除限制。 當成功完成目標後，**AAPS**的功能會逐步解鎖。 此過程允許用戶在從開環模式到閉環模式的過程中安全過渡，同時學習**AAPS**的不同功能。
+**AAPS**具有一套廣泛的安全功能。 這些功能會透過逐步完成一系列[目標](Usage/completing-the-objectives.md)，包括測試特定參數並回答選擇題，逐步解除限制。 當成功完成目標後，**AAPS**的功能會逐步解鎖。 此過程允許用戶在從開環模式到閉環模式的過程中安全過渡，同時學習**AAPS**的不同功能。
 
-[目標](Usage/Objectives.md)設計主要在為用戶提供最好的**AAPS**入門體驗，考慮到了**AAPS**開發者觀察到的新用戶典型錯誤和趨勢。 初學者因為經驗不足或過於急切開始使用**AAPS**而犯錯，或忽略了關鍵點。 這些[目標](Usage/Objectives.md)主要在盡量減少這些問題。
+[目標](Usage/completing-the-objectives.md)設計主要在為用戶提供最好的**AAPS**入門體驗，考慮到了**AAPS**開發者觀察到的新用戶典型錯誤和趨勢。 初學者因為經驗不足或過於急切開始使用**AAPS**而犯錯，或忽略了關鍵點。 這些[目標](Usage/completing-the-objectives.md)主要在盡量減少這些問題。
 
 ### 醫療安全
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
@@ -85,7 +85,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 - 列出**AAPS**中可能出現的常見錯誤的問答清單，請參閱[常見問題（K 部分）](Getting-Started/FAQ.md)；
 
-- “[如何安裝 AAPS](Installing-AndroidAPS/Building-APK.md)？” （D 部分），包括[問題排除](Usage/troubleshooting.md)子部分。
+- “[如何安裝 AAPS](Installing-AndroidAPS/building-AAPS.md)？” （D 部分），包括[問題排除](Usage/troubleshooting.md)子部分。
 
 達到閉環控制的時間因人而異，但使用 AAPS 達到完全閉環控制的大致時間表可以參考[>此處](#how-long-will-it-take-to-set-everything-up)。
 
@@ -103,7 +103,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 此外，**AAPS**還提供了[匯出所有配置設置](Usage/ExportImportSettings.md)的功能。 這確保你可以在更換手機、升級/重新安裝應用程序時安全恢復系統，並將干擾降至最低。 
 
-#### 疑難排解
+#### 問題排除
 
 如果你對任何問題感到不確定，請隨時聯繫**AAPS**社區——沒有什麼問題是愚蠢的！ 鼓勵具有不同經驗水平的所有用戶提出問題。 由於**AAPS**用戶眾多，問題的回應時間通常很快。
 
@@ -153,37 +153,41 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 (preparing-how-long-will-it-take?)=
 ## 設置所有內容需要多長時間？
 
-如前所述，使用**AAPS**更像是一段旅程，需要你投入個人時間。 這不是一次性的設置。 目前估計，從建置**AAPS**、安裝和配置**AAPS**和**CGM**軟體，到從開放循環進入混合閉環循環的過程，大約需要 2 到 3 個月。 因此，建議你盡快優先建置**AAPS**應用程式並完成早期目標，即使你仍在使用其他胰島素輸送系統（在完成目標 5 之前，你可以使用虛擬幫浦）。 以下是大致的時間表：
+如前所述，使用**AAPS**更像是一段旅程，需要你投入個人時間。 這不是一次性的設置。 關於建立建置**AAPS**、安裝和配置**AAPS**和**CGM**軟體，到從開放循環進入混合閉環循環的過程，大約需要 4 到 6 個月。 因此建議您優先建立 **AAPS** 應用程式並儘快完成早期目標，即使您仍然在使用其他胰島素輸送系統（您可以使用虛擬幫浦到達目標 5）。
 
-| 任務                                                   |   大致時間    |
-| ---------------------------------------------------- |:---------:|
-| 初步閱讀文件：                                              |   1-2 天   |
-| 安裝/配置電腦以允許建置：                                        |  2-8 小時   |
-| 建立 Nightscout 伺服器：                                   |   1 小時    |
-| 安裝 CGM 應用程式 (xdrip 或 BYODA 或其他)                      |   1 小時    |
-| 初始化配置 CGM->xdrip->AAPS：                              |   1 小時    |
-| 初始化配置 AAPS->胰島素幫浦：                                   |   1 小時    |
-| 初始化配置 AAPS->NightScout（僅報告）：                         |   1 小時    |
-| 選擇性（對於家長）- 配置 NightScout <-> **AAPS** 與 NSFollowers： |   1 小時    |
-| 目標 1：設置可視化與監控，分析基礎率與比率                               |   1 小時    |
-| 目標 2：學習如何控制 AAPS                                     |   2 小時    |
-| 目標 3：證明你的知識                                          |  最多 14 天  |
-| 目標 4：開始使用開環                                          |    7 天    |
-| 目標 5：理解你的開環，包括其臨時基礎率建議                               |    7 天    |
-| 目標 6：使用低血糖暫停功能開始閉環                                   | 最多 5-14 天 |
-| 目標 7：調整閉環，增加最大 IOB 並逐漸降低血糖目標                         |  最多 7 天   |
-| 目標 8：如有需要，調整基礎率與比率，然後啟用自動感應                          | 最多 7-14 天 |
-| 目標 9：啟用額外的 oref1 功能，例如超級微量注射 (SMB)                   |  最多 14 天  |
-| 目標 10：自動化                                            |    1 天    |
+部分目標需要一定的天數以確保您暸解新功能。 無法跳過此等待時間，這些最小時間是為了您的安全而設定的。
 
+以下是大致的時間表：
 
-一旦你完全掌握 **AAPS**，你將需要微調你的設置參數，以改善整體糖尿病管理。
+| 任務                                        |      大致時間      |
+| ----------------------------------------- |:--------------:|
+| 初步閱讀文件                                    |     1-2 天      |
+| 安裝/配置電腦以允許建立                              |     2-8 小時     |
+| 設置報告伺服器                                   |      1 小時      |
+| 安裝 CGM 應用程式 (xDrip+、BYODA 等)              |      1 小時      |
+| 初步配置 CGM → xDrip+ → APPS                  |      1 小時      |
+| 初步配置 AAPS → 幫浦                            |      1 小時      |
+| 初步配置 AAPS → Nightscout/Tidepool（僅限報告）     |      1 小時      |
+| 可選：配置 Nightscout ↔ **AAPS** 及 NSFollowers |      1 小時      |
+| 目標 1：設置可視化和監控                             |      1 小時      |
+| 目標 2：學習如何控制 AAPS                          |      2 小時      |
+| 目標 3：證明你的知識                               |    最多 14 天     |
+| 目標 4：開始使用開環                               |     最少 7 天     |
+| 目標 5：暸解您的開環                               |      7 天       |
+| 目標 6：開始閉環（LGS - 低血糖暫停）                    | 最少 5 天，最多 14 天 |
+| 目標 7：調整閉環                                 | 最少 1 天，最多 7 天  |
+| 目標 8：調整基礎率和比例，啟用 Autosens                 | 最少 7 天，最多 14 天 |
+| 目標 9：啟用超微量注射 (SMB)                        |    最少 28 天     |
+| 目標 10：自動化                                 |    最少 28 天     |
+| 目標 11：動態 ISF                              |    最少 28 天     |
+
+當你開始使用**AAPS**，你仍然需要定期調整設定，以持續改善你的糖尿病管理。
 
 ## 需求
 
 ### 醫療考量
 
-除了 [安全部分](preparing-safety-frist) 中的醫療警告外，根據你在幫浦中使用的胰島素類型，還有不同的參數需要考量。
+除了 [安全部分](preparing-safety-first) 中的醫療警告外，根據你在幫浦中使用的胰島素類型，還有不同的參數需要考量。
 
 #### 胰島素選擇
 
@@ -204,16 +208,16 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 ### 智慧型手機
 
 #### AAPS 與 Android 版本
-當前版本的 **AAPS**（3.2）需要使用 Google **Android 9.0 或更高版本** 的 Android 智慧型手機。 如果你打算購買一部新手機，截至 2024 年 7 月，建議選擇 Android 13。 用戶強烈建議出於安全原因保持 **AAPS** 的最新版本，不過對於無法使用 Android 9.0 或更新設備的用戶，較早版本的 **AAPS** 仍然可用於舊版 Android，例如 [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) 和 [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2)，可以從過去的版本中找到（查看舊版本的發行說明）。
+目前版本的 **AAPS**（3.2）需要使用 Google **Android 9.0 或更高版本** 的 Android 智慧型手機。 如果你打算購買一部新手機，截至 2024 年 7 月，建議選擇 Android 13。 用戶強烈建議出於安全原因保持 **AAPS** 的最新版本，不過對於無法使用 Android 9.0 或更新設備的用戶，較早版本的 **AAPS** 仍然可用於舊版 Android，例如 [Android 8](https://github.com/nightscout/AndroidAPS/releases/tag/2.8.2.1) 和 [Android 7](https://github.com/nightscout/AndroidAPS/releases/tag/2.6.2)，可以從過去的版本中找到（查看舊版本的發行說明）。
 
 #### 智慧型手機型號選擇
 你選購的具體型號取決於所需的功能。 這裡有兩個關於相容的[智慧型手機](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY/edit#gid=2097219952)和[智慧型手機與智慧型手錶](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)的歷史電子表格。 由於可能的型號眾多，這些電子表格已不再更新，因此我們建議在支援群組（Facebook 或 Discord）中搜尋“手機”或你考慮購買的具體型號。 如果仍需更多資訊，請發佈新帖來詢問。
 
 如欲捐贈仍需測試的智慧型手機或智慧型手錶型號，請發送電子郵件至[donations@androidaps.org](mailto:donations@androidaps.org)。
 
-- [已測試的手機清單](../Getting-Started/Phones.md)
-- [Jelly 設置](../Usage/jelly.md)
-- [華為設定](../Usage/huawei.md)
+- [已測試的手機清單](Getting-Started/Phones.md)
+- [Jelly 設置](Usage/jelly.md)
+- [華為設定](Usage/huawei.md)
 
 我們鼓勵用戶保持手機 Android 版本的最新狀態，包括安全參數。 然而，如果你是 **AAPS** 的新手，或者不是技術專家，你可能希望等到其他人確認更新是安全的後再進行更新，這可以透過我們的各大論壇確認。
 

@@ -33,9 +33,9 @@
 
 在最終用戶許可協議中，有關於使用 **AAPS** 的法律方面的重要訊息。 請仔細閱讀。
 
-如果你不理解或不同意最終用戶許可協議，請不要使用 **AAPS**！
+如果你不暸解或不同意最終用戶許可協議，請不要使用 **AAPS**！
 
-如果你理解並同意，請點擊“我理解並同意”按鈕並繼續設定嚮導：
+如果你暸解並同意，請點擊“我暸解並同意”按鈕並繼續設定嚮導：
 
 ![image](../images/setup-wizard/Screenshot_20231202_125650.png)
 
@@ -293,7 +293,7 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 選擇在幫浦中使用的胰島素類型。
 
-胰島素名稱應該很好理解。
+胰島素名稱應該很好暸解。
 
 ```{admonition} Don't use the "Free-Peak Oref" unless you know what you are doing
 :class: danger

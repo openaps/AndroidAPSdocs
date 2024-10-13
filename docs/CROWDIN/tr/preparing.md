@@ -16,9 +16,9 @@ Many experience-related details in the **AAPS** documentation make more sense wh
 “With great power comes great responsibility…”
 
 ### Technical safety
-**AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](Usage/Objectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
+**AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](Usage/completing-the-objectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
 
-The [Objectives](Usage/Objectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The [Objectives](Usage/Objectives.md) aim to minimise these issues.
+The [Objectives](Usage/completing-the-objectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The [Objectives](Usage/completing-the-objectives.md) aim to minimise these issues.
 
 ### Medical safety
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
@@ -85,7 +85,7 @@ To aid the build process there are dedicated sections:
 
 - List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](Getting-Started/FAQ.md) K);
 
-- “[How to install AAPS](Installing-AndroidAPS/Building-APK.md)? (Section D) which includes [Troubleshooting](Usage/troubleshooting.md) Subsection.
+- “[How to install AAPS](Installing-AndroidAPS/building-AAPS.md)? (Section D) which includes [Troubleshooting](Usage/troubleshooting.md) Subsection.
 
 How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#how-long-will-it-take-to-set-everything-up))
 
@@ -153,37 +153,41 @@ Both **Nightscout** and **AAPS** must be updated approximately once a year, as i
 (preparing-how-long-will-it-take?)=
 ## How long will it take to set everything up?
 
-As mentioned earlier, using **AAPS** is more of a “journey” that requires investment of your personal time. It is not a one-time setup. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 2 to 3 months overall. It is therefore suggested that you prioritise building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5). Here is an approximate timeframe:
+As mentioned earlier, using **AAPS** is more of a “journey” that requires investment of your personal time. It is not a one-time setup. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 4 to 6 months overall. It is therefore suggested that you prioritize building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5).
 
-| Tasks                                                                                       |   Approx time   |
-| ------------------------------------------------------------------------------------------- |:---------------:|
-| initial reading of the documentation:                                                       |    1-2 days     |
-| installing/configuring PC to allow the build:                                               |    2-8 hours    |
-| building a Nightscout server:                                                               |     1 hour      |
-| installing CGM app (xdrip or BYODA or …)                                                    |     1 hour      |
-| configuring CGM->xdrip->APPS initially:                                                     |     1 hour      |
-| configuring AAPS->pump initially:                                                           |     1 hour      |
-| configuring AAPS->NightScout (reporting only):                                              |     1 hour      |
-| optional (for Parents) - configuring NightScout <-> **AAPS** & NSFollowers:                 |     1 hour      |
-| Görev 1: Görselleştirme ve izleme ayarları, bazal ve oranlarını analize etme                |     1 hour      |
-| Objective 2: Learn how to control AAPS                                                      |     2 hour      |
-| Görev 3: Bilginizi kanıtlayın                                                               |  Up to 14 days  |
-| Görev 4: Bir Açık döngüye başlamak                                                          |     7 days      |
-| Görev 5: Geçici bazal önerileri de dahil olmak üzere açık döngünüzü anlamak                 |     7 days      |
-| Görev 6: Düşük KŞ'de Duraklatma ile döngüyü kapatmaya başlamak                              | Up to 5-14 days |
-| Objective 7: Tuning the closed loop, raising maxIOB and gradually lowering BG targets       |  Up to 7 days   |
-| Görev 8: Gerekirse bazalleri ve oranları ayarlayın ve ardından otoduyarlılığı etkinleştirin | Up to 7-14 days |
-| Objective 9: Enabling additional oref1 features, such as super micro bolus (SMB)            |  Up to 14 days  |
-| Görev 10: Otomasyon                                                                         |      1 day      |
+Some of the objectives require a given amount of days to pass to make sure you understand the new functionality. It is not possible to bypass this waiting time, these minimal timings have been set-up for your own safety.
 
+Here is an approximate timeframe:
 
-Once you are fully operational on **AAPS**, you will need to fine tune your setting parameters in order to improve your overall diabetic management.
+| Tasks                                                         |           Approx time            |
+| ------------------------------------------------------------- |:--------------------------------:|
+| Initial reading of the documentation                          |             1-2 days             |
+| Installing/configuring PC to allow the build                  |            2-8 hours             |
+| Setting up a reporting server                                 |              1 hour              |
+| Installing a CGM app (xDrip+, BYODA, …)                       |              1 hour              |
+| Configuring CGM → xDrip+ → APPS initially                     |              1 hour              |
+| Configuring AAPS → pump initially                             |              1 hour              |
+| Configuring AAPS → Nightscout/Tidepool (reporting only)       |              1 hour              |
+| Optional : Configuring NightScout ↔ **AAPS** & NSFollowers    |              1 hour              |
+| Objective 1: Setting up visualization and monitoring          |              1 hour              |
+| Objective 2: Learn how to control AAPS                        |              2 hour              |
+| Görev 3: Bilginizi kanıtlayın                                 |          Up to 14 days           |
+| Görev 4: Bir Açık döngüye başlamak                            |        Minimum of 7 days         |
+| Objective 5: Understanding your open loop                     |              7 days              |
+| Objective 6: Starting to close the loop (Low Glucose Suspend) |   Minimum of 5, up to 14 days    |
+| Objective 7: Tuning the closed loop                           |  Minimum of 1 day, up to 7 days  |
+| Objective 8: Adjust basals and ratios, enable Autosens        | Minimum of 7 days, up to 14 days |
+| Objective 9: Enabling Super Micro Bolus (SMB)                 |        Minimum of 28 days        |
+| Görev 10: Otomasyon                                           |        Minimum of 28 days        |
+| Objective 11: Dynamic ISF                                     |        Minimum of 28 days        |
+
+Once you are fully operational on **AAPS**, you will still need to regularly fine tune your settings in order to improve your overall diabetic management.
 
 ## Requirements
 
 ### Medical considerations
 
-In addition to the medical warnings in the [safety section](preparing-safety-frist) there are also different parameters, depending on which insulin you are using in the pump.
+In addition to the medical warnings in the [safety section](preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump.
 
 #### Insulin choice
 
@@ -211,9 +215,9 @@ The exact model you buy depends on the desired function(s). There are two archiv
 
 To make a donation of smartphone or smartwatch models that still need testing, please email [donations@androidaps.org](mailto:donations@androidaps.org).
 
-- [Test edilen telefonların listesi](../Getting-Started/Phones.md)
-- [Jelly Settings](../Usage/jelly.md)
-- [Huawei Ayarları](../Usage/huawei.md)
+- [Test edilen telefonların listesi](Getting-Started/Phones.md)
+- [Jelly Settings](Usage/jelly.md)
+- [Huawei Ayarları](Usage/huawei.md)
 
 Users are encouraged to keep their phone Android version up-to-date, including with security parameters. However, if you are new with **AAPS** or are not a technical expert you might want to delay updating your phone until others have done so and confirmed it is safe to do so, on our various forums.
 

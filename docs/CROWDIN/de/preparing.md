@@ -16,9 +16,9 @@ Viele Details in der **AAPS**-Dokumentation sind aus Erfahrungen entstanden und 
 „Mit großen Möglichkeiten kommt auch eine große Verantwortung…”
 
 ### Technische Sicherheit
-**AAPS** hat umfangreiche Sicherheitsfunktionen. Diese beschränken das System und werden schrittweise durch das stufenweise Abschließen einer Reihe von [Zielen](Usage/Objectives.md) entfernt. Diese beinhalten das Testen bestimmter Parameter und die Beantwortung mehrerer Multiple-Choice-Fragen. **AAPS**-Funktionen werden mit dem erfolgreichen Abschluss des jeweiligen Ziels freigeschaltet. Dieses Vorgehen ermöglicht durch das schrittweise Kennenlernen der verschiedenen **AAPS**-Funktionen einen sicheren Übergang aus dem 'Open Loop' in den 'Closed Loop'.
+**AAPS** hat umfangreiche Sicherheitsfunktionen. These impose constraints which are gradually removed through staged completion of a series of [Objectives](Usage/completing-the-objectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS**-Funktionen werden mit dem erfolgreichen Abschluss des jeweiligen Ziels freigeschaltet. Dieses Vorgehen ermöglicht durch das schrittweise Kennenlernen der verschiedenen **AAPS**-Funktionen einen sicheren Übergang aus dem 'Open Loop' in den 'Closed Loop'.
 
-Die [Ziele (Objectives)](Usage/Objectives.md) sollen den bestmöglichen Einstieg in **AAPS** ermöglichen, und dabei die typischen Fehler und Nutzungsmuster, die **AAPS**-Entwickler bei Neulingen beobachtet haben, adressieren. Weil Einsteiger unerfahren sind und zu schnell mit **AAPS** loslegen wollen oder wichtige Punkte übersehen haben, können Fehler passieren. Die [Ziele](Usage/Objectives.md) wollen genau diese Probleme minimieren.
+The [Objectives](Usage/completing-the-objectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Weil Einsteiger unerfahren sind und zu schnell mit **AAPS** loslegen wollen oder wichtige Punkte übersehen haben, können Fehler passieren. The [Objectives](Usage/completing-the-objectives.md) aim to minimise these issues.
 
 ### Medizinische Sicherheit
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
@@ -85,7 +85,7 @@ Um Dir durch den Erstellungsprozess zu helfen, gibt es eigene spezifische Abschn
 
 - Eine Liste von Fragen und Antworten zu häufigen Fehlern, die wahrscheinlich auftreten (unter [FAQ - Abschnitt](Getting-Started/FAQ.md) K);
 
-- “[Wie installiere ich AAPS](Installing-AndroidAPS/Building-APK.md)? (Abschnitt D) mit einem Unterabschnitt zur [Fehlerbehandlung](Usage/troubleshooting.md).
+- “[How to install AAPS](Installing-AndroidAPS/building-AAPS.md)? (Abschnitt D) mit einem Unterabschnitt zur [Fehlerbehandlung](Usage/troubleshooting.md).
 
 Wie lange es dauert den Closed Loop zu erreichen ist individuell verschieden, ein grober Zeitablauf bis zum vollen Loopen mit AAPS findest Du ([hier](#how-long-will-it-take-to-set-everything-up)).
 
@@ -153,37 +153,41 @@ Mit dem Erscheinen von verbesserten Versionen müssen **Nightscout** und **AAPS*
 (preparing-how-long-will-it-take?)=
 ## Wie lange wird es dauern, alles einzurichten?
 
-Wie schon erwähnt, ist die **AAPS**-Nutzung eher eine „Reise“, die es notwendig macht, dass Du Deine Zeit in sie investierst. Es ist kein einmaliger Aufwand. Aktuelle Schätzungen für das Erstellen, die Installation und Konfiguration von **AAPS** und **CGM**-Software, sowie den Übergang von Open Loop zu Hybrid Closed Loop mit **AAPS**, gehen von ca. 2 bis 3 Monaten aus. Daher wird empfohlen sich als Erstes auf das Erstellen (Build) der **AAPS**-App zu konzentrieren und so schnell wie möglich die ersten Aufgaben bzw. Ziele (Objectives) anzugehen. Das gilt auch, wenn Du aktuell noch ein anderes "Insulinabgabesystem" haben solltest, da Du bis zum Ziel 5 eine "virtuelle Pumpe" nutzen kannst. Ein ungefährer Zeitrahmen ist:
+Wie schon erwähnt, ist die **AAPS**-Nutzung eher eine „Reise“, die es notwendig macht, dass Du Deine Zeit in sie investierst. Es ist kein einmaliger Aufwand. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 4 to 6 months overall. It is therefore suggested that you prioritize building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5).
 
-| Aufgaben                                                                                            |    Ungefähre Dauer     |
-| --------------------------------------------------------------------------------------------------- |:----------------------:|
-| Erstmaliges Lesen der Dokumentation:                                                                |        1-2 Tage        |
-| Installation/Konfiguration des PCs zum Erstellen der App:                                           |      2-8 Stunden       |
-| Einen Nightscout-Server erstellen:                                                                  |        1 Stunde        |
-| Installieren einer CGM-App (xDrip+ oder BYODA oder …)                                               |        1 Stunde        |
-| Erstmalige Konfiguration CGM → xDrip+ → AAPS:                                                       |        1 Stunde        |
-| Erstmalige Konfiguration AAPS → Insulinpumpe:                                                       |        1 Stunde        |
-| Konfiguration von AAPS → Nightscout (nur Berichte):                                                 |        1 Stunde        |
-| Optional (für Eltern) - Nightscout konfigurieren <-> **AAPS** & NSFollower:                         |        1 Stunde        |
-| Ziel 1: Einrichten der Darstellung und Überwachung sowie analysieren der Basalraten und Faktoren    |        1 Stunde        |
-| Ziel 2: Lerne, wie AAPS bedient wird                                                                |        2 Stunde        |
-| Ziel 3: Belege Dein Wissen                                                                          |    bis zu 14 Tagen     |
-| Ziel 4: Starte den Open Loop                                                                        | wurden 7 Tage erreicht |
-| Ziel 5: Open Loop inklusive der temporären Basalratenvorschläge verstehen                           | wurden 7 Tage erreicht |
-| Ziel 6: Closed Loop mit Abschaltung bei niedrigen Glukose-Werten                                    |   bis zu 5-14 Tagen    |
-| Ziel 7: Justiere den Closed Loop, erhöhe maxIOB über und setze den Zielbereich langsam herunter     |     bis zu 7 Tagen     |
-| Ziel 8: Passe, falls notwendig, Basalraten und Faktoren an und aktiviere dann die Autosens-Funktion |   bis zu 7-14 Tagen    |
-| Ziel 9: Aktiviere zusätzliche oref1 Funktionen für die Nutzung tagsüber wie z. B. den SMB           |    bis zu 14 Tagen     |
-| Ziel 10: Automatisierung                                                                            |         1 Tag          |
+Some of the objectives require a given amount of days to pass to make sure you understand the new functionality. It is not possible to bypass this waiting time, these minimal timings have been set-up for your own safety.
 
+Ein ungefährer Zeitrahmen ist:
 
-Sobald Du **AAPS** vollständig nutzen kannst, ist es an der Zeit die Parameter Deiner Einstellung feiner abzustimmen und so Dein Diabetes-Management zu verbessern.
+| Aufgaben                                                      |         Ungefähre Dauer          |
+| ------------------------------------------------------------- |:--------------------------------:|
+| Initial reading of the documentation                          |             1-2 Tage             |
+| Installing/configuring PC to allow the build                  |           2-8 Stunden            |
+| Setting up a reporting server                                 |             1 Stunde             |
+| Installing a CGM app (xDrip+, BYODA, …)                       |             1 Stunde             |
+| Configuring CGM → xDrip+ → APPS initially                     |             1 Stunde             |
+| Configuring AAPS → pump initially                             |             1 Stunde             |
+| Configuring AAPS → Nightscout/Tidepool (reporting only)       |             1 Stunde             |
+| Optional : Configuring NightScout ↔ **AAPS** & NSFollowers    |             1 Stunde             |
+| Objective 1: Setting up visualization and monitoring          |             1 Stunde             |
+| Ziel 2: Lerne, wie AAPS bedient wird                          |             2 Stunde             |
+| Ziel 3: Belege Dein Wissen                                    |         bis zu 14 Tagen          |
+| Ziel 4: Starte den Open Loop                                  |        Minimum of 7 days         |
+| Objective 5: Understanding your open loop                     |      wurden 7 Tage erreicht      |
+| Objective 6: Starting to close the loop (Low Glucose Suspend) |   Minimum of 5, up to 14 days    |
+| Objective 7: Tuning the closed loop                           |  Minimum of 1 day, up to 7 days  |
+| Objective 8: Adjust basals and ratios, enable Autosens        | Minimum of 7 days, up to 14 days |
+| Objective 9: Enabling Super Micro Bolus (SMB)                 |        Minimum of 28 days        |
+| Ziel 10: Automatisierung                                      |        Minimum of 28 days        |
+| Objective 11: Dynamic ISF                                     |        Minimum of 28 days        |
+
+Once you are fully operational on **AAPS**, you will still need to regularly fine tune your settings in order to improve your overall diabetic management.
 
 ## Voraussetzungen
 
 ### Medizinische Überlegungen
 
-Zusätzlich zu den medizinischen Warnungen in den [Sicherheitshinweisen](preparing-safety-frist) gibt es in Abhängigkeit vom in der Pumpe verwendeten Insulin weitere Parameter.
+In addition to the medical warnings in the [safety section](preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump.
 
 #### Insulinwahl
 
@@ -211,9 +215,9 @@ Welches genaue Modell Du kaufen solltest, hängt von den gewünschten Funktionen
 
 Falls Du Smartphones oder Smartwatch-Modelle für Tests spenden möchtest, sende eine E-Mail an [donations@androidaps.org](mailto:donations@androidaps.org).
 
-- [Liste von getesteten Smartphones](../Getting-Started/Phones.md)
-- [Jelly Einstellungen](../Usage/jelly.md)
-- [Huawei Einstellungen](../Usage/huawei.md)
+- [Liste von getesteten Smartphones](Getting-Started/Phones.md)
+- [Jelly Einstellungen](Usage/jelly.md)
+- [Huawei Einstellungen](Usage/huawei.md)
 
 Das Smartphone sollte regelmäßig Sicherheitsupdates erhalten und stets auf der aktuellen Android-Version gehalten werden. Wenn Du mit AAPS noch nicht sehr vertraut bist oder kein technischer Experte bist, solltest Du mit dem jeweiligen Update warten, bis andere das Update erfolgreich gemacht haben und in den verschiedenen Foren bestätigt haben, dass es problemlos durchgeführt werden kann.
 

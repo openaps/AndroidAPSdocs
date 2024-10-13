@@ -46,7 +46,7 @@
 </tbody>
 </table>
 
-**強烈建議（非必須）使用SSD（固態硬碟）而非HDD（硬碟），因為這將減少建置AAPS apk檔案時所需的時間。** 你仍然可以在建置 **AAPS** apk檔案時使用HDD。 如果這樣做，建置過程可能需要很長時間才能完成，但一旦開始，你可以讓他無需監控地執行。
+**強烈建議（非必須）使用SSD（固態硬碟）而非HDD（硬碟），因為這將減少建置AAPS apk檔案時所需的時間。** 你仍然可以在建置 **AAPS** apk檔案時使用HDD。 如果這樣做，建置過程可能需要很長時間才能完成，但開始後，你可以讓他無需監控地執行。
 
 ## 建置過程中的幫助與支援
 
@@ -117,7 +117,7 @@ Git 是一個允許你追蹤代碼變更和與他人合作的程式。你將使�
 
 ```{admonition} What is Android Studio?
 :class: dropdown
-Android Studio 是一個在你的計算機上運行的程式。他允許你從互聯網下載原始碼（使用 Git）並建立智慧型手機（和智慧手錶）應用程式。通過在你的 PC 上建置新的或更新的應用程式，你不會「破壞」可能在智慧型手機上運行的當前循環版本的 **AAPS**，這些是完全獨立的過程。
+Android Studio 是一個在你的計算機上運行的程式。他允許你從互聯網下載原始碼（使用 Git）並建立智慧型手機（和智慧手錶）應用程式。通過在你的 PC 上建置新的或更新的應用程式，你不會「破壞」可能在智慧型手機上運行的目前循環版本的 **AAPS**，這些是完全獨立的過程。
 ```
 
 安裝Android Studio時最重要的一點是 **耐心！** 安裝和設置期間，Android Studio會下載大量內容，這需要時間。
@@ -129,7 +129,7 @@ Android Studio 是一個在你的計算機上運行的程式。他允許你從�
 導入注意事項：Android Studio 在最近的版本中改變了其用戶介面。此指南將向您展示在「Ladybug」中的*新用戶介面*的步驟。如果您仍在使用舊的用戶介面，您可能想要先按照[這些指示](NewUI)將 Android Studio 更改為新的用戶介面。
 ```
 
-下載[當前版本的 Android Studio](https://developer.android.com/studio)或從[**舊版存檔**](https://developer.android.com/studio/archive)下載一個舊版本，並接受下載協議。
+下載[目前版本的 Android Studio](https://developer.android.com/studio)或從[**舊版存檔**](https://developer.android.com/studio/archive)下載一個舊版本，並接受下載協議。
 
 ![DownloadAndroidStudio](../images/Building-the-App/010_DownloadLadybug.png)
 
@@ -291,7 +291,7 @@ Android Studio 可能會建議更新 gradle 系統。**請絕對不要更新 gra
 
 ![Git Executable](../images/Building-the-App/039_GitTest.png)
 
-如果自動設置成功，你當前版本的 **Git** 將顯示在路徑旁邊。
+如果自動設置成功，你目前版本的 **Git** 將顯示在路徑旁邊。
 
 ![Git\_version\_displayed](../images/Building-the-App/039_GitTestSuccess.png)
 

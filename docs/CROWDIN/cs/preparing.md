@@ -16,9 +16,9 @@ Mnoho detailů v **AAPS** dokumentaci dává větší smysl, když **AAPS** skut
 "S velkou mocí přichází velká odpovědnost..."
 
 ### Technická bezpečnost
-**AAPS** má rozsáhlou sadu bezpečnostních prvků. Tato vynucená omezení jsou postupně uvolňována díky plnění série [cílů](Usage/Objectives.md), které zahrnují testování konkrétních parametrů a otázky s více možnými odpověďmi. Všechny funkce **AAPS** budou odemnknuty po úspěšném splnění cílů. Tento postup umožňuje uživateli bezpečný postup od otevřené k uzavřené smyčce, zatímco se učí o různých funkcích **AAPS**.
+**AAPS** má rozsáhlou sadu bezpečnostních prvků. These impose constraints which are gradually removed through staged completion of a series of [Objectives](Usage/completing-the-objectives.md) which involve testing specific parameters and answering multiple choice questions. Všechny funkce **AAPS** budou odemnknuty po úspěšném splnění cílů. Tento postup umožňuje uživateli bezpečný postup od otevřené k uzavřené smyčce, zatímco se učí o různých funkcích **AAPS**.
 
-Tyto [cíle](Usage/Objectives.md) byly navrženy tak, aby co nejlépe představili **AAPS** a vzali do úvahy tpické chyby a trendy, které vývojáři **AAPS** vysledovali u nových uživatelů. Chyby můžou nastat protože nováčci jsou nezkušení a příliš dychtivý ke spuštění **AAPS**, nebo přehlédli důležité body. [Cíle](Usage/Objectives.md) jsou zaměřené na minimalizaci těchto problémů.
+The [Objectives](Usage/completing-the-objectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Chyby můžou nastat protože nováčci jsou nezkušení a příliš dychtivý ke spuštění **AAPS**, nebo přehlédli důležité body. The [Objectives](Usage/completing-the-objectives.md) aim to minimise these issues.
 
 ### Zdravotní bezpečnost
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
@@ -85,7 +85,7 @@ Pro podporu procesu sestavení aplikace jsou vyčleněny tyto oddíly dokumentac
 
 - seznam orázek a odpovědí zaměřený na časté chyby v rámci FAQ (oddíl K);
 
-- „[Jak nainstalovat AAPS](Installing-AndroidAPS/Building-APK.md)? (sekce D), která zahrnuje pododdíl [Řešení problémů](Usage/troubleshooting.md).
+- “[How to install AAPS](Installing-AndroidAPS/building-AAPS.md)? (sekce D), která zahrnuje pododdíl [Řešení problémů](Usage/troubleshooting.md).
 
 How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#how-long-will-it-take-to-set-everything-up))
 
@@ -153,37 +153,41 @@ V závislosti na vašem glukózovém senzoru/CGM budete potřebovat kompatibiln�
 (preparing-how-long-will-it-take?)=
 ## Jak dlouho bude trvat všechno nastavit?
 
-Jak bylo zmíněno dříve, používání **AAPS** je víceméně "cesta", která od vás bude obětovat váš volný čas. Nejde se o jednorázové řešení. Současné odhady pro sestavení **AAPS**, instalaci a konfiguraci **AAPS** a **CGM** softwaru a postup od otevřené k hybridní smyčce jsou 2 až 3 měsíce. Proto se doporučeje, abyste dali prioritu sestavení **AAPS** aplikace a co nejdříve se pustili do práce na počátečních cílích, i když ještě používáte jiný systém podávání inzulínu (až do cíle 5 můžete využívat pouze virtuální pumpu). Zde je přibližný časový rámec:
+Jak bylo zmíněno dříve, používání **AAPS** je víceméně "cesta", která od vás bude obětovat váš volný čas. Nejde se o jednorázové řešení. Current estimates for building **AAPS**, installing and configuring **AAPS** and **CGM** software and getting from open loop to hybrid closed looping with **AAPS** are about 4 to 6 months overall. It is therefore suggested that you prioritize building the **AAPS** app and working through the early objectives as soon as possible, even if you are still using a different insulin delivery system (you can use a virtual pump up to objective 5).
 
-| Úlohy                                                                                                   | Odhadovaný čas |
-| ------------------------------------------------------------------------------------------------------- |:--------------:|
-| úvodní přečtení dokumentace:                                                                            |    1-2 dny     |
-| instalace a konfigurace PC k sestavení aplikace:                                                        |   2-8 hodin    |
-| sestavení Nightscout serveru:                                                                           |     1 hour     |
-| Instalace CGM aplikace (xDrip, BYODA, …)                                                                |     1 hour     |
-| úvodní konfigurace CGM->xDrip->AAPS:                                                                    |     1 hour     |
-| úvodní konfigurace AAPS->inzulínová pumpa:                                                              |     1 hour     |
-| konfigurace AAPS>NightScout (pouze výkazy):                                                             |     1 hour     |
-| volitelně (pro rodiče) - konfigurace NightScout <-> **AAPS** & AAPS klienti:                            |     1 hour     |
-| Cíl 1: Nastavit vizualizaci a monitoring, analyzovat bazály a poměry                                    |     1 hour     |
-| Cíl 2: Naučte se ovládat AAPS                                                                           |    2 hodiny    |
-| Cíl 3: Prokázat své znalosti                                                                            |   až 14 dní    |
-| Cíl 4: Začít s otevřenou smyčkou                                                                        |     7 dnů      |
-| Cíl 5: Porozumění otevřené smyčce, včetně doporučení pro dočasné bazály                                 |     7 dnů      |
-| Cíl 6: Začátek uzavřené smyčky - s pozastavením pumpy při nízké glykémii                                |   5 - 14 dní   |
-| Cíl 7: Vyladit uzavřenou smyčku, zvyšovat max IOB nad a postupně snižovat cílovou glykémii:             |    až 7 dnů    |
-| Cíl 8: Upravit bazály a poměry, když bude potřeba, a povolit automatickou detekci citlivosti na inzulín |   7 - 14 dní   |
-| Cíl 9: Povolit další funkce oref1, jako je SMB (super micro bolus)                                      |   až 14 dní    |
-| Cíl 10: Automatizace                                                                                    |     1 den      |
+Some of the objectives require a given amount of days to pass to make sure you understand the new functionality. It is not possible to bypass this waiting time, these minimal timings have been set-up for your own safety.
 
+Zde je přibližný časový rámec:
 
-Jakmile budete plně fungovat na **AAPS**, budete potřebovat ladit nastavení vašich parametrů abyste dosáhli zlepšení ve zvládání vašeho diabetu.
+| Úlohy                                                         |          Odhadovaný čas          |
+| ------------------------------------------------------------- |:--------------------------------:|
+| Initial reading of the documentation                          |             1-2 dny              |
+| Installing/configuring PC to allow the build                  |            2-8 hodin             |
+| Setting up a reporting server                                 |              1 hour              |
+| Installing a CGM app (xDrip+, BYODA, …)                       |              1 hour              |
+| Configuring CGM → xDrip+ → APPS initially                     |              1 hour              |
+| Configuring AAPS → pump initially                             |              1 hour              |
+| Configuring AAPS → Nightscout/Tidepool (reporting only)       |              1 hour              |
+| Optional : Configuring NightScout ↔ **AAPS** & NSFollowers    |              1 hour              |
+| Objective 1: Setting up visualization and monitoring          |              1 hour              |
+| Cíl 2: Naučte se ovládat AAPS                                 |             2 hodiny             |
+| Cíl 3: Prokázat své znalosti                                  |            až 14 dní             |
+| Cíl 4: Začít s otevřenou smyčkou                              |        Minimum of 7 days         |
+| Objective 5: Understanding your open loop                     |              7 dnů               |
+| Objective 6: Starting to close the loop (Low Glucose Suspend) |   Minimum of 5, up to 14 days    |
+| Objective 7: Tuning the closed loop                           |  Minimum of 1 day, up to 7 days  |
+| Objective 8: Adjust basals and ratios, enable Autosens        | Minimum of 7 days, up to 14 days |
+| Objective 9: Enabling Super Micro Bolus (SMB)                 |        Minimum of 28 days        |
+| Cíl 10: Automatizace                                          |        Minimum of 28 days        |
+| Objective 11: Dynamic ISF                                     |        Minimum of 28 days        |
+
+Once you are fully operational on **AAPS**, you will still need to regularly fine tune your settings in order to improve your overall diabetic management.
 
 ## Požadavky
 
 ### Lékařská hlediska
 
-Kromě lékařských varování popsaných v oddíle [Bezpečnost](preparing-safety-frist) existují také další parametry, které jsou závislé na typu inzulínu, který používáte v pumpě.
+In addition to the medical warnings in the [safety section](preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump.
 
 #### Výběr inzulínu
 
@@ -211,9 +215,9 @@ Přesný model, který kupujete, závisí na požadovaných funkcích. Existují
 
 Pokud chcete poskytnout chytrý telefon nebo hodinky k provedení testování, napište prosím na [donations@androidaps.org](mailto:donations@androidaps.org).
 
-- [List of tested phones](../Getting-Started/Phones.md)
-- [Jelly Settings](../Usage/jelly.md)
-- [Huawei Settings](../Usage/huawei.md)
+- [List of tested phones](Getting-Started/Phones.md)
+- [Jelly Settings](Usage/jelly.md)
+- [Huawei Settings](Usage/huawei.md)
 
 Uživatelům doporučujeme udržovat jejich Android telefon aktualizovaný, včetně bezpečnostních nastavení. Ovšem pokud jste noví uživatel **AAPS** nebo nejste technicky zdatný, možná budete chtít pozdržet aktualizaci svého telefonu do doby, než to udělají ostatní a potvrdí na fórech, že je to bezpečné.
 

@@ -1,6 +1,6 @@
-# 疑難排解
+# 問題排除
 
-你可以在許多 wiki 頁面上找到疑難排解的資訊。 此頁面是幫助你找到解決問題資訊的鏈接集合。
+你可以在許多 wiki 頁面上找到問題排除的資訊。 此頁面是幫助你找到解決問題資訊的鏈接集合。
 
 額外的有用資訊可能也會在 [FAQ](../Getting-Started/FAQ.html) 中找到。
 
@@ -9,7 +9,7 @@
 ### 建立 & 更新
 
 * [遺失的密鑰庫](troubleshooting_androidstudio-lost-keystore)
-* [疑難排解 AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
+* [問題排除 AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 
 ### 設定
 * [設定檔](Profiles-troubleshooting-profile-errors)
@@ -89,7 +89,7 @@
 * [Libre 3](Libre3-experiences-and-troubleshooting)
 * [Libre 2](Libre2-experiences-and-troubleshooting)
 * [xDrip - 無 CGM 資料](xdrip-identify-receiver)
-* [xDrip - Dexcom 疑難排解](xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [xDrip - Dexcom 問題排除](xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ## 幫浦
 
@@ -106,5 +106,5 @@
 
 ## 智慧型手錶
 
-* [疑難排解 Wear 應用程式](Watchfaces-troubleshooting-the-wear-app)
+* [問題排除 Wear 應用程式](Watchfaces-troubleshooting-the-wear-app)
 * [Sony Smartwatch 3](../Usage/SonySW3.md)

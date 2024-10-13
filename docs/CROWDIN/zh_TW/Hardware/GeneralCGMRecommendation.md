@@ -18,7 +18,7 @@
 設置傳感器後，傳輸器可以卡入傳感器座。 警告！ 先按下方形的一側，然後按下圓形的一側。
 
 (GeneralCGMRecommendation-troubleshooting)=
-## 疑難排解
+## 問題排除
 
 ### 連線問題
 
