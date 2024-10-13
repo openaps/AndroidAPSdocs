@@ -39,7 +39,7 @@
     
         ![批准文本](./images/translations-proofreading.png)
     
-    當校對者批准翻譯後，他將被添加到下一版本的 AAPS 中。
+    當校對者批准翻譯後，他會添加到下一版本的 AAPS 中。
     
     (translations-translation-of-the-documentation)=
     ## Translation of the documentation
@@ -68,7 +68,7 @@
     
     * 翻譯的頁面不會在文件中發布，直到
     
-        1. 翻譯已被校對
+        1. 翻譯已校對
     
         1. Crowdin 和 Github 之間的同步運作已完成（每小時一次），這會為 Github 建立 PR。
     
