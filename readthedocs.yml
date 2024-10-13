@@ -1,12 +1,12 @@
 # Formats in addition to HTML
 
-formats:
+#formats:
    #- pdf
-   - none
+   #- none
 
 # Pip requirements
 requirements_file: ./requirements.txt
 
 # Build Container
 build:
-   image: latest
+   image: "3.1"
