@@ -128,11 +128,12 @@ You may wish to experiment with adjusting your targets being in a tighter range 
 
 You can adjust (widen or tighten) the graph’s green area, representing your target range, by entering different values in [Preferences](../Configuration/Preferences.md) > Overview > Range for Visualisation.
 
+![Stop sign](../images/sign_stop.png)
 
 ```{admonition} If you have been using a virtual pump, change to a real insulin pump now!
 :class: note
 
-| ![Stop sign](../images/sign_stop.png) | If you are open looping with a virtual pump **stop here**. Only click verify at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin. |
+If you are open looping with a virtual pump **stop here**. Only click verify at the end of this **Objective** once you have changed to using a "real" pump which delivers insulin.
 
 ```
 
@@ -251,9 +252,3 @@ Minimal time to complete this **Objective**: **28 days**. This is a mandatory wa
 If you wish to go back in **Objectives** for whatever reason you can do so by clicking at "clear finished".
 
 ![Go back in objectives](../images/Objective_ClearFinished.png)
-
-## Objectives in Android APS before version 3.0
-
-One objective was removed when **AAPS** version 3.0 was released.  Users of Android APS version 2.8.2.1 who are on older Android software (_i.e._ earlier than version 9) will be using an older set of Objectives which can be found [here](../Usage/Objectives_old.md).
-
-[This page was last modified on 2024-10-12](../Installing-AndroidAPS/Releasenotes.md#version-3200-dedicated-to-philoul)
