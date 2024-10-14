@@ -102,257 +102,257 @@ Wenn diese Einstellung deaktiviert ist, wird der Patch keine Warnung abgeben und
 
 #### Pump expiry warning \[hours\] (Patch Ablaufwarnung)
 
-***Default: 72 hours.***
+***Voreingestellt: 72 Stunden.***
 
-This setting changes the time of the expiration warning, when [Patch Expiration](#patch-expiration) is enabled, AAPS will give a notification on the set hour after activation.
+Diese Einstellung ändert, wenn das [Patch Ablaufdatum](#patch-expiration) aktiviert ist, den Zeitpunkt (in Stunden nach der Aktivierung) zu dem AAPS eine Benachrichtigung anzeigen wird.
 
 #### Stündliches Maximum Insulin
 
-***Default: 25U.***
+***Voreingestellt: 25 IE.***
 
-This setting changes the maximum amount of insulin that can be delivered in one hour. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#reset-alarms).
+Diese Einstellung begrenzt die maximal in einer Stunde abzugebende Insulinmenge. Beim Überschreiten des Limits, wird der Patch die Insulinlieferung unterbrechen und einen Alarm auslösen. Der Alarm kann durch das Drücken der Reset-Taste im Übersichtsmenü zurückgesetzt werden (siehe [Alarme zurücksetzen](#reset-alarms)).
 
-Set this to a sensible value for your insulin requirements.
+Setze den Wert auf eine für Deine speziellen Insulin-Anforderungen vernünftigen Wert.
 
 #### Tägliches Maximum Insulin
 
-***Default: 80U.***
+***Voreingestellt: 80 IE.***
 
-This setting changes the maximum amount of insulin that can be delivered in one day. If this limit is exceeded the patch will suspend and give an alarm. The alarm can be reset by pressing the reset button on in the overview menu see [Reset alarms](#reset-alarms).
+Diese Einstellung begrenzt die maximal an einem Tag abzugebende Insulinmenge. Beim Überschreiten des Limits, wird der Patch die Insulinlieferung unterbrechen und einen Alarm auslösen. Der Alarm kann durch das Drücken der Reset-Taste im Übersichtsmenü zurückgesetzt werden (siehe [Alarme zurücksetzen](#reset-alarms)).
 
-Set this to a sensible value for your insulin requirements.
+Setze den Wert auf eine für Deine speziellen Insulin-Anforderungen vernünftigen Wert.
 
-### Step 2b: AAPS Alerts settings
+### Schritt 2b: AAPS Alarm-Einstellungen
 
-Go to preferences
+Öffne die Einstellungen
 
 #### Pumpe:
 
 ##### BT Watchdog
 
-Go to preferences and select **Pump**:
+Gehe in den Einstellungen zum Abschnitt **Pumpe**:
 
 ![BT Watchdog](../images/medtrum/BTWatchdogSetting.png)
 
 ##### BT Watchdog
 
-This setting will try to work around any BLE issues. It will try to reconnect to the pump when the connection is lost. It will also try to reconnect to the pump when the pump is unreachable for a certain amount of time.
+Diese Einstellung wird versuchen, alle BLE-Probleme zu umgehen. Es wird versuchen, bei einer verlorenen Verbindung, sich wieder mit der Pumpe zu verbinden. Es wird auch versuchen, sich wieder mit der Pumpe zu verbinden, wenn die Pumpe für einige Zeit nicht erreichbar war.
 
-Enable this setting if you experience frequent connection issues with your pump.
+Aktiviere diese Einstellung, wenn Du häufig Verbindungsprobleme mit Deiner Pumpe hast.
 
-#### Local Alerts:
+#### Lokale Alarme:
 
-Go to preferences and select **Local Alerts**:
+Gehe in die Einstellungen und wähle **Lokale Alarme**:
 
-![Local Alerts](../images/medtrum/LocalAlertsSettings.png)
+![Lokale Alarme](../images/medtrum/LocalAlertsSettings.png)
 
 ##### Alarm, wenn die Pumpe nicht erreichbar ist
 
 ***Voreingestellt: Aktiviert.***
 
-This setting is forced to enabled when the Medtrum driver is enabled. It will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
+Diese Einstellung ist für Medtrum-Pumpen aktiviert und kann nicht geändert werden. Sollte die Pumpe nicht erreichbar sein, wirst Du alarmiert werden. Dies kann passieren, wenn sich die Pumpe außerhalb der Bluetooth-Reichweite befindet oder wenn die Pumpe aufgrund eines defekten Patches oder einer defekten Pumpenbasis nicht reagiert (z. B. wenn Wasser zwischen Pumpenbasis und den Patch geraten ist).
 
-For safety reasons this setting cannot be disabled.
+Aus Sicherheitsgründen kann diese Einstellung nicht deaktiviert werden.
 
 ##### Grenzwert Pumpe ist nicht erreichbar [min]
 
-***Default: 30 min.***
+***Voreingestellt: 30 Minuten.***
 
-This setting changes the time after which AAPS will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
+Diese Einstellung verändert den Zeitraum, nach dem AAPS Dich benachrichtigt, wenn die Pumpe nicht erreichbar ist. Dies kann passieren, wenn sich die Pumpe außerhalb der Bluetooth-Reichweite befindet oder wenn die Pumpe aufgrund eines defekten Patches oder einer defekten Pumpenbasis nicht reagiert (z. B. wenn Wasser zwischen Pumpenbasis und den Patch geraten ist).
 
-This setting can be changed when using Medtrum pump but it is recommended to set it at 30 minutes for safety reasons.
+Diese Einstellung kann für eine Medtrum-Pumpe geändert werden. Aus Sicherheitsgründen wird empfohlen diese auf 30 Minuten eingestellt zu lassen.
 
-### Step 3: Activate patch
+### Schritt 3: Patch aktivieren
 
-**Before you continue:**
-- Have your Medtrum Nano pumpbase and a reservoir patch ready.
-- Make sure that AAPS is properly set up and a [profile is activated](../Usage/Profiles.md).
-- Other devices that can talk to the Medtrum pump are disabled (PDM and Medtrum app)
+**Bevor Du weiter machst:**
+- Habe Deine Medtrum Nano Pumpenbasis und ein Reservoir-Patch zur Hand.
+- Stell sicher, dass AAPS korrekt eingerichtet und ein [Profil aktiviert ist](../Usage/Profiles.md).
+- Andere Geräte, die sich mit der Medtrum-Pumpe verbinden könnten, sind deaktiviert (PDM und Medtrum-App)
 
-#### Activate patch from the Medtrum overview Tab
+#### Patch über den Medtrum Übersichts-Reiter aktivieren
 
-Navigate to the [Medtrum TAB](#overview) in the AAPS interface and press the **Change Patch** button in the bottom right corner.
+Navigiere zum [MEDTRUM-Reiter](#overview) in der AAPS-Übersicht und tippe auf **Wechsele Patch** in der unteren rechten Ecke.
 
-If a patch is already active, you will be prompted to deactivate this patch first. see [Deactivate Patch](#deactivate-patch).
+Wenn ein Patch bereits aktiv ist, wirst Du aufgefordert, diesen aktiven Patch zuerst zu deaktivieren. Vgl. [Patch deaktivieren](#deactivate-patch).
 
-Follow the prompts to fill and activate a new patch. Please note - it is important to only connect the pumpbase to the reservoir patch at the step when you are prompted to do so. **You must only put the pump on your body and insert the cannula when prompted to during the activation process (after priming is complete).**
+Befolge die Anweisungen, um den neuen Patch zu befüllen und zu aktivieren. Bitte beachten Sie, dass es wichtig ist, die Pumpbase nur an den Patch des Reservoirs anzuschließen, wenn Sie dazu aufgefordert werden. **Du darfst die Pumpe nur dann auf Deinem Körper anbringen und die Kanüle einführen, wenn Du während des Aktivierungsvorgangs dazu aufgefordert wirst (nachdem die Befüllung der Pumpe abgeschlossen ist).**
 
-##### Start Activation
+##### Aktivierung starten
 
-![Start Activation](../images/medtrum/activation/StartActivation.png)
+![Aktivierung starten](../images/medtrum/activation/StartActivation.png)
 
-At this step, double check your serial number and make sure the pumpbase is not connected to the patch yet.
+Überprüfe bei diesem Schritt noch einmal die Seriennummer und stelle sicher, dass die Pumpenbasis noch nicht mit dem Patch verbunden ist.
 
 Drücke **Weiter**, um fortzufahren.
 
-##### Fill the patch
+##### Patch füllen
 
-![Fill the patch](../images/medtrum/activation/FillPatch.png)
+![Patch füllen](../images/medtrum/activation/FillPatch.png)
 
-Once the patch is detected and filled with a minimum of 70Units of insulin, press **Next** will appear.
+Sobald der Patch erkannt und mit mindestens 70 IE Insulin gefüllt ist, erscheint die **Weiter**-Taste auf der Seite.
 
-##### Prime the patch
+##### Patch entlüften
 
-![Half press](../images/medtrum/activation/HalfPress.png)
+![Halb gedrückt](../images/medtrum/activation/HalfPress.png)
 
-Do not remove the safety lock and press the needle button on the patch.
+Entferne nicht die Sicherheitssperre und drücke auf die Nadel-Taste am Patch.
 
-Press **Next** to start prime
+Drücke **Weiter**, um das Entlüften zu starten
 
-![Prime progress](../images/medtrum/activation/PrimeProgress.png)
+![Entlüften-Fortschritt](../images/medtrum/activation/PrimeProgress.png)
 
-![Prime complete](../images/medtrum/activation/PrimeComplete.png)
+![Entlüften abgeschlossen](../images/medtrum/activation/PrimeComplete.png)
 
-Once the prime is complete, press **Next** to continue.
+Sobald das Entlüften abgeschlossen ist, drücke **Weiter**, um fortzufahren.
 
 ##### Patch setzen
 
-![Attach patch](../images/medtrum/activation/AttachPatch.png)
+![Patch setzen](../images/medtrum/activation/AttachPatch.png)
 
-Clean the skin, remove stickers and attach the patch to your body. Remove safety lock and press the needle button on the patch to insert the cannula.
+Reinige die Haut, entferne alle Aufkleber und befestige den Patch an Deinem Körper. Entferne die Sicherheitssperre und drücke die Nadel-Taste auf dem Patch, um die Kanüle zu setzen.
 
-Press **Next** to activate the patch.
+Drücke **Weiter**, um den Patch zu aktivieren.
 
 ##### Patch aktivieren
 
-![Activate patch](../images/medtrum/activation/ActivatePatch.png)
+![Patch aktivieren](../images/medtrum/activation/ActivatePatch.png)
 
-When activation is complete, the following screen will appear
+Wenn die Aktivierung abgeschlossen ist, wird Folgendes angezeigt
 
-![Activation complete](../images/medtrum/activation/ActivationComplete.png)
+![Aktivierung abgeschlossen](../images/medtrum/activation/ActivationComplete.png)
 
 Drücke **OK** um zum Hauptbildschirm zurückzukehren.
 
-### Deactivate patch
+### Patch deaktivieren
 
-To deactivate a currently active patch, go to the [Medtrum TAB](#overview) in the AAPS interface and press the **Change Patch** button.
+Um einen aktuell aktiven Patch zu deaktivieren, gehe zum [Medtrum-Reiter](#overview) in der AAPS-Übersicht und tippe auf **Wechsele Patch **.
 
-![Deactivate patch](../images/medtrum/activation/DeactivatePatch.png)
+![Patch deaktivieren](../images/medtrum/activation/DeactivatePatch.png)
 
-You will be asked to confirm that you wish to deactivate the current patch. **Please note that this action is not reversable.** When deactivation is completed, you can press **Next** to continue the process to activate a new patch. If you are not ready to activate a new patch, press **Cancel** to return to the main screen.
+Du wirst gebeten zu bestätigen, dass Du den aktuellen Patch deaktivieren möchtest. **Bitte beachte, dass diese Aktion nicht rückgängig gemacht werden kann.** Wenn die Deaktivierung abgeschlossen ist, kannst Du auf **Weiter** tippen, um einen neuen Patch zu aktivieren. Wenn Du nicht bereit bist, einen neuen Patch zu aktivieren, tippe auf **Abbrechen**, um zum Hauptbildschirm zurückzukehren.
 
-![Deactivate progress](../images/medtrum/activation/DeactivateProgress.png)
+![Deaktivierungs-Fortschritt](../images/medtrum/activation/DeactivateProgress.png)
 
-If Android APS in unable to deactivate the patch (For instance because the pumpbase has already been removed from the reservoir patch), you may press **Discard** to forget the current patch session and make it possible to activate a new patch.
+Falls AAPS den Patch nicht deaktivieren kann (zum Beispiel, weil die Pumpenbasis bereits vom Reservoir-Patch getrennt wurde), kannst Du **Verwerfen** drücken, um die aktuelle Patch-Sitzung zu löschen und damit eine Aktivierung eines neuen Patches zu ermöglichen.
 
-![Deactivate complete](../images/medtrum/activation/DeactivateComplete.png)
+![Deaktivieren abgeschlossen](../images/medtrum/activation/DeactivateComplete.png)
 
-Once deactivation is complete, press **OK** to return to main screen or press **Next** to continue the process to activate a new patch.
+Sobald die Deaktivierung abgeschlossen ist, tippe auf **OK**, um zum Hauptbildschirm zurückzukehren oder tippe auf **Weiter**, um einen neuen Patch zu aktivieren zu können.
 
-### Resume interrupted activation
+### unterbrochene Aktivierung fortsetzen
 
-If a patch activation is interrupted, for instance because the phone battery runs out, you can resume the activation process by going to the [Medtrum TAB](#overview) in the AAPS interface and press the **Change Patch** button.
+Wenn eine Patch-Aktivierung unterbrochen wird, zum Beispiel weil der Akkustand des Smartphones zu niedrig ist, kannst Du den Aktivierungsvorgang fortsetzen, indem Du auf den [Medtrum-Reiter](#overview) in der AAPS-Übersicht gehst und auf **Wechsele Patch** tippst.
 
-![Resume interrupted activation](../images/medtrum/activation/ActivationInProgress.png)
+![unterbrochene Aktivierung fortsetzen](../images/medtrum/activation/ActivationInProgress.png)
 
-Press **Next** to continue the activation process. Press **Discard** to discard the current patch session and make it possible to activate a new patch.
+Tippe auf **Weiter**, um den Aktivierungsprozess fortzusetzen. Drücke auf **Verwerfen**, um die aktuelle Patch-Sitzung zu löschen und damit eine Aktivierung eines neuen Patches zu ermöglichen.
 
-![Reading activation status](../images/medtrum/activation/ReadingActivationStatus.png)
+![Aktivierungsstatus lesen](../images/medtrum/activation/ReadingActivationStatus.png)
 
-The driver will try to determine the current status of the patch activation. If this was successful it will go into the activation progress at the current step.
+AAPS wird versuchen, den aktuellen Status der Patch-Aktivierung zu bestimmen. Wenn das erfolgreich war, wird in den Aktivierungsfortschritt übergegangen.
 
 ## Übersicht
 
-The overview contains the current status of the Medtrum patch. It also contains buttons to change the patch, reset alarms and refresh the status.
+Die Übersicht enthält den aktuellen Status des Medtrum Patches. Sie enthält auch Schaltflächen zum Wechseln des Patches, Zurücksetzen von Alarmen und zur Status-Aktualisierung.
 
-![Medtrum Overview](../images/medtrum/Overview.png)
+![Medtrum-Übersicht](../images/medtrum/Overview.png)
 
 ##### BLE Status:
 
-This shows the current status of the Bluetooth connection to the pumpbase.
+Zeigt den aktuellen Status der Bluetooth-Verbindung zur Pumpenbasis an.
 
 ##### Zuletzt verbunden:
 
-This shows the last time the pump was connected to AAPS.
+Zeigt den Zeitpunkt, an dem die Pumpenbasis das letzte Mal mit AAPS verbunden war, an.
 
 ##### Pumpenstatus:
 
-This shows the current state of the pump. Zum Beispiel:
-    - ACTIVE : The pump is activated and running normally
-    - STOPPED: The patch is not activated
+Dies zeigt den aktuellen Zustand der Pumpe. Zum Beispiel:
+    - ACTIVE: Die Pumpe ist aktiviert und läuft normal
+    - STOPPED: Der Patch ist nicht aktiviert
 
 ##### Basaltyp:
 
-This shows the current basal type.
+Das zeigt den aktuellen Basaltyp an.
 
 ##### Basalrate:
 
-This shows the current basal rate.
+Dies zeigt die aktuelle Basalrate an.
 
 ##### Letzter Bolus:
 
-This shows the last bolus that was delivered.
+Dies zeigt den letzten abgegebenen Bolus an.
 
-##### Active bolus:
+##### Active bolus (Aktiver Bolus):
 
-This shows the active bolus that is currently being delivered.
+Dies zeigt den derzeit abgegebenen (laufenden) Bolus an.
 
 ##### Aktive Alarme:
 
-This shows any active alarms that are currently active.
+Dies zeigt alle derzeit aktiven Alarme an.
 
 ##### Reservoir:
 
-This shows the current reservoir level.
+Dies zeigt den aktuellen Reservoir-Stand an.
 
 ##### Batterie:
 
-This shows the current battery voltage of the patch.
+Dies zeigt die aktuelle Batterie-Spannung des Patches an.
 
 ##### Pumpentyp:
 
-This shows the current pump type number.
+Zeigt die aktuelle Pumpentyp-Nummer an.
 
 ##### FW-Version:
 
-This shows the current firmware version of the patch.
+Dies zeigt die aktuelle Firmware-Version des Patches an.
 
-##### Patch no:
+##### Patch Nr.:
 
-This shows the sequence number of the activated patch. This number is incremented every time a new patch is activated.
+Dies zeigt die laufende Nummer des aktivierten Patches an. Diese Nummer wird jedes Mal um eins erhöht, wenn ein neuer Patch aktiviert wird.
 
 ##### Patch läuft ab:
 
-This shows the date and time when the patch will expire.
+Hier wird das Datum und die Uhrzeit angezeigt, an dem der Patch ablaufen wird.
 
 ##### Aktualisieren:
 
-This button will refresh the status of the patch.
+Diese Schaltfläche aktualisiert den Patch-Status.
 
-##### Change patch:
+##### Wechsele Patch:
 
-This button will start the process to change the patch. See [Activate patch](#activate-patch) for more information.
+Diese Schaltfläche startet den Prozess zum Wechseln des Patches. Weitere Informationen findest Du unter [Patch aktivieren](#activate-patch).
 
 ### Alarme zurücksetzen
 
-The alarm button will appear on the overview screen when there is an active alarm that can be reset. Pressing this button will reset the alarms and resume insulin delivery if the patch has been suspended due to the alarm. z.B. when suspended due to a maximum daily insulin delivery alarm.
+Die Alarmtaste wird auf der Übersicht angezeigt, wenn es einen aktiven Alarm, der zurückgesetzt werden kann, gibt. Durch Drücken dieser Taste werden die Alarme zurückgesetzt und die Insulinabgabe fortgesetzt, sofern die Abgabe aufgrund des Alarms unterbrochen wurde. z.B. wenn aufgrund eines "maximale tägliche Insulinmenge"-Alarms die Abgabe unterbrochen wurde.
 
 ![Alarme zurücksetzen](../images/medtrum/ResetAlarms.png)
 
-Press the **Reset Alarms** button to reset the alarms and resume normal operation.
+Tippe auf **Alarme zurücksetzen**, um die Alarme zurückzusetzen und den normalen Betrieb fortzusetzen.
 
 ## Problembehandlung
 
-### Connection issues
+### Verbindungsprobleme
 
-If you are experiencing connection timeouts or other connection issues:
-- In Android application settings for AAPS: Set location permission to "Allow all the time".
+Wenn Du Verbindungsabbrüche oder andere Verbindungsprobleme hast:
+- In den Android-Anwendungseinstellungen für AAPS: Standortberechtigung auf "Immer zulassen" setzen.
 
-### Activation interrupted
+### Aktivierung unterbrochen
 
-If the activation process is interrupted for example by and empty phone battery or phone crash. The activation process can be resumed by going to the change patch screen and follow the steps to resume the activation as outlined here: [Resume interrupted activation](#resume-interrupted-activation)
+Wenn der Aktivierungsprozess beispielsweise durch einen leeren Smartphone-Akku oder einen Smartphone-Absturz unterbrochen wird. Der Aktivierungsprozess kann fortgesetzt werden, indem Du zum "Wechsele Patch"-Bildschirm gehst und den entsprechenden Schritten zur Aktivierung, wie im Abschnitt [Aktivierung fortsetzen](#resume-interrupted-activation) beschrieben, folgst.
 
-### Preventing patch faults
+### Patch-Fehler verhindern
 
-The patch can give a variety of errors. To prevent frequent errors:
-- Make sure the pumpbase is properly seated in the patch and no gaps are visible.
-- When filling the patch do not apply excessive force to the plunger. Do not try to fill the patch beyond the maximum that applies to your model.
+Der Patch kann eine Vielzahl von Fehlern verursachen. Um häufige Fehler zu vermeiden:
+- Vergewissere Dich, dass die Pumpenbasis richtig im Patch sitzt und keine Spalten und Lücken sichtbar sind.
+- Übe beim Befüllen des Patches keinen übermäßigen Druck auf den Kolben aus. Befülle den Patch nicht über das für Dein Modell gültige Maximum hinaus.
 
-## Where to get help
+## Wo ich Hilfe bekomme
 
-All of the development work for the Medtrum driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
+Die gesamte Entwicklungsarbeit rund um das Medtrum-Modul wird von der Community auf **freiwilliger** Basis geleistet. Wir bitten Dich daher um einen respektvollen Umgang darum und die folgenden Prinzipien zu befolgen, bevor Du um Unterstützung bittest:
 
 -  **Level 0:** Lies den entsprechenden Abschnitt dieser Dokumentation um sicherzustellen, dass du verstehst, wie die Funktion, mit der Du Schwierigkeiten hast, funktionieren soll.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#Medtrum* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
+-  **Level 1:** Solltest Du trotz dieses Dokuments ein Problem nicht lösen können, tritt dem *#Medtrum* **Discord**-Channel bei, indem Du auf diesen [Einladungs-Link](https://discord.gg/4fQUWHZ4Mw) klickst.
 -  **Level 2:** Vorhandene 'Issues' durchsuchen um zu sehen, ob Dein Problem bereits in den [Issues](https://github.com/nightscout/AAPS/issues) gemeldet wurde. Falls vorhanden, bitte bestätige/kommentiere/ergänze Informationen zu Deinem Problem. Wenn nicht, erstelle bitte ein [neues Issue](https://github.com/nightscout/AndroidAPS/issues) und füge [Deine Logdateien](../Usage/Accessing-logfiles.md) an.
 -  **Sei geduldig - die meisten Mitglieder unserer Community sind gutmütige Freiwillige und die Lösung von Problemen erfordert oft Zeit und Geduld von Nutzern und Entwicklern.**
