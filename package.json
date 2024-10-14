@@ -1,0 +1,15 @@
+{
+  "name": "androidapsdocs",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.4.0",
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
+  }
+}

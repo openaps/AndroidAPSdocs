@@ -4,3 +4,6 @@ docs/EN/_build/
 docs/CROWDIN/fr/_build/
 docs/CROWDIN/de/_build/
 docs/CROWDIN/nl/_build/
+node_modules/
+.vitepress/cache/
+.vitepress/dist/
