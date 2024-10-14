@@ -36,71 +36,71 @@ Gleiches gilt auch für 'Null-Basalraten'. **Basalraten mit 0 IE/h werden in AAP
 
 ## Einrichtung
 
-ACHTUNG: Wenn ein Patch mit AAPS mit aktiviert wird, **MÜSSEN** alle anderen Geräte, die mit der Medtrum Pumpenbasis sprechen könnten, deaktiviert werden. z.B. ein aktiver PDM und die Medtrum-App. Make sure you have your pumpbase and pumpbase SN ready for activation of a new patch.
+ACHTUNG: Wenn ein Patch mit AAPS mit aktiviert wird, **MÜSSEN** alle anderen Geräte, die mit der Medtrum Pumpenbasis sprechen könnten, deaktiviert werden. z.B. ein aktiver PDM und die Medtrum-App. Vergewissere Dich, dass Du Deine Pumpenbasis und deren Seriennummer für die Aktivierung eines neuen Patches bereit hast.
 
 ### Schritt 1: Wähle die Medtrum-Pumpe aus
 
 #### Option 1: Neue Installation
 
-Wenn Du AAPS erstmals installierst, führt Dich der **Einrichtungsassistent** durch die AAPS-Installation. Select “Medtrum” when you reach Pump selection.
+Wenn Du AAPS erstmals installierst, führt Dich der **Einrichtungsassistent** durch die AAPS-Installation. Wenn Du das Pumpenauswahlmenü erreichst, wähle "Medtrum" aus.
 
-If in doubt you can also select “Virtual Pump” and select “Medtrum” later, after setting up AAPS (see option 2).
+Falls Du Dir nicht sicher bist, kannst Du auch zunächst die „Virtuelle Pumpe“ auswählen und nachdem AAPS fertig eingerichtet ist, später dann auf „Medtrum“ wechseln (siehe Option 2).
 
 ![Einrichtungsassistent](../images/medtrum/SetupWizard.png)
 
 #### Option 2: Der Konfigurations-Generator
 
-On an existing installation you can select the **Medtrum** pump from the [Config Builder](Config-Builder.md#config-builder-profile):
+Bei einer bestehenden Installation kannst Du die **Medtrum**-Pumpe unter [Konfiguration](Config-Builder.md#config-builder-profile) auswählen:
 
-On the top-left hand corner **hamburger menu** select **Config Builder**\ ➜\ **Pump**\ ➜\ **Medtrum**\ by selecting the **Enable button** titled **Medtrum**.
+Das **Hamburger-Menü** in der oberen linken Ecke antippen und **Konfiguration**\ ➜\ **Pumpe**\ ➜\ **Medtrum**\ durch **Aktivieren** des Optionsfelds vor dem Namen **Medtrum** auswählen.
 
-Selecting the **checkbox** next to the **Settings Gear** will allow the Medtrum overview to be displayed as a tab in the AAPS interface titled **Medtrum**. Checking this box will facilitate your access to the Medtrum commands when using AAPS and is highly recommended.
+Wenn Du das **Kontrollkästchen** neben dem **Zahnrad** auswählst, wird die Medtrum-Übersicht als Registerkarte **MEDTRUM**> in der AAPS-Menüleiste sichtbar werden. Wenn Du dieses Kästchen aktivierst, hast Du beim Nutzen von AAPS einen einfachen Zugriff auf die Medtrum-Befehle und es wird deshalb sehr empfohlen.
 
 ![Konfigurations-Generator](../images/medtrum/ConfigBuilder.png)
 
-### Step 2: Change Medtrum settings
+### Schritt 2: Ändern der Medtrum-Einstellungen
 
-Enter the Medtrum settings by tapping the **Settings Gear** of the Medtrum module in the Config Builder .
+Öffne die Medtrum-Einstellungen, in dem Du unter KONFIGURATION/Pumpe das auf das **Zahnrad** neben dem Eintrag für die Medtrum tippst.
 
-![Medtrum Settings](../images/medtrum/MedtrumSettings.png)
+![Medtrum-Einstellungen](../images/medtrum/MedtrumSettings.png)
 
 #### Seriennummer:
 
-Enter the serial number of your pumpbase here as noted on the pumpbase. Make sure the serial number is correct and there are no spaces added (You can either use capital or lowercase).
+Gib die Seriennummer Deiner Pumpen-Basis so ein, wie sie dort abgebildet ist. Stell sicher, dass die Seriennummer richtig eingegeben ist und keine Leerzeichen enthält (Du kannst sowohl Groß- als auch Kleinbuchstaben verwenden).
 
-NOTE: This setting can only be changed when there is no patch active.
+HINWEIS: Diese Einstellung kann nur dann geändert werden, wenn kein Patch aktiv ist.
 
-#### Alarm settings
+#### Alarm-Einstellungen
 
-***Default: Beep.***
+***Voreingestellt: Piepton.***
 
-This setting changes the way that the pump will alert you when there is a warning or error.
+Diese Einstellung ändert die Art und Weise, wie die Pumpe Dich im Falle einer Warnung oder eines Fehlers alarmiert.
 
-- Beep > The patch will beep on alarms and warnings
-- Silent > The patch will not alert you on alarms and warnings
+- Piepton > Der Patch wird bei Alarmen oder Warnungen piepen
+- Stumm > Der Patch wird Dich nicht alarmieren und auch keine Warnungen abgeben
 
-Note: In silent mode AAPS will still sound the alarm depending on your phone's volume settings. If you do not respond to the alarm, the patch will eventually beep.
+Hinweis: Im Stumm-Modus gibt AAPS je nach Lautstärkeeinstellungen Deines Smartphones immer noch den Alarm aus. Wenn Du auf den Alarm nicht reagierst, wird der Patch irgendwann piepen.
 
-#### Notification on pump warning
+#### Notification on pump warning (Benachrichtung bei Pumpenwarnung)
 
-***Default: Enabled.***
+***Voreingestellt: Aktiviert.***
 
-This settings changes the way AAPS will show notification on non ciritical pump warnings. When enabled a Notification will be shown on the phone when a pump warning occurs, including:
-    - Low battery
-    - Low reservoir (20 Units)
-    - Patch expiration warning
+Diese Einstellungen ändern die Art und Weise, wie AAPS Benachrichtigung bei nicht kritischen Pumpenwarnungen anzeigt. Wenn die Option aktiviert ist, wird beim Auftreten einer Pumpenwarnung eine Benachrichtigung auf dem Smartphone angezeigt. Das betrifft auch:
+    - Niedriger Akkustand
+    - Reservoir fast leer (20 IE)
+    - Patch-Ablaufwarnung
 
-In either case these warnings are also shown on the Medtrum overview screen under [Active alarms](#active-alarms).
+In jedem Fall werden diese Warnungen auch auf der Medtrum-Übersichtsseite unter [Aktive Alarme](#active-alarms) angezeigt.
 
 #### Patch Ablaufdatum
 
-***Default: Enabled.***
+***Voreingestellt: Aktiviert.***
 
-This setting changes the behavior of the patch. When enabled the patch will expire after 3 days and give an audible warning if you have sound enabled. After 3 days and 8 hours the patch will stop working.
+Diese Einstellung ändert das Verhalten des Patches. Wenn aktiviert, läuft der Patch nach 3 Tagen ab und gibt, sofern die Lautstärkeeinstellungen entsprechend gesetzt sind, eine hörbare Warnung. Nach 3 Tagen und 8 Stunden wird der Patch nicht mehr funktionieren.
 
-If this setting is disabled, the patch will not warn you and will continue running until the patch battery or reservoir runs out.
+Wenn diese Einstellung deaktiviert ist, wird der Patch keine Warnung abgeben und läuft weiter, bis die Patch-Batterie oder das Reservoir leer sind.
 
-#### Pump expiry warning
+#### Pump expiry warning \[hours\] (Patch Ablaufwarnung)
 
 ***Default: 72 hours.***
 
@@ -148,7 +148,7 @@ Go to preferences and select **Local Alerts**:
 
 ##### Alarm, wenn die Pumpe nicht erreichbar ist
 
-***Default: Enabled.***
+***Voreingestellt: Aktiviert.***
 
 This setting is forced to enabled when the Medtrum driver is enabled. It will alert you when the pump is unreachable. This can happen when the pump is out of range or when the pump is not responding due to a defective patch or pumpbase, for example when water leaks between the pumpbase and the patch.
 
