@@ -62,13 +62,13 @@ Section 11) contains archived or additional documentation, including a subsectio
 切換語言 <./changelanguage.md>
 ```
 ```{toctree}
-:caption: 2) Getting started
+:caption: 2) 開始使用
 
-Introduction to AAPS <./Getting-Started/Introduction.md>
-Preparing for AAPS <preparing.md>
-Compatible pumps <./Getting-Started/Pump-Choices.md>
-Compatible CGMs <./Configuration/BG-Source.md>
-Compatible phones  <./Hardware/Phoneconfig.md>
+AAPS介紹 <./Getting-Started/Introduction.md>
+AAPS 準備 <preparing.md>
+相容幫浦  <./Getting-Started/Pump-Choices.md>
+相容CGM <./Configuration/BG-Source.md>
+相容手機  <./Hardware/Phoneconfig.md>
 ```
 
 ```{toctree}
