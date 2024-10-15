@@ -1,10 +1,10 @@
-# CGMS/FGMS Configuration
+# Configuration des MGCs/MGFs
 
 * [Généralités](../Hardware/GeneralCGMRecommendation.md)
 * [Lissage des données](../Usage/Smoothing-Blood-Glucose-Data.md)
 * [Paramètres xDrip+](./xdrip.md)
-* [Dexcom G7 and ONE+](../Hardware/DexcomG7.md)
-* [Dexcom G6 and ONE](../Hardware/DexcomG6.md)
+* [Dexcom G7 et ONE+](../Hardware/DexcomG7.md)
+* [Dexcom G6 et ONE](../Hardware/DexcomG6.md)
 * [Dexcom G5](../Hardware/DexcomG5.md)
 * [Libre 3](../Hardware/Libre3.md)
 * [Libre 2](../Hardware/Libre2.md)

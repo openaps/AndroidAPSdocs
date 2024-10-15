@@ -1,6 +1,6 @@
 # Surveillance à distance
 
-![Monitoring children](../images/KidsMonitoring.png)
+![Le suivi des enfants](../images/KidsMonitoring.png)
 
 AndroidAPS offre plusieurs options pour la surveillance à distance des enfants et permet également d'envoyer des commandes à distance. Bien sûr, vous pouvez également utiliser la surveillance à distance pour suivre votre partenaire ou votre ami.
 
