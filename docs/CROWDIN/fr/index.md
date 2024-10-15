@@ -29,14 +29,14 @@ Le chapitre 9) parle des **Options avancées d'AAPS** telles que comment passer 
 
 Dans le chapitre 10) [Comment soutenir AAPS](make-a-PR.md), nous fournissons des informations pour que vous puissiez soutenir ce projet. Vous pouvez faire un don d'argent, d'équipement ou de connaissances. Vous pouvez suggérer/apporter des modifications à la documentation vous-même, aider avec [la traduction de la documentation](translations.md) ou partager vos données via le projet Open Humans.
 
-Section 11) contains archived or additional documentation, including a subsection for [clinicians](Resources/clinician-guide-to-AndroidAPS.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. D'autres références et ressources sur le diabète et la boucle sont listées dans le chapitre 12).
+Le chapitre 11 contient de la documentation additionnelle ou archivée, dont une page pour les [professionnels de santé](Resources/clinician-guide-to-AndroidAPS.md) qui s'intéressent à la technologie du pancréas artificiel open source comme **AAPS**, ou pour les patients qui veulent partager ces informations avec leur équipe médicale. Ce sujet est également abordé dans l'introduction. D'autres références et ressources sur le diabète et la boucle sont listées dans le chapitre 12).
 
 
- ### Prêt à commencer avec **AAPS**? Read more about **AAPS** in the [Introduction](Getting-Started/Introduction.md).
+ ### Prêt à commencer avec **AAPS**? Apprenez-en plus sur **AAPS** dans l'[Introduction](Getting-Started/Introduction.md).
 
 ```{admonition} SAFETY NOTICE
 :class: AVIS DE SÉCURITÉ
-La sécurité de **AAPS** repose sur les fonctionnalités de sécurité de votre matériel (téléphone, pompe, MCG). Utilisez uniquement une pompe à insuline et un MGC approuvés par les autorités sanitaires, en bon état de fonctionnement. N'utilisez pas de pompes à insuline ni de capteurs MGC endommagés, modifiés ou fabriqués maison. Only use original consumable supplies (inserters, cannulas and insulin reservoirs) approved by the manufacturer for use with your pump and CGM. Using untested or modified supplies can cause inaccuracy and insulin dosing errors, resulting in significant risk to the user. 
+La sécurité de **AAPS** repose sur les fonctionnalités de sécurité de votre matériel (téléphone, pompe, MCG). Utilisez uniquement une pompe à insuline et un MGC approuvés par les autorités sanitaires, en bon état de fonctionnement. N'utilisez pas de pompes à insuline ni de capteurs MGC endommagés, modifiés ou fabriqués maison. Utilisez uniquement du matériel d'origine pour les consommables (applicateurs, cathéters et réservoirs d'insuline), approuvés par le fabricant de votre pompe et de votre MGC. L'utilisation de matériel non testé ou modifié peut entraîner un manque de précision et des erreurs de dosage de l'insuline, ce qui représente un risque important pour l'utilisateur. 
 
 N'utilisez pas **AAPS** si vous prenez des inhibiteurs de SGLT-2 (gliflozines), car ils font baisser la glycémie. Le risque d'acidocétose diabétique est accru à cause de la baisse de l'insuline administrée ; et celui d'hypoglycémie est accru à cause de la baisse de la glycémie. 
 ```
@@ -62,13 +62,13 @@ Toutes les informations et le code décrits ici le sont à des fins d'informatio
 Changer la langue <./changelanguage.md>
 ```
 ```{toctree}
-:caption: 2) Getting started
+:caption: 2) Démarrage
 
-Introduction to AAPS <./Getting-Started/Introduction.md>
-Preparing for AAPS <preparing.md>
-Compatible pumps <./Getting-Started/Pump-Choices.md>
-Compatible CGMs <./Configuration/BG-Source.md>
-Compatible phones  <./Hardware/Phoneconfig.md>
+Introduction aux APS et à AAPS <./Getting-Started/Introduction.md>
+Se préparer à AAPS <preparing.md>
+Pompes compatibles <./Getting-Started/Pump-Choices.md>
+MGCs compatibles <./Configuration/BG-Source.md>
+Téléphones compatibles <./Hardware/Phoneconfig.md>
 ```
 
 ```{toctree}
