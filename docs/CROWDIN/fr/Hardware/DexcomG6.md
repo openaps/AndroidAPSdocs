@@ -1,4 +1,4 @@
-# Dexcom G6 and ONE
+# Dexcom G6 et ONE
 
 ## Les bases en premier
 
