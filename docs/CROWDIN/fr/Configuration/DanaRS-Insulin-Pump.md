@@ -2,9 +2,9 @@
 
 *Ces instructions décrivent la configuration de l’application et de votre pompe si vous avez une DanaRS commercialisée depuis 2017 ou la nouvelle Dana-i. Visitez la [pompe à insuline Dana R](./DanaR-Insulin-Pump) si vous avez plutôt la pompe initiale DanaR.*
 
-**New Dana RS firmware v3 can be used from AAPS version 2.7 onwards.**
+**Le nouveau firmware Dana RS v3 peut être utilisé depuis la version 2.7 d'AAPS.**
 
-**New Dana-i can be used from AAPS version 3.0 onwards.**
+**La nouvelle Dana-i peut être utilisée depuis la version 3.0 d'AAPS.**
 
 * Sur la pompe DanaRS/i, pompe « BASAL A » est utilisé par l'application. Les données existantes se font écrasé.
 
