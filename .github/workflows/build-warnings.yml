@@ -14,10 +14,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [cs, de, el, es, fr, he, ko, lt, nl, ru, tr]
+        language: [en, cs, de, el, es, fr, he, ko, lt, nl, ru, tr]
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
 
       - name: Set up Python 3.8
         uses: actions/setup-python@v5
@@ -62,7 +62,7 @@ jobs:
       fail-fast: false
       max-parallel: 1
       matrix:
-        language: [cs, de, el, es, fr, he, ko, lt, nl, ru, tr]
+        language: [en, cs, de, el, es, fr, he, ko, lt, nl, ru, tr]
 
     steps:
       - name: Get build log
@@ -85,7 +85,7 @@ jobs:
 
       - if: ${{ always() }}
         name: Create Badge - Build warnings
-        uses: schneegans/dynamic-badges-action@v1.0.0
+        uses: schneegans/dynamic-badges-action@v1.7.0
         with:
           auth: ${{ secrets.GIST_SECRET }}
           gistID: 4d086495590ccb904468b66aecc48bdb
