@@ -71,7 +71,7 @@ If you receive a failure message like
     Note for yourself, what directory it is in.
 
   * Go to the Environment variables in windows, select the variable "PATH" and click edit. Add the directory where
-  you have found your git installation.
+    you have found your git installation.
 
   * Save and close.
 
@@ -114,7 +114,7 @@ Follow the instructions at [Gradle Resync](gradle-resync).
 ![Incompatible Gradle JVM](../images/studioTroubleshooting/160_InkompatibelAndroidGradleJVM.png)
   If you experience the following error message, you need to download a correct JVM version before you can try again:
 * Open the gradle view by clicking on the elephant (1) on the right side of Android Studio and open the settings (2) and select **Gradle Settings** (3):
- 
+
 ![Open Gradle Settings](../images/studioTroubleshooting/161_GradleSettings.png)
 
 * Open the **Gradle JDK** options, then select **Download JDK...**
@@ -132,9 +132,9 @@ Follow the instructions at [Gradle Resync](gradle-resync).
 ### Incompatible version of Android Gradle plugin
 
   If you experience the following error message
-  
+
   ![Incompatible version of Android Gradle plugin](../images/studioTroubleshooting/15_InkompatibelAndroidGradlePlugin.png)
-  
+
   You are using an outdated version of Android Studio. 
   In the menu, go to Help > Check for updates and install any updates of Android Studio and its plugins that are found.
 
@@ -143,7 +143,7 @@ Follow the instructions at [Gradle Resync](gradle-resync).
 
   You might get this error message:
 
-    ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
+![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
   * On the right side, open the Gradle tab (1).
 
