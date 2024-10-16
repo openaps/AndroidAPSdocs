@@ -138,7 +138,7 @@ Gradle 同步可能由於各種原因失敗。 當你收到訊息提示 gradle �
 
   你可能會收到此錯誤訊息：
 
-    ![無法解析... 無緩存版本](../images/studioTroubleshooting/08_NoCachedVersion.png)
+![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
   * 在右側，打開 Gradle 標籤 (1)。
 
