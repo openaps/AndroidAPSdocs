@@ -12,27 +12,27 @@ Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not 
 **Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
 ```
 
-## 1.  Gepatchte Dexcom G7 App (DiAKEM)
+## 1.  Patched Dexcom G7 App (DiaKEM)
 
 **Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
 
 ### Installiere eine neue gepatchte (!) G7-App und starte den Sensor
 
-A patched Dexcom G7 app (DiAKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
-Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
+- Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
 
-Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
+- Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases) or [here](https://github.com/emmatovar27/dexcom-g7-apk-patcher/releases).
 
-Enter sensor code in the patched app.
+- Enter sensor code in the patched app.
 
-Follow the general recommendations for CGM hygiene and sensor placement found [here](../Hardware/GeneralCGMRecommendation.md).
+- Follow the general recommendations for CGM hygiene and sensor placement found [here](../Hardware/GeneralCGMRecommendation.md).
 
-After the warm-up phase, the values are displayed as usual in the G7 app.
+- After the warm-up phase, the values are displayed as usual in the G7 app.
+
 
 ### Konfiguration in AAPS
 
-For the configuration in AAPS
 - Wähle 'BYODA' in der [Konfiguration als BZ-Quelle](../Configuration/Config-Builder.md#bg-source) (auch wenn es nicht die gepatchte G7-App ist!)
 
 - Sollte AAPS keine Werte empfangen, wechsel auf eine andere BZ-Quelle und dann wieder zurück auf 'BYODA'. Damit löst Du Berechtigungsabfrage zum Datenaustausch zwischen AAPS und BYODA aus.
