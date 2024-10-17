@@ -10,7 +10,7 @@ This documentation explains how to setup and use **AAPS**. You can navigate thro
 
 Section 2) "Getting Started", the [Introduction](Getting-Started/Introduction.md) explains the general concept of what an artificial pancreas system (APS) is designed to do. It outlines the background of looping in general, why **AAPS** was developed, compares **AAPS** to other systems, and addresses safety. It gives suggestions about how to talk to your clinical team about **AAPS**, explains why you need to build the **AAPS** app yourself rather than just downloading it, and gives an overview of the typical connectivity of an **AAPS** system. It also addresses accessibility, and who is likely to benefit from **AAPS**.
 
-[Preparing for AAPS](preparing.md) gives more detail about safety considerations, and the phones, CGMs (Continuous Glucose Monitors) and insulin pumps which are compatible with **AAPS**. It gives an overview of the process you will go through, and provides an approximate timeline for gaining full functionality of **AAPS**. This section gets you technically prepared to assemble your **AAPS** setup as quickly and efficiently as possible. The subsection [CGM Configuration](Configuration/BG-Source.md) explains how to optimse CGM setup and what smoothing options are best. 
+[Preparing for AAPS](./Getting-Started/PreparingForAaps.md) gives more detail about safety considerations, and the phones, CGMs (Continuous Glucose Monitors) and insulin pumps which are compatible with **AAPS**. It gives an overview of the process you will go through, and provides an approximate timeline for gaining full functionality of **AAPS**. This section gets you technically prepared to assemble your **AAPS** setup as quickly and efficiently as possible. The subsection [CGM Configuration](./Getting-Started/CompatiblesCgms.md) explains how to optimse CGM setup and what smoothing options are best. 
 
 Now that you have a solid understanding of the process, you can start assembling your **AAPS** loop. Section **3) Setting up AAPS** contains step-by-step instructions to do this. It covers choosing and [setting up your reporting server](Installing-AndroidAPS/setting-up-the-reporting-server.md) (Nightscout or Tidepool) so you can review and share your data, getting your computer ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone. It also covers setting up the **AAPS** app using the setup Wizard, linking it with your CGM app, and either a real or virtual insulin pump, as well as linking **AAPS** to your reporting server. 
 You are then slowly introduced to the full usage of what **AAPS** has to offer via a safe and carefully calibrated step-by-step process designed to make sure that you/your child are thoroughly familiar and comfortable navigating all the different levels and menu configurations before graduating on the next phase, commonly referred to as the next "Objective", until you are have enough experience to begin using the more advanced options available within the app. 
@@ -61,16 +61,16 @@ Do not use **AAPS** if you take SGLT-2 inhibitors (gliflozins), as they lower bl
 ```{toctree}
 :caption: 1) Change language
 
-Change language <./changelanguage.md>
+Change language <./ChangeLanguage/ChangeLanguage.md>
 ```
 ```{toctree}
 :caption: 2) Getting started
 
 Introduction to AAPS <./Getting-Started/Introduction.md>
-Preparing for AAPS <preparing.md>
-Compatible pumps <./Getting-Started/Pump-Choices.md>
-Compatible CGMs <./Configuration/BG-Source.md>
-Compatible phones  <./Hardware/Phoneconfig.md>
+Preparing for AAPS <./Getting-Started/PreparingForAaps.md>
+Compatible pumps <./Getting-Started/CompatiblePumps.md>
+Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
+Compatible phones  <./Getting-Started/Phones.md>
 ```
 
 ```{toctree}
@@ -146,13 +146,10 @@ Help! My AAPS phone is broken/stolen/lost
 Glossary <./Getting-Started/Glossary.md>
 AAPS Screens <./Getting-Started/Screenshots.md>
 Your AAPS profile 
-Compatible pumps <./Getting-Started/Pump-Choices.md>
 Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
-Compatible CGMs <./Configuration/BG-Source.md>
-Compatible phones  <./Hardware/Phoneconfig.md>
 Operation of Wear AAPS on a Smartwatch <./Configuration/Watchfaces.md>
 How to customise your AAPS watchface <./Usage/Custom_Watchface_Reference.md>
-xDrip Settings <./Configuration/xdrip.md>
+xDrip Settings <./CompatibleCgms/xDrip.md>
 Autotune <./Usage/autotune.md>
 
 ```
