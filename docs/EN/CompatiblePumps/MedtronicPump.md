@@ -48,7 +48,7 @@ When configuring your Medtronic pump with the setup wizard it is possible that y
 While setting up AAPS to work with your medtronic pump you need to set following items: (see picture above)
 - **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alpabetic characters (e.g. 123456).
 - **Pump Type**: The model pump you are using (e.g. 522). 
-- **Pump Frequency**: There are two options based on where your pump was originally distributed.  Please check the [FAQ](MedtronicPump-faq) if you are unsure which option to select):
+- **Pump Frequency**: There are two options based on where your pump was originally distributed.  Please check the [FAQ](#faq) if you are unsure which option to select):
     - for US & Canada, frequency used is 916 Mhz
     - for Worldwide, frequency used is 868 Mhz
 - **Max Basal on Pump (U/h)**: This needs to match the setting set on your pump (see Configuration of the pump above).  Again this setting must be carefully selected as it will determine how much AAPS can deliver via your basal rate.  This will effectively set the maximum temporary basal rate.  As an example, setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
@@ -85,8 +85,8 @@ When AAPS is configured to use a Medtronic pump a MDT tab will be shown in the l
 
 At the bottom of the screen there are three buttons:
 - **Refresh** is for refreshing the current status of the pump. This should only be used if the connection was lost for a sustained period as this will require a full data refresh (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pump History**: Shows pump history (see [below](MedtronicPump-pump-history))
-- **RL Stats**: Show RL Stats (see [below](MedtronicPump-rl-status-rileylink-status))
+- **Pump History**: Shows pump history (see [below](#pump-history))
+- **RL Stats**: Show RL Stats (see [below](#rl-status-rileylink-status))
 
 (MedtronicPump-pump-history)=
 ## Pump History

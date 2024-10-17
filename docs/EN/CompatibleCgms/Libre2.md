@@ -4,11 +4,11 @@ The Freestyle Libre 2 sensor is now a real CGM even with the official app. Still
 
 ## 1. Use a Bluetooth bridge and OOP
 
-Bluetooth transmitters can be used with the Libre 2 (EU) and an [out of process algorithm](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) app. You can receive blood sugar readings every 5 minutes like with the [Libre 1](../Libre1). 
+Bluetooth transmitters can be used with the Libre 2 (EU) and an [out of process algorithm](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) app. You can receive blood sugar readings every 5 minutes like with the [Libre 1](./Libre1.md). 
 
 Check the bridge and app you want to use are compatible with your sensor and xDrip+ (older Blucon and recent ones won't work, Miaomiao 1 needs firmware 39 and Miaomiao 2 firmware 7).
 
-The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre 2 do a 10 to 25 minutes smoothing to avoid certain jumps. See below [Value smoothing & raw values](#value-smoothing-raw-values). OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
+The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre 2 do a 10 to 25 minutes smoothing to avoid certain jumps. See below [Value smoothing & raw values](#value-smoothing--raw-values). OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
 
 There are some good reasons to use a Bluetooth transmitter:
 
@@ -32,7 +32,7 @@ xDrip+ doesn't support direct connection to Libre 2 US and AUS.
 ```
 
 - Follow [these instructions](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) to setup xDrip+ but make sure to download [this latest OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view) as the one in the document is obsolete.
-- Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
+- Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
 
 -   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
 
@@ -203,8 +203,8 @@ be done.
 The blood sugar values are received on the smartphone by the xDrip+ App.
 
 -   You can safely download the [latest APK (stable)](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) unless you need recent features, in which case you should use the latest [Nightly Snapshot](https://github.com/NightscoutFoundation/xDrip/releases).
--   Set xDrip+ with the [patched app data source](../Configuration/xdrip.md#lbre-2-patched-app).
--   Follow setup instructions on [xDrip+ settings page](../Configuration/xdrip.md).
+-   Set xDrip+ with the [patched app data source](../CompatibleCgms/xDrip.md#libre-2-patched-app).
+-   Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
 
 ### Step 4: Start sensor
 
@@ -232,7 +232,7 @@ activation and make a new initial calibration.
 
 -   If AAPS does not receive BG values when phone is in airplane
     mode, use 'Identify receiver' as describe on [xDrip+ settings
-    page](xdrip-identify-receiver).
+    page](./xDrip.md#identify-receiver).
 
 Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB
 always’ and ‘Enable SMB after carbs’ within SMB algorithm. The BG values
