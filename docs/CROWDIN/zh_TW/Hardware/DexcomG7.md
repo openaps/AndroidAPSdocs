@@ -12,27 +12,27 @@
 **指數平滑** **必須** 啟用，以便有效使用 G7 / ONE+ 值。  
 ```
 
-## 1.  修補版 Dexcom G7 應用程式 (DiAKEM)
+## 1.  修補版 Dexcom G7 應用程式 (DiaKEM)
 
 **注意：需要 AAPS 3.2.0.0 或更高版本！ 不適用於 ONE+。**
 
 ### 安裝新的修補版 G7 應用程式並啟動傳感器
 
-修補版 Dexcom G7 應用程式 (DiAKEM) 可查看 Dexcom G7 資料。 這不是 BYODA 應用程式，因為該應用程式目前無法接收 G7 資料。
+修補版 Dexcom G7 應用程式 (DiaKEM) 可查看 Dexcom G7 資料。 這不是 BYODA 應用程式，因為該應用程式目前無法接收 G7 資料。
 
-如果之前有使用過原Dexcom應用程式，請將其解除安裝（如果傳感器正在運作，可以繼續使用傳感器，請在移除應用程式前記下傳感器代碼！）
+- 如果之前有使用過原Dexcom應用程式，請將其解除安裝（如果傳感器正在運作，可以繼續使用傳感器，請在移除應用程式前記下傳感器代碼！）
 
-從 [這裡](https://github.com/authorgambel/g7/releases)下載並安裝修補版.apk。
+- 從 [這裡](https://github.com/authorgambel/g7/releases)或[這裡](https://github.com/emmatovar27/dexcom-g7-apk-patcher/releases)下載並安裝修補版.apk。
 
-在修補版應用程式中輸入傳感器代碼。
+- 在修補版應用程式中輸入傳感器代碼。
 
-請遵循一般 CGM 衛生規範和感測器安裝位置的建議，詳情請參閱[此處](../Hardware/GeneralCGMRecommendation.md)。
+- 請遵循一般 CGM 衛生規範和感測器安裝位置的建議，詳情請參閱[此處](../Hardware/GeneralCGMRecommendation.md)。
 
-預熱階段結束後，資料會照常顯示在 G7 應用程式中。
+- 浸潤階段結束後，資料會顯示在 G7 應用程式中。
+
 
 ### 在 AAPS 中進行配置
 
-AAPS 中的配置步驟
 - 在 [ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source) 中選擇 'BYODA' - 即便這不是 BYODA 應用程式！
 
 - 如果 AAPS 無法接收任何資料，請切換到其他血糖來源，然後再切回 'BYODA' 以調用查詢以批准 AAPS 和 BYODA 之間的資料交換。

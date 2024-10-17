@@ -56,7 +56,7 @@ On the top-left hand corner **hamburger menu** select **Config Builder**\ ➜\ *
 
 Selecting the **checkbox** next to the **Settings Gear** will allow the Medtrum overview to be displayed as a tab in the AAPS interface titled **Medtrum**. Checking this box will facilitate your access to the Medtrum commands when using AAPS and is highly recommended.
 
-![Générateur de configuration](../images/medtrum/ConfigBuilder.png)
+![Configuration](../images/medtrum/ConfigBuilder.png)
 
 ### Step 2: Change Medtrum settings
 

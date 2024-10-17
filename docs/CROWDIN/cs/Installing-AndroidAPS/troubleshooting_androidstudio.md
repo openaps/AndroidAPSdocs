@@ -138,7 +138,7 @@ Follow the instructions at [Gradle Resync](gradle-resync).
 
   You might get this error message:
 
-    ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
+![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
   * Zkopírujte ‘git checkout --’ do schránky (bez uvozovek)
 

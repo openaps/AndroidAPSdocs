@@ -12,27 +12,27 @@ Noteworthy is the fact that the G7 and ONE+ systems, compared to the G6, do not 
 **Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 / ONE+ values.  
 ```
 
-## 1.  Patched Dexcom G7 App (DiAKEM)
+## 1.  Patched Dexcom G7 App (DiaKEM)
 
 **Note: AAPS 3.2.0.0 or higher is required! Not available for ONE+.**
 
 ### Installez la nouvelle application G7 patchée et démarrez le capteur
 
-A patched Dexcom G7 app (DiAKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+A patched Dexcom G7 app (DiaKEM) gives access to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
-Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
+- Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
 
-Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
+- Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases) or [here](https://github.com/emmatovar27/dexcom-g7-apk-patcher/releases).
 
-Enter sensor code in the patched app.
+- Enter sensor code in the patched app.
 
-Follow the general recommendations for CGM hygiene and sensor placement found [here](../Hardware/GeneralCGMRecommendation.md).
+- Follow the general recommendations for CGM hygiene and sensor placement found [here](../Hardware/GeneralCGMRecommendation.md).
 
-After the warm-up phase, the values are displayed as usual in the G7 app.
+- After the warm-up phase, the values are displayed as usual in the G7 app.
+
 
 ### Configuration in AAPS
 
-For the configuration in AAPS
 - Select 'BYODA' in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source) - even if it is not the BYODA app!
 
 - If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
