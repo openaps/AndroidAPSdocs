@@ -8,7 +8,7 @@
 
 - משאבת Accu-Check Combo של חברת Roche (אין חשיבות לגרסת ה-firmware, כולן עובדות היטב)
 - מכשיר Smartpix או Realtyme עם תוכנת 360 Configuration לקביעת הגדרות המשאבה. (חברת Roche שולחת מכשיר Smartpix ותוכנה ללקוחותיה לפי דרישה.)
-- מכשיר טלפון סלולרי מתאים: טלפון אנדרואיד עם מערכת הפעלה LineageOS 14.1 (לשעבר CyanogenMod) או מערכת הפעלה Android 8.1 Oreo. As of AAPS 3.0 Android 9 is mandatory. ראו [הערות פרסום](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Releasenotes.html#android-version-and-aaps-version) לפרטים.
+- מכשיר טלפון סלולרי מתאים: טלפון אנדרואיד עם מערכת הפעלה LineageOS 14.1 (לשעבר CyanogenMod) או מערכת הפעלה Android 8.1 Oreo. As of AAPS 3.0 Android 9 is mandatory. See [release notes](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version) for details.
 - במידה ונעשה שימוש ב-LineageOS 14.1 יש לוודא גרסת יוני 2017 או מאוחרת יותר, מאחר ושילוב משאבת Combo לבלוטוס נכלל ממעוד זה. 
 - רשימת מכשירי טלפון ניתן למצוא כאן: [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
 - יש לשים לב - זו אינה רשימת טלפונים תואמים מלאה והיא כוללת התרשמות וחוו"ד שהועלו ע"י משתמשים. לאחר צבירת נסיון, חשוב להעלות את המסקנות והתובנות לגבי המכשיר שלך לטובת המשתמשים הבאים (הפרוייקט הזה ושכמותו נבנה ונסמך על רצון ונכונות המשתמשים "להעביר את זה הלאה").
