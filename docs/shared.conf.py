@@ -151,7 +151,7 @@ html_context = {
 """
 html_theme = 'default'
 html_theme_options = {
-  'display_github': True,
+  'display_github': False,
   'github_user': 'openaps',
   'github_repo': 'AndroidAPSdocs',
   'navigation_depth': 6,
