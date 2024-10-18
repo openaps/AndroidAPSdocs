@@ -26,7 +26,7 @@ Hier finden sich die Spezifikationen für den **Omnipod DASH** und die Unterschi
    -  Nicht alle Telefone und Android-Versionen werden sicher funktionieren. Bitte überprüfe die [**DASH getesteten Telefone**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) oder teste einfach mit Deinem Telefon und teile das Ergebnis (Telefonversion und geographische Region, Android-Version, funktioniert / einige Schwierigkeiten / funktioniert nicht).
    - **Wichtiger Hinweis: Es gab mehrere Fälle von dauerhaften, nicht wiederherstellbaren Verbindungsverlusten bei der Verwendung älterer Pods mit Firmware Version 3.XX.X. Nutze diesen alten Pods mit AAPS bitte mit Vorsicht. Insbesondere dann, wenn Dein Smartphone mit anderen Bluetooth-Geräten gekoppelt ist!** Der AAPS Omnipod DASH-Treiber baut bei jedem Senden eines Befehls eine Bluetooth-Verbindung zum DASH Pod via Bluetooth auf und beendet diese Verbindung unmittelbar danach wieder. Die Bluetooth-Verbindungen können durch andere Geräte gestört werden, die mit dem Telefon verbunden sind, auf dem AAPS läuft, wie Earbuds etc... (was in seltenen Fällen zu Verbindungsproblemen oder Pod-Fehlern bei der Aktivierung oder danach bei einigen Telefonmodellen führen kann).
    -  **AAPS Version 3.0 (oder neuer)**, wie im Abschnitt[ **Build APK**](../Installing-AndroidAPS/Building-APK.md) beschrieben, erstellt und auf dem Smartphone installiert.
-* [**Kontinuierliche Glukosemessung (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
+* [**Kontinuierliche Glukosemessung (CGM)**](../Configuration/BG-Source.md)
 
 Diese Anleitung geht davon aus, dass Du einen neuen DASH Pod startest. Falls dies nicht der Fall ist, habe bitte Geduld und beginne diesen Prozess erst bei Deinem nächsten Starten eines neuen Pods.
 
@@ -134,7 +134,7 @@ Stelle sicher, dass der neue Pod und das Smartphone, auf dem AAPS läuft, in der
 
 ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-Es ist zu empfehlen, NACH der Aktivierung des Pods die Einstellungen zu exportieren. Dies solltest Du nach jedem Podwechsel und einmal monatlich tun. Kopiere die Exportdatei an einen sicheren Ort (z. B. in der Cloud). Siehe [**Einstellungen exportieren**](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
+Es ist zu empfehlen, NACH der Aktivierung des Pods die Einstellungen zu exportieren. Dies solltest Du nach jedem Podwechsel und einmal monatlich tun. Kopiere die Exportdatei an einen sicheren Ort (z. B. in der Cloud). see [**Export settings Doc**](../Usage/ExportImportSettings.md).
 
 
 (OmnipodDASH-deactivate-pod)=
