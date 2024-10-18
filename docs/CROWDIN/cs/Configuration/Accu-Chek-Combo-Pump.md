@@ -8,7 +8,7 @@
 
 - Roche Accu-Chek Combo (jakýkoli firmware, všechny fungují)
 - Zařízení Smartpix nebo Realtyme spolu s 360 konfiguračním softwarem pro nastavení pumpy. (Roche poskytuje zařízením Smartpix a konfigurační software zdarma svým zákazníkům na vyžádání.)
-- Kompatibilní telefon: Android telefon s verzí LineageOS 14.1 (dříve CyanogenMod) nebo alespoň Android 8.1 (Oreo). Od verze AAPS 3.0 je Android 9 povinný. Podívejte se na [poznámky k vydání](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Releasenotes.html#android-version-and-aaps-version) pro podrobnosti.
+- Kompatibilní telefon: Android telefon s verzí LineageOS 14.1 (dříve CyanogenMod) nebo alespoň Android 8.1 (Oreo). Od verze AAPS 3.0 je Android 9 povinný. See [release notes](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version) for details.
 - S verzí LineageOS 14.1 musí být aktuální verze alespoň z června 2017, protože změna potřebná k párování Combo pumpy byla zavedena až tehdy. 
 - Seznam telefonů lze nalézt v dokumentu [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
 - Uvědomte si, že toto není úplný seznam a odráží osobní zkušenosti uživatelů. Doporučuje se také sdílet své zkušenosti a pomáhat tak ostatním (tyto projekty jsou o tom, jak si navzájem pomáhat).
