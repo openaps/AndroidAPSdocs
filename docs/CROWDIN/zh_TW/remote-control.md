@@ -308,7 +308,7 @@ _請注意，**NSClient** 已被 **AAPSClient** 取代，適用於 AAPS 3.2 及�
 
 ### 同步設置 - AAPSClient 和 AAPS 配置（適用於 3.2.0.0 版本以上）
 
-當追蹤者手機上安裝了 __AAPSClient__ apk，用戶必須確保在 "組態建置工具" 中的“偏好設定”已正確設置並與 __AAPS__ 的 Nightscout 15 對齊（請參閱發佈說明 [此處](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Update-to-new-version.html)）。 以下範例提供了使用 Nightscout 15 的 NSClient 和 NSClientV3 的同步指南，但 __AAPS__ 也有其他選項（例如 xDrip+）。
+Once __AAPSClient__ apk is installed on the follower phone, the user must ensure their ‘Preferences’ in Config Builder are correctly set up and aligned with __AAPS__ for Nightscout 15 (see Release Notes [here](./Installing-AndroidAPS/Update-to-new-version.md)). 以下範例提供了使用 Nightscout 15 的 NSClient 和 NSClientV3 的同步指南，但 __AAPS__ 也有其他選項（例如 xDrip+）。
 
 在“Config Builder”的“同步設置”中，用戶可以選擇 __AAPS__ 和追蹤者手機的同步選項：
 
@@ -527,7 +527,7 @@ b) 使用者希望避免輸入驗證碼（追蹤者手機需要在輸入資料�
 
 智慧型手錶需要運作 **Android wear** 軟體（最好是 10 或更新版本）才能控制 **AAPS**。 請檢查手錶的技術規格，並查看[相容手錶的表格](link)。 如果不確定，請在 **AAPS** 的 Facebook/Discord 群組中搜尋或詢問。
 
-以下是設置流行型號 Samsung Galaxy Watch 4（40 毫米）的具體操作指南。 Garmin 手錶也是一個受歡迎的選擇，請參閱[這裡](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)。 如果你有設置其他智慧型手錶的經驗，並且認為這對其他用戶有幫助，請[編輯文件](https://androidaps.readthedocs.io/en/latest/make-a-PR.html)，將你的發現分享給更廣泛的 **AAPS** 社群。
+以下是設置流行型號 Samsung Galaxy Watch 4（40 毫米）的具體操作指南。 Garmin 手錶也是一個受歡迎的選擇，請參閱[這裡](https://apps.garmin.com/en-US/apps/a2eebcac-d18a-4227-a143-cd333cf89b55?fbclid=IwAR0k3w3oes-OHgFdPO-cGCuTSIpqFJejHG-klBTm_rmyEJo6gdArw8Nl4Zc#0)。 If you have experience of setting up a different smartwatch which you think would be useful to others, please add it into these pages [edit the documentation](../make-a-PR.md) to share your findings with the wider **AAPS** community.
 
 #### AAPS Wear apk
 
@@ -750,7 +750,7 @@ Wear Installer 2 由 [Malcolm Bryant](https://www.youtube.com/@Freepoc) 開發�
 
 #### Sony 智慧型手錶設置問題排除
 
-雖然 Sony 智慧型手錶 SW 3 已於幾年前停產，但如果你正在使用此型號，請參閱[Sony 智慧型手錶 SW 3 問題排除指南](https://androidaps.readthedocs.io/en/latest/Usage/SonySW3.html)。
+Although it was discontinued a few years ago, if you are using a Sony Smartwatch SW 3 please see here for a troubleshooting guide: [Troubleshooting Sony Smartwatch SW 3](./Usage/SonySW3.md)
 
 
 

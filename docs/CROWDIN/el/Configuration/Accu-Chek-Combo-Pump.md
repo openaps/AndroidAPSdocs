@@ -8,7 +8,7 @@
 
 - Μία αντλία Roche Accu-Check Combo (οποιοδήποτε λογισμικό, όλα είναι συμβατά)
 - Μια συσκευή Smartpix ή Realtyme μαζί με το λογισμικό 360 Configuration Software για τη ρύθμιση της αντλίας. (Η Roche αποστέλλει τις συσκευές Smartpix και το λογισμικό για τη ρύθμιση δωρεάν στους πελάτες της κατόπιν αιτήματος.)
-- Ένα συμβατό τηλέφωνο: Ένα κινητό τηλέφωνο Android με τηλέφωνο που χρησιμοποιεί το LineageOS 14.1 (πρώην CyanogenMod) ή τουλάχιστον το Android 8.1 (Oreo). As of AAPS 3.0 Android 9 is mandatory. Δείτε [τις σημειώσεις έκδοσης ](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Releasenotes.html#android-version-and-aaps-version) για λεπτομέρειες.
+- Ένα συμβατό τηλέφωνο: Ένα κινητό τηλέφωνο Android με τηλέφωνο που χρησιμοποιεί το LineageOS 14.1 (πρώην CyanogenMod) ή τουλάχιστον το Android 8.1 (Oreo). As of AAPS 3.0 Android 9 is mandatory. See [release notes](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version) for details.
 - Με το LineageOS 14.1 πρέπει να είναι μια πρόσφατη έκδοση, τουλάχιστον από τον Ιούνιο του 2017, καθώς η αλλαγή που είναι απαραίτητη για να συνδεθεί η αντλία Combo έγινε εκείνη τη χρονική περίοδο. 
 - Μια λίστα τηλεφώνων μπορεί να βρεθεί στα έγγραφα [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
 - Παρακαλώ προσέξτε ότι η λίστα δεν είναι ολοκληρωμένη και έχει φτιαχτεί από την προσωπική εμπειρία άλλων χρηστών. Σας ενθαρρύνουμε επίσης να εισαγάγετε και εσείς την εμπειρία σας και, συνεπώς, να βοηθήσετε άλλους (αυτά τα προγράμματα προχωρούν με τη συνδρομή όλων).

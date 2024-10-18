@@ -26,7 +26,7 @@
 Ένα smartwatch μπορεί να είναι ένα πολύ χρήσιμο εργαλείο για τη διαχείριση του AAPS με παιδιά. Μερικές διαφορετικές ρυθμίσεις είναι δυνατές:
 
 - If AAPSClient is installed on the parents phone, the [AAPSClient WearOS app](https://github.com/nightscout/AndroidAPS/releases/) can be installed on a compatible smartwatch connected to the parent's phone. Αυτό θα εμφανίσει την τρέχουσα γλυκόζη αίματος, την κατάσταση του συστήματος και θα επιτρέψει την καταχώρηση υδατανθράκων, προσωρινών στόχων και τις αλλαγές προφίλ. ΔΕΝ θα επιτρέψει γευματική δόση ινσουλίνης από την εφαρμογή WearOS.
-- Εναλλακτικά, η εφαρμογή [AAPS WearOS](https://androidaps.readthedocs.io/en/latest/Configuration/Watchfaces.html) μπορεί να κατασκευαστεί και να εγκατασταθεί σε ένα συμβατό smartwatch που είναι συνδεδεμένο στο τηλέφωνο του παιδιού, αλλά φοριέται από τον γονέα. Σε αυτό περιλαμβάνονται όλες οι λειτουργίες που αναφέρονται παραπάνω, καθώς και η ικανότητα για γευματική δόση ινσουλίνης. Αυτό επιτρέπει στο γονέα να χορηγήσει ινσουλίνη χωρίς να χρειάζεται να πάρει το τηλέφωνο από πάνω από το παιδί.
+- Alternatively, the [AAPS WearOS app](../Configuration/Watchfaces.md) can be built and installed on a compatible smartwatch, connected to the kid's phone but worn by the parent. Σε αυτό περιλαμβάνονται όλες οι λειτουργίες που αναφέρονται παραπάνω, καθώς και η ικανότητα για γευματική δόση ινσουλίνης. Αυτό επιτρέπει στο γονέα να χορηγήσει ινσουλίνη χωρίς να χρειάζεται να πάρει το τηλέφωνο από πάνω από το παιδί.
 
 ## Πράγματα που πρέπει να σκεφτείτε
 

@@ -44,11 +44,11 @@ _If you are updating AAPS using an APK built with the same keystore you should n
 
 If you are updating AAPS after you lost or replaced your original keystore (i.e. using a new build computer without transferring the keystore), ensure that you back-up all settings per the above and then uninstall the existing version of AAPS on your phone.
 
-If needed, setup your CGM/BG source receiver prior to the steps listed below (link: https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
+If needed, [setup your CGM/BG source receiver](../Configuration/BG-Source.md) prior to the steps listed below
 
 _Omnipod users:_ importing a preferences file will deactivate your current pod if those preferences were exported during a different active pod session.
 
-1 - Using the back-up copy of your APK from above, follow the instructions for a new installation[ (link: https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Transferring-and-installing-AAPS.html)](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Transferring-and-installing-AAPS.html)
+1 - Using the back-up copy of your APK from above, follow the instructions for a [new installation](../Installing-AndroidAPS/Transferring-and-installing-AAPS.md)
 
 2 - Launch AAPS and allow any requested permissions
 

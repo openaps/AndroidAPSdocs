@@ -26,7 +26,7 @@ AndroidAPS offre plusieurs options pour la surveillance à distance des enfants 
 Une montre peut être un outil très utile pour aider à gérer AAPS avec les enfants. Plusieurs configurations différentes sont possibles:
 
 - Si AAPSClient est installé sur le téléphone des parents, l'application [AAPSClient WearOS](https://github.com/nightscout/AndroidAPS/releases/) peut être installée sur une montre compatible connectée au téléphone des parents. Ceci affichera l'état actuel de la glycémie, le statut de la boucle et autorisera l'entrée des glucides, des cibles temporaires et des changements de profil. Cela n'autorisera pas les bolus depuis l'application WearOS.
-- Alternativement, l'application [AAPS WearOS](https://androidaps.readthedocs.io/en/latest/Configuration/Watchfaces.html) peut être construite et installée sur une montre compatible et connectée au téléphone de l'enfant mais portée par le parent. Cela inclut toutes les fonctions listées ci-dessus, ainsi que la capacité d'injecter un bolus. Cela permettra au parent d'injecter un bolus sans utiliser le téléphone de l'enfant, pas toujours facilement accessible.
+- Alternatively, the [AAPS WearOS app](../Configuration/Watchfaces.md) can be built and installed on a compatible smartwatch, connected to the kid's phone but worn by the parent. Cela inclut toutes les fonctions listées ci-dessus, ainsi que la capacité d'injecter un bolus. Cela permettra au parent d'injecter un bolus sans utiliser le téléphone de l'enfant, pas toujours facilement accessible.
 
 ## Points à considérer
 
