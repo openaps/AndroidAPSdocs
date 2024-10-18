@@ -44,11 +44,11 @@ _Wenn Du AAPS mit einer APK aktualisieren möchtest, die mit demselben Keystore 
 
 Solltest Du AAPS aktualisieren nachdem Du Deinen ursprünglichen Keystore in der Zwischenzeit verloren oder ersetzt hast (z.B. einen neuen Computer für die Erstellung genutzt hast ohne den Keystore übertragen zu haben), ist es wichtig, dass Du die Einstellungen wie oben beschrieben sicherst und dann die bestehende AAPS-Version von Deinem Samartphone deinstallierst.
 
-Wenn erforderlich, richte Deine CGM/Blutzucker-Quelle ein bevor Du mit den Schritten unten beginnst (link: https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
+If needed, [setup your CGM/BG source receiver](../Configuration/BG-Source.md) prior to the steps listed below
 
 _Omnipod-Nutzende:_ Wenn die Einstellungen während einer früheren Pod-Session exportiert wurden, deaktiviert das Importieren einer Einstellungsdatei den jetzt laufenden Pod.
 
-1 - Nutzt Du das oben beschriebene Backup Deiner APK, dann befolge die Anweisungen wie für eine Neuinstallation[ (link: https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Transferring-and-installing-AAPS.html)](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Transferring-and-installing-AAPS.html)
+1 - Using the back-up copy of your APK from above, follow the instructions for a [new installation](../Installing-AndroidAPS/Transferring-and-installing-AAPS.md)
 
 2 - Starte AAPS und erteile alle angeforderten Berechtigungen
 
