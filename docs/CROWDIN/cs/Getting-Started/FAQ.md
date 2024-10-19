@@ -6,7 +6,7 @@ Jak sem přidat další otázky: Postupujte podle těchto pokynů: [odkaz](../ma
 
 ## Mohu si prostě stáhnout instalační soubor AAPS?
 
-Ne. APK soubor obsahující AAPS volně ke stažení neexistuje. Musíte si jej sami [sestavit](../Installing-AndroidAPS/Building-APK.md). Zde je odůvodnění:
+Ne. APK soubor obsahující AAPS volně ke stažení neexistuje. You have to [build](../Installing-AndroidAPS/building-AAPS.md) it yourself. Zde je odůvodnění:
 
 AAPS je určen k ovládání Vaší pumpy a podávání inzulinu. Podle současných předpisů jsou v Evropě všechny systémy klasifikované zdravotnickými zařízeními jako IIa nebo IIb, vyžadují regulační schválení (označení CE) a potřebují různé studie a schválení. Distribuce neregulovaných zařízení je nezákonná. Podobná nařízení platí také v ostatních částech světa.
 
@@ -20,9 +20,9 @@ Proto nejsou soubory APK k dispozici.
 
 Za prvé, musíte si **opatřit kompatibilní hardwarové komponenty**:
 
-- podporovanou [inzulínovou pumpu](./Pump-Choices.md) 
-- [chytrý telefon s operačním systémem Android ](Phones.md) (Apple iOS není podporován AAPS - v případě zájmu se podívejte na [iOS Loop](https://loopkit.github.io/loopdocs/)) a
-- [systém pro kontinuální monitorování glykémie](../Configuration/BG-Source.md). 
+- A [supported insulin pump](../Getting-Started/CompatiblePumps.md), 
+- an [Android smartphone](../CompatiblePhones/ListOfTestedPhones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
+- a [continuous glucose monitoring system](../Getting-Started/CompatiblesCgms.md). 
 
 Za druhé, musíte **nastavit hardware**. Viz [příklad nastavení s podrobným návodem](Sample-Setup.md).
 
@@ -46,7 +46,7 @@ Pokud máte v úmyslu používat Android wear aplikaci pro posílání bolusů n
 
 Pokud odpojujete inz. pumpu z důvodu sprchování, koupání, plavání, sportu nebo jiných aktivit, musíte AAPS informovat o přerušení dávkování inzulinu, aby IOB bylo vypočítáno správně.
 
-Pumpa může být odpojena použitím funkce pod tlačítkem Stav smyčky na [domovské obrazovce AAPS](Screenshots-loop-status).
+The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](../Getting-Started/Screenshots.md#loop-status).
 
 ### Doporučení nejsou založena pouze na jediné hodnotě ze senzoru CGM
 
@@ -67,7 +67,7 @@ Je potřeba, abyste u sebe měli stejné nouzové vybavení, jako všichni ostat
 
 - Náhradní baterie a nabíjecí kabely pro nabití Vašeho chytrého telefonu nebo hodinek (je-li to potřeba). BT čtečku nebo zařízení na propojení.
 - Baterie do pumpy
-- Aktuální [apk](../Installing-AndroidAPS/Building-APK.md) a [soubory s nastavením](../Usage/ExportImportSettings.md) pro AAPS a jakékoli další aplikace používáte (např. xDrip+, BYODA Dexcom), jak v paměti Vašeho zařízení tak v cloudovém uložišti (Dropbox, Google Drive).
+- Current [apk](../Installing-AndroidAPS/building-AAPS.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## Jak mohu bezpečně a spolehlivě upevnit CGM/FGM?
 
@@ -246,8 +246,8 @@ Smyčka může vybíjet baterii rychleji než v normálním režimu. Je to proto
 
 - očistěte póly baterie alkoholem, aby na nich nezůstala případná mastnota/nečistota z výroby.
 
-- V případě pump [DanaR/RS](../Configuration/DanaRS-Insulin-Pump.md) při spouštěcí sekvenci protéká baterií velký proud, aby záměrně přerušil ochranný povlak (který zabraňuje ztrátě kapacity baterie při skladování), ale přerušení ochranného povlaku se nedaří vždy ve 100 % případů. Buďto baterie 2krát až 3krát vyjměte a znovu vložte (než se na obrazovce ukáže 100%), anebo před vložením baterií použijte bateriový klíč ke chvilkovému zkratu (přiložením k oběma pólům baterie na zlomek sekundy).
-- viz také další tipy pro [konkrétní typy baterií](Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life) při použití pumpy Combo
+- for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Buďto baterie 2krát až 3krát vyjměte a znovu vložte (než se na obrazovce ukáže 100%), anebo před vložením baterií použijte bateriový klíč ke chvilkovému zkratu (přiložením k oběma pólům baterie na zlomek sekundy).
+- see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md#battery-type-and-causes-of-short-battery-life)
 
 ### Výměna zásobníků a kanyl
 
@@ -255,14 +255,14 @@ The change of cartridge cannot be done via AAPS but must be carried out as befor
 
 - Long press on "Open Loop"/"Closed Loop" on the Home tab of AAPS and select 'Suspend Loop for 1h'
 - Now nnect the pump and change the reservoir as per pump instructions.
-- Doplňování a plnění hadičky a kanyly můžete udělat také přímo na pumpě. V tomto případě použijte [tlačítko PLNĚNÍ/DOPLŇOVÁNÍ](CPbefore26-pump) na kartě akcí jen k tomu, abyste zaznamenali výměnu.
+- Doplňování a plnění hadičky a kanyly můžete udělat také přímo na pumpě. In this case use [PRIME/FILL button](../Getting-Started/Screenshots.md#action-tab) in the actions tab just to record the change.
 - Jak budete mít pumpu znovu připojenou, obnovte smyčku dlouhým stiskem na 'Pozastaveno (X min)'.
 
-Při výměně kanyly nicméně nepoužívejte "plnění infuzního setu" na pumpě, ale pro plnění infuzního setu a/nebo kanyly použijte bolus, který se neobjeví v historii bolusů. To znamená, že se nepřeruší běžící dočasná bazální dávka. Chcete-li zadat množství inzulínu k naplnění infúzního setu a spustili plnění, použijte na záložce Akce tlačítko [PLNĚNÍ/DOPLŇOVÁNÍ](CPbefore26-pump). Pokud množství není dostatečné, opakujte plnění. Můžete si nastavit výchozí množství pro plnění v Nastavení > Jiné > Hodnoty plnění/doplňování. Podívejte se do příbalového letáku kanyly, kolik jednotek je nutné do kanyly naplnit podle délky jehly a hadičky.
+Při výměně kanyly nicméně nepoužívejte "plnění infuzního setu" na pumpě, ale pro plnění infuzního setu a/nebo kanyly použijte bolus, který se neobjeví v historii bolusů. To znamená, že se nepřeruší běžící dočasná bazální dávka. On the Actions (Act) tab, use the [PRIME/FILL button](../Getting-Started/Screenshots.md#action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. Pokud množství není dostatečné, opakujte plnění. Můžete si nastavit výchozí množství pro plnění v Nastavení > Jiné > Hodnoty plnění/doplňování. Podívejte se do příbalového letáku kanyly, kolik jednotek je nutné do kanyly naplnit podle délky jehly a hadičky.
 
 ## Pozadí
 
-You can find the AAPS wallpaper for your phone on the [phones page](Phones-phone-background).
+You can find the AAPS wallpaper for your phone on the [phones page](../CompatiblePhones/ListOfTestedPhones.md#phone-background).
 
 ## Každodenní používání
 
@@ -270,11 +270,11 @@ You can find the AAPS wallpaper for your phone on the [phones page](Phones-phone
 
 #### Co dělat při sprchování a koupání?
 
-Při sprchování a koupání si můžete pumpu sundat. Na tak krátkou dobu to sice není třeba dělat, ale měli byste AAPS dát vědět že jste pumpu odpojili, aby byly výpočty IOB správné. Viz [popis výše](FAQ-disconnect-pump).
+Při sprchování a koupání si můžete pumpu sundat. Na tak krátkou dobu to sice není třeba dělat, ale měli byste AAPS dát vědět že jste pumpu odpojili, aby byly výpočty IOB správné. See [description above](../Getting-Started/FAQ.md#disconnect-pump).
 
 ### Práce
 
-V závislosti na druhu vaší práce se můžete rozhodnout, že v pracovních dnech budete mít jiné nastavení. Jako uživatel smyčky byste měli zvážit, zda pro váš typický pracovní den nevyužít [přepnutí profilu](../Usage/Profiles.md). Například, můžete přepnout na profil větší než 100% v případě, že vaše práce spočívá v sezení za kancelářským stolem, nebo naopak nižší než 100%, jste-li aktivní a celý den na nohou. You could also consider a high or low temporary target or a [time shift of your profile](Profiles-time-shift) when working much earlier or later than regular, of if you work different shifts. Můžete si také vytvořit druhý profil (např. "doma" nebo "pracovní den"), a přepnout se na ten, který momentálně potřebujete.
+V závislosti na druhu vaší práce se můžete rozhodnout, že v pracovních dnech budete mít jiné nastavení. Jako uživatel smyčky byste měli zvážit, zda pro váš typický pracovní den nevyužít [přepnutí profilu](../Usage/Profiles.md). Například, můžete přepnout na profil větší než 100% v případě, že vaše práce spočívá v sezení za kancelářským stolem, nebo naopak nižší než 100%, jste-li aktivní a celý den na nohou. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles.md#time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, of if you work different shifts. Můžete si také vytvořit druhý profil (např. "doma" nebo "pracovní den"), a přepnout se na ten, který momentálně potřebujete.
 
 ## Volnočasové aktivity
 
@@ -289,8 +289,8 @@ Takže byste sice měli více zkonzumovaných sacharidů, ale smyčka by na ně 
 Při používání smyčky byste měli vyzkoušet tyto kroky:
 
 - Proveďte [přepnutí profilu](../Usage/Profiles.md) < 100%.
-- Nastavte [dočasný cíl Aktivita](temptarget-activity-temp-target), který bude vyšší než vaše běžná cílová hodnota.
-- Jestliže používáte SMB, zkontrolujte, že máte vypnuté možnosti [„Povolit SMB s vysokými dočasnými cíli“](Open-APS-features-enable-smb-with-high-temp-targets) a [„Vždy povolit SMB“](Open-APS-features#enable-smb-always).
+- Set an [activity temp target](../Usage/temptarget.md#activity-temp-target) above your standard target.
+- If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features.md#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features.md#enable-smb-always) are disabled.
 
 Provedení změn před sportem a po sportu je velmi důležité. Proveďte změny v čase před sportem a zvažte vliv svalového plnění.
 
@@ -300,7 +300,7 @@ Procentuální hodnota přepnutí profilu, hodnota pro váš dočasný cíl Akti
 
 ### Sex
 
-You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. Viz [popis výše](FAQ-disconnect-pump).
+You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. See [description above](#disconnect-pump).
 
 ### Požívání alkoholu
 
@@ -316,7 +316,7 @@ Jestliže požíváte alkohol, je nezbytné průběžně sledovat CGM a ručně 
 
 #### Jak mohu provozovat smyčku během noci bez mobilního a WIFI záření?
 
-Mnoho uživatelů zapíná v noci telefon v režimu letadlo. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+Mnoho uživatelů zapíná v noci telefon v režimu letadlo. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Zapněte na mobilu režim letadlo.
 2. Počkejte dokud není režim aktivní.
@@ -350,11 +350,11 @@ Můžete ukázat své výkazy z Nightscoutu (https://ADRESA-VAŠEHO-NS.com/repor
 
 ## Můj problém zde není uveden.
 
-[Informace pro získání pomoci.](Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Informace pro získání pomoci.](../Where-To-Go-For-Help/Connect-with-other-users.md#im-getting-stuck-what-do-i-do-who-can-i-ask)
 
 ## Můj problém zde není uveden, ale nalezl jsem řešení
 
-[Informace pro získání pomoci.](Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Informace pro získání pomoci.](../Where-To-Go-For-Help/Connect-with-other-users.md#im-getting-stuck-what-do-i-do-who-can-i-ask)
 
 **Dejte nám vědět, abychom přidali vaše řešení do tohoto seznamu!**
 
@@ -372,7 +372,7 @@ Nahrajte si na cloudové úložiště (Dropbox, Google etc) všechny apk soubory
 
 Prosím
 
-- check [Troubleshooting Android Studio](troubleshooting_androidstudio-troubleshooting-android-studio) for typical errors and
+- check [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) for typical errors and
 - tipy na [krok za krokem](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
 ## Zasekl jsem se na cíli, a potřebuji pomoc.
@@ -385,7 +385,7 @@ Otevřete hamburger menu, spusťte průvodce nastavením, a když budete vyzván
 
 ## Jak resetovat heslo v AAPS v3.x
 
-You find the documentation [here](update3_0-reset-master-password).
+You find the documentation [here](../Installing-AndroidAPS/update3_0.md#reset-master-password).
 
 ## Můj link/pumpa/pod nereaguje (RL/OL/EmaLink…)
 
