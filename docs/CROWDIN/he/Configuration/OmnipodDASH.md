@@ -26,7 +26,7 @@
    -  לא כל דגמי הטלפון וגרסאות האנדרואיד מובטחות לעבוד כהלכה. יש לבדוק את [**הטלפונים שנבדקו עם DASH**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) או פשוט נסו עם הטלפון שלכם וספרו לנו את התוצאה (הפניה לטלפון ואזור גיאוגרפי, גרסת אנדרואיד, עבד / עם קשיים / לא עבד).
    - **הערה חשובה: היו מספר מקרים של איבודי חיבור קבועים שאינם ניתנים לשחזור בעת שימוש בפודים ישנים יותר עם גירסת קושחה 3X.XX  היזהרו בעת שימוש בפודים הישנים האלה עם AndroidAPS, במיוחד עם התקני בלוטות' מחוברים אחרים!** שימו לב שמנהל ההתקן של AAPS עם Omnipod Dash מתחבר לפוד באמצעות בלוטות' בכל פעם שהוא שולח פקודה ואז מתנתק מיד לאחר מכן. חיבורי הבלוטות' עלולים להיות מופרעים על ידי מכשירים אחרים המקושרים לטלפון המפעיל את AAPS כגון אוזניות וכו'... (מה שעלול לגרום, במקרים נדירים, לבעיית חיבור או לשגיאות\אובדן פוד בהפעלה או לאחר מכן בחלק מדגמי הטלפון).
    -  **AAPS גרסה 3.0 ומעלה נבנתה ומותקנת** תוך שימוש בהוראות [**Build APK**](../Installing-AndroidAPS/Building-APK.md).
-* [**חיישן סוכר רציף (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
+* [**חיישן סוכר רציף (CGM)**](../Configuration/BG-Source.md)
 
 הוראות אלה מניחות כי אתם מתחילים שימוש בפוד חדש; אם זה לא כך, אנא התאזרו בסבלנות ונסו להתחיל בתהליך זה לקראת החלפת הפוד הבא.
 
@@ -134,7 +134,7 @@
 
 ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-מומלץ לייצא הגדרות לאחר הפעלת הפוד. עשו זאת בכל החלפת פוד ופעם בחודש, העתיקו את הקובץ המיוצא לגיבוי בענן שלכם. ראו [**הוראות ייצוא הגדרות**](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
+מומלץ לייצא הגדרות לאחר הפעלת הפוד. עשו זאת בכל החלפת פוד ופעם בחודש, העתיקו את הקובץ המיוצא לגיבוי בענן שלכם. see [**Export settings Doc**](../Usage/ExportImportSettings.md).
 
 
 (OmnipodDASH-deactivate-pod)=

@@ -26,7 +26,7 @@ AAPS, çocukların uzaktan izlenmesi için çeşitli seçenekler sunar ve ayrıc
 Akıllı saat, çocuklarla AAPS'nin yönetilmesine yardımcı olmak için çok yararlı bir araç olabilir. Birkaç farklı konfigürasyon mümkündür:
 
 - If AAPSClient is installed on the parents phone, the [AAPSClient WearOS app](https://github.com/nightscout/AndroidAPS/releases/) can be installed on a compatible smartwatch connected to the parent's phone. Bu, mevcut KŞ'yi, döngü durumunu gösterecek ve karbonhidrat girişi, geçici hedefler ve profil değişikliklerine izin verecektir. WearOS uygulamasından bolus kullanımına izin VERİLMEZ.
-- Alternatif olarak, [AAPS WearOS uygulaması](https://androidaps.readthedocs.io/en/latest/Configuration/Watchfaces.html) çocuğun telefonuna bağlı ancak ebeveynleri tarafından takılabilen uyumlu bir akıllı saat üzerine kurulabilir. Bu uygulama yukarıda listelenen tüm fonksiyonların yanı sıra bolus insülin yeteneğini de içerir. Bu sayede ebeveyn çocuğun telefonuna dokunmadan insülin gönderebilir.
+- Alternatively, the [AAPS WearOS app](../Configuration/Watchfaces.md) can be built and installed on a compatible smartwatch, connected to the kid's phone but worn by the parent. Bu uygulama yukarıda listelenen tüm fonksiyonların yanı sıra bolus insülin yeteneğini de içerir. Bu sayede ebeveyn çocuğun telefonuna dokunmadan insülin gönderebilir.
 
 ## Dikkat edilmesi gereken önemli noktalar
 
