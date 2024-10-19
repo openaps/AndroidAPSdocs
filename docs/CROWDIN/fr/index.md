@@ -10,7 +10,7 @@ Cette documentation explique comment installer et utiliser **AAPS**. Vous pouvez
 
 Dans le chapitre 2) "Démarrage", l'[Introduction](Getting-Started/Introduction.md) explique de manière générale à quoi sert un système de pancréas artificiel (APS). Cette page décrit le contexte global de la boucle, pourquoi **AAPS** a été développé, compare **AAPS** à d'autres systèmes, et parle de la sûreté. Elle donne des suggestions sur la façon d'aborder le sujet d'**AAPS** avec votre équipe médicale, explique pourquoi vous devez compiler l'application **AAPS** vous-même plutôt que de simplement la télécharger, et donne un aperçu basique de la façon dont communiquent les différents éléments d'un système **AAPS**. Elle aborde également l'accessibilité et qui peut bénéficier de l'utilisation d'**AAPS**.
 
-[Se préparer à AAPS](preparing.md) donne plus de détails sur les considérations de sûreté, ainsi que sur les téléphones, les MGC (Mesure de Glycémie en Continu) et les pompes à insuline qui sont compatibles avec **AAPS**. Cette page donne un aperçu du processus que vous allez suivre, et vous donne une idée du temps nécessaire jusqu'à pouvoir profiter pleinement de toutes les fonctionnalités de **AAPS**. Cette section vous prépare techniquement à assembler aussi rapidement et efficacement que possible les différents éléments de votre **AAPS**. Le sous-chapitre [Configuration MGC](Configuration/BG-Source.md) explique comment optimiser la configuration de votre capteur de glycémie et quelles options de lissage sont les meilleures.
+[Preparing for AAPS](./Getting-Started/PreparingForAaps.md) gives more detail about safety considerations, and the phones, CGMs (Continuous Glucose Monitors) and insulin pumps which are compatible with **AAPS**. Cette page donne un aperçu du processus que vous allez suivre, et vous donne une idée du temps nécessaire jusqu'à pouvoir profiter pleinement de toutes les fonctionnalités de **AAPS**. Cette section vous prépare techniquement à assembler aussi rapidement et efficacement que possible les différents éléments de votre **AAPS**. The subsection [CGM Configuration](./Getting-Started/CompatiblesCgms.md) explains how to optimse CGM setup and what smoothing options are best.
 
 Maintenant que vous avez une bonne compréhension du processus, vous pouvez démarrer l'assemblage de votre boucle **AAPS**. Vous trouverez les instructions détaillées pour ce faire dans le chapitre **3) Installation d'AAPS**. On y parlera du choix et du [serveur de reporting](Installing-AndroidAPS/setting-up-the-reporting-server.md) (Nightscout ou Tidepool) afin que vous puissiez analyser et partager vos données, de la préparation de votre ordinateur pour installer Android Studio, de la compilation elle-même de l'application AAPS et du transfert de l'application AAPS sur votre téléphone. Ce chapitre décrit également la configuration de l'application **AAPS** à l'aide de l'Assistant de configuration, pour qu'il puisse communiquer avec votre application MGC et avec une pompe à insuline réelle ou virtuelle, ainsi qu'en liant **AAPS** à votre serveur de reporting. Vous serez ensuite petit à petit guidé dans l'utilisation d'**AAPS**, via un processus progressif, sécurisé et soigneusement calibré. Ce processus est conçu pour s'assurer que vous/votre enfant connaissez bien et êtes à l'aise dans la navigation entre les différents menus et sous-menus de configuration avant de passer à la phase suivante. Ces phases sont communément appelées Objectifs, et visent à vous faire acquérir suffisamment d'expérience pour pouvoir commencer à utiliser les fonctionnalités les plus avancées de l'application. Ces objectifs sont conçus spécifiquement de manière à débloquer progressivement plus de possibilités dans **AAPS** et à passer de la boucle ouverte à la boucle fermée.
 
@@ -57,18 +57,18 @@ Toutes les informations et le code décrits ici le sont à des fins d'informatio
 ## Index de la documentation AAPS
 
 ```{toctree}
-:caption: 1) Changer la langue
+:caption: 1) Change language
 
-Changer la langue <./changelanguage.md>
+Change language <./ChangeLanguage/ChangeLanguage.md>
 ```
 ```{toctree}
-:caption: 2) Démarrage
+:caption: 2) Getting started
 
-Introduction aux APS et à AAPS <./Getting-Started/Introduction.md>
-Se préparer à AAPS <preparing.md>
-Pompes compatibles <./Getting-Started/Pump-Choices.md>
-MGCs compatibles <./Configuration/BG-Source.md>
-Téléphones compatibles <./Hardware/Phoneconfig.md>
+Introduction to AAPS <./Getting-Started/Introduction.md>
+Preparing for AAPS <./Getting-Started/PreparingForAaps.md>
+Compatible pumps <./Getting-Started/CompatiblePumps.md>
+Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
+Compatible phones  <./Getting-Started/Phones.md>
 ```
 
 ```{toctree}
@@ -132,17 +132,15 @@ Au secours !
 ```
 
 ```{toctree}
-:caption: 8) Liens utiles
+:caption: 8) Useful AAPS Links
 
-Glossaire <./Getting-Started/Glossary.md>
-Écrans d'AAPS <./Getting-Started/Screenshots.md>
-Pompes compatibles <./Getting-Started/Pump-Choices.md>
-Astuces Accu-Chek Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
-MGC compatibles <./Configuration/BG-Source.md>
-Téléphones compatible <./Hardware/Phoneconfig.md>
-Utiliser Wear AAPS sur une montre connectée <./Configuration/Watchfaces.md>
-Personnaliser votre cadran AAPS <./Usage/Custom_Watchface_Reference.md>
-Configuration de xDrip <./Configuration/xdrip.md>
+Glossary <./Getting-Started/Glossary.md>
+AAPS Screens <./Getting-Started/Screenshots.md>
+Your AAPS profile 
+Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
+Operation of Wear AAPS on a Smartwatch <./Configuration/Watchfaces.md>
+How to customise your AAPS watchface <./Usage/Custom_Watchface_Reference.md>
+xDrip Settings <./CompatibleCgms/xDrip.md>
 Autotune <./Usage/autotune.md>
 
 ```
