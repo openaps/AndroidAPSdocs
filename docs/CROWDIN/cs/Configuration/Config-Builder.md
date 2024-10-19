@@ -63,13 +63,13 @@ Z přepnutí profilu můžete snadno vytvořit nový místní profil. Posun čas
 
 #### Nahrávání místních profilů do Nighscoutu
 
-Místní profily lze také nahrát do Nightscoutu. Nastavení najdete v [nastavení NSClientu](Preferences-nsclient).
+Místní profily lze také nahrát do Nightscoutu. The settings can be found in [NSClient preferences](../Configuration/Preferences.md#nsclient).
 
 ![Nahrávání místního profilu do Nighscoutu](../images/LocalProfile_UploadNS_AASP30.png)
 
 #### Změna profilu v Nightscout editoru profilu
 
-Změny provedené v editoru profilu v Nightscoutu můžete synchronizovat s lokálními profily. Nastavení najdete v [nastavení NSClientu](Preferences-nsclient).
+Změny provedené v editoru profilu v Nightscoutu můžete synchronizovat s lokálními profily. The settings can be found in [NSClient preferences](../Configuration/Preferences.md#nsclient).
 
 Je nezbytné naklonovat všechny aktuální aktivní záznamy v databázi Nightscout, a ne pouze profil s modrou šipkou! Nové databázové záznamy pak obsahují aktuální datum a lze je aktivovat pomocí záložky "místní profil".
 
@@ -102,13 +102,13 @@ Podrobnosti jsou vysvětleny na stránce nápovědy [pomocník s profilem](../Co
 * Hodnota DIA není u každého člověka stejná. Proto si ji musíte vyzkoušet sami na sobě. 
 * Vždy to však musí být alespoň 5 hodin.
 * Pro velké množství lidí nemá ultra-rychlý inzulin jako Fiasp po 3–4 hodinách prakticky žádné znatelné účinky, i když fakticky zbývá cca 0,0xx jednotky. Nicméně i toto zbytkové množství může mít vliv například při sportu. Z toho důvodu AAPS používá minimální hodnotu DIA 5 hodin.
-* Další informace o tom si můžete přečíst v části Inzulinový profil na [ této ](Screenshots-insulin-profile) stránce.
+* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots.md#insulin-profile) page.
 
 ### Rozdíly v typu inzulínu
 
 * Pro „Rychle působící“ a „Ultra rychlý“ a „Lyumjev“ inzulín je DIA jediná proměnná, kterou si můžete upravovat. Doba maximální účinnosti je fixní. 
 * „Volitelný vrchol“ umožňuje nastavit obě proměnné – DIA i dobu maximální účinnosti inzulínu. Tato volba je určena pouze pro pokročilé uživatele, kteří znají důsledky nastavených hodnot. 
-* Graf [ Křivka inzulínu ](Screenshots-insulin-profile) pomáhá pochopit různé křivky.
+* The [insulin curve graph](../Getting-Started/Screenshots.md#insulin-profile) helps you to understand the different curves.
 * Zaškrtnutím čtverečku vedle názvu si je můžete prohlédnout v záložce. Další možnost jejich zobrazení je přes hamburgerové menu.
 
 #### Rychle působící - Oref
@@ -149,7 +149,7 @@ Podrobnosti jsou vysvětleny na stránce nápovědy [pomocník s profilem](../Co
 
 ## Zdroj glykémií
 
-Vyberte jaký zdroj glykémií používáte. Viz stránka [Zdroj glykémie](BG-Source.md) pro další informace o nastavení.
+Select the blood glucose source you are using - see [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
 
 ![Konfigurace zdroje glykémie](../images/ConfBuild_BG.png)
 
@@ -171,21 +171,21 @@ Vyberte, kterou pumpu používáte.
 
 ![Konfigurace – výběr pumpy](../images/ConfBuild_Pump_AAPS30.png)
 
-* [Dana R](DanaR-Insulin-Pump.md)
+* [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
 * DanaR Korea (pro korejskou verzi pumpy DanaR)
 * Dana Rv2 (DanaR s neoficiálním upgradem firmwaru)
-* [Dana-i/RS](DanaRS-Insulin-Pump.md)
+* [Dana-i/RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
     
     * Pro pumpy Dana – pokud je nutný BT watchdog, aktivujte ho v **Rozšířená nastavení**. Při problémech s připojením k pumpě vypne bluetooth na 1 sekundu. Toto nastavení může u některých mobilů pomoci při zamrzání bluetooth.
-    * [Heslo pro Dana RS pumpy](../Configuration/DanaRS-Insulin-Pump.md) musí být správně zadáno. V předchozích verzích nebylo heslo kontrolováno.
+    * [Password for Dana RS pump](../CompatiblePumps/DanaRS-Insulin-Pump.md) must be entered correctly. V předchozích verzích nebylo heslo kontrolováno.
 
-* [Accu-Chek Insight](Accu-Chek-Insight-Pump.md)
+* [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
 
-* [Accu-Check Combo](Accu-Chek-Combo-Pump.md) (vyžaduje nainstalovanou aplikaci Ruffy)
-* [Omnipod Eros](OmnipodEros.md)
-* [Omnipod DASH](OmnipodDASH.md)
-* [Medtronic](MedtronicPump.md)
-* [Diaconn G8](DiaconnG8.md)
+* [Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
+* [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
+* [Medtronic](../CompatiblePumps/MedtronicPump.md)
+* [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
 * MDI (AAPS poskytuje návrhy pro aplikaci inzulínu pomocí inzulínových per)
 * Virtuální pumpa (otevřená smyčka pro pumpu, pro kterou zatím neexistuje ovladač – nabízí pouze návrhy AAPS)
 
@@ -193,7 +193,7 @@ Vyberte, kterou pumpu používáte.
 
 Vyberte variantu detekce citlivosti. Další detaily o různých modelech si můžete [přečíst zde](../Configuration/Sensitivity-detection-and-COB.md). Bude prováděna analýza historických dat. Jestliže se zjistí, že na inzulín reagujete citlivěji než obvykle (nebo naopak máte vyšší rezistenci), provedou se úpravy. Další podrobnosti o algoritmu citlivosti si můžete přečíst v [dokumentaci OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-Průběh citlivosti můžete na hlavní stránce zobrazit vybráním políčka Citlivost. Zobrazí se jako bílá čára. Pozn: aby mohla Detekce citlivosti/[ Autosens](Open-APS-features-autosens) automaticky upravovat množství dodávaného inzulínu, musíte mít splněný [cíl 8](Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens). Před dosažením tohoto cíle slouží procentuální údaj Autosens a bílá čára v grafu pouze pro informaci.
+Průběh citlivosti můžete na hlavní stránce zobrazit vybráním políčka Citlivost. Zobrazí se jako bílá čára. Note, you need to be in [Objective 8](../Usage/completing-the-objectives.md#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features.md#autosens) automatically adjust the amount of insulin delivered. Před dosažením tohoto cíle slouží procentuální údaj Autosens a bílá čára v grafu pouze pro informaci.
 
 (Config-Builder-absorption-settings)=
 
@@ -208,7 +208,7 @@ Pokud používáte Oref1 s funkcí SMB, musíte změnit **min_5m_carbimpact** na
 Vyberte požadovaný algoritmus APS pro úpravy léčby. Detaily vybraného algoritmu můžete zobrazit na kartě OpenAPS (OAPS).
 
 * OpenAPS AMA (pokročilý asistent s jídly, stav algoritmu v roce 2017). Zjednodušeně řečeno, výhoda systému je v tom, že zadáte-li sacharidy, dokáže systém po poslání bolusu velmi rychle spustit vysoký dočasný bazál.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, nejnovější algoritmus pro pokročilé uživatele) Poznámka: Abyste mohli OpenAPS SMB používat, musíte plnit [9. cíl](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) a hodnotu min_5m_carbimpact musíte mít nastavenou na 8 v nabídce Konfigurace > Detekce citlivosti > Sensitivita Oref1.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../Usage/completing-the-objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Smyčka
 
@@ -230,7 +230,7 @@ Vyberte požadovaný algoritmus APS pro úpravy léčby. Detaily vybraného algo
 
 * AAPS průběžně vyhodnocuje všechny dostupné údaje (IOB, COB, glykémie…) a podle potřeby automaticky upravuje léčbu (tj. bez dalšího Vašeho zásahu) s cílem dosáhnout nastaveného cílového pásma nebo hodnoty (podání bolusu, dočasné bazální dávky, vypnutí podávání inzulínu, aby se předešlo hypoglykémii atd.). 
 * Uzavřená smyčka je zabezpečena velkým množstvím bezpečnostních limitů, které lze nastavit individuálně.
-* Uzavřená smyčka je k dispozici pouze v případě, že jste v [6. cíli](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend) nebo vyšším a používáte podporovanou pumpu.
+* Closed Loop is only possible if you are in [Objective 6](../Usage/completing-the-objectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
 * Poznámka: při používání uzavřené smyčky se doporučuje nastavit jeden cíl místo cílového rozsahu (tj. 5,5 mmol nebo 100 mg/l místo rozsahu 5,0–7,0 mmol nebo 90–125 mg/dl).
 
 ### Pozastavení při nízké glykémii (LGS)
@@ -252,11 +252,11 @@ Součástí AndroidAPS je výukový program (cíle), které musíte splnit krok 
 
 Měli byste pravidelně [exportovat svá nastavení](../Usage/ExportImportSettings.md) (včetně pokroku v plnění cílů). V případě, že v budoucnosti budete muset svůj smartphone nahradit (nové zařízení, poškození displeje atd.), můžete tato nastavení jednoduše importovat.
 
-Viz stránka [Objectives](../Usage/Objectives.md) pro další informace o nastavení.
+See [Objectives](../Usage/completing-the-objectives.md) page for more information.
 
 ## Ošetření
 
-Pokud se podíváte na záložku Ošetření, můžete vidět ošetření které byly nahrány na Nightscout. Chcete-li upravit nebo odstranit záznam (například když jste snědli méně sacharidů, než jste očekávali), vyberte „Odstranit“ a zadejte novou hodnotu (případně změňte čas) prostřednictvím [tlačítka Sacharidy na hlavní obrazovce](Screenshots-carb-correction).
+Pokud se podíváte na záložku Ošetření, můžete vidět ošetření které byly nahrány na Nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
 
 ## Obecné
 
@@ -315,20 +315,20 @@ Vyberte si, chcete-li mít při zadávání ošetření k dispozici pole poznám
 
 #### Stavové indikátory
 
-Vyberte si, chcete-li mít zobrazené [stavové indikátory](Preferences-status-lights) pro přehled o stáří kanyly, inzulínu, baterie a stavu zásobníku nebo baterie. Je-li dosaženo úrovně pro varování, změní se barva stavového indikátoru na žlutou. Kritická hodnota se zobrazí červeně.
+Choose if you want to have [status lights](../Configuration/Preferences.md#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. Je-li dosaženo úrovně pro varování, změní se barva stavového indikátoru na žlutou. Kritická hodnota se zobrazí červeně.
 
 #### Pokročilá nastavení
 
 **Podat tuto část z výsledku kalkukace [%]**: Při použití SMB si mnoho lidí neposílá na jídlo 100% dávku inzulínu, ale pouze její část (např. 75 %), a nechá zbytek na SMB ve spolupráci s UAM (detekce neoznámeného jídla). V tomto nastavení si můžete zvolit výchozí hodnotu pro procento, se kterým by měl bolus kalkulátor počítat. Pokud je toto nastavení 75 % a máte dostat bolus 10 U, navrhne bolusový kalkulátor pouze 7,5 jednotky.
 
-**V průvodci povolte funkci superbolus** (jde o něco jiné než *super mikro bolus*!): Funkci používejte s opatrností a nepovolujte ji, dokud se nenaučíte, co to skutečně dělá. V podstatě je bazál za následující 2 hodiny přidán do bolusu a po dobu těchto 2 h je nastaven nulový dočasný bazál. **Funkce smyčky AAPS budou po dobu superbolusu deaktivovány – používat opatrně! Pokud používáte funkci SMB, funkce smyčky AAPS budou deaktivovány dle vašeho nastavení v části [„Maximální počet minut bazálu, ke kterým se limituje SMB“](Open-APS-features-max-minutes-of-basal-to-limit-smb-to), pokud funkci SMB nevyužíváte, funkce smyčky budou vypnuty na dvě hodiny.** Podrobnosti o superbolusu najdete [zde](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**V průvodci povolte funkci superbolus** (jde o něco jiné než *super mikro bolus*!): Funkci používejte s opatrností a nepovolujte ji, dokud se nenaučíte, co to skutečně dělá. V podstatě je bazál za následující 2 hodiny přidán do bolusu a po dobu těchto 2 h je nastaven nulový dočasný bazál. **Funkce smyčky AAPS budou po dobu superbolusu deaktivovány – používat opatrně! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 (Config-Builder-actions)=
 
 ### Akce
 
 * Tlačítka k běžně používaným úkonům.
-* Podrobnosti najdete v části [Obrazovky AAPS](Screenshots-action-tab).
+* See [AAPS screenshots](../Getting-Started/Screenshots.md#action-tab) for details.
 
 ### Automatizace
 
@@ -368,7 +368,7 @@ Zobrazit na displeji hodinek (ciferník xDrip+) stav smyčky (pokud nepoužívá
 ### NSClient
 
 * Nastavení synchronizace dat mezi AAPS a Nightscoutem.
-* Nastavení v [konfiguraci](Preferences-nsclient) lze otevřít kliknutím na ozubené kolo.
+* Settings in [preferences](../Configuration/Preferences.md#nsclient) can be opened by clicking the cog wheel.
 
 ### Údržba
 
