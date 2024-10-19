@@ -18,9 +18,9 @@ Regularly export your **AAPS** settings after completing each **objective**!
 
 אם לא יהיה לכם עותק גיבוי של **ההגדרות** שלכם, במקרה שמשהו יקרה למכשירכם תצטרכו להתחיל שוב את **משימות** מההתחלה.
 
-בסך הכל **המשימות** לוקחות 6 שבועות בערך (להרחבה ראו [כמה זמן זה ייקח?](preparing-how-long-will-it-take?) ) מהתקנת **AAPS** במכשירכם ועד הפעלת לולאה סגורה "בסיסית" היברידית (ממשימה 1 עד 8), כך שעל אף ש_ניתן_ להתקדם עד **משימה 5** באמצעות **משאבה וירטואלית** (ובאמצעות שימוש בשיטה אחרת של מתן אינסולין בינתיים), עדיין רצוי מאוד להימנע מהצורך להשלים מחדש את כל **המשימות** כי למשל, איבדתם את הסמארטפון.
+Overall the **objectives** take around 6 weeks to complete (see [how long will it take?](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up) for a detailed breakdown) from configuring **AAPS** on your smartphone to "basic" hybrid closed looping (from objective 1 to objective 8), so, although you _can_ proceed up to **objective 5** using a **virtual pump** (and using some other method of insulin delivery in the meantime), having to re-complete all the **objectives** because for example, you lost your smartphone, is still something you really want to avoid.
 
-בנוסף להתקדמות **במשימות**, אם תרצו, ניתן לבטל את ההתקדמות ו[לחזור על משימות קודמות](Objectives-go-back-in-objectives).
+As well as progressing through the **objectives**, if you want, you can also remove your progress and [go back to an earlier objective](#go-back-in-objectives).
 
 ## משימה 1: הגדרת ויזואליזציה, ניטור, ניתוח המינון הבזאלי והיחסים
 
@@ -28,10 +28,10 @@ Regularly export your **AAPS** settings after completing each **objective**!
 
 אם היא לא עובדת, עליכם להגדירה מחדש עד שתפעל כראוי.
 
-- בחרו את החיישן שלכם ב-[בונה התצורה](../Configuration/Config-Builder.md).  ראו [מקור נתוני סוכר](../Configuration/BG-Source.md) לפרטים נוספים.
-- בחרו את המשאבה הנכונה ב[בונה התצורה](../Configuration/Config-Builder.md) כדי להבטיח שהמשאבה שלכם תוכל לתקשר עם AAPS. בחרו **משאבה וירטואלית** אם אתם משתמשים בדגם משאבה שבו **AAPS** אינו תומך, או אם ברצונכם לעבוד על **המשימות** הראשונות תוך שימוש במערכת אחרת למתן אינסולין. ראו [משאבת אינסולין](../Getting-Started/Pump-Choices.md) למידע נוסף.
+- בחרו את החיישן שלכם ב-[בונה התצורה](../Configuration/Config-Builder.md).  See [BG Source](../Getting-Started/CompatiblesCgms.md) for more information.
+- בחרו את המשאבה הנכונה ב[בונה התצורה](../Configuration/Config-Builder.md) כדי להבטיח שהמשאבה שלכם תוכל לתקשר עם AAPS. בחרו **משאבה וירטואלית** אם אתם משתמשים בדגם משאבה שבו **AAPS** אינו תומך, או אם ברצונכם לעבוד על **המשימות** הראשונות תוך שימוש במערכת אחרת למתן אינסולין. See [insulin pump](../Getting-Started/CompatiblePumps.md) for more information.
 - עקבו אחר הוראות [נייטסקאוט](../Installing-AndroidAPS/Nightscout.md) כדי לוודא ש-**Nightscout** מקבל ומציג את הנתונים.
-- שימו לב שכתובת אתר הנייטסקאוט שב-NSClient **חייב להיות ללא הסיומת /api/v1/** - ראו [הגדרות NSClient בהעדפות](Preferences-nsclient).
+- Note that URL in **NSClient** must be **_without_ "/api/v1/"** at the end - see [NSClient settings in Preferences](../Configuration/Preferences.md#NSClient).
 
 שימו לב - _ייתכן שתצטרכו לחכות לקריאת הסוכר הבאה שתגיע כל מנת ש-**AAPS** יזהה אותה._
 
@@ -76,7 +76,7 @@ From time to time, new features are added to **AAPS** which may require a new qu
 
 ## משימה 4: התחלת לופ פתוח
 
-מטרת משימה זו היא לזהות באיזו תדירות **AAPS** יעריך את השפעת המינון הבזאלי על רמות הגלוקוז ולהמליץ על שינויים זמניים במינונים. כחלק משימה זו, אתם תפעילו לולאה פתוחה בפעם הראשונה ותבצעו ידנית 20 שינויים זמניים המוצעים, במינוניים הבזאליים. בנוסף אתם תתנסו בהשפעת ברירות המחדל של המטרות הזמניות (_למשל_ עבור פעילות גופנית או טיפולים בהיפו). אם אינכם מכירים את ההגדרה של שינוי זמני במינון הבזאלי ב-**AAPS**, אנא עיינו בלשונית [פעולות](Screenshots#Screenshots-action-tab).
+מטרת משימה זו היא לזהות באיזו תדירות **AAPS** יעריך את השפעת המינון הבזאלי על רמות הגלוקוז ולהמליץ על שינויים זמניים במינונים. כחלק משימה זו, אתם תפעילו לולאה פתוחה בפעם הראשונה ותבצעו ידנית 20 שינויים זמניים המוצעים, במינוניים הבזאליים. בנוסף אתם תתנסו בהשפעת ברירות המחדל של המטרות הזמניות (_למשל_ עבור פעילות גופנית או טיפולים בהיפו). If you are not familiar with setting a temporay basal rate change in **AAPS** yet, please refer to the [ACTIONS tab](../Getting-Started/Screenshots.md#action-tab).
 
 זמן משוער להשלמת משימה זו: **7 ימים**. חובה להמתין את זמן זה. אינכם יכולים להמשיך אל המשימה הבאה, גם אם ביצעתם כבר את כל השינויים הזמניים במינונים הבזאליים.
 
@@ -101,11 +101,11 @@ From time to time, new features are added to **AAPS** which may require a new qu
 
 ## משימה 5: העמקת הבנת הלולאה הפתוחה, לרבות המינונים הבזאליים הזמניים וההמלצות
 
-במסגרת **משימה 5** אתם תתחילו להבין כיצד מחושבות המלצות בזאליות זמניות. זה כולל את [לוגיקת קביעת מינון בזאלי](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), ניתוח ההשפעה על ידי התבוננות [עקומי חיזוי במסך הראשי](Screenshots-prediction-lines)/Nightscout והסתכלות על חישובים מפורטים המוצגים בלשונית OPENAPS.
+במסגרת **משימה 5** אתם תתחילו להבין כיצד מחושבות המלצות בזאליות זמניות. This includes the [determination of basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), analyzing the impact by observing [prediction lines in AAPS OVERVIEW](../Getting-Started/Screenshots.md#prediction-lines)/Nightscout and looking at detailed calculations shown on your OPENAPS tab.
 
 זמן משוער להשלמת משימה זו: 7 ימים.
 
-משימה זו מחייבת אתכם לקבוע ולהגדיר את הערך "מינון בזאלי זמני מקסימלי" כמתואר ב-[תכונות OpenAPS](Open-APS-features#Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal). ניתן להגדיר ערך זה בהעדפות > OpenAPS AMA.
+This Objective requires you to determine and set your “Max U/h a temp basal can be set to” (max-basal) value as described in [OpenAPS-features](Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal). ניתן להגדיר ערך זה בהעדפות > OpenAPS AMA.
 יש לוודא שהגדרת בטיחות זו מוגדרת גם ב-**AAPS** וגם במשאבת האינסולין.
 
 רצוי שתקבעו ערכי מטרה גבוהים מהרגיל עד אשר תבטחו בהגדרות ובחישובי הלופ.
@@ -143,7 +143,7 @@ If you are open looping with a virtual pump stop here. Only click verify at the 
 עדיין תצטרכו לתקן ערכי סוכר גבוהים בעצמכם (ידנית עם תיקונים באמצעות משאבה או עט)!
 ```
 
-כחלק מ**משימה 6** אתם תסגרו את הלולאה ותפעילו מצב השעיה עקב גלוקוז נמוך (LGS) בו [אינסולין פעיל מקסימלי](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) מוגדר אפס (אוטומטית בעת התחלת המשימה). עליכם להישאר במצב LGS למשך 5 ימים כדי להשלים את משימה זו. כדאי לנצל את הזמן הזה כדי לבדוק אם הגדרות הפרופיל שלכם מדויקות ואינן מפעילות אירועי היפו לעתים קרובות מדי.
+As part of **Objective 6** you will close the loop and activate its Low Glucose Suspend (LGS) mode while [max IOB](Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) is set to zero. עליכם להישאר במצב LGS למשך 5 ימים כדי להשלים את משימה זו. כדאי לנצל את הזמן הזה כדי לבדוק אם הגדרות הפרופיל שלכם מדויקות ואינן מפעילות אירועי היפו לעתים קרובות מדי.
 
 זמן משוער להשלמת משימה זו: 5 ימים.
 
@@ -170,7 +170,7 @@ If you are open looping with a virtual pump stop here. Only click verify at the 
 
 ## משימה 7: כוונון לולאה סגורה, העלאת האינסולין הפעיל המרבי מ-0 והורדה מדורגת של ערכי המטרה
 
-בכדי להשלים את **משימה 7** אתם תסגרו את הלולאה ותעלו את [maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob). maxIOB אופס אוטומטית ב**משימה 6**. איפוס זה מבוטל עכשיו. **AAPS** יתחיל להשתמש בערך maxIOB שהגדרתם כדי לתקן ערכי סוכר גבוהים.
+To complete **Objective 7** you have to close your loop and raise your [maxIOB](Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob). maxIOB אופס אוטומטית ב**משימה 6**. איפוס זה מבוטל עכשיו. **AAPS** יתחיל להשתמש בערך maxIOB שהגדרתם כדי לתקן ערכי סוכר גבוהים.
 
 זמן משוער להשלמת משימה זו: יום אחד.
 
@@ -202,8 +202,8 @@ If you are open looping with a virtual pump stop here. Only click verify at the 
 
 במטרה זו תתמודדו ותשתמשו ב"סופר מיקרו בולוס (SMB)" ככלי מרכזי. לאחר קריאות החובה תהיה לכם הבנה טובה של מהו SMB, איך הוא עובד, נקודת התחלה סבירה של הגדרות שימוש ב-SMB ומדוע הבזאלי מוגדר כאפס באופן זמני לאחר מתן SMB. זמן משוער להשלמת משימה זו: 28 ימים.
 
-- [קטע SMB בתיעוד זה](Open-APS-features-super-micro-bolus-smb) ו-[oref1 ב-openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) הם קריאת חובה כדי להבין את SMB ואת הרעיון של בזאלי זמני 0.
-- לאחר מכן, עליכם [להעלות את מגבלת האינסולין הפעיל המרבי] (Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) כדי לאפשר ל-SMB לתפקד כראוי. מעכשיו, האינסולין הפעיל המרבי כולל את כל האינסולין המוזרק, לא רק את הבזאלי. סף זה משהה את מתן ה-SMB עד שהאינסולין הפעיל (IOB) יורד אל מתחת לערך זה (_למשל_ maxIOB מוגדר ל-7 יח' וניתן בולוס של 8 יח' לכיסוי ארוחה: הזרקת SMB יושהה ולא יינתן אלא אם IOB יורד אל מתחת ל-7 יח'). אפשר להעריך את ערך האינסולין הפעיל המרבי עם החישוב: בולוס ארוחה ממוצע + X3 המינון הבזאלי המרבי שיש ביממה - ראו ב[משימה 7] (Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) כדוגמה)
+- The [SMB section in this documentation](Open-APS-features.md#super-micro-bolus-smb) and [oref1 coverage in the openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) are must-reads to understand SMB and the concept of zero-temping.
+- Once done, you [raise maxIOB](Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working well. מעכשיו, האינסולין הפעיל המרבי כולל את כל האינסולין המוזרק, לא רק את הבזאלי. סף זה משהה את מתן ה-SMB עד שהאינסולין הפעיל (IOB) יורד אל מתחת לערך זה (_למשל_ maxIOB מוגדר ל-7 יח' וניתן בולוס של 8 יח' לכיסוי ארוחה: הזרקת SMB יושהה ולא יינתן אלא אם IOB יורד אל מתחת ל-7 יח'). A good start is setting maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](#objective-7-tuning-the-closed-loop-raising-maxiob-above-0-and-gradually-lowering-bg-targets) as reference)
 - שנו את הפרמטר "min_5m_carbimpact" (העדפות > הגדרות ספיגה > min_5m_carbimpact) ל-8 כשאתם עוברים מאלגוריתם OpenAPS AMA ל-OpenAPS SMB. עבור AMA ערך ברירת המחדל הוא 3. Read more about this setting [here](../Configuration/Preferences.md#min_5m_carbimpact)
 
 (Objectives-objective-10-automation)=
@@ -250,4 +250,4 @@ If you are open looping with a virtual pump stop here. Only click verify at the 
 
 ## משימות ב- AndroidAPS לפני גרסה 3.0
 
-משימה אחת הוסרה כאשר AndroidAPS 3.0 שוחרר.  משתמשי AndroidAPS גרסה 2.8.2.1 המשתמשים בגרסת אנדרואיד ישנה יותר (כלומר גרסה 9 ומטה) יעברו את המשימות הישנות, השונות מהמתואר בדף זה. לפרטים על המשימות הישנות לחצו [כאן](../Usage/Objectives_old.md).
+משימה אחת הוסרה כאשר AndroidAPS 3.0 שוחרר.  Users of Android APS version 2.8.2.1 who are on older Android software (_i.e._ earlier than version 9) will be using an older set of Objectives which can be found [here].
