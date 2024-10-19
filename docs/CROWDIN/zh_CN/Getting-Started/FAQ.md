@@ -6,7 +6,7 @@ How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md
 
 ## Can I just download the AAPS installation file?
 
-No. There is no downloadable apk file for AAPS. You have to [build](../Installing-AndroidAPS/Building-APK.md) it yourself. Here's the reason why:
+No. There is no downloadable apk file for AAPS. You have to [build](../Installing-AndroidAPS/building-AAPS.md) it yourself. Here's the reason why:
 
 AAPS is used to control your pump and give insulin. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
 
@@ -20,9 +20,9 @@ That’s why apks aren’t available.
 
 First of all, you have to **get loopable hardware components**:
 
-- A [supported insulin pump](./Pump-Choices.md), 
-- an [Android smartphone](Phones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
-- a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
+- A [supported insulin pump](../Getting-Started/CompatiblePumps.md), 
+- an [Android smartphone](../CompatiblePhones/ListOfTestedPhones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
+- a [continuous glucose monitoring system](../Getting-Started/CompatiblesCgms.md). 
 
 Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
 
@@ -46,7 +46,7 @@ If you plan to use the android wear app to bolus or change settings then you nee
 
 If you take your pump off for showering, bathing, swimming, sports or other activities you must let AAPS know that no insulin is delivered to keep IOB correct.
 
-The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](Screenshots-loop-status).
+The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](../Getting-Started/Screenshots.md#loop-status).
 
 ### Recommendations not only based on one single CGM reading
 
@@ -67,7 +67,7 @@ You have to have the same emergency equipment with you like every other T1D with
 
 - Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
 - Pump batteries
-- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../Installing-AndroidAPS/building-AAPS.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## How can I safely and securely attach the CGM/FGM?
 
@@ -246,8 +246,8 @@ Looping can reduce the pump battery faster than normal use because the system in
 
 - clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
 
-- for [Dana R/RS pumps](../Configuration/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
-- see also more tips for [particular types of battery](Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
+- for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
+- see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md#battery-type-and-causes-of-short-battery-life)
 
 ### Changing reservoirs and cannulas
 
@@ -255,14 +255,14 @@ The change of cartridge cannot be done via AAPS but must be carried out as befor
 
 - Long press on "Open Loop"/"Closed Loop" on the Home tab of AAPS and select 'Suspend Loop for 1h'
 - Now nnect the pump and change the reservoir as per pump instructions.
-- Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](CPbefore26-pump) in the actions tab just to record the change.
+- Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Getting-Started/Screenshots.md#action-tab) in the actions tab just to record the change.
 - Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
-The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the [PRIME/FILL button](CPbefore26-pump) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
+The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the [PRIME/FILL button](../Getting-Started/Screenshots.md#action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 
 ## Wallpaper
 
-You can find the AAPS wallpaper for your phone on the [phones page](Phones-phone-background).
+You can find the AAPS wallpaper for your phone on the [phones page](../CompatiblePhones/ListOfTestedPhones.md#phone-background).
 
 ## Daily usage
 
@@ -270,11 +270,11 @@ You can find the AAPS wallpaper for your phone on the [phones page](Phones-phone
 
 #### What to do when taking a shower or bath?
 
-You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](FAQ-disconnect-pump).
+You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ.md#disconnect-pump).
 
 ### Work
 
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](Profiles-time-shift) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles.md#time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
 ## Leisure activities
 
@@ -289,8 +289,8 @@ So, you would have more carbohydrates on board, but at the same time the loop wo
 When looping you should try these steps:
 
 - Make a [profile switch](../Usage/Profiles.md) < 100%.
-- Set an [activity temp target](temptarget-activity-temp-target) above your standard target.
-- If you are using SMB make sure ["Enable SMB with high temp targets"](Open-APS-features-enable-smb-with-high-temp-targets) and ["Enable SMB always"](Open-APS-features#enable-smb-always) are disabled.
+- Set an [activity temp target](../Usage/temptarget.md#activity-temp-target) above your standard target.
+- If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features.md#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features.md#enable-smb-always) are disabled.
 
 Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
 
@@ -300,7 +300,7 @@ The percentage of the profile switch, the value for your activity temp target an
 
 ### Sex
 
-You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. See [description above](FAQ-disconnect-pump).
+You can remove the pump to be 'free', but you should tell AAPS so that the IOB calculations are correct. See [description above](#disconnect-pump).
 
 ### Drinking alcohol
 
@@ -316,7 +316,7 @@ When drinking alcohol, you always have to have an eye on your CGM to manually av
 
 #### How can I loop during the night without mobile and WIFI radiation?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Turn on airplane mode in your mobile.
 2. Wait until the airplane mode is active.
@@ -350,11 +350,11 @@ You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or
 
 ## My problem is not listed here.
 
-[Information to get help.](Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users.md#im-getting-stuck-what-do-i-do-who-can-i-ask)
 
 ## My problem is not listed here but I found the solution
 
-[Information to get help.](Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users.md#im-getting-stuck-what-do-i-do-who-can-i-ask)
 
 **Remind us to add your solution to this list!**
 
@@ -372,7 +372,7 @@ Copy on an internet drive (Dropbox, Google etc) : all the apks you used to insta
 
 Please
 
-- check [Troubleshooting Android Studio](troubleshooting_androidstudio-troubleshooting-android-studio) for typical errors and
+- check [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) for typical errors and
 - the tipps for with a [step by step walktrough](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
 ## I'm stuck on an objective and need help.
@@ -385,7 +385,7 @@ Open the hamburger menu, start the Configuration wizard and enter new password w
 
 ## How to reset the password in AAPS v3.x
 
-You find the documentation [here](update3_0-reset-master-password).
+You find the documentation [here](../Installing-AndroidAPS/update3_0.md#reset-master-password).
 
 ## My link/pump/pod is unresponsive (RL/OL/EmaLink…)
 
