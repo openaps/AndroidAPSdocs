@@ -2,13 +2,13 @@
 
 Informationen zur Behebung von Problemen findest Du auf vielen Seiten im Wiki. Auf dieser Seite sind Links zu den entsprechenden Abschnitten zusammengetragen, so dass Du schneller eine Lösung für Dein Problem finden kannst.
 
-Weitere nützliche Informationen findest Du auch in den `FAQ <../Getting-Started/FAQ.md>` _ (Frequently asked questions - häufig gestellte Fragen).
+Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.md).
 
 ## AAPS-App
 
 ### Erstellen & Update
 
-* [Verlorener Keystore](troubleshooting_androidstudio-lost-keystore)
+* [Verlorener Keystore](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore)
 * [Fehlerbehebung Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 
 ### Einstellungen
@@ -16,18 +16,18 @@ Weitere nützliche Informationen findest Du auch in den `FAQ <../Getting-Started
 
   !['Fehler: Basal ist nicht auf Stunden ausgerichtet'](../images/Screen_DifferentPump.png)
 
-* [Daten kommen von einer anderen Pumpe.](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
+* [Daten kommen von einer anderen Pumpe.](../Installing-AndroidAPS/update3_0.md#failure-message-data-from-different-pump)
 
   ![Fehlermeldung: Daten aus verschiedenen Pumpen](../images/BasalNotAlignedToHours2.png)
 
-* [Nightscout-Client (NSClient)](../Usage/Troubleshooting-NSClient.html)
+* [Nightscout-Client (NSClient)](../Usage/Troubleshooting-NSClient.md)
 
 ### Nutzung
-* [Fehlerhafte Kohlenhydrat-Werte (COB)](COB-calculation-detection-of-wrong-cob-values)
+* [Fehlerhafte Kohlenhydrat-Werte (COB)](../Usage/COB-calculation.md#detection-of-wrong-cob-values)
 
    ![Fehler: Langsame KH-Aufnahme](../images/Calculator_SlowCarbAbsorption.png)
 
-* [SMS-Befehle](SMS-Commands-troubleshooting)
+* [SMS-Befehle](../Children/SMS-Commands.md#troubleshooting)
 
 ### Häufige Bluetooth-Verbindungsprobleme
 
@@ -84,27 +84,27 @@ Hier sind Beispiele wie, Du die Einstellungen auf einzelnen Android-Smartphones 
 
 ## CGM
 
-* [Allgemein](GeneralCGMRecommendation-troubleshooting)
-* [Dexcom G6](DexcomG6-troubleshooting-g6)
-* [Libre 3](Libre3-experiences-and-troubleshooting)
-* [Libre 2](Libre2-experiences-and-troubleshooting)
-* [xDrip - fehlende CGM Daten](xdrip-identify-receiver)
-* [xDrip - Dexcom Problembehandlung](xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [Allgemein](../CompatibleCgms/GeneralCGMRecommendation.md#troubleshooting)
+* [Dexcom G6](../CompatibleCgms/DexcomG6.md#troubleshooting-g6-and-one)
+* [Libre 3](../CompatibleCgms/Libre3.md#experiences-and-troubleshooting)
+* [Libre 2](../CompatibleCgms/Libre2.md#experiences-and-troubleshooting)
+* [xDrip - fehlende CGM Daten](../CompatibleCgms/xDrip.md#identify-receiver)
+* [xDrip - Dexcom Problembehandlung](../CompatibleCgms/xDrip.md#troubleshooting-dexcom-g5g6-and-xdrip)
 
 ## Pumpen
 
-* [Dana RS](DanaRS-Insulin-Pump-dana-rs-specific-errors)
-* [Accu-Chek Combo allgemein](Accu-Chek-Combo-Tips-for-Basic-usage)
-* [Accu-Chek Combo + Ruffy](Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
-* [Accu-Chek Insight](Accu-Chek-Insight-Pump-insight-specific-errors)
-* [Medtronic + RileyLink](MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
+* [Dana RS](../CompatiblePumps/DanaRS-Insulin-Pump.md#dana-rs-specific-errors)
+* [Accu-Chek Combo allgemein](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md)
+* [Accu-Chek Combo + Ruffy](../CompatiblePumps/Accu-Chek-Combo-Pump.md#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
+* [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md#insight-specific-errors)
+* [Medtronic + RileyLink](../CompatiblePumps/MedtronicPump.md#what-to-do-if-i-loose-connection-to-rileylink-andor-pump)
 
 ## Smartphones
 
-* [Unihertz Jelly](../Usage/jelly.md)
-* [Huawei Bluetooth & Optimierung der Akkulaufzeit](../Usage/huawei.md)
+* [Unihertz Jelly](../CompatiblePhones/Jelly.md)
+* [Huawei Bluetooth & Optimierung der Akkulaufzeit](../CompatiblePhones/Huawei.md)
 
 ## Smartwatches
 
-* [Fehlerbehebung der Wear App](Watchfaces-troubleshooting-the-wear-app)
+* [Fehlerbehebung der Wear App](../Configuration/Watchfaces.md#troubleshooting-the-wear-app)
 * [Sony Smartwatch 3](../Usage/SonySW3.md)
