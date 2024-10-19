@@ -63,13 +63,13 @@
 
 #### העלאת פרופילים מקומיים לנייטסקאוט
 
-ניתן גם להעלות את הפרופילים המקומיים לנייטסקאוט. ניתן למצוא את ההגדרות ב[העדפות NSClient](Preferences-nsclient).
+ניתן גם להעלות את הפרופילים המקומיים לנייטסקאוט. The settings can be found in [NSClient preferences](../Configuration/Preferences.md#nsclient).
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
 
 #### שינוי הפרופיל בעורך הפרופיל של נייטסקאוט
 
-You can synchronize changes to the profile in the Nighscout profile editor to local profiles. ניתן למצוא את ההגדרות ב[העדפות NSClient](Preferences-nsclient).
+You can synchronize changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](../Configuration/Preferences.md#nsclient).
 
 זה הכרחי לשכפל את כלל מסד הנתונים הפעיל ולא רק פרופיל אחד עם החץ הכחול! התאריך העדכני נרשם עם מסד הנתונים החדש וניתן להפעילו בלשונית "פרופיל מקומי".
 
@@ -102,13 +102,13 @@ You can synchronize changes to the profile in the Nighscout profile editor to lo
 * ה-DIA (משך זמן פעילות האינסולין) משתנה מאדם לאדם. משום כך, עליכם לבדוק את הנתון הזה באופן אישי. 
 * אבל ה-DIA תמיד חייב להיות לפחות 5 שעות.
 * אצל אנשים רבים המשתמשים באינסולין מהיר במיוחד, כמו Fiasp, כמעט ואי אפשר לזהות השפעה כלשהי לאחר שעברו 3-4 שעות, גם אם בעיקרון עדיין נותרו 0.0xx יחידות. הכמות שנותרה בכל זאת עשויה להיות מורגשת בזמן פעילות גופנית, למשל. Therefore, AAPS uses minimum 5h as DIA.
-* ניתן לקרוא עוד מידע בנושא בעמוד [זה](Screenshots-insulin-profile), על פרופילי האינסולין.
+* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots.md#insulin-profile) page.
 
 ### הבדלים בסוגי אינסולין שונים
 
 * באינסולין מסוג Rapid-Acting, Ultra-Rapid, ו-Lyumjev, ה-DIA הוא הנתון היחיד שתוכלו להגדיר בעצמכם. משך הזמן עד השיא הינו קבוע. 
 * שיא חופשי מאפשר לכם להגדיר הן את ה-DIA והן את משך הזמן עד השיא, ומומלץ לשימוש רק על ידי משתמשים מתקדמים המבינים את משמעות ההשלכות של ההגדרות הללו. 
-* [גרף עקומת האינסולין](Screenshots-insulin-profile) מסייע לכם להבין את העקומות השונות.
+* The [insulin curve graph](../Getting-Started/Screenshots.md#insulin-profile) helps you to understand the different curves.
 * ניתן לצפות בו על ידי סימון "V" במשבצת כדי שיופיע כלשונית, או לחילופין למצוא אותו בתוך תפריט ההמבורגר.
 
 #### Oref אינסולין מהיר
@@ -149,7 +149,7 @@ You can synchronize changes to the profile in the Nighscout profile editor to lo
 
 ## מקור ערכי הסוכר
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.md) page for more setup information.
+Select the blood glucose source you are using - see [BG Source](../Getting-Started/CompatiblesCgms.md) page for more setup information.
 
 ![Config Builder BG source](../images/ConfBuild_BG.png)
 
@@ -171,21 +171,21 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 
 ![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS30.png)
 
-* [Dana R](DanaR-Insulin-Pump.md)
+* [Dana R](../CompatiblePumps/DanaR-Insulin-Pump.md)
 * Dana R של השוק הפנים קוראני
 * Dana Rv2 (Dana R עם שדרוג גרסת קושחה לא רשמי)
-* [Dana-i / RS](DanaRS-Insulin-Pump.md)
+* [Dana-i / RS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
     
     * עבור משאבות Dana, במקרה הצורך, הפעילו את האפשרות BT Watchdog שבהעדפות, תחת הכותרת 'משאבה'. אפשרות זו מכבה את הבלוטות' של הטלפון לשניה אחת אם לא נוצר קשר אל המשאבה. זה יכול לעזור בטלפונים מסויימים שיש להם נטייה לניתוקים של בלוטות'.
-    * [סיסמת משאבת Dana RS](../Configuration/DanaRS-Insulin-Pump.md) חייבת להיות נכונה. הסיסמה לא נבדקה בגרסאות קודמות.
+    * [Password for Dana RS pump](../CompatiblePumps/DanaRS-Insulin-Pump.md) must be entered correctly. הסיסמה לא נבדקה בגרסאות קודמות.
 
-* [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
+* [Accu Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
 
-* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (מצריך התקנת ruffy בנוסף)
-* [Omnipod Eros](OmnipodEros.md)
-* [Omnipod DASH](OmnipodDASH.md)
-* [Medtronic](MedtronicPump.md)
-* [Diaconn G8](DiaconnG8.md)
+* [Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Omnipod Eros](../CompatiblePumps/OmnipodEros.md)
+* [Omnipod DASH](../CompatiblePumps/OmnipodDASH.md)
+* [Medtronic](../CompatiblePumps/MedtronicPump.md)
+* [Diaconn G8](../CompatiblePumps/DiaconnG8.md)
 * MDI (קבלת המלצות מ-AAPS לטיפול של הזרקות ידניות ללא משאבה)
 * משאבה וירטואלית (לולאה פתוחה לשימוש עם משאבות שעוד לא או שאינן מתחברות ל-AAPS - קבלת המלצות בלבד)
 
@@ -193,7 +193,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 
 בחרו את סוג זיהוי הרגישות. [לחצו כאן](../Configuration/Sensitivity-detection-and-COB.md) למידע נוסף על האפשרויות השונות. פונקציה זו תנתח את המידע ההיסטורי בשעת מעשה ותבצע התאמות במידה ותזהה כי הנכם מגיבים לאינסולין ברגישות יתר מהרגיל (או להיפך, אינכם מגיבים מספיק). מידע נוסף על אלגוריתם הרגישות ניתן למצוא ב[מסמכי OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-תוכלו לראות את רמת הרגישות שלכם בעמוד הבית, על ידי בחירה ברגישות ומעקב אחרי העקום הלבן בגרף. שימו לב: עליכם להגיע ל[משימה 8](Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) לפני שזיהוי הרגישות/[Autosens](Open-APS-features-autosens) יוכל להתאים אוטומטית את מתן האינסולין. עד שתגיעו לשלב זה במשימות, אחוזי ה-Autosens והעקום הלבן בגרף מוצגים כמידע בלבד.
+תוכלו לראות את רמת הרגישות שלכם בעמוד הבית, על ידי בחירה ברגישות ומעקב אחרי העקום הלבן בגרף. Note, you need to be in [Objective 8](../Usage/completing-the-objectives.md#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features.md#autosens) automatically adjust the amount of insulin delivered. עד שתגיעו לשלב זה במשימות, אחוזי ה-Autosens והעקום הלבן בגרף מוצגים כמידע בלבד.
 
 (Config-Builder-absorption-settings)=
 
@@ -208,7 +208,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 בחר את אלגוריתם ה-APS הרצוי להתאמות טיפוליות. ניתן לצפות בפרטי הפעילות של האלגוריתם הנבחר בלשונית ה-OpenASP(OAPS).
 
 * OpenAPS AMA ("עוזר ארוחות מתקדם", אלגוריתם מ-2017) במילים פשוטות, לאחר הזרקת בולוס ארוחה, האלגוריתם יכול לתקן מהר עם בזאלי זמני גבוה אם הזנתם את כמות הפחמימות במדוייק.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (סופר מיקרו בולוס, האלגוריתם העדכני ביותר למשתמשים מתקדמים) שימו לב: יש להגיע ל[משימה 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) לפני שתוכלו להשתמש ב-OpenAPS SMB, ועל ה-min_5m_carbimpact להיות מוגדר כ-8 בהגדרות של בונה התצורה > זיהוי רגישות > הגדרות רגישות Oref1.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../Usage/completing-the-objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## לולאה
 
@@ -230,7 +230,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 
 * AAPS מנתח ללא הרף את כל הנתונים הזמינים (IOB - אינסולין פעיל בגוף, COB - פחמימות פעילות, BG - רמת הסוכר...) ומתאים אוטומטית את הטיפול במידת הצורך (ללא צורך בהתערבות המשתמש) על מנת להגיע לערך או טווח המטרה שנקבע (על ידי מתן בולוס, שינוי בזאלי זמני, השהיית מתן האינסולין למניעת היפו, וכדו'). 
 * הלולאה הסגורה פועלת במסגרת אינספור מגבלות בטיחות, אותן תוכלו להגדיר באופן אישי.
-* ניתן להשתמש בלולאה הסגורה רק לאחר שהגעתם ל[משימה 6](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend) ומעלה ואתם משתמשים במשאבה נתמכת.
+* Closed Loop is only possible if you are in [Objective 6](../Usage/completing-the-objectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
 * שימו לב: במצב לולאה סגורה מומלץ להגדיר מטרה יחידה במקום טווח מטרה (לדוגמא, 100 mg/dl במקום 90-125 mg/dl).
 
 ### השהייה בזמן רמת גלוקוז נמוכה (LGS)
@@ -252,11 +252,11 @@ AAPS has a leraning program (objectives) that you have to fulfill step by step. 
 
 עליכם [לייצא את הגדרותיכם](../Usage/ExportImportSettings.md) (זה כולל את התקדמותכם במשימות) בקביעות. במקרה בו תחליפו את הטלפון (בגלל קניית חדש, נזק וכו') תוכלו לייבא את ההגדרות.
 
-ראו עמוד [משימות](../Usage/Objectives.md) למידע נוסף.
+See [Objectives](../Usage/completing-the-objectives.md) page for more information.
 
 ## טיפולים
 
-בלשונית טיפולים, תוכלו לראות את הטיפולים שהועלו לנייטסקאוט. אם ברצונכם לערוך או למחוק ערך (למשל, אכלתם פחות פחמימות ממה שציפיתם) בחרו "הסר" והזינו את הערך החדש (שנו את הזמן במידת הצורך) באמצעות כפתור ה[פחמימות במסך הבית](Screenshots-carb-correction).
+בלשונית טיפולים, תוכלו לראות את הטיפולים שהועלו לנייטסקאוט. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
 
 ## כללי
 
@@ -315,20 +315,20 @@ Choose wether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTO
 
 #### אורות חיווי
 
-בחרו אם ברצונכם לראות [אורות חיווי](Preferences-status-lights) בסקירה הכללית לגבי גיל הצינורית, גיל אינסולין, גיל החיישן, גיל הסוללה, רמת המכל ורמת הסוללה. כאשר מגיעה רמת האזהרה, צבע נורית המצב יעבור לצהוב. גיל קריטי יוצג באדום.
+Choose if you want to have [status lights](../Configuration/Preferences.md#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. כאשר מגיעה רמת האזהרה, צבע נורית המצב יעבור לצהוב. גיל קריטי יוצג באדום.
 
 #### הגדרות מתקדמות
 
 **ספק את חלק זה מתוצאת אשף הבולוס[%]**: בעת שימוש ב-SMB, אנשים רבים אינם מזריקים את כל האינסולין הדרוש בבת אחת, אלא רק חלק ממנו (למשל 75%) ונותנים ל-SMB עם UAM (זיהוי ארוחות לא מוכרזות) לעשות את השאר. בהגדרה זו, באפשרותכם לבחור ערך ברירת מחדל עבור אחוז הבולוס שמוזרק מתוך חישוב בולוס הארוחה במחשבון. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
 
-**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. בעיקרון, המינון הבזאלי לשעתיים הקרובות מתווסף לבולוס ומופעל מינון בזאלי זמני 0 למשך שעתיים. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. בעיקרון, המינון הבזאלי לשעתיים הקרובות מתווסף לבולוס ומופעל מינון בזאלי זמני 0 למשך שעתיים. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 (Config-Builder-actions)=
 
 ### פעולות
 
 * לחצנים לגישה מהירה לפונקציות שימושיות.
-* See [AAPS screenshots](Screenshots-action-tab) for details.
+* See [AAPS screenshots](../Getting-Started/Screenshots.md#action-tab) for details.
 
 ### אוטומציה
 
@@ -368,7 +368,7 @@ Display loop information on your xDrip+ watchface (if you are not using AAPS/[AA
 ### NSClient
 
 * Setup sync of your AAPS data with Nightscout.
-* Settings in [preferences](Preferences-nsclient) can be opened by clicking the cog wheel.
+* Settings in [preferences](../Configuration/Preferences.md#nsclient) can be opened by clicking the cog wheel.
 
 ### תחזוקה
 
