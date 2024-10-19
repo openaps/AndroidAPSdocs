@@ -306,7 +306,7 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 ### 血糖來源
 
-選擇你使用的血糖來源。 請閱讀[血糖來源](../Configuration/BG-Source.md)的文檔。
+選擇你使用的血糖來源。 Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
 
 由於有多個選項可用，因此我們不會在此詳細解釋所有選項的配置。 在這裡我們使用Dexcom G6與BYODA應用程式的示例：
 
@@ -428,7 +428,7 @@ Nightscout 使用者應選擇 **NSClient v3**，除非你希望透過 Nightscout
 
 否則，請使用左上角的箭頭退出設定嚮導，讓 **AAPS** 首先顯示一些血糖值。 你可以隨時返回或使用直接配置選項（不使用嚮導）。
 
-請閱讀你的[胰島素幫浦](../Getting-Started/Pump-Choices.md)文檔。
+Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
 
 按“下一步”進入下一個螢幕。
 
