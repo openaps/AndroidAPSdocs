@@ -2,13 +2,13 @@
 
 Sorun giderme bilgilerini viki'deki birçok sayfada bulabilirsiniz. Bu sayfa, sorununuzu çözecek bilgileri bulmanıza yardımcı olacak bir bağlantılar topluluğudur.
 
-Faydalı ilave bilgilere de [SSS](../Getting-Started/FAQ.html) sayfasından ulaşabilirsiniz.
+Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.md).
 
 ## AAPS app
 
 ### Yapım & güncelleme
 
-* [Kayıp keystore](troubleshooting_androidstudio-lost-keystore)
+* [Kayıp keystore](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore)
 * [Android Studio'da Sorun Giderme](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 
 ### Ayarlar
@@ -16,18 +16,18 @@ Faydalı ilave bilgilere de [SSS](../Getting-Started/FAQ.html) sayfasından ula�
 
   ![Hata: Bazal saatlere göre ayarlanamadı](../images/Screen_DifferentPump.png)
 
-* [Pompa - farklı pompadan alınan veriler](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
+* [Pompa - farklı pompadan alınan veriler](../Installing-AndroidAPS/update3_0.md#failure-message-data-from-different-pump)
 
   ![Hata mesajı: Farklı pompadan gelen veriler](../images/BasalNotAlignedToHours2.png)
 
-* [Nightscout Client](../Usage/Troubleshooting-NSClient.html)
+* [Nightscout Client](../Usage/Troubleshooting-NSClient.md)
 
 ### Kullanım
-* [Yanlış karbonhidrat değerleri](COB-calculation-detection-of-wrong-cob-values)
+* [Yanlış karbonhidrat değerleri](../Usage/COB-calculation.md#detection-of-wrong-cob-values)
 
    ![Hata: Yavaş karbonhidrat emilimi](../images/Calculator_SlowCarbAbsorption.png)
 
-* [SMS Komutları](SMS-Commands-troubleshooting)
+* [SMS Komutları](../Children/SMS-Commands.md#troubleshooting)
 
 ### Sık bluetooth bağlantı sorunları
 
@@ -84,27 +84,27 @@ Bunları belirli android telefonlarda nasıl bulacağınıza dair örnekler aşa
 
 ## CGM
 
-* [Genel](GeneralCGMRecommendation-troubleshooting)
-* [Dexcom G6](DexcomG6-troubleshooting-g6)
-* [Libre 3](Libre3-experiences-and-troubleshooting)
-* [Libre 2](Libre2-experiences-and-troubleshooting)
-* [xDrip - CGM verisi yok](xdrip-identify-receiver)
-* [xDrip - Dexcom sorun giderme](xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
+* [Genel](../CompatibleCgms/GeneralCGMRecommendation.md#troubleshooting)
+* [Dexcom G6](../CompatibleCgms/DexcomG6.md#troubleshooting-g6-and-one)
+* [Libre 3](../CompatibleCgms/Libre3.md#experiences-and-troubleshooting)
+* [Libre 2](../CompatibleCgms/Libre2.md#experiences-and-troubleshooting)
+* [xDrip - CGM verisi yok](../CompatibleCgms/xDrip.md#identify-receiver)
+* [xDrip - Dexcom sorun giderme](../CompatibleCgms/xDrip.md#troubleshooting-dexcom-g5g6-and-xdrip)
 
 ## Pompalar
 
-* [DanaRS](DanaRS-Insulin-Pump-dana-rs-specific-errors)
-* [Accu-Chek Combo genel](Accu-Chek-Combo-Tips-for-Basic-usage)
-* [Accu-Chek Combo + Ruffy](Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
-* [Accu-Chek Insight](Accu-Chek-Insight-Pump-insight-specific-errors)
-* [Medtronic + RileyLink](MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
+* [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md#dana-rs-specific-errors)
+* [Accu-Chek Combo genel](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md)
+* [Accu-Chek Combo + Ruffy](../CompatiblePumps/Accu-Chek-Combo-Pump.md#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
+* [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md#insight-specific-errors)
+* [Medtronic + RileyLink](../CompatiblePumps/MedtronicPump.md#what-to-do-if-i-loose-connection-to-rileylink-andor-pump)
 
 ## Telefonlar
 
-* [Jelly](../Usage/jelly.md)
-* [Huawei bluetooth & pil optimizasyonu](../Usage/huawei.md)
+* [Jelly](../CompatiblePhones/Jelly.md)
+* [Huawei bluetooth & pil optimizasyonu](../CompatiblePhones/Huawei.md)
 
 ## Akıllı saatler
 
-* [Wear uygulamasında sorun giderme](Watchfaces-troubleshooting-the-wear-app)
+* [Wear uygulamasında sorun giderme](../Configuration/Watchfaces.md#troubleshooting-the-wear-app)
 * [Sony Smartwatch 3](../Usage/SonySW3.md)
