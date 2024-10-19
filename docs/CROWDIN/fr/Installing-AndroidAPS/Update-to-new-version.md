@@ -14,18 +14,18 @@
 
 ## Overview for updating to a new version of AAPS
 
-1. [Export your settings](../Usage/ExportImportSettings-export-settings) from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
-2. [Update local copy](Update-to-new-version-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
-3. [Constuire un apk signé](Update-to-new-version-build-the-signed-apk)
-4. [Transférez l'apk généré](Building-APK-transfer-apk-to-smartphone) sur votre téléphone et installez le
-5. [Check the version](Update-to-new-version-check-aaps-version-on-phone) in AAPS
-6. En fonction de votre [source de glycémie](../Configuration/BG-Source.md) vérifiez bien [identify receiver](xdrip-identify-receiver) dans xDrip+ ou utilisez l'application [BYODA (Construisez votre propre application Dexcom)](DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+1. [Export your settings](../Usage/ExportImportSettings.md) from the existing **AAPS** version on your phone. You might not need it, but better be safe than sorry.
+2. [Update local copy](#2-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
+3. [Constuire un apk signé](#3-build-the-signed-apk)
+4. [Transfer the built apk](#4-transfer-the-apk) to your phone and install it
+5. [Check the version](#6-check-aaps-version-on-phone) in AAPS
+6. Depending on your [BG source](../Getting-Started/CompatiblesCgms.md) make sure to [identify receiver](../CompatibleCgms/xDrip.md#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app).
 
-Dans le cas où vous auriez des problèmes, allez voir la page spécifique de [dépannage Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
+In case you experience problems, see separate page for [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md).
 
 ## 1. Exporter les paramètres
 
-Allez voir la page [Exporter & importer les paramètres](ExportImportSettings-export-settings) si vous ne vous souvenez plus comment faire.
+See the [Export & import settings](../Usage/ExportImportSettings.md) page if you don't remember how to do this.
 
 (Update-to-new-version-update-your-local-copy)=
 
@@ -67,13 +67,13 @@ Allez voir la page [Exporter & importer les paramètres](ExportImportSettings-ex
 
 ## 3. Construisez l'APK signé
 
-Votre code source est maintenant la version actuellement publiée. Il est maintenant temps de construire l'apk signé comme c'est décrit dans la section [Générer un APK signé](Building-APK-generate-signed-apk).
+Votre code source est maintenant la version actuellement publiée. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/building-AAPS.md#build-the-aaps-signed-apk).
 
 ## 4. Transférez l'apk
 
 Vous devez transférer l'apk sur votre téléphone pour pouvoir l'installer.
 
-Consultez les instructions pour [Transférer le fichier APK sur le smartphone](Building-APK-transfer-apk-to-smartphone)
+See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Transferring-and-installing-AAPS.md)
 
 ## 5. Installer l'apk
 
@@ -93,6 +93,6 @@ Si quelque chose ne va pas, ne paniquez pas.
 
 Respirez un bon coup !
 
-Ensuite, consultez la page [de dépannage d'Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) pour voir si votre problème est déjà documenté !
+Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) if your problem is already documented!
 
 If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).
