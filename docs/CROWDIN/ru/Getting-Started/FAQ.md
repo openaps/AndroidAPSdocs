@@ -6,7 +6,7 @@
 
 ## Можно ли скачать установочный файл AAPS?
 
-Нет. Для AndroidAPS не предоставляется загружаемый файл apk. Его надо [скомпилировать](../Installing-AndroidAPS/Building-APK.md) самостоятельно. Причина вот в чем:
+Нет. Для AndroidAPS не предоставляется загружаемый файл apk. You have to [build](../Installing-AndroidAPS/building-AAPS.md) it yourself. Причина вот в чем:
 
 AndroidAPS создан для управления помпой и подачи инсулина. В соответствии с действующим Европейским законодательством, все системы, классифицируемые как IIa или IIb, являются медицинскими устройствами, подлежащими обязательной сертификации (получение знака CE), что в свою очередь требует соответствующих исследований и одобрений. Распространение несертифицированных устройств незаконно. Аналогичные законы существуют и в других частях мира.
 
@@ -20,9 +20,9 @@ AndroidAPS создан для управления помпой и подачи
 
 Прежде всего, нужно **подготовить компоненты, которые работают с ипж**:
 
-- [Совместимая с AAPS(ИПЖ) инсулиновая помпа](./Pump-Choices.md) 
-- смартфон на Андроид (Apple iOS не поддерживается в AndroidAPS -рассмотрите вариант [iOS Loop](https://loopkit.github.io/loopdocs/))
-- [Система непрерывного мониторинга глюкозы крови (ГК)](../Configuration/BG-Source.md). 
+- A [supported insulin pump](../Getting-Started/CompatiblePumps.md), 
+- an [Android smartphone](../CompatiblePhones/ListOfTestedPhones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
+- a [continuous glucose monitoring system](../Getting-Started/CompatiblesCgms.md). 
 
 Во-вторых, нужно **настроить оборудование**. Смотрите [пример установки с пошаговым руководством](Sample-Setup.md).
 
@@ -46,7 +46,7 @@ AndroidAPS создан для управления помпой и подачи
 
 Если вы снимаете помпу на время душа, купания, занятия спортом или других действий, то, чтобы активный инсулин IOB правильно отражался в системе, следует проинформировать AAPS, что инсулин не вводится,.
 
-Помпу можно отключить с помощью нажатия на символ цикла на [главном экране AAPS](Screenshots-loop-status).
+The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](../Getting-Started/Screenshots.md#loop-status).
 
 ### Рекомендации основаны не на одном показании мониторинга
 
@@ -67,7 +67,7 @@ AndroidAPS создан для управления помпой и подачи
 
 - Банк батарей и кабель для зарядки смартфона, часов и (если это необходимо) BT reader или Link device
 - Батарейки для помпы
-- Действующие дистрибутивы [apk](../Installing-AndroidAPS/Building-APK.md) и [файлы настроек](../Usage/ExportImportSettings.md) для AAPS и других приложений, (напр. xDrip+, BYO Dexcom) как локально, так и в облаке (Dropbox, Google Drive).
+- Current [apk](../Installing-AndroidAPS/building-AAPS.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## Как надежно и безопасно закрепить сенсор для мониторинга?
 
@@ -246,8 +246,8 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 - протирайте контакты батареи спиртовыми салфетками, чтобы на ней не оставались следы заводской смазки.
 
-- в [помпах DanaR/RS ](../Configuration/DanaRS-Insulin-Pump.md)процедура запуска батареи подает импульс высокого напряжения для устранения заводской пленки (которая предотвращает потерю энергии при хранении), но это не всегда срабатывает на 100%. Либо удалите и заново вставьте батарею 2-3 раза до тех пор, пока на экране помпы заряд батареи не покажет 100%, либо замкните контакты батареи на долю секунды при помощи ключа батареи, чтобы удалить этот налет.
-- см. также советы для [конкретных типов батареи](Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
+- for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Либо удалите и заново вставьте батарею 2-3 раза до тех пор, пока на экране помпы заряд батареи не покажет 100%, либо замкните контакты батареи на долю секунды при помощи ключа батареи, чтобы удалить этот налет.
+- see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md#battery-type-and-causes-of-short-battery-life)
 
 ### Замена картриджей и катетеров
 
@@ -255,14 +255,14 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 - Нажмите и удерживайте кнопку "Открытый цикл"/"Замкнутый цикл" на вкладке "Главный экран" AAAPS и выберите "Приостановка цикла на 1ч.'
 - Отключите помпу и замените резервуар в соответствии с инструкцией помпы.
-- Заполнить инфузионный набор можно и непосредственно с помпы. В этом случае пользуйтесь кнопкой [первичное заполнение инфузионного набора](CPbefore26-pump) во вкладке "Действия" только для внесения записи изменений.
+- Заполнить инфузионный набор можно и непосредственно с помпы. In this case use [PRIME/FILL button](../Getting-Started/Screenshots.md#action-tab) in the actions tab just to record the change.
 - После переподключения помпы запустите цикл долгим нажатием на 'Приостановлено (X мин.)'.
 
-Однако замена катетера происходит не через функцию "первичного заполнения инфузионного набора" на помпе, но заполняет катетер с помощью болюса, который не отражается в истории болюса. Это означает, что текущая временная скорость базала не прерывается. На вкладке Действия при помощи кнопки [ЗАПОЛНИТЬ](CPbefore26-pump) задайте то количество инсулина, которое необходимого для заполнения инфузионного набора и начните первичное заполнение. Если этого количества недостаточно, повторите заполнение. Вы можете установить кнопки по умолчанию в Настройках > Другое > Заполнить/Инициировать стандартные количества инсулина. В инструкции к инфузионному набору вы найдете объемы единиц для первичного заполнения в зависимости от длины иглы и длины трубки.
+Однако замена катетера происходит не через функцию "первичного заполнения инфузионного набора" на помпе, но заполняет катетер с помощью болюса, который не отражается в истории болюса. Это означает, что текущая временная скорость базала не прерывается. On the Actions (Act) tab, use the [PRIME/FILL button](../Getting-Started/Screenshots.md#action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. Если этого количества недостаточно, повторите заполнение. Вы можете установить кнопки по умолчанию в Настройках > Другое > Заполнить/Инициировать стандартные количества инсулина. В инструкции к инфузионному набору вы найдете объемы единиц для первичного заполнения в зависимости от длины иглы и длины трубки.
 
 ## Фоновый рисунок
 
-Обои AAPS можно найти для телефона на странице [ Телефоны ](Phones-phone-background).
+You can find the AAPS wallpaper for your phone on the [phones page](../CompatiblePhones/ListOfTestedPhones.md#phone-background).
 
 ## Повседневное применение
 
@@ -270,11 +270,11 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 #### Что делать при приеме душа или ванной?
 
-Помпу можно снять при приеме душа или ванной. За этот короткий промежуток времени вам может не понадобиться, но вы должны сообщить AAPS о том, что отключились для того, чтобы вычисления IOB были правильными. См. [ описание выше ](FAQ-disconnect-pump).
+Помпу можно снять при приеме душа или ванной. За этот короткий промежуток времени вам может не понадобиться, но вы должны сообщить AAPS о том, что отключились для того, чтобы вычисления IOB были правильными. See [description above](../Getting-Started/FAQ.md#disconnect-pump).
 
 ### На работе
 
-В зависимости от вида работы, возможно, вы используете иные методы терапии в рабочие дни. В этом случае есть смысл рассмотреть переключение [профиля](../Usage/Profiles.md) на типичный рабочий день. Например, профиль больше 100% можно установить, если работа не очень тяжелая (напр. сидя за столом), или меньше 100%, если вы активны и на ногах весь день. Также можно рассмотреть возможность установки высокой или низкой временной цели или [смены профиля](Profiles-time-shift), если начинаете намного раньше или позже обычного, или в разные смены. Также можно создать второй профиль (например, дом' и 'работа') и при необходимости переключаться с профиля на профиль.
+В зависимости от вида работы, возможно, вы используете иные методы терапии в рабочие дни. В этом случае есть смысл рассмотреть переключение [профиля](../Usage/Profiles.md) на типичный рабочий день. Например, профиль больше 100% можно установить, если работа не очень тяжелая (напр. сидя за столом), или меньше 100%, если вы активны и на ногах весь день. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles.md#time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, of if you work different shifts. Также можно создать второй профиль (например, дом' и 'работа') и при необходимости переключаться с профиля на профиль.
 
 ## Отдых
 
@@ -289,8 +289,8 @@ AAPS по умолчанию строит свой алгоритм отталк
 При работе с алгоритмом ИПЖ следует выполнить следующие действия:
 
 - Уменьшите [ профиль ](../Usage/Profiles.md) < 100%.
-- Установите [временную цель нагрузка](temptarget-activity-temp-target) выше стандартного целевого значения.
-- Если вы пользуетесь микроболюсами SMB, убедитесь, что [ Включить SMB с высокими временными целями "](Open-APS-features-enable-smb-with-high-temp-targets) и [" Включить SMB всегда " ](Open-APS-features#enable-smb-always) неактивны.
+- Set an [activity temp target](../Usage/temptarget.md#activity-temp-target) above your standard target.
+- If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features.md#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features.md#enable-smb-always) are disabled.
 
 Важное значение имеет предварительная и последующая обработка этих настроек. Внесите изменения до занятий спортом и учитывайте эффект наполнения мышц.
 
@@ -300,7 +300,7 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 ### Секс
 
-Можете снять помпу для "свободы" но следует проинформировать об этом AAPS, чтобы расчеты активного инсулина IOB были правильными. См. [ описание выше ](FAQ-disconnect-pump).
+Можете снять помпу для "свободы" но следует проинформировать об этом AAPS, чтобы расчеты активного инсулина IOB были правильными. See [description above](#disconnect-pump).
 
 ### Употребление алкоголя
 
@@ -316,7 +316,7 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 #### Как обеспечить работу цикла ночью без воздействия мобильного и WIFI излучения?
 
-Многие пользователи ночью переводят телефон в режим авиаперелета. Если вы хотите, чтобы AAPS поддерживал вас во время сна, действуйте следующим образом (будет работать только с локальным источником ГК, таким как xDrip+ или ['самостоятельно построенным приложением Dexcom BYODA'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app), но НЕ будет работать, если данные ГК поступают с сайта Nightscout):
+Многие пользователи ночью переводят телефон в режим авиаперелета. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Включите режим авиаперелета на вашем мобильном устройстве.
 2. Подождите, пока режим авиаперелета не будет активирован.
@@ -350,11 +350,11 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 ## Моя проблема здесь не указана.
 
-[Информация о получении помощи.](Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Информация о получении помощи.](../Where-To-Go-For-Help/Connect-with-other-users.md#im-getting-stuck-what-do-i-do-who-can-i-ask)
 
 ## Моя проблема не перечислена здесь, но я нашел решение
 
-[Информация о получении помощи.](Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Информация о получении помощи.](../Where-To-Go-For-Help/Connect-with-other-users.md#im-getting-stuck-what-do-i-do-who-can-i-ask)
 
 **Напомните нам о добавлении вашего решения в этот список!**
 
@@ -372,7 +372,7 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 Пожалуйста,
 
-- проверьте [Устранение неполадок Android Studio](troubleshooting_androidstudio-troubleshooting-android-studio) на наличие типичных ошибок и
+- check [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) for typical errors and
 - [пошаговые инструкции](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
 ## Я застрял на цели и нуждаюсь в помощи.
@@ -385,7 +385,7 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 ## Как сбросить пароль в AAPS v3.x
 
-Документация [здесь](update3_0-reset-master-password).
+You find the documentation [here](../Installing-AndroidAPS/update3_0.md#reset-master-password).
 
 ## Мой Link/помпа/pod не отвечает (RL/OL/EmaLink…)
 
