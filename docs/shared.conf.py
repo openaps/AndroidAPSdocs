@@ -142,7 +142,7 @@ theme_github_user = 'openAPS'
 theme_github_repo = 'AndroidAPSdocs'
 
 html_context = {
-  'display_github': True,
+  'display_github': False,
   'github_user': 'openaps',
   'github_repo': 'AndroidAPSdocs',
   'github_version': 'master/docs/',
