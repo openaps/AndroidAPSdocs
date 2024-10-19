@@ -306,7 +306,7 @@ Appuyez sur "SUIVANT" pour passer à l'écran suivant :
 
 ### Source des glycémies
 
-Sélectionnez d'où vous allez recevoir les glycémies. Veuillez lire la documentation correspondant à votre [source de glycémie (MGC)](../Configuration/BG-Source.md).
+Sélectionnez d'où vous allez recevoir les glycémies. Please read the documentation for your [BG source](../Getting-Started/CompatiblesCgms.md).
 
 Comme il existe diverses possibilités, nous n'expliquons pas la configuration de chacune ici. Nous utilisons Dexcom G6 avec l'application BYODA dans notre exemple ici :
 
@@ -428,7 +428,7 @@ Si vous avez déjà configuré votre profil dans les étapes précédentes et qu
 
 Sinon, quittez l'Assistant de configuration en utilisant la flèche en haut à gauche et laissez **AAPS** vous montrer d'abord quelques valeurs de glycémie. Vous pouvez revenir à tout moment ou accéder directement à la configuration (sans utiliser l'Assistant).
 
-Veuillez lire la documentation pour votre [pompe à insuline](../Getting-Started/Pump-Choices.md).
+Please read the documentation for your [insulin pump](../Getting-Started/CompatiblePumps.md).
 
 Appuyez sur "SUIVANT" pour passer à l'écran suivant.
 
