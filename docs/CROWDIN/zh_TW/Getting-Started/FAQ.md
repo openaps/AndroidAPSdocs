@@ -6,7 +6,7 @@
 
 ## 我可以直接下載 AAPS 的安裝檔嗎？
 
-不行。 AAPS 沒有可下載的 apk 檔案。 你必須自己[建置](../Installing-AndroidAPS/Building-APK.md)他。 原因如下：
+不行。 AAPS 沒有可下載的 apk 檔案。 You have to [build](../Installing-AndroidAPS/building-AAPS.md) it yourself. 原因如下：
 
 AAPS 用來控制你的幫浦並提供胰島素。 根據歐洲現行法規，所有歸類為 IIa 或 IIb 類的系統都是需要法規批准的醫療設備（需要 CE 標誌），這需要各種研究和簽字確認。 分發未經批准的設備是非法的。 在世界其他地區也有類似的法規。
 
@@ -20,9 +20,9 @@ AAPS 用來控制你的幫浦並提供胰島素。 根據歐洲現行法規，�
 
 首先，你需要**獲取可循環的硬體元件**：
 
-- 一個[支援的胰島素幫浦](./Pump-Choices.md)， 
-- 一部[Android 智慧型手機](Phones.md)（AAPS 不支援 Apple iOS，你可以查閱 [iOS Loop](https://loopkit.github.io/loopdocs/)），以及
-- 一個[連續血糖監測系統](../Configuration/BG-Source.md)。 
+- A [supported insulin pump](../Getting-Started/CompatiblePumps.md), 
+- an [Android smartphone](../CompatiblePhones/ListOfTestedPhones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
+- a [continuous glucose monitoring system](../Getting-Started/CompatiblesCgms.md). 
 
 其次，你需要**設定你的硬體**。 請參閱[步驟教學的範例設置](Sample-Setup.md)。
 
@@ -46,7 +46,7 @@ AAPS 用來控制你的幫浦並提供胰島素。 根據歐洲現行法規，�
 
 如果你因淋浴、沐浴、游泳、運動或其他活動而取下幫浦，你必須讓 AAPS 知道未輸送胰島素，以保持 IOB 的正確性。
 
-可以使用 [AAPS 主畫面](Screenshots-loop-status)上的循環狀態圖示來中斷幫浦連線。
+The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](../Getting-Started/Screenshots.md#loop-status).
 
 ### 建議不是僅基於單一 CGM 讀取值
 
@@ -67,7 +67,7 @@ AAPS 用來控制你的幫浦並提供胰島素。 根據歐洲現行法規，�
 
 - 用於為智慧型手機、手錶和（如有需要）BT 閱讀器或 Link 設備充電的行動電源和充電線
 - 幫浦電池
-- 目前的 [apk](../Installing-AndroidAPS/Building-APK.md) 和 AAPS 及其他應用程式（例如 xDrip+、BYO Dexcom）的[偏好設定檔案](../Usage/ExportImportSettings.md)，同時儲存在本地和雲端（Dropbox、Google Drive）。
+- Current [apk](../Installing-AndroidAPS/building-AAPS.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## 如何安全、牢固地安裝 CGM/FGM？
 
@@ -246,8 +246,8 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 
 - 使用酒精擦拭電池端子，確保沒有殘留的製造蠟/油脂。
 
-- 對於[Dana R/RS 幫浦](../Configuration/DanaRS-Insulin-Pump.md)，啟動過程會消耗較高的電流，目的是有意打破電池上的鈍化膜（防止儲存時能量損失），但他並不總能100%打破鈍化膜。 你可以將電池取出並重新插入 2-3 次，直到螢幕上顯示 100% 為止，或者使用電池鑰匙短暫短路電池，將兩個端子接觸一瞬間。
-- 也可參見更多[特定類型電池的提示](Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)
+- for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. 你可以將電池取出並重新插入 2-3 次，直到螢幕上顯示 100% 為止，或者使用電池鑰匙短暫短路電池，將兩個端子接觸一瞬間。
+- see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md#battery-type-and-causes-of-short-battery-life)
 
 ### 更換儲液罐和插管
 
@@ -255,14 +255,14 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 
 - 在 AAPS 的主頁面長按“開環”/“閉環”，然後選擇“暫停循環 1 小時”。
 - 現在中斷幫浦，並按照幫浦的說明更換儲液罐。
-- 灌注和填充管路及插管也可以直接在幫浦上完成。 在這種情況下，請使用操作選項卡中的[灌注/填充按鈕](CPbefore26-pump)來記錄更換過程。
+- 灌注和填充管路及插管也可以直接在幫浦上完成。 In this case use [PRIME/FILL button](../Getting-Started/Screenshots.md#action-tab) in the actions tab just to record the change.
 - 重新連線幫浦後，長按“暫停 (X 分鐘)”來繼續循環。
 
-然而，更換插管時並不使用幫浦的“灌注輸液組”功能，而是使用一個不會顯示在注射歷史記錄中的注射來填充輸液組或插管。 這意味著他不會中斷目前運作的臨時基礎率。 在操作選項卡上，使用[灌注/填充按鈕](CPbefore26-pump)來設置填充輸液組所需的胰島素量並開始灌注。 如果這個量不足，重複填充操作。 你可以在偏好設定 > 其他 > 填充/灌注標準胰島素量中設置預設量按鈕。 請參閱插管盒中的說明手冊，了解根據針頭長度和管路長度應灌注多少單位。
+然而，更換插管時並不使用幫浦的“灌注輸液組”功能，而是使用一個不會顯示在注射歷史記錄中的注射來填充輸液組或插管。 這意味著他不會中斷目前運作的臨時基礎率。 On the Actions (Act) tab, use the [PRIME/FILL button](../Getting-Started/Screenshots.md#action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. 如果這個量不足，重複填充操作。 你可以在偏好設定 > 其他 > 填充/灌注標準胰島素量中設置預設量按鈕。 請參閱插管盒中的說明手冊，了解根據針頭長度和管路長度應灌注多少單位。
 
 ## 桌布
 
-你可以在[手機頁面](Phones-phone-background)上找到 AAPS 的手機桌布。
+You can find the AAPS wallpaper for your phone on the [phones page](../CompatiblePhones/ListOfTestedPhones.md#phone-background).
 
 ## 日常使用
 
@@ -270,11 +270,11 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 
 #### 淋浴或洗澡時該怎麼做？
 
-淋浴或洗澡時，你可以取下幫浦。 在這短時間內，你可能不需要幫浦，但你應該告訴 AAPS 你已經中斷了連線，以確保 IOB 計算正確。 請參閱[上面的說明](FAQ-disconnect-pump)。
+淋浴或洗澡時，你可以取下幫浦。 在這短時間內，你可能不需要幫浦，但你應該告訴 AAPS 你已經中斷了連線，以確保 IOB 計算正確。 See [description above](../Getting-Started/FAQ.md#disconnect-pump).
 
 ### 工作
 
-根據你的工作，你可能會選擇在工作日使用不同的治療因素。 作為循環使用者，你應該考慮為你典型的工作日設定[設定檔切換](../Usage/Profiles.md)。 例如，如果你的工作要求較低（例如坐在辦公桌前），你可以切換到高於 100% 的設定檔；如果你一整天都在活動，可以切換到低於 100% 的設定檔。 如果你經常工作時間比正常時間早或晚，或者輪班工作，你也可以考慮設置高或低臨時目標，或進行[設定檔的時間調整](Profiles-time-shift)。 你也可以建立第二個設定檔（例如“家庭”和“工作日”），並每天切換到你實際需要的設定檔。
+根據你的工作，你可能會選擇在工作日使用不同的治療因素。 作為循環使用者，你應該考慮為你典型的工作日設定[設定檔切換](../Usage/Profiles.md)。 例如，如果你的工作要求較低（例如坐在辦公桌前），你可以切換到高於 100% 的設定檔；如果你一整天都在活動，可以切換到低於 100% 的設定檔。 You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles.md#time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, of if you work different shifts. 你也可以建立第二個設定檔（例如“家庭”和“工作日”），並每天切換到你實際需要的設定檔。
 
 ## 休閒活動
 
@@ -289,8 +289,8 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 進行循環時，你應該嘗試以下步驟：
 
 - 進行[低於 100% 的設定檔切換](../Usage/Profiles.md)。
-- 設定比你的標準目標更高的[運動臨時目標](temptarget-activity-temp-target)。
-- 如果你正在使用 SMB，請確保停用[“在高臨時目標下啟用 SMB”](Open-APS-features-enable-smb-with-high-temp-targets)和[“始終啟用 SMB”](Open-APS-features#enable-smb-always)。
+- Set an [activity temp target](../Usage/temptarget.md#activity-temp-target) above your standard target.
+- If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features.md#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features.md#enable-smb-always) are disabled.
 
 這些設置的預處理和後處理非常重要。 在運動前及時進行更改，並考慮肌肉補充能量後的影響。
 
@@ -300,7 +300,7 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 
 ### 性行為
 
-你可以取下幫浦以獲得“自由”，但你應該告訴 AAPS 這樣 IOB 計算才能正確。 請參閱[上面的說明](FAQ-disconnect-pump)。
+你可以取下幫浦以獲得“自由”，但你應該告訴 AAPS 這樣 IOB 計算才能正確。 See [description above](#disconnect-pump).
 
 ### 飲酒
 
@@ -316,7 +316,7 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 
 #### 如何在沒有手機和 WIFI 訊號的情況下循環過夜？
 
-許多使用者在夜間將手機切換到飛航模式。 如果你希望循環在你睡覺時幫助你，請按照以下步驟進行操作（這僅適用於本地血糖來源，如 xDrip+ 或[“建立你自己的 Dexcom 應用程式”](DexcomG6-if-using-g6-with-build-your-own-dexcom-app)，如果你透過 Nightscout 獲取血糖讀取值，則此方法無效）：
+許多使用者在夜間將手機切換到飛航模式。 If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. 打開手機的飛航模式。
 2. 等待飛航模式生效。
@@ -350,11 +350,11 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 
 ## 我的問題不在這裡列出。
 
-[獲取幫助的訊息。](Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[獲取幫助的訊息。](../Where-To-Go-For-Help/Connect-with-other-users.md#im-getting-stuck-what-do-i-do-who-can-i-ask)
 
 ## 我的問題不在這裡列出，但我找到了答案。
 
-[獲取幫助的訊息。](Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[獲取幫助的訊息。](../Where-To-Go-For-Help/Connect-with-other-users.md#im-getting-stuck-what-do-i-do-who-can-i-ask)
 
 **提醒我們將你的解決方案添加到此列表中！**
 
@@ -372,7 +372,7 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 
 請
 
-- 檢查[Android Studio 問題排除](troubleshooting_androidstudio-troubleshooting-android-studio)以獲取典型錯誤，並
+- check [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) for typical errors and
 - 查看有關[逐步指南](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po)的提示。
 
 ## 我在目標上卡住了，需要幫助。
@@ -385,7 +385,7 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 
 ## 如何在 AAPS v3.x 中重置密碼？
 
-你可以在[這裡](update3_0-reset-master-password)找到文檔。
+You find the documentation [here](../Installing-AndroidAPS/update3_0.md#reset-master-password).
 
 ## 我的 Link/幫浦/Pod 沒有反應（RL/OL/EmaLink...）
 

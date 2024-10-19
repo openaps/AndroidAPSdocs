@@ -70,7 +70,7 @@
 
 - Pokud chcete použít hlavní heslo pouze pro zabezpečení exportovaného nastavení \<../Usage/ExportImportSettings.md> \` \_, můžete si vytvořit Vlastní heslo.
 
-- Pokud používáte vlastní heslo, klepněte na řádek "Nastavení hesla" a nastavte heslo tak, jak je popsáno výše [../Configuration/Preferences#master-password](Preferences-master-password).
+- If you are using a custom password click on line "Settings password" to set password as described [above](#master-password).
 
   ![Ochrana](../images/Pref2020_Protection.png)
 
@@ -168,7 +168,7 @@
 
 ### Standardní množství inzulinu pro Plnění/Doplňování
 
-- Pokud chcete plnit hadičku nebo kanylu prostřednictvím AAPS, můžete to udělat na [záložce akce](Screenshots-action-tab).
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots.md#action-tab).
 - Přednastavené hodnoty se dají měnit v tomto dialogu.
 
 (Preferences-range-for-visualization)=
@@ -198,7 +198,7 @@
 - Stavové indikátory zobrazují vizuální varování pro
 
   - Stáří senzoru
-  - Stav baterie senzoru pro určité typy čteček (viz. [snímky obrazovak](Screenshots-sensor-level-battery) pro podrobnosti).
+  - Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery) for details).
   - Stáří inzulínu (doba použití aktuálního zásobníku)
   - Stav zásobníku (jednotky)
   - Stáří kanyly
@@ -268,8 +268,8 @@
 
 Stavové indikátory zobrazují vizuální varování pro
 
-- [Vylepšený asistent pro jídlo (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - stav algoritmu v roce 2017
-- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### Nastavení OpenAPS AMA
 
@@ -283,7 +283,7 @@ Stavové indikátory zobrazují vizuální varování pro
 - Jakmile je tato hodnota dosažena, AAPS zastaví přidávání dodatečného bazálu, dokud hodnota inzulínu v těle (IOB) opět neklesne pod tuto hodnotu.
 - Doporučuje se nastavit toto na rozumnou hodnotu. Je doporučeno vzít **nejvyšší hodnotu bazálu** v profilu a **vynásobit ji 4**.
 - Například: máte-li ve svém profilu nejvyšší hodnotu bazálu 0.5U/h, dostanete po vynásobení 4 hodnotu 2U/h.
-- Viz také [podrobný popis funkce](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- See also [detailed feature description](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 #### Maximální bazální IOB \[U\]
 
@@ -307,7 +307,7 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 
 #### Autosens
 
-- [Autosens](Open-APS-features-autosens) sleduje odchylky glukózy v krvi (pozitivní/negativní/neutrální).
+- [Autosens](../Usage/Open-APS-features.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
 - Pokud je chcete i přesto změnit, prostudujte si podrobnosti v , abyste pochopili, co děláte.
 - Pokud vyberete "Autosens také nastavuje cíl", bude algoritmus upravovat i vaši cílovou hodnotu glykémie.
 
@@ -319,17 +319,17 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 (Preferences-openaps-smb-settings)=
 ### Nastavení OpenAPS SMB
 
-- Na rozdíl od AMA, [SMB](Open-APS-features-super-micro-bolus-smb) nevyužívá ke řízení hodnoty glykémie dočasné úrovně bazálu, ale především velmi malé bolusové dávky (mikrobolusy).
+- In contrast to AMA, [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
-- Použití SMB je možné až po spuštění [9. cíle](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb).
+- You must have started [objective 9](../Usage/completing-the-objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
-- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to).
+- The first three settings are explained [above](#max-uh-a-temp-basal-can-be-set-to).
 
-- Podrobnosti o různých možnostech nastavení jsou popsány v části [Funkce OpenAPS](Open-APS-features-enable-smb).
+- Details on the different enable options are described in [OpenAPS feature section](../Usage/Open-APS-features.md#enable-smb).
 
 - *Jak často budou SMB podávány v min.* je omezení SMB, které je standardně nastaveno na každé 4 minuty. Tato hodnota brání systému vydávat SMB příliš často (např. v případě nastavení dočasného cíle). Toto nastavení byste neměli změnit, pokud přesně nevíte, jaké mohou být následky.
 
-- Pokud je aktivováno 'Sensitivita zvýší cíl" nebo 'Resistance sníží cíl', [Autosens](Open-APS-features-autosens) změní váš glykemický cíl podle odchylek hodnoty glykémie.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../Usage/Open-APS-features.md#autosens) will modify your glucose target according to your blood glucose deviations.
 
 - Je-li cíl upraven, bude na domovské obrazovce zobrazen se zeleným pozadím.
 
@@ -387,18 +387,18 @@ Když se na to už budete cítit, můžete dovolit systému, aby začal přidáv
 
 ### Pokročilé nastavení - autosens ratio
 
-- Definujte min. a max. poměr [autosens](Open-APS-features-autosens).
+- Define min. and max. [autosens](../Usage/Open-APS-features.md#autosens) ratio.
 - Normálně by se neměly měnit standardní hodnoty (max. 1.2 a min. 0.7).
 
 ## Nastavení pumpy
 
-Možnosti se budou lišit v závislosti na tom, který ovladač pumpy jste vybrali v [Config builderu](Config-Builder-pump).  Spárujte a nastavte svou pumpu podle pokynů pro jednotlivé pumpy:
+The options here will vary depending on which pump driver you have selected in [Config Builder](../Configuration/Config-Builder.md#pump).  Spárujte a nastavte svou pumpu podle pokynů pro jednotlivé pumpy:
 
-- [Inzulinová pumpa DanaR](../Configuration/DanaR-Insulin-Pump.md)
-- [Inzulinová pumpa DanaRS](../Configuration/DanaRS-Insulin-Pump.md)
-- [Pumpa Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
-- [Pumpa Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
-- [Pumpa Medtronic](../Configuration/MedtronicPump.md)
+- [Inzulinová pumpa DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md)
+- [Inzulinová pumpa DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
+- [Pumpa Accu-Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md)
+- [Pumpa Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
+- [Pumpa Medtronic](../CompatiblePumps/MedtronicPump.md)
 
 Pokud používáte AAPS pro otevřenou smyčku, ujistěte se, že jste v konfiguraci zvolili virtuální pumpu.
 
@@ -470,7 +470,7 @@ Options in advanced settings are self-explanatory.
 
 ## SMS komunikátor
 
-- Možnosti se zobrazí pouze v případě, že je v [Konfiguraci](Config-Builder-sms-communicator) vybrán SMS komunikátor.
+- Options will only be displayed if SMS communicator is selected in [Config Builder](../Configuration/Config-Builder.md#sms-communicator).
 - Používat zjištění polohy podle sítě: Poloha podle vaší Wi-Fi sítě
 - Podrobnější informace jsou popsány v sekci [SMS příkazy](../Children/SMS-Commands.md).
 - Dodatečná bezpečnost je zajištěna použitím autentizační aplikace a dodatečného PIN na konci tokenu.

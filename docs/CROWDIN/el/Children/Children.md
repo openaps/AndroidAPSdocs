@@ -10,14 +10,14 @@
 - Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **AAPSClient app** on their phone. Settings must be the same in AAPS and AAPSClient app.
 - Οι γονείς μπορούν να έχουν συναγερμούς χρησιμοποιώντας την εφαρμογή **xDrip+ με λειτουργία ακόλουθου ** στο τηλέφωνο τους.
 - Απομακρυσμένος έλεγχος του AAPS χρησιμοποιώντας [ Εντολές SMS ](../Children/SMS-Commands.md) που εξασφαλίζεται με έλεγχο ταυτότητας δύο παραγόντων.
-- Remote control through AAPSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) for further details.
+- Remote control through AAPSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](../Installing-AndroidAPS/Releasenotes.md#version-2.8.1.1) for further details.
 
 ## Εργαλεία και εφαρμογές για την εξ αποστάσεως παρακολούθηση
 
 - [Nightscout ](https://nightscout.github.io/)στο πρόγραμμα περιήγησης στο web (κυρίως εμφάνιση δεδομένων)
 - AAPSClient app is a stripped down version of AAPS capable of following somebody, making profile switches, setting TTs and entering carbs. There are 2 apps:  [AAPSClient & AAPSClient2 to download](https://github.com/nightscout/AndroidAPS/releases/). Η μόνη διαφορά μεταξύ τους είναι το όνομα της εφαρμογής. Με αυτόν τον τρόπο μπορείτε να εγκαταστήσετε την εφαρμογή δύο φορές στο ίδιο τηλέφωνο ώστε να μπορείτε να ακολουθήσετε δύο διαφορετικά άτομα/nightscouts με την εφαρμογή.
 - Παρακολούθηση Dexcom αν χρησιμοποιείτε την αυθεντική εφαρμογή του Dexcom (μόνο τιμές γλυκόζης)
-- [xDrip +](../Configuration/xdrip.md) σε λειτουργία follower (κυρίως τιμές γλυκόζης και **συναγερμοί**)
+- [xDrip+](../CompatibleCgms/xDrip.md) in follower mode (mainly BG values and **alarms**)
 - [Sugarmate](https://sugarmate.io/) ή [Spike](https://spike-app.com/) σε iOS (κυρίως τιμές γλυκόζης και συναγερμοί ****)
 - Ορισμένοι χρήστες βρίσκουν ότι ένα πλήρες εργαλείο απομακρυσμένης πρόσβασης, όπως το [TeamViewer](https://www.teamviewer.com/) μπορεί είναι χρήσιμο για την προηγμένη απομακρυσμένη αντιμετώπιση προβλημάτων
 
@@ -30,7 +30,7 @@
 
 ## Πράγματα που πρέπει να σκεφτείτε
 
-- Ο καθορισμός των σωστών ["θεραπευτικών παραγόντων ](FAQ-how-to-begin) (βασικός ρυθμός DIA, ISF...) Είναι δύσκολος για τα παιδιά, ειδικά όταν εμπλέκονται αυξητικές ορμόνες.
+- Setting the correct [treatment factors](../Getting-Started/FAQ.md#how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
 - Settings must be the same in AAPS and AAPSClient app.
 - Λάβετε υπόψη το χρονικό κενό ανάμεσα στο βασικό χρήστη και τον ακόλουθο που δημιουργείται λόγω του χρόνου που χρειάζεται για να ανέβουν και να κατέβουν τα δεδομένα, όπως επίσης και το γεγονός ότι το βασικό τηλέφωνο με AAPS θα ανεβάσει τα δεδομένα μόνο αφού ξεκινήσει το κύκλωμα.
 - Επομένως, πάρτε το χρόνο σας προκειμένου να κάνετε τις ρυθμίσεις σωστά και δοκιμάστε τες στην πραγματική ζωή με το παιδί σας δίπλα σας προτού να ξεκινήσετε την απομακρυσμένη παρακολούθηση και τις απομακρυσμένες θεραπευτικές κινήσεις. Οι σχολικές διακοπές μπορεί να είναι μια καλή περίοδος για αυτό.

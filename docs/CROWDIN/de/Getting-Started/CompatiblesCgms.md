@@ -1,0 +1,15 @@
+# CGMS/FGMS-Konfiguration
+
+- [General](../CompatibleCgms/GeneralCGMRecommendation.md)
+- [Data Smoothing](../CompatibleCgms/SmoothingBloodGlucoseData.md)
+- [xDrip+Settings](../CompatibleCgms/xDrip.md)
+- [Dexcom G7 and ONE+](../CompatibleCgms/DexcomG7.md)
+- [Dexcom G6 and ONE](../CompatibleCgms/DexcomG6.md)
+- [Dexcom G5](../CompatibleCgms/DexcomG5.md)
+- [Libre 3](../CompatibleCgms/Libre3.md)
+- [Libre 2](../CompatibleCgms/Libre2.md)
+- [Libre 1](../CompatibleCgms/Libre1.md)
+- [Eversense](../CompatibleCgms/Eversense.md)
+- [MM640g/MM630g](../CompatibleCgms/MM640g.md)
+- [PocTech](../CompatibleCgms/PocTech.md)
+- [Nightscout as BG Source](../CompatibleCgms/CgmNightscoutUpload.md)

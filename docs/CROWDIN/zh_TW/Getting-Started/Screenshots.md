@@ -10,9 +10,7 @@
 
 * 在各個 AAPS 模組頁籤之間導覽。
 * 你還可以透過向左或向右滑動來更換螢幕。
-* 顯示的分頁可以在[組態建置工具](Config-Builder-tab-or-hamburger-menu)中選擇。
-
-(Screenshots-section-b-profile-target)=
+* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu).
 
 ### B 區 - 設定檔 & 目標
 
@@ -22,7 +20,7 @@
 
 * 目前的設定檔顯示在左側欄位。
 * 點一下設定檔欄位查看設定檔詳細資訊
-* 長按設定檔欄位可[在不同設定檔之間切換](Profiles-profile-switch)。
+* Long press profile bar to [switch between different profiles](../Usage/Profiles.md#profile-switch--profile-percentage).
 * 如果設定檔切換進行中，括號中將顯示剩餘時間（以分鐘為單位）。
 
 #### 目標
@@ -33,14 +31,12 @@
 * 點一下目標欄位可設置[臨時目標](../Usage/temptarget.md)。
 * 如果設置了臨時目標，欄位將變為黃色，括號中顯示剩餘時間（以分鐘為單位）。
 
-(Screenshots-visualization-of-dynamic-target-adjustment)=
-
 #### 動態目標調整的可視化
 
 ![動態目標調整的可視化](../images/Home2020_DynamicTargetAdjustment.png)
 
 * 如果你使用 SMB 演算法，AAPS 可以根據敏感度動態調整你的目標。
-* 啟用以下選項中的一個或兩個[選項](Preferences-openaps-smb-settings) 
+* Enable either one or both of the [following options](../Configuration/Preferences.md#openaps-smb-settings) 
    * "敏感度提高目標" 
    * "阻力降低目標" 
 * 如果 AAPS 偵測到阻力或敏感度，目標將從設定檔中的設定值改變。 
@@ -51,13 +47,11 @@
 #### 目前血糖值
 
 * 最新的 CGM 血糖讀取值顯示在左側。
-* 血糖值的顏色反應了與定義的[範圍](Preferences-range-for-visualization)的關係。 
+* Color of the BG value reflects the status to the defined [range](../Configuration/Preferences.md#range-for-visualization). 
    * 綠色 = 在範圍內
    * 紅色 = 低於範圍
    * 黃色 = 高於範圍
 * 中間的灰色區塊顯示自上次讀取值以來的分鐘數以及過去 15 和 40 分鐘內的變化。
-
-(Screenshots-loop-status)=
 
 #### 循環狀態
 
@@ -66,7 +60,7 @@
 * 新圖示顯示循環狀態：
    
    * 綠色圓圈 = 循環運作中
-   * 綠色圓圈帶虛線 = [低血糖暫停（LGS）](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * green circle with dotted line = [low glucose suspend (LGS)](../Usage/completing-the-objectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
    * 紅色圓圈 = 循環已停用（永久不起作用）
    * 黃色圓圈 = 循環暫停（暫時暫停但將給予基礎胰島素）- 圖示下方顯示剩餘時間
    * 灰色圓圈 = 幫浦已中斷（暫時無胰島素劑量）- 圖示下方顯示剩餘時間
@@ -78,8 +72,6 @@
    * 如果點一下循環圖示，選擇後需要進行驗證。
    
    ![循環狀態選單](../images/Home2020_Loop_Dialog.png)
-
-(Screenshots-bg-warning-sign)=
 
 #### 血糖警告標誌
 
@@ -137,7 +129,7 @@
 
 * 紫線：基礎率 - 圖示隨基礎率的暫時變化而改變（在 100% 時保持不變）。 
    * 按圖示可查看基礎基礎率和任何臨時基礎率的詳細資訊（包括剩餘時間）。
-* 上下箭頭：指示目前[自動敏感性](Open-APS-features-autosens)狀態（啟用或停用）以及圖示下方顯示的數值。
+* Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features.md#autosens) status (enabled or disabled) and value is shown below icon
 
 #### 需要碳水化合物
 
@@ -160,9 +152,7 @@
    * 電池使用時間及電量（百分比）
 * 如果超過警告門檻值，數值將顯示為黃色。
 * 如果超過危急門檻值警告，數值將顯示為紅色。
-* 可在[偏好設定](Preferences-status-lights)中進行設置。
-
-(Screenshots-section-f-main-graph)=
+* Settings can be made in [preferences](../Configuration/Preferences.md#status-lights).
 
 ### F 區 - 主圖表
 
@@ -171,8 +161,8 @@
 * 圖表顯示你的血糖（BG），資料來自你的連續血糖監測儀（CGM）。 
 * 在操作標籤中輸入的筆記（如手指校準和碳水化合物輸入）以及設定檔切換也會顯示在此處。 
 * 長按圖表可更改時間範圍。 你可以選擇 6、12、18 或 24 小時。
-* 綠色區域反應你的目標範圍。 可以在[偏好設定](Preferences-range-for-visualization)中配置。
-* 如果在[偏好設定](Preferences-openaps-smb-settings)中啟用了 SMB，藍色三角形會顯示[SMB](Open-APS-features-super-micro-bolus-smb)。
+* 綠色區域反應你的目標範圍。 It can be configured in [preferences](../Configuration/Preferences.md#range-for-visualization).
+* Blue triangles show [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) - if enabled in [preferences](../Configuration/Preferences.md#openaps-smb-settings).
 * 可選資訊：
    
    * 預測
@@ -202,19 +192,19 @@
    
    預測線顯示如果幫浦停止所有胰島素輸送（0% TBR），血糖 軌跡線將如何變化。
    
-   *此線僅在使用[SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)演算法時出現。*
+   *This line appears only when the [SMB](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
-* **深黃色**線：[UAM](Sensitivity-detection-and-COB-sensitivity-oref1)（未輸入的餐點）
+* **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB.md#sensitivity-oref1) (un-announced meals)
    
    未輸入的餐點(UAM)表示偵測到由於用餐、腎上腺素或其他影響導致的血糖顯著上升。 預測線類似於橙色 COB 線，但他假設偏差將以恆定速度逐漸減少（透過延長目前的減少速度）。
    
-   *此線僅在使用[SMB](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)演算法時出現。*
+   *This line appears only when the [SMB](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
 * **深橙色**線：aCOB（加速碳水化合物吸收）
    
    類似於 COB，但假設碳水化合物吸收率為每 5 分鐘 10 mg/dL（-0.555 mmol/l/5 分鐘）。 已棄用，實用性有限。
    
-   *此線僅在使用舊版[AMA](Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)演算法時出現。*
+   *This line appears only when the older [AMA](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
 通常你的實際血糖曲線最終會位於這些線之間，或接近最符合你情況的假設。
 
@@ -233,7 +223,7 @@
 ### G 區 - 其他圖表
 
 * 你可以在主圖表下啟用最多四個其他圖表。
-* 要打開其他圖表的設置，請單擊[主圖表](Screenshots-section-f-main-graph)右側的三角形並向下滾動。
+* To open settings for additional graphs click the triangle on the right side of the [main graph](#section-f---main-graph) and scroll down.
 
 ![其他圖表設置](../images/Home2020_AdditionalGraphSetting.png)
 
@@ -246,9 +236,9 @@
 #### 活性胰島素(IOB)
 
 * 顯示你體內的胰島素（= 體內的活動胰島素）。 包括注射胰島素和臨時的基礎率（**但不包括你設定檔中的基礎率**）。
-* 如果在 DIA 時間內沒有[SMB](Open-APS-features-super-micro-bolus-smb)、沒有注射或臨時的基礎率，這將為零。
+* If there were no [SMBs](../Usage/Open-APS-features.md#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
 * 如果沒有剩餘注射且長時間設置為零/低基礎率，IOB 可能為負值。
-* 衰減取決於你的[DIA 和胰島素設定檔設置](Config-Builder-local-profile)。 
+* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder.md#local-profile). 
 
 #### 活性碳水化合物(COB)
 
@@ -259,14 +249,14 @@
 #### 偏差
 
 * **灰色**長條圖顯示由於碳水化合物引起的偏差。 
-* **綠色**長條圖顯示血糖高於演算法預期。 綠色長條圖用於在[自動敏感性](Open-APS-features-autosens)中增加抗性。
-* **紅色**長條圖顯示血糖低於演算法預期。 紅色長條圖用於在[自動敏感性](Open-APS-features-autosens)中增加敏感性。
+* **綠色**長條圖顯示血糖高於演算法預期。 Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features.md#autosens).
+* **紅色**長條圖顯示血糖低於演算法預期。 Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features.md#autosens).
 * **黃色**長條圖顯示由於未輸入的餐點(UAM)引起的偏差。
 * **黑色**長條圖顯示未考慮敏感性的輕微偏差。
 
 #### 敏感性
 
-* 顯示[自動敏感性](Open-APS-features-autosens)偵測到的敏感性。 
+* Shows the sensitivity that [Autosens](../Usage/Open-APS-features.md#autosens) has detected. 
 * 敏感性是運動、荷爾蒙等導致的對胰島素的敏感性計算結果。
 
 #### 活動
@@ -287,14 +277,14 @@
    
    * 如果與幫浦的連線中斷，胰島素按鈕將不會顯示。
 
-* 其他按鈕必須在[偏好設定]中設置。
+* Other Buttons have to be setup in [preferences](../Configuration/Preferences.md#buttons).
 
 #### 胰島素
 
 ![注射按鈕](../images/Home2020_ButtonInsulin.png)
 
-* 可以在不使用[注射計算機](Screenshots-bolus-wizard)的情況下注射指定劑量的胰島素。
-* 勾選框可自動啟動你的[即將用餐的臨時目標](Preferences-default-temp-targets)。
+* To give a certain amount of insulin without using [bolus calculator](#bolus-wizard).
+* By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences.md#default-temp-targets).
 * 如果你不想透過幫浦進行注射，只想記錄注射劑量的話（已透過針筒注射胰島素），請勾選「不注射，只紀錄」。
 
 #### 碳水化合物
@@ -302,33 +292,31 @@
 ![碳水化合物按鈕](../images/Home2020_ButtonCarbs.png)
 
 * 記錄碳水化合物而不進行注射。
-* 可以直接透過勾選框設置某些[預設的臨時目標](Preferences-default-temp-targets)。
+* Certain [pre-set temporary targets](../Configuration/Preferences.md#default-temp-targets) can be set directly by checking the box.
 * 時間偏移：你將在何時/何時食用碳水化合物（以分鐘計）。
 * 持續時間：用於[“延長碳水化合物”](../Usage/Extended-Carbs.md)
 * 你可以使用按鈕快速增加碳水化合物量。
-* 筆記將根據你的[NS 客戶端](Preferences-nsclient)設置上傳到 Nightscout。
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences.md#nsclient).
 
 #### 計算機
 
-* 請參閱[注射計算機](Screenshots-bolus-wizard)部分
+* See Bolus Wizard [section below](#bolus-wizard)
 
 #### 校準
 
 * 發送校準至 xDrip+ 或打開 Dexcom 校準對話框。
-* 必須在[偏好設定](Preferences-buttons)中啟用。
+* Must be activated in [preferences](../Configuration/Preferences.md#buttons).
 
 #### CGM
 
 * 開啟 xDrip+。
 * 按返回鍵返回 AAPS。
-* 必須在[偏好設定](Preferences-buttons)中啟用。
+* Must be activated in [preferences](../Configuration/Preferences.md#buttons).
 
 #### 快速嚮導
 
 * 輕鬆輸入碳水化合物數量並設置計算基礎。
-* 詳細資訊可在[偏好設定](Preferences-quick-wizard)中設置。
-
-(Screenshots-bolus-wizard)=
+* Details are setup in [preferences](../Configuration/Preferences.md#quick-wizard).
 
 ## 注射嚮導
 
@@ -353,7 +341,7 @@
 
 ### J 區
 
-* 超級注射是將接下來兩小時的基礎胰島素添加到即時注射中，並發出 0% 臨時基礎率（TBR），以收回額外的胰島素。 此選項僅在[嚮導中啟用超級注射](Preferences-superbolus)時顯示，可在[偏好設定總覽](Preferences-overview)中設置。
+* 超級注射是將接下來兩小時的基礎胰島素添加到即時注射中，並發出 0% 臨時基礎率（TBR），以收回額外的胰島素。 The option only shows when "Enable [superbolus](../Configuration/Preferences.md#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences.md#overview).
 * 其目的是更快地注射胰島素，希望減少血糖高峰。
 * 詳情請查看[diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/)。
 
@@ -361,7 +349,7 @@
 
 * 顯示計算出的注射劑量。 
 * 如果活性胰島素（IOB）的量已超過計算出的注射劑量，那麼他只會顯示仍然需要的碳水化合物數量。
-* 筆記將根據你的[NS 客戶端](Preferences-nsclient)設置上傳到 Nightscout。
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences.md#nsclient).
 
 ### L 區
 
@@ -384,7 +372,7 @@
 
 * 如果你在使用注射嚮導後看到上述警告，則表示 AAPS 偵測到計算的 COB 值可能有誤。
 * 因此，如果你在上一餐有 COB 後再次注射，請注意可能會過量注射！ 
-* 詳情請參閱[COB 計算頁面](COB-calculation-detection-of-wrong-cob-values)上的提示。
+* For details see the hints on [COB calculation page](../Usage/COB-calculation.md#detection-of-wrong-cob-values).
 
 (Screenshots-action-tab)=
 
@@ -394,10 +382,10 @@
 
 ### 操作 - M 區
 
-* 按鈕[設定檔切換](Profiles-profile-switch)，作為按下主畫面上的[目前設定檔](Screenshots-section-b-profile-target)的替代方式。
-* 按鈕[臨時目標](temptarget-temp-targets)，作為按下主畫面上的[目前目標](Screenshots-section-b-profile-target)的替代方式。
+* Button [profile switch](../Usage/Profiles.md#profile-switch--profile-percentage) as an alternative to pressing the [current profile](#section-b---profile--target) on homescreen.
+* Button [temporary target](../Usage/temptarget.md) as an alternative to pressing the [current target](#section-b---profile--target) on homescreen.
 * 啟動或取消臨時基礎率的按鈕。 請注意，當設置了臨時基礎率時，按鈕將從“TEMPBASAL”變為“CANCEL x%”。
-* 儘管[延長注射](Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment)在閉環系統環境中並不太管用，但仍有一些人要求提供使用延長注射的選項。
+* Even though [extended boluses](../Usage/Extended-Carbs.md#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
    
    * 此選項僅適用於 Dana RS 和 Insight 幫浦。 
    * 閉環將自動停止並切換為開環模式，以運作延長注射。
@@ -414,7 +402,7 @@
    * 導管使用時間
    * 幫浦電池使用時間及電量（百分比）
 
-* 如果使用[低解析度外觀](Preferences-skin)，顯示的資訊將會減少。
+* Less information will be shown if [low resolution skin](../Configuration/Preferences.md#skin) is used.
 
 (Screenshots-sensor-level-battery)=
 
@@ -422,14 +410,14 @@
 
 * 需要 xDrip+ 2020 年 12 月 10 日或更新版本的夜間建置。 適用於具有額外發射器（如 MiaoMiao 2）的 CGM。
 * （技術上，傳感器必須將電池電量資訊發送至 xDrip+。） （技術上，傳感器必須將電量資訊傳送至 xDrip+。）
-* 可以在[偏好設定](Preferences-status-lights)中設置門檻值。
+* Thresholds can be set in [preferences](../Configuration/Preferences.md#status-lights).
 * 如果傳感器電量與手機電池電量相同，則說明你的 xDrip+ 版本可能過舊，需進行更新。
    
    ![傳感器電量等於手機電池電量](../images/Home2021_ActionSensorBat.png)
 
 ### 護理入口 - O 區
 
-* 血糖檢查、導管填充、傳感器插入和幫浦電池更換是[N 區](Screenshots-careportal-section-n)顯示資料的基礎。
+* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal---section-n).
 * 填充/注入允許你記錄幫浦部位和胰島素筒的更換。
 * O 區反應了 Nightscout 的護理入口功能。 因此，運動、公告和問題是特別的筆記形式。
 
@@ -455,7 +443,7 @@
 
 ![胰島素設定檔](../images/Screenshot_insulin_profile.png)
 
-* 此功能顯示了你在[設定生成器](Config-Builder-insulin)中選擇的胰島素的活性設定檔。 
+* This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder.md#insulin). 
 * 紫色線顯示注射後胰島素隨時間衰減的情況，藍色線顯示其活性。
 * 需要注意的重要一點是，衰減有一個長尾。 
 * 如果你習慣於手動操作幫浦，你可能習慣於認為胰島素會在大約 3.5 小時內衰減完畢。 
@@ -472,7 +460,7 @@
 ![幫浦狀態](../images/Screenshot_PumpStatus.png)
 
 * 顯示幫浦狀態的不同資訊。 顯示的資訊取決於你的幫浦型號。
-* 詳細資訊請參閱[幫浦頁面](../Hardware/pumps.md)。
+* See [pumps page](../Getting-Started/CompatiblePumps.md) for details.
 
 ## 護理入口
 
@@ -482,7 +470,7 @@
 
 ![在 t 標籤中審查碳水化合物計算](../images/Screenshots_TreatCalc.png)
 
-* 如果你使用了[注射嚮導](Screenshots-bolus-wizard)來計算胰島素劑量，你可以稍後在 ts 標籤中審查此計算。
+* If you have used the [Bolus Wizard](#bolus-wizard) to calculate insulin dosage you can review this calculation later on ts tab.
 * 只需按下綠色的 Calc 鏈接。 （根據幫浦的不同，胰島素和碳水化合物也可能在 ts 中顯示為單行。）
 
 (Screenshots-carb-correction)=
@@ -509,7 +497,7 @@
 
 * 這些標籤顯示了演算法的計算詳細資訊以及 AAPS 執行操作的原因。
 * 每次系統從 CGM 獲取新讀取值時都會進行計算。
-* 有關更多詳細資訊，請參閱[設定生成器頁面的 APS 部分](Config-Builder-aps)。
+* For more details see [APS section on config builder page](../Configuration/Config-Builder.md#aps).
 
 ## 設定檔
 
@@ -523,20 +511,18 @@
    * 基礎率
    * 目標：你希望 AAPS 尋求的血糖水平
 
-* 自 3.0 版起，只能使用[本地設定檔](Config-Builder-local-profile)。 本地設定檔可以在你的智慧型手機上進行編輯，並同步到你的 Nightscout 網站。
-
 (Screenshots-treatment)=
 
 ## 治療
 
 以下治療的歷史記錄：
 
-* 注射和碳水化合物 -> 可以選擇[移除條目](Screenshots-carb-correction)來修正歷史記錄
-* [延長注射](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+* Bolus & carbs -> option to [remove entries](#carb-correction) to correct history
+* [延長注射](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 * 臨時基礎率
 * [臨時目標](../Usage/temptarget.md)
 * [設定檔切換](../Usage/Profiles.md)
-* [護理入口](CPbefore26-careportal-discontinued) - 透過操作標籤輸入的筆記和對話框中的筆記
+* Careportal - notes entered through action tab and notes in dialogues
 
 ## 血糖來源 - xDrip+、BYODA...
 
@@ -550,5 +536,5 @@
 ![NSClient](../images/Screenshots_NSClient.png)
 
 * 顯示與 Nightscout 網站的連線狀態。
-* 設定可在[偏好設定](Preferences-nsclient)中進行。 你可以透過點擊螢幕右上角的齒輪圖示打開相應的部分。
+* Settings are made in [preferences](../Configuration/Preferences.md#nsclient). 你可以透過點擊螢幕右上角的齒輪圖示打開相應的部分。
 * 有關問題排除的詳細資訊，請參閱此[頁面](../Usage/Troubleshooting-NSClient.md)。

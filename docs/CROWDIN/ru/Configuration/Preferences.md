@@ -70,7 +70,7 @@
 
 - Если вы хотите, чтобы главный пароль использовался только для [экспорта настроек](../Usage/ExportImportSettings.md). то примените отдельный пароль для настроек.
 
-- Если вы собираетесь использовать пароль для настроек - нажмите на строчку "Пароль параметров", чтобы задать его. Принцип тот же, что описан [выше](Preferences-master-password).
+- If you are using a custom password click on line "Settings password" to set password as described [above](#master-password).
 
   ![Защита](../images/Pref2020_Protection.png)
 
@@ -168,7 +168,7 @@
 
 ### Заполнить стандартное количество инсулина
 
-- Если вы хотите заполнить инфузионный набор или катетер при помощи AAPS, это можно сделать через вкладку [Действия](Screenshots-action-tab).
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots.md#action-tab).
 - В этом диалоге можно задать предустановленные значения.
 
 (Preferences-range-for-visualization)=
@@ -198,7 +198,7 @@
 - Индикаторы состояния сообщают:
 
   - сколько времени отработал сенсор
-  - Уровень заряда батареи сенсора для некоторых умных ридеров (подробнее см. на странице [снимки экрана](Screenshots-sensor-level-battery)).
+  - Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery) for details).
   - сколько времени прошло с момента установки резервуара
   - об уровне заполнения резервуара (в единицах)
   - сколько времени прошло с момента установки канюли
@@ -268,8 +268,8 @@
 
 В зависимости от настроек в [конфигураторе](../Configuration/Config-Builder.md) можно выбрать между двумя алгоритмами:
 
-- [Улучшенный ассистент приема пищи (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - состояние алгоритма на 2017 год
-- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm recommended for beginners
+- [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
 
 ### Настройки OpenAPS AMA
 
@@ -283,7 +283,7 @@
 - Значение задается в единицах в час (ед./ч).
 - Рекомендуется установить какое-то разумное значение. Хорошая рекомендация – взять **наивысшую скорость базала** в вашем профиле и **умножить ее на 4**.
 - Например, если максимальная скорость базала в вашем профиле была 0,5 ед./ч, то, умножив ее на 4, вы получите значение 2 ед./ч.
-- См. также [подробное описание функции](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- See also [detailed feature description](../Usage/Open-APS-features.md#max-uh-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 #### Максимальный активный базальный инсулин IOB, разрешенный в OpenAPS [ед.]
 
@@ -307,7 +307,7 @@
 
 #### Autosens
 
-- [Autosens](Open-APS-features-autosens)отслеживает отклонения ГК (положительные/отрицательные/нейтральные).
+- [Autosens](../Usage/Open-APS-features.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
 - На основе отклонений он пытается выяснить, насколько вы чувствительны/резистентны к инсулину и корректирует базальную скорость и коэффициент чувствительности к инсулину ISF.
 - Если вы выберете "Autosense также подстраивает цели", алгоритм будет менять целевую ГК.
 
@@ -319,17 +319,17 @@
 (Preferences-openaps-smb-settings)=
 ### Настройки OpenAPS SMB
 
-- В отличие от AMA, [SMB](Open-APS-features-super-micro-bolus-smb) не использует временные базальные скорости для контроля уровней глюкозы, а главным образом супермикроболюсы.
+- In contrast to AMA, [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
-- Для микроболюсов SMB необходимо запустить [ цель 9 ](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb).
+- You must have started [objective 9](../Usage/completing-the-objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
-- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to).
+- The first three settings are explained [above](#max-uh-a-temp-basal-can-be-set-to).
 
-- Подробности различных опций настройки описаны в разделе [возможности OpenAPS ](Open-APS-features-enable-smb).
+- Details on the different enable options are described in [OpenAPS feature section](../Usage/Open-APS-features.md#enable-smb).
 
 - *Как часто SMB будут подаваться в минутах* - по умолчанию эта величина определена только в четыре минуты. Эта величина не позволяет системе подавать микроболюсы слишком часто (например, при постановке временной цели). Не следует менять эту настройку, если только точно не осознаете последствия.
 
-- Если активированы настройки "Чувствительность повышает цель" или "Резистентность понижает цель", [Autosens](Open-APS-features-autosens) меняет целевое значение ГК в соответствии с ее (гликемии) отклонениями.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../Usage/Open-APS-features.md#autosens) will modify your glucose target according to your blood glucose deviations.
 
 - Если цель изменена, она будет отображаться в поле целей на зеленом фоне на главном экране.
 
@@ -387,18 +387,18 @@
 
 ### Расширенные настройки - коэффициент autosens
 
-- Определите мин и макс коэффициент [autosens](Open-APS-features-autosens).
+- Define min. and max. [autosens](../Usage/Open-APS-features.md#autosens) ratio.
 - Обычно стандартные значения (макс. 1.2 и мин. 0.7) не должны меняться.
 
 ## Настройки помпы
 
-Параметры здесь варьируются в зависимости от того, какой драйвер помпы вы выбрали в [конфигураторе](Config-Builder-pump).  Выполните сопряжение и настройте помпу в соответствии с инструкциями относящимися к помпе:
+The options here will vary depending on which pump driver you have selected in [Config Builder](../Configuration/Config-Builder.md#pump).  Выполните сопряжение и настройте помпу в соответствии с инструкциями относящимися к помпе:
 
-- [Инсулиновая помпа DanaR](../Configuration/DanaR-Insulin-Pump.md)
-- [Инсулиновая помпа DanaRS](../Configuration/DanaRS-Insulin-Pump.md)
-- [Помпа Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
-- [Помпа Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
-- [Помпа Medtronic](../Configuration/MedtronicPump.md)
+- [Инсулиновая помпа DanaR](../CompatiblePumps/DanaR-Insulin-Pump.md)
+- [Инсулиновая помпа DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md)
+- [Помпа Accu Chek Combo](../CompatiblePumps/Accu-Chek-Combo-Pump.md)
+- [Помпа Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md)
+- [Помпа Medtronic](../CompatiblePumps/MedtronicPump.md)
 
 Для работы AndroidAPS в незамкнутом цикле, в конфигураторе выберите виртуальную помпу.
 
@@ -470,7 +470,7 @@ Options in advanced settings are self-explanatory.
 
 ## СМС-коммуникатор
 
-- Опции будут показаны только в том случае, если коммуникатор SMS выбран в [Конфигураторе](Config-Builder-sms-communicator).
+- Options will only be displayed if SMS communicator is selected in [Config Builder](../Configuration/Config-Builder.md#sms-communicator).
 - Эта настройка позволяет осуществлять удаленное управление приложением при помощи смс-инструкций, отправляемых на телефон пациента, который выполняет их в AAPS, например, приостанавливая работу цикла или подавая болюсы.
 - Дальнейшая информация описана в [Команды SMS ](../Children/SMS-Commands.md).
 - Дополнительная безопасность обеспечивается с помощью приложения-Аутентификатора и дополнительного PIN-кода в конце сообщения.

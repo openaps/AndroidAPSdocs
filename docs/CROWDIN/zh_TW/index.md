@@ -10,7 +10,7 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 
 第二章節）“入門”，[介紹](Getting-Started/Introduction.md) 解釋了人工胰臟系統 (APS) 的一般概念。 本文件概述了循環系統的背景，為何開發**AAPS** ，並比較了**AAPS** 與其他系統，同時也討論了安全性問題。 他提供了如何與你的醫療團隊討論 **AAPS**的建議，解釋了為什麼你需要自行建置**AAPS** 應用程式，而不是直接下載，並概述了典型的**AAPS** 系統連接性。 他還討論了無障礙設計，並指出誰最有可能從**AAPS** 中受益。
 
-[準備 AAPS](preparing.md)章節提供了更多有關安全考量的詳細資訊，以及相容**AAPS**的手機、CGM（連續血糖監測儀）和胰島素幫浦的相關訊息。 他描述了你將經歷的過程，並提供了獲得完整**AAPS** 功能的大致時間表。 本節將幫助在技術上作好準備，會以最快、最有效率的方式設置你的**AAPS** 。 [CGM 配置](Configuration/BG-Source.md)子章節解釋了如何優化CGM設置及最佳的平滑選項。
+[Preparing for AAPS](./Getting-Started/PreparingForAaps.md) gives more detail about safety considerations, and the phones, CGMs (Continuous Glucose Monitors) and insulin pumps which are compatible with **AAPS**. 他描述了你將經歷的過程，並提供了獲得完整**AAPS** 功能的大致時間表。 本節將幫助在技術上作好準備，會以最快、最有效率的方式設置你的**AAPS** 。 The subsection [CGM Configuration](./Getting-Started/CompatiblesCgms.md) explains how to optimse CGM setup and what smoothing options are best.
 
 現在你已經對過程有了深入的了解，可以開始建置你的**AAPS** 循環系統了。 本章節 **三) 設置 AAPS** 包含逐步指導來進行此操作。 他涵蓋了選擇和 [設置你的報告伺服器](Installing-AndroidAPS/setting-up-the-reporting-server.md)（Nightscout 或 Tidepool），你可以檢視和分享你的資料，準備電腦來建置 AAPS 應用程式，並傳輸到你的手機。 他還涵蓋了使用設置嚮導來設定 **AAPS** 應用程式，與你的 CGM 應用程式連結，並與實體或虛擬胰島素幫浦連結，以及將 **AAPS** 連結到你的報告伺服器。 你將透過一個安全且經過精心設計的逐步流程，慢慢了解**AAPS**所提供的全部功能。此流程主要在確保你或你的孩子能夠充分熟悉，並能操作所有不同的層級和選單配置，然後再進入下一階段，通常稱為下一個「目標」，直到你累積足夠的經驗，再開始使用應用程式內更進階的選項。 這些目標被特別設計為逐步解鎖更多 **AAPS** 的可能性，並從開環轉為閉環。
 
@@ -57,18 +57,18 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 ## AAPS文件索引
 
 ```{toctree}
-:caption: 1) 切換語言
+:caption: 1) Change language
 
-切換語言 <./changelanguage.md>
+Change language <./ChangeLanguage/ChangeLanguage.md>
 ```
 ```{toctree}
-:caption: 2) 開始使用
+:caption: 2) Getting started
 
-AAPS介紹 <./Getting-Started/Introduction.md>
-AAPS 準備 <preparing.md>
-相容幫浦  <./Getting-Started/Pump-Choices.md>
-相容CGM <./Configuration/BG-Source.md>
-相容手機  <./Hardware/Phoneconfig.md>
+Introduction to AAPS <./Getting-Started/Introduction.md>
+Preparing for AAPS <./Getting-Started/PreparingForAaps.md>
+Compatible pumps <./Getting-Started/CompatiblePumps.md>
+Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
+Compatible phones  <./Getting-Started/Phones.md>
 ```
 
 ```{toctree}
@@ -139,19 +139,16 @@ COB 計算 <./Usage/COB-calculation.md>
 ```
 
 ```{toctree}
-:標題: 8) 有用的AAPS連結
+:caption: 8) Useful AAPS Links
 
-詞彙表  <./Getting-Started/Glossary.md>
-AAPS螢幕  <./Getting-Started/Screenshots.md>
-你的AAPS設定檔 
-相容的幫浦 <./Getting-Started/Pump-Choices.md>
-Accu-Chek Combo基本使用提示 <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
-相容的CGM <./Configuration/BG-Source.md>
-相容的手機  <./Hardware/Phoneconfig.md>
-在智慧型手錶上執行AAPS的操作 <./Configuration/Watchfaces.md>
-如何自定義你的AAPS手錶錶面  <./Usage/Custom_Watchface_Reference.md>
-xDrip設置 <./Configuration/xdrip.md>
-自動調整 <./Usage/autotune.md>
+Glossary <./Getting-Started/Glossary.md>
+AAPS Screens <./Getting-Started/Screenshots.md>
+Your AAPS profile 
+Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
+Operation of Wear AAPS on a Smartwatch <./Configuration/Watchfaces.md>
+How to customise your AAPS watchface <./Usage/Custom_Watchface_Reference.md>
+xDrip Settings <./CompatibleCgms/xDrip.md>
+Autotune <./Usage/autotune.md>
 
 ```
 
