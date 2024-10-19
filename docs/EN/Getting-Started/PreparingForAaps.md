@@ -4,7 +4,7 @@ Welcome. This documentation aims to guide users who are preparing to setup and s
 
 ## Finding your way around the documentation
 
-An **index** and explanation of the documentation structure can be found [here](index.md), you can also reach it by clicking on the **AAPS** symbol at the top left of the documentation. There you will find an overview of the purpose of the different documentation sections. You can also use the headings to the left of this page to navigate through the documentation. Finally, there is a handy search function, directly below the **AAPS** symbol. 
+An **index** and explanation of the documentation structure can be found [here](../index.md), you can also reach it by clicking on the **AAPS** symbol at the top left of the documentation. There you will find an overview of the purpose of the different documentation sections. You can also use the headings to the left of this page to navigate through the documentation. Finally, there is a handy search function, directly below the **AAPS** symbol. 
 
 We aim to make it easy to determine both the capabilities and limitations of **AAPS**. It can be disappointing to discover after investing time in reading the documentation that you might not have a compatible insulin pump or CGM, or that **AAPS** offers different functionality than hoped for. 
 
@@ -16,9 +16,9 @@ Many experience-related details in the **AAPS** documentation make more sense wh
 “With great power comes great responsibility…”
 
 ### Technical safety
-**AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](Usage/completing-the-objectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
+**AAPS** has an extensive set of safety features. These impose constraints which are gradually removed through staged completion of a series of [Objectives](../Usage/completing-the-objectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** features are unlocked as the Objectives are successfully completed. This process allows the user to migrate safely in stages from Open Loop to Closed Loop, while learning about the different features of **AAPS**.
 
-The [Objectives](Usage/completing-the-objectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The [Objectives](Usage/completing-the-objectives.md) aim to minimise these issues. 
+The [Objectives](../Usage/completing-the-objectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Mistakes can happen because the beginner is inexperienced and too eager to get started with **AAPS**, or has overlooked key points. The [Objectives](../Usage/completing-the-objectives.md) aim to minimise these issues. 
 
 ### Medical safety
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
@@ -75,7 +75,7 @@ In the preliminary stages of getting started with **AAPS**, you may experience d
 
 #### Technology compatibility
 
-**AAPS** is only compatible with certain types of insulin pumps, CGMs and phones, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read the [CGM](Configuration/BG-Source.md), [pump](Getting-Started/Pump-Choices.md) and [phone](Hardware/Phoneconfig.md) sections. 
+**AAPS** is only compatible with certain types of insulin pumps, CGMs and phones, and some technology may not be available for use in various countries. In order to avoid any disappointment or frustrations, please read the [CGM](../Getting-Started/CompatiblesCgms.md), [pump](../Getting-Started/CompatiblePumps.md) and [phone](../Getting-Started/Phones.md) sections. 
 
 #### App build time and progressing to full looping
 
@@ -83,9 +83,9 @@ The time to build the **AAPS** app  depends on your level of expertise and techn
 
 To aid the build process there are dedicated sections:
 
-- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](Getting-Started/FAQ.md) K);
+- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](../Getting-Started/FAQ.md) K);
   
-- “[How to install AAPS](Installing-AndroidAPS/building-AAPS.md)? (Section D) which includes [Troubleshooting](Usage/troubleshooting.md) Subsection.
+- “[How to install AAPS](../Installing-AndroidAPS/building-AAPS.md)? (Section D) which includes [Troubleshooting](../Usage/troubleshooting.md) Subsection.
 
 How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#how-long-will-it-take-to-set-everything-up))
     
@@ -101,7 +101,7 @@ A “keystore” (.jks file) is a password encrypted file unique to your own cop
 
 This will ensure that you can use that exact same keystore file each time an updated version of **AAPS** is created. On average, there will be 2 **AAPS** updates required each year. 
 
-In addition, **AAPS** provides the ability to [export all your configuration settings](Usage/ExportImportSettings.md). This ensures that you can safely recover your system while changing phones, upgrading/reinstalling the application with minimum disruption. 
+In addition, **AAPS** provides the ability to [export all your configuration settings](../Usage/ExportImportSettings.md). This ensures that you can safely recover your system while changing phones, upgrading/reinstalling the application with minimum disruption. 
 
 #### Troubleshooting
 
@@ -115,19 +115,19 @@ Please feel free to reach out to the AAPS community if there is anything you fee
 
 
 
-#### [Where to go for help](Where-To-Go-For-Help/Background-reading.md)?
+#### [Where to go for help](../Where-To-Go-For-Help/Background-reading.md)?
 
 This section is aimed to provide new users with links on resources in order to get help including accessing community support made up of both new and experienced users who can clarify questions, and resolve the usual pitfalls that come with AAPS.
 
-#### [Section For Clinicians](Resources/clinician-guide-to-AndroidAPS.md)
+#### [Section For Clinicians](../Resources/clinician-guide-to-AndroidAPS.md)
 
-This is a [section specificially for clinicians](Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](introduction-how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.                                                                                                                                                                                                                             
+This is a [section specificially for clinicians](../Resources/clinician-guide-to-AndroidAPS.md) who want to know more about AAPS and open source artificial pancreas technology. There is also guidance on [how to talk to your clinical team](./Introduction.md#how-can-i-approach-discussing-aaps-with-my-clinical-team) in the Introduction.                                                                                                                                                                                                                             
 
 ## What are we going to build and install?
 
 This diagram provides an overview of the key components (both hardware and software) of the **AAPS** system:
 
-![preparing_overview](./images/preparing_images/AAPS_preparing_overview_01.png)
+![preparing_overview](../images/preparing_images/AAPS_preparing_overview_01.png)
 
 
 In addition to the three basic hardware components (phone, pump, glucose sensor), we also need: 
@@ -146,11 +146,11 @@ Attempting to analyse your diabetes performance by looking at CGM data separatel
 
 ### 3) CGM sensor app
 
-Depending on your glucose sensor/CGM, you will need a compatible app for receiving glucose readings and sending them to **AAPS**. The different options are shown below and more information is given in the [compatible CGMs section](./Configuration/BG-Source.md):
+Depending on your glucose sensor/CGM, you will need a compatible app for receiving glucose readings and sending them to **AAPS**. The different options are shown below and more information is given in the [compatible CGMs section](../Getting-Started/CompatiblesCgms.md):
 
-![dexcom_options](./images/preparing_images/AAPS_connectivity_Dex_02.png)
-![libre_options](./images/preparing_images/AAPSconnectivity_libre.png)
-![eversense_options](./images/preparing_images/AAPS_connectivity_eversense.png)
+![dexcom_options](../images/preparing_images/AAPS_connectivity_Dex_02.png)
+![libre_options](../images/preparing_images/AAPSconnectivity_libre.png)
+![eversense_options](../images/preparing_images/AAPS_connectivity_eversense.png)
 
 ### Maintenance of the **AAPS** system
 
@@ -193,7 +193,7 @@ Once you are fully operational on **AAPS**, you will still need to regularly fin
 
 ### Medical considerations
 
-In addition to the medical warnings in the [safety section](preparing-safety-first) there are also different parameters, depending on which insulin you are using in the pump. 
+In addition to the medical warnings in the [safety section](#safety-first) there are also different parameters, depending on which insulin you are using in the pump. 
 
 #### Insulin choice
 
@@ -221,9 +221,9 @@ The exact model you buy depends on the desired function(s). There are two archiv
 
 To make a donation of smartphone or smartwatch models that still need testing, please email [donations@androidaps.org](mailto:donations@androidaps.org).
 
-- [List of tested phones](Getting-Started/Phones.md)
-- [Jelly Settings](Usage/jelly.md)
-- [Huawei Settings](Usage/huawei.md)
+- [List of tested phones](../CompatiblePhones/ListOfTestedPhones.md)
+- [Jelly Settings](../CompatiblePhones/Jelly.md)
+- [Huawei Settings](../CompatiblePhones/Huawei.md)
 
 Users are encouraged to keep their phone Android version up-to-date, including with security parameters. However, if you are new with **AAPS** or are not a technical expert you might want to delay updating your phone until others have done so and confirmed it is safe to do so, on our various forums. 
 
