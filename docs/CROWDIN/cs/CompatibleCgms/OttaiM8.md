@@ -6,4 +6,4 @@
 
 - Spusťte senzor
 
-- Select Ottai in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+- Select Ottai in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
