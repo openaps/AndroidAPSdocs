@@ -40,7 +40,7 @@ Mit dem Start von Ziel 10.
 
 ## Wo finden sich die Automatisierungen in AAPS?
 
-Abhängig von Deinen Einstellungen in der [Konfiguration](../Installing-AndroidAPS/change-configuration.md#config-builder), erreichst Du die **Automatisierungen** entweder über das ‘Hamburger Menü' oder über den eigenen Reiter in **AAPS**.
+Depending on your [config builder](../SettingUpAaps/ConfigBuilder.md) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
 
 ## Wie kann ich eine Automatisierung einrichten?
 
