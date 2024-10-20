@@ -56,7 +56,7 @@ After a sensor change xDrip+ will automatically detect the new sensor and will d
 
 ### Step 4: Configure AndroidAPS (for looping only)
 
-- Select xDrip+ in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+- Select xDrip+ in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
 
 - In xDrip+ select "Libre2 (patched App)" as data source
 - Turn of Smoothing (done in Xdrip+ already)
