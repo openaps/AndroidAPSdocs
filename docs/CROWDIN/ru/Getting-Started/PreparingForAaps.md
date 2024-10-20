@@ -16,9 +16,9 @@ An **index** and explanation of the documentation structure can be found [here](
 “С большими возможностями приходит большая ответственность…"
 
 ### Техническая безопасность
-**AAPS** имеет широкий набор функций безопасности. These impose constraints which are gradually removed through staged completion of a series of [Objectives](../Usage/completing-the-objectives.md) which involve testing specific parameters and answering multiple choice questions. Важные функции системы **AAPS** становятся доступны после успешного завершения Целей. Этот процесс позволяет пользователю изучать возможности **AAPS**. и безопасно перемещаться с незамкнутого на замкнутый цикл системы.
+**AAPS** имеет широкий набор функций безопасности. These impose constraints which are gradually removed through staged completion of a series of [Objectives](../SettingUpAaps/CompletingTheObjectives.md) which involve testing specific parameters and answering multiple choice questions. Важные функции системы **AAPS** становятся доступны после успешного завершения Целей. Этот процесс позволяет пользователю изучать возможности **AAPS**. и безопасно перемещаться с незамкнутого на замкнутый цикл системы.
 
-The [Objectives](../Usage/completing-the-objectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Ошибки возникают из-за неопытности новичков и их желания начать работу с **AAPS** как можно быстрее, без изучения необходимых материалов. The [Objectives](../Usage/completing-the-objectives.md) aim to minimise these issues.
+The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Ошибки возникают из-за неопытности новичков и их желания начать работу с **AAPS** как можно быстрее, без изучения необходимых материалов. The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) aim to minimise these issues.
 
 ### Медицинская безопасность
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
@@ -85,7 +85,7 @@ In a nutshell:
 
 - List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](../Getting-Started/FAQ.md) K);
 
-- “[How to install AAPS](../Installing-AndroidAPS/building-AAPS.md)? (Section D) which includes [Troubleshooting](../Usage/troubleshooting.md) Subsection.
+- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section D) which includes [Troubleshooting](../Usage/troubleshooting.md) Subsection.
 
 How long it takes to get to closed looping depends on the individual, but an approximate timescale for getting to full looping with AAPS can be found ([here](#how-long-will-it-take-to-set-everything-up))
 
