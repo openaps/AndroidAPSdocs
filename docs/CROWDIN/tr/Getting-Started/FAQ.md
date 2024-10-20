@@ -6,7 +6,7 @@ SSS'ye nasıl soru eklenir: Bu [talimatları](../make-a-PR.md) izleyin
 
 ## AAPS kurulum dosyasını indirebilir miyim?
 
-Hayır. AAPS için indirilebilir bir apk dosyası yoktur. You have to [build](../Installing-AndroidAPS/building-AAPS.md) it yourself. Nedeni ise:
+Hayır. AAPS için indirilebilir bir apk dosyası yoktur. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. Nedeni ise:
 
 AAPS, pompanızı kontrol etmek ve insülin vermek için kullanılır. Avrupa'daki mevcut düzenlemelere göre IIa veya IIb olarak sınıflandırılan tüm sistemler, çeşitli çalışmalar ve imzalar gerektiren düzenleyici onay (CE işareti) gerektiren tıbbi cihazlardır. Düzenlenmemiş bir cihazı dağıtmak yasa dışıdır. Dünyanın başka yerlerinde de benzer düzenlemeler var.
 
@@ -67,7 +67,7 @@ Döngü yapmanın pratikliğini anlamanıza yardımcı olacak iyi ipuçları iç
 
 - Akıllı telefonunuzu, saatinizi ve (gerekirse) BT okuyucusunu veya Link cihazını şarj etmek için pil takımı ve kablolar
 - Pompa pilleri
-- Current [apk](../Installing-AndroidAPS/building-AAPS.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## CGM/FGM'yi güvenli ve güvenilir bir şekilde nasıl bağlayabilirim?
 
