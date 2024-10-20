@@ -4,14 +4,14 @@
 
 - [BG quality warning sign](../DailyLifeWithAaps/AapsScreens.md#bg-warning-sign) @tanja
 - [Medtronic pump update](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
-- [Necessary checks after update to AAPS 3.0](../Installing-AndroidAPS/update3_0.md) @tanja
+- [Necessary checks after update to AAPS 3.0](../Maintenance/Update3_0.md) @tanja
 - [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @ robertrub @vanelsberg
 - Update docs for AAPS 3.0 (partly) @xJoe
 - [Wear OS for AAPS 3.0](../Configuration/Watchfaces.md) @peterleimbach
 
 ## January 2022
 
-- [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) - update @tanja
+- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) - update @tanja
 
 ## December 2021
 
@@ -22,12 +22,12 @@
 
 - Best practices for calibrating a [libre 2 sensor](../CompatibleCgms/Libre2.md#best-practices-for-calibrating-a-libre-2-sensor)
 - [ISF](../Getting-Started/FAQ.md) reformulation of impact
-- Update [troubleshooting Android stduio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
+- Update [troubleshooting Android stduio](../GettingHelp/TroubleshootingAndroidStudio)
 - Removed patched [Dexcom](../CompatibleCgms/DexcomG6.md) app as it is obsolete
 
 ## October 2021
 
-- [Release notes](../Installing-AndroidAPS/Releasenotes.md) AAPS 3.0 beta
+- [Release notes](../Maintenance/ReleaseNotes.md) AAPS 3.0 beta
 
 ## September 2021
 
@@ -56,7 +56,7 @@
 - Dexcom G6 with [Build Your Own Dexcom App](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)
 - Libre smart reader [battery level](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery)
 - [Objectives](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) - new questions
-- Other [new AAPS 2.8.0 functions](../Installing-AndroidAPS/Releasenotes.md#version-280)
+- Other [new AAPS 2.8.0 functions](../Maintenance/ReleaseNotes.md#version-280)
 
 ## December 2020
 
@@ -68,7 +68,7 @@
 
 - Accu-Chek Combo - update [time adjustment daylight savings time](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#time-adjustment-daylight-savings-time-dst)
 - Accu-Chek Insight - Option to [upload absolute values](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps)
-- Logs - more details about [folder location](../Usage/Accessing-logfiles.md)
+- Logs - more details about [folder location](../GettingHelp/AccessingLogFiles.md)
 - Omnipod Eros - status update
 - [SMS commands - time sync](../RemoteFeatures/SMSCommands.md)
 
@@ -100,7 +100,7 @@
 - [Build apk with Android Studio 3.6.1](../SettingUpAaps/BuildingAaps.md)
 - [DanaRS with firmware v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **cannot currently be used with AAPS!**
 - [Extended bolus and switch to open loop](../DailyLifeWithAaps/ExtendedCarbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
-- [Update apk with Android Studio 3.6.1](../Installing-AndroidAPS/Update-to-new-version.md)
+- [Update apk with Android Studio 3.6.1](../Maintenance/UpdateToNewVersion)
 
 ## February 2020
 
@@ -110,7 +110,7 @@
 - [Extended bolus](../DailyLifeWithAaps/ExtendedCarbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only) feature - closed loop will be disabled
 - New [Local Profile plugin](../SettingUpAaps/ConfigBuilder.md#local-profile)
 - Sample Setup - update Dexcom G6
-- [Version 2.6.0](../Installing-AndroidAPS/Releasenotes.md#version-260) - major new features
+- [Version 2.6.0](../Maintenance/ReleaseNotes.md#version-260) - major new features
 - [Wear complications](../Configuration/Watchfaces.md)
 
 ## January 2020
@@ -138,14 +138,14 @@
 - [New Freestyle Libre 2 tutorial](../CompatibleCgms/Libre2.md)
 - [Profile switch with percentage - example](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 - [SMS commands update](../RemoteFeatures/SMSCommands.md)
-- [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
-- [Troubleshooting - link collection](../Usage/troubleshooting.md)
+- [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
+- [Troubleshooting - link collection](../GettingHelp/GeneralTroubleshooting.md)
 - Update - quick walk-through for experienced users
 - Docs - update [edit](../make-a-PR.md#code-syntax) and [translation](../translations.md#translation-of-the-documentation).
 
 ## October 2019
 
-- [AAPS version 2.5](../Installing-AndroidAPS/Releasenotes.md#version-250) updates (especially on [update page](../Installing-AndroidAPS/Update-to-new-version.md))
+- [AAPS version 2.5](../Maintenance/ReleaseNotes.md#version-250) updates (especially on [update page](../Maintenance/UpdateToNewVersion))
 - [AccuChek Insight - log options](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps)
 - [COB calculation on separate page](../DailyLifeWithAaps/CobCalculation.md)
 - [COB - wrong COB value detection](../DailyLifeWithAaps/CobCalculation.md#detection-of-wrong-cob-values)

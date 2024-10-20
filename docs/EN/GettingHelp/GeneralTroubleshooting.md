@@ -8,19 +8,19 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 
 ### Building & updating
 
-* [Lost keystore](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore)
-* [Troubleshooting AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
+* [Lost keystore](TroubleshootingAndroidStudio#lost-keystore)
+* [Troubleshooting AndroidStudio](TroubleshootingAndroidStudio)
 
 ### Settings
 * [Profile](Profiles-troubleshooting-profile-errors)
 
   ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
 
-* [Pump - data from different pump](../Installing-AndroidAPS/update3_0.md#failure-message-data-from-different-pump)
+* [Pump - data from different pump](../Maintenance/Update3_0.md#failure-message-data-from-different-pump)
 
   ![Failure message: Data from different pump](../images/BasalNotAlignedToHours2.png)
 
-* [Nightscout Client](../Usage/Troubleshooting-NSClient.md)
+* [Nightscout Client](../GettingHelp/TroubleshootingNsClient.md)
 
 ### Usage
 * [Wrong carb values](../DailyLifeWithAaps/CobCalculation.md#detection-of-wrong-cob-values)

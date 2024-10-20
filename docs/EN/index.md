@@ -23,7 +23,7 @@ Section **5) Daily life with AAPS** covers key **AAPS** features, to help you us
 
 Section **6) Maintenance of AAPS** covers how to export and backup your settings (which is very important in case you lose/break your phone), gives the latest version notes and details how to update **AAPS**. You can expect that there will be one new version and 2-3 required updates per year. You are required to do these updates as with all software, as any minor bugs are ironed out, and improvements to **AAPS** are made. There is a dedicated "updating" troubleshooting section with the common queries. 
 
-Section **7) [Getting Help](Where-To-Go-For-Help/Connect-with-other-users.md)** should help direct you to the best places to go to find general help with **AAPS**. This is very important so that you can get in touch with others as quickly as possible, clarify questions and solve the usual pitfalls. A lot of people are already using **AAPS** successfully, but everyone has a question at some point that they couldn't solve on their own. Due to the large number of users, the response times to questions are usually very quick, typically only a few hours. Don’t worry about asking for help, there is no such thing as a dumb question! We encourage users of any/all levels of experience to ask as many questions as they feel is necessary to help get them up and running safely. This section includes general troubleshooting for **AAPS** and **AAPSClient** (a companion following app) as well as explaining how to send your **AAPS** data (logfiles) to the developers for investigation, if you think a technical issue with **AAPS** needs looking at. 
+Section **7) [Getting Help](GettingHelp/WhereCanIGetHelp.md)** should help direct you to the best places to go to find general help with **AAPS**. This is very important so that you can get in touch with others as quickly as possible, clarify questions and solve the usual pitfalls. A lot of people are already using **AAPS** successfully, but everyone has a question at some point that they couldn't solve on their own. Due to the large number of users, the response times to questions are usually very quick, typically only a few hours. Don’t worry about asking for help, there is no such thing as a dumb question! We encourage users of any/all levels of experience to ask as many questions as they feel is necessary to help get them up and running safely. This section includes general troubleshooting for **AAPS** and **AAPSClient** (a companion following app) as well as explaining how to send your **AAPS** data (logfiles) to the developers for investigation, if you think a technical issue with **AAPS** needs looking at. 
 
 Section **8) Useful AAPS links** are for handy reference. This includes the  [Glossary](Getting-Started/Glossary.md), a list of the acronyms (or short-term names) used throughout **AAPS**. This is where to go to find out what the terms ISF or TT, stand for, for example. This section also has links to useful screenshots and other data. 
 
@@ -116,23 +116,22 @@ Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling
 ```{toctree}
 :caption: 6) Maintenance of AAPS
 
-Backing up your settings
-Export/Import Settings <./Usage/ExportImportSettings.md>
+Export/Import Settings <./Maintenance/ExportImportSettings.md>
 Reviewing your data
-Version Release Notes <./Installing-AndroidAPS/Releasenotes.md>
-Updating to a new version of AAPS <./Installing-AndroidAPS/Update-to-new-version.md>
-
+Version Release Notes <./Maintenance/ReleaseNotes.md>
+Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
+- Update to AAPS 2.7 <./Maintenance/Update2_7.md>
+- Update to AAPS 3.0<./Maintenance/Update3_0.md>
 
 ```
 
 ```{toctree}
 :caption: 7) Getting Help
 
-Where can I get help with AAPS <./Where-To-Go-For-Help/Connect-with-other-users.md>
-General Troubleshooting <./Usage/troubleshooting.md>
-Troubleshooting AAPSClient <./Usage/Troubleshooting-NSClient.md>
+Where can I get help with AAPS <./GettingHelp/WhereCanIGetHelp.md>
+Troubleshooting <./GettingHelp/GeneralTroubleshooting.md>
 How to report bugs/request features
-Accessing logfiles <./Usage/Accessing-logfiles.md>
+Accessing logfiles <./GettingHelp/AccessingLogFiles.md>
 Help! My AAPS phone is broken/stolen/lost
 ```
 
@@ -184,10 +183,6 @@ Careportal (discontinued) <./Usage/CPbefore26.md>
 For Clinicians (outdated) <./Resources/clinician-guide-to-AndroidAPS.md>
 
 Automation with 3rd party apps <./Usage/automationwithapp.md>
-
-Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
-
-Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
 
 ```
 

@@ -1,7 +1,7 @@
 (Releasenotes-release-notes)=
 # Release notes
 
-Please follow the instructions in the [update manual](../Installing-AndroidAPS/Update-to-new-version.md). You can also find a troubleshooting section addressing the most common difficulties when updating on the update manual page.
+Please follow the instructions in the [update manual](UpdateToNewVersion). You can also find a troubleshooting section addressing the most common difficulties when updating on the update manual page.
 
 You will receive the following information as soon as a new update is available:
 
@@ -55,7 +55,7 @@ Release date: 23-10-2023
 
 - NS 15 is required
 - While using websockets in NS v3 plugin treatments entered through NS UI (plus button) and other applications using v1 API are not sent to AAPS. This will be fixed in future release of NS. Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internaly. The same is valid for AAPS and AAPSClient itself.
-- Websockets in v3 plugin works similiar way to v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the oposite side it means delays in exchanging data. Please read [here](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) the important comments from the dev team before you use it!
+- Websockets in v3 plugin works similiar way to v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the oposite side it means delays in exchanging data. Please read [here](ReleaseNotes#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) the important comments from the dev team before you use it!
 - If you are using xdrip as cgm source you must select it again after update due to internal changes
 - Tidepool can be used as a replacement of NS to pass first objective
 - If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip, “xDrip+ Sync Follower” must be selected as source
@@ -161,7 +161,7 @@ Release date: 31-01-2022
 - **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
 - Use the same version of AAPS and NSClient
 
-**Make sure to check and adjust settings after updating to 3.0 as described** [here](../Installing-AndroidAPS/update3_0.md).
+**Make sure to check and adjust settings after updating to 3.0 as described** [here](../Maintenance/Update3_0.md).
 
 ### Preparation steps
 
@@ -200,9 +200,9 @@ Release date: 31-01-2022
 
 - You can start activity temporary target during creation of profile switch @MilosKozak
 
-- NSProfile is gone, just local profile can be used. Local profile can be [synced to NS](../Installing-AndroidAPS/update3_0.md#nightscout-profile-cannot-be-pushed). @MilosKozak.
+- NSProfile is gone, just local profile can be used. Local profile can be [synced to NS](../Maintenance/Update3_0.md#nightscout-profile-cannot-be-pushed). @MilosKozak.
 
-- Forgotten [master password reset procedure](../Installing-AndroidAPS/update3_0.md#reset-master-password) @MilosKozak
+- Forgotten [master password reset procedure](../Maintenance/Update3_0.md#reset-master-password) @MilosKozak
 
 - User actions tracing @Philoul
 
@@ -312,7 +312,7 @@ Release date: 01-01-2021
 
 Release date: 24-09-2020
 
-**Make sure to check and adjust settings after updating to 2.7 as described** [here](../Installing-AndroidAPS/update2_7.md).
+**Make sure to check and adjust settings after updating to 2.7 as described** [here](../Maintenance/Update2_7.md).
 
 You need at least start [objective 11 (in later versions objective 10!)](../SettingUpAaps/CompletingTheObjectives.md#objective-10-automation) in order to continue using [Automation feature](../DailyLifeWithAaps/Automations.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-senstivity-plugin-dynisf). This will not effect other objectives you have already finished. You will keep all finished objectives!
 
@@ -330,7 +330,7 @@ You need at least start [objective 11 (in later versions objective 10!)](../Sett
 - [Low glucose suspend mode](../SettingUpAaps/Preferences.md#aps-mode) @Tornado-Tim
 - [carbs required notifications](../SettingUpAaps/Preferences.md#carb-required-notification) @twain47 @Tornado-Tim
 - removed Careportal (moved to Actions) @MilosKozak
-- [new encrypted backup format](../Usage/ExportImportSettings.md) @dlvoy
+- [new encrypted backup format](ExportImportSettings.md) @dlvoy
 - [new SMS TOTP authentication](../RemoteFeatures/SMSCommands.md) @dlvoy
 - [new SMS PUMP CONNECT, DISCONNECT](../RemoteFeatures/SMSCommands.md#commands) commands @Lexsus
 - better support for tiny basals on Dana pumps @Mackwe
@@ -473,7 +473,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 Release date: 31-10-2019
 
-Please note the [important notes](../Installing-AndroidAPS/Releasenotes.md#version-250) and [limitations](../Installing-AndroidAPS/Releasenotes.md#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](../Installing-AndroidAPS/Releasenotes.md#version-250).
+Please note the [important notes](ReleaseNotes#version-250) and [limitations](ReleaseNotes#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](ReleaseNotes#version-250).
 \* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
 \* New versioning that will allow to do minor updates without triggering the update-notification.
 
@@ -486,7 +486,7 @@ Release date: 26-10-2019
 
 ### Important notes
 
-- Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../SettingUpAaps/BuildingAaps.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
+- Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../SettingUpAaps/BuildingAaps.md) or [update](UpdateToNewVersion).
 - If you are using xDrip [identify receiver](../CompatibleCgms/xDrip.md#identify-receiver) must be set.
 - If you are using Dexcom G6 with the patched Dexcom app you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 - Glimp is supported from version 4.15.57 and newer.

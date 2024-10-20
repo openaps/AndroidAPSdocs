@@ -1,22 +1,24 @@
-# Creating and resorting back-ups
+# Creating and restoring back-ups
 
 It is important to keep back-ups of the items listed below. Best practice is to keep a back-up on a local hard drive as well as a cloud location (i.e. Google Drive, box, etc…). Below are the items that it is recommended to keep back-ups of.
 
-## 1 - keystore file from the computer you used to build the APK.
+## Creating back-ups
+
+### 1 - keystore file from the computer you used to build the APK.
 The keystore is what allows you to install an updated APK on top of the existing application. Maintaining the keystore will greatly reduce the complexity of updating the APK in the future, especially if you need to build the app from a new computer. See the Updating AAPS (link) section for details on using the keystore when building a new APK. 
 
 **When to back-up:** the keystore should be backed up after you first build the AAPS apk.
 
 **How to back-up:** locate your keystore path. If you don’t remember it you can find it in Android Studio by selecting Build > APK > Next. The path will be listed in “Key store path”. Using your file explorer, navigate to this path and make a copy of your keystore file (ending in file extension .jks). Save it to a safe cloud location should your computer become unavailable. Make sure to also record your key store password, key alias and key password.
 
-## 2 - copies of the most recent APK
+### 2 - copies of the most recent APK
 If your main AAPS phone is lost or damaged, having a copy of the APK available will allow you to quickly resume using AAPS with a new phone (note: you also need your preferences backed up as noted below).
 
 **When to back-up:** you should maintain a back-up of the most recent APK that you installed on your main AAPS phone. You may want to also maintain one earlier version in case you need to roll-back to that for any reason. 
 
 **How to back-up:** a copy will be maintained on the computer used to build the APK with Android Studio. Additionally, if you use a cloud platform to copy the APK to your phone, that will maintain a copy in the cloud as well. Make sure you know how to find both locations in the event you need them. Consider setting up dedicated folders on your computer and your cloud platform to store these back-ups.
 
-## 3 - AAPS preferences
+### 3 - AAPS preferences
 Preferences are what tailors the stock AAPS application to how you have it setup. Preferences include details on your config builder settings, status of objectives, nightscout settings, automations and local profiles. With a copy of the APK (see above) and preferences you can be up and running on a new phone quickly. 
 
 **When to back-up:**
@@ -38,7 +40,7 @@ Preferences are what tailors the stock AAPS application to how you have it setup
 
 3 - using the file explorer on your phone (commonly called “Files” or “My Files”) navigate to Internal Storage > AAPS > preferences. Here you will see a copy of all exported preferences files. The file name should be YYYY-MM-DD_Time_appname.json. Upload this file to the cloud platform of your choice. Then from the cloud platform, also download a copy to your local computer.  
 
-# Restoring from your backups on a new phone or fresh installation of AAPS
+## Restoring from your backups on a new phone or fresh installation of AAPS
 Use these instructions if you have a back-up of your APK and preferences that you want to load on to a new phone or if you needed to delete and reinstall the APK on your existing phone for any reason.
 
 _If you are updating AAPS using an APK built with the same keystore you should not need to follow this process. However, it is still advised to create a back-up before you apply the update._

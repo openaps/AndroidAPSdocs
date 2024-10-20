@@ -103,14 +103,14 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 ## Special note when switching phone
 
 When switching to a new phone the following steps are necessary:
-* [Export settings](../Usage/ExportImportSettings.md) on your old phone
+* [Export settings](../Maintenance/ExportImportSettings.md) on your old phone
 * Transfer settings from old to new phone
 
 ### DanaRS v1
 * **Manually pair** Dana RS with the new phone
 * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
 * Install AAPS on the new phone.
-* [Import settings](../Usage/ExportImportSettings.md) on your new phone
+* [Import settings](../Maintenance/ExportImportSettings.md) on your new phone
 
 ### DanaRS v3, Dana-i
 * Start pairing procedure like decribed [above](#pairing-pump).

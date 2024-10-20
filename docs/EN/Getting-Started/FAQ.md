@@ -58,7 +58,7 @@ You have to have the same emergency equipment with you like every other T1D with
 
 * Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
 * Pump batteries
-* Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+* Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Maintenance/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## How can I safely and securely attach the CGM/FGM?
 You can tape it.  There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Some loopers use the cheaper standard kinesiology tape or rocktape.
@@ -304,11 +304,11 @@ You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or
 
 ## My problem is not listed here.
 
-[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users.md#im-getting-stuck-what-do-i-do-who-can-i-ask)
+[Information to get help.](../GettingHelp/WhereCanIGetHelp.md)
 
 ## My problem is not listed here but I found the solution
 
-[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users.md#im-getting-stuck-what-do-i-do-who-can-i-ask)
+[Information to get help.](../GettingHelp/WhereCanIGetHelp.md)
 
 **Remind us to add your solution to this list!**
 
@@ -328,7 +328,7 @@ Copy on an internet drive (Dropbox, Google etc) : all the apks you used to insta
 
 Please 
 
-* check [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) for typical errors and
+* check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) for typical errors and
 * the tipps for with a [step by step walktrough](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
 ## I'm stuck on an objective and need help.
@@ -341,7 +341,7 @@ Open the hamburger menu, start the Configuration wizard and enter new password w
 
 ## How to reset the password in AAPS v3.x
 
-You find the documentation [here](../Installing-AndroidAPS/update3_0.md#reset-master-password).
+You find the documentation [here](../Maintenance/Update3_0.md#reset-master-password).
 
 ## My link/pump/pod is unresponsive (RL/OL/EmaLink…)
 

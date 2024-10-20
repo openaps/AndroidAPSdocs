@@ -38,7 +38,7 @@ SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in th
 ### Phone
 
 The current version of AAPS requires an Android smartphone with Google Android 9.0 or above. So if you are thinking about a new phone, Android 9 is recommended at a minimum but optimally choose Android 10 or 12.
-For older Android versions, older AAPS versions are available see: [Release notes](../Installing-AndroidAPS/Releasenotes.md#android-version-and-aaps-version)
+For older Android versions, older AAPS versions are available see: [Release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version)
 
 Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
@@ -97,7 +97,7 @@ The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice ho
 This is just a short overview of all compatible CGMs/FGM with AAPS. For further details, look [here](../Getting-Started/CompatiblesCgms.md). Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
 
 - [Dexcom G7](../CompatibleCgms/DexcomG7.md): Works with xDrip+ or patched app
-- [Dexcom G6](../CompatibleCgms/DexcomG6.md): BOYDA is recommended as of version 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.md#version-300) for details). xDrip+ must be at least version 2022.01.14 or newer
+- [Dexcom G6](../CompatibleCgms/DexcomG6.md): BOYDA is recommended as of version 3.0 (see [release notes](../Maintenance/ReleaseNotes.md#version-300) for details). xDrip+ must be at least version 2022.01.14 or newer
 - [Dexcom G5](../CompatibleCgms/DexcomG5.md): It works with xDrip+ app or patched Dexcom app
 - [Libre 3](../CompatibleCgms/Libre3.md): It works with xDrip+ (no transmitter needed)
 - [Libre 2](../CompatibleCgms/Libre2.md): It works with xDrip+ (no transmitter needed)

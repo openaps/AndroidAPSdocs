@@ -8,12 +8,12 @@
 * Please update to the new version of **AAPS** as soon as possible after a new release is available.
 * When a new release is available, in the **AAPS** app itself, you will receive an information banner about the new version.
 * The new version will also be announced on Facebook at the time of release.
-* Following the release, please read the [Release Notes](../Installing-AndroidAPS/Releasenotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
+* Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
 * You need to use version **[Hedgehog (2023.1.1) or Iguana (2023.2.1)](https://developer.android.com/studio/)** of Android Studio. If your version is older, please update first Android Studio first! 
 
 ## Overview for updating to a new version of AAPS
 
-1. [Export your settings](../Usage/ExportImportSettings.md) from the existing **AAPS** version on your phone.
+1. [Export your settings](ExportImportSettings.md) from the existing **AAPS** version on your phone.
 You might not need it, but better be safe than sorry.
 2. [Update local copy](#2-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
 3. [Build signed APK](#3-build-the-signed-apk)
@@ -21,10 +21,10 @@ You might not need it, but better be safe than sorry.
 5. [Check the version](#6-check-aaps-version-on-phone) in AAPS
 6. Depending on your [BG source](../Getting-Started/CompatiblesCgms.md) make sure to [identify receiver](../CompatibleCgms/xDrip.md#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app).
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md).
+In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
 
 ## 1. Export your settings
-See the [Export & import settings](../Usage/ExportImportSettings.md) page if you don't remember how to do this.
+See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
 
 (Update-to-new-version-update-your-local-copy)=
 ## 2. Update your local copy
@@ -86,12 +86,12 @@ After you installed the new apk, you can check the AAPS version on your phone by
 ![AAPS version installed](../images/Update_VersionCheck282.png)
 
 
-# Troubleshooting
+## Troubleshooting
 
 If anything goes wrong, don't panic.
 
 Take a breath!
 
-Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) if your problem is already documented!
+Then see the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) if your problem is already documented!
 
 If you need further help, please reach out to other **AAPS** users on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw).

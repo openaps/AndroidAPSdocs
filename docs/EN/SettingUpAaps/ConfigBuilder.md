@@ -30,7 +30,7 @@ However, it is possible to synchronise a Nightscout profile into a local profile
 ### Local profile
 Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
 
-Your local profiles are part of [exported settings](../Usage/ExportImportSettings.md). So make sure to have a backup in a safe place.
+Your local profiles are part of [exported settings](../Maintenance/ExportImportSettings.md). So make sure to have a backup in a safe place.
 
 ![Local Profile settings](../images/LocalProfile_Settings.png)
 
@@ -220,7 +220,7 @@ Note you need to be in [Objective 9](../SettingUpAaps/CompletingTheObjectives.md
 ## Objectives (learning program)
 AAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
-You should [export your settings](../Usage/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
+You should [export your settings](../Maintenance/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
 
 See [Objectives](../SettingUpAaps/CompletingTheObjectives.md) page for more information.
 

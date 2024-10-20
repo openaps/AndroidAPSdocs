@@ -2,7 +2,7 @@
 
 - The program code was changed significantly when switching to AAPS 2.7.
 - Therefore it is important that you make some changes or check settings after the update.
-- Please see [release notes](../Installing-AndroidAPS/Releasenotes.md#version-270) for details on new and extended features.
+- Please see [release notes](ReleaseNotes.md#version-270) for details on new and extended features.
 
 ## Check BG source
 
@@ -23,7 +23,7 @@
 
 ## Set master password
 
-- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7.
+- Necessary to be able to [export settings](ExportImportSettings.md) as they are encrypted as of version 2.7.
 - Open Preferences (three-dot-menu on top right of home screen)
 - Click triangle below "General"
 - Click "Master-Password"
@@ -34,12 +34,12 @@
 ## Export settings
 
 - AAPS 2.7 uses a new encrypted backup format.
-- You must [export your settings](../Usage/ExportImportSettings.md) after updating to version 2.7.
+- You must [export your settings](ExportImportSettings.md) after updating to version 2.7.
 - Settings files from previous versions can only be imported in AAPS 2.7. Export will be in new format.
 - Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
 - If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version.
 - All settings as well as finished objectives will remain as they were in the previous version.
-- In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore).
+- In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the [troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio#lost-keystore).
 
 ## Autosens (Hint - no action necessary)
 

@@ -80,9 +80,9 @@ Up to 30h hours are taken into accord for AAPS calculations. So even after you s
 To remove it immediately you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
 
 However, when there are a lot of duplicates, it might be easier to
-* [backup your settings](../Usage/ExportImportSettings.md),
+* [backup your settings](../Maintenance/ExportImportSettings.md),
 * reset your database in the maintenance menu and
-* [import your settings](../Usage/ExportImportSettings.md) again
+* [import your settings](../Maintenance/ExportImportSettings.md) again
 
 ##### Red warning sign: Duplicate BG data
 
@@ -494,4 +494,4 @@ History of the following treatments:
 
 * Displays status of the connection with your Nightscout site.
 * Settings are made in [preferences](../SettingUpAaps/Preferences.md#nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
-* For troubleshooting see this [page](../Usage/Troubleshooting-NSClient.md).
+* For troubleshooting see this [page](../GettingHelp/TroubleshootingNsClient.md).

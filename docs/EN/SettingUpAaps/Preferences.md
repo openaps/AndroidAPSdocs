@@ -52,7 +52,7 @@
 
 #### Master password
 
-- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted from version 2.7.
+- Necessary to be able to [export settings](../Maintenance/ExportImportSettings.md) as they are encrypted from version 2.7.
   **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
 
 - Open Preferences (three-dot menu on top right of home screen)
@@ -69,7 +69,7 @@
 
 - Protect your settings with a password or phone's biometric authentication (i.e. [child is using AAPS](../RemoteFeatures/RemoteMonitoring.md)).
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Usage/ExportImportSettings.md).
+- Custom password should be used if you want to use master password just for securing [exported settings](../Maintenance/ExportImportSettings.md).
 
 - If you are using a custom password click on line "Settings password" to set password as described [above](#master-password).
 
@@ -420,7 +420,7 @@ Original communication protocol, can be used with older Nightscout versions.
 
 ![NSClientV3](../images/Pref2024_NSClientV3.png)
 
-[New protocol introduced with AAPS 3.2.](../Installing-AndroidAPS/Releasenotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
+[New protocol introduced with AAPS 3.2.](../Maintenance/ReleaseNotes.md#important-comments-on-using-v3-versus-v1-api-for-nightscout-with-aaps) Safer and more efficient.
 
 ```{admonition} V3 data uploaders
 :class: warning

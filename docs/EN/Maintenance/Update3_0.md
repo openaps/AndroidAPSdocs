@@ -7,7 +7,7 @@
 
   Plan the update carefully!!! Best in situation without active insulin and carbs
 
-* Please see the [Release Notes](../Installing-AndroidAPS/Releasenotes) for details on new and changed features.
+* Please see the [Release Notes](../Maintenance/ReleaseNotes.md) for details on new and changed features.
 
 
 ## Check automations
@@ -30,8 +30,6 @@
 * Search for a profile switch with 100% and press clone.
 * A new local profile is added, valid from the current date.
 * To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date.
-
-(update3_0-reset-master-password)=
 
 ## Reset master password
 * You can now reset your master password in case you have forgotten it.
