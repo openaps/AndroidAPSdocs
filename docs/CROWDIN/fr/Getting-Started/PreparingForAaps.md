@@ -16,9 +16,9 @@ De nombreux détails dans la documentation sur l'utilisation de **AAPS** prennen
 “Un grand pouvoir implique de grandes responsabilités... ”
 
 ### Sûreté technique
-**AAPS** dispose d'un large éventail de fonctionnalités liées à la sûreté. These impose constraints which are gradually removed through staged completion of a series of [Objectives](../Usage/completing-the-objectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** débloque des fonctionnalités lorsque vous terminez un objectif avec succès. Ce processus permet à l'utilisateur d'évoluer en toute sécurité par étapes successives, de la Boucle Ouverte à la Boucle Fermée, tout en apprenant les différentes fonctionnalités de **AAPS**.
+**AAPS** dispose d'un large éventail de fonctionnalités liées à la sûreté. These impose constraints which are gradually removed through staged completion of a series of [Objectives](../SettingUpAaps/CompletingTheObjectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS** débloque des fonctionnalités lorsque vous terminez un objectif avec succès. Ce processus permet à l'utilisateur d'évoluer en toute sécurité par étapes successives, de la Boucle Ouverte à la Boucle Fermée, tout en apprenant les différentes fonctionnalités de **AAPS**.
 
-The [Objectives](../Usage/completing-the-objectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Des erreurs peuvent arriver quand un débutant est inexpérimenté et trop impatient de commencer avec **AAPS** ou a négligé des éléments importants. The [Objectives](../Usage/completing-the-objectives.md) aim to minimise these issues.
+The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Des erreurs peuvent arriver quand un débutant est inexpérimenté et trop impatient de commencer avec **AAPS** ou a négligé des éléments importants. The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) aim to minimise these issues.
 
 ### Sûreté médicale
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
@@ -85,7 +85,7 @@ Pour vous aider dans le processus de compilation, il y a des pages dédiées dan
 
 - List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](../Getting-Started/FAQ.md) K);
 
-- “[How to install AAPS](../Installing-AndroidAPS/building-AAPS.md)? (Section D) which includes [Troubleshooting](../Usage/troubleshooting.md) Subsection.
+- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section D) which includes [Troubleshooting](../Usage/troubleshooting.md) Subsection.
 
 Le temps nécessaire pour arriver à la boucle fermée dépendra de chacun, mais vous pouvez vous faire une idée [ici](#how-long-will-it-take-to-set-everything-up)
 
