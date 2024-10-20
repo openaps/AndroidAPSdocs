@@ -7,4 +7,4 @@
 ```
 
 -   Информация о настройке NSClient с сайтом Nightscout.
--   Select NSClient BG in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+-   Select NSClient BG in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
