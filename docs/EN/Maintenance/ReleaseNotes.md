@@ -323,7 +323,7 @@ You need at least start [objective 11 (in later versions objective 10!)](../Sett
 - [new layout, layout selection](../DailyLifeWithAaps/AapsScreens.md) @MilosKozak
 - new [status lights layout](../SettingUpAaps/Preferences.md#status-lights) @MilosKozak
 - [multiple graphs support](../DailyLifeWithAaps/AapsScreens.md#activate-optional-information) @MilosKozak
-- [Profile helper](../Configuration/profilehelper.md) @MilosKozak
+- [Profile helper](../SettingUpAaps/ProfileHelper.md) @MilosKozak
 - visualization of [dynamic target adjustment](../DailyLifeWithAaps/AapsScreens.md#visualization-of-dynamic-target-adjustment) @Tornado-Tim
 - new [preferences layout](../SettingUpAaps/Preferences.md) @MilosKozak
 - SMB algorithm update @Tornado-Tim

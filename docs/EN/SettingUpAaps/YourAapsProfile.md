@@ -1,20 +1,20 @@
 ## Introduction to your AAPS profile ##
 
-### **What is an AAPS profile?**
+### What is an AAPS profile?
 
 Your AAPS profile is a set of five key parameters which define how AAPS should deliver insulin in response to your sensor glucose levels. AAPS has several _additional_ modifiable parameters (like SMB settings), but using these well relies on your underlying AAPS profile being correct. The AAPS profile incorporates: duration of insulin action (DIA), glucose targets, basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR). Screenshots from AAPS of an _example_ profile are shown in below. Please note, this profile shows a large number of timepoints. When you start out with AAPS, your profile is likely to be much simpler. Profiles vary significantly from person-to-person, for examples of AAPS profiles for small children, teenagers and adults please see the later section, optimising your [profile](link).    
 
-#### **Duration of insulin action (DIA)**
+#### Duration of insulin action (DIA)
 The duration of insulin action is set to a single value in AAPS, because your pump will continually infuse the same type of insulin. The remaining four parameters can be set to different values, changing hourly if required, over a 24 hour period. 
 
-#### **Glucose targets**
+#### Glucose targets
 Glucose targets are set according to your personal preferences. For example, if you are concerned about hypos at night, you may set your target slightly higher at 117/mg/dL (6.5 mmol/L) from 9 pm - 7am. If you want to make sure you have plenty of insulin on board (IOB) in the morning before bolusing for breakfast, you may set a lower target of 81 mg/dL (4.5 mmol/L) from 7 am - 8 am. A glucose target, particularly if it is only short-term (less than 4 hours in duration), does not need to be the *actual value* you expect or want your glucose level to get to, rather, it is a good way to tell AAPS to be more or less aggressive, while still keeping your glucose levels in range. The **figure below** shows an example of how the DIA and glucose targets could be set in an AAPS profile.   
 
 ![24-07-23, profile basics - DIA and target](../images/f3904cc3-3d9e-497e-a3b6-3a49650053e6.png)
 
 For the final three parameters, basal rates (BR), insulin sensitivity factors (ISF) and insulin-to-carb ratios (IC or ICR), the absolute values and trends in your insulin requirements vary significantly from person to person, depending on your biology, gender, age, fitness level etc. as well as shorter term factors like illness and recent exercise. For more guidance on this, the book [“Brights Spots and Landmines”](https://brightspotsandlandmines.org/Bright_Spots_and_Landmines_by_Adam_Brown.pdf) by Adam Brown is an excellent book to read. 
 
-#### **Basal rates** 
+#### Basal rates 
 
 Your basal rate of insulin (Units/hour) provides background insulin, keeping your glucose levels stable in the absence of food or exercise. 
 
@@ -22,7 +22,7 @@ Accurate basal rates enable you to wake up in range, and to skip meals - or eat 
 
 Most type 1 diabetes educators (and people with type 1 diabetes!) agree that you should work on getting your basal rates correct, before attempting to optimise your ISF and ICR. 
  
-#### **Insulin sensitivity factor (ISF)**
+#### Insulin sensitivity factor (ISF)
 
 The insulin sensitivity factor (sometimes called correction factor) is a measure of how much your blood glucose level will be reduced by 1 unit of insulin. 
 
@@ -48,7 +48,7 @@ See the **figure below** for an example of how the basal rates and ISF values co
 
 ![24-07-23, profile basics - basal and ISF](../images/55c8ed24-e24e-4caa-9c17-294fa93cb84a.png)
 
-#### **Insulin to Carb ratio (ICR)**
+#### Insulin to Carb ratio (ICR)
   
 The ICR is a measure of how many grams of carbohydrate are covered by one unit of insulin.
 
@@ -65,7 +65,7 @@ As shown in the **figure below**, when entering these values into an AAPS profil
 ![24-07-23, profile basics - ICR](../images/7741eefb-cae5-45c5-a9e5-8eae5ead3f48.png)
 
 
-#### **Why should I try to get my profile settings right? Can’t the loop just take care of it?**   
+#### Why should I try to get my profile settings right? Can’t the loop just take care of it?   
 
 A hybrid closed loop _can_ attempt to make insulin delivery adjustments to minimise poor glycemic control that results from having incorrect profile values. It can do this, for example, by withholding insulin delivery if you are hypo. However, you can achieve much better glycemic control if your profile settings are already as close as possible to what your body needs. This is one of the reasons that AAPS uses staged objectives to move from open loop pumping towards hybrid closed loop. In addition, there will be times when you need to open the loop (sensor warmups, sensor failure _etc._), sometimes in the middle of the night, and you will want to have your settings right for these situations. 
 
@@ -75,3 +75,9 @@ If you are moving from injections (MDI) to AAPS, then it is a good idea to read 
 
 In the [optimising your profile](operating - optimising - your profile link) we present example profiles, discuss how to set and optimise the parameters which form your AAPS profile(s), and provide guidance on additional resources such as **Autotune** which aim to automate optimisation of your profile.
 
+### Profile Helper
+
+The [Profile Helper](../SettingUpAaps/ProfileHelper.md) can help you:
+* build a profile from scratch for a kid
+* compare two profiles
+* clone a profile

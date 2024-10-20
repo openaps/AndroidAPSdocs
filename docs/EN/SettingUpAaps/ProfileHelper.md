@@ -50,7 +50,7 @@ You can use profile helper also to compare to different profiles or profile swit
 (profilehelper-clone-profile)=
 ## Clone profile
 
-If you use [local profiles](Config-Builder-local-profile) you can clone a profile / profile switch directly from profile helper.
+You can clone a profile / profile switch directly from profile helper.
 
 ![Profile Helper Clone profile / profile switch](../images/ProfileHelperClone.png)
 

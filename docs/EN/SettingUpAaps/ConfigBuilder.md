@@ -72,7 +72,7 @@ Profile helper offers two functions:
    1. Find a profile for kids
    2. Compare two profiles or profile switches in order to clone a new profile
 
-Details are explained on the separate [profile helper page](../Configuration/profilehelper.md).
+Details are explained on the separate [profile helper page](../SettingUpAaps/ProfileHelper.md).
 
 (Config-Builder-insulin)=
 ## Insulin
