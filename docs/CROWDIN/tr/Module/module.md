@@ -109,11 +109,11 @@ Nightscout, CGM verilerinizi ve AAPS verilerinizi kaydedip görüntüleyebilen v
 
 Nightscout diğer modüllerden bağımsızdır. Görev 1'i yerine getirmek için Nightscout'a ihtiyacınız olacak.
 
-Nightscout'un AAPS ile kullanım için nasıl yapılandırılacağına ilişkin ek bilgiler [burada](../Installing-AndroidAPS/Nightscout.md) bulunabilir.
+Additional information on how to configure Nightscout for use with AAPS can be found [here](../SettingUpAaps/Nightscout.md).
 
 ### AAPS-.apk dosyası
 
-Sistemin temel bileşeni. Uygulamayı yüklemeden önce, apk dosyasını (bir Android Uygulaması için dosya adı uzantısıdır) oluşturmanız gerekir. Instructions are  [here](../Installing-AndroidAPS/building-AAPS.md).
+Sistemin temel bileşeni. Uygulamayı yüklemeden önce, apk dosyasını (bir Android Uygulaması için dosya adı uzantısıdır) oluşturmanız gerekir. Instructions are  [here](../SettingUpAaps/BuildingAaps.md).
 
 ## Opsiyonel Modüller
 
@@ -137,4 +137,4 @@ Kapalı döngüye geçmek için için tüm modülleri elde etmek bazen biraz zam
 
 Buradaki dokümanları okumaya devam edebilir, çevrimiçi veya çevrimdışı olarak diğer döngü kullanıcılarıyla iletişime geçebilir, [bu linkteki](../Where-To-Go-For-Help/Background-reading.md) dokümanları veya diğer döngü kullanıcılarının yazdıklarını okuyabilirsiniz. (Yazılanlara rağmen dikkatli olmalısınız, her şey doğru olmayabilir veya sizin konfigürasyonunuz için uygun değildir).
 
-**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/completing-the-objectives.md) before each new Objective and setup up your [hardware](index-component-setup).
+**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective and setup up your [hardware](index-component-setup).
