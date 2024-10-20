@@ -331,8 +331,8 @@ You need at least start [objective 11 (in later versions objective 10!)](../Sett
 - [carbs required notifications](../SettingUpAaps/Preferences.md#carb-required-notification) @twain47 @Tornado-Tim
 - removed Careportal (moved to Actions) @MilosKozak
 - [new encrypted backup format](../Usage/ExportImportSettings.md) @dlvoy
-- [new SMS TOTP authentication](../Children/SMS-Commands.md) @dlvoy
-- [new SMS PUMP CONNECT, DISCONNECT](../Children/SMS-Commands.md#commands) commands @Lexsus
+- [new SMS TOTP authentication](../RemoteFeatures/SMSCommands.md) @dlvoy
+- [new SMS PUMP CONNECT, DISCONNECT](../RemoteFeatures/SMSCommands.md#commands) commands @Lexsus
 - better support for tiny basals on Dana pumps @Mackwe
 - small Insight fixes @TebbeUbben @MilosKozak
 - ["Default language" option](../SettingUpAaps/Preferences.md#general) @MilosKozak
@@ -445,7 +445,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - [Wear complications](../Configuration/Watchfaces.md)
 
-- New [SMS commands](../Children/SMS-Commands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
+- New [SMS commands](../RemoteFeatures/SMSCommands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
 
 - Fixed language support
 
@@ -514,7 +514,7 @@ Release date: 26-10-2019
 - New [objectives](../SettingUpAaps/CompletingTheObjectives.md) - exam, application handling
   (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
 - Fixed bug in Dana\* drivers where false time difference was reported
-- Fixed bug in [SMS communicator](../Children/SMS-Commands.md)
+- Fixed bug in [SMS communicator](../RemoteFeatures/SMSCommands.md)
 
 ## Version 2.3
 
@@ -551,7 +551,7 @@ Release date: 29-03-2019
 
 - [DST fix](../Usage/Timezone-traveling.md#time-adjustment-daylight-savings-time-dst)
 - Wear Update
-- [SMS plugin](../Children/SMS-Commands.md) update
+- [SMS plugin](../RemoteFeatures/SMSCommands.md) update
 - Go back in objectives.
 - Stop loop if phone disk is full
 

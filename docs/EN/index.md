@@ -16,7 +16,7 @@ Now that you have a solid understanding of the process, you can start assembling
 You are then slowly introduced to the full usage of what **AAPS** has to offer via a safe and carefully calibrated step-by-step process designed to make sure that you/your child are thoroughly familiar and comfortable navigating all the different levels and menu configurations before graduating on the next phase, commonly referred to as the next "Objective", until you are have enough experience to begin using the more advanced options available within the app. 
 These Objectives are specially designed in such a way that will gradually unlock more possibilities of **AAPS** and switch from Open Loop to Closed Loop.
 
-Section 4) [Remote AAPS features](remote-control.md) highlights a real strength of **AAPS**. There are a wide range of possibilities for remotely sending commands to, or simply following the data from **AAPS**. This is equally useful for carers who want to use **AAPS** for minors, and for adults with diabetes who either want to monitor their sugars (and other metrics) more conveniently than just on their phone (on a watch, in the car _etc._), or wish to have significant others to also monitor the data. This section also provides guidance for using Android Auto so you can view glucose levels in the car.  
+Section 4) [Remote AAPS features](./RemoteFeatures/RemoteControl.md) highlights a real strength of **AAPS**. There are a wide range of possibilities for remotely sending commands to, or simply following the data from **AAPS**. This is equally useful for carers who want to use **AAPS** for minors, and for adults with diabetes who either want to monitor their sugars (and other metrics) more conveniently than just on their phone (on a watch, in the car _etc._), or wish to have significant others to also monitor the data. This section also provides guidance for using Android Auto so you can view glucose levels in the car.  
 
 Section **5) Daily life with AAPS** covers key **AAPS** features, to help you use (and customise)  **AAPS**. This including understanding the screens, carbs-on-board, sensitivity, profile switching, temp targets, extended carbs (or eCarbs), automations, and DynamicISF. It also covers frequent topics like how to manage different types of meals, how to deal with cannula and sensor changes, smartphone updates, daylight saving changes, and [travelling with AAPS](Usage/Timezone-traveling.md) and sports. Common questions and answers are located within the troubleshooting section. 
 
@@ -89,9 +89,10 @@ Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```{toctree}
 :caption: 4) Remote AAPS features
 
-Remote control <remote-control.md>
-Following Only <following-only.md>
-Android Auto <./Usage/Android-auto.md>
+Remote monitoring <./RemoteFeatures/RemoteMonitoring.md>
+Remote control <./RemoteFeatures/RemoteControl.md>
+Following Only <./RemoteFeatures/FollowingOnly.md>
+Android Auto <./RemoteFeatures/AndroidAuto.md>
 
 ```
 

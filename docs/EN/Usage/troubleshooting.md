@@ -27,7 +27,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 
    ![Error: Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
 
-* [SMS commands](../Children/SMS-Commands.md#troubleshooting)
+* [SMS commands](../RemoteFeatures/SMSCommands.md#troubleshooting)
 
 ### Frequent bluetooth connection problems
 

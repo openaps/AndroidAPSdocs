@@ -67,7 +67,7 @@
 
 #### Settings protection
 
-- Protect your settings with a password or phone's biometric authentication (i.e. [child is using AAPS](../Children/Children.md)).
+- Protect your settings with a password or phone's biometric authentication (i.e. [child is using AAPS](../RemoteFeatures/RemoteMonitoring.md)).
 
 - Custom password should be used if you want to use master password just for securing [exported settings](../Usage/ExportImportSettings.md).
 
@@ -82,7 +82,7 @@
 
 #### Bolus protection
 
-- Bolus protection might be useful if AAPS is used by a small child and you [bolus via SMS](../Children/SMS-Commands.md).
+- Bolus protection might be useful if AAPS is used by a small child and you [bolus via SMS](../RemoteFeatures/SMSCommands.md).
 
 - In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter master password.
 
@@ -473,7 +473,7 @@ Options in advanced settings are self-explanatory.
 
 - Options will only be displayed if SMS communicator is selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#sms-communicator).
 - This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.
-- Further information is described in [SMS Commands](../Children/SMS-Commands.md).
+- Further information is described in [SMS Commands](../RemoteFeatures/SMSCommands.md).
 - Additional safety is obtained through use of an authenticator app and additional PIN at token end.
 
 ## Automation

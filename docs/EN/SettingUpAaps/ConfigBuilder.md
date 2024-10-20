@@ -289,7 +289,7 @@ User defined automation tasks ('if-then-else'). Please [read on here](../Usage/A
 
 (Config-Builder-sms-communicator)=
 ### SMS Communicator
-Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.md) for more setup information.
+Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../RemoteFeatures/SMSCommands.md) for more setup information.
 
 ### Food
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.

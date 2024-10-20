@@ -70,7 +70,7 @@
 - Accu-Chek Insight - Option to [upload absolute values](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps)
 - Logs - more details about [folder location](../Usage/Accessing-logfiles.md)
 - Omnipod Eros - status update
-- [SMS commands - time sync](../Children/SMS-Commands.md)
+- [SMS commands - time sync](../RemoteFeatures/SMSCommands.md)
 
 ## September 2020
 
@@ -120,7 +120,7 @@
 
 ## December 2019
 
-- [Android auto](../Usage/Android-auto.md) - setup with screenshots
+- [Android auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
 - [Accu-Chek Insight & Autotune](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps) - workaround for usage
 - [Glimp](../SettingUpAaps/ConfigBuilder.md#bg-source) - version 4.15.57 and newer supported
 - [Watchfaces](../Configuration/Watchfaces.md) - major update, way more details
@@ -137,7 +137,7 @@
 - [Medtronic pump - possible double entries](../CompatiblePumps/MedtronicPump.md)
 - [New Freestyle Libre 2 tutorial](../CompatibleCgms/Libre2.md)
 - [Profile switch with percentage - example](../Usage/Profiles.md)
-- [SMS commands update](../Children/SMS-Commands.md)
+- [SMS commands update](../RemoteFeatures/SMSCommands.md)
 - [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 - [Troubleshooting - link collection](../Usage/troubleshooting.md)
 - Update - quick walk-through for experienced users
@@ -153,7 +153,7 @@
 - [Objectives update version 2.5](../SettingUpAaps/CompletingTheObjectives.md)
 - [Preferences update](../SettingUpAaps/Preferences.md)
 - [SGLT-2 inhibitors - do not use when looping](../Getting-Started/PreparingForAaps.md#no-sglt-2-inhibitors)
-- [SMS Commands Troubleshooting](../Children/SMS-Commands.md#troubleshooting)
+- [SMS Commands Troubleshooting](../RemoteFeatures/SMSCommands.md#troubleshooting)
 - [xDrip - update G6 transmitter replacement](../CompatibleCgms/xDrip.md#replace-transmitter)
 
 ## September 2019
@@ -162,7 +162,7 @@
 - [Bolus calculator](../Getting-Started/Screenshots.md#wrong-cob-detection) - slow carb absorption
 - [Nightscout security](../SettingUpAaps/Nightscout.md#security-considerations)
 - [Profile timeshift](../Usage/Profiles.md#time-shift-of-the-circadian-percentage-profile) (more details)
-- [Remote monitoring](../Children/Children.md)
+- [Remote monitoring](../RemoteFeatures/RemoteMonitoring.md)
 - [What is a closed loop system?](../Getting-Started/Introduction.md#what-does-hybrid-closed-loop-mean)
 
 ## August 2019
