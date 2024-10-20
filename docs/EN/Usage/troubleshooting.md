@@ -23,7 +23,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 * [Nightscout Client](../Usage/Troubleshooting-NSClient.md)
 
 ### Usage
-* [Wrong carb values](../Usage/COB-calculation.md#detection-of-wrong-cob-values)
+* [Wrong carb values](../DailyLifeWithAaps/CobCalculation.md#detection-of-wrong-cob-values)
 
    ![Error: Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
 

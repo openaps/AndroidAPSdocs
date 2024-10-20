@@ -19,7 +19,7 @@ This is the first screen you will come across when you open AAPS and it contains
 
 * Current profile is displayed in the left bar.
 * Short press profile bar to view profile details
-* Long press profile bar to [switch between different profiles](../Usage/Profiles.md#profile-switch--profile-percentage).
+* Long press profile bar to [switch between different profiles](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#profile-switch--profile-percentage).
 * If profile switch was made with duration remaining time in minutes is shown in brackets.
 
 #### Target
@@ -27,7 +27,7 @@ This is the first screen you will come across when you open AAPS and it contains
 ![Temp target remaining duration](../images/Home2020_TT.png)
 
 * Current target blood glucose level is displayed in the right bar.
-* Short press target bar to set a [temporary target](../Usage/temptarget.md).
+* Short press target bar to set a [temporary target](../DailyLifeWithAaps/TempTargets.md).
 * If temp target is set bar turns yellow and remaining time in minutes is shown in brackets.
 
 #### Visualization of Dynamic target adjustment
@@ -119,11 +119,11 @@ You need to find out why you get duplicate BGs:
    * IOB may be negative if there have recently been periods of reduced basal.
    * Press the icon to see the split of bolus and basal insulin
    
-* Grain: [carbs on board (COB)](../Usage/COB-calculation.md) - yet unabsorbed carbs you have eaten before
+* Grain: [carbs on board (COB)](CobCalculation) - yet unabsorbed carbs you have eaten before
   -> icon pulses if carbs are required 
 * Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%)
    * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
-* Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features.md#autosens) status (enabled or disabled) and value is shown below icon
+* Arrows up & down: indicating actual [autosens](KeyAapsFeatures#autosens) status (enabled or disabled) and value is shown below icon
 
 #### Carbs required
 ![Carbs required](../images/Home2020_CarbsRequired.png)
@@ -154,7 +154,7 @@ You need to find out why you get duplicate BGs:
 * Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
 * Long press on the graph to change the time scale. You can choose 6, 12, 18 or 24 hours.
 * The green area reflects your target range. It can be configured in [preferences](../SettingUpAaps/Preferences.md#range-for-visualization).
-* Blue triangles show [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) - if enabled in [preferences](../SettingUpAaps/Preferences.md#openaps-smb-settings).
+* Blue triangles show [SMB](KeyAapsFeatures#super-micro-bolus-smb) - if enabled in [preferences](../SettingUpAaps/Preferences.md#openaps-smb-settings).
 * Optional information:
   
    * Predictions
@@ -170,7 +170,7 @@ You need to find out why you get duplicate BGs:
 (Screenshots-prediction-lines)=
 #### Prediction lines
 
-* **Orange** line: [COB](../Usage/COB-calculation.md) (colour is used generally to represent COB and carbs)
+* **Orange** line: [COB](CobCalculation) (colour is used generally to represent COB and carbs)
 
    Prediction line shows where your BG (not where COB itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
 
@@ -186,7 +186,7 @@ You need to find out why you get duplicate BGs:
 
    *This line appears only when the [SMB](../SettingUpAaps/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
-* **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB.md#sensitivity-oref1) (un-announced meals)
+* **Dark yellow** line: [UAM](../DailyLifeWithAaps/SensitivityDetectionAndCob.md#sensitivity-oref1) (un-announced meals)
 
   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
 
@@ -227,7 +227,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Insulin on board
 * Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
-* If there were no [SMBs](../Usage/Open-APS-features.md#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
+* If there were no [SMBs](KeyAapsFeatures#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
 * IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
 * Decaying depends on your [DIA and insulin profile settings](../SettingUpAaps/ConfigBuilder.md#local-profile). 
 
@@ -238,13 +238,13 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Deviations
 * **GREY** bars show a deviation due to carbs. 
-* **GREEN** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features.md#autosens).
-* **RED** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features.md#autosens).
+* **GREEN** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](KeyAapsFeatures#autosens).
+* **RED** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](KeyAapsFeatures#autosens).
 * **YELLOW** bars show a deviation due to UAM.
 * **BLACK** bars show small deviations not taken into account for sensitivity
 
 #### Sensitivity
-* Shows the sensitivity that [Autosens](../Usage/Open-APS-features.md#autosens) has detected. 
+* Shows the sensitivity that [Autosens](KeyAapsFeatures#autosens) has detected. 
 * Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
 
 #### Activity
@@ -280,7 +280,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * To record carbs without bolusing.
 * Certain [pre-set temporary targets](../SettingUpAaps/Preferences.md#default-temp-targets) can be set directly by checking the box.
 * Time offset: When will you / have you been eaten carbs (in minutes).
-* Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.md)
+* Duration: To be used for ["extended carbs"](ExtendedCarbs)
 * You can use the buttons to quickly increase carb amount.
 * Notes will be uploaded to Nightscout - depending on your settings for [NS client](../SettingUpAaps/Preferences.md#nsclient).
 
@@ -346,7 +346,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * If you see the warning above after using bolus wizard, AAPS has detected that the calculated COB value maybe wrong.
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
-* For details see the hints on [COB calculation page](../Usage/COB-calculation.md#detection-of-wrong-cob-values).
+* For details see the hints on [COB calculation page](CobCalculation#detection-of-wrong-cob-values).
 
 (Screenshots-action-tab)=
 ## Action tab
@@ -354,14 +354,14 @@ When you want to make a meal bolus this is where you will normally make it from.
 ![Actions tab](../images/Home2021_Action.png)
 
 ### Actions - section M
-* Button [profile switch](../Usage/Profiles.md#profile-switch--profile-percentage) as an alternative to pressing the [current profile](#section-b---profile--target) on homescreen.
-* Button [temporary target](../Usage/temptarget.md) as an alternative to pressing the [current target](#section-b---profile--target) on homescreen.
+* Button [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#profile-switch--profile-percentage) as an alternative to pressing the [current profile](#section-b---profile--target) on homescreen.
+* Button [temporary target](../DailyLifeWithAaps/TempTargets.md) as an alternative to pressing the [current target](#section-b---profile--target) on homescreen.
 * Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
-* Even though [extended boluses](../Usage/Extended-Carbs.md#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway. 
+* Even though [extended boluses](ExtendedCarbs#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway. 
 
    * This option is only available for Dana RS and Insight pumps. 
    * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
-   * Make sure to read the [details](../Usage/Extended-Carbs.md) before using this option.
+   * Make sure to read the [details](ExtendedCarbs) before using this option.
 
 (Screenshots-careportal-section-n)=
 
@@ -477,10 +477,10 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 History of the following treatments:
 
 * Bolus & carbs -> option to [remove entries](#carb-correction) to correct history
-* [Extended bolus](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
+* [Extended bolus](ExtendedCarbs#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 * Temporary basal rate
-* [Temporary target](../Usage/temptarget.md)
-* [Profile switch](../Usage/Profiles.md)
+* [Temporary target](../DailyLifeWithAaps/TempTargets.md)
+* [Profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 * Careportal - notes entered through action tab and notes in dialogues
 
 ## BG Source - xDrip+, BYODA...

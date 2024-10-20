@@ -41,7 +41,7 @@ If you plan to use the android wear app to bolus or change settings then you nee
 ### Disconnect pump
 If you take your pump off for showering, bathing, swimming, sports or other activities you must let AAPS know that no insulin is delivered to keep IOB correct.
 
-The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](../Getting-Started/Screenshots.md#loop-status).
+The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](../DailyLifeWithAaps/AapsScreens.md#loop-status).
 
 ### Recommendations not only based on one single CGM reading
 For safety, recommendations made are based on not one CGM reading but the average delta.  Therefore, if you miss some readings it may take a while after getting data back before AAPS kicks in looping again.
@@ -218,10 +218,10 @@ Looping can reduce the pump battery faster than normal use because the system in
 The change of cartridge cannot be done via AAPS but must be carried out as before directly via the pump.
 * Long press on "Open Loop"/"Closed Loop" on the Home tab of AAPS and select 'Suspend Loop for 1h'
 * Now nnect the pump and change the reservoir as per pump instructions.
-* Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Getting-Started/Screenshots.md#action-tab) in the actions tab just to record the change.
+* Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../DailyLifeWithAaps/AapsScreens.md#action-tab) in the actions tab just to record the change.
 * Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
-The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate.  On the Actions (Act) tab, use the [PRIME/FILL button](../Getting-Started/Screenshots.md#action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling.  You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts.  See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
+The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate.  On the Actions (Act) tab, use the [PRIME/FILL button](../DailyLifeWithAaps/AapsScreens.md#action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling.  You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts.  See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 
 ## Wallpaper
 
@@ -235,7 +235,7 @@ You can find the AAPS wallpaper for your phone on the [phones page](../Compatibl
 You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ.md#disconnect-pump).
 
 ### Work
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day.  For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day.  You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles.md#time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) for your typical working day.  For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day.  You could also consider a high or low temporary target or a [time shift of your profile](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
 ## Leisure activities
 
@@ -246,13 +246,13 @@ You have to rework your old sports habits from pre-loop times. If you simply con
 So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
 
 When looping you should try these steps:
-* Make a [profile switch](../Usage/Profiles.md) < 100%.
-* Set an [activity temp target](../Usage/temptarget.md#activity-temp-target) above your standard target.
-* If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features.md#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features.md#enable-smb-always) are disabled.
+* Make a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) < 100%.
+* Set an [activity temp target](../DailyLifeWithAaps/TempTargets.md#activity-temp-target) above your standard target.
+* If you are using SMB make sure ["Enable SMB with high temp targets"](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb-always) are disabled.
 
 Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.md) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
+If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../DailyLifeWithAaps/Automations.md) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
 
 The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
 
@@ -287,7 +287,7 @@ Some people have discovered problems with local broadcast (AAPS not receiving BG
 ### Travelling
 
 #### How to deal with time zone changes?
-With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../Usage/Timezone-traveling.md) page for more details.
+With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
 
 ## Medical topics
 

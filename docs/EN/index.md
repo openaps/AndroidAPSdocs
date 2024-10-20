@@ -18,7 +18,7 @@ These Objectives are specially designed in such a way that will gradually unlock
 
 Section 4) [Remote AAPS features](./RemoteFeatures/RemoteControl.md) highlights a real strength of **AAPS**. There are a wide range of possibilities for remotely sending commands to, or simply following the data from **AAPS**. This is equally useful for carers who want to use **AAPS** for minors, and for adults with diabetes who either want to monitor their sugars (and other metrics) more conveniently than just on their phone (on a watch, in the car _etc._), or wish to have significant others to also monitor the data. This section also provides guidance for using Android Auto so you can view glucose levels in the car.  
 
-Section **5) Daily life with AAPS** covers key **AAPS** features, to help you use (and customise)  **AAPS**. This including understanding the screens, carbs-on-board, sensitivity, profile switching, temp targets, extended carbs (or eCarbs), automations, and DynamicISF. It also covers frequent topics like how to manage different types of meals, how to deal with cannula and sensor changes, smartphone updates, daylight saving changes, and [travelling with AAPS](Usage/Timezone-traveling.md) and sports. Common questions and answers are located within the troubleshooting section. 
+Section **5) Daily life with AAPS** covers key **AAPS** features, to help you use (and customise)  **AAPS**. This including understanding the screens, carbs-on-board, sensitivity, profile switching, temp targets, extended carbs (or eCarbs), automations, and DynamicISF. It also covers frequent topics like how to manage different types of meals, how to deal with cannula and sensor changes, smartphone updates, daylight saving changes, and [travelling with AAPS](DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) and sports. Common questions and answers are located within the troubleshooting section. 
 
 
 Section **6) Maintenance of AAPS** covers how to export and backup your settings (which is very important in case you lose/break your phone), gives the latest version notes and details how to update **AAPS**. You can expect that there will be one new version and 2-3 required updates per year. You are required to do these updates as with all software, as any minor bugs are ironed out, and improvements to **AAPS** are made. There is a dedicated "updating" troubleshooting section with the common queries. 
@@ -99,22 +99,17 @@ Android Auto <./RemoteFeatures/AndroidAuto.md>
 ```{toctree}
 :caption: 5) Daily Life with APPS
 
-AAPS Screens <./Getting-Started/Screenshots.md>
-Key AAPS Features <./Usage/Open-APS-features.md>
-COB calculation <./Usage/COB-calculation.md>
-Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
-Profile switch <./Usage/Profiles.md>
-Temp-targets <./Usage/temptarget.md>
-Extended carbs <./Usage/Extended-Carbs.md>
-Automations <./Usage/Automation.md>
-Dynamic ISF <./Usage/DynamicISF.md>
-Meal Management
-Pumps and cannulas <./5-DailyLifewithAAPS/DailyLife-PUMPS.md>
-Sensors
-Phones
-Daylight saving changes
-Travelling with AAPS 
-Crossing timezones with pumps <./Usage/Timezone-traveling.md>
+AAPS Screens <./DailyLifeWithAaps/AapsScreens.md>
+Key AAPS Features <./DailyLifeWithAaps/KeyAapsFeatures.md>
+COB calculation <./DailyLifeWithAaps/CobCalculation.md>
+Sensitivity detection <./DailyLifeWithAaps/SensitivityDetectionAndCob.md>
+Profile switch <./DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md>
+Temp-targets <./DailyLifeWithAaps/TempTargets.md>
+Extended carbs <./DailyLifeWithAaps/ExtendedCarbs.md>
+Automations <./DailyLifeWithAaps/Automations.md>
+Dynamic ISF <./DailyLifeWithAaps/DynamicISF.md>
+Pumps and cannulas <./DailyLifeWithAaps/PumpsAndCannulas.md>
+Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md>
 
 ```
 
@@ -145,7 +140,6 @@ Help! My AAPS phone is broken/stolen/lost
 :caption: 8) Useful AAPS Links
 
 Glossary <./Getting-Started/Glossary.md>
-AAPS Screens <./Getting-Started/Screenshots.md>
 Your AAPS profile 
 Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
 Operation of Wear AAPS on a Smartwatch <./Configuration/Watchfaces.md>

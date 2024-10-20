@@ -26,11 +26,11 @@ Profile helper offers data sets from two different hospitals for children to fin
 6. Press button 'COMPARE PROFILES' on top of screen.
 7. Comparison of the two adjusted profiles will be displayed.
 
-Once you are fine with the profile adjustments you can [clone the profile](profilehelper-clone-profile) as described below.
+Once you are fine with the profile adjustments you can [clone the profile](#clone-profile) as described below.
 
 ## Compare two profiles
 
-You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../Usage/Profiles.md) before).
+You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) before).
 
 ![Profile Helper 1](../images/ProfileHelper1.png)
 

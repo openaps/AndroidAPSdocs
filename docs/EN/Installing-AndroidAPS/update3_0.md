@@ -3,7 +3,7 @@
 * **Minimum Android version is 9.0 now.**
 * **Data is not migrated to new database.**
 
-  Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new [profile switch](../Usage/Profiles) and start with zero IOB and COB.
+  Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) and start with zero IOB and COB.
 
   Plan the update carefully!!! Best in situation without active insulin and carbs
 
@@ -49,11 +49,11 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
   ![Yellow BG warning](../images/bg_warn_yellow.png)
    
-For details see [AAPS screens page](Screenshots-bg-warning-sign)
+For details see [AAPS screens page](../DailyLifeWithAaps/AapsScreens.md#bg-warning-sign)
 
 
 ## Failure message: Data from different pump
 
    ![Failure message: Data from different pump](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](Config-Builder-pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.
+To resolve this issue go to [config builder](../SettingUpAaps/ConfigBuilder.md#pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.

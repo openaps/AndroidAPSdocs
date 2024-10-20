@@ -146,5 +146,5 @@ In this case turn off bluetooth on pump AND smartphone for about 10 seconds and 
 
 ## Crossing time zones with Insight pump
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#insight).
 

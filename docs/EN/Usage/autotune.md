@@ -41,7 +41,7 @@ Autotune plugin is an implementation of OpenAPS autotune algorythm within AAPS.
   
 - The "Compare profiles" button open the profile comparator view. Input profile is in blue, and output profile (named "Tuned") is in red.
 
-  - Note: in the example below input profile has circadian variation for IC and ISF, but output calculated profile has a single value. If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](autotune-circadian-ic-or-isf-profile) below.
+  - Note: in the example below input profile has circadian variation for IC and ISF, but output calculated profile has a single value. If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](#circadian-ic-or-isf-profile) below.
 
   ![Autotune Compare profiles](../images/Autotune/Autotune_5.png)
 
@@ -84,13 +84,13 @@ Autotune plugin is an implementation of OpenAPS autotune algorythm within AAPS.
 
 ![Autotune default screen](../images/Autotune/Autotune_11.png)
 
-- Automation Switch Profile (default Off): see [Run Autotune with an automation rule](autotune-run-autotune-with-an-automation-rule) below. If you change this setting to On, the input profile will automatically be updated by the Tuned profile, and it will be activated.
+- Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#run-autotune-with-an-automation-rule) below. If you change this setting to On, the input profile will automatically be updated by the Tuned profile, and it will be activated.
   - **Be Carefull, you must trust and verified during several following days that after an update and activation of Tuned profile without modification, it improves your loop**
 
 - Categorize UAM as basal (default On): This setting is for the users using AndroidAPS without any carbs entered (Full UAM). It will prevent (when Off) to categorize UAM as basal.
   - Note: if you have at least one hour of Carbs absorption detected during one day, then all data categorized as "UAM" will be categorized as basal, whatever this setting (On or Off)
 - Number of days of data (default 5): You can define default value with this setting. Each time your select a new profile in Autotune plugin, Tune days parameter will be replaced by this default value
-- Apply average result in circadian IC/ISF (default Off): see [Circadian IC or ISF profile](autotune-circadian-ic-or-isf-profile) below. 
+- Apply average result in circadian IC/ISF (default Off): see [Circadian IC or ISF profile](#circadian-ic-or-isf-profile) below. 
 
 ### Other settings
 
@@ -136,7 +136,7 @@ Autotune plugin is an implementation of OpenAPS autotune algorythm within AAPS.
 
 First step is to define correct trigger for an automation rule with Autotune:
 
-Note: for more information on how to set an automation rule, see [here](./Automation.md).
+Note: for more information on how to set an automation rule, see [here](../DailyLifeWithAaps/Automations.md).
 
 - You should select Recurring time trigger: only run Autotune once per day, and autotune is designed to be runned daily (each new run you shift one day later and quickly profile modification should be tiny)
 
@@ -154,7 +154,7 @@ Note: for more information on how to set an automation rule, see [here](./Automa
 
   ![Autotune default screen](../images/Autotune/Autotune_19b.png)
 
-- After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](autotune-plugin-settings) "Automation Switch Profile" to enabled to automatically update and activate profile tuned after calculation.
+- After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "Automation Switch Profile" to enabled to automatically update and activate profile tuned after calculation.
 
 Note: if you want to automatically tune profiles for specific days of the week (for example a profile for "Weekend days" and another one for "Working days"), then create one rule for each profile, select the same days in Trigger and in Autotune Action, Tune days must be high enough to be sure tuning will be done with at least 6 or 8 days, and don't forget to select time after 4AM in trigger...
 
