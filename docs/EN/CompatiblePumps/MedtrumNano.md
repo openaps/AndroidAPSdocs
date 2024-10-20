@@ -173,7 +173,7 @@ This setting can be changed when using Medtrum pump but it is recommended to set
 
 **Before you continue:**
 - Have your Medtrum Nano pumpbase and a reservoir patch ready.
-- Make sure that AAPS is properly set up and a [profile is activated](../Usage/Profiles.md).
+- Make sure that AAPS is properly set up and a [profile is activated](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md).
 - Other devices that can talk to the Medtrum pump are disabled (PDM and Medtrum app)
 
 #### Activate patch from the Medtrum overview Tab

@@ -4,7 +4,6 @@
 
 There is no issue with changing timezone in phone because pump doesn't use history
 
-(Timezone-traveling-danarv2-danars)=
 ## DanaRv2, DanaRS
 
 These pumps need a special care because AAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
@@ -24,7 +23,7 @@ To avoid this there are two possibilities:
 
    * i.e. Vienna -> New York: profile switch +6 hours
    * i.e. Vienna -> Sydney: profile switch -8 hours
-* Probably not an option if using [patched LibreLink app](Libre2-time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
+* Probably not an option if using [patched LibreLink app](../CompatibleCgms/Libre2.md#5-use-the-patched-librelink-app-with-xdrip) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Option 2: Delete pump history
 
@@ -40,7 +39,6 @@ When get out of plane:
 * turn on phone
 * let phone connect to the pump and fine-tune time
 
-(Timezone-traveling-insight)=
 ## Insight
 
 The driver automatically adjusts the time of the pump to the time of the phone.
@@ -53,13 +51,11 @@ So the Insight user doesn't have to worry about timezone changes and time change
 
 ## Accu-Chek Combo
 
-The [new Combo driver](../Configuration/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the new driver programs into the pump. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
+The [new Combo driver](../CompatiblePumps/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the new driver programs into the pump. In addition, it stores the timezone in the local AAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
 
 Note that this takes some time, however, since it can only be done in the remote-terminal mode, which is generally slow. This is a Combo limitation that cannot be overcome.
 
 The old, Ruffy-based driver does not adjust the time automatically. The user has to do that manually. See below for the steps necessary to do that safely in case the timezone / daylight savings is the reason for the change.
-
-(Timezone-traveling-time-adjustment-daylight-savings-time-dst)=
 
 ## Medtrum
 
@@ -69,20 +65,19 @@ Timezone changes keep the history in tact, only TDD may be affected. Manually ch
 
 When the timezone or time changes running TBR's are stopped. 
 
-# Time adjustment daylight savings time (DST)
+## Time adjustment daylight savings time (DST)
 
 Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
 
 If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
 
-(Timezone-traveling-accu-chek-combo)=
-## Accu-Chek Combo
+### Accu-Chek Combo
 
 **NOTE**: As mentioned above, this secton is only valid for the old, Ruffy-based driver. The new driver adjusts date and time and DST automatically.
 
 AAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
 
-### Actions to take before the clock change
+#### Actions to take before the clock change
 1. Switch OFF any setting that automatically sets the timezone, so you can force the time change when you want to. How you can do this will depend on your smartphone and Android version.
 
    * Some have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the timezone (which you must turn OFF).
@@ -101,7 +96,7 @@ AAPS will issue an alarm if the time between pump and phone differs too much. In
 
 5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
-### Actions to take after the clock change
+#### Actions to take after the clock change
 A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
 
 1. Change the Android timezone back to your current location and re-enable automatic timezone.
@@ -115,15 +110,15 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 6. Continue as normal.
 
-## Accu-Chek Insight
+### Accu-Chek Insight
 
 * Change to DST is done automatically. No action required.
 
-## Medtrum
+### Medtrum
 
 * Change to DST is done automatically. No action required.
 
-## Other pumps
+### Other pumps
 
 * This feature is available since AAPS version 2.2.
 * To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).

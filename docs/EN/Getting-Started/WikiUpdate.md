@@ -2,7 +2,7 @@
 
 ## February 2022
 
-- [BG quality warning sign](../Getting-Started/Screenshots.md#bg-warning-sign) @tanja
+- [BG quality warning sign](../DailyLifeWithAaps/AapsScreens.md#bg-warning-sign) @tanja
 - [Medtronic pump update](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
 - [Necessary checks after update to AAPS 3.0](../Installing-AndroidAPS/update3_0.md) @tanja
 - [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @ robertrub @vanelsberg
@@ -52,21 +52,21 @@
 
 ## January 2021
 
-- [Action tab](../Getting-Started/Screenshots.md#action-tab) - more details on page 'AAPS screens'
+- [Action tab](../DailyLifeWithAaps/AapsScreens.md#action-tab) - more details on page 'AAPS screens'
 - Dexcom G6 with [Build Your Own Dexcom App](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)
-- Libre smart reader [battery level](../Getting-Started/Screenshots.md#sensor-level-battery)
+- Libre smart reader [battery level](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery)
 - [Objectives](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) - new questions
 - Other [new AAPS 2.8.0 functions](../Installing-AndroidAPS/Releasenotes.md#version-280)
 
 ## December 2020
 
 - [Libre 2](../CompatibleCgms/Libre2.md) - patched app does not work with US sensors
-- [OpenAPS hard-coded limits](../Usage/Open-APS-features.md#overview-of-hard-coded-limits)
+- [OpenAPS hard-coded limits](../DailyLifeWithAaps/KeyAapsFeatures.md#overview-of-hard-coded-limits)
 - Sony Smartwatch 3 [Manual Installation of Google Play Service](../Usage/SonySW3.md)
 
 ## October 2020
 
-- Accu-Chek Combo - update [time adjustment daylight savings time](../Usage/Timezone-traveling.md#time-adjustment-daylight-savings-time-dst)
+- Accu-Chek Combo - update [time adjustment daylight savings time](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#time-adjustment-daylight-savings-time-dst)
 - Accu-Chek Insight - Option to [upload absolute values](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps)
 - Logs - more details about [folder location](../Usage/Accessing-logfiles.md)
 - Omnipod Eros - status update
@@ -80,15 +80,15 @@
 ## June 2020
 
 - [Libre 2](../CompatibleCgms/Libre2.md) - more details patched Libre Link app & use of bluetooth transmitters
-- [Time zone travelling](../Usage/Timezone-traveling.md) with Libre 2
+- [Time zone travelling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) with Libre 2
 
 ## May 2020
 
-- [Extended bolus only for Dana + Insight pumps](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
+- [Extended bolus only for Dana + Insight pumps](../DailyLifeWithAaps/ExtendedCarbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 - [Insight deactivate vibration](../CompatiblePumps/Accu-Chek-Insight-Pump.md#vibration) (firmware 3.x only)
 - [Minimal request rate](../SettingUpAaps/Preferences.md#minimal-request-change-) to reduce number of notifications in open loop mode
 - [Patched Libre Link app](../CompatibleCgms/Libre2.md#5-use-the-patched-librelink-app-with-xdrip) - check if correctly patched
-- [Prediction lines](../Getting-Started/Screenshots.md#prediction-lines) - more details
+- [Prediction lines](../DailyLifeWithAaps/AapsScreens.md#prediction-lines) - more details
 
 ## April 2020
 
@@ -99,15 +99,15 @@
 
 - [Build apk with Android Studio 3.6.1](../SettingUpAaps/BuildingAaps.md)
 - [DanaRS with firmware v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **cannot currently be used with AAPS!**
-- [Extended bolus and switch to open loop](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
+- [Extended bolus and switch to open loop](../DailyLifeWithAaps/ExtendedCarbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 - [Update apk with Android Studio 3.6.1](../Installing-AndroidAPS/Update-to-new-version.md)
 
 ## February 2020
 
 - Automation caveats
-- [Autosens](../Usage/Open-APS-features.md#autosens) - short explanation
+- [Autosens](../DailyLifeWithAaps/KeyAapsFeatures.md#autosens) - short explanation
 - [Careportal alternatives](../Usage/CPbefore26.md)
-- [Extended bolus](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only) feature - closed loop will be disabled
+- [Extended bolus](../DailyLifeWithAaps/ExtendedCarbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only) feature - closed loop will be disabled
 - New [Local Profile plugin](../SettingUpAaps/ConfigBuilder.md#local-profile)
 - Sample Setup - update Dexcom G6
 - [Version 2.6.0](../Installing-AndroidAPS/Releasenotes.md#version-260) - major new features
@@ -115,7 +115,7 @@
 
 ## January 2020
 
-- [Manual carb correction](../Getting-Started/Screenshots.md#carb-correction) for faulty carb entries
+- [Manual carb correction](../DailyLifeWithAaps/AapsScreens.md#carb-correction) for faulty carb entries
 - [Image size](../make-a-PR.md) when editing docs
 
 ## December 2019
@@ -128,15 +128,15 @@
 
 ## November 2019
 
-- [Automation - deactivate when disabling loop](../Usage/Automation.md)
+- [Automation - deactivate when disabling loop](../DailyLifeWithAaps/Automations.md)
 - [Dexcom G6 replace transmitter update](../CompatibleCgms/xDrip.md#replace-transmitter)
-- [Extended bolus - why they do not work in a loop context](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
+- [Extended bolus - why they do not work in a loop context](../DailyLifeWithAaps/ExtendedCarbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 - [FAQ - sports](../Getting-Started/FAQ.md#sports)
-- [Homescreen - lines on graph](../Getting-Started/Screenshots.md#section-f---main-graph)
+- [Homescreen - lines on graph](../DailyLifeWithAaps/AapsScreens.md#section-f---main-graph)
 - [Insight - Disable absolute values in NS Client](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps)
 - [Medtronic pump - possible double entries](../CompatiblePumps/MedtronicPump.md)
 - [New Freestyle Libre 2 tutorial](../CompatibleCgms/Libre2.md)
-- [Profile switch with percentage - example](../Usage/Profiles.md)
+- [Profile switch with percentage - example](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)
 - [SMS commands update](../RemoteFeatures/SMSCommands.md)
 - [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 - [Troubleshooting - link collection](../Usage/troubleshooting.md)
@@ -147,8 +147,8 @@
 
 - [AAPS version 2.5](../Installing-AndroidAPS/Releasenotes.md#version-250) updates (especially on [update page](../Installing-AndroidAPS/Update-to-new-version.md))
 - [AccuChek Insight - log options](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps)
-- [COB calculation on separate page](../Usage/COB-calculation.md)
-- [COB - wrong COB value detection](../Usage/COB-calculation.md#detection-of-wrong-cob-values)
+- [COB calculation on separate page](../DailyLifeWithAaps/CobCalculation.md)
+- [COB - wrong COB value detection](../DailyLifeWithAaps/CobCalculation.md#detection-of-wrong-cob-values)
 - [Dexcom G6 specific troubleshooting](../CompatibleCgms/DexcomG6.md#dexcom-g6one-specific-troubleshooting)
 - [Objectives update version 2.5](../SettingUpAaps/CompletingTheObjectives.md)
 - [Preferences update](../SettingUpAaps/Preferences.md)
@@ -158,10 +158,10 @@
 
 ## September 2019
 
-- [Automate](../Usage/Automation.md)
-- [Bolus calculator](../Getting-Started/Screenshots.md#wrong-cob-detection) - slow carb absorption
+- [Automate](../DailyLifeWithAaps/Automations.md)
+- [Bolus calculator](../DailyLifeWithAaps/AapsScreens.md#wrong-cob-detection) - slow carb absorption
 - [Nightscout security](../SettingUpAaps/Nightscout.md#security-considerations)
-- [Profile timeshift](../Usage/Profiles.md#time-shift-of-the-circadian-percentage-profile) (more details)
+- [Profile timeshift](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#time-shift-of-the-circadian-percentage-profile) (more details)
 - [Remote monitoring](../RemoteFeatures/RemoteMonitoring.md)
 - [What is a closed loop system?](../Getting-Started/Introduction.md#what-does-hybrid-closed-loop-mean)
 
