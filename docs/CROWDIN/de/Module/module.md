@@ -109,11 +109,11 @@ Nightscout ist eine Open Source Web-Anwendung, die Deine CGM-Daten und AAPS-Date
 
 Nightscout ist unabhängig von den anderen Modulen. Du brauchst aber auf jeden Fall eine Nightscout-Seite, um das Objetive (Ziel) 1 abzuschließen.
 
-Weitere Informationen zur Konfiguration von Nightscout zur Nutzung mit AAPS findest Du [hier](../Installing-AndroidAPS/Nightscout.md).
+Additional information on how to configure Nightscout for use with AAPS can be found [here](../SettingUpAaps/Nightscout.md).
 
 ### AAPS-.apk Datei
 
-Die grundlegende Komponente des Systems. Bevor Du die App installierst, musst Du zuerst die apk-Datei (das ist Dateinamenerweiterung für eine Android-App) erstellen. Instructions are  [here](../Installing-AndroidAPS/building-AAPS.md).
+Die grundlegende Komponente des Systems. Bevor Du die App installierst, musst Du zuerst die apk-Datei (das ist Dateinamenerweiterung für eine Android-App) erstellen. Instructions are  [here](../SettingUpAaps/BuildingAaps.md).
 
 ## Optionale Komponenten
 
@@ -137,4 +137,4 @@ Manchmal dauert es eine Weile, um alle Module für den Closed Loop zusammen zu b
 
 Du kannst Dich weiter durch das Wiki arbeiten, online und offline mit anderen Loopern in Kontakt treten, weitere [Hintergrundinfos](../Where-To-Go-For-Help/Background-reading.md) oder Berichte von anderen Loopern lesen. Sei aber vorsichtig, nicht alle Anwenderberichte müssen richtig oder für Deinen Fall zutreffend sein.
 
-**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/completing-the-objectives.md) before each new Objective and setup up your [hardware](index-component-setup).
+**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective and setup up your [hardware](index-component-setup).
