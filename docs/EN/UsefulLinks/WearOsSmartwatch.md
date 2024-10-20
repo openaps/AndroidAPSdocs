@@ -341,12 +341,17 @@ There are a couple of watch faces for Garmin that integrate with xDrip or Nights
 ![Screenshot](../images/Garmin_WF.png)
 ![Screenshot](../images/Garmin_WF-annotated.png)
 
+## Troubleshooting Sony smartwatch setup
+
+Although it was discontinued a few years ago, if you are using a Sony Smartwatch SW 3 please see here for a troubleshooting guide:
+[Troubleshooting Sony Smartwatch SW 3](../UsefulLinks/SonySW3.md)
+
 ## Additional AAPS custom watchfaces are also available
 
-[Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
+[Here](../UsefulLinks/AdditionalWatchfaces.md) you can download Zip-Files with custom watchfaces made by other users.
 
 ## Build your own watchface
 
-If you want to build your own watchface, follow the [guide here](CustomWatchfaceReference).
+If you want to build your own watchface, follow the [guide here](../UsefulLinks/CustomWatchfaceReference.md).
 
 Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder  "ExchangeSiteCustomWatchfaces" via a Pull Request into Github. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.

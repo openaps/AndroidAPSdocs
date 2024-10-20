@@ -2,7 +2,7 @@
 
 You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem.
 
-Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.md).
+Additional useful information might also be available in the [FAQ](../UsefulLinks/FAQ.md).
 
 ## AAPS app
 
@@ -108,4 +108,4 @@ Here are examples how to find them on specific android phones.
 ## Smartwatches
 
 * [Troubleshooting Wear app](../UsefulLinks/WearOsSmartwatch.md#troubleshooting-the-wear-app)
-* [Sony Smartwatch 3](../Usage/SonySW3.md)
+* [Sony Smartwatch 3](../UsefulLinks/SonySW3.md)

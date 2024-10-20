@@ -30,7 +30,7 @@ A smartwatch can be a very useful tool in helping manage AAPS with kids. A coupl
 
 ## Things to consider
 
-- Setting the correct [treatment factors](../Getting-Started/FAQ.md#how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
+- Setting the correct [treatment factors](../UsefulLinks/FAQ.md#how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
 - Settings must be the same in AAPS and AAPSClient app.
 - Consider time gap between master and follower due to time for up- and download as well as the fact that AAPS master phone will only upload after loop run.
 - So take your time to set those correctly and test them in real life with your kid next to you before starting remote monitoring and remote treatment. School holidays might be a good time for that.

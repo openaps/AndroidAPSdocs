@@ -4,7 +4,7 @@
 
 **The AAPS app (an apk file) is not available for download, due to regulations around medical devices. It is legal to build the app for your own use, but you must not give a copy to others!**
 
-See [FAQ page](../Getting-Started/FAQ.md) for details.
+See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 
 

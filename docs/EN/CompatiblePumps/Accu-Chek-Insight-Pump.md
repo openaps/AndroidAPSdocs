@@ -18,7 +18,7 @@ you do with it.**
 * A Roche Accu-Chek Insight pump (any firmware, they all work)
 
 Note: AAPS will write data always in **first basal rate profile in the pump**.
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module.md) page which Android version is required to run AAPS.)
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Getting-Started/ComponentOverview) page which Android version is required to run AAPS.)
 * The AAPS app installed on your phone
 
 ## Setup

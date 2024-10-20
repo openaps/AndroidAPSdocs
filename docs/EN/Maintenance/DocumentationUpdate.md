@@ -21,7 +21,7 @@
 ## November 2021
 
 - Best practices for calibrating a [libre 2 sensor](../CompatibleCgms/Libre2.md#best-practices-for-calibrating-a-libre-2-sensor)
-- [ISF](../Getting-Started/FAQ.md) reformulation of impact
+- [ISF](../UsefulLinks/FAQ.md) reformulation of impact
 - Update [troubleshooting Android stduio](../GettingHelp/TroubleshootingAndroidStudio)
 - Removed patched [Dexcom](../CompatibleCgms/DexcomG6.md) app as it is obsolete
 
@@ -39,7 +39,7 @@
 
 ## April 2021
 
-- List of [communication devices](../Module/module.md#additional-communication-device) for Omnipod and Medtronic pumps
+- List of [communication devices](../Getting-Started/ComponentOverview#additional-communication-device) for Omnipod and Medtronic pumps
 - AAPS predictions in [Nightscout](../SettingUpAaps/Nightscout.md#manual-nightscout-setup)
 
 ## March 2021
@@ -62,7 +62,7 @@
 
 - [Libre 2](../CompatibleCgms/Libre2.md) - patched app does not work with US sensors
 - [OpenAPS hard-coded limits](../DailyLifeWithAaps/KeyAapsFeatures.md#overview-of-hard-coded-limits)
-- Sony Smartwatch 3 [Manual Installation of Google Play Service](../Usage/SonySW3.md)
+- Sony Smartwatch 3 [Manual Installation of Google Play Service](../UsefulLinks/SonySW3.md)
 
 ## October 2020
 
@@ -131,7 +131,7 @@
 - [Automation - deactivate when disabling loop](../DailyLifeWithAaps/Automations.md)
 - [Dexcom G6 replace transmitter update](../CompatibleCgms/xDrip.md#replace-transmitter)
 - [Extended bolus - why they do not work in a loop context](../DailyLifeWithAaps/ExtendedCarbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
-- [FAQ - sports](../Getting-Started/FAQ.md#sports)
+- [FAQ - sports](../UsefulLinks/FAQ.md#sports)
 - [Homescreen - lines on graph](../DailyLifeWithAaps/AapsScreens.md#section-f---main-graph)
 - [Insight - Disable absolute values in NS Client](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps)
 - [Medtronic pump - possible double entries](../CompatiblePumps/MedtronicPump.md)

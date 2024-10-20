@@ -83,7 +83,7 @@ The time to build the **AAPS** app  depends on your level of expertise and techn
 
 To aid the build process there are dedicated sections:
 
-- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](../Getting-Started/FAQ.md) K);
+- List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](../UsefulLinks/FAQ.md) K);
   
 - “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section D) which includes [Troubleshooting](../GettingHelp/GeneralTroubleshooting.md) Subsection.
 

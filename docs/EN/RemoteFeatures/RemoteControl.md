@@ -783,7 +783,7 @@ Making adjustments in both the **Galaxy wearable** app on the **AAPS** phone and
 #### Troubleshooting Sony smartwatch setup
 
 Although it was discontinued a few years ago, if you are using a Sony Smartwatch SW 3 please see here for a troubleshooting guide: 
-[Troubleshooting Sony Smartwatch SW 3](../Usage/SonySW3.md)
+[Troubleshooting Sony Smartwatch SW 3](../UsefulLinks/SonySW3.md)
 
 
 

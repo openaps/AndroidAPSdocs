@@ -2,7 +2,7 @@
 
 ## Build yourself instead of download
 
-**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.
+**AAPS** is not available to download, due to regulations concerning medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 ## Important notes
 * Please update to the new version of **AAPS** as soon as possible after a new release is available.

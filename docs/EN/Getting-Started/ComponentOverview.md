@@ -94,7 +94,7 @@ The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice ho
 
 ### BG Source
 
-This is just a short overview of all compatible CGMs/FGM with AAPS. For further details, look [here](../Getting-Started/CompatiblesCgms.md). Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
+This is just a short overview of all compatible CGMs/FGM with AAPS. For further details, look [here](CompatiblesCgms.md). Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
 
 - [Dexcom G7](../CompatibleCgms/DexcomG7.md): Works with xDrip+ or patched app
 - [Dexcom G6](../CompatibleCgms/DexcomG6.md): BOYDA is recommended as of version 3.0 (see [release notes](../Maintenance/ReleaseNotes.md#version-300) for details). xDrip+ must be at least version 2022.01.14 or newer

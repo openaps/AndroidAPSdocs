@@ -68,9 +68,10 @@ Change language <./ChangeLanguage/ChangeLanguage.md>
 
 Introduction to AAPS <./Getting-Started/Introduction.md>
 Preparing for AAPS <./Getting-Started/PreparingForAaps.md>
-Compatible pumps <./Getting-Started/CompatiblePumps.md>
-Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
-Compatible phones  <./Getting-Started/Phones.md>
+Component Overview <./Getting-Started/ComponentOverview.md>
+- Compatible pumps <./Getting-Started/CompatiblePumps.md>
+- Compatible CGMs <./Getting-Started/CompatiblesCgms.md>
+- Compatible phones  <./Getting-Started/Phones.md>
 ```
 
 ```{toctree}
@@ -79,7 +80,8 @@ Compatible phones  <./Getting-Started/Phones.md>
 Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
 Building AAPS <./SettingUpAaps/BuildingAaps.md>
 Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
-Setup Wizard<./SettingUpAaps/SetupWizard.md>
+Setup Wizard <./SettingUpAaps/SetupWizard.md>
+Your AAPS Profile <./SettingUpAaps/YourAapsProfile.md>
 Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
 - Config Builder <./SettingUpAaps/ConfigBuilder.md>
 - Preferences <./SettingUpAaps/Preferences.md>
@@ -140,7 +142,7 @@ Help! My AAPS phone is broken/stolen/lost
 :caption: 8) Useful AAPS Links
 
 Glossary <./UsefulLinks/Glossary.md>
-Your AAPS profile 
+FAQ <./UsefulLinks/FAQ.md>
 WearOS Smartwatch <./UsefulLinks/WearOsSmartwatch.md>
 
 ```
