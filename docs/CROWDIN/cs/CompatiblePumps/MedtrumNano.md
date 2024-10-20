@@ -15,7 +15,7 @@ This software is part of a DIY artificial pancreas solution and is not a product
         - Medtrum TouchCare Nano se základnou s číslem REF: **MD0201** a **MD8201**.
         - Medtrum TouchCare 300U se základnou s číslem REF: **MD8301**.
         - Pokud máte nepodporovaný model a jste ochotni darovat hardware nebo pomoci s testováním, kontaktujte nás prostřednictvím discordu [zde](https://discordapp.com/channels/629952586895851530/1076120802476441641).
-* **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../Installing-AndroidAPS/building-AAPS.md) instructions.
+* **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
 * **Compatible Android phone** with a BLE Bluetooth connection
     - Viz AAPS [poznámky k vydání](../Installing-AndroidAPS/Releasenotes.md)
 * [**Continuous Glucose Monitor (CGM)**](../Getting-Started/CompatiblesCgms.md)
@@ -50,7 +50,7 @@ Pokud máte pochybnosti, můžete také vybrat možnost „Virtuální pumpa“ 
 
 #### Option 2: The Config Builder
 
-On an existing installation you can select the **Medtrum** pump from the [Config Builder](../Configuration/Config-Builder.md#pump):
+On an existing installation you can select the **Medtrum** pump from the [Config Builder](../SettingUpAaps/ConfigBuilder.md#pump):
 
 V levém horním rohu klepněte na **hamburger menu**, vyberte **Konfigurace**\ ➜\ **Pumpa**\ ➜\ **Medtrum**\ klepnutím na **přepínač** s názvem **Medtrum**.
 
