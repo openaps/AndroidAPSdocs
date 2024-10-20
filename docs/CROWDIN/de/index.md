@@ -12,7 +12,7 @@ Section 2) "Getting Started", the [Introduction](Getting-Started/Introduction.md
 
 [Preparing for AAPS](./Getting-Started/PreparingForAaps.md) gives more detail about safety considerations, and the phones, CGMs (Continuous Glucose Monitors) and insulin pumps which are compatible with **AAPS**. Es gibt einen Überblick über den Prozess, den Du durchlaufen wirst, und gibt eine zeitliche Einschätzung wie lange es dauern wird bist Du alle **AAPS**-Funktionalitäten nutzen kannst. Dieser Abschnitt bereitet Dich technisch darauf vor, Deine **AAPS**-Einrichtung so schnell und effizient wie möglich abzuschließen. The subsection [CGM Configuration](./Getting-Started/CompatiblesCgms.md) explains how to optimse CGM setup and what smoothing options are best.
 
-Jetzt, da Du ein solides Grundverständnis des Prozesses hast, kannst Du damit beginnen, Deinen **AAPS**-Loop zu erstellen. Abschnitt **3) AAPS einrichten** enthält Schritt-für-Schritt Anleitungen, um dies zu tun. It covers choosing and [setting up your reporting server](Installing-AndroidAPS/setting-up-the-reporting-server.md) (Nightscout or Tidepool) so you can review and share your data, getting your computer ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone. Es umfasst auch das Einrichten der **AAPS**-App mithilfe des Einrichtungsassistenten, das Verknüpfen mit Deiner CGM-App und entweder einer echten oder einer virtuellen Insulinpumpe sowie das Verknüpfen von **AAPS** mit Deinem Berichtsserver. Du wirst danach durch einen kleinschrittigen und sehr fein justierten Prozess sehr behutsam an die vollständige **AAPS**-Nutzung herangeführt. Damit soll sichergestellt werden, dass Du oder Dein Kind, sicher durch die verschiedenen Funktionen und Menü-Konfigurationen navigieren lernst, bevor Du zur folgenden Phase (auch "nächstes Ziel" bzw. "Objective" genannt) übergehst und schließlich genug Erfahrung gesammelt hast, um die weitreichensten Funktionalitäten der App nutzen zu können. Diese Objectives (Ziele) sind so aufgebaut, dass nach und nach weitere **AAPS**-Funktionen freigeschaltet werden und so am Ende vom 'Open Loop' auf 'Closed Loop' umgestellt werden kann.
+Jetzt, da Du ein solides Grundverständnis des Prozesses hast, kannst Du damit beginnen, Deinen **AAPS**-Loop zu erstellen. Abschnitt **3) AAPS einrichten** enthält Schritt-für-Schritt Anleitungen, um dies zu tun. It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting your computer ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone. Es umfasst auch das Einrichten der **AAPS**-App mithilfe des Einrichtungsassistenten, das Verknüpfen mit Deiner CGM-App und entweder einer echten oder einer virtuellen Insulinpumpe sowie das Verknüpfen von **AAPS** mit Deinem Berichtsserver. Du wirst danach durch einen kleinschrittigen und sehr fein justierten Prozess sehr behutsam an die vollständige **AAPS**-Nutzung herangeführt. Damit soll sichergestellt werden, dass Du oder Dein Kind, sicher durch die verschiedenen Funktionen und Menü-Konfigurationen navigieren lernst, bevor Du zur folgenden Phase (auch "nächstes Ziel" bzw. "Objective" genannt) übergehst und schließlich genug Erfahrung gesammelt hast, um die weitreichensten Funktionalitäten der App nutzen zu können. Diese Objectives (Ziele) sind so aufgebaut, dass nach und nach weitere **AAPS**-Funktionen freigeschaltet werden und so am Ende vom 'Open Loop' auf 'Closed Loop' umgestellt werden kann.
 
 Abschnitt 4) [Remote AAPS-Funktionen](remote-control.md) hebt eine echte Stärke von **AAPS** hervor. Es gibt eine Vielzahl von Möglichkeiten, Befehle remote an **AAPS** zu senden oder einfach dessen Daten zu folgen. Dies ist ebenso nützlich für Betreuende, die **AAPS** für Minderjährige verwenden möchten, als auch für Erwachsene mit Diabetes, die entweder ihre Glukosewerte (und andere Metriken) bequemer als nur auf ihrem Smartphone überwachen möchten (z. B. auf einer Smartwatch, im Auto _usw._), oder die möchten, dass auch nahestehende Personen die Daten überwachen. Dieser Abschnitt hat auch eine Anleitung zur Nutzung von Android Auto, sodass Du die Glukosewerte auch im Auto sehen kannst.
 
@@ -72,16 +72,16 @@ Compatible phones  <./Getting-Started/Phones.md>
 ```
 
 ```{toctree}
-:caption: 3) AAPS einrichten
+:caption: 3) Setting up AAPS
 
-Einen Server für Auswertungen einrichten <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
-AAPS erstellen <./Installing-AndroidAPS/building-AAPS.md>
-AAPS auf Dein Smartphone übertragen und installieren <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
-AAPS Einrichtungsassistent <./Installing-AndroidAPS/setup-wizard.md>
-Deine AAPS Konfiguration anpassen <./Installing-AndroidAPS/change-configuration.md>
-- Konfiguration <./Configuration/Config-Builder.md>
-- Einstellungen <./Configuration/Preferences.md>
-Abschließen der Ziele (Ojectives) <./Usage/completing-the-objectives.md>
+Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+Building AAPS <./SettingUpAaps/BuildingAaps.md>
+Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Setup Wizard<./SettingUpAaps/SetupWizard.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Config Builder <./SettingUpAaps/ConfigBuilder.md>
+- Preferences <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -178,19 +178,19 @@ Open Humans Uploader <./Configuration/OpenHumans.md>
 ```
 
 ```{toctree}
-:caption: 11) Weitere und archivierte Dokumentation
+:caption: 11) Additional/archive documentation
 
-Eigenes Google-Konto für AAPS nutzen (optional)<./Installing-AndroidAPS/Dedicated-Google-account-for-AAPS.md>
+Dedicated Google account for AAPS (optional)<./SettingUpAaps/DedicatedGoogleAccountForAaps.md>
 
-Careportal (eingestellt) <./Usage/CPbefore26.md>
+Careportal (discontinued) <./Usage/CPbefore26.md>
 
-Für Klinikpersonal (veraltet) <./Resources/clinician-guide-to-AndroidAPS.md>
+For Clinicians (outdated) <./Resources/clinician-guide-to-AndroidAPS.md>
 
-Automatisierung mit Drittanbieter Apps <./Usage/automationwithapp.md>
+Automation with 3rd party apps <./Usage/automationwithapp.md>
 
-Prüfungen nach dem Update auf AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
+Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
 
-Prüfungen nach dem Update auf AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
+Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
 
 ```
 
