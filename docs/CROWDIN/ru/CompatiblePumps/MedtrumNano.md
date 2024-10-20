@@ -15,7 +15,7 @@
         - Medtrum TouchCare Nano с помповой базой моделей: **MD0201** и **MD8201**.
         - Medtrum TouchCare Nano 300Uс помповой базой модели: **MD8301**.
         - Если у вас есть неподдерживаемая модель и вы хотите пожертвовать аппаратное обеспечение или помощь в тестировании, пожалуйста, свяжитесь с нами через discord [здесь](https://discordapp.com/channels/629952586895851530/1076120802476441641).
-* **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../Installing-AndroidAPS/building-AAPS.md) instructions.
+* **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
 * **Совместимый Android-телефон** с рабочим модулем BLE Bluetooth
     - См. AAPS [Примечания к выпуску](../Installing-AndroidAPS/Releasenotes.md)
 * [**Непрерывный мониторинг гликемии**](../Getting-Started/CompatiblesCgms.md)
@@ -50,7 +50,7 @@
 
 #### Вариант 2: Конфигуратор
 
-On an existing installation you can select the **Medtrum** pump from the [Config Builder](../Configuration/Config-Builder.md#pump):
+On an existing installation you can select the **Medtrum** pump from the [Config Builder](../SettingUpAaps/ConfigBuilder.md#pump):
 
 В левом верхнем углу из **выпадающего меню** выберите **Конфигуратор**\ ➜\ **Помпа**\ ➜\ **Medtrum**\, включив кнопку **Medtrum**.
 
