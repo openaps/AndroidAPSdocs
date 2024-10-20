@@ -16,9 +16,9 @@ An **index** and explanation of the documentation structure can be found [here](
 “能力越大，責任越大……”
 
 ### 技術安全
-**AAPS**具有一套廣泛的安全功能。 These impose constraints which are gradually removed through staged completion of a series of [Objectives](../Usage/completing-the-objectives.md) which involve testing specific parameters and answering multiple choice questions. 當成功完成目標後，**AAPS**的功能會逐步解鎖。 此過程允許用戶在從開環模式到閉環模式的過程中安全過渡，同時學習**AAPS**的不同功能。
+**AAPS**具有一套廣泛的安全功能。 These impose constraints which are gradually removed through staged completion of a series of [Objectives](../SettingUpAaps/CompletingTheObjectives.md) which involve testing specific parameters and answering multiple choice questions. 當成功完成目標後，**AAPS**的功能會逐步解鎖。 此過程允許用戶在從開環模式到閉環模式的過程中安全過渡，同時學習**AAPS**的不同功能。
 
-The [Objectives](../Usage/completing-the-objectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. 初學者因為經驗不足或過於急切開始使用**AAPS**而犯錯，或忽略了關鍵點。 The [Objectives](../Usage/completing-the-objectives.md) aim to minimise these issues.
+The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. 初學者因為經驗不足或過於急切開始使用**AAPS**而犯錯，或忽略了關鍵點。 The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) aim to minimise these issues.
 
 ### 醫療安全
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
@@ -85,7 +85,7 @@ SGLT-2 抑制劑，也稱為 gliflozins，抑制腎臟對葡萄糖的再吸收�
 
 - List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](../Getting-Started/FAQ.md) K);
 
-- “[How to install AAPS](../Installing-AndroidAPS/building-AAPS.md)? (Section D) which includes [Troubleshooting](../Usage/troubleshooting.md) Subsection.
+- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section D) which includes [Troubleshooting](../Usage/troubleshooting.md) Subsection.
 
 達到閉環控制的時間因人而異，但使用 AAPS 達到完全閉環控制的大致時間表可以參考[>此處](#how-long-will-it-take-to-set-everything-up)。
 
