@@ -25,7 +25,7 @@
 * **相容的 Android 手機** 需具備 BLE 藍牙連線
    -  並非所有手機硬體和 Android 版本都能保證工作。 請檢查 [**DASH 測試過的手機**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)，或直接使用你的手機進行嘗試，並告訴我們結果（手機參考資料和地理區域、Android 版本、是否正常運作/有部份問題/無法運作）。
    - **重要提示：使用舊版韌體 3.XX.X 的 Pod 時，曾有多起永久、不可恢復的連線損失案例。 使用這些舊 Pod 時請小心，尤其是當其他藍牙裝置連線到你的手機時！** 請注意，AAPS Omnipod Dash 驅動程式每次發送指令時都會透過藍牙連線到 Dash POD，並在隨後立即中斷連線。 藍牙連線可能會受到連線到運作 AAPS 手機的其他裝置（例如耳機等）的干擾（在某些手機型號中，這可能會導致連線問題或 Pod 註冊期間或之後的錯誤/遺失），或者被他們干擾。
-   -  **Version 3.0 or newer of AAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/building-AAPS.md) instructions.
+   -  **Version 3.0 or newer of AAPS built and installed** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions.
 * [**連續血糖監測儀（CGM）**](../Getting-Started/CompatiblesCgms.md)
 
 這些說明假設你正在開始新的幫浦使用。如果不是這樣，請耐心等待，並在下一次更換幫浦時再進行。
