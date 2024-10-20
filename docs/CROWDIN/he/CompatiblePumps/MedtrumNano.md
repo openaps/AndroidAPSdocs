@@ -15,7 +15,7 @@ These instructions are for configuring the Medtrum insulin pump.
         - Medtrum TouchCare Nano with pumpbase refs: **MD0201** and **MD8201**.
         - Medtrum TouchCare 300U with pumpbase ref: **MD8301**.
         - If you have an unsupported model and are willing to donate hardware or assist with testing, please contact us via discord [here](https://discordapp.com/channels/629952586895851530/1076120802476441641).
-* **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../Installing-AndroidAPS/building-AAPS.md) instructions.
+* **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
 * **טלפון Android תואם** עם חיבור בלוטות' (BLE)
     - See AAPS [Release Notes](../Installing-AndroidAPS/Releasenotes.md)
 * [**חיישן סוכר רציף (CGM)**](../Getting-Started/CompatiblesCgms.md)
@@ -50,7 +50,7 @@ If in doubt you can also select “Virtual Pump” and select “Medtrum” late
 
 #### אפשרות 2: בונה התצורה
 
-On an existing installation you can select the **Medtrum** pump from the [Config Builder](../Configuration/Config-Builder.md#pump):
+On an existing installation you can select the **Medtrum** pump from the [Config Builder](../SettingUpAaps/ConfigBuilder.md#pump):
 
 On the top-left hand corner **hamburger menu** select **Config Builder**\ ➜\ **Pump**\ ➜\ **Medtrum**\ by selecting the **Enable button** titled **Medtrum**.
 
