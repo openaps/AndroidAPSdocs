@@ -16,9 +16,9 @@ Viele Details in der **AAPS**-Dokumentation sind aus Erfahrungen entstanden und 
 „Mit großen Möglichkeiten kommt auch eine große Verantwortung…”
 
 ### Technische Sicherheit
-**AAPS** hat umfangreiche Sicherheitsfunktionen. These impose constraints which are gradually removed through staged completion of a series of [Objectives](../Usage/completing-the-objectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS**-Funktionen werden mit dem erfolgreichen Abschluss des jeweiligen Ziels freigeschaltet. Dieses Vorgehen ermöglicht durch das schrittweise Kennenlernen der verschiedenen **AAPS**-Funktionen einen sicheren Übergang aus dem 'Open Loop' in den 'Closed Loop'.
+**AAPS** hat umfangreiche Sicherheitsfunktionen. These impose constraints which are gradually removed through staged completion of a series of [Objectives](../SettingUpAaps/CompletingTheObjectives.md) which involve testing specific parameters and answering multiple choice questions. **AAPS**-Funktionen werden mit dem erfolgreichen Abschluss des jeweiligen Ziels freigeschaltet. Dieses Vorgehen ermöglicht durch das schrittweise Kennenlernen der verschiedenen **AAPS**-Funktionen einen sicheren Übergang aus dem 'Open Loop' in den 'Closed Loop'.
 
-The [Objectives](../Usage/completing-the-objectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Weil Einsteiger unerfahren sind und zu schnell mit **AAPS** loslegen wollen oder wichtige Punkte übersehen haben, können Fehler passieren. The [Objectives](../Usage/completing-the-objectives.md) aim to minimise these issues.
+The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) have been designed to achieve the best possible introduction to **AAPS**, taking into consideration the typical errors and general trends **AAPS** developers have observed with new users. Weil Einsteiger unerfahren sind und zu schnell mit **AAPS** loslegen wollen oder wichtige Punkte übersehen haben, können Fehler passieren. The [Objectives](../SettingUpAaps/CompletingTheObjectives.md) aim to minimise these issues.
 
 ### Medizinische Sicherheit
 ```{admonition} Avoid permanent and painful damage to your eyes and nerves
@@ -85,7 +85,7 @@ Um Dir durch den Erstellungsprozess zu helfen, gibt es eigene spezifische Abschn
 
 - List of questions and answers for frequent errors that are likely to occur in [FAQs (Section](../Getting-Started/FAQ.md) K);
 
-- “[How to install AAPS](../Installing-AndroidAPS/building-AAPS.md)? (Section D) which includes [Troubleshooting](../Usage/troubleshooting.md) Subsection.
+- “[How to install AAPS](../SettingUpAaps/BuildingAaps.md)? (Section D) which includes [Troubleshooting](../Usage/troubleshooting.md) Subsection.
 
 Wie lange es dauert den Closed Loop zu erreichen ist individuell verschieden, ein grober Zeitablauf bis zum vollen Loopen mit AAPS findest Du ([hier](#how-long-will-it-take-to-set-everything-up)).
 
