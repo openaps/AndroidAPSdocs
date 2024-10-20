@@ -9,8 +9,8 @@
 開始使用 AAPS，請按照以下步驟操作：
 
 * Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
-* [Download the AAPS source code and build the software](../Installing-AndroidAPS/building-AAPS.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../Installing-AndroidAPS/setup-wizard.md).
+* [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
 
 ## DIY 閉環系統的工作原理
 
