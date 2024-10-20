@@ -94,7 +94,7 @@ Il est très important de s'assurer que les optimisations de batterie sont désa
 
 ## Activation du pilote et appairage avec la Combo
 
-* Select the "Accu-Chek Combo" driver in the [Config builder](../Configuration/Config-Builder.md). **Important**: Il y a l'ancien pilote, appelé "Accu-Chek Combo (Ruffy)", dans cette liste également. Ne _pas_ sélectionner celui-ci.
+* Select the "Accu-Chek Combo" driver in the [Config builder](../SettingUpAaps/ConfigBuilder.md). **Important**: Il y a l'ancien pilote, appelé "Accu-Chek Combo (Ruffy)", dans cette liste également. Ne _pas_ sélectionner celui-ci.
 
   ![Screenshot of Config Builder Combo](../images/combo/combov2-config-builder.png)
 
