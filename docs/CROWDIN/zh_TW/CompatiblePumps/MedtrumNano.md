@@ -15,7 +15,7 @@
         - Medtrum TouchCare Nano與幫浦基座參考：**MD0201**和**MD8201**。
         - Medtrum TouchCare 300U與幫浦基座參考：**MD8301**。
         - 如果你擁有不支援的型號，並願意捐贈硬體或協助測試，請透過discord與我們聯繫[這裡](https://discordapp.com/channels/629952586895851530/1076120802476441641)。
-* **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../Installing-AndroidAPS/building-AAPS.md) instructions.
+* **Version 3.2.0.0 or newer of AAPS built and installed** using the [Build APK](../SettingUpAaps/BuildingAaps.md) instructions.
 * **相容的 Android 手機** 需具備 BLE 藍牙連線
     - 請參閱AAPS的[版本說明](../Installing-AndroidAPS/Releasenotes.md)
 * [**連續血糖監測儀（CGM）**](../Getting-Started/CompatiblesCgms.md)
@@ -50,7 +50,7 @@
 
 #### 選項 2：組態建置工具
 
-On an existing installation you can select the **Medtrum** pump from the [Config Builder](../Configuration/Config-Builder.md#pump):
+On an existing installation you can select the **Medtrum** pump from the [Config Builder](../SettingUpAaps/ConfigBuilder.md#pump):
 
 在左上角的**漢堡選單**中選擇**組態建置工具**\ ➜\ **幫浦**\ ➜\ **Medtrum**，選擇**啟用按鈕**標題為**Medtrum**。
 
