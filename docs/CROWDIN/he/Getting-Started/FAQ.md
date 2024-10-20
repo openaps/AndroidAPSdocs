@@ -6,7 +6,7 @@
 
 ## האם ניתן פשוט להוריד ולהתקין את קובץ ההתקנה של AndroidAPS?
 
-לא. למעשה לא קיים קובץ התקנה (apk) להורדה עבור AndroidAPS, You have to [build](../Installing-AndroidAPS/building-AAPS.md) it yourself. להלן הסיבה לכך:
+לא. למעשה לא קיים קובץ התקנה (apk) להורדה עבור AndroidAPS, You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. להלן הסיבה לכך:
 
 היישום AndroidAPS שולט למעשה במשאבה וקובע את מתן האינסולין. בהתאם לרגולציה הקיימת באירופה, כל מערכת שמסווגת IIa או IIb היא מערכת רפואית שדורשת אישור של הרגולטור (סימון CE) ומחייבת שורה של מחקרים ואישורים. הפצה של מערכת שאינה מאושרת ע"י הרגולטור אינה חוקית. רגולציה דומה קיימת גם באיזורים אחרים בעולם.
 
@@ -67,7 +67,7 @@ The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen
 
 - מטענים וסוללות חלופיות לטעינת הטלפון, השעון החכם, מכשיר הגישור ריילילינק וכו'
 - סוללות למשאבה
-- Current [apk](../Installing-AndroidAPS/building-AAPS.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## כיצד להדביק היטב את החיישן?
 
