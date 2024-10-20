@@ -7,4 +7,4 @@ Wenn Du Netzwerkprobleme hast, Deine Nightscout-Seite nicht verfügbar ist oder 
 ```
 
 -   Richte den NSClient mit den Informationen zu Deiner Nightscout-Seite ein.
--   Select NSClient BG in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+-   Select NSClient BG in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
