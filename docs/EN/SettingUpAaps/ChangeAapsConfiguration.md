@@ -20,7 +20,7 @@ Plugins which you have not enabled (_i.e._ disabled) plugins can not be made vis
 
 **Config builder** is the easiest way to further modify your configuration after you have used the **Setup Wizard**.
 
-The documentation relating to the config builder is available [here](../Configuration/Config-Builder.md).
+The documentation relating to the config builder is available [here](../SettingUpAaps/ConfigBuilder.md).
 
 ## Preferences
 
@@ -28,7 +28,7 @@ The preferences dialogue can be reached via the top right three dot menu on the 
 
 This is a good route if you are not really sure where to look for an configuration option, but it can be a bit tedious if you know you want to change the configuration for just one specific plugin.
 
-The documentation of the preferences is available [here](../Configuration/Preferences.md).
+The documentation of the preferences is available [here](../SettingUpAaps/Preferences.md).
 
 
 ## Plugin preferences
@@ -37,4 +37,4 @@ The **plugin preferences** dialogue can be reached via the top right three dot m
 
 This is a good route if you know that _e.g._ you _just_ want to change the configuration for BYODA. Then, you would select the tab "BYODA" on the top menu of **AAPS**, and then once you are on the BYODA page, in the top right, select the three dot menu and then the "plugin preferences" entry. You are taken directly to the preferences dialogue specifically for the BYODA plugin.
 
-This is a "short cut" to the general preferences dialogue, the documentation of the preferences is available [here](../Configuration/Preferences.md).
+This is a "short cut" to the general preferences dialogue, the documentation of the preferences is available [here](../SettingUpAaps/Preferences.md).

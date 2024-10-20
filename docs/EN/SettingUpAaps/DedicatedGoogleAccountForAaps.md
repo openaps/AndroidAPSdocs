@@ -2,7 +2,7 @@
 
 Some **AAPS** users prefer to use their main email account for **AAPS** as well. Alternatively, some **AAPS** users (or their caregivers) set-up a dedicated **AAPS** email account - this is optional, we give an example of how to do it below.    
 
-If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go straight to the next section, [building AAPS](building-AAPS.md). 
+If you don't want to set up an **AAPS**-dedicated Gmail account, you can just go straight to the next section, [building AAPS](../SettingUpAaps/BuildingAaps.md). 
 
 ```{admonition} Advantages of a dedicated Google account for AAPS
 :class: dropdown
@@ -146,4 +146,4 @@ There is quite a bit of back and forth between the windows but this will ensure 
 
 ![](../images/Building-the-App/building_0014.png)
 
-Congratulations! Now you have created an AAPS-dedicated Google account. The next step is to [build the AAPS app](building-AAPS.md).
+Congratulations! Now you have created an AAPS-dedicated Google account. The next step is to [build the AAPS app](../SettingUpAaps/BuildingAaps.md).
