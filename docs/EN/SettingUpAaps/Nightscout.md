@@ -43,7 +43,7 @@ Note that insulin treatments will only be used for calculations like "Do not bol
 
 ### Further security settings
 
-Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
+Keep your phone up to date as described in [safety first](../Getting-Started/PreparingForAaps.md#safety-first).
 
 (Nightscout-manual-nightscout-setup)=
 ## Manual Nightscout setup

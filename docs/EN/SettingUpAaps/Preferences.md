@@ -267,7 +267,7 @@
 (Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)=
 ## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
 
-Depending on your settings in [config builder](../Configuration/Config-Builder.md) you can choose between two algorithms:
+Depending on your settings in [config builder](../SettingUpAaps/ConfigBuilder.md) you can choose between two algorithms:
 
 - [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama) - state of the algorithm in 2017
 - [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features.md#super-micro-bolus-smb) - most recent algorithm recommended for beginners
@@ -322,7 +322,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 - In contrast to AMA, [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
-- You must have started [objective 9](../Usage/completing-the-objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
+- You must have started [objective 9](../SettingUpAaps/CompletingTheObjectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
 - The first three settings are explained [above](#max-uh-a-temp-basal-can-be-set-to).
 
@@ -393,7 +393,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 ## Pump settings
 
-The options here will vary depending on which pump driver you have selected in [Config Builder](../Configuration/Config-Builder.md#pump).  Pair and set your pump up according to the pump related instructions:
+The options here will vary depending on which pump driver you have selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#pump).  Pair and set your pump up according to the pump related instructions:
 
 - [DanaR Insulin Pump](../CompatiblePumps/DanaR-Insulin-Pump.md)
 - [DanaRS Insulin Pump](../CompatiblePumps/DanaRS-Insulin-Pump.md)
@@ -439,7 +439,7 @@ When using NSClientV3, all uploaders must be using the API V3. Since most are no
 
 Synchronization choices will depend on the way you will want to use AAPS.
 
-You can select which data you want to [upload and download to or from Nightscout](../Installing-AndroidAPS/Nightscout.md#aaps-settings). 
+You can select which data you want to [upload and download to or from Nightscout](../SettingUpAaps/Nightscout.md#aaps-settings). 
 
 ### Alarm options
 
@@ -471,7 +471,7 @@ Options in advanced settings are self-explanatory.
 
 ## SMS Communicator
 
-- Options will only be displayed if SMS communicator is selected in [Config Builder](../Configuration/Config-Builder.md#sms-communicator).
+- Options will only be displayed if SMS communicator is selected in [Config Builder](../SettingUpAaps/ConfigBuilder.md#sms-communicator).
 - This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.
 - Further information is described in [SMS Commands](../Children/SMS-Commands.md).
 - Additional safety is obtained through use of an authenticator app and additional PIN at token end.

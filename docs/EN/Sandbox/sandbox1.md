@@ -54,7 +54,7 @@ testing abbr : <abbr title="Insulin Sensitivity Factor">ISF</abbr>, <abbr title=
 
 Links with anchor : 
 - [how long will it take?](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up)
-- [NSClient settings in Preferences](../Configuration/Preferences.md#nsclient).
+- [NSClient settings in Preferences](../SettingUpAaps/Preferences.md#nsclient).
 - [prediction lines in AAPS OVERVIEW](../Getting-Started/Screenshots.md#prediction-lines) to header level 4
 - [Screenshots](../Getting-Started/Screenshots.md)
 - [Screenshot main graph](../Getting-Started/Screenshots.md#section-f---main-graph) to header level 3

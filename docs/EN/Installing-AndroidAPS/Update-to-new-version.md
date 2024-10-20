@@ -66,12 +66,12 @@ Note: The files that were updated may vary! This is not an indication
 (Update-to-new-version-build-the-signed-apk)=
 ## 3. Build the Signed APK
 
-Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/building-AAPS.md#build-the-aaps-signed-apk).
+Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk).
 
 ## 4. Transfer the apk
 You need to transfer the apk to your phone so you can install it.
 
-See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Transferring-and-installing-AAPS.md)
+See the instructions for [Transfer APK to smartphone](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
 
 ## 5. Install apk

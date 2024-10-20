@@ -12,7 +12,7 @@ See [FAQ page](../Getting-Started/FAQ.md) for details.
 ## Computer and software specifications for building AAPS
 
 * Please use the **[Android Studio version called at least Hedgehog (2023.1.1) or one more recent like Iguana, Jellyfish, Koala or Ladybug](https://developer.android.com/studio/)** to build the apk. Older versions of Android Studio need to be updated first! 
-* [Windows 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.  
+* [Windows 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio.md#unable-to-start-daemon-process) are not supported by Android Studio. Please keep in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system.  
 
 <table class="tg">
 <tbody>
@@ -70,15 +70,15 @@ Please jump directly to the [update guide](../Installing-AndroidAPS/Update-to-ne
 
 The overall steps for building the **AAPS** apk file are as follows:
 
-4.1 [Install Git](Install-Git)
+4.1 [Install Git](#install-git-if-you-dont-have-it)
 
-4.2 [Install Android Studio](Building-APK-install-android-studio)
+4.2 [Install Android Studio](#install-android-studio)
 
-4.3 [Download AAPS code](Building-APK-download-AAPS-code)
+4.3 [Download AAPS code](#download-the-aaps-code)
 
-4.4. [Set Git path in Android Studio preferences](Building-APK-set-git-path-in-preferences)
+4.4. [Set Git path in Android Studio preferences](#set-git-path-in-android-studio-preferences)
 
-4.5. [Build AAPS "signed" apk](Building-APK-generate-signed-apk) 
+4.5. [Build AAPS "signed" apk](#build-the-aaps-signed-apk) 
 
 
 In this guide you will find _example_ screenshots of building of **AAPS** apk file. Because  **Android Studio** - the software which we use to build the **AAPS** apk - is regularly updated, these screenshots may not be identical to your installation, but they should still be possible to follow. 
@@ -97,7 +97,7 @@ Git is a program that allows you to track changes in code and to collaborate wit
 
 #### Steps for Installing Git
 
-1.	Check that you don’t already have **Git** installed. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](Building-APK-install-android-studio): 
+1.	Check that you don’t already have **Git** installed. You can do this by typing “git” in the Windows search bar – if you see **“Git bash”** or some other form of Git, it is already installed and you can go straight to [installing Android Studio](#install-android-studio): 
 
 
 ![Git_installed](../images/Building-the-App/001_check_git_installed.png)
@@ -282,9 +282,9 @@ You can leave the gradle sync running and follow the next steps already.
 (Building-APK-set-git-path-in-preferences)=
 ### Set Git path in Android Studio preferences
 
-Now we will tell Android studio where to find Git, which you installed [earlier](Install-Git).
+Now we will tell Android studio where to find Git, which you installed [earlier](#install-git-if-you-dont-have-it).
 
-* Windows users only: Make sure you have restarted your computer after [installing Git](Install-Git). If not, restart now and re-open Android Studio
+* Windows users only: Make sure you have restarted your computer after [installing Git](#install-git-if-you-dont-have-it). If not, restart now and re-open Android Studio
  
 In the top left corner of **Android Studio**, open the hamburger menu and navigate to **File** > **Settings** (on Windows) or **Android Studio** > **Preferences** (on Mac). 
 This opens the following window, click to expand the dropdown called **Version Control** (1) and select **Git** 
@@ -302,8 +302,8 @@ If the automatic setting is successful, your current version of **Git** will be 
 
 
 If you find that **git.exe** is not found automatically, or that clicking "Test" results in an error (1), you can either 
-* manually enter the path which you saved [earlier](Make_a_note_of_Git_path), or 
-* click on the folder icon (1) and manually navigating to the directory where **git.exe** was installed [earlier](Make_a_note_of_Git_path)
+* manually enter the path which you saved [earlier](#steps-for-installing-git), or 
+* click on the folder icon (1) and manually navigating to the directory where **git.exe** was installed [earlier](#steps-for-installing-git)
 * Verify your settings with the **Test** button!
 
   ![Git not found](../images/Building-the-App/039_GitTestError.png)
@@ -364,7 +364,7 @@ Make sure to note down for yourself where your keystore is stored. You will need
 
 * Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).  
 
-  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [troubleshooting for lost key store](troubleshooting_androidstudio-lost-keystore).
+  The passwords for key store and key do not have to be sophisticated. If you lose your password in the future, see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore).
 
 * The default alias (3) for your key is "key0", leave this unchanged.
 
@@ -415,7 +415,7 @@ In the Notifications box, click on the blue link "locate":
  
 Congratulations! Now you have built the **AAPS** apk file, you will be transferring this file to your smartphone in the next section of the docs. 
 
-Move to the next stage of [Transferring and Installing **AAPS**](Transferring-and-installing-AAPS.md).
+Move to the next stage of [Transferring and Installing **AAPS**](../SettingUpAaps/TransferringAndInstallingAaps.md).
 
 
 
