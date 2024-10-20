@@ -163,7 +163,7 @@
 - [Nightscout security](../SettingUpAaps/Nightscout.md#security-considerations)
 - [Profile timeshift](../Usage/Profiles.md#time-shift-of-the-circadian-percentage-profile) (more details)
 - [Remote monitoring](../Children/Children.md)
-- [What is a closed loop system?](../Getting-Started/Introduction.md#what-does-hybrid-closed-loop-mean-)
+- [What is a closed loop system?](../Getting-Started/Introduction.md#what-does-hybrid-closed-loop-mean)
 
 ## August 2019
 

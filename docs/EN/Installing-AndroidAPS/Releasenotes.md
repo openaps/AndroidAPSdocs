@@ -451,7 +451,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - Objectives: [Allow to go back](../SettingUpAaps/CompletingTheObjectives.md#go-back-in-objectives), Time fetching dialog
 
-- Automation: [allow sorting](../Usage/Automation.md#the-order-of-the-automations-in-the-list-matters-)
+- Automation: [allow sorting](../Usage/Automation.md#the-order-of-the-automations-in-the-list-matters)
 
 - Automation: fixed bug when automation was running with disabled loop
 
