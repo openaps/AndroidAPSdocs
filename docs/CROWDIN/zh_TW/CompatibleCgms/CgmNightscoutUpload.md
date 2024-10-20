@@ -7,4 +7,4 @@
 ```
 
 -   使用你的 Nightscout 網站資訊設定 NSClient。
--   Select NSClient BG in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+-   Select NSClient BG in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
