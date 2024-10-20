@@ -1,36 +1,60 @@
 (Open-APS-features-DynamicISF)=
 ## רגישות דינאמית (DynISF)
-DynamicISF נוסף בגרסה 3.2 של AAPS ודורש להתחיל את משימה 11 כדי להתחיל שימוש. להפעלה בחרו בבונה התצורה > רגישות דינאמית. מומלץ רק למשתמשים מתקדמים שיש להם שליטה טובה ב-AAPS.
+**Dynamic ISF** was added in **AAPS** version 3.2 and requires Objective 11 to be started before **Dynamic ISF** can be activated. Select **Dynamic ISF** in the Config Builder > **AAPS** to activate. **Dynamic ISF** is recommended only for advanced users that have a good handle on their **AAPS'** controls and monitoring.
 
-יש לשים לב כי על מנת להשתמש ב-ISF דינאמי ביעילות, נדרש מסד נתונים של AndroidAPS בגודל מינימלי של חמישה ימים.
+To use **Dynamic ISF** effectively, **AAPS'** database requires a minimum of five (5) days of the user's **AAPS** data.
 
-הרגישות הדינאמית (DynISF) מתאימה את יחס הרגישות לאינסולין באופן דינאמי בהתבסס על המינון היומי הכולל של האינסולין (TDD) ועל ערכי הסוכר הנוכחיים והחזויים.
+**Dynamic ISF** adapts the user's insulin sensitivity factor (**ISF**) dynamically based on the user's:
 
-הרגישות הדינאמית משתמשת במודל של כריס וילסון לקביעת יחס הרגישות לאינסולין (ISF) במקום הגדרות פרופיל סטטיות.‬
+- Total Daily Dose of insulin (**TDD**); and
+- current and predicted blood glucose values.
 
-‫המשוואה המיושמת היא: ISF = 1800 / (TDD * Ln ((glucose / insulin divisor) + 1))‬
+**Dynamic ISF** uses Chris Wilson’s model to determine **ISF** instead of a user's static **Profile's** settings for **ISF**.
 
-היישום משתמש במשוואה כדי לחשב את גורם הרגישות לאינסולין הנוכחי (ISF) ובתחזיות oref1 עבור אינסולין פעיל (IOB), זמן האפס (ZT) ומודל הארוחות שלא הוכרזו (UAM). החישוב של הרגישות הדינאמית אינו מחשב פחמימות פעילות.
+The **Dynamic ISF**  equation implemented is: ISF = 1800 / (TDD * Ln (( glucose / insulin divisor) +1 ))
 
-### TDD - סה"כ מינון אינסולין יומי
-This uses a combination of the 7 day average TDD, the previous day’s TDD and a weighted average of the last eight hours of insulin use extrapolated out for 24 hours. The total daily dose used in the above equation is weighted one third to each of the above values.
+![Screenshot 2024-10-19 145120](https://github.com/user-attachments/assets/472627ef-047f-438d-ba30-eba75eeaff97)
+
+
+
+
+
+The implementation uses the aobve equation to calculate current **ISF** and in the oref1 predictions for **IOB**, **ZT** and **UAM**. It is not used for **COB**.  Further discussion can be found here: https://www.youtube.com/watch?v=oL49FhOts3c.
+
+### TDD (Total Daily Dose)
+TDD will use a combination of the following values:
+1.  7 day average **TDD**;
+2.  the previous day’s **TDD**; and
+3.  a weighted average of the last eight (8) hours of insulin use extrapolated out for 24 hours.
+
+The **TDD** used in the above equation is weighted one third to each of the above values.
 
 ### מחלק אינסולין (Insulin Divisor)
 The insulin divisor depends on the peak of the insulin used and is inversely proportional to the peak time. For Lyumjev this value is 75, for Fiasp, 65 and regular rapid insulin, 55.
 
 ### Dynamic ISF Adjustment Factor
-The adjustment factor allows the user to specify a value between 1% and 300%. This acts as a multiplier on the TDD value and results in the ISF values becoming smaller (ie more insulin required to move glucose levels a small amount) as the value is increased above 100% and larger (i.e. less insulin required to move glucose levels a small amount) as the value is decreased below 100%.
+The Adjustment Factor allows the user to specify a value between 1% and 300%. This acts as a multiplier on the **TDD** value and results in the **ISF** values becoming *smaller* (i.e. more insulin required to move glucose levels a small amount) as the value is increased above 100% and *larger* (i.e. less insulin required to move glucose levels a small amount) as the value is decreased below 100%.
+
+The Adjustment Factor can be located in ‘Preferences’ > **AAPS**:
+
+![Screenshot 2024-10-19 134558](https://github.com/user-attachments/assets/4b563c64-a924-49d3-904b-4e6fdb4dcc67)
+
 
 ### Future ISF
 
-Future ISF is used in the dosing decisions that oref1 makes. Future ISF uses the same TDD value as generated above, taking the adjustment factor into account. It then uses different glucose values dependent on the case:
+Future **ISF** is used in the dosing decisions that oref1 makes.  Future **ISF** uses the same **TDD** value as generated above, taking the Adjustment Factor (discussed above) into account. It then uses different glucose values dependent on the case:
 
-* If levels are flat, within +/- 3 mg/dl, and predicted BG is above target, a combination of 50% minimum predicted BG and 50% current BG is used.
+* If levels are flat, within +/- 3 mg/dl, and predicted **BG** is above target, a combination of 50% minimum predicted **BG** and 50% current **BG** is used.
 
-* If eventual BG is above target and glucose levels are increasing, or eventual BG is above current BG, current BG is used.
+* If eventual **BG** is above target and glucose levels are increasing, or eventual **BG** is above current **BG**, current **BG** is used.
 
-Otherwise, minimum predicted BG is used.
+Otherwise, minimum predicted **BG** is used.
 
 ### אפשר יחס רגישות המבוסס על המינון היומי הכולל לשינוי מינון בזאלי וערכי מטרה
 
-הגדרה זו מחליפה את Autosens, ומשתמשת בסך מינון האינסולין של 24 השעות האחרונות או של השבוע האחרון כדי לכוונן את יחס הרגישות ואת המינון הבזאלי, בדומה לדרך בה Autosens עושה זאת. ערך זה שנחשב נמצא בשימוש גם כדי להתאים את ערך המטרה, אם האפשרויות להתאמת ערך המטרה עם הרגישות מופעלות. בניגוד ל- Autosens, אפשרות זו לא מתאימה ערכי ISF. 
+This setting replaces Autosens, and uses the last 24h **TDD**/7D **TDD** as the basis for increasing and decreasing basal rate, in the same way that standard Autosens does. ערך זה שנחשב נמצא בשימוש גם כדי להתאים את ערך המטרה, אם האפשרויות להתאמת ערך המטרה עם הרגישות מופעלות. Unlike Autosens, this option does not adjust **ISF** values.
+
+### CAUTION - Automations or Profile Percentage Increase
+**Automations** should always be used with care. This is particularly so with **Dynamic ISF**.
+
+If **Dynamic ISF** is in operation, users should reconsider enabling any temporary **Profile** increase as an **Automation** rule or similarly activating a **Profile Percentage** which may create **Dynamic ISF** to be overly aggressive in correction bolusing and could cause hypoglycemia.
