@@ -15,7 +15,7 @@
 
 ## 2021年12月
 
-- [Building the APK](../Installing-AndroidAPS/building-AAPS.md) - update Android Studio Arctic Fox | 2020.3.1 @tanja
+- [Building the APK](../SettingUpAaps/BuildingAaps.md) - update Android Studio Arctic Fox | 2020.3.1 @tanja
 - [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) information added @MilosKozak
 
 ## 2021年11月
@@ -31,7 +31,7 @@
 
 ## 2021年9月
 
-- Recommended computer specification to [build AAPS app](../Installing-AndroidAPS/building-AAPS.md#computer-and-software-specifications-for-building-aaps)
+- Recommended computer specification to [build AAPS app](../SettingUpAaps/BuildingAaps.md#computer-and-software-specifications-for-building-aaps)
 
 ## 2021年6月
 
@@ -40,7 +40,7 @@
 ## 2021年4月
 
 - List of [communication devices](../Module/module.md#additional-communication-device) for Omnipod and Medtronic pumps
-- AAPS predictions in [Nightscout](../Installing-AndroidAPS/Nightscout.md#manual-nightscout-setup)
+- AAPS predictions in [Nightscout](../SettingUpAaps/Nightscout.md#manual-nightscout-setup)
 
 ## 2021年3月
 
@@ -55,7 +55,7 @@
 - [Action tab](../Getting-Started/Screenshots.md#action-tab) - more details on page 'AAPS screens'
 - Dexcom G6 with [Build Your Own Dexcom App](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)
 - Libre smart reader [battery level](../Getting-Started/Screenshots.md#sensor-level-battery)
-- [Objectives](../Usage/completing-the-objectives.md#objective-3-prove-your-knowledge) - new questions
+- [Objectives](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) - new questions
 - Other [new AAPS 2.8.0 functions](../Installing-AndroidAPS/Releasenotes.md#version-280)
 
 ## 2020年12月
@@ -86,7 +86,7 @@
 
 - [延長注射僅適用於 Dana 和 Insight 幫浦](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 - [Insight deactivate vibration](../CompatiblePumps/Accu-Chek-Insight-Pump.md#vibration) (firmware 3.x only)
-- [Minimal request rate](../Configuration/Preferences.md#minimal-request-change-) to reduce number of notifications in open loop mode
+- [Minimal request rate](../SettingUpAaps/Preferences.md#minimal-request-change-) to reduce number of notifications in open loop mode
 - [Patched Libre Link app](../CompatibleCgms/Libre2.md#5-use-the-patched-librelink-app-with-xdrip) - check if correctly patched
 - [Prediction lines](../Getting-Started/Screenshots.md#prediction-lines) - more details
 
@@ -97,7 +97,7 @@
 
 ## 2020年3月
 
-- [使用 Android Studio 3.6.1 建置 APK](../Installing-AndroidAPS/building-AAPS.md)
+- [使用 Android Studio 3.6.1 建置 APK](../SettingUpAaps/BuildingAaps.md)
 - [DanaRS with firmware v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **cannot currently be used with AAPS!**
 - [延長注射並切換到開環](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 - [使用 Android Studio 3.6.1 更新 APK](../Installing-AndroidAPS/Update-to-new-version.md)
@@ -108,7 +108,7 @@
 - [Autosens](../Usage/Open-APS-features.md#autosens) - short explanation
 - [護理入口替代方案](../Usage/CPbefore26.md)
 - [Extended bolus](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only) feature - closed loop will be disabled
-- New [Local Profile plugin](../Configuration/Config-Builder.md#local-profile)
+- New [Local Profile plugin](../SettingUpAaps/ConfigBuilder.md#local-profile)
 - Sample Setup - update Dexcom G6
 - [Version 2.6.0](../Installing-AndroidAPS/Releasenotes.md#version-260) - major new features
 - [Wear OS 複雜功能](../Configuration/Watchfaces.md)
@@ -122,7 +122,7 @@
 
 - [Android Auto](../Usage/Android-auto.md) - 帶有螢幕截圖的設置
 - [Accu-Chek Insight & Autotune](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps) - workaround for usage
-- [Glimp](../Configuration/Config-Builder.md#bg-source) - version 4.15.57 and newer supported
+- [Glimp](../SettingUpAaps/ConfigBuilder.md#bg-source) - version 4.15.57 and newer supported
 - [錶盤](../Configuration/Watchfaces.md) - 大更新，更多細節
 - [Watchface complications](../Configuration/Watchfaces.md#complications) - use your favorite watchface with AAPS data
 
@@ -150,8 +150,8 @@
 - [COB 計算在單獨頁面上](../Usage/COB-calculation.md)
 - [COB - 錯誤 COB 值偵測](../Usage/COB-calculation.md#detection-of-wrong-cob-values)
 - [Dexcom G6 特定問題排除](../CompatibleCgms/DexcomG6.md#dexcom-g6one-specific-troubleshooting)
-- [2.5 版的目標更新](../Usage/completing-the-objectives.md)
-- [偏好設定更新](../Configuration/Preferences.md)
+- [2.5 版的目標更新](../SettingUpAaps/CompletingTheObjectives.md)
+- [偏好設定更新](../SettingUpAaps/Preferences.md)
 - [SGLT-2 抑制劑 - 閉環時請勿使用](../Getting-Started/PreparingForAaps.md#no-sglt-2-inhibitors)
 - [SMS 指令問題排除](../Children/SMS-Commands.md#troubleshooting)
 - [xDrip - 更新 G6 傳感器更換](../CompatibleCgms/xDrip.md#replace-transmitter)
@@ -160,7 +160,7 @@
 
 - [Automate](../Usage/Automation.md)
 - [Bolus calculator](../Getting-Started/Screenshots.md#wrong-cob-detection) - slow carb absorption
-- [Nightscout 安全性](../Installing-AndroidAPS/Nightscout.md#security-considerations)
+- [Nightscout 安全性](../SettingUpAaps/Nightscout.md#security-considerations)
 - [Profile timeshift](../Usage/Profiles.md#time-shift-of-the-circadian-percentage-profile) (more details)
 - [遠端監控](../Children/Children.md)
 - [什麼是閉環系統？](../Getting-Started/Introduction.md#what-does-hybrid-closed-loop-mean)
