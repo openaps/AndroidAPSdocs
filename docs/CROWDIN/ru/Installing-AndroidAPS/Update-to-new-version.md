@@ -67,13 +67,13 @@ See the [Export & import settings](../Usage/ExportImportSettings.md) page if you
 
 ## 3. Построение подписанного приложения APK
 
-Ваш исходный код теперь текущая версия. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/building-AAPS.md#build-the-aaps-signed-apk).
+Ваш исходный код теперь текущая версия. It's time to build the signed apk from it as described in the [build signed apk section](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk).
 
 ## 4. Перемещение apk
 
 Следуето перенести apk на телефон, чтобы установить.
 
-See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Transferring-and-installing-AAPS.md)
+See the instructions for [Transfer APK to smartphone](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
 ## 5. Установка apk
 
