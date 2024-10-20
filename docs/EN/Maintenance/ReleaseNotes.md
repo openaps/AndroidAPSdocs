@@ -7,7 +7,7 @@ You will receive the following information as soon as a new update is available:
 
 ![Update info](../images/AAPS_LoopDisable90days.png)
 
-Then you have 60 days to update. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../Getting-Started/Glossary.md)) as in [objective 6](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend).
+Then you have 60 days to update. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../UsefulLinks/Glossary.md)) as in [objective 6](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend).
 
 If you do not update for another 30 days (90 days from new release date) AAPS will switch to Open Loop.
 
@@ -141,7 +141,7 @@ Release date: 19-07-2022
 - huge UI improvement, cleanup and unification, migration to material design, styles, white theme, new icons. @Andries-Smit @MilosKozak @osodebailar @Philoul
 - widget @MilosKozak
 - Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
-- Watch `Wear OS tiles <../Configuration/Configuration/Watchfaces.mdl#wear-os-tiles>`, translations @Andries-Smit
+- Watch [Wear OS tiles](../UsefulLinks/WearOsSmartwatch.md#wear-os-tiles), translations @Andries-Smit
 - Wear code refactored. Not backward compatible anymore @MilosKozak
 - a11y improvements @Andries-Smit
 - new protection option PIN @Andries-Smit
@@ -293,7 +293,7 @@ Release date: 01-01-2021
 
 - [Omnipod Eros support](../CompatiblePumps/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
 - [bolus advisor](../SettingUpAaps/Preferences.md#quick-wizard) & [eating reminder](../DailyLifeWithAaps/AapsScreens.md#eating-reminder) @MilosKozak
-- [New watchface](../Configuration/Watchfaces.md#new-watchface-as-of-aaps-28) @rICTx-T1D
+- [New watchface](../UsefulLinks/WearOsSmartwatch.md#new-watchface-as-of-aaps-28) @rICTx-T1D
 - Dana RS connection improvements @MilosKozak
 - Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
 - New [Low Ressolution Skin](../SettingUpAaps/Preferences.md#skin)
@@ -343,7 +343,7 @@ You need at least start [objective 11 (in later versions objective 10!)](../Sett
 - removed Oref0 sensitivity @Tornado-Tim
 - [Biometric or password protection](../SettingUpAaps/Preferences.md#protection) for settings, bolus @MilosKozak
 - [new automation trigger](../DailyLifeWithAaps/Automations.md) @PoweRGbg
-- [Open Humans uploader](../Configuration/OpenHumans.md) @TebbeUbben @AdrianLxM
+- [Open Humans uploader](../SupportingAaps/OpenHumans.md) @TebbeUbben @AdrianLxM
 - New documentation @Achim
 
 (Releasenotes-version-2-6-1-4)=
@@ -400,7 +400,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 ### Major new features
 
 - Allow to enter only `https://` in NSClient settings
-- Fixed [BGI](../Getting-Started/Glossary.md) displaying bug on watches
+- Fixed [BGI](../UsefulLinks/Glossary.md) displaying bug on watches
 - Fixed small UI bugs
 - Fixed Insight crashes
 - Fixed future carbs with Combo pump
@@ -443,7 +443,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - Different UI and internal improvements
 
-- [Wear complications](../Configuration/Watchfaces.md)
+- [Wear complications](../UsefulLinks/WearOsSmartwatch.md)
 
 - New [SMS commands](../RemoteFeatures/SMSCommands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
 

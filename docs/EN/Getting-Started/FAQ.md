@@ -1,6 +1,6 @@
 # FAQ for loopers
 
-How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
+How to add questions to the FAQ: Follow the these [instructions](../SupportingAaps/HowToEditTheDocs.md)
 
 # General
 
@@ -212,7 +212,7 @@ Looping can reduce the pump battery faster than normal use because the system in
    
 * clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
 * for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%.  Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
-* see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md#battery-type-and-causes-of-short-battery-life)
+* see also more tips for [particular types of battery](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md#battery-type-and-causes-of-short-battery-life)
 
 ### Changing reservoirs and cannulas
 The change of cartridge cannot be done via AAPS but must be carried out as before directly via the pump.

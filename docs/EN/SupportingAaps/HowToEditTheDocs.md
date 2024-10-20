@@ -3,7 +3,7 @@
 **This description is just for editing the English documentation. All new information must be added in English first.
 If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](make-a-PR-code-syntax) section of this page.
+For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
 
 ## General
 
@@ -23,37 +23,37 @@ For our example we are going to make an edit to AndroidAPSdocs. This can be done
 
 1. Go to [https://github.com/openaps/AndroidAPSdocs](https://github.com/openaps/AndroidAPSdocs) and hit Fork in the upper right to make your own copy of the repository.
 
-![Fork repo](./images/PR0.png)
+![Fork repo](../images/PR0.png)
 
 2. Go to any page and navigate to the page you want to edit. Click on the black box at bottom left of page with the green word "v: latest" or similar. In the pop up window that appears, click the word "edit" for editing in GitHub.  
 
-![edit doc](./images/PR1.png)
+![edit doc](../images/PR1.png)
 
    Or you can click on the "Edit in GitHub" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited. You will need to be already logged into your Github account to do this (if you don't have one, they are straightforward to set up).
 
-![RTD io](./images/PR2.png)
+![RTD io](../images/PR2.png)
 
 3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved.  Make your edits to the file.
 
-We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](make-a-PR-code-syntax).
+We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](#code-syntax).
 
-![Edit branch](./images/PR3.png)
+![Edit branch](../images/PR3.png)
 
 4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typpos sic.). If you see a needed improvement, go back to the edit tab to make more improvements.  
 
-![preview mode](./images/PR5.png)
+![preview mode](../images/PR5.png)
 
 5. When you have finished your edits, scroll to the bottom of the page.  In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the __reason__ for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
 
-![commit comments](./images/PR4.png)
+![commit comments](../images/PR4.png)
 
 6. Click the green "Propose file changes" or "Commit changes" button. In the page that appears click "Create Pull Request" and again in the next page click "Create Pull Request".
 
-![create pull request](./images/PR6.png)
+![create pull request](../images/PR6.png)
 
 7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
 
-![PR tracking](./images/PR7.png)
+![PR tracking](../images/PR7.png)
 
 PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories.  If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork.  Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
 
@@ -267,7 +267,7 @@ Avoid using tables with long texts as the contents is difficult to set in Markdo
     
 3.  Useful references
     
-### ![Image](./images/styleguide01.png) 1\. English language writing tips
+### ![Image](../images/styleguide01.png) 1\. English language writing tips
 
 #### Use language that is appropriate for the reader
 
@@ -405,9 +405,9 @@ A “How-to-guide” style (with minimal explanation) is used for building, conf
 
 A tutorial helps the pupil acquire basic competence. The user will **learn by doing**.
 
-![Image](./images/styleguide02.png)
+![Image](../images/styleguide02.png)
 
-##### ![Image](./images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
+##### ![Image](../images/styleguide03.png) Tutorials (e.g. teaching a kid to beat egg whites)
 
 - narrator directly talks to the reader: In this tutorial **you** will
     (we) could be used to convey “we are in this together” frame-of-thought in some rare cases
@@ -442,9 +442,9 @@ A tutorial helps the pupil acquire basic competence. The user will **learn by do
 - Conclusion (Level 2 heading)
   
 
-![Image](./images/styleguide04.png)
+![Image](../images/styleguide04.png)
 
-##### ![Image](./images/styleguide05.png) How-To Guides (e.g. a recipe)
+##### ![Image](../images/styleguide05.png) How-To Guides (e.g. a recipe)
 
 A how-to guide’s purpose is to help the already-competent user perform a particular task correctly.
 
@@ -478,9 +478,9 @@ A how-to guide’s purpose is to help the already-competent user perform a parti
 - Conclusion paragraph
   
 
-![Image](./images/styleguide06.png)
+![Image](../images/styleguide06.png)
 
-##### ![Image](./images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
+##### ![Image](../images/styleguide07.png) Explanation (e.g. Science behind why egg whites stiffen when you beat them)
 
 An explanation clarifies, deepens and broadens the reader’s understanding of a subject.
 
@@ -507,7 +507,7 @@ An explanation clarifies, deepens and broadens the reader’s understanding of a
 - Conclusion (Level 2 heading)
   
 
-![Image](./images/styleguide08.png)
+![Image](../images/styleguide08.png)
 
 ### 2\. AAPS-specific writing/updating notes 
 

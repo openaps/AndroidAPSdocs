@@ -25,11 +25,11 @@ Section **6) Maintenance of AAPS** covers how to export and backup your settings
 
 Section **7) [Getting Help](GettingHelp/WhereCanIGetHelp.md)** should help direct you to the best places to go to find general help with **AAPS**. This is very important so that you can get in touch with others as quickly as possible, clarify questions and solve the usual pitfalls. A lot of people are already using **AAPS** successfully, but everyone has a question at some point that they couldn't solve on their own. Due to the large number of users, the response times to questions are usually very quick, typically only a few hours. Don’t worry about asking for help, there is no such thing as a dumb question! We encourage users of any/all levels of experience to ask as many questions as they feel is necessary to help get them up and running safely. This section includes general troubleshooting for **AAPS** and **AAPSClient** (a companion following app) as well as explaining how to send your **AAPS** data (logfiles) to the developers for investigation, if you think a technical issue with **AAPS** needs looking at. 
 
-Section **8) Useful AAPS links** are for handy reference. This includes the  [Glossary](Getting-Started/Glossary.md), a list of the acronyms (or short-term names) used throughout **AAPS**. This is where to go to find out what the terms ISF or TT, stand for, for example. This section also has links to useful screenshots and other data. 
+Section **8) Useful AAPS links** are for handy reference. This includes the  [Glossary](./UsefulLinks/Glossary.md), a list of the acronyms (or short-term names) used throughout **AAPS**. This is where to go to find out what the terms ISF or TT, stand for, for example. This section also has links to useful screenshots and other data. 
 
 Section 9) covers **Advanced AAPS options** such as how to progress from using **AAPS** for hybrid-closed looping (bolusing for meals _etc._) to full closed looping (no bolusing), and details development and engineering modes. Most users get on just fine with the main or "Master" **AAPS** version without looking into these options, this section is for users who already have good control and are looking to further improve their setup. 
 
-In section 10) [How to support AAPS](make-a-PR.md) we provide  information so that you can support this project. You can donate money, equipment or expertise. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](translations.md) and provide your data through the Open Humans project. 
+In section 10) [How to support AAPS](SupportingAaps/HowToEditTheDocs.md) we provide  information so that you can support this project. You can donate money, equipment or expertise. You can suggest/make changes to the documentation yourself, help with [translation of the documentation](SupportingAaps/Translations) and provide your data through the Open Humans project. 
 
 Section 11) contains archived or additional documentation, including a subsection for [clinicians](Resources/clinician-guide-to-AndroidAPS.md) who have expressed interest in open source artificial pancreas technology such as **AAPS**, or for patients who want to share such information with their clinicians, this topic is also addressed in the introduction. More diabetes and looping references and resources are contained in Section 12). 
 
@@ -118,7 +118,8 @@ Timezone traveling & Daylight Saving Time <./DailyLifeWithAaps/TimezoneTraveling
 
 Export/Import Settings <./Maintenance/ExportImportSettings.md>
 Reviewing your data
-Version Release Notes <./Maintenance/ReleaseNotes.md>
+AAPS Release Notes <./Maintenance/ReleaseNotes.md>
+Documentation updates <./Maintenance/DocumentationUpdate.md>
 Updating to a new version of AAPS <./Maintenance/UpdateToNewVersion.md>
 - Update to AAPS 2.7 <./Maintenance/Update2_7.md>
 - Update to AAPS 3.0<./Maintenance/Update3_0.md>
@@ -138,38 +139,29 @@ Help! My AAPS phone is broken/stolen/lost
 ```{toctree}
 :caption: 8) Useful AAPS Links
 
-Glossary <./Getting-Started/Glossary.md>
+Glossary <./UsefulLinks/Glossary.md>
 Your AAPS profile 
-Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
-Operation of Wear AAPS on a Smartwatch <./Configuration/Watchfaces.md>
-How to customise your AAPS watchface <./Usage/Custom_Watchface_Reference.md>
-xDrip Settings <./CompatibleCgms/xDrip.md>
-Autotune <./Usage/autotune.md>
+WearOS Smartwatch <./UsefulLinks/WearOsSmartwatch.md>
 
 ```
 
 ```{toctree}
 :caption: 9) Advanced AAPS options
 
-Full Closed Loop <./Usage/FullClosedLoop.md>
-Dev branch <./Installing-AndroidAPS/Dev_branch.md>
-xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
+Full Closed Loop <./AdvancedOptions/FullClosedLoop.md>
+Dev branch <./AdvancedOptions/DevBranch.md>
+xDrip engineering mode <./AdvancedOptions/EnablingEngineeringModeInXdrip.md>
+Autotune <./AdvancedOptions/Autotune.md>
 
 ```
 ```{toctree}
 :caption: 10) How to support AAPS
 
-How to help <./Getting-Started/How-can-I-help.md>
-
-How to edit the docs <./make-a-PR.md>
-
-How to translate the app and docs <./translations.md>
-
-State of translations <./Administration/stateTranslations.md>
-
-Docs updates & changes <./Getting-Started/WikiUpdate.md>
-
-Open Humans Uploader <./Configuration/OpenHumans.md>
+How to help <./SupportingAaps/HowCanIHelp.md>
+Editting the docs <./SupportingAaps/HowToEditTheDocs.md>
+Translating the app and docs <./SupportingAaps/Translations.md>
+State of translations <./SupportingAaps/StateOfTranslations.md>
+Open Humans Uploader <./SupportingAaps/OpenHumans.md>
 
 ```
 

@@ -4,7 +4,7 @@ Documentation about Autotune algorythm can be found in [OpenAPS documentation](h
 
 Autotune plugin is an implementation of OpenAPS autotune algorythm within AAPS.
 
-**Currently Autotune Plugin is only available in dev branch and with Engineering mode.**
+**Currently Autotune Plugin is only available in [dev branch](../AdvancedOptions/DevBranch.md) and with Engineering mode.**
 
 ## Autotune user interface
 

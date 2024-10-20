@@ -118,7 +118,7 @@ Start sling: Tap on Play button
 
 
 #### Example 3: To be added by you!!!
-Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSDocs repository](../make-a-PR.md).
+Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSDocs repository](../SupportingAaps/HowToEditTheDocs.md).
 
 
 

@@ -4,10 +4,10 @@
 
 - [BG quality warning sign](../DailyLifeWithAaps/AapsScreens.md#bg-warning-sign) @tanja
 - [Medtronic pump update](../CompatiblePumps/MedtronicPump.md) @dottedfingertips
-- [Necessary checks after update to AAPS 3.0](../Maintenance/Update3_0.md) @tanja
+- [Necessary checks after update to AAPS 3.0](Update3_0.md) @tanja
 - [Omnipod Dash](../CompatiblePumps/OmnipodDASH.md) @Freloner @ robertrub @vanelsberg
 - Update docs for AAPS 3.0 (partly) @xJoe
-- [Wear OS for AAPS 3.0](../Configuration/Watchfaces.md) @peterleimbach
+- [Wear OS for AAPS 3.0](../UsefulLinks/WearOsSmartwatch.md) @peterleimbach
 
 ## January 2022
 
@@ -27,7 +27,7 @@
 
 ## October 2021
 
-- [Release notes](../Maintenance/ReleaseNotes.md) AAPS 3.0 beta
+- [Release notes](ReleaseNotes.md) AAPS 3.0 beta
 
 ## September 2021
 
@@ -35,7 +35,7 @@
 
 ## June 2021
 
-- [Watchface sideload](../Configuration/Watchfaces.md)
+- [Watchface sideload](../UsefulLinks/WearOsSmartwatch.md)
 
 ## April 2021
 
@@ -56,7 +56,7 @@
 - Dexcom G6 with [Build Your Own Dexcom App](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)
 - Libre smart reader [battery level](../DailyLifeWithAaps/AapsScreens.md#sensor-level-battery)
 - [Objectives](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) - new questions
-- Other [new AAPS 2.8.0 functions](../Maintenance/ReleaseNotes.md#version-280)
+- Other [new AAPS 2.8.0 functions](ReleaseNotes.md#version-280)
 
 ## December 2020
 
@@ -110,21 +110,21 @@
 - [Extended bolus](../DailyLifeWithAaps/ExtendedCarbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only) feature - closed loop will be disabled
 - New [Local Profile plugin](../SettingUpAaps/ConfigBuilder.md#local-profile)
 - Sample Setup - update Dexcom G6
-- [Version 2.6.0](../Maintenance/ReleaseNotes.md#version-260) - major new features
-- [Wear complications](../Configuration/Watchfaces.md)
+- [Version 2.6.0](ReleaseNotes.md#version-260) - major new features
+- [Wear complications](../UsefulLinks/WearOsSmartwatch.md)
 
 ## January 2020
 
 - [Manual carb correction](../DailyLifeWithAaps/AapsScreens.md#carb-correction) for faulty carb entries
-- [Image size](../make-a-PR.md) when editing docs
+- [Image size](../SupportingAaps/HowToEditTheDocs.md) when editing docs
 
 ## December 2019
 
 - [Android auto](../RemoteFeatures/AndroidAuto.md) - setup with screenshots
 - [Accu-Chek Insight & Autotune](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps) - workaround for usage
 - [Glimp](../SettingUpAaps/ConfigBuilder.md#bg-source) - version 4.15.57 and newer supported
-- [Watchfaces](../Configuration/Watchfaces.md) - major update, way more details
-- [Watchface complications](../Configuration/Watchfaces.md#complications) - use your favorite watchface with AAPS data
+- [Watchfaces](../UsefulLinks/WearOsSmartwatch.md) - major update, way more details
+- [Watchface complications](../UsefulLinks/WearOsSmartwatch.md#complications) - use your favorite watchface with AAPS data
 
 ## November 2019
 
@@ -141,11 +141,11 @@
 - [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio)
 - [Troubleshooting - link collection](../GettingHelp/GeneralTroubleshooting.md)
 - Update - quick walk-through for experienced users
-- Docs - update [edit](../make-a-PR.md#code-syntax) and [translation](../translations.md#translation-of-the-documentation).
+- Docs - update [edit](../SupportingAaps/HowToEditTheDocs.md#code-syntax) and [translation](../SupportingAaps/Translations#translation-of-the-documentation).
 
 ## October 2019
 
-- [AAPS version 2.5](../Maintenance/ReleaseNotes.md#version-250) updates (especially on [update page](../Maintenance/UpdateToNewVersion))
+- [AAPS version 2.5](ReleaseNotes.md#version-250) updates (especially on [update page](../Maintenance/UpdateToNewVersion))
 - [AccuChek Insight - log options](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps)
 - [COB calculation on separate page](../DailyLifeWithAaps/CobCalculation.md)
 - [COB - wrong COB value detection](../DailyLifeWithAaps/CobCalculation.md#detection-of-wrong-cob-values)

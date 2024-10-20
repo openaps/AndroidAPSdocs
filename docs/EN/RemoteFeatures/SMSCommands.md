@@ -98,7 +98,7 @@ This section may contain outdated content. Please also see the page [SMS Command
 
 ## Commands
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](../translations.md#translate-strings-for-aaps-app).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](../SupportingAaps/Translations#translate-strings-for-aaps-app).
 
 ![SMS Commands Example](../images/SMSCommands.png)
 

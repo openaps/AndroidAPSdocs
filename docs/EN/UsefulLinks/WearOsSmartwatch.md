@@ -345,6 +345,8 @@ There are a couple of watch faces for Garmin that integrate with xDrip or Nights
 
 [Here](../ExchangeSiteCustomWatchfaces/index.md) you can download Zip-Files with custom watchfaces made by other users.
 
-If you want to build your own watchface, follow the [guide here](../Usage/Custom_Watchface_Reference.md).
+## Build your own watchface
+
+If you want to build your own watchface, follow the [guide here](CustomWatchfaceReference).
 
 Once you have built a custom watchface, you can share your own **AAPS** custom watchface with others, the zip-file can be uploaded in the folder  "ExchangeSiteCustomWatchfaces" via a Pull Request into Github. During merge of the pull request, the documentation team will extract the CustomWatchface.png file and prefix it with the filename of the Zip-file.

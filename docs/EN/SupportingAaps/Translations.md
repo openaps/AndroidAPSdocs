@@ -12,7 +12,7 @@ The approval is a manual step. As non profit organization we don't provide SLAs 
 ```
 
 * When we approve you, click the flag
-   ![When we approve you, click the flag](./images/translation_flags.png)
+   ![When we approve you, click the flag](../images/translation_flags.png)
 
 ## Translation of the app
 
@@ -21,27 +21,27 @@ The approval is a manual step. As non profit organization we don't provide SLAs 
 
 * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
 
-   ![Click translate all](./images/translations-click-translate-all.png)
+   ![Click translate all](../images/translations-click-translate-all.png)
 
 * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
 
-   ![Click strings.xml](./images/translations-click-strings.png)
+   ![Click strings.xml](../images/translations-click-strings.png)
 
 * Translate sentences on left side by adding new translated text or use & edit suggestion 
 
-   ![Translation app](./images/translations-translate.png)
+   ![Translation app](../images/translations-translate.png)
 
 
 ### Proofread strings for AAPS app
 
 * Proofreaders start by selecting "Proofread" when starting from the language home screen.
 
-   ![Proofreading mode app](./images/translations-proofreading-mode.png) 
+   ![Proofreading mode app](../images/translations-proofreading-mode.png) 
 
 
   and approve translated texts 
   
-   ![approve text](./images/translations-proofreading.png)
+   ![approve text](../images/translations-proofreading.png)
 
 When a proofreader approves a translation it will be added to the next version of AAPS.
 
@@ -50,7 +50,7 @@ When a proofreader approves a translation it will be added to the next version o
 
 * Click the name of the docs page you want to translate
 
-![Click docs page](./images/translation_WikiPage.png)
+![Click docs page](../images/translation_WikiPage.png)
 
 
 * Translate sentences by sentence
@@ -68,7 +68,7 @@ When a proofreader approves a translation it will be added to the next version o
     1. These are the suggestion for a translation. Especially you can see how much Crowdin rates this as a fit or if it was already just in the past and come up through text rearrangements but not content change.
     1. Press the "save" button to save a proposal for the translation. It will then promoted to a proofreader for final check.
 
-![Translation docs](./images/translation_WikiTranslate.png)
+![Translation docs](../images/translation_WikiTranslate.png)
 
 * A translated page will not be published in docs before 
 
@@ -97,11 +97,11 @@ It's the proofreaders job to have a special look on this!
 
 * Proofreaders have to switch to Proofreading mode 
 
-   ![Proofreading mode docs](./images/translation_WikiProofreadingmode.png) 
+   ![Proofreading mode docs](../images/translation_WikiProofreadingmode.png) 
 
 
   and approve translated texts 
   
-   ![approve text](./images/translations-proofreading.png)
+   ![approve text](../images/translations-proofreading.png)
 
 * When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during hollidays. To speed up the process you can inform docs team about new translations.

@@ -504,7 +504,7 @@ Select which location service shall be used:
 
 ## Open Humans
 
-- You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../Configuration/OpenHumans.md).
+- You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../SupportingAaps/OpenHumans.md).
 
 - In Preferences you can define when data shall be uploaded
 

@@ -15,7 +15,7 @@ Pick a small task at first and do your first pull request! :)
 
 Great, this is a highly appreciated thing and a good way to pay it forward!
 * The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../make-a-PR.md). Other languages are only translated from english and can't be edited for consistency reasons.
+* A guide how to do commits on English wiki can be found here: [How to make a PR](../SupportingAaps/HowToEditTheDocs.md). Other languages are only translated from english and can't be edited for consistency reasons.
 
 ## I do speak multiple languages and want to translate the app or the documentation
 
@@ -23,7 +23,7 @@ If you are translating something for the first time, please start with translati
 
 You are welcome to start as a translator for the documentation in parallel or later.
 
-You can check the state of translations for the languages app and documentation [here](../Administration/stateTranslations.md).
+You can check the state of translations for the languages app and documentation [here](StateOfTranslations).
 
 * If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
 * If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 

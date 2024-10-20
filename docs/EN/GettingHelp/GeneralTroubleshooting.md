@@ -95,7 +95,7 @@ Here are examples how to find them on specific android phones.
 ## Pumps
 
 * [DanaRS](../CompatiblePumps/DanaRS-Insulin-Pump.md#dana-rs-specific-errors)
-* [Accu-Chek Combo general](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md)
+* [Accu-Chek Combo general](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md)
 * [Accu-Chek Combo + Ruffy](../CompatiblePumps/Accu-Chek-Combo-Pump.md#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
 * [Accu-Chek Insight](../CompatiblePumps/Accu-Chek-Insight-Pump.md#insight-specific-errors)
 * [Medtronic + RileyLink](../CompatiblePumps/MedtronicPump.md#what-to-do-if-i-loose-connection-to-rileylink-andor-pump)
@@ -107,5 +107,5 @@ Here are examples how to find them on specific android phones.
 
 ## Smartwatches
 
-* [Troubleshooting Wear app](../Configuration/Watchfaces.md#troubleshooting-the-wear-app)
+* [Troubleshooting Wear app](../UsefulLinks/WearOsSmartwatch.md#troubleshooting-the-wear-app)
 * [Sony Smartwatch 3](../Usage/SonySW3.md)
