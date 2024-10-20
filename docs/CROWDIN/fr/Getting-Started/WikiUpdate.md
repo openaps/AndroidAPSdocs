@@ -15,7 +15,7 @@
 
 ## Décembre 2021
 
-- [Building the APK](../Installing-AndroidAPS/building-AAPS.md) - update Android Studio Arctic Fox | 2020.3.1 @tanja
+- [Building the APK](../SettingUpAaps/BuildingAaps.md) - update Android Studio Arctic Fox | 2020.3.1 @tanja
 - [Dana-i](../CompatiblePumps/DanaRS-Insulin-Pump.md) information added @MilosKozak
 
 ## Novembre 2021
@@ -31,7 +31,7 @@
 
 ## Septembre 2021
 
-- Recommended computer specification to [build AAPS app](../Installing-AndroidAPS/building-AAPS.md#computer-and-software-specifications-for-building-aaps)
+- Recommended computer specification to [build AAPS app](../SettingUpAaps/BuildingAaps.md#computer-and-software-specifications-for-building-aaps)
 
 ## Juin 2021
 
@@ -40,7 +40,7 @@
 ## Avril 2021
 
 - List of [communication devices](../Module/module.md#additional-communication-device) for Omnipod and Medtronic pumps
-- AAPS predictions in [Nightscout](../Installing-AndroidAPS/Nightscout.md#manual-nightscout-setup)
+- AAPS predictions in [Nightscout](../SettingUpAaps/Nightscout.md#manual-nightscout-setup)
 
 ## Mars 2021
 
@@ -55,7 +55,7 @@
 - [Action tab](../Getting-Started/Screenshots.md#action-tab) - more details on page 'AAPS screens'
 - Dexcom G6 with [Build Your Own Dexcom App](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)
 - Libre smart reader [battery level](../Getting-Started/Screenshots.md#sensor-level-battery)
-- [Objectives](../Usage/completing-the-objectives.md#objective-3-prove-your-knowledge) - new questions
+- [Objectives](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) - new questions
 - Other [new AAPS 2.8.0 functions](../Installing-AndroidAPS/Releasenotes.md#version-280)
 
 ## Décembre 2020
@@ -86,7 +86,7 @@
 
 - [Bolus étendus uniquement pour les pompes Dana + Insight](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 - [Insight deactivate vibration](../CompatiblePumps/Accu-Chek-Insight-Pump.md#vibration) (firmware 3.x only)
-- [Minimal request rate](../Configuration/Preferences.md#minimal-request-change-) to reduce number of notifications in open loop mode
+- [Minimal request rate](../SettingUpAaps/Preferences.md#minimal-request-change-) to reduce number of notifications in open loop mode
 - [Patched Libre Link app](../CompatibleCgms/Libre2.md#5-use-the-patched-librelink-app-with-xdrip) - check if correctly patched
 - [Prediction lines](../Getting-Started/Screenshots.md#prediction-lines) - more details
 
@@ -97,7 +97,7 @@
 
 ## Mars 2020
 
-- [Générer l'apk avec Android Studio 3.6.1](../Installing-AndroidAPS/building-AAPS.md)
+- [Générer l'apk avec Android Studio 3.6.1](../SettingUpAaps/BuildingAaps.md)
 - [DanaRS with firmware v3](../CompatiblePumps/DanaRS-Insulin-Pump.md) **cannot currently be used with AAPS!**
 - [Bolus étendus et passage à en boucle ouverte](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 - [Mettre à jour l'apk avec Android Studio 3.6.1](../Installing-AndroidAPS/Update-to-new-version.md)
@@ -108,7 +108,7 @@
 - [Autosens](../Usage/Open-APS-features.md#autosens) - short explanation
 - [Alternatives à Careportal](../Usage/CPbefore26.md)
 - [Extended bolus](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only) feature - closed loop will be disabled
-- New [Local Profile plugin](../Configuration/Config-Builder.md#local-profile)
+- New [Local Profile plugin](../SettingUpAaps/ConfigBuilder.md#local-profile)
 - Sample Setup - update Dexcom G6
 - [Version 2.6.0](../Installing-AndroidAPS/Releasenotes.md#version-260) - major new features
 - [Complications Montre](../Configuration/Watchfaces.md)
@@ -122,7 +122,7 @@
 
 - [Android auto](../Usage/Android-auto.md) - paramétrage avec copies d'écran
 - [Accu-Chek Insight & Autotune](../CompatiblePumps/Accu-Chek-Insight-Pump.md#settings-in-aaps) - workaround for usage
-- [Glimp](../Configuration/Config-Builder.md#bg-source) - version 4.15.57 and newer supported
+- [Glimp](../SettingUpAaps/ConfigBuilder.md#bg-source) - version 4.15.57 and newer supported
 - [Watchfaces](../Configuration/Watchfaces.md) - mise à jour majeure, beaucoup plus de détails
 - [Watchface complications](../Configuration/Watchfaces.md#complications) - use your favorite watchface with AAPS data
 
@@ -150,8 +150,8 @@
 - [Calcul des GA sur une page distincte](../Usage/COB-calculation.md)
 - [GA - détection de valeur COB incorrecte](../Usage/COB-calculation.md#detection-of-wrong-cob-values)
 - [Dépannages spécifiques à Dexcom G6](../CompatibleCgms/DexcomG6.md#dexcom-g6one-specific-troubleshooting)
-- [Mise à jour des objectifs version 2.5](../Usage/completing-the-objectives.md)
-- [Mise à jour des préférences](../Configuration/Preferences.md)
+- [Mise à jour des objectifs version 2.5](../SettingUpAaps/CompletingTheObjectives.md)
+- [Mise à jour des préférences](../SettingUpAaps/Preferences.md)
 - [Inhibiteurs SGLT-2 - ne pas utiliser lors de la boucle](../Getting-Started/PreparingForAaps.md#no-sglt-2-inhibitors)
 - [Dépannage des commandes SMS](../Children/SMS-Commands.md#troubleshooting)
 - [xDrip - Mise à jour du remplacement de l'émetteur G6](../CompatibleCgms/xDrip.md#replace-transmitter)
@@ -160,7 +160,7 @@
 
 - [Automate](../Usage/Automation.md)
 - [Bolus calculator](../Getting-Started/Screenshots.md#wrong-cob-detection) - slow carb absorption
-- [Sécurité Nightscout](../Installing-AndroidAPS/Nightscout.md#security-considerations)
+- [Sécurité Nightscout](../SettingUpAaps/Nightscout.md#security-considerations)
 - [Profile timeshift](../Usage/Profiles.md#time-shift-of-the-circadian-percentage-profile) (more details)
 - [Surveillance à distance](../Children/Children.md)
 - [Qu'est-ce qu'un système à boucle fermée ?](../Getting-Started/Introduction.md#what-does-hybrid-closed-loop-mean)
