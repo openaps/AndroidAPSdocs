@@ -10,7 +10,7 @@ This is the first screen you will come across when you open AAPS and it contains
 
 * Navigate between the various AAPS modules.
 * Alternatively you can change screens by swiping left or right.
-* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu).
+* Displayed tabs can be selected in [config builder](../SettingUpAaps/ConfigBuilder.md#tab-or-hamburger-menu).
 
 ### Section B - Profile & target
 
@@ -36,7 +36,7 @@ This is the first screen you will come across when you open AAPS and it contains
 ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS can dynamically adjust your target based on sensitivity if you are using SMB algorithm.
-* Enable either one or both of the [following options](../Configuration/Preferences.md#openaps-smb-settings) 
+* Enable either one or both of the [following options](../SettingUpAaps/Preferences.md#openaps-smb-settings) 
    * "sensitivity raises target" and/or 
    * "resistance lowers target" 
 * If AAPS detects resistance or sensitivity the target will change from what is set from profile. 
@@ -47,7 +47,7 @@ This is the first screen you will come across when you open AAPS and it contains
 #### Current blood glucose
 
 * Latest blood glucose reading from your CGM is shown on the left side.
-* Color of the BG value reflects the status to the defined [range](../Configuration/Preferences.md#range-for-visualization). 
+* Color of the BG value reflects the status to the defined [range](../SettingUpAaps/Preferences.md#range-for-visualization). 
    * green = in range
    * red = below range
    * yellow = above range
@@ -60,7 +60,7 @@ This is the first screen you will come across when you open AAPS and it contains
 * A new icon shows loop status:
    
    * green circle = loop running
-   * green circle with dotted line = [low glucose suspend (LGS)](../Usage/completing-the-objectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * green circle with dotted line = [low glucose suspend (LGS)](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
    * red circled = loop disabled (not working permanently)
    * yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
    * grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
@@ -152,7 +152,7 @@ You need to find out why you get duplicate BGs:
    * Battery age and level (%)
 * If threshold warning is exceeded, values will be shown in yellow.
 * If threshold critical is exceeded, values will be shown in red.
-* Settings can be made in [preferences](../Configuration/Preferences.md#status-lights).
+* Settings can be made in [preferences](../SettingUpAaps/Preferences.md#status-lights).
 
 ### Section F - Main graph
 
@@ -161,8 +161,8 @@ You need to find out why you get duplicate BGs:
 * Graph shows your blood glucose (BG) as read from your glucose monitor (CGM). 
 * Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
 * Long press on the graph to change the time scale. You can choose 6, 12, 18 or 24 hours.
-* The green area reflects your target range. It can be configured in [preferences](../Configuration/Preferences.md#range-for-visualization).
-* Blue triangles show [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) - if enabled in [preferences](../Configuration/Preferences.md#openaps-smb-settings).
+* The green area reflects your target range. It can be configured in [preferences](../SettingUpAaps/Preferences.md#range-for-visualization).
+* Blue triangles show [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) - if enabled in [preferences](../SettingUpAaps/Preferences.md#openaps-smb-settings).
 * Optional information:
    
    * Prognozy/Predictions
@@ -192,19 +192,19 @@ You need to find out why you get duplicate BGs:
    
    Prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
    
-   *This line appears only when the [SMB](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *This line appears only when the [SMB](../SettingUpAaps/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
 * **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB.md#sensitivity-oref1) (un-announced meals)
    
    Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
    
-   *This line appears only when the [SMB](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *This line appears only when the [SMB](../SettingUpAaps/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
 * **Dark orange** line: aCOB (accelerated carbohydrate absorption)
    
    Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/l/5m) carb absorption rate. Deprecated and of limited usefulness.
    
-   *This line appears only when the older [AMA](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *This line appears only when the older [AMA](../SettingUpAaps/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
 Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
 
@@ -238,7 +238,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
 * If there were no [SMBs](../Usage/Open-APS-features.md#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
 * IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
-* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder.md#local-profile). 
+* Decaying depends on your [DIA and insulin profile settings](../SettingUpAaps/ConfigBuilder.md#local-profile). 
 
 #### Carbs On Board
 
@@ -277,14 +277,14 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
    
    * If connection to pump is lost, the insulin button will not be visible.
 
-* Other Buttons have to be setup in [preferences](../Configuration/Preferences.md#buttons).
+* Other Buttons have to be setup in [preferences](../SettingUpAaps/Preferences.md#buttons).
 
 #### Insulin
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
 * To give a certain amount of insulin without using [bolus calculator](#bolus-wizard).
-* By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences.md#default-temp-targets).
+* By checking the box you can automatically start your [eating soon temp target](../SettingUpAaps/Preferences.md#default-temp-targets).
 * If you do not want to bolus through pump but record insulin amount (i.e. insulin given by syringe) check the corresponding box.
 
 #### Carbs
@@ -292,11 +292,11 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 ![Carbs button](../images/Home2020_ButtonCarbs.png)
 
 * To record carbs without bolusing.
-* Certain [pre-set temporary targets](../Configuration/Preferences.md#default-temp-targets) can be set directly by checking the box.
+* Certain [pre-set temporary targets](../SettingUpAaps/Preferences.md#default-temp-targets) can be set directly by checking the box.
 * Time offset: When will you / have you been eaten carbs (in minutes).
 * Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.md)
 * You can use the buttons to quickly increase carb amount.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences.md#nsclient).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../SettingUpAaps/Preferences.md#nsclient).
 
 #### Kalkulator
 
@@ -305,18 +305,18 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 #### Calibrations
 
 * Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
-* Must be activated in [preferences](../Configuration/Preferences.md#buttons).
+* Must be activated in [preferences](../SettingUpAaps/Preferences.md#buttons).
 
 #### CGM
 
 * Opens xDrip+.
 * Back button returns to AAPS.
-* Must be activated in [preferences](../Configuration/Preferences.md#buttons).
+* Must be activated in [preferences](../SettingUpAaps/Preferences.md#buttons).
 
 #### Quick Wizard
 
 * Easily enter amount of carbs and set calculation basics.
-* Details are setup in [preferences](../Configuration/Preferences.md#quick-wizard).
+* Details are setup in [preferences](../SettingUpAaps/Preferences.md#quick-wizard).
 
 ## Bolus Wizard
 
@@ -341,7 +341,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ### Section J
 
-* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable [superbolus](../Configuration/Preferences.md#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences.md#overview).
+* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable [superbolus](../SettingUpAaps/Preferences.md#superbolus) in wizard" is set in the [preferences overview](../SettingUpAaps/Preferences.md#overview).
 * The idea is to deliver the insulin sooner and hopefully reduce spikes.
 * For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
@@ -349,7 +349,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * Shows the calculated bolus. 
 * If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences.md#nsclient).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../SettingUpAaps/Preferences.md#nsclient).
 
 ### Section L
 
@@ -402,7 +402,7 @@ When you want to make a meal bolus this is where you will normally make it from.
    * cannula age
    * pump battery age & level (percentage
 
-* Less information will be shown if [low resolution skin](../Configuration/Preferences.md#skin) is used.
+* Less information will be shown if [low resolution skin](../SettingUpAaps/Preferences.md#skin) is used.
 
 (Screenshots-sensor-level-battery)=
 
@@ -410,7 +410,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * Needs xDrip+ nightly build Dec. 10, 2020 or newer.
 * Works for CGM with additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level information to xDrip+.)
-* Thresholds can be set in [preferences](../Configuration/Preferences.md#status-lights).
+* Thresholds can be set in [preferences](../SettingUpAaps/Preferences.md#status-lights).
 * If sensor level is the same as phone battery level you xDrip+ version is probably too old and needs an update.
    
    ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
@@ -443,7 +443,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ![Insulin Profile](../images/Screenshot_insulin_profile.png)
 
-* This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder.md#insulin). 
+* This shows the activity profile of the insulin you have chosen in [config builder](../SettingUpAaps/ConfigBuilder.md#insulin). 
 * The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
 * The important thing to note is that the decay has a long tail. 
 * If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
@@ -497,7 +497,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 * These tabs show details about the algorithm's calculations and why AAPS acts the way it does.
 * Calculations are each time the system gets a fresh reading from the CGM.
-* For more details see [APS section on config builder page](../Configuration/Config-Builder.md#aps).
+* For more details see [APS section on config builder page](../SettingUpAaps/ConfigBuilder.md#aps).
 
 ## Profil
 
@@ -536,5 +536,5 @@ History of the following treatments:
 ![NSClient](../images/Screenshots_NSClient.png)
 
 * Displays status of the connection with your Nightscout site.
-* Settings are made in [preferences](../Configuration/Preferences.md#nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
+* Settings are made in [preferences](../SettingUpAaps/Preferences.md#nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
 * For troubleshooting see this [page](../Usage/Troubleshooting-NSClient.md).
