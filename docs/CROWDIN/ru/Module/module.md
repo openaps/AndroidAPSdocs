@@ -109,11 +109,11 @@ Nightscout - веб-приложение с открытым исходным к
 
 Nightscout не зависит от других модулей. Он понадобится для выполнения цели 1.
 
-Дополнительную информацию о том, как настроить Nightscout для использования с AAPS можно найти [здесь](../Installing-AndroidAPS/Nightscout.md).
+Additional information on how to configure Nightscout for use with AAPS can be found [here](../SettingUpAaps/Nightscout.md).
 
 ### Файл AAPS-.apk
 
-Основной компонент системы. Перед установкой приложения необходимо создать apk-файл ( расширение имен файлов для приложений Android). Instructions are  [here](../Installing-AndroidAPS/building-AAPS.md).
+Основной компонент системы. Перед установкой приложения необходимо создать apk-файл ( расширение имен файлов для приложений Android). Instructions are  [here](../SettingUpAaps/BuildingAaps.md).
 
 ## Дополнительные модули
 
@@ -137,4 +137,4 @@ Nightscout не зависит от других модулей. Он понад
 
 Продолжайте читать документацию, общаться с другими пользователями в сети или вне ее, узнавать мнение пользователей (при этом учитывая, что подходят не все рекомендации).
 
-**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/completing-the-objectives.md) before each new Objective and setup up your [hardware](index-component-setup).
+**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective and setup up your [hardware](index-component-setup).
