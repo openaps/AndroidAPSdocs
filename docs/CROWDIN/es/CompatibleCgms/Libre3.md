@@ -56,7 +56,7 @@ Después de un cambio de sensor, xDrip+ detectará automáticamente el nuevo sen
 
 ### Paso 4: Configurar AndroidAPS
 
-- Select xDrip+ in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+- Select xDrip+ in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
 
 - If AndroidAPS does not receive BG values when phone is in airplane mode, use "Identify receiver"
 - Desactiva el suavizado (ya activado en xDrip+)
