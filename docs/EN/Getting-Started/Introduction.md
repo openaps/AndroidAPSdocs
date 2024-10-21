@@ -18,7 +18,7 @@ In an aircraft, an autopilot does not do the complete job of the human pilot, th
 
 ![image](../images/autopilot.png)
 
-## What does hybrid closed loop mean? 
+## What does hybrid closed loop mean?
 
 The best solution for type 1 diabetes would be a “functional cure” (probably an implant of pancreatic cells which are protected from the immune system). While we are waiting for that, a “full closed loop” artificial pancreas is probably the next best thing. This is a tech system that doesn’t need any user input (like bolusing insulin for meals, or announcing exercise), with good regulation of blood glucose levels. At the moment, there are no widely available systems which are “full” closed loop, they all need some user input. The currently available systems are called “hybrid” closed loop, because they use a combination of automated technology and user input. 
 
