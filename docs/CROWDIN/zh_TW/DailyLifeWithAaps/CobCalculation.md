@@ -44,7 +44,7 @@
 
 ### AAPS 如何偵測錯誤的 COB 值？
 
-通常 __AAPS__ 會透過 **血糖** 變化來偵測碳水化合物的吸收狀況。 Incase the user has entered carbs but **AAPS** cannot detect their estimated absorption through **BG** deviations, it will use the [min_5m_carbimpact](../SettingUpAaps/Preferences.md#min_5m_carbimpact) method to calculate the absorption instead (so called ‘fallback’). 但因為這個方法只會計算最低的碳水化合物吸收量，而不考慮 **血糖** 的變化，所以也可能會導致 <0>COB</0> 數值不正確。
+通常 __AAPS__ 會透過 **血糖** 變化來偵測碳水化合物的吸收狀況。 如果使用者輸入了碳水化合物，但 **AAPS** 無法透過 **血糖** 變化偵測到預估的吸收量，系統會改用 [min_5m_carbimpact](../SettingUpAaps/Preferences.md#min_5m_carbimpact) 這個方法來計算吸收量（這稱為「備用」計算方式）。 但因為這個方法只會計算最低的碳水化合物吸收量，而不考慮 **血糖** 的變化，所以也可能會導致 <0>COB</0> 數值不正確。
 
 ![錯誤 COB 值的提示](../images/Calculator_SlowCarbAbsorption.png)
 
@@ -69,7 +69,7 @@
 
 ## 手動修正輸入的碳水化合物
 
-If carbs are over or underestimated carbs this can be corrected through the Treatments tab and actions tab / menu as described [here](AapsScreens.md#carb-correction).
+如果碳水化合物輸入過多或過少，可以透過「治療」選單進行更正，具體步驟如 [這裡](AapsScreens.md#carb-correction) 所述。
 
 
 ## 碳水化合物更正—如何從「治療」中刪除碳水化合物的項目
