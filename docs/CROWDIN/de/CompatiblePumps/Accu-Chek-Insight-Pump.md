@@ -12,7 +12,7 @@
 
 Hinweis: AAPS schreibt Daten immer in das **erstes Basalratenprofil in der Pumpe**.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module.md) page which Android version is required to run AAPS.)
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Getting-Started/ComponentOverview) page which Android version is required to run AAPS.)
 * AAPS muss auf Deinem Smartphone installiert sein.
 
 ## Einrichtung
@@ -122,7 +122,7 @@ Abhängig von der Version der Pumpen-Firmware kann die Insight bei Bolusabgabe (
 
 * Firmware 1.x: Grundsätzlich keine Vibration
 * Firmware 2.x: Vibration kann nicht deaktiviert werden.
-* Firmware 3.x: AAPS Bolusabgabe ohne Vibration. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2614))
+* Firmware 3.x: AAPS Bolusabgabe ohne Vibration. (minimum [version 2.6.1.4](../Maintenance/ReleaseNotes.md#version-2614))
 
 Die Firmware-Version kann im Menü der Pumpe nachgesehen werden.
 
@@ -150,4 +150,4 @@ Schalte dann Bluetooth auf Pumpe und Smartphone für etwa 10 Sekunden aus und sc
 
 ## Mit der Insight Pumpe über Zeitzonen hinweg reisen
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md#insight).
