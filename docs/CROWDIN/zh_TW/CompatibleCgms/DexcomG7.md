@@ -26,27 +26,27 @@
 
 - 在修補版應用程式中輸入傳感器代碼。
 
-- Follow the general recommendations for CGM hygiene and sensor placement found [here](../CompatibleCgms/GeneralCGMRecommendation.md).
+- 請遵循一般 CGM 衛生規範和感測器安裝位置的建議，詳情請參閱[此處](../CompatibleCgms/GeneralCGMRecommendation.md)。
 
 - 浸潤階段結束後，資料會顯示在 G7 應用程式中。
 
 ### 在 AAPS 中進行配置
 
-- Select 'BYODA' in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source) - even if it is not the BYODA app!
+- 在 [ConfigBuilder 的血糖來源](../SettingUpAaps/ConfigBuilder.md#bg-source) 中選擇 'BYODA' - 即便這不是 BYODA 應用程式！
 
 - 如果 AAPS 無法接收任何資料，請切換到其他血糖來源，然後再切回 'BYODA' 以調用查詢以批准 AAPS 和 BYODA 之間的資料交換。
 
 ## 2. xDrip+（直接連接至 G7 或 ONE+）
 
 - 請參閱這裡的說明：[Xdrip+ G7](https://navid200.github.io/xDrip/docs/Dexcom/G7.html)
-- Select  xDrip+ in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- 在 [ConfigBuilder 的血糖來源](../SettingUpAaps/ConfigBuilder.md#bg-source) 中選擇 xDrip+。
 
-- Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md)
+- 根據 xDrip+ 設定頁面上的解釋來調整 xDrip+ 設定 [xDrip+ 設定](../CompatibleCgms/xDrip.md)
 
 ## 3. xDrip+（伴侶模式）
 
 -   下載並安裝 xDrip+：[xDrip](https://github.com/NightscoutFoundation/xDrip)
 - 在 xDrip+ 中必須選擇「伴侶應用程式」作為資料來源，並在進階設定 > 藍牙設定 > 啟用「伴侶藍牙」。
--   Select  xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+-   在 [ConfigBuilder 的血糖來源](../SettingUpAaps/ConfigBuilder.md#bg-source) 中選擇 xDrip+。
 
--   Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../CompatibleCgms/xDrip.md) 
+-   根據 xDrip+ 設定頁面上的解釋來調整 xDrip+ 設定 [xDrip+ 設定](../CompatibleCgms/xDrip.md) 
