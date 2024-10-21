@@ -4,14 +4,14 @@
 
 **Aplikace AAPS (soubor apk) není k dispozici ke stažení, a to kvůli předpisům týkajícím se zdravotnických prostředků. Je legální vytvořit aplikaci pro své vlastní použití, ale nesmíte dát kopii ostatním!**
 
-Podrobnosti viz [Oddíl FAQ](../Getting-Started/FAQ.md).
+See [FAQ page](../UsefulLinks/FAQ.md) for details.
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 
 ## Specifikace hardware a softwaru pro vytvoření AAPS
 
 - Please use the **[Android Studio version called at least Hedgehog (2023.1.1) or one more recent like Iguana, Jellyfish, Koala or Ladybug](https://developer.android.com/studio/)** to build the apk. Older versions of Android Studio need to be updated first!
-- [Windows 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio.md#unable-to-start-daemon-process) are not supported by Android Studio. Mějte prosím na paměti, že 64bitový CPU a 64bitový OS jsou nutné podmínky. Pokud je váš systém nesplňuje, musíte vyměnit příslušný hardware nebo software nebo celý systém.
+- [Windows 32-bit systems](../GettingHelp/TroubleshootingAndroidStudio#unable-to-start-daemon-process) are not supported by Android Studio. Mějte prosím na paměti, že 64bitový CPU a 64bitový OS jsou nutné podmínky. Pokud je váš systém nesplňuje, musíte vyměnit příslušný hardware nebo software nebo celý systém.
 
 <table class="tg">
 <tbody>
@@ -50,16 +50,16 @@ Podrobnosti viz [Oddíl FAQ](../Getting-Started/FAQ.md).
 
 ## Pomoc a podpora během procesu sestavení
 
-Pokud narazíte na potíže v procesu vytváření aplikace **AAPS**, projděte nejdříve oddíl [**Řešení potíží se systémem Android Studio**](../Installing-AndroidAPS/troubleshooting_androidstudio).
+If you run into difficulties in the process of building the **AAPS** app, there is a dedicated [**troubleshooting Android Studio**](../GettingHelp/TroubleshootingAndroidStudio) section, please consult that first.
 
-If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). Pokud chcete sami něco změnit (aktualizovat snímek obrazovky apod.), odešlete [pull request (PR)] (../make-a-PR.md).
+If you think something in the building instructions is wrong, missing or confusing, or you are still struggling, please reach out to other **AAPS** users group on [Facebook](https://www.facebook.com/groups/AndroidAPSUsers) or [Discord](https://discord.gg/4fQUWHZ4Mw). If you want to change something yourself (updating screenshots _etc_), please submit a [pull request (PR)](../SupportingAaps/HowToEditTheDocs.md).
 
 ## Návod k sestavení aplikace AAPS krok za krokem
 
 ```{admonition} WARNING
 :class: warning
 If you have built AAPS before, you don't need to take all the following steps again.
-Please jump directly to the [update guide](../Installing-AndroidAPS/Update-to-new-version)!
+Please jump directly to the [update guide](../Maintenance/UpdateToNewVersion.md)!
 ```
 
 Základní kroky k sestavení apk souboru **AAPS** jsou následující:
@@ -360,7 +360,7 @@ Make sure to note down for yourself where your keystore is stored. You will need
 
 - Now choose a simple password (and make a note of it), enter it in the password box (2), and confirm it (2).
 
-  Heslo ke keystore souboru a uloženým klíčům nemusí být složité. If you lose your password in the future, see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore).
+  Heslo ke keystore souboru a uloženým klíčům nemusí být složité. If you lose your password in the future, see [troubleshooting for lost key store](../GettingHelp/TroubleshootingAndroidStudio#lost-keystore).
 
 - Výchozí alias (3) pro váš klíč je "key0", ponechte to beze změny.
 
@@ -397,7 +397,7 @@ Po dokončení sestavení aplikace zobrazí Android Studio informaci "BUILD SUCC
 
 ![Build finished](../images/Building-the-App/049_ReopenNotification.png)
 
-_If the build was not successful, refer to the [Android Studio Troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio)._
+_If the build was not successful, refer to the [Android Studio Troubleshooting section](../GettingHelp/TroubleshootingAndroidStudio)._
 
 V oznámení klikněte na modrý odkaz "locate":
 
