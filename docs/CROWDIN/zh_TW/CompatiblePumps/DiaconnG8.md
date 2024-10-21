@@ -88,4 +88,4 @@
 ### 延長注射功能
 
 - 如果使用延長注射功能，將會停用循環模式。
-- See [this page](../Usage/Extended-Carbs.md#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- See [this page](../DailyLifeWithAaps/ExtendedCarbs.md#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
