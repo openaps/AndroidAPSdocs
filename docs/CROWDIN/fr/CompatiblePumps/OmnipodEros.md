@@ -707,7 +707,7 @@ L'affichage du niveau de la batterie est un paramètre qui peut être activé po
 
 (OmnipodEros-troubleshooting)=
 
-## Résolution de problèmes
+## Troubleshooting
 
 ### Erreurs Pod
 
@@ -788,5 +788,5 @@ Tout le travail de développement du pilote Omnipod est fait par la communauté 
 
 - **Niveau 0 :** Lisez la section correspondante de cette documentation pour vous assurer que vous comprenez comment la fonctionnalité avec laquelle vous avez des difficultés est censée fonctionner.
 - **Niveau 1 :** Si vous rencontrez toujours des problèmes que vous n'arrivez pas à résoudre en utilisant ce document, alors veuillez aller sur la chaine *#androidaps* sur **Discord** avec [ce lien d'invitation](https://discord.gg/4fQUWHZ4Mw).
-- **Niveau 2 :** Rechercher dans les problèmes existants pour voir si votre problème a déjà été signalé; si ce n'est pas le cas, veuillez créer une nouvelle [fiche](https://github.com/nightscout/AndroidAPS/issues) et joignez vos [fichiers log](../Usage/Accessing-logfiles.md).
+- **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../GettingHelp/AccessingLogFiles.md).
 - **Soyez patient - la plupart des membres de notre communauté sont des bénévoles de bonne nature, et résoudre les problèmes nécessite souvent du temps et de la patience de la part des utilisateurs et des développeurs.**
