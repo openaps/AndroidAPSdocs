@@ -32,7 +32,7 @@ AndroidAPS 版本 3.2.0.1 不支援 1 分鐘讀取值。 加速和平滑處理�
 
 血糖值會由智慧型手機上的 xDrip+ 應用程式接收。
 
-- If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
+- 如果尚未設定，請下載 [xDrip+](https://github.com/NightscoutFoundation/xDrip) 並按照[xDrip+ 設定頁面](../CompatibleCgms/xDrip.md)上的指示操作。
 - 在 xDrip+ 中選擇 "Libre2（修補版應用程式）" 作為資料來源。
 - 如果需要，請在「不常見的設定」→「額外日誌記錄設定」→「日誌記錄的額外標籤」下輸入 "BgReading:d,xdrip libre_receiver:v"。 這將記錄額外的錯誤訊息以便進行問題排除。
 
@@ -56,7 +56,7 @@ AndroidAPS 版本 3.2.0.1 不支援 1 分鐘讀取值。 加速和平滑處理�
 
 ### 步驟 4：配置 AndroidAPS
 
-- Select xDrip+ in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- 在[ConfigBuilder 的血糖來源](../SettingUpAaps/ConfigBuilder.md#bg-source)中選擇 xDrip+。
 
 - 如果 AndroidAPS 在手機處於飛行模式時無法接收血糖值，請使用「識別接收器」。
 - 關閉平滑處理（已在 Xdrip+ 中完成）。
