@@ -2,30 +2,30 @@
 
 ## 自行建置，而不是下載
 
-**AAPS** 無法下載，因為這涉及醫療設備的法規。 自行建置應用程式以供個人使用是合法的，但你不得將副本提供給他人！ See [FAQ page](../UsefulLinks/FAQ.md) for details.
+**AAPS** 無法下載，因為這涉及醫療設備的法規。 自行建置應用程式以供個人使用是合法的，但你不得將副本提供給他人！ 詳細資訊請參閱 [FAQ 頁面](../UsefulLinks/FAQ.md)。
 
 ## 重要提示
 
 * 請在有新版本發布後儘快更新到最新版本的 **AAPS**。
 * 當有新版本發布時，你將在 **AAPS** 應用中收到關於新版本的訊息橫幅。
 * 新版本也會在發布時於 Facebook 上公佈。
-* Following the release, please read the [Release Notes](ReleaseNotes.md) in detail, and clarify any queries with the community on Facebook or Discord, before proceeding with the update.
+* 發布後，請詳細閱讀[發布說明](ReleaseNotes.md)，如有任何疑問，請在Facebook或Discord社群中澄清後再進行更新。
 * 你需要使用**[Hedgehog (2023.1.1) 或 Iguana (2023.2.1)](https://developer.android.com/studio/)** 版本的 Android Studio。 如果你的版本較舊，請先更新 Android Studio！ 
 
 ## 更新到新版本 AAPS 的概述
 
-1. [Export your settings](ExportImportSettings.md) from the existing **AAPS** version on your phone. 你可能不需要這樣做，但防患於未然更好。
-2. [Update local copy](#2-update-your-local-copy) of the AAPS sourcecode (Git->Fetch and Git -> Pull)
+1. [匯出您的設定](ExportImportSettings.md)自您手機上的現有**AAPS**版本。 你可能不需要這樣做，但防患於未然更好。
+2. [更新本地副本](#2-update-your-local-copy)的AAPS源代碼（Git->Fetch和Git->Pull）
 3. [建置簽章 APK](#3-build-the-signed-apk)
-4. [Transfer the built apk](#4-transfer-the-apk) to your phone and install it
-5. [Check the version](#6-check-aaps-version-on-phone) in AAPS
-6. Depending on your [BG source](../Getting-Started/CompatiblesCgms.md) make sure to [identify receiver](../CompatibleCgms/xDrip.md#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app).
+4. [將構建的apk轉移](#4-transfer-the-apk)到您的手機並安裝
+5. [檢查AAPS中的版本](#6-check-aaps-version-on-phone)
+6. 根據您的[BG來源](../Getting-Started/CompatiblesCgms.md)確保在xDrip中[識別接收器](../CompatibleCgms/xDrip.md#identify-receiver)或使用[「建立您的Dexcom應用」](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)。
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio).
+如果您遇到問題，請參見單獨的[故障排除Android Studio](../GettingHelp/TroubleshootingAndroidStudio)頁面。
 
 ## 1. 匯出你的設定
 
-See the [Export & import settings](ExportImportSettings.md) page if you don't remember how to do this.
+如果您忘記如何做，請參見[匯出與匯入設定](ExportImportSettings.md)頁面。
 
 (Update-to-new-version-update-your-local-copy)=
 
@@ -67,13 +67,13 @@ See the [Export & import settings](ExportImportSettings.md) page if you don't re
 
 ## 3. 建置簽章 APK
 
-你的原始碼現在是目前發布的版本。 It's time to build the signed apk from it as described in the [build signed apk section](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk).
+你的原始碼現在是目前發布的版本。 是時候按照[建置簽章 APK 章節](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk)中的說明從中建置簽章 apk 了。
 
 ## 4. 傳送 APK
 
 你需要將 apk 傳送到手機以便你安裝他。
 
-See the instructions for [Transfer APK to smartphone](../SettingUpAaps/TransferringAndInstallingAaps.md)
+請參閱 [傳送 APK 至智慧型手機](../SettingUpAaps/TransferringAndInstallingAaps.md) 的說明
 
 ## 5. 安裝 APK
 
@@ -87,12 +87,12 @@ See the instructions for [Transfer APK to smartphone](../SettingUpAaps/Transferr
 
 ![已安裝的 AAPS 版本](../images/Update_VersionCheck282.png)
 
-## Troubleshooting
+## 問題排除
 
 如果發生任何錯誤，不要慌張。
 
 先深呼吸！
 
-Then see the separate page [troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) if your problem is already documented!
+然後查看專門頁面[問題排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio)，看看你的問題是否已經記錄在案！
 
 如果你需要進一步幫助，請聯繫其他**AAPS**使用者，透過[Facebook](https://www.facebook.com/groups/AndroidAPSUsers)或[Discord](https://discord.gg/4fQUWHZ4Mw)。
