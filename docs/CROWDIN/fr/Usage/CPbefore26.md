@@ -40,7 +40,7 @@ Cette page indique où retrouver les fonctions précédemment disponibles dans C
 - L'insertion d'un capteur MGC est maintenant dans l'onglet/menu Actions.
 - Toutes les autres fonctions de cette section ont été supprimées. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs--bolus) on this page).
 
-## Pompe
+## Pump
 
 ![Careportal Pump](../images/Careportal_25_26_4_IIb.png)
 
