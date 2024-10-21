@@ -67,13 +67,13 @@ See the [Export & import settings](../Usage/ExportImportSettings.md) page if you
 
 ## 3. 建置簽章 APK
 
-你的原始碼現在是目前發布的版本。 It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/building-AAPS.md#build-the-aaps-signed-apk).
+你的原始碼現在是目前發布的版本。 It's time to build the signed apk from it as described in the [build signed apk section](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk).
 
 ## 4. 傳送 APK
 
 你需要將 apk 傳送到手機以便你安裝他。
 
-See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Transferring-and-installing-AAPS.md)
+See the instructions for [Transfer APK to smartphone](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
 ## 5. 安裝 APK
 

@@ -6,7 +6,7 @@
 
 ## Можно ли скачать установочный файл AAPS?
 
-Нет. Для AndroidAPS не предоставляется загружаемый файл apk. You have to [build](../Installing-AndroidAPS/building-AAPS.md) it yourself. Причина вот в чем:
+Нет. Для AndroidAPS не предоставляется загружаемый файл apk. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. Причина вот в чем:
 
 AndroidAPS создан для управления помпой и подачи инсулина. В соответствии с действующим Европейским законодательством, все системы, классифицируемые как IIa или IIb, являются медицинскими устройствами, подлежащими обязательной сертификации (получение знака CE), что в свою очередь требует соответствующих исследований и одобрений. Распространение несертифицированных устройств незаконно. Аналогичные законы существуют и в других частях мира.
 
@@ -67,7 +67,7 @@ The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen
 
 - Банк батарей и кабель для зарядки смартфона, часов и (если это необходимо) BT reader или Link device
 - Батарейки для помпы
-- Current [apk](../Installing-AndroidAPS/building-AAPS.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## Как надежно и безопасно закрепить сенсор для мониторинга?
 

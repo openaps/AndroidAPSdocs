@@ -21,7 +21,7 @@
     
     ![Снимок экрана удаления глюкометра из помпы Insight](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../Configuration/Config-Builder.md) of the AAPS app select Accu-Chek Insight in the pump section
+* In [Config builder](../SettingUpAaps/ConfigBuilder.md) of the AAPS app select Accu-Chek Insight in the pump section
     
     ![Снимок экрана конфигуратора Config Builder помпы Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
@@ -54,7 +54,7 @@
 
 ## Настройки на AAPS
 
-**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences.md#advanced-settings-nsclient)).
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../SettingUpAaps/Preferences.md#advanced-settings-nsclient)).
 
 ![Снимок экрана настроек Insight](../images/Insight_settings.png)
 
@@ -122,7 +122,7 @@
 
 * Прошивка 1.х: нет вибрации конструктивно.
 * Прошивка 2.х: вибрация не может быть отключена.
-* Прошивка 3.х: AAPS подает болюс беззвучно. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2.6.1.4))
+* Прошивка 3.х: AAPS подает болюс беззвучно. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2614))
 
 Версию прошивки можно найти через меню.
 

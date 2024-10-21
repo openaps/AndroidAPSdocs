@@ -10,7 +10,7 @@
 
 * ניווט בין מודולי AndroidAPS השונים.
 * לחלופין ניתן לעבור בין המסכים ע"י החלקה שמאלה וימינה.
-* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu).
+* Displayed tabs can be selected in [config builder](../SettingUpAaps/ConfigBuilder.md#tab-or-hamburger-menu).
 
 ### חלק B - פרופיל וערכי מטרה
 
@@ -36,7 +36,7 @@
 ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS יכול להתאים באופן דינמי את ערכי המטרה על סמך הרגישות אם אתם משתמשים באלגוריתם SMB.
-* Enable either one or both of the [following options](../Configuration/Preferences.md#openaps-smb-settings) 
+* Enable either one or both of the [following options](../SettingUpAaps/Preferences.md#openaps-smb-settings) 
    * "רגישות מעלה את ערך המטרה" ו\או 
    * "תנגודת מורידה את ערך המטרה" 
 * אם AAPS מזהה תנגודת או רגישות, המטרה תשונה ממה שנקבע בפרופיל. 
@@ -47,7 +47,7 @@
 #### רמת סוכר נוכחית
 
 * קריאת הסוכר האחרונה מהחיישן מוצגת בצד ימין.
-* Color of the BG value reflects the status to the defined [range](../Configuration/Preferences.md#range-for-visualization). 
+* Color of the BG value reflects the status to the defined [range](../SettingUpAaps/Preferences.md#range-for-visualization). 
    * ירוק = בטווח
    * אדום = מתחת לטווח
    * צהוב = מעל הטווח
@@ -60,7 +60,7 @@
 * סמל חדש מציג את מצב הלולאה:
    
    * עיגול ירוק = לולאה פועלת
-   * green circle with dotted line = [low glucose suspend (LGS)](../Usage/completing-the-objectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * green circle with dotted line = [low glucose suspend (LGS)](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
    * מעגל אדום = לולאה מושבתת (קבוע)
    * עיגול צהוב = לולאה מושהת (השהיה זמנית אך אינסולין בזאלי יינתן) - הזמן שנותר להשהיה מוצג מתחת לסמל
    * עיגול אפור = המשאבה מנותקת (האופן זמני, ללא הזרמת כל אינסולין) - הזמן שנותר מוצג מתחת לסמל
@@ -152,7 +152,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
    * גיל ורמת הסוללה (%)
 * אם חורגים מסף האזהרה, הערכים יוצגו בצהוב.
 * אם חורגים מסף האזהרה הקריטי, הערכים יוצגו באדום.
-* Settings can be made in [preferences](../Configuration/Preferences.md#status-lights).
+* Settings can be made in [preferences](../SettingUpAaps/Preferences.md#status-lights).
 
 ### חלק F - גרף ראשי
 
@@ -161,8 +161,8 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 * הגרף מציג את רמת הסוכר בדם (BG) כפי שנקרא מהחיישן. 
 * הערות שהוזנו בלשונית פעולות, כגון כיולים מבדיקות עם גלוקומטר וערכים של פחמימות וכן החלפות פרופיל מוצגות כאן. 
 * לחצו לחיצה ארוכה על הגרף כדי לשנות את קנה המידה של ציר הזמן. אפשר לבחור 6, 12, 18 או 24 שעות.
-* האזור הירוק משקף את טווח המטרה. It can be configured in [preferences](../Configuration/Preferences.md#range-for-visualization).
-* Blue triangles show [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) - if enabled in [preferences](../Configuration/Preferences.md#openaps-smb-settings).
+* האזור הירוק משקף את טווח המטרה. It can be configured in [preferences](../SettingUpAaps/Preferences.md#range-for-visualization).
+* Blue triangles show [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) - if enabled in [preferences](../SettingUpAaps/Preferences.md#openaps-smb-settings).
 * מידע אופציונלי:
    
    * חיזוי
@@ -192,19 +192,19 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
    
    עקום החיזוי מראה כיצד ישתנה עקום הסוכר בדם אם המשאבה תפסיק כל מתן אינסולין (בזאלי זמני 0%).
    
-   *This line appears only when the [SMB](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *This line appears only when the [SMB](../SettingUpAaps/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
 * **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB.md#sensitivity-oref1) (un-announced meals)
    
    ארוחות לא מוכרזות מראש - זיהוי של עלייה משמעותית ברמות הסוכר עקב ארוחות, אדרנלין או השפעות אחרות. עקום החיזוי דומה לעקום הפחמימות הכתום אך הוא מניח שהסטיות יצטמצמו בקצב קבוע (על ידי הארכת קצב הדעיכה הנוכחי).
    
-   *This line appears only when the [SMB](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *This line appears only when the [SMB](../SettingUpAaps/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
 * **עקום כתום כהה**: ספיגת פחמימות מואצת
    
    דומה לפחמימות פעילות אז מניח שספיגת הפחמימות קבועה ב-10 מ"ג\ד"ל\5דק'. מיושן ובעל תועלת מוגבלת.
    
-   *This line appears only when the older [AMA](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *This line appears only when the older [AMA](../SettingUpAaps/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
 בדרך כלל עקומת הסוכר האמיתית נמצאת באמצע בין העקומים הללו, או קרובה לזו שמניחה הנחות שהכי דומות למצבכם הנוכחי.
 
@@ -238,7 +238,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 * מראה את האינסולין הפעיל. הוא כולל אינסולין מבולוס ובזאלי זמני (**אך אינו כולל מינונים בזאליים שנקבעו בפרופיל**).
 * If there were no [SMBs](../Usage/Open-APS-features.md#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
 * אינסולין פעיל יכול להיות שלילי אם אין בולוס או בזאלי זמני אפס/נמוך למשך זמן רב יותר.
-* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder.md#local-profile). 
+* Decaying depends on your [DIA and insulin profile settings](../SettingUpAaps/ConfigBuilder.md#local-profile). 
 
 #### פחמימות פעילות
 
@@ -277,14 +277,14 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
    
    * אם החיבור למשאבה אובד, כפתור האינסולין מוסתר.
 
-* Other Buttons have to be setup in [preferences](../Configuration/Preferences.md#buttons).
+* Other Buttons have to be setup in [preferences](../SettingUpAaps/Preferences.md#buttons).
 
 #### אינסולין
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
 * To give a certain amount of insulin without using [bolus calculator](#bolus-wizard).
-* By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences.md#default-temp-targets).
+* By checking the box you can automatically start your [eating soon temp target](../SettingUpAaps/Preferences.md#default-temp-targets).
 * אם אינכם רוצים להכניס בולוס דרך המשאבה אלא לרשום את כמות האינסולין (כלומר אינסולין שניתן באמצעות מזרק) סמנו את התיבה המתאימה.
 
 #### פחמימות
@@ -292,11 +292,11 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 ![Carbs button](../images/Home2020_ButtonCarbs.png)
 
 * נועד לרישום פחמימות ללא בולוס.
-* Certain [pre-set temporary targets](../Configuration/Preferences.md#default-temp-targets) can be set directly by checking the box.
+* Certain [pre-set temporary targets](../SettingUpAaps/Preferences.md#default-temp-targets) can be set directly by checking the box.
 * היסט זמן: מתי תאכלו פחמימות (בדקות) יחסית לעכשיו.
 * משך: לשימוש ב[פחמימות ממושכות](../Usage/Extended-Carbs.md)
 * ניתן להשתמש בכפתורי התוספת כדי לרשום את מספר הפחמימות ביתר קלות.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences.md#nsclient).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../SettingUpAaps/Preferences.md#nsclient).
 
 #### מחשבון
 
@@ -305,18 +305,18 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 #### כיולים
 
 * שולח כיול ל- xDrip או פותח את חלון הכיול של אפליקציית Dexcom.
-* Must be activated in [preferences](../Configuration/Preferences.md#buttons).
+* Must be activated in [preferences](../SettingUpAaps/Preferences.md#buttons).
 
 #### סנסור
 
 * פותח את xDrip+.
 * כפתור החזרה מחזיר ל-AAPS.
-* Must be activated in [preferences](../Configuration/Preferences.md#buttons).
+* Must be activated in [preferences](../SettingUpAaps/Preferences.md#buttons).
 
 #### אשף מהיר
 
 * הזנה בקלות של כמות הפחמימות והגדרת נתוני החישוב.
-* Details are setup in [preferences](../Configuration/Preferences.md#quick-wizard).
+* Details are setup in [preferences](../SettingUpAaps/Preferences.md#quick-wizard).
 
 ## אשף הבולוס
 
@@ -341,7 +341,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ### חלק J
 
-* סופר בולוס גורם להזרקת האינסולין הבזאלי של השעתיים הקרובות יחד עם בולוס הארוחה ובתמורה, מפעיל בזאלי זמני אפס במשך השעתיים הקרובות. The option only shows when "Enable [superbolus](../Configuration/Preferences.md#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences.md#overview).
+* סופר בולוס גורם להזרקת האינסולין הבזאלי של השעתיים הקרובות יחד עם בולוס הארוחה ובתמורה, מפעיל בזאלי זמני אפס במשך השעתיים הקרובות. The option only shows when "Enable [superbolus](../SettingUpAaps/Preferences.md#superbolus) in wizard" is set in the [preferences overview](../SettingUpAaps/Preferences.md#overview).
 * הרעיון הוא לספק את האינסולין מוקדם יותר ובתקווה להפחית עליות חדות ברמות הסוכר.
 * לפרטים עיינו ב-[diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
@@ -349,7 +349,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 * מציג את הבולוס המחושב. 
 * אם כמות האינסולין הפעיל עולה על הבולוס המחושב, תוצג רק כמות הפחמימות הנדרשת.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences.md#nsclient).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../SettingUpAaps/Preferences.md#nsclient).
 
 ### חלק L
 
@@ -402,7 +402,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
    * גיל הצינורית
    * גיל ודרגת טעינת סוללת המשאבה
 
-* Less information will be shown if [low resolution skin](../Configuration/Preferences.md#skin) is used.
+* Less information will be shown if [low resolution skin](../SettingUpAaps/Preferences.md#skin) is used.
 
 (Screenshots-sensor-level-battery)=
 
@@ -410,7 +410,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 * דרוש xDrip nightly מדצמבר 10, 2020 או חדש יותר.
 * עובד עם חיישנים ומשדרים כדוגמת MiaoMiao 2. (טכנית, החיישן צריך לשלוח את המידע של רמת הסוללה לxDrip+.)
-* Thresholds can be set in [preferences](../Configuration/Preferences.md#status-lights).
+* Thresholds can be set in [preferences](../SettingUpAaps/Preferences.md#status-lights).
 * אם רמת החיישן זהה לרמת הסוללה של הטלפון, כנראה שגרסת ה-xDrip+ ישנה מדי וצריכה עדכון.
    
    ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
@@ -443,7 +443,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 ![פרופיל האינסולין](../images/Screenshot_insulin_profile.png)
 
-* This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder.md#insulin). 
+* This shows the activity profile of the insulin you have chosen in [config builder](../SettingUpAaps/ConfigBuilder.md#insulin). 
 * העקום הסגול מראה כמה אינסולין נשאר לאחר הזרקתו כשהוא דועך לאורך הזמן והעקום הכחול מראה כמה הוא פעיל.
 * חשוב לשים לב לכך שלדעיכה יש זנב ארוך. 
 * אם השתמשתם בעבר במשאבה, כנראה שהנחתם שדעיכת האינסולין לוקחת כ-3.5 שעות. 
@@ -497,7 +497,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
 * לשוניות אלה מציגות פרטים על חישובי האלגוריתם ומדוע AAPS פועל כפי שהוא פועל.
 * החישובים מחושבים בכל פעם שהמערכת מקבלת קריאה חדשה מהחיישן.
-* For more details see [APS section on config builder page](../Configuration/Config-Builder.md#aps).
+* For more details see [APS section on config builder page](../SettingUpAaps/ConfigBuilder.md#aps).
 
 ## פרופיל
 
@@ -536,5 +536,5 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 ![NSClient](../images/Screenshots_NSClient.png)
 
 * מציג את מצב החיבור עם אתר הנייטסקאוט שלכם.
-* Settings are made in [preferences](../Configuration/Preferences.md#nsclient). אפשר לפתוח את החלק המתאים על ידי לחיצה על גלגל השיניים בצד השמאלי העליון של המסך.
+* Settings are made in [preferences](../SettingUpAaps/Preferences.md#nsclient). אפשר לפתוח את החלק המתאים על ידי לחיצה על גלגל השיניים בצד השמאלי העליון של המסך.
 * לפתרון בעיות עיינו ב[דף זה](../Usage/Troubleshooting-NSClient.md).

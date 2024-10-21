@@ -25,7 +25,7 @@ Tajné nebo soukromé informace, jako je adresa vašeho Nightscoutu nebo API hes
 ## Nastavení
 
 1. Create your account on [Open Humans](https://www.openhumans.org) if not already done. Můžete se přihlásit také prostřednictvím svých stávajících účtů Google nebo Facebook.
-2. Povolte plugin “Open Humans” na záložce [Konfigurace](../Configuration/Config-Builder.md).
+2. Enable the “Open Humans” plugin in [Config Builder](../SettingUpAaps/ConfigBuilder.md).
 3. Pomocí ozubeného kolečka otevřete jeho nastavení. Můžete nahrávání dat omezit pouze na dobu, kdy je telefon na Wi-Fi a/nebo na nabíječce.
 4. Otevřete plugin Open Humans (buď přes záložku OH, nebo přes hamburgerové menu) a klepněte na 'LOGIN'.
 

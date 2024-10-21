@@ -6,7 +6,7 @@ Jak sem přidat další otázky: Postupujte podle těchto pokynů: [odkaz](../ma
 
 ## Mohu si prostě stáhnout instalační soubor AAPS?
 
-Ne. APK soubor obsahující AAPS volně ke stažení neexistuje. You have to [build](../Installing-AndroidAPS/building-AAPS.md) it yourself. Zde je odůvodnění:
+Ne. APK soubor obsahující AAPS volně ke stažení neexistuje. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. Zde je odůvodnění:
 
 AAPS je určen k ovládání Vaší pumpy a podávání inzulinu. Podle současných předpisů jsou v Evropě všechny systémy klasifikované zdravotnickými zařízeními jako IIa nebo IIb, vyžadují regulační schválení (označení CE) a potřebují různé studie a schválení. Distribuce neregulovaných zařízení je nezákonná. Podobná nařízení platí také v ostatních částech světa.
 
@@ -67,7 +67,7 @@ Je potřeba, abyste u sebe měli stejné nouzové vybavení, jako všichni ostat
 
 - Náhradní baterie a nabíjecí kabely pro nabití Vašeho chytrého telefonu nebo hodinek (je-li to potřeba). BT čtečku nebo zařízení na propojení.
 - Baterie do pumpy
-- Current [apk](../Installing-AndroidAPS/building-AAPS.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## Jak mohu bezpečně a spolehlivě upevnit CGM/FGM?
 

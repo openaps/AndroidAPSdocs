@@ -40,7 +40,7 @@
 
 ## AAPS 中的自動化在哪裡？
 
-根據你的[組態建置工具](../Installing-AndroidAPS/change-configuration.md#config-builder)設定，**自動化**位於‘漢堡選單’中或作為**AAPS**的一個標籤頁。
+Depending on your [config builder](../SettingUpAaps/ConfigBuilder.md) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
 
 ## 如何設置自動化？
 

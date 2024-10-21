@@ -6,7 +6,7 @@ Comment ajouter des questions à la FAQ : suivez ces [instructions](../make-a-P
 
 ## Can I just download the AAPS installation file?
 
-Non. There is no downloadable apk file for AAPS. You have to [build](../Installing-AndroidAPS/building-AAPS.md) it yourself. En voici la raison :
+Non. There is no downloadable apk file for AAPS. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. En voici la raison :
 
 AAPS is used to control your pump and give insulin. Selon la réglementation actuelle, en Europe, tous les systèmes de classe IIa ou IIb, sont des dispositifs médicaux qui nécessitent une approbation réglementaire (un marquage CE) qui nécessitent diverses études et approbations. La distribution d'un dispositif non homologué est illégal. Des réglementations similaires existent dans d'autres parties du monde.
 
@@ -67,7 +67,7 @@ Vous devez avoir le même équipement d'urgence avec vous, comme tous les autres
 
 - Pack de batteries et câbles pour charger votre smartphone, votre montre et, le cas échéant, votre lecteur BT ou votre périphérique de connection
 - Piles de la Pompe
-- Current [apk](../Installing-AndroidAPS/building-AAPS.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## Comment puis-je fixer le capteur MGC/MGF en toute sécurité ?
 

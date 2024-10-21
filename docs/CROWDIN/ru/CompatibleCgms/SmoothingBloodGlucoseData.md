@@ -4,7 +4,7 @@ If **BG** data is jumpy/noisy, **AAPS** may dose insulin incorrectly resulting i
 
 Some CGM systems have internal algorithms to detect the noise level in the readings, and **AAPS** can use this information to avoid giving SMBs if the BG data is too unreliable. Однако некоторые системы мониторинга не передают такие данные и для этих источников опции "Всегда включать супер микро болюс SMB" и "Включать SMB после углеводов" отключены по соображениям безопасности.
 
-Additionally, as of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. Есть три варианта в [Конфигураторе](../Configuration/Config-Builder.md).
+Additionally, as of **AAPS** version 3.2, **AAPS** offers the option to smooth the data within **AAPS** rather than within the CGM app. There are three options available in the [Config Builder](../SettingUpAaps/ConfigBuilder.md).
 
 ![Сглаживание](../images/ConfBuild_Smoothing.png)
 

@@ -10,7 +10,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AAPS, il contient
 
 * Permet de naviguer entre les différents modules AAPS.
 * Vous pouvez également changer d'écran en glissant vers la gauche ou la droite.
-* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu).
+* Displayed tabs can be selected in [config builder](../SettingUpAaps/ConfigBuilder.md#tab-or-hamburger-menu).
 
 ### Section B - Profil & cible
 
@@ -36,7 +36,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AAPS, il contient
 ![Visualisation de l'ajustement dynamique de la cible](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS peut ajuster dynamiquement votre cible en fonction de la sensibilité si vous utilisez l'algorithme SMB.
-* Enable either one or both of the [following options](../Configuration/Preferences.md#openaps-smb-settings) 
+* Enable either one or both of the [following options](../SettingUpAaps/Preferences.md#openaps-smb-settings) 
    * "Sensibilité augmente la cible" et/ou 
    * "Résistance diminue la cible" 
 * Si AAPS détecte une résistance ou une sensibilité, la cible change en fonction de ce qui est défini dans le profil. 
@@ -47,7 +47,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AAPS, il contient
 #### Glycémie actuelle
 
 * La dernière glycémie reçue de votre MGC est affichée sur le côté gauche.
-* Color of the BG value reflects the status to the defined [range](../Configuration/Preferences.md#range-for-visualization). 
+* Color of the BG value reflects the status to the defined [range](../SettingUpAaps/Preferences.md#range-for-visualization). 
    * vert = dans la fourchette
    * rouge = en dessous de la fourchette
    * jaune = au-dessus de la fourchette
@@ -60,7 +60,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AAPS, il contient
 * Une nouvelle icône affiche l'état de la boucle:
    
    * cercle vert = boucle fermée en cours d'exécution
-   * green circle with dotted line = [low glucose suspend (LGS)](../Usage/completing-the-objectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * green circle with dotted line = [low glucose suspend (LGS)](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
    * cercle rouge = boucle désactivée (ne fonctionne pas de façon permanente)
    * cercle jaune = boucle suspendue (temporairement en pause, mais l'insuline basale sera délivrée) - le temps restant est affiché sous l'icône
    * cercle gris = pompe déconnectée (temporairement aucune insuline n'est délivrée) - le temps restant est affiché sous l'icône
@@ -152,7 +152,7 @@ Vous devez savoir pourquoi vous avez des Gly dupliquées :
    * Âge et niveau de la pile (%)
 * Si le seuil d'alerte est dépassé, les valeurs seront affichées en jaune.
 * Si le seuil critique est dépassé, les valeurs seront affichées en rouge.
-* Settings can be made in [preferences](../Configuration/Preferences.md#status-lights).
+* Settings can be made in [preferences](../SettingUpAaps/Preferences.md#status-lights).
 
 ### Section F - Graphique principal
 
@@ -161,8 +161,8 @@ Vous devez savoir pourquoi vous avez des Gly dupliquées :
 * Le graphique montre votre glycémie (Gly) telle qu'elle est lue par votre capteur de glycémie (MGC). 
 * Les notes saisies dans l'onglet de l'action telles que les calibrations capillaires, les entrées de glucides et les changements de profil sont affichés ici. 
 * Un appui long sur le graphique permet de changer l'échelle de temps. Vous pouvez choisir 6, 12, 18 ou 24 heures.
-* La zone verte reflète votre fourchette cible. It can be configured in [preferences](../Configuration/Preferences.md#range-for-visualization).
-* Blue triangles show [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) - if enabled in [preferences](../Configuration/Preferences.md#openaps-smb-settings).
+* La zone verte reflète votre fourchette cible. It can be configured in [preferences](../SettingUpAaps/Preferences.md#range-for-visualization).
+* Blue triangles show [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) - if enabled in [preferences](../SettingUpAaps/Preferences.md#openaps-smb-settings).
 * Information optionnelle :
    
    * Prédictions
@@ -192,19 +192,19 @@ Vous devez savoir pourquoi vous avez des Gly dupliquées :
    
    Prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
    
-   *This line appears only when the [SMB](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *This line appears only when the [SMB](../SettingUpAaps/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
 * **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB.md#sensitivity-oref1) (un-announced meals)
    
    Les Repas Non Signalés signifient qu'une augmentation significative de la glycémie liée aux repas, à l'adrénaline ou à d'autres facteurs est détectée. Cette ligne de prédiction est similaire à la ligne ORANGE GA, mais elle suppose que les déviations diminueront de façon constante (en étendant le taux de réduction actuel).
    
-   *This line appears only when the [SMB](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *This line appears only when the [SMB](../SettingUpAaps/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
 * **Ligne orange foncé** : aGA (absorption accélérée des glucides)
    
    Similaire à GA, mais en supposant un taux d'absorption de glucides statique de 10 mg/dL/5m (-0,555 mmol/l/5m). Obsolète et d'une utilité limitée.
    
-   *This line appears only when the older [AMA](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *This line appears only when the older [AMA](../SettingUpAaps/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
 Généralement votre courbe de glycémie réelle finira au milieu de ces lignes, ou proche de la ligne qui représente le mieux votre situation réelle.
 
@@ -238,7 +238,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 * Affiche la quantité d'insuline que vous avez à chaque instant (= insuline active dans votre corps). Il inclut l'insuline des bolus et des débits de basal temporaires, (**mais exclut les débits de basal intégrés dans votre profil**).
 * If there were no [SMBs](../Usage/Open-APS-features.md#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
 * L'IA peut être négative si vous n'avez pas de bolus restants et et que vous avez eu une zéro/faible basal temp pendant longtemps.
-* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder.md#local-profile). 
+* Decaying depends on your [DIA and insulin profile settings](../SettingUpAaps/ConfigBuilder.md#local-profile). 
 
 #### Glucides actifs
 
@@ -277,14 +277,14 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
    
    * Si la connexion à la pompe est perdue, le bouton d'insuline ne sera pas visible.
 
-* Other Buttons have to be setup in [preferences](../Configuration/Preferences.md#buttons).
+* Other Buttons have to be setup in [preferences](../SettingUpAaps/Preferences.md#buttons).
 
 #### Insuline
 
 ![Bouton Insuline](../images/Home2020_ButtonInsulin.png)
 
 * To give a certain amount of insulin without using [bolus calculator](#bolus-wizard).
-* By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences.md#default-temp-targets).
+* By checking the box you can automatically start your [eating soon temp target](../SettingUpAaps/Preferences.md#default-temp-targets).
 * Si vous ne voulez pas injecter de bolus avec la pompe mais juste enregistrer la quantité d'insuline (par ex. pour de l'insuline injectée avec un stylo ou une seringue), cochez la case correspondante.
 
 #### Glucides
@@ -292,11 +292,11 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 ![Bouton Glucides](../images/Home2020_ButtonCarbs.png)
 
 * Permet d'enregistrer les glucides sans faire de bolus.
-* Certain [pre-set temporary targets](../Configuration/Preferences.md#default-temp-targets) can be set directly by checking the box.
+* Certain [pre-set temporary targets](../SettingUpAaps/Preferences.md#default-temp-targets) can be set directly by checking the box.
 * Décalage horaire : Quand vous avez / allez manger les glucides (en minutes).
 * Durée : A utiliser pour les ["glucides étendus"](../Usage/Extended-Carbs.md)
 * Vous pouvez utiliser les boutons pour augmenter rapidement la quantité de glucides.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences.md#nsclient).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../SettingUpAaps/Preferences.md#nsclient).
 
 #### Assistant
 
@@ -305,18 +305,18 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 #### Étalonnages
 
 * Envoie un étalonnage à xDrip+ ou ouvre la boîte de dialogue de calibration du Dexcom.
-* Must be activated in [preferences](../Configuration/Preferences.md#buttons).
+* Must be activated in [preferences](../SettingUpAaps/Preferences.md#buttons).
 
 #### MGC
 
 * Ouvre xDrip+.
 * Le bouton Retour permet de revenir à AAPS.
-* Must be activated in [preferences](../Configuration/Preferences.md#buttons).
+* Must be activated in [preferences](../SettingUpAaps/Preferences.md#buttons).
 
 #### Assistant Rapide
 
 * Entrez facilement la quantité de glucides et définissez les paramètres de calcul.
-* Details are setup in [preferences](../Configuration/Preferences.md#quick-wizard).
+* Details are setup in [preferences](../SettingUpAaps/Preferences.md#quick-wizard).
 
 ## Assistant bolus
 
@@ -341,7 +341,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 ### Section J
 
-* La case Superbolus permet d'ajouter l'insuline basale des 2 prochaines heures au bolus immédiat, et un débit basal temporaire (DBT) à 0 est défini pour les 2 prochaines heures afin de ne pas avoir d'insuline supplémentaire. The option only shows when "Enable [superbolus](../Configuration/Preferences.md#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences.md#overview).
+* La case Superbolus permet d'ajouter l'insuline basale des 2 prochaines heures au bolus immédiat, et un débit basal temporaire (DBT) à 0 est défini pour les 2 prochaines heures afin de ne pas avoir d'insuline supplémentaire. The option only shows when "Enable [superbolus](../SettingUpAaps/Preferences.md#superbolus) in wizard" is set in the [preferences overview](../SettingUpAaps/Preferences.md#overview).
 * L'idée est de fournir l'insuline plus tôt et, espérons-le, de réduire les pointes.
 * Pour plus de détails, voir [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
@@ -349,7 +349,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 * Affiche le bolus calculé et permet de renseigner une note. 
 * Si la quantité d'insuline active dépasse déjà le bolus calculé, elle affichera simplement la quantité de glucides encore nécessaire.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences.md#nsclient).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../SettingUpAaps/Preferences.md#nsclient).
 
 ### Section L
 
@@ -402,7 +402,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
    * âge canule
    * âge de la batterie de la pompe & niveau (pourcentage)
 
-* Less information will be shown if [low resolution skin](../Configuration/Preferences.md#skin) is used.
+* Less information will be shown if [low resolution skin](../SettingUpAaps/Preferences.md#skin) is used.
 
 (Screenshots-sensor-level-battery)=
 
@@ -410,7 +410,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 * Nécessite xDrip+ nightly build du 10 décembre 2020 ou plus récent.
 * Fonctionne pour les MGC qui ont des émetteurs supplémentaires tels que MiaoMiao 2. (Techniquement le capteur doit envoyer les informations de niveau de pile à xDrip+).
-* Thresholds can be set in [preferences](../Configuration/Preferences.md#status-lights).
+* Thresholds can be set in [preferences](../SettingUpAaps/Preferences.md#status-lights).
 * Si le niveau du capteur est le même que celui de la batterie du téléphone, la version xDrip+ est probablement trop ancienne et nécessite une mise à jour.
    
    ![Le niveau de la batterie du capteur est égal au niveau de la batterie du téléphone](../images/Home2021_ActionSensorBat.png)
@@ -443,7 +443,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 ![Profil d'Insuline](../images/Screenshot_insulin_profile.png)
 
-* This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder.md#insulin). 
+* This shows the activity profile of the insulin you have chosen in [config builder](../SettingUpAaps/ConfigBuilder.md#insulin). 
 * La ligne MAUVE indique la quantité d’insuline restante après son injection car elle décroît avec le temps, tandis que la ligne BLEUE indique son activité.
 * Le point important à noter est que la décomposition a une longue queue. 
 * Si vous êtes habitué à la pompe manuellement, vous êtes probablement habitué à supposer que l'insuline se désintègre en environ 3,5 heures. 
@@ -497,7 +497,7 @@ La page Traitements peut être utilisée pour corriger les entrées de glucides 
 
 * Ces onglets montrent des détails sur les calculs de l'algorithme et pourquoi AAPS agit de cette façon.
 * Les calculs sont fait à chaque fois que le système obtient une nouvelle lecture du MGC.
-* For more details see [APS section on config builder page](../Configuration/Config-Builder.md#aps).
+* For more details see [APS section on config builder page](../SettingUpAaps/ConfigBuilder.md#aps).
 
 ## Profil
 
@@ -536,5 +536,5 @@ Historique des traitements suivants :
 ![NSClient](../images/Screenshots_NSClient.png)
 
 * Affiche l'état de la connexion avec votre site Nightscout.
-* Settings are made in [preferences](../Configuration/Preferences.md#nsclient). Vous pouvez ouvrir la section correspondante en cliquant sur la roue crantée en haut à droite de l'écran.
+* Settings are made in [preferences](../SettingUpAaps/Preferences.md#nsclient). Vous pouvez ouvrir la section correspondante en cliquant sur la roue crantée en haut à droite de l'écran.
 * Pour le dépannage, voir [cette page](../Usage/Troubleshooting-NSClient.md).

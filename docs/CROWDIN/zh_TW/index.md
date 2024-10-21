@@ -12,7 +12,7 @@ Android APS (**AAPS**) 是一款開源應用程式，專為胰島素依賴型的
 
 [Preparing for AAPS](./Getting-Started/PreparingForAaps.md) gives more detail about safety considerations, and the phones, CGMs (Continuous Glucose Monitors) and insulin pumps which are compatible with **AAPS**. 他描述了你將經歷的過程，並提供了獲得完整**AAPS** 功能的大致時間表。 本節將幫助在技術上作好準備，會以最快、最有效率的方式設置你的**AAPS** 。 The subsection [CGM Configuration](./Getting-Started/CompatiblesCgms.md) explains how to optimse CGM setup and what smoothing options are best.
 
-現在你已經對過程有了深入的了解，可以開始建置你的**AAPS** 循環系統了。 本章節 **三) 設置 AAPS** 包含逐步指導來進行此操作。 他涵蓋了選擇和 [設置你的報告伺服器](Installing-AndroidAPS/setting-up-the-reporting-server.md)（Nightscout 或 Tidepool），你可以檢視和分享你的資料，準備電腦來建置 AAPS 應用程式，並傳輸到你的手機。 他還涵蓋了使用設置嚮導來設定 **AAPS** 應用程式，與你的 CGM 應用程式連結，並與實體或虛擬胰島素幫浦連結，以及將 **AAPS** 連結到你的報告伺服器。 你將透過一個安全且經過精心設計的逐步流程，慢慢了解**AAPS**所提供的全部功能。此流程主要在確保你或你的孩子能夠充分熟悉，並能操作所有不同的層級和選單配置，然後再進入下一階段，通常稱為下一個「目標」，直到你累積足夠的經驗，再開始使用應用程式內更進階的選項。 這些目標被特別設計為逐步解鎖更多 **AAPS** 的可能性，並從開環轉為閉環。
+現在你已經對過程有了深入的了解，可以開始建置你的**AAPS** 循環系統了。 本章節 **三) 設置 AAPS** 包含逐步指導來進行此操作。 It covers choosing and [setting up your reporting server](./SettingUpAaps/SettingUpTheReportingServer.md) (Nightscout or Tidepool) so you can review and share your data, getting your computer ready for building the AAPS app, building the AAPS app and transferring the AAPS app to your phone. 他還涵蓋了使用設置嚮導來設定 **AAPS** 應用程式，與你的 CGM 應用程式連結，並與實體或虛擬胰島素幫浦連結，以及將 **AAPS** 連結到你的報告伺服器。 你將透過一個安全且經過精心設計的逐步流程，慢慢了解**AAPS**所提供的全部功能。此流程主要在確保你或你的孩子能夠充分熟悉，並能操作所有不同的層級和選單配置，然後再進入下一階段，通常稱為下一個「目標」，直到你累積足夠的經驗，再開始使用應用程式內更進階的選項。 這些目標被特別設計為逐步解鎖更多 **AAPS** 的可能性，並從開環轉為閉環。
 
 第四章節）[遠端 AAPS 功能](remote-control.md) 突顯了 **AAPS** 的一個真正強項。 這對於希望遠端發送指令給予，或者只是追踪來自 **AAPS** 的資料來說非常實用。 這對於希望為未成年人使用 **AAPS** 的照護者，以及患有糖尿病的成人同樣實用。成人可以更方便地監控血糖（以及其他指標），不僅限於手機上（例如手錶、車內等），也可以讓重要他人一同監控資料。 本節還提供了使用 Android Auto 的指導，讓你能夠在車內查看血糖水平。
 
@@ -72,16 +72,16 @@ Compatible phones  <./Getting-Started/Phones.md>
 ```
 
 ```{toctree}
-:caption: 3) 設置AAPS
+:caption: 3) Setting up AAPS
 
-設置報告伺服器 <./Installing-AndroidAPS/setting-up-the-reporting-server.md>
-建置 AAPS <./Installing-AndroidAPS/building-AAPS.md>
-傳輸和安裝 AAPS <./Installing-AndroidAPS/Transferring-and-installing-AAPS.md>
-設置嚮導 <./Installing-AndroidAPS/setup-wizard.md>
-更改 AAPS 配置 <./Installing-AndroidAPS/change-configuration.md>
-- 組態建置工具 <./Configuration/Config-Builder.md>
-- 偏好設定 <./Configuration/Preferences.md>
-完成目標 <./Usage/completing-the-objectives.md>
+Setting up the reporting server <./SettingUpAaps/SettingUpTheReportingServer.md>
+Building AAPS <./SettingUpAaps/BuildingAaps.md>
+Transferring and Installing AAPS <./SettingUpAaps/TransferringAndInstallingAaps.md>
+Setup Wizard<./SettingUpAaps/SetupWizard.md>
+Change AAPS configuration <./SettingUpAaps/ChangeAapsConfiguration.md>
+- Config Builder <./SettingUpAaps/ConfigBuilder.md>
+- Preferences <./SettingUpAaps/Preferences.md>
+Completing the objectives <./SettingUpAaps/CompletingTheObjectives.md>
 ```
 
 ```{toctree}
@@ -178,19 +178,19 @@ Open Humans 上傳程式<./Configuration/OpenHumans.md>
 ```
 
 ```{toctree}
-:caption: 11) 附加/存檔文件
+:caption: 11) Additional/archive documentation
 
-為 AAPS 的專用的 Google 帳戶 (可選)<./Installing-AndroidAPS/Dedicated-Google-account-for-AAPS.md>
+Dedicated Google account for AAPS (optional)<./SettingUpAaps/DedicatedGoogleAccountForAaps.md>
 
-Careportal (已停用) <./Usage/CPbefore26.md>
+Careportal (discontinued) <./Usage/CPbefore26.md>
 
-針對臨床醫師 (已過時) <./Resources/clinician-guide-to-AndroidAPS.md>
+For Clinicians (outdated) <./Resources/clinician-guide-to-AndroidAPS.md>
 
-與第三方應用程式自動化 <./Usage/automationwithapp.md>
+Automation with 3rd party apps <./Usage/automationwithapp.md>
 
-更新至 AAPS 3.0 後檢查<./Installing-AndroidAPS/update3_0.md>
+Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
 
-更新至 AAPS 2.7 後檢查 <./Installing-AndroidAPS/update2_7.md>
+Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
 
 ```
 

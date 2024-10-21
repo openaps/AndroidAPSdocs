@@ -21,7 +21,7 @@
     
     ![移除血糖機 Insight 的螢幕截圖](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../Configuration/Config-Builder.md) of the AAPS app select Accu-Chek Insight in the pump section
+* In [Config builder](../SettingUpAaps/ConfigBuilder.md) of the AAPS app select Accu-Chek Insight in the pump section
     
     ![組態建置工具 Insight 的螢幕截圖](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
@@ -54,7 +54,7 @@
 
 ## AAPS 設定
 
-**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences.md#advanced-settings-nsclient)).
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../SettingUpAaps/Preferences.md#advanced-settings-nsclient)).
 
 ![Insight 設定的螢幕截圖](../images/Insight_settings.png)
 
@@ -122,7 +122,7 @@
 
 * 韌體 1.x：設計上沒有震動。
 * 韌體 2.x：無法停用震動。
-* 韌體 3.x：AAPS 安靜地發送注射。 (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2.6.1.4))
+* 韌體 3.x：AAPS 安靜地發送注射。 (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2614))
 
 你可以在選單中找到韌體版本。
 

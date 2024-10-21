@@ -25,7 +25,7 @@ Les informations secrètes ou privées telles que votre URL Nightscout ou votre 
 ## Paramètres
 
 1. Créez votre compte sur [Open Humans](https://www.openhumans.org) si ce n'est pas déjà fait. Vous pouvez réutiliser vos comptes Google ou Facebook existants si vous le souhaitez.
-2. Activez le plugin “Open Humans” dans le [Générateur de configuration](../Configuration/Config-Builder.md).
+2. Enable the “Open Humans” plugin in [Config Builder](../SettingUpAaps/ConfigBuilder.md).
 3. Ouvrez son réglage en utilisant le bouton roue crantée. Vous pouvez restreindre le téléversement au périodes où le téléphone utilise le Wi-Fi et/ou est en charge.
 4. Ouvrez le Plugin Open Humans (dans l'onglet OH ou via le menu hamburger) et cliquez sur 'CONNEXION'.
 

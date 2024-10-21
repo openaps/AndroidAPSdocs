@@ -54,7 +54,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 
 帶有錨點的連結：
 - [這會花多久時間？](../Getting-Started/PreparingForAaps.md#how-long-will-it-take-to-set-everything-up)
-- [偏好設定中的 NSClient 設定](../Configuration/Preferences.md#nsclient)。
+- [NSClient settings in Preferences](../SettingUpAaps/Preferences.md#nsclient).
 - [AAPS 總覽中的預測線](../Getting-Started/Screenshots.md#prediction-lines)，標題層級 4
 - [螢幕截圖](../Getting-Started/Screenshots.md)
 - [主要圖表截圖](../Getting-Started/Screenshots.md#section-f---main-graph)，標題層級 3

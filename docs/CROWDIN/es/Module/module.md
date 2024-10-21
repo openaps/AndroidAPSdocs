@@ -109,11 +109,11 @@ Nightscout is a open source web application that can log and display your CGM da
 
 Nightscout is independent of the other modules. You will need it to fulfill Objective 1.
 
-Additional information on how to configure Nightscout for use with AAPS can be found [here](../Installing-AndroidAPS/Nightscout.md).
+Additional information on how to configure Nightscout for use with AAPS can be found [here](../SettingUpAaps/Nightscout.md).
 
 ### AAPS-.apk file
 
-The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  [here](../Installing-AndroidAPS/building-AAPS.md).
+The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  [here](../SettingUpAaps/BuildingAaps.md).
 
 ## Optional Modules
 
@@ -137,4 +137,4 @@ It sometimes takes a while to get all modules for closing the loop. But no worri
 
 You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../Where-To-Go-For-Help/Background-reading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
-**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/completing-the-objectives.md) before each new Objective and setup up your [hardware](index-component-setup).
+**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective and setup up your [hardware](index-component-setup).

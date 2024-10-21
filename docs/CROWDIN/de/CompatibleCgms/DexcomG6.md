@@ -24,7 +24,7 @@ Mehr dazu findest Du in dem, von Tim Street auf der Seite [www.diabettech.com](h
 -   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](#if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip+.
 -   You can also use xDrip+ as a companion app of the official Dexcom app, but you might experience delays in BG readings.
 -   If not already set up, download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
--   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
 
 - Adjust settings in xDrip+ according to [xDrip+ settings page](../CompatibleCgms/xDrip.md)
 
@@ -44,7 +44,7 @@ Mehr dazu findest Du in dem, von Tim Street auf der Seite [www.diabettech.com](h
 
 ### Einstellungen in AAPS
 
--   Wähle 'Dexcom App (patched)' in der [KONFIGURATION, BZ-Quelle](../Configuration/Config-Builder.md#bg-source) aus.
+-   Select 'Dexcom App (patched)' in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
 
 -   Falls AAPS keine Werte erhält, wechsle auf eine andere BZ-Quelle und dann wieder zurück zur 'gepatchte Dexcom App', um die Abfrage für die Genehmigung des Datenaustauschs zwischen AAPS und BYODA erneut auszulösen.
 

@@ -94,7 +94,7 @@ Je velmi důležité zajistit, aby byly vypnuty optimalizace baterie (úspora en
 
 ## Aktivace driveru a párování s pumpou Combo
 
-* Select the "Accu-Chek Combo" driver in the [Config builder](../Configuration/Config-Builder.md). **Důležité**: V seznamu je také starý ovladač nazvaný "Accu-Chek Combo (Ruffy)". Tento _nevybírejte_.
+* Select the "Accu-Chek Combo" driver in the [Config builder](../SettingUpAaps/ConfigBuilder.md). **Důležité**: V seznamu je také starý ovladač nazvaný "Accu-Chek Combo (Ruffy)". Tento _nevybírejte_.
 
   ![Screenshot Combo config builderu](../images/combo/combov2-config-builder.png)
 

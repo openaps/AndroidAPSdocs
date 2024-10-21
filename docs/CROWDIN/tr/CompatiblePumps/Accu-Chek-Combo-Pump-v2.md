@@ -94,7 +94,7 @@ Pil optimizasyonlarının kapalı olduğundan emin olmak çok önemlidir. AAPS, 
 
 ## Sürücüyü etkinleştirme ve Combo ile eşleştirme
 
-* Select the "Accu-Chek Combo" driver in the [Config builder](../Configuration/Config-Builder.md). **Önemli**: Listede "Accu-Chek Combo (Ruffy)" adlı eski sürücü de mevcuttur. Bunu _seçmeyin_.
+* Select the "Accu-Chek Combo" driver in the [Config builder](../SettingUpAaps/ConfigBuilder.md). **Önemli**: Listede "Accu-Chek Combo (Ruffy)" adlı eski sürücü de mevcuttur. Bunu _seçmeyin_.
 
   ![Combo'nun Konfigürasyon ayaraları ekran görüntüsü](../images/combo/combov2-config-builder.png)
 

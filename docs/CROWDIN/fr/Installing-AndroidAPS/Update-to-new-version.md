@@ -67,13 +67,13 @@ See the [Export & import settings](../Usage/ExportImportSettings.md) page if you
 
 ## 3. Construisez l'APK signé
 
-Votre code source est maintenant la version actuellement publiée. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/building-AAPS.md#build-the-aaps-signed-apk).
+Votre code source est maintenant la version actuellement publiée. It's time to build the signed apk from it as described in the [build signed apk section](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk).
 
 ## 4. Transférez l'apk
 
 Vous devez transférer l'apk sur votre téléphone pour pouvoir l'installer.
 
-See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Transferring-and-installing-AAPS.md)
+See the instructions for [Transfer APK to smartphone](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
 ## 5. Installer l'apk
 

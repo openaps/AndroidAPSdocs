@@ -21,7 +21,7 @@ Poznámka: AAPS vždy zapíše data do **prvního bazálního profilu v pumpě**
     
     ![Snímek obrazovky odebrání glukometru z pumpy Insight](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../Configuration/Config-Builder.md) of the AAPS app select Accu-Chek Insight in the pump section
+* In [Config builder](../SettingUpAaps/ConfigBuilder.md) of the AAPS app select Accu-Chek Insight in the pump section
     
     ![Snímek obrazovky nastavení pumpy Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
@@ -54,7 +54,7 @@ Poznámka: Spojení mezi pumpou a telefonem není permanentní. Spojení bude na
 
 ## Nastavení v AAPS
 
-**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences.md#advanced-settings-nsclient)).
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../SettingUpAaps/Preferences.md#advanced-settings-nsclient)).
 
 ![Snímek obrazovky nastavení Insight](../images/Insight_settings.png)
 
@@ -122,7 +122,7 @@ V závislosti na verzi firmwaru vaší pumpy bude Insight krátce vibrovat poka�
 
 * Firmware 1.x: Žádné vibrace z výroby
 * Firmware 2.x: Vibrace nelze vypnout.
-* Firmware 3.x: AAPS vydává bolus potichu. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2.6.1.4))
+* Firmware 3.x: AAPS vydává bolus potichu. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2614))
 
 Verzi firmwaru lze nalézt v menu.
 

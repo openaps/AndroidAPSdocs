@@ -6,7 +6,7 @@
 
 ## Μπορώ απλά να κατεβάσω το αρχείο εγκατάστασης του AAPS;
 
-Όχι. Δεν υπάρχει κανένα αρχείο apk που να μπορείτε να κατεβάσετε για το AAPS. You have to [build](../Installing-AndroidAPS/building-AAPS.md) it yourself. Ο λόγος που δεν διανέμεται τέτοιο αρχείο είναι ο εξής:
+Όχι. Δεν υπάρχει κανένα αρχείο apk που να μπορείτε να κατεβάσετε για το AAPS. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. Ο λόγος που δεν διανέμεται τέτοιο αρχείο είναι ο εξής:
 
 Το AAPS χρησιμοποιείται για να ελέγξει την αντλία σας και να χορηγήσει ινσουλίνη. Σύμφωνα με την ισχύουσα νομοθεσία στην Ευρώπη, όλα τα συστήματα που ανήκουν σε κατηγορίες όπως είναι οι lla ή llb χαρακτηρίζονται ως ιατρικές συσκευές. Για την κυκλοφορία τέτοιων συσκευών απαιτείται έγκριση από τους αρμόδιους φορείς. Προκειμένου να ληφθεί τέτοιου είδους έγκριση (CE) απαιτείται μία σειρά μελετών, δοκιμών και ελέγχων. Διαφορετικά, η διάθεση τους δεν είναι νόμιμη. Τέτοιες διαδικασίες ελέγχου και εγκρίσεων υπάρχουν και σε άλλα μέρη του κόσμου.
 
@@ -67,7 +67,7 @@ You have to have the same emergency equipment with you like every other T1D with
 
 - Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
 - Μπαταρίες για την αντλία έγχυσης ινσουλίνης
-- Current [apk](../Installing-AndroidAPS/building-AAPS.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## How can I safely and securely attach the CGM/FGM?
 

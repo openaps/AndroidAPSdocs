@@ -40,7 +40,7 @@ When you start Objective 10.
 
 ## Where are Automations located in AAPS?
 
-Depending on your [config builder](../Installing-AndroidAPS/change-configuration.md#config-builder) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
+Depending on your [config builder](../SettingUpAaps/ConfigBuilder.md) settings, **Automation** is located either in the ‘hamburger’ menu or as a tab with **AAPS**.
 
 ## How can I set up an Automation?
 

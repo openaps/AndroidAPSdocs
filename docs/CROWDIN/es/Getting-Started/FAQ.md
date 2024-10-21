@@ -6,7 +6,7 @@
 
 ## ¿Puedo simplemente descargar el archivo de instalación de AAPS?
 
-No. No hay un archivo APK descargable para AAPS. You have to [build](../Installing-AndroidAPS/building-AAPS.md) it yourself. Aquí está la razón:
+No. No hay un archivo APK descargable para AAPS. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. Aquí está la razón:
 
 AAPS se utiliza para controlar tu bomba y administrar insulina. Según la normativa vigente en Europa, todos los sistemas clasificados como IIa o IIb son productos sanitarios que requieren una aprobación reglamentaria (una marca CE), para lo que se necesitan diversos estudios y aprobaciones. La distribución de dispositivos no regulados es ilegal. Existen reglamentos similares en otras partes del mundo.
 
@@ -67,7 +67,7 @@ You have to have the same emergency equipment with you like every other T1D with
 
 - Batería y cables para cargar el teléfono, el reloj y (si es necesario) el lector BT o dispositivo Link
 - Baterias para la bomba
-- Current [apk](../Installing-AndroidAPS/building-AAPS.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## ¿Cómo puedo fijar el MCG/MFG de forma segura?
 

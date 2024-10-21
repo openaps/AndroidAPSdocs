@@ -7,7 +7,7 @@
 
 ![Update info](../images/AAPS_LoopDisable90days.png)
 
-У вас есть 60 дней для обновления. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../Getting-Started/Glossary.md)) as in [objective 6](../Usage/completing-the-objectives.md).
+У вас есть 60 дней для обновления. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../Getting-Started/Glossary.md)) as in [objective 6](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend).
 
 Если вы не обновитесь еще 30 дней (90 дней с новой даты выпуска) AAPS переключится в режим открытого цикла.
 
@@ -285,24 +285,24 @@ v3 - новый протокол. Более безопасный и эффек�
 ### Важные Примечания
 
 - **Минимальная версия теперь Android 8.0.** Для более старых версий Android, все еще можно использовать 2.6.1.4 в старом репозитории.
-- [Objectives have changed.](../Usage/completing-the-objectives.md#objective-3-prove-your-knowledge) **Finish not completed objectives before update.**
-- Репозиторий все еще на <https://github.com/nightscout/AndroidAPS> . If you are not familiar with git the easiest way for update is remove directory with AAPS and do a [new clone](../Installing-AndroidAPS/building-AAPS.md).
+- [Objectives have changed.](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) **Finish not completed objectives before update.**
+- Репозиторий все еще на <https://github.com/nightscout/AndroidAPS> . If you are not familiar with git the easiest way for update is remove directory with AAPS and do a [new clone](../SettingUpAaps/BuildingAaps.md).
 - Используйте [](https://developer.android.com/studio/) Android Studio версии 4.1.1 или новее для построения apk.
 
 ### Новые возможности
 
 - [Omnipod Eros support](../CompatiblePumps/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
-- [bolus advisor](../Configuration/Preferences.md#quick-wizard) & [eating reminder](../Getting-Started/Screenshots.md#eating-reminder) @MilosKozak
+- [bolus advisor](../SettingUpAaps/Preferences.md#quick-wizard) & [eating reminder](../Getting-Started/Screenshots.md#eating-reminder) @MilosKozak
 - [New watchface](../Configuration/Watchfaces.md#new-watchface-as-of-aaps-28) @rICTx-T1D
 - Улучшение связи с Dana RS @MilosKozak
 - Удален алгоритм "Неизмененные значения CGM " в SMB для оригинального приложения Dexcom
-- New [Low Ressolution Skin](../Configuration/Preferences.md#skin)
+- New [Low Ressolution Skin](../SettingUpAaps/Preferences.md#skin)
 - New ["Pregnant" patient type](../Usage/Open-APS-features.md#overview-of-hard-coded-limits) @Brian Quinion
 - Новый макет вкладки NSClient @MilosKozak
 - Передача данных об инсулине, чувствительности и настройках отображения непосредственно с приложения AAPS @MilosKozak
-- [Фильтр настроек](../Configuration/Preferences.md) @Brian Quinion
+- [Preferences filter](../SettingUpAaps/Preferences.md) @Brian Quinion
 - Новые иконки помп @Rig22 @@teleriddler @osodebailar
-- New [insulin type Lyumjev](../Configuration/Config-Builder.md#lyumjev)
+- New [insulin type Lyumjev](../SettingUpAaps/ConfigBuilder.md#lyumjev)
 - Улучшения Помощника настройки @MilosKozak
 - Улучшения безопасности @dlvoy
 - Различные улучшения и исправления @AdrianLxM @Philoul @swissalpine @MilosKozak @Brian Quinion
@@ -314,34 +314,34 @@ v3 - новый протокол. Более безопасный и эффек�
 
 **Проверьте настройки после обновления до 2.7, как описано** [здесь](../Installing-AndroidAPS/update2_7.md).
 
-You need at least start [objective 11 (in later versions objective 10!)](../Usage/completing-the-objectives.md#objective-10-automation) in order to continue using [Automation feature](../Usage/Automation.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](../Usage/completing-the-objectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../Usage/completing-the-objectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-senstivity-plugin-dynisf). Это не повлияет на другие цели, которые вы уже выполнили. У вас сохранятся все завершенные цели!
+You need at least start [objective 11 (in later versions objective 10!)](../SettingUpAaps/CompletingTheObjectives.md#objective-10-automation) in order to continue using [Automation feature](../Usage/Automation.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-senstivity-plugin-dynisf). Это не повлияет на другие цели, которые вы уже выполнили. У вас сохранятся все завершенные цели!
 
 ### Новые возможности
 
 - внутреннее использование зависимостей инъекций, библиотеки обновлений, код переписан на kotlin @MilosKozak @AdrianLxM
 - применение модулей для помп Dana @MilosKozak
 - [новый макет, выбор макета](../Getting-Started/Screenshots.md) @MilosKozak
-- new [status lights layout](../Configuration/Preferences.md#status-lights) @MilosKozak
+- new [status lights layout](../SettingUpAaps/Preferences.md#status-lights) @MilosKozak
 - [multiple graphs support](../Getting-Started/Screenshots.md#activate-optional-information) @MilosKozak
 - [Помощник профиля ](../Configuration/profilehelper.md) @MilosKozak
 - visualization of [dynamic target adjustment](../Getting-Started/Screenshots.md#visualization-of-dynamic-target-adjustment) @Tornado-Tim
-- новый макет [настроек](../Configuration/Preferences.md) @Brian Quinion
+- new [preferences layout](../SettingUpAaps/Preferences.md) @MilosKozak
 - Обновление алгоритма микроболюсов SMB @Tornado-Tim
-- [Low glucose suspend mode](../Configuration/Preferences.md#aps-mode) @Tornado-Tim
-- [carbs required notifications](../Configuration/Preferences.md#carb-required-notification) @twain47 @Tornado-Tim
+- [Low glucose suspend mode](../SettingUpAaps/Preferences.md#aps-mode) @Tornado-Tim
+- [carbs required notifications](../SettingUpAaps/Preferences.md#carb-required-notification) @twain47 @Tornado-Tim
 - удален портал терапии Careportal (перемещен в Действия) @MilosKozak
 - [новый зашифрованный формат резервной копии](../Usage/ExportImportSettings.md) @dlvoy
 - [новая SMS TOTP проверка подлинности](../Children/SMS-Commands.md) @dlvoy
 - [new SMS PUMP CONNECT, DISCONNECT](../Children/SMS-Commands.md#commands) commands @Lexsus
 - улучшена поддержка микро базалов на помпах Dana @Mackwe
 - небольшие исправления для помпы Insight @TebbeUbben @MilosKozak
-- ["Default language" option](../Configuration/Preferences.md#general) @MilosKozak
+- ["Default language" option](../SettingUpAaps/Preferences.md#general) @MilosKozak
 - векторные иконки @Philoul
 - [set neutral temps for MDT pump](../CompatiblePumps/MedtronicPump.md#configuration-of-the-pump) @Tornado-Tim
 - Улучшения в журнале @MilosKozak
 - удалён алгоритм OpenAPS MA @Tornado-Tim
 - Удалена чувствительность Oref0 @Tornado-Tim
-- [Biometric or password protection](../Configuration/Preferences.md#protection) for settings, bolus @MilosKozak
+- [Biometric or password protection](../SettingUpAaps/Preferences.md#protection) for settings, bolus @MilosKozak
 - [новый триггер автоматизации](../Usage/Automation.md) @PoweRGbg
 - [загрузчик Open Humans ](../Configuration/OpenHumans.md) @TebbeUbben @AdrianLxM
 - Новая документация @Achim
@@ -449,7 +449,7 @@ You need at least start [objective 11 (in later versions objective 10!)](../Usag
 
 - Исправлена поддержка языков
 
-- Objectives: [Allow to go back](../Usage/completing-the-objectives.md#go-back-in-objectives), Time fetching dialog
+- Objectives: [Allow to go back](../SettingUpAaps/CompletingTheObjectives.md#go-back-in-objectives), Time fetching dialog
 
 - Automation: [allow sorting](../Usage/Automation.md#the-order-of-the-automations-in-the-list-matters)
 
@@ -484,7 +484,7 @@ Please note the [important notes](../Installing-AndroidAPS/Releasenotes.md#versi
 
 ### Важные Примечания
 
-- Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/building-AAPS.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
+- Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../SettingUpAaps/BuildingAaps.md) or [update](../Installing-AndroidAPS/Update-to-new-version.md).
 - If you are using xDrip [identify receiver](../CompatibleCgms/xDrip.md#identify-receiver) must be set.
 - Если вы используете Dexcom G6 с модифицированным приложением Dexcom, вам понадобится версия из папки [2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 - Поддержка Glimp версии 4.15.57 и новее.
@@ -503,13 +503,13 @@ Please note the [important notes](../Installing-AndroidAPS/Releasenotes.md#versi
 - Поддержка RxJava2, Okhttp3, Retrofit
 - Old [Medtronic pumps](../CompatiblePumps/MedtronicPump.md) support (RileyLink need)
 - Новый [ модуль автоматизации ](../Usage/Automation.md)
-- Allow to [bolus only part](../Configuration/Preferences.md#advanced-settings-overview) from bolus wizard calculation
+- Allow to [bolus only part](../SettingUpAaps/Preferences.md#advanced-settings-overview) from bolus wizard calculation
 - Рендеринг активности инсулина
 - Корректировка прогнозов IOB с помощью результата autosense
 - Новая поддержка модифицированных приложений Dexcom ([ папка 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
 - Верификатор подписи
 - Возможность обойти цели пользователям OpenAPS
-- New [objectives](../Usage/completing-the-objectives.md) - exam, application handling (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
+- New [objectives](../SettingUpAaps/CompletingTheObjectives.md) - exam, application handling (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
 - Исправлена ошибка в драйверах Dana*, где сообщалось о ложной разнице во времени
 - Исправлена ошибка [СМС коммуникатора](../Children/SMS-Commands.md)
 

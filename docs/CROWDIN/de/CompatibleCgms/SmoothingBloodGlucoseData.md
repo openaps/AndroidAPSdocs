@@ -4,7 +4,7 @@ Wenn die **Glukosewerte** Sprünge haben oder verrauscht sind, kann es dazu komm
 
 Einige CGM-Systeme haben interne Algorithmen, um die Qualität der Messwerte zu erkennen. **AAPS** kann diese Informationen nutzen und (bei unzuverlässigen Werten) SMBs aussetzen. Für die CGMs, die diese Informationen nicht übermitteln, werden die Funktionen 'Aktiviere SMB immer' und 'Aktiviere SMB nach Mahlzeiten' aus Sicherheitsgründen deaktiviert.
 
-Zusätzlich gibt es ab der **AAPS** Version 3.2 die Möglichkeit, die Daten innerhalb von **AAPS** zu glätten (anstatt innerhalb der CGM-App). Es gibt drei Optionen in der [KONFIGURATION](../Configuration/Config-Builder.md).
+Zusätzlich gibt es ab der **AAPS** Version 3.2 die Möglichkeit, die Daten innerhalb von **AAPS** zu glätten (anstatt innerhalb der CGM-App). There are three options available in the [Config Builder](../SettingUpAaps/ConfigBuilder.md).
 
 ![Glättung](../images/ConfBuild_Smoothing.png)
 

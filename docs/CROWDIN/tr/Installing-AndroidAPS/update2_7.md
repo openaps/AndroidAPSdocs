@@ -8,7 +8,7 @@
 
 - Güncellemeden sonra KŞ kaynağının doğru olup olmadığını kontrol edin.
 - Especially when using [xDrip+](../CompatibleCgms/xDrip.md) it might happen, that BG source is changed to Dexcom app (patched).
-- Open [Config builder](../Configuration/Config-Builder.md#bg-source) (hamburger menu on top left side of home screen)
+- Open [Config builder](../SettingUpAaps/ConfigBuilder.md#bg-source) (hamburger menu on top left side of home screen)
 - "KŞ kaynağı"na ilerleyin.
 - Değişiklik gerekliyse doğru KŞ kaynağını seçin.
 
@@ -17,8 +17,8 @@
 ## Sınavı bitir
 
 - AAPS 2.7, [otomasyon](../Usage/Automation.md) için yeni görev 11'i (sonraki sürümlerde görev 10 olarak yeniden numaralandırıldı!) içerir.
-- You have to finish exam ([objective 3 and 4](../Usage/completing-the-objectives.md#objective-3-prove-your-knowledge)) in order to complete [objective 11](../Usage/completing-the-objectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-senstivity-plugin-dynisf).
-- If for example you did not finish the exam in [objective 3](../Usage/completing-the-objectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../Usage/completing-the-objectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-senstivity-plugin-dynisf).
+- You have to finish exam ([objective 3 and 4](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge)) in order to complete [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-senstivity-plugin-dynisf).
+- If for example you did not finish the exam in [objective 3](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-senstivity-plugin-dynisf).
 - Bu, daha önce tamamladığınız diğer görevleri etkilemeyecektir. Tüm tamamlanmış görevler korunacaktır!
 
 ## Ana parola tanımlama

@@ -94,7 +94,7 @@ Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet 
 
 ## Aktivierung des Treibers und Kopplung mit der Combo
 
-* Select the "Accu-Chek Combo" driver in the [Config builder](../Configuration/Config-Builder.md). **Wichtig**: Es ist auch der alte Treiber, genannt "Accu-Chek Combo (Ruffy)", in dieser Liste. Wähle diesen _nicht_ aus.
+* Select the "Accu-Chek Combo" driver in the [Config builder](../SettingUpAaps/ConfigBuilder.md). **Wichtig**: Es ist auch der alte Treiber, genannt "Accu-Chek Combo (Ruffy)", in dieser Liste. Wähle diesen _nicht_ aus.
 
   ![Screenshot der Konfiguration Combo](../images/combo/combov2-config-builder.png)
 

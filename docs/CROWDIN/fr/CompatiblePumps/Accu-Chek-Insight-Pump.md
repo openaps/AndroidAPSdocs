@@ -21,7 +21,7 @@ Remarque : AAPS écrira toujours les données dans le **premier profil débit de
     
     ![Copie d'écran de suppression du lecteur Insight](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../Configuration/Config-Builder.md) of the AAPS app select Accu-Chek Insight in the pump section
+* In [Config builder](../SettingUpAaps/ConfigBuilder.md) of the AAPS app select Accu-Chek Insight in the pump section
     
     ![Copie d'écran de Génération de configuration Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
@@ -54,7 +54,7 @@ Remarque : Il n'y aura pas de connexion permanente entre la pompe et le téléph
 
 ## Paramètres dans AAPS
 
-**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences.md#advanced-settings-nsclient)).
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../SettingUpAaps/Preferences.md#advanced-settings-nsclient)).
 
 ![Copie d'écran paramètres Insight](../images/Insight_settings.png)
 
@@ -122,7 +122,7 @@ Depending on the firmware version of your pump, the Insight will vibrate briefly
 
 * Firmware 1.x : Aucune vibration par conception.
 * Firmware 2.x : Les vibrations ne peuvent pas être désactivées.
-* Firmware 3.x: AAPS delivers bolus silently. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2.6.1.4))
+* Firmware 3.x: AAPS delivers bolus silently. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2614))
 
 La version du firmware se trouve dans le menu Appairage de Insight / Version du logiciel.
 

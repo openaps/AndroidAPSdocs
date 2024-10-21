@@ -21,7 +21,7 @@ Opmerking: AAPS zal informatie altijd opslaan in het **eerste basaal profiel in 
     
     ![Screenshot van Insight Verwijderen Meter](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../Configuration/Config-Builder.md) of the AAPS app select Accu-Chek Insight in the pump section
+* In [Config builder](../SettingUpAaps/ConfigBuilder.md) of the AAPS app select Accu-Chek Insight in the pump section
     
     ![Screenshot van Config Builder Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
@@ -54,7 +54,7 @@ Opmerking: Er zal geen permanente verbinding zijn tussen pomp en telefoon. Een v
 
 ## Instellingen in AAPS
 
-**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences.md#advanced-settings-nsclient)).
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../SettingUpAaps/Preferences.md#advanced-settings-nsclient)).
 
 ![Screenshot of Insight Settings](../images/Insight_settings.png)
 
@@ -122,7 +122,7 @@ Depending on the firmware version of your pump, the Insight will vibrate briefly
 
 * Firmware 1.x: Geen trillingen.
 * Firmware 2.x: Trillingen kunnen niet worden uitgeschakeld.
-* Firmware 3.x: AAPS delivers bolus silently. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2.6.1.4))
+* Firmware 3.x: AAPS delivers bolus silently. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2614))
 
 Firmware version can be found in the menu.
 

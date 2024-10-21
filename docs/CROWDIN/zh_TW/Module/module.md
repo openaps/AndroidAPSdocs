@@ -109,11 +109,11 @@ Nightscout 是一個開源網頁應用程式，可以記錄並顯示你的 CGM �
 
 Nightscout 與其他模組獨立運作。 要完成目標 1，你將需要他。
 
-有關如何配置 Nightscout 以與 AAPS 一起使用的更多訊息，請參閱[這裡](../Installing-AndroidAPS/Nightscout.md)。
+Additional information on how to configure Nightscout for use with AAPS can be found [here](../SettingUpAaps/Nightscout.md).
 
 ### AAPS-.apk 檔案
 
-系統的基本組件。 在安裝應用程式之前，你需要先生成 apk 檔案（這是 Android 應用程式的檔案擴展名）。 Instructions are  [here](../Installing-AndroidAPS/building-AAPS.md).
+系統的基本組件。 在安裝應用程式之前，你需要先生成 apk 檔案（這是 Android 應用程式的檔案擴展名）。 Instructions are  [here](../SettingUpAaps/BuildingAaps.md).
 
 ## 可選模組
 
@@ -137,4 +137,4 @@ Nightscout 與其他模組獨立運作。 要完成目標 1，你將需要他。
 
 你可以繼續閱讀這裡的文檔，與其他閉環系統用戶線上或離線交流，或[閱讀](../Where-To-Go-For-Help/Background-reading.md)文檔或其他用戶撰寫的內容（即使需要小心，不是所有內容都正確或適合你複製）。
 
-**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/completing-the-objectives.md) before each new Objective and setup up your [hardware](index-component-setup).
+**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective and setup up your [hardware](index-component-setup).

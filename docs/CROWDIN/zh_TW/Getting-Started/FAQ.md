@@ -6,7 +6,7 @@
 
 ## 我可以直接下載 AAPS 的安裝檔嗎？
 
-不行。 AAPS 沒有可下載的 apk 檔案。 You have to [build](../Installing-AndroidAPS/building-AAPS.md) it yourself. 原因如下：
+不行。 AAPS 沒有可下載的 apk 檔案。 You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. 原因如下：
 
 AAPS 用來控制你的幫浦並提供胰島素。 根據歐洲現行法規，所有歸類為 IIa 或 IIb 類的系統都是需要法規批准的醫療設備（需要 CE 標誌），這需要各種研究和簽字確認。 分發未經批准的設備是非法的。 在世界其他地區也有類似的法規。
 
@@ -67,7 +67,7 @@ The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen
 
 - 用於為智慧型手機、手錶和（如有需要）BT 閱讀器或 Link 設備充電的行動電源和充電線
 - 幫浦電池
-- Current [apk](../Installing-AndroidAPS/building-AAPS.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## 如何安全、牢固地安裝 CGM/FGM？
 

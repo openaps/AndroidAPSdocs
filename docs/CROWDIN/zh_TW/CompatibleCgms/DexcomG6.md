@@ -24,7 +24,7 @@
 -   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](#if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip+.
 -   你還可以將 xDrip+ 用作官方 Dexcom 應用程式的配套程式，但你可能會遇到血糖讀取延遲。
 -   If not already set up, download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
--   在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
 
 - Adjust settings in xDrip+ according to [xDrip+ settings page](../CompatibleCgms/xDrip.md)
 
@@ -44,7 +44,7 @@
 
 ### AAPS 設定
 
--   在[ConfigBuilder 的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇「Dexcom App（修改版）」。
+-   Select 'Dexcom App (patched)' in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
 
 -   如果你未收到任何數值，請選擇其他資料來源，然後重新選擇「Dexcom App（修改版）」以觸發 AAPS 和 BYODA 廣播之間連線所需的權限請求。
 

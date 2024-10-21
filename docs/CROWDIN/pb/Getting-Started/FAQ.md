@@ -6,7 +6,7 @@ Como adicionar perguntas ao FAQ: Siga estas [instruções](../make-a-PR.md)
 
 ## Can I just download the AAPS installation file?
 
-Não. There is no downloadable apk file for AAPS. You have to [build](../Installing-AndroidAPS/building-AAPS.md) it yourself. Veja o motivo:
+Não. There is no downloadable apk file for AAPS. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. Veja o motivo:
 
 AAPS is used to control your pump and give insulin. Nos termos da regulamentação atual na Europa, todos os sistemas classificados como IIa ou IIb são dispositivos médicos que requerem aprovação regulamentar (marca CE) e necessitam de vários estudos e assinaturas. A distribuição de um dispositivo não regulamentado é ilegal. Existem regulamentações semelhantes noutras partes do mundo.
 
@@ -67,7 +67,7 @@ You have to have the same emergency equipment with you like every other T1D with
 
 - Carregadores e cabos para seu smartphone, watch e (se necessário) leitor BT ou dispositivo Link
 - Bateria(s) da Bomba
-- Current [apk](../Installing-AndroidAPS/building-AAPS.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## Como posso anexar de forma segura o CGM/FGM?
 

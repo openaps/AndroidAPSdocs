@@ -10,7 +10,7 @@ This is the first screen you will come across when you open AAPS and it contains
 
 * Navigate between the various AAPS modules.
 * Alternatif olarak, sola veya sağa kaydırarak ekranları değiştirebilirsiniz.
-* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu).
+* Displayed tabs can be selected in [config builder](../SettingUpAaps/ConfigBuilder.md#tab-or-hamburger-menu).
 
 ### Bölüm B - Profil & hedef
 
@@ -36,7 +36,7 @@ This is the first screen you will come across when you open AAPS and it contains
 ![Dinamik hedef ayarının görselleştirilmesi](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS, SMB algoritması kullanıyorsanız, hedefinizi hassasiyete göre dinamik olarak ayarlayabilir.
-* Enable either one or both of the [following options](../Configuration/Preferences.md#openaps-smb-settings) 
+* Enable either one or both of the [following options](../SettingUpAaps/Preferences.md#openaps-smb-settings) 
    * "Duyarlılık hedefi yükseltir" ve/veya 
    * "direnç hedefi düşürür" 
 * AAPS direnç veya duyarlılık tespit ederse hedefi değiştirebilecektir. 
@@ -47,7 +47,7 @@ This is the first screen you will come across when you open AAPS and it contains
 #### Geçerli kan şekeri
 
 * CGM'nizden alınan en son kan şekeri ölçümü sol tarafta gösterilir.
-* Color of the BG value reflects the status to the defined [range](../Configuration/Preferences.md#range-for-visualization). 
+* Color of the BG value reflects the status to the defined [range](../SettingUpAaps/Preferences.md#range-for-visualization). 
    * yeşil = aralık içerisinde
    * kırmızı = aralığın altında
    * sarı = aralığın üstünde
@@ -60,7 +60,7 @@ This is the first screen you will come across when you open AAPS and it contains
 * Yeni bir simge döngü durumunu gösterir:
    
    * yeşil daire = döngü çalışıyor
-   * green circle with dotted line = [low glucose suspend (LGS)](../Usage/completing-the-objectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * green circle with dotted line = [low glucose suspend (LGS)](../SettingUpAaps/CompletingTheObjectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
    * kırmızı daire = döngü devre dışı (kalıcı olarak çalışmıyor)
    * sarı daire = döngü askıya alındı (geçici olarak duraklatıldı ancak bazal insülin verilecek) - kalan süre simgenin altında gösterilir
    * gri daire = pompa bağlantısı kesildi (geçici olarak hiç insülin dozu yok) - kalan süre simgenin altında gösterilir
@@ -152,7 +152,7 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
    * Pil yaşı ve seviyesi (%)
 * Eşik uyarısı aşılırsa değerler sarı renkte gösterilecektir.
 * Kritik eşik aşılırsa değerler kırmızı ile gösterilir.
-* Settings can be made in [preferences](../Configuration/Preferences.md#status-lights).
+* Settings can be made in [preferences](../SettingUpAaps/Preferences.md#status-lights).
 
 ### Bölüm F - Ana grafik
 
@@ -161,8 +161,8 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 * Grafik, glikoz monitörünüzden (CGM) okunan kan şekerinizi (KŞ) gösterir. 
 * Parmak ucundan alınan kalibrasyonları ve karbonhidrat girişleri gibi işlem sekmesine girilen notların yanı sıra profil geçişleri burada gösterilir. 
 * Zaman ölçeğini değiştirmek için grafiğe uzun basın. 6, 12, 18 veya 24 saat seçebilirsiniz.
-* Yeşil alan hedef aralığınızı yansıtmaktadır. It can be configured in [preferences](../Configuration/Preferences.md#range-for-visualization).
-* Blue triangles show [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) - if enabled in [preferences](../Configuration/Preferences.md#openaps-smb-settings).
+* Yeşil alan hedef aralığınızı yansıtmaktadır. It can be configured in [preferences](../SettingUpAaps/Preferences.md#range-for-visualization).
+* Blue triangles show [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) - if enabled in [preferences](../SettingUpAaps/Preferences.md#openaps-smb-settings).
 * İsteğe Bağlı Bilgi:
    
    * Tahminler
@@ -192,19 +192,19 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
    
    Prediction line shows how the BG trajectory line would change if the pump stopped all insulin delivery (0% TBR).
    
-   *This line appears only when the [SMB](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *This line appears only when the [SMB](../SettingUpAaps/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
 * **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB.md#sensitivity-oref1) (un-announced meals)
    
    Bildirilmemiş öğünlerin anlamı, öğün, adrenalin veya diğer etkiler nedeniyle glikoz seviyelerinde önemli bir artışın tespit edilmesidir. Tahmin çizgisi TURUNCU Aktif Karbonhidrat çizgisine benzer, ancak sapmaların sabit bir oranda (mevcut azalma oranını genişleterek) azalacağını varsayar.
    
-   *This line appears only when the [SMB](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *This line appears only when the [SMB](../SettingUpAaps/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
 * ** koyu turuncu ** çizgi: hAKRB (hızlandırılmış karbonhidrat emilimi)
    
    AKRB'e benzer, ancak statik bir 10 mg/dl/5m (-0.555 mmol/l/5m) karbonhidrat emme oranı varsayılır. Kullanımdan kaldırılmış ve sınırlı yararlılık.
    
-   *This line appears only when the older [AMA](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+   *This line appears only when the older [AMA](../SettingUpAaps/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
 Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en çok benzeyen varsayımlarda bulunanın yakınında biter.
 
@@ -238,7 +238,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 * Aktif insülini gösterir (= vücudunuzdaki aktif insülin). Bolus ve geçici bazaldan alınan insülini içerir (**ancak profilinizde ayarlanan bazal oranları hariçtir**).
 * If there were no [SMBs](../Usage/Open-APS-features.md#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
 * Daha uzun bir süre boyunca bolus kalmazsa ve sıfır/düşük geçici bazal devam ederse AİNS negatif olabilir.
-* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder.md#local-profile). 
+* Decaying depends on your [DIA and insulin profile settings](../SettingUpAaps/ConfigBuilder.md#local-profile). 
 
 #### (AKRB) Aktif Karbonhidrat
 
@@ -277,14 +277,14 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
    
    * Pompa bağlantısı kesilirse insülin butonu görünmez.
 
-* Other Buttons have to be setup in [preferences](../Configuration/Preferences.md#buttons).
+* Other Buttons have to be setup in [preferences](../SettingUpAaps/Preferences.md#buttons).
 
 #### İnsülin
 
 ![İnsülin butonu](../images/Home2020_ButtonInsulin.png)
 
 * To give a certain amount of insulin without using [bolus calculator](#bolus-wizard).
-* By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences.md#default-temp-targets).
+* By checking the box you can automatically start your [eating soon temp target](../SettingUpAaps/Preferences.md#default-temp-targets).
 * Pompadan bolus yapmadan sadece insülin miktarını kaydetmek istiyorsanız "Bolusu sadece kayıt altına al" kutusunu işaretleyin.
 
 #### Karbonhidrat
@@ -292,11 +292,11 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 ![Karbonhidrat butonu](../images/Home2020_ButtonCarbs.png)
 
 * Karbonhidratları bolus olmadan kaydetmek için kullanılır.
-* Certain [pre-set temporary targets](../Configuration/Preferences.md#default-temp-targets) can be set directly by checking the box.
+* Certain [pre-set temporary targets](../SettingUpAaps/Preferences.md#default-temp-targets) can be set directly by checking the box.
 * Zaman farkı: Ne zaman karbonhidrat yediniz / yiyeceksiniz (dakika olarak).
 * Süre: ["Yayma karbonhidratlar"](../Usage/Extended-Carbs.md) için kullanılacak
 * Karbonhidrat miktarını hızlı bir şekilde artırmak için butonları kullanabilirsiniz.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences.md#nsclient).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../SettingUpAaps/Preferences.md#nsclient).
 
 #### Hesap makinesi
 
@@ -305,18 +305,18 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 #### Kalibrasyonlar
 
 * xDrip+'a bir kalibrasyon gönderir veya Dexcom kalibrasyon diyalog penceresini açar.
-* Must be activated in [preferences](../Configuration/Preferences.md#buttons).
+* Must be activated in [preferences](../SettingUpAaps/Preferences.md#buttons).
 
 #### CGM
 
 * xDrip+'ı açmak için kullanılır.
 * Geri düğmesi AAPS'e döner.
-* Must be activated in [preferences](../Configuration/Preferences.md#buttons).
+* Must be activated in [preferences](../SettingUpAaps/Preferences.md#buttons).
 
 #### Hızlı Asistan
 
 * Karbonhidrat miktarını kolayca girin ve temel hesaplamaları ayarlayın.
-* Details are setup in [preferences](../Configuration/Preferences.md#quick-wizard).
+* Details are setup in [preferences](../SettingUpAaps/Preferences.md#quick-wizard).
 
 ## Bolus Sihirbazı
 
@@ -341,7 +341,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 ### Bölüm J
 
-* SÜPER BOLUS, sonraki iki saat için bazal insülinin bolusa ilave edildiği ve sıfır GBO olacak sonraki iki saati telafi etmek için kullanılır. The option only shows when "Enable [superbolus](../Configuration/Preferences.md#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences.md#overview).
+* SÜPER BOLUS, sonraki iki saat için bazal insülinin bolusa ilave edildiği ve sıfır GBO olacak sonraki iki saati telafi etmek için kullanılır. The option only shows when "Enable [superbolus](../SettingUpAaps/Preferences.md#superbolus) in wizard" is set in the [preferences overview](../SettingUpAaps/Preferences.md#overview).
 * Buradaki ana fikir, bazal insülini erkenden vererek ani artışları azaltmaktır.
 * Ayrıntılar için [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) adresini ziyaret edin.
 
@@ -349,7 +349,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 * Hesaplanan bolusu gösterir. 
 * Aktif insülin miktarı hesaplanan bolusu aşarsa, o zaman sadece gerekli olan karbonhidrat miktarını gösterecektir.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences.md#nsclient).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../SettingUpAaps/Preferences.md#nsclient).
 
 ### Bölüm L
 
@@ -402,7 +402,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
    * kanül yaşı
    * pompa pil yaşı & seviyesi (yüzdelik bazda
 
-* Less information will be shown if [low resolution skin](../Configuration/Preferences.md#skin) is used.
+* Less information will be shown if [low resolution skin](../SettingUpAaps/Preferences.md#skin) is used.
 
 (Screenshots-sensor-level-battery)=
 
@@ -410,7 +410,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 * xDrip+'ın güncel veya en eski 10 Aralık 2020 sürümü gerekiyor.
 * Libre sensör için MiaoMiao 2 gibi ek verici ile CGM gibi çalışır. (Teknik olarak sensör pil seviyesi bilgilerini xDrip+'a göndermesi gerekir.)
-* Thresholds can be set in [preferences](../Configuration/Preferences.md#status-lights).
+* Thresholds can be set in [preferences](../SettingUpAaps/Preferences.md#status-lights).
 * Sensör seviyesi, telefonun pil seviyesiyle aynıysa, xDrip+ sürümünüz muhtemelen çok eskidir ve güncellenmesi gerekir.
    
    ![Sensör seviyeleri telefonun pil seviyesine eşit](../images/Home2021_ActionSensorBat.png)
@@ -443,7 +443,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 ![İnsülin Profili](../images/Screenshot_insulin_profile.png)
 
-* This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder.md#insulin). 
+* This shows the activity profile of the insulin you have chosen in [config builder](../SettingUpAaps/ConfigBuilder.md#insulin). 
 * MOR çizgi zamanla bozulduğu için enjekte edildikten sonra ne kadar insülin kaldığını, MAVİ çizgi ise ne kadar aktif olduğunu gösterir.
 * Sürecin genel olarak varsayıldığından çok daha uzun sürdüğünü not etmek önemlidir. 
 * Pompa ile elle bolus gönderiyorsanız, muhtemelen insülinin yaklaşık 3.5 saat içinde azaldığını varsayıyorsunuz. 
@@ -497,7 +497,7 @@ Tedavi sekmesi, hatalı karbonhidrat girişlerini düzeltmek için kullanılabil
 
 * Bu sekmeler, algoritmanın hesaplamaları ve AAPS'nin neden böyle davrandığı hakkında ayrıntıları gösterir.
 * Sistemin CGM'den yeni bir okuma aldığı her sefer yeniden hesaplama yapılır.
-* For more details see [APS section on config builder page](../Configuration/Config-Builder.md#aps).
+* For more details see [APS section on config builder page](../SettingUpAaps/ConfigBuilder.md#aps).
 
 ## Profil
 
@@ -536,5 +536,5 @@ Aşağıdaki tedavilerin geçmişini görüntüler:
 ![NSClient](../images/Screenshots_NSClient.png)
 
 * Nightscout sitenizle bağlantının durumunu görüntüler.
-* Settings are made in [preferences](../Configuration/Preferences.md#nsclient). Ekranın sağ üst köşesindeki dişli çarka tıklayarak ilgili bölümü açabilirsiniz.
+* Settings are made in [preferences](../SettingUpAaps/Preferences.md#nsclient). Ekranın sağ üst köşesindeki dişli çarka tıklayarak ilgili bölümü açabilirsiniz.
 * Sorun giderme için bu [sayfaya](../Usage/Troubleshooting-NSClient.md) bakın.

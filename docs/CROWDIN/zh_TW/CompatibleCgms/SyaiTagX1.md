@@ -6,4 +6,4 @@
 
 - Start X1 傳感器
 
-- 選擇 Syai Tag 在 [組態建置工具, 血糖來源](../Configuration/Config-Builder.md#bg-source).
+- Select Syai Tag in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).

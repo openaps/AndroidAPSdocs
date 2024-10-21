@@ -8,7 +8,7 @@
 
 - 更新後檢查血糖資料來源是否正確。
 - Especially when using [xDrip+](../CompatibleCgms/xDrip.md) it might happen, that BG source is changed to Dexcom app (patched).
-- Open [Config builder](../Configuration/Config-Builder.md#bg-source) (hamburger menu on top left side of home screen)
+- Open [Config builder](../SettingUpAaps/ConfigBuilder.md#bg-source) (hamburger menu on top left side of home screen)
 - 向下滾動至「血糖資料來源」。
 - 如果需要，請選擇正確的血糖資料來源。
 
@@ -17,8 +17,8 @@
 ## 完成考試
 
 - AAPS 2.7 包含新的目標 11（在後來的版本中重新編號為目標 10），用於[自動化](../Usage/Automation.md)。
-- You have to finish exam ([objective 3 and 4](../Usage/completing-the-objectives.md#objective-3-prove-your-knowledge)) in order to complete [objective 11](../Usage/completing-the-objectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-senstivity-plugin-dynisf).
-- If for example you did not finish the exam in [objective 3](../Usage/completing-the-objectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../Usage/completing-the-objectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-senstivity-plugin-dynisf).
+- You have to finish exam ([objective 3 and 4](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge)) in order to complete [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-senstivity-plugin-dynisf).
+- If for example you did not finish the exam in [objective 3](../SettingUpAaps/CompletingTheObjectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../SettingUpAaps/CompletingTheObjectives.md#objective-11-enabling-additional-features-for-daytime-use-such-as-dynamic-senstivity-plugin-dynisf).
 - 這不會影響你已完成的其他目標。 你將保留所有已完成的目標！
 
 ## 設置主密碼

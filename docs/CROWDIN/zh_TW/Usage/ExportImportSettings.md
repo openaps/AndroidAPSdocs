@@ -44,11 +44,11 @@ _如果你是使用相同金鑰庫建置的 APK 更新 AAPS，則不需要按照
 
 如果你在丟失或更換原金鑰庫後更新 AAPS（例如在未傳輸金鑰庫的情況下使用新電腦建置），請確保根據上述方法備份所有設定，然後在手機上卸載現有版本的 AAPS。
 
-If needed, [setup your CGM/BG source receiver](../Configuration/BG-Source.md) prior to the steps listed below
+If needed, [setup your CGM/BG source receiver](../Getting-Started/CompatiblesCgms.md) prior to the steps listed below
 
 _Omnipod 用戶：_ 如果在不同的幫浦活動期間匯出偏好設定檔案，匯入該檔案將會停用目前幫浦。
 
-1 - Using the back-up copy of your APK from above, follow the instructions for a [new installation](../Installing-AndroidAPS/Transferring-and-installing-AAPS.md)
+1 - Using the back-up copy of your APK from above, follow the instructions for a [new installation](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
 2 - 啟動 AAPS 並允許任何請求的權限。
 

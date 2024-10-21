@@ -6,7 +6,7 @@ Gewusst wie: Um die FAQ zu ergänzen, folge diesen [Anweisungen](../make-a-PR.md
 
 ## Kann ich die AAPS Installationsdatei (apk) einfach herunterladen?
 
-Leider nein. Es gibt keine apk-Datei für AAPS, die einfach heruntergeladen werden kann. You have to [build](../Installing-AndroidAPS/building-AAPS.md) it yourself. Das hat einen einfachen Grund:
+Leider nein. Es gibt keine apk-Datei für AAPS, die einfach heruntergeladen werden kann. You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. Das hat einen einfachen Grund:
 
 Mit AAPS steuerst Du Deine Pumpe und deren Insulinabgabe. Nach den aktuellen EU-Regeln erfordern alle Medizinprodukte der Klassen IIa oder IIb eine Zulassung (CE Kennzeichnung), die wiederrum verschiedene Studien und abschließende Freigaben erfordern. Der Vertrieb eines nicht zertifizierten Geräts ist illegal. Ähnliche Regelungen existieren in anderen Teilen der Welt.
 
@@ -67,7 +67,7 @@ Zunächst musst du natürlich dieselbe Notfall-Ausrüstung mitnehmen wie jeder a
 
 - Powerbar und Kabel, um bei Bedarf Dein Smartphone, Deine Uhr und ggf. Dein Bluetooth Reader laden zu können.
 - Pumpenbatterien
-- Current [apk](../Installing-AndroidAPS/building-AAPS.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Usage/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## Wie kann ich den CGM/FGM sicher und zuverlässig befestigen?
 

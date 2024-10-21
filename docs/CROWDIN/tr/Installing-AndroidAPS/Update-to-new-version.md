@@ -67,13 +67,13 @@ See the [Export & import settings](../Usage/ExportImportSettings.md) page if you
 
 ## 3. İmzalı APK'yı Derleyin
 
-Kaynak kodunuz artık yayınlanan güncel sürümdür. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/building-AAPS.md#build-the-aaps-signed-apk).
+Kaynak kodunuz artık yayınlanan güncel sürümdür. It's time to build the signed apk from it as described in the [build signed apk section](../SettingUpAaps/BuildingAaps.md#build-the-aaps-signed-apk).
 
 ## 4. Apk dosyasını aktarma
 
 Yükleyebilmeniz için apk'yı telefonunuza aktarmanız gerekir.
 
-See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Transferring-and-installing-AAPS.md)
+See the instructions for [Transfer APK to smartphone](../SettingUpAaps/TransferringAndInstallingAaps.md)
 
 ## 5. Apk dosyasını kurun
 

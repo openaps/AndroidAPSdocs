@@ -109,11 +109,11 @@ Nightscout est une application Web open source qui peut enregistrer et afficher 
 
 Nightscout est indépendant des autres modules. Vous en aurez besoin pour réaliser l'objectif 1.
 
-Des informations supplémentaires sur la configuration de Nightscout pour l'utiliser avec AAPS peuvent être trouvées [ici](../Installing-AndroidAPS/Nightscout.md).
+Additional information on how to configure Nightscout for use with AAPS can be found [here](../SettingUpAaps/Nightscout.md).
 
 ### Fichier apk de AAPS
 
-Le composant de base du système. Avant d'installer l'application, vous devez d'abord construire le fichier apk (qui est l'extension pour une application Android). Instructions are  [here](../Installing-AndroidAPS/building-AAPS.md).
+Le composant de base du système. Avant d'installer l'application, vous devez d'abord construire le fichier apk (qui est l'extension pour une application Android). Instructions are  [here](../SettingUpAaps/BuildingAaps.md).
 
 ## Composants optionnels
 
@@ -137,4 +137,4 @@ Il faut parfois un certain temps pour pouvoir activer tous les composants pour f
 
 Vous pouvez continuer à lire la documentation ici présente, entrer en contact avec d'autres boucleurs en ligne ou hors ligne, [lire les documentations](../Where-To-Go-For-Help/Background-reading.md) ou ce que d'autres boucleurs ont écrits (vous devez toutefois rester prudent, tout n'est pas correct ou adapté à votre situation).
 
-**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/completing-the-objectives.md) before each new Objective and setup up your [hardware](index-component-setup).
+**Done?** If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../SettingUpAaps/CompletingTheObjectives.md) before each new Objective and setup up your [hardware](index-component-setup).

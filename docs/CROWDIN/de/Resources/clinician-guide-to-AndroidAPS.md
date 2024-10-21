@@ -9,8 +9,8 @@ Dieser Leitfaden enthält einige wichtige Informationen über DIY Closed Looping
 Um mit AAPS zu beginnen, sollten folgende Schritte unternommen werden:
 
 * Find a [compatible pump](../Getting-Started/CompatiblePumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Getting-Started/CompatiblesCgms.md).
-* [Download the AAPS source code and build the software](../Installing-AndroidAPS/building-AAPS.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../Installing-AndroidAPS/setup-wizard.md).
+* [Download the AAPS source code and build the software](../SettingUpAaps/BuildingAaps.md).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../SettingUpAaps/SetupWizard.md).
 
 ## Wie ein DIY Closed Loop funktioniert
 

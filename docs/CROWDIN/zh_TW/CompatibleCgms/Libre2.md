@@ -34,7 +34,7 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 - 請按照 [這些指示](https://www.minimallooper.com/post/how-to-setup-freestyle-libre-2-and-oop2-to-use-a-native-bluetooth-connection-in-xdrip) 設定 xDrip+，但請確保下載 [此最新版 OOP2](https://drive.google.com/file/d/1f1VHW2I8w7Xe3kSQqdaY3kihPLs47ILS/view)，因為文件中的版本已過時。
 - Follow setup instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
 
--   在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
 
 ## 3. 使用 Diabox
 
@@ -42,7 +42,7 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 
 ![Diabox](../images/Diabox.png)
 
-- 在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
+- Select xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
 
 ## 4. 使用 Juggluco
 
@@ -52,7 +52,7 @@ xDrip+ 不支援直接連接到 Libre 2 美國和澳洲版本。
 
 ![Juggluco 廣播至 AAPS](../images/Juggluco_AAPS.png)
 
-- 在[組態建置工具的血糖來源](../Configuration/Config-Builder.md#bg-source)中選擇 xDrip+。
+- Select xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
 
 ```{admonition} Use with xDrip+
 :class: note

@@ -24,7 +24,7 @@
 -   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](#if-using-g6-with-build-your-own-dexcom-app) (only G6) with local broadcast to xDrip+.
 -   You can also use xDrip+ as a companion app of the official Dexcom app, but you might experience delays in BG readings.
 -   If not already set up, download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow the instructions on [xDrip+ settings page](../CompatibleCgms/xDrip.md).
--   Select xDrip+ in in [ConfigBuilder, BG Source](../Configuration/Config-Builder.md#bg-source).
+-   Select xDrip+ in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
 
 - Adjust settings in xDrip+ according to [xDrip+ settings page](../CompatibleCgms/xDrip.md)
 
@@ -44,7 +44,7 @@
 
 ### Настройки для AAPS
 
--   В [Конфигураторе, Источник СК](../Configuration/Config-Builder.md#bg-source) выберите "Самостоятельно собранное приложение Dexcom".
+-   Select 'Dexcom App (patched)' in in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
 
 -   Если данные не поступают, выберите любой другой источник данных, а затем снова выберите 'приложение Dexcom (модифицированное)', чтобы запустить запросы разрешений на установление соединения между AAPS и самостоятельно собранным приложением Dexcom.
 
