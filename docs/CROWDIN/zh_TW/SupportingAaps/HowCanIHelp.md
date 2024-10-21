@@ -15,7 +15,7 @@
 太好了，這是非常受到歡迎的事，也是報答社群的好方式！
 
 * 關於 Wiki 的 Discord 頻道可以在這裡找到：[AndroidAPS](https://discord.gg/4fQUWHZ4Mw)。 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../SupportingAaps/HowToEditTheDocs.md). 其他語言僅從英文翻譯，出於一致性原因，無法進行編輯。
+* 有關如何在英文 wiki 中進行提交的指南可以在這裡找到：[如何製作 PR](../SupportingAaps/HowToEditTheDocs.md)。 其他語言僅從英文翻譯，出於一致性原因，無法進行編輯。
 
 ## 我會多種語言，想翻譯應用程式或文件
 
@@ -23,7 +23,7 @@
 
 你也可以同時或稍後開始翻譯文件。
 
-You can check the state of translations for the languages app and documentation [here](StateOfTranslations).
+您可以在[這裡](StateOfTranslations)檢查應用程式和文件的翻譯狀態。
 
 * 如果你想將**應用程式**翻譯成其他語言（感謝你的幫助），請使用 [Crowdin](https://crowdin.com/project/androidaps)。
 * 如果你想將**文件**翻譯成其他語言（感謝你的幫助），請使用 [Crowdin](https://crowdin.com/project/androidapsdocs)。 
