@@ -40,7 +40,7 @@
 - Время установки сенсора CGM теперь находится на вкладке действий / меню.
 - Все другие функции из этого раздела были удалены. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs--bolus) on this page).
 
-## Помпа
+## Pump
 
 ![Careportal Pump](../images/Careportal_25_26_4_IIb.png)
 
