@@ -25,7 +25,7 @@
 * **相容的 Android 手機** 需具備 BLE 藍牙連線
    -  並非所有手機硬體和 Android 版本都能保證工作。 請檢查 [**DASH 測試過的手機**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)，或直接使用你的手機進行嘗試，並告訴我們結果（手機參考資料和地理區域、Android 版本、是否正常運作/有部份問題/無法運作）。
    - **重要提示：使用舊版韌體 3.XX.X 的 Pod 時，曾有多起永久、不可恢復的連線損失案例。 使用這些舊 Pod 時請小心，尤其是當其他藍牙裝置連線到你的手機時！** 請注意，AAPS Omnipod Dash 驅動程式每次發送指令時都會透過藍牙連線到 Dash POD，並在隨後立即中斷連線。 藍牙連線可能會受到連線到運作 AAPS 手機的其他裝置（例如耳機等）的干擾（在某些手機型號中，這可能會導致連線問題或 Pod 註冊期間或之後的錯誤/遺失），或者被他們干擾。
-   -  **Version 3.0 or newer of AAPS built and installed** using the [**Build APK**](../SettingUpAaps/BuildingAaps.md) instructions.
+   -  **使用[**Build APK**](../SettingUpAaps/BuildingAaps.md)指示構建和安裝的 AAPS 版本 3.0 或更高版本**。
 * [**連續血糖監測儀（CGM）**](../Getting-Started/CompatiblesCgms.md)
 
 這些說明假設你正在開始新的幫浦使用。如果不是這樣，請耐心等待，並在下一次更換幫浦時再進行。
@@ -64,7 +64,7 @@
 
 選擇**設置齒輪（3）**旁的**複選框（4）**，將允許 DASH 選單作為 AAPS 介面中的一個標籤顯示，標題為**DASH**。 勾選此框將有助於你在使用 AAPS 時查看 DASH 指令。
 
-**NOTE:** A faster way to access the [**Dash settings**](#dash-settings) can be found below in the Dash settings section of this document.
+**注意：**可以在本文件的 Dash 設定部分找到更快速訪問[**Dash 設定**](#dash-settings)的方法。
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
@@ -130,11 +130,11 @@
 
     點擊手機上的返回按鈕，返回到 **DASH** 標籤畫面，該畫面現在會顯示你的啟用 Pod 的資訊，包括目前基礎率、Pod 儲液量、輸送的胰島素、Pod 錯誤和警報。
 
-    For more details on the information displayed go to the [**DASH Tab**](#dash-tab) section of this document.
+    有關顯示的信息的更多詳細資訊，請轉到本文件的[**DASH 標籤**](#dash-tab)部分。
 
 ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-在註冊 Pod 後匯出設置是一個好習慣。 每次更換 Pod 時都應執行此操作，每月一次，將匯出的文件複製到你的網路磁碟。 see [**Export settings Doc**](../Maintenance/ExportImportSettings.md).
+在註冊 Pod 後匯出設置是一個好習慣。 每次更換 Pod 時都應執行此操作，每月一次，將匯出的文件複製到你的網路磁碟。 請見[**匯出設定文檔**](../Maintenance/ExportImportSettings.md)。
 
 
 (OmnipodDASH-deactivate-pod)=
@@ -169,7 +169,7 @@
 
 ### 恢復胰島素輸送
 
-**注意**：在切換設定檔期間，Dash 必須暫停輸送，然後設置新的基礎率設定檔。 如果兩個指令之間的通訊失敗，則可能會暫停輸送。 Read [**Delivery suspended**](#delivery-suspended) in the troubleshooting section for more details.
+**注意**：在切換設定檔期間，Dash 必須暫停輸送，然後設置新的基礎率設定檔。 如果兩個指令之間的通訊失敗，則可能會暫停輸送。 在故障排除部分閱讀[**暫停交付**](#delivery-suspended)以獲取更多詳細資訊。
 
 使用此指令指示目前暫停的活動 Pod 恢復胰島素輸送。 指令成功處理後，胰島素將根據目前時間並使用活動基礎率設定檔恢復正常輸送。 Pod 將再次接受注射、TBR 和 SMB 的指令。
 
@@ -260,7 +260,7 @@
 
 * **儲液量：** 當儲液量超過 50 單位時顯示 50+ 單位。 當儲液量低於 50 單位時，顯示確切的單位數。
 * **總輸送量：** 顯示從儲液中輸送的胰島素總單位數。 這包含已使用和排空的胰島素。
-* **錯誤：** 顯示遇到的最後一個錯誤。 Review the [Pod history](#view-pod-history) and log files for past errors and more detailed information.
+* **錯誤：** 顯示遇到的最後一個錯誤。 檢查[Pod 歷史](#view-pod-history)和日誌檔案以獲取過去錯誤的詳細資訊和更多信息。
 *  **啟用 Pod 警報：** 保留目前啟用 Pod 上運作的警報。
 
 ### 按鈕
@@ -284,10 +284,10 @@
 
 以下是按下 **POD 管理 (0)** 按鈕從 **DASH** 標籤查看的 **Pod 管理** 選單中的圖示含義。 ![DASH_Tab_2](../images/DASH_images/DASH_Tab/DASH_Tab_2.png) ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
-* 1 - [**Activate Pod**](#activate-pod) : Primes and activates a new pod.
-* 2 - [**Deactivate Pod**](#deactivate-pod) : Deactivates the currently active pod.
+* 1 - [**啟動 Pod**](#activate-pod) : 針對新 pod 進行排氣並啟動。
+* 2 - [**停用藥量**](#deactivate-pod) : 停用當前活躍的藥量。
 * 3 - **播放測試嗶聲** ：按下時播放 Pod 的單次測試嗶聲。
-* 4 - [**Pod history**](#view-pod-history) : Displays the active pod activity history.
+* 4 - [**藥量歷史**](#view-pod-history) : 顯示活躍的藥量活動歷史。
 
 (DanaRS-Insulin-Pump-dash-settings)=
 
@@ -361,7 +361,7 @@
   * **SMS** - 短訊回報數值為 50+ 單位。
   * **Nightscout** - 當超過 50 單位時，向 Nightscout 上傳數值為 50（版本 14.07 及更早版本）。  更新版本將在超過 50 單位時報告數值為 50+。
 
-## Troubleshooting
+## 問題排除
 
 (OmnipodDASH-delivery-suspended)=
 
@@ -373,7 +373,7 @@
      - 可能會通知某個指令未確認：這取決於失敗發生的時間。
      - AAPS 將每 15 分鐘嘗試設置新的基礎率設定檔。
      - 如果輸送仍然暫停（恢復輸送失敗），AAPS 將每 15 分鐘發送通知，通知輸送已暫停。
-     - The [**Resume delivery**](#resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
+     - 如果使用者選擇手動重新開始給藥，[**重新開始給藥**](#resuming-insulin-delivery)按鈕將會啟用。
      - 如果 AAPS 自行恢復輸送失敗（這發生在 Pod 無法到達、聲音靜音等情況下），Pod 將每分鐘發出 4 次嗶聲，持續 3 分鐘，然後在輸送暫停超過 20 分鐘後每 15 分鐘重複一次。
   * 對於未確認的指令，「重新整理 Pod 狀態」應能確認/否認他們。
 
@@ -466,5 +466,5 @@ Omnipod DASH 驅動程式的所有開發工作都是由社群志願者完成的�
 
 -  **等級 0：** 閱讀此文件的相關部分，以確保你了解遇到困難的功能應如何工作。
 -  **等級 1：** 如果你仍然遇到無法解決的問題，請使用[此邀請鏈接](https://discord.gg/4fQUWHZ4Mw)進入**Discord**的*#AAPS* 頻道。
--  **等級 2：** 搜尋現有問題，以查看你的問題是否已被報告，請在[問題](https://github.com/nightscout/AndroidAPS/issues)中確認/評論/添加有關你的問題的訊息。 If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../GettingHelp/AccessingLogFiles.md).
+-  **等級 2：** 搜尋現有問題，以查看你的問題是否已被報告，請在[問題](https://github.com/nightscout/AndroidAPS/issues)中確認/評論/添加有關你的問題的訊息。 如果沒有，請創建一個[新問題](https://github.com/nightscout/AndroidAPS/issues)並附上[您的日誌文件](../GettingHelp/AccessingLogFiles.md)。
 -  **保持耐心——我們社群中的大多數成員都是善良的志願者，解決問題通常需要使用者和開發者雙方的時間和耐心。**
