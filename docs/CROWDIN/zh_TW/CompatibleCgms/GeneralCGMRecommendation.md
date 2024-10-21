@@ -17,7 +17,7 @@
 
 設置傳感器後，傳輸器可以卡入傳感器座。 警告！ 先按下方形的一側，然後按下圓形的一側。
 
-## 問題排除
+## Troubleshooting
 
 ### 連線問題
 
@@ -37,4 +37,4 @@
 
 ![負傳感器年齡](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../Getting-Started/Screenshots.md#action-tab) or a sensor insert with wrong date. 轉到治療選項卡 > 照護入口並刪除錯誤的條目。
+This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../DailyLifeWithAaps/AapsScreens.md#action-tab) or a sensor insert with wrong date. 轉到治療選項卡 > 照護入口並刪除錯誤的條目。
