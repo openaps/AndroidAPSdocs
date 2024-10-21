@@ -4,7 +4,7 @@
 
 某些 CGM 系統內建算法來偵測讀取值中的干擾，**AAPS** 可以利用此資訊避免在血糖資料過於不可靠時給予 SMB 劑量。 然而，部分 CGM 不會傳送此資料，對於這些血糖來源，「始終啟用 SMB」和「碳水化合物後啟用 SMB」會為了安全起見被停用。
 
-此外，從 **AAPS** 3.2 版本開始，**AAPS** 提供選項在 **AAPS** 內平滑資料，而非在 CGM 應用程式內處理。 There are three options available in the [Config Builder](../SettingUpAaps/ConfigBuilder.md).
+此外，從 **AAPS** 3.2 版本開始，**AAPS** 提供選項在 **AAPS** 內平滑資料，而非在 CGM 應用程式內處理。 在[配置生成器](../SettingUpAaps/ConfigBuilder.md)中有三個可用的選項。
 
 ![平滑處理](../images/ConfBuild_Smoothing.png)
 
