@@ -6,4 +6,4 @@
 
 - Start X1 傳感器
 
-- Select Syai Tag in [ConfigBuilder, BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source).
+- 在 [ConfigBuilder，BG Source](../SettingUpAaps/ConfigBuilder.md#bg-source) 中選擇 Syai Tag。
