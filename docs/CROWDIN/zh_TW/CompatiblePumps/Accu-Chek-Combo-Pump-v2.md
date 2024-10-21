@@ -8,7 +8,7 @@
 
 * 一台 Roche Accu-Chek Combo 幫浦（任何韌體版本均可使用）。
 * 一個 Smartpix 或 Realtyme 裝置，配合 360 設定軟體來配置幫浦。 （Roche 在客戶要求下會免費寄送 Smartpix 裝置和設定軟體。）
-* 一台相容的手機。 至少需要 Android 9（Pie）或更新版本。 如果使用 LineageOS，最低支援版本為 16.1。 See [release notes](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) for details.
+* 一台相容的手機。 至少需要 Android 9（Pie）或更新版本。 如果使用 LineageOS，最低支援版本為 16.1。 請參閱 [發行說明](../Maintenance/ReleaseNotes.md#android-version-and-aaps-version) 以獲取詳細信息。
 * 手機上安裝了 AndroidAPS 應用程式。
 
 根據手機的藍牙支援品質及其是否具備額外的省電邏輯，有些手機可能比其他手機運作得更好。 可以在[AAPS 手機列表](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit)文件中找到相容手機。 請注意，這不是完整的列表，只反應個人使用經驗。 我們鼓勵你也分享你的經驗，這樣可以幫助其他人（這些專案是關於傳遞經驗）。
@@ -20,7 +20,7 @@
 
 請注意以下限制：
 
-* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../DailyLifeWithAaps/ExtendedCarbs.md) instead).
+* 目前不支援擴展注射和多波注射 (您可以使用 [擴展碳水化合物](../DailyLifeWithAaps/ExtendedCarbs.md) 作為替代)。
 * 僅支援一個基礎設定檔（第一個）。
 * 如果幫浦上的目前活動設定檔不是設定檔 1，則循環模式將被停用。 這種情況會持續到設定檔 1 被設為活動檔案；當這樣做後，下一次 AAPS 連線時（無論是自動還是因為用戶在 combov2 用戶介面中按下了重新整理按鈕），他會注意到設定檔 1 是目前的活動檔案，並重新啟用循環模式。
 * 如果循環請求取消正在運作的 TBR，Combo 將設置一個 90% 或 110% 的 TBR，持續 15 分鐘。 這是因為實際取消 TBR 會在幫浦上觸發警報，並產生大量震動，這些震動無法停用。
@@ -94,7 +94,7 @@
 
 ## 註冊驅動並將其與 Combo 配對
 
-* Select the "Accu-Chek Combo" driver in the [Config builder](../SettingUpAaps/ConfigBuilder.md). **重要提示**：名單中也有舊驅動，稱為 "Accu-Chek Combo (Ruffy)"。 請 _不要_ 選擇那個。
+* 在[配置建構器](../SettingUpAaps/ConfigBuilder.md)中選擇 "Accu-Chek Combo" 驅動程序。 **重要提示**：名單中也有舊驅動，稱為 "Accu-Chek Combo (Ruffy)"。 請 _不要_ 選擇那個。
 
   ![Config Builder Combo 截圖](../images/combo/combov2-config-builder.png)
 
@@ -163,7 +163,7 @@ Combo 可以在 _遠端終端_ 模式或 _指令_ 模式下透過藍牙操作。
 
 （用戶不影響這一點；驅動完全自主決定使用何種模式。這僅是為了讓用戶知道為什麼有時可以在該欄位中看到 Combo 畫面。） 最底部有一個 「重新整理」 按鈕。
 
-這會觸發幫浦狀態的即時更新。 他也用於告訴 AAPS 之前發現的錯誤現在已修復，可以讓 AAPS 再次檢查一切是否正常（更多相關訊息請參閱 [警報部分](combov2-alerts)）。 It also is used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](#alerts-warnings-and-errors-and-how-they-are-handled)).
+這會觸發幫浦狀態的即時更新。 他也用於告訴 AAPS 之前發現的錯誤現在已修復，可以讓 AAPS 再次檢查一切是否正常（更多相關訊息請參閱 [警報部分](combov2-alerts)）。 他還用於讓AAPS知道之前發現的錯誤已修復，並且AAPS可以再次檢查一切是否正常（更多內容請參閱[關於警報的部分](#alerts-warnings-and-errors-and-how-they-are-handled)）。
 
 ## 偏好設定
 
@@ -174,8 +174,8 @@ Combo 可以在 _遠端終端_ 模式或 _指令_ 模式下透過藍牙操作。
 1. _與幫浦配對_：這是一個可以按下的按鈕，用於與 Combo 配對。 如果已經配對了幫浦，他將無法使用。
 2. _取消幫浦配對_：取消配對已配對的 Combo；與項目1相反。 如果沒有已配對的幫浦，他將無法使用。
 3. _發現持續時間（以秒為單位）_：配對時，驅動會使手機對幫浦可見。 這控制了這種可見性持續多久。 預設選擇最大值（300 秒 = 5 分鐘）。 Android 不允許可見性無限期持續，因此必須選擇一個持續時間。
-4. _自動偵測並自動輸入胰島素儲存庫變更_：如果啟用，通常透過 Action 標籤中的 "注射/填充" 按鈕由用戶完成的 "儲存庫變更" 操作。 This is explained [in further detail below](#autodetecting-and-automatically-entering-battery-and-reservoir-changes).
-5. _自動偵測並自動輸入電池更換_：如果啟用，通常由用戶透過 Action 標籤中的 "幫浦電池變更" 按鈕完成的 "電池更換" 操作。 This is explained [in further detail below](#autodetecting-and-automatically-entering-battery-and-reservoir-changes).
+4. _自動偵測並自動輸入胰島素儲存庫變更_：如果啟用，通常透過 Action 標籤中的 "注射/填充" 按鈕由用戶完成的 "儲存庫變更" 操作。 這在[下面進一步詳細說明](#autodetecting-and-automatically-entering-battery-and-reservoir-changes)。
+5. _自動偵測並自動輸入電池更換_：如果啟用，通常由用戶透過 Action 標籤中的 "幫浦電池變更" 按鈕完成的 "電池更換" 操作。 這在[下面進一步詳細說明](#autodetecting-and-automatically-entering-battery-and-reservoir-changes)。
 6. _啟用詳細 Combo 日誌記錄_：這大大擴展了驅動記錄的日誌數量。 **注意**：除非開發人員要求，否則不要啟用此功能。 否則，這會增加大量的噪音到 AndroidAPS 日誌中，減少他們的實用性。
 
 大多數用戶只使用頂部兩個項目，即 _與幫浦配對_ 和 _取消幫浦配對_ 按鈕。
@@ -200,7 +200,7 @@ Combo 以遠端終端螢幕的形式顯示警報。 警告會顯示一個“Wx�
 - W2 “電池低”：驅動程式會將其轉為顯示於 AAPS 主標籤上的“電池低”警告
 - W3、W6、W7、W8：這些僅供用戶參考資訊，驅動程式會自動消除他們，因此是安全的
 
-其他警告 _不會_ 被自動消除。 此外，錯誤 _絕不_ 會被自動消除。 這兩者都是以相同方式處理：他們會導致驅動程式在 AAPS 介面上顯示警報對話框，並中止任何正在執行的指令。 The driver then switches to the "error" state (see [the Accu-Chek Combo tab contents description above](#accu-chek-combo-tab-contents)). 此狀態不允許任何指令執行。 用戶需要在幫浦上處理錯誤；例如，阻塞錯誤可能需要更換套管。 用戶處理好錯誤後，按下 Accu-Chek Combo 標籤上的“重新整理”按鈕即可恢復正常操作。 然後驅動程式會連線到 Combo 並更新其狀態，檢查畫面上是否仍顯示錯誤等。 此外，驅動程式會在稍後自動重新整理幫浦狀態，因此手動按該按鈕並非必要。
+其他警告 _不會_ 被自動消除。 此外，錯誤 _絕不_ 會被自動消除。 這兩者都是以相同方式處理：他們會導致驅動程式在 AAPS 介面上顯示警報對話框，並中止任何正在執行的指令。 驅動程式會切換到“錯誤”狀態（詳見 [上述 Accu-Chek Combo 標籤內容描述](#accu-chek-combo-tab-contents)）。 此狀態不允許任何指令執行。 用戶需要在幫浦上處理錯誤；例如，阻塞錯誤可能需要更換套管。 用戶處理好錯誤後，按下 Accu-Chek Combo 標籤上的“重新整理”按鈕即可恢復正常操作。 然後驅動程式會連線到 Combo 並更新其狀態，檢查畫面上是否仍顯示錯誤等。 此外，驅動程式會在稍後自動重新整理幫浦狀態，因此手動按該按鈕並非必要。
 
 注射是一個特殊案例。 他在 Combo 的指令模式下執行，此模式下不會在中途報告出現的警報。 因此，驅動程式無法在注射期間自動消除警告。 這意味著不幸的是，幫浦在注射完成之前會一直發出哔哔聲。 最常見的中途警報通常是 W1“儲液槽低”。 **不要** 在注射期間手動取消幫浦上的 Comnbo 警告。 這會有中斷注射的風險。 注射結束後驅動程式會處理警告。
 
@@ -213,8 +213,8 @@ Combo 以遠端終端螢幕的形式顯示警報。 警告會顯示一個“Wx�
 * 請記住這不是一個產品，特別是在初期，使用者需要監控並暸解系統、其限制以及可能出現的故障方式。 強烈建議不要在不充分瞭解系統的人使用該系統時使用他。
 * 由於 Combo 的遠端控制功能運作方式，幾個操作（特別是設定基礎設定檔）相比其他幫浦較慢。 這是 Combo 無法克服的不便限制。
 * 不要在幫浦上設置或取消 TBR。 循環假設他控制 TBR，否則系統無法可靠工作，因為無法確定用戶在幫浦上設定 TBR 的開始時間。
-* 當 AAPS 與幫浦進行通訊時（幫浦上顯示藍牙標誌時），請不要按任何按鈕。 這樣做會中斷藍牙連線。 Only do that if there are problems with establishing a connection (see [the "Before you begin" section above](#before-you-begin)).
-* 在幫浦注射時請不要按任何按鈕。 特別是，不要嘗試透過按下按鈕來取消警報。 See [the section about alerts](#alerts-warnings-and-errors-and-how-they-are-handled) for a more detailed explanation why.
+* 當 AAPS 與幫浦進行通訊時（幫浦上顯示藍牙標誌時），請不要按任何按鈕。 這樣做會中斷藍牙連線。 只有在建立連線時出現問題時才這樣做 (請參見[上述的 "開始之前" 部分](#before-you-begin))。
+* 在幫浦注射時請不要按任何按鈕。 特別是，不要嘗試透過按下按鈕來取消警報。 請參閱[有關警報的部分](#alerts-warnings-and-errors-and-how-they-are-handled)以獲取更詳細的解釋。
 
 ## 無法建立與 Combo 連線時的檢查清單
 
