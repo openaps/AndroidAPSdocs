@@ -18,7 +18,7 @@ So, please take your time in configuring your loop, the benefits of a well-runni
 
 ```{admonition} Ask for Help
 :class: note
-Pokud narazíte na chybu v dokumentaci nebo máte lepší nápad, jak něco vysvětlit, můžete vždy požádat komunitu o pomoc, jak je popsáno v sekci [Propojení s dalšími uživateli](../Where-To-Go-For-Help/Connect-with-other-users.md).
+If there is an error in the documentation or you have a better idea for how something can be explained, you can ask for help from the community as explained at [Connect with other users](../GettingHelp/WhereCanIGetHelp.md).
 ```
 
 ## Průvodce nastavením AAPS krok za krokem
@@ -326,7 +326,7 @@ Go back and press "NEXT" to go to the next screen:
 
 ![image](../images/setup-wizard/Screenshot_20231202_141958.png)
 
-### Profil
+### Profile
 
 Teď se dostáváme k velmi důležité části Průvodce nastavením.
 
@@ -440,7 +440,7 @@ Klinkněte na tlačítko "DALŠÍ" a přejděte na následující obrazovku:
 
 ![image](../images/setup-wizard/Screenshot_20231202_143935.png)
 
-### Algoritmus APS
+### APS algorithm
 
 Vyberte OpenAPS SMB jako váš APS algoritmus. Bez ohledu na název bude SMB funkce algoritmu vypnutá dokud se s **AAPS** blíže neseznámíte a nepropracujete se počátečními cíli. OpenAPS SMB algoritmus je každopádně novější a obecně lepší než OpenAPS AMA.
 
