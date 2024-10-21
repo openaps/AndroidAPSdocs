@@ -51,7 +51,7 @@
 
 要記錄幫浦在 **AAPS** 斷線期間輸送的胰島素，或者筆式注射輸送的胰島素，請選擇「胰島素」標籤，輸入單位數量並選擇「不進行注射，僅記錄」。 當你選擇此選項時，會出現一個「時間偏移」標籤。 如果注射是最近進行的，你可以忽略這個選項，但如果注射是在一段時間前進行的，你可以在時間前面添加一個負號（例如 -30 分鐘）以記錄實際的注射時間。 **AAPS** 隨後會考慮胰島素作用時間並計算系統中剩餘的胰島素。
 
-If you are using **AAPS** as a careiver, you can remotely disconnect (and reconnect) the pump very easily by [SMS command](../RemoteFeatures/SMSCommands.md) using commands such as “pump disconnect 120” and “pump connect 120”. 遠端斷線的持續時間範圍為 1 - 120 分鐘（此範例為 120 分鐘）。 如果你在不方便使用 **AAPS** 手機時，這將會非常有用，例如手機藏在小孩的幫浦腰帶裡，而他正跑向游泳池，或由青少年保管。
+如果您作為照護者使用 **AAPS**，您可以非常輕鬆地通過 [SMS 指令](../RemoteFeatures/SMSCommands.md) 遠端中斷（和重新連線）幫浦，使用如 “pump disconnect 120” 和 “pump connect 120” 的指令。 遠端斷線的持續時間範圍為 1 - 120 分鐘（此範例為 120 分鐘）。 如果你在不方便使用 **AAPS** 手機時，這將會非常有用，例如手機藏在小孩的幫浦腰帶裡，而他正跑向游泳池，或由青少年保管。
 
 ## 活動後重新連線幫浦
 
