@@ -1,12 +1,12 @@
 # 循環使用者常見問題解答 (FAQ)
 
-How to add questions to the FAQ: Follow the these [instructions](../SupportingAaps/HowToEditTheDocs.md)
+如何將問題添加到 FAQ：按照這些[說明](../SupportingAaps/HowToEditTheDocs.md)進行操作。
 
-## General
+## 一般問題
 
-### Can I just download the AAPS installation file?
+### 我可以直接下載 AAPS 的安裝檔嗎？
 
-不行。 AAPS 沒有可下載的 apk 檔案。 You have to [build](../SettingUpAaps/BuildingAaps.md) it yourself. 原因如下：
+不行。 AAPS 沒有可下載的 apk 檔案。 您必須[自己建立](../SettingUpAaps/BuildingAaps.md)它。 原因如下：
 
 AAPS 用來控制你的幫浦並提供胰島素。 根據歐洲現行法規，所有歸類為 IIa 或 IIb 類的系統都是需要法規批准的醫療設備（需要 CE 標誌），這需要各種研究和簽字確認。 分發未經批准的設備是非法的。 在世界其他地區也有類似的法規。
 
@@ -16,13 +16,13 @@ AAPS 用來控制你的幫浦並提供胰島素。 根據歐洲現行法規，�
 
 (FAQ-how-to-begin)=
 
-### How to begin?
+### 如何開始？
 
 首先，你需要**獲取可循環的硬體元件**：
 
-- A [supported insulin pump](../Getting-Started/CompatiblePumps.md), 
-- an [Android smartphone](../CompatiblePhones/ListOfTestedPhones.md) (Apple iOS is not supported by AAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and
-- a [continuous glucose monitoring system](../Getting-Started/CompatiblesCgms.md). 
+- 一個[支援的胰島素幫浦](../Getting-Started/CompatiblePumps.md)， 
+- 一部[Android 智慧型手機](../CompatiblePhones/ListOfTestedPhones.md)（Apple iOS 未被 AAPS 支援 - 您可以查看[iOS Loop](https://loopkit.github.io/loopdocs/)）以及
+- 一個[持續監測血糖系統](../Getting-Started/CompatiblesCgms.md)。 
 
 其次，你需要**設定你的硬體**。 請參閱[步驟教學的範例設置](Sample-Setup.md)。
 
@@ -30,29 +30,29 @@ AAPS 用來控制你的幫浦並提供胰島素。 根據歐洲現行法規，�
 
 第四，你需要學習並**了解 OpenAPS 參考設計以檢查你的治療參數**。 閉環循環的基本原則是你的基礎率和碳水化合物比率是準確的。 所有建議都假設你的基礎需求已得到滿足，任何峰值或谷底的變化是由其他因素引起的，因此需要一些一次性的調整（如運動、壓力等）。 閉環系統為安全所做的調整是有限的（請參閱[OpenAPS 參考設計](https://openaps.org/reference-design/)中的允許最大臨時基礎率），這意味著你不希望浪費這些劑量來修正錯誤的基礎率。 例如，如果你經常在用餐前臨時降低基礎率，那麼很可能需要調整你的基礎率。 你可以使用[autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig)來考慮大量資料，以建議是否以及如何調整基礎率和/或 ISF，並且是否需要更改碳水化合物比率。 或者，你也可以使用[傳統方法](https://integrateddiabetes.com/basal-testing/)來測試並設定你的基礎率。
 
-### What practicalities of looping do I have?
+### 我有哪些實際的循環考量？
 
-#### Password protection
+#### 密碼保護
 
 如果你不希望輕易更改你的偏好設定，你可以透過選擇偏好選單中的“設定密碼”來對偏好設定選單進行密碼保護，然後輸入你選擇的密碼。 下次進入偏好設定選單時，系統會要求輸入該密碼後才能進行下一步操作。 如果你之後想刪除密碼選項，只需進入“設定密碼”，然後刪除文本即可。
 
-#### Android Wear Smartwatches
+#### Android Wear 智慧型手錶
 
 如果你計劃使用 Android Wear 應用程式進行注射或更改設置，你需要確保不會阻止來自 AAPS 的通知。 操作確認將透過通知來完成。
 
 (FAQ-disconnect-pump)=
 
-#### Disconnect pump
+#### 中斷幫浦連線
 
 如果你因淋浴、沐浴、游泳、運動或其他活動而取下幫浦，你必須讓 AAPS 知道未輸送胰島素，以保持 IOB 的正確性。
 
-The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen](../DailyLifeWithAaps/AapsScreens.md#loop-status).
+可以使用[AAPS 主屏幕](../DailyLifeWithAaps/AapsScreens.md#loop-status)上的循環狀態圖示斷開幫浦。
 
-#### Recommendations not only based on one single CGM reading
+#### 建議不是僅基於單一 CGM 讀取值
 
 為了安全起見，建議是基於平均變化，而非單一 CGM 讀取值。 因此，如果你錯過了一些讀取值，可能需要一段時間在恢復資料後，AAPS 才會重新啟動循環。
 
-#### Further readings
+#### 進一步的讀取值
 
 有幾個部落格提供了幫助你了解循環實際運作的好建議：
 
@@ -61,27 +61,27 @@ The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen
 - [限制餐後血糖飆升](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
 - [荷爾蒙和自動感測](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
-### What emergency equipment is recommended to take with me?
+### 推薦隨身攜帶的應急設備有哪些？
 
 你必須攜帶與其他使用胰島素幫浦療法的 1 型糖尿病患者相同的應急設備。 當使用 AAPS 進行循環時，強烈建議隨身攜帶或將以下額外設備放在身邊：
 
 - 用於為智慧型手機、手錶和（如有需要）BT 閱讀器或 Link 設備充電的行動電源和充電線
 - 幫浦電池
-- Current [apk](../SettingUpAaps/BuildingAaps.md) and [preferences files](../Maintenance/ExportImportSettings.md) for AAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- 當前[apk](../SettingUpAaps/BuildingAaps.md)和[偏好設定檔](../Maintenance/ExportImportSettings.md)用於 AAPS 和您使用的任何其他應用程式（例如 xDrip+、BYO Dexcom），包括本地和雲端（Dropbox、Google Drive）。
 
-### How can I safely and securely attach the CGM/FGM?
+### 如何安全、牢固地安裝 CGM/FGM？
 
 你可以使用膠布固定。 市面上有多種常見 CGM 系統的預穿孔“防護貼片”（可搜索 Google、eBay 或 Amazon）。 一些循環使用者會使用更便宜的標準運動貼布或 Rocktape。
 
 你可以固定他。 你還可以購買上臂護腕，用於透過帶子固定 CGM/FGM（可搜索 Google、eBay 或 Amazon）。
 
-## AAPS settings
+## AAPS 設置
 
 以下列表主要在幫助你優化設置。 最好從頂部開始，依次往下進行。 在更改另一個設置之前，請確保先調整好一個設置。 逐步進行調整，而不是一次性做出大幅更改。 你可以使用 [Autotune](https://autotuneweb.azurewebsites.net/) 來引導你的思路，但不要盲目遵循：他可能並不適合你或所有情況。 請注意，設置之間相互影響——在某些情況下，你可能擁有“錯誤”的設置卻能正常運作（例如，如果過高的基礎率恰好與過高的碳水化合物比率同時存在），但在其他情況下卻無法正常運作。 這意味著你需要考慮所有設置，並檢查他們在不同情況下是否協同工作。
 
-### Duration of insulin activity (DIA)
+### 胰島素活性持續時間（DIA）
 
-#### Description & testing
+#### 描述和測試
 
 胰島素衰減至零所需的時間。
 
@@ -89,7 +89,7 @@ The pump can be disconnected using the Loop Status icon on the [AAPS Home Screen
 
 (FAQ-impact)=
 
-#### Impact
+#### 影響
 
 DIA 設置過短可能會導致低血糖。 反之亦然。
 
@@ -97,9 +97,9 @@ DIA 設置過短可能會導致低血糖。 反之亦然。
 
 DIA 設置過短的例子是高血糖後，AAPS 過度修正，導致低血糖。
 
-### Basal rate schedule (U/h)
+### 基礎率時間表（U/h）
 
-#### Description & testing
+#### 描述和測試
 
 在給定的一小時內保持血糖穩定所需的胰島素量。
 
@@ -107,7 +107,7 @@ DIA 設置過短的例子是高血糖後，AAPS 過度修正，導致低血糖�
 
 如果血糖下降，則基礎率過高。 反之亦然。
 
-#### Impact
+#### 影響
 
 基礎率過高可能會導致低血糖。 反之亦然。
 
@@ -117,9 +117,9 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 
 相反，過低的基礎率可能會導致高血糖，並且無法將水平降低到目標。
 
-### Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
+### 胰島素敏感因子（ISF）（mmol/l/U 或 mg/dl/U）
 
-#### Description & testing
+#### 描述和測試
 
 預計每單位胰島素會降低的血糖值。
 
@@ -129,7 +129,7 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 
 請小心，這一值通常設置得過低。 過低意味著 1 單位的胰島素會使血糖下降得比預期更快。
 
-#### Impact
+#### 影響
 
 **較低的 ISF**（即 40 而非 50）意味著每單位胰島素降低的血糖值較少。 這將導致循環中**更多的胰島素**進行更具攻擊性/強烈的修正。 如果 ISF 設置過低，可能會導致低血糖。
 
@@ -146,9 +146,9 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 
 相反地，若胰島素敏感因子（ISF）設太高，可能會導致修正不足，讓你的血糖維持在目標值以上，這種情況在夜間特別明顯。
 
-### Insulin to carb ratio (IC) (g/U)
+### 胰島素與碳水化合物比率 (IC)（g/U）
 
-#### Description & testing
+#### 描述和測試
 
 每單位胰島素對應的碳水化合物克數。
 
@@ -174,7 +174,7 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 > 
 > 線上可找到轉換表，例如[此處](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf)。
 
-#### Impact
+#### 影響
 
 **較低的 IC** = 每單位胰島素對應較少的食物，即你為固定的碳水化合物量獲得更多的胰島素。 也可以稱為“更具攻擊性”。
 
@@ -182,51 +182,51 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 
 如果餐後碳水化合物消化完畢，IOB 回到零，而你的血糖仍高於用餐前，這很可能是 IC 設置過大。 相反，如果你的血糖低於用餐前，IC 設置可能過小。
 
-## APS algorithm
+## APS 演算法
 
-### Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
+### 為什麼在“OPENAPS AMA”選項卡中顯示 "dia:3"，即使我的設定檔中設定了不同的 DIA？
 
 ![AMA 3 小時](../images/Screenshot_AMA3h.png)
 
 在 AMA 中，DIA 並不代表“胰島素作用的持續時間”。 這是一個參數，曾經與 DIA 相關。 現在，他的意思是“修正應在多長時間內完成”。 他與 IOB 的計算無關。 在 OpenAPS SMB 中，不再需要這個參數。
 
-### Profile
+### 設定檔
 
-#### Why using min. 5h DIA (insulin end time) instead of 2-3h?
+#### 為什麼要使用最少 5 小時的 DIA（胰島素結束時間），而不是 2-3 小時？
 
 這篇文章[詳細解釋了原因](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)。 更改 DIA 後，別忘了點擊`啟用設定檔`。
 
-#### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
+#### 什麼原因導致循環頻繁將我的血糖降至低血糖水平，且無碳水化合物存在？
 
 首先，檢查你的基礎率，並進行無碳水化合物的基礎率測試。 如果基礎率正確，那麼這種情況通常是由於 ISF 過低引起的。 過低的 ISF 通常表現如下：
 
 ![ISF 過低](../images/isf.jpg)
 
-#### What causes high postprandial peaks in closed loop?
+#### 什麼原因導致閉環系統中的餐後高峰？
 
 首先，檢查你的基礎率，並進行無碳水化合物的基礎率測試。 如果基礎率正確，且碳水化合物完全吸收後你的血糖正在下降至目標，請嘗試在餐前一段時間內在 AAPS 中設定“即將用餐”的臨時目標，或與你的內分泌科醫生討論適當的餐前注射時間。 如果用餐後你的血糖仍然過高，且碳水化合物完全吸收後血糖依然過高，請考慮與你的內分泌科醫生討論降低你的 IC。 如果在有碳水化合物的情況下血糖過高，而碳水化合物完全吸收後血糖過低，請考慮與你的內分泌科醫生討論提高你的 IC 以及適當的餐前注射時間。
 
-## Other settings
+## 其他設置
 
-### Nightscout settings
+### Nightscout 設置
 
-#### AAPSClient says 'not allowed' and does not upload data. What can I do?
+#### AAPSClient 顯示“未授權”且無法上傳資料。 我該怎麼做？
 
 在 AAPSClient 中檢查“連線設置”。 可能你不在允許的 WLAN 中，或者你啟用了“僅在充電時”且充電線未接上。
 
-### CGM settings
+### CGM 設置
 
-#### Why does AAPS say 'BG source doesn't support advanced filtering'?
+#### 為什麼 AAPS 顯示“血糖來源不支援進階過濾”？
 
 如果你使用的是 Dexcom G5 或 G6 以外的 CGM/FGM 且在 xDrip 原生模式中運作，你將在 AAPS OpenAPS 選項卡中收到此提示。 詳情請參閱[xDrip 中的血糖資料平滑處理](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)。
 
-### Pump
+### 幫浦
 
-#### Where to place the pump?
+#### 幫浦應該放在哪裡？
 
 有無數種放置幫浦的方法。 不論你是否在進行循環操作，這都無關緊要。
 
-#### Batteries
+#### 電池
 
 由於系統透過藍牙進行頻繁互動，循環操作會比正常使用更快耗盡幫浦電池。 最好在電池電量降至 25% 時更換，因為這時通訊變得困難。 你可以使用 Nightscout 網站中的 PUMP_WARN_BATT_P 變數設置幫浦電池的警告提示。 延長電池壽命的小技巧包括：
 
@@ -246,41 +246,41 @@ AAPS 會根據預設基礎率進行“基線”調整。 如果基礎率過高�
 
 - 使用酒精擦拭電池端子，確保沒有殘留的製造蠟/油脂。
 
-- for [Dana R/RS pumps](../CompatiblePumps/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. 你可以將電池取出並重新插入 2-3 次，直到螢幕上顯示 100% 為止，或者使用電池鑰匙短暫短路電池，將兩個端子接觸一瞬間。
-- see also more tips for [particular types of battery](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md#battery-type-and-causes-of-short-battery-life)
+- 對於[Dana R/RS 幫浦](../CompatiblePumps/DanaRS-Insulin-Pump.md)，啟動過程會消耗較高的電流，目的是有意打破電池上的鈍化膜（防止儲存時能量損失），但他並不總能100%打破鈍化膜。 你可以將電池取出並重新插入 2-3 次，直到螢幕上顯示 100% 為止，或者使用電池鑰匙短暫短路電池，將兩個端子接觸一瞬間。
+- 另見[特定類型電池的更多提示](../CompatiblePumps/Accu-Chek-Combo-Tips-for-Basic-usage.md#battery-type-and-causes-of-short-battery-life)
 
-#### Changing reservoirs and cannulas
+#### 更換儲液罐和插管
 
 無法透過 AAPS 更換儲液罐，必須像以前一樣直接透過幫浦進行。
 
 - 在 AAPS 的主頁面長按“開環”/“閉環”，然後選擇“暫停循環 1 小時”。
 - 現在中斷幫浦，並按照幫浦的說明更換儲液罐。
-- 灌注和填充管路及插管也可以直接在幫浦上完成。 In this case use [PRIME/FILL button](../DailyLifeWithAaps/AapsScreens.md#action-tab) in the actions tab just to record the change.
+- 灌注和填充管路及插管也可以直接在幫浦上完成。 在這種情況下，僅使用[PRIME/FILL 按鈕](../DailyLifeWithAaps/AapsScreens.md#action-tab)在操作標籤中記錄更改。
 - 重新連線幫浦後，長按“暫停 (X 分鐘)”來繼續循環。
 
-然而，更換插管時並不使用幫浦的“灌注輸液組”功能，而是使用一個不會顯示在注射歷史記錄中的注射來填充輸液組或插管。 這意味著他不會中斷目前運作的臨時基礎率。 On the Actions (Act) tab, use the [PRIME/FILL button](../DailyLifeWithAaps/AapsScreens.md#action-tab) to set the amount of insulin needed to fill the infusion set and start the priming. 如果這個量不足，重複填充操作。 你可以在偏好設定 > 其他 > 填充/灌注標準胰島素量中設置預設量按鈕。 請參閱插管盒中的說明手冊，了解根據針頭長度和管路長度應灌注多少單位。
+然而，更換插管時並不使用幫浦的“灌注輸液組”功能，而是使用一個不會顯示在注射歷史記錄中的注射來填充輸液組或插管。 這意味著他不會中斷目前運作的臨時基礎率。 在操作選項卡上，使用[灌注/填充按鈕](../DailyLifeWithAaps/AapsScreens.md#action-tab)來設置填充輸液組所需的胰島素量並開始灌注。 如果這個量不足，重複填充操作。 你可以在偏好設定 > 其他 > 填充/灌注標準胰島素量中設置預設量按鈕。 請參閱插管盒中的說明手冊，了解根據針頭長度和管路長度應灌注多少單位。
 
-### Wallpaper
+### 桌布
 
-You can find the AAPS wallpaper for your phone on the [phones page](../CompatiblePhones/ListOfTestedPhones.md#phone-background).
+您可以在[手機頁面](../CompatiblePhones/ListOfTestedPhones.md#phone-background)上找到適合您手機的 AAPS 壁紙。
 
-### Daily usage
+### 日常使用
 
-#### Hygiene
+#### 衛生
 
-##### What to do when taking a shower or bath?
+##### 淋浴或洗澡時該怎麼做？
 
-淋浴或洗澡時，你可以取下幫浦。 在這短時間內，你可能不需要幫浦，但你應該告訴 AAPS 你已經中斷了連線，以確保 IOB 計算正確。 See [description above](#disconnect-pump).
+淋浴或洗澡時，你可以取下幫浦。 在這短時間內，你可能不需要幫浦，但你應該告訴 AAPS 你已經中斷了連線，以確保 IOB 計算正確。 請參見[上方描述](#disconnect-pump)。
 
-#### Work
+#### 工作
 
-根據你的工作，你可能會選擇在工作日使用不同的治療因素。 As a looper you should consider a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) for your typical working day. 例如，如果你的工作要求較低（例如坐在辦公桌前），你可以切換到高於 100% 的設定檔；如果你一整天都在活動，可以切換到低於 100% 的設定檔。 You could also consider a high or low temporary target or a [time shift of your profile](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#time-shift-of-the-circadian-percentage-profile) when working much earlier or later than regular, of if you work different shifts. 你也可以建立第二個設定檔（例如“家庭”和“工作日”），並每天切換到你實際需要的設定檔。
+根據你的工作，你可能會選擇在工作日使用不同的治療因素。 作為循環使用者，您應該考慮在您的典型工作日進行[設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md)。 例如，如果你的工作要求較低（例如坐在辦公桌前），你可以切換到高於 100% 的設定檔；如果你一整天都在活動，可以切換到低於 100% 的設定檔。 如果你經常工作時間比正常時間早或晚，或者輪班工作，你也可以考慮設置高或低臨時目標，或進行[設定檔的時間調整](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md#time-shift-of-the-circadian-percentage-profile)。 你也可以建立第二個設定檔（例如“家庭”和“工作日”），並每天切換到你實際需要的設定檔。
 
-### Leisure activities
+### 休閒活動
 
 (FAQ-sports)=
 
-#### Sports
+#### 運動
 
 你需要重新調整循環之前的運動習慣。 如果你像以前一樣攝取運動碳水化合物，閉環系統會識別並相應地進行修正。
 
@@ -288,21 +288,21 @@ You can find the AAPS wallpaper for your phone on the [phones page](../Compatibl
 
 進行循環時，你應該嘗試以下步驟：
 
-- Make a [profile switch](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) < 100%.
-- Set an [activity temp target](../DailyLifeWithAaps/TempTargets.md#activity-temp-target) above your standard target.
-- If you are using SMB make sure ["Enable SMB with high temp targets"](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb-always) are disabled.
+- 進行一個[設定檔切換](../DailyLifeWithAaps/ProfileSwitch-ProfilePercentage.md) < 100%。
+- 設置一個[活動臨時目標](../DailyLifeWithAaps/TempTargets.md#activity-temp-target)高於您的標準目標。
+- 如果您正在使用 SMB，請確保[“啟用高臨時目標的 SMB”](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb-with-high-temp-targets)和[“始終啟用 SMB”](../DailyLifeWithAaps/KeyAapsFeatures.md#enable-smb-always)已停用。
 
 這些設置的預處理和後處理非常重要。 在運動前及時進行更改，並考慮肌肉補充能量後的影響。
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../DailyLifeWithAaps/Automations.md) for profile switch and TT. 基於位置的自動化也可能是一個不錯的做法，但會讓前置處理變得更複雜。
+如果你定期在同一時間進行運動（例如在健身房上運動課），你可以考慮使用[自動化](../DailyLifeWithAaps/Automations.md)來進行設定檔切換和臨時目標的設置。 基於位置的自動化也可能是一個不錯的做法，但會讓前置處理變得更複雜。
 
 設定檔切換的百分比、運動臨時目標的值以及最佳的更改時間都是個人化的。 如果你正在尋找適合你的值，請從安全的一面開始（從較低的百分比和較高的臨時目標開始）。
 
-#### Sex
+#### 性行為
 
-你可以取下幫浦以獲得“自由”，但你應該告訴 AAPS 這樣 IOB 計算才能正確。 See [description above](#disconnect-pump).
+你可以取下幫浦以獲得“自由”，但你應該告訴 AAPS 這樣 IOB 計算才能正確。 請參見[上方描述](#disconnect-pump)。
 
-#### Drinking alcohol
+#### 飲酒
 
 在閉環模式下飲酒是有風險的，因為演算法無法正確預測受酒精影響的血糖。 你需要檢查自己的方法，並使用 AAPS 中的以下功能來進行處理：
 
@@ -312,11 +312,11 @@ If you do sports regularly at the same time (i.e. sports class in your gym) you 
 
 飲酒時，你必須時刻關注你的 CGM，並手動透過攝取碳水化合物避免低血糖的發生。
 
-#### Sleeping
+#### 睡眠
 
-##### How can I loop during the night without mobile and WIFI radiation?
+##### 如何在沒有手機和 WIFI 訊號的情況下循環過夜？
 
-許多使用者在夜間將手機切換到飛航模式。 If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+許多使用者在夜間將手機切換到飛航模式。 如果你希望循環在你睡覺時幫助你，請按照以下步驟進行操作（這僅適用於本地血糖來源，如 xDrip+ 或[“建立你自己的 Dexcom 應用程式”](../CompatibleCgms/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)，如果你透過 Nightscout 獲取血糖讀取值，則此方法無效）：
 
 1. 打開手機的飛航模式。
 2. 等待飛航模式生效。
@@ -328,66 +328,66 @@ If you do sports regularly at the same time (i.e. sports class in your gym) you 
 
 ![xDrip+ 基本應用間設定識別接收端](../images/xDrip_InterApp_NS.png)
 
-#### Travelling
+#### 旅行
 
-##### How to deal with time zone changes?
+##### 如何應對時區變更？
 
-使用 Dana R 和 Dana R Korean 時，你不需要做任何操作。 For other pumps see [time zone travelling](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md) page for more details.
+使用 Dana R 和 Dana R Korean 時，你不需要做任何操作。 有關其他幫浦，請參見[時區旅行](../DailyLifeWithAaps/TimezoneTraveling-DaylightSavingTime.md)頁面以獲取更多詳細資訊。
 
-### Medical topics
+### 醫療話題
 
-#### Hospitalization
+#### 住院
 
 如果你想與臨床醫師分享一些有關 AAPS 和 DIY 循環的資訊，你可以列印[給臨床醫師的 AAPS 指南](../Resources/clinician-guide-to-AndroidAPS.md)。
 
-#### Medical appointment with your endocrinologist
+#### 與內分泌科醫生的醫療約診
 
-##### Reporting
+##### 報告
 
 你可以展示你的 Nightscout 報告 (https://YOUR-NS-SITE.com/report) 或查看[Nightscout Reporter](https://nightscout-reporter.zreptil.de/)。
 
-## Frequent questions on Discord and their answers...
+## Discord 上的常見問題及其解答...
 
-### My problem is not listed here.
+### 我的問題不在這裡列出。
 
 [獲取幫助的訊息。](../GettingHelp/WhereCanIGetHelp.md)
 
-### My problem is not listed here but I found the solution
+### 我的問題不在這裡列出，但我找到了答案。
 
 [獲取幫助的訊息。](../GettingHelp/WhereCanIGetHelp.md)
 
 **提醒我們將你的解決方案添加到此列表中！**
 
-### AAPS stops everyday around the same time.
+### AAPS 每天在同一時間停止運作。
 
 停用 Google Play Protect。 檢查是否有“清理”應用程式（如 CCleaner 等），並將其卸載。 AAPS / 3 點選單 / 關於 / 點擊“保持應用程式在背景運作”的連結，停止所有電池優化設定。
 
-### How to organize my backups ?
+### 如何組織我的備份？
 
 經常匯出設定：每次更換儲液罐後、修改設定檔後、完成目標後、更換幫浦時...即使沒有更改，也應每月匯出一次。 保留幾個舊的匯出文件。
 
 將所有安裝應用程式（如 AAPS、xDrip、BYODA、修補版 LibreLink...）的 apk 以及所有應用程式的匯出設定文件複製到網路雲端硬碟（Dropbox、Google 等）。
 
-### I have problems, errors building the app.
+### 我在建置應用程式時遇到問題和錯誤。
 
 請
 
-- check [Troubleshooting Android Studio](../GettingHelp/TroubleshootingAndroidStudio) for typical errors and
+- 請檢查[故障排除 Android Studio](../GettingHelp/TroubleshootingAndroidStudio)以獲取典型錯誤和
 - 查看有關[逐步指南](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po)的提示。
 
-### I'm stuck on an objective and need help.
+### 我在目標上卡住了，需要幫助。
 
 截圖問題和答案。 將其發布到 Discord AAPS 頻道。 別忘了說明你選擇了哪些選項（或未選擇），以及為什麼。 你會得到提示和幫助，但你需要找到答案。
 
-### How to reset the password in AAPS v2.8.x ?
+### 如何在 AAPS v2.8.x 中重置密碼？
 
 打開漢堡選單，啟動設定嚮導，並在提示時輸入新密碼。 在完成密碼設置階段後，你可以退出嚮導。
 
-### How to reset the password in AAPS v3.x
+### 如何在 AAPS v3.x 中重置密碼？
 
-You find the documentation [here](../Maintenance/Update3_0.md#reset-master-password).
+您可以在[這裡](../Maintenance/Update3_0.md#reset-master-password)找到文件。
 
-### My link/pump/pod is unresponsive (RL/OL/EmaLink…)
+### 我的 Link/幫浦/Pod 沒有反應（RL/OL/EmaLink...）
 
 某些手機與連線設備（RL/OL/EmaL…）之間會出現藍牙斷線的情況。
 
@@ -395,13 +395,13 @@ You find the documentation [here](../Maintenance/Update3_0.md#reset-master-passw
 
 讓所有這些部件一起運作的最簡單方法是： 1/ 從 AAPS 中刪除連線設備 2/ 關閉連線設備 3/ AAPS 三點選單，退出 AAPS 4/ 長按 AAPS 圖示，進入 Android 選單，選擇 AAPS 應用程式資訊，強制停止 AAPS，然後刪除快取記憶體（不要刪除主要記憶體！） 4bis/ 少數手機可能需要在這裡重新啟動。 你可以嘗試不重啟。 5/ 打開連線設備6/ 啟動 AAPS7/ 前往 Pod 標籤，三點選單，搜尋並連線連線設備
 
-### Build error: file name too long
+### 建置錯誤：檔名過長
 
 在嘗試建置時，我收到錯誤訊息，提示檔名過長。 可能的解決方案：將你的源碼移動到靠近磁碟根目錄的目錄（例如 "c:\src\AndroidAPS-EROS"）。
 
 在 Android Studio 中：確保在開啟專案並從 GitHub 拉取後，"Gradle" 已經同步並完成索引。 執行 Build->Clean Project 之前，請先進行 Rebuild Project。 執行 File->Invalidate Caches 並重新啟動 Android Studio。
 
-### Alert: Running dev version. Closed loop is disabled
+### 警告：運作開發版本。 閉環模式已停用
 
 AAPS 沒有運作在 "開發者模式"。 AAPS 顯示以下訊息："運作開發版本。 閉環模式已停用"。
 
@@ -409,23 +409,23 @@ AAPS 沒有運作在 "開發者模式"。 AAPS 顯示以下訊息："運作開�
 
 提示：複製現有日誌文件並將其重命名為 "engineering_mode"（注意：無文件擴展名！）。
 
-### Where can I find settings files?
+### 在哪裡可以找到設定文件？
 
 設定文件將儲存在你手機的內部存儲中，目錄為 "/AAPS/preferences"。 警告：確保不要遺失密碼，否則你將無法匯入加密的設定文件！
 
-### How to configure battery savings?
+### 如何配置省電設置？
 
 正確配置電源管理對於防止你的手機操作系統在未使用時暫停 AAPS 及相關應用程式和服務非常重要。 結果是 AAPS 無法正常工作，或者感測器和 Rileylink（RL）的藍牙連線可能會被關閉，導致 "幫浦已中斷連線" 警報和通訊錯誤。 在手機上，進入設定->應用程式，並停用以下應用程式的省電模式： AAPS xDrip 或 BYODA/Dexcom 應用程式 藍牙系統應用程式（你可能需要先選擇查看系統應用程式） 或者，完全停用手機上的所有省電模式。 這樣做的結果是你的電池可能會耗電更快，但這是一種找出是否是省電模式導致問題的好方法。 省電模式的實現方式很大程度上取決於手機的品牌、型號和/或操作系統版本。 因此，幾乎無法提供針對你設備的正確省電設置的指導。 根據你的情況進行實驗，找到最佳設置。 如需更多訊息，請參閱 "Don't kill my app"。
 
-### Pump unreachable alerts several times a day or at night.
+### 一天或夜間多次出現幫浦無法使用警報。
 
 你的手機可能暫停了 AAPS 服務，甚至暫停了藍牙連線，導致他失去與 RL 的連線（請參閱省電設置）考慮將無法使用的警報設定為 120 分鐘，方法是點擊右上方的三點選單，選擇 偏好設定->本地警報->幫浦無法使用的門檻值 [分鐘]。
 
-### Where can I delete treatments in AAPS v3 ?
+### 在 AAPS v3 中，在哪裡可以刪除治療？
 
 點擊三點選單，選擇治療，然後再次點擊三點選單，你將看到不同的選項。
 
-### Configuring and Using the AAPSClient remote app
+### 配置和使用 AAPSClient 遠端應用程式
 
 可以透過 AAPSClient 應用程式遠端監控和控制 AAPS，並且可選地透過運作在 Android Wear 手錶上的 Wear 應用程式。 請注意，AAPSClient（遠端）應用程式與 AAPS 中的 NSClient 設置不同，AAPSClient（遠端）Wear 應用程式也與 AAPS Wear 應用程式不同——為了清楚起見，遠端應用程式將稱為 "AAPSClient 遠端" 和 "AAPS 遠端 Wear" 應用程式。
 
@@ -436,7 +436,7 @@ AAPS 沒有運作在 "開發者模式"。 AAPS 顯示以下訊息："運作開�
 
 如果你想透過 AAPSClient 遠端 Wear 應用程式監控/控制 AAPS，則需要同時安裝 AAPSClient 遠端應用程式和相關的 Wear 應用程式。 要編譯 AAPSClient 遠端 Wear 應用程式，請按照安裝/配置 AAPS wear 應用程式的標準說明進行操作，只是在編譯時，選擇 AAPSClient 變體。
 
-### I have a red triangle / AAPS won't enable closed loop / Loops stays in LGS / I have a yellow triangle
+### 我有一個紅色三角形 / AAPS 無法啟用閉環 / 閉環保持在 LGS / 我有一個黃色三角形
 
 紅色和黃色三角形是 AAPS v3 中的安全功能。
 
@@ -446,13 +446,13 @@ AAPS 沒有運作在 "開發者模式"。 AAPS 顯示以下訊息："運作開�
 
 黃色三角形表示每個血糖讀取之間的延遲不穩定。 你沒有定期每 5 分鐘接收到血糖讀取，或者缺少血糖讀取。 這通常是一個 Libre 的問題。 當你更換 G6 發射器時，這種情況也會發生。 如果黃色三角形與 G6 發射器的更換有關，他會在幾個小時（大約 24 小時）後自行消失。 如果是 Libre 的問題，黃色三角形將會一直存在。 閉環可以關閉並正常運作。
 
-### Can I move an active DASH Pod to other hardware?
+### 我可以將一個啟動的 DASH Pod 移動到其他硬體上嗎？
 
 這是可行的。 請注意，由於移動是“未支援的”和“未經測試的”，因此涉及一定的風險。 最佳做法是在 Pod 即將到期時嘗試此過程，以便出現問題時，降低損失。
 
 關鍵是 AAPS 中的幫浦狀態（包括其 MAC 位址）與 DASH 在重新連線時匹配。
 
-### Procedure I follow in this:
+### 我通常會這樣操作：
 
 1) 暫停 DASH 幫浦。 這確保當 DASH 失去連線時，沒有正在運作或排隊的指令。 2) 將手機切換到飛行模式以停用藍牙（以及 WiFi 和行動網路）。 這樣可以確保 AAPS 和 DASH 無法通訊。 3) 匯出設定（包括 DASH 狀態） 4) 從手機上複製剛匯出的設定文件（由於手機處於飛行模式且我們不想更改該狀態，最簡單的方法是使用 USB 連線線）。 5) 將設定文件複製到另一個手機上。 6) 在替代手機上的 AAPS 中匯入設定。 7) 檢查 DASH 標籤，確認他是否識別到 Pod。 8) 取消暫停 Pod。 9) 檢查 DASH 標籤頁，確認其與 Pod 正在通訊（使用重新整理按鈕）。
 
@@ -464,7 +464,7 @@ AAPS 沒有運作在 "開發者模式"。 AAPS 顯示以下訊息："運作開�
 
 當 Pod 丟棄後，請確認 AAPS 報告“無啟動 Pod”。 現在你可以安全地關閉飛行模式了。
 
-### How do I import settings from earlier versions of AAPS into AAPS v3 ?
+### 如何將 AAPS 早期版本的設定匯入到 AAPS v3 中？
 
 你只能匯入使用 AAPS v2.8x 或 v3.x 匯出的設定（在 AAPS v3 中）。如果你使用的是 AAPS v2.8x 之前的版本，或者需要使用 v2.8x 之前的設定匯出文件，則需要先安裝 AAPS v2.8。 將 v2.x 的舊設定匯入到 v2.8。檢查一切正常後，你可以從 v2.8 匯出設定。然後安裝 AAPS v3 並在 v3 中匯入 v2.8 的設定。
 
